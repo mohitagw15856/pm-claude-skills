@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/yourusername/pm-claude-skills.svg)](https://github.com/yourusername/pm-claude-skills/stargazers)
 
-> 📖 **Background**: These Skills emerged from my widely-read Medium article ["Claude Skills: The AI Feature That's Quietly Changing How Product Managers Work"](your-medium-article-link), where I documented how Skills transformed my daily PM workflow, saving 3-4 hours per week.
+> 📖 **Background**: These Skills emerged from my widely-read Medium article ["Claude Skills: The AI Feature That's Quietly Changing How Product Managers Work"](https://medium.com/product-powerhouse/claude-skills-the-ai-feature-thats-quietly-changing-how-product-managers-work-aad5d8d0640a), where I documented how Skills transformed my daily PM workflow, saving 3-4 hours per week.
 
 ## What Are These Skills?
 
