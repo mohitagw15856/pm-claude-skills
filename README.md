@@ -3,7 +3,7 @@
 **Transform your PM workflow with specialized Claude Skills for common product management tasks.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/pm-claude-skills.svg)](https://github.com/yourusername/pm-claude-skills/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills.svg)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
 
 > 📖 **Background**: These Skills emerged from my widely-read Medium article ["Claude Skills: The AI Feature That's Quietly Changing How Product Managers Work"](https://medium.com/product-powerhouse/claude-skills-the-ai-feature-thats-quietly-changing-how-product-managers-work-aad5d8d0640a), where I documented how Skills transformed my daily PM workflow, saving 3-4 hours per week.
 
@@ -52,7 +52,7 @@ That's it! Claude now knows your PRD format.
 - Product Launch Checklist
 - Technical Specification Template
 
-Want a specific Skill? [Request it here](https://github.com/yourusername/pm-claude-skills/issues/new?template=skill-request.md)
+Want a specific Skill? [Request it here](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=skill-request.md)
 
 ## 💡 Real Results
 
@@ -87,7 +87,7 @@ Want a specific Skill? [Request it here](https://github.com/yourusername/pm-clau
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/pm-claude-skills.git
+git clone https://github.com/mohitagw15856/pm-claude-skills.git
 cd pm-claude-skills
 
 # Package a skill (creates .skill file)
@@ -100,7 +100,7 @@ cd ../..
 
 ### Method 3: Direct Download (When Available)
 
-Check the [Releases](https://github.com/yourusername/pm-claude-skills/releases) page for pre-packaged `.skill` files.
+Check the [Releases](https://github.com/mohitagw15856/pm-claude-skills/releases) page for pre-packaged `.skill` files.
 
 ## 🎓 How to Use
 
@@ -126,10 +126,10 @@ See the [Customization Guide](docs/customization.md) for detailed instructions.
 
 Found a bug? Want to suggest an improvement? Contributions are welcome!
 
-- 🐛 [Report an Issue](https://github.com/yourusername/pm-claude-skills/issues/new?template=bug-report.md)
-- 💡 [Request a Skill](https://github.com/yourusername/pm-claude-skills/issues/new?template=skill-request.md)
-- 🔀 [Submit a Pull Request](https://github.com/yourusername/pm-claude-skills/pulls)
-- 💬 [Join Discussions](https://github.com/yourusername/pm-claude-skills/discussions)
+- 🐛 [Report an Issue](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=bug-report.md)
+- 💡 [Request a Skill](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=skill-request.md)
+- 🔀 [Submit a Pull Request](https://github.com/mohitagw15856/pm-claude-skills/pulls)
+- 💬 [Join Discussions](https://github.com/mohitagw15856/pm-claude-skills/discussions)
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
@@ -177,7 +177,7 @@ A: Absolutely! See our [Customization Guide](docs/customization.md).
 A: Yes! Skills work in claude.ai, Claude Code, and via the API.
 
 **Q: What if a Skill doesn't work?**  
-A: Check [Troubleshooting](docs/troubleshooting.md) or [open an issue](https://github.com/yourusername/pm-claude-skills/issues).
+A: Check [Troubleshooting](docs/troubleshooting.md) or [open an issue](https://github.com/mohitagw15856/pm-claude-skills/issues).
 
 **Q: How do I create my own Skills?**  
 A: See [Creating Your Own Skills](docs/creating-skills.md) for a complete guide.
@@ -187,10 +187,9 @@ A: Yes! MIT license allows commercial use.
 
 ## 🔗 Links
 
-- 📝 [Original Medium Article](your-medium-article-link)
-- 🐦 [Follow me on Twitter](your-twitter-link)
-- 💼 [Connect on LinkedIn](your-linkedin-link)
-- ✉️ [Email me](mailto:your-email@example.com)
+- 📝 [Original Medium Article](https://medium.com/product-powerhouse/claude-skills-the-ai-feature-thats-quietly-changing-how-product-managers-work-aad5d8d0640a)
+- 💼 [Connect on LinkedIn](www.linkedin.com/in/mohitaggarwal4)
+- ✉️ [Email me](mailto:mohit15856@gmail.com)
 
 ## 🙏 Acknowledgments
 
@@ -200,7 +199,7 @@ Special thanks to the early testers who provided feedback on these Skills.
 
 ---
 
-**Made with ☕ by [Mohit Aggarwal](your-website-link)**
+**Made with ☕ by [Mohit Aggarwal](https://mohit-pm.netlify.app/)**
 
 *Helping product managers work smarter with AI*
 
