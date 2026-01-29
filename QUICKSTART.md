@@ -19,7 +19,7 @@ Get your first PM Skill working in 5 minutes.
 ## Step 2: Download a Skill (1 minute)
 
 **Option A: Use Pre-Packaged (Easiest)**
-1. Go to [Releases](https://github.com/yourusername/pm-claude-skills/releases)
+1. Go to [Releases](https://github.com/mohitagw15856/pm-claude-skills/releases)
 2. Download `prd-template.skill`
 3. Skip to Step 3
 
@@ -87,9 +87,9 @@ Claude should automatically use the PRD Template Skill and create a structured P
 
 ## Need Help?
 
-- 💬 [Discussions](https://github.com/yourusername/pm-claude-skills/discussions)
-- 🐛 [Report Bug](https://github.com/yourusername/pm-claude-skills/issues)
-- 📧 Email: your-email@example.com
+- 💬 [Discussions](https://github.com/mohitagw15856/pm-claude-skills/discussions)
+- 🐛 [Report Bug](https://github.com/mohitagw15856/pm-claude-skills/issues)
+- 📧 Email: mohit15856@gmail.com
 
 ---
 
@@ -98,4 +98,4 @@ Claude should automatically use the PRD Template Skill and create a structured P
 
 Start with one Skill. See the results. Then add more.
 
-⭐ [Star this repo](https://github.com/yourusername/pm-claude-skills) to get updates!
+⭐ [Star this repo](https://github.com/mohitagw15856/pm-claude-skills) to get updates!
