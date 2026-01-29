@@ -353,13 +353,13 @@ For Pro plans:
    - Screenshots if applicable
 
 3. **Check existing issues**:
-   - [GitHub Issues](https://github.com/yourusername/pm-claude-skills/issues)
-   - [Discussions](https://github.com/yourusername/pm-claude-skills/discussions)
+   - [GitHub Issues](https://github.com/mohitagw15856/pm-claude-skills/issues)
+   - [Discussions](https://github.com/mohitagw15856/pm-claude-skills/discussions)
 
 ### Getting Help
 
 1. **For Skill-specific issues**:
-   - [Open a GitHub Issue](https://github.com/yourusername/pm-claude-skills/issues/new)
+   - [Open a GitHub Issue](https://github.com/mohitagw15856/pm-claude-skills/issues/new)
    - Include Skill name, what you expected, what happened
 
 2. **For Claude platform issues**:
@@ -367,8 +367,8 @@ For Pro plans:
    - Check [Anthropic documentation](https://docs.anthropic.com)
 
 3. **For general questions**:
-   - [Start a Discussion](https://github.com/yourusername/pm-claude-skills/discussions)
-   - Email: your-email@example.com
+   - [Start a Discussion](https://github.com/mohitagw15856/pm-claude-skills/discussions)
+   - Email: mohit15856@gmail.com
 
 ### Reporting a Bug
 
