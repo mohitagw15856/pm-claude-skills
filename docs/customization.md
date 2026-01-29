@@ -394,9 +394,9 @@ When creating action items:
 
 ## Need Help?
 
-- 💬 [Ask in Discussions](https://github.com/yourusername/pm-claude-skills/discussions)
-- 📧 Email: your-email@example.com
-- 🐛 [Report issues](https://github.com/yourusername/pm-claude-skills/issues)
+- 💬 [Ask in Discussions](https://github.com/mohitagw15856/pm-claude-skills/discussions)
+- 📧 Email: mohit15856@gmail.com
+- 🐛 [Report issues](https://github.com/mohitagw15856/pm-claude-skills/issues)
 
 ## Next Steps
 
