@@ -41,13 +41,13 @@ Skills require Code Execution to be enabled.
 ### Option B: Clone the Entire Repository
 
 ```bash
-git clone https://github.com/yourusername/pm-claude-skills.git
+git clone https://github.com/mohitagw15856/pm-claude-skills.git
 cd pm-claude-skills
 ```
 
 ### Option C: Download Pre-packaged Skills (When Available)
 
-Check the [Releases](https://github.com/yourusername/pm-claude-skills/releases) page for `.skill` files ready to upload.
+Check the [Releases](https://github.com/mohitagw15856/pm-claude-skills/releases) page for `.skill` files ready to upload.
 
 ## Step 3: Package the Skill
 
@@ -187,6 +187,6 @@ Team/Enterprise admins can provision Skills organization-wide:
 
 ## Need Help?
 
-- 🐛 [Report an issue](https://github.com/yourusername/pm-claude-skills/issues)
-- 💬 [Ask in Discussions](https://github.com/yourusername/pm-claude-skills/discussions)
-- ✉️ Email: your-email@example.com
+- 🐛 [Report an issue](https://github.com/mohitagw15856/pm-claude-skills/issues)
+- 💬 [Ask in Discussions](https://github.com/mohitagw15856/pm-claude-skills/discussions)
+- ✉️ Email: mohit15856@gmail.com
