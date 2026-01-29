@@ -8,7 +8,7 @@ Thank you for considering contributing to PM Claude Skills! This document provid
 
 If you find a bug in a Skill:
 
-1. Check if the issue already exists in [Issues](https://github.com/yourusername/pm-claude-skills/issues)
+1. Check if the issue already exists in [Issues](https://github.com/mohitagw15856/pm-claude-skills/issues)
 2. If not, create a new issue using the Bug Report template
 3. Include:
    - Which Skill has the issue
@@ -21,7 +21,7 @@ If you find a bug in a Skill:
 
 Have an idea for a new Skill?
 
-1. Check [existing issues](https://github.com/yourusername/pm-claude-skills/issues?q=is%3Aissue+label%3Aenhancement) to avoid duplicates
+1. Check [existing issues](https://github.com/mohitagw15856/pm-claude-skills/issues?q=is%3Aissue+label%3Aenhancement) to avoid duplicates
 2. Create a new issue using the Skill Request template
 3. Describe:
    - What PM task the Skill would help with
@@ -121,7 +121,7 @@ Skills should:
 
 1. **Fork & Branch**
    ```bash
-   git clone https://github.com/yourusername/pm-claude-skills.git
+   git clone https://github.com/mohitagw15856/pm-claude-skills.git
    cd pm-claude-skills
    git checkout -b feature/your-feature-name
    ```
@@ -179,12 +179,12 @@ Violations may result in:
 2. Temporary ban
 3. Permanent ban
 
-Report violations to: [your-email@example.com]
+Report violations to: [mohit15856@gmail.com]
 
 ## Questions?
 
-- 💬 Start a [Discussion](https://github.com/yourusername/pm-claude-skills/discussions)
-- ✉️ Email: [your-email@example.com]
+- 💬 Start a [Discussion](https://github.com/mohitagw15856/pm-claude-skills/discussions)
+- ✉️ Email: [mohit15856@gmail.com]
 - 🐦 Twitter: [@yourhandle]
 
 ## Recognition
