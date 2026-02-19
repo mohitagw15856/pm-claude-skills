@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills.svg)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
 
-> 📖 **Background**: These Skills emerged from my widely-read Medium article ["Claude Skills: The AI Feature That's Quietly Changing How Product Managers Work"](https://medium.com/product-powerhouse/claude-skills-the-ai-feature-thats-quietly-changing-how-product-managers-work-aad5d8d0640a), where I documented how Skills transformed my daily PM workflow, saving 3-4 hours per week.
+> 📖 **Background**: These Skills emerged from two Medium articles: [Part 1 — How Skills changed my workflow](https://medium.com/product-powerhouse/claude-skills-the-ai-feature-thats-quietly-changing-how-product-managers-work-aad5d8d0640a) and [Part 2 — The complete 12-skill toolkit](https://medium.com/@mohit15856/12-claude-skills-for-product-managers-the-complete-toolkit-with-skill-files-for-jira-figma-fcc73a4c1e58).
 
 ## What Are These Skills?
 
@@ -44,13 +44,53 @@ That's it! Claude now knows your PRD format.
 | **User Research Synthesis** | Analyze and synthesize research findings | 2-3 hrs/study | [View](skills/user-research-synthesis) |
 | **Competitive Analysis** | Structured competitive assessments | 1-2 hrs/analysis | [View](skills/competitive-analysis) |
 
-### Coming Soon 🔜
+### Discovery & User Research
+| **User Interview Synthesis** | Synthesise transcripts into structured findings | Notion | [View](skills/user-interview-synthesis) |
+| **Assumption Mapper** | Risk-rate hidden assumptions in any PRD | Miro | [View](skills/assumption-mapper) |
 
-- Data Analysis Standard
-- Roadmap Presentation
-- Quarterly Planning
-- Product Launch Checklist
-- Technical Specification Template
+### Roadmapping & Prioritisation
+| Skill | Purpose | Tool | Folder |
+|-------|---------|------|--------|
+| **RICE Prioritisation** | Score and rank initiatives objectively | Jira | [View](skills/rice-prioritisation) |
+| **Roadmap Narrative** | Turn ranked lists into strategic narratives | Notion, Miro | [View](skills/roadmap-narrative) |
+| **RICE + Impact Matrix** | RICE scoring + strategic alignment combined | Miro, Jira | [View](skills/rice-impact-matrix) |
+
+### Sprint & Delivery
+| Skill | Purpose | Tool | Folder |
+|-------|---------|------|--------|
+| **Sprint Brief** | Generate sprint briefs from Jira data | Jira, Slack | [View](skills/sprint-brief) |
+| **Retro Analysis** | Data-grounded retrospective briefs | Jira, Miro | [View](skills/retro-analysis) |
+
+### Data & Metrics
+| Skill | Purpose | Tool | Folder |
+|-------|---------|------|--------|
+| **Product Health Analysis** | Interpret metrics and surface signals | Analytics | [View](skills/product-health-analysis) |
+
+### Strategy & Competitive Intel
+| Skill | Purpose | Tool | Folder |
+|-------|---------|------|--------|
+| **Competitor Signal Tracker** | Analyse competitor moves strategically | Notion | [View](skills/competitor-signal-tracker) |
+
+### Stakeholder Communication
+| Skill | Purpose | Tool | Folder |
+|-------|---------|------|--------|
+| **PRD Template** | Standardized product requirements | — | [View](skills/prd-template) |
+| **Meeting Notes** | Structured meeting documentation | — | [View](skills/meeting-notes) |
+| **Stakeholder Update** | Executive status updates | — | [View](skills/stakeholder-update) |
+| **Executive Update** | Sharp executive briefings | Slack, Teams | [View](skills/executive-update) |
+
+### Go-to-Market & Launch
+| Skill | Purpose | Tool | Folder |
+|-------|---------|------|--------|
+| **Launch Readiness** | Pre-launch go/no-go assessment | Notion, Jira, Slack | [View](skills/launch-readiness) |
+
+### Cross-functional Collaboration
+| Skill | Purpose | Tool | Folder |
+|-------|---------|------|--------|
+| **User Research Synthesis** | Analyze and synthesize research findings | Notion | [View](skills/user-research-synthesis) |
+| **Competitive Analysis** | Structured competitive assessments | — | [View](skills/competitive-analysis) |
+| **Design Handoff Brief** | PM-to-designer structured briefs | Figma, Notion | [View](skills/design-handoff-brief) |
+
 
 Want a specific Skill? [Request it here](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=skill-request.md)
 
@@ -85,7 +125,7 @@ Want a specific Skill? [Request it here](https://github.com/mohitagw15856/pm-cla
 
 ### Method 2: Clone the Repo
 
-```bash
+bash
 # Clone the repository
 git clone https://github.com/mohitagw15856/pm-claude-skills.git
 cd pm-claude-skills
@@ -96,7 +136,7 @@ zip -r ../../prd-template.skill .
 cd ../..
 
 # Now upload prd-template.skill to Claude
-```
+
 
 ### Method 3: Direct Download (When Available)
 
@@ -190,6 +230,7 @@ A: Yes! MIT license allows commercial use.
 - 📝 [Original Medium Article](https://medium.com/product-powerhouse/claude-skills-the-ai-feature-thats-quietly-changing-how-product-managers-work-aad5d8d0640a)
 - 💼 [Connect on LinkedIn](www.linkedin.com/in/mohitaggarwal4)
 - ✉️ [Email me](mailto:mohit15856@gmail.com)
+- Writing these up and refining them took a fair few evenings. If they saved you some time, a [coffee](https://buymeacoffee.com/mohit15856) is always appreciated 
 
 ## 🙏 Acknowledgments
 
