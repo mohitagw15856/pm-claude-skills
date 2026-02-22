@@ -5,7 +5,15 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills.svg)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
 
-> 📖 **Background**: These Skills emerged from two Medium articles: [Part 1 — How Skills changed my workflow](https://medium.com/product-powerhouse/claude-skills-the-ai-feature-thats-quietly-changing-how-product-managers-work-aad5d8d0640a) and [Part 2 — The complete 12-skill toolkit](https://medium.com/@mohit15856/12-claude-skills-for-product-managers-the-complete-toolkit-with-skill-files-for-jira-figma-fcc73a4c1e58).
+
+> 📖 **Background**: Built across a four-part Medium series:
+> - [Part 1 — How Skills changed my PM workflow](https://medium.com/product-powerhouse/claude-skills-the-ai-feature-thats-quietly-changing-how-product-managers-work-aad5d8d0640a)
+> - [Part 2 — The complete 12-skill toolkit](https://medium.com/@mohit15856/12-claude-skills-for-product-managers-the-complete-toolkit-with-skill-files-for-jira-figma-fcc73a4c1e58)  
+> - [Part 3 — Building Skills the right way (official guide)](https://medium.com/@mohit15856/claude-skills-advanced-guide-what-3-months-of-daily-pm-use-actually-taught-me-18324d6ef7bc)
+> - [Part 4 — Advanced skills based on what top companies want](https://medium.com/product-powerhouse/claude-skills-the-ai-feature-thats-quietly-changing-how-product-managers-work-aad5d8d0640a)
+>
+> Product Management Skills for Claude AI — 18 skills across the full PM lifecycle. Save 10+ hours per week.
+
 
 ## What Are These Skills?
 
@@ -90,6 +98,17 @@ That's it! Claude now knows your PRD format.
 | **User Research Synthesis** | Analyze and synthesize research findings | Notion | [View](skills/user-research-synthesis) |
 | **Competitive Analysis** | Structured competitive assessments | — | [View](skills/competitive-analysis) |
 | **Design Handoff Brief** | PM-to-designer structured briefs | Figma, Notion | [View](skills/design-handoff-brief) |
+
+### 🧠 Advanced Skills (Part 4 — Role-Based Capabilities)
+| Skill | Purpose | Tool | Folder |
+|-------|---------|------|--------|
+| **Competitive Intelligence Monitor** | Weekly diff-based competitor tracking | Notion, OpenClaw | [View](skills/competitive-intelligence-monitor) |
+| **Experiment Designer** | A/B test design + results interpretation | Analytics | [View](skills/experiment-designer) |
+| **Stakeholder Influence Mapper** | Influence strategy + tailored talking points | Slack | [View](skills/stakeholder-influence-mapper) |
+| **Ambiguity Resolver** | Structures vague briefs into actionable problem statements | Notion | [View](skills/ambiguity-resolver) |
+| **Multi-Source Signal Synthesiser** | Reconciles user signals across all research channels | Notion, OpenClaw | [View](skills/multi-source-signal-synthesiser) |
+| **Strategic Narrative Generator** | Roadmap-to-strategy storytelling for executives | Notion | [View](skills/strategic-narrative-generator) |
+
 
 
 Want a specific Skill? [Request it here](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=skill-request.md)
