@@ -1,107 +1,136 @@
 # Product Management Claude Skills
-
-**Transform your PM workflow with specialized Claude Skills for common product management tasks.**
+**Transform your PM workflow with 33 specialised Claude Skills across the full PM lifecycle. Save 10–15 hours per week.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills.svg)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
+[![Skills](https://img.shields.io/badge/Skills-33-brightgreen.svg)](#available-skills)
+[![Version](https://img.shields.io/badge/Version-3.0.0-blue.svg)](#changelog)
 
+> 📖 **Built across a four-part Medium series:**
+> - Part 1 — How Skills changed my PM workflow
+> - Part 2 — The complete 12-skill toolkit
+> - Part 3 — Building Skills the right way (official guide)
+> - Part 4 — Advanced skills based on what top companies want
+> - **Part 5 — 15 new skills covering every gap in the PM lifecycle** *(new)*
 
-> 📖 **Background**: Built across a four-part Medium series:
-> - [Part 1 — How Skills changed my PM workflow](https://medium.com/product-powerhouse/claude-skills-the-ai-feature-thats-quietly-changing-how-product-managers-work-aad5d8d0640a)
-> - [Part 2 — The complete 12-skill toolkit](https://medium.com/@mohit15856/12-claude-skills-for-product-managers-the-complete-toolkit-with-skill-files-for-jira-figma-fcc73a4c1e58)  
-> - [Part 3 — Building Skills the right way (official guide)](https://medium.com/@mohit15856/claude-skills-advanced-guide-what-3-months-of-daily-pm-use-actually-taught-me-18324d6ef7bc)
-> - [Part 4 — Advanced skills based on what top companies want](https://medium.com/product-powerhouse/claude-skills-the-ai-feature-thats-quietly-changing-how-product-managers-work-aad5d8d0640a)
->
-> Product Management Skills for Claude AI — 18 skills across the full PM lifecycle. Save 10+ hours per week.
-
+---
 
 ## What Are These Skills?
 
-Claude Skills are reusable, specialized procedures that teach Claude your exact workflows. Instead of re-explaining your PRD format or meeting notes structure every time, you create a Skill once and Claude automatically applies it whenever relevant.
+Claude Skills are reusable, specialised procedures that teach Claude your exact workflows. Instead of re-explaining your PRD format or meeting notes structure every time, you create a Skill once and Claude automatically applies it whenever relevant.
 
-Think of Skills as "onboarding guides" for Claude—they package your best practices, templates, and processes so Claude consistently delivers outputs the way you want them.
+Think of Skills as "onboarding guides" for Claude — they package your best practices, templates, and processes so Claude consistently delivers outputs the way you want them.
+
+---
 
 ## 🎯 Who Is This For?
 
 - **Product Managers** looking to automate repetitive documentation tasks
-- **PM Teams** wanting to standardize processes and share best practices
+- **PM Teams** wanting to standardise processes and share best practices
 - **Anyone** tired of reformatting Claude's outputs to match their standards
+
+---
 
 ## ⚡ Quick Start (5 Minutes)
 
-1. **Prerequisites**: You need Claude Pro, Team, or Enterprise account
-2. **Enable Code Execution**: Settings → Features → Enable "Code Execution and File Creation"
-3. **Install Your First Skill**:
-   - Download the [`prd-template`](skills/prd-template) folder
-   - Zip the folder (it should contain SKILL.md and any other files)
-   - Rename the .zip to .skill (e.g., `prd-template.skill`)
+1. **Prerequisites:** Claude Pro, Team, or Enterprise account
+2. **Enable Code Execution:** Settings → Features → Enable "Code Execution and File Creation"
+3. **Install your first skill:**
+   - Download a skill folder (e.g. `skills/prd-template`)
+   - Zip the folder contents, rename `.zip` → `.skill`
    - Go to claude.ai → Settings → Skills → Upload Skill
-   - Try it: "Help me write a PRD for a mobile app onboarding feature"
+4. **Try it:** "Help me write a PRD for a mobile app onboarding feature"
 
-That's it! Claude now knows your PRD format.
+That's it. Claude now knows your format.
 
-## 📦 Available Skills
+---
 
-### Free Essential Skills (Included)
+## 📦 Available Skills — v3.0 (33 Skills)
+
+### ✅ Free Essential Skills (Original)
 
 | Skill | Purpose | Time Saved | Folder |
-|-------|---------|------------|--------|
-| **PRD Template** | Standardized product requirements | 2-3 hrs/PRD | [View](skills/prd-template) |
-| **Meeting Notes** | Structured meeting documentation | 15-30 min/meeting | [View](skills/meeting-notes) |
-| **Stakeholder Update** | Executive status updates | 30-45 min/update | [View](skills/stakeholder-update) |
-| **User Research Synthesis** | Analyze and synthesize research findings | 2-3 hrs/study | [View](skills/user-research-synthesis) |
-| **Competitive Analysis** | Structured competitive assessments | 1-2 hrs/analysis | [View](skills/competitive-analysis) |
+|---|---|---|---|
+| **PRD Template** | Standardised product requirements | 2–3 hrs/PRD | [View](skills/prd-template) |
+| **Meeting Notes** | Structured meeting documentation | 15–30 min/meeting | [View](skills/meeting-notes) |
+| **Stakeholder Update** | Executive status updates | 30–45 min/update | [View](skills/stakeholder-update) |
+| **User Research Synthesis** | Analyse and synthesise research findings | 2–3 hrs/study | [View](skills/user-research-synthesis) |
+| **Competitive Analysis** | Structured competitive assessments | 1–2 hrs/analysis | [View](skills/competitive-analysis) |
 
-### Discovery & User Research
+---
+
+### 🔍 Discovery & User Research
+
+| Skill | Purpose | Tool | Folder |
+|---|---|---|---|
 | **User Interview Synthesis** | Synthesise transcripts into structured findings | Notion | [View](skills/user-interview-synthesis) |
 | **Assumption Mapper** | Risk-rate hidden assumptions in any PRD | Miro | [View](skills/assumption-mapper) |
 
-### Roadmapping & Prioritisation
+---
+
+### 🗺️ Roadmapping & Prioritisation
+
 | Skill | Purpose | Tool | Folder |
-|-------|---------|------|--------|
+|---|---|---|---|
 | **RICE Prioritisation** | Score and rank initiatives objectively | Jira | [View](skills/rice-prioritisation) |
 | **Roadmap Narrative** | Turn ranked lists into strategic narratives | Notion, Miro | [View](skills/roadmap-narrative) |
 | **RICE + Impact Matrix** | RICE scoring + strategic alignment combined | Miro, Jira | [View](skills/rice-impact-matrix) |
 
-### Sprint & Delivery
+---
+
+### 🚀 Sprint & Delivery
+
 | Skill | Purpose | Tool | Folder |
-|-------|---------|------|--------|
+|---|---|---|---|
 | **Sprint Brief** | Generate sprint briefs from Jira data | Jira, Slack | [View](skills/sprint-brief) |
 | **Retro Analysis** | Data-grounded retrospective briefs | Jira, Miro | [View](skills/retro-analysis) |
 
-### Data & Metrics
+---
+
+### 📊 Data & Metrics
+
 | Skill | Purpose | Tool | Folder |
-|-------|---------|------|--------|
+|---|---|---|---|
 | **Product Health Analysis** | Interpret metrics and surface signals | Analytics | [View](skills/product-health-analysis) |
 
-### Strategy & Competitive Intel
+---
+
+### 🏆 Strategy & Competitive Intel
+
 | Skill | Purpose | Tool | Folder |
-|-------|---------|------|--------|
+|---|---|---|---|
 | **Competitor Signal Tracker** | Analyse competitor moves strategically | Notion | [View](skills/competitor-signal-tracker) |
 
-### Stakeholder Communication
+---
+
+### 📢 Stakeholder Communication
+
 | Skill | Purpose | Tool | Folder |
-|-------|---------|------|--------|
-| **PRD Template** | Standardized product requirements | — | [View](skills/prd-template) |
-| **Meeting Notes** | Structured meeting documentation | — | [View](skills/meeting-notes) |
-| **Stakeholder Update** | Executive status updates | — | [View](skills/stakeholder-update) |
+|---|---|---|---|
 | **Executive Update** | Sharp executive briefings | Slack, Teams | [View](skills/executive-update) |
 
-### Go-to-Market & Launch
+---
+
+### 🎯 Go-to-Market & Launch
+
 | Skill | Purpose | Tool | Folder |
-|-------|---------|------|--------|
+|---|---|---|---|
 | **Launch Readiness** | Pre-launch go/no-go assessment | Notion, Jira, Slack | [View](skills/launch-readiness) |
 
-### Cross-functional Collaboration
+---
+
+### 🤝 Cross-functional Collaboration
+
 | Skill | Purpose | Tool | Folder |
-|-------|---------|------|--------|
-| **User Research Synthesis** | Analyze and synthesize research findings | Notion | [View](skills/user-research-synthesis) |
-| **Competitive Analysis** | Structured competitive assessments | — | [View](skills/competitive-analysis) |
+|---|---|---|---|
 | **Design Handoff Brief** | PM-to-designer structured briefs | Figma, Notion | [View](skills/design-handoff-brief) |
 
+---
+
 ### 🧠 Advanced Skills (Part 4 — Role-Based Capabilities)
+
 | Skill | Purpose | Tool | Folder |
-|-------|---------|------|--------|
+|---|---|---|---|
 | **Competitive Intelligence Monitor** | Weekly diff-based competitor tracking | Notion, OpenClaw | [View](skills/competitive-intelligence-monitor) |
 | **Experiment Designer** | A/B test design + results interpretation | Analytics | [View](skills/experiment-designer) |
 | **Stakeholder Influence Mapper** | Influence strategy + tailored talking points | Slack | [View](skills/stakeholder-influence-mapper) |
@@ -109,158 +138,200 @@ That's it! Claude now knows your PRD format.
 | **Multi-Source Signal Synthesiser** | Reconciles user signals across all research channels | Notion, OpenClaw | [View](skills/multi-source-signal-synthesiser) |
 | **Strategic Narrative Generator** | Roadmap-to-strategy storytelling for executives | Notion | [View](skills/strategic-narrative-generator) |
 
+---
 
+### 🆕 New Skills — Part 5 (15 New Skills)
 
-Want a specific Skill? [Request it here](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=skill-request.md)
+#### Discovery & Research
+
+| Skill | Purpose | Time Saved | Folder |
+|---|---|---|---|
+| **Discovery Interview Guide** | Full screener + discussion guide + synthesis framework for user interviews | 1–2 hrs/sprint | [View](skills/discovery-interview-guide) |
+| **Job Story Mapper** | Maps JTBD across functional, emotional, and social dimensions with opportunity scoring | 1–2 hrs/workshop | [View](skills/job-story-mapper) |
+
+#### Planning & Strategy
+
+| Skill | Purpose | Time Saved | Folder |
+|---|---|---|---|
+| **OKR Builder** | Writes outcome-focused OKRs, flags vanity metrics and anti-patterns automatically | 1–2 hrs/quarter | [View](skills/okr-builder) |
+| **Feature Prioritisation** | Applies RICE, MoSCoW, Kano, ICE frameworks with rationale for every decision | 1–2 hrs/sprint | [View](skills/feature-prioritisation) |
+| **Roadmap Presentation** | Now/Next/Later roadmaps calibrated to executive, team, or customer audiences | 2–3 hrs/quarter | [View](skills/roadmap-presentation) |
+| **Pricing Strategy** | Value metric, tier design, freemium decision, competitive positioning, rollout plan | 3–4 hrs/review | [View](skills/pricing-strategy) |
+
+#### Delivery & Execution
+
+| Skill | Purpose | Time Saved | Folder |
+|---|---|---|---|
+| **Sprint Planning** | Sprint goals, velocity-calibrated backlogs, capacity plans, and planning agendas | 45–60 min/sprint | [View](skills/sprint-planning) |
+| **Technical Spec Template** | Full tech spec bridging product requirements and engineering implementation | 2–3 hrs/spec | [View](skills/technical-spec-template) |
+| **A/B Test Planner** | Statistically rigorous experiment design with sample size, duration, guardrail metrics | 1–2 hrs/test | [View](skills/ab-test-planner) |
+| **Go-to-Market Planner** | Cross-functional GTM plan with launch tiers, messaging, and activity tracker | 3–4 hrs/launch | [View](skills/go-to-market-planner) |
+| **Product Launch Checklist** | Pre-launch, launch day, and post-launch checklists with Go/No-Go framework | 1–2 hrs/launch | [View](skills/product-launch-checklist) |
+
+#### Analysis & Metrics
+
+| Skill | Purpose | Time Saved | Folder |
+|---|---|---|---|
+| **Data Analysis Standard** | Metric deep-dives, funnel analysis, cohort studies with stakeholder-ready outputs | 2–3 hrs/analysis | [View](skills/data-analysis-standard) |
+| **Retention Analysis** | Diagnoses churn, identifies the "aha moment", recommends testable interventions | 2–3 hrs/analysis | [View](skills/retention-analysis) |
+
+#### AI Product Building
+
+| Skill | Purpose | Time Saved | Folder |
+|---|---|---|---|
+| **AI Product Canvas** | Structures AI/LLM product decisions — model selection, data, evaluation, responsible AI | 3–4 hrs/canvas | [View](skills/ai-product-canvas) |
+
+#### PM Rituals
+
+| Skill | Purpose | Time Saved | Folder |
+|---|---|---|---|
+| **PM Weekly Review** | 20-minute weekly metrics + shipping + insights + priorities ritual | 30–40 min/week | [View](skills/pm-weekly-review) |
+
+---
 
 ## 💡 Real Results
 
-> "These Skills have become indispensable. I used to spend 3-4 hours every Friday on stakeholder updates. Now it takes 20 minutes to compile everything and let Claude format it. Game-changer."  
+> "These Skills have become indispensable. I used to spend 3–4 hours every Friday on stakeholder updates. Now it takes 20 minutes to compile everything and let Claude format it. Game-changer."
 > — **Mohit Aggarwal, Senior PM**
 
-**Time savings per week:**
-- PRD creation: -2.5 hours
-- Meeting notes: -1.5 hours
-- Stakeholder updates: -2.0 hours
-- Research synthesis: -2.5 hours
-- **Total: ~8-9 hours/week back in your schedule**
+**Time savings across all 33 skills:**
 
-## 📚 Documentation
+| Activity | Before | After | Saved/week |
+|---|---|---|---|
+| PRD creation | 3–4 hrs | 45 min | ~3 hrs |
+| Sprint planning | 1.5 hrs | 30 min | ~1 hr |
+| Weekly review & update | 60 min | 20 min | ~40 min |
+| Meeting notes | 30 min | 8 min | ~20 min |
+| Stakeholder updates | 45 min | 15 min | ~30 min |
+| OKR writing | 2 hrs | 30 min | ~1.5 hrs |
+| GTM planning | 4 hrs | 1 hr | ~3 hrs |
+| Data analysis write-up | 3 hrs | 45 min | ~2 hrs |
+| **Total** | | | **~12+ hrs/week** |
 
-- [Installation Guide](docs/installation.md) - Step-by-step setup
-- [Customization Guide](docs/customization.md) - Adapt Skills to your workflow
-- [Troubleshooting](docs/troubleshooting.md) - Common issues and fixes
-- [Creating Your Own Skills](docs/creating-skills.md) - Build custom Skills
+---
 
 ## 🛠️ Installation
 
 ### Method 1: Download Individual Skills (Easiest)
-
-1. Navigate to the skill folder (e.g., `skills/prd-template`)
+1. Navigate to the skill folder (e.g. `skills/sprint-planning`)
 2. Download all files in that folder
-3. Create a zip file containing those files
-4. Rename from `.zip` to `.skill`
-5. Upload to Claude via Settings → Skills
+3. Create a zip file and rename `.zip` → `.skill`
+4. Upload to Claude via Settings → Skills
 
 ### Method 2: Clone the Repo
 
-bash
-# Clone the repository
 git clone https://github.com/mohitagw15856/pm-claude-skills.git
-cd pm-claude-skills
-
-# Package a skill (creates .skill file)
-cd skills/prd-template
-zip -r ../../prd-template.skill .
-cd ../..
-
-# Now upload prd-template.skill to Claude
+cd pm-claude-skills/skills/sprint-planning
+zip -r ../../sprint-planning.skill .
+# Upload sprint-planning.skill to Claude Settings → Skills
 
 
-### Method 3: Direct Download (When Available)
+### Method 3: Pre-packaged Releases
+Check the [Releases](https://github.com/mohitagw15856/pm-claude-skills/releases) page for bundled `.skill` files.
 
-Check the [Releases](https://github.com/mohitagw15856/pm-claude-skills/releases) page for pre-packaged `.skill` files.
+---
 
 ## 🎓 How to Use
 
-1. **Upload a Skill**: Follow installation instructions above
-2. **Just ask Claude**: Claude will automatically recognize when to use the Skill
-   - "Help me write a PRD for X"
-   - "Take notes from this meeting transcript"
-   - "Create a competitive analysis of X, Y, Z"
-3. **No special commands needed**: Skills activate automatically based on context
+Skills activate automatically — just ask Claude naturally:
 
-## 🔧 Customization
 
-Every company has different formats and processes. These Skills are designed to be customized:
+"Help me plan our next sprint — we have 3 engineers and 8 points carry-over"
+"Build OKRs for our retention goal this quarter"
+"Design an A/B test for our new onboarding flow"
+"Write a job story map for our dashboard feature"
+"Create a GTM plan for our API launch in 4 weeks"
+"Build an AI product canvas for our summarisation feature"
 
-1. Download the Skill folder
-2. Edit the `SKILL.md` file to match your standards
-3. Add your company's examples to the instructions
+
+No slash commands. No special syntax. Claude recognises the context and loads the right skill.
+
+---
+
+## 🔧 Customisation
+
+1. Download the skill folder
+2. Edit `SKILL.md` to match your company's formats and terminology
+3. Add your own templates, examples, or frameworks
 4. Re-package and upload
 
-See the [Customization Guide](docs/customization.md) for detailed instructions.
+See [docs/customization.md](docs/customization.md) for full instructions.
+
+---
 
 ## 🤝 Contributing
 
-Found a bug? Want to suggest an improvement? Contributions are welcome!
+Contributions welcome! Current gaps:
+- Domain-specific skills (B2B SaaS, Consumer, Platform/API)
+- Tool-specific skills (Linear, Amplitude, Mixpanel)
+- Non-English language skills
 
-- 🐛 [Report an Issue](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=bug-report.md)
-- 💡 [Request a Skill](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=skill-request.md)
-- 🔀 [Submit a Pull Request](https://github.com/mohitagw15856/pm-claude-skills/pulls)
-- 💬 [Join Discussions](https://github.com/mohitagw15856/pm-claude-skills/discussions)
+[→ Request a skill](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=skill-request.md) · [→ Submit a PR](https://github.com/mohitagw15856/pm-claude-skills/pulls) · [→ Join Discussions](https://github.com/mohitagw15856/pm-claude-skills/discussions)
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-## ⭐ Show Your Support
-
-If these Skills save you time, please:
-1. ⭐ Star this repository
-2. 📢 Share with fellow PMs
-3. 🐛 Report bugs or suggest improvements
-4. ✍️ Write about your experience
+---
 
 ## 📈 Roadmap
 
-**Q1 2026:**
-- [ ] Add Data Analysis Standard Skill
-- [ ] Add Roadmap Presentation Skill
-- [ ] Create video tutorials
-- [ ] Pre-packaged .skill files in Releases
+**v3.1 (Q2 2026):**
+- [ ] Jira Integration Skill (create/update tickets via Claude)
+- [ ] Amplitude Analysis Skill (structured metric queries)
+- [ ] Linear Sprint Skill (Linear-specific sprint management)
+- [ ] B2B SaaS PM Skill Pack
 
-**Q2 2026:**
-- [ ] Domain-specific Skills (SaaS PM, B2B PM, Growth PM)
-- [ ] Team collaboration Skills
-- [ ] Notion/Confluence template packs
+**v4.0 (Q3 2026):**
+- [ ] Team Skills Pack (shared skills across a PM team)
+- [ ] PM Career Coaching Skill (promotion prep, feedback synthesis)
+- [ ] Community Skill Library (submitted by the community)
 
-**Long-term:**
-- [ ] Interactive Skill builder tool
-- [ ] Integration examples with PM tools
-- [ ] Community-contributed Skills library
+---
 
-## 📄 License
+## 📚 Documentation
 
-This project is licensed under the MIT License - see [LICENSE](LICENSE) for details.
+- [Installation Guide](docs/installation.md)
+- [Customisation Guide](docs/customization.md)
+- [Troubleshooting](docs/troubleshooting.md)
+- [Creating Your Own Skills](docs/creating-skills.md)
 
-You're free to use, modify, and distribute these Skills. Attribution appreciated but not required.
+---
 
 ## 🙋 FAQ
 
-**Q: Do I need a paid Claude account?**  
+**Q: Do I need a paid Claude account?**
 A: Yes, Skills require Claude Pro, Team, or Enterprise.
 
-**Q: Can I customize these Skills for my team?**  
-A: Absolutely! See our [Customization Guide](docs/customization.md).
+**Q: Can I customise these for my team?**
+A: Absolutely — see the Customisation Guide.
 
-**Q: Do Skills work with the Claude API?**  
-A: Yes! Skills work in claude.ai, Claude Code, and via the API.
+**Q: Do Skills work with the Claude API?**
+A: Yes — claude.ai, Claude Code, and the API all support Skills.
 
-**Q: What if a Skill doesn't work?**  
-A: Check [Troubleshooting](docs/troubleshooting.md) or [open an issue](https://github.com/mohitagw15856/pm-claude-skills/issues).
+**Q: How do I create my own Skills?**
+A: See Creating Your Own Skills for a complete guide.
 
-**Q: How do I create my own Skills?**  
-A: See [Creating Your Own Skills](docs/creating-skills.md) for a complete guide.
+**Q: Can I use these commercially?**
+A: Yes — MIT licence allows commercial use.
 
-**Q: Can I use these commercially?**  
-A: Yes! MIT license allows commercial use.
+---
+
+## 📄 Licence
+
+MIT — use, modify, and distribute freely. Attribution appreciated.
+
+---
 
 ## 🔗 Links
 
-- 📝 [Original Medium Article](https://medium.com/product-powerhouse/claude-skills-the-ai-feature-thats-quietly-changing-how-product-managers-work-aad5d8d0640a)
-- 💼 [Connect on LinkedIn](www.linkedin.com/in/mohitaggarwal4)
-- ✉️ [Email me](mailto:mohit15856@gmail.com)
-- Writing these up and refining them took a fair few evenings. If they saved you some time, a [coffee](https://buymeacoffee.com/mohit15856) is always appreciated 
+- 📝 [Part 1 — Original Medium Article](https://medium.com/product-powerhouse/claude-skills-the-ai-feature-thats-quietly-changing-how-product-managers-work-aad5d8d0640a)
+- 📝 Part 5 — 15 New Skills *(link once published)*
+- 💼 [Connect on LinkedIn](https://www.linkedin.com/in/mohitaggarwal4)
+- ✉️ [Email](mailto:mohit15856@gmail.com)
 
-## 🙏 Acknowledgments
-
-Thank you to everyone who read and shared my Medium article, and to the Anthropic team for building such a powerful feature.
-
-Special thanks to the early testers who provided feedback on these Skills.
+Writing these up and refining them took a fair few evenings. If they saved you some time, [a coffee is always appreciated](https://buymeacoffee.com).
 
 ---
 
 **Made with ☕ by [Mohit Aggarwal](https://mohit-pm.netlify.app/)**
 
-*Helping product managers work smarter with AI*
+*Helping product managers work smarter with AI — one skill at a time.*
 
-⭐ **Star this repo to get updates as new Skills are added!**
+⭐ **Star this repo to get notified when new skills drop.**
