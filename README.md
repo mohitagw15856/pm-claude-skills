@@ -322,7 +322,7 @@ MIT — use, modify, and distribute freely. Attribution appreciated.
 ## 🔗 Links
 
 - 📝 [Part 1 — Original Medium Article](https://medium.com/product-powerhouse/claude-skills-the-ai-feature-thats-quietly-changing-how-product-managers-work-aad5d8d0640a)
-- 📝 Part 5 — 15 New Skills *(link once published)*
+- 📝 Part 5 — 15 New Skills *(https://medium.com/p/7968ab6bb1e1)*
 - 💼 [Connect on LinkedIn](https://www.linkedin.com/in/mohitaggarwal4)
 - ✉️ [Email](mailto:mohit15856@gmail.com)
 
