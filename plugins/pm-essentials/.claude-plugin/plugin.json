@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-essentials",
+  "version": "3.0.0",
+  "description": "Core PM skills: PRD Template, Meeting Notes, Stakeholder Update, User Research Synthesis, and Competitive Analysis. The 5 skills every PM needs first.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["product-management", "prd", "meeting-notes", "stakeholder", "user-research", "competitive-analysis"]
+}

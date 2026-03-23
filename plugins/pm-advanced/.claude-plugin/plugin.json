@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-advanced",
+  "version": "3.0.0",
+  "description": "Advanced PM skills: AI Product Canvas, Multi-Source Signal Synthesiser, Experiment Designer, Design Handoff Brief. For senior PMs working on complex or AI-powered products.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["product-management", "ai-product", "experiment-design", "design-handoff", "signal-synthesis"]
+}

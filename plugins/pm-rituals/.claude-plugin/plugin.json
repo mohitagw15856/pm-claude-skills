@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-rituals",
+  "version": "3.0.0",
+  "description": "PM Weekly Review: a 20-minute structured ritual covering metrics movement, shipping progress, customer insights, and next week's top 3 priorities in a shareable update.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["product-management", "weekly-review", "productivity", "rituals", "planning"]
+}

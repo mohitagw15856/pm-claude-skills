@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-strategy",
+  "version": "3.0.0",
+  "description": "Strategy & stakeholder skills: Competitor Signal Tracker, Competitive Intelligence Monitor, Stakeholder Influence Mapper, Strategic Narrative Generator, Executive Update, Ambiguity Resolver.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["product-management", "strategy", "competitive-intelligence", "stakeholder", "executive", "narrative"]
+}

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-discovery",
+  "version": "3.0.0",
+  "description": "Discovery & research skills: Discovery Interview Guide, Job Story Mapper, User Interview Synthesis, Assumption Mapper. Structure user research from screener to synthesis.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["product-management", "user-research", "discovery", "jtbd", "interviews", "assumption-mapping"]
+}

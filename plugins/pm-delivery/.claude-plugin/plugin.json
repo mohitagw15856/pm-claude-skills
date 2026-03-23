@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-delivery",
+  "version": "3.0.0",
+  "description": "Sprint & delivery skills: Sprint Planning, Technical Spec Template, A/B Test Planner, Go-to-Market Planner, Product Launch Checklist, Sprint Brief, Retro Analysis.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["product-management", "sprint", "agile", "ab-testing", "go-to-market", "launch", "technical-spec"]
+}
