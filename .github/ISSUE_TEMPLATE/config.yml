@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 Read the article series
+    url: https://medium.com/product-powerhouse/claude-skills-the-ai-feature-thats-quietly-changing-how-product-managers-work-aad5d8d0640a
+    about: Full background on the Claude Skills Library and how to use it
+  - name: 💬 Start a Discussion
+    url: https://github.com/mohitagw15856/pm-claude-skills/discussions
+    about: For open-ended conversations, ideas, and community skill sharing
