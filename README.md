@@ -307,6 +307,18 @@ claude plugin install pm-cross@pm-claude-skills
 
 
 ---
+🛠️ Custom Skills for Your Team
+The 80 skills in this library are built for general professional workflows. But the most powerful version of Claude Skills is one built specifically for your team — your templates, your terminology, your processes, your quality standards.
+What custom skills look like in practice:
+
+A law firm's contract review skill trained on their specific clause library and risk tolerance
+A SaaS company's sprint brief skill that knows their engineering conventions and definition of done
+A finance team's board pack skill that follows their exact narrative structure and slide format
+An HR team's job description skill that reflects their values language and includes their specific benefits
+
+The difference between a generic skill and one built for your context is significant. Generic skills eliminate the blank page. Custom skills eliminate the rework.
+If you want skills built for your team's specific workflows — [get in touch](mailto:mohit15856@gmail.com).
+Include a brief description of your team, the workflows you want to automate, and the tools you use. I'll come back to you within 48 hours.
 
 ## 📖 How Skills Work
 
