@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "pm-figma",
   "version": "1.0.0",
-  "description": "Figma skills for product managers and designers: Component Audit, Design Brief, Annotation Guide, Design Review, User Flow Planner, Variant Matrix, Spacing System, Prototype Plan, Design QA, PM Design Critique. Work smarter in Figma across the full design lifecycle.",
+  "description": "Figma skills for PMs and designers: Component Audit, Design Brief, Annotation Guide, Design Review, User Flow Planner, Variant Matrix, Spacing System, Prototype Plan, Design QA, PM Design Critique. Work smarter across the full Figma design lifecycle.",
   "author": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
