@@ -12,13 +12,11 @@ A community-built library of Claude Skills covering product management, marketin
 
 In Claude Code, run:
 
-```bash
 /plugin marketplace add mohitagw15856/pm-claude-skills
-```
+
 
 Or install by profession:
 
-```bash
 claude plugin install pm-essentials@pm-claude-skills     # Core PM + Word tracked changes
 claude plugin install pm-delivery@pm-claude-skills       # Delivery + PowerPoint auditor
 claude plugin install pm-data@pm-claude-skills           # Data + chart data extractor
@@ -30,15 +28,14 @@ claude plugin install pm-operations@pm-claude-skills     # Operations
 claude plugin install pm-research@pm-claude-skills       # Research & Healthcare
 claude plugin install pm-cross@pm-claude-skills          # Cross-profession
 claude plugin install pm-figma@pm-claude-skills          # Figma
-```
+
 
 Or clone and symlink for auto-updates:
 
-```bash
 git clone https://github.com/mohitagw15856/pm-claude-skills.git ~/pm-claude-skills
 mkdir -p ~/.claude/skills
 ln -s ~/pm-claude-skills/skills/* ~/.claude/skills/
-```
+
 
 ---
 
@@ -73,8 +70,8 @@ This repo was built alongside a published article series. Read the full story:
 | Part 7 | 33 Claude Skills for PMs Are Now in the Claude Code Marketplace | [Read →](https://medium.com/product-powerhouse/33-claude-skills-for-pms-are-now-in-the-claude-code-marketplace-heres-how-to-install-them-7968ab6bb1e1) |
 | Part 8 | I Added 20 New Claude Skills Beyond Product Management | [Read →](https://medium.com/product-powerhouse/i-built-20-new-claude-skills-for-every-profession-heres-the-full-library-50278e00bf72) |
 | Part 9 | 80 Claude Skills for Every Profession — Lawyers, Doctors, Finance, HR, Sales and More | [Read →](https://medium.com/@mohit15856/80-claude-skills-for-every-profession-lawyers-doctors-finance-hr-sales-and-more-3dfde9ec0033) |
-| Part 10 | A Day in the Life With 80 Claude Skills | *Link TBC* |
-| Part 11 | 10 Figma Claude Skills for PMs and Designers | *Link TBC* |
+| Part 10 | A Day in the Life With 80 Claude Skills | [Read →](https://medium.com/@mohit15856/a-day-in-the-life-with-80-claude-skills-what-actually-gets-triggered-7caf9f5c159e) |
+| Part 11 | 10 Figma Claude Skills for PMs and Designers | [Read →](https://medium.com/@mohit15856/10-figma-claude-skills-for-pms-and-designers-the-complete-figma-toolkit-784441d07a78)|
 | Part 12 | I Built the Same Skills Library for ChatGPT — Here's What's Different | [Read →](https://medium.com/product-powerhouse/i-built-the-same-skills-library-for-chatgpt-heres-what-s-different-a9305f9c20b9) |
 | Part 13 | I Re-Tested My 90 Claude Skills on Opus 4.7 — Here's What Got Better | *Latest — Link TBC* |
 
@@ -273,9 +270,8 @@ This repo was built alongside a published article series. Read the full story:
 | 91 | **Figma Design QA** | `skills/figma-design-qa/` | Pre-handoff QA checklist covering file hygiene, states, accessibility, and handoff readiness |
 | 92 | **Figma Design Critique (PM)** | `skills/figma-design-critique-pm/` | PM-perspective design critique focused on product outcomes, not aesthetics |
 
-```bash
 claude plugin install pm-figma@pm-claude-skills
-```
+
 
 ---
 
@@ -291,7 +287,6 @@ This is an open-source community library. If you've built a skill that saves you
 4. Raise a pull request with a short description of what the skill does and why you built it
 
 **SKILL.md template:**
-```markdown
 ---
 name: your-skill-name
 description: "One sentence. Use when [trigger condition]. Produces [output description]."
@@ -300,7 +295,7 @@ description: "One sentence. Use when [trigger condition]. Produces [output descr
 # Skill Title
 
 [Instructions for Claude to follow when this skill is invoked]
-```
+
 
 **What makes a good skill:**
 - Solves a recurring professional workflow (not a one-off task)
@@ -331,7 +326,6 @@ Have a skill idea? [Open an issue](../../issues) or raise it in [Discussions](..
 
 Install the whole library or just the bundles you need:
 
-```bash
 # Install everything
 /plugin marketplace add mohitagw15856/pm-claude-skills
 
@@ -358,7 +352,6 @@ claude plugin install pm-operations@pm-claude-skills
 claude plugin install pm-research@pm-claude-skills
 claude plugin install pm-cross@pm-claude-skills
 claude plugin install pm-figma@pm-claude-skills
-```
 
 ---
 
