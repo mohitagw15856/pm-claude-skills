@@ -64,6 +64,14 @@ ENDS
 ## Journalist Test
 Would a journalist care? Is the headline the full story? Is there a human angle? Is the quote something a human would say? Can the first paragraph stand alone?
 
+## Quality Checks
+
+- [ ] Headline uses active voice and is under 10 words
+- [ ] First paragraph stands alone as the complete story
+- [ ] Quote adds something the facts don't say (not a restatement)
+- [ ] Boilerplate is factual, not promotional
+- [ ] Embargo date and media contact are included
+
 ## Example Trigger Phrases
 - "Write a press release announcing [news]"
 - "Draft a media statement about [event]"

@@ -91,6 +91,14 @@ This call is NOT successful if we only pitched and got "sounds interesting, send
 ### Suggested Next Step
 "Based on what we discussed, the logical next step would be [specific]. Does [day/time] work?"
 
+## Quality Checks
+
+- [ ] Research summary includes recent news (last 90 days) — not just LinkedIn bio
+- [ ] Call hypothesis is written before the call (not post-rationalised after)
+- [ ] Discovery questions progress from context → pain → business impact → buying process
+- [ ] Success criteria define what "not successful" looks like (not just the ideal outcome)
+- [ ] A specific next step is proposed (not "let's stay in touch")
+
 ## Example Trigger Phrases
 - "Prepare me for a discovery call with [company/contact]"
 - "Build a call brief for my meeting with [name] at [company]"

@@ -1,11 +1,20 @@
 ---
 name: ab-test-planner
-description: Designs statistically rigorous A/B tests for product features, UI changes, onboarding flows, and pricing experiments. Use when asked to set up an experiment, run an A/B test, calculate sample size, or interpret test results. Triggers on "A/B test", "experiment", "split test", "statistical significance", "sample size".
+description: "Design statistically rigorous A/B tests for product features, UI changes, onboarding flows, and pricing experiments. Use when asked to set up an experiment, design an A/B test, calculate sample size, or interpret test results. Produces a complete test plan with hypothesis, variant definitions, sample size, duration estimate, guardrail metrics, and a results interpretation guide."
 ---
 
 # A/B Test Planner Skill
 
 Design experiments that produce trustworthy results — not just directional signals. Every test output includes hypothesis, success metrics, sample size, duration, and a results interpretation guide.
+
+## Required Inputs
+
+Ask the user for these if not provided:
+- **What is being tested** (feature, UI change, copy, pricing, onboarding step)
+- **Hypothesis** (or ask to help formulate one)
+- **Primary metric** (conversion rate, click-through, completion rate, etc.)
+- **Baseline rate** and **minimum detectable effect** (MDE)
+- **Daily eligible users** (to calculate duration)
 
 ## Experiment Design Checklist
 
@@ -93,3 +102,12 @@ Flag if traffic is too low to reach significance in under 8 weeks — recommend 
 - If user wants to test multiple variants, explain the multiple comparisons problem and recommend a Bonferroni correction or a Bayesian approach
 - If traffic is very low (<1,000 users/day), recommend qualitative alternatives: moderated testing, 5-second tests, or user interviews
 - Never approve a test with no guardrail metrics — always protect revenue, retention, or core engagement
+
+## Quality Checks
+
+- [ ] Hypothesis is directional (predicts a specific direction and magnitude, not "let's see")
+- [ ] Primary metric is singular (guardrail metrics are secondary)
+- [ ] Sample size is calculated from actual MDE and baseline (not guessed)
+- [ ] Test duration accounts for weekly seasonality (minimum 2 weeks)
+- [ ] Guardrail metrics are defined (at least one to protect revenue or core engagement)
+- [ ] Rollback trigger is specified with a concrete threshold

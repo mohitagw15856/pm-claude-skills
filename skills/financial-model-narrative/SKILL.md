@@ -55,6 +55,14 @@ For each significant variance:
 - Use past tense for actuals, conditional for forecast
 - One insight per paragraph
 
+## Quality Checks
+
+- [ ] Headline summary leads with meaning, not just the number
+- [ ] Every significant variance has a cause, permanence, and action
+- [ ] Forward-looking commentary includes specific risks and opportunities
+- [ ] Audience-appropriate language (board vs investor vs management)
+- [ ] One-off items clearly distinguished from recurring items
+
 ## Example Trigger Phrases
 - "Write a financial narrative for these results: [paste numbers]"
 - "Turn this P&L into a board narrative"

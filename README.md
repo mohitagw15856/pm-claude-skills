@@ -1,10 +1,10 @@
-# 🧠 Claude Skills Library — 93 Skills for Every Profession
+# 🧠 Claude Skills Library — 100 Skills for Every Profession
 
-> **Save 8–10 hours per week across 14 professions. Install in 2 minutes. Now with Opus 4.7-optimised vision and document skills.**
+> **Save 8–10 hours per week across 15 professions. Install in 2 minutes. Now with 100 skills and comprehensive quality improvements across every skill.**
 
-A community-built library of Claude Skills covering product management, marketing, engineering, data, design, Figma, leadership, legal, finance, HR, sales, operations, research, and more. Each skill is a structured SKILL.md file that teaches Claude how to produce professional-grade outputs for your specific workflows.
+A community-built library of Claude Skills covering product management, marketing, engineering, data, design, Figma, leadership, legal, finance, HR, sales, operations, research, education, and more. Each skill is a structured SKILL.md file that teaches Claude how to produce professional-grade outputs for your specific workflows.
 
-**🆕 Latest release (v5.2.0):** Three new skills that leverage Claude Opus 4.7's improved vision and document capabilities — pptx-slide-auditor, docx-tracked-changes-writer, and chart-data-extractor.
+**🆕 Latest release (v6.0.0):** 100 skills milestone — 7 new skills added, plus quality improvements across all 93 existing skills (standardised descriptions, Required Inputs sections, and Quality Checks on every skill).
 
 ---
 
@@ -42,19 +42,26 @@ ln -s ~/pm-claude-skills/skills/* ~/.claude/skills/
 
 ---
 
-## 🆕 What's New in v5.2.0 — Opus 4.7 Release
+## 🆕 What's New in v6.0.0 — 100 Skills Milestone
 
-Three new skills designed specifically to leverage Claude Opus 4.7's improved vision and document capabilities:
+**7 new skills added:**
 
 | Skill | Bundle | What It Does |
 |---|---|---|
-| **PPTX Slide Auditor** | pm-delivery | Audit a PowerPoint deck for layout issues, text overflow, visual hierarchy problems, and consistency gaps |
-| **Word Doc Tracked Changes** | pm-essentials | Produce properly-formatted tracked changes for Word documents — insertions, deletions, margin comments |
-| **Chart Data Extractor** | pm-data | Extract pixel-level data from chart images and produce a structured data table with confidence levels |
+| **Teaching Lesson Plan** | pm-cross | Structured lesson plans for any subject, audience, or setting — with objectives, activities, and formative assessment |
+| **SEO Content Brief** | pm-gtm | Complete SEO briefs with search intent analysis, competitor gaps, content outline, and on-page requirements |
+| **Media Pitch** | pm-gtm | Story-first journalist pitches with angle development framework and pitch rules |
+| **Change Management Plan** | pm-hr | Full change plan covering stakeholder analysis, communication strategy, training, and adoption metrics |
+| **Workshop Facilitation Guide** | pm-operations | Complete facilitation guides with activity instructions, decision protocols, and facilitator moves |
+| **Sales Forecasting Model** | pm-sales | Pipeline-based forecast with stage model, scenario analysis, assumption log, and activity sanity check |
+| **Tax Planning Checklist** | pm-finance | Year-end tax planning review framework across income, pension, CGT, business reliefs, and ISAs |
 
-Plus three existing skills (figma-design-qa, code-review-checklist, compliance-checklist) updated to remove verification scaffolding that Opus 4.7 no longer needs — faster and cleaner outputs.
+**Quality improvements across all 93 existing skills:**
+- Every skill now has a standardised `description` field using the "Verb the thing. Use when X. Produces Y." format
+- Every skill now has a `Required Inputs` section prompting Claude to ask for missing information before executing
+- Every skill now has a `Quality Checks` section with specific checkboxes Claude verifies before delivering output
 
-**Read the full story:** [Part 13 — I Re-Tested My 90 Claude Skills on Opus 4.7](#)
+**Read the full story:** [Part 14 — I Rebuilt All 93 Skills and Added 7 More: What 100 Skills Taught Me About What Makes a Great Skill](#)
 
 ---
 
@@ -76,11 +83,12 @@ This repo was built alongside a published article series. Read the full story:
 | Part 10 | A Day in the Life With 80 Claude Skills | *Link TBC* |
 | Part 11 | 10 Figma Claude Skills for PMs and Designers | *Link TBC* |
 | Part 12 | I Built the Same Skills Library for ChatGPT — Here's What's Different | [Read →](https://medium.com/product-powerhouse/i-built-the-same-skills-library-for-chatgpt-heres-what-s-different-a9305f9c20b9) |
-| Part 13 | I Re-Tested My 90 Claude Skills on Opus 4.7 — Here's What Got Better | *Latest — Link TBC* |
+| Part 13 | I Re-Tested My 90 Claude Skills on Opus 4.7 — Here's What Got Better | *Link TBC* |
+| Part 14 | I Rebuilt All 93 Skills and Added 7 More: What 100 Skills Taught Me About What Makes a Great Skill | *Latest — Link TBC* |
 
 ---
 
-## 🗂️ All 93 Skills
+## 🗂️ All 100 Skills
 
 ### 🛠️ Product Management (Skills 1–34)
 **Bundles:** `pm-essentials` · `pm-discovery` · `pm-planning` · `pm-delivery` · `pm-analytics` · `pm-strategy` · `pm-advanced` · `pm-rituals`
@@ -101,7 +109,7 @@ This repo was built alongside a published article series. Read the full story:
 
 ---
 
-### 📣 Marketing & GTM (Skills 35–38)
+### 📣 Marketing & GTM (Skills 35–40)
 **Bundle:** `pm-gtm`
 
 | # | Skill | Folder | What It Does |
@@ -110,168 +118,176 @@ This repo was built alongside a published article series. Read the full story:
 | 36 | **Content Calendar** | `skills/content-calendar/` | Multi-channel content calendars with opening hooks, formats, and repurposing map |
 | 37 | **Competitor Teardown** | `skills/competitor-teardown/` | Full competitive analysis: positioning map, feature comparison, messaging gaps, SWOT, recommendations |
 | 38 | **Email Campaign** | `skills/email-campaign/` | Sequenced email campaigns with subject lines, preview text, body copy, and CTAs |
+| 39 | **SEO Content Brief** 🆕 | `skills/seo-content-brief/` | Complete SEO briefs with search intent, competitor gap analysis, content outline, and on-page requirements |
+| 40 | **Media Pitch** 🆕 | `skills/media-pitch/` | Story-first journalist pitches with angle development framework and pitch writing rules |
 
 ---
 
-### 👩‍💻 Engineering & Tech (Skills 39–42)
+### 👩‍💻 Engineering & Tech (Skills 41–44)
 **Bundle:** `pm-engineering`
 
 | # | Skill | Folder | What It Does |
 |---|---|---|---|
-| 39 | **Code Review Checklist** | `skills/code-review-checklist/` | Tailored PR review checklists by language, type, and risk level |
-| 40 | **Incident Postmortem** | `skills/incident-postmortem/` | Blameless postmortems with timeline, RCA, impact, and action items |
-| 41 | **API Docs Writer** | `skills/api-docs-writer/` | Developer-facing API docs: endpoints, parameters, response schemas, code examples |
-| 42 | **Architecture Decision Record** | `skills/architecture-decision-record/` | ADRs with context, options considered, decision, consequences, and risks |
+| 41 | **Code Review Checklist** | `skills/code-review-checklist/` | Tailored PR review checklists by language, type, and risk level |
+| 42 | **Incident Postmortem** | `skills/incident-postmortem/` | Blameless postmortems with timeline, RCA, impact, and action items |
+| 43 | **API Docs Writer** | `skills/api-docs-writer/` | Developer-facing API docs: endpoints, parameters, response schemas, code examples |
+| 44 | **Architecture Decision Record** | `skills/architecture-decision-record/` | ADRs with context, options considered, decision, consequences, and risks |
 
 ---
 
-### 📊 Data & Analytics (Skills 43–46)
+### 📊 Data & Analytics (Skills 45–48)
 **Bundle:** `pm-data`
 
 | # | Skill | Folder | What It Does |
 |---|---|---|---|
-| 43 | **Metrics Framework** | `skills/metrics-framework/` | North Star + metric tree, dashboard tiers, counter-metrics |
-| 44 | **SQL Query Explainer** | `skills/sql-query-explainer/` | Explain, optimise, write, and document SQL in plain English |
-| 45 | **Dashboard Brief** | `skills/dashboard-brief/` | Complete dashboard spec: KPIs, charts, filters, layout, data requirements |
-| 46 | **Chart Data Extractor** 🆕 | `skills/chart-data-extractor/` | Extract pixel-level data from chart images into structured data tables |
+| 45 | **Metrics Framework** | `skills/metrics-framework/` | North Star + metric tree, dashboard tiers, counter-metrics |
+| 46 | **SQL Query Explainer** | `skills/sql-query-explainer/` | Explain, optimise, write, and document SQL in plain English |
+| 47 | **Dashboard Brief** | `skills/dashboard-brief/` | Complete dashboard spec: KPIs, charts, filters, layout, data requirements |
+| 48 | **Chart Data Extractor** | `skills/chart-data-extractor/` | Extract pixel-level data from chart images into structured data tables |
 
 ---
 
-### 🧑‍💼 Leadership & People (Skills 47–49)
+### 🧑‍💼 Leadership & People (Skills 49–51)
 **Bundle:** `pm-people`
 
 | # | Skill | Folder | What It Does |
 |---|---|---|---|
-| 47 | **Performance Review** | `skills/performance-review/` | Structured reviews from bullet-point notes — self, manager, peer, and upward |
-| 48 | **Hiring Rubric** | `skills/hiring-rubric/` | Interview scorecards with competencies, behavioural questions, and panel guide |
-| 49 | **Team Offsite Planner** | `skills/team-offsite-planner/` | Full offsite agenda, session facilitation notes, and logistics checklist |
+| 49 | **Performance Review** | `skills/performance-review/` | Structured reviews from bullet-point notes — self, manager, peer, and upward |
+| 50 | **Hiring Rubric** | `skills/hiring-rubric/` | Interview scorecards with competencies, behavioural questions, and panel guide |
+| 51 | **Team Offsite Planner** | `skills/team-offsite-planner/` | Full offsite agenda, session facilitation notes, and logistics checklist |
 
 ---
 
-### 🎨 Design & UX (Skills 50–52)
+### 🎨 Design & UX (Skills 52–54)
 **Bundle:** `pm-design`
 
 | # | Skill | Folder | What It Does |
 |---|---|---|---|
-| 50 | **UX Research Plan** | `skills/ux-research-plan/` | Research plans with screener, discussion guide, and synthesis framework |
-| 51 | **Design Critique** | `skills/design-critique/` | Structured feedback using JTBD, Gestalt principles, and Nielsen's heuristics |
-| 52 | **Accessibility Audit** | `skills/accessibility-audit/` | WCAG 2.2 audit with prioritised remediation and quick wins |
+| 52 | **UX Research Plan** | `skills/ux-research-plan/` | Research plans with screener, discussion guide, and synthesis framework |
+| 53 | **Design Critique** | `skills/design-critique/` | Structured feedback using JTBD, Gestalt principles, and Nielsen's heuristics |
+| 54 | **Accessibility Audit** | `skills/accessibility-audit/` | WCAG 2.2 audit with prioritised remediation and quick wins |
 
 ---
 
-### 🏢 Business & Strategy (Skills 53–55)
+### 🏢 Business & Strategy (Skills 55–57)
 **Bundle:** `pm-business`
 
 | # | Skill | Folder | What It Does |
 |---|---|---|---|
-| 53 | **Investor Update** | `skills/investor-update/` | Monthly/quarterly investor updates: metrics, highlights, challenges, and asks |
-| 54 | **Board Deck Narrative** | `skills/board-deck-narrative/` | Slide-by-slide board presentation structure with narrative beats and talking points |
-| 55 | **Job Application** | `skills/job-application/` | Tailored CV summary, ATS keyword optimisation, and cover letter for any JD |
+| 55 | **Investor Update** | `skills/investor-update/` | Monthly/quarterly investor updates: metrics, highlights, challenges, and asks |
+| 56 | **Board Deck Narrative** | `skills/board-deck-narrative/` | Slide-by-slide board presentation structure with narrative beats and talking points |
+| 57 | **Job Application** | `skills/job-application/` | Tailored CV summary, ATS keyword optimisation, and cover letter for any JD |
 
 ---
 
-### ⚖️ Legal (Skills 56–59)
+### ⚖️ Legal (Skills 58–61)
 **Bundle:** `pm-legal`
 
 > ⚠️ All legal skills include a disclaimer. Not a substitute for qualified legal advice.
 
 | # | Skill | Folder | What It Does |
 |---|---|---|---|
-| 56 | **Contract Review** | `skills/contract-review/` | Structured review with key terms, flagged clauses, risk rating, and plain English summary |
-| 57 | **NDA Analyser** | `skills/nda-analyser/` | Clause-by-clause NDA analysis with risk flags and negotiation checklist |
-| 58 | **Legal Brief** | `skills/legal-brief/` | Legal memos and argument outlines in IRAC format (Issue, Rule, Application, Conclusion) |
-| 59 | **Compliance Checklist** | `skills/compliance-checklist/` | GDPR, SOC 2, ISO 27001, FCA, HIPAA compliance checklists with prioritised gap analysis |
+| 58 | **Contract Review** | `skills/contract-review/` | Structured review with key terms, flagged clauses, risk rating, and plain English summary |
+| 59 | **NDA Analyser** | `skills/nda-analyser/` | Clause-by-clause NDA analysis with risk flags and negotiation checklist |
+| 60 | **Legal Brief** | `skills/legal-brief/` | Legal memos and argument outlines in IRAC format (Issue, Rule, Application, Conclusion) |
+| 61 | **Compliance Checklist** | `skills/compliance-checklist/` | GDPR, SOC 2, ISO 27001, FCA, HIPAA compliance checklists with prioritised gap analysis |
 
 ---
 
-### 💰 Finance (Skills 60–63)
+### 💰 Finance (Skills 62–66)
 **Bundle:** `pm-finance`
 
 | # | Skill | Folder | What It Does |
 |---|---|---|---|
-| 60 | **Financial Model Narrative** | `skills/financial-model-narrative/` | Turns P&L and model outputs into board-ready written narratives |
-| 61 | **Budget Variance Analysis** | `skills/budget-variance-analysis/` | Variance table with root cause commentary and management summary |
-| 62 | **Investor Pitch Deck** | `skills/investor-pitch-deck/` | Slide-by-slide pitch deck structure with what each slide must prove |
-| 63 | **Financial Due Diligence** | `skills/financial-due-diligence/` | DD document request list, analytical questions, and red flags checklist |
+| 62 | **Financial Model Narrative** | `skills/financial-model-narrative/` | Turns P&L and model outputs into board-ready written narratives |
+| 63 | **Budget Variance Analysis** | `skills/budget-variance-analysis/` | Variance table with root cause commentary and management summary |
+| 64 | **Investor Pitch Deck** | `skills/investor-pitch-deck/` | Slide-by-slide pitch deck structure with what each slide must prove |
+| 65 | **Financial Due Diligence** | `skills/financial-due-diligence/` | DD document request list, analytical questions, and red flags checklist |
+| 66 | **Tax Planning Checklist** 🆕 | `skills/tax-planning-checklist/` | Year-end tax planning framework across income, pension, CGT, business reliefs, and ISAs |
 
 ---
 
-### 👥 HR (Skills 64–67)
+### 👥 HR (Skills 67–71)
 **Bundle:** `pm-hr`
 
 | # | Skill | Folder | What It Does |
 |---|---|---|---|
-| 64 | **Job Description Writer** | `skills/job-description-writer/` | Inclusive, structured JDs with built-in language review and salary range nudge |
-| 65 | **Onboarding Plan** | `skills/onboarding-plan/` | 30/60/90-day plans with week-by-week structure, milestones, and manager checklist |
-| 66 | **Employee Engagement Survey** | `skills/employee-engagement-survey/` | Survey design + results analysis mode with eNPS and action planning template |
-| 67 | **Redundancy Consultation** | `skills/redundancy-consultation/` | Process timeline, at-risk letter, consultation script, and confirmation letter — UK law |
+| 67 | **Job Description Writer** | `skills/job-description-writer/` | Inclusive, structured JDs with built-in language review and salary range nudge |
+| 68 | **Onboarding Plan** | `skills/onboarding-plan/` | 30/60/90-day plans with week-by-week structure, milestones, and manager checklist |
+| 69 | **Employee Engagement Survey** | `skills/employee-engagement-survey/` | Survey design + results analysis mode with eNPS and action planning template |
+| 70 | **Redundancy Consultation** | `skills/redundancy-consultation/` | Process timeline, at-risk letter, consultation script, and confirmation letter — UK law |
+| 71 | **Change Management Plan** 🆕 | `skills/change-management-plan/` | Full change plan covering stakeholder analysis, communication strategy, training, and adoption metrics |
 
 ---
 
-### 🤝 Sales (Skills 68–71)
+### 🤝 Sales (Skills 72–76)
 **Bundle:** `pm-sales`
 
 | # | Skill | Folder | What It Does |
 |---|---|---|---|
-| 68 | **Sales Battlecard** | `skills/sales-battlecard/` | One-page competitive battlecard with objection responses and landmine questions |
-| 69 | **Discovery Call Prep** | `skills/discovery-call-prep/` | Call brief with research summary, hypothesis, structured questions, and success criteria |
-| 70 | **Proposal Writer** | `skills/proposal-writer/` | Commercial proposals structured around the prospect's problem, not the product |
-| 71 | **Account Plan** | `skills/account-plan/` | Strategic account plan with relationship map, whitespace analysis, risks, and 90-day actions |
+| 72 | **Sales Battlecard** | `skills/sales-battlecard/` | One-page competitive battlecard with objection responses and landmine questions |
+| 73 | **Discovery Call Prep** | `skills/discovery-call-prep/` | Call brief with research summary, hypothesis, structured questions, and success criteria |
+| 74 | **Proposal Writer** | `skills/proposal-writer/` | Commercial proposals structured around the prospect's problem, not the product |
+| 75 | **Account Plan** | `skills/account-plan/` | Strategic account plan with relationship map, whitespace analysis, risks, and 90-day actions |
+| 76 | **Sales Forecasting Model** 🆕 | `skills/sales-forecasting-model/` | Pipeline-based forecast with stage model, scenario analysis, assumption log, and activity sanity check |
 
 ---
 
-### ⚙️ Operations (Skills 72–75)
+### ⚙️ Operations (Skills 77–81)
 **Bundle:** `pm-operations`
 
 | # | Skill | Folder | What It Does |
 |---|---|---|---|
-| 72 | **Process Documentation** | `skills/process-documentation/` | Clear process docs with steps, roles, edge cases — followable by a new starter |
-| 73 | **SOP Writer** | `skills/sop-writer/` | Formal, audit-ready SOPs with version control, quality checks, and non-conformance process |
-| 74 | **Vendor Evaluation** | `skills/vendor-evaluation/` | Weighted vendor scorecard, RFP questions, reference check template, and recommendation |
-| 75 | **Project Status Report** | `skills/project-status-report/` | RAG status reports with milestone progress, issues, risks, and decisions required |
+| 77 | **Process Documentation** | `skills/process-documentation/` | Clear process docs with steps, roles, edge cases — followable by a new starter |
+| 78 | **SOP Writer** | `skills/sop-writer/` | Formal, audit-ready SOPs with version control, quality checks, and non-conformance process |
+| 79 | **Vendor Evaluation** | `skills/vendor-evaluation/` | Weighted vendor scorecard, RFP questions, reference check template, and recommendation |
+| 80 | **Project Status Report** | `skills/project-status-report/` | RAG status reports with milestone progress, issues, risks, and decisions required |
+| 81 | **Workshop Facilitation Guide** 🆕 | `skills/workshop-facilitation-guide/` | Complete facilitation guides with activity instructions, decision protocols, and facilitator moves |
 
 ---
 
-### 🏥 Research & Healthcare (Skills 76–79)
+### 🏥 Research & Healthcare (Skills 82–85)
 **Bundle:** `pm-research`
 
 > ⚠️ Healthcare skills are for documentation and educational purposes only. All clinical content must be reviewed by a qualified professional.
 
 | # | Skill | Folder | What It Does |
 |---|---|---|---|
-| 76 | **Clinical Case Summary** | `skills/clinical-case-summary/` | SBAR handovers, SOAP notes, and case reports for educational and documentation use |
-| 77 | **Research Protocol** | `skills/research-protocol/` | Complete study protocols with objectives, methodology, ethics, and analysis plan |
-| 78 | **Patient Communication** | `skills/patient-communication/` | Plain English patient letters, leaflets, and results communications at Grade 6 reading level |
-| 79 | **Literature Review** | `skills/literature-review/` | Thematically organised literature reviews with synthesis, critical analysis, and gap identification |
+| 82 | **Clinical Case Summary** | `skills/clinical-case-summary/` | SBAR handovers, SOAP notes, and case reports for educational and documentation use |
+| 83 | **Research Protocol** | `skills/research-protocol/` | Complete study protocols with objectives, methodology, ethics, and analysis plan |
+| 84 | **Patient Communication** | `skills/patient-communication/` | Plain English patient letters, leaflets, and results communications at Grade 6 reading level |
+| 85 | **Literature Review** | `skills/literature-review/` | Thematically organised literature reviews with synthesis, critical analysis, and gap identification |
 
 ---
 
-### 🌐 Cross-Profession (Skills 80–82)
+### 🌐 Cross-Profession (Skills 86–89)
 **Bundle:** `pm-cross`
 
 | # | Skill | Folder | What It Does |
 |---|---|---|---|
-| 80 | **Press Release** | `skills/press-release/` | Journalist-ready press releases with headline rules, boilerplate, and journalist test |
-| 81 | **Grant Proposal** | `skills/grant-proposal/` | Complete grant applications aligned to funder priorities with budget narrative |
-| 82 | **Executive Summary** | `skills/executive-summary/` | Decision-ready executive summaries with bottom line upfront, adapted for any audience |
+| 86 | **Press Release** | `skills/press-release/` | Journalist-ready press releases with headline rules, boilerplate, and journalist test |
+| 87 | **Grant Proposal** | `skills/grant-proposal/` | Complete grant applications aligned to funder priorities with budget narrative |
+| 88 | **Executive Summary** | `skills/executive-summary/` | Decision-ready executive summaries with bottom line upfront, adapted for any audience |
+| 89 | **Teaching Lesson Plan** 🆕 | `skills/teaching-lesson-plan/` | Complete lesson plans for any subject, audience, or setting — with objectives, activities, and formative assessment |
 
 ---
 
-### 🖼️ Figma (Skills 83–92)
+### 🖼️ Figma (Skills 90–100 — reaching the milestone)
 **Bundle:** `pm-figma`
 
 | # | Skill | Folder | What It Does |
 |---|---|---|---|
-| 83 | **Figma Component Audit** | `skills/figma-component-audit/` | Audit component library for naming issues, coverage gaps, and variant completeness |
-| 84 | **Figma Design Brief** | `skills/figma-design-brief/` | Convert PRDs and feature requests into structured Figma design briefs |
-| 85 | **Figma Annotation Guide** | `skills/figma-annotation-guide/` | Generate complete developer handoff annotations covering all states and edge cases |
-| 86 | **Figma Design Review** | `skills/figma-design-review/` | PM design review against requirements with explicit approval status |
-| 87 | **Figma User Flow Planner** | `skills/figma-user-flow-planner/` | Map all screens, states, and decision points before opening Figma |
-| 88 | **Figma Variant Matrix** | `skills/figma-variant-matrix/` | Define all component variants, properties, and states before building |
-| 89 | **Figma Spacing System** | `skills/figma-spacing-system/` | Design a complete spacing scale, grid, and token system |
-| 90 | **Figma Prototype Plan** | `skills/figma-prototype-plan/` | Plan prototype scope, interactions, and test task scripts for user testing |
-| 91 | **Figma Design QA** | `skills/figma-design-qa/` | Pre-handoff QA checklist covering file hygiene, states, accessibility, and handoff readiness |
-| 92 | **Figma Design Critique (PM)** | `skills/figma-design-critique-pm/` | PM-perspective design critique focused on product outcomes, not aesthetics |
+| 90 | **Figma Component Audit** | `skills/figma-component-audit/` | Audit component library for naming issues, coverage gaps, and variant completeness |
+| 91 | **Figma Design Brief** | `skills/figma-design-brief/` | Convert PRDs and feature requests into structured Figma design briefs |
+| 92 | **Figma Annotation Guide** | `skills/figma-annotation-guide/` | Generate complete developer handoff annotations covering all states and edge cases |
+| 93 | **Figma Design Review** | `skills/figma-design-review/` | PM design review against requirements with explicit approval status |
+| 94 | **Figma User Flow Planner** | `skills/figma-user-flow-planner/` | Map all screens, states, and decision points before opening Figma |
+| 95 | **Figma Variant Matrix** | `skills/figma-variant-matrix/` | Define all component variants, properties, and states before building |
+| 96 | **Figma Spacing System** | `skills/figma-spacing-system/` | Design a complete spacing scale, grid, and token system |
+| 97 | **Figma Prototype Plan** | `skills/figma-prototype-plan/` | Plan prototype scope, interactions, and test task scripts for user testing |
+| 98 | **Figma Design QA** | `skills/figma-design-qa/` | Pre-handoff QA checklist covering file hygiene, states, accessibility, and handoff readiness |
+| 99 | **Figma Design Critique (PM)** | `skills/figma-design-critique-pm/` | PM-perspective design critique focused on product outcomes, not aesthetics |
+| 100 | **PM Weekly Review** | `skills/pm-weekly-review/` | Weekly PM review and planning ritual — metrics, shipping progress, blockers, and next week's priorities |
 
 ```bash
 claude plugin install pm-figma@pm-claude-skills
@@ -312,14 +328,11 @@ description: "One sentence. Use when [trigger condition]. Produces [output descr
 
 | Skill | Profession | Use Case |
 |---|---|---|
-| `teaching-lesson-plan` | Education | Structured lesson plans from curriculum objectives |
-| `seo-content-brief` | Marketing | Content briefs with keyword strategy and outline |
 | `grant-report` | Non-profit | Funder progress reports against grant objectives |
 | `architectural-spec` | Architecture | Project specifications and technical drawing briefs |
-| `media-pitch` | Journalism | Story pitches to editors and commissioning briefs |
 | `clinical-guideline-summary` | Healthcare | Plain English summaries of clinical guidelines |
-| `tax-planning-checklist` | Finance | Year-end tax planning checklist by entity type |
-| `sales-forecasting-model` | Sales | Structured pipeline forecasting and commentary |
+| `pitch-deck-feedback` | Startup | Investor-perspective critique of a pitch deck |
+| `board-minutes` | Governance | Formal board meeting minutes from discussion notes |
 
 Have a skill idea? [Open an issue](../../issues) or raise it in [Discussions](../../discussions).
 
@@ -374,7 +387,7 @@ Read the full breakdown: [Part 12 — I Built the Same Skills Library for ChatGP
 
 ## 🛠️ Custom Skills for Your Team
 
-The 93 skills in this library are built for general professional workflows. But the most powerful version of Claude Skills is one built specifically for *your* team — your templates, your terminology, your processes, your quality standards.
+The 100 skills in this library are built for general professional workflows. But the most powerful version of Claude Skills is one built specifically for *your* team — your templates, your terminology, your processes, your quality standards.
 
 **What custom skills look like in practice:**
 

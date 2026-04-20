@@ -81,11 +81,12 @@ NOTE: Steps must be written in imperative form. Each step must have one action o
 | 1.0 | [Date] | [Name] | Initial release |
 
 ## Quality Checks
-- All steps in imperative form
-- Each step has exactly one action
-- Roles specified for every step
-- Quality checkpoints at critical stages
-- Non-conformance process defined
+- [ ] All steps written in imperative form ("Open...", "Navigate...", "Confirm...")
+- [ ] Each step has exactly one action
+- [ ] Role specified for every step
+- [ ] Quality checkpoints at critical stages
+- [ ] Non-conformance process defines who to notify and how to document
+- [ ] Document history table and review date are included
 
 ## Example Trigger Phrases
 - "Write an SOP for [process]"

@@ -1,6 +1,6 @@
 ---
 name: data-analysis-standard
-description: Structures product data analysis, metric deep-dives, funnel analysis, and cohort studies. Use when asked to analyse product metrics, investigate a drop in conversion, build a dashboard spec, or explain data to stakeholders. Triggers on "analyse metrics", "funnel analysis", "cohort analysis", "data deep dive", "why did X drop".
+description: "Structure a product data analysis, metric deep-dive, funnel analysis, or cohort study. Use when asked to analyse product metrics, investigate a drop in conversion, explain a data change to stakeholders, or find the root cause of a metric movement. Produces a structured analysis with question, root cause, confidence level, and recommended action."
 ---
 
 # Data Analysis Standard Skill
@@ -99,6 +99,23 @@ Output a cohort retention table and annotate:
 **What this analysis does NOT tell us:** [Important caveat — what data is missing or what can't be concluded]
 
 ---
+
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Metric or question** being investigated
+- **Time period** (what changed, from when to when)
+- **Data available** (which segments, sources, or queries you have access to)
+- **Business context** (what decision this analysis informs)
+- **Audience** (who will read this — exec / team / data team)
+
+## Quality Checks
+
+- [ ] Analysis answers all 4 questions: what changed, why, so what, now what
+- [ ] Root cause has evidence (not just hypothesis)
+- [ ] Confidence level is stated and justified
+- [ ] What the data cannot tell us is explicitly named
+- [ ] Recommended action includes an owner and timeline
 
 ## Guidelines
 

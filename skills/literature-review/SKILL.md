@@ -59,11 +59,11 @@ Organised thematically — not chronologically. Each theme = one section.
 For each paper: internal validity, external validity, bias types, effect size significance vs clinical significance, funding conflicts.
 
 ## Quality Checks
-- Organised thematically not as paper summaries
-- Evidence synthesised across papers
-- Critical analysis included
-- Gaps identified
-- All claims cited
+- [ ] Organised thematically (not as individual paper summaries)
+- [ ] Evidence synthesised across papers (not summarised one by one)
+- [ ] Critical analysis of methodology included for key studies
+- [ ] Gaps identified — what the field still needs
+- [ ] All claims cited
 
 ## Example Trigger Phrases
 - "Write a literature review on [topic]"

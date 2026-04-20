@@ -1,6 +1,6 @@
 ---
 name: meeting-notes
-description: Structure and format meeting notes following PM best practices. Use when the user needs to create, format, or organize meeting notes, capture action items from meetings, or document discussions and decisions.
+description: "Structure and format meeting notes following PM best practices. Use when asked to create meeting notes, format discussion notes, capture action items, or document decisions from any meeting type. Produces structured notes with decisions, action items (owner + deadline), open questions, and next steps."
 ---
 
 # Meeting Notes Skill
@@ -242,6 +242,14 @@ Template additions:
 **Next Meeting**: February 1, 2026 - Progress Check-in
 **Notes Sent**: January 20, 2026 5:30 PM
 ```
+
+## Quality Checks
+
+- [ ] Every action item has a single named owner (not "team")
+- [ ] Every action item has a concrete deadline
+- [ ] Decisions include context (why the decision was made)
+- [ ] Open questions have an owner and a "by when"
+- [ ] No verbatim transcripts — synthesis only
 
 ## Notes Distribution
 

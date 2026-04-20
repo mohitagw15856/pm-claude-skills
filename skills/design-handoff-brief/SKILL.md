@@ -1,12 +1,19 @@
 ---
 name: design-handoff-brief
-description: Transform feature briefs into structured design briefs that give designers the context they need
-tool_integration: Figma, Notion
+description: "Transform feature briefs into structured design briefs that give designers the context they need before opening Figma. Use when asked to write a design brief, create a design handoff, brief a designer on a new feature, or translate a PRD into design requirements. Produces a brief with user goal, emotional context, success criteria, constraints, edge cases, and out-of-scope boundaries."
 ---
+
 # Design Handoff Brief Skill
 
-## Purpose
 Produce a design brief that sets designers up for success — grounding them in user context and constraints before they open Figma, not after they've gone in the wrong direction.
+
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Feature brief or PRD** (even rough notes work)
+- **Designer's name or team** (for personalisation)
+- **Technical constraints** (any engineering limitations already known)
+- **Timeline** (when does design need to be done?)
 
 ## What Designers Actually Need (and PMs Often Skip)
 - The user's goal, not the feature name
@@ -23,8 +30,9 @@ Produce a design brief that sets designers up for success — grounding them in 
 4. List edge cases the design must handle
 5. Define success criteria the design should be evaluated against
 6. Write a "not in scope" section to prevent scope creep in design
+7. **Validate** — Confirm every edge case listed is specific enough to design for, and every out-of-scope item is concrete enough to say "no" to
 
-## Output Format
+## Output Structure
 
 ### Design Brief: [Feature Name]
 
@@ -57,3 +65,11 @@ Produce a design brief that sets designers up for success — grounding them in 
 - User research: [link]
 - Existing patterns: [Figma component library link]
 - Competitor examples: [links if relevant]
+
+## Quality Checks
+
+- [ ] User goal is written in user language (not feature/product language)
+- [ ] At least one edge case covers an error or failure state
+- [ ] Success criteria are measurable or observable (not "looks good")
+- [ ] Out-of-scope section names at least one thing that might seem in scope but isn't
+- [ ] Technical constraints are specific enough for an engineer to confirm

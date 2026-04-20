@@ -88,7 +88,10 @@ At end of [period]:
 - [Expansion opportunity] progressed to [stage]
 - Health score moved from [current] to [target]
 
-## Example Trigger Phrases
-- "Build an account plan for [customer]"
-- "Create a key account strategy for [account]"
-- "Help me plan my approach to renewing [account]"
+## Quality Checks
+
+- [ ] Relationship map identifies decision-makers, influencers, and any relationship gaps
+- [ ] Risks all have mitigation actions and named owners
+- [ ] Growth opportunities include estimated value (even roughly)
+- [ ] 90-day actions are specific (not "have a call" — what call, with whom, to achieve what)
+- [ ] Success criteria are measurable at the end of the planning period

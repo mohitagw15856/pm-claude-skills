@@ -86,6 +86,14 @@ Writes commercial proposals that win business — structured around the prospect
 2. We will send contract and confirm kickoff
 3. [Any immediate action]
 
+## Quality Checks
+
+- [ ] "Understanding Your Situation" reflects what was learned in discovery (not generic)
+- [ ] Outcomes are listed (not just deliverables or features)
+- [ ] "Not included" section is explicit to prevent scope disputes later
+- [ ] Next steps include a specific date and named action
+- [ ] "Valid until" date is included to create urgency
+
 ## Example Trigger Phrases
 - "Write a proposal for [prospect] to [solve their problem]"
 - "Draft a statement of work for [project]"

@@ -1,11 +1,20 @@
 ---
 name: stakeholder-update
-description: Create executive stakeholder updates following proven communication frameworks. Use when the user needs to create a status update, progress report, executive summary, or communication for leadership, stakeholders, or executives.
+description: "Create concise executive stakeholder updates using the BLUF (Bottom Line Up Front) framework. Use when asked to write a status update, progress report, project communication, or executive briefing for leadership or stakeholders. Produces a BLUF-led update with status, key metrics, risks, upcoming milestones, and decisions needed — readable in under 2 minutes."
 ---
 
 # Stakeholder Update Skill
 
 This skill creates effective status updates for executives and stakeholders following the BLUF (Bottom Line Up Front) principle.
+
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Project or product being reported on**
+- **Audience** (CEO, board, cross-functional leads, investors — changes depth and format)
+- **Period** (this week / this sprint / this month)
+- **Current status** (on track / at risk / blocked)
+- **Key metrics** and their current values vs. targets
 
 ## Update Structure
 
@@ -217,3 +226,11 @@ Only include issues that matter at executive level.
 - Competitive positioning
 - Market opportunities
 - Financial implications
+
+## Quality Checks
+
+- [ ] Update leads with BLUF — status, key takeaway, and action needed before any detail
+- [ ] Every metric has a target comparison (not just a raw number)
+- [ ] Every risk has a mitigation and a "help needed" flag if stakeholder action is required
+- [ ] Decisions needed have specific options and a clear recommendation
+- [ ] Total length is under 1 page / 2 minutes reading time

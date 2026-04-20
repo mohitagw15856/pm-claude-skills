@@ -1,6 +1,6 @@
 ---
 name: okr-builder
-description: Creates well-structured OKRs (Objectives and Key Results) for product teams, startups, and individuals. Use when asked to write OKRs, set quarterly goals, define key results, or review existing OKRs. Triggers on "OKR", "objective and key results", "quarterly goals", "north star metric".
+description: "Create well-structured OKRs (Objectives and Key Results) for product teams, startups, and individuals. Use when asked to write OKRs, set quarterly goals, define key results, or review existing OKRs. Produces a complete OKR set with objectives, measurable key results, baselines, and a scoring guide."
 ---
 
 # OKR Builder Skill
@@ -60,6 +60,15 @@ At quarter end, score each KR:
 - 0.4–0.6 = Made progress but missed
 - 0.0–0.3 = Missed — needs retrospective discussion
 
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Team or individual** the OKRs are for
+- **Quarter and year**
+- **Company or product North Star metric** (OKRs should connect to this)
+- **Top 3 priorities or goals for this quarter** (rough notes are fine)
+- **Any existing OKRs to review or improve** (optional)
+
 ## Guidelines
 
 - Always ask for the company-level or product-level North Star metric before writing OKRs
@@ -67,3 +76,11 @@ At quarter end, score each KR:
 - If user provides output-based goals, always reframe as outcomes
 - Include a "health check" section flagging which KRs have no current baseline data
 - Remind user: OKRs are not performance reviews — they should be ambitious enough that missing them is okay
+
+## Quality Checks
+
+- [ ] Each KR is measurable with a baseline and target
+- [ ] No output-based KRs (no "launch X" or "complete Y")
+- [ ] Maximum 4 KRs per objective
+- [ ] OKRs connect to the company or product North Star
+- [ ] Ambitious enough that 0.7 attainment is the expected score

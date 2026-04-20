@@ -1,11 +1,19 @@
 ---
 name: feature-prioritisation
-description: Applies prioritisation frameworks (RICE, MoSCoW, Kano, ICE, Opportunity Scoring) to rank features and backlog items. Use when asked to prioritise features, rank a backlog, decide what to build next, or evaluate tradeoffs. Triggers on "prioritise features", "what should we build", "backlog grooming", "RICE score", "MoSCoW".
+description: "Apply prioritisation frameworks (RICE, MoSCoW, Kano, ICE, Opportunity Scoring) to rank features and backlog items. Use when asked to prioritise features, rank a backlog, decide what to build next, or evaluate tradeoffs between competing ideas. Produces a scored, ranked feature list with framework-specific tables, recommended build order, deprioritised items, and assumptions made."
 ---
 
 # Feature Prioritisation Skill
 
 Apply the right prioritisation framework to any backlog and produce a clear, defensible ranking with rationale — not just a sorted list.
+
+## Required Inputs
+
+Ask the user for these if not provided:
+- **List of features or initiatives to prioritise**
+- **Goal or metric** being prioritised against (OKR, launch, sprint)
+- **Preferred framework** (or recommend based on context below)
+- **Team data**: reach estimates, effort estimates, velocity (for RICE)
 
 ## Framework Selection Guide
 
@@ -102,3 +110,11 @@ Recommend building: all Basic features first → Performance features for key us
 - If stakeholder politics are influencing prioritisation, name it explicitly and suggest separating the framework score from the final decision
 - Recommend revisiting priorities every 2 weeks minimum
 - Never produce a single-column ranked list without rationale — explain the top 3 and bottom 3 decisions
+
+## Quality Checks
+
+- [ ] Every item is scored against the same goal or metric (not different goals per item)
+- [ ] Deprioritised items are explicitly listed with reasons (not just absent from the ranked list)
+- [ ] Assumptions used in scoring are documented
+- [ ] Stakeholder politics or personal preferences are separated from framework score
+- [ ] Prioritisation is anchored to a specific scope (sprint / quarter / launch)

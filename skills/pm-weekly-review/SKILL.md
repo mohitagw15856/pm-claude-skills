@@ -1,6 +1,6 @@
 ---
 name: pm-weekly-review
-description: Structures a PM's weekly review and planning session — synthesising metrics, shipping progress, blockers, and next-week priorities into a shareable update. Use when doing a weekly PM review, writing a weekly update, preparing for a Monday planning session, or reviewing sprint health. Triggers on "weekly review", "weekly update", "PM standup", "weekly planning", "end of week summary".
+description: "Structure a PM's weekly review and planning session. Use when doing a weekly PM review, writing a weekly update, preparing for Monday planning, or reviewing sprint health. Produces a shareable weekly update covering metrics movement, shipping progress, blockers, insights, and next week's top 3 priorities."
 ---
 
 # PM Weekly Review Skill
@@ -97,6 +97,23 @@ Turn the chaotic end-of-week brain dump into a structured 20-minute ritual that 
 > [Name the uncertainty explicitly]
 
 ---
+
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Product area or team** you own
+- **Key metrics this week** (with values and prior week comparison)
+- **What shipped, slipped, or is blocked**
+- **Top 3 priorities for next week**
+- **Any customer insights or signals** (optional)
+
+## Quality Checks
+
+- [ ] Metrics include period-over-period comparison (not just raw numbers)
+- [ ] Every blocked item has an owner and a specific unblocking action
+- [ ] Next week's priorities have a "why this week" rationale
+- [ ] Total length is under 400 words (skimmable in 3 minutes)
+- [ ] Reflection section is honest, not aspirational
 
 ## Guidelines
 

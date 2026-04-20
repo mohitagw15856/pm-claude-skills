@@ -73,6 +73,15 @@ When a prospect mentions [Competitor], say: "[Your positioning in one sentence]"
 We win when: [Scenario — e.g. customer prioritises outcome over price]
 We lose when: [Honest scenario — e.g. primary driver is lowest upfront cost]
 
+## Quality Checks
+
+- [ ] Competitor strengths are listed honestly (not minimised)
+- [ ] Differentiators have proof points (not just claims)
+- [ ] Objection responses are conversational (not scripted-sounding)
+- [ ] Landmine questions are natural and non-confrontational
+- [ ] "When we lose" is included and honest
+- [ ] Battlecard has a review date
+
 ## Example Trigger Phrases
 - "Build a battlecard against [competitor]"
 - "Create a competitive cheat sheet for [competitor]"

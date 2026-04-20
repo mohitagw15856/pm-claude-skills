@@ -1,11 +1,19 @@
 ---
 name: roadmap-presentation
-description: Creates structured roadmap presentations and narratives for executive, stakeholder, and team audiences. Use when asked to build a product roadmap, present roadmap to leadership, create a roadmap slide, or communicate quarterly plans. Triggers on "roadmap presentation", "product roadmap", "quarterly roadmap", "roadmap slide", "roadmap for leadership".
+description: "Create structured roadmap presentations calibrated to any audience. Use when asked to build a product roadmap, present roadmap to leadership, create a roadmap slide, or communicate quarterly plans to execs, teams, or customers. Produces an audience-calibrated Now/Next/Later roadmap with strategic context, initiative tables, success metrics, and explicit deprioritisation rationale."
 ---
 
 # Roadmap Presentation Skill
 
 Build roadmaps that tell a strategy story — not just a list of features with dates. Every roadmap output is audience-calibrated: executives get outcomes, teams get specificity, customers get value.
+
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Audience** (executive/board, cross-functional, engineering, customers — changes format significantly)
+- **Prioritised initiative list** with rough timelines or quarters
+- **Company OKRs or strategic goals** (to anchor the narrative)
+- **Period covered** (Q1, H1, full year, etc.)
 
 ## Audience Calibration
 
@@ -112,3 +120,11 @@ Every roadmap needs a narrative, not just a timeline. Structure it as:
 - For executive audiences: lead with the outcome the roadmap delivers to the business, not the features
 - Recommend a roadmap review cadence: monthly for Now items, quarterly for Next/Later
 - If dates are demanded for Later items: use quarters (Q3 2026), not specific dates
+
+## Quality Checks
+
+- [ ] Format matches the audience (executives don't get sprint-level detail)
+- [ ] NOW items are committed with owners; NEXT items are directional; LATER items are aspirational
+- [ ] "What We're NOT Building" section has at least 2 items with rationale
+- [ ] Success metrics are specified per theme (not just a list of features)
+- [ ] Language is free of internal jargon — tested by asking: "could an external stakeholder understand this?"

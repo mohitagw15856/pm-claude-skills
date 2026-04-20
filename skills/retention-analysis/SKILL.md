@@ -1,6 +1,6 @@
 ---
 name: retention-analysis
-description: Structures retention analysis, churn investigations, and engagement deep-dives for product teams. Use when asked to analyse user retention, investigate churn, measure DAU/MAU, or build a retention improvement plan. Triggers on "retention analysis", "churn", "DAU/MAU", "user retention", "why are users leaving".
+description: "Structure a retention analysis, churn investigation, or engagement deep-dive for any product team. Use when asked to analyse user retention, investigate churn, measure DAU/MAU, or build a retention improvement plan. Produces a retention snapshot with root cause hypotheses, aha-moment correlation, and prioritised interventions."
 ---
 
 # Retention Analysis Skill
@@ -107,6 +107,24 @@ Users who [specific action] in first [N] days retain at [X%] vs [Y%] for those w
 - Alert threshold: [If X drops below Y, investigate immediately]
 
 ---
+
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Product and business model** (SaaS / consumer app / marketplace / other)
+- **Current retention metrics** (D1, D7, D30 if available)
+- **Segment to analyse** (all users / paid / free / a specific cohort)
+- **Key question to answer** (why is retention dropping? what drives retention?)
+- **Available data** (analytics events, churn surveys, interview notes)
+
+## Quality Checks
+
+- [ ] Retention curve shape is diagnosed (flattening vs trending to zero = PMF vs onboarding)
+- [ ] Cohorts are segmented before analysis (not all users lumped together)
+- [ ] "Aha moment" correlation is identified or flagged as unknown
+- [ ] Interventions are specific (not "improve onboarding")
+- [ ] Churned user interviews are recommended (not just data analysis)
+- [ ] Monitoring plan includes an alert threshold
 
 ## Guidelines
 

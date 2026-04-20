@@ -62,6 +62,15 @@ Issued only after genuine consultation. Must include: statutory pay calculated, 
 
 WARNING: Take advice from an employment lawyer or qualified HR professional before beginning any redundancy process.
 
+## Quality Checks
+
+- [ ] Number of roles determines consultation type (individual vs collective)
+- [ ] Selection criteria are objective and non-discriminatory
+- [ ] At-risk letter states no decision has been made
+- [ ] Consultation meeting includes genuine exploration of alternatives
+- [ ] Statutory redundancy pay guidance included
+- [ ] Legal advice disclaimer is prominent
+
 ## Example Trigger Phrases
 - "Help me structure a redundancy consultation"
 - "Draft an at-risk letter for [role]"

@@ -1,6 +1,6 @@
 ---
 name: pricing-strategy
-description: Structures pricing strategy decisions, packaging options, and pricing page design for SaaS and digital products. Use when reviewing or setting pricing, designing pricing tiers, evaluating freemium vs paid, or preparing a pricing change. Triggers on "pricing strategy", "pricing tiers", "freemium", "pricing page", "how should we price", "pricing change".
+description: "Structure pricing strategy decisions, packaging options, and tier design for SaaS and digital products. Use when reviewing or setting pricing, designing pricing tiers, evaluating freemium vs paid, or preparing a pricing change. Produces a pricing strategy recommendation with model rationale, tier structure, competitive positioning, and rollout plan."
 ---
 
 # Pricing Strategy Skill
@@ -109,6 +109,25 @@ Positioning options:
 - Expansion revenue
 
 ---
+
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Product or service** being priced
+- **Current pricing** (if any — and why it's being reviewed)
+- **Target customer segments** (size, role, willingness to pay)
+- **Key competitors and their pricing** (if known)
+- **Business model** (SaaS / Marketplace / Usage-based / Other)
+- **Primary goal** (grow adoption / increase ARPU / reduce churn / new market entry)
+
+## Quality Checks
+
+- [ ] Value metric is defined (the unit that scales with customer value)
+- [ ] Free-to-paid upgrade trigger is specific (not "when they need more")
+- [ ] Competitive positioning is chosen and justified (premium / parity / value)
+- [ ] Pricing change rollout plan includes grandfathering decision
+- [ ] Counter-metrics are defined to catch perverse incentives
+- [ ] Risks have specific mitigations (not just listed)
 
 ## Guidelines
 

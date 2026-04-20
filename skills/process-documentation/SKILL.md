@@ -75,6 +75,14 @@ Produces clear, structured process documentation that someone new to a role can 
 ### Review
 Next review due: [Date]
 
+## Quality Checks
+
+- [ ] Every step has a named role (not "someone" or "the team")
+- [ ] Edge cases and exceptions table is complete
+- [ ] Prerequisites are listed so someone new can prepare before starting
+- [ ] Escalation path is named (specific people or roles, not just "your manager")
+- [ ] Review date is set
+
 ## Example Trigger Phrases
 - "Document this process: [description]"
 - "Write a process guide for [workflow]"

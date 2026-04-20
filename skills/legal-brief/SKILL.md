@@ -56,6 +56,15 @@ What this memo does not cover. What additional research would change the analysi
 
 WARNING: This draft requires review by a qualified legal professional. It does not constitute legal advice.
 
+## Quality Checks
+
+- [ ] Issue is stated as a specific legal question (not a general topic)
+- [ ] Brief answer appears before the analysis (conclusion upfront)
+- [ ] Disputed facts are explicitly flagged
+- [ ] Areas of legal uncertainty are noted (not hidden in confident language)
+- [ ] Caveats section lists what would change the analysis
+- [ ] Disclaimer is included
+
 ## Example Trigger Phrases
 - "Draft a legal memo on [issue]"
 - "Write a legal brief arguing [position]"

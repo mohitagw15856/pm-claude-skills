@@ -62,11 +62,11 @@ Nice to have (3-4 items):
 - Any requirements potentially discriminating against protected characteristics
 
 ## Quality Checks
-- Salary range included
-- Must-haves genuinely essential (6 items max)
-- Each responsibility starts with action verb
-- Inclusive language review completed
-- No years-of-experience requirements unless legally required
+- [ ] Salary range included
+- [ ] Must-haves genuinely essential (6 items max)
+- [ ] Each responsibility starts with action verb
+- [ ] Inclusive language review completed
+- [ ] No years-of-experience requirements unless legally required
 
 ## Example Trigger Phrases
 - "Write a job description for a [role]"

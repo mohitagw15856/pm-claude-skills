@@ -57,6 +57,14 @@ List any standard clauses absent but normally expected for this contract type.
 
 WARNING: This review is for informational purposes only and does not constitute legal advice. Always consult a qualified solicitor or lawyer before signing any legally binding agreement.
 
+## Quality Checks
+
+- [ ] Overall risk rating is justified (not just "Medium" without reasons)
+- [ ] All flagged clauses have a specific recommended action (not just "read this")
+- [ ] Missing clauses section is completed for this contract type
+- [ ] Plain English summary can be understood by a non-lawyer
+- [ ] Disclaimer is included
+
 ## Example Trigger Phrases
 - "Review this contract: [paste]"
 - "Flag the key risks in this agreement"

@@ -64,6 +64,15 @@ Security: ISO 27001 / SOC 2 certified? Where is data stored? Breach notification
 **Conditions:** [Contract terms to negotiate before signing]
 **Runner-up:** [Vendor and why they lost]
 
+## Quality Checks
+
+- [ ] Evaluation criteria weights total 100%
+- [ ] Scoring rubric is defined before scoring vendors (not post-hoc)
+- [ ] Reference check questions are included
+- [ ] Recommendation includes risks and conditions, not just a winner
+- [ ] Runner-up rationale explains why they lost (enables future conversations)
+- [ ] Contract terms to negotiate are specified
+
 ## Example Trigger Phrases
 - "Help me evaluate vendors for [procurement]"
 - "Create a vendor scorecard for [software/service]"

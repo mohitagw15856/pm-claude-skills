@@ -1,11 +1,21 @@
 ---
 name: prd-template
-description: Product Requirements Document creation following proven PM template structure. Use when the user asks to create, write, draft, or help with a PRD, product requirements document, product spec, feature specification, or product documentation for a new feature or product.
+description: "Create a Product Requirements Document following proven PM template structure. Use when asked to write a PRD, product spec, feature specification, or requirements document for a new feature or product. Produces a complete PRD with problem statement, user stories, functional requirements, technical considerations, and success metrics."
 ---
 
 # PRD Template Skill
 
 This skill helps create professional Product Requirements Documents following industry best practices.
+
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Feature or product name**
+- **Problem being solved** (from the user's perspective)
+- **Target user** (role, context, what they're trying to accomplish)
+- **Success metrics** (how will you know it worked?)
+- **Scope** (MVP vs full vision — what's in and out of scope)
+- **Key stakeholders** (who needs to review and approve)
 
 ## Template Structure
 
@@ -90,6 +100,15 @@ Format: "As a [user type], I want to [action] so that [benefit]"
 - Leave requirements ambiguous
 - Skip the "why"
 - Forget about accessibility
+
+## Quality Checks
+
+- [ ] Problem statement is written from the user's perspective (not the company's)
+- [ ] Success metrics are specific and measurable
+- [ ] User stories include acceptance criteria
+- [ ] Requirements are testable (not vague)
+- [ ] Open questions are listed explicitly
+- [ ] Implementation plan distinguishes MVP from future phases
 
 ## Example PRD Opening
 

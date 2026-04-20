@@ -80,6 +80,14 @@ eNPS: Below 0 = Concerning / 0-30 = Good / 30-70 = Great / 70+ = Excellent
 
 **5. Communication Template** — Draft message to share results with employees.
 
+## Quality Checks
+
+- [ ] Survey includes anonymity statement at the start
+- [ ] eNPS question (0-10 recommend scale) is included in all survey types
+- [ ] Open-ended questions are included (not just Likert scales)
+- [ ] Analysis includes a specific action planning template (not just observations)
+- [ ] Results communication template commits to sharing back with employees by a specific date
+
 ## Example Trigger Phrases
 - "Create an employee engagement survey for our team"
 - "Design a pulse survey for [topic]"

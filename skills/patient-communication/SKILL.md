@@ -83,6 +83,15 @@ Yours sincerely, [Name, Title, Department]
 - Use "you" and "we" throughout
 - Numbers as digits: "2 tablets" not "two tablets"
 
+## Quality Checks
+
+- [ ] Written at or below Grade 8 reading level (short words, short sentences)
+- [ ] Active voice used throughout ("We will contact you" not "You will be contacted")
+- [ ] Results letter states the result in the first sentence
+- [ ] Next steps are specific and include timeframes
+- [ ] No Latin or acronyms without explanation
+- [ ] Disclaimer that clinical review is required before sending
+
 ## Example Trigger Phrases
 - "Write a patient letter about [topic]"
 - "Create a patient information leaflet for [procedure]"

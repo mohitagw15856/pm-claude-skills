@@ -52,6 +52,15 @@ Clauses always covered: permitted use, non-solicitation/non-compete, term and po
 
 WARNING: This analysis is for informational purposes only and is not legal advice. Consult a qualified solicitor before signing.
 
+## Quality Checks
+
+- [ ] Definition of confidential information assessed for scope (narrow / standard / very broad)
+- [ ] Residuals clause checked (allows memory use of disclosed information — high-risk)
+- [ ] Non-solicitation / non-compete provisions flagged
+- [ ] Post-termination obligations duration noted
+- [ ] Plain English verdict given (standard / one-sided / needs lawyer)
+- [ ] Disclaimer is included
+
 ## Example Trigger Phrases
 - "Analyse this NDA"
 - "Review this confidentiality agreement"

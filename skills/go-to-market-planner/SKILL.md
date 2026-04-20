@@ -1,6 +1,6 @@
 ---
 name: go-to-market-planner
-description: Builds go-to-market (GTM) plans for product launches, feature releases, and new market entries. Use when planning a product launch, writing a GTM strategy, defining launch tiers, or coordinating cross-functional launch activities. Triggers on "go-to-market", "GTM plan", "product launch plan", "launch strategy", "release plan".
+description: "Build a go-to-market plan for any product launch, feature release, or new market entry. Use when planning a product launch, writing a GTM strategy, defining launch tiers, or coordinating cross-functional launch activities. Produces a tiered GTM plan with messaging, cross-functional activity tracker, success metrics, and launch day checklist."
 ---
 
 # Go-to-Market Planner Skill
@@ -106,9 +106,28 @@ Always confirm tier with the user before proceeding.
 
 ---
 
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Product or feature name**
+- **Target launch date**
+- **Launch tier** (Tier 1 / 2 / 3 — or describe scope and the skill will classify)
+- **Target audience** (who benefits and who it's NOT for)
+- **Key message** (what's the headline outcome for the customer)
+- **PM and launch owner**
+
 ## Guidelines
 
 - Never plan a Tier 1 launch without at least 8 weeks of lead time
 - Always include a "Not for" section — it prevents misdirected sales and support tickets
 - Recommend a soft launch to 5–10% of users before full rollout for any Tier 1 or 2 launch
 - Post-launch retrospective should be scheduled at launch planning time — don't leave it to chance
+
+## Quality Checks
+
+- [ ] Launch tier is confirmed and appropriate for scope
+- [ ] "Not for" section is included to prevent misdirected sales and support
+- [ ] Every function has at least one activity with a named owner and due date
+- [ ] Success metrics include a measurement window (30/60/90 days)
+- [ ] Rollback procedure is confirmed for Tier 1 and 2 launches
+- [ ] Post-launch retrospective is scheduled

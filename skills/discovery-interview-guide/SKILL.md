@@ -1,6 +1,6 @@
 ---
 name: discovery-interview-guide
-description: Creates structured user discovery interview guides with screener questions, discussion guides, and synthesis frameworks. Use when planning user interviews, customer discovery sessions, Jobs-to-be-Done research, or problem validation. Triggers on "user interview", "discovery interview", "customer research", "JTBD", "problem validation".
+description: "Create a structured user discovery interview guide with screener questions, a discussion guide, and a synthesis framework. Use when planning user interviews, customer discovery sessions, Jobs-to-be-Done research, or problem validation. Produces a complete guide covering warm-up, problem exploration, and a per-session synthesis template."
 ---
 
 # Discovery Interview Guide Skill
@@ -80,6 +80,23 @@ Understand the competitive landscape from their perspective.
 - Most emotionally charged moment in interviews: [observation]
 
 ---
+
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Research topic or question** (what decision will this inform?)
+- **Target participant profile** (role, behaviour, company type)
+- **Session length** (30 / 45 / 60 / 90 minutes)
+- **Number of interviews planned**
+- **Known hypotheses to test or avoid confirming prematurely** (optional)
+
+## Quality Checks
+
+- [ ] No future-tense questions ("would you...") — only past-behaviour questions
+- [ ] Product or solution not mentioned until after pain is confirmed
+- [ ] Questions open-ended (cannot be answered yes/no)
+- [ ] Synthesis template included for per-session notes
+- [ ] Screener questions identify and disqualify wrong participants
 
 ## Guidelines
 

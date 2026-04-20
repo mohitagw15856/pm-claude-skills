@@ -83,6 +83,14 @@ Goals:
 Manager: Meeting expectations? What to double down on? What to develop?
 New hire: Have the clarity, tools, support needed? What surprised you? What would you change about onboarding?
 
+## Quality Checks
+
+- [ ] Before Day 1 manager checklist is complete (IT, access, buddy, calendar)
+- [ ] Each phase (orient/learn/contribute/lead) has a clear milestone
+- [ ] 90-day review questions are included for both manager and new hire
+- [ ] Plan is tailored to the specific role and level (not generic)
+- [ ] Key stakeholder 1:1s are listed by name or role
+
 ## Example Trigger Phrases
 - "Create a 30/60/90 day plan for a new [role]"
 - "Write an onboarding plan for [name] starting as [role]"

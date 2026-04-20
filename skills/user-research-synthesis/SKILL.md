@@ -1,11 +1,19 @@
 ---
 name: user-research-synthesis
-description: Analyze and synthesize user research findings following PM best practices. Use when the user provides user research data, interview transcripts, survey results, or user feedback that needs to be analyzed, synthesized, or summarized into insights and recommendations.
+description: "Analyze and synthesize user research findings into structured, actionable insights. Use when given user research data, interview transcripts, survey results, or user feedback that needs to be analyzed and summarised. Produces a themed synthesis with prevalence data, supporting quotes, pain points analysis, feature request prioritisation, and recommended next steps."
 ---
 
 # User Research Synthesis Skill
 
 This skill helps analyze user research data and transform it into actionable insights following a structured methodology.
+
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Research data** (transcripts, notes, survey results, or summary bullets)
+- **Research method** (interviews, surveys, usability tests, etc.)
+- **Number of participants** and their profiles (role, context)
+- **Research questions** the study aimed to answer
 
 ## Synthesis Framework
 

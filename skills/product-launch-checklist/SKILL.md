@@ -1,6 +1,6 @@
 ---
 name: product-launch-checklist
-description: Generates comprehensive pre-launch, launch day, and post-launch checklists for product releases. Use when preparing for a product launch, feature release, or major update. Triggers on "launch checklist", "pre-launch", "launch day", "release checklist", "ship checklist", "go-live checklist".
+description: "Generate a comprehensive pre-launch, launch day, and post-launch checklist for any product release. Use when preparing for a product launch, feature release, or major update. Produces a role-assigned, tiered checklist covering engineering readiness, marketing and comms, support, and post-launch monitoring."
 ---
 
 # Product Launch Checklist Skill
@@ -108,6 +108,14 @@ The skill generates a tiered checklist. Tier 3 launches use only the Essentials 
 - [ ] Follow-up features added to backlog based on feedback
 
 ---
+
+## Quality Checks
+
+- [ ] Launch tier confirmed before generating checklist (scope determines depth)
+- [ ] Go/No-Go decision has a named owner and a specific decision time
+- [ ] Rollback procedure is documented and tested (not just planned)
+- [ ] Feature flag expansion is staged (5% → 50% → 100%), not all-at-once
+- [ ] Post-launch retrospective is scheduled at launch time
 
 ## Guidelines
 

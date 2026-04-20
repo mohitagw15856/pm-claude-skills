@@ -1,6 +1,6 @@
 ---
 name: sprint-planning
-description: Structures and facilitates sprint planning sessions. Use when asked to plan a sprint, organise backlog items, assign story points, create sprint goals, or prepare sprint planning meeting agendas. Triggers on phrases like "plan sprint", "sprint planning", "sprint goal", "sprint backlog".
+description: "Structure and facilitate sprint planning sessions. Use when asked to plan a sprint, organise backlog items, assign story points, create sprint goals, or prepare sprint planning agendas. Produces a sprint goal, velocity-calibrated backlog, capacity plan, risk flags, and a structured sprint planning meeting agenda."
 ---
 
 # Sprint Planning Skill
@@ -87,3 +87,11 @@ Story points to commit = Historical velocity × Availability factor
 - Recommend the team commits to 80% of available capacity, not 100%
 - If no velocity data is provided, assume 20–30 points for a 5-person team as a starting point
 - Highlight any story with unclear ownership as a blocker
+
+## Quality Checks
+
+- [ ] Sprint goal is outcome-focused (not "implement X" — something like "users can do Y")
+- [ ] Team capacity is calculated using actual availability, not theoretical 100%
+- [ ] Every story has an acceptance criterion (flag any that don't)
+- [ ] Stories estimated at 8+ points are flagged for splitting
+- [ ] Carry-overs from last sprint are accounted for in capacity

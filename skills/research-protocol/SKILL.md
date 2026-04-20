@@ -86,10 +86,11 @@ Qualitative: [Framework — e.g. Braun & Clarke], [quality assurance]
 | Write-up | | | |
 
 ## Quality Checks
-- Primary objective is singular and answerable
-- Sample size has stated basis
-- Ethical considerations complete
-- Analysis plan pre-specified
+- [ ] Primary objective is singular and answerable (not compound)
+- [ ] Sample size has a stated basis (power calculation or saturation rationale)
+- [ ] Ethical considerations section is complete
+- [ ] Analysis plan is pre-specified (not "to be determined")
+- [ ] Timeline includes all phases from ethics approval to write-up
 
 ## Example Trigger Phrases
 - "Write a research protocol for [study]"

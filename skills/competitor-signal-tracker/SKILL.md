@@ -1,12 +1,18 @@
 ---
 name: competitor-signal-tracker
-description: Analyse competitor moves and surface strategic implications for your product
-tool_integration: Notion
+description: "Analyse competitor moves and surface strategic implications for your product. Use when asked to track competitor signals, analyse a competitor announcement, understand what a competitor is doing strategically, or produce a competitive intelligence report. Produces a categorised signal analysis with threat ratings, roadmap implications, and recommended responses."
 ---
+
 # Competitor Signal Tracker Skill
 
-## Purpose
 Turn scattered competitor information into structured strategic intelligence — not just "what they did" but "what it means for us."
+
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Competitor name(s)** and the signals/updates to analyse
+- **Your product's current roadmap or strategic priorities** (to assess relevance)
+- **Time period** the signals cover (this week, this month, etc.)
 
 ## Signal Categories to Track
 - **Product signals:** New features, removals, UX changes, beta programmes
@@ -21,8 +27,9 @@ Turn scattered competitor information into structured strategic intelligence —
 3. Rate strategic threat level: High / Medium / Low / Watch
 4. Connect to your roadmap: does this accelerate, validate, or challenge any of your bets?
 5. Recommend a response: Accelerate existing initiative / Deprioritise / Monitor / Investigate further
+6. **Validate** — Confirm every High threat has a specific recommended response with an owner. "Monitor" is not an acceptable response for High-rated threats.
 
-## Output Format
+## Output Structure
 
 ### Competitive Intelligence Report — [Date]
 
@@ -35,4 +42,12 @@ Turn scattered competitor information into structured strategic intelligence —
 **Recommended Response:** [Action + owner + timeline]
 
 #### Strategic Summary
-[2-3 sentences on the overall competitive landscape shift this week/month]
+[2-3 sentences on the overall competitive landscape shift this period]
+
+## Quality Checks
+
+- [ ] Every signal is categorised (not just described)
+- [ ] Threat level is justified — not assigned arbitrarily
+- [ ] High-threat signals have specific recommended responses (not "monitor")
+- [ ] Implications connect to specific roadmap items or strategic bets
+- [ ] Strategic summary gives a landscape-level view, not just a list of individual signals

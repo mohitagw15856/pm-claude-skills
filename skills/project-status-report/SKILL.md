@@ -103,6 +103,14 @@ RAG definitions:
 - Decisions must be genuinely actionable
 - Keep to one page where possible
 
+## Quality Checks
+
+- [ ] Red status is stated immediately (not buried after positives)
+- [ ] Every issue has a named owner and a resolution date
+- [ ] Decisions required are genuinely actionable by the audience
+- [ ] Milestones are binary (complete or not complete — no "85% done")
+- [ ] Executive summary can stand alone for a stakeholder who reads nothing else
+
 ## Example Trigger Phrases
 - "Write a project status report for [project]"
 - "Generate a RAG status update for [project]"

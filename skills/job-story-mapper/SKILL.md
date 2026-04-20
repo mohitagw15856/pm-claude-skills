@@ -1,6 +1,6 @@
 ---
 name: job-story-mapper
-description: Writes Jobs-to-be-Done (JTBD) job stories and maps customer jobs across functional, social, and emotional dimensions. Use when defining user needs, writing job stories, conducting JTBD research, or reframing features around customer outcomes. Triggers on "job story", "JTBD", "jobs to be done", "when I want to", "user need", "hire a product".
+description: "Write Jobs-to-be-Done (JTBD) job stories and map customer jobs across functional, social, and emotional dimensions. Use when defining user needs, writing job stories, conducting JTBD research, or reframing features around customer outcomes. Produces a job story map with opportunity scoring, pain intensity ratings, and product opportunity analysis."
 ---
 
 # Job Story Mapper Skill
@@ -104,6 +104,15 @@ Rate each job story on:
 - Prioritise: Opportunity score > 10
 
 ---
+
+## Quality Checks
+
+- [ ] Job stories use the "When / I want to / So I can" format (not user story format)
+- [ ] Situation is specific (not "as a user" — a real moment or trigger)
+- [ ] All three dimensions covered: functional, emotional, social
+- [ ] Opportunity score calculated for each job story
+- [ ] Current workaround identified for each high-opportunity story
+- [ ] Product opportunity is distinct from "build the feature" (it's an outcome)
 
 ## Guidelines
 

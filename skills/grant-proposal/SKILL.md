@@ -87,11 +87,14 @@ Funder test: does this problem align with [funder] stated priorities? Make the c
 
 ---
 
-## Funder Alignment Check
-- Every section explicitly references funder stated priorities
-- Word limits respected
-- Budget aligns with eligible costs policy
-- Required attachments prepared
+## Quality Checks
+
+- [ ] Every section explicitly references funder stated priorities (not just generic language)
+- [ ] Problem statement includes specific data, not just assertions
+- [ ] Objectives are SMART (measurable and time-bound)
+- [ ] Budget narrative justifies every line with specific detail
+- [ ] Sustainability section explains what happens after the grant ends
+- [ ] Word limits respected
 
 ## Example Trigger Phrases
 - "Write a grant proposal for [project] applying to [funder]"

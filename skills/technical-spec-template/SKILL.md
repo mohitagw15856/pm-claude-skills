@@ -1,11 +1,19 @@
 ---
 name: technical-spec-template
-description: Creates structured technical specification documents that bridge product requirements and engineering implementation. Use when writing a tech spec, engineering spec, system design doc, or API specification. Triggers on "technical spec", "tech spec", "engineering spec", "system design doc", "API spec", "implementation spec".
+description: "Create structured technical specification documents that bridge product requirements and engineering implementation. Use when writing a tech spec, engineering spec, system design doc, or API specification. Produces a complete spec with problem statement, proposed solution, data model, API design, alternatives considered, security considerations, testing plan, and rollout strategy."
 ---
 
 # Technical Spec Template Skill
 
 Write technical specifications that engineers actually read — clear problem framing, unambiguous requirements, explicit decisions, and documented trade-offs.
+
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Feature or system description** (what needs to be specced)
+- **Related PRD or product brief** (if available)
+- **Engineering reviewers** (whose sign-off is needed)
+- **Known constraints** (technical limitations, security requirements, performance targets)
 
 ## When to Write a Tech Spec
 
@@ -131,3 +139,11 @@ Error codes: [list]
 - Security and privacy sections are never optional for features that touch user data
 - Recommend async review: engineers read first, then a 30-minute sync to resolve questions
 - Keep the spec updated as implementation progresses — stale specs are worse than no specs
+
+## Quality Checks
+
+- [ ] Problem statement contains no solution language
+- [ ] Non-goals explicitly list at least 2 things that might be assumed in scope
+- [ ] At least 2 alternative approaches are documented with reasons for rejection
+- [ ] Security and privacy section is completed for any feature touching user data
+- [ ] All open questions have a named owner and due date (not "TBD")

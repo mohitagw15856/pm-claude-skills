@@ -1,6 +1,6 @@
 ---
 name: ai-product-canvas
-description: Structures AI and ML product decisions including model selection, data requirements, evaluation frameworks, and responsible AI considerations. Use when building AI-powered features, evaluating LLM integrations, designing AI products, or assessing AI readiness. Triggers on "AI product", "LLM feature", "AI canvas", "build with AI", "AI integration", "AI-powered", "machine learning feature".
+description: "Structure AI and ML product decisions with the rigour of any product decision. Use when building AI-powered features, evaluating LLM integrations, designing AI products, or assessing AI readiness. Produces a complete AI product canvas covering problem definition, model approach, data requirements, evaluation framework, UX design, responsible AI checklist, and launch monitoring plan."
 ---
 
 # AI Product Canvas Skill
@@ -143,3 +143,19 @@ Before building, flag if any of these apply:
 - Responsible AI checklist must be completed before launch, not after
 - Include latency in success metrics — a 5-second AI response is often worse than no AI at all
 - Recommend starting with a human-in-the-loop design and automating only when accuracy is proven
+
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Feature or product description** (what the AI is intended to do)
+- **User problem** (what problem the AI is solving for users)
+- **Available data** (what training/inference data exists)
+- **ML/AI lead** (who owns the technical implementation)
+
+## Quality Checks
+
+- [ ] "Why AI?" is answered clearly (not "because we can")
+- [ ] Minimum acceptable accuracy threshold is defined before build begins
+- [ ] Fallback UX is specified for model failures or low-confidence outputs
+- [ ] Responsible AI checklist is completed (not deferred to post-launch)
+- [ ] Monitoring plan includes both model performance and user engagement metrics

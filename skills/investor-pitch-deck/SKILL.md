@@ -42,6 +42,15 @@ For each slide:
 - Investors decide go/no-go on slides 1-5 — front-load evidence
 - Keep to 10-12 slides for a first meeting
 
+## Quality Checks
+
+- [ ] Each slide answers one specific investor question
+- [ ] Slides 1-5 front-load the strongest evidence
+- [ ] Traction slide shows retention and revenue, not just signups
+- [ ] Competition slide does not say "no competitors"
+- [ ] Ask slide specifies use of funds and 18-month milestones
+- [ ] TAM is bottoms-up where possible
+
 ## Example Trigger Phrases
 - "Build a pitch deck structure for [company]"
 - "Help me structure my Series A deck"
