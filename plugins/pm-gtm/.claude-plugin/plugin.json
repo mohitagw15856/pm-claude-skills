@@ -1,13 +1,13 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "pm-gtm",
-  "version": "1.0.0",
-  "description": "Marketing & GTM skills: Go-To-Market Planner, Content Calendar, Competitor Teardown, Email Campaign. Build positioning statements, messaging pillars, feature lists, use cases, and launch campaigns.",
+  "version": "1.1.0",
+  "description": "Marketing & GTM skills: Go-To-Market Planner, Content Calendar, Competitor Teardown, Email Campaign, SEO Content Brief, Media Pitch. Build positioning statements, messaging pillars, feature lists, use cases, SEO-optimised content briefs, and journalist pitches.",
   "author": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
   "license": "MIT",
-  "keywords": ["product-management", "marketing", "gtm", "positioning", "content-calendar", "competitor-analysis", "email-campaign"]
+  "keywords": ["product-management", "marketing", "gtm", "positioning", "content-calendar", "competitor-analysis", "email-campaign", "seo", "media-pitch", "pr", "journalism"]
 }

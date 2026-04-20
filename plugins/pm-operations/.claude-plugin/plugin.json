@@ -1,13 +1,13 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "pm-operations",
-  "version": "1.0.0",
-  "description": "Operations skills: Process Documentation, SOP Writer, Vendor Evaluation, Project Status Report. Document workflows, write audit-ready SOPs, evaluate vendors with weighted scorecards, and produce RAG status reports.",
+  "version": "1.1.0",
+  "description": "Operations skills: Process Documentation, SOP Writer, Vendor Evaluation, Project Status Report, Workshop Facilitation Guide. Document workflows, write audit-ready SOPs, evaluate vendors, produce RAG status reports, and design facilitated workshops with activity instructions and facilitator moves.",
   "author": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
   "license": "MIT",
-  "keywords": ["operations", "process", "sop", "vendor", "procurement", "project-management", "rag-status"]
+  "keywords": ["operations", "process", "sop", "vendor", "procurement", "project-management", "rag-status", "facilitation", "workshop", "working-session"]
 }

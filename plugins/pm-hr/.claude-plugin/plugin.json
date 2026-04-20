@@ -1,13 +1,13 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "pm-hr",
-  "version": "1.0.0",
-  "description": "HR skills: Job Description Writer, Onboarding Plan, Employee Engagement Survey, Redundancy Consultation. Write inclusive JDs, build 30/60/90-day plans, design engagement surveys, and structure legally compliant redundancy processes.",
+  "version": "1.1.0",
+  "description": "HR skills: Job Description Writer, Onboarding Plan, Employee Engagement Survey, Redundancy Consultation, Change Management Plan. Write inclusive JDs, build 30/60/90-day plans, design engagement surveys, structure redundancy processes, and manage organisational change with stakeholder analysis and adoption metrics.",
   "author": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
   "license": "MIT",
-  "keywords": ["hr", "people", "job-description", "onboarding", "engagement", "redundancy", "recruitment"]
+  "keywords": ["hr", "people", "job-description", "onboarding", "engagement", "redundancy", "recruitment", "change-management", "transformation", "organisational-change"]
 }

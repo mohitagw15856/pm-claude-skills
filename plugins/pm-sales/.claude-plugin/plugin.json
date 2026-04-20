@@ -1,13 +1,13 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "pm-sales",
-  "version": "1.0.0",
-  "description": "Sales skills: Sales Battlecard, Discovery Call Prep, Proposal Writer, Account Plan. Build competitive battlecards, prepare structured discovery calls, write winning proposals, and create strategic account plans.",
+  "version": "1.1.0",
+  "description": "Sales skills: Sales Battlecard, Discovery Call Prep, Proposal Writer, Account Plan, Sales Forecasting Model. Build competitive battlecards, prepare discovery calls, write winning proposals, create account plans, and build pipeline-based revenue forecasts with scenario analysis.",
   "author": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
   "license": "MIT",
-  "keywords": ["sales", "battlecard", "discovery", "proposal", "account-plan", "competitive", "crm"]
+  "keywords": ["sales", "battlecard", "discovery", "proposal", "account-plan", "competitive", "crm", "forecasting", "pipeline", "revenue-model"]
 }
