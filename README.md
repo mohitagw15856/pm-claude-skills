@@ -58,7 +58,7 @@ ln -s ~/pm-claude-skills/skills/* ~/.claude/skills/
 - Every skill now has a `Required Inputs` section prompting Claude to ask for missing information before executing
 - Every skill now has a `Quality Checks` section with specific checkboxes Claude verifies before delivering output
 
-**Read the full story:** [Part 14 — I Rebuilt All 93 Skills and Added 7 More: What 100 Skills Taught Me About What Makes a Great Skill](#)
+**Read the full story:** [Part 14 — I Rebuilt All 93 Skills and Added 7 More: What 100 Skills Taught Me About What Makes a Great Skill](https://medium.com/product-powerhouse/a-pull-request-made-me-rebuild-all-93-of-my-claude-skills-then-i-added-7-more-16d5fe3e7f85)
 
 ---
 
