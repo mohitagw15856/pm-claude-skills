@@ -1,13 +1,13 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "pm-engineering",
-  "version": "1.0.0",
-  "description": "Engineering & tech skills: Code Review Checklist, Incident Postmortem, API Docs Writer, Architecture Decision Record. Structured outputs for engineering teams and technical PMs.",
+  "version": "2.0.0",
+  "description": "Engineering & tech skills: Code Review Checklist, Incident Postmortem, API Docs Writer, Architecture Decision Record, Debugging Log Analyser, PR Description Writer, System Design Interview, Changelog Generator, Test Strategy Doc, Runbook Writer. 10 structured skills for engineering teams and technical PMs.",
   "author": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
   "license": "MIT",
-  "keywords": ["product-management", "engineering", "code-review", "incident-postmortem", "api-documentation", "adr", "architecture"]
+  "keywords": ["product-management", "engineering", "code-review", "incident-postmortem", "api-documentation", "adr", "architecture", "debugging", "pull-request", "system-design", "changelog", "test-strategy", "runbook", "devops"]
 }

@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "6.0.0",
-  "description": "100 Claude Skills across 14 professions — product management, legal, finance, HR, sales, engineering, design, Figma, operations, research, and more. Now with standardised quality checks, required inputs, and 7 new skills.",
+  "version": "7.0.0",
+  "description": "106 Claude Skills across 15 professions — product management, engineering, legal, finance, HR, sales, design, Figma, operations, research, and more. Includes 6 new engineering skills: debugging, PR descriptions, system design, changelogs, test strategy, and runbooks.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
@@ -82,8 +82,8 @@
     },
     {
       "name": "pm-engineering",
-      "description": "Engineering & tech skills: Code Review Checklist, Incident Postmortem, API Docs Writer, Architecture Decision Record. Structured outputs for engineering teams and technical PMs.",
-      "version": "1.1.0",
+      "description": "Engineering & tech skills: Code Review Checklist, Incident Postmortem, API Docs Writer, Architecture Decision Record, Debugging Log Analyser, PR Description Writer, System Design Interview, Changelog Generator, Test Strategy Doc, Runbook Writer. 10 structured skills for engineering teams, SREs, and technical PMs.",
+      "version": "2.0.0",
       "category": "productivity",
       "source": "./plugins/pm-engineering",
       "homepage": "https://github.com/mohitagw15856/pm-claude-skills"

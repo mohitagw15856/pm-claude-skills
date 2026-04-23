@@ -1,10 +1,16 @@
-# 🧠 Claude Skills Library — 100 Skills for Every Profession
+# 🧠 Claude Skills Library — 106 Skills for Every Profession
 
-> **Save 8–10 hours per week across 15 professions. Install in 2 minutes. Now with 100 skills and comprehensive quality improvements across every skill.**
+[![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
+[![Skills](https://img.shields.io/badge/skills-106-blue)](https://github.com/mohitagw15856/pm-claude-skills)
+[![Version](https://img.shields.io/badge/version-7.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
+[![Install](https://img.shields.io/badge/Install%20in%20Claude%20Code-2%20minutes-orange)](https://github.com/mohitagw15856/pm-claude-skills#-quick-install-2-minutes)
+[![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 
-A community-built library of Claude Skills covering product management, marketing, engineering, data, design, Figma, leadership, legal, finance, HR, sales, operations, research, education, and more. Each skill is a structured SKILL.md file that teaches Claude how to produce professional-grade outputs for your specific workflows.
+> **Save 8–10 hours per week across 15 professions. Install in 2 minutes. Now with 106 skills including 6 new engineering skills.**
 
-**🆕 Latest release (v6.0.0):** 100 skills milestone — 7 new skills added, plus quality improvements across all 93 existing skills (standardised descriptions, Required Inputs sections, and Quality Checks on every skill).
+A community-built library of Claude Skills covering product management, engineering, marketing, data, design, Figma, leadership, legal, finance, HR, sales, operations, research, education, and more. Each skill is a structured SKILL.md file that teaches Claude how to produce professional-grade outputs for your specific workflows.
+
+**🆕 Latest release (v7.0.0):** 6 new engineering skills added — Debugging Log Analyser, PR Description Writer, System Design Interview, Changelog Generator, Test Strategy Doc, and Runbook Writer. The `pm-engineering` bundle now has 10 skills.
 
 ---
 
@@ -19,6 +25,7 @@ Or install by profession:
 
 claude plugin install pm-essentials@pm-claude-skills     # Core PM + Word tracked changes
 claude plugin install pm-delivery@pm-claude-skills       # Delivery + PowerPoint auditor
+claude plugin install pm-engineering@pm-claude-skills    # Engineering + DevOps (10 skills) 🆕
 claude plugin install pm-data@pm-claude-skills           # Data + chart data extractor
 claude plugin install pm-legal@pm-claude-skills          # Legal
 claude plugin install pm-finance@pm-claude-skills        # Finance
@@ -39,9 +46,40 @@ ln -s ~/pm-claude-skills/skills/* ~/.claude/skills/
 
 ---
 
-## 🆕 What's New in v6.0.0 — 100 Skills Milestone
+## 🎬 See It in Action
 
-**7 new skills added:**
+**Debugging Log Analyser** — paste a stack trace or error log, get a structured root cause diagnosis with probable cause, affected code path, a specific fix, and next debugging steps.
+
+**PR Description Writer** — share your diff or commit list, get a reviewer-friendly PR description with summary, changes made, testing steps, and reviewer notes.
+
+**Sprint Planning Skill** — paste your sprint goals and backlog items, get a complete structured sprint plan with capacity, commitments, risks, and a day-one kickoff agenda.
+
+> 📹 Drop a demo in [Discussions](../../discussions) and we'll feature it here.
+
+---
+
+## 🆕 What's New in v7.0.0 — Engineering Skills Expansion
+
+**6 new engineering skills added to `pm-engineering`:**
+
+| Skill | Bundle | What It Does |
+|---|---|---|
+| **Debugging Log Analyser** 🆕 | pm-engineering | Parse stack traces and error logs into a structured root cause diagnosis with a specific fix |
+| **PR Description Writer** 🆕 | pm-engineering | Write reviewer-friendly PR descriptions from a diff, commit list, or change summary |
+| **System Design Interview** 🆕 | pm-engineering | Structure complete system design answers with capacity estimates, component deep-dives, and trade-offs |
+| **Changelog Generator** 🆕 | pm-engineering | Convert git commits into a polished, user-facing changelog following Keep a Changelog format |
+| **Test Strategy Doc** 🆕 | pm-engineering | Write a complete test strategy with risk assessment, test types, coverage targets, and P0/P1 test cases |
+| **Runbook Writer** 🆕 | pm-engineering | Write operational runbooks for deployments, incidents, and maintenance with exact commands and rollback steps |
+
+The `pm-engineering` bundle now has **10 skills** — the most complete engineering toolkit in the library.
+
+**Read the full story:** [Part 14 — I Rebuilt All 93 Skills and Added 7 More: What 100 Skills Taught Me About What Makes a Great Skill](https://medium.com/product-powerhouse/a-pull-request-made-me-rebuild-all-93-of-my-claude-skills-then-i-added-7-more-16d5fe3e7f85)
+
+---
+
+## 📖 v6.0.0 — 100 Skills Milestone
+
+**7 skills added:**
 
 | Skill | Bundle | What It Does |
 |---|---|---|
@@ -52,13 +90,6 @@ ln -s ~/pm-claude-skills/skills/* ~/.claude/skills/
 | **Workshop Facilitation Guide** | pm-operations | Complete facilitation guides with activity instructions, decision protocols, and facilitator moves |
 | **Sales Forecasting Model** | pm-sales | Pipeline-based forecast with stage model, scenario analysis, assumption log, and activity sanity check |
 | **Tax Planning Checklist** | pm-finance | Year-end tax planning review framework across income, pension, CGT, business reliefs, and ISAs |
-
-**Quality improvements across all 93 existing skills:**
-- Every skill now has a standardised `description` field using the "Verb the thing. Use when X. Produces Y." format
-- Every skill now has a `Required Inputs` section prompting Claude to ask for missing information before executing
-- Every skill now has a `Quality Checks` section with specific checkboxes Claude verifies before delivering output
-
-**Read the full story:** [Part 14 — I Rebuilt All 93 Skills and Added 7 More: What 100 Skills Taught Me About What Makes a Great Skill](https://medium.com/product-powerhouse/a-pull-request-made-me-rebuild-all-93-of-my-claude-skills-then-i-added-7-more-16d5fe3e7f85)
 
 ---
 
@@ -85,7 +116,7 @@ This repo was built alongside a published article series. Read the full story:
 
 ---
 
-## 🗂️ All 100 Skills
+## 🗂️ All 106 Skills
 
 ### 🛠️ Product Management (Skills 1–34)
 **Bundles:** `pm-essentials` · `pm-discovery` · `pm-planning` · `pm-delivery` · `pm-analytics` · `pm-strategy` · `pm-advanced` · `pm-rituals`
@@ -120,7 +151,7 @@ This repo was built alongside a published article series. Read the full story:
 
 ---
 
-### 👩‍💻 Engineering & Tech (Skills 41–44)
+### 👩‍💻 Engineering & Tech (Skills 41–50)
 **Bundle:** `pm-engineering`
 
 | # | Skill | Folder | What It Does |
@@ -129,6 +160,12 @@ This repo was built alongside a published article series. Read the full story:
 | 42 | **Incident Postmortem** | `skills/incident-postmortem/` | Blameless postmortems with timeline, RCA, impact, and action items |
 | 43 | **API Docs Writer** | `skills/api-docs-writer/` | Developer-facing API docs: endpoints, parameters, response schemas, code examples |
 | 44 | **Architecture Decision Record** | `skills/architecture-decision-record/` | ADRs with context, options considered, decision, consequences, and risks |
+| 45 | **Debugging Log Analyser** 🆕 | `skills/debugging-log-analyser/` | Parse stack traces and error logs into a structured root cause diagnosis with a specific fix |
+| 46 | **PR Description Writer** 🆕 | `skills/pr-description-writer/` | Write reviewer-friendly PR descriptions from a diff, commit list, or change summary |
+| 47 | **System Design Interview** 🆕 | `skills/system-design-interview/` | Structure complete system design answers with capacity estimates, component deep-dives, and trade-offs |
+| 48 | **Changelog Generator** 🆕 | `skills/changelog-generator/` | Convert git commits into a polished, user-facing changelog following Keep a Changelog format |
+| 49 | **Test Strategy Doc** 🆕 | `skills/test-strategy-doc/` | Write a complete test strategy with risk assessment, test types, coverage targets, and P0/P1 test cases |
+| 50 | **Runbook Writer** 🆕 | `skills/runbook-writer/` | Write operational runbooks for deployments, incidents, and maintenance with exact commands and rollback steps |
 
 ---
 
@@ -329,7 +366,7 @@ description: "One sentence. Use when [trigger condition]. Produces [output descr
 | `pitch-deck-feedback` | Startup | Investor-perspective critique of a pitch deck |
 | `board-minutes` | Governance | Formal board meeting minutes from discussion notes |
 
-Have a skill idea? [Open an issue](../../issues) or raise it in [Discussions](../../discussions).
+Have a skill idea? Add it to [SKILL_REQUEST.md](SKILL_REQUEST.md), [open an issue](../../issues), or raise it in [Discussions](../../discussions). Most-voted requests get built first.
 
 **Contributors** get credited in this README and in the article series. 🙌
 
@@ -352,7 +389,7 @@ claude plugin install pm-strategy@pm-claude-skills
 claude plugin install pm-advanced@pm-claude-skills
 claude plugin install pm-rituals@pm-claude-skills
 claude plugin install pm-gtm@pm-claude-skills
-claude plugin install pm-engineering@pm-claude-skills
+claude plugin install pm-engineering@pm-claude-skills    # 10 engineering skills 🆕
 claude plugin install pm-data@pm-claude-skills
 claude plugin install pm-people@pm-claude-skills
 claude plugin install pm-design@pm-claude-skills
@@ -410,9 +447,20 @@ Learn more: [Anthropic's Skills documentation](https://code.claude.com/docs/en/s
 
 ---
 
-## ⭐ If this is useful
+## ⭐ Star Milestones
 
-Star the repo so others can find it. And if you build something with these skills — raise a PR, open a discussion, or tag me in your article.
+Stars unlock the next wave of skills. Here's the roadmap:
+
+| Milestone | Unlocks | Status |
+|---|---|---|
+| 100 ⭐ | 10 Figma skills + quality rebuild across all 93 skills | ✅ Shipped (v6.0.0) |
+| 250 ⭐ | 10 Customer Success skills (health scorecard, QBR deck, escalation brief, churn analysis) | 🔒 Locked |
+| 500 ⭐ | 25 more Engineering skills (CI/CD playbooks, SLO templates, onboarding docs, debugging patterns) | 🔒 Locked |
+| 1000 ⭐ | Full Startup Founder kit (fundraising memo, pitch critique, co-founder equity split) | 🔒 Locked |
+
+**[⭐ Star this repo to unlock the next milestone →](https://github.com/mohitagw15856/pm-claude-skills)**
+
+Want a specific skill built? [Vote or request in SKILL_REQUEST.md](SKILL_REQUEST.md).
 
 ---
 
