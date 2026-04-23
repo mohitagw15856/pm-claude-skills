@@ -43,7 +43,6 @@ git clone https://github.com/mohitagw15856/pm-claude-skills.git ~/pm-claude-skil
 mkdir -p ~/.claude/skills
 ln -s ~/pm-claude-skills/skills/* ~/.claude/skills/
 
-
 ---
 
 ## 🎬 See It in Action

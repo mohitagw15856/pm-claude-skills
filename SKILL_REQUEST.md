@@ -6,7 +6,7 @@ Have an idea for a skill? Add it here or upvote existing requests by leaving a ð
 
 ## How to Request a Skill
 
-1. [Open an issue](../../issues/new) with the label `skill-request`
+1. [Open an issue](https://github.com/mohitagw15856/pm-claude-skills/issues/new) with the label `skill-request`
 2. Include:
    - **Skill name** (what you'd call it)
    - **Profession** (who uses this)
