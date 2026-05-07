@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "8.0.0",
-  "description": "106 Claude Skills across 22 plugin bundles plus the first agent template (PM Sprint Agent), covering 15 professions — product management, engineering, legal, finance, HR, sales, design, Figma, marketing, and more. Building blocks for the Anthropic agent template architecture.",
+  "version": "9.0.0",
+  "description": "106 Claude Skills + 4 templates across 22 plugin bundles plus the first agent template (PM Sprint Agent), covering 15 professions — product management, engineering, legal, finance, HR, sales, design, Figma, marketing, and more. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
