@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "9.0.0",
-  "description": "106 Claude Skills + 4 templates across 22 plugin bundles plus the first agent template (PM Sprint Agent), covering 15 professions — product management, engineering, legal, finance, HR, sales, design, Figma, marketing, and more. Building blocks for the Anthropic agent template architecture.",
+  "version": "10.0.0",
+  "description": "114 Claude Skills + 4 agent templates across 23 plugin bundles covering 16 professions — product management, engineering, customer success, legal, finance, HR, sales, design, Figma, marketing, and more. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
@@ -82,10 +82,18 @@
     },
     {
       "name": "pm-engineering",
-      "description": "Engineering & tech skills: Code Review Checklist, Incident Postmortem, API Docs Writer, Architecture Decision Record, Debugging Log Analyser, PR Description Writer, System Design Interview, Changelog Generator, Test Strategy Doc, Runbook Writer. 10 structured skills for engineering teams, SREs, and technical PMs.",
-      "version": "2.0.0",
+      "description": "Engineering & tech skills: Code Review Checklist, Incident Postmortem, API Docs Writer, Architecture Decision Record, Debugging Log Analyser, PR Description Writer, System Design Interview, Changelog Generator, Test Strategy Doc, Runbook Writer, CI/CD Playbook, SLO & Error Budget, Developer Onboarding Doc, On-Call Runbook. 14 structured skills for engineering teams, SREs, and technical PMs.",
+      "version": "3.0.0",
       "category": "productivity",
       "source": "./plugins/pm-engineering",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-cs",
+      "description": "Customer Success skills: Customer Health Scorecard, QBR Deck, Escalation Brief, Churn Analysis. Score account health with a weighted RAG framework, build structured QBR decks with value narratives, write crisp escalation briefs for at-risk accounts, and analyse churn by category and segment with prioritised interventions.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-cs",
       "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
     },
     {

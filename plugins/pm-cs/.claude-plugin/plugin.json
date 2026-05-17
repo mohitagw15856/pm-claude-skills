@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-cs",
+  "version": "1.0.0",
+  "description": "Customer Success skills: Customer Health Scorecard, QBR Deck, Escalation Brief, Churn Analysis. Score account health with a weighted RAG framework, build structured QBR decks with value narratives, write crisp escalation briefs for at-risk accounts, and analyse churn by category and segment with prioritised interventions.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["customer-success", "account-management", "health-scorecard", "qbr", "quarterly-business-review", "churn", "retention", "escalation", "csm", "renewal"]
+}
