@@ -28,6 +28,7 @@ claude plugin install pm-essentials@pm-claude-skills     # Core PM + Word tracke
 claude plugin install pm-delivery@pm-claude-skills       # Delivery + PowerPoint auditor
 
 claude plugin install pm-engineering@pm-claude-skills    # Engineering (14 skills) 🆕
+
 claude plugin install pm-cs@pm-claude-skills             # Customer Success 🆕
 
 claude plugin install pm-data@pm-claude-skills           # Data + chart data extractor
@@ -546,29 +547,50 @@ Install the whole library or just the bundles you need:
 
 # Install by profession
 claude plugin install pm-essentials@pm-claude-skills
-claude plugin install pm-discovery@pm-claude-skills
-claude plugin install pm-planning@pm-claude-skills
-claude plugin install pm-delivery@pm-claude-skills
-claude plugin install pm-analytics@pm-claude-skills
-claude plugin install pm-strategy@pm-claude-skills
-claude plugin install pm-advanced@pm-claude-skills
-claude plugin install pm-rituals@pm-claude-skills
-claude plugin install pm-gtm@pm-claude-skills
-claude plugin install pm-engineering@pm-claude-skills    # 14 engineering skills 🆕
-claude plugin install pm-cs@pm-claude-skills             # Customer Success (4 skills) 🆕
-claude plugin install pm-data@pm-claude-skills
-claude plugin install pm-people@pm-claude-skills
-claude plugin install pm-design@pm-claude-skills
-claude plugin install pm-business@pm-claude-skills
-claude plugin install pm-legal@pm-claude-skills
-claude plugin install pm-finance@pm-claude-skills
-claude plugin install pm-hr@pm-claude-skills
-claude plugin install pm-sales@pm-claude-skills
-claude plugin install pm-operations@pm-claude-skills
-claude plugin install pm-research@pm-claude-skills
-claude plugin install pm-cross@pm-claude-skills
-claude plugin install pm-figma@pm-claude-skills
 
+claude plugin install pm-discovery@pm-claude-skills
+
+claude plugin install pm-planning@pm-claude-skills
+
+claude plugin install pm-delivery@pm-claude-skills
+
+claude plugin install pm-analytics@pm-claude-skills
+
+claude plugin install pm-strategy@pm-claude-skills
+
+claude plugin install pm-advanced@pm-claude-skills
+
+claude plugin install pm-rituals@pm-claude-skills
+
+claude plugin install pm-gtm@pm-claude-skills
+
+claude plugin install pm-engineering@pm-claude-skills    # 14 engineering skills 🆕
+
+claude plugin install pm-cs@pm-claude-skills             # Customer Success (4 skills) 🆕
+
+claude plugin install pm-data@pm-claude-skills
+
+claude plugin install pm-people@pm-claude-skills
+
+claude plugin install pm-design@pm-claude-skills
+
+claude plugin install pm-business@pm-claude-skills
+
+claude plugin install pm-legal@pm-claude-skills
+
+claude plugin install pm-finance@pm-claude-skills
+
+claude plugin install pm-hr@pm-claude-skills
+
+claude plugin install pm-sales@pm-claude-skills
+
+claude plugin install pm-operations@pm-claude-skills
+
+claude plugin install pm-research@pm-claude-skills
+
+claude plugin install pm-cross@pm-claude-skills
+
+claude plugin install pm-figma@pm-claude-skills
 
 ---
 
