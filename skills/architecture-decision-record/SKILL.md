@@ -10,6 +10,7 @@ This skill produces a complete Architecture Decision Record (ADR) following the 
 ## Required Inputs
 
 Ask the user for these if not provided:
+- **ADR number** (sequential number in your ADR registry — e.g. 012; or "next available" if unknown)
 - **Decision title** (brief, e.g. "Use PostgreSQL as primary datastore")
 - **Context** (what situation led to this decision needing to be made?)
 - **Options considered** (at least 2; if only 1 is given, prompt for alternatives that were considered or ruled out)
@@ -17,6 +18,7 @@ Ask the user for these if not provided:
 - **Reason for choice**
 - **Status** (Proposed / Accepted / Deprecated / Superseded)
 - **Author and date**
+- **Team context** (optional — team size, relevant experience, org constraints; helps calibrate formality and depth of the Context section)
 
 ## Output Format
 
@@ -89,13 +91,13 @@ For each option, produce:
 
 ## Implementation Notes
 
-[Optional but valuable: any specific patterns, gotchas, or guidance for the team implementing based on this decision. Link to relevant tickets, RFCs, or design docs if applicable.]
+[Include if the decision has non-obvious implementation gotchas, or if there are related tickets/RFCs implementers will need. Skip only if the decision is purely tooling selection with no implementation ambiguity.]
 
 ---
 
 ## Review Date
 
-[Optional: "This decision should be reviewed if [condition] — e.g. team grows beyond 20 engineers, or traffic exceeds 10M requests/day."]
+[Include unless the decision is permanent or self-evidently final. State a specific trigger condition — e.g. "Review if team grows beyond 20 engineers or traffic exceeds 10M requests/day" — not just "should be reviewed periodically".]
 
 ---
 
@@ -107,7 +109,8 @@ For each option, produce:
 - [ ] Consequences include *negative* consequences — no decision is consequence-free
 - [ ] Decision is stated in plain language in the Decision section
 - [ ] Risks section identifies what would invalidate this decision
-- [ ] Written for someone with no prior context on this decision
+- [ ] Context section states the problem explicitly in its first 1–2 sentences (does not assume the reader knows what problem the team was solving)
+- [ ] Each rejected option's "Why ruled out" explanation names a specific constraint or trade-off (not a circular statement like "didn't meet our requirements")
 
 ## Usage Examples
 - "Write an ADR for using [technology]"

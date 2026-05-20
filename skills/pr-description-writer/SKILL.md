@@ -78,8 +78,9 @@ Flag anything that warrants extra attention:
 - [ ] Title is imperative mood and under 72 characters
 - [ ] Summary explains what AND why (not just what)
 - [ ] Changes list describes logical changes (not file-by-file changes)
+- [ ] Title starts with a valid type prefix (feat / fix / refactor / chore / deps / config / hotfix) and is under 72 characters
 - [ ] Testing steps are reproducible by someone unfamiliar with the code
-- [ ] Risk-appropriate reviewer guidance is included
+- [ ] For high-risk PRs, Reviewer Notes flags at least one specific area of concern or deliberate trade-off; for low-risk PRs, Reviewer Notes is either omitted or kept to one line
 
 ## Usage Examples
 - "Write a PR description for these changes" + [paste diff or description]

@@ -13,8 +13,10 @@ Ask the user for these if not provided:
 - **API or endpoint details** (raw spec, Postman export, or verbal description)
 - **Auth method** (API key / Bearer token / OAuth 2.0 / None)
 - **Base URL**
+- **API version** (e.g. v1, v2.3, or "unversioned" — affects deprecation notes and versioning headers)
+- **Rate limits** (requests per second/minute per token or IP, if known — or "unknown")
 - **Audience** (internal developers / external partners / public)
-- **Output format** (Markdown / OpenAPI YAML / Plain prose)
+- **Output format** (Markdown for developer portals and READMEs / Plain prose for Confluence or Notion — note: OpenAPI YAML is not produced by this skill)
 
 ## Output Format
 
@@ -133,7 +135,8 @@ data = response.json()
 - [ ] Every parameter is documented (type, required/optional, description)
 - [ ] Response fields are fully documented with types
 - [ ] All relevant error codes are listed with resolution guidance
-- [ ] Code examples are copy-paste runnable (no pseudocode)
+- [ ] Error codes cover at minimum: 400 (bad request), 401/403 (auth), 404 (not found), 429 (rate limited), 500 (server error) — or explicitly note which don't apply to this endpoint
+- [ ] Code examples use the actual base URL and a realistic placeholder token — no examples reference undefined variables or "YOUR_ENDPOINT" outside the snippet
 - [ ] Auth method is clearly stated at the top
 - [ ] Enum values are listed where applicable
 - [ ] Pagination documented if the endpoint is a list endpoint
