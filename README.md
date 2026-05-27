@@ -1,18 +1,18 @@
-# 🧠 PM Claude Skills — 155 Skills for Every Profession
+# 🧠 PM Claude Skills — 167 Skills for Every Profession
 
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
-[![Skills](https://img.shields.io/badge/skills-155-blue)](https://github.com/mohitagw15856/pm-claude-skills)
-[![Version](https://img.shields.io/badge/version-13.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
+[![Skills](https://img.shields.io/badge/skills-167-blue)](https://github.com/mohitagw15856/pm-claude-skills)
+[![Version](https://img.shields.io/badge/version-14.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
 [![Install](https://img.shields.io/badge/Install%20in%20Claude%20Code-2%20minutes-orange)](https://github.com/mohitagw15856/pm-claude-skills#-quick-install-2-minutes)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4)](https://github.com/sponsors/mohitagw15856)
 
 > **PM stands for Professional, not just Product Management.**
-> 155 Claude Skills + 4 agent templates across 24 bundles covering 17 professions. Built by a PM, used by everyone.
+> 167 Claude Skills + 4 agent templates across 26 bundles covering 18 professions. Built by a PM, used by everyone.
 
-A community-built library of Claude Skills for professionals across every field — product management, engineering, customer success, marketing, social media, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured SKILL.md file that teaches Claude how to produce professional-grade outputs for your specific workflows.
+A community-built library of Claude Skills for professionals across every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured SKILL.md file that teaches Claude how to produce professional-grade outputs for your specific workflows.
 
-**🆕 Latest release (v13.0.0):** Social Media profession added — 5 new skills for social media managers, content creators, and growth marketers. Audit your social presence, brief influencer partnerships, manage communities at scale, plan paid social campaigns, and build a viral content system.
+**🆕 Latest release (v14.0.0):** 12 new community-inspired skills across 4 bundles — a brand new Writers & Content Creators profession (Instagram downloader, AEO optimizer, thumbnail creator, Substack scraper, notes humanizer), plus decision-making, productivity, and Claude Code power tools.
 ---
 
 ## 🚀 Quick Install (2 minutes)
@@ -51,6 +51,8 @@ claude plugin install pm-figma@pm-claude-skills          # Figma
 
 claude plugin install pm-social@pm-claude-skills         # Social Media 🆕
 
+claude plugin install pm-writers@pm-claude-skills        # Writers & Content Creators 🆕
+
 
 Or clone and symlink for auto-updates:
 
@@ -76,7 +78,7 @@ ln -s ~/pm-claude-skills/skills/* ~/.claude/skills/
 
 On May 5, 2026, Anthropic [released their first agent templates](https://www.anthropic.com/news/finance-agents) — pre-packaged Claude agents that combine **skills, connectors, and subagents** into ready-to-run workflows for financial services.
 
-This library is the largest open-source collection of professional skills available — covering 16 professions beyond financial services. **The 155 skills here are the building blocks for agent templates outside of finance.**
+This library is the largest open-source collection of professional skills available — covering 17 professions beyond financial services. **The 167 skills here are the building blocks for agent templates outside of finance.**
 
 ### What is an agent template?
 
@@ -153,6 +155,46 @@ More templates will follow. If you want to contribute one, see the [template con
 
 ---
 
+## 🆕 What's New in v14.0.0 — Writers & Content Creators + 7 Community Skills
+
+**12 new community-inspired skills across 4 bundles:**
+
+### New profession: ✍️ Writers & Content Creators (`pm-writers`)
+
+| Skill | What It Does |
+|---|---|
+| **Instagram Post Downloader** 🆕 | Downloads Instagram images and carousels as high-res files; stitches carousel slides into a single PDF |
+| **AEO Optimizer** 🆕 | Restructures articles for AI citation — rewrites H2s as questions, adds 50–80 word answer capsules, audits paragraph length and trust signals |
+| **Thumbnail Creator** 🆕 | Generates brand-aligned thumbnail candidates via Gemini API from article copy; Claude evaluates results via computer vision |
+| **Substack Notes Scraper** 🆕 | Scrapes Substack Notes engagement data (likes, comments, restacks) and exports a formatted .xlsx with filters and conditional formatting |
+| **Notes Humanizer** 🆕 | Strips AI writing patterns (em dashes, filler phrases, uniform rhythm) and injects genuine human signals — opinion, varied rhythm, specific detail |
+
+### Extended: `pm-cross` (+3 skills)
+
+| Skill | What It Does |
+|---|---|
+| **Sycophancy Challenger** 🆕 | Flips Claude's default — argues the strongest case *against* your idea first, holds its position under pushback, and only backs down with new evidence |
+| **Last 30 Days Research** 🆕 | Searches Reddit, X, and the web for the last 30 days on any topic and returns a structured report: consensus, disagreements, pain points, and signal confidence |
+| **NotebookLM Connector** 🆕 | Automates NotebookLM from Claude Code via Chrome extension — create notebooks, add sources, generate mindmaps and audio overviews |
+
+### Extended: `pm-operations` (+2 skills)
+
+| Skill | What It Does |
+|---|---|
+| **Email Triage** 🆕 | Reads Gmail for a configurable window, filters out receipts/notifications, and surfaces only what needs a reply or decision — with priority, urgency, and a reply starter |
+| **Morning Intelligence** 🆕 | 15-question interview that writes a personalised master prompt for your morning news brief, ready to drop into a Cowork Scheduled Task or Claude Code Routine |
+
+### Extended: `pm-engineering` (+2 skills — for Claude Code users)
+
+| Skill | What It Does |
+|---|---|
+| **Context Mode** 🆕 | Solves Claude Code context bloat and memory loss — filters raw command output and maintains a session log so Claude resumes exactly where it left off after a reset |
+| **Claude Superpowers** 🆕 | Forces Claude Code to plan before coding, work in isolation, write tests first, and review its own work twice — from 60% first pass to 80%+ |
+
+The library now includes **167 skills** across **18 professions** + 4 working agent templates.
+
+---
+
 ## 🆕 What's New in v13.0.0 — Social Media Profession
 
 **5 new skills — a complete Social Media profession bundle:**
@@ -165,7 +207,7 @@ More templates will follow. If you want to contribute one, see the [template con
 | **Social Ad Campaign** 🆕 | pm-social | Full-funnel paid social campaign plan with audience targeting, ad set architecture, copy for every format (video, static, carousel, lead gen), budget allocation, and A/B testing plan |
 | **Viral Content Framework** 🆕 | pm-social | Psychology of sharing, 6 proven hook formulas, 5 content structures, platform-specific playbooks for LinkedIn/TikTok/Instagram/X/YouTube, and a repeatable content testing system |
 
-The library now includes **155 skills** across **17 professions** + 4 working agent templates.
+The library now includes **167 skills** across **18 professions** + 4 working agent templates.
 
 Install the new bundle:
 
@@ -281,7 +323,7 @@ This repo was built alongside a published article series. Read the full story:
 
 ---
 
-## 🗂️ All 155 Skills
+## 🗂️ All 167 Skills
 
 ### 🛠️ Product Management (Skills 1–37)
 **Bundles:** `pm-essentials` · `pm-discovery` · `pm-planning` · `pm-delivery` · `pm-analytics` · `pm-strategy` · `pm-advanced` · `pm-rituals`
@@ -318,7 +360,7 @@ This repo was built alongside a published article series. Read the full story:
 
 ---
 
-### 👩‍💻 Engineering & Tech (Skills 46–80)
+### 👩‍💻 Engineering & Tech (Skills 46–80, 166–167)
 **Bundle:** `pm-engineering`
 
 | # | Skill | Folder | What It Does |
@@ -358,6 +400,8 @@ This repo was built alongside a published article series. Read the full story:
 | 78 | **Sprint Velocity Analysis** 🆕 | `skills/sprint-velocity-analysis/` | Velocity trend analysis, completion rate patterns, blocker frequency, improvement recommendations, and capacity forecast |
 | 79 | **Microservices Decomposition** 🆕 | `skills/microservices-decomposition/` | Domain-driven service boundary design with bounded context map, communication patterns, data ownership, and strangler fig migration plan |
 | 80 | **Engineering Hiring Rubric** 🆕 | `skills/engineering-hiring-rubric/` | Technical interview rubric with level expectations, coding scorecard, system design guide, behavioural question bank, and debrief template |
+| 166 | **Context Mode** 🆕 | `skills/context-mode/` | Filters command output noise and maintains a session log so Claude resumes exactly where it left off after a context reset |
+| 167 | **Claude Superpowers** 🆕 | `skills/claude-superpowers/` | Forces Claude Code to plan first, work in isolation, write tests before code, and double-review its own output — consistently better first passes |
 
 ---
 
@@ -484,7 +528,7 @@ claude plugin install pm-cs@pm-claude-skills
 
 ---
 
-### ⚙️ Operations (Skills 120–126)
+### ⚙️ Operations (Skills 120–126, 164–165)
 **Bundle:** `pm-operations`
 
 | # | Skill | Folder | What It Does |
@@ -496,6 +540,8 @@ claude plugin install pm-cs@pm-claude-skills
 | 124 | **Workshop Facilitation Guide** | `skills/workshop-facilitation-guide/` | Complete facilitation guides with activity instructions, decision protocols, and facilitator moves |
 | 125 | **Risk Register** 🆕 | `skills/risk-register/` | L×I risk scoring, RAG heat map, top-risk executive summary, and per-risk mitigation and contingency plans |
 | 126 | **RACI Matrix** 🆕 | `skills/raci-matrix/` | RACI with role definitions, decision map, anti-pattern guide, and a communication template for all teams |
+| 164 | **Email Triage** 🆕 | `skills/email-triage/` | Reads Gmail for a configurable window and surfaces only what needs action — priority-ranked with urgency ratings and reply starters |
+| 165 | **Morning Intelligence** 🆕 | `skills/morning-intelligence/` | 15-question interview that writes a personalised master prompt for your daily news brief, ready for Cowork Scheduled Tasks or Claude Code Routines |
 
 ---
 
@@ -513,7 +559,7 @@ claude plugin install pm-cs@pm-claude-skills
 
 ---
 
-### 🌐 Cross-Profession (Skills 131–134)
+### 🌐 Cross-Profession (Skills 131–134, 161–163)
 **Bundle:** `pm-cross`
 
 | # | Skill | Folder | What It Does |
@@ -522,6 +568,9 @@ claude plugin install pm-cs@pm-claude-skills
 | 132 | **Grant Proposal** | `skills/grant-proposal/` | Complete grant applications aligned to funder priorities with budget narrative |
 | 133 | **Executive Summary** | `skills/executive-summary/` | Decision-ready executive summaries with bottom line upfront, adapted for any audience |
 | 134 | **Teaching Lesson Plan** | `skills/teaching-lesson-plan/` | Complete lesson plans for any subject, audience, or setting — with objectives, activities, and formative assessment |
+| 161 | **Sycophancy Challenger** 🆕 | `skills/sycophancy-challenger/` | Argues the strongest case *against* your idea first — a genuine thinking partner that holds its position under pressure |
+| 162 | **Last 30 Days Research** 🆕 | `skills/last-30-days-research/` | Searches Reddit, X, and the web for the last 30 days on any topic and returns consensus, disagreements, pain points, and signal confidence |
+| 163 | **NotebookLM Connector** 🆕 | `skills/notebooklm-connector/` | Automates NotebookLM via Chrome extension — create notebooks, add sources, generate mindmaps and audio overviews from Claude Code |
 
 ---
 
@@ -574,9 +623,28 @@ claude plugin install pm-social@pm-claude-skills
 
 ---
 
+### ✍️ Writers & Content Creators (Skills 156–160)
+**Bundle:** `pm-writers`
+
+> Install:
+
+```
+claude plugin install pm-writers@pm-claude-skills
+```
+
+| # | Skill | Folder | What It Does |
+|---|---|---|---|
+| 156 | **Instagram Post Downloader** 🆕 | `skills/instagram-post-downloader/` | Downloads Instagram images and full carousels as high-res files; stitches carousel slides into a single PDF. Requires `*.cdninstagram.com` on domain allowlist |
+| 157 | **AEO Optimizer** 🆕 | `skills/aeo-optimizer/` | Restructures any article for AI citation — rewrites H2s as questions, adds 50–80 word answer capsules under each, audits paragraph length, and flags trust signals |
+| 158 | **Thumbnail Creator** 🆕 | `skills/thumbnail-creator/` | Generates brand-aligned thumbnail candidates via Gemini API; Claude evaluates results via computer vision and returns ranked candidates with rationale |
+| 159 | **Substack Notes Scraper** 🆕 | `skills/substack-notes-scraper/` | Scrapes Substack Notes and exports likes, comments, and restacks to a formatted .xlsx with frozen headers, filters, and top-performer highlighting |
+| 160 | **Notes Humanizer** 🆕 | `skills/notes-humanizer/` | Strips AI writing patterns (em dashes, filler phrases, uniform rhythm) across 3 phases: audit, strip, inject — returns side-by-side comparison and clean final text |
+
+---
+
 ## ❤️ Sponsor This Work
 
-Building and maintaining 155 skills across 24 bundles takes real time — testing skills against new model releases, building new ones from community requests, writing the article series, and keeping documentation current.
+Building and maintaining 167 skills across 26 bundles takes real time — testing skills against new model releases, building new ones from community requests, writing the article series, and keeping documentation current.
 
 If these skills save you time at work, consider sponsoring:
 
@@ -694,6 +762,8 @@ claude plugin install pm-cross@pm-claude-skills
 claude plugin install pm-figma@pm-claude-skills
 
 claude plugin install pm-social@pm-claude-skills         # Social Media 🆕
+
+claude plugin install pm-writers@pm-claude-skills        # Writers & Content Creators 🆕
 
 ---
 

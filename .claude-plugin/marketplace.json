@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "13.0.0",
-  "description": "PM stands for Professional, not just Product Management. 155 Claude Skills + 4 agent templates across 24 bundles covering 17 professions — engineering, customer success, legal, finance, HR, sales, design, Figma, marketing, social media, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
+  "version": "14.0.0",
+  "description": "PM stands for Professional, not just Product Management. 167 Claude Skills + 4 agent templates across 26 bundles covering 18 professions — engineering, customer success, legal, finance, HR, sales, design, Figma, marketing, social media, writers, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
@@ -82,8 +82,8 @@
     },
     {
       "name": "pm-engineering",
-      "description": "Engineering & tech skills: Code Review Checklist, Incident Postmortem, API Docs Writer, Architecture Decision Record, Debugging Log Analyser, PR Description Writer, System Design Interview, Changelog Generator, Test Strategy Doc, Runbook Writer, CI/CD Playbook, SLO & Error Budget, Developer Onboarding Doc, On-Call Runbook, Security Threat Model, Performance Budget, Database Schema Design, Database Migration Plan, Technical Debt Register, RFC Writer, Capacity Planning, Load Testing Plan, Disaster Recovery Plan, Feature Flag Guide, Dependency Audit, Service Catalog Entry, Monitoring Setup Guide, Local Dev Setup, API Versioning Strategy, Infra-as-Code Review, Engineering Weekly Report, Tech Radar, Sprint Velocity Analysis, Microservices Decomposition, Engineering Hiring Rubric. 35 structured skills for engineering teams, SREs, and technical PMs.",
-      "version": "4.0.0",
+      "description": "Engineering & tech skills: Code Review Checklist, Incident Postmortem, API Docs Writer, Architecture Decision Record, Debugging Log Analyser, PR Description Writer, System Design Interview, Changelog Generator, Test Strategy Doc, Runbook Writer, CI/CD Playbook, SLO & Error Budget, Developer Onboarding Doc, On-Call Runbook, Security Threat Model, Performance Budget, Database Schema Design, Database Migration Plan, Technical Debt Register, RFC Writer, Capacity Planning, Load Testing Plan, Disaster Recovery Plan, Feature Flag Guide, Dependency Audit, Service Catalog Entry, Monitoring Setup Guide, Local Dev Setup, API Versioning Strategy, Infra-as-Code Review, Engineering Weekly Report, Tech Radar, Sprint Velocity Analysis, Microservices Decomposition, Engineering Hiring Rubric, Context Mode, Claude Superpowers. 37 structured skills for engineering teams, SREs, technical PMs, and Claude Code power users.",
+      "version": "4.1.0",
       "category": "productivity",
       "source": "./plugins/pm-engineering",
       "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
@@ -162,8 +162,8 @@
     },
     {
       "name": "pm-operations",
-      "description": "Operations skills: Process Documentation, SOP Writer, Vendor Evaluation, Project Status Report, Workshop Facilitation Guide, Risk Register, RACI Matrix. Document workflows, write SOPs, build risk registers with L×I scoring, define RACI matrices for cross-functional initiatives, and design facilitated workshops.",
-      "version": "1.2.0",
+      "description": "Operations skills: Process Documentation, SOP Writer, Vendor Evaluation, Project Status Report, Workshop Facilitation Guide, Risk Register, RACI Matrix, Email Triage, Morning Intelligence. Document workflows, write SOPs, build risk registers, define RACI matrices, triage your inbox to only what needs action, and auto-generate a personalised morning news brief.",
+      "version": "1.3.0",
       "category": "productivity",
       "source": "./plugins/pm-operations",
       "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
@@ -178,8 +178,8 @@
     },
     {
       "name": "pm-cross",
-      "description": "Cross-profession skills: Press Release, Grant Proposal, Executive Summary, Teaching Lesson Plan. Write journalist-ready press releases, structure grant applications, produce decision-ready executive summaries, and design complete lesson plans for any subject, audience, or setting.",
-      "version": "1.1.0",
+      "description": "Cross-profession skills: Press Release, Grant Proposal, Executive Summary, Teaching Lesson Plan, Sycophancy Challenger, Last 30 Days Research, NotebookLM Connector. Get genuine push-back on your ideas (not validation), gather multi-platform research from the last 30 days, and automate NotebookLM from Claude.",
+      "version": "1.2.0",
       "category": "productivity",
       "source": "./plugins/pm-cross",
       "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
@@ -198,6 +198,14 @@
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-social",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-writers",
+      "description": "Writers & Content Creators skills: Instagram Post Downloader, AEO Optimizer, Thumbnail Creator, Substack Notes Scraper, Notes Humanizer. Download Instagram carousels as PDFs, restructure articles for AI citation, generate thumbnail candidates via Gemini, export Substack Notes analytics to Excel, and strip AI writing patterns from any text.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-writers",
       "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
     }
   ]
