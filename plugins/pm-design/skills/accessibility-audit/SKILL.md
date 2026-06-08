@@ -167,6 +167,14 @@ Ask the user for these if not provided:
 - [ ] Effort estimates are included for prioritisation
 - [ ] Testing recommendations are included
 
+## Anti-Patterns
+
+- [ ] Do not rely solely on automated scanning tools — automated checks catch ~30% of issues; manual keyboard and screen reader testing is required
+- [ ] Do not label an issue "minor" simply because it only affects a small percentage of users — for those users it may block all access
+- [ ] Do not add ARIA roles to fix broken semantics — use correct semantic HTML first; ARIA is a last resort
+- [ ] Do not confuse colour contrast of text with colour contrast of UI components — they have different minimum ratios (4.5:1 vs 3:1)
+- [ ] Do not audit only the happy path — error states, empty states, and loading states must also meet accessibility requirements
+
 ## Example Trigger Phrases
 
 - "Audit this design for accessibility"

@@ -60,6 +60,14 @@ Feature, PM, Designer, Platform, Design due, Dev handoff dates.
 - [ ] Constraints include accessibility requirements
 - [ ] Open questions have owners
 
+## Anti-Patterns
+
+- [ ] Do not write a design brief that describes the solution — the brief must describe the problem and constraints, not the design answer
+- [ ] Do not skip the success criteria — designers need to know what "done" looks like before starting
+- [ ] Do not omit existing components to reuse — briefs that ignore the design system lead to inconsistent implementations
+- [ ] Do not leave open questions unresolved — escalate them before design work starts, not during it
+- [ ] Do not confuse requirements with design instructions — the brief defines what, not how
+
 ## Example Trigger Phrases
 - "Write a design brief for [feature]"
 - "Turn this PRD into a Figma design brief"

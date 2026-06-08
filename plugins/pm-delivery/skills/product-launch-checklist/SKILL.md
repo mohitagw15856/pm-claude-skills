@@ -7,6 +7,15 @@ description: "Generate a comprehensive pre-launch, launch day, and post-launch c
 
 Never launch without checking everything. Generate a complete, role-assigned checklist covering pre-launch readiness, launch day execution, and post-launch monitoring.
 
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Launch name** and planned launch date
+- **Launch tier** (1 = major product launch, 2 = significant feature release, 3 = incremental update)
+- **Team members and their roles** (engineering lead, PM, marketing, support, etc.)
+- **Feature description** (what is being launched)
+- **Rollback capability** (can this be feature-flagged or reverted quickly?)
+
 ## How to Use This Skill
 
 Provide:
@@ -116,6 +125,14 @@ The skill generates a tiered checklist. Tier 3 launches use only the Essentials 
 - [ ] Rollback procedure is documented and tested (not just planned)
 - [ ] Feature flag expansion is staged (5% → 50% → 100%), not all-at-once
 - [ ] Post-launch retrospective is scheduled at launch time
+
+## Anti-Patterns
+
+- [ ] Do not apply a Tier 1 checklist to an incremental update — tier the launch appropriately before generating the checklist
+- [ ] Do not launch on a Friday without confirmed weekend engineering coverage
+- [ ] Do not leave the Go/No-Go decision owner as "the team" — it must be a named individual
+- [ ] Do not skip the rollback plan for Tier 1 and 2 launches — know the revert time before going live
+- [ ] Do not close the launch without scheduling the post-launch retrospective — it must be booked at launch time, not after
 
 ## Guidelines
 

@@ -212,6 +212,14 @@ List each transformation in execution order. For ELT pipelines, this is the dbt 
 - [ ] Failure modes include a documented recovery owner
 - [ ] PII fields are identified and a treatment plan is specified
 
+## Anti-Patterns
+
+- [ ] Do not spec a pipeline without defining SLAs — "as fast as possible" is not an acceptable freshness target
+- [ ] Do not omit error handling and dead-letter queue strategy — every pipeline must specify what happens to failed records
+- [ ] Do not design idempotent loads without documenting the deduplication key — assume reruns will happen
+- [ ] Do not leave data quality rules implicit — schema validation, null checks, and referential integrity must be explicit
+- [ ] Do not ignore schema evolution — specify how upstream schema changes are detected and handled
+
 ## Example Trigger Phrases
 
 - "Design a data pipeline for our Salesforce to Snowflake sync"

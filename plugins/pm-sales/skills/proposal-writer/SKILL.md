@@ -94,6 +94,14 @@ Writes commercial proposals that win business — structured around the prospect
 - [ ] Next steps include a specific date and named action
 - [ ] "Valid until" date is included to create urgency
 
+## Anti-Patterns
+
+- [ ] Do not lead with the solution before establishing that the problem is understood — the proposal must demonstrate problem comprehension first
+- [ ] Do not use vague investment language like "competitive pricing" — every proposal must state a specific price or range
+- [ ] Do not omit a "not included" section — undefined scope leads to disputes after the proposal is accepted
+- [ ] Do not forget a "valid until" date — proposals without expiry create awkward situations and stale pricing
+- [ ] Do not list next steps without naming who is responsible for each and what the expected timeline is
+
 ## Example Trigger Phrases
 - "Write a proposal for [prospect] to [solve their problem]"
 - "Draft a statement of work for [project]"

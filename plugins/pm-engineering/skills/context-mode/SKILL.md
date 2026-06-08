@@ -1,6 +1,6 @@
 ---
 name: context-mode
-description: "Activate output filtering, session logging, and auto-resume to keep Claude Code sessions running for hours without context bloat or memory loss. Use when asked to enable context mode, turn on long session mode, or activate session persistence. Installs a session log at project root, filters verbose command output before it enters context, and auto-resumes after Claude resets."
+description: "Activate output filtering, session logging, and auto-resume to keep Claude Code sessions productive across resets. Use when starting a long or complex coding session, when previous sessions lost context mid-task, or when you need Claude to resume exactly where it left off after a reset. Installs a session.log at project root, filters verbose command output to preserve context, and automatically resumes in-progress tasks after any Claude reset."
 ---
 
 # Context Mode Skill

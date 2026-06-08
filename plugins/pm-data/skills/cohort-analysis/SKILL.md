@@ -178,6 +178,14 @@ ORDER BY 1, 3;
 - [ ] Recommendations are tied to specific cohort or segment findings — not generic growth advice
 - [ ] Leading indicators are observable in production data, not just in theory
 
+## Anti-Patterns
+
+- [ ] Do not allow the same user to appear in multiple cohorts — overlapping cohorts produce retention numbers that cannot be compared or acted upon
+- [ ] Do not assume assumed ARPU in LTV projections — use observed revenue per retained user per period, not a blended average that hides segment differences
+- [ ] Do not draw conclusions from cohorts too small to be statistically meaningful — flag minimum cohort size thresholds and note when a cohort is too small to trust
+- [ ] Do not conflate retention rate with engagement rate — a user who logs in but does not complete the key retention event is not retained by the definition used
+- [ ] Do not make recommendations without connecting them to specific cohort or segment findings — generic growth advice that could apply to any product adds no value
+
 ## Example Trigger Phrases
 
 - "Run a cohort analysis for our SaaS product"

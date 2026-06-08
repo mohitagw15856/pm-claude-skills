@@ -131,3 +131,11 @@ Ask the user for these if not provided:
 - [ ] Success metrics include a measurement window (30/60/90 days)
 - [ ] Rollback procedure is confirmed for Tier 1 and 2 launches
 - [ ] Post-launch retrospective is scheduled
+
+## Anti-Patterns
+
+- [ ] Do not build a Tier 1 GTM plan for an incremental feature update — tier the launch appropriately before planning
+- [ ] Do not create activity lists without named owners and due dates — unowned tasks do not get done
+- [ ] Do not skip the rollback procedure for Tier 1 and 2 launches — every significant launch must have an abort plan
+- [ ] Do not treat marketing and engineering as separate tracks — cross-functional coordination is the whole point of a GTM plan
+- [ ] Do not set success metrics without a defined measurement window — "increase signups" is not a measurable target

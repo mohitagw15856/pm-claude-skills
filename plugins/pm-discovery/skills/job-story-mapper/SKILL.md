@@ -114,6 +114,22 @@ Rate each job story on:
 - [ ] Current workaround identified for each high-opportunity story
 - [ ] Product opportunity is distinct from "build the feature" (it's an outcome)
 
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Product or feature area** to map (e.g. onboarding, checkout, dashboard)
+- **User type or persona** (who are we mapping jobs for?)
+- **Source material** (user interview notes, support tickets, discovery findings, or describe from memory)
+- **Scope** (full product job map vs. a single feature area)
+
+## Anti-Patterns
+
+- [ ] Do not write job stories that describe a feature rather than a situation-motivation pair
+- [ ] Do not skip the social and emotional dimensions — mapping only functional jobs misses the most defensible differentiation opportunities
+- [ ] Do not define situations too broadly ("as a user who wants to manage their work") — the situation must be a specific moment or trigger
+- [ ] Do not conflate opportunity scoring with priority — a high opportunity score still requires feasibility and strategic fit assessment
+- [ ] Do not produce a job map without identifying current workarounds — the workaround reveals what the job is worth to the customer
+
 ## Guidelines
 
 - Never write a job story for a feature — write it for the situation that makes the feature valuable

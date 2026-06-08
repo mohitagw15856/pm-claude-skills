@@ -330,3 +330,11 @@ curl http://localhost:[PORT]/health
 - [ ] On-call section has real links, not placeholders
 - [ ] Contacts are current — team members with real Slack handles
 - [ ] Troubleshooting covers the top 3 actual questions new joiners ask
+
+## Anti-Patterns
+
+- [ ] Do not document the ideal setup — document the actual setup; real oddities and gotchas are what new engineers need most
+- [ ] Do not leave placeholder contacts like "ask your manager" — name specific people for each domain or the doc becomes useless when the new joiner has an urgent question
+- [ ] Do not write the onboarding doc without reviewing it with a recent joiner — the author is blind to what they take for granted
+- [ ] Do not include every piece of architectural detail — an onboarding doc that covers everything teaches nothing; link to deeper docs instead
+- [ ] Do not skip the "things that might surprise you" section — undocumented non-obvious patterns are the number one cause of wasted engineering time in the first week

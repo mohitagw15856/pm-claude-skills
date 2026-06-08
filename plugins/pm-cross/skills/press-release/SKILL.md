@@ -72,6 +72,14 @@ Would a journalist care? Is the headline the full story? Is there a human angle?
 - [ ] Boilerplate is factual, not promotional
 - [ ] Embargo date and media contact are included
 
+## Anti-Patterns
+
+- [ ] Do not bury the news — the most important information must appear in the first paragraph (inverted pyramid)
+- [ ] Do not use promotional language or superlatives — press releases must read as news, not advertising copy
+- [ ] Do not omit the boilerplate — every press release needs the standard "About [Company]" paragraph at the end
+- [ ] Do not forget the embargo date and media contact — journalists need both to use the release
+- [ ] Do not write a headline longer than 12 words — it must be scannable and specific
+
 ## Example Trigger Phrases
 - "Write a press release announcing [news]"
 - "Draft a media statement about [event]"

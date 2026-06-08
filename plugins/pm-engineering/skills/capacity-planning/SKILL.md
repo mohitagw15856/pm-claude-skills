@@ -346,6 +346,14 @@ Define the thresholds that require explicit action — not retrospective fixes a
 
 ---
 
+## Anti-Patterns
+
+- [ ] Do not set capacity trigger thresholds without knowing the baseline — a "CPU > 70%" alert is meaningless if you don't know what normal looks like
+- [ ] Do not plan only for average traffic — capacity plans that don't model peak load will result in incidents during the events that matter most
+- [ ] Do not conflate vertical and horizontal scaling — adding more app servers without addressing database connection limits will not resolve the constraint
+- [ ] Do not present growth projections as certainties — all forecasts have uncertainty; state the confidence level and provide a conservative and optimistic scenario
+- [ ] Do not defer action items without a named owner and a specific date — a roadmap with no owners is a wish list
+
 ## Quality Checks
 
 - [ ] Every resource has a quantified current utilisation and a projected months-to-ceiling — no hand-waving

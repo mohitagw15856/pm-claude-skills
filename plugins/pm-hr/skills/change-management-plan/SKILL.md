@@ -131,6 +131,14 @@ Ask the user for these if not provided:
 - [ ] Adoption metrics have a measurement date and owner
 - [ ] Resistance management has specific responses (not just "communicate more")
 
+## Anti-Patterns
+
+- [ ] Do not treat communication as a one-time announcement — people need to hear a message multiple times before they internalise it; plan for repeated touchpoints
+- [ ] Do not assign change management to a single owner without involving line managers — managers are the most effective cascade channel and must be briefed before their teams
+- [ ] Do not schedule training after go-live — people who learn a new system on the day they need to use it will revert to the old process
+- [ ] Do not ignore resistors in the stakeholder analysis — resistors who are not explicitly engaged will undermine adoption, especially informal leaders
+- [ ] Do not measure adoption only at go-live — the real test is sustained adoption at 90 days, when novelty has worn off
+
 ## Example Trigger Phrases
 
 - "Write a change management plan for [initiative]"

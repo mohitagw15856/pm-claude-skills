@@ -149,6 +149,14 @@ Ask the user for these if not provided:
 - [ ] Board asks are specific and actionable
 - [ ] Deck is ≤ 15 slides (excluding appendix)
 
+## Anti-Patterns
+
+- [ ] Do not bury bad news after slides full of good news — boards lose trust when they discover problems were de-emphasised; lead with the honest narrative
+- [ ] Do not include slides without a "so what" — a chart that shows data without a takeaway wastes board time and signals the presenter hasn't done the analysis
+- [ ] Do not exceed 15 slides in the main deck — a longer deck usually means the presenter hasn't decided what matters most
+- [ ] Do not attend a board meeting without at least one specific ask — a board meeting with no asks is a missed opportunity to leverage the room
+- [ ] Do not report metrics without comparing them to plan or a prior period — a metric shown in isolation gives the board no basis for judgement
+
 ## Example Trigger Phrases
 
 - "Build a board deck structure for our Q[N] board meeting"

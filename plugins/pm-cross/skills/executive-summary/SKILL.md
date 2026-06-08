@@ -84,12 +84,21 @@ An executive summary is NOT a summary of the document. It is a standalone docume
 **Client:** Lead with their problem. Show you understand before presenting recommendation.
 
 ## Quality Checks
-- Bottom line in first 3 sentences
-- Standalone — no need to read full document
-- Recommendation is specific
-- Fits length limit
-- Written for audience priorities not author priorities
-- Next steps have owners and dates
+
+- [ ] Bottom line in first 3 sentences
+- [ ] Standalone — no need to read full document
+- [ ] Recommendation is specific
+- [ ] Fits length limit
+- [ ] Written for audience priorities not author priorities
+- [ ] Next steps have owners and dates
+
+## Anti-Patterns
+
+- [ ] Do not summarise the document chronologically — an executive summary that follows the structure of the source document is not an executive summary, it is an abstract
+- [ ] Do not bury the recommendation at the end — executives read the first paragraph and skim the rest; the ask must be in sentence one or two
+- [ ] Do not use the same summary for different audiences — a CEO and a board member have different decision contexts and require different framing
+- [ ] Do not include background that the reader already knows — every sentence of background must earn its place by making the bottom line more actionable
+- [ ] Do not leave the "risks of inaction" section vague — a summary that does not quantify what happens if the reader does nothing removes the urgency needed for a decision
 
 ## Example Trigger Phrases
 - "Write an executive summary of this report: [paste]"

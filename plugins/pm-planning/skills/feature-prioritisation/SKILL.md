@@ -118,3 +118,11 @@ Recommend building: all Basic features first → Performance features for key us
 - [ ] Assumptions used in scoring are documented
 - [ ] Stakeholder politics or personal preferences are separated from framework score
 - [ ] Prioritisation is anchored to a specific scope (sprint / quarter / launch)
+
+## Anti-Patterns
+
+- [ ] Do not score items against different goals — every item in a prioritisation session must be scored against the same objective
+- [ ] Do not omit deprioritised items — explicitly listing what was cut and why is as important as the ranked list
+- [ ] Do not let stakeholder politics override framework scores without documenting the override and reason
+- [ ] Do not mix RICE, ICE, or MoSCoW scores across frameworks in a single session — pick one framework per prioritisation exercise
+- [ ] Do not treat the output as final without documenting the assumptions used in scoring — assumptions change, and the list must be revisitable

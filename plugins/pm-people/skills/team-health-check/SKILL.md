@@ -1,6 +1,6 @@
 ---
 name: team-health-check
-description: "Run a structured team health assessment. Use when asked to run a team health check, assess team morale, facilitate a team retrospective on ways of working, or evaluate team dynamics. Produces a health assessment across key dimensions with RAG status, underlying signals, and prioritised improvement actions."
+description: "Runs a structured team health assessment across key dimensions. Use when asked to run a team health check, assess team morale, facilitate a retrospective on ways of working, or evaluate team dynamics. Produces a health assessment with RAG status per dimension, underlying signals, and prioritised improvement actions with named owners."
 ---
 
 # Team Health Check Skill
@@ -252,6 +252,14 @@ Use this template to document results after the session or survey.
 - [ ] Each action has a single owner — not "the team"
 - [ ] Results are shared with the team, not kept by management
 - [ ] Trend data is tracked across cycles to show improvement or regression
+
+## Anti-Patterns
+
+- [ ] Do not run a health check without first establishing psychological safety — without it, scores reflect fear, not reality
+- [ ] Do not treat a single health check as a trend — one data point cannot show improvement or regression
+- [ ] Do not keep results with management without sharing them with the team — transparency is a prerequisite for trust
+- [ ] Do not generate action items that are vague commitments like "improve communication" — every action must be specific and verifiable
+- [ ] Do not assign actions to "the team" — each improvement action needs a single named owner
 
 ## Example Trigger Phrases
 

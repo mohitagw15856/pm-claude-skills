@@ -258,3 +258,11 @@ Items where the cost of remediation currently exceeds the business value, accept
 - [ ] Accepted/deferred items have a review date and a named owner — no permanently deferred items
 - [ ] The register distinguishes between debt (deliberate or accumulated shortcuts) and bugs (unintended defects)
 - [ ] Items are closed as resolved only when acceptance criteria are met — not when the PR is merged
+
+## Anti-Patterns
+
+- [ ] Do not score debt items arbitrarily — priority scores must be calculated using the documented formula
+- [ ] Do not conflate technical debt (deliberate shortcuts) with bugs (unintended defects) — they require different remediation strategies
+- [ ] Do not underrate security and dependency items because they feel abstract — score based on actual business impact
+- [ ] Do not create "permanently deferred" items — every accepted item must have a review date and named owner
+- [ ] Do not include resolution plans that are vague descriptions — each plan must have specific, ticketable steps

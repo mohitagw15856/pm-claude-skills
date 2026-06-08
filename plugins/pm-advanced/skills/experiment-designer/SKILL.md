@@ -67,3 +67,11 @@ Ask the user for these if not provided:
 - [ ] Test was not stopped early (or flagged clearly if it was)
 - [ ] Practical significance assessed separately from statistical significance
 - [ ] Sample ratio mismatch is checked in results interpretation
+
+## Anti-Patterns
+
+- [ ] Do not define success criteria after seeing preliminary results — post-hoc success definitions are HARKing (Hypothesising After Results are Known) and invalidate the experiment
+- [ ] Do not stop a test early because the result looks significant — early stopping dramatically inflates false positive rates; the test must run to the planned sample size
+- [ ] Do not treat statistical significance as the same as practical significance — a p < 0.05 result with a 0.1% lift is real but may not be worth shipping
+- [ ] Do not run the same experiment on the same population multiple times without correction — multiple testing inflates the chance of a false positive proportionally
+- [ ] Do not use more than one primary metric — multiple primary metrics require multiple hypothesis corrections and make the ship/kill decision ambiguous

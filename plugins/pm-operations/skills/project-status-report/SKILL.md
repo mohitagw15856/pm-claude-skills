@@ -111,6 +111,14 @@ RAG definitions:
 - [ ] Milestones are binary (complete or not complete — no "85% done")
 - [ ] Executive summary can stand alone for a stakeholder who reads nothing else
 
+## Anti-Patterns
+
+- [ ] Do not rate project health as Green while listing unresolved critical blockers
+- [ ] Do not report milestone progress as a percentage — milestones are binary: complete or not complete
+- [ ] Do not bury risks at the bottom — if something is high risk, it belongs in the executive summary
+- [ ] Do not leave decisions required without specifying who must decide and by when
+- [ ] Do not write an executive summary that requires reading the full report to understand — it must stand alone
+
 ## Example Trigger Phrases
 - "Write a project status report for [project]"
 - "Generate a RAG status update for [project]"

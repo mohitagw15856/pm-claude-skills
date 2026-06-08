@@ -1,6 +1,6 @@
 ---
 name: sql-query-explainer
-description: "Explain, optimise, or translate SQL queries into plain language. Use when asked to explain a SQL query, optimise slow SQL, write a data dictionary, translate SQL to plain English for non-technical stakeholders, or review a query for correctness and performance. Works across PostgreSQL, MySQL, BigQuery, Snowflake, and standard SQL."
+description: "Explains, optimises, writes, and documents SQL queries. Use when asked to explain a SQL query, optimise slow SQL, translate SQL to plain English for non-technical stakeholders, write a query from a natural language description, or produce query documentation. Produces plain-English explanations, annotated optimised queries, or a data dictionary covering output shape, assumptions, and known limitations. Works across PostgreSQL, MySQL, BigQuery, Snowflake, and standard SQL."
 ---
 
 # SQL Query Explainer Skill

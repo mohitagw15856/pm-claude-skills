@@ -354,3 +354,11 @@ If this schema is being introduced to an existing system, note the migration app
 - [ ] JSONB columns are justified — not used as a substitute for proper schema design on queryable fields
 - [ ] Normalization decisions are documented with reasoning, not just stated
 - [ ] Migration notes address existing data if this is a schema change, not a greenfield schema
+
+## Anti-Patterns
+
+- [ ] Do not use JSONB columns as a substitute for proper relational schema design on fields that will be queried
+- [ ] Do not add indexes speculatively — every index must be justified by a specific access pattern
+- [ ] Do not omit timezone-awareness — use TIMESTAMPTZ, never plain TIMESTAMP
+- [ ] Do not design without documenting normalization decisions — future maintainers need the reasoning, not just the structure
+- [ ] Do not skip the access patterns section — schema without query patterns cannot be evaluated for correctness

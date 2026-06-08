@@ -76,6 +76,14 @@ If the user doesn't have a strong angle, help them find one:
 - [ ] Journalist's name is used (not "Hi there")
 - [ ] Mobile number included for deadline follow-up
 
+## Anti-Patterns
+
+- [ ] Do not write a pitch that leads with the company's history or description — the story angle must come first, not who the company is
+- [ ] Do not use vague data points ("significant growth", "thousands of users") — every statistic must be specific and verifiable
+- [ ] Do not send the same pitch to multiple journalists in a BCC — pitches must be individually tailored to each journalist's beat and recent work
+- [ ] Do not offer an exclusive without setting a response deadline — an open-ended exclusive invitation is ignored or used to delay indefinitely
+- [ ] Do not follow up with "just checking in" — a follow-up must contain new information or a fresh angle, otherwise it is noise
+
 ## Example Trigger Phrases
 
 - "Write a media pitch for [story or announcement]"

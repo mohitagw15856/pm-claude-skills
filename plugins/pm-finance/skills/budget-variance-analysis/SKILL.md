@@ -48,10 +48,17 @@ Does the full-year forecast need updating? State revised expectation and key ass
 3-4 sentences of management commentary suitable for a board pack.
 
 ## Quality Checks
-- All variances above threshold explained
-- Root causes specific (not vague)
-- Favourable/Adverse correctly labelled
-- Forecast impact stated for material variances
+- [ ] All variances above threshold explained
+- [ ] Root causes specific (not vague)
+- [ ] Favourable/Adverse correctly labelled
+- [ ] Forecast impact stated for material variances
+
+## Anti-Patterns
+
+- [ ] Do not explain a variance as "timing" without specifying which period it will reverse into and what amount is expected
+- [ ] Do not label a favourable variance on a cost line without checking whether it is due to underspend, delayed spend, or reduced activity — the cause determines whether it is genuinely good news
+- [ ] Do not omit variances below the materiality threshold entirely — note them collectively so the reader knows they exist and were reviewed
+- [ ] Do not present a variance analysis without a forecast impact statement for material items — historical variances without forward implications are incomplete
 
 ## Example Trigger Phrases
 - "Write a variance analysis for these actuals vs budget: [paste]"

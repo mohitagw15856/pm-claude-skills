@@ -226,3 +226,11 @@ How we'll know the partnership is working:
 - "Create a reseller partnership proposal for [Company]"
 - "Build the business case for a strategic partnership with [Partner]"
 - "Structure a technology integration partnership proposal"
+
+## Anti-Patterns
+
+- [ ] Do not write the value proposition from your own perspective — the "For Partner" section must be written from the partner's point of view, in the language of their goals and their customers
+- [ ] Do not leave commercial terms as structure without numbers — a proposal that says "revenue share" without stating the percentage is not a proposal, it is a conversation opener
+- [ ] Do not omit the "What we're not proposing" section — leaving unstated assumptions creates misaligned expectations that derail negotiations later
+- [ ] Do not set success metrics unilaterally — metrics that only your company controls or cares about will not earn partner commitment
+- [ ] Do not write a go-to-market plan with "TBD" owners — every activity must have a named owner on at least one side before the proposal goes out

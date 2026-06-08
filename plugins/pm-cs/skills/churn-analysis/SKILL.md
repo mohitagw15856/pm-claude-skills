@@ -1,6 +1,6 @@
 ---
 name: churn-analysis
-description: "Analyse customer churn for a product or cohort and produce a structured churn report. Use when asked to analyse churn, understand why customers are leaving, identify churn patterns, calculate churn rate, or build a churn reduction plan. Produces a churn analysis with rate calculations, categorised reasons, early warning signals, and prioritised interventions."
+description: "Produce a structured churn analysis that separates avoidable from unavoidable churn. Use when investigating why customers are leaving, identifying at-risk segments, calculating net revenue retention, or building a retention intervention plan. Produces a churn report with rate calculations, categorised reasons by avoidability, segment breakdown, timing analysis, early warning signals, and prioritised interventions ranked by estimated impact."
 ---
 
 # Churn Analysis Skill
@@ -168,6 +168,14 @@ Ranked by estimated impact × feasibility.
 - [Data gap 3]
 
 ---
+
+## Anti-Patterns
+
+- [ ] Do not mix avoidable and unavoidable churn in intervention plans — recommending product fixes for customers who churned due to company shutdown wastes resources
+- [ ] Do not calculate churn rate using end-of-period customer count as the denominator — this understates churn; always divide churned customers by the starting cohort
+- [ ] Do not rely solely on exit survey data for churn reasons — response rates are typically low and self-selection biases the sample toward customers who are engaged enough to complete a survey
+- [ ] Do not recommend interventions without linking them to a specific churn reason — interventions disconnected from root causes will not move retention
+- [ ] Do not report only gross revenue churn — without net revenue retention (NRR), a healthy-looking retention number can hide a shrinking revenue base
 
 ## Quality Checks
 

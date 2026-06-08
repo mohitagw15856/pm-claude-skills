@@ -140,6 +140,14 @@ Rules for action items:
 - [ ] No action item contains vague language like "improve monitoring", "increase resilience", or "better testing" — each must name a specific change
 - [ ] Executive summary is readable by non-technical leadership
 
+## Anti-Patterns
+
+- [ ] Do not assign blame to individuals — postmortems must focus on system and process failures
+- [ ] Do not write action items with vague language like "improve monitoring" — each must name a specific, ownable change
+- [ ] Do not skip the contributing factors — root cause alone misses the systemic issues that enable incidents
+- [ ] Do not omit the detection timeline — how long it took to detect matters as much as how long it took to resolve
+- [ ] Do not treat the postmortem as closed until all action items have named owners and due dates
+
 ## Usage Examples
 - "Write a postmortem for the [incident name] outage"
 - "Help me write a P1 incident report"

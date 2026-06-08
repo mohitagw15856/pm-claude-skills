@@ -67,3 +67,11 @@ Ask the user for these if not provided:
 - [ ] Each theme has a specific, measurable metric (not "improve engagement")
 - [ ] Progression story shows causal links between quarters, not just chronological listing
 - [ ] "Not on the roadmap" section includes at least 2 items with clear rationale
+
+## Anti-Patterns
+
+- [ ] Do not produce a narrative that lists initiatives chronologically without showing causal progression — the story must show why each phase enables the next
+- [ ] Do not use abstract strategic language that cannot be repeated by a non-technical listener — test whether someone could explain it back without the document
+- [ ] Do not omit the "what's not on the roadmap" section — what you are choosing not to do is as important as what you are doing
+- [ ] Do not set themes without measurable metrics — a theme without a metric cannot be tracked or held to account
+- [ ] Do not skip the hard questions section — preparing for objections in advance is the purpose of the narrative exercise

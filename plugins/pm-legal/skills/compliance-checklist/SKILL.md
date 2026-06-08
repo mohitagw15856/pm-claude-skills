@@ -99,6 +99,14 @@ Once certified/compliant, what needs to continue:
 - [ ] Quick wins clearly separated from complex implementations
 - [ ] Evidence requirements tied to specific controls
 
+## Anti-Patterns
+
+- [ ] Do not omit the legal disclaimer — this checklist does not constitute compliance advice and must never be presented as a substitute for qualified professional review
+- [ ] Do not generate a generic checklist that is not tailored to the stated framework, organisation type, and maturity level — a SOC 2 checklist for a startup and an enterprise are fundamentally different documents
+- [ ] Do not list controls without specifying what evidence is required — a control without evidence requirements cannot be audited
+- [ ] Do not mark a control as "full" implementation when it is partial — overestimating readiness leads to audit failures and regulatory risk
+- [ ] Do not skip the "common pitfalls" section — this is where organisations most frequently fail audits for the stated framework
+
 ## Example Trigger Phrases
 - "Create a GDPR compliance checklist for our SaaS"
 - "Generate a SOC 2 Type II readiness checklist"

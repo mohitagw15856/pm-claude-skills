@@ -136,6 +136,14 @@ Template for the summary document to send within 48 hours:
 - [ ] Each working session has a stated output
 - [ ] Agenda has social/informal time built in
 
+## Anti-Patterns
+
+- [ ] Do not fill the entire agenda with structured sessions — unstructured social time is essential for team bonding and must be built in
+- [ ] Do not schedule more than 90 minutes of intensive working sessions without a break
+- [ ] Do not design an offsite without clearly linking each session to the stated goals — purpose must be explicit
+- [ ] Do not neglect logistics — venue, travel, dietary requirements, and accessibility must be confirmed before the agenda is finalised
+- [ ] Do not plan without an energy management arc — high-energy collaboration sessions should not appear directly after lunch
+
 ## Example Trigger Phrases
 
 - "Plan a 1-day offsite for my team of [size]"

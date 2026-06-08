@@ -65,6 +65,14 @@ For each paper: internal validity, external validity, bias types, effect size si
 - [ ] Gaps identified — what the field still needs
 - [ ] All claims cited
 
+## Anti-Patterns
+
+- [ ] Do not summarise papers one by one — evidence must be synthesised thematically across multiple studies, not presented as a sequence of abstracts
+- [ ] Do not omit methodological critique — a literature review that only reports findings without assessing study quality is not a critical review
+- [ ] Do not organise by chronology when thematic organisation is possible — chronological reviews bury the conceptual structure of the field
+- [ ] Do not present contested findings as settled consensus — where evidence is mixed, name both sides and why the evidence diverges
+- [ ] Do not skip the gap analysis — identifying what the field still needs is a core deliverable, not an optional addition
+
 ## Example Trigger Phrases
 - "Write a literature review on [topic]"
 - "Synthesise the evidence on [topic] from these papers: [paste]"

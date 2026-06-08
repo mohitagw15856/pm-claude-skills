@@ -1,6 +1,6 @@
 ---
 name: nda-analyser
-description: "Analyse a Non-Disclosure Agreement (NDA) and flag key terms, unusual provisions, and negotiation points. Use when asked to review an NDA, mutual NDA, confidentiality agreement, or non-disclosure deed. Produces clause-by-clause analysis with risk flags and a negotiation checklist."
+description: "Analyses a Non-Disclosure Agreement clause by clause and flags unusual terms, one-sided provisions, and negotiation points. Use when reviewing an NDA, mutual NDA, confidentiality agreement, or non-disclosure deed before signing or countering. Produces a plain English verdict, clause-by-clause risk analysis, and a prioritised negotiation checklist — always with a disclaimer that qualified legal advice is required before signing."
 ---
 
 # NDA Analyser Skill
@@ -60,6 +60,14 @@ WARNING: This analysis is for informational purposes only and is not legal advic
 - [ ] Post-termination obligations duration noted
 - [ ] Plain English verdict given (standard / one-sided / needs lawyer)
 - [ ] Disclaimer is included
+
+## Anti-Patterns
+
+- [ ] Do not present the analysis as legal advice — the disclaimer must appear prominently and the output must recommend qualified legal review before any signing decision
+- [ ] Do not skip the residuals clause check — residuals clauses allow the receiving party to use disclosed information from memory, which is one of the highest-risk provisions in any NDA
+- [ ] Do not evaluate only the clauses explicitly flagged by the user — a complete analysis must cover all standard clause types even if the user only asked about one
+- [ ] Do not assess breadth of the confidentiality definition without checking for oral disclosure coverage — oral disclosures with no written confirmation requirement are a common enforcement gap
+- [ ] Do not omit the plain English verdict — a clause-by-clause analysis without a summary conclusion leaves the user unable to act on the findings
 
 ## Example Trigger Phrases
 - "Analyse this NDA"

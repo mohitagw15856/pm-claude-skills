@@ -1,6 +1,6 @@
 ---
 name: instagram-post-downloader
-description: "Download Instagram posts — single images or full carousels — directly from a URL. Fetches high-resolution files from Instagram's CDN, saves them into a named folder, and stitches carousel slides into a single PDF. Supports batch downloading of multiple URLs at once. Use when asked to download, save, or archive an Instagram post, reel thumbnail, or carousel."
+description: "Downloads and saves Instagram posts as high-resolution files. Use when asked to download, save, or archive an Instagram post, reel thumbnail, or carousel. Fetches images from Instagram's CDN, saves them into a named folder, and stitches carousel slides into a single PDF. Supports batch downloading of multiple URLs at once."
 ---
 
 # Instagram Post Downloader Skill
@@ -633,6 +633,14 @@ Before marking the task complete, verify each item:
 - [ ] No credential or cookie storage — skill operates on public posts only
 
 ---
+
+## Anti-Patterns
+
+- [ ] Do not attempt to download private posts or content behind a login wall — this skill is for public posts only
+- [ ] Do not ignore 429 rate-limit responses — always implement a backoff wait before retrying
+- [ ] Do not save all downloads to a single flat folder when processing multiple accounts — use named subfolders per source
+- [ ] Do not skip PDF stitching for carousel posts — individual slides delivered without a combined PDF are incomplete output
+- [ ] Do not proceed if Instagram returns a login wall — surface the limitation clearly rather than returning an error silently
 
 ## Example Trigger Phrases
 

@@ -587,6 +587,14 @@ Before marking the task complete, verify each item:
 
 ---
 
+## Anti-Patterns
+
+- [ ] Do not generate thumbnails without incorporating brand colours and style specs when provided — off-brand outputs must be regenerated
+- [ ] Do not skip the evaluation step — all candidates must be scored before being presented to the user
+- [ ] Do not present only one thumbnail candidate — always generate multiple options for comparison
+- [ ] Do not include the full image generation prompts in a separate document — they must be included in the evaluation report for iteration reference
+- [ ] Do not claim a thumbnail is final without offering an iteration round
+
 ## Example Trigger Phrases
 
 - "Create thumbnails for this article"

@@ -82,6 +82,14 @@ Order by: fixes before handoff (critical) > consistency fixes (high) > polish (m
 - [ ] Audience-appropriate concerns flagged explicitly
 - [ ] Slides without issues are listed briefly, not ignored
 
+## Anti-Patterns
+
+- [ ] Do not flag stylistic preferences as issues — only report genuine layout problems, overflow, and consistency errors
+- [ ] Do not produce a flat list of issues — group by severity (Critical / Major / Minor) so fixes can be prioritised
+- [ ] Do not skip slides without commenting — every slide must have an explicit pass or issue status
+- [ ] Do not suggest redesigning content — the audit scope is layout, consistency, and readability, not messaging
+- [ ] Do not report the same issue type repeatedly across slides without summarising the pattern — consolidate repeated issues
+
 ## Example Trigger Phrases
 - "Audit this slide deck before my board meeting"
 - "Review this PowerPoint for layout issues"

@@ -326,3 +326,11 @@ Run structured tests — change one variable at a time:
 - "Create a LinkedIn ad campaign for [B2B SaaS product]"
 - "Write TikTok ad copy for [consumer brand]"
 - "Structure a paid social funnel for [offer]"
+
+## Anti-Patterns
+
+- [ ] Do not combine multiple campaign objectives in one campaign — pick one measurable goal or the algorithm cannot optimise correctly
+- [ ] Do not skip retargeting suppression — existing customers receiving acquisition ads wastes budget and damages brand perception
+- [ ] Do not launch without completing the tracking setup checklist — campaigns without verified pixel firing cannot be optimised or attributed
+- [ ] Do not run A/B tests changing more than one variable at a time — multi-variable tests produce uninterpretable results
+- [ ] Do not allocate equal budget across TOFU, MOFU, and BOFU — BOFU audiences convert at higher rates and deserve proportionally more budget per conversion

@@ -92,3 +92,11 @@ NOTE: Steps must be written in imperative form. Each step must have one action o
 - "Write an SOP for [process]"
 - "Create a standard operating procedure for [task]"
 - "Write a work instruction for [process]"
+
+## Anti-Patterns
+
+- [ ] Do not write steps that contain more than one action — each step must be a single, auditable action in imperative form
+- [ ] Do not omit a role from any step — every action must be assigned to a specific role or the SOP cannot be enforced
+- [ ] Do not skip the non-conformance section — an SOP without a deviation process cannot meet audit or regulatory requirements
+- [ ] Do not produce an SOP without a review date and version history — undated documents cannot be relied upon for compliance
+- [ ] Do not use passive voice in procedure steps — write "Open the system" not "The system should be opened"

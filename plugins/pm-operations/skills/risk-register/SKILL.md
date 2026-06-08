@@ -209,3 +209,11 @@ A risk is closed when:
 - "What risks should I document for a data migration project?"
 - "Generate a risk register for our steering committee"
 - "Help me identify and score risks for our Q3 delivery plan"
+
+## Anti-Patterns
+
+- [ ] Do not assign risks to "the team" or "TBD" — every risk must have a named individual owner
+- [ ] Do not write mitigations as "monitor and review" — mitigations must describe what is actively being done to reduce likelihood or impact
+- [ ] Do not delete closed risks — they provide an audit trail; archive them instead
+- [ ] Do not confuse risks with issues — a risk is something that might happen; an issue is something that has already happened
+- [ ] Do not leave Critical or High risks without a contingency plan — what happens if the mitigation fails must be documented

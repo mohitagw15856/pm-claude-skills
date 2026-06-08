@@ -1,6 +1,6 @@
 ---
 name: rice-prioritisation
-description: "Score and rank product initiatives using the RICE framework. Use when asked to prioritise features, rank a backlog using RICE, score initiatives for quarterly planning, or apply an objective framework to a list of competing ideas. Produces a ranked RICE table with scores, quick wins and moonshot flags, dependency notes, and a recommended sequencing order."
+description: "Scores and ranks product initiatives using the RICE framework. Use when asked to prioritise features, rank a backlog using RICE, score initiatives for quarterly planning, or apply an objective framework to a list of competing ideas. Produces a ranked RICE table with scores, quick wins and moonshot flags, dependency notes, and a recommended sequencing order."
 ---
 
 # RICE Prioritisation Skill
@@ -57,3 +57,11 @@ RICE Score = (Reach × Impact × Confidence) / Effort
 - [ ] Quick wins and moonshots are explicitly called out
 - [ ] Dependencies that affect sequencing are noted
 - [ ] Any surprising ranking is investigated before accepting it
+
+## Anti-Patterns
+
+- [ ] Do not default to 100% confidence on estimates that lack supporting data — this inflates scores and misleads planning
+- [ ] Do not treat RICE scores as a final decision — a ranking that surprises the team must be investigated before it is accepted
+- [ ] Do not omit effort estimates from engineering — PM-only effort estimates are frequently optimistic and skew results
+- [ ] Do not forget to note dependencies that would change the sequencing even if RICE scores suggest otherwise
+- [ ] Do not score every initiative at the same impact level — if everything is "high impact," the framework produces no useful signal

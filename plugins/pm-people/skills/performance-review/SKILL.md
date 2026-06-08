@@ -108,6 +108,14 @@ Ask the user for these if not provided:
 - [ ] No vague phrases without evidence
 - [ ] Tone is professional and fair throughout
 
+## Anti-Patterns
+
+- [ ] Do not inflate positive language to avoid difficult feedback — growth areas must be clearly stated, not buried
+- [ ] Do not include feedback that isn't supported by specific examples — every development point needs evidence
+- [ ] Do not write a review that only covers what happened in the last month — the full review period must be considered
+- [ ] Do not omit development goals — a review without forward-looking guidance is incomplete
+- [ ] Do not use language that could be read as discriminatory — avoid references to personality traits unrelated to work performance
+
 ## Example Trigger Phrases
 
 - "Write a performance review for [name] based on these notes: [paste notes]"

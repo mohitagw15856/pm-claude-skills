@@ -70,6 +70,13 @@ Produce a clean SWOT for the user's product in the context of this competitive l
 - [ ] SWOT is honest — Weaknesses and Threats should not be softened
 - [ ] Recommendations are specific and actionable, not generic strategy advice
 
+## Anti-Patterns
+
+- [ ] Do not mark feature presence as equivalent across competitors without noting quality differences — both products may have "reporting" while one's is meaningfully better
+- [ ] Do not position the user's product in the most favourable quadrant without justification — a self-serving positioning map that ignores real competitive pressure provides no strategic value
+- [ ] Do not soften Weaknesses or Threats in the SWOT — a SWOT that only celebrates strengths is a marketing document, not a strategy tool
+- [ ] Do not include unverifiable claims about competitor capabilities without flagging them as assumptions — presenting rumours as facts damages analytical credibility
+
 ## Example Trigger Phrases
 
 - "Do a competitor analysis of [Product] vs [Competitor A] and [Competitor B]"

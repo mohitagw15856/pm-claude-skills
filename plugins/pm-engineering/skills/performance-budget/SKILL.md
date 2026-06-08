@@ -275,3 +275,11 @@ When a breach is detected, work through this checklist in order:
 - [ ] Budget breach response process names specific Slack channels and owners
 - [ ] Budget thresholds are anchored to baseline measurements or a justified target — not pulled from thin air
 - [ ] Per-journey targets are defined for critical user journeys, not just global averages
+
+## Anti-Patterns
+
+- [ ] Do not set budget thresholds without measuring a current baseline first — targets must be anchored to reality
+- [ ] Do not define global averages only — critical user journeys need individual budgets as they may diverge significantly
+- [ ] Do not omit CI enforcement — a performance budget that is not enforced in the build pipeline will not be respected
+- [ ] Do not leave the breach response process without named owners and escalation channels
+- [ ] Do not set budgets that apply only to one environment — production and staging targets should be documented separately if they differ

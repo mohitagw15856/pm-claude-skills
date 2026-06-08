@@ -1,6 +1,6 @@
 ---
 name: job-application
-description: "Tailor a CV and cover letter to a specific job description. Use when asked to write a cover letter, tailor a CV or resume, optimise for ATS, match a job description, or prepare a job application. Produces an ATS-optimised tailored CV summary and a personalised cover letter."
+description: "Tailors a CV and cover letter to a specific job description. Use when asked to write a cover letter, tailor a CV or resume, optimise for ATS, match a job description, or prepare a job application. Produces an ATS-optimised tailored CV summary and a personalised cover letter aligned to the role's requirements."
 ---
 
 # Job Application Skill
@@ -119,6 +119,14 @@ Before submitting:
 - [ ] Paragraph 2 includes at least one quantified achievement
 - [ ] Cover letter is 250–350 words
 - [ ] Gaps are either addressed or strategically omitted
+
+## Anti-Patterns
+
+- [ ] Do not fabricate or embellish experience — only use real achievements from the provided CV
+- [ ] Do not use the same cover letter template for every role — every letter must reference specific details of the job description
+- [ ] Do not address selection criteria that aren't in the JD — match keywords the employer actually used
+- [ ] Do not omit ATS optimisation — ensure role-specific keywords from the JD appear naturally in the CV summary
+- [ ] Do not write a cover letter that re-summarises the CV — it must add context and motivation, not repeat bullet points
 
 ## Example Trigger Phrases
 

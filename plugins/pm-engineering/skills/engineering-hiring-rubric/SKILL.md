@@ -336,3 +336,11 @@ Brief every interviewer on these before they conduct their first interview for t
 - [ ] Scorecard uses observable behavior fields ("What did the candidate do or say") — not impression fields
 - [ ] Must-hire competencies are explicitly named for the role and level
 - [ ] Debrief agenda enforces written scorecard submission before verbal discussion to prevent anchoring
+
+## Anti-Patterns
+
+- [ ] Do not use a single behavioral anchor description per competency — you must define what Strong Hire AND No Hire look like separately, or interviewers cannot calibrate
+- [ ] Do not allow "culture fit" as a standalone assessment dimension — it masks similarity bias; all judgments must use observable behavioral evidence
+- [ ] Do not let interviewers share scorecard feedback before the debrief — verbal pre-debrief discussion anchors everyone to the first opinion expressed
+- [ ] Do not set the same must-hire competency list for all engineering roles — a senior backend engineer and a frontend engineer have different non-negotiable competencies
+- [ ] Do not skip the calibration bias notes section — interviewers who have never been briefed on halo effect, recency bias, and credential bias will reproduce them in every loop

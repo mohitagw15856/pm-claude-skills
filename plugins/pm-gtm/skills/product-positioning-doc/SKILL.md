@@ -212,6 +212,14 @@ Positioning only works if it's implemented consistently:
 - [ ] Persona messaging uses the buyer's language, not the company's
 - [ ] At least two people from product, marketing, and sales have reviewed and approved
 
+## Anti-Patterns
+
+- [ ] Do not write positioning that could describe any competitor — differentiation must be specific, provable, and hard to copy
+- [ ] Do not mix category design with category entry — know whether you are creating a new category or competing in an existing one
+- [ ] Do not create persona messaging that uses the same headline for all personas — each persona has different priorities
+- [ ] Do not include proof points that are claims without evidence — every proof point needs a supporting data point or reference
+- [ ] Do not skip the "not for" section — defining who this is not for sharpens targeting and prevents off-persona deals
+
 ## Example Trigger Phrases
 
 - "Write a positioning document for [product]"

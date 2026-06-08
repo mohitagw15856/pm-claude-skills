@@ -70,6 +70,14 @@ For each state, list only what changes from Default:
 - [ ] Token mapping covers all visual properties
 - [ ] Disabled state uses layer-level properties not opacity
 
+## Anti-Patterns
+
+- [ ] Do not create a variant matrix with properties that overlap or conflict — each property must be independently variable
+- [ ] Do not use opacity for disabled states — disabled states must use layer-level properties, not opacity
+- [ ] Do not enumerate every mathematical combination if many are invalid — document only valid, buildable combinations
+- [ ] Do not define variants without considering responsive behaviour — specify which properties change across screen sizes
+- [ ] Do not produce a matrix without Figma implementation guidance — variant naming conventions must follow Figma's property system
+
 ## Example Trigger Phrases
 - "Define the variants for a [component] in Figma"
 - "What states does my [component] need?"

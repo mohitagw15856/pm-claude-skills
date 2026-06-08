@@ -1,6 +1,6 @@
 ---
 name: retro-analysis
-description: "Analyse sprint delivery data and produce a structured retrospective brief. Use when asked to run a retrospective, analyse sprint data, prepare a retro brief, or turn sprint metrics into discussion prompts. Produces a data-grounded retrospective brief with completion stats, pattern analysis, Start/Stop/Continue prompts, and one concrete experiment for next sprint."
+description: "Analyses sprint delivery data and produces a structured retrospective brief. Use when asked to run a retrospective, analyse sprint data, prepare a retro brief, or turn sprint metrics into discussion prompts. Produces a data-grounded retrospective brief with completion stats, pattern analysis, Start/Stop/Continue prompts, and one concrete experiment for next sprint."
 ---
 
 # Retrospective Analysis Skill
@@ -51,3 +51,11 @@ Ask the user for these if not provided:
 - [ ] Carry-over analysis identifies the ticket type or cause, not just the count
 - [ ] Data observations don't assign blame — they describe patterns
 - [ ] Velocity trend is mentioned in context (is this a one-off or a pattern?)
+
+## Anti-Patterns
+
+- [ ] Do not assign blame to individuals in the retrospective brief — observations must describe patterns, not people
+- [ ] Do not produce Start/Stop/Continue prompts that are vague categories — each must name a specific behaviour
+- [ ] Do not recommend an experiment that cannot be completed within one sprint — small, testable experiments only
+- [ ] Do not treat carry-over tickets as a velocity problem without first identifying the root cause category
+- [ ] Do not run the same retrospective format every sprint — vary the format to prevent engagement fatigue

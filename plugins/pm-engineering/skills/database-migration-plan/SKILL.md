@@ -452,3 +452,11 @@ Follow this checklist on the day of migration. Mark each step as done before pro
 - [ ] Lock types are identified for every DDL statement — no "should be fine" assumptions
 - [ ] The deployment runbook names who runs each step, not just what to run
 - [ ] Phase 4 (contract) is explicitly gated on the rollback window passing — not run on the same day as Phase 3
+
+## Anti-Patterns
+
+- [ ] Do not combine the expand and contract phases into a single deployment — they must be separated by a deployment cycle
+- [ ] Do not run DDL changes without first testing on a production-sized data clone
+- [ ] Do not skip the NOT VALID + VALIDATE pattern for constraint additions on large tables — it causes full table locks
+- [ ] Do not define a rollback as "restore from backup" — each phase must have an explicit, fast rollback procedure
+- [ ] Do not omit dual-write logic during the transition period — removing the old column before all writers are updated causes data loss

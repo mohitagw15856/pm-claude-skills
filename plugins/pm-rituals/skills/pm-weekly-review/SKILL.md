@@ -115,6 +115,14 @@ Ask the user for these if not provided:
 - [ ] Total length is under 400 words (skimmable in 3 minutes)
 - [ ] Reflection section is honest, not aspirational
 
+## Anti-Patterns
+
+- [ ] Do not report metrics without comparing to target or the prior week — absolute numbers without context are not useful
+- [ ] Do not list blockers without a named owner and proposed resolution — unowned blockers stay blocked
+- [ ] Do not write a weekly review that is longer than one page — it must be scannable in under 2 minutes
+- [ ] Do not include more than 3 priorities for next week — a list of 8 "top priorities" means nothing is prioritised
+- [ ] Do not skip the insights section — observations that inform future decisions are a PM's key value add
+
 ## Guidelines
 
 - Keep the whole document under 400 words — if stakeholders won't read it, it doesn't exist
