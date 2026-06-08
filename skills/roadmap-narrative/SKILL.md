@@ -54,3 +54,11 @@ Ask the user for these if not provided:
 - [ ] Progression narrative shows causal links between quarters (not just chronological listing)
 - [ ] "What's not on the roadmap" section includes at least 2 items with clear rationale
 - [ ] Language throughout is free of engineering jargon — tested by asking: "could a CFO repeat this?"
+
+## Anti-Patterns
+
+- [ ] Do not produce a list of features with dates and call it a narrative — every initiative must connect to a strategic theme
+- [ ] Do not omit the "what's not on the roadmap" section — without it, the narrative lacks strategic discipline
+- [ ] Do not write progression as a chronological list — show causal links between quarters (Q1 enables Q2 because…)
+- [ ] Do not write the executive summary last and treat it as a summary — write it as the version stakeholders will repeat
+- [ ] Do not let orphaned initiatives appear without a theme — either create a theme or flag the gap explicitly

@@ -84,6 +84,13 @@ Ask the user which of these they want:
 - [ ] Assumptions about axis scale and interpolation are stated
 - [ ] CSV output is clean and directly usable
 
+## Anti-Patterns
+
+- [ ] Do not silently include low-confidence data points in the main table — flag them separately so the user knows which values to verify
+- [ ] Do not assume a linear scale without confirming it — logarithmic axes make extracted values incorrect by orders of magnitude if misread
+- [ ] Do not report extracted values with false precision — if the chart's Y-axis only shows gridlines every 10 units, a reported value of 37 is invented, not extracted
+- [ ] Do not omit the assumptions and caveats section — partial image quality, overlapping bars, or unlabelled axes must be disclosed
+
 ## Example Trigger Phrases
 - "Extract the data from this chart"
 - "Transcribe the numbers in this graph"

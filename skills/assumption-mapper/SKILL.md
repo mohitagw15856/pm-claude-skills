@@ -51,6 +51,13 @@ Input: *"We're building a self-serve onboarding flow to reduce time-to-value for
 | Faster onboarding correlates with higher retention | Viability | 3 | 4 | 1 | Cohort analysis of current onboarding times vs. 90-day retention |
 | The current onboarding is the primary reason for slow time-to-value | Desirability | 2 | 4 | 2 | User interviews with recent churned SMB accounts |
 
+## Anti-Patterns
+
+- [ ] Do not only surface desirability assumptions — feasibility and viability assumptions are equally likely to kill a product and are often overlooked
+- [ ] Do not assign high confidence to an assumption just because it hasn't been challenged yet — absence of evidence is not evidence
+- [ ] Do not recommend "user interviews" as the validation method for every assumption — some assumptions require quantitative data, competitive analysis, or technical spikes
+- [ ] Do not list assumptions that cannot be tested — every assumption in the map must have a plausible validation method, or it should be flagged as unknowable and treated as a risk
+
 ## Quality Checks
 
 - [ ] At least one assumption per category (Desirability, Feasibility, Viability, Usability)

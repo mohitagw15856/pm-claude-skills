@@ -99,6 +99,14 @@ This call is NOT successful if we only pitched and got "sounds interesting, send
 - [ ] Success criteria define what "not successful" looks like (not just the ideal outcome)
 - [ ] A specific next step is proposed (not "let's stay in touch")
 
+## Anti-Patterns
+
+- [ ] Do not write the call hypothesis after the call — hypotheses written post-hoc are rationalisations, not testable predictions
+- [ ] Do not open with a product pitch before establishing the prospect's problem — leading with pitch signals you are not there to learn, which closes discovery conversations
+- [ ] Do not use closed questions in the discovery phase ("Do you have this problem?") — they produce yes/no answers that confirm bias rather than reveal pain
+- [ ] Do not skip the "not successful" definition in success criteria — a call that ends with "send me more info" feels like progress but is not a qualified next step
+- [ ] Do not treat all prospect research equally — recent news (last 90 days) is more relevant to call context than static company facts from LinkedIn
+
 ## Example Trigger Phrases
 - "Prepare me for a discovery call with [company/contact]"
 - "Build a call brief for my meeting with [name] at [company]"

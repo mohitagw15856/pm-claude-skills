@@ -251,3 +251,11 @@ Accepted risks are threats the team has decided not to mitigate right now. Every
 - [ ] STRIDE analysis covers all major components — not just the API layer
 - [ ] Mitigation actions are specific enough to become a ticket (not "improve security")
 - [ ] The ASCII trust boundary diagram matches the architecture description provided
+
+## Anti-Patterns
+
+- [ ] Do not restrict STRIDE analysis to only the API layer — threats exist at every component including the database and internal services
+- [ ] Do not leave mitigations as vague directives like "improve security" — every mitigation must be specific enough to become a ticket
+- [ ] Do not accept risks without a named owner and a review date — unowned accepted risks are not managed risks
+- [ ] Do not write a threat model that covers only theoretical threats — prioritise by likelihood and impact using the risk register
+- [ ] Do not omit the asset register — without knowing what is being protected, the STRIDE analysis has no anchor

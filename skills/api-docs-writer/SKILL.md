@@ -141,6 +141,14 @@ data = response.json()
 - [ ] Enum values are listed where applicable
 - [ ] Pagination documented if the endpoint is a list endpoint
 
+## Anti-Patterns
+
+- [ ] Do not document only the happy path — every endpoint must have error codes for at least 400, 401/403, 404, 429, and 500
+- [ ] Do not use placeholder values like "YOUR_ENDPOINT" or "INSERT_TOKEN" in code examples — use realistic-looking placeholders anchored to the actual base URL
+- [ ] Do not skip enum values for fields with a fixed set of accepted values — undocumented enums cause integration bugs
+- [ ] Do not omit pagination documentation on list endpoints — developers who miss this will build integrations that silently miss data
+- [ ] Do not describe what a field "is" without describing what it "does" — "the ID" is not documentation; "the unique identifier used to retrieve or update this resource" is
+
 ## Usage Examples
 - "Document this API endpoint: [paste spec or description]"
 - "Turn this Postman collection into developer docs"

@@ -7,6 +7,18 @@ description: "Design an employee engagement survey and analyse results. Use when
 
 Designs complete employee engagement surveys and provides a framework for analysing and acting on results.
 
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Mode** — designing a new survey or analysing existing results
+- **Survey type** (annual / quarterly pulse / post-onboarding / exit / specific topic)
+- **Company name** (for personalisation of question text)
+- **Company size and stage** (startup / scaleup / enterprise — affects question relevance)
+- **Key areas of concern** (optional — e.g. "we have had high attrition on the engineering team")
+- **Anonymity approach** — fully anonymous, team-level reporting only, or individual responses visible to HR
+- **Length target** (short: 5–10 questions / standard: 15–25 / comprehensive: 30+)
+- **For analysis mode:** survey results data (paste as table, CSV, or summary statistics)
+
 ## Mode Detection
 - User provides survey results -> Analysis mode
 - User wants to create a survey -> Design mode
@@ -87,6 +99,14 @@ eNPS: Below 0 = Concerning / 0-30 = Good / 30-70 = Great / 70+ = Excellent
 - [ ] Open-ended questions are included (not just Likert scales)
 - [ ] Analysis includes a specific action planning template (not just observations)
 - [ ] Results communication template commits to sharing back with employees by a specific date
+
+## Anti-Patterns
+
+- [ ] Do not launch a survey without committing to a communication-back date — surveys with no follow-through reduce trust and depress future response rates
+- [ ] Do not use only Likert scale questions — open-text responses surface specific themes that quantitative scores cannot, and are essential for action planning
+- [ ] Do not design a comprehensive 30+ question survey as a pulse — pulse surveys that take more than 5 minutes see sharply lower completion rates
+- [ ] Do not present analysis without an action planning template — raw scores without committed actions are the most common reason engagement survey data is ignored
+- [ ] Do not segment results below teams of 5 when anonymity is promised — small-group breakdowns allow individual identification and destroy psychological safety
 
 ## Example Trigger Phrases
 - "Create an employee engagement survey for our team"

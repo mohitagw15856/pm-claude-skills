@@ -1,6 +1,6 @@
 ---
 name: notes-humanizer
-description: Strips AI writing patterns from text and rewrites it to sound genuinely human — not by softening it, but by removing statistical defaults and injecting the specific signals that human writers produce.
+description: "Strips AI writing patterns from text and rewrites it to sound genuinely human by removing statistical defaults and injecting the specific signals that human writers produce. Use when a draft reads as AI-generated, over-polished, or rhythmically uniform — including blog posts, emails, LinkedIn posts, or any prose that needs to sound like a real person wrote it. Produces a pattern audit, side-by-side comparison, itemised change log, and clean rewritten output ready to paste."
 ---
 
 # Notes Humanizer
@@ -152,6 +152,14 @@ Present the output in the four-section structure defined above. The change log m
 - [ ] The change log lists specific instances, not categories
 - [ ] The clean output section has no annotations or formatting artifacts — ready to paste
 - [ ] If the original was already clean, that was stated explicitly rather than changes invented
+
+## Anti-Patterns
+
+- [ ] Do not remove all em dashes — only the ones functioning as parenthetical substitutes should be removed; genuine dramatic pauses are valid
+- [ ] Do not invent problems to justify changes when the original is already clean — report what was found honestly, even if the answer is "this text is mostly fine"
+- [ ] Do not add the aside or opinion generically — the injected human signals must connect to an actual claim or argument in the text, not float in as decoration
+- [ ] Do not list changes by category in the change log — every individual change must be listed separately with the specific reason for that specific instance
+- [ ] Do not apply humanisation changes that alter the factual claims or intended meaning of the original text — the skill rewrites style, not substance
 
 ---
 

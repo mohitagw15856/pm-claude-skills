@@ -1,6 +1,6 @@
 ---
 name: rice-impact-matrix
-description: "Score features using RICE and plot against strategic alignment for nuanced prioritisation. Use when asked to prioritise features, build a priority matrix, combine quantitative scoring with strategic fit, or decide what to build next with multiple competing initiatives. Produces a scored priority matrix with RICE scores, strategic alignment ratings, quadrant placement, and sequencing recommendations."
+description: "Scores features using both RICE and strategic alignment for nuanced prioritisation. Use when asked to prioritise features, build a priority matrix, combine quantitative scoring with strategic fit, or decide what to build next with multiple competing initiatives. Produces a scored priority matrix with RICE scores, strategic alignment ratings, quadrant placement, and sequencing recommendations."
 ---
 
 # RICE + Strategic Alignment Skill
@@ -60,3 +60,11 @@ Combined Score = RICE Score + (Strategic Alignment × 10)
 - [ ] Conflicts between RICE rank and strategic alignment are explicitly flagged
 - [ ] "Drop" recommendations are specific — not just "low priority, deprioritise"
 - [ ] Confidence levels on estimates are noted where weak (drives the 50% confidence flag)
+
+## Anti-Patterns
+
+- [ ] Do not treat the combined score as a definitive ranking — use it to structure a conversation, not replace one
+- [ ] Do not rate strategic alignment as "high" because an initiative feels important without mapping it to a specific OKR
+- [ ] Do not place all initiatives in the "Now" quadrant — a matrix with no "Drop" recommendations is not credible
+- [ ] Do not ignore the conflict flag when RICE rank and strategic alignment sharply diverge
+- [ ] Do not accept 100% confidence on estimates that have not been validated with data

@@ -1,6 +1,6 @@
 ---
 name: last-30-days-research
-description: Multi-platform research skill that gathers recent (last 30 days) opinions, sentiment, and signal on any topic from Reddit, X/Twitter, and the web. Cuts through SEO-stuffed results to surface what real people are actually saying.
+description: "Searches Reddit, X/Twitter, and the broader web for recent opinions, sentiment, and signal on any topic. Use when you need to know what real people are saying about a tool, product, trend, or event in the past 30 days — cutting through SEO content to surface genuine community reaction. Produces a structured report with consensus findings, pain points, positive signals, contrarian takes, source links, and a signal confidence rating."
 ---
 
 # Last 30 Days Research
@@ -137,6 +137,14 @@ Before outputting the report, verify:
 - [ ] If a section has no findings, it says so explicitly rather than being omitted or padded
 - [ ] No vendor-authored content or press releases treated as independent signal
 - [ ] Synonyms and alternative names for the topic were searched
+
+## Anti-Patterns
+
+- [ ] Do not treat SEO blog posts or vendor-authored content as community signal — only count independent sources
+- [ ] Do not report findings without applying the date filter — prior knowledge mixed with recent search results produces stale, unverifiable claims
+- [ ] Do not fabricate or guess at URLs — every link in the Sources section must have been retrieved during the research session
+- [ ] Do not report a single mention as a "finding" — a finding requires corroboration from at least two independent sources
+- [ ] Do not rate Signal Confidence as High when fewer than 5 credible sources were found — this misleads the reader about how much to rely on the output
 
 ## Example Trigger Phrases
 

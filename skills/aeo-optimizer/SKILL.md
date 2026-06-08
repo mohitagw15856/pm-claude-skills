@@ -352,6 +352,14 @@ Before marking this task complete, verify each item:
 
 ---
 
+## Anti-Patterns
+
+- [ ] Do not place links inside answer capsules — links break AI extractability and will cause the capsule to be skipped or paraphrased
+- [ ] Do not write capsules longer than 80 words — oversized capsules are less likely to be extracted cleanly by AI engines
+- [ ] Do not rewrite the H1 title — it serves SEO purposes and should follow different rules from H2s
+- [ ] Do not add hedging phrases ("it depends", "there are many factors") inside capsules — commit to a direct, extractable answer
+- [ ] Do not fabricate trust signals — only surface and note signals that actually exist in the article; inventing statistics undermines credibility
+
 ## Example Trigger Phrases
 
 - "AEO optimize this article"

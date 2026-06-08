@@ -15,7 +15,7 @@ Transform raw backlog items into a structured, achievable sprint with clear goal
 - **Sprint Planning Agenda** — structured 2-hour meeting agenda with timings
 - **Risk Flags** — blockers or dependencies that could derail the sprint
 
-## Inputs to Request From User
+## Required Inputs
 
 Ask for (if not already provided):
 - Sprint duration (1 or 2 weeks)
@@ -95,3 +95,11 @@ Story points to commit = Historical velocity × Availability factor
 - [ ] Every story has an acceptance criterion (flag any that don't)
 - [ ] Stories estimated at 8+ points are flagged for splitting
 - [ ] Carry-overs from last sprint are accounted for in capacity
+
+## Anti-Patterns
+
+- [ ] Do not write sprint goals as task lists — goals must be outcome-focused and scoreable pass/fail at sprint end
+- [ ] Do not commit to 100% of available capacity — always recommend 80% to preserve slack for unplanned work
+- [ ] Do not carry stories with no acceptance criteria into the sprint — flag them as blockers before committing
+- [ ] Do not allow stories estimated at 8+ points into the sprint without splitting them first
+- [ ] Do not ignore carry-over items when calculating capacity — they consume capacity and must be accounted for before new work is pulled in

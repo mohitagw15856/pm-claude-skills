@@ -558,3 +558,11 @@ Run this checklist quarterly and before any major infrastructure change:
 - [ ] Contact list contains current phone numbers, not just Slack handles (Slack may be down during a DR event)
 - [ ] Security breach runbook (3.5) explicitly names the security team contact and does not attempt self-remediation
 - [ ] All thresholds (RTO/RPO) are visible in the monitoring dashboard so actual vs. target is measurable in real time
+
+## Anti-Patterns
+
+- [ ] Do not write runbook commands without testing them — an untested command in a runbook is actively dangerous during a real disaster when cognitive load is highest
+- [ ] Do not set RTO/RPO targets without business sign-off — technical teams often set aspirational targets that do not reflect actual business cost tolerance for downtime
+- [ ] Do not include only the "happy path" of each failover scenario — runbooks must explicitly cover what to do when the recovery step itself fails
+- [ ] Do not list Slack handles as the only escalation contact — Slack may be unavailable during a region-wide failure; phone numbers are mandatory
+- [ ] Do not schedule DR game days without pre-committing to fix the gaps found — a game day that produces action items no one owns is theater, not preparedness

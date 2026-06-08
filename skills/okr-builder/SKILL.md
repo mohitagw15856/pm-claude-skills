@@ -84,3 +84,11 @@ Ask the user for these if not provided:
 - [ ] Maximum 4 KRs per objective
 - [ ] OKRs connect to the company or product North Star
 - [ ] Ambitious enough that 0.7 attainment is the expected score
+
+## Anti-Patterns
+
+- [ ] Do not accept output-based key results — any KR phrased as "launch X" or "complete Y" must be rewritten as an outcome with a baseline and target
+- [ ] Do not write OKRs without asking for the company or product North Star — OKRs disconnected from the strategic context are just a goal-setting exercise
+- [ ] Do not write more than 4 KRs per objective — too many KRs dilute focus and make scoring ambiguous at quarter end
+- [ ] Do not use binary KRs (ship/don't ship) — every KR must be scorable on a 0.0–1.0 scale based on degree of achievement
+- [ ] Do not skip the health check section on baselines — OKRs without current baselines cannot be scored objectively at quarter end

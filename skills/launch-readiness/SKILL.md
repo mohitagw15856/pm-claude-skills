@@ -1,6 +1,6 @@
 ---
 name: launch-readiness
-description: "Run a comprehensive pre-launch readiness assessment across all functions. Use when asked to assess launch readiness, run a pre-launch review, create a go/no-go recommendation, or check if a product or feature is ready to ship. Produces a function-by-function readiness status, blockers list, risk register, and an explicit Go / Conditional Go / No-Go recommendation."
+description: "Assesses pre-launch readiness across every function and produces an explicit Go / Conditional Go / No-Go recommendation. Use when preparing for any product or feature launch, running a pre-launch review, or determining whether a release is safe to ship. Produces a function-by-function readiness status, a ranked blockers list with owners and deadlines, a risk register, and a clearly reasoned launch recommendation."
 ---
 
 # Launch Readiness Skill
@@ -80,3 +80,11 @@ Ask the user for these if not provided:
 - [ ] Analytics events are verified in staging, not just implemented
 - [ ] Go/No-Go decision has a named decision-maker and a cut-off time
 - [ ] At least one post-launch monitoring check is scheduled (e.g., T+2hr, T+24hr)
+
+## Anti-Patterns
+
+- [ ] Do not mark a function as "Ready" without evidence — green status must be backed by a completed checklist item, not an assumption
+- [ ] Do not issue a Conditional Go without specifying exactly what conditions must be met and by when — vague conditions are not conditions
+- [ ] Do not treat the rollback plan as complete unless it has been tested in staging, not just documented
+- [ ] Do not assign blockers to "the team" — every blocker must have a single named owner or it will not be resolved before launch
+- [ ] Do not skip the analytics verification step — unverified tracking events mean the launch will be invisible and cannot be evaluated

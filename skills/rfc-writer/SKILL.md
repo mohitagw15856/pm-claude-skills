@@ -397,3 +397,11 @@ Accept the current state and revisit the problem in [timeframe].
 - [ ] Open questions are assigned to named owners with deadlines — not floating
 - [ ] The RFC is written to be read by someone who was not in the planning conversations
 - [ ] Migration plan addresses all affected parties — users, API consumers, data — not just the technical steps
+
+## Anti-Patterns
+
+- [ ] Do not write the RFC as a persuasion document — its purpose is to expose trade-offs, not sell a decision
+- [ ] Do not list alternatives without explicit rejection reasons — "we preferred the proposed solution" is not a reason
+- [ ] Do not leave the security implications section blank or write "N/A" without a reasoned explanation
+- [ ] Do not write open questions without assigning a named owner and a resolution deadline
+- [ ] Do not skip the "impact of not solving this" section — without it, reviewers cannot assess urgency

@@ -112,6 +112,14 @@ For each option, produce:
 - [ ] Context section states the problem explicitly in its first 1–2 sentences (does not assume the reader knows what problem the team was solving)
 - [ ] Each rejected option's "Why ruled out" explanation names a specific constraint or trade-off (not a circular statement like "didn't meet our requirements")
 
+## Anti-Patterns
+
+- [ ] Do not write an ADR after the decision has already been fully implemented and the team has moved on — ADRs written retrospectively often omit the real reasons and alternatives
+- [ ] Do not list only the chosen option — rejected options with honest reasons are the most valuable part of an ADR for future readers
+- [ ] Do not write consequences that are all positive — every architectural decision involves trade-offs; an ADR with no negative consequences was not scrutinised honestly
+- [ ] Do not leave the status as "Proposed" indefinitely — an ADR that no one has approved is not guiding anyone's decisions
+- [ ] Do not write context that assumes the reader already knows what problem was being solved — the context section exists precisely for readers who lack that background
+
 ## Usage Examples
 - "Write an ADR for using [technology]"
 - "Document our decision to [architectural choice]"

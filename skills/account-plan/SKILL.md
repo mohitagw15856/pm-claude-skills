@@ -88,6 +88,13 @@ At end of [period]:
 - [Expansion opportunity] progressed to [stage]
 - Health score moved from [current] to [target]
 
+## Anti-Patterns
+
+- [ ] Do not list only executive contacts in the relationship map — champions and day-to-day users are often more influential on renewal decisions
+- [ ] Do not set growth opportunity estimates without a basis — even rough ARR values prevent the plan from being treated seriously
+- [ ] Do not treat "no known risks" as acceptable — if no risks are identified, the plan hasn't been scrutinised honestly
+- [ ] Do not write 90-day actions as vague aspirations ("strengthen the relationship") — each action must specify a call, meeting, or deliverable with a named owner
+
 ## Quality Checks
 
 - [ ] Relationship map identifies decision-makers, influencers, and any relationship gaps

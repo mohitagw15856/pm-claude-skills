@@ -1,6 +1,6 @@
 ---
 name: notebooklm-connector
-description: Automates NotebookLM from Claude Code — creates notebooks, adds sources, and triggers outputs (mindmaps, audio overviews, slide decks) without manual clicking via the Claude Chrome extension.
+description: "Automates NotebookLM from Claude Code using browser automation via the Claude Chrome extension — creating notebooks, adding sources, and triggering outputs without manual clicking. Use when you want to create a NotebookLM notebook, add URLs or documents as sources, or generate mindmaps, audio overviews, or briefing docs programmatically. Produces a confirmed checklist of completed actions and a direct link to the notebook."
 ---
 
 # NotebookLM Connector
@@ -163,6 +163,14 @@ If any step fails, do the following:
 - [ ] Any failed steps are explicitly reported with the specific failure reason
 - [ ] Manual workaround was offered for any step that failed
 - [ ] Output checklist accurately reflects what was completed vs. what failed
+
+## Anti-Patterns
+
+- [ ] Do not proceed with any browser action before the full request has been parsed into discrete steps — ambiguous source references must be clarified before navigating
+- [ ] Do not guess at source URLs if the user says "add my research sources" without specifying them — ask for the explicit list before starting
+- [ ] Do not batch actions speculatively — each action must be confirmed complete before the next one begins to avoid compounding failures
+- [ ] Do not wait for audio overview rendering to complete — audio overviews take 5–15 minutes server-side; report the trigger and move on rather than blocking the session
+- [ ] Do not attempt this skill if the Claude Chrome extension is not active — report the missing prerequisite immediately rather than attempting browser steps that will fail
 
 ## Example Trigger Phrases
 

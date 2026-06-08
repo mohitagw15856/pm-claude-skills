@@ -430,3 +430,11 @@ load-test:
 - [ ] CI integration blocks promotion on threshold failure — not just records results
 - [ ] Soak test has been run at least once to establish a memory and connection pool baseline
 - [ ] Results comparison to previous run is part of the analysis — not just absolute pass/fail
+
+## Anti-Patterns
+
+- [ ] Do not set thresholds without grounding them in actual SLO targets or production baselines — arbitrary numbers produce meaningless pass/fail results
+- [ ] Do not run the load generator on the same host as the service under test — this contaminates both the test results and the service metrics
+- [ ] Do not use production user data in load test seeding — all test data must be synthetic, tagged, and cleaned up after each run
+- [ ] Do not skip the soak test on first deployment — only a soak test reveals slow memory leaks and connection pool exhaustion that short tests miss
+- [ ] Do not treat a passing baseline test as evidence the service handles spikes — baseline, stress, spike, and soak scenarios test fundamentally different failure modes

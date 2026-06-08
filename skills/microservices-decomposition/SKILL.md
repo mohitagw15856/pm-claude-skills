@@ -288,3 +288,11 @@ Conway's Law: the architecture of a system mirrors the communication structure o
 - [ ] If decomposing a monolith, the strangler fig migration plan has phases with durations, dependencies, and success criteria
 - [ ] Risk register addresses at minimum: data consistency, distributed transactions, and Conway's Law alignment
 - [ ] Organizational alignment section maps services to teams and identifies misalignments that need to be resolved
+
+## Anti-Patterns
+
+- [ ] Do not define service boundaries before completing the domain analysis — services derived without bounded context mapping will split the wrong things and couple the wrong things
+- [ ] Do not assign multiple teams as co-owners of a single service — shared ownership is no ownership; every service needs exactly one team accountable for it
+- [ ] Do not default to synchronous REST calls for all inter-service communication — using sync calls where async events would decouple services creates cascading failure modes
+- [ ] Do not propose more than one service per bounded context without a clear justification — over-decomposition (nanoservices) creates operational overhead that exceeds the decomposition benefit
+- [ ] Do not begin migration without deploying distributed tracing first — migrating without observability means flying blind when the first extraction causes a production incident

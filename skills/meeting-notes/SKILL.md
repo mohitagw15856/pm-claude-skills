@@ -7,6 +7,14 @@ description: "Structure and format meeting notes following PM best practices. Us
 
 This skill structures meeting notes to maximize value and ensure follow-through.
 
+## Required Inputs
+
+Ask the user for these if not provided:
+- **Meeting title and date**
+- **Attendees** (names and roles)
+- **Raw notes or transcript** (paste discussion notes, a transcript, or describe what was discussed)
+- **Meeting type** (1:1 / sprint planning / product review / stakeholder sync / other) — determines which template to use
+
 ## Standard Meeting Notes Template
 
 ### Meeting Header
@@ -250,6 +258,14 @@ Template additions:
 - [ ] Decisions include context (why the decision was made)
 - [ ] Open questions have an owner and a "by when"
 - [ ] No verbatim transcripts — synthesis only
+
+## Anti-Patterns
+
+- [ ] Do not assign action items to "the team" or "everyone" — every action item must have exactly one named owner or it will not be completed
+- [ ] Do not capture verbatim transcript content — meeting notes record decisions and commitments, not the full conversational path to get there
+- [ ] Do not omit the context for decisions — a decision without its rationale is useless when someone asks "why did we do that?" six months later
+- [ ] Do not leave open questions without an owner and deadline — an unanswered question with no follow-up assigned is a blocked decision
+- [ ] Do not delay sending notes beyond 2 hours after the meeting — notes sent the next day miss the window when action item owners can act on commitments while fresh
 
 ## Notes Distribution
 

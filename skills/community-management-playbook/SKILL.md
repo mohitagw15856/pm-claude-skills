@@ -300,6 +300,14 @@ Track these weekly:
 - [ ] Community health metrics have targets, not just labels
 - [ ] Platform-specific nuances are covered for every active channel
 
+## Anti-Patterns
+
+- [ ] Do not delete genuine customer complaints to silence negative feedback — deletion damages trust more than the original complaint and can escalate a minor issue to a viral one
+- [ ] Do not respond to competitor comparison comments publicly — engaging publicly with competitive comparisons amplifies them; redirect to DMs or ignore
+- [ ] Do not use the same template response for every complaint — copy-paste responses on visible complaints are noticed by other users and undermine brand authenticity
+- [ ] Do not leave a crisis without pausing scheduled content — queued posts published during an active brand crisis appear tone-deaf and make the situation worse
+- [ ] Do not set response time SLAs that cannot be met with the available team size — an SLA that is consistently missed is worse than no SLA
+
 ## Example Trigger Phrases
 
 - "Build a community management playbook for [brand]"

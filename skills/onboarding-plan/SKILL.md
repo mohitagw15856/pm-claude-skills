@@ -91,6 +91,14 @@ New hire: Have the clarity, tools, support needed? What surprised you? What woul
 - [ ] Plan is tailored to the specific role and level (not generic)
 - [ ] Key stakeholder 1:1s are listed by name or role
 
+## Anti-Patterns
+
+- [ ] Do not produce a generic plan that could apply to any role — the plan must reference the specific role, team, tools, and priorities provided, not use placeholder text
+- [ ] Do not skip the Before Day 1 manager checklist — IT access and system provisioning failures on day 1 destroy first impressions and waste the new hire's first week
+- [ ] Do not set milestones without distinguishing between the orient, learn, contribute, and lead phases — collapsing phases produces plans where new hires are expected to lead before they understand the product
+- [ ] Do not omit the 90-day review questions — the review is the accountability mechanism for the entire plan, and skipping it makes the milestones meaningless
+- [ ] Do not treat the plan as a task list — each phase should have a clear theme and a milestone that describes an observable capability, not just a set of completed activities
+
 ## Example Trigger Phrases
 - "Create a 30/60/90 day plan for a new [role]"
 - "Write an onboarding plan for [name] starting as [role]"
