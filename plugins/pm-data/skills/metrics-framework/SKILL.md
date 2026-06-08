@@ -94,6 +94,14 @@ Suggest a 3-tier dashboard structure:
 - [ ] Dashboard tiers are tailored to the product stage
 - [ ] All metric definitions are unambiguous (formula or clear description)
 
+## Anti-Patterns
+
+- [ ] Do not set a North Star metric that measures business activity (revenue, pageviews) rather than customer value delivered — this creates incentives misaligned with product quality
+- [ ] Do not define metrics without specifying the formula or data source — an ambiguous metric will be measured differently by different people
+- [ ] Do not skip counter-metrics — optimising any single metric without a guard rail will eventually produce perverse incentives
+- [ ] Do not include more than 4–5 metrics in a daily team view — a dashboard with 20 metrics is a dashboard nobody looks at
+- [ ] Do not classify all metrics as "leading" — be honest about which are lagging outcome metrics and which genuinely predict future outcomes
+
 ## Example Trigger Phrases
 
 - "Build a metrics framework for [product]"

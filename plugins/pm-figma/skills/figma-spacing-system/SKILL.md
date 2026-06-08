@@ -69,6 +69,14 @@ Desktop (1440px): 12 columns, margin [value], gutter [value], max content width 
 - [ ] Component conventions cover common decisions
 - [ ] Figma implementation steps included
 
+## Anti-Patterns
+
+- [ ] Do not create a spacing scale with arbitrary values — the scale must follow a consistent mathematical ratio (e.g. 4px base, 8-4-2 system)
+- [ ] Do not define spacing tokens without Figma implementation instructions — token names alone are not actionable
+- [ ] Do not create a spacing system that doesn't account for component-level spacing conventions — global tokens and component usage must both be documented
+- [ ] Do not skip grid definitions — spacing without a grid system is incomplete layout foundation documentation
+- [ ] Do not produce a spacing system that ignores responsive behaviour — define how spacing adapts across breakpoints
+
 ## Example Trigger Phrases
 - "Create a spacing system for our Figma design system"
 - "Define our spacing tokens for Figma"

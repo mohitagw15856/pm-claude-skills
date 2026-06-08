@@ -84,6 +84,13 @@ Position competitors on two key dimensions relevant to the market:
 **Medium-term (3-12 months):**
 1. [Action] — [Rationale]
 
+## Anti-Patterns
+
+- [ ] Do not present competitor feature claims as facts without citing a source or flagging them as assumptions — outdated or incorrect feature data misleads sales and product decisions
+- [ ] Do not build a competitive analysis that only covers features — pricing, messaging, go-to-market motion, and who they hire for are equally strategic signals
+- [ ] Do not treat all buyers as identical — the same product may win against Competitor A in the enterprise segment and lose in SMB; segment-specific win/loss matters
+- [ ] Do not soften weaknesses and threats in the SWOT to avoid internal discomfort — an honest SWOT is only useful if the negatives are real
+
 ## Quality Checks
 
 - [ ] All competitor claims cite a source or are flagged as assumptions

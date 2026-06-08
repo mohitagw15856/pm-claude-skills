@@ -388,6 +388,14 @@ Apply the hook formulas and content structures from above to these topic angles:
 - [ ] Testing system is set up — 48-hour signal tracked for every post
 - [ ] CTA asks for a specific action, not a generic "like and share"
 
+## Anti-Patterns
+
+- [ ] Do not create a single generic framework — hook formulas and content structures must be platform-specific
+- [ ] Do not confuse reach with virality — high reach alone is not viral; content must drive sharing, saves, or resharing
+- [ ] Do not produce hook formulas without testing guidance — frameworks without a testing system produce one-off results
+- [ ] Do not ignore the shareability trigger — all content must have a clear reason why someone would send it to another person
+- [ ] Do not design hooks that work only once — the framework must be repeatable, not a collection of one-time tactics
+
 ## Example Trigger Phrases
 
 - "Build a viral content framework for [brand / creator]"

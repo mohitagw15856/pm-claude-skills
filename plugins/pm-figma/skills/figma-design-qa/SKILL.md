@@ -1,6 +1,6 @@
 ---
 name: figma-design-qa
-description: "Run a pre-handoff QA checklist on any Figma design before it goes to engineering. Use when asked to QA a Figma design, do a pre-handoff check, review a design before engineering, or validate a Figma file is ready to build. Produces a structured QA checklist covering file hygiene, component usage, accessibility, and handoff readiness with pass/fail status. Optimised for Opus 4.7 and newer models."
+description: "Runs a pre-handoff QA checklist on a Figma design before it goes to engineering. Use when asked to QA a Figma design, do a pre-handoff check, or validate a Figma file is ready to build. Produces a structured QA report covering file hygiene, component usage, accessibility, and handoff readiness with explicit pass/fail status per item. Optimised for Opus 4.7 and newer models."
 ---
 
 # Figma Design QA Skill
@@ -80,6 +80,14 @@ Status, signed off by, date.
 - [ ] Every fail has a specific description and fix action
 - [ ] Blocking issues separated from minor ones
 - [ ] Handoff decision is explicit
+
+## Anti-Patterns
+
+- [ ] Do not produce a partial QA — every checklist category must be evaluated, not just the ones that are obviously problematic
+- [ ] Do not leave the handoff decision ambiguous — the output must explicitly state pass, pass with conditions, or fail
+- [ ] Do not skip accessibility checks — colour contrast, tap target size, and screen reader labels are required, not optional
+- [ ] Do not report issues without specifying which screen or component they appear on
+- [ ] Do not approve a design if any component is detached from the library without a documented reason
 
 ## Example Trigger Phrases
 - "QA this Figma design before handoff"

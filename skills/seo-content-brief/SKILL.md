@@ -124,3 +124,11 @@ Each heading is the exact H2/H3 to use (these are what Google reads):
 - "Create a content brief for [topic]"
 - "What should I include in a blog post about [keyword]?"
 - "Build a content strategy brief for [topic]"
+
+## Anti-Patterns
+
+- [ ] Do not write an outline that answers a different question than the actual search intent — the brief must match what the searcher wants, not what the brand wants to say
+- [ ] Do not set keyword density targets so high that they produce unnatural writing — 3–5 natural mentions is guidance, not a quota
+- [ ] Do not skip the competitor gap analysis — without it, the brief produces content that duplicates what already ranks
+- [ ] Do not leave the FAQ section without real "People Also Ask" questions — fabricated questions miss search volume opportunities
+- [ ] Do not write a title tag longer than 60 characters — it will be truncated in search results and undermine ranking

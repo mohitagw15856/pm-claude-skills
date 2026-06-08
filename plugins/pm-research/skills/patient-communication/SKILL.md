@@ -92,6 +92,14 @@ Yours sincerely, [Name, Title, Department]
 - [ ] No Latin or acronyms without explanation
 - [ ] Disclaimer that clinical review is required before sending
 
+## Anti-Patterns
+
+- [ ] Do not use medical jargon without a plain-English explanation — write for the patient, not the clinician
+- [ ] Do not omit a clear "next steps" section — patients must know exactly what to do after reading
+- [ ] Do not produce final content without flagging that clinical review is required before sending
+- [ ] Do not write above a Grade 8 reading level without a compelling reason — accessibility is the default
+- [ ] Do not include Latin abbreviations (e.g. "p.r.n.", "b.d.") without spelling them out — they are not universally understood
+
 ## Example Trigger Phrases
 - "Write a patient letter about [topic]"
 - "Create a patient information leaflet for [procedure]"

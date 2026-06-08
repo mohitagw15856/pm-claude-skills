@@ -128,3 +128,11 @@ To hit £[target]:
 - "Create a pipeline model for [team/business]"
 - "Help me build a bottom-up revenue forecast"
 - "What is our forecast for Q[N] based on current pipeline?"
+
+## Anti-Patterns
+
+- [ ] Do not present a single forecast number without scenario analysis — a forecast without upside and downside cases hides risk
+- [ ] Do not use 100% confidence on conversion rates that are not backed by historical data — flag them as assumptions
+- [ ] Do not skip the activity sanity check — a forecast number that requires unreachable activity levels is not credible
+- [ ] Do not use top-down quota as the only forecast method when pipeline data exists — bottom-up is more accurate and defensible
+- [ ] Do not omit the coverage ratio — without it, stakeholders cannot assess whether the pipeline is sufficient to hit target

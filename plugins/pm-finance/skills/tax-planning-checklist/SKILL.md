@@ -120,6 +120,14 @@ Based on the above, prioritise these before year-end:
 - [ ] Disclaimer is prominent — this is a framework, not tax advice
 - [ ] Threshold figures are flagged as requiring verification for current tax year
 
+## Anti-Patterns
+
+- [ ] Do not provide specific tax advice — always recommend qualified tax advice and note this prominently
+- [ ] Do not present threshold figures as definitive without noting they require verification for the current tax year
+- [ ] Do not produce a generic checklist without tailoring it to the entity type (individual, sole trader, limited company)
+- [ ] Do not omit timing-critical items — some reliefs require action before year-end and deadlines must be called out
+- [ ] Do not conflate UK and non-UK tax rules — clarify jurisdiction before generating any checklist
+
 ## Example Trigger Phrases
 
 - "Give me a tax planning checklist for [year-end / my situation]"

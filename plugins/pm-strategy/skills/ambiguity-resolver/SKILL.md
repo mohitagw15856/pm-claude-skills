@@ -72,6 +72,13 @@ Input: *"We need to figure out what to do about our enterprise customers."*
 **In scope:** Enterprise accounts ($50K+ ARR) showing declining health scores in the last two quarters
 **Out of scope:** SMB segment, new enterprise acquisition strategy
 
+## Anti-Patterns
+
+- [ ] Do not reframe the brief into questions that are still too broad to research — each reframed question must be answerable by a specific activity
+- [ ] Do not list a research activity without stating what it would tell you and what it would NOT tell you
+- [ ] Do not leave the decision owner as "leadership" or "the team" — name a specific person or role
+- [ ] Do not omit an explicit out-of-scope boundary — without it, scope will expand organically and the brief becomes meaningless
+
 ## Quality Checks
 
 - [ ] Every reframed question is specific enough to research (not "how do we improve things?")

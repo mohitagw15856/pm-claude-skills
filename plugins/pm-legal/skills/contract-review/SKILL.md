@@ -65,6 +65,14 @@ WARNING: This review is for informational purposes only and does not constitute 
 - [ ] Plain English summary can be understood by a non-lawyer
 - [ ] Disclaimer is included
 
+## Anti-Patterns
+
+- [ ] Do not provide legal advice or suggest the review substitutes for qualified legal counsel
+- [ ] Do not skip flagging unusual or one-sided clauses because they appear standard
+- [ ] Do not omit a plain-English summary — legal jargon alone is not useful output
+- [ ] Do not rate risk without explaining what specifically drives that rating
+- [ ] Do not ignore missing clauses — absence of key protections is itself a risk
+
 ## Example Trigger Phrases
 - "Review this contract: [paste]"
 - "Flag the key risks in this agreement"

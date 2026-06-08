@@ -1,6 +1,6 @@
 ---
 name: multi-source-signal-synthesiser
-description: "Synthesise user signals from multiple research sources into a unified insight brief, reconciling conflicting feedback. Use when asked to make sense of data from multiple sources, synthesise user research, reconcile conflicting feedback, or when the user says 'what are users really telling us' or 'make sense of all this user data'. Produces ranked insights with confidence ratings, divergent signal analysis, and research gap identification."
+description: "Synthesises user signals from multiple research sources into a unified, weighted insight brief. Use when you have data from interviews, support tickets, NPS verbatims, app reviews, or sales calls and need to reconcile contradictions, surface the underlying need behind requests, or answer 'what are users really telling us'. Produces ranked insights with confidence ratings, source weighting rationale, divergent signal analysis by user segment, and a research gap identification section."
 ---
 
 # Multi-Source Signal Synthesiser Skill
@@ -60,3 +60,11 @@ Ask the user for these if not provided:
 - [ ] Divergent signals identify the specific user segments, not just "some users disagree"
 - [ ] Confidence ratings are consistent with source diversity and weighting
 - [ ] "What the data does NOT tell us" section is honest about gaps
+
+## Anti-Patterns
+
+- [ ] Do not echo surface-level feature requests as insights — translate every request to the underlying need before including it as a finding
+- [ ] Do not assign High confidence to insights supported by only one source type — confidence requires corroboration across at least two distinct source types
+- [ ] Do not treat all sources as equally weighted — a single interview quote and a pattern across 200 support tickets are not comparable signals
+- [ ] Do not collapse divergent signals into a single finding — where user segments have genuinely different needs, name the segments explicitly rather than averaging them away
+- [ ] Do not omit the research gap section when key decisions rest on thin data — acting on low-confidence findings without flagging the gaps misleads product teams

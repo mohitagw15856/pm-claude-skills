@@ -92,6 +92,14 @@ Qualitative: [Framework — e.g. Braun & Clarke], [quality assurance]
 - [ ] Analysis plan is pre-specified (not "to be determined")
 - [ ] Timeline includes all phases from ethics approval to write-up
 
+## Anti-Patterns
+
+- [ ] Do not write an analysis plan as "to be determined" — the analysis approach must be pre-specified before data collection
+- [ ] Do not skip the ethical considerations section — all research involving human participants requires ethical review
+- [ ] Do not define research questions so broadly that the study cannot answer them within scope and budget
+- [ ] Do not conflate the research question with the hypothesis — state them separately and clearly
+- [ ] Do not omit sample size justification — an underpowered study wastes resources and produces inconclusive results
+
 ## Example Trigger Phrases
 - "Write a research protocol for [study]"
 - "Help me design a study to investigate [question]"

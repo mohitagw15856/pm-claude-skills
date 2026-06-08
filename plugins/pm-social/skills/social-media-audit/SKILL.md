@@ -225,3 +225,11 @@ The fastest way to improve the score by 10+ points:
 - "How are we doing on social compared to competitors?"
 - "What's working and what isn't on our social channels?"
 - "Give me a social media health check for [brand]"
+
+## Anti-Patterns
+
+- [ ] Do not score platforms against guesswork — every score must be based on actual metrics provided or observable data
+- [ ] Do not write recommendations as "post more content" or "improve engagement" — every action must be specific and measurable
+- [ ] Do not use competitor benchmarks that are not based on real data — fabricated benchmarks invalidate the competitive gap analysis
+- [ ] Do not audit content mix based on what should have been posted — analyse what was actually posted during the audit period
+- [ ] Do not sequence the action plan by effort alone — sequence by impact × effort so the highest-value actions come first

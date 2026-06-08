@@ -50,6 +50,14 @@ For each "High Priority" post, add one repurposing suggestion — e.g. "Turn thi
 - [ ] Formats match platform norms
 - [ ] Repurposing map covers all High Priority posts
 
+## Anti-Patterns
+
+- [ ] Do not fill the calendar with generic topic placeholders — every entry must have a specific, usable topic and hook
+- [ ] Do not stack the same pillar or format on consecutive days — variety is required
+- [ ] Do not produce opening hooks that start with "Did you know" or other cliché openers
+- [ ] Do not ignore channel norms — formats must match the platform (no long-form threads for Instagram)
+- [ ] Do not skip the repurposing map for High Priority posts
+
 ## Example Trigger Phrases
 
 - "Build me a 4-week content calendar for [brand]"

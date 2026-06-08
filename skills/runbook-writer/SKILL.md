@@ -145,3 +145,11 @@ After completing the runbook:
 - "I need a runbook for [procedure]"
 - "Document the operational procedure for [X]"
 - "Write an ops playbook for [scenario]"
+
+## Anti-Patterns
+
+- [ ] Do not write steps as vague actions like "run the deploy script" — every step must include the exact command
+- [ ] Do not leave the rollback section as a placeholder — a runbook without a tested rollback procedure is incomplete and dangerous
+- [ ] Do not omit expected output for each step — without it, the on-call engineer cannot tell if the step succeeded
+- [ ] Do not write escalation contacts as "[Team name]" — every escalation row must have a real contact or an explicit flag to fill in
+- [ ] Do not assume the reader knows the system — write for someone who has never touched it before

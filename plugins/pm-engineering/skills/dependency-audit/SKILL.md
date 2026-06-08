@@ -1,6 +1,6 @@
 ---
 name: dependency-audit
-description: "Conduct a dependency audit for a project — checking for security vulnerabilities, license compliance issues, outdated packages, and transitive dependency risk. Use when asked to audit dependencies, review package security, check license compliance, assess dependency health, or produce a vulnerability report. Produces a vulnerability findings table, license compliance matrix, update priority matrix, dependency health score, and 30-day remediation plan."
+description: "Audits project dependencies for security vulnerabilities, license compliance issues, outdated packages, and transitive dependency risk. Use when asked to audit dependencies, review package security, check license compliance, assess dependency health, or produce a vulnerability report. Produces a vulnerability findings table, license compliance matrix, update priority matrix, dependency health score, and 30-day remediation plan."
 ---
 
 # Dependency Audit Skill
@@ -330,3 +330,11 @@ go-licenses check ./... --allowed_licenses=MIT,Apache-2.0,BSD-2-Clause,BSD-3-Cla
 - [ ] CI pipeline change is included — the audit findings should be the last time these are caught manually
 - [ ] The dependency health score is calculated from actual findings, not estimated
 - [ ] Remediation plan actions are specific commands or steps, not "upgrade package X" without version targets
+
+## Anti-Patterns
+
+- [ ] Do not report only direct dependencies — transitive dependency vulnerabilities are often more dangerous and are the most commonly missed
+- [ ] Do not present raw audit tool output without interpretation — a table of 200 CVEs with no prioritisation is worse than no audit at all
+- [ ] Do not assign all Critical CVEs as "fix immediately" without checking whether an exploitable path exists in your usage context
+- [ ] Do not make license compliance decisions without legal input — flagging a GPL dependency without a recommendation is incomplete work
+- [ ] Do not complete the audit without including a CI/CD pipeline step — a one-time audit that leaves the door open for new vulnerabilities is not a remediation

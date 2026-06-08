@@ -71,6 +71,14 @@ WARNING: Take advice from an employment lawyer or qualified HR professional befo
 - [ ] Statutory redundancy pay guidance included
 - [ ] Legal advice disclaimer is prominent
 
+## Anti-Patterns
+
+- [ ] Do not proceed without a prominent disclaimer that qualified HR and legal advice is required before taking any action
+- [ ] Do not use template letters without customising them for the specific individual and situation
+- [ ] Do not omit the genuine exploration of alternatives — redundancy consultation must consider alternatives before confirming decisions
+- [ ] Do not leave out statutory redundancy pay guidance — employees have legal entitlements that must be referenced
+- [ ] Do not conduct a redundancy process without documenting the selection criteria and scoring — undocumented decisions create legal risk
+
 ## Example Trigger Phrases
 - "Help me structure a redundancy consultation"
 - "Draft an at-risk letter for [role]"

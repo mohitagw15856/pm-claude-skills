@@ -73,6 +73,14 @@ Security: ISO 27001 / SOC 2 certified? Where is data stored? Breach notification
 - [ ] Runner-up rationale explains why they lost (enables future conversations)
 - [ ] Contract terms to negotiate are specified
 
+## Anti-Patterns
+
+- [ ] Do not weight all evaluation criteria equally — the scorecard must reflect the relative importance of each criterion
+- [ ] Do not evaluate vendors only on features — security, support, contract terms, and financial stability matter too
+- [ ] Do not produce a recommendation without explaining why the runner-up lost — this enables future vendor conversations
+- [ ] Do not skip contract terms to negotiate — identifying leverage points is part of the procurement decision
+- [ ] Do not recommend a vendor without stating the conditions under which the recommendation would change
+
 ## Example Trigger Phrases
 - "Help me evaluate vendors for [procurement]"
 - "Create a vendor scorecard for [software/service]"

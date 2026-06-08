@@ -1,6 +1,6 @@
 ---
 name: figma-design-critique-pm
-description: "Run a PM-perspective design critique focused on product outcomes, user goals, and business requirements — not aesthetics. Use when asked for a PM design critique, a product review of a design, feedback on a Figma design from a product perspective, or when you want to critique a design without being a designer. Produces structured outcome-based feedback tied to user goals and business metrics."
+description: "Runs a PM-perspective design critique focused on product outcomes and user goals, not aesthetics. Use when asked for a PM design critique, a product review of a Figma design, or feedback from a product perspective without needing to be a designer. Produces structured outcome-based feedback tied to user goals, business metrics, and requirement coverage."
 ---
 
 # Figma Design Critique — PM Perspective Skill
@@ -67,6 +67,14 @@ Approve / Approve with changes (list) / Revise and re-review (one focus area onl
 - [ ] Questions section included (not just directives)
 - [ ] PM recommendation is explicit
 - [ ] Evidence basis stated honestly
+
+## Anti-Patterns
+
+- [ ] Do not critique visual aesthetics — PM feedback must focus on product outcomes, user goals, and business requirements
+- [ ] Do not provide feedback without stating the evidence basis — distinguish between observed design facts and assumed user behaviour
+- [ ] Do not give vague feedback like "the flow feels confusing" — every concern must reference a specific screen state or interaction
+- [ ] Do not ignore what is working — balanced critique includes explicit acknowledgment of design decisions that are well-executed
+- [ ] Do not critique without knowing the design constraints — always ask about technical, time, or resource limitations before judging decisions
 
 ## Example Trigger Phrases
 - "Give me a PM critique of this design"

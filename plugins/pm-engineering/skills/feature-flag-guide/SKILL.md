@@ -367,3 +367,11 @@ All flag changes in production must be traceable. Ensure the following are confi
 - [ ] Stale flag detection runs automatically and results are reviewed weekly
 - [ ] Code review checklist includes: "Does this PR introduce a flag? If yes, is the creation checklist complete?"
 - [ ] At least one person other than the flag owner knows how to disable any given flag in an emergency
+
+## Anti-Patterns
+
+- [ ] Do not create release flags without a cleanup date — flags without expiry dates become permanent technical debt that accumulates silently until the codebase is unmaintainable
+- [ ] Do not skip monitoring setup for flags between 1–99% rollout — a partially-rolled-out flag without metric comparison is a risk without a sensor
+- [ ] Do not nest flags inside other flags — compound flag logic makes cleanup nearly impossible and creates untestable code paths
+- [ ] Do not allow flag owners to leave the team without reassigning ownership — orphan flags with no owner never get cleaned up
+- [ ] Do not use feature flags as a permanent configuration system — flags that have been at 100% or 0% for more than 30 days must be cleaned up; using flags as permanent config couples business logic to a feature flag platform

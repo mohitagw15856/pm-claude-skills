@@ -247,6 +247,14 @@ Ask the user which output they need, then gather inputs:
 - [ ] Suggested actions are specific enough that the reviewee knows exactly what to do differently on Monday
 - [ ] Direct quotes are genuinely direct — not paraphrased into blandness
 
+## Anti-Patterns
+
+- [ ] Do not write survey questions that ask about personality traits rather than observable behaviours ("is a good communicator" vs "communicates updates before deadlines")
+- [ ] Do not write development feedback that names the person's character flaws instead of specific behaviours and their impact
+- [ ] Do not aggregate ratings without noting high-variance scores — a 2/5 and a 5/5 averaged to 3.5 hides a real signal
+- [ ] Do not include direct quotes in the report that could identify the reviewer in small teams — paraphrase or omit
+- [ ] Do not write suggested actions so vague they could apply to anyone ("be more strategic") — every suggestion must name a specific observable behaviour change
+
 ## Example Trigger Phrases
 
 - "Build a 360 feedback survey for a [role] at senior level"

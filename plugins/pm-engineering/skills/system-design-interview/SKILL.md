@@ -125,6 +125,14 @@ Things to tackle in production but out of scope for this design session:
 - [ ] Trade-offs section is honest (not just benefits of chosen approach)
 - [ ] Data flow is described end-to-end for the critical path
 
+## Anti-Patterns
+
+- [ ] Do not jump to solutions before clarifying requirements — always establish functional and non-functional requirements first
+- [ ] Do not present a design without discussing trade-offs — every architecture decision has costs and benefits that must be acknowledged
+- [ ] Do not use vague capacity estimates — show the actual calculation (QPS, storage bytes, bandwidth) not just "this handles scale"
+- [ ] Do not design for unlimited scale by default — match the design to the requirements stated
+- [ ] Do not skip the data model — a system design without entity definitions and data flow is incomplete
+
 ## Usage Examples
 - "Help me answer a system design interview: [question]"
 - "Design [system] for a system design interview"

@@ -301,6 +301,14 @@ builders and response parsers.
 
 ---
 
+## Anti-Patterns
+
+- [ ] Do not classify expanding an enum (new response values) as non-breaking — clients with exhaustive switch statements will break when they receive an unexpected enum value
+- [ ] Do not set a sunset date without confirming it is achievable for the largest consumer — a sunset that forces consumers to miss a legal deadline will be ignored or escalated
+- [ ] Do not maintain more than two simultaneous stable/deprecated versions — each additional supported version multiplies maintenance burden and consumer confusion
+- [ ] Do not use "monitor traffic" as the sole mechanism for knowing when all consumers have migrated — track named consumers against migration completion explicitly
+- [ ] Do not skip the migration guide — consumers will delay migration indefinitely without a step-by-step guide that estimates effort
+
 ## Quality Checks
 
 - [ ] Versioning scheme recommendation includes explicit rationale tied to the API type and consumer type provided — not a generic recommendation

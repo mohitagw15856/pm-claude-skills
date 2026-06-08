@@ -152,6 +152,14 @@ For each insight: "This means we should [design/product implication]" or "This c
 - [ ] Synthesis framework is included
 - [ ] Incentive recommendation is included
 
+## Anti-Patterns
+
+- [ ] Do not write a research plan without clearly stated research objectives — every methodology choice must flow from the objectives
+- [ ] Do not design a plan that mixes generative and evaluative research without clearly separating them
+- [ ] Do not omit screener criteria — recruiting unqualified participants invalidates the research
+- [ ] Do not write discussion guide questions that are leading — questions must be neutral and open-ended
+- [ ] Do not skip the incentive recommendation — uncompensated research has lower participant quality and completion rates
+
 ## Example Trigger Phrases
 
 - "Write a research plan for [feature or product area]"

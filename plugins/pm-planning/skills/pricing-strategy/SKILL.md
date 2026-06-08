@@ -129,6 +129,14 @@ Ask the user for these if not provided:
 - [ ] Counter-metrics are defined to catch perverse incentives
 - [ ] Risks have specific mitigations (not just listed)
 
+## Anti-Patterns
+
+- [ ] Do not base pricing solely on cost-plus — pricing must reflect value delivered to the customer
+- [ ] Do not design tiers where the middle tier is clearly worse value — it undermines trust and pushes customers to extremes
+- [ ] Do not change pricing without a migration plan for existing customers — surprise price changes cause churn
+- [ ] Do not set enterprise pricing as "contact us" without a floor — it deters self-serve evaluation and qualification
+- [ ] Do not skip competitive positioning — pricing in isolation from the market is incomplete strategy
+
 ## Guidelines
 
 - Never price based on cost — price based on value delivered to the customer

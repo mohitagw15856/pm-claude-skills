@@ -51,6 +51,14 @@ For each slide:
 - [ ] Ask slide specifies use of funds and 18-month milestones
 - [ ] TAM is bottoms-up where possible
 
+## Anti-Patterns
+
+- [ ] Do not include a "no real competitors" slide — every company has competition and investors will discount founders who claim otherwise
+- [ ] Do not use a top-down TAM calculation without a bottoms-up validation — investors distrust pure top-down market sizing
+- [ ] Do not leave the ask vague — specify the amount, use of funds, and 18-month milestones the funding enables
+- [ ] Do not let traction slides show vanity metrics — focus on revenue, retention, and growth rate over downloads and signups
+- [ ] Do not bury the problem slide — investors must understand and feel the pain before they care about the solution
+
 ## Example Trigger Phrases
 - "Build a pitch deck structure for [company]"
 - "Help me structure my Series A deck"

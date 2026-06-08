@@ -105,3 +105,11 @@ Ask the user for these if not provided:
 - If user is new to interviewing: remind them to stay silent after asking a question (aim for 80/20 participant-to-interviewer talking ratio)
 - Never synthesise during the interview — do it after, when you can look across sessions
 - Flag confirmation bias: if user writes questions that lead toward a predetermined answer, rewrite them as open-ended alternatives
+
+## Anti-Patterns
+
+- [ ] Do not use future-tense questions ("Would you use this?") — hypothetical responses do not predict real behaviour and produce false confidence in an idea
+- [ ] Do not mention your product or solution before problem exploration is complete — doing so anchors the participant's responses and invalidates the discovery
+- [ ] Do not synthesise across fewer than 5 interviews — themes from 2–3 interviews reflect anecdote, not pattern; wait for saturation
+- [ ] Do not write screener questions that are too easy to pass — if participants can guess the "right" answer, you will recruit the wrong people
+- [ ] Do not treat participant opinions as evidence of future behaviour — what people say they will do consistently diverges from what they actually do

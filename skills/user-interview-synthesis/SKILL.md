@@ -1,6 +1,6 @@
 ---
 name: user-interview-synthesis
-description: "Synthesise user interview transcripts into structured research findings. Use when asked to analyse interview notes, synthesise qualitative research, identify themes from user interviews, or turn raw interview data into actionable product insights. Produces a themed synthesis with supporting quotes, 'so what' implications, and recommended next steps."
+description: "Synthesises user interview transcripts into structured research findings. Use when asked to analyse interview notes, synthesise qualitative research, identify themes from interviews, or turn raw interview data into actionable product insights. Produces a themed synthesis with supporting quotes per theme, 'so what' implications, and recommended next steps."
 ---
 
 # User Interview Synthesis Skill
@@ -50,3 +50,11 @@ Ask the user for these if not provided:
 - [ ] Researcher bias check: no leading language, findings don't all support one hypothesis
 - [ ] Single-source signals are flagged separately, not mixed into main themes
 - [ ] Research questions from the study brief are each addressed (even if the answer is "inconclusive")
+
+## Anti-Patterns
+
+- [ ] Do not mix single-source signals into main themes — insights cited by only one participant must be flagged separately
+- [ ] Do not write implications that are observations restated rather than product decisions enabled
+- [ ] Do not include themes that only support the project hypothesis — contradictory findings must be surfaced, not omitted
+- [ ] Do not present findings without quotes — every theme requires verbatim evidence from at least 3 participants
+- [ ] Do not leave research questions unanswered — each question from the study brief must be explicitly addressed, even if the answer is inconclusive

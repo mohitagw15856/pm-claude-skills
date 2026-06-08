@@ -1,6 +1,6 @@
 ---
 name: competitor-signal-tracker
-description: "Analyse competitor moves and surface strategic implications for your product. Use when asked to track competitor signals, analyse a competitor announcement, understand what a competitor is doing strategically, or produce a competitive intelligence report. Produces a categorised signal analysis with threat ratings, roadmap implications, and recommended responses."
+description: "Analyse competitor moves and translate them into strategic implications for your product roadmap. Use when a competitor announces a new feature, pricing change, partnership, or strategic shift, or when producing a periodic competitive intelligence report. Produces a categorised signal analysis with reactive-vs-proactive assessment, threat ratings, specific roadmap implications, and recommended responses with owners."
 ---
 
 # Competitor Signal Tracker Skill
@@ -43,6 +43,13 @@ Ask the user for these if not provided:
 
 #### Strategic Summary
 [2-3 sentences on the overall competitive landscape shift this period]
+
+## Anti-Patterns
+
+- [ ] Do not rate a signal as High threat without explaining the specific roadmap item or customer segment it threatens — unjustified threat ratings lose credibility over time
+- [ ] Do not treat a hiring signal as definitive proof of a strategic bet — hiring signals require corroboration from product, messaging, or pricing signals before acting on them
+- [ ] Do not conflate a competitor's announcement with a competitor's shipped capability — press releases and blog posts often describe aspirations, not production features
+- [ ] Do not recommend "accelerate existing initiative" for every High signal — sometimes the right response is to differentiate harder in an adjacent area rather than race the competitor directly
 
 ## Quality Checks
 

@@ -216,3 +216,11 @@ Prompt questions:
 - [ ] Roadmap preview links each item to a customer goal
 - [ ] Mutual commitments section has real owners on both sides
 - [ ] Customer has at least 20 minutes of airtime in the agenda
+
+## Anti-Patterns
+
+- [ ] Do not fill the QBR with product activity metrics — lead with business outcomes the customer cares about
+- [ ] Do not present a roadmap without linking each item to a customer goal — vendor priorities are not a QBR agenda
+- [ ] Do not run a QBR as a one-sided presentation — it must include structured time for the customer to speak
+- [ ] Do not close a QBR without documented mutual commitments with named owners on both sides
+- [ ] Do not skip the "what's not working" slide — suppressing problems erodes trust and misses renewal risks

@@ -362,3 +362,11 @@ ANYTHING ELSE:
 - [ ] Diagnostic commands work — they have been run by at least one person recently
 - [ ] Handoff template is used at every shift change — not just during incidents
 - [ ] "Things I had to figure out that weren't documented" are added to this runbook after every incident
+
+## Anti-Patterns
+
+- [ ] Do not write alert runbooks with vague diagnostic steps like "check the logs" — every step must specify the exact command, dashboard link, or query to run
+- [ ] Do not include an alert in the runbook that has no specific on-call action — an alert that pages someone with no defined response path creates panic, not resolution
+- [ ] Do not leave the rollback command undocumented or untested — a rollback procedure that has never been run will fail when needed most
+- [ ] Do not list escalation contacts without phone numbers and Slack handles — email-only escalation paths are useless during a 3am incident
+- [ ] Do not write the runbook once and treat it as permanent — runbooks go stale after incidents; every incident must trigger a review of the relevant runbook entries

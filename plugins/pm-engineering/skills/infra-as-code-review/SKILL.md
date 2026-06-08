@@ -290,3 +290,11 @@ Medium and Low findings should be tracked as follow-up issues with a committed r
 - [ ] Code snippets in findings show both the problematic code AND the corrected version
 - [ ] Overall risk rating is justified by the highest-severity open finding
 - [ ] Checklist items are binary (checkable) — not narrative observations
+
+## Anti-Patterns
+
+- [ ] Do not mark a finding as Low if it involves hardcoded credentials or secrets in any form — always Critical
+- [ ] Do not review IaC in isolation from the deployment context — networking and IAM must be evaluated together
+- [ ] Do not produce narrative findings without the specific resource name, file, and line number
+- [ ] Do not skip the "Required Actions Before Merge" summary — reviewers need a clear blocking list, not just a full report
+- [ ] Do not approve code where encryption at rest or in transit is missing on data stores, even if not explicitly flagged by the requester

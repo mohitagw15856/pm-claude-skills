@@ -1,6 +1,6 @@
 ---
 name: morning-intelligence
-description: "Run a 15-question interview to capture your role, topics, sources, exclusions, and format preferences — then write a master prompt you can drop into a scheduled task or Claude Code Routine to get a personalised news brief every morning. Use when asked to set up a morning intelligence brief, build a morning news prompt, or create a personalised news briefing."
+description: "Interviews you across 15 questions to capture your role, topics, sources, exclusions, and format preferences, then writes a master prompt you can paste into a scheduled task or Claude Code Routine. Use when you want to set up a personalised daily news brief, build a reusable morning news prompt, or create an automated intelligence briefing. Produces a confirmed summary of your preferences, a ready-to-paste master prompt, and setup instructions for both Cowork Scheduled Tasks and Claude Code Routines."
 ---
 
 # Morning Intelligence Skill
@@ -184,6 +184,14 @@ UPDATING YOUR BRIEF
 - [ ] Format instruction is precise enough that a different AI could follow it correctly
 - [ ] The master prompt is inside a code block so it copies cleanly
 - [ ] Both setup options (Cowork and Claude Code Routines) are included
+
+## Anti-Patterns
+
+- [ ] Do not skip the interview and write a generic master prompt — a brief that is not tailored to the user's specific role and topics will be ignored after the first day
+- [ ] Do not proceed to write the master prompt without confirming the "What I Heard" summary — errors in the summary will silently propagate into a prompt that produces the wrong briefing every morning
+- [ ] Do not use broad topic labels in the master prompt (e.g. "AI", "tech news") — every topic must have a specific angle or focus to produce signal-to-noise ratio worth reading
+- [ ] Do not omit the NEVER INCLUDE section — without explicit exclusions, the briefing will fill with noise that the user said they wanted filtered out
+- [ ] Do not ask all 15 questions at once — the interview must run one question or small group at a time to produce specific, considered answers
 
 ---
 

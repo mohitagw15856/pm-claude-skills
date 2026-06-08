@@ -434,3 +434,11 @@ Honest assessment of what is missing today and what the priority to add it is:
 - [ ] The primary dashboard answers "is the service healthy?" in under 10 seconds — no hunting for the right panel
 - [ ] Business metrics are tracked alongside infrastructure metrics — not just four golden signals
 - [ ] Observability debt items have owners and dates — not just "would be nice to have"
+
+## Anti-Patterns
+
+- [ ] Do not create alerts without a specific on-call action — an alert that just says "investigate" trains engineers to ignore it
+- [ ] Do not set alert thresholds from a template without calibrating against production baselines — uncalibrated thresholds cause either alert fatigue or missed incidents
+- [ ] Do not log PII, tokens, or secrets — a logging standard is incomplete without an explicit list of what must never be logged
+- [ ] Do not measure only the four golden signals without adding at least one business metric alert — infrastructure health can be green while the business-critical path is silently failing
+- [ ] Do not deploy distributed tracing without verifying that trace IDs propagate across all service boundaries — partial tracing is worse than no tracing because it produces misleading incomplete traces

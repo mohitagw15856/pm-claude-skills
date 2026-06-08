@@ -128,3 +128,11 @@ Every roadmap needs a narrative, not just a timeline. Structure it as:
 - [ ] "What We're NOT Building" section has at least 2 items with rationale
 - [ ] Success metrics are specified per theme (not just a list of features)
 - [ ] Language is free of internal jargon — tested by asking: "could an external stakeholder understand this?"
+
+## Anti-Patterns
+
+- [ ] Do not put specific dates on NEXT or LATER items — use quarters or halves to signal appropriate confidence levels
+- [ ] Do not show the same level of detail to executives and engineers — calibrate depth to audience or you lose both
+- [ ] Do not omit the "What We're NOT Building" section — a roadmap without explicit deprioritisation becomes a wish list
+- [ ] Do not present LATER items as commitments — frame everything outside NOW as directional, not promised
+- [ ] Do not skip the success metrics section — without it, stakeholders cannot evaluate whether the roadmap is working

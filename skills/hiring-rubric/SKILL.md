@@ -119,6 +119,14 @@ Suggest how to divide competencies across interview rounds to avoid repetition:
 - [ ] Red flags are specific to this role and level
 - [ ] Panel guide avoids competency overlap between rounds
 
+## Anti-Patterns
+
+- [ ] Do not include competencies that overlap significantly — each dimension must assess a distinct quality
+- [ ] Do not write behavioural questions that can be answered with a yes/no — use "Tell me about a time..." format
+- [ ] Do not set a scoring bar without calibration guidance — "above bar" means nothing without concrete examples at each level
+- [ ] Do not create a rubric with more than 6 competencies — panel interviews cannot reliably assess more
+- [ ] Do not omit a "must-have vs. nice-to-have" distinction in the requirements — all criteria cannot carry equal weight
+
 ## Example Trigger Phrases
 
 - "Create a hiring rubric for a [role]"

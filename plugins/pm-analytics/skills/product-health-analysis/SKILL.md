@@ -57,3 +57,11 @@ Analyse across four layers:
 - [ ] Every flagged metric has a root cause hypothesis, not just "it dropped"
 - [ ] Observations are written for a non-technical stakeholder (no raw query language or data jargon)
 - [ ] Overall health rating is justified with specific evidence
+
+## Anti-Patterns
+
+- [ ] Do not report a single aggregate metric without segment breakdowns — averages hide opposing trends
+- [ ] Do not flag a metric as healthy just because it is above the target — check if the target itself is meaningful
+- [ ] Do not list metric movements without root cause hypotheses — observations without explanations are not analysis
+- [ ] Do not mix product health metrics with business KPIs without explaining the relationship between them
+- [ ] Do not omit recommended actions — a health report that only describes problems without prioritised next steps is incomplete

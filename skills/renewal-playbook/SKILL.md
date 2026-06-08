@@ -181,6 +181,14 @@ Prepare for the most likely objections:
 - [ ] Timeline starts at least 90 days before renewal date
 - [ ] Objection responses are specific to this account, not generic
 
+## Anti-Patterns
+
+- [ ] Do not start renewal conversations less than 90 days before the renewal date for accounts over $50K ARR
+- [ ] Do not build a renewal strategy without first honestly assessing account health — wishful thinking leads to last-minute churn
+- [ ] Do not treat all renewal objections as negotiating tactics — some objections signal genuine dissatisfaction that requires resolution first
+- [ ] Do not offer discounts as the first response to price objections — explore value gaps before reducing price
+- [ ] Do not close the renewal without confirming the expansion opportunity — every renewal is also an expansion conversation
+
 ## Example Trigger Phrases
 
 - "Build a renewal playbook for [Account Name] renewing in [Month]"

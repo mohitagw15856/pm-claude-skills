@@ -56,6 +56,13 @@ Ask the user for these if not provided:
 **This Week's Strategic Summary:**
 [2 sentences max — what is the overall competitive landscape doing?]
 
+## Anti-Patterns
+
+- [ ] Do not mark a signal as Low priority simply because it is new and unfamiliar — unknown competitive moves often deserve investigation before dismissal
+- [ ] Do not provide "monitor" as the recommended response for a High-priority signal — High signals require a specific action with a named owner
+- [ ] Do not include signals from competitors that are not relevant to the stated roadmap or strategic priorities — noise reduces the brief's usefulness and trains the team to ignore it
+- [ ] Do not produce a diff-mode brief that is longer than the full report — if the diff output exceeds 300 words, it is a full report, not a diff
+
 ## Quality Checks
 
 - [ ] Every High-priority signal has a specific response action and owner

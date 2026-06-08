@@ -1,6 +1,6 @@
 ---
 name: ai-ethics-review
-description: "Conduct an ethical review of an AI or ML feature, model, or product. Use when asked to run an AI ethics review, assess AI risks, audit a model for bias, or produce an AI impact assessment. Produces a structured ethics review covering fairness, transparency, privacy, safety, accountability, and societal impact with prioritised mitigations."
+description: "Conduct a structured ethical review of an AI or ML feature, model, or product. Use when preparing to deploy an AI system, assessing algorithmic risk, auditing a model for bias, or producing a responsible AI impact assessment. Produces a structured ethics review covering fairness, transparency, privacy, safety, accountability, and societal impact with a risk tier score, pre-deployment checklist, and prioritised mitigations."
 ---
 
 # AI Ethics Review Skill
@@ -197,6 +197,14 @@ Ask the user for these if not provided:
 - [ ] Safety section covers both false positive and false negative failure modes
 - [ ] Accountability section names real people, not teams or roles
 - [ ] Mitigations are specific and time-bound — not "monitor and review"
+
+## Anti-Patterns
+
+- [ ] Do not limit the affected-population analysis to users of the product — AI that makes decisions about people (hiring, credit, content moderation) affects non-users who have no opt-out
+- [ ] Do not accept "we will monitor" as a mitigation without specifying what is monitored, at what threshold, and who acts
+- [ ] Do not assign fairness analysis to the model team alone — protected characteristic analysis requires input from legal, HR, or a subject-matter expert
+- [ ] Do not defer the DPIA to post-launch — for high-risk tier systems, a DPIA is a pre-requisite for lawful deployment under GDPR
+- [ ] Do not conflate statistical accuracy with fairness — a model can be 95% accurate overall while performing significantly worse for a protected group
 
 ## Example Trigger Phrases
 

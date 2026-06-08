@@ -139,3 +139,11 @@ Score each dimension 1–5. Weight as shown. Calculate weighted total out of 100
 - [ ] Actions have owners and deadlines
 - [ ] Renewal probability is calibrated against pipeline reality
 - [ ] Trend arrows reflect direction of change vs. last scorecard, not just current state
+
+## Anti-Patterns
+
+- [ ] Do not score health dimensions on gut feel — every score needs specific supporting evidence
+- [ ] Do not give a Green status to accounts with unresolved P1 issues or missed milestones
+- [ ] Do not list risks vaguely — "low engagement" without specifics is not actionable
+- [ ] Do not leave recommended actions without named owners and deadlines
+- [ ] Do not conflate product usage frequency with product value delivery

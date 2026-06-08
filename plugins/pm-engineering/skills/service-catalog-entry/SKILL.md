@@ -290,3 +290,11 @@ Document limitations honestly — this section prevents other teams from buildin
 - [ ] All runbook links are live — not broken references or TODO placeholders
 - [ ] Data classification includes retention period and encryption status — not just sensitivity level
 - [ ] The entry has been reviewed by at least one consumer team to confirm it matches their experience of the service
+
+## Anti-Patterns
+
+- [ ] Do not write aspirational SLO targets — targets must be agreed with stakeholders and based on historical data, not copied from a template
+- [ ] Do not leave runbook links as TODO placeholders — broken or missing links make the catalog entry worse than useless during an incident
+- [ ] Do not omit the "Known Limitations" section to make the service look better — undisclosed limitations cause incorrect integrations and downstream incidents
+- [ ] Do not list API error codes without testing them — aspirational error documentation misleads consumers
+- [ ] Do not write the "What It Does" section with jargon — a new engineer from another team must understand it in under 2 minutes

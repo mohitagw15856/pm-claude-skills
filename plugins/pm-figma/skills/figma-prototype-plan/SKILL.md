@@ -76,6 +76,14 @@ Success when: [Specific trigger]
 - [ ] Success criteria defined for each task
 - [ ] Reset process defined for between participants
 
+## Anti-Patterns
+
+- [ ] Do not prototype everything — scope must be limited to the interactions that answer the specific research questions
+- [ ] Do not design prototype flows without also writing the test task scripts — the two must align exactly
+- [ ] Do not skip the reset process between participants — unsettled prototype state contaminates results
+- [ ] Do not plan a prototype without specifying which interactions are clickable vs static — ambiguity causes scope creep
+- [ ] Do not scope a prototype without first defining the research questions it needs to answer
+
 ## Example Trigger Phrases
 - "Plan the Figma prototype for our user test on [feature]"
 - "What interactions do I need to build for this prototype?"

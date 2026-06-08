@@ -110,6 +110,14 @@ By the end of this session, participants will be able to:
 - [ ] Differentiation is specified for both support and extension
 - [ ] Timing adds up to session length
 
+## Anti-Patterns
+
+- [ ] Do not design a lesson plan without explicitly stating the learning objectives — activities must trace back to outcomes
+- [ ] Do not allocate timing that does not add up to the total session length — the plan must be time-feasible
+- [ ] Do not create activities with no assessment component — learning must be measurable, not just delivered
+- [ ] Do not ignore differentiation — a plan with no accommodation for different learning levels or abilities is incomplete
+- [ ] Do not front-load all content delivery without interactive breaks — passive listening degrades retention after 15–20 minutes
+
 ## Example Trigger Phrases
 
 - "Write a lesson plan on [topic] for [audience]"

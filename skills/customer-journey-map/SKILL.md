@@ -206,6 +206,14 @@ Low   😤 │                        *    *
 - [ ] Emotion curve shows the real experience — not an aspirationally positive version
 - [ ] Research gaps are documented — the map reflects what is known, not assumed
 
+## Anti-Patterns
+
+- [ ] Do not build the map from assumptions alone — ground at least the pain points in real customer data or research
+- [ ] Do not treat all journey stages as equally weighted — identify the highest-friction moments explicitly
+- [ ] Do not omit the emotional layer — a journey map without emotions is a process flow, not a customer map
+- [ ] Do not create generic touchpoints that apply to any product — each touchpoint must be specific to this product and customer
+- [ ] Do not leave opportunities unranked — prioritise by impact and feasibility
+
 ## Example Trigger Phrases
 
 - "Map the customer journey for [product]"

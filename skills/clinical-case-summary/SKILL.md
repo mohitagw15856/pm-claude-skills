@@ -71,10 +71,17 @@ WARNING: For documentation and educational purposes only. All clinical content m
 - Follow-up plan
 
 ## Quality Checks
-- Patient details fully anonymised
-- Allergies and medications included in handover formats
-- Safety netting included in SOAP plan
-- Disclaimer included
+- [ ] Patient details fully anonymised
+- [ ] Allergies and medications included in handover formats
+- [ ] Safety netting included in SOAP plan
+- [ ] Disclaimer included
+
+## Anti-Patterns
+
+- [ ] Do not include any identifiable patient information — full names, dates of birth, NHS or MRN numbers, or specific addresses must be anonymised or replaced with generic identifiers
+- [ ] Do not omit the clinical disclaimer — this output is for documentation and educational purposes only and must not be presented as clinical advice
+- [ ] Do not confuse the SBAR Recommendation with a treatment plan — R is what you need from the recipient, not a full management plan
+- [ ] Do not list differential diagnoses without noting the reasoning for ranking — an unranked list of differentials is not clinically useful
 
 ## Example Trigger Phrases
 - "Write a clinical handover using SBAR for this patient"

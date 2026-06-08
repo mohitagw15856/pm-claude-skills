@@ -482,3 +482,11 @@ Before opening your first pull request, verify:
 - [ ] Docker Compose version and Docker Desktop memory requirements are stated explicitly
 - [ ] "Expected output" is shown for key commands so engineers know whether a step succeeded
 - [ ] Setup time estimate is honest — verified by timing a real onboarding session, not estimated
+
+## Anti-Patterns
+
+- [ ] Do not write setup steps from memory without testing them on a clean machine — steps that skip implicit knowledge break for new engineers
+- [ ] Do not leave environment variables undocumented — every variable in .env.example must appear in the Variables table with a description and source
+- [ ] Do not write troubleshooting entries for theoretical issues — only include problems that have actually occurred during real onboarding sessions
+- [ ] Do not assume Docker Desktop is configured correctly — memory limits and platform (M1/M2) compatibility must be explicitly called out
+- [ ] Do not omit expected output for key commands — without "expected output", engineers cannot tell whether a step succeeded or silently failed

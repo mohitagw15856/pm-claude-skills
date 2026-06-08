@@ -58,3 +58,11 @@ Ask the user for these if not provided:
 - [ ] Each stakeholder's talking points lead with their concern, not your agenda
 - [ ] At least one "do not approach until X is aligned" flag is considered
 - [ ] The ask from each stakeholder is a single, specific thing (not a vague "support")
+
+## Anti-Patterns
+
+- [ ] Do not approach high-influence blockers before aligning their sponsors — approach order determines outcome
+- [ ] Do not create talking points that lead with your agenda — always lead with the stakeholder's stated concern
+- [ ] Do not treat every stakeholder as equally important — focus depth on the decision-makers and key influencers
+- [ ] Do not omit the "do not approach until X is aligned" flags — sequencing mistakes can permanently close doors
+- [ ] Do not build the map based only on org chart position — influence often lives outside formal authority

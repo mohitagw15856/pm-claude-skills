@@ -234,3 +234,11 @@ Only include issues that matter at executive level.
 - [ ] Every risk has a mitigation and a "help needed" flag if stakeholder action is required
 - [ ] Decisions needed have specific options and a clear recommendation
 - [ ] Total length is under 1 page / 2 minutes reading time
+
+## Anti-Patterns
+
+- [ ] Do not bury the status assessment at the bottom — BLUF means the most important information comes first
+- [ ] Do not report metrics without a target or prior-period comparison — raw numbers without context are not useful
+- [ ] Do not list risks without mitigation actions and clear flags for stakeholder help needed
+- [ ] Do not write decisions needed as questions without providing a clear recommendation — executives need options, not open-ended questions
+- [ ] Do not allow the update to exceed one page — if it requires more, the message needs editing, not expanding

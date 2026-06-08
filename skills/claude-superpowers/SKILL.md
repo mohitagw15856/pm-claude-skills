@@ -1,6 +1,6 @@
 ---
 name: claude-superpowers
-description: "Force Claude Code to work like a senior developer: plan before coding, work in isolation, write tests first, and review its own output twice before presenting it. Use when asked to enable superpowers mode, activate the superpowers framework, or turn on superpowers for this session. Installs a 4-stage framework — Plan, Isolate, Test First, Double Review — that prevents Claude from sprinting into broken code."
+description: "Activate a 4-stage coding discipline framework that forces Claude to plan before coding, isolate changes on a branch, write tests first, and self-review output twice before presenting it. Use when starting a complex coding task, when past Claude sessions produced broken first drafts, or when you want to prevent rework cycles. Produces a confirmed written plan, isolated feature branch, test-first implementation, and a double-reviewed output with a correctness and code-quality checklist."
 ---
 
 # Claude Superpowers Skill
@@ -268,6 +268,14 @@ Tell the user: "Add this to your CLAUDE.md and Superpowers will be active perman
 - [ ] CLAUDE.md installation text was offered after activation
 
 ---
+
+## Anti-Patterns
+
+- [ ] Do not proceed to Stage 2 without explicit user confirmation of the plan — coding before confirmation defeats the entire purpose of the planning stage
+- [ ] Do not write tests after the implementation and call it "test-first" — tests must be written and confirmed failing before the implementation starts
+- [ ] Do not skip the Double Review when time is tight — the review is most valuable precisely when speed is the priority, because that is when errors are most likely
+- [ ] Do not expand scope during Stage 2 without surfacing it — silent scope expansion produces code the user did not approve and may not want
+- [ ] Do not mark both reviews as clean without actually performing them — a rubber-stamp review produces false confidence and defeats the framework
 
 ## Example Trigger Phrases
 

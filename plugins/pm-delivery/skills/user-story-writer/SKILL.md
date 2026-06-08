@@ -209,6 +209,14 @@ Then the export contains only invoices from Jan 2026 — not all invoices
 - [ ] Out of scope is documented — not assumed
 - [ ] Stories are independent — they can be shipped individually without depending on unreleased work (except where explicitly noted)
 
+## Anti-Patterns
+
+- [ ] Do not write user stories from a technical perspective — every story must be from the user's point of view and state their goal
+- [ ] Do not write acceptance criteria that are untestable — every criterion must have a clear pass/fail condition
+- [ ] Do not create stories that are too large to complete in a single sprint — break epics into estimable, independently deliverable stories
+- [ ] Do not omit edge cases — unhappy paths and error states are required, not optional
+- [ ] Do not skip the Definition of Done — without it, "done" means different things to different people
+
 ## Example Trigger Phrases
 
 - "Write user stories for [feature] from this brief"

@@ -83,6 +83,14 @@ Next review due: [Date]
 - [ ] Escalation path is named (specific people or roles, not just "your manager")
 - [ ] Review date is set
 
+## Anti-Patterns
+
+- [ ] Do not write steps without specifying who is responsible for each — ownership must be explicit throughout
+- [ ] Do not omit the escalation path — every process must say what happens when something goes wrong
+- [ ] Do not document the ideal process if the real process differs — document reality, then note improvements separately
+- [ ] Do not skip edge cases and exceptions — they are where most process failures actually occur
+- [ ] Do not produce documentation without a review date — undated process docs quickly become incorrect
+
 ## Example Trigger Phrases
 - "Document this process: [description]"
 - "Write a process guide for [workflow]"

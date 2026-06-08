@@ -126,6 +126,14 @@ Ask the user for these if not provided:
 - [ ] Churned user interviews are recommended (not just data analysis)
 - [ ] Monitoring plan includes an alert threshold
 
+## Anti-Patterns
+
+- [ ] Do not recommend "improve onboarding" without specifying what specific step to change and why
+- [ ] Do not analyse retention without segmenting by cohort — aggregate retention curves hide cohort-specific patterns
+- [ ] Do not treat DAU/MAU below 5% as a retention problem — at that level, it is a product-market fit problem
+- [ ] Do not skip qualitative research — churned user interviews reveal reasons that quantitative data cannot
+- [ ] Do not set a monitoring alert without specifying the threshold that triggers it
+
 ## Guidelines
 
 - Never recommend "improve onboarding" without specifying *what* to change and *why*

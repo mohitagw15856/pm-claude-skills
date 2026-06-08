@@ -174,3 +174,11 @@ Include:
 - [ ] ARR at risk is quantified
 - [ ] Communication plan has owners and dates — not "TBD"
 - [ ] Language is professional and blameless toward individuals
+
+## Anti-Patterns
+
+- [ ] Do not assign blame to individuals — focus on system failures and process gaps
+- [ ] Do not downplay ARR at risk or describe churn risk vaguely without a number
+- [ ] Do not leave resolution plan ownership as "TBD" or unassigned
+- [ ] Do not write the brief without a clear ask from the escalation owner
+- [ ] Do not omit the customer's own stated position — their perspective must be represented fairly

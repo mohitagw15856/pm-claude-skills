@@ -56,6 +56,14 @@ Touch targets, screen reader labels, focus order, colour contrast, motion prefer
 - [ ] Empty states specified
 - [ ] Edge cases listed as actionable questions
 
+## Anti-Patterns
+
+- [ ] Do not annotate only the happy path — error states, loading states, and empty states must all be documented
+- [ ] Do not use vague spacing descriptions like "some padding" — specify exact pixel values or token names
+- [ ] Do not skip accessibility annotations — focus order, ARIA labels, and colour contrast ratios must be included
+- [ ] Do not leave interaction behaviour undescribed — every interactive element needs a documented response
+- [ ] Do not produce annotations without edge cases — developers need to know what happens at boundaries
+
 ## Example Trigger Phrases
 - "Write dev annotations for this Figma screen"
 - "Create developer handoff notes for [screen/component]"

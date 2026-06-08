@@ -292,6 +292,14 @@ Ask for these if not already provided:
 
 ---
 
+## Anti-Patterns
+
+- [ ] Do not describe a rollback procedure that has never been tested — a theoretical rollback is not a rollback plan; test it in staging before production
+- [ ] Do not allow deploys on Fridays or before holidays without an explicit on-call engineer who will monitor through the weekend
+- [ ] Do not commit secrets to source control even in non-production branches — secret scanning in the pipeline catches this, but prevention is the standard
+- [ ] Do not skip post-deploy monitoring after a production deploy — the deploying engineer must watch error rates and latency for the specified observation window
+- [ ] Do not suppress a security scan finding without a linked ticket and a named owner — suppressions without accountability accumulate into unmanaged risk
+
 ## Quality Checks
 
 - [ ] Every stage has a clear owner when it fails

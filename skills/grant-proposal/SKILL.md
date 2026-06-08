@@ -96,6 +96,14 @@ Funder test: does this problem align with [funder] stated priorities? Make the c
 - [ ] Sustainability section explains what happens after the grant ends
 - [ ] Word limits respected
 
+## Anti-Patterns
+
+- [ ] Do not write a generic proposal — every section must be tailored to the specific funder's stated priorities
+- [ ] Do not exceed the specified word or page limits — over-length proposals are disqualified at many funders
+- [ ] Do not leave the sustainability section vague — funders need to know what happens after grant funding ends
+- [ ] Do not use jargon the funder's reviewers won't understand — write for the panel, not the project team
+- [ ] Do not underspecify the budget narrative — every significant line item must be justified with method and reasoning
+
 ## Example Trigger Phrases
 - "Write a grant proposal for [project] applying to [funder]"
 - "Help me write a funding application for [grant programme]"

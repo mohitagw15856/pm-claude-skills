@@ -73,3 +73,11 @@ Ask the user for these if not provided:
 - [ ] Success criteria are measurable or observable (not "looks good")
 - [ ] Out-of-scope section names at least one thing that might seem in scope but isn't
 - [ ] Technical constraints are specific enough for an engineer to confirm
+
+## Anti-Patterns
+
+- [ ] Do not write the user goal in feature language ("design the checkout flow") — it must be written from the user's perspective with a motivation and outcome
+- [ ] Do not skip the "Explicitly Out of Scope" section — without it, designers will inadvertently solve problems not intended for this iteration
+- [ ] Do not list edge cases that are so generic they apply to any feature (e.g. "handle errors") — each edge case must be specific to this feature's failure modes
+- [ ] Do not hand off the brief without confirming engineering constraints are accurate — a constraint that is wrong is worse than no constraint
+- [ ] Do not omit the emotional context of the user — designs without emotional grounding produce technically correct but experientially flat results

@@ -1,6 +1,6 @@
 ---
 name: substack-notes-scraper
-description: Scrapes a Substack Notes page and exports engagement data (likes, comments, restacks) to a formatted .xlsx file with conditional formatting and summary stats.
+description: "Scrapes a Substack Notes page and exports engagement data to a formatted .xlsx file. Use when asked to download, analyse, or export Substack Notes performance data including likes, comments, and restacks. Produces a formatted spreadsheet with conditional formatting, summary stats, and per-note engagement metrics."
 ---
 
 # Substack Notes Scraper
@@ -166,6 +166,14 @@ After generating the file, report:
 - [ ] If the page failed to load properly, the user was told — not silently given an empty file
 
 ---
+
+## Anti-Patterns
+
+- [ ] Do not proceed without a valid Substack handle or profile URL — scraping without a specific target cannot be completed
+- [ ] Do not ignore rate-limit responses from Substack — implement backoff and reduce request frequency before retrying
+- [ ] Do not export data without conditional formatting and summary stats — raw data without visualisation is not the expected output
+- [ ] Do not attempt to access private or subscriber-only notes — this skill is for public Notes content only
+- [ ] Do not produce output without a clear date range filter — undated exports make trend analysis impossible
 
 ## Example Trigger Phrases
 

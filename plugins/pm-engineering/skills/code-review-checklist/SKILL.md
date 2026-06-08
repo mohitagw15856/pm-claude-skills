@@ -107,6 +107,14 @@ Based on the change type and language, flag 2-3 things reviewers typically miss 
 - [ ] Decision framework includes at least one named blocking condition and one named non-blocking comment condition
 - [ ] Common pitfalls are specific to the stated language + change-type combo (not generic advice like "watch out for bugs")
 
+## Anti-Patterns
+
+- [ ] Do not generate a generic checklist that ignores the stated language — a Python checklist and a Go checklist have fundamentally different correctness concerns
+- [ ] Do not treat "looks fine" as a valid review outcome — the checklist exists to surface specific concerns, not validate a superficial read
+- [ ] Do not scope a "high risk" review the same as a "low risk" review — depth must scale with the stated risk level
+- [ ] Do not flag every stylistic preference as a blocking issue — distinguish between blocking correctness issues and non-blocking comments
+- [ ] Do not skip the "common pitfalls" section for the stated language and change-type combination — this is where the most valuable knowledge lives
+
 ## Usage Examples
 - "Generate a code review checklist for [PR description]"
 - "What should I check in this pull request?"

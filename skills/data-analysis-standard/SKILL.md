@@ -117,6 +117,14 @@ Ask the user for these if not provided:
 - [ ] What the data cannot tell us is explicitly named
 - [ ] Recommended action includes an owner and timeline
 
+## Anti-Patterns
+
+- [ ] Do not present correlations as causation — always state the distinction explicitly
+- [ ] Do not report a metric movement without stating the time window and comparison baseline
+- [ ] Do not skip the "so what" — raw observations without recommended actions are incomplete analysis
+- [ ] Do not overstate confidence — label hypotheses clearly and note what data would be needed to confirm them
+- [ ] Do not ignore segment breakdowns — aggregate metrics can mask opposing trends in sub-segments
+
 ## Guidelines
 
 - Always state what the data *cannot* tell you — never oversell confidence

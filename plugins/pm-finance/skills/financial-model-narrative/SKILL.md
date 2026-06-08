@@ -63,6 +63,14 @@ For each significant variance:
 - [ ] Audience-appropriate language (board vs investor vs management)
 - [ ] One-off items clearly distinguished from recurring items
 
+## Anti-Patterns
+
+- [ ] Do not list numbers without explaining what is driving them — narrative must go beyond restating the figures
+- [ ] Do not mix one-off items with recurring performance without clearly distinguishing them
+- [ ] Do not write the same level of detail for all line items — focus depth on the items that matter most
+- [ ] Do not omit forward-looking commentary — a narrative without outlook is incomplete for board or investor audiences
+- [ ] Do not use technical accounting language without translation — the audience is executives, not accountants
+
 ## Example Trigger Phrases
 - "Write a financial narrative for these results: [paste numbers]"
 - "Turn this P&L into a board narrative"

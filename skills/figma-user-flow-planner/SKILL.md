@@ -68,6 +68,14 @@ Feature name/
 - [ ] Out-of-scope section is explicit
 - [ ] Figma file structure matches screen map
 
+## Anti-Patterns
+
+- [ ] Do not plan only the happy path — all error states, empty states, and edge cases must be mapped before designing starts
+- [ ] Do not produce a flow map that doesn't match the Figma file structure — the page structure must reflect the flow map
+- [ ] Do not define screens without specifying all required states — a screen without its variants is an incomplete design scope
+- [ ] Do not start designing before entry and exit points are fully documented — unclear boundaries cause scope creep
+- [ ] Do not plan user flows without tying each step back to a user goal — every screen must justify its existence
+
 ## Example Trigger Phrases
 - "Plan the user flow for [feature] in Figma"
 - "What screens do I need to design for [feature]?"

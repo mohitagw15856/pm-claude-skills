@@ -261,3 +261,11 @@ If cycle time data was not provided: *Cycle time data was not included in this a
 - [ ] Next-sprint capacity forecast uses historical average as the baseline and deducts specific known reducers
 - [ ] Health diagnosis table uses Red/Yellow/Green with evidence cited in the Evidence column — no unsupported scores
 - [ ] If metrics are missing (cycle time, blocker log), the report explicitly calls them out as recommended additions
+
+## Anti-Patterns
+
+- [ ] Do not generate the velocity chart from placeholder data — it must reflect the actual sprint data provided
+- [ ] Do not diagnose trend direction without computing trailing vs leading averages — "it looks like it's declining" is not a diagnosis
+- [ ] Do not list carry-over as a generic observation — identify root cause categories with counts for the analysis to be actionable
+- [ ] Do not produce recommendations without a named owner, a start date, and a measurable target
+- [ ] Do not score health dimensions without citing evidence in the Evidence column — unsupported Red/Yellow/Green scores are not credible

@@ -147,3 +147,11 @@ Error codes: [list]
 - [ ] At least 2 alternative approaches are documented with reasons for rejection
 - [ ] Security and privacy section is completed for any feature touching user data
 - [ ] All open questions have a named owner and due date (not "TBD")
+
+## Anti-Patterns
+
+- [ ] Do not include solution language in the problem statement — the problem must be described independently of the proposed solution
+- [ ] Do not omit alternatives considered — a spec that considers only one approach has not been properly evaluated
+- [ ] Do not leave open questions as "TBD" without a named owner and due date — unresolved questions are blockers
+- [ ] Do not skip security and privacy sections for any feature that touches user data
+- [ ] Do not write a non-goals section that is empty — always list at least two things that might be assumed in scope

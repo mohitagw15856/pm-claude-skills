@@ -206,6 +206,14 @@ For each component, assess against these quality criteria:
 - [ ] Both Figma and code (Storybook/implementation) are assessed — not just Figma
 - [ ] Stakeholders from design, engineering, and product have reviewed the audit
 
+## Anti-Patterns
+
+- [ ] Do not assess only the Figma library without checking the code implementation — Figma-code drift is one of the most common and costly design system failures
+- [ ] Do not score adoption without interviewing teams — audit tool metrics miss the human reasons teams build custom components instead of using the system
+- [ ] Do not treat all component gaps equally — prioritise gaps based on how many production screens rely on custom implementations, not alphabetically
+- [ ] Do not recommend adding more components without first auditing documentation quality — an undocumented component is often worse than no component
+- [ ] Do not schedule remediation without a named owner per initiative — design system improvements without ownership consistently stall
+
 ## Example Trigger Phrases
 
 - "Audit our design system for consistency and coverage"

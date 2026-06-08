@@ -82,6 +82,14 @@ Flag anything that warrants extra attention:
 - [ ] Testing steps are reproducible by someone unfamiliar with the code
 - [ ] For high-risk PRs, Reviewer Notes flags at least one specific area of concern or deliberate trade-off; for low-risk PRs, Reviewer Notes is either omitted or kept to one line
 
+## Anti-Patterns
+
+- [ ] Do not write a description that only restates what changed — explain why the change was made
+- [ ] Do not skip the testing steps — reviewers need to know how to verify the change works
+- [ ] Do not omit the reviewer notes for high-risk PRs — flag deliberate trade-offs and areas needing careful review
+- [ ] Do not describe implementation details that are obvious from the diff — add context that the diff cannot convey
+- [ ] Do not produce a single paragraph — structure with headers so reviewers can navigate to what they need
+
 ## Usage Examples
 - "Write a PR description for these changes" + [paste diff or description]
 - "Draft a pull request for [feature]"

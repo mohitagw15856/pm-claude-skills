@@ -114,6 +114,14 @@ Flag any fields that may not exist in current data infrastructure.
 - [ ] Data requirements section flags any missing fields
 - [ ] Filters are practical and don't require IT to configure
 
+## Anti-Patterns
+
+- [ ] Do not specify metrics that the available data sources cannot actually support — always validate data availability
+- [ ] Do not include more than 8–10 primary metrics on a single dashboard — more creates noise, not insight
+- [ ] Do not skip the primary business question — a dashboard without a north-star question becomes a vanity metrics display
+- [ ] Do not choose chart types for aesthetic reasons — every chart type must match the data relationship it represents
+- [ ] Do not leave filter configurations vague — specify exact filter values, not just filter categories
+
 ## Example Trigger Phrases
 
 - "Design a dashboard to track [business process]"

@@ -103,6 +103,14 @@ Flag if traffic is too low to reach significance in under 8 weeks — recommend 
 - If traffic is very low (<1,000 users/day), recommend qualitative alternatives: moderated testing, 5-second tests, or user interviews
 - Never approve a test with no guardrail metrics — always protect revenue, retention, or core engagement
 
+## Anti-Patterns
+
+- [ ] Do not run a test without a directional hypothesis — "let's see what happens" produces uninterpretable results
+- [ ] Do not declare a winner before reaching the pre-planned sample size — peeking at results inflates false positive rates
+- [ ] Do not test multiple independent changes in a single variant — you won't know which change caused the result
+- [ ] Do not use engagement metrics (clicks, time-on-page) as the primary metric when the goal is revenue or retention — proxy metrics mislead
+- [ ] Do not ignore guardrail metrics — a conversion lift that causes a support ticket spike is not a win
+
 ## Quality Checks
 
 - [ ] Hypothesis is directional (predicts a specific direction and magnitude, not "let's see")

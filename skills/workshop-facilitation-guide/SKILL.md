@@ -140,6 +140,14 @@ End every session with:
 - [ ] Parking lot is used actively (not a graveyard)
 - [ ] Close captures decisions and actions before the room empties
 
+## Anti-Patterns
+
+- [ ] Do not design a workshop without explicitly linking every activity to a session goal — purposeless activities waste participant time
+- [ ] Do not schedule more than 90 minutes of continuous structured activity without a break
+- [ ] Do not close a workshop without capturing decisions and actions before the room empties — post-session follow-up is too late
+- [ ] Do not plan a workshop without considering psychological safety for sensitive topics — establish ground rules at the start
+- [ ] Do not underestimate timing — add 20% buffer to all activity estimates, especially for groups over 8 people
+
 ## Example Trigger Phrases
 
 - "Design a workshop for [goal] with [group]"

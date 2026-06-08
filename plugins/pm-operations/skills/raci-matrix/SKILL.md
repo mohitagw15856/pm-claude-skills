@@ -151,6 +151,14 @@ Please review the full matrix here: [Link]. Raise any concerns by [Date] — aft
 - [ ] A communication plan exists to share the RACI with all involved parties
 - [ ] Decision map covers the top 5–10 highest-stakes decisions in the project
 
+## Anti-Patterns
+
+- [ ] Do not assign more than one Accountable per task — shared accountability means no accountability
+- [ ] Do not create a RACI with more than 5–6 roles — it becomes unreadable and unenforceable
+- [ ] Do not include tasks so broad that the RACI cannot be acted upon — break down to decision-level granularity
+- [ ] Do not skip the conflict resolution process — RACI matrices without a process for disputes are unused after the first disagreement
+- [ ] Do not confuse Responsible with Accountable — document the distinction clearly for each role
+
 ## Example Trigger Phrases
 
 - "Build a RACI matrix for our product launch"

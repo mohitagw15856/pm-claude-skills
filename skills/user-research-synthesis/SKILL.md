@@ -123,21 +123,21 @@ Research gaps identified:
 - Quantify when possible ("7 out of 10 users...")
 - Connect themes to business objectives
 
-## Quality Standards
+## Quality Checks
 
-✅ **Good Synthesis:**
-- Identifies patterns, not just individual responses
-- Connects insights to product decisions
-- Includes supporting evidence for each claim
-- Separates observations from interpretations
-- Prioritizes findings by impact
+- [ ] Themes identify patterns across multiple participants, not individual responses
+- [ ] Insights connect to specific product decisions, not just observations
+- [ ] Each claim includes supporting evidence (quotes, counts, or examples)
+- [ ] Observations and interpretations are clearly separated
+- [ ] Findings are prioritised by impact, not just listed
 
-❌ **Poor Synthesis:**
-- Lists every individual comment
-- Lacks evidence or examples
-- Makes unsupported leaps
-- Focuses on solutions before understanding problems
-- Ignores contradictory data
+## Anti-Patterns
+
+- [ ] Do not list every individual comment — synthesis must identify patterns across participants
+- [ ] Do not make interpretive leaps without supporting evidence from the data
+- [ ] Do not focus on feature requests before understanding the underlying problem — always identify the job-to-be-done first
+- [ ] Do not ignore contradictory data — conflicting findings must be surfaced and noted
+- [ ] Do not present results without quantifying prevalence — state how many participants held each view
 
 ## Example Theme
 

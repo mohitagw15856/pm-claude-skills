@@ -66,6 +66,14 @@ Naming convention to enforce:
 - [ ] Fix plan is ordered by impact-to-effort ratio
 - [ ] Variant completeness covers all interactive states
 
+## Anti-Patterns
+
+- [ ] Do not flag naming issues without providing a specific, consistent naming convention to adopt
+- [ ] Do not audit only visual consistency — also check for missing interactive states and accessibility compliance
+- [ ] Do not list all issues at equal priority — group by impact (Critical / Major / Minor) so the fix plan is actionable
+- [ ] Do not omit variant completeness — every interactive component must cover all required states
+- [ ] Do not leave coverage gaps without recommending specific missing components to add
+
 ## Example Trigger Phrases
 - "Audit my Figma component library"
 - "Review our design system for consistency issues"

@@ -162,3 +162,11 @@ If no decisions are pending: *No decisions pending.*
 - [ ] Escalations that need leadership attention are called out explicitly in the Risks section — not just buried in a table row
 - [ ] The entire report is readable in under 2 minutes — if it is longer than one printed page, trim it
 - [ ] Report period (week number and date range) is clearly stated in the header
+
+## Anti-Patterns
+
+- [ ] Do not fabricate metrics — if data is not available, mark the field as `[data needed]` rather than estimating; stakeholders making decisions on invented numbers is actively harmful
+- [ ] Do not write next week's priorities as activities ("work on X") — they must be outcomes ("ship X", "complete Y migration") so stakeholders can evaluate whether the team delivered
+- [ ] Do not bury escalations inside a risk table row — anything needing leadership attention must be called out explicitly in the Escalations section
+- [ ] Do not list blocked items without naming a specific owner and a concrete unblocking action — "waiting on X" is not a blocker entry, it is a placeholder
+- [ ] Do not write a report that exceeds two printed pages — length signals the author has not done the editorial work of deciding what matters to stakeholders

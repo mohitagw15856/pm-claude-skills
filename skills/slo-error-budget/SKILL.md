@@ -229,3 +229,11 @@ This policy defines what to do with the error budget — both when it's healthy 
 - [ ] Error budget policy has clear triggers and clear actions — not "discuss as a team"
 - [ ] Burn rate alerts have different windows to catch both fast burns and slow burns
 - [ ] Exclusions are documented so they don't silently inflate the SLO number
+
+## Anti-Patterns
+
+- [ ] Do not set SLO targets at 100% — this discourages feature development and does not reflect how users experience reliability
+- [ ] Do not measure internal system metrics as SLIs — SLIs must reflect what users directly experience, not internal CPU or memory
+- [ ] Do not write an error budget policy with vague triggers — "discuss as a team" is not an actionable policy; triggers must be specific percentages
+- [ ] Do not base targets on aspirational round numbers — always derive from historical baseline data
+- [ ] Do not configure only one burn-rate alert window — a single window misses both fast burns and slow burns that exhaust the budget quietly

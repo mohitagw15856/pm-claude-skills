@@ -70,6 +70,22 @@ Produces a structured financial due diligence framework — document request lis
 - Balance sheet risk: [Assessment]
 - Overall: Green Strong / Amber Acceptable / Red Material concerns
 
+## Quality Checks
+
+- [ ] Document request list is tailored to the transaction type and stage — not a generic template
+- [ ] Red flags checklist covers revenue quality, margins, cash conversion, and balance sheet risk
+- [ ] Every analytical question connects to a specific risk the transaction presents
+- [ ] Summary output template is completed with an overall RAG assessment
+- [ ] Disclaimer that this is a framework and does not substitute for qualified financial or legal advice
+
+## Anti-Patterns
+
+- [ ] Do not present the checklist without tailoring it to the specific transaction type and stage of diligence
+- [ ] Do not overlook revenue concentration risk — customer concentration above 20–30% is a material risk that must be flagged
+- [ ] Do not confuse EBITDA with cash — always check cash conversion and identify non-cash items
+- [ ] Do not skip the related-party transaction review — undisclosed related-party dealings are a common due diligence failure point
+- [ ] Do not produce output without noting this is a framework and qualified financial and legal advice is required
+
 ## Example Trigger Phrases
 - "Give me a financial due diligence checklist for [company type]"
 - "What documents should I request for financial DD?"

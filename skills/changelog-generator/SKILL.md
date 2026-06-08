@@ -81,6 +81,14 @@ Follow [Keep a Changelog](https://keepachangelog.com) format:
 - [ ] No entries start with past-tense verbs (no "Added", "Fixed", "Removed" — use "Add", "Fix", "Remove")
 - [ ] Every breaking change entry includes a specific migration action (not just "update your code")
 
+## Anti-Patterns
+
+- [ ] Do not include implementation details in changelog entries — users need to know what changed for them, not how the code was refactored internally
+- [ ] Do not list every micro-commit as a separate entry — related commits should be grouped into one user-facing change
+- [ ] Do not omit the migration path for breaking changes — a breaking change entry without a specific migration action forces users to read the source code
+- [ ] Do not include empty sections — a "### Fixed" section with no entries signals the template was filled in carelessly
+- [ ] Do not write breaking changes in the same casual tone as minor additions — breaking changes must be visually prominent and call out migration requirements explicitly
+
 ## Usage Examples
 - "Write a changelog for version [X]" + [paste commits]
 - "Generate release notes from these commits"

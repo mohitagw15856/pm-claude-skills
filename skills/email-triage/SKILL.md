@@ -1,6 +1,6 @@
 ---
 name: email-triage
-description: Reads your Gmail inbox for a configurable window (default: last 8 hours) and surfaces only what needs action — replies, decisions, or follow-up. Filters out receipts, notifications, newsletters, and anything that doesn't need you.
+description: "Reads your Gmail inbox for a configurable window (default: last 8 hours) and surfaces only what needs action — replies, decisions, or follow-up. Filters out receipts, notifications, newsletters, and anything that doesn't need you."
 ---
 
 # Email Triage
@@ -168,6 +168,14 @@ Keep this to one line. Do not elaborate.
 - [ ] Always-ignore senders/domains are fully suppressed
 - [ ] Output is scannable — no unnecessary prose, no padding
 - [ ] Financial statements and sensitive content were counted but not shown in full
+
+## Anti-Patterns
+
+- [ ] Do not surface FYI emails in the High or Medium priority sections — burying actionable items with informational ones defeats the purpose of triage
+- [ ] Do not write vague "What they need" summaries ("Sarah sent an email about the report") — every summary must state the actual ask, not a description of the email
+- [ ] Do not apply the same tone to every reply starter — a formal email from a client requires a different opener than a casual Slack-style email from a colleague
+- [ ] Do not include emails outside the requested time window — time window accuracy is the core trust signal for this skill
+- [ ] Do not omit the filtered-out count — users need to know how much was scanned, not just what was surfaced, to trust the triage is complete
 
 ## Dispatch / Mobile Usage
 

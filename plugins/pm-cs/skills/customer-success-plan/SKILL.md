@@ -183,6 +183,14 @@ If the success plan falls off track:
 - [ ] Plan is written to be shared with the customer — no internal-only commentary in this document
 - [ ] Executive sponsor is identified and has an engagement role
 
+## Anti-Patterns
+
+- [ ] Do not define success metrics that the vendor controls — metrics must reflect the customer's business outcomes
+- [ ] Do not set milestone dates without customer confirmation — unilateral timelines undermine joint ownership
+- [ ] Do not create a plan the customer hasn't agreed to — it must be mutual, not a CSM's internal plan
+- [ ] Do not leave ownership fields blank or assigned to "CS team" — every action needs a named owner
+- [ ] Do not confuse product adoption milestones with customer business outcomes — both are needed but are not the same
+
 ## Example Trigger Phrases
 
 - "Build a success plan for [Account Name] who just signed"

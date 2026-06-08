@@ -89,6 +89,14 @@ Before delivering output, verify:
 - [ ] Use cases include a Before/After structure
 - [ ] Language is consistent with the target customer's vocabulary (not internal engineering terms)
 
+## Anti-Patterns
+
+- [ ] Do not write feature descriptions instead of benefits — the GTM pack must translate features into customer value
+- [ ] Do not use the same messaging across all buyer personas — each role has different priorities and language
+- [ ] Do not create a positioning statement that could apply to any competitor — differentiation must be specific and defensible
+- [ ] Do not skip the "not for" section — defining who this is not for sharpens positioning and prevents misdirected sales effort
+- [ ] Do not list use cases without tying them to specific job titles or buyer roles
+
 ## Example Trigger Phrases
 
 - "Create a positioning statement for [product]"

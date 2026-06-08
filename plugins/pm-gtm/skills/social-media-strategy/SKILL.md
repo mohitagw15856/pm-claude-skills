@@ -235,3 +235,11 @@ A concrete first month of content — ready to adapt and post:
 - "Help me define content pillars and posting cadence for our startup"
 - "Design a 90-day social media plan for [company]"
 - "What should our social media strategy be for a product launch?"
+
+## Anti-Patterns
+
+- [ ] Do not recommend every platform — justify each choice with where the target audience actually spends time
+- [ ] Do not define content pillars that serve only the brand — each pillar must deliver specific value to the audience or it will not earn attention
+- [ ] Do not set a posting cadence that exceeds the team's realistic capacity — an unsustainable strategy fails faster than a modest one
+- [ ] Do not use vanity metrics (likes, followers in isolation) as primary KPIs — tie KPIs to the stated business goal
+- [ ] Do not skip the tone of voice section — without it, multiple contributors produce inconsistent content that erodes brand identity

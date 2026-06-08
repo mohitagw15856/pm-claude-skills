@@ -51,3 +51,11 @@ Ask the user for these if not provided:
 - [ ] Every risk has a mitigation or owner (not just "this is a risk")
 - [ ] Carry-over items are connected to their impact on this sprint's goal
 - [ ] Definition of Done is agreed criteria, not a task list
+
+## Anti-Patterns
+
+- [ ] Do not write a sprint goal as a task list — the goal must be a single outcome-focused statement that can be scored pass/fail
+- [ ] Do not leave the critical path unnamed — "the important tickets" is not a critical path
+- [ ] Do not list risks without a mitigation or owner — a risk without a response is just a worry list
+- [ ] Do not ignore carry-over items' impact on this sprint's capacity and goal
+- [ ] Do not write a Definition of Done that mixes task completion with outcome criteria — they must be observable and agreed before the sprint starts

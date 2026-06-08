@@ -152,6 +152,14 @@ Ask the user for these if not provided:
 - **Available data** (what training/inference data exists)
 - **ML/AI lead** (who owns the technical implementation)
 
+## Anti-Patterns
+
+- [ ] Do not skip the "Why AI?" question — if the answer is "we want to use AI," stop and reframe around the user problem first
+- [ ] Do not launch with an undefined accuracy threshold — "good enough" is not a threshold; set a number before build begins
+- [ ] Do not design the UX to hide AI-generated output as if it were system truth — users need to know when AI is involved so they can override it
+- [ ] Do not defer the Responsible AI checklist to post-launch — bias and privacy issues are far harder to fix in production than in design
+- [ ] Do not treat model latency as a post-launch optimisation — a 6-second AI response that replaces a 1-second rule-based response is a regression, not a feature
+
 ## Quality Checks
 
 - [ ] "Why AI?" is answered clearly (not "because we can")

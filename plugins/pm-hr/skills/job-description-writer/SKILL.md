@@ -68,6 +68,14 @@ Nice to have (3-4 items):
 - [ ] Inclusive language review completed
 - [ ] No years-of-experience requirements unless legally required
 
+## Anti-Patterns
+
+- [ ] Do not include years-of-experience requirements unless legally necessary — they exclude qualified candidates and may create legal risk
+- [ ] Do not list "nice to have" items in the requirements section — separate mandatory from desirable clearly
+- [ ] Do not use gendered or exclusionary language — run the inclusive language check before finalising
+- [ ] Do not write a responsibilities section with more than 8 items — prioritise the most important duties
+- [ ] Do not omit compensation range where legally required or culturally expected — hiding salary deters qualified candidates
+
 ## Example Trigger Phrases
 - "Write a job description for a [role]"
 - "Create an inclusive job posting for [role]"

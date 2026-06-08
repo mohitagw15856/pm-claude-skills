@@ -233,6 +233,14 @@ How we'll measure success:
 - [ ] Disclosure requirements are clearly stated (FTC / ASA compliance)
 - [ ] Important dates include a buffer for revisions
 
+## Anti-Patterns
+
+- [ ] Do not leave creative guidelines so restrictive that the influencer's authentic voice is lost — prescriptiveness kills performance
+- [ ] Do not omit the approval process — undefined approval workflows cause delays and missed publishing windows
+- [ ] Do not set performance metrics that the influencer cannot influence — views are a metric, algorithm reach is not
+- [ ] Do not skip the disclosure requirements section — FTC/ASA compliance is mandatory, not optional
+- [ ] Do not list deliverables without specifying format, dimensions, and platform specs
+
 ## Example Trigger Phrases
 
 - "Write an influencer brief for our product launch"

@@ -1,6 +1,6 @@
 ---
 name: design-critique
-description: "Give structured, constructive feedback on any design. Use when asked to critique a design, review a UI, give feedback on a Figma file or wireframe, assess a user flow, or evaluate a design against UX principles. Applies Jobs-to-be-Done, Gestalt principles, and usability heuristics to give actionable feedback."
+description: "Gives structured, constructive feedback on any design using UX frameworks. Use when asked to critique a design, review a UI, give feedback on a Figma file or wireframe, assess a user flow, or evaluate a design against UX principles. Applies Jobs-to-be-Done, Gestalt principles, and usability heuristics to give actionable feedback with prioritised issues and specific recommendations."
 ---
 
 # Design Critique Skill
@@ -120,6 +120,14 @@ Prioritised list of the 3 most impactful changes. Each should be actionable in t
 - [ ] Recommendations are specific and actionable
 - [ ] Priority levels (High/Medium/Low) reflect actual impact on user goal
 - [ ] Heuristic assessment only covers visible elements
+
+## Anti-Patterns
+
+- [ ] Do not lead with visual preference (e.g. "I don't like the colour") — every issue must reference a UX principle or user impact
+- [ ] Do not invent problems in the "What's Working" section — manufactured praise undermines the entire critique
+- [ ] Do not provide the same priority level (High/Medium/Low) to every issue — prioritisation requires genuine judgment about user impact
+- [ ] Do not skip the JTBD section for product screens — connecting feedback to the user's job-to-be-done is what separates UX critique from aesthetic opinion
+- [ ] Do not give recommendations that require a full redesign when the user is in high-fidelity — scope recommendations to the design stage
 
 ## Example Trigger Phrases
 

@@ -110,6 +110,14 @@ Format: "As a [user type], I want to [action] so that [benefit]"
 - [ ] Open questions are listed explicitly
 - [ ] Implementation plan distinguishes MVP from future phases
 
+## Anti-Patterns
+
+- [ ] Do not write requirements from the company's perspective — every requirement must trace back to a user need
+- [ ] Do not include vague requirements like "the system should be fast" — every requirement must be testable
+- [ ] Do not conflate MVP with future phases — be explicit about what is and is not in scope for the first release
+- [ ] Do not leave success metrics as percentages without baselines — specify the current state and the target
+- [ ] Do not skip open questions — unresolved assumptions are risks; surfacing them is the PM's job
+
 ## Example PRD Opening
 
 ```

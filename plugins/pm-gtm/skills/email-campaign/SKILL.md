@@ -70,6 +70,14 @@ For every email in the sequence, produce:
 - [ ] Tone is consistent across all emails
 - [ ] Strategic notes explain the intent of each email
 
+## Anti-Patterns
+
+- [ ] Do not include more than one primary CTA per email — competing calls to action reduce click-through by splitting attention
+- [ ] Do not open with "Hi, welcome to [product]" or any variation of a generic greeting — the opening line must earn attention immediately or recipients stop reading
+- [ ] Do not write preview text that repeats the subject line — preview text is a second chance to earn the open, not a repeat of the first chance
+- [ ] Do not write a sequence where each email restates the same value proposition — each email must advance the narrative or serve a distinct purpose in the buyer's journey
+- [ ] Do not assume all subscribers receive all emails — each email must stand alone for subscribers who missed earlier messages in the sequence
+
 ## Example Trigger Phrases
 
 - "Write a 3-email launch sequence for [product]"

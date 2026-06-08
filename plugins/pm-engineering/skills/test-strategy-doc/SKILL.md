@@ -122,6 +122,14 @@ Testing is complete when:
 - [ ] Each test type names a concrete tool (not "some testing framework")
 - [ ] Definition of Done is measurable (not "tests are done when QA is happy")
 
+## Anti-Patterns
+
+- [ ] Do not write a test strategy without a risk table that drives test priority — generic coverage targets are not a strategy
+- [ ] Do not leave the "out of scope" section blank — every test strategy must explicitly name what is not being tested and why
+- [ ] Do not specify test types without naming a concrete tool for each — "some testing framework" is not actionable
+- [ ] Do not define a Definition of Done that is not measurable — "QA is happy" is not a completion criterion
+- [ ] Do not create P0 risk areas without corresponding P0 test cases — risk rating must map to test coverage
+
 ## Usage Examples
 - "Write a test strategy for [feature]" + [paste spec or PRD]
 - "Create a test plan for [system]"

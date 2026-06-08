@@ -1,6 +1,6 @@
 ---
 name: figma-design-review
-description: "Run a structured PM design review against product requirements. Use when asked to review a Figma design, check a design against requirements, do a PM design review, or assess whether a design meets the product spec. Produces a requirements coverage check, UX concerns, open questions, and explicit approval status."
+description: "Runs a structured PM design review against product requirements. Use when asked to review a Figma design, check a design against requirements, or assess whether a design meets the product spec. Produces a requirements coverage check, UX concerns, open questions, and an explicit approval status — approved, approved with conditions, or not approved."
 ---
 
 # Figma Design Review Skill
@@ -59,6 +59,14 @@ Approved / Approved with changes (list) / Needs revision (focus area + next revi
 - [ ] Concerns are outcome-focused not aesthetic
 - [ ] Open questions have owners
 - [ ] Approval status is explicit
+
+## Anti-Patterns
+
+- [ ] Do not review a design without a list of requirements to check against — always ask for the PRD, design brief, or acceptance criteria first
+- [ ] Do not give a vague approval status — the decision must be explicitly "approved", "approved with conditions", or "not approved"
+- [ ] Do not conflate requirements gaps with UX concerns — track them separately so engineers and designers can act independently
+- [ ] Do not raise concerns without suggesting what information is needed to resolve them
+- [ ] Do not skip open questions — unresolved assumptions at review time become bugs after engineering handoff
 
 ## Example Trigger Phrases
 - "Review this Figma design against the requirements"

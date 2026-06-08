@@ -288,3 +288,11 @@ This log records every ring movement since the radar's first edition. Use it to 
 - [ ] Maintenance process includes: nomination channel, review cadence, who decides, and ring-change criteria
 - [ ] Technologies identified as "strategic bets" in the inputs are placed in Adopt (if proven) or Trial (if being rolled out)
 - [ ] Technologies identified for deprecation are in Hold with a rationale that references the replacement
+
+## Anti-Patterns
+
+- [ ] Do not place a technology in Adopt without evidence it is proven at the team's scale — aspirational placements mislead engineers
+- [ ] Do not add a blip without a written rationale paragraph — table rows without context are unusable
+- [ ] Do not create a Hold entry without specifying a concrete migration path or target technology
+- [ ] Do not skip the maintenance process — a radar with no process for updates becomes stale within two quarters
+- [ ] Do not omit ring definitions — engineers need to know what they should do in response to each ring, not just what the ring means

@@ -119,6 +119,14 @@ Hi [Investor names or "all"],
 - [ ] Total length is skimmable in 3–4 minutes
 - [ ] No spin or buzzwords
 
+## Anti-Patterns
+
+- [ ] Do not omit challenges or bad news — sanitised updates erode investor trust faster than bad results do
+- [ ] Do not bury the lead — use BLUF structure and put the most important news in the first paragraph
+- [ ] Do not send an update without a clear "Ask" section — investors who want to help need to know how
+- [ ] Do not use buzzwords or spin — investors see hundreds of updates and will see through vague positive language
+- [ ] Do not report metrics without a comparison baseline — numbers without context (vs. last period or target) are meaningless
+
 ## Example Trigger Phrases
 
 - "Write an investor update for [month/quarter]"
