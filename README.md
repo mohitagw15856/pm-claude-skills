@@ -21,6 +21,13 @@
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
 **🆕 Latest release (v17.0.0 — Agents, Commands & the npx CLI):** install into any tool with one cross-platform command — `npx pm-claude-skills add --agent <tool>`. Adds 4 Claude Code subagents, 6 slash commands, Cursor `.mdc` exports, a SkillCheck validator, and a skill scaffolder. See the [changelog](#-changelog).
+
+<!-- DEMO: replace web/docs-assets/playground.png below with web/docs-assets/playground-demo.gif
+     once recorded (see web/docs-assets/README.md for how). The link goes to the live app. -->
+### ▶ See it in action — [try the live Skill Playground](https://mohitagw15856.github.io/pm-claude-skills/)
+
+[![Skill Playground demo — pick a skill, fill the form, run it with your own Claude key](web/docs-assets/playground.png)](https://mohitagw15856.github.io/pm-claude-skills/)
+
 ---
 
 ## Contents
@@ -108,10 +115,12 @@ body as a system prompt — for those we ship ready-made [exports](#ready-to-use
 | **Claude Code** (CLI / desktop / web / IDE) | Native. Install via the plugin marketplace; Claude loads a skill automatically when your request matches its description. | ✅ Yes |
 | **Hermes Agent** (Nous Research) | Native — same open `SKILL.md` standard. Run `python3 scripts/sync-hermes-skills.py` to install into `~/.hermes/skills/`; Hermes auto-discovers them. | ✅ Yes |
 | **OpenAI Codex · OpenClaw** | Native `SKILL.md`. One-line install (see [below](#one-line-install-for-coding-agents)) or `./scripts/install.sh --agent codex`. | ✅ Yes |
-| **Cursor** | Generated `.mdc` rules. One-line install into `.cursor/rules/`, or copy from [`exports/cursor/`](exports/cursor/). | ⚙️ By description |
+| **Cursor** | Generated `.mdc` rules → `.cursor/rules/`. `npx pm-claude-skills add --agent cursor`. | ⚙️ By description |
+| **Windsurf** | Generated `.md` workspace rules → `.windsurf/rules/`. `npx pm-claude-skills add --agent windsurf`. | ⚙️ By description |
+| **Aider** | Generated conventions files you load with `aider --read`. `npx pm-claude-skills add --agent aider`. | ⚙️ `--read` |
+| **MCP clients** (Claude Desktop, Cline, …) | Run the [MCP server](mcp/) — the assistant searches & pulls skills on demand via `npx -y pm-claude-skills-mcp`. | ✅ On demand |
 | **Claude.ai & Claude API** | Upload a skill, or paste the body in as a system prompt / project instruction. | ⚙️ Manual |
-| **Other `SKILL.md`-aware agents** (Gemini CLI, Aider, Windsurf, …) | Point the agent at `skills/`, or use `./scripts/install.sh`. The frameworks are tool-agnostic; only discovery differs per tool. | ⚙️ Varies by tool |
-| **ChatGPT & Gemini** | Copy a ready-made export (below) into a Custom GPT or Gem's instructions. You keep the full framework and output format. | ❌ Paste per use |
+| **ChatGPT & Gemini** | Copy a ready-made [export](#ready-to-use-exports) into a Custom GPT or Gem's instructions. You keep the full framework and output format. | ❌ Paste per use |
 
 **What's verified vs. what varies:** the skill **bodies** — the frameworks, rubrics, and
 output templates that do the actual work — are model-agnostic and have been used across
@@ -127,7 +136,7 @@ maintained twice:
 
 - **ChatGPT** — copy any [`exports/chatgpt/<bundle>/<skill>/SYSTEM_PROMPT.md`](exports/chatgpt/) straight into a Custom GPT's instructions.
 - **Google Gemini** — copy any [`exports/gemini/<bundle>/<skill>/GEM_INSTRUCTIONS.md`](exports/gemini/) into a Gem's instructions.
-- **Cursor** — copy any [`exports/cursor/<bundle>/<skill>/<skill>.mdc`](exports/cursor/) into `.cursor/rules/` (or use the one-liner below).
+- **Cursor** (`.mdc`) · **Windsurf** (`.md`) · **Aider** (`.md`) — generated rule/conventions files in [`exports/cursor/`](exports/cursor/), [`exports/windsurf/`](exports/windsurf/), [`exports/aider/`](exports/aider/) (or use the installers below).
 
 ### One-command install for coding agents
 
@@ -135,9 +144,11 @@ maintained twice:
 
 ```bash
 npx pm-claude-skills add --agent claude     # skills + subagents + commands → ~/.claude/
-npx pm-claude-skills add --agent codex      # OpenAI Codex
+npx pm-claude-skills add --agent codex      # OpenAI Codex (or: hermes · openclaw)
 npx pm-claude-skills add --agent cursor     # .mdc rules → ./.cursor/rules
-npx pm-claude-skills list                   # claude · hermes · codex · openclaw · cursor
+npx pm-claude-skills add --agent windsurf   # .md rules → ./.windsurf/rules
+npx pm-claude-skills add --agent aider      # conventions → load with: aider --read
+npx pm-claude-skills list                   # all supported agents + default paths
 ```
 
 Add `--link` (symlink), `--target <path>`, or `--dry-run` to any `add`.
@@ -190,6 +201,22 @@ Install everything for Claude Code in one go (skills **+** subagents **+** comma
 ```
 
 Commands whose skill ships a Python helper (RICE, sprint capacity, customer health) run it to **compute** results, not estimate them.
+
+---
+
+## 🧩 MCP Server — Skills on Demand
+
+For MCP clients (Claude Desktop, Cline, …), there's a zero-dependency [**MCP server**](mcp/) so your assistant **searches and pulls skills on demand** instead of installing 172 files. It exposes three tools — `list_skills`, `search_skills`, `get_skill` — over stdio (no network, nothing leaves your machine).
+
+```json
+{
+  "mcpServers": {
+    "pm-claude-skills": { "command": "npx", "args": ["-y", "pm-claude-skills-mcp"] }
+  }
+}
+```
+
+Then ask: *"search the skills for customer churn, then apply the best one to my account."* Full setup in [`mcp/README.md`](mcp/).
 
 ---
 

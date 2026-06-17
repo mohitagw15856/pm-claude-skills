@@ -32,18 +32,21 @@ default_target() {
     codex)    echo "$HOME/.codex/skills" ;;
     openclaw) echo "$HOME/.openclaw/skills" ;;
     cursor)   echo "$PWD/.cursor/rules" ;;
+    windsurf) echo "$PWD/.windsurf/rules" ;;
+    aider)    echo "$PWD/.aider/skills" ;;
     *) return 1 ;;
   esac
 }
 
 list_agents() {
   echo "Supported agents and default targets:"
-  for a in claude hermes codex openclaw cursor; do
+  for a in claude hermes codex openclaw cursor windsurf aider; do
     printf "  %-9s %s\n" "$a" "$(default_target "$a")"
   done
   echo
   echo "Native SKILL.md agents: claude, hermes, codex, openclaw (install skill folders)."
-  echo "Cursor installs generated .mdc rules from exports/cursor/."
+  echo "Cursor (.mdc) / Windsurf (.md) install generated rule files; Aider installs"
+  echo "conventions you load with 'aider --read'."
   echo "Targets are sensible defaults — override with --target if your setup differs."
 }
 
@@ -80,18 +83,20 @@ count=0
 if [ "$DRYRUN" = 1 ]; then echo "[dry-run] Installing skills for '$AGENT' into $TARGET";
 else echo "Installing skills for '$AGENT' into $TARGET"; mkdir -p "$TARGET"; fi
 
-if [ "$AGENT" = "cursor" ]; then
-  # Install generated .mdc rules (flattened) into .cursor/rules/.
-  CURSOR_DIR="$REPO_DIR/exports/cursor"
-  if [ ! -d "$CURSOR_DIR" ]; then
-    echo "Error: $CURSOR_DIR missing. Run: node scripts/build-exports.mjs" >&2; exit 1
+if [ "$AGENT" = "cursor" ] || [ "$AGENT" = "windsurf" ] || [ "$AGENT" = "aider" ]; then
+  # Install generated rule/conventions files (flattened) into the target dir.
+  EXPORT_DIR="$REPO_DIR/exports/$AGENT"
+  EXT='*.md'; [ "$AGENT" = "cursor" ] && EXT='*.mdc'
+  if [ ! -d "$EXPORT_DIR" ]; then
+    echo "Error: $EXPORT_DIR missing. Run: node scripts/build-exports.mjs" >&2; exit 1
   fi
-  while IFS= read -r mdc; do
-    base="$(basename "$mdc")"
+  while IFS= read -r f; do
+    base="$(basename "$f")"
+    [ "$base" = "README.md" ] && continue   # skip the generated index
     if [ "$DRYRUN" = 1 ]; then echo "  would install $base -> $TARGET/$base";
-    else cp "$mdc" "$TARGET/$base"; fi
+    else cp "$f" "$TARGET/$base"; fi
     count=$((count + 1))
-  done < <(find "$CURSOR_DIR" -name '*.mdc' | sort)
+  done < <(find "$EXPORT_DIR" -name "$EXT" | sort)
 else
   # Native SKILL.md agents: place each skill folder.
   for skill in "$SKILLS_DIR"/*/; do
@@ -126,7 +131,9 @@ if [ "$DRYRUN" = 1 ]; then
 else
   echo "Installed $count item(s) for '$AGENT'."
   case "$AGENT" in
-    cursor) echo "Cursor will pick up the rules in $TARGET on its next session." ;;
+    cursor)   echo "Cursor will pick up the rules in $TARGET on its next session." ;;
+    windsurf) echo "Windsurf will pick up the rules in $TARGET on its next session." ;;
+    aider)    echo "Load any of them with:  aider --read $TARGET/<skill>.md" ;;
     *) echo "Restart $AGENT — it auto-discovers SKILL.md skills in $TARGET by their description." ;;
   esac
 fi

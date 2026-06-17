@@ -31,14 +31,17 @@
   },
   "author": "Mohit Aggarwal",
   "bin": {
-    "pm-claude-skills": "bin/cli.mjs"
+    "pm-claude-skills": "bin/cli.mjs",
+    "pm-claude-skills-mcp": "mcp/server.mjs"
   },
   "files": [
     "bin/",
+    "mcp/",
     "skills/",
     "agents/",
     "commands/",
-    "exports/"
+    "exports/",
+    "skill-tiers.json"
   ],
   "scripts": {
     "new-skill": "node scripts/new-skill.mjs",

@@ -10,6 +10,16 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 ## [Unreleased]
 
 ### Added
+- **MCP server** — `mcp/server.mjs`, a zero-dependency Model Context Protocol server
+  (stdio) exposing `list_skills`, `search_skills`, and `get_skill` so MCP clients (Claude
+  Desktop, Cline, …) pull skills on demand. Published as a second bin,
+  `npx pm-claude-skills-mcp`.
+- **Windsurf & Aider targets** — two more export platforms (`exports/windsurf/*.md`
+  workspace rules, `exports/aider/*.md` conventions) and install support in `install.sh`,
+  the `npx` CLI, and one-line `windsurf-install.sh` / `aider-install.sh`. The library now
+  exports to **5 platforms** (ChatGPT, Gemini, Cursor, Windsurf, Aider).
+- **Hero demo placement** — README "See it in action" block linking to the live Playground,
+  ready to swap a `playground-demo.gif` in (recording guide in `web/docs-assets/README.md`).
 - **Automated npm publishing** — `.github/workflows/npm-publish.yml` publishes the package
   to npm (with provenance) when a GitHub Release is published. Requires a one-time
   `NPM_TOKEN` repo secret; no local npm needed.

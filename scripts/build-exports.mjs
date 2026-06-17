@@ -60,6 +60,25 @@ const PLATFORMS = {
     render: ({ description, body }) =>
       `---\ndescription: ${JSON.stringify(description)}\nglobs:\nalwaysApply: false\n---\n\n${body.trim()}\n`,
   },
+  windsurf: {
+    label: 'Windsurf — workspace rule (.md)',
+    dir: 'exports/windsurf',
+    file: (s) => `${s.name}.md`,
+    groupByBundle: true,
+    // Windsurf reads `.windsurf/rules/*.md`. trigger:model_decision = the agent
+    // pulls the rule in when the description matches the task.
+    render: ({ description, body }) =>
+      `---\ntrigger: model_decision\ndescription: ${JSON.stringify(description)}\n---\n\n${body.trim()}\n`,
+  },
+  aider: {
+    label: 'Aider — conventions file (.md)',
+    dir: 'exports/aider',
+    file: (s) => `${s.name}.md`,
+    groupByBundle: true,
+    // Aider has no auto-discovery dir — you load a file into context with
+    // `aider --read <file>`. So this is the plain body, ready to --read.
+    render: ({ body }) => `${body.trim()}\n`,
+  },
 };
 
 // ── Helpers (shared shape with web/build-skills.mjs) ────────────────────────

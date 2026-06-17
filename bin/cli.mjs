@@ -24,12 +24,16 @@ const VERSION = (() => {
 })();
 
 const NATIVE = new Set(['claude', 'hermes', 'codex', 'openclaw']);
+// Rule-file agents install generated files from exports/<agent> (ext per agent).
+const RULEFILE = { cursor: '.mdc', windsurf: '.md', aider: '.md' };
 const defaultTarget = (agent) => ({
   claude: join(homedir(), '.claude', 'skills'),
   hermes: join(homedir(), '.hermes', 'skills'),
   codex: join(homedir(), '.codex', 'skills'),
   openclaw: join(homedir(), '.openclaw', 'skills'),
   cursor: join(process.cwd(), '.cursor', 'rules'),
+  windsurf: join(process.cwd(), '.windsurf', 'rules'),
+  aider: join(process.cwd(), '.aider', 'skills'),
 }[agent]);
 
 function parse(argv) {
@@ -46,12 +50,12 @@ function parse(argv) {
   return out;
 }
 
-function listMdc(dir) {
+function listFiles(dir, ext) {
   const out = [];
   for (const e of readdirSync(dir)) {
     const p = join(dir, e);
-    if (statSync(p).isDirectory()) out.push(...listMdc(p));
-    else if (p.endsWith('.mdc')) out.push(p);
+    if (statSync(p).isDirectory()) out.push(...listFiles(p, ext));
+    else if (p.endsWith(ext)) out.push(p);
   }
   return out;
 }
@@ -68,8 +72,8 @@ function placeDir(src, dest, { link, dryRun }) {
 
 function add(opts) {
   const agent = opts.agent;
-  if (!agent || !(NATIVE.has(agent) || agent === 'cursor')) {
-    console.error(`Error: --agent must be one of: claude, hermes, codex, openclaw, cursor.`);
+  if (!agent || !(NATIVE.has(agent) || agent in RULEFILE)) {
+    console.error(`Error: --agent must be one of: claude, hermes, codex, openclaw, cursor, windsurf, aider.`);
     process.exit(2);
   }
   const skillsDir = join(PKG_ROOT, 'skills');
@@ -80,13 +84,15 @@ function add(opts) {
   console.log(`${opts.dryRun ? '[dry-run] ' : ''}Installing for '${agent}' into ${target}`);
   if (!opts.dryRun) mkdirSync(target, { recursive: true });
 
-  if (agent === 'cursor') {
-    const cursorDir = join(PKG_ROOT, 'exports', 'cursor');
-    if (!existsSync(cursorDir)) { console.error(`Error: ${cursorDir} missing.`); process.exit(1); }
-    for (const mdc of listMdc(cursorDir).sort()) {
-      const dest = join(target, basename(mdc));
-      if (opts.dryRun) console.log(`  would install ${basename(mdc)} -> ${dest}`);
-      else copyFileSync(mdc, dest);
+  if (agent in RULEFILE) {
+    const ext = RULEFILE[agent];
+    const exportDir = join(PKG_ROOT, 'exports', agent);
+    if (!existsSync(exportDir)) { console.error(`Error: ${exportDir} missing.`); process.exit(1); }
+    for (const f of listFiles(exportDir, ext).sort()) {
+      if (basename(f) === 'README.md') continue;   // skip the generated index
+      const dest = join(target, basename(f));
+      if (opts.dryRun) console.log(`  would install ${basename(f)} -> ${dest}`);
+      else copyFileSync(f, dest);
       count++;
     }
   } else {
@@ -116,31 +122,36 @@ function add(opts) {
 
   console.log(`\n${opts.dryRun ? 'Would install' : 'Installed'} ${count} item(s) for '${agent}'.`);
   if (!opts.dryRun) {
-    console.log(agent === 'cursor'
-      ? `Cursor will pick up the rules in ${target} on its next session.`
-      : `Restart ${agent} — it auto-discovers SKILL.md skills in ${target} by their description.`);
+    const note = {
+      cursor: `Cursor will pick up the rules in ${target} on its next session.`,
+      windsurf: `Windsurf will pick up the rules in ${target} on its next session.`,
+      aider: `Load any of them with:  aider --read ${join(target, '<skill>.md')}`,
+    }[agent] || `Restart ${agent} — it auto-discovers SKILL.md skills in ${target} by their description.`;
+    console.log(note);
   }
 }
 
 function list() {
   console.log('Supported agents and default targets:\n');
-  for (const a of ['claude', 'hermes', 'codex', 'openclaw', 'cursor']) {
+  for (const a of ['claude', 'hermes', 'codex', 'openclaw', 'cursor', 'windsurf', 'aider']) {
     console.log(`  ${a.padEnd(9)} ${defaultTarget(a)}`);
   }
   console.log('\nNative SKILL.md agents: claude, hermes, codex, openclaw (install skill folders).');
-  console.log('Claude also gets subagents + slash commands. Cursor installs .mdc rules.');
+  console.log('Claude also gets subagents + slash commands. Cursor/Windsurf install rule files;');
+  console.log('Aider installs conventions you load with "aider --read".');
 }
 
 const HELP = `pm-claude-skills — install professional Agent Skills into any AI coding tool.
 
 Usage:
-  npx pm-claude-skills add --agent <claude|hermes|codex|openclaw|cursor> [--target <path>] [--link] [--dry-run]
+  npx pm-claude-skills add --agent <claude|hermes|codex|openclaw|cursor|windsurf|aider> [--target <path>] [--link] [--dry-run]
   npx pm-claude-skills list
   npx pm-claude-skills --version
 
 Examples:
   npx pm-claude-skills add --agent claude     # skills + subagents + commands
   npx pm-claude-skills add --agent cursor     # .mdc rules into ./.cursor/rules
+  npx pm-claude-skills add --agent windsurf   # .md rules into ./.windsurf/rules
   npx pm-claude-skills add --agent codex --link
 `;
 
