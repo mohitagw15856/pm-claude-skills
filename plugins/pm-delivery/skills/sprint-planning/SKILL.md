@@ -53,6 +53,22 @@ Availability factor: 0.7–0.85 depending on holidays/events
 Story points to commit = Historical velocity × Availability factor
 ```
 
+## Programmatic Helper
+
+This skill ships with a stdlib-only Python script that computes capacity instead of estimating it by hand. Use it whenever the team's numbers are known — it applies the availability and 80% commit-ratio rules consistently.
+
+```bash
+# Quick estimate from flags
+python3 scripts/capacity_calculator.py --team 5 --days 10 --velocity 30 --availability 0.8 --carryover 5
+
+# Detailed estimate from per-member availability (JSON via stdin or --input file.json)
+echo '{"sprint_days":10,"historical_velocity":40,"carryover_points":8,
+       "members":[{"name":"Ada","available_days":10},{"name":"Linus","available_days":7}]}' \
+  | python3 scripts/capacity_calculator.py --input -
+```
+
+The script returns available focus hours, a velocity figure adjusted for real availability, the **recommended commitment** (capped at 80% of velocity), and the remaining **capacity for new work** after carry-overs. Run it first, then build the sprint backlog to fit the recommended number. Add `--json` to pipe the result into other tooling.
+
 ## Output Format
 
 ### Sprint [N] — [Start Date] to [End Date]

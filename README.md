@@ -18,12 +18,15 @@ A community-built library of Claude Skills for professionals across every field 
 ## Contents
 
 - [🚀 Quick Install](#-quick-install-2-minutes)
+- [🔌 Works With — Cross-Tool Compatibility](#-works-with--cross-tool-compatibility)
 - [🌐 Skill Playground — try any skill in your browser](#-skill-playground--try-any-skill-in-your-browser)
 - [📦 Plugin Directory](#-plugin-directory)
 - [🤖 Building Blocks for Agent Templates](#-building-blocks-for-agent-templates)
+- [🏷️ Skill Tiers — start with the strongest](#️-skill-tiers--start-with-the-strongest)
 - [🗂️ All 167 Skills](#️-all-167-skills)
 - [📋 Changelog](#-changelog)
 - [🤝 Contributing](#-contributing--add-your-skill)
+- [🔗 Related Projects](#-related-projects)
 
 ---
 
@@ -71,6 +74,31 @@ Or clone and symlink for auto-updates:
 git clone https://github.com/mohitagw15856/pm-claude-skills.git ~/pm-claude-skills
 mkdir -p ~/.claude/skills
 ln -s ~/pm-claude-skills/skills/* ~/.claude/skills/
+
+---
+
+## 🔌 Works With — Cross-Tool Compatibility
+
+These skills were built for Claude Code, but they aren't locked to it. Each `SKILL.md` is
+two portable parts: a small **frontmatter** block (`name` + `description`) and a
+**markdown body** that is just a well-structured set of instructions and output templates.
+The body is plain English — so it works anywhere a capable model reads instructions.
+
+| Platform | How it works | Auto-trigger? |
+|---|---|---|
+| **Claude Code** (CLI / desktop / web / IDE) | Native. Install via the plugin marketplace; Claude loads a skill automatically when your request matches its description. | ✅ Yes |
+| **Claude.ai & Claude API** | Upload a skill, or paste the body in as a system prompt / project instruction. | ⚙️ Manual |
+| **Other coding agents that read the `SKILL.md` format** (e.g. Codex, Gemini CLI, Cursor) | Point the agent at the skill folder, or paste the body. The frameworks are tool-agnostic; only the auto-discovery mechanism differs per tool. | ⚙️ Varies by tool |
+| **General chat LLMs** (ChatGPT, Gemini, Copilot, etc.) | Copy the body of any `SKILL.md` into a custom instruction / system prompt / custom GPT. You keep the full framework and output format. | ❌ Paste per use |
+
+**What's verified vs. what varies:** the skill **bodies** — the frameworks, rubrics, and
+output templates that do the actual work — are model-agnostic and have been used across
+Claude and other chat LLMs. What's **Claude Code-specific** is the convenience layer:
+plugin install, automatic skill discovery from the `description`, and the helper-script
+invocation flow. On other tools you copy the body in manually and lose only the
+auto-triggering, not the substance.
+
+> Prefer ChatGPT? There's also a [companion Custom GPT library](#-companion-repository--chatgpt-custom-gpts) built from the same frameworks.
 
 ---
 
@@ -224,6 +252,8 @@ More templates will follow. If you want to contribute one, see the [template con
 ---
 
 ## 📋 Changelog
+
+The highlights are below. For the structured, [Keep a Changelog](https://keepachangelog.com/)-format history (including unreleased changes), see **[CHANGELOG.md](CHANGELOG.md)**.
 
 <details>
 <summary><strong>Release history — v6.0.0 → v14.0.0</strong> (click to expand)</summary>
@@ -395,6 +425,21 @@ This repo was built alongside a published article series. Read the full story:
 | Part 14 | I Rebuilt All 93 Skills and Added 7 More: What 100 Skills Taught Me About What Makes a Great Skill | [Read →](https://medium.com/product-powerhouse/a-pull-request-made-me-rebuild-all-93-of-my-claude-skills-then-i-added-7-more-16d5fe3e7f85) |
 | Part 15 | I’m a Product Manager. I Just Shipped 6 Engineering Skills to My Open-Source Claude Library. | [Read →](https://medium.com/product-powerhouse/im-a-product-manager-i-just-shipped-6-engineering-skills-to-my-open-source-claude-library-8745aaa2ecf9) |
 | Part 16 | Anthropic Just Released 10 Agent Templates. Here’s the First One I Built Using My 106 Skills. | [Read →](https://medium.com/product-powerhouse/anthropic-just-released-10-agent-templates-heres-the-first-one-i-built-using-my-106-skills-a6708f9bd3ea) |
+
+---
+
+## 🏷️ Skill Tiers — Start With the Strongest
+
+A 170+ skill library doesn't have 170 equally-mature skills, and pretending otherwise
+wastes your time. Skills are tiered honestly so you can start with the best work:
+
+- 🟢 **Production-Ready (46)** — battle-tested, stable output, used in real work. Includes the three skills with computed Python helpers (sprint planning, RICE, customer health). **Start here.**
+- 🔵 **Stable** — solid, reliable, well-structured; the default for most of the library.
+- 🟡 **Experimental** — newer or dependent on an external tool/API/scrape (Gemini, Gmail, browser automation, social scraping). Useful, but more setup and more moving parts.
+
+**👉 Full breakdown: [TIERS.md](TIERS.md)** — every Production-Ready and Experimental skill listed by name.
+
+If you're new, install `pm-essentials` and try a couple of Production-Ready skills before going wide.
 
 ---
 
@@ -773,6 +818,8 @@ description: "One sentence. Use when [trigger condition]. Produces [output descr
 - Produces consistent, structured output
 - Works without needing extensive setup or context
 
+**Before you submit:** read the **[Skill Authoring Standard](SKILL-AUTHORING-STANDARD.md)** — it documents the exact section structure, frontmatter rules, and quality bar every skill in this library follows (including optional stdlib-only helper scripts).
+
 **Skills wishlist** (most requested — up for grabs):
 
 | Skill | Profession | Use Case |
@@ -856,6 +903,31 @@ If you use ChatGPT instead of Claude Code, there's a companion repo with the sam
 **[professional-gpt-library](https://github.com/mohitagw15856/professional-gpt-library)** — 10 starter GPTs across 8 professions, MIT licence.
 
 Read the full breakdown: [Part 12 — I Built the Same Skills Library for ChatGPT](https://medium.com/product-powerhouse/i-built-the-same-skills-library-for-chatgpt-heres-what-s-different-a9305f9c20b9)
+
+---
+
+## 🔗 Related Projects
+
+Claude Skills is a fast-growing open ecosystem. If this library doesn't have what you
+need, these community projects are worth a look — and if you maintain one of the lists
+below, a reciprocal link is always welcome. 🙌
+
+**Other skill libraries**
+
+- **[alirezarezvani/claude-skills](https://github.com/alirezarezvani/claude-skills)** — a large engineering-leaning library (300+ skills, agents, and commands) with explicit multi-tool support across Claude Code, Codex, Gemini CLI, Cursor, and more.
+
+**Curated "awesome" lists** (great for discovery)
+
+- **[hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code)** — the broad list of skills, hooks, slash-commands, and plugins for Claude Code.
+- **[travisvn/awesome-claude-skills](https://github.com/travisvn/awesome-claude-skills)** — curated Claude Skills, resources, and tools.
+- **[karanb192/awesome-claude-skills](https://github.com/karanb192/awesome-claude-skills)** — verified skills for Claude Code, Claude.ai, and the API.
+- **[ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)** — skills and tools for customizing Claude workflows.
+
+**From this author**
+
+- **[professional-gpt-library](https://github.com/mohitagw15856/professional-gpt-library)** — the same frameworks rebuilt as ChatGPT Custom GPTs.
+
+> Maintain a Claude Skills project and want to be listed here? [Open a PR](../../pulls) or an [issue](../../issues).
 
 ---
 

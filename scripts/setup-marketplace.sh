@@ -55,6 +55,7 @@ cp skills/feature-prioritisation/SKILL.md    plugins/pm-planning/skills/feature-
 cp skills/roadmap-presentation/SKILL.md      plugins/pm-planning/skills/roadmap-presentation/SKILL.md
 cp skills/pricing-strategy/SKILL.md          plugins/pm-planning/skills/pricing-strategy/SKILL.md
 cp skills/rice-prioritisation/SKILL.md       plugins/pm-planning/skills/rice-prioritisation/SKILL.md
+cp -r skills/rice-prioritisation/scripts     plugins/pm-planning/skills/rice-prioritisation/ 2>/dev/null || true
 cp skills/roadmap-narrative/SKILL.md         plugins/pm-planning/skills/roadmap-narrative/SKILL.md
 cp skills/rice-impact-matrix/SKILL.md        plugins/pm-planning/skills/rice-impact-matrix/SKILL.md
 
@@ -73,6 +74,7 @@ mkdir -p plugins/pm-delivery/skills/sprint-brief
 mkdir -p plugins/pm-delivery/skills/retro-analysis
 
 cp skills/sprint-planning/SKILL.md           plugins/pm-delivery/skills/sprint-planning/SKILL.md
+cp -r skills/sprint-planning/scripts         plugins/pm-delivery/skills/sprint-planning/ 2>/dev/null || true
 cp skills/technical-spec-template/SKILL.md   plugins/pm-delivery/skills/technical-spec-template/SKILL.md
 cp skills/ab-test-planner/SKILL.md           plugins/pm-delivery/skills/ab-test-planner/SKILL.md
 cp skills/go-to-market-planner/SKILL.md      plugins/pm-delivery/skills/go-to-market-planner/SKILL.md
