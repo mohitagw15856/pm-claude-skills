@@ -9,6 +9,10 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+_Nothing yet._
+
+## [18.0.0] — Windsurf, Aider & an MCP Server — 2026-06-17
+
 ### Added
 - **MCP server** — `mcp/server.mjs`, a zero-dependency Model Context Protocol server
   (stdio) exposing `list_skills`, `search_skills`, and `get_skill` so MCP clients (Claude
@@ -175,7 +179,8 @@ Earlier releases (v1.0.0 – v5.0.0) predate this changelog. See the
 [article series](README.md#-the-article-series) for the full history of how the
 library grew from the first PM toolkit to 100+ skills.
 
-[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v17.0.0...HEAD
+[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v18.0.0...HEAD
+[18.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v17.0.0...v18.0.0
 [17.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v16.0.0...v17.0.0
 [16.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v15.0.0...v16.0.0
 [15.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v14.0.0...v15.0.0
