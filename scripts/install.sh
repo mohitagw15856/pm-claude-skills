@@ -100,6 +100,24 @@ else
     place "${skill%/}" "$TARGET/$name"
     count=$((count + 1))
   done
+
+  # Claude Code also gets subagents and slash commands (siblings of skills/).
+  if [ "$AGENT" = "claude" ]; then
+    claude_root="$(dirname "$TARGET")"   # ~/.claude
+    for kind in agents commands; do
+      src="$REPO_DIR/$kind"
+      [ -d "$src" ] || continue
+      dest="$claude_root/$kind"
+      [ "$DRYRUN" = 1 ] || mkdir -p "$dest"
+      for f in "$src"/*.md; do
+        base="$(basename "$f")"
+        [ "$base" = "README.md" ] && continue
+        if [ "$DRYRUN" = 1 ]; then echo "  would install $kind/$base -> $dest/$base";
+        else cp "$f" "$dest/$base"; fi
+        count=$((count + 1))
+      done
+    done
+  fi
 fi
 
 echo

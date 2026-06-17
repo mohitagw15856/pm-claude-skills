@@ -1,8 +1,12 @@
-# 🧠 PM Skills — 167 Professional Skills for Claude, ChatGPT, Gemini & Hermes
+# 🧠 PM Skills — 167 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
+
+> Open-source **Agent Skills** (`SKILL.md`) + subagents + slash commands for every profession — one source, every AI coding tool.
 
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
 [![Skills](https://img.shields.io/badge/skills-167-blue)](https://github.com/mohitagw15856/pm-claude-skills)
-[![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
+[![Subagents](https://img.shields.io/badge/subagents-4-blueviolet)](agents/)
+[![Commands](https://img.shields.io/badge/slash%20commands-6-blueviolet)](commands/)
+[![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Cursor%20%7C%20Codex%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
 [![SkillCheck](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skillcheck.yml?branch=main&label=SkillCheck)](.github/workflows/skillcheck.yml)
 [![Version](https://img.shields.io/badge/version-16.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
 [![Install](https://img.shields.io/badge/Install%20in%20Claude%20Code-2%20minutes-orange)](https://github.com/mohitagw15856/pm-claude-skills#-quick-install-2-minutes)
@@ -21,6 +25,7 @@ A community-built library of professional skills for every field — product man
 
 - [🚀 Quick Install](#-quick-install-2-minutes)
 - [🔌 Works With — Cross-Tool Compatibility](#-works-with--cross-tool-compatibility)
+- [🤖 Subagents & Slash Commands](#-subagents--slash-commands)
 - [🌐 Skill Playground — try any skill in your browser](#-skill-playground--try-any-skill-in-your-browser)
 - [📦 Plugin Directory](#-plugin-directory)
 - [🤖 Building Blocks for Agent Templates](#-building-blocks-for-agent-templates)
@@ -148,6 +153,33 @@ node scripts/build-exports.mjs --check    # CI: fail if exports are stale
 ```
 
 > Prefer a hand-curated ChatGPT collection? There's also a [companion Custom GPT library](#-companion-repository--chatgpt-custom-gpts) built from the same frameworks.
+
+---
+
+## 🤖 Subagents & Slash Commands
+
+It's not just skills. The library also ships **Claude Code subagents** and **slash commands** built on top of the strongest skills, so common workflows are one delegation or one command away.
+
+**Subagents** ([`agents/`](agents/)) — focused personas Claude delegates to automatically by description:
+
+| Agent | Use it for |
+|---|---|
+| [`pm-partner`](agents/pm-partner.md) | PRDs, prioritisation, stakeholder updates, exec summaries |
+| [`sprint-master`](agents/sprint-master.md) | Sprint planning, retros, velocity, user stories |
+| [`cs-guardian`](agents/cs-guardian.md) | Account health, churn, renewals, escalations, QBRs |
+| [`launch-captain`](agents/launch-captain.md) | Positioning, GTM, launch checklists, competitor teardowns |
+
+**Slash commands** ([`commands/`](commands/)) — run a skill on whatever you pass:
+
+`/prd` · `/rice` · `/sprint-plan` · `/health-scorecard` · `/retro` · `/exec-summary`
+
+Install everything for Claude Code in one go (skills **+** subagents **+** commands):
+
+```bash
+./scripts/install.sh --agent claude       # ~/.claude/{skills,agents,commands}
+```
+
+Commands whose skill ships a Python helper (RICE, sprint capacity, customer health) run it to **compute** results, not estimate them.
 
 ---
 
@@ -861,9 +893,12 @@ This is an open-source community library. If you've built a skill that saves you
 **How to contribute:**
 
 1. Fork this repo
-2. Create a new folder: `skills/your-skill-name/`
-3. Add a `SKILL.md` file following the template below
+2. Scaffold a skill that already passes validation: `npm run new-skill -- --name your-skill-name`
+   (or copy the template below into `skills/your-skill-name/SKILL.md`)
+3. Fill in the sections, then check it: `npm run skillcheck`
 4. Raise a pull request with a short description of what the skill does and why you built it
+
+> CI runs **SkillCheck** on every PR — `node scripts/skillcheck.mjs` validates structure and must pass.
 
 **SKILL.md template:**
 ---
@@ -1041,6 +1076,10 @@ Stars unlock the next wave of skills. Here's the roadmap:
 **[⭐ Star this repo to unlock the next milestone →](https://github.com/mohitagw15856/pm-claude-skills)**
 
 Want a specific skill built? [Vote or request in SKILL_REQUEST.md](SKILL_REQUEST.md).
+
+### 📈 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mohitagw15856/pm-claude-skills&type=Date)](https://star-history.com/#mohitagw15856/pm-claude-skills&Date)
 
 ---
 

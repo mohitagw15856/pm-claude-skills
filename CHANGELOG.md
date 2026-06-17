@@ -10,6 +10,17 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 ## [Unreleased]
 
 ### Added
+- **Subagents & slash commands** — the library now ships content beyond skills:
+  4 Claude Code subagents in [`agents/`](agents/) (`pm-partner`, `sprint-master`,
+  `cs-guardian`, `launch-captain`) and 6 slash commands in [`commands/`](commands/)
+  (`/prd`, `/rice`, `/sprint-plan`, `/health-scorecard`, `/retro`, `/exec-summary`).
+  `install.sh --agent claude` now installs skills **+** agents **+** commands.
+- **Skill scaffolding generator** — `scripts/new-skill.mjs` (`npm run new-skill`) creates a
+  `SKILL.md` that already passes SkillCheck, lowering the barrier to contributing.
+- **`package.json`** — `npm run` entry points (`new-skill`, `skillcheck`, `build:exports`,
+  `build:web`, `check`) so the repo reads as a real project.
+- **README discoverability pass** — keyword-rich H1 (Agent Skills for Claude, ChatGPT,
+  Gemini, Cursor, Codex & Hermes), subagent/command count badges, and a Star History chart.
 - **SkillCheck validator** — `scripts/skillcheck.mjs` validates every `SKILL.md` against
   the authoring standard (frontmatter, name/folder match, trigger + produces clauses,
   required headings, tier referential integrity). Errors fail CI; `--strict` also fails on

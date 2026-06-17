@@ -1,0 +1,23 @@
+{
+  "name": "pm-claude-skills",
+  "version": "16.0.0",
+  "private": true,
+  "type": "module",
+  "description": "167 professional agent skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes — plus subagents, slash commands, and a multi-platform export pipeline.",
+  "license": "MIT",
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mohitagw15856/pm-claude-skills.git"
+  },
+  "scripts": {
+    "new-skill": "node scripts/new-skill.mjs",
+    "skillcheck": "node scripts/skillcheck.mjs",
+    "build:exports": "node scripts/build-exports.mjs",
+    "build:web": "node web/build-skills.mjs",
+    "check": "node scripts/skillcheck.mjs && node scripts/build-exports.mjs --check"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
