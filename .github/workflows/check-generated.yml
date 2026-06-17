@@ -1,0 +1,43 @@
+name: Check generated artifacts
+
+# Skills are the single source of truth. The web index (web/skills.json) and the
+# multi-platform exports (exports/) are generated from skills/*/SKILL.md. This
+# job fails if either is out of date, so a skill edit can't ship without its
+# regenerated artifacts.
+
+on:
+  pull_request:
+    paths:
+      - 'skills/**'
+      - 'plugins/**'
+      - 'web/build-skills.mjs'
+      - 'scripts/build-exports.mjs'
+      - 'exports/**'
+      - 'web/skills.json'
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**'
+      - 'scripts/build-exports.mjs'
+      - 'exports/**'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Verify multi-platform exports are up to date
+        run: node scripts/build-exports.mjs --check
+
+      - name: Verify web/skills.json is up to date
+        run: |
+          node web/build-skills.mjs
+          git diff --exit-code -- web/skills.json \
+            || (echo "::error::web/skills.json is stale — run 'node web/build-skills.mjs' and commit." && exit 1)

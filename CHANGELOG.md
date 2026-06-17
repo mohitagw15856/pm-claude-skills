@@ -10,6 +10,12 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 ## [Unreleased]
 
 ### Added
+- **Multi-platform export generator.** `scripts/build-exports.mjs` renders every skill
+  into platform-ready files under `exports/` from a single source of truth (the
+  `SKILL.md` body), so content is never maintained twice. Ships ChatGPT
+  (`exports/chatgpt/<bundle>/<skill>/SYSTEM_PROMPT.md`) and a `PLATFORMS` registry that
+  makes adding Gemini/Cursor/etc. a few lines. Includes a `--check` mode and a
+  `check-generated` CI workflow that fails if exports or `web/skills.json` drift.
 - **Programmatic helpers (stdlib Python) for three flagship skills.** Each runs with
   zero dependencies and computes part of the work instead of estimating by hand:
   - `sprint-planning/scripts/capacity_calculator.py` — recommended sprint commitment
