@@ -9,7 +9,17 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+_Nothing yet._
+
+## [16.0.0] — Multi-Platform — 2026-06-17
+
+The library stops being Claude-only and becomes a portable, single-source-of-truth project.
+
 ### Added
+- **Hermes Agent support (native).** `scripts/sync-hermes-skills.py` installs the
+  canonical `skills/` into `~/.hermes/skills/` (copy or `--link` symlink). Hermes reads
+  the same open `SKILL.md` standard, so there is no format conversion — it auto-discovers
+  skills by their `description`, exactly like Claude Code.
 - **Multi-platform export generator.** `scripts/build-exports.mjs` renders every skill
   into platform-ready files under `exports/` from a single source of truth (the
   `SKILL.md` body), so content is never maintained twice. Ships **ChatGPT**
@@ -32,21 +42,37 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
   **Production-Ready**, **Stable**, or **Experimental** so new users start with the
   strongest work.
 - **Cross-tool compatibility** — README now documents which platforms the skills work
-  on (Claude Code natively; the SKILL.md bodies port to other agents and chat LLMs).
+  on (Claude Code and Hermes natively; the SKILL.md bodies port to other agents and chat LLMs).
 - **Skill Playground upgrades** — the hosted web app gains a **tier filter** and per-tile
   tier badges, plus a *"Use this skill in another tool"* panel that copies the
   instructions formatted for ChatGPT, Gemini, or raw. Tier data comes from a single
   machine-readable source, `skill-tiers.json`.
+- **Related Projects** — README section linking to other community Claude Skills
+  libraries and the `awesome-claude-skills` / `awesome-claude-code` lists.
+
+### Changed
+- **Multi-platform rebrand.** README title, tagline, intro, and badges now position the
+  library for Claude, ChatGPT, Gemini, and Hermes — not Claude alone. (The repository
+  name, marketplace ID, and install commands are unchanged.)
+- `SECURITY.md` supported-versions table updated to the v16 release line.
 
 ### Fixed
 - **`web/skills.json` is now deterministic.** Removed the wall-clock `generatedAt` field
   (it was unused by the UI and made every rebuild differ), so the new `check-generated`
   CI step can reliably verify the index is in sync with the source skills.
-- **Related Projects** — README section linking to other community Claude Skills
-  libraries and the `awesome-claude-skills` / `awesome-claude-code` lists.
 
-### Changed
-- `SECURITY.md` supported-versions table updated to the current release line.
+## [15.0.0] — Skill Playground — 2026-06-09
+
+### Added
+- **Skill Playground** — a zero-backend browser app (`web/`) to run any skill with your own
+  Claude API key. Tile gallery with search + bundle filter, click-to-run forms generated from
+  each skill's `Required Inputs`, live streaming output with copy / download-as-`.md`, and a
+  model picker. `web/build-skills.mjs` generates `skills.json`; a GitHub Actions workflow
+  auto-deploys to GitHub Pages on every push to `main`.
+
+### Fixed
+- Mid-stream API errors now surface to the user instead of being silently swallowed.
+- `max_tokens` raised to 8192 to avoid truncating long outputs.
 
 ## [14.0.0] — Writers & Content Creators + 7 Community Skills
 
@@ -105,5 +131,7 @@ Earlier releases (v1.0.0 – v5.0.0) predate this changelog. See the
 [article series](README.md#-the-article-series) for the full history of how the
 library grew from the first PM toolkit to 100+ skills.
 
-[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v14.0.0...HEAD
+[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v16.0.0...HEAD
+[16.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v15.0.0...v16.0.0
+[15.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v14.0.0...v15.0.0
 [14.0.0]: https://github.com/mohitagw15856/pm-claude-skills/releases

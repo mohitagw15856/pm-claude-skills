@@ -1,18 +1,19 @@
-# 🧠 PM Claude Skills — 167 Skills for Every Profession
+# 🧠 PM Skills — 167 Professional Skills for Claude, ChatGPT, Gemini & Hermes
 
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
 [![Skills](https://img.shields.io/badge/skills-167-blue)](https://github.com/mohitagw15856/pm-claude-skills)
-[![Version](https://img.shields.io/badge/version-14.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
+[![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
+[![Version](https://img.shields.io/badge/version-16.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
 [![Install](https://img.shields.io/badge/Install%20in%20Claude%20Code-2%20minutes-orange)](https://github.com/mohitagw15856/pm-claude-skills#-quick-install-2-minutes)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4)](https://github.com/sponsors/mohitagw15856)
 
 > **PM stands for Professional, not just Product Management.**
-> 167 Claude Skills + 4 agent templates across 26 bundles covering 18 professions. Built by a PM, used by everyone.
+> 167 professional skills + 4 agent templates across 26 bundles covering 18 professions. Built for Claude Code — and now portable to ChatGPT, Gemini, and Hermes Agent. Built by a PM, used by everyone.
 
-A community-built library of Claude Skills for professionals across every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured SKILL.md file that teaches Claude how to produce professional-grade outputs for your specific workflows.
+A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest release (v14.0.0):** 12 new community-inspired skills across 4 bundles — a brand new Writers & Content Creators profession (Instagram downloader, AEO optimizer, thumbnail creator, Substack scraper, notes humanizer), plus decision-making, productivity, and Claude Code power tools.
+**🆕 Latest release (v16.0.0 — Multi-Platform):** the library goes cross-tool. A single-source export generator produces ready-to-use ChatGPT and Gemini prompts from every skill, native Hermes Agent install support, three stdlib Python helper scripts, explicit skill tiers, and an upgraded Skill Playground. See the [changelog](#-changelog).
 ---
 
 ## Contents
@@ -84,19 +85,23 @@ two portable parts: a small **frontmatter** block (`name` + `description`) and a
 **markdown body** that is just a well-structured set of instructions and output templates.
 The body is plain English — so it works anywhere a capable model reads instructions.
 
+There are two kinds of support. **Native `SKILL.md` agents** read the file as-is and
+auto-discover skills from the `description` frontmatter. **Other tools** take the markdown
+body as a system prompt — for those we ship ready-made [exports](#ready-to-use-exports).
+
 | Platform | How it works | Auto-trigger? |
 |---|---|---|
 | **Claude Code** (CLI / desktop / web / IDE) | Native. Install via the plugin marketplace; Claude loads a skill automatically when your request matches its description. | ✅ Yes |
+| **Hermes Agent** (Nous Research) | Native — same open `SKILL.md` standard. Run `python3 scripts/sync-hermes-skills.py` to install into `~/.hermes/skills/`; Hermes auto-discovers them. | ✅ Yes |
 | **Claude.ai & Claude API** | Upload a skill, or paste the body in as a system prompt / project instruction. | ⚙️ Manual |
-| **Other coding agents that read the `SKILL.md` format** (e.g. Codex, Gemini CLI, Cursor) | Point the agent at the skill folder, or paste the body. The frameworks are tool-agnostic; only the auto-discovery mechanism differs per tool. | ⚙️ Varies by tool |
-| **General chat LLMs** (ChatGPT, Gemini, Copilot, etc.) | Copy the body of any `SKILL.md` into a custom instruction / system prompt / custom GPT. You keep the full framework and output format. | ❌ Paste per use |
+| **Other coding agents that read the `SKILL.md` format** (e.g. Codex, Gemini CLI, Cursor) | Point the agent at the `skills/` folder, or paste the body. The frameworks are tool-agnostic; only the auto-discovery mechanism differs per tool. | ⚙️ Varies by tool |
+| **ChatGPT & Gemini** | Copy a ready-made export (below) into a Custom GPT or Gem's instructions. You keep the full framework and output format. | ❌ Paste per use |
 
 **What's verified vs. what varies:** the skill **bodies** — the frameworks, rubrics, and
 output templates that do the actual work — are model-agnostic and have been used across
-Claude and other chat LLMs. What's **Claude Code-specific** is the convenience layer:
-plugin install, automatic skill discovery from the `description`, and the helper-script
-invocation flow. On other tools you copy the body in manually and lose only the
-auto-triggering, not the substance.
+Claude and other chat LLMs. Native `SKILL.md` agents (Claude Code, Hermes) also get the
+convenience layer: automatic skill discovery from the `description`. On chat LLMs you paste
+the body in manually and lose only the auto-triggering, not the substance.
 
 ### Ready-to-use exports
 
@@ -107,8 +112,15 @@ maintained twice:
 - **ChatGPT** — copy any [`exports/chatgpt/<bundle>/<skill>/SYSTEM_PROMPT.md`](exports/chatgpt/) straight into a Custom GPT's instructions.
 - **Google Gemini** — copy any [`exports/gemini/<bundle>/<skill>/GEM_INSTRUCTIONS.md`](exports/gemini/) into a Gem's instructions.
 
-The skill body in `skills/<name>/SKILL.md` is the single source of truth. Regenerate (or
-add a new platform — it's a few lines in the `PLATFORMS` registry) with:
+Native `SKILL.md` agents don't need exports — install the skills directly:
+
+```bash
+# Hermes Agent (Nous Research) — installs skills/ into ~/.hermes/skills/
+python3 scripts/sync-hermes-skills.py            # copy (use --link to symlink, --dry-run to preview)
+```
+
+The skill body in `skills/<name>/SKILL.md` is the single source of truth. Regenerate the
+chat-LLM exports (or add a new platform — it's a few lines in the `PLATFORMS` registry) with:
 
 ```bash
 node scripts/build-exports.mjs            # regenerate all platform exports
@@ -270,10 +282,25 @@ More templates will follow. If you want to contribute one, see the [template con
 
 ## 📋 Changelog
 
-The highlights are below. For the structured, [Keep a Changelog](https://keepachangelog.com/)-format history (including unreleased changes), see **[CHANGELOG.md](CHANGELOG.md)**.
+The highlights are below. For the structured, [Keep a Changelog](https://keepachangelog.com/)-format history, see **[CHANGELOG.md](CHANGELOG.md)**.
+
+### 🆕 What's New in v16.0.0 — Multi-Platform
+
+The library stops being Claude-only and becomes a portable, single-source-of-truth project:
+
+- **Runs on more platforms.** Native install for **Hermes Agent** (same open `SKILL.md` standard) via `scripts/sync-hermes-skills.py`, plus ready-to-paste **ChatGPT** and **Gemini** exports generated from every skill.
+- **One source, many targets.** `scripts/build-exports.mjs` renders per-platform files from each `SKILL.md` body — nothing is maintained twice — with a `PLATFORMS` registry that makes adding a tool a few lines, and a CI guard that fails on drift.
+- **Three stdlib Python helpers** for flagship skills (sprint capacity, RICE scoring, customer-health scoring).
+- **Explicit skill tiers** (`TIERS.md` + `skill-tiers.json`): 46 Production-Ready, a curated Experimental set, Stable as default — surfaced in the README and the playground.
+- **Upgraded Skill Playground**: tier filter + badges and a "use this skill in another tool" copy panel.
+- **Repo hygiene**: `CHANGELOG.md`, `SKILL-AUTHORING-STANDARD.md`, refreshed `SECURITY.md`, `.gitignore`, and a Related Projects section.
 
 <details>
-<summary><strong>Release history — v6.0.0 → v14.0.0</strong> (click to expand)</summary>
+<summary><strong>Release history — v6.0.0 → v15.0.0</strong> (click to expand)</summary>
+
+### 🆕 What's New in v15.0.0 — Skill Playground (browser UI) 🌐
+
+Run any skill **without installing anything** — a zero-backend web app that executes skills in your browser with your own Claude API key. Tile gallery with search and bundle filter, click-to-run forms auto-generated from each skill's inputs, live streaming output with copy / download, and an auto-deploy to GitHub Pages on every push to `main`. **▶ Live: [mohitagw15856.github.io/pm-claude-skills](https://mohitagw15856.github.io/pm-claude-skills/)**
 
 ### 🆕 What's New in v14.0.0 — Writers & Content Creators + 7 Community Skills
 

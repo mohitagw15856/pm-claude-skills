@@ -10,9 +10,9 @@ That said, security matters here in two specific ways: **skill file safety** and
 
 | Version | Supported |
 |---|---|
-| v14.x (latest) | ✅ Active |
-| v12.x – v13.x | ✅ Security fixes only |
-| < v12.0.0 | ❌ No longer supported |
+| v16.x (latest) | ✅ Active |
+| v14.x – v15.x | ✅ Security fixes only |
+| < v14.0.0 | ❌ No longer supported |
 
 Because skills are plain markdown, "support" means we review and correct any reported
 safety issue (prompt injection, unsafe instructions) in the listed versions.
