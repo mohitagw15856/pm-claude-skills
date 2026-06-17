@@ -9,7 +9,10 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
-_Nothing yet._
+### Added
+- **Automated npm publishing** — `.github/workflows/npm-publish.yml` publishes the package
+  to npm (with provenance) when a GitHub Release is published. Requires a one-time
+  `NPM_TOKEN` repo secret; no local npm needed.
 
 ## [17.0.0] — Agents, Commands & the npx CLI — 2026-06-17
 

@@ -1,0 +1,50 @@
+name: Publish to npm
+
+# Publishes the package to npm when you publish a GitHub Release (or run this
+# workflow manually). No local npm needed — set one repo secret, NPM_TOKEN, and
+# every release ships `npx pm-claude-skills` to the world.
+#
+# One-time setup:
+#   1. Create a free npm account at https://www.npmjs.com/signup
+#   2. Profile -> Access Tokens -> Generate New Token -> "Automation"
+#   3. In this repo: Settings -> Secrets and variables -> Actions -> New repository
+#      secret named NPM_TOKEN with that token.
+# Then: publish a GitHub Release tagged vX.Y.Z (matching package.json version).
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write   # enables npm provenance (a verified "published from this repo" badge)
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Verify release tag matches package.json version
+        if: github.event_name == 'release'
+        run: |
+          TAG="${GITHUB_REF_NAME#v}"
+          PKG="$(node -p "require('./package.json').version")"
+          echo "release tag: $TAG | package.json: $PKG"
+          if [ "$TAG" != "$PKG" ]; then
+            echo "::error::Release tag ($TAG) does not match package.json version ($PKG). Bump package.json or fix the tag."
+            exit 1
+          fi
+
+      - name: Publish to npm (public, with provenance)
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
