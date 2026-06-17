@@ -9,7 +9,16 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+_Nothing yet._
+
+## [17.0.0] — Agents, Commands & the npx CLI — 2026-06-17
+
 ### Added
+- **`npx pm-claude-skills` CLI** — a cross-platform Node installer (`bin/cli.mjs`, no bash,
+  no git, works on Windows) that installs skills into any agent:
+  `npx pm-claude-skills add --agent <claude|hermes|codex|openclaw|cursor>` with
+  `--link` / `--target` / `--dry-run`. For `claude` it installs skills + subagents +
+  commands. `package.json` is now a publishable package (`bin`, `files`, keywords).
 - **Subagents & slash commands** — the library now ships content beyond skills:
   4 Claude Code subagents in [`agents/`](agents/) (`pm-partner`, `sprint-master`,
   `cs-guardian`, `launch-captain`) and 6 slash commands in [`commands/`](commands/)
@@ -153,7 +162,8 @@ Earlier releases (v1.0.0 – v5.0.0) predate this changelog. See the
 [article series](README.md#-the-article-series) for the full history of how the
 library grew from the first PM toolkit to 100+ skills.
 
-[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v16.0.0...HEAD
+[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v17.0.0...HEAD
+[17.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v16.0.0...v17.0.0
 [16.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v15.0.0...v16.0.0
 [15.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v14.0.0...v15.0.0
 [14.0.0]: https://github.com/mohitagw15856/pm-claude-skills/releases
