@@ -3,6 +3,8 @@
 > Open-source **Agent Skills** (`SKILL.md`) + subagents + slash commands for every profession — one source, every AI coding tool.
 
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
+[![npm](https://img.shields.io/npm/v/pm-claude-skills?logo=npm&color=cb3837)](https://www.npmjs.com/package/pm-claude-skills)
+[![npm downloads](https://img.shields.io/npm/dm/pm-claude-skills?logo=npm&color=cb3837&label=installs)](https://www.npmjs.com/package/pm-claude-skills)
 [![Skills](https://img.shields.io/badge/skills-167-blue)](https://github.com/mohitagw15856/pm-claude-skills)
 [![Subagents](https://img.shields.io/badge/subagents-4-blueviolet)](agents/)
 [![Commands](https://img.shields.io/badge/slash%20commands-6-blueviolet)](commands/)
@@ -39,7 +41,7 @@ A community-built library of professional skills for every field — product man
 
 ## 🚀 Quick Install (2 minutes)
 
-**Any tool, one command** (Windows/macOS/Linux — needs Node):
+**Any tool, one command** — via the [`pm-claude-skills`](https://www.npmjs.com/package/pm-claude-skills) npm package (Windows/macOS/Linux, needs Node):
 
 ```bash
 npx pm-claude-skills add --agent claude     # or: codex · cursor · hermes · openclaw
