@@ -9,7 +9,18 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
-_Nothing yet._
+### Added
+- **SkillCheck validator** — `scripts/skillcheck.mjs` validates every `SKILL.md` against
+  the authoring standard (frontmatter, name/folder match, trigger + produces clauses,
+  required headings, tier referential integrity). Errors fail CI; `--strict` also fails on
+  warnings. New `skillcheck.yml` workflow and a SkillCheck badge in the README.
+- **Cursor export platform** — `build-exports.mjs` now also generates
+  `exports/cursor/<bundle>/<skill>/<skill>.mdc` rule files (the registry now supports
+  per-skill filenames).
+- **Per-agent installers** — `scripts/install.sh` (a unified installer for
+  claude · hermes · codex · openclaw · cursor, with `--link` / `--target` / `--dry-run`),
+  plus curl-able one-liners `scripts/codex-install.sh`, `scripts/openclaw-install.sh`, and
+  `scripts/cursor-install.sh` that clone the library and install in one command.
 
 ## [16.0.0] — Multi-Platform — 2026-06-17
 

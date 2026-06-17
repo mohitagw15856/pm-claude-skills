@@ -12,6 +12,7 @@ Currently exporting **172 skills** to:
 
 - **ChatGPT — Custom GPT instructions** → `exports/chatgpt/`
 - **Google Gemini — Gem instructions** → `exports/gemini/`
+- **Cursor — project rule (.mdc)** → `exports/cursor/`
 
 Adding a new platform is a few lines in the `PLATFORMS` registry of
 `scripts/build-exports.mjs` — no content is duplicated.

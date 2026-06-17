@@ -26,8 +26,9 @@ const pluginsDir = join(root, 'plugins');
 const exportsDir = join(root, 'exports');
 
 // ── Platform registry ───────────────────────────────────────────────────────
-// To add a new platform (Gemini, Cursor, …), add an entry here. `render` gets
+// To add a new platform, add an entry here. `render` gets
 // { name, description, title, body, bundle } and returns the file contents.
+// `file` is a fixed filename, or a function (skill) => filename for per-skill names.
 const PLATFORMS = {
   chatgpt: {
     label: 'ChatGPT — Custom GPT instructions',
@@ -49,15 +50,16 @@ const PLATFORMS = {
     render: ({ description, body }) =>
       `You are a specialised assistant. ${description}\n\nFollow these instructions:\n\n${body.trim()}\n`,
   },
-  // Example of how a future platform slots in (kept commented, not generated):
-  // cursor: {
-  //   label: 'Cursor — project rule (.mdc)',
-  //   dir: 'exports/cursor',
-  //   file: 'rule.mdc',
-  //   groupByBundle: false,
-  //   render: ({ description, body }) =>
-  //     `---\ndescription: ${JSON.stringify(description)}\nalwaysApply: false\n---\n\n${body.trim()}\n`,
-  // },
+  cursor: {
+    label: 'Cursor — project rule (.mdc)',
+    dir: 'exports/cursor',
+    file: (s) => `${s.name}.mdc`,
+    groupByBundle: true,
+    // Cursor reads `.cursor/rules/*.mdc`. Each rule is YAML frontmatter + the body.
+    // alwaysApply:false keeps it an opt-in rule the agent pulls in by description.
+    render: ({ description, body }) =>
+      `---\ndescription: ${JSON.stringify(description)}\nglobs:\nalwaysApply: false\n---\n\n${body.trim()}\n`,
+  },
 };
 
 // ── Helpers (shared shape with web/build-skills.mjs) ────────────────────────
@@ -115,6 +117,10 @@ function loadSkills() {
   return skills;
 }
 
+// Resolve a platform's output filename for a skill (string or function).
+const fileNameFor = (platform, skill) =>
+  typeof platform.file === 'function' ? platform.file(skill) : platform.file;
+
 // Build the full path->content map a platform should produce.
 function planPlatform(key, platform, skills) {
   const files = new Map();
@@ -122,22 +128,24 @@ function planPlatform(key, platform, skills) {
   for (const skill of skills) {
     const parts = [base];
     if (platform.groupByBundle) parts.push(skill.bundle);
-    parts.push(skill.name, platform.file);
+    parts.push(skill.name, fileNameFor(platform, skill));
     files.set(join(...parts), platform.render(skill));
   }
   // Generated index for the platform.
+  const fileHint = typeof platform.file === 'function' ? '.mdc rule' : platform.file;
   const index = [
     `# ${platform.label}`,
     '',
     `> Auto-generated from \`skills/*/SKILL.md\` by \`scripts/build-exports.mjs\`.`,
     `> **Do not edit these files by hand** — edit the source skill and regenerate.`,
     '',
-    `${skills.length} skills exported. Copy a \`${platform.file}\` into the tool to use it.`,
+    `${skills.length} skills exported. Copy a \`${fileHint}\` into the tool to use it.`,
     '',
     '| Skill | Bundle | Path |',
     '|---|---|---|',
     ...skills.map((s) => {
-      const rel = relative(base, [...(platform.groupByBundle ? [join(base, s.bundle)] : [base]), s.name, platform.file].reduce((a, b) => join(a, b)));
+      const leaf = [...(platform.groupByBundle ? [join(base, s.bundle)] : [base]), s.name, fileNameFor(platform, s)].reduce((a, b) => join(a, b));
+      const rel = relative(base, leaf);
       return `| ${s.title} | \`${s.bundle}\` | \`${rel}\` |`;
     }),
     '',

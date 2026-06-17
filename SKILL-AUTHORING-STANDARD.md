@@ -74,6 +74,8 @@ A skill is ready to merge when:
       trustworthy, not just a prompt.
 - [ ] It works with no setup beyond reading the file (scripts excepted, and those are
       stdlib-only).
+- [ ] It passes **SkillCheck**: `node scripts/skillcheck.mjs` reports no errors (warnings
+      are advisory). CI runs this on every PR that touches `skills/`.
 
 ## 5. Helper scripts (optional)
 

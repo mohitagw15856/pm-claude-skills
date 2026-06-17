@@ -3,6 +3,7 @@
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
 [![Skills](https://img.shields.io/badge/skills-167-blue)](https://github.com/mohitagw15856/pm-claude-skills)
 [![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
+[![SkillCheck](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skillcheck.yml?branch=main&label=SkillCheck)](.github/workflows/skillcheck.yml)
 [![Version](https://img.shields.io/badge/version-16.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
 [![Install](https://img.shields.io/badge/Install%20in%20Claude%20Code-2%20minutes-orange)](https://github.com/mohitagw15856/pm-claude-skills#-quick-install-2-minutes)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
@@ -93,8 +94,10 @@ body as a system prompt — for those we ship ready-made [exports](#ready-to-use
 |---|---|---|
 | **Claude Code** (CLI / desktop / web / IDE) | Native. Install via the plugin marketplace; Claude loads a skill automatically when your request matches its description. | ✅ Yes |
 | **Hermes Agent** (Nous Research) | Native — same open `SKILL.md` standard. Run `python3 scripts/sync-hermes-skills.py` to install into `~/.hermes/skills/`; Hermes auto-discovers them. | ✅ Yes |
+| **OpenAI Codex · OpenClaw** | Native `SKILL.md`. One-line install (see [below](#one-line-install-for-coding-agents)) or `./scripts/install.sh --agent codex`. | ✅ Yes |
+| **Cursor** | Generated `.mdc` rules. One-line install into `.cursor/rules/`, or copy from [`exports/cursor/`](exports/cursor/). | ⚙️ By description |
 | **Claude.ai & Claude API** | Upload a skill, or paste the body in as a system prompt / project instruction. | ⚙️ Manual |
-| **Other coding agents that read the `SKILL.md` format** (e.g. Codex, Gemini CLI, Cursor) | Point the agent at the `skills/` folder, or paste the body. The frameworks are tool-agnostic; only the auto-discovery mechanism differs per tool. | ⚙️ Varies by tool |
+| **Other `SKILL.md`-aware agents** (Gemini CLI, Aider, Windsurf, …) | Point the agent at `skills/`, or use `./scripts/install.sh`. The frameworks are tool-agnostic; only discovery differs per tool. | ⚙️ Varies by tool |
 | **ChatGPT & Gemini** | Copy a ready-made export (below) into a Custom GPT or Gem's instructions. You keep the full framework and output format. | ❌ Paste per use |
 
 **What's verified vs. what varies:** the skill **bodies** — the frameworks, rubrics, and
@@ -111,16 +114,33 @@ maintained twice:
 
 - **ChatGPT** — copy any [`exports/chatgpt/<bundle>/<skill>/SYSTEM_PROMPT.md`](exports/chatgpt/) straight into a Custom GPT's instructions.
 - **Google Gemini** — copy any [`exports/gemini/<bundle>/<skill>/GEM_INSTRUCTIONS.md`](exports/gemini/) into a Gem's instructions.
+- **Cursor** — copy any [`exports/cursor/<bundle>/<skill>/<skill>.mdc`](exports/cursor/) into `.cursor/rules/` (or use the one-liner below).
 
-Native `SKILL.md` agents don't need exports — install the skills directly:
+### One-line install for coding agents
+
+Native `SKILL.md` agents (Claude Code, Hermes, Codex, OpenClaw) and Cursor can install every skill with a single command — each clones the library and drops the skills where the agent discovers them:
 
 ```bash
-# Hermes Agent (Nous Research) — installs skills/ into ~/.hermes/skills/
-python3 scripts/sync-hermes-skills.py            # copy (use --link to symlink, --dry-run to preview)
+# OpenAI Codex
+bash <(curl -fsSL https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/scripts/codex-install.sh)
+
+# OpenClaw
+bash <(curl -fsSL https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/scripts/openclaw-install.sh)
+
+# Cursor (.mdc rules into ./.cursor/rules)
+bash <(curl -fsSL https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/scripts/cursor-install.sh)
+```
+
+Already cloned? Use the unified installer for any agent (add `--link`, `--target`, or `--dry-run`):
+
+```bash
+./scripts/install.sh --list                      # claude · hermes · codex · openclaw · cursor
+./scripts/install.sh --agent codex               # install for a specific agent
+python3 scripts/sync-hermes-skills.py            # Hermes equivalent (copy, or --link / --dry-run)
 ```
 
 The skill body in `skills/<name>/SKILL.md` is the single source of truth. Regenerate the
-chat-LLM exports (or add a new platform — it's a few lines in the `PLATFORMS` registry) with:
+chat-LLM / Cursor exports (or add a new platform — it's a few lines in the `PLATFORMS` registry) with:
 
 ```bash
 node scripts/build-exports.mjs            # regenerate all platform exports
