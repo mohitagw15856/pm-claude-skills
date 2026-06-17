@@ -36,7 +36,7 @@ jobs:
       - name: Verify release tag matches package.json version
         if: github.event_name == 'release'
         run: |
-          TAG="${GITHUB_REF_NAME#v}"
+          TAG="${GITHUB_REF_NAME#[vV]}"   # strip a leading v or V (v17.0.0 / V17.0.0)
           PKG="$(node -p "require('./package.json').version")"
           echo "release tag: $TAG | package.json: $PKG"
           if [ "$TAG" != "$PKG" ]; then
