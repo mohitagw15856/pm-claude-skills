@@ -35,6 +35,20 @@ Score each dimension 1–5. Weight as shown. Calculate weighted total out of 100
 - 60–79: Amber (at risk, needs attention)
 - 0–59: Red (high churn risk, escalate)
 
+## Programmatic Helper
+
+This skill ships with a stdlib-only Python script that applies the weights above and converts the weighted total to a RAG status — so the headline score is computed identically every time and weights always sum to 100%.
+
+```bash
+# Five scores 1-5 in order: adoption engagement outcomes support commercial
+python3 scripts/health_score.py --scores 4 3 4 2 5 --account "Acme Corp"
+
+# Or from JSON (lets you override the default weights per account/segment)
+python3 scripts/health_score.py --input account.json
+```
+
+It returns the per-dimension weighted points, the **total out of 100**, and the **RAG band** (Green ≥80, Amber 60–79, Red <60) with a one-line next step. Run it to set the headline number, then write the dimension detail and actions below around it. Add `--json` for downstream tooling.
+
 ## Output Format
 
 ---

@@ -25,6 +25,24 @@ Ask the user for these if not provided:
 ## RICE Formula
 RICE Score = (Reach × Impact × Confidence) / Effort
 
+## Programmatic Helper
+
+This skill ships with a stdlib-only Python script that calculates and ranks RICE scores so the maths is consistent and the quick-win / moonshot flags are applied by rule, not by feel. Feed it the initiatives once R, I, C, and E are gathered.
+
+```bash
+# From a JSON file (confidence accepts 0.8 or 80)
+python3 scripts/rice_calculator.py initiatives.json
+
+# Or from a CSV with header: name,reach,impact,confidence,effort
+python3 scripts/rice_calculator.py initiatives.csv --format csv
+
+# Or piped in
+echo '[{"name":"Onboarding","reach":5000,"impact":2,"confidence":0.8,"effort":3}]' \
+  | python3 scripts/rice_calculator.py -
+```
+
+It outputs a ranked table with computed RICE scores and auto-flags **quick-win** (strong score, low relative effort), **moonshot** (high impact, high effort), and **low-confidence** (≤50%) items. Use the computed ranking as the starting point, then apply the validation step below — never accept a surprising top rank without checking the estimates behind it.
+
 ## Process
 1. For each initiative provided, gather or estimate R, I, C, E values
 2. Flag where estimates are weak and note what data would improve them

@@ -10,9 +10,12 @@ That said, security matters here in two specific ways: **skill file safety** and
 
 | Version | Supported |
 |---|---|
-| v4.0.0 (latest) | ✅ Active |
-| v3.0.0 | ✅ Security fixes only |
-| < v3.0.0 | ❌ No longer supported |
+| v14.x (latest) | ✅ Active |
+| v12.x – v13.x | ✅ Security fixes only |
+| < v12.0.0 | ❌ No longer supported |
+
+Because skills are plain markdown, "support" means we review and correct any reported
+safety issue (prompt injection, unsafe instructions) in the listed versions.
 
 ## Skill File Safety
 
@@ -24,7 +27,9 @@ All skills in this repo are reviewed before merging to ensure they:
 - Do not contain malicious commands disguised as skill instructions
 - Do not include hardcoded credentials, API keys, or personally identifiable information
 
-**If you are installing skills from this repo:** skills are plain text markdown files. They do not execute code, make network requests, or access your file system on their own. Review any skill file before installing if you have concerns.
+**If you are installing skills from this repo:** the skills themselves are plain markdown instruction files. They do not execute code, make network requests, or access your file system on their own. Review any skill file before installing if you have concerns.
+
+**A few skills ship optional helper scripts** (in a `scripts/` folder, e.g. the sprint, RICE, and customer-health calculators). These are pure Python standard-library programs — no third-party dependencies, no network calls, no file writes outside what you pass them. They only run when you explicitly invoke them. Read any script before running it, exactly as you would any code from the internet.
 
 ## Reporting a Vulnerability
 
