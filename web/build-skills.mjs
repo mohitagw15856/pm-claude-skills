@@ -10,6 +10,16 @@ const root = join(__dirname, '..');
 const skillsDir = join(root, 'skills');
 const pluginsDir = join(root, 'plugins');
 
+// --- Skill tiers (single source: skill-tiers.json) ---
+// Anything not listed is 'stable'. Used to badge/filter skills in the playground.
+let TIERS = { productionReady: [], experimental: [] };
+const tiersFile = join(root, 'skill-tiers.json');
+if (existsSync(tiersFile)) TIERS = { ...TIERS, ...JSON.parse(readFileSync(tiersFile, 'utf8')) };
+const productionSet = new Set(TIERS.productionReady);
+const experimentalSet = new Set(TIERS.experimental);
+const tierFor = (name) =>
+  productionSet.has(name) ? 'production' : experimentalSet.has(name) ? 'experimental' : 'stable';
+
 // --- Map each skill name -> plugin bundle (for grouping/filtering) ---
 const skillToPlugin = {};
 if (existsSync(pluginsDir)) {
@@ -98,12 +108,19 @@ for (const name of readdirSync(skillsDir)) {
     description: meta.description || '',
     summary: summarize(meta.description || ''),
     plugin: skillToPlugin[name] || 'other',
+    tier: tierFor(name),
     inputs: parseInputs(body),
     instructions: body.trim(),
   });
 }
 
 skills.sort((a, b) => a.title.localeCompare(b.title));
-const out = { generatedAt: new Date().toISOString(), count: skills.length, skills };
+// No wall-clock timestamp: the output must be deterministic so CI can verify it
+// is in sync with the source skills (a timestamp would make every build differ).
+const out = { count: skills.length, skills };
 writeFileSync(join(__dirname, 'skills.json'), JSON.stringify(out));
-console.log(`Wrote web/skills.json — ${skills.length} skills, ${Object.keys(skillToPlugin).length ? new Set(skills.map(s=>s.plugin)).size : 0} bundles.`);
+const tierCounts = skills.reduce((a, s) => ((a[s.tier] = (a[s.tier] || 0) + 1), a), {});
+console.log(
+  `Wrote web/skills.json — ${skills.length} skills, ${new Set(skills.map((s) => s.plugin)).size} bundles ` +
+  `(production: ${tierCounts.production || 0}, stable: ${tierCounts.stable || 0}, experimental: ${tierCounts.experimental || 0}).`
+);

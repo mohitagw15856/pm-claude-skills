@@ -10,6 +10,13 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 ## [Unreleased]
 
 ### Added
+- **Multi-platform export generator.** `scripts/build-exports.mjs` renders every skill
+  into platform-ready files under `exports/` from a single source of truth (the
+  `SKILL.md` body), so content is never maintained twice. Ships **ChatGPT**
+  (`exports/chatgpt/.../SYSTEM_PROMPT.md`) and **Google Gemini**
+  (`exports/gemini/.../GEM_INSTRUCTIONS.md`) exports, plus a `PLATFORMS` registry that
+  makes adding Cursor/etc. a few lines. Includes a `--check` mode and a
+  `check-generated` CI workflow that fails if exports or `web/skills.json` drift.
 - **Programmatic helpers (stdlib Python) for three flagship skills.** Each runs with
   zero dependencies and computes part of the work instead of estimating by hand:
   - `sprint-planning/scripts/capacity_calculator.py` — recommended sprint commitment
@@ -26,6 +33,15 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
   strongest work.
 - **Cross-tool compatibility** — README now documents which platforms the skills work
   on (Claude Code natively; the SKILL.md bodies port to other agents and chat LLMs).
+- **Skill Playground upgrades** — the hosted web app gains a **tier filter** and per-tile
+  tier badges, plus a *"Use this skill in another tool"* panel that copies the
+  instructions formatted for ChatGPT, Gemini, or raw. Tier data comes from a single
+  machine-readable source, `skill-tiers.json`.
+
+### Fixed
+- **`web/skills.json` is now deterministic.** Removed the wall-clock `generatedAt` field
+  (it was unused by the UI and made every rebuild differ), so the new `check-generated`
+  CI step can reliably verify the index is in sync with the source skills.
 - **Related Projects** — README section linking to other community Claude Skills
   libraries and the `awesome-claude-skills` / `awesome-claude-code` lists.
 

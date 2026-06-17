@@ -1,0 +1,19 @@
+{
+  "_comment": "Machine-readable source for skill tiers. Keep in sync with TIERS.md. Any skill not listed here is 'stable'. Consumed by web/build-skills.mjs to tag skills.json.",
+  "productionReady": [
+    "prd-template", "meeting-notes", "stakeholder-update", "user-research-synthesis", "competitive-analysis",
+    "rice-prioritisation", "feature-prioritisation", "okr-builder", "roadmap-narrative", "rice-impact-matrix",
+    "sprint-planning", "sprint-brief", "user-story-writer", "retro-analysis", "ab-test-planner", "product-launch-checklist", "technical-spec-template",
+    "customer-journey-map", "assumption-mapper", "user-interview-synthesis", "discovery-interview-guide", "job-story-mapper",
+    "data-analysis-standard", "retention-analysis", "cohort-analysis", "metrics-framework", "product-health-analysis",
+    "cs-health-scorecard", "churn-analysis", "qbr-deck", "renewal-playbook", "customer-success-plan", "cs-escalation-brief",
+    "code-review-checklist", "incident-postmortem", "architecture-decision-record", "api-docs-writer", "runbook-writer", "changelog-generator", "pr-description-writer", "technical-debt-register",
+    "go-to-market", "competitor-teardown", "product-positioning-doc",
+    "executive-summary", "press-release"
+  ],
+  "experimental": [
+    "instagram-post-downloader", "substack-notes-scraper", "thumbnail-creator", "notebooklm-connector",
+    "email-triage", "morning-intelligence", "last-30-days-research", "competitor-signal-tracker",
+    "multi-source-signal-synthesiser"
+  ]
+}

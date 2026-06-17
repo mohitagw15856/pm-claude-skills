@@ -39,6 +39,12 @@
   <div class="controls" id="controls">
     <input id="search" type="search" placeholder="Search skills…" />
     <select id="pluginFilter"><option value="">All bundles</option></select>
+    <select id="tierFilter" title="Maturity tier">
+      <option value="">All tiers</option>
+      <option value="production">🟢 Production-Ready</option>
+      <option value="stable">🔵 Stable</option>
+      <option value="experimental">🟡 Experimental</option>
+    </select>
     <span id="count" class="count"></span>
   </div>
 
@@ -52,9 +58,21 @@
 
       <div class="skill-head">
         <span class="bundle-tag" id="skillBundle"></span>
+        <span class="tier-tag" id="skillTier"></span>
         <h2 id="skillTitle"></h2>
         <p id="skillDesc" class="skill-desc"></p>
       </div>
+
+      <details class="elsewhere" id="elsewhere">
+        <summary>Use this skill in another tool ↗</summary>
+        <p class="elsewhere-note">These skills aren't locked to Claude. Copy the ready-made instructions into another assistant — you keep the full framework, you just paste it once.</p>
+        <div class="elsewhere-actions">
+          <button id="copyChatgpt" class="ghost" type="button">Copy for ChatGPT</button>
+          <button id="copyGemini" class="ghost" type="button">Copy for Gemini</button>
+          <button id="copyClaude" class="ghost" type="button">Copy raw instructions</button>
+          <span id="copyMsg" class="copy-msg"></span>
+        </div>
+      </details>
 
       <form id="inputForm" class="input-form"></form>
 

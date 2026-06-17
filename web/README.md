@@ -5,6 +5,15 @@ Pick a skill → it becomes a form → fill it in → Claude executes the skill'
 and streams the result. Your key is stored only in your browser (`localStorage`) and sent
 directly to `api.anthropic.com`. Nothing touches a server we own.
 
+## What you can do
+
+- **Search and filter** the full library by keyword, **bundle**, and **maturity tier**
+  (🟢 Production-Ready · 🔵 Stable · 🟡 Experimental) — every tile shows its tier.
+- **Run a skill** against the Claude API and stream the output (copy or download as `.md`).
+- **Use it in another tool** — each skill has a *"Use this skill in another tool"* panel
+  that copies the instructions formatted for **ChatGPT**, **Gemini**, or as raw text, so
+  you can paste it into any assistant. (Same output as the generated `exports/` files.)
+
 ## Run locally
 
 ```bash
@@ -20,7 +29,9 @@ Paste a key from [console.anthropic.com](https://console.anthropic.com/settings/
 ## How it works
 
 - `build-skills.mjs` scans `../skills/*/SKILL.md`, parses the frontmatter and the
-  **Required Inputs** section, and writes `skills.json` (the UI's data source).
+  **Required Inputs** section, tags each skill with its tier (from `../skill-tiers.json`),
+  and writes a **deterministic** `skills.json` (the UI's data source — no timestamp, so CI
+  can verify it stays in sync).
 - `app.js` sends the skill's instruction body as the `system` prompt and the filled-in
   fields as the user message, using the Anthropic Messages API with
   `anthropic-dangerous-direct-browser-access: true` for direct browser calls.

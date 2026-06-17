@@ -9,6 +9,12 @@ let SKILLS = [];
 let current = null;
 let controller = null;
 
+const TIER_META = {
+  production: { label: 'Production-Ready', cls: 'tier-production', dot: '🟢' },
+  stable: { label: 'Stable', cls: 'tier-stable', dot: '🔵' },
+  experimental: { label: 'Experimental', cls: 'tier-experimental', dot: '🟡' },
+};
+
 init();
 
 async function init() {
@@ -28,11 +34,17 @@ async function init() {
 
   el('search').addEventListener('input', renderGallery);
   el('pluginFilter').addEventListener('change', renderGallery);
+  el('tierFilter').addEventListener('change', renderGallery);
   el('backBtn').addEventListener('click', showGallery);
   el('runBtn').addEventListener('click', run);
   el('stopBtn').addEventListener('click', () => controller && controller.abort());
   el('copyBtn').addEventListener('click', () => navigator.clipboard.writeText(el('output').dataset.raw || ''));
   el('downloadBtn').addEventListener('click', downloadOutput);
+
+  // Copy the skill's instructions formatted for another assistant.
+  el('copyChatgpt').addEventListener('click', () => copyPrompt('chatgpt'));
+  el('copyGemini').addEventListener('click', () => copyPrompt('gemini'));
+  el('copyClaude').addEventListener('click', () => copyPrompt('claude'));
 
   try {
     const res = await fetch('skills.json');
@@ -58,11 +70,13 @@ async function init() {
 function renderGallery() {
   const q = el('search').value.toLowerCase().trim();
   const bundle = el('pluginFilter').value;
+  const tier = el('tierFilter').value;
   const gallery = el('gallery');
   gallery.innerHTML = '';
 
   const matches = SKILLS.filter((s) => {
     if (bundle && s.plugin !== bundle) return false;
+    if (tier && (s.tier || 'stable') !== tier) return false;
     if (!q) return true;
     return (s.title + ' ' + s.description + ' ' + s.name).toLowerCase().includes(q);
   });
@@ -76,11 +90,16 @@ function renderGallery() {
 
   const frag = document.createDocumentFragment();
   for (const s of matches) {
+    const meta = TIER_META[s.tier] || TIER_META.stable;
     const card = document.createElement('button');
     card.className = 'skill-card';
     card.innerHTML =
-      `<span class="card-bundle"></span><h3 class="card-title"></h3><p class="card-summary"></p>`;
+      `<div class="card-tags"><span class="card-bundle"></span><span class="card-tier"></span></div>` +
+      `<h3 class="card-title"></h3><p class="card-summary"></p>`;
     card.querySelector('.card-bundle').textContent = s.plugin;
+    const tierEl = card.querySelector('.card-tier');
+    tierEl.textContent = `${meta.dot} ${meta.label}`;
+    tierEl.classList.add(meta.cls);
     card.querySelector('.card-title').textContent = s.title;
     card.querySelector('.card-summary').textContent = s.summary || s.description;
     card.addEventListener('click', () => selectSkill(s));
@@ -104,8 +123,14 @@ function selectSkill(s) {
   el('controls').hidden = true;
   el('runner').hidden = false;
   el('skillBundle').textContent = s.plugin;
+  const meta = TIER_META[s.tier] || TIER_META.stable;
+  const tierTag = el('skillTier');
+  tierTag.textContent = `${meta.dot} ${meta.label}`;
+  tierTag.className = 'tier-tag ' + meta.cls;
   el('skillTitle').textContent = s.title;
   el('skillDesc').textContent = s.description;
+  el('elsewhere').open = false;
+  el('copyMsg').textContent = '';
   el('outputWrap').hidden = true;
   el('output').innerHTML = '';
   setStatus('');
@@ -222,6 +247,29 @@ async function run() {
     el('runBtn').disabled = false;
     el('stopBtn').hidden = true;
     controller = null;
+  }
+}
+
+// Format the current skill's instructions for another assistant, mirroring the
+// per-platform renderers in scripts/build-exports.mjs.
+function promptFor(platform) {
+  if (!current) return '';
+  const body = current.instructions;
+  if (platform === 'gemini') {
+    return `You are a specialised assistant. ${current.description}\n\nFollow these instructions:\n\n${body}`;
+  }
+  return body; // chatgpt + claude use the body directly
+}
+
+async function copyPrompt(platform) {
+  const text = promptFor(platform);
+  if (!text) return;
+  const labels = { chatgpt: 'ChatGPT', gemini: 'Gemini', claude: 'raw' };
+  try {
+    await navigator.clipboard.writeText(text);
+    el('copyMsg').textContent = `Copied ${labels[platform]} prompt — paste it into the tool's instructions.`;
+  } catch (_) {
+    el('copyMsg').textContent = 'Copy failed — your browser blocked clipboard access.';
   }
 }
 

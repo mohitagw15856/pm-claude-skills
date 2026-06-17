@@ -98,7 +98,24 @@ plugin install, automatic skill discovery from the `description`, and the helper
 invocation flow. On other tools you copy the body in manually and lose only the
 auto-triggering, not the substance.
 
-> Prefer ChatGPT? There's also a [companion Custom GPT library](#-companion-repository--chatgpt-custom-gpts) built from the same frameworks.
+### Ready-to-use exports
+
+You don't have to strip frontmatter by hand. Every skill is exported to platform-ready
+files under [`exports/`](exports/), generated from the same source so nothing is
+maintained twice:
+
+- **ChatGPT** — copy any [`exports/chatgpt/<bundle>/<skill>/SYSTEM_PROMPT.md`](exports/chatgpt/) straight into a Custom GPT's instructions.
+- **Google Gemini** — copy any [`exports/gemini/<bundle>/<skill>/GEM_INSTRUCTIONS.md`](exports/gemini/) into a Gem's instructions.
+
+The skill body in `skills/<name>/SKILL.md` is the single source of truth. Regenerate (or
+add a new platform — it's a few lines in the `PLATFORMS` registry) with:
+
+```bash
+node scripts/build-exports.mjs            # regenerate all platform exports
+node scripts/build-exports.mjs --check    # CI: fail if exports are stale
+```
+
+> Prefer a hand-curated ChatGPT collection? There's also a [companion Custom GPT library](#-companion-repository--chatgpt-custom-gpts) built from the same frameworks.
 
 ---
 

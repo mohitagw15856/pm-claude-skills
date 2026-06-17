@@ -81,3 +81,7 @@ list in the [README](README.md#️-all-167-skills).
 once they have a stable output format and real-world use — see
 [SKILL-AUTHORING-STANDARD.md](SKILL-AUTHORING-STANDARD.md#7-tiering). Think a skill is
 mis-tiered? [Open an issue](../../issues).*
+
+> **For tooling:** the machine-readable tier membership lives in
+> [`skill-tiers.json`](skill-tiers.json) (the Skill Playground reads it to badge and
+> filter skills). Keep this page and that file in sync when re-tiering.

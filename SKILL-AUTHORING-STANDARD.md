@@ -24,6 +24,9 @@ skills/
 - Use lowercase, hyphenated names (`customer-journey-map`, not `CustomerJourneyMap`).
 - A skill must be useful with `SKILL.md` alone. Scripts are an enhancement, never a
   prerequisite.
+- **Never hand-edit `exports/`.** Those platform files (e.g. ChatGPT `SYSTEM_PROMPT.md`)
+  are generated from the `SKILL.md` body by `scripts/build-exports.mjs`. Edit the source
+  skill and regenerate; CI fails if they drift.
 
 ## 2. Frontmatter (required)
 
