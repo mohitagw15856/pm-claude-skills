@@ -8,7 +8,7 @@
 [![Commands](https://img.shields.io/badge/slash%20commands-6-blueviolet)](commands/)
 [![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Cursor%20%7C%20Codex%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
 [![SkillCheck](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skillcheck.yml?branch=main&label=SkillCheck)](.github/workflows/skillcheck.yml)
-[![Version](https://img.shields.io/badge/version-16.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
+[![Version](https://img.shields.io/badge/version-17.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
 [![Install](https://img.shields.io/badge/Install%20in%20Claude%20Code-2%20minutes-orange)](https://github.com/mohitagw15856/pm-claude-skills#-quick-install-2-minutes)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4)](https://github.com/sponsors/mohitagw15856)
@@ -18,7 +18,7 @@
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest release (v16.0.0 — Multi-Platform):** the library goes cross-tool. A single-source export generator produces ready-to-use ChatGPT and Gemini prompts from every skill, native Hermes Agent install support, three stdlib Python helper scripts, explicit skill tiers, and an upgraded Skill Playground. See the [changelog](#-changelog).
+**🆕 Latest release (v17.0.0 — Agents, Commands & the npx CLI):** install into any tool with one cross-platform command — `npx pm-claude-skills add --agent <tool>`. Adds 4 Claude Code subagents, 6 slash commands, Cursor `.mdc` exports, a SkillCheck validator, and a skill scaffolder. See the [changelog](#-changelog).
 ---
 
 ## Contents
@@ -39,7 +39,13 @@ A community-built library of professional skills for every field — product man
 
 ## 🚀 Quick Install (2 minutes)
 
-In Claude Code, run:
+**Any tool, one command** (Windows/macOS/Linux — needs Node):
+
+```bash
+npx pm-claude-skills add --agent claude     # or: codex · cursor · hermes · openclaw
+```
+
+**In Claude Code**, run:
 
 /plugin marketplace add mohitagw15856/pm-claude-skills
 
@@ -121,28 +127,30 @@ maintained twice:
 - **Google Gemini** — copy any [`exports/gemini/<bundle>/<skill>/GEM_INSTRUCTIONS.md`](exports/gemini/) into a Gem's instructions.
 - **Cursor** — copy any [`exports/cursor/<bundle>/<skill>/<skill>.mdc`](exports/cursor/) into `.cursor/rules/` (or use the one-liner below).
 
-### One-line install for coding agents
+### One-command install for coding agents
 
-Native `SKILL.md` agents (Claude Code, Hermes, Codex, OpenClaw) and Cursor can install every skill with a single command — each clones the library and drops the skills where the agent discovers them:
+**Cross-platform (Windows, macOS, Linux) — recommended.** One Node command installs every skill where your agent discovers them. No git, no bash:
 
 ```bash
-# OpenAI Codex
+npx pm-claude-skills add --agent claude     # skills + subagents + commands → ~/.claude/
+npx pm-claude-skills add --agent codex      # OpenAI Codex
+npx pm-claude-skills add --agent cursor     # .mdc rules → ./.cursor/rules
+npx pm-claude-skills list                   # claude · hermes · codex · openclaw · cursor
+```
+
+Add `--link` (symlink), `--target <path>`, or `--dry-run` to any `add`.
+
+**Shell one-liners** (macOS / Linux / Git Bash / WSL — *not* PowerShell):
+
+```bash
 bash <(curl -fsSL https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/scripts/codex-install.sh)
-
-# OpenClaw
 bash <(curl -fsSL https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/scripts/openclaw-install.sh)
-
-# Cursor (.mdc rules into ./.cursor/rules)
 bash <(curl -fsSL https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/scripts/cursor-install.sh)
 ```
 
-Already cloned? Use the unified installer for any agent (add `--link`, `--target`, or `--dry-run`):
+> **Windows / PowerShell:** use the `npx` command above (the `bash <(curl …)` form is a Unix idiom and won't run in PowerShell).
 
-```bash
-./scripts/install.sh --list                      # claude · hermes · codex · openclaw · cursor
-./scripts/install.sh --agent codex               # install for a specific agent
-python3 scripts/sync-hermes-skills.py            # Hermes equivalent (copy, or --link / --dry-run)
-```
+Already cloned? `./scripts/install.sh --agent <name>` (or `python3 scripts/sync-hermes-skills.py` for Hermes) does the same from your checkout.
 
 The skill body in `skills/<name>/SKILL.md` is the single source of truth. Regenerate the
 chat-LLM / Cursor exports (or add a new platform — it's a few lines in the `PLATFORMS` registry) with:
@@ -336,16 +344,28 @@ More templates will follow. If you want to contribute one, see the [template con
 
 The highlights are below. For the structured, [Keep a Changelog](https://keepachangelog.com/)-format history, see **[CHANGELOG.md](CHANGELOG.md)**.
 
-### 🆕 What's New in v16.0.0 — Multi-Platform
+### 🆕 What's New in v17.0.0 — Agents, Commands & the npx CLI
+
+The library grows past "just skills" and gets one-command, cross-platform install:
+
+- **`npx pm-claude-skills add --agent <tool>`** — a cross-platform Node installer (Windows/macOS/Linux, no bash, no git) for claude · hermes · codex · openclaw · cursor.
+- **4 Claude Code subagents** (`agents/`) and **6 slash commands** (`commands/`) built on the strongest skills; `--agent claude` installs skills + agents + commands together.
+- **Cursor `.mdc` exports** — third generated platform alongside ChatGPT and Gemini.
+- **SkillCheck validator** (`scripts/skillcheck.mjs`) with a CI badge, and a **skill scaffolder** (`npm run new-skill`) that emits a valid `SKILL.md`.
+- **One-line shell installers** for Codex / OpenClaw / Cursor, plus a unified `scripts/install.sh`.
+
+<details>
+<summary><strong>v16.0.0 — Multi-Platform</strong> (click to expand)</summary>
 
 The library stops being Claude-only and becomes a portable, single-source-of-truth project:
 
-- **Runs on more platforms.** Native install for **Hermes Agent** (same open `SKILL.md` standard) via `scripts/sync-hermes-skills.py`, plus ready-to-paste **ChatGPT** and **Gemini** exports generated from every skill.
-- **One source, many targets.** `scripts/build-exports.mjs` renders per-platform files from each `SKILL.md` body — nothing is maintained twice — with a `PLATFORMS` registry that makes adding a tool a few lines, and a CI guard that fails on drift.
+- **Runs on more platforms.** Native install for **Hermes Agent** (same open `SKILL.md` standard), plus ready-to-paste **ChatGPT** and **Gemini** exports generated from every skill.
+- **One source, many targets.** `scripts/build-exports.mjs` renders per-platform files from each `SKILL.md` body — nothing maintained twice — with a `PLATFORMS` registry and a CI guard that fails on drift.
 - **Three stdlib Python helpers** for flagship skills (sprint capacity, RICE scoring, customer-health scoring).
-- **Explicit skill tiers** (`TIERS.md` + `skill-tiers.json`): 46 Production-Ready, a curated Experimental set, Stable as default — surfaced in the README and the playground.
-- **Upgraded Skill Playground**: tier filter + badges and a "use this skill in another tool" copy panel.
-- **Repo hygiene**: `CHANGELOG.md`, `SKILL-AUTHORING-STANDARD.md`, refreshed `SECURITY.md`, `.gitignore`, and a Related Projects section.
+- **Explicit skill tiers** (`TIERS.md` + `skill-tiers.json`) and an **upgraded Skill Playground** (tier filter + "use in another tool" copy panel).
+- **Repo hygiene**: `CHANGELOG.md`, `SKILL-AUTHORING-STANDARD.md`, refreshed `SECURITY.md`, `.gitignore`, Related Projects.
+
+</details>
 
 <details>
 <summary><strong>Release history — v6.0.0 → v15.0.0</strong> (click to expand)</summary>

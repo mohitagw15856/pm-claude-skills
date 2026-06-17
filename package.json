@@ -1,15 +1,45 @@
 {
   "name": "pm-claude-skills",
-  "version": "16.0.0",
-  "private": true,
+  "version": "17.0.0",
   "type": "module",
-  "description": "167 professional agent skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes — plus subagents, slash commands, and a multi-platform export pipeline.",
+  "description": "167 professional Agent Skills (SKILL.md) + subagents + slash commands for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes. Install into any AI coding tool with: npx pm-claude-skills add --agent <tool>.",
+  "keywords": [
+    "claude",
+    "claude-code",
+    "claude-skills",
+    "agent-skills",
+    "skill-md",
+    "chatgpt",
+    "gemini",
+    "cursor",
+    "codex",
+    "hermes-agent",
+    "ai-agents",
+    "subagents",
+    "slash-commands",
+    "prompt-engineering",
+    "product-management"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
   "repository": {
     "type": "git",
     "url": "https://github.com/mohitagw15856/pm-claude-skills.git"
   },
+  "bugs": {
+    "url": "https://github.com/mohitagw15856/pm-claude-skills/issues"
+  },
+  "author": "Mohit Aggarwal",
+  "bin": {
+    "pm-claude-skills": "bin/cli.mjs"
+  },
+  "files": [
+    "bin/",
+    "skills/",
+    "agents/",
+    "commands/",
+    "exports/"
+  ],
   "scripts": {
     "new-skill": "node scripts/new-skill.mjs",
     "skillcheck": "node scripts/skillcheck.mjs",
