@@ -10,7 +10,7 @@
 [![Commands](https://img.shields.io/badge/slash%20commands-6-blueviolet)](commands/)
 [![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Cursor%20%7C%20Codex%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
 [![SkillCheck](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skillcheck.yml?branch=main&label=SkillCheck)](.github/workflows/skillcheck.yml)
-[![Version](https://img.shields.io/badge/version-17.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
+[![Version](https://img.shields.io/badge/version-18.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
 [![Install](https://img.shields.io/badge/Install%20in%20Claude%20Code-2%20minutes-orange)](https://github.com/mohitagw15856/pm-claude-skills#-quick-install-2-minutes)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4)](https://github.com/sponsors/mohitagw15856)
@@ -20,7 +20,7 @@
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest release (v17.0.0 — Agents, Commands & the npx CLI):** install into any tool with one cross-platform command — `npx pm-claude-skills add --agent <tool>`. Adds 4 Claude Code subagents, 6 slash commands, Cursor `.mdc` exports, a SkillCheck validator, and a skill scaffolder. See the [changelog](#-changelog).
+**🆕 Latest release (v18.0.0 — Windsurf, Aider & an MCP Server):** two more install targets (Windsurf, Aider — now 5 export platforms across 7 tools) and a zero-dependency **MCP server** (`npx pm-claude-skills-mcp`) so MCP clients search and pull skills on demand. See the [changelog](#-changelog).
 
 <!-- DEMO: replace web/docs-assets/playground.png below with web/docs-assets/playground-demo.gif
      once recorded (see web/docs-assets/README.md for how). The link goes to the live app. -->
@@ -373,15 +373,26 @@ More templates will follow. If you want to contribute one, see the [template con
 
 The highlights are below. For the structured, [Keep a Changelog](https://keepachangelog.com/)-format history, see **[CHANGELOG.md](CHANGELOG.md)**.
 
-### 🆕 What's New in v17.0.0 — Agents, Commands & the npx CLI
+### 🆕 What's New in v18.0.0 — Windsurf, Aider & an MCP Server
+
+The library reaches more tools and adds a new content type:
+
+- **Two more install targets** — **Windsurf** (`.windsurf/rules/*.md`) and **Aider** (`aider --read`). The library now exports to **5 platforms** (ChatGPT, Gemini, Cursor, Windsurf, Aider) and installs into **7 tools**.
+- **MCP server** (`npx pm-claude-skills-mcp`) — a zero-dependency Model Context Protocol server so MCP clients (Claude Desktop, Cline) **search and pull skills on demand** via `list_skills` / `search_skills` / `get_skill`. See [`mcp/`](mcp/).
+- **Automated npm publishing** — a GitHub Actions workflow ships the package on every release.
+- **Hero demo placement** in the README, ready for a Playground GIF.
+
+<details>
+<summary><strong>v17.0.0 — Agents, Commands & the npx CLI</strong> (click to expand)</summary>
 
 The library grows past "just skills" and gets one-command, cross-platform install:
 
-- **`npx pm-claude-skills add --agent <tool>`** — a cross-platform Node installer (Windows/macOS/Linux, no bash, no git) for claude · hermes · codex · openclaw · cursor.
-- **4 Claude Code subagents** (`agents/`) and **6 slash commands** (`commands/`) built on the strongest skills; `--agent claude` installs skills + agents + commands together.
-- **Cursor `.mdc` exports** — third generated platform alongside ChatGPT and Gemini.
-- **SkillCheck validator** (`scripts/skillcheck.mjs`) with a CI badge, and a **skill scaffolder** (`npm run new-skill`) that emits a valid `SKILL.md`.
-- **One-line shell installers** for Codex / OpenClaw / Cursor, plus a unified `scripts/install.sh`.
+- **`npx pm-claude-skills add --agent <tool>`** — a cross-platform Node installer (Windows/macOS/Linux, no bash, no git).
+- **4 Claude Code subagents** (`agents/`) and **6 slash commands** (`commands/`); `--agent claude` installs skills + agents + commands together.
+- **Cursor `.mdc` exports**, a **SkillCheck validator** + CI badge, and a **skill scaffolder** (`npm run new-skill`).
+- **One-line shell installers** plus a unified `scripts/install.sh`.
+
+</details>
 
 <details>
 <summary><strong>v16.0.0 — Multi-Platform</strong> (click to expand)</summary>
