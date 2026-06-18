@@ -32,6 +32,27 @@ Ask the user which framework they prefer, or recommend based on context:
 
 ## RICE Scoring
 
+## Programmatic Helper
+
+This skill ships with a stdlib-only Python script that computes ranking for math-based frameworks so feature scoring is consistent across sessions.
+
+```bash
+# RICE from JSON
+python3 scripts/feature_prioritisation.py initiatives.json --framework rice
+
+# RICE from CSV
+python3 scripts/feature_prioritisation.py initiatives.csv --framework rice --format csv
+
+# ICE from JSON
+python3 scripts/feature_prioritisation.py features.json --framework ice
+
+# Pipe into it
+printf '%s\n' '[{"name":"API refactor","impact":8,"confidence":80,"ease":5}]' \
+  | python3 scripts/feature_prioritisation.py --framework ice -
+```
+
+Use `--json` to produce machine-readable output for downstream tooling.
+
 **Formula:** (Reach × Impact × Confidence) ÷ Effort
 
 | Factor | Definition | Scale |
