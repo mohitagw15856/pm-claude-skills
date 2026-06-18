@@ -12,7 +12,7 @@
 [![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Cursor%20%7C%20Codex%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
 [![SkillCheck](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skillcheck.yml?branch=main&label=SkillCheck)](.github/workflows/skillcheck.yml)
 [![Security Audit](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skill-audit.yml?branch=main&label=security%20audit)](.github/workflows/skill-audit.yml)
-[![Version](https://img.shields.io/badge/version-18.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
+[![Version](https://img.shields.io/badge/version-19.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
 [![Install](https://img.shields.io/badge/Install%20in%20Claude%20Code-2%20minutes-orange)](https://github.com/mohitagw15856/pm-claude-skills#-quick-install-2-minutes)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4)](https://github.com/sponsors/mohitagw15856)
@@ -22,7 +22,7 @@
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest release (v18.0.0 — Windsurf, Aider & an MCP Server):** two more install targets (Windsurf, Aider — now 5 export platforms across 7 tools) and a zero-dependency **MCP server** (`npx pm-claude-skills-mcp`) so MCP clients search and pull skills on demand. See the [changelog](#-changelog).
+**🆕 Latest release (v19.0.0 — Security Auditor, Personas & Catalog):** a CI **Skill Security Auditor** that flags prompt-injection / unsafe code in any skill, **4 personas** (output-styles), an [orchestration guide](ORCHESTRATION.md), a server-rendered **skill catalog**, and a public [roadmap](ROADMAP.md). See the [changelog](#-changelog).
 
 <!-- DEMO: replace web/docs-assets/playground.png below with web/docs-assets/playground-demo.gif
      once recorded (see web/docs-assets/README.md for how). The link goes to the live app. -->
@@ -379,14 +379,24 @@ More templates will follow. If you want to contribute one, see the [template con
 
 The highlights are below. For the structured, [Keep a Changelog](https://keepachangelog.com/)-format history, see **[CHANGELOG.md](CHANGELOG.md)**.
 
-### 🆕 What's New in v18.0.0 — Windsurf, Aider & an MCP Server
+### 🆕 What's New in v19.0.0 — Security Auditor, Personas & Catalog
 
-The library reaches more tools and adds a new content type:
+Trust, more content types, and discoverability:
 
-- **Two more install targets** — **Windsurf** (`.windsurf/rules/*.md`) and **Aider** (`aider --read`). The library now exports to **5 platforms** (ChatGPT, Gemini, Cursor, Windsurf, Aider) and installs into **7 tools**.
-- **MCP server** (`npx pm-claude-skills-mcp`) — a zero-dependency Model Context Protocol server so MCP clients (Claude Desktop, Cline) **search and pull skills on demand** via `list_skills` / `search_skills` / `get_skill`. See [`mcp/`](mcp/).
-- **Automated npm publishing** — a GitHub Actions workflow ships the package on every release.
-- **Hero demo placement** in the README, ready for a Playground GIF.
+- **Skill Security Auditor** — `scripts/skill-audit.mjs` scans every skill (and its scripts) for prompt injection, data exfiltration, unsafe code, secrets, and hidden text; **HIGH findings fail CI**. New `security audit` badge + a `skill-security-auditor` skill.
+- **Personas** — 4 Claude Code output-styles (Startup CTO, Growth Marketer, Solo Founder, Product Leader) in [`output-styles/`](output-styles/).
+- **Orchestration guide** ([`ORCHESTRATION.md`](ORCHESTRATION.md)) — Skill Chain, Multi-Agent Handoff, Domain Deep-Dive, Solo Sprint.
+- **Static skill catalog** — a server-rendered, SEO-indexable catalog of every skill (linked from the README + Playground).
+- **Public roadmap** ([`ROADMAP.md`](ROADMAP.md)) with now/next/later + good first issues.
+
+<details>
+<summary><strong>v18.0.0 — Windsurf, Aider & an MCP Server</strong> (click to expand)</summary>
+
+- **Two more install targets** — **Windsurf** and **Aider** (now 5 export platforms / 7 tools).
+- **MCP server** (`npx pm-claude-skills-mcp`) — search & pull skills on demand from MCP clients.
+- **Automated npm publishing** workflow; README hero demo placement.
+
+</details>
 
 <details>
 <summary><strong>v17.0.0 — Agents, Commands & the npx CLI</strong> (click to expand)</summary>
