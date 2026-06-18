@@ -30,9 +30,13 @@ back to `results.example.json` (clearly labelled) so the page renders before you
 
 ### No local key? Run it in CI
 
-Add an `ANTHROPIC_API_KEY` repo secret, then go to **Actions → "Update Skill Leaderboard"
-→ Run workflow**. It runs the evals, commits `evals/results.json`, and the Pages deploy
-re-renders the public leaderboard with real numbers — no laptop required.
+1. Add an `ANTHROPIC_API_KEY` repo secret.
+2. Enable **Settings → Actions → General → Workflow permissions → "Allow GitHub Actions to
+   create and approve pull requests"** (so the workflow can open its results PR — `main`
+   requires PRs).
+3. **Actions → "Update Skill Leaderboard" → Run workflow.** It runs the evals and opens a
+   PR with `evals/results.json`. **Merge that PR** and the Pages deploy re-renders the
+   public leaderboard with real numbers — no laptop required.
 
 ## Add a case
 

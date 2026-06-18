@@ -10,6 +10,8 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 ## [Unreleased]
 
 ### Changed
+- **Leaderboard workflow opens a PR** instead of pushing to `main` (which the branch
+  ruleset blocks). After it runs, merge the auto-created results PR to publish real numbers.
 - **Faster, hang-proof evals.** The Anthropic client now has a per-request timeout (120s)
   and limited retries (429/5xx/timeout); the eval harness runs cases concurrently
   (default 4). The leaderboard workflow has a 20-minute job timeout. A 24-call run that
