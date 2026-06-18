@@ -1,0 +1,29 @@
+{
+  "_comment": "Eval cases: a representative input per skill. Run with: node evals/run-evals.mjs",
+  "cases": [
+    {
+      "skill": "rice-prioritisation",
+      "input": "Rank these for next quarter:\n1. Onboarding redesign — reach ~5000 users/qtr, big activation impact, ~3 person-months.\n2. Dark mode — ~8000 users want it, low impact, ~1 person-month.\n3. SSO for enterprise — ~400 accounts, high deal impact, ~4 person-months, low confidence."
+    },
+    {
+      "skill": "prd-template",
+      "input": "Feature: in-app referral program so existing users invite colleagues and both get a credit. Target: activated B2B users. Goal: grow signups 15% in Q3."
+    },
+    {
+      "skill": "cs-health-scorecard",
+      "input": "Account: Acme Corp, enterprise, ARR $120k, renewal in 90 days. DAU/MAU 18%, 2 open P2 tickets, CSAT 7, exec sponsor left last month, seats 80/100 used, payments on time."
+    },
+    {
+      "skill": "executive-summary",
+      "input": "Summarise: our Q2 retention dropped from 82% to 76% driven by a new onboarding flow that confused mobile users; we shipped a fix in week 10 and retention recovered to 80%; we recommend a full mobile onboarding rework next quarter."
+    },
+    {
+      "skill": "competitive-analysis",
+      "input": "Analyse our position vs Notion and Coda for a lightweight team wiki aimed at small startups. We're cheaper and faster to set up but have fewer integrations."
+    },
+    {
+      "skill": "sprint-planning",
+      "input": "Team of 5, 2-week sprint, average velocity 30 points, one engineer out 3 days. Backlog: checkout redesign (8), payment retries (5), analytics events (3), bug bash (3), API rate limiting (5)."
+    }
+  ]
+}

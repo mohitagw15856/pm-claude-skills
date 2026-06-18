@@ -153,6 +153,8 @@ Examples:
   npx pm-claude-skills add --agent cursor     # .mdc rules into ./.cursor/rules
   npx pm-claude-skills add --agent windsurf   # .md rules into ./.windsurf/rules
   npx pm-claude-skills add --agent codex --link
+
+  npx pm-claude-skills generate --from <url|file>   # turn your docs into a SKILL.md (needs ANTHROPIC_API_KEY)
 `;
 
 const opts = parse(process.argv.slice(2));
@@ -161,4 +163,9 @@ if (opts.version) console.log(VERSION);
 else if (opts.help || !cmd || cmd === 'help') console.log(HELP);
 else if (cmd === 'list') list();
 else if (cmd === 'add') add(opts);
+else if (cmd === 'generate') {
+  const { run } = await import('./generate.mjs');
+  try { process.exit(await run(process.argv.slice(3))); }
+  catch (e) { console.error(`Error: ${e.message}`); process.exit(1); }
+}
 else { console.error(`Unknown command: ${cmd}\n`); console.log(HELP); process.exit(2); }
