@@ -1,0 +1,67 @@
+name: Update Skill Leaderboard
+
+# Runs the eval harness with your ANTHROPIC_API_KEY secret, commits the real
+# results (evals/results.json), and lets the Pages deploy re-render the public
+# leaderboard with real numbers. Manual trigger so it never burns tokens by
+# surprise. (Uncomment the schedule to re-run, e.g. monthly, after model upgrades.)
+
+on:
+  workflow_dispatch:
+    inputs:
+      models:
+        description: 'Comma-separated model ids to score'
+        required: false
+        default: 'claude-sonnet-4-6,claude-haiku-4-5-20251001'
+      judge:
+        description: 'Judge model id'
+        required: false
+        default: 'claude-opus-4-8'
+  # schedule:
+  #   - cron: '0 6 1 * *'   # 06:00 on the 1st of each month
+
+permissions:
+  contents: write
+
+concurrency:
+  group: eval-leaderboard
+  cancel-in-progress: false
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run evals
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY secret is not set. Add it in Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+          node evals/run-evals.mjs \
+            --models "${{ github.event.inputs.models || 'claude-sonnet-4-6,claude-haiku-4-5-20251001' }}" \
+            --judge "${{ github.event.inputs.judge || 'claude-opus-4-8' }}"
+
+      - name: Build the leaderboard page (sanity check)
+        run: node scripts/build-leaderboard.mjs
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add evals/results.json
+          if git diff --cached --quiet; then
+            echo "No change in results."
+          else
+            git commit -m "chore(evals): refresh leaderboard results"
+            git push
+            echo "Committed evals/results.json — the Pages deploy will render real numbers."
+          fi

@@ -28,6 +28,12 @@ node scripts/build-leaderboard.mjs       # render web/leaderboard.html
 `run-evals.mjs` writes `evals/results.json`; the leaderboard builder prefers it and falls
 back to `results.example.json` (clearly labelled) so the page renders before you run real evals.
 
+### No local key? Run it in CI
+
+Add an `ANTHROPIC_API_KEY` repo secret, then go to **Actions → "Update Skill Leaderboard"
+→ Run workflow**. It runs the evals, commits `evals/results.json`, and the Pages deploy
+re-renders the public leaderboard with real numbers — no laptop required.
+
 ## Add a case
 
 Append to [`cases.json`](cases.json): `{ "skill": "<name>", "input": "<a realistic prompt>" }`.

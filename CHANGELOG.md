@@ -9,7 +9,12 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
-_Nothing yet._
+### Added
+- **One-click leaderboard updates in CI** — `.github/workflows/eval-leaderboard.yml`
+  ("Update Skill Leaderboard") runs the evals with the `ANTHROPIC_API_KEY` secret, commits
+  `evals/results.json`, and the Pages deploy re-renders the public leaderboard with real
+  numbers — no local key needed. The deploy workflow now also triggers on
+  `evals/results.json`.
 
 ## [20.0.0] — Agentic Tooling — 2026-06-18
 

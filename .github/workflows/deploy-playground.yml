@@ -10,6 +10,10 @@ on:
     paths:
       - 'skills/**'
       - 'web/**'
+      - 'evals/results.json'
+      - 'skill-tiers.json'
+      - 'scripts/build-docs.mjs'
+      - 'scripts/build-leaderboard.mjs'
       - '.github/workflows/deploy-playground.yml'
   workflow_dispatch:
 
