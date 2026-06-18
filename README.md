@@ -24,7 +24,7 @@
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest release (v20.1.0 — Star Nudges & Eval Hardening):** run any skill in CI with the **[GitHub Action](action/)**, turn your docs into a skill with **`npx pm-claude-skills generate`**, compare skills across models on the **[Skill Leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)** (now one-click in CI), and — if it saves you time — ⭐ the repo. See the [changelog](#-changelog).
+**🆕 Latest release (v20.1.0 — Star Nudges, Community PRs & Hardening):** a new **YouTube Script Writer** skill (174 total), a stdlib **feature-prioritisation** helper, safer installs, one-click leaderboard updates in CI, and star CTAs across the CLI/README/npm. See the [changelog](#-changelog).
 
 <!-- DEMO: replace web/docs-assets/playground.png below with web/docs-assets/playground-demo.gif
      once recorded (see web/docs-assets/README.md for how). The link goes to the live app. -->
@@ -405,9 +405,12 @@ More templates will follow. If you want to contribute one, see the [template con
 
 The highlights are below. For the structured, [Keep a Changelog](https://keepachangelog.com/)-format history, see **[CHANGELOG.md](CHANGELOG.md)**.
 
-### 🆕 What's New in v20.1.0 — Star Nudges & Eval Hardening
+### 🆕 What's New in v20.1.0 — Star Nudges, Community PRs & Hardening
 
 - **Star the repo, from anywhere you use it** — tasteful, non-spammy CTAs (no `postinstall`): after a successful `npx pm-claude-skills add`, in `--help`, in `list`, in the MCP server banner, below the README badges, and a `funding` link on npm.
+- **New skill: YouTube Script Writer** (experimental) — retention-optimized video scripts with hook variations, a video/audio cue table, and SEO metadata. Thanks @prajwal-28 (#50). **Now 174 skills.**
+- **Feature-prioritisation helper** — a dependency-free Python script that computes RICE/ICE rankings consistently across sessions. Thanks @zeotrix (#48).
+- **Safer installs + robust parsing** — the CLI refuses system-critical install targets, and `skillcheck` tolerates CRLF/whitespace in frontmatter. Thanks @MatrixNeoKozak (#47).
 - **One-click leaderboard in CI** — the "Update Skill Leaderboard" workflow runs the evals with your `ANTHROPIC_API_KEY` secret and opens a results PR; merge it to publish real numbers.
 - **Faster, hang-proof evals** — per-request timeout + retries in the API client and concurrent eval runs, so a CI run finishes in minutes and can't stall.
 

@@ -53,7 +53,7 @@
     "skillcheck": "node scripts/skillcheck.mjs",
     "build:exports": "node scripts/build-exports.mjs",
     "build:web": "node web/build-skills.mjs",
-    "check": "node scripts/skillcheck.mjs && node scripts/build-exports.mjs --check"
+    "check": "node scripts/skillcheck.mjs && node scripts/build-exports.mjs --check && node web/build-skills.mjs && git diff --exit-code -- web/skills.json"
   },
   "engines": {
     "node": ">=18"
