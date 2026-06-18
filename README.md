@@ -12,7 +12,7 @@
 [![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Cursor%20%7C%20Codex%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
 [![SkillCheck](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skillcheck.yml?branch=main&label=SkillCheck)](.github/workflows/skillcheck.yml)
 [![Security Audit](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skill-audit.yml?branch=main&label=security%20audit)](.github/workflows/skill-audit.yml)
-[![Version](https://img.shields.io/badge/version-19.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
+[![Version](https://img.shields.io/badge/version-20.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
 [![Install](https://img.shields.io/badge/Install%20in%20Claude%20Code-2%20minutes-orange)](https://github.com/mohitagw15856/pm-claude-skills#-quick-install-2-minutes)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4)](https://github.com/sponsors/mohitagw15856)
@@ -22,7 +22,7 @@
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest release (v19.0.0 — Security Auditor, Personas & Catalog):** a CI **Skill Security Auditor** that flags prompt-injection / unsafe code in any skill, **4 personas** (output-styles), an [orchestration guide](ORCHESTRATION.md), a server-rendered **skill catalog**, and a public [roadmap](ROADMAP.md). See the [changelog](#-changelog).
+**🆕 Latest release (v20.0.0 — Agentic Tooling):** run any skill in CI with the new **[GitHub Action](action/)**, turn your docs into a skill with **`npx pm-claude-skills generate`**, and compare skills across models on the **[Skill Leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)** (LLM-judge evals). See the [changelog](#-changelog).
 
 <!-- DEMO: replace web/docs-assets/playground.png below with web/docs-assets/playground-demo.gif
      once recorded (see web/docs-assets/README.md for how). The link goes to the live app. -->
@@ -403,15 +403,21 @@ More templates will follow. If you want to contribute one, see the [template con
 
 The highlights are below. For the structured, [Keep a Changelog](https://keepachangelog.com/)-format history, see **[CHANGELOG.md](CHANGELOG.md)**.
 
-### 🆕 What's New in v19.0.0 — Security Auditor, Personas & Catalog
+### 🆕 What's New in v20.0.0 — Agentic Tooling
 
-Trust, more content types, and discoverability:
+The library starts *doing* the work, not just describing it:
 
-- **Skill Security Auditor** — `scripts/skill-audit.mjs` scans every skill (and its scripts) for prompt injection, data exfiltration, unsafe code, secrets, and hidden text; **HIGH findings fail CI**. New `security audit` badge + a `skill-security-auditor` skill.
-- **Personas** — 4 Claude Code output-styles (Startup CTO, Growth Marketer, Solo Founder, Product Leader) in [`output-styles/`](output-styles/).
-- **Orchestration guide** ([`ORCHESTRATION.md`](ORCHESTRATION.md)) — Skill Chain, Multi-Agent Handoff, Domain Deep-Dive, Solo Sprint.
-- **Static skill catalog** — a server-rendered, SEO-indexable catalog of every skill (linked from the README + Playground).
-- **Public roadmap** ([`ROADMAP.md`](ROADMAP.md)) with now/next/later + good first issues.
+- **GitHub Action** ([`action/`](action/)) — run any skill in a repo's CI (auto PR descriptions, changelogs, release notes, reviews). `uses: mohitagw15856/pm-claude-skills/action@main`. We dogfood it to write this repo's own PR descriptions.
+- **`generate` command** — `npx pm-claude-skills generate --from <url|file>` turns your docs into a standard-compliant `SKILL.md`.
+- **Skill evals + Leaderboard** — LLM-as-judge scoring of skills across models, rendered as a public [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html).
+
+<details>
+<summary><strong>v19.0.0 — Security Auditor, Personas & Catalog</strong> (click to expand)</summary>
+
+- **Skill Security Auditor** — scans every skill (and its scripts) for prompt injection, exfiltration, unsafe code, secrets, hidden text; HIGH fails CI. Plus a `skill-security-auditor` skill.
+- **4 personas** (output-styles), an [orchestration guide](ORCHESTRATION.md), a server-rendered **skill catalog**, and a public [roadmap](ROADMAP.md).
+
+</details>
 
 <details>
 <summary><strong>v18.0.0 — Windsurf, Aider & an MCP Server</strong> (click to expand)</summary>

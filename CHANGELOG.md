@@ -9,7 +9,14 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+_Nothing yet._
+
+## [20.0.0] — Agentic Tooling — 2026-06-18
+
 ### Added
+- **Dogfooded Action** — `.github/workflows/pr-description.yml` uses our own GitHub Action
+  (`uses: ./action`) to auto-write this repo's PR descriptions when a PR opens with an
+  empty body (skips quietly without the `ANTHROPIC_API_KEY` secret and on forks).
 - **GitHub Action** ([`action/`](action/)) — run any skill in CI: `uses:
   mohitagw15856/pm-claude-skills/action@main` to auto-write PR descriptions,
   changelogs, release notes, or code-review checklists. Composite action +
@@ -211,7 +218,8 @@ Earlier releases (v1.0.0 – v5.0.0) predate this changelog. See the
 [article series](README.md#-the-article-series) for the full history of how the
 library grew from the first PM toolkit to 100+ skills.
 
-[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v19.0.0...HEAD
+[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v20.0.0...HEAD
+[20.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v19.0.0...v20.0.0
 [19.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v18.0.0...v19.0.0
 [18.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v17.0.0...v18.0.0
 [17.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v16.0.0...v17.0.0
