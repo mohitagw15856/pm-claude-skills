@@ -40,6 +40,7 @@
     "skills/",
     "agents/",
     "commands/",
+    "output-styles/",
     "exports/",
     "skill-tiers.json"
   ],

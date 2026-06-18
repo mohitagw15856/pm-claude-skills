@@ -10,3 +10,6 @@ venv/
 *.swp
 .idea/
 .vscode/
+
+# Generated docs catalog (built in CI for Pages)
+web/catalog.html

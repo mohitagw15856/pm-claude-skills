@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-172 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+173 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -148,6 +148,7 @@
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/GEM_INSTRUCTIONS.md` |
 | SEO Content Brief | `pm-gtm` | `pm-gtm/seo-content-brief/GEM_INSTRUCTIONS.md` |
 | Service Catalog Entry | `pm-engineering` | `pm-engineering/service-catalog-entry/GEM_INSTRUCTIONS.md` |
+| Skill Security Auditor | `other` | `other/skill-security-auditor/GEM_INSTRUCTIONS.md` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/GEM_INSTRUCTIONS.md` |
 | Social Ad Campaign | `pm-social` | `pm-social/social-ad-campaign/GEM_INSTRUCTIONS.md` |
 | Social Media Audit | `pm-social` | `pm-social/social-media-audit/GEM_INSTRUCTIONS.md` |

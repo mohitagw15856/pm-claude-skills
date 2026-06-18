@@ -102,10 +102,10 @@ function add(opts) {
       placeDir(src, join(target, name), opts);
       count++;
     }
-    // Claude Code also gets subagents and slash commands.
+    // Claude Code also gets subagents, slash commands, and output-styles.
     if (agent === 'claude') {
       const claudeRoot = dirname(target);
-      for (const kind of ['agents', 'commands']) {
+      for (const kind of ['agents', 'commands', 'output-styles']) {
         const src = join(PKG_ROOT, kind);
         if (!existsSync(src)) continue;
         const dest = join(claudeRoot, kind);

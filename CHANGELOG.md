@@ -9,7 +9,23 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
-_Nothing yet._
+### Added
+- **Skill Security Auditor** — `scripts/skill-audit.mjs` scans installable content
+  (`skills/*/SKILL.md` + each skill's `scripts/`) for prompt injection, data
+  exfiltration, dynamic code execution, destructive shell, hardcoded secrets, and hidden
+  text. HIGH findings fail CI (`skill-audit.yml`); a `security audit` badge in the README.
+  Plus a new **`skill-security-auditor`** skill that teaches the same review for any skill.
+- **Personas (output-styles)** — 4 Claude Code output styles in [`output-styles/`](output-styles/)
+  (Startup CTO, Growth Marketer, Solo Founder, Product Leader). `--agent claude` now also
+  installs `~/.claude/output-styles/`.
+- **Orchestration guide** — [`ORCHESTRATION.md`](ORCHESTRATION.md): Skill Chain,
+  Multi-Agent Handoff, Domain Deep-Dive, and Solo Sprint patterns for combining skills,
+  subagents, and commands.
+- **Static skill catalog** — `scripts/build-docs.mjs` generates a server-rendered,
+  SEO-indexable `web/catalog.html` of all skills (linked from the README and Playground;
+  built in the Pages deploy).
+- **Public roadmap** — [`ROADMAP.md`](ROADMAP.md) with now/next/later and a "good first
+  issues" list to grow contributors.
 
 ## [18.0.0] — Windsurf, Aider & an MCP Server — 2026-06-17
 

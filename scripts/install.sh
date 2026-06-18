@@ -106,10 +106,10 @@ else
     count=$((count + 1))
   done
 
-  # Claude Code also gets subagents and slash commands (siblings of skills/).
+  # Claude Code also gets subagents, slash commands, and output-styles (siblings of skills/).
   if [ "$AGENT" = "claude" ]; then
     claude_root="$(dirname "$TARGET")"   # ~/.claude
-    for kind in agents commands; do
+    for kind in agents commands output-styles; do
       src="$REPO_DIR/$kind"
       [ -d "$src" ] || continue
       dest="$claude_root/$kind"

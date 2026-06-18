@@ -38,6 +38,9 @@ jobs:
       - name: Rebuild skills.json from SKILL.md files
         run: node web/build-skills.mjs
 
+      - name: Build the static skill catalog (web/catalog.html)
+        run: node scripts/build-docs.mjs
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 

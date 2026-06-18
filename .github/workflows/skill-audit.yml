@@ -1,0 +1,31 @@
+name: Skill Security Audit
+
+# Scans installable skill content (skills/*/SKILL.md and each skill's scripts/)
+# for prompt injection, data exfiltration, dynamic code execution, destructive
+# shell, hardcoded secrets, and hidden text. Fails on HIGH-severity findings.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**'
+      - 'scripts/skill-audit.mjs'
+      - '.github/workflows/skill-audit.yml'
+  pull_request:
+    paths:
+      - 'skills/**'
+      - 'scripts/skill-audit.mjs'
+      - '.github/workflows/skill-audit.yml'
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run the skill security auditor
+        run: node scripts/skill-audit.mjs

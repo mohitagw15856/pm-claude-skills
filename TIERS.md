@@ -14,7 +14,7 @@ strongest work and know what to expect from the rest.
 
 ---
 
-## 🟢 Production-Ready (46)
+## 🟢 Production-Ready (47)
 
 These are the skills to reach for first — the most-used, most-refined frameworks in the
 library.
@@ -44,7 +44,7 @@ library.
 `go-to-market` · `competitor-teardown` · `product-positioning-doc`
 
 **Cross-profession**
-`executive-summary` · `press-release`
+`executive-summary` · `press-release` · `skill-security-auditor`
 
 ---
 

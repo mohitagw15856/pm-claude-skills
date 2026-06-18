@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-172 skills exported. Copy a `.mdc rule` into the tool to use it.
+173 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -148,6 +148,7 @@
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/security-threat-model.md` |
 | SEO Content Brief | `pm-gtm` | `pm-gtm/seo-content-brief/seo-content-brief.md` |
 | Service Catalog Entry | `pm-engineering` | `pm-engineering/service-catalog-entry/service-catalog-entry.md` |
+| Skill Security Auditor | `other` | `other/skill-security-auditor/skill-security-auditor.md` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/slo-error-budget.md` |
 | Social Ad Campaign | `pm-social` | `pm-social/social-ad-campaign/social-ad-campaign.md` |
 | Social Media Audit | `pm-social` | `pm-social/social-media-audit/social-media-audit.md` |

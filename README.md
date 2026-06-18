@@ -8,8 +8,10 @@
 [![Skills](https://img.shields.io/badge/skills-167-blue)](https://github.com/mohitagw15856/pm-claude-skills)
 [![Subagents](https://img.shields.io/badge/subagents-4-blueviolet)](agents/)
 [![Commands](https://img.shields.io/badge/slash%20commands-6-blueviolet)](commands/)
+[![Personas](https://img.shields.io/badge/personas-4-blueviolet)](output-styles/)
 [![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Cursor%20%7C%20Codex%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
 [![SkillCheck](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skillcheck.yml?branch=main&label=SkillCheck)](.github/workflows/skillcheck.yml)
+[![Security Audit](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skill-audit.yml?branch=main&label=security%20audit)](.github/workflows/skill-audit.yml)
 [![Version](https://img.shields.io/badge/version-18.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
 [![Install](https://img.shields.io/badge/Install%20in%20Claude%20Code-2%20minutes-orange)](https://github.com/mohitagw15856/pm-claude-skills#-quick-install-2-minutes)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
@@ -194,13 +196,17 @@ It's not just skills. The library also ships **Claude Code subagents** and **sla
 
 `/prd` · `/rice` · `/sprint-plan` · `/health-scorecard` · `/retro` · `/exec-summary`
 
-Install everything for Claude Code in one go (skills **+** subagents **+** commands):
+**Personas** ([`output-styles/`](output-styles/)) — Claude Code output styles that change the assistant's whole voice and default skill loadout. Switch with `/output-style`:
+
+`Startup CTO` · `Growth Marketer` · `Solo Founder` · `Product Leader`
+
+Install everything for Claude Code in one go (skills **+** subagents **+** commands **+** personas):
 
 ```bash
-./scripts/install.sh --agent claude       # ~/.claude/{skills,agents,commands}
+npx pm-claude-skills add --agent claude   # ~/.claude/{skills,agents,commands,output-styles}
 ```
 
-Commands whose skill ships a Python helper (RICE, sprint capacity, customer health) run it to **compute** results, not estimate them.
+Commands whose skill ships a Python helper (RICE, sprint capacity, customer health) run it to **compute** results, not estimate them. To string these together, see the [orchestration patterns](ORCHESTRATION.md) (skill chains & multi-agent handoffs).
 
 ---
 
@@ -222,7 +228,7 @@ Then ask: *"search the skills for customer churn, then apply the best one to my 
 
 ## 🌐 Skill Playground — Try Any Skill in Your Browser
 
-**▶ Live: [mohitagw15856.github.io/pm-claude-skills](https://mohitagw15856.github.io/pm-claude-skills/)**
+**▶ Live: [mohitagw15856.github.io/pm-claude-skills](https://mohitagw15856.github.io/pm-claude-skills/)** · 📚 [Browse the full skill catalog](https://mohitagw15856.github.io/pm-claude-skills/catalog.html)
 
 Don't want to install anything yet? Run any of these skills from a **zero-backend web app** using **your own Claude API key**. Pick a skill, fill in the auto-generated form, and Claude streams the result. Your key is stored only in your browser (`localStorage`) and sent directly to the Anthropic API — nothing touches a server we own.
 
@@ -589,7 +595,7 @@ This repo was built alongside a published article series. Read the full story:
 A 170+ skill library doesn't have 170 equally-mature skills, and pretending otherwise
 wastes your time. Skills are tiered honestly so you can start with the best work:
 
-- 🟢 **Production-Ready (46)** — battle-tested, stable output, used in real work. Includes the three skills with computed Python helpers (sprint planning, RICE, customer health). **Start here.**
+- 🟢 **Production-Ready (47)** — battle-tested, stable output, used in real work. Includes the three skills with computed Python helpers (sprint planning, RICE, customer health). **Start here.**
 - 🔵 **Stable** — solid, reliable, well-structured; the default for most of the library.
 - 🟡 **Experimental** — newer or dependent on an external tool/API/scrape (Gemini, Gmail, browser automation, social scraping). Useful, but more setup and more moving parts.
 
@@ -948,7 +954,7 @@ Higher tiers include custom skill development for your team, direct access for s
 
 This is an open-source community library. If you've built a skill that saves you time, share it here.
 
-**Found a bug?** [Open a bug report →](../../issues/new?template=bug-report.md) — use the template so it's easy to triage.
+**New here?** See the [Roadmap & good first issues](ROADMAP.md#-good-first-issues) for starter tasks. **Found a bug?** [Open a bug report →](../../issues/new?template=bug-report.md).
 
 **How to contribute:**
 
@@ -958,7 +964,7 @@ This is an open-source community library. If you've built a skill that saves you
 3. Fill in the sections, then check it: `npm run skillcheck`
 4. Raise a pull request with a short description of what the skill does and why you built it
 
-> CI runs **SkillCheck** on every PR — `node scripts/skillcheck.mjs` validates structure and must pass.
+> Every PR is gated by **SkillCheck** (structure — `node scripts/skillcheck.mjs`) and the **Skill Security Auditor** (safety — `node scripts/skill-audit.mjs`, which flags prompt-injection / exfiltration / unsafe code). Both must pass.
 
 **SKILL.md template:**
 ---
