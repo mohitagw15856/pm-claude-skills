@@ -22,10 +22,12 @@ const strict = args.includes('--strict');
 const asJson = args.includes('--json');
 
 function parseFrontmatter(text) {
-  const m = text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+  // Tolerate optional leading whitespace and CRLF/LF line endings so authored-on-Windows
+  // files don't produce false negatives.
+  const m = text.match(/^\s*---\r?\n([\s\S]*?)\r?\n\s*---\r?\n?([\s\S]*)$/);
   if (!m) return { meta: null, body: text };
   const meta = {};
-  for (const line of m[1].split('\n')) {
+  for (const line of m[1].split(/\r?\n/)) {
     const kv = line.match(/^(\w[\w-]*):\s*(.*)$/);
     if (kv) {
       let v = kv[2].trim();
