@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-writers",
+  "version": "1.1.0",
+  "description": "Writers & Content Creators skills: Instagram Post Downloader, AEO Optimizer, Thumbnail Creator, Substack Notes Scraper, Notes Humanizer, YouTube Script Writer. Download Instagram carousels as PDFs, restructure articles for AI citation, generate thumbnail candidates via Gemini, export Substack Notes analytics to Excel, strip AI writing patterns from any text, and write retention-optimized YouTube scripts with hooks and visual/audio cues.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["content-creation", "writing", "youtube", "social-media", "seo", "aeo", "substack", "instagram", "thumbnail", "humanizer"]
+}

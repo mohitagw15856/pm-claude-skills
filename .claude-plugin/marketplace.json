@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "14.0.0",
-  "description": "PM stands for Professional, not just Product Management. 167 Claude Skills + 4 agent templates across 26 bundles covering 18 professions — engineering, customer success, legal, finance, HR, sales, design, Figma, marketing, social media, writers, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
+  "version": "20.2.0",
+  "description": "PM stands for Professional, not just Product Management. 174 Claude Skills + 4 agent templates across 26 bundles covering 18 professions — engineering, customer success, legal, finance, HR, sales, design, Figma, marketing, social media, writers, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
@@ -34,8 +34,8 @@
     },
     {
       "name": "pm-delivery",
-      "description": "Sprint & delivery skills: Sprint Planning, Technical Spec, A/B Test Planner, Go-to-Market Planner, Launch Checklist, Sprint Brief, Retro Analysis, PPTX Slide Auditor, User Story Writer. Write production-ready user stories with Given/When/Then acceptance criteria, edge cases, and definition of done.",
-      "version": "3.2.0",
+      "description": "Sprint & delivery skills: Sprint Planning, Technical Spec, A/B Test Planner, Go-to-Market Planner, Launch Checklist, Sprint Brief, Retro Analysis, PPTX Slide Auditor, User Story Writer, Launch Readiness. Write production-ready user stories with Given/When/Then acceptance criteria, plus a cross-functional pre-launch readiness assessment with an explicit Go / Conditional Go / No-Go recommendation.",
+      "version": "3.3.0",
       "category": "productivity",
       "source": "./plugins/pm-delivery",
       "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
@@ -82,8 +82,8 @@
     },
     {
       "name": "pm-engineering",
-      "description": "Engineering & tech skills: Code Review Checklist, Incident Postmortem, API Docs Writer, Architecture Decision Record, Debugging Log Analyser, PR Description Writer, System Design Interview, Changelog Generator, Test Strategy Doc, Runbook Writer, CI/CD Playbook, SLO & Error Budget, Developer Onboarding Doc, On-Call Runbook, Security Threat Model, Performance Budget, Database Schema Design, Database Migration Plan, Technical Debt Register, RFC Writer, Capacity Planning, Load Testing Plan, Disaster Recovery Plan, Feature Flag Guide, Dependency Audit, Service Catalog Entry, Monitoring Setup Guide, Local Dev Setup, API Versioning Strategy, Infra-as-Code Review, Engineering Weekly Report, Tech Radar, Sprint Velocity Analysis, Microservices Decomposition, Engineering Hiring Rubric, Context Mode, Claude Superpowers. 37 structured skills for engineering teams, SREs, technical PMs, and Claude Code power users.",
-      "version": "4.1.0",
+      "description": "Engineering & tech skills: Code Review Checklist, Incident Postmortem, API Docs Writer, Architecture Decision Record, Debugging Log Analyser, PR Description Writer, System Design Interview, Changelog Generator, Test Strategy Doc, Runbook Writer, CI/CD Playbook, SLO & Error Budget, Developer Onboarding Doc, On-Call Runbook, Security Threat Model, Performance Budget, Database Schema Design, Database Migration Plan, Technical Debt Register, RFC Writer, Capacity Planning, Load Testing Plan, Disaster Recovery Plan, Feature Flag Guide, Dependency Audit, Service Catalog Entry, Monitoring Setup Guide, Local Dev Setup, API Versioning Strategy, Infra-as-Code Review, Engineering Weekly Report, Tech Radar, Sprint Velocity Analysis, Microservices Decomposition, Engineering Hiring Rubric, Context Mode, Claude Superpowers, Skill Security Auditor. 38 structured skills for engineering teams, SREs, technical PMs, and Claude Code power users — including a security audit for any SKILL.md / system prompt before you install or merge it.",
+      "version": "4.2.0",
       "category": "productivity",
       "source": "./plugins/pm-engineering",
       "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
@@ -202,8 +202,8 @@
     },
     {
       "name": "pm-writers",
-      "description": "Writers & Content Creators skills: Instagram Post Downloader, AEO Optimizer, Thumbnail Creator, Substack Notes Scraper, Notes Humanizer. Download Instagram carousels as PDFs, restructure articles for AI citation, generate thumbnail candidates via Gemini, export Substack Notes analytics to Excel, and strip AI writing patterns from any text.",
-      "version": "1.0.0",
+      "description": "Writers & Content Creators skills: Instagram Post Downloader, AEO Optimizer, Thumbnail Creator, Substack Notes Scraper, Notes Humanizer, YouTube Script Writer. Download Instagram carousels as PDFs, restructure articles for AI citation, generate thumbnail candidates via Gemini, export Substack Notes analytics to Excel, strip AI writing patterns from any text, and write retention-optimized YouTube scripts with hooks and visual/audio cues.",
+      "version": "1.1.0",
       "category": "productivity",
       "source": "./plugins/pm-writers",
       "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
