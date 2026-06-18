@@ -1,18 +1,18 @@
-# 🧠 PM Skills — 167 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
+# 🧠 PM Skills — 174 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
 
 > Open-source **Agent Skills** (`SKILL.md`) + subagents + slash commands for every profession — one source, every AI coding tool.
 
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
 [![npm](https://img.shields.io/npm/v/pm-claude-skills?logo=npm&color=cb3837)](https://www.npmjs.com/package/pm-claude-skills)
 [![npm downloads](https://img.shields.io/npm/dm/pm-claude-skills?logo=npm&color=cb3837&label=installs)](https://www.npmjs.com/package/pm-claude-skills)
-[![Skills](https://img.shields.io/badge/skills-167-blue)](https://github.com/mohitagw15856/pm-claude-skills)
+[![Skills](https://img.shields.io/badge/skills-174-blue)](https://github.com/mohitagw15856/pm-claude-skills)
 [![Subagents](https://img.shields.io/badge/subagents-4-blueviolet)](agents/)
 [![Commands](https://img.shields.io/badge/slash%20commands-6-blueviolet)](commands/)
 [![Personas](https://img.shields.io/badge/personas-4-blueviolet)](output-styles/)
 [![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Cursor%20%7C%20Codex%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
 [![SkillCheck](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skillcheck.yml?branch=main&label=SkillCheck)](.github/workflows/skillcheck.yml)
 [![Security Audit](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skill-audit.yml?branch=main&label=security%20audit)](.github/workflows/skill-audit.yml)
-[![Version](https://img.shields.io/badge/version-20.1.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
+[![Version](https://img.shields.io/badge/version-20.2.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
 [![Install](https://img.shields.io/badge/Install%20in%20Claude%20Code-2%20minutes-orange)](https://github.com/mohitagw15856/pm-claude-skills#-quick-install-2-minutes)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4)](https://github.com/sponsors/mohitagw15856)
@@ -20,11 +20,11 @@
 ### ⭐ If this saves you time, [star the repo](https://github.com/mohitagw15856/pm-claude-skills) — it's the #1 way to help others find it.
 
 > **PM stands for Professional, not just Product Management.**
-> 167 professional skills + 4 agent templates across 26 bundles covering 18 professions. Built for Claude Code — and now portable to ChatGPT, Gemini, and Hermes Agent. Built by a PM, used by everyone.
+> 174 professional skills + 4 agent templates across 26 bundles covering 18 professions. Built for Claude Code — and now portable to ChatGPT, Gemini, and Hermes Agent. Built by a PM, used by everyone.
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest release (v20.1.0 — Star Nudges, Community PRs & Hardening):** a new **YouTube Script Writer** skill (174 total), a stdlib **feature-prioritisation** helper, safer installs, one-click leaderboard updates in CI, and star CTAs across the CLI/README/npm. See the [changelog](#-changelog).
+**🆕 Latest release (v20.2.0 — Community PRs & New Skill):** a new **YouTube Script Writer** skill (**174 total**), a stdlib **feature-prioritisation** helper, safer installs, and robust frontmatter parsing — all from community contributors. See the [changelog](#-changelog).
 
 <!-- DEMO: replace web/docs-assets/playground.png below with web/docs-assets/playground-demo.gif
      once recorded (see web/docs-assets/README.md for how). The link goes to the live app. -->
@@ -43,7 +43,7 @@ A community-built library of professional skills for every field — product man
 - [📦 Plugin Directory](#-plugin-directory)
 - [🤖 Building Blocks for Agent Templates](#-building-blocks-for-agent-templates)
 - [🏷️ Skill Tiers — start with the strongest](#️-skill-tiers--start-with-the-strongest)
-- [🗂️ All 167 Skills](#️-all-167-skills)
+- [🗂️ All 174 Skills](#️-all-174-skills)
 - [📋 Changelog](#-changelog)
 - [🤝 Contributing](#-contributing--add-your-skill)
 - [🔗 Related Projects](#-related-projects)
@@ -324,7 +324,7 @@ Not sure which plugin to install? Here's what each one covers:
 
 On May 5, 2026, Anthropic [released their first agent templates](https://www.anthropic.com/news/finance-agents) — pre-packaged Claude agents that combine **skills, connectors, and subagents** into ready-to-run workflows for financial services.
 
-This library is the largest open-source collection of professional skills available — covering 17 professions beyond financial services. **The 167 skills here are the building blocks for agent templates outside of finance.**
+This library is the largest open-source collection of professional skills available — covering 17 professions beyond financial services. **The 174 skills here are the building blocks for agent templates outside of finance.**
 
 ### What is an agent template?
 
@@ -405,14 +405,21 @@ More templates will follow. If you want to contribute one, see the [template con
 
 The highlights are below. For the structured, [Keep a Changelog](https://keepachangelog.com/)-format history, see **[CHANGELOG.md](CHANGELOG.md)**.
 
-### 🆕 What's New in v20.1.0 — Star Nudges, Community PRs & Hardening
+### 🆕 What's New in v20.2.0 — Community PRs & New Skill
 
-- **Star the repo, from anywhere you use it** — tasteful, non-spammy CTAs (no `postinstall`): after a successful `npx pm-claude-skills add`, in `--help`, in `list`, in the MCP server banner, below the README badges, and a `funding` link on npm.
 - **New skill: YouTube Script Writer** (experimental) — retention-optimized video scripts with hook variations, a video/audio cue table, and SEO metadata. Thanks @prajwal-28 (#50). **Now 174 skills.**
 - **Feature-prioritisation helper** — a dependency-free Python script that computes RICE/ICE rankings consistently across sessions. Thanks @zeotrix (#48).
 - **Safer installs + robust parsing** — the CLI refuses system-critical install targets, and `skillcheck` tolerates CRLF/whitespace in frontmatter. Thanks @MatrixNeoKozak (#47).
+- **Catalog reconciled to 174** — the headline, badge, and skill catalog now reflect the true count, with entries added for Skill Security Auditor, Launch Readiness, and YouTube Script Writer.
+
+<details>
+<summary><strong>v20.1.0 — Star Nudges & Eval Hardening</strong> (click to expand)</summary>
+
+- **Star the repo, from anywhere you use it** — tasteful, non-spammy CTAs (no `postinstall`): after a successful `npx pm-claude-skills add`, in `--help`, in `list`, in the MCP server banner, below the README badges, and a `funding` link on npm.
 - **One-click leaderboard in CI** — the "Update Skill Leaderboard" workflow runs the evals with your `ANTHROPIC_API_KEY` secret and opens a results PR; merge it to publish real numbers.
 - **Faster, hang-proof evals** — per-request timeout + retries in the API client and concurrent eval runs, so a CI run finishes in minutes and can't stall.
+
+</details>
 
 <details>
 <summary><strong>v20.0.0 — Agentic Tooling</strong> (click to expand)</summary>
@@ -659,12 +666,12 @@ If you're new, install `pm-essentials` and try a couple of Production-Ready skil
 
 ---
 
-## 🗂️ All 167 Skills
+## 🗂️ All 174 Skills
 
 The [Plugin Directory](#-plugin-directory) above summarises every bundle. Expand below for the full per-skill breakdown with folder paths.
 
 <details>
-<summary><strong>Browse all 167 skills by profession</strong> (click to expand)</summary>
+<summary><strong>Browse all 174 skills by profession</strong> (click to expand)</summary>
 
 ### 🛠️ Product Management (Skills 1–37)
 **Bundles:** `pm-essentials` · `pm-discovery` · `pm-planning` · `pm-delivery` · `pm-analytics` · `pm-strategy` · `pm-advanced` · `pm-rituals`
@@ -701,7 +708,7 @@ The [Plugin Directory](#-plugin-directory) above summarises every bundle. Expand
 
 ---
 
-### 👩‍💻 Engineering & Tech (Skills 46–80, 166–167)
+### 👩‍💻 Engineering & Tech (Skills 46–80, 166–168)
 **Bundle:** `pm-engineering`
 
 | # | Skill | Folder | What It Does |
@@ -743,6 +750,7 @@ The [Plugin Directory](#-plugin-directory) above summarises every bundle. Expand
 | 80 | **Engineering Hiring Rubric** 🆕 | `skills/engineering-hiring-rubric/` | Technical interview rubric with level expectations, coding scorecard, system design guide, behavioural question bank, and debrief template |
 | 166 | **Context Mode** 🆕 | `skills/context-mode/` | Filters command output noise and maintains a session log so Claude resumes exactly where it left off after a context reset |
 | 167 | **Claude Superpowers** 🆕 | `skills/claude-superpowers/` | Forces Claude Code to plan first, work in isolation, write tests before code, and double-review its own output — consistently better first passes |
+| 168 | **Skill Security Auditor** 🆕 | `skills/skill-security-auditor/` | Audits any SKILL.md / system prompt for prompt injection, data exfiltration, code execution, secrets, and hidden text; returns a risk-rated report with an install / don't-install recommendation |
 
 ---
 
@@ -869,7 +877,7 @@ claude plugin install pm-cs@pm-claude-skills
 
 ---
 
-### ⚙️ Operations (Skills 120–126, 164–165)
+### ⚙️ Operations (Skills 120–126, 164–165, 169)
 **Bundle:** `pm-operations`
 
 | # | Skill | Folder | What It Does |
@@ -883,6 +891,7 @@ claude plugin install pm-cs@pm-claude-skills
 | 126 | **RACI Matrix** 🆕 | `skills/raci-matrix/` | RACI with role definitions, decision map, anti-pattern guide, and a communication template for all teams |
 | 164 | **Email Triage** 🆕 | `skills/email-triage/` | Reads Gmail for a configurable window and surfaces only what needs action — priority-ranked with urgency ratings and reply starters |
 | 165 | **Morning Intelligence** 🆕 | `skills/morning-intelligence/` | 15-question interview that writes a personalised master prompt for your daily news brief, ready for Cowork Scheduled Tasks or Claude Code Routines |
+| 169 | **Launch Readiness** 🆕 | `skills/launch-readiness/` | Cross-functional pre-launch assessment with a function-by-function readiness status, ranked blockers (owners + deadlines), a risk register, and an explicit Go / Conditional Go / No-Go recommendation |
 
 ---
 
@@ -964,7 +973,7 @@ claude plugin install pm-social@pm-claude-skills
 
 ---
 
-### ✍️ Writers & Content Creators (Skills 156–160)
+### ✍️ Writers & Content Creators (Skills 156–160, 170)
 **Bundle:** `pm-writers`
 
 > Install:
@@ -980,6 +989,7 @@ claude plugin install pm-writers@pm-claude-skills
 | 158 | **Thumbnail Creator** 🆕 | `skills/thumbnail-creator/` | Generates brand-aligned thumbnail candidates via Gemini API; Claude evaluates results via computer vision and returns ranked candidates with rationale |
 | 159 | **Substack Notes Scraper** 🆕 | `skills/substack-notes-scraper/` | Scrapes Substack Notes and exports likes, comments, and restacks to a formatted .xlsx with frozen headers, filters, and top-performer highlighting |
 | 160 | **Notes Humanizer** 🆕 | `skills/notes-humanizer/` | Strips AI writing patterns (em dashes, filler phrases, uniform rhythm) across 3 phases: audit, strip, inject — returns side-by-side comparison and clean final text |
+| 170 | **YouTube Script Writer** 🆕 | `skills/youtube-script-writer/` | Retention-optimized video scripts with 3 title/thumbnail concepts, 3 hook variations, a video/audio cue script table, and SEO metadata |
 
 </details>
 
@@ -987,7 +997,7 @@ claude plugin install pm-writers@pm-claude-skills
 
 ## ❤️ Sponsor This Work
 
-Building and maintaining 167 skills across 26 bundles takes real time — testing skills against new model releases, building new ones from community requests, writing the article series, and keeping documentation current.
+Building and maintaining 174 skills across 26 bundles takes real time — testing skills against new model releases, building new ones from community requests, writing the article series, and keeping documentation current.
 
 If these skills save you time at work, consider sponsoring:
 
