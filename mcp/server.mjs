@@ -166,6 +166,7 @@ function handle(msg) {
 }
 
 process.stderr.write(`[${SERVER_NAME}] MCP server ready — ${SKILLS.length} skills, ${TOOLS.length} tools.\n`);
+process.stderr.write(`[${SERVER_NAME}] ⭐ Star the repo: https://github.com/mohitagw15856/pm-claude-skills\n`);
 const rl = createInterface({ input: process.stdin });
 rl.on('line', (line) => {
   const s = line.trim();
