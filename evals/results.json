@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T20:13:31.726Z",
+  "generatedAt": "2026-06-18T20:35:19.929Z",
   "judge": "claude-opus-4-8",
   "models": [
     "claude-sonnet-4-6",
@@ -19,9 +19,9 @@
         "structure": 5,
         "completeness": 5,
         "usefulness": 5,
-        "grounding": 5
+        "grounding": 4
       },
-      "overall": 5
+      "overall": 4.75
     },
     {
       "skill": "rice-prioritisation",
@@ -30,9 +30,9 @@
         "structure": 5,
         "completeness": 5,
         "usefulness": 5,
-        "grounding": 4
+        "grounding": 5
       },
-      "overall": 4.75
+      "overall": 5
     },
     {
       "skill": "prd-template",
@@ -63,9 +63,9 @@
         "structure": 5,
         "completeness": 5,
         "usefulness": 5,
-        "grounding": 4
+        "grounding": 5
       },
-      "overall": 4.75
+      "overall": 5
     },
     {
       "skill": "cs-health-scorecard",
@@ -84,19 +84,19 @@
       "scores": {
         "structure": 5,
         "completeness": 5,
-        "usefulness": 4,
+        "usefulness": 5,
         "grounding": 4
       },
-      "overall": 4.5
+      "overall": 4.75
     },
     {
       "skill": "executive-summary",
       "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
-        "completeness": 4,
+        "completeness": 5,
         "usefulness": 4,
-        "grounding": 4
+        "grounding": 3
       },
       "overall": 4.25
     },
@@ -116,11 +116,11 @@
       "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
-        "completeness": 5,
+        "completeness": 4,
         "usefulness": 5,
-        "grounding": 4
+        "grounding": 3
       },
-      "overall": 4.75
+      "overall": 4.25
     },
     {
       "skill": "sprint-planning",
