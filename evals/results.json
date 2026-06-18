@@ -1,0 +1,148 @@
+{
+  "generatedAt": "2026-06-18T12:40:14.995Z",
+  "judge": "claude-opus-4-8",
+  "models": [
+    "claude-sonnet-4-6",
+    "claude-haiku-4-5-20251001"
+  ],
+  "dimensions": [
+    "structure",
+    "completeness",
+    "usefulness",
+    "grounding"
+  ],
+  "results": [
+    {
+      "skill": "rice-prioritisation",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5
+    },
+    {
+      "skill": "rice-prioritisation",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "prd-template",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "prd-template",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 3
+      },
+      "overall": 4.25
+    },
+    {
+      "skill": "cs-health-scorecard",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5
+    },
+    {
+      "skill": "cs-health-scorecard",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "executive-summary",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5
+    },
+    {
+      "skill": "executive-summary",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "competitive-analysis",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "competitive-analysis",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.5
+    },
+    {
+      "skill": "sprint-planning",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "sprint-planning",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 4,
+        "grounding": 3
+      },
+      "overall": 4
+    }
+  ]
+}
