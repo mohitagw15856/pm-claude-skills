@@ -9,7 +9,31 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
-## [20.1.0] — Star Nudges, Community PRs & Hardening — 2026-06-18
+## [20.2.0] — Community PRs & New Skill — 2026-06-18
+
+### Added
+- **New skill: YouTube Script Writer** (experimental) — retention-optimized video scripts with
+  3 title/thumbnail concepts, 3 hook variations, a video/audio cue script table, and SEO
+  metadata. Thanks @prajwal-28 (#50). Library is now **174 skills**.
+- **Feature-prioritisation helper script** — a dependency-free (stdlib-only) Python helper that
+  computes RICE/ICE rankings from JSON/CSV/stdin, so scoring is consistent across sessions.
+  Thanks @zeotrix (#48, closes #39).
+
+### Changed
+- **Safer installs** — the CLI now resolves the install target and refuses system-critical
+  directories (`/`, `/usr`, `/etc`, `/root`, …) so a mistyped `--target` can't clobber the
+  system. Thanks @MatrixNeoKozak (#47).
+- **README catalog reconciled to the real count** — the headline, badge, table of contents, and
+  "All Skills" catalog now say **174** (was a stale 167); added catalog entries for Skill
+  Security Auditor (#168), Launch Readiness (#169), and YouTube Script Writer (#170).
+
+### Fixed
+- **`skillcheck` frontmatter parser** tolerates leading whitespace and CRLF/LF line endings, so
+  skills authored on Windows no longer produce false negatives. Thanks @MatrixNeoKozak (#47).
+- **`npm run check` now guards `web/skills.json`** — it rebuilds the file and fails on any drift,
+  so a stale playground index can't pass locally and then break CI.
+
+## [20.1.0] — Star Nudges & Eval Hardening — 2026-06-18
 
 ### Added
 - **Star the repo, from anywhere you use it.** Tasteful, non-spammy calls-to-action that turn
@@ -17,12 +41,6 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
   `npx pm-claude-skills add`, in `--help`, in `list`, in the MCP server's startup banner, a
   CTA below the README badges (npm renders it on the package page), and a `funding` field in
   `package.json` so npm shows a Fund/Sponsor link.
-- **New skill: YouTube Script Writer** (experimental) — retention-optimized video scripts with
-  3 title/thumbnail concepts, 3 hook variations, a video/audio cue script table, and SEO
-  metadata. Thanks @prajwal-28 (#50). Library is now **174 skills**.
-- **Feature-prioritisation helper script** — a dependency-free (stdlib-only) Python helper that
-  computes RICE/ICE rankings from JSON/CSV/stdin, so scoring is consistent across sessions.
-  Thanks @zeotrix (#48, closes #39).
 - **One-click leaderboard updates in CI** — `.github/workflows/eval-leaderboard.yml`
   ("Update Skill Leaderboard") runs the evals with the `ANTHROPIC_API_KEY` secret, commits
   `evals/results.json`, and the Pages deploy re-renders the public leaderboard with real
@@ -30,21 +48,12 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
   `evals/results.json`.
 
 ### Changed
-- **Safer installs** — the CLI now resolves the install target and refuses system-critical
-  directories (`/`, `/usr`, `/etc`, `/root`, …) so a mistyped `--target` can't clobber the
-  system. Thanks @MatrixNeoKozak (#47).
 - **Leaderboard workflow opens a PR** instead of pushing to `main` (which the branch
   ruleset blocks). After it runs, merge the auto-created results PR to publish real numbers.
 - **Faster, hang-proof evals.** The Anthropic client now has a per-request timeout (120s)
   and limited retries (429/5xx/timeout); the eval harness runs cases concurrently
   (default 4). The leaderboard workflow has a 20-minute job timeout. A 24-call run that
   was sequential now finishes in a few minutes and can't stall a job indefinitely.
-
-### Fixed
-- **`skillcheck` frontmatter parser** tolerates leading whitespace and CRLF/LF line endings, so
-  skills authored on Windows no longer produce false negatives. Thanks @MatrixNeoKozak (#47).
-- **`npm run check` now guards `web/skills.json`** — it rebuilds the file and fails on any drift,
-  so a stale playground index can't pass locally and then break CI.
 
 ## [20.0.0] — Agentic Tooling — 2026-06-18
 
