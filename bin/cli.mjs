@@ -141,6 +141,7 @@ function list() {
   console.log('\nNative SKILL.md agents: claude, hermes, codex, openclaw (install skill folders).');
   console.log('Claude also gets subagents + slash commands. Cursor/Windsurf install rule files;');
   console.log('Aider installs conventions you load with "aider --read".');
+  console.log(`\n${STAR}`);
 }
 
 const HELP = `pm-claude-skills — install professional Agent Skills into any AI coding tool.
