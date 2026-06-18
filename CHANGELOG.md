@@ -9,6 +9,12 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+### Changed
+- **Faster, hang-proof evals.** The Anthropic client now has a per-request timeout (120s)
+  and limited retries (429/5xx/timeout); the eval harness runs cases concurrently
+  (default 4). The leaderboard workflow has a 20-minute job timeout. A 24-call run that
+  was sequential now finishes in a few minutes and can't stall a job indefinitely.
+
 ### Added
 - **One-click leaderboard updates in CI** — `.github/workflows/eval-leaderboard.yml`
   ("Update Skill Leaderboard") runs the evals with the `ANTHROPIC_API_KEY` secret, commits

@@ -61,33 +61,53 @@ function parseScores(text) {
   return s;
 }
 
+// Run an async worker over `items` with at most `limit` in flight.
+async function pool(items, limit, worker) {
+  const out = [];
+  let i = 0;
+  await Promise.all(Array.from({ length: Math.min(limit, items.length) }, async () => {
+    while (i < items.length) {
+      const idx = i++;
+      out[idx] = await worker(items[idx]);
+    }
+  }));
+  return out;
+}
+
+async function scoreTask({ c, body, description, model }) {
+  try {
+    const output = await complete({ apiKey, model, system: runPrompt(body), messages: [{ role: 'user', content: c.input }], maxTokens: 3000 });
+    const judged = await complete({ apiKey, model: judge, messages: [{ role: 'user', content: judgePrompt(description, output) }], maxTokens: 200 });
+    const scores = parseScores(judged);
+    const overall = DIMENSIONS.reduce((a, d) => a + scores[d], 0) / DIMENSIONS.length;
+    process.stderr.write(`✓ ${c.skill} on ${model} — ${overall.toFixed(2)}/5\n`);
+    return { skill: c.skill, model, scores, overall: Math.round(overall * 100) / 100 };
+  } catch (e) {
+    process.stderr.write(`✗ ${c.skill} on ${model} — FAILED (${e.message})\n`);
+    return null;
+  }
+}
+
 async function main() {
   if (!apiKey) { console.error('Set ANTHROPIC_API_KEY to run evals.'); process.exit(1); }
+  const concurrency = parseInt(arg('concurrency', '4'), 10) || 4;
   const { cases } = JSON.parse(readFileSync(casesPath, 'utf8'));
-  const results = [];
 
+  // Build the full (case × model) task list.
+  const tasks = [];
   for (const c of cases) {
     const skillFile = join(root, 'skills', c.skill, 'SKILL.md');
     if (!existsSync(skillFile)) { console.error(`skip ${c.skill}: no SKILL.md`); continue; }
     const { meta, body } = parseSkill(readFileSync(skillFile, 'utf8'));
-    for (const model of models) {
-      process.stderr.write(`Running ${c.skill} on ${model}… `);
-      try {
-        const output = await complete({ apiKey, model, system: runPrompt(body), messages: [{ role: 'user', content: c.input }], maxTokens: 3000 });
-        const judged = await complete({ apiKey, model: judge, messages: [{ role: 'user', content: judgePrompt(meta.description || c.skill, output) }], maxTokens: 200 });
-        const scores = parseScores(judged);
-        const overall = DIMENSIONS.reduce((a, d) => a + scores[d], 0) / DIMENSIONS.length;
-        results.push({ skill: c.skill, model, scores, overall: Math.round(overall * 100) / 100 });
-        process.stderr.write(`${overall.toFixed(2)}/5\n`);
-      } catch (e) {
-        process.stderr.write(`FAILED (${e.message})\n`);
-      }
-    }
+    for (const model of models) tasks.push({ c, body, description: meta.description || c.skill, model });
   }
+
+  process.stderr.write(`Scoring ${tasks.length} runs (concurrency ${concurrency})…\n`);
+  const results = (await pool(tasks, concurrency, scoreTask)).filter(Boolean);
 
   const out = { generatedAt: new Date().toISOString(), judge, models, dimensions: DIMENSIONS, results };
   writeFileSync(outPath, JSON.stringify(out, null, 2));
-  console.log(`\nWrote ${outPath} — ${results.length} scored runs. Build the page: node scripts/build-leaderboard.mjs`);
+  console.log(`\nWrote ${outPath} — ${results.length}/${tasks.length} scored runs. Build the page: node scripts/build-leaderboard.mjs`);
 }
 
 main();
