@@ -9,6 +9,20 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [20.1.0] — Star Nudges & Eval Hardening — 2026-06-18
+
+### Added
+- **Star the repo, from anywhere you use it.** Tasteful, non-spammy calls-to-action that turn
+  npm/CLI users into stargazers — no `postinstall` hook: a prompt after a successful
+  `npx pm-claude-skills add`, in `--help`, in `list`, in the MCP server's startup banner, a
+  CTA below the README badges (npm renders it on the package page), and a `funding` field in
+  `package.json` so npm shows a Fund/Sponsor link.
+- **One-click leaderboard updates in CI** — `.github/workflows/eval-leaderboard.yml`
+  ("Update Skill Leaderboard") runs the evals with the `ANTHROPIC_API_KEY` secret, commits
+  `evals/results.json`, and the Pages deploy re-renders the public leaderboard with real
+  numbers — no local key needed. The deploy workflow now also triggers on
+  `evals/results.json`.
+
 ### Changed
 - **Leaderboard workflow opens a PR** instead of pushing to `main` (which the branch
   ruleset blocks). After it runs, merge the auto-created results PR to publish real numbers.
@@ -16,13 +30,6 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
   and limited retries (429/5xx/timeout); the eval harness runs cases concurrently
   (default 4). The leaderboard workflow has a 20-minute job timeout. A 24-call run that
   was sequential now finishes in a few minutes and can't stall a job indefinitely.
-
-### Added
-- **One-click leaderboard updates in CI** — `.github/workflows/eval-leaderboard.yml`
-  ("Update Skill Leaderboard") runs the evals with the `ANTHROPIC_API_KEY` secret, commits
-  `evals/results.json`, and the Pages deploy re-renders the public leaderboard with real
-  numbers — no local key needed. The deploy workflow now also triggers on
-  `evals/results.json`.
 
 ## [20.0.0] — Agentic Tooling — 2026-06-18
 
