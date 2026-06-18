@@ -29,6 +29,10 @@
   "bugs": {
     "url": "https://github.com/mohitagw15856/pm-claude-skills/issues"
   },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/mohitagw15856/pm-claude-skills"
+  },
   "author": "Mohit Aggarwal",
   "bin": {
     "pm-claude-skills": "bin/cli.mjs",

@@ -19,6 +19,7 @@ import { homedir } from 'node:os';
 import { createRequire } from 'node:module';
 
 const PKG_ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
+const STAR = '⭐ Find this useful? Star the repo: https://github.com/mohitagw15856/pm-claude-skills';
 const VERSION = (() => {
   try { return createRequire(import.meta.url)('../package.json').version; } catch { return '0.0.0'; }
 })();
@@ -128,6 +129,7 @@ function add(opts) {
       aider: `Load any of them with:  aider --read ${join(target, '<skill>.md')}`,
     }[agent] || `Restart ${agent} — it auto-discovers SKILL.md skills in ${target} by their description.`;
     console.log(note);
+    console.log(`\n${STAR}`);
   }
 }
 
@@ -155,6 +157,8 @@ Examples:
   npx pm-claude-skills add --agent codex --link
 
   npx pm-claude-skills generate --from <url|file>   # turn your docs into a SKILL.md (needs ANTHROPIC_API_KEY)
+
+${STAR}
 `;
 
 const opts = parse(process.argv.slice(2));
