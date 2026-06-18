@@ -13,7 +13,7 @@
 //   --link           symlink instead of copy (native agents; falls back to copy)
 //   --dry-run        print what would happen without writing
 import { readdirSync, existsSync, mkdirSync, rmSync, cpSync, symlinkSync, copyFileSync, statSync } from 'node:fs';
-import { join, dirname, basename } from 'node:path';
+import { join, dirname, basename, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { homedir } from 'node:os';
 import { createRequire } from 'node:module';
@@ -78,7 +78,15 @@ function add(opts) {
   }
   const skillsDir = join(PKG_ROOT, 'skills');
   if (!existsSync(skillsDir)) { console.error(`Error: bundled skills/ not found at ${skillsDir}.`); process.exit(1); }
-  const target = opts.target || defaultTarget(agent);
+  const target = resolve(opts.target || defaultTarget(agent));
+
+  // Prevent installation into critical system directories
+  const criticalPaths = ['/', '/usr', '/bin', '/etc', '/var', '/root', '/boot', '/proc', '/sys', '/dev'];
+  if (criticalPaths.includes(target)) {
+    console.error(`Error: Cannot install into a system-critical directory: ${target}`);
+    process.exit(1);
+  }
+
   let count = 0;
 
   console.log(`${opts.dryRun ? '[dry-run] ' : ''}Installing for '${agent}' into ${target}`);
