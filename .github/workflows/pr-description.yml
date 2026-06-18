@@ -1,0 +1,71 @@
+name: Auto PR description
+
+# Dogfoods our own Action: when a PR is opened with an empty body, run the
+# pr-description-writer skill on the diff and fill it in. A living demo of
+# `uses: ./action`. Requires the ANTHROPIC_API_KEY repo secret; skips quietly
+# without it (and on forks, which can't read secrets).
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  describe:
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - name: Check for API key and an empty PR body
+        id: gate
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const hasKey = !!process.env.ANTHROPIC_API_KEY;
+            const body = (context.payload.pull_request.body || '').trim();
+            if (!hasKey) core.info('ANTHROPIC_API_KEY not set — skipping.');
+            if (body) core.info('PR already has a description — skipping.');
+            core.setOutput('go', String(hasKey && !body));
+
+      - name: Checkout
+        if: steps.gate.outputs.go == 'true'
+        uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - name: Collect the diff
+        if: steps.gate.outputs.go == 'true'
+        id: diff
+        run: |
+          {
+            echo "text<<DIFF_EOF"
+            echo "Title: ${{ github.event.pull_request.title }}"
+            echo "Commits:"; git log --oneline origin/${{ github.base_ref }}..HEAD | head -30
+            echo; echo "Changed files:"; git diff --stat origin/${{ github.base_ref }}...HEAD | tail -40
+            echo "DIFF_EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Write the PR description with the skill
+        if: steps.gate.outputs.go == 'true'
+        id: skill
+        uses: ./action
+        with:
+          skill: pr-description-writer
+          input: ${{ steps.diff.outputs.text }}
+          api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - name: Update the PR body
+        if: steps.gate.outputs.go == 'true'
+        uses: actions/github-script@v7
+        env:
+          BODY: ${{ steps.skill.outputs.result }}
+        with:
+          script: |
+            await github.rest.pulls.update({
+              owner: context.repo.owner, repo: context.repo.repo,
+              pull_number: context.issue.number,
+              body: process.env.BODY + '\n\n<sub>✍️ Drafted by the pm-claude-skills GitHub Action (pr-description-writer).</sub>',
+            });
