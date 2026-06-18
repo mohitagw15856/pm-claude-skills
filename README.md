@@ -24,7 +24,7 @@
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest release (v20.0.0 — Agentic Tooling):** run any skill in CI with the new **[GitHub Action](action/)**, turn your docs into a skill with **`npx pm-claude-skills generate`**, and compare skills across models on the **[Skill Leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)** (LLM-judge evals). See the [changelog](#-changelog).
+**🆕 Latest release (v20.1.0 — Star Nudges & Eval Hardening):** run any skill in CI with the **[GitHub Action](action/)**, turn your docs into a skill with **`npx pm-claude-skills generate`**, compare skills across models on the **[Skill Leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)** (now one-click in CI), and — if it saves you time — ⭐ the repo. See the [changelog](#-changelog).
 
 <!-- DEMO: replace web/docs-assets/playground.png below with web/docs-assets/playground-demo.gif
      once recorded (see web/docs-assets/README.md for how). The link goes to the live app. -->
@@ -405,13 +405,22 @@ More templates will follow. If you want to contribute one, see the [template con
 
 The highlights are below. For the structured, [Keep a Changelog](https://keepachangelog.com/)-format history, see **[CHANGELOG.md](CHANGELOG.md)**.
 
-### 🆕 What's New in v20.0.0 — Agentic Tooling
+### 🆕 What's New in v20.1.0 — Star Nudges & Eval Hardening
+
+- **Star the repo, from anywhere you use it** — tasteful, non-spammy CTAs (no `postinstall`): after a successful `npx pm-claude-skills add`, in `--help`, in `list`, in the MCP server banner, below the README badges, and a `funding` link on npm.
+- **One-click leaderboard in CI** — the "Update Skill Leaderboard" workflow runs the evals with your `ANTHROPIC_API_KEY` secret and opens a results PR; merge it to publish real numbers.
+- **Faster, hang-proof evals** — per-request timeout + retries in the API client and concurrent eval runs, so a CI run finishes in minutes and can't stall.
+
+<details>
+<summary><strong>v20.0.0 — Agentic Tooling</strong> (click to expand)</summary>
 
 The library starts *doing* the work, not just describing it:
 
 - **GitHub Action** ([`action/`](action/)) — run any skill in a repo's CI (auto PR descriptions, changelogs, release notes, reviews). `uses: mohitagw15856/pm-claude-skills/action@main`. We dogfood it to write this repo's own PR descriptions.
 - **`generate` command** — `npx pm-claude-skills generate --from <url|file>` turns your docs into a standard-compliant `SKILL.md`.
 - **Skill evals + Leaderboard** — LLM-as-judge scoring of skills across models, rendered as a public [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html).
+
+</details>
 
 <details>
 <summary><strong>v19.0.0 — Security Auditor, Personas & Catalog</strong> (click to expand)</summary>
