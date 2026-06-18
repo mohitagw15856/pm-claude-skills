@@ -1,0 +1,51 @@
+name: 'PM Skills — Run a Skill'
+description: 'Run any pm-claude-skills SKILL.md in CI — auto PR descriptions, changelogs, release notes, code-review checklists, and more.'
+author: 'Mohit Aggarwal'
+branding:
+  icon: 'cpu'
+  color: 'purple'
+
+inputs:
+  skill:
+    description: 'Skill name to run (e.g. pr-description-writer, changelog-generator, code-review-checklist).'
+    required: true
+  input:
+    description: 'The input/context text the skill should work on.'
+    required: false
+  input_file:
+    description: 'Read the input from this file instead of the `input` string.'
+    required: false
+  api_key:
+    description: 'Anthropic API key (store it as a secret).'
+    required: true
+  model:
+    description: 'Claude model id.'
+    required: false
+    default: 'claude-sonnet-4-6'
+  output_file:
+    description: 'If set, also write the result to this file.'
+    required: false
+  max_tokens:
+    description: 'Max output tokens.'
+    required: false
+    default: '4096'
+
+outputs:
+  result:
+    description: 'The skill output (also use output_file for multi-line results).'
+    value: ${{ steps.run.outputs.result }}
+
+runs:
+  using: composite
+  steps:
+    - id: run
+      shell: bash
+      run: node "$GITHUB_ACTION_PATH/run.mjs"
+      env:
+        INPUT_SKILL: ${{ inputs.skill }}
+        INPUT_INPUT: ${{ inputs.input }}
+        INPUT_INPUT_FILE: ${{ inputs.input_file }}
+        INPUT_API_KEY: ${{ inputs.api_key }}
+        INPUT_MODEL: ${{ inputs.model }}
+        INPUT_OUTPUT_FILE: ${{ inputs.output_file }}
+        INPUT_MAX_TOKENS: ${{ inputs.max_tokens }}

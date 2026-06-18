@@ -226,6 +226,30 @@ Then ask: *"search the skills for customer churn, then apply the best one to my 
 
 ---
 
+## ⚙️ AI-Powered Tooling
+
+Three ways to put the library to work beyond installing files:
+
+**🤖 Run a skill in your CI — [GitHub Action](action/).** Auto-write PR descriptions, changelogs, release notes, or run a code-review checklist on every PR:
+
+```yaml
+- uses: mohitagw15856/pm-claude-skills/action@main
+  with:
+    skill: pr-description-writer
+    input: ${{ steps.diff.outputs.text }}
+    api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+```
+
+**🏗️ Turn your docs into a skill — `generate`.** Point it at a URL or file and it writes a `SKILL.md` that follows the authoring standard:
+
+```bash
+ANTHROPIC_API_KEY=sk-ant-… npx pm-claude-skills generate --from ./team-process.md
+```
+
+**🏆 Skill Leaderboard — [evals](evals/).** An LLM-as-judge harness scores each skill across Claude models on structure, completeness, usefulness, and grounding. **[View the leaderboard →](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)**
+
+---
+
 ## 🌐 Skill Playground — Try Any Skill in Your Browser
 
 **▶ Live: [mohitagw15856.github.io/pm-claude-skills](https://mohitagw15856.github.io/pm-claude-skills/)** · 📚 [Browse the full skill catalog](https://mohitagw15856.github.io/pm-claude-skills/catalog.html)

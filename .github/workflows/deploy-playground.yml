@@ -41,6 +41,9 @@ jobs:
       - name: Build the static skill catalog (web/catalog.html)
         run: node scripts/build-docs.mjs
 
+      - name: Build the skill leaderboard (web/leaderboard.html)
+        run: node scripts/build-leaderboard.mjs
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
 

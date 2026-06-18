@@ -9,7 +9,19 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
-_Nothing yet._
+### Added
+- **GitHub Action** ([`action/`](action/)) — run any skill in CI: `uses:
+  mohitagw15856/pm-claude-skills/action@main` to auto-write PR descriptions,
+  changelogs, release notes, or code-review checklists. Composite action +
+  dependency-free runner.
+- **`generate` command** — `npx pm-claude-skills generate --from <url|file>` turns a
+  team's documentation into a `SKILL.md` that follows the authoring standard
+  (`bin/generate.mjs`, needs `ANTHROPIC_API_KEY`).
+- **Skill evals + Leaderboard** — `evals/run-evals.mjs` scores skill output across models
+  with an LLM judge (structure / completeness / usefulness / grounding);
+  `scripts/build-leaderboard.mjs` renders a public `web/leaderboard.html` (built in the
+  Pages deploy, linked from the README, catalog, and playground).
+- Shared, dependency-free Anthropic client (`bin/lib/anthropic.mjs`) used by all three.
 
 ## [19.0.0] — Security Auditor, Personas & Catalog — 2026-06-18
 

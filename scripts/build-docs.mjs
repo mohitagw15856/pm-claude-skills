@@ -89,6 +89,7 @@ const html = `<!DOCTYPE html>
     <a href="https://mohitagw15856.github.io/pm-claude-skills/">▶ Live Playground</a>
     <a href="${REPO}">GitHub</a>
     <a href="${REPO}#-quick-install-2-minutes">Install</a>
+    <a href="leaderboard.html">Leaderboard</a>
     <a href="${REPO}/blob/main/TIERS.md">Tiers</a>
   </div>
 </header>
