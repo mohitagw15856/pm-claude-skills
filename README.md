@@ -37,6 +37,26 @@ A community-built library of professional skills for every field — product man
 
 ---
 
+## 👋 New here? Start in 30 seconds
+
+**The problem:** Ask any AI for a PRD, an exec update, or a launch plan and you get *generic* — plausible-sounding filler you still have to rewrite from scratch. The model doesn't know what "good" actually looks like for professional work.
+
+**What this fixes:** Each skill is a battle-tested `SKILL.md` that teaches the AI the real structure, rigour, and judgement a senior professional uses — so the first draft is one you can *ship*, not one you have to redo.
+
+**Try these 5 first** — no install needed, run them right in the [live Playground](https://mohitagw15856.github.io/pm-claude-skills/):
+
+| Skill | Give it… | Get back… |
+|-------|----------|-----------|
+| 📊 [Executive Update](skills/executive-update) | messy progress notes | a tight 250-word briefing for your CEO or board |
+| 📋 [PRD Template](skills/prd-template) | a vague feature idea | a structured PRD with scope, success metrics & risks |
+| 🎯 [RICE Prioritisation](skills/rice-prioritisation) | a pile of backlog ideas | a ranked, defensible priority list |
+| 🔭 [Competitor Teardown](skills/competitor-teardown) | "what are rivals up to?" | a positioning map, feature gaps & strategy |
+| 📝 [Meeting Notes](skills/meeting-notes) | a raw transcript | decisions, owners & next steps |
+
+→ Like what you see? [**Install in 2 minutes**](#-quick-install-2-minutes) · [browse all 174 skills](#️-all-174-skills) · [**⭐ star the repo**](https://github.com/mohitagw15856/pm-claude-skills/stargazers) so others find it.
+
+---
+
 ## 🔄 One library, the whole professional workflow
 
 These 174 skills aren't a random catalog — they cover the **full arc of professional work**, end to end. Wherever you are in the loop, there's a skill for it:
@@ -65,6 +85,7 @@ These 174 skills aren't a random catalog — they cover the **full arc of profes
 
 ## Contents
 
+- [👋 New here? Start in 30 seconds](#-new-here-start-in-30-seconds)
 - [🔄 One library, the whole professional workflow](#-one-library-the-whole-professional-workflow)
 - [🚀 Quick Install](#-quick-install-2-minutes)
 - [🔌 Works With — Cross-Tool Compatibility](#-works-with--cross-tool-compatibility)
