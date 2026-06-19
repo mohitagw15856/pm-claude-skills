@@ -38,6 +38,18 @@
     · 📄 <a href="examples.html">Sample outputs</a> · 📚 <a href="catalog.html">Catalog</a> · 🏆 <a href="leaderboard.html">Leaderboard</a>
   </div>
 
+  <div class="onboarding" id="onboarding" hidden>
+    <span class="onboarding-q">👋 New here? What do you do?</span>
+    <div class="role-chips" id="roleChips"></div>
+    <button class="role-skip" id="roleSkip" type="button">skip</button>
+  </div>
+
+  <details class="context-box" id="contextBox">
+    <summary>🧠 Your context — set once, every skill uses it <span id="contextStatus" class="context-status"></span></summary>
+    <textarea id="contextInput" rows="4" placeholder="About you & your company: product, who it's for, your voice/tone, key metrics, competitors, constraints. Saved in your browser and added to every run, so outputs come back tailored to you — no re-typing."></textarea>
+    <div class="context-hint">Saved locally in your browser. Never sent anywhere except prepended to your own Claude requests.</div>
+  </details>
+
   <div class="recommend" id="recommend">
     <input id="recommendInput" type="text" placeholder="🧭 Not sure which skill? Describe your task — e.g. “explain a metric drop to my CEO”" />
     <div id="recommendResults" class="recommend-results" hidden></div>

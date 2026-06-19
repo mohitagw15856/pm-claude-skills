@@ -1,0 +1,56 @@
+name: Skill Bot (ChatOps)
+
+# Run any skill from a GitHub issue/PR comment. Comment, e.g.:
+#
+#   /skill executive-update
+#   Audience: CEO. Period: Q2. Shipped onboarding redesign; activation up; hiring behind.
+#
+# The bot runs the skill and replies inline. `/skill list` shows usage.
+#
+# Cost/abuse guard: only runs for the repo OWNER, MEMBERs, and COLLABORATORs —
+# random external commenters can't trigger paid API calls. Needs the
+# ANTHROPIC_API_KEY repo secret.
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  run-skill:
+    # Only on comments starting with "/skill" from trusted authors.
+    if: >
+      startsWith(github.event.comment.body, '/skill') &&
+      contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.comment.author_association)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: React to acknowledge
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.reactions.createForIssueComment({
+              owner: context.repo.owner, repo: context.repo.repo,
+              comment_id: context.payload.comment.id, content: 'eyes'
+            });
+
+      - name: Run the skill and reply
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          COMMENT_BODY: ${{ github.event.comment.body }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY secret is not set."
+            exit 1
+          fi
+          node scripts/skill-bot.mjs

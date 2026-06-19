@@ -2,7 +2,18 @@
 
 const KEY_STORE = 'anthropic_api_key';
 const MODEL_STORE = 'anthropic_model';
+const CONTEXT_STORE = 'pm_skills_context';
+const ROLE_STORE = 'pm_skills_role';
 const API_URL = 'https://api.anthropic.com/v1/messages';
+
+// Role → a curated starter set of skill names (the "try these first" for each role).
+const ROLES = {
+  'Product Manager': ['prd-template', 'rice-prioritisation', 'roadmap-narrative', 'executive-update', 'user-research-synthesis', 'metrics-framework'],
+  'Founder / Exec': ['executive-update', 'board-deck-narrative', 'investor-update', 'competitor-teardown', 'okr-builder', 'go-to-market'],
+  'Customer Success': ['cs-health-scorecard', 'churn-analysis', 'cs-escalation-brief', 'renewal-playbook', 'qbr-deck', 'account-plan'],
+  'Marketing': ['go-to-market', 'product-positioning-doc', 'content-calendar', 'press-release', 'competitor-teardown', 'email-campaign'],
+  'Engineering': ['technical-spec-template', 'architecture-decision-record', 'incident-postmortem', 'code-review-checklist', 'rfc-writer', 'runbook-writer'],
+};
 
 const el = (id) => document.getElementById(id);
 let SKILLS = [];
@@ -30,6 +41,15 @@ async function init() {
 
   el('apiKey').addEventListener('input', (e) => localStorage.setItem(KEY_STORE, e.target.value.trim()));
   el('model').addEventListener('change', (e) => localStorage.setItem(MODEL_STORE, e.target.value));
+
+  // Skill Memory: restore + auto-save the user's context, used on every run.
+  const savedContext = localStorage.getItem(CONTEXT_STORE) || '';
+  el('contextInput').value = savedContext;
+  updateContextStatus();
+  el('contextInput').addEventListener('input', (e) => {
+    localStorage.setItem(CONTEXT_STORE, e.target.value);
+    updateContextStatus();
+  });
   el('keyToggle').addEventListener('click', () => {
     const f = el('apiKey');
     const show = f.type === 'password';
@@ -74,6 +94,47 @@ async function init() {
   }
   renderGallery();
   applyShareLink(); // open a skill (and prefill inputs) if the URL points to one
+  initOnboarding();
+}
+
+// ---------- Skill Memory (context layer) ----------
+function getContext() {
+  return (el('contextInput').value || '').trim();
+}
+function updateContextStatus() {
+  const has = getContext().length > 0;
+  el('contextStatus').textContent = has ? '✓ active' : '';
+}
+
+// ---------- Role-based onboarding ----------
+function initOnboarding() {
+  const chips = el('roleChips');
+  for (const role of Object.keys(ROLES)) {
+    const b = document.createElement('button');
+    b.type = 'button';
+    b.className = 'role-chip';
+    b.textContent = role;
+    b.addEventListener('click', () => chooseRole(role));
+    chips.appendChild(b);
+  }
+  el('roleSkip').addEventListener('click', dismissOnboarding);
+  // Show the role prompt only on first visit (no role chosen, not skipped).
+  if (!localStorage.getItem(ROLE_STORE) && !location.search.includes('skill=')) {
+    el('onboarding').hidden = false;
+  }
+}
+function dismissOnboarding() {
+  el('onboarding').hidden = true;
+  localStorage.setItem(ROLE_STORE, 'skipped');
+}
+function chooseRole(role) {
+  localStorage.setItem(ROLE_STORE, role);
+  el('onboarding').hidden = true;
+  const names = (ROLES[role] || []).filter((n) => SKILLS.some((s) => s.name === n));
+  el('search').value = '';
+  el('pluginFilter').value = '';
+  el('tierFilter').value = '';
+  renderGallery(names, role); // featured starter set for this role
 }
 
 // ---------- Recommender: rank skills by a free-text task description ----------
@@ -154,12 +215,54 @@ function applyShareLink() {
 }
 
 // ---------- Gallery (tiles) ----------
-function renderGallery() {
+function makeCard(s) {
+  const meta = TIER_META[s.tier] || TIER_META.stable;
+  const card = document.createElement('button');
+  card.className = 'skill-card';
+  card.innerHTML =
+    `<div class="card-tags"><span class="card-bundle"></span><span class="card-eval"></span><span class="card-tier"></span></div>` +
+    `<h3 class="card-title"></h3><p class="card-summary"></p>`;
+  card.querySelector('.card-bundle').textContent = s.plugin;
+  const evalEl = card.querySelector('.card-eval');
+  if (s.eval) {
+    evalEl.textContent = evalBadgeText(s);
+    evalEl.title = `Eval-scored ${s.eval.score}/5 across ${s.eval.runs} model runs`;
+  } else {
+    evalEl.remove();
+  }
+  const tierEl = card.querySelector('.card-tier');
+  tierEl.textContent = `${meta.dot} ${meta.label}`;
+  tierEl.classList.add(meta.cls);
+  card.querySelector('.card-title').textContent = s.title;
+  card.querySelector('.card-summary').textContent = s.summary || s.description;
+  card.addEventListener('click', () => selectSkill(s));
+  return card;
+}
+
+function renderGallery(featuredNames, roleLabel) {
+  const gallery = el('gallery');
+  gallery.innerHTML = '';
+
+  // Role-based starter pack: a curated, ordered set with a "show all" escape.
+  if (featuredNames && featuredNames.length) {
+    const list = featuredNames.map((n) => SKILLS.find((s) => s.name === n)).filter(Boolean);
+    const banner = document.createElement('div');
+    banner.className = 'starter-banner';
+    banner.innerHTML =
+      `<span><strong>Your starter pack${roleLabel ? ' for ' + escapeHtml(roleLabel) : ''}</strong> — try these first.</span>` +
+      `<button class="link-btn" type="button">Show all ${SKILLS.length} skills →</button>`;
+    banner.querySelector('.link-btn').addEventListener('click', () => renderGallery());
+    gallery.appendChild(banner);
+    el('count').textContent = `${list.length} starter skills`;
+    const frag = document.createDocumentFragment();
+    for (const s of list) frag.appendChild(makeCard(s));
+    gallery.appendChild(frag);
+    return;
+  }
+
   const q = el('search').value.toLowerCase().trim();
   const bundle = el('pluginFilter').value;
   const tier = el('tierFilter').value;
-  const gallery = el('gallery');
-  gallery.innerHTML = '';
 
   const matches = SKILLS.filter((s) => {
     if (bundle && s.plugin !== bundle) return false;
@@ -176,29 +279,7 @@ function renderGallery() {
   }
 
   const frag = document.createDocumentFragment();
-  for (const s of matches) {
-    const meta = TIER_META[s.tier] || TIER_META.stable;
-    const card = document.createElement('button');
-    card.className = 'skill-card';
-    card.innerHTML =
-      `<div class="card-tags"><span class="card-bundle"></span><span class="card-eval"></span><span class="card-tier"></span></div>` +
-      `<h3 class="card-title"></h3><p class="card-summary"></p>`;
-    card.querySelector('.card-bundle').textContent = s.plugin;
-    const evalEl = card.querySelector('.card-eval');
-    if (s.eval) {
-      evalEl.textContent = evalBadgeText(s);
-      evalEl.title = `Eval-scored ${s.eval.score}/5 across ${s.eval.runs} model runs`;
-    } else {
-      evalEl.remove();
-    }
-    const tierEl = card.querySelector('.card-tier');
-    tierEl.textContent = `${meta.dot} ${meta.label}`;
-    tierEl.classList.add(meta.cls);
-    card.querySelector('.card-title').textContent = s.title;
-    card.querySelector('.card-summary').textContent = s.summary || s.description;
-    card.addEventListener('click', () => selectSkill(s));
-    frag.appendChild(card);
-  }
+  for (const s of matches) frag.appendChild(makeCard(s));
   gallery.appendChild(frag);
 }
 
@@ -329,7 +410,12 @@ async function run() {
   if (missing.length) return setStatus(`Fill in: ${missing.map((f) => f.dataset.label).join(', ')}`, true);
 
   const userMessage = buildUserMessage(fields);
-  const system = current.instructions + SKILL_SUFFIX;
+  const ctx = getContext();
+  const ctxBlock = ctx
+    ? `\n\n## About the user and their context (apply this throughout — match their product, audience, and voice)\n${ctx}`
+    : '';
+  const system = current.instructions + SKILL_SUFFIX + ctxBlock;
+  const plainSystem = ctx ? ctxBlock.trim() : '';
   const model = el('model').value;
   const compare = el('compareToggle').checked;
 
@@ -364,7 +450,7 @@ async function run() {
       // Plain = the same inputs with no skill system prompt.
       [acc] = await Promise.all([
         streamCompletion({ key, model, system, userMessage, node: withNode, signal: controller.signal }),
-        streamCompletion({ key, model, system: '', userMessage, node: plainNode, signal: controller.signal }),
+        streamCompletion({ key, model, system: plainSystem, userMessage, node: plainNode, signal: controller.signal }),
       ]);
     } else {
       acc = await streamCompletion({ key, model, system, userMessage, node: out, signal: controller.signal });

@@ -23,6 +23,10 @@ These run **several skills in sequence**, passing each output forward as context
 | `/rescue-an-account` | cs-health-scorecard → churn-analysis → cs-escalation-brief → renewal-playbook | Measure → Communicate |
 | `/run-discovery` | ambiguity-resolver → discovery-interview-guide → user-research-synthesis → rice-prioritisation | Discover → Decide |
 
+## 🧠 Skill Memory
+
+`/setup-context` builds a `pm-context.md` (company, audience, voice, metrics). Once it exists, run skills as usual — they read it as standing context, so output is tailored to you instead of generic. Template: [`templates/pm-context.example.md`](../templates/pm-context.example.md).
+
 ## Install
 
 ```bash

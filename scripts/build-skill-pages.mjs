@@ -104,9 +104,13 @@ function page(s) {
 <meta property="og:title" content="${esc(s.title)} — AI Agent Skill" />
 <meta property="og:description" content="${metaDesc}" />
 <meta property="og:url" content="${url}" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="${BASE}/og/${s.name}.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="${esc(s.title)} — AI Agent Skill" />
 <meta name="twitter:description" content="${metaDesc}" />
+<meta name="twitter:image" content="${BASE}/og/${s.name}.jpg" />
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 <style>${CSS}</style>
 </head>

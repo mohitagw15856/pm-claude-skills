@@ -107,6 +107,34 @@ Individual skills are great. **Chaining** them is the superpower. A *recipe* run
 
 ---
 
+## 🧠 Skill Memory — set your context once, every skill uses it
+
+Generic output is the #1 complaint with AI. **Skill Memory** fixes it: tell the skills who you are *once*, and every skill and recipe produces output already tuned to your product, audience, and voice — no re-typing.
+
+- **In Claude Code:** run [`/setup-context`](commands/setup-context.md) (or copy [`templates/pm-context.example.md`](templates/pm-context.example.md) → `pm-context.md`). Skills read it as standing context.
+- **In the [Playground](https://mohitagw15856.github.io/pm-claude-skills/):** fill the **🧠 Your context** box — it's saved in your browser and prepended to every run.
+
+```
+Without context:  "write an exec update" → generic, you rewrite it
+With context:      "write an exec update" → your voice, your metrics,
+                    your audience — shippable on the first try
+```
+
+---
+
+## 🤖 Run a skill from a GitHub comment (ChatOps)
+
+This repo ships a [**Skill Bot**](.github/workflows/skill-bot.yml): comment on any issue or PR and a skill runs and replies inline.
+
+```
+/skill executive-update
+Audience: CEO. Period: Q2. Shipped onboarding redesign; activation up; hiring behind plan.
+```
+
+The bot runs the skill and posts the result as a reply. `/skill list` shows usage. It's gated to repo collaborators (so random commenters can't trigger paid API calls) and needs an `ANTHROPIC_API_KEY` secret. Copy the workflow into your own repo to give your whole team skill-powered ChatOps.
+
+---
+
 ## ✅ Eval-verified quality — not just quantity
 
 Most skill libraries ask you to trust the count. This one is **scored**. An [eval harness](evals/) runs each skill against a held-out test case, then an LLM judge (Opus 4.8) rates the output on four dimensions — **structure, completeness, usefulness, grounding** — averaged across two models.
@@ -132,6 +160,7 @@ These scores show up as badges in the [Playground](https://mohitagw15856.github.
 - [👋 New here? Start in 30 seconds](#-new-here-start-in-30-seconds)
 - [🔄 One library, the whole professional workflow](#-one-library-the-whole-professional-workflow)
 - [🧩 Workflow Recipes — chain skills into one flow](#-workflow-recipes--chain-skills-into-one-flow)
+- [🧠 Skill Memory — set your context once](#-skill-memory--set-your-context-once-every-skill-uses-it)
 - [✅ Eval-verified quality](#-eval-verified-quality--not-just-quantity)
 - [🚀 Quick Install](#-quick-install-2-minutes)
 - [🔌 Works With — Cross-Tool Compatibility](#-works-with--cross-tool-compatibility)
