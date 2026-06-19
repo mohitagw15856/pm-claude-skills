@@ -14,6 +14,9 @@ on:
       - 'skill-tiers.json'
       - 'scripts/build-docs.mjs'
       - 'scripts/build-leaderboard.mjs'
+      - 'scripts/build-skill-pages.mjs'
+      - 'scripts/build-samples.mjs'
+      - 'examples/samples/**'
       - '.github/workflows/deploy-playground.yml'
   workflow_dispatch:
 
@@ -44,6 +47,12 @@ jobs:
 
       - name: Build the static skill catalog (web/catalog.html)
         run: node scripts/build-docs.mjs
+
+      - name: Build the sample-output gallery data (web/samples.json)
+        run: node scripts/build-samples.mjs
+
+      - name: Build per-skill SEO pages + sitemap (web/skill/*.html)
+        run: node scripts/build-skill-pages.mjs
 
       - name: Build the skill leaderboard (web/leaderboard.html)
         run: node scripts/build-leaderboard.mjs

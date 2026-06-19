@@ -35,11 +35,12 @@ const cards = (list) => list.map((s) => {
   const [dot, label] = TIER[s.tier] || TIER.stable;
   return `      <article class="card" id="${esc(s.name)}">
         <div class="row"><span class="tier tier-${s.tier}">${dot} ${label}</span><span class="bundle">${esc(s.plugin)}</span></div>
-        <h3>${esc(s.title)}</h3>
+        <h3><a href="skill/${esc(s.name)}.html">${esc(s.title)}</a></h3>
         <p>${esc(s.description)}</p>
         <div class="links">
+          <a href="skill/${esc(s.name)}.html">Details →</a>
           <a href="${REPO}/blob/main/skills/${esc(s.name)}/SKILL.md">SKILL.md ↗</a>
-          <a href="https://mohitagw15856.github.io/pm-claude-skills/#${esc(s.name)}">Run in Playground →</a>
+          <a href="https://mohitagw15856.github.io/pm-claude-skills/index.html?skill=${esc(s.name)}">Run in Playground →</a>
         </div>
       </article>`;
 }).join('\n');

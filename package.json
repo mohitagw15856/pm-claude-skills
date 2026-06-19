@@ -56,6 +56,7 @@
     "build:web": "node web/build-skills.mjs",
     "build:workflows": "node scripts/build-workflows.mjs",
     "build:samples": "node scripts/build-samples.mjs",
+    "build:pages": "node scripts/build-skill-pages.mjs",
     "skill-of-the-week": "node scripts/skill-of-the-week.mjs",
     "check": "node scripts/skillcheck.mjs && node scripts/build-exports.mjs --check && node scripts/build-workflows.mjs --check && node web/build-skills.mjs && node scripts/build-samples.mjs && git diff --exit-code -- web/skills.json web/samples.json"
   },

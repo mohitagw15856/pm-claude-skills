@@ -14,3 +14,6 @@ venv/
 # Generated docs catalog (built in CI for Pages)
 web/catalog.html
 web/leaderboard.html
+web/skill/
+web/sitemap.xml
+web/robots.txt
