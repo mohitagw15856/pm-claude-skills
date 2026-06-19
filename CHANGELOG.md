@@ -9,6 +9,32 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [21.0.0] — Workflow Recipes, Eval-Verified Quality & a Smarter Playground — 2026-06-19
+
+The biggest update yet — the 174 skills become a *system*, not just a catalog.
+
+### Added
+- **Workflow Recipes** — chain skills into one flow, where each output feeds the next. Five
+  cross-profession recipes ship as slash commands and over MCP: `/ship-a-feature`,
+  `/close-the-quarter`, `/launch-a-product`, `/rescue-an-account`, `/run-discovery`. Defined in
+  `workflows.json`, documented in `WORKFLOWS.md` (generated + validated by `scripts/build-workflows.mjs`).
+- **Eval-verified quality** — real eval scores (structure, completeness, usefulness, grounding;
+  judged by Opus 4.8) now surface as badges in the Playground and leaderboard. Eval coverage
+  expanded from 6 to 15 skills.
+- **One-click MCP** — `claude mcp add pm-skills -- npx -y pm-claude-skills-mcp` makes every skill
+  and recipe available in any MCP client (Claude Code, Claude Desktop, Cursor, Windsurf). New
+  `list_workflows` / `get_workflow` MCP tools.
+- **Playground upgrades** — a "which skill do I need?" recommender, a Compare toggle (run inputs
+  with vs. without the skill, side by side), and shareable deep-links that prefill inputs.
+- **Sample-output gallery** (`examples.html`) — 18 real example outputs so you can see what each
+  skill produces before running anything. Generated via a workflow using the API-key secret.
+- **Skill of the week** — a scheduled workflow composes weekly X/LinkedIn posts; an optional
+  webhook auto-publishes.
+
+### Changed
+- README leads with a problem-solution hook, a workflow lifecycle diagram, a "hero five"
+  quick-start, and an animated demo (plus a Compare-mode demo).
+
 ## [20.2.0] — Community PRs & New Skill — 2026-06-18
 
 ### Added
