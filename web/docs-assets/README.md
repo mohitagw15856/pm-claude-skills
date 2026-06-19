@@ -2,9 +2,40 @@
 
 Images used in the main README.
 
-- `playground.png` — current Skill Playground screenshot (shown in the README hero).
+- `playground-demo.gif` — animated hero demo (shown in the README).
+- `playground.png` — static screenshot / fallback.
 
-## Recording the hero demo GIF
+## Re-recording the hero demo GIF (automated)
+
+`record-demo.mjs` drives the live Playground with Playwright and records a video.
+The navigation, skill selection, and form-fill are real; the streamed model output
+is a representative mock, so **no API key is needed**.
+
+```bash
+# 1. Serve the playground locally
+cd web && python3 -m http.server 8080 &
+
+# 2. Build the skills data if it is stale
+node web/build-skills.mjs
+
+# 3. Record (Playwright + a matching Chromium must be installed)
+#    npx playwright install chromium   # one-time, if needed
+node web/docs-assets/record-demo.mjs   # writes a .webm into this folder
+
+# 4. Convert the .webm to an optimized GIF (two-pass palette)
+cd web/docs-assets
+V=$(ls *.webm | head -1)
+ffmpeg -y -i "$V" -vf "fps=13,scale=1080:-1:flags=lanczos,palettegen=stats_mode=diff" /tmp/palette.png
+ffmpeg -y -i "$V" -i /tmp/palette.png \
+  -lavfi "fps=13,scale=1080:-1:flags=lanczos[x];[x][1:v]paletteuse=dither=bayer:bayer_scale=3:diff_mode=rectangle" \
+  playground-demo.gif
+rm -f *.webm
+```
+
+For a **fully live** recording (real Claude call instead of the mock), comment out the
+`window.fetch` override in `record-demo.mjs` and set a key via `localStorage` first.
+
+## Recording manually (alternative)
 
 To replace the static screenshot with a short looping demo:
 
