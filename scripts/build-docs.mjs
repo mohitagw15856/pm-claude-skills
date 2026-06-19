@@ -54,6 +54,7 @@ const html = `<!DOCTYPE html>
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
 <title>Skill Catalog — ${skills.length} Agent Skills for Claude, ChatGPT, Gemini, Cursor & more</title>
 <meta name="description" content="Browse all ${skills.length} professional Agent Skills (SKILL.md) — product, engineering, customer success, marketing, design, finance, HR, sales and more. Works with Claude, ChatGPT, Gemini, Cursor, Codex, Hermes." />
 <link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/catalog.html" />

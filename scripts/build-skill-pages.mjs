@@ -96,6 +96,7 @@ function page(s) {
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
 <title>${esc(s.title)} — AI Agent Skill for Claude, ChatGPT &amp; Gemini</title>
 <meta name="description" content="${metaDesc}" />
 <link rel="canonical" href="${url}" />
