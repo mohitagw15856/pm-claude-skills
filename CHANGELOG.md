@@ -9,6 +9,24 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [21.1.0] — Skill Memory, Onboarding, Social Cards & ChatOps — 2026-06-19
+
+Make the library personal, easy to start with, and shareable.
+
+### Added
+- **Skill Memory (context layer)** — set your company/product/audience/voice once and every
+  skill personalizes its output. New `/setup-context` command + `templates/pm-context.example.md`
+  for Claude Code; a saved "Your context" box in the Playground that's prepended to every run.
+- **Role-based onboarding** — first-visit "what's your role?" prompt (PM / Founder / CSM /
+  Marketing / Engineering) surfaces a curated starter pack, with a "show all 174" escape.
+- **Branded social cards** — a 1200×630 Open Graph image per skill (`scripts/build-og-images.mjs`),
+  wired into every per-skill page so shared links render a polished preview.
+- **ChatOps Skill Bot** — comment `/skill <name>` on a GitHub issue/PR and the skill runs and
+  replies inline (`.github/workflows/skill-bot.yml`); gated to repo collaborators.
+
+### Changed
+- `templates/` now ships in the npm package (so `/setup-context` can read the template).
+
 ## [21.0.0] — Workflow Recipes, Eval-Verified Quality & a Smarter Playground — 2026-06-19
 
 The biggest update yet — the 174 skills become a *system*, not just a catalog.
