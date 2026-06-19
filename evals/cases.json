@@ -24,6 +24,42 @@
     {
       "skill": "sprint-planning",
       "input": "Team of 5, 2-week sprint, average velocity 30 points, one engineer out 3 days. Backlog: checkout redesign (8), payment retries (5), analytics events (3), bug bash (3), API rate limiting (5)."
+    },
+    {
+      "skill": "roadmap-narrative",
+      "input": "H2 roadmap for a B2B analytics product. Themes: self-serve onboarding, an integrations marketplace, and enterprise SSO/audit logs. Audience: the exec team and key customers. We want the story, not a feature list."
+    },
+    {
+      "skill": "okr-builder",
+      "input": "Company objective: become the default analytics tool for startups. For the product team, next quarter. We care about activation, retention, and word-of-mouth growth."
+    },
+    {
+      "skill": "go-to-market",
+      "input": "Launching an integrations marketplace for our analytics product. Target: existing mid-market customers and their ops teams. Goal: 30% of accounts install at least one integration within 60 days."
+    },
+    {
+      "skill": "churn-analysis",
+      "input": "SMB SaaS, $49/mo. Monthly logo churn rose from 3% to 5% over two quarters. Most cancellations happen in month 2-3. Top stated reasons: 'too hard to set up' and 'didn't see value'. Annual plans churn far less than monthly."
+    },
+    {
+      "skill": "stakeholder-update",
+      "input": "Weekly update for sales, support, and exec stakeholders on the checkout revamp. Status: 10% rollout live, conversion +4%, one payments edge case under investigation, full launch gated on a Legal PCI review due Tuesday."
+    },
+    {
+      "skill": "user-story-writer",
+      "input": "Feature: let users export a dashboard to PDF and schedule a recurring email of it. Users are analysts and their managers. Keep stories small and testable with clear acceptance criteria."
+    },
+    {
+      "skill": "incident-postmortem",
+      "input": "Checkout was down 42 minutes after a deploy set a wrong env var on the payments service; 5xx spiked, ~1,200 failed checkouts. Detected by alert in 6 min, fixed by rollback. Blameless postmortem with timeline and action items."
+    },
+    {
+      "skill": "ab-test-planner",
+      "input": "Test whether moving the signup CTA above the fold on the pricing page increases free-trial starts. Current trial-start rate 8%, ~20k weekly visitors. We want to detect a 10% relative lift."
+    },
+    {
+      "skill": "metrics-framework",
+      "input": "Define the metrics framework for a B2B analytics product: the north star, input metrics across acquisition/activation/retention/revenue, and guardrails. Stage: early growth, ~500 paying accounts."
     }
   ]
 }

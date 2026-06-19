@@ -121,6 +121,10 @@ The flagship skills score consistently high (out of 5):
 
 These scores show up as badges in the [Playground](https://mohitagw15856.github.io/pm-claude-skills/) and the [🏆 leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html). Coverage is expanding — run it yourself with `node evals/run-evals.mjs` (needs an API key). *Honest note: 6 skills are eval-scored today; the rest are reviewed against the [authoring standard](SKILL-AUTHORING-STANDARD.md) but not yet auto-scored.*
 
+**See the difference for yourself.** The Playground's *Compare* toggle runs the same inputs with and without the skill, side by side — structured, shippable output on the left; generic mush on the right:
+
+[![Compare mode — the same prompt with and without the skill, side by side](web/docs-assets/compare-demo.gif)](https://mohitagw15856.github.io/pm-claude-skills/)
+
 ---
 
 ## Contents

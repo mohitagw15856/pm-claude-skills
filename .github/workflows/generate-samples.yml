@@ -1,0 +1,45 @@
+name: Generate Sample Outputs
+
+# Generates real model outputs for the sample-output gallery using the
+# ANTHROPIC_API_KEY repo secret — the key never leaves GitHub. Generates a
+# sample for every eval-case skill that doesn't already have one (it never
+# overwrites hand-written samples), rebuilds web/samples.json, and commits.
+#
+# Run it from the Actions tab → "Generate Sample Outputs" → Run workflow.
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate missing samples + rebuild gallery
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY secret is not set."
+            exit 1
+          fi
+          node scripts/build-samples.mjs --generate-missing
+
+      - name: Commit new samples
+        run: |
+          if ! git diff --quiet -- examples/samples web/samples.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add examples/samples web/samples.json
+            git commit -m "chore(samples): generate sample outputs for the gallery"
+            git push
+          else
+            echo "No new samples to commit."
+          fi

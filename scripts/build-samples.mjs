@@ -30,13 +30,13 @@ function parseFrontmatter(text) {
 async function generate(skillName) {
   const { complete, parseSkill } = await import('../bin/lib/anthropic.mjs');
   const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) { console.error('Set ANTHROPIC_API_KEY to generate.'); process.exit(1); }
+  if (!apiKey) throw new Error('Set ANTHROPIC_API_KEY to generate.');
   const skillFile = join(root, 'skills', skillName, 'SKILL.md');
-  if (!existsSync(skillFile)) { console.error(`Unknown skill: ${skillName}`); process.exit(1); }
+  if (!existsSync(skillFile)) throw new Error(`Unknown skill: ${skillName}`);
   const { body } = parseSkill(readFileSync(skillFile, 'utf8'));
   const cases = JSON.parse(readFileSync(join(root, 'evals', 'cases.json'), 'utf8')).cases;
   const input = (cases.find((c) => c.skill === skillName) || {}).input;
-  if (!input) { console.error(`No eval case input for ${skillName}; add one to evals/cases.json first.`); process.exit(1); }
+  if (!input) throw new Error(`No eval case input for ${skillName}; add one to evals/cases.json first.`);
   const system = body + '\n\n---\nExecute this skill now on the input below and produce the complete output. Do not ask questions.';
   const output = await complete({ apiKey, model: 'claude-sonnet-4-6', system, messages: [{ role: 'user', content: input }], maxTokens: 4096 });
   const title = skillName.split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ');
@@ -48,7 +48,18 @@ async function generate(skillName) {
 
 const genIdx = process.argv.indexOf('--generate');
 if (genIdx !== -1) {
-  await generate(process.argv[genIdx + 1]);
+  try { await generate(process.argv[genIdx + 1]); }
+  catch (e) { console.error(e.message); process.exit(1); }
+}
+
+// --generate-missing: generate a sample for every eval-case skill that doesn't
+// already have one (never overwrites hand-written samples).
+if (process.argv.includes('--generate-missing')) {
+  const cases = JSON.parse(readFileSync(join(root, 'evals', 'cases.json'), 'utf8')).cases;
+  for (const c of cases) {
+    if (existsSync(join(samplesDir, `${c.skill}.md`))) { console.log(`skip ${c.skill} (already has a sample)`); continue; }
+    try { await generate(c.skill); } catch (e) { console.error(`failed ${c.skill}: ${e.message}`); }
+  }
 }
 
 // Build samples.json
