@@ -89,14 +89,15 @@ const run = async () => {
 
   await page.goto(BASE, { waitUntil: 'networkidle' });
   await page.waitForSelector('.skill-card');
-  await pause(700);
+  await pause(900); // shows the gallery with eval-score badges on cards
 
-  // Search to surface the featured skill.
-  await page.fill('#search', 'executive update');
-  await pause(600);
+  // Use the "which skill do I need?" recommender — describe a task in plain English.
+  await page.locator('#recommendInput').type('write an executive update for my CEO', { delay: 22 });
+  await page.waitForSelector('.recommend-chip', { timeout: 3000 });
+  await pause(800);
 
-  // Open it.
-  await page.click('.skill-card:has(.card-title:text-is("Executive Update"))');
+  // Click the recommended Executive Update skill.
+  await page.locator('.recommend-chip', { hasText: 'Executive Update' }).first().click();
   await page.waitForSelector('#inputForm input, #inputForm textarea');
   await pause(500);
 

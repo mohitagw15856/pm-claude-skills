@@ -24,7 +24,7 @@
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest release (v20.2.0 — Community PRs & New Skill):** a new **YouTube Script Writer** skill (**174 total**), a stdlib **feature-prioritisation** helper, safer installs, and robust frontmatter parsing — all from community contributors. See the [changelog](#-changelog).
+**🆕 Latest release (v21.0.0 — Workflow Recipes, Eval-Verified Quality & a Smarter Playground):** chain skills into [**workflow recipes**](#-workflow-recipes--chain-skills-into-one-flow), see [**eval-verified scores**](#-eval-verified-quality--not-just-quantity), install everywhere with [**one-line MCP**](#-quick-install-2-minutes), and a Playground with a skill recommender, a with/without **Compare** toggle, and shareable links. See the [changelog](#-changelog).
 
 ### ▶ See it in action — [try the live Skill Playground](https://mohitagw15856.github.io/pm-claude-skills/)
 
@@ -509,6 +509,17 @@ More templates will follow. If you want to contribute one, see the [template con
 ## 📋 Changelog
 
 The highlights are below. For the structured, [Keep a Changelog](https://keepachangelog.com/)-format history, see **[CHANGELOG.md](CHANGELOG.md)**.
+
+### 🆕 What's New in v21.0.0 — Workflow Recipes, Eval-Verified Quality & a Smarter Playground
+
+The 174 skills become a *system*, not just a catalog.
+
+- **🧩 Workflow Recipes** — chain skills into one flow, each output feeding the next: `/ship-a-feature`, `/close-the-quarter`, `/launch-a-product`, `/rescue-an-account`, `/run-discovery`. Run as slash commands or over MCP. See [WORKFLOWS.md](WORKFLOWS.md).
+- **✅ Eval-verified quality** — real scores (structure, completeness, usefulness, grounding; judged by Opus 4.8) now show as badges in the Playground and leaderboard. Eval coverage grew from 6 → 15 skills.
+- **🔌 One-click MCP** — `claude mcp add pm-skills -- npx -y pm-claude-skills-mcp` makes every skill + recipe available in Claude Code, Claude Desktop, Cursor, and Windsurf, plus new `list_workflows`/`get_workflow` tools.
+- **🎛️ Playground upgrades** — a "which skill do I need?" recommender, a with/without **Compare** toggle, shareable deep-links that prefill inputs, and eval-score badges.
+- **📄 Sample-output gallery** — 18 real example outputs so you can see what a skill produces before running it.
+- **🗓️ Skill of the week** — a scheduled workflow that composes weekly social posts.
 
 ### 🆕 What's New in v20.2.0 — Community PRs & New Skill
 
