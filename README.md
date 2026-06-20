@@ -159,7 +159,9 @@ That's not luck — it's a [self-improving pipeline](scripts/improve-skill.mjs) 
 
 [![Compare mode — the same prompt with and without the skill, side by side](web/docs-assets/compare-demo.gif)](https://mohitagw15856.github.io/pm-claude-skills/)
 
-**Already have a draft?** Flip on **📝 Critique mode** in the Playground — paste your existing PRD/roadmap/update and get a rubric score, ranked gaps, and a redline graded against the skill's framework. And before you ship, run [**`/red-team`**](skills/red-team-review/SKILL.md) to stress-test the plan against a room of hostile expert personas.
+**Already have a draft?** Flip on **📝 Critique mode** in the Playground — or use the standalone [**Grade your work**](https://mohitagw15856.github.io/pm-claude-skills/grade.html) tool — to paste an existing PRD/roadmap/update and get a rubric score, ranked gaps, and a redline graded against the skill's framework. Before you ship, run [**`/red-team`**](skills/red-team-review/SKILL.md) to stress-test the plan against a room of hostile expert personas.
+
+This whole thing is an open, reproducible **[benchmark for AI professional work](https://mohitagw15856.github.io/pm-claude-skills/benchmark.html)** — and it's *eval-gated*: every contributed skill is auto-checked for structure and scored on the rubric ([submit one →](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=submit-skill.yml)).
 
 ---
 

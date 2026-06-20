@@ -1,0 +1,53 @@
+name: "🧠 Submit a skill"
+description: Propose a new skill for the library (eval-gated — strong skills get scored and merged).
+title: "[Skill] <short name>"
+labels: ["skill-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing! This library is **eval-gated**: every skill is checked for structure and, where it has a test case, scored on a rubric (structure · completeness · usefulness · grounding). New skills should aim for **≥ 4.0/5**.
+
+        The fastest path is to **open a PR** with `skills/<your-skill>/SKILL.md` (+ a case in `evals/cases.json`) — the [PR check](../blob/main/.github/workflows/skill-pr-check.yml) will score it automatically. Use this form if you'd rather propose first.
+  - type: input
+    id: name
+    attributes:
+      label: Skill name (kebab-case)
+      placeholder: e.g. incident-comms-plan
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: One paragraph. What it produces + a "Use when…" trigger. Follow the style of existing skills.
+    validations:
+      required: true
+  - type: input
+    id: framework
+    attributes:
+      label: Based on (framework / source)
+      description: The canonical method it encodes, if any (e.g. "RICE — Intercom"). Adds a "📚 Based on" citation.
+  - type: textarea
+    id: case
+    attributes:
+      label: Eval case (a realistic input)
+      description: A short, representative prompt the skill should handle well. Used to score it.
+    validations:
+      required: true
+  - type: dropdown
+    id: bundle
+    attributes:
+      label: Best-fit bundle
+      options: [pm-essentials, pm-engineering, pm-cs, pm-data, pm-design, pm-finance, pm-hr, pm-sales, pm-operations, pm-legal, pm-research, pm-gtm, pm-social, pm-writers, pm-cross, other]
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Checklist
+      options:
+        - label: It's distinct from existing skills (I checked the catalog)
+          required: true
+        - label: It's a plain SKILL.md with no executable code, network calls, or secrets
+          required: true

@@ -14,6 +14,15 @@ Good skills have three things in common:
 
 ---
 
+## 🔁 Contributions are eval-gated
+
+This library is a [benchmark](https://mohitagw15856.github.io/pm-claude-skills/benchmark.html) as much as a collection. When you open a PR that adds or changes a skill, the [**Skill PR Check**](.github/workflows/skill-pr-check.yml) automatically:
+
+1. Validates the SKILL.md **structure** (`skillcheck`) — this must pass.
+2. If you also add a case to [`evals/cases.json`](evals/cases.json), **scores the changed skill** on the rubric (structure · completeness · usefulness · grounding) and posts the result on your PR.
+
+Aim for **≥ 4.0/5**. Adding a case is the fastest way to prove your skill is strong — and it's cheap (the check scores only the *changed* skills). Prefer a guided start? Use the [submit-a-skill form](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=submit-skill.yml).
+
 ## How to Submit a Skill
 
 ### Step 1: Fork the repo

@@ -1,0 +1,69 @@
+name: Skill PR Check (eval-gated)
+
+# Every PR that touches skills/ gets an automatic quality gate:
+#   1. skillcheck validates structure (always runs — free, no API).
+#   2. If an ANTHROPIC_API_KEY is available (same-repo branches; withheld from fork PRs
+#      by GitHub for safety), it cheaply re-scores ONLY the changed skills (run-evals
+#      --changed, ~cents) and posts the scores as a PR comment.
+# Fork PRs still get the structural check + a note that a maintainer will score them.
+
+on:
+  pull_request:
+    paths:
+      - 'skills/**'
+      - 'evals/cases.json'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }} # empty on fork PRs → eval step skips
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # need origin/main to diff changed skills
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Structure check (skillcheck)
+        id: skillcheck
+        run: |
+          if node scripts/skillcheck.mjs; then echo "result=pass" >> "$GITHUB_OUTPUT"; else echo "result=fail" >> "$GITHUB_OUTPUT"; exit 1; fi
+
+      - name: Eval changed skills (cheap; skipped if no key)
+        id: eval
+        if: ${{ always() && env.ANTHROPIC_API_KEY != '' }}
+        run: |
+          git fetch origin main --depth=1 || true
+          node evals/run-evals.mjs --changed --base origin/main || true
+          echo "ran=1" >> "$GITHUB_OUTPUT"
+
+      - name: Build PR comment
+        if: ${{ always() }}
+        env:
+          BASE_REF: origin/main
+          EVAL_RAN: ${{ steps.eval.outputs.ran }}
+          SKILLCHECK: ${{ steps.skillcheck.outputs.result }}
+        run: node scripts/pr-eval-comment.mjs > /tmp/skill-pr-comment.md
+
+      - name: Post / update PR comment
+        if: ${{ always() }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const body = fs.readFileSync('/tmp/skill-pr-comment.md', 'utf8');
+            const { owner, repo } = context.repo;
+            const issue_number = context.payload.pull_request.number;
+            const marker = '## 🤖 Skill PR check';
+            const comments = await github.rest.issues.listComments({ owner, repo, issue_number });
+            const mine = comments.data.find(c => c.body && c.body.startsWith(marker));
+            if (mine) await github.rest.issues.updateComment({ owner, repo, comment_id: mine.id, body });
+            else await github.rest.issues.createComment({ owner, repo, issue_number, body });

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>Grade your work — free AI rubric for PRDs, OKRs, roadmaps & more</title>
+<meta name="description" content="Paste your PRD, OKRs, roadmap, or exec update and get a free rubric score, ranked gaps, and a redline — graded against the framework a senior pro uses. No install." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
+<style>
+  .grade-wrap { max-width: 820px; margin: 0 auto; padding: 18px 22px 70px; }
+  .grade-pick { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 10px 0 14px; }
+  .grade-pick select { padding: 9px 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; max-width: 100%; }
+  .grade-draft { width: 100%; box-sizing: border-box; min-height: 240px; padding: 13px 15px; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; color: var(--text); font-family: inherit; font-size: 14px; line-height: 1.5; }
+  .grade-h { font-size: 27px; margin: 6px 0; }
+  .based { font-size: 13px; color: var(--muted); margin: 0 0 12px; } .based em { color: var(--accent-2); font-style: italic; }
+  .actions { margin: 14px 0; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Grade your work</h1><p class="tagline">Paste a draft — get a rubric score, the gaps, and a redline. Free.</p></div>
+  </div>
+  <div class="key-area">
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Claude key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<div class="key-note">🔒 Your key + draft stay in your browser and go only to your own Claude requests. · ▶ <a href="index.html">Playground</a> · 🏆 <a href="benchmark.html">Benchmark</a> · 📚 <a href="catalog.html">Catalog</a></div>
+
+<div class="grade-wrap">
+  <div class="grade-pick">
+    <span>Grade my</span>
+    <select id="skillSelect"></select>
+    <span>against its framework.</span>
+  </div>
+  <p class="based" id="based" hidden></p>
+  <textarea id="draft" class="grade-draft" placeholder="Paste your existing draft here — e.g. your PRD, OKRs, roadmap, exec update, postmortem…"></textarea>
+  <div class="actions">
+    <button id="runBtn" class="primary" type="button">Grade it</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+    <button id="shareBtn" class="ghost" type="button">🔗 Share</button>
+    <span id="status" class="status"></span>
+  </div>
+  <div class="output-wrap" id="outWrap" hidden>
+    <div class="output-toolbar"><span>Your grade</span><button id="copyBtn" class="ghost" type="button">Copy</button></div>
+    <article id="out" class="output markdown"></article>
+  </div>
+</div>
+
+<script>
+const API_URL='https://api.anthropic.com/v1/messages';
+const el=(id)=>document.getElementById(id);
+let SKILLS=[], controller=null;
+init();
+async function init(){
+  const k=localStorage.getItem('anthropic_api_key'); if(k) el('apiKey').value=k;
+  const m=localStorage.getItem('anthropic_model'); if(m) el('model').value=m;
+  el('apiKey').addEventListener('input',e=>localStorage.setItem('anthropic_api_key',e.target.value.trim()));
+  el('model').addEventListener('change',e=>localStorage.setItem('anthropic_model',e.target.value));
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('runBtn').addEventListener('click',run);
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+  el('copyBtn').addEventListener('click',()=>navigator.clipboard.writeText(el('out').dataset.raw||''));
+  el('shareBtn').addEventListener('click',()=>{const u=new URL(location.href.split('?')[0]);u.searchParams.set('skill',el('skillSelect').value);navigator.clipboard.writeText(u.toString()).then(()=>setStatus('Link copied.'),()=>{});});
+  el('skillSelect').addEventListener('change',renderBased);
+  try{ SKILLS=(await (await fetch('skills.json')).json()).skills; }catch(e){ setStatus('Could not load skills.',true); return; }
+  SKILLS.sort((a,b)=>a.title.localeCompare(b.title));
+  for(const s of SKILLS){ const o=document.createElement('option'); o.value=s.name; o.textContent=s.title; el('skillSelect').appendChild(o); }
+  const want=new URLSearchParams(location.search).get('skill');
+  if(want&&SKILLS.some(s=>s.name===want)) el('skillSelect').value=want;
+  renderBased();
+}
+function current(){ return SKILLS.find(s=>s.name===el('skillSelect').value); }
+function renderBased(){ const s=current(); const b=el('based'); if(s&&s.source){ b.innerHTML='📚 Graded against '+s.source.replace(/\*(.+?)\*/g,'<em>$1</em>'); b.hidden=false; } else b.hidden=true; }
+async function run(){
+  const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your Claude key first.',true);
+  const s=current(); const draft=el('draft').value.trim(); if(!draft) return setStatus('Paste a draft to grade.',true);
+  const system=`You are a senior reviewer. Grade the user's existing artifact against the standard a top "${s.title}" should meet${s.source?', grounded in the framework it follows ('+s.source.replace(/\\*/g,'')+')':''}. Do NOT rewrite it from scratch — improve THEIR draft.\n\nReturn, in order:\n1. **Score** — rate 1–5 on **structure, completeness, usefulness, grounding**, one line each with why, then an overall /5.\n2. **Top gaps** — the most important specific, actionable problems, ranked.\n3. **Redline** — concrete edits and additions to fix the biggest gaps (quote what to change).\n\nUse the following skill as the rubric for what "good" looks like:\n${s.instructions}`;
+  el('outWrap').hidden=false; const out=el('out'); out.innerHTML=''; out.dataset.raw='';
+  el('runBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController(); setStatus('Grading…');
+  try{
+    const res=await fetch(API_URL,{method:'POST',headers:{'content-type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:el('model').value,max_tokens:4096,stream:true,system,messages:[{role:'user',content:draft}]}),signal:controller.signal});
+    if(!res.ok){ let m='API '+res.status; try{m=JSON.parse(await res.text()).error.message;}catch(_){ } throw new Error(m); }
+    const reader=res.body.getReader(); const dec=new TextDecoder(); let buf='',acc='';
+    while(true){ const {value,done}=await reader.read(); if(done)break; buf+=dec.decode(value,{stream:true}); const lines=buf.split('\n'); buf=lines.pop();
+      for(const line of lines){ if(!line.startsWith('data:'))continue; const p=line.slice(5).trim(); if(!p||p==='[DONE]')continue; let evt; try{evt=JSON.parse(p);}catch(_){continue;}
+        if(evt.type==='content_block_delta'&&evt.delta&&evt.delta.text){ acc+=evt.delta.text; out.innerHTML=DOMPurify.sanitize(marked.parse(acc)); } } }
+    out.dataset.raw=acc; setStatus('Done.');
+  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
+  finally{ el('runBtn').disabled=false; el('stopBtn').hidden=true; controller=null; }
+}
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+</script>
+</body>
+</html>

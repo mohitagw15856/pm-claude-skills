@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>The Professional Skill Benchmark — measuring AI work quality</title>
+<meta name="description" content="An open benchmark for the quality of AI-produced professional work — PRDs, OKRs, roadmaps, postmortems and more — scored on a fixed rubric by an LLM judge. Methodology, live leaderboard, and how to submit your own skill." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .bm { max-width: 820px; margin: 0 auto; padding: 20px 22px 70px; }
+  .bm h1 { font-size: 30px; margin: 6px 0; }
+  .bm h2 { font-size: 20px; margin: 28px 0 10px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+  .lead { font-size: 17px; color: #c7cfda; }
+  .dims { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .dim { border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; background: var(--panel); }
+  .dim b { color: var(--accent-2); }
+  .cta { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+  .btn { display: inline-block; padding: 10px 16px; border-radius: 9px; font-weight: 600; font-size: 14px; }
+  .btn-primary { background: var(--accent); color: #0f1115; }
+  .btn-ghost { background: var(--panel-2); border: 1px solid var(--border); color: var(--text); }
+  ol li { margin: 6px 0; }
+  @media (max-width: 620px){ .dims { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>The Professional Skill Benchmark</h1><p class="tagline">Measuring the quality of AI-produced professional work.</p></div>
+  </div>
+</header>
+<div class="key-note">📊 An open, reproducible benchmark. · 🏆 <a href="leaderboard.html">Live leaderboard</a> · ▶ <a href="index.html">Playground</a> · 📚 <a href="catalog.html">Catalog</a></div>
+
+<div class="bm">
+  <p class="lead">Everyone ships "AI skills." Almost nobody measures whether the output is any good. This is an open benchmark that does — think of it as a <strong>SWE-bench for professional work</strong>: PRDs, OKRs, roadmaps, postmortems, GTM plans and more, scored on a fixed rubric by an LLM judge.</p>
+
+  <div class="cta">
+    <a class="btn btn-primary" href="leaderboard.html">🏆 See the live leaderboard</a>
+    <a class="btn btn-ghost" href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/evals/README.md">Methodology & code ↗</a>
+    <a class="btn btn-ghost" href="grade.html">📝 Grade your own work</a>
+  </div>
+
+  <h2>How it's scored</h2>
+  <p>For each skill, a representative <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/evals/cases.json">held-out case</a> is run, then a judge model rates the output 1–5 on four dimensions:</p>
+  <div class="dims">
+    <div class="dim"><b>Structure</b> — follows the expected shape for this kind of artifact.</div>
+    <div class="dim"><b>Completeness</b> — covers what the task needs; nothing important missing.</div>
+    <div class="dim"><b>Usefulness</b> — specific and genuinely useful to a professional, not generic.</div>
+    <div class="dim"><b>Grounding</b> — stays grounded in the input; no invented facts or metrics.</div>
+  </div>
+
+  <h2>Why it's credible</h2>
+  <ol>
+    <li><strong>Reproducible & open.</strong> The harness, cases, and results are in the repo — run it yourself with <code>node evals/run-evals.mjs</code>.</li>
+    <li><strong>Blind to the author.</strong> The judge sees the skill's stated purpose and the output, not the model or author name.</li>
+    <li><strong>It catches real failures.</strong> A recent run flagged three skills at ~2.0/5; a fix lifted them to 4.75/5. Scores move when quality moves.</li>
+    <li><strong>Honest coverage.</strong> 15 of 175 skills are scored today and the set is growing — we don't claim a number we can't show.</li>
+  </ol>
+
+  <h2>Submit your skill to the benchmark</h2>
+  <p>The benchmark is open. To get a skill scored:</p>
+  <ol>
+    <li>Open a PR adding <code>skills/&lt;name&gt;/SKILL.md</code> and a case in <code>evals/cases.json</code> (or use the <a href="https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=submit-skill.yml">submit-a-skill form</a>).</li>
+    <li>The <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/.github/workflows/skill-pr-check.yml">PR check</a> validates structure and scores the changed skill automatically, posting the result on your PR.</li>
+    <li>Skills that clear the bar (aim for <strong>≥ 4.0/5</strong>) get merged and appear on the leaderboard.</li>
+  </ol>
+  <p class="lead" style="margin-top:18px"><a href="leaderboard.html">→ View the current standings</a></p>
+</div>
+</body>
+</html>

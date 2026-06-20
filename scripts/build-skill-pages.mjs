@@ -127,6 +127,7 @@ function page(s) {
 
   <div class="cta">
     <a class="btn btn-primary" href="${playUrl}">▶ Run it free in the Playground</a>
+    <a class="btn btn-ghost" href="${BASE}/grade.html?skill=${s.name}">📝 Grade your existing draft</a>
     <a class="btn btn-ghost" href="${REPO}/blob/main/skills/${s.name}/SKILL.md">View SKILL.md ↗</a>
   </div>
 
