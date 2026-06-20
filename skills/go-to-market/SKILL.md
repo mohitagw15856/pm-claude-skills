@@ -7,9 +7,12 @@ description: "Create go-to-market assets for any product or feature. Use when as
 
 This skill produces a complete go-to-market asset pack for a product, feature, or initiative. It follows Geoffrey Moore's positioning framework and structures all outputs for use in sales decks, landing pages, launch emails, and internal alignment docs.
 
-## Required Inputs
+## Working from a brief
 
-Ask the user for these if not provided:
+You will often get a short brief without every detail. **Always deliver the full GTM pack anyway** — do not stop to ask questions and do not leave bracketed placeholders like `[ADD PROOF POINT]` or `[Technical capability]`. Where a detail is missing (differentiators, proof points, features), infer specific, realistic ones from the product description and the target customer, and mark anything inferred as *(assumed — confirm)*. A concrete, labelled assumption is always better than a blank.
+
+## Inputs (infer any not provided — label assumptions)
+
 - **Product/feature name**
 - **One-line description** (what it does, technically)
 - **Target customer** (role, company size, industry if relevant)
@@ -39,7 +42,7 @@ Generate 3–5 messaging pillars. Each pillar must include:
 
 - **Pillar name** (2–4 words, bold)
 - **One-sentence summary** of what this pillar claims
-- **2–3 proof points** (specific, evidence-backed where possible — if the user hasn't provided data, flag with [ADD PROOF POINT])
+- **2–3 proof points** (specific and evidence-backed; if no data was provided, infer a realistic proof point and mark it *(assumed)* — never leave a bare placeholder)
 - **Example use in copy** (one sentence as it would appear in a landing page or deck)
 
 Pillars should be distinct — avoid overlap. Each pillar should be defensible against the primary competitor.
@@ -57,7 +60,7 @@ Produce a two-column table:
 Rules:
 - Never list a feature without a corresponding benefit
 - Benefits should reference the target customer's workflow or pain point
-- Aim for 6–12 rows; ask the user for more features if they've only given 1–2
+- Aim for 6–12 rows; if only 1–2 features were given, infer the rest plausibly from the product description
 - Avoid jargon in the benefit column — write as if explaining to a buyer, not an engineer
 
 ---
