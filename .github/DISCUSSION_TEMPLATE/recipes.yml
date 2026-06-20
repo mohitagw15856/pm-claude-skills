@@ -1,0 +1,31 @@
+title: "[Recipe] "
+labels: ["recipe"]
+body:
+  - type: markdown
+    attributes:
+      value: "Share a workflow recipe — a chain of skills you run together. Built one in the [Workflow Canvas](https://mohitagw15856.github.io/pm-claude-skills/canvas.html)? Paste its share link below."
+  - type: input
+    id: name
+    attributes:
+      label: Recipe name
+      placeholder: e.g. "New-feature kickoff"
+    validations:
+      required: true
+  - type: input
+    id: chain
+    attributes:
+      label: The chain (skills in order)
+      placeholder: e.g. ambiguity-resolver → prd-template → rice-prioritisation → go-to-market
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Canvas share link (optional)
+      placeholder: https://mohitagw15856.github.io/pm-claude-skills/canvas.html?recipe=...
+  - type: textarea
+    id: when
+    attributes:
+      label: When to use it
+    validations:
+      required: true

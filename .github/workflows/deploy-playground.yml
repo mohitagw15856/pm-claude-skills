@@ -13,9 +13,11 @@ on:
       - 'evals/results.json'
       - 'skill-tiers.json'
       - 'skill-sources.json'
+      - 'giscus.json'
       - 'scripts/build-docs.mjs'
       - 'scripts/build-leaderboard.mjs'
       - 'scripts/build-skill-pages.mjs'
+      - 'scripts/build-community.mjs'
       - 'scripts/build-samples.mjs'
       - 'examples/samples/**'
       - '.github/workflows/deploy-playground.yml'
@@ -54,6 +56,11 @@ jobs:
 
       - name: Build per-skill SEO pages + sitemap (web/skill/*.html)
         run: node scripts/build-skill-pages.mjs
+
+      - name: Build the community hub (web/community.html)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/build-community.mjs
 
       - name: Build the skill leaderboard (web/leaderboard.html)
         run: node scripts/build-leaderboard.mjs

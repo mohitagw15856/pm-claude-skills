@@ -1,0 +1,25 @@
+title: "[Show & Tell] "
+labels: ["show-and-tell"]
+body:
+  - type: markdown
+    attributes:
+      value: "Share something a skill (or a workflow recipe) produced for you. Real outputs help others see what's possible — and help us improve the skills."
+  - type: input
+    id: skill
+    attributes:
+      label: Which skill or recipe?
+      placeholder: e.g. prd-template, or the /ship-a-feature recipe
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What you got
+      description: Paste the output (or a snippet), or describe what it did for you.
+    validations:
+      required: true
+  - type: textarea
+    id: tweaks
+    attributes:
+      label: Tweaks or tips (optional)
+      description: Anything you changed, added to your context, or learned.
