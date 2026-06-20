@@ -4,7 +4,15 @@ const KEY_STORE = 'anthropic_api_key';
 const MODEL_STORE = 'anthropic_model';
 const CONTEXT_STORE = 'pm_skills_context';
 const ROLE_STORE = 'pm_skills_role';
+const THEME_STORE = 'pm_theme';
+const FAV_STORE = 'pm_favs';
+const RECENT_STORE = 'pm_recents';
 const API_URL = 'https://api.anthropic.com/v1/messages';
+
+const lsGet = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) || d; } catch (e) { return d; } };
+const lsSet = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
+let favs = lsGet(FAV_STORE, []);
+let recents = lsGet(RECENT_STORE, []);
 
 // Role → a curated starter set of skill names (the "try these first" for each role).
 const ROLES = {
@@ -94,6 +102,25 @@ async function init() {
   el('recommendInput').addEventListener('input', renderRecommendations);
   el('shareBtn').addEventListener('click', shareSkill);
 
+  // Theme toggle (saved theme is applied early by nav.js).
+  syncThemeIcon();
+  el('themeToggle').addEventListener('click', () => {
+    const next = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+    document.documentElement.dataset.theme = next;
+    try { localStorage.setItem(THEME_STORE, next); } catch (e) {}
+    syncThemeIcon();
+  });
+
+  // ⌘K command palette.
+  el('cmdkBtn').addEventListener('click', openCmdk);
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openCmdk(); }
+    else if (e.key === 'Escape' && !el('cmdkOverlay').hidden) closeCmdk();
+  });
+  el('cmdkInput').addEventListener('input', renderCmdk);
+  el('cmdkInput').addEventListener('keydown', cmdkNav);
+  el('cmdkOverlay').addEventListener('click', (e) => { if (e.target === el('cmdkOverlay')) closeCmdk(); });
+
   // Critique mode: grade an existing draft instead of generating.
   el('critiqueToggle').addEventListener('change', (e) => {
     const on = e.target.checked;
@@ -123,6 +150,89 @@ async function init() {
   renderGallery();
   applyShareLink(); // open a skill (and prefill inputs) if the URL points to one
   initOnboarding();
+  initHero();
+}
+
+// ---------- Theme ----------
+function syncThemeIcon() {
+  el('themeToggle').textContent = document.documentElement.dataset.theme === 'light' ? '☀️' : '🌙';
+}
+
+// ---------- Hero (stats count-up + show/hide) ----------
+function countUp(node, to) {
+  const start = performance.now(), dur = 900;
+  (function step(t) {
+    const p = Math.min(1, (t - start) / dur);
+    node.textContent = Math.round(to * (1 - Math.pow(1 - p, 3)));
+    if (p < 1) requestAnimationFrame(step);
+  })(start);
+}
+function initHero() {
+  countUp(el('statSkills'), SKILLS.length);
+  countUp(el('statEval'), SKILLS.filter((s) => s.eval).length);
+  fetch('https://api.github.com/repos/mohitagw15856/pm-claude-skills')
+    .then((r) => r.json()).then((d) => { if (d && d.stargazers_count != null) el('statStars').textContent = d.stargazers_count; })
+    .catch(() => { el('statStars').textContent = '★'; });
+}
+function showHero(show) { const h = el('hero'); if (h) h.hidden = !show; }
+
+// ---------- ⌘K command palette ----------
+const CMDK_TOOLS = [
+  ['canvas.html', '🧩 Workflow Canvas'], ['agent.html', '✨ Auto-Agent'], ['studio.html', '🏗️ Create a skill'],
+  ['grade.html', '📝 Grade your work'], ['benchmark.html', '🏆 Benchmark'], ['community.html', '💬 Community'],
+  ['leaderboard.html', '📊 Leaderboard'], ['catalog.html', '📚 Catalog'], ['pro.html', '⭐ Pro'],
+];
+let cmdkResults = [], cmdkSel = 0;
+function openCmdk() { el('cmdkOverlay').hidden = false; el('cmdkInput').value = ''; el('cmdkInput').focus(); renderCmdk(); }
+function closeCmdk() { el('cmdkOverlay').hidden = true; }
+function renderCmdk() {
+  const q = el('cmdkInput').value.toLowerCase().replace(/[-_]+/g, ' ').trim();
+  const norm = (x) => x.toLowerCase().replace(/[-_]+/g, ' ');
+  const skillHits = SKILLS.map((s) => {
+    // Rank: title match beats name match beats description match.
+    let score = 0;
+    if (!q) score = 1;
+    else if (norm(s.title).includes(q)) score = 3;
+    else if (norm(s.name).includes(q)) score = 2;
+    else if (norm(s.description).includes(q)) score = 1;
+    return { s, score };
+  }).filter((x) => x.score > 0)
+    .sort((a, b) => b.score - a.score || (b.s.eval?.score || 0) - (a.s.eval?.score || 0))
+    .slice(0, 8)
+    .map(({ s }) => ({ kind: 'Skill', label: s.title, sub: s.plugin, run: () => { closeCmdk(); selectSkill(s); } }));
+  const toolHits = CMDK_TOOLS.filter((t) => !q || t[1].toLowerCase().includes(q))
+    .map((t) => ({ kind: 'Tool', label: t[1], sub: t[0], run: () => { location.href = t[0]; } }));
+  cmdkResults = [...toolHits.slice(0, 4), ...skillHits];
+  cmdkSel = 0;
+  const list = el('cmdkList');
+  if (!cmdkResults.length) { list.innerHTML = '<div class="cmdk-empty">No matches.</div>'; return; }
+  list.innerHTML = cmdkResults.map((r, i) =>
+    `<div class="cmdk-item${i === 0 ? ' sel' : ''}" data-i="${i}"><span class="ci-kind">${r.kind}</span> <span>${escapeHtml(r.label)}</span><span class="ci-sub">${escapeHtml(r.sub)}</span></div>`
+  ).join('');
+  [...list.querySelectorAll('.cmdk-item')].forEach((n) => {
+    n.addEventListener('click', () => cmdkResults[+n.dataset.i].run());
+    n.addEventListener('mousemove', () => setCmdkSel(+n.dataset.i));
+  });
+}
+function setCmdkSel(i) {
+  cmdkSel = i;
+  [...el('cmdkList').children].forEach((n, j) => n.classList.toggle('sel', j === i));
+}
+function cmdkNav(e) {
+  if (e.key === 'ArrowDown') { e.preventDefault(); setCmdkSel(Math.min(cmdkResults.length - 1, cmdkSel + 1)); el('cmdkList').children[cmdkSel].scrollIntoView({ block: 'nearest' }); }
+  else if (e.key === 'ArrowUp') { e.preventDefault(); setCmdkSel(Math.max(0, cmdkSel - 1)); el('cmdkList').children[cmdkSel].scrollIntoView({ block: 'nearest' }); }
+  else if (e.key === 'Enter') { e.preventDefault(); if (cmdkResults[cmdkSel]) cmdkResults[cmdkSel].run(); }
+}
+
+// ---------- Favorites + recents ----------
+function isFav(name) { return favs.includes(name); }
+function toggleFav(name) {
+  favs = isFav(name) ? favs.filter((n) => n !== name) : [name, ...favs];
+  lsSet(FAV_STORE, favs); renderGallery();
+}
+function recordRecent(name) {
+  recents = [name, ...recents.filter((n) => n !== name)].slice(0, 8);
+  lsSet(RECENT_STORE, recents);
 }
 
 // ---------- Skill Memory (context layer) ----------
@@ -277,8 +387,20 @@ function makeCard(s) {
   tierEl.classList.add(meta.cls);
   card.querySelector('.card-title').textContent = s.title;
   card.querySelector('.card-summary').textContent = s.summary || s.description;
+  const fav = document.createElement('span');
+  fav.className = 'card-fav' + (isFav(s.name) ? ' on' : '');
+  fav.textContent = '⭐';
+  fav.title = isFav(s.name) ? 'Unfavourite' : 'Favourite';
+  fav.addEventListener('click', (e) => { e.stopPropagation(); toggleFav(s.name); });
+  card.querySelector('.card-tags').appendChild(fav);
   card.addEventListener('click', () => selectSkill(s));
   return card;
+}
+function galleryHead(text) {
+  const h = document.createElement('h4');
+  h.className = 'gallery-head';
+  h.textContent = text;
+  return h;
 }
 
 function renderGallery(featuredNames, roleLabel) {
@@ -299,14 +421,16 @@ function renderGallery(featuredNames, roleLabel) {
     const frag = document.createDocumentFragment();
     for (const s of list) frag.appendChild(makeCard(s));
     gallery.appendChild(frag);
+    showHero(false);
     return;
   }
 
   const q = el('search').value.toLowerCase().trim();
   const bundle = el('pluginFilter').value;
   const tier = el('tierFilter').value;
-
   const evalOnly = el('evalFilter').checked;
+  const isDefault = !q && !bundle && !tier && !evalOnly;
+  showHero(isDefault);
   const norm = (x) => x.toLowerCase().replace(/[-_]+/g, ' '); // so "red team" matches "red-team"
   const nq = norm(q);
   const matches = SKILLS.filter((s) => {
@@ -325,6 +449,17 @@ function renderGallery(featuredNames, roleLabel) {
   }
 
   const frag = document.createDocumentFragment();
+
+  // On the default view, surface favourites + recents first.
+  if (isDefault) {
+    const find = (n) => SKILLS.find((s) => s.name === n);
+    const favList = favs.map(find).filter(Boolean);
+    const recentList = recents.map(find).filter(Boolean).filter((s) => !isFav(s.name));
+    if (favList.length) { frag.appendChild(galleryHead('⭐ Your favourites')); favList.forEach((s) => frag.appendChild(makeCard(s))); }
+    if (recentList.length) { frag.appendChild(galleryHead('🕘 Recently used')); recentList.forEach((s) => frag.appendChild(makeCard(s))); }
+    if (favList.length || recentList.length) frag.appendChild(galleryHead(`All ${SKILLS.length} skills`));
+  }
+
   for (const s of matches) frag.appendChild(makeCard(s));
   gallery.appendChild(frag);
 }
@@ -334,12 +469,15 @@ function showGallery() {
   el('runner').hidden = true;
   el('gallery').hidden = false;
   el('controls').hidden = false;
+  renderGallery(); // refresh favourites/recents + hero state
   window.scrollTo({ top: 0 });
 }
 
 // ---------- Select & build form ----------
 function selectSkill(s) {
   current = s;
+  recordRecent(s.name);
+  showHero(false);
   el('gallery').hidden = true;
   el('controls').hidden = true;
   el('runner').hidden = false;

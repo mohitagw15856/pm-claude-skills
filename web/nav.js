@@ -3,6 +3,8 @@
 // Each page just needs: <nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
 // and <script src="nav.js"></script>.
 (function () {
+  // Apply the saved theme as early as possible (shared across all pages).
+  try { document.documentElement.dataset.theme = localStorage.getItem('pm_theme') || 'dark'; } catch (e) {}
   var TOOLS = [
     ['index.html', '▶ Playground'],
     ['canvas.html', '🧩 Workflow Canvas'],
