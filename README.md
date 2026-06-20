@@ -12,7 +12,7 @@
 [![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Cursor%20%7C%20Codex%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
 [![SkillCheck](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skillcheck.yml?branch=main&label=SkillCheck)](.github/workflows/skillcheck.yml)
 [![Security Audit](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skill-audit.yml?branch=main&label=security%20audit)](.github/workflows/skill-audit.yml)
-[![Version](https://img.shields.io/badge/version-22.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
+[![Version](https://img.shields.io/badge/version-22.1.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
 [![Install](https://img.shields.io/badge/Install%20in%20Claude%20Code-2%20minutes-orange)](https://github.com/mohitagw15856/pm-claude-skills#-quick-install-2-minutes)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4)](https://github.com/sponsors/mohitagw15856)
@@ -24,7 +24,7 @@
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest release (v22.0.0 — Closing the Loop):** skills now [**improve themselves**](#-eval-verified-quality--not-just-quantity) via the eval harness, you can [**grade your own drafts**](#-eval-verified-quality--not-just-quantity) (Critique mode), [**build your own recipes**](#-workflow-recipes--chain-skills-into-one-flow) on the Workflow Canvas, ground skills in your real data, and [**`/red-team`**](skills/red-team-review/SKILL.md) any plan. Now **175 skills**, 15 eval-scored. See the [changelog](#-changelog).
+**🆕 Latest release (v22.1.0 — The Skills Hub):** a community **[hub](https://mohitagw15856.github.io/pm-claude-skills/community.html)** with per-skill discussions, an [**eval-gated contribution flow**](#-eval-verified-quality--not-just-quantity), a free [**Grade-your-work**](https://mohitagw15856.github.io/pm-claude-skills/grade.html) tool, a public [**benchmark**](https://mohitagw15856.github.io/pm-claude-skills/benchmark.html) — and a redesigned UI. Builds on v22.0.0 (self-improving skills, Critique mode, Workflow Canvas, `/red-team`). **175 skills**, 15 eval-scored. See the [changelog](#-changelog).
 
 ### ▶ See it in action — [try the live Skill Playground](https://mohitagw15856.github.io/pm-claude-skills/)
 
@@ -549,7 +549,7 @@ More templates will follow. If you want to contribute one, see the [template con
 
 ## 📋 Changelog
 
-**Latest: v22.0.0 — Closing the Loop.** Skills now **improve themselves** (eval → critique → rewrite, kept only if the score rises), you can **grade your own drafts** (Critique mode), **ground skills in your real data**, **build your own recipes** on the Workflow Canvas, and **red-team any plan**. The eval harness caught three weak skills and the fix lifted them 2.0 → 4.75/5. Now **175 skills**, 15 eval-scored.
+**Latest: v22.1.0 — The Skills Hub.** A GitHub-native community layer: per-skill discussions, a Community feed, an eval-gated contribution flow, a free Grade-your-work tool, a public benchmark, and a redesigned UI. Builds on **v22.0.0 (Closing the Loop)** — self-improving skills, Critique mode, the Workflow Canvas, and `/red-team`. Now **175 skills**, 15 eval-scored.
 
 Full [Keep a Changelog](https://keepachangelog.com/)-format history — every release back to the start — is in **[CHANGELOG.md](CHANGELOG.md)**.
 

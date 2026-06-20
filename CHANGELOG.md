@@ -9,6 +9,24 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [22.1.0] — The Skills Hub, Contribution Flow & a Redesign — 2026-06-20
+
+The library becomes a community **platform** — with a benchmark, a contributor flow, a place to gather, and a much sharper look.
+
+### Added
+- **Skills Hub (GitHub-native, no backend):**
+  - **Per-skill discussion threads** on every skill page via Giscus (backed by GitHub Discussions).
+  - A **Community page** (`community.html`) with a live activity feed, contributor wall, and skill-of-the-week, generated from the GitHub API at deploy time.
+  - **Discussion category templates** (Show & Tell, Recipes) + **Share-to-Hub** buttons in the Playground and Grade tool that open a prefilled Show & Tell post.
+- **Eval-gated contribution flow:** a PR check validates structure and cheaply scores only the *changed* skills (`run-evals --changed`), posting the result on the PR; plus a submit-a-skill issue form.
+- **Grade your work** (`grade.html`): paste a draft, get a rubric score + ranked gaps + a redline against any skill's framework. A "Grade your draft" CTA is on every skill page.
+- **Public Benchmark page** (`benchmark.html`) framing the eval as an open standard for AI professional-work quality.
+- A prominent **tools navigation bar** across all browser tools.
+
+### Changed
+- **Redesigned the web UI** — gradient header, accent-gradient nav and buttons, richer background, card hover states, and focus rings. Less bland, more product.
+- **Cost-optimized the eval engine** — cheaper defaults (one model + Sonnet judge, ~$0.30/run), `--dry-run` estimate, skip-unchanged via content hash, `--changed` and `--max-skills`; removed all auto-spending crons. Hardened the API client (honor `Retry-After`, more retries).
+
 ## [22.0.0] — Closing the Loop — 2026-06-20
 
 The library stops being a one-shot generator and starts closing loops — improving itself, grading your work, grounding in your data, and composing visually.
