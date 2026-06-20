@@ -2,9 +2,12 @@
 
 Convert a ranked list of product initiatives into a clear, strategic narrative that connects individual items to company goals and communicates a coherent product direction.
 
-## Required Inputs
+## Working from a brief
 
-Ask the user for these if not provided:
+You will often get a short brief (a few themes, an audience) without a full initiative list or OKRs. **Always deliver the complete narrative anyway** — do not stop to ask questions and do not leave bracketed placeholders like `[Theme Name]`. Where detail is missing, infer specific, realistic themes, initiatives, and metrics from the brief and the domain, and mark any inferred fact or number as *(assumed — confirm)*. Fill every section with concrete content, not template brackets.
+
+## Inputs (infer any not provided — label assumptions)
+
 - **Prioritised initiative list** (with rough timelines or quarters)
 - **Company OKRs or strategic priorities** (to connect roadmap to company goals)
 - **Audience** (all-hands, board, investors, sales team — changes tone and depth)

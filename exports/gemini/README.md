@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-174 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+175 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -131,6 +131,7 @@
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/GEM_INSTRUCTIONS.md` |
 | QBR Deck | `pm-cs` | `pm-cs/qbr-deck/GEM_INSTRUCTIONS.md` |
 | RACI Matrix | `pm-operations` | `pm-operations/raci-matrix/GEM_INSTRUCTIONS.md` |
+| Red-Team Review | `pm-cross` | `pm-cross/red-team-review/GEM_INSTRUCTIONS.md` |
 | Redundancy Consultation | `pm-hr` | `pm-hr/redundancy-consultation/GEM_INSTRUCTIONS.md` |
 | Renewal Playbook | `pm-cs` | `pm-cs/renewal-playbook/GEM_INSTRUCTIONS.md` |
 | Research Protocol | `pm-research` | `pm-research/research-protocol/GEM_INSTRUCTIONS.md` |

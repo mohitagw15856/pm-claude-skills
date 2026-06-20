@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-174 skills exported. Copy a `.mdc rule` into the tool to use it.
+175 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -131,6 +131,7 @@
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/proposal-writer.mdc` |
 | QBR Deck | `pm-cs` | `pm-cs/qbr-deck/qbr-deck.mdc` |
 | RACI Matrix | `pm-operations` | `pm-operations/raci-matrix/raci-matrix.mdc` |
+| Red-Team Review | `pm-cross` | `pm-cross/red-team-review/red-team-review.mdc` |
 | Redundancy Consultation | `pm-hr` | `pm-hr/redundancy-consultation/redundancy-consultation.mdc` |
 | Renewal Playbook | `pm-cs` | `pm-cs/renewal-playbook/renewal-playbook.mdc` |
 | Research Protocol | `pm-research` | `pm-research/research-protocol/research-protocol.mdc` |

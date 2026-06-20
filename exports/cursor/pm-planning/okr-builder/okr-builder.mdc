@@ -8,6 +8,10 @@ alwaysApply: false
 
 Write ambitious, measurable OKRs that connect product work to company strategy. Avoid vanity metrics, output-focused key results, and objectives that sound like task lists.
 
+## Working from a brief
+
+You will often get a short brief without every detail (no baselines, no exact numbers). **Always deliver a complete, specific OKR set anyway** — do not stop to ask questions and do not leave bracketed placeholders like `[target]`. Where a baseline or number is missing, infer a realistic value from the brief and the domain, and mark it *(assumed — confirm)*. A clearly-labelled assumed baseline (e.g. "activation 40% *(assumed)* → 60%") is always better than a blank or an invented-as-fact figure.
+
 ## OKR Fundamentals
 
 **Objective:** Qualitative, inspiring, time-bound. Answers "where are we going?"
@@ -61,18 +65,17 @@ At quarter end, score each KR:
 - 0.4–0.6 = Made progress but missed
 - 0.0–0.3 = Missed — needs retrospective discussion
 
-## Required Inputs
+## Inputs (infer any not provided — label assumptions)
 
-Ask the user for these if not provided:
 - **Team or individual** the OKRs are for
 - **Quarter and year**
-- **Company or product North Star metric** (OKRs should connect to this)
+- **Company or product North Star metric** (OKRs should connect to this — if not given, infer a plausible one and label it *(assumed)*)
 - **Top 3 priorities or goals for this quarter** (rough notes are fine)
 - **Any existing OKRs to review or improve** (optional)
 
 ## Guidelines
 
-- Always ask for the company-level or product-level North Star metric before writing OKRs
+- Connect OKRs to the company/product North Star; if it isn't given, infer a plausible one and label it *(assumed)* rather than asking
 - Recommend no more than 3 objectives per team per quarter
 - If user provides output-based goals, always reframe as outcomes
 - Include a "health check" section flagging which KRs have no current baseline data

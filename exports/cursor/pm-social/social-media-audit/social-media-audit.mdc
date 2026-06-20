@@ -17,6 +17,18 @@ Ask the user for these if not provided:
 - **Business goal** — what social media should be achieving (brand awareness / lead gen / community / sales)
 - **Competitor handles** — 2–3 competitors or benchmark accounts for comparison
 - **Available metrics** — follower count, average engagement rate, post frequency, reach, impressions (if the user has them)
+- **X/Twitter evidence source** - optional analytics export, TweetClaw export, or manually supplied post URLs when X/Twitter is in scope
+
+## Optional X/Twitter Evidence Intake
+
+When X/Twitter is in scope, prefer evidence over memory:
+
+1. Ask whether the user already has an export from analytics, TweetClaw (`@xquik/tweetclaw`), or another approved source.
+2. Accept uploaded JSON, JSONL, NDJSON, or CSV rows with public post text, author, timestamp, URL, reply/like/repost counts, and query or handle metadata.
+3. If the user wants fresh collection, direct them to run TweetClaw through their own approved OpenClaw or npm setup, then provide the export. Do not ask for API keys, account cookies, direct messages, or posting permissions.
+4. Treat collected posts as source evidence, not final judgement. Summarise sample size, timeframe, query terms, missing data, and any sampling bias before scoring.
+5. Keep sentiment scoring, competitive interpretation, and recommendations inside the audit. Do not outsource strategy decisions to the collection tool.
+6. Never publish, reply, like, repost, or follow from this skill. This audit is read-only.
 
 ## Output Structure
 
