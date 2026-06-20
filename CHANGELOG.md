@@ -9,6 +9,20 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [21.1.1] — Framework Attribution & a Leaner README — 2026-06-20
+
+### Added
+- **Framework attribution** — `skill-sources.json` cites the canonical method each skill encodes
+  (RICE, Jobs-to-be-Done, Continuous Discovery, Porter's Five Forces, the Pyramid Principle,
+  Google SRE, WCAG, *Obviously Awesome*, and more). Shown as a "📚 Based on" line in the
+  Playground and on every per-skill page. 50 skills attributed; the rest intentionally left
+  unattributed rather than given a fabricated citation. `skill-sources.json` now ships in the package.
+
+### Changed
+- **README slimmed ~38%** (1,361 → ~850 lines): the full 174-skill catalog moved to
+  [`SKILLS.md`](SKILLS.md), changelog history collapsed to latest + link, article series collapsed,
+  positioning one-liner sharpened, and a Claude Cowork install path added.
+
 ## [21.1.0] — Skill Memory, Onboarding, Social Cards & ChatOps — 2026-06-19
 
 Make the library personal, easy to start with, and shareable.

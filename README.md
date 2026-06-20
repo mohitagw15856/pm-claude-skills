@@ -12,7 +12,7 @@
 [![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Cursor%20%7C%20Codex%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
 [![SkillCheck](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skillcheck.yml?branch=main&label=SkillCheck)](.github/workflows/skillcheck.yml)
 [![Security Audit](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skill-audit.yml?branch=main&label=security%20audit)](.github/workflows/skill-audit.yml)
-[![Version](https://img.shields.io/badge/version-21.1.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
+[![Version](https://img.shields.io/badge/version-21.1.1-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
 [![Install](https://img.shields.io/badge/Install%20in%20Claude%20Code-2%20minutes-orange)](https://github.com/mohitagw15856/pm-claude-skills#-quick-install-2-minutes)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4)](https://github.com/sponsors/mohitagw15856)
@@ -24,7 +24,7 @@
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest release (v21.0.0 — Workflow Recipes, Eval-Verified Quality & a Smarter Playground):** chain skills into [**workflow recipes**](#-workflow-recipes--chain-skills-into-one-flow), see [**eval-verified scores**](#-eval-verified-quality--not-just-quantity), install everywhere with [**one-line MCP**](#-quick-install-2-minutes), and a Playground with a skill recommender, a with/without **Compare** toggle, and shareable links. See the [changelog](#-changelog).
+**🆕 Latest release (v21.1.1):** every skill now cites the framework it encodes — a [**"📚 Based on" line**](#-eval-verified-quality--not-just-quantity) (RICE, JTBD, Continuous Discovery, Porter, the Pyramid Principle, Google SRE…) in the Playground and on each skill page. Builds on v21.1.0 ([Skill Memory](#-skill-memory--set-your-context-once-every-skill-uses-it), role onboarding, social cards, [ChatOps](#-run-a-skill-from-a-github-comment-chatops)). See the [changelog](#-changelog).
 
 ### ▶ See it in action — [try the live Skill Playground](https://mohitagw15856.github.io/pm-claude-skills/)
 
@@ -542,6 +542,8 @@ More templates will follow. If you want to contribute one, see the [template con
 ## 📋 Changelog
 
 Latest highlights below — full [Keep a Changelog](https://keepachangelog.com/)-format history in **[CHANGELOG.md](CHANGELOG.md)**.
+
+**v21.1.1 — Framework Attribution & a Leaner README.** Every skill now cites the framework it encodes (a "📚 Based on" line); the README is ~38% shorter with the full catalog moved to [SKILLS.md](SKILLS.md).
 
 **v21.1.0 — Skill Memory, Onboarding, Social Cards & ChatOps.** Set your context once and every skill personalizes; first-visit role onboarding; a branded social card per skill; and a `/skill` GitHub-comment bot.
 
