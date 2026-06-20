@@ -18,12 +18,13 @@ const API_URL = 'https://api.anthropic.com/v1/messages';
  * @param {number} [o.retries]   - Retries on timeout / 429 / 5xx (default 2).
  * @returns {Promise<string>}
  */
-export async function complete({ apiKey, model = 'claude-sonnet-4-6', system, messages, maxTokens = 4096, timeoutMs = 120000, retries = 2 }) {
+export async function complete({ apiKey, model = 'claude-sonnet-4-6', system, messages, maxTokens = 4096, timeoutMs = 120000, retries = 5 }) {
   if (!apiKey) throw new Error('Missing Anthropic API key (set ANTHROPIC_API_KEY).');
   let lastErr;
   for (let attempt = 0; attempt <= retries; attempt++) {
     const ctrl = new AbortController();
     const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+    let waitMs = Math.min(30000, 1000 * 2 ** attempt) + Math.floor(Math.random() * 500); // capped backoff + jitter
     try {
       const res = await fetch(API_URL, {
         method: 'POST',
@@ -40,21 +41,23 @@ export async function complete({ apiKey, model = 'claude-sonnet-4-6', system, me
         return (data.content || []).map((c) => c.text || '').join('').trim();
       }
       const body = await res.text().catch(() => '');
-      // Retry transient server / rate-limit errors; fail fast on 4xx (bad key/model).
-      if ((res.status === 429 || res.status >= 500) && attempt < retries) {
+      // Retry transient server / rate-limit / overloaded errors; fail fast on other 4xx.
+      if ((res.status === 429 || res.status === 529 || res.status >= 500) && attempt < retries) {
+        const ra = parseFloat(res.headers.get('retry-after')); // server-advised wait wins
+        if (ra > 0) waitMs = Math.min(60000, ra * 1000) + 250;
         lastErr = new Error(`Anthropic API ${res.status}`);
       } else {
         throw new Error(`Anthropic API ${res.status}: ${body.slice(0, 500)}`);
       }
     } catch (e) {
       if (e.name === 'AbortError') e = new Error(`Anthropic API request timed out after ${timeoutMs}ms`);
-      const retryable = /timed out/.test(e.message) || e.name === 'TypeError' || /Anthropic API (429|5\d\d)/.test(e.message);
+      const retryable = /timed out/.test(e.message) || e.name === 'TypeError' || /Anthropic API (429|529|5\d\d)/.test(e.message);
       if (!retryable || attempt >= retries) throw e;
       lastErr = e;
     } finally {
       clearTimeout(timer);
     }
-    await new Promise((r) => setTimeout(r, 1000 * 2 ** attempt)); // backoff: 1s, 2s, 4s
+    await new Promise((r) => setTimeout(r, waitMs));
   }
   throw lastErr || new Error('Anthropic API request failed.');
 }

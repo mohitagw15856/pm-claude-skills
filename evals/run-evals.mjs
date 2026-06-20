@@ -90,7 +90,7 @@ async function scoreTask({ c, body, description, model }) {
 
 async function main() {
   if (!apiKey) { console.error('Set ANTHROPIC_API_KEY to run evals.'); process.exit(1); }
-  const concurrency = parseInt(arg('concurrency', '4'), 10) || 4;
+  const concurrency = parseInt(arg('concurrency', '2'), 10) || 2;
   const { cases } = JSON.parse(readFileSync(casesPath, 'utf8'));
 
   // Build the full (case × model) task list.

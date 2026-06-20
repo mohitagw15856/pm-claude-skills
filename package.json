@@ -61,7 +61,8 @@
     "build:pages": "node scripts/build-skill-pages.mjs",
     "build:og": "node scripts/build-og-images.mjs",
     "skill-of-the-week": "node scripts/skill-of-the-week.mjs",
-    "check": "node scripts/skillcheck.mjs && node scripts/build-exports.mjs --check && node scripts/build-workflows.mjs --check && node web/build-skills.mjs && node scripts/build-samples.mjs && git diff --exit-code -- web/skills.json web/samples.json"
+    "check": "node scripts/skillcheck.mjs && node scripts/build-exports.mjs --check && node scripts/build-workflows.mjs --check && node web/build-skills.mjs && node scripts/build-samples.mjs && git diff --exit-code -- web/skills.json web/samples.json",
+    "improve": "node scripts/improve-skill.mjs"
   },
   "engines": {
     "node": ">=18"
