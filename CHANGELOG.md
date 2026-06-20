@@ -9,6 +9,19 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [22.3.0] — Monetization & a Polished Playground — 2026-06-21
+
+### Added
+- **Sponsors program** — tiers + value props ([SPONSORS.md](SPONSORS.md)), an auto-rendered sponsor wall on the Community page, and the GitHub Sponsors button (`FUNDING.yml`).
+- **Embeddable widget** ([`web/embed.js`](web/embed.js)) — drop `<div data-pm-skill="…">` on any site for a branded "Run this skill" card that links back; copy-paste snippet on every skill page.
+- **Pro / Teams page** (`pro.html`) — private skills, shared team context, custom packs; Partner tier today + a waitlist.
+- **Playground polish:** a **⌘K command palette** (ranked fuzzy search of skills + tools), a **hero landing** with animated stats + the Auto-Agent demo, **favourites + recently-used**, a site-wide **light/dark theme** toggle, **compare-models** (Opus/Sonnet/Haiku side by side), and **save-as-image** (branded PNG of any result).
+- **Repo social-preview image** for shareable links.
+
+### Changed
+- **README glow-up** — a native **Mermaid** lifecycle diagram, an honest **"How it compares"** table, and an animated typing header.
+- **Shared navigation** (`web/nav.js`) is now the single source for the tools bar *and* theme, applied consistently across every page (fixes catalog/leaderboard drift + theme).
+
 ## [22.2.0] — Skill Studio, Auto-Agent & Editor Extension — 2026-06-20
 
 Lower the bar to *create* skills, raise the ceiling on *using* them, and meet people in their editor.
