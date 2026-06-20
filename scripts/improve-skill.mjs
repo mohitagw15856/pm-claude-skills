@@ -18,7 +18,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const apiKey = process.env.ANTHROPIC_API_KEY || '';
 const arg = (n, d) => { const i = process.argv.indexOf(`--${n}`); return i !== -1 ? process.argv[i + 1] : d; };
 const RUN_MODEL = arg('model', 'claude-sonnet-4-6');
-const JUDGE = arg('judge', 'claude-opus-4-8');
+const JUDGE = arg('judge', 'claude-sonnet-4-6'); // cost-optimized; pass --judge claude-opus-4-8 for a stricter pass
 const MIN_GAIN = parseFloat(arg('min-gain', '0.25'));
 const DRY = process.argv.includes('--dry-run');
 const DIMENSIONS = ['structure', 'completeness', 'usefulness', 'grounding'];

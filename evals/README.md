@@ -20,10 +20,21 @@ Needs an Anthropic API key (this calls the API and costs tokens):
 
 ```bash
 ANTHROPIC_API_KEY=sk-ant-... node evals/run-evals.mjs
-#   --models claude-opus-4-8,claude-sonnet-4-6,claude-haiku-4-5-20251001
-#   --judge  claude-opus-4-8
 node scripts/build-leaderboard.mjs       # render web/leaderboard.html
 ```
+
+## 💸 Keeping it cheap
+
+Evals call the API, so the defaults are deliberately frugal and **nothing runs on a schedule** — every eval/improve workflow is manual (`workflow_dispatch`).
+
+- **Cheap defaults:** one run model (Sonnet) + a **Sonnet judge** (Opus judging was ~5× the cost for a 1–5 rubric it doesn't need). A full run is roughly **$0.30**.
+- **Estimate before you spend:** `node evals/run-evals.mjs --dry-run` prints the plan and a rough cost, making **no** API calls.
+- **Skip unchanged:** each result stores a content hash; re-running only re-scores skills whose `SKILL.md` (or case) changed. `--force` overrides.
+- **Only changed skills:** `--changed` scores just the skills that differ from `--base` (default `origin/main`) — ideal for CI / per-PR evals (often $0.00).
+- **Hard cap:** `--max-skills N`.
+- **Official, stricter pass** when you want it: `--models claude-sonnet-4-6,claude-haiku-4-5-20251001 --judge claude-opus-4-8`.
+
+> **Set a hard ceiling at the source:** in the [Anthropic Console](https://console.anthropic.com/settings/limits) → **Limits**, set a monthly spend cap. That guarantees evals (or the ChatOps bot, or sample generation) can never run your balance dry again.
 
 `run-evals.mjs` writes `evals/results.json`; the leaderboard builder prefers it and falls
 back to `results.example.json` (clearly labelled) so the page renders before you run real evals.

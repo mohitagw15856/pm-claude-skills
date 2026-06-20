@@ -12,8 +12,8 @@ on:
         description: 'Space-separated skill names, or "all" for every eval-case skill'
         required: true
         default: 'all'
-  schedule:
-    - cron: '0 6 * * 1' # weekly — "gets better while you sleep"
+  # Manual-only by design: this spends API credits, so it never runs on a schedule.
+  # Trigger it yourself from the Actions tab when you want an improvement pass.
 
 permissions:
   contents: write

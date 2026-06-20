@@ -50,7 +50,9 @@ jobs:
           fi
           node evals/run-evals.mjs \
             --models "${{ github.event.inputs.models || 'claude-sonnet-4-6,claude-haiku-4-5-20251001' }}" \
-            --judge "${{ github.event.inputs.judge || 'claude-opus-4-8' }}"
+            --judge "${{ github.event.inputs.judge || 'claude-sonnet-4-6' }}"
+          # Cheap by default (Sonnet judge, skips unchanged skills). For a stricter
+          # official pass, dispatch with judge=claude-opus-4-8.
 
       - name: Build the leaderboard page (sanity check)
         run: node scripts/build-leaderboard.mjs
