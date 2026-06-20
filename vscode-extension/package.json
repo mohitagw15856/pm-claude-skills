@@ -1,0 +1,20 @@
+{
+  "name": "pm-skills",
+  "displayName": "PM Skills — 175 Agent Skills",
+  "description": "Insert any of 175 professional Agent Skills as context for Copilot/Cursor, or open one in the playground — without leaving your editor.",
+  "version": "0.1.0",
+  "publisher": "mohitagw15856",
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Snippets", "Other", "AI"],
+  "keywords": ["claude", "skills", "prompt", "copilot", "cursor", "ai", "prd", "agent skills"],
+  "repository": { "type": "git", "url": "https://github.com/mohitagw15856/pm-claude-skills.git" },
+  "license": "MIT",
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      { "command": "pmSkills.insert", "title": "PM Skills: Insert a skill as context" },
+      { "command": "pmSkills.copy", "title": "PM Skills: Copy a skill to clipboard" },
+      { "command": "pmSkills.openPlayground", "title": "PM Skills: Open a skill in the Playground" }
+    ]
+  }
+}

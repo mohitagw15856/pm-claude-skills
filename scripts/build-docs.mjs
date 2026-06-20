@@ -91,16 +91,8 @@ const html = `<!DOCTYPE html>
   <h1>🧠 Skill Catalog — ${skills.length} professional Agent Skills</h1>
   <p>Structured <code>SKILL.md</code> skills for Claude, ChatGPT, Gemini, Cursor, Codex &amp; Hermes. Install all with <code>npx pm-claude-skills add --agent &lt;tool&gt;</code>.</p>
 </header>
-<nav class="toolbar-nav" aria-label="Tools">
-  <a class="tool" href="index.html">▶ Playground</a>
-  <a class="tool" href="canvas.html">🧩 Workflow Canvas</a>
-  <a class="tool" href="grade.html">📝 Grade your work</a>
-  <a class="tool" href="examples.html">📄 Sample outputs</a>
-  <a class="tool" href="benchmark.html">🏆 Benchmark</a>
-  <a class="tool" href="community.html">💬 Community</a>
-  <a class="tool" href="leaderboard.html">📊 Leaderboard</a>
-  <a class="tool active" href="catalog.html">📚 Catalog</a>
-</nav>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<script src="nav.js"></script>
 <div class="controls"><input id="q" type="search" placeholder="Filter ${skills.length} skills…" oninput="filter()" /></div>
 <main id="main">
 ${sections}

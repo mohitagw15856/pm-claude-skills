@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>Skill Studio — create a new AI agent skill in your browser</title>
+<meta name="description" content="Describe a skill and generate a complete, standards-compliant SKILL.md — then open a one-click pull request to contribute it. The eval harness scores it automatically." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .studio { max-width: 880px; margin: 0 auto; padding: 16px 22px 70px; }
+  .field { margin-bottom: 12px; } .field label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 5px; }
+  .field .hint { color: var(--muted); font-weight: 400; }
+  .field input, .field textarea, .field select {
+    width: 100%; box-sizing: border-box; padding: 10px 12px; background: var(--panel); color: var(--text);
+    border: 1px solid var(--border); border-radius: 9px; font-family: inherit; font-size: 14px;
+  }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; } @media(max-width:620px){.row2{grid-template-columns:1fr;}}
+  .actions { margin: 14px 0; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  pre.skillmd { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px; overflow: auto; font-size: 13px; line-height: 1.5; white-space: pre-wrap; }
+  .out-actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 12px 0; }
+  .lead { color: #c7cfda; font-size: 15.5px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Skill Studio</h1><p class="tagline">Describe a skill → get a compliant SKILL.md → open a PR.</p></div></div>
+  <div class="key-area">
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Claude key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your key stays in this browser. Generated skills are scored by the <a href="benchmark.html">eval harness</a> when you open a PR.</div>
+
+<div class="studio">
+  <p class="lead">Turn an idea into a <strong>standards-compliant skill</strong> — frontmatter, a "work from a brief" rule, structured output, quality checks, and anti-patterns — then contribute it in one click.</p>
+
+  <div class="field"><label>Skill name <span class="hint">— kebab-case</span></label><input id="f_name" placeholder="e.g. incident-comms-plan" /></div>
+  <div class="field"><label>What it does <span class="hint">— one or two sentences</span></label><textarea id="f_does" rows="2" placeholder="Draft a customer-facing incident communications plan during an outage."></textarea></div>
+  <div class="row2">
+    <div class="field"><label>Use it when… <span class="hint">— trigger phrases</span></label><input id="f_when" placeholder="asked to write an incident comms plan / status page update" /></div>
+    <div class="field"><label>It produces… </label><input id="f_produces" placeholder="a timed comms plan with holding statements per channel" /></div>
+  </div>
+  <div class="field"><label>Key inputs <span class="hint">— what the user provides</span></label><textarea id="f_inputs" rows="2" placeholder="severity, affected service, audience, channels, current status"></textarea></div>
+  <div class="row2">
+    <div class="field"><label>Based on <span class="hint">— framework/source (optional)</span></label><input id="f_source" placeholder="e.g. Google SRE incident comms" /></div>
+    <div class="field"><label>Bundle</label><select id="f_bundle"><option>pm-operations</option><option>pm-essentials</option><option>pm-engineering</option><option>pm-cs</option><option>pm-data</option><option>pm-design</option><option>pm-finance</option><option>pm-hr</option><option>pm-sales</option><option>pm-legal</option><option>pm-research</option><option>pm-gtm</option><option>pm-social</option><option>pm-writers</option><option>pm-cross</option></select></div>
+  </div>
+
+  <div class="actions">
+    <button id="genBtn" class="primary" type="button">✨ Generate SKILL.md</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+    <span id="status" class="status"></span>
+  </div>
+
+  <div id="outWrap" hidden>
+    <div class="out-actions">
+      <button id="copyBtn" class="ghost" type="button">Copy</button>
+      <button id="dlBtn" class="ghost" type="button">Download .md</button>
+      <a id="prBtn" class="btn-pr" target="_blank" rel="noopener"></a>
+      <a id="issueBtn" class="ghost" href="https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=submit-skill.yml" target="_blank" rel="noopener" style="text-decoration:none;padding:8px 13px;border:1px solid var(--border);border-radius:8px;color:var(--text)">Submit via form</a>
+    </div>
+    <pre class="skillmd" id="out"></pre>
+  </div>
+</div>
+
+<script src="nav.js"></script>
+<script>
+const API_URL='https://api.anthropic.com/v1/messages';
+const REPO='mohitagw15856/pm-claude-skills';
+const el=(id)=>document.getElementById(id);
+let controller=null;
+const k=localStorage.getItem('anthropic_api_key'); if(k) el('apiKey').value=k;
+const m=localStorage.getItem('anthropic_model'); if(m) el('model').value=m;
+el('apiKey').addEventListener('input',e=>localStorage.setItem('anthropic_api_key',e.target.value.trim()));
+el('model').addEventListener('change',e=>localStorage.setItem('anthropic_model',e.target.value));
+el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+el('genBtn').addEventListener('click',gen);
+el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+el('copyBtn').addEventListener('click',()=>navigator.clipboard.writeText(el('out').textContent||''));
+el('dlBtn').addEventListener('click',()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([el('out').textContent],{type:'text/markdown'}));a.download=(el('f_name').value.trim()||'skill')+'.md';a.click();});
+
+function setStatus(t,e){const s=el('status');s.textContent=t;s.className='status'+(e?' err':'');}
+
+async function gen(){
+  const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your Claude key first.',true);
+  const name=el('f_name').value.trim().toLowerCase().replace(/[^a-z0-9-]+/g,'-').replace(/^-|-$/g,'');
+  if(!name) return setStatus('Give the skill a name.',true);
+  if(!el('f_does').value.trim()) return setStatus('Describe what it does.',true);
+  el('f_name').value=name;
+  const system=`You are an expert author of "Agent Skills" — structured SKILL.md instruction files. Output ONLY a single valid SKILL.md file (no commentary, no code fences). Follow this exact structure:
+
+1. YAML frontmatter delimited by --- with two keys:
+   - name: ${name}
+   - description: one paragraph that (a) says what it does, (b) has a "Use when…" trigger clause listing realistic phrases, and (c) ends with a "Produces …" sentence describing the concrete output.
+2. # <Title> heading.
+3. A one-line purpose statement.
+4. ## Working from a brief — instruct: always deliver the complete artifact even from a short brief; infer missing specifics and mark them *(assumed — confirm)*; never leave [bracketed placeholders] or ask questions instead of delivering.
+5. ## Required Inputs — a bulleted list (infer any not provided).
+6. ## Output Structure — the exact sections/format the artifact should have.
+7. ## Quality Checks — a checklist of - [ ] items.
+8. ## Anti-Patterns — a checklist of - [ ] "Do not …" items, each with a short reason.
+Keep it tight and instructional. British or American spelling is fine; be consistent.`;
+  const user=`Create a skill.
+Name: ${name}
+What it does: ${el('f_does').value.trim()}
+Use when: ${el('f_when').value.trim()||'(infer realistic triggers)'}
+Produces: ${el('f_produces').value.trim()||'(infer the concrete output)'}
+Key inputs: ${el('f_inputs').value.trim()||'(infer)'}
+Based on (framework/source): ${el('f_source').value.trim()||'(none — only cite a real one if clearly applicable)'}`;
+
+  el('outWrap').hidden=false; const out=el('out'); out.textContent='';
+  el('genBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController(); setStatus('Generating…');
+  let acc='';
+  try{
+    const res=await fetch(API_URL,{method:'POST',headers:{'content-type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:el('model').value,max_tokens:3000,stream:true,system,messages:[{role:'user',content:user}]}),signal:controller.signal});
+    if(!res.ok){let msg='API '+res.status;try{msg=JSON.parse(await res.text()).error.message;}catch(_){ }throw new Error(msg);}
+    const reader=res.body.getReader();const dec=new TextDecoder();let buf='';
+    while(true){const {value,done}=await reader.read();if(done)break;buf+=dec.decode(value,{stream:true});const lines=buf.split('\n');buf=lines.pop();
+      for(const line of lines){if(!line.startsWith('data:'))continue;const p=line.slice(5).trim();if(!p||p==='[DONE]')continue;let e;try{e=JSON.parse(p);}catch(_){continue;}
+        if(e.type==='content_block_delta'&&e.delta&&e.delta.text){acc+=e.delta.text;out.textContent=acc;}}}
+    acc=acc.replace(/^```[a-z]*\n?|\n?```$/g,'').trim(); out.textContent=acc;
+    setStatus('Done — review it, then open a PR.');
+    // Wire the one-click PR (GitHub create-file editor, prefilled).
+    const url=`https://github.com/${REPO}/new/main?filename=${encodeURIComponent('skills/'+name+'/SKILL.md')}&value=${encodeURIComponent(acc)}`;
+    const pr=el('prBtn'); pr.textContent='🚀 Open a pull request'; pr.href=url;
+  }catch(e){setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true);}
+  finally{el('genBtn').disabled=false;el('stopBtn').hidden=true;controller=null;}
+}
+</script>
+<style>.btn-pr{background:linear-gradient(135deg,#e0855f,#d9605a);color:#1a1207;font-weight:700;padding:9px 15px;border-radius:8px;text-decoration:none;font-size:13px}.btn-pr:hover{filter:brightness(1.06)}</style>
+</body>
+</html>

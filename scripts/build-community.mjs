@@ -57,8 +57,6 @@ const feedHtml = feed.slice(0, 14).map((f) =>
   `<li><span class="fi">${f.icon}</span> <a href="${f.url}">${f.text}</a> <span class="when">${f.when ? ago(f.when) : ''}</span></li>`
 ).join('');
 
-const tools = (active) => ['index.html ▶ Playground', 'canvas.html 🧩 Workflow Canvas', 'grade.html 📝 Grade your work', 'examples.html 📄 Sample outputs', 'benchmark.html 🏆 Benchmark', 'community.html 💬 Community', 'leaderboard.html 📊 Leaderboard', 'catalog.html 📚 Catalog']
-  .map((t) => { const [href, ...label] = t.split(' '); const l = label.join(' '); return `<a class="tool${href === active ? ' active' : ''}" href="${href}">${l}</a>`; }).join('\n    ');
 
 const html = `<!DOCTYPE html>
 <html lang="en">
@@ -90,9 +88,8 @@ const html = `<!DOCTYPE html>
   <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
     <div class="brand-text"><h1>Community Hub</h1><p class="tagline">Share what you built. Swap recipes. Shape the library.</p></div></div>
 </header>
-<nav class="toolbar-nav" aria-label="Tools">
-    ${tools('community.html')}
-</nav>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<script src="nav.js"></script>
 <div class="hub">
   <div class="stats">
     <div class="stat"><b>⭐ ${stars}</b><br><span>stars</span></div>

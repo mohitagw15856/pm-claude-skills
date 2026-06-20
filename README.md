@@ -105,7 +105,7 @@ Individual skills are great. **Chaining** them is the superpower. A *recipe* run
 
 → Full detail and how to add your own in [**WORKFLOWS.md**](WORKFLOWS.md). Recipes run as slash commands in Claude Code, or over MCP via the `get_workflow` tool.
 
-**Or build your own visually.** The [**Workflow Canvas**](https://mohitagw15856.github.io/pm-claude-skills/canvas.html) lets you drag any skills into a custom chain and run it in the browser — each step's output feeds the next. Like n8n, but for professional thinking.
+**Or build your own visually.** The [**Workflow Canvas**](https://mohitagw15856.github.io/pm-claude-skills/canvas.html) lets you drag any skills into a custom chain and run it in the browser — each step's output feeds the next. Like n8n, but for professional thinking. Don't know which skills to use? The [**✨ Auto-Agent**](https://mohitagw15856.github.io/pm-claude-skills/agent.html) takes a plain-English goal, picks the right skills, and runs the chain for you.
 
 [![Workflow Canvas — drag skills into a chain and run it, each step feeding the next](web/docs-assets/canvas-demo.gif)](https://mohitagw15856.github.io/pm-claude-skills/canvas.html)
 
@@ -161,7 +161,7 @@ That's not luck — it's a [self-improving pipeline](scripts/improve-skill.mjs) 
 
 **Already have a draft?** Flip on **📝 Critique mode** in the Playground — or use the standalone [**Grade your work**](https://mohitagw15856.github.io/pm-claude-skills/grade.html) tool — to paste an existing PRD/roadmap/update and get a rubric score, ranked gaps, and a redline graded against the skill's framework. Before you ship, run [**`/red-team`**](skills/red-team-review/SKILL.md) to stress-test the plan against a room of hostile expert personas.
 
-This whole thing is an open, reproducible **[benchmark for AI professional work](https://mohitagw15856.github.io/pm-claude-skills/benchmark.html)** — and it's *eval-gated*: every contributed skill is auto-checked for structure and scored on the rubric ([submit one →](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=submit-skill.yml)).
+This whole thing is an open, reproducible **[benchmark for AI professional work](https://mohitagw15856.github.io/pm-claude-skills/benchmark.html)** — and it's *eval-gated*: every contributed skill is auto-checked for structure and scored on the rubric. The easiest way to add one is **[Skill Studio](https://mohitagw15856.github.io/pm-claude-skills/studio.html)** — describe a skill in your browser, generate a compliant `SKILL.md`, and open a pull request in one click ([or use the form →](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=submit-skill.yml)).
 
 ---
 
@@ -259,6 +259,8 @@ The body is plain English — so it works anywhere a capable model reads instruc
 There are two kinds of support. **Native `SKILL.md` agents** read the file as-is and
 auto-discover skills from the `description` frontmatter. **Other tools** take the markdown
 body as a system prompt — for those we ship ready-made [exports](#ready-to-use-exports).
+
+**In your editor (VS Code / Cursor):** the [**`vscode-extension/`**](vscode-extension/) brings all 175 skills into the Command Palette — search and *insert a skill as context* for Copilot/Cursor chat, copy it, or open it in the Playground.
 
 | Platform | How it works | Auto-trigger? |
 |---|---|---|

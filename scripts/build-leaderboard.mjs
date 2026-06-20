@@ -61,16 +61,8 @@ const html = `<!DOCTYPE html>
   <h1>🏆 Skill Leaderboard</h1>
   <p>LLM-judged quality (1–5) for each skill across Claude models — scored on structure, completeness, usefulness &amp; grounding by <code>${esc(data.judge || 'an LLM judge')}</code>.</p>
 </header>
-<nav class="toolbar-nav" aria-label="Tools">
-  <a class="tool" href="index.html">▶ Playground</a>
-  <a class="tool" href="canvas.html">🧩 Workflow Canvas</a>
-  <a class="tool" href="grade.html">📝 Grade your work</a>
-  <a class="tool" href="examples.html">📄 Sample outputs</a>
-  <a class="tool" href="benchmark.html">🏆 Benchmark</a>
-  <a class="tool" href="community.html">💬 Community</a>
-  <a class="tool active" href="leaderboard.html">📊 Leaderboard</a>
-  <a class="tool" href="catalog.html">📚 Catalog</a>
-</nav>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<script src="nav.js"></script>
 <main>
   ${isExample ? '<div class="banner">⚠️ <strong>Example data</strong> — illustrative scores so this page renders. Run <code>ANTHROPIC_API_KEY=… node evals/run-evals.mjs</code> then <code>node scripts/build-leaderboard.mjs</code> for real numbers.</div>' : ''}
   <table>
