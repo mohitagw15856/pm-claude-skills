@@ -20,6 +20,23 @@ const samplesFile = join(root, 'web', 'samples.json');
 const samples = existsSync(samplesFile) ? JSON.parse(readFileSync(samplesFile, 'utf8')).samples : [];
 const sampleBySkill = Object.fromEntries(samples.map((s) => [s.skill, s]));
 
+// Giscus (per-skill discussion, backed by GitHub Discussions). Falls back to a plain
+// "Discuss on GitHub" link until repoId + categoryId are filled in giscus.json.
+const giscus = existsSync(join(root, 'giscus.json')) ? JSON.parse(readFileSync(join(root, 'giscus.json'), 'utf8')) : {};
+const giscusReady = giscus.repoId && giscus.categoryId && giscus.repo;
+function discussionBlock(s) {
+  if (!giscusReady) {
+    return `<h2>💬 Discussion</h2>\n<p>Used this skill? Share what you got, tweaks, or questions on <a href="${REPO}/discussions">GitHub Discussions</a>.</p>`;
+  }
+  return `<h2>💬 Discussion</h2>
+<script src="https://giscus.app/client.js"
+  data-repo="${giscus.repo}" data-repo-id="${giscus.repoId}"
+  data-category="${esc(giscus.category || '')}" data-category-id="${giscus.categoryId}"
+  data-mapping="specific" data-term="skill: ${s.name}"
+  data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top"
+  data-theme="${giscus.theme || 'dark'}" data-lang="en" crossorigin="anonymous" async></script>`;
+}
+
 const esc = (s) => String(s || '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const TIER = { production: ['🟢', 'Production-Ready'], stable: ['🔵', 'Stable'], experimental: ['🟡', 'Experimental'] };
 
@@ -139,6 +156,7 @@ claude mcp add pm-skills -- npx -y pm-claude-skills-mcp</code></pre>
   ${inputs}
   ${sample}
   ${relatedHtml}
+  ${discussionBlock(s)}
 
   <div class="foot">
     <strong>${esc(s.title)}</strong> is one of ${skills.length} open-source professional AI agent skills.

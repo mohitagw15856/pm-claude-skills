@@ -1,0 +1,9 @@
+{
+  "_setup": "2-minute setup to turn on per-skill discussions: (1) Repo Settings → General → Features → enable Discussions. (2) Install the giscus GitHub app on this repo: https://github.com/apps/giscus. (3) Go to https://giscus.app, enter mohitagw15856/pm-claude-skills, pick the 'Announcements'-style category you want (e.g. create one called 'Skill discussions'), and copy the data-repo-id and data-category-id it generates. (4) Paste them into repoId and categoryId below and commit. Until both are filled, skill pages show a 'Discuss on GitHub' link instead of the embedded widget.",
+  "repo": "mohitagw15856/pm-claude-skills",
+  "repoId": "",
+  "category": "Skill discussions",
+  "categoryId": "",
+  "mapping": "specific",
+  "theme": "dark"
+}

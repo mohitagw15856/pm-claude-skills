@@ -83,6 +83,7 @@ async function init() {
   el('stopBtn').addEventListener('click', () => controller && controller.abort());
   el('copyBtn').addEventListener('click', () => navigator.clipboard.writeText(el('output').dataset.raw || ''));
   el('downloadBtn').addEventListener('click', downloadOutput);
+  el('shareHubBtn').addEventListener('click', shareToHub);
 
   // Copy the skill's instructions formatted for another assistant.
   el('copyChatgpt').addEventListener('click', () => copyPrompt('chatgpt'));
@@ -202,6 +203,20 @@ function renderRecommendations() {
     box.appendChild(chip);
   }
   box.hidden = false;
+}
+
+// ---------- Share an output to the community Hub (prefilled GitHub Discussion) ----------
+const REPO_URL = 'https://github.com/mohitagw15856/pm-claude-skills';
+function shareToHub() {
+  if (!current) return;
+  const out = (el('output').dataset.raw || '').trim();
+  if (!out) return setStatus('Run the skill first, then share what you got.', true);
+  const title = `[Show & Tell] ${current.title}`;
+  const body =
+    `**Skill:** \`${current.name}\` · made with the [PM Skills playground](https://mohitagw15856.github.io/pm-claude-skills/?skill=${current.name})\n\n` +
+    `**What I got:**\n\n${out.slice(0, 5000)}${out.length > 5000 ? '\n\n…(truncated)' : ''}\n\n**Tweaks / notes:** `;
+  const url = `${REPO_URL}/discussions/new?category=show-and-tell&title=${encodeURIComponent(title)}&body=${encodeURIComponent(body)}`;
+  window.open(url, '_blank', 'noopener');
 }
 
 // ---------- Shareable links: ?skill=<name>&i=<base64 inputs> ----------
