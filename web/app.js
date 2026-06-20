@@ -8,8 +8,8 @@ const API_URL = 'https://api.anthropic.com/v1/messages';
 
 // Role → a curated starter set of skill names (the "try these first" for each role).
 const ROLES = {
-  'Product Manager': ['prd-template', 'rice-prioritisation', 'roadmap-narrative', 'executive-update', 'user-research-synthesis', 'metrics-framework'],
-  'Founder / Exec': ['executive-update', 'board-deck-narrative', 'investor-update', 'competitor-teardown', 'okr-builder', 'go-to-market'],
+  'Product Manager': ['prd-template', 'rice-prioritisation', 'roadmap-narrative', 'executive-update', 'red-team-review', 'metrics-framework'],
+  'Founder / Exec': ['executive-update', 'board-deck-narrative', 'investor-update', 'competitor-teardown', 'red-team-review', 'go-to-market'],
   'Customer Success': ['cs-health-scorecard', 'churn-analysis', 'cs-escalation-brief', 'renewal-playbook', 'qbr-deck', 'account-plan'],
   'Marketing': ['go-to-market', 'product-positioning-doc', 'content-calendar', 'press-release', 'competitor-teardown', 'email-campaign'],
   'Engineering': ['technical-spec-template', 'architecture-decision-record', 'incident-postmortem', 'code-review-checklist', 'rfc-writer', 'runbook-writer'],
@@ -74,9 +74,10 @@ async function init() {
     el('keyToggle').textContent = show ? 'Hide' : 'Show';
   });
 
-  el('search').addEventListener('input', renderGallery);
-  el('pluginFilter').addEventListener('change', renderGallery);
-  el('tierFilter').addEventListener('change', renderGallery);
+  el('search').addEventListener('input', () => renderGallery());
+  el('pluginFilter').addEventListener('change', () => renderGallery());
+  el('tierFilter').addEventListener('change', () => renderGallery());
+  el('evalFilter').addEventListener('change', () => renderGallery());
   el('backBtn').addEventListener('click', showGallery);
   el('runBtn').addEventListener('click', run);
   el('stopBtn').addEventListener('click', () => controller && controller.abort());
@@ -290,12 +291,16 @@ function renderGallery(featuredNames, roleLabel) {
   const bundle = el('pluginFilter').value;
   const tier = el('tierFilter').value;
 
+  const evalOnly = el('evalFilter').checked;
+  const norm = (x) => x.toLowerCase().replace(/[-_]+/g, ' '); // so "red team" matches "red-team"
+  const nq = norm(q);
   const matches = SKILLS.filter((s) => {
     if (bundle && s.plugin !== bundle) return false;
     if (tier && (s.tier || 'stable') !== tier) return false;
+    if (evalOnly && !s.eval) return false;
     if (!q) return true;
-    return (s.title + ' ' + s.description + ' ' + s.name).toLowerCase().includes(q);
-  });
+    return norm(s.title + ' ' + s.description + ' ' + s.name).includes(nq);
+  }).sort((a, b) => evalOnly ? (b.eval?.score || 0) - (a.eval?.score || 0) : 0);
 
   el('count').textContent = `${matches.length} skill${matches.length === 1 ? '' : 's'}`;
 

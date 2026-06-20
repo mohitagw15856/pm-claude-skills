@@ -210,6 +210,9 @@ button.ghost:hover { border-color: var(--accent); }
 .link-btn { background: none; border: 0; color: var(--accent-2); cursor: pointer; font-size: 13px; }
 .link-btn:hover { text-decoration: underline; }
 
+/* ---------- Eval-scored filter ---------- */
+.eval-filter { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: #6ee7b7; cursor: pointer; background: rgba(16,185,129,.10); border: 1px solid rgba(16,185,129,.30); border-radius: 8px; padding: 7px 11px; }
+
 /* ---------- Critique mode ---------- */
 .mode-bar { margin-bottom: 12px; }
 .mode-toggle {

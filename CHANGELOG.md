@@ -9,6 +9,23 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [22.0.0] — Closing the Loop — 2026-06-20
+
+The library stops being a one-shot generator and starts closing loops — improving itself, grading your work, grounding in your data, and composing visually.
+
+### Added
+- **Self-improving skills** — `scripts/improve-skill.mjs` + a weekly workflow: eval → judge critique → rewrite the SKILL.md → re-eval, **keeping the rewrite only if the score rises**. Logged to `SKILL-IMPROVEMENTS.md`.
+- **Critique mode** (Playground) — paste an existing draft and get a rubric score, ranked gaps, and a redline, graded against the skill's framework. Generate *or* evaluate.
+- **Data grounding** — load a real file into your context in the Playground; documented MCP connector pattern so skills act on live sources (Linear, Drive, a database).
+- **Workflow Canvas** (`web/canvas.html`) — drag skills into a custom chain and run it, each step feeding the next; shareable recipe links.
+- **Red-Team Review skill** + `/red-team` — stress-test a plan against hostile expert personas, with ranked blind spots, a pre-mortem, and prioritised fixes. Library is now **175 skills**.
+- **Eval-scored filter** in the Playground so the (now 15) eval badges are easy to find.
+
+### Changed
+- **Hardened the eval client** — honor `Retry-After`, retry 429/529/5xx up to 5× with capped backoff+jitter, lower eval concurrency (4 → 2). Leaderboard runs now complete reliably.
+- **Fixed three skills the eval flagged** — `go-to-market`, `okr-builder`, `roadmap-narrative` went from ~2.0/5 to **4.75/5** with a "work from a brief" rule. Eval coverage expanded 6 → 15 skills.
+- Hyphen/space-insensitive Playground search (so "red team" finds `red-team-review`).
+
 ## [21.1.1] — Framework Attribution & a Leaner README — 2026-06-20
 
 ### Added
