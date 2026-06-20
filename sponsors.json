@@ -1,0 +1,12 @@
+{
+  "_note": "Sponsor tiers + current sponsors — the single source for the README section, the Community page sponsor wall, and SPONSORS.md. Add a sponsor by appending to \"sponsors\" (name, url, logo, tier). Run: node scripts/build-community.mjs to refresh the wall.",
+  "sponsorUrl": "https://github.com/sponsors/mohitagw15856",
+  "coffeeUrl": "https://www.buymeacoffee.com/mohit15856",
+  "tiers": [
+    { "name": "☕ Supporter", "price": "$5/mo", "perks": ["Your name in SPONSORS.md", "Sponsor badge on your GitHub", "Warm fuzzy feeling"] },
+    { "name": "🚀 Backer", "price": "$25/mo", "perks": ["Everything in Supporter", "Priority on your skill requests", "A vote on the roadmap"] },
+    { "name": "🏢 Sustaining", "price": "$100/mo", "perks": ["Everything in Backer", "Your logo + link in the README and on the site", "One custom skill built for you each quarter"] },
+    { "name": "💎 Partner", "price": "$500/mo", "perks": ["Everything in Sustaining", "Your logo on every skill page", "A private skill pack built for your team", "Priority support & a quarterly review call"] }
+  ],
+  "sponsors": []
+}

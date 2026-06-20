@@ -57,6 +57,15 @@ const feedHtml = feed.slice(0, 14).map((f) =>
   `<li><span class="fi">${f.icon}</span> <a href="${f.url}">${f.text}</a> <span class="when">${f.when ? ago(f.when) : ''}</span></li>`
 ).join('');
 
+// Sponsors (from sponsors.json) — tiers + wall.
+const sp = existsSync(join(root, 'sponsors.json')) ? JSON.parse(readFileSync(join(root, 'sponsors.json'), 'utf8')) : { tiers: [], sponsors: [], sponsorUrl: '#' };
+const tierHtml = (sp.tiers || []).map((t) =>
+  `<div class="tier"><div class="tname">${esc(t.name)}</div><div class="tprice">${esc(t.price)}</div><ul>${(t.perks || []).map((p) => `<li>${esc(p)}</li>`).join('')}</ul></div>`
+).join('');
+const wallHtml = (sp.sponsors && sp.sponsors.length)
+  ? sp.sponsors.map((s) => `<a class="sponsor" href="${esc(s.url || '#')}" title="${esc(s.name)}">${s.logo ? `<img src="${esc(s.logo)}" alt="${esc(s.name)}" />` : esc(s.name)}</a>`).join('')
+  : `<span class="muted">No sponsors yet — <a href="${esc(sp.sponsorUrl)}">be the first</a> and your logo lands here, in the README, and on every skill page.</span>`;
+
 
 const html = `<!DOCTYPE html>
 <html lang="en">
@@ -117,7 +126,26 @@ const html = `<!DOCTYPE html>
       <p style="margin-top:12px"><a href="https://github.com/${REPO}/blob/main/CONTRIBUTING.md">Add yourself → contribute a skill</a></p>
     </div>
   </div>
+
+  <div class="card" style="margin-top:20px">
+    <h2>❤️ Sponsors</h2>
+    <p class="muted" style="margin-top:0">Keep this free, independent, and ad-free — and get your logo in front of everyone who uses it.</p>
+    <div class="wall">${wallHtml}</div>
+    <div class="tiers">${tierHtml}</div>
+    <div class="hub-cta" style="margin-top:14px">
+      <a class="btn btn-primary" href="${esc(sp.sponsorUrl)}">💖 Become a sponsor</a>
+      <a class="btn btn-ghost" href="${esc(sp.coffeeUrl || sp.sponsorUrl)}">☕ Buy me a coffee</a>
+    </div>
+  </div>
 </div>
+<style>
+  .wall{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin:6px 0 16px}
+  .wall .sponsor img{height:42px;border-radius:8px}
+  .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+  .tier{border:1px solid var(--border);border-radius:10px;padding:12px 14px;background:var(--panel-2)}
+  .tname{font-weight:700} .tprice{color:var(--accent-2);font-size:13px;margin-bottom:6px}
+  .tier ul{margin:0;padding-left:18px;font-size:12.5px;color:var(--muted)} .tier li{margin:3px 0}
+</style>
 </body>
 </html>`;
 

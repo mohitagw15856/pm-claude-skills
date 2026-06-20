@@ -156,6 +156,12 @@ claude mcp add pm-skills -- npx -y pm-claude-skills-mcp</code></pre>
   ${inputs}
   ${sample}
   ${relatedHtml}
+
+  <h2>🔌 Embed this skill</h2>
+  <p>Drop this on your blog, docs, or site — it renders a "Run this skill" card:</p>
+  <pre><code>&lt;div data-pm-skill="${s.name}"&gt;&lt;/div&gt;
+&lt;script src="${BASE}/embed.js" async&gt;&lt;/script&gt;</code></pre>
+
   ${discussionBlock(s)}
 
   <div class="foot">

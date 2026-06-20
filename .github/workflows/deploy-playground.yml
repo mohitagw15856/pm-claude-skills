@@ -14,6 +14,7 @@ on:
       - 'skill-tiers.json'
       - 'skill-sources.json'
       - 'giscus.json'
+      - 'sponsors.json'
       - 'scripts/build-docs.mjs'
       - 'scripts/build-leaderboard.mjs'
       - 'scripts/build-skill-pages.mjs'

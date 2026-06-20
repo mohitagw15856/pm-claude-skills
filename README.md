@@ -637,18 +637,18 @@ Every skill, grouped by profession. **[Browse the full per-skill catalog → SKI
 
 Building and maintaining 175 skills across 26 bundles takes real time — testing skills against new model releases, building new ones from community requests, writing the article series, and keeping documentation current.
 
-If these skills save you time at work, consider sponsoring:
+If these skills save you time at work — or you're a company that wants your logo in front of the PMs, engineers, and operators who use them daily — **[become a sponsor →](https://github.com/sponsors/mohitagw15856)** (or [☕ buy me a coffee](https://www.buymeacoffee.com/mohit15856)).
 
-**[💖 Become a Sponsor →](https://github.com/sponsors/mohitagw15856)**
+| Tier | / mo | What you get |
+|------|----:|--------------|
+| ☕ **Supporter** | $5 | Name in [SPONSORS.md](SPONSORS.md) · sponsor badge |
+| 🚀 **Backer** | $25 | + priority on your skill requests · roadmap vote |
+| 🏢 **Sustaining** | $100 | + **your logo + link here and on the site** · one custom skill / quarter |
+| 💎 **Partner** | $500 | + logo on **every skill page** · a **private skill pack for your team** · priority support |
 
-Sponsorships from $5/month (coffee tier) up to $500/month (sustaining sponsor with logo placement). Every sponsor directly funds:
+Full details and where the money goes: **[SPONSORS.md](SPONSORS.md)**.
 
-- New skills based on community votes in [SKILL_REQUEST.md](SKILL_REQUEST.md)
-- Updates to existing skills when new Claude models ship
-- Continued free, ad-free Medium articles documenting what works
-- Quality improvements across the library
-
-Higher tiers include custom skill development for your team, direct access for support, and logo placement in this README. See the [sponsor page](https://github.com/sponsors/mohitagw15856) for full tier details.
+**Our sponsors:** *be the [first](https://github.com/sponsors/mohitagw15856) — your logo goes right here.*
 
 ---
 
