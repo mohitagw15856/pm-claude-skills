@@ -22,6 +22,23 @@ claude mcp add github      -- npx -y @modelcontextprotocol/server-github      # 
 Any [MCP server](https://github.com/modelcontextprotocol/servers) works — Postgres, Slack,
 Notion, Google Drive, Sentry, etc. `pm-skills` is the structure layer; they're the data layer.
 
+## 🔑 What you connect / authorize
+
+`pm-skills` itself needs **no auth** — it only serves skill instructions. Each **data** server
+you add authorizes on its own, once, in your MCP config:
+
+| Data server | What it needs |
+|---|---|
+| **filesystem** | a folder path you grant it (no token) |
+| **GitHub** | a Personal Access Token (`GITHUB_PERSONAL_ACCESS_TOKEN`) — use a fine-grained, read-mostly one |
+| **Slack** | a Slack bot/app token (OAuth) |
+| **Notion / Google Drive** | the provider's API token / OAuth connection |
+| **Postgres & co.** | a connection string |
+
+So "connect your GitHub/Slack" = add that provider's MCP server with its token to your client
+**once** — then every skill can use it. Nothing is sent anywhere except your own model + the
+servers you configured.
+
 ## Worked recipes (copy the prompt)
 
 **📋 PRD from a real ticket** *(pm-skills + github)*

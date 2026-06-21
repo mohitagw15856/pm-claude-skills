@@ -416,3 +416,9 @@ html[data-theme="light"] .toolbar-nav .tool.active { color: #fff; }
 .img-card .ic-body { max-height: 760px; overflow: hidden; font-size: 14.5px; line-height: 1.55; }
 .img-card .ic-body h1, .img-card .ic-body h2 { font-size: 18px; }
 .img-card .ic-foot { margin-top: 18px; padding-top: 14px; border-top: 1px solid #2a313c; font-size: 13px; color: #95a0b0; }
+
+/* ===== Make the API-key field impossible to miss when empty ===== */
+.key-field input:placeholder-shown { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(217,119,87,.22); }
+.key-field.pulse input { animation: keypulse .45s ease 3; }
+@keyframes keypulse { 0%,100% { box-shadow: 0 0 0 3px rgba(217,119,87,.22); } 50% { box-shadow: 0 0 0 7px rgba(217,119,87,.55); } }
+.key-hint { font-size: 11px; color: var(--accent-2); font-weight: 600; white-space: nowrap; }

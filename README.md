@@ -402,6 +402,8 @@ Then ask: *"search the skills for customer churn, then apply the best one to my 
 
 **🔌 Skills that *act* on your data.** Run `pm-skills` alongside a data server (filesystem, GitHub, Postgres, Drive…) and a skill works on your *real* sources: *"draft the PRD **from** GitHub issue #123,"* *"run `churn-analysis` on `exports/q2.csv`,"* *"open an issue per `product-launch-checklist` item."* Copy-paste configs + worked recipes in [**`connectors/`**](connectors/).
 
+> `pm-skills` needs **no auth**. To connect GitHub, Slack, Notion, etc., you add *that* provider's MCP server with its own token/OAuth **once** in your client — then every skill can use it. (filesystem = a folder you grant; GitHub = a PAT; Slack/Notion = OAuth.)
+
 ---
 
 ## ⚙️ AI-Powered Tooling

@@ -620,7 +620,7 @@ const SKILL_SUFFIX =
 // ---------- Run ----------
 async function run() {
   const key = el('apiKey').value.trim();
-  if (!key) return setStatus('Enter your Claude API key first.', true);
+  if (!key) { flagMissingKey(); return setStatus('👆 Paste your Claude API key (top-right) to run.', true); }
   if (!current) return;
 
   const ctx = getContext();
@@ -766,6 +766,15 @@ function setStatus(msg, isErr) {
   const s = el('status');
   s.textContent = msg;
   s.className = 'status' + (isErr ? ' err' : '');
+}
+
+// Draw the eye to the API-key field when someone tries to run without one.
+function flagMissingKey() {
+  const f = el('apiKey');
+  const wrap = f.closest('.key-field');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  f.focus();
+  if (wrap) { wrap.classList.remove('pulse'); void wrap.offsetWidth; wrap.classList.add('pulse'); setTimeout(() => wrap.classList.remove('pulse'), 1500); }
 }
 
 function parseApiError(text, status) {
