@@ -36,7 +36,7 @@
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest release (v26.0.0 — the Creator stack):** a new **🎬 [`pm-creator`](plugins/pm-creator)** bundle for content creators — `content-repurposer` (one piece → thread + LinkedIn + newsletter + carousel + Reel), `hook-writer`, `short-form-script`, `newsletter-writer`, `creator-brand-kit`, `creator-media-kit` — plus a **`/repurpose`** workflow, a **🔥 Viral Score** mode in the [Grade tool](https://mohitagw15856.github.io/pm-claude-skills/grade.html) (score any hook/post for reach), and tie-in with **[ContentGoldMine](https://github.com/mohitagw15856/ContentGoldMine)**, the app that automates the whole pipeline. Builds on v25 (the `skills` CLI, meta-skill, related-skills graph, Learn page). **205 skills**, 20 eval-scored. See the [changelog](#-changelog).
+**🆕 Latest release (v27.0.0 — across the whole AI ecosystem):** the library now plugs into everything. **Multi-model playground** (run any skill with your own **Claude / OpenAI / Gemini / Ollama** key — local models included), a **[remote MCP connector](mcp-remote/)** (add PM Skills to **ChatGPT, Claude.ai & Cursor** with one URL — no install), the MCP server now exposes skills as **prompts + resources**, **4 new IDE targets** (Cline, Continue, Zed, Roo — 9 platforms total), a **[Python package](python/)** (`pip install pm-skills` → LangChain/CrewAI tools), an **[`llms.txt`](https://mohitagw15856.github.io/pm-claude-skills/llms.txt)** for agent discovery, a reusable **[score-skills GitHub Action](.github/actions/score-skills/)**, and **MCP-registry manifests**. Plus the full library is now **eval-scored: 196 skills, avg 4.8/5**. **205 skills**. See the [changelog](#-changelog).
 
 ### ▶ See it in action — [try the live Skill Playground](https://mohitagw15856.github.io/pm-claude-skills/)
 
@@ -308,12 +308,14 @@ body as a system prompt — for those we ship ready-made [exports](#ready-to-use
 | **Claude Code** (CLI / desktop / web / IDE) | Native. Install via the plugin marketplace; Claude loads a skill automatically when your request matches its description. | ✅ Yes |
 | **Hermes Agent** (Nous Research) | Native — same open `SKILL.md` standard. Run `python3 scripts/sync-hermes-skills.py` to install into `~/.hermes/skills/`; Hermes auto-discovers them. | ✅ Yes |
 | **OpenAI Codex · OpenClaw** | Native `SKILL.md`. One-line install (see [below](#one-line-install-for-coding-agents)) or `./scripts/install.sh --agent codex`. | ✅ Yes |
-| **Cursor** | Generated `.mdc` rules → `.cursor/rules/`. `npx pm-claude-skills add --agent cursor`. | ⚙️ By description |
-| **Windsurf** | Generated `.md` workspace rules → `.windsurf/rules/`. `npx pm-claude-skills add --agent windsurf`. | ⚙️ By description |
-| **Aider** | Generated conventions files you load with `aider --read`. `npx pm-claude-skills add --agent aider`. | ⚙️ `--read` |
-| **MCP clients** (Claude Desktop, Cline, …) | Run the [MCP server](mcp/) — the assistant searches & pulls skills on demand via `npx -y pm-claude-skills-mcp`. | ✅ On demand |
-| **Claude.ai & Claude API** | Upload a skill, or paste the body in as a system prompt / project instruction. | ⚙️ Manual |
-| **ChatGPT & Gemini** | Copy a ready-made [export](#ready-to-use-exports) into a Custom GPT or Gem's instructions. You keep the full framework and output format. | ❌ Paste per use |
+| **Cursor · Windsurf · Aider** | Generated rules (`.cursor/rules/`, `.windsurf/rules/`, `aider --read`). `npx pm-claude-skills add --agent cursor` (or windsurf / aider). | ⚙️ By description |
+| **Cline · Continue · Zed · Roo** | Generated rule files under [`exports/`](exports/) (`.clinerules/`, Continue rules, Zed `.rules`, `.roo/rules/`). | ⚙️ By description |
+| **MCP clients** (Claude Desktop, Cline, …) | Run the [MCP server](mcp/) — searches & pulls skills on demand via `npx -y pm-claude-skills-mcp`. Now also serves skills as MCP **prompts + resources**. | ✅ On demand |
+| **ChatGPT · Claude.ai · Cursor (remote MCP)** | Deploy the [remote connector](mcp-remote/) and add **one URL** — no install. | ✅ On demand |
+| **Python agents** (LangChain, CrewAI, LlamaIndex) | [`pip install pm-skills`](python/) → `search_skills` / `get_skill` / ready-made tool adapters. | ✅ On demand |
+| **Run on your own key** (Claude / OpenAI / Gemini / Ollama) | The [Playground](https://mohitagw15856.github.io/pm-claude-skills/) runs any skill live — pick a provider, paste a key (or point at local Ollama). | ▶ In browser |
+| **ChatGPT & Gemini (copy-paste)** | Copy a ready-made [export](#ready-to-use-exports) into a Custom GPT or Gem's instructions. | ❌ Paste per use |
+| **Any agent / answer engine** | [`llms.txt`](https://mohitagw15856.github.io/pm-claude-skills/llms.txt) makes the whole library discoverable & citable. | ✅ On demand |
 
 **What's verified vs. what varies:** the skill **bodies** — the frameworks, rubrics, and
 output templates that do the actual work — are model-agnostic and have been used across
@@ -598,7 +600,7 @@ More templates will follow. If you want to contribute one, see the [template con
 
 ## 📋 Changelog
 
-**Latest: v26.0.0 — the Creator stack.** A new **🎬 `pm-creator`** bundle (content-repurposer, hook-writer, short-form-script, newsletter-writer, creator-brand-kit, creator-media-kit), a **`/repurpose`** workflow recipe, a **🔥 Viral Score** mode in the Grade tool (score any post/hook for social reach), and cross-promotion with **[ContentGoldMine](https://github.com/mohitagw15856/ContentGoldMine)** (the app that automates the repurposing pipeline) via [connectors/contentgoldmine.md](connectors/contentgoldmine.md). Builds on **v25.0.0** (the `skills` CLI, `writing-great-skills`, related-skills graph, Learn page). Now **205 skills** across **28 bundles** and **21 professions**, 20 eval-scored.
+**Latest: v27.0.0 — across the whole AI ecosystem.** Multi-model playground (Claude / OpenAI / Gemini / **Ollama** — run skills on local models too); a **remote MCP connector** ([`mcp-remote/`](mcp-remote/)) to add PM Skills to **ChatGPT, Claude.ai & Cursor** by URL; MCP server now serves skills as **prompts + resources**; **4 new IDE export targets** (Cline, Continue, Zed, Roo → 9 platforms); a **Python package** ([`python/`](python/), `pip install pm-skills` with LangChain/CrewAI adapters); an **`llms.txt`** for agent discovery; a reusable **[score-skills Action](.github/actions/score-skills/)**; and **MCP-registry manifests** (`server.json`, `smithery.yaml`). The full library is now eval-scored — **196 skills, avg 4.8/5**. Builds on **v26.0.0** (the Creator stack). **205 skills** across **28 bundles**, **21 professions**.
 
 Full [Keep a Changelog](https://keepachangelog.com/)-format history — every release back to the start — is in **[CHANGELOG.md](CHANGELOG.md)**.
 

@@ -1,6 +1,6 @@
 {
   "name": "pm-claude-skills",
-  "version": "26.0.0",
+  "version": "27.0.0",
   "type": "module",
   "description": "205 professional Agent Skills (SKILL.md) + subagents + slash commands for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes. Install into any AI coding tool with: npx pm-claude-skills add --agent <tool>.",
   "keywords": [
