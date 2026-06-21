@@ -1,8 +1,7 @@
 {
-  "generatedAt": "2026-06-21T06:57:26.639Z",
-  "judge": "claude-sonnet-4-6",
+  "generatedAt": "2026-06-21T18:58:18.334Z",
+  "judge": "claude-haiku-4-5-20251001",
   "models": [
-    "claude-sonnet-4-6",
     "claude-haiku-4-5-20251001"
   ],
   "dimensions": [
@@ -13,15 +12,16 @@
   ],
   "results": [
     {
-      "skill": "ab-test-planner",
-      "model": "claude-sonnet-4-6",
+      "skill": "360-feedback-template",
+      "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
         "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
+        "usefulness": 4,
+        "grounding": 5
       },
-      "overall": 4.75
+      "overall": 4.75,
+      "hash": "aa090570a6d71303"
     },
     {
       "skill": "ab-test-planner",
@@ -35,15 +35,208 @@
       "overall": 4.75
     },
     {
-      "skill": "churn-analysis",
-      "model": "claude-sonnet-4-6",
+      "skill": "ab-test-readout",
+      "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
         "completeness": 5,
         "usefulness": 5,
         "grounding": 4
       },
-      "overall": 4.75
+      "overall": 4.75,
+      "hash": "76aaf0d32f9022aa"
+    },
+    {
+      "skill": "accessibility-audit",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "eb50224ec8ea4021"
+    },
+    {
+      "skill": "account-plan",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "69a4317b543b01c3"
+    },
+    {
+      "skill": "aeo-optimizer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 4,
+        "grounding": 4
+      },
+      "overall": 4.5,
+      "hash": "b606e4121cb9272b"
+    },
+    {
+      "skill": "ai-ethics-review",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 4.75,
+      "hash": "24abcb285bfcf91d"
+    },
+    {
+      "skill": "ai-product-canvas",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "a01c82acf4090b07"
+    },
+    {
+      "skill": "ambiguity-resolver",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "c78fd6c01b1f3113"
+    },
+    {
+      "skill": "api-docs-writer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "046e99dbb05f6e9f"
+    },
+    {
+      "skill": "api-versioning-strategy",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "7e8f1732317dead5"
+    },
+    {
+      "skill": "architecture-decision-record",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "5e6b72a3ad846489"
+    },
+    {
+      "skill": "assumption-mapper",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "1eba095d7c196284"
+    },
+    {
+      "skill": "board-deck-narrative",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 4.75,
+      "hash": "b3460d3c9c242096"
+    },
+    {
+      "skill": "budget-variance-analysis",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "47e0da38dfeb20f4"
+    },
+    {
+      "skill": "cap-table-explainer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 4,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.25,
+      "hash": "f6ebbf6bc4df5c72"
+    },
+    {
+      "skill": "capacity-planning",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "6556b7ff589d4ba6"
+    },
+    {
+      "skill": "change-management-plan",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "6b14d2dc525cb0bc"
+    },
+    {
+      "skill": "changelog-generator",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "2a8a35c54855b978"
     },
     {
       "skill": "churn-analysis",
@@ -57,8 +250,8 @@
       "overall": 4.25
     },
     {
-      "skill": "code-explainer",
-      "model": "claude-sonnet-4-6",
+      "skill": "cicd-playbook",
+      "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
         "completeness": 5,
@@ -66,7 +259,31 @@
         "grounding": 5
       },
       "overall": 5,
-      "hash": "2fc9722b89148d7f"
+      "hash": "8eec013c0489ff2d"
+    },
+    {
+      "skill": "clause-explainer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "b57d709903e7722b"
+    },
+    {
+      "skill": "clinical-case-summary",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "2c0bbe39274b70a1"
     },
     {
       "skill": "code-explainer",
@@ -81,15 +298,40 @@
       "hash": "2fc9722b89148d7f"
     },
     {
-      "skill": "competitive-analysis",
-      "model": "claude-sonnet-4-6",
+      "skill": "code-review-checklist",
+      "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
-        "completeness": 4,
+        "completeness": 5,
         "usefulness": 5,
-        "grounding": 4
+        "grounding": 5
       },
-      "overall": 4.5
+      "overall": 5,
+      "hash": "1ad05cb3e14dee6a"
+    },
+    {
+      "skill": "cohort-analysis",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 4,
+        "completeness": 3,
+        "usefulness": 4,
+        "grounding": 2
+      },
+      "overall": 3.25,
+      "hash": "5d56a6ceaf7966b9"
+    },
+    {
+      "skill": "community-management-playbook",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "b7cb581b865d1f1b"
     },
     {
       "skill": "competitive-analysis",
@@ -103,15 +345,124 @@
       "overall": 4.25
     },
     {
-      "skill": "cs-health-scorecard",
-      "model": "claude-sonnet-4-6",
+      "skill": "competitive-intelligence-monitor",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 4,
+        "completeness": 3,
+        "usefulness": 4,
+        "grounding": 4
+      },
+      "overall": 3.75,
+      "hash": "4476bf5994d035b2"
+    },
+    {
+      "skill": "competitor-signal-tracker",
+      "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
         "completeness": 5,
         "usefulness": 5,
         "grounding": 5
       },
-      "overall": 5
+      "overall": 5,
+      "hash": "0f0db9b4f4e48240"
+    },
+    {
+      "skill": "competitor-teardown",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.5,
+      "hash": "1d61294eb2cf326f"
+    },
+    {
+      "skill": "compliance-checklist",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "9ebe41fd8c5b56a6"
+    },
+    {
+      "skill": "content-calendar",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "901d43fcec7d2cf4"
+    },
+    {
+      "skill": "content-repurposer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "851f94ee2233d26a"
+    },
+    {
+      "skill": "contract-review",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "826c64d830329afe"
+    },
+    {
+      "skill": "creator-brand-kit",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "04e49b554a3b1217"
+    },
+    {
+      "skill": "creator-media-kit",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "362e605ea8ffa0f4"
+    },
+    {
+      "skill": "cs-escalation-brief",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "1db7fbd2dfb62549"
     },
     {
       "skill": "cs-health-scorecard",
@@ -125,16 +476,136 @@
       "overall": 4.75
     },
     {
-      "skill": "dependency-conflict-resolver",
-      "model": "claude-sonnet-4-6",
+      "skill": "customer-journey-map",
+      "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
         "completeness": 5,
         "usefulness": 5,
-        "grounding": 3
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "bc04967903500851"
+    },
+    {
+      "skill": "customer-success-plan",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "cd4f62c406e70717"
+    },
+    {
+      "skill": "dashboard-brief",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "e2546ecebd99e5c8"
+    },
+    {
+      "skill": "data-analysis-standard",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "43e82dfb567709bd"
+    },
+    {
+      "skill": "data-pipeline-spec",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "64672d91fba8371a"
+    },
+    {
+      "skill": "data-quality-audit",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "7af157c1df365cba"
+    },
+    {
+      "skill": "database-migration-plan",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "f61dd1355d98279a"
+    },
+    {
+      "skill": "database-schema-design",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 4,
+        "completeness": 4,
+        "usefulness": 4,
+        "grounding": 5
+      },
+      "overall": 4.25,
+      "hash": "f588b691f9287662"
+    },
+    {
+      "skill": "debugging-log-analyser",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "e06ba9b36d7d003a"
+    },
+    {
+      "skill": "demand-letter",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "302a80d9596bb880"
+    },
+    {
+      "skill": "dependency-audit",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 4
       },
       "overall": 4.5,
-      "hash": "fa1fb16d0eed968b"
+      "hash": "607af8ee4db9380e"
     },
     {
       "skill": "dependency-conflict-resolver",
@@ -149,16 +620,148 @@
       "hash": "fa1fb16d0eed968b"
     },
     {
-      "skill": "error-decoder",
-      "model": "claude-sonnet-4-6",
+      "skill": "design-critique",
+      "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
         "completeness": 5,
         "usefulness": 5,
-        "grounding": 3
+        "grounding": 5
       },
-      "overall": 4.5,
-      "hash": "be82f69c10d4ee6b"
+      "overall": 5,
+      "hash": "3f37437f41ea2b32"
+    },
+    {
+      "skill": "design-handoff-brief",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "7182626eeddf01f5"
+    },
+    {
+      "skill": "design-system-audit",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "b0629ad066e18ed8"
+    },
+    {
+      "skill": "developer-onboarding-doc",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "96fd330918fb1b32"
+    },
+    {
+      "skill": "disaster-recovery-plan",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 4,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.25,
+      "hash": "2f3fc08e4d42a871"
+    },
+    {
+      "skill": "discovery-call-prep",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "7badef0a8e057e8a"
+    },
+    {
+      "skill": "discovery-interview-guide",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "c8e630f121983004"
+    },
+    {
+      "skill": "docx-tracked-changes",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "227e559531ffa0bf"
+    },
+    {
+      "skill": "email-campaign",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "bc2a28032117ea70"
+    },
+    {
+      "skill": "employee-engagement-survey",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "82821e3f3d9fbbbb"
+    },
+    {
+      "skill": "engineering-hiring-rubric",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "1fdae44512c494cb"
+    },
+    {
+      "skill": "engineering-weekly-report",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "3dc55e2a9d26f8b3"
     },
     {
       "skill": "error-decoder",
@@ -174,17 +777,6 @@
     },
     {
       "skill": "executive-summary",
-      "model": "claude-sonnet-4-6",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 5
-      },
-      "overall": 5
-    },
-    {
-      "skill": "executive-summary",
       "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
@@ -195,8 +787,8 @@
       "overall": 4.25
     },
     {
-      "skill": "git-troubleshooter",
-      "model": "claude-sonnet-4-6",
+      "skill": "executive-update",
+      "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
         "completeness": 5,
@@ -204,7 +796,211 @@
         "grounding": 4
       },
       "overall": 4.75,
-      "hash": "1ca184578361e09b"
+      "hash": "ee5891d3c3427213"
+    },
+    {
+      "skill": "experiment-designer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "a8728bf8e6726950"
+    },
+    {
+      "skill": "feature-flag-guide",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "2bd3fe2a831aa855"
+    },
+    {
+      "skill": "feature-prioritisation",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "cc89d6b8684145b1"
+    },
+    {
+      "skill": "figma-annotation-guide",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.5,
+      "hash": "45530c994fd6db34"
+    },
+    {
+      "skill": "figma-component-audit",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "ae3b9090a9047148"
+    },
+    {
+      "skill": "figma-design-brief",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "fbc53bee055eba1c"
+    },
+    {
+      "skill": "figma-design-critique-pm",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "367106369106132e"
+    },
+    {
+      "skill": "figma-design-qa",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "c961957c10d091aa"
+    },
+    {
+      "skill": "figma-design-review",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "1afa4e649670c861"
+    },
+    {
+      "skill": "figma-prototype-plan",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "5a6251eaa32d207f"
+    },
+    {
+      "skill": "figma-spacing-system",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "b6afcb8eeb7f1649"
+    },
+    {
+      "skill": "figma-user-flow-planner",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "13de41c150baf089"
+    },
+    {
+      "skill": "figma-variant-matrix",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "98a242433051f837"
+    },
+    {
+      "skill": "financial-due-diligence",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "960ae68440f2d83e"
+    },
+    {
+      "skill": "financial-model-narrative",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "c2e04e3b22bd2f53"
+    },
+    {
+      "skill": "founder-market-fit",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 2
+      },
+      "overall": 4.25,
+      "hash": "13ad2df880bcb12c"
+    },
+    {
+      "skill": "fundraising-faq",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 4.75,
+      "hash": "89dfb678a420aaed"
     },
     {
       "skill": "git-troubleshooter",
@@ -220,17 +1016,6 @@
     },
     {
       "skill": "go-to-market",
-      "model": "claude-sonnet-4-6",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "go-to-market",
       "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
@@ -241,96 +1026,8 @@
       "overall": 4.75
     },
     {
-      "skill": "incident-postmortem",
-      "model": "claude-sonnet-4-6",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "incident-postmortem",
+      "skill": "go-to-market-planner",
       "model": "claude-haiku-4-5-20251001",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "metrics-framework",
-      "model": "claude-sonnet-4-6",
-      "scores": {
-        "structure": 5,
-        "completeness": 4,
-        "usefulness": 5,
-        "grounding": 3
-      },
-      "overall": 4.25
-    },
-    {
-      "skill": "metrics-framework",
-      "model": "claude-haiku-4-5-20251001",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "okr-builder",
-      "model": "claude-sonnet-4-6",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "okr-builder",
-      "model": "claude-haiku-4-5-20251001",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "prd-template",
-      "model": "claude-sonnet-4-6",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "prd-template",
-      "model": "claude-haiku-4-5-20251001",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "regex-builder",
-      "model": "claude-sonnet-4-6",
       "scores": {
         "structure": 5,
         "completeness": 5,
@@ -338,7 +1035,675 @@
         "grounding": 5
       },
       "overall": 5,
-      "hash": "67ee0a6feb1f5549"
+      "hash": "984a23e0cae717e1"
+    },
+    {
+      "skill": "grant-proposal",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 4,
+        "grounding": 4
+      },
+      "overall": 4.5,
+      "hash": "6b1dd0154da778bb"
+    },
+    {
+      "skill": "hiring-rubric",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "22cff2ddb741bc8f"
+    },
+    {
+      "skill": "hook-writer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "466a4a3c45636de6"
+    },
+    {
+      "skill": "iep-goal-support",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "fce5ec05bac96539"
+    },
+    {
+      "skill": "incident-postmortem",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "influencer-brief",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "60334395c0e09738"
+    },
+    {
+      "skill": "infra-as-code-review",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 4.75,
+      "hash": "4e44870f5a7f6105"
+    },
+    {
+      "skill": "investor-cold-email",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "09e0f88bf774694e"
+    },
+    {
+      "skill": "investor-pitch-deck",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "f7b9efa978f35759"
+    },
+    {
+      "skill": "investor-update",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "b28e891ffbae587b"
+    },
+    {
+      "skill": "job-application",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "211fc18c9979db7a"
+    },
+    {
+      "skill": "job-description-writer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "aadd8f3fee0128d1"
+    },
+    {
+      "skill": "job-story-mapper",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "d7f13bede111b9b0"
+    },
+    {
+      "skill": "last-30-days-research",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 4,
+        "completeness": 3,
+        "usefulness": 4,
+        "grounding": 2
+      },
+      "overall": 3.25,
+      "hash": "914e956ff30153a2"
+    },
+    {
+      "skill": "launch-readiness",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "6f03ae9753fed6c6"
+    },
+    {
+      "skill": "legal-brief",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.5,
+      "hash": "82bf703cc288a178"
+    },
+    {
+      "skill": "lesson-plan",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "30b46efe51e2c0e4"
+    },
+    {
+      "skill": "literature-review",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 4,
+        "grounding": 3
+      },
+      "overall": 4,
+      "hash": "67ae2f2ceef0f55c"
+    },
+    {
+      "skill": "load-testing-plan",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "02484a5db0c8f7c4"
+    },
+    {
+      "skill": "local-dev-setup",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.5,
+      "hash": "6c291c65f034d676"
+    },
+    {
+      "skill": "media-pitch",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "fb8dc81910d50dd6"
+    },
+    {
+      "skill": "meeting-notes",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "0644d5375d1e362b"
+    },
+    {
+      "skill": "metric-tree-builder",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "26633856e37bc5fc"
+    },
+    {
+      "skill": "metrics-framework",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "microservices-decomposition",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 4,
+        "completeness": 4,
+        "usefulness": 4,
+        "grounding": 5
+      },
+      "overall": 4.25,
+      "hash": "a4ba98c0691b5e47"
+    },
+    {
+      "skill": "monitoring-setup-guide",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "8ed744d3acaa76a2"
+    },
+    {
+      "skill": "multi-source-signal-synthesiser",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "ff2246c098ac8b6e"
+    },
+    {
+      "skill": "nda-analyser",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.5,
+      "hash": "d00bc1b805aa7f5e"
+    },
+    {
+      "skill": "newsletter-writer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "bcd62714ecfde6cc"
+    },
+    {
+      "skill": "notes-humanizer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "451c288ab01e4107"
+    },
+    {
+      "skill": "okr-builder",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "onboarding-plan",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "260399dac05aea1c"
+    },
+    {
+      "skill": "oncall-runbook",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 4.75,
+      "hash": "c11efc3af45782d6"
+    },
+    {
+      "skill": "parent-communication",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 4,
+        "grounding": 2
+      },
+      "overall": 4,
+      "hash": "d289ec56fc7f21fb"
+    },
+    {
+      "skill": "partnership-proposal",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "09cf92676de521cc"
+    },
+    {
+      "skill": "patient-communication",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "7fde4fcfa4919f28"
+    },
+    {
+      "skill": "performance-budget",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "d8c90afc598a02d9"
+    },
+    {
+      "skill": "performance-review",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "1fd9921bb31a18aa"
+    },
+    {
+      "skill": "pm-weekly-review",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "29f93479c4bfb414"
+    },
+    {
+      "skill": "pptx-slide-auditor",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "ccef0d328b8a8ba4"
+    },
+    {
+      "skill": "pr-description-writer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "d2c4caf6b7836246"
+    },
+    {
+      "skill": "prd-template",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "press-release",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 4,
+        "grounding": 4
+      },
+      "overall": 4.5,
+      "hash": "eb9fb47d1d684be6"
+    },
+    {
+      "skill": "pricing-strategy",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "9766b8c2a438981c"
+    },
+    {
+      "skill": "privacy-policy-drafter",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "f4bdc41b4cd10de9"
+    },
+    {
+      "skill": "process-documentation",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "06cec73cf68e3b33"
+    },
+    {
+      "skill": "product-health-analysis",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "2cccb28ff0462063"
+    },
+    {
+      "skill": "product-launch-checklist",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 4.75,
+      "hash": "a23da329e472c0a5"
+    },
+    {
+      "skill": "product-positioning-doc",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "4e0685feb5aaaa4c"
+    },
+    {
+      "skill": "project-status-report",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "0dbe88f3cdb20c3a"
+    },
+    {
+      "skill": "proposal-writer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "98af8d0d5e98da4f"
+    },
+    {
+      "skill": "qbr-deck",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 4,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 4.75,
+      "hash": "27c216e22872c7ea"
+    },
+    {
+      "skill": "quiz-generator",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "0d855076d22b794c"
+    },
+    {
+      "skill": "raci-matrix",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "d62db1b2d8e5cc26"
+    },
+    {
+      "skill": "red-team-review",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 4,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.25,
+      "hash": "093df79b91fc6420"
+    },
+    {
+      "skill": "redundancy-consultation",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 4,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 4.75,
+      "hash": "f0a1218e1f63e9a8"
     },
     {
       "skill": "regex-builder",
@@ -353,15 +1718,76 @@
       "hash": "67ee0a6feb1f5549"
     },
     {
-      "skill": "rice-prioritisation",
-      "model": "claude-sonnet-4-6",
+      "skill": "renewal-playbook",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "0f39f325f46b299d"
+    },
+    {
+      "skill": "research-protocol",
+      "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
         "completeness": 5,
         "usefulness": 5,
         "grounding": 4
       },
-      "overall": 4.75
+      "overall": 4.75,
+      "hash": "621c9772e9c265c6"
+    },
+    {
+      "skill": "retention-analysis",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "20c2bf58a98df447"
+    },
+    {
+      "skill": "retro-analysis",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "33343b966ceec8b5"
+    },
+    {
+      "skill": "rfc-writer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "f15c5f4e9c140d82"
+    },
+    {
+      "skill": "rice-impact-matrix",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 4.75,
+      "hash": "5efe5954722f2859"
     },
     {
       "skill": "rice-prioritisation",
@@ -375,15 +1801,16 @@
       "overall": 4.75
     },
     {
-      "skill": "roadmap-narrative",
-      "model": "claude-sonnet-4-6",
+      "skill": "risk-register",
+      "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
         "completeness": 5,
         "usefulness": 5,
-        "grounding": 4
+        "grounding": 5
       },
-      "overall": 4.75
+      "overall": 5,
+      "hash": "8048b09682f80af6"
     },
     {
       "skill": "roadmap-narrative",
@@ -397,15 +1824,208 @@
       "overall": 4.75
     },
     {
-      "skill": "sprint-planning",
-      "model": "claude-sonnet-4-6",
+      "skill": "roadmap-presentation",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "3b0af4a2477369da"
+    },
+    {
+      "skill": "rubric-builder",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "e894147f9e6848f7"
+    },
+    {
+      "skill": "runbook-writer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "d42fb6f9948309c4"
+    },
+    {
+      "skill": "runway-planner",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "531323ce1ea2e0f9"
+    },
+    {
+      "skill": "sales-battlecard",
+      "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
         "completeness": 5,
         "usefulness": 5,
         "grounding": 4
       },
-      "overall": 4.75
+      "overall": 4.75,
+      "hash": "899a45e3ae7cb2cd"
+    },
+    {
+      "skill": "sales-forecasting-model",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "a422f9554b35eb3d"
+    },
+    {
+      "skill": "security-threat-model",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 4,
+        "grounding": 5
+      },
+      "overall": 4.75,
+      "hash": "ce1e4abddb3d3b72"
+    },
+    {
+      "skill": "seo-content-brief",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "ea9077c195daa7c5"
+    },
+    {
+      "skill": "service-catalog-entry",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "76e2f5517f06c785"
+    },
+    {
+      "skill": "short-form-script",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "5748fde89384ef7c"
+    },
+    {
+      "skill": "skill-security-auditor",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "a9ed472485193313"
+    },
+    {
+      "skill": "slo-error-budget",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "18a47fd98a6a0fa3"
+    },
+    {
+      "skill": "social-ad-campaign",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "4b3c43389504d733"
+    },
+    {
+      "skill": "social-media-audit",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "a8f677cf5c160736"
+    },
+    {
+      "skill": "social-media-strategy",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "4b1bc233059db653"
+    },
+    {
+      "skill": "sop-writer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "57e1d1c413af8866"
+    },
+    {
+      "skill": "sprint-brief",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "b4ad316639bf065f"
     },
     {
       "skill": "sprint-planning",
@@ -419,15 +2039,40 @@
       "overall": 3.75
     },
     {
-      "skill": "stakeholder-update",
-      "model": "claude-sonnet-4-6",
+      "skill": "sprint-velocity-analysis",
+      "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
         "completeness": 5,
         "usefulness": 5,
         "grounding": 5
       },
-      "overall": 5
+      "overall": 5,
+      "hash": "0ed5e65793583af9"
+    },
+    {
+      "skill": "sql-query-explainer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 2
+      },
+      "overall": 4.25,
+      "hash": "c847020303b820b2"
+    },
+    {
+      "skill": "stakeholder-influence-mapper",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.5,
+      "hash": "6f4a92a492b5eb61"
     },
     {
       "skill": "stakeholder-update",
@@ -441,15 +2086,184 @@
       "overall": 4.75
     },
     {
-      "skill": "user-story-writer",
-      "model": "claude-sonnet-4-6",
+      "skill": "startup-idea-validator",
+      "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
         "completeness": 5,
         "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "5adafbfe1115b4a0"
+    },
+    {
+      "skill": "strategic-narrative-generator",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "bc94c2a0a761af5c"
+    },
+    {
+      "skill": "student-feedback",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "446f01e916329c01"
+    },
+    {
+      "skill": "sycophancy-challenger",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "1ead0416bd2f57f0"
+    },
+    {
+      "skill": "system-design-interview",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "d77e8f2fd38bbda5"
+    },
+    {
+      "skill": "tax-planning-checklist",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "0c9d860af67c2ab9"
+    },
+    {
+      "skill": "teaching-lesson-plan",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "41b00e15169f914f"
+    },
+    {
+      "skill": "team-health-check",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 4.75,
+      "hash": "aa9fe057298a19db"
+    },
+    {
+      "skill": "team-offsite-planner",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
         "grounding": 4
       },
-      "overall": 4.75
+      "overall": 4.5,
+      "hash": "463535b8ec0da59d"
+    },
+    {
+      "skill": "tech-radar",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "039b7b48a1adc145"
+    },
+    {
+      "skill": "technical-debt-register",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "d7a1fa4b95b70b45"
+    },
+    {
+      "skill": "technical-spec-template",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 4.75,
+      "hash": "9d6948c7239fb741"
+    },
+    {
+      "skill": "test-strategy-doc",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "52da8480ce7c7f53"
+    },
+    {
+      "skill": "user-interview-synthesis",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "ef1b5164445bfe1e"
+    },
+    {
+      "skill": "user-research-synthesis",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "79581469f9006a3f"
     },
     {
       "skill": "user-story-writer",
@@ -461,6 +2275,78 @@
         "grounding": 4
       },
       "overall": 4.75
+    },
+    {
+      "skill": "ux-research-plan",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "26266b46c1dbfb49"
+    },
+    {
+      "skill": "vendor-evaluation",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "6f562dc889f4cedf"
+    },
+    {
+      "skill": "viral-content-framework",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 4,
+        "completeness": 3,
+        "usefulness": 4,
+        "grounding": 5
+      },
+      "overall": 4,
+      "hash": "2281dc76f7ec7ddc"
+    },
+    {
+      "skill": "workshop-facilitation-guide",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "28568f498845e93e"
+    },
+    {
+      "skill": "writing-great-skills",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "deedce7d3cad940a"
+    },
+    {
+      "skill": "youtube-script-writer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 4,
+        "grounding": 2
+      },
+      "overall": 4,
+      "hash": "d97c446f6ffdf99e"
     }
   ]
 }
