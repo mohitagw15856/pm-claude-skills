@@ -35,3 +35,6 @@ web/llms-full.txt
 python/dist/
 python/*.egg-info/
 __pycache__/
+
+# VS Code package artifact
+*.vsix

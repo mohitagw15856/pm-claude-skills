@@ -16,8 +16,11 @@
 
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
 [![npm](https://img.shields.io/npm/v/pm-claude-skills?logo=npm&color=cb3837)](https://www.npmjs.com/package/pm-claude-skills)
-[![npm downloads](https://img.shields.io/npm/dm/pm-claude-skills?logo=npm&color=cb3837&label=installs)](https://www.npmjs.com/package/pm-claude-skills)
+[![PyPI](https://img.shields.io/pypi/v/pm-skills?logo=pypi&logoColor=white&color=3775A9&label=pip)](https://pypi.org/project/pm-skills/)
+[![MCP](https://img.shields.io/badge/MCP-registry-0098FF?logo=modelcontextprotocol&logoColor=white)](https://github.com/mohitagw15856/pm-claude-skills#-use-it-anywhere--the-ai-ecosystem)
+[![Remote MCP](https://img.shields.io/badge/ChatGPT%20%C2%B7%20Claude.ai-connector-10A37F)](mcp-remote/)
 [![Skills](https://img.shields.io/badge/skills-205-blue)](https://github.com/mohitagw15856/pm-claude-skills)
+[![eval](https://img.shields.io/badge/eval--scored-196%20%C2%B7%20avg%204.8%2F5-brightgreen)](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)
 [![Subagents](https://img.shields.io/badge/subagents-4-blueviolet)](agents/)
 [![Commands](https://img.shields.io/badge/slash%20commands-6-blueviolet)](commands/)
 [![Personas](https://img.shields.io/badge/personas-4-blueviolet)](output-styles/)
@@ -36,7 +39,7 @@
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest release (v27.0.0 — across the whole AI ecosystem):** the library now plugs into everything. **Multi-model playground** (run any skill with your own **Claude / OpenAI / Gemini / Ollama** key — local models included), a **[remote MCP connector](mcp-remote/)** (add PM Skills to **ChatGPT, Claude.ai & Cursor** with one URL — no install), the MCP server now exposes skills as **prompts + resources**, **4 new IDE targets** (Cline, Continue, Zed, Roo — 9 platforms total), a **[Python package](python/)** (`pip install pm-skills` → LangChain/CrewAI tools), an **[`llms.txt`](https://mohitagw15856.github.io/pm-claude-skills/llms.txt)** for agent discovery, a reusable **[score-skills GitHub Action](.github/actions/score-skills/)**, and **MCP-registry manifests**. Plus the full library is now **eval-scored: 196 skills, avg 4.8/5**. **205 skills**. See the [changelog](#-changelog).
+**🆕 Latest release (v28.0.0 — live across the whole AI ecosystem):** every channel is now shipped & public — **[`pip install pm-skills`](https://pypi.org/project/pm-skills/)** (LangChain/CrewAI), the **hosted MCP connector** `https://pm-skills-mcp.pm-claude-skills.workers.dev/` (add to **ChatGPT/Claude.ai/Cursor** by URL), and the **[official MCP registry](https://github.com/mohitagw15856/pm-claude-skills/blob/main/server.json)** listing. See the new **[🌍 Use It Anywhere](#-use-it-anywhere--the-ai-ecosystem)** section. Also: **multi-model playground** (run any skill with your own **Claude / OpenAI / Gemini / Ollama** key — local models included), a **[remote MCP connector](mcp-remote/)** (add PM Skills to **ChatGPT, Claude.ai & Cursor** with one URL — no install), the MCP server now exposes skills as **prompts + resources**, **4 new IDE targets** (Cline, Continue, Zed, Roo — 9 platforms total), a **[Python package](python/)** (`pip install pm-skills` → LangChain/CrewAI tools), an **[`llms.txt`](https://mohitagw15856.github.io/pm-claude-skills/llms.txt)** for agent discovery, a reusable **[score-skills GitHub Action](.github/actions/score-skills/)**, and **MCP-registry manifests**. Plus the full library is now **eval-scored: 196 skills, avg 4.8/5**. **205 skills**. See the [changelog](#-changelog).
 
 ### ▶ See it in action — [try the live Skill Playground](https://mohitagw15856.github.io/pm-claude-skills/)
 
@@ -287,6 +290,26 @@ Or clone and symlink for auto-updates:
 git clone https://github.com/mohitagw15856/pm-claude-skills.git ~/pm-claude-skills
 mkdir -p ~/.claude/skills
 ln -s ~/pm-claude-skills/skills/* ~/.claude/skills/
+
+---
+
+## 🌍 Use It Anywhere — the AI Ecosystem
+
+The same 205 skills reach you through every channel — pick whatever fits your stack:
+
+| Channel | Get it |
+|---|---|
+| 🌐 **Browser playground** | [Run any skill free](https://mohitagw15856.github.io/pm-claude-skills/) with your own **Claude / OpenAI / Gemini / Ollama** key (local models too) |
+| 📦 **npm** | `npx pm-claude-skills add --agent claude` (or codex · cursor · hermes · openclaw) |
+| 🔌 **`skills` CLI** | `npx skills add mohitagw15856/pm-claude-skills` (works across 60+ agents) |
+| 🐍 **Python / PyPI** | `pip install pm-skills` → `search_skills` / `get_skill` + **LangChain & CrewAI** tools |
+| 🧠 **MCP (local)** | `npx -y pm-claude-skills-mcp` — tools, **prompts & resources**. Listed in the [official MCP registry](https://github.com/mohitagw15856/pm-claude-skills/blob/main/server.json). |
+| ⚡ **MCP (hosted)** | Add **`https://pm-skills-mcp.pm-claude-skills.workers.dev/`** as a connector URL in **ChatGPT, Claude.ai, or Cursor** — no install. ([build your own](mcp-remote/)) |
+| 🧩 **Browser extension** | A skill picker inside ChatGPT, Claude.ai & Gemini — [`extension/`](extension/) |
+| 🖥️ **IDE rules** | Generated exports for **Cursor, Windsurf, Aider, Cline, Continue, Zed, Roo** — [`exports/`](exports/) |
+| 🤖 **Agents & answer engines** | [`llms.txt`](https://mohitagw15856.github.io/pm-claude-skills/llms.txt) makes the whole library discoverable & citable |
+
+> **196 of 205 skills are eval-scored, averaging 4.8/5** — see the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html).
 
 ---
 
@@ -600,7 +623,7 @@ More templates will follow. If you want to contribute one, see the [template con
 
 ## 📋 Changelog
 
-**Latest: v27.0.0 — across the whole AI ecosystem.** Multi-model playground (Claude / OpenAI / Gemini / **Ollama** — run skills on local models too); a **remote MCP connector** ([`mcp-remote/`](mcp-remote/)) to add PM Skills to **ChatGPT, Claude.ai & Cursor** by URL; MCP server now serves skills as **prompts + resources**; **4 new IDE export targets** (Cline, Continue, Zed, Roo → 9 platforms); a **Python package** ([`python/`](python/), `pip install pm-skills` with LangChain/CrewAI adapters); an **`llms.txt`** for agent discovery; a reusable **[score-skills Action](.github/actions/score-skills/)**; and **MCP-registry manifests** (`server.json`, `smithery.yaml`). The full library is now eval-scored — **196 skills, avg 4.8/5**. Builds on **v26.0.0** (the Creator stack). **205 skills** across **28 bundles**, **21 professions**.
+**Latest: v28.0.0 — live across the whole AI ecosystem.** Now public on every channel: **PyPI** (`pip install pm-skills`), a **hosted MCP connector** URL for ChatGPT/Claude.ai/Cursor, and the **official MCP registry** — plus a new **🌍 Use It Anywhere** section + PyPI/MCP header badges. Builds on the v27 ecosystem work: multi-model playground (Claude / OpenAI / Gemini / **Ollama**); a **remote MCP connector** ([`mcp-remote/`](mcp-remote/)) to add PM Skills to **ChatGPT, Claude.ai & Cursor** by URL; MCP server now serves skills as **prompts + resources**; **4 new IDE export targets** (Cline, Continue, Zed, Roo → 9 platforms); a **Python package** ([`python/`](python/), `pip install pm-skills` with LangChain/CrewAI adapters); an **`llms.txt`** for agent discovery; a reusable **[score-skills Action](.github/actions/score-skills/)**; and **MCP-registry manifests** (`server.json`, `smithery.yaml`). The full library is now eval-scored — **196 skills, avg 4.8/5**. Builds on **v26.0.0** (the Creator stack). **205 skills** across **28 bundles**, **21 professions**.
 
 Full [Keep a Changelog](https://keepachangelog.com/)-format history — every release back to the start — is in **[CHANGELOG.md](CHANGELOG.md)**.
 
