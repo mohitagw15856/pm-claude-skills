@@ -33,6 +33,10 @@ const rows = skills.map((s) => `<tr><td class="skill">${esc(s)}</td>${models.map
 }).join('')}</tr>`).join('\n');
 const avgRow = `<tr class="avg"><td>Average</td>${models.map((m) => `<td><strong>${modelAvg(m).toFixed(2)}</strong></td>`).join('')}</tr>`;
 
+const allScores = data.results.map((r) => r.overall);
+const overallAvg = allScores.length ? allScores.reduce((a, b) => a + b, 0) / allScores.length : 0;
+const topCount = data.results.filter((r) => r.overall >= 4.5).length;
+
 const html = `<!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -45,6 +49,7 @@ const html = `<!DOCTYPE html>
   body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
   a{color:var(--accent2)} header{padding:28px 22px;border-bottom:1px solid var(--border);background:var(--panel)}
   header h1{margin:0 0 6px;font-size:23px} header p{margin:0;color:var(--muted);font-size:14px}
+  header .bigstat{margin:0 0 8px;font-size:18px;color:var(--accent2)}
   .toolbar-nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:12px 22px;background:rgba(13,15,20,.7);border-bottom:1px solid var(--border)}
   .toolbar-nav .tool{font-size:13px;font-weight:600;text-decoration:none;padding:7px 14px;border-radius:99px;color:var(--muted);border:1px solid transparent;white-space:nowrap;transition:color .12s,background .12s,border-color .12s}
   .toolbar-nav .tool:hover{color:var(--text);background:var(--panel2);border-color:var(--border)}
@@ -61,7 +66,8 @@ const html = `<!DOCTYPE html>
 </style></head><body>
 <header>
   <h1>🏆 Skill Leaderboard</h1>
-  <p>LLM-judged quality (1–5) for each skill across Claude models — scored on structure, completeness, usefulness &amp; grounding by <code>${esc(data.judge || 'an LLM judge')}</code>.</p>
+  <p class="bigstat"><strong>${esc(skills.length)} skills scored · average ${overallAvg.toFixed(1)}/5 · ${esc(topCount)} at 4.5+</strong></p>
+  <p>LLM-judged quality (1–5) for each skill across Claude models — scored on structure, completeness, usefulness &amp; grounding by <code>${esc(data.judge || 'an LLM judge')}</code>. Skills that need an image, a live source, or that activate a behaviour aren't scored on this rubric.</p>
 </header>
 <nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
 <script src="nav.js"></script>

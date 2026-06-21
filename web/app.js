@@ -157,7 +157,12 @@ function countUp(node, to) {
 }
 function initHero() {
   countUp(el('statSkills'), SKILLS.length);
-  countUp(el('statEval'), SKILLS.filter((s) => s.eval).length);
+  const scored = SKILLS.filter((s) => s.eval);
+  countUp(el('statEval'), scored.length);
+  if (scored.length && el('statAvg')) {
+    const avg = scored.reduce((a, s) => a + (s.eval.score || 0), 0) / scored.length;
+    el('statAvg').textContent = avg.toFixed(1);
+  }
   fetch('https://api.github.com/repos/mohitagw15856/pm-claude-skills')
     .then((r) => r.json()).then((d) => { if (d && d.stargazers_count != null) el('statStars').textContent = d.stargazers_count; })
     .catch(() => { el('statStars').textContent = '★'; });
