@@ -1,0 +1,18 @@
+{
+  "_comment": "Copy the servers you want into your client's MCP config. Running pm-skills ALONGSIDE data servers (filesystem, github, …) is what lets a skill act on your real data: the skill supplies the structure, the other server supplies the facts. Replace <PATH> and tokens.",
+  "mcpServers": {
+    "pm-skills": {
+      "command": "npx",
+      "args": ["-y", "pm-claude-skills-mcp"]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "<ABSOLUTE_PATH_TO_YOUR_PROJECT>"]
+    },
+    "github": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-github"],
+      "env": { "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_GITHUB_PAT>" }
+    }
+  }
+}

@@ -47,6 +47,7 @@
     "output-styles/",
     "exports/",
     "templates/",
+    "connectors/",
     "skill-tiers.json",
     "skill-sources.json",
     "workflows.json"

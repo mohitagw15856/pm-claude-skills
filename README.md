@@ -400,6 +400,8 @@ For MCP clients (Claude Desktop, Cline, …), there's a zero-dependency [**MCP s
 
 Then ask: *"search the skills for customer churn, then apply the best one to my account."* Full setup in [`mcp/README.md`](mcp/).
 
+**🔌 Skills that *act* on your data.** Run `pm-skills` alongside a data server (filesystem, GitHub, Postgres, Drive…) and a skill works on your *real* sources: *"draft the PRD **from** GitHub issue #123,"* *"run `churn-analysis` on `exports/q2.csv`,"* *"open an issue per `product-launch-checklist` item."* Copy-paste configs + worked recipes in [**`connectors/`**](connectors/).
+
 ---
 
 ## ⚙️ AI-Powered Tooling

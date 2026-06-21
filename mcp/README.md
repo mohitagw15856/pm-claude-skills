@@ -62,6 +62,8 @@ Skills are far more useful on *your* data than on pasted summaries. Because this
 
 The skill supplies the *structure*; the other server supplies the *facts*. In the browser playground, the **📎 Ground in a file** button does the lightweight version — loading a local file into your context.
 
+**→ Copy-paste configs + worked recipes:** [`connectors/`](../connectors/) ("draft the PRD *from* GitHub issue #123", "run churn-analysis on `exports/q2.csv`", "open an issue per launch-checklist item").
+
 ## How it works
 
 Pure Node standard library, MCP stdio transport (newline-delimited JSON-RPC 2.0). It reads the bundled `skills/` at startup and serves them in-memory; all logging goes to stderr so it never corrupts the protocol stream. No network, no data leaves your machine.
