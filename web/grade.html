@@ -122,6 +122,7 @@ async function run(){
     const s=current(); if(!draft) return setStatus('Paste a draft to grade.',true);
     system=`You are a senior reviewer. Grade the user's existing artifact against the standard a top "${s.title}" should meet${s.source?', grounded in the framework it follows ('+s.source.replace(/\\*/g,'')+')':''}. Do NOT rewrite it from scratch — improve THEIR draft.\n\nReturn, in order:\n1. **Score** — rate 1–5 on **structure, completeness, usefulness, grounding**, one line each with why, then an overall /5.\n2. **Top gaps** — the most important specific, actionable problems, ranked.\n3. **Redline** — concrete edits and additions to fix the biggest gaps (quote what to change).\n\nUse the following skill as the rubric for what "good" looks like:\n${s.instructions}`;
   }
+  if(window.pmTrack) pmTrack(viral?'grade/viral-score':'grade/'+(current()&&current().name||'skill'));
   el('outWrap').hidden=false; const out=el('out'); out.innerHTML=''; out.dataset.raw='';
   el('runBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController(); setStatus(viral?'Scoring…':'Grading…');
   try{

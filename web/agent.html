@@ -74,6 +74,7 @@ async function run(){
   const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your Claude key first.',true);
   const goal=el('goal').value.trim(); if(!goal) return setStatus('Describe your goal first.',true);
   if(!SKILLS.length) return setStatus('Skills not loaded yet — try again in a moment.',true);
+  if(window.pmTrack) pmTrack('agent/run');
   el('runBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController();
   el('plan').hidden=true; el('plan').innerHTML=''; el('stages').innerHTML='';
   const model=el('model').value;

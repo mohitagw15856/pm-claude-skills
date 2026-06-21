@@ -124,6 +124,7 @@ async function run(){
   const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your Claude key first.',true);
   if(!PIPE.length) return setStatus('Add at least one skill.',true);
   const kickoff=el('kickoff').value.trim(); if(!kickoff) return setStatus('Add a kickoff brief.',true);
+  if(window.pmTrack) pmTrack('canvas/run/'+PIPE.length+'-skills');
   el('runBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController();
   let upstream='';
   try{

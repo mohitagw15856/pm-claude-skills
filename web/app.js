@@ -646,6 +646,7 @@ async function run() {
   const key = el('apiKey').value.trim();
   if (!key) { flagMissingKey(); return setStatus('👆 Paste your Claude API key (top-right) to run.', true); }
   if (!current) return;
+  if (window.pmTrack) pmTrack('run/' + current.name);
 
   const ctx = getContext();
   const ctxBlock = ctx
@@ -753,6 +754,7 @@ function promptFor(platform) {
 async function copyPrompt(platform) {
   const text = promptFor(platform);
   if (!text) return;
+  if (window.pmTrack && current) pmTrack('copy/' + platform + '/' + current.name);
   const labels = { chatgpt: 'ChatGPT', gemini: 'Gemini', claude: 'raw' };
   try {
     await navigator.clipboard.writeText(text);

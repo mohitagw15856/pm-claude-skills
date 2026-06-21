@@ -5,6 +5,26 @@
 (function () {
   // Apply the saved theme as early as possible (shared across all pages).
   try { document.documentElement.dataset.theme = localStorage.getItem('pm_theme') || 'dark'; } catch (e) {}
+
+  // --- Privacy-first analytics (cookieless, no PII) ------------------------
+  // Tracks anonymous page views + which skills/tools are run — NEVER the API
+  // key, inputs, or outputs. Disabled until you set your GoatCounter code.
+  // Get one free (open-source, no cookies) at https://www.goatcounter.com →
+  // then set ANALYTICS_CODE to your subdomain (e.g. 'pm-skills' for
+  // pm-skills.goatcounter.com). Leave empty to keep tracking fully OFF.
+  var ANALYTICS_CODE = '';
+  window.pmTrack = function () {}; // safe no-op until enabled
+  if (ANALYTICS_CODE) {
+    var gc = document.createElement('script');
+    gc.async = true;
+    gc.src = '//gc.zgo.at/count.js';
+    gc.setAttribute('data-goatcounter', 'https://' + ANALYTICS_CODE + '.goatcounter.com/count');
+    document.head.appendChild(gc);
+    // Custom events (e.g. a skill run). Only an event name is sent — nothing else.
+    window.pmTrack = function (name) {
+      try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: String(name).slice(0, 80), event: true }); } catch (e) {}
+    };
+  }
   var TOOLS = [
     ['index.html', '▶ Playground'],
     ['ask.html', '❓ Ask'],
