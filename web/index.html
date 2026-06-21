@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles.css" />
   <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 </head>
 <body>
   <header class="topbar">
@@ -16,7 +17,7 @@
       <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
       <div class="brand-text">
         <h1>Skill Playground</h1>
-        <p class="tagline">170+ professional skills — run with your Claude key, or copy for ChatGPT &amp; Gemini.</p>
+        <p class="tagline">180 professional skills — run with your Claude key, or copy for ChatGPT &amp; Gemini.</p>
       </div>
     </div>
     <div class="key-area">
@@ -29,6 +30,7 @@
         <option value="claude-sonnet-4-6" selected>Sonnet 4.6</option>
         <option value="claude-haiku-4-5-20251001">Haiku 4.5</option>
       </select>
+      <button id="cmdkBtn" class="kbtn" type="button" title="Quick search (⌘K)">⌘K</button>
     </div>
   </header>
 
@@ -38,6 +40,23 @@
     🔒 Your key is stored only in this browser and sent directly to api.anthropic.com — never to us.
     Get one at <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">console.anthropic.com</a>.
   </div>
+
+  <section class="hero" id="hero">
+    <div class="hero-text">
+      <h2>Make AI produce <span class="grad">real professional work</span>.</h2>
+      <p>180 open-source skills that teach Claude, ChatGPT &amp; Gemini the structure a senior pro uses — PRDs, exec updates, launch plans, postmortems. Run any one free, right here.</p>
+      <div class="hero-stats">
+        <div><b id="statSkills">0</b><span>skills</span></div>
+        <div><b id="statEval">0</b><span>eval-scored</span></div>
+        <div><b id="statStars">★</b><span>stars</span></div>
+      </div>
+      <div class="hero-cta">
+        <a class="tool active" href="agent.html" style="text-decoration:none">✨ Try the Auto-Agent</a>
+        <a class="tool" href="#controls" style="text-decoration:none">▶ Browse skills ↓</a>
+      </div>
+    </div>
+    <a class="hero-gif" href="agent.html"><img src="docs-assets/agent-demo.gif" alt="Auto-Agent: a goal becomes a planned chain of skills" loading="lazy" /></a>
+  </section>
 
   <div class="onboarding" id="onboarding" hidden>
     <span class="onboarding-q">👋 New here? What do you do?</span>
@@ -117,6 +136,7 @@
         <button id="runBtn" class="primary" type="button">Run with my Claude key</button>
         <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
         <label class="compare-toggle" title="Run the same inputs with and without the skill, side by side"><input type="checkbox" id="compareToggle" /> ⚖️ Compare vs. plain prompt</label>
+        <label class="compare-toggle" title="Run this skill across Opus, Sonnet & Haiku side by side"><input type="checkbox" id="modelsToggle" /> 🤖 Compare models</label>
         <span id="status" class="status"></span>
       </div>
 
@@ -127,6 +147,7 @@
             <button id="copyBtn" class="ghost" type="button">Copy</button>
             <button id="downloadBtn" class="ghost" type="button">Download .md</button>
             <button id="shareHubBtn" class="ghost" type="button" title="Post what you got to the community Show & Tell">💬 Share to Hub</button>
+            <button id="imgBtn" class="ghost" type="button" title="Download this result as a branded image">🖼️ Save as image</button>
           </div>
         </div>
         <article id="output" class="output markdown"></article>
@@ -134,6 +155,13 @@
       </div>
     </section>
   </main>
+
+  <div class="cmdk-overlay" id="cmdkOverlay" hidden>
+    <div class="cmdk" role="dialog" aria-label="Quick search">
+      <input id="cmdkInput" type="text" placeholder="Search skills and tools…  (Esc to close)" autocomplete="off" />
+      <div class="cmdk-list" id="cmdkList"></div>
+    </div>
+  </div>
 
   <script src="app.js"></script>
 <script src="nav.js"></script>

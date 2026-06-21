@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>Ask — get a dev question answered by the right skill</title>
+<meta name="description" content="Ask a coding question — errors, regex, git, dependencies, 'what does this code do' — and the right skill answers it instantly. Or post it to the community Q&A for a human answer." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
+<style>
+  .ask { max-width: 820px; margin: 0 auto; padding: 16px 22px 70px; }
+  .lead { color: #c7cfda; font-size: 16px; }
+  .qbox { width: 100%; box-sizing: border-box; padding: 14px 16px; border-radius: 12px; background: var(--panel); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 15px; }
+  .examples { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0; }
+  .ex { font-size: 12.5px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 99px; padding: 6px 12px; cursor: pointer; color: var(--muted); }
+  .ex:hover { border-color: var(--accent); color: var(--text); }
+  .routed { font-size: 13px; color: var(--muted); margin: 12px 0 4px; }
+  .routed a { font-weight: 600; }
+  .answer { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 12px 16px; }
+  .qa-cta { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .btn { padding: 9px 15px; border-radius: 9px; font-weight: 600; font-size: 13px; text-decoration: none; }
+  .btn-ghost { background: var(--panel-2); border: 1px solid var(--border); color: var(--text); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Ask</h1><p class="tagline">A coding question → answered by the right skill.</p></div></div>
+  <div class="key-area">
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Claude key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your key stays in this browser. Want a human answer too? Post your question to the <a href="https://github.com/mohitagw15856/pm-claude-skills/discussions/new?category=q-a">community Q&amp;A</a>.</div>
+
+<div class="ask">
+  <p class="lead">Stuck on an error, a regex, a git mess, a dependency conflict, or unfamiliar code? Ask here — the best skill answers instantly. Like StackOverflow, but the answer's already written.</p>
+  <textarea id="q" class="qbox" rows="4" placeholder="Paste your error, code, or question…  e.g. 'TypeError: cannot read properties of undefined (reading map) in my React component'"></textarea>
+  <div class="examples" id="examples"></div>
+  <div class="actions" style="margin:6px 0 12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+    <button id="askBtn" class="primary" type="button">⚡ Answer it</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+    <span id="status" class="status"></span>
+  </div>
+  <div id="routed" class="routed" hidden></div>
+  <div id="answerWrap" hidden><article id="answer" class="answer markdown"></article>
+    <div class="qa-cta">
+      <a id="qaBtn" class="btn btn-ghost" target="_blank" rel="noopener">💬 Still stuck? Ask the community</a>
+      <button id="copyBtn" class="btn btn-ghost" type="button">Copy answer</button>
+    </div>
+  </div>
+</div>
+
+<script src="nav.js"></script>
+<script>
+const API_URL='https://api.anthropic.com/v1/messages';
+const el=(id)=>document.getElementById(id);
+let SKILLS=[], byName={}, controller=null;
+const EXAMPLES=["Explain this stack trace","Write a regex for an email","Undo my last git commit","Fix npm peer dependency error","What does this function do?"];
+const k=localStorage.getItem('anthropic_api_key'); if(k) el('apiKey').value=k;
+const m=localStorage.getItem('anthropic_model'); if(m) el('model').value=m;
+el('apiKey').addEventListener('input',e=>localStorage.setItem('anthropic_api_key',e.target.value.trim()));
+el('model').addEventListener('change',e=>localStorage.setItem('anthropic_model',e.target.value));
+el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+el('askBtn').addEventListener('click',ask);
+el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+el('copyBtn').addEventListener('click',()=>navigator.clipboard.writeText(el('answer').dataset.raw||''));
+EXAMPLES.forEach(t=>{const b=document.createElement('button');b.className='ex';b.textContent=t;b.onclick=()=>{el('q').value=t;el('q').focus();};el('examples').appendChild(b);});
+(async()=>{ try{ SKILLS=(await (await fetch('skills.json')).json()).skills; byName=Object.fromEntries(SKILLS.map(s=>[s.name,s])); }catch(e){ setStatus('Could not load skills.',true);} })();
+function setStatus(t,e){const s=el('status');s.textContent=t;s.className='status'+(e?' err':'');}
+
+async function callAPI({system,user,node,signal}){
+  const res=await fetch(API_URL,{method:'POST',headers:{'content-type':'application/json','x-api-key':el('apiKey').value.trim(),'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:el('model').value,max_tokens:4096,stream:true,...(system?{system}:{}),messages:[{role:'user',content:user}]}),signal});
+  if(!res.ok){let msg='API '+res.status;try{msg=JSON.parse(await res.text()).error.message;}catch(_){ }throw new Error(msg);}
+  const reader=res.body.getReader();const dec=new TextDecoder();let buf='',acc='';
+  while(true){const {value,done}=await reader.read();if(done)break;buf+=dec.decode(value,{stream:true});const lines=buf.split('\n');buf=lines.pop();
+    for(const line of lines){if(!line.startsWith('data:'))continue;const p=line.slice(5).trim();if(!p||p==='[DONE]')continue;let e;try{e=JSON.parse(p);}catch(_){continue;}
+      if(e.type==='content_block_delta'&&e.delta&&e.delta.text){acc+=e.delta.text;if(node)node.innerHTML=DOMPurify.sanitize(marked.parse(acc));}}}
+  return acc;
+}
+
+async function ask(){
+  if(!el('apiKey').value.trim()) return setStatus('Enter your Claude key first.',true);
+  const q=el('q').value.trim(); if(!q) return setStatus('Type a question first.',true);
+  if(!SKILLS.length) return setStatus('Skills still loading — try again.',true);
+  el('askBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController();
+  el('routed').hidden=true; el('answerWrap').hidden=true;
+  el('qaBtn').href='https://github.com/mohitagw15856/pm-claude-skills/discussions/new?category=q-a&title='+encodeURIComponent(q.slice(0,80));
+  try{
+    setStatus('Finding the best skill…');
+    const catalog=SKILLS.map(s=>`${s.name}: ${s.summary||s.description}`).join('\n');
+    const routeSys=`You route a developer's question to the single best skill to answer it. Return ONLY JSON: {"skill":"exact-name","why":"short reason"}. Prefer skills that directly answer coding/debugging/troubleshooting questions (e.g. error-decoder, regex-builder, git-troubleshooter, dependency-conflict-resolver, code-explainer, debugging-log-analyser, sql-query-explainer).`;
+    const raw=await callAPI({system:routeSys,user:`QUESTION:\n${q}\n\nCATALOG (name: what it does):\n${catalog}`,signal:controller.signal});
+    let pick; try{ pick=JSON.parse((raw.match(/\{[\s\S]*\}/)||[])[0]); }catch(_){ pick=null; }
+    const s=pick&&byName[pick.skill]?byName[pick.skill]:byName['error-decoder'];
+    el('routed').hidden=false;
+    el('routed').innerHTML=`Answered with the <a href="skill/${s.name}.html" target="_blank">${s.title}</a> skill${pick&&pick.why?` — <span>${escapeHtml(pick.why)}</span>`:''}.`;
+    el('answerWrap').hidden=false; const ans=el('answer'); ans.innerHTML='';
+    setStatus('Answering…');
+    const acc=await callAPI({system:s.instructions+'\n\n---\nAnswer the user\'s question now using this skill. Be direct and concrete.',user:q,node:ans,signal:controller.signal});
+    ans.dataset.raw=acc; setStatus('Done.');
+  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
+  finally{ el('askBtn').disabled=false; el('stopBtn').hidden=true; controller=null; }
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+</script>
+</body>
+</html>

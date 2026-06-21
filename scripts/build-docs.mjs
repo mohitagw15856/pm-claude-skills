@@ -60,6 +60,8 @@ const html = `<!DOCTYPE html>
 <link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/catalog.html" />
 <style>
   :root{--bg:#0f1115;--panel:#161a21;--panel2:#1d222b;--border:#2a313c;--text:#e7ebf0;--muted:#95a0b0;--accent:#d97757;--accent2:#e89b82}
+  html[data-theme="light"]{--bg:#f7f6f3;--panel:#fff;--panel2:#f1efe9;--border:#e4e0d8;--text:#1b2027;--muted:#667085}
+  html[data-theme="light"] .toolbar-nav{background:rgba(255,255,255,.75)}
   *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
   a{color:var(--accent2);text-decoration:none}a:hover{text-decoration:underline}
   header{padding:28px 22px;border-bottom:1px solid var(--border);background:var(--panel)}

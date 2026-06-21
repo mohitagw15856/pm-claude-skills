@@ -1,4 +1,4 @@
-# 🗂️ All 175 Skills — full catalog
+# 🗂️ All 180 Skills — full catalog
 
 > The complete per-skill breakdown by profession. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 

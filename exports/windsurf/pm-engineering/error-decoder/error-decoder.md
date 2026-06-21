@@ -1,0 +1,44 @@
+---
+trigger: model_decision
+description: "Decode an error message or stack trace into a plain-English cause, the exact fix, and how to prevent it. Use when asked to explain an error, debug a stack trace, figure out why code is throwing, or make sense of a cryptic exception. Produces a structured diagnosis: what the error means, the most likely cause, a concrete fix with code, and a prevention tip."
+---
+
+# Error Decoder Skill
+
+Turn a scary error into a clear answer — the way a senior engineer would read it over your shoulder.
+
+## Working from a brief
+
+You'll often get just an error string or a partial stack trace, with no surrounding code. **Always deliver a complete diagnosis anyway** — infer the language/framework and the likely context from the error itself, and mark inferences as *(assumed — confirm)*. Never refuse for missing context and never leave bracketed placeholders.
+
+## Input
+
+The error message, stack trace, or crash output — plus (if given) the language/runtime, the relevant code, and what the user was doing. Infer anything missing.
+
+## Output Structure
+
+### 1. What it means
+One or two plain-English sentences: what this error is actually saying (translate the jargon).
+
+### 2. Most likely cause
+The top cause given the message, ranked if there are several plausible ones. Point at the exact line/frame in the trace that matters and say why.
+
+### 3. The fix
+Concrete, copy-pasteable steps or code. If the cause is uncertain, give the highest-probability fix first, then the fallback.
+
+### 4. Why it happened / prevent it
+One line on the underlying reason and a guardrail (a check, a type, a test, a config) that stops it recurring.
+
+## Quality Checks
+
+- [ ] The explanation translates the error into plain language (no restating the raw message)
+- [ ] The cause points to a specific line/frame or condition, not "something went wrong"
+- [ ] The fix is concrete and runnable, not "check your code"
+- [ ] Assumptions about language/context are labelled
+
+## Anti-Patterns
+
+- [ ] Do not just paraphrase the error — explain what it *means* and why it happened
+- [ ] Do not give a generic "try reinstalling" answer when the trace points to a specific cause
+- [ ] Do not invent file names or code that wasn't given — infer and label, or ask for the one missing thing only if truly blocking
+- [ ] Do not stop at the fix — always add the one prevention step

@@ -1,18 +1,24 @@
-# 🧠 PM Skills — 175 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
+# 🧠 PM Skills — 180 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
+
+<p align="center">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/">
+    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=24&pause=900&color=D97757&center=true&vCenter=true&width=720&lines=180+eval-scored+AI+skills;PRDs%2C+roadmaps%2C+launches+%E2%80%94+done+right;Run+any+one+free+in+your+browser" alt="PM Skills" />
+  </a>
+</p>
 
 > **Generic AI gives you filler. These give you the structure a senior pro actually uses** — PRDs, exec updates, launch plans, postmortems — as open-source `SKILL.md` files. Across **18 professions**, not just product management. One source, every AI tool.
 
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
 [![npm](https://img.shields.io/npm/v/pm-claude-skills?logo=npm&color=cb3837)](https://www.npmjs.com/package/pm-claude-skills)
 [![npm downloads](https://img.shields.io/npm/dm/pm-claude-skills?logo=npm&color=cb3837&label=installs)](https://www.npmjs.com/package/pm-claude-skills)
-[![Skills](https://img.shields.io/badge/skills-175-blue)](https://github.com/mohitagw15856/pm-claude-skills)
+[![Skills](https://img.shields.io/badge/skills-180-blue)](https://github.com/mohitagw15856/pm-claude-skills)
 [![Subagents](https://img.shields.io/badge/subagents-4-blueviolet)](agents/)
 [![Commands](https://img.shields.io/badge/slash%20commands-6-blueviolet)](commands/)
 [![Personas](https://img.shields.io/badge/personas-4-blueviolet)](output-styles/)
 [![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Cursor%20%7C%20Codex%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
 [![SkillCheck](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skillcheck.yml?branch=main&label=SkillCheck)](.github/workflows/skillcheck.yml)
 [![Security Audit](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skill-audit.yml?branch=main&label=security%20audit)](.github/workflows/skill-audit.yml)
-[![Version](https://img.shields.io/badge/version-22.2.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
+[![Version](https://img.shields.io/badge/version-22.3.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
 [![Install](https://img.shields.io/badge/Install%20in%20Claude%20Code-2%20minutes-orange)](https://github.com/mohitagw15856/pm-claude-skills#-quick-install-2-minutes)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4)](https://github.com/sponsors/mohitagw15856)
@@ -20,11 +26,11 @@
 ### ⭐ If this saves you time, [star the repo](https://github.com/mohitagw15856/pm-claude-skills) — it's the #1 way to help others find it.
 
 > **PM stands for Professional, not just Product Management.**
-> 175 professional skills + 4 agent templates across 26 bundles covering 18 professions. Built for Claude Code — and now portable to ChatGPT, Gemini, and Hermes Agent. Built by a PM, used by everyone.
+> 180 professional skills + 4 agent templates across 26 bundles covering 18 professions. Built for Claude Code — and now portable to ChatGPT, Gemini, and Hermes Agent. Built by a PM, used by everyone.
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest release (v22.2.0 — Studio, Auto-Agent & an editor extension):** create a skill in your browser with [**Skill Studio**](https://mohitagw15856.github.io/pm-claude-skills/studio.html) (→ one-click PR), let the [**✨ Auto-Agent**](https://mohitagw15856.github.io/pm-claude-skills/agent.html) plan and run a skill chain from a plain goal, and use the [**VS Code / Cursor extension**](vscode-extension/) to insert skills in your editor. Builds on the v22.1 Skills Hub. **175 skills**, 15 eval-scored. See the [changelog](#-changelog).
+**🆕 Latest release (v22.3.0 — Monetization & a polished playground):** a [**Sponsors program**](SPONSORS.md) + [**embeddable widget**](web/embed.js) + [**Pro/Teams**](https://mohitagw15856.github.io/pm-claude-skills/pro.html) page, and a redesigned playground with a **⌘K palette**, a hero landing, **favourites**, **light/dark** mode, **compare-models** (Opus/Sonnet/Haiku side by side), and **save-as-image**. Builds on v22.2 (Studio, Auto-Agent, editor extension). **180 skills**, 15 eval-scored. See the [changelog](#-changelog).
 
 ### ▶ See it in action — [try the live Skill Playground](https://mohitagw15856.github.io/pm-claude-skills/)
 
@@ -53,21 +59,20 @@ A community-built library of professional skills for every field — product man
 | 🔭 [Competitor Teardown](skills/competitor-teardown) | "what are rivals up to?" | a positioning map, feature gaps & strategy |
 | 📝 [Meeting Notes](skills/meeting-notes) | a raw transcript | decisions, owners & next steps |
 
-→ Want proof first? See [**real sample outputs**](https://mohitagw15856.github.io/pm-claude-skills/examples.html) from each skill. Like what you see? [**Install in 2 minutes**](#-quick-install-2-minutes) · [browse all 175 skills](#️-all-175-skills) · [**⭐ star the repo**](https://github.com/mohitagw15856/pm-claude-skills/stargazers) so others find it.
+→ Want proof first? See [**real sample outputs**](https://mohitagw15856.github.io/pm-claude-skills/examples.html) from each skill. Like what you see? [**Install in 2 minutes**](#-quick-install-2-minutes) · [browse all 180 skills](#️-all-180-skills) · [**⭐ star the repo**](https://github.com/mohitagw15856/pm-claude-skills/stargazers) so others find it.
 
 ---
 
 ## 🔄 One library, the whole professional workflow
 
-These 175 skills aren't a random catalog — they cover the **full arc of professional work**, end to end. Wherever you are in the loop, there's a skill for it:
+These 180 skills aren't a random catalog — they cover the **full arc of professional work**, end to end. Wherever you are in the loop, there's a skill for it:
 
-```
-  DISCOVER  →   DECIDE   →    BUILD    →    SHIP    →   MEASURE   →  COMMUNICATE
- ──────────   ──────────   ──────────   ──────────   ──────────   ─────────────
-  frame the    prioritise    design &     launch &     track &      report up
-  problem,     & spec the    engineer     release      analyse      & out
-  research     work          the work     the work     results
-        └────────────────────── feeds the next discovery ──────────────────────┘
+```mermaid
+flowchart LR
+    A(["🔍 Discover"]) --> B(["🎯 Decide"]) --> C(["🔨 Build"]) --> D(["🚀 Ship"]) --> E(["📊 Measure"]) --> F(["📣 Communicate"])
+    F -. "feeds the next discovery" .-> A
+    classDef s fill:#1d222b,stroke:#d97757,color:#e7ebf0;
+    class A,B,C,D,E,F s;
 ```
 
 | Phase | What you're doing | Start with these skills |
@@ -79,7 +84,7 @@ These 175 skills aren't a random catalog — they cover the **full arc of profes
 | **📊 Measure** | Track outcomes & analyse | `metrics-framework` · `cohort-analysis` · `ab-test-planner` · `churn-analysis` |
 | **📣 Communicate** | Report up and out | `executive-update` · `board-deck-narrative` · `stakeholder-update` · `qbr-deck` |
 
-> New here? Start with the [**top-tier skills**](#️-skill-tiers--start-with-the-strongest), or jump straight to [**all 175 skills**](#️-all-175-skills) grouped by profession.
+> New here? Start with the [**top-tier skills**](#️-skill-tiers--start-with-the-strongest), or jump straight to [**all 180 skills**](#️-all-180-skills) grouped by profession.
 
 ---
 
@@ -104,6 +109,8 @@ Individual skills are great. **Chaining** them is the superpower. A *recipe* run
 | `/run-discovery` | frame → interview guide → synthesis → prioritise | Discover → Decide |
 
 → Full detail and how to add your own in [**WORKFLOWS.md**](WORKFLOWS.md). Recipes run as slash commands in Claude Code, or over MCP via the `get_workflow` tool.
+
+**Got a coding question?** Just [**❓ Ask**](https://mohitagw15856.github.io/pm-claude-skills/ask.html) — an error, a regex, a git mess, a dependency conflict, *"what does this code do?"* — and the right developer skill answers instantly (like StackOverflow, but the answer's already written), with a one-click path to the community [Q&A](https://github.com/mohitagw15856/pm-claude-skills/discussions) for a human follow-up.
 
 **Or build your own visually.** The [**Workflow Canvas**](https://mohitagw15856.github.io/pm-claude-skills/canvas.html) lets you drag any skills into a custom chain and run it in the browser — each step's output feeds the next. Like n8n, but for professional thinking. Don't know which skills to use? The [**✨ Auto-Agent**](https://mohitagw15856.github.io/pm-claude-skills/agent.html) takes a plain-English goal, **plans which skills to chain**, and runs them for you — each step feeding the next:
 
@@ -167,6 +174,23 @@ This whole thing is an open, reproducible **[benchmark for AI professional work]
 
 ---
 
+## ⚖️ How it compares
+
+Most skill repos are a folder of prompts. This one is a **system** — measured, composable, and usable in the browser:
+
+| | **PM Skills** | Typical skill repo |
+|---|:---:|:---:|
+| Skills | **180**, across 18 professions | a handful → dozens, usually one domain |
+| Quality | **eval-scored** on a rubric + a public [benchmark](https://mohitagw15856.github.io/pm-claude-skills/benchmark.html) | trust the README |
+| Improves itself | ✅ eval → critique → rewrite (kept only if it scores higher) | ✗ |
+| Grounded in frameworks | ✅ each cites its source (RICE, JTBD, Pyramid Principle…) | rarely |
+| Run without installing | ✅ [browser playground](https://mohitagw15856.github.io/pm-claude-skills/) + your key | ✗ copy-paste |
+| Compose / orchestrate | ✅ [recipes](WORKFLOWS.md), a [visual canvas](https://mohitagw15856.github.io/pm-claude-skills/canvas.html), an [auto-agent](https://mohitagw15856.github.io/pm-claude-skills/agent.html) | ✗ |
+| Works beyond Claude | ✅ MCP · ChatGPT/Gemini exports · VS Code extension | usually one tool |
+| Community | ✅ per-skill discussions + a [hub](https://mohitagw15856.github.io/pm-claude-skills/community.html) | issues only |
+
+---
+
 ## Contents
 
 - [👋 New here? Start in 30 seconds](#-new-here-start-in-30-seconds)
@@ -181,7 +205,7 @@ This whole thing is an open, reproducible **[benchmark for AI professional work]
 - [📦 Plugin Directory](#-plugin-directory)
 - [🤖 Building Blocks for Agent Templates](#-building-blocks-for-agent-templates)
 - [🏷️ Skill Tiers — start with the strongest](#️-skill-tiers--start-with-the-strongest)
-- [🗂️ All 175 Skills](#️-all-175-skills)
+- [🗂️ All 180 Skills](#️-all-180-skills)
 - [📋 Changelog](#-changelog)
 - [🤝 Contributing](#-contributing--add-your-skill)
 - [🔗 Related Projects](#-related-projects)
@@ -196,7 +220,7 @@ This whole thing is an open, reproducible **[benchmark for AI professional work]
 npx pm-claude-skills add --agent claude     # or: codex · cursor · hermes · openclaw
 ```
 
-**Or one-line MCP** — make all 175 skills + 5 workflow recipes available in *every* session of any MCP client (Claude Code, Claude Desktop, Cursor, Windsurf), no per-file install:
+**Or one-line MCP** — make all 180 skills + 5 workflow recipes available in *every* session of any MCP client (Claude Code, Claude Desktop, Cursor, Windsurf), no per-file install:
 
 ```bash
 claude mcp add pm-skills -- npx -y pm-claude-skills-mcp
@@ -262,7 +286,7 @@ There are two kinds of support. **Native `SKILL.md` agents** read the file as-is
 auto-discover skills from the `description` frontmatter. **Other tools** take the markdown
 body as a system prompt — for those we ship ready-made [exports](#ready-to-use-exports).
 
-**In your editor (VS Code / Cursor):** the [**`vscode-extension/`**](vscode-extension/) brings all 175 skills into the Command Palette — search and *insert a skill as context* for Copilot/Cursor chat, copy it, or open it in the Playground.
+**In your editor (VS Code / Cursor):** the [**`vscode-extension/`**](vscode-extension/) brings all 180 skills into the Command Palette — search and *insert a skill as context* for Copilot/Cursor chat, copy it, or open it in the Playground.
 
 | Platform | How it works | Auto-trigger? |
 |---|---|---|
@@ -474,7 +498,7 @@ Not sure which plugin to install? Here's what each one covers:
 
 On May 5, 2026, Anthropic [released their first agent templates](https://www.anthropic.com/news/finance-agents) — pre-packaged Claude agents that combine **skills, connectors, and subagents** into ready-to-run workflows for financial services.
 
-This library is the largest open-source collection of professional skills available — covering 17 professions beyond financial services. **The 175 skills here are the building blocks for agent templates outside of finance.**
+This library is the largest open-source collection of professional skills available — covering 17 professions beyond financial services. **The 180 skills here are the building blocks for agent templates outside of finance.**
 
 ### What is an agent template?
 
@@ -553,11 +577,11 @@ More templates will follow. If you want to contribute one, see the [template con
 
 ## 📋 Changelog
 
-**Latest: v22.2.0 — Studio, Auto-Agent & editor extension.** Skill Studio (browser authoring → one-click PR), the Auto-Agent (goal → planned skill chain), and a VS Code / Cursor extension. Builds on **v22.1.0 (the Skills Hub)** and **v22.0.0 (Closing the Loop)**. Now **175 skills**, 15 eval-scored.
+**Latest: v22.3.0 — Monetization & a polished playground.** A Sponsors program, an embeddable "run this skill" widget, and a Pro/Teams page; plus a redesigned playground (⌘K palette, hero landing, favourites, light/dark, compare-models, save-as-image) and a README glow-up. Builds on **v22.2.0** (Studio, Auto-Agent, editor extension). Now **180 skills**, 15 eval-scored.
 
 Full [Keep a Changelog](https://keepachangelog.com/)-format history — every release back to the start — is in **[CHANGELOG.md](CHANGELOG.md)**.
 
-→ Earlier releases (v20 and before — the road from 6 to 175 skills) are in **[CHANGELOG.md](CHANGELOG.md)**.
+→ Earlier releases (v20 and before — the road from 6 to 180 skills) are in **[CHANGELOG.md](CHANGELOG.md)**.
 
 ---
 
@@ -606,7 +630,7 @@ If you're new, install `pm-essentials` and try a couple of Production-Ready skil
 
 ---
 
-## 🗂️ All 175 Skills
+## 🗂️ All 180 Skills
 
 Every skill, grouped by profession. **[Browse the full per-skill catalog → SKILLS.md](SKILLS.md)** · **[searchable live catalog](https://mohitagw15856.github.io/pm-claude-skills/catalog.html)** · **[run any skill in the browser](https://mohitagw15856.github.io/pm-claude-skills/)**
 
@@ -614,7 +638,7 @@ Every skill, grouped by profession. **[Browse the full per-skill catalog → SKI
 |---|---|---|---|
 | 🛠️ Product Management | `pm-essentials` · `pm-discovery` · `pm-planning` · `pm-delivery` · `pm-strategy` · `pm-advanced` · `pm-rituals` | 37 | `/prd` · `/rice` |
 | 📣 Marketing & GTM | `pm-gtm` | 8 | `go-to-market` |
-| 👩‍💻 Engineering & Tech | `pm-engineering` | 38 | `incident-postmortem` |
+| 👩‍💻 Engineering & Tech | `pm-engineering` | 43 | `incident-postmortem` |
 | 🤝 Customer Success | `pm-cs` | 6 | `cs-health-scorecard` |
 | 📊 Data & Analytics | `pm-data` · `pm-analytics` | 6 | `metrics-framework` |
 | 🧑‍💼 Leadership & People | `pm-people` | 5 | `executive-update` |
@@ -637,7 +661,7 @@ Every skill, grouped by profession. **[Browse the full per-skill catalog → SKI
 
 ## ❤️ Sponsor This Work
 
-Building and maintaining 175 skills across 26 bundles takes real time — testing skills against new model releases, building new ones from community requests, writing the article series, and keeping documentation current.
+Building and maintaining 180 skills across 26 bundles takes real time — testing skills against new model releases, building new ones from community requests, writing the article series, and keeping documentation current.
 
 If these skills save you time at work — or you're a company that wants your logo in front of the PMs, engineers, and operators who use them daily — **[become a sponsor →](https://github.com/sponsors/mohitagw15856)** (or [☕ buy me a coffee](https://www.buymeacoffee.com/mohit15856)).
 

@@ -103,7 +103,7 @@ const html = `<!DOCTYPE html>
   <div class="stats">
     <div class="stat"><b>⭐ ${stars}</b><br><span>stars</span></div>
     <div class="stat"><b>🍴 ${forks}</b><br><span>forks</span></div>
-    <div class="stat"><b>175</b><br><span>skills</span></div>
+    <div class="stat"><b>180</b><br><span>skills</span></div>
   </div>
 
   <div class="hub-cta">

@@ -8,7 +8,7 @@ by hand; edit the source skill and run:
 node scripts/build-exports.mjs
 ```
 
-Currently exporting **175 skills** to:
+Currently exporting **180 skills** to:
 
 - **ChatGPT — Custom GPT instructions** → `exports/chatgpt/`
 - **Google Gemini — Gem instructions** → `exports/gemini/`

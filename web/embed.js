@@ -35,7 +35,7 @@
         '<h3 class="pmtitle">' + esc(s.title) + '</h3>' +
         '<p class="pmdesc">' + esc(s.summary || s.description || '') + '</p>' +
         '<a class="pmrun" href="' + play + '" target="_blank" rel="noopener">▶ Run this skill free</a>' +
-        '<div class="pmfoot">Powered by <a href="' + BASE + '/" target="_blank" rel="noopener">PM Skills</a> — 175 open-source AI agent skills</div>' +
+        '<div class="pmfoot">Powered by <a href="' + BASE + '/" target="_blank" rel="noopener">PM Skills</a> — 180 open-source AI agent skills</div>' +
         '</div>';
     });
   }

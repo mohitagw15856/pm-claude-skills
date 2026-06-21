@@ -1,0 +1,24 @@
+title: "[Q] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: "Ask a developer question and get answered by the community (and the maintainer). Tip: try the [**Ask** tool](https://mohitagw15856.github.io/pm-claude-skills/ask.html) first — it answers instantly with the right skill. Mark the best reply as the **answer** so others can find it."
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What are you trying to do, and what's going wrong? Be specific.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Error / code / context
+      description: Paste the exact error, stack trace, or code. Include language/runtime + versions.
+      render: text
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you've tried
+      description: What you already attempted (including the Ask tool's answer, if you used it).
