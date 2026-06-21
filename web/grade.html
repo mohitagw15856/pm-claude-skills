@@ -17,6 +17,9 @@
   .grade-h { font-size: 27px; margin: 6px 0; }
   .based { font-size: 13px; color: var(--muted); margin: 0 0 12px; } .based em { color: var(--accent-2); font-style: italic; }
   .actions { margin: 14px 0; }
+  .grade-mode { display: flex; gap: 18px; flex-wrap: wrap; margin: 4px 0 10px; font-size: 14px; }
+  .grade-mode label { display: inline-flex; align-items: center; gap: 7px; cursor: pointer; color: var(--muted); }
+  .grade-mode input { accent-color: var(--accent); }
 </style>
 </head>
 <body>
@@ -34,10 +37,26 @@
 <div class="key-note">🔒 Your key + draft stay in your browser and go only to your own Claude requests.</div>
 
 <div class="grade-wrap">
-  <div class="grade-pick">
+  <div class="grade-mode">
+    <label><input type="radio" name="mode" value="skill" checked> 📝 Grade vs. a skill framework</label>
+    <label><input type="radio" name="mode" value="viral"> 🔥 Viral Score — score a post/hook for social reach</label>
+  </div>
+  <div class="grade-pick" id="skillPick">
     <span>Grade my</span>
     <select id="skillSelect"></select>
     <span>against its framework.</span>
+  </div>
+  <div class="grade-pick" id="viralPick" hidden>
+    <span>Score this for</span>
+    <select id="platform">
+      <option value="auto" selected>auto-detect platform</option>
+      <option value="X/Twitter">X / Twitter</option>
+      <option value="LinkedIn">LinkedIn</option>
+      <option value="TikTok / Reels / Shorts">TikTok / Reels / Shorts</option>
+      <option value="Instagram">Instagram</option>
+      <option value="YouTube title">YouTube title</option>
+      <option value="email subject / newsletter">Email / Newsletter</option>
+    </select>
   </div>
   <p class="based" id="based" hidden></p>
   <textarea id="draft" class="grade-draft" placeholder="Paste your existing draft here — e.g. your PRD, OKRs, roadmap, exec update, postmortem…"></textarea>
@@ -70,6 +89,7 @@ async function init(){
   el('shareHubBtn').addEventListener('click',()=>{const s=current();const raw=(el('out').dataset.raw||'').trim();if(!raw)return setStatus('Grade something first.',true);const title='[Show & Tell] Graded my '+s.title;const body='**Skill:** `'+s.name+'` · graded with [PM Skills](https://mohitagw15856.github.io/pm-claude-skills/grade.html?skill='+s.name+')\n\n**The grade:**\n\n'+raw.slice(0,5000)+(raw.length>5000?'\n\n…(truncated)':'');window.open('https://github.com/mohitagw15856/pm-claude-skills/discussions/new?category=show-and-tell&title='+encodeURIComponent(title)+'&body='+encodeURIComponent(body),'_blank','noopener');});
   el('shareBtn').addEventListener('click',()=>{const u=new URL(location.href.split('?')[0]);u.searchParams.set('skill',el('skillSelect').value);navigator.clipboard.writeText(u.toString()).then(()=>setStatus('Link copied.'),()=>{});});
   el('skillSelect').addEventListener('change',renderBased);
+  document.querySelectorAll('input[name="mode"]').forEach(r=>r.addEventListener('change',applyMode));
   try{ SKILLS=(await (await fetch('skills.json')).json()).skills; }catch(e){ setStatus('Could not load skills.',true); return; }
   SKILLS.sort((a,b)=>a.title.localeCompare(b.title));
   for(const s of SKILLS){ const o=document.createElement('option'); o.value=s.name; o.textContent=s.title; el('skillSelect').appendChild(o); }
@@ -78,13 +98,32 @@ async function init(){
   renderBased();
 }
 function current(){ return SKILLS.find(s=>s.name===el('skillSelect').value); }
-function renderBased(){ const s=current(); const b=el('based'); if(s&&s.source){ b.innerHTML='📚 Graded against '+s.source.replace(/\*(.+?)\*/g,'<em>$1</em>'); b.hidden=false; } else b.hidden=true; }
+function mode(){ return document.querySelector('input[name="mode"]:checked').value; }
+function renderBased(){ const s=current(); const b=el('based'); if(mode()==='skill'&&s&&s.source){ b.innerHTML='📚 Graded against '+s.source.replace(/\*(.+?)\*/g,'<em>$1</em>'); b.hidden=false; } else b.hidden=true; }
+function applyMode(){
+  const viral=mode()==='viral';
+  el('skillPick').hidden=viral; el('viralPick').hidden=!viral;
+  el('runBtn').textContent=viral?'Score it':'Grade it';
+  el('draft').placeholder=viral
+    ? 'Paste a hook, tweet, thread, LinkedIn post, caption, video opener, or subject line…'
+    : 'Paste your existing draft here — e.g. your PRD, OKRs, roadmap, exec update, postmortem…';
+  renderBased();
+}
+const VIRAL_SYSTEM=(platform)=>`You are a viral content strategist who has studied what makes posts spread. Score the user's content for social-media reach${platform&&platform!=='auto'?' on '+platform:' (auto-detect the platform from the content)'}.\n\nReturn, in this order, as markdown:\n1. **🔥 Viral Score: N/100** — a single headline number, with a one-line verdict (e.g. "strong hook, weak payoff").\n2. **Breakdown** — a table scoring each 1–10 with a one-line reason: **Hook strength** (does the first line stop the scroll?), **Clarity**, **Value/Payoff** (is it worth the reader's time?), **Emotion/Shareability** (would someone share or save it?), **CTA / next step**, **Platform fit**.\n3. **Top 3 fixes** — the highest-leverage, specific changes to raise the score, ranked.\n4. **Rewritten hook** — 2–3 stronger first-line options they can drop in.\n\nBe specific and honest — a flat post should score low. Judge by what actually performs on the platform, not by politeness. End with one italic line: *⚡ Want this generated, scored, and auto-published at scale? Try ContentGoldMine: https://github.com/mohitagw15856/ContentGoldMine*`;
 async function run(){
   const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your Claude key first.',true);
-  const s=current(); const draft=el('draft').value.trim(); if(!draft) return setStatus('Paste a draft to grade.',true);
-  const system=`You are a senior reviewer. Grade the user's existing artifact against the standard a top "${s.title}" should meet${s.source?', grounded in the framework it follows ('+s.source.replace(/\\*/g,'')+')':''}. Do NOT rewrite it from scratch — improve THEIR draft.\n\nReturn, in order:\n1. **Score** — rate 1–5 on **structure, completeness, usefulness, grounding**, one line each with why, then an overall /5.\n2. **Top gaps** — the most important specific, actionable problems, ranked.\n3. **Redline** — concrete edits and additions to fix the biggest gaps (quote what to change).\n\nUse the following skill as the rubric for what "good" looks like:\n${s.instructions}`;
+  const draft=el('draft').value.trim();
+  const viral=mode()==='viral';
+  let system;
+  if(viral){
+    if(!draft) return setStatus('Paste a post or hook to score.',true);
+    system=VIRAL_SYSTEM(el('platform').value);
+  } else {
+    const s=current(); if(!draft) return setStatus('Paste a draft to grade.',true);
+    system=`You are a senior reviewer. Grade the user's existing artifact against the standard a top "${s.title}" should meet${s.source?', grounded in the framework it follows ('+s.source.replace(/\\*/g,'')+')':''}. Do NOT rewrite it from scratch — improve THEIR draft.\n\nReturn, in order:\n1. **Score** — rate 1–5 on **structure, completeness, usefulness, grounding**, one line each with why, then an overall /5.\n2. **Top gaps** — the most important specific, actionable problems, ranked.\n3. **Redline** — concrete edits and additions to fix the biggest gaps (quote what to change).\n\nUse the following skill as the rubric for what "good" looks like:\n${s.instructions}`;
+  }
   el('outWrap').hidden=false; const out=el('out'); out.innerHTML=''; out.dataset.raw='';
-  el('runBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController(); setStatus('Grading…');
+  el('runBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController(); setStatus(viral?'Scoring…':'Grading…');
   try{
     const res=await fetch(API_URL,{method:'POST',headers:{'content-type':'application/json','x-api-key':key,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},body:JSON.stringify({model:el('model').value,max_tokens:4096,stream:true,system,messages:[{role:'user',content:draft}]}),signal:controller.signal});
     if(!res.ok){ let m='API '+res.status; try{m=JSON.parse(await res.text()).error.message;}catch(_){ } throw new Error(m); }

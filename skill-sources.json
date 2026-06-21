@@ -2,6 +2,8 @@
   "_comment": "Framework attribution: the canonical method/author each skill encodes. Surfaced as a 'Based on' line on skill pages, the playground, and the catalog. Only skills with a genuine, well-known source are listed; the rest are intentionally omitted rather than given a fabricated citation.",
   "sources": {
     "writing-great-skills": "Anthropic Agent Skills authoring guidance + progressive disclosure",
+    "content-repurposer": "Atomic content / content-repurposing practice (pairs with ContentGoldMine)",
+    "short-form-script": "Hook–retention–payoff short-form video structure",
     "cap-table-explainer": "Y Combinator SAFE & standard round mechanics",
     "runway-planner": "Default Alive or Dead — Paul Graham (Y Combinator)",
     "founder-market-fit": "Founder-market fit & YC application practice",

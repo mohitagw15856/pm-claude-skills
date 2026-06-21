@@ -4,20 +4,20 @@
   </a>
 </p>
 
-# 🧠 PM Skills — 199 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
+# 🧠 PM Skills — 205 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
 
 <p align="center">
   <a href="https://mohitagw15856.github.io/pm-claude-skills/">
-    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=24&pause=900&color=D97757&center=true&vCenter=true&width=720&lines=199+pro+AI+skills;PRDs%2C+roadmaps%2C+launches+%E2%80%94+done+right;Run+any+one+free+in+your+browser" alt="PM Skills" />
+    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=24&pause=900&color=D97757&center=true&vCenter=true&width=720&lines=205+pro+AI+skills;PRDs%2C+roadmaps%2C+launches+%E2%80%94+done+right;Run+any+one+free+in+your+browser" alt="PM Skills" />
   </a>
 </p>
 
-> **Generic AI gives you filler. These give you the structure a senior pro actually uses** — PRDs, exec updates, launch plans, postmortems — as open-source `SKILL.md` files. Across **20 professions**, not just product management. One source, every AI tool.
+> **Generic AI gives you filler. These give you the structure a senior pro actually uses** — PRDs, exec updates, launch plans, postmortems — as open-source `SKILL.md` files. Across **21 professions**, not just product management. One source, every AI tool.
 
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
 [![npm](https://img.shields.io/npm/v/pm-claude-skills?logo=npm&color=cb3837)](https://www.npmjs.com/package/pm-claude-skills)
 [![npm downloads](https://img.shields.io/npm/dm/pm-claude-skills?logo=npm&color=cb3837&label=installs)](https://www.npmjs.com/package/pm-claude-skills)
-[![Skills](https://img.shields.io/badge/skills-199-blue)](https://github.com/mohitagw15856/pm-claude-skills)
+[![Skills](https://img.shields.io/badge/skills-205-blue)](https://github.com/mohitagw15856/pm-claude-skills)
 [![Subagents](https://img.shields.io/badge/subagents-4-blueviolet)](agents/)
 [![Commands](https://img.shields.io/badge/slash%20commands-6-blueviolet)](commands/)
 [![Personas](https://img.shields.io/badge/personas-4-blueviolet)](output-styles/)
@@ -32,11 +32,11 @@
 ### ⭐ If this saves you time, [star the repo](https://github.com/mohitagw15856/pm-claude-skills) — it's the #1 way to help others find it.
 
 > **PM stands for Professional, not just Product Management.**
-> 199 professional skills + 4 agent templates across 27 bundles covering 20 professions. Built for Claude Code — and now portable to ChatGPT, Gemini, and Hermes Agent. Built by a PM, used by everyone.
+> 205 professional skills + 4 agent templates across 28 bundles covering 21 professions. Built for Claude Code — and now portable to ChatGPT, Gemini, and Hermes Agent. Built by a PM, used by everyone.
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest release (v25.0.0 — ecosystem & interconnection):** install with the open **[`skills`](https://github.com/vercel-labs/skills) CLI** (`npx skills add mohitagw15856/pm-claude-skills`, works across 60+ agents); a new **[`writing-great-skills`](skills/writing-great-skills/SKILL.md)** meta-skill + **`/setup-pm-skills`** onboarding; a **related-skills graph** (every skill now shows "Start with" + "Related" so the library reads as a system); a **[🎓 Learn](https://mohitagw15856.github.io/pm-claude-skills/learn.html)** page (Skills vs MCP vs Subagents vs Prompts vs Hooks); a **[CONTEXT.md](CONTEXT.example.md)** convention + **[hooks](hooks/)** that auto-load it; and a **[Composio recipe](connectors/composio.md)** for skills that *act* across 500+ apps. Builds on v24 (Founders & Educators bundles + the browser extension). **199 skills**, 20 eval-scored. See the [changelog](#-changelog).
+**🆕 Latest release (v26.0.0 — the Creator stack):** a new **🎬 [`pm-creator`](plugins/pm-creator)** bundle for content creators — `content-repurposer` (one piece → thread + LinkedIn + newsletter + carousel + Reel), `hook-writer`, `short-form-script`, `newsletter-writer`, `creator-brand-kit`, `creator-media-kit` — plus a **`/repurpose`** workflow, a **🔥 Viral Score** mode in the [Grade tool](https://mohitagw15856.github.io/pm-claude-skills/grade.html) (score any hook/post for reach), and tie-in with **[ContentGoldMine](https://github.com/mohitagw15856/ContentGoldMine)**, the app that automates the whole pipeline. Builds on v25 (the `skills` CLI, meta-skill, related-skills graph, Learn page). **205 skills**, 20 eval-scored. See the [changelog](#-changelog).
 
 ### ▶ See it in action — [try the live Skill Playground](https://mohitagw15856.github.io/pm-claude-skills/)
 
@@ -65,13 +65,13 @@ A community-built library of professional skills for every field — product man
 | 🔭 [Competitor Teardown](skills/competitor-teardown) | "what are rivals up to?" | a positioning map, feature gaps & strategy |
 | 📝 [Meeting Notes](skills/meeting-notes) | a raw transcript | decisions, owners & next steps |
 
-→ Want proof first? See [**real sample outputs**](https://mohitagw15856.github.io/pm-claude-skills/examples.html) from each skill. Like what you see? [**Install in 2 minutes**](#-quick-install-2-minutes) · [browse all 199 skills](#️-all-199-skills) · [**⭐ star the repo**](https://github.com/mohitagw15856/pm-claude-skills/stargazers) so others find it.
+→ Want proof first? See [**real sample outputs**](https://mohitagw15856.github.io/pm-claude-skills/examples.html) from each skill. Like what you see? [**Install in 2 minutes**](#-quick-install-2-minutes) · [browse all 205 skills](#️-all-205-skills) · [**⭐ star the repo**](https://github.com/mohitagw15856/pm-claude-skills/stargazers) so others find it.
 
 ---
 
 ## 🔄 One library, the whole professional workflow
 
-These 199 skills aren't a random catalog — they cover the **full arc of professional work**, end to end. Wherever you are in the loop, there's a skill for it:
+These 205 skills aren't a random catalog — they cover the **full arc of professional work**, end to end. Wherever you are in the loop, there's a skill for it:
 
 ```mermaid
 flowchart LR
@@ -90,7 +90,7 @@ flowchart LR
 | **📊 Measure** | Track outcomes & analyse | `metrics-framework` · `cohort-analysis` · `ab-test-planner` · `churn-analysis` |
 | **📣 Communicate** | Report up and out | `executive-update` · `board-deck-narrative` · `stakeholder-update` · `qbr-deck` |
 
-> New here? Start with the [**top-tier skills**](#️-skill-tiers--start-with-the-strongest), or jump straight to [**all 199 skills**](#️-all-199-skills) grouped by profession.
+> New here? Start with the [**top-tier skills**](#️-skill-tiers--start-with-the-strongest), or jump straight to [**all 205 skills**](#️-all-205-skills) grouped by profession.
 
 ---
 
@@ -186,7 +186,7 @@ Most skill repos are a folder of prompts. This one is a **system** — measured,
 
 | | **PM Skills** | Typical skill repo |
 |---|:---:|:---:|
-| Skills | **199**, across 20 professions | a handful → dozens, usually one domain |
+| Skills | **205**, across 21 professions | a handful → dozens, usually one domain |
 | Quality | **eval-scored** on a rubric + a public [benchmark](https://mohitagw15856.github.io/pm-claude-skills/benchmark.html) | trust the README |
 | Improves itself | ✅ eval → critique → rewrite (kept only if it scores higher) | ✗ |
 | Grounded in frameworks | ✅ each cites its source (RICE, JTBD, Pyramid Principle…) | rarely |
@@ -211,7 +211,7 @@ Most skill repos are a folder of prompts. This one is a **system** — measured,
 - [📦 Plugin Directory](#-plugin-directory)
 - [🤖 Building Blocks for Agent Templates](#-building-blocks-for-agent-templates)
 - [🏷️ Skill Tiers — start with the strongest](#️-skill-tiers--start-with-the-strongest)
-- [🗂️ All 199 Skills](#️-all-199-skills)
+- [🗂️ All 205 Skills](#️-all-205-skills)
 - [📋 Changelog](#-changelog)
 - [🤝 Contributing](#-contributing--add-your-skill)
 - [🔗 Related Projects](#-related-projects)
@@ -220,13 +220,13 @@ Most skill repos are a folder of prompts. This one is a **system** — measured,
 
 ## 🚀 Quick Install (2 minutes)
 
-**With the [`skills`](https://github.com/vercel-labs/skills) CLI** (the open agent-skills installer that works across Claude Code, Cursor, Codex, OpenCode & 60+ agents) — pick from all 199 interactively:
+**With the [`skills`](https://github.com/vercel-labs/skills) CLI** (the open agent-skills installer that works across Claude Code, Cursor, Codex, OpenCode & 60+ agents) — pick from all 205 interactively:
 
 ```bash
 npx skills add mohitagw15856/pm-claude-skills            # browse & pick (auto-detects your agent)
 npx skills add mohitagw15856/pm-claude-skills --list     # just preview the catalog
 npx skills add mohitagw15856/pm-claude-skills --skill prd-template   # grab one
-npx skills add mohitagw15856/pm-claude-skills --skill '*'            # install all 199
+npx skills add mohitagw15856/pm-claude-skills --skill '*'            # install all 205
 ```
 
 **Or our own installer** — via the [`pm-claude-skills`](https://www.npmjs.com/package/pm-claude-skills) npm package (Windows/macOS/Linux, needs Node), which also installs subagents, slash commands & cross-tool exports:
@@ -235,7 +235,7 @@ npx skills add mohitagw15856/pm-claude-skills --skill '*'            # install a
 npx pm-claude-skills add --agent claude     # or: codex · cursor · hermes · openclaw
 ```
 
-**Or one-line MCP** — make all 199 skills + 5 workflow recipes available in *every* session of any MCP client (Claude Code, Claude Desktop, Cursor, Windsurf), no per-file install:
+**Or one-line MCP** — make all 205 skills + 5 workflow recipes available in *every* session of any MCP client (Claude Code, Claude Desktop, Cursor, Windsurf), no per-file install:
 
 ```bash
 claude mcp add pm-skills -- npx -y pm-claude-skills-mcp
@@ -301,7 +301,7 @@ There are two kinds of support. **Native `SKILL.md` agents** read the file as-is
 auto-discover skills from the `description` frontmatter. **Other tools** take the markdown
 body as a system prompt — for those we ship ready-made [exports](#ready-to-use-exports).
 
-**In your editor (VS Code / Cursor):** the [**`vscode-extension/`**](vscode-extension/) brings all 199 skills into the Command Palette — search and *insert a skill as context* for Copilot/Cursor chat, copy it, or open it in the Playground.
+**In your editor (VS Code / Cursor):** the [**`vscode-extension/`**](vscode-extension/) brings all 205 skills into the Command Palette — search and *insert a skill as context* for Copilot/Cursor chat, copy it, or open it in the Playground.
 
 | Platform | How it works | Auto-trigger? |
 |---|---|---|
@@ -517,7 +517,7 @@ Not sure which plugin to install? Here's what each one covers:
 
 On May 5, 2026, Anthropic [released their first agent templates](https://www.anthropic.com/news/finance-agents) — pre-packaged Claude agents that combine **skills, connectors, and subagents** into ready-to-run workflows for financial services.
 
-This library is the largest open-source collection of professional skills available — covering 19 professions beyond financial services. **The 199 skills here are the building blocks for agent templates outside of finance.**
+This library is the largest open-source collection of professional skills available — covering 20 professions beyond financial services. **The 205 skills here are the building blocks for agent templates outside of finance.**
 
 ### What is an agent template?
 
@@ -596,11 +596,11 @@ More templates will follow. If you want to contribute one, see the [template con
 
 ## 📋 Changelog
 
-**Latest: v25.0.0 — ecosystem & interconnection.** Install via the open **[`skills`](https://github.com/vercel-labs/skills) CLI** (works across 60+ agents); a **`writing-great-skills`** meta-skill + **`/setup-pm-skills`** onboarding command; a **related-skills graph** ("Start with" + "Related" on every skill, in the Playground and on each skill page); a **[Learn](https://mohitagw15856.github.io/pm-claude-skills/learn.html)** page explaining Skills vs MCP vs Subagents vs Prompts vs Hooks; a **[CONTEXT.md](CONTEXT.example.md)** convention with **[hooks](hooks/)** that auto-load it; and a **[Composio](connectors/composio.md)** recipe for skills that act across 500+ apps. Builds on **v24.0.0** (Founders & Educators bundles + browser extension). Now **199 skills** across **27 bundles** and **20 professions**, 20 eval-scored.
+**Latest: v26.0.0 — the Creator stack.** A new **🎬 `pm-creator`** bundle (content-repurposer, hook-writer, short-form-script, newsletter-writer, creator-brand-kit, creator-media-kit), a **`/repurpose`** workflow recipe, a **🔥 Viral Score** mode in the Grade tool (score any post/hook for social reach), and cross-promotion with **[ContentGoldMine](https://github.com/mohitagw15856/ContentGoldMine)** (the app that automates the repurposing pipeline) via [connectors/contentgoldmine.md](connectors/contentgoldmine.md). Builds on **v25.0.0** (the `skills` CLI, `writing-great-skills`, related-skills graph, Learn page). Now **205 skills** across **28 bundles** and **21 professions**, 20 eval-scored.
 
 Full [Keep a Changelog](https://keepachangelog.com/)-format history — every release back to the start — is in **[CHANGELOG.md](CHANGELOG.md)**.
 
-→ Earlier releases (v20 and before — the road from 6 to 199 skills) are in **[CHANGELOG.md](CHANGELOG.md)**.
+→ Earlier releases (v20 and before — the road from 6 to 205 skills) are in **[CHANGELOG.md](CHANGELOG.md)**.
 
 ---
 
@@ -636,7 +636,7 @@ This repo was built alongside a published 16-part article series on Medium.
 
 ## 🏷️ Skill Tiers — Start With the Strongest
 
-A 199-skill library doesn't have 199 equally-mature skills, and pretending otherwise
+A 205-skill library doesn't have 205 equally-mature skills, and pretending otherwise
 wastes your time. Skills are tiered honestly so you can start with the best work:
 
 - 🟢 **Production-Ready (47)** — battle-tested, stable output, used in real work. Includes the three skills with computed Python helpers (sprint planning, RICE, customer health). **Start here.**
@@ -649,7 +649,7 @@ If you're new, install `pm-essentials` and try a couple of Production-Ready skil
 
 ---
 
-## 🗂️ All 199 Skills
+## 🗂️ All 205 Skills
 
 Every skill, grouped by profession. **[Browse the full per-skill catalog → SKILLS.md](SKILLS.md)** · **[searchable live catalog](https://mohitagw15856.github.io/pm-claude-skills/catalog.html)** · **[run any skill in the browser](https://mohitagw15856.github.io/pm-claude-skills/)**
 
@@ -667,6 +667,7 @@ Every skill, grouped by profession. **[Browse the full per-skill catalog → SKI
 | 💰 Finance | `pm-finance` | 5 | `investor-pitch-deck` |
 | 🚀 Founders & Startups | `pm-founders` | 6 | `startup-idea-validator` · `cap-table-explainer` |
 | 🎓 Educators | `pm-education` | 6 | `lesson-plan` · `rubric-builder` |
+| 🎬 Content Creators | `pm-creator` | 6 | `content-repurposer` · `hook-writer` |
 | 👥 HR | `pm-hr` | 5 | `job-description-writer` |
 | 🤝 Sales | `pm-sales` | 6 | `sales-battlecard` |
 | ⚙️ Operations | `pm-operations` | 10 | `sop-writer` |
@@ -682,7 +683,7 @@ Every skill, grouped by profession. **[Browse the full per-skill catalog → SKI
 
 ## ❤️ Sponsor This Work
 
-Building and maintaining 199 skills across 27 bundles takes real time — testing skills against new model releases, building new ones from community requests, writing the article series, and keeping documentation current.
+Building and maintaining 205 skills across 28 bundles takes real time — testing skills against new model releases, building new ones from community requests, writing the article series, and keeping documentation current.
 
 If these skills save you time at work — or you're a company that wants your logo in front of the PMs, engineers, and operators who use them daily — **[become a sponsor →](https://github.com/sponsors/mohitagw15856)** (or [☕ buy me a coffee](https://www.buymeacoffee.com/mohit15856)).
 
@@ -839,6 +840,7 @@ below, a reciprocal link is always welcome. 🙌
 
 **From this author**
 
+- **[ContentGoldMine](https://github.com/mohitagw15856/ContentGoldMine)** — the *automation* layer of the creator stack. This library teaches the craft (`pm-creator`: hooks, repurposing, short-form, newsletters); ContentGoldMine runs it end-to-end — one URL → 5 platform formats, viral-scored, with carousel images and auto-publishing to X/LinkedIn. See the [cross-tool recipe](connectors/contentgoldmine.md).
 - **[professional-gpt-library](https://github.com/mohitagw15856/professional-gpt-library)** — the same frameworks rebuilt as ChatGPT Custom GPTs.
 
 > Maintain a Claude Skills project and want to be listed here? [Open a PR](../../pulls) or an [issue](../../issues).

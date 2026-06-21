@@ -6,7 +6,7 @@ Run one as a slash command in Claude Code (e.g. `/ship-a-feature a referral prog
 
 <!-- Generated from workflows.json by scripts/build-workflows.mjs — do not edit by hand. -->
 
-There are **5 recipes** today:
+There are **6 recipes** today:
 
 | Recipe | Command | Lifecycle | Chains |
 |--------|---------|-----------|--------|
@@ -15,6 +15,7 @@ There are **5 recipes** today:
 | **Launch a Product** | `/launch-a-product` | Decide → Ship | 5 skills |
 | **Rescue an Account** | `/rescue-an-account` | Measure → Communicate | 4 skills |
 | **Run Discovery** | `/run-discovery` | Discover → Decide | 4 skills |
+| **Repurpose Content** | `/repurpose` | One source → many platforms | 3 skills |
 
 ## Ship a Feature — `/ship-a-feature`
 
@@ -72,6 +73,16 @@ There are **5 recipes** today:
 2. **discovery-interview-guide** → produces a screener and discussion guide for user interviews.
 3. **user-research-synthesis** → produces themes and insights from the research.
 4. **rice-prioritisation** → produces a ranked, defensible list of what to do next.
+
+## Repurpose Content — `/repurpose`
+
+*One source → many platforms* · Turn one blog post, video, or idea into a full platform-native content pack — thread, LinkedIn, newsletter, carousel, and short-form script — with sharpened hooks and a thumbnail concept.
+
+`content-repurposer` → `hook-writer` → `thumbnail-creator`
+
+1. **content-repurposer** → produces platform-native drafts for X, LinkedIn, newsletter, carousel and short-form video.
+2. **hook-writer** → produces stronger, scroll-stopping hooks for each piece.
+3. **thumbnail-creator** → produces a thumbnail concept for the video version.
 
 ---
 

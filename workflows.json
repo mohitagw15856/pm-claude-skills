@@ -67,6 +67,18 @@
         { "skill": "user-research-synthesis", "produces": "themes and insights from the research", "passes": "the validated insights" },
         { "skill": "rice-prioritisation", "produces": "a ranked, defensible list of what to do next", "passes": null }
       ]
+    },
+    {
+      "id": "repurpose",
+      "command": "/repurpose",
+      "name": "Repurpose Content",
+      "lifecycle": "One source → many platforms",
+      "summary": "Turn one blog post, video, or idea into a full platform-native content pack — thread, LinkedIn, newsletter, carousel, and short-form script — with sharpened hooks and a thumbnail concept.",
+      "steps": [
+        { "skill": "content-repurposer", "produces": "platform-native drafts for X, LinkedIn, newsletter, carousel and short-form video", "passes": "the drafts and the core idea" },
+        { "skill": "hook-writer", "produces": "stronger, scroll-stopping hooks for each piece", "passes": "the winning hooks" },
+        { "skill": "thumbnail-creator", "produces": "a thumbnail concept for the video version", "passes": null }
+      ]
     }
   ]
 }

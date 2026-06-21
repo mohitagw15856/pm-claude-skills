@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-creator",
+  "version": "1.0.0",
+  "description": "Content creator skills: Content Repurposer, Hook Writer, Short-Form Script, Newsletter Writer, Creator Brand Kit, Creator Media Kit. Atomize one piece into a multi-platform pack (thread, LinkedIn, newsletter, carousel, Reel), write scroll-stopping hooks, script TikToks/Reels/Shorts, draft newsletter issues, define your niche/voice/pillars, and land sponsorships. The craft layer of the creator stack — pairs with the ContentGoldMine app for one-click automation.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["content-creator", "creator", "social-media", "repurposing", "hook", "short-form", "tiktok", "reels", "shorts", "youtube", "newsletter", "substack", "personal-brand", "sponsorship", "media-kit", "influencer"]
+}
