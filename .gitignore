@@ -30,3 +30,8 @@ evals/cases.full.json
 # Generated agent-discovery files (rebuilt on deploy)
 web/llms.txt
 web/llms-full.txt
+
+# Python build artifacts
+python/dist/
+python/*.egg-info/
+__pycache__/

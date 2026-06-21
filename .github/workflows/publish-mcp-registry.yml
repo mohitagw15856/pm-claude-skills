@@ -1,0 +1,33 @@
+name: Publish to MCP Registry
+
+# Publishes server.json to the official MCP registry (registry.modelcontextprotocol.io).
+# The server name uses the io.github.mohitagw15856/* namespace, which the registry verifies
+# automatically from this repo's GitHub OIDC token — no account setup or secret needed.
+# Run from the Actions tab (Run workflow) or it fires on each release.
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  id-token: write   # GitHub OIDC → proves ownership of the io.github.<user> namespace
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install mcp-publisher
+        run: |
+          URL=$(curl -fsSL https://api.github.com/repos/modelcontextprotocol/registry/releases/latest \
+            | grep -o 'https://[^"]*mcp-publisher[^"]*linux[^"]*amd64[^"]*\.tar\.gz' | head -1)
+          echo "Downloading: $URL"
+          curl -fsSL "$URL" -o mcp-publisher.tar.gz
+          tar xzf mcp-publisher.tar.gz
+          chmod +x mcp-publisher
+      - name: Login via GitHub OIDC
+        run: ./mcp-publisher login github-oidc
+      - name: Publish server.json
+        run: ./mcp-publisher publish
