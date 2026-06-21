@@ -79,6 +79,39 @@ const PLATFORMS = {
     // `aider --read <file>`. So this is the plain body, ready to --read.
     render: ({ body }) => `${body.trim()}\n`,
   },
+  cline: {
+    label: 'Cline — .clinerules/ rule (.md)',
+    dir: 'exports/cline',
+    file: (s) => `${s.name}.md`,
+    groupByBundle: true,
+    // Drop into `.clinerules/` in your project; Cline loads them as rules.
+    render: ({ body }) => `${body.trim()}\n`,
+  },
+  continue: {
+    label: 'Continue.dev — rule (.md)',
+    dir: 'exports/continue',
+    file: (s) => `${s.name}.md`,
+    groupByBundle: true,
+    // Continue reads markdown rules with optional frontmatter (name + description).
+    render: ({ description, body }) =>
+      `---\nname: ${JSON.stringify(description.slice(0, 60))}\ndescription: ${JSON.stringify(description)}\n---\n\n${body.trim()}\n`,
+  },
+  zed: {
+    label: 'Zed — .rules file (.md)',
+    dir: 'exports/zed',
+    file: (s) => `${s.name}.md`,
+    groupByBundle: true,
+    // Zed reads a project `.rules` file; paste/append the skill you want.
+    render: ({ body }) => `${body.trim()}\n`,
+  },
+  roo: {
+    label: 'Roo Code — .roo/rules/ rule (.md)',
+    dir: 'exports/roo',
+    file: (s) => `${s.name}.md`,
+    groupByBundle: true,
+    // Drop into `.roo/rules/` in your project; Roo Code loads them as rules.
+    render: ({ body }) => `${body.trim()}\n`,
+  },
 };
 
 // ── Helpers (shared shape with web/build-skills.mjs) ────────────────────────

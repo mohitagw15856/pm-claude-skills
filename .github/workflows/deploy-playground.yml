@@ -49,6 +49,9 @@ jobs:
       - name: Rebuild skills.json from SKILL.md files
         run: node web/build-skills.mjs
 
+      - name: Build llms.txt (agent/answer-engine discovery)
+        run: node scripts/build-llms-txt.mjs
+
       - name: Build the static skill catalog (web/catalog.html)
         run: node scripts/build-docs.mjs
 

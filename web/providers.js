@@ -54,6 +54,23 @@
     },
   };
 
+  PROVIDERS.ollama = {
+    name: 'Ollama', keyStore: 'ollama_base_url', default: 'http://localhost:11434',
+    placeholder: 'http://localhost:11434 (your Ollama URL)', keyUrl: 'https://ollama.com/download',
+    models: [['llama3.2', 'Llama 3.2'], ['qwen2.5', 'Qwen 2.5'], ['mistral', 'Mistral'], ['gemma2', 'Gemma 2'], ['phi3', 'Phi-3']],
+    // Ollama ships an OpenAI-compatible endpoint. NOTE: to call it from a hosted page,
+    // start Ollama with OLLAMA_ORIGINS set (e.g. OLLAMA_ORIGINS=* ollama serve) or CORS blocks it.
+    buildReq: function (o) {
+      var base = (o.key || 'http://localhost:11434').replace(/\/+$/, '');
+      var messages = [];
+      if (o.system) messages.push({ role: 'system', content: o.system });
+      messages.push({ role: 'user', content: o.userMessage });
+      return { url: base + '/v1/chat/completions', headers: { 'content-type': 'application/json' }, body: { model: o.model, stream: true, messages: messages } };
+    },
+    delta: function (e) { return (e.choices && e.choices[0] && e.choices[0].delta && e.choices[0].delta.content) || ''; },
+    errOf: function (e) { return e.error ? (e.error.message || 'Ollama error') : ''; },
+  };
+
   function providerId() { var p = localStorage.getItem(PROVIDER_STORE); return PROVIDERS[p] ? p : 'anthropic'; }
   function current() { return PROVIDERS[providerId()]; }
   function modelStoreKey(p) { return 'pm_model_' + p; }
@@ -77,7 +94,7 @@
       if (saved && cfg.models.some(function (m) { return m[0] === saved; })) msel.value = saved;
     }
     var kf = d.getElementById('apiKey');
-    if (kf) { kf.value = localStorage.getItem(cfg.keyStore) || ''; kf.placeholder = cfg.placeholder; }
+    if (kf) { kf.value = localStorage.getItem(cfg.keyStore) || cfg.default || ''; kf.placeholder = cfg.placeholder; }
     var gk = d.getElementById('getKeyLink');
     if (gk) { gk.href = cfg.keyUrl; gk.textContent = 'Get your ' + cfg.name + ' key →'; }
   }

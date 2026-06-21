@@ -15,6 +15,10 @@ Currently exporting **205 skills** to:
 - **Cursor — project rule (.mdc)** → `exports/cursor/`
 - **Windsurf — workspace rule (.md)** → `exports/windsurf/`
 - **Aider — conventions file (.md)** → `exports/aider/`
+- **Cline — .clinerules/ rule (.md)** → `exports/cline/`
+- **Continue.dev — rule (.md)** → `exports/continue/`
+- **Zed — .rules file (.md)** → `exports/zed/`
+- **Roo Code — .roo/rules/ rule (.md)** → `exports/roo/`
 
 Adding a new platform is a few lines in the `PLATFORMS` registry of
 `scripts/build-exports.mjs` — no content is duplicated.

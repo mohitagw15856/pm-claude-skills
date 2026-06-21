@@ -174,11 +174,40 @@ function handle(msg) {
     case 'initialize':
       return reply(id, {
         protocolVersion: (params && params.protocolVersion) || '2024-11-05',
-        capabilities: { tools: {} },
+        capabilities: { tools: {}, prompts: {}, resources: {} },
         serverInfo: { name: SERVER_NAME, version: VERSION },
       });
     case 'tools/list':
       return reply(id, { tools: TOOLS });
+
+    // Each skill is also exposed as an MCP prompt (so it appears in slash-command /
+    // prompt pickers) and as a readable resource (skill://<name>).
+    case 'prompts/list':
+      return reply(id, {
+        prompts: SKILLS.map((s) => ({
+          name: s.name,
+          title: s.title,
+          description: s.description,
+          arguments: [{ name: 'task', description: 'The task or input to apply this skill to.', required: false }],
+        })),
+      });
+    case 'prompts/get': {
+      const s = byName.get(params && params.name);
+      if (!s) return fail(id, -32602, `Unknown prompt: ${params && params.name}`);
+      const task = (params && params.arguments && params.arguments.task) || '';
+      const text = s.body + (task ? `\n\n---\nApply this skill now to the following:\n${task}` : '');
+      return reply(id, { description: s.description, messages: [{ role: 'user', content: { type: 'text', text } }] });
+    }
+    case 'resources/list':
+      return reply(id, {
+        resources: SKILLS.map((s) => ({ uri: `skill://${s.name}`, name: s.title, description: s.description, mimeType: 'text/markdown' })),
+      });
+    case 'resources/read': {
+      const uri = (params && params.uri) || '';
+      const s = byName.get(uri.replace(/^skill:\/\//, ''));
+      if (!s) return fail(id, -32602, `Unknown resource: ${uri}`);
+      return reply(id, { contents: [{ uri, mimeType: 'text/markdown', text: `# ${s.title}\n\n${s.body}` }] });
+    }
     case 'tools/call': {
       const toolName = params && params.name;
       try {

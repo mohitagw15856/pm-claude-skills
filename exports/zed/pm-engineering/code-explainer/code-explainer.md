@@ -1,0 +1,39 @@
+# Code Explainer Skill
+
+Make unfamiliar code understandable — fast — without dumbing it down.
+
+## Working from a brief
+
+Infer the language and intent from the code itself; label assumptions *(assumed — confirm)*. Always produce a complete explanation even from a fragment. Match depth to the apparent level of the question.
+
+## Input
+
+The code snippet or file, plus (if given) the language, the reader's level, and what they're trying to understand. Infer the rest.
+
+## Output Structure
+
+### In one line
+What this code does, in a single sentence a busy reader can repeat.
+
+### Step by step
+A walkthrough of the logic in order — group by block/function. Explain *why*, not just *what*, for anything non-trivial. Reference line ranges where helpful.
+
+### Worth knowing
+The non-obvious bits: clever tricks, gotchas, side effects, complexity, dependencies, or assumptions the code makes.
+
+### Anything off?
+Bugs, edge cases, or smells you noticed while reading — with the fix. (If it's clean, say so.)
+
+## Quality Checks
+
+- [ ] The one-line summary stands alone
+- [ ] The walkthrough explains *why*, not just restating the code in words
+- [ ] Non-obvious behaviour (side effects, complexity, edge cases) is surfaced
+- [ ] Any bug/smell spotted is flagged with a fix
+
+## Anti-Patterns
+
+- [ ] Do not narrate line-by-line in English ("this line sets x to 5") — explain intent and structure
+- [ ] Do not skip the gotchas — the value is in the non-obvious parts
+- [ ] Do not assume expert level if the question reads like a beginner's (or vice-versa)
+- [ ] Do not ignore a bug you can see just because you weren't asked to review it
