@@ -8,6 +8,14 @@ name: Update Skill Leaderboard
 on:
   workflow_dispatch:
     inputs:
+      scope:
+        description: 'Which skills to score: curated (~20) or all (205, auto-generated cases ~$2 on Haiku)'
+        type: choice
+        required: false
+        default: 'curated'
+        options:
+          - curated
+          - all
       models:
         description: 'Comma-separated model ids to score'
         required: false
@@ -30,7 +38,7 @@ concurrency:
 jobs:
   evaluate:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 50
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -48,11 +56,23 @@ jobs:
             echo "::error::ANTHROPIC_API_KEY secret is not set. Add it in Settings → Secrets and variables → Actions."
             exit 1
           fi
-          node evals/run-evals.mjs \
-            --models "${{ github.event.inputs.models || 'claude-sonnet-4-6,claude-haiku-4-5-20251001' }}" \
-            --judge "${{ github.event.inputs.judge || 'claude-sonnet-4-6' }}"
-          # Cheap by default (Sonnet judge, skips unchanged skills). For a stricter
-          # official pass, dispatch with judge=claude-opus-4-8.
+          SCOPE="${{ github.event.inputs.scope || 'curated' }}"
+          MODELS="${{ github.event.inputs.models || 'claude-sonnet-4-6,claude-haiku-4-5-20251001' }}"
+          JUDGE="${{ github.event.inputs.judge || 'claude-sonnet-4-6' }}"
+          if [ "$SCOPE" = "all" ]; then
+            # Score every skill. Default the full pass to Haiku-only (~$2) unless the
+            # dispatcher explicitly chose models/judge.
+            if [ "$MODELS" = "claude-sonnet-4-6,claude-haiku-4-5-20251001" ]; then MODELS="claude-haiku-4-5-20251001"; fi
+            if [ "$JUDGE" = "claude-sonnet-4-6" ]; then JUDGE="claude-haiku-4-5-20251001"; fi
+            echo "Scoring ALL skills — models=$MODELS judge=$JUDGE"
+            node scripts/gen-eval-cases.mjs
+            node evals/run-evals.mjs --cases evals/cases.full.json --models "$MODELS" --judge "$JUDGE"
+          else
+            echo "Scoring curated cases — models=$MODELS judge=$JUDGE"
+            node evals/run-evals.mjs --models "$MODELS" --judge "$JUDGE"
+          fi
+          # Cheap by default; skips unchanged skills. For a stricter official pass,
+          # dispatch with judge=claude-opus-4-8.
 
       - name: Build the leaderboard page (sanity check)
         run: node scripts/build-leaderboard.mjs
