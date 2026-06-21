@@ -10,7 +10,7 @@ Getting listed in these is pure distribution — each is a search surface where 
 
 | Registry | How to list |
 |---|---|
-| **Official MCP registry** | Publish with the registry CLI: `npx @modelcontextprotocol/registry publish` (uses `server.json`). See [registry docs](https://github.com/modelcontextprotocol/registry). |
+| **Official MCP registry** | ✅ Automated — the [`publish-mcp-registry.yml`](../.github/workflows/publish-mcp-registry.yml) workflow publishes `server.json` on each release (GitHub OIDC verifies the `io.github.*` namespace; no secret). Run it from the Actions tab anytime. |
 | **Smithery** ([smithery.ai](https://smithery.ai)) | Connect the GitHub repo at smithery.ai → it reads `smithery.yaml` and lists the server. |
 | **mcp.so** ([mcp.so](https://mcp.so)) | Submit the repo via their "Submit" form — it indexes from GitHub + npm. |
 | **Glama** ([glama.ai/mcp/servers](https://glama.ai/mcp/servers)) | Auto-discovers public MCP servers on GitHub; submit/claim the listing to add metadata. |
