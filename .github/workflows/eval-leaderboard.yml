@@ -24,6 +24,10 @@ on:
         description: 'Judge model id (Sonnet is ~5x cheaper than Opus and fine for the rubric)'
         required: false
         default: 'claude-sonnet-4-6'
+      seed_branch:
+        description: 'Reuse prior results from this branch (e.g. eval-results) so a re-run only re-scores skills whose SKILL.md or eval case changed — pennies, not dollars. Empty = start from main.'
+        required: false
+        default: ''
   # schedule:
   #   - cron: '0 6 1 * *'   # 06:00 on the 1st of each month
 
@@ -47,6 +51,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+
+      - name: Seed prior results (incremental re-score)
+        if: ${{ github.event.inputs.seed_branch != '' }}
+        run: |
+          BR="${{ github.event.inputs.seed_branch }}"
+          if git fetch origin "$BR" >/dev/null 2>&1 && git cat-file -e "origin/$BR:evals/results.json" 2>/dev/null; then
+            git show "origin/$BR:evals/results.json" > evals/results.json
+            echo "Seeded evals/results.json from origin/$BR — $(node -e "console.log(require('./evals/results.json').results.length)") prior results reused; only changed skills will re-score."
+          else
+            echo "::warning::Branch '$BR' or its evals/results.json not found — starting from main."
+          fi
 
       - name: Run evals
         env:
