@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-20T12:00:45.670Z",
-  "judge": "claude-opus-4-8",
+  "generatedAt": "2026-06-21T06:57:26.639Z",
+  "judge": "claude-sonnet-4-6",
   "models": [
     "claude-sonnet-4-6",
     "claude-haiku-4-5-20251001"
@@ -13,7 +13,7 @@
   ],
   "results": [
     {
-      "skill": "rice-prioritisation",
+      "skill": "ab-test-planner",
       "model": "claude-sonnet-4-6",
       "scores": {
         "structure": 5,
@@ -24,7 +24,7 @@
       "overall": 4.75
     },
     {
-      "skill": "rice-prioritisation",
+      "skill": "ab-test-planner",
       "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
@@ -35,7 +35,7 @@
       "overall": 4.75
     },
     {
-      "skill": "prd-template",
+      "skill": "churn-analysis",
       "model": "claude-sonnet-4-6",
       "scores": {
         "structure": 5,
@@ -46,51 +46,7 @@
       "overall": 4.75
     },
     {
-      "skill": "prd-template",
-      "model": "claude-haiku-4-5-20251001",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "cs-health-scorecard",
-      "model": "claude-sonnet-4-6",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 5
-      },
-      "overall": 5
-    },
-    {
-      "skill": "cs-health-scorecard",
-      "model": "claude-haiku-4-5-20251001",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "executive-summary",
-      "model": "claude-sonnet-4-6",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 5
-      },
-      "overall": 5
-    },
-    {
-      "skill": "executive-summary",
+      "skill": "churn-analysis",
       "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
@@ -99,6 +55,30 @@
         "grounding": 3
       },
       "overall": 4.25
+    },
+    {
+      "skill": "code-explainer",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "2fc9722b89148d7f"
+    },
+    {
+      "skill": "code-explainer",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "2fc9722b89148d7f"
     },
     {
       "skill": "competitive-analysis",
@@ -123,6 +103,300 @@
       "overall": 4.25
     },
     {
+      "skill": "cs-health-scorecard",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5
+    },
+    {
+      "skill": "cs-health-scorecard",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "dependency-conflict-resolver",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 3
+      },
+      "overall": 4.5,
+      "hash": "fa1fb16d0eed968b"
+    },
+    {
+      "skill": "dependency-conflict-resolver",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "fa1fb16d0eed968b"
+    },
+    {
+      "skill": "error-decoder",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 3
+      },
+      "overall": 4.5,
+      "hash": "be82f69c10d4ee6b"
+    },
+    {
+      "skill": "error-decoder",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 4,
+        "completeness": 4,
+        "usefulness": 4,
+        "grounding": 2
+      },
+      "overall": 3.5,
+      "hash": "be82f69c10d4ee6b"
+    },
+    {
+      "skill": "executive-summary",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5
+    },
+    {
+      "skill": "executive-summary",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 4,
+        "grounding": 3
+      },
+      "overall": 4.25
+    },
+    {
+      "skill": "git-troubleshooter",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "1ca184578361e09b"
+    },
+    {
+      "skill": "git-troubleshooter",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 4,
+        "grounding": 3
+      },
+      "overall": 4,
+      "hash": "1ca184578361e09b"
+    },
+    {
+      "skill": "go-to-market",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "go-to-market",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "incident-postmortem",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "incident-postmortem",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "metrics-framework",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 3
+      },
+      "overall": 4.25
+    },
+    {
+      "skill": "metrics-framework",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "okr-builder",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "okr-builder",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "prd-template",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "prd-template",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "regex-builder",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "67ee0a6feb1f5549"
+    },
+    {
+      "skill": "regex-builder",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 4,
+        "grounding": 5
+      },
+      "overall": 4.5,
+      "hash": "67ee0a6feb1f5549"
+    },
+    {
+      "skill": "rice-prioritisation",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "rice-prioritisation",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "roadmap-narrative",
+      "model": "claude-sonnet-4-6",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
+      "skill": "roadmap-narrative",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75
+    },
+    {
       "skill": "sprint-planning",
       "model": "claude-sonnet-4-6",
       "scores": {
@@ -143,94 +417,6 @@
         "grounding": 2
       },
       "overall": 3.75
-    },
-    {
-      "skill": "roadmap-narrative",
-      "model": "claude-sonnet-4-6",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "roadmap-narrative",
-      "model": "claude-haiku-4-5-20251001",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "okr-builder",
-      "model": "claude-sonnet-4-6",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "okr-builder",
-      "model": "claude-haiku-4-5-20251001",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "go-to-market",
-      "model": "claude-sonnet-4-6",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "go-to-market",
-      "model": "claude-haiku-4-5-20251001",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "churn-analysis",
-      "model": "claude-sonnet-4-6",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "churn-analysis",
-      "model": "claude-haiku-4-5-20251001",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 4,
-        "grounding": 3
-      },
-      "overall": 4.25
     },
     {
       "skill": "stakeholder-update",
@@ -267,72 +453,6 @@
     },
     {
       "skill": "user-story-writer",
-      "model": "claude-haiku-4-5-20251001",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "incident-postmortem",
-      "model": "claude-sonnet-4-6",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "incident-postmortem",
-      "model": "claude-haiku-4-5-20251001",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "ab-test-planner",
-      "model": "claude-sonnet-4-6",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "ab-test-planner",
-      "model": "claude-haiku-4-5-20251001",
-      "scores": {
-        "structure": 5,
-        "completeness": 5,
-        "usefulness": 5,
-        "grounding": 4
-      },
-      "overall": 4.75
-    },
-    {
-      "skill": "metrics-framework",
-      "model": "claude-sonnet-4-6",
-      "scores": {
-        "structure": 5,
-        "completeness": 4,
-        "usefulness": 5,
-        "grounding": 3
-      },
-      "overall": 4.25
-    },
-    {
-      "skill": "metrics-framework",
       "model": "claude-haiku-4-5-20251001",
       "scores": {
         "structure": 5,
