@@ -12,7 +12,7 @@
   // Get one free (open-source, no cookies) at https://www.goatcounter.com →
   // then set ANALYTICS_CODE to your subdomain (e.g. 'pm-skills' for
   // pm-skills.goatcounter.com). Leave empty to keep tracking fully OFF.
-  var ANALYTICS_CODE = '';
+  var ANALYTICS_CODE = 'mohitagw';
   window.pmTrack = function () {}; // safe no-op until enabled
   if (ANALYTICS_CODE) {
     var gc = document.createElement('script');
