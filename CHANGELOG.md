@@ -9,6 +9,19 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [23.0.0] — 180 Skills + the Ask Experience — 2026-06-21
+
+A milestone release (crossed 1,000 ⭐): the library turns into a developer Q&A surface.
+
+### Added
+- **Five developer skills** (bundled in `pm-engineering`, 38 → 43): **error-decoder** (decode an error/stack trace), **regex-builder** (build/explain regex with tests), **git-troubleshooter** (safe commands to undo a git mess), **dependency-conflict-resolver** (version-hell, ranked by safety), **code-explainer** (plain-English walkthrough). Library is now **180 skills**.
+- **Ask** (`ask.html`) — a coding question routed to the best developer skill and answered instantly ("StackOverflow, but the answer's already written"), with a one-click path to the community Q&A.
+- **Q&A Discussions** template + an ❓ Ask nav tab.
+- **Eval cases for the 5 new skills** — eval coverage 15 → **20 skills**.
+
+### Fixed
+- Registered the new skills across all manifests (`marketplace.json`, `plugin.json`) and refreshed every count to 180; regenerated exports (906 files), OG cards, and the hero GIF/social preview.
+
 ## [22.3.0] — Monetization & a Polished Playground — 2026-06-21
 
 ### Added

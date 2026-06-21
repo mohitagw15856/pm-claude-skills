@@ -18,7 +18,7 @@
 [![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Cursor%20%7C%20Codex%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
 [![SkillCheck](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skillcheck.yml?branch=main&label=SkillCheck)](.github/workflows/skillcheck.yml)
 [![Security Audit](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skill-audit.yml?branch=main&label=security%20audit)](.github/workflows/skill-audit.yml)
-[![Version](https://img.shields.io/badge/version-22.3.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
+[![Version](https://img.shields.io/badge/version-23.0.0-brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
 [![Install](https://img.shields.io/badge/Install%20in%20Claude%20Code-2%20minutes-orange)](https://github.com/mohitagw15856/pm-claude-skills#-quick-install-2-minutes)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4)](https://github.com/sponsors/mohitagw15856)
@@ -30,7 +30,7 @@
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest release (v22.3.0 — Monetization & a polished playground):** a [**Sponsors program**](SPONSORS.md) + [**embeddable widget**](web/embed.js) + [**Pro/Teams**](https://mohitagw15856.github.io/pm-claude-skills/pro.html) page, and a redesigned playground with a **⌘K palette**, a hero landing, **favourites**, **light/dark** mode, **compare-models** (Opus/Sonnet/Haiku side by side), and **save-as-image**. Builds on v22.2 (Studio, Auto-Agent, editor extension). **180 skills**, 15 eval-scored. See the [changelog](#-changelog).
+**🆕 Latest release (v23.0.0 — 180 skills + the Ask experience):** five new developer skills (error decoder, regex builder, git troubleshooter, dependency resolver, code explainer) and **[❓ Ask](https://mohitagw15856.github.io/pm-claude-skills/ask.html)** — a coding question routed to the right skill and answered instantly, plus a community [Q&A](https://github.com/mohitagw15856/pm-claude-skills/discussions). Builds on v22.3 (sponsors, embed widget, polished playground). **180 skills**, 20 eval-scored. See the [changelog](#-changelog).
 
 ### ▶ See it in action — [try the live Skill Playground](https://mohitagw15856.github.io/pm-claude-skills/)
 
@@ -577,7 +577,7 @@ More templates will follow. If you want to contribute one, see the [template con
 
 ## 📋 Changelog
 
-**Latest: v22.3.0 — Monetization & a polished playground.** A Sponsors program, an embeddable "run this skill" widget, and a Pro/Teams page; plus a redesigned playground (⌘K palette, hero landing, favourites, light/dark, compare-models, save-as-image) and a README glow-up. Builds on **v22.2.0** (Studio, Auto-Agent, editor extension). Now **180 skills**, 15 eval-scored.
+**Latest: v23.0.0 — 180 skills + the Ask experience.** Five new developer skills (error decoder, regex builder, git troubleshooter, dependency resolver, code explainer), an **Ask** page (coding question → right skill answers instantly) and a community **Q&A**. Builds on **v22.3.0** (sponsors, embed widget, polished playground). Now **180 skills**, 20 eval-scored.
 
 Full [Keep a Changelog](https://keepachangelog.com/)-format history — every release back to the start — is in **[CHANGELOG.md](CHANGELOG.md)**.
 

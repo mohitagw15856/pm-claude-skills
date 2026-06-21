@@ -60,6 +60,26 @@
     {
       "skill": "metrics-framework",
       "input": "Define the metrics framework for a B2B analytics product: the north star, input metrics across acquisition/activation/retention/revenue, and guardrails. Stage: early growth, ~500 paying accounts."
+    },
+    {
+      "skill": "error-decoder",
+      "input": "TypeError: Cannot read properties of undefined (reading 'map') at ProductList (ProductList.jsx:24). It's a React component that renders a list from an API call."
+    },
+    {
+      "skill": "regex-builder",
+      "input": "Write a regex (JavaScript) that validates a US phone number, accepting both (555) 123-4567 and 555-123-4567, but rejecting letters or wrong digit counts."
+    },
+    {
+      "skill": "git-troubleshooter",
+      "input": "I made 2 commits on main but they were meant for a feature branch, and I haven't pushed yet. How do I move them onto a new branch and clean up main?"
+    },
+    {
+      "skill": "dependency-conflict-resolver",
+      "input": "npm install fails: react-dom@18 needs peer react@^18 but the project pins react@17.0.2. Several other packages still expect 17. How do I resolve this safely?"
+    },
+    {
+      "skill": "code-explainer",
+      "input": "Explain this:\n\nconst debounce = (fn, ms) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; };"
     }
   ]
 }
