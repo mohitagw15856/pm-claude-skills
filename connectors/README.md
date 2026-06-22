@@ -56,6 +56,23 @@ servers you configured.
 **🔁 A whole recipe, grounded** *(pm-skills + filesystem/github)*
 > Get the `ship-a-feature` workflow, use the notes in `docs/idea.md` as the kickoff, and run the chain end to end.
 
+## 🧩 Tool integrations
+
+Beyond MCP data servers, PM Skills plugs into the tools where work already happens. Each guide
+uses the read-only **REST API / static catalogue** (no auth, open CORS) or the hosted MCP
+connector:
+
+| Tool | What you get | Guide |
+|---|---|---|
+| **n8n** | skills as nodes in any automation (MCP Client or HTTP Request) | [`n8n.md`](n8n.md) |
+| **Lovable** | build skill-powered web apps; make its generator skill-aware | [`lovable.md`](lovable.md) |
+| **Obsidian** | skills as vault notes / AI-plugin prompts; the vault as project state | [`obsidian.md`](obsidian.md) |
+
+> **REST API** — `GET /v1/skills`, `/v1/skills/{name}` (`?format=md`), `/v1/search?q=`,
+> `/v1/workflows` on `https://pm-skills-mcp.pm-claude-skills.workers.dev`. Same catalogue as
+> the MCP connector, for any HTTP/no-code tool. Static fallback:
+> [`skills.json`](https://mohitagw15856.github.io/pm-claude-skills/skills.json).
+
 ## How it works
 `pm-skills` exposes `search_skills` / `get_skill` / `get_workflow` over MCP; the assistant
 fetches the right instructions and applies them to whatever the *data* server returns. No

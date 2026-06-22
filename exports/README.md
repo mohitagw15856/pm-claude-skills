@@ -19,6 +19,7 @@ Currently exporting **205 skills** to:
 - **Continue.dev — rule (.md)** → `exports/continue/`
 - **Zed — .rules file (.md)** → `exports/zed/`
 - **Roo Code — .roo/rules/ rule (.md)** → `exports/roo/`
+- **Obsidian — vault skill note (AI-plugin prompt)** → `exports/obsidian/`
 
 Adding a new platform is a few lines in the `PLATFORMS` registry of
 `scripts/build-exports.mjs` — no content is duplicated.

@@ -7,6 +7,7 @@
 // Then add the printed https://…workers.dev/  URL as an MCP/connector endpoint.
 
 const SKILLS_URL = 'https://mohitagw15856.github.io/pm-claude-skills/skills.json';
+const WORKFLOWS_URL = 'https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/workflows.json';
 const SERVER = { name: 'pm-claude-skills', version: 'remote-1.0.0' };
 
 let CACHE = null;
@@ -14,8 +15,30 @@ async function getSkills() {
   if (CACHE) return CACHE;
   const r = await fetch(SKILLS_URL, { cf: { cacheTtl: 3600, cacheEverything: true } });
   const j = await r.json();
-  CACHE = (j.skills || []).map((s) => ({ name: s.name, title: s.title, description: s.description, plugin: s.plugin, body: s.instructions || '' }));
+  CACHE = (j.skills || []).map((s) => ({ name: s.name, title: s.title, description: s.description, plugin: s.plugin, tier: s.tier || null, inputs: s.inputs || null, source: s.source || null, body: s.instructions || '' }));
   return CACHE;
+}
+
+let WF_CACHE = null;
+async function getWorkflows() {
+  if (WF_CACHE) return WF_CACHE;
+  const r = await fetch(WORKFLOWS_URL, { cf: { cacheTtl: 3600, cacheEverything: true } });
+  const j = await r.json();
+  WF_CACHE = j.workflows || [];
+  return WF_CACHE;
+}
+
+// Keyword search shared by the MCP tool and the REST API. Ranks by how often the
+// query substring appears across name/title/description.
+function searchSkills(skills, query, limit) {
+  const q = String(query || '').toLowerCase();
+  if (!q) return [];
+  return skills
+    .map((s) => ({ s, n: (s.title + ' ' + s.description + ' ' + s.name).toLowerCase().split(q).length - 1 }))
+    .filter((x) => x.n > 0)
+    .sort((a, b) => b.n - a.n)
+    .slice(0, limit)
+    .map((x) => x.s);
 }
 
 const CORS = {
@@ -37,10 +60,8 @@ async function runTool(name, args) {
     return list.map((s) => `- ${s.name} (${s.plugin}): ${s.description}`).join('\n');
   }
   if (name === 'search_skills') {
-    const q = String(args.query || '').toLowerCase();
-    const scored = skills.map((s) => ({ s, n: (s.title + ' ' + s.description + ' ' + s.name).toLowerCase().split(q).length - 1 }))
-      .filter((x) => x.n > 0).sort((a, b) => b.n - a.n).slice(0, args.limit || 10);
-    return scored.length ? scored.map((x) => `- ${x.s.name}: ${x.s.description}`).join('\n') : 'No matching skills.';
+    const hits = searchSkills(skills, args.query, args.limit || 10);
+    return hits.length ? hits.map((s) => `- ${s.name}: ${s.description}`).join('\n') : 'No matching skills.';
   }
   if (name === 'get_skill') {
     const s = skills.find((x) => x.name === args.name);
@@ -99,16 +120,96 @@ async function handle(msg) {
   }
 }
 
+// ── REST API ─────────────────────────────────────────────────────────────────
+// A plain read-only JSON API over the same catalogue the MCP tools serve, so
+// no-code / HTTP tools (n8n's HTTP Request node, Lovable apps, Make, Zapier…)
+// can use the library without speaking MCP. Read-only, no auth, CORS-open.
+const jsonResponse = (data, status = 200) =>
+  new Response(JSON.stringify(data, null, 2), { status, headers: { 'content-type': 'application/json; charset=utf-8', ...CORS } });
+
+const publicSkill = (s) => ({ name: s.name, title: s.title, description: s.description, bundle: s.plugin, tier: s.tier });
+const fullSkill = (s) => ({ name: s.name, title: s.title, description: s.description, bundle: s.plugin, tier: s.tier, inputs: s.inputs, source: s.source, instructions: s.body });
+
+async function handleRest(url) {
+  const seg = url.pathname.replace(/\/+$/, '').split('/').filter(Boolean); // e.g. ['v1','skills','prd-template']
+
+  // GET /v1 — index
+  if (seg.length === 1) {
+    return jsonResponse({
+      service: 'pm-skills REST API',
+      version: 'v1',
+      endpoints: {
+        'GET /v1/skills': 'List skills. Filters: ?bundle=<plugin> ?q=<search> ?limit=N',
+        'GET /v1/skills/{name}': 'One skill with full instructions. Add ?format=md for raw markdown.',
+        'GET /v1/search?q=<query>': 'Search skills by keyword.',
+        'GET /v1/workflows': 'List workflow recipes (skill chains).',
+        'GET /v1/workflows/{id}': 'One workflow recipe with its ordered steps.',
+      },
+      note: 'Read-only, no auth, CORS-open. Same catalogue as the MCP connector (POST /).',
+    });
+  }
+
+  // /v1/skills  and  /v1/skills/{name}
+  if (seg[1] === 'skills') {
+    const skills = await getSkills();
+    if (seg.length === 2) {
+      const q = url.searchParams.get('q');
+      const bundle = url.searchParams.get('bundle');
+      const limit = Number(url.searchParams.get('limit')) || 0;
+      let list = bundle ? skills.filter((s) => s.plugin === bundle) : skills;
+      if (q) list = searchSkills(list, q, limit || 50);
+      else if (limit) list = list.slice(0, limit);
+      return jsonResponse({ count: list.length, skills: list.map(publicSkill) });
+    }
+    const name = decodeURIComponent(seg.slice(2).join('/'));
+    const s = skills.find((x) => x.name === name);
+    if (!s) return jsonResponse({ error: `No skill named "${name}". Try GET /v1/search?q=` }, 404);
+    const fmt = url.searchParams.get('format');
+    if (fmt === 'md' || fmt === 'markdown') {
+      return new Response(`# ${s.title}\n\n${s.body}`, { headers: { 'content-type': 'text/markdown; charset=utf-8', ...CORS } });
+    }
+    return jsonResponse(fullSkill(s));
+  }
+
+  // /v1/search?q=
+  if (seg[1] === 'search') {
+    const q = url.searchParams.get('q') || '';
+    if (!q) return jsonResponse({ error: 'Pass a query: GET /v1/search?q=churn' }, 400);
+    const hits = searchSkills(await getSkills(), q, Number(url.searchParams.get('limit')) || 10);
+    return jsonResponse({ query: q, count: hits.length, skills: hits.map(publicSkill) });
+  }
+
+  // /v1/workflows  and  /v1/workflows/{id}
+  if (seg[1] === 'workflows') {
+    const wfs = await getWorkflows();
+    if (seg.length === 2) {
+      return jsonResponse({
+        count: wfs.length,
+        workflows: wfs.map((w) => ({ id: w.id, name: w.name, command: w.command, summary: w.summary, lifecycle: w.lifecycle, steps: (w.steps || []).map((st) => st.skill) })),
+      });
+    }
+    const w = wfs.find((x) => x.id === seg[2]);
+    if (!w) return jsonResponse({ error: `No workflow "${seg[2]}". See GET /v1/workflows` }, 404);
+    return jsonResponse(w);
+  }
+
+  return jsonResponse({ error: 'Unknown endpoint. See GET /v1' }, 404);
+}
+
 export default {
   async fetch(request) {
     if (request.method === 'OPTIONS') return new Response(null, { headers: CORS });
+    const url = new URL(request.url);
+    if ((request.method === 'GET' || request.method === 'HEAD') && url.pathname.startsWith('/v1')) {
+      return handleRest(url);
+    }
     if (request.method === 'GET' || request.method === 'HEAD') {
       // MCP Streamable HTTP: a client opening the optional SSE stream sends Accept:
       // text/event-stream. This server is stateless (no server-initiated messages), so
       // we signal "no stream" with 405 per spec; humans/health-checks get a JSON blurb.
       const accept = request.headers.get('accept') || '';
       if (accept.includes('text/event-stream')) return new Response('This MCP server has no server-initiated stream; send JSON-RPC via POST.', { status: 405, headers: CORS });
-      return new Response(JSON.stringify({ server: SERVER, transport: 'streamable-http', hint: 'POST MCP JSON-RPC here, or add this URL as an MCP connector.' }), { headers: { 'content-type': 'application/json', ...CORS } });
+      return new Response(JSON.stringify({ server: SERVER, transport: 'streamable-http', hint: 'POST MCP JSON-RPC here, or add this URL as an MCP connector.', rest: 'GET /v1 for a read-only REST API (skills, search, workflows) — for n8n, Lovable, Make, etc.' }), { headers: { 'content-type': 'application/json', ...CORS } });
     }
     if (request.method !== 'POST') return new Response('Method Not Allowed', { status: 405, headers: CORS });
     let body;

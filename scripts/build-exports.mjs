@@ -112,6 +112,30 @@ const PLATFORMS = {
     // Drop into `.roo/rules/` in your project; Roo Code loads them as rules.
     render: ({ body }) => `${body.trim()}\n`,
   },
+  obsidian: {
+    label: 'Obsidian — vault skill note (AI-plugin prompt)',
+    dir: 'exports/obsidian',
+    file: (s) => `${s.name}.md`,
+    groupByBundle: true,
+    // Drop these into your vault. Each note works three ways: as a custom prompt
+    // for the Copilot-for-Obsidian / Text Generator plugins, as a Templater
+    // template, or as a plain reference note. The frontmatter maps to Obsidian
+    // properties; the footer tells the model to apply the skill to your current
+    // note or selection (swap `{{selection}}` for your plugin's variable).
+    render: ({ name, title, description, body }) =>
+      `---\n` +
+      `aliases: [${JSON.stringify(title)}]\n` +
+      `tags: [pm-skills, skill]\n` +
+      `skill: ${name}\n` +
+      `description: ${JSON.stringify(description)}\n` +
+      `---\n\n` +
+      `${body.trim()}\n\n` +
+      `---\n` +
+      `<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater\n` +
+      `     variable for the highlighted text — replace it with your plugin's equivalent\n` +
+      `     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->\n` +
+      `Apply the skill above to the following input:\n\n{{selection}}\n`,
+  },
 };
 
 // ── Helpers (shared shape with web/build-skills.mjs) ────────────────────────
