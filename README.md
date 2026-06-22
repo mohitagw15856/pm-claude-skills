@@ -20,6 +20,7 @@
 [![Commands](https://img.shields.io/badge/slash%20commands-6-blueviolet)](commands/)
 [![Personas](https://img.shields.io/badge/personas-4-blueviolet)](output-styles/)
 [![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Cursor%20%7C%20Codex%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
+[![Integrations](https://img.shields.io/badge/integrates%20with-n8n%20%C2%B7%20Lovable%20%C2%B7%20Obsidian-0E9F6E)](connectors/)
 [![SkillCheck](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skillcheck.yml?branch=main&label=SkillCheck)](.github/workflows/skillcheck.yml)
 [![Security Audit](https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skill-audit.yml?branch=main&label=security%20audit)](.github/workflows/skill-audit.yml)
 [![Version](https://img.shields.io/github/v/release/mohitagw15856/pm-claude-skills?label=version&color=brightgreen)](https://github.com/mohitagw15856/pm-claude-skills/releases)
@@ -34,6 +35,8 @@
 </p>
 
 > **Generic AI gives you filler. These give you the structure a senior pro actually uses** — PRDs, exec updates, launch plans, postmortems — as open-source `SKILL.md` files. Across **21 professions**, not just product management. One source, every AI tool.
+
+> **🆕 Now plugs into your stack** — automate skills in **[n8n](connectors/n8n.md)**, build apps on **[Lovable](connectors/lovable.md)**, and run them in your **[Obsidian](connectors/obsidian.md)** vault, all via a read-only **[REST API](mcp-remote/#rest-api-for-n8n-lovable-make-any-http-tool)** on the hosted Worker.
 
 ### ⭐ If this saves you time, [star the repo](https://github.com/mohitagw15856/pm-claude-skills) — it's the #1 way to help others find it.
 
