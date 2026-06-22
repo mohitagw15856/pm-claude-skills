@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "pm-skills"
-version = "0.1.0"
+version = "0.1.1"
 description = "205 professional Agent Skills (PRDs, launch plans, postmortems, rubrics, contracts…) as importable building blocks for Python AI agents — LangChain, CrewAI, LlamaIndex, or any framework."
 readme = "README.md"
 license = { text = "MIT" }

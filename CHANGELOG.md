@@ -9,11 +9,14 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [28.1.0] — Integrations: n8n, Lovable & Obsidian + a REST API — 2026-06-22
+
 ### Added
 - **REST API on the hosted Worker** (`mcp-remote/`) — a read-only, no-auth, CORS-open JSON API under `/v1` (`/v1/skills`, `/v1/skills/{name}` with `?format=md`, `/v1/search`, `/v1/workflows`) so HTTP / no-code tools can use the library without speaking MCP. Same catalogue as the MCP connector.
 - **n8n integration** ([`connectors/n8n.md`](connectors/n8n.md)) — MCP Client node (zero-build) and HTTP Request node recipes, plus an importable example workflow ([`connectors/n8n-example-workflow.json`](connectors/n8n-example-workflow.json)).
 - **Lovable integration** ([`connectors/lovable.md`](connectors/lovable.md)) — client-side BYO-key and Supabase edge-function patterns, plus a paste-in knowledge snippet that makes Lovable's generator skill-aware.
 - **Obsidian integration** ([`connectors/obsidian.md`](connectors/obsidian.md)) + a new **`obsidian` export target** — all 205 skills regenerate as vault-ready notes ([`exports/obsidian/`](exports/obsidian/)) usable as Copilot-for-Obsidian / Text Generator / Templater prompts. 10 export platforms total.
+- **Worker deploy Action** ([`.github/workflows/deploy-worker.yml`](.github/workflows/deploy-worker.yml)) — auto-deploys `mcp-remote/` to Cloudflare on changes (with a post-deploy `/v1` smoke test), so the REST API stays live without a manual `wrangler deploy`.
 
 ## [23.0.0] — 180 Skills + the Ask Experience — 2026-06-21
 
