@@ -8,6 +8,13 @@ alwaysApply: false
 
 Apply consistent, criteria-based RICE scoring to a list of features or initiatives to produce an objective prioritisation ranking.
 
+## Reads from / Writes to the Brain
+
+If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, ground in it instead of re-asking for what you already know:
+
+- **Read first:** `knowledge/strategy.md` (so the ranking serves the direction), the items as `entities/`, and impact `hypotheses/`. Run `python3 ../professional-brain/scripts/brain_query.py ./brain "<initiative theme>"` and carry each fact's provenance tag through — an impact estimate is usually a `[hunch]`, not `[data]`.
+- **📥 Propose to the Brain:** after producing, propose recording the ranking decision to `decisions/` and the reach/impact estimates as `hypotheses/` tagged by evidence strength. Show them, get a yes, then write with `../professional-brain/scripts/brain_write.py … --commit` (append-only, dry-run by default).
+
 ## Required Inputs
 
 Ask the user for these if not provided:

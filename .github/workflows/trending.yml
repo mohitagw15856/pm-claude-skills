@@ -1,0 +1,43 @@
+name: Refresh trending skills
+
+# Pulls the most-run skills from GoatCounter into web/trending.json so the playground's
+# "🔥 Trending this week" strip reflects real usage. The API token stays in repo secrets
+# (never in the client). No token configured → the script no-ops, so this is harmless.
+#
+# ONE-TIME SETUP:
+#   1. GoatCounter → Settings → "API tokens" → create a token with "Read statistics".
+#   2. Add it as the repo secret GOATCOUNTER_TOKEN (Settings → Secrets and variables → Actions).
+# Then it runs weekly (or dispatch it manually).
+
+on:
+  schedule:
+    - cron: '0 7 * * 1'   # Mondays 07:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  trending:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Build trending.json
+        env:
+          GOATCOUNTER_TOKEN: ${{ secrets.GOATCOUNTER_TOKEN }}
+          GOATCOUNTER_SITE: mohitagw
+        run: node scripts/build-trending.mjs
+      - name: Commit if changed
+        run: |
+          if ! git diff --quiet -- web/trending.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add web/trending.json
+            git commit -m "chore(trending): refresh trending skills from usage"
+            git push
+          else
+            echo "No change to trending.json."
+          fi

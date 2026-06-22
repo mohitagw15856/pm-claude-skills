@@ -144,6 +144,7 @@ async function init() {
   applyShareLink(); // open a skill (and prefill inputs) if the URL points to one
   initOnboarding();
   initHero();
+  loadTrending();
 }
 
 // ---------- Hero (stats count-up + show/hide) ----------
@@ -496,6 +497,24 @@ function showGallery() {
 }
 
 // ---------- Select & build form ----------
+// 🔥 Trending strip — real usage from GoatCounter (web/trending.json, refreshed by a
+// scheduled Action). Stays hidden until there's enough signal, so it's never empty/sad.
+async function loadTrending() {
+  let data;
+  try { data = await (await fetch('trending.json', { cache: 'no-store' })).json(); } catch (_) { return; }
+  const items = ((data && data.skills) || []).map((t) => SKILLS.find((s) => s.name === t.name)).filter(Boolean).slice(0, 6);
+  if (items.length < 3) return; // not enough signal yet
+  const box = el('trending');
+  if (!box) return;
+  box.innerHTML = '<span class="trend-lead">🔥 Trending this week</span>' +
+    items.map((s) => `<button class="trend-chip" data-n="${s.name}" title="${escapeHtml(s.description)}">${escapeHtml(s.title)}</button>`).join('');
+  box.hidden = false;
+  box.querySelectorAll('.trend-chip').forEach((b) => b.addEventListener('click', () => {
+    const t = SKILLS.find((s) => s.name === b.dataset.n);
+    if (t) { if (window.pmTrack) pmTrack('trending/' + t.name); selectSkill(t); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+  }));
+}
+
 function renderRelated(s) {
   const box = el('skillRelated');
   if (!box) return;

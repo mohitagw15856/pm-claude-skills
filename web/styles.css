@@ -273,6 +273,12 @@ input:focus, select:focus, textarea:focus { outline: none; box-shadow: 0 0 0 3px
 .skill-source { font-size: 12.5px; color: var(--muted); margin: 0 0 10px; }
 .skill-source em { color: var(--accent-2); font-style: italic; }
 
+/* 🔥 Trending strip */
+.trending { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 14px; padding: 10px 14px; background: linear-gradient(90deg, rgba(217,119,87,.10), transparent); border: 1px solid var(--border); border-radius: 12px; }
+.trending .trend-lead { font-size: 13px; font-weight: 700; color: var(--accent-2); margin-right: 2px; }
+.trend-chip { font: inherit; font-size: 12.5px; padding: 5px 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--panel); color: var(--text); cursor: pointer; transition: border-color .12s, background .12s; }
+.trend-chip:hover { border-color: var(--accent); background: var(--panel-2); }
+
 /* Workspace / history panel */
 .history-panel { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; margin: 0 0 14px; }
 .history-panel .hist-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }

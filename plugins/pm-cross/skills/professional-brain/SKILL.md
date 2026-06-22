@@ -1,6 +1,6 @@
 ---
 name: professional-brain
-description: "Maintain a durable, local markdown memory ('brain') of your product context, decisions, hypotheses, and stakeholders that other skills read from and write back to. Use when asked to set up a brain, ingest notes/artifacts into memory, recall what's known about a topic, log a decision with provenance, or run a weekly brain review. Produces a structured brain/ folder (knowledge, decisions, hypotheses, stakeholders, entities, source) with provenance-tagged facts, plus ingest/recall/review operations."
+description: "Maintain a durable, local markdown memory ('brain') of your product context, decisions, hypotheses, and stakeholders that other skills read from and write back to. Use when asked to set up a brain, ingest notes/artifacts into memory, recall what's known about a topic, log a decision with provenance, or run a weekly brain review. Produces a structured brain/ folder (knowledge, decisions, hypotheses, stakeholders, entities, source) with provenance-tagged facts, plus ingest/recall/record/review operations with approval-gated, append-only write-back."
 ---
 
 # Professional Brain Skill
@@ -73,6 +73,21 @@ extracted claim with its provenance. Never discard the source.
 the brain, then synthesise an answer that **cites each fact's file and tag**. If memory is thin,
 say so rather than inventing.
 
+**record** — The write-back half of the loop (Phase 1). After a skill produces an artifact (or on
+demand), extract the **durable outcomes** worth remembering — decisions made, new facts learned,
+assumptions surfaced, stakeholder asks — and propose them as a numbered list, each with its
+**target section** and **provenance tag**. This is the action surface, so it is **approval-gated
+and dry-run by default**:
+
+1. **Propose** — show the records you'd write (section · tag · text). Preview with
+   `brain_write.py …` (no `--commit`), which prints exactly what would be appended.
+2. **Approve** — the user confirms, edits, or drops items. Never write without a yes.
+3. **Append** — write the approved records with `--commit`. Append-only: decisions become a new
+   numbered file; everything else appends to its named file. Nothing is overwritten.
+
+Downgrade weak evidence honestly — a conclusion from one call is `[interview]`, a gut call is
+`[hunch]`; don't launder it into `[data]`.
+
 **review** — Weekly sweep. Flag: stale hypotheses (open too long with no new evidence),
 decisions whose `reopen-when` condition now holds, contradictions between files, and facts that
 are only `[hunch]`/`[verbal]` but are being treated as settled. Draft the updates; don't apply
@@ -94,6 +109,17 @@ python3 scripts/brain_query.py ./brain "enterprise SSO" --json
 
 Use its output as the grounded evidence set, then synthesise the answer on top — never answer a
 recall from outside the brain without saying so.
+
+`scripts/brain_write.py` is the write-back counterpart — it **appends** a provenance-tagged record
+(append-only, never overwrites) and is **dry-run by default** so you can preview before committing:
+
+```bash
+# Preview what would be written (changes nothing):
+python3 scripts/brain_write.py ./brain decisions "Prioritise mobile" --tag data --body "68% of churn is mobile" --source "Q3 analytics"
+
+# Write it after approval:
+python3 scripts/brain_write.py ./brain decisions "Prioritise mobile" --tag data --body "…" --source "Q3 analytics" --commit
+```
 
 ## The contract for other skills
 

@@ -7,6 +7,13 @@ description: "Transform detailed product updates into concise executive briefing
 
 Produce a stakeholder update that busy executives will actually read — structured around what they care about: decisions, risks, and numbers.
 
+## Reads from / Writes to the Brain
+
+If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, ground in it instead of re-asking for what you already know:
+
+- **Read first:** recent `decisions/`, `knowledge/` (the headline numbers + their definitions), and `context.md` (voice). Run `python3 ../professional-brain/scripts/brain_query.py ./brain "<period or initiative>"` and carry provenance through — flag a metric that's only `[verbal]`.
+- **📥 Propose to the Brain:** the update mostly *reads* — but propose recording any **new** decision or commitment it surfaces to `decisions/`, provenance-tagged. Show it, get a yes, then write with `../professional-brain/scripts/brain_write.py … --commit` (append-only, dry-run by default).
+
 ## Required Inputs
 
 Ask the user for these if not provided:

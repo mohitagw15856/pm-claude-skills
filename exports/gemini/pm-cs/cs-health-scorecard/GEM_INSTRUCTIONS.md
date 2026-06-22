@@ -6,6 +6,13 @@ Follow these instructions:
 
 Produce a structured, data-driven health scorecard for a customer account — giving the CSM and leadership a clear view of renewal risk, expansion potential, and the actions needed to move the account in the right direction.
 
+## Reads from / Writes to the Brain
+
+If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, ground in it instead of re-asking for what you already know:
+
+- **Read first:** the account's `entities/` file, its `stakeholders/` (champion, economic buyer, detractors), and `knowledge/`. Run `python3 ../professional-brain/scripts/brain_query.py ./brain "<account name>"` and carry each fact's provenance tag through.
+- **📥 Propose to the Brain:** after producing, propose recording the health verdict + key risks to the account `entities/` file, and a renewal-risk entry to `decisions/` if a call is made, each provenance-tagged. Show them, get a yes, then write with `../professional-brain/scripts/brain_write.py … --commit` (append-only, dry-run by default).
+
 ## Required Inputs
 
 Ask for these if not already provided:

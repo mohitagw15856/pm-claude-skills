@@ -1,6 +1,8 @@
 # 🧠 Professional Brain — memory + actions for the skills
 
-> **Status: Phase 0 (proof).** The state layer is in; the action layer is designed, not built.
+> **Status: Phase 1 (write-back).** The state layer reads *and* writes — skills propose
+> provenance-tagged records back to the brain, approval-gated and append-only. The *external*
+> action layer (filing real tickets/PRs) is Phase 2, designed below, not built.
 
 The skills library is great at producing a document. What it can't do yet is **remember** —
 every run starts cold, and the *why* behind past decisions evaporates. The Professional Brain
@@ -15,12 +17,15 @@ recall (brain) → run a skill (method) → produce the artifact → propose act
    → approve → execute → record the decision + provenance back (brain) → weekly review
 ```
 
-## What's shipped (Phase 0)
+## What's shipped (Phases 0–1)
 
 - **[`professional-brain`](skills/professional-brain/SKILL.md)** — the skill defining the brain
-  schema, the provenance-tag convention, and four operations: `init`, `ingest`, `recall`, `review`.
+  schema, the provenance-tag convention, and five operations: `init`, `ingest`, `recall`,
+  **`record`**, `review`.
 - **[`scripts/brain_query.py`](skills/professional-brain/scripts/brain_query.py)** — stdlib-only,
   grep-based recall that returns matches ranked by provenance strength (no vector DB).
+- **[`scripts/brain_write.py`](skills/professional-brain/scripts/brain_write.py)** — the write-back
+  half: append-only, dry-run-by-default, approval-gated record-writing (Phase 1).
 - **[`templates/brain/`](templates/brain/)** — a copyable, filled-in scaffold (Obsidian-vault
   compatible) so the loop is tangible from minute one.
 - **[`/brain`](commands/brain.md)** slash command.
@@ -42,9 +47,9 @@ weakest) — so skills can downgrade confidence on weak evidence instead of trea
 
 | Phase | Scope | Status |
 |---|---|---|
-| **0 — Proof** | brain schema + provenance + recall helper + 2 brain-aware skills | ✅ this PR |
-| **1 — Write-back** | an `actions` block on skills + a dry-run executor (GitHub/Linear) behind an approval gate | planned |
-| **2 — Close the loop** | executed actions auto-record to the brain; `/brain review` sweep; an MCP "brain server" so n8n / Lovable / the playground share one brain | planned |
+| **0 — Proof** | brain schema + provenance + recall helper + 2 brain-aware skills | ✅ shipped |
+| **1 — Write-back** | `record` operation + `brain_write.py` (append-only, dry-run, approval-gated) + the "📥 Propose to the Brain" block, rolled across high-value skills | ✅ shipped |
+| **2 — External actions & close the loop** | a dry-run executor for *external* actions (GitHub/Linear tickets) behind an approval gate; executed actions auto-record to the brain; an MCP "brain server" so n8n / Lovable / the playground share one brain | planned |
 | **3 — Generalise** | profession brains (CS, founder, legal); more action targets (Notion, Slack, calendar); a scenario eval suite | planned |
 
 ## Design principles
@@ -52,5 +57,6 @@ weakest) — so skills can downgrade confidence on weak evidence instead of trea
 - **Local-first, plain markdown.** Grep-able, human-editable, auditable. No embeddings hiding the reasoning.
 - **Provenance over confidence theatre.** A claim's strength is explicit and travels with it.
 - **Append, don't overwrite.** Decisions accrete history; the audit trail in `source/` is never edited.
-- **Actions are the scariest surface.** When Phase 1 lands, write-back is dry-run by default,
-  scope-limited, approval-gated, and logged. Nothing acts silently.
+- **Actions are the scariest surface.** Write-back is dry-run by default, scope-limited,
+  approval-gated, and append-only — nothing is written without a yes. External actions (Phase 2)
+  will hold to the same bar.

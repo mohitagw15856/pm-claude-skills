@@ -2,6 +2,13 @@
 
 Convert a ranked list of product initiatives into a clear, strategic narrative that connects individual items to company goals and communicates a coherent product direction.
 
+## Reads from / Writes to the Brain
+
+If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, ground in it instead of re-asking for what you already know:
+
+- **Read first:** `knowledge/strategy.md` (the direction the narrative must ladder to), priority `decisions/`, and feature `entities/`. Run `python3 ../professional-brain/scripts/brain_query.py ./brain "<roadmap theme>"` and carry each fact's provenance tag through.
+- **📥 Propose to the Brain:** after producing, propose logging the sequencing/priority decisions to `decisions/` and updating the relevant feature `entities/`, each provenance-tagged. Show them, get a yes, then write with `../professional-brain/scripts/brain_write.py … --commit` (append-only, dry-run by default).
+
 ## Working from a brief
 
 You will often get a short brief (a few themes, an audience) without a full initiative list or OKRs. **Always deliver the complete narrative anyway** — do not stop to ask questions and do not leave bracketed placeholders like `[Theme Name]`. Where detail is missing, infer specific, realistic themes, initiatives, and metrics from the brief and the domain, and mark any inferred fact or number as *(assumed — confirm)*. Fill every section with concrete content, not template brackets.

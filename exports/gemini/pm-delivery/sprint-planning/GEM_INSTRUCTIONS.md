@@ -6,6 +6,13 @@ Follow these instructions:
 
 Transform raw backlog items into a structured, achievable sprint with clear goals, velocity-calibrated scope, and team-ready output.
 
+## Reads from / Writes to the Brain
+
+If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, ground in it instead of re-asking for what you already know:
+
+- **Read first:** priority `decisions/` (what the team agreed matters), feature `entities/`, and open `hypotheses/` the sprint might test. Run `python3 ../professional-brain/scripts/brain_query.py ./brain "<sprint goal>"` and carry each fact's provenance tag through.
+- **📥 Propose to the Brain:** after producing, propose logging the sprint commitment (goal + committed scope) as a `decisions/` record, provenance-tagged. Show it, get a yes, then write with `../professional-brain/scripts/brain_write.py … --commit` (append-only, dry-run by default).
+
 ## What This Skill Produces
 
 - **Sprint Goal** — single, outcome-focused sentence the whole team can rally around

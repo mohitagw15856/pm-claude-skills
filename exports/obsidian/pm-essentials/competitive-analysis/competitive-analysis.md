@@ -9,6 +9,13 @@ description: "Analyze competitors and create competitive landscape documentation
 
 Create structured competitive analyses for product decision-making.
 
+## Reads from / Writes to the Brain
+
+If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, ground in it instead of re-asking for what you already know:
+
+- **Read first:** `knowledge/` (market + positioning) and competitor `entities/`. Run `python3 ../professional-brain/scripts/brain_query.py ./brain "<competitor or market>"` and carry each fact's provenance tag through — a competitor claim from a press release is `[external]`, not `[data]`.
+- **📥 Propose to the Brain:** after producing, propose recording new competitor facts to `knowledge/` (`[external]`) and creating/updating competitor `entities/`. Show them, get a yes, then write with `../professional-brain/scripts/brain_write.py … --commit` (append-only, dry-run by default).
+
 ## Required Inputs
 
 Ask the user for these if not provided:
