@@ -1,8 +1,10 @@
 # 🧠 Professional Brain — memory + actions for the skills
 
-> **Status: Phase 1 (write-back).** The state layer reads *and* writes — skills propose
-> provenance-tagged records back to the brain, approval-gated and append-only. The *external*
-> action layer (filing real tickets/PRs) is Phase 2, designed below, not built.
+> **Status: Phase 2 (actions).** The full loop is in: skills read the brain, write
+> provenance-tagged records back (Phase 1), and now **execute** their recommendations —
+> opening tickets, posting updates — via the [`action-runner`](skills/action-runner/SKILL.md)
+> skill: dry-run preview, per-action risk gate, approval-gated, then recorded back to the brain.
+> A shared MCP "brain server" (one brain across n8n / Lovable / the playground) is the next step.
 
 The skills library is great at producing a document. What it can't do yet is **remember** —
 every run starts cold, and the *why* behind past decisions evaporates. The Professional Brain
@@ -26,6 +28,9 @@ recall (brain) → run a skill (method) → produce the artifact → propose act
   grep-based recall that returns matches ranked by provenance strength (no vector DB).
 - **[`scripts/brain_write.py`](skills/professional-brain/scripts/brain_write.py)** — the write-back
   half: append-only, dry-run-by-default, approval-gated record-writing (Phase 1).
+- **[`action-runner`](skills/action-runner/SKILL.md)** + **[`action_preview.py`](skills/action-runner/scripts/action_preview.py)** —
+  the action layer (Phase 2): turn a skill's recommendations into executed actions (tickets,
+  messages) with a dry-run preview, per-action risk gate, approval, and auto-record back to the brain.
 - **[`templates/brain/`](templates/brain/)** — a copyable, filled-in scaffold (Obsidian-vault
   compatible) so the loop is tangible from minute one.
 - **[`/brain`](commands/brain.md)** slash command.
@@ -49,8 +54,8 @@ weakest) — so skills can downgrade confidence on weak evidence instead of trea
 |---|---|---|
 | **0 — Proof** | brain schema + provenance + recall helper + 2 brain-aware skills | ✅ shipped |
 | **1 — Write-back** | `record` operation + `brain_write.py` (append-only, dry-run, approval-gated) + the "📥 Propose to the Brain" block, rolled across high-value skills | ✅ shipped |
-| **2 — External actions & close the loop** | a dry-run executor for *external* actions (GitHub/Linear tickets) behind an approval gate; executed actions auto-record to the brain; an MCP "brain server" so n8n / Lovable / the playground share one brain | planned |
-| **3 — Generalise** | profession brains (CS, founder, legal); more action targets (Notion, Slack, calendar); a scenario eval suite | planned |
+| **2 — External actions** | the [`action-runner`](skills/action-runner/SKILL.md) skill: a dry-run executor for *external* actions (open tickets, post updates) with `action_preview.py` risk-gating, approval per high-risk action, then auto-record back to the brain. Wired into product-launch-checklist, sprint-planning, incident-postmortem. | ✅ shipped |
+| **3 — Shared brain & generalise** | an MCP "brain server" so n8n / Lovable / the playground share one brain; profession brains (CS, founder, legal); more action targets (Notion, Slack, calendar); a `/brain review` sweep and scenario eval suite | planned |
 
 ## Design principles
 

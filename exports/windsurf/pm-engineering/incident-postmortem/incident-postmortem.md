@@ -7,6 +7,10 @@ description: "Write a structured incident postmortem or post-incident review. Us
 
 This skill produces a complete, blameless incident postmortem document following industry-standard format. Output enforces blameless framing throughout — system gaps over individual failures — and drives toward specific, closeable action items rather than vague process commitments.
 
+## Proposes Actions
+
+The action items don't have to stay on the page: hand them to [`action-runner`](../action-runner/SKILL.md), which previews them (dry-run, risk-rated), runs only what you approve via the connected action MCP, and records what was done back to the brain. Typical: **file a follow-up issue per action item** (🟡), assigned to its owner with a due date. This skill proposes; action-runner gates and runs — never silently.
+
 ## Required Inputs
 
 Ask the user for these if not provided:

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-206 skills exported. Copy a `.mdc rule` into the tool to use it.
+207 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -12,6 +12,7 @@
 | A/B Test Readout | `pm-data` | `pm-data/ab-test-readout/ab-test-readout.mdc` |
 | Accessibility Audit | `pm-design` | `pm-design/accessibility-audit/accessibility-audit.mdc` |
 | Account Plan | `pm-sales` | `pm-sales/account-plan/account-plan.mdc` |
+| Action Runner | `pm-cross` | `pm-cross/action-runner/action-runner.mdc` |
 | AEO Optimizer | `pm-writers` | `pm-writers/aeo-optimizer/aeo-optimizer.mdc` |
 | AI Ethics Review | `pm-advanced` | `pm-advanced/ai-ethics-review/ai-ethics-review.mdc` |
 | AI Product Canvas | `pm-advanced` | `pm-advanced/ai-product-canvas/ai-product-canvas.mdc` |

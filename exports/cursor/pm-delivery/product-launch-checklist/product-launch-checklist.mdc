@@ -8,6 +8,10 @@ alwaysApply: false
 
 Never launch without checking everything. Generate a complete, role-assigned checklist covering pre-launch readiness, launch day execution, and post-launch monitoring.
 
+## Proposes Actions
+
+Once the checklist is approved, it can be *executed*: hand the items to [`action-runner`](../action-runner/SKILL.md), which previews them (dry-run, risk-rated), runs only what you approve via the connected action MCP (GitHub/Linear/Slack), and records what was done back to the brain. Typical: **open an issue per checklist item** in the named repo/project (🟡), and **post the launch summary to Slack** (🔴 — approved individually). This skill proposes; action-runner gates and runs — never silently.
+
 ## Required Inputs
 
 Ask the user for these if not provided:

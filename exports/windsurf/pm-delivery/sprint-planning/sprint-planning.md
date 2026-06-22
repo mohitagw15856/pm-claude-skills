@@ -14,6 +14,10 @@ If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, g
 - **Read first:** priority `decisions/` (what the team agreed matters), feature `entities/`, and open `hypotheses/` the sprint might test. Run `python3 ../professional-brain/scripts/brain_query.py ./brain "<sprint goal>"` and carry each fact's provenance tag through.
 - **📥 Propose to the Brain:** after producing, propose logging the sprint commitment (goal + committed scope) as a `decisions/` record, provenance-tagged. Show it, get a yes, then write with `../professional-brain/scripts/brain_write.py … --commit` (append-only, dry-run by default).
 
+## Proposes Actions
+
+Once the sprint is agreed, hand it to [`action-runner`](../action-runner/SKILL.md): it previews (dry-run, risk-rated), runs only what you approve via the connected action MCP, and records what was done back to the brain. Typical: **create a ticket per committed backlog item** and **set the sprint milestone** (🟡). This skill proposes; action-runner gates and runs — never silently.
+
 ## What This Skill Produces
 
 - **Sprint Goal** — single, outcome-focused sentence the whole team can rally around

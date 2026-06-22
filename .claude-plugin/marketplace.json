@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "28.2.0",
-  "description": "PM stands for Professional, not just Product Management. 206 Claude Skills + 4 agent templates across 28 bundles covering 21 professions — engineering, customer success, legal, finance, HR, sales, design, Figma, marketing, social media, writers, founders/startups, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
+  "version": "28.3.0",
+  "description": "PM stands for Professional, not just Product Management. 207 Claude Skills + 4 agent templates across 28 bundles covering 21 professions — engineering, customer success, legal, finance, HR, sales, design, Figma, marketing, social media, writers, founders/startups, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
@@ -202,8 +202,8 @@
     },
     {
       "name": "pm-cross",
-      "description": "Cross-profession skills: Press Release, Grant Proposal, Executive Summary, Teaching Lesson Plan, Sycophancy Challenger, Last 30 Days Research, NotebookLM Connector. Get genuine push-back on your ideas (not validation), gather multi-platform research from the last 30 days, and automate NotebookLM from Claude.",
-      "version": "1.2.0",
+      "description": "Cross-profession skills: Press Release, Grant Proposal, Executive Summary, Teaching Lesson Plan, Sycophancy Challenger, Last 30 Days Research, NotebookLM Connector, Professional Brain, Action Runner. Get genuine push-back on your ideas, gather multi-platform research, automate NotebookLM — plus the Professional Brain: a durable local memory skills read & write back (provenance-tagged), and Action Runner to execute a skill's recommendations (open tickets, post updates) safely behind a dry-run approval gate.",
+      "version": "1.3.0",
       "category": "productivity",
       "source": "./plugins/pm-cross",
       "homepage": "https://github.com/mohitagw15856/pm-claude-skills"

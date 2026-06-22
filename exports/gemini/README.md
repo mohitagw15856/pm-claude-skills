@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-206 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+207 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -12,6 +12,7 @@
 | A/B Test Readout | `pm-data` | `pm-data/ab-test-readout/GEM_INSTRUCTIONS.md` |
 | Accessibility Audit | `pm-design` | `pm-design/accessibility-audit/GEM_INSTRUCTIONS.md` |
 | Account Plan | `pm-sales` | `pm-sales/account-plan/GEM_INSTRUCTIONS.md` |
+| Action Runner | `pm-cross` | `pm-cross/action-runner/GEM_INSTRUCTIONS.md` |
 | AEO Optimizer | `pm-writers` | `pm-writers/aeo-optimizer/GEM_INSTRUCTIONS.md` |
 | AI Ethics Review | `pm-advanced` | `pm-advanced/ai-ethics-review/GEM_INSTRUCTIONS.md` |
 | AI Product Canvas | `pm-advanced` | `pm-advanced/ai-product-canvas/GEM_INSTRUCTIONS.md` |

@@ -54,6 +54,7 @@
   ],
   "experimental": [
     "professional-brain",
+    "action-runner",
     "instagram-post-downloader",
     "substack-notes-scraper",
     "thumbnail-creator",
