@@ -250,6 +250,7 @@ claude plugin install pm-cs@pm-claude-skills
 | 161 | **Sycophancy Challenger** 🆕 | `skills/sycophancy-challenger/` | Argues the strongest case *against* your idea first — a genuine thinking partner that holds its position under pressure |
 | 162 | **Last 30 Days Research** 🆕 | `skills/last-30-days-research/` | Searches Reddit, X, and the web for the last 30 days on any topic and returns consensus, disagreements, pain points, and signal confidence |
 | 163 | **NotebookLM Connector** 🆕 | `skills/notebooklm-connector/` | Automates NotebookLM via Chrome extension — create notebooks, add sources, generate mindmaps and audio overviews from Claude Code |
+| 206 | **Professional Brain** 🆕 | `skills/professional-brain/` | A durable, local markdown memory (knowledge, decisions, hypotheses, stakeholders) that skills read before answering and write to after — provenance-tagged, with deterministic recall |
 
 ---
 

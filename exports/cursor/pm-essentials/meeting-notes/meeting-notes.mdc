@@ -16,6 +16,17 @@ Ask the user for these if not provided:
 - **Raw notes or transcript** (paste discussion notes, a transcript, or describe what was discussed)
 - **Meeting type** (1:1 / sprint planning / product review / stakeholder sync / other) — determines which template to use
 
+## Reads from / Writes to the Brain
+
+If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, this is where notes become durable memory:
+
+- **Read first:** the relevant `stakeholders/` files (so you arrive knowing each attendee's
+  open asks and concerns) and any `decisions/` the meeting revisits.
+- **Write after:** append each **decision** (with its rationale and a `reopen-when`) to
+  `decisions/`, add new **asks/concerns** to the right `stakeholders/` file, and flag any new
+  **assumption** into `hypotheses/`. Tag every captured fact with its provenance — most meeting
+  statements are `[verbal]` until independently confirmed. Save the raw notes to `source/`.
+
 ## Standard Meeting Notes Template
 
 ### Meeting Header

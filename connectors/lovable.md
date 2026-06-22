@@ -73,7 +73,7 @@ just works.
 
 ```text
 KNOWLEDGE: PM Skills integration
-PM Skills is a free, read-only, CORS-open catalogue of 205 professional "skill"
+PM Skills is a free, read-only, CORS-open catalogue of 206 professional "skill"
 prompts (PRDs, exec updates, launch plans, etc.). Use it whenever the app needs to
 produce a structured professional document.
 

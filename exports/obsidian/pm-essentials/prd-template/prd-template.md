@@ -19,6 +19,18 @@ Ask the user for these if not provided:
 - **Scope** (MVP vs full vision — what's in and out of scope)
 - **Key stakeholders** (who needs to review and approve)
 
+## Reads from / Writes to the Brain
+
+If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, use it instead of asking for context you already have:
+
+- **Read first:** `context.md` (product, metrics definitions, voice), `knowledge/strategy.md`
+  (where the product is going), any related `hypotheses/` and the matching `entities/` feature
+  file. Run `python3 ../professional-brain/scripts/brain_query.py ./brain "<feature>"` to pull
+  grounded facts, and carry their provenance tags into the PRD (don't present a `[hunch]` as a
+  settled requirement).
+- **Write after:** save the feature as/into `entities/<feature>.md`, log any scoping decision to
+  `decisions/`, and add new assumptions to `hypotheses/`. Tag each with its provenance.
+
 ## Template Structure
 
 Every PRD should include these sections in order:

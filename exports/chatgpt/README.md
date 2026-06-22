@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-205 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+206 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -149,6 +149,7 @@
 | Product Health Analysis | `pm-analytics` | `pm-analytics/product-health-analysis/SYSTEM_PROMPT.md` |
 | Product Launch Checklist | `pm-delivery` | `pm-delivery/product-launch-checklist/SYSTEM_PROMPT.md` |
 | Product Positioning Doc | `pm-gtm` | `pm-gtm/product-positioning-doc/SYSTEM_PROMPT.md` |
+| Professional Brain | `pm-cross` | `pm-cross/professional-brain/SYSTEM_PROMPT.md` |
 | Project Status Report | `pm-operations` | `pm-operations/project-status-report/SYSTEM_PROMPT.md` |
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/SYSTEM_PROMPT.md` |
 | QBR Deck | `pm-cs` | `pm-cs/qbr-deck/SYSTEM_PROMPT.md` |

@@ -12,7 +12,7 @@ There are three ways in, from zero-build to native. Pick by how much you want to
 ## Tier 0 — MCP Client node (works today, no build)
 
 n8n's **AI Agent** node can use any external MCP server as a tool via the **MCP Client Tool**
-node. Point it at the hosted PM Skills connector and all 205 skills + 6 workflow recipes
+node. Point it at the hosted PM Skills connector and all 206 skills + 6 workflow recipes
 become tools the agent can call on demand.
 
 1. Add an **AI Agent** node (with your Anthropic/OpenAI credential).

@@ -1,6 +1,6 @@
 # pm-skills (Python)
 
-**205 professional Agent Skills** — PRDs, launch plans, postmortems, rubrics, contracts, pitch
+**206 professional Agent Skills** — PRDs, launch plans, postmortems, rubrics, contracts, pitch
 decks and more, across 21 professions — as importable building blocks for Python AI agents.
 The skills are bundled with the package, so there's **no network call and no API key** to read them.
 
