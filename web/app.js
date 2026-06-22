@@ -30,6 +30,16 @@ let SKILLS = [];
 let current = null;
 let controller = null;
 let lastRunUsedBrain = false;
+const SAMPLES = {}; // skill name → { input, output, source } pre-generated example
+
+// Provider-aware label for the Run button (the default provider is now the free path).
+function runLabel() {
+  const p = window.PMProviders && PMProviders.current();
+  if (!p) return 'Run skill';
+  if (p.local) return 'Run free in my browser';
+  if (p.free) return `Run free with ${p.name}`;
+  return `Run with my ${p.name} key`;
+}
 
 const TIER_META = {
   production: { label: 'Production-Ready', cls: 'tier-production', dot: '🟢' },
@@ -122,8 +132,17 @@ async function init() {
     el('inputForm').hidden = on;
     el('compareToggle').closest('.compare-toggle').style.display = on ? 'none' : '';
     el('modelsToggle').closest('.compare-toggle').style.display = on ? 'none' : '';
-    el('runBtn').textContent = on ? 'Grade my draft' : 'Run with my Claude key';
+    el('runBtn').textContent = on ? 'Grade my draft' : runLabel();
   });
+  // Keep the Run button label in sync with the chosen provider (free / in-browser / key).
+  const provSel = el('provider');
+  if (provSel) provSel.addEventListener('change', () => { if (!el('critiqueToggle').checked) el('runBtn').textContent = runLabel(); });
+
+  // Pre-generated sample outputs (zero-setup "see the value") — best-effort, optional.
+  try {
+    const sd = await (await fetch('samples.json')).json();
+    (sd.samples || []).forEach((x) => { SAMPLES[x.skill] = x; });
+  } catch (_) {}
 
   try {
     const res = await fetch('skills.json');
@@ -522,6 +541,22 @@ function renderGallery(featuredNames, roleLabel) {
   gallery.appendChild(frag);
 }
 
+// Render a pre-generated sample into the output area — no key, no API call.
+function showSample(s) {
+  const x = SAMPLES[s.name];
+  if (!x) return;
+  el('outputWrap').hidden = false;
+  el('compareGrid').hidden = true;
+  el('compareGrid').innerHTML = '';
+  const out = el('output');
+  out.hidden = false;
+  out.dataset.raw = x.output; // copy / download / Save-to-Brain operate on the real text
+  const banner = `<div class="sample-banner">📄 <strong>Sample output</strong> — pre-generated for the example input below. Fill the form and hit <strong>${escapeHtml(runLabel())}</strong> to make your own.<br /><span class="sample-input">Example input: ${escapeHtml((x.input || '').slice(0, 220))}${(x.input || '').length > 220 ? '…' : ''}</span></div>`;
+  out.innerHTML = banner + DOMPurify.sanitize(marked.parse(x.output));
+  setStatus(`📄 Showing a pre-generated sample${x.source ? ' (' + x.source + ')' : ''} — no key used.`);
+  el('outputWrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 function showGallery() {
   current = null;
   el('runner').hidden = true;
@@ -613,7 +648,14 @@ function selectSkill(s) {
   el('inputForm').hidden = false;
   el('compareToggle').closest('.compare-toggle').style.display = '';
   el('modelsToggle').checked = false;
-  el('runBtn').textContent = 'Run with my Claude key';
+  el('runBtn').textContent = runLabel();
+  // Surface a pre-generated sample for this skill (zero setup, no key) if we have one.
+  const sampleBtn = el('sampleBtn');
+  if (sampleBtn) {
+    const has = !!SAMPLES[s.name];
+    sampleBtn.hidden = !has;
+    sampleBtn.onclick = has ? () => showSample(s) : null;
+  }
   el('outputWrap').hidden = true;
   el('output').innerHTML = '';
   el('output').hidden = false;
@@ -648,7 +690,11 @@ function makeField(inp, i) {
 
 // Stream one completion from the API into a target node. Returns the full text.
 async function streamCompletion({ key, model, system, userMessage, node, signal }) {
-  const acc = await PMProviders.stream({ key, model, system, userMessage, signal, onDelta: (a) => renderMarkdown(node, a, true) });
+  const acc = await PMProviders.stream({
+    key, model, system, userMessage, signal,
+    onDelta: (a) => renderMarkdown(node, a, true),
+    onProgress: (r) => setStatus(`⬇ Loading the in-browser model (one-time download)… ${Math.round((r.progress || 0) * 100)}%`),
+  });
   renderMarkdown(node, acc, false);
   return acc;
 }
@@ -659,7 +705,8 @@ const SKILL_SUFFIX =
 // ---------- Run ----------
 async function run() {
   const key = el('apiKey').value.trim();
-  if (!key) { flagMissingKey(); return setStatus(`👆 Paste your ${P().name} API key (top-right) to run.`, true); }
+  const localModel = !!P().local; // in-browser model needs no key
+  if (!key && !localModel) { flagMissingKey(); return setStatus(`👆 Paste your ${P().name} API key (top-right) to run — or pick "In-browser (no key)".`, true); }
   if (!current) return;
   if (window.pmTrack) pmTrack('run/' + current.name);
 

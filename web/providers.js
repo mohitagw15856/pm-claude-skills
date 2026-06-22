@@ -39,8 +39,8 @@
       errOf: function (e) { return e.error ? (e.error.message || 'OpenAI error') : ''; },
     },
     gemini: {
-      name: 'Gemini', keyStore: 'gemini_api_key',
-      placeholder: 'AIza… (your Google AI Studio key)', keyUrl: 'https://aistudio.google.com/apikey',
+      name: 'Gemini', keyStore: 'gemini_api_key', free: true,
+      placeholder: 'AIza… (free Google AI Studio key — no credit card)', keyUrl: 'https://aistudio.google.com/apikey',
       models: [['gemini-2.0-flash', 'Gemini 2.0 Flash'], ['gemini-1.5-pro', 'Gemini 1.5 Pro'], ['gemini-1.5-flash', 'Gemini 1.5 Flash']],
       buildReq: function (o) {
         return {
@@ -71,7 +71,48 @@
     errOf: function (e) { return e.error ? (e.error.message || 'Ollama error') : ''; },
   };
 
-  function providerId() { var p = localStorage.getItem(PROVIDER_STORE); return PROVIDERS[p] ? p : 'anthropic'; }
+  // In-browser model — zero key, zero cost, fully private. Runs via WebLLM on WebGPU.
+  // The model weights download once (cached by the browser); generation never leaves the device.
+  PROVIDERS.webllm = {
+    name: 'In-browser', keyStore: 'pm_webllm_noop', local: true,
+    placeholder: '(no key needed — the model runs in your browser)', keyUrl: 'https://github.com/mlc-ai/web-llm',
+    models: [
+      ['Qwen2.5-1.5B-Instruct-q4f16_1-MLC', 'Qwen2.5 1.5B · fastest (~1GB)'],
+      ['Llama-3.2-3B-Instruct-q4f16_1-MLC', 'Llama 3.2 3B (~2GB)'],
+      ['Phi-3.5-mini-instruct-q4f16_1-MLC', 'Phi-3.5 mini (~2.5GB)'],
+    ],
+    // buildReq/delta/errOf are unused — stream() routes local providers to streamLocal().
+  };
+
+  // Lazy WebLLM engine (loaded only when someone actually picks the in-browser provider).
+  var _engine = null, _engineModel = null;
+  async function getEngine(model, onProgress) {
+    if (!('gpu' in navigator)) throw new Error('Your browser has no WebGPU. Use Chrome or Edge 113+ (desktop), or switch to the free Gemini key.');
+    if (_engine && _engineModel === model) return _engine;
+    var webllm = await import('https://esm.run/@mlc-ai/web-llm');
+    if (_engine) { try { await _engine.unload(); } catch (_) {} }
+    _engine = await webllm.CreateMLCEngine(model, { initProgressCallback: onProgress });
+    _engineModel = model;
+    return _engine;
+  }
+  async function streamLocal(opts) {
+    var engine = await getEngine(opts.model, function (r) { if (opts.onProgress) opts.onProgress(r); });
+    var messages = [];
+    if (opts.system) messages.push({ role: 'system', content: opts.system });
+    messages.push({ role: 'user', content: opts.userMessage });
+    var chunks = await engine.chat.completions.create({ messages: messages, stream: true, max_tokens: 4096 });
+    var acc = '';
+    for await (var chunk of chunks) {
+      if (opts.signal && opts.signal.aborted) { try { await engine.interruptGenerate(); } catch (_) {} break; }
+      var t = (chunk.choices && chunk.choices[0] && chunk.choices[0].delta && chunk.choices[0].delta.content) || '';
+      if (t) { acc += t; if (opts.onDelta) opts.onDelta(acc); }
+    }
+    return acc;
+  }
+
+  // New visitors default to the free, no-credit-card path (Gemini). Anyone who has already
+  // chosen a provider keeps their choice.
+  function providerId() { var p = localStorage.getItem(PROVIDER_STORE); return PROVIDERS[p] ? p : 'gemini'; }
   function current() { return PROVIDERS[providerId()]; }
   function modelStoreKey(p) { return 'pm_model_' + p; }
 
@@ -94,9 +135,20 @@
       if (saved && cfg.models.some(function (m) { return m[0] === saved; })) msel.value = saved;
     }
     var kf = d.getElementById('apiKey');
-    if (kf) { kf.value = localStorage.getItem(cfg.keyStore) || cfg.default || ''; kf.placeholder = cfg.placeholder; }
+    if (kf) {
+      kf.value = cfg.local ? '' : (localStorage.getItem(cfg.keyStore) || cfg.default || '');
+      kf.placeholder = cfg.placeholder;
+      kf.disabled = !!cfg.local; // in-browser model needs no key
+      var fieldWrap = kf.closest('.key-field');
+      if (fieldWrap) fieldWrap.style.opacity = cfg.local ? '.5' : '';
+    }
     var gk = d.getElementById('getKeyLink');
-    if (gk) { gk.href = cfg.keyUrl; gk.textContent = 'Get your ' + cfg.name + ' key →'; }
+    if (gk) {
+      gk.href = cfg.keyUrl;
+      gk.textContent = cfg.local ? 'Runs in your browser — no key, no cost →'
+        : cfg.free ? 'Get a FREE ' + cfg.name + ' key (no credit card) →'
+        : 'Get your ' + cfg.name + ' key →';
+    }
   }
 
   // Wire #provider + #apiKey + #model listeners + initial fill. Call once on load.
@@ -116,7 +168,9 @@
   // Provider-aware SSE streaming. opts: {key, model, system, userMessage, signal, onDelta(acc)}.
   // Returns the full accumulated text.
   async function stream(opts) {
-    var prov = current(), req = prov.buildReq(opts);
+    var prov = current();
+    if (prov.local) return streamLocal(opts);
+    var req = prov.buildReq(opts);
     var res = await fetch(req.url, { method: 'POST', headers: req.headers, body: JSON.stringify(req.body), signal: opts.signal });
     if (!res.ok) throw new Error(parseApiError(await res.text(), res.status));
     var reader = res.body.getReader(), dec = new TextDecoder(), buf = '', acc = '';

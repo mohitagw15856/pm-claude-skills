@@ -357,6 +357,12 @@ input:focus, select:focus, textarea:focus { outline: none; box-shadow: 0 0 0 3px
 
 /* ---------- Share button ---------- */
 .share-btn { margin-top: 10px; }
+.sample-btn { margin-top: 10px; margin-right: 8px; border-color: var(--accent); color: var(--accent-2); }
+.sample-banner {
+  background: var(--panel-2); border: 1px solid var(--border); border-left: 3px solid var(--accent);
+  border-radius: 8px; padding: 10px 13px; margin-bottom: 14px; font-size: 13px; color: var(--muted);
+}
+.sample-banner .sample-input { display: inline-block; margin-top: 5px; font-size: 12px; opacity: .85; }
 
 /* ---------- Sample-output gallery ---------- */
 .sample-card {

@@ -21,19 +21,19 @@
       </div>
     </div>
     <div class="key-area">
-      <select id="provider" title="Model provider — run with your own key from any of these">
+      <select id="provider" title="Model provider — start free with no credit card">
+        <option value="gemini">Gemini (free key)</option>
+        <option value="webllm">In-browser (no key)</option>
         <option value="anthropic">Claude</option>
         <option value="openai">OpenAI</option>
-        <option value="gemini">Gemini</option><option value="ollama">Ollama (local)</option>
+        <option value="ollama">Ollama (local)</option>
       </select>
       <div class="key-field">
-        <input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" spellcheck="false" />
+        <input id="apiKey" type="password" placeholder="AIza… (free Google AI Studio key — no credit card)" autocomplete="off" spellcheck="false" />
         <button id="keyToggle" type="button" class="show-toggle">Show</button>
       </div>
       <select id="model" title="Model">
-        <option value="claude-opus-4-8">Opus 4.8</option>
-        <option value="claude-sonnet-4-6" selected>Sonnet 4.6</option>
-        <option value="claude-haiku-4-5-20251001">Haiku 4.5</option>
+        <option value="gemini-2.0-flash">Gemini 2.0 Flash</option>
       </select>
       <button id="cmdkBtn" class="kbtn" type="button" title="Quick search (⌘K)">⌘K</button>
     </div>
@@ -42,8 +42,8 @@
   <nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
 
   <div class="key-note">
-    <strong>👆 To run a skill, pick a provider and paste your API key in the top-right.</strong> Works with <strong>Claude, OpenAI, or Gemini</strong> — your key stays only in this browser and is sent directly to that provider — never to us.
-    <a id="getKeyLink" href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener">Get a Claude key →</a> · Or just <strong>copy any skill</strong> for ChatGPT/Gemini — no key needed.
+    <strong>👆 No credit card needed to start.</strong> Grab a <strong>free Google AI Studio key</strong> (30 seconds, no card) and paste it top-right — or pick <strong>In-browser</strong> to run a model with <strong>no key at all</strong>. Prefer Claude/OpenAI? Switch the provider dropdown. Your key stays only in this browser, sent straight to the provider — never to us.
+    <a id="getKeyLink" href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Get a FREE Gemini key (no credit card) →</a> · Or just <strong>copy any skill</strong> for ChatGPT/Claude — no key needed.
     <br /><span style="opacity:.7;font-size:12px">🔒 Privacy: we use cookieless, anonymous usage counts (page views + which skills run) — never your key, inputs, or outputs.</span>
   </div>
 
@@ -119,6 +119,7 @@
         <p id="skillDesc" class="skill-desc"></p>
         <p id="skillSource" class="skill-source" hidden></p>
         <div id="skillRelated" class="skill-related" hidden></div>
+        <button id="sampleBtn" class="ghost sample-btn" type="button" hidden title="See a real, pre-generated example — no key needed">📄 See a sample output — no key needed</button>
         <button id="shareBtn" class="ghost share-btn" type="button" title="Copy a link that opens this skill with these inputs">🔗 Share</button>
         <span id="shareMsg" class="copy-msg"></span>
       </div>
