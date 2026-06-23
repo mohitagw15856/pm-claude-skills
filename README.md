@@ -90,6 +90,10 @@ The whole library on one page — install, all 207 skills by profession, the Pro
 
 **[📥 Markdown](CHEATSHEET.md)** · **[🖼️ PNG](web/docs-assets/cheatsheet.png)** · **[📄 PDF](web/docs-assets/cheatsheet.pdf)** — regenerate the image/PDF with `node web/docs-assets/shoot.mjs` (`PAGES=cheatsheet`).
 
+> 📖 **Want the full walkthrough?** The **[Practical Guide](web/guide.html)** is a 15-page,
+> example-driven manual — install → your first skill → worked examples (PRD, exec update, RICE,
+> postmortem) → chaining recipes → the Brain → running anywhere → tips. **[Download the PDF →](web/docs-assets/PM-Skills-Guide.pdf)**
+
 ---
 
 ## 🧠 The Professional Brain — local-first memory for any AI agent

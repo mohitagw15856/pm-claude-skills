@@ -44,9 +44,12 @@
       ['leaderboard.html', '📊 Leaderboard'],
       ['benchmark.html', '🏆 Benchmark'],
       ['learn.html', '🎓 Learn'],
+      ['guide.html', '📖 Guide'],
       ['community.html', '💬 Community'],
     ] },
     { href: 'pro.html', label: '⭐ Pro' },
+    // Always-visible way back to the source — opens the GitHub repo in a new tab.
+    { href: 'https://github.com/mohitagw15856/pm-claude-skills', label: '★ GitHub', external: true, cta: true },
   ];
   var nav = document.getElementById('toolbar');
   if (!nav) return;
@@ -54,6 +57,7 @@
   if (file === '' || file === '/') file = 'index.html';
   var link = function (href, lbl) { return '<a class="tool' + (href === file ? ' active' : '') + '" href="' + href + '">' + lbl + '</a>'; };
   nav.innerHTML = NAV.map(function (it) {
+    if (it.external) return '<a class="tool' + (it.cta ? ' cta' : '') + '" href="' + it.href + '" target="_blank" rel="noopener">' + it.label + '</a>';
     if (it.href) return link(it.href, it.label);
     var here = it.items.some(function (t) { return t[0] === file; });
     return '<span class="tool-group">'
@@ -83,6 +87,19 @@
   });
   document.addEventListener('click', function () { closeAll(null); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAll(null); });
+
+  // Make the Product Notes brand/logo a way home (every page) — clicking it returns
+  // to the Playground, the conventional "logo = home" affordance that was missing.
+  var brand = document.querySelector('.brand');
+  if (brand && file !== 'index.html') {
+    brand.style.cursor = 'pointer';
+    brand.setAttribute('role', 'link');
+    brand.setAttribute('tabindex', '0');
+    brand.title = 'Back to the Playground';
+    var goHome = function () { location.href = 'index.html'; };
+    brand.addEventListener('click', function (e) { if (!e.target.closest('a,button,select,input')) goHome(); });
+    brand.addEventListener('keydown', function (e) { if (e.key === 'Enter') goHome(); });
+  }
 
   // Theme toggle — rendered on every page so it works site-wide.
   var t = document.createElement('button');

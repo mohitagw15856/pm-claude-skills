@@ -8,6 +8,8 @@ Images used in the main README and in articles.
 - `brain.png` — the **in-browser Brain** (`brain.html`), the six provenance-tagged sections.
 - `cheatsheet.png` / `cheatsheet.pdf` — the one-page cheatsheet poster, rendered from
   [`../cheatsheet.html`](../cheatsheet.html) (content mirrors [`../../CHEATSHEET.md`](../../CHEATSHEET.md)).
+- `PM-Skills-Guide.pdf` — the 15-page Practical Guide, rendered from [`../guide.html`](../guide.html)
+  (multi-page A4). Regenerate with `PAGES=guide node web/docs-assets/shoot.mjs`.
 
 ## Screenshots of the Galaxy / Brain / Cheatsheet (automated)
 

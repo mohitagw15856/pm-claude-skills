@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<!-- The PM Skills user guide. Self-contained, print-optimised (A4). Render to PDF with
+     web/docs-assets/shoot.mjs (PAGES=guide → web/docs-assets/PM-Skills-Guide.pdf), or open
+     in a browser → Print → Save as PDF. Also a live page at /guide.html. -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PM Skills — The Practical Guide</title>
+<meta name="description" content="How to effectively use the PM Skills library: install, run a skill, worked examples (PRD, exec update, RICE, postmortem), chaining recipes, the Professional Brain, running anywhere, and tips." />
+<style>
+  :root{ --ink:#1a1d23; --muted:#5b6573; --accent:#c75b39; --accent2:#0a66c2; --line:#e3e7ed;
+         --panel:#f6f8fa; --code:#0b1020; --codebg:#f3f4f6; }
+  *{box-sizing:border-box}
+  html{-webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  body{margin:0; color:var(--ink); background:#fff;
+    font:15px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;}
+  .doc{max-width:820px; margin:0 auto; padding:0 46px;}
+  h1{font-size:26px; margin:30px 0 6px; letter-spacing:-.4px}
+  h2{font-size:21px; margin:30px 0 8px; color:var(--accent); letter-spacing:-.3px;
+     border-bottom:2px solid var(--accent); padding-bottom:5px;}
+  h3{font-size:16.5px; margin:20px 0 5px}
+  p{margin:8px 0}
+  a{color:var(--accent2); text-decoration:none}
+  .muted{color:var(--muted)}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:12.8px;
+    background:var(--codebg); border:1px solid var(--line); border-radius:5px; padding:1px 5px;}
+  pre{background:var(--code); color:#e6edf3; border-radius:10px; padding:13px 15px; overflow:auto;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:12.6px; line-height:1.5;
+    margin:10px 0; white-space:pre-wrap;}
+  pre .c{color:#7d8590}
+  table{width:100%; border-collapse:collapse; font-size:13.5px; margin:10px 0}
+  th,td{text-align:left; padding:5px 8px; border-bottom:1px solid var(--line); vertical-align:top}
+  th{color:var(--muted); font-weight:600}
+  blockquote{margin:12px 0; padding:9px 14px; background:var(--panel); border-left:3px solid var(--accent);
+    border-radius:0 8px 8px 0; color:#33404f;}
+  .callout{background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:12px 15px; margin:12px 0;}
+  .lead{font-size:16px; color:#33404f}
+  ul,ol{margin:8px 0; padding-left:22px} li{margin:4px 0}
+  .step{font-weight:700; color:var(--accent)}
+  .tag{display:inline-block; background:#eef2f7; border:1px solid var(--line); border-radius:999px;
+    padding:1px 9px; font-size:12px; color:var(--muted); margin-right:4px}
+  .ex{border:1px solid var(--line); border-radius:10px; overflow:hidden; margin:12px 0}
+  .ex .h{background:var(--panel); padding:7px 13px; font-weight:600; font-size:13.5px; border-bottom:1px solid var(--line)}
+  .ex .b{padding:11px 13px}
+  hr{border:none; border-top:1px solid var(--line); margin:18px 0}
+  /* Print: each top-level section starts a new page. */
+  @page{ size:A4; margin:18mm 0; }
+  section{ page-break-before:always; }
+  section.cover, section.toc{ page-break-before:auto; }
+  h2,h3{ break-after:avoid }
+  pre,table,.ex,.callout,blockquote{ break-inside:avoid }
+  .cover{ text-align:center; padding-top:90px }
+  .cover h1{ font-size:40px; border:0 }
+  .cover .sub{ font-size:18px; color:var(--muted); margin-top:8px }
+  .cover .meta{ margin-top:34px; color:var(--muted); font-size:13.5px }
+  .cover .pill{ display:inline-block; background:var(--panel); border:1px solid var(--line);
+    border-radius:999px; padding:4px 12px; margin:4px; font-size:13px; color:var(--ink) }
+  .footer-note{ color:var(--muted); font-size:12px; margin-top:26px; border-top:1px solid var(--line); padding-top:10px }
+</style>
+</head>
+<body>
+<div class="doc">
+
+<!-- ───────────────── COVER ───────────────── -->
+<section class="cover">
+  <img src="assets/product-notes.jpg" alt="Product Notes" style="height:72px;width:auto;border-radius:14px;background:#f5f1e8;padding:8px 14px;margin-bottom:6px" />
+  <h1>PM Skills</h1>
+  <div class="sub">The Practical Guide — how to actually use 207 AI skills, with worked examples</div>
+  <div class="meta">
+    <div><span class="pill">207 skills</span><span class="pill">21 professions</span><span class="pill">eval-scored 4.8/5</span><span class="pill">MIT</span></div>
+    <p style="margin-top:24px"><b>Repo:</b> github.com/mohitagw15856/pm-claude-skills<br>
+    <b>Run free (no install):</b> mohitagw15856.github.io/pm-claude-skills</p>
+    <p class="muted" style="margin-top:18px"><i>PM stands for Professional, not just Product Management.</i></p>
+  </div>
+</section>
+
+<!-- ───────────────── TOC ───────────────── -->
+<section class="toc">
+  <h2>What's inside</h2>
+  <ol>
+    <li>What this is — and the one idea behind it</li>
+    <li>When to reach for a skill (and when not to)</li>
+    <li>Get started in 60 seconds (browser) — and every other way</li>
+    <li>Anatomy of a skill: how to read and invoke one</li>
+    <li>Worked example 1 — a PRD from a fuzzy idea</li>
+    <li>Worked example 2 — an exec update from messy notes</li>
+    <li>Worked example 3 — RICE prioritisation (with the helper script)</li>
+    <li>Chaining skills — the workflow recipes</li>
+    <li>Make it yours — Skill Memory &amp; context</li>
+    <li>The Professional Brain — memory + actions</li>
+    <li>Run it anywhere — Claude Code, MCP, the REST API, n8n / Obsidian</li>
+    <li>Trust the output — eval scores, Compare, Grade</li>
+    <li>Tips, anti-patterns &amp; getting the most out of it</li>
+    <li>Quick reference &amp; where to go next</li>
+  </ol>
+</section>
+
+<!-- 1 -->
+<section>
+  <h2>1 · What this is — and the one idea behind it</h2>
+  <p class="lead">Ask any AI for a PRD, an exec update, or a launch plan and you get <i>plausible filler</i> — something 80% there and 100% generic that you still rewrite from scratch. The model can write fluently; it just doesn't know what <b>“good”</b> looks like for a specific professional deliverable.</p>
+  <p><b>PM Skills fixes that.</b> Each “skill” is a structured <code>SKILL.md</code> file that encodes the real method a senior professional uses for one job — the sections, the rubric, the judgement, the anti-patterns. When the AI loads a skill, its first draft already has the right structure, the right questions asked, and the common mistakes avoided.</p>
+  <div class="callout">
+    <b>The one idea:</b> a skill is not a clever prompt — it's a <i>repeatable recipe for a good deliverable</i>. Same skill, two different users, two outputs that look like the same professional product.
+  </div>
+  <p>There are <b>207 skills across 21 professions</b> — product, engineering, design, data, marketing, CS, legal, finance, HR, sales, ops, research, and more. They're open-source (MIT), eval-scored on a public rubric, and run anywhere a capable model reads instructions.</p>
+  <h3>What you can make with them (a taste)</h3>
+  <table>
+    <tr><th>Give it…</th><th>Get back…</th><th>Skill</th></tr>
+    <tr><td>messy progress notes</td><td>a tight 250-word CEO briefing</td><td><code>executive-update</code></td></tr>
+    <tr><td>a vague feature idea</td><td>a structured PRD with metrics &amp; risks</td><td><code>prd-template</code></td></tr>
+    <tr><td>a backlog of ideas</td><td>a ranked, defensible priority list</td><td><code>rice-prioritisation</code></td></tr>
+    <tr><td>a raw incident timeline</td><td>a blameless postmortem with owners</td><td><code>incident-postmortem</code></td></tr>
+    <tr><td>a meeting transcript</td><td>decisions, owners &amp; next steps</td><td><code>meeting-notes</code></td></tr>
+  </table>
+</section>
+
+<!-- 2 -->
+<section>
+  <h2>2 · When to reach for a skill (and when not to)</h2>
+  <h3>Great fit</h3>
+  <ul>
+    <li><b>Recurring professional deliverables</b> — anything you produce more than once and that has a “right shape”: PRDs, updates, postmortems, briefs, plans, reviews.</li>
+    <li><b>You're staring at a blank page</b> — the skill removes the structure debate so you spend time on judgement, not formatting.</li>
+    <li><b>You want consistency across a team</b> — everyone's PRD comes out in the same shape.</li>
+  </ul>
+  <h3>Poor fit (don't force it)</h3>
+  <ul>
+    <li><b>One-off, throwaway tasks</b> with no “right structure.”</li>
+    <li><b>Pure facts retrieval</b> — a skill gives <i>structure</i>, not ground truth. Feed it your real data (see §11).</li>
+    <li><b>Final say on judgement calls</b> — a skill drafts; <b>you</b> decide. Treat every output as a strong first draft to verify, not gospel.</li>
+  </ul>
+  <blockquote>Rule of thumb: if you'd be happy to reuse the same outline next month, there's probably a skill for it — and it'll save you the most time.</blockquote>
+</section>
+
+<!-- 3 -->
+<section>
+  <h2>3 · Get started in 60 seconds (browser) — and every other way</h2>
+  <p>The fastest way to feel it: the <b>browser playground</b>. No install, runs with your own model key (stored only in your browser), or a built-in no-key model.</p>
+  <ol>
+    <li>Open <b>mohitagw15856.github.io/pm-claude-skills</b></li>
+    <li>Pick a skill (try <i>Executive Update</i>) — or describe your task and let it recommend one.</li>
+    <li>Paste your own Claude / OpenAI / Gemini key (or choose “In-browser, no key”).</li>
+    <li>Fill the short form → <b>Run</b>. The result streams in. Toggle <b>Compare</b> to see it with vs. without the skill.</li>
+  </ol>
+  <h3>Install it where you work</h3>
+  <table>
+    <tr><th>You use…</th><th>Command / how</th></tr>
+    <tr><td>Claude Code</td><td><code>npx pm-claude-skills add --agent claude</code></td></tr>
+    <tr><td>Cursor / Codex / 60+ agents</td><td><code>npx skills add mohitagw15856/pm-claude-skills</code></td></tr>
+    <tr><td>MCP (any client, on demand)</td><td><code>claude mcp add pm-skills -- npx -y pm-claude-skills-mcp</code></td></tr>
+    <tr><td>ChatGPT / Claude.ai / Cursor (hosted)</td><td>add connector URL <code>pm-skills-mcp.pm-claude-skills.workers.dev</code></td></tr>
+    <tr><td>Python (LangChain / CrewAI)</td><td><code>pip install pm-skills</code></td></tr>
+    <tr><td>ChatGPT / Gemini (copy-paste)</td><td>paste an export from <code>exports/</code> into a Custom GPT / Gem</td></tr>
+  </table>
+  <p class="muted">Everything is one source of truth: the same skill body powers all of these.</p>
+</section>
+
+<!-- 4 -->
+<section>
+  <h2>4 · Anatomy of a skill: how to read and invoke one</h2>
+  <p>Every skill is a markdown file with two parts: a tiny <b>frontmatter</b> (name + a description with trigger phrases) and a <b>body</b> (the method, an output template, quality checks, and anti-patterns).</p>
+  <pre><span class="c">--- frontmatter (all the model sees when deciding to load it) ---</span>
+name: prd-template
+description: "Create a PRD... Use when asked to write a PRD,
+  product spec, or feature specification. Produces a complete
+  PRD with problem, user stories, requirements, success metrics."
+<span class="c">--- body ---</span>
+# PRD Template Skill
+## Required Inputs       <span class="c"># what it asks you for</span>
+## Template Structure    <span class="c"># the sections it produces</span>
+## Quality Checks        <span class="c"># the bar the output must pass</span>
+## Anti-Patterns         <span class="c"># mistakes it refuses to make</span></pre>
+  <h3>How to invoke one</h3>
+  <ul>
+    <li><b>Claude Code (native):</b> just describe the task — Claude auto-loads the matching skill from its description. Or name it: <i>“use the prd-template skill for…”.</i> Some ship a slash command: <code>/prd</code>, <code>/rice</code>, <code>/sprint-plan</code>.</li>
+    <li><b>MCP:</b> <i>“search the skills for churn, then apply the best one to this account.”</i></li>
+    <li><b>Chat (ChatGPT/Gemini):</b> paste the skill body as the system prompt / custom instructions, then give your input.</li>
+  </ul>
+  <div class="callout"><b>Pro move:</b> a skill always asks for missing inputs rather than inventing them. Give it a <i>brief</i> up front (even bullet points) and it'll produce a full draft instead of interviewing you.</div>
+</section>
+
+<!-- 5 -->
+<section>
+  <h2>5 · Worked example 1 — a PRD from a fuzzy idea</h2>
+  <p><span class="tag">skill</span><code>prd-template</code> &nbsp; <span class="tag">command</span><code>/prd</code></p>
+  <div class="ex">
+    <div class="h">① Your input (a few bullets is enough)</div>
+    <div class="b"><pre>Feature: referral program for B2B users.
+Goal: +15% signups in Q3. Activated admins invite peers;
+both sides get account credit. MVP only. Reviewers: Eng, Growth.</pre></div>
+  </div>
+  <div class="ex">
+    <div class="h">② What you ask</div>
+    <div class="b"><pre>Use the prd-template skill to write a PRD for this. Ask me
+anything critical that's missing; otherwise produce the draft.</pre></div>
+  </div>
+  <div class="ex">
+    <div class="h">③ What comes back (shape, abridged)</div>
+    <div class="b"><pre><b>PRD — B2B Referral Program</b>
+<b>1. Overview</b> — Problem, goal (+15% Q3 signups), non-goals (MVP: no tiers)
+<b>2. Target user</b> — Activated admins on paid plans
+<b>3. User stories</b>
+   US1: As an admin, I can invite a peer by email and see status…
+   US2: As an invitee, I get a credit applied on signup…  (+ acceptance criteria)
+<b>4. Requirements</b> — functional + edge cases (self-referral, fraud caps)
+<b>5. Success metrics</b> — primary: invited→signup rate; guardrail: support tickets
+<b>6. Risks & open questions</b> — abuse, attribution window, finance sign-off</pre></div>
+  </div>
+  <p><b>Why it's better than a raw prompt:</b> success metrics and a guardrail metric are there by default; abuse and attribution risks are surfaced; non-goals keep MVP honest. You spend your time deciding the attribution window — not remembering that a PRD needs one.</p>
+  <p class="muted">Next: feed this PRD into <code>rice-prioritisation</code> to position it, or <code>go-to-market</code> to plan the launch (see §8).</p>
+</section>
+
+<!-- 6 -->
+<section>
+  <h2>6 · Worked example 2 — an exec update from messy notes</h2>
+  <p><span class="tag">skill</span><code>executive-update</code> &nbsp; <span class="tag">command</span><code>/exec-summary</code></p>
+  <div class="ex">
+    <div class="h">① Your input (raw, unstructured)</div>
+    <div class="b"><pre>shipped onboarding redesign to all new accounts, activation
+looking way up. backend hiring is 2 roles behind, billing
+revamp now at risk for Q3. NRR flat. need contractor budget.
+audience: CEO. period: Q2.</pre></div>
+  </div>
+  <div class="ex">
+    <div class="h">② What comes back (abridged)</div>
+    <div class="b"><pre><b>Executive Update — Q2, for the CEO</b>
+<b>Headline:</b> Activation up sharply after onboarding redesign; on track
+for Q2, with one staffing risk that needs a decision.
+<b>Key metrics:</b> activation ▲ (best quarter); NRR flat at 112%.
+<b>Progress:</b> onboarding redesign at 100% of new accounts; faster TTV.
+<b>Risk &amp; decision needed:</b> backend hiring 2 roles behind → billing
+revamp at risk for Q3. <i>Decision:</i> approve contractor budget to hold the date.
+<b>Next:</b> roll the activation win into core; bring a Q3 staffing plan.</pre></div>
+  </div>
+  <p><b>The skill's judgement:</b> it leads with the headline and the <i>decision needed</i> (Pyramid Principle), keeps it ~250 words, and separates progress from the ask — exactly what a CEO wants. Add your real numbers and it's shippable.</p>
+</section>
+
+<!-- 7 -->
+<section>
+  <h2>7 · Worked example 3 — RICE prioritisation (with the helper script)</h2>
+  <p><span class="tag">skill</span><code>rice-prioritisation</code> &nbsp; <span class="tag">command</span><code>/rice</code> &nbsp; <span class="tag">script</span>computes the maths by rule</p>
+  <p>Some skills ship a stdlib-only helper so the numbers are computed, not vibed. RICE is one:</p>
+  <pre><span class="c"># initiatives.json: [{name, reach, impact, confidence, effort}, ...]</span>
+python3 scripts/rice_calculator.py initiatives.json
+<span class="c"># → ranked table with RICE scores + auto-flags:</span>
+<span class="c">#   quick-win (high score, low effort), moonshot (high impact/effort),</span>
+<span class="c">#   low-confidence (≤50%)</span></pre>
+  <div class="ex">
+    <div class="h">Result (abridged)</div>
+    <div class="b"><pre>Initiative           Reach  Impact  Conf  Effort  RICE   Flag
+Onboarding revamp    5000   2.0     80%   3       2667   quick-win
+Referral program     5000   3.0     50%   2       3750   low-conf
+Enterprise SSO        800   3.0     100%  5        480   —
+→ Sequence: validate referral confidence first; ship onboarding now.</pre></div>
+  </div>
+  <p><b>How to use it well:</b> let the script rank, then <i>investigate any surprising top item</i> before accepting it — RICE is a tool, not a verdict. The skill explicitly tells the model to do this, so it won't hand you a number it can't defend.</p>
+  <p class="muted">Other computed skills: sprint capacity (<code>sprint-planning</code>), customer health (<code>cs-health-scorecard</code>).</p>
+</section>
+
+<!-- 8 -->
+<section>
+  <h2>8 · Chaining skills — the workflow recipes</h2>
+  <p>Individual skills are useful; <b>chaining</b> them is the superpower. A recipe runs several skills in order and <b>passes each output forward</b> as context for the next — a fuzzy idea comes out the other end as a joined-up set of artifacts.</p>
+  <pre>/ship-a-feature  "a referral program for B2B users"
+
+  ambiguity-resolver → prd-template → rice-prioritisation
+   frame the problem    spec it        position it
+        → roadmap-narrative → go-to-market
+           place on roadmap    launch plan
+        └──── each stage's output feeds the next ────┘</pre>
+  <h3>The built-in recipes</h3>
+  <table>
+    <tr><th>Recipe</th><th>Does</th></tr>
+    <tr><td><code>/ship-a-feature</code></td><td>idea → PRD → priority → roadmap → launch plan</td></tr>
+    <tr><td><code>/close-the-quarter</code></td><td>metrics → churn → exec update → board deck</td></tr>
+    <tr><td><code>/launch-a-product</code></td><td>competitors → positioning → GTM → checklist → press release</td></tr>
+    <tr><td><code>/rescue-an-account</code></td><td>health score → churn cause → escalation → renewal plan</td></tr>
+    <tr><td><code>/run-discovery</code></td><td>frame → interview guide → synthesis → prioritise</td></tr>
+  </table>
+  <p><b>Two ways to run a chain:</b> the slash command in Claude Code, or visually in the browser <b>Workflow Canvas</b> (drag skills into a chain) — and the <b>Auto-Agent</b> will even pick the chain for you from a plain-English goal.</p>
+  <div class="callout"><b>Carry context forward.</b> If you're chaining by hand, paste the previous step's output into the next so each skill builds on the last instead of starting cold.</div>
+</section>
+
+<!-- 9 -->
+<section>
+  <h2>9 · Make it yours — Skill Memory &amp; context</h2>
+  <p>Generic output is the #1 complaint with AI. <b>Skill Memory</b> fixes it: tell the skills who you are <i>once</i>, and every skill produces output already tuned to your product, audience, and voice.</p>
+  <ul>
+    <li><b>In Claude Code:</b> run <code>/setup-context</code> (or copy <code>templates/pm-context.example.md</code> → <code>pm-context.md</code>) and fill it in. Skills read it as standing context.</li>
+    <li><b>In the playground:</b> fill the <b>🧠 Your context</b> box — saved in your browser, prepended to every run.</li>
+  </ul>
+  <pre><span class="c"># pm-context.md (keep it short and concrete)</span>
+Company: Acme — collaborative analytics for RevOps teams
+Audience I write for: CEO, board, eng team
+Voice: crisp, no hype; lead with the decision; updates &lt; 250 words
+North-star metric: weekly active workspaces (define it exactly)
+Competitors: BigCo (we win on time-to-value)</pre>
+  <blockquote>Without context: “write an exec update” → generic, you rewrite it.<br>
+  With context: “write an exec update” → your voice, your metrics, your audience — shippable first try.</blockquote>
+</section>
+
+<!-- 10 -->
+<section>
+  <h2>10 · The Professional Brain — memory + actions</h2>
+  <p>Skill Memory is one file. The <b>Professional Brain</b> is the full version: a durable, local <b>markdown memory</b> that skills read before answering and write to after — so runs stop starting cold and decisions keep their <i>why</i>. No vector DB; it's grep-able, auditable, Obsidian-compatible.</p>
+  <pre>brain/
+  context.md   knowledge/   decisions/   hypotheses/
+  stakeholders/   entities/   source/</pre>
+  <h3>Provenance — the trust mechanism</h3>
+  <p>Every fact is tagged by how strong it is, so a hunch never poses as data:</p>
+  <p><code>[data]</code> · <code>[interview]</code> · <code>[external]</code> · <code>[verbal]</code> · <code>[hunch]</code> &nbsp;(strongest → weakest)</p>
+  <h3>The loop (with a real example)</h3>
+  <ol>
+    <li><span class="step">Set it up:</span> <code>cp -r templates/brain ./brain</code> (or run the <code>/brain</code> command → <code>init</code>).</li>
+    <li><span class="step">Recall:</span> the brain feeds context into a skill automatically. Manually:
+      <pre>python3 skills/professional-brain/scripts/brain_query.py ./brain "retention"
+<span class="c"># → matches ranked by provenance, e.g.:</span>
+<span class="c">#   [data]   knowledge/strategy.md: mobile NPS 6.2 vs web 8.1…</span>
+<span class="c">#   [verbal] stakeholders/sarah.md: wants retention tied to a metric…</span></pre></li>
+    <li><span class="step">Run a skill:</span> ask for a PRD — it reads <code>knowledge/strategy.md</code> and carries the tags through, instead of you re-pasting context.</li>
+    <li><span class="step">Record back:</span> after a meeting, <code>meeting-notes</code> proposes decisions to write to <code>decisions/</code> — append-only, <b>dry-run by default, approved before anything is written.</b></li>
+    <li><span class="step">Act (optional):</span> the <code>action-runner</code> turns a skill's recommendations into real tickets / messages — risk-rated, approved per action, recorded back. <i>Nothing acts silently.</i></li>
+  </ol>
+  <p class="muted">Try it with no install: the in-browser Brain at <b>/brain.html</b> (round-trips with the on-disk folder via markdown import/export).</p>
+</section>
+
+<!-- 11 -->
+<section>
+  <h2>11 · Run it anywhere — Claude Code, MCP, the REST API, n8n / Obsidian</h2>
+  <h3>On your real data (the big unlock)</h3>
+  <p>A skill gives <i>structure</i>; a connector gives it <i>your facts</i>. Run the <code>pm-skills</code> MCP server alongside a data server (filesystem, GitHub, a database) and a skill acts on what that server exposes:</p>
+  <pre><span class="c"># Claude Code: add both, once</span>
+claude mcp add pm-skills  -- npx -y pm-claude-skills-mcp
+claude mcp add github     -- npx -y @modelcontextprotocol/server-github
+
+<span class="c"># then just ask:</span>
+"Get the prd-template skill, read GitHub issue acme/app#123, and write the PRD from it."
+"Run churn-analysis on exports/q2.csv."
+"Open a GitHub issue per item in the product-launch-checklist."</pre>
+  <h3>The REST API (for any HTTP / no-code tool)</h3>
+  <pre><span class="c"># read-only, no auth, CORS-open — base:</span>
+<span class="c"># https://pm-skills-mcp.pm-claude-skills.workers.dev</span>
+GET /v1/skills                 <span class="c"># list (?bundle= ?q= ?limit=)</span>
+GET /v1/skills/{name}?format=md  <span class="c"># the raw skill body</span>
+GET /v1/workflows              <span class="c"># the recipe chains</span></pre>
+  <ul>
+    <li><b>n8n</b> — feed a skill into your AI node; a trigger becomes a finished doc routed to Slack/Notion.</li>
+    <li><b>Obsidian</b> — every skill is a vault note you run as a Copilot / Text-Generator prompt.</li>
+    <li><b>Lovable</b> — build a skill-powered app; a knowledge snippet makes its generator skill-aware.</li>
+  </ul>
+  <p class="muted">Full recipes in <code>connectors/</code> (n8n.md, obsidian.md, lovable.md).</p>
+</section>
+
+<!-- 12 -->
+<section>
+  <h2>12 · Trust the output — eval scores, Compare, Grade</h2>
+  <p>Quality is measured, not claimed. Three ways to check before you rely on a result:</p>
+  <ul>
+    <li><b>Eval scores</b> — an LLM judge rates each skill against a held-out case on four dimensions (structure · completeness · usefulness · grounding). <b>196 skills scored, avg 4.8/5</b> on the public leaderboard. A regression gate blocks any change that lowers a score.</li>
+    <li><b>Compare mode</b> (playground) — run the same input <i>with vs. without</i> the skill, side by side, to judge whether it actually helped.</li>
+    <li><b>Grade your draft</b> — paste an existing PRD/update and get a rubric score, ranked gaps, and a redline graded against the skill's framework. Great for improving work you already have.</li>
+  </ul>
+  <div class="callout"><b>Before you ship a plan,</b> run <code>red-team-review</code> — it stress-tests the plan against a room of hostile expert personas and surfaces what breaks.</div>
+</section>
+
+<!-- 13 -->
+<section>
+  <h2>13 · Tips, anti-patterns &amp; getting the most out of it</h2>
+  <h3>Do</h3>
+  <ul>
+    <li><b>Give a brief, not a blank.</b> Even three bullets gets you a full draft instead of an interview.</li>
+    <li><b>Set your context once</b> (§9) — it lifts every single skill.</li>
+    <li><b>Chain for real work</b> (§8). Most deliverables are a sequence, not one shot.</li>
+    <li><b>Compute, don't guess.</b> If a skill ships a helper script (RICE, sprint, health), run it.</li>
+    <li><b>Feed it your data</b> (§11) rather than pasting summaries — “draft the PRD <i>from</i> the ticket.”</li>
+    <li><b>Verify before you ship.</b> The skill drafts; you own the judgement. Check surprising numbers.</li>
+  </ul>
+  <h3>Don't</h3>
+  <ul>
+    <li><b>Don't treat output as fact.</b> Structure ≠ ground truth.</li>
+    <li><b>Don't accept a surprising ranking</b> without checking the estimates behind it.</li>
+    <li><b>Don't force a skill</b> onto a one-off with no “right shape” — you'll fight it.</li>
+    <li><b>Don't auto-run actions you haven't reviewed</b> — keep the Brain's approval gate on.</li>
+  </ul>
+  <h3>If you're rolling it out to a team</h3>
+  <ol>
+    <li>Install <code>pm-essentials</code> + share one <code>pm-context.md</code> so everyone's output matches your house style.</li>
+    <li>Pick the 5 deliverables your team writes weekly; standardise on those skills first.</li>
+    <li>Add the GitHub Action or Skill Bot so skills run in CI / from a PR comment.</li>
+    <li>Custom skills (your templates, your terminology) eliminate <i>rework</i>, not just the blank page — see the repo's “custom skills for your team.”</li>
+  </ol>
+</section>
+
+<!-- 14 -->
+<section>
+  <h2>14 · Quick reference &amp; where to go next</h2>
+  <h3>Five skills to try first</h3>
+  <p><code>executive-update</code> · <code>prd-template</code> · <code>rice-prioritisation</code> · <code>competitor-teardown</code> · <code>meeting-notes</code></p>
+  <h3>Commands worth memorising</h3>
+  <p><code>/prd</code> · <code>/rice</code> · <code>/sprint-plan</code> · <code>/retro</code> · <code>/exec-summary</code> · <code>/brain</code> · <code>/setup-context</code> · the recipes in §8</p>
+  <h3>Where things live</h3>
+  <table>
+    <tr><td>All skills, browsable</td><td>SKILLS.md · the live catalog &amp; Skill Galaxy (/galaxy.html)</td></tr>
+    <tr><td>One-page cheatsheet</td><td>CHEATSHEET.md (+ PNG/PDF in docs-assets)</td></tr>
+    <tr><td>The Brain</td><td>BRAIN.md · BRAIN_QUICKSTART.md · /brain.html</td></tr>
+    <tr><td>Integrations</td><td>connectors/ (n8n, Obsidian, Lovable) + the REST API</td></tr>
+    <tr><td>Quality</td><td>the leaderboard · evals/ · Compare &amp; Grade in the playground</td></tr>
+    <tr><td>Contribute / request</td><td>CONTRIBUTING.md · Skill Studio (make a skill → PR)</td></tr>
+  </table>
+  <div class="callout">
+    <b>Start here:</b> open the playground, run <i>Executive Update</i> on your own messy notes, and flip on <b>Compare</b>. That 30-second moment — generic mush on one side, your shippable draft on the other — is the whole pitch.
+  </div>
+  <div class="footer-note">
+    PM Skills · MIT · github.com/mohitagw15856/pm-claude-skills · Run free at mohitagw15856.github.io/pm-claude-skills · ⭐ a star helps others find it. <i>PM stands for Professional.</i>
+  </div>
+</section>
+
+</div>
+</body>
+</html>
