@@ -92,6 +92,18 @@ The whole library on one page — install, all 207 skills by profession, the Pro
 
 ---
 
+## 🧠 The Professional Brain — local-first memory for any AI agent
+
+Generic AI forgets everything between sessions, so you re-paste context forever and last quarter's *why* evaporates. The **Professional Brain** is the fix — and it's the most novel piece here, worth a look on its own:
+
+- **Plain markdown, no vector DB** — a `brain/` folder (knowledge · decisions · hypotheses · stakeholders) your AI **reads before answering and writes to after**. Grep-able, auditable, Obsidian-compatible — memory you can read and correct by hand, not a black box.
+- **Provenance over confidence theatre** — every fact is tagged `[data] [interview] [external] [verbal] [hunch]`, so a hunch never poses as a measured result.
+- **It acts, safely** — the [`action-runner`](skills/action-runner/) turns a skill's recommendations into real tickets/messages: dry-run, risk-rated, approval-gated, then recorded back. *Nothing acts silently.*
+
+**→ [Read the architecture](BRAIN.md)** · **[5-min Quickstart](BRAIN_QUICKSTART.md)** · **[try it in the browser](https://mohitagw15856.github.io/pm-claude-skills/brain.html)**
+
+---
+
 ## 🔄 One library, the whole professional workflow
 
 These 207 skills aren't a random catalog — they cover the **full arc of professional work**, end to end. Wherever you are in the loop, there's a skill for it:
@@ -181,7 +193,9 @@ The bot runs the skill and posts the result as a reply. `/skill list` shows usag
 
 **Grounded in canonical frameworks.** These aren't invented prompts — each skill encodes a proven method and cites it: RICE (Intercom), Jobs-to-be-Done (Christensen), Continuous Discovery (Teresa Torres), Porter's Five Forces, the Pyramid Principle (Minto), Google SRE, WCAG, *Obviously Awesome* (April Dunford), and more. The source shows as a **"📚 Based on"** line on every [skill page](https://mohitagw15856.github.io/pm-claude-skills/skill/rice-prioritisation.html) and in the Playground.
 
-**And measured, not just claimed.** An [eval harness](evals/) runs each skill against a held-out test case, then an LLM judge (Opus 4.8) rates the output on four dimensions — **structure, completeness, usefulness, grounding** — averaged across two models. **15 skills are eval-scored** today (and climbing); the rest are reviewed against the [authoring standard](SKILL-AUTHORING-STANDARD.md).
+**And measured, not just claimed.** An [eval harness](evals/) runs each skill against a held-out test case, then an LLM judge (Opus 4.8) rates the output on four dimensions — **structure, completeness, usefulness, grounding** — averaged across two models. **15 skills are eval-scored** today (and climbing); the rest are reviewed against the [authoring standard](SKILL-AUTHORING-STANDARD.md). A **[regression gate](.github/workflows/skill-pr-check.yml)** then blocks any PR that drops a skill's score, so quality can't quietly rot as models change.
+
+**The qualitative half — real time saved.** Scores measure quality; **[case studies](CASE_STUDIES.md)** measure outcomes. See the kind of before → after a skill delivers (PRD: ~2 days → ~25 min), and **[add your own 2-minute ROI story](../../issues/new?template=roi-story.yml)** — we'll feature it.
 
 **The loop actually catches bad skills.** A recent run flagged three skills scoring ~2/5 because they asked for missing inputs instead of delivering. We added a "work from a brief" rule, re-ran, and they jumped to **4.75/5**:
 

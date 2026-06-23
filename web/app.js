@@ -102,6 +102,8 @@ async function init() {
   updateHistoryBtn();
   el('shareHubBtn').addEventListener('click', shareToHub);
   el('imgBtn').addEventListener('click', shareAsImage);
+  el('fbUp').addEventListener('click', () => sendFeedback('up'));
+  el('fbDown').addEventListener('click', () => sendFeedback('down'));
   initBrainSave();
 
   // Copy the skill's instructions formatted for another assistant.
@@ -794,6 +796,7 @@ ${current.instructions}${ctxBlock}`;
     out.dataset.raw = acc; // copy/download use the skill output, in either mode
     saveRun(acc);
     setStatus('Done.');
+    showFeedback();
   } catch (e) {
     if (e.name === 'AbortError') {
       setStatus('Stopped.');
@@ -806,6 +809,32 @@ ${current.instructions}${ctxBlock}`;
     showRunFlow(false);
     controller = null;
   }
+}
+
+// ── Opt-in feedback (anonymous) ─────────────────────────────────────────────
+// Reveal a 👍/👎 bar after a successful run. A click sends an anonymous
+// GoatCounter event (counts only — never the inputs/outputs/key) and opens a
+// prefilled GitHub issue for the optional "what I'd change" note. This is the
+// real-usage signal a fork can't copy; it stays privacy-clean and backend-free.
+function showFeedback() {
+  const bar = el('feedbackBar'); if (!bar) return;
+  bar.hidden = false;
+  el('fbThanks').hidden = true;
+  el('fbImprove').hidden = true;
+  el('fbUp').hidden = false;
+  el('fbDown').hidden = false;
+}
+function sendFeedback(kind) {
+  const name = (current && current.name) || 'unknown';
+  try { if (window.pmTrack) pmTrack('feedback/' + name + '/' + kind); } catch (e) {}
+  el('fbUp').hidden = true;
+  el('fbDown').hidden = true;
+  el('fbThanks').hidden = false;
+  const improve = el('fbImprove');
+  improve.href = 'https://github.com/mohitagw15856/pm-claude-skills/issues/new?labels=feedback&title=' +
+    encodeURIComponent(`Feedback on ${name} (${kind === 'up' ? '👍' : '👎'})`) +
+    '&body=' + encodeURIComponent(`Skill: ${name}\nRating: ${kind}\n\nWhat I'd change / what would make it better:\n`);
+  improve.hidden = false;
 }
 
 // The animated "inputs → (brain) → skill → output" pipeline shown while a run streams.

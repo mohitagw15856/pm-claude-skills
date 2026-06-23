@@ -1,5 +1,10 @@
 # 🧠 Professional Brain — memory + actions for the skills
 
+**Local-first memory for any AI agent.** A plain-markdown brain your AI reads before it answers
+and writes to after — provenance-tagged, grep-able, auditable. No vector DB, no cloud. It ships
+inside this library, but the idea stands alone: *give your agent a memory you can read and correct
+by hand.*
+
 > **Just want to use it?** → **[5-minute Quickstart](BRAIN_QUICKSTART.md)** (a folder + one file; MCP optional). This page is the architecture.
 
 > **Status: Phase 2 (actions).** The full loop is in: skills read the brain, write

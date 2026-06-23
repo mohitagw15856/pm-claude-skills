@@ -1,0 +1,67 @@
+name: "📈 Share an ROI story"
+description: Tell us how a skill saved you time — we'll feature it (with credit) in CASE_STUDIES.md, the site, and the README.
+title: "[ROI] <skill> saved <time>"
+labels: ["roi-story"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! Concrete before → after numbers are the most useful thing you can give the project.
+        Two minutes here helps other teams decide — and helps us see which skills deliver.
+  - type: input
+    id: role
+    attributes:
+      label: Your role & context
+      placeholder: e.g. Senior PM, B2B SaaS (Series B)
+    validations:
+      required: true
+  - type: input
+    id: skill
+    attributes:
+      label: Which skill(s)?
+      placeholder: e.g. prd-template, rice-prioritisation
+    validations:
+      required: true
+  - type: input
+    id: before
+    attributes:
+      label: Before — how long it used to take
+      placeholder: e.g. ~2 days to a reviewable PRD
+    validations:
+      required: true
+  - type: input
+    id: after
+    attributes:
+      label: After — how long with the skill
+      placeholder: e.g. ~25 minutes
+    validations:
+      required: true
+  - type: textarea
+    id: what_changed
+    attributes:
+      label: What changed (one or two honest sentences — rough edges welcome)
+      placeholder: e.g. "Structure, success metrics, and risks were already there, so I spent my time on judgement instead of formatting. Wished it asked about rollout."
+    validations:
+      required: true
+  - type: input
+    id: quote
+    attributes:
+      label: A one-line quote we can feature (optional)
+      placeholder: e.g. "Cut our PRD cycle from two days to under half an hour."
+  - type: dropdown
+    id: credit
+    attributes:
+      label: How should we credit you?
+      options:
+        - "Name + role (e.g. 'Alex R., PM at Acme')"
+        - "Role only (e.g. 'PM at a B2B SaaS')"
+        - "Anonymous"
+    validations:
+      required: true
+  - type: checkboxes
+    id: permission
+    attributes:
+      label: Permission
+      options:
+        - label: I'm OK with this story being featured in the repo, on the site, and in the README.
+          required: true

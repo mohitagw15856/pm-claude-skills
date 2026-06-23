@@ -198,6 +198,13 @@ button.ghost:hover { border-color: var(--accent); background: var(--panel); }
   font-size: 12px; color: var(--muted); margin-bottom: 8px;
 }
 .output-toolbar > div { display: flex; gap: 8px; flex-wrap: wrap; }
+.feedback-bar {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border);
+  font-size: 13px; color: var(--muted);
+}
+.feedback-bar button { padding: 3px 9px; font-size: 14px; line-height: 1.4; }
+.feedback-bar .bs-link { color: var(--muted); }
 .brain-save {
   display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
   margin-bottom: 10px; padding: 10px 12px;

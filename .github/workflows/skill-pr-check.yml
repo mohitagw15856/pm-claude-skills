@@ -67,3 +67,12 @@ jobs:
             const mine = comments.data.find(c => c.body && c.body.startsWith(marker));
             if (mine) await github.rest.issues.updateComment({ owner, repo, comment_id: mine.id, body });
             else await github.rest.issues.createComment({ owner, repo, issue_number, body });
+
+      # Quality lock: fail the check if a changed skill's score dropped vs main.
+      # Runs last so the score comment always posts first. Skipped on fork PRs
+      # (no key → eval didn't run). Tune the drop tolerance with --threshold.
+      - name: Eval regression gate
+        if: ${{ steps.eval.outputs.ran == '1' }}
+        run: |
+          git show origin/main:evals/results.json > /tmp/baseline.json 2>/dev/null || echo '{"results":[]}' > /tmp/baseline.json
+          node scripts/eval-regression-gate.mjs --baseline /tmp/baseline.json --results evals/results.json --threshold 0.5
