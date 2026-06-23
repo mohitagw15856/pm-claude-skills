@@ -20,11 +20,12 @@ if (!TOKEN) {
   process.exit(0);
 }
 
-// All-time window (ratings accrue slowly; we want the full picture, not just this week).
+// Wide-but-safe window: ratings accrue slowly, so we look back 90 days (a 1-year window 404s
+// because it predates GoatCounter free-plan data retention). Hour-rounded RFC3339, as the API wants.
 const hour = (d) => d.toISOString().slice(0, 13) + ':00:00Z';
-const start = hour(new Date(Date.now() - 365 * 864e5));
+const start = hour(new Date(Date.now() - 90 * 864e5));
 const end = hour(new Date());
-const url = `https://${SITE}.goatcounter.com/api/v0/stats/hits?start=${encodeURIComponent(start)}&end=${encodeURIComponent(end)}&limit=500`;
+const url = `https://${SITE}.goatcounter.com/api/v0/stats/hits?start=${encodeURIComponent(start)}&end=${encodeURIComponent(end)}&limit=200`;
 
 const res = await fetch(url, { headers: { authorization: 'Bearer ' + TOKEN } });
 if (!res.ok) {
