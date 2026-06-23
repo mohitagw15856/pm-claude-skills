@@ -1,4 +1,11 @@
 {
-  "generatedAt": null,
-  "skills": {}
+  "generatedAt": "2026-06-23T21:05:09.531Z",
+  "skills": {
+    "meeting-notes": {
+      "up": 1,
+      "down": 0,
+      "total": 1,
+      "pct": 100
+    }
+  }
 }
