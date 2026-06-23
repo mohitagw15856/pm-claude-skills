@@ -1,5 +1,18 @@
 {
-  "generatedAt": null,
+  "generatedAt": "2026-06-23T20:37:07.645Z",
   "window": "7d",
-  "skills": []
+  "skills": [
+    {
+      "name": "meeting-notes",
+      "count": 1
+    },
+    {
+      "name": "prd-template",
+      "count": 1
+    },
+    {
+      "name": "content-calendar",
+      "count": 1
+    }
+  ]
 }
