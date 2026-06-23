@@ -31,6 +31,15 @@ let current = null;
 let controller = null;
 let lastRunUsedBrain = false;
 const SAMPLES = {}; // skill name → { input, output, source } pre-generated example
+const FEEDBACK = {}; // skill name → { up, down, total, pct } real ratings (build-feedback.mjs)
+const FB_MIN = 4; // don't show a helpful% until there's enough signal to be meaningful
+
+// Real proof badge ("👍 92% · 25") for a skill, or '' when there aren't enough ratings yet.
+function feedbackBadge(name, compact) {
+  const f = FEEDBACK[name];
+  if (!f || (f.total || 0) < FB_MIN) return '';
+  return compact ? `👍 ${f.pct}%` : `👍 ${f.pct}% · ${f.total} rating${f.total === 1 ? '' : 's'}`;
+}
 
 // Provider-aware label for the Run button (the default provider is now the free path).
 function runLabel() {
@@ -150,6 +159,11 @@ async function init() {
   try {
     const sd = await (await fetch('samples.json')).json();
     (sd.samples || []).forEach((x) => { SAMPLES[x.skill] = x; });
+  } catch (_) {}
+  // Real 👍/👎 ratings, aggregated from usage by build-feedback.mjs — proof badges, best-effort.
+  try {
+    const fd = await (await fetch('feedback.json', { cache: 'no-store' })).json();
+    Object.assign(FEEDBACK, fd.skills || {});
   } catch (_) {}
 
   try {
@@ -457,9 +471,12 @@ function makeCard(s) {
   const card = document.createElement('button');
   card.className = 'skill-card';
   card.innerHTML =
-    `<div class="card-tags"><span class="card-bundle"></span><span class="card-eval"></span><span class="card-tier"></span></div>` +
+    `<div class="card-tags"><span class="card-bundle"></span><span class="card-eval"></span><span class="card-proof"></span><span class="card-tier"></span></div>` +
     `<h3 class="card-title"></h3><p class="card-summary"></p>`;
   card.querySelector('.card-bundle').textContent = s.plugin;
+  const proofEl = card.querySelector('.card-proof');
+  const proof = feedbackBadge(s.name, true);
+  if (proof) { proofEl.textContent = proof; proofEl.title = 'Real 👍/👎 ratings from people who ran this'; } else { proofEl.remove(); }
   const evalEl = card.querySelector('.card-eval');
   if (s.eval) {
     evalEl.textContent = evalBadgeText(s);
@@ -635,6 +652,12 @@ function selectSkill(s) {
     evalTag.hidden = false;
   } else {
     evalTag.hidden = true;
+  }
+  const fbTag = el('skillFeedback');
+  if (fbTag) {
+    const badge = feedbackBadge(s.name);
+    fbTag.textContent = badge;
+    fbTag.hidden = !badge;
   }
   el('skillTitle').textContent = s.title;
   el('skillDesc').textContent = s.description;
@@ -851,9 +874,16 @@ function sendFeedback(kind) {
   el('fbDown').hidden = true;
   el('fbThanks').hidden = false;
   const improve = el('fbImprove');
-  improve.href = 'https://github.com/mohitagw15856/pm-claude-skills/issues/new?labels=feedback&title=' +
-    encodeURIComponent(`Feedback on ${name} (${kind === 'up' ? '👍' : '👎'})`) +
-    '&body=' + encodeURIComponent(`Skill: ${name}\nRating: ${kind}\n\nWhat I'd change / what would make it better:\n`);
+  if (kind === 'up') {
+    // Turn a thumbs-up into a real, attributable ROI story (the proof the project actually needs).
+    improve.href = 'https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=roi-story.yml&skill=' + encodeURIComponent(name);
+    improve.textContent = '📈 Share how it helped (30s) — we’ll feature it →';
+  } else {
+    improve.href = 'https://github.com/mohitagw15856/pm-claude-skills/issues/new?labels=feedback&title=' +
+      encodeURIComponent(`Feedback on ${name} (👎)`) +
+      '&body=' + encodeURIComponent(`Skill: ${name}\nRating: down\n\nWhat I'd change / what would make it better:\n`);
+    improve.textContent = 'Tell us what you’d change →';
+  }
   improve.hidden = false;
 }
 

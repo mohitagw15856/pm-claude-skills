@@ -386,6 +386,13 @@ input:focus, select:focus, textarea:focus { outline: none; box-shadow: 0 0 0 3px
   color: #6ee7b7; background: rgba(16,185,129,.12); border: 1px solid rgba(16,185,129,.35);
 }
 .eval-badge { display: inline-block; font-size: 11px; margin: 0 0 8px 6px; }
+/* Real 👍 helpful% proof badge (shown only once a skill has enough ratings) */
+.card-proof, .proof-badge {
+  font-size: 10px; font-weight: 700; letter-spacing: .02em; padding: 2px 7px;
+  border-radius: 99px; white-space: nowrap;
+  color: #fbbf64; background: rgba(245,158,11,.12); border: 1px solid rgba(245,158,11,.35);
+}
+.proof-badge { display: inline-block; font-size: 11px; margin: 0 0 8px 6px; }
 
 /* ---------- Share button ---------- */
 .share-btn { margin-top: 10px; }
