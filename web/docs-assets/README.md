@@ -6,18 +6,21 @@ Images used in the main README and in articles.
 - `playground.png` — static screenshot / fallback.
 - `galaxy.png` — the **Skill Galaxy** (`galaxy.html`) constellation, clustered by profession.
 - `brain.png` — the **in-browser Brain** (`brain.html`), the six provenance-tagged sections.
+- `cheatsheet.png` / `cheatsheet.pdf` — the one-page cheatsheet poster, rendered from
+  [`../cheatsheet.html`](../cheatsheet.html) (content mirrors [`../../CHEATSHEET.md`](../../CHEATSHEET.md)).
 
-## Screenshots of the Galaxy + Brain (automated)
+## Screenshots of the Galaxy / Brain / Cheatsheet (automated)
 
 `shoot.mjs` screenshots `galaxy.html` and `brain.html` from the live site (or a local
-server) into `galaxy.png` / `brain.png`. Handy for the README and for articles.
+server), and renders the local `cheatsheet.html` to a full-page `cheatsheet.png` **and** a
+single-page `cheatsheet.pdf`. Handy for the README and for articles.
 
 ```bash
 npx playwright install chromium                 # one-time, if needed
-node web/docs-assets/shoot.mjs                  # shoot the live GitHub Pages site
+node web/docs-assets/shoot.mjs                  # all of them
 # options:
+PAGES=cheatsheet node web/docs-assets/shoot.mjs                 # just one (galaxy|brain|cheatsheet)
 BASE_URL=http://localhost:8080 node web/docs-assets/shoot.mjs   # shoot a local `web/` server
-PAGES=galaxy node web/docs-assets/shoot.mjs                     # just one (galaxy|brain)
 IGNORE_HTTPS_ERRORS=1 node web/docs-assets/shoot.mjs            # behind a TLS-intercepting proxy
 ```
 

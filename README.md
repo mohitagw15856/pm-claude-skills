@@ -78,6 +78,20 @@ A community-built library of professional skills for every field — product man
 
 ---
 
+## 📄 One-page cheatsheet
+
+The whole library on one page — install, all 207 skills by profession, the Professional Brain, the REST API, integrations, and quality tooling. Great to **print, share, or drop into a slide**.
+
+<p align="center">
+  <a href="CHEATSHEET.md">
+    <img src="web/docs-assets/cheatsheet.png" width="80%" alt="PM Skills one-page cheatsheet — 207 skills, the Professional Brain, REST API, integrations, and tooling at a glance." />
+  </a>
+</p>
+
+**[📥 Markdown](CHEATSHEET.md)** · **[🖼️ PNG](web/docs-assets/cheatsheet.png)** · **[📄 PDF](web/docs-assets/cheatsheet.pdf)** — regenerate the image/PDF with `node web/docs-assets/shoot.mjs` (`PAGES=cheatsheet`).
+
+---
+
 ## 🔄 One library, the whole professional workflow
 
 These 207 skills aren't a random catalog — they cover the **full arc of professional work**, end to end. Wherever you are in the loop, there's a skill for it:
