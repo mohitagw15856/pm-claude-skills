@@ -4,7 +4,7 @@
 # 🧠 PM Skills — One-Page Cheatsheet
 
 **207 open-source AI skills + memory + actions, for every profession.** MIT.
-**Repo:** https://github.com/mohitagw15856/pm-claude-skills · **Try free (no install):** https://mohitagw15856.github.io/pm-claude-skills/
+**Repo:** https://github.com/mohitagw15856/pm-claude-skills · **Try free (no install):** https://mohitagw15856.github.io/pm-claude-skills/?ref=cheatsheet
 
 > *PM = Professional, not just Product Management.* Each skill is a `SKILL.md` that teaches an AI the real
 > structure a senior pro uses — PRDs, exec updates, launch plans, postmortems — so the first draft is shippable.
@@ -53,6 +53,7 @@
 - **Slash commands (16):** `/prd` `/rice` `/sprint-plan` `/retro` `/exec-summary` `/health-scorecard` `/brain` … + the recipes above
 - **Personas (5):** Startup CTO · Growth Marketer · Solo Founder · Product Leader (`/output-style`)
 - **Build visually:** [Workflow Canvas](https://mohitagw15856.github.io/pm-claude-skills/canvas.html) (drag skills into a chain) · [Auto-Agent](https://mohitagw15856.github.io/pm-claude-skills/agent.html) (plain-English goal → planned chain)
+- **🌐 Any language:** run any skill in **10 languages** (Spanish · Mandarin · Hindi · Arabic *(RTL)* · Portuguese · French · German · Japanese · Russian · Indonesian) — pick a language in the playground; the frameworks are universal.
 
 ---
 
