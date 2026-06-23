@@ -13,6 +13,10 @@
 
     var REP = opts.repulsion || 1800, SPRING = opts.spring || 0.015, LEN = opts.linkLen || 60,
         GRAV = opts.gravity || 0.04, DAMP = opts.damping || 0.86, MAXV = 30;
+    // Simulated-annealing cooldown: forces fade as `alpha` decays, so the layout eases into
+    // place over ~a couple of seconds and then holds still. Interaction (drag/zoom) re-warms it.
+    var alpha = 1, ALPHA_MIN = 0.004, ALPHA_DECAY = opts.alphaDecay || 0.022;
+    function reheat(a) { alpha = Math.max(alpha, a == null ? 1 : a); }
 
     var ctx = canvas.getContext('2d'), dpr = Math.min(window.devicePixelRatio || 1, 2);
     var W = 0, H = 0;
@@ -41,23 +45,24 @@
         for (var j = i + 1; j < nodes.length; j++) {
           var b = nodes[j];
           var dx = a.x - b.x, dy = a.y - b.y, d2 = dx * dx + dy * dy + 0.01, d = Math.sqrt(d2);
-          var f = REP / d2, fx = f * dx / d, fy = f * dy / d;
+          var f = REP / d2 * alpha, fx = f * dx / d, fy = f * dy / d;
           a.vx += fx; a.vy += fy; b.vx -= fx; b.vy -= fy;
         }
       }
       links.forEach(function (l) {
         var a = idMap[l.source], b = idMap[l.target];
         var dx = b.x - a.x, dy = b.y - a.y, d = Math.sqrt(dx * dx + dy * dy) + 0.01;
-        var f = SPRING * (d - (l.len || LEN)), fx = f * dx / d, fy = f * dy / d;
+        var f = SPRING * (d - (l.len || LEN)) * alpha, fx = f * dx / d, fy = f * dy / d;
         a.vx += fx; a.vy += fy; b.vx -= fx; b.vy -= fy;
       });
       nodes.forEach(function (n) {
         var tx = (n.ax != null ? n.ax : W / 2), ty = (n.ay != null ? n.ay : H / 2);
-        n.vx += (tx - n.x) * GRAV; n.vy += (ty - n.y) * GRAV;
+        n.vx += (tx - n.x) * GRAV * alpha; n.vy += (ty - n.y) * GRAV * alpha;
         n.vx *= DAMP; n.vy *= DAMP;
         n.vx = Math.max(-MAXV, Math.min(MAXV, n.vx)); n.vy = Math.max(-MAXV, Math.min(MAXV, n.vy));
         if (n !== dragNode) { n.x += n.vx; n.y += n.vy; }
       });
+      alpha *= (1 - ALPHA_DECAY); // cool down toward a stable layout
     }
 
     function draw() {
@@ -73,7 +78,11 @@
     }
 
     var raf;
-    function loop() { tick(); draw(); raf = requestAnimationFrame(loop); }
+    function loop() {
+      if (alpha > ALPHA_MIN || dragNode) tick(); // frozen once cooled; drawing continues for pulse
+      draw();
+      raf = requestAnimationFrame(loop);
+    }
     loop();
 
     function toWorld(cx, cy) {
@@ -93,11 +102,11 @@
     canvas.addEventListener('mousedown', function (e) {
       moved = false; px = e.clientX; py = e.clientY;
       var n = nodeAt(e.clientX, e.clientY);
-      if (n) { dragNode = n; } else { panning = true; }
+      if (n) { dragNode = n; reheat(0.4); } else { panning = true; }
     });
     window.addEventListener('mousemove', function (e) {
       if (dragNode) {
-        var w = toWorld(e.clientX, e.clientY); dragNode.x = w.x; dragNode.y = w.y; dragNode.vx = dragNode.vy = 0; moved = true;
+        var w = toWorld(e.clientX, e.clientY); dragNode.x = w.x; dragNode.y = w.y; dragNode.vx = dragNode.vy = 0; moved = true; reheat(0.3);
       } else if (panning) {
         view.x += e.clientX - px; view.y += e.clientY - py; px = e.clientX; py = e.clientY; moved = true;
       } else {
@@ -132,8 +141,9 @@
           if (n.y == null) n.y = (n.ay != null ? n.ay : H / 2) + (Math.random() - 0.5) * 200;
           n.vx = n.vx || 0; n.vy = n.vy || 0;
         });
+        reheat(1);
       },
-      reheat: function () { nodes.forEach(function (n) { n.vx += (Math.random() - 0.5) * 6; n.vy += (Math.random() - 0.5) * 6; }); },
+      reheat: function () { reheat(1); },
       fit: function () { view = { x: 0, y: 0, k: 1 }; },
       stop: function () { cancelAnimationFrame(raf); },
     };

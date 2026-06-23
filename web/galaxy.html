@@ -78,9 +78,9 @@ const label = (p) => p.replace(/^pm-/, '').replace(/(^|-)(\w)/g, (_, d, c) => (d
       ax: cx + Math.cos(a) * ringR, ay: cy + Math.sin(a) * ringR };
   });
 
-  const nodes = skills.map((s) => {
+  const nodes = skills.map((s, i) => {
     const m = bmeta[s.plugin], score = s.eval ? s.eval.score : 0;
-    return { id: s.name, s, color: m.color, ax: m.ax, ay: m.ay,
+    return { id: s.name, s, color: m.color, ax: m.ax, ay: m.ay, seed: i * 1.7,
       r: 4 + (score ? (score - 3.5) * 4 : 1.5), trend: !!trending[s.name] };
   });
   const idset = new Set(nodes.map((n) => n.id));
@@ -121,7 +121,7 @@ const label = (p) => p.replace(/^pm-/, '').replace(/(^|-)(\w)/g, (_, d, c) => (d
     },
     drawNode(ctx, n, hovered, k) {
       const on = lit(n), t = performance.now() - t0;
-      const pulse = n.trend ? 1 + 0.28 * Math.sin(t / 320 + n.x) : 1;
+      const pulse = n.trend ? 1 + 0.14 * Math.sin(t / 1100 + n.seed) : 1;
       const rad = n.r * pulse;
       ctx.globalAlpha = on ? 1 : 0.12;
       // glow
