@@ -59,6 +59,7 @@
       </div>
       <div class="hero-cta">
         <a class="tool active" href="agent.html" style="text-decoration:none">✨ Try the Auto-Agent</a>
+        <a class="tool" href="galaxy.html" style="text-decoration:none">🌌 Explore the Galaxy</a>
         <a class="tool" href="#controls" style="text-decoration:none">▶ Browse skills ↓</a>
       </div>
     </div>
@@ -154,6 +155,15 @@
       </div>
 
       <div class="output-wrap" id="outputWrap" hidden>
+        <div id="runFlow" class="run-flow" hidden aria-hidden="true">
+          <span class="rf-stage">📝 Inputs</span>
+          <span class="rf-pipe"></span>
+          <span class="rf-stage rf-brain" id="rfBrain" hidden>🧠 Brain</span>
+          <span class="rf-pipe" id="rfBrainPipe" hidden></span>
+          <span class="rf-stage rf-skill" id="rfSkill">⚙️ Skill</span>
+          <span class="rf-pipe"></span>
+          <span class="rf-stage rf-out">✨ Output</span>
+        </div>
         <div class="output-toolbar">
           <span>Output</span>
           <div>

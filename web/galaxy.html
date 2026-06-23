@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>🌌 Skill Galaxy — explore 200+ skills as a living map</title>
+<meta name="description" content="The whole skills library as an interactive constellation: 207 skills clustered by profession, sized by eval score, linked by what pairs with what. Drag, zoom, click a star to run it." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  html, body { height: 100%; }
+  body { overflow: hidden; }
+  .galaxy-wrap { position: fixed; inset: 0; top: 0; }
+  #galaxyCanvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block;
+    background: radial-gradient(ellipse at 50% 40%, #11151d 0%, #0a0c11 70%, #07080b 100%); }
+  .galaxy-top { position: absolute; top: 14px; left: 16px; right: 16px; z-index: 5; display: flex;
+    gap: 12px; align-items: center; flex-wrap: wrap; pointer-events: none; }
+  .galaxy-top > * { pointer-events: auto; }
+  .galaxy-title { font-size: 18px; font-weight: 800; letter-spacing: -.01em; }
+  .galaxy-title small { font-weight: 500; color: var(--muted); font-size: 12px; }
+  #galaxySearch { padding: 8px 12px; min-width: 190px; background: rgba(20,24,31,.85); border: 1px solid var(--border);
+    border-radius: 9px; color: var(--text); font: inherit; font-size: 13px; backdrop-filter: blur(6px); }
+  .galaxy-back { padding: 8px 12px; background: rgba(20,24,31,.85); border: 1px solid var(--border); border-radius: 9px;
+    color: var(--text); font: inherit; font-size: 13px; text-decoration: none; backdrop-filter: blur(6px); }
+  .galaxy-hint { position: absolute; bottom: 12px; left: 16px; z-index: 5; font-size: 11.5px; color: var(--muted);
+    background: rgba(10,12,17,.6); padding: 5px 10px; border-radius: 8px; backdrop-filter: blur(4px); }
+  .legend { position: absolute; bottom: 12px; right: 12px; z-index: 5; max-width: 230px; max-height: 46vh; overflow: auto;
+    background: rgba(13,15,20,.82); border: 1px solid var(--border); border-radius: 10px; padding: 9px 11px;
+    font-size: 11px; backdrop-filter: blur(8px); display: flex; flex-wrap: wrap; gap: 4px 10px; }
+  .legend b { width: 100%; font-size: 10px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); margin-bottom: 2px; }
+  .legend span { display: inline-flex; align-items: center; gap: 5px; color: var(--text); cursor: pointer; opacity: .9; }
+  .legend i { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+  #gtip { position: fixed; z-index: 20; max-width: 280px; pointer-events: none; display: none;
+    background: rgba(13,15,20,.96); border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.5); }
+  #gtip .t { font-weight: 700; font-size: 13.5px; }
+  #gtip .b { font-size: 11px; color: var(--accent-2); margin: 2px 0 4px; }
+  #gtip .d { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  #gtip .e { font-size: 11px; color: #7bd88f; margin-top: 4px; }
+</style>
+</head>
+<body>
+<div class="galaxy-wrap">
+  <canvas id="galaxyCanvas"></canvas>
+  <div class="galaxy-top">
+    <a href="index.html" class="galaxy-back">← Playground</a>
+    <span class="galaxy-title">🌌 Skill Galaxy <small id="galaxyCount"></small></span>
+    <input id="galaxySearch" type="search" placeholder="Highlight a skill…" />
+  </div>
+  <div class="legend" id="legend"></div>
+  <div class="galaxy-hint">drag the void to pan · scroll to zoom · drag a star to fling it · click a star to run it</div>
+  <div id="gtip"></div>
+</div>
+
+<script src="forcegraph.js"></script>
+<script>
+const el = (id) => document.getElementById(id);
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+// Friendly bundle labels (strip the pm- prefix, title-case).
+const label = (p) => p.replace(/^pm-/, '').replace(/(^|-)(\w)/g, (_, d, c) => (d ? ' ' : '') + c.toUpperCase()).trim();
+
+(async function () {
+  let skills = [], trending = {};
+  try { skills = (await (await fetch('skills.json')).json()).skills; } catch (_) {}
+  try { trending = ((await (await fetch('trending.json', { cache: 'no-store' })).json()).skills || []).reduce((m, t) => (m[t.name] = true, m), {}); } catch (_) {}
+  if (!skills.length) { el('galaxyCount').textContent = '— could not load skills.json'; return; }
+
+  const canvas = el('galaxyCanvas');
+  const r = canvas.getBoundingClientRect(), W = r.width, H = r.height, cx = W / 2, cy = H / 2;
+
+  // One anchor + colour per bundle, arranged on a ring so each profession forms a constellation.
+  const bundles = [...new Set(skills.map((s) => s.plugin))];
+  const ringR = Math.min(W, H) * 0.34;
+  const bmeta = {};
+  bundles.forEach((b, i) => {
+    const a = (i / bundles.length) * Math.PI * 2 - Math.PI / 2;
+    bmeta[b] = { color: `hsl(${Math.round((i / bundles.length) * 360)}, 70%, 62%)`,
+      ax: cx + Math.cos(a) * ringR, ay: cy + Math.sin(a) * ringR };
+  });
+
+  const nodes = skills.map((s) => {
+    const m = bmeta[s.plugin], score = s.eval ? s.eval.score : 0;
+    return { id: s.name, s, color: m.color, ax: m.ax, ay: m.ay,
+      r: 4 + (score ? (score - 3.5) * 4 : 1.5), trend: !!trending[s.name] };
+  });
+  const idset = new Set(nodes.map((n) => n.id));
+  const seen = new Set(), links = [];
+  skills.forEach((s) => {
+    const add = (t) => { if (t && idset.has(t)) { const k = [s.name, t].sort().join('|'); if (!seen.has(k)) { seen.add(k); links.push({ source: s.name, target: t, same: skills.find((x) => x.name === t)?.plugin === s.plugin }); } } };
+    if (s.readsFirst) add(s.readsFirst);
+    (s.related || []).forEach(add);
+  });
+  el('galaxyCount').textContent = `· ${nodes.length} skills · ${bundles.length} professions · drag, zoom, explore`;
+
+  // Legend (click a bundle to spotlight it).
+  let spotlight = null;
+  el('legend').innerHTML = '<b>Professions</b>' + bundles.map((b) =>
+    `<span data-b="${esc(b)}"><i style="background:${bmeta[b].color}"></i>${esc(label(b))}</span>`).join('');
+  el('legend').querySelectorAll('span[data-b]').forEach((sp) =>
+    sp.addEventListener('click', () => { spotlight = (spotlight === sp.dataset.b) ? null : sp.dataset.b; }));
+
+  let query = '';
+  el('galaxySearch').addEventListener('input', (e) => { query = e.target.value.toLowerCase().trim(); });
+
+  const tip = el('gtip');
+  let t0 = performance.now();
+
+  function lit(n) {
+    if (query) return (n.s.title + ' ' + n.s.name + ' ' + n.s.description).toLowerCase().includes(query);
+    if (spotlight) return n.s.plugin === spotlight;
+    return true;
+  }
+
+  PMGraph.create(canvas, {
+    nodes, links, repulsion: 900, spring: 0.02, linkLen: 42, gravity: 0.06,
+    drawLink(ctx, a, b) {
+      const on = lit(a) && lit(b);
+      ctx.strokeStyle = on ? 'rgba(150,170,200,0.16)' : 'rgba(120,130,150,0.04)';
+      ctx.lineWidth = a.same && on ? 0.8 : 0.5;
+      ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke();
+    },
+    drawNode(ctx, n, hovered, k) {
+      const on = lit(n), t = performance.now() - t0;
+      const pulse = n.trend ? 1 + 0.28 * Math.sin(t / 320 + n.x) : 1;
+      const rad = n.r * pulse;
+      ctx.globalAlpha = on ? 1 : 0.12;
+      // glow
+      const grd = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, rad * 3.4);
+      grd.addColorStop(0, n.color); grd.addColorStop(0.35, n.color); grd.addColorStop(1, 'rgba(0,0,0,0)');
+      ctx.globalAlpha = on ? (n.trend ? 0.5 : 0.32) : 0.05;
+      ctx.fillStyle = grd; ctx.beginPath(); ctx.arc(n.x, n.y, rad * 3.4, 0, 7); ctx.fill();
+      // core
+      ctx.globalAlpha = on ? 1 : 0.12;
+      ctx.fillStyle = n.color; ctx.beginPath(); ctx.arc(n.x, n.y, rad, 0, 7); ctx.fill();
+      if (hovered) { ctx.strokeStyle = '#fff'; ctx.lineWidth = 1.5; ctx.stroke(); }
+      // label when zoomed in, hovered, or searching
+      if (on && (hovered || k > 1.7 || (query && rad))) {
+        ctx.globalAlpha = 1; ctx.fillStyle = hovered ? '#fff' : 'rgba(220,226,236,0.82)';
+        ctx.font = (hovered ? '600 ' : '') + '11px -apple-system,system-ui,sans-serif';
+        ctx.fillText(n.s.title, n.x + rad + 4, n.y + 3.5);
+      }
+      ctx.globalAlpha = 1;
+    },
+    onHover(n, x, y) {
+      if (!n) { tip.style.display = 'none'; return; }
+      tip.innerHTML = `<div class="t">${esc(n.s.title)}</div><div class="b">${esc(label(n.s.plugin))}${n.trend ? ' · 🔥 trending' : ''}</div><div class="d">${esc((n.s.summary || n.s.description || '').slice(0, 150))}</div>${n.s.eval ? `<div class="e">✅ ${n.s.eval.score}/5 eval</div>` : ''}`;
+      tip.style.display = 'block';
+      const tw = tip.offsetWidth, th = tip.offsetHeight;
+      tip.style.left = Math.min(x + 14, innerWidth - tw - 8) + 'px';
+      tip.style.top = Math.min(y + 14, innerHeight - th - 8) + 'px';
+    },
+    onClick(n) { location.href = 'index.html?skill=' + encodeURIComponent(n.id); },
+  });
+})();
+</script>
+</body>
+</html>

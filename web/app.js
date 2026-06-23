@@ -748,6 +748,7 @@ ${current.instructions}${ctxBlock}`;
   el('runBtn').disabled = true;
   el('stopBtn').hidden = false;
   if (lastRunUsedBrain) setStatus('🧠 Grounding this run in your brain…');
+  showRunFlow(true, (current && current.title) || 'Skill', lastRunUsedBrain);
   controller = new AbortController();
 
   // Single → #output. Compare-plain → 2 panes. Compare-models → one pane per model.
@@ -802,7 +803,20 @@ ${current.instructions}${ctxBlock}`;
   } finally {
     el('runBtn').disabled = false;
     el('stopBtn').hidden = true;
+    showRunFlow(false);
     controller = null;
+  }
+}
+
+// The animated "inputs → (brain) → skill → output" pipeline shown while a run streams.
+function showRunFlow(on, label, brainOn) {
+  const f = el('runFlow');
+  if (!f) return;
+  f.hidden = !on;
+  if (on) {
+    el('rfSkill').textContent = '⚙️ ' + (label || 'Skill');
+    el('rfBrain').hidden = !brainOn;
+    el('rfBrainPipe').hidden = !brainOn;
   }
 }
 

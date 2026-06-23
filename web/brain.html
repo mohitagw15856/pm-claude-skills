@@ -21,6 +21,21 @@
   .sect textarea { width: 100%; box-sizing: border-box; min-height: 90px; padding: 11px 13px; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font: inherit; font-size: 13.5px; line-height: 1.5; resize: vertical; }
   #savedMsg { font-size: 12px; color: var(--accent-2); }
   .file-load { cursor: pointer; }
+  .view-toggle { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .view-toggle button { background: var(--panel); border: 0; color: var(--muted); padding: 6px 12px; font: inherit; font-size: 13px; cursor: pointer; }
+  .view-toggle button.on { background: var(--accent); color: #fff; }
+  #graphView { position: relative; margin-top: 14px; }
+  #brainCanvas { width: 100%; height: 62vh; min-height: 380px; display: block; border: 1px solid var(--border);
+    border-radius: 12px; background: radial-gradient(ellipse at 50% 40%, #12161e 0%, #0b0d12 75%); }
+  .graph-empty { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; text-align: center;
+    color: var(--muted); font-size: 14px; padding: 20px; pointer-events: none; }
+  #btip { position: fixed; z-index: 20; max-width: 300px; pointer-events: none; display: none;
+    background: rgba(13,15,20,.96); border: 1px solid var(--border); border-radius: 10px; padding: 9px 12px; box-shadow: 0 8px 30px rgba(0,0,0,.5); }
+  #btip .t { font-size: 12.5px; line-height: 1.4; }
+  #btip .b { font-size: 11px; margin-top: 4px; text-transform: capitalize; }
+  .prov-legend { font-size: 11px; color: var(--muted); margin-top: 8px; display: flex; flex-wrap: wrap; gap: 12px; }
+  .prov-legend span { display: inline-flex; align-items: center; gap: 5px; }
+  .prov-legend i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
 </style>
 </head>
 <body>
@@ -34,6 +49,7 @@
   <p class="lead">Everything here is stored <strong>only in this browser</strong> (localStorage) and added to your skill runs as grounded memory. New to it? See the <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/BRAIN_QUICKSTART.md">5-minute Quickstart</a>. Edit a section and it saves as you type.</p>
 
   <div class="brain-bar">
+    <span class="view-toggle"><button id="viewEdit" class="on" type="button">✏️ Edit</button><button id="viewGraph" type="button">🕸️ Graph</button></span>
     <label title="When on, the playground prepends your brain to every skill run"><input type="checkbox" id="useBrain" /> Use my brain in every skill run</label>
     <span class="spacer"></span>
     <button id="seedBtn" class="ghost" type="button" title="Fill the sections with the example brain">Load example</button>
@@ -45,8 +61,23 @@
   <p class="legend">Provenance — tag facts by evidence strength (strongest → weakest): <code>[data]</code> <code>[interview]</code> <code>[external]</code> <code>[verbal]</code> <code>[hunch]</code>. Skills won't treat a <code>[hunch]</code> as settled.</p>
 
   <div id="sections"></div>
+
+  <div id="graphView" hidden>
+    <canvas id="brainCanvas"></canvas>
+    <div class="graph-empty" id="graphEmpty" hidden>Your brain is empty. Add facts in the Edit view (or hit “Load example”) and they’ll appear here as a living map.</div>
+    <div class="prov-legend">
+      <span><i style="background:#5ad19a"></i>data</span>
+      <span><i style="background:#57c7c7"></i>interview</span>
+      <span><i style="background:#6aa0ff"></i>external</span>
+      <span><i style="background:#e0a23c"></i>verbal</span>
+      <span><i style="background:#8b93a3"></i>hunch</span>
+      <span style="opacity:.7">· brighter = stronger evidence · drag to pan, scroll to zoom</span>
+    </div>
+  </div>
+  <div id="btip"></div>
 </div>
 
+<script src="forcegraph.js"></script>
 <script src="brain.js"></script>
 <script>
 const el = (id) => document.getElementById(id);
@@ -95,6 +126,98 @@ el('importFile').addEventListener('change', (e) => {
   const f = e.target.files[0]; if (!f) return;
   const r = new FileReader(); r.onload = () => { PMBrain.importMarkdown(String(r.result)); render(); flash('Imported'); }; r.readAsText(f); e.target.value = '';
 });
+
+// ---------- 🕸️ Brain Graph (Obsidian-style) ----------
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const PROV = { data: { c: '#5ad19a', a: 1 }, interview: { c: '#57c7c7', a: 1 }, external: { c: '#6aa0ff', a: .92 }, verbal: { c: '#e0a23c', a: .62 }, hunch: { c: '#8b93a3', a: .45 }, none: { c: '#aab3c2', a: .8 } };
+const slug = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+function buildGraph() {
+  const cv = el('brainCanvas').getBoundingClientRect();
+  const W = cv.width || 700, H = cv.height || 420, cx = W / 2, cy = H / 2;
+  const secs = PMBrain.SECTIONS.filter((s) => PMBrain.get(s).trim());
+  const nodes = [], links = [], byLabel = {};
+  const ringR = Math.min(W, H) * 0.3, hub = {};
+  secs.forEach((s, i) => {
+    const a = (i / secs.length) * Math.PI * 2 - Math.PI / 2;
+    const hx = cx + Math.cos(a) * ringR, hy = cy + Math.sin(a) * ringR;
+    hub[s] = { x: hx, y: hy };
+    nodes.push({ id: 'hub:' + s, hub: true, label: s, r: 11, color: '#c9d2de', alpha: 1, ax: hx, ay: hy });
+  });
+  secs.forEach((s) => {
+    PMBrain.get(s).split('\n').map((l) => l.trim()).filter((l) => l && l !== '_(empty)_').forEach((line, idx) => {
+      const m = line.match(/\[(data|interview|external|verbal|hunch)\]/i);
+      const prov = m ? m[1].toLowerCase() : 'none';
+      const text = line.replace(/^[-*#]+\s*/, '').replace(/\[(data|interview|external|verbal|hunch)\]\s*/ig, '').trim();
+      const id = s + ':' + idx, p = PROV[prov];
+      nodes.push({ id, sec: s, prov, text, raw: line, r: 5.5, color: p.c, alpha: p.a, ax: hub[s].x, ay: hub[s].y });
+      links.push({ source: 'hub:' + s, target: id, hub: true });
+      byLabel[slug(text).slice(0, 30)] = id;
+    });
+  });
+  nodes.filter((n) => n.raw).forEach((n) => {
+    const re = /\[\[([^\]]+)\]\]/g; let m;
+    while ((m = re.exec(n.raw))) {
+      const want = slug(m[1]);
+      const key = Object.keys(byLabel).find((k) => k && (k.startsWith(want) || want.startsWith(k)));
+      if (key && byLabel[key] !== n.id) links.push({ source: n.id, target: byLabel[key] });
+    }
+  });
+  return { nodes, links };
+}
+
+function drawNode(ctx, n, hovered, k) {
+  ctx.globalAlpha = n.alpha == null ? 1 : n.alpha;
+  if (n.hub) {
+    ctx.fillStyle = n.color; ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, 7); ctx.fill();
+    ctx.globalAlpha = 1; ctx.fillStyle = '#0b0d12'; ctx.font = '700 9px system-ui'; ctx.textAlign = 'center';
+    ctx.fillText(n.label.slice(0, 3).toUpperCase(), n.x, n.y + 3); ctx.textAlign = 'left';
+    ctx.fillStyle = 'rgba(220,226,236,.92)'; ctx.font = '600 11px system-ui'; ctx.fillText(n.label, n.x + n.r + 4, n.y + 3.5);
+    return;
+  }
+  const grd = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r * 3); grd.addColorStop(0, n.color); grd.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.globalAlpha = (n.alpha || 1) * 0.3; ctx.fillStyle = grd; ctx.beginPath(); ctx.arc(n.x, n.y, n.r * 3, 0, 7); ctx.fill();
+  ctx.globalAlpha = n.alpha || 1; ctx.fillStyle = n.color; ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, 7); ctx.fill();
+  if (n.prov === 'hunch') { ctx.setLineDash([2, 2]); ctx.strokeStyle = n.color; ctx.lineWidth = 1; ctx.stroke(); ctx.setLineDash([]); }
+  if (hovered) { ctx.globalAlpha = 1; ctx.strokeStyle = '#fff'; ctx.lineWidth = 1.5; ctx.stroke(); }
+  if (hovered || k > 1.8) { ctx.globalAlpha = 1; ctx.fillStyle = hovered ? '#fff' : 'rgba(210,218,230,.8)'; ctx.font = '10px system-ui'; ctx.fillText(n.text.slice(0, 42), n.x + n.r + 4, n.y + 3.5); }
+  ctx.globalAlpha = 1;
+}
+function drawLink(ctx, a, b, l) {
+  ctx.strokeStyle = l.hub ? 'rgba(150,160,180,0.12)' : 'rgba(120,170,255,0.32)';
+  ctx.lineWidth = l.hub ? 0.6 : 1;
+  if (!l.hub) ctx.setLineDash([3, 3]);
+  ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); ctx.setLineDash([]);
+}
+function onHover(n, x, y) {
+  const tip = el('btip');
+  if (!n || n.hub) { tip.style.display = 'none'; return; }
+  tip.innerHTML = `<div class="t">${esc(n.text)}</div><div class="b" style="color:${n.color}">[${n.prov === 'none' ? 'untagged' : n.prov}] · ${esc(n.sec)}</div>`;
+  tip.style.display = 'block';
+  tip.style.left = Math.min(x + 14, innerWidth - tip.offsetWidth - 8) + 'px';
+  tip.style.top = Math.min(y + 14, innerHeight - tip.offsetHeight - 8) + 'px';
+}
+
+let graph = null;
+function renderGraph() {
+  if (graph) { graph.stop(); graph = null; }
+  const d = buildGraph();
+  el('graphEmpty').hidden = d.nodes.some((n) => !n.hub);
+  graph = PMGraph.create(el('brainCanvas'), { nodes: d.nodes, links: d.links, repulsion: 1400, spring: 0.03, linkLen: 38, gravity: 0.08, drawNode, drawLink, onHover, onClick: (n) => { if (n && !n.hub) showView(false); } });
+}
+function showView(graphOn) {
+  el('viewGraph').classList.toggle('on', graphOn);
+  el('viewEdit').classList.toggle('on', !graphOn);
+  el('sections').style.display = graphOn ? 'none' : '';
+  el('graphView').hidden = !graphOn;
+  if (graphOn) renderGraph();
+  else if (graph) { graph.stop(); graph = null; el('btip').style.display = 'none'; }
+}
+el('viewEdit').addEventListener('click', () => showView(false));
+el('viewGraph').addEventListener('click', () => showView(true));
+// Reflect changes saved from the playground (Save to Brain) or another tab, live.
+window.addEventListener('storage', (e) => { if (e.key === PMBrain.STORE && !el('graphView').hidden) renderGraph(); });
+
 render();
 </script>
 <script src="nav.js"></script>

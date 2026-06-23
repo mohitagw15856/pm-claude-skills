@@ -27,6 +27,7 @@
   }
   var TOOLS = [
     ['index.html', '▶ Playground'],
+    ['galaxy.html', '🌌 Galaxy'],
     ['ask.html', '❓ Ask'],
     ['canvas.html', '🧩 Workflow Canvas'],
     ['agent.html', '✨ Auto-Agent'],

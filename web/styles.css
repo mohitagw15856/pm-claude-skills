@@ -364,6 +364,21 @@ input:focus, select:focus, textarea:focus { outline: none; box-shadow: 0 0 0 3px
 }
 .sample-banner .sample-input { display: inline-block; margin-top: 5px; font-size: 12px; opacity: .85; }
 
+/* ---------- Live run-flow animation ---------- */
+.run-flow { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; padding: 10px 12px;
+  background: var(--panel); border: 1px solid var(--border); border-radius: 10px; }
+.run-flow .rf-stage { font-size: 12px; font-weight: 600; padding: 5px 10px; border-radius: 8px;
+  background: var(--panel-2); border: 1px solid var(--border); white-space: nowrap; }
+.run-flow .rf-skill { border-color: var(--accent); color: var(--accent-2); }
+.run-flow .rf-out { animation: rfpulse 1.2s ease-in-out infinite; }
+.run-flow .rf-brain { border-color: #6f9d7f; color: #9ad8a8; }
+.run-flow .rf-pipe { flex: 1; height: 3px; min-width: 20px; border-radius: 2px; opacity: .75;
+  background: linear-gradient(90deg, var(--accent) 0%, transparent 50%, var(--accent) 100%);
+  background-size: 200% 100%; animation: rfflow 1s linear infinite; }
+@keyframes rfflow { from { background-position: 200% 0; } to { background-position: 0 0; } }
+@keyframes rfpulse { 0%, 100% { opacity: .5; } 50% { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .run-flow .rf-pipe, .run-flow .rf-out { animation: none; } }
+
 /* ---------- Sample-output gallery ---------- */
 .sample-card {
   max-width: 880px; margin: 0 auto 14px; background: var(--panel);

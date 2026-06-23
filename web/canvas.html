@@ -19,7 +19,16 @@
   .palette-item .b { font-size: 10px; color: var(--accent-2); text-transform: uppercase; letter-spacing: .03em; }
   .pipe { min-height: 200px; }
   .kickoff { width: 100%; box-sizing: border-box; padding: 11px 13px; border-radius: 10px; background: var(--panel); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 14px; margin-bottom: 6px; }
-  .arrow { text-align: center; color: var(--muted); font-size: 18px; line-height: 1.1; }
+  .arrow { position: relative; height: 24px; text-align: center; line-height: 1.1; }
+  .arrow .glyph { color: var(--muted); font-size: 18px; }
+  .arrow.flowing .glyph { visibility: hidden; }
+  .arrow.flowing::before { content: ''; position: absolute; left: 50%; top: 2px; transform: translateX(-50%);
+    width: 3px; height: 20px; border-radius: 2px; background: linear-gradient(180deg, var(--accent), transparent, var(--accent));
+    background-size: 100% 200%; animation: wireflow .8s linear infinite; }
+  @keyframes wireflow { from { background-position: 0 200%; } to { background-position: 0 0; } }
+  .node.running { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 0 20px rgba(217,119,87,.22); }
+  .node.done .node-num { background: #5ad19a; color: #0b0d12; }
+  @media (prefers-reduced-motion: reduce) { .arrow.flowing::before { animation: none; } }
   .node { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 12px 14px; }
   .node-head { display: flex; align-items: center; gap: 8px; }
   .node-num { background: var(--accent); color: #0f1115; font-weight: 700; font-size: 12px; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; }
@@ -115,12 +124,13 @@ function renderPipe(){
     node.querySelector('[data-down]').onclick=()=>{ if(i<PIPE.length-1){[PIPE[i+1],PIPE[i]]=[PIPE[i],PIPE[i+1]];renderPipe();} };
     node.querySelector('[data-rm]').onclick=()=>{ PIPE.splice(i,1);renderPipe(); };
     pipe.appendChild(node);
-    if(i<PIPE.length-1){ const a=document.createElement('div');a.className='arrow';a.textContent='↓';pipe.appendChild(a); }
+    if(i<PIPE.length-1){ const a=document.createElement('div');a.className='arrow';a.id='arrow-'+i;a.innerHTML='<span class="glyph">↓</span>';pipe.appendChild(a); }
   });
 }
 
 async function run(){
-  const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your '+PMProviders.current().name+' key first.',true);
+  const key=el('apiKey').value.trim(); const local=PMProviders.current().local;
+  if(!key&&!local) return setStatus('Enter your '+PMProviders.current().name+' key first — or pick the In-browser (no key) provider.',true);
   if(!PIPE.length) return setStatus('Add at least one skill.',true);
   const kickoff=el('kickoff').value.trim(); if(!kickoff) return setStatus('Add a kickoff brief.',true);
   if(window.pmTrack) pmTrack('canvas/run/'+PIPE.length+'-skills');
@@ -130,16 +140,22 @@ async function run(){
     for(let i=0;i<PIPE.length;i++){
       const s=SKILLS.find(x=>x.name===PIPE[i]); if(!s) continue;
       setStatus(`Running step ${i+1}/${PIPE.length}: ${s.title}…`);
+      const node=el('node-'+i); if(node) node.classList.add('running');
+      if(i>0) el('arrow-'+(i-1))?.classList.add('flowing'); // data flowing from the previous step
       const out=el('out-'+i); out.hidden=false; out.innerHTML='';
       const system=s.instructions+'\n\n---\nExecute this skill now and produce the complete output. Do not ask questions; note any assumptions.';
       const userMsg = i===0
         ? kickoff
         : `Overall goal:\n${kickoff}\n\nBuild directly on the upstream work below (carry its decisions forward):\n\n${upstream}`;
       upstream = await stream({key,model:el('model').value,system,userMsg,node:out,signal:controller.signal});
+      if(i>0) el('arrow-'+(i-1))?.classList.remove('flowing');
+      if(node){ node.classList.remove('running'); node.classList.add('done'); }
     }
     setStatus('Done — pipeline complete.');
   }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
-  finally{ el('runBtn').disabled=false; el('stopBtn').hidden=true; controller=null; }
+  finally{ el('runBtn').disabled=false; el('stopBtn').hidden=true; controller=null;
+    document.querySelectorAll('.arrow.flowing').forEach(a=>a.classList.remove('flowing'));
+    document.querySelectorAll('.node.running').forEach(n=>n.classList.remove('running')); }
 }
 
 async function stream({key,model,system,userMsg,node,signal}){
