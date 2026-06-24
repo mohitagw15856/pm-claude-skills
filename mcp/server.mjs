@@ -81,46 +81,146 @@ const WORKFLOWS = loadWorkflows();
 const wfById = new Map(WORKFLOWS.map((w) => [w.id, w]));
 
 // ── Tools ───────────────────────────────────────────────────────────────────
+// Reusable output-schema fragments (so tools declare structured output, not just text).
+const SKILL_ITEM = {
+  type: 'object',
+  properties: {
+    name: { type: 'string', description: 'The skill id (use with get_skill).' },
+    title: { type: 'string', description: 'Human-readable title.' },
+    tier: { type: 'string', description: 'Maturity tier: production | stable | experimental.' },
+    description: { type: 'string', description: 'One-line summary of what the skill does.' },
+  },
+  required: ['name', 'title', 'description'],
+};
+// All tools are read-only lookups over the bundled library — non-destructive, idempotent, closed-world.
+const READONLY = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false };
+
 const TOOLS = [
   {
     name: 'list_skills',
-    description: 'List available professional skills (name, title, tier, one-line description). Optionally filter by tier.',
+    title: 'List skills',
+    description: 'List available professional skills (name, title, tier, one-line description). Optionally filter by maturity tier.',
     inputSchema: {
       type: 'object',
-      properties: { tier: { type: 'string', enum: ['production', 'stable', 'experimental'], description: 'Only skills in this maturity tier.' } },
+      additionalProperties: false,
+      properties: { tier: { type: 'string', enum: ['production', 'stable', 'experimental'], description: 'Optional. Only return skills in this maturity tier.' } },
     },
+    outputSchema: {
+      type: 'object',
+      properties: { count: { type: 'integer', description: 'Number of skills returned.' }, skills: { type: 'array', description: 'The matching skills.', items: SKILL_ITEM } },
+      required: ['count', 'skills'],
+    },
+    annotations: { title: 'List skills', ...READONLY },
   },
   {
     name: 'search_skills',
-    description: 'Search skills by keyword across name, description, and body. Returns the best matches.',
+    title: 'Search skills',
+    description: 'Search skills by keyword across name, description, and body. Returns the best-matching skills, ranked.',
     inputSchema: {
       type: 'object',
-      properties: { query: { type: 'string', description: 'Keywords describing the task, e.g. "prioritise backlog" or "customer churn".' }, limit: { type: 'number', description: 'Max results (default 10).' } },
+      additionalProperties: false,
+      properties: {
+        query: { type: 'string', description: 'Keywords describing the task, e.g. "prioritise backlog" or "customer churn".' },
+        limit: { type: 'integer', minimum: 1, maximum: 50, description: 'Maximum number of results to return (default 10).' },
+      },
       required: ['query'],
     },
+    outputSchema: {
+      type: 'object',
+      properties: { query: { type: 'string', description: 'The query that was searched.' }, matches: { type: 'array', description: 'Matching skills, best first.', items: SKILL_ITEM } },
+      required: ['query', 'matches'],
+    },
+    annotations: { title: 'Search skills', ...READONLY },
   },
   {
     name: 'get_skill',
+    title: 'Get a skill',
     description: 'Get the full instructions (the SKILL.md body) for one skill by name. Apply these instructions to the user\'s task.',
-    inputSchema: { type: 'object', properties: { name: { type: 'string', description: 'The exact skill name, e.g. "rice-prioritisation".' } }, required: ['name'] },
+    inputSchema: {
+      type: 'object',
+      additionalProperties: false,
+      properties: { name: { type: 'string', description: 'The exact skill id, e.g. "rice-prioritisation" (from list_skills / search_skills).' } },
+      required: ['name'],
+    },
+    outputSchema: {
+      type: 'object',
+      properties: { name: { type: 'string', description: 'The skill id.' }, title: { type: 'string', description: 'Human-readable title.' }, instructions: { type: 'string', description: 'The full SKILL.md body to apply to the task.' } },
+      required: ['name', 'instructions'],
+    },
+    annotations: { title: 'Get a skill', ...READONLY },
   },
   {
     name: 'list_workflows',
+    title: 'List workflow recipes',
     description: 'List workflow recipes — named chains that run several skills in sequence, passing each output forward (e.g. ship-a-feature, close-the-quarter). Use when a task spans multiple steps end to end.',
-    inputSchema: { type: 'object', properties: {} },
+    inputSchema: { type: 'object', additionalProperties: false, properties: {} },
+    outputSchema: {
+      type: 'object',
+      properties: {
+        workflows: {
+          type: 'array', description: 'Available workflow recipes.',
+          items: {
+            type: 'object',
+            properties: {
+              id: { type: 'string', description: 'Recipe id (use with get_workflow).' },
+              name: { type: 'string', description: 'Recipe name.' },
+              lifecycle: { type: 'string', description: 'The lifecycle stages it spans.' },
+              summary: { type: 'string', description: 'What the recipe accomplishes.' },
+              skills: { type: 'array', items: { type: 'string' }, description: 'The ordered skill ids in the chain.' },
+            },
+            required: ['id', 'name', 'skills'],
+          },
+        },
+      },
+      required: ['workflows'],
+    },
+    annotations: { title: 'List workflow recipes', ...READONLY },
   },
   {
     name: 'get_workflow',
+    title: 'Get a workflow recipe',
     description: 'Get one workflow recipe by id: the ordered list of skills to run and what each produces. Run each step in order with get_skill, carrying every output forward as context for the next.',
-    inputSchema: { type: 'object', properties: { id: { type: 'string', description: 'The workflow id, e.g. "ship-a-feature".' } }, required: ['id'] },
+    inputSchema: {
+      type: 'object',
+      additionalProperties: false,
+      properties: { id: { type: 'string', description: 'The workflow id, e.g. "ship-a-feature" (from list_workflows).' } },
+      required: ['id'],
+    },
+    outputSchema: {
+      type: 'object',
+      properties: {
+        id: { type: 'string', description: 'Recipe id.' },
+        name: { type: 'string', description: 'Recipe name.' },
+        lifecycle: { type: 'string', description: 'The lifecycle stages it spans.' },
+        summary: { type: 'string', description: 'What the recipe accomplishes.' },
+        steps: {
+          type: 'array', description: 'Ordered steps; run each with get_skill, carrying output forward.',
+          items: {
+            type: 'object',
+            properties: {
+              skill: { type: 'string', description: 'The skill id to run at this step.' },
+              produces: { type: 'string', description: 'What this step produces.' },
+              passes: { type: ['string', 'null'], description: 'What to carry forward to the next step.' },
+            },
+            required: ['skill'],
+          },
+        },
+      },
+      required: ['id', 'name', 'steps'],
+    },
+    annotations: { title: 'Get a workflow recipe', ...READONLY },
   },
 ];
+
+// Each tool returns { text, structured }: human-readable text content (back-compat) plus a
+// structured object matching the tool's outputSchema.
+const skillItem = (s) => ({ name: s.name, title: s.title, tier: s.tier, description: s.description });
 
 function runTool(name, args = {}) {
   if (name === 'list_skills') {
     const list = SKILLS.filter((s) => !args.tier || s.tier === args.tier);
-    const text = list.map((s) => `- ${s.name} [${s.tier}] — ${s.description}`).join('\n');
-    return `${list.length} skills:\n${text}`;
+    const text = `${list.length} skills:\n` + list.map((s) => `- ${s.name} [${s.tier}] — ${s.description}`).join('\n');
+    return { text, structured: { count: list.length, skills: list.map(skillItem) } };
   }
   if (name === 'search_skills') {
     const q = String(args.query || '').toLowerCase().trim();
@@ -136,27 +236,27 @@ function runTool(name, args = {}) {
       }
       return { s, score };
     }).filter((x) => x.score > 0).sort((a, b) => b.score - a.score).slice(0, Math.max(1, Math.min(args.limit || 10, 50)));
-    if (!scored.length) return `No skills matched "${args.query}".`;
-    return scored.map(({ s }) => `- ${s.name} [${s.tier}] — ${s.description}`).join('\n');
+    const matches = scored.map(({ s }) => skillItem(s));
+    const text = matches.length ? matches.map((s) => `- ${s.name} [${s.tier}] — ${s.description}`).join('\n') : `No skills matched "${args.query}".`;
+    return { text, structured: { query: String(args.query || ''), matches } };
   }
   if (name === 'get_skill') {
     const s = byName.get(String(args.name || '').trim());
     if (!s) throw new Error(`Unknown skill "${args.name}". Use search_skills or list_skills to find one.`);
-    return s.body;
+    return { text: s.body, structured: { name: s.name, title: s.title, instructions: s.body } };
   }
   if (name === 'list_workflows') {
-    if (!WORKFLOWS.length) return 'No workflow recipes are available in this install.';
-    return WORKFLOWS.map((w) =>
-      `- ${w.id} (${w.lifecycle}) — ${w.summary}\n    chain: ${w.steps.map((s) => s.skill).join(' → ')}`
-    ).join('\n');
+    const text = WORKFLOWS.length
+      ? WORKFLOWS.map((w) => `- ${w.id} (${w.lifecycle}) — ${w.summary}\n    chain: ${w.steps.map((s) => s.skill).join(' → ')}`).join('\n')
+      : 'No workflow recipes are available in this install.';
+    return { text, structured: { workflows: WORKFLOWS.map((w) => ({ id: w.id, name: w.name, lifecycle: w.lifecycle, summary: w.summary, skills: w.steps.map((s) => s.skill) })) } };
   }
   if (name === 'get_workflow') {
     const w = wfById.get(String(args.id || '').trim());
     if (!w) throw new Error(`Unknown workflow "${args.id}". Use list_workflows to see available recipes.`);
-    const steps = w.steps.map((s, i) =>
-      `${i + 1}. get_skill("${s.skill}") → produces ${s.produces}.${s.passes ? ` Pass forward: ${s.passes}.` : ''}`
-    ).join('\n');
-    return `Workflow: ${w.name} (${w.lifecycle})\n${w.summary}\n\nRun these in order, carrying each output forward as context for the next:\n${steps}`;
+    const steps = w.steps.map((s, i) => `${i + 1}. get_skill("${s.skill}") → produces ${s.produces}.${s.passes ? ` Pass forward: ${s.passes}.` : ''}`).join('\n');
+    const text = `Workflow: ${w.name} (${w.lifecycle})\n${w.summary}\n\nRun these in order, carrying each output forward as context for the next:\n${steps}`;
+    return { text, structured: { id: w.id, name: w.name, lifecycle: w.lifecycle, summary: w.summary, steps: w.steps.map((s) => ({ skill: s.skill, produces: s.produces, passes: s.passes ?? null })) } };
   }
   throw new Error(`Unknown tool: ${name}`);
 }
@@ -175,7 +275,17 @@ function handle(msg) {
       return reply(id, {
         protocolVersion: (params && params.protocolVersion) || '2024-11-05',
         capabilities: { tools: {}, prompts: {}, resources: {} },
-        serverInfo: { name: SERVER_NAME, version: VERSION },
+        serverInfo: {
+          name: SERVER_NAME,
+          title: 'PM Skills — Professional Agent Skills',
+          version: VERSION,
+          websiteUrl: 'https://mohitagw15856.github.io/pm-claude-skills/',
+          icons: [{ src: 'https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/icon.svg', mimeType: 'image/svg+xml', sizes: ['any'] }],
+        },
+        instructions:
+          'A library of professional Agent Skills (PRDs, launches, postmortems, compliance, growth, and more) plus multi-skill workflow recipes. ' +
+          'To answer a professional task: call search_skills (or list_skills) to find the right skill, then get_skill to fetch its instructions and apply them to the user\'s input. ' +
+          'For multi-step work that spans discovery → decision → build → ship, use list_workflows / get_workflow and run the chained skills in order, carrying each output forward.',
       });
     case 'tools/list':
       return reply(id, { tools: TOOLS });
@@ -211,8 +321,8 @@ function handle(msg) {
     case 'tools/call': {
       const toolName = params && params.name;
       try {
-        const text = runTool(toolName, (params && params.arguments) || {});
-        return reply(id, { content: [{ type: 'text', text }] });
+        const { text, structured } = runTool(toolName, (params && params.arguments) || {});
+        return reply(id, { content: [{ type: 'text', text }], structuredContent: structured });
       } catch (e) {
         return reply(id, { content: [{ type: 'text', text: `Error: ${e.message}` }], isError: true });
       }
