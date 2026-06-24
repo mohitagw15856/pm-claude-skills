@@ -40,6 +40,16 @@
 
 ### ⭐ If this saves you time, [star the repo](https://github.com/mohitagw15856/pm-claude-skills) — it's the #1 way to help others find it.
 
+## ⚡ Use it in 30 seconds — pick one
+
+| You want to… | Do this |
+|---|---|
+| **Just try it** (no install) | Open the **[Playground](https://mohitagw15856.github.io/pm-claude-skills/)** → pick a skill → run it in your browser. |
+| **Use it in Claude Code / Cursor / Codex** | `npx pm-claude-skills add --agent claude` &nbsp;*(or `cursor`, `codex`, `windsurf`…)* |
+| **Have it in every AI session** | `claude mcp add pm-skills -- npx -y pm-claude-skills-mcp` |
+
+*Not sure? Start with the Playground.* This is a **CLI, not a library** — you don't need `npm install`; `npx pm-claude-skills …` always runs the latest. Browse everything first with `npx pm-claude-skills list`.
+
 > **PM stands for Professional, not just Product Management.**
 > 232 professional skills + 4 agent templates across 31 bundles covering 23 professions. Built for Claude Code — and now portable to ChatGPT, Gemini, and Hermes Agent. Built by a PM, used by everyone.
 
