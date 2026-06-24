@@ -1,0 +1,63 @@
+---
+description: "Map where you are against the next level and build a concrete plan to close the gap. Use when asked to map a career ladder, find the gap to the next level, build a development/growth plan, or figure out what to work on to get promoted. Produces a level-gap map — current vs. target competencies side by side, the specific gaps, and a prioritised 1–2 quarter plan of evidence-generating projects to close them."
+globs:
+alwaysApply: false
+---
+
+# Career Ladder Map Skill
+
+"How do I get to the next level?" usually gets a vague answer. This skill makes it concrete: lay your
+current demonstrated competencies next to the **target** level's, find the real gaps, and turn each into
+a specific project that will *generate the evidence* a [`promotion-packet`](../promotion-packet/SKILL.md)
+needs. A plan, not a pep talk.
+
+## Required Inputs
+
+Ask for these only if they aren't already provided:
+
+- **Current level → target level**, and the **ladder/rubric** for both (the competencies each expects).
+- **Your current evidence** — what you've demonstrated and where (a [`brag-doc`](../brag-doc/SKILL.md) helps).
+- **Constraints** — your role's scope, time, and what opportunities are realistically available.
+
+## Output Format
+
+### Career Ladder Map — [name], [current] → [target]
+
+**1. Side-by-side** — each competency at current vs. target, with your honest status:
+
+| Competency | Target-level bar | Where I am now | Gap |
+|---|---|---|---|
+| e.g. Scope of influence | multi-team | strong within my team | 🟡 partial |
+
+Status: 🟢 already demonstrating · 🟡 partial / inconsistent · 🔴 not yet.
+
+**2. The real gaps** — the 2–4 competencies (🔴/🟡) that actually stand between you and the level. Be honest — a flattering map wastes quarters.
+
+**3. Evidence-generating plan** — for each gap, a **specific project** that would create the proof, plus how you'd get the opportunity (ask your manager, volunteer, scope it yourself):
+
+| Gap | Project that proves it | Opportunity / ask | By when |
+|---|---|---|---|
+
+**4. Sequencing** — what to focus on this quarter vs. next (you can't close every gap at once; pick the highest-signal ones).
+
+**5. Manager alignment** — what to confirm with your manager so you're calibrated on the *same* bar (the #1 cause of surprise "not yet"s).
+
+## Quality Checks
+
+- [ ] Both levels are mapped against the actual rubric, not a generic guess
+- [ ] Your current status is honest (🟢/🟡/🔴), not aspirational
+- [ ] Each gap has a **specific project** that generates evidence — not "get better at X"
+- [ ] The plan names how you'll get the opportunity, not just the goal
+- [ ] It's sequenced (this quarter vs. next), and includes a manager-calibration step
+
+## Anti-Patterns
+
+- [ ] Do not produce a flattering self-assessment — an honest 🔴 you can fix beats a 🟢 the committee disagrees with
+- [ ] Do not list goals without the project that proves them — "show more leadership" isn't a plan
+- [ ] Do not try to close every gap at once — sequence by signal; depth beats breadth
+- [ ] Do not skip manager calibration — closing gaps against a bar your manager doesn't share leads to a surprise "not yet"
+- [ ] Do not confuse activity with evidence — the project has to produce a demonstrable, level-appropriate outcome
+
+## Based On
+
+Career-ladder / competency-framework practice — gap analysis against the target level and evidence-led development planning.

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-career",
+  "version": "1.0.0",
+  "description": "Career & growth skills for advocating for yourself: Brag Doc, Self-Review, Promotion Packet, 1:1 Prep, Career Ladder Map, and Salary Negotiation (with a total-comp comparison script).",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["career", "promotion", "performance-review", "brag-doc", "salary-negotiation", "1-on-1", "growth", "professional-development"]
+}

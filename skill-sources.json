@@ -1,6 +1,9 @@
 {
   "_comment": "Framework attribution: the canonical method/author each skill encodes. Surfaced as a 'Based on' line on skill pages, the playground, and the catalog. Only skills with a genuine, well-known source are listed; the rest are intentionally omitted rather than given a fabricated citation.",
   "sources": {
+    "brag-doc": "Brag-document practice (Julia Evans)",
+    "one-on-one-prep": "High Output Management (Andy Grove)",
+    "salary-negotiation": "Getting to Yes — Fisher & Ury (BATNA, interests over positions)",
     "decision-memo": "Amazon-style narrative memos + one-way / two-way door decisions",
     "strategy-memo": "Good Strategy / Bad Strategy — Richard Rumelt (diagnosis · guiding policy · coherent action)",
     "soc2-readiness": "AICPA SOC 2 Trust Services Criteria",
