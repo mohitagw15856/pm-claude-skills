@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "29.0.0",
-  "description": "PM stands for Professional, not just Product Management. 207 Claude Skills + 4 agent templates across 28 bundles covering 21 professions — engineering, customer success, legal, finance, HR, sales, design, Figma, marketing, social media, writers, founders/startups, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
+  "version": "29.1.0",
+  "description": "PM stands for Professional, not just Product Management. 222 Claude Skills + 4 agent templates across 30 bundles covering 22 professions — engineering, customer success, legal, finance, HR, sales, design, Figma, marketing, social media, writers, founders/startups, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
