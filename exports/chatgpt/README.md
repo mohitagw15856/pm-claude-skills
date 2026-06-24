@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-222 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+228 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -60,6 +60,7 @@
 | Data Analysis Standard | `pm-analytics` | `pm-analytics/data-analysis-standard/SYSTEM_PROMPT.md` |
 | Data Pipeline Spec | `pm-data` | `pm-data/data-pipeline-spec/SYSTEM_PROMPT.md` |
 | Data Quality Audit | `pm-data` | `pm-data/data-quality-audit/SYSTEM_PROMPT.md` |
+| Data Retention Policy | `pm-compliance` | `pm-compliance/data-retention-policy/SYSTEM_PROMPT.md` |
 | Database Migration Plan | `pm-engineering` | `pm-engineering/database-migration-plan/SYSTEM_PROMPT.md` |
 | Database Schema Design | `pm-engineering` | `pm-engineering/database-schema-design/SYSTEM_PROMPT.md` |
 | Dataset Datasheet | `pm-ai` | `pm-ai/dataset-datasheet/SYSTEM_PROMPT.md` |
@@ -100,11 +101,13 @@
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/SYSTEM_PROMPT.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/SYSTEM_PROMPT.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/SYSTEM_PROMPT.md` |
+| GDPR Compliance | `pm-compliance` | `pm-compliance/gdpr-compliance/SYSTEM_PROMPT.md` |
 | Git Troubleshooter | `pm-engineering` | `pm-engineering/git-troubleshooter/SYSTEM_PROMPT.md` |
 | Go-To-Market | `pm-gtm` | `pm-gtm/go-to-market/SYSTEM_PROMPT.md` |
 | Go-to-Market Planner | `pm-delivery` | `pm-delivery/go-to-market-planner/SYSTEM_PROMPT.md` |
 | Grant Proposal | `pm-cross` | `pm-cross/grant-proposal/SYSTEM_PROMPT.md` |
 | Growth Experiment Backlog | `pm-growth` | `pm-growth/growth-experiment-backlog/SYSTEM_PROMPT.md` |
+| HIPAA Safeguards | `pm-compliance` | `pm-compliance/hipaa-safeguards/SYSTEM_PROMPT.md` |
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/SYSTEM_PROMPT.md` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/SYSTEM_PROMPT.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/SYSTEM_PROMPT.md` |
@@ -115,6 +118,7 @@
 | Investor Cold Email | `pm-founders` | `pm-founders/investor-cold-email/SYSTEM_PROMPT.md` |
 | Investor Pitch Deck | `pm-finance` | `pm-finance/investor-pitch-deck/SYSTEM_PROMPT.md` |
 | Investor Update | `pm-business` | `pm-business/investor-update/SYSTEM_PROMPT.md` |
+| ISO 27001 ISMS | `pm-compliance` | `pm-compliance/iso-27001-isms/SYSTEM_PROMPT.md` |
 | Job Application | `pm-business` | `pm-business/job-application/SYSTEM_PROMPT.md` |
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/SYSTEM_PROMPT.md` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/SYSTEM_PROMPT.md` |
@@ -195,6 +199,7 @@
 | Short-Form Script | `pm-creator` | `pm-creator/short-form-script/SYSTEM_PROMPT.md` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/SYSTEM_PROMPT.md` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/SYSTEM_PROMPT.md` |
+| SOC 2 Readiness | `pm-compliance` | `pm-compliance/soc2-readiness/SYSTEM_PROMPT.md` |
 | Social Ad Campaign | `pm-social` | `pm-social/social-ad-campaign/SYSTEM_PROMPT.md` |
 | Social Media Audit | `pm-social` | `pm-social/social-media-audit/SYSTEM_PROMPT.md` |
 | Social Media Strategy | `pm-gtm` | `pm-gtm/social-media-strategy/SYSTEM_PROMPT.md` |
@@ -225,6 +230,7 @@
 | User Story Writer | `pm-delivery` | `pm-delivery/user-story-writer/SYSTEM_PROMPT.md` |
 | UX Research Plan | `pm-design` | `pm-design/ux-research-plan/SYSTEM_PROMPT.md` |
 | Vendor Evaluation | `pm-operations` | `pm-operations/vendor-evaluation/SYSTEM_PROMPT.md` |
+| Vendor Security Review | `pm-compliance` | `pm-compliance/vendor-security-review/SYSTEM_PROMPT.md` |
 | Viral Content Framework | `pm-social` | `pm-social/viral-content-framework/SYSTEM_PROMPT.md` |
 | Workshop Facilitation Guide | `pm-operations` | `pm-operations/workshop-facilitation-guide/SYSTEM_PROMPT.md` |
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/SYSTEM_PROMPT.md` |

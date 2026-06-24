@@ -1,6 +1,10 @@
 {
   "_comment": "Framework attribution: the canonical method/author each skill encodes. Surfaced as a 'Based on' line on skill pages, the playground, and the catalog. Only skills with a genuine, well-known source are listed; the rest are intentionally omitted rather than given a fabricated citation.",
   "sources": {
+    "soc2-readiness": "AICPA SOC 2 Trust Services Criteria",
+    "gdpr-compliance": "EU GDPR (Art. 6, 9, 30, 35 + data-subject rights)",
+    "hipaa-safeguards": "HIPAA Security Rule (45 CFR §164.308–312)",
+    "iso-27001-isms": "ISO/IEC 27001 (ISMS + Annex A + Statement of Applicability)",
     "marketing-funnel-plan": "Pirate Metrics — AARRR (Dave McClure, 500 Startups)",
     "retention-loop-design": "The Hook Model (Nir Eyal) + cohort-retention analysis",
     "model-card": "Model Cards for Model Reporting (Mitchell et al., 2019)",

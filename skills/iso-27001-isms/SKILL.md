@@ -1,0 +1,72 @@
+---
+name: iso-27001-isms
+description: "Scope an ISO 27001 ISMS and build the Statement of Applicability across Annex A controls. Use when asked to implement ISO 27001, scope an ISMS, build a Statement of Applicability (SoA), or prepare for ISO 27001 certification. Produces an ISMS plan — scope & context, risk-treatment approach, an Annex A control applicability table (the SoA), and a prioritised implementation roadmap."
+---
+
+# ISO 27001 ISMS Skill
+
+ISO 27001 certifies a *system* (the ISMS), not a checklist — auditors check that you scoped it, assessed
+risk, and can justify which Annex A controls you applied or excluded (the Statement of Applicability).
+This skill builds that backbone: scope, risk treatment, and a defensible SoA, so certification is a
+documented management system rather than a scramble.
+
+## Required Inputs
+
+Ask for these only if they aren't already provided:
+
+- **ISMS scope** — the products, locations, and information assets in scope (and what's deliberately out).
+- **Context & interested parties** — the business, its regulatory/customer security obligations, and key risks.
+- **Risk approach** — how you identify, assess, and treat information-security risk (the SoA flows from the risk assessment, not the other way round).
+- **Current controls** — what's already implemented across the Annex A domains.
+
+## Output Format
+
+### ISO 27001 ISMS: [organisation]
+
+**1. Scope statement** — the boundary of the ISMS: assets, locations, exclusions and why.
+
+**2. Context & risk** — interested parties and their requirements; the risk assessment method and risk acceptance criteria.
+
+**3. Statement of Applicability (SoA)** — the heart of it: each Annex A control, applicable or not, status, and justification:
+
+| Annex A control | Applicable? | Status | Justification |
+|---|---|---|---|
+| A.5 Access control policy | Yes | met | Required for customer data |
+| A.8 Teleworking | No | n/a | No remote-access to in-scope systems — excluded with rationale |
+
+(Excluding a control is fine — *excluding it without a justification* is an audit finding.)
+
+**4. Risk treatment plan** — the top risks, the treatment (mitigate/accept/transfer/avoid), and the controls that address each.
+
+**5. Implementation roadmap** — prioritised: mandatory clauses 4–10 (management system) first, then the highest-risk Annex A gaps, with owners and dates.
+
+## Programmatic Helper
+
+`scripts/soa_coverage.py` (stdlib only) scores SoA coverage and flags controls excluded without a
+justification (the classic finding):
+
+```bash
+# soa.json: [{"control":"A.5.1","applicable":true,"status":"met|partial|gap","justification":"..."}, ...]
+python3 scripts/soa_coverage.py soa.json
+python3 scripts/soa_coverage.py soa.json --json
+```
+
+## Quality Checks
+
+- [ ] The ISMS scope is explicit, including deliberate exclusions
+- [ ] The SoA covers every Annex A control with an applicable/excluded decision
+- [ ] Every excluded control carries a justification (the most common audit finding)
+- [ ] The SoA traces to the risk assessment — controls exist to treat identified risks, not for show
+- [ ] Mandatory management-system clauses (4–10) are addressed, not just the Annex A controls
+
+## Anti-Patterns
+
+- [ ] Do not exclude a control without a written justification — silent exclusions are audit findings
+- [ ] Do not build the SoA before the risk assessment — applicability is *derived* from risk, not guessed
+- [ ] Do not treat Annex A as the whole standard — clauses 4–10 (the management system) are mandatory and where many fail
+- [ ] Do not mark controls "implemented" without evidence of operation — certification audits sample evidence
+- [ ] Do not present this as certification — only an accredited body certifies; this prepares the ISMS
+
+## Based On
+
+ISO/IEC 27001 (ISMS clauses 4–10) and Annex A control set + the Statement of Applicability requirement.

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-222 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+228 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -60,6 +60,7 @@
 | Data Analysis Standard | `pm-analytics` | `pm-analytics/data-analysis-standard/GEM_INSTRUCTIONS.md` |
 | Data Pipeline Spec | `pm-data` | `pm-data/data-pipeline-spec/GEM_INSTRUCTIONS.md` |
 | Data Quality Audit | `pm-data` | `pm-data/data-quality-audit/GEM_INSTRUCTIONS.md` |
+| Data Retention Policy | `pm-compliance` | `pm-compliance/data-retention-policy/GEM_INSTRUCTIONS.md` |
 | Database Migration Plan | `pm-engineering` | `pm-engineering/database-migration-plan/GEM_INSTRUCTIONS.md` |
 | Database Schema Design | `pm-engineering` | `pm-engineering/database-schema-design/GEM_INSTRUCTIONS.md` |
 | Dataset Datasheet | `pm-ai` | `pm-ai/dataset-datasheet/GEM_INSTRUCTIONS.md` |
@@ -100,11 +101,13 @@
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/GEM_INSTRUCTIONS.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/GEM_INSTRUCTIONS.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/GEM_INSTRUCTIONS.md` |
+| GDPR Compliance | `pm-compliance` | `pm-compliance/gdpr-compliance/GEM_INSTRUCTIONS.md` |
 | Git Troubleshooter | `pm-engineering` | `pm-engineering/git-troubleshooter/GEM_INSTRUCTIONS.md` |
 | Go-To-Market | `pm-gtm` | `pm-gtm/go-to-market/GEM_INSTRUCTIONS.md` |
 | Go-to-Market Planner | `pm-delivery` | `pm-delivery/go-to-market-planner/GEM_INSTRUCTIONS.md` |
 | Grant Proposal | `pm-cross` | `pm-cross/grant-proposal/GEM_INSTRUCTIONS.md` |
 | Growth Experiment Backlog | `pm-growth` | `pm-growth/growth-experiment-backlog/GEM_INSTRUCTIONS.md` |
+| HIPAA Safeguards | `pm-compliance` | `pm-compliance/hipaa-safeguards/GEM_INSTRUCTIONS.md` |
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/GEM_INSTRUCTIONS.md` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/GEM_INSTRUCTIONS.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/GEM_INSTRUCTIONS.md` |
@@ -115,6 +118,7 @@
 | Investor Cold Email | `pm-founders` | `pm-founders/investor-cold-email/GEM_INSTRUCTIONS.md` |
 | Investor Pitch Deck | `pm-finance` | `pm-finance/investor-pitch-deck/GEM_INSTRUCTIONS.md` |
 | Investor Update | `pm-business` | `pm-business/investor-update/GEM_INSTRUCTIONS.md` |
+| ISO 27001 ISMS | `pm-compliance` | `pm-compliance/iso-27001-isms/GEM_INSTRUCTIONS.md` |
 | Job Application | `pm-business` | `pm-business/job-application/GEM_INSTRUCTIONS.md` |
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/GEM_INSTRUCTIONS.md` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/GEM_INSTRUCTIONS.md` |
@@ -195,6 +199,7 @@
 | Short-Form Script | `pm-creator` | `pm-creator/short-form-script/GEM_INSTRUCTIONS.md` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/GEM_INSTRUCTIONS.md` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/GEM_INSTRUCTIONS.md` |
+| SOC 2 Readiness | `pm-compliance` | `pm-compliance/soc2-readiness/GEM_INSTRUCTIONS.md` |
 | Social Ad Campaign | `pm-social` | `pm-social/social-ad-campaign/GEM_INSTRUCTIONS.md` |
 | Social Media Audit | `pm-social` | `pm-social/social-media-audit/GEM_INSTRUCTIONS.md` |
 | Social Media Strategy | `pm-gtm` | `pm-gtm/social-media-strategy/GEM_INSTRUCTIONS.md` |
@@ -225,6 +230,7 @@
 | User Story Writer | `pm-delivery` | `pm-delivery/user-story-writer/GEM_INSTRUCTIONS.md` |
 | UX Research Plan | `pm-design` | `pm-design/ux-research-plan/GEM_INSTRUCTIONS.md` |
 | Vendor Evaluation | `pm-operations` | `pm-operations/vendor-evaluation/GEM_INSTRUCTIONS.md` |
+| Vendor Security Review | `pm-compliance` | `pm-compliance/vendor-security-review/GEM_INSTRUCTIONS.md` |
 | Viral Content Framework | `pm-social` | `pm-social/viral-content-framework/GEM_INSTRUCTIONS.md` |
 | Workshop Facilitation Guide | `pm-operations` | `pm-operations/workshop-facilitation-guide/GEM_INSTRUCTIONS.md` |
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/GEM_INSTRUCTIONS.md` |

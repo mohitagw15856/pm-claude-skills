@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-222 skills exported. Copy a `.mdc rule` into the tool to use it.
+228 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -60,6 +60,7 @@
 | Data Analysis Standard | `pm-analytics` | `pm-analytics/data-analysis-standard/data-analysis-standard.md` |
 | Data Pipeline Spec | `pm-data` | `pm-data/data-pipeline-spec/data-pipeline-spec.md` |
 | Data Quality Audit | `pm-data` | `pm-data/data-quality-audit/data-quality-audit.md` |
+| Data Retention Policy | `pm-compliance` | `pm-compliance/data-retention-policy/data-retention-policy.md` |
 | Database Migration Plan | `pm-engineering` | `pm-engineering/database-migration-plan/database-migration-plan.md` |
 | Database Schema Design | `pm-engineering` | `pm-engineering/database-schema-design/database-schema-design.md` |
 | Dataset Datasheet | `pm-ai` | `pm-ai/dataset-datasheet/dataset-datasheet.md` |
@@ -100,11 +101,13 @@
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/financial-model-narrative.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/founder-market-fit.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/fundraising-faq.md` |
+| GDPR Compliance | `pm-compliance` | `pm-compliance/gdpr-compliance/gdpr-compliance.md` |
 | Git Troubleshooter | `pm-engineering` | `pm-engineering/git-troubleshooter/git-troubleshooter.md` |
 | Go-To-Market | `pm-gtm` | `pm-gtm/go-to-market/go-to-market.md` |
 | Go-to-Market Planner | `pm-delivery` | `pm-delivery/go-to-market-planner/go-to-market-planner.md` |
 | Grant Proposal | `pm-cross` | `pm-cross/grant-proposal/grant-proposal.md` |
 | Growth Experiment Backlog | `pm-growth` | `pm-growth/growth-experiment-backlog/growth-experiment-backlog.md` |
+| HIPAA Safeguards | `pm-compliance` | `pm-compliance/hipaa-safeguards/hipaa-safeguards.md` |
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/hiring-rubric.md` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/hook-writer.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/iep-goal-support.md` |
@@ -115,6 +118,7 @@
 | Investor Cold Email | `pm-founders` | `pm-founders/investor-cold-email/investor-cold-email.md` |
 | Investor Pitch Deck | `pm-finance` | `pm-finance/investor-pitch-deck/investor-pitch-deck.md` |
 | Investor Update | `pm-business` | `pm-business/investor-update/investor-update.md` |
+| ISO 27001 ISMS | `pm-compliance` | `pm-compliance/iso-27001-isms/iso-27001-isms.md` |
 | Job Application | `pm-business` | `pm-business/job-application/job-application.md` |
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/job-description-writer.md` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/job-story-mapper.md` |
@@ -195,6 +199,7 @@
 | Short-Form Script | `pm-creator` | `pm-creator/short-form-script/short-form-script.md` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/skill-security-auditor.md` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/slo-error-budget.md` |
+| SOC 2 Readiness | `pm-compliance` | `pm-compliance/soc2-readiness/soc2-readiness.md` |
 | Social Ad Campaign | `pm-social` | `pm-social/social-ad-campaign/social-ad-campaign.md` |
 | Social Media Audit | `pm-social` | `pm-social/social-media-audit/social-media-audit.md` |
 | Social Media Strategy | `pm-gtm` | `pm-gtm/social-media-strategy/social-media-strategy.md` |
@@ -225,6 +230,7 @@
 | User Story Writer | `pm-delivery` | `pm-delivery/user-story-writer/user-story-writer.md` |
 | UX Research Plan | `pm-design` | `pm-design/ux-research-plan/ux-research-plan.md` |
 | Vendor Evaluation | `pm-operations` | `pm-operations/vendor-evaluation/vendor-evaluation.md` |
+| Vendor Security Review | `pm-compliance` | `pm-compliance/vendor-security-review/vendor-security-review.md` |
 | Viral Content Framework | `pm-social` | `pm-social/viral-content-framework/viral-content-framework.md` |
 | Workshop Facilitation Guide | `pm-operations` | `pm-operations/workshop-facilitation-guide/workshop-facilitation-guide.md` |
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/writing-great-skills.md` |

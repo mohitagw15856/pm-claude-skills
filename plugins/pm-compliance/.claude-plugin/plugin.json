@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-compliance",
+  "version": "1.0.0",
+  "description": "Compliance & trust skills for regulated and enterprise teams: SOC 2 Readiness, GDPR Compliance, HIPAA Safeguards, ISO 27001 ISMS, Vendor Security Review, and Data Retention Policy. Each ships a stdlib scoring/validation script.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["compliance", "soc2", "gdpr", "hipaa", "iso-27001", "security", "privacy", "vendor-risk", "governance", "trust"]
+}
