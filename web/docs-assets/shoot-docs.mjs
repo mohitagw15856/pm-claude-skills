@@ -22,8 +22,8 @@ const THEMES = {
   modern: { canvas: '#ffffff', ink: '#111418', accent: '#d9605a', muted: '#5b626b', rule: '#e6e6e6', serif: false, body: "15px/1.6 'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif" },
   mono: { canvas: '#fbfbfa', ink: '#16181d', accent: '#0b6b5b', muted: '#5b626b', rule: '#e3e3df', serif: false, body: "14px/1.6 'IBM Plex Sans',-apple-system,Segoe UI,Roboto,Arial,sans-serif" },
 };
-function themeCSS(t) {
-  const accent = t.accent;
+function themeCSS(t, accentOverride) {
+  const accent = accentOverride || t.accent;
   return [
     '*{box-sizing:border-box}',
     `body{font:${t.body};color:${t.ink};background:${t.canvas};max-width:760px;margin:0 auto;padding:44px 48px}`,
@@ -146,6 +146,92 @@ Jordan Avery` },
 
 - Do we build social ingestion in-house or via a provider?
 - What's the data-retention policy for DM content?` },
+
+  { id: 'linkedin-profile', theme: 'modern', label: 'LinkedIn', md: `# LinkedIn Profile
+
+## Headline
+
+Senior PM · B2B SaaS & PLG · I turn messy roadmaps into shipped outcomes (activation, retention, revenue)
+
+## About
+
+Most products don't fail for lack of ideas — they fail for lack of *focus*. My job is to find the one thing that moves the metric, and ship it.
+
+Over 8 years in B2B SaaS I've taken products from 0→1 and scaled them: I cut onboarding drop-off in half (unlocking ~$140k ARR), lifted mobile NPS from 14 to 38, and built an experiment program running 24 tests a quarter.
+
+I work from the job the customer is hiring us for — not the feature list. Discovery first, then ruthless prioritisation, then a roadmap people actually believe.
+
+**Specialties:** product strategy · continuous discovery · RICE/OKRs · activation & retention · experimentation · stakeholder alignment.
+
+*Open to senior/principal PM roles in B2B SaaS. Reach out — I'd love to talk.*
+
+## Featured skills
+
+Product Strategy · User Research · A/B Testing · Roadmapping · SQL · OKRs · Go-to-Market` },
+
+  { id: 'portfolio-page', theme: 'paper', label: 'Portfolio', md: `# Jordan Avery — Product, end to end
+
+I take fuzzy problems to shipped outcomes. Selected work below; full case studies on request.
+
+## Onboarding revamp — activation 41% → 52%
+
+- **Context:** new users hit value too late; week-1 activation had stalled for three quarters.
+- **My role:** owned discovery, the PRD, and cross-functional delivery (eng + design + lifecycle).
+- **What I did:** cut the signup flow from 5 steps to 3, added a guided first action, instrumented the funnel.
+- **Outcome:** activation 41% → 52%, drop-off 18% → 9%, ~$140k ARR unlocked. Now the team's north-star play.
+
+## Platform migration — zero downtime
+
+- **Context:** legacy monolith blocked the roadmap; a migration had been deferred twice as "too risky".
+- **My role:** drove the plan across 3 squads over 6 months; owned sequencing and the rollback gates.
+- **What I did:** phased cutover behind flags, contract tests at every seam, a go/no-go per phase.
+- **Outcome:** shipped with zero customer downtime; unblocked the next year of roadmap.
+
+## How I work
+
+Discovery before solutions · the smallest test that proves it · ruthless about the one metric that matters.` },
+
+  { id: 'personal-bio', theme: 'modern', label: 'Bio', md: `# Personal Bio
+
+## One-liner
+
+Jordan Avery is a senior product manager who turns messy roadmaps into shipped outcomes.
+
+## Short (≈50 words)
+
+Jordan Avery is a senior PM with 8 years in B2B SaaS. They've taken products from 0→1 to scale — halving onboarding drop-off to unlock ~$140k ARR and lifting mobile NPS from 14 to 38. Jordan works from the customer's job to be done, not the feature list.
+
+## Long (≈150 words)
+
+Jordan Avery is a senior product manager who builds products people actually adopt. Over eight years in B2B SaaS they've owned discovery-to-launch for products from pre-seed to scale: a signup redesign that lifted activation from 41% to 52%, a zero-downtime platform migration across three teams, and an experiment program shipping 24 tests a quarter at a 31% win rate.
+
+Jordan's approach is unfashionably simple — start from the job the customer is hiring you for, find the one metric that matters, and ship the smallest thing that moves it. Roadmaps people believe; decisions backed by evidence, not the loudest voice.
+
+Outside work, Jordan mentors first-time PMs and is a reliably over-confident five-a-side goalkeeper.` },
+
+  { id: 'brand-onepager', theme: 'modern', accent: '#6d28d9', label: 'One-Pager (brand tint)', md: `# Aster — your design system, on autopilot
+
+*Keep every team on-brand without a single Slack ping to the design team.*
+
+## The problem
+
+Design systems rot. Components drift, tokens fork, and by month six every team has its own "almost right" button. Keeping it consistent is a full-time job nobody owns.
+
+## The solution
+
+Aster watches your codebase and Figma, flags drift the moment it happens, and opens the fix as a PR. Your design system stays alive — automatically.
+
+## Why now
+
+| Signal | Detail |
+|---|---|
+| Traction | 60 teams · 88% monthly retention · $14k MRR |
+| Wedge | The only tool that auto-*fixes* drift, not just reports it |
+| Timing | Design-engineering is finally a budget line |
+
+## The ask
+
+Raising a $2M seed to reach $50k MRR. **Let's talk → team@aster.design**` },
 ];
 
 const browser = await chromium.launch();
@@ -155,8 +241,8 @@ for (const s of SAMPLES) {
   const html = mdToHtml(s.md);
   const page = await browser.newPage({ viewport: { width: 820, height: 1060 }, deviceScaleFactor: 2 });
   await page.setContent(
-    `<!doctype html><html><head><meta charset="utf-8"><style>${themeCSS(t)}</style></head>` +
-    `<body>${html}<div class="pm-foot">Made with PM Skills · ${s.label} · ${s.theme} theme</div></body></html>`,
+    `<!doctype html><html><head><meta charset="utf-8"><style>${themeCSS(t, s.accent)}</style></head>` +
+    `<body>${html}<div class="pm-foot">Made with PM Skills · ${s.label} · ${s.theme} theme${s.accent ? ' · brand ' + s.accent : ''}</div></body></html>`,
     { waitUntil: 'networkidle' }
   );
   await page.screenshot({ path: path.join(outDir, `${s.id}.png`), fullPage: true });

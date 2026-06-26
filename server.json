@@ -6,12 +6,12 @@
     "url": "https://github.com/mohitagw15856/pm-claude-skills",
     "source": "github"
   },
-  "version": "29.4.0",
+  "version": "29.4.1",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "pm-claude-skills",
-      "version": "29.4.0",
+      "version": "29.4.1",
       "transport": {
         "type": "stdio"
       },

@@ -99,9 +99,15 @@ It's not just text — the playground exports every result as a **professionally
     <td width="25%" align="center"><a href="web/docs-assets/samples/cover-letter.pdf"><img src="web/docs-assets/samples/cover-letter.png" alt="Cover Letter — Paper theme" /></a><br /><b><a href="skills/cover-letter">Cover Letter</a></b><br /><sub>Paper theme</sub></td>
     <td width="25%" align="center"><a href="web/docs-assets/samples/prd.pdf"><img src="web/docs-assets/samples/prd.png" alt="PRD — Technical theme" /></a><br /><b><a href="skills/prd-template">PRD</a></b><br /><sub>Technical theme</sub></td>
   </tr>
+  <tr>
+    <td width="25%" align="center"><a href="web/docs-assets/samples/linkedin-profile.pdf"><img src="web/docs-assets/samples/linkedin-profile.png" alt="LinkedIn Profile — Modern theme" /></a><br /><b><a href="skills/linkedin-profile">LinkedIn</a></b><br /><sub>Modern theme</sub></td>
+    <td width="25%" align="center"><a href="web/docs-assets/samples/portfolio-page.pdf"><img src="web/docs-assets/samples/portfolio-page.png" alt="Portfolio — Paper theme" /></a><br /><b><a href="skills/portfolio-page">Portfolio</a></b><br /><sub>Paper theme</sub></td>
+    <td width="25%" align="center"><a href="web/docs-assets/samples/personal-bio.pdf"><img src="web/docs-assets/samples/personal-bio.png" alt="Personal Bio — Modern theme" /></a><br /><b><a href="skills/personal-bio">Bio</a></b><br /><sub>Modern theme</sub></td>
+    <td width="25%" align="center"><a href="web/docs-assets/samples/brand-onepager.pdf"><img src="web/docs-assets/samples/brand-onepager.png" alt="One-Pager tinted to a brand colour" /></a><br /><b><a href="skills/one-pager">Brand-tinted</a></b><br /><sub>your brand colour</sub></td>
+  </tr>
 </table>
 
-> Generate yours: run a skill in the [Playground](https://mohitagw15856.github.io/pm-claude-skills/), then **Download → PDF · Paper / Modern / Technical**. Personal documents live in the [`pm-personal`](#️-all-244-skills) bundle (résumé, cover letter, bio, LinkedIn, portfolio, one-pager).
+> Generate yours: run a skill in the [Playground](https://mohitagw15856.github.io/pm-claude-skills/), then **Download → PDF · Paper / Modern / Technical**. Add a `Brand color: #hex` line to your context and it tints to match (last tile). Personal documents live in the [`pm-personal`](#️-all-244-skills) bundle (résumé, cover letter, bio, LinkedIn, portfolio, one-pager).
 
 ---
 
