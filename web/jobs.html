@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>💼 Job Search — your single stop to land the role | PM Skills</title>
+<meta name="description" content="A guided, free job-search toolkit: research the role, fix your CV & LinkedIn, write outreach and cover letters, prep for the interview, follow up, and negotiate — each step runs in your browser, no signup." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .jobs { max-width: 940px; margin: 0 auto; padding: 18px 22px 90px; }
+  .jobs-hero { text-align: center; padding: 10px 0 6px; }
+  .jobs-hero h1 { font-size: 30px; margin: 6px 0; }
+  .jobs-hero p { color: var(--muted); font-size: 15.5px; max-width: 640px; margin: 6px auto; line-height: 1.55; }
+  .jobs-note { font-size: 12.5px; color: var(--muted); background: var(--panel); border: 1px solid var(--border);
+    border-radius: 10px; padding: 10px 14px; margin: 16px auto; max-width: 720px; text-align: center; }
+  .stage { margin: 26px 0 8px; }
+  .stage-head { display: flex; align-items: baseline; gap: 10px; border-bottom: 1px solid var(--border); padding-bottom: 6px; margin-bottom: 14px; }
+  .stage-num { width: 26px; height: 26px; flex: none; border-radius: 50%; background: var(--accent-grad); color: #1a1207;
+    font-weight: 800; font-size: 13px; display: grid; place-items: center; }
+  .stage-head h2 { font-size: 19px; margin: 0; }
+  .stage-head span { color: var(--muted); font-size: 13px; }
+  .cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(248px, 1fr)); }
+  .jcard { display: flex; flex-direction: column; gap: 6px; text-align: left; text-decoration: none;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 15px 16px;
+    color: var(--text); transition: border-color .15s, transform .15s, box-shadow .15s; position: relative; }
+  .jcard:hover { border-color: rgba(217,119,87,.55); transform: translateY(-3px); box-shadow: var(--shadow-accent); }
+  .jcard .jt { font-weight: 700; font-size: 15px; }
+  .jcard .jd { font-size: 12.7px; color: var(--muted); line-height: 1.5; }
+  .jcard .jrun { font-size: 11.5px; color: var(--accent-2); font-weight: 600; margin-top: auto; }
+  .jcard .jdoc { position: absolute; top: 12px; right: 13px; font-size: 11px; color: var(--muted); }
+  .jobs-cta { text-align: center; margin: 34px 0 10px; }
+  .jobs-cta a { display: inline-block; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>💼 Job Search</h1><p class="tagline">Your single stop to find and land the role — free, in your browser.</p></div></div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<div class="jobs">
+  <div class="jobs-hero">
+    <h1>Land the job — one guided toolkit</h1>
+    <p>Every step of a real search, in order: sharpen your materials, target the right roles, reach out, ace the interview, and negotiate. Each tool runs in the playground with the structure a senior pro uses.</p>
+  </div>
+  <div class="jobs-note">🔒 Runs in your browser — start <strong>free</strong> with a Google AI Studio key or the in-browser model (no card), or bring your own Claude/OpenAI key. Nothing is stored on a server. Export any result as a <strong>designed PDF</strong>.</div>
+
+  <div id="stages"></div>
+
+  <div class="jobs-cta">
+    <a class="tool active" href="canvas.html" style="text-decoration:none">🧩 Chain several of these in the Workflow Canvas</a>
+  </div>
+</div>
+
+<script>
+// The job-search journey — each step maps to a real skill that opens in the playground runner.
+// No backend: the playground handles the run (free Gemini / in-browser / your own key).
+const STAGES = [
+  { n: 1, title: 'Prepare your materials', note: 'get your story straight', skills: [
+    ['resume', 'Résumé / CV', 'Achievement-led, ATS-safe — tailored to a role.', true],
+    ['linkedin-profile', 'LinkedIn Profile', 'Keyword headline + a hook-before-fold About.', false],
+    ['personal-bio', 'Personal Bio', 'One-liner / short / long, consistent.', false],
+    ['portfolio-page', 'Portfolio', 'Case studies that show impact, not a gallery.', true],
+    ['brag-doc', 'Brag Doc', 'Log wins so reviews & applications write themselves.', false],
+  ] },
+  { n: 2, title: 'Target the right roles', note: 'apply with intent', skills: [
+    ['jd-decoder', 'JD Decoder', 'What a posting really wants + your honest fit.', false],
+    ['company-brief', 'Company Brief', 'Research a company fast, before you apply.', true],
+  ] },
+  { n: 3, title: 'Apply & reach out', note: 'get noticed', skills: [
+    ['job-application', 'Tailor CV + Cover Letter', 'ATS-tailored application for a specific JD.', true],
+    ['cover-letter', 'Cover Letter', 'A specific one they actually read.', true],
+    ['outreach-message', 'Outreach / Networking', 'Cold messages and referral asks that get replies.', false],
+  ] },
+  { n: 4, title: 'Interview & follow up', note: 'win the room', skills: [
+    ['interview-prep', 'Interview Prep', 'Tailored to this company & round; STAR answers.', false],
+    ['discovery-call-prep', 'Call Prep', 'Prep for a specific recruiter/hiring-manager call.', false],
+    ['follow-up-sequence', 'Follow-Up Sequence', 'Stay on their radar without being annoying.', false],
+  ] },
+  { n: 5, title: 'Negotiate & grow', note: 'get paid, get promoted', skills: [
+    ['salary-negotiation', 'Salary Negotiation', 'Total-comp plan, BATNA, and counter scripts.', false],
+    ['career-ladder-map', 'Career Ladder Map', 'Map the gap to the next level + a plan.', false],
+    ['promotion-packet', 'Promotion Packet', 'Build the case you already operate one level up.', true],
+  ] },
+];
+
+const wrap = document.getElementById('stages');
+STAGES.forEach((st) => {
+  const sec = document.createElement('section');
+  sec.className = 'stage';
+  sec.innerHTML = `<div class="stage-head"><span class="stage-num">${st.n}</span><h2>${st.title}</h2><span>${st.note}</span></div>`;
+  const cards = document.createElement('div');
+  cards.className = 'cards';
+  st.skills.forEach(([name, title, desc, doc]) => {
+    const a = document.createElement('a');
+    a.className = 'jcard';
+    a.href = 'index.html?skill=' + encodeURIComponent(name);
+    a.innerHTML =
+      (doc ? '<span class="jdoc" title="Export as a designed PDF">📄 PDF</span>' : '') +
+      `<span class="jt">${title}</span><span class="jd">${desc}</span><span class="jrun">Run it →</span>`;
+    cards.appendChild(a);
+  });
+  sec.appendChild(cards);
+  wrap.appendChild(sec);
+});
+</script>
+<script src="nav.js"></script>
+</body>
+</html>

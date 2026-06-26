@@ -29,6 +29,7 @@
   // stays short. To add/move a tool, edit this list only.
   var NAV = [
     { href: 'index.html', label: '▶ Playground' },
+    { href: 'jobs.html', label: '💼 Job Search' },
     { href: 'galaxy.html', label: '🌌 Galaxy' },
     { group: 'Tools', items: [
       ['agent.html', '✨ Auto-Agent'],
