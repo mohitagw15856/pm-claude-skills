@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://mohitagw15856.github.io/pm-claude-skills/">
-    <img src="web/docs-assets/professions-hero.png" width="100%" alt="PM Skills — 190+ open-source AI skills, one for every profession: Product Management, Engineering, Marketing & GTM, Customer Success, Data & Analytics, Leadership & People, Design & UX, Business & Strategy, Legal, Finance, Founders & Startups, Educators, HR, Sales, Operations, Research & Healthcare, Figma, Social Media, Writers & Content, and Cross-Profession. The structure a senior pro uses, as portable SKILL.md files. Works with Claude, ChatGPT, Gemini, Cursor, Codex & Hermes." />
+    <img src="web/docs-assets/professions-hero.png" width="100%" alt="PM Skills — 240+ open-source AI skills, one for every profession: Product Management, Engineering, Marketing & GTM, Customer Success, Data & Analytics, Leadership & People, Design & UX, Business & Strategy, Legal, Finance, Founders & Startups, Educators, HR, Sales, Operations, Research & Healthcare, Figma, Social Media, Writers & Content, and Cross-Profession. The structure a senior pro uses, as portable SKILL.md files. Works with Claude, ChatGPT, Gemini, Cursor, Codex & Hermes." />
   </a>
 </p>
 

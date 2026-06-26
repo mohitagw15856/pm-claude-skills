@@ -1,5 +1,5 @@
 // Generates the repo social-preview image → web/docs-assets/social-preview.png (1920x960, 2:1).
-// Uses a future-proof "190+ skills" headline so it does NOT need regenerating every release.
+// Uses a future-proof "240+ skills" headline so it does NOT need regenerating every release.
 // Renders an HTML card and screenshots it with Playwright.
 //
 //   node scripts/build-social-preview.mjs
@@ -35,7 +35,7 @@ const html = `<!DOCTYPE html><html><head><meta charset="utf-8"><style>
 </style></head><body>
   <div>
     <div class="top"><span class="logo">🧠</span><span class="brand">PM Skills</span></div>
-    <h1><span class="hl">190+</span> AI skills<br>for every profession</h1>
+    <h1><span class="hl">240+</span> AI skills<br>for every profession</h1>
     <p>PRDs · roadmaps · launches · postmortems — the structure a senior pro uses, for Claude, ChatGPT &amp; Gemini.</p>
     <div class="pills">
       <span class="pill pill-eval">✅ Eval-verified</span>
@@ -53,4 +53,4 @@ const page = await browser.newPage({ viewport: { width: 1280, height: 640 }, dev
 await page.setContent(html, { waitUntil: 'networkidle' });
 await page.screenshot({ path: join(outDir, 'social-preview.png') });
 await browser.close();
-console.log('Wrote web/docs-assets/social-preview.png (1920x960) — "190+ AI skills" (future-proof, no count to update).');
+console.log('Wrote web/docs-assets/social-preview.png (1920x960) — "240+ AI skills" (future-proof, no count to update).');

@@ -1,6 +1,6 @@
 // Generates the README hero banner → web/docs-assets/professions-hero.png.
 // Shows the value prop + every profession the library covers, as chips. Uses a
-// future-proof "190+ skills" line and the profession list itself as the proof, so it
+// future-proof "240+ skills" line and the profession list itself as the proof, so it
 // doesn't go stale each release.
 //
 //   node scripts/build-readme-hero.mjs
@@ -48,7 +48,7 @@ const html = `<!DOCTYPE html><html><head><meta charset="utf-8"><style>
   .cta{color:#e89b82;font-weight:700}
 </style></head><body>
   <div class="top"><span class="logo">🧠</span><span class="brand">PM Skills</span></div>
-  <h1><span class="hl">190+</span> open-source AI skills — one for every profession</h1>
+  <h1><span class="hl">240+</span> open-source AI skills — one for every profession</h1>
   <p class="sub">The structure a senior pro actually uses — PRDs, launches, postmortems, rubrics, contracts, pitch decks — as portable <b>SKILL.md</b> files.</p>
   <div class="chips">${chips}</div>
   <div class="foot"><span>Claude · ChatGPT · Gemini · Cursor · Codex · Hermes</span><span class="cta">▶ run any one free in your browser</span></div>
@@ -59,4 +59,4 @@ const page = await browser.newPage({ viewport: { width: 1280, height: 720 }, dev
 await page.setContent(html, { waitUntil: 'networkidle' });
 await page.screenshot({ path: join(outDir, 'professions-hero.png') });
 await browser.close();
-console.log(`Wrote web/docs-assets/professions-hero.png (2560x1440) — ${PROFESSIONS.length} professions, future-proof "190+" headline.`);
+console.log(`Wrote web/docs-assets/professions-hero.png (2560x1440) — ${PROFESSIONS.length} professions, future-proof "240+" headline.`);

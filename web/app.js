@@ -211,6 +211,11 @@ function countUp(node, to) {
 }
 function initHero() {
   countUp(el('statSkills'), SKILLS.length);
+  // Keep the visible prose counts in sync with the real catalogue so they never go stale.
+  const n = SKILLS.length;
+  document.querySelectorAll('[data-skill-count]').forEach((eln) => {
+    eln.textContent = eln.textContent.replace(/\b\d{2,4}\b/, n);
+  });
   const scored = SKILLS.filter((s) => s.eval);
   countUp(el('statEval'), scored.length);
   if (scored.length && el('statAvg')) {
