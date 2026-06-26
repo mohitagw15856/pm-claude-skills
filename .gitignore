@@ -42,3 +42,6 @@ __pycache__/
 # wrangler local cache
 .wrangler/
 mcp-remote/.wrangler/
+
+# Local dev installs (not committed)
+node_modules/
