@@ -6,7 +6,7 @@ Run one as a slash command in Claude Code (e.g. `/ship-a-feature a referral prog
 
 <!-- Generated from workflows.json by scripts/build-workflows.mjs — do not edit by hand. -->
 
-There are **8 recipes** today:
+There are **9 recipes** today:
 
 | Recipe | Command | Lifecycle | Chains |
 |--------|---------|-----------|--------|
@@ -18,6 +18,7 @@ There are **8 recipes** today:
 | **Repurpose Content** | `/repurpose` | One source → many platforms | 3 skills |
 | **Launch an AI Feature** | `/launch-an-ai-feature` | Spec → Design → Evaluate → Budget → Document | 5 skills |
 | **Grow a Product** | `/grow-a-product` | Diagnose → Experiment → Retain → Nurture | 4 skills |
+| **Land a Job** | `/land-a-job` | Decode → Research → Apply → Interview | 4 skills |
 
 ## Ship a Feature — `/ship-a-feature`
 
@@ -108,6 +109,17 @@ There are **8 recipes** today:
 2. **growth-experiment-backlog** → produces a prioritised, properly-powered experiment backlog (ICE) against that stage.
 3. **retention-loop-design** → produces a retention/engagement loop (trigger→action→reward→investment) and activation path.
 4. **lifecycle-crm-plan** → produces behaviour-triggered lifecycle journeys that drive the loop, with holdouts and suppression.
+
+## Land a Job — `/land-a-job`
+
+*Decode → Research → Apply → Interview* · Go after a specific role end to end: decode the job description, research the company, tailor your CV and cover letter to it, and prep for the interview — each step building on the last.
+
+`jd-decoder` → `company-brief` → `job-application` → `interview-prep`
+
+1. **jd-decoder** → produces what the posting really wants, your honest fit, and the keywords to mirror.
+2. **company-brief** → produces a research brief — business model, trajectory, and the challenges this role would touch.
+3. **job-application** → produces an ATS-tailored CV summary and a cover letter aligned to the decoded requirements.
+4. **interview-prep** → produces a tailored prep pack — likely questions for this role and round, STAR answers, a story bank, and questions to ask.
 
 ---
 

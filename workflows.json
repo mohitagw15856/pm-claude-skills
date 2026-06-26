@@ -106,6 +106,19 @@
         { "skill": "retention-loop-design", "produces": "a retention/engagement loop (trigger→action→reward→investment) and activation path", "passes": "the loop and the habit milestone" },
         { "skill": "lifecycle-crm-plan", "produces": "behaviour-triggered lifecycle journeys that drive the loop, with holdouts and suppression", "passes": null }
       ]
+    },
+    {
+      "id": "land-a-job",
+      "command": "/land-a-job",
+      "name": "Land a Job",
+      "lifecycle": "Decode → Research → Apply → Interview",
+      "summary": "Go after a specific role end to end: decode the job description, research the company, tailor your CV and cover letter to it, and prep for the interview — each step building on the last.",
+      "steps": [
+        { "skill": "jd-decoder", "produces": "what the posting really wants, your honest fit, and the keywords to mirror", "passes": "the must-haves, your fit gaps, and the mirror-phrases" },
+        { "skill": "company-brief", "produces": "a research brief — business model, trajectory, and the challenges this role would touch", "passes": "the company context and likely challenges" },
+        { "skill": "job-application", "produces": "an ATS-tailored CV summary and a cover letter aligned to the decoded requirements", "passes": "the tailored positioning and the strongest proof points" },
+        { "skill": "interview-prep", "produces": "a tailored prep pack — likely questions for this role and round, STAR answers, a story bank, and questions to ask", "passes": null }
+      ]
     }
   ]
 }

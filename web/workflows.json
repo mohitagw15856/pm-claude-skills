@@ -105,6 +105,19 @@
         "retention-loop-design",
         "lifecycle-crm-plan"
       ]
+    },
+    {
+      "id": "land-a-job",
+      "name": "Land a Job",
+      "command": "/land-a-job",
+      "lifecycle": "Decode → Research → Apply → Interview",
+      "summary": "Go after a specific role end to end: decode the job description, research the company, tailor your CV and cover letter to it, and prep for the interview — each step building on the last.",
+      "skills": [
+        "jd-decoder",
+        "company-brief",
+        "job-application",
+        "interview-prep"
+      ]
     }
   ]
 }
