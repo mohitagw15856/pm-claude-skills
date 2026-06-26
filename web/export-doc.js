@@ -34,16 +34,67 @@
     saveBlob(new Blob(['﻿', html], { type: 'application/msword' }), safeName(title) + '.doc');
   }
 
-  // --- PDF (clean print window → user saves as PDF; selectable text) -----------
-  function toPDF(md, title) {
+  // --- PDF design system ("good content deserves good paper") ------------------
+  // Each theme is a small set of constraints (canvas, ink, accent, type, spacing) so the
+  // SAME markdown comes out professionally typeset. Themes are intentionally few and opinionated.
+  var THEMES = {
+    plain: {
+      label: 'Plain', canvas: '#ffffff', ink: '#111111', accent: '#444444', muted: '#555555', rule: '#cccccc',
+      serif: false, body: '14px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif',
+    },
+    paper: { // Kami-inspired: warm parchment + ink-blue accent + serif
+      label: 'Paper (serif)', canvas: '#f5f4ed', ink: '#1a1a1a', accent: '#1B365D', muted: '#5a5a52', rule: '#d8d5c8',
+      serif: true, body: "15px/1.5 Charter,'Iowan Old Style',Georgia,'Times New Roman',serif",
+    },
+    modern: { // clean sans, single accent, generous white space
+      canvas: '#ffffff', label: 'Modern (sans)', ink: '#111418', accent: '#d9605a', muted: '#5b626b', rule: '#e6e6e6',
+      serif: false, body: "15px/1.6 'Inter',-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif",
+    },
+    mono: { // technical / dossier look
+      label: 'Technical', canvas: '#fbfbfa', ink: '#16181d', accent: '#0b6b5b', muted: '#5b626b', rule: '#e3e3df',
+      serif: false, body: "14px/1.6 'IBM Plex Sans',-apple-system,Segoe UI,Roboto,Arial,sans-serif",
+    },
+  };
+
+  function themeCSS(t, accentOverride) {
+    var accent = accentOverride || t.accent;
+    return (
+      '@page{margin:18mm 16mm}' +
+      '*{box-sizing:border-box}' +
+      'body{font:' + t.body + ';color:' + t.ink + ';background:' + t.canvas + ';max-width:760px;margin:36px auto;padding:0 30px}' +
+      'h1,h2,h3,h4{line-height:1.2;color:' + t.ink + ';margin:1.25em 0 .35em;' + (t.serif ? '' : 'letter-spacing:-.01em;') + 'font-weight:700}' +
+      'h1{font-size:2em;margin-top:0;border-bottom:2px solid ' + accent + ';padding-bottom:.2em;color:' + accent + '}' +
+      'h2{font-size:1.4em;border-bottom:1px solid ' + t.rule + ';padding-bottom:.15em}' +
+      'h3{font-size:1.15em}' +
+      'p,li{color:' + t.ink + '}' +
+      'a{color:' + accent + ';text-decoration:none}' +
+      'strong{color:' + t.ink + '}' +
+      'table{border-collapse:collapse;width:100%;margin:14px 0;font-size:.95em}' +
+      'th,td{border:1px solid ' + t.rule + ';padding:7px 11px;text-align:left;vertical-align:top}' +
+      'th{background:' + accent + ';color:#fff;font-weight:600;border-color:' + accent + '}' +
+      'tr:nth-child(even) td{background:rgba(0,0,0,.025)}' +
+      'code{background:rgba(0,0,0,.05);padding:1px 5px;border-radius:4px;font-family:"IBM Plex Mono",Consolas,monospace;font-size:.9em}' +
+      'pre{background:rgba(0,0,0,.04);padding:13px 15px;border-radius:8px;overflow:auto;border:1px solid ' + t.rule + '}' +
+      'pre code{background:none;padding:0}' +
+      'blockquote{border-left:3px solid ' + accent + ';margin:1em 0;padding:.1em 0 .1em 16px;color:' + t.muted + '}' +
+      'hr{border:0;border-top:1px solid ' + t.rule + ';margin:1.6em 0}' +
+      'ul,ol{padding-left:1.3em}li{margin:.2em 0}' +
+      '.pm-foot{margin-top:34px;padding-top:10px;border-top:1px solid ' + t.rule + ';font-size:11px;color:' + t.muted + ';' + (t.serif ? '' : 'letter-spacing:.02em;') + '}' +
+      '@media print{body{margin:0;max-width:none}a{color:' + accent + '}tr:nth-child(even) td{-webkit-print-color-adjust:exact;print-color-adjust:exact}th{-webkit-print-color-adjust:exact;print-color-adjust:exact}}'
+    );
+  }
+
+  // opts: { theme: 'paper'|'modern'|'mono'|'plain', accent: '#hex' (brand override) }
+  function toPDF(md, title, opts) {
+    opts = opts || {};
+    var t = THEMES[opts.theme] || THEMES.plain;
     var w = window.open('', '_blank');
     if (!w) { alert('Allow pop-ups to export as PDF.'); return; }
+    var foot = '<div class="pm-foot">Made with PM Skills · mohitagw15856.github.io/pm-claude-skills</div>';
     w.document.write('<html><head><meta charset="utf-8"><title>' + (title || 'Document') + '</title>' +
-      '<style>body{font:14px/1.65 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;max-width:820px;margin:40px auto;padding:0 26px;color:#111}' +
-      'h1,h2,h3{line-height:1.25;margin:1.2em 0 .4em} table{border-collapse:collapse;width:100%;margin:12px 0} th,td{border:1px solid #ccc;padding:6px 10px;text-align:left}' +
-      'code{background:#f3f3f3;padding:1px 5px;border-radius:4px;font-family:Consolas,monospace} pre{background:#f3f3f3;padding:12px;border-radius:6px;overflow:auto}' +
-      'blockquote{border-left:3px solid #ddd;margin:0;padding-left:14px;color:#555}@media print{body{margin:0}}</style></head><body>' +
-      mdToHtml(md) + '<scr' + 'ipt>window.onload=function(){setTimeout(function(){window.print();},200);}</scr' + 'ipt></body></html>');
+      '<style>' + themeCSS(t, opts.accent) + '</style></head><body>' +
+      mdToHtml(md) + foot +
+      '<scr' + 'ipt>window.onload=function(){setTimeout(function(){window.print();},250);}</scr' + 'ipt></body></html>');
     w.document.close();
   }
 
@@ -111,6 +162,7 @@
 
   g.PMExport = {
     word: toWord, pdf: toPDF, pptx: toPptx, xlsx: toXlsx,
+    THEMES: THEMES,
     hasTables: function (md) { return parseMdTables(md).length > 0; },
   };
 })(window);

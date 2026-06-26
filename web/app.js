@@ -286,6 +286,13 @@ function recordRecent(name) {
 function getContext() {
   return (el('contextInput').value || '').trim();
 }
+// Pull a brand accent colour from the user's context, if they set one — a "brand color: #hex"
+// line, or any standalone hex. Used to tint the themed PDF export so documents match their brand.
+function brandAccent() {
+  const ctx = getContext();
+  const m = ctx.match(/brand\s*(?:colou?r)?\s*[:=]\s*(#[0-9a-fA-F]{3,6})/i) || ctx.match(/(#[0-9a-fA-F]{6})\b/);
+  return m ? m[1] : '';
+}
 function updateContextStatus() {
   const has = getContext().length > 0;
   el('contextStatus').textContent = has ? '✓ active' : '';
@@ -1028,7 +1035,10 @@ function onExport(e) {
   try {
     if (fmt === 'md') return downloadOutput();
     if (fmt === 'docx') return PMExport.word(md, title);
-    if (fmt === 'pdf') return PMExport.pdf(md, title);
+    if (fmt === 'pdf' || fmt.indexOf('pdf:') === 0) {
+      const theme = fmt.indexOf('pdf:') === 0 ? fmt.slice(4) : 'paper';
+      return PMExport.pdf(md, title, { theme, accent: brandAccent() });
+    }
     if (fmt === 'pptx') return PMExport.pptx(md, title);
     if (fmt === 'xlsx') return PMExport.xlsx(md, title);
   } catch (err) {
