@@ -1,0 +1,10 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-comms",
+  "version": "1.0.0",
+  "description": "Communication & influence skills everyone needs: Difficult Conversation, Giving Feedback, Managing Up, Executive Presence, Saying No, and a Persuasion Brief. The soft skills that decide careers.",
+  "author": { "name": "Mohit Aggarwal", "email": "mohit15856@gmail.com" },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["communication", "feedback", "managing-up", "executive-presence", "persuasion", "influence", "difficult-conversations", "leadership"]
+}
