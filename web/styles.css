@@ -488,6 +488,9 @@ html[data-theme="light"] .toolbar-nav .tool.active { color: #fff; }
 /* ===== Hero ===== */
 .hero { max-width: 1100px; margin: 26px auto 8px; padding: 0 4px; display: grid; grid-template-columns: 1.1fr 1fr; gap: 26px; align-items: center; }
 @media (max-width: 760px){ .hero { grid-template-columns: 1fr; } }
+.dir-pill { display: inline-block; margin: 0 0 12px; padding: 5px 12px; border-radius: 99px; font-size: 12.5px; font-weight: 600;
+  text-decoration: none; color: var(--accent-2); background: rgba(217,119,87,.12); border: 1px solid rgba(217,119,87,.4); }
+.dir-pill:hover { background: rgba(217,119,87,.18); color: #f0b39c; }
 .hero h2 { font-size: 34px; line-height: 1.08; margin: 0 0 12px; letter-spacing: -.025em; }
 .hero h2 .grad { background: var(--accent-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 .hero p { color: var(--muted); font-size: 15px; margin: 0 0 18px; max-width: 50ch; line-height: 1.55; }

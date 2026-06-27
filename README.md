@@ -1,5 +1,6 @@
 # 🧠 PM Skills — 270 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
 
+[![In the official Anthropic plugin directory](https://img.shields.io/badge/Anthropic%20Plugin%20Directory-Published-D97757?logo=anthropic&logoColor=white)](#-quick-install-2-minutes)
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
 [![npm](https://img.shields.io/npm/v/pm-claude-skills?logo=npm&color=cb3837)](https://www.npmjs.com/package/pm-claude-skills)
 [![npm downloads](https://img.shields.io/npm/dm/pm-claude-skills?logo=npm&color=cb3837&label=installs)](https://www.npmjs.com/package/pm-claude-skills)
@@ -32,6 +33,10 @@
   <a href="https://mohitagw15856.github.io/pm-claude-skills/">
     <img src="web/docs-assets/professions-hero.png" width="100%" alt="PM Skills — 240+ open-source AI skills, one for every profession: Product Management, Engineering, Marketing & GTM, Customer Success, Data & Analytics, Leadership & People, Design & UX, Business & Strategy, Legal, Finance, Founders & Startups, Educators, HR, Sales, Operations, Research & Healthcare, Figma, Social Media, Writers & Content, and Cross-Profession. The structure a senior pro uses, as portable SKILL.md files. Works with Claude, ChatGPT, Gemini, Cursor, Codex & Hermes." />
   </a>
+</p>
+
+<p align="center">
+  <strong>🎉 Now published in the official <a href="https://www.anthropic.com/">Anthropic</a> Claude plugin directory</strong> — install it straight from the <code>/plugin</code> marketplace in Claude Code.
 </p>
 
 > **Generic AI gives you filler. These give you the structure a senior pro actually uses** — PRDs, exec updates, launch plans, postmortems — as open-source `SKILL.md` files. Across **23 professions**, not just product management. One source, every AI tool.
@@ -343,7 +348,7 @@ Your assistant can then *"search the skills for churn"* or *"run the ship-a-feat
 
 **In [Claude Cowork](https://www.anthropic.com/claude)** — open the plugin browser → **Add from GitHub** → enter `mohitagw15856/pm-claude-skills`, then add the bundles you want. No CLI needed.
 
-**In Claude Code**, run:
+**In Claude Code** — it's in the **official Anthropic plugin directory**, so you can browse to it in the `/plugin` marketplace, or add it directly:
 
 /plugin marketplace add mohitagw15856/pm-claude-skills
 
