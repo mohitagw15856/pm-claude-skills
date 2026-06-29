@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-299 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+303 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -45,6 +45,7 @@
 | Clause Explainer | `pm-legal` | `pm-legal/clause-explainer/GEM_INSTRUCTIONS.md` |
 | Client Discovery | `pm-consulting` | `pm-consulting/client-discovery/GEM_INSTRUCTIONS.md` |
 | Clinical Case Summary | `pm-research` | `pm-research/clinical-case-summary/GEM_INSTRUCTIONS.md` |
+| Clinical Trial Protocol | `pm-health` | `pm-health/clinical-trial-protocol/GEM_INSTRUCTIONS.md` |
 | Code Explainer | `pm-engineering` | `pm-engineering/code-explainer/GEM_INSTRUCTIONS.md` |
 | Code Review Checklist | `pm-engineering` | `pm-engineering/code-review-checklist/GEM_INSTRUCTIONS.md` |
 | Cohort Analysis | `pm-data` | `pm-data/cohort-analysis/GEM_INSTRUCTIONS.md` |
@@ -93,6 +94,7 @@
 | Developer Onboarding Document | `pm-engineering` | `pm-engineering/developer-onboarding-doc/GEM_INSTRUCTIONS.md` |
 | Difficult Conversation | `pm-comms` | `pm-comms/difficult-conversation/GEM_INSTRUCTIONS.md` |
 | Disaster Recovery Plan | `pm-engineering` | `pm-engineering/disaster-recovery-plan/GEM_INSTRUCTIONS.md` |
+| Discharge Summary | `pm-health` | `pm-health/discharge-summary/GEM_INSTRUCTIONS.md` |
 | Discovery Call Prep | `pm-sales` | `pm-sales/discovery-call-prep/GEM_INSTRUCTIONS.md` |
 | Discovery Interview Guide | `pm-discovery` | `pm-discovery/discovery-interview-guide/GEM_INSTRUCTIONS.md` |
 | Word Doc Tracked Changes | `pm-essentials` | `pm-essentials/docx-tracked-changes/GEM_INSTRUCTIONS.md` |
@@ -211,6 +213,7 @@
 | Press Release | `pm-cross` | `pm-cross/press-release/GEM_INSTRUCTIONS.md` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/GEM_INSTRUCTIONS.md` |
 | Pricing Strategy | `pm-planning` | `pm-planning/pricing-strategy/GEM_INSTRUCTIONS.md` |
+| Prior Authorization Letter | `pm-health` | `pm-health/prior-authorization-letter/GEM_INSTRUCTIONS.md` |
 | Privacy Policy Drafter | `pm-legal` | `pm-legal/privacy-policy-drafter/GEM_INSTRUCTIONS.md` |
 | Process Documentation | `pm-operations` | `pm-operations/process-documentation/GEM_INSTRUCTIONS.md` |
 | Product Health Analysis | `pm-analytics` | `pm-analytics/product-health-analysis/GEM_INSTRUCTIONS.md` |
@@ -262,6 +265,7 @@
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/GEM_INSTRUCTIONS.md` |
 | Slide Deck | `pm-documents` | `pm-documents/slide-deck/GEM_INSTRUCTIONS.md` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/GEM_INSTRUCTIONS.md` |
+| SOAP Note | `pm-health` | `pm-health/soap-note/GEM_INSTRUCTIONS.md` |
 | SOC 2 Readiness | `pm-compliance` | `pm-compliance/soc2-readiness/GEM_INSTRUCTIONS.md` |
 | Social Ad Campaign | `pm-social` | `pm-social/social-ad-campaign/GEM_INSTRUCTIONS.md` |
 | Social Media Audit | `pm-social` | `pm-social/social-media-audit/GEM_INSTRUCTIONS.md` |

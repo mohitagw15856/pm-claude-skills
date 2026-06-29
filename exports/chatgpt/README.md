@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-299 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+303 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -45,6 +45,7 @@
 | Clause Explainer | `pm-legal` | `pm-legal/clause-explainer/SYSTEM_PROMPT.md` |
 | Client Discovery | `pm-consulting` | `pm-consulting/client-discovery/SYSTEM_PROMPT.md` |
 | Clinical Case Summary | `pm-research` | `pm-research/clinical-case-summary/SYSTEM_PROMPT.md` |
+| Clinical Trial Protocol | `pm-health` | `pm-health/clinical-trial-protocol/SYSTEM_PROMPT.md` |
 | Code Explainer | `pm-engineering` | `pm-engineering/code-explainer/SYSTEM_PROMPT.md` |
 | Code Review Checklist | `pm-engineering` | `pm-engineering/code-review-checklist/SYSTEM_PROMPT.md` |
 | Cohort Analysis | `pm-data` | `pm-data/cohort-analysis/SYSTEM_PROMPT.md` |
@@ -93,6 +94,7 @@
 | Developer Onboarding Document | `pm-engineering` | `pm-engineering/developer-onboarding-doc/SYSTEM_PROMPT.md` |
 | Difficult Conversation | `pm-comms` | `pm-comms/difficult-conversation/SYSTEM_PROMPT.md` |
 | Disaster Recovery Plan | `pm-engineering` | `pm-engineering/disaster-recovery-plan/SYSTEM_PROMPT.md` |
+| Discharge Summary | `pm-health` | `pm-health/discharge-summary/SYSTEM_PROMPT.md` |
 | Discovery Call Prep | `pm-sales` | `pm-sales/discovery-call-prep/SYSTEM_PROMPT.md` |
 | Discovery Interview Guide | `pm-discovery` | `pm-discovery/discovery-interview-guide/SYSTEM_PROMPT.md` |
 | Word Doc Tracked Changes | `pm-essentials` | `pm-essentials/docx-tracked-changes/SYSTEM_PROMPT.md` |
@@ -211,6 +213,7 @@
 | Press Release | `pm-cross` | `pm-cross/press-release/SYSTEM_PROMPT.md` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/SYSTEM_PROMPT.md` |
 | Pricing Strategy | `pm-planning` | `pm-planning/pricing-strategy/SYSTEM_PROMPT.md` |
+| Prior Authorization Letter | `pm-health` | `pm-health/prior-authorization-letter/SYSTEM_PROMPT.md` |
 | Privacy Policy Drafter | `pm-legal` | `pm-legal/privacy-policy-drafter/SYSTEM_PROMPT.md` |
 | Process Documentation | `pm-operations` | `pm-operations/process-documentation/SYSTEM_PROMPT.md` |
 | Product Health Analysis | `pm-analytics` | `pm-analytics/product-health-analysis/SYSTEM_PROMPT.md` |
@@ -262,6 +265,7 @@
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/SYSTEM_PROMPT.md` |
 | Slide Deck | `pm-documents` | `pm-documents/slide-deck/SYSTEM_PROMPT.md` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/SYSTEM_PROMPT.md` |
+| SOAP Note | `pm-health` | `pm-health/soap-note/SYSTEM_PROMPT.md` |
 | SOC 2 Readiness | `pm-compliance` | `pm-compliance/soc2-readiness/SYSTEM_PROMPT.md` |
 | Social Ad Campaign | `pm-social` | `pm-social/social-ad-campaign/SYSTEM_PROMPT.md` |
 | Social Media Audit | `pm-social` | `pm-social/social-media-audit/SYSTEM_PROMPT.md` |

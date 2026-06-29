@@ -1,0 +1,13 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-health",
+  "version": "1.0.0",
+  "description": "Healthcare documentation skills for clinicians and health teams (drafting aids for clinician review, not medical advice): SOAP Note, Discharge Summary, Prior Authorization Letter, and Clinical Trial Protocol.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["healthcare", "clinical", "soap-note", "discharge-summary", "prior-authorization", "clinical-trial", "medical-documentation"]
+}

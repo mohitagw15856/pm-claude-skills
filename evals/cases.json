@@ -156,6 +156,22 @@
     {
       "skill": "apology-letter",
       "input": "Write an apology to a customer. We're a meal-kit company; we shipped their order to the wrong address and by the time it was sorted the ingredients had spoiled, ruining a dinner party they'd planned. It was our fulfilment error. We want to refund the order in full, give them a credit for a future box, and keep them as a customer."
+    },
+    {
+      "skill": "soap-note",
+      "input": "Write a SOAP note from these encounter notes. 54-year-old presents with a productive cough for 5 days, low-grade fever, and mild shortness of breath on exertion; no chest pain. History of mild asthma. Exam: temp 38.1C, RR 20, SpO2 96% on room air, scattered crackles in the right lower lung field. Working impression: community-acquired pneumonia, mild. Plan: chest X-ray, start oral amoxicillin, continue inhaler, push fluids, review in 3 days or sooner if worse."
+    },
+    {
+      "skill": "discharge-summary",
+      "input": "Write a discharge summary. Admitted 3 days ago for community-acquired pneumonia after presenting with cough, fever, and shortness of breath; chest X-ray confirmed a right-lower-lobe infiltrate. Treated with IV antibiotics, switched to oral on day 2 with good response; afebrile for 24 hours at discharge. Discharge meds: complete a 5-day course of oral amoxicillin (new), continue home inhaler (unchanged). Discharged home in stable condition. Follow up with primary care in 1 week; return if fever returns or breathing worsens."
+    },
+    {
+      "skill": "prior-authorization-letter",
+      "input": "Write a letter of medical necessity. Patient has moderate-to-severe plaque psoriasis covering ~15% body surface area, with significant impact on daily function and quality of life. They have tried and failed topical corticosteroids and methotrexate (inadequate response after 3 months; methotrexate caused elevated liver enzymes). We are requesting authorization for a biologic (adalimumab). Insurer requires step-therapy documentation. Patient is a 42-year-old on a commercial plan."
+    },
+    {
+      "skill": "clinical-trial-protocol",
+      "input": "Draft a clinical trial protocol synopsis. Phase II, randomized, double-blind, placebo-controlled trial of an investigational oral drug for moderate knee osteoarthritis pain in adults. Primary question: does it reduce pain versus placebo over 12 weeks? We expect to enroll adults 45-75 with a confirmed diagnosis. Outcome of interest is patient-reported pain. Treat effect sizes and prior data as placeholders for the study team to set."
     }
   ]
 }

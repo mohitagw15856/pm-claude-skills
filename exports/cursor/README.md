@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-299 skills exported. Copy a `.mdc rule` into the tool to use it.
+303 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -45,6 +45,7 @@
 | Clause Explainer | `pm-legal` | `pm-legal/clause-explainer/clause-explainer.mdc` |
 | Client Discovery | `pm-consulting` | `pm-consulting/client-discovery/client-discovery.mdc` |
 | Clinical Case Summary | `pm-research` | `pm-research/clinical-case-summary/clinical-case-summary.mdc` |
+| Clinical Trial Protocol | `pm-health` | `pm-health/clinical-trial-protocol/clinical-trial-protocol.mdc` |
 | Code Explainer | `pm-engineering` | `pm-engineering/code-explainer/code-explainer.mdc` |
 | Code Review Checklist | `pm-engineering` | `pm-engineering/code-review-checklist/code-review-checklist.mdc` |
 | Cohort Analysis | `pm-data` | `pm-data/cohort-analysis/cohort-analysis.mdc` |
@@ -93,6 +94,7 @@
 | Developer Onboarding Document | `pm-engineering` | `pm-engineering/developer-onboarding-doc/developer-onboarding-doc.mdc` |
 | Difficult Conversation | `pm-comms` | `pm-comms/difficult-conversation/difficult-conversation.mdc` |
 | Disaster Recovery Plan | `pm-engineering` | `pm-engineering/disaster-recovery-plan/disaster-recovery-plan.mdc` |
+| Discharge Summary | `pm-health` | `pm-health/discharge-summary/discharge-summary.mdc` |
 | Discovery Call Prep | `pm-sales` | `pm-sales/discovery-call-prep/discovery-call-prep.mdc` |
 | Discovery Interview Guide | `pm-discovery` | `pm-discovery/discovery-interview-guide/discovery-interview-guide.mdc` |
 | Word Doc Tracked Changes | `pm-essentials` | `pm-essentials/docx-tracked-changes/docx-tracked-changes.mdc` |
@@ -211,6 +213,7 @@
 | Press Release | `pm-cross` | `pm-cross/press-release/press-release.mdc` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/pricing-calculator.mdc` |
 | Pricing Strategy | `pm-planning` | `pm-planning/pricing-strategy/pricing-strategy.mdc` |
+| Prior Authorization Letter | `pm-health` | `pm-health/prior-authorization-letter/prior-authorization-letter.mdc` |
 | Privacy Policy Drafter | `pm-legal` | `pm-legal/privacy-policy-drafter/privacy-policy-drafter.mdc` |
 | Process Documentation | `pm-operations` | `pm-operations/process-documentation/process-documentation.mdc` |
 | Product Health Analysis | `pm-analytics` | `pm-analytics/product-health-analysis/product-health-analysis.mdc` |
@@ -262,6 +265,7 @@
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/skill-security-auditor.mdc` |
 | Slide Deck | `pm-documents` | `pm-documents/slide-deck/slide-deck.mdc` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/slo-error-budget.mdc` |
+| SOAP Note | `pm-health` | `pm-health/soap-note/soap-note.mdc` |
 | SOC 2 Readiness | `pm-compliance` | `pm-compliance/soc2-readiness/soc2-readiness.mdc` |
 | Social Ad Campaign | `pm-social` | `pm-social/social-ad-campaign/social-ad-campaign.mdc` |
 | Social Media Audit | `pm-social` | `pm-social/social-media-audit/social-media-audit.mdc` |

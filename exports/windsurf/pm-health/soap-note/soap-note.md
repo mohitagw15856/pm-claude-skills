@@ -1,0 +1,68 @@
+---
+trigger: model_decision
+description: "Structure a clinical encounter into a clean SOAP note. Use when asked to write a SOAP note, document a patient encounter, turn visit notes into clinical documentation, or structure subjective/objective/assessment/plan. Produces a well-organised SOAP note — Subjective, Objective, Assessment (with differential), and Plan — from the provided encounter details, in standard clinical-documentation style."
+---
+
+# SOAP Note Skill
+
+Good clinical documentation is structured so the next clinician can reconstruct the reasoning in seconds: what
+the patient reported, what was found, what you think, and what you'll do. This skill turns encounter notes into
+a clean SOAP note that follows that structure and keeps assessment separate from plan.
+
+> **Clinical-safety note:** this is a documentation-formatting aid, **not medical advice or a diagnosis**. It
+> organises information a qualified clinician provides; all content must be reviewed and verified by the treating
+> clinician before entering the medical record. Do not invent clinical findings, vitals, or results.
+
+## Working from a brief
+
+Given rough encounter notes, **produce the full structured note anyway** — organise what's given into the four
+sections and place each detail correctly. Where a standard field wasn't provided, leave it clearly marked (e.g.
+"Vitals: not documented") rather than inventing a value. Never fabricate findings, labs, or measurements.
+
+## Required Inputs
+
+Ask for these only if they aren't already provided (else mark as not documented):
+
+- **Subjective** — the patient's reported symptoms, history of present illness, relevant history.
+- **Objective** — exam findings, vitals, labs/imaging results (as provided).
+- **Clinical impression** — the working assessment / differential, if the clinician has one.
+- **Plan** — orders, treatment, follow-up, patient education (as provided).
+
+## Output Format
+
+### SOAP Note
+
+**S — Subjective**
+- Chief complaint, HPI (onset, location, duration, character, aggravating/relieving, timing, severity), pertinent history and ROS as provided.
+
+**O — Objective**
+- Vitals; physical exam by system; lab/imaging results. Only what was documented — mark anything absent as "not documented".
+
+**A — Assessment**
+- The working diagnosis/clinical impression, with a brief differential where relevant. Keep reasoning here, separate from the plan.
+
+**P — Plan**
+- Per problem: diagnostics ordered, treatment/medications, referrals, patient education, and follow-up. Numbered by problem when there are several.
+
+End with a note of any **fields not documented** and a reminder that the treating clinician must verify before filing.
+
+## Quality Checks
+
+- [ ] Each detail is in the correct SOAP section (symptoms in S, findings in O, reasoning in A, actions in P)
+- [ ] Assessment is kept separate from plan — diagnosis vs. what you'll do
+- [ ] No clinical value (vital, lab, finding) is invented — undocumented fields are marked, not guessed
+- [ ] The plan is actionable and tied to the assessed problem(s)
+- [ ] Standard clinical structure and abbreviations are used appropriately
+- [ ] A clinician-review reminder is included
+
+## Anti-Patterns
+
+- [ ] Do not invent vitals, labs, exam findings, or results to fill a section — mark them "not documented"
+- [ ] Do not present this as diagnosis or medical advice — it formats clinician-provided information
+- [ ] Do not blur assessment and plan into one block — they serve different readers and purposes
+- [ ] Do not drop pertinent negatives the clinician noted — they're part of the reasoning
+- [ ] Do not reorganise so heavily that the clinician's original meaning changes
+
+## Based On
+
+Clinical documentation practice — the SOAP (Subjective, Objective, Assessment, Plan) format for structured, reviewable encounter notes.
