@@ -210,13 +210,20 @@ function countUp(node, to) {
     if (p < 1) requestAnimationFrame(step);
   })(start);
 }
-function initHero() {
-  countUp(el('statSkills'), SKILLS.length);
-  // Keep the visible prose counts in sync with the real catalogue so they never go stale.
-  const n = SKILLS.length;
+// Keep the visible prose counts in sync with the real catalogue so they never go stale —
+// also re-run after a UI-language switch, since i18n.js resets the text to a dict value.
+function syncSkillCount() {
+  const n = (SKILLS && SKILLS.length) || 0;
+  if (!n) return;
   document.querySelectorAll('[data-skill-count]').forEach((eln) => {
     eln.textContent = eln.textContent.replace(/\b\d{2,4}\b/, n);
   });
+}
+window.pmOnI18nApply = syncSkillCount;
+
+function initHero() {
+  countUp(el('statSkills'), SKILLS.length);
+  syncSkillCount();
   const scored = SKILLS.filter((s) => s.eval);
   countUp(el('statEval'), scored.length);
   if (scored.length && el('statAvg')) {

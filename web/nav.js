@@ -83,16 +83,28 @@
   if (!nav) return;
   var file = (location.pathname.split('/').pop() || 'index.html');
   if (file === '' || file === '/') file = 'index.html';
-  var link = function (href, lbl) { return '<a class="tool' + (href === file ? ' active' : '') + '" href="' + href + '">' + lbl + '</a>'; };
+  // Map nav targets to i18n keys (used by i18n.js when the UI language is switched).
+  var NAVKEY = {
+    'index.html': 'nav.playground', 'jobs.html': 'nav.jobs', 'hub.html': 'nav.journeys', 'galaxy.html': 'nav.galaxy', 'pro.html': 'nav.pro',
+    'agent.html': 'nav.agent', 'canvas.html': 'nav.canvas', 'ask.html': 'nav.ask', 'brain.html': 'nav.brain', 'grade.html': 'nav.grade', 'studio.html': 'nav.studio',
+    'catalog.html': 'nav.catalog', 'examples.html': 'nav.examples', 'leaderboard.html': 'nav.leaderboard', 'coverage.html': 'nav.coverage',
+    'benchmark.html': 'nav.benchmark', 'learn.html': 'nav.learn', 'guide.html': 'nav.guide', 'community.html': 'nav.community',
+    'https://github.com/mohitagw15856/pm-claude-skills/blob/main/COMMUNITY-SKILLS.md': 'nav.communitySkills',
+    'Tools': 'nav.tools', 'Explore': 'nav.explore',
+  };
+  var di = function (href) { return NAVKEY[href] ? ' data-i18n="' + NAVKEY[href] + '"' : ''; };
+  var link = function (href, lbl) { return '<a class="tool' + (href === file ? ' active' : '') + '"' + di(href) + ' href="' + href + '">' + lbl + '</a>'; };
   nav.innerHTML = NAV.map(function (it) {
     if (it.external) return '<a class="tool' + (it.cta ? ' cta' : '') + '" href="' + it.href + '" target="_blank" rel="noopener">' + it.label + '</a>';
     if (it.href) return link(it.href, it.label);
     var here = it.items.some(function (t) { return t[0] === file; });
     return '<span class="tool-group">'
-      + '<button type="button" class="tool group-btn' + (here ? ' active' : '') + '" aria-haspopup="true" aria-expanded="false">' + it.group + ' ▾</button>'
-      + '<span class="group-menu" hidden>' + it.items.map(function (t) { return t[2] ? '<a class="tool" href="' + t[0] + '" target="_blank" rel="noopener">' + t[1] + '</a>' : link(t[0], t[1]); }).join('') + '</span>'
+      + '<button type="button" class="tool group-btn' + (here ? ' active' : '') + '" aria-haspopup="true" aria-expanded="false"><span' + di(it.group) + '>' + it.group + '</span> ▾</button>'
+      + '<span class="group-menu" hidden>' + it.items.map(function (t) { return t[2] ? '<a class="tool"' + di(t[0]) + ' href="' + t[0] + '" target="_blank" rel="noopener">' + t[1] + '</a>' : link(t[0], t[1]); }).join('') + '</span>'
       + '</span>';
   }).join('');
+  // Apply UI translations to the freshly-built nav (no-op if i18n.js isn't loaded on this page).
+  if (window.PMi18n) window.PMi18n.apply();
 
   // Dropdown open/close (click to toggle, outside-click / Escape to close).
   var groups = [].slice.call(nav.querySelectorAll('.tool-group'));
@@ -141,4 +153,18 @@
     setIcon();
   });
   nav.appendChild(t);
+
+  // UI-language toggle (中 / EN) — only where i18n.js is loaded (the playground). Switches the
+  // interface chrome; the 🌐 output selector / Translate button handle the generated content.
+  if (window.PMi18n) {
+    var lt = document.createElement('button');
+    lt.type = 'button'; lt.className = 'tool theme-pill'; lt.title = 'Switch interface language · 切换界面语言';
+    var setLangIcon = function () { lt.textContent = window.PMi18n.getLang() === 'zh' ? 'EN' : '中'; };
+    setLangIcon();
+    lt.addEventListener('click', function () {
+      window.PMi18n.setLang(window.PMi18n.getLang() === 'zh' ? 'en' : 'zh');
+      setLangIcon();
+    });
+    nav.appendChild(lt);
+  }
 })();

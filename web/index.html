@@ -44,38 +44,38 @@
 
   <div class="key-note">
     <strong>👆 No credit card needed to start.</strong> Grab a <strong>free Google AI Studio key</strong> (30 seconds, no card) and paste it top-right — or pick <strong>In-browser</strong> to run a model with <strong>no key at all</strong>. Prefer Claude/OpenAI? Switch the provider dropdown. Your key stays only in this browser, sent straight to the provider — never to us.
-    <a id="getKeyLink" href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Get a FREE Gemini key (no credit card) →</a> · Or just <strong>copy any skill</strong> for ChatGPT/Claude — no key needed.
+    <a id="getKeyLink" data-i18n="page.getKey" href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Get a FREE Gemini key (no credit card) →</a> · Or just <strong>copy any skill</strong> for ChatGPT/Claude — no key needed.
     <br /><span style="opacity:.7;font-size:12px">🔒 Privacy: we use cookieless, anonymous usage counts (page views + which skills run) — never your key, inputs, or outputs.</span>
   </div>
 
   <section class="hero" id="hero">
     <div class="hero-text">
-      <a class="dir-pill" href="https://www.anthropic.com/" target="_blank" rel="noopener" title="Published in the official Anthropic Claude plugin directory">🎉 In the official Anthropic plugin directory</a>
-      <h2>Make AI produce <span class="grad">real professional work</span>.</h2>
-      <p data-skill-count>244 open-source skills that teach Claude, ChatGPT &amp; Gemini the structure a senior pro uses — PRDs, exec updates, launch plans, postmortems. Run any one free, right here.</p>
+      <a class="dir-pill" data-i18n="page.dirPill" href="https://www.anthropic.com/" target="_blank" rel="noopener" title="Published in the official Anthropic Claude plugin directory">🎉 In the official Anthropic plugin directory</a>
+      <h2 data-i18n-html="page.heroH2">Make AI produce <span class="grad">real professional work</span>.</h2>
+      <p data-skill-count data-i18n="page.heroP">319 open-source skills that teach Claude, ChatGPT &amp; Gemini the structure a senior pro uses — PRDs, exec updates, launch plans, postmortems. Run any one free, right here.</p>
       <div class="hero-stats">
-        <div><b id="statSkills">0</b><span>skills</span></div>
-        <div><b id="statEval">0</b><span>eval-scored</span></div>
-        <div><b id="statAvg">—</b><span>avg score /5</span></div>
-        <div><b id="statStars">★</b><span>stars</span></div>
+        <div><b id="statSkills">0</b><span data-i18n="page.statSkills">skills</span></div>
+        <div><b id="statEval">0</b><span data-i18n="page.statEval">eval-scored</span></div>
+        <div><b id="statAvg">—</b><span data-i18n="page.statAvg">avg score /5</span></div>
+        <div><b id="statStars">★</b><span data-i18n="page.statStars">stars</span></div>
       </div>
       <div class="hero-cta">
-        <a class="tool active" href="agent.html" style="text-decoration:none">✨ Try the Auto-Agent</a>
-        <a class="tool" href="galaxy.html" style="text-decoration:none">🌌 Explore the Galaxy</a>
-        <a class="tool" href="#controls" style="text-decoration:none">▶ Browse skills ↓</a>
+        <a class="tool active" data-i18n="page.cta1" href="agent.html" style="text-decoration:none">✨ Try the Auto-Agent</a>
+        <a class="tool" data-i18n="page.cta2" href="galaxy.html" style="text-decoration:none">🌌 Explore the Galaxy</a>
+        <a class="tool" data-i18n="page.cta3" href="#controls" style="text-decoration:none">▶ Browse skills ↓</a>
       </div>
     </div>
     <a class="hero-gif" href="agent.html"><img src="docs-assets/agent-demo.gif" alt="Auto-Agent: a goal becomes a planned chain of skills" loading="lazy" /></a>
   </section>
 
   <div class="onboarding" id="onboarding" hidden>
-    <span class="onboarding-q">👋 New here? What do you do?</span>
+    <span class="onboarding-q" data-i18n="page.onboardingQ">👋 New here? What do you do?</span>
     <div class="role-chips" id="roleChips"></div>
-    <button class="role-skip" id="roleSkip" type="button">skip</button>
+    <button class="role-skip" id="roleSkip" type="button" data-i18n="page.skip">skip</button>
   </div>
 
   <details class="context-box" id="contextBox">
-    <summary>🧠 Your context — set once, every skill uses it <span id="contextStatus" class="context-status"></span></summary>
+    <summary><span data-i18n="page.contextSummary">🧠 Your context — set once, every skill uses it</span> <span id="contextStatus" class="context-status"></span></summary>
     <textarea id="contextInput" rows="4" placeholder="About you & your company: product, who it's for, your voice/tone, key metrics, competitors, constraints. Tip: add a line like 'Brand color: #1B365D' and the themed PDF export tints your documents to match. Saved in your browser and added to every run, so outputs come back tailored to you — no re-typing."></textarea>
     <div class="context-actions-row">
       <label class="file-load" title="Load a CSV / markdown / text file so skills ground on your real data">📎 Ground in a file<input type="file" id="contextFile" accept=".txt,.md,.csv,.json,.tsv,.log" hidden /></label>
@@ -85,21 +85,21 @@
   </details>
 
   <div class="recommend" id="recommend">
-    <input id="recommendInput" type="text" placeholder="🧭 Not sure which skill? Describe your task — e.g. “explain a metric drop to my CEO”" />
+    <input id="recommendInput" type="text" data-i18n-ph="page.recommendPh" placeholder="🧭 Not sure which skill? Describe your task — e.g. “explain a metric drop to my CEO”" />
     <div id="recommendResults" class="recommend-results" hidden></div>
   </div>
 
   <div class="controls" id="controls">
-    <input id="search" type="search" placeholder="Search skills…" />
-    <select id="pluginFilter"><option value="">All bundles</option></select>
+    <input id="search" type="search" data-i18n-ph="page.searchPh" placeholder="Search skills…" />
+    <select id="pluginFilter"><option value="" data-i18n="page.allBundles">All bundles</option></select>
     <select id="tierFilter" title="Maturity tier">
-      <option value="">All tiers</option>
-      <option value="production">🟢 Production-Ready</option>
-      <option value="stable">🔵 Stable</option>
-      <option value="experimental">🟡 Experimental</option>
+      <option value="" data-i18n="page.allTiers">All tiers</option>
+      <option value="production" data-i18n="page.tierProd">🟢 Production-Ready</option>
+      <option value="stable" data-i18n="page.tierStable">🔵 Stable</option>
+      <option value="experimental" data-i18n="page.tierExp">🟡 Experimental</option>
     </select>
-    <label class="eval-filter" title="Show only skills scored by the eval harness"><input type="checkbox" id="evalFilter" /> ✅ Eval-scored</label>
-    <button id="historyBtn" class="ghost" type="button" title="Your saved runs (stored only in this browser)">🕘 History</button>
+    <label class="eval-filter" title="Show only skills scored by the eval harness"><input type="checkbox" id="evalFilter" /> <span data-i18n="page.evalFilter">✅ Eval-scored</span></label>
+    <button id="historyBtn" class="ghost" type="button" data-i18n="page.history" title="Your saved runs (stored only in this browser)">🕘 History</button>
     <span id="count" class="count"></span>
   </div>
 
@@ -238,6 +238,7 @@
 <script src="brain.js"></script>
 <script src="export-doc.js"></script>
 <script src="app.js"></script>
+<script src="i18n.js"></script>
 <script src="nav.js"></script>
 </body>
 </html>
