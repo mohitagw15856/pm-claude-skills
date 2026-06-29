@@ -9,6 +9,13 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+### Added
+- **"Evaluate selected bundles" Action** ([`.github/workflows/eval-bundles.yml`](.github/workflows/eval-bundles.yml)) — pick which bundles to score and add to the leaderboard. A free `list` mode reports eval coverage per bundle (✅ complete / 🟡 partial / ⬜ unevaluated) in the job summary; `evaluate` mode scores the bundles you name (or every unevaluated one), keeps all existing scores, and opens a PR with the refreshed `evals/results.json`. Backed by a new [`scripts/eval-status.mjs`](scripts/eval-status.mjs) (CLI: `node scripts/eval-status.mjs`) and new `--bundles` / `--skills` / `--unevaluated` filters on the eval harness.
+
+### Fixed
+- **Header navigation on generated pages** — the Tools/Explore dropdowns broke on `catalog.html`, `leaderboard.html`, and `community.html` because those pages ship inline CSS and don't link `styles.css`, so the dropdown/CTA rules never loaded. [`web/nav.js`](web/nav.js) now injects its own styles, keeping it the single source of truth so the bar works on every page.
+- **Guide skill count** — [`web/guide.html`](web/guide.html) now reads **288 skills across 23 professions** (was 244 / 21).
+
 ## [29.0.0] — Multilingual + a polished experience — 2026-06-23
 
 ### Added

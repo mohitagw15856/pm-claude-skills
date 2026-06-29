@@ -14,6 +14,7 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { EVAL_EXCLUDE } from '../evals/eval-exclude.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const skillsDir = join(root, 'skills');
@@ -34,21 +35,8 @@ const firstSentence = (s) => (s.split(/(?<=[.!?])\s/)[0] || s).slice(0, 200);
 const curated = JSON.parse(readFileSync(join(root, 'evals', 'cases.json'), 'utf8')).cases;
 const curatedBySkill = new Map(curated.map((c) => [c.skill, c]));
 
-// Skills that an LLM-as-judge can't fairly score on a text "artifact" rubric — they need
-// an image, a live URL/account, or they activate a behaviour rather than produce a document.
-// Scoring them yields a misleading low (grounding tanks because there's nothing to ground on),
-// so we exclude them from the leaderboard and mark them "not eval-applicable" instead.
-const EVAL_EXCLUDE = new Set([
-  'chart-data-extractor',        // needs an image to read
-  'substack-notes-scraper',      // needs a live URL
-  'instagram-post-downloader',   // needs a live URL / tool
-  'thumbnail-creator',           // produces an image
-  'email-triage',                // needs a connected Gmail
-  'notebooklm-connector',        // external tool / live source
-  'morning-intelligence',        // needs live web data
-  'context-mode',                // activates a session behaviour, not an artifact
-  'claude-superpowers',          // activates a coding discipline, not an artifact
-]);
+// EVAL_EXCLUDE (skills an LLM judge can't fairly score on a text rubric) is shared
+// with scripts/eval-status.mjs — see evals/eval-exclude.mjs.
 
 const cases = [];
 let generated = 0, excluded = 0;

@@ -1,0 +1,131 @@
+name: Evaluate selected bundles
+
+# Pick which bundles to score and add to the public leaderboard.
+#
+# Two-step, no-surprise-spend flow:
+#   1. mode = list      → reports eval coverage per bundle (free, no API calls). Read the
+#                         job summary to see which bundles are still unevaluated.
+#   2. mode = evaluate  → scores the skills in the bundles you name (or every unevaluated
+#                         one), keeps all existing scores, and opens a PR with the refreshed
+#                         evals/results.json. Merging it republishes the leaderboard.
+#
+# Manual trigger only, so it never burns tokens by surprise.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'list = just show unevaluated bundles (free). evaluate = score the chosen bundles.'
+        type: choice
+        required: true
+        default: 'list'
+        options:
+          - list
+          - evaluate
+      bundles:
+        description: 'Bundles to evaluate (comma-separated, e.g. pm-support,pm-consulting). Use "unevaluated" for every bundle with unscored skills. Ignored when mode=list.'
+        required: false
+        default: 'unevaluated'
+      only_unscored:
+        description: 'Within the chosen bundles, score only skills with no score yet (skip already-scored ones). Cheapest.'
+        type: boolean
+        required: false
+        default: true
+      models:
+        description: 'Comma-separated model ids to score with'
+        required: false
+        default: 'claude-haiku-4-5-20251001'
+      judge:
+        description: 'Judge model id'
+        required: false
+        default: 'claude-haiku-4-5-20251001'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: eval-bundles
+  cancel-in-progress: false
+
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build the skill catalog (skill → bundle map)
+        run: node web/build-skills.mjs
+
+      - name: Report eval coverage by bundle
+        run: node scripts/eval-status.mjs --markdown >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Stop here (list mode)
+        if: ${{ github.event.inputs.mode == 'list' }}
+        run: echo "List mode — see the job summary above for unevaluated bundles. Re-run with mode=evaluate to score them."
+
+      - name: Resolve which bundles to score
+        if: ${{ github.event.inputs.mode == 'evaluate' }}
+        id: pick
+        run: |
+          BUNDLES="${{ github.event.inputs.bundles }}"
+          if [ "$BUNDLES" = "unevaluated" ] || [ -z "$BUNDLES" ]; then
+            BUNDLES="$(node scripts/eval-status.mjs --unevaluated)"
+          fi
+          if [ -z "$BUNDLES" ]; then
+            echo "::notice::No bundles left to evaluate — every bundle is fully scored. Nothing to do."
+          fi
+          echo "bundles=$BUNDLES" >> "$GITHUB_OUTPUT"
+          echo "Scoring bundles: $BUNDLES"
+
+      - name: Evaluate the selected bundles
+        if: ${{ github.event.inputs.mode == 'evaluate' && steps.pick.outputs.bundles != '' }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY secret is not set. Add it in Settings → Secrets and variables → Actions."
+            exit 1
+          fi
+          MODELS="${{ github.event.inputs.models }}"
+          JUDGE="${{ github.event.inputs.judge }}"
+          UNSCORED=""
+          if [ "${{ github.event.inputs.only_unscored }}" = "true" ]; then UNSCORED="--unevaluated"; fi
+          # Generate a representative case for every skill, then score only the chosen
+          # bundles. Prior results.json scores are kept; only the selected skills (re)run.
+          node scripts/gen-eval-cases.mjs
+          node evals/run-evals.mjs \
+            --cases evals/cases.full.json \
+            --bundles "${{ steps.pick.outputs.bundles }}" \
+            $UNSCORED \
+            --models "$MODELS" --judge "$JUDGE"
+
+      - name: Build the leaderboard page (sanity check)
+        if: ${{ github.event.inputs.mode == 'evaluate' && steps.pick.outputs.bundles != '' }}
+        run: node scripts/build-leaderboard.mjs
+
+      - name: Open a PR with the refreshed results
+        if: ${{ github.event.inputs.mode == 'evaluate' && steps.pick.outputs.bundles != '' }}
+        uses: peter-evans/create-pull-request@v7
+        with:
+          add-paths: evals/results.json
+          branch: eval-bundles-results
+          delete-branch: true
+          commit-message: "chore(evals): score selected bundles for the leaderboard"
+          title: "chore(evals): add ${{ steps.pick.outputs.bundles }} to the leaderboard"
+          body: |
+            Auto-generated by the **Evaluate selected bundles** workflow.
+
+            **Bundles scored:** `${{ steps.pick.outputs.bundles }}`
+            **Models:** `${{ github.event.inputs.models }}` · **Judge:** `${{ github.event.inputs.judge }}`
+
+            Merging this publishes the new scores on the live leaderboard (the Pages deploy
+            re-renders `web/leaderboard.html` when `evals/results.json` changes). All previously
+            scored skills are preserved.

@@ -6,6 +6,29 @@
   // Apply the saved theme as early as possible (shared across all pages).
   try { document.documentElement.dataset.theme = localStorage.getItem('pm_theme') || 'dark'; } catch (e) {}
 
+  // --- Self-contained nav CSS ---------------------------------------------
+  // The grouped-dropdown + CTA styles used to live only in styles.css, but the
+  // generated pages (catalog.html, leaderboard.html, community.html) ship their
+  // own inline <style> and don't link styles.css — so their Tools/Explore
+  // dropdowns rendered unstyled and broke the header. Injecting the rules here
+  // keeps nav.js the single source of truth and makes the bar work everywhere.
+  // var() fallbacks cover pages that don't define the full token set.
+  if (!document.getElementById('pm-nav-css')) {
+    var st = document.createElement('style');
+    st.id = 'pm-nav-css';
+    st.textContent = [
+      '.toolbar-nav .tool.cta{color:var(--text,#e7ebf0);border-color:var(--accent,#d97757);font-weight:700}',
+      '.toolbar-nav .tool.cta:hover{background:var(--accent-grad,linear-gradient(135deg,#e0855f,#d9605a));color:#1a1207;border-color:transparent}',
+      '.toolbar-nav .tool-group{position:relative;display:inline-flex}',
+      '.toolbar-nav .group-btn{cursor:pointer;font-family:inherit}',
+      '.toolbar-nav .group-menu{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);z-index:60;display:flex;flex-direction:column;gap:3px;min-width:200px;padding:7px;background:var(--panel,#161a21);border:1px solid var(--border,#2a313c);border-radius:12px;box-shadow:0 12px 34px rgba(0,0,0,.45)}',
+      '.toolbar-nav .group-menu[hidden]{display:none}',
+      '.toolbar-nav .group-menu .tool{white-space:nowrap;text-align:left}',
+      'html[data-theme="light"] .toolbar-nav .group-menu{background:#fff}'
+    ].join('');
+    (document.head || document.documentElement).appendChild(st);
+  }
+
   // --- Privacy-first analytics (cookieless, no PII) ------------------------
   // Tracks anonymous page views + which skills/tools are run — NEVER the API
   // key, inputs, or outputs. Disabled until you set your GoatCounter code.
