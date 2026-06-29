@@ -1,17 +1,13 @@
 {
-  "generatedAt": "2026-06-23T20:37:07.645Z",
+  "generatedAt": "2026-06-29T11:58:05.300Z",
   "window": "7d",
   "skills": [
     {
-      "name": "meeting-notes",
-      "count": 1
-    },
-    {
       "name": "prd-template",
-      "count": 1
+      "count": 2
     },
     {
-      "name": "content-calendar",
+      "name": "go-to-market-planner",
       "count": 1
     }
   ]
