@@ -171,6 +171,18 @@ Then update the target list/count in the README and `docs/`. See
 
 ---
 
+## Listing a community skill (keep it in your own repo)
+
+Not every skill needs to live in this repo. If you've built skills in **your own repo** and
+just want people to find them, raise a one-row PR to **[`COMMUNITY-SKILLS.md`](COMMUNITY-SKILLS.md)**
+instead of opening a full skill PR — and once it's merged you earn a **"Featured in PM Skills
+Community" badge** to display in your own repo. Those listings are community-maintained and **not**
+eval-scored or security-audited — the bar is "public repo with a valid `SKILL.md` and an
+honest one-liner." The curated, quality-gated flow above is for skills you want *in* the
+library (playground, MCP, exports, leaderboard).
+
+---
+
 ## Skills Wishlist
 
 These have been requested but not yet built. Pick one up if you have the expertise:

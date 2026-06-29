@@ -10,6 +10,7 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 ## [Unreleased]
 
 ### Added
+- **Community Skills directory** ([`COMMUNITY-SKILLS.md`](COMMUNITY-SKILLS.md)) — a fenced, community-maintained list of external skill repos/packs that follow the `SKILL.md` standard, with an explicit trust boundary (community-contributed; **not** eval-scored or security-audited) so it stays clearly separate from the curated library. **PR-only** to get listed, and a merged PR earns a **"Featured in PM Skills Community" badge** authors can display in their own repo (links back to the directory — the awesome-list flywheel). A format validator ([`scripts/check-community-skills.mjs`](scripts/check-community-skills.mjs)) + CI keeps submissions well-formed. Linked from the README and CONTRIBUTING.
 - **Kilo Code export/install target** (#40) — `exports/kilocode/` (rules for `.kilocode/rules/`) wired end-to-end: a `PLATFORMS` entry in `build-exports.mjs`, an install-path mapping in `install.sh`, and a CLI branch in `bin/cli.mjs` (`npx pm-claude-skills add --agent kilocode`). 11 export platforms total.
 - **Export-target contributor checklist** ([`CONTRIBUTING.md`](CONTRIBUTING.md)) — a 4-point contract (registry entry · install-path mapping · CLI branch · `build-exports --check` proof) so "support another tool" always means a working install path, not just a README entry. Kilo Code is the worked example.
 

@@ -1,0 +1,25 @@
+name: Community Skills check
+
+# Validates the COMMUNITY-SKILLS.md directory table when a PR edits it, so
+# community "add my skill" PRs stay well-formed (4 columns, a linked name, a
+# public repo URL, no duplicates). Structural only — no network calls.
+
+on:
+  pull_request:
+    paths:
+      - 'COMMUNITY-SKILLS.md'
+      - 'scripts/check-community-skills.mjs'
+      - '.github/workflows/community-skills-check.yml'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate the Community Skills directory
+        run: node scripts/check-community-skills.mjs

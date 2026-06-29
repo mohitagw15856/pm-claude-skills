@@ -902,6 +902,8 @@ Full details and where the money goes: **[SPONSORS.md](SPONSORS.md)**.
 
 This is an open-source community library. If you've built a skill that saves you time, share it here.
 
+**Two ways to share:** contribute a skill into the **curated library** (eval-scored, in the playground/MCP/exports) via the quality-gated flow below — or, if you'd rather keep it in your own repo, **list it in [Community Skills](COMMUNITY-SKILLS.md)** with a one-row PR and earn a **"Featured in PM Skills Community" badge** for your repo (community-maintained, not eval-scored).
+
 **New here?** See the [Roadmap & good first issues](ROADMAP.md#-good-first-issues) for starter tasks. **Found a bug?** [Open a bug report →](../../issues/new?template=bug-report.md).
 
 **How to contribute:**
