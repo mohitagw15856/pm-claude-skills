@@ -10,9 +10,9 @@
 [![Remote MCP](https://img.shields.io/badge/ChatGPT%20%C2%B7%20Claude.ai-connector-10A37F)](mcp-remote/)
 [![Smithery](https://smithery.ai/badge/mohit15856/pm-skills)](https://smithery.ai/servers/mohit15856/pm-skills)
 [![Skills](https://img.shields.io/badge/skills-313-blue)](https://github.com/mohitagw15856/pm-claude-skills)
-[![eval](https://img.shields.io/badge/eval--scored-196%20%C2%B7%20avg%204.8%2F5-brightgreen)](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)
+[![eval](https://img.shields.io/badge/eval--scored-208%20%C2%B7%20avg%204.8%2F5-brightgreen)](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)
 [![Subagents](https://img.shields.io/badge/subagents-4-blueviolet)](agents/)
-[![Commands](https://img.shields.io/badge/slash%20commands-6-blueviolet)](commands/)
+[![Commands](https://img.shields.io/badge/slash%20commands-19-blueviolet)](commands/)
 [![Personas](https://img.shields.io/badge/personas-4-blueviolet)](output-styles/)
 [![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Cursor%20%7C%20Codex%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
 [![Integrations](https://img.shields.io/badge/integrates%20with-n8n%20%C2%B7%20Lovable%20%C2%B7%20Obsidian-0E9F6E)](connectors/)
@@ -263,7 +263,7 @@ The bot runs the skill and posts the result as a reply. `/skill list` shows usag
 
 **Grounded in canonical frameworks.** These aren't invented prompts — each skill encodes a proven method and cites it: RICE (Intercom), Jobs-to-be-Done (Christensen), Continuous Discovery (Teresa Torres), Porter's Five Forces, the Pyramid Principle (Minto), Google SRE, WCAG, *Obviously Awesome* (April Dunford), and more. The source shows as a **"📚 Based on"** line on every [skill page](https://mohitagw15856.github.io/pm-claude-skills/skill/rice-prioritisation.html) and in the Playground.
 
-**And measured, not just claimed.** An [eval harness](evals/) runs each skill against a held-out test case, then an LLM judge (Opus 4.8) rates the output on four dimensions — **structure, completeness, usefulness, grounding** — averaged across two models. **15 skills are eval-scored** today (and climbing); the rest are reviewed against the [authoring standard](SKILL-AUTHORING-STANDARD.md). A **[regression gate](.github/workflows/skill-pr-check.yml)** then blocks any PR that drops a skill's score, so quality can't quietly rot as models change.
+**And measured, not just claimed.** An [eval harness](evals/) runs each skill against a held-out test case, then an LLM judge (Opus 4.8) rates the output on four dimensions — **structure, completeness, usefulness, grounding** — averaged across two models. **208 skills are eval-scored** today (and climbing); the rest are reviewed against the [authoring standard](SKILL-AUTHORING-STANDARD.md). A **[regression gate](.github/workflows/skill-pr-check.yml)** then blocks any PR that drops a skill's score, so quality can't quietly rot as models change.
 
 **The qualitative half — real time saved.** Scores measure quality; **[case studies](CASE_STUDIES.md)** measure outcomes. See the kind of before → after a skill delivers (PRD: ~2 days → ~25 min), and **[add your own 2-minute ROI story](../../issues/new?template=roi-story.yml)** — we'll feature it.
 
@@ -413,7 +413,7 @@ The same 313 skills reach you through every channel — pick whatever fits your 
 | 🖥️ **IDE rules** | Generated exports for **Cursor, Windsurf, Aider, Cline, Continue, Zed, Roo** — [`exports/`](exports/) |
 | 🤖 **Agents & answer engines** | [`llms.txt`](https://mohitagw15856.github.io/pm-claude-skills/llms.txt) makes the whole library discoverable & citable |
 
-> **196 of 313 skills are eval-scored, averaging 4.8/5** — see the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html).
+> **208 of 313 skills are eval-scored, averaging 4.8/5** — see the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html).
 
 > 🧠 **Give your skills memory:** the [Professional Brain](BRAIN.md) is a local markdown folder skills read, write back to, and act on. It's a folder + one file to start — **[5-minute Quickstart](BRAIN_QUICKSTART.md)**.
 
