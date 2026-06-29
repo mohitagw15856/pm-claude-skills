@@ -160,9 +160,86 @@
     g.XLSX.writeFile(wb, safeName(title) + '.xlsx');
   }
 
+  // --- Calendar (.ics) — dated items in a roadmap/plan become calendar events --------
+  // Pulls dates out of (a) markdown tables with a date-ish column and (b) plain lines like
+  // "- 2026-07-01: Launch" or "**Jul 1, 2026** — Kickoff". All-day VEVENTs; imports into
+  // Google Calendar, Apple Calendar, Outlook. Returns the count of events written (0 = none found).
+  var MONTHS = { jan: 0, feb: 1, mar: 2, apr: 3, may: 4, jun: 5, jul: 6, aug: 7, sep: 8, oct: 9, nov: 10, dec: 11 };
+  function parseDate(s) {
+    if (!s) return null;
+    var m = s.match(/\b(\d{4})[-/](\d{1,2})[-/](\d{1,2})\b/); // ISO 2026-07-01
+    if (m) return ymd(+m[1], +m[2] - 1, +m[3]);
+    m = s.match(/\b([A-Za-z]{3,9})\.?\s+(\d{1,2})(?:st|nd|rd|th)?,?\s+(\d{4})\b/); // Jul 1, 2026
+    if (m && m[1].slice(0, 3).toLowerCase() in MONTHS) return ymd(+m[3], MONTHS[m[1].slice(0, 3).toLowerCase()], +m[2]);
+    m = s.match(/\b(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]{3,9})\.?\s+(\d{4})\b/); // 1 Jul 2026
+    if (m && m[2].slice(0, 3).toLowerCase() in MONTHS) return ymd(+m[3], MONTHS[m[2].slice(0, 3).toLowerCase()], +m[1]);
+    return null;
+  }
+  function ymd(y, mo, d) {
+    var dt = new Date(Date.UTC(y, mo, d));
+    if (isNaN(dt.getTime())) return null;
+    var p = function (n) { return (n < 10 ? '0' : '') + n; };
+    return '' + dt.getUTCFullYear() + p(dt.getUTCMonth() + 1) + p(dt.getUTCDate());
+  }
+  function icsEscape(s) { return String(s).replace(/([,;\\])/g, '\\$1').replace(/\n/g, '\\n'); }
+
+  function extractEvents(md) {
+    var events = [];
+    // (a) Tables — find a date column + a label column.
+    parseMdTables(md).forEach(function (rows) {
+      var head = rows[0].map(function (h) { return h.toLowerCase(); });
+      var dateCol = head.findIndex(function (h) { return /date|when|deadline|due|timing|milestone date|target/.test(h); });
+      var labelCol = head.findIndex(function (h, i) { return i !== dateCol && /milestone|task|event|item|name|deliverable|activity|phase|what|title/.test(h); });
+      if (labelCol === -1) labelCol = head.findIndex(function (_h, i) { return i !== dateCol; });
+      for (var r = 1; r < rows.length; r++) {
+        var row = rows[r];
+        var dt = parseDate(dateCol > -1 ? row[dateCol] : row.join(' '));
+        if (!dt) continue;
+        var label = (labelCol > -1 ? row[labelCol] : row[0]) || 'Event';
+        events.push({ date: dt, summary: label, desc: row.join(' · ') });
+      }
+    });
+    // (b) Plain lines: "- 2026-07-01: Launch" / "**Jul 1, 2026** — Kickoff" / "1 Jul 2026 — Kickoff".
+    (md || '').split('\n').forEach(function (raw) {
+      if (/^\s*\|.*\|\s*$/.test(raw)) return; // table rows are handled above — don't double-count
+      var ln = raw.trim().replace(/^[-*+]\s+/, '').replace(/^\*\*|\*\*/g, '');
+      var dt = parseDate(ln);
+      if (!dt) return;
+      // Skip lines already covered by a table row (cheap dedupe on date+text).
+      var label = clean(ln.replace(/\b\d{4}[-/]\d{1,2}[-/]\d{1,2}\b/, '')
+        .replace(/\b[A-Za-z]{3,9}\.?\s+\d{1,2}(?:st|nd|rd|th)?,?\s+\d{4}\b/, '')
+        .replace(/\b\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]{3,9}\.?\s+\d{4}\b/, '')
+        .replace(/^[\s:—–-]+|[\s:—–-]+$/g, '')) || 'Event';
+      if (events.some(function (e) { return e.date === dt && e.summary === label; })) return;
+      events.push({ date: dt, summary: label, desc: ln });
+    });
+    return events;
+  }
+
+  function toIcs(md, title) {
+    var events = extractEvents(md);
+    if (!events.length) {
+      alert('No dates found to put on a calendar. This works best on a roadmap, launch plan, or timeline with dated milestones (e.g. a "Date" column or "2026-07-01: …" lines).');
+      return;
+    }
+    var stamp = new Date().toISOString().replace(/[-:]/g, '').replace(/\.\d+Z$/, 'Z');
+    var lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//PM Skills//Artifacts//EN', 'CALSCALE:GREGORIAN',
+      'X-WR-CALNAME:' + icsEscape(title || 'PM Skills plan')];
+    events.forEach(function (e, i) {
+      // All-day event: DTEND is the day after DTSTART per the spec.
+      var end = ymd(+e.date.slice(0, 4), +e.date.slice(4, 6) - 1, +e.date.slice(6, 8) + 1) || e.date;
+      lines.push('BEGIN:VEVENT', 'UID:' + stamp + '-' + i + '@pm-skills', 'DTSTAMP:' + stamp,
+        'DTSTART;VALUE=DATE:' + e.date, 'DTEND;VALUE=DATE:' + end,
+        'SUMMARY:' + icsEscape(e.summary), 'DESCRIPTION:' + icsEscape(e.desc || ''), 'END:VEVENT');
+    });
+    lines.push('END:VCALENDAR');
+    saveBlob(new Blob([lines.join('\r\n')], { type: 'text/calendar' }), safeName(title) + '.ics');
+  }
+
   g.PMExport = {
-    word: toWord, pdf: toPDF, pptx: toPptx, xlsx: toXlsx,
+    word: toWord, pdf: toPDF, pptx: toPptx, xlsx: toXlsx, ics: toIcs,
     THEMES: THEMES,
     hasTables: function (md) { return parseMdTables(md).length > 0; },
+    hasDates: function (md) { return extractEvents(md).length > 0; },
   };
 })(window);

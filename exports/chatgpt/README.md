@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-319 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+329 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -22,10 +22,12 @@
 | AI Feature PRD | `pm-ai` | `pm-ai/ai-feature-prd/SYSTEM_PROMPT.md` |
 | AI Product Canvas | `pm-advanced` | `pm-advanced/ai-product-canvas/SYSTEM_PROMPT.md` |
 | Ambiguity Resolver | `pm-strategy` | `pm-strategy/ambiguity-resolver/SYSTEM_PROMPT.md` |
+| Announcement Card | `pm-visuals` | `pm-visuals/announcement-card/SYSTEM_PROMPT.md` |
 | API Docs Writer | `pm-engineering` | `pm-engineering/api-docs-writer/SYSTEM_PROMPT.md` |
 | API Versioning Strategy | `pm-engineering` | `pm-engineering/api-versioning-strategy/SYSTEM_PROMPT.md` |
 | Apology Letter | `pm-crisis` | `pm-crisis/apology-letter/SYSTEM_PROMPT.md` |
 | Architecture Decision Record (ADR) | `pm-engineering` | `pm-engineering/architecture-decision-record/SYSTEM_PROMPT.md` |
+| Architecture Diagram | `pm-visuals` | `pm-visuals/architecture-diagram/SYSTEM_PROMPT.md` |
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/SYSTEM_PROMPT.md` |
 | Board Deck Narrative | `pm-business` | `pm-business/board-deck-narrative/SYSTEM_PROMPT.md` |
 | Board Pre-Read | `pm-business` | `pm-business/board-pre-read/SYSTEM_PROMPT.md` |
@@ -109,6 +111,7 @@
 | Engagement Retro | `pm-consulting` | `pm-consulting/engagement-retro/SYSTEM_PROMPT.md` |
 | Engineering Hiring Rubric | `pm-engineering` | `pm-engineering/engineering-hiring-rubric/SYSTEM_PROMPT.md` |
 | Engineering Weekly Report | `pm-engineering` | `pm-engineering/engineering-weekly-report/SYSTEM_PROMPT.md` |
+| Entity-Relationship Diagram | `pm-visuals` | `pm-visuals/entity-relationship-diagram/SYSTEM_PROMPT.md` |
 | Error Decoder | `pm-engineering` | `pm-engineering/error-decoder/SYSTEM_PROMPT.md` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/SYSTEM_PROMPT.md` |
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/SYSTEM_PROMPT.md` |
@@ -132,9 +135,11 @@
 | Figma Variant Matrix | `pm-figma` | `pm-figma/figma-variant-matrix/SYSTEM_PROMPT.md` |
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/SYSTEM_PROMPT.md` |
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/SYSTEM_PROMPT.md` |
+| Flowchart | `pm-visuals` | `pm-visuals/flowchart/SYSTEM_PROMPT.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/SYSTEM_PROMPT.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/SYSTEM_PROMPT.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/SYSTEM_PROMPT.md` |
+| Gantt / Roadmap | `pm-visuals` | `pm-visuals/gantt-roadmap/SYSTEM_PROMPT.md` |
 | GDPR Compliance | `pm-compliance` | `pm-compliance/gdpr-compliance/SYSTEM_PROMPT.md` |
 | Git Troubleshooter | `pm-engineering` | `pm-engineering/git-troubleshooter/SYSTEM_PROMPT.md` |
 | Giving Feedback | `pm-comms` | `pm-comms/giving-feedback/SYSTEM_PROMPT.md` |
@@ -190,6 +195,7 @@
 | Metric Tree Builder | `pm-data` | `pm-data/metric-tree-builder/SYSTEM_PROMPT.md` |
 | Metrics Framework | `pm-data` | `pm-data/metrics-framework/SYSTEM_PROMPT.md` |
 | Microservices Decomposition | `pm-engineering` | `pm-engineering/microservices-decomposition/SYSTEM_PROMPT.md` |
+| Mind Map | `pm-visuals` | `pm-visuals/mind-map/SYSTEM_PROMPT.md` |
 | Model Card | `pm-ai` | `pm-ai/model-card/SYSTEM_PROMPT.md` |
 | Model Selection Advisor | `pm-ai` | `pm-ai/model-selection-advisor/SYSTEM_PROMPT.md` |
 | Monitoring Setup Guide | `pm-engineering` | `pm-engineering/monitoring-setup-guide/SYSTEM_PROMPT.md` |
@@ -204,6 +210,7 @@
 | On-Call Runbook | `pm-engineering` | `pm-engineering/oncall-runbook/SYSTEM_PROMPT.md` |
 | One-on-One Prep | `pm-career` | `pm-career/one-on-one-prep/SYSTEM_PROMPT.md` |
 | One-Pager | `pm-personal` | `pm-personal/one-pager/SYSTEM_PROMPT.md` |
+| Org Chart | `pm-visuals` | `pm-visuals/org-chart/SYSTEM_PROMPT.md` |
 | Outreach Message | `pm-jobsearch` | `pm-jobsearch/outreach-message/SYSTEM_PROMPT.md` |
 | Paid Acquisition Plan | `pm-growth` | `pm-growth/paid-acquisition-plan/SYSTEM_PROMPT.md` |
 | Parent Communication | `pm-education` | `pm-education/parent-communication/SYSTEM_PROMPT.md` |
@@ -236,6 +243,7 @@
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/SYSTEM_PROMPT.md` |
 | QBR Deck | `pm-cs` | `pm-cs/qbr-deck/SYSTEM_PROMPT.md` |
 | Quiz Generator | `pm-education` | `pm-education/quiz-generator/SYSTEM_PROMPT.md` |
+| Quote Card | `pm-visuals` | `pm-visuals/quote-card/SYSTEM_PROMPT.md` |
 | RACI Matrix | `pm-operations` | `pm-operations/raci-matrix/SYSTEM_PROMPT.md` |
 | RAG Architecture Review | `pm-ai` | `pm-ai/rag-architecture-review/SYSTEM_PROMPT.md` |
 | RAG Design Doc | `pm-ai` | `pm-ai/rag-design-doc/SYSTEM_PROMPT.md` |
@@ -273,6 +281,7 @@
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/SYSTEM_PROMPT.md` |
 | Self-Review | `pm-career` | `pm-career/self-review/SYSTEM_PROMPT.md` |
 | SEO Content Brief | `pm-gtm` | `pm-gtm/seo-content-brief/SYSTEM_PROMPT.md` |
+| Sequence Diagram | `pm-visuals` | `pm-visuals/sequence-diagram/SYSTEM_PROMPT.md` |
 | Service Catalog Entry | `pm-engineering` | `pm-engineering/service-catalog-entry/SYSTEM_PROMPT.md` |
 | Short-Form Script | `pm-creator` | `pm-creator/short-form-script/SYSTEM_PROMPT.md` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/SYSTEM_PROMPT.md` |
@@ -314,6 +323,7 @@
 | Transcreation | `pm-localization` | `pm-localization/transcreation/SYSTEM_PROMPT.md` |
 | Unit Economics | `pm-calculators` | `pm-calculators/unit-economics/SYSTEM_PROMPT.md` |
 | User Interview Synthesis | `pm-discovery` | `pm-discovery/user-interview-synthesis/SYSTEM_PROMPT.md` |
+| User Journey Map | `pm-visuals` | `pm-visuals/user-journey-map/SYSTEM_PROMPT.md` |
 | User Research Synthesis | `pm-essentials` | `pm-essentials/user-research-synthesis/SYSTEM_PROMPT.md` |
 | User Story Writer | `pm-delivery` | `pm-delivery/user-story-writer/SYSTEM_PROMPT.md` |
 | UX Research Plan | `pm-design` | `pm-design/ux-research-plan/SYSTEM_PROMPT.md` |

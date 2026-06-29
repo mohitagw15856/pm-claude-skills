@@ -11,6 +11,7 @@
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
 <script src="providers.js"></script>
 <script src="brain.js"></script>
+<script src="diagrams.js"></script>
 <style>
   .canvas-wrap { display: grid; grid-template-columns: 300px 1fr; gap: 18px; max-width: 1200px; margin: 0 auto; padding: 16px 22px 70px; }
   .palette { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 12px; height: fit-content; position: sticky; top: 12px; max-height: 90vh; overflow: auto; }
@@ -172,6 +173,7 @@ async function run(){
         ? kickoff
         : `Overall goal:\n${kickoff}\n\nBuild directly on the upstream work below (carry its decisions forward):\n\n${upstream}`;
       upstream = await stream({key,model:el('model').value,system,userMsg,node:out,signal:controller.signal});
+      if(window.PMDiagrams) PMDiagrams.enhance(out, PIPE[i]);
       if(i>0) el('arrow-'+(i-1))?.classList.remove('flowing');
       if(node){ node.classList.remove('running'); node.classList.add('done'); }
     }

@@ -1,4 +1,4 @@
-# 🧠 PM Skills — 319 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
+# 🧠 PM Skills — 329 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
 
 [![In the official Anthropic plugin directory](https://img.shields.io/badge/Anthropic%20Plugin%20Directory-Published-D97757?logo=anthropic&logoColor=white)](#-quick-install-2-minutes)
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
@@ -9,7 +9,7 @@
 [![MCP](https://img.shields.io/badge/MCP-registry-0098FF?logo=modelcontextprotocol&logoColor=white)](https://github.com/mohitagw15856/pm-claude-skills#-use-it-anywhere--the-ai-ecosystem)
 [![Remote MCP](https://img.shields.io/badge/ChatGPT%20%C2%B7%20Claude.ai-connector-10A37F)](mcp-remote/)
 [![Smithery](https://smithery.ai/badge/mohit15856/pm-skills)](https://smithery.ai/servers/mohit15856/pm-skills)
-[![Skills](https://img.shields.io/badge/skills-319-blue)](https://github.com/mohitagw15856/pm-claude-skills)
+[![Skills](https://img.shields.io/badge/skills-329-blue)](https://github.com/mohitagw15856/pm-claude-skills)
 [![eval](https://img.shields.io/badge/eval--scored-208%20%C2%B7%20avg%204.8%2F5-brightgreen)](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)
 [![Subagents](https://img.shields.io/badge/subagents-4-blueviolet)](agents/)
 [![Commands](https://img.shields.io/badge/slash%20commands-19-blueviolet)](commands/)
@@ -25,7 +25,7 @@
 
 <p align="center">
   <a href="https://mohitagw15856.github.io/pm-claude-skills/">
-    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=24&pause=900&color=D97757&center=true&vCenter=true&width=720&lines=319+pro+AI+skills;PRDs%2C+roadmaps%2C+launches+%E2%80%94+done+right;Run+any+one+free+in+your+browser" alt="PM Skills" />
+    <img src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=24&pause=900&color=D97757&center=true&vCenter=true&width=720&lines=329+pro+AI+skills;PRDs%2C+roadmaps%2C+launches+%E2%80%94+done+right;Run+any+one+free+in+your+browser" alt="PM Skills" />
   </a>
 </p>
 
@@ -56,11 +56,11 @@
 *Not sure? Start with the Playground.* This is a **CLI, not a library** — you don't need `npm install`; `npx pm-claude-skills …` always runs the latest. Browse everything first with `npx pm-claude-skills list`.
 
 > **PM stands for Professional, not just Product Management.**
-> 319 professional skills + 4 agent templates across 46 bundles covering 23 professions. Built for Claude Code — and now portable to ChatGPT, Gemini, and Hermes Agent. Built by a PM, used by everyone.
+> 329 professional skills + 4 agent templates across 47 bundles covering 23 professions. Built for Claude Code — and now portable to ChatGPT, Gemini, and Hermes Agent. Built by a PM, used by everyone.
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest — v30.2.0 (中文 interface — a bilingual playground):** the whole playground UI now switches between **English and Simplified Chinese** — every page carries a **🌐 中文 / 🌐 English** toggle in the nav (nav, hero, Job Search, Guided Journeys, Catalog, and more are hand-translated, not machine output). Your choice is remembered across visits. This is on top of the **🌐 Translate** button that localizes any *generated result* into 11 languages. *Earlier (v30.1):* a **🌐 Localization bundle** — `professional-translator`, `transcreation`, `localization-brief`, `subtitle-caption`, `glossary-builder`, `i18n-readiness-review`. **319 skills across 46 bundles.** → **[Full release history & notes](https://github.com/mohitagw15856/pm-claude-skills/releases)**.
+**🆕 Latest — v31.0.0 (Artifacts & Visuals — your output isn't just text):** a new **🎨 `pm-visuals` bundle** whose diagram skills emit **Mermaid that renders live in the playground** and exports to **PNG/SVG** — `flowchart`, `architecture-diagram`, `user-journey-map`, `org-chart`, `sequence-diagram`, `mind-map`, `gantt-roadmap`, `entity-relationship-diagram` — plus `announcement-card` & `quote-card` built to export as shareable images. Diagrams render in **any** skill's output now, not just these. Also new: **📅 Calendar (.ics) export** — a roadmap or launch plan with dates drops straight into Google/Apple/Outlook calendar. This joins the existing PDF / Word / PowerPoint / Excel / image exports. *Earlier (v30.2):* a bilingual **English / 中文** playground UI. **329 skills across 47 bundles.** → **[Full release history & notes](https://github.com/mohitagw15856/pm-claude-skills/releases)**.
 
 ### ▶ See it in action — [try the live Skill Playground](https://mohitagw15856.github.io/pm-claude-skills/)
 
@@ -89,7 +89,7 @@ A community-built library of professional skills for every field — product man
 | 🔭 [Competitor Teardown](skills/competitor-teardown) | "what are rivals up to?" | a positioning map, feature gaps & strategy |
 | 📝 [Meeting Notes](skills/meeting-notes) | a raw transcript | decisions, owners & next steps |
 
-→ Want proof first? See [**real sample outputs**](https://mohitagw15856.github.io/pm-claude-skills/examples.html) from each skill. Like what you see? [**Install in 2 minutes**](#-quick-install-2-minutes) · [browse all 319 skills](#️-all-319-skills) · [**⭐ star the repo**](https://github.com/mohitagw15856/pm-claude-skills/stargazers) so others find it.
+→ Want proof first? See [**real sample outputs**](https://mohitagw15856.github.io/pm-claude-skills/examples.html) from each skill. Like what you see? [**Install in 2 minutes**](#-quick-install-2-minutes) · [browse all 329 skills](#️-all-329-skills) · [**⭐ star the repo**](https://github.com/mohitagw15856/pm-claude-skills/stargazers) so others find it.
 
 ---
 
@@ -112,7 +112,7 @@ It's not just text — the playground exports every result as a **professionally
   </tr>
 </table>
 
-> Generate yours: run a skill in the [Playground](https://mohitagw15856.github.io/pm-claude-skills/), then **Download → PDF · Paper / Modern / Technical**. Add a `Brand color: #hex` line to your context and it tints to match (last tile). Personal documents live in the [`pm-personal`](#️-all-319-skills) bundle (résumé, cover letter, bio, LinkedIn, portfolio, one-pager).
+> Generate yours: run a skill in the [Playground](https://mohitagw15856.github.io/pm-claude-skills/), then **Download → PDF · Paper / Modern / Technical**. Add a `Brand color: #hex` line to your context and it tints to match (last tile). Personal documents live in the [`pm-personal`](#️-all-329-skills) bundle (résumé, cover letter, bio, LinkedIn, portfolio, one-pager).
 
 ---
 
@@ -121,11 +121,11 @@ It's not just text — the playground exports every result as a **professionally
 <details>
 <summary>Read more ↓</summary>
 
-The whole library on one page — install, all 319 skills by profession, the Professional Brain, the REST API, integrations, and quality tooling. Great to **print, share, or drop into a slide**.
+The whole library on one page — install, all 329 skills by profession, the Professional Brain, the REST API, integrations, and quality tooling. Great to **print, share, or drop into a slide**.
 
 <p align="center">
   <a href="CHEATSHEET.md">
-    <img src="web/docs-assets/cheatsheet.png" width="80%" alt="PM Skills one-page cheatsheet — 319 skills, the Professional Brain, REST API, integrations, and tooling at a glance." />
+    <img src="web/docs-assets/cheatsheet.png" width="80%" alt="PM Skills one-page cheatsheet — 329 skills, the Professional Brain, REST API, integrations, and tooling at a glance." />
   </a>
 </p>
 
@@ -156,7 +156,7 @@ Generic AI forgets everything between sessions, so you re-paste context forever 
 <details>
 <summary>Read more ↓</summary>
 
-These 319 skills aren't a random catalog — they cover the **full arc of professional work**, end to end. Wherever you are in the loop, there's a skill for it:
+These 329 skills aren't a random catalog — they cover the **full arc of professional work**, end to end. Wherever you are in the loop, there's a skill for it:
 
 ```mermaid
 flowchart LR
@@ -175,7 +175,7 @@ flowchart LR
 | **📊 Measure** | Track outcomes & analyse | `metrics-framework` · `cohort-analysis` · `ab-test-planner` · `churn-analysis` |
 | **📣 Communicate** | Report up and out | `executive-update` · `board-deck-narrative` · `stakeholder-update` · `qbr-deck` |
 
-> New here? Start with the [**top-tier skills**](#️-skill-tiers--start-with-the-strongest), or jump straight to [**all 319 skills**](#️-all-319-skills) grouped by profession.
+> New here? Start with the [**top-tier skills**](#️-skill-tiers--start-with-the-strongest), or jump straight to [**all 329 skills**](#️-all-329-skills) grouped by profession.
 
 </details>
 
@@ -298,7 +298,7 @@ Most skill repos are a folder of prompts. This one is a **system** — measured,
 
 | | **PM Skills** | Typical skill repo |
 |---|:---:|:---:|
-| Skills | **319**, across 23 professions | a handful → dozens, usually one domain |
+| Skills | **329**, across 23 professions | a handful → dozens, usually one domain |
 | Quality | **eval-scored** on a rubric + a public [benchmark](https://mohitagw15856.github.io/pm-claude-skills/benchmark.html) | trust the README |
 | Improves itself | ✅ eval → critique → rewrite (kept only if it scores higher) | ✗ |
 | Grounded in frameworks | ✅ each cites its source (RICE, JTBD, Pyramid Principle…) | rarely |
@@ -323,13 +323,13 @@ Most skill repos are a folder of prompts. This one is a **system** — measured,
 >
 > ⚠️ **You don't need `npm install pm-claude-skills`** — it's a CLI, not a library, so there's nothing to import. Use `npx pm-claude-skills …` (it always runs the latest). `npm install` just downloads it and does nothing on its own.
 
-**With the [`skills`](https://github.com/vercel-labs/skills) CLI** (the open agent-skills installer that works across Claude Code, Cursor, Codex, OpenCode & 60+ agents) — pick from all 319 interactively:
+**With the [`skills`](https://github.com/vercel-labs/skills) CLI** (the open agent-skills installer that works across Claude Code, Cursor, Codex, OpenCode & 60+ agents) — pick from all 329 interactively:
 
 ```bash
 npx skills add mohitagw15856/pm-claude-skills            # browse & pick (auto-detects your agent)
 npx skills add mohitagw15856/pm-claude-skills --list     # just preview the catalog
 npx skills add mohitagw15856/pm-claude-skills --skill prd-template   # grab one
-npx skills add mohitagw15856/pm-claude-skills --skill '*'            # install all 319
+npx skills add mohitagw15856/pm-claude-skills --skill '*'            # install all 329
 ```
 
 **Or our own installer** — via the [`pm-claude-skills`](https://www.npmjs.com/package/pm-claude-skills) npm package (Windows/macOS/Linux, needs Node), which also installs subagents, slash commands & cross-tool exports:
@@ -338,7 +338,7 @@ npx skills add mohitagw15856/pm-claude-skills --skill '*'            # install a
 npx pm-claude-skills add --agent claude     # or: codex · cursor · hermes · openclaw
 ```
 
-**Or one-line MCP** — make all 319 skills + 5 workflow recipes available in *every* session of any MCP client (Claude Code, Claude Desktop, Cursor, Windsurf), no per-file install:
+**Or one-line MCP** — make all 329 skills + 5 workflow recipes available in *every* session of any MCP client (Claude Code, Claude Desktop, Cursor, Windsurf), no per-file install:
 
 ```bash
 claude mcp add pm-skills -- npx -y pm-claude-skills-mcp
@@ -399,7 +399,7 @@ ln -s ~/pm-claude-skills/skills/* ~/.claude/skills/
 <details>
 <summary>Read more ↓</summary>
 
-The same 319 skills reach you through every channel — pick whatever fits your stack:
+The same 329 skills reach you through every channel — pick whatever fits your stack:
 
 | Channel | Get it |
 |---|---|
@@ -413,7 +413,7 @@ The same 319 skills reach you through every channel — pick whatever fits your 
 | 🖥️ **IDE rules** | Generated exports for **Cursor, Windsurf, Aider, Cline, Continue, Zed, Roo, Kilo Code** — [`exports/`](exports/) |
 | 🤖 **Agents & answer engines** | [`llms.txt`](https://mohitagw15856.github.io/pm-claude-skills/llms.txt) makes the whole library discoverable & citable |
 
-> **208 of 319 skills are eval-scored, averaging 4.8/5** — see the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html).
+> **208 of 329 skills are eval-scored, averaging 4.8/5** — see the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html).
 
 > 🧠 **Give your skills memory:** the [Professional Brain](BRAIN.md) is a local markdown folder skills read, write back to, and act on. It's a folder + one file to start — **[5-minute Quickstart](BRAIN_QUICKSTART.md)**.
 
@@ -435,7 +435,7 @@ There are two kinds of support. **Native `SKILL.md` agents** read the file as-is
 auto-discover skills from the `description` frontmatter. **Other tools** take the markdown
 body as a system prompt — for those we ship ready-made [exports](#ready-to-use-exports).
 
-**In your editor (VS Code / Cursor):** the [**`vscode-extension/`**](vscode-extension/) brings all 319 skills into the Command Palette — search and *insert a skill as context* for Copilot/Cursor chat, copy it, or open it in the Playground.
+**In your editor (VS Code / Cursor):** the [**`vscode-extension/`**](vscode-extension/) brings all 329 skills into the Command Palette — search and *insert a skill as context* for Copilot/Cursor chat, copy it, or open it in the Playground.
 
 | Platform | How it works | Auto-trigger? |
 |---|---|---|
@@ -595,7 +595,7 @@ ANTHROPIC_API_KEY=sk-ant-… npx pm-claude-skills generate --from ./team-process
 
 **🏆 Skill Leaderboard — [evals](evals/).** An LLM-as-judge harness scores each skill across Claude models on structure, completeness, usefulness, and grounding. **[View the leaderboard →](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)**
 
-> **Score the *whole* library, cheaply.** `npm run eval:gen-cases` writes a representative input for **all 319 skills** (curated cases kept verbatim; the rest auto-generated), then `npm run eval:all` runs the full pass on Haiku for **~$2** total. The weakest scorers can then be auto-rewritten with **`npm run improve -- <skill>`** (`/improve`), which keeps a change only if the score goes up.
+> **Score the *whole* library, cheaply.** `npm run eval:gen-cases` writes a representative input for **all 329 skills** (curated cases kept verbatim; the rest auto-generated), then `npm run eval:all` runs the full pass on Haiku for **~$2** total. The weakest scorers can then be auto-rewritten with **`npm run improve -- <skill>`** (`/improve`), which keeps a change only if the score goes up.
 
 </details>
 
@@ -691,7 +691,7 @@ Not sure which plugin to install? Here's what each one covers:
 
 On May 5, 2026, Anthropic [released their first agent templates](https://www.anthropic.com/news/finance-agents) — pre-packaged Claude agents that combine **skills, connectors, and subagents** into ready-to-run workflows for financial services.
 
-This library is the largest open-source collection of professional skills available — covering 20 professions beyond financial services. **The 319 skills here are the building blocks for agent templates outside of finance.**
+This library is the largest open-source collection of professional skills available — covering 20 professions beyond financial services. **The 329 skills here are the building blocks for agent templates outside of finance.**
 
 ### What is an agent template?
 
@@ -771,7 +771,7 @@ More templates will follow. If you want to contribute one, see the [template con
 <details>
 <summary>Read more ↓</summary>
 
-**Latest: v30.0.0 — 25 new skills, 4 new bundles (AI-builder, crisis comms, healthcare, life-admin, nonprofit) & an eval-coverage page.** 319 skills across 46 bundles, 23 professions. Every tagged release has complete notes on the **[Releases page](https://github.com/mohitagw15856/pm-claude-skills/releases)**.
+**Latest: v30.0.0 — 25 new skills, 4 new bundles (AI-builder, crisis comms, healthcare, life-admin, nonprofit) & an eval-coverage page.** 329 skills across 47 bundles, 23 professions. Every tagged release has complete notes on the **[Releases page](https://github.com/mohitagw15856/pm-claude-skills/releases)**.
 
 Full [Keep a Changelog](https://keepachangelog.com/)-format history — every release back to the start — is in **[CHANGELOG.md](CHANGELOG.md)**.
 
@@ -819,7 +819,7 @@ This repo was built alongside a published 16-part article series on Medium.
 <details>
 <summary>Read more ↓</summary>
 
-A 319-skill library doesn't have 319 equally-mature skills, and pretending otherwise
+A 329-skill library doesn't have 329 equally-mature skills, and pretending otherwise
 wastes your time. Skills are tiered honestly so you can start with the best work:
 
 - 🟢 **Production-Ready (50)** — battle-tested, stable output, used in real work. Includes the three skills with computed Python helpers (sprint planning, RICE, customer health). **Start here.**
@@ -834,7 +834,7 @@ If you're new, install `pm-essentials` and try a couple of Production-Ready skil
 
 ---
 
-## 🗂️ All 319 Skills
+## 🗂️ All 329 Skills
 
 <details>
 <summary>Read more ↓</summary>
@@ -864,6 +864,7 @@ Every skill, grouped by profession. **[Browse the full per-skill catalog → SKI
 | 🖼️ Figma | `pm-figma` | 10 | `figma-design-review` |
 | 📱 Social Media | `pm-social` | 5 | `social-media-strategy` |
 | ✍️ Writers & Content | `pm-writers` | 6 | `aeo-optimizer` |
+| 🎨 Visuals & Diagrams | `pm-visuals` 🆕 | 10 | `flowchart` · `architecture-diagram` · `gantt-roadmap` |
 
 > Full per-skill detail (folder paths, descriptions, "🆕" markers) lives in **[SKILLS.md](SKILLS.md)**.
 
@@ -876,7 +877,7 @@ Every skill, grouped by profession. **[Browse the full per-skill catalog → SKI
 <details>
 <summary>Read more ↓</summary>
 
-Building and maintaining 319 skills across 46 bundles takes real time — testing skills against new model releases, building new ones from community requests, writing the article series, and keeping documentation current.
+Building and maintaining 329 skills across 47 bundles takes real time — testing skills against new model releases, building new ones from community requests, writing the article series, and keeping documentation current.
 
 If these skills save you time at work — or you're a company that wants your logo in front of the PMs, engineers, and operators who use them daily — **[become a sponsor →](https://github.com/sponsors/mohitagw15856)** (or [☕ buy me a coffee](https://www.buymeacoffee.com/mohit15856)).
 
@@ -908,7 +909,7 @@ pull request**, and once it's merged you earn a badge to show off in your own re
 ```
 
 Community listings live in their authors' own repos and are **community-maintained — not
-eval-scored or security-audited** (that's the [curated library](#️-all-319-skills) above). Want
+eval-scored or security-audited** (that's the [curated library](#️-all-329-skills) above). Want
 your skill *in* the curated library instead? See **Contributing** below.
 
 ---

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-319 skills exported. Copy a `.mdc rule` into the tool to use it.
+329 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -22,10 +22,12 @@
 | AI Feature PRD | `pm-ai` | `pm-ai/ai-feature-prd/ai-feature-prd.mdc` |
 | AI Product Canvas | `pm-advanced` | `pm-advanced/ai-product-canvas/ai-product-canvas.mdc` |
 | Ambiguity Resolver | `pm-strategy` | `pm-strategy/ambiguity-resolver/ambiguity-resolver.mdc` |
+| Announcement Card | `pm-visuals` | `pm-visuals/announcement-card/announcement-card.mdc` |
 | API Docs Writer | `pm-engineering` | `pm-engineering/api-docs-writer/api-docs-writer.mdc` |
 | API Versioning Strategy | `pm-engineering` | `pm-engineering/api-versioning-strategy/api-versioning-strategy.mdc` |
 | Apology Letter | `pm-crisis` | `pm-crisis/apology-letter/apology-letter.mdc` |
 | Architecture Decision Record (ADR) | `pm-engineering` | `pm-engineering/architecture-decision-record/architecture-decision-record.mdc` |
+| Architecture Diagram | `pm-visuals` | `pm-visuals/architecture-diagram/architecture-diagram.mdc` |
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/assumption-mapper.mdc` |
 | Board Deck Narrative | `pm-business` | `pm-business/board-deck-narrative/board-deck-narrative.mdc` |
 | Board Pre-Read | `pm-business` | `pm-business/board-pre-read/board-pre-read.mdc` |
@@ -109,6 +111,7 @@
 | Engagement Retro | `pm-consulting` | `pm-consulting/engagement-retro/engagement-retro.mdc` |
 | Engineering Hiring Rubric | `pm-engineering` | `pm-engineering/engineering-hiring-rubric/engineering-hiring-rubric.mdc` |
 | Engineering Weekly Report | `pm-engineering` | `pm-engineering/engineering-weekly-report/engineering-weekly-report.mdc` |
+| Entity-Relationship Diagram | `pm-visuals` | `pm-visuals/entity-relationship-diagram/entity-relationship-diagram.mdc` |
 | Error Decoder | `pm-engineering` | `pm-engineering/error-decoder/error-decoder.mdc` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/escalation-tree.mdc` |
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/eval-rubric-designer.mdc` |
@@ -132,9 +135,11 @@
 | Figma Variant Matrix | `pm-figma` | `pm-figma/figma-variant-matrix/figma-variant-matrix.mdc` |
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/financial-due-diligence.mdc` |
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/financial-model-narrative.mdc` |
+| Flowchart | `pm-visuals` | `pm-visuals/flowchart/flowchart.mdc` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/follow-up-sequence.mdc` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/founder-market-fit.mdc` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/fundraising-faq.mdc` |
+| Gantt / Roadmap | `pm-visuals` | `pm-visuals/gantt-roadmap/gantt-roadmap.mdc` |
 | GDPR Compliance | `pm-compliance` | `pm-compliance/gdpr-compliance/gdpr-compliance.mdc` |
 | Git Troubleshooter | `pm-engineering` | `pm-engineering/git-troubleshooter/git-troubleshooter.mdc` |
 | Giving Feedback | `pm-comms` | `pm-comms/giving-feedback/giving-feedback.mdc` |
@@ -190,6 +195,7 @@
 | Metric Tree Builder | `pm-data` | `pm-data/metric-tree-builder/metric-tree-builder.mdc` |
 | Metrics Framework | `pm-data` | `pm-data/metrics-framework/metrics-framework.mdc` |
 | Microservices Decomposition | `pm-engineering` | `pm-engineering/microservices-decomposition/microservices-decomposition.mdc` |
+| Mind Map | `pm-visuals` | `pm-visuals/mind-map/mind-map.mdc` |
 | Model Card | `pm-ai` | `pm-ai/model-card/model-card.mdc` |
 | Model Selection Advisor | `pm-ai` | `pm-ai/model-selection-advisor/model-selection-advisor.mdc` |
 | Monitoring Setup Guide | `pm-engineering` | `pm-engineering/monitoring-setup-guide/monitoring-setup-guide.mdc` |
@@ -204,6 +210,7 @@
 | On-Call Runbook | `pm-engineering` | `pm-engineering/oncall-runbook/oncall-runbook.mdc` |
 | One-on-One Prep | `pm-career` | `pm-career/one-on-one-prep/one-on-one-prep.mdc` |
 | One-Pager | `pm-personal` | `pm-personal/one-pager/one-pager.mdc` |
+| Org Chart | `pm-visuals` | `pm-visuals/org-chart/org-chart.mdc` |
 | Outreach Message | `pm-jobsearch` | `pm-jobsearch/outreach-message/outreach-message.mdc` |
 | Paid Acquisition Plan | `pm-growth` | `pm-growth/paid-acquisition-plan/paid-acquisition-plan.mdc` |
 | Parent Communication | `pm-education` | `pm-education/parent-communication/parent-communication.mdc` |
@@ -236,6 +243,7 @@
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/proposal-writer.mdc` |
 | QBR Deck | `pm-cs` | `pm-cs/qbr-deck/qbr-deck.mdc` |
 | Quiz Generator | `pm-education` | `pm-education/quiz-generator/quiz-generator.mdc` |
+| Quote Card | `pm-visuals` | `pm-visuals/quote-card/quote-card.mdc` |
 | RACI Matrix | `pm-operations` | `pm-operations/raci-matrix/raci-matrix.mdc` |
 | RAG Architecture Review | `pm-ai` | `pm-ai/rag-architecture-review/rag-architecture-review.mdc` |
 | RAG Design Doc | `pm-ai` | `pm-ai/rag-design-doc/rag-design-doc.mdc` |
@@ -273,6 +281,7 @@
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/security-threat-model.mdc` |
 | Self-Review | `pm-career` | `pm-career/self-review/self-review.mdc` |
 | SEO Content Brief | `pm-gtm` | `pm-gtm/seo-content-brief/seo-content-brief.mdc` |
+| Sequence Diagram | `pm-visuals` | `pm-visuals/sequence-diagram/sequence-diagram.mdc` |
 | Service Catalog Entry | `pm-engineering` | `pm-engineering/service-catalog-entry/service-catalog-entry.mdc` |
 | Short-Form Script | `pm-creator` | `pm-creator/short-form-script/short-form-script.mdc` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/skill-security-auditor.mdc` |
@@ -314,6 +323,7 @@
 | Transcreation | `pm-localization` | `pm-localization/transcreation/transcreation.mdc` |
 | Unit Economics | `pm-calculators` | `pm-calculators/unit-economics/unit-economics.mdc` |
 | User Interview Synthesis | `pm-discovery` | `pm-discovery/user-interview-synthesis/user-interview-synthesis.mdc` |
+| User Journey Map | `pm-visuals` | `pm-visuals/user-journey-map/user-journey-map.mdc` |
 | User Research Synthesis | `pm-essentials` | `pm-essentials/user-research-synthesis/user-research-synthesis.mdc` |
 | User Story Writer | `pm-delivery` | `pm-delivery/user-story-writer/user-story-writer.mdc` |
 | UX Research Plan | `pm-design` | `pm-design/ux-research-plan/ux-research-plan.mdc` |

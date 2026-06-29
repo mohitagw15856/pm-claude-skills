@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-319 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+329 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -22,10 +22,12 @@
 | AI Feature PRD | `pm-ai` | `pm-ai/ai-feature-prd/GEM_INSTRUCTIONS.md` |
 | AI Product Canvas | `pm-advanced` | `pm-advanced/ai-product-canvas/GEM_INSTRUCTIONS.md` |
 | Ambiguity Resolver | `pm-strategy` | `pm-strategy/ambiguity-resolver/GEM_INSTRUCTIONS.md` |
+| Announcement Card | `pm-visuals` | `pm-visuals/announcement-card/GEM_INSTRUCTIONS.md` |
 | API Docs Writer | `pm-engineering` | `pm-engineering/api-docs-writer/GEM_INSTRUCTIONS.md` |
 | API Versioning Strategy | `pm-engineering` | `pm-engineering/api-versioning-strategy/GEM_INSTRUCTIONS.md` |
 | Apology Letter | `pm-crisis` | `pm-crisis/apology-letter/GEM_INSTRUCTIONS.md` |
 | Architecture Decision Record (ADR) | `pm-engineering` | `pm-engineering/architecture-decision-record/GEM_INSTRUCTIONS.md` |
+| Architecture Diagram | `pm-visuals` | `pm-visuals/architecture-diagram/GEM_INSTRUCTIONS.md` |
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/GEM_INSTRUCTIONS.md` |
 | Board Deck Narrative | `pm-business` | `pm-business/board-deck-narrative/GEM_INSTRUCTIONS.md` |
 | Board Pre-Read | `pm-business` | `pm-business/board-pre-read/GEM_INSTRUCTIONS.md` |
@@ -109,6 +111,7 @@
 | Engagement Retro | `pm-consulting` | `pm-consulting/engagement-retro/GEM_INSTRUCTIONS.md` |
 | Engineering Hiring Rubric | `pm-engineering` | `pm-engineering/engineering-hiring-rubric/GEM_INSTRUCTIONS.md` |
 | Engineering Weekly Report | `pm-engineering` | `pm-engineering/engineering-weekly-report/GEM_INSTRUCTIONS.md` |
+| Entity-Relationship Diagram | `pm-visuals` | `pm-visuals/entity-relationship-diagram/GEM_INSTRUCTIONS.md` |
 | Error Decoder | `pm-engineering` | `pm-engineering/error-decoder/GEM_INSTRUCTIONS.md` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/GEM_INSTRUCTIONS.md` |
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/GEM_INSTRUCTIONS.md` |
@@ -132,9 +135,11 @@
 | Figma Variant Matrix | `pm-figma` | `pm-figma/figma-variant-matrix/GEM_INSTRUCTIONS.md` |
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/GEM_INSTRUCTIONS.md` |
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/GEM_INSTRUCTIONS.md` |
+| Flowchart | `pm-visuals` | `pm-visuals/flowchart/GEM_INSTRUCTIONS.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/GEM_INSTRUCTIONS.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/GEM_INSTRUCTIONS.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/GEM_INSTRUCTIONS.md` |
+| Gantt / Roadmap | `pm-visuals` | `pm-visuals/gantt-roadmap/GEM_INSTRUCTIONS.md` |
 | GDPR Compliance | `pm-compliance` | `pm-compliance/gdpr-compliance/GEM_INSTRUCTIONS.md` |
 | Git Troubleshooter | `pm-engineering` | `pm-engineering/git-troubleshooter/GEM_INSTRUCTIONS.md` |
 | Giving Feedback | `pm-comms` | `pm-comms/giving-feedback/GEM_INSTRUCTIONS.md` |
@@ -190,6 +195,7 @@
 | Metric Tree Builder | `pm-data` | `pm-data/metric-tree-builder/GEM_INSTRUCTIONS.md` |
 | Metrics Framework | `pm-data` | `pm-data/metrics-framework/GEM_INSTRUCTIONS.md` |
 | Microservices Decomposition | `pm-engineering` | `pm-engineering/microservices-decomposition/GEM_INSTRUCTIONS.md` |
+| Mind Map | `pm-visuals` | `pm-visuals/mind-map/GEM_INSTRUCTIONS.md` |
 | Model Card | `pm-ai` | `pm-ai/model-card/GEM_INSTRUCTIONS.md` |
 | Model Selection Advisor | `pm-ai` | `pm-ai/model-selection-advisor/GEM_INSTRUCTIONS.md` |
 | Monitoring Setup Guide | `pm-engineering` | `pm-engineering/monitoring-setup-guide/GEM_INSTRUCTIONS.md` |
@@ -204,6 +210,7 @@
 | On-Call Runbook | `pm-engineering` | `pm-engineering/oncall-runbook/GEM_INSTRUCTIONS.md` |
 | One-on-One Prep | `pm-career` | `pm-career/one-on-one-prep/GEM_INSTRUCTIONS.md` |
 | One-Pager | `pm-personal` | `pm-personal/one-pager/GEM_INSTRUCTIONS.md` |
+| Org Chart | `pm-visuals` | `pm-visuals/org-chart/GEM_INSTRUCTIONS.md` |
 | Outreach Message | `pm-jobsearch` | `pm-jobsearch/outreach-message/GEM_INSTRUCTIONS.md` |
 | Paid Acquisition Plan | `pm-growth` | `pm-growth/paid-acquisition-plan/GEM_INSTRUCTIONS.md` |
 | Parent Communication | `pm-education` | `pm-education/parent-communication/GEM_INSTRUCTIONS.md` |
@@ -236,6 +243,7 @@
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/GEM_INSTRUCTIONS.md` |
 | QBR Deck | `pm-cs` | `pm-cs/qbr-deck/GEM_INSTRUCTIONS.md` |
 | Quiz Generator | `pm-education` | `pm-education/quiz-generator/GEM_INSTRUCTIONS.md` |
+| Quote Card | `pm-visuals` | `pm-visuals/quote-card/GEM_INSTRUCTIONS.md` |
 | RACI Matrix | `pm-operations` | `pm-operations/raci-matrix/GEM_INSTRUCTIONS.md` |
 | RAG Architecture Review | `pm-ai` | `pm-ai/rag-architecture-review/GEM_INSTRUCTIONS.md` |
 | RAG Design Doc | `pm-ai` | `pm-ai/rag-design-doc/GEM_INSTRUCTIONS.md` |
@@ -273,6 +281,7 @@
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/GEM_INSTRUCTIONS.md` |
 | Self-Review | `pm-career` | `pm-career/self-review/GEM_INSTRUCTIONS.md` |
 | SEO Content Brief | `pm-gtm` | `pm-gtm/seo-content-brief/GEM_INSTRUCTIONS.md` |
+| Sequence Diagram | `pm-visuals` | `pm-visuals/sequence-diagram/GEM_INSTRUCTIONS.md` |
 | Service Catalog Entry | `pm-engineering` | `pm-engineering/service-catalog-entry/GEM_INSTRUCTIONS.md` |
 | Short-Form Script | `pm-creator` | `pm-creator/short-form-script/GEM_INSTRUCTIONS.md` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/GEM_INSTRUCTIONS.md` |
@@ -314,6 +323,7 @@
 | Transcreation | `pm-localization` | `pm-localization/transcreation/GEM_INSTRUCTIONS.md` |
 | Unit Economics | `pm-calculators` | `pm-calculators/unit-economics/GEM_INSTRUCTIONS.md` |
 | User Interview Synthesis | `pm-discovery` | `pm-discovery/user-interview-synthesis/GEM_INSTRUCTIONS.md` |
+| User Journey Map | `pm-visuals` | `pm-visuals/user-journey-map/GEM_INSTRUCTIONS.md` |
 | User Research Synthesis | `pm-essentials` | `pm-essentials/user-research-synthesis/GEM_INSTRUCTIONS.md` |
 | User Story Writer | `pm-delivery` | `pm-delivery/user-story-writer/GEM_INSTRUCTIONS.md` |
 | UX Research Plan | `pm-design` | `pm-design/ux-research-plan/GEM_INSTRUCTIONS.md` |

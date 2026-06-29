@@ -1,13 +1,21 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "30.2.0",
-  "description": "PM stands for Professional, not just Product Management. 319 Claude Skills + 4 agent templates across 46 bundles covering 23 professions — engineering, AI/ML, customer success, legal, finance, HR, sales, design, Figma, marketing, social media, writers, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
+  "version": "31.0.0",
+  "description": "PM stands for Professional, not just Product Management. 329 Claude Skills + 4 agent templates across 47 bundles covering 23 professions — engineering, AI/ML, customer success, legal, finance, HR, sales, design, Figma, marketing, social media, writers, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "plugins": [
+    {
+      "name": "pm-visuals",
+      "description": "Turn ideas into visuals: Flowchart, Architecture Diagram, User Journey Map, Org Chart, Sequence Diagram, Mind Map, Gantt Roadmap, ER Diagram — plus Announcement & Quote cards. Diagram skills emit Mermaid that renders live in the playground and exports to PNG/SVG.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-visuals",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
     {
       "name": "pm-localization",
       "description": "Translation & localization skills: Professional Translator, Transcreation, Localization Brief, Subtitle & Caption, Glossary Builder, and i18n Readiness Review. Reach every market — translation as a real job, not word-for-word.",

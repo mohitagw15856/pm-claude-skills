@@ -1,0 +1,10 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-visuals",
+  "version": "1.0.0",
+  "description": "Turn ideas into visuals: Flowchart, Architecture Diagram, User Journey Map, Org Chart, Sequence Diagram, Mind Map, Gantt Roadmap, ER Diagram — plus Announcement & Quote cards. Diagram skills emit Mermaid that renders live in the playground and exports to PNG/SVG; card skills export as image.",
+  "author": { "name": "Mohit Aggarwal", "email": "mohit15856@gmail.com" },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["diagram", "mermaid", "flowchart", "architecture", "gantt", "roadmap", "sequence-diagram", "er-diagram", "mindmap", "org-chart", "visualization"]
+}

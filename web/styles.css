@@ -234,6 +234,12 @@ button.ghost:hover { border-color: var(--accent); background: var(--panel); }
 .markdown code { background: var(--panel-2); padding: 2px 6px; border-radius: 5px; font-size: 13px; }
 .markdown pre { background: var(--panel-2); padding: 14px; border-radius: 8px; overflow-x: auto; }
 .markdown pre code { background: none; padding: 0; }
+/* Rendered ```mermaid diagrams (PMDiagrams) */
+.diagram { margin: 16px 0; padding: 14px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 12px; text-align: center; position: relative; }
+.diagram svg { max-width: 100%; height: auto; }
+.diagram-tools { display: flex; gap: 6px; justify-content: flex-end; margin-top: 8px; }
+.diagram-tools button { font-size: 12px; padding: 3px 9px; }
+.diagram-err { font-size: 12.5px; color: var(--muted); margin: 8px 0 -4px; }
 .markdown table { border-collapse: collapse; width: 100%; margin: 12px 0; }
 .markdown th, .markdown td { border: 1px solid var(--border); padding: 7px 10px; text-align: left; font-size: 13px; }
 .markdown th { background: var(--panel-2); }

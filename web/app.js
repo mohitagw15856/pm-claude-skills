@@ -610,6 +610,7 @@ function showSample(s) {
   out.dataset.raw = x.output; // copy / download / Save-to-Brain operate on the real text
   const banner = `<div class="sample-banner">📄 <strong>Sample output</strong> — pre-generated for the example input below. Fill the form and hit <strong>${escapeHtml(runLabel())}</strong> to make your own.<br /><span class="sample-input">Example input: ${escapeHtml((x.input || '').slice(0, 220))}${(x.input || '').length > 220 ? '…' : ''}</span></div>`;
   out.innerHTML = banner + DOMPurify.sanitize(marked.parse(x.output));
+  if (window.PMDiagrams) PMDiagrams.enhance(out, s.name);
   setStatus(`📄 Showing a pre-generated sample${x.source ? ' (' + x.source + ')' : ''} — no key used.`);
   el('outputWrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
@@ -999,6 +1000,8 @@ function buildUserMessage(fields) {
 function renderMarkdown(node, text, streaming) {
   node.innerHTML = DOMPurify.sanitize(marked.parse(text, { breaks: true }));
   node.classList.toggle('cursor', streaming);
+  // Once streaming settles, turn any ```mermaid blocks into real diagrams (with SVG/PNG export).
+  if (!streaming && window.PMDiagrams) PMDiagrams.enhance(node, current && current.name);
 }
 
 function downloadOutput() {
@@ -1088,6 +1091,7 @@ function onExport(e) {
     }
     if (fmt === 'pptx') return PMExport.pptx(md, title);
     if (fmt === 'xlsx') return PMExport.xlsx(md, title);
+    if (fmt === 'ics') return PMExport.ics(md, title);
   } catch (err) {
     setStatus('Export failed: ' + (err.message || err), true);
   }
