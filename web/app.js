@@ -113,6 +113,7 @@ async function init() {
   updateHistoryBtn();
   el('shareHubBtn').addEventListener('click', shareToHub);
   el('imgBtn').addEventListener('click', shareAsImage);
+  if (el('translateBtn')) el('translateBtn').addEventListener('click', translateOutput);
   el('fbUp').addEventListener('click', () => sendFeedback('up'));
   el('fbDown').addEventListener('click', () => sendFeedback('down'));
   // Output language — restore the saved choice, persist + track changes.
@@ -752,6 +753,40 @@ async function streamCompletion({ key, model, system, userMessage, node, signal 
   });
   renderMarkdown(node, acc, false);
   return acc;
+}
+
+// Translate the already-generated output into the language picked in the 🌐 selector —
+// no need to re-run the whole skill. Cheaper, faster, and keeps the structure.
+async function translateOutput() {
+  const out = el('output');
+  const md = (out && out.dataset.raw || '').trim();
+  if (!md) return setStatus('Run a skill first, then translate the result.', true);
+  const langSel = el('outputLang');
+  const lang = langSel ? langSel.value : '';
+  if (!lang) return setStatus('Pick a language in the 🌐 selector first (English is selected — nothing to translate to).', true);
+  const langLabel = langSel.selectedOptions[0] ? langSel.selectedOptions[0].textContent.trim() : lang;
+  const key = el('apiKey').value.trim();
+  if (!key && !P().local) { flagMissingKey(); return setStatus(`👆 Add your ${P().name} key (or pick In-browser) to translate.`, true); }
+
+  if (window.pmTrack) pmTrack('translate/' + lang);
+  el('translateBtn').disabled = true;
+  setStatus(`🌐 Translating into ${langLabel}…`);
+  controller = new AbortController();
+  const system = `You are a professional translator. Translate the user's document into ${lang}. Preserve the markdown structure (headings, tables, lists, emphasis) exactly. Translate all prose, headings, and labels. Keep code, identifiers, URLs, and proper nouns unchanged. Use natural, professional ${lang} — meaning over word-for-word.`;
+  try {
+    const model = el('model').value;
+    const acc = await streamCompletion({ key, model, system, userMessage: md, node: out, signal: controller.signal });
+    out.dataset.raw = acc;
+    // RTL scripts render right-to-left.
+    const rtl = langSel.selectedOptions[0] && langSel.selectedOptions[0].dataset.rtl;
+    out.setAttribute('dir', rtl ? 'rtl' : 'ltr');
+    setStatus(`🌐 Translated into ${langLabel}.`);
+  } catch (e) {
+    setStatus(e.name === 'AbortError' ? 'Stopped.' : (e.message || 'Translation failed.'), true);
+  } finally {
+    el('translateBtn').disabled = false;
+    controller = null;
+  }
 }
 
 const SKILL_SUFFIX =
