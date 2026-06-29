@@ -9,13 +9,19 @@ on:
   workflow_dispatch:
     inputs:
       scope:
-        description: 'Which skills to score: curated (~20) or all (205, auto-generated cases ~$2 on Haiku)'
+        description: 'What to score'
         type: choice
         required: false
-        default: 'curated'
+        default: 'unscored'
         options:
-          - curated
-          - all
+          - unscored   # only skills with no score yet — the cheap way to finish the library (additive)
+          - bundle     # only the bundle(s) named below (additive)
+          - curated    # the ~20 hand-written curated cases
+          - all        # every skill (auto-generated cases, ~$2+ on Haiku)
+      bundle:
+        description: 'For scope=bundle: comma-separated bundle name(s), e.g. pm-ai,pm-growth (see .claude-plugin/marketplace.json for names)'
+        required: false
+        default: ''
       models:
         description: 'Comma-separated model ids to score'
         required: false
@@ -52,13 +58,18 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Seed prior results (incremental re-score)
-        if: ${{ github.event.inputs.seed_branch != '' }}
+      - name: Seed prior results (keep existing scores)
         run: |
+          # Targeted modes (unscored / bundle) must be ADDITIVE — keep the scores already
+          # earned and only add/refresh the targeted skills. So default-seed from the
+          # eval-results branch unless the dispatcher named a different seed_branch.
+          SCOPE="${{ github.event.inputs.scope || 'unscored' }}"
           BR="${{ github.event.inputs.seed_branch }}"
+          if [ -z "$BR" ] && { [ "$SCOPE" = "unscored" ] || [ "$SCOPE" = "bundle" ]; }; then BR="eval-results"; fi
+          if [ -z "$BR" ]; then echo "No seed branch — starting from main's results."; exit 0; fi
           if git fetch origin "$BR" >/dev/null 2>&1 && git cat-file -e "origin/$BR:evals/results.json" 2>/dev/null; then
             git show "origin/$BR:evals/results.json" > evals/results.json
-            echo "Seeded evals/results.json from origin/$BR — $(node -e "console.log(require('./evals/results.json').results.length)") prior results reused; only changed skills will re-score."
+            echo "Seeded evals/results.json from origin/$BR — $(node -e "console.log(require('./evals/results.json').results.length)") prior results kept; only the targeted/changed skills will (re)score."
           else
             echo "::warning::Branch '$BR' or its evals/results.json not found — starting from main."
           fi
@@ -71,21 +82,41 @@ jobs:
             echo "::error::ANTHROPIC_API_KEY secret is not set. Add it in Settings → Secrets and variables → Actions."
             exit 1
           fi
-          SCOPE="${{ github.event.inputs.scope || 'curated' }}"
+          SCOPE="${{ github.event.inputs.scope || 'unscored' }}"
+          BUNDLE="${{ github.event.inputs.bundle }}"
           MODELS="${{ github.event.inputs.models || 'claude-sonnet-4-6,claude-haiku-4-5-20251001' }}"
           JUDGE="${{ github.event.inputs.judge || 'claude-sonnet-4-6' }}"
-          if [ "$SCOPE" = "all" ]; then
-            # Score every skill. Default the full pass to Haiku-only (~$2) unless the
-            # dispatcher explicitly chose models/judge.
+          # Targeted/full passes default to cheap Haiku unless the dispatcher overrode models/judge.
+          if [ "$SCOPE" != "curated" ]; then
             if [ "$MODELS" = "claude-sonnet-4-6,claude-haiku-4-5-20251001" ]; then MODELS="claude-haiku-4-5-20251001"; fi
             if [ "$JUDGE" = "claude-sonnet-4-6" ]; then JUDGE="claude-haiku-4-5-20251001"; fi
-            echo "Scoring ALL skills — models=$MODELS judge=$JUDGE"
-            node scripts/gen-eval-cases.mjs
-            node evals/run-evals.mjs --cases evals/cases.full.json --models "$MODELS" --judge "$JUDGE"
-          else
-            echo "Scoring curated cases — models=$MODELS judge=$JUDGE"
-            node evals/run-evals.mjs --models "$MODELS" --judge "$JUDGE"
           fi
+
+          case "$SCOPE" in
+            unscored)
+              echo "Scoring ONLY unscored skills (additive) — models=$MODELS judge=$JUDGE"
+              node scripts/gen-eval-cases.mjs
+              node evals/run-evals.mjs --cases evals/cases.full.json --unevaluated --models "$MODELS" --judge "$JUDGE"
+              ;;
+            bundle)
+              if [ -z "$BUNDLE" ]; then
+                echo "::error::scope=bundle but no 'bundle' input given. Re-run and set e.g. bundle=pm-ai,pm-growth."
+                exit 1
+              fi
+              echo "Scoring bundle(s) '$BUNDLE' (additive) — models=$MODELS judge=$JUDGE"
+              node scripts/gen-eval-cases.mjs
+              node evals/run-evals.mjs --cases evals/cases.full.json --bundles "$BUNDLE" --models "$MODELS" --judge "$JUDGE"
+              ;;
+            all)
+              echo "Scoring ALL skills — models=$MODELS judge=$JUDGE"
+              node scripts/gen-eval-cases.mjs
+              node evals/run-evals.mjs --cases evals/cases.full.json --models "$MODELS" --judge "$JUDGE"
+              ;;
+            *)
+              echo "Scoring curated cases — models=$MODELS judge=$JUDGE"
+              node evals/run-evals.mjs --models "$MODELS" --judge "$JUDGE"
+              ;;
+          esac
           # Cheap by default; skips unchanged skills. For a stricter official pass,
           # dispatch with judge=claude-opus-4-8.
 
