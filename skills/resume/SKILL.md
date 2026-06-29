@@ -10,9 +10,20 @@ A resume gets ~7 seconds and an ATS scan before a human reads it. So it has to b
 into quantified accomplishment bullets, structured single-column (ATS-safe), and tailored to the target
 role. Export it with the **Paper** or **Modern** PDF theme for a typeset result.
 
-## Required Inputs
+## Working from a brief
 
-Ask for these only if they aren't already provided:
+You will often get rough notes, a partial history, or just a target role. **Always deliver a complete,
+ready-to-use resume anyway** — do not stop to ask questions and do not leave bracketed placeholders like
+`[Company]` or `[add metric]`. Where a detail is missing, infer a specific, realistic one from the rest of
+the brief and the target role, and mark anything you inferred *(assumed — confirm)* so the user knows to
+verify it. A concrete, labelled assumption always beats a blank or a clarifying question.
+
+Quantify every achievement: if the user gave a real number, use it; if not, turn the duty into an
+achievement with a **defensible, clearly-framed estimate** *(assumed — confirm)* rather than leaving it as a
+responsibility. Never silently fabricate or inflate numbers on a real person's resume — an unmarked
+invented metric is the one thing worse than a missing one.
+
+## Inputs (infer any not provided — label assumptions)
 
 - **Target role / job description** — so the resume is tailored and keyword-aligned (generic resumes lose).
 - **Your experience** — roles, dates, and what you did/achieved (rough notes fine; the skill quantifies them).

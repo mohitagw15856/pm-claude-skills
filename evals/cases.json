@@ -108,6 +108,10 @@
     {
       "skill": "competitive-intelligence-monitor",
       "input": "Brief me on these competitor signals this week: (1) Rival A launched an AI assistant in beta; (2) Rival B cut prices 20% for startups; (3) Rival C hired a VP of Enterprise Sales; (4) a newcomer raised a $15M Series A. We're a mid-market analytics product."
+    },
+    {
+      "skill": "resume",
+      "input": "Write my resume, targeting a Senior Product Manager role at a B2B SaaS company. My experience:\n- Product Manager at Acme Analytics (2021-present): owned the onboarding flow; ran an onboarding revamp that took activation from 31% to 44%; led a team of 3 (2 designers, 1 eng PM); launched a self-serve plan that now drives about a third of new signups.\n- Associate PM at Beta Corp (2019-2021): shipped the mobile app v1; ran the A/B testing program.\n- Skills: SQL, Amplitude, Figma, experimentation, roadmapping.\n- BS in Computer Science, State University, 2019.\nUse my real numbers where I gave them; one page."
     }
   ]
 }
