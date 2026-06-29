@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-21T18:58:18.334Z",
+  "generatedAt": "2026-06-29T08:02:35.259Z",
   "judge": "claude-haiku-4-5-20251001",
   "models": [
     "claude-haiku-4-5-20251001"
@@ -215,6 +215,18 @@
       "hash": "6556b7ff589d4ba6"
     },
     {
+      "skill": "case-study-writeup",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "6f2bca3d11c96cc7"
+    },
+    {
       "skill": "change-management-plan",
       "model": "claude-haiku-4-5-20251001",
       "scores": {
@@ -272,6 +284,18 @@
       },
       "overall": 4.75,
       "hash": "b57d709903e7722b"
+    },
+    {
+      "skill": "client-discovery",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "e432ae7b96f8428b"
     },
     {
       "skill": "clinical-case-summary",
@@ -391,6 +415,18 @@
       },
       "overall": 5,
       "hash": "9ebe41fd8c5b56a6"
+    },
+    {
+      "skill": "consulting-proposal",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "1f61f320b996912f"
     },
     {
       "skill": "content-calendar",
@@ -738,6 +774,18 @@
       },
       "overall": 5,
       "hash": "82821e3f3d9fbbbb"
+    },
+    {
+      "skill": "engagement-retro",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "8c5cba5c3694fef8"
     },
     {
       "skill": "engineering-hiring-rubric",
@@ -1682,6 +1730,18 @@
       "hash": "d62db1b2d8e5cc26"
     },
     {
+      "skill": "rate-card",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "0d0f3b6341250f3f"
+    },
+    {
       "skill": "red-team-review",
       "model": "claude-haiku-4-5-20251001",
       "scores": {
@@ -2096,6 +2156,18 @@
       },
       "overall": 5,
       "hash": "5adafbfe1115b4a0"
+    },
+    {
+      "skill": "statement-of-work",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "9033d8f99fa92cf7"
     },
     {
       "skill": "strategic-narrative-generator",
