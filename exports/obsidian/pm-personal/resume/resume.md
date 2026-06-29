@@ -20,10 +20,14 @@ ready-to-use resume anyway** — do not stop to ask questions and do not leave b
 the brief and the target role, and mark anything you inferred *(assumed — confirm)* so the user knows to
 verify it. A concrete, labelled assumption always beats a blank or a clarifying question.
 
-Quantify every achievement: if the user gave a real number, use it; if not, turn the duty into an
-achievement with a **defensible, clearly-framed estimate** *(assumed — confirm)* rather than leaving it as a
-responsibility. Never silently fabricate or inflate numbers on a real person's resume — an unmarked
-invented metric is the one thing worse than a missing one.
+Quantify every achievement. **Lead with the user's real numbers** — when they gave a figure, use it exactly.
+Only when a metric is genuinely absent, turn the duty into an outcome-focused achievement (the *result*, e.g.
+"shipped the mobile app v1, growing it to its first cohort of users"); add a number only if it's a
+**defensible, conservative estimate**, marked *(assumed — confirm)*. Never silently fabricate or inflate
+numbers on a real person's resume — an unmarked invented metric is the one thing worse than a missing one.
+
+Output **only the finished resume** (and its short tailoring note) — no preamble, no "here's your resume", no
+meta-commentary about what you did.
 
 ## Inputs (infer any not provided — label assumptions)
 
