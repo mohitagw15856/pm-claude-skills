@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-29T08:02:35.259Z",
+  "generatedAt": "2026-06-29T09:08:59.413Z",
   "judge": "claude-haiku-4-5-20251001",
   "models": [
     "claude-haiku-4-5-20251001"
@@ -463,6 +463,18 @@
       },
       "overall": 4.75,
       "hash": "826c64d830329afe"
+    },
+    {
+      "skill": "cover-letter",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "bbd519418998c2c7"
     },
     {
       "skill": "creator-brand-kit",
@@ -1289,6 +1301,18 @@
       "hash": "30b46efe51e2c0e4"
     },
     {
+      "skill": "linkedin-profile",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 5,
+        "grounding": 2
+      },
+      "overall": 4,
+      "hash": "7207bd77d03c1ec9"
+    },
+    {
       "skill": "literature-review",
       "model": "claude-haiku-4-5-20251001",
       "scores": {
@@ -1479,6 +1503,18 @@
       "hash": "c11efc3af45782d6"
     },
     {
+      "skill": "one-pager",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
+      },
+      "overall": 4.75,
+      "hash": "bc23795ab653166e"
+    },
+    {
       "skill": "parent-communication",
       "model": "claude-haiku-4-5-20251001",
       "scores": {
@@ -1539,6 +1575,18 @@
       "hash": "1fd9921bb31a18aa"
     },
     {
+      "skill": "personal-bio",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "0a2cbf781f90e083"
+    },
+    {
       "skill": "pm-weekly-review",
       "model": "claude-haiku-4-5-20251001",
       "scores": {
@@ -1549,6 +1597,18 @@
       },
       "overall": 5,
       "hash": "29f93479c4bfb414"
+    },
+    {
+      "skill": "portfolio-page",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
+      },
+      "overall": 5,
+      "hash": "279888c04a6ae865"
     },
     {
       "skill": "pptx-slide-auditor",
@@ -1800,6 +1860,18 @@
       },
       "overall": 4.75,
       "hash": "621c9772e9c265c6"
+    },
+    {
+      "skill": "resume",
+      "model": "claude-haiku-4-5-20251001",
+      "scores": {
+        "structure": 4,
+        "completeness": 3,
+        "usefulness": 4,
+        "grounding": 2
+      },
+      "overall": 3.25,
+      "hash": "aeac2f0059d9dfec"
     },
     {
       "skill": "retention-analysis",
