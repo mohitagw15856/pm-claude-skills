@@ -41,6 +41,9 @@ const sotw = existsSync(join(root, 'web', 'skill-of-the-week.json'))
 
 const stars = repo?.stargazers_count ?? '—';
 const forks = repo?.forks_count ?? '—';
+// Skill count from the built catalogue (avoids a hardcoded number going stale).
+const skillCount = existsSync(join(root, 'web', 'skills.json'))
+  ? (JSON.parse(readFileSync(join(root, 'web', 'skills.json'), 'utf8')).count ?? '—') : '—';
 
 const contribHtml = (contributors || []).filter((c) => c.type === 'User').slice(0, 24).map((c) =>
   `<a class="contrib" href="${c.html_url}" title="${esc(c.login)} · ${c.contributions} contributions"><img src="${c.avatar_url}&s=80" alt="${esc(c.login)}" loading="lazy" /></a>`
@@ -103,7 +106,7 @@ const html = `<!DOCTYPE html>
   <div class="stats">
     <div class="stat"><b>⭐ ${stars}</b><br><span>stars</span></div>
     <div class="stat"><b>🍴 ${forks}</b><br><span>forks</span></div>
-    <div class="stat"><b>180</b><br><span>skills</span></div>
+    <div class="stat"><b>${skillCount}</b><br><span>skills</span></div>
   </div>
 
   <div class="hub-cta">
@@ -111,6 +114,7 @@ const html = `<!DOCTYPE html>
     <a class="btn btn-ghost" href="${'https://github.com/' + REPO}/discussions/new?category=show-and-tell">📣 Show & Tell what you built</a>
     <a class="btn btn-ghost" href="${'https://github.com/' + REPO}/discussions/new?category=recipes">🧩 Share a recipe</a>
     <a class="btn btn-ghost" href="${'https://github.com/' + REPO}/issues/new?template=submit-skill.yml">🧠 Submit a skill</a>
+    <a class="btn btn-ghost" href="${'https://github.com/' + REPO}/blob/main/COMMUNITY-SKILLS.md">🌐 Get listed + earn the badge</a>
   </div>
 
   ${sotw ? `<div class="card sotw" style="margin-bottom:18px">🛠️ <strong>Skill of the week:</strong> <a href="${BASE}/skill/${sotw.skill}.html">${esc(sotw.title)}</a> — ${esc(sotw.summary || '')}</div>` : ''}

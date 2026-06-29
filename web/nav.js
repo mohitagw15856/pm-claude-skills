@@ -72,6 +72,8 @@
       ['learn.html', '🎓 Learn'],
       ['guide.html', '📖 Guide'],
       ['community.html', '💬 Community'],
+      // External (GitHub doc): a 3rd truthy element renders it as a new-tab link.
+      ['https://github.com/mohitagw15856/pm-claude-skills/blob/main/COMMUNITY-SKILLS.md', '🌐 Community Skills', true],
     ] },
     { href: 'pro.html', label: '⭐ Pro' },
     // Always-visible way back to the source — opens the GitHub repo in a new tab.
@@ -88,7 +90,7 @@
     var here = it.items.some(function (t) { return t[0] === file; });
     return '<span class="tool-group">'
       + '<button type="button" class="tool group-btn' + (here ? ' active' : '') + '" aria-haspopup="true" aria-expanded="false">' + it.group + ' ▾</button>'
-      + '<span class="group-menu" hidden>' + it.items.map(function (t) { return link(t[0], t[1]); }).join('') + '</span>'
+      + '<span class="group-menu" hidden>' + it.items.map(function (t) { return t[2] ? '<a class="tool" href="' + t[0] + '" target="_blank" rel="noopener">' + t[1] + '</a>' : link(t[0], t[1]); }).join('') + '</span>'
       + '</span>';
   }).join('');
 
