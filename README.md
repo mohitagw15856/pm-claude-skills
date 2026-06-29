@@ -901,10 +901,10 @@ Built your own skills? **[List them in the Community Skills directory](COMMUNITY
 a place to showcase skill repos and packs that follow the `SKILL.md` standard. It's a **one-row
 pull request**, and once it's merged you earn a badge to show off in your own repo:
 
-[![Featured in PM Skills Community](https://img.shields.io/badge/Featured%20in-PM%20Skills%20Community-d97757?logo=anthropic&logoColor=white)](COMMUNITY-SKILLS.md)
+[![Featured in PM Skills Community](https://mohitagw15856.github.io/pm-claude-skills/assets/community-badge.svg)](COMMUNITY-SKILLS.md)
 
 ```markdown
-[![Featured in PM Skills Community](https://img.shields.io/badge/Featured%20in-PM%20Skills%20Community-d97757?logo=anthropic&logoColor=white)](https://github.com/mohitagw15856/pm-claude-skills/blob/main/COMMUNITY-SKILLS.md)
+[![Featured in PM Skills Community](https://mohitagw15856.github.io/pm-claude-skills/assets/community-badge.svg)](https://github.com/mohitagw15856/pm-claude-skills/blob/main/COMMUNITY-SKILLS.md)
 ```
 
 Community listings live in their authors' own repos and are **community-maintained — not

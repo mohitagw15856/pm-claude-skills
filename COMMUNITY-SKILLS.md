@@ -4,7 +4,7 @@ A directory of **skill repos and packs built by the community** that follow the
 [`SKILL.md` standard](SKILL-AUTHORING-STANDARD.md). Get your skills listed, and earn a
 **badge** for your own repo that shows they're part of the PM Skills community. 🏅
 
-[![Featured in PM Skills Community](https://img.shields.io/badge/Featured%20in-PM%20Skills%20Community-d97757?logo=anthropic&logoColor=white)](https://github.com/mohitagw15856/pm-claude-skills/blob/main/COMMUNITY-SKILLS.md)
+[![Featured in PM Skills Community](https://mohitagw15856.github.io/pm-claude-skills/assets/community-badge.svg)](https://github.com/mohitagw15856/pm-claude-skills/blob/main/COMMUNITY-SKILLS.md)
 
 > [!IMPORTANT]
 > **This is not the curated library.** The skills *in this repo* (`skills/`) are
@@ -65,12 +65,12 @@ back to this directory:
 
 **Markdown**
 ```markdown
-[![Featured in PM Skills Community](https://img.shields.io/badge/Featured%20in-PM%20Skills%20Community-d97757?logo=anthropic&logoColor=white)](https://github.com/mohitagw15856/pm-claude-skills/blob/main/COMMUNITY-SKILLS.md)
+[![Featured in PM Skills Community](https://mohitagw15856.github.io/pm-claude-skills/assets/community-badge.svg)](https://github.com/mohitagw15856/pm-claude-skills/blob/main/COMMUNITY-SKILLS.md)
 ```
 
 **HTML**
 ```html
-<a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/COMMUNITY-SKILLS.md"><img src="https://img.shields.io/badge/Featured%20in-PM%20Skills%20Community-d97757?logo=anthropic&logoColor=white" alt="Featured in PM Skills Community" /></a>
+<a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/COMMUNITY-SKILLS.md"><img src="https://mohitagw15856.github.io/pm-claude-skills/assets/community-badge.svg" alt="Featured in PM Skills Community" /></a>
 ```
 
 It renders like the badge at the top of this page. Wear it with pride. 🏅
