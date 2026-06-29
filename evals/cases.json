@@ -136,6 +136,26 @@
     {
       "skill": "model-selection-advisor",
       "input": "Which model should we use to classify inbound support tickets into one of 12 categories and extract the product name? ~50,000 tickets/day, needs to keep up in near-real-time, budget-sensitive. Accuracy matters but it's a fairly constrained extraction/classification task, not open-ended reasoning. Tickets are short. Outputs feed an automated routing system, so consistency matters."
+    },
+    {
+      "skill": "pr-crisis-response",
+      "input": "We're a B2B SaaS company. A security researcher just tweeted that a misconfiguration may have exposed some customers' support attachments; it's getting traction and a journalist has emailed us. We've confirmed the misconfiguration existed and is now fixed, but we don't yet know exactly how many customers were affected or whether anything was actually accessed. Build our crisis comms plan."
+    },
+    {
+      "skill": "incident-public-statement",
+      "input": "Draft our public statement. Our payments service had a 3-hour outage this morning (09:10-12:05 UTC) caused by a failed database upgrade; some customers were double-charged. We've rolled back, identified the affected transactions, and are issuing automatic refunds within 5 business days. Affected customers don't need to do anything. Tone: accountable and reassuring."
+    },
+    {
+      "skill": "customer-outage-notice",
+      "input": "Write our outage notices. Our file-upload feature is currently failing for users in the EU region (started ~14:20 CET); the rest of the app works. We're still investigating the cause. We'll update every 30 minutes. Need status-page posts for each phase, a customer email, and a resolved summary."
+    },
+    {
+      "skill": "layoff-communication",
+      "input": "We need to communicate a layoff: a 12% reduction (about 60 people) across sales and recruiting, driven by slower-than-planned revenue growth and a refocus on the core product. Affected employees get 12 weeks' severance, 6 months of benefits, and outplacement support. People will be told individually on Tuesday morning, followed by an all-hands. Prepare the full comms package."
+    },
+    {
+      "skill": "apology-letter",
+      "input": "Write an apology to a customer. We're a meal-kit company; we shipped their order to the wrong address and by the time it was sorted the ingredients had spoiled, ruining a dinner party they'd planned. It was our fulfilment error. We want to refund the order in full, give them a credit for a future box, and keep them as a customer."
     }
   ]
 }

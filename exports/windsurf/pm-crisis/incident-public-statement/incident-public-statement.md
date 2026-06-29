@@ -1,0 +1,64 @@
+---
+trigger: model_decision
+description: "Write a single clear, honest public statement about an incident. Use when asked to draft a public statement, a press statement, or an official response to a security breach, outage, data incident, recall, or public controversy. Produces a ready-to-publish statement — acknowledgement, what happened, impact, what you're doing, what affected people should do, and a commitment to update — plus a short and a long version."
+---
+
+# Incident Public Statement Skill
+
+A public statement is judged in seconds: does it acknowledge the problem, take responsibility, and tell people
+what to do? This skill writes that statement — honest, human, and specific — avoiding both the legalese that
+reads as evasion and the over-promising that creates the next problem. (Need the whole coordinated response,
+not just the statement? Use [`pr-crisis-response`](../pr-crisis-response/SKILL.md).)
+
+## Working from a brief
+
+Given a one-line incident description, **produce the full statement anyway** — infer the likely impact and next
+steps, label assumptions, and clearly bracket only the genuinely incident-specific facts the user must confirm
+before publishing (numbers, dates, scope). Never refuse for missing detail; flag legally sensitive claims for review.
+
+## Required Inputs
+
+Ask for these only if they aren't already provided (else infer and label):
+
+- **What happened** — the incident, when it started/was discovered, and current status.
+- **Who's affected and how** — scope and the concrete impact on them.
+- **What you're doing** — the response so far and what's next.
+- **What affected people should do** — the specific action (reset password, watch for X, no action needed).
+- **Voice & constraints** — tone, and anything legal/regulatory you can't yet say.
+
+## Output Format
+
+### Public Statement: [incident]
+
+**Statement (publish-ready)** — in this order:
+1. **Acknowledge** — name the issue plainly in the first sentence; don't bury it.
+2. **What happened** — a brief, factual account (confirmed only); say what's still being investigated.
+3. **Impact** — who/what is affected, specifically and honestly.
+4. **What we're doing** — the actions taken and underway, with accountability (no blame-shifting).
+5. **What you should do** — the clear next step for affected people, or "no action needed" if true.
+6. **Our commitment** — that you'll share an update by a stated time, and how to get help/contact.
+
+Then provide:
+- **Short version** — 2–3 sentences for social / status page / SMS.
+- **Notes** — bracketed facts to confirm before publishing, and any line flagged for legal review.
+
+## Quality Checks
+
+- [ ] The first sentence acknowledges the issue directly — no warm-up, no burying
+- [ ] Only confirmed facts are stated; open items are named as "under investigation"
+- [ ] It takes responsibility without speculating on cause or shifting blame
+- [ ] Affected people get a clear, specific action (or an honest "no action needed")
+- [ ] It commits to a next update by a stated time
+- [ ] Both a full and a short version are provided; sensitive claims flagged for review
+
+## Anti-Patterns
+
+- [ ] Do not open with self-congratulation or context-setting — lead with the acknowledgement
+- [ ] Do not use evasive legalese ("issues may have impacted some users") when you can be specific
+- [ ] Do not speculate on cause or promise outcomes you can't guarantee
+- [ ] Do not state numbers/scope you haven't confirmed — bracket them for confirmation
+- [ ] Do not omit what the reader should actually do next
+
+## Based On
+
+Incident communication practice — prompt acknowledgement, factual transparency, accountability, and clear guidance for affected people.

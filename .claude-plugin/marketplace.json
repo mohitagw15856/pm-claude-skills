@@ -49,6 +49,14 @@
       "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
     },
     {
+      "name": "pm-crisis",
+      "description": "Crisis & sensitive communications skills for high-stakes moments: PR Crisis Response, Incident Public Statement, Customer Outage Notice, Layoff Communication, and Apology Letter.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-crisis",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-calculators",
       "description": "Executable business calculators — each ships a stdlib script: Unit Economics (LTV/CAC), SaaS Metrics (NRR/quick ratio), Runway (default alive/dead), Pricing, and ROI/NPV. Verifiable math, not vibes.",
       "version": "1.0.0",
