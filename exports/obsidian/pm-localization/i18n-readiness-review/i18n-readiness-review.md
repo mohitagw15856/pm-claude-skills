@@ -1,0 +1,71 @@
+---
+aliases: ["i18n Readiness Review"]
+tags: [pm-skills, skill]
+skill: i18n-readiness-review
+description: "Review a product/codebase for internationalization readiness before you localize. Use when asked if a product is ready to localize, to review i18n readiness, find hard-coded strings/locale bugs, or prep for going multilingual. Produces a readiness audit — externalized strings, locale-aware formatting, layout/expansion, encoding/RTL, and a prioritised list of i18n fixes to make before translation starts."
+---
+
+# i18n Readiness Review Skill
+
+Localizing a product that isn't *internationalized* fails expensively — translators hit hard-coded
+strings, layouts break on longer languages, dates show in the wrong format, and RTL shatters the UI.
+i18n is the engineering groundwork; localization is the content. This skill audits whether the product
+is ready, so you fix the foundations *before* paying to translate into the cracks.
+
+## Required Inputs
+
+Ask for these only if they aren't already provided:
+
+- **The product** — web/app/codebase, stack/framework (i18n tooling differs).
+- **Target languages** — especially if any need RTL (Arabic/Hebrew), CJK (Chinese/Japanese/Korean), or are long (German/Finnish).
+- **What you can share** — code snippets, UI screenshots, or a description of how strings/formatting are handled today.
+
+## Output Format
+
+### i18n Readiness: [product]
+
+A readiness audit across the dimensions that break localization, each with status (🟢 ready / 🟡 partial / 🔴 blocker) and the fix:
+
+| Dimension | Check | Status | Fix |
+|---|---|---|---|
+| **String externalization** | no user-facing text hard-coded; all in resource files / i18n keys | | move strings to a catalog; no concatenated sentences |
+| **Formatting** | dates, numbers, currency, plurals via locale-aware libs (Intl/ICU) | | use Intl/ICU; never string-format dates |
+| **Pluralization** | plural rules handled (not `count + " items"`) | | ICU plural categories (some langs have 4–6) |
+| **Layout/expansion** | UI tolerates ~+30–40% text length; no fixed-width truncation | | flexible layouts, no text baked into images |
+| **Encoding** | UTF-8 throughout; CJK renders | | UTF-8 end to end |
+| **RTL** | layout mirrors for right-to-left scripts | | logical CSS properties, dir attribute |
+| **Locale plumbing** | locale selection, fallback, and persistence exist | | a locale resolver + fallback chain |
+| **Assets/content** | images with text, examples, names are swappable | | externalize locale-specific assets |
+
+**Prioritised fixes** — the blockers (🔴) first (hard-coded strings, no Intl formatting, broken RTL), then 🟡s. These must land **before** translation begins, or you translate into a broken foundation.
+
+**Verdict** — ready to localize / fix-blockers-first / not yet, in one line.
+
+## Quality Checks
+
+- [ ] Checks string externalization (the #1 blocker) — no hard-coded or concatenated UI text
+- [ ] Verifies locale-aware formatting (Intl/ICU) for dates, numbers, currency, plurals
+- [ ] Assesses layout expansion (+30–40%) and RTL if a target needs it
+- [ ] Confirms UTF-8 / CJK encoding end to end
+- [ ] Prioritises blockers to fix *before* translation starts
+- [ ] Ends with a clear ready / not-ready verdict
+
+## Anti-Patterns
+
+- [ ] Do not start translating before i18n is ready — you'll translate into hard-coded strings and broken layouts
+- [ ] Do not concatenate sentence fragments — word order differs by language; translate whole strings with placeholders
+- [ ] Do not string-format dates/numbers — use Intl/ICU, or every locale shows them wrong
+- [ ] Do not assume text length — German/Finnish expand; fixed-width UI truncates and clips
+- [ ] Do not ignore RTL until late — retrofitting right-to-left into a left-to-right layout is a rebuild, not a tweak
+
+## Based On
+
+Internationalization engineering practice — string externalization, ICU/Intl formatting & plurals, text expansion, RTL, UTF-8.
+
+---
+<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
+     variable for the highlighted text — replace it with your plugin's equivalent
+     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
+Apply the skill above to the following input:
+
+{{selection}}

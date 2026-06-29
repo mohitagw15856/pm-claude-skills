@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-localization",
+      "description": "Translation & localization skills: Professional Translator, Transcreation, Localization Brief, Subtitle & Caption, Glossary Builder, and i18n Readiness Review. Reach every market — translation as a real job, not word-for-word.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-localization",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-support",
       "description": "Support & customer-ops skills: Support Macro, Help-Center Article, CSAT/NPS Analysis (with an NPS calculator), Support Runbook, Escalation Tree, and KB Audit. For frontline support, CX, and success teams.",
       "version": "1.0.0",

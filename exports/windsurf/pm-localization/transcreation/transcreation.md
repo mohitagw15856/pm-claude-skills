@@ -1,0 +1,58 @@
+---
+trigger: model_decision
+description: "Transcreate marketing/brand copy for another language and culture — recreate the impact, not the words. Use when asked to adapt a tagline, ad, slogan, campaign, or brand message for a new market, or when a translation is 'correct but flat'. Produces a transcreated version that lands emotionally in-culture, with the strategic rationale, 2-3 options, and notes on what was changed and why."
+---
+
+# Transcreation Skill
+
+A translated tagline is often technically correct and completely dead — puns don't survive, cultural
+references miss, the emotional punch evaporates. Transcreation *recreates the intent and impact* in the
+target culture, even if that means very different words. This skill does that for marketing and brand
+copy: capture the strategic intent, then write copy that *works* for the new audience — with options,
+because creative needs choices.
+
+## Required Inputs
+
+Ask for these only if they aren't already provided:
+
+- **The source copy** (tagline, headline, ad, slogan, CTA) and the **target language + market/culture**.
+- **The intent** — what the original is *trying to do* (the feeling, the promise, the wordplay) — this is what you preserve, not the literal words.
+- **Brand voice & guardrails** — tone, things to keep, things you can't say in this market.
+- **Constraints** — character limits (ads), where it appears.
+
+## Output Format
+
+### Transcreation: [copy] → [target market]
+
+**1. Intent of the original** — what it does in the source culture (the emotion, the mechanism, any pun/rhyme/reference). Naming this is the whole job — it's what you recreate.
+
+**2. Why a literal translation fails here** — the specific reason (the pun doesn't carry, the reference is unknown, the tone reads differently, a word has bad connotations in-market).
+
+**3. Transcreated options (2–3)** — distinct creative routes that recreate the *impact* for the target audience. For each: the copy, a back-translation (literal meaning, for the client's confidence), and the angle it takes.
+
+| Option | Copy (target) | Back-translation | The angle |
+|---|---|---|---|
+
+**4. Recommendation** — which option best matches the brand + market, and why.
+
+**5. Flags** — anything to verify with an in-market native (connotations, slang currency, legal/claims), and any character-limit fit.
+
+## Quality Checks
+
+- [ ] Names the original's *intent/impact* — and recreates that, not the words
+- [ ] Explains why a literal translation would fall flat in this market
+- [ ] Gives 2–3 distinct creative options, each with a back-translation for client confidence
+- [ ] Respects brand voice and market guardrails
+- [ ] Flags anything an in-market native should confirm (connotations, slang, claims)
+
+## Anti-Patterns
+
+- [ ] Do not translate literally — transcreation recreates the feeling; identical words that lose the punch is failure
+- [ ] Do not give one option — creative work needs choices; offer distinct routes
+- [ ] Do not omit the back-translation — clients need to know what the new copy literally says
+- [ ] Do not ignore cultural connotation — a fine word in one market can be odd or offensive in another; flag it
+- [ ] Do not bust the character limit — an ad headline that truncates is unusable
+
+## Based On
+
+Transcreation / creative-localization practice — intent-led recreation, multiple routes, back-translation, in-market validation.
