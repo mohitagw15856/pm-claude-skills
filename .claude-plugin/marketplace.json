@@ -65,6 +65,14 @@
       "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
     },
     {
+      "name": "pm-lifeadmin",
+      "description": "Life-admin letters that get results: Complaint Letter, Dispute Letter, Reference Letter, Rental Application, and Insurance Claim. The everyday correspondence everyone needs, done well.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-lifeadmin",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-calculators",
       "description": "Executable business calculators — each ships a stdlib script: Unit Economics (LTV/CAC), SaaS Metrics (NRR/quick ratio), Runway (default alive/dead), Pricing, and ROI/NPV. Verifiable math, not vibes.",
       "version": "1.0.0",

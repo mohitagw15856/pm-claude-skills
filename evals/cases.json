@@ -172,6 +172,26 @@
     {
       "skill": "clinical-trial-protocol",
       "input": "Draft a clinical trial protocol synopsis. Phase II, randomized, double-blind, placebo-controlled trial of an investigational oral drug for moderate knee osteoarthritis pain in adults. Primary question: does it reduce pain versus placebo over 12 weeks? We expect to enroll adults 45-75 with a confirmed diagnosis. Outcome of interest is patient-reported pain. Treat effect sizes and prior data as placeholders for the study team to set."
+    },
+    {
+      "skill": "complaint-letter",
+      "input": "Write a complaint letter to an airline. My flight (BA286, 14 March, booking ref ABC123) was cancelled 2 hours before departure with no rebooking offered; I had to buy a last-minute ticket on another airline for $640 and missed the first day of a conference. I've called twice and been told to 'wait for an email' that never came. I want a full refund of the original fare plus reimbursement of the $640. Deadline: 14 days."
+    },
+    {
+      "skill": "dispute-letter",
+      "input": "Write a letter to my credit-card company disputing a charge. There's a $129.99 charge from 'GLOWFIT LTD' dated 3 April on my account ending 4821 that I did not authorise and do not recognise; I've never done business with this company. I want the charge reversed and written confirmation. I have my statement and can provide more detail."
+    },
+    {
+      "skill": "reference-letter",
+      "input": "Write a reference letter. I'm a senior engineering manager recommending a software engineer who reported to me for 3 years for a senior/staff engineer role at another company. Strengths: technically excellent, owned our payments rewrite end to end, mentors junior engineers, and is unusually calm in incidents. Mark any specific examples you invent so I can replace them with real ones."
+    },
+    {
+      "skill": "rental-application",
+      "input": "Write a rental application cover letter for a 2-bedroom flat I want to rent, move-in 1 June, ideally a 2-year tenancy. I'm a full-time nurse with stable income, have rented my current place for 4 years with on-time rent and a landlord reference available. I have a small, well-behaved cat. I can provide proof of income, ID, and references quickly."
+    },
+    {
+      "skill": "insurance-claim",
+      "input": "Write a home-insurance claim letter. Policy number HOME-558921. A pipe under the kitchen sink burst on 8 May while I was away, flooding the kitchen and damaging the flooring, lower cabinets, and a dishwasher. Estimated repair/replacement: flooring $2,800, cabinets $1,500, dishwasher $600. I have photos, a plumber's report, and repair quotes. I'm claiming $4,900 and want it processed promptly."
     }
   ]
 }
