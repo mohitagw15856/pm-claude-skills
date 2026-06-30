@@ -15,6 +15,8 @@ const lsSet = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } ca
 let favs = lsGet(FAV_STORE, []);
 let recents = lsGet(RECENT_STORE, []);
 let workspace = lsGet(WORKSPACE_STORE, []);
+let activeDomain = null; // a "Browse by category" domain the user drilled into
+let showAll = false;      // user clicked "show all skills" from the landing
 
 // Role → a curated starter set of skill names (the "try these first" for each role).
 // Loaded from web/personas.json at startup; this is the fallback if that fetch fails.
@@ -343,6 +345,7 @@ function chooseRole(role) {
   el('search').value = '';
   el('pluginFilter').value = '';
   el('tierFilter').value = '';
+  activeDomain = null; showAll = false;
   renderGallery(names, role); // featured starter set for this role
 }
 
@@ -572,6 +575,67 @@ function galleryHead(text) {
   return h;
 }
 
+// The 56 bundles grouped into a handful of friendly domains, so a first-time visitor browses
+// ~10 calm categories instead of a wall of cards. Any bundle not listed falls into "Industries & More".
+const DOMAINS = [
+  { key: 'product', emoji: '🚀', label: 'Product', bundles: ['pm-essentials', 'pm-discovery', 'pm-planning', 'pm-delivery', 'pm-strategy', 'pm-advanced', 'pm-rituals'] },
+  { key: 'marketing', emoji: '📣', label: 'Marketing & Growth', bundles: ['pm-gtm', 'pm-growth', 'pm-copy', 'pm-social', 'pm-creator'] },
+  { key: 'engineering', emoji: '💻', label: 'Engineering & AI', bundles: ['pm-engineering', 'pm-craft', 'pm-qa', 'pm-ai', 'pm-dataeng'] },
+  { key: 'data', emoji: '📊', label: 'Data & Analytics', bundles: ['pm-data', 'pm-analytics'] },
+  { key: 'design', emoji: '🎨', label: 'Design & Content', bundles: ['pm-design', 'pm-figma', 'pm-uxwriting', 'pm-writers', 'pm-visuals'] },
+  { key: 'customers', emoji: '🤝', label: 'Customers & Sales', bundles: ['pm-cs', 'pm-support', 'pm-sales', 'pm-recruiting'] },
+  { key: 'finance', emoji: '💰', label: 'Finance, Ops & Business', bundles: ['pm-finance', 'pm-money', 'pm-calculators', 'pm-accounting', 'pm-operations', 'pm-business', 'pm-consulting', 'pm-founders'] },
+  { key: 'legal', emoji: '⚖️', label: 'Legal & Compliance', bundles: ['pm-legal', 'pm-compliance'] },
+  { key: 'career', emoji: '🧑', label: 'You & Career', bundles: ['pm-personal', 'pm-career', 'pm-jobsearch', 'pm-comms', 'pm-people', 'pm-hr', 'pm-lifeadmin'] },
+  { key: 'industries', emoji: '🌍', label: 'Industries & More', bundles: ['pm-health', 'pm-research', 'pm-education', 'pm-nonprofit', 'pm-crisis', 'pm-localization', 'pm-realestate', 'pm-ecommerce', 'pm-documents', 'pm-devrel', 'pm-cross'] },
+];
+const DOMAIN_BY_BUNDLE = {};
+DOMAINS.forEach((d) => d.bundles.forEach((b) => { DOMAIN_BY_BUNDLE[b] = d.key; }));
+const domainOf = (plugin) => DOMAIN_BY_BUNDLE[plugin] || 'industries';
+// A calm, broadly-useful starter set for the landing (filtered to those that actually exist).
+const CURATED_START = ['brief-builder', 'prd-template', 'executive-update', 'meeting-notes', 'go-to-market', 'competitive-analysis', 'rice-prioritisation', 'okr-builder', 'resume', 'cover-letter', 'roadmap-narrative', 'incident-postmortem'];
+
+// The first-time-visitor landing: favourites/recents, a curated "start here" set, and category
+// chips — instead of dumping all skills at once.
+function renderLanding() {
+  const gallery = el('gallery');
+  const find = (n) => SKILLS.find((s) => s.name === n);
+  const frag = document.createDocumentFragment();
+
+  const favList = favs.map(find).filter(Boolean);
+  const recentList = recents.map(find).filter(Boolean).filter((s) => !isFav(s.name));
+  if (favList.length) { frag.appendChild(galleryHead('⭐ Your favourites')); favList.forEach((s) => frag.appendChild(makeCard(s))); }
+  if (recentList.length) { frag.appendChild(galleryHead('🕘 Recently used')); recentList.slice(0, 8).forEach((s) => frag.appendChild(makeCard(s))); }
+
+  const starts = CURATED_START.map(find).filter(Boolean);
+  frag.appendChild(galleryHead('✨ Start here — popular & broadly useful'));
+  starts.forEach((s) => frag.appendChild(makeCard(s)));
+
+  // Browse-by-category chips (full-width row).
+  frag.appendChild(galleryHead('🗂️ Browse by category'));
+  const chips = document.createElement('div');
+  chips.className = 'domain-chips';
+  DOMAINS.forEach((d) => {
+    const count = SKILLS.filter((s) => domainOf(s.plugin) === d.key).length;
+    if (!count) return;
+    const c = document.createElement('button');
+    c.type = 'button'; c.className = 'domain-chip';
+    c.innerHTML = `<span class="dc-emoji">${d.emoji}</span><span class="dc-label">${escapeHtml(d.label)}</span><span class="dc-count">${count}</span>`;
+    c.addEventListener('click', () => { activeDomain = d.key; showAll = false; renderGallery(); el('controls').scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+    chips.appendChild(c);
+  });
+  frag.appendChild(chips);
+
+  const more = document.createElement('button');
+  more.type = 'button'; more.className = 'link-btn show-all-link';
+  more.textContent = `Show all ${SKILLS.length} skills →`;
+  more.addEventListener('click', () => { showAll = true; renderGallery(); });
+  frag.appendChild(more);
+
+  gallery.appendChild(frag);
+  el('count').textContent = `${SKILLS.length} skills · ${DOMAINS.length} categories`;
+}
+
 function renderGallery(featuredNames, roleLabel) {
   const gallery = el('gallery');
   gallery.innerHTML = '';
@@ -584,7 +648,7 @@ function renderGallery(featuredNames, roleLabel) {
     banner.innerHTML =
       `<span><strong>Your starter pack${roleLabel ? ' for ' + escapeHtml(roleLabel) : ''}</strong> — try these first.</span>` +
       `<button class="link-btn" type="button">Show all ${SKILLS.length} skills →</button>`;
-    banner.querySelector('.link-btn').addEventListener('click', () => renderGallery());
+    banner.querySelector('.link-btn').addEventListener('click', () => { showAll = true; renderGallery(); });
     gallery.appendChild(banner);
     el('count').textContent = `${list.length} starter skills`;
     const frag = document.createDocumentFragment();
@@ -598,17 +662,38 @@ function renderGallery(featuredNames, roleLabel) {
   const bundle = el('pluginFilter').value;
   const tier = el('tierFilter').value;
   const evalOnly = el('evalFilter').checked;
+  // An explicit search or dropdown filter overrides the category/landing browse mode.
+  if (q || bundle || tier || evalOnly) { activeDomain = null; showAll = false; }
   const isDefault = !q && !bundle && !tier && !evalOnly;
   showHero(isDefault);
+
+  // First-time landing: calm, curated, category-first — not 391 cards.
+  if (isDefault && !activeDomain && !showAll) { renderLanding(); return; }
+
   const norm = (x) => x.toLowerCase().replace(/[-_]+/g, ' '); // so "red team" matches "red-team"
   const nq = norm(q);
   const matches = SKILLS.filter((s) => {
+    if (activeDomain && domainOf(s.plugin) !== activeDomain) return false;
     if (bundle && s.plugin !== bundle) return false;
     if (tier && (s.tier || 'stable') !== tier) return false;
     if (evalOnly && !s.eval) return false;
     if (!q) return true;
     return norm(s.title + ' ' + s.description + ' ' + s.name).includes(nq);
   }).sort((a, b) => evalOnly ? (b.eval?.score || 0) - (a.eval?.score || 0) : 0);
+
+  const frag = document.createDocumentFragment();
+
+  // A back-to-start banner whenever we're in a drilled-in view (category or "show all").
+  if ((activeDomain || showAll) && !q && !bundle && !tier && !evalOnly) {
+    const dom = DOMAINS.find((d) => d.key === activeDomain);
+    const banner = document.createElement('div');
+    banner.className = 'starter-banner';
+    banner.innerHTML =
+      `<span><strong>${dom ? escapeHtml(dom.emoji + ' ' + dom.label) : 'All ' + SKILLS.length + ' skills'}</strong>${dom ? ' — ' + matches.length + ' skills' : ''}</span>` +
+      `<button class="link-btn" type="button">← Back to categories</button>`;
+    banner.querySelector('.link-btn').addEventListener('click', () => { activeDomain = null; showAll = false; renderGallery(); });
+    frag.appendChild(banner);
+  }
 
   el('count').textContent = `${matches.length} skill${matches.length === 1 ? '' : 's'}`;
 
@@ -617,16 +702,16 @@ function renderGallery(featuredNames, roleLabel) {
     return;
   }
 
-  const frag = document.createDocumentFragment();
-
-  // On the default view, surface favourites + recents first.
-  if (isDefault) {
-    const find = (n) => SKILLS.find((s) => s.name === n);
-    const favList = favs.map(find).filter(Boolean);
-    const recentList = recents.map(find).filter(Boolean).filter((s) => !isFav(s.name));
-    if (favList.length) { frag.appendChild(galleryHead('⭐ Your favourites')); favList.forEach((s) => frag.appendChild(makeCard(s))); }
-    if (recentList.length) { frag.appendChild(galleryHead('🕘 Recently used')); recentList.forEach((s) => frag.appendChild(makeCard(s))); }
-    if (favList.length || recentList.length) frag.appendChild(galleryHead(`All ${SKILLS.length} skills`));
+  // Inside a category (no search), group by bundle so it reads as sub-sections.
+  if (activeDomain && !q) {
+    const byBundle = {};
+    for (const s of matches) (byBundle[s.plugin] = byBundle[s.plugin] || []).push(s);
+    Object.keys(byBundle).sort().forEach((b) => {
+      frag.appendChild(galleryHead(b));
+      byBundle[b].forEach((s) => frag.appendChild(makeCard(s)));
+    });
+    gallery.appendChild(frag);
+    return;
   }
 
   for (const s of matches) frag.appendChild(makeCard(s));
