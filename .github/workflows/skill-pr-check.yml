@@ -1,11 +1,10 @@
-name: Skill PR Check (eval-gated)
+name: Skill PR Check (structure)
 
-# Every PR that touches skills/ gets an automatic quality gate:
-#   1. skillcheck validates structure (always runs — free, no API).
-#   2. If an ANTHROPIC_API_KEY is available (same-repo branches; withheld from fork PRs
-#      by GitHub for safety), it cheaply re-scores ONLY the changed skills (run-evals
-#      --changed, ~cents) and posts the scores as a PR comment.
-# Fork PRs still get the structural check + a note that a maintainer will score them.
+# Every PR that touches skills/ gets a fast, free structural quality gate:
+#   - skillcheck validates structure (frontmatter, required sections) — no API, no cost.
+# Skills are NOT eval-scored on the PR. Scoring is decided later, after merge, via the
+# manual "Evaluate selected bundles" Action (.github/workflows/eval-bundles.yml) — so
+# opening a PR never spends tokens, and you choose when/what to score.
 
 on:
   pull_request:
@@ -20,13 +19,11 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
-    env:
-      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }} # empty on fork PRs → eval step skips
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # need origin/main to diff changed skills
+          fetch-depth: 0 # need origin/main to diff changed skills for the comment
 
       - uses: actions/setup-node@v4
         with:
@@ -37,19 +34,10 @@ jobs:
         run: |
           if node scripts/skillcheck.mjs; then echo "result=pass" >> "$GITHUB_OUTPUT"; else echo "result=fail" >> "$GITHUB_OUTPUT"; exit 1; fi
 
-      - name: Eval changed skills (cheap; skipped if no key)
-        id: eval
-        if: ${{ always() && env.ANTHROPIC_API_KEY != '' }}
-        run: |
-          git fetch origin main --depth=1 || true
-          node evals/run-evals.mjs --changed --base origin/main || true
-          echo "ran=1" >> "$GITHUB_OUTPUT"
-
       - name: Build PR comment
         if: ${{ always() }}
         env:
           BASE_REF: origin/main
-          EVAL_RAN: ${{ steps.eval.outputs.ran }}
           SKILLCHECK: ${{ steps.skillcheck.outputs.result }}
         run: node scripts/pr-eval-comment.mjs > /tmp/skill-pr-comment.md
 
@@ -67,12 +55,3 @@ jobs:
             const mine = comments.data.find(c => c.body && c.body.startsWith(marker));
             if (mine) await github.rest.issues.updateComment({ owner, repo, comment_id: mine.id, body });
             else await github.rest.issues.createComment({ owner, repo, issue_number, body });
-
-      # Quality lock: fail the check if a changed skill's score dropped vs main.
-      # Runs last so the score comment always posts first. Skipped on fork PRs
-      # (no key → eval didn't run). Tune the drop tolerance with --threshold.
-      - name: Eval regression gate
-        if: ${{ steps.eval.outputs.ran == '1' }}
-        run: |
-          git show origin/main:evals/results.json > /tmp/baseline.json 2>/dev/null || echo '{"results":[]}' > /tmp/baseline.json
-          node scripts/eval-regression-gate.mjs --baseline /tmp/baseline.json --results evals/results.json --threshold 0.5

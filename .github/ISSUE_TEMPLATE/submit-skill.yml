@@ -1,14 +1,14 @@
 name: "🧠 Submit a skill"
-description: Propose a new skill for the library (eval-gated — strong skills get scored and merged).
+description: Propose a new skill for the library (structure-checked on PR; eval-scored after merge).
 title: "[Skill] <short name>"
 labels: ["skill-submission"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for contributing! This library is **eval-gated**: every skill is checked for structure and, where it has a test case, scored on a rubric (structure · completeness · usefulness · grounding). New skills should aim for **≥ 4.0/5**.
+        Thanks for contributing! Every skill is **structure-checked on its PR**, and **eval-scored after merge** on a rubric (structure · completeness · usefulness · grounding) via the Evaluate-selected-bundles Action. New skills should aim for **≥ 4.0/5** — so include a test case.
 
-        The fastest path is to **open a PR** with `skills/<your-skill>/SKILL.md` (+ a case in `evals/cases.json`) — the [PR check](../blob/main/.github/workflows/skill-pr-check.yml) will score it automatically. Use this form if you'd rather propose first.
+        The fastest path is to **open a PR** with `skills/<your-skill>/SKILL.md` (+ a case in `evals/cases.json`) — the [PR check](../blob/main/.github/workflows/skill-pr-check.yml) validates structure; scoring is run later. Use this form if you'd rather propose first.
   - type: input
     id: name
     attributes:
