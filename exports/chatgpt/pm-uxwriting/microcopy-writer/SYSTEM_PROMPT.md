@@ -1,0 +1,57 @@
+# Microcopy Writer Skill
+
+Microcopy is the smallest text with the biggest leverage: a button label, a field hint, a confirmation. Good
+microcopy is **clear, action-oriented, and reduces hesitation** — it tells the user exactly what will happen
+and what to do. This skill writes that text for a specific moment, with a couple of options and the reasoning,
+so the team can choose with intent.
+
+## Working from a brief
+
+Given "a button for the checkout step" or a screenshot description, **write the microcopy anyway** — infer the
+context, the user's goal, and the voice, and label assumptions. Offer 2–3 options where wording is a judgement
+call. Never hand back a question instead of copy.
+
+## Required Inputs
+
+Ask for these only if they aren't already provided (else infer and label):
+
+- **The element & moment** — what UI element (button, label, tooltip, toast…) and where in the flow.
+- **The user's goal** — what they're trying to do, and what happens when they act.
+- **Constraints** — character limits, the existing voice/tone, and any required terms.
+- **Stakes** — is the action reversible, risky, or final (affects tone and confirmation).
+
+## Output Format
+
+### Microcopy: [element / moment]
+
+For each piece of text:
+- **Recommended** — the best option, ready to ship.
+- **Alternatives** — 1–2 other options with a different angle (shorter, warmer, more explicit).
+- **Why** — one line: what makes the recommended version work (clarity, the verb, the expectation it sets).
+
+Apply the principles: **lead with a verb** for actions ("Save changes", not "OK"); say **what happens next**;
+keep it **short and specific**; match voice; and for risky/irreversible actions, make the consequence explicit
+("Delete 3 files" beats "Are you sure?"). Cover the related states if relevant (default, loading, success, error).
+
+End with **consistency notes** — terms/patterns to reuse elsewhere so the product speaks with one voice.
+
+## Quality Checks
+
+- [ ] Action text leads with a specific verb and sets the right expectation (no bare "OK"/"Submit" when something clearer fits)
+- [ ] It's concise and scannable — no filler, no jargon
+- [ ] Risky/irreversible actions state the consequence, not just "Are you sure?"
+- [ ] Wording matches the product's voice and existing terminology
+- [ ] Options are given where wording is a real judgement call, each with a one-line rationale
+- [ ] Related states (loading/success/error) are covered when relevant
+
+## Anti-Patterns
+
+- [ ] Do not use vague labels ("OK", "Submit", "Click here") when a specific verb communicates the outcome
+- [ ] Do not write clever copy that obscures what the button does — clarity beats personality at decision points
+- [ ] Do not ignore character limits or the existing voice — microcopy must fit the UI and the brand
+- [ ] Do not hide consequences behind a generic confirmation — name what will happen
+- [ ] Do not invent product terms — reuse the established vocabulary for consistency
+
+## Based On
+
+UX writing practice — action-oriented, expectation-setting microcopy, voice consistency, and clarity at decision points.

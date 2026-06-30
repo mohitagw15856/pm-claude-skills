@@ -1,0 +1,10 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-ecommerce",
+  "version": "1.0.0",
+  "description": "E-commerce & retail skills that sell: Product Description, Marketplace Listing Optimizer, Return & Refund Policy, Promotion Plan, Review Response, and Category Page Brief. Listings that rank and convert, promos with the margin math, and reviews handled well.",
+  "author": { "name": "Mohit Aggarwal", "email": "mohit15856@gmail.com" },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["ecommerce", "retail", "product-listing", "marketplace", "amazon", "shopify", "merchandising", "conversion"]
+}

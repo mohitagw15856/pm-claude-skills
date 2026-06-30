@@ -1,0 +1,10 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-accounting",
+  "version": "1.0.0",
+  "description": "Accounting & bookkeeping skills for finance ops and small businesses: Invoice Generator, Expense Policy, Collections Email, Financial Statement Explainer, Bookkeeping Categorization, and Cash Flow Forecast. Practical money admin — drafting aids, not tax/accounting advice.",
+  "author": { "name": "Mohit Aggarwal", "email": "mohit15856@gmail.com" },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["accounting", "bookkeeping", "invoice", "expenses", "collections", "cash-flow", "finance-ops", "small-business"]
+}

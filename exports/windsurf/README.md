@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-330 skills exported. Copy a `.mdc rule` into the tool to use it.
+354 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -31,14 +31,19 @@
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/assumption-mapper.md` |
 | Board Deck Narrative | `pm-business` | `pm-business/board-deck-narrative/board-deck-narrative.md` |
 | Board Pre-Read | `pm-business` | `pm-business/board-pre-read/board-pre-read.md` |
+| Bookkeeping Categorization | `pm-accounting` | `pm-accounting/bookkeeping-categorization/bookkeeping-categorization.md` |
+| Boolean Search Builder | `pm-recruiting` | `pm-recruiting/boolean-search-builder/boolean-search-builder.md` |
 | Brag Doc | `pm-career` | `pm-career/brag-doc/brag-doc.md` |
 | Budget Variance Analysis | `pm-finance` | `pm-finance/budget-variance-analysis/budget-variance-analysis.md` |
+| Candidate Scorecard | `pm-recruiting` | `pm-recruiting/candidate-scorecard/candidate-scorecard.md` |
 | Cap Table Explainer | `pm-founders` | `pm-founders/cap-table-explainer/cap-table-explainer.md` |
 | Capacity Planning | `pm-engineering` | `pm-engineering/capacity-planning/capacity-planning.md` |
 | Capital Allocation | `pm-business` | `pm-business/capital-allocation/capital-allocation.md` |
 | Career Ladder Map | `pm-career` | `pm-career/career-ladder-map/career-ladder-map.md` |
 | Case for Support | `pm-nonprofit` | `pm-nonprofit/case-for-support/case-for-support.md` |
 | Case Study Write-up | `pm-consulting` | `pm-consulting/case-study-writeup/case-study-writeup.md` |
+| Cash Flow Forecast | `pm-accounting` | `pm-accounting/cash-flow-forecast/cash-flow-forecast.md` |
+| Category Page Brief | `pm-ecommerce` | `pm-ecommerce/category-page-brief/category-page-brief.md` |
 | Change Management Plan | `pm-hr` | `pm-hr/change-management-plan/change-management-plan.md` |
 | Changelog Generator | `pm-engineering` | `pm-engineering/changelog-generator/changelog-generator.md` |
 | Chart | `pm-visuals` | `pm-visuals/chart/chart.md` |
@@ -54,6 +59,7 @@
 | Code Review Checklist | `pm-engineering` | `pm-engineering/code-review-checklist/code-review-checklist.md` |
 | Cohort Analysis | `pm-data` | `pm-data/cohort-analysis/cohort-analysis.md` |
 | Cold Email | `pm-copy` | `pm-copy/cold-email/cold-email.md` |
+| Collections Email | `pm-accounting` | `pm-accounting/collections-email/collections-email.md` |
 | Community Management Playbook | `pm-social` | `pm-social/community-management-playbook/community-management-playbook.md` |
 | Company Brief | `pm-jobsearch` | `pm-jobsearch/company-brief/company-brief.md` |
 | Competitive Analysis | `pm-essentials` | `pm-essentials/competitive-analysis/competitive-analysis.md` |
@@ -65,6 +71,7 @@
 | Consulting Proposal | `pm-consulting` | `pm-consulting/consulting-proposal/consulting-proposal.md` |
 | Content Calendar | `pm-gtm` | `pm-gtm/content-calendar/content-calendar.md` |
 | Content Repurposer | `pm-creator` | `pm-creator/content-repurposer/content-repurposer.md` |
+| Content Style Guide | `pm-uxwriting` | `pm-uxwriting/content-style-guide/content-style-guide.md` |
 | Context Mode | `pm-engineering` | `pm-engineering/context-mode/context-mode.md` |
 | Contract Review | `pm-legal` | `pm-legal/contract-review/contract-review.md` |
 | Conversion Rate Optimization | `pm-growth` | `pm-growth/conversion-rate-optimization/conversion-rate-optimization.md` |
@@ -109,17 +116,20 @@
 | Email Sequence | `pm-copy` | `pm-copy/email-sequence/email-sequence.md` |
 | Email Triage | `pm-operations` | `pm-operations/email-triage/email-triage.md` |
 | Employee Engagement Survey | `pm-hr` | `pm-hr/employee-engagement-survey/employee-engagement-survey.md` |
+| Empty State Writer | `pm-uxwriting` | `pm-uxwriting/empty-state-writer/empty-state-writer.md` |
 | Engagement Retro | `pm-consulting` | `pm-consulting/engagement-retro/engagement-retro.md` |
 | Engineering Hiring Rubric | `pm-engineering` | `pm-engineering/engineering-hiring-rubric/engineering-hiring-rubric.md` |
 | Engineering Weekly Report | `pm-engineering` | `pm-engineering/engineering-weekly-report/engineering-weekly-report.md` |
 | Entity-Relationship Diagram | `pm-visuals` | `pm-visuals/entity-relationship-diagram/entity-relationship-diagram.md` |
 | Error Decoder | `pm-engineering` | `pm-engineering/error-decoder/error-decoder.md` |
+| Error Message Writer | `pm-uxwriting` | `pm-uxwriting/error-message-writer/error-message-writer.md` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/escalation-tree.md` |
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/eval-rubric-designer.md` |
 | Excel Model | `pm-documents` | `pm-documents/excel-model/excel-model.md` |
 | Executive Presence | `pm-comms` | `pm-comms/executive-presence/executive-presence.md` |
 | Executive Summary | `pm-cross` | `pm-cross/executive-summary/executive-summary.md` |
 | Executive Update | `pm-strategy` | `pm-strategy/executive-update/executive-update.md` |
+| Expense Policy | `pm-accounting` | `pm-accounting/expense-policy/expense-policy.md` |
 | Experiment Designer | `pm-advanced` | `pm-advanced/experiment-designer/experiment-designer.md` |
 | Experiment Readout | `pm-dataeng` | `pm-dataeng/experiment-readout/experiment-readout.md` |
 | Feature Flag Guide | `pm-engineering` | `pm-engineering/feature-flag-guide/feature-flag-guide.md` |
@@ -136,6 +146,7 @@
 | Figma Variant Matrix | `pm-figma` | `pm-figma/figma-variant-matrix/figma-variant-matrix.md` |
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/financial-due-diligence.md` |
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/financial-model-narrative.md` |
+| Financial Statement Explainer | `pm-accounting` | `pm-accounting/financial-statement-explainer/financial-statement-explainer.md` |
 | Flowchart | `pm-visuals` | `pm-visuals/flowchart/flowchart.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/follow-up-sequence.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/founder-market-fit.md` |
@@ -164,9 +175,11 @@
 | Instagram Post Downloader | `pm-writers` | `pm-writers/instagram-post-downloader/instagram-post-downloader.md` |
 | Insurance Claim | `pm-lifeadmin` | `pm-lifeadmin/insurance-claim/insurance-claim.md` |
 | Interview Prep | `pm-jobsearch` | `pm-jobsearch/interview-prep/interview-prep.md` |
+| Interview Question Bank | `pm-recruiting` | `pm-recruiting/interview-question-bank/interview-question-bank.md` |
 | Investor Cold Email | `pm-founders` | `pm-founders/investor-cold-email/investor-cold-email.md` |
 | Investor Pitch Deck | `pm-finance` | `pm-finance/investor-pitch-deck/investor-pitch-deck.md` |
 | Investor Update | `pm-business` | `pm-business/investor-update/investor-update.md` |
+| Invoice Generator | `pm-accounting` | `pm-accounting/invoice-generator/invoice-generator.md` |
 | ISO 27001 ISMS | `pm-compliance` | `pm-compliance/iso-27001-isms/iso-27001-isms.md` |
 | JD Decoder | `pm-jobsearch` | `pm-jobsearch/jd-decoder/jd-decoder.md` |
 | Job Application | `pm-business` | `pm-business/job-application/job-application.md` |
@@ -189,12 +202,14 @@
 | Localization Brief | `pm-localization` | `pm-localization/localization-brief/localization-brief.md` |
 | Managing Up | `pm-comms` | `pm-comms/managing-up/managing-up.md` |
 | Marketing Funnel Plan | `pm-growth` | `pm-growth/marketing-funnel-plan/marketing-funnel-plan.md` |
+| Marketplace Listing Optimizer | `pm-ecommerce` | `pm-ecommerce/marketplace-listing-optimizer/marketplace-listing-optimizer.md` |
 | Media Pitch | `pm-gtm` | `pm-gtm/media-pitch/media-pitch.md` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/meeting-notes.md` |
 | Messaging Framework | `pm-growth` | `pm-growth/messaging-framework/messaging-framework.md` |
 | Metric Semantic Layer | `pm-dataeng` | `pm-dataeng/metric-semantic-layer/metric-semantic-layer.md` |
 | Metric Tree Builder | `pm-data` | `pm-data/metric-tree-builder/metric-tree-builder.md` |
 | Metrics Framework | `pm-data` | `pm-data/metrics-framework/metrics-framework.md` |
+| Microcopy Writer | `pm-uxwriting` | `pm-uxwriting/microcopy-writer/microcopy-writer.md` |
 | Microservices Decomposition | `pm-engineering` | `pm-engineering/microservices-decomposition/microservices-decomposition.md` |
 | Mind Map | `pm-visuals` | `pm-visuals/mind-map/mind-map.md` |
 | Model Card | `pm-ai` | `pm-ai/model-card/model-card.md` |
@@ -206,7 +221,9 @@
 | Newsletter Writer | `pm-creator` | `pm-creator/newsletter-writer/newsletter-writer.md` |
 | NotebookLM Connector | `pm-cross` | `pm-cross/notebooklm-connector/notebooklm-connector.md` |
 | Notes Humanizer | `pm-writers` | `pm-writers/notes-humanizer/notes-humanizer.md` |
+| Offer Letter | `pm-recruiting` | `pm-recruiting/offer-letter/offer-letter.md` |
 | OKR Builder | `pm-planning` | `pm-planning/okr-builder/okr-builder.md` |
+| Onboarding Copy | `pm-uxwriting` | `pm-uxwriting/onboarding-copy/onboarding-copy.md` |
 | Onboarding Plan | `pm-hr` | `pm-hr/onboarding-plan/onboarding-plan.md` |
 | On-Call Runbook | `pm-engineering` | `pm-engineering/oncall-runbook/oncall-runbook.md` |
 | One-on-One Prep | `pm-career` | `pm-career/one-on-one-prep/one-on-one-prep.md` |
@@ -233,13 +250,16 @@
 | Prior Authorization Letter | `pm-health` | `pm-health/prior-authorization-letter/prior-authorization-letter.md` |
 | Privacy Policy Drafter | `pm-legal` | `pm-legal/privacy-policy-drafter/privacy-policy-drafter.md` |
 | Process Documentation | `pm-operations` | `pm-operations/process-documentation/process-documentation.md` |
+| Product Description | `pm-ecommerce` | `pm-ecommerce/product-description/product-description.md` |
 | Product Health Analysis | `pm-analytics` | `pm-analytics/product-health-analysis/product-health-analysis.md` |
 | Product Launch Checklist | `pm-delivery` | `pm-delivery/product-launch-checklist/product-launch-checklist.md` |
+| Product Naming | `pm-uxwriting` | `pm-uxwriting/product-naming/product-naming.md` |
 | Product Positioning Doc | `pm-gtm` | `pm-gtm/product-positioning-doc/product-positioning-doc.md` |
 | Professional Brain | `pm-cross` | `pm-cross/professional-brain/professional-brain.md` |
 | Professional Translator | `pm-localization` | `pm-localization/professional-translator/professional-translator.md` |
 | Project Status Report | `pm-operations` | `pm-operations/project-status-report/project-status-report.md` |
 | Promotion Packet | `pm-career` | `pm-career/promotion-packet/promotion-packet.md` |
+| Promotion Plan | `pm-ecommerce` | `pm-ecommerce/promotion-plan/promotion-plan.md` |
 | Prompt Optimizer | `pm-ai` | `pm-ai/prompt-optimizer/prompt-optimizer.md` |
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/proposal-writer.md` |
 | QBR Deck | `pm-cs` | `pm-cs/qbr-deck/qbr-deck.md` |
@@ -249,6 +269,7 @@
 | RAG Architecture Review | `pm-ai` | `pm-ai/rag-architecture-review/rag-architecture-review.md` |
 | RAG Design Doc | `pm-ai` | `pm-ai/rag-design-doc/rag-design-doc.md` |
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/rate-card.md` |
+| Recruiter Outreach | `pm-recruiting` | `pm-recruiting/recruiter-outreach/recruiter-outreach.md` |
 | Red-Team Review | `pm-cross` | `pm-cross/red-team-review/red-team-review.md` |
 | Redundancy Consultation | `pm-hr` | `pm-hr/redundancy-consultation/redundancy-consultation.md` |
 | Reference Letter | `pm-lifeadmin` | `pm-lifeadmin/reference-letter/reference-letter.md` |
@@ -261,6 +282,8 @@
 | Retention Analysis | `pm-analytics` | `pm-analytics/retention-analysis/retention-analysis.md` |
 | Retention Loop Design | `pm-growth` | `pm-growth/retention-loop-design/retention-loop-design.md` |
 | Retrospective Analysis | `pm-delivery` | `pm-delivery/retro-analysis/retro-analysis.md` |
+| Return & Refund Policy | `pm-ecommerce` | `pm-ecommerce/return-refund-policy/return-refund-policy.md` |
+| Review Response | `pm-ecommerce` | `pm-ecommerce/review-response/review-response.md` |
 | RFC Writer | `pm-engineering` | `pm-engineering/rfc-writer/rfc-writer.md` |
 | RFP Writer | `pm-operations` | `pm-operations/rfp-writer/rfp-writer.md` |
 | RICE + Strategic Alignment | `pm-planning` | `pm-planning/rice-impact-matrix/rice-impact-matrix.md` |
@@ -294,6 +317,7 @@
 | Social Media Audit | `pm-social` | `pm-social/social-media-audit/social-media-audit.md` |
 | Social Media Strategy | `pm-gtm` | `pm-gtm/social-media-strategy/social-media-strategy.md` |
 | SOP Writer | `pm-operations` | `pm-operations/sop-writer/sop-writer.md` |
+| Sourcing Strategy | `pm-recruiting` | `pm-recruiting/sourcing-strategy/sourcing-strategy.md` |
 | Sprint Brief | `pm-delivery` | `pm-delivery/sprint-brief/sprint-brief.md` |
 | Sprint Planning | `pm-delivery` | `pm-delivery/sprint-planning/sprint-planning.md` |
 | Sprint Velocity Analysis | `pm-engineering` | `pm-engineering/sprint-velocity-analysis/sprint-velocity-analysis.md` |

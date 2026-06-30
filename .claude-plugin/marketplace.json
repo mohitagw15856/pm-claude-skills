@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "31.1.0",
-  "description": "PM stands for Professional, not just Product Management. 330 Claude Skills + 4 agent templates across 47 bundles covering 23 professions — engineering, AI/ML, customer success, legal, finance, HR, sales, design, Figma, marketing, social media, writers, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
+  "version": "32.0.0",
+  "description": "PM stands for Professional, not just Product Management. 354 Claude Skills + 4 agent templates across 51 bundles covering 23 professions — engineering, AI/ML, customer success, legal, finance, HR, sales, design, Figma, marketing, social media, writers, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
@@ -22,6 +22,38 @@
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-localization",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-accounting",
+      "description": "Accounting & bookkeeping skills for finance ops and small businesses: Invoice Generator, Expense Policy, Collections Email, Financial Statement Explainer, Bookkeeping Categorization, and Cash Flow Forecast. Practical money admin — drafting aids, not tax/accounting advice.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-accounting",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-recruiting",
+      "description": "Recruiting & talent-sourcing skills: Boolean Search Builder, Recruiter Outreach, Interview Question Bank, Candidate Scorecard, Offer Letter, and Sourcing Strategy. Source, assess, and close candidates — structured and fair.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-recruiting",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-uxwriting",
+      "description": "UX writing & content design skills: Microcopy Writer, Error Message Writer, Empty State Writer, Product Naming, Content Style Guide, and Onboarding Copy. The small words that make a product clear, usable, and on-voice.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-uxwriting",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-ecommerce",
+      "description": "E-commerce & retail skills that sell: Product Description, Marketplace Listing Optimizer, Return & Refund Policy, Promotion Plan, Review Response, and Category Page Brief. Listings that rank and convert, promos with the margin math, and reviews handled well.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-ecommerce",
       "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
     },
     {

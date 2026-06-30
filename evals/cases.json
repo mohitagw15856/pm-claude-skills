@@ -212,6 +212,102 @@
     {
       "skill": "donor-update",
       "input": "Write a year-end donor update/thank-you email to our recurring donors. Because of their support this year we provided 12,000 meals and opened a second community kitchen. We want them to feel appreciated and part of the mission, with a short story and only a very light, optional invitation to a volunteer day — no hard ask. Warm, personal tone. Mark any invented specifics for us to replace."
+    },
+    {
+      "skill": "product-description",
+      "input": "Write a product description for our insulated stainless-steel water bottle. Details: 750ml, double-wall vacuum insulation (keeps cold 24h / hot 12h), powder-coated matte finish, leak-proof lid, fits most cup holders, BPA-free, available in 5 colours. Sold on our own Shopify store. Buyers are active commuters and gym-goers. Brand voice: friendly and energetic. Don't invent any specs I haven't given."
+    },
+    {
+      "skill": "marketplace-listing-optimizer",
+      "input": "Optimize our Amazon listing. Product: a bamboo cutting board set (3 pieces, different sizes, juice groove, non-slip). Current title is just 'Bamboo Cutting Board Set'. Traffic is low and conversion is mediocre. Category is Kitchen. Buyers search things like 'wood cutting board', 'chopping board set', 'bamboo cutting board with handle'. Give me an optimized title, bullets, backend keywords, an images plan, and conversion fixes."
+    },
+    {
+      "skill": "return-refund-policy",
+      "input": "Write a returns, refunds and exchanges policy for my Shopify clothing store. I want a 30-day window, items must be unworn with tags, customers pay return shipping except for faulty/wrong items, refunds to original payment within 5-7 business days, and final-sale items (underwear and clearance) aren't returnable. Friendly tone. Flag anything I should check legally."
+    },
+    {
+      "skill": "promotion-plan",
+      "input": "Plan a Black Friday / Cyber Monday promotion for our skincare DTC brand. Goal: acquire new customers but protect margin. Hero product costs us $12 and sells for $40. We have email (~50k list), Meta/Google ads, and our Shopify store. Window is the BFCM weekend. Show me the offer options, the margin/break-even math (use placeholders for numbers I haven't given), the channel plan, timeline, and how to measure it."
+    },
+    {
+      "skill": "review-response",
+      "input": "Write replies to two reviews on our Trustpilot. (1) 5 stars: 'Fast shipping and the headphones sound amazing, exactly as described!' (2) 1 star: 'Arrived 10 days late and the box was crushed. Really disappointed.' Our brand voice is warm and professional; we can offer a replacement or refund on the second. Sign off as 'The Acme Audio Team'. Also give me reusable templates."
+    },
+    {
+      "skill": "category-page-brief",
+      "input": "Write a category page brief for the 'Women's Running Shoes' collection on our Shopify store. Shoppers range from beginners to marathoners. We carry ~60 styles across brands, with attributes like cushioning, support type (neutral/stability), surface (road/trail), and price. Target keywords around 'women's running shoes'. Cover intent/keywords, H1 + intro, merchandising/sort, filters and their crawlability, internal links, and technical SEO."
+    },
+    {
+      "skill": "microcopy-writer",
+      "input": "Write the microcopy for the final step of a checkout flow on a paid subscription app. There's a primary button that charges the card and starts the plan, plus a small reassurance line under it. The plan is $12/month, billed monthly, cancel anytime. Voice is friendly and trustworthy. Give me the button label, the reassurance line, and the success-toast text, with a couple of options and why."
+    },
+    {
+      "skill": "error-message-writer",
+      "input": "Rewrite this error for end users: 'Error 402: payment_intent authentication_required'. Context: a card payment failed because the bank needs the customer to authenticate (3-D Secure). It shows as a full-page state after they hit Pay. They can retry, complete verification, or use a different card. Voice is calm and helpful. Give me the user-facing message plus a note on what to log vs. show."
+    },
+    {
+      "skill": "empty-state-writer",
+      "input": "Write the empty states for a 'Projects' screen in a team task-management app. Cover: (1) first use — a brand-new account with no projects yet, where we want them to create their first project; (2) a search/filter that returns no matching projects; (3) all projects archived/completed. Voice is encouraging and concise. For each give headline, supporting line, and action(s)."
+    },
+    {
+      "skill": "product-naming",
+      "input": "Help me name a new feature in our analytics product: an AI assistant that answers questions about your data in plain English and builds charts. Audience is data-curious business users (not analysts). Our brand is clean and modern; existing features have clear, descriptive names. Give me candidates across naming strategies, an evaluation, a recommendation, and the checks to run before we commit."
+    },
+    {
+      "skill": "content-style-guide",
+      "input": "Create a content style guide for our B2B fintech app aimed at small-business owners. We want to sound clear, trustworthy, and human — never stuffy or jargon-heavy. US English. It applies to product UI, marketing, and support. Include voice principles with before/after examples, tone by context, mechanics, a do/don't word list, and accessibility rules. Mark anything you infer for us to confirm."
+    },
+    {
+      "skill": "onboarding-copy",
+      "input": "Write the in-product onboarding copy for a personal habit-tracking app. The first win is the user creating their first habit and checking it off once. The path: welcome → name a habit → set a reminder time → mark it done today. Format is a mix of a welcome modal and tooltips, and steps should be skippable. Encouraging, concise voice. Include the welcome, the step tooltips, a checklist, and the first-win success moment."
+    },
+    {
+      "skill": "boolean-search-builder",
+      "input": "Build me boolean and X-ray searches to source a Senior Backend Engineer in Berlin (open to remote in Germany). Must-haves: strong Go or Java, distributed systems, and experience scaling production services. Nice-to-have: Kubernetes. Exclude junior/intern and recruiters. I'll search LinkedIn and GitHub. Give me tight and broad versions, X-ray variants, and a plan to widen or narrow."
+    },
+    {
+      "skill": "recruiter-outreach",
+      "input": "Write a LinkedIn InMail to a senior product designer who currently works at a competitor, for our Staff Product Designer role. Genuine selling points: they'd own design for a brand-new 0-to-1 product area, small senior team, fully remote, strong comp. Personalization: I'll insert a real detail about their portfolio. Warm, concise, low-pressure. Also give me a 2-step follow-up sequence and subject-line options."
+    },
+    {
+      "skill": "interview-question-bank",
+      "input": "Create a structured interview question bank for a Senior Product Manager role. Core competencies we care about: product sense, execution/delivery, data fluency, stakeholder influence, and leadership. Two interview rounds with different interviewers. Include behavioral, role/scenario, and values questions, with what a strong vs. weak answer looks like, follow-up probes, and a simple scoring rubric."
+    },
+    {
+      "skill": "candidate-scorecard",
+      "input": "Turn my interview notes into a scorecard for a Senior PM candidate. Notes: Product sense — gave a sharp critique of our onboarding and a prioritization rationale (RICE), strong. Execution — described shipping a payments revamp but was vague on how they handled the cross-team conflict. Data — comfortable, cited specific metrics (activation 31%→44%). Stakeholder influence — not really tested this round. Scale is 1-4 (strong no to strong yes). Give per-competency ratings with evidence, risks, open questions, and a recommendation with confidence."
+    },
+    {
+      "skill": "offer-letter",
+      "input": "Draft a job offer for a Senior Software Engineer. Base $165k, 15% target bonus, equity (0.05%, 4-year vest with 1-year cliff), $10k sign-on. Full-time, remote (US), reports to the Eng Manager, start date in ~4 weeks. Contingent on a background check and work authorization. Offer expires in 7 days. Warm tone. Give me both the verbal-offer call script and the written letter, and flag what HR/legal needs to confirm."
+    },
+    {
+      "skill": "sourcing-strategy",
+      "input": "Build a sourcing strategy for a hard-to-fill Staff Machine Learning Engineer role. Must-haves: production ML at scale, strong Python, and experience with recommendation or ranking systems. Remote within the US, competitive comp, but we're an unknown Series B brand. We've posted the job and gotten weak inbound. Cover the candidate profile (and adjacent profiles), where they concentrate, a prioritized channel plan, funnel math with a worked example, and a weekly cadence."
+    },
+    {
+      "skill": "invoice-generator",
+      "input": "Create an invoice. From: Jordan Lee Design (freelance, jordan@jldesign.com). To: Acme Corp, accounts@acme.com, PO #4471, project 'Marketing site redesign'. Line items: Homepage design — 1 @ $1,200; Landing page templates — 3 @ $400; Logo refresh — 1 @ $600. Terms: Net 30, pay by bank transfer. No sales tax (I'll confirm tax separately). Use invoice number INV-2026-014, issued today. Show the totals."
+    },
+    {
+      "skill": "expense-policy",
+      "input": "Write an expense and reimbursement policy for a 50-person remote-first startup. Lean but fair culture. Common categories: travel (occasional), business meals, software subscriptions, home-office equipment, and co-working day passes. Managers approve up to $500; anything above needs finance sign-off. Expenses are submitted in our tool with receipts required over $25, reimbursed in the next payroll. Mark the amounts as ours to set and flag anything tax-related."
+    },
+    {
+      "skill": "collections-email",
+      "input": "Write a collections email sequence. Invoice INV-2026-014 for $3,000 to a valued ongoing client, Acme Corp, is now 14 days overdue (Net 30 terms). I want to be polite but firm, keep the relationship, and make paying easy (bank transfer or a payment link). We have an agreed 2% late fee per month but I want to confirm enforceability before mentioning it. Give me the staged sequence from a gentle nudge to a final notice."
+    },
+    {
+      "skill": "financial-statement-explainer",
+      "input": "Explain this P&L to me in plain English — I'm a founder, not an accountant. For last quarter: Revenue $480,000; Cost of goods sold $144,000; Gross profit $336,000; Operating expenses $300,000 (of which sales & marketing $180,000, R&D $80,000, G&A $40,000); Operating income $36,000; Net income $28,000. Tell me what each part means, the margins and numbers that matter, and the story — are we healthy?"
+    },
+    {
+      "skill": "bookkeeping-categorization",
+      "input": "Help me set up a chart of accounts and categorization rules for my freelance design business. I use Xero, cash basis. Typical transactions: client payments, software subscriptions (Figma, Adobe), a contractor I sometimes pay, laptop and equipment purchases, co-working membership, business travel, and transfers between my business and personal accounts. I want clean monthly books that are easy for my accountant. Flag anything tax-sensitive."
+    },
+    {
+      "skill": "cash-flow-forecast",
+      "input": "Build me a 13-week cash flow forecast structure for my agency. Starting cash is $60,000. Expected inflows: two retainer clients paying $12,000/month (around the 5th), plus a $25,000 project invoice I expect to collect in week 6. Outflows: payroll ~$28,000/month (15th and end of month), rent $4,000/month, software ~$1,500/month, and quarterly tax of $18,000 in week 9. Show the model, a worked example, where the low point is, and what to do if cash gets tight."
     }
   ]
 }

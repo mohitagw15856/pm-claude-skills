@@ -1,0 +1,10 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-uxwriting",
+  "version": "1.0.0",
+  "description": "UX writing & content design skills: Microcopy Writer, Error Message Writer, Empty State Writer, Product Naming, Content Style Guide, and Onboarding Copy. The small words that make a product clear, usable, and on-voice.",
+  "author": { "name": "Mohit Aggarwal", "email": "mohit15856@gmail.com" },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["ux-writing", "content-design", "microcopy", "error-messages", "empty-states", "naming", "style-guide", "onboarding"]
+}

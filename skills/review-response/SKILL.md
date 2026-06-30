@@ -1,0 +1,62 @@
+---
+name: review-response
+description: "Write the right reply to a customer review — positive, negative, or mixed. Use when asked to respond to a review, reply to a bad/1-star review, handle online reviews, or write review-response templates. Produces tailored, on-brand responses that thank advocates, de-escalate and resolve complaints, and read well to the *future* shopper who's reading them — plus reusable templates."
+---
+
+# Review Response Skill
+
+Reviews are read by the next buyer, not just the reviewer — so a reply is public customer service and marketing
+at once. A good response thanks genuinely, takes ownership without being defensive, moves the heat to a private
+channel, and shows future shoppers you're a business that cares. This skill writes that reply for the review in
+front of you, and gives you templates for next time.
+
+## Working from a brief
+
+Given a review (or just "reply to a 1-star about late delivery"), **write the full response anyway** — infer a
+reasonable, on-brand reply and a fair resolution, marking specifics *(confirm/insert)* (order details, the
+exact remedy). Never invent facts about what happened; never argue with the customer in public.
+
+## Required Inputs
+
+Ask for these only if they aren't already provided (else infer and label):
+
+- **The review** — the text, the rating, and where it's posted (Google, Amazon, Trustpilot, app store…).
+- **What happened** — your side/context if known, and whether it's resolved.
+- **Brand voice** — warm/formal/playful, and the name you sign off with.
+- **What you can offer** — any remedy you're willing to make (refund, replacement, discount, fix).
+
+## Output Format
+
+### Review Response
+
+- **Read** — a one-line read of the review: sentiment, the real issue, and whether it's fixable.
+- **The reply** — a ready-to-post response that:
+  - **Opens** by addressing them by name and thanking them for the feedback.
+  - **For positive:** echoes the specific thing they loved, adds a little brand warmth, and invites them back (no hard sell).
+  - **For negative/mixed:** acknowledges the specific problem, takes ownership (no excuses/blame), apologises sincerely, states what you'll do, and **moves to a private channel** for resolution.
+  - **Closes** human and signed.
+- **Short version** — a tighter variant for platforms with length limits.
+- **Templates** — reusable patterns for the common cases (5★ thanks, shipping issue, product fault, sizing/fit, wrong expectations) with `[brackets]` to fill.
+
+Keep negative replies calm and brief — the audience is the *next* shopper.
+
+## Quality Checks
+
+- [ ] Addresses the reviewer by name and references the *specific* point they raised
+- [ ] Negative replies take ownership without excuses or blaming the customer
+- [ ] Complaints are moved to a private channel for the actual resolution
+- [ ] Tone matches the brand and stays calm — never defensive or sarcastic
+- [ ] Positive replies add warmth without a pushy upsell
+- [ ] No private data is exposed; invented specifics are flagged to confirm
+
+## Anti-Patterns
+
+- [ ] Do not get defensive or argue facts in public — you're writing for the next shopper, not to win
+- [ ] Do not paste an identical canned reply on every review — personalise to the specific point
+- [ ] Do not expose order numbers, emails, or other private details in a public reply
+- [ ] Do not over-apologise or grovel on a minor issue, or under-respond on a serious one — match the severity
+- [ ] Do not bribe for removal or incentivise changing the review in ways the platform forbids
+
+## Based On
+
+Online reputation & customer-service practice — specific, ownership-led public responses, private-channel resolution, and audience-aware (next-shopper) tone.
