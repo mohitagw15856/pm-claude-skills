@@ -1142,7 +1142,7 @@ Stars unlock the next wave of skills and features. We've hit every milestone so 
 | 1,000 ⭐ | Startup Founder kit — *delivered, and then some: the Founders **and** Educators bundles + a browser extension for ChatGPT/Claude.ai/Gemini* | ✅ Shipped (v24.0.0) |
 | **2,000 ⭐** | 2 community-voted profession bundles + the browser & VS Code extensions published to their stores | 🔓 **Current goal** |
 | 3,500 ⭐ | Community **skill packs** (curated role/industry bundles) + internationalised skill descriptions | 🔒 Locked |
-| 5,000 ⭐ | Public **contributor leaderboard** + the push to 300 skills | 🔒 Locked |
+| 5,000 ⭐ | Public **contributor leaderboard** + the push to 400 skills | 🔒 Locked |
 
 **[⭐ Star this repo to unlock the next milestone →](https://github.com/mohitagw15856/pm-claude-skills)** — we're at **2,000⭐** next.
 
