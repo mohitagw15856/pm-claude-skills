@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-378 skills exported. Copy a `.mdc rule` into the tool to use it.
+391 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -35,8 +35,10 @@
 | Bookkeeping Categorization | `pm-accounting` | `pm-accounting/bookkeeping-categorization/bookkeeping-categorization.mdc` |
 | Boolean Search Builder | `pm-recruiting` | `pm-recruiting/boolean-search-builder/boolean-search-builder.mdc` |
 | Brag Doc | `pm-career` | `pm-career/brag-doc/brag-doc.mdc` |
+| Brief Builder | `pm-cross` | `pm-cross/brief-builder/brief-builder.mdc` |
 | Budget Builder | `pm-money` | `pm-money/budget-builder/budget-builder.mdc` |
 | Budget Variance Analysis | `pm-finance` | `pm-finance/budget-variance-analysis/budget-variance-analysis.mdc` |
+| Bug Diagnosis | `pm-craft` | `pm-craft/bug-diagnosis/bug-diagnosis.mdc` |
 | Bug Report | `pm-qa` | `pm-qa/bug-report/bug-report.mdc` |
 | Candidate Scorecard | `pm-recruiting` | `pm-recruiting/candidate-scorecard/candidate-scorecard.mdc` |
 | Cap Table Explainer | `pm-founders` | `pm-founders/cap-table-explainer/cap-table-explainer.mdc` |
@@ -59,8 +61,10 @@
 | Client Discovery | `pm-consulting` | `pm-consulting/client-discovery/client-discovery.mdc` |
 | Clinical Case Summary | `pm-research` | `pm-research/clinical-case-summary/clinical-case-summary.mdc` |
 | Clinical Trial Protocol | `pm-health` | `pm-health/clinical-trial-protocol/clinical-trial-protocol.mdc` |
+| Co-Marketing | `pm-growth` | `pm-growth/co-marketing/co-marketing.mdc` |
 | Code Explainer | `pm-engineering` | `pm-engineering/code-explainer/code-explainer.mdc` |
 | Code Review Checklist | `pm-engineering` | `pm-engineering/code-review-checklist/code-review-checklist.mdc` |
+| Code Review Guide | `pm-craft` | `pm-craft/code-review-guide/code-review-guide.mdc` |
 | Cohort Analysis | `pm-data` | `pm-data/cohort-analysis/cohort-analysis.mdc` |
 | Cold Email | `pm-copy` | `pm-copy/cold-email/cold-email.mdc` |
 | Collections Email | `pm-accounting` | `pm-accounting/collections-email/collections-email.mdc` |
@@ -215,6 +219,7 @@
 | Localization Brief | `pm-localization` | `pm-localization/localization-brief/localization-brief.mdc` |
 | Managing Up | `pm-comms` | `pm-comms/managing-up/managing-up.mdc` |
 | Marketing Funnel Plan | `pm-growth` | `pm-growth/marketing-funnel-plan/marketing-funnel-plan.mdc` |
+| Marketing Psychology | `pm-growth` | `pm-growth/marketing-psychology/marketing-psychology.mdc` |
 | Marketplace Listing Optimizer | `pm-ecommerce` | `pm-ecommerce/marketplace-listing-optimizer/marketplace-listing-optimizer.mdc` |
 | Media Pitch | `pm-gtm` | `pm-gtm/media-pitch/media-pitch.mdc` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/meeting-notes.mdc` |
@@ -249,6 +254,7 @@
 | Parent Communication | `pm-education` | `pm-education/parent-communication/parent-communication.mdc` |
 | Partnership Proposal | `pm-sales` | `pm-sales/partnership-proposal/partnership-proposal.mdc` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/patient-communication.mdc` |
+| Paywall Optimization | `pm-growth` | `pm-growth/paywall-optimization/paywall-optimization.mdc` |
 | Performance Budget | `pm-engineering` | `pm-engineering/performance-budget/performance-budget.mdc` |
 | Performance Review | `pm-people` | `pm-people/performance-review/performance-review.mdc` |
 | Personal Bio | `pm-personal` | `pm-personal/personal-bio/personal-bio.mdc` |
@@ -257,6 +263,7 @@
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/portfolio-page.mdc` |
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/pptx-slide-auditor.mdc` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/pr-crisis-response.mdc` |
+| PR Description | `pm-craft` | `pm-craft/pr-description/pr-description.mdc` |
 | PR Description Writer | `pm-engineering` | `pm-engineering/pr-description-writer/pr-description-writer.mdc` |
 | PRD Template | `pm-essentials` | `pm-essentials/prd-template/prd-template.mdc` |
 | Press Release | `pm-cross` | `pm-cross/press-release/press-release.mdc` |
@@ -272,6 +279,7 @@
 | Product Positioning Doc | `pm-gtm` | `pm-gtm/product-positioning-doc/product-positioning-doc.mdc` |
 | Professional Brain | `pm-cross` | `pm-cross/professional-brain/professional-brain.mdc` |
 | Professional Translator | `pm-localization` | `pm-localization/professional-translator/professional-translator.mdc` |
+| Programmatic SEO | `pm-growth` | `pm-growth/programmatic-seo/programmatic-seo.mdc` |
 | Project Status Report | `pm-operations` | `pm-operations/project-status-report/project-status-report.mdc` |
 | Promotion Packet | `pm-career` | `pm-career/promotion-packet/promotion-packet.mdc` |
 | Promotion Plan | `pm-ecommerce` | `pm-ecommerce/promotion-plan/promotion-plan.mdc` |
@@ -292,7 +300,9 @@
 | Recruiter Outreach | `pm-recruiting` | `pm-recruiting/recruiter-outreach/recruiter-outreach.mdc` |
 | Red-Team Review | `pm-cross` | `pm-cross/red-team-review/red-team-review.mdc` |
 | Redundancy Consultation | `pm-hr` | `pm-hr/redundancy-consultation/redundancy-consultation.mdc` |
+| Refactoring Plan | `pm-craft` | `pm-craft/refactoring-plan/refactoring-plan.mdc` |
 | Reference Letter | `pm-lifeadmin` | `pm-lifeadmin/reference-letter/reference-letter.mdc` |
+| Referral Program | `pm-growth` | `pm-growth/referral-program/referral-program.mdc` |
 | Referral Program Design | `pm-growth` | `pm-growth/referral-program-design/referral-program-design.mdc` |
 | Regex Builder & Explainer | `pm-engineering` | `pm-engineering/regex-builder/regex-builder.mdc` |
 | Regression Test Plan | `pm-qa` | `pm-qa/regression-test-plan/regression-test-plan.mdc` |
@@ -324,11 +334,13 @@
 | Sales Page | `pm-copy` | `pm-copy/sales-page/sales-page.mdc` |
 | Savings Goal Plan | `pm-money` | `pm-money/savings-goal-plan/savings-goal-plan.mdc` |
 | Saying No | `pm-comms` | `pm-comms/saying-no/saying-no.mdc` |
+| Schema Markup | `pm-growth` | `pm-growth/schema-markup/schema-markup.mdc` |
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/security-threat-model.mdc` |
 | Self-Review | `pm-career` | `pm-career/self-review/self-review.mdc` |
 | SEO Content Brief | `pm-gtm` | `pm-gtm/seo-content-brief/seo-content-brief.mdc` |
 | Sequence Diagram | `pm-visuals` | `pm-visuals/sequence-diagram/sequence-diagram.mdc` |
 | Service Catalog Entry | `pm-engineering` | `pm-engineering/service-catalog-entry/service-catalog-entry.mdc` |
+| Session Handoff | `pm-craft` | `pm-craft/session-handoff/session-handoff.mdc` |
 | Short-Form Script | `pm-creator` | `pm-creator/short-form-script/short-form-script.mdc` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/skill-security-auditor.mdc` |
 | Slide Deck | `pm-documents` | `pm-documents/slide-deck/slide-deck.mdc` |
@@ -359,6 +371,7 @@
 | Sycophancy Challenger | `pm-cross` | `pm-cross/sycophancy-challenger/sycophancy-challenger.mdc` |
 | System Design Interview | `pm-engineering` | `pm-engineering/system-design-interview/system-design-interview.mdc` |
 | Tax Planning Checklist | `pm-finance` | `pm-finance/tax-planning-checklist/tax-planning-checklist.mdc` |
+| TDD Workflow | `pm-craft` | `pm-craft/tdd-workflow/tdd-workflow.mdc` |
 | Teaching Lesson Plan | `pm-cross` | `pm-cross/teaching-lesson-plan/teaching-lesson-plan.mdc` |
 | Team Health Check | `pm-people` | `pm-people/team-health-check/team-health-check.mdc` |
 | Team Offsite Planner | `pm-people` | `pm-people/team-offsite-planner/team-offsite-planner.mdc` |

@@ -1,0 +1,58 @@
+---
+name: tdd-workflow
+description: "Drive a feature with a disciplined test-driven development loop — red, green, refactor. Use when implementing a feature or fixing a bug and you want tests to lead, or when asked to 'do this with TDD' / write the test first. Produces a step-by-step red-green-refactor plan: the failing test to write first, the minimal code to pass it, and the refactor — one small cycle at a time."
+---
+
+# TDD Workflow Skill
+
+The failure mode of AI-assisted coding is writing a pile of code, then maybe some tests that rubber-stamp it.
+TDD inverts that: the test defines the behavior *first*, the code does the minimum to pass, then you refactor
+safely. This skill runs that loop with discipline — **one small red-green-refactor cycle at a time**, never
+jumping ahead to untested code.
+
+## Required Inputs
+
+Ask for these only if they aren't already provided:
+
+- **The behavior to build** — the feature/bugfix, stated as observable behavior (input → expected output).
+- **The stack** — language, test framework/runner, where tests live.
+- **The seam** — the function/module/endpoint under test, and any collaborators to fake/mock.
+- **Edge cases** — the conditions that matter (errors, empty, boundaries).
+
+## Output Format
+
+### TDD plan: [behavior]
+
+**Behavior list** — the observable cases to drive out, ordered simplest → richest (happy path first, then edges/errors). Each becomes one cycle.
+
+Then, for **each cycle** (do them one at a time, smallest first):
+
+**🔴 Red** — the single failing test to write now (the actual test code), and *why it fails* (the behavior doesn't exist yet). One assertion of one behavior.
+
+**🟢 Green** — the *minimal* code to make exactly that test pass — even if it's obvious/ugly. No extra features, no speculative generality.
+
+**🔵 Refactor** — what to clean up now that it's green (naming, duplication, structure) with the test as the safety net. Skip if nothing's needed.
+
+**Run** — the command to run the test(s) and what "passing" looks like.
+
+End with: the next cycle's red test, and a note to commit at each green.
+
+## Quality Checks
+
+- [ ] Behaviors are listed and ordered simplest-first; each cycle tests ONE behavior
+- [ ] The red step writes a genuinely failing test *before* any implementation
+- [ ] The green step is the minimal code to pass — no untested extra functionality
+- [ ] Refactoring happens only on green, with tests as the safety net
+- [ ] Edge/error cases each get their own cycle, not bolted onto the happy path
+
+## Anti-Patterns
+
+- [ ] Do not write the implementation first and the test after — that's not TDD, it's rationalization
+- [ ] Do not write five tests then all the code — one red→green→refactor cycle at a time
+- [ ] Do not over-build in green — only enough to pass the current test
+- [ ] Do not test implementation details — test observable behavior so refactors don't break tests
+- [ ] Do not skip the refactor step when there's obvious duplication or a bad name
+
+## Based On
+
+Test-Driven Development (Kent Beck): red → green → refactor, triangulation, one behavior per cycle.

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-craft",
+  "version": "1.0.0",
+  "description": "Engineering craft & process discipline for working with coding agents: TDD Workflow, Bug Diagnosis, Refactoring Plan, Session Handoff, PR Description, and Code Review Guide. How to work, not just what to ship — the disciplines that keep AI-assisted code sane.",
+  "author": { "name": "Mohit Aggarwal", "email": "mohit15856@gmail.com" },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["engineering", "tdd", "debugging", "refactoring", "code-review", "pull-request", "process", "coding-agent"]
+}

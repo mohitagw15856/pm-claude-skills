@@ -1,0 +1,61 @@
+---
+trigger: model_decision
+description: "Plan a co-marketing partnership — two brands reaching each other's audiences for mutual gain. Use when asked to plan a partnership, joint campaign, co-branded content/webinar, integration launch, or partner outreach. Produces the partner fit rationale, a fair value exchange, the joint campaign plan, the partner pitch, and how success is split and measured."
+---
+
+# Co-Marketing Skill
+
+Co-marketing pairs two non-competing brands with overlapping audiences to do something together — a webinar,
+co-branded content, a bundle, an integration launch — so each reaches the other's customers at near-zero CAC.
+It works only when the audience overlap is real and the value exchange is fair. This skill plans that: the fit,
+the deal, the campaign, and the pitch.
+
+## Required Inputs
+
+Ask for these only if they aren't already provided:
+
+- **Your side** — your product, audience, reach (list size, traffic, social), and what you can offer a partner.
+- **Target partner(s)** — who, or the *profile* of an ideal partner (shared audience, non-competing, complementary).
+- **The goal** — leads, signups, awareness, content, integration adoption.
+- **Assets to offer** — audience access, content, engineering, budget, distribution.
+
+## Output Format
+
+### Co-marketing plan: [you] × [partner]
+
+**1. Partner fit** — why this pairing: the **shared audience** (who overlaps), why you're *complementary not competitive*, and what each side uniquely brings. If a profile, name 3–5 candidate partners.
+
+**2. Value exchange** — what each side gives and gets, made *fair and balanced* (mismatched reach is the #1 killer — address it):
+
+| | You give | You get |
+|---|---|---|
+| Partner | | |
+
+**3. The campaign** — the joint activity (co-webinar / co-branded guide / bundle / integration launch / newsletter swap), the assets needed, owners, and a rough timeline.
+
+**4. Promotion & lead split** — how each side promotes (email, social, site), and how leads/credit are shared and followed up — agreed *up front* to avoid the post-campaign fight.
+
+**5. The partner pitch** — a short outreach message a partner would say yes to: lead with *their* benefit (your audience, your asset), make the lift small, propose one concrete first activity.
+
+**6. Success metrics** — what you each measure (leads, signups, attributed pipeline, reach), and a quick post-mortem plan.
+
+## Quality Checks
+
+- [ ] Partner fit is grounded in real audience overlap and a complementary (non-competing) relationship
+- [ ] The value exchange is explicitly balanced — mismatched reach is addressed, not ignored
+- [ ] The campaign is concrete (format, assets, owners, timeline)
+- [ ] Lead-sharing and promotion responsibilities are agreed up front
+- [ ] The partner pitch leads with the partner's benefit and a small first ask
+- [ ] Shared success metrics are defined
+
+## Anti-Patterns
+
+- [ ] Do not propose a partner with no real audience overlap — "big brand" ≠ "right brand"
+- [ ] Do not partner with a competitor or design a lopsided deal — fairness sustains partnerships
+- [ ] Do not leave lead-sharing vague — agree it before the campaign, not after
+- [ ] Do not pitch by leading with what *you* want — lead with the partner's gain
+- [ ] Do not skip metrics — "we did a thing together" isn't a result
+
+## Based On
+
+Partnership / co-marketing practice (audience-overlap fit, balanced value exchange, joint campaign + lead-sharing, partner-first pitch).

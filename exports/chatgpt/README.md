@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-378 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+391 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -35,8 +35,10 @@
 | Bookkeeping Categorization | `pm-accounting` | `pm-accounting/bookkeeping-categorization/SYSTEM_PROMPT.md` |
 | Boolean Search Builder | `pm-recruiting` | `pm-recruiting/boolean-search-builder/SYSTEM_PROMPT.md` |
 | Brag Doc | `pm-career` | `pm-career/brag-doc/SYSTEM_PROMPT.md` |
+| Brief Builder | `pm-cross` | `pm-cross/brief-builder/SYSTEM_PROMPT.md` |
 | Budget Builder | `pm-money` | `pm-money/budget-builder/SYSTEM_PROMPT.md` |
 | Budget Variance Analysis | `pm-finance` | `pm-finance/budget-variance-analysis/SYSTEM_PROMPT.md` |
+| Bug Diagnosis | `pm-craft` | `pm-craft/bug-diagnosis/SYSTEM_PROMPT.md` |
 | Bug Report | `pm-qa` | `pm-qa/bug-report/SYSTEM_PROMPT.md` |
 | Candidate Scorecard | `pm-recruiting` | `pm-recruiting/candidate-scorecard/SYSTEM_PROMPT.md` |
 | Cap Table Explainer | `pm-founders` | `pm-founders/cap-table-explainer/SYSTEM_PROMPT.md` |
@@ -59,8 +61,10 @@
 | Client Discovery | `pm-consulting` | `pm-consulting/client-discovery/SYSTEM_PROMPT.md` |
 | Clinical Case Summary | `pm-research` | `pm-research/clinical-case-summary/SYSTEM_PROMPT.md` |
 | Clinical Trial Protocol | `pm-health` | `pm-health/clinical-trial-protocol/SYSTEM_PROMPT.md` |
+| Co-Marketing | `pm-growth` | `pm-growth/co-marketing/SYSTEM_PROMPT.md` |
 | Code Explainer | `pm-engineering` | `pm-engineering/code-explainer/SYSTEM_PROMPT.md` |
 | Code Review Checklist | `pm-engineering` | `pm-engineering/code-review-checklist/SYSTEM_PROMPT.md` |
+| Code Review Guide | `pm-craft` | `pm-craft/code-review-guide/SYSTEM_PROMPT.md` |
 | Cohort Analysis | `pm-data` | `pm-data/cohort-analysis/SYSTEM_PROMPT.md` |
 | Cold Email | `pm-copy` | `pm-copy/cold-email/SYSTEM_PROMPT.md` |
 | Collections Email | `pm-accounting` | `pm-accounting/collections-email/SYSTEM_PROMPT.md` |
@@ -215,6 +219,7 @@
 | Localization Brief | `pm-localization` | `pm-localization/localization-brief/SYSTEM_PROMPT.md` |
 | Managing Up | `pm-comms` | `pm-comms/managing-up/SYSTEM_PROMPT.md` |
 | Marketing Funnel Plan | `pm-growth` | `pm-growth/marketing-funnel-plan/SYSTEM_PROMPT.md` |
+| Marketing Psychology | `pm-growth` | `pm-growth/marketing-psychology/SYSTEM_PROMPT.md` |
 | Marketplace Listing Optimizer | `pm-ecommerce` | `pm-ecommerce/marketplace-listing-optimizer/SYSTEM_PROMPT.md` |
 | Media Pitch | `pm-gtm` | `pm-gtm/media-pitch/SYSTEM_PROMPT.md` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/SYSTEM_PROMPT.md` |
@@ -249,6 +254,7 @@
 | Parent Communication | `pm-education` | `pm-education/parent-communication/SYSTEM_PROMPT.md` |
 | Partnership Proposal | `pm-sales` | `pm-sales/partnership-proposal/SYSTEM_PROMPT.md` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/SYSTEM_PROMPT.md` |
+| Paywall Optimization | `pm-growth` | `pm-growth/paywall-optimization/SYSTEM_PROMPT.md` |
 | Performance Budget | `pm-engineering` | `pm-engineering/performance-budget/SYSTEM_PROMPT.md` |
 | Performance Review | `pm-people` | `pm-people/performance-review/SYSTEM_PROMPT.md` |
 | Personal Bio | `pm-personal` | `pm-personal/personal-bio/SYSTEM_PROMPT.md` |
@@ -257,6 +263,7 @@
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/SYSTEM_PROMPT.md` |
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/SYSTEM_PROMPT.md` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/SYSTEM_PROMPT.md` |
+| PR Description | `pm-craft` | `pm-craft/pr-description/SYSTEM_PROMPT.md` |
 | PR Description Writer | `pm-engineering` | `pm-engineering/pr-description-writer/SYSTEM_PROMPT.md` |
 | PRD Template | `pm-essentials` | `pm-essentials/prd-template/SYSTEM_PROMPT.md` |
 | Press Release | `pm-cross` | `pm-cross/press-release/SYSTEM_PROMPT.md` |
@@ -272,6 +279,7 @@
 | Product Positioning Doc | `pm-gtm` | `pm-gtm/product-positioning-doc/SYSTEM_PROMPT.md` |
 | Professional Brain | `pm-cross` | `pm-cross/professional-brain/SYSTEM_PROMPT.md` |
 | Professional Translator | `pm-localization` | `pm-localization/professional-translator/SYSTEM_PROMPT.md` |
+| Programmatic SEO | `pm-growth` | `pm-growth/programmatic-seo/SYSTEM_PROMPT.md` |
 | Project Status Report | `pm-operations` | `pm-operations/project-status-report/SYSTEM_PROMPT.md` |
 | Promotion Packet | `pm-career` | `pm-career/promotion-packet/SYSTEM_PROMPT.md` |
 | Promotion Plan | `pm-ecommerce` | `pm-ecommerce/promotion-plan/SYSTEM_PROMPT.md` |
@@ -292,7 +300,9 @@
 | Recruiter Outreach | `pm-recruiting` | `pm-recruiting/recruiter-outreach/SYSTEM_PROMPT.md` |
 | Red-Team Review | `pm-cross` | `pm-cross/red-team-review/SYSTEM_PROMPT.md` |
 | Redundancy Consultation | `pm-hr` | `pm-hr/redundancy-consultation/SYSTEM_PROMPT.md` |
+| Refactoring Plan | `pm-craft` | `pm-craft/refactoring-plan/SYSTEM_PROMPT.md` |
 | Reference Letter | `pm-lifeadmin` | `pm-lifeadmin/reference-letter/SYSTEM_PROMPT.md` |
+| Referral Program | `pm-growth` | `pm-growth/referral-program/SYSTEM_PROMPT.md` |
 | Referral Program Design | `pm-growth` | `pm-growth/referral-program-design/SYSTEM_PROMPT.md` |
 | Regex Builder & Explainer | `pm-engineering` | `pm-engineering/regex-builder/SYSTEM_PROMPT.md` |
 | Regression Test Plan | `pm-qa` | `pm-qa/regression-test-plan/SYSTEM_PROMPT.md` |
@@ -324,11 +334,13 @@
 | Sales Page | `pm-copy` | `pm-copy/sales-page/SYSTEM_PROMPT.md` |
 | Savings Goal Plan | `pm-money` | `pm-money/savings-goal-plan/SYSTEM_PROMPT.md` |
 | Saying No | `pm-comms` | `pm-comms/saying-no/SYSTEM_PROMPT.md` |
+| Schema Markup | `pm-growth` | `pm-growth/schema-markup/SYSTEM_PROMPT.md` |
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/SYSTEM_PROMPT.md` |
 | Self-Review | `pm-career` | `pm-career/self-review/SYSTEM_PROMPT.md` |
 | SEO Content Brief | `pm-gtm` | `pm-gtm/seo-content-brief/SYSTEM_PROMPT.md` |
 | Sequence Diagram | `pm-visuals` | `pm-visuals/sequence-diagram/SYSTEM_PROMPT.md` |
 | Service Catalog Entry | `pm-engineering` | `pm-engineering/service-catalog-entry/SYSTEM_PROMPT.md` |
+| Session Handoff | `pm-craft` | `pm-craft/session-handoff/SYSTEM_PROMPT.md` |
 | Short-Form Script | `pm-creator` | `pm-creator/short-form-script/SYSTEM_PROMPT.md` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/SYSTEM_PROMPT.md` |
 | Slide Deck | `pm-documents` | `pm-documents/slide-deck/SYSTEM_PROMPT.md` |
@@ -359,6 +371,7 @@
 | Sycophancy Challenger | `pm-cross` | `pm-cross/sycophancy-challenger/SYSTEM_PROMPT.md` |
 | System Design Interview | `pm-engineering` | `pm-engineering/system-design-interview/SYSTEM_PROMPT.md` |
 | Tax Planning Checklist | `pm-finance` | `pm-finance/tax-planning-checklist/SYSTEM_PROMPT.md` |
+| TDD Workflow | `pm-craft` | `pm-craft/tdd-workflow/SYSTEM_PROMPT.md` |
 | Teaching Lesson Plan | `pm-cross` | `pm-cross/teaching-lesson-plan/SYSTEM_PROMPT.md` |
 | Team Health Check | `pm-people` | `pm-people/team-health-check/SYSTEM_PROMPT.md` |
 | Team Offsite Planner | `pm-people` | `pm-people/team-offsite-planner/SYSTEM_PROMPT.md` |

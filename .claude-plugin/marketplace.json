@@ -1,13 +1,21 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "33.0.0",
-  "description": "PM stands for Professional, not just Product Management. 378 Claude Skills + 4 agent templates across 55 bundles covering 25 professions — engineering, AI/ML, customer success, legal, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
+  "version": "34.0.0",
+  "description": "PM stands for Professional, not just Product Management. 391 Claude Skills + 4 agent templates across 56 bundles covering 25 professions — engineering, AI/ML, customer success, legal, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "plugins": [
+    {
+      "name": "pm-craft",
+      "description": "Engineering craft & process discipline for working with coding agents: TDD Workflow, Bug Diagnosis, Refactoring Plan, Session Handoff, PR Description, and Code Review Guide. How to work, not just what to ship.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-craft",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
     {
       "name": "pm-money",
       "description": "Personal-finance skills for individuals: Budget Builder, Debt Payoff Plan, Investing Policy Statement, Net Worth Statement, Savings Goal Plan, and Expense Audit. Educational planning aids — not regulated financial advice.",
