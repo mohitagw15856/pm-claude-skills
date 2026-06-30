@@ -284,6 +284,30 @@
     {
       "skill": "sourcing-strategy",
       "input": "Build a sourcing strategy for a hard-to-fill Staff Machine Learning Engineer role. Must-haves: production ML at scale, strong Python, and experience with recommendation or ranking systems. Remote within the US, competitive comp, but we're an unknown Series B brand. We've posted the job and gotten weak inbound. Cover the candidate profile (and adjacent profiles), where they concentrate, a prioritized channel plan, funnel math with a worked example, and a weekly cadence."
+    },
+    {
+      "skill": "invoice-generator",
+      "input": "Create an invoice. From: Jordan Lee Design (freelance, jordan@jldesign.com). To: Acme Corp, accounts@acme.com, PO #4471, project 'Marketing site redesign'. Line items: Homepage design — 1 @ $1,200; Landing page templates — 3 @ $400; Logo refresh — 1 @ $600. Terms: Net 30, pay by bank transfer. No sales tax (I'll confirm tax separately). Use invoice number INV-2026-014, issued today. Show the totals."
+    },
+    {
+      "skill": "expense-policy",
+      "input": "Write an expense and reimbursement policy for a 50-person remote-first startup. Lean but fair culture. Common categories: travel (occasional), business meals, software subscriptions, home-office equipment, and co-working day passes. Managers approve up to $500; anything above needs finance sign-off. Expenses are submitted in our tool with receipts required over $25, reimbursed in the next payroll. Mark the amounts as ours to set and flag anything tax-related."
+    },
+    {
+      "skill": "collections-email",
+      "input": "Write a collections email sequence. Invoice INV-2026-014 for $3,000 to a valued ongoing client, Acme Corp, is now 14 days overdue (Net 30 terms). I want to be polite but firm, keep the relationship, and make paying easy (bank transfer or a payment link). We have an agreed 2% late fee per month but I want to confirm enforceability before mentioning it. Give me the staged sequence from a gentle nudge to a final notice."
+    },
+    {
+      "skill": "financial-statement-explainer",
+      "input": "Explain this P&L to me in plain English — I'm a founder, not an accountant. For last quarter: Revenue $480,000; Cost of goods sold $144,000; Gross profit $336,000; Operating expenses $300,000 (of which sales & marketing $180,000, R&D $80,000, G&A $40,000); Operating income $36,000; Net income $28,000. Tell me what each part means, the margins and numbers that matter, and the story — are we healthy?"
+    },
+    {
+      "skill": "bookkeeping-categorization",
+      "input": "Help me set up a chart of accounts and categorization rules for my freelance design business. I use Xero, cash basis. Typical transactions: client payments, software subscriptions (Figma, Adobe), a contractor I sometimes pay, laptop and equipment purchases, co-working membership, business travel, and transfers between my business and personal accounts. I want clean monthly books that are easy for my accountant. Flag anything tax-sensitive."
+    },
+    {
+      "skill": "cash-flow-forecast",
+      "input": "Build me a 13-week cash flow forecast structure for my agency. Starting cash is $60,000. Expected inflows: two retainer clients paying $12,000/month (around the 5th), plus a $25,000 project invoice I expect to collect in week 6. Outflows: payroll ~$28,000/month (15th and end of month), rent $4,000/month, software ~$1,500/month, and quarterly tax of $18,000 in week 9. Show the model, a worked example, where the low point is, and what to do if cash gets tight."
     }
   ]
 }
