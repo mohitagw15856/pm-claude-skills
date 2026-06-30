@@ -1,0 +1,10 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-recruiting",
+  "version": "1.0.0",
+  "description": "Recruiting & talent-sourcing skills: Boolean Search Builder, Recruiter Outreach, Interview Question Bank, Candidate Scorecard, Offer Letter, and Sourcing Strategy. Source, assess, and close candidates — structured and fair.",
+  "author": { "name": "Mohit Aggarwal", "email": "mohit15856@gmail.com" },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["recruiting", "sourcing", "talent-acquisition", "boolean-search", "interviewing", "candidate-scorecard", "offer-letter", "hiring"]
+}

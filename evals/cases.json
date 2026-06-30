@@ -260,6 +260,30 @@
     {
       "skill": "onboarding-copy",
       "input": "Write the in-product onboarding copy for a personal habit-tracking app. The first win is the user creating their first habit and checking it off once. The path: welcome → name a habit → set a reminder time → mark it done today. Format is a mix of a welcome modal and tooltips, and steps should be skippable. Encouraging, concise voice. Include the welcome, the step tooltips, a checklist, and the first-win success moment."
+    },
+    {
+      "skill": "boolean-search-builder",
+      "input": "Build me boolean and X-ray searches to source a Senior Backend Engineer in Berlin (open to remote in Germany). Must-haves: strong Go or Java, distributed systems, and experience scaling production services. Nice-to-have: Kubernetes. Exclude junior/intern and recruiters. I'll search LinkedIn and GitHub. Give me tight and broad versions, X-ray variants, and a plan to widen or narrow."
+    },
+    {
+      "skill": "recruiter-outreach",
+      "input": "Write a LinkedIn InMail to a senior product designer who currently works at a competitor, for our Staff Product Designer role. Genuine selling points: they'd own design for a brand-new 0-to-1 product area, small senior team, fully remote, strong comp. Personalization: I'll insert a real detail about their portfolio. Warm, concise, low-pressure. Also give me a 2-step follow-up sequence and subject-line options."
+    },
+    {
+      "skill": "interview-question-bank",
+      "input": "Create a structured interview question bank for a Senior Product Manager role. Core competencies we care about: product sense, execution/delivery, data fluency, stakeholder influence, and leadership. Two interview rounds with different interviewers. Include behavioral, role/scenario, and values questions, with what a strong vs. weak answer looks like, follow-up probes, and a simple scoring rubric."
+    },
+    {
+      "skill": "candidate-scorecard",
+      "input": "Turn my interview notes into a scorecard for a Senior PM candidate. Notes: Product sense — gave a sharp critique of our onboarding and a prioritization rationale (RICE), strong. Execution — described shipping a payments revamp but was vague on how they handled the cross-team conflict. Data — comfortable, cited specific metrics (activation 31%→44%). Stakeholder influence — not really tested this round. Scale is 1-4 (strong no to strong yes). Give per-competency ratings with evidence, risks, open questions, and a recommendation with confidence."
+    },
+    {
+      "skill": "offer-letter",
+      "input": "Draft a job offer for a Senior Software Engineer. Base $165k, 15% target bonus, equity (0.05%, 4-year vest with 1-year cliff), $10k sign-on. Full-time, remote (US), reports to the Eng Manager, start date in ~4 weeks. Contingent on a background check and work authorization. Offer expires in 7 days. Warm tone. Give me both the verbal-offer call script and the written letter, and flag what HR/legal needs to confirm."
+    },
+    {
+      "skill": "sourcing-strategy",
+      "input": "Build a sourcing strategy for a hard-to-fill Staff Machine Learning Engineer role. Must-haves: production ML at scale, strong Python, and experience with recommendation or ranking systems. Remote within the US, competitive comp, but we're an unknown Series B brand. We've posted the job and gotten weak inbound. Cover the candidate profile (and adjacent profiles), where they concentrate, a prioritized channel plan, funnel math with a worked example, and a weekly cadence."
     }
   ]
 }

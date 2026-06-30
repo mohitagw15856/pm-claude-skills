@@ -1,0 +1,74 @@
+---
+aliases: ["Interview Question Bank"]
+tags: [pm-skills, skill]
+skill: interview-question-bank
+description: "Build a structured, role-specific interview question bank with what good answers look like. Use when asked to create interview questions, an interview guide, a structured interview kit, or competency-based questions for a role. Produces questions mapped to the competencies that matter — behavioral (STAR), role/technical, and values — each with what a strong vs. weak answer shows and follow-up probes, for fair, consistent interviews."
+---
+
+# Interview Question Bank Skill
+
+Unstructured interviews mostly measure who's charming. Structured, competency-based interviews predict
+performance — the same questions, mapped to what the role needs, scored against what a good answer looks like.
+This skill builds that question bank so every interviewer assesses the same things, fairly and consistently.
+
+## Working from a brief
+
+Given "interview questions for a senior PM", **build the bank anyway** — infer the core competencies for the
+role and write questions for each, labelling assumptions. Provide "what good looks like" for every question.
+Never hand back a flat list of questions with no evaluation guidance.
+
+## Required Inputs
+
+Ask for these only if they aren't already provided (else infer and label):
+
+- **The role** — title, level, and the 4–6 competencies that actually predict success in it.
+- **Must-have skills** — technical/functional areas to probe, and any deal-breakers.
+- **Values/culture** — the behaviours the team cares about (collaboration, ownership, etc.).
+- **Format** — how many rounds/interviewers, and time per interview (so the bank is sized right).
+
+## Output Format
+
+### Interview Question Bank: [role]
+
+**1. Competency map** — the 4–6 competencies to assess and which round/interviewer owns each (avoid everyone asking the same thing).
+
+**2. Questions by competency** — for each competency, 2–4 questions:
+
+| Question | Type | What a strong answer shows | Red flags | Follow-up probes |
+|---|---|---|---|---|
+| "Tell me about a time you…" | Behavioral (STAR) | specifics, their role, the outcome, learning | vague, all "we", no result | "What would you do differently?" |
+
+Include **behavioral** (past behaviour, STAR-friendly), **role/technical** (a realistic problem or scenario), and **values** questions.
+
+**3. Scoring** — a simple rubric (e.g. 1–4 per competency) and the bar to advance, so scores are comparable across interviewers.
+
+**4. Fairness notes** — ask every candidate the same core questions; keep questions job-related; avoid questions about protected characteristics (age, family, health, religion, etc.); focus on evidence, not "fit feeling".
+
+## Quality Checks
+
+- [ ] Questions map to explicit competencies the role actually needs — not trivia
+- [ ] Each question has "what good looks like" and red flags, so answers are scored, not vibed
+- [ ] A mix of behavioral, role/technical, and values questions is included
+- [ ] Competencies are distributed across rounds so interviewers don't overlap
+- [ ] A simple, comparable scoring rubric is provided
+- [ ] Questions are job-related and avoid protected-characteristic / illegal territory
+
+## Anti-Patterns
+
+- [ ] Do not produce a flat question list with no evaluation guidance — that's how interviews stay inconsistent
+- [ ] Do not use brain-teasers or trivia that don't predict job performance
+- [ ] Do not let every interviewer assess the same competency — map and distribute
+- [ ] Do not include questions about age, family status, health, religion, or other protected areas
+- [ ] Do not score on "culture fit" gut feel — score on observable, job-related evidence
+
+## Based On
+
+Structured-interview practice — competency-based, behaviorally-anchored questions with scoring rubrics and fairness/consistency safeguards.
+
+---
+<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
+     variable for the highlighted text — replace it with your plugin's equivalent
+     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
+Apply the skill above to the following input:
+
+{{selection}}
