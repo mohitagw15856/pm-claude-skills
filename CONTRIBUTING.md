@@ -14,14 +14,13 @@ Good skills have three things in common:
 
 ---
 
-## 🔁 Contributions are eval-gated
+## 🔁 Structure-checked on PR, eval-scored after merge
 
-This library is a [benchmark](https://mohitagw15856.github.io/pm-claude-skills/benchmark.html) as much as a collection. When you open a PR that adds or changes a skill, the [**Skill PR Check**](.github/workflows/skill-pr-check.yml) automatically:
+This library is a [benchmark](https://mohitagw15856.github.io/pm-claude-skills/benchmark.html) as much as a collection. When you open a PR that adds or changes a skill, the [**Skill PR Check**](.github/workflows/skill-pr-check.yml) automatically validates the SKILL.md **structure** (`skillcheck`) — this must pass — and posts a comment listing the changed skills and whether each has an eval case.
 
-1. Validates the SKILL.md **structure** (`skillcheck`) — this must pass.
-2. If you also add a case to [`evals/cases.json`](evals/cases.json), **scores the changed skill** on the rubric (structure · completeness · usefulness · grounding) and posts the result on your PR.
+Skills are **not scored on the PR** (so opening one never spends tokens). **Eval scoring is decided later, after merge**, via the manual [**Evaluate selected bundles**](.github/workflows/eval-bundles.yml) Action — maintainers choose when and what to score, and the result lands on the public [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html).
 
-Aim for **≥ 4.0/5**. Adding a case is the fastest way to prove your skill is strong — and it's cheap (the check scores only the *changed* skills). Prefer a guided start? Use the [submit-a-skill form](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=submit-skill.yml).
+So: **include a case in [`evals/cases.json`](evals/cases.json)** with your skill — it's what lets the skill be scored later (aim for **≥ 4.0/5** on the rubric: structure · completeness · usefulness · grounding). Prefer a guided start? Use the [submit-a-skill form](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=submit-skill.yml).
 
 ## How to Submit a Skill
 
