@@ -9,6 +9,15 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+### Added
+- **2 new vertical bundles, 12 skills (354 → 366 skills, 51 → 53 bundles)** — each ships a curated eval case:
+  - **🧪 QA & Testing** (new `pm-qa`): `test-case-writer`, `bug-report`, `exploratory-test-charter`, `regression-test-plan`, `qa-release-signoff`, `api-test-plan`.
+  - **🏠 Real Estate** (new `pm-realestate`): `property-listing`, `comparative-market-analysis`, `property-offer-letter`, `property-investment-analysis`, `open-house-plan`, `tenant-screening-guide` — listing/offer/tenant skills bake in Fair-Housing safeguards; CMA/investment skills flag "not an appraisal/financial advice" and never invent comps/figures.
+- **`npm run new-bundle` scaffolder** ([`scripts/new-bundle.mjs`](scripts/new-bundle.mjs)) — scaffold or wire a whole bundle in one command: creates the `plugin.json`, copies each skill into the plugin (wiring existing `skills/<name>/` or scaffolding a SkillCheck-passing stub), and inserts a `marketplace.json` entry (textually, preserving formatting; idempotent).
+
+### Changed
+- **PRs no longer eval-score skills.** The Skill PR Check now only validates **structure** (`skillcheck`) — opening a PR never spends tokens. Eval scoring is run deliberately after merge via the manual [**Evaluate selected bundles**](.github/workflows/eval-bundles.yml) Action. (The score-drop regression gate on PRs was removed.)
+
 ## [32.0.0] — 4 new bundles: E-commerce, UX Writing, Recruiting & Accounting — 2026-06-30
 
 ### Added
