@@ -58,6 +58,7 @@
   "scripts": {
     "postinstall": "node bin/postinstall.mjs",
     "new-skill": "node scripts/new-skill.mjs",
+    "new-bundle": "node scripts/new-bundle.mjs",
     "skillcheck": "node scripts/skillcheck.mjs",
     "build:exports": "node scripts/build-exports.mjs",
     "build:web": "node web/build-skills.mjs",

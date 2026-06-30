@@ -1,0 +1,71 @@
+---
+name: comparative-market-analysis
+description: "Build a comparative market analysis (CMA) to price a property. Use when asked to do a CMA, a comparative market analysis, price a home, or estimate a property's value from comparables. Produces a structured CMA — the subject property, selected comparables with adjustments, an estimated value range, market context, and a pricing recommendation with rationale — for a real-estate professional to review. Not a formal appraisal."
+---
+
+# Comparative Market Analysis Skill
+
+A CMA prices a home the way the market actually values it: against recent, similar, nearby sales — adjusted for
+the differences. This skill structures that analysis so the number is **defensible**: the comparables chosen and
+why, the adjustments made, the resulting range, and a pricing recommendation tied to the seller's goal.
+
+> **Note:** this is a pricing-analysis aid for a real-estate professional, **not a formal appraisal or
+> financial/legal advice**. It works from the comparables and figures you provide; valuation depends on local
+> market data and professional judgement. Never invent comp sales or prices — use the data given or mark it to source.
+
+## Working from a brief
+
+Given a subject property and a few comps, **build the CMA anyway** — structure the analysis, apply reasoned
+adjustments, and give a range, marking any figure to source *(confirm with MLS/records)*. Where comps are
+missing, explain what to pull rather than inventing sales. Never fabricate comparable prices.
+
+## Required Inputs
+
+Ask for these only if they aren't already provided (else mark to source):
+
+- **Subject property** — address/area, type, beds/baths, size, lot, condition, and notable features.
+- **Comparables** — recent nearby sales (and ideally active/pending) with their key attributes and sale prices.
+- **Market context** — local trend (rising/flat/falling), inventory, and days-on-market if known.
+- **Goal & timeline** — sell fast vs. maximise price, and any deadline.
+
+## Output Format
+
+### CMA: [subject property]
+
+**1. Subject property** — the key attributes summarised.
+
+**2. Comparables** — a table of the comps used, with adjustments toward the subject:
+
+| Comp | Sold price | Date | Beds/Baths | Size | Key differences | Adjustment | Adjusted price |
+|---|---|---|---|---|---|---|---|
+
+  Explain the adjustment logic (e.g. +/- for size, condition, extra bath, garage, view) — directionally and why.
+
+**3. Market context** — the trend, inventory, and absorption, and what it means for pricing now.
+
+**4. Estimated value range** — a supported range from the adjusted comps (not a single false-precision number), with the most-likely figure.
+
+**5. Pricing recommendation** — a list price tied to the goal (e.g. price at market for speed, slightly under for multiple offers, at the top of range to test) — with the trade-off of each.
+
+**6. Caveats** — data to confirm, and a note that a formal appraisal/agent review is needed.
+
+## Quality Checks
+
+- [ ] Comps are genuinely comparable (recent, nearby, similar) — or the limitation is flagged
+- [ ] Adjustments are explained directionally with rationale, not hand-waved
+- [ ] The output is a supported **range**, not a single false-precision number
+- [ ] The pricing recommendation ties to the seller's goal and states the trade-off
+- [ ] Market trend/inventory context informs the recommendation
+- [ ] No comp sales or prices are invented; figures to source are flagged
+
+## Anti-Patterns
+
+- [ ] Do not invent comparable sales or prices — use provided data or say what to pull
+- [ ] Do not give a single exact value with false precision — give a supported range
+- [ ] Do not skip adjustments — raw comp prices ignore the differences that matter
+- [ ] Do not ignore the market trend — a stale comp in a moving market misleads
+- [ ] Do not present this as a formal appraisal — flag for professional review
+
+## Based On
+
+Real-estate valuation practice — comparable-sales analysis with feature adjustments, market-context weighting, and goal-aligned pricing (CMA, not a formal appraisal).

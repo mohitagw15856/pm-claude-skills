@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-realestate",
+  "version": "1.0.0",
+  "description": "Real-estate skills for agents, buyers, and investors: Property Listing, Comparative Market Analysis, Property Offer Letter, Property Investment Analysis, Open House Plan, and Tenant Screening Guide. Market, price, and evaluate property — Fair-Housing-aware drafting aids, not legal advice.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "real-estate",
+    "property",
+    "listing",
+    "cma",
+    "investment",
+    "rental",
+    "open-house",
+    "tenant-screening"
+  ]
+}

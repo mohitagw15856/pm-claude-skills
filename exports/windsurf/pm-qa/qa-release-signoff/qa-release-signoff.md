@@ -1,0 +1,63 @@
+---
+trigger: model_decision
+description: "Produce a QA release sign-off / go-no-go readiness report. Use when asked for a release sign-off, a go/no-go QA report, release readiness, or a test summary before shipping. Produces a sign-off — what was tested and the results, open defects by severity, coverage and residual risk, the go/no-go recommendation with conditions, and a rollback note — so the release decision is evidence-based, not a vibe."
+---
+
+# QA Release Sign-off Skill
+
+A release sign-off turns "QA says it's fine" into an evidence-based decision: here's what we tested, here's what
+passed and what's still open, here's the risk, and here's the recommendation. This skill produces that report so
+the go/no-go is accountable — and so anyone reading it later knows exactly what shipped and what didn't.
+
+## Working from a brief
+
+Given test results and a list of open bugs, **produce the sign-off anyway** — organise the evidence, weigh the
+open defects, and make a clear recommendation with conditions, marking anything unverified *(confirm)*. Never
+invent test results or pass rates; if coverage is thin, say so as a risk.
+
+## Required Inputs
+
+Ask for these only if they aren't already provided (else mark unknown / as a risk):
+
+- **The release** — what's shipping (version/scope) and the target date.
+- **Testing done** — what was tested (areas, types), results/pass rate, and what wasn't covered.
+- **Open defects** — known bugs with severity, and any with workarounds.
+- **Risk & ops** — known risks, rollback/feature-flag availability, and any acceptance criteria/exit gates.
+
+## Output Format
+
+### QA Sign-off: [release] — [date]
+
+- **Recommendation** — **Go / Go with conditions / No-go**, in one line, up front, with the headline reason.
+- **Scope** — what's in this release.
+- **Testing summary** — what was tested (areas + test types), results (pass/fail, pass rate), and **what was not tested**.
+- **Open defects** — a table by severity, with impact and any workaround:
+
+| ID | Severity | Area | Impact | Workaround | Blocker? |
+|---|---|---|---|---|---|
+
+- **Coverage & residual risk** — what's well-covered vs. thin, and the honest risk of shipping now.
+- **Conditions to ship** (if "go with conditions") — what must be true/fixed/monitored before or right after release.
+- **Rollback / mitigation** — how to undo or contain it (rollback, feature flag, hotfix path) if something goes wrong.
+- **Sign-off** — who's recommending, and what they're attesting to.
+
+## Quality Checks
+
+- [ ] The go/no-go recommendation is explicit and up front, with the reason
+- [ ] Both what was tested *and what wasn't* are stated — no false sense of coverage
+- [ ] Open defects are listed by severity with impact and blocker status
+- [ ] Residual risk is stated honestly, not buried
+- [ ] "Go with conditions" lists concrete, checkable conditions
+- [ ] A rollback/mitigation path is included; no results are invented
+
+## Anti-Patterns
+
+- [ ] Do not give a thumbs-up with no evidence — sign-off is a record, not a vibe
+- [ ] Do not hide untested areas or thin coverage — that's the risk the reader needs
+- [ ] Do not conflate severity and priority, or omit blocker status on open bugs
+- [ ] Do not recommend "go" while ignoring a known critical defect without naming the risk/decision
+- [ ] Do not ship without a rollback/mitigation note for when it goes wrong
+
+## Based On
+
+Release-management & QA practice — evidence-based go/no-go sign-offs with coverage transparency, defect triage, residual-risk disclosure, and rollback planning.

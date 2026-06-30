@@ -1,0 +1,64 @@
+---
+trigger: model_decision
+description: "Turn a requirement or user story into clear, executable test cases. Use when asked to write test cases, test scenarios, a test suite for a feature, or to derive tests from acceptance criteria. Produces structured test cases — preconditions, steps, test data, expected results — across happy path, edge cases, and negative cases, plus a coverage note, so a tester (or automation) can run them without guessing."
+---
+
+# Test Case Writer Skill
+
+Good test cases are unambiguous and complete: anyone can run them and get the same result, and together they
+cover the ways the feature can succeed *and* fail. This skill derives test cases from a requirement or user
+story — happy path first, then the edge and negative cases that find real bugs — each written so it's directly
+executable.
+
+## Working from a brief
+
+Given a user story or a one-line feature description, **write the test cases anyway** — infer the acceptance
+criteria, boundaries, and likely failure modes, labelling assumptions. Always include edge and negative cases,
+not just the happy path. Never hand back questions instead of cases.
+
+## Required Inputs
+
+Ask for these only if they aren't already provided (else infer and label):
+
+- **The requirement** — the feature/user story and its acceptance criteria.
+- **Inputs & rules** — fields, valid/invalid values, limits, and business rules that define correct behaviour.
+- **Scope & environment** — UI/API/both, platforms, and any preconditions (logged-in, data state).
+- **Priority** — what matters most (critical paths), so cases can be ordered.
+
+## Output Format
+
+### Test Cases: [feature]
+
+A short intro line, then cases in a table (or per-case blocks for complex flows):
+
+| ID | Title | Type | Preconditions | Steps | Test data | Expected result | Priority |
+|---|---|---|---|---|---|---|---|
+| TC-01 | Valid login | Happy path | user exists | 1. … 2. … | valid creds | logged in, lands on … | High |
+| TC-02 | Wrong password | Negative | user exists | … | bad password | error shown, not logged in | High |
+| TC-03 | Empty fields | Negative/validation | — | … | blank | inline validation | Med |
+| TC-04 | Max-length input | Edge/boundary | — | … | boundary value | accepted/handled | Med |
+
+Cover, deliberately: **happy path**, **boundary/edge** (empty, max, min, just over/under limits), **negative** (invalid input, wrong state, unauthorised), and any **business-rule** cases.
+
+End with a **coverage note**: which acceptance criteria/requirements each case maps to, and any gaps or risks to flag for review.
+
+## Quality Checks
+
+- [ ] Each case has clear preconditions, numbered steps, the test data, and a single expected result
+- [ ] Steps are unambiguous — two testers would execute them identically
+- [ ] Coverage includes edge/boundary and negative cases, not just the happy path
+- [ ] Cases trace back to the acceptance criteria / requirement (coverage note)
+- [ ] Cases are prioritised so the critical paths are obvious
+- [ ] Expected results are specific and verifiable (not "works correctly")
+
+## Anti-Patterns
+
+- [ ] Do not write only happy-path cases — the bugs live in the edges and negatives
+- [ ] Do not write vague steps ("test the login") — give the exact actions and data
+- [ ] Do not use unverifiable expected results ("it should work") — state the observable outcome
+- [ ] Do not combine many checks into one bloated case — keep cases atomic and traceable
+- [ ] Do not skip preconditions/test data — they're why a case is reproducible
+
+## Based On
+
+Test-design practice — requirement-derived cases with boundary-value and negative testing, atomic executable steps, and traceability to acceptance criteria.

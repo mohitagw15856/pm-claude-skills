@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-qa",
+  "version": "1.0.0",
+  "description": "QA & testing skills: Test Case Writer, Bug Report, Exploratory Test Charter, Regression Test Plan, QA Release Sign-off, and API Test Plan. Find bugs early and ship with evidence, not vibes.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "qa",
+    "testing",
+    "test-cases",
+    "bug-report",
+    "regression",
+    "exploratory-testing",
+    "api-testing",
+    "quality"
+  ]
+}
