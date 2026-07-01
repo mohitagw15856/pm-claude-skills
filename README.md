@@ -46,19 +46,23 @@
 ### ⭐ If this saves you time, [star the repo](https://github.com/mohitagw15856/pm-claude-skills) — it's the #1 way to help others find it.
 
 <p align="center">
-  <strong>🧱 Built with the community</strong> — every contributor gets a face on the wall.
+  <strong>🧱 Built with the community</strong> — thank you to everyone who's contributed skills, fixes, and ideas.
 </p>
 <p align="center">
-  <a href="https://github.com/mohitagw15856/pm-claude-skills/graphs/contributors">
-    <img src="https://contrib.rocks/image?repo=mohitagw15856/pm-claude-skills" alt="Contributors to PM Skills" />
-  </a>
+  <a href="https://github.com/mohitagw15856"><img src="https://github.com/mohitagw15856.png?size=100" width="64" height="64" alt="mohitagw15856" title="mohitagw15856" /></a>
+  <a href="https://github.com/roian6"><img src="https://github.com/roian6.png?size=100" width="64" height="64" alt="roian6" title="roian6 — board-minutes" /></a>
+  <a href="https://github.com/MatrixNeoKozak"><img src="https://github.com/MatrixNeoKozak.png?size=100" width="64" height="64" alt="MatrixNeoKozak" title="MatrixNeoKozak — install-path safety & frontmatter parsing" /></a>
+  <a href="https://github.com/zeotrix"><img src="https://github.com/zeotrix.png?size=100" width="64" height="64" alt="zeotrix" title="zeotrix — feature-prioritisation helper" /></a>
+  <a href="https://github.com/prajwal-28"><img src="https://github.com/prajwal-28.png?size=100" width="64" height="64" alt="prajwal-28" title="prajwal-28 — YouTube skill" /></a>
+  <a href="https://github.com/kriptoburak"><img src="https://github.com/kriptoburak.png?size=100" width="64" height="64" alt="kriptoburak" title="kriptoburak — social skills" /></a>
+  <a href="https://github.com/rohan-tessl"><img src="https://github.com/rohan-tessl.png?size=100" width="64" height="64" alt="rohan-tessl" title="rohan-tessl — skill-score improvements" /></a>
 </p>
 <p align="center">
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contribute-a%20skill%20in%2010%20min-D97757" alt="Contribute a skill" /></a>
   &nbsp;<a href="COMMUNITY-SKILLS.md"><img src="https://img.shields.io/badge/or%20list%20your%20own-Featured%20in%20PM%20Skills-0E9F6E" alt="List your own skill" /></a>
 </p>
 
-> **Want your avatar up there?** Ship a skill with the [10-minute scaffolder](CONTRIBUTING.md#-fast-path-scaffold-it-in-one-command), or keep your skill in your own repo and [list it in Community Skills](COMMUNITY-SKILLS.md) to earn a **"Featured in PM Skills Community"** badge for your README.
+> **Want your avatar up there?** Open a PR with a skill using the [10-minute scaffolder](CONTRIBUTING.md#-fast-path-scaffold-it-in-one-command) — every merged contribution gets added to the wall. Or keep your skill in your own repo and [list it in Community Skills](COMMUNITY-SKILLS.md) to earn a **"Featured in PM Skills Community"** badge for your README.
 
 ## ⚡ Use it in 30 seconds — pick one
 
