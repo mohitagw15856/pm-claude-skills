@@ -360,6 +360,38 @@
     {
       "skill": "board-minutes",
       "input": "Draft formal board minutes for Northwind Robotics Inc. The regular board meeting was held on 12 March 2025, 10:00-11:30, by video conference. Present: Priya Shah (Chair), Daniel Okoro (CEO), Lena Fischer (CFO), Marcus Webb (independent director). Apologies: Ana Ruiz. In attendance: Tom Reilly (company secretary, minutes). Quorum was confirmed. Agenda and notes: (1) Previous minutes from 5 Feb approved without amendment. (2) Q1 financials — CFO presented; revenue $4.2M, 11% ahead of plan; cash runway 16 months. Board noted the results. (3) Series B fundraise — proposed raising $25M; board discussed dilution and lead investor terms; resolved to authorize management to proceed with term-sheet negotiations up to a $120M pre-money valuation and report back before signing. Marcus Webb declared a conflict as an advisor to one prospective investor and recused himself from this item. (4) Annual budget — approved as presented. Actions: CFO to circulate the revised runway model by 20 March; CEO to bring the lead-investor term sheet to the next meeting. Next meeting 9 April 2025 by video conference. Flag anything that needs governance or legal review, and mark anything unknown as to confirm."
+    },
+    {
+      "skill": "win-loss-analysis",
+      "input": "Run a win/loss analysis on last quarter's deals for our B2B analytics product. Data: 40 closed-won worth $1.9M and 55 closed-lost worth $3.1M. Common closed-lost reasons in CRM: 'price too high' (18), 'missing SSO/SAML' (12), 'went with Looker' (9), 'no decision/timing' (10), 'poor fit' (6). Wins skew mid-market; enterprise win rate looks weak. Interview snippets: one lost buyer said 'your dashboards are great but procurement needs SOC 2 and SSO', a won buyer said 'setup took a day vs weeks with the incumbent'. Primary competitors: Looker and Tableau. This feeds our QBR and roadmap review — give themes, win rate by cut, controllable vs structural, and prioritized actions with owners."
+    },
+    {
+      "skill": "sales-enablement-kit",
+      "input": "Build a sales enablement kit for the launch of our new AI-assisted reporting feature in a mid-market analytics platform. Buyer: a Head of RevOps; user: analysts. Core value: cuts weekly reporting from hours to minutes by generating draft reports from a prompt. Proof: beta customers saved ~6 hours/week; one logo is [to confirm]. Motion: PLG-assist with a sales overlay. Top competitor: Looker. Common objection: 'can I trust AI-generated numbers?'. Pricing: it's an add-on to Pro. Give reps the pitch, discovery questions, talk track, a short demo flow, objection handling, and a competitive counter."
+    },
+    {
+      "skill": "pricing-page-copy",
+      "input": "Write pricing page copy for a project-management SaaS with three plans plus enterprise. Value metric is per-seat. Free: up to 3 users, unlimited tasks, 1 project. Pro: $12/user/month, unlimited projects, timelines, integrations. Business: $22/user/month, everything in Pro plus dashboards, admin controls, priority support. Enterprise: custom, adds SSO, SAML, audit logs, SLA. 14-day free trial on paid plans, no credit card, cancel anytime. Buyers get confused about which plan they need and whether they'll be charged for overages. Voice is friendly and plain. Write the header, tier cards, add-ons if useful, risk reducers, and a pricing FAQ."
+    },
+    {
+      "skill": "analyst-relations-brief",
+      "input": "Prep me for a Forrester briefing in two weeks. We're a mid-stage customer data platform; the analyst covers CDPs and is running a Wave next year. Objective: get on their radar for inclusion and reposition us as 'activation-first' rather than 'just storage'. Differentiators: real-time activation, a no-code audience builder, and transparent usage-based pricing; proof includes a retail customer that lifted campaign ROAS 22% [to confirm the logo is shareable]. Roadmap themes we can share: warehouse-native deployment; identity resolution is on the roadmap but a current gap. Competitors: Segment and mParticle. Give me the one message, market framing, differentiation with proof, a demo storyline mapped to likely evaluation criteria, tough questions with honest answers, and follow-ups."
+    },
+    {
+      "skill": "customer-advisory-board",
+      "input": "Plan our first customer advisory board for an enterprise cybersecurity product. Objective: strategic roadmap input and deepening relationships with top accounts ahead of a platform expansion. Format: half-day in person, twice a year, with a VP of Product as exec sponsor. We want 10-12 members balanced across financial services, healthcare, and tech, mixing security buyers (CISOs) and practitioners (SOC leads); no direct-competitor customers in the same room. Topics: platform consolidation, AI in the SOC, and pricing model feedback (pricing is sensitive). Give me the charter, membership criteria, a discussion-led agenda, discussion guides, roles, logistics, and a follow-up/value-capture plan."
+    },
+    {
+      "skill": "voice-of-customer-program",
+      "input": "Set up a Voice of Customer program for a B2B SaaS company. Objective: reduce churn and guide the roadmap. Existing feedback sources: Zendesk support tickets, quarterly NPS surveys (baseline NPS 32), sales/CS notes in Salesforce, G2 reviews, and monthly user interviews. Tools available: Salesforce, Zendesk, a survey tool, and product analytics; no dedicated feedback tool yet. Consumers: product and CX leadership. We serve SMB and enterprise and want to track them separately. Design objectives, a source map, a taxonomy, cadences, closed-loop routing with customer follow-up, ownership, and success metrics."
+    },
+    {
+      "skill": "launch-tiering-framework",
+      "input": "Help me decide the launch tier and right-size go-to-market for a new feature: native Slack notifications in our project-management tool. It's frequently requested (top-5 on our feedback board), broadens reach across all segments, and a competitor just shipped something similar, but it's an incremental capability rather than a new product. It's GA, docs are ready, but sales enablement isn't done yet. Team bandwidth is tight this quarter. Score impact and novelty, recommend T1/T2/T3, list the activities and channels to do and skip, assign owners, give a right-sized checklist and success metrics, and flag any readiness gaps."
+    },
+    {
+      "skill": "sales-demo-script",
+      "input": "Write a 20-minute first-demo script for our AI reporting analytics product to a Head of RevOps. Their pain (from discovery): the team spends a full day every week hand-building the same board and revenue reports in spreadsheets, and numbers are often stale by the meeting. Value story: connect your data once, then generate a trustworthy draft report from a prompt in minutes, with drill-down. Show: the prompt-to-report generation, the drill-down/verification, and a scheduled auto-refresh. Use realistic sample sales data. Competitor in the deal: Looker. Give me the open that restates their world, discovery hooks to tailor live, a scene-by-scene flow with talk track and marked aha moments, handling for 'can I trust the numbers?', and a close with a concrete next step."
     }
   ]
 }

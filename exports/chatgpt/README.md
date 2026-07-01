@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-392 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+400 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -22,6 +22,7 @@
 | AI Feature PRD | `pm-ai` | `pm-ai/ai-feature-prd/SYSTEM_PROMPT.md` |
 | AI Product Canvas | `pm-advanced` | `pm-advanced/ai-product-canvas/SYSTEM_PROMPT.md` |
 | Ambiguity Resolver | `pm-strategy` | `pm-strategy/ambiguity-resolver/SYSTEM_PROMPT.md` |
+| Analyst Relations Brief | `pm-pmm` | `pm-pmm/analyst-relations-brief/SYSTEM_PROMPT.md` |
 | Announcement Card | `pm-visuals` | `pm-visuals/announcement-card/SYSTEM_PROMPT.md` |
 | API Docs Writer | `pm-engineering` | `pm-engineering/api-docs-writer/SYSTEM_PROMPT.md` |
 | API Test Plan | `pm-qa` | `pm-qa/api-test-plan/SYSTEM_PROMPT.md` |
@@ -93,6 +94,7 @@
 | Customer Escalation Brief | `pm-cs` | `pm-cs/cs-escalation-brief/SYSTEM_PROMPT.md` |
 | Customer Health Scorecard | `pm-cs` | `pm-cs/cs-health-scorecard/SYSTEM_PROMPT.md` |
 | CSAT / NPS Analysis | `pm-support` | `pm-support/csat-nps-analysis/SYSTEM_PROMPT.md` |
+| Customer Advisory Board | `pm-pmm` | `pm-pmm/customer-advisory-board/SYSTEM_PROMPT.md` |
 | Customer Journey Map | `pm-discovery` | `pm-discovery/customer-journey-map/SYSTEM_PROMPT.md` |
 | Customer Outage Notice | `pm-crisis` | `pm-crisis/customer-outage-notice/SYSTEM_PROMPT.md` |
 | Customer Success Plan | `pm-cs` | `pm-cs/customer-success-plan/SYSTEM_PROMPT.md` |
@@ -207,6 +209,7 @@
 | Last 30 Days Research | `pm-cross` | `pm-cross/last-30-days-research/SYSTEM_PROMPT.md` |
 | Launch Post | `pm-devrel` | `pm-devrel/launch-post/SYSTEM_PROMPT.md` |
 | Launch Readiness | `pm-delivery` | `pm-delivery/launch-readiness/SYSTEM_PROMPT.md` |
+| Launch Tiering Framework | `pm-pmm` | `pm-pmm/launch-tiering-framework/SYSTEM_PROMPT.md` |
 | Layoff Communication | `pm-crisis` | `pm-crisis/layoff-communication/SYSTEM_PROMPT.md` |
 | Legal Brief | `pm-legal` | `pm-legal/legal-brief/SYSTEM_PROMPT.md` |
 | Lesson Plan | `pm-education` | `pm-education/lesson-plan/SYSTEM_PROMPT.md` |
@@ -269,6 +272,7 @@
 | PRD Template | `pm-essentials` | `pm-essentials/prd-template/SYSTEM_PROMPT.md` |
 | Press Release | `pm-cross` | `pm-cross/press-release/SYSTEM_PROMPT.md` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/SYSTEM_PROMPT.md` |
+| Pricing Page Copy | `pm-pmm` | `pm-pmm/pricing-page-copy/SYSTEM_PROMPT.md` |
 | Pricing Strategy | `pm-planning` | `pm-planning/pricing-strategy/SYSTEM_PROMPT.md` |
 | Prior Authorization Letter | `pm-health` | `pm-health/prior-authorization-letter/SYSTEM_PROMPT.md` |
 | Privacy Policy Drafter | `pm-legal` | `pm-legal/privacy-policy-drafter/SYSTEM_PROMPT.md` |
@@ -331,6 +335,8 @@
 | SaaS Metrics | `pm-calculators` | `pm-calculators/saas-metrics/SYSTEM_PROMPT.md` |
 | Salary Negotiation | `pm-career` | `pm-career/salary-negotiation/SYSTEM_PROMPT.md` |
 | Sales Battlecard | `pm-sales` | `pm-sales/sales-battlecard/SYSTEM_PROMPT.md` |
+| Sales Demo Script | `pm-pmm` | `pm-pmm/sales-demo-script/SYSTEM_PROMPT.md` |
+| Sales Enablement Kit | `pm-pmm` | `pm-pmm/sales-enablement-kit/SYSTEM_PROMPT.md` |
 | Sales Forecasting Model | `pm-sales` | `pm-sales/sales-forecasting-model/SYSTEM_PROMPT.md` |
 | Sales Page | `pm-copy` | `pm-copy/sales-page/SYSTEM_PROMPT.md` |
 | Savings Goal Plan | `pm-money` | `pm-money/savings-goal-plan/SYSTEM_PROMPT.md` |
@@ -395,6 +401,8 @@
 | Vendor Evaluation | `pm-operations` | `pm-operations/vendor-evaluation/SYSTEM_PROMPT.md` |
 | Vendor Security Review | `pm-compliance` | `pm-compliance/vendor-security-review/SYSTEM_PROMPT.md` |
 | Viral Content Framework | `pm-social` | `pm-social/viral-content-framework/SYSTEM_PROMPT.md` |
+| Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/SYSTEM_PROMPT.md` |
+| Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/SYSTEM_PROMPT.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/SYSTEM_PROMPT.md` |
 | Workshop Facilitation Guide | `pm-operations` | `pm-operations/workshop-facilitation-guide/SYSTEM_PROMPT.md` |
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/SYSTEM_PROMPT.md` |

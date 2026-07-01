@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-pmm",
+  "version": "1.0.0",
+  "description": "Product Marketing skills: Win/Loss Analysis, Sales Enablement, Pricing-Page Copy, Analyst Relations, Customer Advisory Boards, Voice of Customer, Launch Tiering, and Demo Scripts. Turn product value into messaging, enablement, and launches that land.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "product-marketing",
+    "pmm",
+    "sales-enablement",
+    "win-loss",
+    "pricing",
+    "analyst-relations",
+    "voice-of-customer",
+    "launch-tiering"
+  ]
+}

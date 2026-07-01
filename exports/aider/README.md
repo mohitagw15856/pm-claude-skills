@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-392 skills exported. Copy a `.mdc rule` into the tool to use it.
+400 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -22,6 +22,7 @@
 | AI Feature PRD | `pm-ai` | `pm-ai/ai-feature-prd/ai-feature-prd.md` |
 | AI Product Canvas | `pm-advanced` | `pm-advanced/ai-product-canvas/ai-product-canvas.md` |
 | Ambiguity Resolver | `pm-strategy` | `pm-strategy/ambiguity-resolver/ambiguity-resolver.md` |
+| Analyst Relations Brief | `pm-pmm` | `pm-pmm/analyst-relations-brief/analyst-relations-brief.md` |
 | Announcement Card | `pm-visuals` | `pm-visuals/announcement-card/announcement-card.md` |
 | API Docs Writer | `pm-engineering` | `pm-engineering/api-docs-writer/api-docs-writer.md` |
 | API Test Plan | `pm-qa` | `pm-qa/api-test-plan/api-test-plan.md` |
@@ -93,6 +94,7 @@
 | Customer Escalation Brief | `pm-cs` | `pm-cs/cs-escalation-brief/cs-escalation-brief.md` |
 | Customer Health Scorecard | `pm-cs` | `pm-cs/cs-health-scorecard/cs-health-scorecard.md` |
 | CSAT / NPS Analysis | `pm-support` | `pm-support/csat-nps-analysis/csat-nps-analysis.md` |
+| Customer Advisory Board | `pm-pmm` | `pm-pmm/customer-advisory-board/customer-advisory-board.md` |
 | Customer Journey Map | `pm-discovery` | `pm-discovery/customer-journey-map/customer-journey-map.md` |
 | Customer Outage Notice | `pm-crisis` | `pm-crisis/customer-outage-notice/customer-outage-notice.md` |
 | Customer Success Plan | `pm-cs` | `pm-cs/customer-success-plan/customer-success-plan.md` |
@@ -207,6 +209,7 @@
 | Last 30 Days Research | `pm-cross` | `pm-cross/last-30-days-research/last-30-days-research.md` |
 | Launch Post | `pm-devrel` | `pm-devrel/launch-post/launch-post.md` |
 | Launch Readiness | `pm-delivery` | `pm-delivery/launch-readiness/launch-readiness.md` |
+| Launch Tiering Framework | `pm-pmm` | `pm-pmm/launch-tiering-framework/launch-tiering-framework.md` |
 | Layoff Communication | `pm-crisis` | `pm-crisis/layoff-communication/layoff-communication.md` |
 | Legal Brief | `pm-legal` | `pm-legal/legal-brief/legal-brief.md` |
 | Lesson Plan | `pm-education` | `pm-education/lesson-plan/lesson-plan.md` |
@@ -269,6 +272,7 @@
 | PRD Template | `pm-essentials` | `pm-essentials/prd-template/prd-template.md` |
 | Press Release | `pm-cross` | `pm-cross/press-release/press-release.md` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/pricing-calculator.md` |
+| Pricing Page Copy | `pm-pmm` | `pm-pmm/pricing-page-copy/pricing-page-copy.md` |
 | Pricing Strategy | `pm-planning` | `pm-planning/pricing-strategy/pricing-strategy.md` |
 | Prior Authorization Letter | `pm-health` | `pm-health/prior-authorization-letter/prior-authorization-letter.md` |
 | Privacy Policy Drafter | `pm-legal` | `pm-legal/privacy-policy-drafter/privacy-policy-drafter.md` |
@@ -331,6 +335,8 @@
 | SaaS Metrics | `pm-calculators` | `pm-calculators/saas-metrics/saas-metrics.md` |
 | Salary Negotiation | `pm-career` | `pm-career/salary-negotiation/salary-negotiation.md` |
 | Sales Battlecard | `pm-sales` | `pm-sales/sales-battlecard/sales-battlecard.md` |
+| Sales Demo Script | `pm-pmm` | `pm-pmm/sales-demo-script/sales-demo-script.md` |
+| Sales Enablement Kit | `pm-pmm` | `pm-pmm/sales-enablement-kit/sales-enablement-kit.md` |
 | Sales Forecasting Model | `pm-sales` | `pm-sales/sales-forecasting-model/sales-forecasting-model.md` |
 | Sales Page | `pm-copy` | `pm-copy/sales-page/sales-page.md` |
 | Savings Goal Plan | `pm-money` | `pm-money/savings-goal-plan/savings-goal-plan.md` |
@@ -395,6 +401,8 @@
 | Vendor Evaluation | `pm-operations` | `pm-operations/vendor-evaluation/vendor-evaluation.md` |
 | Vendor Security Review | `pm-compliance` | `pm-compliance/vendor-security-review/vendor-security-review.md` |
 | Viral Content Framework | `pm-social` | `pm-social/viral-content-framework/viral-content-framework.md` |
+| Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/voice-of-customer-program.md` |
+| Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/win-loss-analysis.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/word-document.md` |
 | Workshop Facilitation Guide | `pm-operations` | `pm-operations/workshop-facilitation-guide/workshop-facilitation-guide.md` |
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/writing-great-skills.md` |

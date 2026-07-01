@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-pmm",
+      "description": "Product Marketing skills: Win/Loss Analysis, Sales Enablement, Pricing-Page Copy, Analyst Relations, Customer Advisory Boards, Voice of Customer, Launch Tiering, and Demo Scripts. Turn product value into messaging, enablement, and launches that land.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-pmm",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-craft",
       "description": "Engineering craft & process discipline for working with coding agents: TDD Workflow, Bug Diagnosis, Refactoring Plan, Session Handoff, PR Description, and Code Review Guide. How to work, not just what to ship.",
       "version": "1.0.0",

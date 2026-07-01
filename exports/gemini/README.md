@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-392 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+400 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -22,6 +22,7 @@
 | AI Feature PRD | `pm-ai` | `pm-ai/ai-feature-prd/GEM_INSTRUCTIONS.md` |
 | AI Product Canvas | `pm-advanced` | `pm-advanced/ai-product-canvas/GEM_INSTRUCTIONS.md` |
 | Ambiguity Resolver | `pm-strategy` | `pm-strategy/ambiguity-resolver/GEM_INSTRUCTIONS.md` |
+| Analyst Relations Brief | `pm-pmm` | `pm-pmm/analyst-relations-brief/GEM_INSTRUCTIONS.md` |
 | Announcement Card | `pm-visuals` | `pm-visuals/announcement-card/GEM_INSTRUCTIONS.md` |
 | API Docs Writer | `pm-engineering` | `pm-engineering/api-docs-writer/GEM_INSTRUCTIONS.md` |
 | API Test Plan | `pm-qa` | `pm-qa/api-test-plan/GEM_INSTRUCTIONS.md` |
@@ -93,6 +94,7 @@
 | Customer Escalation Brief | `pm-cs` | `pm-cs/cs-escalation-brief/GEM_INSTRUCTIONS.md` |
 | Customer Health Scorecard | `pm-cs` | `pm-cs/cs-health-scorecard/GEM_INSTRUCTIONS.md` |
 | CSAT / NPS Analysis | `pm-support` | `pm-support/csat-nps-analysis/GEM_INSTRUCTIONS.md` |
+| Customer Advisory Board | `pm-pmm` | `pm-pmm/customer-advisory-board/GEM_INSTRUCTIONS.md` |
 | Customer Journey Map | `pm-discovery` | `pm-discovery/customer-journey-map/GEM_INSTRUCTIONS.md` |
 | Customer Outage Notice | `pm-crisis` | `pm-crisis/customer-outage-notice/GEM_INSTRUCTIONS.md` |
 | Customer Success Plan | `pm-cs` | `pm-cs/customer-success-plan/GEM_INSTRUCTIONS.md` |
@@ -207,6 +209,7 @@
 | Last 30 Days Research | `pm-cross` | `pm-cross/last-30-days-research/GEM_INSTRUCTIONS.md` |
 | Launch Post | `pm-devrel` | `pm-devrel/launch-post/GEM_INSTRUCTIONS.md` |
 | Launch Readiness | `pm-delivery` | `pm-delivery/launch-readiness/GEM_INSTRUCTIONS.md` |
+| Launch Tiering Framework | `pm-pmm` | `pm-pmm/launch-tiering-framework/GEM_INSTRUCTIONS.md` |
 | Layoff Communication | `pm-crisis` | `pm-crisis/layoff-communication/GEM_INSTRUCTIONS.md` |
 | Legal Brief | `pm-legal` | `pm-legal/legal-brief/GEM_INSTRUCTIONS.md` |
 | Lesson Plan | `pm-education` | `pm-education/lesson-plan/GEM_INSTRUCTIONS.md` |
@@ -269,6 +272,7 @@
 | PRD Template | `pm-essentials` | `pm-essentials/prd-template/GEM_INSTRUCTIONS.md` |
 | Press Release | `pm-cross` | `pm-cross/press-release/GEM_INSTRUCTIONS.md` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/GEM_INSTRUCTIONS.md` |
+| Pricing Page Copy | `pm-pmm` | `pm-pmm/pricing-page-copy/GEM_INSTRUCTIONS.md` |
 | Pricing Strategy | `pm-planning` | `pm-planning/pricing-strategy/GEM_INSTRUCTIONS.md` |
 | Prior Authorization Letter | `pm-health` | `pm-health/prior-authorization-letter/GEM_INSTRUCTIONS.md` |
 | Privacy Policy Drafter | `pm-legal` | `pm-legal/privacy-policy-drafter/GEM_INSTRUCTIONS.md` |
@@ -331,6 +335,8 @@
 | SaaS Metrics | `pm-calculators` | `pm-calculators/saas-metrics/GEM_INSTRUCTIONS.md` |
 | Salary Negotiation | `pm-career` | `pm-career/salary-negotiation/GEM_INSTRUCTIONS.md` |
 | Sales Battlecard | `pm-sales` | `pm-sales/sales-battlecard/GEM_INSTRUCTIONS.md` |
+| Sales Demo Script | `pm-pmm` | `pm-pmm/sales-demo-script/GEM_INSTRUCTIONS.md` |
+| Sales Enablement Kit | `pm-pmm` | `pm-pmm/sales-enablement-kit/GEM_INSTRUCTIONS.md` |
 | Sales Forecasting Model | `pm-sales` | `pm-sales/sales-forecasting-model/GEM_INSTRUCTIONS.md` |
 | Sales Page | `pm-copy` | `pm-copy/sales-page/GEM_INSTRUCTIONS.md` |
 | Savings Goal Plan | `pm-money` | `pm-money/savings-goal-plan/GEM_INSTRUCTIONS.md` |
@@ -395,6 +401,8 @@
 | Vendor Evaluation | `pm-operations` | `pm-operations/vendor-evaluation/GEM_INSTRUCTIONS.md` |
 | Vendor Security Review | `pm-compliance` | `pm-compliance/vendor-security-review/GEM_INSTRUCTIONS.md` |
 | Viral Content Framework | `pm-social` | `pm-social/viral-content-framework/GEM_INSTRUCTIONS.md` |
+| Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/GEM_INSTRUCTIONS.md` |
+| Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/GEM_INSTRUCTIONS.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/GEM_INSTRUCTIONS.md` |
 | Workshop Facilitation Guide | `pm-operations` | `pm-operations/workshop-facilitation-guide/GEM_INSTRUCTIONS.md` |
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/GEM_INSTRUCTIONS.md` |
