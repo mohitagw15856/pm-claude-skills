@@ -1,17 +1,17 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-10-17/server.schema.json",
   "name": "io.github.mohitagw15856/pm-claude-skills",
-  "description": "354 professional Agent Skills + workflow recipes — searchable & fetchable over MCP.",
+  "description": "400 professional Agent Skills + workflow recipes — searchable & fetchable over MCP.",
   "repository": {
     "url": "https://github.com/mohitagw15856/pm-claude-skills",
     "source": "github"
   },
-  "version": "34.0.0",
+  "version": "35.0.0",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "pm-claude-skills",
-      "version": "34.0.0",
+      "version": "35.0.0",
       "transport": {
         "type": "stdio"
       },
