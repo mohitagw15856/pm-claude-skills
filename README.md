@@ -45,6 +45,21 @@
 
 ### ⭐ If this saves you time, [star the repo](https://github.com/mohitagw15856/pm-claude-skills) — it's the #1 way to help others find it.
 
+<p align="center">
+  <strong>🧱 Built with the community</strong> — every contributor gets a face on the wall.
+</p>
+<p align="center">
+  <a href="https://github.com/mohitagw15856/pm-claude-skills/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=mohitagw15856/pm-claude-skills" alt="Contributors to PM Skills" />
+  </a>
+</p>
+<p align="center">
+  <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/contribute-a%20skill%20in%2010%20min-D97757" alt="Contribute a skill" /></a>
+  &nbsp;<a href="COMMUNITY-SKILLS.md"><img src="https://img.shields.io/badge/or%20list%20your%20own-Featured%20in%20PM%20Skills-0E9F6E" alt="List your own skill" /></a>
+</p>
+
+> **Want your avatar up there?** Ship a skill with the [10-minute scaffolder](CONTRIBUTING.md#-fast-path-scaffold-it-in-one-command), or keep your skill in your own repo and [list it in Community Skills](COMMUNITY-SKILLS.md) to earn a **"Featured in PM Skills Community"** badge for your README.
+
 ## ⚡ Use it in 30 seconds — pick one
 
 | You want to… | Do this |
@@ -410,6 +425,7 @@ The same 392 skills reach you through every channel — pick whatever fits your 
 | 🧠 **MCP (local)** | `npx -y pm-claude-skills-mcp` — tools, **prompts & resources**. Listed in the [official MCP registry](https://github.com/mohitagw15856/pm-claude-skills/blob/main/server.json). |
 | ⚡ **MCP (hosted)** | Add **`https://pm-skills-mcp.pm-claude-skills.workers.dev/`** as a connector URL in **ChatGPT, Claude.ai, or Cursor** — no install. Also on **[Smithery](https://smithery.ai/servers/mohit15856/pm-skills)**. ([build your own](mcp-remote/)) |
 | 🧩 **Browser extension** | A skill picker inside ChatGPT, Claude.ai & Gemini — [`extension/`](extension/) |
+| 🚀 **Raycast / Alfred** | Search every skill from your launcher, then open, run, or install it — [`integrations/raycast/`](integrations/raycast/) · [`integrations/alfred/`](integrations/alfred/) |
 | 🖥️ **IDE rules** | Generated exports for **Cursor, Windsurf, Aider, Cline, Continue, Zed, Roo, Kilo Code** — [`exports/`](exports/) |
 | 🤖 **Agents & answer engines** | [`llms.txt`](https://mohitagw15856.github.io/pm-claude-skills/llms.txt) makes the whole library discoverable & citable |
 
@@ -478,6 +494,8 @@ npx pm-claude-skills add --agent codex      # OpenAI Codex (or: hermes · opencl
 npx pm-claude-skills add --agent cursor     # .mdc rules → ./.cursor/rules
 npx pm-claude-skills add --agent windsurf   # .md rules → ./.windsurf/rules
 npx pm-claude-skills add --agent aider      # conventions → load with: aider --read
+npx pm-claude-skills search board           # find skills by name/description
+npx pm-claude-skills search launch --json   # machine-readable (Raycast/Alfred/scripts)
 npx pm-claude-skills list                   # all supported agents + default paths
 ```
 

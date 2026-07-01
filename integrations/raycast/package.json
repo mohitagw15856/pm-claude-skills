@@ -1,0 +1,38 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "pm-skills",
+  "title": "PM Skills",
+  "description": "Search the PM Skills library — professional Agent Skills (PRDs, launch plans, board minutes, postmortems, rubrics, contracts…) — and open, run, or install any of them.",
+  "icon": "extension-icon.png",
+  "author": "mohitagw15856",
+  "categories": ["Productivity", "Developer Tools"],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "search-skills",
+      "title": "Search Skills",
+      "subtitle": "PM Skills",
+      "description": "Search professional Agent Skills and open them in the playground, or copy install/run commands.",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.70.0",
+    "@raycast/utils": "^1.13.0"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.6",
+    "@types/node": "^20.8.10",
+    "@types/react": "^18.2.27",
+    "eslint": "^8.51.0",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "lint": "ray lint",
+    "fix-lint": "ray lint --fix",
+    "publish": "npx @raycast/api@latest publish"
+  }
+}

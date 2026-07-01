@@ -12,7 +12,7 @@
 //   --target <path>  override the default install directory
 //   --link           symlink instead of copy (native agents; falls back to copy)
 //   --dry-run        print what would happen without writing
-import { readdirSync, existsSync, mkdirSync, rmSync, cpSync, symlinkSync, copyFileSync, statSync } from 'node:fs';
+import { readdirSync, existsSync, mkdirSync, rmSync, cpSync, symlinkSync, copyFileSync, statSync, readFileSync } from 'node:fs';
 import { join, dirname, basename, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { homedir } from 'node:os';
@@ -44,6 +44,7 @@ function parse(argv) {
     const a = argv[i];
     if (a === '--link') out.link = true;
     else if (a === '--dry-run') out.dryRun = true;
+    else if (a === '--json') out.json = true;
     else if (a === '--help' || a === '-h') out.help = true;
     else if (a === '--version' || a === '-v') out.version = true;
     else if (a.startsWith('--')) { out[a.slice(2)] = argv[i + 1]; i++; }
@@ -60,6 +61,86 @@ function listFiles(dir, ext) {
     else if (p.endsWith(ext)) out.push(p);
   }
   return out;
+}
+
+const PLAYGROUND = 'https://mohitagw15856.github.io/pm-claude-skills';
+
+// Read a skill's YAML frontmatter (name + description) without a YAML dependency.
+function readFrontmatter(file) {
+  const txt = readFileSync(file, 'utf8');
+  const m = txt.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  if (!m) return {};
+  const fm = {};
+  for (const line of m[1].split(/\r?\n/)) {
+    const kv = line.match(/^([A-Za-z0-9_-]+):\s*(.*)$/);
+    if (kv) fm[kv[1]] = kv[2].trim().replace(/^["']|["']$/g, '');
+  }
+  return fm;
+}
+
+// Build an index of the bundled skills from skills/<name>/SKILL.md frontmatter.
+function readSkillIndex() {
+  const skillsDir = join(PKG_ROOT, 'skills');
+  if (!existsSync(skillsDir)) return [];
+  const out = [];
+  for (const e of readdirSync(skillsDir)) {
+    const p = join(skillsDir, e, 'SKILL.md');
+    if (!existsSync(p)) continue;
+    const fm = readFrontmatter(p);
+    out.push({ name: fm.name || e, description: fm.description || '' });
+  }
+  return out.sort((a, b) => a.name.localeCompare(b.name));
+}
+
+// `search [query…]` — find skills by name/description. `--json` for tooling
+// (Raycast / Alfred / scripts), `--limit N` to cap results.
+function search(opts) {
+  const terms = opts._.slice(1).map((t) => String(t).toLowerCase()).filter(Boolean);
+  let items = readSkillIndex();
+  if (terms.length) {
+    items = items
+      .map((s) => {
+        const name = s.name.toLowerCase();
+        const hay = `${name} ${s.description.toLowerCase()}`;
+        let score = 0;
+        for (const t of terms) {
+          if (!hay.includes(t)) return { ...s, score: -1 };
+          score += name.includes(t) ? 2 : 1;
+          if (name === t) score += 3;
+        }
+        return { ...s, score };
+      })
+      .filter((s) => s.score >= 0)
+      .sort((a, b) => b.score - a.score || a.name.localeCompare(b.name));
+  }
+  const limit = opts.limit ? Math.max(1, parseInt(opts.limit, 10) || 0) : (opts.json ? items.length : 25);
+  const shown = items.slice(0, limit);
+
+  if (opts.json) {
+    console.log(JSON.stringify(shown.map(({ name, description }) => ({
+      name,
+      description,
+      summary: description.split(/(?<=[.!?])\s/)[0],
+      url: `${PLAYGROUND}/?skill=${name}`,
+    })), null, 2));
+    return;
+  }
+  if (!shown.length) {
+    console.log(`No skills match "${terms.join(' ')}". Try a broader term, or: npx pm-claude-skills search`);
+    return;
+  }
+  const q = terms.length ? ` matching "${terms.join(' ')}"` : '';
+  const more = items.length > shown.length ? `  (showing ${shown.length} of ${items.length} — narrow your query or pass --limit)` : '';
+  console.log(`${items.length} skill(s)${q}:${more}\n`);
+  for (const s of shown) {
+    const summary = s.description.split(/(?<=[.!?])\s/)[0].slice(0, 100);
+    console.log(`  \x1b[1m${s.name}\x1b[0m`);
+    if (summary) console.log(`    ${summary}`);
+    console.log(`    ▶ ${PLAYGROUND}/?skill=${s.name}`);
+  }
+  console.log(`\nRun one:   npx pm-claude-skills run <skill> --text "…"`);
+  console.log(`Install:   npx pm-claude-skills add --agent claude`);
+  console.log(`\n${STAR}`);
 }
 
 function placeDir(src, dest, { link, dryRun }) {
@@ -164,6 +245,7 @@ const HELP = `pm-claude-skills — install professional Agent Skills into any AI
 Usage:
   npx pm-claude-skills add --agent <claude|hermes|codex|openclaw|cursor|windsurf|aider> [--target <path>] [--link] [--dry-run]
   npx pm-claude-skills run <skill> [--text "…" | --input <file>] [--model <m>] [--out <file>]
+  npx pm-claude-skills search [query…] [--json] [--limit <n>]
   npx pm-claude-skills list
   npx pm-claude-skills --version
 
@@ -172,6 +254,9 @@ Examples:
   npx pm-claude-skills add --agent cursor     # .mdc rules into ./.cursor/rules
   npx pm-claude-skills add --agent windsurf   # .md rules into ./.windsurf/rules
   npx pm-claude-skills add --agent codex --link
+
+  npx pm-claude-skills search board            # find skills by name/description
+  npx pm-claude-skills search launch --json    # machine-readable (Raycast/Alfred/scripts)
 
   npx pm-claude-skills run prd-template --text "a referral program for B2B users"   # run a skill (needs ANTHROPIC_API_KEY)
   cat notes.txt | npx pm-claude-skills run meeting-notes --out summary.md           # pipe input, write the artifact
@@ -185,6 +270,7 @@ const cmd = opts._[0];
 if (opts.version) console.log(VERSION);
 else if (!cmd || cmd === 'help' || (opts.help && cmd !== 'run' && cmd !== 'generate')) console.log(HELP);
 else if (cmd === 'list') list();
+else if (cmd === 'search') search(opts);
 else if (cmd === 'add') add(opts);
 else if (cmd === 'run') {
   const { run } = await import('./run.mjs');

@@ -22,6 +22,38 @@ Skills are **not scored on the PR** (so opening one never spends tokens). **Eval
 
 So: **include a case in [`evals/cases.json`](evals/cases.json)** with your skill — it's what lets the skill be scored later (aim for **≥ 4.0/5** on the rubric: structure · completeness · usefulness · grounding). Prefer a guided start? Use the [submit-a-skill form](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=submit-skill.yml).
 
+## ⚡ Fast path: scaffold it in one command
+
+Don't hand-build the folder structure — the repo ships scaffolders that generate a **SkillCheck-passing** starting point so you fill in the blanks instead of remembering the whole layout. A PR is ~10 minutes, not an afternoon.
+
+**A single skill:**
+
+```bash
+npm run new-skill -- --name churn-forecaster --description "Forecast account churn. Use when… Produces…"
+# or run it with no args for interactive prompts:
+npm run new-skill
+```
+
+This creates `skills/churn-forecaster/SKILL.md` pre-filled with the required frontmatter and section headings (`Required Inputs`, `Output Structure`, `Quality Checks`, `Anti-Patterns`, `Example Trigger Phrases`). Edit the `<!-- TODO -->` bits, then jump to **Step 5** to validate.
+
+**A whole bundle** (plugin.json + `plugins/<bundle>/skills/**` copies + a marketplace entry, in one step):
+
+```bash
+npm run new-bundle -- --name pm-foo --desc "What the bundle is" --skills skill-one,skill-two,skill-three
+```
+
+Existing skills named in `--skills` are *wired* into the bundle; names that don't exist yet get a passing *stub* scaffolded for you.
+
+**After either command**, regenerate the catalog + exports and validate:
+
+```bash
+node web/build-skills.mjs && node scripts/build-exports.mjs   # or: npm run check
+```
+
+Prefer to do it by hand? The full manual walkthrough is below.
+
+---
+
 ## How to Submit a Skill
 
 ### Step 1: Fork the repo
