@@ -356,6 +356,10 @@
     {
       "skill": "tenant-screening-guide",
       "input": "Help me design a fair tenant screening process for a single-family rental I'm listing at $2,000/month in the US. I want reliable tenants but I want to stay compliant and consistent. Walk me through objective criteria (income, credit, rental history, verification), the application and checks I should run with consent, how to evaluate applicants consistently, applicant communication including adverse action, and the fair-housing guardrails. Flag anything I must confirm with a local attorney."
+    },
+    {
+      "skill": "board-minutes",
+      "input": "Draft formal board minutes for Northwind Robotics Inc. The regular board meeting was held on 12 March 2025, 10:00-11:30, by video conference. Present: Priya Shah (Chair), Daniel Okoro (CEO), Lena Fischer (CFO), Marcus Webb (independent director). Apologies: Ana Ruiz. In attendance: Tom Reilly (company secretary, minutes). Quorum was confirmed. Agenda and notes: (1) Previous minutes from 5 Feb approved without amendment. (2) Q1 financials — CFO presented; revenue $4.2M, 11% ahead of plan; cash runway 16 months. Board noted the results. (3) Series B fundraise — proposed raising $25M; board discussed dilution and lead investor terms; resolved to authorize management to proceed with term-sheet negotiations up to a $120M pre-money valuation and report back before signing. Marcus Webb declared a conflict as an advisor to one prospective investor and recused himself from this item. (4) Annual budget — approved as presented. Actions: CFO to circulate the revised runway model by 20 March; CEO to bring the lead-investor term sheet to the next meeting. Next meeting 9 April 2025 by video conference. Flag anything that needs governance or legal review, and mark anything unknown as to confirm."
     }
   ]
 }

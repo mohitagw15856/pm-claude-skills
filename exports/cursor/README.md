@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-391 skills exported. Copy a `.mdc rule` into the tool to use it.
+392 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -31,6 +31,7 @@
 | Architecture Diagram | `pm-visuals` | `pm-visuals/architecture-diagram/architecture-diagram.mdc` |
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/assumption-mapper.mdc` |
 | Board Deck Narrative | `pm-business` | `pm-business/board-deck-narrative/board-deck-narrative.mdc` |
+| Board Minutes | `pm-business` | `pm-business/board-minutes/board-minutes.mdc` |
 | Board Pre-Read | `pm-business` | `pm-business/board-pre-read/board-pre-read.mdc` |
 | Bookkeeping Categorization | `pm-accounting` | `pm-accounting/bookkeeping-categorization/bookkeeping-categorization.mdc` |
 | Boolean Search Builder | `pm-recruiting` | `pm-recruiting/boolean-search-builder/boolean-search-builder.mdc` |
