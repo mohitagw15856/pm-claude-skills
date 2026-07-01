@@ -95,6 +95,33 @@ async function init() {
     reader.readAsText(file);
     e.target.value = '';
   });
+  // Ground in a live source: pull a public GitHub issue/PR (title + body) into context.
+  const pullGhIssue = async () => {
+    const url = (el('ghIssueUrl').value || '').trim();
+    if (!url) return;
+    const m = url.match(/github\.com\/([^/]+)\/([^/]+)\/(?:issues|pull)\/(\d+)/);
+    if (!m) { el('contextFileMsg').textContent = 'Paste a full GitHub issue or PR URL.'; return; }
+    const [, owner, repo, num] = m;
+    const api = `https://api.github.com/repos/${owner}/${repo}/issues/${num}`;
+    el('contextFileMsg').textContent = 'Fetching…';
+    try {
+      const res = await fetch(api, { headers: { Accept: 'application/vnd.github+json' } });
+      if (!res.ok) throw new Error(res.status === 403 ? 'rate-limited — try again shortly' : `HTTP ${res.status}`);
+      const d = await res.json();
+      const block = `--- GitHub ${d.pull_request ? 'PR' : 'issue'} #${d.number}: ${d.title} (${owner}/${repo}) ---\n${(d.body || '(no description)').slice(0, 100000)}`;
+      const box = el('contextInput');
+      box.value = (box.value ? box.value + '\n\n' : '') + block;
+      localStorage.setItem(CONTEXT_STORE, box.value);
+      updateContextStatus();
+      el('contextFileMsg').textContent = `Loaded #${d.number} “${d.title}” into your context.`;
+      el('ghIssueUrl').value = '';
+      el('contextBox').open = true;
+    } catch (err) {
+      el('contextFileMsg').textContent = `Couldn't fetch that issue (${err.message}).`;
+    }
+  };
+  el('ghIssueBtn').addEventListener('click', pullGhIssue);
+  el('ghIssueUrl').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); pullGhIssue(); } });
   el('keyToggle').addEventListener('click', () => {
     const f = el('apiKey');
     const show = f.type === 'password';

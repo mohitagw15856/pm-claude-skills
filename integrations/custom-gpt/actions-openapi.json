@@ -1,0 +1,122 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "PM Skills API",
+    "description": "Read-only access to the PM Skills library — 390+ professional Agent Skills (PRDs, launch plans, board minutes, postmortems, rubrics, contracts, and more). Search skills, fetch a skill's full instructions, and browse workflow recipes.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://pm-skills-mcp.pm-claude-skills.workers.dev"
+    }
+  ],
+  "paths": {
+    "/v1/skills": {
+      "get": {
+        "operationId": "listSkills",
+        "summary": "List or filter skills",
+        "description": "List skills, optionally filtered by bundle or a search query.",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Keyword search over skill name and description.",
+            "required": false,
+            "schema": { "type": "string" }
+          },
+          {
+            "name": "bundle",
+            "in": "query",
+            "description": "Filter to one bundle/plugin (e.g. pm-business, pm-engineering).",
+            "required": false,
+            "schema": { "type": "string" }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Max number of skills to return.",
+            "required": false,
+            "schema": { "type": "integer" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "A list of skills." }
+        }
+      }
+    },
+    "/v1/skills/{name}": {
+      "get": {
+        "operationId": "getSkill",
+        "summary": "Get one skill",
+        "description": "Fetch a single skill by name. Use format=md to get the raw Markdown instructions to follow.",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "The skill's name, e.g. prd-template or board-minutes.",
+            "required": true,
+            "schema": { "type": "string" }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "description": "Set to 'md' to return the raw Markdown instruction body instead of JSON.",
+            "required": false,
+            "schema": { "type": "string", "enum": ["json", "md"] }
+          }
+        ],
+        "responses": {
+          "200": { "description": "The skill, as JSON or Markdown." }
+        }
+      }
+    },
+    "/v1/search": {
+      "get": {
+        "operationId": "searchSkills",
+        "summary": "Search skills",
+        "description": "Keyword search across the whole library. Returns the best-matching skills.",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "description": "The search query, e.g. 'launch plan' or 'churn'.",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "Matching skills." }
+        }
+      }
+    },
+    "/v1/workflows": {
+      "get": {
+        "operationId": "listWorkflows",
+        "summary": "List workflow recipes",
+        "description": "List the multi-skill workflow recipes (skill chains) available.",
+        "responses": {
+          "200": { "description": "A list of workflow recipes." }
+        }
+      }
+    },
+    "/v1/workflows/{id}": {
+      "get": {
+        "operationId": "getWorkflow",
+        "summary": "Get one workflow recipe",
+        "description": "Fetch a single workflow recipe with its ordered steps.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The recipe id.",
+            "required": true,
+            "schema": { "type": "string" }
+          }
+        ],
+        "responses": {
+          "200": { "description": "The workflow recipe and its steps." }
+        }
+      }
+    }
+  }
+}

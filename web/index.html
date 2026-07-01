@@ -79,6 +79,8 @@
     <textarea id="contextInput" rows="4" placeholder="About you & your company: product, who it's for, your voice/tone, key metrics, competitors, constraints. Tip: add a line like 'Brand color: #1B365D' and the themed PDF export tints your documents to match. Saved in your browser and added to every run, so outputs come back tailored to you — no re-typing."></textarea>
     <div class="context-actions-row">
       <label class="file-load" title="Load a CSV / markdown / text file so skills ground on your real data">📎 Ground in a file<input type="file" id="contextFile" accept=".txt,.md,.csv,.json,.tsv,.log" hidden /></label>
+      <input id="ghIssueUrl" type="text" class="gh-issue-input" placeholder="…or paste a public GitHub issue / PR URL" title="Pull a public GitHub issue or PR (title + body) into your context" />
+      <button id="ghIssueBtn" type="button" class="ghost" title="Fetch the issue/PR and add it to your context">⬇ Pull</button>
       <span id="contextFileMsg" class="context-hint" style="margin:0"></span>
     </div>
     <div class="context-hint">Saved locally in your browser. Files are read in-browser and only sent (with your context) to your own Claude requests. For live sources (Linear, Drive, a database), ground skills via <a href="mcp/README.md">MCP</a>.</div>
