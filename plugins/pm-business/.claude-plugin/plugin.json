@@ -2,12 +2,12 @@
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "pm-business",
   "version": "1.0.0",
-  "description": "Business & strategy skills: Investor Update, Board Deck Narrative, Job Application. Write investor updates investors actually read, structure board presentations, and tailor CVs and cover letters with ATS optimisation.",
+  "description": "Business & strategy skills: Investor Update, Board Deck Narrative, Board Pre-Read, Board Minutes, Job Application. Write investor updates investors actually read, structure board materials, capture formal board decisions, and tailor CVs and cover letters with ATS optimisation.",
   "author": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
   "license": "MIT",
-  "keywords": ["product-management", "business", "strategy", "investor-update", "board-deck", "startup", "career", "job-application"]
+  "keywords": ["product-management", "business", "strategy", "investor-update", "board-deck", "board-pre-read", "board-minutes", "governance", "startup", "career", "job-application"]
 }
