@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-400 skills exported. Copy a `.mdc rule` into the tool to use it.
+411 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -38,6 +38,7 @@
 | Boolean Search Builder | `pm-recruiting` | `pm-recruiting/boolean-search-builder/boolean-search-builder.md` |
 | Brag Doc | `pm-career` | `pm-career/brag-doc/brag-doc.md` |
 | Brief Builder | `pm-cross` | `pm-cross/brief-builder/brief-builder.md` |
+| Briefing Note | `pm-gov` | `pm-gov/briefing-note/briefing-note.md` |
 | Budget Builder | `pm-money` | `pm-money/budget-builder/budget-builder.md` |
 | Budget Variance Analysis | `pm-finance` | `pm-finance/budget-variance-analysis/budget-variance-analysis.md` |
 | Bug Diagnosis | `pm-craft` | `pm-craft/bug-diagnosis/bug-diagnosis.md` |
@@ -166,6 +167,7 @@
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/financial-model-narrative.md` |
 | Financial Statement Explainer | `pm-accounting` | `pm-accounting/financial-statement-explainer/financial-statement-explainer.md` |
 | Flowchart | `pm-visuals` | `pm-visuals/flowchart/flowchart.md` |
+| FOIA / Public-Records Request | `pm-gov` | `pm-gov/foia-request/foia-request.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/follow-up-sequence.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/founder-market-fit.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/fundraising-faq.md` |
@@ -259,11 +261,13 @@
 | Partnership Proposal | `pm-sales` | `pm-sales/partnership-proposal/partnership-proposal.md` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/patient-communication.md` |
 | Paywall Optimization | `pm-growth` | `pm-growth/paywall-optimization/paywall-optimization.md` |
+| Penetration Test Report | `pm-security` | `pm-security/pentest-report/pentest-report.md` |
 | Performance Budget | `pm-engineering` | `pm-engineering/performance-budget/performance-budget.md` |
 | Performance Review | `pm-people` | `pm-people/performance-review/performance-review.md` |
 | Personal Bio | `pm-personal` | `pm-personal/personal-bio/personal-bio.md` |
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/persuasion-brief.md` |
 | PM Weekly Review | `pm-rituals` | `pm-rituals/pm-weekly-review/pm-weekly-review.md` |
+| Policy Memo | `pm-gov` | `pm-gov/policy-memo/policy-memo.md` |
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/portfolio-page.md` |
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/pptx-slide-auditor.md` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/pr-crisis-response.md` |
@@ -293,6 +297,7 @@
 | Property Listing | `pm-realestate` | `pm-realestate/property-listing/property-listing.md` |
 | Property Offer Letter | `pm-realestate` | `pm-realestate/property-offer-letter/property-offer-letter.md` |
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/proposal-writer.md` |
+| Public Comment | `pm-gov` | `pm-gov/public-comment/public-comment.md` |
 | QA Release Sign-off | `pm-qa` | `pm-qa/qa-release-signoff/qa-release-signoff.md` |
 | QBR Deck | `pm-cs` | `pm-cs/qbr-deck/qbr-deck.md` |
 | Quiz Generator | `pm-education` | `pm-education/quiz-generator/quiz-generator.md` |
@@ -311,6 +316,7 @@
 | Referral Program Design | `pm-growth` | `pm-growth/referral-program-design/referral-program-design.md` |
 | Regex Builder & Explainer | `pm-engineering` | `pm-engineering/regex-builder/regex-builder.md` |
 | Regression Test Plan | `pm-qa` | `pm-qa/regression-test-plan/regression-test-plan.md` |
+| Regulatory Impact Analysis | `pm-gov` | `pm-gov/regulatory-impact-analysis/regulatory-impact-analysis.md` |
 | Renewal Playbook | `pm-cs` | `pm-cs/renewal-playbook/renewal-playbook.md` |
 | Rental Application | `pm-lifeadmin` | `pm-lifeadmin/rental-application/rental-application.md` |
 | Research Protocol | `pm-research` | `pm-research/research-protocol/research-protocol.md` |
@@ -321,6 +327,7 @@
 | Return & Refund Policy | `pm-ecommerce` | `pm-ecommerce/return-refund-policy/return-refund-policy.md` |
 | Review Response | `pm-ecommerce` | `pm-ecommerce/review-response/review-response.md` |
 | RFC Writer | `pm-engineering` | `pm-engineering/rfc-writer/rfc-writer.md` |
+| RFP Response | `pm-gov` | `pm-gov/rfp-response/rfp-response.md` |
 | RFP Writer | `pm-operations` | `pm-operations/rfp-writer/rfp-writer.md` |
 | RICE + Strategic Alignment | `pm-planning` | `pm-planning/rice-impact-matrix/rice-impact-matrix.md` |
 | RICE Prioritisation | `pm-planning` | `pm-planning/rice-prioritisation/rice-prioritisation.md` |
@@ -342,6 +349,8 @@
 | Savings Goal Plan | `pm-money` | `pm-money/savings-goal-plan/savings-goal-plan.md` |
 | Saying No | `pm-comms` | `pm-comms/saying-no/saying-no.md` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/schema-markup.md` |
+| Security Incident Response | `pm-security` | `pm-security/security-incident-response/security-incident-response.md` |
+| Security Review | `pm-security` | `pm-security/security-review/security-review.md` |
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/security-threat-model.md` |
 | Self-Review | `pm-career` | `pm-career/self-review/self-review.md` |
 | SEO Content Brief | `pm-gtm` | `pm-gtm/seo-content-brief/seo-content-brief.md` |
@@ -388,6 +397,7 @@
 | Tenant Screening Guide | `pm-realestate` | `pm-realestate/tenant-screening-guide/tenant-screening-guide.md` |
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/test-case-writer.md` |
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/test-strategy-doc.md` |
+| Threat Model | `pm-security` | `pm-security/threat-model/threat-model.md` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `pm-writers/thumbnail-creator/thumbnail-creator.md` |
 | Transcreation | `pm-localization` | `pm-localization/transcreation/transcreation.md` |
 | Unit Economics | `pm-calculators` | `pm-calculators/unit-economics/unit-economics.md` |
@@ -402,6 +412,7 @@
 | Vendor Security Review | `pm-compliance` | `pm-compliance/vendor-security-review/vendor-security-review.md` |
 | Viral Content Framework | `pm-social` | `pm-social/viral-content-framework/viral-content-framework.md` |
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/voice-of-customer-program.md` |
+| Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/vuln-triage.md` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/win-loss-analysis.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/word-document.md` |
 | Workshop Facilitation Guide | `pm-operations` | `pm-operations/workshop-facilitation-guide/workshop-facilitation-guide.md` |

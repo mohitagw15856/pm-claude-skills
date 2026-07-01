@@ -1,0 +1,10 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-security",
+  "version": "1.0.0",
+  "description": "Hands-on application & operational security skills: Threat Model (STRIDE), Security Review, Vulnerability Triage (CVSS), Security Incident Response, and Pentest Report. Defensive security and authorized testing for systems you own or are permitted to assess.",
+  "author": { "name": "Mohit Aggarwal", "email": "mohit15856@gmail.com" },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["security", "appsec", "threat-modeling", "stride", "vulnerability", "incident-response", "pentest", "owasp"]
+}

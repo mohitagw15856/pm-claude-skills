@@ -1,0 +1,76 @@
+---
+aliases: ["Regulatory Impact Analysis"]
+tags: [pm-skills, skill]
+skill: regulatory-impact-analysis
+description: "Produce a regulatory impact analysis (RIA) weighing the costs, benefits, and alternatives of a proposed rule. Use when asked to assess a regulation's impact, do a cost-benefit analysis of a policy, justify a rulemaking, or compare regulatory options. Produces a structured RIA: the problem and rationale, options including the baseline, costs vs. benefits, distributional effects, and a reasoned recommendation."
+---
+
+# Regulatory Impact Analysis Skill
+
+Before a rule is made, good practice (and often law) requires showing it's justified: what problem it solves,
+what it costs, what it delivers, and whether a lighter option would do better. This skill produces a structured
+**RIA** — honest about uncertainty, comparing real alternatives against the do-nothing baseline.
+
+> Educational analytical aid. A formal RIA must follow the jurisdiction's guidance (e.g. US OMB Circular A-4,
+> UK Better Regulation Framework) and use validated data — treat this as a rigorous first draft, not an official filing.
+
+## Required Inputs
+
+Ask for these only if they aren't already provided:
+
+- **The proposed rule & problem** — what's proposed and the market failure / risk / harm it addresses.
+- **Options** — the realistic alternatives (including status quo / non-regulatory approaches), or ask the skill to develop them.
+- **Impacts & data** — expected costs (compliance, admin, indirect) and benefits (safety, health, efficiency), who bears them, any figures available.
+- **Timeframe & discounting** — the horizon and any required discount rate.
+
+## Output Format
+
+### Regulatory Impact Analysis: [rule]
+
+**1. Problem statement & rationale** — the specific problem (market failure, externality, risk) and why intervention is needed now. If there's no clear problem, say so.
+
+**2. Objectives** — what success looks like, in measurable terms.
+
+**3. Options considered** — including the **baseline (do nothing)** and non-regulatory alternatives. Describe each.
+
+**4. Costs & benefits by option** — for each option, the expected costs and benefits (quantified where possible; qualitative where not), over the timeframe. A comparison table:
+
+| Option | Key costs | Key benefits | Net assessment |
+|---|---|---|---|
+
+State assumptions, data sources, and **uncertainty** honestly (ranges, sensitivity).
+
+**5. Distributional effects** — who gains and who bears the costs (small business, regions, groups); any equity concerns.
+
+**6. Recommendation** — the preferred option and why it's proportionate — the best net benefit for the burden imposed.
+
+**7. Implementation & review** — enforcement, compliance burden, and how/when the rule's effect will be evaluated (sunset/review clause).
+
+## Quality Checks
+
+- [ ] The problem/market-failure is clearly established before any option is recommended
+- [ ] Options include the do-nothing baseline and at least one non-regulatory or lighter alternative
+- [ ] Costs and benefits are compared per option, quantified where data allows, with sources
+- [ ] Uncertainty is stated honestly (ranges/sensitivity), not hidden behind point estimates
+- [ ] Distributional effects and a proportionality-based recommendation are included
+- [ ] A review/evaluation mechanism is specified
+
+## Anti-Patterns
+
+- [ ] Do not assume regulation is the answer — establish the problem and test the baseline first
+- [ ] Do not present only the preferred option — compare real alternatives
+- [ ] Do not fabricate precise numbers — use ranges and label assumptions where data is thin
+- [ ] Do not ignore who bears the cost — distributional/small-business impact matters
+- [ ] Do not omit proportionality — the benefit must justify the burden imposed
+
+## Based On
+
+Regulatory impact analysis practice (OMB Circular A-4 / Better Regulation): problem-first, options vs. baseline, cost-benefit, proportionality.
+
+---
+<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
+     variable for the highlighted text — replace it with your plugin's equivalent
+     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
+Apply the skill above to the following input:
+
+{{selection}}

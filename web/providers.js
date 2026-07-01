@@ -10,7 +10,7 @@
     anthropic: {
       name: 'Claude', keyStore: 'anthropic_api_key',
       placeholder: 'sk-ant-… (your Anthropic API key)', keyUrl: 'https://console.anthropic.com/settings/keys',
-      models: [['claude-opus-4-8', 'Opus 4.8'], ['claude-sonnet-4-6', 'Sonnet 4.6'], ['claude-haiku-4-5-20251001', 'Haiku 4.5']],
+      models: [['claude-fable-5', 'Fable 5 ✨ (newest)'], ['claude-opus-4-8', 'Opus 4.8'], ['claude-sonnet-4-6', 'Sonnet 4.6'], ['claude-haiku-4-5-20251001', 'Haiku 4.5']],
       buildReq: function (o) {
         return {
           url: 'https://api.anthropic.com/v1/messages',

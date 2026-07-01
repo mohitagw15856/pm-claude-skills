@@ -1,13 +1,29 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "35.0.0",
-  "description": "PM stands for Professional, not just Product Management. 391 Claude Skills + 4 agent templates across 56 bundles covering 25 professions — engineering, AI/ML, customer success, legal, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
+  "version": "36.0.0",
+  "description": "PM stands for Professional, not just Product Management. 411 Claude Skills + 4 agent templates across 59 bundles covering 27 professions — engineering, security, AI/ML, customer success, legal, government & policy, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "plugins": [
+    {
+      "name": "pm-security",
+      "description": "Hands-on application & operational security skills: Threat Model (STRIDE), Security Review, Vulnerability Triage (CVSS), Security Incident Response, and Pentest Report. Defensive security and authorized testing for systems you own or are permitted to assess.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-security",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-gov",
+      "description": "Government & public-policy skills: RFP Response, Policy Memo, Public Comment, Briefing Note, FOIA Request, and Regulatory Impact Analysis. For public servants, GovTech vendors, and policy teams — drafting aids, not legal advice.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-gov",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
     {
       "name": "pm-pmm",
       "description": "Product Marketing skills: Win/Loss Analysis, Sales Enablement, Pricing-Page Copy, Analyst Relations, Customer Advisory Boards, Voice of Customer, Launch Tiering, and Demo Scripts. Turn product value into messaging, enablement, and launches that land.",

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-400 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+411 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -38,6 +38,7 @@
 | Boolean Search Builder | `pm-recruiting` | `pm-recruiting/boolean-search-builder/SYSTEM_PROMPT.md` |
 | Brag Doc | `pm-career` | `pm-career/brag-doc/SYSTEM_PROMPT.md` |
 | Brief Builder | `pm-cross` | `pm-cross/brief-builder/SYSTEM_PROMPT.md` |
+| Briefing Note | `pm-gov` | `pm-gov/briefing-note/SYSTEM_PROMPT.md` |
 | Budget Builder | `pm-money` | `pm-money/budget-builder/SYSTEM_PROMPT.md` |
 | Budget Variance Analysis | `pm-finance` | `pm-finance/budget-variance-analysis/SYSTEM_PROMPT.md` |
 | Bug Diagnosis | `pm-craft` | `pm-craft/bug-diagnosis/SYSTEM_PROMPT.md` |
@@ -166,6 +167,7 @@
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/SYSTEM_PROMPT.md` |
 | Financial Statement Explainer | `pm-accounting` | `pm-accounting/financial-statement-explainer/SYSTEM_PROMPT.md` |
 | Flowchart | `pm-visuals` | `pm-visuals/flowchart/SYSTEM_PROMPT.md` |
+| FOIA / Public-Records Request | `pm-gov` | `pm-gov/foia-request/SYSTEM_PROMPT.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/SYSTEM_PROMPT.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/SYSTEM_PROMPT.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/SYSTEM_PROMPT.md` |
@@ -259,11 +261,13 @@
 | Partnership Proposal | `pm-sales` | `pm-sales/partnership-proposal/SYSTEM_PROMPT.md` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/SYSTEM_PROMPT.md` |
 | Paywall Optimization | `pm-growth` | `pm-growth/paywall-optimization/SYSTEM_PROMPT.md` |
+| Penetration Test Report | `pm-security` | `pm-security/pentest-report/SYSTEM_PROMPT.md` |
 | Performance Budget | `pm-engineering` | `pm-engineering/performance-budget/SYSTEM_PROMPT.md` |
 | Performance Review | `pm-people` | `pm-people/performance-review/SYSTEM_PROMPT.md` |
 | Personal Bio | `pm-personal` | `pm-personal/personal-bio/SYSTEM_PROMPT.md` |
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/SYSTEM_PROMPT.md` |
 | PM Weekly Review | `pm-rituals` | `pm-rituals/pm-weekly-review/SYSTEM_PROMPT.md` |
+| Policy Memo | `pm-gov` | `pm-gov/policy-memo/SYSTEM_PROMPT.md` |
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/SYSTEM_PROMPT.md` |
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/SYSTEM_PROMPT.md` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/SYSTEM_PROMPT.md` |
@@ -293,6 +297,7 @@
 | Property Listing | `pm-realestate` | `pm-realestate/property-listing/SYSTEM_PROMPT.md` |
 | Property Offer Letter | `pm-realestate` | `pm-realestate/property-offer-letter/SYSTEM_PROMPT.md` |
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/SYSTEM_PROMPT.md` |
+| Public Comment | `pm-gov` | `pm-gov/public-comment/SYSTEM_PROMPT.md` |
 | QA Release Sign-off | `pm-qa` | `pm-qa/qa-release-signoff/SYSTEM_PROMPT.md` |
 | QBR Deck | `pm-cs` | `pm-cs/qbr-deck/SYSTEM_PROMPT.md` |
 | Quiz Generator | `pm-education` | `pm-education/quiz-generator/SYSTEM_PROMPT.md` |
@@ -311,6 +316,7 @@
 | Referral Program Design | `pm-growth` | `pm-growth/referral-program-design/SYSTEM_PROMPT.md` |
 | Regex Builder & Explainer | `pm-engineering` | `pm-engineering/regex-builder/SYSTEM_PROMPT.md` |
 | Regression Test Plan | `pm-qa` | `pm-qa/regression-test-plan/SYSTEM_PROMPT.md` |
+| Regulatory Impact Analysis | `pm-gov` | `pm-gov/regulatory-impact-analysis/SYSTEM_PROMPT.md` |
 | Renewal Playbook | `pm-cs` | `pm-cs/renewal-playbook/SYSTEM_PROMPT.md` |
 | Rental Application | `pm-lifeadmin` | `pm-lifeadmin/rental-application/SYSTEM_PROMPT.md` |
 | Research Protocol | `pm-research` | `pm-research/research-protocol/SYSTEM_PROMPT.md` |
@@ -321,6 +327,7 @@
 | Return & Refund Policy | `pm-ecommerce` | `pm-ecommerce/return-refund-policy/SYSTEM_PROMPT.md` |
 | Review Response | `pm-ecommerce` | `pm-ecommerce/review-response/SYSTEM_PROMPT.md` |
 | RFC Writer | `pm-engineering` | `pm-engineering/rfc-writer/SYSTEM_PROMPT.md` |
+| RFP Response | `pm-gov` | `pm-gov/rfp-response/SYSTEM_PROMPT.md` |
 | RFP Writer | `pm-operations` | `pm-operations/rfp-writer/SYSTEM_PROMPT.md` |
 | RICE + Strategic Alignment | `pm-planning` | `pm-planning/rice-impact-matrix/SYSTEM_PROMPT.md` |
 | RICE Prioritisation | `pm-planning` | `pm-planning/rice-prioritisation/SYSTEM_PROMPT.md` |
@@ -342,6 +349,8 @@
 | Savings Goal Plan | `pm-money` | `pm-money/savings-goal-plan/SYSTEM_PROMPT.md` |
 | Saying No | `pm-comms` | `pm-comms/saying-no/SYSTEM_PROMPT.md` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/SYSTEM_PROMPT.md` |
+| Security Incident Response | `pm-security` | `pm-security/security-incident-response/SYSTEM_PROMPT.md` |
+| Security Review | `pm-security` | `pm-security/security-review/SYSTEM_PROMPT.md` |
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/SYSTEM_PROMPT.md` |
 | Self-Review | `pm-career` | `pm-career/self-review/SYSTEM_PROMPT.md` |
 | SEO Content Brief | `pm-gtm` | `pm-gtm/seo-content-brief/SYSTEM_PROMPT.md` |
@@ -388,6 +397,7 @@
 | Tenant Screening Guide | `pm-realestate` | `pm-realestate/tenant-screening-guide/SYSTEM_PROMPT.md` |
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/SYSTEM_PROMPT.md` |
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/SYSTEM_PROMPT.md` |
+| Threat Model | `pm-security` | `pm-security/threat-model/SYSTEM_PROMPT.md` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `pm-writers/thumbnail-creator/SYSTEM_PROMPT.md` |
 | Transcreation | `pm-localization` | `pm-localization/transcreation/SYSTEM_PROMPT.md` |
 | Unit Economics | `pm-calculators` | `pm-calculators/unit-economics/SYSTEM_PROMPT.md` |
@@ -402,6 +412,7 @@
 | Vendor Security Review | `pm-compliance` | `pm-compliance/vendor-security-review/SYSTEM_PROMPT.md` |
 | Viral Content Framework | `pm-social` | `pm-social/viral-content-framework/SYSTEM_PROMPT.md` |
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/SYSTEM_PROMPT.md` |
+| Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/SYSTEM_PROMPT.md` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/SYSTEM_PROMPT.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/SYSTEM_PROMPT.md` |
 | Workshop Facilitation Guide | `pm-operations` | `pm-operations/workshop-facilitation-guide/SYSTEM_PROMPT.md` |

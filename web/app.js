@@ -661,15 +661,15 @@ function galleryHead(text) {
 // ~10 calm categories instead of a wall of cards. Any bundle not listed falls into "Industries & More".
 const DOMAINS = [
   { key: 'product', emoji: '🚀', label: 'Product', bundles: ['pm-essentials', 'pm-discovery', 'pm-planning', 'pm-delivery', 'pm-strategy', 'pm-advanced', 'pm-rituals'] },
-  { key: 'marketing', emoji: '📣', label: 'Marketing & Growth', bundles: ['pm-gtm', 'pm-growth', 'pm-copy', 'pm-social', 'pm-creator'] },
-  { key: 'engineering', emoji: '💻', label: 'Engineering & AI', bundles: ['pm-engineering', 'pm-craft', 'pm-qa', 'pm-ai', 'pm-dataeng'] },
+  { key: 'marketing', emoji: '📣', label: 'Marketing & Growth', bundles: ['pm-gtm', 'pm-growth', 'pm-copy', 'pm-social', 'pm-creator', 'pm-pmm'] },
+  { key: 'engineering', emoji: '💻', label: 'Engineering & AI', bundles: ['pm-engineering', 'pm-craft', 'pm-qa', 'pm-ai', 'pm-dataeng', 'pm-security'] },
   { key: 'data', emoji: '📊', label: 'Data & Analytics', bundles: ['pm-data', 'pm-analytics'] },
   { key: 'design', emoji: '🎨', label: 'Design & Content', bundles: ['pm-design', 'pm-figma', 'pm-uxwriting', 'pm-writers', 'pm-visuals'] },
   { key: 'customers', emoji: '🤝', label: 'Customers & Sales', bundles: ['pm-cs', 'pm-support', 'pm-sales', 'pm-recruiting'] },
   { key: 'finance', emoji: '💰', label: 'Finance, Ops & Business', bundles: ['pm-finance', 'pm-money', 'pm-calculators', 'pm-accounting', 'pm-operations', 'pm-business', 'pm-consulting', 'pm-founders'] },
   { key: 'legal', emoji: '⚖️', label: 'Legal & Compliance', bundles: ['pm-legal', 'pm-compliance'] },
   { key: 'career', emoji: '🧑', label: 'You & Career', bundles: ['pm-personal', 'pm-career', 'pm-jobsearch', 'pm-comms', 'pm-people', 'pm-hr', 'pm-lifeadmin'] },
-  { key: 'industries', emoji: '🌍', label: 'Industries & More', bundles: ['pm-health', 'pm-research', 'pm-education', 'pm-nonprofit', 'pm-crisis', 'pm-localization', 'pm-realestate', 'pm-ecommerce', 'pm-documents', 'pm-devrel', 'pm-cross'] },
+  { key: 'industries', emoji: '🌍', label: 'Industries & More', bundles: ['pm-health', 'pm-research', 'pm-education', 'pm-nonprofit', 'pm-crisis', 'pm-localization', 'pm-realestate', 'pm-ecommerce', 'pm-documents', 'pm-devrel', 'pm-gov', 'pm-cross'] },
 ];
 const DOMAIN_BY_BUNDLE = {};
 DOMAINS.forEach((d) => d.bundles.forEach((b) => { DOMAIN_BY_BUNDLE[b] = d.key; }));

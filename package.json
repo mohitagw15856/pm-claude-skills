@@ -1,9 +1,9 @@
 {
   "name": "pm-claude-skills",
-  "version": "35.0.0",
+  "version": "36.0.0",
   "type": "module",
   "mcpName": "io.github.mohitagw15856/pm-claude-skills",
-  "description": "400 professional Agent Skills (SKILL.md) + subagents + slash commands for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes. It's a CLI, not a library: run `npx pm-claude-skills add --agent <tool>` to install into your AI tool — no `npm install` needed. Or try any skill free at https://mohitagw15856.github.io/pm-claude-skills/",
+  "description": "411 professional Agent Skills (SKILL.md) + subagents + slash commands for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes. It's a CLI, not a library: run `npx pm-claude-skills add --agent <tool>` to install into your AI tool — no `npm install` needed. Or try any skill free at https://mohitagw15856.github.io/pm-claude-skills/",
   "keywords": [
     "claude",
     "claude-code",
@@ -68,7 +68,7 @@
     "build:community": "node scripts/build-community.mjs",
     "build:og": "node scripts/build-og-images.mjs",
     "skill-of-the-week": "node scripts/skill-of-the-week.mjs",
-    "check": "node scripts/skillcheck.mjs && node scripts/build-exports.mjs --check && node scripts/build-workflows.mjs --check && node web/build-skills.mjs && node scripts/build-samples.mjs && git diff --exit-code -- web/skills.json web/samples.json",
+    "check": "node scripts/skillcheck.mjs && node scripts/build-exports.mjs --check && node scripts/build-workflows.mjs --check && node web/build-skills.mjs && node scripts/build-samples.mjs && node scripts/build-skills-md.mjs && git diff --exit-code -- web/skills.json web/samples.json SKILLS.md",
     "improve": "node scripts/improve-skill.mjs",
     "eval:gen-cases": "node scripts/gen-eval-cases.mjs",
     "eval:all": "node scripts/gen-eval-cases.mjs && node evals/run-evals.mjs --cases evals/cases.full.json --models claude-haiku-4-5-20251001 --judge claude-haiku-4-5-20251001"

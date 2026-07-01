@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-400 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+411 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -38,6 +38,7 @@
 | Boolean Search Builder | `pm-recruiting` | `pm-recruiting/boolean-search-builder/GEM_INSTRUCTIONS.md` |
 | Brag Doc | `pm-career` | `pm-career/brag-doc/GEM_INSTRUCTIONS.md` |
 | Brief Builder | `pm-cross` | `pm-cross/brief-builder/GEM_INSTRUCTIONS.md` |
+| Briefing Note | `pm-gov` | `pm-gov/briefing-note/GEM_INSTRUCTIONS.md` |
 | Budget Builder | `pm-money` | `pm-money/budget-builder/GEM_INSTRUCTIONS.md` |
 | Budget Variance Analysis | `pm-finance` | `pm-finance/budget-variance-analysis/GEM_INSTRUCTIONS.md` |
 | Bug Diagnosis | `pm-craft` | `pm-craft/bug-diagnosis/GEM_INSTRUCTIONS.md` |
@@ -166,6 +167,7 @@
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/GEM_INSTRUCTIONS.md` |
 | Financial Statement Explainer | `pm-accounting` | `pm-accounting/financial-statement-explainer/GEM_INSTRUCTIONS.md` |
 | Flowchart | `pm-visuals` | `pm-visuals/flowchart/GEM_INSTRUCTIONS.md` |
+| FOIA / Public-Records Request | `pm-gov` | `pm-gov/foia-request/GEM_INSTRUCTIONS.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/GEM_INSTRUCTIONS.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/GEM_INSTRUCTIONS.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/GEM_INSTRUCTIONS.md` |
@@ -259,11 +261,13 @@
 | Partnership Proposal | `pm-sales` | `pm-sales/partnership-proposal/GEM_INSTRUCTIONS.md` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/GEM_INSTRUCTIONS.md` |
 | Paywall Optimization | `pm-growth` | `pm-growth/paywall-optimization/GEM_INSTRUCTIONS.md` |
+| Penetration Test Report | `pm-security` | `pm-security/pentest-report/GEM_INSTRUCTIONS.md` |
 | Performance Budget | `pm-engineering` | `pm-engineering/performance-budget/GEM_INSTRUCTIONS.md` |
 | Performance Review | `pm-people` | `pm-people/performance-review/GEM_INSTRUCTIONS.md` |
 | Personal Bio | `pm-personal` | `pm-personal/personal-bio/GEM_INSTRUCTIONS.md` |
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/GEM_INSTRUCTIONS.md` |
 | PM Weekly Review | `pm-rituals` | `pm-rituals/pm-weekly-review/GEM_INSTRUCTIONS.md` |
+| Policy Memo | `pm-gov` | `pm-gov/policy-memo/GEM_INSTRUCTIONS.md` |
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/GEM_INSTRUCTIONS.md` |
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/GEM_INSTRUCTIONS.md` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/GEM_INSTRUCTIONS.md` |
@@ -293,6 +297,7 @@
 | Property Listing | `pm-realestate` | `pm-realestate/property-listing/GEM_INSTRUCTIONS.md` |
 | Property Offer Letter | `pm-realestate` | `pm-realestate/property-offer-letter/GEM_INSTRUCTIONS.md` |
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/GEM_INSTRUCTIONS.md` |
+| Public Comment | `pm-gov` | `pm-gov/public-comment/GEM_INSTRUCTIONS.md` |
 | QA Release Sign-off | `pm-qa` | `pm-qa/qa-release-signoff/GEM_INSTRUCTIONS.md` |
 | QBR Deck | `pm-cs` | `pm-cs/qbr-deck/GEM_INSTRUCTIONS.md` |
 | Quiz Generator | `pm-education` | `pm-education/quiz-generator/GEM_INSTRUCTIONS.md` |
@@ -311,6 +316,7 @@
 | Referral Program Design | `pm-growth` | `pm-growth/referral-program-design/GEM_INSTRUCTIONS.md` |
 | Regex Builder & Explainer | `pm-engineering` | `pm-engineering/regex-builder/GEM_INSTRUCTIONS.md` |
 | Regression Test Plan | `pm-qa` | `pm-qa/regression-test-plan/GEM_INSTRUCTIONS.md` |
+| Regulatory Impact Analysis | `pm-gov` | `pm-gov/regulatory-impact-analysis/GEM_INSTRUCTIONS.md` |
 | Renewal Playbook | `pm-cs` | `pm-cs/renewal-playbook/GEM_INSTRUCTIONS.md` |
 | Rental Application | `pm-lifeadmin` | `pm-lifeadmin/rental-application/GEM_INSTRUCTIONS.md` |
 | Research Protocol | `pm-research` | `pm-research/research-protocol/GEM_INSTRUCTIONS.md` |
@@ -321,6 +327,7 @@
 | Return & Refund Policy | `pm-ecommerce` | `pm-ecommerce/return-refund-policy/GEM_INSTRUCTIONS.md` |
 | Review Response | `pm-ecommerce` | `pm-ecommerce/review-response/GEM_INSTRUCTIONS.md` |
 | RFC Writer | `pm-engineering` | `pm-engineering/rfc-writer/GEM_INSTRUCTIONS.md` |
+| RFP Response | `pm-gov` | `pm-gov/rfp-response/GEM_INSTRUCTIONS.md` |
 | RFP Writer | `pm-operations` | `pm-operations/rfp-writer/GEM_INSTRUCTIONS.md` |
 | RICE + Strategic Alignment | `pm-planning` | `pm-planning/rice-impact-matrix/GEM_INSTRUCTIONS.md` |
 | RICE Prioritisation | `pm-planning` | `pm-planning/rice-prioritisation/GEM_INSTRUCTIONS.md` |
@@ -342,6 +349,8 @@
 | Savings Goal Plan | `pm-money` | `pm-money/savings-goal-plan/GEM_INSTRUCTIONS.md` |
 | Saying No | `pm-comms` | `pm-comms/saying-no/GEM_INSTRUCTIONS.md` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/GEM_INSTRUCTIONS.md` |
+| Security Incident Response | `pm-security` | `pm-security/security-incident-response/GEM_INSTRUCTIONS.md` |
+| Security Review | `pm-security` | `pm-security/security-review/GEM_INSTRUCTIONS.md` |
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/GEM_INSTRUCTIONS.md` |
 | Self-Review | `pm-career` | `pm-career/self-review/GEM_INSTRUCTIONS.md` |
 | SEO Content Brief | `pm-gtm` | `pm-gtm/seo-content-brief/GEM_INSTRUCTIONS.md` |
@@ -388,6 +397,7 @@
 | Tenant Screening Guide | `pm-realestate` | `pm-realestate/tenant-screening-guide/GEM_INSTRUCTIONS.md` |
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/GEM_INSTRUCTIONS.md` |
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/GEM_INSTRUCTIONS.md` |
+| Threat Model | `pm-security` | `pm-security/threat-model/GEM_INSTRUCTIONS.md` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `pm-writers/thumbnail-creator/GEM_INSTRUCTIONS.md` |
 | Transcreation | `pm-localization` | `pm-localization/transcreation/GEM_INSTRUCTIONS.md` |
 | Unit Economics | `pm-calculators` | `pm-calculators/unit-economics/GEM_INSTRUCTIONS.md` |
@@ -402,6 +412,7 @@
 | Vendor Security Review | `pm-compliance` | `pm-compliance/vendor-security-review/GEM_INSTRUCTIONS.md` |
 | Viral Content Framework | `pm-social` | `pm-social/viral-content-framework/GEM_INSTRUCTIONS.md` |
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/GEM_INSTRUCTIONS.md` |
+| Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/GEM_INSTRUCTIONS.md` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/GEM_INSTRUCTIONS.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/GEM_INSTRUCTIONS.md` |
 | Workshop Facilitation Guide | `pm-operations` | `pm-operations/workshop-facilitation-guide/GEM_INSTRUCTIONS.md` |

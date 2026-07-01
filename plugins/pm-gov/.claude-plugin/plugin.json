@@ -1,0 +1,10 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-gov",
+  "version": "1.0.0",
+  "description": "Government & public-policy skills: RFP Response, Policy Memo, Public Comment, Briefing Note, FOIA Request, and Regulatory Impact Analysis. For public servants, GovTech vendors, policy teams, and anyone working with government — drafting aids, not legal advice.",
+  "author": { "name": "Mohit Aggarwal", "email": "mohit15856@gmail.com" },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["government", "policy", "public-sector", "rfp", "procurement", "foia", "regulation", "govtech"]
+}
