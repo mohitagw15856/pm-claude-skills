@@ -9,13 +9,24 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [35.0.0] — 400 skills, new reach (Custom GPT · Gemini Gem · Raycast · Alfred) & Product Marketing — 2026-07-01
+
 ### Added
+- **New bundle — Product Marketing (`pm-pmm`), 8 skills (392 → 400 skills, 56 → 57 bundles)** — `win-loss-analysis`, `sales-enablement-kit`, `pricing-page-copy`, `analyst-relations-brief`, `customer-advisory-board`, `voice-of-customer-program`, `launch-tiering-framework`, `sales-demo-script`. Each ships a curated eval case and bakes in guardrails (never fabricating win/loss quotes, pricing, logos, or analyst metrics; mark unknowns `[to confirm]`).
+- **Custom GPT packaging** ([`integrations/custom-gpt/`](integrations/custom-gpt/)) — publish the whole library as a GPT in the GPT Store: an OpenAPI **Actions** schema over the hosted read-only REST API (`searchSkills` / `getSkill` / `listWorkflows` …), the GPT system prompt, and a 10-minute setup guide. The GPT reads skills **live**, so it never goes stale.
+- **Gemini Gem packaging** ([`integrations/gemini-gem/`](integrations/gemini-gem/)) — package the library as a Gem using `llms.txt` / `llms-full.txt` as Knowledge, with a copy-paste setup.
+- **Raycast extension** ([`integrations/raycast/`](integrations/raycast/)) — search every skill from your launcher, then open, run, or install it; reads the live catalog.
+- **Alfred workflow** ([`integrations/alfred/`](integrations/alfred/)) — keyword `pm` to search skills, with open/copy actions and a one-command `.alfredworkflow` build.
+- **CLI `search` command** — `npx pm-claude-skills search [query] [--json] [--limit]`. Name-weighted ranking over the whole library; `--json` powers the launcher integrations and any script.
+- **Bring-your-data in the playground** — paste a public GitHub issue/PR URL to pull its title + body straight into your context (fetched in-browser), alongside the existing file upload.
+- **Board Minutes skill** (`board-minutes`, in `pm-business`) — formal minutes with attendees, quorum, conflicts of interest, resolutions, and an action register, with governance-review safeguards. Contributed by [@roian6](https://github.com/roian6).
 - **2 new vertical bundles, 12 skills (354 → 366 skills, 51 → 53 bundles)** — each ships a curated eval case:
   - **🧪 QA & Testing** (new `pm-qa`): `test-case-writer`, `bug-report`, `exploratory-test-charter`, `regression-test-plan`, `qa-release-signoff`, `api-test-plan`.
   - **🏠 Real Estate** (new `pm-realestate`): `property-listing`, `comparative-market-analysis`, `property-offer-letter`, `property-investment-analysis`, `open-house-plan`, `tenant-screening-guide` — listing/offer/tenant skills bake in Fair-Housing safeguards; CMA/investment skills flag "not an appraisal/financial advice" and never invent comps/figures.
 - **`npm run new-bundle` scaffolder** ([`scripts/new-bundle.mjs`](scripts/new-bundle.mjs)) — scaffold or wire a whole bundle in one command: creates the `plugin.json`, copies each skill into the plugin (wiring existing `skills/<name>/` or scaffolding a SkillCheck-passing stub), and inserts a `marketplace.json` entry (textually, preserving formatting; idempotent).
 
 ### Changed
+- **CONTRIBUTING fast path** — documented the `npm run new-skill` / `new-bundle` scaffolders so a first contribution is ~10 minutes, not an afternoon.
 - **PRs no longer eval-score skills.** The Skill PR Check now only validates **structure** (`skillcheck`) — opening a PR never spends tokens. Eval scoring is run deliberately after merge via the manual [**Evaluate selected bundles**](.github/workflows/eval-bundles.yml) Action. (The score-drop regression gate on PRs was removed.)
 
 ## [32.0.0] — 4 new bundles: E-commerce, UX Writing, Recruiting & Accounting — 2026-06-30
