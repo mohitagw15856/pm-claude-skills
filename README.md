@@ -412,6 +412,7 @@ The same 400 skills reach you through every channel — pick whatever fits your 
 | 🧩 **Browser extension** | A skill picker inside ChatGPT, Claude.ai & Gemini — [`extension/`](extension/) |
 | 🚀 **Raycast / Alfred** | Search every skill from your launcher, then open, run, or install it — [`integrations/raycast/`](integrations/raycast/) · [`integrations/alfred/`](integrations/alfred/) |
 | 🤖 **Custom GPT / Gemini Gem** | Publish the library as a GPT (live Actions API) or a Gem — copy-paste setup in [`integrations/custom-gpt/`](integrations/custom-gpt/) · [`integrations/gemini-gem/`](integrations/gemini-gem/) |
+| 💬 **Slack / Discord** | A `/pmskill` slash command in your team chat — one signature-verified Worker for both — [`integrations/chatops/`](integrations/chatops/) |
 | 🖥️ **IDE rules** | Generated exports for **Cursor, Windsurf, Aider, Cline, Continue, Zed, Roo, Kilo Code** — [`exports/`](exports/) |
 | 🤖 **Agents & answer engines** | [`llms.txt`](https://mohitagw15856.github.io/pm-claude-skills/llms.txt) makes the whole library discoverable & citable |
 

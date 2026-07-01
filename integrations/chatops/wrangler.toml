@@ -1,0 +1,17 @@
+name = "pm-skills-chatops"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# A single Worker serving both the Slack and Discord slash commands.
+#
+# Deploy:
+#   cd integrations/chatops
+#   npx wrangler deploy
+#
+# Then set the signing secrets (fail-closed — a route without its secret refuses):
+#   npx wrangler secret put SLACK_SIGNING_SECRET   # from your Slack app → Basic Information
+#   npx wrangler secret put DISCORD_PUBLIC_KEY      # from your Discord app → General Information
+#
+# Endpoints after deploy (Wrangler prints your <worker>.workers.dev URL):
+#   Slack slash command Request URL    →  https://<worker>/slack
+#   Discord Interactions Endpoint URL  →  https://<worker>/discord
