@@ -9,6 +9,8 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [39.0.0] — three waves: SkillBench & the registry, the breathtaking six, and the revamped playground — 2026-07-02
+
 ### Added — the "make it famous" wave (7 features)
 - **🏛 SkillBench** ([skillbench/](skillbench/)) — the professional-work benchmark: HumanEval exists for code, nothing measured whether a model can write a PRD, postmortem, or board update that survives contact. A **frozen 12-task set** across 6 domains, each run *bare* and *skilled* per model, judged two-pass on the library's fixed rubric — yielding a **SkillBench score** and a **skill lift** (how much structured judgment improves each model). Multi-provider runner (Claude/GPT/Gemini), a manual **Run SkillBench** workflow that commits results, and a quarterly **State of Professional AI** report template.
 - **📦 Turnkey CI recipes** ([action/examples/](action/examples/)) — four copy-one-file workflows for the existing GitHub Action: PR opened → drafted description commented; release published → user-facing notes prepended; issue labelled `incident` → postmortem scaffold posted; docs PR → quality-bar verdicts commented. Plus the Marketplace publishing path documented.

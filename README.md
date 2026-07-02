@@ -60,7 +60,7 @@
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 Latest (the breathtaking wave):** **🎛 [Living artifacts](https://mohitagw15856.github.io/pm-claude-skills/)** — RICE, roadmap, journey-map, and scorecard outputs now render as *interactive* components in the playground: drag a confidence slider and watch the ranking re-sort live. **🩻 [Document X-ray](https://mohitagw15856.github.io/pm-claude-skills/xray.html)** — every sentence heat-mapped by evidence strength, load-bearing lines outlined. **🥊 [The Gym](https://mohitagw15856.github.io/pm-claude-skills/gym.html)** — negotiate against an AI with a *secret* bottom line, then get scored against the optimum you couldn't see. **📷 [`pm-vision`](plugins/pm-vision)** — attach photos/screenshots and [`whiteboard-to-spec`](skills/whiteboard-to-spec/SKILL.md), [`screenshot-teardown`](skills/screenshot-teardown/SKILL.md), and [`deck-autopsy`](skills/deck-autopsy/SKILL.md) read the pixels as the input. **✍️ [`style-fingerprint`](skills/style-fingerprint/SKILL.md)** — every skill learns to write in *your* voice. **🔒 [`evidence-lock`](skills/evidence-lock/SKILL.md)** — no-unsourced-sentences mode with quote-level footnotes. → full details in the [CHANGELOG](CHANGELOG.md). *Earlier (v38.0):* **🛡️ [The Defense](https://mohitagw15856.github.io/pm-claude-skills/defend.html)** — the executives cross-examine *you*, live. **🔏 Attestations** — tamper-evident verdict records, checkable at [verify.html](https://mohitagw15856.github.io/pm-claude-skills/verify.html). **📜 [SkillSpec v1.0](SKILLSPEC.md)**, **🤝 A2A** discovery, **🎯 [`outcome-tracker`](skills/outcome-tracker/SKILL.md)**, `## Execution` blocks for computer-use agents, extension v1.1 with **ambient lint**, and the [training dataset pipeline](dataset/) toward `pm-skills-3b`. *Earlier (v37.0):* **🏛️ [The Boardroom](https://mohitagw15856.github.io/pm-claude-skills/boardroom.html)** — five AI executives debate your document live — plus two new domains — **🤖 `pm-agentops`** (operate AI agents in production: `prompt-regression-suite`, `model-migration-plan`, `context-engineering-review`, `agent-incident-postmortem`, `agent-observability-spec`) and **⏰ `pm-autopilot`** (put recurring rituals on a schedule: `autopilot-charter`, `schedule-recipe`, `delta-briefing` + the recurring skills worth scheduling). New **`which-skill`** router: describe your task, get routed to the right skill — with a disambiguation table for the library's look-alike clusters. And the depth push has begun: 6 Production-Ready skills now ship `references/` + `templates/` (PRD, RICE, OKRs, teardown, postmortem, stakeholder update). *Earlier (v36.0):* `pm-security` + `pm-gov` bundles, Fable 5 in the playground, auto-generated `SKILLS.md`. **426 skills across 62 bundles.** → **[Full release history & notes](https://github.com/mohitagw15856/pm-claude-skills/releases)**.
+**🆕 v39.0.0 — three waves in one release.** ⚡ *Superpowers:* [SkillBench](skillbench/) (the professional-work benchmark for models) · the [community registry](community/) (npm-for-skills) · the [Interview Gauntlet](https://mohitagw15856.github.io/pm-claude-skills/gauntlet.html) · [CI recipes](action/examples/) + [ambient hooks](hooks/) · Hugging Face [dataset publishing](dataset/) · [localization to 8 languages](i18n/). 🤯 *Breathtaking:* [living artifacts](https://mohitagw15856.github.io/pm-claude-skills/), [Document X-ray](https://mohitagw15856.github.io/pm-claude-skills/xray.html), [The Gym](https://mohitagw15856.github.io/pm-claude-skills/gym.html), [`pm-vision`](plugins/pm-vision), [`style-fingerprint`](skills/style-fingerprint/SKILL.md), [`evidence-lock`](skills/evidence-lock/SKILL.md). ✨ *Revamped:* the playground command bar + Galaxy 2.0 with a guided Sky tour. **426 skills · 62 bundles · 25 professions.** → [CHANGELOG](CHANGELOG.md) · [all releases](https://github.com/mohitagw15856/pm-claude-skills/releases).
 
 ### ▶ See it in action — [try the live Skill Playground](https://mohitagw15856.github.io/pm-claude-skills/)
 
@@ -70,6 +70,43 @@ A community-built library of professional skills for every field — product man
 [![Skill Playground demo — pick a skill, fill the form, run it with your own Claude key](web/docs-assets/playground-demo.gif)](https://mohitagw15856.github.io/pm-claude-skills/)
 
 <sub>👆 Pick any skill, fill a short form, and run it with your own key — no install required.</sub>
+
+---
+
+## ✨ The showcase — six things no other skills library does
+
+<table>
+  <tr>
+    <td width="50%">
+      <a href="https://mohitagw15856.github.io/pm-claude-skills/boardroom.html"><img src="web/docs-assets/showcase/boardroom.png" alt="The Boardroom — five AI executives debate your document in rounds, with severity-tagged findings" /></a>
+      <b>🏛️ <a href="https://mohitagw15856.github.io/pm-claude-skills/boardroom.html">The Boardroom</a></b> — paste a PRD or pitch and five AI executives debate it live: severity-tagged openings, cross-examination, then a Chair's verdict memo with the changes that would survive the room. Verdicts export as <a href="https://mohitagw15856.github.io/pm-claude-skills/verify.html">verifiable attestations</a>. Ready to be questioned yourself? <a href="https://mohitagw15856.github.io/pm-claude-skills/defend.html">Defend it</a>.
+    </td>
+    <td width="50%">
+      <a href="https://mohitagw15856.github.io/pm-claude-skills/xray.html"><img src="web/docs-assets/showcase/xray.png" alt="Document X-ray — sentences heat-mapped by evidence strength with an evidence score" /></a>
+      <b>🩻 <a href="https://mohitagw15856.github.io/pm-claude-skills/xray.html">Document X-ray</a></b> — see the evidence skeleton under your prose: every sentence classified as <i>data · sourced · assertion · superlative · assumption</i>, load-bearing lines outlined, weakest claims listed to fix first — before someone in the meeting finds them for you.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <a href="https://mohitagw15856.github.io/pm-claude-skills/"><img src="web/docs-assets/showcase/artifacts.png" alt="Living artifacts — an interactive RICE board with sliders and an animated journey map rendered from skill output" /></a>
+      <b>🎛 <a href="https://mohitagw15856.github.io/pm-claude-skills/">Living artifacts</a></b> — outputs you can <i>grab</i>, not just read: RICE results render as a live board (drag a confidence slider, watch the ranking re-sort), journeys as an animated emotion curve, health checks as gauges. The document and the instrument, together.
+    </td>
+    <td width="50%">
+      <a href="https://mohitagw15856.github.io/pm-claude-skills/gauntlet.html"><img src="web/docs-assets/showcase/gauntlet.png" alt="The Interview Gauntlet — four stages from job posting to signed offer" /></a>
+      <b>🏆 <a href="https://mohitagw15856.github.io/pm-claude-skills/gauntlet.html">The Interview Gauntlet</a></b> — job posting → signed offer, one arc: decode what the role <i>actually</i> wants, forge your stories, survive five hiring-manager questions, negotiate against a recruiter with a hidden band — and get a readiness score /100. Also in the ring: <a href="https://mohitagw15856.github.io/pm-claude-skills/gym.html">🥊 The Gym</a>.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <a href="https://mohitagw15856.github.io/pm-claude-skills/"><img src="web/docs-assets/showcase/cmdbar.png" alt="The command bar — describe your task in plain words and get matched to the right skill instantly" /></a>
+      <b>🪄 <a href="https://mohitagw15856.github.io/pm-claude-skills/">The command bar</a></b> — don't browse 426 cards; just say it: <i>"a blameless postmortem for Friday's outage"</i> → the top three skills, instantly, locally, before you've even entered a key. Enter opens the best match.
+    </td>
+    <td width="50%">
+      <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy.html"><img src="web/docs-assets/showcase/galaxy.png" alt="Skill Galaxy — the library as a living star map with a guided sky tour" /></a>
+      <b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy.html">The Skill Galaxy</a></b> — the whole library as a living star map (brightness = eval score). Press <b>▶ Sky tour</b> and the camera flies you across the professions, then traces a Journey constellation. Click any star for details; search flies you to it.
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -819,7 +856,7 @@ More templates will follow. If you want to contribute one, see the [template con
 <details>
 <summary>Read more ↓</summary>
 
-**Latest: the breathtaking wave — [living artifacts](https://mohitagw15856.github.io/pm-claude-skills/), [Document X-ray](https://mohitagw15856.github.io/pm-claude-skills/xray.html), [The Gym](https://mohitagw15856.github.io/pm-claude-skills/gym.html), [`pm-vision`](plugins/pm-vision), [`style-fingerprint`](skills/style-fingerprint/SKILL.md) & [`evidence-lock`](skills/evidence-lock/SKILL.md)** *(v38.0: SkillSpec, The Defense, attestations, A2A, outcome tracking & the dataset).* 426 skills across 62 bundles, 25 professions. Every tagged release has complete notes on the **[Releases page](https://github.com/mohitagw15856/pm-claude-skills/releases)**.
+**Latest: v39.0.0 — three waves in one:** [SkillBench](skillbench/), the [community registry](community/), the [Interview Gauntlet](https://mohitagw15856.github.io/pm-claude-skills/gauntlet.html), [living artifacts](https://mohitagw15856.github.io/pm-claude-skills/), [Document X-ray](https://mohitagw15856.github.io/pm-claude-skills/xray.html), [The Gym](https://mohitagw15856.github.io/pm-claude-skills/gym.html), pm-vision, i18n, HF publishing, CI recipes & the Galaxy Sky tour. 426 skills across 62 bundles, 25 professions. Every tagged release has complete notes on the **[Releases page](https://github.com/mohitagw15856/pm-claude-skills/releases)**.
 
 Full [Keep a Changelog](https://keepachangelog.com/)-format history — every release back to the start — is in **[CHANGELOG.md](CHANGELOG.md)**.
 
