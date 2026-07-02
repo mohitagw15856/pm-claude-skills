@@ -9,6 +9,8 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [42.0.0] — every Production-Ready skill gets depth, the arenas get voices, and the web gets a safety net — 2026-07-02
+
 ### Added — the everything-else wave (protection, theatre, depth)
 - **🧪 CI web smoke suite** ([tests/web-smoke.mjs](tests/web-smoke.mjs) + [web-tests.yml](.github/workflows/web-tests.yml)) — all 21 interactive pages load headlessly with zero console/page errors on every web PR and push, plus load-bearing interaction checks: keyless guards on every arena, command-bar routing, the artifact renderer, the attestation round-trip, Galaxy fly-to-search. The insurance layer that would have caught the Galaxy crashes before a human did.
 - **🔊 Voice for the arenas** ([web/voice.js](web/voice.js)) — **Theatre mode**: each Boardroom executive (and the Defense examiners, the Gauntlet's interviewer and recruiter) speaks their turn aloud in a distinct browser voice — deterministic voice assignment with per-persona rate/pitch, markdown and severity tags cleaned for speech. **🎙 Dictation**: answer the Defense and both Gauntlet stages out loud via browser speech recognition. Zero API cost; feature-detected, buttons hide when unsupported.

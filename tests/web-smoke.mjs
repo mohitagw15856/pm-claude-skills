@@ -130,7 +130,10 @@ const PAGES = [
   { url: 'canvas.html' }, { url: 'agent.html' }, { url: 'studio.html' },
   { url: 'brain.html' }, { url: 'ask.html' }, { url: 'daily.html' },
   { url: 'jobs.html' }, { url: 'hub.html' }, { url: 'grade.html' },
-  { url: 'learn.html' }, { url: 'catalog.html' }, { url: 'examples.html' },
+  { url: 'learn.html' }, { url: 'examples.html' },
+  // NOTE: catalog/leaderboard/community/coverage are GENERATED pages
+  // (gitignored) — they don't exist in a fresh checkout, so CI can't load
+  // them. They're covered indirectly: build scripts run in check-generated.
 ];
 
 const base = process.env.BASE || '';
@@ -147,6 +150,8 @@ for (const spec of PAGES) {
   const errs = [];
   page.on('console', (m) => { if (m.type() === 'error' && !ignorable(m.text())) errs.push('console: ' + m.text().slice(0, 200)); });
   page.on('pageerror', (e) => errs.push('pageerror: ' + String(e.message).slice(0, 200)));
+  // Name the URL on any 4xx/5xx — console 404 messages omit it, which makes failures unreadable.
+  page.on('response', (r) => { if (r.status() >= 400 && !ignorable(r.url())) errs.push('http ' + r.status() + ': ' + r.url().slice(-120)); });
   try {
     await page.goto(origin + '/' + spec.url, { waitUntil: 'domcontentloaded', timeout: 20000 });
     await page.waitForTimeout(spec.settle || 1200);
