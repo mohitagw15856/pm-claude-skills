@@ -59,6 +59,8 @@
     { group: 'Tools', items: [
       ['boardroom.html', '🏛️ Boardroom'],
       ['defend.html', '🛡️ Defend'],
+      ['gym.html', '🥊 The Gym'],
+      ['xray.html', '🩻 X-ray'],
       ['agent.html', '✨ Auto-Agent'],
       ['canvas.html', '🧩 Workflow Canvas'],
       ['ask.html', '❓ Ask'],

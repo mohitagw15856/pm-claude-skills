@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>Document X-ray — see your document's evidence skeleton</title>
+<meta name="description" content="Paste any document and see it like an MRI: every sentence heat-mapped by evidence strength — data, sourced, assertion, superlative, or hidden assumption — with the load-bearing sentences and the weakest claims called out." />
+<link rel="stylesheet" href="styles.css" />
+<script src="providers.js"></script>
+<style>
+  .xr-wrap { max-width: 1080px; margin: 0 auto; padding: 16px 22px 70px; }
+  .lead { color: #c7cfda; font-size: 15.5px; }
+  .doc-in { width: 100%; box-sizing: border-box; min-height: 160px; padding: 12px 14px; border-radius: 12px; background: var(--panel); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 14px; line-height: 1.5; }
+  .bar { display: flex; gap: 10px; align-items: center; margin: 12px 0; flex-wrap: wrap; }
+  .scan { display: grid; grid-template-columns: 1fr 300px; gap: 16px; margin-top: 6px; }
+  @media (max-width: 860px) { .scan { grid-template-columns: 1fr; } }
+  .film { border: 1px solid var(--border); border-radius: 14px; background: var(--panel); padding: 16px 18px; font-size: 14.5px; line-height: 1.85; position: relative; overflow: hidden; }
+  .film.scanning::after { content: ''; position: absolute; left: 0; right: 0; top: -40%; height: 26%;
+    background: linear-gradient(180deg, transparent, rgba(217,119,87,.14), transparent);
+    animation: sweep 1.6s linear infinite; }
+  @keyframes sweep { from { top: -30%; } to { top: 110%; } }
+  @media (prefers-reduced-motion: reduce) { .film.scanning::after { animation: none; } }
+  .s { border-bottom: 2px solid transparent; border-radius: 3px; padding: 0 1px; opacity: 0; transition: opacity .35s ease; cursor: help; }
+  .s.on { opacity: 1; }
+  .s.data { background: rgba(90,209,154,.14); border-bottom-color: #5ad19a; }
+  .s.sourced { background: rgba(106,169,255,.13); border-bottom-color: #6aa9ff; }
+  .s.assertion { background: rgba(255,180,84,.12); border-bottom-color: #ffb454; }
+  .s.superlative { background: rgba(255,92,92,.14); border-bottom-color: #ff5c5c; }
+  .s.assumption { background: rgba(201,164,255,.13); border-bottom-color: #c9a4ff; border-bottom-style: dashed; }
+  .s.load { box-shadow: inset 0 0 0 1px rgba(217,119,87,.7); }
+  .panel { border: 1px solid var(--border); border-radius: 14px; background: var(--panel); padding: 14px 16px; height: fit-content; position: sticky; top: 12px; font-size: 13px; }
+  .panel h3 { margin: 0 0 8px; font-size: 13px; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); }
+  .legend div { display: flex; align-items: center; gap: 8px; margin: 5px 0; }
+  .sw { width: 14px; height: 14px; border-radius: 4px; flex: none; }
+  .count { margin-left: auto; font-weight: 700; }
+  .score-ring { text-align: center; margin: 8px 0 14px; }
+  .score-ring b { font-size: 34px; }
+  .score-ring small { display: block; color: var(--muted); }
+  .lb { border-top: 1px solid var(--border); margin-top: 12px; padding-top: 10px; }
+  .lb p { margin: 6px 0; color: var(--muted); font-size: 12.5px; }
+  .lb p b { color: var(--text); font-weight: 600; }
+  .worst { color: #ff8f8f; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Document X-ray</h1><p class="tagline">See the evidence skeleton under your prose.</p></div></div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-fable-5">Fable 5 ✨</option><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your key stays in this browser. The document goes only to the model provider you choose.</div>
+
+<div class="xr-wrap">
+  <p class="lead">Paste a document and see it like an MRI: every sentence classified by what's holding it up — <strong style="color:#5ad19a">data</strong>, <strong style="color:#6aa9ff">sourced claim</strong>, <strong style="color:#ffb454">bare assertion</strong>, <strong style="color:#ff5c5c">unsupported superlative</strong>, or <strong style="color:#c9a4ff">hidden assumption</strong> — with the load-bearing sentences outlined. Then fix the red ones before someone in the meeting finds them for you.</p>
+
+  <textarea id="doc" class="doc-in" placeholder="Paste the document — a PRD, strategy memo, pitch, exec update…"></textarea>
+  <div class="bar">
+    <button id="runBtn" class="primary" type="button">🩻 X-ray it</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+    <span id="status" class="status"></span>
+  </div>
+
+  <div class="scan" id="scan" hidden>
+    <div class="film" id="film"></div>
+    <aside class="panel">
+      <h3>Evidence score</h3>
+      <div class="score-ring"><b id="score">–</b><small>0 = vibes · 100 = fully grounded</small></div>
+      <h3>Legend</h3>
+      <div class="legend">
+        <div><span class="sw" style="background:#5ad19a"></span> Data / measured <span class="count" id="c-data">0</span></div>
+        <div><span class="sw" style="background:#6aa9ff"></span> Sourced claim <span class="count" id="c-sourced">0</span></div>
+        <div><span class="sw" style="background:#ffb454"></span> Bare assertion <span class="count" id="c-assertion">0</span></div>
+        <div><span class="sw" style="background:#ff5c5c"></span> Superlative <span class="count" id="c-superlative">0</span></div>
+        <div><span class="sw" style="background:#c9a4ff"></span> Hidden assumption <span class="count" id="c-assumption">0</span></div>
+      </div>
+      <div class="lb" id="loadBearing"></div>
+      <div class="lb" id="fixFirst"></div>
+    </aside>
+  </div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let controller=null;
+const CLASSES=['data','sourced','assertion','superlative','assumption'];
+const WEIGHT={data:1,sourced:0.85,assertion:0.35,superlative:0,assumption:0.15,neutral:null};
+
+init();
+function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('runBtn').addEventListener('click',run);
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+}
+
+async function run(){
+  const key=el('apiKey').value.trim(), local=PMProviders.current().local;
+  if(!key&&!local) return setStatus('Enter your '+PMProviders.current().name+' key first — or pick the In-browser (no key) provider.',true);
+  let doc=el('doc').value.trim();
+  if(doc.length<200) return setStatus('Paste at least a few paragraphs — an X-ray needs a body.',true);
+  if(doc.length>15000) doc=doc.slice(0,15000);
+  if(window.pmTrack) pmTrack('xray/run');
+  el('runBtn').disabled=true; el('stopBtn').hidden=false;
+  el('scan').hidden=false; el('film').innerHTML=''; el('film').classList.add('scanning');
+  el('score').textContent='–'; el('loadBearing').innerHTML=''; el('fixFirst').innerHTML='';
+  CLASSES.forEach(c=>el('c-'+c).textContent='0');
+  setStatus('Scanning the evidence skeleton…');
+  controller=new AbortController();
+
+  const system=`You are an evidence auditor. Split the document into its sentences (headings and list items count as sentences; keep original order and wording EXACTLY — do not paraphrase, merge, or drop any). Classify each sentence:
+- "data": contains a concrete measured number/date from the author's own instrumentation or stated measurement
+- "sourced": cites or clearly attributes an external source, research, or named evidence
+- "assertion": a factual claim with no support given
+- "superlative": an unsupported superlative or absolute ("best", "seamless", "industry-leading", "no competitors")
+- "assumption": presents something uncertain as settled (hidden assumption)
+- "neutral": structure, transitions, headings, or statements of intent with nothing to support
+Also identify the load-bearing sentences — the few the whole document's argument rests on.
+Return STRICT JSON only, no code fences:
+{"sentences":[{"t":"<exact sentence text>","c":"data|sourced|assertion|superlative|assumption|neutral","note":"<only for non-neutral: one short line — for weak classes, what evidence would fix it>"}],"loadBearing":[<sentence indexes, 0-based, max 5>],"fixFirst":[<indexes of the 3 weakest load-relevant sentences>]}`;
+  try{
+    const raw=await PMProviders.stream({key,model:el('model').value,system,userMessage:'THE DOCUMENT:\n\n'+doc,signal:controller.signal,
+      onDelta:(a)=>{ setStatus('Scanning… '+a.length.toLocaleString()+' chars analysed'); }});
+    const js=raw.replace(/^```(json)?|```$/gm,'').trim();
+    const data=JSON.parse(js.slice(js.indexOf('{'), js.lastIndexOf('}')+1));
+    render(data);
+    setStatus('X-ray complete — hover any highlight for the diagnosis.');
+  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Scan failed — try a shorter document.'),true); }
+  finally{ el('runBtn').disabled=false; el('stopBtn').hidden=true; el('film').classList.remove('scanning'); controller=null; }
+}
+
+function render(data){
+  const film=el('film'); film.innerHTML='';
+  const sentences=(data.sentences||[]).slice(0,400);
+  const lb=new Set(data.loadBearing||[]), fx=new Set(data.fixFirst||[]);
+  const counts={data:0,sourced:0,assertion:0,superlative:0,assumption:0};
+  let wSum=0,wN=0;
+  sentences.forEach((s,i)=>{
+    const cls=CLASSES.includes(s.c)?s.c:'neutral';
+    if(cls!=='neutral'){ counts[cls]++; wSum+=WEIGHT[cls]; wN++; }
+    const span=document.createElement('span');
+    span.className='s '+cls+(lb.has(i)?' load':'');
+    span.textContent=s.t+' ';
+    if(s.note) span.title=(lb.has(i)?'LOAD-BEARING · ':'')+s.note;
+    else if(lb.has(i)) span.title='LOAD-BEARING — the argument rests on this line';
+    film.appendChild(span);
+    setTimeout(()=>span.classList.add('on'), 24*i); // the scan reveals top-to-bottom
+  });
+  CLASSES.forEach(c=>el('c-'+c).textContent=String(counts[c]));
+  const score=wN?Math.round((wSum/wN)*100):0;
+  animateScore(score);
+  const lbBox=el('loadBearing');
+  lbBox.innerHTML='<h3>Load-bearing sentences</h3>';
+  [...lb].slice(0,5).forEach(i=>{ if(sentences[i]) { const p=document.createElement('p'); p.innerHTML='<b>“'+esc(trunc(sentences[i].t,110))+'”</b>'; lbBox.appendChild(p);} });
+  const fxBox=el('fixFirst');
+  fxBox.innerHTML='<h3>Fix these first</h3>';
+  [...fx].slice(0,3).forEach(i=>{ const s=sentences[i]; if(!s) return; const p=document.createElement('p'); p.className='worst'; p.innerHTML='“'+esc(trunc(s.t,90))+'” — '+esc(s.note||''); fxBox.appendChild(p); });
+  if(!fx.size) fxBox.innerHTML+='<p>Nothing urgent — solid skeleton.</p>';
+}
+
+function animateScore(target){
+  const n=el('score'); let v=0;
+  const step=()=>{ v=Math.min(v+Math.max(1,Math.round(target/30)),target); n.textContent=String(v);
+    n.style.color = v>=70?'#5ad19a':v>=40?'#ffb454':'#ff5c5c';
+    if(v<target) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+}
+function trunc(t,n){ return t.length>n?t.slice(0,n)+'…':t; }
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+function esc(s){ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

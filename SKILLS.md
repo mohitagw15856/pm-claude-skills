@@ -1,4 +1,4 @@
-# 🗂️ All 421 Skills — full catalog
+# 🗂️ All 426 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -6,7 +6,7 @@
 
 **Jump to:** [🚀 Product](#product) · [📣 Marketing & Growth](#marketing-growth) · [💻 Engineering & AI](#engineering-ai) · [📊 Data & Analytics](#data-analytics) · [🎨 Design & Content](#design-content) · [🤝 Customers & Sales](#customers-sales) · [💰 Finance, Ops & Business](#finance-ops-business) · [⚖️ Legal & Compliance](#legal-compliance) · [🧑 You & Career](#you-career) · [🌍 Industries & Public Sector](#industries-public-sector)
 
-## 🚀 Product (41 skills)
+## 🚀 Product (42 skills)
 
 ### `pm-advanced` — 5 skills · 5 eval-scored
 
@@ -43,7 +43,7 @@
 | **Job Story Mapper** (`job-story-mapper`) | Write Jobs-to-be-Done (JTBD) job stories and map customer jobs across functional, social, and emotional dimensions. | ✅ 5/5 |
 | **User Interview Synthesis** (`user-interview-synthesis`) | Synthesises user interview transcripts into structured research findings. | ✅ 5/5 |
 
-### `pm-essentials` — 7 skills · 6 eval-scored
+### `pm-essentials` — 8 skills · 6 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -52,6 +52,7 @@
 | **Meeting Notes** (`meeting-notes`) | Structure and format meeting notes following PM best practices. | ✅ 5/5 |
 | **PRD Template** (`prd-template`) | Create a Product Requirements Document following proven PM template structure. | ✅ 4.8/5 |
 | **Stakeholder Update** (`stakeholder-update`) | Create concise executive stakeholder updates using the BLUF (Bottom Line Up Front) framework. | ✅ 4.8/5 |
+| **Style Fingerprint** (`style-fingerprint`) | Study 3-5 documents the user actually shipped and distil a compact style card — so every skill writes in their voice, not the model's. | — |
 | **User Research Synthesis** (`user-research-synthesis`) | Analyze and synthesize user research findings into structured, actionable insights. | ✅ 5/5 |
 | **Which Skill Router** (`which-skill`) | Route a fuzzy request to the right skill in this library. | — |
 
@@ -276,7 +277,7 @@
 | **Threat Model** (`threat-model`) | Threat-model a system or feature to find where it could be attacked, before you build it. | — |
 | **Vulnerability Triage** (`vuln-triage`) | Triage a vulnerability or scanner finding — assess real severity, exploitability, and how urgently to fix. | — |
 
-## 📊 Data & Analytics (12 skills)
+## 📊 Data & Analytics (11 skills)
 
 ### `pm-analytics` — 3 skills · 3 eval-scored
 
@@ -286,12 +287,11 @@
 | **Product Health Analysis** (`product-health-analysis`) | Interpret product metrics against goals and surface actionable signals. | ✅ 5/5 |
 | **Retention Analysis** (`retention-analysis`) | Structure a retention analysis, churn investigation, or engagement deep-dive for any product team. | ✅ 5/5 |
 
-### `pm-data` — 9 skills · 8 eval-scored
+### `pm-data` — 8 skills · 8 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **A/B Test Readout** (`ab-test-readout`) | Analyse a finished A/B test and write the readout — the result, whether it's statistically and practically significant, what it means, and the… | ✅ 4.8/5 |
-| **Chart Data Extractor** (`chart-data-extractor`) | Extract pixel-level data from an image of a chart or graph and produce a structured data table. | — |
 | **Cohort Analysis** (`cohort-analysis`) | Structure a cohort analysis for retention, LTV, or behavioural patterns. | ✅ 3.3/5 |
 | **Dashboard Brief** (`dashboard-brief`) | Convert a business question into a complete dashboard specification. | ✅ 5/5 |
 | **Data Pipeline Spec** (`data-pipeline-spec`) | Design an ETL/ELT data pipeline specification. | ✅ 5/5 |
@@ -605,7 +605,7 @@
 | **Portfolio Page** (`portfolio-page`) | Structure a portfolio or case-study page that shows your work, not just lists it. | ✅ 5/5 |
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 
-## 🌍 Industries & Public Sector (75 skills)
+## 🌍 Industries & Public Sector (80 skills)
 
 ### `pm-agentops` — 5 skills
 
@@ -743,15 +743,25 @@
 | **Property Offer Letter** (`property-offer-letter`) | Write a buyer's offer cover letter to a seller to strengthen a real-estate bid. | — |
 | **Tenant Screening Guide** (`tenant-screening-guide`) | Design a fair, consistent tenant screening process for a rental. | — |
 
-### `pm-research` — 4 skills · 4 eval-scored
+### `pm-research` — 5 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Clinical Case Summary** (`clinical-case-summary`) | Write a structured clinical case summary or case presentation. | ✅ 5/5 |
+| **Evidence Lock** (`evidence-lock`) | Write or rewrite a document in evidence-locked mode: no unsourced sentences — every substantive claim carries a footnote citing the exact passage… | — |
 | **Literature Review** (`literature-review`) | Structure and write a literature review for any research topic. | ✅ 4/5 |
 | **Patient Communication** (`patient-communication`) | Write clear, plain-English patient communications for any healthcare context. | ✅ 5/5 |
 | **Research Protocol** (`research-protocol`) | Write a structured research protocol or study design document. | ✅ 4.8/5 |
 
+### `pm-vision` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Chart Data Extractor** (`chart-data-extractor`) | Extract pixel-level data from an image of a chart or graph and produce a structured data table. | — |
+| **Deck Autopsy** (`deck-autopsy`) | Autopsy a slide deck from photos or screenshots of its slides — the narrative arc, the numbers, and what each slide is hiding. | — |
+| **Screenshot Teardown** (`screenshot-teardown`) | Tear down a competitor's product from screenshots of its actual UI — onboarding, pricing page, core flows. | — |
+| **Whiteboard To Spec** (`whiteboard-to-spec`) | Turn photos of a whiteboard, sticky-note wall, or napkin sketch into a structured spec the team can execute. | — |
+
 ---
 
-_421 skills across 61 bundles · 208 eval-scored (49%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_426 skills across 62 bundles · 208 eval-scored (49%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

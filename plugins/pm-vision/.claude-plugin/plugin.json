@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-vision",
+  "version": "1.0.0",
+  "description": "Vision-first skills: point a camera or screenshot at the work and get the structured artifact — whiteboard photos become specs, competitor screenshots become teardowns, slide photos become board pre-reads, chart images become data tables. Built for multimodal models (Fable 5, Sonnet, Gemini); attach images in the playground or paste them in Claude Code.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "vision",
+    "multimodal",
+    "screenshots",
+    "whiteboard",
+    "images"
+  ]
+}

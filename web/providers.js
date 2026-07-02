@@ -12,10 +12,14 @@
       placeholder: 'sk-ant-… (your Anthropic API key)', keyUrl: 'https://console.anthropic.com/settings/keys',
       models: [['claude-fable-5', 'Fable 5 ✨ (newest)'], ['claude-opus-4-8', 'Opus 4.8'], ['claude-sonnet-4-6', 'Sonnet 4.6'], ['claude-haiku-4-5-20251001', 'Haiku 4.5']],
       buildReq: function (o) {
+        // Vision: o.images = [{media_type, data(base64)}] → content blocks before the text.
+        var content = (o.images && o.images.length)
+          ? o.images.map(function (im) { return { type: 'image', source: { type: 'base64', media_type: im.media_type, data: im.data } }; }).concat([{ type: 'text', text: o.userMessage }])
+          : o.userMessage;
         return {
           url: 'https://api.anthropic.com/v1/messages',
           headers: { 'content-type': 'application/json', 'x-api-key': o.key, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
-          body: Object.assign({ model: o.model, max_tokens: 8192, stream: true }, o.system ? { system: o.system } : {}, { messages: [{ role: 'user', content: o.userMessage }] }),
+          body: Object.assign({ model: o.model, max_tokens: 8192, stream: true }, o.system ? { system: o.system } : {}, { messages: [{ role: 'user', content: content }] }),
         };
       },
       delta: function (e) { return (e.type === 'content_block_delta' && e.delta && e.delta.text) ? e.delta.text : ''; },
@@ -28,7 +32,10 @@
       buildReq: function (o) {
         var messages = [];
         if (o.system) messages.push({ role: 'system', content: o.system });
-        messages.push({ role: 'user', content: o.userMessage });
+        var content = (o.images && o.images.length)
+          ? o.images.map(function (im) { return { type: 'image_url', image_url: { url: 'data:' + im.media_type + ';base64,' + im.data } }; }).concat([{ type: 'text', text: o.userMessage }])
+          : o.userMessage;
+        messages.push({ role: 'user', content: content });
         return {
           url: 'https://api.openai.com/v1/chat/completions',
           headers: { 'content-type': 'application/json', authorization: 'Bearer ' + o.key },
@@ -43,10 +50,13 @@
       placeholder: 'AIza… (free Google AI Studio key — no credit card)', keyUrl: 'https://aistudio.google.com/apikey',
       models: [['gemini-2.0-flash', 'Gemini 2.0 Flash'], ['gemini-1.5-pro', 'Gemini 1.5 Pro'], ['gemini-1.5-flash', 'Gemini 1.5 Flash']],
       buildReq: function (o) {
+        var parts = (o.images && o.images.length)
+          ? o.images.map(function (im) { return { inline_data: { mime_type: im.media_type, data: im.data } }; }).concat([{ text: o.userMessage }])
+          : [{ text: o.userMessage }];
         return {
           url: 'https://generativelanguage.googleapis.com/v1beta/models/' + o.model + ':streamGenerateContent?alt=sse&key=' + encodeURIComponent(o.key),
           headers: { 'content-type': 'application/json' },
-          body: Object.assign({}, o.system ? { system_instruction: { parts: [{ text: o.system }] } } : {}, { contents: [{ role: 'user', parts: [{ text: o.userMessage }] }] }),
+          body: Object.assign({}, o.system ? { system_instruction: { parts: [{ text: o.system }] } } : {}, { contents: [{ role: 'user', parts: parts }] }),
         };
       },
       delta: function (e) { try { return e.candidates[0].content.parts[0].text || ''; } catch (_) { return ''; } },

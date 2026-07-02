@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-421 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+426 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -59,7 +59,7 @@
 | Changelog Generator | `pm-engineering` | `pm-engineering/changelog-generator/SYSTEM_PROMPT.md` |
 | Changelog Writer | `pm-devrel` | `pm-devrel/changelog-writer/SYSTEM_PROMPT.md` |
 | Chart | `pm-visuals` | `pm-visuals/chart/SYSTEM_PROMPT.md` |
-| Chart Data Extractor | `pm-data` | `pm-data/chart-data-extractor/SYSTEM_PROMPT.md` |
+| Chart Data Extractor | `pm-vision` | `pm-vision/chart-data-extractor/SYSTEM_PROMPT.md` |
 | Churn Analysis | `pm-cs` | `pm-cs/churn-analysis/SYSTEM_PROMPT.md` |
 | CI/CD Playbook | `pm-engineering` | `pm-engineering/cicd-playbook/SYSTEM_PROMPT.md` |
 | Claude Superpowers | `pm-engineering` | `pm-engineering/claude-superpowers/SYSTEM_PROMPT.md` |
@@ -117,6 +117,7 @@
 | Debt Payoff Plan | `pm-money` | `pm-money/debt-payoff-plan/SYSTEM_PROMPT.md` |
 | Debugging Log Analyser | `pm-engineering` | `pm-engineering/debugging-log-analyser/SYSTEM_PROMPT.md` |
 | Decision Memo | `pm-business` | `pm-business/decision-memo/SYSTEM_PROMPT.md` |
+| Deck Autopsy | `pm-vision` | `pm-vision/deck-autopsy/SYSTEM_PROMPT.md` |
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/SYSTEM_PROMPT.md` |
 | Demand Letter | `pm-legal` | `pm-legal/demand-letter/SYSTEM_PROMPT.md` |
 | Dependency Audit | `pm-engineering` | `pm-engineering/dependency-audit/SYSTEM_PROMPT.md` |
@@ -147,6 +148,7 @@
 | Error Message Writer | `pm-uxwriting` | `pm-uxwriting/error-message-writer/SYSTEM_PROMPT.md` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/SYSTEM_PROMPT.md` |
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/SYSTEM_PROMPT.md` |
+| Evidence Lock | `pm-research` | `pm-research/evidence-lock/SYSTEM_PROMPT.md` |
 | Excel Model | `pm-documents` | `pm-documents/excel-model/SYSTEM_PROMPT.md` |
 | Executive Presence | `pm-comms` | `pm-comms/executive-presence/SYSTEM_PROMPT.md` |
 | Executive Summary | `pm-cross` | `pm-cross/executive-summary/SYSTEM_PROMPT.md` |
@@ -358,6 +360,7 @@
 | Saying No | `pm-comms` | `pm-comms/saying-no/SYSTEM_PROMPT.md` |
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/SYSTEM_PROMPT.md` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/SYSTEM_PROMPT.md` |
+| Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/SYSTEM_PROMPT.md` |
 | Security Incident Response | `pm-security` | `pm-security/security-incident-response/SYSTEM_PROMPT.md` |
 | Security Review | `pm-security` | `pm-security/security-review/SYSTEM_PROMPT.md` |
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/SYSTEM_PROMPT.md` |
@@ -389,6 +392,7 @@
 | Strategic Narrative Generator | `pm-strategy` | `pm-strategy/strategic-narrative-generator/SYSTEM_PROMPT.md` |
 | Strategy Memo | `pm-business` | `pm-business/strategy-memo/SYSTEM_PROMPT.md` |
 | Student Feedback | `pm-education` | `pm-education/student-feedback/SYSTEM_PROMPT.md` |
+| Style Fingerprint | `pm-essentials` | `pm-essentials/style-fingerprint/SYSTEM_PROMPT.md` |
 | Substack Notes Scraper | `pm-writers` | `pm-writers/substack-notes-scraper/SYSTEM_PROMPT.md` |
 | Subtitle & Caption | `pm-localization` | `pm-localization/subtitle-caption/SYSTEM_PROMPT.md` |
 | Support Macro | `pm-support` | `pm-support/support-macro/SYSTEM_PROMPT.md` |
@@ -423,6 +427,7 @@
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/SYSTEM_PROMPT.md` |
 | Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/SYSTEM_PROMPT.md` |
 | Which Skill Router | `pm-essentials` | `pm-essentials/which-skill/SYSTEM_PROMPT.md` |
+| Whiteboard To Spec | `pm-vision` | `pm-vision/whiteboard-to-spec/SYSTEM_PROMPT.md` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/SYSTEM_PROMPT.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/SYSTEM_PROMPT.md` |
 | Workshop Facilitation Guide | `pm-operations` | `pm-operations/workshop-facilitation-guide/SYSTEM_PROMPT.md` |

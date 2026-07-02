@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-421 skills exported. Copy a `.mdc rule` into the tool to use it.
+426 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -59,7 +59,7 @@
 | Changelog Generator | `pm-engineering` | `pm-engineering/changelog-generator/changelog-generator.md` |
 | Changelog Writer | `pm-devrel` | `pm-devrel/changelog-writer/changelog-writer.md` |
 | Chart | `pm-visuals` | `pm-visuals/chart/chart.md` |
-| Chart Data Extractor | `pm-data` | `pm-data/chart-data-extractor/chart-data-extractor.md` |
+| Chart Data Extractor | `pm-vision` | `pm-vision/chart-data-extractor/chart-data-extractor.md` |
 | Churn Analysis | `pm-cs` | `pm-cs/churn-analysis/churn-analysis.md` |
 | CI/CD Playbook | `pm-engineering` | `pm-engineering/cicd-playbook/cicd-playbook.md` |
 | Claude Superpowers | `pm-engineering` | `pm-engineering/claude-superpowers/claude-superpowers.md` |
@@ -117,6 +117,7 @@
 | Debt Payoff Plan | `pm-money` | `pm-money/debt-payoff-plan/debt-payoff-plan.md` |
 | Debugging Log Analyser | `pm-engineering` | `pm-engineering/debugging-log-analyser/debugging-log-analyser.md` |
 | Decision Memo | `pm-business` | `pm-business/decision-memo/decision-memo.md` |
+| Deck Autopsy | `pm-vision` | `pm-vision/deck-autopsy/deck-autopsy.md` |
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/delta-briefing.md` |
 | Demand Letter | `pm-legal` | `pm-legal/demand-letter/demand-letter.md` |
 | Dependency Audit | `pm-engineering` | `pm-engineering/dependency-audit/dependency-audit.md` |
@@ -147,6 +148,7 @@
 | Error Message Writer | `pm-uxwriting` | `pm-uxwriting/error-message-writer/error-message-writer.md` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/escalation-tree.md` |
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/eval-rubric-designer.md` |
+| Evidence Lock | `pm-research` | `pm-research/evidence-lock/evidence-lock.md` |
 | Excel Model | `pm-documents` | `pm-documents/excel-model/excel-model.md` |
 | Executive Presence | `pm-comms` | `pm-comms/executive-presence/executive-presence.md` |
 | Executive Summary | `pm-cross` | `pm-cross/executive-summary/executive-summary.md` |
@@ -358,6 +360,7 @@
 | Saying No | `pm-comms` | `pm-comms/saying-no/saying-no.md` |
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/schedule-recipe.md` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/schema-markup.md` |
+| Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/screenshot-teardown.md` |
 | Security Incident Response | `pm-security` | `pm-security/security-incident-response/security-incident-response.md` |
 | Security Review | `pm-security` | `pm-security/security-review/security-review.md` |
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/security-threat-model.md` |
@@ -389,6 +392,7 @@
 | Strategic Narrative Generator | `pm-strategy` | `pm-strategy/strategic-narrative-generator/strategic-narrative-generator.md` |
 | Strategy Memo | `pm-business` | `pm-business/strategy-memo/strategy-memo.md` |
 | Student Feedback | `pm-education` | `pm-education/student-feedback/student-feedback.md` |
+| Style Fingerprint | `pm-essentials` | `pm-essentials/style-fingerprint/style-fingerprint.md` |
 | Substack Notes Scraper | `pm-writers` | `pm-writers/substack-notes-scraper/substack-notes-scraper.md` |
 | Subtitle & Caption | `pm-localization` | `pm-localization/subtitle-caption/subtitle-caption.md` |
 | Support Macro | `pm-support` | `pm-support/support-macro/support-macro.md` |
@@ -423,6 +427,7 @@
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/voice-of-customer-program.md` |
 | Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/vuln-triage.md` |
 | Which Skill Router | `pm-essentials` | `pm-essentials/which-skill/which-skill.md` |
+| Whiteboard To Spec | `pm-vision` | `pm-vision/whiteboard-to-spec/whiteboard-to-spec.md` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/win-loss-analysis.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/word-document.md` |
 | Workshop Facilitation Guide | `pm-operations` | `pm-operations/workshop-facilitation-guide/workshop-facilitation-guide.md` |

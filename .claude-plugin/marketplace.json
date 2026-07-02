@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-vision",
+      "description": "Vision-first skills: point a camera or screenshot at the work and get the structured artifact — whiteboard photos become specs, competitor screenshots become teardowns, slide photos become board pre-reads, chart images become data tables. Built for multimodal models (Fable 5, Sonnet, Gemini); attach images in the playground or paste them in Claude Code.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-vision",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-agentops",
       "description": "Operate AI agents and LLM features in production: prompt regression suites, model migration plans, context-engineering reviews, agent incident postmortems, and observability specs — plus the pm-ai evaluation and cost skills they build on.",
       "version": "1.0.0",

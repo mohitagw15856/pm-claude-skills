@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-421 skills exported. Copy a `.mdc rule` into the tool to use it.
+426 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -59,7 +59,7 @@
 | Changelog Generator | `pm-engineering` | `pm-engineering/changelog-generator/changelog-generator.mdc` |
 | Changelog Writer | `pm-devrel` | `pm-devrel/changelog-writer/changelog-writer.mdc` |
 | Chart | `pm-visuals` | `pm-visuals/chart/chart.mdc` |
-| Chart Data Extractor | `pm-data` | `pm-data/chart-data-extractor/chart-data-extractor.mdc` |
+| Chart Data Extractor | `pm-vision` | `pm-vision/chart-data-extractor/chart-data-extractor.mdc` |
 | Churn Analysis | `pm-cs` | `pm-cs/churn-analysis/churn-analysis.mdc` |
 | CI/CD Playbook | `pm-engineering` | `pm-engineering/cicd-playbook/cicd-playbook.mdc` |
 | Claude Superpowers | `pm-engineering` | `pm-engineering/claude-superpowers/claude-superpowers.mdc` |
@@ -117,6 +117,7 @@
 | Debt Payoff Plan | `pm-money` | `pm-money/debt-payoff-plan/debt-payoff-plan.mdc` |
 | Debugging Log Analyser | `pm-engineering` | `pm-engineering/debugging-log-analyser/debugging-log-analyser.mdc` |
 | Decision Memo | `pm-business` | `pm-business/decision-memo/decision-memo.mdc` |
+| Deck Autopsy | `pm-vision` | `pm-vision/deck-autopsy/deck-autopsy.mdc` |
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/delta-briefing.mdc` |
 | Demand Letter | `pm-legal` | `pm-legal/demand-letter/demand-letter.mdc` |
 | Dependency Audit | `pm-engineering` | `pm-engineering/dependency-audit/dependency-audit.mdc` |
@@ -147,6 +148,7 @@
 | Error Message Writer | `pm-uxwriting` | `pm-uxwriting/error-message-writer/error-message-writer.mdc` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/escalation-tree.mdc` |
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/eval-rubric-designer.mdc` |
+| Evidence Lock | `pm-research` | `pm-research/evidence-lock/evidence-lock.mdc` |
 | Excel Model | `pm-documents` | `pm-documents/excel-model/excel-model.mdc` |
 | Executive Presence | `pm-comms` | `pm-comms/executive-presence/executive-presence.mdc` |
 | Executive Summary | `pm-cross` | `pm-cross/executive-summary/executive-summary.mdc` |
@@ -358,6 +360,7 @@
 | Saying No | `pm-comms` | `pm-comms/saying-no/saying-no.mdc` |
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/schedule-recipe.mdc` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/schema-markup.mdc` |
+| Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/screenshot-teardown.mdc` |
 | Security Incident Response | `pm-security` | `pm-security/security-incident-response/security-incident-response.mdc` |
 | Security Review | `pm-security` | `pm-security/security-review/security-review.mdc` |
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/security-threat-model.mdc` |
@@ -389,6 +392,7 @@
 | Strategic Narrative Generator | `pm-strategy` | `pm-strategy/strategic-narrative-generator/strategic-narrative-generator.mdc` |
 | Strategy Memo | `pm-business` | `pm-business/strategy-memo/strategy-memo.mdc` |
 | Student Feedback | `pm-education` | `pm-education/student-feedback/student-feedback.mdc` |
+| Style Fingerprint | `pm-essentials` | `pm-essentials/style-fingerprint/style-fingerprint.mdc` |
 | Substack Notes Scraper | `pm-writers` | `pm-writers/substack-notes-scraper/substack-notes-scraper.mdc` |
 | Subtitle & Caption | `pm-localization` | `pm-localization/subtitle-caption/subtitle-caption.mdc` |
 | Support Macro | `pm-support` | `pm-support/support-macro/support-macro.mdc` |
@@ -423,6 +427,7 @@
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/voice-of-customer-program.mdc` |
 | Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/vuln-triage.mdc` |
 | Which Skill Router | `pm-essentials` | `pm-essentials/which-skill/which-skill.mdc` |
+| Whiteboard To Spec | `pm-vision` | `pm-vision/whiteboard-to-spec/whiteboard-to-spec.mdc` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/win-loss-analysis.mdc` |
 | Word Document | `pm-documents` | `pm-documents/word-document/word-document.mdc` |
 | Workshop Facilitation Guide | `pm-operations` | `pm-operations/workshop-facilitation-guide/workshop-facilitation-guide.mdc` |

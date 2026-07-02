@@ -432,6 +432,26 @@
     {
       "skill": "outcome-tracker",
       "input": "We just committed Q3 priorities off this RICE table: 1) Onboarding redesign, RICE 320, we claim activation goes 42%->55% by end of Q3. 2) SSO, RICE 210, we claim it unblocks 4 stalled enterprise deals (~$180k) within 60 days of ship. 3) Dark mode, RICE 90. I am 80% confident on onboarding, 60% on SSO. Record the predictions."
+    },
+    {
+      "skill": "whiteboard-to-spec",
+      "input": "Attached are two photos of our sprint-planning whiteboard from this afternoon (same board, left and right halves). The session was about the Q3 referral feature. Write it up before we all forget what the arrows meant."
+    },
+    {
+      "skill": "screenshot-teardown",
+      "input": "Attached: 4 screenshots of Rival A's new onboarding flow (signup, workspace setup, template picker, paywall). We are redesigning our own onboarding next sprint — what are they optimising for and what should we steal or avoid?"
+    },
+    {
+      "skill": "deck-autopsy",
+      "input": "Attached are photos of 12 slides from a competitor's Series B deck that leaked at a conference. We are pitching the same investors next month. What is their argument, where does it break, and what questions is the deck avoiding?"
+    },
+    {
+      "skill": "style-fingerprint",
+      "input": "Here are four things I actually wrote and shipped: two weekly exec updates, a launch announcement to the company, and a long Slack post about our pricing change. [samples pasted]. Learn my voice so the updates you draft stop sounding like a press release."
+    },
+    {
+      "skill": "evidence-lock",
+      "input": "Sources: our Q2 churn analysis, the pricing experiment readout, and 12 win/loss interview summaries [pasted]. Task: write the 'why we are changing pricing' section of the board memo in hard-lock mode — the CFO checks footnotes for sport."
     }
   ]
 }

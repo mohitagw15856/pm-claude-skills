@@ -1,0 +1,76 @@
+---
+aliases: ["Screenshot Teardown"]
+tags: [pm-skills, skill]
+skill: screenshot-teardown
+description: "Tear down a competitor's product from screenshots of its actual UI — onboarding, pricing page, core flows. Use when given screenshots of a rival's app or website and asked what they're doing, how their flow works, or what to learn/steal/avoid. Produces a UX-and-strategy teardown grounded in what is visibly on screen, with an inferences-vs-observations split. Requires image input. For a market-level teardown without screenshots use competitor-teardown."
+---
+
+# Screenshot Teardown Skill
+
+Marketing pages say what a competitor claims; screenshots show what they shipped. This skill reads real UI evidence — layout, copy, defaults, friction, what's promoted and what's buried — and turns it into competitive insight you can defend, because every claim points at pixels.
+
+## What This Skill Produces
+
+- A **screen-by-screen read**: what each screenshot shows, what the design is optimising for, where the friction is
+- **Strategic inferences** — pricing/packaging signals, target-user signals, maturity signals — each labelled as inference and tied to its visual evidence
+- **Learn / steal / avoid** recommendations for your own product
+
+## Required Inputs
+
+- **The screenshots** (up to ~5 per pass; more → ask which flow matters most). If none attached, ask — never tear down from memory of the product.
+- **Your product and angle** (ask if missing): who's analysing, and for what decision (pricing? onboarding redesign? battlecard?)
+
+## Reading Method
+
+1. **Anchor every claim to pixels.** "Their onboarding asks for a credit card at step 1" — only if the screenshot shows it. Cite which screenshot each observation comes from.
+2. **Read the hierarchy, not just the content.** What's biggest, first, pre-selected, and colourful is what they *want* used; what's behind a "More" menu is what they don't. Defaults are strategy.
+3. **Count the friction.** Fields, steps, decisions, permission asks — visible effort before value is a measurable choice.
+4. **Read the copy as positioning.** Button labels, empty states, and upgrade nags reveal the audience and the monetisation pressure better than their homepage does.
+5. **Separate the two registers strictly:**
+   - **Observed** — on screen, citable
+   - **Inferred** — a reading of intent ("the pre-selected annual plan suggests LTV pressure"), always labelled `[inference]`
+6. **Mind the screenshot's limits.** One user's session, one plan tier, one moment. Note what state the shots can't show (A/B variants, other tiers, mobile vs desktop).
+
+## Output Format
+
+### Screenshot teardown: [competitor] — [flow examined]
+
+**Evidence base:** [n] screenshots of [what], captured [date if known]. What this evidence can't show: [limits].
+
+**Screen-by-screen:**
+**[#1 — screen name]** — Shows: [observed]. Optimised for: [read]. Friction: [count/notes]. Notable copy: "[verbatim]".
+
+**What they're optimising for overall:** [2-3 lines synthesising the design intent]
+
+**Strategic signals:**
+| Signal | Evidence (screenshot #) | Observed / Inference |
+|---|---|---|
+
+**For us — learn / steal / avoid:**
+- **Learn:** [pattern worth understanding]
+- **Steal:** [specific, adaptable pattern — with what to change]
+- **Avoid:** [their visible mistake and why we think it's one]
+
+## Quality Checks
+
+- [ ] Every observation cites its screenshot; every inference is labelled `[inference]`
+- [ ] Copy is quoted verbatim where it carries the point, not paraphrased
+- [ ] The friction count is actual (fields/steps visible), not vibes
+- [ ] The teardown states what the screenshots *cannot* show
+- [ ] Recommendations name what to change when stealing a pattern — context transplants fail
+
+## Anti-Patterns
+
+- [ ] Do not analyse a product from training-data memory when screenshots are provided — the pixels are the source of truth, and the product has probably changed
+- [ ] Do not proceed without images — that's `competitor-teardown`'s job
+- [ ] Do not present inferences as facts — "they're struggling with churn" is a reading, not a screenshot
+- [ ] Do not sneer — "cluttered" is not analysis; name what the clutter costs and whom it serves
+- [ ] Do not extrapolate a whole strategy from one screen — say when the evidence is thin
+
+---
+<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
+     variable for the highlighted text — replace it with your plugin's equivalent
+     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
+Apply the skill above to the following input:
+
+{{selection}}

@@ -814,6 +814,7 @@ function showSample(s) {
   out.innerHTML = banner + DOMPurify.sanitize(marked.parse(x.output));
   if (window.PMDiagrams) PMDiagrams.enhance(out, s.name);
   if (window.PMCharts) PMCharts.enhance(out, s.name);
+  if (window.PMArtifacts) PMArtifacts.enhance(out);
   setStatus(`📄 Showing a pre-generated sample${x.source ? ' (' + x.source + ')' : ''} — no key used.`);
   el('outputWrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
@@ -869,8 +870,51 @@ function renderRelated(s) {
     }));
 }
 
+// Vision skills accept image attachments (whiteboard photos, competitor screenshots,
+// slide photos, chart images) sent as content blocks to providers that support them.
+const VISION_SKILLS = new Set(['whiteboard-to-spec', 'screenshot-teardown', 'deck-autopsy', 'chart-data-extractor']);
+let attachedImages = []; // [{media_type, data(base64)}]
+
+function renderVisionAttach(s) {
+  let box = el('visionAttach');
+  attachedImages = [];
+  if (!VISION_SKILLS.has(s.name)) { if (box) box.remove(); return; }
+  if (!box) {
+    box = document.createElement('div');
+    box.id = 'visionAttach';
+    box.style.cssText = 'border:1px dashed var(--accent);border-radius:12px;padding:10px 14px;margin:10px 0;font-size:13px;';
+    el('inputForm').insertAdjacentElement('beforebegin', box);
+  }
+  box.innerHTML = '<strong>📷 Attach image(s)</strong> — this skill reads pictures (up to 5, ~4&nbsp;MB each). ' +
+    '<input type="file" id="visionFiles" accept="image/png,image/jpeg,image/webp,image/gif" multiple style="display:block;margin-top:8px" />' +
+    '<div id="visionPreviews" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px"></div>' +
+    '<div class="copy-msg" id="visionMsg"></div>';
+  el('visionFiles').addEventListener('change', (e) => {
+    const files = [...e.target.files].slice(0, 5);
+    attachedImages = [];
+    el('visionPreviews').innerHTML = '';
+    files.forEach((file) => {
+      if (file.size > 4.5 * 1024 * 1024) { el('visionMsg').textContent = `${file.name} is too large (>4.5 MB) — resize it first.`; return; }
+      const reader = new FileReader();
+      reader.onload = () => {
+        const url = String(reader.result || '');
+        const m = url.match(/^data:([^;]+);base64,(.*)$/s);
+        if (!m) return;
+        attachedImages.push({ media_type: m[1], data: m[2] });
+        const img = document.createElement('img');
+        img.src = url;
+        img.style.cssText = 'height:56px;border-radius:8px;border:1px solid var(--border)';
+        el('visionPreviews').appendChild(img);
+        el('visionMsg').textContent = `${attachedImages.length} image(s) attached — sent only to your chosen provider.`;
+      };
+      reader.readAsDataURL(file);
+    });
+  });
+}
+
 function selectSkill(s) {
   current = s;
+  renderVisionAttach(s);
   recordRecent(s.name);
   // Reset any remix from a previously-open skill (a shared remix link re-applies it after this).
   if (el('remixInput')) { el('remixInput').value = ''; updateRemixActive(); if (el('remixMsg')) el('remixMsg').textContent = ''; }
@@ -958,9 +1002,9 @@ function makeField(inp, i) {
 }
 
 // Stream one completion from the API into a target node. Returns the full text.
-async function streamCompletion({ key, model, system, userMessage, node, signal }) {
+async function streamCompletion({ key, model, system, userMessage, node, signal, images }) {
   const acc = await PMProviders.stream({
-    key, model, system, userMessage, signal,
+    key, model, system, userMessage, signal, images,
     onDelta: (a) => renderMarkdown(node, a, true),
     onProgress: (r) => setStatus(`⬇ Loading the in-browser model (one-time download)… ${Math.round((r.progress || 0) * 100)}%`),
   });
@@ -1076,6 +1120,7 @@ ${current.instructions}${ctxBlock}`;
     if (missing.length) return setStatus(`Fill in: ${missing.map((f) => f.dataset.label).join(', ')}`, true);
     userMessage = buildUserMessage(fields);
     system = current.instructions + SKILL_SUFFIX + ctxBlock;
+    if (window.PMArtifacts) system += PMArtifacts.promptFor(current.name); // living artifact block, where the skill has a renderer
     plainSystem = ctx ? ctxBlock.trim() : '';
     compareModels = el('modelsToggle').checked;
     compare = !compareModels && el('compareToggle').checked;
@@ -1149,7 +1194,9 @@ ${current.instructions}${ctxBlock}`;
         streamCompletion({ key, model, system: plainSystem, userMessage, node: plainNode, signal: controller.signal }),
       ]);
     } else {
-      acc = await streamCompletion({ key, model, system, userMessage, node: out, signal: controller.signal });
+      const images = (current && VISION_SKILLS.has(current.name) && attachedImages.length) ? attachedImages.slice(0, 5) : undefined;
+      if (images) userMessage = `[${images.length} image(s) attached — treat them as the primary input]\n\n` + userMessage;
+      acc = await streamCompletion({ key, model, system, userMessage, node: out, signal: controller.signal, images });
     }
     out.dataset.raw = acc; // copy/download use the skill output, in either mode
     saveRun(acc);
@@ -1252,6 +1299,7 @@ function renderMarkdown(node, text, streaming) {
   if (!streaming) {
     if (window.PMDiagrams) PMDiagrams.enhance(node, current && current.name);
     if (window.PMCharts) PMCharts.enhance(node, current && current.name);
+    if (window.PMArtifacts) PMArtifacts.enhance(node);
   }
 }
 

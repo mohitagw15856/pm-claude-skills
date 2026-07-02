@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>The Gym — negotiate against an AI with a secret bottom line</title>
+<meta name="description" content="A scenario engine with hidden state: negotiate a salary, renewal, vendor deal, or exec pushback against an AI counterparty with a secret BATNA — then get scored against the theoretical optimum you couldn't see." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
+<script src="providers.js"></script>
+<style>
+  .gym-wrap { max-width: 880px; margin: 0 auto; padding: 16px 22px 70px; }
+  .lead { color: #c7cfda; font-size: 15.5px; }
+  .setup select, .setup input { width: 100%; box-sizing: border-box; padding: 10px 12px; border-radius: 10px; background: var(--panel); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 14px; margin-bottom: 10px; }
+  .bar { display: flex; gap: 10px; align-items: center; margin: 10px 0; flex-wrap: wrap; }
+  .brief { border: 1px dashed var(--accent); border-radius: 12px; background: rgba(217,119,87,.06); padding: 12px 15px; font-size: 13.8px; margin: 14px 0; }
+  .table-hint { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; margin: 16px 0 6px; }
+  .chat { display: flex; flex-direction: column; gap: 10px; }
+  .msg { max-width: 82%; border: 1px solid var(--border); border-radius: 14px; padding: 10px 14px; font-size: 13.8px; line-height: 1.5; }
+  .msg.them { align-self: flex-start; background: var(--panel); border-left: 3px solid #ffb454; }
+  .msg.you { align-self: flex-end; background: rgba(217,119,87,.1); border-right: 3px solid var(--accent); }
+  .msg .who { font-size: 11px; color: var(--muted); margin-bottom: 3px; text-transform: uppercase; letter-spacing: .04em; }
+  .typing { display: inline-flex; gap: 4px; } .typing i { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); animation: blink 1s infinite; }
+  .typing i:nth-child(2){animation-delay:.2s}.typing i:nth-child(3){animation-delay:.4s}
+  @keyframes blink { 0%,80%,100% { opacity:.25 } 40% { opacity:1 } }
+  .say { display: flex; gap: 8px; margin-top: 12px; }
+  .say textarea { flex: 1; box-sizing: border-box; padding: 10px 12px; border-radius: 10px; background: var(--panel); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 14px; resize: vertical; min-height: 44px; }
+  .debrief { border: 1.5px solid var(--accent); border-radius: 14px; background: linear-gradient(180deg, rgba(217,119,87,.09), transparent 55%), var(--panel); padding: 16px 18px; margin-top: 16px; font-size: 13.8px; }
+  .history { color: var(--muted); font-size: 12.5px; margin-top: 10px; }
+  .history b { color: var(--text); }
+  .out-actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>The Gym</h1><p class="tagline">Negotiate against an AI with a secret bottom line.</p></div></div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-fable-5">Fable 5 ✨</option><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your key stays in this browser. The counterparty's bottom line is generated fresh each session and hidden until the debrief.</div>
+
+<div class="gym-wrap">
+  <p class="lead">The <a href="defend.html">Defense</a> asks you questions. The Gym plays against you <strong>with secrets</strong>: your counterparty has a hidden bottom line, hidden pressures, and a concession style you'll have to read from behaviour. Close the deal (or walk), and only then does the debrief reveal what was actually achievable — and score you against it.</p>
+
+  <div class="setup" id="setup">
+    <select id="scenario">
+      <option value="salary">💼 Salary negotiation — you got the offer, now improve it</option>
+      <option value="renewal">🤝 Renewal save — your customer wants a discount to stay</option>
+      <option value="vendor">📦 Vendor deal — you're buying, they're anchoring high</option>
+      <option value="exec">🎯 Exec pushback — win resources for your roadmap from a sceptical VP</option>
+    </select>
+    <input id="ctx" type="text" placeholder="Optional context: your role, numbers you know (current salary / contract value / budget)…" />
+    <select id="difficulty">
+      <option value="fair">🎓 Fair — a reasonable counterparty</option>
+      <option value="tough" selected>🎯 Tough — professional, self-interested, reads your tells</option>
+      <option value="shark">🦈 Shark — exploits every mistake you make</option>
+    </select>
+    <div class="bar">
+      <button id="startBtn" class="primary" type="button">🥊 Enter the gym</button>
+      <span id="status" class="status"></span>
+    </div>
+    <div class="history" id="history"></div>
+  </div>
+
+  <div id="session" hidden>
+    <div class="brief" id="brief"></div>
+    <div class="table-hint">At the table</div>
+    <div class="chat" id="chat"></div>
+    <div class="say" id="say">
+      <textarea id="sayText" placeholder="Say something… (Enter to send, Shift+Enter for a new line)"></textarea>
+      <button id="sendBtn" class="primary" type="button">Send</button>
+    </div>
+    <div class="bar">
+      <button id="closeBtn" class="ghost" type="button">🤝 Close on current terms</button>
+      <button id="walkBtn" class="ghost" type="button">🚪 Walk away</button>
+      <span id="status2" class="status"></span>
+    </div>
+    <div id="debrief" class="debrief markdown" hidden></div>
+    <div class="out-actions" id="after" hidden>
+      <button id="dlBtn" class="primary" type="button">⬇ Download debrief (.md)</button>
+      <button id="againBtn" class="ghost" type="button">↻ New session</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+const SCEN={
+  salary:{you:'the candidate who just received a job offer',them:'the hiring manager',stakes:'base salary, equity, sign-on bonus, start date, remote days'},
+  renewal:{you:'the account manager trying to renew the contract profitably',them:'the customer\'s head of procurement threatening to churn',stakes:'renewal price, term length, service credits, added seats'},
+  vendor:{you:'the buyer purchasing software for your team',them:'the vendor\'s enterprise sales lead',stakes:'price per seat, contract length, implementation fees, exit clauses'},
+  exec:{you:'a product lead asking for two more engineers and a scope commitment',them:'the VP of Engineering, sceptical and budget-squeezed',stakes:'headcount, timeline commitments, scope trades, what you give up in return'},
+};
+let WORLD=null, TURNS=[], controller=null, DEBRIEF='';
+
+init();
+function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('startBtn').addEventListener('click',start);
+  el('sendBtn').addEventListener('click',()=>send(null));
+  el('sayText').addEventListener('keydown',(e)=>{ if(e.key==='Enter'&&!e.shiftKey){ e.preventDefault(); send(null); } });
+  el('closeBtn').addEventListener('click',()=>finish('close'));
+  el('walkBtn').addEventListener('click',()=>finish('walk'));
+  el('againBtn').addEventListener('click',()=>location.reload());
+  el('dlBtn').addEventListener('click',()=>{
+    const md='# Gym debrief — '+el('scenario').value+' ('+el('difficulty').value+')\n\n## Transcript\n\n'+TURNS.map(t=>('**'+t.who+':** '+t.text)).join('\n\n')+'\n\n## Debrief\n\n'+DEBRIEF;
+    const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([md],{type:'text/markdown'})); a.download='gym-debrief.md'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),3000);
+  });
+  renderHistory();
+}
+
+function keyOk(){ const key=el('apiKey').value.trim(); if(!key&&!PMProviders.current().local){ setStatus('Enter your '+PMProviders.current().name+' key first — or pick the In-browser (no key) provider.',true); return null;} return key; }
+
+async function start(){
+  const key=keyOk(); if(key===null) return;
+  const sc=SCEN[el('scenario').value], diff=el('difficulty').value, ctx=el('ctx').value.trim();
+  if(window.pmTrack) pmTrack('gym/'+el('scenario').value+'/'+diff);
+  el('startBtn').disabled=true; setStatus('Generating your counterparty (and their secrets)…');
+  controller=new AbortController();
+  const system=`You are a scenario engine. Create a realistic negotiation world. The user plays ${sc.you}; the counterparty is ${sc.them}. Negotiable dimensions: ${sc.stakes}. Difficulty: ${diff} (fair = reasonable; tough = professional and self-interested; shark = exploits mistakes, anchors hard, manufactures deadlines — but stays realistic, never cartoonish).
+${ctx?('User context to incorporate: '+ctx):'Invent plausible, internally consistent numbers.'}
+Return STRICT JSON only, no code fences:
+{"counterparty":{"name":"<name>","role":"<role>","style":"<2 lines: personality + concession style>"},
+ "public_brief":"<4-6 lines the USER knows going in: situation, their goal, the numbers they know. Address the user as 'you'.>",
+ "hidden":{"batna":"<counterparty's real alternative if no deal>","walkaway":"<their true limit on the main dimension, a number>","pressures":["<hidden pressure 1>","<hidden pressure 2>"],"tells":"<how their behaviour leaks their pressure, subtly>"},
+ "optimum":"<3 lines: the best realistic outcome the user could achieve given the hidden state — with numbers>"}`;
+  try{
+    const raw=await PMProviders.stream({key,model:el('model').value,system,userMessage:'Generate the session world now.',signal:controller.signal});
+    const js=raw.replace(/^```(json)?|```$/gm,'').trim();
+    WORLD=JSON.parse(js.slice(js.indexOf('{'), js.lastIndexOf('}')+1));
+    el('setup').hidden=true; el('session').hidden=false;
+    el('brief').innerHTML='<strong>📋 Your brief</strong><br>'+esc(WORLD.public_brief).replace(/\n/g,'<br>')+'<br><em>Across the table: '+esc(WORLD.counterparty.name)+' — '+esc(WORLD.counterparty.role)+'.</em>';
+    setStatus('');
+    await counterpartyTurn('(Open the conversation naturally, in character — greet and set the frame from your side.)');
+  }catch(e){ setStatus(e.message||'Could not generate the session.',true); el('startBtn').disabled=false; }
+}
+
+function addMsg(who,cls){
+  const m=document.createElement('div'); m.className='msg '+cls;
+  m.innerHTML='<div class="who">'+esc(who)+'</div><div class="t"><span class="typing"><i></i><i></i><i></i></span></div>';
+  el('chat').appendChild(m); m.scrollIntoView({behavior:'smooth',block:'end'});
+  return m.querySelector('.t');
+}
+
+function charSystem(extra){
+  const diff=el('difficulty').value;
+  return `You are ${WORLD.counterparty.name}, ${WORLD.counterparty.role}, in a live negotiation. Style: ${WORLD.counterparty.style}. Difficulty: ${diff}.
+YOUR HIDDEN STATE (never reveal these values or that they exist; act on them):
+- Your BATNA: ${WORLD.hidden.batna}
+- Your true walk-away limit: ${WORLD.hidden.walkaway}
+- Your hidden pressures: ${(WORLD.hidden.pressures||[]).join(' · ')}
+- Your tells: ${WORLD.hidden.tells}
+Rules: stay in character, speak ≤120 words per turn, negotiate realistically — respond to good tactics (calibrated questions, silence, legitimate anchors) by conceding gradually per your style, and punish bad ones (bluffs you can call, needless concessions) as this difficulty would. Let your tells leak SUBTLY under pressure. You may reference your hidden pressures obliquely, never explicitly. If pushed past your walk-away, threaten to end it — and mean it. ${extra||''}`;
+}
+
+async function counterpartyTurn(nudge){
+  const key=keyOk(); if(key===null) return;
+  const t=addMsg(WORLD.counterparty.name,'them');
+  controller=new AbortController();
+  const transcript=TURNS.map(x=>x.who+': '+x.text).join('\n\n')||'(no turns yet)';
+  try{
+    const text=await PMProviders.stream({key,model:el('model').value,system:charSystem(nudge),
+      userMessage:'TRANSCRIPT SO FAR:\n\n'+transcript+'\n\nRespond with your next line only.',signal:controller.signal,
+      onDelta:(a)=>{ t.innerHTML=DOMPurify.sanitize(marked.parse(a)); }});
+    t.innerHTML=DOMPurify.sanitize(marked.parse(text));
+    TURNS.push({who:WORLD.counterparty.name,text});
+  }catch(e){ t.textContent='('+(e.message||'failed')+')'; }
+}
+
+async function send(){
+  const text=el('sayText').value.trim(); if(!text||!WORLD) return;
+  el('sayText').value='';
+  const t=addMsg('You','you'); t.textContent=text;
+  TURNS.push({who:'You',text});
+  el('sendBtn').disabled=true;
+  await counterpartyTurn('');
+  el('sendBtn').disabled=false; el('sayText').focus();
+}
+
+async function finish(how){
+  const key=keyOk(); if(key===null||!WORLD) return;
+  if(TURNS.filter(t=>t.who==='You').length<2 && how==='close') return setStatus2('Negotiate at least a couple of turns before closing.',true);
+  el('say').hidden=true; el('closeBtn').disabled=true; el('walkBtn').disabled=true;
+  setStatus2('Revealing the hidden state and scoring your game…');
+  if(window.pmTrack) pmTrack('gym/finish/'+how);
+  controller=new AbortController();
+  const system=`You are the coach reviewing a finished negotiation. The user ${how==='walk'?'WALKED AWAY':'CLOSED on the final terms in the transcript'}.
+THE HIDDEN STATE (now revealed): BATNA: ${WORLD.hidden.batna} · true walk-away: ${WORLD.hidden.walkaway} · pressures: ${(WORLD.hidden.pressures||[]).join(' · ')} · tells: ${WORLD.hidden.tells}
+THE THEORETICAL OPTIMUM: ${WORLD.optimum}
+Write the debrief in markdown, ≤380 words:
+"## The reveal" — what was actually true across the table, and whether ${how==='walk'?'walking':'the close'} was right given it.
+"## Score" — a table: Dimension | /10 | Evidence from the transcript. Dimensions: Value captured vs optimum · Information gained (questions asked) · Concession discipline · Reading the tells.
+"**Final: <n>/40 — <one line>**"
+"## What you left on the table" — concrete, with numbers.
+"## Three drills for next session" — specific behaviours to practise, tied to mistakes in THIS transcript.`;
+  try{
+    const box=el('debrief'); box.hidden=false;
+    DEBRIEF=await PMProviders.stream({key,model:el('model').value,system,
+      userMessage:'FULL TRANSCRIPT:\n\n'+TURNS.map(t=>t.who+': '+t.text).join('\n\n'),signal:controller.signal,
+      onDelta:(a)=>{ box.innerHTML=DOMPurify.sanitize(marked.parse(a)); }});
+    box.innerHTML=DOMPurify.sanitize(marked.parse(DEBRIEF));
+    el('after').hidden=false;
+    setStatus2('Session complete.');
+    saveScore();
+  }catch(e){ setStatus2(e.message||'Scoring failed.',true); el('closeBtn').disabled=false; el('walkBtn').disabled=false; el('say').hidden=false; }
+}
+
+// Improvement over sessions: keep the last scores per scenario in this browser.
+function saveScore(){
+  const m=DEBRIEF.match(/Final:\s*(\d+)\s*\/\s*40/i); if(!m) return;
+  try{
+    const k='pm_gym_scores', all=JSON.parse(localStorage.getItem(k)||'{}');
+    (all[el('scenario').value]=all[el('scenario').value]||[]).push({s:+m[1],d:Date.now(),diff:el('difficulty').value});
+    localStorage.setItem(k,JSON.stringify(all));
+  }catch(_){}
+}
+function renderHistory(){
+  try{
+    const all=JSON.parse(localStorage.getItem('pm_gym_scores')||'{}');
+    const parts=Object.entries(all).map(([sc,arr])=>{
+      const last=arr.slice(-5).map(x=>x.s+'/40').join(' → ');
+      return '<b>'+esc(sc)+'</b>: '+esc(last);
+    });
+    el('history').innerHTML=parts.length?('📈 Your recent sessions — '+parts.join(' · ')):'';
+  }catch(_){}
+}
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+function setStatus2(m,err){ const s=el('status2'); s.textContent=m; s.className='status'+(err?' err':''); }
+function esc(s){ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

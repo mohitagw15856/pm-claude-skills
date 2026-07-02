@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-421 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+426 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -59,7 +59,7 @@
 | Changelog Generator | `pm-engineering` | `pm-engineering/changelog-generator/GEM_INSTRUCTIONS.md` |
 | Changelog Writer | `pm-devrel` | `pm-devrel/changelog-writer/GEM_INSTRUCTIONS.md` |
 | Chart | `pm-visuals` | `pm-visuals/chart/GEM_INSTRUCTIONS.md` |
-| Chart Data Extractor | `pm-data` | `pm-data/chart-data-extractor/GEM_INSTRUCTIONS.md` |
+| Chart Data Extractor | `pm-vision` | `pm-vision/chart-data-extractor/GEM_INSTRUCTIONS.md` |
 | Churn Analysis | `pm-cs` | `pm-cs/churn-analysis/GEM_INSTRUCTIONS.md` |
 | CI/CD Playbook | `pm-engineering` | `pm-engineering/cicd-playbook/GEM_INSTRUCTIONS.md` |
 | Claude Superpowers | `pm-engineering` | `pm-engineering/claude-superpowers/GEM_INSTRUCTIONS.md` |
@@ -117,6 +117,7 @@
 | Debt Payoff Plan | `pm-money` | `pm-money/debt-payoff-plan/GEM_INSTRUCTIONS.md` |
 | Debugging Log Analyser | `pm-engineering` | `pm-engineering/debugging-log-analyser/GEM_INSTRUCTIONS.md` |
 | Decision Memo | `pm-business` | `pm-business/decision-memo/GEM_INSTRUCTIONS.md` |
+| Deck Autopsy | `pm-vision` | `pm-vision/deck-autopsy/GEM_INSTRUCTIONS.md` |
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/GEM_INSTRUCTIONS.md` |
 | Demand Letter | `pm-legal` | `pm-legal/demand-letter/GEM_INSTRUCTIONS.md` |
 | Dependency Audit | `pm-engineering` | `pm-engineering/dependency-audit/GEM_INSTRUCTIONS.md` |
@@ -147,6 +148,7 @@
 | Error Message Writer | `pm-uxwriting` | `pm-uxwriting/error-message-writer/GEM_INSTRUCTIONS.md` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/GEM_INSTRUCTIONS.md` |
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/GEM_INSTRUCTIONS.md` |
+| Evidence Lock | `pm-research` | `pm-research/evidence-lock/GEM_INSTRUCTIONS.md` |
 | Excel Model | `pm-documents` | `pm-documents/excel-model/GEM_INSTRUCTIONS.md` |
 | Executive Presence | `pm-comms` | `pm-comms/executive-presence/GEM_INSTRUCTIONS.md` |
 | Executive Summary | `pm-cross` | `pm-cross/executive-summary/GEM_INSTRUCTIONS.md` |
@@ -358,6 +360,7 @@
 | Saying No | `pm-comms` | `pm-comms/saying-no/GEM_INSTRUCTIONS.md` |
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/GEM_INSTRUCTIONS.md` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/GEM_INSTRUCTIONS.md` |
+| Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/GEM_INSTRUCTIONS.md` |
 | Security Incident Response | `pm-security` | `pm-security/security-incident-response/GEM_INSTRUCTIONS.md` |
 | Security Review | `pm-security` | `pm-security/security-review/GEM_INSTRUCTIONS.md` |
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/GEM_INSTRUCTIONS.md` |
@@ -389,6 +392,7 @@
 | Strategic Narrative Generator | `pm-strategy` | `pm-strategy/strategic-narrative-generator/GEM_INSTRUCTIONS.md` |
 | Strategy Memo | `pm-business` | `pm-business/strategy-memo/GEM_INSTRUCTIONS.md` |
 | Student Feedback | `pm-education` | `pm-education/student-feedback/GEM_INSTRUCTIONS.md` |
+| Style Fingerprint | `pm-essentials` | `pm-essentials/style-fingerprint/GEM_INSTRUCTIONS.md` |
 | Substack Notes Scraper | `pm-writers` | `pm-writers/substack-notes-scraper/GEM_INSTRUCTIONS.md` |
 | Subtitle & Caption | `pm-localization` | `pm-localization/subtitle-caption/GEM_INSTRUCTIONS.md` |
 | Support Macro | `pm-support` | `pm-support/support-macro/GEM_INSTRUCTIONS.md` |
@@ -423,6 +427,7 @@
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/GEM_INSTRUCTIONS.md` |
 | Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/GEM_INSTRUCTIONS.md` |
 | Which Skill Router | `pm-essentials` | `pm-essentials/which-skill/GEM_INSTRUCTIONS.md` |
+| Whiteboard To Spec | `pm-vision` | `pm-vision/whiteboard-to-spec/GEM_INSTRUCTIONS.md` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/GEM_INSTRUCTIONS.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/GEM_INSTRUCTIONS.md` |
 | Workshop Facilitation Guide | `pm-operations` | `pm-operations/workshop-facilitation-guide/GEM_INSTRUCTIONS.md` |
