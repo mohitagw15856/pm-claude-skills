@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<!-- Printable / shareable one-page cheatsheet poster. Self-contained (no external assets).
+<!-- Printable / shareable cheatsheet poster. Self-contained (no external assets).
      Open in a browser → Print → Save as PDF, or render with web/docs-assets/shoot.mjs
      (PAGES=cheatsheet) to docs-assets/cheatsheet.png / .pdf. Content mirrors CHEATSHEET.md. -->
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>PM Skills — One-Page Cheatsheet</title>
-<meta name="description" content="244 open-source AI skills + memory + actions for every profession. Install, run anywhere, the Professional Brain, REST API, integrations, and quality tooling — on one page." />
+<title>PM Skills — the Cheatsheet</title>
+<meta name="description" content="441 open-source AI skills, an executive Boardroom, a standing AI staff, the professional-work benchmark, and one link to start — on one poster." />
 <style>
   :root{
     --bg:#0f1115; --panel:#171a21; --panel2:#1d222b; --ink:#e7ebf0; --muted:#9aa4b2;
@@ -18,7 +18,6 @@
     font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
     -webkit-font-smoothing:antialiased;}
   .sheet{max-width:1180px;margin:0 auto;padding:28px 30px 22px;}
-  /* Header */
   header{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;
     border-bottom:2px solid var(--brand);padding-bottom:14px;margin-bottom:18px;}
   h1{font-size:30px;margin:0;letter-spacing:-.5px}
@@ -30,30 +29,25 @@
   .pill b{color:var(--brand)}
   .repo{text-align:right;flex:0 0 auto;font-size:12.5px}
   .repo a{color:var(--brand);text-decoration:none;font-weight:600}
-  .repo .qr{margin-top:6px;color:var(--muted)}
-  /* Grid */
+  .start{background:linear-gradient(135deg,rgba(217,119,87,.14),rgba(217,119,87,.04));
+    border:1.5px solid var(--brand);border-radius:12px;padding:13px 16px;margin:0 0 18px}
+  .start h2{font-size:15px;margin:0 0 7px;color:var(--brand)}
+  .start ol{margin:0;padding-left:20px}.start li{margin:3px 0;font-size:13px}
   .cols{column-count:2;column-gap:22px}
   @media (max-width:820px){.cols{column-count:1}}
   .card{break-inside:avoid;background:var(--panel);border:1px solid var(--line);
     border-radius:12px;padding:13px 15px;margin:0 0 16px}
   .card h2{font-size:14.5px;margin:0 0 9px;color:var(--brand);
     display:flex;align-items:center;gap:7px;letter-spacing:.2px}
-  .card.wide{column-span:all}
   table{width:100%;border-collapse:collapse;font-size:12.5px}
   td,th{text-align:left;padding:3px 6px;vertical-align:top;border-bottom:1px solid var(--line)}
   th{color:var(--muted);font-weight:600}
-  td.n{color:var(--brand);font-weight:700;text-align:right;white-space:nowrap}
+  td.n{color:var(--brand);font-weight:700;white-space:nowrap}
   code,.k{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
     background:var(--panel2);border:1px solid var(--line);border-radius:5px;
     padding:1px 5px;font-size:11.5px;color:var(--code)}
-  .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:11.5px;
-    background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:9px 11px;color:var(--code);
-    white-space:pre-wrap;line-height:1.55}
-  ul{margin:0;padding-left:18px} li{margin:3px 0}
+  ul{margin:0;padding-left:18px} li{margin:3px 0;font-size:12.5px}
   .lead{color:var(--muted)}
-  .loop{background:var(--panel2);border:1px dashed var(--brand);border-radius:8px;
-    padding:8px 10px;font-size:11.5px;color:var(--ink);margin-top:8px}
-  .tiers span{display:inline-block;margin-right:10px}
   footer{margin-top:6px;border-top:1px solid var(--line);padding-top:10px;
     color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
   footer a{color:var(--brand);text-decoration:none}
@@ -62,123 +56,128 @@
 </head>
 <body>
 <div class="sheet">
-  <header>
-    <div>
-      <h1><img src="assets/product-notes.jpg" alt="Product Notes" style="height:30px;width:auto;border-radius:6px;background:#f5f1e8;padding:3px 7px;vertical-align:-7px;margin-right:6px" />PM Skills — <span class="em">One-Page Cheatsheet</span></h1>
-      <div class="tag">244 open-source AI skills + a memory + an action layer, for every profession. Each is a <code>SKILL.md</code> that teaches an AI the structure a senior pro actually uses — so the first draft is shippable, not filler. <i>PM = Professional, not just Product Management.</i></div>
-      <div class="stats">
-        <span class="pill"><b>244</b> skills</span>
-        <span class="pill"><b>21</b> professions</span>
-        <span class="pill"><b>196</b> eval-scored · avg <b>4.8/5</b></span>
-        <span class="pill">Claude · ChatGPT · Gemini · Cursor · Codex · Hermes</span>
-        <span class="pill">MIT</span>
-      </div>
-    </div>
-    <div class="repo">
-      ⭐ <a href="https://github.com/mohitagw15856/pm-claude-skills">github.com/mohitagw15856/pm-claude-skills</a>
-      <div class="qr">Try free, no install →<br><a href="https://mohitagw15856.github.io/pm-claude-skills/?ref=cheatsheet">the Playground</a></div>
-    </div>
-  </header>
 
-  <div class="cols">
-
-    <div class="card">
-      <h2>⚡ Install — pick one</h2>
-      <table>
-        <tr><td>Claude Code (skills+agents+commands)</td><td><code>npx pm-claude-skills add --agent claude</code></td></tr>
-        <tr><td>Any agent (Cursor/Codex/60+)</td><td><code>npx skills add mohitagw15856/pm-claude-skills</code></td></tr>
-        <tr><td>MCP, on demand</td><td><code>claude mcp add pm-skills -- npx -y pm-claude-skills-mcp</code></td></tr>
-        <tr><td>Hosted MCP / connector URL</td><td><code>pm-skills-mcp.pm-claude-skills.workers.dev</code></td></tr>
-        <tr><td>Python (LangChain/CrewAI)</td><td><code>pip install pm-skills</code></td></tr>
-        <tr><td>Browser, your own key</td><td>open the Playground (no install)</td></tr>
-      </table>
+<header>
+  <div>
+    <h1>🧠 PM <span class="em">Skills</span> — the Cheatsheet</h1>
+    <div class="tag"><b>Generic AI gives you filler.</b> These 441 open-source <code>SKILL.md</code> files teach the AI the structure a senior professional actually uses — quality checks and anti-patterns included — so the first draft is one you can ship.</div>
+    <div class="stats">
+      <span class="pill"><b>441</b> skills</span>
+      <span class="pill"><b>64</b> bundles</span>
+      <span class="pill"><b>25</b> professions</span>
+      <span class="pill"><b>208</b> eval-scored · avg <b>4.8/5</b></span>
+      <span class="pill"><b>11</b> chained recipes</span>
+      <span class="pill">MIT · client-side · <b>your</b> key</span>
     </div>
-
-    <div class="card">
-      <h2>🧩 Compose</h2>
-      <ul>
-        <li><b>Recipes</b> (chain skills): <code>/ship-a-feature</code> <code>/close-the-quarter</code> <code>/launch-a-product</code> <code>/rescue-an-account</code> <code>/run-discovery</code> <code>/repurpose</code></li>
-        <li><b>Subagents (5):</b> pm-partner · sprint-master · cs-guardian · launch-captain</li>
-        <li><b>Commands (16):</b> <code>/prd</code> <code>/rice</code> <code>/sprint-plan</code> <code>/retro</code> <code>/exec-summary</code> <code>/brain</code> …</li>
-        <li><b>Personas (5):</b> Startup CTO · Growth Marketer · Solo Founder · Product Leader</li>
-        <li><b>Visual:</b> Workflow Canvas (drag→chain) · Auto-Agent (goal→planned chain)</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>🗂️ 244 skills across 21 professions</h2>
-      <table>
-        <tr><th>Profession</th><th class="n">#</th><th>Try first</th></tr>
-        <tr><td>🛠️ Product Mgmt</td><td class="n">37</td><td><code>/prd</code> <code>/rice</code></td></tr>
-        <tr><td>👩‍💻 Engineering</td><td class="n">43</td><td>incident-postmortem</td></tr>
-        <tr><td>📣 Marketing & GTM</td><td class="n">8</td><td>go-to-market</td></tr>
-        <tr><td>📊 Data & Analytics</td><td class="n">12</td><td>metric-tree-builder</td></tr>
-        <tr><td>🤝 Customer Success</td><td class="n">6</td><td>cs-health-scorecard</td></tr>
-        <tr><td>⚙️ Operations</td><td class="n">10</td><td>sop-writer</td></tr>
-        <tr><td>🖼️ Figma</td><td class="n">10</td><td>figma-design-review</td></tr>
-        <tr><td>🌐 Cross-profession</td><td class="n">10</td><td>meeting-notes · professional-brain</td></tr>
-        <tr><td>⚖️ Legal · 💰 Finance</td><td class="n">7·5</td><td>contract-review · investor-pitch-deck</td></tr>
-        <tr><td>🚀 Founders · 🎓 Educators</td><td class="n">6·6</td><td>startup-idea-validator · lesson-plan</td></tr>
-        <tr><td>🎬 Creators · ✍️ Writers</td><td class="n">6·6</td><td>hook-writer · aeo-optimizer</td></tr>
-        <tr><td>👥 HR · 🤝 Sales</td><td class="n">5·6</td><td>job-description-writer · sales-battlecard</td></tr>
-        <tr><td>🧑‍💼 People · 🎨 Design</td><td class="n">5·4</td><td>executive-update · design-critique</td></tr>
-        <tr><td>📱 Social · 🏢 Strategy · 🏥 Research</td><td class="n">5·3·4</td><td>social-media-strategy · literature-review</td></tr>
-      </table>
-      <div class="tiers" style="margin-top:8px;font-size:12px">
-        <span>🟢 <b>50</b> Production-Ready</span><span>🔵 <b>145</b> Stable</span><span>🟡 <b>12</b> Experimental</span>
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>🧠 The Professional Brain — memory + actions</h2>
-      <div class="lead">A local, <b>plain-markdown</b> memory skills read before answering and write to after. <b>No vector DB</b> — grep-able, auditable, Obsidian-compatible.</div>
-      <div class="mono">brain/  context.md · knowledge/ · decisions/
-        hypotheses/ · stakeholders/ · entities/ · source/</div>
-      <ul style="margin-top:8px">
-        <li><b>Provenance tags:</b> <code>[data]</code> <code>[interview]</code> <code>[external]</code> <code>[verbal]</code> <code>[hunch]</code> — a hunch never poses as data.</li>
-        <li><b>Ops:</b> init · ingest · recall · record · review (<code>/brain</code>)</li>
-        <li><b>Recall:</b> <code>brain_query.py</code> — deterministic, provenance-ranked</li>
-        <li><b>Write-back:</b> <code>brain_write.py</code> — append-only, dry-run, approval-gated</li>
-        <li><b>Actions (<code>action-runner</code>):</b> recommendations → real tickets/messages, risk-rated 🟢🟡🔴, approved per action. <i>Nothing acts silently.</i></li>
-      </ul>
-      <div class="loop">recall → run a skill → produce → propose actions → approve → execute → record back → weekly review</div>
-    </div>
-
-    <div class="card">
-      <h2>🌍 Run anywhere — REST API & integrations</h2>
-      <div class="lead">Read-only, no auth, CORS-open — <code>pm-skills-mcp.pm-claude-skills.workers.dev</code></div>
-      <table>
-        <tr><td><code>GET /v1/skills</code></td><td>all skills (<code>?bundle</code> <code>?q</code> <code>?limit</code>)</td></tr>
-        <tr><td><code>GET /v1/skills/{name}</code></td><td>one skill (<code>?format=md</code>)</td></tr>
-        <tr><td><code>GET /v1/search?q=</code></td><td>keyword search</td></tr>
-        <tr><td><code>GET /v1/workflows</code></td><td>recipe chains</td></tr>
-      </table>
-      <ul style="margin-top:8px">
-        <li><b>n8n</b> — MCP Client / HTTP node into your AI node</li>
-        <li><b>Obsidian</b> — every skill as a vault note / AI-plugin prompt</li>
-        <li><b>Lovable</b> — skill-powered apps; a knowledge snippet for its generator</li>
-        <li><b>Exports (10):</b> ChatGPT · Gemini · Cursor · Windsurf · Aider · Cline · Continue · Zed · Roo · Obsidian</li>
-        <li><b>🌐 10 languages:</b> run any skill in Spanish · Mandarin · Hindi · Arabic (RTL) · Portuguese · French · German · Japanese · Russian · Indonesian — pick one in the playground.</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h2>✅ Quality & 🛠️ tooling</h2>
-      <ul>
-        <li><b>Eval-scored, not just counted</b> — LLM judge on structure/completeness/usefulness/grounding → <b>196 scored, 4.8/5</b></li>
-        <li><b>Self-improving</b> — <code>/improve</code> keeps a rewrite only if the score rises</li>
-        <li><b>PR gates</b> — SkillCheck (structure) + Security Auditor (injection/exfiltration)</li>
-        <li><b>Explore/try:</b> Skill Galaxy (map) · Ask (dev Q&A) · Grade your draft · Compare mode · Skill Studio (make→PR)</li>
-        <li><b>In CI:</b> a GitHub Action runs a skill on a PR; Skill Bot runs <code>/skill</code> from a comment</li>
-      </ul>
-    </div>
-
   </div>
+  <div class="repo">
+    <a href="https://github.com/mohitagw15856/pm-claude-skills">github.com/mohitagw15856/pm-claude-skills</a>
+    <div class="tag" style="text-align:right">Claude · ChatGPT · Gemini · Cursor · Codex · any MCP client</div>
+  </div>
+</header>
 
-  <footer>
-    <div>⭐ Star &amp; share — <a href="https://github.com/mohitagw15856/pm-claude-skills">github.com/mohitagw15856/pm-claude-skills</a></div>
-    <div>Run free → <a href="https://mohitagw15856.github.io/pm-claude-skills/?ref=cheatsheet">mohitagw15856.github.io/pm-claude-skills</a> · MIT · <i>PM stands for Professional.</i></div>
-  </footer>
+<div class="start">
+  <h2>⚡ THE one place to start — no install, no signup</h2>
+  <ol>
+    <li>Open <a href="https://mohitagw15856.github.io/pm-claude-skills/?ref=cheatsheet" style="color:var(--brand);font-weight:700">mohitagw15856.github.io/pm-claude-skills</a> <span class="lead">(free Gemini key, in-browser local model, or your own Claude/OpenAI key)</span></li>
+    <li>Type your task into the <b>🪄 command bar</b> — <i>“a blameless postmortem for Friday’s outage”</i> — it routes you to the right skill instantly</li>
+    <li>Fill the short form → Run → export as <b>PDF / Word / slides</b>. <span class="lead">Liked it?</span> <code>npx pm-claude-skills add --agent claude</code></li>
+  </ol>
+</div>
+
+<div class="card">
+  <h2>🤯 Six things no other skills library does</h2>
+  <table>
+    <tr><td class="n">🏛 The Boardroom</td><td>Five AI executives debate your PRD in rounds — severity-tagged openings, cross-examination, a Chair's verdict memo with <i>the changes that would survive the room</i>. 🔊 Theatre mode: they argue <b>out loud</b>. Verdicts export as hash-verifiable attestations.</td></tr>
+    <tr><td class="n">🏢 The Firm</td><td>Charter a standing AI staff (CFO, CCO, CTO, Strategy…) who file delta-aware memos, <b>hold board meetings without you</b>, and log falsifiable predictions you score — each staff member earns a visible calibration record.</td></tr>
+    <tr><td class="n">🏆 The Gauntlet</td><td>Job posting → decoded role → your stories forged → live cross-examination (answer <b>by voice</b>) → salary negotiation vs a hidden band → readiness /100 + a frameable certificate.</td></tr>
+    <tr><td class="n">🩻 Document X-ray</td><td>Every sentence heat-mapped by evidence strength — data · sourced · assertion · superlative · hidden assumption — load-bearing lines outlined, weakest claims listed to fix first.</td></tr>
+    <tr><td class="n">🎛 Living artifacts</td><td>RICE renders as a live board — drag the confidence slider, the ranking re-sorts. Journeys draw their emotion curve; health checks animate gauges.</td></tr>
+    <tr><td class="n">🥊 The Gym</td><td>Negotiate a salary / renewal / vendor deal against an AI with a <b>secret bottom line</b>; the debrief reveals what was achievable and scores you against it.</td></tr>
+  </table>
+  <div class="lead" style="margin-top:7px">Plus: 🌌 the Skill Galaxy star map (take the ▶ Sky tour) · 📷 vision skills that read whiteboard photos &amp; competitor screenshots · 🔏 verify.html for attestations</div>
+</div>
+
+<div class="cols">
+
+<div class="card">
+  <h2>🗂 Reach for these first</h2>
+  <table>
+    <tr><th>You need…</th><th>Skill</th></tr>
+    <tr><td>Product docs that ship</td><td><code>prd-template</code> <code>rice-prioritisation</code> <code>okr-builder</code></td></tr>
+    <tr><td>Engineering rituals</td><td><code>incident-postmortem</code> <code>architecture-decision-record</code> <code>ai-code-review</code></td></tr>
+    <tr><td>Exec &amp; board comms</td><td><code>executive-update</code> <code>stakeholder-update</code></td></tr>
+    <tr><td>Customer success</td><td><code>cs-health-scorecard</code> <code>churn-analysis</code> <code>renewal-playbook</code></td></tr>
+    <tr><td><b>The agent era</b> 🆕</td><td><code>mcp-server-spec</code> <code>agent-readiness-audit</code> <code>agent-era-pricing</code></td></tr>
+    <tr><td><b>AI at work</b> 🆕</td><td><code>ai-usage-policy</code> <code>ai-roi-audit</code> <code>role-redesign-for-ai</code></td></tr>
+    <tr><td>Your career</td><td><code>pm-personal</code> bundle + the Gauntlet</td></tr>
+  </table>
+  <div class="lead" style="margin-top:7px">Every Production-Ready skill ships <code>references/</code> (the judgment calls) + <code>templates/</code> (fill-in worksheets). 🇪🇸 The whole tier is in Spanish too.</div>
+</div>
+
+<div class="card">
+  <h2>🔌 Install anywhere</h2>
+  <table>
+    <tr><td>Claude Code <span class="lead">(+4 agents, 21 commands, hooks)</span></td><td><code>npx pm-claude-skills add --agent claude</code></td></tr>
+    <tr><td>Cursor / Codex / Windsurf / 60+</td><td><code>… add --agent cursor</code></td></tr>
+    <tr><td>Any MCP client</td><td><code>claude mcp add pm-skills -- npx -y pm-claude-skills-mcp</code></td></tr>
+    <tr><td>ChatGPT / Claude.ai connector</td><td><code>pm-skills-mcp.pm-claude-skills.workers.dev</code></td></tr>
+    <tr><td>Python (LangChain/CrewAI)</td><td><code>pip install pm-skills</code></td></tr>
+    <tr><td>Plugin marketplace</td><td><code>/plugin marketplace add mohitagw15856/pm-claude-skills</code></td></tr>
+    <tr><td>GitHub CI <span class="lead">(PR descs, changelogs, doc lint)</span></td><td>copy a file from <code>action/examples/</code></td></tr>
+    <tr><td>Browser extension <span class="lead">(insert skills + lint your writing)</span></td><td><code>extension/</code></td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h2>🧩 Chained recipes (11)</h2>
+  <ul>
+    <li><code>/ship-a-feature</code> — fuzzy idea → problem → PRD → RICE → roadmap → GTM</li>
+    <li><code>/land-a-job</code> — decode → research → apply → interview</li>
+    <li><code>/ship-an-mcp-server</code> 🆕 — spec → readiness audit → pricing → oversight</li>
+    <li><code>/adopt-ai-properly</code> 🆕 — policy → roles → reviews → ROI audit</li>
+    <li>…plus <code>/launch-a-product</code>, <code>/close-the-quarter</code>, <code>/rescue-an-account</code>, <code>/run-discovery</code></li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>🧠 Memory that compounds</h2>
+  <ul>
+    <li><b>The Brain</b> — local plain-markdown memory, provenance-tagged <code>[data]→[hunch]</code>; skills read it before answering, write back approval-gated. No vector DB.</li>
+    <li><b><code>outcome-tracker</code></b> — every decision's predictions recorded &amp; scored against reality; your frameworks earn calibration records.</li>
+    <li><b><code>action-runner</code></b> — recommendations become real tickets/messages, risk-rated, approved per action. Nothing acts silently.</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>🏗 Infrastructure, not just a library</h2>
+  <ul>
+    <li><b>SkillSpec</b> — the formal <code>SKILL.md</code> standard (conformance L1–L4); SkillCheck + security audit gate every PR</li>
+    <li><b>SkillBench</b> — the professional-work benchmark: 12 frozen tasks, models scored bare vs skill-instructed</li>
+    <li><b>Community registry</b> — publish <code>you/skill-name</code> via one PR; served live over REST + MCP</li>
+    <li><b>Agents can hire it</b> — A2A discovery card + <code>message/send</code>; MCP pairings make skills <i>act</i> (Notion, Slack — approval-gated)</li>
+    <li><b>REST API</b> — <code>/v1/skills</code> · <code>/v1/search</code> · <code>/v1/workflows</code> · <code>/v1/community</code> (no auth) → n8n, Lovable, Obsidian</li>
+    <li><b>Training data</b> — the library distilled to a dataset, on Hugging Face each release</li>
+  </ul>
+</div>
+
+<div class="card">
+  <h2>✅ Quality, out loud</h2>
+  <ul>
+    <li><b>Eval-scored, not just counted</b> — an LLM judge rates structure / completeness / usefulness / grounding → public <a href="https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html" style="color:var(--brand)">leaderboard</a></li>
+    <li><b>PR gates</b> — SkillCheck (structure) + Security Auditor (injection/exfiltration) + a 20-page web smoke suite</li>
+    <li><b>Honest tiers</b> — 🟢 Production-Ready (50, with full depth) · 🔵 Stable · 🟡 Experimental</li>
+  </ul>
+</div>
+
+</div>
+
+<footer>
+  <span>⭐ Star &amp; share: <a href="https://github.com/mohitagw15856/pm-claude-skills">github.com/mohitagw15856/pm-claude-skills</a></span>
+  <span>🚀 Start: <a href="https://mohitagw15856.github.io/pm-claude-skills/?ref=cheatsheet">mohitagw15856.github.io/pm-claude-skills</a></span>
+  <span>MIT · <i>PM stands for Professional</i></span>
+</footer>
+
 </div>
 </body>
 </html>

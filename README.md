@@ -188,20 +188,20 @@ It's not just text — the playground exports every result as a **professionally
 
 ---
 
-## 📄 One-page cheatsheet
+## 📄 The shareable cheatsheet
 
 <details>
 <summary>Read more ↓</summary>
 
-The whole library on one page — install, all 441 skills by profession, the Professional Brain, the REST API, integrations, and quality tooling. Great to **print, share, or drop into a slide**.
+The whole repo on one poster — the 60-second start path, the six things no other skills library does (Boardroom, Firm, Gauntlet, X-ray, living artifacts, the Gym), install one-liners for every tool, and the infrastructure story. Built to **print, share, or drop into a slide** — with one link to start.
 
 <p align="center">
-  <a href="CHEATSHEET.md">
-    <img src="web/docs-assets/cheatsheet.png" width="80%" alt="PM Skills one-page cheatsheet — 441 skills, the Professional Brain, REST API, integrations, and tooling at a glance." />
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/cheatsheet.html">
+    <img src="web/docs-assets/cheatsheet.png" width="80%" alt="PM Skills cheatsheet — one link to start, the six standout features, install paths for every tool, and the infrastructure story on one poster." />
   </a>
 </p>
 
-**[📥 Markdown](CHEATSHEET.md)** · **[🖼️ PNG](web/docs-assets/cheatsheet.png)** · **[📄 PDF](web/docs-assets/cheatsheet.pdf)** — regenerate the image/PDF with `node web/docs-assets/shoot.mjs` (`PAGES=cheatsheet`).
+**[📥 Markdown](CHEATSHEET.md)** · **[🖼️ Download PNG](https://mohitagw15856.github.io/pm-claude-skills/docs-assets/cheatsheet.png)** · **[📄 Download PDF](https://mohitagw15856.github.io/pm-claude-skills/docs-assets/cheatsheet.pdf)** · **[🌐 Live poster](https://mohitagw15856.github.io/pm-claude-skills/cheatsheet.html)** — regenerate with `PAGES=cheatsheet node web/docs-assets/shoot.mjs`.
 
 > 📖 **Want the full walkthrough?** The **[Practical Guide](web/guide.html)** is a 15-page,
 > example-driven manual — install → your first skill → worked examples (PRD, exec update, RICE,
