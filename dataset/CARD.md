@@ -1,5 +1,13 @@
 ---
 license: mit
+configs:
+  - config_name: routing
+    data_files: routing.jsonl
+    default: true
+  - config_name: sft-seeds
+    data_files: sft-seeds.jsonl
+  - config_name: samples
+    data_files: samples.jsonl
 task_categories:
   - text-generation
 language:
