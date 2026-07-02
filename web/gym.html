@@ -10,6 +10,7 @@
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
 <script src="providers.js"></script>
+<script src="export-doc.js"></script>
 <style>
   .gym-wrap { max-width: 880px; margin: 0 auto; padding: 16px 22px 70px; }
   .lead { color: #c7cfda; font-size: 15.5px; }
@@ -85,6 +86,7 @@
     <div id="debrief" class="debrief markdown" hidden></div>
     <div class="out-actions" id="after" hidden>
       <button id="dlBtn" class="primary" type="button">⬇ Download debrief (.md)</button>
+      <button id="certBtn" class="ghost" type="button">🎓 Certificate (PDF)</button>
       <button id="againBtn" class="ghost" type="button">↻ New session</button>
     </div>
   </div>
@@ -110,6 +112,17 @@ function init(){
   el('closeBtn').addEventListener('click',()=>finish('close'));
   el('walkBtn').addEventListener('click',()=>finish('walk'));
   el('againBtn').addEventListener('click',()=>location.reload());
+  el('certBtn').addEventListener('click',()=>{
+    const m=DEBRIEF.match(/Final:\s*(\d+)\s*\/\s*40/i);
+    if(!m) return;
+    const scen={salary:'a salary negotiation',renewal:'a renewal save',vendor:'a vendor deal',exec:'an exec pushback'}[el('scenario').value]||'a negotiation';
+    const diff={fair:'🎓 Fair',tough:'🎯 Tough',shark:'🦈 Shark'}[el('difficulty').value]||el('difficulty').value;
+    const name=(prompt('Name on the certificate (blank to leave it off):','')||'').trim();
+    PMExport.certificate({kind:'PM Skills · The Gym',headline:'Went the Distance',
+      name:name||null,score:m[1]+'/40',level:diff+' difficulty — '+scen+' against a counterparty with a hidden bottom line',
+      details:['hidden BATNA revealed only at the debrief','scored against the theoretical optimum']});
+    if(window.pmTrack) pmTrack('gym/certificate');
+  });
   el('dlBtn').addEventListener('click',()=>{
     const md='# Gym debrief — '+el('scenario').value+' ('+el('difficulty').value+')\n\n## Transcript\n\n'+TURNS.map(t=>('**'+t.who+':** '+t.text)).join('\n\n')+'\n\n## Debrief\n\n'+DEBRIEF;
     const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([md],{type:'text/markdown'})); a.download='gym-debrief.md'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),3000);

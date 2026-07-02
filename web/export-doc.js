@@ -236,8 +236,54 @@
     saveBlob(new Blob([lines.join('\r\n')], { type: 'text/calendar' }), safeName(title) + '.ics');
   }
 
+  // --- 🎓 Certificate — a landscape, print-ready award for the arena pages -----
+  // (Gauntlet / Defense / Gym). Same print-window mechanism as toPDF; typeset like
+  // something you'd actually frame: rules, a seal, a verification line.
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function certificate(o) {
+    // o: {kind, name?, headline, score, level, date?, details?[], quote?}
+    var w = window.open('', '_blank');
+    if (!w) { alert('Allow pop-ups to download the certificate.'); return; }
+    var date = o.date || new Date().toISOString().slice(0, 10);
+    var accent = o.accent || '#1B365D';
+    var details = (o.details || []).map(function (d) { return '<span class="d">' + esc(d) + '</span>'; }).join('<i>·</i>');
+    w.document.write('<html><head><meta charset="utf-8"><title>' + esc(o.headline) + ' — certificate</title><style>' +
+      '@page{size:A4 landscape;margin:0}' +
+      'body{margin:0;font:15px/1.5 Charter,"Iowan Old Style",Georgia,serif;color:#1a1a1a;background:#f5f3ea;' +
+      '-webkit-print-color-adjust:exact;print-color-adjust:exact}' +
+      '.frame{box-sizing:border-box;width:100vw;height:100vh;padding:34px;display:flex}' +
+      '.inner{flex:1;border:2.5px solid ' + accent + ';outline:1px solid ' + accent + ';outline-offset:5px;' +
+      'display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:34px 60px;position:relative}' +
+      '.kind{font-size:12px;letter-spacing:.42em;text-transform:uppercase;color:' + accent + ';font-weight:600}' +
+      'h1{font-size:44px;margin:14px 0 4px;font-weight:600;letter-spacing:-.01em}' +
+      '.who{font-size:17px;color:#555;margin:2px 0 18px;font-style:italic}' +
+      '.score{font-size:64px;font-weight:700;color:' + accent + ';margin:6px 0;line-height:1}' +
+      '.level{font-size:15px;margin:2px 0 16px}' +
+      '.rule{width:180px;border-top:1px solid #b9b39f;margin:14px auto}' +
+      '.details{font-size:12.5px;color:#666}.details .d{white-space:nowrap}.details i{margin:0 10px;font-style:normal;color:#b9b39f}' +
+      '.quote{max-width:640px;font-size:14px;font-style:italic;color:#4a4a44;margin:16px 0 0}' +
+      '.seal{position:absolute;right:44px;bottom:38px;width:92px;height:92px;border-radius:50%;border:2px solid ' + accent + ';' +
+      'display:flex;flex-direction:column;align-items:center;justify-content:center;color:' + accent + ';transform:rotate(-8deg)}' +
+      '.seal b{font-size:22px}.seal span{font-size:8.5px;letter-spacing:.18em;text-transform:uppercase}' +
+      '.verify{position:absolute;left:44px;bottom:42px;font-size:10.5px;color:#8a8574;text-align:left}' +
+      '</style></head><body><div class="frame"><div class="inner">' +
+      '<div class="kind">' + esc(o.kind || 'PM Skills · Certificate') + '</div>' +
+      '<h1>' + esc(o.headline) + '</h1>' +
+      (o.name ? '<div class="who">awarded to ' + esc(o.name) + '</div>' : '<div class="who">earned in live session</div>') +
+      (o.score ? '<div class="score">' + esc(o.score) + '</div>' : '') +
+      (o.level ? '<div class="level">' + esc(o.level) + '</div>' : '') +
+      '<div class="rule"></div>' +
+      (details ? '<div class="details">' + details + '</div>' : '') +
+      (o.quote ? '<div class="quote">“' + esc(o.quote) + '”</div>' : '') +
+      '<div class="seal"><b>🧠</b><span>pm-skills</span><span>' + esc(date) + '</span></div>' +
+      '<div class="verify">Earned live against AI examiners at<br>mohitagw15856.github.io/pm-claude-skills — sessions run<br>client-side; the score is only as honest as the run.</div>' +
+      '</div></div>' +
+      '<scr' + 'ipt>window.onload=function(){setTimeout(function(){window.print();},300);}</scr' + 'ipt></body></html>');
+    w.document.close();
+  }
+
   g.PMExport = {
-    word: toWord, pdf: toPDF, pptx: toPptx, xlsx: toXlsx, ics: toIcs,
+    word: toWord, pdf: toPDF, pptx: toPptx, xlsx: toXlsx, ics: toIcs, certificate: certificate,
     THEMES: THEMES,
     hasTables: function (md) { return parseMdTables(md).length > 0; },
     hasDates: function (md) { return extractEvents(md).length > 0; },

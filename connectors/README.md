@@ -67,6 +67,7 @@ connector:
 | **n8n** | skills as nodes in any automation (MCP Client or HTTP Request) | [`n8n.md`](n8n.md) |
 | **Lovable** | build skill-powered web apps; make its generator skill-aware | [`lovable.md`](lovable.md) |
 | **Obsidian** | skills as vault notes / AI-plugin prompts; the vault as project state | [`obsidian.md`](obsidian.md) |
+| **MCP pairings** 🆕 | skills that *act*: notes file themselves in Notion, updates post to Slack, plans build the sprint — approval-gated per SkillSpec §5 | [`mcp-pairings.md`](mcp-pairings.md) |
 
 > **REST API** — `GET /v1/skills`, `/v1/skills/{name}` (`?format=md`), `/v1/search?q=`,
 > `/v1/workflows` on `https://pm-skills-mcp.pm-claude-skills.workers.dev`. Same catalogue as

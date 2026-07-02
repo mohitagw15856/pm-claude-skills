@@ -9,6 +9,11 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+### Added — the fun & connected wave
+- **🌠 Galaxy cosmic events** — ambient shooting stars streak across the sky (reduced-motion aware, never during the tour), and a new **🎲 Warp** button: a hyperspace-streak jump to a random top-rated skill you haven't visited — serendipity as a feature.
+- **🎓 Certificates** — the arena pages (Gauntlet, Defense, Gym) now export a *frameable*, print-typeset landscape certificate: serif headline, your score, the level, a dated seal, and honest fine print ("the score is only as honest as the run"). New `PMExport.certificate()` in the export engine.
+- **🔌 MCP pairings** ([connectors/mcp-pairings.md](connectors/mcp-pairings.md)) — skills that *act* through the MCP servers you've already connected: `meeting-notes` gains a full `## Execution` block (file the approved notes in Notion, create tracker issues per action item, verify + link back), `/firm` offers to deliver approved minutes via Slack/Notion, and a pairing table maps eight workflows end-to-end — all under SkillSpec §5's approval-gated, verbatim-delivery, verify-and-link rules.
+
 ## [40.0.0] — The Firm: don't run tools, employ a staff — 2026-07-02
 
 ### Added

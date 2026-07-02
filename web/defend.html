@@ -10,6 +10,7 @@
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
 <script src="providers.js"></script>
+<script src="export-doc.js"></script>
 <style>
   .def-wrap { max-width: 940px; margin: 0 auto; padding: 16px 22px 70px; }
   .lead { color: #c7cfda; font-size: 15.5px; }
@@ -83,6 +84,7 @@
   <div id="feed" class="feed"></div>
   <div id="after" class="out-actions" hidden>
     <button id="dlDebrief" class="primary" type="button">⬇ Download debrief (.md)</button>
+    <button id="cert" class="ghost" type="button">🎓 Certificate (PDF)</button>
     <button id="again" class="ghost" type="button">↻ New session</button>
   </div>
 </div>
@@ -122,6 +124,16 @@ function init(){
   el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
   el('again').addEventListener('click',()=>{el('feed').innerHTML='';el('after').hidden=true;el('progress').hidden=true;TRANSCRIPT=[];SCORECARD='';});
   el('dlDebrief').addEventListener('click',()=>download('defense-debrief.md',debrief()));
+  el('cert').addEventListener('click',()=>{
+    const v=(SCORECARD.match(/PASS WITH REVISIONS|NOT READY|PASS/i)||[])[0];
+    if(!v) return;
+    const name=(prompt('Name on the certificate (blank to leave it off):','')||'').trim();
+    const bench=BENCH.filter(p=>p.on).map(p=>p.role).join(', ');
+    PMExport.certificate({kind:'PM Skills · The Defense',headline:'Defended Before the Bench',
+      name:name||null,score:v.toUpperCase(),level:el('difficulty').value+' difficulty — cross-examined live by '+bench,
+      details:['scored on facts, evidence, honesty about unknowns, and composure']});
+    if(window.pmTrack) pmTrack('defend/certificate');
+  });
   renderBench();
 }
 function renderBench(){

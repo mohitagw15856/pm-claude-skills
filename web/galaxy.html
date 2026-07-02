@@ -75,6 +75,7 @@
     <input id="galaxySearch" type="search" placeholder="Find a skill… (Enter flies you there)" />
     <button id="tourBtn" class="gbtn" type="button" title="Sit back — a guided flight across the professions and one Journey constellation">▶ Sky tour</button>
     <button id="forYouBtn" class="gbtn" type="button" title="Highlights high-scoring skills next to the ones you've already run">🧭 For you</button>
+    <button id="warpBtn" class="gbtn" type="button" title="Hyperspace jump to a random top-rated skill — serendipity mode">🎲 Warp</button>
   </div>
   <div class="legend" id="legend"></div>
   <div class="galaxy-hint">drag to pan · scroll to zoom · click a star for details · Enter in search flies to it · brightness = eval score</div>
@@ -182,6 +183,10 @@ const label = (p) => p.replace(/^pm-/, '').replace(/(^|-)(\w)/g, (_, d, c) => (d
   let tourTimers = [], tourPath = [], touring = false, forYou = [];
   // Per-frame label collision boxes (world coords) — see the label block in drawNode.
   const labelBoxes = []; let lastLabelReset = 0;
+  // 🌠 Cosmic events (drawn in SCREEN space in afterDraw): ambient meteors + warp streaks.
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const meteors = []; let nextMeteor = performance.now() + 3000;
+  let warpUntil = 0; // hyperspace streak effect while a warp flight is underway
 
   const graph = PMGraph.create(canvas, {
     nodes, links, repulsion: 900, spring: 0.02, linkLen: 42, gravity: 0.06,
@@ -279,6 +284,48 @@ const label = (p) => p.replace(/^pm-/, '').replace(/(^|-)(\w)/g, (_, d, c) => (d
           ctx.stroke(); ctx.setLineDash([]);
           ctx.restore();
         }
+      }
+      // 🌠 Cosmic events — meteors + warp streaks, in SCREEN space so zoom doesn't touch them.
+      if (!reduceMotion) {
+        const now = performance.now();
+        ctx.save();
+        ctx.setTransform(window.devicePixelRatio > 2 ? 2 : (window.devicePixelRatio || 1), 0, 0, window.devicePixelRatio > 2 ? 2 : (window.devicePixelRatio || 1), 0, 0);
+        const sw = canvas.clientWidth, sh = canvas.clientHeight;
+        // Ambient shooting stars: one every ~5-9s, a brief bright streak across a corner.
+        if (now > nextMeteor && meteors.length < 3 && !touring) {
+          nextMeteor = now + 5000 + Math.random() * 4000;
+          const fromLeft = Math.random() < 0.5;
+          meteors.push({ t0: now, dur: 900 + Math.random() * 500,
+            x0: fromLeft ? -40 : sw + 40, y0: Math.random() * sh * 0.45,
+            dx: (fromLeft ? 1 : -1) * (sw * 0.35 + Math.random() * sw * 0.2), dy: sh * (0.18 + Math.random() * 0.22) });
+        }
+        for (let i = meteors.length - 1; i >= 0; i--) {
+          const m = meteors[i], p = (now - m.t0) / m.dur;
+          if (p >= 1) { meteors.splice(i, 1); continue; }
+          const x = m.x0 + m.dx * p, y = m.y0 + m.dy * p;
+          const tail = 70 * (1 - p * 0.5);
+          const ang = Math.atan2(m.dy, m.dx);
+          const g = ctx.createLinearGradient(x, y, x - Math.cos(ang) * tail, y - Math.sin(ang) * tail);
+          g.addColorStop(0, 'rgba(255,255,255,' + (0.9 * (1 - p)) + ')');
+          g.addColorStop(1, 'rgba(255,255,255,0)');
+          ctx.strokeStyle = g; ctx.lineWidth = 1.6; ctx.lineCap = 'round';
+          ctx.beginPath(); ctx.moveTo(x, y); ctx.lineTo(x - Math.cos(ang) * tail, y - Math.sin(ang) * tail); ctx.stroke();
+        }
+        // 🎲 Warp: radial hyperspace streaks from the screen centre while the camera flies.
+        if (now < warpUntil) {
+          const cx2 = sw / 2, cy2 = sh / 2, k = 1 - (warpUntil - now) / 750;
+          for (let i = 0; i < 26; i++) {
+            const a = (i / 26) * Math.PI * 2 + (i % 3) * 0.4;
+            const r0 = 60 + k * 260, r1 = r0 + 90 + k * 140;
+            ctx.strokeStyle = 'rgba(190,215,255,' + (0.5 * (1 - k)) + ')';
+            ctx.lineWidth = 1.2;
+            ctx.beginPath();
+            ctx.moveTo(cx2 + Math.cos(a) * r0, cy2 + Math.sin(a) * r0);
+            ctx.lineTo(cx2 + Math.cos(a) * r1, cy2 + Math.sin(a) * r1);
+            ctx.stroke();
+          }
+        }
+        ctx.restore();
       }
       // 🛸 Your personal trail — dashed line through the skills you've run, ringed.
       if (trailOn && trailUniq.length) {
@@ -379,6 +426,21 @@ const label = (p) => p.replace(/^pm-/, '').replace(/(^|-)(\w)/g, (_, d, c) => (d
   }
   el('tourBtn').addEventListener('click', () => (touring ? stopTour() : startTour()));
   canvas.addEventListener('pointerdown', stopTour);
+
+  // 🎲 Warp — hyperspace jump to a random top-rated star you haven't visited this session.
+  const warped = new Set();
+  el('warpBtn').addEventListener('click', () => {
+    stopTour();
+    let pool = nodes.filter((n) => n.scored && n.s.eval.score >= 4.5 && !warped.has(n.id));
+    if (!pool.length) { warped.clear(); pool = nodes.filter((n) => n.scored && n.s.eval.score >= 4.5); }
+    const target = pool[Math.floor(Math.random() * pool.length)];
+    if (!target) return;
+    warped.add(target.id);
+    warpUntil = performance.now() + 750;
+    graph.flyTo(target.x, target.y, 2.4, 750);
+    setTimeout(() => { openPanel(target); caption('🎲 ' + target.s.title, label(target.s.plugin) + ' · ' + target.s.eval.score + '/5 — your serendipity stop'); setTimeout(() => el('gcaption').classList.remove('show'), 3000); }, 780);
+    if (window.pmTrack) pmTrack('galaxy/warp');
+  });
 
   // ── 🧭 For you: high-scoring stars orbiting the ones you've already run ──────
   el('forYouBtn').addEventListener('click', () => {
