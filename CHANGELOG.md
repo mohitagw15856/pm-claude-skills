@@ -9,6 +9,8 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [40.0.0] — The Firm: don't run tools, employ a staff — 2026-07-02
+
 ### Added
 - **🏢 The Firm** ([web/firm.html](web/firm.html) + [`/firm`](commands/firm.md)) — the composition layer over everything the library has become: don't run tools, **employ a staff**. Charter a standing team once (pre-filled from your Skill Memory); each session, every hired staff member — 💰 CFO, ❤️ CCO, 🛠️ CTO, 🦈 Strategy, plus 📣 Growth and ⚖️ Counsel on the bench — files a **delta-aware memo** on their beat (what changed since last session, never a restatement; each runs a real library skill as its method), ending in a **falsifiable prediction** with a check-by date. Then the staff **hold a boardroom session without you** — genuine disagreement where beats conflict — and the minutes land in your inbox with decisions, asks, and **dissent preserved**. Score predictions as reality lands and each staff member accumulates a visible **calibration record** on their card: you can performance-review your AI staff. Everything persists in-browser. The `/firm` slash command runs the same loop natively in Claude Code, grounded in `FIRM.md`, the Brain, and your git log, saving minutes to `firm-minutes/` and predictions to `brain/predictions/`.
 
