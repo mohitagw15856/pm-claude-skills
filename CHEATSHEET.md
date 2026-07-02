@@ -6,7 +6,7 @@
 **One link to start: https://mohitagw15856.github.io/pm-claude-skills/** — no install, no signup; runs with a free Gemini key, a fully-local in-browser model, or your own Claude/OpenAI key.
 
 > **The problem:** ask any AI for a PRD, a postmortem, or a board update and you get plausible filler you rewrite from scratch.
-> **The fix:** 441 open-source `SKILL.md` files that teach the AI the *actual structure a senior professional uses* — quality checks and anti-patterns included — so the first draft is one you can ship. **MIT. 25 professions. Works in Claude, ChatGPT, Gemini, Cursor, Codex & any MCP client.**
+> **The fix:** 451 open-source `SKILL.md` files that teach the AI the *actual structure a senior professional uses* — quality checks and anti-patterns included — so the first draft is one you can ship. **MIT. 25 professions. Works in Claude, ChatGPT, Gemini, Cursor, Codex & any MCP client.**
 
 ---
 
@@ -37,7 +37,7 @@ Plus: **🌌 [the Skill Galaxy](https://mohitagw15856.github.io/pm-claude-skills
 
 ## 🗂 What's inside
 
-**441 skills · 64 profession bundles · 25 fields** — product, engineering, customer success, marketing/GTM, data, design, sales, HR, legal, finance, founders, security, government, healthcare, education, real estate, and more. Highlights by job-to-do:
+**451 skills · 65 profession bundles · 25 fields** — product, engineering, customer success, marketing/GTM, data, design, sales, HR, legal, finance, founders, security, government, healthcare, education, real estate, and more. Highlights by job-to-do:
 
 | You need… | Reach for |
 |---|---|
@@ -81,6 +81,6 @@ The **[Professional Brain](BRAIN.md)**: a local, plain-markdown memory the skill
 
 ---
 
-**The numbers:** 441 skills · 64 bundles · 25 professions · 208 eval-scored on a public rubric ([leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)) · 11 recipes · MIT · everything runs client-side with **your** key.
+**The numbers:** 451 skills · 65 bundles · 25 professions · 208 eval-scored on a public rubric ([leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)) · 11 recipes · MIT · everything runs client-side with **your** key.
 
 <sub>⭐ **Star & share:** https://github.com/mohitagw15856/pm-claude-skills · 🚀 **Start:** https://mohitagw15856.github.io/pm-claude-skills/ · Built by [Mohit Aggarwal](https://medium.com/@mohit15856) · *PM stands for Professional.*</sub>

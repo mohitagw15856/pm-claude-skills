@@ -60,6 +60,16 @@ Ask for these only if they aren't already provided:
 
 Presentation practice — assertion-evidence / one-idea-per-slide, Duarte/Minto narrative structure — implemented with python-pptx.
 
+## Programmatic Helper
+
+This skill ships `scripts/pptx_tool.py` — **zero-dependency** (stdlib zip+XML) generation of a real `.pptx` from a markdown outline:
+
+```bash
+python3 scripts/pptx_tool.py build deck.pptx --outline-file deck.md
+```
+
+Outline: `# Title` (+ next line = subtitle) · `## Slide title` · `- bullet` (two-space indent = sub-bullet) · `> speaker note`. Ships a clean 16:9 dark-title theme that opens in PowerPoint/Keynote/Slides. Design the narrative first (per this skill), then emit the outline and build. Honest limits: one theme, no images/charts — it's the restylable skeleton; for designed decks use the playground's slide export.
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text — replace it with your plugin's equivalent

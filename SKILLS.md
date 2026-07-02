@@ -1,4 +1,4 @@
-# 🗂️ All 441 Skills — full catalog
+# 🗂️ All 451 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -302,15 +302,17 @@
 | **Metrics Framework** (`metrics-framework`) | Build a metrics framework for any product, team, or business. | ✅ 4.8/5 |
 | **SQL Query Explainer** (`sql-query-explainer`) | Explains, optimises, writes, and documents SQL queries. | ✅ 4.3/5 |
 
-## 🎨 Design & Content (37 skills)
+## 🎨 Design & Content (39 skills)
 
-### `pm-design` — 4 skills · 4 eval-scored
+### `pm-design` — 6 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Accessibility Audit** (`accessibility-audit`) | Generate a WCAG 2.2 accessibility audit checklist and remediation suggestions for any UI or design. | ✅ 5/5 |
+| **Brand Guidelines** (`brand-guidelines`) | Extract a brand's visual and verbal identity into an applicable guideline kit — tokens, voice rules, and do/don't pairs — then apply it… | — |
 | **Design Critique** (`design-critique`) | Give structured, constructive feedback on any design using UX frameworks. | ✅ 5/5 |
 | **Design System Audit** (`design-system-audit`) | Audit a design system for consistency, coverage, and quality. | ✅ 4.8/5 |
+| **Frontend Design** (`frontend-design`) | Produce frontend UI that actually looks designed — a working spacing/type system, deliberate color use, real states, and restraint — instead of… | — |
 | **UX Research Plan** (`ux-research-plan`) | Create a structured UX research plan for any product question or feature. | ✅ 5/5 |
 
 ### `pm-figma` — 10 skills · 10 eval-scored
@@ -608,7 +610,7 @@
 | **Portfolio Page** (`portfolio-page`) | Structure a portfolio or case-study page that shows your work, not just lists it. | ✅ 5/5 |
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 
-## 🌍 Industries & Public Sector (92 skills)
+## 🌍 Industries & Public Sector (100 skills)
 
 ### `pm-agentnative` — 5 skills
 
@@ -748,6 +750,19 @@
 | **Subtitle & Caption** (`subtitle-caption`) | Write or translate subtitles/captions that respect reading speed and timing rules. | — |
 | **Transcreation** (`transcreation`) | Transcreate marketing/brand copy for another language and culture — recreate the impact, not the words. | — |
 
+### `pm-method` — 8 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Brainstorming** (`brainstorming`) | Run a real brainstorm — divergent generation without judgment, then convergent selection with explicit criteria — instead of listing ten obvious… | — |
+| **Code Simplification** (`code-simplification`) | Simplify code that works — remove speculative abstraction, dead flexibility, and needless indirection while keeping behaviour identical and verified. | — |
+| **Executing Plans** (`executing-plans`) | Execute a written plan with discipline — verify each step before advancing, surface deviations instead of improvising around them, and keep a… | — |
+| **Incremental Implementation** (`incremental-implementation`) | Build in small, individually-verified increments that each leave the system working — instead of big-bang changes that fail mysteriously at the end. | — |
+| **Interview Me** (`interview-me`) | Elicit the real requirements by interviewing the requester BEFORE building or writing anything — one question at a time, until the brief is buildable. | — |
+| **Subagent Orchestration** (`subagent-orchestration`) | Decompose work across parallel subagents properly — task slicing that avoids collisions, briefs that stand alone, and result integration that… | — |
+| **Verification Before Completion** (`verification-before-completion`) | Verify work actually meets its brief BEFORE declaring it done — a structured self-review pass that catches the gaps, unmet requirements, and… | — |
+| **Writing Plans** (`writing-plans`) | Write an executable work plan BEFORE starting a complex task — decomposed steps with verification points, risks pre-named, and explicit stop… | — |
+
 ### `pm-nonprofit` — 3 skills
 
 | Skill | What it does | Eval |
@@ -789,4 +804,4 @@
 
 ---
 
-_441 skills across 64 bundles · 208 eval-scored (47%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_451 skills across 65 bundles · 208 eval-scored (46%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

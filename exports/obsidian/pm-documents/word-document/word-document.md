@@ -60,6 +60,24 @@ Ask for these only if they aren't already provided:
 
 Document-production practice (style-based formatting, structured headings, TOC-ready) implemented with python-docx.
 
+## Programmatic Helper
+
+This skill ships `scripts/docx_tool.py` — **zero-dependency** (stdlib zip+XML) production of real `.docx` files:
+
+```bash
+# Markdown-lite → Word (#/##/### headings, - bullets, 1. numbered, **bold**, *italic*)
+python3 scripts/docx_tool.py create out.docx --text-file doc.md
+
+# Fill {{placeholders}} through an existing .docx (body, headers, footers) —
+# handles Word splitting a placeholder across formatting runs
+python3 scripts/docx_tool.py fill template.docx out.docx --values '{"client":"Acme","date":"2026-07-03"}'
+
+# Verify what a .docx actually says (plain-text extraction)
+python3 scripts/docx_tool.py extract out.docx
+```
+
+Write the document first (per this skill), then `create` it as a real file. Honest limits: the markdown subset above with default styling; complex templates keep their formatting except in paragraphs where a placeholder spanned runs.
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text — replace it with your plugin's equivalent

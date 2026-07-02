@@ -1,0 +1,54 @@
+---
+description: "Decompose work across parallel subagents properly — task slicing that avoids collisions, briefs that stand alone, and result integration that catches contradictions. Use when work can genuinely parallelise (research fan-outs, multi-file changes, independent analyses), when deciding whether to delegate or do it yourself, or when past multi-agent runs produced conflicts and duplicated effort. Produces an orchestration plan: the parallel/sequential split, per-agent briefs, and the integration protocol."
+globs:
+alwaysApply: false
+---
+
+# Subagent Orchestration Skill
+
+Parallel agents multiply speed exactly when the decomposition is right — and multiply mess when it isn't: two agents editing one file, three agents making inconsistent assumptions, results that can't be merged. Orchestration is a design discipline: slice for independence, brief for standalone execution, integrate with suspicion.
+
+## What This Skill Produces
+
+- A **decomposition decision**: what runs parallel, what stays sequential, what isn't worth delegating at all
+- **Per-agent briefs** that survive without shared context
+- An **integration protocol**: merge order, conflict checks, and the verification of the combined result
+
+## Orchestration Method
+
+1. **Decide IF before HOW.** Delegation costs: brief-writing, context loss, integration, and review of work you didn't watch. Worth it when subtasks are genuinely independent AND individually substantial. A task you could finish in the time it takes to write two good briefs is yours to do.
+2. **Slice by ownership boundary, not by topic.** The test per pair of subtasks: do they write to the same artifact, or does one's output change the other's input? Yes → sequential or merged into one task. The safe cuts: different files/directories · different data sources to research · different independent deliverables. The classic collision: "agent A refactors, agent B adds tests" on the same module — topically distinct, physically overlapping.
+3. **Write briefs that stand alone.** A subagent doesn't share your conversation. Each brief carries: the goal as an outcome test · the context it can't infer (constraints, conventions, decisions already made — stated, not referenced) · what it must NOT touch (the other agents' territory, named) · the exact deliverable shape (so integration is mechanical) · when to stop and return rather than improvise.
+4. **Pin the shared assumptions.** If any decision affects multiple agents (naming, interface shapes, the version of truth), make it BEFORE dispatch and put it in every brief. Two agents each "reasonably deciding" an interface produces two interfaces.
+5. **Integrate with suspicion.** On return: check each result against its brief (subagents drift too) · diff for cross-agent contradictions (terminology, duplicate implementations, conflicting claims — the research fan-out that returns three different revenue numbers is a finding, not an averaging opportunity) · then run whole-result verification, because parts that pass individually can fail composed.
+6. **Sequence the merge.** Integrate in dependency order, verifying at each join, not all-at-once at the end. A bad result caught at merge #1 costs one redo; at merge #4 it costs archaeology.
+
+## Output Format
+
+### Orchestration plan: [task]
+
+**Do-it-yourself instead?** [no, because … / partially — these bits stay with me: …]
+
+| Lane | Subtask (outcome test) | Territory (writes to) | Must not touch | Deliverable shape |
+|---|---|---|---|---|
+| parallel-1 | | | | |
+| sequential-after-1&2 | | | | |
+
+**Pinned shared assumptions (in every brief):** …
+**Integration protocol:** [merge order · contradiction checks · the composed-result verification]
+
+## Quality Checks
+
+- [ ] The delegate-vs-do decision was made explicitly, with the brief-writing cost counted
+- [ ] No two parallel lanes write to the same artifact
+- [ ] Every brief contains its territory, its must-not-touch, and a stop condition
+- [ ] Shared assumptions were pinned before dispatch, not discovered at merge
+- [ ] Integration verifies the composed whole, not just each part
+
+## Anti-Patterns
+
+- [ ] Do not parallelise for the feeling of speed — two colliding agents are slower than one sequential pass
+- [ ] Do not write briefs that reference your context ("as discussed", "the usual way") — subagents weren't in the room
+- [ ] Do not average contradictory results — a contradiction is a defect to resolve, with a cause
+- [ ] Do not merge everything then verify once — verify at each join while causes are still traceable
+- [ ] Do not delegate the judgment-bearing core (the decision, the synthesis, the taste) — delegate the legwork around it

@@ -512,6 +512,46 @@
     {
       "skill": "feature-sunset-plan",
       "input": "Kill our built-in 'Forms' feature: 3.1% of workspaces use it, but that includes 2 enterprise accounts ($140k combined ARR) whose intake process runs on it, and one has Forms named in their contract. It costs us ~15% of one team plus a security-review burden every quarter. Replacement: our new Typeform integration covers ~80% of use cases but has no conditional logic. Data: 40k form submissions stored. Plan the sunset."
+    },
+    {
+      "skill": "interview-me",
+      "input": "Make me a dashboard for the leadership team. Interview me first."
+    },
+    {
+      "skill": "brainstorming",
+      "input": "Brainstorm ways to reduce no-shows for our B2B product demos (currently 38% no-show). We've already tried reminder emails. Budget exists but is not unlimited; sales team is 6 people."
+    },
+    {
+      "skill": "writing-plans",
+      "input": "Plan the migration of our marketing site from WordPress to a static site generator. Constraints: SEO rankings must not drop, the blog has 400 posts with weird embedded shortcodes, and marketing needs to keep publishing weekly throughout. I don't know yet whether the shortcodes can be auto-converted."
+    },
+    {
+      "skill": "executing-plans",
+      "input": "Here is the plan we agreed [migration plan with 6 steps, step 2 says 'verify shortcode converter handles all 400 posts']. I am starting execution now. Walk me through it — and step 2 just failed on 37 posts that use a custom pricing-table shortcode."
+    },
+    {
+      "skill": "verification-before-completion",
+      "input": "I've finished the competitive analysis doc the CEO asked for: 'compare us to the top 3 rivals on pricing, enterprise features, and support SLAs, keep it under 2 pages, and make it usable in Thursday's board meeting.' Here's my draft [draft is 4 pages, covers pricing and features for 2 rivals, no SLA section]. Verify before I send it."
+    },
+    {
+      "skill": "subagent-orchestration",
+      "input": "I need to research 5 competitors (pricing, recent launches, hiring signals), update 12 API endpoint docs to a new format, and write a summary memo. I have parallel subagents available. Orchestrate this — last time two agents both edited the same docs file and I got merge conflicts."
+    },
+    {
+      "skill": "incremental-implementation",
+      "input": "Replace our homegrown session-token auth with OAuth across a codebase where 23 call-sites use the old auth helper. It's load-bearing (production, 40k users). Previous attempt was one giant PR that got reverted after breaking password reset. Plan the increments."
+    },
+    {
+      "skill": "code-simplification",
+      "input": "This Claude-generated payment retry module works and has passing tests, but it's 600 lines: a RetryStrategy interface with one implementation, a config object with 11 options (we set 2), an event emitter with one subscriber, and a custom backoff calculator that duplicates a utility we already have in lib/time.ts. Simplify it."
+    },
+    {
+      "skill": "frontend-design",
+      "input": "Build the UI for a small internal tool: a table of 200 customer accounts with health scores, filters by segment, and a detail pane. It currently 'works but looks like a prototype' - default browser styles, five different paddings. Dense pro-tool register, our accent is #0E7C66. Vanilla HTML/CSS single file."
+    },
+    {
+      "skill": "brand-guidelines",
+      "input": "Extract a brand kit from our materials: [homepage screenshot shows dark navy background #0B1D3A, coral CTAs, Inter font, sentence-case headlines, airy spacing; the sales deck uses the same navy but title-case and cramped]. Then tell me which of the two conflicting styles should win and write the kit."
     }
   ]
 }

@@ -59,3 +59,17 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Financial-modelling best practice (separate inputs from calculations, formula-driven, no hard-codes) implemented with openpyxl.
+
+## Programmatic Helper
+
+This skill ships `scripts/xlsx_tool.py` — a **zero-dependency** (stdlib zip+XML) tool that produces real `.xlsx` files, so the model you design can be delivered as a working workbook, not a markdown table:
+
+```bash
+# Build a workbook from JSON (numbers stay numbers, "=B2*C2" becomes a live formula)
+python3 scripts/xlsx_tool.py create model.xlsx --data '{"Model": [["Item","Qty","Price","Total"],["Widget",4,9.5,"=B2*C2"]]}'
+
+# Fill {{placeholders}} in an existing template workbook
+python3 scripts/xlsx_tool.py fill template.xlsx out.xlsx --values '{"month":"July","revenue":21000}'
+```
+
+Design the model first (per this skill), then emit the JSON and run `create`. Honest limits: default styling only, no charts — for formatted finals, open the generated file and style it, or use the playground's Excel export.
