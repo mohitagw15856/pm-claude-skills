@@ -81,8 +81,8 @@ In Claude Code, [`/firm`](commands/firm.md) runs the same session natively — g
 
 <table>
   <tr>
-    <td width="50%"><a href="https://mohitagw15856.github.io/pm-claude-skills/firm.html"><img src="web/docs-assets/showcase/firm-org.png" alt="The Firm — your charter and staff cards, each with a live calibration record" /></a><br /><sub>Your staff — each card shows their beat, the skill their duty runs on, and their live calibration record.</sub></td>
-    <td width="50%"><a href="https://mohitagw15856.github.io/pm-claude-skills/firm.html"><img src="web/docs-assets/showcase/firm.png" alt="Board minutes from a session the staff held without you — decisions table, dissent preserved, and the prediction ledger" /></a><br /><sub>The minutes from a session they held without you — decisions with asks, dissent preserved, predictions awaiting reality.</sub></td>
+    <td width="50%"><a href="https://mohitagw15856.github.io/pm-claude-skills/firm.html"><img src="web/docs-assets/showcase/firm-org.png" alt="The Firm — a real chartered firm: six staff hired, each card showing their beat and the skill their duty runs on" /></a><br /><sub>A real chartered firm (unretouched session) — six staff hired, each card showing their beat and the library skill their duty runs on.</sub></td>
+    <td width="50%"><a href="https://mohitagw15856.github.io/pm-claude-skills/firm.html"><img src="web/docs-assets/showcase/firm.png" alt="Real board minutes from session 1 — the staff debate two stalled enterprise deals vs rising churn, with five falsifiable predictions in the ledger" /></a><br /><sub>The actual session-1 minutes — the staff met without their principal, argued sequencing vs churn, and logged five falsifiable predictions now awaiting reality.</sub></td>
   </tr>
 </table>
 
