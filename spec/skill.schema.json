@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mohitagw15856/pm-claude-skills/spec/skill.schema.json",
+  "title": "SkillSpec v1.0 — SKILL.md frontmatter",
+  "description": "Machine-readable schema for the YAML frontmatter of a SKILL.md skill package. See SKILLSPEC.md for the full specification including body-section conformance levels.",
+  "type": "object",
+  "required": ["name", "description"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Kebab-case identifier. MUST equal the skill's directory name and be unique within a registry."
+    },
+    "description": {
+      "type": "string",
+      "minLength": 40,
+      "description": "The routing surface. MUST contain, in order: what the skill does (one clause); 'Use when …' trigger phrases; 'Produces …' the concrete artifact. At most ~3 sentences plus one optional cross-reference sentence."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(-[0-9A-Za-z.-]+)?$",
+      "description": "Optional SemVer. Major = breaking Output Format or Execution change. Absent = unversioned (0.x, mutable)."
+    },
+    "license": {
+      "type": "string",
+      "description": "Optional SPDX license identifier. Absent = inherits the containing repository's license."
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Open extension object. Consumers MUST ignore unknown keys.",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

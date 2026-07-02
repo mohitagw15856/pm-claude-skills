@@ -59,11 +59,16 @@ recall (brain) → run a skill (method) → produce the artifact → propose act
 
 ```
 brain/
-  context.md      knowledge/   decisions/   hypotheses/   stakeholders/   entities/   source/
+  context.md      knowledge/   decisions/   hypotheses/   stakeholders/   entities/   source/   predictions/
 ```
 
 Every fact is provenance-tagged — `[data] [interview] [external] [verbal] [hunch]` (strongest →
 weakest) — so skills can downgrade confidence on weak evidence instead of treating a hunch as settled.
+
+`predictions/` is the outcome-tracking ledger: when a decision skill commits to a claim (a RICE
+impact, a forecast number, a launch metric), the [`outcome-tracker`](skills/outcome-tracker/SKILL.md)
+skill records it here as a falsifiable prediction with a check-by date — and later scores it against
+reality, so frameworks accumulate a real calibration record instead of a reputation.
 
 ## The roadmap
 

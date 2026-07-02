@@ -4,17 +4,35 @@
   <meta charset="UTF-8" />
   <style>
     :root { color-scheme: light dark; }
-    body { width: 300px; margin: 0; font: 13px/1.45 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
-    .head { display: flex; align-items: center; gap: 8px; padding: 14px; background: #d97757; color: #fff; }
+    body { width: 340px; margin: 0; font: 13px/1.45 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    .head { display: flex; align-items: center; gap: 8px; padding: 12px 14px; background: #d97757; color: #fff; }
     .head img { width: 28px; height: 28px; border-radius: 6px; }
     .head strong { font-size: 14px; }
-    .body { padding: 14px; }
+    .tabs { display: flex; border-bottom: 1px solid rgba(128,128,128,.25); }
+    .tab { flex: 1; padding: 9px 0; border: 0; background: none; font: inherit; font-weight: 600; color: #888; cursor: pointer; border-bottom: 2px solid transparent; }
+    .tab.on { color: #d97757; border-bottom-color: #d97757; }
+    .body { padding: 12px 14px 14px; }
     .body p { margin: 0 0 10px; color: #555; }
     @media (prefers-color-scheme: dark) { .body p { color: #aaa; } body { background: #1f1f23; color: #ececf1; } }
-    ul { margin: 0 0 12px; padding-left: 18px; }
-    li { margin: 3px 0; }
     a.btn { display: block; text-align: center; padding: 9px; border-radius: 9px; background: #d97757; color: #fff; text-decoration: none; font-weight: 600; margin-top: 4px; }
     .tip { font-size: 11.5px; color: #888; margin-top: 10px; }
+    /* Lint view */
+    textarea, input[type="password"], input[type="text"] { width: 100%; box-sizing: border-box; font: inherit; padding: 7px 9px; border: 1px solid rgba(128,128,128,.4); border-radius: 8px; background: transparent; color: inherit; margin-bottom: 8px; }
+    textarea { min-height: 96px; resize: vertical; }
+    button.go { width: 100%; padding: 9px; border: 0; border-radius: 9px; background: #d97757; color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+    button.go[disabled] { opacity: .6; cursor: default; }
+    .status { font-size: 11.5px; color: #888; margin: 8px 0 0; min-height: 15px; }
+    .status.err { color: #e05c5c; }
+    .summary { font-weight: 600; margin: 10px 0 8px; }
+    .verdict { display: flex; gap: 7px; align-items: flex-start; padding: 6px 0; border-top: 1px solid rgba(128,128,128,.18); }
+    .chip { flex: none; font-size: 10px; font-weight: 800; letter-spacing: .03em; padding: 2px 7px; border-radius: 999px; margin-top: 1px; }
+    .chip.pass { background: rgba(90,209,154,.18); color: #2e9e6b; }
+    .chip.fail { background: rgba(224,92,92,.16); color: #e05c5c; }
+    .chip.na { background: rgba(128,128,128,.18); color: #888; }
+    .verdict .c { font-weight: 600; }
+    .verdict .n { display: block; font-weight: 400; color: #888; font-size: 12px; margin-top: 1px; }
+    .mini { width: auto; padding: 6px 12px; margin-top: 10px; background: #444; }
+    .detected { font-size: 11.5px; color: #d97757; margin: -4px 0 8px; }
   </style>
 </head>
 <body>
@@ -22,13 +40,33 @@
     <img src="icons/icon48.png" alt="" />
     <strong>PM Skills</strong>
   </div>
-  <div class="body">
+  <div class="tabs">
+    <button class="tab on" id="tabInsert" type="button">🧠 Insert</button>
+    <button class="tab" id="tabLint" type="button">✓ Lint</button>
+  </div>
+
+  <div class="body" id="viewInsert">
     <p><b id="count">198</b> professional skills, ready to drop into your chat.</p>
     <p>Open <b>ChatGPT</b>, <b>Claude.ai</b> or <b>Gemini</b>, then click the floating <b>🧠 Skills</b> button to pick one — it inserts the framework into the message box. Add your task and send.</p>
     <a class="btn" href="https://mohitagw15856.github.io/pm-claude-skills/" target="_blank" rel="noopener">Open the Playground ↗</a>
     <a class="btn" style="background:#444;margin-top:8px" href="https://github.com/mohitagw15856/pm-claude-skills" target="_blank" rel="noopener">⭐ Star on GitHub</a>
     <p class="tip">Works on chatgpt.com · claude.ai · gemini.google.com. Skills run locally — nothing is sent to us.</p>
   </div>
+
+  <div class="body" id="viewLint" hidden>
+    <p>Lint what <em>you</em> wrote against a skill's quality bar — its Quality Checks and Anti-Patterns. Judgment only, no generation.</p>
+    <textarea id="lintText" placeholder="Select text on the page before opening this popup — or paste it here."></textarea>
+    <input id="lintSkill" type="text" list="skillDl" placeholder="✨ Auto-detect the skill (or type one, e.g. PRD Template)" />
+    <datalist id="skillDl"></datalist>
+    <div class="detected" id="lintDetected" hidden></div>
+    <input id="lintKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" />
+    <button class="go" id="lintBtn" type="button">✓ Lint it</button>
+    <div class="status" id="lintStatus"></div>
+    <div id="lintResults"></div>
+    <button class="go mini" id="lintCopy" type="button" hidden>Copy as markdown</button>
+    <p class="tip">Your key is stored in this browser (extension storage) and sent only to api.anthropic.com when you click Lint.</p>
+  </div>
+
   <script src="popup.js"></script>
 </body>
 </html>

@@ -129,3 +129,27 @@ The script returns available focus hours, a velocity figure adjusted for real av
 - [ ] Do not carry stories with no acceptance criteria into the sprint — flag them as blockers before committing
 - [ ] Do not allow stories estimated at 8+ points into the sprint without splitting them first
 - [ ] Do not ignore carry-over items when calculating capacity — they consume capacity and must be accounted for before new work is pulled in
+
+## Execution
+
+For tool-using or computer-use agents that can reach the team's tracker (Jira, Linear, GitHub Projects). Runtimes without tool access ignore this section and deliver the document. See [SKILLSPEC.md §5](../../SKILLSPEC.md) for the rules this block follows.
+
+### Preconditions
+- The sprint plan above has been produced and **explicitly approved by a human** — never build a sprint from an unreviewed draft.
+- Tracker access is already authenticated in the agent's environment; the target board/project is named by the user.
+- A dry-run listing of intended changes has been shown and confirmed.
+
+### Allowed actions
+- Create the sprint/iteration container with the approved name and dates.
+- Move the approved, already-existing backlog items into the sprint — only the items listed in the approved plan.
+- Set story-point estimates on those items to the approved values.
+- Post the sprint goal as the sprint description or a pinned comment.
+- Nothing else: no creating new issues, no deleting or closing anything, no editing item descriptions, no touching other sprints.
+
+### Verification
+- Re-read the sprint from the tracker: item count and total points equal the approved plan; every moved item is in the sprint; sprint dates match.
+- Post the verification summary (items, points, dates) back to the user.
+
+### Rollback
+- Undo = move the items back to the backlog and delete the empty sprint container.
+- Stop and ask a human if: any item in the plan no longer exists or changed since approval, the tracker rejects an action, or the board contains an active sprint with overlapping dates.

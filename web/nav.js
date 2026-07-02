@@ -58,6 +58,7 @@
     { href: 'galaxy.html', label: '🌌 Galaxy' },
     { group: 'Tools', items: [
       ['boardroom.html', '🏛️ Boardroom'],
+      ['defend.html', '🛡️ Defend'],
       ['agent.html', '✨ Auto-Agent'],
       ['canvas.html', '🧩 Workflow Canvas'],
       ['ask.html', '❓ Ask'],

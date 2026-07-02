@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>Verify an attestation — did this exact document get this verdict?</title>
+<meta name="description" content="Verify a pm-skills attestation: paste the document and the attestation JSON, and this page recomputes the content hash locally to confirm the exact text that received a Boardroom verdict. Nothing leaves your browser." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .verify-wrap { max-width: 860px; margin: 0 auto; padding: 16px 22px 70px; }
+  .lead { color: #c7cfda; font-size: 15.5px; }
+  textarea { width: 100%; box-sizing: border-box; padding: 12px 14px; border-radius: 12px; background: var(--panel); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 13.5px; line-height: 1.5; }
+  label { display: block; font-size: 13px; font-weight: 600; margin: 14px 0 6px; }
+  .bar { display: flex; gap: 10px; align-items: center; margin: 16px 0; flex-wrap: wrap; }
+  .result { border-radius: 14px; padding: 16px 18px; margin-top: 8px; border: 1.5px solid var(--border); background: var(--panel); }
+  .result.ok { border-color: #5ad19a; background: linear-gradient(180deg, rgba(90,209,154,.08), transparent 60%), var(--panel); }
+  .result.bad { border-color: #ff5c5c; background: linear-gradient(180deg, rgba(255,92,92,.08), transparent 60%), var(--panel); }
+  .result h2 { margin: 0 0 8px; font-size: 17px; }
+  .facts { width: 100%; border-collapse: collapse; font-size: 13.5px; margin-top: 8px; }
+  .facts td { border-top: 1px solid var(--border); padding: 7px 10px 7px 0; vertical-align: top; }
+  .facts td:first-child { color: var(--muted); white-space: nowrap; padding-right: 18px; }
+  code.h { font-size: 11.5px; word-break: break-all; color: var(--muted); }
+  .scope { border: 1px dashed var(--border); border-radius: 12px; padding: 10px 14px; margin-top: 18px; font-size: 13px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Verify an attestation</h1><p class="tagline">Did this exact document get this verdict?</p></div></div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Verification runs entirely in your browser — nothing is uploaded anywhere.</div>
+
+<div class="verify-wrap">
+  <p class="lead">A <a href="boardroom.html">Boardroom</a> attestation is a tamper-evident record that <em>this exact text</em> received <em>this verdict</em>. Paste both below — this page recomputes the document's SHA-256 locally and compares it to the attested hash. A single changed character fails the match.</p>
+
+  <label>The document (exact text that was reviewed)</label>
+  <textarea id="doc" rows="8" placeholder="Paste the full document text…"></textarea>
+
+  <label>The attestation (boardroom-attestation.json)</label>
+  <textarea id="att" rows="6" placeholder='Paste the attestation JSON… {"spec":"pm-skills-attestation/1", …}'></textarea>
+
+  <div class="bar">
+    <button id="go" class="primary" type="button">🔏 Verify</button>
+    <span id="status" class="status"></span>
+  </div>
+
+  <div id="out" hidden></div>
+
+  <div class="scope"><strong>What this proves — and what it doesn't.</strong> A match proves the pasted text is byte-identical to the document whose session produced this attestation, and shows the recorded verdict and session facts. It is an <em>integrity</em> check, not a signature: it does not prove <em>who</em> ran the session. Treat the attestation as trustworthy to the degree you trust where it was stored (e.g. committed to the repo alongside the document).</div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+async function sha256hex(text){
+  const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text));
+  return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');
+}
+el('go').addEventListener('click',async ()=>{
+  const doc=el('doc').value, out=el('out');
+  out.hidden=true; setStatus('');
+  let att;
+  try{ att=JSON.parse(el('att').value.trim()); }catch(_){ return setStatus('That attestation is not valid JSON.',true); }
+  if(!att || att.spec!=='pm-skills-attestation/1' || !att.document || !att.document.sha256)
+    return setStatus('Not a pm-skills attestation (expected spec pm-skills-attestation/1).',true);
+  if(!doc.trim()) return setStatus('Paste the document text to verify.',true);
+  if(window.pmTrack) pmTrack('verify/run');
+  // The boardroom hashes the doc after its 24k truncation — apply the same rule.
+  let text=doc.trim();
+  if(text.length>24000) text=text.slice(0,24000)+'\n\n[…document truncated for the session…]';
+  const h=await sha256hex(text);
+  const ok=h===String(att.document.sha256).toLowerCase();
+  const s=att.session||{};
+  out.hidden=false;
+  out.className='result '+(ok?'ok':'bad');
+  out.innerHTML=(ok
+    ? '<h2>✅ Match — this exact text received the attested verdict</h2>'
+    : '<h2>❌ No match — this text is NOT the document that was reviewed</h2><p>Even a one-character edit after the session causes this. Ask for the reviewed version, or re-run the session on this text.</p>')
+    +'<table class="facts">'
+    +row('Verdict', esc(att.verdict||'(not recorded)'))
+    +row('Session', esc((s.tool||'?')+' · '+(s.depth||'')+' · grill: '+(s.grill||'?')))
+    +row('Bench', esc((s.bench||[]).join(', ')||'?'))
+    +row('Model', esc((s.provider?s.provider+' · ':'')+(s.model||'?')))
+    +row('Created', esc(att.created||'?'))
+    +row('Document hash', '<code class="h">'+esc(att.document.sha256)+'</code>')
+    +row('Recomputed', '<code class="h">'+esc(h)+'</code>')
+    +'</table>';
+});
+function row(k,v){ return '<tr><td>'+k+'</td><td>'+v+'</td></tr>'; }
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+function esc(t){ return String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

@@ -255,3 +255,25 @@ Only include issues that matter at executive level.
 - [ ] Do not list risks without mitigation actions and clear flags for stakeholder help needed
 - [ ] Do not write decisions needed as questions without providing a clear recommendation — executives need options, not open-ended questions
 - [ ] Do not allow the update to exceed one page — if it requires more, the message needs editing, not expanding
+
+## Execution
+
+For tool-using agents that can reach the team's communication channels (Slack, email). Sending an update is **outward-facing**: it is never automatic. Runtimes without tool access ignore this section. See [SKILLSPEC.md §5](../../SKILLSPEC.md).
+
+### Preconditions
+- The final update text has been shown to the human **verbatim** and explicitly approved — including the exact channel/recipient list.
+- The channel or recipient list is named by the user, not inferred from history.
+- If the status is 🔴 or contains a Decision Needed, confirm the named decision-maker is among the recipients.
+
+### Allowed actions
+- Post the approved text, unmodified, to the one approved channel — or send it as one email to the approved recipients with the approved subject line.
+- Save a copy to the location the user names (doc, Brain, repo file).
+- Nothing else: no scheduling recurring sends (see `schedule-recipe` for that, with its own gates), no @-mentions not present in the approved text, no cross-posting.
+
+### Verification
+- Confirm the message exists in the channel/thread (fetch its permalink) and report the link back.
+- Confirm the sent text is byte-identical to the approved text.
+
+### Rollback
+- If the platform allows it, deletion of a just-posted message is permitted **only** on explicit human instruction — otherwise post a correction reply.
+- Stop and ask a human if: the channel is not found, posting partially fails, or the approved text no longer matches what is about to be sent.

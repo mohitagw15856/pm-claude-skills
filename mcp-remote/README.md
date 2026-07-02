@@ -50,6 +50,29 @@ curl https://pm-skills-mcp.<you>.workers.dev/v1/skills/prd-template?format=md
 See [`../connectors/n8n.md`](../connectors/n8n.md), [`../connectors/lovable.md`](../connectors/lovable.md),
 and [`../connectors/obsidian.md`](../connectors/obsidian.md) for worked integrations.
 
+## Agent-to-agent (A2A) discovery — other agents can hire the library
+
+The Worker also speaks the emerging **agent-to-agent** pattern, so autonomous agents can
+*discover* this service and pull the right professional skill for a task without a human
+wiring anything:
+
+- **Discovery card:** `GET /.well-known/agent-card.json` — who this agent is, what it can
+  do (`search-skills`, `get-skill`, `get-workflow`), and where to message it.
+- **Messaging:** `POST /a2a` — minimal JSON-RPC 2.0, method `message/send`. Send a task
+  description; the reply names the best-matching skill (plus a runner-up) and includes its
+  **full SKILL.md instructions** for the calling agent to execute itself. Read-only, no
+  server-side LLM calls, no auth, CORS open.
+
+```bash
+curl -s https://pm-skills-mcp.pm-claude-skills.workers.dev/a2a \
+  -H 'content-type: application/json' \
+  -d '{"jsonrpc":"2.0","id":1,"method":"message/send",
+       "params":{"message":{"parts":[{"kind":"text","text":"I need to prioritise a messy backlog for Q3"}]}}}'
+```
+
+Deploys automatically: any push to `main` touching `mcp-remote/**` triggers the
+[`deploy-worker`](../.github/workflows/deploy-worker.yml) workflow.
+
 ## How it works
 
 `src/index.js` is a stateless Worker. A `GET /v1/*` request is served by the REST handler;

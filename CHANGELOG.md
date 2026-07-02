@@ -9,6 +9,18 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [38.0.0] — The library becomes infrastructure: SkillSpec, execution blocks, A2A, attestations, The Defense, outcome tracking, ambient lint & the dataset — 2026-07-02
+
+### Added — the "library as infrastructure" wave (8 frontier features)
+- **SkillSpec v1.0** ([SKILLSPEC.md](SKILLSPEC.md) + [spec/skill.schema.json](spec/skill.schema.json)) — a formal, normative specification for `SKILL.md`: frontmatter contract, body-section rules, conformance levels **L1 Loadable → L4 Verified**, SemVer + content-hash pinning, safety requirements, registry interoperability. SkillCheck is the reference validator; the authoring standard remains the style guide.
+- **Execution blocks for computer-use agents** — skills MAY now carry an `## Execution` section (Preconditions / closed-allow-list Actions / Verification / Rollback) so tool-using agents can *perform* a skill, bounded and approval-gated, instead of only drafting. Spec in SKILLSPEC §5; worked examples in `sprint-planning` (build the approved sprint in the tracker) and `stakeholder-update` (send the approved update, verbatim, to the approved channel).
+- **Agent-to-agent (A2A) discovery on the hosted Worker** — `GET /.well-known/agent-card.json` (who this agent is, what it offers) and `POST /a2a` (JSON-RPC `message/send`: send a task description, receive the best-matching skill's full instructions + runner-up). Read-only, no auth, no server-side LLM. Other agents can now *hire the library*.
+- **`outcome-tracker` skill** (in `pm-autopilot`) + `predictions/` Brain folder — closes the loop nobody closes: record every decision's falsifiable predictions (metric, band, confidence, check-by date, framework), score them against reality on a schedule, and compute per-framework / per-confidence-band calibration with a stdlib calculator (`outcome_calibration.py`). Frameworks earn trust from outcomes, not vibes.
+- **🛡️ The Defense** ([web/defend.html](web/defend.html)) — the Boardroom reviews the *document*; this reviews **you**. Up to three executives cross-examine you live, one question at a time; a neutral Chair scores the defense (facts, evidence, honesty about unknowns, composure), issues PASS / PASS WITH REVISIONS / NOT READY, and names the three questions to prepare better. Honest "I don't know" scores above bluffing.
+- **🔏 Boardroom attestations + verify page** — every verdict now exports a tamper-evident integrity record (SHA-256 of the exact reviewed text + bench, grill, model, verdict). [web/verify.html](web/verify.html) re-computes the hash locally — one changed character fails the match. Scope stated honestly: integrity, not signature.
+- **Extension v1.1 — ambient lint** — the browser extension gains a Lint tab: select text you wrote anywhere, and it's judged against a chosen (or auto-detected) skill's Quality Checks + Anti-Patterns with your own key — pass/fail chips with specific notes, copy-as-markdown. Grammarly for professional judgment.
+- **Training dataset pipeline** ([scripts/build-dataset.mjs](scripts/build-dataset.mjs) → [dataset/](dataset/)) — deterministically distills the library into training data: ~1,500 skill-routing chat pairs, 108 eval-case SFT seeds, 22 graded sample triplets, plus the two-stage teacher-distillation recipe. Step one toward `pm-skills-3b`. **421 skills across 61 bundles.**
+
 ## [37.0.0] — The Boardroom, AgentOps & Autopilot bundles, the skill router & per-skill depth — 2026-07-01
 
 ### Added

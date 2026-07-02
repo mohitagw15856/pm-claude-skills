@@ -428,6 +428,10 @@
     {
       "skill": "agent-observability-spec",
       "input": "We are launching a tool-using research agent (search + internal wiki + email draft tools), about 50k requests/day, on Datadog. Biggest fears: it emailing the wrong thing, cost blowouts, and quality drifting after prompt changes. Spec the observability."
+    },
+    {
+      "skill": "outcome-tracker",
+      "input": "We just committed Q3 priorities off this RICE table: 1) Onboarding redesign, RICE 320, we claim activation goes 42%->55% by end of Q3. 2) SSO, RICE 210, we claim it unblocks 4 stalled enterprise deals (~$180k) within 60 days of ship. 3) Dark mode, RICE 90. I am 80% confident on onboarding, 60% on SSO. Record the predictions."
     }
   ]
 }

@@ -11,7 +11,7 @@ const WORKFLOWS_URL = 'https://raw.githubusercontent.com/mohitagw15856/pm-claude
 const SERVER = {
   name: 'pm-claude-skills',
   title: 'PM Skills — Professional Agent Skills',
-  version: 'remote-1.1.0',
+  version: 'remote-1.2.0',
   websiteUrl: 'https://mohitagw15856.github.io/pm-claude-skills/',
   icons: [{ src: 'https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/icon.svg', mimeType: 'image/svg+xml', sizes: ['any'] }],
 };
@@ -275,6 +275,87 @@ async function handleRest(url) {
   return jsonResponse({ error: 'Unknown endpoint. See GET /v1' }, 404);
 }
 
+// ── Agent-to-agent (A2A) discovery ───────────────────────────────────────────
+// Other AI agents can discover this service via the standard well-known agent
+// card, then "hire" the library over a minimal JSON-RPC message/send endpoint:
+// send a task description, get back the best-matching skill's full instructions
+// to execute themselves. Read-only, no LLM calls server-side, same catalogue.
+const WORKER_URL = 'https://pm-skills-mcp.pm-claude-skills.workers.dev';
+const REPO_URL = 'https://github.com/mohitagw15856/pm-claude-skills';
+const AGENT_CARD = {
+  name: 'PM Skills Library',
+  description:
+    'A library of professional Agent Skills (PRDs, launches, postmortems, compliance, growth, careers & more). ' +
+    'Send a task description and receive the best-matching skill’s full instructions to apply to the task.',
+  url: WORKER_URL + '/a2a',
+  version: SERVER.version,
+  provider: { organization: 'pm-claude-skills', url: REPO_URL },
+  capabilities: { streaming: false, pushNotifications: false, stateTransitionHistory: false },
+  defaultInputModes: ['text/plain', 'application/json'],
+  defaultOutputModes: ['text/plain', 'application/json'],
+  skills: [
+    {
+      id: 'search-skills',
+      name: 'Search skills',
+      description: 'Search skills by keyword across name, title, and description. Returns the best matches, ranked.',
+      tags: ['discovery', 'search', 'catalog'],
+      examples: ['prioritise backlog', 'customer churn', 'which skill should I use for a launch plan?'],
+    },
+    {
+      id: 'get-skill',
+      name: 'Get a skill',
+      description: "Get a skill's full instructions (the SKILL.md body) by name, to apply to the calling agent's task.",
+      tags: ['skill', 'instructions', 'retrieval'],
+      examples: ['get rice-prioritisation', 'fetch the incident-postmortem skill'],
+    },
+    {
+      id: 'get-workflow',
+      name: 'Get a workflow recipe',
+      description: 'Fetch a multi-skill recipe (an ordered chain of skills where each output feeds the next).',
+      tags: ['workflow', 'recipe', 'chain'],
+      examples: ['ship-a-feature', 'launch-a-product'],
+    },
+  ],
+};
+
+const rpcError = (id, code, message) =>
+  jsonResponse({ jsonrpc: '2.0', id: id === undefined ? null : id, error: { code, message } });
+
+async function handleA2A(request) {
+  let body;
+  try { body = await request.json(); } catch { return rpcError(null, -32600, 'Invalid request: body is not JSON.'); }
+  const { id, method, params = {} } = body || {};
+  if (!body || body.jsonrpc !== '2.0' || typeof method !== 'string') return rpcError(id, -32600, 'Invalid request: expected JSON-RPC 2.0.');
+  if (method !== 'message/send') return rpcError(id, -32601, 'Method not found: ' + method + ' (this agent supports message/send).');
+
+  const parts = (params.message && params.message.parts) || [];
+  const query = parts.map((p) => (p && (p.text || (p.kind === 'text' && p.content))) || '').join(' ').trim();
+  if (!query) return rpcError(id, -32600, 'Invalid request: params.message.parts must contain text describing the task.');
+
+  const skills = await getSkills();
+  // Direct skill-name mention wins; otherwise keyword search over the catalogue.
+  const named = skills.find((s) => query.toLowerCase().includes(s.name));
+  const best = named || searchSkills(skills, query, 1)[0] || searchSkills(skills, query.split(/\s+/).slice(0, 3).join(' '), 1)[0];
+  if (!best) {
+    return jsonResponse({
+      jsonrpc: '2.0', id,
+      result: { kind: 'message', role: 'agent', messageId: crypto.randomUUID(), metadata: { skill: null, bundle: null, runnerUp: null }, parts: [{ kind: 'text', text: 'No matching skill found. Try different keywords, or GET ' + WORKER_URL + '/v1/skills for the catalogue.' }] },
+    });
+  }
+  const runnerUp = searchSkills(skills, query, 2).filter((s) => s.name !== best.name)[0];
+  return jsonResponse({
+    jsonrpc: '2.0', id,
+    result: {
+      kind: 'message', role: 'agent', messageId: crypto.randomUUID(),
+      metadata: { skill: best.name, bundle: best.plugin, runnerUp: runnerUp ? runnerUp.name : null },
+      parts: [
+        { kind: 'text', text: `Best-match skill: ${best.name} (${best.plugin}) — ${best.description}` + (runnerUp ? `\nRunner-up: ${runnerUp.name} — ${runnerUp.description}` : '') },
+        { kind: 'text', text: `Apply these instructions to the task:\n\n# ${best.title}\n\n${best.body}` },
+      ],
+    },
+  });
+}
+
 // ── "Try Claude free, no key" — a SPONSORED, CAPPED proxy ────────────────────
 // Ships OFF. It only runs when you provision (a) the ANTHROPIC_API_KEY secret and
 // (b) a KV namespace bound as TRY_KV (for the rate-limit counters). It fails CLOSED:
@@ -327,6 +408,15 @@ export default {
   async fetch(request, env) {
     if (request.method === 'OPTIONS') return new Response(null, { headers: CORS });
     const url = new URL(request.url);
+    // A2A: standard discovery card + minimal message/send endpoint (see handleA2A).
+    if (url.pathname === '/.well-known/agent-card.json' && (request.method === 'GET' || request.method === 'HEAD')) {
+      return jsonResponse(AGENT_CARD);
+    }
+    if (url.pathname === '/a2a') {
+      if (request.method === 'POST') return handleA2A(request);
+      if (request.method === 'GET') return jsonResponse({ hint: 'POST JSON-RPC 2.0 message/send here. Discovery: GET /.well-known/agent-card.json' });
+      return new Response('Method Not Allowed', { status: 405, headers: CORS });
+    }
     // Capped, sponsored "try Claude free, no key" endpoint (off until configured — see handleTry).
     if (url.pathname === '/try') {
       if (request.method === 'GET') return tryStatus(env);   // frontend probes this to show/hide the button (already a Response)

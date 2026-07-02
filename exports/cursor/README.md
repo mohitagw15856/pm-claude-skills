@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-420 skills exported. Copy a `.mdc rule` into the tool to use it.
+421 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -261,6 +261,7 @@
 | One-Pager | `pm-personal` | `pm-personal/one-pager/one-pager.mdc` |
 | Open House Plan | `pm-realestate` | `pm-realestate/open-house-plan/open-house-plan.mdc` |
 | Org Chart | `pm-visuals` | `pm-visuals/org-chart/org-chart.mdc` |
+| Outcome Tracker | `pm-autopilot` | `pm-autopilot/outcome-tracker/outcome-tracker.mdc` |
 | Outreach Message | `pm-jobsearch` | `pm-jobsearch/outreach-message/outreach-message.mdc` |
 | Paid Acquisition Plan | `pm-growth` | `pm-growth/paid-acquisition-plan/paid-acquisition-plan.mdc` |
 | Parent Communication | `pm-education` | `pm-education/parent-communication/parent-communication.mdc` |

@@ -1,4 +1,4 @@
-# 🗂️ All 420 Skills — full catalog
+# 🗂️ All 421 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -605,7 +605,7 @@
 | **Portfolio Page** (`portfolio-page`) | Structure a portfolio or case-study page that shows your work, not just lists it. | ✅ 5/5 |
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 
-## 🌍 Industries & Public Sector (74 skills)
+## 🌍 Industries & Public Sector (75 skills)
 
 ### `pm-agentops` — 5 skills
 
@@ -617,12 +617,13 @@
 | **Model Migration Plan** (`model-migration-plan`) | Plan the migration of an LLM feature from one model to another without breaking production. | — |
 | **Prompt Regression Suite** (`prompt-regression-suite`) | Design a regression test suite that catches an LLM feature getting worse when the prompt, model, or context changes. | — |
 
-### `pm-autopilot` — 3 skills
+### `pm-autopilot` — 4 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Autopilot Charter** (`autopilot-charter`) | Decide which of your recurring rituals to put on autopilot — and which to keep manual. | — |
 | **Delta Briefing** (`delta-briefing`) | Make a recurring brief report what changed since the last edition instead of restating everything. | — |
+| **Outcome Tracker** (`outcome-tracker`) | Record the testable predictions inside a decision, then score them against reality later — so frameworks earn trust from outcomes, not vibes. | — |
 | **Schedule Recipe** (`schedule-recipe`) | Turn 'run this every Friday at 4pm' into a working, copy-paste schedule on the user's actual runner. | — |
 
 ### `pm-crisis` — 5 skills
@@ -753,4 +754,4 @@
 
 ---
 
-_420 skills across 61 bundles · 208 eval-scored (50%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_421 skills across 61 bundles · 208 eval-scored (49%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

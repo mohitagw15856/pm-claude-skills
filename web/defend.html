@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>The Defense — defend your document against AI executives, live</title>
+<meta name="description" content="A flight simulator for the real meeting: paste your PRD, plan, or pitch and defend it live — AI executives cross-examine you one question at a time, then a neutral Chair scores your defense and tells you what to prepare before the real one." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
+<script src="providers.js"></script>
+<style>
+  .def-wrap { max-width: 940px; margin: 0 auto; padding: 16px 22px 70px; }
+  .lead { color: #c7cfda; font-size: 15.5px; }
+  .doc-in { width: 100%; box-sizing: border-box; min-height: 170px; padding: 12px 14px; border-radius: 12px; background: var(--panel); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 14px; line-height: 1.5; }
+  .ctx-in { width: 100%; box-sizing: border-box; padding: 10px 12px; margin-top: 8px; border-radius: 10px; background: var(--panel); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 13.5px; }
+  .bench { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0 6px; }
+  .seat { display: flex; align-items: center; gap: 8px; padding: 7px 12px 7px 8px; border-radius: 999px; border: 1.5px solid var(--border); background: var(--panel); cursor: pointer; user-select: none; transition: all .15s; }
+  .seat .em { width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; font-size: 15px; background: var(--panel-2); }
+  .seat b { font-size: 13px; } .seat small { display: block; font-size: 10.5px; color: var(--muted); }
+  .seat.on { border-color: var(--seat, var(--accent)); box-shadow: 0 0 0 1px var(--seat, var(--accent)); }
+  .seat.off { opacity: .45; }
+  .seat.speaking { animation: seatpulse 1.2s ease-in-out infinite; }
+  @keyframes seatpulse { 0%,100% { box-shadow: 0 0 0 1px var(--seat); } 50% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--seat) 45%, transparent); } }
+  @media (prefers-reduced-motion: reduce) { .seat.speaking { animation: none; } }
+  .bar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 12px 0 6px; }
+  .bar select { padding: 8px 10px; border-radius: 9px; background: var(--panel); color: var(--text); border: 1px solid var(--border); font-family: inherit; }
+  .progress { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .06em; margin: 16px 0 2px; }
+  .feed { display: flex; flex-direction: column; gap: 12px; }
+  .msg { border: 1px solid var(--border); border-left: 3px solid var(--seat, var(--border)); border-radius: 12px; background: var(--panel); padding: 12px 15px; }
+  .msg-head { display: flex; align-items: center; gap: 9px; margin-bottom: 7px; }
+  .msg-head .em { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font-size: 16px; background: var(--panel-2); box-shadow: 0 0 0 2px var(--seat, var(--border)); }
+  .msg-head b { font-size: 14px; } .msg-head small { color: var(--muted); font-size: 12px; }
+  .msg-body { font-size: 13.8px; line-height: 1.55; }
+  .msg-body p { margin: 6px 0; }
+  .msg.you { border-left-color: #9aa7b8; background: var(--panel-2); }
+  .typing { display: inline-flex; gap: 4px; padding: 4px 0; }
+  .typing i { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); animation: blink 1s infinite; }
+  .typing i:nth-child(2) { animation-delay: .2s; } .typing i:nth-child(3) { animation-delay: .4s; }
+  @keyframes blink { 0%,80%,100% { opacity: .25; } 40% { opacity: 1; } }
+  .answer-box { border: 1.5px dashed var(--accent); border-radius: 12px; background: var(--panel); padding: 12px 15px; }
+  .answer-box textarea { width: 100%; box-sizing: border-box; min-height: 84px; padding: 10px 12px; border-radius: 9px; background: var(--panel-2); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 14px; line-height: 1.5; }
+  .answer-box .hint { color: var(--muted); font-size: 12px; margin: 6px 0 8px; }
+  .verdict { border: 1.5px solid var(--accent); border-radius: 14px; background: linear-gradient(180deg, rgba(217,119,87,.09), transparent 55%), var(--panel); padding: 16px 18px; }
+  .verdict .msg-head .em { box-shadow: 0 0 0 2px var(--accent); }
+  .out-actions { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>The Defense</h1><p class="tagline">Defend your document against the bench — before the real meeting.</p></div></div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-fable-5">Fable 5 ✨</option><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your key stays in this browser. The whole session runs client-side — your document and answers are sent only to the model provider you choose.</div>
+
+<div class="def-wrap">
+  <p class="lead">The <a href="boardroom.html">Boardroom</a> reviews the <em>document</em>. This reviews <strong>you</strong>. Paste what you're presenting; up to three executives cross-examine you one question at a time — then a neutral Chair scores your defense and tells you exactly what to prepare before the real meeting. Saying "I don't know" honestly scores better than bluffing.</p>
+
+  <textarea id="doc" class="doc-in" placeholder="Paste the document you'll be defending — a PRD, launch plan, investor pitch, pricing proposal, strategy memo…"></textarea>
+  <input id="ctx" class="ctx-in" placeholder="Optional context: who the real meeting is with, what decision you're asking for, what you're most nervous about…" />
+
+  <div class="bench" id="bench" aria-label="The examiners — click to seat or excuse (three maximum)"></div>
+
+  <div class="bar">
+    <select id="difficulty" title="How hard the examiners go at you">
+      <option value="practice">🎓 Practice</option>
+      <option value="realistic" selected>🎯 Realistic</option>
+      <option value="career">🔥 Career-defining</option>
+    </select>
+    <button id="runBtn" class="primary" type="button">🛡️ Begin the defense</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Adjourn early</button>
+    <span id="status" class="status"></span>
+  </div>
+
+  <div id="progress" class="progress" hidden></div>
+  <div id="feed" class="feed"></div>
+  <div id="after" class="out-actions" hidden>
+    <button id="dlDebrief" class="primary" type="button">⬇ Download debrief (.md)</button>
+    <button id="again" class="ghost" type="button">↻ New session</button>
+  </div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+const BENCH=[
+  {id:'cfo',emoji:'💰',name:'Margaret Cho',role:'CFO',color:'#5ad19a',on:true,
+   lens:'unit economics, ROI, payback period, headcount and the opportunity cost of doing this instead of something else',
+   bias:'You kill anything that cannot show its maths. You distrust hockey-stick projections and unpriced assumptions.'},
+  {id:'cto',emoji:'🛠️',name:'Dev Sharma',role:'CTO',color:'#6aa9ff',on:true,
+   lens:'technical feasibility, architecture and security implications, tech debt, delivery risk and sequencing',
+   bias:'You have been burned by underestimated migrations. You always ask what breaks at 10x load and who is on call for it.'},
+  {id:'cco',emoji:'❤️',name:'Amara Okafor',role:'Chief Customer Officer',color:'#ff8fa3',on:false,
+   lens:'real user value, adoption friction, support blast radius, churn and trust risk',
+   bias:'You channel the angriest customer in the room. You are allergic to features nobody asked for.'},
+  {id:'counsel',emoji:'⚖️',name:'Sam Whitfield',role:'General Counsel',color:'#c9a4ff',on:false,
+   lens:'privacy and data handling, regulatory exposure, contractual commitments, IP, and any claim that could be challenged publicly',
+   bias:'You read every superlative as a future lawsuit and every data flow as a future breach notification.'},
+  {id:'vc',emoji:'🦈',name:'Riko Tanaka',role:'The Sceptic · VC partner',color:'#ffb454',on:true,
+   lens:'market size, differentiation, competitive response, timing, and the kill-shot question the author hopes nobody asks',
+   bias:'You have seen four hundred decks this year. "We have no competitors" ends the meeting for you.'},
+];
+const DIFFICULTY={
+  practice:'Be challenging but fair and supportive. If the previous answer was weak, give the author a fair chance to recover: ask a related but more approachable follow-up.',
+  realistic:'Ask exactly what a real executive would ask. Follow up on evasions and unsupported numbers. Do not soften, do not pile on.',
+  career:'This is a career-defining review. Probe the weakest point ruthlessly. If the previous answer bluffed, dodged, or hand-waved a number, drill directly into that before anything else.',
+};
+const ROTATIONS=2;
+let controller=null, TRANSCRIPT=[], SCORECARD='', answerResolve=null;
+
+init();
+function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('runBtn').addEventListener('click',defend);
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+  el('again').addEventListener('click',()=>{el('feed').innerHTML='';el('after').hidden=true;el('progress').hidden=true;TRANSCRIPT=[];SCORECARD='';});
+  el('dlDebrief').addEventListener('click',()=>download('defense-debrief.md',debrief()));
+  renderBench();
+}
+function renderBench(){
+  const b=el('bench'); b.innerHTML='';
+  BENCH.forEach(p=>{
+    const d=document.createElement('div');
+    d.className='seat '+(p.on?'on':'off'); d.style.setProperty('--seat',p.color); d.id='seat-'+p.id;
+    d.title=(p.on?'Click to excuse ':'Click to seat ')+p.role;
+    d.innerHTML=`<span class="em">${p.emoji}</span><span><b>${esc(p.name)}</b><small>${esc(p.role)}</small></span>`;
+    d.addEventListener('click',()=>{
+      if(!p.on&&BENCH.filter(x=>x.on).length>=3) return setStatus('Three examiners maximum — excuse one first.',true);
+      p.on=!p.on; renderBench();
+    });
+    b.appendChild(d);
+  });
+}
+async function defend(){
+  const key=el('apiKey').value.trim(), local=PMProviders.current().local;
+  if(!key&&!local) return setStatus('Enter your '+PMProviders.current().name+' key first — or pick the In-browser (no key) provider.',true);
+  let doc=el('doc').value.trim();
+  if(doc.length<80) return setStatus('The bench needs a real document — paste at least a few paragraphs.',true);
+  if(doc.length>24000) doc=doc.slice(0,24000)+'\n\n[…document truncated for the session…]';
+  const bench=BENCH.filter(p=>p.on);
+  if(!bench.length) return setStatus('Seat at least one examiner.',true);
+  const ctx=el('ctx').value.trim(), diff=el('difficulty').value;
+  if(window.pmTrack) pmTrack('defend/run/'+bench.length+'-examiners');
+  el('runBtn').disabled=true; el('stopBtn').hidden=false; el('after').hidden=true;
+  el('feed').innerHTML=''; el('progress').hidden=false; TRANSCRIPT=[]; SCORECARD=''; controller=new AbortController();
+  const docBlock=(ctx?('CONTEXT FROM THE AUTHOR:\n'+ctx+'\n\n'):'')+'THE DOCUMENT BEING DEFENDED:\n\n'+doc;
+  const total=bench.length*ROTATIONS;
+  try{
+    for(let q=0;q<total;q++){
+      const p=bench[q%bench.length];
+      el('progress').textContent='Question '+(q+1)+' of '+total+' — '+p.role+' has the floor';
+      const sys=`You are ${p.name}, ${p.role}, cross-examining the author of a document in a live defense session.\nYour lens: ${p.lens}.\nYour disposition: ${p.bias}\nDifficulty: ${DIFFICULTY[diff]}\n\nRules: ask exactly ONE hard question, at most 60 words. It must reference a specific claim in the document or a specific previous answer. Never answer for the author, never lecture, no preamble — just the question. Do not repeat a question already asked in the transcript.`;
+      const user=docBlock+(TRANSCRIPT.length?('\n\nDEFENSE TRANSCRIPT SO FAR:\n\n'+transcriptText()):'')+'\n\nAsk your next question.';
+      const question=await speak(p,sys,user,'Question '+(q+1));
+      TRANSCRIPT.push({kind:'q',who:p,text:question});
+      const answer=await waitForAnswer(q+1,total);
+      TRANSCRIPT.push({kind:'a',who:null,text:answer});
+      addYouCard(answer);
+    }
+    // The Chair scores the defense
+    el('progress').textContent='The Chair is scoring the defense…';
+    const chair={id:'chair',emoji:'🪑',name:'The Chair',role:'Chair of the board',color:'#d97757'};
+    const chairSys=`You are the Chair, scoring how well the AUTHOR defended their document — not the document itself. Score strictly from evidence in the transcript; quote it. Honest "I don't know, and here is how I would find out" answers score HIGHER on handling of unknowns than confident bluffing.\n\nProduce a markdown scorecard:\n"### Scorecard" — a table: Dimension | Score /10 | Evidence (a short quote from the defense). Dimensions: Command of the facts · Evidence over assertion · Handling of unknowns (honesty vs bluff) · Composure under pressure.\nThen "**Verdict:**" — exactly one of: ✅ PASS · 🟡 PASS WITH REVISIONS · 🔴 NOT READY — with a one-line reason.\nThen "### The three questions to prepare better" — the 3 questions from this session (or implied by it) the author handled worst, each with one line on what a strong answer needs.\nIf the verdict is PASS, end with this badge on its own line: 🛡️ Defended [document type] at ${diff} level — pm-skills Defense, ${new Date().toISOString().slice(0,10)}\nAt most 350 words.`;
+    SCORECARD=await speak(chair,chairSys,docBlock+'\n\nFULL DEFENSE TRANSCRIPT:\n\n'+transcriptText(),'The debrief',true);
+    el('progress').textContent='Session complete';
+    setStatus('Defense scored — download the debrief.');
+    el('after').hidden=false;
+  }catch(e){ setStatus(e.name==='AbortError'?'Session adjourned.':(e.message||'The session failed.'),true); el('progress').hidden=true; }
+  finally{ el('runBtn').disabled=false; el('stopBtn').hidden=true; controller=null;
+    document.querySelectorAll('.seat.speaking').forEach(s=>s.classList.remove('speaking'));
+    const ab=document.querySelector('.answer-box'); if(ab) ab.remove(); }
+}
+async function speak(p,system,userMessage,label,isVerdict){
+  const seat=el('seat-'+p.id); if(seat) seat.classList.add('speaking');
+  const card=document.createElement('div'); card.className='msg'+(isVerdict?' verdict':''); card.style.setProperty('--seat',p.color);
+  card.innerHTML=`<div class="msg-head"><span class="em">${p.emoji}</span><span><b>${esc(p.name)}</b> <small>· ${esc(p.role)} · ${esc(label)}</small></span></div>
+    <div class="msg-body"><span class="typing"><i></i><i></i><i></i></span></div>`;
+  el('feed').appendChild(card); card.scrollIntoView({behavior:'smooth',block:'end'});
+  const body=card.querySelector('.msg-body');
+  const text=await PMProviders.stream({key:el('apiKey').value.trim(),model:el('model').value,system,userMessage,signal:controller.signal,
+    onDelta:(a)=>{body.innerHTML=DOMPurify.sanitize(marked.parse(a));}});
+  body.innerHTML=DOMPurify.sanitize(marked.parse(text||'*[said nothing]*'));
+  if(seat) seat.classList.remove('speaking');
+  return text;
+}
+function waitForAnswer(n,total){
+  return new Promise((resolve,reject)=>{
+    const box=document.createElement('div'); box.className='answer-box';
+    box.innerHTML=`<div class="hint">Your answer (${n}/${total}) — "I don't know, but here's how I'd find out" beats a bluff. Ctrl/Cmd+Enter to submit.</div>
+      <textarea placeholder="Answer the question as you would in the real meeting…"></textarea>
+      <div class="out-actions" style="margin:8px 0 0"><button class="primary" type="button">Submit answer</button></div>`;
+    el('feed').appendChild(box); box.scrollIntoView({behavior:'smooth',block:'end'});
+    const ta=box.querySelector('textarea'), btn=box.querySelector('button');
+    ta.focus();
+    const submit=()=>{ const v=ta.value.trim(); if(!v) return setStatus('Say something — even "I don\'t know" is an answer.',true);
+      box.remove(); setStatus(''); resolve(v); };
+    btn.addEventListener('click',submit);
+    ta.addEventListener('keydown',(e)=>{ if((e.metaKey||e.ctrlKey)&&e.key==='Enter') submit(); });
+    controller.signal.addEventListener('abort',()=>{ box.remove(); reject(new DOMException('Aborted','AbortError')); },{once:true});
+  });
+}
+function addYouCard(text){
+  const card=document.createElement('div'); card.className='msg you'; card.style.setProperty('--seat','#9aa7b8');
+  card.innerHTML=`<div class="msg-head"><span class="em">🧑</span><span><b>You</b> <small>· the author</small></span></div><div class="msg-body"></div>`;
+  card.querySelector('.msg-body').innerHTML=DOMPurify.sanitize(marked.parse(text));
+  el('feed').appendChild(card);
+}
+function transcriptText(){
+  return TRANSCRIPT.map(t=>t.kind==='q'?`${t.who.name} (${t.who.role}) asked:\n${t.text}`:`The author answered:\n${t.text}`).join('\n\n');
+}
+function debrief(){
+  const head='# Defense debrief\n\n'+new Date().toISOString().slice(0,10)+' · difficulty: '+el('difficulty').value+' · examiners: '+BENCH.filter(p=>p.on).map(p=>p.role).join(', ')+'\n\n';
+  const qa=TRANSCRIPT.map(t=>t.kind==='q'?`**${t.who.name} (${t.who.role}):** ${t.text}`:`**You:** ${t.text}`).join('\n\n');
+  return head+'## Transcript\n\n'+qa+'\n\n## The Chair\'s scorecard\n\n'+(SCORECARD||'(session ended before scoring)');
+}
+function download(name,text){
+  const a=document.createElement('a');
+  a.href=URL.createObjectURL(new Blob([text],{type:'text/markdown'})); a.download=name; a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+}
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+function esc(s){ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

@@ -96,7 +96,21 @@ See `skills/rice-prioritisation/scripts/rice_calculator.py` for a reference exam
 - No prompt injection, no instructions to override model guidelines, no requests to
   collect or transmit user data. See [SECURITY.md](SECURITY.md).
 
-## 7. Tiering
+## 7. Execution blocks (optional — for tool-using / computer-use agents)
+
+A skill an agent could *act on* (not just draft from) MAY add an `## Execution` section
+with exactly four subsections: **Preconditions**, **Allowed actions**, **Verification**,
+**Rollback**. Rules that make it safe:
+
+- **Allowed actions is a closed allow-list** — an agent must not extrapolate beyond it.
+- Destructive or outward-facing actions must be gated on explicit human approval in
+  Preconditions.
+- A runtime without tool access simply ignores the block and produces the document.
+
+Full normative rules live in [SKILLSPEC.md §5](SKILLSPEC.md). Worked examples:
+`skills/sprint-planning`, `skills/stakeholder-update`.
+
+## 8. Tiering
 
 New skills enter as **Experimental**. Once a skill has a stable output format, quality
 checks, and real-world use, it can be promoted to **Stable** or **Production-Ready** in

@@ -62,7 +62,7 @@
   </div>
 </header>
 <nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
-<div class="key-note">🔒 Your key stays in this browser. The whole meeting runs client-side — your document is sent only to the model provider you choose.</div>
+<div class="key-note">🔒 Your key stays in this browser. The whole meeting runs client-side — your document is sent only to the model provider you choose. · 🔏 Verdicts export as <a href="verify.html">verifiable attestations</a> · 🛡️ Ready to be questioned yourself? <a href="defend.html">Defend it live</a></div>
 
 <div class="board-wrap">
   <p class="lead">Every tool here helps you <em>write</em> the document. This is where you find out if it <strong>survives contact with a leadership team</strong> — before the real one sees it. Paste a PRD, launch plan, pitch, or strategy memo; the bench debates it in rounds, then the Chair issues a verdict memo with the changes that would survive the room.</p>
@@ -97,6 +97,7 @@
   <div id="after" class="out-actions" hidden>
     <button id="dlMemo" class="primary" type="button">⬇ Download decision memo</button>
     <button id="dlAll" class="ghost" type="button">⬇ Full transcript (.md)</button>
+    <button id="dlAtt" class="ghost" type="button" title="A tamper-evident record that THIS exact document got THIS verdict — verifiable at verify.html">🔏 Attestation (.json)</button>
     <button id="again" class="ghost" type="button">↻ New session</button>
   </div>
 </div>
@@ -128,7 +129,7 @@ const GRILL={
   direct:'No pleasantries. Go straight at the weaknesses. Respectful of the author, unsparing about the work.',
   brutal:'This is the meeting where projects die. Be surgical and unsparing — never insult the author, only the work, but concede nothing to politeness.',
 };
-let controller=null, TRANSCRIPT=[], MEMO='';
+let controller=null, TRANSCRIPT=[], MEMO='', SESSION=null;
 
 init();
 function init(){
@@ -139,6 +140,7 @@ function init(){
   el('again').addEventListener('click',()=>{el('feed').innerHTML='';el('after').hidden=true;el('rounds').hidden=true;setRound(0);TRANSCRIPT=[];MEMO='';});
   el('dlMemo').addEventListener('click',()=>download('decision-memo.md',MEMO||'(no verdict)'));
   el('dlAll').addEventListener('click',()=>download('boardroom-transcript.md',fullTranscript()));
+  el('dlAtt').addEventListener('click',downloadAttestation);
   renderBench();
 }
 function renderBench(){
@@ -161,6 +163,7 @@ async function convene(){
   const bench=BENCH.filter(p=>p.on);
   if(bench.length<2) return setStatus('Seat at least two executives.',true);
   const ctx=el('ctx').value.trim(), grill=GRILL[el('grill').value], quick=el('depth').value==='quick';
+  SESSION={doc, bench:bench.map(p=>p.role), grill:el('grill').value, depth:el('depth').value, provider:PMProviders.providerId(), model:el('model').value};
   if(window.pmTrack) pmTrack('boardroom/run/'+bench.length+'-execs');
   el('runBtn').disabled=true; el('stopBtn').hidden=false; el('after').hidden=true;
   el('feed').innerHTML=''; el('rounds').hidden=false; TRANSCRIPT=[]; MEMO=''; controller=new AbortController();
@@ -225,6 +228,27 @@ function fullTranscript(){
   const head='# Boardroom session\n\n'+new Date().toISOString().slice(0,10)+' · bench: '+BENCH.filter(p=>p.on).map(p=>p.role).join(', ')+'\n\n';
   const body=TRANSCRIPT.map(t=>`## ${t.who.name} (${t.who.role}) — ${t.round===1?'opening':'cross-examination'}\n\n${t.text}`).join('\n\n');
   return head+body+'\n\n## The Chair — decision memo\n\n'+(MEMO||'(session ended before the verdict)');
+}
+// Integrity attestation: a tamper-evident record that THIS exact document text
+// received THIS verdict from THIS session. It pins content by SHA-256 — it is
+// not a cryptographic signature (see verify.html for the honest scope).
+async function sha256hex(text){
+  const b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(text));
+  return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');
+}
+async function downloadAttestation(){
+  if(!SESSION||!MEMO) return setStatus('Run a full session first — the attestation records the verdict.',true);
+  const verdict=((MEMO.match(/\*\*Verdict:\*\*[^\n]*/)||['(no verdict line)'])[0]).replace(/\*\*/g,'').trim();
+  const att={
+    spec:'pm-skills-attestation/1',
+    created:new Date().toISOString(),
+    document:{sha256:await sha256hex(SESSION.doc), chars:SESSION.doc.length},
+    session:{tool:'boardroom', bench:SESSION.bench, grill:SESSION.grill, depth:SESSION.depth, provider:SESSION.provider, model:SESSION.model},
+    verdict:verdict,
+    transcript_sha256:await sha256hex(fullTranscript()),
+    verify:'https://mohitagw15856.github.io/pm-claude-skills/verify.html',
+  };
+  download('boardroom-attestation.json',JSON.stringify(att,null,2));
 }
 function download(name,text){
   const a=document.createElement('a');
