@@ -57,6 +57,7 @@
     { href: 'hub.html', label: '🧭 Journeys' },
     { href: 'galaxy.html', label: '🌌 Galaxy' },
     { group: 'Tools', items: [
+      ['firm.html', '🏢 The Firm'],
       ['boardroom.html', '🏛️ Boardroom'],
       ['defend.html', '🛡️ Defend'],
       ['gym.html', '🥊 The Gym'],

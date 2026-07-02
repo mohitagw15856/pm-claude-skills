@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>The Firm — hire a standing AI staff for your product</title>
+<meta name="description" content="Stop running tools; employ a staff. Charter a team of AI executives who file delta-aware memos on your metrics, customers, engineering, and market — hold a boardroom session without you — and log falsifiable predictions you can score, so each staff member earns (or loses) your trust." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
+<script src="providers.js"></script>
+<style>
+  .firm-wrap { max-width: 1060px; margin: 0 auto; padding: 16px 22px 70px; }
+  .lead { color: #c7cfda; font-size: 15.5px; }
+  .charter-in { width: 100%; box-sizing: border-box; min-height: 96px; padding: 11px 13px; border-radius: 12px; background: var(--panel); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 13.8px; }
+  .org { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 12px; margin: 14px 0; }
+  .staff { border: 1px solid var(--border); border-left: 3px solid var(--seat, var(--border)); border-radius: 13px; background: var(--panel); padding: 12px 14px; }
+  .staff.off { opacity: .45; }
+  .staff-head { display: flex; align-items: center; gap: 9px; }
+  .staff-head .em { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font-size: 17px; background: var(--panel-2); box-shadow: 0 0 0 2px var(--seat, var(--border)); flex: none; }
+  .staff-head b { font-size: 14px; } .staff-head small { display: block; color: var(--muted); font-size: 11.5px; }
+  .staff-head .hire { margin-left: auto; background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; cursor: pointer; padding: 3px 10px; font: inherit; font-size: 12px; }
+  .duty { font-size: 12px; color: var(--muted); margin: 8px 0 0; line-height: 1.45; }
+  .duty b { color: var(--accent-2); font-weight: 600; }
+  .staff .cal { font-size: 11.5px; margin-top: 6px; }
+  .staff .cal .hit { color: #5ad19a; } .staff .cal .miss { color: #ff7a7a; }
+  .staff.working .em { animation: seatpulse 1.1s ease-in-out infinite; }
+  @keyframes seatpulse { 0%,100% { box-shadow: 0 0 0 2px var(--seat); } 50% { box-shadow: 0 0 0 6px color-mix(in srgb, var(--seat) 40%, transparent); } }
+  @media (prefers-reduced-motion: reduce) { .staff.working .em { animation: none; } }
+  .bar { display: flex; gap: 10px; align-items: center; margin: 12px 0; flex-wrap: wrap; }
+  .agenda-in { flex: 1; min-width: 240px; padding: 10px 12px; border-radius: 10px; background: var(--panel); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 13.5px; }
+  .cols { display: grid; grid-template-columns: 1fr 320px; gap: 16px; align-items: start; }
+  @media (max-width: 900px) { .cols { grid-template-columns: 1fr; } }
+  .inbox-item { border: 1px solid var(--border); border-left: 3px solid var(--seat, var(--border)); border-radius: 12px; background: var(--panel); margin-bottom: 10px; overflow: hidden; }
+  .inbox-item summary { display: flex; align-items: center; gap: 9px; padding: 11px 14px; cursor: pointer; list-style: none; }
+  .inbox-item summary::-webkit-details-marker { display: none; }
+  .inbox-item .em2 { font-size: 16px; }
+  .inbox-item b { font-size: 13.5px; } .inbox-item small { color: var(--muted); font-size: 11.5px; margin-left: auto; white-space: nowrap; }
+  .inbox-item .unread { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex: none; }
+  .inbox-item .body { border-top: 1px solid var(--border); padding: 12px 16px; font-size: 13.5px; line-height: 1.55; }
+  .inbox-item.minutes { border-left-color: var(--accent); background: linear-gradient(180deg, rgba(217,119,87,.06), transparent 60%), var(--panel); }
+  .panel { border: 1px solid var(--border); border-radius: 13px; background: var(--panel); padding: 13px 15px; font-size: 12.5px; position: sticky; top: 12px; }
+  .panel h3 { margin: 0 0 8px; font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); }
+  .pred { border-top: 1px solid var(--border); padding: 7px 0; }
+  .pred .who { color: var(--accent-2); font-size: 11px; }
+  .pred .act { margin-top: 4px; display: flex; gap: 6px; }
+  .pred .act button { font-size: 11px; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--border); background: var(--panel-2); color: var(--text); cursor: pointer; }
+  .pred.hit { opacity: .75; } .pred.hit .who::after { content: ' · ✅ hit'; color: #5ad19a; }
+  .pred.miss { opacity: .75; } .pred.miss .who::after { content: ' · ❌ miss'; color: #ff7a7a; }
+  .empty { color: var(--muted); border: 2px dashed var(--border); border-radius: 12px; padding: 26px; text-align: center; font-size: 13px; }
+  h2.sec { font-size: 15px; margin: 22px 0 8px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>The Firm</h1><p class="tagline">Don't run tools. Employ a staff.</p></div></div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-fable-5">Fable 5 ✨</option><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Everything — charter, memos, minutes, predictions — lives in this browser. Sent only to the model provider you choose, only when you convene.</div>
+
+<div class="firm-wrap">
+  <p class="lead">Every other page is <em>pull</em> — you show up and run a tool. The Firm is <strong>push</strong>: charter a standing staff once, and each time you convene, every member files a <strong>delta-aware memo</strong> on their beat (what changed, not what they said last time), ending in a <strong>falsifiable prediction</strong>. Then the staff hold a <strong>boardroom session without you</strong> and send you the minutes — decisions, dissent preserved. Score the predictions as reality lands, and watch which of your staff has <em>earned</em> trust.</p>
+
+  <h2 class="sec">📜 The charter — what your staff knows</h2>
+  <textarea id="charter" class="charter-in" placeholder="Your product, stage, audience, current numbers, this quarter's goals, known worries… (pre-filled from your Skill Memory if you've set it in the playground)"></textarea>
+
+  <h2 class="sec">🪪 The staff — hire or excuse</h2>
+  <div class="org" id="org"></div>
+
+  <div class="bar">
+    <input id="agenda" class="agenda-in" placeholder="This session's board agenda (optional — otherwise the staff pick the sharpest open question from their own memos)" />
+    <button id="runBtn" class="primary" type="button">🏢 Convene the Firm</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Adjourn</button>
+    <span id="status" class="status"></span>
+  </div>
+
+  <div class="cols">
+    <main>
+      <h2 class="sec">📥 Your inbox</h2>
+      <div id="inbox"></div>
+    </main>
+    <aside class="panel">
+      <h3>🎯 Prediction ledger</h3>
+      <p style="margin:0 0 6px;color:var(--muted)">Every memo ends in a falsifiable claim. Score them when reality lands — calibration shows on each staff card.</p>
+      <div id="ledger"></div>
+    </aside>
+  </div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+const STORE='pm_firm';
+// The staff roster. Each member: persona + a beat + the library skill their duty runs on.
+const ROSTER=[
+  {id:'cfo',emoji:'💰',name:'Margaret Cho',role:'CFO',color:'#5ad19a',on:true,
+   beat:'the numbers: growth, burn, unit economics, and the metric everyone is avoiding',
+   duty:'Metrics & risk memo',skill:'product-health-analysis',
+   bias:'You distrust unpriced assumptions and hockey sticks. You name the number nobody put on the agenda.'},
+  {id:'cco',emoji:'❤️',name:'Amara Okafor',role:'Chief Customer Officer',color:'#ff8fa3',on:true,
+   beat:'customers: health, churn signals, support blast radius, the voice of the angriest account',
+   duty:'Customer pulse memo',skill:'churn-analysis',
+   bias:'You channel the customer who is about to leave quietly. Silence from an account worries you more than complaints.'},
+  {id:'cto',emoji:'🛠️',name:'Dev Sharma',role:'CTO',color:'#6aa9ff',on:true,
+   beat:'engineering: delivery health, tech debt, reliability, what breaks at 10×',
+   duty:'Engineering health memo',skill:'engineering-weekly-report',
+   bias:'You have been burned by underestimated migrations. You surface the debt before it surfaces itself.'},
+  {id:'strategy',emoji:'🦈',name:'Riko Tanaka',role:'Head of Strategy',color:'#ffb454',on:true,
+   beat:'the market: competitor moves, positioning drift, the kill-shot question nobody is asking',
+   duty:'Competitive brief',skill:'competitive-intelligence-monitor',
+   bias:'You assume every rival is smarter than they look. You call reactive moves reactive.'},
+  {id:'growth',emoji:'📣',name:'Lena Fischer',role:'VP Growth',color:'#7fd6c2',on:false,
+   beat:'distribution: activation, retention curves, channel fit, where the funnel actually leaks',
+   duty:'Growth & retention memo',skill:'retention-analysis',
+   bias:'You believe a great product nobody finds is a hobby. You count the funnel, not the features.'},
+  {id:'counsel',emoji:'⚖️',name:'Sam Whitfield',role:'General Counsel',color:'#c9a4ff',on:false,
+   beat:'exposure: regulatory, contractual, privacy, and any public claim that could be challenged',
+   duty:'Risk register memo',skill:'risk-register',
+   bias:'You read every superlative as a future lawsuit. You want owners on risks, not vibes.'},
+];
+let F=null, SKILLS={}, controller=null;
+
+init();
+async function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('runBtn').addEventListener('click',convene);
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+  F=load();
+  // Charter defaults to the playground's Skill Memory so the staff already knows you.
+  el('charter').value=F.charter||localStorage.getItem('pm_context')||'';
+  el('charter').addEventListener('input',()=>{F.charter=el('charter').value;save();});
+  try{ const d=await (await fetch('skills.json')).json(); d.skills.forEach(s=>SKILLS[s.name]=s); }catch(_){}
+  renderOrg(); renderInbox(); renderLedger();
+}
+function load(){ try{ return JSON.parse(localStorage.getItem(STORE))||{charter:'',hired:null,inbox:[],preds:[],n:0}; }catch(_){ return {charter:'',hired:null,inbox:[],preds:[],n:0}; } }
+function save(){ localStorage.setItem(STORE,JSON.stringify(F)); }
+const hired=(id)=>F.hired?F.hired.includes(id):ROSTER.find(r=>r.id===id).on;
+function setHired(id,on){ F.hired=ROSTER.filter(r=> r.id===id?on:hired(r.id)).map(r=>r.id); save(); }
+
+function calOf(id){
+  const ps=F.preds.filter(p=>p.by===id&&p.status!=='pending');
+  if(!ps.length) return '';
+  const hits=ps.filter(p=>p.status==='hit').length;
+  return `<span class="cal">calibration: <span class="hit">${hits} hit</span> · <span class="miss">${ps.length-hits} miss</span> of ${ps.length} scored</span>`;
+}
+function renderOrg(){
+  const org=el('org'); org.innerHTML='';
+  ROSTER.forEach(m=>{
+    const on=hired(m.id);
+    const d=document.createElement('div');
+    d.className='staff'+(on?'':' off'); d.id='staff-'+m.id; d.style.setProperty('--seat',m.color);
+    d.innerHTML=`<div class="staff-head"><span class="em">${m.emoji}</span><span><b>${esc(m.name)}</b><small>${esc(m.role)}</small></span>
+      <button class="hire" type="button">${on?'Excuse':'Hire'}</button></div>
+      <div class="duty"><b>Watches:</b> ${esc(m.beat)}.<br><b>Files:</b> ${esc(m.duty)} (runs <code>${esc(m.skill)}</code>).</div>
+      ${calOf(m.id)}`;
+    d.querySelector('.hire').addEventListener('click',()=>{setHired(m.id,!on);renderOrg();});
+    org.appendChild(d);
+  });
+}
+
+async function convene(){
+  const key=el('apiKey').value.trim(), local=PMProviders.current().local;
+  if(!key&&!local) return setStatus('Enter your '+PMProviders.current().name+' key first — or pick the In-browser (no key) provider.',true);
+  const charter=el('charter').value.trim();
+  if(charter.length<60) return setStatus('Give the staff a real charter first — product, stage, goals, worries.',true);
+  const staff=ROSTER.filter(m=>hired(m.id));
+  if(staff.length<2) return setStatus('Hire at least two staff members.',true);
+  if(window.pmTrack) pmTrack('firm/convene/'+staff.length);
+  el('runBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController();
+  F.n++; const session=F.n;
+  try{
+    // ── 1. Every staff member files their memo (delta-aware, ends in a prediction) ──
+    const memos=[];
+    for(const m of staff){
+      setStatus(`${m.name} is preparing the ${m.duty.toLowerCase()}…`);
+      el('staff-'+m.id).classList.add('working');
+      const prev=[...F.inbox].reverse().find(x=>x.from===m.id&&!x.minutes);
+      const sk=SKILLS[m.skill];
+      const system=`You are ${m.name}, ${m.role} at the user's company — a standing staff member, not a chatbot. Your beat: ${m.beat}. Disposition: ${m.bias}
+${sk?('Apply this skill as your method where the charter gives you material:\n'+sk.instructions.slice(0,6000)+'\n---\n'):''}
+Write your ${m.duty} as a MEMO to your principal (the user), ≤300 words, markdown:
+- Lead with the single most important thing on your beat right now, given the charter${prev?' AND what changed since your last memo (do not restate it — delta only; if nothing material changed on some front, one line says so)':''}.
+- Be concrete. Where the charter lacks a number you need, say exactly what to instrument — never invent data.
+- If something needs the board's attention, flag it as "FOR THE BOARD: …" (one line).
+- END with exactly one line: "Prediction: <a falsifiable claim about the next 30-90 days on your beat, with a number and a check-by date>"
+First person, in character, no preamble.`;
+      const user='THE CHARTER:\n'+charter+(prev?('\n\nYOUR PREVIOUS MEMO (session '+prev.session+'):\n'+prev.md):'')+'\n\nFile your memo for session '+session+'.';
+      const md=await PMProviders.stream({key,model:el('model').value,system,userMessage:user,signal:controller.signal});
+      memos.push({m,md});
+      deliver({from:m.id,emoji:m.emoji,color:m.color,title:m.duty+' — '+m.name,md,session});
+      const pm=md.match(/Prediction:\s*([^\n]+)/i);
+      if(pm) { F.preds.push({text:pm[1].trim(),by:m.id,who:m.name,session,status:'pending',ts:Date.now()}); save(); renderLedger(); }
+      el('staff-'+m.id).classList.remove('working');
+    }
+    // ── 2. The staff meet without you ──
+    setStatus('The staff are in the boardroom…');
+    staff.forEach(m=>el('staff-'+m.id).classList.add('working'));
+    const agenda=el('agenda').value.trim();
+    const memoBlock=memos.map(({m,md})=>`MEMO from ${m.name} (${m.role}):\n${md}`).join('\n\n---\n\n');
+    const chairSys=`You are the Chair of this company's standing staff meeting. The staff have filed their memos. ${agenda?('The principal set the agenda: "'+agenda+'".'):'Derive the agenda: the sharpest open question raised across the memos (prefer anything flagged FOR THE BOARD).'}
+Simulate the session faithfully: each staff member argues from THEIR memo and disposition; let them disagree where their beats genuinely conflict.
+Then write the MINUTES for the principal, markdown, ≤380 words:
+"## Minutes — session ${session}" · "**Agenda:** …"
+"### The discussion" — 4-6 exchanges, attributed by name, only positions their memos support.
+"### Decisions & asks" — table: Decision/Ask | Proposed by | What it needs from you.
+"### Dissent preserved" — what was NOT settled and who holds which side (or "None").
+"### Watch next" — the one thing the staff agreed to check before next session.`;
+    const minutes=await PMProviders.stream({key,model:el('model').value,system:chairSys,userMessage:'THE CHARTER:\n'+charter+'\n\nTHE MEMOS:\n\n'+memoBlock,signal:controller.signal});
+    deliver({from:'chair',emoji:'🪑',color:'#d97757',title:'Board minutes — session '+session,md:minutes,session,minutes:true});
+    setStatus('Session '+session+' complete — '+(staff.length+1)+' items in your inbox.');
+  }catch(e){ setStatus(e.name==='AbortError'?'Adjourned.':(e.message||'The session failed.'),true); }
+  finally{
+    el('runBtn').disabled=false; el('stopBtn').hidden=true; controller=null;
+    document.querySelectorAll('.staff.working').forEach(s=>s.classList.remove('working'));
+    save(); renderOrg();
+  }
+}
+
+function deliver(item){ F.inbox.push({...item,ts:Date.now(),read:false,id:Math.random().toString(36).slice(2)}); save(); renderInbox(); }
+function renderInbox(){
+  const box=el('inbox'); box.innerHTML='';
+  if(!F.inbox.length){ box.innerHTML='<div class="empty">Nothing yet. Charter the firm, hire your staff, and convene — the memos and minutes land here.</div>'; return; }
+  [...F.inbox].reverse().forEach(it=>{
+    const d=document.createElement('details');
+    d.className='inbox-item'+(it.minutes?' minutes':''); d.style.setProperty('--seat',it.color||'');
+    d.innerHTML=`<summary>${it.read?'':'<span class="unread"></span>'}<span class="em2">${it.emoji}</span><b>${esc(it.title)}</b><small>session ${it.session} · ${new Date(it.ts).toLocaleDateString()}</small></summary>
+      <div class="body markdown">${DOMPurify.sanitize(marked.parse(it.md||''))}</div>`;
+    d.addEventListener('toggle',()=>{ if(d.open&&!it.read){ it.read=true; save(); d.querySelector('.unread')?.remove(); } });
+    box.appendChild(d);
+  });
+}
+function renderLedger(){
+  const box=el('ledger'); box.innerHTML='';
+  const pending=F.preds.filter(p=>p.status==='pending');
+  if(!F.preds.length){ box.innerHTML='<div style="color:var(--muted)">No predictions yet.</div>'; return; }
+  [...F.preds].reverse().slice(0,12).forEach(p=>{
+    const d=document.createElement('div'); d.className='pred '+p.status;
+    d.innerHTML=`<div class="who">${esc(p.who)} · session ${p.session}</div><div>${esc(p.text)}</div>`+
+      (p.status==='pending'?'<div class="act"><button data-s="hit">✅ Hit</button><button data-s="miss">❌ Miss</button></div>':'');
+    d.querySelectorAll('.act button').forEach(b=>b.addEventListener('click',()=>{ p.status=b.dataset.s; save(); renderLedger(); renderOrg(); }));
+    box.appendChild(d);
+  });
+  if(pending.length) box.insertAdjacentHTML('afterbegin',`<div style="color:var(--muted);margin-bottom:4px">${pending.length} awaiting reality:</div>`);
+}
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+function esc(s){ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

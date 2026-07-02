@@ -12,7 +12,7 @@
 [![Skills](https://img.shields.io/badge/skills-426-blue)](https://github.com/mohitagw15856/pm-claude-skills)
 [![eval](https://img.shields.io/badge/eval--scored-208%20%C2%B7%20avg%204.8%2F5-brightgreen)](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)
 [![Subagents](https://img.shields.io/badge/subagents-4-blueviolet)](agents/)
-[![Commands](https://img.shields.io/badge/slash%20commands-19-blueviolet)](commands/)
+[![Commands](https://img.shields.io/badge/slash%20commands-21-blueviolet)](commands/)
 [![Personas](https://img.shields.io/badge/personas-4-blueviolet)](output-styles/)
 [![Platforms](https://img.shields.io/badge/works%20with-Claude%20%7C%20ChatGPT%20%7C%20Gemini%20%7C%20Cursor%20%7C%20Codex%20%7C%20Hermes-8A2BE2)](#-works-with--cross-tool-compatibility)
 [![Integrations](https://img.shields.io/badge/integrates%20with-n8n%20%C2%B7%20Lovable%20%C2%B7%20Obsidian-0E9F6E)](connectors/)
@@ -70,6 +70,14 @@ A community-built library of professional skills for every field — product man
 [![Skill Playground demo — pick a skill, fill the form, run it with your own Claude key](web/docs-assets/playground-demo.gif)](https://mohitagw15856.github.io/pm-claude-skills/)
 
 <sub>👆 Pick any skill, fill a short form, and run it with your own key — no install required.</sub>
+
+---
+
+## 🏢 The Firm — don't run tools, employ a staff
+
+Everything below is *pull*: you show up and run something. **[The Firm](https://mohitagw15856.github.io/pm-claude-skills/firm.html)** is *push* — the endgame the whole library was building toward. Charter a standing team once, then convene: your **💰 CFO**, **❤️ Chief Customer Officer**, **🛠️ CTO**, and **🦈 Head of Strategy** (hire 📣 Growth and ⚖️ Counsel too, or excuse anyone) each file a **delta-aware memo** on their beat — what *changed*, never a restatement — ending in a **falsifiable prediction** with a check-by date. Then the staff **hold a boardroom session without you** and send you the minutes: decisions, asks, **dissent preserved**. As reality lands, score the predictions — and each staff member's card shows a live **calibration record**. You can performance-review your AI staff.
+
+In Claude Code, [`/firm`](commands/firm.md) runs the same session natively — grounded in your `FIRM.md`, [Brain](BRAIN.md), and git log, minutes saved to `firm-minutes/`, predictions to the Brain's ledger. **[Convene the Firm →](https://mohitagw15856.github.io/pm-claude-skills/firm.html)**
 
 ---
 
