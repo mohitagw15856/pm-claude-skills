@@ -23,7 +23,10 @@
   .staff-head .hire { margin-left: auto; background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; cursor: pointer; padding: 3px 10px; font: inherit; font-size: 12px; }
   .duty { font-size: 12px; color: var(--muted); margin: 8px 0 0; line-height: 1.45; }
   .duty b { color: var(--accent-2); font-weight: 600; }
-  .staff .cal { font-size: 11.5px; margin-top: 6px; }
+  .staff .cal { font-size: 11.5px; margin-top: 6px; color: var(--muted); }
+  .calbar { display: inline-block; vertical-align: middle; width: 54px; height: 6px; margin-left: 6px; border-radius: 3px; background: var(--panel-2); overflow: hidden; }
+  .calbar i { display: block; height: 100%; background: linear-gradient(90deg,#ff7a7a,#ffb454 45%,#5ad19a 75%); }
+  .dutysel { max-width: 190px; font-size: 11px; padding: 2px 4px; border-radius: 6px; background: var(--panel-2); color: var(--text); border: 1px solid var(--border); }
   .staff .cal .hit { color: #5ad19a; } .staff .cal .miss { color: #ff7a7a; }
   .staff.working .em { animation: seatpulse 1.1s ease-in-out infinite; }
   @keyframes seatpulse { 0%,100% { box-shadow: 0 0 0 2px var(--seat); } 50% { box-shadow: 0 0 0 6px color-mix(in srgb, var(--seat) 40%, transparent); } }
@@ -144,12 +147,29 @@ function save(){ localStorage.setItem(STORE,JSON.stringify(F)); }
 const hired=(id)=>F.hired?F.hired.includes(id):ROSTER.find(r=>r.id===id).on;
 function setHired(id,on){ F.hired=ROSTER.filter(r=> r.id===id?on:hired(r.id)).map(r=>r.id); save(); }
 
-function calOf(id){
-  const ps=F.preds.filter(p=>p.by===id&&p.status!=='pending');
-  if(!ps.length) return '';
-  const hits=ps.filter(p=>p.status==='hit').length;
-  return `<span class="cal">calibration: <span class="hit">${hits} hit</span> · <span class="miss">${ps.length-hits} miss</span> of ${ps.length} scored</span>`;
+function dutyOf(m){ return (F.duties&&F.duties[m.id])||m.skill; }
+function calReport(id){
+  // A real calibration report per staff member (the JS port of the
+  // outcome-tracker skill's calculator): rate over resolved, current streak,
+  // pending count — plus a trust verdict once there's enough history.
+  const all=F.preds.filter(p=>p.by===id);
+  const res=all.filter(p=>p.status==='hit'||p.status==='miss');
+  const pending=all.length-res.length;
+  if(!all.length) return {html:''};
+  const hits=res.filter(p=>p.status==='hit').length;
+  const rate=res.length?hits/res.length:null;
+  let streak=0, kind='';
+  for(let i=res.length-1;i>=0;i--){ if(!kind) kind=res[i].status; if(res[i].status===kind) streak++; else break; }
+  const MIN=5; // below this, a rate is noise — say so instead
+  let verdict='';
+  if(res.length>=MIN) verdict = rate>=0.7?'🟢 earned trust':rate>=0.45?'🟡 mixed record':'🔴 verify their calls';
+  else if(res.length) verdict='⚪ building history ('+res.length+'/'+MIN+' resolved)';
+  const bar = rate==null?'' : `<span class="calbar"><i style="width:${Math.round(rate*100)}%"></i></span>`;
+  return {rate,res:res.length,html:
+    `<div class="cal">${verdict?verdict+' · ':''}${rate!=null?Math.round(rate*100)+'% over '+res.length+' resolved':''}${bar}
+     ${streak>1?` · ${kind==='hit'?'🔥':'❄️'} ${streak} ${kind} streak`:''}${pending?` · ${pending} awaiting reality`:''}</div>`};
 }
+const calOf=(id)=>calReport(id).html;
 function renderOrg(){
   const org=el('org'); org.innerHTML='';
   ROSTER.forEach(m=>{
@@ -158,9 +178,17 @@ function renderOrg(){
     d.className='staff'+(on?'':' off'); d.id='staff-'+m.id; d.style.setProperty('--seat',m.color);
     d.innerHTML=`<div class="staff-head"><span class="em">${m.emoji}</span><span><b>${esc(m.name)}</b><small>${esc(m.role)}</small></span>
       <button class="hire" type="button">${on?'Excuse':'Hire'}</button></div>
-      <div class="duty"><b>Watches:</b> ${esc(m.beat)}.<br><b>Files:</b> ${esc(m.duty)} (runs <code>${esc(m.skill)}</code>).</div>
+      <div class="duty"><b>Watches:</b> ${esc(m.beat)}.<br><b>Files:</b> ${esc(m.duty)} — method: <select class="dutysel" title="Swap which library skill this duty runs on"></select></div>
       ${calOf(m.id)}`;
     d.querySelector('.hire').addEventListener('click',()=>{setHired(m.id,!on);renderOrg();});
+    // Duty-skill swap: any catalog skill can be this staff member's method.
+    const sel=d.querySelector('.dutysel');
+    const current=dutyOf(m);
+    const names=Object.keys(SKILLS).sort();
+    sel.innerHTML='<option value="'+esc(m.skill)+'">'+esc(m.skill)+(m.skill===current?'':'')+' (default)</option>'+
+      names.filter(n=>n!==m.skill).map(n=>`<option value="${esc(n)}"${n===current?' selected':''}>${esc(n)}</option>`).join('');
+    sel.value=current;
+    sel.addEventListener('change',()=>{ (F.duties=F.duties||{})[m.id]=sel.value; save(); });
     org.appendChild(d);
   });
 }
@@ -182,7 +210,7 @@ async function convene(){
       setStatus(`${m.name} is preparing the ${m.duty.toLowerCase()}…`);
       el('staff-'+m.id).classList.add('working');
       const prev=[...F.inbox].reverse().find(x=>x.from===m.id&&!x.minutes);
-      const sk=SKILLS[m.skill];
+      const sk=SKILLS[dutyOf(m)];
       const system=`You are ${m.name}, ${m.role} at the user's company — a standing staff member, not a chatbot. Your beat: ${m.beat}. Disposition: ${m.bias}
 ${sk?('Apply this skill as your method where the charter gives you material:\n'+sk.instructions.slice(0,6000)+'\n---\n'):''}
 Write your ${m.duty} as a MEMO to your principal (the user), ≤300 words, markdown:

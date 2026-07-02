@@ -1,0 +1,25 @@
+name: Web smoke tests
+
+# The insurance layer: every interactive page loads headlessly with ZERO console
+# or page errors, plus load-bearing interaction checks (keyless guards, command-bar
+# routing, artifact renderers, attestation round-trip, galaxy fly-to). Free, ~2 min.
+on:
+  pull_request:
+    paths: ['web/**', 'tests/**']
+  push:
+    branches: [main]
+    paths: ['web/**', 'tests/**']
+  workflow_dispatch: {}
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install Playwright (chromium only)
+        run: npm i --no-save playwright && npx playwright install --with-deps chromium
+      - name: Run the suite
+        run: node tests/web-smoke.mjs

@@ -118,6 +118,32 @@
         "job-application",
         "interview-prep"
       ]
+    },
+    {
+      "id": "ship-an-mcp-server",
+      "name": "Ship an MCP Server",
+      "command": "/ship-an-mcp-server",
+      "lifecycle": "Spec → Audit → Price",
+      "summary": "Make your product genuinely usable by AI agents: spec the server, audit every agent-facing surface, and fix the pricing before agents break it.",
+      "skills": [
+        "mcp-server-spec",
+        "agent-readiness-audit",
+        "agent-era-pricing",
+        "human-in-the-loop-design"
+      ]
+    },
+    {
+      "id": "adopt-ai-properly",
+      "name": "Adopt AI Properly",
+      "command": "/adopt-ai-properly",
+      "lifecycle": "Policy → Roles → Proof",
+      "summary": "The org-side AI adoption arc: a policy people can follow, roles redesigned on purpose, reviews that still measure the human, and an audit that proves what paid.",
+      "skills": [
+        "ai-usage-policy",
+        "role-redesign-for-ai",
+        "ai-assisted-performance-review",
+        "ai-roi-audit"
+      ]
     }
   ]
 }

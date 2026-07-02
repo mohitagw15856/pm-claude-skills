@@ -55,6 +55,24 @@
 
 *Not sure? Start with the Playground.* This is a **CLI, not a library** — you don't need `npm install`; `npx pm-claude-skills …` always runs the latest. Browse everything first with `npx pm-claude-skills list`.
 
+<details>
+<summary>📚 <b>Documentation map</b> — this README is the trailer; the details live in focused docs</summary>
+
+| Topic | Doc |
+|---|---|
+| Install on any tool | [docs/installation.md](docs/installation.md) · [QUICKSTART.md](QUICKSTART.md) · [CHEATSHEET.md](CHEATSHEET.md) |
+| Write / contribute a skill | [SKILL-AUTHORING-STANDARD.md](SKILL-AUTHORING-STANDARD.md) · [CONTRIBUTING.md](CONTRIBUTING.md) · the [`SKILLSPEC`](SKILLSPEC.md) |
+| The full skill listing | [SKILLS.md](SKILLS.md) (auto-generated) · [TIERS.md](TIERS.md) |
+| Chained recipes & orchestration | [WORKFLOWS.md](WORKFLOWS.md) · [ORCHESTRATION.md](ORCHESTRATION.md) |
+| Memory & actions (the Brain) | [BRAIN.md](BRAIN.md) · [BRAIN_QUICKSTART.md](BRAIN_QUICKSTART.md) |
+| Benchmark & evals | [skillbench/](skillbench/) · [evals/](evals/) · [live leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html) |
+| Publish your own skill | [community/](community/) |
+| MCP / REST / A2A / connectors | [mcp-remote/](mcp-remote/) · [connectors/](connectors/) (incl. [MCP pairings](connectors/mcp-pairings.md)) |
+| CI recipes & hooks | [action/](action/) · [hooks/](hooks/) |
+| Ops, URLs & standing decisions | [OPERATIONS.md](OPERATIONS.md) · [ROADMAP.md](ROADMAP.md) |
+
+</details>
+
 > **PM stands for Professional, not just Product Management.**
 > 441 professional skills + 4 agent templates across 64 bundles covering 25 professions. Built for Claude Code — and now portable to ChatGPT, Gemini, and Hermes Agent. Built by a PM, used by everyone.
 
@@ -74,6 +92,8 @@ A community-built library of professional skills for every field — product man
 ---
 
 ## 🏢 The Firm — don't run tools, employ a staff
+
+[![The Firm — a live session: staff memos streaming in, the board meeting without you, minutes with dissent preserved](web/docs-assets/firm-demo.gif)](https://mohitagw15856.github.io/pm-claude-skills/firm.html)
 
 Everything below is *pull*: you show up and run something. **[The Firm](https://mohitagw15856.github.io/pm-claude-skills/firm.html)** is *push* — the endgame the whole library was building toward. Charter a standing team once, then convene: your **💰 CFO**, **❤️ Chief Customer Officer**, **🛠️ CTO**, and **🦈 Head of Strategy** (hire 📣 Growth and ⚖️ Counsel too, or excuse anyone) each file a **delta-aware memo** on their beat — what *changed*, never a restatement — ending in a **falsifiable prediction** with a check-by date. Then the staff **hold a boardroom session without you** and send you the minutes: decisions, asks, **dissent preserved**. As reality lands, score the predictions — and each staff member's card shows a live **calibration record**. You can performance-review your AI staff.
 
@@ -280,7 +300,9 @@ Paste a PRD, launch plan, investor pitch, or strategy memo. A bench of five AI e
 
 Seat or excuse executives, set the grill level (🤝 constructive → 🔥 brutal), and download the decision memo. Runs entirely in your browser with your own key — same as the playground. **[Convene the board →](https://mohitagw15856.github.io/pm-claude-skills/boardroom.html)**
 
-It anchors a whole **pressure-test suite**:
+[![The Boardroom — a live session: severity-tagged openings streaming, cross-examination, the Chair's verdict](web/docs-assets/boardroom-demo.gif)](https://mohitagw15856.github.io/pm-claude-skills/boardroom.html)
+
+It anchors a whole **pressure-test suite** — and with 🔊 **Theatre mode** the executives now *speak their turns aloud* in distinct voices, while 🎙 lets you answer the Defense and the Gauntlet's interviewer out loud (browser speech, zero API):
 
 - **🔏 Attestations** — every verdict exports as a tamper-evident record (SHA-256 of the exact text + session facts + verdict). Anyone can check it at **[verify.html](https://mohitagw15856.github.io/pm-claude-skills/verify.html)**: paste the document and the attestation, and a single changed character fails the match. As AI-drafted documents flood teams, *"was this ever pressure-tested?"* becomes checkable.
 - **🛡️ [The Defense](https://mohitagw15856.github.io/pm-claude-skills/defend.html)** — the Boardroom reviews the *document*; this reviews **you**. The executives cross-examine you live, one question at a time; you answer; a neutral Chair scores your defense (command of the facts, evidence over assertion, honesty about unknowns, composure) and tells you exactly what to prepare before the real meeting. Saying "I don't know" honestly scores better than bluffing.

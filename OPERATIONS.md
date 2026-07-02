@@ -45,3 +45,10 @@ A single reference for every URL, dashboard, and config location for this projec
 
 - Chrome Web Store · VS Code Marketplace · Anthropic plugin directory ([clau.de/plugin-directory-submission](https://clau.de/plugin-directory-submission))
 - mcp.so · PulseMCP (optional) · 4 awesome-list PRs (travisvn, ComposioHQ, BehiSecc, hesreallyhim)
+
+## 📦 Standing decisions
+
+| Decision | Call | Revisit when |
+|---|---|---|
+| **Committing `exports/` to git** (2026-07-02) | **Keep committing.** Browsable exports on GitHub are a real feature (deep links in README/docs, zero-build consumption), and generation-at-publish would break existing links. Cost: ~32 MB tree, ~11 files rewritten per skill edit. | Pack size crosses **150 MB** (`git count-objects -vH`), or GitHub starts warning — then switch to generate-at-publish + a one-time history rewrite. |
+| **Tier entry policy** (2026-07-02) | New self-contained skills enter **Stable**; **Experimental** only for external-dependency skills. Matches actual practice; authoring standard §8 updated. | If unscored-Stable skills draw quality complaints, revisit gating Stable on an eval score. |

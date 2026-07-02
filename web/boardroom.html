@@ -10,6 +10,7 @@
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
 <script src="providers.js"></script>
+<script src="voice.js"></script>
 <style>
   .board-wrap { max-width: 940px; margin: 0 auto; padding: 16px 22px 70px; }
   .lead { color: #c7cfda; font-size: 15.5px; }
@@ -83,6 +84,7 @@
       <option value="quick">Quick session — openings and verdict only</option>
     </select>
     <button id="runBtn" class="primary" type="button">🏛️ Convene the board</button>
+    <button id="theatreBtn" class="ghost" type="button" title="Theatre mode — each executive speaks their turn out loud in a distinct voice (browser speech, no API)">🔇 Theatre</button>
     <button id="stopBtn" class="ghost" type="button" hidden>Adjourn early</button>
     <span id="status" class="status"></span>
   </div>
@@ -141,6 +143,7 @@ function init(){
   el('dlMemo').addEventListener('click',()=>download('decision-memo.md',MEMO||'(no verdict)'));
   el('dlAll').addEventListener('click',()=>download('boardroom-transcript.md',fullTranscript()));
   el('dlAtt').addEventListener('click',downloadAttestation);
+  if(window.PMVoice) PMVoice.theatreToggle(el('theatreBtn'));
   renderBench();
 }
 function renderBench(){
@@ -211,6 +214,7 @@ async function speak(p,system,userMessage,roundLabel,isVerdict){
     onDelta:(a)=>{body.innerHTML=sevChips(DOMPurify.sanitize(marked.parse(a)));}});
   body.innerHTML=sevChips(DOMPurify.sanitize(marked.parse(text||'*[said nothing]*')));
   if(seat) seat.classList.remove('speaking');
+  if(window.PMVoice&&PMVoice.isEnabled()&&text) PMVoice.speak(p.id,p.name+', '+p.role.split('·')[0]+': '+text);
   return text;
 }
 function sevChips(html){

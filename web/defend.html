@@ -11,6 +11,7 @@
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
 <script src="providers.js"></script>
 <script src="export-doc.js"></script>
+<script src="voice.js"></script>
 <style>
   .def-wrap { max-width: 940px; margin: 0 auto; padding: 16px 22px 70px; }
   .lead { color: #c7cfda; font-size: 15.5px; }
@@ -76,6 +77,7 @@
       <option value="career">🔥 Career-defining</option>
     </select>
     <button id="runBtn" class="primary" type="button">🛡️ Begin the defense</button>
+    <button id="theatreBtn" class="ghost" type="button" title="Hear the examiners out loud (browser speech, no API)">🔇 Theatre</button>
     <button id="stopBtn" class="ghost" type="button" hidden>Adjourn early</button>
     <span id="status" class="status"></span>
   </div>
@@ -200,6 +202,7 @@ async function speak(p,system,userMessage,label,isVerdict){
     onDelta:(a)=>{body.innerHTML=DOMPurify.sanitize(marked.parse(a));}});
   body.innerHTML=DOMPurify.sanitize(marked.parse(text||'*[said nothing]*'));
   if(seat) seat.classList.remove('speaking');
+  if(window.PMVoice&&PMVoice.isEnabled()&&text) PMVoice.speak(p.id,text);
   return text;
 }
 function waitForAnswer(n,total){
@@ -207,9 +210,10 @@ function waitForAnswer(n,total){
     const box=document.createElement('div'); box.className='answer-box';
     box.innerHTML=`<div class="hint">Your answer (${n}/${total}) — "I don't know, but here's how I'd find out" beats a bluff. Ctrl/Cmd+Enter to submit.</div>
       <textarea placeholder="Answer the question as you would in the real meeting…"></textarea>
-      <div class="out-actions" style="margin:8px 0 0"><button class="primary" type="button">Submit answer</button></div>`;
+      <div class="out-actions" style="margin:8px 0 0"><button class="primary" type="button">Submit answer</button><button class="ghost mic" type="button" title="Answer out loud (browser speech recognition)">🎙</button></div>`;
     el('feed').appendChild(box); box.scrollIntoView({behavior:'smooth',block:'end'});
     const ta=box.querySelector('textarea'), btn=box.querySelector('button');
+    if(window.PMVoice) PMVoice.micToTextarea(box.querySelector('.mic'), ta);
     ta.focus();
     const submit=()=>{ const v=ta.value.trim(); if(!v) return setStatus('Say something — even "I don\'t know" is an answer.',true);
       box.remove(); setStatus(''); resolve(v); };

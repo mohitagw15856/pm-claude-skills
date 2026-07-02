@@ -6,7 +6,7 @@ Run one as a slash command in Claude Code (e.g. `/ship-a-feature a referral prog
 
 <!-- Generated from workflows.json by scripts/build-workflows.mjs — do not edit by hand. -->
 
-There are **9 recipes** today:
+There are **11 recipes** today:
 
 | Recipe | Command | Lifecycle | Chains |
 |--------|---------|-----------|--------|
@@ -19,6 +19,8 @@ There are **9 recipes** today:
 | **Launch an AI Feature** | `/launch-an-ai-feature` | Spec → Design → Evaluate → Budget → Document | 5 skills |
 | **Grow a Product** | `/grow-a-product` | Diagnose → Experiment → Retain → Nurture | 4 skills |
 | **Land a Job** | `/land-a-job` | Decode → Research → Apply → Interview | 4 skills |
+| **Ship an MCP Server** | `/ship-an-mcp-server` | Spec → Audit → Price | 4 skills |
+| **Adopt AI Properly** | `/adopt-ai-properly` | Policy → Roles → Proof | 4 skills |
 
 ## Ship a Feature — `/ship-a-feature`
 
@@ -120,6 +122,28 @@ There are **9 recipes** today:
 2. **company-brief** → produces a research brief — business model, trajectory, and the challenges this role would touch.
 3. **job-application** → produces an ATS-tailored CV summary and a cover letter aligned to the decoded requirements.
 4. **interview-prep** → produces a tailored prep pack — likely questions for this role and round, STAR answers, a story bank, and questions to ask.
+
+## Ship an MCP Server — `/ship-an-mcp-server`
+
+*Spec → Audit → Price* · Make your product genuinely usable by AI agents: spec the server, audit every agent-facing surface, and fix the pricing before agents break it.
+
+`mcp-server-spec` → `agent-readiness-audit` → `agent-era-pricing` → `human-in-the-loop-design`
+
+1. **mcp-server-spec** → produces a task-shaped toolset with auth, gates, and the never-exposed list.
+2. **agent-readiness-audit** → produces a six-surface readiness score with the failing artifacts quoted and a fix list.
+3. **agent-era-pricing** → produces a value-metric migration plan with fences and cannibalisation math.
+4. **human-in-the-loop-design** → produces the approval surface for every gated action the server exposes.
+
+## Adopt AI Properly — `/adopt-ai-properly`
+
+*Policy → Roles → Proof* · The org-side AI adoption arc: a policy people can follow, roles redesigned on purpose, reviews that still measure the human, and an audit that proves what paid.
+
+`ai-usage-policy` → `role-redesign-for-ai` → `ai-assisted-performance-review` → `ai-roi-audit`
+
+1. **ai-usage-policy** → produces a one-page usable policy with the data traffic-light and decision log.
+2. **role-redesign-for-ai** → produces redesigned role charters with capacity deliberately reallocated.
+3. **ai-assisted-performance-review** → produces review criteria that measure judgment, verification, outcomes, and leverage.
+4. **ai-roi-audit** → produces per-tool keep/consolidate/cut verdicts with the measurement behind each number.
 
 ---
 

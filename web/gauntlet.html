@@ -11,6 +11,7 @@
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
 <script src="providers.js"></script>
 <script src="export-doc.js"></script>
+<script src="voice.js"></script>
 <style>
   .g-wrap { max-width: 860px; margin: 0 auto; padding: 16px 22px 70px; }
   .lead { color: #c7cfda; font-size: 15.5px; }
@@ -75,7 +76,7 @@
       <option value="realistic" selected>🎯 Realistic — a fair but probing loop</option>
       <option value="brutal">🔥 Brutal — bar-raiser energy</option>
     </select>
-    <div class="bar"><button id="b1" class="primary" type="button">Decode it →</button><span id="st1" class="status"></span></div>
+    <div class="bar"><button id="b1" class="primary" type="button">Decode it →</button><button id="theatreBtn" class="ghost" type="button" title="Hear the interviewer and recruiter out loud (browser speech, no API)">🔇 Theatre</button><span id="st1" class="status"></span></div>
     <div id="o1" class="out markdown hidden"></div>
     <div class="bar hidden" id="n1"><button class="primary" type="button" data-next="2">Next: forge your stories →</button></div>
   </section>
@@ -95,7 +96,7 @@
     <h2 class="stage-h">🎤 Stage 3 — The interview</h2>
     <p class="stage-sub">The hiring manager has read the posting and your stories. Five questions, one at a time. Honest "I don't know" beats a bluff.</p>
     <div class="chat" id="chat3"></div>
-    <div class="say" id="say3"><textarea id="a3" placeholder="Your answer… (Enter to send)"></textarea><button id="send3" class="primary" type="button">Answer</button></div>
+    <div class="say" id="say3"><textarea id="a3" placeholder="Your answer… (Enter to send)"></textarea><button id="mic3" class="ghost" type="button" title="Answer out loud">🎙</button><button id="send3" class="primary" type="button">Answer</button></div>
     <div class="bar hidden" id="n3"><button class="primary" type="button" data-next="4">Next: the offer call →</button></div>
   </section>
 
@@ -104,7 +105,7 @@
     <h2 class="stage-h">💰 Stage 4 — The offer</h2>
     <p class="stage-sub">You got it. Now the recruiter calls with a number — and a hidden approval band. Negotiate; close or push. 4-6 exchanges is realistic.</p>
     <div class="chat" id="chat4"></div>
-    <div class="say" id="say4"><textarea id="a4" placeholder="Your move… (Enter to send)"></textarea><button id="send4" class="primary" type="button">Send</button></div>
+    <div class="say" id="say4"><textarea id="a4" placeholder="Your move… (Enter to send)"></textarea><button id="mic4" class="ghost" type="button" title="Speak your move">🎙</button><button id="send4" class="primary" type="button">Send</button></div>
     <div class="bar"><button id="accept" class="ghost hidden" type="button">🤝 Accept current offer</button><span id="st4" class="status"></span></div>
   </section>
 
@@ -149,6 +150,7 @@ function init(){
     if(window.pmTrack) pmTrack('gauntlet/certificate');
   });
   document.querySelectorAll('[data-next]').forEach(b=>b.addEventListener('click',()=>gotoStage(+b.dataset.next)));
+  if(window.PMVoice){ PMVoice.theatreToggle(el('theatreBtn')); PMVoice.micToTextarea(el('mic3'),el('a3')); PMVoice.micToTextarea(el('mic4'),el('a4')); }
   setStage(1);
 }
 function key(){ const k=el('apiKey').value.trim(); if(!k&&!PMProviders.current().local){ status(1,'Enter your '+PMProviders.current().name+' key (top-right) — or pick In-browser (no key).',true); return null;} return k; }
@@ -215,6 +217,7 @@ async function ask3(){
     const q=await gen({node:t,user:'DECODED ROLE:\n'+S.decoded+'\n\nCANDIDATE STORIES:\n'+S.stories+'\n\nINTERVIEW SO FAR:\n'+S.iq.map((q,i)=>'Q: '+q+'\nA: '+(S.ia[i]||'')).join('\n\n')+'\n\nAsk question '+(S.iq.length+1)+' of 5.',
       system:`You are the hiring manager for this role, interviewing live. Style: ${diffLine[S.diff]}. Ask ONE question (≤50 words): grounded in the decoded requirements, probing where the stories are thinnest, building on previous answers. Questions 4-5 should be the hardest (a gap, a contradiction, or "walk me through the failure"). Output only the question, in character.`});
     S.iq.push(q);
+    if(window.PMVoice&&PMVoice.isEnabled()&&q) PMVoice.speak('cto',q);
   }catch(e){ t.textContent='('+(e.message||'failed')+')'; }
 }
 async function answer3(){
@@ -254,6 +257,7 @@ async function move4(nudge){
     const text=await gen({node:t,user:'NEGOTIATION SO FAR:\n'+(S.offerTurns.map(x=>x.who+': '+x.text).join('\n\n')||'(none yet)')+'\n\nRespond with your next line only.',
       system:`You are the recruiter. HIDDEN STATE (never reveal): opening ${S.offerHidden.opening} · true ceiling ${S.offerHidden.band_max} · flexible levers: ${(S.offerHidden.levers||[]).join(', ')} · your pressure: ${S.offerHidden.pressure}. Negotiate realistically (≤80 words/turn): concede slowly toward the ceiling only against good arguments (competing data, specific asks); offer levers before base; if pushed past the ceiling, hold and mean it. ${nudge||''}`});
     S.offerTurns.push({who:'Recruiter',text});
+    if(window.PMVoice&&PMVoice.isEnabled()&&text) PMVoice.speak('growth',text);
   }catch(e){ t.textContent='('+(e.message||'failed')+')'; }
   el('send4').disabled=false;
 }

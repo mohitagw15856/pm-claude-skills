@@ -112,6 +112,8 @@ Full normative rules live in [SKILLSPEC.md §5](SKILLSPEC.md). Worked examples:
 
 ## 8. Tiering
 
-New skills enter as **Experimental**. Once a skill has a stable output format, quality
-checks, and real-world use, it can be promoted to **Stable** or **Production-Ready** in
-[TIERS.md](TIERS.md). Tiering is honest signposting, not a value judgement on effort.
+New self-contained skills that meet this standard enter as **Stable** (the library's
+default tier). **Experimental** is reserved for skills that depend on external services,
+scraping, or browser/desktop automation — more setup, more failure modes. Promotion to
+**Production-Ready** happens in [TIERS.md](TIERS.md) once a skill has an eval score and
+real-world use. Tiering is honest signposting, not a value judgement on effort.

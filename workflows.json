@@ -8,11 +8,31 @@
       "lifecycle": "Discover → Decide → Build → Ship",
       "summary": "Take a raw feature idea from fuzzy brief all the way to a launch plan, end to end.",
       "steps": [
-        { "skill": "ambiguity-resolver", "produces": "a sharp problem statement and scoped boundaries", "passes": "the framed problem" },
-        { "skill": "prd-template", "produces": "a full PRD with goals, requirements, and success metrics", "passes": "the PRD scope and metrics" },
-        { "skill": "rice-prioritisation", "produces": "a RICE score positioning this work against alternatives", "passes": "the priority and confidence" },
-        { "skill": "roadmap-narrative", "produces": "where this sits on the roadmap and the story around it", "passes": "the roadmap framing" },
-        { "skill": "go-to-market", "produces": "a launch plan: audience, messaging, channels, and timeline", "passes": null }
+        {
+          "skill": "ambiguity-resolver",
+          "produces": "a sharp problem statement and scoped boundaries",
+          "passes": "the framed problem"
+        },
+        {
+          "skill": "prd-template",
+          "produces": "a full PRD with goals, requirements, and success metrics",
+          "passes": "the PRD scope and metrics"
+        },
+        {
+          "skill": "rice-prioritisation",
+          "produces": "a RICE score positioning this work against alternatives",
+          "passes": "the priority and confidence"
+        },
+        {
+          "skill": "roadmap-narrative",
+          "produces": "where this sits on the roadmap and the story around it",
+          "passes": "the roadmap framing"
+        },
+        {
+          "skill": "go-to-market",
+          "produces": "a launch plan: audience, messaging, channels, and timeline",
+          "passes": null
+        }
       ]
     },
     {
@@ -22,10 +42,26 @@
       "lifecycle": "Measure → Communicate",
       "summary": "Turn the quarter's raw numbers into a leadership-ready story and board deck.",
       "steps": [
-        { "skill": "metrics-framework", "produces": "the metric tree and what actually moved", "passes": "the key metric movements" },
-        { "skill": "churn-analysis", "produces": "why customers left and what is avoidable", "passes": "the retention findings" },
-        { "skill": "executive-update", "produces": "a tight leadership briefing of the quarter", "passes": "the headline narrative" },
-        { "skill": "board-deck-narrative", "produces": "a slide-by-slide board deck storyline", "passes": null }
+        {
+          "skill": "metrics-framework",
+          "produces": "the metric tree and what actually moved",
+          "passes": "the key metric movements"
+        },
+        {
+          "skill": "churn-analysis",
+          "produces": "why customers left and what is avoidable",
+          "passes": "the retention findings"
+        },
+        {
+          "skill": "executive-update",
+          "produces": "a tight leadership briefing of the quarter",
+          "passes": "the headline narrative"
+        },
+        {
+          "skill": "board-deck-narrative",
+          "produces": "a slide-by-slide board deck storyline",
+          "passes": null
+        }
       ]
     },
     {
@@ -35,11 +71,31 @@
       "lifecycle": "Decide → Ship",
       "summary": "Go from competitive landscape to positioning to a fully checklisted launch and press release.",
       "steps": [
-        { "skill": "competitor-teardown", "produces": "the competitive map and gaps to exploit", "passes": "the positioning opportunity" },
-        { "skill": "product-positioning-doc", "produces": "positioning, value props, and messaging pillars", "passes": "the approved messaging" },
-        { "skill": "go-to-market", "produces": "the GTM plan across audience and channels", "passes": "the launch plan" },
-        { "skill": "product-launch-checklist", "produces": "an owner-by-owner launch readiness checklist", "passes": "the launch date and scope" },
-        { "skill": "press-release", "produces": "the announcement press release", "passes": null }
+        {
+          "skill": "competitor-teardown",
+          "produces": "the competitive map and gaps to exploit",
+          "passes": "the positioning opportunity"
+        },
+        {
+          "skill": "product-positioning-doc",
+          "produces": "positioning, value props, and messaging pillars",
+          "passes": "the approved messaging"
+        },
+        {
+          "skill": "go-to-market",
+          "produces": "the GTM plan across audience and channels",
+          "passes": "the launch plan"
+        },
+        {
+          "skill": "product-launch-checklist",
+          "produces": "an owner-by-owner launch readiness checklist",
+          "passes": "the launch date and scope"
+        },
+        {
+          "skill": "press-release",
+          "produces": "the announcement press release",
+          "passes": null
+        }
       ]
     },
     {
@@ -49,10 +105,26 @@
       "lifecycle": "Measure → Communicate",
       "summary": "Diagnose an at-risk customer and build the full save play through to renewal.",
       "steps": [
-        { "skill": "cs-health-scorecard", "produces": "a health score with the specific risk drivers", "passes": "the risk profile" },
-        { "skill": "churn-analysis", "produces": "the root cause and whether the risk is avoidable", "passes": "the diagnosis" },
-        { "skill": "cs-escalation-brief", "produces": "an internal escalation brief for the save", "passes": "the resolution plan" },
-        { "skill": "renewal-playbook", "produces": "the renewal strategy and negotiation plan", "passes": null }
+        {
+          "skill": "cs-health-scorecard",
+          "produces": "a health score with the specific risk drivers",
+          "passes": "the risk profile"
+        },
+        {
+          "skill": "churn-analysis",
+          "produces": "the root cause and whether the risk is avoidable",
+          "passes": "the diagnosis"
+        },
+        {
+          "skill": "cs-escalation-brief",
+          "produces": "an internal escalation brief for the save",
+          "passes": "the resolution plan"
+        },
+        {
+          "skill": "renewal-playbook",
+          "produces": "the renewal strategy and negotiation plan",
+          "passes": null
+        }
       ]
     },
     {
@@ -62,10 +134,26 @@
       "lifecycle": "Discover → Decide",
       "summary": "From a vague opportunity to validated insight and a prioritised next step.",
       "steps": [
-        { "skill": "ambiguity-resolver", "produces": "a one-page problem brief from the fuzzy opportunity", "passes": "the scoped question" },
-        { "skill": "discovery-interview-guide", "produces": "a screener and discussion guide for user interviews", "passes": "the research focus" },
-        { "skill": "user-research-synthesis", "produces": "themes and insights from the research", "passes": "the validated insights" },
-        { "skill": "rice-prioritisation", "produces": "a ranked, defensible list of what to do next", "passes": null }
+        {
+          "skill": "ambiguity-resolver",
+          "produces": "a one-page problem brief from the fuzzy opportunity",
+          "passes": "the scoped question"
+        },
+        {
+          "skill": "discovery-interview-guide",
+          "produces": "a screener and discussion guide for user interviews",
+          "passes": "the research focus"
+        },
+        {
+          "skill": "user-research-synthesis",
+          "produces": "themes and insights from the research",
+          "passes": "the validated insights"
+        },
+        {
+          "skill": "rice-prioritisation",
+          "produces": "a ranked, defensible list of what to do next",
+          "passes": null
+        }
       ]
     },
     {
@@ -75,9 +163,21 @@
       "lifecycle": "One source → many platforms",
       "summary": "Turn one blog post, video, or idea into a full platform-native content pack — thread, LinkedIn, newsletter, carousel, and short-form script — with sharpened hooks and a thumbnail concept.",
       "steps": [
-        { "skill": "content-repurposer", "produces": "platform-native drafts for X, LinkedIn, newsletter, carousel and short-form video", "passes": "the drafts and the core idea" },
-        { "skill": "hook-writer", "produces": "stronger, scroll-stopping hooks for each piece", "passes": "the winning hooks" },
-        { "skill": "thumbnail-creator", "produces": "a thumbnail concept for the video version", "passes": null }
+        {
+          "skill": "content-repurposer",
+          "produces": "platform-native drafts for X, LinkedIn, newsletter, carousel and short-form video",
+          "passes": "the drafts and the core idea"
+        },
+        {
+          "skill": "hook-writer",
+          "produces": "stronger, scroll-stopping hooks for each piece",
+          "passes": "the winning hooks"
+        },
+        {
+          "skill": "thumbnail-creator",
+          "produces": "a thumbnail concept for the video version",
+          "passes": null
+        }
       ]
     },
     {
@@ -87,11 +187,31 @@
       "lifecycle": "Spec → Design → Evaluate → Budget → Document",
       "summary": "Take an AI/LLM feature idea from a probabilistic-aware PRD through retrieval/agent design, an eval plan with a ship bar, a cost & latency budget, and a launch-ready model card.",
       "steps": [
-        { "skill": "ai-feature-prd", "produces": "a PRD designed for a probabilistic system — uncertainty UX, guardrails, fallback, and a quality bar", "passes": "the feature scope, stakes, and quality bar" },
-        { "skill": "rag-design-doc", "produces": "the retrieval/generation design (chunking, retrieval, reranking, grounding, failure modes)", "passes": "the system design and grounding approach" },
-        { "skill": "ai-eval-plan", "produces": "an eval harness: datasets, rubrics, baselines, a ship threshold, and a regression gate", "passes": "the metrics and the ship bar" },
-        { "skill": "llm-cost-latency-budget", "produces": "per-request token math, model tiering, caching, p95 targets, and spend guardrails", "passes": "the cost/latency envelope" },
-        { "skill": "model-card", "produces": "a launch-ready model card: intended use, sliced eval, limitations, and a rollback trigger", "passes": null }
+        {
+          "skill": "ai-feature-prd",
+          "produces": "a PRD designed for a probabilistic system — uncertainty UX, guardrails, fallback, and a quality bar",
+          "passes": "the feature scope, stakes, and quality bar"
+        },
+        {
+          "skill": "rag-design-doc",
+          "produces": "the retrieval/generation design (chunking, retrieval, reranking, grounding, failure modes)",
+          "passes": "the system design and grounding approach"
+        },
+        {
+          "skill": "ai-eval-plan",
+          "produces": "an eval harness: datasets, rubrics, baselines, a ship threshold, and a regression gate",
+          "passes": "the metrics and the ship bar"
+        },
+        {
+          "skill": "llm-cost-latency-budget",
+          "produces": "per-request token math, model tiering, caching, p95 targets, and spend guardrails",
+          "passes": "the cost/latency envelope"
+        },
+        {
+          "skill": "model-card",
+          "produces": "a launch-ready model card: intended use, sliced eval, limitations, and a rollback trigger",
+          "passes": null
+        }
       ]
     },
     {
@@ -101,10 +221,26 @@
       "lifecycle": "Diagnose → Experiment → Retain → Nurture",
       "summary": "Turn a growth goal into a full-funnel diagnosis, a prioritised experiment backlog, a retention loop, and the lifecycle journeys that nurture users — a joined-up growth plan.",
       "steps": [
-        { "skill": "marketing-funnel-plan", "produces": "a full-funnel map with the biggest leak identified and a 90-day focus", "passes": "the focus stage and the metric to move" },
-        { "skill": "growth-experiment-backlog", "produces": "a prioritised, properly-powered experiment backlog (ICE) against that stage", "passes": "the top experiments and the target metric" },
-        { "skill": "retention-loop-design", "produces": "a retention/engagement loop (trigger→action→reward→investment) and activation path", "passes": "the loop and the habit milestone" },
-        { "skill": "lifecycle-crm-plan", "produces": "behaviour-triggered lifecycle journeys that drive the loop, with holdouts and suppression", "passes": null }
+        {
+          "skill": "marketing-funnel-plan",
+          "produces": "a full-funnel map with the biggest leak identified and a 90-day focus",
+          "passes": "the focus stage and the metric to move"
+        },
+        {
+          "skill": "growth-experiment-backlog",
+          "produces": "a prioritised, properly-powered experiment backlog (ICE) against that stage",
+          "passes": "the top experiments and the target metric"
+        },
+        {
+          "skill": "retention-loop-design",
+          "produces": "a retention/engagement loop (trigger→action→reward→investment) and activation path",
+          "passes": "the loop and the habit milestone"
+        },
+        {
+          "skill": "lifecycle-crm-plan",
+          "produces": "behaviour-triggered lifecycle journeys that drive the loop, with holdouts and suppression",
+          "passes": null
+        }
       ]
     },
     {
@@ -114,10 +250,84 @@
       "lifecycle": "Decode → Research → Apply → Interview",
       "summary": "Go after a specific role end to end: decode the job description, research the company, tailor your CV and cover letter to it, and prep for the interview — each step building on the last.",
       "steps": [
-        { "skill": "jd-decoder", "produces": "what the posting really wants, your honest fit, and the keywords to mirror", "passes": "the must-haves, your fit gaps, and the mirror-phrases" },
-        { "skill": "company-brief", "produces": "a research brief — business model, trajectory, and the challenges this role would touch", "passes": "the company context and likely challenges" },
-        { "skill": "job-application", "produces": "an ATS-tailored CV summary and a cover letter aligned to the decoded requirements", "passes": "the tailored positioning and the strongest proof points" },
-        { "skill": "interview-prep", "produces": "a tailored prep pack — likely questions for this role and round, STAR answers, a story bank, and questions to ask", "passes": null }
+        {
+          "skill": "jd-decoder",
+          "produces": "what the posting really wants, your honest fit, and the keywords to mirror",
+          "passes": "the must-haves, your fit gaps, and the mirror-phrases"
+        },
+        {
+          "skill": "company-brief",
+          "produces": "a research brief — business model, trajectory, and the challenges this role would touch",
+          "passes": "the company context and likely challenges"
+        },
+        {
+          "skill": "job-application",
+          "produces": "an ATS-tailored CV summary and a cover letter aligned to the decoded requirements",
+          "passes": "the tailored positioning and the strongest proof points"
+        },
+        {
+          "skill": "interview-prep",
+          "produces": "a tailored prep pack — likely questions for this role and round, STAR answers, a story bank, and questions to ask",
+          "passes": null
+        }
+      ]
+    },
+    {
+      "id": "ship-an-mcp-server",
+      "command": "/ship-an-mcp-server",
+      "name": "Ship an MCP Server",
+      "lifecycle": "Spec → Audit → Price",
+      "summary": "Make your product genuinely usable by AI agents: spec the server, audit every agent-facing surface, and fix the pricing before agents break it.",
+      "steps": [
+        {
+          "skill": "mcp-server-spec",
+          "produces": "a task-shaped toolset with auth, gates, and the never-exposed list",
+          "passes": "the tool surface and safety boundaries"
+        },
+        {
+          "skill": "agent-readiness-audit",
+          "produces": "a six-surface readiness score with the failing artifacts quoted and a fix list",
+          "passes": "the readiness gaps that touch adoption"
+        },
+        {
+          "skill": "agent-era-pricing",
+          "produces": "a value-metric migration plan with fences and cannibalisation math",
+          "passes": "the pricing model agents will actually meet"
+        },
+        {
+          "skill": "human-in-the-loop-design",
+          "produces": "the approval surface for every gated action the server exposes",
+          "passes": "the oversight design"
+        }
+      ]
+    },
+    {
+      "id": "adopt-ai-properly",
+      "command": "/adopt-ai-properly",
+      "name": "Adopt AI Properly",
+      "lifecycle": "Policy → Roles → Proof",
+      "summary": "The org-side AI adoption arc: a policy people can follow, roles redesigned on purpose, reviews that still measure the human, and an audit that proves what paid.",
+      "steps": [
+        {
+          "skill": "ai-usage-policy",
+          "produces": "a one-page usable policy with the data traffic-light and decision log",
+          "passes": "the sanctioned-tools reality"
+        },
+        {
+          "skill": "role-redesign-for-ai",
+          "produces": "redesigned role charters with capacity deliberately reallocated",
+          "passes": "the new expectations per role"
+        },
+        {
+          "skill": "ai-assisted-performance-review",
+          "produces": "review criteria that measure judgment, verification, outcomes, and leverage",
+          "passes": "the evaluation frame"
+        },
+        {
+          "skill": "ai-roi-audit",
+          "produces": "per-tool keep/consolidate/cut verdicts with the measurement behind each number",
+          "passes": "the renewal decisions"
+        }
       ]
     }
   ]
