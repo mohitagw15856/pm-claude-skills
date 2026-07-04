@@ -335,6 +335,20 @@ The most requested arc, as one experience: **[the Gauntlet](https://mohitagw1585
 
 ---
 
+### 🎤 The Panel — you're the interviewer now
+
+The Gauntlet trains you to *be* interviewed; **[the Panel](https://mohitagw15856.github.io/pm-claude-skills/hiring.html)** trains the harder, rarer skill: telling a great candidate from a great talker. The AI plays a candidate with a **hidden archetype** — genuinely strong, polished-but-evasive, or a confident bluffer whose stories wobble under a second follow-up. You ask the questions, you write the hire/no-hire recommendation *before* the reveal, and a hiring coach scores **your** technique: evidence-pinning, follow-up discipline, and the tells you caught or missed.
+
+### 🎓 The Academy & 🎁 Wrapped — learn it, then see your story
+
+**[The Academy](https://mohitagw15856.github.io/pm-claude-skills/academy.html)** turns the library's own Anti-Patterns into three learning tracks (🎯 executive communication, 🔬 discovery & evidence, ⚙️ work discipline) — 18 spot-the-flaw drills with explanations that quote the exact skill rule, **no API key needed**, each track examined live in an arena, certificate on graduation. And **[Wrapped](https://mohitagw15856.github.io/pm-claude-skills/wrapped.html)** plays your practice back as an animated story from purely local data — personal bests, imposters caught, prediction calibration, your earned persona title — with a canvas share card. Nothing leaves the machine.
+
+### 🗂 Local-first, all the way down
+
+Connect the Firm or the Boardroom to a **real folder on disk** (the 🗂 chip, Chromium): minutes, verdicts, transcripts, and predictions land as markdown files — point Claude Code at the same folder and the web arenas and the CLI become one product. Share a whole Boardroom session as a **replay link** where the URL fragment *is* the data (gzip, no server). Swap the Boardroom's bench for the 🦈 fundraising, 🏥 healthcare, or 🚀 seed-stage preset — or build your own executive, or publish a [bench pack](community/) for others. Teams? **[A folder convention, not a backend](docs/TEAMS-DECISION.md)** — a shared git repo of `brain/` + `firm-minutes/` + `boardroom/` is auth, audit, review, and sync we never have to build. Run `npx pm-claude-skills doctor` for a read-only checkup of your whole setup, ℞ included.
+
+---
+
 ## 🧠 Skill Memory — set your context once, every skill uses it
 
 <details>
