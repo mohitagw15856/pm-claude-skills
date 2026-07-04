@@ -9,6 +9,8 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [43.0.0] — the local-first & learning wave: your folder, your story, the other side of the table — 2026-07-04
+
 ### Added — the local-first & learning wave: your folder, your story, the other side of the table
 - **🗂 The local-first workspace** ([web/workspace.js](web/workspace.js)) — connect the Firm and the Boardroom to a **real folder on disk** (File System Access API, Chromium): Firm minutes land in `firm-minutes/`, staff memos in `firm-minutes/memos/`, predictions in `brain/predictions/` with frontmatter, Boardroom verdicts + transcripts in `boardroom/`. Point Claude Code at the same folder and the web arenas and the CLI become **one product** — `/firm` reads what the browser wrote. Connect-once persistence via IndexedDB; feature-detected everywhere else.
 - **🔗 Shareable Boardroom replays** — every finished session gets a **replay link**: the whole debate (doc excerpt, every executive turn, the verdict) gzip-compressed into the URL fragment — *no server, nothing uploaded, the link IS the data*. Recipients watch it play back turn by turn with a typing animation. Sessions and custom setups up to ~28 KB compressed.
@@ -569,7 +571,8 @@ Earlier releases (v1.0.0 – v5.0.0) predate this changelog. See the
 [article series](README.md#-the-article-series) for the full history of how the
 library grew from the first PM toolkit to 100+ skills.
 
-[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v20.0.0...HEAD
+[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v43.0.0...HEAD
+[43.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v42.0.0...v43.0.0
 [20.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v19.0.0...v20.0.0
 [19.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v18.0.0...v19.0.0
 [18.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v17.0.0...v18.0.0
