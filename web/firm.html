@@ -10,6 +10,7 @@
 <script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
 <script src="providers.js"></script>
+<script src="workspace.js"></script>
 <style>
   .firm-wrap { max-width: 1060px; margin: 0 auto; padding: 16px 22px 70px; }
   .lead { color: #c7cfda; font-size: 15.5px; }
@@ -80,6 +81,7 @@
   <div class="bar">
     <input id="agenda" class="agenda-in" placeholder="This session's board agenda (optional — otherwise the staff pick the sharpest open question from their own memos)" />
     <button id="runBtn" class="primary" type="button">🏢 Convene the Firm</button>
+    <span id="wsChip" hidden></span>
     <button id="stopBtn" class="ghost" type="button" hidden>Adjourn</button>
     <span id="status" class="status"></span>
   </div>
@@ -136,6 +138,7 @@ async function init(){
   el('runBtn').addEventListener('click',convene);
   el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
   F=load();
+  if(window.PMWorkspace) PMWorkspace.chip(el('wsChip'));
   // Charter defaults to the playground's Skill Memory so the staff already knows you.
   el('charter').value=F.charter||localStorage.getItem('pm_context')||'';
   el('charter').addEventListener('input',()=>{F.charter=el('charter').value;save();});
@@ -224,7 +227,13 @@ First person, in character, no preamble.`;
       memos.push({m,md});
       deliver({from:m.id,emoji:m.emoji,color:m.color,title:m.duty+' — '+m.name,md,session});
       const pm=md.match(/Prediction:\s*([^\n]+)/i);
-      if(pm) { F.preds.push({text:pm[1].trim(),by:m.id,who:m.name,session,status:'pending',ts:Date.now()}); save(); renderLedger(); }
+      if(pm) {
+        F.preds.push({text:pm[1].trim(),by:m.id,who:m.name,session,status:'pending',ts:Date.now()}); save(); renderLedger();
+        if(window.PMWorkspace&&PMWorkspace.connected()){
+          PMWorkspace.write(`brain/predictions/${PMWorkspace.today()}-${m.id}-s${session}.md`,
+            `---\nby: ${m.name}\nsession: ${session}\nstatus: pending\nrecorded: ${PMWorkspace.today()}\n---\n\n${pm[1].trim()}\n`).catch(()=>{});
+        }
+      }
       el('staff-'+m.id).classList.remove('working');
     }
     // ── 2. The staff meet without you ──
@@ -251,7 +260,16 @@ Then write the MINUTES for the principal, markdown, ≤380 words:
   }
 }
 
-function deliver(item){ F.inbox.push({...item,ts:Date.now(),read:false,id:Math.random().toString(36).slice(2)}); save(); renderInbox(); }
+function deliver(item){
+  F.inbox.push({...item,ts:Date.now(),read:false,id:Math.random().toString(36).slice(2)}); save(); renderInbox();
+  // Local-first: when a workspace folder is connected, artifacts land on DISK —
+  // the same firm-minutes/ and brain/predictions/ that Claude Code's /firm uses.
+  if(window.PMWorkspace&&PMWorkspace.connected()){
+    const day=PMWorkspace.today();
+    const path=item.minutes?`firm-minutes/session-${item.session}-${day}.md`:`firm-minutes/memos/session-${item.session}-${PMWorkspace.slug(item.title)}.md`;
+    PMWorkspace.write(path,`# ${item.title}\n\n_${day} · session ${item.session}_\n\n${item.md}\n`).catch(()=>{});
+  }
+}
 function renderInbox(){
   const box=el('inbox'); box.innerHTML='';
   if(!F.inbox.length){ box.innerHTML='<div class="empty">Nothing yet. Charter the firm, hire your staff, and convene — the memos and minutes land here.</div>'; return; }

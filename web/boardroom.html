@@ -11,6 +11,7 @@
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
 <script src="providers.js"></script>
 <script src="voice.js"></script>
+<script src="workspace.js"></script>
 <style>
   .board-wrap { max-width: 940px; margin: 0 auto; padding: 16px 22px 70px; }
   .lead { color: #c7cfda; font-size: 15.5px; }
@@ -71,6 +72,12 @@
   <textarea id="doc" class="doc-in" placeholder="Paste the document on the table — a PRD, launch plan, investor pitch, pricing proposal, strategy memo…"></textarea>
   <input id="ctx" class="ctx-in" placeholder="Optional context: company stage, budget reality, deadline, what decision this document is asking for…" />
 
+  <div class="bar" style="margin:12px 0 2px">
+    <select id="benchPreset" class="ghost" title="Swap the whole panel for a bench built for your document type" style="padding:8px 10px;border-radius:9px;background:var(--panel);color:var(--text);border:1px solid var(--border);font-family:inherit">
+      <option value="">🪑 Default bench (CFO · CTO · CCO · Counsel · VC)</option>
+    </select>
+    <button id="addExec" class="ghost" type="button" title="Charter your own executive — e.g. YOUR actual CFO's known concerns">➕ Custom executive</button>
+  </div>
   <div class="bench" id="bench" aria-label="The bench — click to seat or excuse an executive"></div>
 
   <div class="bar">
@@ -85,6 +92,7 @@
     </select>
     <button id="runBtn" class="primary" type="button">🏛️ Convene the board</button>
     <button id="theatreBtn" class="ghost" type="button" title="Theatre mode — each executive speaks their turn out loud in a distinct voice (browser speech, no API)">🔇 Theatre</button>
+    <span id="wsChip" hidden></span>
     <button id="stopBtn" class="ghost" type="button" hidden>Adjourn early</button>
     <span id="status" class="status"></span>
   </div>
@@ -100,6 +108,7 @@
     <button id="dlMemo" class="primary" type="button">⬇ Download decision memo</button>
     <button id="dlAll" class="ghost" type="button">⬇ Full transcript (.md)</button>
     <button id="dlAtt" class="ghost" type="button" title="A tamper-evident record that THIS exact document got THIS verdict — verifiable at verify.html">🔏 Attestation (.json)</button>
+    <button id="shareReplay" class="ghost" type="button" title="A link that REPLAYS this session with the streaming animation — no key needed to watch">🔗 Share replay</button>
     <button id="again" class="ghost" type="button">↻ New session</button>
   </div>
 </div>
@@ -132,6 +141,31 @@ const GRILL={
   brutal:'This is the meeting where projects die. Be surgical and unsparing — never insult the author, only the work, but concede nothing to politeness.',
 };
 let controller=null, TRANSCRIPT=[], MEMO='', SESSION=null;
+const DEFAULT_BENCH=BENCH.slice();
+let PRESETS=[];
+function customExecs(){ try{ return JSON.parse(localStorage.getItem('pm_custom_execs'))||[]; }catch(_){ return []; } }
+function applyBench(list){ BENCH.length=0; list.forEach(x=>BENCH.push(x)); customExecs().forEach(x=>BENCH.push({...x,on:x.on!==false})); renderBench(); }
+async function initBenches(){
+  try{ PRESETS=(await (await fetch('benches.json')).json()).benches||[]; }catch(_){ PRESETS=[]; }
+  const sel=el('benchPreset');
+  PRESETS.forEach((b,i)=>{ const o=document.createElement('option'); o.value=String(i); o.textContent=b.name+' — '+b.for; sel.appendChild(o); });
+  sel.addEventListener('change',()=>{
+    const b=PRESETS[+sel.value];
+    applyBench(b? b.executives.map(e=>({...e,on:true})) : DEFAULT_BENCH.map(e=>({...e})));
+    if(window.pmTrack&&b) pmTrack('boardroom/bench/'+b.id);
+  });
+  if(customExecs().length) applyBench(DEFAULT_BENCH.map(e=>({...e})));
+}
+function addCustomExec(){
+  const name=(prompt('Executive name (e.g. "Raj Mehta"):')||'').trim(); if(!name) return;
+  const role=(prompt('Role (e.g. "Our actual CFO"):')||'Advisor').trim();
+  const lens=(prompt('What they always scrutinise (their lens):')||'').trim(); if(!lens) return;
+  const bias=(prompt('Their disposition — how they argue (e.g. "always asks about gross margin; hates multi-year projections"):')||'').trim();
+  const ex={id:'cx'+Date.now().toString(36),emoji:'🪑',name,role,color:'#9aa4b2',lens,bias:bias||('You scrutinise '+lens+'.'),on:true,custom:true};
+  const list=customExecs(); list.push(ex); localStorage.setItem('pm_custom_execs',JSON.stringify(list));
+  BENCH.push(ex); renderBench();
+  if(window.pmTrack) pmTrack('boardroom/custom-exec');
+}
 
 init();
 function init(){
@@ -143,7 +177,12 @@ function init(){
   el('dlMemo').addEventListener('click',()=>download('decision-memo.md',MEMO||'(no verdict)'));
   el('dlAll').addEventListener('click',()=>download('boardroom-transcript.md',fullTranscript()));
   el('dlAtt').addEventListener('click',downloadAttestation);
+  el('shareReplay').addEventListener('click',shareReplay);
+  el('addExec').addEventListener('click',addCustomExec);
+  initBenches();
+  maybeReplay();
   if(window.PMVoice) PMVoice.theatreToggle(el('theatreBtn'));
+  if(window.PMWorkspace) PMWorkspace.chip(el('wsChip'));
   renderBench();
 }
 function renderBench(){
@@ -152,8 +191,13 @@ function renderBench(){
     const d=document.createElement('div');
     d.className='seat '+(p.on?'on':'off'); d.style.setProperty('--seat',p.color); d.id='seat-'+p.id;
     d.title=(p.on?'Click to excuse ':'Click to seat ')+p.role;
-    d.innerHTML=`<span class="em">${p.emoji}</span><span><b>${esc(p.name)}</b><small>${esc(p.role)}</small></span>`;
+    d.innerHTML=`<span class="em">${p.emoji}</span><span><b>${esc(p.name)}</b><small>${esc(p.role)}${p.custom?' · yours':''}</small></span>`;
     d.addEventListener('click',()=>{p.on=!p.on;renderBench();});
+    if(p.custom){ d.addEventListener('contextmenu',(e)=>{ e.preventDefault();
+      if(confirm('Remove '+p.name+' from your roster?')){
+        const list=customExecs().filter(x=>x.id!==p.id); localStorage.setItem('pm_custom_execs',JSON.stringify(list));
+        const i=BENCH.findIndex(x=>x.id===p.id); if(i>-1) BENCH.splice(i,1); renderBench();
+      } }); d.title=(d.title||'')+' · right-click to remove'; }
     b.appendChild(d);
   });
 }
@@ -198,6 +242,12 @@ async function convene(){
     setRound(4);
     setStatus('Session closed — the memo is ready.');
     el('after').hidden=false;
+    // Local-first: verdict memo + transcript to disk when a workspace is connected.
+    if(window.PMWorkspace&&PMWorkspace.connected()){
+      const day=PMWorkspace.today();
+      PMWorkspace.write(`boardroom/${day}-verdict.md`,MEMO).catch(()=>{});
+      PMWorkspace.write(`boardroom/${day}-transcript.md`,fullTranscript()).catch(()=>{});
+    }
   }catch(e){ setStatus(e.name==='AbortError'?'Session adjourned.':(e.message||'The session failed.'),true); }
   finally{ el('runBtn').disabled=false; el('stopBtn').hidden=true; controller=null;
     document.querySelectorAll('.seat.speaking').forEach(s=>s.classList.remove('speaking')); }
@@ -258,6 +308,63 @@ function download(name,text){
   const a=document.createElement('a');
   a.href=URL.createObjectURL(new Blob([text],{type:'text/markdown'})); a.download=name; a.click();
   setTimeout(()=>URL.revokeObjectURL(a.href),4000);
+}
+// ── Shareable replays: the whole session gzipped into the URL fragment. ──────
+// Anyone opening the link watches the debate re-stream — no key, no API.
+async function gz(str){
+  const cs=new CompressionStream('gzip');
+  const b=new Blob([str]).stream().pipeThrough(cs);
+  const buf=await new Response(b).arrayBuffer();
+  return btoa(String.fromCharCode(...new Uint8Array(buf))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+}
+async function gunz(b64){
+  const bin=atob(b64.replace(/-/g,'+').replace(/_/g,'/'));
+  const bytes=Uint8Array.from(bin,c=>c.charCodeAt(0));
+  const ds=new DecompressionStream('gzip');
+  return new Response(new Blob([bytes]).stream().pipeThrough(ds)).text();
+}
+async function shareReplay(){
+  if(!TRANSCRIPT.length&&!MEMO) return setStatus('Run a session first — then share its replay.',true);
+  const payload={v:1,doc:(SESSION&&SESSION.doc||'').slice(0,600),bench:SESSION?SESSION.bench:[],grill:SESSION?SESSION.grill:'direct',
+    t:TRANSCRIPT.map(x=>({r:x.round,id:x.who.id,n:x.who.name,ro:x.who.role,e:x.who.emoji,c:x.who.color,md:x.text})),memo:MEMO};
+  const frag=await gz(JSON.stringify(payload));
+  const url=location.origin+location.pathname+'#replay='+frag;
+  if(url.length>28000) return setStatus('Session too large to fit in a link — download the transcript instead.',true);
+  try{ await navigator.clipboard.writeText(url); setStatus('Replay link copied ('+Math.round(url.length/1024)+' KB) — anyone can watch, no key needed.'); }
+  catch(_){ setStatus(url.slice(0,80)+'…',false); }
+  if(window.pmTrack) pmTrack('boardroom/share-replay');
+}
+async function maybeReplay(){
+  const m=location.hash.match(/#replay=(.+)/);
+  if(!m) return;
+  let data; try{ data=JSON.parse(await gunz(m[1])); }catch(_){ return setStatus('Could not read this replay link.',true); }
+  document.querySelector('.board-wrap .lead').innerHTML='<strong>▶ Replay</strong> — you are watching a recorded session ('+esc(data.bench.join(', '))+' · grill: '+esc(data.grill)+'). <a href="boardroom.html">Run your own →</a>';
+  el('doc').value=data.doc+(data.doc.length>=600?'…':''); el('doc').disabled=true; el('runBtn').disabled=true;
+  el('rounds').hidden=false;
+  let lastRound=0;
+  for(const turn of data.t){
+    if(turn.r!==lastRound){ lastRound=turn.r; roundTitle('Round '+turn.r+(turn.r===1?' — opening statements':' — cross-examination')); setRound(turn.r); }
+    await replayCard({emoji:turn.e,name:turn.n,role:turn.ro,color:turn.c},turn.md,false);
+  }
+  if(data.memo){ setRound(3); roundTitle('Round 3 — the verdict'); await replayCard({emoji:'🪑',name:'The Chair',role:'Chair of the board',color:'#d97757'},data.memo,true); setRound(4); }
+  setStatus('Replay complete. Run your own document through the board →');
+}
+function replayCard(p,text,isVerdict){
+  return new Promise((resolve)=>{
+    const card=document.createElement('div'); card.className='msg'+(isVerdict?' verdict':''); card.style.setProperty('--seat',p.color);
+    card.innerHTML=`<div class="msg-head"><span class="em">${p.emoji}</span><span><b>${esc(p.name)}</b> <small>· ${esc(p.role)}</small></span></div><div class="msg-body"></div>`;
+    el('feed').appendChild(card); card.scrollIntoView({behavior:'smooth',block:'end'});
+    const body=card.querySelector('.msg-body');
+    const chunks=text.match(/\S+\s*/g)||[text];
+    let i=0,acc='';
+    const tick=()=>{ 
+      const step=Math.max(1,Math.round(chunks.length/60));
+      acc+=chunks.slice(i,i+step).join(''); i+=step;
+      body.innerHTML=sevChips(DOMPurify.sanitize(marked.parse(acc)));
+      if(i<chunks.length) setTimeout(tick,35); else resolve();
+    };
+    tick();
+  });
 }
 function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
 function esc(s){ return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
