@@ -1,0 +1,32 @@
+# Documents get code review: PRs touching docs are reviewed by a bench of AI
+# executives (CFO / CTO / CCO), objections quote the doc, and the Chair issues a
+# 🟢/🟡/🔴 verdict as a PR comment. Optionally make 🔴 fail the check.
+# Copy to .github/workflows/doc-review-boardroom.yml · needs secret ANTHROPIC_API_KEY.
+name: Boardroom doc review
+on:
+  pull_request:
+    paths: ['docs/**/*.md', '**/*.prd.md', '**/*.plan.md']
+permissions:
+  pull-requests: write
+  contents: read
+jobs:
+  boardroom:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - name: Gather changed docs
+        run: git diff --name-only origin/${{ github.base_ref }}...HEAD -- 'docs/**/*.md' '**/*.prd.md' '**/*.plan.md' | head -8 > /tmp/changed.txt
+      - name: Fetch the reviewer
+        run: curl -fsSL https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/scripts/boardroom-review.mjs -o /tmp/boardroom-review.mjs && curl -fsSL https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/bin/lib/anthropic.mjs -o /tmp/lib-anthropic.mjs && mkdir -p /tmp/bin/lib && cp /tmp/lib-anthropic.mjs /tmp/bin/lib/anthropic.mjs && sed -i "s|'../bin/lib/anthropic.mjs'|'/tmp/bin/lib/anthropic.mjs'|" /tmp/boardroom-review.mjs
+      - name: Convene the board
+        if: hashFiles('/tmp/changed.txt') != ''
+        env: { ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }} }
+        # add `--fail-on red` to make a 🔴 verdict fail this check (exit 3)
+        run: node /tmp/boardroom-review.mjs --files-from /tmp/changed.txt --out /tmp/review.md
+      - name: Comment the verdict
+        if: hashFiles('/tmp/review.md') != ''
+        env: { GH_TOKEN: ${{ github.token }} }
+        run: |
+          { cat /tmp/review.md; echo; echo '---'; echo '_Reviewed by [pm-skills](https://github.com/mohitagw15856/pm-claude-skills) · [live Boardroom](https://mohitagw15856.github.io/pm-claude-skills/boardroom.html)_'; } > /tmp/comment.md
+          gh pr comment ${{ github.event.pull_request.number }} --body-file /tmp/comment.md
