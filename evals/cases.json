@@ -1,557 +1,569 @@
 {
-  "_comment": "Eval cases: a representative input per skill. Run with: node evals/run-evals.mjs",
-  "cases": [
-    {
-      "skill": "rice-prioritisation",
-      "input": "Rank these for next quarter:\n1. Onboarding redesign — reach ~5000 users/qtr, big activation impact, ~3 person-months.\n2. Dark mode — ~8000 users want it, low impact, ~1 person-month.\n3. SSO for enterprise — ~400 accounts, high deal impact, ~4 person-months, low confidence."
-    },
-    {
-      "skill": "prd-template",
-      "input": "Feature: in-app referral program so existing users invite colleagues and both get a credit. Target: activated B2B users. Goal: grow signups 15% in Q3."
-    },
-    {
-      "skill": "cs-health-scorecard",
-      "input": "Account: Acme Corp, enterprise, ARR $120k, renewal in 90 days. DAU/MAU 18%, 2 open P2 tickets, CSAT 7, exec sponsor left last month, seats 80/100 used, payments on time."
-    },
-    {
-      "skill": "executive-summary",
-      "input": "Summarise: our Q2 retention dropped from 82% to 76% driven by a new onboarding flow that confused mobile users; we shipped a fix in week 10 and retention recovered to 80%; we recommend a full mobile onboarding rework next quarter."
-    },
-    {
-      "skill": "competitive-analysis",
-      "input": "Analyse our position vs Notion and Coda for a lightweight team wiki aimed at small startups. We're cheaper and faster to set up but have fewer integrations."
-    },
-    {
-      "skill": "sprint-planning",
-      "input": "Team of 5, 2-week sprint, average velocity 30 points, one engineer out 3 days. Backlog: checkout redesign (8), payment retries (5), analytics events (3), bug bash (3), API rate limiting (5)."
-    },
-    {
-      "skill": "roadmap-narrative",
-      "input": "H2 roadmap for a B2B analytics product. Themes: self-serve onboarding, an integrations marketplace, and enterprise SSO/audit logs. Audience: the exec team and key customers. We want the story, not a feature list."
-    },
-    {
-      "skill": "okr-builder",
-      "input": "Company objective: become the default analytics tool for startups. For the product team, next quarter. We care about activation, retention, and word-of-mouth growth."
-    },
-    {
-      "skill": "go-to-market",
-      "input": "Launching an integrations marketplace for our analytics product. Target: existing mid-market customers and their ops teams. Goal: 30% of accounts install at least one integration within 60 days."
-    },
-    {
-      "skill": "churn-analysis",
-      "input": "SMB SaaS, $49/mo. Monthly logo churn rose from 3% to 5% over two quarters. Most cancellations happen in month 2-3. Top stated reasons: 'too hard to set up' and 'didn't see value'. Annual plans churn far less than monthly."
-    },
-    {
-      "skill": "stakeholder-update",
-      "input": "Weekly update for sales, support, and exec stakeholders on the checkout revamp. Status: 10% rollout live, conversion +4%, one payments edge case under investigation, full launch gated on a Legal PCI review due Tuesday."
-    },
-    {
-      "skill": "user-story-writer",
-      "input": "Feature: let users export a dashboard to PDF and schedule a recurring email of it. Users are analysts and their managers. Keep stories small and testable with clear acceptance criteria."
-    },
-    {
-      "skill": "incident-postmortem",
-      "input": "Checkout was down 42 minutes after a deploy set a wrong env var on the payments service; 5xx spiked, ~1,200 failed checkouts. Detected by alert in 6 min, fixed by rollback. Blameless postmortem with timeline and action items."
-    },
-    {
-      "skill": "ab-test-planner",
-      "input": "Test whether moving the signup CTA above the fold on the pricing page increases free-trial starts. Current trial-start rate 8%, ~20k weekly visitors. We want to detect a 10% relative lift."
-    },
-    {
-      "skill": "metrics-framework",
-      "input": "Define the metrics framework for a B2B analytics product: the north star, input metrics across acquisition/activation/retention/revenue, and guardrails. Stage: early growth, ~500 paying accounts."
-    },
-    {
-      "skill": "error-decoder",
-      "input": "TypeError: Cannot read properties of undefined (reading 'map') at ProductList (ProductList.jsx:24). It's a React component that renders a list from an API call."
-    },
-    {
-      "skill": "regex-builder",
-      "input": "Write a regex (JavaScript) that validates a US phone number, accepting both (555) 123-4567 and 555-123-4567, but rejecting letters or wrong digit counts."
-    },
-    {
-      "skill": "git-troubleshooter",
-      "input": "I made 2 commits on main but they were meant for a feature branch, and I haven't pushed yet. How do I move them onto a new branch and clean up main?"
-    },
-    {
-      "skill": "dependency-conflict-resolver",
-      "input": "npm install fails: react-dom@18 needs peer react@^18 but the project pins react@17.0.2. Several other packages still expect 17. How do I resolve this safely?"
-    },
-    {
-      "skill": "code-explainer",
-      "input": "Explain this:\n\nconst debounce = (fn, ms) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; };"
-    },
-    {
-      "skill": "sql-query-explainer",
-      "input": "Explain and optimise this slow query (Postgres):\n\nSELECT u.id, u.email, COUNT(o.id) AS orders FROM users u LEFT JOIN orders o ON o.user_id = u.id WHERE u.created_at > '2025-01-01' GROUP BY u.id, u.email ORDER BY orders DESC;\n\nIt scans 4M users and takes ~30s."
-    },
-    {
-      "skill": "aeo-optimizer",
-      "input": "Optimise this article intro for answer engines:\n\n'Customer churn is when customers stop using your product. It's a big problem for SaaS companies. In this post we'll talk about some ways to reduce churn and why it matters for your business growth over time.'"
-    },
-    {
-      "skill": "literature-review",
-      "input": "Write a short literature review on the effect of remote work on software-engineering productivity. Use 3-4 representative findings (synthesise typical results from well-known studies) and note where the evidence conflicts."
-    },
-    {
-      "skill": "privacy-policy-drafter",
-      "input": "Draft a privacy policy for 'Tasky', a B2B SaaS task manager. We collect account info (name, email), usage analytics via PostHog, payments via Stripe, and support emails. EU + US customers. No data selling."
-    },
-    {
-      "skill": "assumption-mapper",
-      "input": "Audit this brief for hidden assumptions:\n\n'We'll add an AI summary to every report. Users want less reading. It'll boost weekly active usage by 20% and cut support tickets. We can ship it in 3 weeks reusing the existing model.'"
-    },
-    {
-      "skill": "cohort-analysis",
-      "input": "Run a cohort retention analysis. Monthly signup cohorts, % active at month 1/3/6: Jan 100/48/31; Feb 100/52/35; Mar 100/61/44 (after an onboarding revamp in Feb). Find the story and what to do."
-    },
-    {
-      "skill": "competitive-intelligence-monitor",
-      "input": "Brief me on these competitor signals this week: (1) Rival A launched an AI assistant in beta; (2) Rival B cut prices 20% for startups; (3) Rival C hired a VP of Enterprise Sales; (4) a newcomer raised a $15M Series A. We're a mid-market analytics product."
-    },
-    {
-      "skill": "resume",
-      "input": "Write my one-page resume for a Senior Product Manager role at a B2B SaaS company. Use only the facts below.\nContact: Jordan Lee, San Francisco / remote, jordan.lee@email.com, (555) 010-2233, linkedin.com/in/jordanlee.\nExperience:\n- Product Manager, Acme Analytics (2021-present): Owned onboarding and activation. Led an onboarding revamp that lifted activation from 31% to 44% in two quarters. Launched a self-serve plan that now drives 34% of new signups and added ~$480k ARR in its first year. Ran a 12-experiment A/B program that cut time-to-first-value from 9 days to 3. Managed 3 reports (2 designers, 1 engineer).\n- Associate PM, Beta Corp (2019-2021): Shipped the mobile app v1 (40k downloads in 6 months, 4.6 App Store rating). Built the experimentation program from scratch (0 to 20 tests/quarter), lifting checkout conversion from 2.1% to 3.3%.\nSkills: SQL, Amplitude, Figma, A/B testing, roadmapping, stakeholder management.\nEducation: BS Computer Science, State University, 2019.\nTarget-role keywords from the JD: activation, retention, experimentation, self-serve growth, cross-functional leadership."
-    },
-    {
-      "skill": "prompt-optimizer",
-      "input": "Improve this prompt. It's flaky — sometimes it returns prose, sometimes a list, and it occasionally makes up ticket fields that don't exist.\nPrompt: \"Summarize this support ticket and tell me how urgent it is and what to do.\"\nDesired output: a JSON object with fields summary (1-2 sentences), priority (P1-P4), and next_action. It runs on every inbound ticket. Only use information present in the ticket; if priority is unclear, use P3."
-    },
-    {
-      "skill": "eval-rubric-designer",
-      "input": "Design an eval rubric and LLM-judge prompt for an AI feature that drafts replies to customer support emails. Good means: on-topic and correct, grounded in the customer's message and our help-centre context (no invented policies), correct empathetic tone, and a clear next step. We'll score with an LLM judge at scale and spot-check with humans."
-    },
-    {
-      "skill": "rag-architecture-review",
-      "input": "Review our RAG system. Setup: we dump PDFs into pgvector with fixed 1000-token chunks, embed with a general model, retrieve top-5 by cosine similarity, and stuff them into the prompt 'Answer the question using the context.' Symptoms: it often answers confidently but cites the wrong product version, and questions that mention a specific error code usually get a generic answer. Corpus is ~4,000 product docs across 6 versions, updated weekly. Per-customer isolation is required."
-    },
-    {
-      "skill": "llm-guardrails-spec",
-      "input": "Spec the guardrails for an AI assistant on our B2B SaaS support site. It answers product questions using our docs, can look up the logged-in user's own account info via a tool, and can open a support ticket. Input comes from untrusted end users; the docs it retrieves include some third-party content. In scope: product and account questions. Out of scope: legal/financial advice. Data includes account details and billing info."
-    },
-    {
-      "skill": "agent-design-review",
-      "input": "Review this agent design. It's a 'research assistant': given a question, it loops — search the web, read a page, decide if it has enough, otherwise search again — then writes a summary with sources. It has tools: web_search, fetch_url, and send_email (to email the summary). Control flow is a ReAct loop with no explicit step cap. Each step re-sends the full conversation. Runs interactively; cost has spiked on some runs. Input is untrusted."
-    },
-    {
-      "skill": "model-selection-advisor",
-      "input": "Which model should we use to classify inbound support tickets into one of 12 categories and extract the product name? ~50,000 tickets/day, needs to keep up in near-real-time, budget-sensitive. Accuracy matters but it's a fairly constrained extraction/classification task, not open-ended reasoning. Tickets are short. Outputs feed an automated routing system, so consistency matters."
-    },
-    {
-      "skill": "pr-crisis-response",
-      "input": "We're a B2B SaaS company. A security researcher just tweeted that a misconfiguration may have exposed some customers' support attachments; it's getting traction and a journalist has emailed us. We've confirmed the misconfiguration existed and is now fixed, but we don't yet know exactly how many customers were affected or whether anything was actually accessed. Build our crisis comms plan."
-    },
-    {
-      "skill": "incident-public-statement",
-      "input": "Draft our public statement. Our payments service had a 3-hour outage this morning (09:10-12:05 UTC) caused by a failed database upgrade; some customers were double-charged. We've rolled back, identified the affected transactions, and are issuing automatic refunds within 5 business days. Affected customers don't need to do anything. Tone: accountable and reassuring."
-    },
-    {
-      "skill": "customer-outage-notice",
-      "input": "Write our outage notices. Our file-upload feature is currently failing for users in the EU region (started ~14:20 CET); the rest of the app works. We're still investigating the cause. We'll update every 30 minutes. Need status-page posts for each phase, a customer email, and a resolved summary."
-    },
-    {
-      "skill": "layoff-communication",
-      "input": "We need to communicate a layoff: a 12% reduction (about 60 people) across sales and recruiting, driven by slower-than-planned revenue growth and a refocus on the core product. Affected employees get 12 weeks' severance, 6 months of benefits, and outplacement support. People will be told individually on Tuesday morning, followed by an all-hands. Prepare the full comms package."
-    },
-    {
-      "skill": "apology-letter",
-      "input": "Write an apology to a customer. We're a meal-kit company; we shipped their order to the wrong address and by the time it was sorted the ingredients had spoiled, ruining a dinner party they'd planned. It was our fulfilment error. We want to refund the order in full, give them a credit for a future box, and keep them as a customer."
-    },
-    {
-      "skill": "soap-note",
-      "input": "Write a SOAP note from these encounter notes. 54-year-old presents with a productive cough for 5 days, low-grade fever, and mild shortness of breath on exertion; no chest pain. History of mild asthma. Exam: temp 38.1C, RR 20, SpO2 96% on room air, scattered crackles in the right lower lung field. Working impression: community-acquired pneumonia, mild. Plan: chest X-ray, start oral amoxicillin, continue inhaler, push fluids, review in 3 days or sooner if worse."
-    },
-    {
-      "skill": "discharge-summary",
-      "input": "Write a discharge summary. Admitted 3 days ago for community-acquired pneumonia after presenting with cough, fever, and shortness of breath; chest X-ray confirmed a right-lower-lobe infiltrate. Treated with IV antibiotics, switched to oral on day 2 with good response; afebrile for 24 hours at discharge. Discharge meds: complete a 5-day course of oral amoxicillin (new), continue home inhaler (unchanged). Discharged home in stable condition. Follow up with primary care in 1 week; return if fever returns or breathing worsens."
-    },
-    {
-      "skill": "prior-authorization-letter",
-      "input": "Write a letter of medical necessity. Patient has moderate-to-severe plaque psoriasis covering ~15% body surface area, with significant impact on daily function and quality of life. They have tried and failed topical corticosteroids and methotrexate (inadequate response after 3 months; methotrexate caused elevated liver enzymes). We are requesting authorization for a biologic (adalimumab). Insurer requires step-therapy documentation. Patient is a 42-year-old on a commercial plan."
-    },
-    {
-      "skill": "clinical-trial-protocol",
-      "input": "Draft a clinical trial protocol synopsis. Phase II, randomized, double-blind, placebo-controlled trial of an investigational oral drug for moderate knee osteoarthritis pain in adults. Primary question: does it reduce pain versus placebo over 12 weeks? We expect to enroll adults 45-75 with a confirmed diagnosis. Outcome of interest is patient-reported pain. Treat effect sizes and prior data as placeholders for the study team to set."
-    },
-    {
-      "skill": "complaint-letter",
-      "input": "Write a complaint letter to an airline. My flight (BA286, 14 March, booking ref ABC123) was cancelled 2 hours before departure with no rebooking offered; I had to buy a last-minute ticket on another airline for $640 and missed the first day of a conference. I've called twice and been told to 'wait for an email' that never came. I want a full refund of the original fare plus reimbursement of the $640. Deadline: 14 days."
-    },
-    {
-      "skill": "dispute-letter",
-      "input": "Write a letter to my credit-card company disputing a charge. There's a $129.99 charge from 'GLOWFIT LTD' dated 3 April on my account ending 4821 that I did not authorise and do not recognise; I've never done business with this company. I want the charge reversed and written confirmation. I have my statement and can provide more detail."
-    },
-    {
-      "skill": "reference-letter",
-      "input": "Write a reference letter. I'm a senior engineering manager recommending a software engineer who reported to me for 3 years for a senior/staff engineer role at another company. Strengths: technically excellent, owned our payments rewrite end to end, mentors junior engineers, and is unusually calm in incidents. Mark any specific examples you invent so I can replace them with real ones."
-    },
-    {
-      "skill": "rental-application",
-      "input": "Write a rental application cover letter for a 2-bedroom flat I want to rent, move-in 1 June, ideally a 2-year tenancy. I'm a full-time nurse with stable income, have rented my current place for 4 years with on-time rent and a landlord reference available. I have a small, well-behaved cat. I can provide proof of income, ID, and references quickly."
-    },
-    {
-      "skill": "insurance-claim",
-      "input": "Write a home-insurance claim letter. Policy number HOME-558921. A pipe under the kitchen sink burst on 8 May while I was away, flooding the kitchen and damaging the flooring, lower cabinets, and a dishwasher. Estimated repair/replacement: flooring $2,800, cabinets $1,500, dishwasher $600. I have photos, a plumber's report, and repair quotes. I'm claiming $4,900 and want it processed promptly."
-    },
-    {
-      "skill": "rfp-writer",
-      "input": "Write an RFP for a new customer-support help-desk platform for a 60-person B2B SaaS company. Must-haves: shared inbox, live chat, a knowledge base, and integration with our existing CRM and Slack. Nice-to-haves: AI-assisted replies and CSAT surveys. We care most about ease of use and total cost, then integrations, then support. Budget is roughly $30-50k/year. We want to go live in Q3; vendor questions due in 2 weeks, proposals in 4."
-    },
-    {
-      "skill": "vendor-contract-checklist",
-      "input": "Review this SaaS subscription agreement before we sign. Deal: an analytics platform, $40k/year, 2-year term. Key terms: auto-renews for successive 12-month periods unless cancelled with 90 days' notice; price may increase each renewal (no cap stated); 99.5% uptime SLA with service credits as the sole remedy; liability capped at fees paid in the prior 3 months; data export available during the term but deletion/portability on termination isn't mentioned; governing law is the vendor's home state. Flag the risks and give me negotiation points."
-    },
-    {
-      "skill": "impact-report",
-      "input": "Write our annual impact report. We're a nonprofit that runs free coding bootcamps for unemployed adults. This year: 6 cohorts, 180 graduates, 71% employed within 6 months at an average starting salary uplift of about $18k. Income was $1.2M (60% grants, 30% individual donors, 10% corporate), with 82% spent on programs. Include a placeholder beneficiary story. Audience is donors and grant funders. Mark any invented figures for us to replace."
-    },
-    {
-      "skill": "case-for-support",
-      "input": "Write a case for support for a $500k campaign to fund a new youth mental-health drop-in centre in our city. The need: youth mental-health referrals are up sharply and wait times for support are months long. Our solution: a walk-in centre offering immediate, free counselling; we've run a successful pilot. We want giving levels from $50 to $50k. Audience: major donors and local foundations. Mark invented statistics for replacement."
-    },
-    {
-      "skill": "donor-update",
-      "input": "Write a year-end donor update/thank-you email to our recurring donors. Because of their support this year we provided 12,000 meals and opened a second community kitchen. We want them to feel appreciated and part of the mission, with a short story and only a very light, optional invitation to a volunteer day — no hard ask. Warm, personal tone. Mark any invented specifics for us to replace."
-    },
-    {
-      "skill": "product-description",
-      "input": "Write a product description for our insulated stainless-steel water bottle. Details: 750ml, double-wall vacuum insulation (keeps cold 24h / hot 12h), powder-coated matte finish, leak-proof lid, fits most cup holders, BPA-free, available in 5 colours. Sold on our own Shopify store. Buyers are active commuters and gym-goers. Brand voice: friendly and energetic. Don't invent any specs I haven't given."
-    },
-    {
-      "skill": "marketplace-listing-optimizer",
-      "input": "Optimize our Amazon listing. Product: a bamboo cutting board set (3 pieces, different sizes, juice groove, non-slip). Current title is just 'Bamboo Cutting Board Set'. Traffic is low and conversion is mediocre. Category is Kitchen. Buyers search things like 'wood cutting board', 'chopping board set', 'bamboo cutting board with handle'. Give me an optimized title, bullets, backend keywords, an images plan, and conversion fixes."
-    },
-    {
-      "skill": "return-refund-policy",
-      "input": "Write a returns, refunds and exchanges policy for my Shopify clothing store. I want a 30-day window, items must be unworn with tags, customers pay return shipping except for faulty/wrong items, refunds to original payment within 5-7 business days, and final-sale items (underwear and clearance) aren't returnable. Friendly tone. Flag anything I should check legally."
-    },
-    {
-      "skill": "promotion-plan",
-      "input": "Plan a Black Friday / Cyber Monday promotion for our skincare DTC brand. Goal: acquire new customers but protect margin. Hero product costs us $12 and sells for $40. We have email (~50k list), Meta/Google ads, and our Shopify store. Window is the BFCM weekend. Show me the offer options, the margin/break-even math (use placeholders for numbers I haven't given), the channel plan, timeline, and how to measure it."
-    },
-    {
-      "skill": "review-response",
-      "input": "Write replies to two reviews on our Trustpilot. (1) 5 stars: 'Fast shipping and the headphones sound amazing, exactly as described!' (2) 1 star: 'Arrived 10 days late and the box was crushed. Really disappointed.' Our brand voice is warm and professional; we can offer a replacement or refund on the second. Sign off as 'The Acme Audio Team'. Also give me reusable templates."
-    },
-    {
-      "skill": "category-page-brief",
-      "input": "Write a category page brief for the 'Women's Running Shoes' collection on our Shopify store. Shoppers range from beginners to marathoners. We carry ~60 styles across brands, with attributes like cushioning, support type (neutral/stability), surface (road/trail), and price. Target keywords around 'women's running shoes'. Cover intent/keywords, H1 + intro, merchandising/sort, filters and their crawlability, internal links, and technical SEO."
-    },
-    {
-      "skill": "microcopy-writer",
-      "input": "Write the microcopy for the final step of a checkout flow on a paid subscription app. There's a primary button that charges the card and starts the plan, plus a small reassurance line under it. The plan is $12/month, billed monthly, cancel anytime. Voice is friendly and trustworthy. Give me the button label, the reassurance line, and the success-toast text, with a couple of options and why."
-    },
-    {
-      "skill": "error-message-writer",
-      "input": "Rewrite this error for end users: 'Error 402: payment_intent authentication_required'. Context: a card payment failed because the bank needs the customer to authenticate (3-D Secure). It shows as a full-page state after they hit Pay. They can retry, complete verification, or use a different card. Voice is calm and helpful. Give me the user-facing message plus a note on what to log vs. show."
-    },
-    {
-      "skill": "empty-state-writer",
-      "input": "Write the empty states for a 'Projects' screen in a team task-management app. Cover: (1) first use — a brand-new account with no projects yet, where we want them to create their first project; (2) a search/filter that returns no matching projects; (3) all projects archived/completed. Voice is encouraging and concise. For each give headline, supporting line, and action(s)."
-    },
-    {
-      "skill": "product-naming",
-      "input": "Help me name a new feature in our analytics product: an AI assistant that answers questions about your data in plain English and builds charts. Audience is data-curious business users (not analysts). Our brand is clean and modern; existing features have clear, descriptive names. Give me candidates across naming strategies, an evaluation, a recommendation, and the checks to run before we commit."
-    },
-    {
-      "skill": "content-style-guide",
-      "input": "Create a content style guide for our B2B fintech app aimed at small-business owners. We want to sound clear, trustworthy, and human — never stuffy or jargon-heavy. US English. It applies to product UI, marketing, and support. Include voice principles with before/after examples, tone by context, mechanics, a do/don't word list, and accessibility rules. Mark anything you infer for us to confirm."
-    },
-    {
-      "skill": "onboarding-copy",
-      "input": "Write the in-product onboarding copy for a personal habit-tracking app. The first win is the user creating their first habit and checking it off once. The path: welcome → name a habit → set a reminder time → mark it done today. Format is a mix of a welcome modal and tooltips, and steps should be skippable. Encouraging, concise voice. Include the welcome, the step tooltips, a checklist, and the first-win success moment."
-    },
-    {
-      "skill": "boolean-search-builder",
-      "input": "Build me boolean and X-ray searches to source a Senior Backend Engineer in Berlin (open to remote in Germany). Must-haves: strong Go or Java, distributed systems, and experience scaling production services. Nice-to-have: Kubernetes. Exclude junior/intern and recruiters. I'll search LinkedIn and GitHub. Give me tight and broad versions, X-ray variants, and a plan to widen or narrow."
-    },
-    {
-      "skill": "recruiter-outreach",
-      "input": "Write a LinkedIn InMail to a senior product designer who currently works at a competitor, for our Staff Product Designer role. Genuine selling points: they'd own design for a brand-new 0-to-1 product area, small senior team, fully remote, strong comp. Personalization: I'll insert a real detail about their portfolio. Warm, concise, low-pressure. Also give me a 2-step follow-up sequence and subject-line options."
-    },
-    {
-      "skill": "interview-question-bank",
-      "input": "Create a structured interview question bank for a Senior Product Manager role. Core competencies we care about: product sense, execution/delivery, data fluency, stakeholder influence, and leadership. Two interview rounds with different interviewers. Include behavioral, role/scenario, and values questions, with what a strong vs. weak answer looks like, follow-up probes, and a simple scoring rubric."
-    },
-    {
-      "skill": "candidate-scorecard",
-      "input": "Turn my interview notes into a scorecard for a Senior PM candidate. Notes: Product sense — gave a sharp critique of our onboarding and a prioritization rationale (RICE), strong. Execution — described shipping a payments revamp but was vague on how they handled the cross-team conflict. Data — comfortable, cited specific metrics (activation 31%→44%). Stakeholder influence — not really tested this round. Scale is 1-4 (strong no to strong yes). Give per-competency ratings with evidence, risks, open questions, and a recommendation with confidence."
-    },
-    {
-      "skill": "offer-letter",
-      "input": "Draft a job offer for a Senior Software Engineer. Base $165k, 15% target bonus, equity (0.05%, 4-year vest with 1-year cliff), $10k sign-on. Full-time, remote (US), reports to the Eng Manager, start date in ~4 weeks. Contingent on a background check and work authorization. Offer expires in 7 days. Warm tone. Give me both the verbal-offer call script and the written letter, and flag what HR/legal needs to confirm."
-    },
-    {
-      "skill": "sourcing-strategy",
-      "input": "Build a sourcing strategy for a hard-to-fill Staff Machine Learning Engineer role. Must-haves: production ML at scale, strong Python, and experience with recommendation or ranking systems. Remote within the US, competitive comp, but we're an unknown Series B brand. We've posted the job and gotten weak inbound. Cover the candidate profile (and adjacent profiles), where they concentrate, a prioritized channel plan, funnel math with a worked example, and a weekly cadence."
-    },
-    {
-      "skill": "invoice-generator",
-      "input": "Create an invoice. From: Jordan Lee Design (freelance, jordan@jldesign.com). To: Acme Corp, accounts@acme.com, PO #4471, project 'Marketing site redesign'. Line items: Homepage design — 1 @ $1,200; Landing page templates — 3 @ $400; Logo refresh — 1 @ $600. Terms: Net 30, pay by bank transfer. No sales tax (I'll confirm tax separately). Use invoice number INV-2026-014, issued today. Show the totals."
-    },
-    {
-      "skill": "expense-policy",
-      "input": "Write an expense and reimbursement policy for a 50-person remote-first startup. Lean but fair culture. Common categories: travel (occasional), business meals, software subscriptions, home-office equipment, and co-working day passes. Managers approve up to $500; anything above needs finance sign-off. Expenses are submitted in our tool with receipts required over $25, reimbursed in the next payroll. Mark the amounts as ours to set and flag anything tax-related."
-    },
-    {
-      "skill": "collections-email",
-      "input": "Write a collections email sequence. Invoice INV-2026-014 for $3,000 to a valued ongoing client, Acme Corp, is now 14 days overdue (Net 30 terms). I want to be polite but firm, keep the relationship, and make paying easy (bank transfer or a payment link). We have an agreed 2% late fee per month but I want to confirm enforceability before mentioning it. Give me the staged sequence from a gentle nudge to a final notice."
-    },
-    {
-      "skill": "financial-statement-explainer",
-      "input": "Explain this P&L to me in plain English — I'm a founder, not an accountant. For last quarter: Revenue $480,000; Cost of goods sold $144,000; Gross profit $336,000; Operating expenses $300,000 (of which sales & marketing $180,000, R&D $80,000, G&A $40,000); Operating income $36,000; Net income $28,000. Tell me what each part means, the margins and numbers that matter, and the story — are we healthy?"
-    },
-    {
-      "skill": "bookkeeping-categorization",
-      "input": "Help me set up a chart of accounts and categorization rules for my freelance design business. I use Xero, cash basis. Typical transactions: client payments, software subscriptions (Figma, Adobe), a contractor I sometimes pay, laptop and equipment purchases, co-working membership, business travel, and transfers between my business and personal accounts. I want clean monthly books that are easy for my accountant. Flag anything tax-sensitive."
-    },
-    {
-      "skill": "cash-flow-forecast",
-      "input": "Build me a 13-week cash flow forecast structure for my agency. Starting cash is $60,000. Expected inflows: two retainer clients paying $12,000/month (around the 5th), plus a $25,000 project invoice I expect to collect in week 6. Outflows: payroll ~$28,000/month (15th and end of month), rent $4,000/month, software ~$1,500/month, and quarterly tax of $18,000 in week 9. Show the model, a worked example, where the low point is, and what to do if cash gets tight."
-    },
-    {
-      "skill": "test-case-writer",
-      "input": "Write test cases for a login feature. Acceptance criteria: a user can log in with a valid email and password; wrong credentials show an error without logging in; after 5 failed attempts the account is locked for 15 minutes; the email field must be a valid format; 'remember me' keeps the session for 30 days. Web app, UI testing. Cover happy path, validation, negative, and edge cases, and trace each case to the criteria."
-    },
-    {
-      "skill": "bug-report",
-      "input": "Turn this into a proper bug report: 'The CSV export is broken.' Context I can give: on the Reports page, clicking 'Export to CSV' when a report has more than about 1,000 rows just spins and never downloads; under 1,000 rows it works. Happens every time on Chrome 120 on Windows; a colleague saw it on Safari too. There's a 500 error in the network tab on the /export request. I'm on the Pro plan as an admin. Build version 4.7.2."
-    },
-    {
-      "skill": "exploratory-test-charter",
-      "input": "Plan exploratory testing for a new checkout flow on an e-commerce site. It's brand new, integrates a third-party payment provider, supports guest and logged-in checkout, multiple payment methods, discount codes, and address validation. We have about half a day. Give me risk-prioritized, timeboxed charters with test ideas and oracles."
-    },
-    {
-      "skill": "regression-test-plan",
-      "input": "We're releasing a change to our checkout's discount-code logic. It touches the cart total calculation and the payment step, which are shared with the rest of checkout. Critical paths that must never break: add-to-cart, checkout, and payment. A full regression run currently takes about 6 hours and we have limited time before release. Build a risk-based regression plan with tiers, what to skip, automation candidates, and a run strategy."
-    },
-    {
-      "skill": "qa-release-signoff",
-      "input": "Write a QA sign-off for release v4.8.0 shipping Friday. Testing done: full regression on web (98% pass), smoke on mobile, and exploratory on the new checkout. Open defects: BUG-101 (major — discount code occasionally not applied on first try, workaround: refresh), BUG-118 (minor — alignment issue on the confirmation page). The new checkout has a feature flag and we can roll back. Mobile wasn't fully regression-tested. Give me a go/no-go with conditions, the risk, and a rollback note."
-    },
-    {
-      "skill": "api-test-plan",
-      "input": "Plan tests for a REST endpoint: POST /api/v1/orders. It creates an order from a JSON body { items: [{sku, qty}], shippingAddress }, requires a bearer token with the 'orders:write' scope, returns 201 with the created order on success, 400 on validation errors, 401/403 for auth issues, and 409 if an item is out of stock. Rate-limited to 100 req/min. Give me functional, validation, auth/authz, negative, and contract cases, plus non-functional notes."
-    },
-    {
-      "skill": "property-listing",
-      "input": "Write a listing description for a 3-bedroom, 2-bath single-family home (1,850 sq ft) in a walkable neighbourhood. Standout features: a renovated kitchen with quartz counters and a large island, an open-plan living/dining area with lots of natural light, a private fenced backyard with a deck, and a 2-car garage. Close to parks, cafes, and a train station. Upscale-but-warm tone for MLS and Zillow. Don't invent any facts; flag anything to confirm."
-    },
-    {
-      "skill": "comparative-market-analysis",
-      "input": "Build a CMA for a 3-bed/2-bath, 1,850 sq ft home in good condition. Recent comparable sales nearby: (A) 3/2, 1,800 sq ft, sold $620k 1 month ago, similar condition; (B) 4/2, 2,100 sq ft, sold $690k 2 months ago, larger; (C) 3/2, 1,700 sq ft, sold $585k 3 weeks ago, needs updating. Market is rising, low inventory, homes selling in ~2 weeks. Seller wants to sell within 60 days but maximize price. Give adjustments, a value range, and a pricing recommendation."
-    },
-    {
-      "skill": "property-offer-letter",
-      "input": "Write an offer cover letter for buyers (Sam and Alex) on a home they love. What won them over: the big kitchen island (they cook constantly), the light-filled living room, and the garden for their vegetable patch. Their offer is strong: pre-approved financing, a competitive price, flexible on the closing date to fit the sellers, and minimal contingencies. Warm and sincere tone. Keep it about the home and the offer, and flag the fair-housing considerations."
-    },
-    {
-      "skill": "property-investment-analysis",
-      "input": "Analyze a rental investment. Purchase price $300,000, ~$8,000 closing costs, no rehab. Financing: 25% down, 7% interest, 30-year loan. Rent $2,400/month. I haven't given you operating costs — use realistic placeholder assumptions for vacancy, maintenance, property management, taxes, insurance, and a capex reserve, and flag them. My target is at least 8% cash-on-cash and positive monthly cash flow. Show the formulas, the returns, a verdict, and a downside check."
-    },
-    {
-      "skill": "open-house-plan",
-      "input": "Plan an open house for my listing this Saturday 12-3pm: a 3-bed/2-bath family home listed at $625k in a desirable school district. I have MLS/Zillow, social media, an email list of buyers and agents, yard signage, and a small boost budget. Goal is to sell this home and pick up buyer leads. Give me the timing, promotion plan, prep/staging checklist, a day-of run sheet, lead capture, and follow-up."
-    },
-    {
-      "skill": "tenant-screening-guide",
-      "input": "Help me design a fair tenant screening process for a single-family rental I'm listing at $2,000/month in the US. I want reliable tenants but I want to stay compliant and consistent. Walk me through objective criteria (income, credit, rental history, verification), the application and checks I should run with consent, how to evaluate applicants consistently, applicant communication including adverse action, and the fair-housing guardrails. Flag anything I must confirm with a local attorney."
-    },
-    {
-      "skill": "board-minutes",
-      "input": "Draft formal board minutes for Northwind Robotics Inc. The regular board meeting was held on 12 March 2025, 10:00-11:30, by video conference. Present: Priya Shah (Chair), Daniel Okoro (CEO), Lena Fischer (CFO), Marcus Webb (independent director). Apologies: Ana Ruiz. In attendance: Tom Reilly (company secretary, minutes). Quorum was confirmed. Agenda and notes: (1) Previous minutes from 5 Feb approved without amendment. (2) Q1 financials — CFO presented; revenue $4.2M, 11% ahead of plan; cash runway 16 months. Board noted the results. (3) Series B fundraise — proposed raising $25M; board discussed dilution and lead investor terms; resolved to authorize management to proceed with term-sheet negotiations up to a $120M pre-money valuation and report back before signing. Marcus Webb declared a conflict as an advisor to one prospective investor and recused himself from this item. (4) Annual budget — approved as presented. Actions: CFO to circulate the revised runway model by 20 March; CEO to bring the lead-investor term sheet to the next meeting. Next meeting 9 April 2025 by video conference. Flag anything that needs governance or legal review, and mark anything unknown as to confirm."
-    },
-    {
-      "skill": "win-loss-analysis",
-      "input": "Run a win/loss analysis on last quarter's deals for our B2B analytics product. Data: 40 closed-won worth $1.9M and 55 closed-lost worth $3.1M. Common closed-lost reasons in CRM: 'price too high' (18), 'missing SSO/SAML' (12), 'went with Looker' (9), 'no decision/timing' (10), 'poor fit' (6). Wins skew mid-market; enterprise win rate looks weak. Interview snippets: one lost buyer said 'your dashboards are great but procurement needs SOC 2 and SSO', a won buyer said 'setup took a day vs weeks with the incumbent'. Primary competitors: Looker and Tableau. This feeds our QBR and roadmap review — give themes, win rate by cut, controllable vs structural, and prioritized actions with owners."
-    },
-    {
-      "skill": "sales-enablement-kit",
-      "input": "Build a sales enablement kit for the launch of our new AI-assisted reporting feature in a mid-market analytics platform. Buyer: a Head of RevOps; user: analysts. Core value: cuts weekly reporting from hours to minutes by generating draft reports from a prompt. Proof: beta customers saved ~6 hours/week; one logo is [to confirm]. Motion: PLG-assist with a sales overlay. Top competitor: Looker. Common objection: 'can I trust AI-generated numbers?'. Pricing: it's an add-on to Pro. Give reps the pitch, discovery questions, talk track, a short demo flow, objection handling, and a competitive counter."
-    },
-    {
-      "skill": "pricing-page-copy",
-      "input": "Write pricing page copy for a project-management SaaS with three plans plus enterprise. Value metric is per-seat. Free: up to 3 users, unlimited tasks, 1 project. Pro: $12/user/month, unlimited projects, timelines, integrations. Business: $22/user/month, everything in Pro plus dashboards, admin controls, priority support. Enterprise: custom, adds SSO, SAML, audit logs, SLA. 14-day free trial on paid plans, no credit card, cancel anytime. Buyers get confused about which plan they need and whether they'll be charged for overages. Voice is friendly and plain. Write the header, tier cards, add-ons if useful, risk reducers, and a pricing FAQ."
-    },
-    {
-      "skill": "analyst-relations-brief",
-      "input": "Prep me for a Forrester briefing in two weeks. We're a mid-stage customer data platform; the analyst covers CDPs and is running a Wave next year. Objective: get on their radar for inclusion and reposition us as 'activation-first' rather than 'just storage'. Differentiators: real-time activation, a no-code audience builder, and transparent usage-based pricing; proof includes a retail customer that lifted campaign ROAS 22% [to confirm the logo is shareable]. Roadmap themes we can share: warehouse-native deployment; identity resolution is on the roadmap but a current gap. Competitors: Segment and mParticle. Give me the one message, market framing, differentiation with proof, a demo storyline mapped to likely evaluation criteria, tough questions with honest answers, and follow-ups."
-    },
-    {
-      "skill": "customer-advisory-board",
-      "input": "Plan our first customer advisory board for an enterprise cybersecurity product. Objective: strategic roadmap input and deepening relationships with top accounts ahead of a platform expansion. Format: half-day in person, twice a year, with a VP of Product as exec sponsor. We want 10-12 members balanced across financial services, healthcare, and tech, mixing security buyers (CISOs) and practitioners (SOC leads); no direct-competitor customers in the same room. Topics: platform consolidation, AI in the SOC, and pricing model feedback (pricing is sensitive). Give me the charter, membership criteria, a discussion-led agenda, discussion guides, roles, logistics, and a follow-up/value-capture plan."
-    },
-    {
-      "skill": "voice-of-customer-program",
-      "input": "Set up a Voice of Customer program for a B2B SaaS company. Objective: reduce churn and guide the roadmap. Existing feedback sources: Zendesk support tickets, quarterly NPS surveys (baseline NPS 32), sales/CS notes in Salesforce, G2 reviews, and monthly user interviews. Tools available: Salesforce, Zendesk, a survey tool, and product analytics; no dedicated feedback tool yet. Consumers: product and CX leadership. We serve SMB and enterprise and want to track them separately. Design objectives, a source map, a taxonomy, cadences, closed-loop routing with customer follow-up, ownership, and success metrics."
-    },
-    {
-      "skill": "launch-tiering-framework",
-      "input": "Help me decide the launch tier and right-size go-to-market for a new feature: native Slack notifications in our project-management tool. It's frequently requested (top-5 on our feedback board), broadens reach across all segments, and a competitor just shipped something similar, but it's an incremental capability rather than a new product. It's GA, docs are ready, but sales enablement isn't done yet. Team bandwidth is tight this quarter. Score impact and novelty, recommend T1/T2/T3, list the activities and channels to do and skip, assign owners, give a right-sized checklist and success metrics, and flag any readiness gaps."
-    },
-    {
-      "skill": "sales-demo-script",
-      "input": "Write a 20-minute first-demo script for our AI reporting analytics product to a Head of RevOps. Their pain (from discovery): the team spends a full day every week hand-building the same board and revenue reports in spreadsheets, and numbers are often stale by the meeting. Value story: connect your data once, then generate a trustworthy draft report from a prompt in minutes, with drill-down. Show: the prompt-to-report generation, the drill-down/verification, and a scheduled auto-refresh. Use realistic sample sales data. Competitor in the deal: Looker. Give me the open that restates their world, discovery hooks to tailor live, a scene-by-scene flow with talk track and marked aha moments, handling for 'can I trust the numbers?', and a close with a concrete next step."
-    },
-    {
-      "skill": "which-skill",
-      "input": "My boss wants something on our competitors for the board next week — we have three main rivals and one of them just announced a pricing change. Which skill should I use?"
-    },
-    {
-      "skill": "autopilot-charter",
-      "input": "I am a solo PM. Every week I write a stakeholder update and a competitive briefing; every month a churn review. I also write performance feedback twice a year. My analytics are in Amplitude, competitor news I collect manually. What should I put on autopilot?"
-    },
-    {
-      "skill": "schedule-recipe",
-      "input": "I want a competitive briefing generated every Monday at 8am London time. I live in Claude Code and my notes are markdown files in a git repo. Output should land as a file in the repo under briefings/."
-    },
-    {
-      "skill": "delta-briefing",
-      "input": "Here is last week's competitor brief: Rival A shipped SSO (watching enterprise push), Rival B raised Series C, Rival C quiet. This week: Rival A announced SOC 2 and a Salesforce integration, Rival B did layoffs of 15%, Rival C still quiet. Write this week's edition."
-    },
-    {
-      "skill": "prompt-regression-suite",
-      "input": "Our support-reply drafter (Claude, JSON output with reply_text and category fields) broke twice: once it started replying in English to German tickets, once it leaked internal ticket IDs into replies. We tweak the prompt weekly. Design the regression suite."
-    },
-    {
-      "skill": "model-migration-plan",
-      "input": "We must move our summarisation feature off claude-3-5-sonnet (deprecated in 90 days) to claude-sonnet-4-6. 2M requests/month, output shown directly to end users, we have ~40 golden examples but no CI evals. Plan the migration."
-    },
-    {
-      "skill": "context-engineering-review",
-      "input": "Our RAG chatbot system prompt is 1,200 tokens, we inject the current date and user name at the top, then 20 retrieved chunks (about 6k tokens), then full chat history unbounded, then 14 tool definitions. Users say it ignores instructions late in conversations and our token bill doubled. Review the context."
-    },
-    {
-      "skill": "agent-incident-postmortem",
-      "input": "Yesterday our billing-support agent told ~30 customers they were eligible for a refund policy that does not exist. It cited a deprecated help-centre article that was still in the retrieval index. A customer posted it on X and support noticed 6 hours in. We have full traces. Write the postmortem."
-    },
-    {
-      "skill": "agent-observability-spec",
-      "input": "We are launching a tool-using research agent (search + internal wiki + email draft tools), about 50k requests/day, on Datadog. Biggest fears: it emailing the wrong thing, cost blowouts, and quality drifting after prompt changes. Spec the observability."
-    },
-    {
-      "skill": "outcome-tracker",
-      "input": "We just committed Q3 priorities off this RICE table: 1) Onboarding redesign, RICE 320, we claim activation goes 42%->55% by end of Q3. 2) SSO, RICE 210, we claim it unblocks 4 stalled enterprise deals (~$180k) within 60 days of ship. 3) Dark mode, RICE 90. I am 80% confident on onboarding, 60% on SSO. Record the predictions."
-    },
-    {
-      "skill": "whiteboard-to-spec",
-      "input": "Attached are two photos of our sprint-planning whiteboard from this afternoon (same board, left and right halves). The session was about the Q3 referral feature. Write it up before we all forget what the arrows meant."
-    },
-    {
-      "skill": "screenshot-teardown",
-      "input": "Attached: 4 screenshots of Rival A's new onboarding flow (signup, workspace setup, template picker, paywall). We are redesigning our own onboarding next sprint — what are they optimising for and what should we steal or avoid?"
-    },
-    {
-      "skill": "deck-autopsy",
-      "input": "Attached are photos of 12 slides from a competitor's Series B deck that leaked at a conference. We are pitching the same investors next month. What is their argument, where does it break, and what questions is the deck avoiding?"
-    },
-    {
-      "skill": "style-fingerprint",
-      "input": "Here are four things I actually wrote and shipped: two weekly exec updates, a launch announcement to the company, and a long Slack post about our pricing change. [samples pasted]. Learn my voice so the updates you draft stop sounding like a press release."
-    },
-    {
-      "skill": "evidence-lock",
-      "input": "Sources: our Q2 churn analysis, the pricing experiment readout, and 12 win/loss interview summaries [pasted]. Task: write the 'why we are changing pricing' section of the board memo in hard-lock mode — the CFO checks footnotes for sport."
-    },
-    {
-      "skill": "mcp-server-spec",
-      "input": "We are Invoicely, a B2B invoicing SaaS. Our REST API has 38 endpoints (CRUD for invoices, clients, payments, reminders, reports, webhooks, team members). Product wants an MCP server 'exposing the API to agents'. Riskiest actions: sending invoices to clients, issuing refunds, deleting records. Agents will act on behalf of individual users via OAuth. Spec it."
-    },
-    {
-      "skill": "agent-readiness-audit",
-      "input": "Audit our developer tool for agent readiness: docs are a JS-rendered Docusaurus site, no llms.txt, API keys require a sales call for anything above free tier, error responses are mostly generic 400s, signup has an image CAPTCHA, and we have no idea how much of our traffic is agents. Agents will mostly be asked to research us vs competitors and to onboard + send a first API request."
-    },
-    {
-      "skill": "agent-era-pricing",
-      "input": "Seat-based project tool, $18/seat/mo, 40k customers averaging 12 seats. Seat counts shrank 9% this year while API calls tripled - customers run agents that create/update tasks. Enterprise asks for 'agent pricing' weekly. Cost per seat ~$1.1/mo, per 1k API calls ~$0.04. Cohorts: 5-seat startup heavy automation, 40-seat mid-market light automation, 200-seat enterprise piloting agents. Design the migration."
-    },
-    {
-      "skill": "human-in-the-loop-design",
-      "input": "Our support agent can: draft replies, send replies, issue refunds up to $500, escalate tickets, edit customer records, and merge duplicate accounts. Volume: 900 drafts/day, 700 sends/day, 25 refunds/day, 10 merges/day. One team lead reviews everything today and is drowning - she approved 340 items yesterday without reading most. Design the loop."
-    },
-    {
-      "skill": "voice-agent-design",
-      "input": "Dental clinic chain, 40 locations. Phone traffic: appointment booking/rescheduling (55%), opening hours and directions (15%), insurance questions (12%), billing disputes (8%), emergencies (5%), other (5%). The agent can read/write the scheduling system and read the insurance FAQ. Humans available 8-6 weekdays; nothing after hours today. Design the voice agent."
-    },
-    {
-      "skill": "ai-roi-audit",
-      "input": "CFO wants an AI ROI audit before renewals. Spend: Copilot $390k/yr (2,100 seats, 61% weekly active), ChatGPT Enterprise $310k/yr (1,400 seats, 44% WAU), Claude $180k/yr (600 seats, 78% WAU), an AI meeting-notes tool $85k/yr (nobody is sure who uses it), API spend $220k/yr across 14 internal projects. Evidence available: engineering cycle time data, support handle times, and a lot of enthusiastic anecdotes. Renewal decisions due in 6 weeks."
-    },
-    {
-      "skill": "role-redesign-for-ai",
-      "input": "Our 6-person content team: writers spent ~60% of time drafting, 20% research, 20% editing/publishing. AI now produces first drafts for everything; writers report drafting time down to ~15% but they spend heavy time fixing AI output and say 'my job is babysitting a robot'. Leadership privately wants the same team to double output rather than cut heads, but has not said this to the team. Redesign the writer role."
-    },
-    {
-      "skill": "ai-usage-policy",
-      "input": "350-person fintech (we process card data, PCI scope, UK+EU customers). Reality: engineering uses Claude Code officially; sales and support paste customer emails into free ChatGPT accounts daily; legal wants a total ban; the CTO wants enablement with guardrails. We have enterprise agreements with Anthropic only. Write the policy."
-    },
-    {
-      "skill": "ai-assisted-performance-review",
-      "input": "I manage 8 backend engineers. Two adopted coding agents hard - their PR volume tripled but two incidents traced to unreviewed agent code they merged. Three use AI moderately. One senior refuses entirely on principle and now looks 'slow' on the dashboard but his code never breaks. Review season starts next month and my current rubric is 40% 'delivery velocity'. Help."
-    },
-    {
-      "skill": "ai-content-audit",
-      "input": "Our SaaS blog: 60 posts/yr handwritten until 2024, then an agency scaled us to 40 AI posts/month. 640 posts total now. Organic traffic peaked 8 months ago, down 35% since; several money pages lost rankings. Sample titles from the AI era: '10 Project Management Tips for 2026', 'What Is Workflow Automation? A Complete Guide', 'The Ultimate Guide to Team Productivity'. Audit and triage."
-    },
-    {
-      "skill": "ai-code-review",
-      "input": "Review this AI-authored PR (Claude wrote it, author says they 'skimmed it'): adds a rate limiter middleware to our Express API. The diff: a new RateLimiter class (180 lines) with a token bucket, its own LRU cache implementation (we already use lru-cache elsewhere), a config system with 9 options, tests that mock Date.now and assert the mock, one catch(e){} around the Redis call so 'it fails open', and a call to redis.expireat with a float timestamp. CI is green."
-    },
-    {
-      "skill": "synthetic-user-research",
-      "input": "PM wants to 'validate' our new pricing page with synthetic users before Thursday's launch decision: 'run 50 AI personas, see if they would buy the Pro tier at $49'. We have 22 real churn interviews, 400 support tickets, and analytics segments from the current page. Handle this request."
-    },
-    {
-      "skill": "async-decision-memo",
-      "input": "Decision needed by Friday: migrate our monorepo CI from Jenkins to GitHub Actions (est. 3 weeks of platform-team work, blocks the release-automation project). I recommend migrating. Must consult: the 4 platform engineers and the release manager (one platform engineer is strongly pro-Jenkins). Inform: all of engineering (60 people). Last infra decision died in a 200-comment thread. Set this up."
-    },
-    {
-      "skill": "brand-impersonation-response",
-      "input": "A TikTok account is running a deepfake video of our CEO announcing a 'customer appreciation crypto giveaway' linking to firmly-rewards.com (we are firmly.io) which asks users to connect wallets. Posted 4 days ago, 90k views, 3 customers have reported losing funds, our CEO found out an hour ago from a friend. Run the response."
-    },
-    {
-      "skill": "feature-sunset-plan",
-      "input": "Kill our built-in 'Forms' feature: 3.1% of workspaces use it, but that includes 2 enterprise accounts ($140k combined ARR) whose intake process runs on it, and one has Forms named in their contract. It costs us ~15% of one team plus a security-review burden every quarter. Replacement: our new Typeform integration covers ~80% of use cases but has no conditional logic. Data: 40k form submissions stored. Plan the sunset."
-    },
-    {
-      "skill": "interview-me",
-      "input": "Make me a dashboard for the leadership team. Interview me first."
-    },
-    {
-      "skill": "brainstorming",
-      "input": "Brainstorm ways to reduce no-shows for our B2B product demos (currently 38% no-show). We've already tried reminder emails. Budget exists but is not unlimited; sales team is 6 people."
-    },
-    {
-      "skill": "writing-plans",
-      "input": "Plan the migration of our marketing site from WordPress to a static site generator. Constraints: SEO rankings must not drop, the blog has 400 posts with weird embedded shortcodes, and marketing needs to keep publishing weekly throughout. I don't know yet whether the shortcodes can be auto-converted."
-    },
-    {
-      "skill": "executing-plans",
-      "input": "Here is the plan we agreed [migration plan with 6 steps, step 2 says 'verify shortcode converter handles all 400 posts']. I am starting execution now. Walk me through it — and step 2 just failed on 37 posts that use a custom pricing-table shortcode."
-    },
-    {
-      "skill": "verification-before-completion",
-      "input": "I've finished the competitive analysis doc the CEO asked for: 'compare us to the top 3 rivals on pricing, enterprise features, and support SLAs, keep it under 2 pages, and make it usable in Thursday's board meeting.' Here's my draft [draft is 4 pages, covers pricing and features for 2 rivals, no SLA section]. Verify before I send it."
-    },
-    {
-      "skill": "subagent-orchestration",
-      "input": "I need to research 5 competitors (pricing, recent launches, hiring signals), update 12 API endpoint docs to a new format, and write a summary memo. I have parallel subagents available. Orchestrate this — last time two agents both edited the same docs file and I got merge conflicts."
-    },
-    {
-      "skill": "incremental-implementation",
-      "input": "Replace our homegrown session-token auth with OAuth across a codebase where 23 call-sites use the old auth helper. It's load-bearing (production, 40k users). Previous attempt was one giant PR that got reverted after breaking password reset. Plan the increments."
-    },
-    {
-      "skill": "code-simplification",
-      "input": "This Claude-generated payment retry module works and has passing tests, but it's 600 lines: a RetryStrategy interface with one implementation, a config object with 11 options (we set 2), an event emitter with one subscriber, and a custom backoff calculator that duplicates a utility we already have in lib/time.ts. Simplify it."
-    },
-    {
-      "skill": "frontend-design",
-      "input": "Build the UI for a small internal tool: a table of 200 customer accounts with health scores, filters by segment, and a detail pane. It currently 'works but looks like a prototype' - default browser styles, five different paddings. Dense pro-tool register, our accent is #0E7C66. Vanilla HTML/CSS single file."
-    },
-    {
-      "skill": "brand-guidelines",
-      "input": "Extract a brand kit from our materials: [homepage screenshot shows dark navy background #0B1D3A, coral CTAs, Inter font, sentence-case headlines, airy spacing; the sales deck uses the same navy but title-case and cramped]. Then tell me which of the two conflicting styles should win and write the kit."
-    }
-  ]
+ "_comment": "Eval cases: a representative input per skill. Run with: node evals/run-evals.mjs",
+ "cases": [
+  {
+   "skill": "rice-prioritisation",
+   "input": "Rank these for next quarter:\n1. Onboarding redesign \u2014 reach ~5000 users/qtr, big activation impact, ~3 person-months.\n2. Dark mode \u2014 ~8000 users want it, low impact, ~1 person-month.\n3. SSO for enterprise \u2014 ~400 accounts, high deal impact, ~4 person-months, low confidence."
+  },
+  {
+   "skill": "prd-template",
+   "input": "Feature: in-app referral program so existing users invite colleagues and both get a credit. Target: activated B2B users. Goal: grow signups 15% in Q3."
+  },
+  {
+   "skill": "cs-health-scorecard",
+   "input": "Account: Acme Corp, enterprise, ARR $120k, renewal in 90 days. DAU/MAU 18%, 2 open P2 tickets, CSAT 7, exec sponsor left last month, seats 80/100 used, payments on time."
+  },
+  {
+   "skill": "executive-summary",
+   "input": "Summarise: our Q2 retention dropped from 82% to 76% driven by a new onboarding flow that confused mobile users; we shipped a fix in week 10 and retention recovered to 80%; we recommend a full mobile onboarding rework next quarter."
+  },
+  {
+   "skill": "competitive-analysis",
+   "input": "Analyse our position vs Notion and Coda for a lightweight team wiki aimed at small startups. We're cheaper and faster to set up but have fewer integrations."
+  },
+  {
+   "skill": "sprint-planning",
+   "input": "Team of 5, 2-week sprint, average velocity 30 points, one engineer out 3 days. Backlog: checkout redesign (8), payment retries (5), analytics events (3), bug bash (3), API rate limiting (5)."
+  },
+  {
+   "skill": "roadmap-narrative",
+   "input": "H2 roadmap for a B2B analytics product. Themes: self-serve onboarding, an integrations marketplace, and enterprise SSO/audit logs. Audience: the exec team and key customers. We want the story, not a feature list."
+  },
+  {
+   "skill": "okr-builder",
+   "input": "Company objective: become the default analytics tool for startups. For the product team, next quarter. We care about activation, retention, and word-of-mouth growth."
+  },
+  {
+   "skill": "go-to-market",
+   "input": "Launching an integrations marketplace for our analytics product. Target: existing mid-market customers and their ops teams. Goal: 30% of accounts install at least one integration within 60 days."
+  },
+  {
+   "skill": "churn-analysis",
+   "input": "SMB SaaS, $49/mo. Monthly logo churn rose from 3% to 5% over two quarters. Most cancellations happen in month 2-3. Top stated reasons: 'too hard to set up' and 'didn't see value'. Annual plans churn far less than monthly."
+  },
+  {
+   "skill": "stakeholder-update",
+   "input": "Weekly update for sales, support, and exec stakeholders on the checkout revamp. Status: 10% rollout live, conversion +4%, one payments edge case under investigation, full launch gated on a Legal PCI review due Tuesday."
+  },
+  {
+   "skill": "user-story-writer",
+   "input": "Feature: let users export a dashboard to PDF and schedule a recurring email of it. Users are analysts and their managers. Keep stories small and testable with clear acceptance criteria."
+  },
+  {
+   "skill": "incident-postmortem",
+   "input": "Checkout was down 42 minutes after a deploy set a wrong env var on the payments service; 5xx spiked, ~1,200 failed checkouts. Detected by alert in 6 min, fixed by rollback. Blameless postmortem with timeline and action items."
+  },
+  {
+   "skill": "ab-test-planner",
+   "input": "Test whether moving the signup CTA above the fold on the pricing page increases free-trial starts. Current trial-start rate 8%, ~20k weekly visitors. We want to detect a 10% relative lift."
+  },
+  {
+   "skill": "metrics-framework",
+   "input": "Define the metrics framework for a B2B analytics product: the north star, input metrics across acquisition/activation/retention/revenue, and guardrails. Stage: early growth, ~500 paying accounts."
+  },
+  {
+   "skill": "error-decoder",
+   "input": "TypeError: Cannot read properties of undefined (reading 'map') at ProductList (ProductList.jsx:24). It's a React component that renders a list from an API call."
+  },
+  {
+   "skill": "regex-builder",
+   "input": "Write a regex (JavaScript) that validates a US phone number, accepting both (555) 123-4567 and 555-123-4567, but rejecting letters or wrong digit counts."
+  },
+  {
+   "skill": "git-troubleshooter",
+   "input": "I made 2 commits on main but they were meant for a feature branch, and I haven't pushed yet. How do I move them onto a new branch and clean up main?"
+  },
+  {
+   "skill": "dependency-conflict-resolver",
+   "input": "npm install fails: react-dom@18 needs peer react@^18 but the project pins react@17.0.2. Several other packages still expect 17. How do I resolve this safely?"
+  },
+  {
+   "skill": "code-explainer",
+   "input": "Explain this:\n\nconst debounce = (fn, ms) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), ms); }; };"
+  },
+  {
+   "skill": "sql-query-explainer",
+   "input": "Explain and optimise this slow query (Postgres):\n\nSELECT u.id, u.email, COUNT(o.id) AS orders FROM users u LEFT JOIN orders o ON o.user_id = u.id WHERE u.created_at > '2025-01-01' GROUP BY u.id, u.email ORDER BY orders DESC;\n\nIt scans 4M users and takes ~30s."
+  },
+  {
+   "skill": "aeo-optimizer",
+   "input": "Optimise this article intro for answer engines:\n\n'Customer churn is when customers stop using your product. It's a big problem for SaaS companies. In this post we'll talk about some ways to reduce churn and why it matters for your business growth over time.'"
+  },
+  {
+   "skill": "literature-review",
+   "input": "Write a short literature review on the effect of remote work on software-engineering productivity. Use 3-4 representative findings (synthesise typical results from well-known studies) and note where the evidence conflicts."
+  },
+  {
+   "skill": "privacy-policy-drafter",
+   "input": "Draft a privacy policy for 'Tasky', a B2B SaaS task manager. We collect account info (name, email), usage analytics via PostHog, payments via Stripe, and support emails. EU + US customers. No data selling."
+  },
+  {
+   "skill": "assumption-mapper",
+   "input": "Audit this brief for hidden assumptions:\n\n'We'll add an AI summary to every report. Users want less reading. It'll boost weekly active usage by 20% and cut support tickets. We can ship it in 3 weeks reusing the existing model.'"
+  },
+  {
+   "skill": "cohort-analysis",
+   "input": "Run a cohort retention analysis. Monthly signup cohorts, % active at month 1/3/6: Jan 100/48/31; Feb 100/52/35; Mar 100/61/44 (after an onboarding revamp in Feb). Find the story and what to do."
+  },
+  {
+   "skill": "competitive-intelligence-monitor",
+   "input": "Brief me on these competitor signals this week: (1) Rival A launched an AI assistant in beta; (2) Rival B cut prices 20% for startups; (3) Rival C hired a VP of Enterprise Sales; (4) a newcomer raised a $15M Series A. We're a mid-market analytics product."
+  },
+  {
+   "skill": "resume",
+   "input": "Write my one-page resume for a Senior Product Manager role at a B2B SaaS company. Use only the facts below.\nContact: Jordan Lee, San Francisco / remote, jordan.lee@email.com, (555) 010-2233, linkedin.com/in/jordanlee.\nExperience:\n- Product Manager, Acme Analytics (2021-present): Owned onboarding and activation. Led an onboarding revamp that lifted activation from 31% to 44% in two quarters. Launched a self-serve plan that now drives 34% of new signups and added ~$480k ARR in its first year. Ran a 12-experiment A/B program that cut time-to-first-value from 9 days to 3. Managed 3 reports (2 designers, 1 engineer).\n- Associate PM, Beta Corp (2019-2021): Shipped the mobile app v1 (40k downloads in 6 months, 4.6 App Store rating). Built the experimentation program from scratch (0 to 20 tests/quarter), lifting checkout conversion from 2.1% to 3.3%.\nSkills: SQL, Amplitude, Figma, A/B testing, roadmapping, stakeholder management.\nEducation: BS Computer Science, State University, 2019.\nTarget-role keywords from the JD: activation, retention, experimentation, self-serve growth, cross-functional leadership."
+  },
+  {
+   "skill": "prompt-optimizer",
+   "input": "Improve this prompt. It's flaky \u2014 sometimes it returns prose, sometimes a list, and it occasionally makes up ticket fields that don't exist.\nPrompt: \"Summarize this support ticket and tell me how urgent it is and what to do.\"\nDesired output: a JSON object with fields summary (1-2 sentences), priority (P1-P4), and next_action. It runs on every inbound ticket. Only use information present in the ticket; if priority is unclear, use P3."
+  },
+  {
+   "skill": "eval-rubric-designer",
+   "input": "Design an eval rubric and LLM-judge prompt for an AI feature that drafts replies to customer support emails. Good means: on-topic and correct, grounded in the customer's message and our help-centre context (no invented policies), correct empathetic tone, and a clear next step. We'll score with an LLM judge at scale and spot-check with humans."
+  },
+  {
+   "skill": "rag-architecture-review",
+   "input": "Review our RAG system. Setup: we dump PDFs into pgvector with fixed 1000-token chunks, embed with a general model, retrieve top-5 by cosine similarity, and stuff them into the prompt 'Answer the question using the context.' Symptoms: it often answers confidently but cites the wrong product version, and questions that mention a specific error code usually get a generic answer. Corpus is ~4,000 product docs across 6 versions, updated weekly. Per-customer isolation is required."
+  },
+  {
+   "skill": "llm-guardrails-spec",
+   "input": "Spec the guardrails for an AI assistant on our B2B SaaS support site. It answers product questions using our docs, can look up the logged-in user's own account info via a tool, and can open a support ticket. Input comes from untrusted end users; the docs it retrieves include some third-party content. In scope: product and account questions. Out of scope: legal/financial advice. Data includes account details and billing info."
+  },
+  {
+   "skill": "agent-design-review",
+   "input": "Review this agent design. It's a 'research assistant': given a question, it loops \u2014 search the web, read a page, decide if it has enough, otherwise search again \u2014 then writes a summary with sources. It has tools: web_search, fetch_url, and send_email (to email the summary). Control flow is a ReAct loop with no explicit step cap. Each step re-sends the full conversation. Runs interactively; cost has spiked on some runs. Input is untrusted."
+  },
+  {
+   "skill": "model-selection-advisor",
+   "input": "Which model should we use to classify inbound support tickets into one of 12 categories and extract the product name? ~50,000 tickets/day, needs to keep up in near-real-time, budget-sensitive. Accuracy matters but it's a fairly constrained extraction/classification task, not open-ended reasoning. Tickets are short. Outputs feed an automated routing system, so consistency matters."
+  },
+  {
+   "skill": "pr-crisis-response",
+   "input": "We're a B2B SaaS company. A security researcher just tweeted that a misconfiguration may have exposed some customers' support attachments; it's getting traction and a journalist has emailed us. We've confirmed the misconfiguration existed and is now fixed, but we don't yet know exactly how many customers were affected or whether anything was actually accessed. Build our crisis comms plan."
+  },
+  {
+   "skill": "incident-public-statement",
+   "input": "Draft our public statement. Our payments service had a 3-hour outage this morning (09:10-12:05 UTC) caused by a failed database upgrade; some customers were double-charged. We've rolled back, identified the affected transactions, and are issuing automatic refunds within 5 business days. Affected customers don't need to do anything. Tone: accountable and reassuring."
+  },
+  {
+   "skill": "customer-outage-notice",
+   "input": "Write our outage notices. Our file-upload feature is currently failing for users in the EU region (started ~14:20 CET); the rest of the app works. We're still investigating the cause. We'll update every 30 minutes. Need status-page posts for each phase, a customer email, and a resolved summary."
+  },
+  {
+   "skill": "layoff-communication",
+   "input": "We need to communicate a layoff: a 12% reduction (about 60 people) across sales and recruiting, driven by slower-than-planned revenue growth and a refocus on the core product. Affected employees get 12 weeks' severance, 6 months of benefits, and outplacement support. People will be told individually on Tuesday morning, followed by an all-hands. Prepare the full comms package."
+  },
+  {
+   "skill": "apology-letter",
+   "input": "Write an apology to a customer. We're a meal-kit company; we shipped their order to the wrong address and by the time it was sorted the ingredients had spoiled, ruining a dinner party they'd planned. It was our fulfilment error. We want to refund the order in full, give them a credit for a future box, and keep them as a customer."
+  },
+  {
+   "skill": "soap-note",
+   "input": "Write a SOAP note from these encounter notes. 54-year-old presents with a productive cough for 5 days, low-grade fever, and mild shortness of breath on exertion; no chest pain. History of mild asthma. Exam: temp 38.1C, RR 20, SpO2 96% on room air, scattered crackles in the right lower lung field. Working impression: community-acquired pneumonia, mild. Plan: chest X-ray, start oral amoxicillin, continue inhaler, push fluids, review in 3 days or sooner if worse."
+  },
+  {
+   "skill": "discharge-summary",
+   "input": "Write a discharge summary. Admitted 3 days ago for community-acquired pneumonia after presenting with cough, fever, and shortness of breath; chest X-ray confirmed a right-lower-lobe infiltrate. Treated with IV antibiotics, switched to oral on day 2 with good response; afebrile for 24 hours at discharge. Discharge meds: complete a 5-day course of oral amoxicillin (new), continue home inhaler (unchanged). Discharged home in stable condition. Follow up with primary care in 1 week; return if fever returns or breathing worsens."
+  },
+  {
+   "skill": "prior-authorization-letter",
+   "input": "Write a letter of medical necessity. Patient has moderate-to-severe plaque psoriasis covering ~15% body surface area, with significant impact on daily function and quality of life. They have tried and failed topical corticosteroids and methotrexate (inadequate response after 3 months; methotrexate caused elevated liver enzymes). We are requesting authorization for a biologic (adalimumab). Insurer requires step-therapy documentation. Patient is a 42-year-old on a commercial plan."
+  },
+  {
+   "skill": "clinical-trial-protocol",
+   "input": "Draft a clinical trial protocol synopsis. Phase II, randomized, double-blind, placebo-controlled trial of an investigational oral drug for moderate knee osteoarthritis pain in adults. Primary question: does it reduce pain versus placebo over 12 weeks? We expect to enroll adults 45-75 with a confirmed diagnosis. Outcome of interest is patient-reported pain. Treat effect sizes and prior data as placeholders for the study team to set."
+  },
+  {
+   "skill": "complaint-letter",
+   "input": "Write a complaint letter to an airline. My flight (BA286, 14 March, booking ref ABC123) was cancelled 2 hours before departure with no rebooking offered; I had to buy a last-minute ticket on another airline for $640 and missed the first day of a conference. I've called twice and been told to 'wait for an email' that never came. I want a full refund of the original fare plus reimbursement of the $640. Deadline: 14 days."
+  },
+  {
+   "skill": "dispute-letter",
+   "input": "Write a letter to my credit-card company disputing a charge. There's a $129.99 charge from 'GLOWFIT LTD' dated 3 April on my account ending 4821 that I did not authorise and do not recognise; I've never done business with this company. I want the charge reversed and written confirmation. I have my statement and can provide more detail."
+  },
+  {
+   "skill": "reference-letter",
+   "input": "Write a reference letter. I'm a senior engineering manager recommending a software engineer who reported to me for 3 years for a senior/staff engineer role at another company. Strengths: technically excellent, owned our payments rewrite end to end, mentors junior engineers, and is unusually calm in incidents. Mark any specific examples you invent so I can replace them with real ones."
+  },
+  {
+   "skill": "rental-application",
+   "input": "Write a rental application cover letter for a 2-bedroom flat I want to rent, move-in 1 June, ideally a 2-year tenancy. I'm a full-time nurse with stable income, have rented my current place for 4 years with on-time rent and a landlord reference available. I have a small, well-behaved cat. I can provide proof of income, ID, and references quickly."
+  },
+  {
+   "skill": "insurance-claim",
+   "input": "Write a home-insurance claim letter. Policy number HOME-558921. A pipe under the kitchen sink burst on 8 May while I was away, flooding the kitchen and damaging the flooring, lower cabinets, and a dishwasher. Estimated repair/replacement: flooring $2,800, cabinets $1,500, dishwasher $600. I have photos, a plumber's report, and repair quotes. I'm claiming $4,900 and want it processed promptly."
+  },
+  {
+   "skill": "rfp-writer",
+   "input": "Write an RFP for a new customer-support help-desk platform for a 60-person B2B SaaS company. Must-haves: shared inbox, live chat, a knowledge base, and integration with our existing CRM and Slack. Nice-to-haves: AI-assisted replies and CSAT surveys. We care most about ease of use and total cost, then integrations, then support. Budget is roughly $30-50k/year. We want to go live in Q3; vendor questions due in 2 weeks, proposals in 4."
+  },
+  {
+   "skill": "vendor-contract-checklist",
+   "input": "Review this SaaS subscription agreement before we sign. Deal: an analytics platform, $40k/year, 2-year term. Key terms: auto-renews for successive 12-month periods unless cancelled with 90 days' notice; price may increase each renewal (no cap stated); 99.5% uptime SLA with service credits as the sole remedy; liability capped at fees paid in the prior 3 months; data export available during the term but deletion/portability on termination isn't mentioned; governing law is the vendor's home state. Flag the risks and give me negotiation points."
+  },
+  {
+   "skill": "impact-report",
+   "input": "Write our annual impact report. We're a nonprofit that runs free coding bootcamps for unemployed adults. This year: 6 cohorts, 180 graduates, 71% employed within 6 months at an average starting salary uplift of about $18k. Income was $1.2M (60% grants, 30% individual donors, 10% corporate), with 82% spent on programs. Include a placeholder beneficiary story. Audience is donors and grant funders. Mark any invented figures for us to replace."
+  },
+  {
+   "skill": "case-for-support",
+   "input": "Write a case for support for a $500k campaign to fund a new youth mental-health drop-in centre in our city. The need: youth mental-health referrals are up sharply and wait times for support are months long. Our solution: a walk-in centre offering immediate, free counselling; we've run a successful pilot. We want giving levels from $50 to $50k. Audience: major donors and local foundations. Mark invented statistics for replacement."
+  },
+  {
+   "skill": "donor-update",
+   "input": "Write a year-end donor update/thank-you email to our recurring donors. Because of their support this year we provided 12,000 meals and opened a second community kitchen. We want them to feel appreciated and part of the mission, with a short story and only a very light, optional invitation to a volunteer day \u2014 no hard ask. Warm, personal tone. Mark any invented specifics for us to replace."
+  },
+  {
+   "skill": "product-description",
+   "input": "Write a product description for our insulated stainless-steel water bottle. Details: 750ml, double-wall vacuum insulation (keeps cold 24h / hot 12h), powder-coated matte finish, leak-proof lid, fits most cup holders, BPA-free, available in 5 colours. Sold on our own Shopify store. Buyers are active commuters and gym-goers. Brand voice: friendly and energetic. Don't invent any specs I haven't given."
+  },
+  {
+   "skill": "marketplace-listing-optimizer",
+   "input": "Optimize our Amazon listing. Product: a bamboo cutting board set (3 pieces, different sizes, juice groove, non-slip). Current title is just 'Bamboo Cutting Board Set'. Traffic is low and conversion is mediocre. Category is Kitchen. Buyers search things like 'wood cutting board', 'chopping board set', 'bamboo cutting board with handle'. Give me an optimized title, bullets, backend keywords, an images plan, and conversion fixes."
+  },
+  {
+   "skill": "return-refund-policy",
+   "input": "Write a returns, refunds and exchanges policy for my Shopify clothing store. I want a 30-day window, items must be unworn with tags, customers pay return shipping except for faulty/wrong items, refunds to original payment within 5-7 business days, and final-sale items (underwear and clearance) aren't returnable. Friendly tone. Flag anything I should check legally."
+  },
+  {
+   "skill": "promotion-plan",
+   "input": "Plan a Black Friday / Cyber Monday promotion for our skincare DTC brand. Goal: acquire new customers but protect margin. Hero product costs us $12 and sells for $40. We have email (~50k list), Meta/Google ads, and our Shopify store. Window is the BFCM weekend. Show me the offer options, the margin/break-even math (use placeholders for numbers I haven't given), the channel plan, timeline, and how to measure it."
+  },
+  {
+   "skill": "review-response",
+   "input": "Write replies to two reviews on our Trustpilot. (1) 5 stars: 'Fast shipping and the headphones sound amazing, exactly as described!' (2) 1 star: 'Arrived 10 days late and the box was crushed. Really disappointed.' Our brand voice is warm and professional; we can offer a replacement or refund on the second. Sign off as 'The Acme Audio Team'. Also give me reusable templates."
+  },
+  {
+   "skill": "category-page-brief",
+   "input": "Write a category page brief for the 'Women's Running Shoes' collection on our Shopify store. Shoppers range from beginners to marathoners. We carry ~60 styles across brands, with attributes like cushioning, support type (neutral/stability), surface (road/trail), and price. Target keywords around 'women's running shoes'. Cover intent/keywords, H1 + intro, merchandising/sort, filters and their crawlability, internal links, and technical SEO."
+  },
+  {
+   "skill": "microcopy-writer",
+   "input": "Write the microcopy for the final step of a checkout flow on a paid subscription app. There's a primary button that charges the card and starts the plan, plus a small reassurance line under it. The plan is $12/month, billed monthly, cancel anytime. Voice is friendly and trustworthy. Give me the button label, the reassurance line, and the success-toast text, with a couple of options and why."
+  },
+  {
+   "skill": "error-message-writer",
+   "input": "Rewrite this error for end users: 'Error 402: payment_intent authentication_required'. Context: a card payment failed because the bank needs the customer to authenticate (3-D Secure). It shows as a full-page state after they hit Pay. They can retry, complete verification, or use a different card. Voice is calm and helpful. Give me the user-facing message plus a note on what to log vs. show."
+  },
+  {
+   "skill": "empty-state-writer",
+   "input": "Write the empty states for a 'Projects' screen in a team task-management app. Cover: (1) first use \u2014 a brand-new account with no projects yet, where we want them to create their first project; (2) a search/filter that returns no matching projects; (3) all projects archived/completed. Voice is encouraging and concise. For each give headline, supporting line, and action(s)."
+  },
+  {
+   "skill": "product-naming",
+   "input": "Help me name a new feature in our analytics product: an AI assistant that answers questions about your data in plain English and builds charts. Audience is data-curious business users (not analysts). Our brand is clean and modern; existing features have clear, descriptive names. Give me candidates across naming strategies, an evaluation, a recommendation, and the checks to run before we commit."
+  },
+  {
+   "skill": "content-style-guide",
+   "input": "Create a content style guide for our B2B fintech app aimed at small-business owners. We want to sound clear, trustworthy, and human \u2014 never stuffy or jargon-heavy. US English. It applies to product UI, marketing, and support. Include voice principles with before/after examples, tone by context, mechanics, a do/don't word list, and accessibility rules. Mark anything you infer for us to confirm."
+  },
+  {
+   "skill": "onboarding-copy",
+   "input": "Write the in-product onboarding copy for a personal habit-tracking app. The first win is the user creating their first habit and checking it off once. The path: welcome \u2192 name a habit \u2192 set a reminder time \u2192 mark it done today. Format is a mix of a welcome modal and tooltips, and steps should be skippable. Encouraging, concise voice. Include the welcome, the step tooltips, a checklist, and the first-win success moment."
+  },
+  {
+   "skill": "boolean-search-builder",
+   "input": "Build me boolean and X-ray searches to source a Senior Backend Engineer in Berlin (open to remote in Germany). Must-haves: strong Go or Java, distributed systems, and experience scaling production services. Nice-to-have: Kubernetes. Exclude junior/intern and recruiters. I'll search LinkedIn and GitHub. Give me tight and broad versions, X-ray variants, and a plan to widen or narrow."
+  },
+  {
+   "skill": "recruiter-outreach",
+   "input": "Write a LinkedIn InMail to a senior product designer who currently works at a competitor, for our Staff Product Designer role. Genuine selling points: they'd own design for a brand-new 0-to-1 product area, small senior team, fully remote, strong comp. Personalization: I'll insert a real detail about their portfolio. Warm, concise, low-pressure. Also give me a 2-step follow-up sequence and subject-line options."
+  },
+  {
+   "skill": "interview-question-bank",
+   "input": "Create a structured interview question bank for a Senior Product Manager role. Core competencies we care about: product sense, execution/delivery, data fluency, stakeholder influence, and leadership. Two interview rounds with different interviewers. Include behavioral, role/scenario, and values questions, with what a strong vs. weak answer looks like, follow-up probes, and a simple scoring rubric."
+  },
+  {
+   "skill": "candidate-scorecard",
+   "input": "Turn my interview notes into a scorecard for a Senior PM candidate. Notes: Product sense \u2014 gave a sharp critique of our onboarding and a prioritization rationale (RICE), strong. Execution \u2014 described shipping a payments revamp but was vague on how they handled the cross-team conflict. Data \u2014 comfortable, cited specific metrics (activation 31%\u219244%). Stakeholder influence \u2014 not really tested this round. Scale is 1-4 (strong no to strong yes). Give per-competency ratings with evidence, risks, open questions, and a recommendation with confidence."
+  },
+  {
+   "skill": "offer-letter",
+   "input": "Draft a job offer for a Senior Software Engineer. Base $165k, 15% target bonus, equity (0.05%, 4-year vest with 1-year cliff), $10k sign-on. Full-time, remote (US), reports to the Eng Manager, start date in ~4 weeks. Contingent on a background check and work authorization. Offer expires in 7 days. Warm tone. Give me both the verbal-offer call script and the written letter, and flag what HR/legal needs to confirm."
+  },
+  {
+   "skill": "sourcing-strategy",
+   "input": "Build a sourcing strategy for a hard-to-fill Staff Machine Learning Engineer role. Must-haves: production ML at scale, strong Python, and experience with recommendation or ranking systems. Remote within the US, competitive comp, but we're an unknown Series B brand. We've posted the job and gotten weak inbound. Cover the candidate profile (and adjacent profiles), where they concentrate, a prioritized channel plan, funnel math with a worked example, and a weekly cadence."
+  },
+  {
+   "skill": "invoice-generator",
+   "input": "Create an invoice. From: Jordan Lee Design (freelance, jordan@jldesign.com). To: Acme Corp, accounts@acme.com, PO #4471, project 'Marketing site redesign'. Line items: Homepage design \u2014 1 @ $1,200; Landing page templates \u2014 3 @ $400; Logo refresh \u2014 1 @ $600. Terms: Net 30, pay by bank transfer. No sales tax (I'll confirm tax separately). Use invoice number INV-2026-014, issued today. Show the totals."
+  },
+  {
+   "skill": "expense-policy",
+   "input": "Write an expense and reimbursement policy for a 50-person remote-first startup. Lean but fair culture. Common categories: travel (occasional), business meals, software subscriptions, home-office equipment, and co-working day passes. Managers approve up to $500; anything above needs finance sign-off. Expenses are submitted in our tool with receipts required over $25, reimbursed in the next payroll. Mark the amounts as ours to set and flag anything tax-related."
+  },
+  {
+   "skill": "collections-email",
+   "input": "Write a collections email sequence. Invoice INV-2026-014 for $3,000 to a valued ongoing client, Acme Corp, is now 14 days overdue (Net 30 terms). I want to be polite but firm, keep the relationship, and make paying easy (bank transfer or a payment link). We have an agreed 2% late fee per month but I want to confirm enforceability before mentioning it. Give me the staged sequence from a gentle nudge to a final notice."
+  },
+  {
+   "skill": "financial-statement-explainer",
+   "input": "Explain this P&L to me in plain English \u2014 I'm a founder, not an accountant. For last quarter: Revenue $480,000; Cost of goods sold $144,000; Gross profit $336,000; Operating expenses $300,000 (of which sales & marketing $180,000, R&D $80,000, G&A $40,000); Operating income $36,000; Net income $28,000. Tell me what each part means, the margins and numbers that matter, and the story \u2014 are we healthy?"
+  },
+  {
+   "skill": "bookkeeping-categorization",
+   "input": "Help me set up a chart of accounts and categorization rules for my freelance design business. I use Xero, cash basis. Typical transactions: client payments, software subscriptions (Figma, Adobe), a contractor I sometimes pay, laptop and equipment purchases, co-working membership, business travel, and transfers between my business and personal accounts. I want clean monthly books that are easy for my accountant. Flag anything tax-sensitive."
+  },
+  {
+   "skill": "cash-flow-forecast",
+   "input": "Build me a 13-week cash flow forecast structure for my agency. Starting cash is $60,000. Expected inflows: two retainer clients paying $12,000/month (around the 5th), plus a $25,000 project invoice I expect to collect in week 6. Outflows: payroll ~$28,000/month (15th and end of month), rent $4,000/month, software ~$1,500/month, and quarterly tax of $18,000 in week 9. Show the model, a worked example, where the low point is, and what to do if cash gets tight."
+  },
+  {
+   "skill": "test-case-writer",
+   "input": "Write test cases for a login feature. Acceptance criteria: a user can log in with a valid email and password; wrong credentials show an error without logging in; after 5 failed attempts the account is locked for 15 minutes; the email field must be a valid format; 'remember me' keeps the session for 30 days. Web app, UI testing. Cover happy path, validation, negative, and edge cases, and trace each case to the criteria."
+  },
+  {
+   "skill": "bug-report",
+   "input": "Turn this into a proper bug report: 'The CSV export is broken.' Context I can give: on the Reports page, clicking 'Export to CSV' when a report has more than about 1,000 rows just spins and never downloads; under 1,000 rows it works. Happens every time on Chrome 120 on Windows; a colleague saw it on Safari too. There's a 500 error in the network tab on the /export request. I'm on the Pro plan as an admin. Build version 4.7.2."
+  },
+  {
+   "skill": "exploratory-test-charter",
+   "input": "Plan exploratory testing for a new checkout flow on an e-commerce site. It's brand new, integrates a third-party payment provider, supports guest and logged-in checkout, multiple payment methods, discount codes, and address validation. We have about half a day. Give me risk-prioritized, timeboxed charters with test ideas and oracles."
+  },
+  {
+   "skill": "regression-test-plan",
+   "input": "We're releasing a change to our checkout's discount-code logic. It touches the cart total calculation and the payment step, which are shared with the rest of checkout. Critical paths that must never break: add-to-cart, checkout, and payment. A full regression run currently takes about 6 hours and we have limited time before release. Build a risk-based regression plan with tiers, what to skip, automation candidates, and a run strategy."
+  },
+  {
+   "skill": "qa-release-signoff",
+   "input": "Write a QA sign-off for release v4.8.0 shipping Friday. Testing done: full regression on web (98% pass), smoke on mobile, and exploratory on the new checkout. Open defects: BUG-101 (major \u2014 discount code occasionally not applied on first try, workaround: refresh), BUG-118 (minor \u2014 alignment issue on the confirmation page). The new checkout has a feature flag and we can roll back. Mobile wasn't fully regression-tested. Give me a go/no-go with conditions, the risk, and a rollback note."
+  },
+  {
+   "skill": "api-test-plan",
+   "input": "Plan tests for a REST endpoint: POST /api/v1/orders. It creates an order from a JSON body { items: [{sku, qty}], shippingAddress }, requires a bearer token with the 'orders:write' scope, returns 201 with the created order on success, 400 on validation errors, 401/403 for auth issues, and 409 if an item is out of stock. Rate-limited to 100 req/min. Give me functional, validation, auth/authz, negative, and contract cases, plus non-functional notes."
+  },
+  {
+   "skill": "property-listing",
+   "input": "Write a listing description for a 3-bedroom, 2-bath single-family home (1,850 sq ft) in a walkable neighbourhood. Standout features: a renovated kitchen with quartz counters and a large island, an open-plan living/dining area with lots of natural light, a private fenced backyard with a deck, and a 2-car garage. Close to parks, cafes, and a train station. Upscale-but-warm tone for MLS and Zillow. Don't invent any facts; flag anything to confirm."
+  },
+  {
+   "skill": "comparative-market-analysis",
+   "input": "Build a CMA for a 3-bed/2-bath, 1,850 sq ft home in good condition. Recent comparable sales nearby: (A) 3/2, 1,800 sq ft, sold $620k 1 month ago, similar condition; (B) 4/2, 2,100 sq ft, sold $690k 2 months ago, larger; (C) 3/2, 1,700 sq ft, sold $585k 3 weeks ago, needs updating. Market is rising, low inventory, homes selling in ~2 weeks. Seller wants to sell within 60 days but maximize price. Give adjustments, a value range, and a pricing recommendation."
+  },
+  {
+   "skill": "property-offer-letter",
+   "input": "Write an offer cover letter for buyers (Sam and Alex) on a home they love. What won them over: the big kitchen island (they cook constantly), the light-filled living room, and the garden for their vegetable patch. Their offer is strong: pre-approved financing, a competitive price, flexible on the closing date to fit the sellers, and minimal contingencies. Warm and sincere tone. Keep it about the home and the offer, and flag the fair-housing considerations."
+  },
+  {
+   "skill": "property-investment-analysis",
+   "input": "Analyze a rental investment. Purchase price $300,000, ~$8,000 closing costs, no rehab. Financing: 25% down, 7% interest, 30-year loan. Rent $2,400/month. I haven't given you operating costs \u2014 use realistic placeholder assumptions for vacancy, maintenance, property management, taxes, insurance, and a capex reserve, and flag them. My target is at least 8% cash-on-cash and positive monthly cash flow. Show the formulas, the returns, a verdict, and a downside check."
+  },
+  {
+   "skill": "open-house-plan",
+   "input": "Plan an open house for my listing this Saturday 12-3pm: a 3-bed/2-bath family home listed at $625k in a desirable school district. I have MLS/Zillow, social media, an email list of buyers and agents, yard signage, and a small boost budget. Goal is to sell this home and pick up buyer leads. Give me the timing, promotion plan, prep/staging checklist, a day-of run sheet, lead capture, and follow-up."
+  },
+  {
+   "skill": "tenant-screening-guide",
+   "input": "Help me design a fair tenant screening process for a single-family rental I'm listing at $2,000/month in the US. I want reliable tenants but I want to stay compliant and consistent. Walk me through objective criteria (income, credit, rental history, verification), the application and checks I should run with consent, how to evaluate applicants consistently, applicant communication including adverse action, and the fair-housing guardrails. Flag anything I must confirm with a local attorney."
+  },
+  {
+   "skill": "board-minutes",
+   "input": "Draft formal board minutes for Northwind Robotics Inc. The regular board meeting was held on 12 March 2025, 10:00-11:30, by video conference. Present: Priya Shah (Chair), Daniel Okoro (CEO), Lena Fischer (CFO), Marcus Webb (independent director). Apologies: Ana Ruiz. In attendance: Tom Reilly (company secretary, minutes). Quorum was confirmed. Agenda and notes: (1) Previous minutes from 5 Feb approved without amendment. (2) Q1 financials \u2014 CFO presented; revenue $4.2M, 11% ahead of plan; cash runway 16 months. Board noted the results. (3) Series B fundraise \u2014 proposed raising $25M; board discussed dilution and lead investor terms; resolved to authorize management to proceed with term-sheet negotiations up to a $120M pre-money valuation and report back before signing. Marcus Webb declared a conflict as an advisor to one prospective investor and recused himself from this item. (4) Annual budget \u2014 approved as presented. Actions: CFO to circulate the revised runway model by 20 March; CEO to bring the lead-investor term sheet to the next meeting. Next meeting 9 April 2025 by video conference. Flag anything that needs governance or legal review, and mark anything unknown as to confirm."
+  },
+  {
+   "skill": "win-loss-analysis",
+   "input": "Run a win/loss analysis on last quarter's deals for our B2B analytics product. Data: 40 closed-won worth $1.9M and 55 closed-lost worth $3.1M. Common closed-lost reasons in CRM: 'price too high' (18), 'missing SSO/SAML' (12), 'went with Looker' (9), 'no decision/timing' (10), 'poor fit' (6). Wins skew mid-market; enterprise win rate looks weak. Interview snippets: one lost buyer said 'your dashboards are great but procurement needs SOC 2 and SSO', a won buyer said 'setup took a day vs weeks with the incumbent'. Primary competitors: Looker and Tableau. This feeds our QBR and roadmap review \u2014 give themes, win rate by cut, controllable vs structural, and prioritized actions with owners."
+  },
+  {
+   "skill": "sales-enablement-kit",
+   "input": "Build a sales enablement kit for the launch of our new AI-assisted reporting feature in a mid-market analytics platform. Buyer: a Head of RevOps; user: analysts. Core value: cuts weekly reporting from hours to minutes by generating draft reports from a prompt. Proof: beta customers saved ~6 hours/week; one logo is [to confirm]. Motion: PLG-assist with a sales overlay. Top competitor: Looker. Common objection: 'can I trust AI-generated numbers?'. Pricing: it's an add-on to Pro. Give reps the pitch, discovery questions, talk track, a short demo flow, objection handling, and a competitive counter."
+  },
+  {
+   "skill": "pricing-page-copy",
+   "input": "Write pricing page copy for a project-management SaaS with three plans plus enterprise. Value metric is per-seat. Free: up to 3 users, unlimited tasks, 1 project. Pro: $12/user/month, unlimited projects, timelines, integrations. Business: $22/user/month, everything in Pro plus dashboards, admin controls, priority support. Enterprise: custom, adds SSO, SAML, audit logs, SLA. 14-day free trial on paid plans, no credit card, cancel anytime. Buyers get confused about which plan they need and whether they'll be charged for overages. Voice is friendly and plain. Write the header, tier cards, add-ons if useful, risk reducers, and a pricing FAQ."
+  },
+  {
+   "skill": "analyst-relations-brief",
+   "input": "Prep me for a Forrester briefing in two weeks. We're a mid-stage customer data platform; the analyst covers CDPs and is running a Wave next year. Objective: get on their radar for inclusion and reposition us as 'activation-first' rather than 'just storage'. Differentiators: real-time activation, a no-code audience builder, and transparent usage-based pricing; proof includes a retail customer that lifted campaign ROAS 22% [to confirm the logo is shareable]. Roadmap themes we can share: warehouse-native deployment; identity resolution is on the roadmap but a current gap. Competitors: Segment and mParticle. Give me the one message, market framing, differentiation with proof, a demo storyline mapped to likely evaluation criteria, tough questions with honest answers, and follow-ups."
+  },
+  {
+   "skill": "customer-advisory-board",
+   "input": "Plan our first customer advisory board for an enterprise cybersecurity product. Objective: strategic roadmap input and deepening relationships with top accounts ahead of a platform expansion. Format: half-day in person, twice a year, with a VP of Product as exec sponsor. We want 10-12 members balanced across financial services, healthcare, and tech, mixing security buyers (CISOs) and practitioners (SOC leads); no direct-competitor customers in the same room. Topics: platform consolidation, AI in the SOC, and pricing model feedback (pricing is sensitive). Give me the charter, membership criteria, a discussion-led agenda, discussion guides, roles, logistics, and a follow-up/value-capture plan."
+  },
+  {
+   "skill": "voice-of-customer-program",
+   "input": "Set up a Voice of Customer program for a B2B SaaS company. Objective: reduce churn and guide the roadmap. Existing feedback sources: Zendesk support tickets, quarterly NPS surveys (baseline NPS 32), sales/CS notes in Salesforce, G2 reviews, and monthly user interviews. Tools available: Salesforce, Zendesk, a survey tool, and product analytics; no dedicated feedback tool yet. Consumers: product and CX leadership. We serve SMB and enterprise and want to track them separately. Design objectives, a source map, a taxonomy, cadences, closed-loop routing with customer follow-up, ownership, and success metrics."
+  },
+  {
+   "skill": "launch-tiering-framework",
+   "input": "Help me decide the launch tier and right-size go-to-market for a new feature: native Slack notifications in our project-management tool. It's frequently requested (top-5 on our feedback board), broadens reach across all segments, and a competitor just shipped something similar, but it's an incremental capability rather than a new product. It's GA, docs are ready, but sales enablement isn't done yet. Team bandwidth is tight this quarter. Score impact and novelty, recommend T1/T2/T3, list the activities and channels to do and skip, assign owners, give a right-sized checklist and success metrics, and flag any readiness gaps."
+  },
+  {
+   "skill": "sales-demo-script",
+   "input": "Write a 20-minute first-demo script for our AI reporting analytics product to a Head of RevOps. Their pain (from discovery): the team spends a full day every week hand-building the same board and revenue reports in spreadsheets, and numbers are often stale by the meeting. Value story: connect your data once, then generate a trustworthy draft report from a prompt in minutes, with drill-down. Show: the prompt-to-report generation, the drill-down/verification, and a scheduled auto-refresh. Use realistic sample sales data. Competitor in the deal: Looker. Give me the open that restates their world, discovery hooks to tailor live, a scene-by-scene flow with talk track and marked aha moments, handling for 'can I trust the numbers?', and a close with a concrete next step."
+  },
+  {
+   "skill": "which-skill",
+   "input": "My boss wants something on our competitors for the board next week \u2014 we have three main rivals and one of them just announced a pricing change. Which skill should I use?"
+  },
+  {
+   "skill": "autopilot-charter",
+   "input": "I am a solo PM. Every week I write a stakeholder update and a competitive briefing; every month a churn review. I also write performance feedback twice a year. My analytics are in Amplitude, competitor news I collect manually. What should I put on autopilot?"
+  },
+  {
+   "skill": "schedule-recipe",
+   "input": "I want a competitive briefing generated every Monday at 8am London time. I live in Claude Code and my notes are markdown files in a git repo. Output should land as a file in the repo under briefings/."
+  },
+  {
+   "skill": "delta-briefing",
+   "input": "Here is last week's competitor brief: Rival A shipped SSO (watching enterprise push), Rival B raised Series C, Rival C quiet. This week: Rival A announced SOC 2 and a Salesforce integration, Rival B did layoffs of 15%, Rival C still quiet. Write this week's edition."
+  },
+  {
+   "skill": "prompt-regression-suite",
+   "input": "Our support-reply drafter (Claude, JSON output with reply_text and category fields) broke twice: once it started replying in English to German tickets, once it leaked internal ticket IDs into replies. We tweak the prompt weekly. Design the regression suite."
+  },
+  {
+   "skill": "model-migration-plan",
+   "input": "We must move our summarisation feature off claude-3-5-sonnet (deprecated in 90 days) to claude-sonnet-4-6. 2M requests/month, output shown directly to end users, we have ~40 golden examples but no CI evals. Plan the migration."
+  },
+  {
+   "skill": "context-engineering-review",
+   "input": "Our RAG chatbot system prompt is 1,200 tokens, we inject the current date and user name at the top, then 20 retrieved chunks (about 6k tokens), then full chat history unbounded, then 14 tool definitions. Users say it ignores instructions late in conversations and our token bill doubled. Review the context."
+  },
+  {
+   "skill": "agent-incident-postmortem",
+   "input": "Yesterday our billing-support agent told ~30 customers they were eligible for a refund policy that does not exist. It cited a deprecated help-centre article that was still in the retrieval index. A customer posted it on X and support noticed 6 hours in. We have full traces. Write the postmortem."
+  },
+  {
+   "skill": "agent-observability-spec",
+   "input": "We are launching a tool-using research agent (search + internal wiki + email draft tools), about 50k requests/day, on Datadog. Biggest fears: it emailing the wrong thing, cost blowouts, and quality drifting after prompt changes. Spec the observability."
+  },
+  {
+   "skill": "outcome-tracker",
+   "input": "We just committed Q3 priorities off this RICE table: 1) Onboarding redesign, RICE 320, we claim activation goes 42%->55% by end of Q3. 2) SSO, RICE 210, we claim it unblocks 4 stalled enterprise deals (~$180k) within 60 days of ship. 3) Dark mode, RICE 90. I am 80% confident on onboarding, 60% on SSO. Record the predictions."
+  },
+  {
+   "skill": "whiteboard-to-spec",
+   "input": "Attached are two photos of our sprint-planning whiteboard from this afternoon (same board, left and right halves). The session was about the Q3 referral feature. Write it up before we all forget what the arrows meant."
+  },
+  {
+   "skill": "screenshot-teardown",
+   "input": "Attached: 4 screenshots of Rival A's new onboarding flow (signup, workspace setup, template picker, paywall). We are redesigning our own onboarding next sprint \u2014 what are they optimising for and what should we steal or avoid?"
+  },
+  {
+   "skill": "deck-autopsy",
+   "input": "Attached are photos of 12 slides from a competitor's Series B deck that leaked at a conference. We are pitching the same investors next month. What is their argument, where does it break, and what questions is the deck avoiding?"
+  },
+  {
+   "skill": "style-fingerprint",
+   "input": "Here are four things I actually wrote and shipped: two weekly exec updates, a launch announcement to the company, and a long Slack post about our pricing change. [samples pasted]. Learn my voice so the updates you draft stop sounding like a press release."
+  },
+  {
+   "skill": "evidence-lock",
+   "input": "Sources: our Q2 churn analysis, the pricing experiment readout, and 12 win/loss interview summaries [pasted]. Task: write the 'why we are changing pricing' section of the board memo in hard-lock mode \u2014 the CFO checks footnotes for sport."
+  },
+  {
+   "skill": "mcp-server-spec",
+   "input": "We are Invoicely, a B2B invoicing SaaS. Our REST API has 38 endpoints (CRUD for invoices, clients, payments, reminders, reports, webhooks, team members). Product wants an MCP server 'exposing the API to agents'. Riskiest actions: sending invoices to clients, issuing refunds, deleting records. Agents will act on behalf of individual users via OAuth. Spec it."
+  },
+  {
+   "skill": "agent-readiness-audit",
+   "input": "Audit our developer tool for agent readiness: docs are a JS-rendered Docusaurus site, no llms.txt, API keys require a sales call for anything above free tier, error responses are mostly generic 400s, signup has an image CAPTCHA, and we have no idea how much of our traffic is agents. Agents will mostly be asked to research us vs competitors and to onboard + send a first API request."
+  },
+  {
+   "skill": "agent-era-pricing",
+   "input": "Seat-based project tool, $18/seat/mo, 40k customers averaging 12 seats. Seat counts shrank 9% this year while API calls tripled - customers run agents that create/update tasks. Enterprise asks for 'agent pricing' weekly. Cost per seat ~$1.1/mo, per 1k API calls ~$0.04. Cohorts: 5-seat startup heavy automation, 40-seat mid-market light automation, 200-seat enterprise piloting agents. Design the migration."
+  },
+  {
+   "skill": "human-in-the-loop-design",
+   "input": "Our support agent can: draft replies, send replies, issue refunds up to $500, escalate tickets, edit customer records, and merge duplicate accounts. Volume: 900 drafts/day, 700 sends/day, 25 refunds/day, 10 merges/day. One team lead reviews everything today and is drowning - she approved 340 items yesterday without reading most. Design the loop."
+  },
+  {
+   "skill": "voice-agent-design",
+   "input": "Dental clinic chain, 40 locations. Phone traffic: appointment booking/rescheduling (55%), opening hours and directions (15%), insurance questions (12%), billing disputes (8%), emergencies (5%), other (5%). The agent can read/write the scheduling system and read the insurance FAQ. Humans available 8-6 weekdays; nothing after hours today. Design the voice agent."
+  },
+  {
+   "skill": "ai-roi-audit",
+   "input": "CFO wants an AI ROI audit before renewals. Spend: Copilot $390k/yr (2,100 seats, 61% weekly active), ChatGPT Enterprise $310k/yr (1,400 seats, 44% WAU), Claude $180k/yr (600 seats, 78% WAU), an AI meeting-notes tool $85k/yr (nobody is sure who uses it), API spend $220k/yr across 14 internal projects. Evidence available: engineering cycle time data, support handle times, and a lot of enthusiastic anecdotes. Renewal decisions due in 6 weeks."
+  },
+  {
+   "skill": "role-redesign-for-ai",
+   "input": "Our 6-person content team: writers spent ~60% of time drafting, 20% research, 20% editing/publishing. AI now produces first drafts for everything; writers report drafting time down to ~15% but they spend heavy time fixing AI output and say 'my job is babysitting a robot'. Leadership privately wants the same team to double output rather than cut heads, but has not said this to the team. Redesign the writer role."
+  },
+  {
+   "skill": "ai-usage-policy",
+   "input": "350-person fintech (we process card data, PCI scope, UK+EU customers). Reality: engineering uses Claude Code officially; sales and support paste customer emails into free ChatGPT accounts daily; legal wants a total ban; the CTO wants enablement with guardrails. We have enterprise agreements with Anthropic only. Write the policy."
+  },
+  {
+   "skill": "ai-assisted-performance-review",
+   "input": "I manage 8 backend engineers. Two adopted coding agents hard - their PR volume tripled but two incidents traced to unreviewed agent code they merged. Three use AI moderately. One senior refuses entirely on principle and now looks 'slow' on the dashboard but his code never breaks. Review season starts next month and my current rubric is 40% 'delivery velocity'. Help."
+  },
+  {
+   "skill": "ai-content-audit",
+   "input": "Our SaaS blog: 60 posts/yr handwritten until 2024, then an agency scaled us to 40 AI posts/month. 640 posts total now. Organic traffic peaked 8 months ago, down 35% since; several money pages lost rankings. Sample titles from the AI era: '10 Project Management Tips for 2026', 'What Is Workflow Automation? A Complete Guide', 'The Ultimate Guide to Team Productivity'. Audit and triage."
+  },
+  {
+   "skill": "ai-code-review",
+   "input": "Review this AI-authored PR (Claude wrote it, author says they 'skimmed it'): adds a rate limiter middleware to our Express API. The diff: a new RateLimiter class (180 lines) with a token bucket, its own LRU cache implementation (we already use lru-cache elsewhere), a config system with 9 options, tests that mock Date.now and assert the mock, one catch(e){} around the Redis call so 'it fails open', and a call to redis.expireat with a float timestamp. CI is green."
+  },
+  {
+   "skill": "synthetic-user-research",
+   "input": "PM wants to 'validate' our new pricing page with synthetic users before Thursday's launch decision: 'run 50 AI personas, see if they would buy the Pro tier at $49'. We have 22 real churn interviews, 400 support tickets, and analytics segments from the current page. Handle this request."
+  },
+  {
+   "skill": "async-decision-memo",
+   "input": "Decision needed by Friday: migrate our monorepo CI from Jenkins to GitHub Actions (est. 3 weeks of platform-team work, blocks the release-automation project). I recommend migrating. Must consult: the 4 platform engineers and the release manager (one platform engineer is strongly pro-Jenkins). Inform: all of engineering (60 people). Last infra decision died in a 200-comment thread. Set this up."
+  },
+  {
+   "skill": "brand-impersonation-response",
+   "input": "A TikTok account is running a deepfake video of our CEO announcing a 'customer appreciation crypto giveaway' linking to firmly-rewards.com (we are firmly.io) which asks users to connect wallets. Posted 4 days ago, 90k views, 3 customers have reported losing funds, our CEO found out an hour ago from a friend. Run the response."
+  },
+  {
+   "skill": "feature-sunset-plan",
+   "input": "Kill our built-in 'Forms' feature: 3.1% of workspaces use it, but that includes 2 enterprise accounts ($140k combined ARR) whose intake process runs on it, and one has Forms named in their contract. It costs us ~15% of one team plus a security-review burden every quarter. Replacement: our new Typeform integration covers ~80% of use cases but has no conditional logic. Data: 40k form submissions stored. Plan the sunset."
+  },
+  {
+   "skill": "interview-me",
+   "input": "Make me a dashboard for the leadership team. Interview me first."
+  },
+  {
+   "skill": "brainstorming",
+   "input": "Brainstorm ways to reduce no-shows for our B2B product demos (currently 38% no-show). We've already tried reminder emails. Budget exists but is not unlimited; sales team is 6 people."
+  },
+  {
+   "skill": "writing-plans",
+   "input": "Plan the migration of our marketing site from WordPress to a static site generator. Constraints: SEO rankings must not drop, the blog has 400 posts with weird embedded shortcodes, and marketing needs to keep publishing weekly throughout. I don't know yet whether the shortcodes can be auto-converted."
+  },
+  {
+   "skill": "executing-plans",
+   "input": "Here is the plan we agreed [migration plan with 6 steps, step 2 says 'verify shortcode converter handles all 400 posts']. I am starting execution now. Walk me through it \u2014 and step 2 just failed on 37 posts that use a custom pricing-table shortcode."
+  },
+  {
+   "skill": "verification-before-completion",
+   "input": "I've finished the competitive analysis doc the CEO asked for: 'compare us to the top 3 rivals on pricing, enterprise features, and support SLAs, keep it under 2 pages, and make it usable in Thursday's board meeting.' Here's my draft [draft is 4 pages, covers pricing and features for 2 rivals, no SLA section]. Verify before I send it."
+  },
+  {
+   "skill": "subagent-orchestration",
+   "input": "I need to research 5 competitors (pricing, recent launches, hiring signals), update 12 API endpoint docs to a new format, and write a summary memo. I have parallel subagents available. Orchestrate this \u2014 last time two agents both edited the same docs file and I got merge conflicts."
+  },
+  {
+   "skill": "incremental-implementation",
+   "input": "Replace our homegrown session-token auth with OAuth across a codebase where 23 call-sites use the old auth helper. It's load-bearing (production, 40k users). Previous attempt was one giant PR that got reverted after breaking password reset. Plan the increments."
+  },
+  {
+   "skill": "code-simplification",
+   "input": "This Claude-generated payment retry module works and has passing tests, but it's 600 lines: a RetryStrategy interface with one implementation, a config object with 11 options (we set 2), an event emitter with one subscriber, and a custom backoff calculator that duplicates a utility we already have in lib/time.ts. Simplify it."
+  },
+  {
+   "skill": "frontend-design",
+   "input": "Build the UI for a small internal tool: a table of 200 customer accounts with health scores, filters by segment, and a detail pane. It currently 'works but looks like a prototype' - default browser styles, five different paddings. Dense pro-tool register, our accent is #0E7C66. Vanilla HTML/CSS single file."
+  },
+  {
+   "skill": "brand-guidelines",
+   "input": "Extract a brand kit from our materials: [homepage screenshot shows dark navy background #0B1D3A, coral CTAs, Inter font, sentence-case headlines, airy spacing; the sales deck uses the same navy but title-case and cramped]. Then tell me which of the two conflicting styles should win and write the kit."
+  },
+  {
+   "skill": "cohort-curve-model",
+   "input": "Our monthly cohorts retain like this on average: month 0 100%, m1 58%, m2 44%, m3 38%, m4 35%, m5 33%. ARPU is $12/month. What LTV does this actually imply, and is retention flattening?"
+  },
+  {
+   "skill": "runway-monte-carlo",
+   "input": "We have $1.8M in the bank, burning about $150k/month gross (it swings maybe 15% month to month), $30k MRR growing ~4%/month but lumpy. When do we realistically need to start the raise?"
+  },
+  {
+   "skill": "pricing-sensitivity-model",
+   "input": "We ran the four-question pricing survey with 32 valid responses (attached as survey.json: too_cheap mostly $4-8, cheap $8-14, expensive $16-24, too_expensive $25-40). What price range can we defend, and what should the plan page cost?"
+  }
+ ]
 }
