@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-451 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+454 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -84,6 +84,7 @@
 | Code Review Guide | `pm-craft` | `pm-craft/code-review-guide/SYSTEM_PROMPT.md` |
 | Code Simplification | `pm-method` | `pm-method/code-simplification/SYSTEM_PROMPT.md` |
 | Cohort Analysis | `pm-data` | `pm-data/cohort-analysis/SYSTEM_PROMPT.md` |
+| Cohort Curve Model | `pm-calculators` | `pm-calculators/cohort-curve-model/SYSTEM_PROMPT.md` |
 | Cold Email | `pm-copy` | `pm-copy/cold-email/SYSTEM_PROMPT.md` |
 | Collections Email | `pm-accounting` | `pm-accounting/collections-email/SYSTEM_PROMPT.md` |
 | Community Management Playbook | `pm-social` | `pm-social/community-management-playbook/SYSTEM_PROMPT.md` |
@@ -305,6 +306,7 @@
 | Press Release | `pm-cross` | `pm-cross/press-release/SYSTEM_PROMPT.md` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/SYSTEM_PROMPT.md` |
 | Pricing Page Copy | `pm-pmm` | `pm-pmm/pricing-page-copy/SYSTEM_PROMPT.md` |
+| Pricing Sensitivity Model (Van Westendorp) | `pm-calculators` | `pm-calculators/pricing-sensitivity-model/SYSTEM_PROMPT.md` |
 | Pricing Strategy | `pm-planning` | `pm-planning/pricing-strategy/SYSTEM_PROMPT.md` |
 | Prior Authorization Letter | `pm-health` | `pm-health/prior-authorization-letter/SYSTEM_PROMPT.md` |
 | Privacy Policy Drafter | `pm-legal` | `pm-legal/privacy-policy-drafter/SYSTEM_PROMPT.md` |
@@ -368,6 +370,7 @@
 | Rubric Builder | `pm-education` | `pm-education/rubric-builder/SYSTEM_PROMPT.md` |
 | Runbook Writer | `pm-engineering` | `pm-engineering/runbook-writer/SYSTEM_PROMPT.md` |
 | Runway Calculator | `pm-calculators` | `pm-calculators/runway-calculator/SYSTEM_PROMPT.md` |
+| Runway Monte Carlo | `pm-calculators` | `pm-calculators/runway-monte-carlo/SYSTEM_PROMPT.md` |
 | Runway Planner | `pm-founders` | `pm-founders/runway-planner/SYSTEM_PROMPT.md` |
 | SaaS Metrics | `pm-calculators` | `pm-calculators/saas-metrics/SYSTEM_PROMPT.md` |
 | Salary Negotiation | `pm-career` | `pm-career/salary-negotiation/SYSTEM_PROMPT.md` |

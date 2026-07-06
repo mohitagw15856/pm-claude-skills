@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-451 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+454 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -84,6 +84,7 @@
 | Code Review Guide | `pm-craft` | `pm-craft/code-review-guide/GEM_INSTRUCTIONS.md` |
 | Code Simplification | `pm-method` | `pm-method/code-simplification/GEM_INSTRUCTIONS.md` |
 | Cohort Analysis | `pm-data` | `pm-data/cohort-analysis/GEM_INSTRUCTIONS.md` |
+| Cohort Curve Model | `pm-calculators` | `pm-calculators/cohort-curve-model/GEM_INSTRUCTIONS.md` |
 | Cold Email | `pm-copy` | `pm-copy/cold-email/GEM_INSTRUCTIONS.md` |
 | Collections Email | `pm-accounting` | `pm-accounting/collections-email/GEM_INSTRUCTIONS.md` |
 | Community Management Playbook | `pm-social` | `pm-social/community-management-playbook/GEM_INSTRUCTIONS.md` |
@@ -305,6 +306,7 @@
 | Press Release | `pm-cross` | `pm-cross/press-release/GEM_INSTRUCTIONS.md` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/GEM_INSTRUCTIONS.md` |
 | Pricing Page Copy | `pm-pmm` | `pm-pmm/pricing-page-copy/GEM_INSTRUCTIONS.md` |
+| Pricing Sensitivity Model (Van Westendorp) | `pm-calculators` | `pm-calculators/pricing-sensitivity-model/GEM_INSTRUCTIONS.md` |
 | Pricing Strategy | `pm-planning` | `pm-planning/pricing-strategy/GEM_INSTRUCTIONS.md` |
 | Prior Authorization Letter | `pm-health` | `pm-health/prior-authorization-letter/GEM_INSTRUCTIONS.md` |
 | Privacy Policy Drafter | `pm-legal` | `pm-legal/privacy-policy-drafter/GEM_INSTRUCTIONS.md` |
@@ -368,6 +370,7 @@
 | Rubric Builder | `pm-education` | `pm-education/rubric-builder/GEM_INSTRUCTIONS.md` |
 | Runbook Writer | `pm-engineering` | `pm-engineering/runbook-writer/GEM_INSTRUCTIONS.md` |
 | Runway Calculator | `pm-calculators` | `pm-calculators/runway-calculator/GEM_INSTRUCTIONS.md` |
+| Runway Monte Carlo | `pm-calculators` | `pm-calculators/runway-monte-carlo/GEM_INSTRUCTIONS.md` |
 | Runway Planner | `pm-founders` | `pm-founders/runway-planner/GEM_INSTRUCTIONS.md` |
 | SaaS Metrics | `pm-calculators` | `pm-calculators/saas-metrics/GEM_INSTRUCTIONS.md` |
 | Salary Negotiation | `pm-career` | `pm-career/salary-negotiation/GEM_INSTRUCTIONS.md` |

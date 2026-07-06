@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-451 skills exported. Copy a `.mdc rule` into the tool to use it.
+454 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -84,6 +84,7 @@
 | Code Review Guide | `pm-craft` | `pm-craft/code-review-guide/code-review-guide.md` |
 | Code Simplification | `pm-method` | `pm-method/code-simplification/code-simplification.md` |
 | Cohort Analysis | `pm-data` | `pm-data/cohort-analysis/cohort-analysis.md` |
+| Cohort Curve Model | `pm-calculators` | `pm-calculators/cohort-curve-model/cohort-curve-model.md` |
 | Cold Email | `pm-copy` | `pm-copy/cold-email/cold-email.md` |
 | Collections Email | `pm-accounting` | `pm-accounting/collections-email/collections-email.md` |
 | Community Management Playbook | `pm-social` | `pm-social/community-management-playbook/community-management-playbook.md` |
@@ -305,6 +306,7 @@
 | Press Release | `pm-cross` | `pm-cross/press-release/press-release.md` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/pricing-calculator.md` |
 | Pricing Page Copy | `pm-pmm` | `pm-pmm/pricing-page-copy/pricing-page-copy.md` |
+| Pricing Sensitivity Model (Van Westendorp) | `pm-calculators` | `pm-calculators/pricing-sensitivity-model/pricing-sensitivity-model.md` |
 | Pricing Strategy | `pm-planning` | `pm-planning/pricing-strategy/pricing-strategy.md` |
 | Prior Authorization Letter | `pm-health` | `pm-health/prior-authorization-letter/prior-authorization-letter.md` |
 | Privacy Policy Drafter | `pm-legal` | `pm-legal/privacy-policy-drafter/privacy-policy-drafter.md` |
@@ -368,6 +370,7 @@
 | Rubric Builder | `pm-education` | `pm-education/rubric-builder/rubric-builder.md` |
 | Runbook Writer | `pm-engineering` | `pm-engineering/runbook-writer/runbook-writer.md` |
 | Runway Calculator | `pm-calculators` | `pm-calculators/runway-calculator/runway-calculator.md` |
+| Runway Monte Carlo | `pm-calculators` | `pm-calculators/runway-monte-carlo/runway-monte-carlo.md` |
 | Runway Planner | `pm-founders` | `pm-founders/runway-planner/runway-planner.md` |
 | SaaS Metrics | `pm-calculators` | `pm-calculators/saas-metrics/saas-metrics.md` |
 | Salary Negotiation | `pm-career` | `pm-career/salary-negotiation/salary-negotiation.md` |

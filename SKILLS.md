@@ -1,4 +1,4 @@
-# 🗂️ All 451 Skills — full catalog
+# 🗂️ All 454 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -414,7 +414,7 @@
 | **Support Macro** (`support-macro`) | Write reusable support macros / canned responses that sound human, not robotic. | — |
 | **Support Runbook** (`support-runbook`) | Write a support runbook for handling a recurring issue type consistently. | — |
 
-## 💰 Finance, Ops & Business (54 skills)
+## 💰 Finance, Ops & Business (57 skills)
 
 ### `pm-accounting` — 6 skills
 
@@ -440,13 +440,16 @@
 | **Job Application** (`job-application`) | Tailors a CV and cover letter to a specific job description. | ✅ 5/5 |
 | **Strategy Memo** (`strategy-memo`) | Write a strategy memo that commits to a bet and says what you won't do. | — |
 
-### `pm-calculators` — 5 skills
+### `pm-calculators` — 8 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Cohort Curve Model** (`cohort-curve-model`) | Fit a retention curve to observed cohort data and project LTV — computed, not estimated. | — |
 | **Pricing Calculator** (`pricing-calculator`) | Model pricing scenarios — tiers, margins, break-even, and the revenue impact of a price change. | — |
+| **Pricing Sensitivity Model (Van Westendorp)** (`pricing-sensitivity-model`) | Van Westendorp price sensitivity, computed from real survey answers — crossings found by interpolation, not read off a chart by eye. | — |
 | **ROI Estimator** (`roi-estimator`) | Estimate the ROI, payback, and NPV of an investment, project, or purchase. | — |
 | **Runway Calculator** (`runway-calculator`) | Calculate cash runway, burn, and the zero-cash date — and whether you're default alive or dead. | — |
+| **Runway Monte Carlo** (`runway-monte-carlo`) | Cash runway as a distribution, not a number — Monte Carlo simulated. | — |
 | **SaaS Metrics** (`saas-metrics`) | Compute the core SaaS metrics — MRR/ARR, growth, NRR/GRR, churn, quick ratio, magic number — from your numbers. | — |
 | **Unit Economics** (`unit-economics`) | Model the unit economics of a business — CAC, LTV, payback, contribution margin — from real inputs. | — |
 
@@ -804,4 +807,4 @@
 
 ---
 
-_451 skills across 65 bundles · 208 eval-scored (46%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_454 skills across 65 bundles · 208 eval-scored (46%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
