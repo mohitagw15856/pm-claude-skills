@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>Your First 90 Days — the campaign. One story, every arena.</title>
+<meta name="description" content="Campaign mode: you're the new head of product at Relay, a Series A freight-analytics startup. Eight chapters over ninety fictional days route you through every arena — the Academy, the Gym, the Panel, the Boardroom — and your real scores write the story: the renewal you save (or lose), the hire you make (or get fooled by), the board meeting at the end. Progress saves locally." />
+<link rel="stylesheet" href="styles.css" />
+<script src="export-doc.js"></script>
+<style>
+  .c-wrap { max-width: 860px; margin: 0 auto; padding: 16px 22px 70px; }
+  .lead { color: #c7cfda; font-size: 15.5px; }
+  .timeline { display: flex; gap: 6px; margin: 18px 0; flex-wrap: wrap; }
+  .day { flex: 1; min-width: 86px; text-align: center; padding: 8px 6px; border-radius: 11px; border: 1px solid var(--border); background: var(--panel); font-size: 11.5px; color: var(--muted); cursor: pointer; }
+  .day.done { border-color: #5ad19a; color: #5ad19a; }
+  .day.live { border-color: var(--accent); color: var(--text); background: rgba(217,119,87,.1); font-weight: 700; }
+  .day.locked { opacity: .45; cursor: default; }
+  .story { border: 1px solid var(--border); border-radius: 15px; background: var(--panel); padding: 22px 26px; margin: 16px 0; font-size: 14.8px; line-height: 1.66; }
+  .story .kick { font-size: 11.5px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; }
+  .story h2 { margin: 0 0 14px; font-size: 21px; }
+  .story p { margin: 10px 0; }
+  .story .said { border-left: 3px solid var(--accent); padding: 2px 0 2px 14px; margin: 12px 0; color: #dfe5ec; font-style: italic; }
+  .story .who { display: block; font-style: normal; font-size: 11.5px; color: var(--muted); margin-top: 3px; }
+  .mission { border: 1.5px solid var(--accent); border-radius: 14px; background: linear-gradient(180deg, rgba(217,119,87,.09), transparent 60%), var(--panel); padding: 16px 20px; margin: 16px 0; }
+  .mission h3 { margin: 0 0 8px; font-size: 15.5px; }
+  .mission .brief { font-size: 13.6px; line-height: 1.55; }
+  .mission .brief code { background: rgba(217,119,87,.12); padding: 1px 6px; border-radius: 5px; font-size: 12.5px; }
+  .mbar { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; align-items: center; }
+  .mbar a.primary { text-decoration: none; padding: 10px 16px; border-radius: 11px; display: inline-block; }
+  .epilogue { border-left: 3px solid #5ad19a; padding: 4px 0 4px 16px; margin: 14px 0; color: #cfe8da; font-size: 13.8px; line-height: 1.6; }
+  .status-note { font-size: 12.5px; color: var(--muted); }
+  .verdictpick { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+  .hidden { display: none !important; }
+  .fin { text-align: center; padding: 26px; }
+  .fin h2 { font-size: 26px; }
+  .dossier { text-align: left; display: inline-block; margin: 14px auto; font-size: 13.8px; line-height: 1.7; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Your First 90 Days</h1><p class="tagline">One story, every arena. Your real scores write the ending.</p></div></div>
+  <button id="reset" class="ghost" type="button" title="Abandon this run and start over">↻ New game</button>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<div class="c-wrap">
+  <p class="lead">You've just been hired as the first Head of Product at <strong>Relay</strong> — a Series A freight-analytics startup with real revenue, a tired engineering team, and a board meeting in ninety days. The campaign routes you through the real arenas; what you score there becomes what happens here. <strong>Saves locally. No key needed to play; missions use whatever the arena needs.</strong></p>
+  <div class="timeline" id="timeline"></div>
+  <div id="stage"></div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+const ls=(k,d)=>{ try{ return JSON.parse(localStorage.getItem(k)) ?? d; }catch(_){ return d; } };
+const esc=(s)=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+
+// ── Detection probes: what the arenas leave in this browser ───────────────────
+const probes = {
+  academy(){ const p=ls('pm_academy',{}); return Object.values(p).reduce((n,t)=>n+Object.keys(t.answers||{}).length,0); },
+  runs(){ return (ls('pm_workspace',[])||[]).length; },
+  gym(){ const g=ls('pm_gym_scores',{})||{}; return Object.values(g).flat().length; },
+  gymLast(){ const g=ls('pm_gym_scores',{})||{}; const a=Object.values(g).flat().sort((x,y)=>x.d-y.d); return a.length?a[a.length-1].s:null; },
+  panel(){ return (ls('pm_panel_runs',[])||[]).length; },
+  panelLast(){ const p=ls('pm_panel_runs',[])||[]; return p.length?p[p.length-1]:null; },
+  preds(){ return (ls('pm_reckoning',[])||[]).length + ((ls('pm_firm',{})||{}).preds||[]).length; },
+  daily(){ return (ls('pm_daily_streak',{})||{}).total||0; },
+};
+const rightCall=(p)=>((p.arch==='strong')===/^(strong )?hire$/.test(p.call||''));
+
+// ── The campaign ──────────────────────────────────────────────────────────────
+// Each chapter: story(o) → html, mission, probe key + completion test against the
+// baseline snapshot, outcome(o) capture, epilogue(o) → html using captured outcomes.
+const CH=[
+{ id:'d1', day:'Day 1', title:'The badge works, nobody briefed you',
+  story:(o)=>`<p>Relay's office is four rooms above a shuttered gym. Priya Nair — CEO, ex-operator, allergic to slides — hands you a laptop with the sticker still on it.</p>
+  <div class="said">"Three PMs in two years. Tomas thinks product managers are a tax. Prove him wrong by Friday, or agree with him by March."<span class="who">— Priya Nair, CEO</span></div>
+  <p>Tomas Okafor (CTO, co-founder, writes Go and eulogies for dead roadmaps) doesn't look up when you pass. On your desk: a churn report nobody has opened and a sticky note that says <em>"ask Jules about Meridian"</em>.</p>
+  <p>Before you touch anything, you drill. You know how this goes when people skip the fundamentals.</p>`,
+  mission:{arena:'academy.html',name:'The Academy',brief:'Complete at least <b>4 drills</b> in any Academy track. The work-discipline track is what Day 1 at Relay actually needs.'},
+  probe:'academy', need:(base,now)=>now>=base+4,
+  outcome:(o,base,now)=>{o.drills=now;},
+  epilogue:()=>`You spend the afternoon with the library's anti-patterns instead of writing a 30-60-90 deck nobody asked for. Tomas notices you <em>didn't</em> schedule a meeting. It registers as a point in your favour. Small, but real.` },
+
+{ id:'w1', day:'Week 1', title:'The backlog is a haunted house',
+  story:()=>`<p>Jules Marchetti (Head of Sales, closes like weather changes) has promised four different customers four different dashboards. The "roadmap" is a Slack thread with 340 replies. Wren, your only designer, has started signing their mockups <em>"probably won't ship anyway."</em></p>
+  <div class="said">"I don't need a strategy deck. I need to know what we are NOT building, in writing, by Monday."<span class="who">— Tomas Okafor, CTO</span></div>
+  <p>Time to produce an actual artifact. Take Relay's mess to the playground and run it through a real skill.</p>`,
+  mission:{arena:'index.html',name:'the Playground',brief:'Run any skill on Relay\'s situation — <code>prd-template</code> on "a unified analytics dashboard for freight brokers", or <code>interview-me</code> to sharpen the brief first. <b>1 saved run</b> completes the mission (runs save automatically).'},
+  probe:'runs', need:(base,now)=>now>base,
+  outcome:(o,base,now)=>{o.artifact=true;},
+  epilogue:()=>`Monday, 9:04am: your one-pager is in #product. By noon, Jules has forwarded it to a customer as "our vision" (fine), and Tomas has replied with a single word he has never before typed to a PM: <em>"workable."</em>` },
+
+{ id:'w2', day:'Week 2', title:'Meridian wants to leave',
+  story:()=>`<p>The sticky note bill comes due. <strong>Meridian Freight</strong> — 18% of ARR, your logo slide's crown jewel — has a renewal call this week, and their new VP Ops thinks Relay is "a reporting tool we outgrew."</p>
+  <div class="said">"They asked for a 40% discount and a custom integration. I said you'd handle it. You will, right?"<span class="who">— Jules Marchetti, Head of Sales</span></div>
+  <p>Priya can't be on the call. It's you against their procurement lead, who has done this a hundred times more than you have.</p>`,
+  mission:{arena:'gym.html',name:'The Gym',brief:'Fight <b>one negotiation</b> — the renewal/customer scenario is the fiction match, but any counts. Your score writes Meridian\'s fate: <b>20+/40 saves the account.</b>'},
+  probe:'gym', need:(base,now)=>now>base,
+  outcome:(o,base,now)=>{o.gymScore=probes.gymLast();},
+  epilogue:(o)=>o.gymScore>=20
+    ?`Final score ${o.gymScore}/40. Meridian renews — smaller discount than Jules promised, integration scoped as paid work. Priya forwards the news to the board with the subject line "keep." You've bought yourself standing.`
+    :`Final score ${o.gymScore??'—'}/40. It wasn't enough. Meridian churns at the end of the month — 18% of ARR walking out the door with a polite email. Priya doesn't blame you in public. The board meeting in Week 12 just got much harder.` },
+
+{ id:'w4', day:'Week 4', title:'The roadmap faces the room',
+  story:(o)=>`<p>${o.gymScore>=20?'With Meridian safe, you':'With the Meridian hole in the forecast, you'} finally write the thing everyone's been fighting about: one roadmap, three bets, a kill-list of everything else. Wren makes it beautiful. Jules calls it "brave," which from sales is not a compliment.</p>
+  <div class="said">"Bring it Thursday. Everyone senior will be there. If it survives the room, it ships."<span class="who">— Priya Nair, CEO</span></div>`,
+  mission:{arena:'boardroom.html',name:'the Boardroom',brief:'Paste your roadmap — a real one, or Relay\'s three-bets one-pager you write for this — and <b>survive the bench</b>. Report the Chair\'s verdict honestly below (the campaign trusts your report; it\'s practice, not a leaderboard).',verdictPick:true},
+  probe:'runs', need:()=>false,
+  outcome:()=>{},
+  epilogue:(o)=>({green:`The bench signs off. Tomas — TOMAS — says "I'd build this." The roadmap goes on the wall, literally, taped next to the coffee machine where strategy actually lives.`,
+    yellow:`Survivable. The CFO archetype found the soft cost estimates, and she was right. You repair the numbers over the weekend; the roadmap ships Monday with fewer adjectives and better math.`,
+    red:`It doesn't survive. Three blocking objections, two of them fair. It stings — and it's the cheapest way you'll ever learn that lesson. The rewrite is sharper than anything you'd have gotten to alone.`}[o.roadmapVerdict||'yellow']) },
+
+{ id:'w6', day:'Week 6', title:'Headcount: one. Choose wisely.',
+  story:()=>`<p>The board pre-approved one senior product hire. Forty applications. Three finalists on paper so similar they could be the same person. Priya's calendar is full; the final round is yours alone.</p>
+  <div class="said">"Our last 'senior' hire interviewed brilliantly and shipped nothing for six months. I still don't know how I missed it. Don't you miss it."<span class="who">— Priya Nair, CEO</span></div>`,
+  mission:{arena:'hiring.html',name:'The Panel',brief:'Interview <b>one candidate</b> and make your call. The archetype you face — and whether you read them right — writes what happens at Relay in Week 10.'},
+  probe:'panel', need:(base,now)=>now>base,
+  outcome:(o)=>{const p=probes.panelLast(); if(p){o.hire={arch:p.arch,call:p.call,right:rightCall(p),score:p.score};}},
+  epilogue:(o)=>!o.hire?``:o.hire.right
+    ?(o.hire.arch==='strong'
+      ?`You said ${esc(o.hire.call)} — and they were the real thing. Sam starts in two weeks. In their first standup they quietly fix a metric definition that's been wrong for a year. Tomas allocates them commit rights early, his highest honour.`
+      :`You caught it. The polish, the "we" that never became "I", the metric that changed sizes between answers — you saw through it and passed. Priya reads your interview notes and says "this is what I couldn't articulate about the last one."`)
+    :(o.hire.arch==='strong'
+      ?`You passed on them — and they were real. Three weeks later they ship something great at a competitor. Recruiting is probabilistic; this one hurts anyway. The req reopens.`
+      :`You said ${esc(o.hire.call)}. Week 10 will remember that the candidate's stories never quite added up — because at Relay, they still don't. The hire is already "between deliverables."`) },
+
+{ id:'w8', day:'Week 8', title:'On the record',
+  story:(o)=>`<p>${o.hire&&o.hire.right?'The new hire is landing well, and the':'The'} numbers for the board meeting are taking shape. Priya wants more than a status deck — she wants <em>calls</em>.</p>
+  <div class="said">"Anyone can present a dashboard. I want to know what you think happens NEXT — in writing, with a number on it, so in Q3 we know if we should trust your instincts or audit them."<span class="who">— Priya Nair, CEO</span></div>
+  <p>This is how calibration gets built: in public, with dates.</p>`,
+  mission:{arena:'reckoning.html',name:'The Reckoning',brief:'Record <b>2 predictions</b> about anything real — your product, your market, Relay\'s fiction — each with a confidence and a due date. The ledger keeps score from now on.'},
+  probe:'preds', need:(base,now)=>now>=base+2,
+  outcome:(o,base,now)=>{o.onRecord=now-base;},
+  epilogue:(o)=>`${o.onRecord} calls on the record, confidences attached. Priya reads them and doesn't comment — which you learn later means she's saving them for your review. Good. That's what they're for.` },
+
+{ id:'w10', day:'Week 10', title:'The grind is the job',
+  story:(o)=>`<p>${o.hire&&!o.hire.right&&o.hire.arch!=='strong'?'The bad hire finally exits — two weeks of severance and a lesson that cost a quarter. Meanwhile the':'The'} board meeting is twelve days out. There's no big move left to make; there's only the daily practice that separates people who peaked from people who compound.</p>
+  <div class="said">"You know what I like about you? Week one, you drilled. Week ten, you're still drilling. The last three treated learning like an onboarding phase."<span class="who">— Tomas Okafor, CTO</span></div>`,
+  mission:{arena:'daily.html',name:'the Daily Challenge',brief:'Complete <b>1 daily challenge</b> (or another Academy track if you\'re bingeing). Compounding is the mission.'},
+  probe:'daily', need:(base,now)=>now>base,
+  outcome:()=>{},
+  epilogue:()=>`Practice logged. Somewhere in the repetition, the skills stop being tools you reach for and start being how you think. That's the thing no deck can show a board — and the thing they can always smell.` },
+
+{ id:'d90', day:'Day 90', title:'The board meeting',
+  story:(o)=>{
+    const arr=[];
+    arr.push(`<p>Ninety days. The board files into the good conference room — the one with the whiteboard nobody's allowed to erase.</p>`);
+    arr.push(o.gymScore>=20?`<p>Meridian's logo is still on slide 4, renewed, and everyone in the room knows who kept it there.</p>`:`<p>There's a gap on slide 4 where Meridian's logo used to be. You own it in the first minute — the only move that works.</p>`);
+    if(o.hire&&o.hire.right) arr.push(`<p>Your hire sits in on the product section. The board notices the bench strength. Boards always notice bench strength.</p>`);
+    arr.push(`<div class="said">"Ninety days ago I told you to prove Tomas wrong. Go ahead."<span class="who">— Priya Nair, CEO</span></div>`);
+    return arr.join('');
+  },
+  mission:{arena:'boardroom.html',name:'the Boardroom (🦈 fundraising bench)',brief:'Take your 90-day story — the real artifacts you made in this campaign, or your own document — into the Boardroom with the <b>fundraising bench preset</b>. Report the verdict. This is the finale.',verdictPick:true,verdictKey:'boardVerdict'},
+  probe:'runs', need:()=>false,
+  outcome:()=>{},
+  epilogue:()=>`` },
+];
+
+// ── Save / state ──────────────────────────────────────────────────────────────
+let S=ls('pm_campaign',null)||{started:new Date().toISOString().slice(0,10),ch:0,base:{},o:{},done:[]};
+const save=()=>localStorage.setItem('pm_campaign',JSON.stringify(S));
+function ensureBaseline(i){
+  const c=CH[i];
+  if(S.base[c.id]===undefined){ S.base[c.id]=probes[c.probe](); save(); }
+}
+
+// ── Render ────────────────────────────────────────────────────────────────────
+function render(){
+  el('timeline').innerHTML=CH.map((c,i)=>{
+    const cls=i<S.ch?'done':i===S.ch?'live':'locked';
+    return '<div class="day '+cls+'" data-i="'+i+'">'+(i<S.ch?'✓ ':'')+c.day+'</div>';
+  }).join('');
+  document.querySelectorAll('.day.done').forEach(d=>d.addEventListener('click',()=>showChapter(+d.dataset.i,true)));
+  if(S.ch>=CH.length) return finale();
+  showChapter(S.ch,false);
+}
+function showChapter(i,readonly){
+  const c=CH[i]; ensureBaseline(i);
+  let h='<div class="story"><div class="kick">'+c.day+' at Relay</div><h2>'+c.title+'</h2>'+c.story(S.o)+'</div>';
+  if(readonly){
+    h+='<div class="epilogue">'+(typeof c.epilogue==='function'?c.epilogue(S.o):'')+'</div>';
+    h+='<div class="mbar"><button class="ghost" id="backLive" type="button">→ Back to '+CH[Math.min(S.ch,CH.length-1)].day+'</button></div>';
+    el('stage').innerHTML=h;
+    const b=el('backLive'); if(b) b.addEventListener('click',()=>render());
+    return;
+  }
+  h+='<div class="mission"><h3>🎯 Mission — '+c.mission.name+'</h3><div class="brief">'+c.mission.brief+'</div><div class="mbar">'+
+     '<a class="primary" href="'+c.mission.arena+'" target="_blank" rel="opener">Open '+c.mission.name+' ↗</a>';
+  if(c.mission.verdictPick){
+    h+='</div><div class="verdictpick"><span class="status-note">The Chair said:</span>'+
+       '<button class="ghost" data-v="green" type="button">🟢 proceed</button><button class="ghost" data-v="yellow" type="button">🟡 with repairs</button><button class="ghost" data-v="red" type="button">🔴 not ready</button></div>';
+  } else {
+    h+='<button class="primary" id="check" type="button">I\'m back — check my progress</button><span class="status-note" id="cnote"></span></div>';
+  }
+  h+='</div>';
+  el('stage').innerHTML=h;
+  const chk=el('check');
+  if(chk) chk.addEventListener('click',()=>{
+    const base=S.base[c.id], now=probes[c.probe]();
+    if(c.need(base,now)){ complete(i,base,now); }
+    else el('cnote').textContent='Not yet — the arena hasn\'t recorded it. ('+c.mission.name+' saves automatically when you finish.)';
+  });
+  document.querySelectorAll('.verdictpick button').forEach(b=>b.addEventListener('click',()=>{
+    S.o[c.mission.verdictKey||'roadmapVerdict']=b.dataset.v; complete(i,0,0);
+  }));
+}
+function complete(i,base,now){
+  const c=CH[i];
+  c.outcome(S.o,base,now);
+  S.done.push(c.id); S.ch=i+1; save();
+  if(window.pmTrack) pmTrack('campaign/chapter/'+c.id);
+  if(S.ch>=CH.length) return finale();
+  // show the epilogue, then a continue button
+  const ep=typeof c.epilogue==='function'?c.epilogue(S.o):'';
+  el('stage').innerHTML='<div class="story"><div class="kick">'+c.day+' — resolved</div><h2>'+c.title+'</h2>'+
+    (ep?'<div class="epilogue">'+ep+'</div>':'')+
+    '<div class="mbar"><button class="primary" id="next" type="button">Continue → '+CH[S.ch].day+'</button></div></div>';
+  el('next').addEventListener('click',render);
+  el('timeline').querySelectorAll('.day').forEach((d,j)=>{d.className='day '+(j<S.ch?'done':j===S.ch?'live':'locked');});
+}
+function finale(){
+  const o=S.o;
+  const wins=[o.gymScore>=20?'Saved the Meridian renewal ('+o.gymScore+'/40)':null,
+    o.hire&&o.hire.right?'Read the '+o.hire.arch+' candidate correctly':null,
+    o.onRecord?o.onRecord+' predictions on the record':null,
+    {green:'Board verdict: 🟢 proceed',yellow:'Board verdict: 🟡 proceed with repairs',red:'Board verdict: 🔴 — and survived it'}[o.boardVerdict]||null].filter(Boolean);
+  const scars=[o.gymScore!==undefined&&o.gymScore<20?'Lost Meridian (the scar that teaches)':null,
+    o.hire&&!o.hire.right?'The hiring miss':null].filter(Boolean);
+  const ending=o.boardVerdict==='green'
+    ?'Priya doesn\'t say "you proved him wrong." She says something better: <em>"same time next quarter."</em> Tomas shakes your hand. It\'s a firm, brief, deeply earned handshake.'
+    :o.boardVerdict==='red'
+    ?'The board is hard on the plan and — you notice — not on you. There\'s a difference, and surviving ninety days at Relay taught you to hear it. The plan gets rebuilt. You stay.'
+    :'The board asks hard questions and gets straight answers, some of them "I don\'t know yet, here\'s the date I will." Which, it turns out, is what competence sounds like.';
+  el('stage').innerHTML='<div class="story fin"><div class="kick">Day 90 · after the meeting</div><h2>🏁 The end of the beginning</h2>'+
+    '<p>'+ending+'</p>'+
+    '<div class="dossier"><b>Your 90 days:</b><br/>'+wins.map(w=>'✅ '+w).join('<br/>')+(scars.length?'<br/>'+scars.map(s=>'⚔️ '+s).join('<br/>'):'')+'</div>'+
+    '<div class="mbar" style="justify-content:center"><button class="primary" id="cert" type="button">🎓 Certificate (PDF)</button><button class="ghost" id="again" type="button">↻ Run it again (new outcomes)</button></div></div>';
+  el('timeline').querySelectorAll('.day').forEach(d=>d.className='day done');
+  el('cert').addEventListener('click',()=>{
+    const name=(prompt('Name on the certificate (blank to leave it off):','')||'').trim();
+    PMExport.certificate({kind:'PM Skills · The Campaign',headline:'Survived the First 90 Days',
+      name:name||null,score:wins.length+'/'+(wins.length+scars.length)+' arcs won',
+      level:'Head of Product, Relay (fictional) — every arena, one story',
+      details:wins.concat(scars.map(s=>'and carried: '+s)).slice(0,4)});
+    if(window.pmTrack) pmTrack('campaign/certificate');
+  });
+  el('again').addEventListener('click',()=>{ if(confirm('Abandon this run and start Day 1 fresh?')){ localStorage.removeItem('pm_campaign'); location.reload(); } });
+  if(window.pmTrack) pmTrack('campaign/finale');
+}
+el('reset').addEventListener('click',()=>{ if(confirm('Abandon this run and start Day 1 fresh?')){ localStorage.removeItem('pm_campaign'); location.reload(); } });
+render();
+if(window.pmTrack) pmTrack('campaign/open');
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

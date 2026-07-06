@@ -145,6 +145,21 @@ const PAGES = [
       if ((await p.locator('.card').count()) < 1) throw new Error('no cards rendered');
       if (!(await p.locator('.card.on').textContent()).includes('Nothing here yet')) throw new Error('empty state missing');
     } },
+  { url: 'campaign.html', async check(p) {
+      if ((await p.locator('.day').count()) !== 8) throw new Error('expected 8 chapters');
+      // false-completion guard: check-progress with no arena data must not advance
+      await p.click('#check'); await p.waitForTimeout(200);
+      if (!/not yet/i.test(await p.locator('#cnote').textContent())) throw new Error('completion guard missing');
+    } },
+  { url: 'reckoning.html', async check(p) {
+      await p.fill('#ptext', 'Activation exceeds fifty percent by end of Q3');
+      await p.click('#padd'); await p.waitForTimeout(200);
+      if ((await p.locator('#openList .pred').count()) < 1) throw new Error('prediction not recorded');
+    } },
+  { url: 'handbook.html', settle: 2500, async check(p) {
+      if ((await p.locator('h3.skill-h').count()) < 40) throw new Error('craft chapters did not render');
+      if ((await p.locator('.alm-skill').count()) < 400) throw new Error('almanac did not render');
+    } },
   { url: 'canvas.html' }, { url: 'agent.html' }, { url: 'studio.html' },
   { url: 'brain.html' }, { url: 'ask.html' }, { url: 'daily.html' },
   { url: 'jobs.html' }, { url: 'hub.html' }, { url: 'grade.html' },
