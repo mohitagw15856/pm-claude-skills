@@ -68,3 +68,7 @@ The skill supplies the *structure*; the other server supplies the *facts*. In th
 ## How it works
 
 Pure Node standard library, MCP stdio transport (newline-delimited JSON-RPC 2.0). It reads the bundled `skills/` at startup and serves them in-memory; all logging goes to stderr so it never corrupts the protocol stream. No network, no data leaves your machine.
+
+## Frontier: MCP Apps
+
+The MCP spec is gaining **interactive UI resources** (MCP Apps): servers returning live components, not just text. When it stabilizes across clients, `run_skill` outputs here will upgrade to interactive artifacts — an editable scorecard, a living model — inside Claude Desktop itself. Tracked; not shipped until the spec settles.

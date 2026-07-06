@@ -356,6 +356,15 @@ Connect the Firm or the Boardroom to a **real folder on disk** (the 🗂 chip, C
 - **[The Reckoning](https://mohitagw15856.github.io/pm-claude-skills/reckoning.html)** — your prediction ledger: confidences, due dates, resurfacing, and a personal **calibration curve with a Brier score**. Also in the CLI: `npx pm-claude-skills reckoning`. When you say 80%, does it happen 80% of the time? Now you'll know.
 - **🔏 The chain of trust** — security scan → [sha256 content pinning](community/README.md#-trust--integrity--the-full-chain) in the registry → install lockfile + `npx pm-claude-skills verify` drift detection → npm provenance. Verifiable end to end, no trust in us required.
 
+### 🌐 Infrastructure for the whole ecosystem
+
+- **[`pm-skills-tools`](tools-pkg/)** — all 454 skills as **agent tools**: OpenAI function schemas, Vercel AI SDK adapters, `pick()`/`search()` runtime. `npm i pm-skills-tools` and your agent wields the library.
+- **[The SkillSpec badge](skillspec/README.md#the-badge)** — any skills repo can wear its live-graded conformance level: `![SkillSpec](https://img.shields.io/endpoint?url=…/badge?repo=you/yours)`.
+- **[The State of Agent Skills](docs/reports/)** — the census of the public SKILL.md ecosystem (counts, conformance pyramid, security hits), regenerated from GitHub code search. The observatory, not just a participant.
+- **[Every protocol](connectors/mcp-pairings.md#every-protocol-one-library)** — MCP (with zero-key sampling) · A2A · AGENTS.md · function calling · REST.
+- **[The Apprentice](templates/apprentice/)** — a ready-to-run Agent SDK agent grounded in your brain and your skills' Quality Checks. Fork it.
+- **`council`** (cross-vendor adversarial review) · **`migrate`** (convert prompt libraries into skills) · **[chief-of-staff hook](hooks/)** (every session opens with your predictions due and latest verdicts).
+
 ### 📦 The ecosystem toolchain — beyond this library
 
 - **`npx pm-claude-skills install <owner/repo>`** — install skills from **any public GitHub repo**, security-scanned and [SkillSpec](SKILLSPEC.md)-graded on the way in; flagged skills are never installed. The package manager for the whole skills ecosystem, with auditing as the value add.
