@@ -89,6 +89,14 @@ const useWhenN = graded.filter((g) => g.useWhen).length;
 const medianKb = graded.length ? (graded.map((g) => g.bytes).sort((a, b) => a - b)[Math.floor(graded.length / 2)] / 1024).toFixed(1) : '—';
 const forkShare = graded.length ? Math.round(100 * graded.filter((g) => g.fork).length / graded.length) : 0;
 
+// Quality gate: rate-limited runs (common for Actions tokens — code search is
+// heavily throttled there) must not overwrite a good report with a degraded one.
+const nullCounts = Object.values(totals).filter((v) => v === null).length;
+if (graded.length < 20 || nullCounts >= 3) {
+  console.error(`\n✗ Census degraded (graded ${graded.length}, ${nullCounts}/5 counts failed) — not publishing. Rate limits? Retry later or run locally with gh auth.`);
+  process.exit(2);
+}
+
 const fmt = (n) => n === null ? 'n/a' : n.toLocaleString('en-US');
 const report = `# The State of Agent Skills — ${today}
 
