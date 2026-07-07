@@ -1,1 +1,173 @@
-{"_comment":"SkillBench results. One entry per model per run. See skillbench/README.md.","runs":[]}
+{
+  "_comment": "SkillBench results. One entry per model per run. See skillbench/README.md.",
+  "runs": [
+    {
+      "model": "claude-haiku-4-5-20251001",
+      "date": "2026-07-07",
+      "taskSetVersion": 1,
+      "harness": "1.0",
+      "judge": "claude-sonnet-4-6",
+      "score": 4.5,
+      "bare": 4.77,
+      "lift": -0.27,
+      "tasks": [
+        {
+          "task": "prd-template",
+          "domain": "product",
+          "bare": 4.25,
+          "skilled": 1.75
+        },
+        {
+          "task": "rice-prioritisation",
+          "domain": "product",
+          "bare": 4.75,
+          "skilled": 5
+        },
+        {
+          "task": "stakeholder-update",
+          "domain": "communication",
+          "bare": 5,
+          "skilled": 3.75
+        },
+        {
+          "task": "incident-postmortem",
+          "domain": "engineering-ops",
+          "bare": 4.75,
+          "skilled": 5
+        },
+        {
+          "task": "model-migration-plan",
+          "domain": "engineering-ops",
+          "bare": 5,
+          "skilled": 5
+        },
+        {
+          "task": "churn-analysis",
+          "domain": "analysis",
+          "bare": 5,
+          "skilled": 4.5
+        },
+        {
+          "task": "ab-test-planner",
+          "domain": "analysis",
+          "bare": 5,
+          "skilled": 5
+        },
+        {
+          "task": "okr-builder",
+          "domain": "people",
+          "bare": 3.75,
+          "skilled": 4.75
+        },
+        {
+          "task": "cs-escalation-brief",
+          "domain": "communication",
+          "bare": 5,
+          "skilled": 5
+        },
+        {
+          "task": "competitor-teardown",
+          "domain": "strategy",
+          "bare": 4.75,
+          "skilled": 4.75
+        },
+        {
+          "task": "pricing-strategy",
+          "domain": "strategy",
+          "bare": 5,
+          "skilled": 4.5
+        },
+        {
+          "task": "performance-review",
+          "domain": "people",
+          "bare": 5,
+          "skilled": 5
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-4-6",
+      "date": "2026-07-07",
+      "taskSetVersion": 1,
+      "harness": "1.0",
+      "judge": "claude-sonnet-4-6",
+      "score": 4.6,
+      "bare": 4.95,
+      "lift": -0.35,
+      "tasks": [
+        {
+          "task": "prd-template",
+          "domain": "product",
+          "bare": 4.75,
+          "skilled": 2
+        },
+        {
+          "task": "rice-prioritisation",
+          "domain": "product",
+          "bare": 5,
+          "skilled": 5
+        },
+        {
+          "task": "stakeholder-update",
+          "domain": "communication",
+          "bare": 5,
+          "skilled": 3.5
+        },
+        {
+          "task": "incident-postmortem",
+          "domain": "engineering-ops",
+          "bare": 5,
+          "skilled": 4.75
+        },
+        {
+          "task": "model-migration-plan",
+          "domain": "engineering-ops",
+          "bare": 5,
+          "skilled": 5
+        },
+        {
+          "task": "churn-analysis",
+          "domain": "analysis",
+          "bare": 5,
+          "skilled": 5
+        },
+        {
+          "task": "ab-test-planner",
+          "domain": "analysis",
+          "bare": 5,
+          "skilled": 5
+        },
+        {
+          "task": "okr-builder",
+          "domain": "people",
+          "bare": 4.88,
+          "skilled": 5
+        },
+        {
+          "task": "cs-escalation-brief",
+          "domain": "communication",
+          "bare": 5,
+          "skilled": 5
+        },
+        {
+          "task": "competitor-teardown",
+          "domain": "strategy",
+          "bare": 4.75,
+          "skilled": 5
+        },
+        {
+          "task": "pricing-strategy",
+          "domain": "strategy",
+          "bare": 5,
+          "skilled": 5
+        },
+        {
+          "task": "performance-review",
+          "domain": "people",
+          "bare": 5,
+          "skilled": 5
+        }
+      ]
+    }
+  ]
+}
