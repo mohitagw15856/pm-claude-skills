@@ -55,10 +55,11 @@
     { href: 'daily.html', label: '🔥 Daily' },
     { href: 'jobs.html', label: '💼 Job Search' },
     { href: 'hub.html', label: '🧭 Journeys' },
-    { href: 'galaxy.html', label: '🌌 Galaxy' },
+    { href: 'galaxy3d.html', label: '🌌 Galaxy 3D' },
     { group: 'Tools', items: [
       ['firm.html', '🏢 The Firm'],
       ['boardroom.html', '🏛️ Boardroom'],
+      ['stage.html', '🎬 The Stage'],
       ['defend.html', '🛡️ Defend'],
       ['gym.html', '🥊 The Gym'],
       ['gauntlet.html', '🏆 Gauntlet'],
@@ -86,6 +87,8 @@
       ['wrapped.html', '🎁 Wrapped'],
       ['handbook.html', '📖 Handbook'],
       ['city.html', '🌃 Skill City'],
+      ['trophy.html', '🏆 Trophy Forge'],
+      ['galaxy.html', '🗺 Galaxy (2D)'],
       ['guide.html', '📖 Guide'],
       ['community.html', '💬 Community'],
       // External (GitHub doc): a 3rd truthy element renders it as a new-tab link.

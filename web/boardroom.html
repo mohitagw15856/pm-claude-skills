@@ -330,7 +330,9 @@ async function shareReplay(){
   const frag=await gz(JSON.stringify(payload));
   const url=location.origin+location.pathname+'#replay='+frag;
   if(url.length>28000) return setStatus('Session too large to fit in a link — download the transcript instead.',true);
-  try{ await navigator.clipboard.writeText(url); setStatus('Replay link copied ('+Math.round(url.length/1024)+' KB) — anyone can watch, no key needed. 🎬 Or watch it in 3D: stage.html'); }
+  try{ await navigator.clipboard.writeText(url); setStatus('Replay link copied ('+Math.round(url.length/1024)+' KB) — anyone can watch, no key needed.');
+    const st=document.getElementById('status');
+    if(st&&!st.querySelector('a')){ const a=document.createElement('a'); a.href='stage.html'+location.hash.replace(/^#?/,'#'); a.textContent=' 🎬 Watch it on the 3D Stage →'; a.style.color='var(--accent)'; a.href='stage.html#replay='+frag; st.appendChild(a); } }
   catch(_){ setStatus(url.slice(0,80)+'…',false); }
   if(window.pmTrack) pmTrack('boardroom/share-replay');
 }
