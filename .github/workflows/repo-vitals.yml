@@ -1,0 +1,71 @@
+name: Repo vitals
+
+# The self-operating repo: free scheduled upkeep. Results live on the
+# `vitals-data` branch (main is PR-only for the workflow token), which
+# web/status.html reads via raw.githubusercontent.
+#
+#   daily  — append runs-served + stars to history.json
+#   weekly (Mon) — regenerate the State of Agent Skills census
+#   weekly (Mon) — live re-scan of the community registry; opens an issue on failure
+on:
+  schedule:
+    - cron: '18 5 * * *'    # daily snapshot
+    - cron: '43 6 * * 1'    # weekly census + registry re-scan (Mondays)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  vitals:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+
+      - name: Snapshot vitals (daily)
+        run: |
+          git checkout vitals-data 2>/dev/null || git checkout -b vitals-data
+          git checkout main -- scripts/ skillspec/ community/ 2>/dev/null || true
+          RUNS=$(curl -sf "https://pm-skills-mcp.pm-claude-skills.workers.dev/try/stats?format=json" | node -e "process.stdin.on('data',d=>console.log(JSON.parse(d).freeRunsServed))" || echo null)
+          STARS=$(gh api repos/${{ github.repository }} --jq .stargazers_count || echo null)
+          node -e "
+            const fs=require('fs');
+            let h=[]; try{h=JSON.parse(fs.readFileSync('history.json','utf8'))}catch(_){}
+            const today=new Date().toISOString().slice(0,10);
+            h=h.filter(x=>x.d!==today);
+            h.push({d:today, runs:${RUNS}, stars:${STARS}});
+            fs.writeFileSync('history.json', JSON.stringify(h,null,1)+'\n');
+            console.log('history:', h.length, 'days');
+          "
+
+      - name: Weekly census (Mondays)
+        if: github.event.schedule == '43 6 * * 1' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        run: node scripts/skill-census.mjs --sample 100 && mkdir -p reports && cp docs/reports/state-of-agent-skills-*.md reports/ 2>/dev/null || true
+
+      - name: Weekly registry re-scan (Mondays)
+        if: github.event.schedule == '43 6 * * 1' || github.event_name == 'workflow_dispatch'
+        run: |
+          if ! node scripts/check-registry.mjs --fetch 2>err.log; then
+            gh issue list --label registry-health --state open --json number --jq length | grep -q '^0$' && \
+              gh issue create --title "Registry health: live re-scan failed $(date +%Y-%m-%d)" \
+                --label registry-health \
+                --body "$(printf 'The weekly live validation of community/registry.json failed — an entry is dead, moved, or no longer matches its sha256 pin.\n\n```\n%s\n```\nPer the house rules, broken entries >30 days get removed.' "$(cat err.log | head -30)")" || true
+            echo "registry scan FAILED (issue filed)";
+          else echo "registry clean"; fi
+
+      - name: Commit to vitals-data
+        run: |
+          git config user.name "vitals-bot"
+          git config user.email "actions@github.com"
+          git rm -r --cached scripts skillspec community 2>/dev/null || true
+          rm -rf scripts skillspec community docs err.log 2>/dev/null || true
+          git add history.json reports 2>/dev/null || git add history.json
+          git diff --cached --quiet || git commit -m "vitals: $(date +%Y-%m-%d)"
+          git push -f origin vitals-data

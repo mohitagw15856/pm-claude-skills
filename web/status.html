@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>Vitals — this project's numbers, in the open</title>
+<meta name="description" content="The repo's public dashboard: free skill runs served (sponsor-funded) and stars over time, the latest SkillBench results, the ecosystem census, and exactly what sponsorship pays for. Updated daily by a scheduled workflow; the data branch is public." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .v-wrap { max-width: 860px; margin: 0 auto; padding: 16px 22px 70px; }
+  .lead { color: #c7cfda; font-size: 15.5px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 18px 0; }
+  .vcard { border: 1px solid var(--border); border-radius: 14px; background: var(--panel); padding: 16px; text-align: center; }
+  .vcard b { display: block; font-size: 30px; }
+  .vcard span { font-size: 12px; color: var(--muted); }
+  h2 { font-size: 17px; margin: 24px 0 8px; }
+  canvas.chart { width: 100%; max-width: 820px; border: 1px solid var(--border); border-radius: 13px; background: var(--panel); }
+  .hint { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  table { border-collapse: collapse; font-size: 13.5px; margin: 8px 0; }
+  td, th { border: 1px solid var(--border); padding: 7px 12px; text-align: left; }
+  .cta { border: 1.5px solid var(--accent); border-radius: 14px; background: linear-gradient(180deg, rgba(217,119,87,.09), transparent 60%), var(--panel); padding: 16px 20px; margin: 20px 0; font-size: 14px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Vitals</h1><p class="tagline">The project's numbers, in the open. Updated daily by a robot.</p></div></div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<div class="v-wrap">
+  <p class="lead">Radical transparency as a feature: the free trial's usage, the star curve, the benchmark, and the ecosystem census — all public, all fetched live from the <a href="https://github.com/mohitagw15856/pm-claude-skills/tree/vitals-data">open data branch</a> a scheduled workflow appends to daily. What you see here is exactly what <a href="https://github.com/sponsors/mohitagw15856">sponsorship</a> funds.</p>
+
+  <div class="cards" id="cards"></div>
+
+  <h2>🔥 Free runs served (sponsor-funded, counts only — never content)</h2>
+  <canvas id="runsChart" class="chart" width="820" height="240"></canvas>
+  <h2>⭐ Stars</h2>
+  <canvas id="starsChart" class="chart" width="820" height="240"></canvas>
+  <p class="hint">One point per day since 2026-07-07 (when the ledger started). Flat lines early on are honesty, not failure.</p>
+
+  <h2>🏆 SkillBench — the professional-work benchmark</h2>
+  <div id="bench" class="hint">loading…</div>
+
+  <div class="cta"><b>💛 Sponsors fund every free run on this page.</b> Naming rights, never influence: your name in the README, your logo on the playground, or a Boardroom bench carrying your company's name — <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/docs/SPONSORSHIP.md">the tiers</a> · <a href="https://github.com/sponsors/mohitagw15856">become a sponsor</a>.</div>
+
+  <p class="hint">More public records: <a href="https://github.com/mohitagw15856/pm-claude-skills/tree/main/docs/reports">the State of Agent Skills census</a> · <a href="leaderboard.html">the eval leaderboard</a> · <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/CHANGELOG.md">the changelog</a>.</p>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+const HIST='https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/vitals-data/history.json';
+const BENCH='https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/skillbench/results.json';
+
+function line(canvas, pts, color, fmt){
+  const c=el(canvas), x=c.getContext('2d'), W=c.width, H=c.height, L=56, B=30, T=16, R=14;
+  x.clearRect(0,0,W,H);
+  if(pts.length<1){ x.fillStyle='#95a0b0'; x.font='13px system-ui'; x.textAlign='center'; x.fillText('No data yet — the daily robot starts tonight.',W/2,H/2); return; }
+  const vals=pts.map(p=>p.v).filter(v=>v!=null);
+  const min=Math.min(...vals), max=Math.max(...vals,min+1);
+  const px=(i)=>L+(pts.length===1?0.5:i/(pts.length-1))*(W-L-R);
+  const py=(v)=>T+(1-(v-min)/(max-min))*(H-T-B);
+  x.strokeStyle='#242b38'; x.fillStyle='#95a0b0'; x.font='10.5px system-ui';
+  for(let g=0;g<=3;g++){ const v=min+(max-min)*g/3, y=py(v);
+    x.beginPath(); x.moveTo(L,y); x.lineTo(W-R,y); x.stroke();
+    x.textAlign='right'; x.fillText(fmt(v), L-8, y+3); }
+  x.strokeStyle=color; x.lineWidth=2.2; x.beginPath();
+  pts.forEach((p,i)=>{ if(p.v==null) return; i===0?x.moveTo(px(i),py(p.v)):x.lineTo(px(i),py(p.v)); });
+  x.stroke();
+  x.fillStyle=color;
+  pts.forEach((p,i)=>{ if(p.v==null) return; x.beginPath(); x.arc(px(i),py(p.v),3,0,7); x.fill(); });
+  x.fillStyle='#95a0b0'; x.textAlign='center';
+  x.fillText(pts[0].d, L+30, H-9); if(pts.length>1) x.fillText(pts[pts.length-1].d, W-R-34, H-9);
+}
+
+(async()=>{
+  let h=[]; try{ h=await (await fetch(HIST)).json(); }catch(_){}
+  const last=h[h.length-1]||{};
+  const first=h[0]||{};
+  el('cards').innerHTML=[
+    ['🔥 '+(last.runs??'—'),'free runs served, all-time'],
+    ['⭐ '+(last.stars??'—'),'GitHub stars'],
+    [h.length,'days on the public ledger'],
+    [(last.runs!=null&&first.runs!=null&&h.length>1)?('+'+(last.runs-first.runs)):'—','runs this period'],
+  ].map(([b,s])=>'<div class="vcard"><b>'+b+'</b><span>'+s+'</span></div>').join('');
+  line('runsChart', h.map(p=>({d:p.d,v:p.runs})), '#d97757', v=>Math.round(v));
+  line('starsChart', h.map(p=>({d:p.d,v:p.stars})), '#6aa9ff', v=>Math.round(v));
+
+  try{
+    const b=await (await fetch(BENCH)).json();
+    const runs=(b.runs||[]);
+    if(!runs.length){ el('bench').textContent='No runs recorded yet.'; return; }
+    el('bench').innerHTML='<table><tr><th>Model</th><th>Score</th><th>Bare (no skill)</th><th>Lift</th><th>Date</th></tr>'+
+      runs.map(r=>'<tr><td>'+r.model+'</td><td><b>'+(r.score??'—')+'</b></td><td>'+(r.bare??'—')+'</td><td>'+(r.lift??'—')+'</td><td>'+(r.date||'').slice(0,10)+'</td></tr>').join('')+
+      '</table><span class="hint">12 frozen tasks, judged blind — <a href="https://github.com/mohitagw15856/pm-claude-skills/tree/main/skillbench">methodology</a>.</span>';
+  }catch(_){ el('bench').textContent='Could not load results.'; }
+})();
+if(window.pmTrack) pmTrack('status/open');
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
