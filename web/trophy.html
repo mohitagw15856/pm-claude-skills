@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>The Trophy Forge — your achievement, cast in gold and spinning</title>
+<meta name="description" content="Turn any pm-skills achievement into a 3D trophy: an engraved gold obelisk with your name and score, slowly rotating under studio lighting, exportable as a PNG for the feed. Reads your Charter automatically; everything renders locally." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .f-wrap { max-width: 700px; margin: 0 auto; padding: 14px 22px 40px; text-align: center; }
+  #stage { width: 100%; height: 480px; border: 1px solid var(--border); border-radius: 16px; background: radial-gradient(ellipse at 50% 30%, #191d28, #07080d 75%); }
+  .bar { display: flex; gap: 10px; justify-content: center; margin: 12px 0; flex-wrap: wrap; }
+  input { padding: 10px 13px; border-radius: 11px; background: var(--panel); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 13.5px; width: 200px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>The Trophy Forge</h1><p class="tagline">Flat certificates are for filing. This one spins.</p></div></div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="f-wrap">
+  <div class="bar">
+    <input id="tname" placeholder="Name" /><input id="ttitle" placeholder="Achievement (e.g. The Charter)" /><input id="tscore" placeholder="Score (e.g. 4/4)" style="width:110px" />
+    <button id="forge" class="primary" type="button">🔨 Forge</button>
+    <button id="png" class="ghost" type="button">📸 Export PNG</button>
+  </div>
+  <canvas id="stage"></canvas>
+  <p class="hint" style="color:var(--muted);font-size:12px">Earned the <a href="charter.html">Charter</a>? It engraves itself. Renders locally — export and post it.</p>
+</div>
+
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+<script type="module">
+import * as THREE from 'three';
+const el=(id)=>document.getElementById(id);
+
+const canvas=el('stage');
+const renderer=new THREE.WebGLRenderer({canvas, antialias:true, preserveDrawingBuffer:true});
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(38, 1, 0.1, 100);
+camera.position.set(0, 4.2, 15.5); camera.lookAt(0, 3.2, 0);
+function resize(){ const r=canvas.getBoundingClientRect(); renderer.setSize(r.width,r.height,false); renderer.setPixelRatio(Math.min(devicePixelRatio,2)); camera.aspect=r.width/r.height; camera.updateProjectionMatrix(); }
+resize(); addEventListener('resize',resize);
+
+// Studio lighting: warm key, cool fill, top rim.
+scene.add(new THREE.AmbientLight(0x334, 0.9));
+const k1=new THREE.SpotLight(0xffe0b0, 300, 40, 0.6, 0.5); k1.position.set(6,10,8); scene.add(k1);
+const k2=new THREE.DirectionalLight(0x88a8ff, 0.8); k2.position.set(-7,4,-6); scene.add(k2);
+const k3=new THREE.DirectionalLight(0xffffff, 1.2); k3.position.set(0,12,2); scene.add(k3);
+
+const gold=new THREE.MeshPhysicalMaterial({color:0xd4af37, metalness:1, roughness:0.24, clearcoat:0.6});
+const darkstone=new THREE.MeshPhysicalMaterial({color:0x191b22, roughness:0.35, clearcoat:0.4});
+const trophy=new THREE.Group(); scene.add(trophy);
+
+function plaqueTexture(name,title,score){
+  const c=document.createElement('canvas'); c.width=512; c.height=256;
+  const x=c.getContext('2d');
+  x.fillStyle='#141118'; x.fillRect(0,0,512,256);
+  x.strokeStyle='#d4af37'; x.lineWidth=5; x.strokeRect(12,12,488,232);
+  x.fillStyle='#f4e6bf'; x.textAlign='center';
+  x.font='700 40px Georgia'; x.fillText((name||'').slice(0,20)||'—',256,86);
+  x.font='26px Georgia'; x.fillStyle='#d4af37'; x.fillText((title||'PM Skills').slice(0,30),256,140);
+  x.font='700 46px Georgia'; x.fillStyle='#fff'; x.fillText((score||'').slice(0,12),256,205);
+  return new THREE.CanvasTexture(c);
+}
+function build(name,title,score){
+  while(trophy.children.length) trophy.remove(trophy.children[0]);
+  const base=new THREE.Mesh(new THREE.CylinderGeometry(2.4,2.8,0.7,48), darkstone); base.position.y=0.35; trophy.add(base);
+  const base2=new THREE.Mesh(new THREE.CylinderGeometry(1.8,2.2,0.5,48), darkstone); base2.position.y=0.95; trophy.add(base2);
+  // plaque
+  const pl=new THREE.Mesh(new THREE.PlaneGeometry(2.6,1.3), new THREE.MeshStandardMaterial({map:plaqueTexture(name,title,score), roughness:0.5}));
+  pl.position.set(0,0.72,2.45); pl.rotation.x=-0.12; trophy.add(pl);
+  // obelisk
+  const ob=new THREE.Mesh(new THREE.CylinderGeometry(0.28,0.75,4.6,4), gold); ob.position.y=3.5; ob.rotation.y=Math.PI/4; trophy.add(ob);
+  const tip=new THREE.Mesh(new THREE.ConeGeometry(0.30,0.7,4), gold); tip.position.y=6.15; tip.rotation.y=Math.PI/4; trophy.add(tip);
+  // laurel ring
+  const ring=new THREE.Mesh(new THREE.TorusGeometry(1.15,0.09,16,64), gold); ring.position.y=1.55; ring.rotation.x=Math.PI/2; trophy.add(ring);
+  // floating star
+  const star=new THREE.Mesh(new THREE.OctahedronGeometry(0.34), new THREE.MeshPhysicalMaterial({color:0xfff2c8, emissive:0xd4af37, emissiveIntensity:1.4, metalness:0.8, roughness:0.1}));
+  star.position.y=6.9; star.name='star'; trophy.add(star);
+}
+
+// Prefill from the Charter if earned.
+let charter=null; try{ charter=JSON.parse(localStorage.getItem('pm_charter')||'null'); }catch(_){}
+el('tname').value=charter?charter.name:'';
+el('ttitle').value=charter?'The PM Skills Charter':'';
+el('tscore').value=charter?'4/4':'';
+build(el('tname').value||'Your Name', el('ttitle').value||'PM Skills', el('tscore').value||'★');
+
+el('forge').addEventListener('click',()=>{ build(el('tname').value,el('ttitle').value,el('tscore').value); if(window.pmTrack) pmTrack('trophy/forge'); });
+el('png').addEventListener('click',()=>{
+  const a=document.createElement('a'); a.href=canvas.toDataURL('image/png'); a.download='pm-skills-trophy.png'; a.click();
+  if(window.pmTrack) pmTrack('trophy/export');
+});
+
+renderer.setAnimationLoop(()=>{
+  const t=performance.now()*0.001;
+  trophy.rotation.y=t*0.55;
+  const star=trophy.getObjectByName('star');
+  if(star){ star.rotation.y=-t*1.4; star.position.y=6.9+Math.sin(t*2)*0.12; }
+  renderer.render(scene,camera);
+});
+window.__trophyReady=true;
+if(window.pmTrack) pmTrack('trophy/open');
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

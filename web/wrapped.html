@@ -46,6 +46,17 @@
   <div class="deck" id="deck" title="Click / → to advance"></div>
   <div class="dots" id="dots"></div>
   <p class="hint">Click the card, or use ← → keys</p>
+  <div id="holoWrap" style="display:none;margin:22px auto 6px;perspective:900px;width:min(300px,80vw)">
+    <div id="holo" style="position:relative;border-radius:18px;padding:22px 20px 18px;background:linear-gradient(150deg,#1a1030,#3a1140 45%,#12303a);border:1px solid rgba(255,255,255,.25);transform-style:preserve-3d;transition:transform .08s linear;overflow:hidden;text-align:center">
+      <div id="foil" style="position:absolute;inset:0;background:linear-gradient(115deg,transparent 20%,rgba(255,0,128,.28) 36%,rgba(0,255,224,.3) 46%,rgba(255,230,0,.26) 56%,transparent 74%);mix-blend-mode:color-dodge;pointer-events:none"></div>
+      <div style="position:absolute;inset:0;background:repeating-linear-gradient(105deg,rgba(255,255,255,.05) 0 2px,transparent 2px 6px);mix-blend-mode:overlay;pointer-events:none"></div>
+      <div id="holoEmoji" style="font-size:58px;filter:drop-shadow(0 4px 12px rgba(0,0,0,.6))">🌱</div>
+      <div id="holoTitle" style="font-weight:800;font-size:19px;margin:8px 0 2px;color:#fff;text-shadow:0 1px 8px rgba(255,255,255,.25)"></div>
+      <div id="holoSub" style="font-size:11.5px;color:rgba(255,255,255,.75);letter-spacing:.1em;text-transform:uppercase">PM Skills · collectible</div>
+      <div id="holoStats" style="margin-top:12px;font-size:12.5px;color:#eaf2ff;line-height:1.7;text-align:left"></div>
+    </div>
+    <p class="hint" style="text-align:center">✨ holographic — move your cursor over it</p>
+  </div>
   <div class="actions">
     <button id="share" class="primary" type="button">🖼 Download your share card (PNG)</button>
     <button id="replay" class="ghost" type="button">↻ Replay</button>
@@ -144,6 +155,32 @@ el('deck').addEventListener('click',e=>{ if(e.target.closest('a')) return; go(cu
 document.addEventListener('keydown',e=>{ if(e.key==='ArrowRight') go(cur+1); if(e.key==='ArrowLeft') go(cur-1); });
 el('replay').addEventListener('click',()=>go(0));
 if(window.pmTrack) pmTrack('wrapped/open');
+
+// ── ✨ The holo card: your persona as a foil collectible ──────────────────────
+(function(){
+  const p=persona(D); if(!p) return;
+  el('holoWrap').style.display='block';
+  el('holoEmoji').textContent=p[0].split(' ')[0];
+  el('holoTitle').textContent=p[0].replace(/^\S+\s/,'');
+  const rows=[];
+  if(D.runs) rows.push('⚙ '+D.runs+' skill runs');
+  if(D.gymBest) rows.push('🥊 best '+D.gymBest.s+'/40');
+  if(D.panelN) rows.push('🕵️ '+D.caught+'/'+(D.caught+D.fooled||1)+' imposters caught');
+  if(D.predsN) rows.push('🔮 '+Math.round(100*D.hits/Math.max(1,D.predsN))+'% calibration');
+  if(D.streak) rows.push('🔥 '+D.streak+'-day streak');
+  el('holoStats').innerHTML=rows.slice(0,4).join('<br>');
+  const card=el('holo'), foil=el('foil');
+  function tilt(x,y){
+    card.style.transform='rotateY('+(x*16)+'deg) rotateX('+(-y*16)+'deg)';
+    foil.style.background='linear-gradient('+(115+x*70)+'deg,transparent '+(14+y*12)+'%,rgba(255,0,128,.32) '+(34+x*10)+'%,rgba(0,255,224,.34) '+(46+x*6)+'%,rgba(255,230,0,.3) '+(58-x*8)+'%,transparent 78%)';
+  }
+  card.parentElement.addEventListener('pointermove',(e)=>{
+    const r=card.getBoundingClientRect();
+    tilt(((e.clientX-r.left)/r.width-0.5)*2, ((e.clientY-r.top)/r.height-0.5)*2);
+  });
+  card.parentElement.addEventListener('pointerleave',()=>{ card.style.transform=''; });
+  if(window.DeviceOrientationEvent) addEventListener('deviceorientation',(e)=>{ if(e.gamma!=null) tilt(Math.max(-1,Math.min(1,e.gamma/30)), Math.max(-1,Math.min(1,(e.beta-45)/30))); });
+})();
 
 // ── Share card: canvas → PNG, composed from the same numbers ─────────────────
 el('share').addEventListener('click',()=>{
