@@ -9,6 +9,13 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+### Added — the self-operating wave: PWA, public vitals, and the repo that maintains itself
+- **📱 The playground is a PWA** — install it to a phone/desktop; the no-API core (the Handbook, Academy, Campaign, Wrapped, Reckoning, Charter, daily challenge) works **offline** via a conservative service worker (same-origin only; provider APIs and the trial endpoint are never cached).
+- **📈 Public vitals** ([status.html](https://mohitagw15856.github.io/pm-claude-skills/status.html)) — the project's numbers in the open: free runs served and stars charted over time from the public `vitals-data` branch, the latest SkillBench results, and exactly what sponsorship funds.
+- **🤖 The self-operating repo** ([repo-vitals.yml](.github/workflows/repo-vitals.yml)) — a daily snapshot appends runs-served + stars to the open ledger; every Monday the **State of Agent Skills census regenerates** and the **community registry is live re-scanned** (dead or pin-mismatched entries automatically file a `registry-health` issue — the trust chain is now actively enforced).
+- **🎬 Demo GIFs** — the Tower collapse, the Galaxy warp, the Stage verdict, and the holo-card tilt, captured from the real pages ([docs-assets](web/docs-assets/)); the first two now open the README's 3D section.
+- **🏷 Repo metadata** — 18 GitHub topics set, [SECURITY.md](SECURITY.md) refreshed to cover the hosted pieces and the chain of trust (validator bypasses are explicitly in scope), and a social-preview image generated.
+
 ## [45.0.0] — the spectacle release: duels, the Charter, and the library in 3D — 2026-07-07
 
 ### Added — the spectacle wave: duels, the Charter, and the library in 3D

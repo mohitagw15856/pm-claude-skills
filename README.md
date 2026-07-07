@@ -355,6 +355,12 @@ Connect the Firm or the Boardroom to a **real folder on disk** (the 🗂 chip, C
 
 ### 🌌 The library in 3D
 
+<p align="center">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/tower.html"><img src="web/docs-assets/demo-tower.gif" width="420" alt="The Tower of Claims — the argument collapses because the conclusion rested on glass" /></a>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="web/docs-assets/demo-galaxy.gif" width="420" alt="Galaxy 3D — hyperspace warp between skill constellations" /></a>
+</p>
+
+
 - **[Galaxy 3D](https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html)** — 454 skills as a bloom-lit starfield you fly through; **your sky is yours** (stars you've run burn brighter). **[Skill City](https://mohitagw15856.github.io/pm-claude-skills/city.html)** — the same idea as a dusk skyline: windows light up in buildings you've used.
 - **[The Tower of Claims](https://mohitagw15856.github.io/pm-claude-skills/tower.html)** — your document as a physics tower: data is steel, assumptions are glass, and the stress test shows the argument stand or **collapse**. Keyless demo built in.
 - **[The Stage](https://mohitagw15856.github.io/pm-claude-skills/stage.html)** — any Boardroom replay as a cinematic 3D scene: the hologram document cracks as objections land; the verdict seals it gold or shatters it.

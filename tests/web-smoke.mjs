@@ -183,6 +183,9 @@ const PAGES = [
   { url: 'trophy.html', settle: 2000, async check(p) {
       await p.waitForFunction(() => window.__trophyReady, null, { timeout: 20000 });
     } },
+  { url: 'status.html', settle: 2500, async check(p) {
+      if ((await p.locator('.vcard').count()) !== 4) throw new Error('vitals cards missing');
+    } },
   { url: 'canvas.html' }, { url: 'agent.html' }, { url: 'studio.html' },
   { url: 'brain.html' }, { url: 'ask.html' }, { url: 'daily.html' },
   { url: 'jobs.html' }, { url: 'hub.html' }, { url: 'grade.html' },

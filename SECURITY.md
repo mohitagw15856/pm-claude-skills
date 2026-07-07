@@ -2,9 +2,9 @@
 
 ## Overview
 
-This repository contains Claude Skill files — plain markdown instruction files that teach Claude how to perform professional tasks. There are no backend services, APIs, authentication systems, or databases in this repo.
+This repository contains Claude Skill files — plain markdown instruction files that teach Claude how to perform professional tasks — plus the open-source tooling around them: a CLI, MCP servers (local and a hosted Cloudflare Worker), validators, and a browser playground. No accounts, no databases of user content, no telemetry of content.
 
-That said, security matters here in two specific ways: **skill file safety** and **prompt injection risks**.
+Security matters here in three ways: **skill file safety**, **prompt injection risks**, and the **integrity of the install chain**.
 
 ## What this plugin does / does NOT do (trust at a glance)
 
@@ -22,6 +22,12 @@ That said, security matters here in two specific ways: **skill file safety** and
 - ❌ Contain prompt-injection, jailbreak, or data-exfiltration instructions — CI enforces this.
 
 **Automated guardrails:** every change runs **[SkillCheck](.github/workflows/skillcheck.yml)** (structure/safety lint) and a **[security audit](.github/workflows/skill-audit.yml)** in CI; the **[`skill-security-auditor`](skills/skill-security-auditor/)** skill scans any `SKILL.md` for injection / exfiltration / privilege-escalation patterns. MIT licensed.
+
+## The hosted pieces & the chain of trust
+
+- **Keys never leave your browser/machine.** The playground sends prompts only to the provider you select; keys live in `localStorage` and never touch our worker. The one exception is the **sponsored free trial**, which uses the maintainer's key server-side, is hard-capped, and records **counts only, never content**.
+- **The chain of trust for installed skills** ([details](community/README.md#-trust--integrity--the-full-chain)): security-pattern scanning on everything `pm-claude-skills install` fetches from anywhere → optional **sha256 content pinning** in the community registry → an install **lockfile** with `pm-claude-skills verify` drift/tamper detection → **npm provenance** on all published packages.
+- **Bypass = vulnerability.** If you get malicious phrasing past `skillspec-check`, the registry scan, or the install scanner, that's a security report — same channel below, credited unless you prefer otherwise.
 
 ## Supported Versions
 
