@@ -5,10 +5,10 @@ name: Web smoke tests
 # routing, artifact renderers, attestation round-trip, galaxy fly-to). Free, ~2 min.
 on:
   pull_request:
-    paths: ['web/**', 'tests/**']
+    paths: ['web/**', 'tests/**', 'skills/*/scripts/**']
   push:
     branches: [main]
-    paths: ['web/**', 'tests/**']
+    paths: ['web/**', 'tests/**', 'skills/*/scripts/**']
   workflow_dispatch: {}
 
 jobs:
@@ -23,3 +23,14 @@ jobs:
         run: npm i --no-save playwright && npx playwright install --with-deps chromium
       - name: Run the suite
         run: node tests/web-smoke.mjs
+
+  scripts-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.x' }
+      - name: Executable-skills smoke (29 scripts, 3 tiers)
+        run: node tests/scripts-smoke.mjs
