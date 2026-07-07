@@ -113,6 +113,10 @@ Before submitting:
 
 ---
 
+## Deeper Materials
+
+- [`references/six-second-scan.md`](references/six-second-scan.md) — how the ATS parser and the 6-second human scan actually read an application, and the 20-minute tailoring budget
+
 ## Quality Checks
 
 - [ ] JD analysis completed before writing (not skipped)

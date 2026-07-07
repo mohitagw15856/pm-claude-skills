@@ -135,6 +135,10 @@ Ask the user for these if not provided:
 - **Every slide has a "so what."** A slide that just shows data without a takeaway wastes board time.
 - **Leave time for discussion.** Board value is in the conversation, not the presentation. Aim to spend 40% of the meeting presenting and 60% in discussion.
 
+## Deeper Materials
+
+- [`references/what-boards-actually-read.md`](references/what-boards-actually-read.md) — the pre-read reality, in-room dynamics, and the asks discipline
+
 ## Quality Checks
 
 - [ ] Opening frame states the meeting's narrative theme

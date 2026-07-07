@@ -2,6 +2,12 @@
 
 This skill explains SQL queries in plain language, identifies optimisation opportunities, and helps communicate data logic to non-technical stakeholders. It also writes and documents new queries from natural language descriptions.
 
+## Required Inputs
+
+- **The SQL** (Explain/Optimise/Document modes) — the actual query, ideally with the dialect named (Postgres, BigQuery, Snowflake, MySQL…); dialect changes both semantics and the optimisation advice.
+- **The intent in plain words** (Write mode) — what question the data should answer, plus table/column names if known. Without a schema, assumptions get stated, never silently invented.
+- Optional but transformative: `EXPLAIN`/`EXPLAIN ANALYZE` output and rough table sizes — turns generic advice into advice about *your* query plan.
+
 ## Modes
 
 Detect which mode the user needs based on their request:
@@ -120,6 +126,15 @@ Known limitations:
 ```
 
 ---
+
+## Output Format
+
+Every mode returns the same disciplined shape:
+
+1. **The one-line summary** — what this query does, in business language ("monthly revenue per region, excluding refunds"), before any SQL talk.
+2. **The walkthrough or the artifact** — mode-dependent: annotated clause-by-clause explanation (Explain), the rewritten query with a diff of what changed and why (Optimise), the new query with stated assumptions (Write), or the doc block (Document).
+3. **The gotchas** — NULL behaviour, join fan-out, timezone traps, and index implications that apply to *this* query, not generic advice.
+4. **Verification** — a small `SELECT` the user can run to confirm the query does what the summary claims (row counts before/after, a spot-check predicate).
 
 ## Quality Checks
 

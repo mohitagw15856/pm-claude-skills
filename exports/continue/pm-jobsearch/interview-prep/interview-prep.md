@@ -35,6 +35,10 @@ Ask for these only if they aren't already provided:
 
 **6. Gaps & landmines** — the weak spots (a tenure gap, a missing skill, a pivot) and how to address each honestly and confidently if it comes up.
 
+## Deeper Materials
+
+- [`references/story-matrix.md`](references/story-matrix.md) — the 6-stories-cover-40-questions matrix and the first-sentences rehearsal method
+
 ## Quality Checks
 
 - [ ] Questions are tailored to the specific role and round, ordered by likelihood — not generic

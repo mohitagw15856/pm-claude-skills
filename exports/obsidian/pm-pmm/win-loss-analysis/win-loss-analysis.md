@@ -77,6 +77,10 @@ If the data is thin, say so and analyze what exists rather than inventing outcom
 
 ---
 
+## Deeper Materials
+
+- [`references/buyer-interview-craft.md`](references/buyer-interview-craft.md) — the interview craft that defeats buyer politeness — who calls, when, and the questions that get truth
+
 ## Quality Checks
 
 - [ ] Every reason is backed by counts, not vibes

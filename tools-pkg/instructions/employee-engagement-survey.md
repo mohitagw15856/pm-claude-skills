@@ -87,6 +87,11 @@ eNPS: Below 0 = Concerning / 0-30 = Good / 30-70 = Great / 70+ = Excellent
 
 **5. Communication Template** — Draft message to share results with employees.
 
+## Output Format
+
+- **Design Mode** delivers: the question set grouped by driver (each with its response scale and the reason it earns its place), the anonymity/threshold rules stated up front, the invitation copy, and the analysis plan written *before* data exists — so nobody designs the analysis around the answers.
+- **Analysis Mode** delivers: participation and segment coverage first (with the n-below-threshold segments suppressed and said so), driver scores vs. prior wave with the deltas that clear noise flagged, verbatim themes with prevalence counts, and a **"three commitments" section** — because a survey that doesn't end in visible action is the fastest way to kill next year's response rate.
+
 ## Quality Checks
 
 - [ ] Survey includes anonymity statement at the start

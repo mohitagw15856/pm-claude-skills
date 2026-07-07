@@ -6,6 +6,12 @@ Produce correct, readable regular expressions — and explain them so the user a
 
 Infer the regex flavor (JavaScript/PCRE/Python/Go) from context; if unstated, default to one and say so *(assumed — confirm)*. Always deliver a working pattern and tests even from a loose description. Never leave placeholders.
 
+## Required Inputs
+
+- **What should match and what should NOT** — 3+ positive examples and, critically, 2+ near-miss negatives (the strings that *look* matchable but must be rejected). The negatives are where every regex bug lives.
+- **The engine/flavor** (JavaScript, PCRE, Python `re`, RE2, grep -E…) — anchors, lookbehind, and Unicode behaviour differ enough to break portability silently.
+- **Where it runs** — validation, extraction, or replacement changes how greedy the pattern should be.
+
 ## Two modes
 - **Build:** the user describes what to match → produce the regex.
 - **Explain:** the user pastes a regex → break it down.

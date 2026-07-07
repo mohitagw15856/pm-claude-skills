@@ -9,6 +9,13 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+### Added — the proof wave: 454/454 L3, tested scripts, gated quality
+- **🎯 454/454 SkillSpec L3** — the last four skills (brief-builder, regex-builder, sql-query-explainer, employee-engagement-survey) gained their missing structure sections; the whole library now self-verifies, and CI **gates every PR on `skillspec --min-level 3`** — the claim is enforced, not aspirational.
+- **🧪 Executable-skills harness** ([tests/scripts-smoke.mjs](tests/scripts-smoke.mjs)) — all 29 Python helpers exercised on every relevant change: `--help` health across the board, 9 functional cases with real fixtures (Office roundtrips, a deterministic Monte Carlo exact-output match, and a regression guard for the Van Westendorp plateau bug), and a no-hangs-on-garbage tier. 67 assertions, zero API cost.
+- **📚 Depth wave 3** — crafted references/templates for 9 high-traffic Stable skills: gated fill-in templates for `one-pager` and `cover-letter`; calibration references for `cold-email` (reply-rate line-by-line), `job-application` (the six-second scan), `interview-prep` (the story matrix), `win-loss-analysis` (buyer interview craft), `pricing-strategy` (the model-selection regrets table), `board-deck-narrative` (what boards actually read), and `performance-review` (evidence, not adjectives).
+- **🚦 Lighthouse CI** ([lighthouse.yml](.github/workflows/lighthouse.yml)) — weekly performance + accessibility budgets on the key pages, accessibility ≥0.9 as the hard gate (first run: green).
+- **🪝 Dogfooding** — [.pre-commit-config.yaml](.pre-commit-config.yaml) runs the repo's own published skillspec hook locally; the standard applies to us first.
+
 ### Added — the self-operating wave: PWA, public vitals, and the repo that maintains itself
 - **📱 The playground is a PWA** — install it to a phone/desktop; the no-API core (the Handbook, Academy, Campaign, Wrapped, Reckoning, Charter, daily challenge) works **offline** via a conservative service worker (same-origin only; provider APIs and the trial endpoint are never cached).
 - **📈 Public vitals** ([status.html](https://mohitagw15856.github.io/pm-claude-skills/status.html)) — the project's numbers in the open: free runs served and stars charted over time from the public `vitals-data` branch, the latest SkillBench results, and exactly what sponsorship funds.

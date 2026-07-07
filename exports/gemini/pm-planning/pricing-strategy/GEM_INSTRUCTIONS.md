@@ -119,6 +119,10 @@ Ask the user for these if not provided:
 - **Business model** (SaaS / Marketplace / Usage-based / Other)
 - **Primary goal** (grow adoption / increase ARPU / reduce churn / new market entry)
 
+## Deeper Materials
+
+- [`references/model-selection.md`](references/model-selection.md) — the model-selection decision tree and the regrets table from each model's veterans
+
 ## Quality Checks
 
 - [ ] Value metric is defined (the unit that scales with customer value)

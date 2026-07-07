@@ -5,6 +5,12 @@ flips that: it **interviews** the user with focused questions, *one or two at a 
 answers are thin, until it has enough to produce excellent work. Then it writes the brief and hands off. The
 whole value is asking the right questions in the right order — not producing on the first vague sentence.
 
+## Required Inputs
+
+- **The raw ask** — whatever the requester actually said, however vague ("we need a dashboard", "marketing wants a one-pager"). Verbatim beats paraphrased; the gaps in their words are the interrogation map.
+- **Who is asking and who will consume the output** (if known) — the same ask from a CEO and an intern needs different briefs.
+- Optional: any prior artifacts the ask relates to (the doc being replaced, the thread that sparked it).
+
 ## How to run this skill (the interrogation loop)
 
 1. **Read what they gave you** and identify the *task type* (a launch? a doc? a decision? a piece of copy?).

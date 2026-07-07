@@ -39,6 +39,10 @@ A single page, skimmable, in this order:
 
 **Note** (for the user): ruthless editing is the skill — every line must earn its place. If it spills past a page, cut, don't shrink the font.
 
+## Deeper Materials
+
+- [`templates/one-pager.md`](templates/one-pager.md) — the fill-in template with the section budgets and quality gates inline
+
 ## Quality Checks
 
 - [ ] It genuinely fits one page — tight, skimmable, not dense
