@@ -1,14 +1,35 @@
 {
   "name": "skillspec-check",
-  "version": "1.0.0",
-  "description": "The eslint for SKILL.md — validate any repo's Agent Skills against SkillSpec: conformance levels (L1 Loadable → L3 Trustworthy) plus a security-pattern scan. Zero dependencies.",
+  "version": "1.0.1",
+  "description": "The eslint for SKILL.md \u2014 validate any repo's Agent Skills against SkillSpec: conformance levels (L1 Loadable \u2192 L3 Trustworthy) plus a security-pattern scan. Zero dependencies.",
   "type": "module",
-  "bin": { "skillspec": "cli.mjs", "skillspec-check": "cli.mjs" },
-  "files": ["cli.mjs", "README.md"],
-  "engines": { "node": ">=18" },
-  "keywords": ["skillspec", "skill", "agent-skills", "claude", "lint", "validator", "SKILL.md", "mcp"],
+  "bin": {
+    "skillspec": "cli.mjs",
+    "skillspec-check": "cli.mjs"
+  },
+  "files": [
+    "cli.mjs",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "skillspec",
+    "skill",
+    "agent-skills",
+    "claude",
+    "lint",
+    "validator",
+    "SKILL.md",
+    "mcp"
+  ],
   "author": "Mohit Aggarwal <mohit15856@gmail.com>",
   "license": "MIT",
-  "repository": { "type": "git", "url": "git+https://github.com/mohitagw15856/pm-claude-skills.git", "directory": "skillspec" },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohitagw15856/pm-claude-skills.git",
+    "directory": "skillspec"
+  },
   "homepage": "https://github.com/mohitagw15856/pm-claude-skills/blob/main/SKILLSPEC.md"
 }

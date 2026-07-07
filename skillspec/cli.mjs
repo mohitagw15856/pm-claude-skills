@@ -21,13 +21,17 @@ const minLevel = (() => { const i = args.indexOf('--min-level'); return i >= 0 ?
 const paths = args.filter((a, i) => !a.startsWith('--') && args[i - 1] !== '--min-level');
 
 // Security patterns — mirrored from the pm-skills registry validator.
+// The four BANNED patterns are unambiguous → errors. The curl rule is
+// context-dependent (engineering docs legitimately contain install/health-check
+// examples) → it warns for human review instead of failing the build; localhost
+// is exempt entirely.
 const BANNED = [
   [/ignore (all |any )?(previous|prior|above) (instructions|rules)/i, 'instruction-override phrasing'],
   [/disregard (your|the) (system prompt|guidelines|instructions)/i, 'instruction-override phrasing'],
-  [/curl\s+-?[a-z]*\s*https?:\/\/(?!raw\.githubusercontent|github\.com|docs\.)/i, 'network call to an unvetted URL'],
   [/send (the )?(user('|’)s)? ?(data|input|conversation|api key)/i, 'data-exfiltration instruction'],
   [/\b(api[_-]?key|token|password)\s*[:=]\s*['"][A-Za-z0-9_\-]{16,}/, 'embedded credential'],
 ];
+const CURL_REVIEW = /curl\s+-?[a-z]*\s*https?:\/\/(?!localhost|127\.0\.0\.1|raw\.githubusercontent|github\.com|docs\.)/i;
 
 function findSkillFiles(p) {
   const st = statSync(p);
@@ -82,6 +86,7 @@ function check(file) {
 
   // Security scan (any level).
   for (const [re, why] of BANNED) if (re.test(text)) errors.push(`SECURITY — ${why}`);
+  if (CURL_REVIEW.test(text)) warnings.push('contains a curl to an external URL — fine in docs/examples; review that it is not an instruction to exfiltrate');
 
   // Hygiene.
   if (text.length > 64 * 1024) warnings.push(`SKILL.md is ${Math.round(text.length / 1024)} KB — agents load this whole file; consider moving depth to references/`);
