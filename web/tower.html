@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>The Tower of Claims — watch your argument stand or fall</title>
+<meta name="description" content="Your document as a physical tower: every sentence is a block, and the material is the evidence — data is steel, sourced claims are stone, assertions are wood, hype is cardboard, hidden assumptions are glass. Then physics turns on: weak blocks shatter under load and you watch the argument stand or collapse. Instant demo without a key; grade your real document live with one." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
+<script src="providers.js"></script>
+<style>
+  .t-wrap { max-width: 900px; margin: 0 auto; padding: 14px 22px 30px; }
+  .lead { color: #c7cfda; font-size: 15px; }
+  textarea { width: 100%; box-sizing: border-box; min-height: 100px; padding: 11px 13px; border-radius: 11px; background: var(--panel); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 13.5px; resize: vertical; }
+  .bar { display: flex; gap: 10px; align-items: center; margin: 10px 0; flex-wrap: wrap; }
+  #stage { position: relative; width: 100%; height: 520px; border: 1px solid var(--border); border-radius: 15px; overflow: hidden; background: #07080d; }
+  #scene3d { width: 100%; height: 100%; display: block; }
+  #verdict { position: absolute; left: 50%; transform: translateX(-50%); bottom: 14px; z-index: 4; font-size: 15px; font-weight: 800; padding: 10px 20px; border-radius: 999px; background: rgba(14,17,23,.9); border: 1.5px solid var(--border); display: none; backdrop-filter: blur(6px); }
+  #verdict.stand { border-color: #5ad19a; color: #5ad19a; } #verdict.fall { border-color: #e5534b; color: #e5534b; }
+  #blockTip { position: absolute; z-index: 5; pointer-events: none; font-size: 12px; color: #fff; background: rgba(10,12,16,.92); border: 1px solid var(--border); border-radius: 9px; padding: 7px 10px; max-width: 300px; line-height: 1.45; display: none; }
+  .legend { display: flex; gap: 14px; flex-wrap: wrap; font-size: 12px; color: var(--muted); margin: 8px 0; }
+  .legend b { color: var(--text); }
+  .sw { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 4px; vertical-align: -1px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>The Tower of Claims</h1><p class="tagline">Every sentence is a block. The evidence is the material. Physics is the reviewer.</p></div></div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="key (only needed for live grading)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-fable-5">Fable 5 ✨</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<div class="t-wrap">
+  <p class="lead">Paste a document and it becomes a <strong>tower</strong>: sentences are blocks, evidence is material — <b>steel</b> for data, <b>stone</b> for sourced claims, <b>wood</b> for assertions, <b>cardboard</b> for hype, <b>glass</b> for hidden assumptions. Then gravity gets a vote: weak blocks shatter under the weight above them, and the argument <em>stands or falls in front of you</em>.</p>
+  <textarea id="doc" placeholder="Paste your PRD, pitch, or plan… (or just press the demo button — no key needed)"></textarea>
+  <div class="bar">
+    <button id="demo" class="primary" type="button">🏗 Demo tower — no key needed</button>
+    <button id="grade" class="ghost" type="button">🔬 Grade MY document & build (uses your key)</button>
+    <button id="stress" class="ghost" type="button" disabled>💥 Stress test</button>
+    <span id="status" class="status"></span>
+  </div>
+  <div class="legend">
+    <span><span class="sw" style="background:#7f95b5"></span><b>steel</b> = data</span>
+    <span><span class="sw" style="background:#8a8578"></span><b>stone</b> = sourced</span>
+    <span><span class="sw" style="background:#a5713c"></span><b>wood</b> = assertion</span>
+    <span><span class="sw" style="background:#d0a04b"></span><b>cardboard</b> = superlative</span>
+    <span><span class="sw" style="background:#79d5e8"></span><b>glass</b> = hidden assumption</span>
+  </div>
+  <div id="stage"><canvas id="scene3d"></canvas><div id="verdict"></div><div id="blockTip"></div></div>
+</div>
+
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+               "cannon-es": "https://cdn.jsdelivr.net/npm/cannon-es@0.20.0/dist/cannon-es.js" } }
+</script>
+<script type="module">
+import * as THREE from 'three';
+import * as CANNON from 'cannon-es';
+
+const el=(id)=>document.getElementById(id);
+
+// Materials: [color, density, fragile(breaks under load), roughness, transparent]
+const MAT={
+  data:        {color:0x7f95b5, mass:5.0, fragile:false, rough:0.35, glass:false, label:'steel (data)'},
+  sourced:     {color:0x8a8578, mass:3.0, fragile:false, rough:0.9,  glass:false, label:'stone (sourced)'},
+  neutral:     {color:0x6f6f78, mass:2.0, fragile:false, rough:0.8,  glass:false, label:'concrete (neutral)'},
+  assertion:   {color:0xa5713c, mass:1.2, fragile:false, rough:0.75, glass:false, label:'wood (assertion)'},
+  superlative: {color:0xd0a04b, mass:0.5, fragile:true,  rough:0.95, glass:false, label:'cardboard (superlative)'},
+  assumption:  {color:0x79d5e8, mass:0.6, fragile:true,  rough:0.05, glass:true,  label:'glass (hidden assumption)'},
+};
+
+// ── Scene + physics world ─────────────────────────────────────────────────────
+const canvas=el('scene3d'), stage=el('stage');
+const renderer=new THREE.WebGLRenderer({canvas, antialias:true});
+const scene=new THREE.Scene();
+scene.background=new THREE.Color(0x07080d);
+scene.fog=new THREE.Fog(0x07080d, 60, 160);
+const camera=new THREE.PerspectiveCamera(50, 1, 0.1, 500);
+scene.add(new THREE.AmbientLight(0x8899bb, 0.5));
+const key=new THREE.DirectionalLight(0xffe8c8, 1.6); key.position.set(18,30,14); key.castShadow=true;
+key.shadow.mapSize.set(1024,1024); key.shadow.camera.left=-25; key.shadow.camera.right=25; key.shadow.camera.top=40; key.shadow.camera.bottom=-5;
+scene.add(key);
+scene.add(new THREE.DirectionalLight(0x88aaff, 0.35).position.set(-14,10,-10).clone());
+renderer.shadowMap.enabled=true;
+// ground
+const ground=new THREE.Mesh(new THREE.CylinderGeometry(16,16,0.6,48), new THREE.MeshStandardMaterial({color:0x12151d, roughness:0.9}));
+ground.position.y=-0.3; ground.receiveShadow=true; scene.add(ground);
+const grid=new THREE.GridHelper(60,30,0x1c2230,0x141824); grid.position.y=0.01; scene.add(grid);
+
+let world=null, blocks=[];
+function resetWorld(){
+  for(const b of blocks){ scene.remove(b.mesh); b.mesh.geometry.dispose(); }
+  blocks=[];
+  world=new CANNON.World({gravity:new CANNON.Vec3(0,-9.82,0)});
+  world.addBody(new CANNON.Body({type:CANNON.Body.STATIC, shape:new CANNON.Plane(), quaternion:new CANNON.Quaternion().setFromEuler(-Math.PI/2,0,0)}));
+  el('verdict').style.display='none';
+  el('stress').disabled=true;
+}
+function resize(){
+  const w=stage.clientWidth, h=stage.clientHeight;
+  renderer.setSize(w,h,false); renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+  camera.aspect=w/h; camera.updateProjectionMatrix();
+}
+resize(); addEventListener('resize',resize);
+
+// ── Build the tower from graded sentences ─────────────────────────────────────
+// Load-bearing sentences form the FOUNDATION courses; the rest stack in document
+// order; the final sentence (usually the conclusion) caps the top.
+let originalCount=0;
+function build(grading){
+  resetWorld();
+  const S=grading.sentences.filter(s=>s.t&&s.t.trim());
+  const lb=new Set(grading.loadBearing||[]);
+  const order=[...S.keys()].sort((a,b)=>(lb.has(b)?1:0)-(lb.has(a)?1:0));   // foundation first, stable sort keeps doc order
+  const perRow=3, W=3.4, H=1.15, D=2.2, GAP=0.12;
+  order.forEach((si,i)=>{
+    const s=S[si], m=MAT[s.c]||MAT.neutral;
+    const row=Math.floor(i/perRow), col=i%perRow;
+    const cols=Math.min(perRow, order.length-row*perRow);
+    const x=(col-(cols-1)/2)*(W+GAP)*( row%2? 1:-1 )*(row%2?1:-1) + (row%2?(W+GAP)/2*((col===cols-1&&cols<perRow)?0:0):0);
+    const px=(col-(cols-1)/2)*(W+GAP) + (row%2? (W+GAP)/2*0.35 : 0);
+    const py=H/2 + row*(H+0.02) + 0.02;
+    const geoB=new THREE.BoxGeometry(W,H,D);
+    const matB=new THREE.MeshPhysicalMaterial({
+      color:m.color, roughness:m.rough, metalness:s.c==='data'?0.8:0.05,
+      transparent:m.glass, opacity:m.glass?0.45:1, transmission:m.glass?0.6:0,
+    });
+    const mesh=new THREE.Mesh(geoB, matB); mesh.castShadow=true; mesh.receiveShadow=true;
+    mesh.position.set(px,py,0); scene.add(mesh);
+    const body=new CANNON.Body({mass:m.mass, shape:new CANNON.Box(new CANNON.Vec3(W/2,H/2,D/2)), position:new CANNON.Vec3(px,py,0)});
+    body.sleepSpeedLimit=0.2;
+    world.addBody(body);
+    blocks.push({mesh, body, s, m, row, alive:true});
+  });
+  originalCount=order.length;
+  const rows=Math.ceil(order.length/perRow);
+  camera.position.set(10, rows*H*0.85+3, 13);
+  camera.lookAt(0, rows*H*0.5, 0);
+  el('stress').disabled=false;
+  el('status').textContent=order.length+' blocks · '+blocks.filter(b=>b.m.fragile).length+' fragile — run the stress test.';
+  if(window.pmTrack) pmTrack('tower/build');
+}
+
+// ── The stress test: fragile blocks shatter under the load above them ────────
+let shaking=0;
+function stress(){
+  el('stress').disabled=true;
+  const fragile=blocks.filter(b=>b.alive&&b.m.fragile);
+  const maxRow=Math.max(...blocks.map(b=>b.row));
+  let any=false, delay=400;
+  for(const b of fragile){
+    const loadAbove=blocks.filter(o=>o.row>b.row).length;
+    if(loadAbove>=1){                          // anything resting on a fragile block breaks it
+      any=true;
+      setTimeout(()=>{ shatter(b); }, delay);
+      delay+=550;
+    }
+  }
+  const survivors=blocks.length-fragile.filter(b=>blocks.some(o=>o.row>b.row)).length;
+  setTimeout(()=>{
+    const v=el('verdict');
+    const fell=blocks.filter(b=>!b.alive).length;
+    const stands=fell===0 || fell/Math.max(1,originalCount)<0.18;
+    v.className=stands?'stand':'fall'; v.style.display='block';
+    v.textContent=stands
+      ? '🏛 IT STANDS — '+(fell? 'lost '+fell+' weak block'+(fell===1?'':'s')+', held anyway.' : 'not one fragile block under load. Ship it.')
+      : '💥 IT FALLS — '+fell+' blocks failed. The conclusion was resting on glass.';
+    if(window.pmTrack) pmTrack('tower/verdict/'+(stands?'stand':'fall'));
+  }, delay+2400);
+  if(!any){ /* verdict fires above anyway */ }
+}
+function shatter(b){
+  b.alive=false;
+  world.removeBody(b.body);
+  scene.remove(b.mesh);
+  // shards: 6 small pieces at the block's position, thrown outward
+  for(let i=0;i<6;i++){
+    const sgeo=new THREE.BoxGeometry(0.7,0.35,0.6);
+    const smesh=new THREE.Mesh(sgeo, b.mesh.material.clone()); smesh.castShadow=true;
+    smesh.position.copy(b.mesh.position); scene.add(smesh);
+    const sbody=new CANNON.Body({mass:0.15, shape:new CANNON.Box(new CANNON.Vec3(0.35,0.17,0.3)),
+      position:new CANNON.Vec3(b.mesh.position.x,b.mesh.position.y,b.mesh.position.z)});
+    sbody.velocity.set((Math.random()-.5)*7, Math.random()*4, (Math.random()-.5)*7);
+    world.addBody(sbody);
+    blocks.push({mesh:smesh, body:sbody, s:b.s, m:b.m, row:-1, alive:true, shard:true});
+  }
+  shaking=performance.now();
+}
+
+// ── Hover: which sentence is this block? ─────────────────────────────────────
+const ray=new THREE.Raycaster(), mouse=new THREE.Vector2();
+canvas.addEventListener('pointermove',e=>{
+  const r=canvas.getBoundingClientRect();
+  mouse.x=((e.clientX-r.left)/r.width)*2-1; mouse.y=-((e.clientY-r.top)/r.height)*2+1;
+  ray.setFromCamera(mouse,camera);
+  const hit=ray.intersectObjects(blocks.filter(b=>b.alive&&!b.shard).map(b=>b.mesh))[0];
+  const tip=el('blockTip');
+  if(hit){
+    const b=blocks.find(x=>x.mesh===hit.object);
+    tip.style.display='block'; tip.style.left=(e.clientX-r.left+14)+'px'; tip.style.top=(e.clientY-r.top-8)+'px';
+    tip.innerHTML='<b>'+b.m.label+'</b><br>'+String(b.s.t).slice(0,140)+(b.s.note?('<br><i style="color:#95a0b0">'+String(b.s.note).slice(0,100)+'</i>'):'');
+  } else tip.style.display='none';
+});
+
+// ── Render loop ───────────────────────────────────────────────────────────────
+const clock=new THREE.Clock();
+renderer.setAnimationLoop(()=>{
+  const dt=Math.min(clock.getDelta(),0.05);
+  if(world) world.step(1/60, dt, 3);
+  for(const b of blocks) if(b.alive||b.shard){ b.mesh.position.copy(b.body.position); b.mesh.quaternion.copy(b.body.quaternion); }
+  if(shaking){
+    const k=(performance.now()-shaking)/450;
+    if(k<1){ camera.position.x+=Math.sin(k*60)*0.09*(1-k); camera.position.y+=Math.cos(k*80)*0.06*(1-k); }
+    else shaking=0;
+  }
+  renderer.render(scene,camera);
+});
+
+// ── The demo document (hand-graded — instant, no key) ────────────────────────
+const DEMO={sentences:[
+  {t:'Churn in the SMB cohort rose from 2.1% to 3.4% between January and April (billing data, n=4,182).',c:'data',note:''},
+  {t:'Exit interviews cite onboarding confusion as the top reason (internal research, March).',c:'sourced',note:''},
+  {t:'Our onboarding is clearly the worst part of the product.',c:'superlative',note:'"clearly the worst" — rank it against measured steps instead'},
+  {t:'A guided setup flow will fix the confusion.',c:'assumption',note:'assumes cause; no test yet that guidance changes behaviour'},
+  {t:'Competitors ship guided setup as standard.',c:'assertion',note:'plausible — name the competitors and their activation deltas'},
+  {t:'Engineering estimates the flow at six weeks (planning doc, signed off).',c:'sourced',note:''},
+  {t:'Activation improved 9pp in the pilot with 120 users (experiment #47).',c:'data',note:''},
+  {t:'Every churned customer would have stayed with better onboarding.',c:'assumption',note:'unfalsifiable as written — the glass under the conclusion'},
+  {t:'Therefore we should pause the analytics roadmap for a quarter and rebuild onboarding.',c:'assertion',note:'the conclusion — look what it rests on'},
+],loadBearing:[0,6,3],fixFirst:[7,3,2]};
+
+el('demo').addEventListener('click',()=>{ build(DEMO); });
+el('stress').addEventListener('click',stress);
+el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+PMProviders.initProviderUI();
+
+// Live grading: the X-ray prompt, then build.
+el('grade').addEventListener('click',async ()=>{
+  const doc=el('doc').value.trim();
+  if(doc.length<200) return el('status').textContent='Paste a real document (a few paragraphs at least) — or use the demo.';
+  const k=el('apiKey').value.trim();
+  if(!k&&!PMProviders.current().local) return el('status').textContent='Enter your '+PMProviders.current().name+' key — or press the demo button (free).';
+  el('grade').disabled=true; el('status').textContent='Grading every sentence…';
+  try{
+    const raw=await PMProviders.stream({key:k,model:el('model').value,
+      system:`You are an evidence auditor. Split the document into sentences and grade each: "data" (verifiable numbers/measurements), "sourced" (attributed to a named source), "assertion" (unbacked factual claim), "superlative" (hype/absolute language), "assumption" (hidden premise the argument needs), "neutral" (connective tissue). Return STRICT JSON only:
+{"sentences":[{"t":"<exact sentence>","c":"data|sourced|assertion|superlative|assumption|neutral","note":"<for weak classes: one line on what evidence would fix it, else empty>"}],"loadBearing":[<indexes of the ≤5 sentences the argument rests on>],"fixFirst":[<indexes of the 3 weakest load-relevant>]}`,
+      userMessage:doc.slice(0,16000)});
+    const js=raw.replace(/^```(json)?|```$/gm,'').trim();
+    build(JSON.parse(js.slice(js.indexOf('{'), js.lastIndexOf('}')+1)));
+    if(window.pmTrack) pmTrack('tower/graded');
+  }catch(e){ el('status').textContent=e.message||'Grading failed.'; }
+  finally{ el('grade').disabled=false; }
+});
+
+window.__towerReady=true;
+if(window.pmTrack) pmTrack('tower/open');
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
