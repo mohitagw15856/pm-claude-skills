@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>Galaxy 3D — 454 skills as a real starfield you can fly through</title>
+<meta name="description" content="The skill library as an actual galaxy: 454 skills are stars, 65 bundles are colored constellations on spiral arms, with bloom, fly-to search, a hyperspace warp — and your sky is yours: stars you've actually run burn brighter. WebGL, all client-side." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  html, body { height: 100%; margin: 0; overflow: hidden; }
+  #cosmos { position: fixed; inset: 0; }
+  .hud { position: fixed; z-index: 5; }
+  .hud.top { top: 10px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; justify-content: center; }
+  .hud input { padding: 9px 14px; border-radius: 999px; background: rgba(16,19,26,.82); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 13.5px; width: min(300px, 60vw); backdrop-filter: blur(6px); }
+  .hud button { padding: 9px 14px; border-radius: 999px; background: rgba(16,19,26,.82); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 13px; cursor: pointer; backdrop-filter: blur(6px); }
+  .hud button:hover { border-color: var(--accent); }
+  #label { position: fixed; z-index: 6; pointer-events: none; font-size: 12.5px; color: #fff; text-shadow: 0 1px 6px #000; display: none; }
+  #panel { position: fixed; right: 14px; top: 60px; width: min(330px, 86vw); z-index: 7; background: rgba(14,17,23,.92); border: 1px solid var(--border); border-radius: 15px; padding: 16px 18px; display: none; backdrop-filter: blur(8px); }
+  #panel h2 { margin: 0 0 4px; font-size: 17px; }
+  #panel .b { font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  #panel p { font-size: 13px; line-height: 1.5; color: #c7cfda; }
+  #panel a { color: var(--accent); text-decoration: none; font-size: 13px; }
+  #panel .x { position: absolute; top: 8px; right: 12px; cursor: pointer; color: var(--muted); }
+  .hint { position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%); z-index: 5; font-size: 11.5px; color: rgba(255,255,255,.45); text-align: center; }
+  #back { position: fixed; top: 10px; left: 12px; z-index: 6; font-size: 12.5px; color: var(--muted); text-decoration: none; background: rgba(16,19,26,.82); border: 1px solid var(--border); border-radius: 999px; padding: 8px 13px; }
+</style>
+</head>
+<body>
+<canvas id="cosmos"></canvas>
+<a id="back" href="galaxy.html">← 2D map</a>
+<div class="hud top">
+  <input id="q" placeholder="🔭 Find a skill — the camera flies there…" />
+  <button id="warp" type="button" title="Hyperspace jump to a random star">🌀 Warp</button>
+  <button id="home" type="button" title="Back to the wide view">🏠</button>
+</div>
+<div id="label"></div>
+<div id="panel"><span class="x" id="px">✕</span><div class="b" id="pBundle"></div><h2 id="pName"></h2><p id="pDesc"></p><a id="pRun" href="#" target="_blank">▶ Run this skill in the playground</a><br/><a id="pPage" href="#" target="_blank">📄 Skill page</a></div>
+<div class="hint">drag to orbit · scroll to zoom · click a star · <b>stars you've run burn brighter</b></div>
+
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+               "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+</script>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+
+const el=(id)=>document.getElementById(id);
+const ls=(k,d)=>{ try{ return JSON.parse(localStorage.getItem(k)) ?? d; }catch(_){ return d; } };
+
+// ── Data: the library + your practice record ─────────────────────────────────
+const catalog = await fetch('skills.json').then(r=>r.json()).catch(()=>({skills:[]}));
+const SKILLS = catalog.skills || [];
+const runsBy = {};
+for (const r of ls('pm_workspace',[])||[]) runsBy[r.name]=(runsBy[r.name]||0)+1;
+
+// Bundles → spiral-arm constellation centers.
+const bundles=[...new Set(SKILLS.map(s=>s.plugin||'other'))];
+const centers={}, hues={};
+bundles.forEach((b,i)=>{
+  const t=i/bundles.length, arm=i%3, angle=t*Math.PI*4 + arm*(Math.PI*2/3), r=60+t*260;
+  centers[b]=new THREE.Vector3(Math.cos(angle)*r, (Math.random()-.5)*36, Math.sin(angle)*r);
+  hues[b]=(i*0.618034)%1;   // golden-ratio hue spacing — neighbours never share a colour
+});
+
+// ── Scene ─────────────────────────────────────────────────────────────────────
+const canvas=el('cosmos');
+const renderer=new THREE.WebGLRenderer({canvas, antialias:true});
+renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+const scene=new THREE.Scene();
+scene.fog=new THREE.FogExp2(0x05060a, 0.00085);
+const camera=new THREE.PerspectiveCamera(62, innerWidth/innerHeight, 0.1, 4000);
+camera.position.set(0, 150, 340);
+const controls=new OrbitControls(camera, canvas);
+controls.enableDamping=true; controls.dampingFactor=0.06; controls.maxDistance=1200; controls.minDistance=8;
+
+// Star sprite texture (soft round glow), generated on a canvas.
+function glowTexture(){
+  const c=document.createElement('canvas'); c.width=c.height=64;
+  const x=c.getContext('2d'), g=x.createRadialGradient(32,32,0,32,32,32);
+  g.addColorStop(0,'rgba(255,255,255,1)'); g.addColorStop(0.3,'rgba(255,255,255,.8)'); g.addColorStop(1,'rgba(255,255,255,0)');
+  x.fillStyle=g; x.fillRect(0,0,64,64);
+  return new THREE.CanvasTexture(c);
+}
+const sprite=glowTexture();
+
+// ── The stars: one point per skill ────────────────────────────────────────────
+const N=SKILLS.length;
+const pos=new Float32Array(N*3), col=new Float32Array(N*3), size=new Float32Array(N);
+const starMeta=[];
+SKILLS.forEach((s,i)=>{
+  const c=centers[s.plugin||'other'];
+  const p=new THREE.Vector3(c.x+(Math.random()-.5)*46, c.y+(Math.random()-.5)*22, c.z+(Math.random()-.5)*46);
+  pos.set([p.x,p.y,p.z], i*3);
+  const runs=runsBy[s.name]||0;
+  const lit=Math.min(1, runs/3);                                  // your sky: 3 runs = fully ablaze
+  const base=s.tier==='production'?0.72:s.tier==='experimental'?0.38:0.55;
+  const color=new THREE.Color().setHSL(hues[s.plugin||'other'], 0.75, base*0.5 + lit*0.42);
+  col.set([color.r,color.g,color.b], i*3);
+  size[i]= 3.2 + (s.tier==='production'?1.6:0) + lit*4.0;
+  starMeta.push({...s, position:p, runs});
+});
+const geo=new THREE.BufferGeometry();
+geo.setAttribute('position', new THREE.BufferAttribute(pos,3));
+geo.setAttribute('color', new THREE.BufferAttribute(col,3));
+geo.setAttribute('size', new THREE.BufferAttribute(size,1));
+const starMat=new THREE.ShaderMaterial({
+  uniforms:{ tex:{value:sprite} },
+  vertexShader:`attribute float size; varying vec3 vColor;
+    void main(){ vColor=color; vec4 mv=modelViewMatrix*vec4(position,1.0);
+    gl_PointSize=size*(560.0/-mv.z); gl_Position=projectionMatrix*mv; }`,
+  fragmentShader:`uniform sampler2D tex; varying vec3 vColor;
+    void main(){ gl_FragColor=vec4(vColor,1.0)*texture2D(tex,gl_PointCoord); }`,
+  vertexColors:true, transparent:true, depthWrite:false, blending:THREE.AdditiveBlending,
+});
+const stars=new THREE.Points(geo, starMat);
+scene.add(stars);
+
+// Nebulae: one soft glow per bundle, breathing slowly.
+const nebulae=[];
+for(const b of bundles){
+  const m=new THREE.Sprite(new THREE.SpriteMaterial({map:sprite, color:new THREE.Color().setHSL(hues[b],0.7,0.32), transparent:true, opacity:0.09, depthWrite:false, blending:THREE.AdditiveBlending}));
+  m.position.copy(centers[b]); m.scale.setScalar(46);
+  scene.add(m); nebulae.push(m);
+}
+// Background dust: 3000 far faint stars.
+{
+  const n=3000, p2=new Float32Array(n*3);
+  for(let i=0;i<n;i++){ const v=new THREE.Vector3().randomDirection().multiplyScalar(900+Math.random()*1400); p2.set([v.x,v.y,v.z],i*3); }
+  const g2=new THREE.BufferGeometry(); g2.setAttribute('position', new THREE.BufferAttribute(p2,3));
+  scene.add(new THREE.Points(g2, new THREE.PointsMaterial({color:0x8899bb, size:1.15, sizeAttenuation:true, map:sprite, transparent:true, opacity:0.55, depthWrite:false})));
+}
+
+// Bloom — the glow that makes it a galaxy.
+const composer=new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene,camera));
+const bloom=new UnrealBloomPass(new THREE.Vector2(innerWidth,innerHeight), 0.9, 0.7, 0.08);
+composer.addPass(bloom);
+
+function resize(){
+  renderer.setSize(innerWidth,innerHeight); composer.setSize(innerWidth,innerHeight);
+  camera.aspect=innerWidth/innerHeight; camera.updateProjectionMatrix();
+}
+resize(); addEventListener('resize',resize);
+
+// ── Picking: hover labels + click panel ───────────────────────────────────────
+const ray=new THREE.Raycaster(); ray.params.Points.threshold=3.2;
+const mouse=new THREE.Vector2(); let hovered=-1;
+canvas.addEventListener('pointermove',e=>{ mouse.x=(e.clientX/innerWidth)*2-1; mouse.y=-(e.clientY/innerHeight)*2+1;
+  ray.setFromCamera(mouse,camera);
+  const hit=ray.intersectObject(stars)[0];
+  hovered=hit?hit.index:-1;
+  const lb=el('label');
+  if(hovered>=0){ lb.style.display='block'; lb.style.left=(e.clientX+12)+'px'; lb.style.top=(e.clientY-8)+'px';
+    const m=starMeta[hovered]; lb.textContent=m.name+(m.runs?' ✦ yours':''); canvas.style.cursor='pointer'; }
+  else { lb.style.display='none'; canvas.style.cursor='grab'; }
+});
+canvas.addEventListener('click',()=>{ if(hovered>=0) openPanel(starMeta[hovered]); });
+function openPanel(m){
+  el('pBundle').textContent=(m.plugin||'')+' · '+(m.tier||'')+(m.runs?(' · ✦ run '+m.runs+'×'):'');
+  el('pName').textContent=m.name;
+  el('pDesc').textContent=String(m.description||'').slice(0,260);
+  el('pRun').href='index.html?skill='+m.name;
+  el('pPage').href='skill/'+m.name+'.html';
+  el('panel').style.display='block';
+  if(window.pmTrack) pmTrack('galaxy3d/star');
+}
+el('px').addEventListener('click',()=>el('panel').style.display='none');
+
+// ── Camera choreography: fly-to, warp, home ──────────────────────────────────
+let tween=null;
+function flyTo(target, dist, dur){
+  const from=camera.position.clone(), fromT=controls.target.clone();
+  const dir=new THREE.Vector3().randomDirection().multiplyScalar(dist);
+  const to=target.clone().add(dir), t0=performance.now();
+  tween={t0, dur, from, fromT, to, toT:target.clone()};
+}
+el('q').addEventListener('keydown',e=>{
+  if(e.key!=='Enter') return;
+  const q=el('q').value.toLowerCase().trim(); if(!q) return;
+  const words=q.split(/\s+/);
+  let best=null,bs=-1;
+  for(const m of starMeta){
+    const hay=(m.name+' '+(m.description||'')).toLowerCase();
+    let sc=0; for(const w of words) if(hay.includes(w)) sc+=m.name.includes(w)?2:1;
+    if(sc>bs){bs=sc;best=m;}
+  }
+  if(best&&bs>0){ flyTo(best.position, 26, 1800); setTimeout(()=>openPanel(best), 1900); if(window.pmTrack) pmTrack('galaxy3d/search'); }
+});
+let warping=0;
+el('warp').addEventListener('click',()=>{
+  const m=starMeta[Math.floor(Math.random()*starMeta.length)];
+  warping=performance.now();
+  flyTo(m.position, 24, 1500);
+  setTimeout(()=>openPanel(m), 1650);
+  if(window.pmTrack) pmTrack('galaxy3d/warp');
+});
+el('home').addEventListener('click',()=>{ flyTo(new THREE.Vector3(0,0,0), 460, 1600); el('panel').style.display='none'; });
+
+// ── Render loop ───────────────────────────────────────────────────────────────
+const ease=(t)=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+renderer.setAnimationLoop(()=>{
+  const now=performance.now();
+  if(tween){
+    const k=Math.min(1,(now-tween.t0)/tween.dur), e=ease(k);
+    camera.position.lerpVectors(tween.from,tween.to,e);
+    controls.target.lerpVectors(tween.fromT,tween.toT,e);
+    if(k>=1) tween=null;
+  }
+  // Warp: FOV punch + bloom surge — the hyperspace feel.
+  if(warping){
+    const k=Math.min(1,(now-warping)/1500);
+    camera.fov=62+Math.sin(k*Math.PI)*46; camera.updateProjectionMatrix();
+    bloom.strength=0.9+Math.sin(k*Math.PI)*1.6;
+    if(k>=1){ warping=0; camera.fov=62; camera.updateProjectionMatrix(); bloom.strength=0.9; }
+  }
+  const t=now*0.001;
+  stars.rotation.y=t*0.008;                       // the slow turn of the galaxy
+  nebulae.forEach((n,i)=>{ n.material.opacity=0.07+Math.sin(t*0.4+i)*0.03; n.position.copy(centers[bundles[i]]).applyAxisAngle(new THREE.Vector3(0,1,0), t*0.008); });
+  controls.update();
+  composer.render();
+});
+window.__galaxyReady = { stars: N, bundles: bundles.length };
+if(window.pmTrack) pmTrack('galaxy3d/open');
+</script>
+</body>
+</html>
