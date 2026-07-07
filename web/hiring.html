@@ -12,6 +12,7 @@
 <script src="providers.js"></script>
 <script src="export-doc.js"></script>
 <script src="voice.js"></script>
+<script src="duel.js"></script>
 <style>
   .g-wrap { max-width: 860px; margin: 0 auto; padding: 16px 22px 70px; }
   .lead { color: #c7cfda; font-size: 15.5px; }
@@ -70,6 +71,7 @@
   <section id="s1">
     <h2 class="stage-h">📋 Stage 1 — The role you're hiring for</h2>
     <p class="stage-sub">One or two lines is enough — "Senior PM for our payments platform" works. The candidate's résumé and hidden archetype get generated from it.</p>
+    <div id="duelBanner" hidden></div>
     <textarea id="role" placeholder="e.g. Senior product manager for a B2B payments platform — owns merchant onboarding, works with 2 eng squads, reports to the VP Product"></textarea>
     <div class="bar">
       <select id="rounds" style="width:auto;padding:9px 12px;border-radius:10px;background:var(--panel);border:1px solid var(--border);color:var(--text);font-family:inherit">
@@ -111,6 +113,7 @@
   <section id="s4" class="hidden">
     <h2 class="stage-h">🏁 The reveal</h2>
     <div id="o4" class="verdict markdown"></div>
+    <div id="duelCard" hidden></div>
     <div class="out-actions">
       <button id="dl" class="primary" type="button">⬇ Download the panel report (.md)</button>
       <button id="cert" class="ghost" type="button">🎓 Certificate (PDF)</button>
@@ -129,8 +132,18 @@ const ARCHETYPES=[
 ];
 let S={role:'',rounds:7,arch:null,cv:'',turns:[],call:'',why:'',verdict:''};
 
+let DUEL=null;
 init();
 function init(){
+  if(window.PMDuel) PMDuel.read().then(d=>{
+    if(d&&d.k==='panel'&&d.cv&&d.arch){
+      DUEL=d;
+      el('role').value=d.role||''; el('role').disabled=true;
+      if(d.rounds) el('rounds').value=String(d.rounds);
+      el('rounds').disabled=true;
+      PMDuel.banner(el('duelBanner'),d,'Interview the EXACT same candidate — same résumé, same hidden archetype. Their interviewer score to beat is out of 100.');
+    }
+  });
   PMProviders.initProviderUI();
   el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
   el('b1').addEventListener('click',stage1);
@@ -171,6 +184,17 @@ Answer the interviewer's question in ≤110 words, in character, first person, c
 async function stage1(){
   if(key()===null) return;
   S.role=el('role').value.trim(); S.rounds=+el('rounds').value;
+  if(DUEL){
+    // The duel carries the exact candidate: same résumé, same hidden archetype.
+    S.role=DUEL.role; S.rounds=DUEL.rounds||7;
+    S.arch=ARCHETYPES.find(a=>a.id===DUEL.arch)||ARCHETYPES[0];
+    S.cv=DUEL.cv;
+    const o=el('cv'); o.classList.remove('hidden');
+    o.innerHTML=DOMPurify.sanitize(marked.parse(S.cv));
+    el('n1').classList.remove('hidden'); st('');
+    if(window.pmTrack) pmTrack('panel/duel-start');
+    return;
+  }
   if(S.role.length<20) return st('Describe the role — one or two real lines.',true);
   S.arch=ARCHETYPES[Math.floor(Math.random()*ARCHETYPES.length)];
   if(window.pmTrack) pmTrack('panel/start');
@@ -220,7 +244,12 @@ async function makeCall(call){
 "### Next interview" — the 2 techniques that would most raise this interviewer's game.
 End with: 🏆 The Panel — interviewer <n>/100, candidate was: ${S.arch.id} · pm-skills, ${new Date().toISOString().slice(0,10)}`});
     if(window.pmTrack) pmTrack('panel/finish/'+S.arch.id);
-    try{ const runs=JSON.parse(localStorage.getItem('pm_panel_runs')||'[]'); const m=S.verdict.match(/Interviewer score:\s*(\d+)/i); runs.push({d:Date.now(),arch:S.arch.id,call:S.call,score:m?+m[1]:null}); localStorage.setItem('pm_panel_runs',JSON.stringify(runs.slice(-50))); }catch(_){}
+    try{ const runs=JSON.parse(localStorage.getItem('pm_panel_runs')||'[]'); const m=S.verdict.match(/Interviewer score:\s*(\d+)/i); runs.push({d:Date.now(),arch:S.arch.id,call:S.call,score:m?+m[1]:null}); localStorage.setItem('pm_panel_runs',JSON.stringify(runs.slice(-50)));
+      if(window.PMDuel&&m){
+        if(DUEL) PMDuel.scorecard(el('duelCard'),DUEL,m[1]+'/100');
+        PMDuel.challengeButton(document.querySelector('#s4 .out-actions'),()=>({k:'panel',role:S.role,cv:S.cv,arch:S.arch.id,rounds:S.rounds,score:m[1]+'/100'}));
+      }
+    }catch(_){}
   }catch(e){ o.textContent=e.message||'Scoring failed.'; }
 }
 function certificate(){

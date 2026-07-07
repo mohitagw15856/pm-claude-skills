@@ -11,6 +11,7 @@
 <script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
 <script src="providers.js"></script>
 <script src="export-doc.js"></script>
+<script src="duel.js"></script>
 <style>
   .gym-wrap { max-width: 880px; margin: 0 auto; padding: 16px 22px 70px; }
   .lead { color: #c7cfda; font-size: 15.5px; }
@@ -71,6 +72,7 @@
   </div>
 
   <div id="session" hidden>
+    <div id="duelBanner" hidden></div>
     <div class="brief" id="brief"></div>
     <div class="table-hint">At the table</div>
     <div class="chat" id="chat"></div>
@@ -84,6 +86,7 @@
       <span id="status2" class="status"></span>
     </div>
     <div id="debrief" class="debrief markdown" hidden></div>
+    <div id="duelCard" hidden></div>
     <div class="out-actions" id="after" hidden>
       <button id="dlBtn" class="primary" type="button">⬇ Download debrief (.md)</button>
       <button id="certBtn" class="ghost" type="button">🎓 Certificate (PDF)</button>
@@ -132,11 +135,32 @@ function init(){
 
 function keyOk(){ const key=el('apiKey').value.trim(); if(!key&&!PMProviders.current().local){ setStatus('Enter your '+PMProviders.current().name+' key first — or pick the In-browser (no key) provider.',true); return null;} return key; }
 
+let DUEL=null;
+if(window.PMDuel) PMDuel.read().then(d=>{
+  if(d&&d.k==='gym'&&d.world){
+    DUEL=d;
+    if(d.scenario&&el('scenario').querySelector('option[value="'+d.scenario+'"]')) el('scenario').value=d.scenario;
+    if(d.diff) el('difficulty').value=d.diff;
+    el('scenario').disabled=true; el('difficulty').disabled=true; el('ctx').disabled=true;
+    PMDuel.banner(el('duelBanner'),d,'Same counterparty, same secret bottom line ('+(d.scenario||'scenario')+', '+(d.diff||'')+'). Beat their score out of 40.');
+  }
+});
+
 async function start(){
   const key=keyOk(); if(key===null) return;
   const sc=SCEN[el('scenario').value], diff=el('difficulty').value, ctx=el('ctx').value.trim();
   if(window.pmTrack) pmTrack('gym/'+el('scenario').value+'/'+diff);
-  el('startBtn').disabled=true; setStatus('Generating your counterparty (and their secrets)…');
+  el('startBtn').disabled=true;
+  if(DUEL){
+    // The duel carries the exact world — no generation, identical hidden state.
+    WORLD=DUEL.world;
+    el('setup').hidden=true; el('session').hidden=false;
+    el('brief').innerHTML='<strong>📋 Your brief</strong><br>'+esc(WORLD.public_brief).replace(/\n/g,'<br>')+'<br><em>Across the table: '+esc(WORLD.counterparty.name)+' — '+esc(WORLD.counterparty.role)+'.</em>';
+    setStatus('');
+    await counterpartyTurn('(Open the conversation naturally, in character — greet and set the frame from your side.)');
+    return;
+  }
+  setStatus('Generating your counterparty (and their secrets)…');
   controller=new AbortController();
   const system=`You are a scenario engine. Create a realistic negotiation world. The user plays ${sc.you}; the counterparty is ${sc.them}. Negotiable dimensions: ${sc.stakes}. Difficulty: ${diff} (fair = reasonable; tough = professional and self-interested; shark = exploits mistakes, anchors hard, manufactures deadlines — but stays realistic, never cartoonish).
 ${ctx?('User context to incorporate: '+ctx):'Invent plausible, internally consistent numbers.'}
@@ -229,6 +253,14 @@ Write the debrief in markdown, ≤380 words:
 // Improvement over sessions: keep the last scores per scenario in this browser.
 function saveScore(){
   const m=DEBRIEF.match(/Final:\s*(\d+)\s*\/\s*40/i); if(!m) return;
+  // ⚔️ Duels: side-by-side vs the challenger, and a challenge button for this run.
+  if(window.PMDuel){
+    if(DUEL) PMDuel.scorecard(el('duelCard'),DUEL,m[1]+'/40');
+    if(!el('after').querySelector('.ghost[data-duel]')){
+      PMDuel.challengeButton(el('after'),()=>({k:'gym',world:WORLD,scenario:el('scenario').value,diff:el('difficulty').value,score:m[1]+'/40'}));
+      el('after').lastElementChild.setAttribute('data-duel','1');
+    }
+  }
   try{
     const k='pm_gym_scores', all=JSON.parse(localStorage.getItem(k)||'{}');
     (all[el('scenario').value]=all[el('scenario').value]||[]).push({s:+m[1],d:Date.now(),diff:el('difficulty').value});
