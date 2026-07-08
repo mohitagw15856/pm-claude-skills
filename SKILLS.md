@@ -1,4 +1,4 @@
-# 🗂️ All 454 Skills — full catalog
+# 🗂️ All 466 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -6,9 +6,9 @@
 
 **Jump to:** [🚀 Product](#product) · [📣 Marketing & Growth](#marketing-growth) · [💻 Engineering & AI](#engineering-ai) · [📊 Data & Analytics](#data-analytics) · [🎨 Design & Content](#design-content) · [🤝 Customers & Sales](#customers-sales) · [💰 Finance, Ops & Business](#finance-ops-business) · [⚖️ Legal & Compliance](#legal-compliance) · [🧑 You & Career](#you-career) · [🌍 Industries & Public Sector](#industries-public-sector)
 
-## 🚀 Product (43 skills)
+## 🚀 Product (44 skills)
 
-### `pm-advanced` — 5 skills · 5 eval-scored
+### `pm-advanced` — 6 skills · 5 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -17,6 +17,7 @@
 | **Design Handoff Brief** (`design-handoff-brief`) | Transform feature briefs into structured design briefs that give designers the context they need before opening Figma. | ✅ 5/5 |
 | **Experiment Designer** (`experiment-designer`) | Design statistically rigorous A/B tests and interpret experiment results. | ✅ 5/5 |
 | **Multi-Source Signal Synthesiser** (`multi-source-signal-synthesiser`) | Synthesises user signals from multiple research sources into a unified, weighted insight brief. | ✅ 5/5 |
+| **Skill Fusion** (`skill-fusion`) | Fuse two skills from this library into one hybrid brief for a task that sits between them — the meta-skill. | — |
 
 ### `pm-delivery` — 10 skills · 10 eval-scored
 
@@ -414,7 +415,7 @@
 | **Support Macro** (`support-macro`) | Write reusable support macros / canned responses that sound human, not robotic. | — |
 | **Support Runbook** (`support-runbook`) | Write a support runbook for handling a recurring issue type consistently. | — |
 
-## 💰 Finance, Ops & Business (57 skills)
+## 💰 Finance, Ops & Business (60 skills)
 
 ### `pm-accounting` — 6 skills
 
@@ -440,7 +441,7 @@
 | **Job Application** (`job-application`) | Tailors a CV and cover letter to a specific job description. | ✅ 5/5 |
 | **Strategy Memo** (`strategy-memo`) | Write a strategy memo that commits to a bet and says what you won't do. | — |
 
-### `pm-calculators` — 8 skills
+### `pm-calculators` — 11 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -451,6 +452,9 @@
 | **Runway Calculator** (`runway-calculator`) | Calculate cash runway, burn, and the zero-cash date — and whether you're default alive or dead. | — |
 | **Runway Monte Carlo** (`runway-monte-carlo`) | Cash runway as a distribution, not a number — Monte Carlo simulated. | — |
 | **SaaS Metrics** (`saas-metrics`) | Compute the core SaaS metrics — MRR/ARR, growth, NRR/GRR, churn, quick ratio, magic number — from your numbers. | — |
+| **Schedule Monte Carlo** (`schedule-monte-carlo`) | Project completion as a distribution, not a date — Monte Carlo over the task graph. | — |
+| **Support Staffing Model** (`support-staffing-model`) | How many support agents does the queue actually need — Erlang C, computed, not 'tickets per agent' folklore. | — |
+| **Tornado Sensitivity** (`tornado-sensitivity`) | Which assumption actually moves the answer — one-at-a-time sensitivity, ranked into a tornado. | — |
 | **Unit Economics** (`unit-economics`) | Model the unit economics of a business — CAC, LTV, payback, contribution margin — from real inputs. | — |
 
 ### `pm-consulting` — 6 skills · 6 eval-scored
@@ -538,7 +542,7 @@
 | **NDA Analyser** (`nda-analyser`) | Analyses a Non-Disclosure Agreement clause by clause and flags unusual terms, one-sided provisions, and negotiation points. | ✅ 4.5/5 |
 | **Privacy Policy Drafter** (`privacy-policy-drafter`) | Draft a clear, plain-language privacy policy tailored to what a product actually collects and does with data. | ✅ 4.8/5 |
 
-## 🧑 You & Career (38 skills)
+## 🧑 You & Career (41 skills)
 
 ### `pm-career` — 6 skills
 
@@ -582,15 +586,18 @@
 | **JD Decoder** (`jd-decoder`) | Decode a job description to find what they actually want beneath the buzzwords. | — |
 | **Outreach Message** (`outreach-message`) | Write cold outreach and networking messages that actually get replies. | — |
 
-### `pm-lifeadmin` — 5 skills
+### `pm-lifeadmin` — 8 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Complaint Letter** (`complaint-letter`) | Write a firm, effective complaint letter that gets a resolution. | — |
 | **Dispute Letter** (`dispute-letter`) | Write a letter to dispute an incorrect charge, bill, or record. | — |
+| **Eulogy Writer** (`eulogy-writer`) | Help someone write a eulogy — the hardest writing most people ever do, at the worst possible time. | — |
+| **Fine Appeal Letter** (`fine-appeal-letter`) | Appeal a parking ticket, penalty charge, or administrative fine with the grounds that actually get appeals granted — not indignation. | — |
 | **Insurance Claim** (`insurance-claim`) | Write a clear insurance claim letter or appeal that supports a payout. | — |
 | **Reference Letter** (`reference-letter`) | Write a credible, specific letter of recommendation or reference. | — |
 | **Rental Application** (`rental-application`) | Write a standout rental application / cover letter to a landlord or letting agent. | — |
+| **Wedding Speech** (`wedding-speech`) | A best-man/maid-of-honour/parent wedding toast that actually lands — funny without roasting, moving without syrup, short enough that nobody checks… | — |
 
 ### `pm-people` — 5 skills · 5 eval-scored
 
@@ -613,7 +620,7 @@
 | **Portfolio Page** (`portfolio-page`) | Structure a portfolio or case-study page that shows your work, not just lists it. | ✅ 5/5 |
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 
-## 🌍 Industries & Public Sector (100 skills)
+## 🌍 Industries & Public Sector (105 skills)
 
 ### `pm-agentnative` — 5 skills
 
@@ -805,6 +812,16 @@
 | **Screenshot Teardown** (`screenshot-teardown`) | Tear down a competitor's product from screenshots of its actual UI — onboarding, pricing page, core flows. | — |
 | **Whiteboard To Spec** (`whiteboard-to-spec`) | Turn photos of a whiteboard, sticky-note wall, or napkin sketch into a structured spec the team can execute. | — |
 
+### `pm-warroom` — 5 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Assumption Bounty** (`assumption-bounty`) | Extract every hidden assumption from a plan or document and put a price on each one — what it costs if wrong, what it costs to test. | — |
+| **Decision Autopsy** (`decision-autopsy`) | Judge a past decision by its PROCESS, not its outcome — because good decisions lose and bad decisions win, and teams that can't tell the… | — |
+| **Devil's Twin** (`devils-twin`) | The strongest possible case AGAINST what you just wrote — argued to win, not to check a box. | — |
+| **Metric Gaslighting Detector** (`metric-gaslighting-detector`) | Find out how a dashboard, KPI report, or metrics slide is lying to you — before you repeat its story in a bigger room. | — |
+| **Premortem Assassin** (`premortem-assassin`) | Kill the plan on paper before reality does it for money. | — |
+
 ---
 
-_454 skills across 65 bundles · 208 eval-scored (46%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_466 skills across 66 bundles · 208 eval-scored (45%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

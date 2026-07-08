@@ -62,6 +62,22 @@ const CASES = [
       const m = out.match(/OPP=([\d.]+).*range=([\d.]+)–([\d.]+)/);
       return m && +m[1] > +m[2] && +m[1] < +m[3];
     } },
+  { name: 'erlang staffing (M/M/c)', script: 'skills/support-staffing-model/scripts/erlang_staffing.py',
+    args: ['plan', join(tmp, 's.xlsx'), '--arrivals', '120', '--aht', '6', '--sla', '0.8', '--answer-in', '60'],
+    expect: /base 15 on-queue \/ 22 rostered/ },   // exact Erlang C result — drift = regression
+  { name: 'schedule MC (deterministic)', script: 'skills/schedule-monte-carlo/scripts/schedule_sim.py',
+    args: ['run', join(tmp, 'sc.xlsx'), '--tasks', w('t.json', JSON.stringify([
+      { name: 'design', optimistic: 3, likely: 5, pessimistic: 10, depends: [] },
+      { name: 'build', optimistic: 8, likely: 13, pessimistic: 25, depends: ['design'] }]))],
+    expect: /deterministic=18\.0 P10=/ },
+  { name: 'tornado (+ injection rejected)', script: 'skills/tornado-sensitivity/scripts/tornado.py',
+    args: ['run', join(tmp, 'to.xlsx'), '--model', w('m.json', JSON.stringify({ output: 'x', formula: '(a*b)/c',
+      drivers: [{ name: 'a', low: 1, base: 2, high: 3 }, { name: 'b', low: 4, base: 5, high: 6 }, { name: 'c', low: 1, base: 2, high: 4 }] }))],
+    expect: /top driver: c/, post: () => {
+      const r = spawnSync('python3', [join(root, 'skills/tornado-sensitivity/scripts/tornado.py'), 'run', join(tmp, 'e.xlsx'),
+        '--model', w('evil.json', JSON.stringify({ formula: '__import__("os")', drivers: [{ name: 'x', low: 1, base: 2, high: 3 }] }))], { encoding: 'utf8', timeout: 15000 });
+      return r.status !== 0;   // the evil formula must be rejected
+    } },
   { name: 'nps distribution', script: 'skills/csat-nps-analysis/scripts/nps.py',
     args: ['nps', '2', '1', '1', '2', '4', '5', '5', '10', '10', '25', '35'], expect: /NPS|nps/i },
   { name: 'A/B z-test', script: 'skills/experiment-readout/scripts/ab_significance.py',

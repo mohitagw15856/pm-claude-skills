@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-454 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+466 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -39,6 +39,7 @@
 | Apology Letter | `pm-crisis` | `pm-crisis/apology-letter/GEM_INSTRUCTIONS.md` |
 | Architecture Decision Record (ADR) | `pm-engineering` | `pm-engineering/architecture-decision-record/GEM_INSTRUCTIONS.md` |
 | Architecture Diagram | `pm-visuals` | `pm-visuals/architecture-diagram/GEM_INSTRUCTIONS.md` |
+| Assumption Bounty | `pm-warroom` | `pm-warroom/assumption-bounty/GEM_INSTRUCTIONS.md` |
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/GEM_INSTRUCTIONS.md` |
 | Async Decision Memo | `pm-operations` | `pm-operations/async-decision-memo/GEM_INSTRUCTIONS.md` |
 | Autopilot Charter | `pm-autopilot` | `pm-autopilot/autopilot-charter/GEM_INSTRUCTIONS.md` |
@@ -129,6 +130,7 @@
 | dbt Model Spec | `pm-dataeng` | `pm-dataeng/dbt-model-spec/GEM_INSTRUCTIONS.md` |
 | Debt Payoff Plan | `pm-money` | `pm-money/debt-payoff-plan/GEM_INSTRUCTIONS.md` |
 | Debugging Log Analyser | `pm-engineering` | `pm-engineering/debugging-log-analyser/GEM_INSTRUCTIONS.md` |
+| Decision Autopsy | `pm-warroom` | `pm-warroom/decision-autopsy/GEM_INSTRUCTIONS.md` |
 | Decision Memo | `pm-business` | `pm-business/decision-memo/GEM_INSTRUCTIONS.md` |
 | Deck Autopsy | `pm-vision` | `pm-vision/deck-autopsy/GEM_INSTRUCTIONS.md` |
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/GEM_INSTRUCTIONS.md` |
@@ -139,6 +141,7 @@
 | Design Handoff Brief | `pm-advanced` | `pm-advanced/design-handoff-brief/GEM_INSTRUCTIONS.md` |
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/GEM_INSTRUCTIONS.md` |
 | Developer Onboarding Document | `pm-engineering` | `pm-engineering/developer-onboarding-doc/GEM_INSTRUCTIONS.md` |
+| Devil's Twin | `pm-warroom` | `pm-warroom/devils-twin/GEM_INSTRUCTIONS.md` |
 | Difficult Conversation | `pm-comms` | `pm-comms/difficult-conversation/GEM_INSTRUCTIONS.md` |
 | Disaster Recovery Plan | `pm-engineering` | `pm-engineering/disaster-recovery-plan/GEM_INSTRUCTIONS.md` |
 | Discharge Summary | `pm-health` | `pm-health/discharge-summary/GEM_INSTRUCTIONS.md` |
@@ -160,6 +163,7 @@
 | Error Decoder | `pm-engineering` | `pm-engineering/error-decoder/GEM_INSTRUCTIONS.md` |
 | Error Message Writer | `pm-uxwriting` | `pm-uxwriting/error-message-writer/GEM_INSTRUCTIONS.md` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/GEM_INSTRUCTIONS.md` |
+| Eulogy Writer | `pm-lifeadmin` | `pm-lifeadmin/eulogy-writer/GEM_INSTRUCTIONS.md` |
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/GEM_INSTRUCTIONS.md` |
 | Evidence Lock | `pm-research` | `pm-research/evidence-lock/GEM_INSTRUCTIONS.md` |
 | Excel Model | `pm-documents` | `pm-documents/excel-model/GEM_INSTRUCTIONS.md` |
@@ -188,6 +192,7 @@
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/GEM_INSTRUCTIONS.md` |
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/GEM_INSTRUCTIONS.md` |
 | Financial Statement Explainer | `pm-accounting` | `pm-accounting/financial-statement-explainer/GEM_INSTRUCTIONS.md` |
+| Fine Appeal Letter | `pm-lifeadmin` | `pm-lifeadmin/fine-appeal-letter/GEM_INSTRUCTIONS.md` |
 | Flowchart | `pm-visuals` | `pm-visuals/flowchart/GEM_INSTRUCTIONS.md` |
 | FOIA / Public-Records Request | `pm-gov` | `pm-gov/foia-request/GEM_INSTRUCTIONS.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/GEM_INSTRUCTIONS.md` |
@@ -257,6 +262,7 @@
 | Media Pitch | `pm-gtm` | `pm-gtm/media-pitch/GEM_INSTRUCTIONS.md` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/GEM_INSTRUCTIONS.md` |
 | Messaging Framework | `pm-growth` | `pm-growth/messaging-framework/GEM_INSTRUCTIONS.md` |
+| Metric Gaslighting Detector | `pm-warroom` | `pm-warroom/metric-gaslighting-detector/GEM_INSTRUCTIONS.md` |
 | Metric Semantic Layer | `pm-dataeng` | `pm-dataeng/metric-semantic-layer/GEM_INSTRUCTIONS.md` |
 | Metric Tree Builder | `pm-data` | `pm-data/metric-tree-builder/GEM_INSTRUCTIONS.md` |
 | Metrics Framework | `pm-data` | `pm-data/metrics-framework/GEM_INSTRUCTIONS.md` |
@@ -303,6 +309,7 @@
 | PR Description | `pm-craft` | `pm-craft/pr-description/GEM_INSTRUCTIONS.md` |
 | PR Description Writer | `pm-engineering` | `pm-engineering/pr-description-writer/GEM_INSTRUCTIONS.md` |
 | PRD Template | `pm-essentials` | `pm-essentials/prd-template/GEM_INSTRUCTIONS.md` |
+| Premortem Assassin | `pm-warroom` | `pm-warroom/premortem-assassin/GEM_INSTRUCTIONS.md` |
 | Press Release | `pm-cross` | `pm-cross/press-release/GEM_INSTRUCTIONS.md` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/GEM_INSTRUCTIONS.md` |
 | Pricing Page Copy | `pm-pmm` | `pm-pmm/pricing-page-copy/GEM_INSTRUCTIONS.md` |
@@ -381,6 +388,7 @@
 | Sales Page | `pm-copy` | `pm-copy/sales-page/GEM_INSTRUCTIONS.md` |
 | Savings Goal Plan | `pm-money` | `pm-money/savings-goal-plan/GEM_INSTRUCTIONS.md` |
 | Saying No | `pm-comms` | `pm-comms/saying-no/GEM_INSTRUCTIONS.md` |
+| Schedule Monte Carlo | `pm-calculators` | `pm-calculators/schedule-monte-carlo/GEM_INSTRUCTIONS.md` |
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/GEM_INSTRUCTIONS.md` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/GEM_INSTRUCTIONS.md` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/GEM_INSTRUCTIONS.md` |
@@ -393,6 +401,7 @@
 | Service Catalog Entry | `pm-engineering` | `pm-engineering/service-catalog-entry/GEM_INSTRUCTIONS.md` |
 | Session Handoff | `pm-craft` | `pm-craft/session-handoff/GEM_INSTRUCTIONS.md` |
 | Short-Form Script | `pm-creator` | `pm-creator/short-form-script/GEM_INSTRUCTIONS.md` |
+| Skill Fusion | `pm-advanced` | `pm-advanced/skill-fusion/GEM_INSTRUCTIONS.md` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/GEM_INSTRUCTIONS.md` |
 | Slide Deck | `pm-documents` | `pm-documents/slide-deck/GEM_INSTRUCTIONS.md` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/GEM_INSTRUCTIONS.md` |
@@ -421,6 +430,7 @@
 | Subtitle & Caption | `pm-localization` | `pm-localization/subtitle-caption/GEM_INSTRUCTIONS.md` |
 | Support Macro | `pm-support` | `pm-support/support-macro/GEM_INSTRUCTIONS.md` |
 | Support Runbook | `pm-support` | `pm-support/support-runbook/GEM_INSTRUCTIONS.md` |
+| Support Staffing Model | `pm-calculators` | `pm-calculators/support-staffing-model/GEM_INSTRUCTIONS.md` |
 | Sycophancy Challenger | `pm-cross` | `pm-cross/sycophancy-challenger/GEM_INSTRUCTIONS.md` |
 | Synthetic User Research | `pm-research` | `pm-research/synthetic-user-research/GEM_INSTRUCTIONS.md` |
 | System Design Interview | `pm-engineering` | `pm-engineering/system-design-interview/GEM_INSTRUCTIONS.md` |
@@ -437,6 +447,7 @@
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/GEM_INSTRUCTIONS.md` |
 | Threat Model | `pm-security` | `pm-security/threat-model/GEM_INSTRUCTIONS.md` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `pm-writers/thumbnail-creator/GEM_INSTRUCTIONS.md` |
+| Tornado Sensitivity | `pm-calculators` | `pm-calculators/tornado-sensitivity/GEM_INSTRUCTIONS.md` |
 | Transcreation | `pm-localization` | `pm-localization/transcreation/GEM_INSTRUCTIONS.md` |
 | Unit Economics | `pm-calculators` | `pm-calculators/unit-economics/GEM_INSTRUCTIONS.md` |
 | User Interview Synthesis | `pm-discovery` | `pm-discovery/user-interview-synthesis/GEM_INSTRUCTIONS.md` |
@@ -453,6 +464,7 @@
 | Voice Agent Design | `pm-agentnative` | `pm-agentnative/voice-agent-design/GEM_INSTRUCTIONS.md` |
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/GEM_INSTRUCTIONS.md` |
 | Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/GEM_INSTRUCTIONS.md` |
+| Wedding Speech | `pm-lifeadmin` | `pm-lifeadmin/wedding-speech/GEM_INSTRUCTIONS.md` |
 | Which Skill Router | `pm-essentials` | `pm-essentials/which-skill/GEM_INSTRUCTIONS.md` |
 | Whiteboard To Spec | `pm-vision` | `pm-vision/whiteboard-to-spec/GEM_INSTRUCTIONS.md` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/GEM_INSTRUCTIONS.md` |

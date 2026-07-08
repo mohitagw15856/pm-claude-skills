@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-454 skills exported. Copy a `.mdc rule` into the tool to use it.
+466 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -39,6 +39,7 @@
 | Apology Letter | `pm-crisis` | `pm-crisis/apology-letter/apology-letter.mdc` |
 | Architecture Decision Record (ADR) | `pm-engineering` | `pm-engineering/architecture-decision-record/architecture-decision-record.mdc` |
 | Architecture Diagram | `pm-visuals` | `pm-visuals/architecture-diagram/architecture-diagram.mdc` |
+| Assumption Bounty | `pm-warroom` | `pm-warroom/assumption-bounty/assumption-bounty.mdc` |
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/assumption-mapper.mdc` |
 | Async Decision Memo | `pm-operations` | `pm-operations/async-decision-memo/async-decision-memo.mdc` |
 | Autopilot Charter | `pm-autopilot` | `pm-autopilot/autopilot-charter/autopilot-charter.mdc` |
@@ -129,6 +130,7 @@
 | dbt Model Spec | `pm-dataeng` | `pm-dataeng/dbt-model-spec/dbt-model-spec.mdc` |
 | Debt Payoff Plan | `pm-money` | `pm-money/debt-payoff-plan/debt-payoff-plan.mdc` |
 | Debugging Log Analyser | `pm-engineering` | `pm-engineering/debugging-log-analyser/debugging-log-analyser.mdc` |
+| Decision Autopsy | `pm-warroom` | `pm-warroom/decision-autopsy/decision-autopsy.mdc` |
 | Decision Memo | `pm-business` | `pm-business/decision-memo/decision-memo.mdc` |
 | Deck Autopsy | `pm-vision` | `pm-vision/deck-autopsy/deck-autopsy.mdc` |
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/delta-briefing.mdc` |
@@ -139,6 +141,7 @@
 | Design Handoff Brief | `pm-advanced` | `pm-advanced/design-handoff-brief/design-handoff-brief.mdc` |
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/design-system-audit.mdc` |
 | Developer Onboarding Document | `pm-engineering` | `pm-engineering/developer-onboarding-doc/developer-onboarding-doc.mdc` |
+| Devil's Twin | `pm-warroom` | `pm-warroom/devils-twin/devils-twin.mdc` |
 | Difficult Conversation | `pm-comms` | `pm-comms/difficult-conversation/difficult-conversation.mdc` |
 | Disaster Recovery Plan | `pm-engineering` | `pm-engineering/disaster-recovery-plan/disaster-recovery-plan.mdc` |
 | Discharge Summary | `pm-health` | `pm-health/discharge-summary/discharge-summary.mdc` |
@@ -160,6 +163,7 @@
 | Error Decoder | `pm-engineering` | `pm-engineering/error-decoder/error-decoder.mdc` |
 | Error Message Writer | `pm-uxwriting` | `pm-uxwriting/error-message-writer/error-message-writer.mdc` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/escalation-tree.mdc` |
+| Eulogy Writer | `pm-lifeadmin` | `pm-lifeadmin/eulogy-writer/eulogy-writer.mdc` |
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/eval-rubric-designer.mdc` |
 | Evidence Lock | `pm-research` | `pm-research/evidence-lock/evidence-lock.mdc` |
 | Excel Model | `pm-documents` | `pm-documents/excel-model/excel-model.mdc` |
@@ -188,6 +192,7 @@
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/financial-due-diligence.mdc` |
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/financial-model-narrative.mdc` |
 | Financial Statement Explainer | `pm-accounting` | `pm-accounting/financial-statement-explainer/financial-statement-explainer.mdc` |
+| Fine Appeal Letter | `pm-lifeadmin` | `pm-lifeadmin/fine-appeal-letter/fine-appeal-letter.mdc` |
 | Flowchart | `pm-visuals` | `pm-visuals/flowchart/flowchart.mdc` |
 | FOIA / Public-Records Request | `pm-gov` | `pm-gov/foia-request/foia-request.mdc` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/follow-up-sequence.mdc` |
@@ -257,6 +262,7 @@
 | Media Pitch | `pm-gtm` | `pm-gtm/media-pitch/media-pitch.mdc` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/meeting-notes.mdc` |
 | Messaging Framework | `pm-growth` | `pm-growth/messaging-framework/messaging-framework.mdc` |
+| Metric Gaslighting Detector | `pm-warroom` | `pm-warroom/metric-gaslighting-detector/metric-gaslighting-detector.mdc` |
 | Metric Semantic Layer | `pm-dataeng` | `pm-dataeng/metric-semantic-layer/metric-semantic-layer.mdc` |
 | Metric Tree Builder | `pm-data` | `pm-data/metric-tree-builder/metric-tree-builder.mdc` |
 | Metrics Framework | `pm-data` | `pm-data/metrics-framework/metrics-framework.mdc` |
@@ -303,6 +309,7 @@
 | PR Description | `pm-craft` | `pm-craft/pr-description/pr-description.mdc` |
 | PR Description Writer | `pm-engineering` | `pm-engineering/pr-description-writer/pr-description-writer.mdc` |
 | PRD Template | `pm-essentials` | `pm-essentials/prd-template/prd-template.mdc` |
+| Premortem Assassin | `pm-warroom` | `pm-warroom/premortem-assassin/premortem-assassin.mdc` |
 | Press Release | `pm-cross` | `pm-cross/press-release/press-release.mdc` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/pricing-calculator.mdc` |
 | Pricing Page Copy | `pm-pmm` | `pm-pmm/pricing-page-copy/pricing-page-copy.mdc` |
@@ -381,6 +388,7 @@
 | Sales Page | `pm-copy` | `pm-copy/sales-page/sales-page.mdc` |
 | Savings Goal Plan | `pm-money` | `pm-money/savings-goal-plan/savings-goal-plan.mdc` |
 | Saying No | `pm-comms` | `pm-comms/saying-no/saying-no.mdc` |
+| Schedule Monte Carlo | `pm-calculators` | `pm-calculators/schedule-monte-carlo/schedule-monte-carlo.mdc` |
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/schedule-recipe.mdc` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/schema-markup.mdc` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/screenshot-teardown.mdc` |
@@ -393,6 +401,7 @@
 | Service Catalog Entry | `pm-engineering` | `pm-engineering/service-catalog-entry/service-catalog-entry.mdc` |
 | Session Handoff | `pm-craft` | `pm-craft/session-handoff/session-handoff.mdc` |
 | Short-Form Script | `pm-creator` | `pm-creator/short-form-script/short-form-script.mdc` |
+| Skill Fusion | `pm-advanced` | `pm-advanced/skill-fusion/skill-fusion.mdc` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/skill-security-auditor.mdc` |
 | Slide Deck | `pm-documents` | `pm-documents/slide-deck/slide-deck.mdc` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/slo-error-budget.mdc` |
@@ -421,6 +430,7 @@
 | Subtitle & Caption | `pm-localization` | `pm-localization/subtitle-caption/subtitle-caption.mdc` |
 | Support Macro | `pm-support` | `pm-support/support-macro/support-macro.mdc` |
 | Support Runbook | `pm-support` | `pm-support/support-runbook/support-runbook.mdc` |
+| Support Staffing Model | `pm-calculators` | `pm-calculators/support-staffing-model/support-staffing-model.mdc` |
 | Sycophancy Challenger | `pm-cross` | `pm-cross/sycophancy-challenger/sycophancy-challenger.mdc` |
 | Synthetic User Research | `pm-research` | `pm-research/synthetic-user-research/synthetic-user-research.mdc` |
 | System Design Interview | `pm-engineering` | `pm-engineering/system-design-interview/system-design-interview.mdc` |
@@ -437,6 +447,7 @@
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/test-strategy-doc.mdc` |
 | Threat Model | `pm-security` | `pm-security/threat-model/threat-model.mdc` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `pm-writers/thumbnail-creator/thumbnail-creator.mdc` |
+| Tornado Sensitivity | `pm-calculators` | `pm-calculators/tornado-sensitivity/tornado-sensitivity.mdc` |
 | Transcreation | `pm-localization` | `pm-localization/transcreation/transcreation.mdc` |
 | Unit Economics | `pm-calculators` | `pm-calculators/unit-economics/unit-economics.mdc` |
 | User Interview Synthesis | `pm-discovery` | `pm-discovery/user-interview-synthesis/user-interview-synthesis.mdc` |
@@ -453,6 +464,7 @@
 | Voice Agent Design | `pm-agentnative` | `pm-agentnative/voice-agent-design/voice-agent-design.mdc` |
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/voice-of-customer-program.mdc` |
 | Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/vuln-triage.mdc` |
+| Wedding Speech | `pm-lifeadmin` | `pm-lifeadmin/wedding-speech/wedding-speech.mdc` |
 | Which Skill Router | `pm-essentials` | `pm-essentials/which-skill/which-skill.mdc` |
 | Whiteboard To Spec | `pm-vision` | `pm-vision/whiteboard-to-spec/whiteboard-to-spec.mdc` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/win-loss-analysis.mdc` |

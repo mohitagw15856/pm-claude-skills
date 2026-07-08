@@ -1,7 +1,7 @@
 {
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "pm-calculators",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Executable business calculators & models \u2014 each ships a stdlib script: Unit Economics (LTV/CAC), SaaS Metrics (NRR/quick ratio), Runway (default alive/dead), Pricing, ROI/NPV \u2014 plus computed models that emit real .xlsx with live formulas: cohort curve fitting (LTV), Monte Carlo runway (P10/P50/P90), and Van Westendorp pricing. Verifiable math, not vibes.",
   "author": {
     "name": "Mohit Aggarwal",

@@ -564,6 +564,54 @@
   {
    "skill": "pricing-sensitivity-model",
    "input": "We ran the four-question pricing survey with 32 valid responses (attached as survey.json: too_cheap mostly $4-8, cheap $8-14, expensive $16-24, too_expensive $25-40). What price range can we defend, and what should the plan page cost?"
+  },
+  {
+   "skill": "premortem-assassin",
+   "input": "Plan: migrate all 40 enterprise customers from the legacy dashboard to the new analytics platform in Q3. Steps: feature-parity audit (2 wks), migration tooling (4 wks), pilot with 3 friendly accounts (2 wks), staged rollout (4 wks). Success = 100% migrated by Sept 30 with churn <2%. Team: 4 eng, 1 PM. The legacy system is maintained by one engineer who has given notice."
+  },
+  {
+   "skill": "devils-twin",
+   "input": "Memo: we should sunset our free tier. Analysis of 14k free accounts shows 1.9% ever convert, support costs $31/account/yr, and free users generate 60% of support volume. Killing free saves ~$430k/yr and focuses the team on paying customers. Opposition would come from the growth team, who credit free with our SEO and word-of-mouth."
+  },
+  {
+   "skill": "metric-gaslighting-detector",
+   "input": "Dashboard slide: 'Engagement is up 40% since the redesign' (chart: weekly sessions, y-axis 80k-95k, window starts the week after a viral article). 'NPS improved to 46 from 44' (n=38). 'Churn stable at 2.1%' (denominator changed from all accounts to accounts >90 days old in the same period). Claim: the redesign is working."
+  },
+  {
+   "skill": "decision-autopsy",
+   "input": "Decision (14 months ago): we passed on acquiring a small competitor for $2M because integration would cost 2 quarters. They were acquired by our biggest rival, who used their tech to win three of our enterprise renewals ($1.1M ARR lost). At the time we knew: their tech was solid, our roadmap was full, the price was fair. We did not know the rival was bidding."
+  },
+  {
+   "skill": "assumption-bounty",
+   "input": "Plan excerpt: 'We will launch the partner marketplace in Q2. Partners will build integrations because our API is well-documented. We conservatively expect 25 integrations by year end, driving 15% of new signups. Revenue share of 20% aligns incentives. Marketing will feature partners in the newsletter.'"
+  },
+  {
+   "skill": "support-staffing-model",
+   "input": "We get about 90 chats per hour at peak, average handle time is 8 minutes, and we promise 80% answered within 60 seconds. Team says they need 20 agents; finance says 12. Shrinkage historically runs 35%. Who is right?"
+  },
+  {
+   "skill": "schedule-monte-carlo",
+   "input": "Tasks: schema design (2/4/8 days), backend (8/12/22, needs schema), frontend (10/14/24, needs schema), QA (4/6/14, needs backend+frontend), launch prep (2/3/6, needs QA). Leadership wants a commit date; the PM summed the likelies and said 33 days."
+  },
+  {
+   "skill": "tornado-sensitivity",
+   "input": "ROI model: roi = (leads * close_rate * acv) / spend. leads 800-1200-1500, close_rate 0.04-0.07-0.09, acv 8000-11000-13000, spend 250000-300000-380000. The team keeps arguing about lead volume. Are they arguing about the right thing?"
+  },
+  {
+   "skill": "eulogy-writer",
+   "input": "My dad, Robert. 71. He fixed everyone's cars on our street for free and complained the whole time. Always said 'measure twice, cut once' about everything including marriages. Taught me to drive in a church parking lot, gripping the door the whole time. Room will be family and his old shop friends. Laughter is fine, he'd insist."
+  },
+  {
+   "skill": "wedding-speech",
+   "input": "Best man for my college roommate Danny. Stories: he once drove 6 hours to return a library book, he burned instant noodles twice, and he practiced asking Priya out in the mirror for a week (I heard it through the wall). Priya made him someone who stopped rehearsing life. Audience: both families, her grandparents, open bar after."
+  },
+  {
+   "skill": "fine-appeal-letter",
+   "input": "Parking ticket for \u00a370 in a loading bay. I was loading \u2014 carrying boxes from a shop to my van, took about 12 minutes, warden ticketed at minute 9. The bay sign says 'loading only, 20 min max'. I have the shop receipt with timestamp and a photo of the sign. Notice number PCN-88213, deadline 14 days."
+  },
+  {
+   "skill": "skill-fusion",
+   "input": "Fuse incident-postmortem with executive-update: our payment processor was down 4 hours Tuesday, board update due Friday. The board needs the update; two of them will audit the postmortem details. Write the fused brief and structure."
   }
  ]
 }

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-warroom",
+  "version": "1.0.0",
+  "description": "The adversarial bundle — skills that attack your work before reality does: Premortem Assassin (twelve failure vectors), Devil's Twin (the opposition's best memo), Metric Gaslighting Detector (how dashboards lie), Decision Autopsy (process vs outcome), and Assumption Bounty (hidden beliefs, priced).",
+  "author": { "name": "Mohit Aggarwal", "email": "mohit15856@gmail.com" },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": ["premortem", "red-team", "devils-advocate", "decision-quality", "metrics", "assumptions"]
+}

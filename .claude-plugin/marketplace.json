@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-warroom",
+      "description": "The adversarial bundle \u2014 skills that attack your work before reality does: Premortem Assassin, Devil's Twin, Metric Gaslighting Detector, Decision Autopsy, Assumption Bounty.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-warroom",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-method",
       "description": "Process discipline for professional work \u2014 the difference between an agent that produces output and one that produces outcomes. Interview the requester before building, brainstorm divergent-then-convergent, write and execute real plans, verify before declaring done, orchestrate subagents, work incrementally, and simplify what you built.",
       "version": "1.0.0",

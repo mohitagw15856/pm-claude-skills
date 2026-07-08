@@ -192,6 +192,12 @@
   "description": "Diagram a system or technical architecture — services, data stores, and how they connect. Use when asked to draw an architecture, show how components fit together, map a system/data flow, or visualize services and dependencies. Produces a ready-to-render Mermaid diagram with grouped subgraphs (renders live, exportable as PNG/SVG) plus a component legend and notes."
  },
  {
+  "name": "assumption_bounty",
+  "skill": "assumption-bounty",
+  "bundle": "pm-warroom",
+  "description": "Extract every hidden assumption from a plan or document and put a price on each one — what it costs if wrong, what it costs to test. Use before committing to anything whose author says 'obviously' or whose spreadsheet has hardcoded cells: the bounty hunt makes the invisible load-bearing beliefs explicit and tells you which three to test this week. Produces the assumption ledger (priced and ranked), the cheapest test for each dangerous one, and the document's honest confidence statement."
+ },
+ {
   "name": "assumption_mapper",
   "skill": "assumption-mapper",
   "bundle": "pm-discovery",
@@ -732,6 +738,12 @@
   "description": "Parse error logs, stack traces, and crash reports into a structured root cause diagnosis. Use when an application is throwing exceptions, crashing, or producing unexpected errors and you need to understand why and what to fix. Produces a structured diagnosis with error classification, stack trace walkthrough, probable root cause with confidence level, affected code path, a concrete code-level fix suggestion, and ordered next debugging steps."
  },
  {
+  "name": "decision_autopsy",
+  "skill": "decision-autopsy",
+  "bundle": "pm-warroom",
+  "description": "Judge a past decision by its PROCESS, not its outcome — because good decisions lose and bad decisions win, and teams that can't tell the difference learn the wrong lessons. Use when reviewing a big call after the fact (a bet that failed, a pass that haunts, a hire, a pivot) and the room is about to conclude 'it failed so it was wrong.' Produces a process-forensics report: what was knowable then, the quality grade of the decision as-made, the luck accounting, and the ONE process change worth keeping."
+ },
+ {
   "name": "decision_memo",
   "skill": "decision-memo",
   "bundle": "pm-business",
@@ -790,6 +802,12 @@
   "skill": "developer-onboarding-doc",
   "bundle": "pm-engineering",
   "description": "Write a developer onboarding document for a service, codebase, or team. Use when asked to write a developer guide, service README, onboarding doc for a new engineer, codebase orientation, or getting-started guide for a technical team. Produces a structured doc covering service overview, architecture, local setup, key patterns, testing, deployment, and who to ask for what."
+ },
+ {
+  "name": "devils_twin",
+  "skill": "devils-twin",
+  "bundle": "pm-warroom",
+  "description": "The strongest possible case AGAINST what you just wrote — argued to win, not to check a box. Use when a document is about to ship and everyone around it already agrees: the twin writes the opposition's best memo (not a critique of yours), so you meet the real counter-argument before your audience does. Produces the opposing memo, the map of which of your claims it defeats/dents/leaves standing, and the pre-emption paragraph worth adding."
  },
  {
   "name": "difficult_conversation",
@@ -910,6 +928,12 @@
   "skill": "escalation-tree",
   "bundle": "pm-support",
   "description": "Design a support/incident escalation tree — who handles what, when it escalates, and to whom. Use when asked to design an escalation path, an escalation matrix, support tiers, an on-call escalation policy, or to fix 'tickets bounce around / nothing gets escalated in time'. Produces an escalation tree — tiers & ownership, severity definitions, time-based triggers, routing rules, contacts/roles, and the customer-communication cadence per level."
+ },
+ {
+  "name": "eulogy_writer",
+  "skill": "eulogy-writer",
+  "bundle": "pm-lifeadmin",
+  "description": "Help someone write a eulogy — the hardest writing most people ever do, at the worst possible time. Use when someone must speak at a funeral or memorial and doesn't know where to start, or has fragments and no shape. Produces a 3-5 minute eulogy built from their memories in their voice, plus a delivery copy formatted for shaking hands — gentle process, no interrogation, nothing invented."
  },
  {
   "name": "eval_rubric_designer",
@@ -1078,6 +1102,12 @@
   "skill": "financial-statement-explainer",
   "bundle": "pm-accounting",
   "description": "Explain a financial statement (P&L, balance sheet, or cash flow) in plain English. Use when asked to explain a P&L / income statement, a balance sheet, a cash flow statement, or to make financials understandable to a non-finance reader. Produces a plain-language walkthrough — what each section means, the line items that matter, the key ratios, and the story the numbers tell — so a non-accountant can read and act on it. Not financial advice."
+ },
+ {
+  "name": "fine_appeal_letter",
+  "skill": "fine-appeal-letter",
+  "bundle": "pm-lifeadmin",
+  "description": "Appeal a parking ticket, penalty charge, or administrative fine with the grounds that actually get appeals granted — not indignation. Use when someone got a ticket/fine/penalty notice and either has a legitimate case or wants an honest read on whether they do. Produces a short formal appeal letter built on recognised grounds (signage, procedure, mitigation, first-offence discretion), the evidence checklist, and a candid win-likelihood note — or the honest advice to just pay it."
  },
  {
   "name": "flowchart",
@@ -1494,6 +1524,12 @@
   "description": "Build a messaging framework (message house) that the whole company can use consistently. Use when asked to create messaging, a value proposition, a message house, key messages, or to make marketing/sales/product say the same thing. Produces a messaging framework — audience & value proposition, the one-line positioning, 3 message pillars with proof points, objection handling, and a words-we-use/avoid list."
  },
  {
+  "name": "metric_gaslighting_detector",
+  "skill": "metric-gaslighting-detector",
+  "bundle": "pm-warroom",
+  "description": "Find out how a dashboard, KPI report, or metrics slide is lying to you — before you repeat its story in a bigger room. Use when numbers feel too tidy, a narrative rests on one chart, or you inherited metrics you didn't define. Produces a deception audit: every metric graded for the eleven classic distortions (denominator games, survivorship, y-axis crimes, cherry-picked windows…), the story the data would tell under honest framing, and the three questions to ask the metric's owner."
+ },
+ {
   "name": "metric_semantic_layer",
   "skill": "metric-semantic-layer",
   "bundle": "pm-dataeng",
@@ -1768,6 +1804,12 @@
   "skill": "prd-template",
   "bundle": "pm-essentials",
   "description": "Create a Product Requirements Document following proven PM template structure. Use when asked to write a PRD, product spec, feature specification, or requirements document for a new feature or product. Produces a complete PRD with problem statement, user stories, functional requirements, technical considerations, and success metrics."
+ },
+ {
+  "name": "premortem_assassin",
+  "skill": "premortem-assassin",
+  "bundle": "pm-warroom",
+  "description": "Kill the plan on paper before reality does it for money. Use when a plan, launch, migration, or strategy is about to be committed to and nobody has tried hard to murder it yet — the assassin attacks through twelve named failure vectors and writes the post-mortem of the failure that hasn't happened. Produces a premortem: the death narrative, the twelve-vector attack with survival verdicts, the three kill-shots most likely to land, and the cheap tripwires that would give early warning."
  },
  {
   "name": "press_release",
@@ -2238,6 +2280,12 @@
   "description": "Decline a request, push back on scope, or protect priorities without burning the relationship. Use when asked how to say no, turn down a request, push back on your boss/stakeholder, decline extra work, or protect the roadmap from a pet feature. Produces a graceful, firm response — the no, the honest why, an alternative or trade-off, and the exact wording, tuned to who's asking."
  },
  {
+  "name": "schedule_monte_carlo",
+  "skill": "schedule-monte-carlo",
+  "bundle": "pm-calculators",
+  "description": "Project completion as a distribution, not a date — Monte Carlo over the task graph. Use when a plan's finish date came from summing 'likely' estimates (it's wrong, mathematically), when leadership needs a commit date, or when you need to know which tasks actually control the timeline. Produces P10/P50/P90 completion, per-task criticality (how often each task sits on the critical path), and a real .xlsx — via the bundled zero-dependency simulator, deterministic with a seed."
+ },
+ {
   "name": "schedule_recipe",
   "skill": "schedule-recipe",
   "bundle": "pm-autopilot",
@@ -2308,6 +2356,12 @@
   "skill": "short-form-script",
   "bundle": "pm-creator",
   "description": "Write a short-form video script for TikTok, Instagram Reels, or YouTube Shorts — built on the hook→retention→payoff structure that drives watch-time. Use when asked to script a Reel, TikTok, Short, or any 15–60s vertical video. Produces a timed script with a 0–3s hook, retention beats with on-screen text and B-roll cues, a payoff, and a CTA — plus a caption and on-screen-text list. Distinct from long-form YouTube scripting."
+ },
+ {
+  "name": "skill_fusion",
+  "skill": "skill-fusion",
+  "bundle": "pm-advanced",
+  "description": "Fuse two skills from this library into one hybrid brief for a task that sits between them — the meta-skill. Use when a task straddles two skills (a PRD that's also a pitch; a postmortem that must double as a board update) and running them separately would produce two documents where one is needed. Produces the fused operating brief: combined structure, merged quality bar, precedence rules for where the parents disagree, and the fused output itself if input was provided."
  },
  {
   "name": "skill_security_auditor",
@@ -2478,6 +2532,12 @@
   "description": "Write a support runbook for handling a recurring issue type consistently. Use when asked to write a support runbook, a troubleshooting playbook for agents, a handling guide for a common issue, or a tier-1 response procedure. Produces a runbook — issue identification, triage/severity, step-by-step diagnosis & resolution, decision tree, when/how to escalate, and the customer-comms templates — so any agent resolves it the same way."
  },
  {
+  "name": "support_staffing_model",
+  "skill": "support-staffing-model",
+  "bundle": "pm-calculators",
+  "description": "How many support agents does the queue actually need — Erlang C, computed, not 'tickets per agent' folklore. Use when staffing a support/CS team, defending headcount, or checking whether an SLA is mathematically possible with the current roster. Produces agent counts across load scenarios (with shrinkage), occupancy and average-wait numbers, and a real .xlsx — via the bundled zero-dependency script."
+ },
+ {
   "name": "sycophancy_challenger",
   "skill": "sycophancy-challenger",
   "bundle": "pm-cross",
@@ -2574,6 +2634,12 @@
   "description": "Generate article or newsletter thumbnail candidates using the Gemini API from inside Claude Code. Claude reads article copy, proposes composition concepts, writes image generation prompts incorporating brand specs, calls Gemini to generate the images, evaluates the results via computer vision, and returns ranked candidates with rationale. Use when asked to create thumbnails, generate cover images, or produce visual candidates for an article or newsletter."
  },
  {
+  "name": "tornado_sensitivity",
+  "skill": "tornado-sensitivity",
+  "bundle": "pm-calculators",
+  "description": "Which assumption actually moves the answer — one-at-a-time sensitivity, ranked into a tornado. Use when a model's output is being argued about (LTV, ROI, forecast) and the room is debating drivers that don't matter, or before spending diligence effort: swing every driver low→high and see which one owns the outcome. Produces the ranked tornado table, share-of-swing per driver, and a real .xlsx — via the bundled zero-dependency script with a safely restricted formula evaluator."
+ },
+ {
   "name": "transcreation",
   "skill": "transcreation",
   "bundle": "pm-localization",
@@ -2668,6 +2734,12 @@
   "skill": "vuln-triage",
   "bundle": "pm-security",
   "description": "Triage a vulnerability or scanner finding — assess real severity, exploitability, and how urgently to fix. Use when asked to triage a CVE, prioritize scanner/pentest findings, assess a vuln's risk, or decide what to patch first. Produces a triage verdict: CVSS-informed severity adjusted for your context, exploitability, real risk, a fix/mitigation, and an SLA — so you fix what matters, not just what's red."
+ },
+ {
+  "name": "wedding_speech",
+  "skill": "wedding-speech",
+  "bundle": "pm-lifeadmin",
+  "description": "A best-man/maid-of-honour/parent wedding toast that actually lands — funny without roasting, moving without syrup, short enough that nobody checks their phone. Use when someone has to give a wedding speech and has either nothing or a dangerous first draft. Produces a 2-4 minute toast built on one good story, plus delivery notes and the three jokes to cut."
  },
  {
   "name": "which_skill",

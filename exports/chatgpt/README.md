@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-454 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+466 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -39,6 +39,7 @@
 | Apology Letter | `pm-crisis` | `pm-crisis/apology-letter/SYSTEM_PROMPT.md` |
 | Architecture Decision Record (ADR) | `pm-engineering` | `pm-engineering/architecture-decision-record/SYSTEM_PROMPT.md` |
 | Architecture Diagram | `pm-visuals` | `pm-visuals/architecture-diagram/SYSTEM_PROMPT.md` |
+| Assumption Bounty | `pm-warroom` | `pm-warroom/assumption-bounty/SYSTEM_PROMPT.md` |
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/SYSTEM_PROMPT.md` |
 | Async Decision Memo | `pm-operations` | `pm-operations/async-decision-memo/SYSTEM_PROMPT.md` |
 | Autopilot Charter | `pm-autopilot` | `pm-autopilot/autopilot-charter/SYSTEM_PROMPT.md` |
@@ -129,6 +130,7 @@
 | dbt Model Spec | `pm-dataeng` | `pm-dataeng/dbt-model-spec/SYSTEM_PROMPT.md` |
 | Debt Payoff Plan | `pm-money` | `pm-money/debt-payoff-plan/SYSTEM_PROMPT.md` |
 | Debugging Log Analyser | `pm-engineering` | `pm-engineering/debugging-log-analyser/SYSTEM_PROMPT.md` |
+| Decision Autopsy | `pm-warroom` | `pm-warroom/decision-autopsy/SYSTEM_PROMPT.md` |
 | Decision Memo | `pm-business` | `pm-business/decision-memo/SYSTEM_PROMPT.md` |
 | Deck Autopsy | `pm-vision` | `pm-vision/deck-autopsy/SYSTEM_PROMPT.md` |
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/SYSTEM_PROMPT.md` |
@@ -139,6 +141,7 @@
 | Design Handoff Brief | `pm-advanced` | `pm-advanced/design-handoff-brief/SYSTEM_PROMPT.md` |
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/SYSTEM_PROMPT.md` |
 | Developer Onboarding Document | `pm-engineering` | `pm-engineering/developer-onboarding-doc/SYSTEM_PROMPT.md` |
+| Devil's Twin | `pm-warroom` | `pm-warroom/devils-twin/SYSTEM_PROMPT.md` |
 | Difficult Conversation | `pm-comms` | `pm-comms/difficult-conversation/SYSTEM_PROMPT.md` |
 | Disaster Recovery Plan | `pm-engineering` | `pm-engineering/disaster-recovery-plan/SYSTEM_PROMPT.md` |
 | Discharge Summary | `pm-health` | `pm-health/discharge-summary/SYSTEM_PROMPT.md` |
@@ -160,6 +163,7 @@
 | Error Decoder | `pm-engineering` | `pm-engineering/error-decoder/SYSTEM_PROMPT.md` |
 | Error Message Writer | `pm-uxwriting` | `pm-uxwriting/error-message-writer/SYSTEM_PROMPT.md` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/SYSTEM_PROMPT.md` |
+| Eulogy Writer | `pm-lifeadmin` | `pm-lifeadmin/eulogy-writer/SYSTEM_PROMPT.md` |
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/SYSTEM_PROMPT.md` |
 | Evidence Lock | `pm-research` | `pm-research/evidence-lock/SYSTEM_PROMPT.md` |
 | Excel Model | `pm-documents` | `pm-documents/excel-model/SYSTEM_PROMPT.md` |
@@ -188,6 +192,7 @@
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/SYSTEM_PROMPT.md` |
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/SYSTEM_PROMPT.md` |
 | Financial Statement Explainer | `pm-accounting` | `pm-accounting/financial-statement-explainer/SYSTEM_PROMPT.md` |
+| Fine Appeal Letter | `pm-lifeadmin` | `pm-lifeadmin/fine-appeal-letter/SYSTEM_PROMPT.md` |
 | Flowchart | `pm-visuals` | `pm-visuals/flowchart/SYSTEM_PROMPT.md` |
 | FOIA / Public-Records Request | `pm-gov` | `pm-gov/foia-request/SYSTEM_PROMPT.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/SYSTEM_PROMPT.md` |
@@ -257,6 +262,7 @@
 | Media Pitch | `pm-gtm` | `pm-gtm/media-pitch/SYSTEM_PROMPT.md` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/SYSTEM_PROMPT.md` |
 | Messaging Framework | `pm-growth` | `pm-growth/messaging-framework/SYSTEM_PROMPT.md` |
+| Metric Gaslighting Detector | `pm-warroom` | `pm-warroom/metric-gaslighting-detector/SYSTEM_PROMPT.md` |
 | Metric Semantic Layer | `pm-dataeng` | `pm-dataeng/metric-semantic-layer/SYSTEM_PROMPT.md` |
 | Metric Tree Builder | `pm-data` | `pm-data/metric-tree-builder/SYSTEM_PROMPT.md` |
 | Metrics Framework | `pm-data` | `pm-data/metrics-framework/SYSTEM_PROMPT.md` |
@@ -303,6 +309,7 @@
 | PR Description | `pm-craft` | `pm-craft/pr-description/SYSTEM_PROMPT.md` |
 | PR Description Writer | `pm-engineering` | `pm-engineering/pr-description-writer/SYSTEM_PROMPT.md` |
 | PRD Template | `pm-essentials` | `pm-essentials/prd-template/SYSTEM_PROMPT.md` |
+| Premortem Assassin | `pm-warroom` | `pm-warroom/premortem-assassin/SYSTEM_PROMPT.md` |
 | Press Release | `pm-cross` | `pm-cross/press-release/SYSTEM_PROMPT.md` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/SYSTEM_PROMPT.md` |
 | Pricing Page Copy | `pm-pmm` | `pm-pmm/pricing-page-copy/SYSTEM_PROMPT.md` |
@@ -381,6 +388,7 @@
 | Sales Page | `pm-copy` | `pm-copy/sales-page/SYSTEM_PROMPT.md` |
 | Savings Goal Plan | `pm-money` | `pm-money/savings-goal-plan/SYSTEM_PROMPT.md` |
 | Saying No | `pm-comms` | `pm-comms/saying-no/SYSTEM_PROMPT.md` |
+| Schedule Monte Carlo | `pm-calculators` | `pm-calculators/schedule-monte-carlo/SYSTEM_PROMPT.md` |
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/SYSTEM_PROMPT.md` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/SYSTEM_PROMPT.md` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/SYSTEM_PROMPT.md` |
@@ -393,6 +401,7 @@
 | Service Catalog Entry | `pm-engineering` | `pm-engineering/service-catalog-entry/SYSTEM_PROMPT.md` |
 | Session Handoff | `pm-craft` | `pm-craft/session-handoff/SYSTEM_PROMPT.md` |
 | Short-Form Script | `pm-creator` | `pm-creator/short-form-script/SYSTEM_PROMPT.md` |
+| Skill Fusion | `pm-advanced` | `pm-advanced/skill-fusion/SYSTEM_PROMPT.md` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/SYSTEM_PROMPT.md` |
 | Slide Deck | `pm-documents` | `pm-documents/slide-deck/SYSTEM_PROMPT.md` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/SYSTEM_PROMPT.md` |
@@ -421,6 +430,7 @@
 | Subtitle & Caption | `pm-localization` | `pm-localization/subtitle-caption/SYSTEM_PROMPT.md` |
 | Support Macro | `pm-support` | `pm-support/support-macro/SYSTEM_PROMPT.md` |
 | Support Runbook | `pm-support` | `pm-support/support-runbook/SYSTEM_PROMPT.md` |
+| Support Staffing Model | `pm-calculators` | `pm-calculators/support-staffing-model/SYSTEM_PROMPT.md` |
 | Sycophancy Challenger | `pm-cross` | `pm-cross/sycophancy-challenger/SYSTEM_PROMPT.md` |
 | Synthetic User Research | `pm-research` | `pm-research/synthetic-user-research/SYSTEM_PROMPT.md` |
 | System Design Interview | `pm-engineering` | `pm-engineering/system-design-interview/SYSTEM_PROMPT.md` |
@@ -437,6 +447,7 @@
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/SYSTEM_PROMPT.md` |
 | Threat Model | `pm-security` | `pm-security/threat-model/SYSTEM_PROMPT.md` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `pm-writers/thumbnail-creator/SYSTEM_PROMPT.md` |
+| Tornado Sensitivity | `pm-calculators` | `pm-calculators/tornado-sensitivity/SYSTEM_PROMPT.md` |
 | Transcreation | `pm-localization` | `pm-localization/transcreation/SYSTEM_PROMPT.md` |
 | Unit Economics | `pm-calculators` | `pm-calculators/unit-economics/SYSTEM_PROMPT.md` |
 | User Interview Synthesis | `pm-discovery` | `pm-discovery/user-interview-synthesis/SYSTEM_PROMPT.md` |
@@ -453,6 +464,7 @@
 | Voice Agent Design | `pm-agentnative` | `pm-agentnative/voice-agent-design/SYSTEM_PROMPT.md` |
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/SYSTEM_PROMPT.md` |
 | Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/SYSTEM_PROMPT.md` |
+| Wedding Speech | `pm-lifeadmin` | `pm-lifeadmin/wedding-speech/SYSTEM_PROMPT.md` |
 | Which Skill Router | `pm-essentials` | `pm-essentials/which-skill/SYSTEM_PROMPT.md` |
 | Whiteboard To Spec | `pm-vision` | `pm-vision/whiteboard-to-spec/SYSTEM_PROMPT.md` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/SYSTEM_PROMPT.md` |
