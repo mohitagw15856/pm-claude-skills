@@ -1,0 +1,24 @@
+# pm-skills-7b LoRA — axolotl config. See training/README.md for routes + cost.
+base_model: Qwen/Qwen2.5-7B-Instruct
+load_in_4bit: true
+adapter: lora
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_linear: true
+datasets:
+  - path: training/sft.jsonl
+    type: chat_template
+    field_messages: messages
+chat_template: chatml
+sequence_len: 2048
+micro_batch_size: 2
+gradient_accumulation_steps: 8
+num_epochs: 2
+learning_rate: 2e-4
+lr_scheduler: cosine
+warmup_ratio: 0.05
+bf16: auto
+output_dir: training/out/pm-skills-7b-lora
+save_strategy: epoch
+logging_steps: 10
