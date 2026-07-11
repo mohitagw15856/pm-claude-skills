@@ -1,0 +1,54 @@
+name: Season leaderboard check
+
+# Validates PRs to seasons/leaderboard-*.json: entry shape, attestation fields,
+# score bounds, handle = PR author, no tampering with others' entries.
+on:
+  pull_request:
+    paths: ['seasons/**']
+
+permissions:
+  contents: read
+  pull-requests: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: Verify entries
+        env:
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+        run: |
+          node - <<'JS'
+          const { execSync } = require('child_process');
+          const fs = require('fs');
+          const author = process.env.PR_AUTHOR.toLowerCase();
+          const files = execSync('git diff --name-only origin/main...HEAD -- seasons/').toString().trim().split('\n').filter(Boolean);
+          let fail = 0;
+          for (const f of files) {
+            if (!/leaderboard-\d+\.json$/.test(f)) { if (!/season-\d+\.json$/.test(f)) { console.error('✗ unexpected file: ' + f); fail++; } continue; }
+            const now = JSON.parse(fs.readFileSync(f, 'utf8'));
+            const before = JSON.parse(execSync(`git show origin/main:${f}`).toString());
+            const key = (e) => e.name + '|' + e.transcript_sha256;
+            const old = new Map((before.entries||[]).map((e) => [key(e), JSON.stringify(e)]));
+            for (const [k, v] of old) {
+              const still = (now.entries||[]).find((e) => key(e) === k);
+              if (!still || JSON.stringify(still) !== v) { console.error('✗ existing entry modified/removed: ' + k.slice(0, 40)); fail++; }
+            }
+            for (const e of (now.entries||[])) {
+              if (old.has(key(e))) continue;   // pre-existing
+              const errs = [];
+              if (!e.name || e.name.toLowerCase() !== author) errs.push(`name "${e.name}" must equal the PR author "${author}"`);
+              if (!(e.score >= 0 && e.score <= 40)) errs.push('score must be 0-40');
+              if (!/^[a-f0-9]{64}$/.test(e.transcript_sha256 || '')) errs.push('transcript_sha256 must be a sha256 hex');
+              if (!e.attestation || e.attestation.spec !== 'pm-skills-attestation/1') errs.push('attestation.spec missing');
+              if (!/^\d{4}-\d{2}-\d{2}$/.test(e.date || '')) errs.push('date must be YYYY-MM-DD');
+              if (errs.length) { console.error('✗ ' + (e.name||'?') + ': ' + errs.join(' · ')); fail++; }
+              else console.log('✓ ' + e.name + ' ' + e.score + '/40');
+            }
+          }
+          process.exit(fail ? 1 : 0);
+          JS

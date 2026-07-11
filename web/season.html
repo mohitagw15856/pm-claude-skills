@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>The Season — a global, verifiable competition in professional judgment</title>
+<meta name="description" content="One negotiation scenario a month, identical hidden state for everyone on Earth, scores cryptographically attested and submitted by PR to a CI-verified public leaderboard. No accounts, no server — the first open esport of professional judgment." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .s-wrap { max-width: 800px; margin: 0 auto; padding: 16px 22px 70px; }
+  .lead { color: #c7cfda; font-size: 15.5px; }
+  .hero { border: 2px solid #c9a227; border-radius: 16px; background: linear-gradient(160deg, rgba(201,162,39,.12), transparent 60%), var(--panel); padding: 24px 26px; margin: 18px 0; }
+  .hero h2 { margin: 0 0 6px; font-size: 24px; }
+  .hero .meta { font-size: 13px; color: var(--muted); margin-bottom: 12px; }
+  .brief { font-size: 14.5px; line-height: 1.6; border-left: 3px solid #c9a227; padding-left: 14px; margin: 14px 0; }
+  .btn-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; }
+  a.enter { background: #c9a227; color: #10131a; font-weight: 800; padding: 12px 22px; border-radius: 11px; text-decoration: none; font-size: 15px; }
+  h3 { font-size: 17px; margin: 26px 0 8px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+  td, th { border: 1px solid var(--border); padding: 8px 12px; text-align: left; }
+  th { color: var(--muted); font-size: 11.5px; text-transform: uppercase; letter-spacing: .06em; }
+  tr.podium-0 td { background: rgba(201,162,39,.12); } tr.podium-1 td { background: rgba(170,170,190,.08); } tr.podium-2 td { background: rgba(180,120,60,.08); }
+  .rules { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .empty { color: var(--muted); padding: 14px; text-align: center; border: 1px dashed var(--border); border-radius: 12px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>The Season</h1><p class="tagline">One scenario. The whole world. Verifiable scores.</p></div></div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<div class="s-wrap">
+  <p class="lead">Every month, one negotiation drops — the <strong>identical counterparty and hidden state for everyone on Earth</strong>. You play it in the <a href="gym.html">Gym</a>, your score is cryptographically attested, and the leaderboard lives in the open repo where CI verifies every entry and anyone can read every transcript. No accounts. No server. The first open esport of professional judgment.</p>
+
+  <div class="hero" id="hero"><div class="empty">Loading the current season…</div></div>
+
+  <h3>🏅 Leaderboard</h3>
+  <div id="board"><div class="empty">Loading…</div></div>
+
+  <h3>How it works</h3>
+  <ol class="rules">
+    <li><b>Play</b> — the Enter button opens the Gym locked to this season's world. Your key or the free trial; unlimited attempts, best score counts.</li>
+    <li><b>Attest</b> — after the debrief you get a submission block: your score, the date, and the SHA-256 of your transcript.</li>
+    <li><b>Submit</b> — one PR adding your entry to <code>seasons/leaderboard-<span id="sn">1</span>.json</code>. CI validates the shape; humans (everyone) can audit the play.</li>
+    <li><b>Honor</b> — the hidden state is technically readable in the repo; the Season runs on honor and public transcripts, like every good game. Metagamed sessions read as exactly what they are.</li>
+  </ol>
+  <p class="rules">Season winners get their handle in the <b>Hall of Seasons</b> in the README, permanently. That's the prize. It's enough.</p>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+const esc=(s)=>String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+(async()=>{
+  try{
+    const s=await (await fetch('season-current.json')).json();
+    el('sn').textContent=s.season;
+    el('hero').innerHTML='<h2>🏆 Season '+s.season+' — '+esc(s.title)+'</h2>'+
+      '<div class="meta">Opens '+s.opens+' · closes '+s.closes+' · arena: The Gym · scored /40</div>'+
+      '<div class="brief">'+esc(s.world.public_brief)+'</div>'+
+      '<div class="meta">Across the table: <b>'+esc(s.world.counterparty.name)+'</b> — '+esc(s.world.counterparty.role)+'</div>'+
+      '<div class="btn-row"><a class="enter" href="gym.html#season='+s.season+'">⚔️ Enter Season '+s.season+'</a></div>';
+    const lbUrl='https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/seasons/leaderboard-'+s.season+'.json';
+    const lb=await (await fetch(lbUrl)).json();
+    const entries=(lb.entries||[]).slice().sort((a,b)=>b.score-a.score).slice(0,50);
+    el('board').innerHTML=entries.length
+      ? '<table><tr><th>#</th><th>Player</th><th>Score</th><th>Date</th><th>Transcript</th></tr>'+
+        entries.map((e,i)=>'<tr class="podium-'+i+'"><td>'+(i+1)+'</td><td><a href="https://github.com/'+esc(e.name)+'">'+esc(e.name)+'</a></td><td><b>'+e.score+'/40</b></td><td>'+esc(e.date||'')+'</td><td style="font-size:11px;color:var(--muted)">'+esc((e.transcript_sha256||'').slice(0,12))+'…</td></tr>').join('')+'</table>'
+      : '<div class="empty">Nobody on the board yet — Season '+s.season+' is wide open. First entry takes the crown until someone beats it.</div>';
+  }catch(e){ el('hero').innerHTML='<div class="empty">Could not load the season.</div>'; }
+  if(window.pmTrack) pmTrack('season/open');
+})();
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

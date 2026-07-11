@@ -1,0 +1,28 @@
+{
+  "season": 1,
+  "title": "The Meridian Renewal",
+  "opens": "2026-07-11",
+  "closes": "2026-08-10",
+  "arena": "gym",
+  "world": {
+    "counterparty": {
+      "name": "Dana Okonkwo-Reyes",
+      "role": "VP Procurement, Meridian Freight",
+      "style": "Warm for exactly four minutes, then granite. Uses silence as a crowbar. Concedes only against numbers, never against charm."
+    },
+    "public_brief": "You run accounts at a logistics-analytics SaaS. Meridian Freight — 18% of your ARR at $240k/yr — is up for renewal in three weeks. Their new VP Procurement has opened with: a competitor quote 'around $150k', a demand for a 3-year price lock, and a hard note that your two Q1 outages 'were noticed upstairs.' Your goals: renew at $210k+ per year, no lock longer than 2 years, and get the expansion conversation (their new EU lanes) on the calendar.",
+    "hidden": {
+      "batna": "The competitor quote is real but their board hates migration risk after a botched TMS switch in 2024 — moving costs them ~$95k and two quarters of pain they cannot afford before peak season.",
+      "walkaway": "$185k/yr — below that Dana takes the migration pain. Above $205k she needs a story for her CFO; the story she can sell is 'we got the SLA teeth and the EU lanes priced in.'",
+      "pressures": ["Peak season starts in 9 weeks and a migration before it is career risk for Dana personally", "Her CFO privately wants ONE analytics vendor across the merged fleet — consolidation with YOU is on her slide 7, not elimination"],
+      "tells": "She checks her second phone when migration timing is mentioned. Her sentences get shorter when the EU lanes come up — that's the thing she actually needs."
+    },
+    "optimum": "Close at $215-225k/yr, 2-year term, SLA credits clause (costs you little, gives her the CFO story), EU-lane pilot scoped as paid expansion — using the migration-before-peak-season squeeze and the consolidation agenda she never states."
+  },
+  "rules": {
+    "attempts": "Best score counts; unlimited attempts; each submission must be a genuinely played session.",
+    "honor": "The hidden state is technically readable in this file — the Season runs on honor, transcripts are public, and metagamed sessions are obvious to readers. Play it straight; the leaderboard links every replay.",
+    "scoring": "The Gym's standard debrief: /40 across value captured, information gained, concession discipline, and reading the tells.",
+    "submit": "Play at season.html → copy your submission block → PR adding it to seasons/leaderboard-1.json. CI validates shape + attestation. Name = your GitHub handle."
+  }
+}

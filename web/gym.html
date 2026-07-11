@@ -135,6 +135,17 @@ function init(){
 
 function keyOk(){ const key=el('apiKey').value.trim(); if(!key&&!PMProviders.current().local){ setStatus('Enter your '+PMProviders.current().name+' key first — or pick the In-browser (no key) provider.',true); return null;} return key; }
 
+let SEASON=null;
+if(/#season=/.test(location.hash)){
+  fetch('season-current.json').then(r=>r.json()).then(s=>{
+    SEASON=s;
+    el('scenario').disabled=true; el('difficulty').disabled=true; el('ctx').disabled=true;
+    const b=el('duelBanner'); b.hidden=false;
+    b.style.cssText='border:1.5px solid #c9a227;border-radius:13px;background:linear-gradient(90deg,rgba(201,162,39,.12),transparent 70%),var(--panel);padding:13px 16px;margin:12px 0;font-size:13.8px;line-height:1.5;';
+    b.innerHTML='<b>🏆 Season '+s.season+' — '+s.title+'</b> · closes '+s.closes+'. Everyone on Earth faces this exact counterparty and hidden state. Best score to the <a href="season.html">global leaderboard</a>. '+
+      '<div style="font-size:11.5px;color:var(--muted);margin-top:5px">'+s.rules.honor+'</div>';
+  }).catch(()=>{});
+}
 let DUEL=null;
 if(window.PMDuel) PMDuel.read().then(d=>{
   if(d&&d.k==='gym'&&d.world){
@@ -151,6 +162,14 @@ async function start(){
   const sc=SCEN[el('scenario').value], diff=el('difficulty').value, ctx=el('ctx').value.trim();
   if(window.pmTrack) pmTrack('gym/'+el('scenario').value+'/'+diff);
   el('startBtn').disabled=true;
+  if(SEASON){
+    WORLD=SEASON.world;
+    el('setup').hidden=true; el('session').hidden=false;
+    el('brief').innerHTML='<strong>📋 Season '+SEASON.season+' brief</strong><br>'+esc(WORLD.public_brief).replace(/\n/g,'<br>')+'<br><em>Across the table: '+esc(WORLD.counterparty.name)+' — '+esc(WORLD.counterparty.role)+'.</em>';
+    setStatus('');
+    await counterpartyTurn('(Open the conversation naturally, in character — greet and set the frame from your side.)');
+    return;
+  }
   if(DUEL){
     // The duel carries the exact world — no generation, identical hidden state.
     WORLD=DUEL.world;
@@ -253,6 +272,23 @@ Write the debrief in markdown, ≤380 words:
 // Improvement over sessions: keep the last scores per scenario in this browser.
 function saveScore(){
   const m=DEBRIEF.match(/Final:\s*(\d+)\s*\/\s*40/i); if(!m) return;
+  // 🏆 Season: attested submission block for the global leaderboard.
+  if(SEASON){
+    (async()=>{
+      const transcript=TURNS.map(t=>t.who+': '+t.text).join('\n\n');
+      const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(transcript));
+      const th=[...new Uint8Array(buf)].map(x=>x.toString(16).padStart(2,'0')).join('');
+      const entry={name:'YOUR-GITHUB-HANDLE',season:SEASON.season,score:+m[1],date:new Date().toISOString().slice(0,10),
+        transcript_sha256:th,attestation:{spec:'pm-skills-attestation/1',session:{tool:'season-'+SEASON.season},verdict:'Season '+SEASON.season+': '+m[1]+'/40'}};
+      const card=el('duelCard'); card.hidden=false;
+      card.style.cssText='border:1.5px solid #c9a227;border-radius:13px;background:var(--panel);padding:15px 18px;margin:14px 0;';
+      card.innerHTML='<b>🏆 Season submission — '+m[1]+'/40</b><br><span style="font-size:12.5px;color:var(--muted)">Copy this entry into <code>seasons/leaderboard-'+SEASON.season+'.json</code> via PR (set your GitHub handle). CI verifies the shape; the community reads the transcripts.</span>'+
+        '<pre style="font-size:11px;overflow:auto;margin-top:8px">'+esc(JSON.stringify(entry,null,1))+'</pre>'+
+        '<button class="ghost" type="button" id="copySeason">📋 Copy entry</button>';
+      el('copySeason').addEventListener('click',()=>{navigator.clipboard.writeText(JSON.stringify(entry,null,1));el('copySeason').textContent='✅ copied';});
+      if(window.pmTrack) pmTrack('season/finish/'+SEASON.season);
+    })();
+  }
   // ⚔️ Duels: side-by-side vs the challenger, and a challenge button for this run.
   if(window.PMDuel){
     if(DUEL) PMDuel.scorecard(el('duelCard'),DUEL,m[1]+'/40');
