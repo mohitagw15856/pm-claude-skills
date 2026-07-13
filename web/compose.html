@@ -4,16 +4,17 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Auto-Composer — turn a goal into a skill chain | PM Skills</title>
-<meta name="description" content="Describe a goal and the composer plans a novel, ordered chain of professional skills to reach it — then run the chain step by step." />
+<meta name="description" content="Describe a goal and the composer reasons over every professional skill to plan a novel, ordered chain to reach it — then run the chain step by step." />
 <link rel="stylesheet" href="styles.css" />
 <style>
   .cmp { max-width: 760px; margin: 0 auto; padding: 22px 22px 80px; }
   .cmp h1 { font-size: 26px; margin: 6px 0; }
   .cmp .lead { color: var(--muted); font-size: 15px; }
-  .goal-row { display: flex; gap: 10px; margin: 16px 0; flex-wrap: wrap; }
+  .goal-row { display: flex; gap: 10px; margin: 16px 0 6px; flex-wrap: wrap; }
   .goal-row input { flex: 1 1 320px; font-size: 15px; padding: 11px 14px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; color: var(--text); }
   .goal-row input:focus { outline: none; border-color: var(--accent); }
   .btn { padding: 11px 18px; border-radius: 10px; font-weight: 700; font-size: 15px; cursor: pointer; border: none; background: linear-gradient(135deg,#e0855f,#d9605a); color: #1a1207; }
+  .btn[disabled] { opacity: .6; cursor: default; }
   .step { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 14px 16px; margin: 10px 0; display: flex; gap: 12px; align-items: flex-start; }
   .step .n { font-weight: 800; color: var(--accent); font-size: 18px; min-width: 26px; }
   .step h3 { margin: 0 0 3px; font-size: 16px; }
@@ -23,7 +24,12 @@
   .ghostb { padding: 9px 14px; border-radius: 9px; background: var(--panel-2); border: 1px solid var(--border); color: var(--text); font-size: 13px; text-decoration: none; }
   .examples { color: var(--muted); font-size: 13px; margin-top: 8px; }
   .examples a { cursor: pointer; }
-  .empty { color: var(--muted); padding: 24px 0; }
+  .empty, .planmsg { color: var(--muted); padding: 8px 0; font-size: 13px; }
+  .planmsg b { color: var(--accent-2); }
+  .key-area { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .key-area select, .key-area input { padding: 8px 10px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 13px; }
+  .key-field { position: relative; display: flex; align-items: center; }
+  .key-field input { width: 300px; max-width: 60vw; }
 </style>
 </head>
 <body>
@@ -32,12 +38,24 @@
     <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
     <div class="brand-text"><h1>Auto-Composer</h1><p class="tagline">A goal in — an ordered chain of skills out.</p></div>
   </div>
+  <div class="key-area">
+    <select id="provider" title="Model provider — start free with no credit card">
+      <option value="tryclaude">✨ Claude — free trial (no key)</option>
+      <option value="gemini">Gemini (free key)</option>
+      <option value="webllm">In-browser (no key)</option>
+      <option value="anthropic">Claude</option>
+      <option value="openai">OpenAI</option>
+      <option value="ollama">Ollama (local)</option>
+    </select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="API key (stays in your browser)" autocomplete="off" spellcheck="false" /></div>
+    <select id="model" title="Model"><option value="gemini-2.0-flash">Gemini 2.0 Flash</option></select>
+  </div>
 </header>
 <nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
-<div class="key-note">🧭 Describe an outcome; the composer plans which skills to run, in what order, and why.</div>
+<div class="key-note">🧭 Describe an outcome; the composer <b>reasons over every skill</b> to plan which to run, in what order, and why. No key? It still plans with a fast built-in heuristic.</div>
 
 <div class="cmp">
-  <p class="lead">Not a prebuilt recipe — the composer reasons over all skills and their lifecycle to assemble a chain for <em>your</em> goal, then hands you each step to run.</p>
+  <p class="lead">Not a prebuilt recipe — the composer looks across all skills and assembles a chain for <em>your</em> goal, then hands you each step to run.</p>
   <div class="goal-row">
     <input id="goal" type="text" placeholder="e.g. launch a referral program for B2B users and measure it" />
     <button id="go" class="btn" type="button">Compose ▸</button>
@@ -47,24 +65,24 @@
     <a data-ex="diagnose why an enterprise account is churning and build a save plan">rescue an account</a> ·
     <a data-ex="turn this quarter's numbers into a board narrative and deck">close the quarter</a>
   </div>
+  <div id="planmsg" class="planmsg"></div>
   <div id="plan"></div>
 </div>
 
+<script src="providers.js"></script>
 <script src="nav.js"></script>
 <script>
 const el = (id) => document.getElementById(id);
 const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-let SKILLS = [];
+let SKILLS = [], byName = {};
 
-// A lightweight lifecycle order so a composed chain reads like real work:
-// understand → decide → build → launch → measure → communicate.
 const PHASE = [
-  { key: 'understand', rx: /(discovery|research|interview|competitive|assumption|persona|journey|jobs)/i },
-  { key: 'decide', rx: /(prioriti|rice|decision|strategy|okr|roadmap|trade|bet)/i },
-  { key: 'build', rx: /(prd|spec|user-story|design|architecture|test|api|requirement)/i },
-  { key: 'launch', rx: /(launch|go-to-market|gtm|release|checklist|enablement|press|marketing|pricing)/i },
-  { key: 'measure', rx: /(metric|analy|ab-test|experiment|cohort|churn|dashboard|kpi|funnel)/i },
-  { key: 'communicate', rx: /(update|summary|exec|board|stakeholder|report|memo|minutes|narrative)/i },
+  { key: 'Understand', rx: /(discovery|research|interview|competitive|assumption|persona|journey|jobs)/i },
+  { key: 'Decide', rx: /(prioriti|rice|decision|strategy|okr|roadmap|trade|bet)/i },
+  { key: 'Build', rx: /(prd|spec|user-story|design|architecture|test|api|requirement)/i },
+  { key: 'Launch', rx: /(launch|go-to-market|gtm|release|checklist|enablement|press|marketing|pricing)/i },
+  { key: 'Measure', rx: /(metric|analy|ab-test|experiment|cohort|churn|dashboard|kpi|funnel)/i },
+  { key: 'Communicate', rx: /(update|summary|exec|board|stakeholder|report|memo|minutes|narrative)/i },
 ];
 const phaseOf = (s) => {
   const hay = (s.name + ' ' + (s.plugin || '') + ' ' + (s.summary || s.description || '')).toLowerCase();
@@ -72,47 +90,85 @@ const phaseOf = (s) => {
   return 3;
 };
 
-fetch('skills.json').then((r) => r.json()).then((d) => { SKILLS = (Array.isArray(d) ? d : d.skills) || []; });
+fetch('skills.json').then((r) => r.json()).then((d) => {
+  SKILLS = (Array.isArray(d) ? d : d.skills) || [];
+  SKILLS.forEach((s) => (byName[s.name] = s));
+});
+try { if (window.PMProviders) PMProviders.initProviderUI(); } catch (_) {}
 
-function score(skill, terms) {
+const summ = (s) => (s.summary || s.description || '').split(/(?<=[.!?])\s/)[0].slice(0, 120);
+
+function scoreSkill(skill, terms) {
   const hay = (skill.name + ' ' + (skill.summary || skill.description || '') + ' ' + (skill.plugin || '')).toLowerCase();
   let s = 0;
-  for (const t of terms) { if (hay.includes(t)) s += skill.name.toLowerCase().includes(t) ? 2 : 1; }
-  if (skill.eval && skill.eval.score) s += skill.eval.score / 10; // nudge toward proven skills
+  for (const t of terms) if (hay.includes(t)) s += skill.name.toLowerCase().includes(t) ? 2 : 1;
+  if (skill.eval && skill.eval.score) s += skill.eval.score / 10;
   return s;
 }
-
-function compose() {
-  const goal = el('goal').value.trim();
-  if (!goal || !SKILLS.length) return;
+function candidates(goal, n) {
   const terms = goal.toLowerCase().split(/\s+/).filter((w) => w.length > 2);
-  const ranked = SKILLS.map((s) => ({ s, sc: score(s, terms) })).filter((x) => x.sc > 0)
-    .sort((a, b) => b.sc - a.sc).slice(0, 12).map((x) => x.s);
-  // one best skill per lifecycle phase → a coherent, ordered chain (max 6 steps)
-  const byPhase = new Map();
-  for (const s of ranked) { const p = phaseOf(s); if (!byPhase.has(p)) byPhase.set(p, s); }
-  const chain = [...byPhase.entries()].sort((a, b) => a[0] - b[0]).map((e) => e[1]);
+  return SKILLS.map((s) => ({ s, sc: scoreSkill(s, terms) })).filter((x) => x.sc > 0)
+    .sort((a, b) => b.sc - a.sc).slice(0, n).map((x) => x.s);
+}
 
+// Heuristic fallback: best skill per lifecycle phase, ordered.
+function heuristicChain(goal) {
+  const ranked = candidates(goal, 14);
+  const byPhase = new Map();
+  for (const s of ranked) { const p = phaseOf(s); if (!byPhase.has(p)) byPhase.set(p, { s, why: summ(s) }); }
+  return [...byPhase.entries()].sort((a, b) => a[0] - b[0]).map((e) => e[1]);
+}
+
+function renderChain(chain, how) {
   const plan = el('plan');
-  if (!chain.length) { plan.innerHTML = '<p class="empty">No strong matches — try describing the outcome in a few more words.</p>'; return; }
-  const phaseNames = ['Understand', 'Decide', 'Build', 'Launch', 'Measure', 'Communicate'];
-  const steps = chain.map((s, i) => {
-    const phase = phaseNames[phaseOf(s)] || 'Do';
-    const why = esc((s.summary || s.description || '').split(/(?<=[.!?])\s/)[0]).slice(0, 130);
+  if (!chain.length) { plan.innerHTML = '<p class="empty">No strong matches — try describing the outcome in a few more words.</p>'; el('planmsg').textContent = ''; return; }
+  const steps = chain.map((c, i) => {
+    const s = c.s, phase = PHASE[phaseOf(s)].key;
     return `<div class="step"><div class="n">${i + 1}</div><div>
       <h3>${esc(s.title || s.name)} <span style="font-weight:400;color:var(--muted);font-size:12px">· ${phase}${s.eval ? ' · ✅ ' + s.eval.score : ''}</span></h3>
-      <div class="why">${why}</div>
+      <div class="why">${esc(c.why || summ(s))}</div>
       <a class="run" href="index.html?skill=${encodeURIComponent(s.name)}" target="_blank" rel="noopener">▶ Run step ${i + 1}</a>
     </div></div>`;
   }).join('');
-  const canvas = `canvas.html`;
-  plan.innerHTML = `<h2 style="font-size:18px;margin:18px 0 4px">Composed chain — ${chain.length} steps</h2>
-    <p class="lead" style="margin:0 0 6px">Run them top to bottom; each step's output is the next step's input.</p>
-    ${steps}
-    <div class="chain-actions">
-      <a class="ghostb" href="${canvas}">🧩 Open the Workflow Canvas to run the whole chain</a>
-    </div>`;
-  if (window.pmTrack) pmTrack('compose/run');
+  el('planmsg').innerHTML = `<b>${how}</b> · ${chain.length} steps — run top to bottom; each step's output feeds the next.`;
+  plan.innerHTML = steps + `<div class="chain-actions"><a class="ghostb" href="canvas.html">🧩 Open the Workflow Canvas to run the whole chain</a></div>`;
+}
+
+async function planWithModel(goal) {
+  const cands = candidates(goal, 32);
+  if (!cands.length) return null;
+  const key = (el('apiKey').value || '').trim();
+  const model = el('model').value;
+  const list = cands.map((s) => `- ${s.name} — ${summ(s)}`).join('\n');
+  const system = `You are a workflow planner for a library of professional "skills". Given a GOAL and a CANDIDATE list of skills (name — summary), choose an ordered chain of 3 to 6 skills that, run in sequence, achieve the goal. Order them the way real work flows (understand → decide → build → launch → measure → communicate, as relevant). Return ONLY a JSON array like [{"skill":"exact-name","why":"one short reason"}] using ONLY names from the candidates. No prose, no code fence.`;
+  const userMessage = `GOAL: ${goal}\n\nCANDIDATES:\n${list}`;
+  let acc = await PMProviders.stream({ key, model, system, userMessage, onDelta: () => {} });
+  const m = String(acc).match(/\[[\s\S]*\]/);
+  if (!m) throw new Error('no JSON in model reply');
+  const arr = JSON.parse(m[0]);
+  const chain = arr.map((x) => (byName[x.skill] ? { s: byName[x.skill], why: x.why } : null)).filter(Boolean);
+  if (!chain.length) throw new Error('model picked no valid skills');
+  return chain;
+}
+
+let busy = false;
+async function compose() {
+  const goal = el('goal').value.trim();
+  if (!goal || !SKILLS.length || busy) return;
+  busy = true; el('go').disabled = true; el('planmsg').textContent = 'Planning…'; el('plan').innerHTML = '';
+  try {
+    let chain, how = 'Heuristic plan';
+    try {
+      chain = await planWithModel(goal);
+      how = 'Model-planned';
+    } catch (e) {
+      chain = heuristicChain(goal); // no key / error → instant heuristic
+      if (el('apiKey').value.trim()) el('planmsg').textContent = 'Model plan unavailable (' + e.message + ') — showing a heuristic plan.';
+    }
+    if (!chain) chain = heuristicChain(goal);
+    renderChain(chain, how);
+    if (window.pmTrack) pmTrack('compose/' + (how === 'Model-planned' ? 'model' : 'heuristic'));
+  } finally { busy = false; el('go').disabled = false; }
 }
 
 el('go').addEventListener('click', compose);
