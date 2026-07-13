@@ -72,6 +72,8 @@
       ['academy.html', '🎓 Academy'],
       ['xray.html', '🩻 X-ray'],
       ['agent.html', '✨ Auto-Agent'],
+      ['compose.html', '🧭 Auto-Composer'],
+      ['live.html', '🎙️ Live Meeting'],
       ['canvas.html', '🧩 Workflow Canvas'],
       ['ask.html', '❓ Ask'],
       ['brain.html', '🧠 Brain'],

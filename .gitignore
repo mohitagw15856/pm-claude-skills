@@ -46,3 +46,7 @@ mcp-remote/.wrangler/
 
 # Local dev installs (not committed)
 node_modules/
+
+# Self-improve Action working files
+.self-improve.json
+.self-improve-backups/

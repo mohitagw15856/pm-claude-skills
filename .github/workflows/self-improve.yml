@@ -1,0 +1,68 @@
+name: Self-improve skills
+
+# Moonshot #1 — the library improves itself, with a human merge gate.
+# Manually dispatched (never automatic) so eval spend is always deliberate.
+# Picks the lowest-scoring skills, rewrites them, re-scores, keeps only the
+# genuine wins, and opens a PR for review.
+
+on:
+  workflow_dispatch:
+    inputs:
+      count:
+        description: How many of the lowest-scoring skills to attempt
+        default: '5'
+        required: true
+      judge:
+        description: Judge model for re-scoring (cheaper = less spend)
+        default: 'claude-haiku-4-5-20251001'
+        required: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  improve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Rewrite the lowest-scoring skills
+        id: pick
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node scripts/self-improve.mjs --pick "${{ github.event.inputs.count }}"
+
+      - name: Re-score the rewritten skills
+        if: steps.pick.outputs.picked != '0'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: node evals/run-evals.mjs --skills "${{ steps.pick.outputs.skills }}" --models "${{ github.event.inputs.judge }}" --judge "${{ github.event.inputs.judge }}"
+
+      - name: Keep only genuine improvements
+        id: reconcile
+        if: steps.pick.outputs.picked != '0'
+        run: node scripts/self-improve.mjs --reconcile
+
+      - name: Regenerate catalog + exports
+        if: steps.reconcile.outputs.improved != '0'
+        run: node web/build-skills.mjs && node scripts/build-exports.mjs
+
+      - name: Open a PR with the improvements
+        if: steps.reconcile.outputs.improved != '0'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: bot/self-improve
+          title: 'bot: self-improve ${{ steps.reconcile.outputs.improved }} skill(s)'
+          body: |
+            Autonomous skill improvement — the lowest-scoring skills were rewritten,
+            re-scored, and only the ones that **beat their previous score** were kept.
+
+            **Improved:** ${{ steps.reconcile.outputs.summary }}
+
+            Review the diffs before merging. Judge: `${{ github.event.inputs.judge }}`.
+          commit-message: 'bot: self-improve skills (${{ steps.reconcile.outputs.summary }})'
+          delete-branch: true

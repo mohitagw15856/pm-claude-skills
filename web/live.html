@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Live Meeting Co-pilot — decisions & actions as they happen | PM Skills</title>
+<meta name="description" content="Dictate or paste a meeting as it happens and the co-pilot surfaces decisions, action items, open questions and risks live — then generates full minutes." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .live { max-width: 1040px; margin: 0 auto; padding: 18px 22px 70px; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .live h1 { font-size: 22px; }
+  .col h2 { font-size: 15px; margin: 0 0 8px; color: var(--accent-2); }
+  #transcript { width: 100%; min-height: 340px; box-sizing: border-box; font-size: 14px; line-height: 1.55; color: var(--text); background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; padding: 12px; resize: vertical; }
+  #transcript:focus { outline: none; border-color: var(--accent); }
+  .controls { display: flex; gap: 10px; margin: 8px 0; flex-wrap: wrap; align-items: center; }
+  .btn { padding: 9px 14px; border-radius: 9px; font-weight: 700; font-size: 13px; cursor: pointer; border: 1px solid var(--border); background: var(--panel-2); color: var(--text); }
+  .btn.rec { background: linear-gradient(135deg,#e0855f,#d9605a); color: #1a1207; border: none; }
+  .btn.rec.on { background: #d9605a; color: #fff; }
+  .card { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 12px 14px; margin-bottom: 12px; }
+  .card h3 { margin: 0 0 8px; font-size: 14px; }
+  .card ul { margin: 0; padding-left: 18px; }
+  .card li { font-size: 13.5px; line-height: 1.5; margin: 4px 0; }
+  .badge { font-size: 11px; font-weight: 700; border-radius: 999px; padding: 1px 7px; margin-left: 6px; }
+  .b-dec { color: #6ee7b7; background: rgba(16,185,129,.12); }
+  .b-act { color: #93c5fd; background: rgba(59,130,246,.12); }
+  .b-q { color: #fcd34d; background: rgba(245,158,11,.12); }
+  .b-risk { color: #fca5a5; background: rgba(239,68,68,.12); }
+  .empty { color: var(--muted); font-size: 13px; }
+  .full { margin-top: 6px; }
+  .full a { font-size: 13px; font-weight: 700; color: var(--accent-2); text-decoration: none; }
+  @media (max-width: 780px){ .live { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Live Meeting Co-pilot</h1><p class="tagline">Decisions, actions, questions & risks — as the meeting happens.</p></div>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🎙️ Paste or dictate the conversation. The co-pilot updates the right column live, then generates full minutes when you're done. Runs entirely in your browser.</div>
+
+<div class="live">
+  <div class="col">
+    <h2>Transcript</h2>
+    <div class="controls">
+      <button id="mic" class="btn rec" type="button">🎙️ Start dictation</button>
+      <button id="clear" class="btn" type="button">Clear</button>
+      <span id="micState" class="empty"></span>
+    </div>
+    <textarea id="transcript" placeholder="Paste the meeting transcript here, or hit “Start dictation” and talk. As text arrives, the co-pilot surfaces decisions, actions, open questions and risks on the right…"></textarea>
+    <div class="full">
+      <a id="fullMinutes" href="#" target="_blank" rel="noopener">📝 Generate full minutes from this transcript →</a>
+    </div>
+  </div>
+  <div class="col">
+    <h2>Live read</h2>
+    <div class="card"><h3>✅ Decisions <span class="badge b-dec" id="cDec">0</span></h3><ul id="decisions"></ul><div class="empty" id="decEmpty">Nothing yet.</div></div>
+    <div class="card"><h3>📌 Action items <span class="badge b-act" id="cAct">0</span></h3><ul id="actions"></ul><div class="empty" id="actEmpty">Nothing yet.</div></div>
+    <div class="card"><h3>❓ Open questions <span class="badge b-q" id="cQ">0</span></h3><ul id="questions"></ul><div class="empty" id="qEmpty">Nothing yet.</div></div>
+    <div class="card"><h3>⚠️ Risks / concerns <span class="badge b-risk" id="cRisk">0</span></h3><ul id="risks"></ul><div class="empty" id="riskEmpty">Nothing yet.</div></div>
+  </div>
+</div>
+
+<script src="nav.js"></script>
+<script>
+const el = (id) => document.getElementById(id);
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+// Heuristic live extraction — fast, private, no key. (Upgradeable to a model pass.)
+const RX = {
+  decision: /\b(we(?:'ll| will| have| are going to)?\s+(?:decide|go with|ship|approve|agree|commit)|decided|agreed|approved|let's go with|the call is|resolution:)/i,
+  action: /\b(action item|to-?do|will (?:own|take|send|draft|follow up|prepare|set up)|owner:|assign|by (?:monday|tuesday|wednesday|thursday|friday|next week|eod|tomorrow|\w+day))/i,
+  question: /\?\s*$/,
+  risk: /\b(risk|concern|blocker|blocked|worried|worry|dependency|depends on|if .* then we|might not|could fail|edge case|unknown)\b/i,
+};
+
+function sentences(text) {
+  return text.replace(/\n+/g, ' ').split(/(?<=[.!?])\s+/).map((s) => s.trim()).filter((s) => s.length > 6);
+}
+
+function classify(text) {
+  const out = { decisions: [], actions: [], questions: [], risks: [] };
+  const seen = new Set();
+  for (const s of sentences(text)) {
+    const key = s.toLowerCase();
+    if (seen.has(key)) continue; seen.add(key);
+    if (RX.decision.test(s)) out.decisions.push(s);
+    else if (RX.action.test(s)) out.actions.push(s);
+    else if (RX.risk.test(s)) out.risks.push(s);
+    else if (RX.question.test(s)) out.questions.push(s);
+  }
+  return out;
+}
+
+function fill(listId, emptyId, countId, items) {
+  el(listId).innerHTML = items.map((t) => `<li>${esc(t)}</li>`).join('');
+  el(emptyId).style.display = items.length ? 'none' : 'block';
+  el(countId).textContent = items.length;
+}
+
+let t = null;
+function refresh() {
+  const text = el('transcript').value;
+  const c = classify(text);
+  fill('decisions', 'decEmpty', 'cDec', c.decisions);
+  fill('actions', 'actEmpty', 'cAct', c.actions);
+  fill('questions', 'qEmpty', 'cQ', c.questions);
+  fill('risks', 'riskEmpty', 'cRisk', c.risks);
+  // Deep-link to full minutes via the meeting-notes skill, transcript prefilled.
+  try {
+    const packed = btoa(unescape(encodeURIComponent(JSON.stringify([text.slice(0, 6000)]))));
+    el('fullMinutes').href = 'index.html?skill=meeting-notes' + (packed.length < 1800 ? '&i=' + packed : '');
+  } catch (_) {}
+}
+el('transcript').addEventListener('input', () => { clearTimeout(t); t = setTimeout(refresh, 400); });
+el('clear').addEventListener('click', () => { el('transcript').value = ''; refresh(); });
+
+// Optional live dictation via the Web Speech API (Chrome/Edge). Falls back gracefully.
+let rec = null, listening = false;
+const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+if (!SR) { el('mic').disabled = true; el('mic').textContent = '🎙️ Dictation unsupported'; el('micState').textContent = 'Your browser has no speech recognition — paste instead.'; }
+el('mic').addEventListener('click', () => {
+  if (!SR) return;
+  if (listening) { rec && rec.stop(); return; }
+  rec = new SR(); rec.continuous = true; rec.interimResults = false; rec.lang = 'en-US';
+  rec.onresult = (e) => {
+    let add = '';
+    for (let i = e.resultIndex; i < e.results.length; i++) if (e.results[i].isFinal) add += e.results[i][0].transcript + '. ';
+    if (add) { el('transcript').value += (el('transcript').value ? ' ' : '') + add.trim(); refresh(); }
+  };
+  rec.onend = () => { listening = false; el('mic').classList.remove('on'); el('mic').textContent = '🎙️ Start dictation'; el('micState').textContent = ''; };
+  rec.onerror = (e) => { el('micState').textContent = 'Mic error: ' + e.error; };
+  rec.start(); listening = true; el('mic').classList.add('on'); el('mic').textContent = '⏹ Stop'; el('micState').textContent = 'Listening…';
+  if (window.pmTrack) pmTrack('live/dictate');
+});
+refresh();
+</script>
+</body>
+</html>

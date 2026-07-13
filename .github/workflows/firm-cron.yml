@@ -1,0 +1,42 @@
+name: Firm session
+
+# Moonshot #5 — a standing AI Firm that delivers recurring work unattended.
+# Manual-first: it runs on demand here. To make it a true standing firm, uncomment
+# the schedule block (and know it will spend on the API each run).
+
+on:
+  workflow_dispatch:
+    inputs:
+      agenda:
+        description: What should the firm convene on?
+        default: 'Pick the single sharpest open question facing us and resolve it.'
+        required: true
+  # schedule:
+  #   - cron: '0 13 * * 1'   # every Monday 13:00 UTC — the Monday board memo
+
+permissions:
+  contents: write
+
+jobs:
+  convene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Convene the firm
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          FIRM_AGENDA: ${{ github.event.inputs.agenda }}
+        # Point --context at a real brief/metrics file in the repo to ground it.
+        run: node scripts/firm-session.mjs --out firm-sessions
+
+      - name: Commit the session memo
+        run: |
+          git config user.name  "firm-bot"
+          git config user.email "firm-bot@users.noreply.github.com"
+          git add firm-sessions/
+          git diff --cached --quiet || git commit -m "firm: session $(date -u +%F)"
+          git push

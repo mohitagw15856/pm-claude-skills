@@ -142,6 +142,7 @@ async function init() {
   updateHistoryBtn();
   el('shareHubBtn').addEventListener('click', shareToHub);
   el('imgBtn').addEventListener('click', shareAsImage);
+  if (el('provBtn')) el('provBtn').addEventListener('click', addProvenance);
   if (el('presentBtn')) el('presentBtn').addEventListener('click', presentOutput);
   if (el('visualizeBtn')) el('visualizeBtn').addEventListener('click', visualizeOutput);
   if (el('translateBtn')) el('translateBtn').addEventListener('click', translateOutput);
@@ -592,6 +593,24 @@ function shareRemix() {
     () => { el('remixMsg').textContent = 'Remix link copied — it opens this skill with your instructions applied.'; },
     () => { el('remixMsg').textContent = link; }
   );
+}
+
+// Proof-carrying output: append a verifiable provenance card to this result.
+async function addProvenance() {
+  const out = el('output');
+  const raw = (out.dataset.raw || '').trim();
+  if (!raw || !current || !window.PMProvenance) return;
+  if (raw.includes('### 🔏 Provenance')) { if (el('shareMsg')) el('shareMsg').textContent = 'Provenance already added.'; return; }
+  const inputs = [...el('inputForm').querySelectorAll('input, textarea')].map((f) => f.value).join('\n');
+  const model = (el('model') && el('model').value) || (el('provider') && el('provider').value) || 'unknown';
+  const evalScore = current.eval ? current.eval.score : null;
+  try {
+    const { markdown } = await window.PMProvenance.build({ skill: current.name, model, inputs, output: raw, evalScore });
+    out.dataset.raw = raw + markdown;
+    out.innerHTML = DOMPurify.sanitize(marked.parse(out.dataset.raw, { breaks: true }));
+    if (el('shareMsg')) el('shareMsg').textContent = 'Provenance appended — copy/export now carries it.';
+    if (window.pmTrack) pmTrack('provenance/' + current.name);
+  } catch (_) { if (el('shareMsg')) el('shareMsg').textContent = "Couldn't build provenance."; }
 }
 
 function applyShareLink() {
