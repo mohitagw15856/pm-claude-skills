@@ -42,7 +42,7 @@ GitHub's public \`SKILL.md\` surface stands at roughly **${censusHeadline} files
 
 ${bench.runs.length ? bench.runs.map((r) => `- **${r.model}** — ${r.score}/5 skill-guided${r.bare != null ? ` vs ${r.bare}/5 bare (lift: ${r.lift ?? 'n/a'})` : ''} · ${String(r.date).slice(0, 10)}`).join('\n') : '- First cross-vendor runs pending.'}
 
-The finding that matters: **the lift from skill-structure exceeds the gap between adjacent model tiers** — process discipline is worth more than a model upgrade at current margins. Frozen tasks, blind judging, transcripts published: [skillbench/](../../skillbench/).
+The honest early finding: **in run 1, skill-guided outputs scored slightly BELOW bare outputs for both models** (n=12 tasks, single vendor, one judge). Two live hypotheses, both testable: the judge may reward fluent freeform over disciplined structure, or the structure tax is real on short tasks and pays off only on complex ones. We publish the number as measured rather than the one we hoped for — cross-vendor runs and a structure-aware judging rubric are the next experiments. Frozen tasks, blind judging, transcripts published: [skillbench/](../../skillbench/).
 
 ## 3. The competition (the Season)
 
