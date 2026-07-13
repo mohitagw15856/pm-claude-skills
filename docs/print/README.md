@@ -1,0 +1,19 @@
+# 📦 Print products — the Handbook and the Operator's Deck as real objects
+
+Both artifacts are print-ready today; this is the press-go runbook for putting them on shelves. Physical objects recruit people the internet can't reach, and both are margin-positive without sponsorship.
+
+## The Handbook (paperback)
+- **Interior:** `web/docs-assets/handbook.pdf` regenerates from the library every release (A4; for 6×9" trade, re-run the print step in [build-handbook.mjs](../../scripts/build-handbook.mjs) with the print preset — margins are already book-safe). ~350 pages at current corpus.
+- **Route A — Lulu (fastest, no inventory):** lulu.com → paperback → upload interior PDF + cover (below) → price at cost+$6 → get a storefront link for the README. ~30 minutes.
+- **Route B — Amazon KDP (reach):** same files; needs an ISBN (KDP gives you one free) and 72h review. Royalty ~$4-7 at $24.99.
+- **Cover:** `node docs/print/build-covers.mjs` renders front/back/spine to `handbook-cover.pdf` sized for both routes (spine width auto-calculated from page count in the script header — update after big releases).
+
+## The Operator's Deck (cards)
+- **Cards:** the deck builder (`scripts/build-deck.mjs`, shipped in #133) already renders per-skill cards with QR codes; `node docs/print/build-covers.mjs --deck` lays them out 9-up on A4 + singles at 63×88mm (poker standard) for print services.
+- **Route — MakePlayingCards.com / printerstudio:** upload the singles PDF, 54-card deck (the 50 production skills + 4 arena cards), ~$12/deck at qty 1, ~$6 at 50. The QR on every card lands on that skill's playground page — the deck is a distribution channel disguised as a gift.
+
+## House rules for physical goods
+- Price transparently (cost + stated margin, published here); proceeds route like sponsorship — the free-runs pool first.
+- The digital versions remain free forever; print is a format, not a paywall.
+
+**Owner actions:** create the Lulu/KDP/MPC accounts, upload, publish the store links back into this file and the README. Everything else is generated.
