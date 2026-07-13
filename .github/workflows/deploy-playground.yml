@@ -10,6 +10,7 @@ on:
     paths:
       - 'skills/**'
       - 'web/**'
+      - 'skillbench/results.json'
       - 'evals/results.json'
       - 'skill-tiers.json'
       - 'skill-sources.json'
@@ -72,6 +73,9 @@ jobs:
 
       - name: Build the eval-coverage page (web/coverage.html)
         run: node scripts/build-coverage.mjs
+
+      - name: Build the model leaderboard data (web/modelbench.json)
+        run: node scripts/build-modelbench.mjs
 
       - name: Configure Pages
         uses: actions/configure-pages@v5

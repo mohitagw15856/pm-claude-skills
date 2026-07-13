@@ -94,6 +94,7 @@
       ['leaderboard.html', '📊 Leaderboard'],
       ['coverage.html', '📈 Eval coverage'],
       ['benchmark.html', '🏆 Benchmark'],
+      ['modelbench.html', '🤖 Model rankings'],
       ['learn.html', '🎓 Learn'],
       ['wrapped.html', '🎁 Wrapped'],
       ['handbook.html', '📖 Handbook'],

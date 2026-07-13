@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>SkillBench — which AI does professional work best? (the MMLU for real work)</title>
+<meta name="description" content="An open, reproducible benchmark of how well AI models do real professional work — PRDs, postmortems, board updates, OKRs — scored 1–5 by a pinned LLM judge on a fixed rubric. Model rankings, per-domain breakdown, and the skill-lift finding. Run it yourself." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .mb-wrap { max-width: 940px; margin: 0 auto; padding: 16px 22px 70px; }
+  .mb-lead { color: var(--muted); font-size: 15.5px; line-height: 1.6; max-width: 760px; }
+  .mb-lead strong { color: var(--text); }
+  .mb-meta { font-size: 12.5px; color: var(--muted); margin: 8px 0 18px; }
+  table.mb { width: 100%; border-collapse: collapse; font-size: 14px; }
+  table.mb th, table.mb td { text-align: left; padding: 11px 12px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+  table.mb th { font-size: 12px; text-transform: uppercase; letter-spacing: .6px; color: var(--muted); font-weight: 600; }
+  table.mb td.rank { color: var(--muted); font-variant-numeric: tabular-nums; width: 34px; }
+  table.mb td.model { font-weight: 600; }
+  .scorecell { display: flex; align-items: center; gap: 10px; min-width: 190px; }
+  .scorebar { flex: 1; height: 9px; border-radius: 5px; background: var(--panel-2); overflow: hidden; }
+  .scorebar > i { display: block; height: 100%; border-radius: 5px; background: linear-gradient(90deg, var(--accent, #d97757), #e3b341); }
+  .scoreval { font-variant-numeric: tabular-nums; font-weight: 700; width: 42px; text-align: right; }
+  .lift { font-variant-numeric: tabular-nums; font-weight: 600; padding: 2px 8px; border-radius: 999px; font-size: 12.5px; }
+  .lift.pos { color: #3fb950; background: rgba(63,185,80,.12); }
+  .lift.neg { color: #d29922; background: rgba(210,153,34,.12); }
+  .lift.zero { color: var(--muted); background: var(--panel-2); }
+  .domains { display: flex; gap: 4px; flex-wrap: wrap; }
+  .dcell { font-size: 11px; padding: 2px 6px; border-radius: 6px; color: #0b0e13; font-variant-numeric: tabular-nums; }
+  .callout { border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; margin: 22px 0; background: var(--panel); }
+  .callout h3 { margin: 0 0 6px; font-size: 15px; }
+  .callout p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.55; }
+  .cta-row { display: flex; gap: 10px; flex-wrap: wrap; margin: 18px 0; }
+  pre.run { background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; overflow-x: auto; font-size: 12.5px; }
+  .empty { color: var(--muted); font-style: italic; padding: 20px 0; }
+  h2.section { font-size: 18px; margin: 26px 0 8px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>SkillBench</h1><p class="tagline">Which AI actually does professional work best?</p></div>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<div class="mb-wrap">
+  <p class="mb-lead">There's <strong>HumanEval</strong> for code and <strong>MMLU</strong> for knowledge — nothing measures whether a model can write a PRD your team can execute, a postmortem that finds the real root cause, or a board update that survives the room. <strong>SkillBench is that benchmark:</strong> a fixed set of realistic professional tasks, a published rubric, and a pinned LLM judge — fully reproducible from this repo.</p>
+  <p class="mb-meta" id="meta">Loading results…</p>
+
+  <h2 class="section">🏆 Model rankings</h2>
+  <div id="board"><p class="empty">Loading…</p></div>
+
+  <div class="callout" id="liftCallout" hidden>
+    <h3>📉 The skill-lift finding</h3>
+    <p id="liftText"></p>
+  </div>
+
+  <h2 class="section">🔬 How it's scored</h2>
+  <p class="mb-lead">Each model runs every task two ways — <strong>bare</strong> (task only) and <strong>skilled</strong> (task + the matching <code>SKILL.md</code>). The judge scores each output <strong>1–5</strong> on the same fixed rubric the library uses — structure, completeness, usefulness, grounding — with the judge model + version pinned per release. The headline <strong>SkillBench score</strong> is the mean skilled score; <strong>skill lift</strong> is skilled minus bare.</p>
+
+  <div class="cta-row">
+    <a class="btn btn-primary" href="https://github.com/mohitagw15856/pm-claude-skills/tree/main/skillbench">📖 Methodology &amp; task set</a>
+    <a class="btn" href="leaderboard.html">🎯 Skill leaderboard (scores skills, not models)</a>
+    <a class="btn" href="benchmark.html">ℹ️ About the rubric</a>
+  </div>
+
+  <h2 class="section">▶ Run it yourself</h2>
+  <p class="mb-lead">SkillBench is open and reproducible — add a model to the board by running the harness and committing the result. Estimate cost first with <code>--dry-run</code>.</p>
+  <pre class="run"># Score one model (Anthropic / OpenAI / Gemini via env keys)
+ANTHROPIC_API_KEY=… node skillbench/run-skillbench.mjs --models claude-sonnet-4-6
+
+# Compare across providers
+ANTHROPIC_API_KEY=… OPENAI_API_KEY=… GEMINI_API_KEY=… \
+  node skillbench/run-skillbench.mjs --models claude-opus-4-8,gpt-4o,gemini-2.0-flash</pre>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+const DOMAIN_LABEL={product:'Product',communication:'Comms','engineering-ops':'Eng ops',analysis:'Analysis',people:'People',strategy:'Strategy'};
+const prettyModel=(m)=>m.replace(/-\d{6,}$/,'').replace(/claude-/,'Claude ').replace(/gpt-/,'GPT-').replace(/gemini-/,'Gemini ');
+function heat(v){ // 1–5 → red→green
+  const t=Math.max(0,Math.min(1,(v-1)/4)); const h=Math.round(8+t*(130-8));
+  return 'hsl('+h+' 62% 62%)';
+}
+init();
+async function init(){
+  let data; try{ data=await (await fetch('modelbench.json')).json(); }catch(e){ el('board').innerHTML='<p class="empty">Could not load results.</p>'; return; }
+  const models=data.models||[];
+  el('meta').textContent=`${models.length} model(s) · ${data.taskCount} tasks across ${(data.domains||[]).length} domains · task set v${data.taskSetVersion} · judge pinned per run · updated ${new Date(data.generated).toISOString().slice(0,10)}`;
+  if(!models.length){ el('board').innerHTML='<p class="empty">No model runs yet — run the harness below to seed the board.</p>'; return; }
+  const domains=data.domains||[];
+  const rows=models.map((m,i)=>{
+    const pct=Math.max(0,Math.min(100,((m.score-1)/4)*100));
+    const lift=m.lift; const lc=lift>0.05?'pos':lift<-0.05?'neg':'zero'; const ls=(lift>0?'+':'')+(lift==null?'—':lift.toFixed(2));
+    const dcells=domains.map(d=>{const v=m.byDomain&&m.byDomain[d];return v==null?'<span class="dcell" style="background:var(--panel-2);color:var(--muted)">—</span>':`<span class="dcell" title="${DOMAIN_LABEL[d]||d}: ${v}" style="background:${heat(v)}">${v.toFixed(1)}</span>`;}).join('');
+    return `<tr>
+      <td class="rank">${i+1}</td>
+      <td class="model">${prettyModel(m.model)}<div style="font-size:11px;color:var(--muted);font-weight:400">${m.model}</div></td>
+      <td><div class="scorecell"><span class="scorebar"><i style="width:${pct}%"></i></span><span class="scoreval">${m.score.toFixed(2)}</span></div></td>
+      <td><span class="lift ${lc}" title="skilled minus bare">${ls}</span></td>
+      <td><div class="domains">${dcells}</div></td>
+    </tr>`;
+  }).join('');
+  el('board').innerHTML=`<div style="overflow-x:auto"><table class="mb">
+    <thead><tr><th>#</th><th>Model</th><th>SkillBench score</th><th title="skilled minus bare">Skill lift</th><th>By domain (skilled, 1–5)</th></tr></thead>
+    <tbody>${rows}</tbody></table></div>`;
+  // Honest skill-lift note.
+  const avgLift=models.reduce((a,m)=>a+(m.lift||0),0)/models.length;
+  if(Math.abs(avgLift)>=0.03){
+    el('liftCallout').hidden=false;
+    el('liftText').textContent = avgLift>0
+      ? `On this task set, attaching the matching skill raised scores by ${avgLift.toFixed(2)} on average — structured judgment measurably improves output.`
+      : `An honest result worth surfacing: on this frozen task set the top models already score near-ceiling bare, so the matching skill nudged the mean ${avgLift.toFixed(2)} — the lift shows up on weaker models and messier, longer-horizon tasks, not on tidy single-shot briefs a frontier model already nails. The benchmark reports what it finds, not what flatters the library.`;
+  }
+}
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
