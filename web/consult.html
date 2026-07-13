@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Consultant Mode — the skills interview you before they answer</title>
+<meta name="description" content="A new way to run any of the skills: instead of a one-shot template, the skill interviews you like a senior consultant — asking the two or three questions that actually change the answer — then produces the artifact. The original one-shot skills are unchanged." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
+<script src="providers.js"></script>
+<style>
+  .cs-wrap { max-width: 800px; margin: 0 auto; padding: 18px 22px 40px; }
+  .cs-sub { font-size: 13px; color: var(--muted); margin: 0 0 14px; }
+  .cs-pick { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 10px 0 14px; font-size: 14px; }
+  .cs-pick select { padding: 9px 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; max-width: 100%; }
+  .thread { display: flex; flex-direction: column; gap: 12px; margin: 8px 0 16px; }
+  .msg { max-width: 88%; padding: 11px 15px; border-radius: 14px; font-size: 14px; line-height: 1.55; white-space: pre-wrap; }
+  .msg.ai { align-self: flex-start; background: var(--panel); border: 1px solid var(--border); border-bottom-left-radius: 4px; }
+  .msg.me { align-self: flex-end; background: var(--accent); color: #1a1207; border-bottom-right-radius: 4px; white-space: pre-wrap; }
+  .msg.ai.q { border-color: var(--accent); }
+  .composer { position: sticky; bottom: 0; display: flex; gap: 8px; padding: 10px 0; background: linear-gradient(0deg, var(--bg) 70%, transparent); }
+  .composer textarea { flex: 1; box-sizing: border-box; min-height: 46px; max-height: 160px; padding: 11px 14px; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; color: var(--text); font-family: inherit; font-size: 14px; resize: vertical; }
+  .final-wrap { margin-top: 8px; border: 1px solid var(--accent); border-radius: 14px; overflow: hidden; }
+  .final-wrap .output-toolbar { background: var(--panel-2); }
+  .badge-consult { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 999px; background: var(--panel-2); border: 1px solid var(--border); color: var(--muted); margin-left: 8px; vertical-align: middle; }
+  .hint { font-size: 12px; color: var(--muted); margin: 2px 0 0; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Consultant Mode <span class="badge-consult">beta</span></h1><p class="tagline">The skill interviews you first — then delivers. Nothing generic.</p></div>
+  </div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your key + answers stay in your browser and go only to your chosen provider — never to us. The original one-shot skills are unchanged; this is an added way to run them.</div>
+
+<div class="cs-wrap">
+  <p class="cs-sub">Same skills you already know — but run as a conversation. Pick one, describe your situation in a line, and it'll ask the two or three questions that actually change the answer before it writes anything. A blank page that thinks with you, instead of a template you fill in alone.</p>
+  <div class="cs-pick">
+    <span>Consult me on</span>
+    <select id="skillSelect"></select>
+    <button id="startBtn" class="primary" type="button">Start</button>
+    <button id="resetBtn" class="ghost" type="button" hidden>New session</button>
+    <span id="status" class="status"></span>
+  </div>
+  <p class="hint" id="based" hidden></p>
+
+  <div class="thread" id="thread"></div>
+
+  <div class="composer" id="composer" hidden>
+    <textarea id="reply" placeholder="Type your answer… (Enter to send, Shift+Enter for a new line)"></textarea>
+    <button id="sendBtn" class="primary" type="button">Send</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+  </div>
+
+  <div class="final-wrap" id="finalWrap" hidden>
+    <div class="output-toolbar"><span>✅ Your deliverable</span><div><button id="copyBtn" class="ghost" type="button">Copy</button> <button id="againBtn" class="ghost" type="button">Refine further</button></div></div>
+    <article id="final" class="output markdown" style="padding:16px 18px"></article>
+  </div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+const FINAL_TAG='===DELIVERABLE===';
+let SKILLS=[], controller=null, history=[], started=false;
+
+init();
+async function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('startBtn').addEventListener('click',start);
+  el('resetBtn').addEventListener('click',reset);
+  el('sendBtn').addEventListener('click',send);
+  el('againBtn').addEventListener('click',()=>{ el('finalWrap').hidden=true; el('composer').hidden=false; el('reply').focus(); });
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+  el('copyBtn').addEventListener('click',()=>navigator.clipboard.writeText(el('final').dataset.raw||''));
+  el('reply').addEventListener('keydown',(e)=>{ if(e.key==='Enter'&&!e.shiftKey){ e.preventDefault(); send(); } });
+  el('skillSelect').addEventListener('change',renderBased);
+  try{ SKILLS=(await (await fetch('skills.json')).json()).skills; }catch(e){ setStatus('Could not load skills.',true); return; }
+  SKILLS.sort((a,b)=>a.title.localeCompare(b.title));
+  for(const s of SKILLS){ const o=document.createElement('option'); o.value=s.name; o.textContent=s.title; el('skillSelect').appendChild(o); }
+  const want=new URLSearchParams(location.search).get('skill');
+  if(want&&SKILLS.some(s=>s.name===want)) el('skillSelect').value=want;
+  renderBased();
+}
+function current(){ return SKILLS.find(s=>s.name===el('skillSelect').value); }
+function renderBased(){ const s=current(); const b=el('based'); if(s&&s.source){ b.innerHTML='📚 Grounded in '+s.source.replace(/\*(.+?)\*/g,'<em>$1</em>'); b.hidden=false; } else b.hidden=true; }
+function sysFor(s){
+  return `You are a senior "${s.title}" consultant running a live working session with a client. You have deep command of the following method${s.source?' ('+s.source.replace(/\\*/g,'')+')':''}:
+
+${s.instructions}
+
+HOW TO RUN THE SESSION:
+- Do NOT produce the final artifact immediately. First, interview the client to get what you actually need.
+- Ask ONE focused question at a time — the single most decision-relevant thing you're missing. Keep each question to 1–2 sentences, in plain language, and say briefly why it matters if it isn't obvious.
+- Adapt: let each answer shape the next question. Ask at most 3–4 questions total; fewer if the client already gave you enough.
+- If the client says "just go", "you decide", or gives you enough, stop asking and deliver.
+- When you have enough, output the finished artifact to the full standard of the skill above — thorough, specific to what they told you, ready to use. Begin the final message with the line "${FINAL_TAG}" on its own, then the artifact in markdown. Only the final deliverable message may contain that tag.`;
+}
+function addMsg(role, text, isQ){ const d=document.createElement('div'); d.className='msg '+(role==='me'?'me':'ai')+(isQ?' q':''); d.textContent=text; el('thread').appendChild(d); d.scrollIntoView({behavior:'smooth',block:'end'}); return d; }
+
+async function start(){
+  const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your provider key first.',true);
+  const s=current(); if(!s) return;
+  started=true; history=[]; el('thread').innerHTML=''; el('finalWrap').hidden=true;
+  el('startBtn').hidden=true; el('resetBtn').hidden=false; el('skillSelect').disabled=true;
+  el('composer').hidden=false;
+  if(window.pmTrack) pmTrack('consult/'+s.name);
+  addMsg('me', `I'd like your help with: ${s.title}.`);
+  history.push('CLIENT: I\'d like your help with: '+s.title+'. Please start by asking me what you need to know.');
+  await turn();
+}
+function reset(){ started=false; history=[]; el('thread').innerHTML=''; el('composer').hidden=true; el('finalWrap').hidden=true; el('startBtn').hidden=false; el('resetBtn').hidden=true; el('skillSelect').disabled=false; setStatus(''); }
+async function send(){
+  const val=el('reply').value.trim(); if(!val||!started) return;
+  el('reply').value=''; addMsg('me', val); history.push('CLIENT: '+val);
+  await turn();
+}
+async function turn(){
+  const key=el('apiKey').value.trim(); const s=current();
+  const bubble=addMsg('ai','…');
+  el('sendBtn').disabled=true; el('startBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController(); setStatus('Thinking…');
+  const transcript=history.join('\n\n')+'\n\nCONSULTANT:';
+  try{
+    const acc=await PMProviders.stream({key,model:el('model').value,system:sysFor(s),userMessage:transcript,signal:controller.signal,onDelta:(a)=>{
+      if(a.includes(FINAL_TAG)){ bubble.textContent='✅ Ready — writing your deliverable below…'; bubble.classList.remove('q'); }
+      else bubble.textContent=a;
+    }});
+    history.push('CONSULTANT: '+acc);
+    if(acc.includes(FINAL_TAG)){
+      const md=acc.split(FINAL_TAG)[1].trim();
+      bubble.textContent='✅ Done — your deliverable is below.';
+      el('finalWrap').hidden=false; el('composer').hidden=true;
+      const f=el('final'); f.dataset.raw=md; f.innerHTML=DOMPurify.sanitize(marked.parse(md));
+      f.scrollIntoView({behavior:'smooth',block:'start'});
+      setStatus('Delivered.');
+    } else {
+      bubble.classList.add('q'); el('reply').focus(); setStatus('');
+    }
+  }catch(e){ bubble.textContent='⚠️ '+(e.name==='AbortError'?'Stopped.':(e.message||'Failed.')); setStatus(e.message||'Failed.',true); }
+  finally{ el('sendBtn').disabled=false; el('startBtn').disabled=false; el('stopBtn').hidden=true; controller=null; }
+}
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
