@@ -1,0 +1,37 @@
+name: Morning Show (weekly newsletter)
+
+# Moonshot #6 — a passive audience with no new content work. Composes a weekly
+# issue from the catalog (deterministic, no API cost) and commits it. Turn the
+# schedule on to publish every Monday; wire the last issue into an ESP/TTS step
+# to make it a real email or podcast.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 13 * * 1' # every Monday 13:00 UTC
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Compose this week's issue
+        run: node scripts/build-morning-show.mjs
+
+      - name: Commit the issue
+        run: |
+          git config user.name  "morning-show-bot"
+          git config user.email "morning-show-bot@users.noreply.github.com"
+          git add newsletter/
+          git diff --cached --quiet || git commit -m "newsletter: weekly issue $(date -u +%F)"
+          git push
+
+      # Optional next steps (left as comments): pipe newsletter/*latest*.md into
+      # Buttondown/Mailchimp for email, or a TTS action for the podcast audio.

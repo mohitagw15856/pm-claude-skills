@@ -68,6 +68,7 @@
     "build:community": "node scripts/build-community.mjs",
     "build:og": "node scripts/build-og-images.mjs",
     "build:deck": "node scripts/build-deck.mjs",
+    "build:show": "node scripts/build-morning-show.mjs",
     "skill-of-the-week": "node scripts/skill-of-the-week.mjs",
     "check": "node scripts/skillcheck.mjs && node scripts/build-exports.mjs --check && node scripts/build-workflows.mjs --check && node web/build-skills.mjs && node scripts/build-samples.mjs && node scripts/build-skills-md.mjs && git diff --exit-code -- web/skills.json web/samples.json SKILLS.md",
     "improve": "node scripts/improve-skill.mjs",
