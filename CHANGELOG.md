@@ -9,6 +9,8 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [48.0.0] — the institution release: a repo grows a name on the door — 2026-07-13
+
 ### Added — the institution wave: from repo to something with a name on the door
 - **🏛 [The Open Institute for Professional Judgment](https://mohitagw15856.github.io/pm-claude-skills/institute.html)** — the umbrella binding what already operates (SkillSpec, the Operator's Exam, SkillBench rankings, the census, the Season, the annual report) to named principles: *verifiability over authority; money never touches judgment*. Charter in [docs/INSTITUTE.md](docs/INSTITUTE.md).
 - **📜 [The SkillSpec Foundation trajectory](docs/FOUNDATION.md)** — governance written against our own interest: RFC process (with mandatory false-positive analysis and census-measured breakage), maintainership earned by adoption, constitutional verifiability, and the one-hour spin-out runbook to a neutral org.
