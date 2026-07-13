@@ -1,6 +1,6 @@
 ---
 description: Workflow recipe — turn the quarter's raw numbers into a leadership story and board deck by chaining 4 skills.
-argument-hint: [the quarter's metrics, wins, and misses]
+argument-hint: "[the quarter's metrics, wins, and misses]"
 ---
 
 Run the **Close the Quarter** workflow recipe for: $ARGUMENTS

@@ -1,6 +1,6 @@
 ---
 description: Workflow recipe — diagnose an at-risk customer and build the full save play through to renewal by chaining 4 skills.
-argument-hint: [the account and what's going wrong]
+argument-hint: "[the account and what's going wrong]"
 ---
 
 Run the **Rescue an Account** workflow recipe for: $ARGUMENTS

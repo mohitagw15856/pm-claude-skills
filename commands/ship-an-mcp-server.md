@@ -1,6 +1,6 @@
 ---
 description: Workflow recipe — make your product agent-usable by chaining 4 skills, spec to pricing.
-argument-hint: [the product and its API/capabilities, plus what agents will be asked to do]
+argument-hint: "[the product and its API/capabilities, plus what agents will be asked to do]"
 ---
 
 Run the **Ship an MCP Server** workflow recipe for: $ARGUMENTS

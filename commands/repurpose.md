@@ -1,6 +1,6 @@
 ---
 description: Workflow recipe — turn one blog post, video, or idea into a full platform-native content pack (thread, LinkedIn, newsletter, carousel, short-form script) with sharp hooks and a thumbnail concept.
-argument-hint: [a URL, a transcript/blog paste, or the core idea]
+argument-hint: "[a URL, a transcript/blog paste, or the core idea]"
 ---
 
 Run the **Repurpose Content** workflow recipe for: $ARGUMENTS

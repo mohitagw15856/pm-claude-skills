@@ -1,6 +1,6 @@
 ---
 description: Workflow recipe — the org-side AI adoption arc, policy to proof, by chaining 4 skills.
-argument-hint: [the org: size, industry, what AI tools are in use (officially and not), what's worrying leadership]
+argument-hint: "[the org: size, industry, what AI tools are in use (officially and not), what's worrying leadership]"
 ---
 
 Run the **Adopt AI Properly** workflow recipe for: $ARGUMENTS

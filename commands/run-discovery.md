@@ -1,6 +1,6 @@
 ---
 description: Workflow recipe — go from a vague opportunity to validated insight and a prioritised next step by chaining 4 skills.
-argument-hint: [the opportunity or fuzzy question]
+argument-hint: "[the opportunity or fuzzy question]"
 ---
 
 Run the **Run Discovery** workflow recipe for: $ARGUMENTS
