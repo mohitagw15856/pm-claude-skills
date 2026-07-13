@@ -1,6 +1,6 @@
 ---
 description: Onboard a new user — find out what they do, recommend the right bundles & top skills, and set up a project CONTEXT.md so every skill is tailored to them.
-argument-hint: [optional — your role / what you're working on]
+argument-hint: "[optional — your role / what you're working on]"
 ---
 
 You are onboarding someone to the **PM Skills** library (198 professional Agent Skills across 27 bundles). Goal: get them from "installed" to "got real value" in under two minutes. Context they gave: $ARGUMENTS

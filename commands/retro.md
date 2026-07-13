@@ -1,6 +1,6 @@
 ---
 description: Run a structured sprint retrospective from notes.
-argument-hint: [what happened this sprint — wins, misses, blockers]
+argument-hint: "[what happened this sprint — wins, misses, blockers]"
 ---
 
 Apply the **retro-analysis** skill to: $ARGUMENTS

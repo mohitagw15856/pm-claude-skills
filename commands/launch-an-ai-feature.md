@@ -1,6 +1,6 @@
 ---
 description: Workflow recipe — take an AI/LLM feature from a probabilistic-aware PRD to a launch-ready model card by chaining 5 skills.
-argument-hint: [the AI feature idea]
+argument-hint: "[the AI feature idea]"
 ---
 
 Run the **Launch an AI Feature** workflow recipe for: $ARGUMENTS

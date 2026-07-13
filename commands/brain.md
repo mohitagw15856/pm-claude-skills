@@ -1,6 +1,6 @@
 ---
 description: Set up or use your Professional Brain — init, ingest, recall, or review.
-argument-hint: [init | ingest <thing> | recall <query> | review]
+argument-hint: "[init | ingest <thing> | recall <query> | review]"
 ---
 
 Apply the **professional-brain** skill to: $ARGUMENTS

@@ -1,6 +1,6 @@
 ---
 description: Draft a product requirements document from a feature idea or brief.
-argument-hint: [feature or problem to spec]
+argument-hint: "[feature or problem to spec]"
 ---
 
 Apply the **prd-template** skill to produce a complete PRD for: $ARGUMENTS

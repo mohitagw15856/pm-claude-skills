@@ -1,6 +1,6 @@
 ---
 description: Workflow recipe — go from competitive landscape to a fully checklisted launch and press release by chaining 5 skills.
-argument-hint: [the product and who it's for]
+argument-hint: "[the product and who it's for]"
 ---
 
 Run the **Launch a Product** workflow recipe for: $ARGUMENTS

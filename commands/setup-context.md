@@ -1,6 +1,6 @@
 ---
 description: Set up your Skill Memory — a pm-context.md every skill reads so outputs come back tailored to you.
-argument-hint: [optional notes about you/your company to seed it]
+argument-hint: "[optional notes about you/your company to seed it]"
 ---
 
 Set up the user's **Skill Memory** (`pm-context.md`).

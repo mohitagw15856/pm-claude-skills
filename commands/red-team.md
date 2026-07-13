@@ -1,6 +1,6 @@
 ---
 description: Stress-test a plan, strategy, PRD, or launch with a room of hostile expert personas before you commit.
-argument-hint: [the plan / doc to pressure-test]
+argument-hint: "[the plan / doc to pressure-test]"
 ---
 
 Apply the **red-team-review** skill to pressure-test: $ARGUMENTS

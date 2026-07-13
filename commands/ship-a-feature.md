@@ -1,6 +1,6 @@
 ---
 description: Workflow recipe — take a feature idea from fuzzy brief to launch plan by chaining 5 skills.
-argument-hint: [the feature idea or problem]
+argument-hint: "[the feature idea or problem]"
 ---
 
 Run the **Ship a Feature** workflow recipe for: $ARGUMENTS

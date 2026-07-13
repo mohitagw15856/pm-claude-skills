@@ -1,6 +1,6 @@
 ---
 description: Plan a sprint with a calibrated, realistic commitment.
-argument-hint: [team size, velocity, backlog items, known absences]
+argument-hint: "[team size, velocity, backlog items, known absences]"
 ---
 
 Apply the **sprint-planning** skill using: $ARGUMENTS

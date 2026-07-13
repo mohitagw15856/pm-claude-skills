@@ -1,6 +1,6 @@
 ---
 description: Score and rank initiatives with the RICE framework.
-argument-hint: [list of initiatives, or a file/path of them]
+argument-hint: "[list of initiatives, or a file/path of them]"
 ---
 
 Apply the **rice-prioritisation** skill to: $ARGUMENTS

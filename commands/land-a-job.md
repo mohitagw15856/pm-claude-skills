@@ -1,6 +1,6 @@
 ---
 description: Workflow recipe — go after a specific role end to end by chaining 4 skills: decode the JD, research the company, tailor your application, and prep the interview.
-argument-hint: [the role + company, or paste the job description]
+argument-hint: "[the role + company, or paste the job description]"
 ---
 
 Run the **Land a Job** workflow recipe for: $ARGUMENTS

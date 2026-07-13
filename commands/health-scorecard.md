@@ -1,6 +1,6 @@
 ---
 description: Build a weighted customer health scorecard for an account.
-argument-hint: [account name + usage/support/commercial signals]
+argument-hint: "[account name + usage/support/commercial signals]"
 ---
 
 Apply the **cs-health-scorecard** skill to: $ARGUMENTS
