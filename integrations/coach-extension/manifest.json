@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "PM Skills — Watch-me-work Coach",
+  "version": "1.0.0",
+  "description": "As you draft a doc, issue, or email, a quiet nudge suggests the professional skill that fits — one click to run it. Proactive, in-context, private.",
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://docs.google.com/*",
+        "https://mail.google.com/*",
+        "https://github.com/*",
+        "https://linear.app/*",
+        "https://*.notion.so/*",
+        "https://*.atlassian.net/*",
+        "https://*.slack.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["coach-skills.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
