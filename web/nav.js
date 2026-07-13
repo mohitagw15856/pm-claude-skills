@@ -89,6 +89,7 @@
       ['learn.html', '🎓 Learn'],
       ['wrapped.html', '🎁 Wrapped'],
       ['handbook.html', '📖 Handbook'],
+      ['deck.html', '🃏 Operator\'s Deck'],
       ['city.html', '🌃 Skill City'],
       ['trophy.html', '🏆 Trophy Forge'],
       ['galaxy.html', '🗺 Galaxy (2D)'],
