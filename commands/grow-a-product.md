@@ -1,6 +1,6 @@
 ---
 description: Workflow recipe — turn a growth goal into a funnel diagnosis, experiment backlog, retention loop, and lifecycle journeys by chaining 4 skills.
-argument-hint: [the growth goal — e.g. "lift D30 retention for B2B teams"]
+argument-hint: '[the growth goal — e.g. "lift D30 retention for B2B teams"]'
 ---
 
 Run the **Grow a Product** workflow recipe for: $ARGUMENTS
