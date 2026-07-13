@@ -1,0 +1,13 @@
+name = "pm-skills-sms"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# Text a skill over SMS / WhatsApp via Twilio.
+#
+# Deploy:  cd integrations/twilio && npx wrangler deploy
+# Secrets (fail-closed — the worker refuses without both):
+#   npx wrangler secret put ANTHROPIC_API_KEY   # runs the skill
+#   npx wrangler secret put TWILIO_AUTH_TOKEN    # verifies the request came from Twilio
+#
+# Then in the Twilio console, set your number's "A message comes in" webhook
+# (Messaging) to:  https://<worker>.workers.dev/sms   (HTTP POST)
