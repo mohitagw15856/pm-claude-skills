@@ -197,8 +197,8 @@ function page(s) {
     ? `<h2>Example output</h2>\n<div class="sample"><div class="md" id="sample"></div></div>\n<p class="muted">Input: ${esc(sampleBySkill[s.name].input)} · ${esc(sampleBySkill[s.name].source)}</p>`
     : '';
   const sampleScript = sampleBySkill[s.name]
-    ? `<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
+    ? `<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
 <script>(function(){var n=document.getElementById('sample');n.innerHTML=DOMPurify.sanitize(marked.parse(${JSON.stringify(sampleBySkill[s.name].output)}));
 ['h1','h2','h3','h4'].reverse().forEach(function(t){var lvl=Math.min(6,parseInt(t[1])+2);n.querySelectorAll(t).forEach(function(el){var r=document.createElement('h'+lvl);r.innerHTML=el.innerHTML;el.replaceWith(r);});});})();</script>`
     : '';
