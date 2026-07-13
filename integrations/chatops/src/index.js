@@ -97,7 +97,29 @@ async function verifyDiscord(req, rawBody, publicKey) {
   }
 }
 
-async function handleDiscord(req, env) {
+function discordResults(query, skills) {
+  if (!skills.length) {
+    return query
+      ? `No skills matched **${query}**. Browse all 400+ at <${SITE}>`
+      : `Usage: \`/pmskill query:<what you need>\`. Browse: <${SITE}>`;
+  }
+  const lines = skills.map((s) => `• **${s.title || s.name}** — ${summarize(s)}\n<${SITE}/?skill=${s.name}>`).join('\n');
+  return `**Skills for “${query}”**\n${lines}`;
+}
+
+// After a deferred reply, edit the original response via the interaction webhook.
+async function discordFollowUp(body, content) {
+  const url = `https://discord.com/api/v10/webhooks/${body.application_id}/${body.token}/messages/@original`;
+  try {
+    await fetch(url, {
+      method: 'PATCH',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ content }),
+    });
+  } catch (_) { /* nothing else we can do from a background task */ }
+}
+
+async function handleDiscord(req, env, ctx) {
   const publicKey = env.DISCORD_PUBLIC_KEY;
   if (!publicKey) return new Response('Bot not configured: DISCORD_PUBLIC_KEY is missing.', { status: 401 });
   const raw = await req.text();
@@ -109,17 +131,14 @@ async function handleDiscord(req, env) {
   if (body.type === 2) { // APPLICATION_COMMAND
     const opt = (body.data?.options || []).find((o) => o.name === 'query');
     const query = (opt && opt.value) || '';
-    const skills = await searchSkills(query);
-    let content;
-    if (!skills.length) {
-      content = query
-        ? `No skills matched **${query}**. Browse all 400+ at <${SITE}>`
-        : `Usage: \`/pmskill query:<what you need>\`. Browse: <${SITE}>`;
-    } else {
-      const lines = skills.map((s) => `• **${s.title || s.name}** — ${summarize(s)}\n<${SITE}/?skill=${s.name}>`).join('\n');
-      content = `**Skills for “${query}”**\n${lines}`;
-    }
-    return json({ type: 4, data: { content, flags: 64 } }); // 64 = ephemeral
+    // Defer immediately (must reply within 3s), then edit the reply once the
+    // search returns — so a cold upstream never trips Discord's timeout.
+    const work = (async () => {
+      const skills = await searchSkills(query);
+      await discordFollowUp(body, discordResults(query, skills));
+    })();
+    if (ctx && ctx.waitUntil) ctx.waitUntil(work); else await work;
+    return json({ type: 5, data: { flags: 64 } }); // 5 = deferred, ephemeral
   }
   return json({ type: 4, data: { content: 'Unsupported interaction.', flags: 64 } });
 }
@@ -130,10 +149,10 @@ function json(obj, status = 200) {
 }
 
 export default {
-  async fetch(req, env) {
+  async fetch(req, env, ctx) {
     const url = new URL(req.url);
     if (req.method === 'POST' && url.pathname === '/slack') return handleSlack(req, env);
-    if (req.method === 'POST' && url.pathname === '/discord') return handleDiscord(req, env);
+    if (req.method === 'POST' && url.pathname === '/discord') return handleDiscord(req, env, ctx);
     if (url.pathname === '/' || url.pathname === '') {
       return new Response(
         `PM Skills ChatOps bot.\nSlack slash command  → POST ${url.origin}/slack\nDiscord interactions → POST ${url.origin}/discord\n\nSource & setup: ${REPO}/tree/main/integrations/chatops\n`,

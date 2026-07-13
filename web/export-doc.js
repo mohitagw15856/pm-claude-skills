@@ -12,11 +12,13 @@
     document.body.appendChild(a); a.click();
     setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
   }
-  function loadScript(src) {
+  function loadScript(src, integrity) {
     return new Promise(function (resolve, reject) {
       if (document.querySelector('script[data-x="' + src + '"]')) return resolve();
       var s = document.createElement('script');
       s.src = src; s.async = true; s.setAttribute('data-x', src);
+      // Subresource Integrity: pin the CDN bundle so a compromised package can't run.
+      if (integrity) { s.integrity = integrity; s.crossOrigin = 'anonymous'; }
       s.onload = resolve; s.onerror = function () { reject(new Error('Could not load ' + src)); };
       document.head.appendChild(s);
     });
@@ -117,7 +119,7 @@
   function clean(s) { return s.replace(/\*\*(.+?)\*\*/g, '$1').replace(/\*(.+?)\*/g, '$1').replace(/`(.+?)`/g, '$1').replace(/\[(.+?)\]\(.+?\)/g, '$1').trim(); }
 
   async function toPptx(md, title) {
-    await loadScript('https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js');
+    await loadScript('https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js', 'sha384-Cck14aA9cifjYolcnjebXRfWGkz5ltHMBiG4px/j8GS+xQcb7OhNQWZYyWjQ+UwQ');
     var pptx = new g.PptxGenJS();
     pptx.defineLayout && pptx.layout && (pptx.layout = 'LAYOUT_WIDE');
     var slides = mdToSlides(md, title);
@@ -154,7 +156,7 @@
   async function toXlsx(md, title) {
     var tables = parseMdTables(md);
     if (!tables.length) { alert('No tables found in this output to export to Excel. Try Word or PDF instead.'); return; }
-    await loadScript('https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js');
+    await loadScript('https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js', 'sha384-vtjasyidUo0kW94K5MXDXntzOJpQgBKXmE7e2Ga4LG0skTTLeBi97eFAXsqewJjw');
     var wb = g.XLSX.utils.book_new();
     tables.forEach(function (t, i) { g.XLSX.utils.book_append_sheet(wb, g.XLSX.utils.aoa_to_sheet(t), 'Table ' + (i + 1)); });
     g.XLSX.writeFile(wb, safeName(title) + '.xlsx');

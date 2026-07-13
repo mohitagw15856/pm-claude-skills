@@ -7,8 +7,8 @@
 <title>The Firm — hire a standing AI staff for your product</title>
 <meta name="description" content="Stop running tools; employ a staff. Charter a team of AI executives who file delta-aware memos on your metrics, customers, engineering, and market — hold a boardroom session without you — and log falsifiable predictions you can score, so each staff member earns (or loses) your trust." />
 <link rel="stylesheet" href="styles.css" />
-<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
 <script src="providers.js"></script>
 <script src="workspace.js"></script>
 <style>
@@ -146,7 +146,12 @@ async function init(){
   renderOrg(); renderInbox(); renderLedger();
 }
 function load(){ try{ return JSON.parse(localStorage.getItem(STORE))||{charter:'',hired:null,inbox:[],preds:[],n:0}; }catch(_){ return {charter:'',hired:null,inbox:[],preds:[],n:0}; } }
-function save(){ localStorage.setItem(STORE,JSON.stringify(F)); }
+function save(){
+  try {
+    if (F.inbox && F.inbox.length > 300) F.inbox = F.inbox.slice(-300); // cap unbounded growth
+    localStorage.setItem(STORE, JSON.stringify(F));
+  } catch (e) { /* quota / serialization failure — don't abort a convene mid-run */ }
+}
 const hired=(id)=>F.hired?F.hired.includes(id):ROSTER.find(r=>r.id===id).on;
 function setHired(id,on){ F.hired=ROSTER.filter(r=> r.id===id?on:hired(r.id)).map(r=>r.id); save(); }
 
