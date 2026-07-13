@@ -63,6 +63,7 @@
       ['compose.html', '🧭 Auto-Composer'],
       ['live.html', '🎙️ Live Meeting'],
       ['morningshow.html', '📻 Morning Show'],
+      ['consult.html', '💬 Consultant Mode'],
     ] },
     { group: 'Tools', items: [
       ['firm.html', '🏢 The Firm'],
