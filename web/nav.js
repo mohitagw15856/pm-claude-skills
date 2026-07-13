@@ -58,6 +58,7 @@
     { href: 'galaxy3d.html', label: '🌌 Galaxy 3D' },
     { group: 'Tools', items: [
       ['firm.html', '🏢 The Firm'],
+      ['firm-game.html', '🎮 Run the Firm (game)'],
       ['boardroom.html', '🏛️ Boardroom'],
       ['stage.html', '🎬 The Stage'],
       ['defend.html', '🛡️ Defend'],

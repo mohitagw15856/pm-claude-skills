@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Run the Firm — an AI-company tycoon | PM Skills</title>
+<meta name="description" content="Play your standing AI Firm as a tycoon: make the quarterly calls, watch cash, growth, morale and reputation move, and see if the prediction ledger says you were right. Each decision is really a professional skill." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .game { max-width: 720px; margin: 0 auto; padding: 18px 22px 80px; }
+  .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin: 14px 0 6px; }
+  .kpi { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 10px 12px; text-align: center; }
+  .kpi .v { font-size: 20px; font-weight: 800; }
+  .kpi .l { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+  .kpi.up .v { color: #6ee7b7; } .kpi.down .v { color: #fca5a5; }
+  .qbar { display: flex; justify-content: space-between; align-items: center; color: var(--muted); font-size: 13px; margin-top: 6px; }
+  .card { border: 1px solid var(--border); border-radius: 14px; background: var(--panel); padding: 18px 20px; margin: 14px 0; }
+  .card h2 { font-size: 19px; margin: 0 0 6px; }
+  .card .sit { color: var(--muted); font-size: 14.5px; line-height: 1.55; }
+  .choices { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+  .choice { text-align: left; border: 1px solid var(--border); border-radius: 10px; background: var(--panel-2); color: var(--text); padding: 12px 14px; cursor: pointer; font-size: 14.5px; transition: border-color .12s, transform .08s; }
+  .choice:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .outcome { border-left: 3px solid var(--accent); background: var(--panel-2); border-radius: 8px; padding: 12px 14px; margin-top: 12px; font-size: 14px; line-height: 1.55; }
+  .outcome .verdict { font-weight: 700; }
+  .outcome .verdict.good { color: #6ee7b7; } .outcome .verdict.bad { color: #fca5a5; }
+  .outcome .skill { display: inline-block; margin-top: 8px; font-size: 13px; color: var(--accent-2); text-decoration: none; }
+  .btn { padding: 11px 18px; border-radius: 10px; font-weight: 700; font-size: 15px; cursor: pointer; border: none; background: linear-gradient(135deg,#e0855f,#d9605a); color: #1a1207; margin-top: 12px; }
+  .ghostb { padding: 9px 14px; border-radius: 9px; background: var(--panel-2); border: 1px solid var(--border); color: var(--text); font-size: 13px; cursor: pointer; text-decoration: none; }
+  .ledger { margin-top: 10px; font-size: 12.5px; color: var(--muted); }
+  .final h1 { font-size: 30px; margin: 6px 0; }
+  .final .grade { font-size: 54px; font-weight: 900; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  @media (max-width: 560px){ .kpis { grid-template-columns: repeat(2,1fr); } }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" /><div class="brand-text"><h1>Run the Firm</h1><p class="tagline">Eight quarters. Your calls. The ledger decides.</p></div></div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🎮 You run a standing AI Firm. Make the quarterly call — cash, growth, morale & reputation move, and the prediction ledger scores whether you were right. Each decision is really a professional skill.</div>
+
+<div class="game">
+  <div class="kpis">
+    <div class="kpi" id="k-cash"><div class="v">—</div><div class="l">Cash ($k)</div></div>
+    <div class="kpi" id="k-growth"><div class="v">—</div><div class="l">Growth %</div></div>
+    <div class="kpi" id="k-morale"><div class="v">—</div><div class="l">Morale</div></div>
+    <div class="kpi" id="k-rep"><div class="v">—</div><div class="l">Reputation</div></div>
+  </div>
+  <div class="qbar"><span id="qlabel">Quarter 1 / 8</span><span id="calledLabel">Ledger: 0/0 calls right</span></div>
+  <div id="stage"></div>
+</div>
+
+<script src="nav.js"></script>
+<script>
+const el = (id) => document.getElementById(id);
+const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const SITE = 'https://mohitagw15856.github.io/pm-claude-skills';
+const TURNS = 8;
+
+// Each choice: fx = KPI deltas; bet = which KPI you predict will END the quarter UP;
+// skill = the real skill this decision maps to. A random market swing adds uncertainty.
+const SCENARIOS = [
+  { t: 'A competitor just launched', s: 'A well-funded rival ships a feature you were planning. The team is rattled. What do you do this quarter?',
+    c: [
+      { label: 'Rush a response feature to market', out: 'You ship fast; quality slips a little but you hold the narrative.', fx: { cash: -60, growth: 8, morale: -6, rep: 4 }, bet: 'growth', skill: 'competitive-analysis' },
+      { label: 'Do a calm competitive teardown first', out: 'You map where you actually win and reposition — slower, but sharper.', fx: { cash: -10, growth: 4, morale: 4, rep: 8 }, bet: 'rep', skill: 'competitive-analysis' },
+      { label: 'Ignore it and focus on your roadmap', out: 'You stay the course. Some customers wobble; the team stays focused.', fx: { cash: 0, growth: -4, morale: 2, rep: -4 }, bet: 'morale', skill: 'strategy-memo' },
+    ] },
+  { t: 'Runway is tightening', s: 'You have ~5 quarters of cash at the current burn. The board wants a plan.',
+    c: [
+      { label: 'Cut costs hard now', out: 'You extend runway but momentum and morale take a hit.', fx: { cash: 120, growth: -8, morale: -10, rep: 0 }, bet: 'cash', skill: 'cash-flow-forecast' },
+      { label: 'Raise a bridge round', out: 'You raise on okay terms; dilution stings but you buy time to grow.', fx: { cash: 220, growth: 2, morale: 4, rep: -4 }, bet: 'cash', skill: 'investor-update' },
+      { label: 'Push for revenue, no cuts', out: 'You bet on sales. Risky — if growth stalls, cash gets scary.', fx: { cash: -30, growth: 10, morale: -2, rep: 2 }, bet: 'growth', skill: 'go-to-market' },
+    ] },
+  { t: 'A launch is two weeks out', s: 'Engineering says it is "mostly ready." Support and docs are behind.',
+    c: [
+      { label: 'Run a launch-readiness review', out: 'You find two real blockers and fix them; the launch lands clean.', fx: { cash: -10, growth: 7, morale: 5, rep: 8 }, bet: 'rep', skill: 'launch-readiness' },
+      { label: 'Ship on the date no matter what', out: 'You hit the date; a rough edge or two dents trust.', fx: { cash: 10, growth: 6, morale: -4, rep: -8 }, bet: 'growth', skill: 'product-launch-checklist' },
+      { label: 'Slip the date a month', out: 'Quality is high but the delay frustrates sales and the board.', fx: { cash: -20, growth: -2, morale: 2, rep: 2 }, bet: 'morale', skill: 'launch-readiness' },
+    ] },
+  { t: 'Your best engineer is burning out', s: 'Your strongest IC is quietly overloaded and hinting at leaving.',
+    c: [
+      { label: 'Redistribute load, protect their time', out: 'You lose some velocity now but keep the person and the team\'s trust.', fx: { cash: 0, growth: -3, morale: 12, rep: 3 }, bet: 'morale', skill: 'team-health-check' },
+      { label: 'Push through the quarter, address it later', out: 'You hit the goals; the engineer leaves next quarter. Ouch.', fx: { cash: 0, growth: 5, morale: -14, rep: -4 }, bet: 'growth', skill: 'retro-analysis' },
+      { label: 'Throw money at it (raise + bonus)', out: 'Buys goodwill and time; not a real fix, but it holds.', fx: { cash: -40, growth: 1, morale: 8, rep: 1 }, bet: 'morale', skill: 'performance-review' },
+    ] },
+  { t: 'A customer churns loudly', s: 'A flagship account leaves and posts about it. The room is tense.',
+    c: [
+      { label: 'Run a win/loss analysis, fix the pattern', out: 'You find the real reason and stop the bleeding across accounts.', fx: { cash: -10, growth: 4, morale: 3, rep: 9 }, bet: 'rep', skill: 'win-loss-analysis' },
+      { label: 'Fire off a public apology + roadmap', out: 'Good optics, but without a fix the pattern repeats.', fx: { cash: 0, growth: 0, morale: 1, rep: 3 }, bet: 'rep', skill: 'pr-crisis-response' },
+      { label: 'Discount hard to save the logo', out: 'You keep them, at a margin hit and a precedent you\'ll regret.', fx: { cash: -50, growth: 2, morale: -2, rep: -2 }, bet: 'growth', skill: 'churn-analysis' },
+    ] },
+  { t: 'The board wants a bigger bet', s: 'Investors push you to move upmarket to enterprise. It is not obviously right.',
+    c: [
+      { label: 'Write a decision memo and choose deliberately', out: 'You frame the call clearly; whichever way, everyone is aligned.', fx: { cash: -10, growth: 5, morale: 6, rep: 8 }, bet: 'rep', skill: 'decision-memo' },
+      { label: 'Go enterprise, all in', out: 'Big TAM, long sales cycles. Cash gets tight before it pays off.', fx: { cash: -80, growth: 9, morale: -2, rep: 4 }, bet: 'growth', skill: 'go-to-market' },
+      { label: 'Stay self-serve SMB', out: 'You defend the core; the board grumbles but the machine hums.', fx: { cash: 40, growth: 3, morale: 4, rep: -3 }, bet: 'cash', skill: 'strategy-memo' },
+    ] },
+  { t: 'An outage hits at the worst time', s: 'A 45-minute outage during a big demo week. Customers noticed.',
+    c: [
+      { label: 'Blameless postmortem + real fixes', out: 'You turn it into trust; reliability and reputation climb.', fx: { cash: -20, growth: 2, morale: 6, rep: 10 }, bet: 'rep', skill: 'incident-postmortem' },
+      { label: 'Quiet it down, move on', out: 'You dodge the noise now; the root cause bites again later.', fx: { cash: 5, growth: 1, morale: -6, rep: -6 }, bet: 'cash', skill: 'incident-postmortem' },
+    ] },
+  { t: 'Pricing is leaving money on the table', s: 'Analysis suggests you are underpriced, but a change could spook customers.',
+    c: [
+      { label: 'Redesign the pricing page carefully', out: 'You reframe value; conversion and revenue both tick up.', fx: { cash: 60, growth: 6, morale: 2, rep: 4 }, bet: 'cash', skill: 'pricing-page-copy' },
+      { label: 'Raise prices across the board', out: 'Revenue up, but a chunk of small accounts churn and grumble.', fx: { cash: 90, growth: -5, morale: -3, rep: -6 }, bet: 'cash', skill: 'saas-metrics' },
+      { label: 'Leave pricing alone', out: 'No risk, no reward. The gap stays open for a rival.', fx: { cash: -10, growth: 1, morale: 1, rep: 0 }, bet: 'morale', skill: 'pricing-strategy' },
+    ] },
+  { t: 'A viral moment lands in your lap', s: 'A post about your product blows up. Traffic spikes 10×. Servers are groaning.',
+    c: [
+      { label: 'Ride it — ship a launch post + capture leads', out: 'You catch the wave; growth and reputation surge.', fx: { cash: -10, growth: 14, morale: 6, rep: 10 }, bet: 'growth', skill: 'launch-post' },
+      { label: 'Play it safe, protect stability', out: 'No crash, but you miss most of the moment.', fx: { cash: 0, growth: 3, morale: 0, rep: 1 }, bet: 'rep', skill: 'runbook-writer' },
+    ] },
+  { t: 'The quarter is ending', s: 'Time to tell the story to the board and the team.',
+    c: [
+      { label: 'Write a crisp board narrative', out: 'You land the story honestly; the board leans in and backs you.', fx: { cash: 10, growth: 4, morale: 6, rep: 9 }, bet: 'rep', skill: 'board-deck-narrative' },
+      { label: 'Spin only the good news', out: 'It plays for a quarter; trust erodes when reality shows up.', fx: { cash: 0, growth: 2, morale: -4, rep: -7 }, bet: 'growth', skill: 'executive-update' },
+    ] },
+];
+
+let S, deck, done;
+function reset() {
+  S = { q: 1, cash: 500, growth: 12, morale: 70, rep: 50, right: 0, calls: 0, log: [] };
+  deck = SCENARIOS.map((x) => x).sort(() => Math.random() - 0.5);
+  done = false;
+  renderKpis(); nextTurn();
+}
+const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
+
+function renderKpis(delta) {
+  const set = (id, v, d) => { const n = el(id); n.querySelector('.v').textContent = v; n.className = 'kpi' + (d > 0 ? ' up' : d < 0 ? ' down' : ''); };
+  set('k-cash', Math.round(S.cash), delta && delta.cash);
+  set('k-growth', Math.round(S.growth), delta && delta.growth);
+  set('k-morale', Math.round(S.morale), delta && delta.morale);
+  set('k-rep', Math.round(S.rep), delta && delta.rep);
+  el('qlabel').textContent = `Quarter ${Math.min(S.q, TURNS)} / ${TURNS}`;
+  el('calledLabel').textContent = `Ledger: ${S.right}/${S.calls} calls right`;
+}
+
+function nextTurn() {
+  if (S.q > TURNS || S.cash < 0 || S.morale <= 0) return finish();
+  const sc = deck[(S.q - 1) % deck.length];
+  el('stage').innerHTML = `<div class="card"><h2>Q${S.q}: ${esc(sc.t)}</h2><div class="sit">${esc(sc.s)}</div>
+    <div class="choices">${sc.c.map((ch, i) => `<button class="choice" data-i="${i}">${esc(ch.label)}</button>`).join('')}</div></div>`;
+  [...document.querySelectorAll('.choice')].forEach((b) => b.addEventListener('click', () => choose(sc, sc.c[+b.dataset.i])));
+}
+
+function choose(sc, ch) {
+  // Market swing: a small random move on each KPI, so predictions aren't guaranteed.
+  const mkt = { cash: rand(-25, 25), growth: rand(-4, 4), morale: rand(-4, 4), rep: rand(-4, 4) };
+  const before = { cash: S.cash, growth: S.growth, morale: S.morale, rep: S.rep };
+  S.cash = S.cash + ch.fx.cash + mkt.cash;
+  S.growth = clamp(S.growth + ch.fx.growth + mkt.growth, 0, 100);
+  S.morale = clamp(S.morale + ch.fx.morale + mkt.morale, 0, 100);
+  S.rep = clamp(S.rep + ch.fx.rep + mkt.rep, 0, 100);
+  const delta = { cash: S.cash - before.cash, growth: S.growth - before.growth, morale: S.morale - before.morale, rep: S.rep - before.rep };
+
+  // Prediction ledger: did the KPI you bet on actually end the quarter up?
+  const called = delta[ch.bet] > 0;
+  S.calls++; if (called) S.right++;
+  S.log.push({ q: S.q, choice: ch.label, called });
+  renderKpis(delta);
+
+  el('stage').innerHTML = `<div class="card"><h2>Q${S.q} — the call plays out</h2>
+    <div class="outcome">${esc(ch.out)}
+      <div style="margin-top:8px">Your prediction — <b>${ch.bet} up</b> — <span class="verdict ${called ? 'good' : 'bad'}">${called ? 'held ✓ (+1 to the ledger)' : 'missed ✗ (the market had other ideas)'}</span>.</div>
+      <a class="skill" href="index.html?skill=${encodeURIComponent(ch.skill)}" target="_blank" rel="noopener">↳ This was really the <b>${esc(ch.skill)}</b> skill — run it for real →</a>
+    </div>
+    <button class="btn" id="cont">${S.q >= TURNS ? 'See your results →' : 'Next quarter →'}</button></div>`;
+  el('cont').addEventListener('click', () => { S.q++; nextTurn(); });
+  if (window.pmTrack) pmTrack('firmgame/turn');
+}
+const rand = (a, b) => a + Math.random() * (b - a);
+
+function finish() {
+  done = true;
+  // Score: KPIs (0–100-ish) + cash health + ledger accuracy.
+  const acc = S.calls ? S.right / S.calls : 0;
+  const score = Math.round(clamp(S.growth, 0, 100) * 0.3 + S.morale * 0.25 + S.rep * 0.25 + clamp(S.cash / 12, 0, 100) * 0.2 + acc * 20);
+  const grade = score >= 92 ? 'S' : score >= 82 ? 'A' : score >= 70 ? 'B' : score >= 55 ? 'C' : score >= 40 ? 'D' : 'F';
+  const bankrupt = S.cash < 0 || S.morale <= 0;
+  const best = Math.max(score, +(localStorage.getItem('pm_firmgame_best') || 0));
+  try { localStorage.setItem('pm_firmgame_best', best); } catch (_) {}
+  el('stage').innerHTML = `<div class="card final">
+    <div class="grade">${bankrupt ? '💀' : grade}</div>
+    <h1>${bankrupt ? 'The Firm folded' : 'You ran the Firm for two years'}</h1>
+    <p class="sit">${bankrupt ? 'Cash or morale hit zero — even good operators get dealt bad hands.' : `Final score <b>${score}</b> · ledger <b>${S.right}/${S.calls}</b> calls right · best <b>${best}</b>.`}</p>
+    <div class="kpis" style="margin:14px 0">
+      <div class="kpi"><div class="v">${Math.round(S.cash)}</div><div class="l">Cash ($k)</div></div>
+      <div class="kpi"><div class="v">${Math.round(S.growth)}</div><div class="l">Growth %</div></div>
+      <div class="kpi"><div class="v">${Math.round(S.morale)}</div><div class="l">Morale</div></div>
+      <div class="kpi"><div class="v">${Math.round(S.rep)}</div><div class="l">Reputation</div></div>
+    </div>
+    <div class="row">
+      <button class="btn" id="again" style="margin:0">Play again</button>
+      <button class="ghostb" id="share">🔗 Share your score</button>
+      <a class="ghostb" href="firm.html">🏢 Run the real Firm →</a>
+    </div>
+  </div>`;
+  el('again').addEventListener('click', reset);
+  el('share').addEventListener('click', () => {
+    const text = `I ran the AI Firm tycoon and scored ${bankrupt ? '💀 (folded)' : grade + ' · ' + score} — ${S.right}/${S.calls} calls right. Try it: ${location.href.split('?')[0]}`;
+    if (navigator.share) { navigator.share({ title: 'Run the Firm', text }).catch(() => {}); return; }
+    navigator.clipboard.writeText(text).then(() => { el('share').textContent = 'Copied!'; }, () => {});
+  });
+  if (window.pmTrack) pmTrack('firmgame/finish/' + grade);
+}
+
+reset();
+</script>
+</body>
+</html>
