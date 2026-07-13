@@ -54,7 +54,7 @@ Wrangler prints your URL, e.g. `https://pm-skills-chatops.<you>.workers.dev`.
 ## How it works
 
 - `POST /slack` — verifies `X-Slack-Signature` (HMAC-SHA256 over `v0:{ts}:{body}`, 5-minute replay window), parses the command, searches, replies in Slack `mrkdwn`.
-- `POST /discord` — verifies `X-Signature-Ed25519` over `{timestamp}{body}`, answers `PING`, and responds to the command with an ephemeral message.
+- `POST /discord` — verifies `X-Signature-Ed25519` over `{timestamp}{body}`, answers `PING`, then **defers** the command (type 5) and edits the reply via the interaction webhook once the search returns — so a cold upstream never trips Discord's 3-second deadline. Replies are ephemeral.
 - Both call `GET /v1/search?q=…` on the hosted API and link each result to `…/?skill=<name>`.
 
 No data is stored; nothing but an event is ever logged. MIT © Mohit Aggarwal.

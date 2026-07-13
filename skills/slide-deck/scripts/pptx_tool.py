@@ -9,10 +9,11 @@ Outline format:
   ## Slide title     → new content slide
   - bullet           → bullet on the current slide (two spaces indent = sub-bullet)
   plain line         → body text line on the current slide
-  > note text        → speaker notes for the current slide (not rendered on-slide)
+  > note text        → captured as a speaker note; reported at the end but NOT embedded in the .pptx
 
 Limits (honest): one clean default theme (dark title bar, white body), no images/
-charts/transitions. It opens in PowerPoint/Keynote/Slides and is meant as the
+charts/transitions. Speaker notes (`> ...`) are parsed and counted but are not written into the
+file's notes panes — paste them in after opening. It opens in PowerPoint/Keynote/Slides and is meant as the
 skeleton you restyle — for designed decks, export from the playground instead.
 """
 import argparse, re, sys, zipfile
