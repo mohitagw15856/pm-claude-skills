@@ -76,7 +76,10 @@ scene.fog=new THREE.FogExp2(0x05060a, 0.00085);
 const camera=new THREE.PerspectiveCamera(62, innerWidth/innerHeight, 0.1, 4000);
 camera.position.set(0, 150, 340);
 const controls=new OrbitControls(camera, canvas);
-controls.enableDamping=true; controls.dampingFactor=0.06; controls.maxDistance=1200; controls.minDistance=8;
+controls.enableDamping=true; controls.dampingFactor=0.08; controls.maxDistance=1800; controls.minDistance=6;
+controls.zoomToCursor=true;        // zoom toward what you point at, not the origin
+controls.rotateSpeed=0.65; controls.zoomSpeed=0.9; controls.panSpeed=0.8;
+controls.touches={ ONE: THREE.TOUCH.ROTATE, TWO: THREE.TOUCH.DOLLY_PAN };  // one-finger orbit, two-finger zoom/pan
 
 // Star sprite texture (soft round glow), generated on a canvas.
 function glowTexture(){
@@ -219,8 +222,10 @@ renderer.setAnimationLoop(()=>{
     if(k>=1){ warping=0; camera.fov=62; camera.updateProjectionMatrix(); bloom.strength=0.9; }
   }
   const t=now*0.001;
-  stars.rotation.y=t*0.008;                       // the slow turn of the galaxy
-  nebulae.forEach((n,i)=>{ n.material.opacity=0.07+Math.sin(t*0.4+i)*0.03; n.position.copy(centers[bundles[i]]).applyAxisAngle(new THREE.Vector3(0,1,0), t*0.008); });
+  // The galaxy stays still so the camera stays in control — a perpetual spin made
+  // it drift under the cursor and, worse, threw off fly-to/search (which target each
+  // star's fixed position). Nebulae still breathe in place.
+  nebulae.forEach((n,i)=>{ n.material.opacity=0.07+Math.sin(t*0.4+i)*0.03; });
   controls.update();
   composer.render();
 });
