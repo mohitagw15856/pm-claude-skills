@@ -3,10 +3,10 @@
 Both artifacts are print-ready today; this is the press-go runbook for putting them on shelves. Physical objects recruit people the internet can't reach, and both are margin-positive without sponsorship.
 
 ## The Handbook (paperback)
-- **Interior:** `web/docs-assets/handbook.pdf` regenerates from the library every release (A4; for 6×9" trade, re-run the print step in [build-handbook.mjs](../../scripts/build-handbook.mjs) with the print preset — margins are already book-safe). ~350 pages at current corpus.
-- **Route A — Lulu (fastest, no inventory):** lulu.com → paperback → upload interior PDF + cover (below) → price at cost+$6 → get a storefront link for the README. ~30 minutes.
+- **Interior:** `node docs/print/build-interior.mjs` renders `web/handbook.html` to `handbook-interior-6x9.pdf` — 6×9" trade with gutter-safe 0.625" margins. **Currently 299 pages.** (The A4 `web/docs-assets/handbook.pdf` is the free digital edition, not the print interior.)
+- **Cover:** `node docs/print/build-covers.mjs --pages <N>` renders front/back/spine to `handbook-cover.pdf`; the interior script prints the N to use. Current: 12.923"×9.250", spine 0.673" @ 299pp. **Re-run both after big releases.**
+- **Route A — Lulu (fastest, no inventory):** lulu.com → paperback → 6×9 (US Trade), black & white, 299 pages → upload `handbook-interior-6x9.pdf` + `handbook-cover.pdf` → price at cost+$6 → get a storefront link for the README. ~30 minutes.
 - **Route B — Amazon KDP (reach):** same files; needs an ISBN (KDP gives you one free) and 72h review. Royalty ~$4-7 at $24.99.
-- **Cover:** `node docs/print/build-covers.mjs` renders front/back/spine to `handbook-cover.pdf` sized for both routes (spine width auto-calculated from page count in the script header — update after big releases).
 
 ## The Operator's Deck (cards)
 - **Cards:** the deck builder (`scripts/build-deck.mjs`, shipped in #133) already renders per-skill cards with QR codes; `node docs/print/build-covers.mjs --deck` lays them out 9-up on A4 + singles at 63×88mm (poker standard) for print services.
