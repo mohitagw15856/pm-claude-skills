@@ -1,0 +1,28 @@
+# Builds Cockpit installers for mac/win/linux on tag. RENAME (drop .disabled) to
+# enable after one successful local `npm run tauri build` — 3-OS runners cost
+# ~15 min of Actions time per release.
+name: Cockpit release
+on:
+  push:
+    tags: ['cockpit-v*']
+permissions: { contents: write }
+jobs:
+  build:
+    strategy:
+      matrix: { os: [macos-latest, ubuntu-latest, windows-latest] }
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Linux deps
+        if: matrix.os == 'ubuntu-latest'
+        run: sudo apt-get update && sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
+      - run: cd cockpit && npm install && npm run tauri build
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            cockpit/src-tauri/target/release/bundle/**/*.dmg
+            cockpit/src-tauri/target/release/bundle/**/*.AppImage
+            cockpit/src-tauri/target/release/bundle/**/*.msi
