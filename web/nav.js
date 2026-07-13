@@ -57,6 +57,7 @@
     { href: 'hub.html', label: '🧭 Journeys' },
     { href: 'galaxy3d.html', label: '🌌 Galaxy 3D' },
     { group: '🆕 New', items: [
+      ['teardown.html', '🔨 Teardown Engine'],
       ['deck.html', '🃏 Operator\'s Deck'],
       ['firm-game.html', '🎮 Run the Firm (game)'],
       ['compose.html', '🧭 Auto-Composer'],

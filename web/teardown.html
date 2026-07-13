@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Teardown Engine — paste any real doc, get a brutal, fair scorecard</title>
+<meta name="description" content="Paste a real job post, changelog, landing page, PRD, or pitch — and get an honest letter grade, a scorecard, the damning findings, and the one fix that matters. Judged against the standard a senior pro holds. Free, shareable." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
+<script src="providers.js"></script>
+<style>
+  .td-wrap { max-width: 840px; margin: 0 auto; padding: 18px 22px 70px; }
+  .td-h { font-size: 27px; margin: 6px 0; }
+  .td-sub { font-size: 13px; color: var(--muted); margin: 0 0 14px; }
+  .td-pick { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 10px 0 12px; font-size: 14px; }
+  .td-pick select { padding: 9px 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; max-width: 100%; }
+  .td-draft { width: 100%; box-sizing: border-box; min-height: 220px; padding: 13px 15px; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; color: var(--text); font-family: inherit; font-size: 14px; line-height: 1.5; }
+  .actions { margin: 14px 0; }
+  /* The shareable scorecard */
+  .scorecard { display: none; margin: 16px 0 8px; padding: 22px 24px; border-radius: 16px; border: 1px solid var(--border); background: linear-gradient(150deg, var(--panel), var(--panel-2)); box-shadow: 0 14px 40px rgba(0,0,0,.35); position: relative; overflow: hidden; }
+  .scorecard.show { display: block; }
+  .sc-top { display: flex; align-items: center; gap: 18px; }
+  .sc-grade { font-size: 62px; font-weight: 900; line-height: 1; letter-spacing: -2px; }
+  .sc-meta { flex: 1; min-width: 0; }
+  .sc-type { font-size: 12px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin: 0 0 4px; }
+  .sc-verdict { font-size: 17px; font-weight: 700; margin: 0; }
+  .sc-score { font-size: 13px; color: var(--muted); margin: 3px 0 0; }
+  .sc-bars { margin: 16px 0 4px; display: grid; gap: 7px; }
+  .sc-bar { display: grid; grid-template-columns: 120px 1fr 34px; align-items: center; gap: 10px; font-size: 12px; }
+  .sc-bar .lab { color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sc-bar .track { height: 8px; border-radius: 5px; background: var(--panel-2); overflow: hidden; }
+  .sc-bar .fill { height: 100%; border-radius: 5px; }
+  .sc-bar .n { text-align: right; font-variant-numeric: tabular-nums; color: var(--text); }
+  .sc-foot { margin: 14px 0 0; font-size: 11px; color: var(--muted); display: flex; justify-content: space-between; gap: 10px; }
+  .grade-A { color: #3fb950; } .grade-B { color: #56d364; } .grade-C { color: #d29922; } .grade-D { color: #e08c3f; } .grade-F { color: #f85149; }
+  .fill-A,.fill-B { background: linear-gradient(90deg,#2ea043,#56d364); } .fill-C { background: linear-gradient(90deg,#bb8009,#e3b341); } .fill-D,.fill-F { background: linear-gradient(90deg,#da3633,#f85149); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>The Teardown Engine</h1><p class="tagline">Paste a real doc. Get an honest grade — and the one fix that matters.</p></div>
+  </div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your key + the doc stay in your browser and go only to your chosen provider — never to us. Only tear down documents you're allowed to.</div>
+
+<div class="td-wrap">
+  <p class="td-sub">Real documents, not toy inputs. Paste a competitor's job post, a startup's changelog, a landing page, a PRD, a pitch — anything public — and see how it holds up against the bar a senior pro sets.</p>
+  <div class="td-pick">
+    <span>This is a</span>
+    <select id="docType"></select>
+    <span id="basedNote"></span>
+  </div>
+  <textarea id="draft" class="td-draft" placeholder="Paste the document here — a job post, changelog, landing-page copy, PRD, press release, cold email, README…"></textarea>
+  <div class="actions">
+    <button id="runBtn" class="primary" type="button">🔨 Tear it down</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+    <span id="status" class="status"></span>
+  </div>
+
+  <div class="scorecard" id="scorecard">
+    <div class="sc-top">
+      <div class="sc-grade" id="scGrade">–</div>
+      <div class="sc-meta">
+        <p class="sc-type" id="scType">Teardown</p>
+        <p class="sc-verdict" id="scVerdict"></p>
+        <p class="sc-score" id="scScore"></p>
+      </div>
+    </div>
+    <div class="sc-bars" id="scBars"></div>
+    <div class="sc-foot">
+      <span>🔨 Teardown Engine · PM Skills</span>
+      <span>mohitagw15856.github.io/pm-claude-skills</span>
+    </div>
+  </div>
+  <div class="actions" id="shareRow" hidden>
+    <button id="shareX" class="ghost" type="button">𝕏 Share the verdict</button>
+    <button id="copyCard" class="ghost" type="button">Copy summary</button>
+    <button id="fixBtn" class="ghost" type="button">✍️ Now fix it →</button>
+  </div>
+
+  <div class="output-wrap" id="outWrap" hidden>
+    <div class="output-toolbar"><span>The teardown</span><div><button id="copyBtn" class="ghost" type="button">Copy</button></div></div>
+    <article id="out" class="output markdown"></article>
+  </div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let SKILLS=[], controller=null, LAST=null;
+
+// Curated doc-type → the skill whose standard becomes the rubric. "auto" lets the model name the bar itself.
+const TYPES=[
+  ['auto','a document (let the engine pick the standard)',''],
+  ['job post','job post / job description','job-description-writer'],
+  ['changelog','changelog / release notes','changelog-writer'],
+  ['landing page','landing page / homepage copy','landing-page-copy'],
+  ['value prop','value proposition / positioning','value-proposition'],
+  ['PRD','PRD / product spec','prd-template'],
+  ['pitch deck','investor pitch deck','investor-pitch-deck'],
+  ['press release','press release / announcement','press-release'],
+  ['cold email','cold / sales email','cold-email'],
+  ['case study','case study','case-study-writeup'],
+  ['README','README / project doc','readme-writer'],
+  ['one-pager','one-pager / brief','one-pager'],
+];
+
+init();
+async function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('runBtn').addEventListener('click',run);
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+  el('copyBtn').addEventListener('click',()=>navigator.clipboard.writeText(el('out').dataset.raw||''));
+  el('docType').addEventListener('change',renderBased);
+  el('shareX').addEventListener('click',shareX);
+  el('copyCard').addEventListener('click',copyCard);
+  el('fixBtn').addEventListener('click',()=>{ const t=TYPES.find(t=>t[0]===el('docType').value); const skill=t&&t[2]; location.href='grade.html'+(skill?('?skill='+encodeURIComponent(skill)):''); });
+  for(const [val,label] of TYPES){ const o=document.createElement('option'); o.value=val; o.textContent=label; el('docType').appendChild(o); }
+  try{ SKILLS=(await (await fetch('skills.json')).json()).skills; }catch(e){ /* auto mode still works without a rubric skill */ }
+  const want=new URLSearchParams(location.search).get('type');
+  if(want&&TYPES.some(t=>t[0]===want)) el('docType').value=want;
+  renderBased();
+}
+function rubricSkill(){ const t=TYPES.find(t=>t[0]===el('docType').value); const name=t&&t[2]; return name&&SKILLS.find(s=>s.name===name)||null; }
+function renderBased(){ const s=rubricSkill(); el('basedNote').innerHTML = s ? ('— judged against <strong>'+s.title+'</strong>') : '— the engine will name the standard it judges by.'; }
+
+async function run(){
+  const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your provider key first.',true);
+  const draft=el('draft').value.trim(); if(!draft) return setStatus('Paste a document to tear down.',true);
+  const t=TYPES.find(t=>t[0]===el('docType').value), label=t?t[1]:'document', s=rubricSkill();
+  const system=`You are a ruthless but scrupulously fair senior reviewer doing a public teardown of a real ${el('docType').value==='auto'?'professional document':'"'+label+'"'}. Your job is to judge it against the bar a top operator holds — not to be nice. But every criticism must be specific, quotable, and true; never invent flaws, and give credit where the work is genuinely strong.
+
+Return, in this exact order, as markdown:
+
+1. A single line, exactly: \`GRADE: <letter> <score>/100 — <≤10-word verdict>\` where letter is one of A,B,C,D,F. This line MUST be first and in that format (it is parsed).
+2. \`SCORES:\` then 4–6 lines, each exactly \`- <Dimension>: <n>/100\` — the dimensions you judged on (e.g. Clarity, Specificity, Credibility, Structure, Differentiation, Call-to-action — pick what fits this document type).
+3. **## The verdict** — 2–3 sentences: what this document is trying to do and whether it earns it.
+4. **## What's actually broken** — the 3–5 most damaging problems, ranked, each with a **quote of the offending line** and why it fails. Be concrete.
+5. **## What's working** — 1–3 things done genuinely well (honest, not filler).
+6. **## The one fix** — if they change only one thing, this is it. Make it a specific, do-it-now instruction.
+
+${s ? 'Use the following skill as the rubric for what "good" looks like for this document type:\n'+s.instructions : 'Name the professional standard you are judging against in the verdict.'}`;
+  if(window.pmTrack) pmTrack('teardown/'+(el('docType').value||'auto'));
+  el('outWrap').hidden=false; el('scorecard').classList.remove('show'); el('shareRow').hidden=true;
+  const out=el('out'); out.innerHTML=''; out.dataset.raw='';
+  el('runBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController(); setStatus('Tearing it down…');
+  try{
+    const acc=await PMProviders.stream({key,model:el('model').value,system,userMessage:draft,signal:controller.signal,onDelta:(a)=>{out.innerHTML=DOMPurify.sanitize(marked.parse(stripCard(a)));}});
+    out.dataset.raw=acc; renderCard(acc, label); setStatus('Done.');
+  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
+  finally{ el('runBtn').disabled=false; el('stopBtn').hidden=true; controller=null; }
+}
+
+// Hide the machine-readable GRADE:/SCORES: preamble from the prose view; the scorecard renders it instead.
+function stripCard(text){ return text.replace(/^\s*GRADE:.*$/im,'').replace(/^\s*SCORES:\s*$/im,'').replace(/^\s*-\s*[^:\n]+:\s*\d{1,3}\/100\s*$/gim, ''); }
+function renderCard(text, label){
+  const g=text.match(/GRADE:\s*([ABCDF])\s*(\d{1,3})\s*\/\s*100\s*[—-]\s*(.+)/i);
+  if(!g){ return; }
+  const letter=g[1].toUpperCase(), score=g[2], verdict=g[3].trim().replace(/[`*]/g,'');
+  const bars=[...text.matchAll(/^-\s*([^:\n]+?):\s*(\d{1,3})\s*\/\s*100\s*$/gim)].map(m=>[m[1].trim(),Math.min(100,+m[2])]);
+  el('scGrade').textContent=letter; el('scGrade').className='sc-grade grade-'+letter;
+  el('scType').textContent=(label||'document').toUpperCase()+' · TEARDOWN';
+  el('scVerdict').textContent=verdict; el('scScore').textContent=score+'/100';
+  el('scBars').innerHTML=bars.map(([lab,n])=>{const cl=n>=85?'A':n>=70?'B':n>=55?'C':n>=40?'D':'F';return '<div class="sc-bar"><span class="lab" title="'+lab.replace(/"/g,'')+'">'+lab+'</span><span class="track"><span class="fill fill-'+cl+'" style="width:'+n+'%"></span></span><span class="n">'+n+'</span></div>';}).join('');
+  el('scorecard').classList.add('show'); el('shareRow').hidden=false;
+  LAST={letter,score,verdict,label:label||'document'};
+}
+function copyCard(){ if(!LAST) return; const txt=`🔨 Teardown — ${LAST.label}: ${LAST.letter} (${LAST.score}/100)\n"${LAST.verdict}"\n\nGraded free at https://mohitagw15856.github.io/pm-claude-skills/teardown.html`; navigator.clipboard.writeText(txt).then(()=>setStatus('Summary copied.'),()=>{}); }
+function shareX(){ if(!LAST) return; const t=`I ran a ${LAST.label} through the Teardown Engine 🔨\n\nGrade: ${LAST.letter} (${LAST.score}/100) — "${LAST.verdict}"\n\nGrade any doc free:`; window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(t)+'&url='+encodeURIComponent('https://mohitagw15856.github.io/pm-claude-skills/teardown.html'),'_blank','noopener'); }
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
