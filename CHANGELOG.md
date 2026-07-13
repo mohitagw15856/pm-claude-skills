@@ -9,6 +9,19 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [47.0.0] — the off-web release: skills that reach you where you already work — 2026-07-13
+
+### Added — six ways off the web: text, email, a card deck, a game, a coach, and a newsletter
+- **📱 Text or call a skill** ([integrations/twilio](integrations/twilio)) — a Cloudflare Worker that turns any incoming SMS into a skill run: it verifies Twilio's request signature (HMAC-SHA1, fail-closed), routes the message to the best skill via `/v1/search` (or an explicit `skill-name:` prefix), runs it on the Anthropic API, and replies as TwiML. The library now answers a phone number.
+- **✉️ Email-native operator** ([integrations/email](integrations/email)) — a Cloudflare Email Worker: send a note to an address, it parses the message (`postal-mime`), picks the skill from the subject or body, runs it, and **replies in-thread** (`message.reply`, `mimetext`). No app, no login — just email.
+- **🃏 The Operator's Deck** ([deck.html](https://mohitagw15856.github.io/pm-claude-skills/deck.html)) — a printable, poker-sized physical card deck: [build-deck.mjs](scripts/build-deck.mjs) bakes 54 cards, each with a QR that deep-links to the skill in the Playground, cut guides and `@page` print CSS. The library as an object you can hold and deal.
+- **🎮 Run the Firm — the game** ([firm-game.html](https://mohitagw15856.github.io/pm-claude-skills/firm-game.html)) — a self-contained browser tycoon: steer an AI company across 8 quarters trading cash, growth, morale and reputation against a random market, score a prediction ledger, earn a grade (S–F), and share the run. Every decision maps to a real skill in the library.
+- **🧭 Watch-me-work Coach** ([integrations/coach-extension](integrations/coach-extension)) — an MV3 browser extension that watches the doc/email/PR/ticket you're editing (Docs, Gmail, GitHub, Linear, Notion, Jira, Slack), keyword-matches the text against a bundled skill index, and surfaces a dismissible corner nudge — *"there's a skill for this."* Fully local: nothing you type ever leaves the tab.
+- **📻 Auto morning-show / newsletter** ([newsletter/](newsletter)) — a zero-cost weekly issue: [build-morning-show.mjs](scripts/build-morning-show.mjs) composes a skill-of-the-week, fresh picks, the numbers, and a spoken "show script" for TTS — deterministically from the catalog by ISO week, so a [scheduled Action](.github/workflows/morning-show.yml) publishes an issue every Monday untouched.
+
+### Changed — navigation & discoverability
+- **🆕 A "New" nav group** — the just-shipped surfaces (Operator's Deck, Run the Firm, Auto-Composer, Live Meeting, Morning Show) were live but buried in the crowded Tools/Explore dropdowns. They now sit in a dedicated top-level **🆕 New** group, and every dropdown scrolls (`max-height` + `overflow-y`) so nothing falls off-screen on smaller viewports.
+
 ### Added — the frontier wave: the Season, the Nightwatch, the Atlas, and the show about you
 - **🏆 The Season** ([season.html](https://mohitagw15856.github.io/pm-claude-skills/season.html)) — the first open, serverless esport of professional judgment: one negotiation a month with **identical hidden state for everyone on Earth**, played through the Gym's season mode, scores attested with transcript SHA-256, submitted by PR to a CI-verified leaderboard (shape, bounds, author-matches-handle, tamper-protection). Season 1, "The Meridian Renewal," is open until 2026-08-10; winners enter the Hall of Seasons.
 - **🌙 The Nightwatch** (`pm-claude-skills nightwatch`) — AI staff that work your directory while you sleep: a scheduled Agent SDK shift that settles due predictions against file evidence, investigates open hunches, drafts the one artifact the workspace needs, and files a morning brief of work DONE. launchd/cron installer, `--dry-run` shows the shift plan free, bounded turns, writes only inside the workspace.
