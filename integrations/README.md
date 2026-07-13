@@ -10,5 +10,6 @@ Ways to reach the PM Skills library beyond the CLI, MCP server, and browser play
 | [`gemini-gem/`](gemini-gem/) | Publish the library as a **Gemini Gem** (llms.txt knowledge) | [SETUP](gemini-gem/SETUP.md) |
 | [`chatops/`](chatops/) | **Slack & Discord** `/pmskill` slash command — one Cloudflare Worker, signature-verified | [README](chatops/README.md) |
 | [`twilio/`](twilio/) | **Text a skill** over SMS / WhatsApp — run a skill from a text, get the result back | [README](twilio/README.md) |
+| [`email/`](email/) | **Email operator** — forward a thread, get the drafted artifact back in-thread | [README](email/README.md) |
 
 Each of these is a **discovery channel** with its own audience — a store listing, a launcher, or a marketplace — pointing back to the open-source project.

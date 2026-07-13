@@ -1,0 +1,17 @@
+{
+  "name": "pm-skills-email",
+  "private": true,
+  "type": "module",
+  "description": "Email-native operator — forward a thread, get the drafted artifact back.",
+  "dependencies": {
+    "mimetext": "^3.0.16",
+    "postal-mime": "^2.2.7"
+  },
+  "devDependencies": {
+    "wrangler": "^3.80.0"
+  },
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  }
+}

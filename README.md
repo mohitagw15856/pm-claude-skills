@@ -592,6 +592,7 @@ The same 451 skills reach you through every channel — pick whatever fits your 
 | 🤖 **Custom GPT / Gemini Gem** | Publish the library as a GPT (live Actions API) or a Gem — copy-paste setup in [`integrations/custom-gpt/`](integrations/custom-gpt/) · [`integrations/gemini-gem/`](integrations/gemini-gem/) |
 | 💬 **Slack / Discord** | A `/pmskill` slash command in your team chat — one signature-verified Worker for both — [`integrations/chatops/`](integrations/chatops/) |
 | 📱 **Text a skill (SMS/WhatsApp)** | Text a task to a Twilio number, get the drafted artifact back — no app, no browser — [`integrations/twilio/`](integrations/twilio/) |
+| 📧 **Email operator** | Forward a thread to a routing address; the drafted artifact replies in-thread — [`integrations/email/`](integrations/email/) |
 | 🖥️ **IDE rules** | Generated exports for **Cursor, Windsurf, Aider, Cline, Continue, Zed, Roo, Kilo Code** — [`exports/`](exports/) |
 | 🤖 **Agents & answer engines** | [`llms.txt`](https://mohitagw15856.github.io/pm-claude-skills/llms.txt) makes the whole library discoverable & citable |
 

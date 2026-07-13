@@ -1,0 +1,21 @@
+name = "pm-skills-email"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Email-native operator. Forward a thread to your routing address, get the
+# drafted artifact back as a reply.
+#
+# Deploy:
+#   cd integrations/email
+#   npm install
+#   npx wrangler deploy
+#   npx wrangler secret put ANTHROPIC_API_KEY
+#
+# Then in the Cloudflare dashboard → your domain → Email → Email Routing:
+#   • enable Email Routing (adds the MX/DNS records)
+#   • create a custom address (e.g. do@yourdomain.com) with action
+#     "Send to a Worker" → pm-skills-email
+#
+# The Worker replies in-thread via Cloudflare's native email reply, so no
+# outbound email service (MailChannels etc.) is required.
