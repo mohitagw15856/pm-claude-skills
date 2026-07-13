@@ -8,5 +8,5 @@
     "windows": [{ "title": "PM Skills — the Cockpit", "width": 1280, "height": 860, "minWidth": 900, "minHeight": 600 }],
     "security": { "csp": null }
   },
-  "bundle": { "active": true, "targets": "all", "icon": ["icons/icon.png"] }
+  "bundle": { "active": true, "targets": "all", "icon": ["icons/icon.png", "icons/icon.ico"] }
 }
