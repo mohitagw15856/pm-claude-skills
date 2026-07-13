@@ -9,6 +9,18 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+### Added — the institution wave: from repo to something with a name on the door
+- **🏛 [The Open Institute for Professional Judgment](https://mohitagw15856.github.io/pm-claude-skills/institute.html)** — the umbrella binding what already operates (SkillSpec, the Operator's Exam, SkillBench rankings, the census, the Season, the annual report) to named principles: *verifiability over authority; money never touches judgment*. Charter in [docs/INSTITUTE.md](docs/INSTITUTE.md).
+- **📜 [The SkillSpec Foundation trajectory](docs/FOUNDATION.md)** — governance written against our own interest: RFC process (with mandatory false-positive analysis and census-measured breakage), maintainership earned by adoption, constitutional verifiability, and the one-hour spin-out runbook to a neutral org.
+- **🏢 [The Org Edition](org/)** — `docker compose up` = your company's skill library on your infra: playground + drop-in /v1 API over curated **plus private skills** (hot-reloaded, overriding on collision), deliberately no built-in auth (your VPN/SSO; no account DB to breach), nothing phones home. Tested: 467 skills served with a private override.
+- **💼 [The creator economy](docs/CREATORS.md)** — paid packs with a **0% platform take** (Polar/Lemon Squeezy checkout, CI-validated), the sampler rule, and the same security/conformance bar on paid listings. Creators keep the repo, the customers, and the money.
+- **🎓 [The Syllabus](docs/syllabus/)** — a complete 6-week zero-budget course (Academy drills + arenas as attested labs + the Operator's Exam as the final), instructor notes with per-week failure modes, and a verified **SCORM 1.2 export** for Canvas/Moodle/Blackboard.
+- **🎖 [Agent Conformance](conformance/)** — the suite that certifies *agents* (not models) use skills correctly: discovery, restraint, structure, self-verification, and the honesty-gate refusal — self-tested with pass/fail fixtures; certification by PR with a badge.
+- **📕 [The State of Professional AI — 2026 Mid-Year](docs/reports/state-of-professional-ai-2026.md)** — the Institute's citable flagship, generated from live data, including the honest SkillBench finding (run 1 measured *negative* skill-lift, n=12 single-vendor — published as measured, with the two testable hypotheses).
+- **📦 [Print products press-go kit](docs/print/)** — the Handbook's full-wrap cover generated (spine width computed), POD runbooks for Lulu/KDP/MakePlayingCards, house rules: digital stays free, proceeds to the free-runs pool.
+- **🖥 [The Cockpit](cockpit/)** — complete Tauri 2 scaffold for the desktop app (PWA core ships in the binary; tray/notification/hotkey hooks named as TODOs) + a disabled 3-OS release workflow awaiting the owner's first local build.
+- **🏟 Season, institutionalized** — the permanent [Hall of Seasons](seasons/HALL.md), a daily rollover workflow that freezes podiums and opens next-season checklists (scenario authorship stays human, as principle), and live Season standings in the Morning Show.
+
 ## [47.0.0] — the off-web release: skills that reach you where you already work — 2026-07-13
 
 ### Added — six ways off the web: text, email, a card deck, a game, a coach, and a newsletter

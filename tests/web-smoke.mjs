@@ -197,6 +197,9 @@ const PAGES = [
       const s = await p.evaluate(() => writeScript(news()).length);
       if (s < 6) throw new Error('show script too short: ' + s);
     } },
+  { url: 'institute.html', async check(p) {
+      if ((await p.locator('.organ').count()) !== 6) throw new Error('expected 6 organs');
+    } },
   { url: 'canvas.html' }, { url: 'agent.html' }, { url: 'studio.html' },
   { url: 'brain.html' }, { url: 'ask.html' }, { url: 'daily.html' },
   { url: 'jobs.html' }, { url: 'hub.html' }, { url: 'grade.html' },

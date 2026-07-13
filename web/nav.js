@@ -97,6 +97,7 @@
       ['modelbench.html', '🤖 Model rankings'],
       ['learn.html', '🎓 Learn'],
       ['wrapped.html', '🎁 Wrapped'],
+      ['institute.html', '🏛 The Institute'],
       ['handbook.html', '📖 Handbook'],
       ['city.html', '🌃 Skill City'],
       ['trophy.html', '🏆 Trophy Forge'],

@@ -13,6 +13,8 @@
 [![Free runs served](https://img.shields.io/endpoint?url=https%3A%2F%2Fpm-skills-mcp.pm-claude-skills.workers.dev%2Ftry%2Fstats&cacheSeconds=300)](https://mohitagw15856.github.io/pm-claude-skills/)
 [![Sponsor](https://img.shields.io/badge/💛_sponsors_fund_the_free_runs-ea4aaa)](https://github.com/sponsors/mohitagw15856)
 
+> 🏛 **This project grew into [The Open Institute for Professional Judgment](https://mohitagw15856.github.io/pm-claude-skills/institute.html)** — the SkillSpec standard, the Operator's Exam, the SkillBench rankings, the ecosystem census, the global Season, and the [State of Professional AI](docs/reports/state-of-professional-ai-2026.md). Every instrument open, free, and verifiable. Also: run it inside your company with the [Org Edition](org/) (`docker compose up`).
+
 > **Big repo?** It's a monorepo on purpose — but you probably need one folder. **[REPO-MAP.md](REPO-MAP.md)** tells you which, and the skills-only clone is 10 seconds: `git clone --filter=blob:none --sparse <url> && git sparse-checkout set skills`
 
 > 💛 **The free runs are sponsor-funded.** Every sponsor dollar visibly raises the daily cap on the counter above — and sponsors get [naming rights, not influence](docs/SPONSORSHIP.md): your name in this README, your logo on the playground, or **a Boardroom bench carrying your company's name**. → [Become a sponsor](https://github.com/sponsors/mohitagw15856)

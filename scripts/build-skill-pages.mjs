@@ -334,7 +334,7 @@ for (const s of skills) writeFileSync(join(outDir, `${s.name}.html`), page(s));
 const today = new Date().toISOString().slice(0, 10);
 const urls = [
   `${BASE}/`, `${BASE}/catalog.html`, `${BASE}/examples.html`, `${BASE}/leaderboard.html`,
-  `${BASE}/coverage.html`, `${BASE}/canvas.html`, `${BASE}/firm.html`, `${BASE}/boardroom.html`, `${BASE}/defend.html`, `${BASE}/verify.html`, `${BASE}/gym.html`, `${BASE}/gauntlet.html`, `${BASE}/xray.html`, `${BASE}/grade.html`, `${BASE}/benchmark.html`, `${BASE}/hiring.html`, `${BASE}/wrapped.html`, `${BASE}/academy.html`, `${BASE}/campaign.html`, `${BASE}/reckoning.html`, `${BASE}/handbook.html`, `${BASE}/charter.html`, `${BASE}/tower.html`, `${BASE}/stage.html`, `${BASE}/galaxy3d.html`, `${BASE}/city.html`, `${BASE}/trophy.html`, `${BASE}/status.html`, `${BASE}/season.html`, `${BASE}/atlas.html`, `${BASE}/morningshow.html`,
+  `${BASE}/coverage.html`, `${BASE}/canvas.html`, `${BASE}/firm.html`, `${BASE}/boardroom.html`, `${BASE}/defend.html`, `${BASE}/verify.html`, `${BASE}/gym.html`, `${BASE}/gauntlet.html`, `${BASE}/xray.html`, `${BASE}/grade.html`, `${BASE}/benchmark.html`, `${BASE}/hiring.html`, `${BASE}/wrapped.html`, `${BASE}/academy.html`, `${BASE}/campaign.html`, `${BASE}/reckoning.html`, `${BASE}/handbook.html`, `${BASE}/charter.html`, `${BASE}/tower.html`, `${BASE}/stage.html`, `${BASE}/galaxy3d.html`, `${BASE}/city.html`, `${BASE}/trophy.html`, `${BASE}/status.html`, `${BASE}/season.html`, `${BASE}/atlas.html`, `${BASE}/morningshow.html`, `${BASE}/institute.html`,
   ...skills.map((s) => `${BASE}/skill/${s.name}.html`),
 ];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
