@@ -1,7 +1,7 @@
 {
   "$schema": "https://schema.tauri.app/config/2.0.0",
   "productName": "PM Skills",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "identifier": "io.github.mohitagw15856.pmskills",
   "build": { "frontendDist": "../../web" },
   "app": {

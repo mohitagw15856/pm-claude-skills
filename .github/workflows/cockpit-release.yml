@@ -1,5 +1,7 @@
 # Builds Cockpit installers for mac/win/linux on tag (~15 min of Actions time
 # per release). Enabled 2026-07-13 after the first successful local build.
+# Matrix jobs upload artifacts; one final job publishes the release with all
+# assets at once — immutable releases forbid uploads after publish.
 name: Cockpit release
 on:
   push:
@@ -8,20 +10,32 @@ permissions: { contents: write }
 jobs:
   build:
     strategy:
+      fail-fast: false
       matrix: { os: [macos-latest, ubuntu-latest, windows-latest] }
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: '20' }
+        with: { node-version: '22' }
       - uses: dtolnay/rust-toolchain@stable
       - name: Linux deps
         if: matrix.os == 'ubuntu-latest'
         run: sudo apt-get update && sudo apt-get install -y libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
       - run: cd cockpit && npm install && npm run tauri build
-      - uses: softprops/action-gh-release@v2
+      - uses: actions/upload-artifact@v4
         with:
-          files: |
+          name: cockpit-${{ matrix.os }}
+          path: |
             cockpit/src-tauri/target/release/bundle/**/*.dmg
             cockpit/src-tauri/target/release/bundle/**/*.AppImage
             cockpit/src-tauri/target/release/bundle/**/*.msi
+          if-no-files-found: error
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with: { path: dist, merge-multiple: true }
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: dist/**/*
