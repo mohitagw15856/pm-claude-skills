@@ -1,5 +1,7 @@
 # SkillSpec v1.0 — a formal specification for `SKILL.md` professional skills
 
+> **The standard now has its own home: [github.com/mohitagw15856/skillspec](https://github.com/mohitagw15856/skillspec)** (RFC governance, validator, schema — see [docs/FOUNDATION.md](docs/FOUNDATION.md)). This file is the pinned copy of the version this repo implements: **SkillSpec 1.0**. Spec changes land there as RFCs, not here.
+
 **Status:** v1.0 (stable core, forward-compatible extensions) · **Reference implementation:** [`scripts/skillcheck.mjs`](scripts/skillcheck.mjs) · **Machine-readable schema:** [`spec/skill.schema.json`](spec/skill.schema.json)
 
 `SKILL.md` files are becoming a cross-tool standard for giving AI agents professional judgment. This document specifies the format precisely enough that **any runtime** (Claude Code, Hermes, a computer-use agent, an A2A service) and **any registry** can consume, validate, and version skills interoperably. The [pm-claude-skills library](https://github.com/mohitagw15856/pm-claude-skills) is the reference corpus; [SKILL-AUTHORING-STANDARD.md](SKILL-AUTHORING-STANDARD.md) remains the human *style guide* — this document is the *contract*.
