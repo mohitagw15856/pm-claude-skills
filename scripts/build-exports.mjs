@@ -215,8 +215,17 @@ function planPlatform(key, platform, skills) {
     parts.push(skill.name, fileNameFor(platform, skill));
     files.set(join(...parts), platform.render(skill));
   }
-  // Generated index for the platform.
-  const fileHint = typeof platform.file === 'function' ? '.mdc rule' : platform.file;
+  // Generated index for the platform. Derive the extension from an actual
+  // rendered filename so the hint matches what each platform emits (only
+  // `cursor` uses `.mdc`; every other function-based platform uses `.md`).
+  let fileHint;
+  if (typeof platform.file === 'function') {
+    const sample = skills[0] ? platform.file(skills[0]) : '';
+    const ext = sample.slice(sample.lastIndexOf('.'));
+    fileHint = ext ? `${ext} rule` : 'rule';
+  } else {
+    fileHint = platform.file;
+  }
   const index = [
     `# ${platform.label}`,
     '',
