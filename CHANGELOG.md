@@ -9,6 +9,30 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [49.0.0] — the professions release: six industries nobody built AI for, and depth for the fifty that carry the library — 2026-07-14
+
+### Added — six unserved professions (466 → 496 skills, 72 bundles)
+- **🏗 [pm-construction](plugins/pm-construction)** — bid/tender review (front-loading detection, exclusion risk-shift), defensible change orders, punch lists with back-charge flags, toolbox-talk safety briefings (hierarchy of controls), subcontractor scorecards with a safety-cap rule, and delay claim letters built on the excusable/compensable matrix.
+- **🔧 [pm-hardware](plugins/pm-hardware)** — hardware PRDs with four-layer cost stacks, BOM cost review (single-source and EOL flags), EVT/DVT/PVT gate reviews with waiver discipline, factory acceptance tests (AQL sampling), tooling risk with shown cavitation math, and 8D-structured RMA failure analysis.
+- **📦 [pm-supplychain](plugins/pm-supplychain)** — weighted RFP scoring with sensitivity checks, supplier scorecards (OTIF/PPM), S&OP readouts with the max-three-decisions rule, forecast interrogation (hockey-stick detection), ABC/XYZ inventory policy, and logistics incident reports.
+- **🌍 [pm-climate](plugins/pm-climate)** — GHG inventory sanity checks (never net offsets against the gross headline), CSRD/ESRS-flavored disclosure drafting, climate risk (hazard × exposure × vulnerability), and a greenwashing self-audit that grades your claims before a regulator does.
+- **🛡 [pm-insurance](plugins/pm-insurance) + 🏦 [pm-banking](plugins/pm-banking)** — claims triage, underwriting narratives, renewal reviews, coverage-gap analysis; credit memos with covenant headroom, covenant compliance reviews, KYC/AML escalations, portfolio risk briefs. Every regulated-domain skill embeds an "analytical support, not a determination" line.
+
+### Added — depth inside the skills
+- **📖 Worked examples, 50/50** — every Production-Ready skill ships `references/worked-example.md`: a realistic brief, a complete gold-standard artifact, and margin notes tying each choice back to the skill's rules. Internally consistent numbers; real tensions, not happy paths.
+- **🎯 Scoring rubrics, 50/50** — each production skill carries a skill-specific 0–40 rubric with 0/5/10 anchors; 32+ is ship-quality. The bridge from "trust me" to "score it".
+- **⌨️ CLI field-by-field prompting** — `pm-claude-skills run <skill>` at a TTY with no input now prompts from the skill's declared inputs (same parse the playground form uses). Plus **[RFC-0002](https://github.com/mohitagw15856/skillspec/blob/main/docs/rfcs/0002-machine-readable-inputs.md)** drafted in the standard's new home to make structured inputs official.
+
+### Changed — the standard moved out
+- **📜 SkillSpec has its own repo** — [github.com/mohitagw15856/skillspec](https://github.com/mohitagw15856/skillspec) (history-preserving split: spec, JSON Schema, validator, pre-commit hook, GOVERNANCE.md, RFC-0001 ratifying 1.0 as-is). This repo's SKILLSPEC.md is now the pinned pointer copy; one org-creation click remains.
+- **🖥 Cockpit shipped** — [cockpit-v0.1.2](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/cockpit-v0.1.2): the playground as a native desktop app, with mac/windows/linux installers now building on every `cockpit-v*` tag.
+- **📕 The print kit is real** — `docs/print/build-interior.mjs` renders a true 6×9" trade interior (299 pp) and the wrap cover regenerates from the actual page count.
+
+### Fixed — community PRs, thank you @thejesh23
+- **[#146](https://github.com/mohitagw15856/pm-claude-skills/pull/146)** — export READMEs now advertise each platform's real file extension (only cursor is `.mdc`).
+- **[#147](https://github.com/mohitagw15856/pm-claude-skills/pull/147)** — `list` derives agents from the CLI's own registries; kilocode no longer missing.
+- **[#148](https://github.com/mohitagw15856/pm-claude-skills/pull/148)** — the postinstall banner counts skills at install time instead of hardcoding a stale number.
+
 ## [48.0.0] — the institution release: a repo grows a name on the door — 2026-07-13
 
 ### Added — the institution wave: from repo to something with a name on the door
@@ -688,7 +712,9 @@ Earlier releases (v1.0.0 – v5.0.0) predate this changelog. See the
 [article series](README.md#-the-article-series) for the full history of how the
 library grew from the first PM toolkit to 100+ skills.
 
-[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v46.0.0...HEAD
+[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v49.0.0...HEAD
+[49.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v48.0.0...v49.0.0
+[48.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v47.0.0...v48.0.0
 [46.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v45.0.0...v46.0.0
 [45.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v44.0.0...v45.0.0
 [44.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v43.0.0...v44.0.0
