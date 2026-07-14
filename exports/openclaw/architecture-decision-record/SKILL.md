@@ -106,13 +106,6 @@ For each option, produce:
 
 ---
 
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/decision-scoping.md`** — What Deserves an ADR (and What "Context" Must Contain). Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/adr.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
-
 ## Scoring Rubric (0–40)
 
 Score any output of this skill before handing it over; 32+ is ship-quality.

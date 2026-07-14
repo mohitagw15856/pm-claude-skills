@@ -154,8 +154,10 @@ const PLATFORMS = {
     // homepage (shown in the macOS Skills UI) and a metadata.openclaw block with
     // a bundle emoji, so the library looks native rather than merely functional.
     // The flat <skill>/SKILL.md layout is exactly what `clawhub sync` publishes.
-    // Helper scripts stay in the source repo — every skill is, per the standard,
-    // useful with SKILL.md alone.
+    // Sections that assume the library's local layout are stripped — a standalone
+    // package must not reference sibling skills (../professional-brain) or
+    // references/templates files that don't ship with it; ClawHub's reviewer
+    // rightly flags instructions that point at phantom files.
     render: ({ name, description, body, bundle }) =>
       `---\n` +
       `name: ${name}\n` +
@@ -166,9 +168,19 @@ const PLATFORMS = {
       `    "openclaw": { "emoji": ${JSON.stringify(BUNDLE_EMOJI[bundle] || '🧠')} }\n` +
       `  }\n` +
       `---\n\n` +
-      `${body.trim()}\n`,
+      `${stripLocalLayoutSections(body).trim()}\n`,
   },
 };
+
+// Drop sections that only make sense inside this repo's layout (sibling-skill
+// Brain integration, references/ and templates/ pointers) from standalone
+// single-file exports. A section runs from its ## heading to the next ##.
+function stripLocalLayoutSections(body) {
+  return body.replace(
+    /^## (Reads from \/ Writes to the Brain|Deeper Materials)\n[\s\S]*?(?=^## |(?![\s\S]))/gm,
+    ''
+  );
+}
 
 // Bundle → emoji for the OpenClaw metadata block (macOS Skills UI). Unlisted
 // bundles fall back to 🧠. Purely cosmetic — never gates eligibility.

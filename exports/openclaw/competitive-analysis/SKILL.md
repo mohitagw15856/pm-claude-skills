@@ -12,13 +12,6 @@ metadata:
 
 Create structured competitive analyses for product decision-making.
 
-## Reads from / Writes to the Brain
-
-If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, ground in it instead of re-asking for what you already know:
-
-- **Read first:** `knowledge/` (market + positioning) and competitor `entities/`. Run `python3 ../professional-brain/scripts/brain_query.py ./brain "<competitor or market>"` and carry each fact's provenance tag through — a competitor claim from a press release is `[external]`, not `[data]`.
-- **📥 Propose to the Brain:** after producing, propose recording new competitor facts to `knowledge/` (`[external]`) and creating/updating competitor `entities/`. Show them, get a yes, then write with `../professional-brain/scripts/brain_write.py … --commit` (append-only, dry-run by default).
-
 ## Required Inputs
 
 Ask the user for these if not provided:
@@ -102,13 +95,6 @@ Position competitors on two key dimensions relevant to the market:
 - [ ] Do not build a competitive analysis that only covers features — pricing, messaging, go-to-market motion, and who they hire for are equally strategic signals
 - [ ] Do not treat all buyers as identical — the same product may win against Competitor A in the enterprise segment and lose in SMB; segment-specific win/loss matters
 - [ ] Do not soften weaknesses and threats in the SWOT to avoid internal discomfort — an honest SWOT is only useful if the negatives are real
-
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/feature-matrix-honesty.md`** — Feature Matrices That Don't Lie. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/landscape-doc.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
 
 ## Scoring Rubric (0–40)
 

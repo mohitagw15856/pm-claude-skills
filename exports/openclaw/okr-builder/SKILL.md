@@ -12,21 +12,9 @@ metadata:
 
 Write ambitious, measurable OKRs that connect product work to company strategy. Avoid vanity metrics, output-focused key results, and objectives that sound like task lists.
 
-## Reads from / Writes to the Brain
-
-If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, ground in it instead of re-asking for what you already know:
-
-- **Read first:** `context.md` (metric definitions), `knowledge/strategy.md` (where the product is going), and any open `hypotheses/`. Run `python3 ../professional-brain/scripts/brain_query.py ./brain "<objective theme>"` and carry each fact's provenance tag through — don't set a key result off a `[hunch]` as if it were `[data]`.
-- **📥 Propose to the Brain:** after producing, propose logging the chosen objectives + KR targets as a `decisions/` record (the period's bet) and any new metric definitions to `knowledge/`, each provenance-tagged. Show them, get a yes, then write with `../professional-brain/scripts/brain_write.py … --commit` (append-only, dry-run by default).
-
 ## Working from a brief
 
 You will often get a short brief without every detail (no baselines, no exact numbers). **Always deliver a complete, specific OKR set anyway** — do not stop to ask questions and do not leave bracketed placeholders like `[target]`. Where a baseline or number is missing, infer a realistic value from the brief and the domain, and mark it *(assumed — confirm)*. A clearly-labelled assumed baseline (e.g. "activation 40% *(assumed)* → 60%") is always better than a blank or an invented-as-fact figure.
-
-## Deeper Materials
-
-- **`references/bad-okr-gallery.md`** — six realistic bad OKRs with diagnosis and rewrite (disguised roadmap, unfalsifiable objective, sandbagging, uncontrollable KR, metric zoo, missing guardrail), ending in a 5-question diagnostic. Use it when *reviewing* existing OKRs — match against the gallery before writing feedback.
-- **`templates/okr-worksheet.md`** — a fill-in worksheet whose columns enforce the quality gates (baseline source, drift test, control test, guardrail) plus a pre-committed quarter-end scoring rubric. Offer it when a team wants to draft OKRs themselves.
 
 ## OKR Fundamentals
 

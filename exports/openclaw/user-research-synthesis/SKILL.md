@@ -20,13 +20,6 @@ Ask the user for these if not provided:
 - **Number of participants** and their profiles (role, context)
 - **Research questions** the study aimed to answer
 
-## Reads from / Writes to the Brain
-
-If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, use it before asking:
-
-- **Read first:** open `hypotheses/` (which assumptions this research can validate or invalidate) and `context.md` (who the users are).
-- **Write after:** update each touched hypothesis's status, add durable insights to `knowledge/users.md`, and keep the raw notes in `source/`. Tag interview-derived claims `[interview]` — never launder them into `[data]`.
-
 ## Synthesis Framework
 
 ### 1. Data Collection Overview
@@ -134,13 +127,6 @@ Research gaps identified:
 - Provide evidence for each theme
 - Quantify when possible ("7 out of 10 users...")
 - Connect themes to business objectives
-
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/theme-validity.md`** — When Is a Theme Real? Synthesis Validity Rules. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/synthesis-report.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
 
 ## Scoring Rubric (0–40)
 

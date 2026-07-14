@@ -20,11 +20,6 @@ Ask the user for these if not provided:
 - **Analysis depth** (quick overview / detailed teardown)
 - **Primary use case for this analysis** (e.g. sales enablement, investor deck, internal strategy, product planning)
 
-## Deeper Materials
-
-- **`references/intel-sourcing-guide.md`** — where competitive facts come from (four source tiers), which source to use per teardown section, the [verified]/[reported]/[assumed] confidence labels, and the ethics line. Apply its labelling to every substantive claim in the output.
-- **`templates/teardown-skeleton.md`** — a fill-in teardown with the confidence labels and a verification queue built in. Offer it when the user wants to gather the intel themselves.
-
 ## Output Structure
 
 ### 1. Competitive Landscape Overview

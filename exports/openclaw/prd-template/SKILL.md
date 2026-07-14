@@ -22,25 +22,6 @@ Ask the user for these if not provided:
 - **Scope** (MVP vs full vision — what's in and out of scope)
 - **Key stakeholders** (who needs to review and approve)
 
-## Reads from / Writes to the Brain
-
-If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, use it instead of asking for context you already have:
-
-- **Read first:** `context.md` (product, metrics definitions, voice), `knowledge/strategy.md`
-  (where the product is going), any related `hypotheses/` and the matching `entities/` feature
-  file. Run `python3 ../professional-brain/scripts/brain_query.py ./brain "<feature>"` to pull
-  grounded facts, and carry their provenance tags into the PRD (don't present a `[hunch]` as a
-  settled requirement).
-- **Write after:** save the feature as/into `entities/<feature>.md`, log any scoping decision to
-  `decisions/`, and add new assumptions to `hypotheses/`. Tag each with its provenance.
-
-## Deeper Materials
-
-This skill ships with two support files — use them when they're available:
-
-- **`templates/prd-skeleton.md`** — a fill-in PRD skeleton with a "what good looks like" hint per section. Start from it when the user wants a document to complete themselves rather than a generated draft.
-- **`references/success-metrics-guide.md`** — calibration for the Success Metrics section: the four-part metric test, the standard adoption/outcome/business/guardrail set, and the common traps. Consult it whenever writing or reviewing the metrics table.
-
 ## Template Structure
 
 Every PRD should include these sections in order:

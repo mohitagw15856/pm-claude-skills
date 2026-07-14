@@ -51,13 +51,6 @@ Who they are, what they struggle with, what they aspire to, where they hang out.
 ### 6. Reuse note
 How to paste this into other skills (or the Playground "🧠 Your context" box / a `CONTEXT.md`) so [[content-repurposer]], [[hook-writer]], [[short-form-script]], and [[newsletter-writer]] all sound like you.
 
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/voice-consistency.md`** — Voice Consistency: the Creator's Compounding Asset. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/brand-kit.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
-
 ## Scoring Rubric (0–40)
 
 Score any output of this skill before handing it over; 32+ is ship-quality.

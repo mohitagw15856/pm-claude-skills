@@ -12,13 +12,6 @@ metadata:
 
 Transform raw backlog items into a structured, achievable sprint with clear goals, velocity-calibrated scope, and team-ready output.
 
-## Reads from / Writes to the Brain
-
-If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, ground in it instead of re-asking for what you already know:
-
-- **Read first:** priority `decisions/` (what the team agreed matters), feature `entities/`, and open `hypotheses/` the sprint might test. Run `python3 ../professional-brain/scripts/brain_query.py ./brain "<sprint goal>"` and carry each fact's provenance tag through.
-- **📥 Propose to the Brain:** after producing, propose logging the sprint commitment (goal + committed scope) as a `decisions/` record, provenance-tagged. Show it, get a yes, then write with `../professional-brain/scripts/brain_write.py … --commit` (append-only, dry-run by default).
-
 ## Proposes Actions
 
 Once the sprint is agreed, hand it to [`action-runner`](../action-runner/SKILL.md): it previews (dry-run, risk-rated), runs only what you approve via the connected action MCP, and records what was done back to the brain. Typical: **create a ticket per committed backlog item** and **set the sprint milestone** (🟡). This skill proposes; action-runner gates and runs — never silently.
@@ -119,13 +112,6 @@ The script returns available focus hours, a velocity figure adjusted for real av
 - Recommend the team commits to 80% of available capacity, not 100%
 - If no velocity data is provided, assume 20–30 points for a 5-person team as a starting point
 - Highlight any story with unclear ownership as a blocker
-
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/capacity-honesty.md`** — Capacity Honesty — the numbers teams lie to themselves about. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/planning-worksheet.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
 
 ## Scoring Rubric (0–40)
 

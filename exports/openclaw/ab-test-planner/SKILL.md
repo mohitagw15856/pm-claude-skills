@@ -116,13 +116,6 @@ Flag if traffic is too low to reach significance in under 8 weeks — recommend 
 - [ ] Do not use engagement metrics (clicks, time-on-page) as the primary metric when the goal is revenue or retention — proxy metrics mislead
 - [ ] Do not ignore guardrail metrics — a conversion lift that causes a support ticket spike is not a win
 
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/test-validity-traps.md`** — The Validity Traps That Quietly Invalidate A/B Tests. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/test-plan.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
-
 ## Scoring Rubric (0–40)
 
 Score any output of this skill before handing it over; 32+ is ship-quality.

@@ -135,13 +135,6 @@ After completing the runbook:
 
 ---
 
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/3am-usability.md`** — The 3AM Test: Runbooks for Degraded Humans. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/runbook.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
-
 ## Scoring Rubric (0–40)
 
 Score any output of this skill before handing it over; 32+ is ship-quality.

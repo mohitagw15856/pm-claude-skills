@@ -12,13 +12,6 @@ metadata:
 
 Produce a structured churn analysis that goes beyond the headline rate — identifying why customers leave, which segments are most at risk, and what interventions will have the highest impact on retention.
 
-## Reads from / Writes to the Brain
-
-If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, ground in it instead of re-asking for what you already know:
-
-- **Read first:** `context.md` (metric definitions — what "churn" means here), `knowledge/`, and related segment `entities/`. Run `python3 ../professional-brain/scripts/brain_query.py ./brain "churn"` and carry each fact's provenance tag through.
-- **📥 Propose to the Brain:** after producing, propose recording the headline retention finding to `knowledge/` (`[data]`), any retention decision to `decisions/`, and at-risk drivers as `hypotheses/`. Show them, get a yes, then write with `../professional-brain/scripts/brain_write.py … --commit` (append-only, dry-run by default).
-
 ## Required Inputs
 
 Ask for these if not already provided:
@@ -188,13 +181,6 @@ Ranked by estimated impact × feasibility.
 - [ ] Do not rely solely on exit survey data for churn reasons — response rates are typically low and self-selection biases the sample toward customers who are engaged enough to complete a survey
 - [ ] Do not recommend interventions without linking them to a specific churn reason — interventions disconnected from root causes will not move retention
 - [ ] Do not report only gross revenue churn — without net revenue retention (NRR), a healthy-looking retention number can hide a shrinking revenue base
-
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/avoidability-calls.md`** — Avoidable or Not? The Judgment Calls in Churn Classification. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/churn-report.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
 
 ## Scoring Rubric (0–40)
 

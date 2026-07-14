@@ -12,13 +12,6 @@ metadata:
 
 Apply consistent, criteria-based RICE scoring to a list of features or initiatives to produce an objective prioritisation ranking.
 
-## Reads from / Writes to the Brain
-
-If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, ground in it instead of re-asking for what you already know:
-
-- **Read first:** `knowledge/strategy.md` (so the ranking serves the direction), the items as `entities/`, and impact `hypotheses/`. Run `python3 ../professional-brain/scripts/brain_query.py ./brain "<initiative theme>"` and carry each fact's provenance tag through — an impact estimate is usually a `[hunch]`, not `[data]`.
-- **📥 Propose to the Brain:** after producing, propose recording the ranking decision to `decisions/` and the reach/impact estimates as `hypotheses/` tagged by evidence strength. Show them, get a yes, then write with `../professional-brain/scripts/brain_write.py … --commit` (append-only, dry-run by default).
-
 ## Required Inputs
 
 Ask the user for these if not provided:
@@ -54,11 +47,6 @@ echo '[{"name":"Onboarding","reach":5000,"impact":2,"confidence":0.8,"effort":3}
 ```
 
 It outputs a ranked table with computed RICE scores and auto-flags **quick-win** (strong score, low relative effort), **moonshot** (high impact, high effort), and **low-confidence** (≤50%) items. Use the computed ranking as the starting point, then apply the validation step below — never accept a surprising top rank without checking the estimates behind it.
-
-## Deeper Materials
-
-- **`references/estimate-calibration.md`** — how to anchor each of the four estimates (reach sources, the impact scale with reserve-it-for examples, evidence-based confidence, cross-functional effort) and the cross-checks to run on the finished ranking. Apply it when challenging the user's inputs.
-- **`templates/scoring-worksheet.md`** — a fill-in worksheet whose evidence columns force each score to name its source. Offer it when a team wants to score together rather than have the ranking generated.
 
 ## Process
 1. For each initiative provided, gather or estimate R, I, C, E values

@@ -24,12 +24,6 @@ Ask for these only if they aren't already provided:
 - **Inputs available** — context/data the model can use; privacy constraints.
 - **Trust level needed** — can the user verify the output, or must it be near-perfect?
 
-## Reads from / Writes to the Brain
-
-If a [`professional-brain`](../professional-brain/SKILL.md) exists, read `context.md` (product, users, voice)
-and `knowledge/strategy.md` first; write the feature to `entities/` and any scoping decision to `decisions/`,
-each provenance-tagged.
-
 ## Output Format
 
 ### AI Feature PRD: [feature]

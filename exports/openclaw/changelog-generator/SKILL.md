@@ -77,13 +77,6 @@ Follow [Keep a Changelog](https://keepachangelog.com) format:
 
 **Empty sections:** Omit any section with no entries. Don't include empty `### Fixed` blocks.
 
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/user-translation.md`** — Commit-to-Changelog Translation: Writing for the People Affected. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/release-entry.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
-
 ## Scoring Rubric (0–40)
 
 Score any output of this skill before handing it over; 32+ is ship-quality.

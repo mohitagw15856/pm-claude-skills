@@ -25,13 +25,6 @@ Ask the user for these if not provided:
 - **Feature description** (what is being launched)
 - **Rollback capability** (can this be feature-flagged or reverted quickly?)
 
-## Reads from / Writes to the Brain
-
-If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, use it before asking:
-
-- **Read first:** the `entities/` feature being launched and related `decisions/` (scope, dates, owners).
-- **Write after:** log launch decisions and owners to `decisions/`. This skill can also hand the checklist to [`action-runner`](../action-runner/SKILL.md) to file the tickets — which records what was actually done back to the brain, closing the loop.
-
 ## How to Use This Skill
 
 Provide:
@@ -133,13 +126,6 @@ The skill generates a tiered checklist. Tier 3 launches use only the Essentials 
 - [ ] Follow-up features added to backlog based on feedback
 
 ---
-
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/launch-tiering.md`** — Launch Tiering: Matching Ceremony to Stakes. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/launch-plan.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
 
 ## Scoring Rubric (0–40)
 

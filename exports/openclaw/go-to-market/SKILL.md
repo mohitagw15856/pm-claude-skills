@@ -25,13 +25,6 @@ You will often get a short brief without every detail. **Always deliver the full
 - **Key competitor or alternative** (what people do today without this)
 - **Top 3 differentiators**
 
-## Reads from / Writes to the Brain
-
-If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, use it before asking:
-
-- **Read first:** `context.md` (product, ICP, voice), `knowledge/market.md` and `knowledge/strategy.md`, and the matching `entities/` feature being launched.
-- **Write after:** save the launch plan to `entities/`, and any positioning or channel decision to `decisions/`, each provenance-tagged.
-
 ## Output Structure
 
 Always produce all four sections below in order.
@@ -92,13 +85,6 @@ Generate 3–5 role-specific use cases. Each use case must follow this format:
 Use cases should cover different buyer personas if possible (e.g. end user, manager, admin).
 
 ---
-
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/messaging-hierarchy.md`** — The Messaging Hierarchy: One Claim, Then Everything Else. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/gtm-pack.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
 
 ## Scoring Rubric (0–40)
 

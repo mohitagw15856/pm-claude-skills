@@ -66,13 +66,6 @@ Scan for each category and rate severity (🔴 High / 🟠 Medium / 🟡 Low):
 
 ---
 
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/injection-patterns.md`** — The Injection Pattern Library: What Malicious Skills Actually Look Like. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/audit-report.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
-
 ## Scoring Rubric (0–40)
 
 Score any output of this skill before handing it over; 32+ is ship-quality.

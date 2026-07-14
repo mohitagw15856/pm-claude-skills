@@ -145,13 +145,6 @@ Error codes: [list]
 - Recommend async review: engineers read first, then a 30-minute sync to resolve questions
 - Keep the spec updated as implementation progresses — stale specs are worse than no specs
 
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/spec-decisions.md`** — What a Spec Is For: Decisions, Alternatives, and the Blast Radius. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/spec-skeleton.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
-
 ## Scoring Rubric (0–40)
 
 Score any output of this skill before handing it over; 32+ is ship-quality.

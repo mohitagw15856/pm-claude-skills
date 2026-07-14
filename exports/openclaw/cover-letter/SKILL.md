@@ -40,10 +40,6 @@ A 3–4 paragraph letter (≈250–350 words):
 
 **Voice note** (for the user): keep it human — contractions, active voice, no thesaurus words. Read it aloud; if it sounds like a robot, cut.
 
-## Deeper Materials
-
-- [`templates/cover-letter.md`](templates/cover-letter.md) — the four-paragraph template with anti-throat-clearing gates
-
 ## Quality Checks
 
 - [ ] The opening is specific to this company — it could not be pasted to another employer

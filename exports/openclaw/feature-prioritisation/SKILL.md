@@ -139,13 +139,6 @@ Use `--json` to produce machine-readable output for downstream tooling.
 - Recommend revisiting priorities every 2 weeks minimum
 - Never produce a single-column ranked list without rationale — explain the top 3 and bottom 3 decisions
 
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/framework-selection.md`** — Picking the Prioritisation Framework (Instead of Defaulting to RICE). Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/prioritisation-session.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
-
 ## Scoring Rubric (0–40)
 
 Score any output of this skill before handing it over; 32+ is ship-quality.

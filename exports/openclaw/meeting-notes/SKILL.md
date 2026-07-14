@@ -20,17 +20,6 @@ Ask the user for these if not provided:
 - **Raw notes or transcript** (paste discussion notes, a transcript, or describe what was discussed)
 - **Meeting type** (1:1 / sprint planning / product review / stakeholder sync / other) — determines which template to use
 
-## Reads from / Writes to the Brain
-
-If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, this is where notes become durable memory:
-
-- **Read first:** the relevant `stakeholders/` files (so you arrive knowing each attendee's
-  open asks and concerns) and any `decisions/` the meeting revisits.
-- **Write after:** append each **decision** (with its rationale and a `reopen-when`) to
-  `decisions/`, add new **asks/concerns** to the right `stakeholders/` file, and flag any new
-  **assumption** into `hypotheses/`. Tag every captured fact with its provenance — most meeting
-  statements are `[verbal]` until independently confirmed. Save the raw notes to `source/`.
-
 ## Standard Meeting Notes Template
 
 ### Meeting Header
@@ -266,13 +255,6 @@ Template additions:
 **Next Meeting**: February 1, 2026 - Progress Check-in
 **Notes Sent**: January 20, 2026 5:30 PM
 ```
-
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/decisions-vs-discussion.md`** — Separating Decisions from Discussion. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/notes-skeleton.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
 
 ## Scoring Rubric (0–40)
 

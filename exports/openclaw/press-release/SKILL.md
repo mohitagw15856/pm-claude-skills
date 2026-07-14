@@ -69,13 +69,6 @@ ENDS
 ## Journalist Test
 Would a journalist care? Is the headline the full story? Is there a human angle? Is the quote something a human would say? Can the first paragraph stand alone?
 
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/newsworthiness.md`** — Newsworthiness: What Makes a Release News Instead of Noise. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/release-skeleton.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
-
 ## Scoring Rubric (0–40)
 
 Score any output of this skill before handing it over; 32+ is ship-quality.

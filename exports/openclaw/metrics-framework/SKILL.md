@@ -23,13 +23,6 @@ Ask the user for these if not provided:
 
 If no framework preference is given, recommend the best fit based on stage and business model.
 
-## Reads from / Writes to the Brain
-
-If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, use it before asking:
-
-- **Read first:** `context.md` for the metric *definitions* the org already agreed on (reuse them — don't silently redefine a metric) and `knowledge/strategy.md` for what the business is optimising for.
-- **Write after:** save the metric tree and definitions to `knowledge/`, and any target-setting decision to `decisions/`, each provenance-tagged so a `[hunch]` target isn't treated as a committed goal.
-
 ## Output Structure
 
 ### 1. Framework Recommendation (if not specified)
@@ -96,13 +89,6 @@ Suggest a 3-tier dashboard structure:
 [5 questions the team should ask in their weekly metrics review to turn numbers into insights. e.g. "Is our activation rate improving while retention stays flat? That suggests onboarding quality issue, not a product-market fit problem."]
 
 ---
-
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/metric-tree-craft.md`** — Metric Trees That Drive Decisions (Not Dashboards). Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/metric-tree.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
 
 ## Scoring Rubric (0–40)
 

@@ -63,13 +63,6 @@ Input: *"We're building a self-serve onboarding flow to reduce time-to-value for
 - [ ] Do not recommend "user interviews" as the validation method for every assumption — some assumptions require quantitative data, competitive analysis, or technical spikes
 - [ ] Do not list assumptions that cannot be tested — every assumption in the map must have a plausible validation method, or it should be flagged as unknowable and treated as a risk
 
-## Deeper Materials
-
-This skill ships with support files — use them when they are available:
-
-- **`references/cheap-tests.md`** — The Cheap-Test Catalog: Right-Sizing Validation. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
-- **`templates/assumption-board.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
-
 ## Scoring Rubric (0–40)
 
 Score any output of this skill before handing it over; 32+ is ship-quality.

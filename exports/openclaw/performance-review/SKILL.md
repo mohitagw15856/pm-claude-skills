@@ -104,10 +104,6 @@ Ask the user for these if not provided:
 - Avoid jargon — "drove alignment" and "leveraged synergies" are meaningless. Use plain language.
 - If the user gives sparse notes, ask for one concrete example per achievement before writing
 
-## Deeper Materials
-
-- [`references/evidence-not-adjectives.md`](references/evidence-not-adjectives.md) — the adjective→evidence substitution table and the calibration rules that keep files honest
-
 ## Quality Checks
 
 - [ ] Every achievement includes a specific outcome (not just activity)

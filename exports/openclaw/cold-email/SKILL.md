@@ -41,10 +41,6 @@ Ask for these only if they aren't already provided:
 
 **Note** — what to personalise per prospect (the one line that proves it isn't a blast), and the one metric to watch (reply rate, not open rate).
 
-## Deeper Materials
-
-- [`references/reply-rate-calibration.md`](references/reply-rate-calibration.md) — line-by-line calibration of what actually moves reply rates, with honest expectations
-
 ## Quality Checks
 
 - [ ] Under ~120 words and skimmable on a phone
