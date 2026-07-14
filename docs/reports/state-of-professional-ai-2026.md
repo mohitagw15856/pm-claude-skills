@@ -1,6 +1,6 @@
-# The State of Professional AI — 2026 Mid-Year Edition
+# The State of Professional AI — 2026 Edition
 
-*Published 2026-07-13 by [the Open Institute for Professional Judgment](INSTITUTE.md). Every number below is reproducible: the instruments, raw data, and methods are open. Cite freely.*
+*Published 2026-07-14 by [the Open Institute for Professional Judgment](INSTITUTE.md). Every number below is reproducible: the instruments, raw data, and methods are open. Cite freely.*
 
 ## 1. The skill ecosystem (the census)
 
@@ -20,7 +20,7 @@ Season 1 — *The Meridian Renewal* — opened 2026-07-11: identical hidden stat
 
 ## 4. The library (this project as a specimen)
 
-**466 skills · 50 production / 404 stable / 12 experimental — 100% at SkillSpec L3 (CI-enforced).** 1178 GitHub stars. The free-runs ledger (sponsor-funded, counts only): **32 runs served** across 7 recorded days (+12 in the period).
+**496 skills · 50 production / 434 stable / 12 experimental — 100% at SkillSpec L3 (CI-enforced).** 1181 GitHub stars. The free-runs ledger (sponsor-funded, counts only): **36 runs served** across 8 recorded days (+16 in the period).
 
 ## 5. The year's theses
 

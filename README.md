@@ -1,4 +1,4 @@
-# 🧠 PM Skills — 466 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
+# 🧠 PM Skills — 496 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
 
 [![In the official Anthropic plugin directory](https://img.shields.io/badge/Anthropic%20Plugin%20Directory-Published-D97757?logo=anthropic&logoColor=white)](#-quick-install-2-minutes)
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
@@ -86,7 +86,7 @@
 
 A community-built library of professional skills for every field — product management, engineering, customer success, marketing, social media, writers, design, legal, finance, HR, sales, operations, research, and more. Each skill is a structured `SKILL.md` file that teaches an AI assistant how to produce professional-grade outputs for your workflows. Skills run natively in **Claude Code** and **Hermes Agent** (same open `SKILL.md` standard), and ship as ready-to-paste exports for **ChatGPT** and **Gemini** — see [Works With](#-works-with--cross-tool-compatibility).
 
-**🆕 v49.0.0 — the professions release:** six industries nobody built AI for — 🏗 **[pm-construction](plugins/pm-construction)** (bid review, change orders, punch lists, toolbox talks, delay claims), 🔧 **[pm-hardware](plugins/pm-hardware)** (hardware PRDs, BOM review, EVT/DVT/PVT gates, FAT, tooling risk, 8D), 📦 **[pm-supplychain](plugins/pm-supplychain)**, 🌍 **[pm-climate](plugins/pm-climate)** (with a greenwashing self-audit), 🛡 **[pm-insurance](plugins/pm-insurance)** + 🏦 **[pm-banking](plugins/pm-banking)** — plus depth for the fifty that carry the library: 📖 **worked examples on all 50 production skills** (gold-standard artifacts with why-notes), 🎯 **skill-specific 0–40 scoring rubrics on all 50**, ⌨️ CLI field-by-field prompting, and 📜 **[SkillSpec in its own repo](https://github.com/mohitagw15856/skillspec)** with RFC governance. **496 skills · 72 bundles · 31 professions.** *Earlier — v48, the institution release:* 🏛 **[The Open Institute for Professional Judgment](https://mohitagw15856.github.io/pm-claude-skills/institute.html)** — SkillSpec (+ its [foundation trajectory](docs/FOUNDATION.md)), the Operator's Exam, SkillBench rankings, the census, the Season (with the Hall + automated rollover), and **[The State of Professional AI 2026](docs/reports/state-of-professional-ai-2026.md)**; 🏢 the **[Org Edition](org/)** (`docker compose up` = your company's library on your infra), 🎓 the **[6-week Syllabus](docs/syllabus/)** with SCORM export, 🎖 **[Agent Conformance](conformance/)** certification, 💼 the **[creator economy](docs/CREATORS.md)** (0% take). Plus the frontier wave: 🏆 the Season is OPEN, 🌙 the Nightwatch, ⏰ standing skills, 🗺 the Atlas, 📻 the Morning Show, 👥 multiplayer Boardroom, 🧠 the 7b pipeline. *Earlier — v46, the arsenal release:* ⚔️ **[`pm-warroom`](plugins/pm-warroom)** — the adversarial bundle (Premortem Assassin's twelve failure vectors, Devil's Twin writes the opposition's best memo, Metric Gaslighting Detector's eleven distortions, Decision Autopsy, Assumption Bounty), 🧮 **three more skills that do real math** (Erlang-C staffing, schedule Monte Carlo over the task DAG, tornado sensitivity — CI-pinned exact outputs), 🎭 shareable singles (eulogy-writer, wedding-speech, fine-appeal-letter, skill-fusion), 🎨 **generative identities on every skill page and playground card** (five banner families seeded from the name, matching colours + monograms, ⓘ links), 🎯 **466/466 SkillSpec L3 — CI-enforced**, 🧪 the 76-assertion scripts harness, 📱 the **PWA** (no-API core offline), 📈 [public vitals](https://mohitagw15856.github.io/pm-claude-skills/status.html) + self-operating crons, 🗺 [REPO-MAP](REPO-MAP.md). **466 skills · 66 bundles.** *Earlier — v45, the spectacle release:* Duels, the Charter, Galaxy 3D, the collapsing Tower of Claims, the Stage, holo cards & Skill City. *Earlier — v44, the legendary release:* Campaign mode, the Professional Work Handbook (2,297-rule Anti-Pattern Almanac), the Reckoning, the ecosystem package manager, zero-key MCP sampling, pm-skills-tools, the SkillSpec badge & the census. *Earlier — v43, the local-first & learning wave:* the 🗂 workspace bridge, Boardroom replay links & bench packs, 🎤 The Panel, 🎓 The Academy, 🎁 Wrapped, the evolution loop & pm-method. *Earlier — v42:* depth (`references/` + `templates/`) on all Production-Ready skills, 🔊 Theatre voices, Firm calibration & the CI smoke suite. *Earlier — v41, the modern skills wave:* two new domains — **🤖 [`pm-agentnative`](plugins/pm-agentnative)** (build for non-human users: [`mcp-server-spec`](skills/mcp-server-spec/SKILL.md), [`agent-readiness-audit`](skills/agent-readiness-audit/SKILL.md), [`agent-era-pricing`](skills/agent-era-pricing/SKILL.md), [`human-in-the-loop-design`](skills/human-in-the-loop-design/SKILL.md), [`voice-agent-design`](skills/voice-agent-design/SKILL.md)) and **🧑‍💼 [`pm-aiwork`](plugins/pm-aiwork)** (the questions every manager has this year: [`ai-roi-audit`](skills/ai-roi-audit/SKILL.md), [`role-redesign-for-ai`](skills/role-redesign-for-ai/SKILL.md), [`ai-usage-policy`](skills/ai-usage-policy/SKILL.md), [`ai-assisted-performance-review`](skills/ai-assisted-performance-review/SKILL.md), [`ai-content-audit`](skills/ai-content-audit/SKILL.md)) — plus 5 singles ([`ai-code-review`](skills/ai-code-review/SKILL.md), [`synthetic-user-research`](skills/synthetic-user-research/SKILL.md), [`async-decision-memo`](skills/async-decision-memo/SKILL.md), [`brand-impersonation-response`](skills/brand-impersonation-response/SKILL.md), [`feature-sunset-plan`](skills/feature-sunset-plan/SKILL.md)). Also: 🌠 Galaxy shooting stars + a 🎲 Warp button, 🎓 frameable [certificates](web/export-doc.js) from the arena pages, and 🔌 [MCP pairings](connectors/mcp-pairings.md) — skills that act through your connected servers. *Earlier — v40: [The Firm](https://mohitagw15856.github.io/pm-claude-skills/firm.html). v39 (three waves):* ⚡ *Superpowers:* [SkillBench](skillbench/) (the professional-work benchmark for models) · the [community registry](community/) (npm-for-skills) · the [Interview Gauntlet](https://mohitagw15856.github.io/pm-claude-skills/gauntlet.html) · [CI recipes](action/examples/) + [ambient hooks](hooks/) · Hugging Face [dataset publishing](dataset/) · [localization to 8 languages](i18n/). 🤯 *Breathtaking:* [living artifacts](https://mohitagw15856.github.io/pm-claude-skills/), [Document X-ray](https://mohitagw15856.github.io/pm-claude-skills/xray.html), [The Gym](https://mohitagw15856.github.io/pm-claude-skills/gym.html), [`pm-vision`](plugins/pm-vision), [`style-fingerprint`](skills/style-fingerprint/SKILL.md), [`evidence-lock`](skills/evidence-lock/SKILL.md). ✨ *Revamped:* the playground command bar + Galaxy 2.0 with a guided Sky tour. **466 skills · 66 bundles · 25 professions.** → [CHANGELOG](CHANGELOG.md) · [all releases](https://github.com/mohitagw15856/pm-claude-skills/releases).
+**🆕 v49.0.0 — the professions release:** six industries nobody built AI for — 🏗 **[pm-construction](plugins/pm-construction)** (bid review, change orders, punch lists, toolbox talks, delay claims), 🔧 **[pm-hardware](plugins/pm-hardware)** (hardware PRDs, BOM review, EVT/DVT/PVT gates, FAT, tooling risk, 8D), 📦 **[pm-supplychain](plugins/pm-supplychain)**, 🌍 **[pm-climate](plugins/pm-climate)** (with a greenwashing self-audit), 🛡 **[pm-insurance](plugins/pm-insurance)** + 🏦 **[pm-banking](plugins/pm-banking)** — plus depth for the fifty that carry the library: 📖 **worked examples on all 50 production skills** (gold-standard artifacts with why-notes), 🎯 **skill-specific 0–40 scoring rubrics on all 50**, ⌨️ CLI field-by-field prompting, and 📜 **[SkillSpec in its own repo](https://github.com/mohitagw15856/skillspec)** with RFC governance. **496 skills · 72 bundles · 31 professions.** *Earlier — v48, the institution release:* 🏛 **[The Open Institute for Professional Judgment](https://mohitagw15856.github.io/pm-claude-skills/institute.html)** — SkillSpec (+ its [foundation trajectory](docs/FOUNDATION.md)), the Operator's Exam, SkillBench rankings, the census, the Season (with the Hall + automated rollover), and **[The State of Professional AI 2026](docs/reports/state-of-professional-ai-2026.md)**; 🏢 the **[Org Edition](org/)** (`docker compose up` = your company's library on your infra), 🎓 the **[6-week Syllabus](docs/syllabus/)** with SCORM export, 🎖 **[Agent Conformance](conformance/)** certification, 💼 the **[creator economy](docs/CREATORS.md)** (0% take). Plus the frontier wave: 🏆 the Season is OPEN, 🌙 the Nightwatch, ⏰ standing skills, 🗺 the Atlas, 📻 the Morning Show, 👥 multiplayer Boardroom, 🧠 the 7b pipeline. *Earlier — v46, the arsenal release:* ⚔️ **[`pm-warroom`](plugins/pm-warroom)** — the adversarial bundle (Premortem Assassin's twelve failure vectors, Devil's Twin writes the opposition's best memo, Metric Gaslighting Detector's eleven distortions, Decision Autopsy, Assumption Bounty), 🧮 **three more skills that do real math** (Erlang-C staffing, schedule Monte Carlo over the task DAG, tornado sensitivity — CI-pinned exact outputs), 🎭 shareable singles (eulogy-writer, wedding-speech, fine-appeal-letter, skill-fusion), 🎨 **generative identities on every skill page and playground card** (five banner families seeded from the name, matching colours + monograms, ⓘ links), 🎯 **466/466 SkillSpec L3 — CI-enforced**, 🧪 the 76-assertion scripts harness, 📱 the **PWA** (no-API core offline), 📈 [public vitals](https://mohitagw15856.github.io/pm-claude-skills/status.html) + self-operating crons, 🗺 [REPO-MAP](REPO-MAP.md). **466 skills · 66 bundles.** *Earlier — v45, the spectacle release:* Duels, the Charter, Galaxy 3D, the collapsing Tower of Claims, the Stage, holo cards & Skill City. *Earlier — v44, the legendary release:* Campaign mode, the Professional Work Handbook (2,470-rule Anti-Pattern Almanac), the Reckoning, the ecosystem package manager, zero-key MCP sampling, pm-skills-tools, the SkillSpec badge & the census. *Earlier — v43, the local-first & learning wave:* the 🗂 workspace bridge, Boardroom replay links & bench packs, 🎤 The Panel, 🎓 The Academy, 🎁 Wrapped, the evolution loop & pm-method. *Earlier — v42:* depth (`references/` + `templates/`) on all Production-Ready skills, 🔊 Theatre voices, Firm calibration & the CI smoke suite. *Earlier — v41, the modern skills wave:* two new domains — **🤖 [`pm-agentnative`](plugins/pm-agentnative)** (build for non-human users: [`mcp-server-spec`](skills/mcp-server-spec/SKILL.md), [`agent-readiness-audit`](skills/agent-readiness-audit/SKILL.md), [`agent-era-pricing`](skills/agent-era-pricing/SKILL.md), [`human-in-the-loop-design`](skills/human-in-the-loop-design/SKILL.md), [`voice-agent-design`](skills/voice-agent-design/SKILL.md)) and **🧑‍💼 [`pm-aiwork`](plugins/pm-aiwork)** (the questions every manager has this year: [`ai-roi-audit`](skills/ai-roi-audit/SKILL.md), [`role-redesign-for-ai`](skills/role-redesign-for-ai/SKILL.md), [`ai-usage-policy`](skills/ai-usage-policy/SKILL.md), [`ai-assisted-performance-review`](skills/ai-assisted-performance-review/SKILL.md), [`ai-content-audit`](skills/ai-content-audit/SKILL.md)) — plus 5 singles ([`ai-code-review`](skills/ai-code-review/SKILL.md), [`synthetic-user-research`](skills/synthetic-user-research/SKILL.md), [`async-decision-memo`](skills/async-decision-memo/SKILL.md), [`brand-impersonation-response`](skills/brand-impersonation-response/SKILL.md), [`feature-sunset-plan`](skills/feature-sunset-plan/SKILL.md)). Also: 🌠 Galaxy shooting stars + a 🎲 Warp button, 🎓 frameable [certificates](web/export-doc.js) from the arena pages, and 🔌 [MCP pairings](connectors/mcp-pairings.md) — skills that act through your connected servers. *Earlier — v40: [The Firm](https://mohitagw15856.github.io/pm-claude-skills/firm.html). v39 (three waves):* ⚡ *Superpowers:* [SkillBench](skillbench/) (the professional-work benchmark for models) · the [community registry](community/) (npm-for-skills) · the [Interview Gauntlet](https://mohitagw15856.github.io/pm-claude-skills/gauntlet.html) · [CI recipes](action/examples/) + [ambient hooks](hooks/) · Hugging Face [dataset publishing](dataset/) · [localization to 8 languages](i18n/). 🤯 *Breathtaking:* [living artifacts](https://mohitagw15856.github.io/pm-claude-skills/), [Document X-ray](https://mohitagw15856.github.io/pm-claude-skills/xray.html), [The Gym](https://mohitagw15856.github.io/pm-claude-skills/gym.html), [`pm-vision`](plugins/pm-vision), [`style-fingerprint`](skills/style-fingerprint/SKILL.md), [`evidence-lock`](skills/evidence-lock/SKILL.md). ✨ *Revamped:* the playground command bar + Galaxy 2.0 with a guided Sky tour. **466 skills · 66 bundles · 25 professions.** → [CHANGELOG](CHANGELOG.md) · [all releases](https://github.com/mohitagw15856/pm-claude-skills/releases).
 
 ### ▶ See it in action — [try the live Skill Playground](https://mohitagw15856.github.io/pm-claude-skills/)
 
@@ -169,7 +169,7 @@ In Claude Code, [`/firm`](commands/firm.md) runs the same session natively — g
 | 🔭 [Competitor Teardown](skills/competitor-teardown) | "what are rivals up to?" | a positioning map, feature gaps & strategy |
 | 📝 [Meeting Notes](skills/meeting-notes) | a raw transcript | decisions, owners & next steps |
 
-→ Want proof first? See [**real sample outputs**](https://mohitagw15856.github.io/pm-claude-skills/examples.html) from each skill. Like what you see? [**Install in 2 minutes**](#-quick-install-2-minutes) · [browse all 451 skills](#️-all-451-skills) · [**⭐ star the repo**](https://github.com/mohitagw15856/pm-claude-skills/stargazers) so others find it.
+→ Want proof first? See [**real sample outputs**](https://mohitagw15856.github.io/pm-claude-skills/examples.html) from each skill. Like what you see? [**Install in 2 minutes**](#-quick-install-2-minutes) · [browse all 496 skills](#️-all-skills-by-profession) · [**⭐ star the repo**](https://github.com/mohitagw15856/pm-claude-skills/stargazers) so others find it.
 
 ---
 
@@ -192,7 +192,7 @@ It's not just text — the playground exports every result as a **professionally
   </tr>
 </table>
 
-> Generate yours: run a skill in the [Playground](https://mohitagw15856.github.io/pm-claude-skills/), then **Download → PDF · Paper / Modern / Technical**. Add a `Brand color: #hex` line to your context and it tints to match (last tile). Personal documents live in the [`pm-personal`](#️-all-451-skills) bundle (résumé, cover letter, bio, LinkedIn, portfolio, one-pager).
+> Generate yours: run a skill in the [Playground](https://mohitagw15856.github.io/pm-claude-skills/), then **Download → PDF · Paper / Modern / Technical**. Add a `Brand color: #hex` line to your context and it tints to match (last tile). Personal documents live in the [`pm-personal`](#️-all-skills-by-profession) bundle (résumé, cover letter, bio, LinkedIn, portfolio, one-pager).
 
 ---
 
@@ -255,7 +255,7 @@ flowchart LR
 | **📊 Measure** | Track outcomes & analyse | `metrics-framework` · `cohort-analysis` · `ab-test-planner` · `churn-analysis` |
 | **📣 Communicate** | Report up and out | `executive-update` · `board-deck-narrative` · `stakeholder-update` · `qbr-deck` |
 
-> New here? Start with the [**top-tier skills**](#️-skill-tiers--start-with-the-strongest), or jump straight to [**all 451 skills**](#️-all-451-skills) grouped by profession.
+> New here? Start with the [**top-tier skills**](#️-skill-tiers--start-with-the-strongest), or jump straight to [**all 496 skills**](#️-all-skills-by-profession) grouped by profession.
 
 </details>
 
@@ -373,7 +373,7 @@ Connect the Firm or the Boardroom to a **real folder on disk** (the 🗂 chip, C
 ### 🗺 The Campaign, the Book, and the Ledger
 
 - **[Your First 90 Days](https://mohitagw15856.github.io/pm-claude-skills/campaign.html)** — campaign mode: one story across every arena. You join a fictional Series A startup, and your *real* arena scores write the plot — lose the Gym negotiation and the account churns; get fooled in the Panel and the bad hire haunts Week 10. Replayable, saves locally, certificate at Day 90.
-- **[The Professional Work Handbook](https://mohitagw15856.github.io/pm-claude-skills/handbook.html)** — the library as a book: 11 chapters of craft (the Production-Ready tier in full) + **the Anti-Pattern Almanac: 2,237 rules of professional judgment** from all 466 skills. Printable ([PDF](web/docs-assets/handbook.pdf)), free, regenerated every release.
+- **[The Professional Work Handbook](https://mohitagw15856.github.io/pm-claude-skills/handbook.html)** — the library as a book: 11 chapters of craft (the Production-Ready tier in full) + **the Anti-Pattern Almanac: 2,237 rules of professional judgment** from all 496 skills. Printable ([PDF](web/docs-assets/handbook.pdf)), free, regenerated every release.
 - **[The Reckoning](https://mohitagw15856.github.io/pm-claude-skills/reckoning.html)** — your prediction ledger: confidences, due dates, resurfacing, and a personal **calibration curve with a Brier score**. Also in the CLI: `npx pm-claude-skills reckoning`. When you say 80%, does it happen 80% of the time? Now you'll know.
 - **🔏 The chain of trust** — security scan → [sha256 content pinning](community/README.md#-trust--integrity--the-full-chain) in the registry → install lockfile + `npx pm-claude-skills verify` drift detection → npm provenance. Verifiable end to end, no trust in us required.
 
@@ -443,7 +443,7 @@ The bot runs the skill and posts the result as a reply. `/skill list` shows usag
 
 **Grounded in canonical frameworks.** These aren't invented prompts — each skill encodes a proven method and cites it: RICE (Intercom), Jobs-to-be-Done (Christensen), Continuous Discovery (Teresa Torres), Porter's Five Forces, the Pyramid Principle (Minto), Google SRE, WCAG, *Obviously Awesome* (April Dunford), and more. The source shows as a **"📚 Based on"** line on every [skill page](https://mohitagw15856.github.io/pm-claude-skills/skill/rice-prioritisation.html) and in the Playground.
 
-**And measured, not just claimed.** An [eval harness](evals/) runs each skill against a held-out test case, then an LLM judge (Opus 4.8) rates the output on four dimensions — **structure, completeness, usefulness, grounding** — averaged across two models. **208 skills are eval-scored** today (and climbing); the rest are reviewed against the [authoring standard](SKILL-AUTHORING-STANDARD.md). PRs are auto-checked for **structure**; eval scoring is run deliberately (after merge) via the [**Evaluate selected bundles**](.github/workflows/eval-bundles.yml) Action and published to the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html).
+**And measured, not just claimed.** An [eval harness](evals/) runs each skill against a held-out test case, then an LLM judge (Opus 4.8) rates the output on four dimensions — **structure, completeness, usefulness, grounding** — averaged across two models. **28 skills are eval-scored** today (and climbing); the rest are reviewed against the [authoring standard](SKILL-AUTHORING-STANDARD.md). PRs are auto-checked for **structure**; eval scoring is run deliberately (after merge) via the [**Evaluate selected bundles**](.github/workflows/eval-bundles.yml) Action and published to the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html).
 
 **The qualitative half — real time saved.** Scores measure quality; **[case studies](CASE_STUDIES.md)** measure outcomes. See the kind of before → after a skill delivers (PRD: ~2 days → ~25 min), and **[add your own 2-minute ROI story](../../issues/new?template=roi-story.yml)** — we'll feature it.
 
@@ -503,13 +503,13 @@ Most skill repos are a folder of prompts. This one is a **system** — measured,
 >
 > ⚠️ **You don't need `npm install pm-claude-skills`** — it's a CLI, not a library, so there's nothing to import. Use `npx pm-claude-skills …` (it always runs the latest). `npm install` just downloads it and does nothing on its own.
 
-**With the [`skills`](https://github.com/vercel-labs/skills) CLI** (the open agent-skills installer that works across Claude Code, Cursor, Codex, OpenCode & 60+ agents) — pick from all 451 interactively:
+**With the [`skills`](https://github.com/vercel-labs/skills) CLI** (the open agent-skills installer that works across Claude Code, Cursor, Codex, OpenCode & 60+ agents) — pick from all 496 interactively:
 
 ```bash
 npx skills add mohitagw15856/pm-claude-skills            # browse & pick (auto-detects your agent)
 npx skills add mohitagw15856/pm-claude-skills --list     # just preview the catalog
 npx skills add mohitagw15856/pm-claude-skills --skill prd-template   # grab one
-npx skills add mohitagw15856/pm-claude-skills --skill '*'            # install all 451
+npx skills add mohitagw15856/pm-claude-skills --skill '*'            # install all 496
 ```
 
 **Or our own installer** — via the [`pm-claude-skills`](https://www.npmjs.com/package/pm-claude-skills) npm package (Windows/macOS/Linux, needs Node), which also installs subagents, slash commands & cross-tool exports:
@@ -518,7 +518,7 @@ npx skills add mohitagw15856/pm-claude-skills --skill '*'            # install a
 npx pm-claude-skills add --agent claude     # or: codex · cursor · hermes · openclaw
 ```
 
-**Or one-line MCP** — make all 451 skills + 5 workflow recipes available in *every* session of any MCP client (Claude Code, Claude Desktop, Cursor, Windsurf), no per-file install:
+**Or one-line MCP** — make all 496 skills + 11 workflow recipes available in *every* session of any MCP client (Claude Code, Claude Desktop, Cursor, Windsurf), no per-file install:
 
 ```bash
 claude mcp add pm-skills -- npx -y pm-claude-skills-mcp
@@ -538,7 +538,7 @@ claude plugin install pm-essentials@pm-claude-skills     # Core PM + Word tracke
 
 claude plugin install pm-delivery@pm-claude-skills       # Delivery + PowerPoint auditor
 
-claude plugin install pm-engineering@pm-claude-skills    # Engineering (35 skills) 🆕
+claude plugin install pm-engineering@pm-claude-skills    # Engineering (45 skills) 🆕
 
 claude plugin install pm-cs@pm-claude-skills             # Customer Success 🆕
 
@@ -579,7 +579,7 @@ ln -s ~/pm-claude-skills/skills/* ~/.claude/skills/
 <details>
 <summary>Read more ↓</summary>
 
-The same 451 skills reach you through every channel — pick whatever fits your stack:
+The same 496 skills reach you through every channel — pick whatever fits your stack:
 
 | Channel | Get it |
 |---|---|
@@ -598,7 +598,7 @@ The same 451 skills reach you through every channel — pick whatever fits your 
 | 🖥️ **IDE rules** | Generated exports for **Cursor, Windsurf, Aider, Cline, Continue, Zed, Roo, Kilo Code** — [`exports/`](exports/) |
 | 🤖 **Agents & answer engines** | [`llms.txt`](https://mohitagw15856.github.io/pm-claude-skills/llms.txt) makes the whole library discoverable & citable |
 
-> **208 of 451 skills are eval-scored, averaging 4.8/5** — see the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html).
+> **153 curated eval cases ship with the library, and 28 skills carry published judge scores (avg 4.41/5)** — see the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html).
 
 > 🧠 **Give your skills memory:** the [Professional Brain](BRAIN.md) is a local markdown folder skills read, write back to, and act on. It's a folder + one file to start — **[5-minute Quickstart](BRAIN_QUICKSTART.md)**.
 
@@ -620,7 +620,7 @@ There are two kinds of support. **Native `SKILL.md` agents** read the file as-is
 auto-discover skills from the `description` frontmatter. **Other tools** take the markdown
 body as a system prompt — for those we ship ready-made [exports](#ready-to-use-exports).
 
-**In your editor (VS Code / Cursor):** the [**`vscode-extension/`**](vscode-extension/) brings all 451 skills into the Command Palette — search and *insert a skill as context* for Copilot/Cursor chat, copy it, or open it in the Playground.
+**In your editor (VS Code / Cursor):** the [**`vscode-extension/`**](vscode-extension/) brings all 496 skills into the Command Palette — search and *insert a skill as context* for Copilot/Cursor chat, copy it, or open it in the Playground.
 
 | Platform | How it works | Auto-trigger? |
 |---|---|---|
@@ -782,7 +782,7 @@ ANTHROPIC_API_KEY=sk-ant-… npx pm-claude-skills generate --from ./team-process
 
 **🏆 Skill Leaderboard — [evals](evals/).** An LLM-as-judge harness scores each skill across Claude models on structure, completeness, usefulness, and grounding. **[View the leaderboard →](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)**
 
-> **Score the *whole* library, cheaply.** `npm run eval:gen-cases` writes a representative input for **all 451 skills** (curated cases kept verbatim; the rest auto-generated), then `npm run eval:all` runs the full pass on Haiku for **~$2** total. The weakest scorers can then be auto-rewritten with **`npm run improve -- <skill>`** (`/improve`), which keeps a change only if the score goes up.
+> **Score the *whole* library, cheaply.** `npm run eval:gen-cases` writes a representative input for **all 496 skills** (curated cases kept verbatim; the rest auto-generated), then `npm run eval:all` runs the full pass on Haiku for **~$2** total. The weakest scorers can then be auto-rewritten with **`npm run improve -- <skill>`** (`/improve`), which keeps a change only if the score goes up.
 
 </details>
 
@@ -834,7 +834,7 @@ Not sure which plugin to install? Here's what each one covers:
 | **pm-delivery** | ab-test-planner, go-to-market-planner, pptx-slide-auditor, product-launch-checklist, retro-analysis, sprint-brief, sprint-planning, technical-spec-template, user-story-writer | Everything you need to ship: sprint planning, user stories, launch checklists, A/B test design, retros, and PowerPoint auditing. The most-used plugin for day-to-day delivery. |
 | **pm-design** | accessibility-audit, design-critique, design-system-audit, ux-research-plan | For PMs who work closely with design. Covers accessibility audits, structured design critiques, design system reviews, and UX research planning. |
 | **pm-discovery** | assumption-mapper, customer-journey-map, discovery-interview-guide, job-story-mapper, user-interview-synthesis | The discovery toolkit: map assumptions, build journey maps, write interview guides, synthesise user interviews, and reframe features as job stories. |
-| **pm-engineering** | 37 skills across API docs, architecture, CI/CD, incident response, security, observability, and more | The largest plugin — built for PMs embedded in engineering teams. Covers technical specs, runbooks, on-call processes, architecture decisions, and engineering hiring. |
+| **pm-engineering** | 45 skills across API docs, architecture, CI/CD, incident response, security, observability, and more | The largest plugin — built for PMs embedded in engineering teams. Covers technical specs, runbooks, on-call processes, architecture decisions, and engineering hiring. |
 | **pm-figma** | figma-annotation-guide, figma-component-audit, figma-design-brief, figma-design-critique-pm, figma-design-qa, figma-design-review, figma-prototype-plan, figma-spacing-system, figma-user-flow-planner, figma-variant-matrix | Purpose-built for Figma workflows. Covers design QA, component audits, spacing systems, user flow planning, variant matrices, and design briefs — all from a PM perspective. |
 | **pm-finance** | budget-variance-analysis, financial-due-diligence, financial-model-narrative, investor-pitch-deck, tax-planning-checklist | For PMs who touch financials — explaining budget variances, building investor pitch decks, narrating financial models, and running due diligence reviews. |
 | **pm-gtm** | competitor-teardown, content-calendar, email-campaign, go-to-market, media-pitch, product-positioning-doc, seo-content-brief, social-media-strategy | The go-to-market toolkit: positioning docs, competitor teardowns, GTM plans, content calendars, email campaigns, and SEO briefs. Best for PMs who own launch and demand. |
@@ -878,7 +878,7 @@ Not sure which plugin to install? Here's what each one covers:
 
 On May 5, 2026, Anthropic [released their first agent templates](https://www.anthropic.com/news/finance-agents) — pre-packaged Claude agents that combine **skills, connectors, and subagents** into ready-to-run workflows for financial services.
 
-This library is the largest open-source collection of professional skills available — covering 20 professions beyond financial services. **The 451 skills here are the building blocks for agent templates outside of finance.**
+This library is the largest open-source collection of professional skills available — covering 20 professions beyond financial services. **The 496 skills here are the building blocks for agent templates outside of finance.**
 
 ### What is an agent template?
 
@@ -1006,7 +1006,7 @@ This repo was built alongside a published 16-part article series on Medium.
 <details>
 <summary>Read more ↓</summary>
 
-A 451-skill library doesn't have 451 equally-mature skills, and pretending otherwise
+A 496-skill library doesn't have 496 equally-mature skills, and pretending otherwise
 wastes your time. Skills are tiered honestly so you can start with the best work:
 
 - 🟢 **Production-Ready (50)** — battle-tested, stable output, used in real work. Includes the three skills with computed Python helpers (sprint planning, RICE, customer health). **Start here.**
@@ -1021,7 +1021,7 @@ If you're new, install `pm-essentials` and try a couple of Production-Ready skil
 
 ---
 
-## 🗂️ All 451 Skills
+## 🗂️ All Skills, by Profession
 
 <details>
 <summary>Read more ↓</summary>
@@ -1101,7 +1101,7 @@ pull request**, and once it's merged you earn a badge to show off in your own re
 ```
 
 Community listings live in their authors' own repos and are **community-maintained — not
-eval-scored or security-audited** (that's the [curated library](#️-all-451-skills) above). Want
+eval-scored or security-audited** (that's the [curated library](#️-all-skills-by-profession) above). Want
 your skill *in* the curated library instead? See **Contributing** below.
 
 ---
@@ -1192,7 +1192,7 @@ claude plugin install pm-rituals@pm-claude-skills
 
 claude plugin install pm-gtm@pm-claude-skills
 
-claude plugin install pm-engineering@pm-claude-skills    # Engineering (35 skills)
+claude plugin install pm-engineering@pm-claude-skills    # Engineering (45 skills)
 
 claude plugin install pm-cs@pm-claude-skills             # Customer Success
 
@@ -1279,7 +1279,7 @@ below, a reciprocal link is always welcome. 🙌
 <details>
 <summary>Read more ↓</summary>
 
-The 155 skills in this library are built for general professional workflows. But the most powerful version of Claude Skills is one built specifically for *your* team — your templates, your terminology, your processes, your quality standards.
+The 496 skills in this library are built for general professional workflows. But the most powerful version of Claude Skills is one built specifically for *your* team — your templates, your terminology, your processes, your quality standards.
 
 **What custom skills look like in practice:**
 
@@ -1331,7 +1331,7 @@ Stars unlock the next wave of skills and features. We've hit every milestone so 
 | 1,000 ⭐ | Startup Founder kit — *delivered, and then some: the Founders **and** Educators bundles + a browser extension for ChatGPT/Claude.ai/Gemini* | ✅ Shipped (v24.0.0) |
 | **2,000 ⭐** | 2 community-voted profession bundles + the browser & VS Code extensions published to their stores | 🔓 **Current goal** |
 | 3,500 ⭐ | Community **skill packs** (curated role/industry bundles) + internationalised skill descriptions | 🔒 Locked |
-| 5,000 ⭐ | Public **contributor leaderboard** + the push to 451 skills | 🔒 Locked |
+| 5,000 ⭐ | Public **contributor leaderboard** + the push to 600 skills | 🔒 Locked |
 
 **[⭐ Star this repo to unlock the next milestone →](https://github.com/mohitagw15856/pm-claude-skills)** — we're at **2,000⭐** next.
 

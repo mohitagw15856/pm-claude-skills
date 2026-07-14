@@ -13,7 +13,10 @@ const spineIn = (pages * 0.002252).toFixed(3);            // Lulu/KDP white pape
 const W = (0.125 + 6 + +spineIn + 6 + 0.125).toFixed(3);  // bleed+back+spine+front+bleed
 const H = (9 + 0.25).toFixed(3);
 const { skills } = JSON.parse(readFileSync(join(root, 'web', 'skills.json'), 'utf8'));
-const rules = 2297;
+// Rule count comes from the generated handbook (its embedded stats), never hardcoded —
+// a stale number on a printed cover is unfixable after the fact.
+const rules = +(readFileSync(join(root, 'web', 'handbook.html'), 'utf8').match(/"rules":(\d+)/)?.[1] ?? 0);
+if (!rules) { console.error('Could not read rule count from web/handbook.html — rebuild the handbook first.'); process.exit(1); }
 const html = `<!DOCTYPE html><html><head><meta charset="utf-8"><style>
 @page { size: ${W}in ${H}in; margin: 0; } body { margin:0; width:${W}in; height:${H}in; display:flex; font-family:Georgia,serif; color:#f4e6bf; background:linear-gradient(160deg,#141018,#241a30 60%,#101318); }
 .back,.front { width:6.125in; padding:.6in; box-sizing:border-box; } .spine { width:${spineIn}in; background:#c9a227; color:#141018; writing-mode:vertical-rl; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:14pt; }

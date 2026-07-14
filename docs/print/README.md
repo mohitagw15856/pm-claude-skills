@@ -3,9 +3,9 @@
 Both artifacts are print-ready today; this is the press-go runbook for putting them on shelves. Physical objects recruit people the internet can't reach, and both are margin-positive without sponsorship.
 
 ## The Handbook (paperback)
-- **Interior:** `node docs/print/build-interior.mjs` renders `web/handbook.html` to `handbook-interior-6x9.pdf` — 6×9" trade with gutter-safe 0.625" margins. **Currently 299 pages.** (The A4 `web/docs-assets/handbook.pdf` is the free digital edition, not the print interior.)
-- **Cover:** `node docs/print/build-covers.mjs --pages <N>` renders front/back/spine to `handbook-cover.pdf`; the interior script prints the N to use. Current: 12.923"×9.250", spine 0.673" @ 299pp. **Re-run both after big releases.**
-- **Route A — Lulu (fastest, no inventory):** lulu.com → paperback → 6×9 (US Trade), black & white, 299 pages → upload `handbook-interior-6x9.pdf` + `handbook-cover.pdf` → price at cost+$6 → get a storefront link for the README. ~30 minutes.
+- **Interior:** `node docs/print/build-interior.mjs` renders `web/handbook.html` to `handbook-interior-6x9.pdf` — 6×9" trade with gutter-safe 0.625" margins. **Currently 342 pages.** (The A4 `web/docs-assets/handbook.pdf` is the free digital edition, not the print interior.)
+- **Cover:** `node docs/print/build-covers.mjs --pages <N>` renders front/back/spine to `handbook-cover.pdf`; the interior script prints the N to use. Current: see build output — spine derives from the printed page count. **Re-run both after big releases.**
+- **Route A — Lulu (fastest, no inventory):** lulu.com → paperback → 6×9 (US Trade), black & white, 342 pages → upload `handbook-interior-6x9.pdf` + `handbook-cover.pdf` → price at cost+$6 → get a storefront link for the README. ~30 minutes.
 - **Route B — Amazon KDP (reach):** same files; needs an ISBN (KDP gives you one free) and 72h review. Royalty ~$4-7 at $24.99.
 
 ## The Operator's Deck (cards)
