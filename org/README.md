@@ -14,3 +14,5 @@ open http://localhost:8080
 - **Nothing phones home.** No telemetry, no license checks, MIT.
 
 Team conventions (shared brains, minutes folders, review gates) are documented in [TEAMS-DECISION.md](../docs/TEAMS-DECISION.md) — the Org Edition is the server-shaped half of that story, operated by you.
+
+**Want it set up for you?** Fixed-scope setup, private skill authoring, and support retainers: [docs/SERVICES.md](../docs/SERVICES.md).

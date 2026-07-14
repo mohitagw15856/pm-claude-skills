@@ -1080,7 +1080,9 @@ If these skills save you time at work — or you're a company that wants your lo
 | 🏢 **Sustaining** | $100 | + **your logo + link here and on the site** · one custom skill / quarter |
 | 💎 **Partner** | $500 | + logo on **every skill page** · a **private skill pack for your team** · priority support |
 
-Full details and where the money goes: **[SPONSORS.md](SPONSORS.md)**.
+Full details and where the money goes: **[SPONSORS.md](SPONSORS.md)**. Sponsorship funds the **[free playground runs](https://mohitagw15856.github.io/pm-claude-skills/)** first — every dollar becomes runs people can watch happen on the live counter.
+
+**Companies:** if you want outcomes rather than a logo — the Org Edition on your infra, private skills for your team, or a support retainer — see **[Services](docs/SERVICES.md)** (fixed scope, transparent pricing, and private work never touches the public rankings).
 
 **Our sponsors:** *be the [first](https://github.com/sponsors/mohitagw15856) — your logo goes right here.*
 
