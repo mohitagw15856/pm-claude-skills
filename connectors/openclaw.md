@@ -37,7 +37,13 @@ clawhub sync --dry-run    # review first — 496 uploads is a statement
 clawhub sync --all
 ```
 
-**Suggested starter set** (personal always-on agent fit): `email-triage`, `morning-intelligence`, `meeting-notes`, `brag-doc`, `stakeholder-update`, `executive-summary`, `competitor-signal-tracker`, `apology-letter`, `budget-builder`, `last-30-days-research`, plus the `pm-lifeadmin` and `pm-personal` bundles. Publish the rest once the starter set proves discovery works.
+**✅ Published 2026-07-14** — the starter set is live under [@mohitagw15856 on ClawHub](https://clawhub.ai/mohitagw15856) at v49.0.0: `email-triage`, `morning-intelligence`, `meeting-notes`, `brag-doc`, `stakeholder-update`, `executive-summary`, `competitor-signal-tracker`, `apology-letter`, `budget-builder`, `last-30-days-research`. Install any of them:
+
+```bash
+clawhub install @mohitagw15856/email-triage      # or: openclaw skills install @mohitagw15856/email-triage
+```
+
+Next tranche (`pm-lifeadmin` + `pm-personal` bundles, then wider) once the starter set proves discovery works. Re-publish at each release so ClawHub never serves a stale body.
 
 **House rule:** publish only from `exports/openclaw/` (the generated, dressed copies), and re-`sync` after each release so ClawHub never serves a stale body.
 
