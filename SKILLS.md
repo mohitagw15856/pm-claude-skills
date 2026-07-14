@@ -1,4 +1,4 @@
-# 🗂️ All 496 Skills — full catalog
+# 🗂️ All 515 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -415,7 +415,7 @@
 | **Support Macro** (`support-macro`) | Write reusable support macros / canned responses that sound human, not robotic. | — |
 | **Support Runbook** (`support-runbook`) | Write a support runbook for handling a recurring issue type consistently. | — |
 
-## 💰 Finance, Ops & Business (60 skills)
+## 💰 Finance, Ops & Business (64 skills)
 
 ### `pm-accounting` — 6 skills
 
@@ -441,13 +441,17 @@
 | **Job Application** (`job-application`) | Tailors a CV and cover letter to a specific job description. | — |
 | **Strategy Memo** (`strategy-memo`) | Write a strategy memo that commits to a bet and says what you won't do. | — |
 
-### `pm-calculators` — 11 skills
+### `pm-calculators` — 15 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Cohort Curve Model** (`cohort-curve-model`) | Fit a retention curve to observed cohort data and project LTV — computed, not estimated. | — |
+| **Exit Waterfall** (`exit-waterfall`) | Compute who gets what at each exit price from a cap table — liquidation preferences, conversion points, and where the founders' share collapses. | — |
+| **FIRE Number** (`fire-number`) | Compute a financial-independence (FIRE) target and years-to-reach with every assumption labeled as an assumption — plus a sensitivity table… | — |
+| **Offer Comparison** (`offer-comparison`) | Compare two or more job offers as total-comp curves over four years — vesting cliffs, bonuses, 401(k) match, and the crossover year computed, not… | — |
 | **Pricing Calculator** (`pricing-calculator`) | Model pricing scenarios — tiers, margins, break-even, and the revenue impact of a price change. | — |
 | **Pricing Sensitivity Model (Van Westendorp)** (`pricing-sensitivity-model`) | Van Westendorp price sensitivity, computed from real survey answers — crossings found by interpolation, not read off a chart by eye. | — |
+| **Refinance Breakeven** (`refinance-breakeven`) | Compute the month a refinance actually starts saving money — payment delta, breakeven month, and total interest on both paths including the… | — |
 | **ROI Estimator** (`roi-estimator`) | Estimate the ROI, payback, and NPV of an investment, project, or purchase. | — |
 | **Runway Calculator** (`runway-calculator`) | Calculate cash runway, burn, and the zero-cash date — and whether you're default alive or dead. | — |
 | **Runway Monte Carlo** (`runway-monte-carlo`) | Cash runway as a distribution, not a number — Monte Carlo simulated. | — |
@@ -542,7 +546,7 @@
 | **NDA Analyser** (`nda-analyser`) | Analyses a Non-Disclosure Agreement clause by clause and flags unusual terms, one-sided provisions, and negotiation points. | — |
 | **Privacy Policy Drafter** (`privacy-policy-drafter`) | Draft a clear, plain-language privacy policy tailored to what a product actually collects and does with data. | ✅ 4.8/5 |
 
-## 🧑 You & Career (41 skills)
+## 🧑 You & Career (43 skills)
 
 ### `pm-career` — 6 skills
 
@@ -555,10 +559,11 @@
 | **Salary Negotiation** (`salary-negotiation`) | Plan a compensation negotiation grounded in numbers and leverage, not nerves. | — |
 | **Self-Review** (`self-review`) | Write a performance self-review that's specific, evidenced, and balanced. | — |
 
-### `pm-comms` — 6 skills
+### `pm-comms` — 7 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Altitude Shifter** (`altitude-shifter`) | Re-pitch one piece of content for four audiences — the board, the engineers, a customer, a new hire — with a delta table showing what changed… | — |
 | **Difficult Conversation** (`difficult-conversation`) | Prepare for and script a hard conversation — conflict, bad news, a boundary, an apology. | — |
 | **Executive Presence** (`executive-presence`) | Sharpen how you show up in high-stakes rooms — communicate with gravitas, concision, and confidence. | — |
 | **Giving Feedback** (`giving-feedback`) | Turn a vague concern into specific, kind, actionable feedback. | — |
@@ -609,7 +614,7 @@
 | **Team Health Check** (`team-health-check`) | Runs a structured team health assessment across key dimensions. | — |
 | **Team Offsite Planner** (`team-offsite-planner`) | Plan a team offsite from goals to full agenda. | — |
 
-### `pm-personal` — 6 skills · 1 eval-scored
+### `pm-personal` — 7 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -617,10 +622,11 @@
 | **LinkedIn Profile** (`linkedin-profile`) | Optimise a LinkedIn profile to be found and to convert. | — |
 | **One-Pager** (`one-pager`) | Distil anything — a startup, product, project, or idea — into a single persuasive page. | — |
 | **Personal Bio** (`personal-bio`) | Write a professional bio in the three lengths you actually need. | — |
+| **Personal Board of Directors** (`personal-board-of-directors`) | Five standing advisors — the Operator, the Skeptic, the CFO, the Coach, the Customer — debate your decision on paper and vote. | — |
 | **Portfolio Page** (`portfolio-page`) | Structure a portfolio or case-study page that shows your work, not just lists it. | — |
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 
-## 🌍 Industries & Public Sector (135 skills)
+## 🌍 Industries & Public Sector (148 skills)
 
 ### `pm-agentnative` — 5 skills
 
@@ -717,6 +723,17 @@
 | **Sycophancy Challenger** (`sycophancy-challenger`) | Flip Claude’s default from validation to adversarial critique. | — |
 | **Teaching Lesson Plan** (`teaching-lesson-plan`) | Design a structured lesson plan for any subject, audience, or format. | — |
 
+### `pm-decoders` — 6 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Benefits Decoder** (`benefits-decoder`) | Decode an employment benefits package into what it's actually worth and where the fine print bites. | — |
+| **HOA Decoder** (`hoa-decoder`) | Decode HOA covenants (CC&Rs) and the fee structure before you buy into them. | — |
+| **Lease Decoder** (`lease-decoder`) | Decode a residential lease into plain English and rank the clauses that can hurt you. | — |
+| **Loan Decoder** (`loan-decoder`) | Decode a personal, auto, or mortgage loan offer into what it really costs and where the traps are. | — |
+| **Medical Bill Decoder** (`medical-bill-decoder`) | Decode an itemized medical bill or EOB into plain English and find the charges worth disputing. | — |
+| **ToS Decoder** (`tos-decoder`) | Decode a terms of service or privacy policy into what you're actually agreeing to, ranked by real-world impact. | — |
+
 ### `pm-devrel` — 6 skills
 
 | Skill | What it does | Eval |
@@ -809,15 +826,17 @@
 | **Subtitle & Caption** (`subtitle-caption`) | Write or translate subtitles/captions that respect reading speed and timing rules. | — |
 | **Transcreation** (`transcreation`) | Transcreate marketing/brand copy for another language and culture — recreate the impact, not the words. | — |
 
-### `pm-method` — 8 skills
+### `pm-method` — 10 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Brainstorming** (`brainstorming`) | Run a real brainstorm — divergent generation without judgment, then convergent selection with explicit criteria — instead of listing ten obvious… | — |
 | **Code Simplification** (`code-simplification`) | Simplify code that works — remove speculative abstraction, dead flexibility, and needless indirection while keeping behaviour identical and verified. | — |
+| **Decision Forensics** (`decision-forensics`) | Reconstruct the decision actually made in a messy Slack, email, or meeting thread into a proper decision record — commitments named, silent… | — |
 | **Executing Plans** (`executing-plans`) | Execute a written plan with discipline — verify each step before advancing, surface deviations instead of improvising around them, and keep a… | — |
 | **Incremental Implementation** (`incremental-implementation`) | Build in small, individually-verified increments that each leave the system working — instead of big-bang changes that fail mysteriously at the end. | — |
 | **Interview Me** (`interview-me`) | Elicit the real requirements by interviewing the requester BEFORE building or writing anything — one question at a time, until the brief is buildable. | — |
+| **Receipts Audit** (`receipts-audit`) | Audit any document against its own sources — every factual claim extracted and graded as evidenced, partially evidenced, unsupported, or… | — |
 | **Subagent Orchestration** (`subagent-orchestration`) | Decompose work across parallel subagents properly — task slicing that avoids collisions, briefs that stand alone, and result integration that… | — |
 | **Verification Before Completion** (`verification-before-completion`) | Verify work actually meets its brief BEFORE declaring it done — a structured self-review pass that catches the gaps, unmet requirements, and… | — |
 | **Writing Plans** (`writing-plans`) | Write an executable work plan BEFORE starting a complex task — decomposed steps with verification points, risks pre-named, and explicit stop… | — |
@@ -852,6 +871,16 @@
 | **Research Protocol** (`research-protocol`) | Write a structured research protocol or study design document. | — |
 | **Synthetic User Research** (`synthetic-user-research`) | Use AI personas for early-stage research signal — with hard guardrails on what synthetic methods can and cannot validate. Use when asked to run… | — |
 
+### `pm-simulators` — 5 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Acquirer Red Team** (`acquirer-red-team`) | Simulate the acquirer's diligence team hunting for reasons to cut your price — their internal red-flags memo with a price-chip estimate per finding. | — |
+| **Opposing Counsel** (`opposing-counsel`) | Read a contract the way the counterparty's lawyer will — hunting for leverage, not fairness. | — |
+| **Regulator Eyes** (`regulator-eyes`) | Read your marketing claims, landing page, or ad copy the way a consumer-protection investigator would (FTC/ASA framing) and draft the inquiry… | — |
+| **The Churning Customer** (`the-churning-customer`) | Simulate the exact customer who will quietly cancel in month 4 — their internal monologue through the lifecycle and the honest exit interview they… | — |
+| **VC Partner Meeting** (`vc-partner-meeting`) | Simulate the VC partner meeting that discusses your pitch after you leave the room — four partner archetypes debate, then write the internal… | — |
+
 ### `pm-supplychain` — 6 skills
 
 | Skill | What it does | Eval |
@@ -884,4 +913,4 @@
 
 ---
 
-_496 skills across 72 bundles · 28 eval-scored (6%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_515 skills across 74 bundles · 28 eval-scored (5%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

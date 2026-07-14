@@ -1,0 +1,69 @@
+# Offer Comparison Skill
+
+Offers are quoted as feelings — "the startup has more upside" — but they resolve to numbers with dates on them. This skill computes the curves: what each offer pays in each of the next four years, where the lines cross, and which lever in the weaker offer would actually move it.
+
+## What This Skill Produces
+
+- **The comp table** — per-year and cumulative totals per offer, from the script
+- **The crossover analysis** — which offer leads when, and what assumption that ranking is hostage to
+- **The risk translation** — private equity restated honestly rather than at face value
+- **Negotiation levers** — ranked by dollar impact per unit of asking-awkwardness
+
+## Required Inputs
+
+Ask for these if not provided:
+- **Per offer:** base, bonus %, equity grant value, vest years, cliff months, vest frequency, 401(k) match (% and cap), any promised refreshers
+- **The user's horizon** — expecting to stay 2 years or 4 changes the answer, because cliffs do
+- **Equity risk view** — public RSUs count at face; for private equity, agree a discount with the user (e.g. 50–75% haircut pre-Series B) and pass the discounted number to the script *labeled as such*
+
+## Programmatic Helper
+
+```bash
+python3 scripts/offer_comparison.py offers.json
+cat offers.json | python3 scripts/offer_comparison.py - --json
+```
+
+Input shape in the script docstring. The script computes vesting month-by-month (a 12-month cliff releases the accrued year), bonuses and match annually, and reports the cumulative leader and crossover year. **It values equity at exactly the number you give it** — the risk adjustment is your input, visible, never a hidden assumption.
+
+## Framework: The Judgment Around the Math
+
+- **The cliff vs the horizon** — an 18-month expected stay makes year-4 equity fiction; compare at the user's actual horizon, not the grant's
+- **A risky dollar ≠ a salary dollar** — never compare private paper to cash 1:1; show the comparison at 2–3 discount levels if the user resists picking one
+- **Refreshers are policy, not promise** — model them only if written down; otherwise mention them as upside outside the table
+- **Levers, ranked:** base (compounds into bonus and match) → equity grant → signing bonus (one-time, easiest yes) → cliff/start-date adjustments
+
+## Output Format
+
+---
+
+# Offer Comparison: [A] vs [B]
+
+## The Curves
+[Script output: per-year, cumulative, leader, crossover]
+
+## What the Ranking Is Hostage To
+[The 1–2 assumptions that flip the answer — usually the private-equity discount and the stay-horizon — each shown with the flipped result.]
+
+## Negotiation Levers
+| Lever | Applied to | Moves 4-yr total by | Ask difficulty |
+|---|---|---|---|
+
+*Educational model, not financial advice — verify with a licensed professional before acting on it.*
+
+---
+
+## Quality Checks
+
+- [ ] Equity discount for private companies is explicit and the user agreed to it
+- [ ] The comparison is shown at the user's stated horizon, not only at 4 years
+- [ ] The hostage-assumptions section shows the flipped ranking, not just names the risk
+- [ ] Levers carry dollar impacts computed from the actual offers
+- [ ] The disclaimer line appears in the artifact
+
+## Anti-Patterns
+
+- [ ] Do not compare a risky equity dollar to a salary dollar 1:1 — the discount is the analysis
+- [ ] Do not hide the vesting cliff inside annual averages — year 1 with a cliff is its own story
+- [ ] Do not model unwritten refreshers as income
+- [ ] Do not declare a winner without naming what assumption the win depends on
+- [ ] Do not present the model's output without its assumptions attached

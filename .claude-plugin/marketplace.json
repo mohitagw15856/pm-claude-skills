@@ -9,6 +9,22 @@
   },
   "plugins": [
     {
+      "name": "pm-simulators",
+      "description": "Adversarial roleplay: simulate the specific hostile reader you fear — opposing counsel attacking your contract, the VC partner meeting after you leave the room, a consumer-protection investigator reading your claims, the customer who quietly churns, and the acquirer's red team chipping your price. Each produces the adversary's real artifact plus an out-of-character debrief with fixes.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-simulators",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-decoders",
+      "description": "AI reads the fine print for you: leases, medical bills, terms of service, loans, benefits packages, and HOA covenants decoded into plain English with ranked red flags, the questions to ask, and what's actually negotiable. Not legal advice — a sharp friend who reads contracts.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-decoders",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-banking",
       "description": "Banking & lending skills: credit memos with covenant headroom, quarterly covenant compliance reviews, KYC/AML escalation write-ups, and portfolio risk briefs — credit and compliance judgment for analysts and RMs.",
       "version": "1.0.0",

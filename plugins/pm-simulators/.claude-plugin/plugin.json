@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-simulators",
+  "version": "1.0.0",
+  "description": "Adversarial roleplay: simulate the specific hostile reader you fear — opposing counsel attacking your contract, the VC partner meeting after you leave the room, a consumer-protection investigator reading your claims, the customer who quietly churns, and the acquirer's red team chipping your price. Each produces the adversary's real artifact plus an out-of-character debrief with fixes.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "simulation",
+    "adversarial",
+    "red-team",
+    "contract",
+    "pitch",
+    "churn",
+    "due-diligence"
+  ]
+}

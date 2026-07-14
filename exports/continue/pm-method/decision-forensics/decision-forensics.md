@@ -1,0 +1,73 @@
+---
+name: "Reconstruct the decision actually made in a messy Slack, ema"
+description: "Reconstruct the decision actually made in a messy Slack, email, or meeting thread into a proper decision record — commitments named, silent assumptions surfaced, non-decisions called out. Use when asked what did we actually decide, turn this thread into a decision record, who committed to what, or reconstruct this discussion. Produces a decision record with quoted evidence, a commitments table, reconstructed assumptions, dismissed options, and a confidence note on the reconstruction itself."
+---
+
+# Decision Forensics Skill
+
+Most decisions are never stated — they precipitate out of a thread and everyone leaves with a different memory of them. This skill is the forensic pass: what was actually decided (if anything), who committed to what, and which disagreements got papered over rather than resolved. (To *write* a fresh decision going forward, use `architecture-decision-record`; this skill reconstructs one from the wreckage.)
+
+## What This Skill Produces
+
+- **The decision, stated cleanly** — one sentence, even though nobody ever said it in one sentence — or the finding "no decision was reached"
+- **The commitments table** — who agreed to do what, with the quote that binds them
+- **Reconstructed assumptions** — what everyone silently took as true, labeled as reconstructed
+- **Dismissed options and papered-over questions** — what was set aside, and what was never actually resolved
+- **A confidence note** — how solid this reconstruction is and where it's guessing
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The thread** — Slack export, email chain, or meeting notes/transcript (paste; timestamps and names preserved if possible)
+- **The cast** (optional) — who's who: roles and decision authority; else infer from context and label
+- **What prompted the forensics** (optional) — a dispute, an audit, onboarding someone — shapes emphasis, never conclusions
+
+## Framework: The Forensic Protocol
+
+1. **Anchor** — find the moments where direction changed hands: an approval word ("ship it", "fine, let's"), an unobjected proposal followed by action talk, or authority going silent after a suggestion (silence + subsequent action = the most common decision form).
+2. **Attribute** — every claim about a person gets a verbatim quote or close paraphrase *with the original wording nearby*. No quote, no attribution.
+3. **Excavate assumptions** — what must everyone have believed for the exchange to make sense? Label each `[reconstructed]` — these were never said.
+4. **Separate resolved from papered-over** — a question answered vs a question abandoned when someone changed the subject. The second list is usually the valuable one.
+5. **Grade the reconstruction** — HIGH (explicit approval by named authority) · MEDIUM (unobjected proposal + consistent action) · LOW (inferred from fragments). State it.
+
+## Output Format
+
+---
+
+# Decision Record (reconstructed): [one-sentence decision]
+**Source:** [thread, date range] · **Reconstruction confidence:** HIGH/MEDIUM/LOW — [why]
+
+## The Decision
+[One sentence. Or: "**No decision was reached.** The thread ends with X unresolved; subsequent action, if any, happened without recorded agreement."]
+
+## Commitments
+| Who | Committed to | The binding quote | By when |
+|---|---|---|---|
+
+## Assumptions (all `[reconstructed]`)
+- …
+
+## Options Dismissed
+| Option | Dismissed by/when | Stated reason | Actually resolved? |
+|---|---|---|---|
+
+## Papered Over
+[Questions raised and abandoned — each with who raised it and where the thread swerved.]
+
+---
+
+## Quality Checks
+
+- [ ] Every attribution carries a quote or near-paraphrase with original wording nearby
+- [ ] Assumptions are labeled `[reconstructed]` — never presented as things people said
+- [ ] The confidence grade matches the evidence type (explicit / unobjected / inferred)
+- [ ] Papered-over questions are listed separately from resolved ones
+- [ ] If no decision was reached, the record says so plainly
+
+## Anti-Patterns
+
+- [ ] Do not attribute positions beyond what the text supports — quote it or drop it
+- [ ] Do not resolve ambiguity by inventing agreement — surfacing the ambiguity IS the deliverable
+- [ ] Do not clean a non-decision into a decision; "no decision was reached" is a valid, common, and useful finding
+- [ ] Do not editorialize about who was right — forensics reconstructs; it doesn't adjudicate
+- [ ] Do not omit the confidence note — a reconstruction that hides its own uncertainty is fabrication with footnotes

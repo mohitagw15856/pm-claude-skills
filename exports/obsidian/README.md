@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-496 skills exported. Copy a `.md rule` into the tool to use it.
+515 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -12,6 +12,7 @@
 | A/B Test Readout | `pm-data` | `pm-data/ab-test-readout/ab-test-readout.md` |
 | Accessibility Audit | `pm-design` | `pm-design/accessibility-audit/accessibility-audit.md` |
 | Account Plan | `pm-sales` | `pm-sales/account-plan/account-plan.md` |
+| Acquirer Red Team | `pm-simulators` | `pm-simulators/acquirer-red-team/acquirer-red-team.md` |
 | Action Runner | `pm-cross` | `pm-cross/action-runner/action-runner.md` |
 | Ad Copy | `pm-copy` | `pm-copy/ad-copy/ad-copy.md` |
 | AEO Optimizer | `pm-writers` | `pm-writers/aeo-optimizer/aeo-optimizer.md` |
@@ -30,6 +31,7 @@
 | AI Product Canvas | `pm-advanced` | `pm-advanced/ai-product-canvas/ai-product-canvas.md` |
 | AI ROI Audit | `pm-aiwork` | `pm-aiwork/ai-roi-audit/ai-roi-audit.md` |
 | AI Usage Policy | `pm-aiwork` | `pm-aiwork/ai-usage-policy/ai-usage-policy.md` |
+| Altitude Shifter | `pm-comms` | `pm-comms/altitude-shifter/altitude-shifter.md` |
 | Ambiguity Resolver | `pm-strategy` | `pm-strategy/ambiguity-resolver/ambiguity-resolver.md` |
 | Analyst Relations Brief | `pm-pmm` | `pm-pmm/analyst-relations-brief/analyst-relations-brief.md` |
 | Announcement Card | `pm-visuals` | `pm-visuals/announcement-card/announcement-card.md` |
@@ -43,6 +45,7 @@
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/assumption-mapper.md` |
 | Async Decision Memo | `pm-operations` | `pm-operations/async-decision-memo/async-decision-memo.md` |
 | Autopilot Charter | `pm-autopilot` | `pm-autopilot/autopilot-charter/autopilot-charter.md` |
+| Benefits Decoder | `pm-decoders` | `pm-decoders/benefits-decoder/benefits-decoder.md` |
 | Bid / Tender Review | `pm-construction` | `pm-construction/bid-tender-review/bid-tender-review.md` |
 | Board Deck Narrative | `pm-business` | `pm-business/board-deck-narrative/board-deck-narrative.md` |
 | Board Minutes | `pm-business` | `pm-business/board-minutes/board-minutes.md` |
@@ -139,6 +142,7 @@
 | Debt Payoff Plan | `pm-money` | `pm-money/debt-payoff-plan/debt-payoff-plan.md` |
 | Debugging Log Analyser | `pm-engineering` | `pm-engineering/debugging-log-analyser/debugging-log-analyser.md` |
 | Decision Autopsy | `pm-warroom` | `pm-warroom/decision-autopsy/decision-autopsy.md` |
+| Decision Forensics | `pm-method` | `pm-method/decision-forensics/decision-forensics.md` |
 | Decision Memo | `pm-business` | `pm-business/decision-memo/decision-memo.md` |
 | Deck Autopsy | `pm-vision` | `pm-vision/deck-autopsy/deck-autopsy.md` |
 | Delay Claim Letter | `pm-construction` | `pm-construction/delay-claim-letter/delay-claim-letter.md` |
@@ -183,6 +187,7 @@
 | Executive Presence | `pm-comms` | `pm-comms/executive-presence/executive-presence.md` |
 | Executive Summary | `pm-cross` | `pm-cross/executive-summary/executive-summary.md` |
 | Executive Update | `pm-strategy` | `pm-strategy/executive-update/executive-update.md` |
+| Exit Waterfall | `pm-calculators` | `pm-calculators/exit-waterfall/exit-waterfall.md` |
 | Expense Audit | `pm-money` | `pm-money/expense-audit/expense-audit.md` |
 | Expense Policy | `pm-accounting` | `pm-accounting/expense-policy/expense-policy.md` |
 | Experiment Designer | `pm-advanced` | `pm-advanced/experiment-designer/experiment-designer.md` |
@@ -206,6 +211,7 @@
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/financial-model-narrative.md` |
 | Financial Statement Explainer | `pm-accounting` | `pm-accounting/financial-statement-explainer/financial-statement-explainer.md` |
 | Fine Appeal Letter | `pm-lifeadmin` | `pm-lifeadmin/fine-appeal-letter/fine-appeal-letter.md` |
+| FIRE Number | `pm-calculators` | `pm-calculators/fire-number/fire-number.md` |
 | Flowchart | `pm-visuals` | `pm-visuals/flowchart/flowchart.md` |
 | FOIA / Public-Records Request | `pm-gov` | `pm-gov/foia-request/foia-request.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/follow-up-sequence.md` |
@@ -227,6 +233,7 @@
 | Help Center Article | `pm-support` | `pm-support/help-center-article/help-center-article.md` |
 | HIPAA Safeguards | `pm-compliance` | `pm-compliance/hipaa-safeguards/hipaa-safeguards.md` |
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/hiring-rubric.md` |
+| HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/hoa-decoder.md` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/hook-writer.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/human-in-the-loop-design.md` |
 | i18n Readiness Review | `pm-localization` | `pm-localization/i18n-readiness-review/i18n-readiness-review.md` |
@@ -261,6 +268,7 @@
 | Launch Readiness | `pm-delivery` | `pm-delivery/launch-readiness/launch-readiness.md` |
 | Launch Tiering Framework | `pm-pmm` | `pm-pmm/launch-tiering-framework/launch-tiering-framework.md` |
 | Layoff Communication | `pm-crisis` | `pm-crisis/layoff-communication/layoff-communication.md` |
+| Lease Decoder | `pm-decoders` | `pm-decoders/lease-decoder/lease-decoder.md` |
 | Legal Brief | `pm-legal` | `pm-legal/legal-brief/legal-brief.md` |
 | Lending Risk Brief | `pm-banking` | `pm-banking/lending-risk-brief/lending-risk-brief.md` |
 | Lesson Plan | `pm-education` | `pm-education/lesson-plan/lesson-plan.md` |
@@ -271,6 +279,7 @@
 | LLM Guardrails Spec | `pm-ai` | `pm-ai/llm-guardrails-spec/llm-guardrails-spec.md` |
 | Load Testing Plan | `pm-engineering` | `pm-engineering/load-testing-plan/load-testing-plan.md` |
 | Loan Covenant Review | `pm-banking` | `pm-banking/loan-covenant-review/loan-covenant-review.md` |
+| Loan Decoder | `pm-decoders` | `pm-decoders/loan-decoder/loan-decoder.md` |
 | Local Dev Setup | `pm-engineering` | `pm-engineering/local-dev-setup/local-dev-setup.md` |
 | Localization Brief | `pm-localization` | `pm-localization/localization-brief/localization-brief.md` |
 | Logistics Incident Report | `pm-supplychain` | `pm-supplychain/logistics-incident-report/logistics-incident-report.md` |
@@ -280,6 +289,7 @@
 | Marketplace Listing Optimizer | `pm-ecommerce` | `pm-ecommerce/marketplace-listing-optimizer/marketplace-listing-optimizer.md` |
 | MCP Server Spec | `pm-agentnative` | `pm-agentnative/mcp-server-spec/mcp-server-spec.md` |
 | Media Pitch | `pm-gtm` | `pm-gtm/media-pitch/media-pitch.md` |
+| Medical Bill Decoder | `pm-decoders` | `pm-decoders/medical-bill-decoder/medical-bill-decoder.md` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/meeting-notes.md` |
 | Messaging Framework | `pm-growth` | `pm-growth/messaging-framework/messaging-framework.md` |
 | Metric Gaslighting Detector | `pm-warroom` | `pm-warroom/metric-gaslighting-detector/metric-gaslighting-detector.md` |
@@ -300,6 +310,7 @@
 | Newsletter Writer | `pm-creator` | `pm-creator/newsletter-writer/newsletter-writer.md` |
 | NotebookLM Connector | `pm-cross` | `pm-cross/notebooklm-connector/notebooklm-connector.md` |
 | Notes Humanizer | `pm-writers` | `pm-writers/notes-humanizer/notes-humanizer.md` |
+| Offer Comparison | `pm-calculators` | `pm-calculators/offer-comparison/offer-comparison.md` |
 | Offer Letter | `pm-recruiting` | `pm-recruiting/offer-letter/offer-letter.md` |
 | OKR Builder | `pm-planning` | `pm-planning/okr-builder/okr-builder.md` |
 | Onboarding Copy | `pm-uxwriting` | `pm-uxwriting/onboarding-copy/onboarding-copy.md` |
@@ -308,6 +319,7 @@
 | One-on-One Prep | `pm-career` | `pm-career/one-on-one-prep/one-on-one-prep.md` |
 | One-Pager | `pm-personal` | `pm-personal/one-pager/one-pager.md` |
 | Open House Plan | `pm-realestate` | `pm-realestate/open-house-plan/open-house-plan.md` |
+| Opposing Counsel | `pm-simulators` | `pm-simulators/opposing-counsel/opposing-counsel.md` |
 | Org Chart | `pm-visuals` | `pm-visuals/org-chart/org-chart.md` |
 | Outcome Tracker | `pm-autopilot` | `pm-autopilot/outcome-tracker/outcome-tracker.md` |
 | Outreach Message | `pm-jobsearch` | `pm-jobsearch/outreach-message/outreach-message.md` |
@@ -320,6 +332,7 @@
 | Performance Budget | `pm-engineering` | `pm-engineering/performance-budget/performance-budget.md` |
 | Performance Review | `pm-people` | `pm-people/performance-review/performance-review.md` |
 | Personal Bio | `pm-personal` | `pm-personal/personal-bio/personal-bio.md` |
+| Personal Board of Directors | `pm-personal` | `pm-personal/personal-board-of-directors/personal-board-of-directors.md` |
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/persuasion-brief.md` |
 | PM Weekly Review | `pm-rituals` | `pm-rituals/pm-weekly-review/pm-weekly-review.md` |
 | Policy Memo | `pm-gov` | `pm-gov/policy-memo/policy-memo.md` |
@@ -367,6 +380,7 @@
 | RAG Design Doc | `pm-ai` | `pm-ai/rag-design-doc/rag-design-doc.md` |
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/rate-card.md` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/readme-writer.md` |
+| Receipts Audit | `pm-method` | `pm-method/receipts-audit/receipts-audit.md` |
 | Recruiter Outreach | `pm-recruiting` | `pm-recruiting/recruiter-outreach/recruiter-outreach.md` |
 | Red-Team Review | `pm-cross` | `pm-cross/red-team-review/red-team-review.md` |
 | Redundancy Consultation | `pm-hr` | `pm-hr/redundancy-consultation/redundancy-consultation.md` |
@@ -374,8 +388,10 @@
 | Reference Letter | `pm-lifeadmin` | `pm-lifeadmin/reference-letter/reference-letter.md` |
 | Referral Program | `pm-growth` | `pm-growth/referral-program/referral-program.md` |
 | Referral Program Design | `pm-growth` | `pm-growth/referral-program-design/referral-program-design.md` |
+| Refinance Breakeven | `pm-calculators` | `pm-calculators/refinance-breakeven/refinance-breakeven.md` |
 | Regex Builder & Explainer | `pm-engineering` | `pm-engineering/regex-builder/regex-builder.md` |
 | Regression Test Plan | `pm-qa` | `pm-qa/regression-test-plan/regression-test-plan.md` |
+| Regulator Eyes | `pm-simulators` | `pm-simulators/regulator-eyes/regulator-eyes.md` |
 | Regulatory Impact Analysis | `pm-gov` | `pm-gov/regulatory-impact-analysis/regulatory-impact-analysis.md` |
 | Renewal Playbook | `pm-cs` | `pm-cs/renewal-playbook/renewal-playbook.md` |
 | Rental Application | `pm-lifeadmin` | `pm-lifeadmin/rental-application/rental-application.md` |
@@ -473,10 +489,12 @@
 | Tenant Screening Guide | `pm-realestate` | `pm-realestate/tenant-screening-guide/tenant-screening-guide.md` |
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/test-case-writer.md` |
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/test-strategy-doc.md` |
+| The Churning Customer | `pm-simulators` | `pm-simulators/the-churning-customer/the-churning-customer.md` |
 | Threat Model | `pm-security` | `pm-security/threat-model/threat-model.md` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `pm-writers/thumbnail-creator/thumbnail-creator.md` |
 | Tooling Risk Assessment | `pm-hardware` | `pm-hardware/tooling-risk-assessment/tooling-risk-assessment.md` |
 | Tornado Sensitivity | `pm-calculators` | `pm-calculators/tornado-sensitivity/tornado-sensitivity.md` |
+| ToS Decoder | `pm-decoders` | `pm-decoders/tos-decoder/tos-decoder.md` |
 | Transcreation | `pm-localization` | `pm-localization/transcreation/transcreation.md` |
 | Underwriting Narrative | `pm-insurance` | `pm-insurance/underwriting-narrative/underwriting-narrative.md` |
 | Unit Economics | `pm-calculators` | `pm-calculators/unit-economics/unit-economics.md` |
@@ -486,6 +504,7 @@
 | User Story Writer | `pm-delivery` | `pm-delivery/user-story-writer/user-story-writer.md` |
 | UX Research Plan | `pm-design` | `pm-design/ux-research-plan/ux-research-plan.md` |
 | Value Proposition | `pm-copy` | `pm-copy/value-proposition/value-proposition.md` |
+| VC Partner Meeting | `pm-simulators` | `pm-simulators/vc-partner-meeting/vc-partner-meeting.md` |
 | Vendor Contract Checklist | `pm-operations` | `pm-operations/vendor-contract-checklist/vendor-contract-checklist.md` |
 | Vendor Evaluation | `pm-operations` | `pm-operations/vendor-evaluation/vendor-evaluation.md` |
 | Vendor Security Review | `pm-compliance` | `pm-compliance/vendor-security-review/vendor-security-review.md` |

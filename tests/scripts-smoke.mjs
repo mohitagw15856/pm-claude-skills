@@ -87,6 +87,26 @@ const CASES = [
       { name: 'A', reach: 5000, impact: 2, confidence: 0.8, effort: 3 },
       { name: 'B', reach: 800, impact: 3, confidence: 0.5, effort: 1 }]))],
     expect: /A|B/ },
+  { name: 'exit waterfall (conversion equilibrium — exact pins)', script: 'skills/exit-waterfall/scripts/exit_waterfall.py',
+    args: [w('cap.json', JSON.stringify({ classes: [
+      { name: 'Founders', shares: 6000000, type: 'common' },
+      { name: 'Seed', shares: 1500000, type: 'preferred', invested: 2000000, pref_multiple: 1 },
+      { name: 'Series A', shares: 2500000, type: 'preferred', invested: 8000000, pref_multiple: 1 },
+      { name: 'Options', shares: 1000000, type: 'options', strike: 0.8 }],
+      exits: [10000000, 30000000, 60000000] }))],
+    // exact: at $10M prefs consume all (Founders 0); Seed converts alone at $30M; both at $60M
+    expect: /10,000,000 {15}0 {7}2,000,000 {7}8,000,000 {15}0 {2}-[\s\S]*30,000,000 {6}16,094,118[\s\S]*Seed\n[\s\S]*60,000,000 {6}33,163,636[\s\S]*Seed,Series A/ },
+  { name: 'offer comparison (cliff + crossover)', script: 'skills/offer-comparison/scripts/offer_comparison.py',
+    args: [w('offers.json', JSON.stringify([
+      { name: 'BigCo', base: 190000, bonus_pct: 15, equity_total: 240000, vest_years: 4, cliff_months: 12, vest_freq: 'monthly', match_pct: 4, match_cap: 0 },
+      { name: 'Startup', base: 165000, bonus_pct: 0, equity_total: 400000, vest_years: 4, cliff_months: 12, vest_freq: 'monthly' }]))],
+    expect: /286,100 {9}265,000[\s\S]*leader at year 4: BigCo · no crossover/ },   // exact yr-1 totals
+  { name: 'refinance breakeven (term-reset warning)', script: 'skills/refinance-breakeven/scripts/refinance_breakeven.py',
+    args: ['--balance', '380000', '--rate', '6.9', '--months-left', '336', '--new-rate', '5.6', '--new-term', '360', '--closing', '6500'],
+    expect: /2,557\.54 -> 2,181\.50[\s\S]*breakeven: month 18[\s\S]*term reset: 24 extra months/ },
+  { name: 'fire number (sensitivity grid)', script: 'skills/fire-number/scripts/fire_number.py',
+    args: ['--savings', '120000', '--monthly', '3000', '--spend', '60000'],
+    expect: /FIRE number: 1,500,000[\s\S]*years to reach at 5% real return: 19\.5[\s\S]*not modeled: sequence-of-returns risk/ },
 ];
 for (const c of CASES) {
   const r = spawnSync('python3', [join(root, c.script), ...c.args], { encoding: 'utf8', timeout: 30000 });

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-496 skills exported. Copy a `SKILL.md` into the tool to use it.
+515 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -12,6 +12,7 @@
 | A/B Test Readout | `pm-data` | `ab-test-readout/SKILL.md` |
 | Accessibility Audit | `pm-design` | `accessibility-audit/SKILL.md` |
 | Account Plan | `pm-sales` | `account-plan/SKILL.md` |
+| Acquirer Red Team | `pm-simulators` | `acquirer-red-team/SKILL.md` |
 | Action Runner | `pm-cross` | `action-runner/SKILL.md` |
 | Ad Copy | `pm-copy` | `ad-copy/SKILL.md` |
 | AEO Optimizer | `pm-writers` | `aeo-optimizer/SKILL.md` |
@@ -30,6 +31,7 @@
 | AI Product Canvas | `pm-advanced` | `ai-product-canvas/SKILL.md` |
 | AI ROI Audit | `pm-aiwork` | `ai-roi-audit/SKILL.md` |
 | AI Usage Policy | `pm-aiwork` | `ai-usage-policy/SKILL.md` |
+| Altitude Shifter | `pm-comms` | `altitude-shifter/SKILL.md` |
 | Ambiguity Resolver | `pm-strategy` | `ambiguity-resolver/SKILL.md` |
 | Analyst Relations Brief | `pm-pmm` | `analyst-relations-brief/SKILL.md` |
 | Announcement Card | `pm-visuals` | `announcement-card/SKILL.md` |
@@ -43,6 +45,7 @@
 | Assumption Mapper | `pm-discovery` | `assumption-mapper/SKILL.md` |
 | Async Decision Memo | `pm-operations` | `async-decision-memo/SKILL.md` |
 | Autopilot Charter | `pm-autopilot` | `autopilot-charter/SKILL.md` |
+| Benefits Decoder | `pm-decoders` | `benefits-decoder/SKILL.md` |
 | Bid / Tender Review | `pm-construction` | `bid-tender-review/SKILL.md` |
 | Board Deck Narrative | `pm-business` | `board-deck-narrative/SKILL.md` |
 | Board Minutes | `pm-business` | `board-minutes/SKILL.md` |
@@ -139,6 +142,7 @@
 | Debt Payoff Plan | `pm-money` | `debt-payoff-plan/SKILL.md` |
 | Debugging Log Analyser | `pm-engineering` | `debugging-log-analyser/SKILL.md` |
 | Decision Autopsy | `pm-warroom` | `decision-autopsy/SKILL.md` |
+| Decision Forensics | `pm-method` | `decision-forensics/SKILL.md` |
 | Decision Memo | `pm-business` | `decision-memo/SKILL.md` |
 | Deck Autopsy | `pm-vision` | `deck-autopsy/SKILL.md` |
 | Delay Claim Letter | `pm-construction` | `delay-claim-letter/SKILL.md` |
@@ -183,6 +187,7 @@
 | Executive Presence | `pm-comms` | `executive-presence/SKILL.md` |
 | Executive Summary | `pm-cross` | `executive-summary/SKILL.md` |
 | Executive Update | `pm-strategy` | `executive-update/SKILL.md` |
+| Exit Waterfall | `pm-calculators` | `exit-waterfall/SKILL.md` |
 | Expense Audit | `pm-money` | `expense-audit/SKILL.md` |
 | Expense Policy | `pm-accounting` | `expense-policy/SKILL.md` |
 | Experiment Designer | `pm-advanced` | `experiment-designer/SKILL.md` |
@@ -206,6 +211,7 @@
 | Financial Model Narrative | `pm-finance` | `financial-model-narrative/SKILL.md` |
 | Financial Statement Explainer | `pm-accounting` | `financial-statement-explainer/SKILL.md` |
 | Fine Appeal Letter | `pm-lifeadmin` | `fine-appeal-letter/SKILL.md` |
+| FIRE Number | `pm-calculators` | `fire-number/SKILL.md` |
 | Flowchart | `pm-visuals` | `flowchart/SKILL.md` |
 | FOIA / Public-Records Request | `pm-gov` | `foia-request/SKILL.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `follow-up-sequence/SKILL.md` |
@@ -227,6 +233,7 @@
 | Help Center Article | `pm-support` | `help-center-article/SKILL.md` |
 | HIPAA Safeguards | `pm-compliance` | `hipaa-safeguards/SKILL.md` |
 | Hiring Rubric | `pm-people` | `hiring-rubric/SKILL.md` |
+| HOA Decoder | `pm-decoders` | `hoa-decoder/SKILL.md` |
 | Hook Writer | `pm-creator` | `hook-writer/SKILL.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `human-in-the-loop-design/SKILL.md` |
 | i18n Readiness Review | `pm-localization` | `i18n-readiness-review/SKILL.md` |
@@ -261,6 +268,7 @@
 | Launch Readiness | `pm-delivery` | `launch-readiness/SKILL.md` |
 | Launch Tiering Framework | `pm-pmm` | `launch-tiering-framework/SKILL.md` |
 | Layoff Communication | `pm-crisis` | `layoff-communication/SKILL.md` |
+| Lease Decoder | `pm-decoders` | `lease-decoder/SKILL.md` |
 | Legal Brief | `pm-legal` | `legal-brief/SKILL.md` |
 | Lending Risk Brief | `pm-banking` | `lending-risk-brief/SKILL.md` |
 | Lesson Plan | `pm-education` | `lesson-plan/SKILL.md` |
@@ -271,6 +279,7 @@
 | LLM Guardrails Spec | `pm-ai` | `llm-guardrails-spec/SKILL.md` |
 | Load Testing Plan | `pm-engineering` | `load-testing-plan/SKILL.md` |
 | Loan Covenant Review | `pm-banking` | `loan-covenant-review/SKILL.md` |
+| Loan Decoder | `pm-decoders` | `loan-decoder/SKILL.md` |
 | Local Dev Setup | `pm-engineering` | `local-dev-setup/SKILL.md` |
 | Localization Brief | `pm-localization` | `localization-brief/SKILL.md` |
 | Logistics Incident Report | `pm-supplychain` | `logistics-incident-report/SKILL.md` |
@@ -280,6 +289,7 @@
 | Marketplace Listing Optimizer | `pm-ecommerce` | `marketplace-listing-optimizer/SKILL.md` |
 | MCP Server Spec | `pm-agentnative` | `mcp-server-spec/SKILL.md` |
 | Media Pitch | `pm-gtm` | `media-pitch/SKILL.md` |
+| Medical Bill Decoder | `pm-decoders` | `medical-bill-decoder/SKILL.md` |
 | Meeting Notes | `pm-essentials` | `meeting-notes/SKILL.md` |
 | Messaging Framework | `pm-growth` | `messaging-framework/SKILL.md` |
 | Metric Gaslighting Detector | `pm-warroom` | `metric-gaslighting-detector/SKILL.md` |
@@ -300,6 +310,7 @@
 | Newsletter Writer | `pm-creator` | `newsletter-writer/SKILL.md` |
 | NotebookLM Connector | `pm-cross` | `notebooklm-connector/SKILL.md` |
 | Notes Humanizer | `pm-writers` | `notes-humanizer/SKILL.md` |
+| Offer Comparison | `pm-calculators` | `offer-comparison/SKILL.md` |
 | Offer Letter | `pm-recruiting` | `offer-letter/SKILL.md` |
 | OKR Builder | `pm-planning` | `okr-builder/SKILL.md` |
 | Onboarding Copy | `pm-uxwriting` | `onboarding-copy/SKILL.md` |
@@ -308,6 +319,7 @@
 | One-on-One Prep | `pm-career` | `one-on-one-prep/SKILL.md` |
 | One-Pager | `pm-personal` | `one-pager/SKILL.md` |
 | Open House Plan | `pm-realestate` | `open-house-plan/SKILL.md` |
+| Opposing Counsel | `pm-simulators` | `opposing-counsel/SKILL.md` |
 | Org Chart | `pm-visuals` | `org-chart/SKILL.md` |
 | Outcome Tracker | `pm-autopilot` | `outcome-tracker/SKILL.md` |
 | Outreach Message | `pm-jobsearch` | `outreach-message/SKILL.md` |
@@ -320,6 +332,7 @@
 | Performance Budget | `pm-engineering` | `performance-budget/SKILL.md` |
 | Performance Review | `pm-people` | `performance-review/SKILL.md` |
 | Personal Bio | `pm-personal` | `personal-bio/SKILL.md` |
+| Personal Board of Directors | `pm-personal` | `personal-board-of-directors/SKILL.md` |
 | Persuasion Brief | `pm-comms` | `persuasion-brief/SKILL.md` |
 | PM Weekly Review | `pm-rituals` | `pm-weekly-review/SKILL.md` |
 | Policy Memo | `pm-gov` | `policy-memo/SKILL.md` |
@@ -367,6 +380,7 @@
 | RAG Design Doc | `pm-ai` | `rag-design-doc/SKILL.md` |
 | Rate Card | `pm-consulting` | `rate-card/SKILL.md` |
 | README Writer | `pm-devrel` | `readme-writer/SKILL.md` |
+| Receipts Audit | `pm-method` | `receipts-audit/SKILL.md` |
 | Recruiter Outreach | `pm-recruiting` | `recruiter-outreach/SKILL.md` |
 | Red-Team Review | `pm-cross` | `red-team-review/SKILL.md` |
 | Redundancy Consultation | `pm-hr` | `redundancy-consultation/SKILL.md` |
@@ -374,8 +388,10 @@
 | Reference Letter | `pm-lifeadmin` | `reference-letter/SKILL.md` |
 | Referral Program | `pm-growth` | `referral-program/SKILL.md` |
 | Referral Program Design | `pm-growth` | `referral-program-design/SKILL.md` |
+| Refinance Breakeven | `pm-calculators` | `refinance-breakeven/SKILL.md` |
 | Regex Builder & Explainer | `pm-engineering` | `regex-builder/SKILL.md` |
 | Regression Test Plan | `pm-qa` | `regression-test-plan/SKILL.md` |
+| Regulator Eyes | `pm-simulators` | `regulator-eyes/SKILL.md` |
 | Regulatory Impact Analysis | `pm-gov` | `regulatory-impact-analysis/SKILL.md` |
 | Renewal Playbook | `pm-cs` | `renewal-playbook/SKILL.md` |
 | Rental Application | `pm-lifeadmin` | `rental-application/SKILL.md` |
@@ -473,10 +489,12 @@
 | Tenant Screening Guide | `pm-realestate` | `tenant-screening-guide/SKILL.md` |
 | Test Case Writer | `pm-qa` | `test-case-writer/SKILL.md` |
 | Test Strategy Document | `pm-engineering` | `test-strategy-doc/SKILL.md` |
+| The Churning Customer | `pm-simulators` | `the-churning-customer/SKILL.md` |
 | Threat Model | `pm-security` | `threat-model/SKILL.md` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `thumbnail-creator/SKILL.md` |
 | Tooling Risk Assessment | `pm-hardware` | `tooling-risk-assessment/SKILL.md` |
 | Tornado Sensitivity | `pm-calculators` | `tornado-sensitivity/SKILL.md` |
+| ToS Decoder | `pm-decoders` | `tos-decoder/SKILL.md` |
 | Transcreation | `pm-localization` | `transcreation/SKILL.md` |
 | Underwriting Narrative | `pm-insurance` | `underwriting-narrative/SKILL.md` |
 | Unit Economics | `pm-calculators` | `unit-economics/SKILL.md` |
@@ -486,6 +504,7 @@
 | User Story Writer | `pm-delivery` | `user-story-writer/SKILL.md` |
 | UX Research Plan | `pm-design` | `ux-research-plan/SKILL.md` |
 | Value Proposition | `pm-copy` | `value-proposition/SKILL.md` |
+| VC Partner Meeting | `pm-simulators` | `vc-partner-meeting/SKILL.md` |
 | Vendor Contract Checklist | `pm-operations` | `vendor-contract-checklist/SKILL.md` |
 | Vendor Evaluation | `pm-operations` | `vendor-evaluation/SKILL.md` |
 | Vendor Security Review | `pm-compliance` | `vendor-security-review/SKILL.md` |

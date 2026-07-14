@@ -1,0 +1,75 @@
+---
+description: "Simulate the exact customer who will quietly cancel in month 4 — their internal monologue through the lifecycle and the honest exit interview they never gave you. Use when asked why do customers really churn, simulate a churning customer, roleplay the customer who cancels, or what does silent churn look like for my product. Produces the customer's lifecycle monologue, their never-given exit interview, and a debrief with the earliest detectable signals and interventions."
+globs:
+alwaysApply: false
+---
+
+# The Churning Customer Skill
+
+The customers who churn loudest are the least dangerous — they tell you why. This skill simulates the dangerous one: the customer who onboards politely, disappoints quietly, ignores the renewal email, and never files a ticket. It reconstructs their inner monologue so you can meet them before month 4 does. (For the data-side view, use `churn-analysis`; this is the human inside the cohort.)
+
+## What This Skill Produces
+
+- **The lifecycle monologue** — what this customer actually thought at five moments you couldn't observe
+- **The exit interview they never gave** — honest answers to the questions your survey would have asked
+- **The debrief** — the 3 earliest detectable signals with a concrete intervention each
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The product** — what it does, price point, who buys it
+- **The onboarding path** — what a new customer experiences in week 1 (steps, emails, human touch or not)
+- **A real churn profile** (optional) — segment or anecdote of someone who left; else simulate the most economically damaging plausible profile and label the assumption
+
+## Framework: The Five Silent Moments
+
+Simulate the monologue at exactly these points — churn is decided at moments, not gradually:
+
+| Moment | The question in the customer's head |
+|---|---|
+| 1. Purchase rationalization (day 0) | "What did I just tell my boss/spouse this would do?" |
+| 2. First value attempt (day 2–7) | "Is this doing the thing I bought it for, or am I doing extra work?" |
+| 3. The silent disappointment (week 2–6) | The moment expectations quietly reprice — usually never spoken |
+| 4. The workaround (month 2–3) | "It's easier to just [spreadsheet/old tool/ignore it]" — churn is now decided |
+| 5. The renewal email (month 4+) | Reads the price with fresh eyes; cancellation is administration, not decision |
+
+The monologue must be specific to THIS product's actual onboarding, in a believable human voice — mildly busy, non-technical unless the buyer is technical, never cartoonishly angry. Quiet disappointment, not rage.
+
+## Output Format
+
+---
+
+# The Customer Who Left: [name, role, segment] — [Product]
+
+> Simulation — a plausible composite, not a prediction. Validate against real churned-customer interviews.
+
+## The Five Moments
+[First-person monologue at each moment, 3–6 sentences each, referencing the product's real onboarding steps]
+
+## The Exit Interview They Never Gave
+**What did you buy this to do?** · **When did you first doubt it?** · **What did you replace it with?** · **What would have kept you?** (honest answer, which is usually smaller than a feature) · **Why didn't you tell us?**
+
+## Debrief — out of character
+| Signal | Detectable when | Where it shows | Intervention |
+|---|---|---|---|
+[3 signals, each earlier than the last section's moment 4]
+
+One paragraph: the single change to onboarding that moves moment 2 from "extra work" to "did the thing."
+
+---
+
+## Quality Checks
+
+- [ ] Monologue references the product's actual onboarding steps, not generic SaaS beats
+- [ ] Moment 3 (silent disappointment) is specific and plausible — it's the heart of the simulation
+- [ ] The "what would have kept you" answer is honest-sized, not a feature wishlist
+- [ ] Every signal in the debrief is detectable in data or behavior the company actually has
+- [ ] The voice is quietly busy, not theatrical
+
+## Anti-Patterns
+
+- [ ] Do not simulate an angry customer — anger churns loudly; this skill is for the silent majority
+- [ ] Do not let the customer articulate the company's own roadmap — real customers describe pain, not solutions
+- [ ] Do not invent product facts not in the input; where onboarding details are missing, ask or label the assumption
+- [ ] Do not end without interventions — the monologue is diagnosis, the debrief is the treatment
+- [ ] Do not stay in character in the debrief

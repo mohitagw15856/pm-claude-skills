@@ -1,0 +1,69 @@
+---
+trigger: model_decision
+description: "Re-pitch one piece of content for four audiences — the board, the engineers, a customer, a new hire — with a delta table showing what changed between altitudes and why. Use when asked to rewrite this for execs, explain this to the team, make this customer-facing, or say this four ways. Produces the four versions plus the delta table of what was cut, added, and reframed per altitude."
+---
+
+# Altitude Shifter Skill
+
+The same fact needs different load-bearing details at different altitudes — the board needs the decision and the risk, the engineers need the constraints, the customer needs the benefit, the new hire needs the context everyone else already has. This skill produces all four at once, and shows its work: what changed between versions and why.
+
+## What This Skill Produces
+
+- **Four versions** of the same content, each complete at its altitude
+- **The delta table** — what was cut, added, and reframed per altitude
+- **A leakage check** — jargon, blame, or bad news that shifted dishonestly between altitudes
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The content** — the memo, update, decision, or announcement to shift (paste it)
+- **What actually happened** (if the content is spin-adjacent, the underlying facts — the shifter needs the truth to keep versions consistent)
+- **Which altitudes are needed** (default: all four)
+- **Anything confidential** that must not leak downhill (names, numbers, legal exposure)
+
+## Framework: The Four Altitudes
+
+| Altitude | Load-bearing content | Length discipline | The test |
+|---|---|---|---|
+| **The board** | The decision, the risk, the ask, the number | ≤5 sentences | Could they act on this alone? |
+| **The engineers** | Constraints, interfaces, what is NOT changing, why the deadline is real | As long as needed, no shorter | Could they start without a meeting? |
+| **A customer** | The benefit in their vocabulary; zero internal jargon or org chart | 3–6 sentences | Would they forward it? |
+| **The new hire** | The context everyone's assuming — history, acronyms expanded, who owns what | Generous | Do they know why, not just what? |
+
+**Consistency rule:** all four versions must be true simultaneously. Different emphasis is the point; different facts is lying.
+
+## Output Format
+
+---
+
+# [Title], at Four Altitudes
+
+## 🏛 Board
+## ⚙️ Engineering
+## 👤 Customer
+## 🌱 New hire
+
+## Delta Table
+| Altitude | Cut | Added | Reframed |
+|---|---|---|---|
+
+## Leakage Check
+[Jargon that survived into the customer version · bad news that softened on the way up · internal blame that leaked down — each with the fix applied.]
+
+---
+
+## Quality Checks
+
+- [ ] Each version passes its altitude test (act / start / forward / understand-why)
+- [ ] All four versions are simultaneously true — no fact contradicts across altitudes
+- [ ] The board version contains the risk, not just the win
+- [ ] The customer version contains zero internal jargon, team names, or process language
+- [ ] The delta table explains reframings, not just lists them
+
+## Anti-Patterns
+
+- [ ] Do not just shorten — each altitude has different load-bearing facts, not fewer of the same ones
+- [ ] Do not leak internal jargon downhill or customer-blame uphill
+- [ ] Do not soften bad news as it goes up — the board version carries the same risk the engineers see
+- [ ] Do not write the new-hire version as a summary — it's the version with MORE context, not less
+- [ ] Do not produce four versions without the delta table — the table is what makes the shift inspectable

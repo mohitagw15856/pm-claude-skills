@@ -30,6 +30,12 @@
   "description": "Build a structured account plan for any key customer or target account. Use when asked to create an account plan, key account strategy, strategic account review, or territory plan. Produces a complete account plan with relationship map, growth opportunities, risks, and 90-day action plan."
  },
  {
+  "name": "acquirer_red_team",
+  "skill": "acquirer-red-team",
+  "bundle": "pm-simulators",
+  "description": "Simulate the acquirer's diligence team hunting for reasons to cut your price — their internal red-flags memo with a price-chip estimate per finding. Use when asked to red-team my company before a sale, how will an acquirer attack our valuation, pre-diligence audit, or what will DD find. Produces the acquirer's internal memo (revenue quality, key-person, tech debt, concentration, legal) and a debrief on which flags are fixable before a process."
+ },
+ {
   "name": "action_runner",
   "skill": "action-runner",
   "bundle": "pm-cross",
@@ -138,6 +144,12 @@
   "description": "Evaluate performance fairly when output is AI-assisted — what still measures the human, what now measures the tooling, and how to run the review conversation. Use when reviewing someone whose work is heavily AI-assisted, when output volume stopped meaning anything, when calibrating a team with uneven AI adoption, or when writing review criteria for the AI era. Produces review guidance: a what-measures-whom analysis, rewritten criteria, calibration rules for mixed-adoption teams, and conversation scripts. For the general review document use performance-review; for redesigning the role itself use role-redesign-for-ai."
  },
  {
+  "name": "altitude_shifter",
+  "skill": "altitude-shifter",
+  "bundle": "pm-comms",
+  "description": "Re-pitch one piece of content for four audiences — the board, the engineers, a customer, a new hire — with a delta table showing what changed between altitudes and why. Use when asked to rewrite this for execs, explain this to the team, make this customer-facing, or say this four ways. Produces the four versions plus the delta table of what was cut, added, and reframed per altitude."
+ },
+ {
   "name": "ambiguity_resolver",
   "skill": "ambiguity-resolver",
   "bundle": "pm-strategy",
@@ -214,6 +226,12 @@
   "skill": "autopilot-charter",
   "bundle": "pm-autopilot",
   "description": "Decide which of your recurring rituals to put on autopilot — and which to keep manual. Use when asked what to automate, how to set up recurring AI runs, which reports or briefings could run on a schedule, or to design an automation charter for a team. Produces a ritual inventory with automate/assist/keep-manual calls, guardrails per ritual, and a rollout order."
+ },
+ {
+  "name": "benefits_decoder",
+  "skill": "benefits-decoder",
+  "bundle": "pm-decoders",
+  "description": "Decode an employment benefits package into what it's actually worth and where the fine print bites. Use when someone asks 'is this offer good', 'decode my benefits package', 'what does my equity actually mean', or 'what should I ask HR before signing'. Produces a benefit-by-benefit decode with real dollar values, ranked red flags (vesting cliffs, clawbacks, 'discretionary' bonuses, unlimited-PTO economics), and the questions to ask HR before signing."
  },
  {
   "name": "bid_tender_review",
@@ -792,6 +810,12 @@
   "description": "Judge a past decision by its PROCESS, not its outcome — because good decisions lose and bad decisions win, and teams that can't tell the difference learn the wrong lessons. Use when reviewing a big call after the fact (a bet that failed, a pass that haunts, a hire, a pivot) and the room is about to conclude 'it failed so it was wrong.' Produces a process-forensics report: what was knowable then, the quality grade of the decision as-made, the luck accounting, and the ONE process change worth keeping."
  },
  {
+  "name": "decision_forensics",
+  "skill": "decision-forensics",
+  "bundle": "pm-method",
+  "description": "Reconstruct the decision actually made in a messy Slack, email, or meeting thread into a proper decision record — commitments named, silent assumptions surfaced, non-decisions called out. Use when asked what did we actually decide, turn this thread into a decision record, who committed to what, or reconstruct this discussion. Produces a decision record with quoted evidence, a commitments table, reconstructed assumptions, dismissed options, and a confidence note on the reconstruction itself."
+ },
+ {
   "name": "decision_memo",
   "skill": "decision-memo",
   "bundle": "pm-business",
@@ -1050,6 +1074,12 @@
   "description": "Transform detailed product updates into concise executive briefings. Use when asked to write an executive update, leadership update, product update for the exec team, or a C-suite product briefing. Produces a structured 250-word briefing with headline, key metrics, progress, risks, decisions needed, and next steps."
  },
  {
+  "name": "exit_waterfall",
+  "skill": "exit-waterfall",
+  "bundle": "pm-calculators",
+  "description": "Compute who gets what at each exit price from a cap table — liquidation preferences, conversion points, and where the founders' share collapses. Use when asked to model an exit waterfall, what do I get if we sell for X, explain liquidation preferences on my cap table, or compare payouts across exit prices. Produces a per-stakeholder payout table across exit values with conversion decisions shown, plus the plain-English reading of what the structure means for each party."
+ },
+ {
   "name": "expense_audit",
   "skill": "expense-audit",
   "bundle": "pm-money",
@@ -1188,6 +1218,12 @@
   "description": "Appeal a parking ticket, penalty charge, or administrative fine with the grounds that actually get appeals granted — not indignation. Use when someone got a ticket/fine/penalty notice and either has a legitimate case or wants an honest read on whether they do. Produces a short formal appeal letter built on recognised grounds (signage, procedure, mitigation, first-offence discretion), the evidence checklist, and a candid win-likelihood note — or the honest advice to just pay it."
  },
  {
+  "name": "fire_number",
+  "skill": "fire-number",
+  "bundle": "pm-calculators",
+  "description": "Compute a financial-independence (FIRE) target and years-to-reach with every assumption labeled as an assumption — plus a sensitivity table instead of a single false-precision answer. Use when asked what's my FIRE number, when can I retire early, how much do I need to be financially independent, or model my savings trajectory. Produces the FIRE number, years-to-target at stated assumptions, a return × withdrawal-rate sensitivity grid, and the honest list of what the model ignores."
+ },
+ {
   "name": "flowchart",
   "skill": "flowchart",
   "bundle": "pm-visuals",
@@ -1312,6 +1348,12 @@
   "skill": "hiring-rubric",
   "bundle": "pm-people",
   "description": "Generate a structured interview scorecard and interview guide for any role. Use when asked to create a hiring rubric, interview scorecard, structured interview guide, or assessment criteria for a job. Produces a scorecard with competencies, behavioural questions, and scoring guidance."
+ },
+ {
+  "name": "hoa_decoder",
+  "skill": "hoa-decoder",
+  "bundle": "pm-decoders",
+  "description": "Decode HOA covenants (CC&Rs) and the fee structure before you buy into them. Use when someone asks 'what do these HOA rules actually mean', 'decode these CC&Rs', 'is this HOA going to be a problem', or 'what should I check before buying in an HOA'. Produces a restriction decode ranked by lifestyle impact, special-assessment exposure analysis, enforcement and fine mechanics, and the exact records to request before buying."
  },
  {
   "name": "hook_writer",
@@ -1518,6 +1560,12 @@
   "description": "Plan and write the communications for a layoff or restructure with clarity and dignity. Use when asked to communicate a layoff, write a RIF/redundancy announcement, prepare manager talking points for letting people go, or plan workforce-reduction comms. Produces a comms package — sequencing plan, the all-hands/company message, the affected-employee message, a manager guide with talking points, a staying-team message, and an external/press holding line."
  },
  {
+  "name": "lease_decoder",
+  "skill": "lease-decoder",
+  "bundle": "pm-decoders",
+  "description": "Decode a residential lease into plain English and rank the clauses that can hurt you. Use when someone asks 'what am I signing', 'decode my lease', 'is this rental agreement normal', or 'can my landlord really do this'. Produces a clause-by-clause decode table, ranked red flags, break-clause and deposit math, questions to ask before signing, and what's actually negotiable."
+ },
+ {
   "name": "legal_brief",
   "skill": "legal-brief",
   "bundle": "pm-legal",
@@ -1578,6 +1626,12 @@
   "description": "Run a quarterly loan covenant compliance review: covenant table with required vs actual vs headroom, trend and trajectory-to-breach analysis, waiver and amendment options with pricing implications, early-warning indicators, and a watch-list recommendation. Use when asked to review covenant compliance, check covenant headroom, assess a potential covenant breach, or prepare a quarterly borrower monitoring review. Produces a structured covenant review with headroom table, trajectory analysis, and recommended actions."
  },
  {
+  "name": "loan_decoder",
+  "skill": "loan-decoder",
+  "bundle": "pm-decoders",
+  "description": "Decode a personal, auto, or mortgage loan offer into what it really costs and where the traps are. Use when someone asks 'is this loan a good deal', 'decode my loan offer', 'what am I signing', or 'what will this mortgage actually cost me'. Produces a total-cost-of-loan number, APR vs advertised-rate reconciliation, ranked red flags (prepayment penalties, junk fees, rate-reset exposure), and the three questions that most change the deal."
+ },
+ {
   "name": "local_dev_setup",
   "skill": "local-dev-setup",
   "bundle": "pm-engineering",
@@ -1630,6 +1684,12 @@
   "skill": "media-pitch",
   "bundle": "pm-gtm",
   "description": "Write a media pitch or press outreach email for any story or announcement. Use when asked to write a media pitch, journalist outreach email, press pitch, or story angle for PR. Produces a concise pitch with a compelling news angle, journalist-specific hook, and clear call to action."
+ },
+ {
+  "name": "medical_bill_decoder",
+  "skill": "medical-bill-decoder",
+  "bundle": "pm-decoders",
+  "description": "Decode an itemized medical bill or EOB into plain English and find the charges worth disputing. Use when someone asks 'why is my medical bill so high', 'decode my hospital bill', 'what is this EOB saying', or 'can I negotiate this bill'. Produces a line-by-line decode, duplicate and unbundling flags, balance-billing red flags, and ready-to-read scripts for requesting an itemized bill, financial assistance, and a negotiation call."
  },
  {
   "name": "meeting_notes",
@@ -1752,6 +1812,12 @@
   "description": "Strips AI writing patterns from text and rewrites it to sound genuinely human by removing statistical defaults and injecting the specific signals that human writers produce. Use when a draft reads as AI-generated, over-polished, or rhythmically uniform — including blog posts, emails, LinkedIn posts, or any prose that needs to sound like a real person wrote it. Produces a pattern audit, side-by-side comparison, itemised change log, and clean rewritten output ready to paste."
  },
  {
+  "name": "offer_comparison",
+  "skill": "offer-comparison",
+  "bundle": "pm-calculators",
+  "description": "Compare two or more job offers as total-comp curves over four years — vesting cliffs, bonuses, 401(k) match, and the crossover year computed, not vibed. Use when asked to compare job offers, which offer pays more over time, model my equity vesting, or is the startup offer actually worth it. Produces a year-by-year and cumulative comp table per offer, the crossover analysis, and negotiation levers ranked by dollar impact."
+ },
+ {
   "name": "offer_letter",
   "skill": "offer-letter",
   "bundle": "pm-recruiting",
@@ -1798,6 +1864,12 @@
   "skill": "open-house-plan",
   "bundle": "pm-realestate",
   "description": "Plan and promote an open house that draws buyers and generates leads. Use when asked to plan an open house, market an open house, or create an open-house checklist. Produces a plan — timing and promotion across channels, prep and staging checklist, a day-of run sheet, lead capture, and follow-up — so the event drives real interest and the agent leaves with leads, not just foot traffic."
+ },
+ {
+  "name": "opposing_counsel",
+  "skill": "opposing-counsel",
+  "bundle": "pm-simulators",
+  "description": "Read a contract the way the counterparty's lawyer will — hunting for leverage, not fairness. Use when someone says 'read this like opposing counsel', 'how would the other side attack this agreement', 'find the weaknesses before they do', or before sending or signing any contract. Produces the demand/position letter opposing counsel would actually send, plus an out-of-character debrief with the clause fixes that defang each attack."
  },
  {
   "name": "org_chart",
@@ -1870,6 +1942,12 @@
   "skill": "personal-bio",
   "bundle": "pm-personal",
   "description": "Write a professional bio in the three lengths you actually need. Use when asked to write a bio, an 'about me', a speaker/author bio, or a short profile blurb. Produces three ready-to-use versions — a one-liner, a short (~50-word) bio, and a long (~150-word) bio — in a consistent third-person voice, plus a first-person variant."
+ },
+ {
+  "name": "personal_board_of_directors",
+  "skill": "personal-board-of-directors",
+  "bundle": "pm-personal",
+  "description": "Five standing advisors — the Operator, the Skeptic, the CFO, the Coach, the Customer — debate your decision on paper and vote. Use when asked to help me decide, pressure-test this decision, what would smart advisors say, or convene my board. Produces five distinct advisor memos, a disagreement map, a vote with a stated decision rule, and the one question to resolve before deciding."
  },
  {
   "name": "persuasion_brief",
@@ -2154,6 +2232,12 @@
   "description": "Write a clear, well-structured README for a software project or open-source repo. Use when asked to write or improve a README, document a project, or make a repo approachable. Produces a complete README — one-line pitch, badges, quickstart, usage, install, contributing, license — that gets someone from landing to running fast."
  },
  {
+  "name": "receipts_audit",
+  "skill": "receipts-audit",
+  "bundle": "pm-method",
+  "description": "Audit any document against its own sources — every factual claim extracted and graded as evidenced, partially evidenced, unsupported, or contradicted, with the exact source line that supports or fails it. Use when asked to fact-check a document against its sources, check whether a report's claims are backed up, verify a deck against the data, or ask 'does this doc have receipts?'. Produces a claim ledger, unsupported claims ranked by load-bearingness, a fix-or-drop call per claim, and an honesty score with stated method."
+ },
+ {
   "name": "recruiter_outreach",
   "skill": "recruiter-outreach",
   "bundle": "pm-recruiting",
@@ -2196,6 +2280,12 @@
   "description": "Design a referral or viral-loop program that actually drives growth. Use when asked to design a referral program, build a viral/invite loop, set referral incentives, or improve word-of-mouth growth. Produces a referral design — the loop mechanics, incentive structure (who gets what, when), the viral-math estimate (k-factor/cycle time), fraud guardrails, placement & messaging, and success metrics."
  },
  {
+  "name": "refinance_breakeven",
+  "skill": "refinance-breakeven",
+  "bundle": "pm-calculators",
+  "description": "Compute the month a refinance actually starts saving money — payment delta, breakeven month, and total interest on both paths including the term-reset trap. Use when asked should I refinance, when does a refi break even, compare my loan to a refi offer, or is this refinance worth the closing costs. Produces the breakeven analysis with both interest totals, the if-you-sell-before-month-N warning, and the cases where the breakeven math lies."
+ },
+ {
   "name": "regex_builder",
   "skill": "regex-builder",
   "bundle": "pm-engineering",
@@ -2206,6 +2296,12 @@
   "skill": "regression-test-plan",
   "bundle": "pm-qa",
   "description": "Design and prioritize a regression test suite so changes don't break what worked. Use when asked to plan regression testing, build a regression suite, decide what to re-test after a change, or trim a bloated regression pack. Produces a risk-based regression plan — what to re-test and why, prioritised tiers (smoke → full), automation candidates, and a run strategy per release — so coverage matches risk and the suite stays fast."
+ },
+ {
+  "name": "regulator_eyes",
+  "skill": "regulator-eyes",
+  "bundle": "pm-simulators",
+  "description": "Read your marketing claims, landing page, or ad copy the way a consumer-protection investigator would (FTC/ASA framing) and draft the inquiry letter they could send. Use when asked to check my marketing claims, read this like a regulator, audit my landing page for claim risk, or is this ad compliant. Produces a claim inventory with substantiation demands, the inquiry letter, and a fix-or-drop debrief per claim."
  },
  {
   "name": "regulatory_impact_analysis",
@@ -2790,6 +2886,12 @@
   "description": "Write a test strategy document from a feature spec, PRD, or system description. Use when asked to create a test plan, write a test strategy, define QA approach, or plan testing for a feature or release. Produces a complete test strategy with scope, risk assessment, test types, coverage targets, and a prioritised test case outline."
  },
  {
+  "name": "the_churning_customer",
+  "skill": "the-churning-customer",
+  "bundle": "pm-simulators",
+  "description": "Simulate the exact customer who will quietly cancel in month 4 — their internal monologue through the lifecycle and the honest exit interview they never gave you. Use when asked why do customers really churn, simulate a churning customer, roleplay the customer who cancels, or what does silent churn look like for my product. Produces the customer's lifecycle monologue, their never-given exit interview, and a debrief with the earliest detectable signals and interventions."
+ },
+ {
   "name": "threat_model",
   "skill": "threat-model",
   "bundle": "pm-security",
@@ -2812,6 +2914,12 @@
   "skill": "tornado-sensitivity",
   "bundle": "pm-calculators",
   "description": "Which assumption actually moves the answer — one-at-a-time sensitivity, ranked into a tornado. Use when a model's output is being argued about (LTV, ROI, forecast) and the room is debating drivers that don't matter, or before spending diligence effort: swing every driver low→high and see which one owns the outcome. Produces the ranked tornado table, share-of-swing per driver, and a real .xlsx — via the bundled zero-dependency script with a safely restricted formula evaluator."
+ },
+ {
+  "name": "tos_decoder",
+  "skill": "tos-decoder",
+  "bundle": "pm-decoders",
+  "description": "Decode a terms of service or privacy policy into what you're actually agreeing to, ranked by real-world impact. Use when someone asks 'what am I agreeing to', 'decode this privacy policy', 'is this ToS bad', or 'should I click accept'. Produces a ranked findings table with a 'should I care?' verdict per finding, covering data resale, arbitration and class-action waivers, unilateral changes, content licenses, and what deletion really means."
  },
  {
   "name": "transcreation",
@@ -2866,6 +2974,12 @@
   "skill": "value-proposition",
   "bundle": "pm-copy",
   "description": "Craft a sharp value proposition that says who it's for, the outcome, and why you over the alternative. Use when asked to write a value prop, a value proposition, a one-liner, or to clarify 'what do we even say we do?'. Produces a primary value-prop statement, a plain-language one-liner, 3 benefit-led variations, and the before→after transformation it promises — ready to headline a landing page."
+ },
+ {
+  "name": "vc_partner_meeting",
+  "skill": "vc-partner-meeting",
+  "bundle": "pm-simulators",
+  "description": "Simulate the VC partner meeting that discusses your pitch after you leave the room — four partner archetypes debate, then write the internal verdict memo. Use when asked how will VCs discuss my pitch, simulate the partner meeting, stress-test my fundraise, or what happens after the pitch. Produces the meeting transcript, the internal fund/pass/track memo, and a debrief listing which objections are fixable before the real meeting."
  },
  {
   "name": "vendor_contract_checklist",

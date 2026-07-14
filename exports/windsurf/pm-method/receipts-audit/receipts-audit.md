@@ -1,0 +1,73 @@
+---
+trigger: model_decision
+description: "Audit any document against its own sources — every factual claim extracted and graded as evidenced, partially evidenced, unsupported, or contradicted, with the exact source line that supports or fails it. Use when asked to fact-check a document against its sources, check whether a report's claims are backed up, verify a deck against the data, or ask 'does this doc have receipts?'. Produces a claim ledger, unsupported claims ranked by load-bearingness, a fix-or-drop call per claim, and an honesty score with stated method."
+---
+
+# Receipts Audit Skill
+
+A document earns trust one sourced claim at a time. This skill takes a document plus the evidence behind it, extracts every factual claim, and grades each strictly against the provided sources — never against plausibility. The output is a claim ledger, a ranked list of the unsupported claims that matter most, and an honesty score whose method is shown, not asserted.
+
+## What This Skill Produces
+
+- A numbered claim ledger: every factual claim, its grade, and the specific source line that supports or fails it
+- Unsupported and contradicted claims ranked by how load-bearing they are to the document's argument
+- A fix-or-drop recommendation per failing claim, with rewritten wording where a fix exists
+- An honesty score (0–100) with the calculation method stated in the artifact
+
+## Required Inputs
+
+Ask for these if not provided:
+
+- **The document** — the report, deck text, post, memo, or page under audit
+- **The sources** — the data, citations, quotes, or evidence the document claims to rest on. If none are supplied, run the extraction anyway, grade everything **Unsupported (no sources provided)**, and say so plainly at the top
+- **Audience stakes** (optional) — who reads this and what they'd decide from it; used for load-bearingness ranking. If absent, infer from the document and label the inference
+
+## Grading Framework
+
+**1. Extract claims.** Every checkable factual assertion: numbers, comparisons, dates, quotes, causal statements ("X drove Y"), and superlatives ("fastest", "first"). Opinions and hedged forecasts are out of scope — note them separately, don't grade them.
+
+**2. Grade each claim against the sources only:**
+
+| Grade | Test |
+|---|---|
+| Evidenced | A specific source line states it, at the claim's full scope and tense |
+| Partially evidenced | A source supports a narrower, older, or weaker version than the claim as worded |
+| Unsupported | No provided source addresses it — even if it is probably true |
+| Contradicted | A provided source says otherwise; quote both lines side by side |
+
+**3. Rank the failures by load-bearingness (1–5):** 5 = the document's core conclusion collapses without it; 3 = a supporting pillar; 1 = colour. Rank only Unsupported and Contradicted claims.
+
+**4. Fix-or-drop per failing claim.** Fix = rewrite so an existing source line covers it (narrow the scope, soften the tense, attribute it). Drop = no source can carry it. Name the evidence that, if obtained, would upgrade it.
+
+**5. Score honesty:** `100 × (Evidenced + 0.5 × Partially) / total graded claims`, then subtract 10 per Contradicted claim, floor 0. State this formula and the counts in the output.
+
+## Output Format
+
+### Receipts audit: [document name]
+
+**1. Verdict** — honesty score, counts per grade, and the single most consequential failing claim.
+
+**2. Claim ledger** — table: # | claim (verbatim) | grade | source line (quoted, with location) or "none provided".
+
+**3. Load-bearing failures** — failing claims ranked 5→1, each with one sentence on what breaks if it's wrong.
+
+**4. Fix-or-drop register** — per failing claim: **Fix** (rewritten wording + the source line it now rests on) or **Drop** (why no fix exists), plus evidence-to-collect.
+
+**5. Honesty score method** — the formula, the counts, the arithmetic.
+
+## Quality Checks
+
+- [ ] Every graded claim cites a specific source line or explicitly says none was provided
+- [ ] Causal claims and superlatives are extracted, not just numbers
+- [ ] Contradicted claims show both lines — the claim and the source — verbatim
+- [ ] The load-bearing ranking reflects the document's argument, not claim order
+- [ ] Every failing claim ends in Fix (with wording) or Drop — no "verify later" limbo
+- [ ] The honesty score shows its arithmetic in the artifact
+
+## Anti-Patterns
+
+- [ ] Do not grade a claim by plausibility — only by the provided sources
+- [ ] Do not let a true-but-unsourced claim pass as evidenced — Unsupported means unsupported here, not false
+- [ ] Do not invent sources — if you recall external evidence, it does not exist for this audit
+- [ ] Do not average away a Contradicted claim — one contradiction outweighs ten evidenced footnotes
+- [ ] Do not fix a claim by vaguening it — fixes bind wording to a real source line, or the claim drops
