@@ -226,12 +226,13 @@ function add(opts) {
 
 function list() {
   console.log('Supported agents and default targets:\n');
-  for (const a of ['claude', 'hermes', 'codex', 'openclaw', 'cursor', 'windsurf', 'aider']) {
+  // Derive from the registries above so this can't drift from what `add` accepts.
+  for (const a of [...NATIVE, ...Object.keys(RULEFILE)]) {
     console.log(`  ${a.padEnd(9)} ${defaultTarget(a)}`);
   }
   console.log('\nNative SKILL.md agents: claude, hermes, codex, openclaw (install skill folders).');
-  console.log('Claude also gets subagents + slash commands. Cursor/Windsurf install rule files;');
-  console.log('Aider installs conventions you load with "aider --read".');
+  console.log('Claude also gets subagents + slash commands. Cursor / Windsurf / Kilo Code install');
+  console.log('rule files; Aider installs conventions you load with "aider --read".');
   console.log(`\n${STAR}`);
 }
 
