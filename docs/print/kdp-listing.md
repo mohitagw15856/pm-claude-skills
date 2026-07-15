@@ -46,12 +46,25 @@ Written precisely enough to instruct an AI — and clear enough to read as a boo
 
 _KDP tip: don't repeat words already in your title/subtitle or your categories — those are indexed automatically. Use the slots for phrases a buyer would actually type._
 
-## Categories (choose up to 3 in the create flow)
-1. **Business & Money › Skills**
-2. **Business & Money › Management & Leadership › Management**
-3. **Computers & Technology › Computer Science › AI & Machine Learning** — _or_ **Business & Money › Business Writing** if you'd rather stay fully business-shelved.
+## Categories (choose up to 3)
 
-_After publishing you can email KDP to be added to up to 10 categories total; start with the 3 above._
+KDP now shows a **searchable category browser** (a pop-up where you type a term and tick up to 3 *leaf* categories), not a fixed dropdown — so type these terms in its search box rather than looking for exact menu names. Pick the leaf, not just the parent.
+
+**Recommended 3 (type the term → pick the leaf):**
+1. Search **"Business Writing"** → *Books › Business & Money › Skills › Business Writing*
+2. Search **"Decision"** → *Books › Business & Money › Skills › Decision-Making & Problem Solving*
+3. Search **"Management"** → *Books › Business & Money › Management & Leadership › Management*
+
+**Good alternates if one isn't offered on your marketplace:**
+- Search **"Strategic Planning"** → *Business & Money › Processes & Infrastructure › Strategic Planning*
+- Search **"Machine Learning"** → *Computers & Technology › Computer Science › AI & Machine Learning*
+- Search **"Knowledge Capital"** → *Business & Money › Processes & Infrastructure › Knowledge Capital*
+- Search **"Business Etiquette"** or **"Time Management"** → both under *Business & Money › Skills*
+
+Notes:
+- If the search finds nothing for a term, that leaf doesn't exist on the marketplace you're setting up — pick the closest alternate above.
+- The picker is **per marketplace** (Amazon.com vs .co.uk have slightly different trees); set the US ones first.
+- After publishing you can email KDP to be added to **up to 10 categories** total; start with these 3.
 
 ## Pricing
 - List price: **$24.99** (Amazon.com). KDP auto-computes other marketplaces and shows royalty (~$4–7 after print cost).
