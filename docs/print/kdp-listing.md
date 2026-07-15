@@ -46,25 +46,22 @@ Written precisely enough to instruct an AI — and clear enough to read as a boo
 
 _KDP tip: don't repeat words already in your title/subtitle or your categories — those are indexed automatically. Use the slots for phrases a buyer would actually type._
 
-## Categories (choose up to 3)
+## Categories (choose up to 3 — hard cap)
 
-KDP now shows a **searchable category browser** (a pop-up where you type a term and tick up to 3 *leaf* categories), not a fixed dropdown — so type these terms in its search box rather than looking for exact menu names. Pick the leaf, not just the parent.
+KDP shows a **search-and-browse category picker**. It opens on the **top-level alphabetical list** of Amazon book categories (Arts & Photography, Audiobooks, Biographies & Memoirs, Business & Money, …) — you do **not** pick at that level. Scroll to **`Business & Money`**, expand it, and tick up to **3** sub-categories. (You can also type a term in the picker's search box.)
 
-**Recommended 3 (type the term → pick the leaf):**
-1. Search **"Business Writing"** → *Books › Business & Money › Skills › Business Writing*
-2. Search **"Decision"** → *Books › Business & Money › Skills › Decision-Making & Problem Solving*
-3. Search **"Management"** → *Books › Business & Money › Management & Leadership › Management*
+**Aim for these areas inside Business & Money** (exact leaf names vary by marketplace — pick the closest the picker actually offers):
+- **Skills** — e.g. Business Writing, or Decision-Making & Problem Solving
+- **Management & Leadership** — e.g. Management
+- **Processes & Infrastructure** — e.g. Strategic Planning or Knowledge Capital
 
-**Good alternates if one isn't offered on your marketplace:**
-- Search **"Strategic Planning"** → *Business & Money › Processes & Infrastructure › Strategic Planning*
-- Search **"Machine Learning"** → *Computers & Technology › Computer Science › AI & Machine Learning*
-- Search **"Knowledge Capital"** → *Business & Money › Processes & Infrastructure › Knowledge Capital*
-- Search **"Business Etiquette"** or **"Time Management"** → both under *Business & Money › Skills*
+For the AI angle, back out and expand **Computers & Technology › Computer Science › AI & Machine Learning**.
 
 Notes:
-- If the search finds nothing for a term, that leaf doesn't exist on the marketplace you're setting up — pick the closest alternate above.
-- The picker is **per marketplace** (Amazon.com vs .co.uk have slightly different trees); set the US ones first.
-- After publishing you can email KDP to be added to **up to 10 categories** total; start with these 3.
+- **3 is the hard cap** — Amazon ended the "email support for up to 10 categories" option in 2023.
+- The tree is **per marketplace** (Amazon.com ≠ .co.uk ≠ .in) — set your primary marketplace's categories; check what it actually lists rather than assuming a path exists.
+- You can **change categories anytime** from the Bookshelf (Edit details → Categories); changes take ~24–72h. Test placements later — nothing here is permanent.
+- Don't over-optimise the leaf: being shelved in **Business & Money** is what matters most.
 
 ## Pricing
 - List price: **$24.99** (Amazon.com). KDP auto-computes other marketplaces and shows royalty (~$4–7 after print cost).
