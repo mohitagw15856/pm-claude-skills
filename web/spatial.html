@@ -12,20 +12,19 @@
   #space:active { cursor: grabbing; }
   .overlay { position: fixed; z-index: 5; }
   .hint { left: 0; right: 0; bottom: 16px; text-align:center; color: var(--muted); font-size: 12.5px; pointer-events:none; }
-  .hud { top: 70px; left: 16px; display:flex; gap:8px; flex-wrap:wrap; }
+  .hud { top: 14px; right: 16px; display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end; max-width: 70vw; }
+  #back { position: fixed; z-index: 6; top: 14px; left: 14px; font-size: 13px; color: var(--text); text-decoration: none; background: rgba(16,19,26,.82); border: 1px solid var(--border); border-radius: 999px; padding: 8px 14px; backdrop-filter: blur(6px); display:inline-flex; align-items:center; gap:8px; }
+  #back:hover { border-color: var(--accent); }
+  #back b { font-weight: 700; }
   .hud button, .hud input { background: rgba(20,24,32,.7); border:1px solid var(--border); color: var(--text); border-radius:8px; padding:7px 11px; font-size:13px; backdrop-filter: blur(6px); }
   .tip { position: fixed; z-index: 6; pointer-events:none; background: rgba(10,12,18,.92); border:1px solid var(--accent); border-radius:8px; padding:6px 10px; font-size:12.5px; display:none; max-width:220px; }
   #vrStatus { font-size:12px; color:var(--muted); align-self:center; }
 </style>
 </head>
 <body>
-<header class="topbar">
-  <div class="brand">
-    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
-    <div class="brand-text"><h1>Spatial</h1><p class="tagline">Step inside the library.</p></div>
-  </div>
-</header>
-<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<!-- Immersive full-canvas page (like Galaxy 3D): no shared header/nav bar — the
+     canvas owns the viewport, with a lightweight back pill to return. -->
+<a id="back" href="index.html" title="Back to the Playground">← <b>PM Skills</b> · 🌌 Spatial</a>
 
 <canvas id="space"></canvas>
 <div class="overlay hud">
