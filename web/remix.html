@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Skill Remix — fork a skill, tweak it, run it, share it</title>
+<meta name="description" content="Open any of the 515 skills, edit its instructions in the browser, run your version instantly, see a diff against the original, and share your fork as a PR. Turn passive use into contribution." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
+<script src="providers.js"></script>
+<style>
+  .rx-wrap { max-width: 1100px; margin: 0 auto; padding: 14px 22px 60px; }
+  .rx-lead { color: var(--muted); font-size: 15px; }
+  .pick { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 10px 0; }
+  select { padding: 9px 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; max-width: 100%; }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 860px){ .split { grid-template-columns: 1fr; } }
+  textarea { width: 100%; box-sizing: border-box; min-height: 320px; padding: 12px 14px; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-family: ui-monospace,Menlo,monospace; font-size: 12.5px; line-height: 1.5; }
+  #brief { min-height: 70px; font-family: inherit; font-size: 14px; }
+  .out { border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; background: var(--panel); min-height: 320px; overflow-y: auto; max-height: 62vh; }
+  .diff { font-family: ui-monospace,Menlo,monospace; font-size: 12px; white-space: pre-wrap; }
+  .diff ins { background: rgba(63,185,80,.22); text-decoration: none; }
+  .diff del { background: rgba(248,81,73,.22); }
+  .actions { margin: 12px 0; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .exp-btn { background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 8px 12px; cursor: pointer; font-size: 13px; }
+  .mini { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Skill Remix</h1><p class="tagline">Fork it, tweak it, run it, share it.</p></div>
+  </div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your edits stay in your browser. Sharing a fork is a deliberate PR — nothing is uploaded automatically.</div>
+
+<div class="rx-wrap">
+  <p class="rx-lead">Every skill is just editable text. Fork one, change the instructions to fit <strong>your</strong> team's standards, run your version against a real brief, and — if it's better — share it back as a fork with attribution.</p>
+  <div class="pick">
+    <span class="mini">Fork</span>
+    <select id="skill"></select>
+    <button id="resetSkill" class="exp-btn" type="button">↺ reset to original</button>
+    <span class="mini" id="based"></span>
+  </div>
+  <input id="brief" type="text" style="width:100%;box-sizing:border-box;padding:10px 13px;background:var(--panel-2);border:1px solid var(--border);border-radius:10px;color:var(--text)" placeholder="A brief to test your fork on…" />
+  <div class="actions">
+    <button id="runBtn" class="primary" type="button">▶ Run my fork</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+    <button id="diffBtn" class="exp-btn" type="button">🔀 Show diff vs original</button>
+    <button id="shareBtn" class="exp-btn" type="button">🔗 Share my fork (PR)</button>
+    <span id="status" class="status"></span>
+  </div>
+  <div class="split">
+    <div><div class="mini" style="margin-bottom:5px">Your fork (edit freely)</div><textarea id="editor"></textarea></div>
+    <div><div class="mini" style="margin-bottom:5px">Output / diff</div><div class="out markdown" id="out"><span class="mini">Run your fork to see the output, or “Show diff”.</span></div></div>
+  </div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let SKILLS=[], controller=null, ORIG='';
+init();
+async function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('skill').addEventListener('change',loadSkill);
+  el('resetSkill').addEventListener('click',()=>{ el('editor').value=ORIG; setStatus('Reset to original.'); });
+  el('runBtn').addEventListener('click',run);
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+  el('diffBtn').addEventListener('click',showDiff);
+  el('shareBtn').addEventListener('click',share);
+  try{ SKILLS=(await (await fetch('skills.json')).json()).skills; SKILLS.sort((a,b)=>a.title.localeCompare(b.title)); for(const s of SKILLS){ const o=document.createElement('option'); o.value=s.name; o.textContent=s.title; el('skill').appendChild(o);} }catch(e){ setStatus('Could not load skills.',true); return; }
+  const want=new URLSearchParams(location.search).get('skill'); if(want&&SKILLS.some(s=>s.name===want)) el('skill').value=want;
+  loadSkill();
+}
+function cur(){ return SKILLS.find(s=>s.name===el('skill').value); }
+function loadSkill(){ const s=cur(); if(!s)return; ORIG=s.instructions||''; el('editor').value=ORIG; el('based').textContent=s.source?('· based on '+s.source.replace(/\*/g,'')):''; el('out').innerHTML='<span class="mini">Run your fork to see the output.</span>'; }
+async function run(){
+  const key=el('apiKey').value.trim(); const brief=el('brief').value.trim();
+  if(!brief) return setStatus('Add a brief to test on.',true);
+  if(window.pmTrack) pmTrack('remix/run');
+  const out=el('out'); out.className='out markdown'; out.innerHTML='';
+  el('runBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController(); setStatus('Running your fork…');
+  try{
+    const acc=await PMProviders.stream({key,model:el('model').value,system:el('editor').value,userMessage:brief,signal:controller.signal,onDelta:(a)=>{ out.innerHTML=DOMPurify.sanitize(marked.parse(a)); }});
+    setStatus('Done.');
+  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
+  finally{ el('runBtn').disabled=false; el('stopBtn').hidden=true; controller=null; }
+}
+// word-level diff
+function showDiff(){
+  const a=ORIG.split(/(\s+)/), b=el('editor').value.split(/(\s+)/);
+  // simple LCS-ish greedy diff
+  const out=[]; let i=0,j=0;
+  const bset=new Map(); b.forEach((w,k)=>{ if(!bset.has(w))bset.set(w,[]); bset.get(w).push(k); });
+  while(i<a.length){ const idxs=bset.get(a[i]); if(idxs&&idxs.some(k=>k>=j)){ const k=idxs.find(k=>k>=j); while(j<k){ out.push('<ins>'+esc(b[j++])+'</ins>'); } out.push(esc(a[i])); j=k+1; i++; } else { out.push('<del>'+esc(a[i++])+'</del>'); } }
+  while(j<b.length) out.push('<ins>'+esc(b[j++])+'</ins>');
+  el('out').className='out'; el('out').innerHTML='<div class="diff">'+out.join('')+'</div>';
+}
+function share(){
+  const s=cur(); const body='Proposing a **fork** of `'+s.name+'`. My version of the skill instructions:\n\n```markdown\n'+el('editor').value.slice(0,7000)+'\n```\n\n_Shared via Skill Remix. Attribution: '+(new URLSearchParams(location.search).get('by')||'a community remixer')+'._';
+  window.open('https://github.com/mohitagw15856/pm-claude-skills/issues/new?title='+encodeURIComponent('remix: fork of '+s.name)+'&body='+encodeURIComponent(body)+'&labels=skill-remix','_blank','noopener');
+}
+function esc(s){ return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

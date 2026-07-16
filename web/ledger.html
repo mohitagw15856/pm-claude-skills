@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Outcome Ledger — did the work actually land?</title>
+<meta name="description" content="Log what you made with a skill, then come back weeks later and mark whether it shipped, got approved, or got a reply. The first honest track record of which AI-produced professional work actually gets adopted — built from your real outcomes, kept in your browser." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
+<style>
+  .lg-wrap { max-width: 900px; margin: 0 auto; padding: 16px 22px 70px; }
+  .lg-lead { color: var(--muted); font-size: 15px; line-height: 1.55; }
+  .stat-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+  .stat { flex: 1; min-width: 130px; border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; background: var(--panel); }
+  .stat b { font-size: 26px; display: block; } .stat span { font-size: 12px; color: var(--muted); }
+  .add { border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; margin: 12px 0; background: var(--panel); }
+  .add .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 6px 0; }
+  select, input[type=text] { padding: 9px 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; }
+  input[type=text].grow { flex: 1; min-width: 200px; }
+  .entry { border: 1px solid var(--border); border-radius: 12px; padding: 11px 14px; margin: 8px 0; background: var(--panel); }
+  .entry .top { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: baseline; }
+  .entry .title { font-weight: 600; } .entry .meta { font-size: 12px; color: var(--muted); }
+  .outcomes { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+  .oc { border: 1px solid var(--border); border-radius: 999px; padding: 4px 11px; font-size: 12.5px; cursor: pointer; background: var(--panel-2); color: var(--text); }
+  .oc.sel { border-color: var(--accent); color: #fff; }
+  .oc.landed.sel { background: #2ea043; border-color: #2ea043; }
+  .oc.mixed.sel { background: #bb8009; border-color: #bb8009; }
+  .oc.no.sel { background: #b62324; border-color: #b62324; }
+  .oc.pending.sel { background: #3b4252; border-color: #6b7280; }
+  .del { float: right; cursor: pointer; color: var(--muted); font-size: 12px; }
+  .actions { margin: 14px 0; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .exp-btn { background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 8px 12px; cursor: pointer; font-size: 13px; }
+  .bar { height: 8px; border-radius: 5px; background: var(--panel-2); overflow: hidden; margin-top: 8px; display: flex; }
+  .bar i { height: 100%; } .bar .l { background: #2ea043; } .bar .m { background: #bb8009; } .bar .n { background: #b62324; }
+  .mini { font-size: 12px; color: var(--muted); }
+  table.rank { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 8px; }
+  table.rank td, table.rank th { border-bottom: 1px solid var(--border); padding: 6px 8px; text-align: left; }
+  th { color: var(--muted); font-weight: 600; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>The Outcome Ledger</h1><p class="tagline">Did the work actually land? The honest track record.</p></div>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your ledger lives only in this browser. Publishing a result is a deliberate, opt-in PR — nothing is uploaded automatically.</div>
+
+<div class="lg-wrap">
+  <p class="lg-lead">Every AI tool stops at the draft — nobody ever learns whether the PRD shipped, the memo got approved, or the cold email got a reply. The Ledger closes that loop: log what you made, then come back and mark what <strong>actually happened</strong>. Over time it becomes the one thing no skill library has — a record of which skills' outputs <em>land in the real world</em>.</p>
+
+  <div class="stat-row" id="stats"></div>
+
+  <div class="add">
+    <div class="row">
+      <span class="mini">I made a</span>
+      <select id="skill"><option value="">— pick a skill —</option></select>
+      <input id="title" type="text" class="grow" placeholder="what it was — e.g. 'Q3 referral-program PRD for the leadership review'" />
+    </div>
+    <div class="row">
+      <button id="addBtn" class="primary" type="button">➕ Log it</button>
+      <span class="mini">then revisit it in a week or two and mark the outcome.</span>
+    </div>
+  </div>
+
+  <div id="entries"></div>
+
+  <h2 style="font-size:17px;margin:22px 0 4px">🏆 What actually lands (your data)</h2>
+  <p class="mini">Landed-rate = shipped/approved/got-a-reply ÷ resolved outcomes. Needs a few marked entries to mean anything.</p>
+  <div id="rank"></div>
+
+  <div class="actions">
+    <button id="exportBtn" class="exp-btn" type="button">⬇ Export my ledger (JSON)</button>
+    <button id="importBtn" class="exp-btn" type="button">⬆ Import</button>
+    <input id="importFile" type="file" accept="application/json" hidden />
+    <button id="claimBtn" class="exp-btn" type="button">📢 Contribute my landed-rates (anonymised PR)</button>
+    <span id="status" class="mini"></span>
+  </div>
+  <p class="mini">Contributing sends only <em>skill → counts</em> (no titles, no content) so the community can build a public "what lands" leaderboard — the honest signal that feeds <code>improve-skill</code>.</p>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+const KEY='pm_outcome_ledger_v1';
+const OUTCOMES=[['landed','✅ Shipped / approved / got a reply'],['mixed','🟡 Partly — used with changes'],['no','❌ Didn\'t land'],['pending','⏳ Still waiting']];
+let LEDGER=[], SKILLS=[];
+
+init();
+async function init(){
+  el('addBtn').addEventListener('click',add);
+  el('exportBtn').addEventListener('click',exportJson);
+  el('importBtn').addEventListener('click',()=>el('importFile').click());
+  el('importFile').addEventListener('change',importJson);
+  el('claimBtn').addEventListener('click',claim);
+  el('title').addEventListener('keydown',e=>{ if(e.key==='Enter') add(); });
+  LEDGER=load();
+  try{ SKILLS=(await (await fetch('skills.json')).json()).skills; SKILLS.sort((a,b)=>a.title.localeCompare(b.title)); for(const s of SKILLS){ const o=document.createElement('option'); o.value=s.name; o.textContent=s.title; el('skill').appendChild(o);} }catch(e){}
+  const want=new URLSearchParams(location.search).get('skill'); if(want) el('skill').value=want;
+  render();
+}
+function load(){ try{ return JSON.parse(localStorage.getItem(KEY)||'[]'); }catch(e){ return []; } }
+function save(){ localStorage.setItem(KEY, JSON.stringify(LEDGER)); }
+function skillTitle(name){ const s=SKILLS.find(x=>x.name===name); return s?s.title:name; }
+function add(){
+  const name=el('skill').value, title=el('title').value.trim();
+  if(!name) return setStatus('Pick a skill first.');
+  if(!title) return setStatus('Add a short description of what you made.');
+  LEDGER.unshift({ id:Math.random().toString(36).slice(2,9), skill:name, title, made:Date.now(), outcome:'pending' });
+  el('title').value=''; save(); render();
+  if(window.pmTrack) pmTrack('ledger/log');
+}
+function setOutcome(id,oc){ const e=LEDGER.find(x=>x.id===id); if(e){ e.outcome=oc; e.resolved=oc==='pending'?null:Date.now(); save(); render(); if(window.pmTrack)pmTrack('ledger/outcome/'+oc); } }
+function del(id){ LEDGER=LEDGER.filter(x=>x.id!==id); save(); render(); }
+function agesince(t){ const d=Math.floor((Date.now()-t)/864e5); return d<=0?'today':d===1?'yesterday':d+' days ago'; }
+
+function render(){
+  // top stats
+  const total=LEDGER.length, resolved=LEDGER.filter(e=>e.outcome!=='pending').length;
+  const landed=LEDGER.filter(e=>e.outcome==='landed').length;
+  const rate=resolved? Math.round(landed/resolved*100):0;
+  el('stats').innerHTML=`
+    <div class="stat"><b>${total}</b><span>artifacts logged</span></div>
+    <div class="stat"><b>${resolved}</b><span>outcomes marked</span></div>
+    <div class="stat"><b style="color:#3fb950">${resolved?rate+'%':'—'}</b><span>landed-rate</span></div>
+    <div class="stat"><b>${LEDGER.filter(e=>e.outcome==='pending').length}</b><span>awaiting reality</span></div>`;
+  // entries
+  el('entries').innerHTML = total ? LEDGER.map(e=>`
+    <div class="entry">
+      <span class="del" data-del="${e.id}">✕ remove</span>
+      <div class="top"><span class="title">${esc(e.title)}</span><span class="meta">${esc(skillTitle(e.skill))} · logged ${agesince(e.made)}</span></div>
+      <div class="outcomes">${OUTCOMES.map(([k,l])=>`<span class="oc ${k}${e.outcome===k?' sel':''}" data-oc="${e.id}:${k}">${l}</span>`).join('')}</div>
+    </div>`).join('') : '<p class="mini">No entries yet — log your first artifact above. (Tip: after you run a skill in the playground, come here and log what you produced.)</p>';
+  document.querySelectorAll('[data-oc]').forEach(b=>b.addEventListener('click',()=>{ const [id,oc]=b.dataset.oc.split(':'); setOutcome(id,oc); }));
+  document.querySelectorAll('[data-del]').forEach(b=>b.addEventListener('click',()=>del(b.dataset.del)));
+  // ranking
+  const by={};
+  for(const e of LEDGER){ if(e.outcome==='pending')continue; (by[e.skill]=by[e.skill]||{l:0,m:0,n:0})[e.outcome==='landed'?'l':e.outcome==='mixed'?'m':'n']++; }
+  const rows=Object.entries(by).map(([s,c])=>{ const tot=c.l+c.m+c.n; return {s,tot,rate:(c.l+c.m*0.5)/tot,c}; }).sort((a,b)=>b.rate-a.rate||b.tot-a.tot);
+  el('rank').innerHTML = rows.length ? `<table class="rank"><thead><tr><th>Skill</th><th>Landed-rate</th><th>Outcomes</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${esc(skillTitle(r.s))}</td><td><b>${Math.round(r.rate*100)}%</b><div class="bar"><i class="l" style="width:${r.c.l/r.tot*100}%"></i><i class="m" style="width:${r.c.m/r.tot*100}%"></i><i class="n" style="width:${r.c.n/r.tot*100}%"></i></div></td><td class="mini">${r.tot} (${r.c.l}✅ ${r.c.m}🟡 ${r.c.n}❌)</td></tr>`).join('')}</tbody></table>` : '<p class="mini">Mark a few outcomes and your per-skill landed-rates appear here.</p>';
+}
+function exportJson(){ const blob=new Blob([JSON.stringify(LEDGER,null,2)],{type:'application/json'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='outcome-ledger.json'; a.click(); }
+function importJson(e){ const f=e.target.files[0]; if(!f)return; const r=new FileReader(); r.onload=()=>{ try{ const d=JSON.parse(r.result); if(Array.isArray(d)){ LEDGER=d; save(); render(); setStatus('Imported '+d.length+' entries.'); } }catch(err){ setStatus('Bad file.'); } }; r.readAsText(f); }
+function claim(){
+  const by={};
+  for(const e of LEDGER){ if(e.outcome==='pending')continue; (by[e.skill]=by[e.skill]||{landed:0,mixed:0,no:0})[e.outcome]++; }
+  if(!Object.keys(by).length) return setStatus('Mark some outcomes first — nothing to contribute yet.');
+  const payload={ contributed:new Date().toISOString().slice(0,10), counts:by };
+  const body='Anonymised outcome data to add to `data/outcomes.json` (append to the `contributions` array). Only skill→counts, no titles or content:\n\n```json\n'+JSON.stringify(payload,null,2)+'\n```';
+  window.open('https://github.com/mohitagw15856/pm-claude-skills/issues/new?title='+encodeURIComponent('outcomes: landed-rate contribution')+'&body='+encodeURIComponent(body),'_blank','noopener');
+}
+function esc(s){ return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function setStatus(m){ el('status').textContent=m; }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

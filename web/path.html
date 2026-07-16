@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Operator's Path — 30 days to certified professional judgment</title>
+<meta name="description" content="A structured 30-day journey that ties the skills, the Academy, the arenas and the Operator's Exam into one path with daily drills, streaks, and spaced-repetition reviews. Progress is kept in your browser." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .p-wrap { max-width: 820px; margin: 0 auto; padding: 16px 22px 70px; }
+  .p-lead { color: var(--muted); font-size: 15px; }
+  .progress { display: flex; gap: 12px; flex-wrap: wrap; margin: 14px 0; }
+  .pcard { flex: 1; min-width: 130px; border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; background: var(--panel); }
+  .pcard b { font-size: 24px; display: block; } .pcard span { font-size: 12px; color: var(--muted); }
+  .track { height: 10px; border-radius: 6px; background: var(--panel-2); overflow: hidden; margin: 6px 0 16px; }
+  .track i { display: block; height: 100%; background: linear-gradient(90deg,var(--accent),#e3b341); }
+  .day { display: flex; gap: 12px; align-items: flex-start; border: 1px solid var(--border); border-radius: 12px; padding: 11px 14px; margin: 8px 0; background: var(--panel); }
+  .day.done { opacity: .6; } .day.today { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+  .day .n { font-weight: 800; font-size: 18px; min-width: 34px; color: var(--accent); }
+  .day .c { flex: 1; } .day .c h3 { margin: 0 0 3px; font-size: 15px; } .day .c p { margin: 0; font-size: 13px; color: var(--muted); }
+  .day .c a { font-size: 12.5px; }
+  .chk { cursor: pointer; font-size: 20px; }
+  .review { font-size: 11px; color: var(--accent); }
+  .mini { font-size: 12px; color: var(--muted); }
+  .actions { margin: 12px 0; display: flex; gap: 8px; flex-wrap: wrap; }
+  .exp-btn { background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 8px 12px; cursor: pointer; font-size: 13px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>The Operator's Path</h1><p class="tagline">30 days to certified professional judgment.</p></div>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your progress is saved only in this browser. No account, no signup — just show up.</div>
+
+<div class="p-wrap">
+  <p class="p-lead">The skills, the Academy, the arenas and the Operator's Exam are powerful on their own — but scattered. This is the spine: <strong>one drill a day for 30 days</strong>, with streaks and spaced-repetition reviews, ending at the Exam. Do the day's task, tick it off, come back tomorrow.</p>
+  <div class="progress">
+    <div class="pcard"><b id="doneN">0</b><span>of 30 days done</span></div>
+    <div class="pcard"><b id="streak">0</b><span>day streak 🔥</span></div>
+    <div class="pcard"><b id="pct">0%</b><span>complete</span></div>
+  </div>
+  <div class="track"><i id="bar" style="width:0%"></i></div>
+  <div class="actions">
+    <button id="jumpToday" class="exp-btn" type="button">↧ Jump to today</button>
+    <button id="reset" class="exp-btn" type="button">Reset progress</button>
+    <span id="status" class="mini"></span>
+  </div>
+  <div id="days"></div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+const KEY='pm_path_v1';
+// 30-day curriculum: [title, subtitle, href, linkLabel]. Reviews are auto-scheduled (spaced repetition).
+const DAYS=[
+  ['Meet the library','Run your first skill in the playground on a real task of yours.','index.html','Open the playground'],
+  ['Find by intent','Use the command bar — describe a task in plain words, run the top match.','index.html','Command bar'],
+  ['The PRD','Draft a PRD from a fuzzy idea with prd-template.','index.html?skill=prd-template','Run PRD'],
+  ['The exec update','Turn messy notes into an executive-update.','index.html?skill=executive-update','Run it'],
+  ['Grade your work','Paste a real draft into Grade and act on the top gap.','grade.html','Grade'],
+  ['The Boardroom','Put a document through the Boardroom and read the Chair\'s verdict.','boardroom.html','Boardroom'],
+  ['Prioritise','Run RICE on a real backlog; drag the confidence slider.','index.html?skill=rice-prioritisation','RICE'],
+  ['The postmortem','Write a blameless incident-postmortem from a timeline.','index.html?skill=incident-postmortem','Run it'],
+  ['Document X-ray','Heat-map a claim-heavy doc; fix the weakest line.','xray.html','X-ray'],
+  ['The Gym','Negotiate against an AI with a hidden bottom line; read the debrief.','gym.html','The Gym'],
+  ['Make it real','Export an output as a branded PDF or a Packet.','make.html','Make it real'],
+  ['Teardown','Run a real public doc through the Teardown Engine.','teardown.html','Teardown'],
+  ['Consultant mode','Run a skill as an interview instead of a template.','consult.html','Consult'],
+  ['The Panel','Face The Panel — a live interview across four stages.','hiring.html','The Panel'],
+  ['Chain it','Run a workflow recipe (e.g. /ship-a-feature) end to end.','hub.html','Journeys'],
+  ['The Firm','Charter a standing AI staff and read their first memos.','firm.html','The Firm'],
+  ['Calibrate','Log a prediction in the Reckoning with a confidence.','reckoning.html','Reckoning'],
+  ['The Gauntlet','Run the Interview Gauntlet from job post to offer.','gauntlet.html','Gauntlet'],
+  ['Bring your data','Ground a skill in your real CSV/Sheet.','data.html','Own data'],
+  ['Meeting → artifacts','Turn a transcript into notes + actions + emails.','meeting.html','Meeting'],
+  ['The Academy','Complete an Academy lesson on a weak spot.','academy.html','Academy'],
+  ['Defend','Defend a decision against an adversarial reviewer.','defend.html','Defend'],
+  ['The War Table','Watch two AIs negotiate; note the winning move.','wartable.html','War Table'],
+  ['Remix','Fork a skill to fit your team\'s standard.','remix.html','Remix'],
+  ['Model duel','Bake off three models on your own task.','duel.html','Duel'],
+  ['Cost sense','Run the Cost & Privacy meter; learn what a run costs.','cost.html','Cost meter'],
+  ['The Ledger','Log three artifacts you\'ve made in the Outcome Ledger.','ledger.html','Ledger'],
+  ['The Charter','Write your professional Charter.','charter.html','Charter'],
+  ['Dress rehearsal','Re-run your two weakest arena scores.','gym.html','Rehearse'],
+  ['The Exam','Sit the Operator\'s Exam and mint your credential.','certified.html','Take the Exam'],
+];
+let state=load();
+init();
+function load(){ try{ return JSON.parse(localStorage.getItem(KEY)||'{"done":{},"start":0}'); }catch(e){ return {done:{},start:0}; } }
+function save(){ localStorage.setItem(KEY,JSON.stringify(state)); }
+function init(){
+  if(!state.start){ state.start=Date.now(); save(); }
+  el('reset').addEventListener('click',()=>{ if(confirm('Reset all path progress?')){ state={done:{},start:Date.now()}; save(); render(); } });
+  el('jumpToday').addEventListener('click',()=>{ const t=document.querySelector('.day.today'); t&&t.scrollIntoView({behavior:'smooth',block:'center'}); });
+  render();
+}
+function currentDay(){ const done=Object.keys(state.done).length; return Math.min(30, done+1); }
+function streak(){ // consecutive done from day 1
+  let s=0; for(let i=1;i<=30;i++){ if(state.done[i]) s++; else break; } return s;
+}
+function render(){
+  const doneN=Object.keys(state.done).length; const today=currentDay();
+  el('doneN').textContent=doneN; el('streak').textContent=streak(); const pct=Math.round(doneN/30*100);
+  el('pct').textContent=pct+'%'; el('bar').style.width=pct+'%';
+  el('days').innerHTML=DAYS.map((d,i)=>{ const n=i+1; const done=!!state.done[n]; const isToday=n===today;
+    // spaced repetition: after a day is done, resurface a review on +3 and +9 days (by count)
+    const rev = (state.done[n-3]||state.done[n-9]) ? '' : '';
+    return `<div class="day${done?' done':''}${isToday?' today':''}" id="d${n}">
+      <div class="n">${n}</div>
+      <div class="c"><h3>${esc(d[0])}${isToday?' <span class="mini">· today</span>':''}</h3><p>${esc(d[1])}</p>
+        <a href="${d[2]}">${esc(d[3])} →</a>${n%7===0?' &nbsp;<span class="review">🔁 review week — redo your weakest task from the last 7 days</span>':''}</div>
+      <span class="chk" data-day="${n}">${done?'✅':'⬜'}</span>
+    </div>`; }).join('');
+  document.querySelectorAll('[data-day]').forEach(c=>c.addEventListener('click',()=>{ const n=c.dataset.day; if(state.done[n])delete state.done[n]; else state.done[n]=Date.now(); save(); render(); if(state.done[n]&&window.pmTrack)pmTrack('path/day'+n); if(Object.keys(state.done).length===30) setStatus('🎓 Path complete — go mint your credential!'); }));
+}
+function esc(s){ return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+function setStatus(m){ el('status').textContent=m; }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Model Duel — run your task on three models at once</title>
+<meta name="description" content="SkillBench ranks models on fixed tasks. This runs YOUR task on up to three models side by side, so you can pick the best one for your real work — a personal, honest bake-off." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
+<script src="providers.js"></script>
+<script src="pmcost.js"></script>
+<style>
+  .d-wrap { max-width: 1100px; margin: 0 auto; padding: 14px 22px 60px; }
+  .d-lead { color: var(--muted); font-size: 15px; }
+  .setup { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 10px 0; }
+  select, input[type=password] { padding: 9px 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; }
+  textarea { width: 100%; box-sizing: border-box; min-height: 90px; padding: 11px 13px; background: var(--panel); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-family: inherit; font-size: 14px; }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px; }
+  @media (max-width: 820px){ .grid { grid-template-columns: 1fr; } }
+  .col { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); display: flex; flex-direction: column; min-height: 200px; }
+  .col header { padding: 9px 12px; border-bottom: 1px solid var(--border); display: flex; gap: 8px; align-items: center; justify-content: space-between; }
+  .col header select { font-size: 12.5px; padding: 5px 8px; }
+  .col .body { padding: 10px 12px; font-size: 13px; overflow-y: auto; max-height: 60vh; }
+  .col .foot { border-top: 1px solid var(--border); padding: 7px 12px; display: flex; justify-content: space-between; align-items: center; }
+  .win { background: rgba(63,185,80,.12); border: 1px solid #2ea043; border-radius: 999px; padding: 4px 10px; font-size: 12px; cursor: pointer; color: var(--text); }
+  .win.sel { background: #2ea043; color: #fff; }
+  .mini { font-size: 11.5px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Model Duel</h1><p class="tagline">Your task, three models, side by side.</p></div>
+  </div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="gemini">Gemini (free key)</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="key for the chosen provider" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <span class="mini" style="align-self:center">all three columns use this provider</span>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your key + task stay in your browser. The same task runs on three models of your chosen provider so you can compare on <em>your</em> work.</div>
+
+<div class="d-wrap">
+  <p class="d-lead">Benchmarks rank models on someone else's tasks. This is a bake-off on <strong>yours</strong>: pick a skill (or write a free prompt), give a brief, and watch three models answer at once. Pick the winner — the choice is remembered.</p>
+  <div class="setup">
+    <select id="skill"><option value="">— free prompt —</option></select>
+    <button id="runBtn" class="primary" type="button">⚔️ Run the duel</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Stop all</button>
+    <span id="status" class="status"></span>
+  </div>
+  <textarea id="brief" placeholder="Your brief / task — the same input goes to all three models."></textarea>
+  <div class="grid" id="grid"></div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let SKILLS=[], controllers=[];
+const MODELSETS={ anthropic:['claude-opus-4-8','claude-sonnet-4-6','claude-haiku-4-5-20251001'], openai:['gpt-4o','gpt-4o-mini','o4-mini'], gemini:['gemini-1.5-pro','gemini-2.0-flash','gemini-1.5-flash'], ollama:['llama3.1','qwen2.5','mistral'] };
+init();
+async function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('runBtn').addEventListener('click',run);
+  el('stopBtn').addEventListener('click',()=>controllers.forEach(c=>c&&c.abort()));
+  el('provider').addEventListener('change',renderCols);
+  renderCols();
+  try{ SKILLS=(await (await fetch('skills.json')).json()).skills; SKILLS.sort((a,b)=>a.title.localeCompare(b.title)); for(const s of SKILLS){ const o=document.createElement('option'); o.value=s.name; o.textContent=s.title; el('skill').appendChild(o);} }catch(e){}
+}
+function models(){ return MODELSETS[el('provider').value]||MODELSETS.anthropic; }
+function renderCols(){
+  const ms=models();
+  el('grid').innerHTML=[0,1,2].map(i=>`
+    <div class="col" data-i="${i}">
+      <header><select data-model="${i}">${ms.map(m=>`<option${m===ms[i]?' selected':''}>${m}</option>`).join('')}</select></header>
+      <div class="body mini" id="b${i}">—</div>
+      <div class="foot"><span class="mini" id="c${i}"></span><span class="win" data-win="${i}">👑 winner</span></div>
+    </div>`).join('');
+  document.querySelectorAll('[data-win]').forEach(b=>b.addEventListener('click',()=>{ document.querySelectorAll('[data-win]').forEach(x=>x.classList.remove('sel')); b.classList.add('sel'); const m=document.querySelector('[data-model="'+b.dataset.win+'"]').value; localStorage.setItem('pm_duel_winner',m); setStatus('Winner: '+m+' (remembered).'); if(window.pmTrack)pmTrack('duel/winner'); }));
+}
+async function run(){
+  const key=el('apiKey').value.trim(); const pid=el('provider').value;
+  const brief=el('brief').value.trim(); if(!brief) return setStatus('Write a task first.',true);
+  if(!key && pid!=='ollama') return setStatus('Enter your provider key.',true);
+  const s=SKILLS.find(x=>x.name===el('skill').value); const system=s?s.instructions:'You are a sharp professional assistant. Answer the task directly and well.';
+  if(window.pmTrack) pmTrack('duel/run');
+  el('runBtn').disabled=true; el('stopBtn').hidden=false; controllers=[]; setStatus('Running three models…');
+  const chosen=[0,1,2].map(i=>document.querySelector('[data-model="'+i+'"]').value);
+  await Promise.all([0,1,2].map(async i=>{
+    const model=chosen[i], body=el('b'+i), foot=el('c'+i); body.className='body markdown'; body.innerHTML='…';
+    const ctrl=new AbortController(); controllers[i]=ctrl; const t0=performance.now();
+    try{
+      const acc=await PMProviders.stream({key,model,system,userMessage:brief,signal:ctrl.signal,onDelta:(a)=>{ body.innerHTML=DOMPurify.sanitize(marked.parse(a)); }});
+      const est=PMCost.estimate({model,inputText:system+brief,outputText:acc});
+      foot.textContent=((performance.now()-t0)/1000).toFixed(1)+'s · ~'+PMCost.fmt(est.usd)+' · '+est.outTok+' tok';
+    }catch(e){ body.innerHTML='<span class="mini">⚠️ '+(e.name==='AbortError'?'stopped':(e.message||'failed'))+'</span>'; }
+  }));
+  el('runBtn').disabled=false; el('stopBtn').hidden=true; setStatus('Done — pick a winner.');
+}
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

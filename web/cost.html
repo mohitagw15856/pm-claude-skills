@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Cost &amp; Privacy meter — what each run costs, and where your data goes</title>
+<meta name="description" content="Because you bring your own key, you pay the provider directly. This shows the estimated token cost of each run, a running total, and a plain-English breakdown of exactly what was sent, to whom, and what never leaves your browser." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
+<script src="providers.js"></script>
+<script src="pmcost.js"></script>
+<style>
+  .co-wrap { max-width: 820px; margin: 0 auto; padding: 16px 22px 70px; }
+  .co-lead { color: var(--muted); font-size: 15px; }
+  .meter { display: flex; gap: 12px; flex-wrap: wrap; margin: 14px 0; }
+  .m { flex: 1; min-width: 150px; border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; background: var(--panel); }
+  .m b { font-size: 24px; display: block; } .m span { font-size: 12px; color: var(--muted); }
+  .pick { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 8px 0; }
+  select { padding: 9px 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; }
+  textarea { width: 100%; box-sizing: border-box; min-height: 110px; padding: 12px 14px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-family: inherit; font-size: 14px; }
+  .privacy { border: 1px solid var(--border); border-left: 3px solid #3fb950; border-radius: 0 12px 12px 0; padding: 12px 15px; margin: 14px 0; background: var(--panel); }
+  .privacy h3 { margin: 0 0 6px; font-size: 14px; } .privacy li { font-size: 13px; margin: 4px 0; }
+  .out { border-top: 1px solid var(--border); margin-top: 12px; padding-top: 10px; }
+  .mini { font-size: 12px; color: var(--muted); }
+  table.price { width:100%; border-collapse:collapse; font-size:12.5px; margin-top:8px } table.price td,table.price th{ border-bottom:1px solid var(--border); padding:4px 8px; text-align:left } th{color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Cost &amp; Privacy</h1><p class="tagline">What each run costs — and where your data goes.</p></div>
+  </div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 This page is here <em>because</em> your key and data go straight to your chosen provider — never to us. Below is exactly what that means, in plain English.</div>
+
+<div class="co-wrap">
+  <p class="co-lead">You bring your own key, so <strong>you pay the provider directly</strong> — usually a fraction of a cent per run. Here's the honest number, a running total kept only in your browser, and a breakdown of where every byte went.</p>
+
+  <div class="meter">
+    <div class="m"><b id="lastCost">—</b><span>last run (est.)</span></div>
+    <div class="m"><b id="lastTok">—</b><span>tokens in / out</span></div>
+    <div class="m"><b id="total">$0.000</b><span>your running total <a href="#" id="reset" class="mini">reset</a></span></div>
+  </div>
+
+  <div class="pick">
+    <span class="mini">Estimate &amp; run a</span>
+    <select id="skill"><option value="">— free prompt —</option></select>
+  </div>
+  <textarea id="brief" placeholder="Type or paste your input. As you type, the estimate updates before you spend anything."></textarea>
+  <div class="pick">
+    <button id="estBtn" class="ghost" type="button">🧮 Estimate only (free)</button>
+    <button id="runBtn" class="primary" type="button">▶ Run &amp; count</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+    <span id="status" class="status"></span>
+  </div>
+
+  <div class="privacy">
+    <h3>🔎 Where your data went (this run)</h3>
+    <ul id="privacyList">
+      <li>Nothing sent yet — this updates the moment you run something.</li>
+    </ul>
+  </div>
+
+  <div class="out" id="outWrap" hidden><article id="out" class="output markdown"></article></div>
+
+  <details style="margin-top:16px">
+    <summary class="mini">Price table used for estimates (per 1M tokens, USD — approximate list prices)</summary>
+    <table class="price" id="priceTable"><thead><tr><th>Model</th><th>Input</th><th>Output</th></tr></thead><tbody></tbody></table>
+    <p class="mini">Estimates use a ~4-chars-per-token heuristic. Your provider's dashboard is the source of truth for real billing.</p>
+  </details>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let SKILLS=[], controller=null;
+init();
+async function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('estBtn').addEventListener('click',()=>estimate(true));
+  el('runBtn').addEventListener('click',run);
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+  el('brief').addEventListener('input',()=>estimate(false));
+  el('reset').addEventListener('click',(e)=>{ e.preventDefault(); PMCost.reset(); el('total').textContent='$0.000'; });
+  el('total').textContent=PMCost.fmt(PMCost.total());
+  el('priceTable').querySelector('tbody').innerHTML=Object.entries(PMCost.PRICES).map(([m,p])=>`<tr><td>${m}</td><td>$${p[0]}</td><td>$${p[1]}</td></tr>`).join('');
+  try{ SKILLS=(await (await fetch('skills.json')).json()).skills; SKILLS.sort((a,b)=>a.title.localeCompare(b.title)); for(const s of SKILLS){ const o=document.createElement('option'); o.value=s.name; o.textContent=s.title; el('skill').appendChild(o);} }catch(e){}
+}
+function sysAndUser(){ const s=SKILLS.find(x=>x.name===el('skill').value); const brief=el('brief').value; return { system:s? s.instructions : '', user:brief, name:s?s.name:'free prompt' }; }
+function estimate(show){
+  const {system,user}=sysAndUser(); const model=el('model').value;
+  const est=PMCost.estimate({ model, inputText:system+'\n'+user, outputText:'x'.repeat(user.length*3||1200) });
+  el('lastTok').textContent=est.inTok.toLocaleString()+' / ~'+est.outTok.toLocaleString();
+  el('lastCost').textContent='~'+PMCost.fmt(est.usd);
+  if(show) setStatus('Estimate only — nothing was sent.');
+  return est;
+}
+async function run(){
+  const key=el('apiKey').value.trim(); const pid=PMProviders.providerId&&PMProviders.providerId();
+  const {system,user,name}=sysAndUser(); if(!user.trim()) return setStatus('Type an input first.',true);
+  if(!key && pid!=='webllm') return setStatus('Enter your provider key (or use the in-browser model — free).',true);
+  const model=el('model').value; const free=PMCost.isFree(model,pid);
+  if(window.pmTrack) pmTrack('cost/run');
+  el('outWrap').hidden=false; const out=el('out'); out.innerHTML=''; out.dataset.raw='';
+  el('runBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController(); setStatus('Running…');
+  try{
+    const acc=await PMProviders.stream({key,model,system,userMessage:user,signal:controller.signal,onDelta:(a)=>{ out.innerHTML=DOMPurify.sanitize(marked.parse(a)); }});
+    out.dataset.raw=acc;
+    const est=PMCost.estimate({ model, inputText:system+'\n'+user, outputText:acc });
+    el('lastTok').textContent=est.inTok.toLocaleString()+' / '+est.outTok.toLocaleString();
+    el('lastCost').textContent=free?'$0 (local)':PMCost.fmt(est.usd);
+    if(!free){ const t=PMCost.record(est.usd); el('total').textContent=PMCost.fmt(t); }
+    renderPrivacy(name, free, pid, model, est);
+    setStatus('Done.');
+  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
+  finally{ el('runBtn').disabled=false; el('stopBtn').hidden=true; controller=null; }
+}
+const PROVHOST={ anthropic:'api.anthropic.com (Anthropic)', openai:'api.openai.com (OpenAI)', gemini:'generativelanguage.googleapis.com (Google)', ollama:'your local Ollama server', webllm:'nowhere — runs on your GPU' };
+function renderPrivacy(name, free, pid, model, est){
+  const host=PROVHOST[pid]||'your chosen provider';
+  el('privacyList').innerHTML=[
+    `<b>Sent:</b> your input + the skill's instructions (${est.inTok.toLocaleString()} tokens) → <b>${host}</b>.`,
+    free? `<b>Cost:</b> $0 — this model runs ${pid==='webllm'?'in your browser':'on your own machine'}, no network billing.` : `<b>Cost:</b> ~${PMCost.fmt(est.usd)}, billed by your provider directly to your account.`,
+    `<b>Never sent to this site:</b> your API key, your input, or the output — this page is static and has no server. ${pid==='webllm'?'Nothing left your device at all.':''}`,
+    `<b>Stored locally only:</b> a running cost total in this browser's localStorage (reset any time).`,
+  ].map(x=>'<li>'+x+'</li>').join('');
+}
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

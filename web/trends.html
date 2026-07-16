@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Trends — what the world actually runs</title>
+<meta name="description" content="A privacy-preserving pulse of the library: the highest-rated skills, what's strongest by profession, and where the eval-proven work is — a discovery engine built from anonymous, opt-in signal." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .tr-wrap { max-width: 960px; margin: 0 auto; padding: 16px 22px 60px; }
+  .tr-lead { color: var(--muted); font-size: 15px; }
+  h2.sec { font-size: 17px; margin: 22px 0 8px; }
+  .rows { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  @media (max-width: 720px){ .rows { grid-template-columns: 1fr; } }
+  .row { display: flex; justify-content: space-between; align-items: center; gap: 10px; border: 1px solid var(--border); border-radius: 10px; padding: 9px 13px; background: var(--panel); }
+  .row a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 14px; }
+  .row .v { font-size: 12.5px; color: var(--accent-2, #e3b341); white-space: nowrap; font-weight: 700; }
+  .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip { border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; font-size: 13px; text-decoration: none; color: var(--text); background: var(--panel); }
+  .mini { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Trends</h1><p class="tagline">What the world actually runs.</p></div>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<div class="tr-wrap">
+  <p class="tr-lead">A pulse of the library, built from <strong>anonymous, opt-in</strong> signal — the ratings people leave and the eval scores the judge assigns. No accounts, no tracking of you; just what's proving useful, so you can find the strong stuff fast.</p>
+
+  <h2 class="sec">👍 Highest-rated by real users</h2>
+  <div class="rows" id="rated"></div>
+  <p class="mini" id="ratedNote"></p>
+
+  <h2 class="sec">✅ Eval-proven leaders</h2>
+  <div class="rows" id="scored"></div>
+
+  <h2 class="sec">🧭 Strongest by profession</h2>
+  <div class="chips" id="professions"></div>
+
+  <h2 class="sec">📦 The biggest bundles</h2>
+  <div class="rows" id="bundles"></div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+init();
+async function init(){
+  let skills=[], feedback={};
+  try{ skills=(await (await fetch('skills.json')).json()).skills; }catch(e){}
+  try{ feedback=await (await fetch('feedback.json')).json(); }catch(e){ feedback={}; }
+  const S=(name)=>skills.find(s=>s.name===name);
+  const link=(s,v)=>`<div class="row"><a href="index.html?skill=${encodeURIComponent(s.name)}">${esc(s.title)}</a><span class="v">${v}</span></div>`;
+
+  // rated (from feedback.json: { name: {up, total, pct} } shapes vary — be defensive)
+  const fb=Object.entries(feedback).map(([name,d])=>{ if(!d||typeof d!=='object')return null; const total=d.total||d.count||((d.up||0)+(d.down||0)); const pct=d.pct!=null?d.pct:(total?Math.round((d.up||0)/total*100):0); return total>=3&&S(name)?{s:S(name),pct,total}:null; }).filter(Boolean).sort((a,b)=>b.pct-a.pct||b.total-a.total).slice(0,10);
+  el('rated').innerHTML=fb.length?fb.map(r=>link(r.s,`${r.pct}% · ${r.total}★`)).join(''):'<p class="mini">No rated skills yet — 👍/👎 a few in the playground and they’ll surface here.</p>';
+  el('ratedNote').textContent=fb.length?`From ${fb.reduce((a,r)=>a+r.total,0)} opt-in ratings.`:'';
+
+  // eval-scored leaders
+  const scored=skills.filter(s=>s.eval&&s.eval.score).sort((a,b)=>b.eval.score-a.eval.score).slice(0,10);
+  el('scored').innerHTML=scored.length?scored.map(s=>link(s,`${s.eval.score}/5`)).join(''):'<p class="mini">—</p>';
+
+  // strongest by profession (bundle) — count of eval-scored per bundle, pick top skill each
+  const byBundle={};
+  for(const s of skills){ const b=s.plugin||'core'; (byBundle[b]=byBundle[b]||[]).push(s); }
+  const profs=Object.entries(byBundle).map(([b,arr])=>{ const best=arr.slice().sort((a,c)=>((c.eval&&c.eval.score)||0)-((a.eval&&a.eval.score)||0))[0]; return {b,best,n:arr.length}; }).sort((a,c)=>c.n-a.n).slice(0,16);
+  el('professions').innerHTML=profs.map(p=>`<a class="chip" href="index.html?skill=${encodeURIComponent(p.best.name)}">${esc(p.b)} <span class="mini">· ${esc(p.best.title)}</span></a>`).join('');
+
+  // biggest bundles
+  const big=Object.entries(byBundle).map(([b,arr])=>({b,n:arr.length})).sort((a,c)=>c.n-a.n).slice(0,10);
+  el('bundles').innerHTML=big.map(x=>`<div class="row"><a href="catalog.html">${esc(x.b)}</a><span class="v">${x.n} skills</span></div>`).join('');
+}
+function esc(s){ return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

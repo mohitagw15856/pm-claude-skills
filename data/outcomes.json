@@ -1,0 +1,5 @@
+{
+  "spec": "pm-skills-outcomes/1",
+  "note": "Anonymised, opt-in outcome data contributed from the Outcome Ledger (ledger.html). Each contribution is skill → counts of {landed, mixed, no} only — no titles, no content. Aggregated, this becomes the first public 'what actually lands' signal and feeds improve-skill. Contribute via the ledger's 'Contribute' button (opens a PR/issue).",
+  "contributions": []
+}

@@ -57,6 +57,12 @@
     { href: 'hub.html', label: '🧭 Journeys' },
     { href: 'galaxy3d.html', label: '🌌 Galaxy 3D' },
     { group: '🆕 New', items: [
+      ['ledger.html', '📓 Outcome Ledger'],
+      ['cost.html', '💰 Cost & Privacy'],
+      ['duel.html', '⚔️ Model Duel'],
+      ['remix.html', '🔀 Skill Remix'],
+      ['path.html', '🧭 The Operator\'s Path'],
+      ['trends.html', '📈 Trends'],
       ['voice.html', '🎙️ Voice Mode'],
       ['capture.html', '📷 Live Capture'],
       ['video.html', '🎬 Video export'],
