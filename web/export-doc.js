@@ -26,15 +26,29 @@
   // marked + DOMPurify are already on every tool page.
   function mdToHtml(md) { return DOMPurify.sanitize(marked.parse(md || '')); }
 
-  // --- Word (.doc via Office-HTML, opens cleanly in Word/Pages/Docs) ----------
-  function toWord(md, title) {
-    var body = mdToHtml(md);
-    var html = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>" +
-      "<head><meta charset='utf-8'><title>" + (title || 'Document') + "</title>" +
-      "<style>body{font-family:Calibri,Arial,sans-serif;font-size:11pt;line-height:1.5} h1{font-size:20pt} h2{font-size:15pt} h3{font-size:13pt} table{border-collapse:collapse} td,th{border:1px solid #999;padding:4pt 8pt} code{font-family:Consolas,monospace}</style></head><body>" +
-      body + "</body></html>";
-    saveBlob(new Blob(['﻿', html], { type: 'application/msword' }), safeName(title) + '.doc');
+  // Brand Kit (optional): logo / accent / font / footer / org, applied to every export.
+  function brand() {
+    var b = (g.PMBrand && g.PMBrand.get && g.PMBrand.get()) || {};
+    return { accent: b.accent || '', logo: b.logo || '', font: b.font || 'system', footer: b.footer || '', org: b.org || '' };
   }
+  function esc0(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+
+  // --- Word (.doc via Office-HTML, opens cleanly in Word/Pages/Docs) ----------
+  function wordHtml(md, title) {
+    var bk = brand();
+    var head = (bk.logo || bk.org)
+      ? "<p style='border-bottom:2px solid " + (bk.accent || '#444') + ";padding-bottom:6pt;margin-bottom:14pt'>" +
+        (bk.logo ? "<img src='" + bk.logo + "' style='max-height:40px'/> " : '') +
+        (bk.org ? "<b style='font-size:13pt;color:" + (bk.accent || '#111') + "'>" + esc0(bk.org) + "</b>" : '') + "</p>"
+      : '';
+    var accentCss = bk.accent ? ('h1{color:' + bk.accent + '}') : '';
+    return "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>" +
+      "<head><meta charset='utf-8'><title>" + (title || 'Document') + "</title>" +
+      "<style>body{font-family:Calibri,Arial,sans-serif;font-size:11pt;line-height:1.5} h1{font-size:20pt} h2{font-size:15pt} h3{font-size:13pt} table{border-collapse:collapse} td,th{border:1px solid #999;padding:4pt 8pt} code{font-family:Consolas,monospace}" + accentCss + "</style></head><body>" +
+      head + mdToHtml(md) + (bk.footer ? "<p style='margin-top:20pt;color:#777;font-size:9pt'>" + esc0(bk.footer) + "</p>" : '') + "</body></html>";
+  }
+  function wordBlob(md, title) { return new Blob(['﻿', wordHtml(md, title)], { type: 'application/msword' }); }
+  function toWord(md, title) { saveBlob(wordBlob(md, title), safeName(title) + '.doc'); }
 
   // --- PDF design system ("good content deserves good paper") ------------------
   // Each theme is a small set of constraints (canvas, ink, accent, type, spacing) so the
@@ -90,12 +104,21 @@
   function toPDF(md, title, opts) {
     opts = opts || {};
     var t = THEMES[opts.theme] || THEMES.plain;
+    var bk = brand();
+    var accent = opts.accent || bk.accent || '';
     var w = window.open('', '_blank');
     if (!w) { alert('Allow pop-ups to export as PDF.'); return; }
-    var foot = '<div class="pm-foot">Made with PM Skills · mohitagw15856.github.io/pm-claude-skills</div>';
+    // Brand header (logo + org) and footer, when a Brand Kit is set.
+    var header = (bk.logo || bk.org)
+      ? '<div class="pm-head">' + (bk.logo ? '<img src="' + bk.logo + '" alt="">' : '') + (bk.org ? '<span>' + esc0(bk.org) + '</span>' : '') + '</div>'
+      : '';
+    var footText = bk.footer ? esc0(bk.footer) : 'Made with PM Skills · mohitagw15856.github.io/pm-claude-skills';
+    var foot = '<div class="pm-foot">' + footText + '</div>';
+    var fontOverride = (g.PMBrand && bk.font && bk.font !== 'system') ? ('body{font-family:' + g.PMBrand.fontStack(bk.font) + '}') : '';
+    var headCSS = '.pm-head{display:flex;align-items:center;gap:12px;margin:0 0 18px;padding-bottom:12px;border-bottom:2px solid ' + (accent || t.accent) + '}.pm-head img{max-height:40px;max-width:180px}.pm-head span{font-weight:700;font-size:15px;color:' + (accent || t.ink) + '}';
     w.document.write('<html><head><meta charset="utf-8"><title>' + (title || 'Document') + '</title>' +
-      '<style>' + themeCSS(t, opts.accent) + '</style></head><body>' +
-      mdToHtml(md) + foot +
+      '<style>' + themeCSS(t, accent) + headCSS + fontOverride + '</style></head><body>' +
+      header + mdToHtml(md) + foot +
       '<scr' + 'ipt>window.onload=function(){setTimeout(function(){window.print();},250);}</scr' + 'ipt></body></html>');
     w.document.close();
   }
@@ -118,25 +141,32 @@
   }
   function clean(s) { return s.replace(/\*\*(.+?)\*\*/g, '$1').replace(/\*(.+?)\*/g, '$1').replace(/`(.+?)`/g, '$1').replace(/\[(.+?)\]\(.+?\)/g, '$1').trim(); }
 
-  async function toPptx(md, title) {
+  var hex = function (c, d) { return (c || '').replace('#', '').match(/^[0-9a-fA-F]{6}$/) ? c.replace('#', '') : d; };
+  async function buildPptx(md, title) {
     await loadScript('https://cdn.jsdelivr.net/npm/pptxgenjs@3.12.0/dist/pptxgen.bundle.js', 'sha384-Cck14aA9cifjYolcnjebXRfWGkz5ltHMBiG4px/j8GS+xQcb7OhNQWZYyWjQ+UwQ');
+    var bk = brand();
+    var accent = hex(bk.accent, 'D97757');
     var pptx = new g.PptxGenJS();
     pptx.defineLayout && pptx.layout && (pptx.layout = 'LAYOUT_WIDE');
     var slides = mdToSlides(md, title);
-    // Title slide
+    // Title slide — brand logo + org if set.
     var t = pptx.addSlide();
-    t.addText(title || 'PM Skills', { x: 0.5, y: 2.4, w: '90%', h: 1, fontSize: 34, bold: true, color: '1F2937', align: 'center' });
-    t.addText('Generated with PM Skills', { x: 0.5, y: 3.5, w: '90%', h: 0.5, fontSize: 14, color: 'D97757', align: 'center' });
+    if (bk.logo) { try { t.addImage({ data: bk.logo, x: 5.83, y: 0.9, w: 1.5, h: 1.5, sizing: { type: 'contain', w: 1.5, h: 1.5 } }); } catch (e) {} }
+    t.addText(title || 'PM Skills', { x: 0.5, y: 2.7, w: '90%', h: 1, fontSize: 34, bold: true, color: '1F2937', align: 'center' });
+    t.addText(bk.org || 'Generated with PM Skills', { x: 0.5, y: 3.8, w: '90%', h: 0.5, fontSize: 14, color: accent, align: 'center' });
     slides.forEach(function (s) {
       var sl = pptx.addSlide();
+      sl.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: 0.18, h: 5.63, fill: { color: accent } });
       sl.addText(s.title || ' ', { x: 0.5, y: 0.35, w: '92%', h: 0.9, fontSize: 26, bold: true, color: '1F2937' });
       if (s.bullets.length) {
         sl.addText(s.bullets.slice(0, 12).map(function (b) { return { text: b, options: { bullet: true, breakLine: true } }; }),
           { x: 0.6, y: 1.4, w: '88%', h: 5, fontSize: 16, color: '374151', valign: 'top' });
       }
     });
-    pptx.writeFile({ fileName: safeName(title) + '.pptx' });
+    return pptx;
   }
+  async function toPptx(md, title) { (await buildPptx(md, title)).writeFile({ fileName: safeName(title) + '.pptx' }); }
+  async function pptxBlob(md, title) { return (await buildPptx(md, title)).write('blob'); }
 
   // --- Excel (.xlsx) — every markdown table becomes a sheet --------------------
   function parseMdTables(md) {
@@ -153,13 +183,60 @@
     flush();
     return tables.filter(function (t) { return t.length > 1; });
   }
-  async function toXlsx(md, title) {
-    var tables = parseMdTables(md);
-    if (!tables.length) { alert('No tables found in this output to export to Excel. Try Word or PDF instead.'); return; }
+  async function loadXlsx() {
     await loadScript('https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js', 'sha384-vtjasyidUo0kW94K5MXDXntzOJpQgBKXmE7e2Ga4LG0skTTLeBi97eFAXsqewJjw');
-    var wb = g.XLSX.utils.book_new();
-    tables.forEach(function (t, i) { g.XLSX.utils.book_append_sheet(wb, g.XLSX.utils.aoa_to_sheet(t), 'Table ' + (i + 1)); });
-    g.XLSX.writeFile(wb, safeName(title) + '.xlsx');
+    return g.XLSX;
+  }
+  var numish = function (v) { var n = parseFloat(String(v).replace(/[$,%\s]/g, '')); return isFinite(n) && /\d/.test(String(v)) ? n : null; };
+  // Build a worksheet from an array-of-arrays; when `model` is on, numeric columns get a
+  // live SUM total row (a real =SUM() formula, so the file recalculates like a spreadsheet).
+  function sheetFromTable(XLSX, t, model) {
+    var aoa = t.map(function (r) { return r.slice(); });
+    if (model && aoa.length > 2) {
+      var cols = aoa[0].length, totals = new Array(cols).fill(null), anyNum = false;
+      for (var c = 0; c < cols; c++) {
+        var allNum = true, seen = 0;
+        for (var r = 1; r < aoa.length; r++) { var v = aoa[r][c]; if (v === '' || v == null) continue; seen++; if (numish(v) == null) { allNum = false; break; } }
+        if (allNum && seen > 1) { totals[c] = c; anyNum = true; }
+      }
+      if (anyNum) {
+        // Coerce numeric cells to numbers so SUM works.
+        for (var rr = 1; rr < aoa.length; rr++) for (var cc = 0; cc < cols; cc++) { var nv = numish(aoa[rr][cc]); if (nv != null && totals[cc] != null) aoa[rr][cc] = nv; }
+        var totalRow = new Array(cols).fill('');
+        totalRow[0] = 'Total';
+        var ws0 = XLSX.utils.aoa_to_sheet(aoa);
+        var lastDataRow = aoa.length; // 1-indexed row of last data (header is row 1)
+        aoa.push(totalRow);
+        var ws = XLSX.utils.aoa_to_sheet(aoa);
+        for (var k = 0; k < cols; k++) {
+          if (totals[k] == null) continue;
+          var colLetter = XLSX.utils.encode_col(k);
+          var cellRef = colLetter + (aoa.length); // total row
+          ws[cellRef] = { t: 'n', f: 'SUM(' + colLetter + '2:' + colLetter + lastDataRow + ')' };
+        }
+        return ws;
+      }
+    }
+    return XLSX.utils.aoa_to_sheet(aoa);
+  }
+  async function buildXlsx(md, title, model) {
+    var tables = parseMdTables(md);
+    if (!tables.length) return null;
+    var XLSX = await loadXlsx();
+    var wb = XLSX.utils.book_new();
+    tables.forEach(function (t, i) { XLSX.utils.book_append_sheet(wb, sheetFromTable(XLSX, t, model), 'Sheet ' + (i + 1)); });
+    return { wb: wb, XLSX: XLSX };
+  }
+  async function toXlsx(md, title, model) {
+    var r = await buildXlsx(md, title, model);
+    if (!r) { alert('No tables found in this output to export to Excel. Try Word or PDF instead.'); return; }
+    r.XLSX.writeFile(r.wb, safeName(title) + '.xlsx');
+  }
+  async function xlsxBlob(md, title, model) {
+    var r = await buildXlsx(md, title, model);
+    if (!r) return null;
+    var arr = r.XLSX.write(r.wb, { bookType: 'xlsx', type: 'array' });
+    return new Blob([arr], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
   }
 
   // --- Calendar (.ics) — dated items in a roadmap/plan become calendar events --------
@@ -284,10 +361,87 @@
     w.document.close();
   }
 
+  // --- The Packet — bundle several artifacts into one .zip ---------------------
+  // items: [{ md, title, formats: ['docx','xlsx','pptx','pdf-html','md'] }]. Produces the
+  // real bytes for each (pptx/xlsx/word/markdown; 'pdf-html' ships a print-ready .html since
+  // a true PDF needs the print dialog), zips them, and downloads a single file.
+  async function packet(items, zipName) {
+    await loadScript('https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js', 'sha384-+mbV2IY1Zk/X1p/nWllGySJSUN8uMs+gUAN10Or95UBH0fpj6GfKgPmgC5EXieXG');
+    var zip = new g.JSZip();
+    for (var i = 0; i < items.length; i++) {
+      var it = items[i], base = safeName(it.title || ('artifact-' + (i + 1)));
+      var fmts = it.formats || ['docx'];
+      for (var f = 0; f < fmts.length; f++) {
+        var fmt = fmts[f];
+        try {
+          if (fmt === 'md') zip.file(base + '.md', it.md || '');
+          else if (fmt === 'docx') zip.file(base + '.doc', wordBlob(it.md, it.title));
+          else if (fmt === 'pptx') { var pb = await pptxBlob(it.md, it.title); if (pb) zip.file(base + '.pptx', pb); }
+          else if (fmt === 'xlsx') { var xb = await xlsxBlob(it.md, it.title, it.model); if (xb) zip.file(base + '.xlsx', xb); }
+          else if (fmt === 'pdf-html') zip.file(base + '.html', printableHtml(it.md, it.title));
+        } catch (e) { /* skip a format that can't be produced, keep the rest */ }
+      }
+    }
+    var blob = await zip.generateAsync({ type: 'blob' });
+    saveBlob(blob, safeName(zipName || 'packet') + '.zip');
+  }
+  function printableHtml(md, title) {
+    var t = THEMES.paper, bk = brand();
+    return '<html><head><meta charset="utf-8"><title>' + esc0(title || 'Document') + '</title><style>' + themeCSS(t, bk.accent) +
+      '@media screen{body{box-shadow:0 0 0 1px #ddd}}</style></head><body>' + mdToHtml(md) +
+      '<div class="pm-foot">' + (bk.footer ? esc0(bk.footer) : 'Made with PM Skills') + '</div>' +
+      '<scr' + 'ipt>window.onload=function(){setTimeout(function(){window.print&&window.print();},400);}</scr' + 'ipt></body></html>';
+  }
+
+  // --- Infographic one-pager — a designed visual summary, not prose ------------
+  // Pulls the headline, up to 4 "big numbers" (e.g. "**42%** — churn"), and the top
+  // takeaways, and lays them out as a print-ready single page. Opens the print dialog.
+  function extractStats(md) {
+    var stats = [], seen = {};
+    var re = /(?:\*\*|`)?(\$?\d[\d,]*\.?\d*\s*[%x×]?[KMB]?)(?:\*\*|`)?\s*(?:[—:\-–]\s*|\()([A-Za-z][^\n.|)]{2,42})/g, m;
+    while ((m = re.exec(md)) && stats.length < 6) { var k = m[1] + m[2]; if (seen[k]) continue; seen[k] = 1; stats.push({ n: m[1].trim(), label: m[2].trim().replace(/[)*]+$/, '') }); }
+    return stats.slice(0, 4);
+  }
+  function onePager(md, title) {
+    var bk = brand(), accent = bk.accent || '#d9605a';
+    var w = window.open('', '_blank');
+    if (!w) { alert('Allow pop-ups to build the one-pager.'); return; }
+    var lines = (md || '').split('\n').map(function (l) { return l.trim(); });
+    var h1 = (lines.find(function (l) { return /^#\s/.test(l); }) || '').replace(/^#\s*/, '') || title || 'Summary';
+    var takeaways = lines.filter(function (l) { return /^[-*+]\s+/.test(l); }).slice(0, 5)
+      .map(function (l) { return clean(l.replace(/^[-*+]\s+/, '')); });
+    var stats = extractStats(md);
+    var statHtml = stats.map(function (s) { return '<div class="stat"><div class="n">' + esc0(s.n) + '</div><div class="l">' + esc0(s.label) + '</div></div>'; }).join('');
+    var takeHtml = takeaways.map(function (t) { return '<li>' + esc0(t) + '</li>'; }).join('');
+    w.document.write('<html><head><meta charset="utf-8"><title>' + esc0(title || 'One-pager') + '</title><style>' +
+      '@page{size:A4 portrait;margin:0}*{box-sizing:border-box}' +
+      'body{margin:0;font-family:' + (g.PMBrand ? g.PMBrand.fontStack(bk.font) : 'Inter,Arial,sans-serif') + ';color:#16181d;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}' +
+      '.page{width:210mm;min-height:297mm;padding:22mm 20mm;margin:0 auto}' +
+      '.top{display:flex;align-items:center;gap:14px;border-bottom:4px solid ' + accent + ';padding-bottom:14px}' +
+      '.top img{max-height:44px}.top .org{font-weight:700;color:' + accent + '}' +
+      'h1{font-size:30pt;line-height:1.1;margin:26px 0 6px}' +
+      '.stats{display:grid;grid-template-columns:repeat(' + Math.max(1, Math.min(4, stats.length || 1)) + ',1fr);gap:14px;margin:26px 0}' +
+      '.stat{border:1px solid #e6e6e6;border-top:4px solid ' + accent + ';border-radius:10px;padding:16px}' +
+      '.stat .n{font-size:30pt;font-weight:800;color:' + accent + ';line-height:1}.stat .l{font-size:10.5pt;color:#555;margin-top:6px}' +
+      'h2{font-size:14pt;margin:26px 0 8px;color:' + accent + '}ul{padding-left:18px}li{font-size:12pt;line-height:1.6;margin:6px 0}' +
+      '.foot{position:fixed;bottom:12mm;left:20mm;right:20mm;border-top:1px solid #ddd;padding-top:8px;font-size:9pt;color:#888}' +
+      '</style></head><body><div class="page">' +
+      '<div class="top">' + (bk.logo ? '<img src="' + bk.logo + '">' : '') + '<span class="org">' + esc0(bk.org || 'PM Skills') + '</span></div>' +
+      '<h1>' + esc0(h1) + '</h1>' +
+      (statHtml ? '<div class="stats">' + statHtml + '</div>' : '') +
+      (takeHtml ? '<h2>Key takeaways</h2><ul>' + takeHtml + '</ul>' : '') +
+      '<div class="foot">' + esc0(bk.footer || 'Made with PM Skills · mohitagw15856.github.io/pm-claude-skills') + '</div>' +
+      '</div><scr' + 'ipt>window.onload=function(){setTimeout(function(){window.print();},350);}</scr' + 'ipt></body></html>');
+    w.document.close();
+  }
+
   g.PMExport = {
     word: toWord, pdf: toPDF, pptx: toPptx, xlsx: toXlsx, ics: toIcs, certificate: certificate,
+    wordBlob: wordBlob, pptxBlob: pptxBlob, xlsxBlob: xlsxBlob,
+    packet: packet, onePager: onePager,
     THEMES: THEMES,
     hasTables: function (md) { return parseMdTables(md).length > 0; },
     hasDates: function (md) { return extractEvents(md).length > 0; },
+    hasStats: function (md) { return extractStats(md).length > 0; },
   };
 })(window);

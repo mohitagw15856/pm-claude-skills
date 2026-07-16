@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Make it real — turn a skill into a branded document, deck, model, or a whole packet</title>
+<meta name="description" content="Run any skill and export the result as a real, on-brand deliverable — a themed PDF, Word doc, PowerPoint, or Excel model with live formulas — or build a whole Packet (a zip of PRD, plan, deck and brief) in one click. Add your logo once; every export wears it." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
+<script src="providers.js"></script>
+<script src="brandkit.js"></script>
+<script src="export-doc.js"></script>
+<style>
+  .mk-wrap { max-width: 860px; margin: 0 auto; padding: 16px 22px 70px; }
+  .mk-lead { color: var(--muted); font-size: 15px; line-height: 1.55; }
+  .tabs { display: flex; gap: 8px; margin: 14px 0 16px; flex-wrap: wrap; }
+  .tabs button { background: var(--panel); border: 1px solid var(--border); color: var(--muted); border-radius: 999px; padding: 7px 15px; cursor: pointer; font-size: 13.5px; }
+  .tabs button.on { color: var(--text); border-color: var(--accent); }
+  .card { border: 1px solid var(--border); border-radius: 14px; padding: 16px 18px; margin: 12px 0; background: var(--panel); }
+  label.fld { display: block; font-size: 13px; font-weight: 600; margin: 10px 0 5px; }
+  select, input[type=text], input[type=color], textarea { font-family: inherit; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  select, input[type=text] { padding: 9px 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; }
+  textarea { width: 100%; box-sizing: border-box; min-height: 130px; padding: 12px 14px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-size: 14px; line-height: 1.5; }
+  .actions { margin: 14px 0; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .brand-preview { display: inline-flex; align-items: center; gap: 10px; padding: 8px 12px; border-radius: 10px; border: 1px solid var(--border); background: var(--panel-2); font-size: 13px; }
+  .brand-preview img { max-height: 28px; max-width: 90px; border-radius: 4px; }
+  .swatch { width: 18px; height: 18px; border-radius: 5px; border: 1px solid var(--border); display: inline-block; vertical-align: middle; }
+  .preset { border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; margin: 8px 0; cursor: pointer; }
+  .preset.sel { border-color: var(--accent); background: rgba(217,96,90,.06); }
+  .preset h4 { margin: 0 0 3px; font-size: 14px; } .preset p { margin: 0; font-size: 12.5px; color: var(--muted); }
+  .prog { font-size: 13px; color: var(--muted); margin: 6px 0; }
+  .prog .done { color: #3fb950; } .prog .run { color: var(--accent); }
+  .hidden { display: none; }
+  .exp-btn { background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 8px 12px; cursor: pointer; font-size: 13px; }
+  .exp-btn:hover { border-color: var(--accent); }
+  .mini { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Make it real</h1><p class="tagline">A skill's answer → a real, on-brand deliverable. Or a whole packet.</p></div>
+  </div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your key, brief and brand kit stay in your browser — exports are generated locally. Your logo never leaves the tab.</div>
+
+<div class="mk-wrap">
+  <p class="mk-lead">The library doesn't just answer — it produces. Run a skill and take the result as a themed PDF, Word, deck, or a live-formula Excel model, all wearing your brand. Or build a <strong>Packet</strong>: one brief, a zip of finished documents.</p>
+
+  <div class="tabs">
+    <button id="tabOne" class="on" type="button">One artifact</button>
+    <button id="tabPacket" type="button">📦 The Packet</button>
+    <button id="tabBrand" type="button">🎨 Brand Kit</button>
+  </div>
+
+  <!-- ONE ARTIFACT -->
+  <section id="oneView">
+    <div class="card">
+      <div class="row">
+        <label class="fld" style="margin:0">Run</label>
+        <select id="skillSelect"></select>
+        <button id="runBtn" class="primary" type="button">Run</button>
+        <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+        <span id="status" class="status"></span>
+      </div>
+      <label class="fld" for="brief">Your brief / context</label>
+      <textarea id="brief" placeholder="Describe your situation — product, audience, goal, key facts. The more specific, the better the artifact."></textarea>
+    </div>
+
+    <div class="card" id="outCard" hidden>
+      <div class="row" style="justify-content:space-between">
+        <strong>Result</strong>
+        <span class="mini" id="brandNote"></span>
+      </div>
+      <div class="actions" id="exportRow">
+        <select id="pdfTheme" class="exp-btn" title="Document template">
+          <option value="paper">📄 PDF — Paper (serif)</option>
+          <option value="modern">📄 PDF — Modern</option>
+          <option value="mono">📄 PDF — Technical</option>
+          <option value="plain">📄 PDF — Plain</option>
+        </select>
+        <button class="exp-btn" data-x="pdf" type="button">⬇ PDF</button>
+        <button class="exp-btn" data-x="docx" type="button">⬇ Word</button>
+        <button class="exp-btn" data-x="pptx" type="button">⬇ PowerPoint</button>
+        <button class="exp-btn" data-x="xlsx" type="button">⬇ Excel</button>
+        <label class="mini"><input type="checkbox" id="liveFormulas" checked> live formulas</label>
+        <button class="exp-btn" data-x="onepager" type="button">🖼️ One-pager</button>
+      </div>
+      <article id="out" class="output markdown" style="border-top:1px solid var(--border);padding-top:12px"></article>
+    </div>
+  </section>
+
+  <!-- PACKET -->
+  <section id="packetView" hidden>
+    <div class="card">
+      <p class="mini">Pick a packet, give one brief, and get a <strong>.zip</strong> of finished documents — each skill in the chain rendered to its best format, all on your brand.</p>
+      <div id="presets"></div>
+      <label class="fld" for="pbrief">Your brief / context</label>
+      <textarea id="pbrief" placeholder="e.g. 'A B2B referral program for activated users — both sides get a $50 credit. Launching in Q3, targeting mid-market SaaS admins.'"></textarea>
+      <div class="actions">
+        <button id="buildBtn" class="primary" type="button">📦 Build the packet</button>
+        <button id="pstopBtn" class="ghost" type="button" hidden>Stop</button>
+      </div>
+      <div id="progress"></div>
+    </div>
+  </section>
+
+  <!-- BRAND KIT -->
+  <section id="brandView" hidden>
+    <div class="card">
+      <p class="mini">Set it once. Every export from this page — PDF, Word, deck, one-pager — comes out on your brand. Stored only in this browser.</p>
+      <label class="fld" for="bOrg">Organisation / name</label>
+      <input id="bOrg" type="text" placeholder="Acme Inc." style="width:100%;box-sizing:border-box" />
+      <div class="row" style="margin-top:10px">
+        <div><label class="fld">Accent colour</label><input id="bAccent" type="color" value="#d9605a" style="width:56px;height:38px;border:1px solid var(--border);border-radius:8px;background:var(--panel-2)" /></div>
+        <div style="flex:1;min-width:180px"><label class="fld" for="bFont">Font</label>
+          <select id="bFont" style="width:100%"><option value="system">System sans</option><option value="inter">Inter</option><option value="serif">Serif (Charter/Georgia)</option><option value="mono">IBM Plex Sans</option></select>
+        </div>
+        <div><label class="fld" for="bLogo">Logo (PNG/SVG)</label><input id="bLogo" type="file" accept="image/*" class="mini" /></div>
+      </div>
+      <label class="fld" for="bFooter">Footer line (optional)</label>
+      <input id="bFooter" type="text" placeholder="© 2026 Acme Inc. · Confidential" style="width:100%;box-sizing:border-box" />
+      <div class="actions">
+        <button id="saveBrand" class="primary" type="button">Save brand kit</button>
+        <button id="clearBrand" class="ghost" type="button">Clear</button>
+        <span id="brandStatus" class="status"></span>
+        <span class="brand-preview" id="brandPrev"></span>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let SKILLS=[], controller=null, LASTMD='', LASTTITLE='';
+
+// Packet presets — filtered at load to skills that actually exist.
+const PRESETS=[
+  { id:'launch', icon:'🚀', name:'Launch Kit', desc:'PRD → GTM plan → launch checklist → press release → board deck',
+    items:[['prd-template',['docx']],['go-to-market-planner',['docx']],['product-launch-checklist',['xlsx']],['press-release',['docx']],['board-deck-narrative',['pptx']]] },
+  { id:'strategy', icon:'🧭', name:'Strategy Pack', desc:'Competitive analysis → pricing strategy → OKRs → one-pager',
+    items:[['competitive-analysis',['docx']],['pricing-strategy',['docx','xlsx']],['okr-builder',['xlsx']],['one-pager',['pdf-html']]] },
+  { id:'delivery', icon:'🏃', name:'Delivery Pack', desc:'PRD → user stories → sprint plan → stakeholder update',
+    items:[['prd-template',['docx']],['user-story-writer',['docx']],['sprint-planning',['xlsx']],['stakeholder-update',['docx']]] },
+];
+let selectedPreset='launch';
+
+init();
+async function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('tabOne').addEventListener('click',()=>tab('one'));
+  el('tabPacket').addEventListener('click',()=>tab('packet'));
+  el('tabBrand').addEventListener('click',()=>tab('brand'));
+  el('runBtn').addEventListener('click',run);
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+  el('buildBtn').addEventListener('click',buildPacket);
+  el('pstopBtn').addEventListener('click',()=>controller&&controller.abort());
+  document.querySelectorAll('#exportRow [data-x]').forEach(b=>b.addEventListener('click',()=>doExport(b.dataset.x)));
+  el('saveBrand').addEventListener('click',saveBrand);
+  el('clearBrand').addEventListener('click',()=>{PMBrand.clear();loadBrandForm();renderBrandPrev();setBrandStatus('Cleared.');});
+  el('bLogo').addEventListener('change',async(e)=>{ const d=await PMBrand.readLogo(e.target.files[0]); PMBrand.set({logo:d}); renderBrandPrev(); });
+  try{ SKILLS=(await (await fetch('skills.json')).json()).skills; }catch(e){ setStatus('Could not load skills.',true); }
+  SKILLS.sort((a,b)=>a.title.localeCompare(b.title));
+  for(const s of SKILLS){ const o=document.createElement('option'); o.value=s.name; o.textContent=s.title; el('skillSelect').appendChild(o); }
+  const want=new URLSearchParams(location.search).get('skill');
+  if(want&&SKILLS.some(s=>s.name===want)) el('skillSelect').value=want;
+  renderPresets(); loadBrandForm(); renderBrandPrev(); renderBrandNote();
+}
+function tab(t){ el('oneView').hidden=t!=='one'; el('packetView').hidden=t!=='packet'; el('brandView').hidden=t!=='brand';
+  el('tabOne').classList.toggle('on',t==='one'); el('tabPacket').classList.toggle('on',t==='packet'); el('tabBrand').classList.toggle('on',t==='brand'); }
+function skillByName(n){ return SKILLS.find(s=>s.name===n); }
+function sysFor(s){ return s.instructions; }
+
+async function run(){
+  const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your provider key first.',true);
+  const s=skillByName(el('skillSelect').value); if(!s) return;
+  const brief=el('brief').value.trim(); if(!brief) return setStatus('Add a brief so the artifact is about something.',true);
+  if(window.pmTrack) pmTrack('make/'+s.name);
+  el('outCard').hidden=false; const out=el('out'); out.innerHTML=''; out.dataset.raw='';
+  el('runBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController(); setStatus('Running…');
+  try{
+    const acc=await PMProviders.stream({key,model:el('model').value,system:sysFor(s),userMessage:brief,signal:controller.signal,onDelta:(a)=>{out.innerHTML=DOMPurify.sanitize(marked.parse(a));}});
+    out.dataset.raw=acc; LASTMD=acc; LASTTITLE=s.title; setStatus('Done — export it below.');
+  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
+  finally{ el('runBtn').disabled=false; el('stopBtn').hidden=true; controller=null; }
+}
+function doExport(kind){
+  const md=el('out').dataset.raw||LASTMD; if(!md) return setStatus('Run a skill first.',true);
+  const title=LASTTITLE||'artifact';
+  try{
+    if(kind==='pdf') return PMExport.pdf(md,title,{theme:el('pdfTheme').value});
+    if(kind==='docx') return PMExport.word(md,title);
+    if(kind==='pptx') return PMExport.pptx(md,title);
+    if(kind==='xlsx') return PMExport.xlsx(md,title,el('liveFormulas').checked);
+    if(kind==='onepager') return PMExport.onePager(md,title);
+  }catch(e){ setStatus('Export failed: '+(e.message||e),true); }
+}
+
+// ---- Packet ----
+function renderPresets(){
+  const avail=SKILLS.map(s=>s.name);
+  el('presets').innerHTML=PRESETS.map(p=>{
+    const items=p.items.filter(it=>avail.includes(it[0]));
+    return `<div class="preset${p.id===selectedPreset?' sel':''}" data-id="${p.id}"><h4>${p.icon} ${p.name} <span class="mini">· ${items.length} documents</span></h4><p>${p.desc}</p></div>`;
+  }).join('');
+  document.querySelectorAll('#presets .preset').forEach(d=>d.addEventListener('click',()=>{ selectedPreset=d.dataset.id; renderPresets(); }));
+}
+async function buildPacket(){
+  const key=el('apiKey').value.trim(); if(!key) return setProg('Enter your provider key first.',true);
+  const brief=el('pbrief').value.trim(); if(!brief) return setProg('Add a brief for the packet.',true);
+  const preset=PRESETS.find(p=>p.id===selectedPreset);
+  const avail=SKILLS.map(s=>s.name);
+  const items=preset.items.filter(it=>avail.includes(it[0]));
+  if(!items.length) return setProg('No skills available for this packet.',true);
+  if(window.pmTrack) pmTrack('make/packet/'+preset.id);
+  el('buildBtn').disabled=true; el('pstopBtn').hidden=false; controller=new AbortController();
+  const results=[]; const rows=items.map(it=>`<div class="prog" id="pg-${it[0]}">◦ ${skillByName(it[0]).title}</div>`);
+  el('progress').innerHTML=rows.join('');
+  try{
+    for(const [name,formats] of items){
+      const s=skillByName(name); const pg=el('pg-'+name);
+      pg.innerHTML=`<span class="run">▶</span> ${s.title} — writing…`;
+      const md=await PMProviders.stream({key,model:el('model').value,system:sysFor(s),userMessage:brief,signal:controller.signal});
+      results.push({ md, title:s.title, formats, model:formats.includes('xlsx') });
+      pg.innerHTML=`<span class="done">✓</span> ${s.title} <span class="mini">→ ${formats.join(', ')}</span>`;
+    }
+    setProg('Zipping…');
+    await PMExport.packet(results, preset.name);
+    setProg('✓ Packet downloaded — '+results.length+' documents.');
+  }catch(e){ setProg(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
+  finally{ el('buildBtn').disabled=false; el('pstopBtn').hidden=true; controller=null; }
+}
+function setProg(m,err){ const d=document.createElement('div'); d.className='prog'; d.style.color=err?'var(--err,#f85149)':''; d.textContent=m; el('progress').appendChild(d); }
+
+// ---- Brand Kit ----
+function loadBrandForm(){ const b=PMBrand.get(); el('bOrg').value=b.org||''; el('bAccent').value=b.accent||'#d9605a'; el('bFont').value=b.font||'system'; el('bFooter').value=b.footer||''; }
+function saveBrand(){ PMBrand.set({ org:el('bOrg').value.trim(), accent:el('bAccent').value, font:el('bFont').value, footer:el('bFooter').value.trim() }); renderBrandPrev(); renderBrandNote(); setBrandStatus('Saved — exports now wear your brand.'); }
+function renderBrandPrev(){ const b=PMBrand.get(); el('brandPrev').innerHTML=(b.logo?`<img src="${b.logo}">`:'')+`<span class="swatch" style="background:${b.accent||'#d9605a'}"></span>`+(b.org?`<b>${b.org.replace(/[<>]/g,'')}</b>`:'<span class="mini">no brand set</span>'); }
+function renderBrandNote(){ el('brandNote').textContent = PMBrand.has() ? '🎨 exports use your brand kit' : 'Tip: set a Brand Kit to brand every export'; }
+function setBrandStatus(m){ el('brandStatus').textContent=m; }
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
