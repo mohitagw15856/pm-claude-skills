@@ -1,0 +1,51 @@
+name: Scheduled reports
+
+# Close the loop: run the skills in config/scheduled-reports.json on their
+# cadence and commit each output to docs/reports/scheduled/. Runs daily and the
+# script itself decides what's actually due today. Needs the ANTHROPIC_API_KEY
+# secret; if it's absent the job no-ops cleanly (dry-run).
+
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Run all reports regardless of schedule'
+        type: boolean
+        default: false
+  schedule:
+    - cron: '0 13 * * *' # daily 13:00 UTC — the script filters to what's due
+
+permissions:
+  contents: write
+
+jobs:
+  reports:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Generate due reports
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "No ANTHROPIC_API_KEY — running dry-run only."
+            node scripts/scheduled-report.mjs --dry-run --force
+            exit 0
+          fi
+          node scripts/scheduled-report.mjs ${{ inputs.force && '--force' || '' }}
+
+      - name: Commit any new reports
+        run: |
+          git config user.name  "scheduled-report-bot"
+          git config user.email "scheduled-report-bot@users.noreply.github.com"
+          git add docs/reports/scheduled/ 2>/dev/null || true
+          git diff --cached --quiet || git commit -m "reports: scheduled digest $(date -u +%F)"
+          git push || true
+
+      # Delivery beyond commit: pipe the newest docs/reports/scheduled/*.md into
+      # the email worker (integrations/email) or Slack app (integrations/slack-app)
+      # here as an extra step — the artifact is already on disk.

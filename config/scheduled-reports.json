@@ -1,0 +1,32 @@
+{
+  "spec": "pm-skills-scheduled-reports/1",
+  "note": "Each entry runs a skill on a cadence and writes the output to docs/reports/scheduled/. cadence is one of weekly|biweekly|monthly. day is 0-6 (Sun-Sat) for weekly/biweekly, or 1-28 (day-of-month) for monthly. inputs are the skill's inputs in order. Delivery is 'commit' by default; wire email/slack in the workflow. Set ANTHROPIC_API_KEY. Add your own — this file is the schedule.",
+  "reports": [
+    {
+      "id": "weekly-portfolio-pulse",
+      "title": "Weekly Portfolio Pulse",
+      "skill": "executive-update",
+      "cadence": "weekly",
+      "day": 1,
+      "model": "claude-sonnet-4-6",
+      "inputs": [
+        "Audience: the leadership team. Cadence: weekly.",
+        "This week across the product portfolio: (paste your notes, metrics, and incidents here — or wire this input to a data source in the workflow). Absent real input, produce a clearly-labelled TEMPLATE the operator fills in."
+      ],
+      "deliver": "commit"
+    },
+    {
+      "id": "monthly-strategy-review",
+      "title": "Monthly Strategy Review",
+      "skill": "okr-builder",
+      "cadence": "monthly",
+      "day": 1,
+      "model": "claude-sonnet-4-6",
+      "inputs": [
+        "Quarter context and current objectives (paste here, or wire to a source).",
+        "Produce a review-ready draft; where inputs are missing, mark them [FILL IN] rather than inventing facts."
+      ],
+      "deliver": "commit"
+    }
+  ]
+}
