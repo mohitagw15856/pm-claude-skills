@@ -1,0 +1,398 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>The Operator — print &amp; play</title><style>
+@page{size:A4;margin:8mm}*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Helvetica,Arial,sans-serif;color:#16181d;background:#fff}
+.rules{page-break-after:always;padding:6mm}
+.rules h1{font-size:30pt;margin:0;color:#b3402f}
+.rules .tag{font-size:12pt;color:#555;margin:2px 0 10px}
+.rbox h2{font-size:13pt;margin:12px 0 4px;color:#b3402f}
+.rbox p,.rbox li{font-size:10.5pt;line-height:1.4}
+.rules .foot{margin-top:14px;font-size:8.5pt;color:#999}
+.sheet{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:0;page-break-after:always;height:281mm}
+.card{border:1px dashed #bbb;padding:5mm;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.card .ctag{font-size:8pt;font-weight:700;letter-spacing:.12em;color:#fff;background:#333;align-self:flex-start;padding:2px 7px;border-radius:4px}
+.skill .ctag{background:#1f6f5c}.sit .ctag{background:#b3402f}
+.ctitle{font-size:15pt;font-weight:800;margin:8px 0 6px;line-height:1.1}
+.cdesc{font-size:9pt;color:#333;line-height:1.35;flex:1}
+.cfoot{font-size:8pt;color:#888;text-transform:uppercase;letter-spacing:.08em;border-top:1px solid #eee;padding-top:4px}
+.csit{font-size:12.5pt;font-weight:600;line-height:1.3;flex:1;margin-top:8px}
+.cpar{font-size:8.5pt;color:#999;border-top:1px solid #eee;padding-top:4px}
+.sheet.sit .card{background:linear-gradient(160deg,#fff,#fdf3f1)}
+.sheet.skill .card{background:linear-gradient(160deg,#fff,#f0f7f4)}
+</style></head><body>
+<section class="rules">
+  <h1>The Operator</h1>
+  <p class="tag">A print-and-play party game about professional judgment — built from the real skill library.</p>
+  <div class="rbox">
+    <h2>The idea</h2>
+    <p>Every round, a messy work <b>situation</b> hits the table. Everyone secretly commits the <b>skill</b> they'd reach for. Then you argue. The judge awards the point to the most convincing operator — not always the "par" answer on the card.</p>
+    <h2>Setup (2–6 players)</h2>
+    <ol>
+      <li>Print, cut, and split into two decks: <b>Situations</b> (24) and <b>Skills</b> (48). Shuffle each.</li>
+      <li>Deal <b>5 skill cards</b> to each player. Place the situation deck face-down.</li>
+      <li>Youngest player judges first; the role rotates left each round.</li>
+    </ol>
+    <h2>A round</h2>
+    <ol>
+      <li>The judge flips the top <b>situation</b> and reads it aloud.</li>
+      <li>Every non-judge plays <b>one skill card face-down</b>.</li>
+      <li>Reveal together. In turn, each player gets <b>20 seconds</b> to argue why their skill is the move.</li>
+      <li>The judge awards the <b>situation card</b> (1 point) to the best case. Ties: the judge picks.</li>
+      <li>Everyone draws back up to 5. Judge role passes left.</li>
+    </ol>
+    <h2>Winning</h2>
+    <p>First to <b>5 situation cards</b> wins — or play a timed round and count points. The "par" line on each situation is the library's suggested answer: use it to settle a deadlock, or ignore it and reward the better argument. Half the fun is beating par.</p>
+    <h2>Variants</h2>
+    <ul>
+      <li><b>Speed round:</b> 10-second arguments, judge decides instantly.</li>
+      <li><b>Coop:</b> no judge — the table must reach consensus on one skill per situation before a 60s timer.</li>
+      <li><b>Deep end:</b> play the actual skill in the <a>playground</a> after the round and compare it to your argument.</li>
+    </ul>
+  </div>
+  <p class="foot">PM Skills · MIT · mohitagw15856.github.io/pm-claude-skills — this sheet + 72 cards.</p>
+</section>
+<section class="sheet skill"><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">PRD Template</div>
+  <div class="cdesc">Create a Product Requirements Document following proven PM template structure.</div>
+  <div class="cfoot">pm-essentials</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Executive Update</div>
+  <div class="cdesc">Transform detailed product updates into concise executive briefings.</div>
+  <div class="cfoot">pm-strategy</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Incident Postmortem</div>
+  <div class="cdesc">Write a structured incident postmortem or post-incident review.</div>
+  <div class="cfoot">pm-engineering</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">One-Pager</div>
+  <div class="cdesc">Distil anything — a startup, product, project, or idea — into a single persuasive page.</div>
+  <div class="cfoot">pm-personal</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Meeting Notes</div>
+  <div class="cdesc">Structure and format meeting notes following PM best practices.</div>
+  <div class="cfoot">pm-essentials</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">RICE Prioritisation</div>
+  <div class="cdesc">Scores and ranks product initiatives using the RICE framework.</div>
+  <div class="cfoot">pm-planning</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Competitor Teardown</div>
+  <div class="cdesc">Produce a structured competitive analysis for any product or market.</div>
+  <div class="cfoot">pm-gtm</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">OKR Builder</div>
+  <div class="cdesc">Create well-structured OKRs (Objectives and Key Results) for product teams, startups, and individuals.</div>
+  <div class="cfoot">pm-planning</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Stakeholder Update</div>
+  <div class="cdesc">Create concise executive stakeholder updates using the BLUF (Bottom Line Up Front) framework.</div>
+  <div class="cfoot">pm-essentials</div>
+</div></section>
+<section class="sheet skill"><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Product Launch Checklist</div>
+  <div class="cdesc">Generate a comprehensive pre-launch, launch day, and post-launch checklist for any product release.</div>
+  <div class="cfoot">pm-delivery</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">User Research Synthesis</div>
+  <div class="cdesc">Analyze and synthesize user research findings into structured, actionable insights.</div>
+  <div class="cfoot">pm-essentials</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Go-to-Market Planner</div>
+  <div class="cdesc">Build a go-to-market plan for any product launch, feature release, or new market entry.</div>
+  <div class="cfoot">pm-delivery</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Press Release</div>
+  <div class="cdesc">Write a professional press release for any announcement.</div>
+  <div class="cfoot">pm-cross</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Cover Letter</div>
+  <div class="cdesc">Write a specific, non-generic cover letter that connects your evidence to the role.</div>
+  <div class="cfoot">pm-personal</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Sprint Planning</div>
+  <div class="cdesc">Structure and facilitate sprint planning sessions.</div>
+  <div class="cfoot">pm-delivery</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Decision Forensics</div>
+  <div class="cdesc">Reconstruct the decision actually made in a messy Slack, email, or meeting thread into a proper decision record — commitments named, silent…</div>
+  <div class="cfoot">pm-method</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Win/Loss Analysis</div>
+  <div class="cdesc">Analyze why deals are won and lost and turn it into an action plan.</div>
+  <div class="cfoot">pm-pmm</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Performance Review</div>
+  <div class="cdesc">Write structured, balanced performance reviews from bullet-point inputs.</div>
+  <div class="cfoot">pm-people</div>
+</div></section>
+<section class="sheet skill"><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">A/B Test Planner</div>
+  <div class="cdesc">Design statistically rigorous A/B tests for product features, UI changes, onboarding flows, and pricing experiments.</div>
+  <div class="cfoot">pm-delivery</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Churn Analysis</div>
+  <div class="cdesc">Produce a structured churn analysis that separates avoidable from unavoidable churn.</div>
+  <div class="cfoot">pm-cs</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Pricing Strategy</div>
+  <div class="cdesc">Structure pricing strategy decisions, packaging options, and tier design for SaaS and digital products.</div>
+  <div class="cfoot">pm-planning</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Content Calendar</div>
+  <div class="cdesc">Generate a structured content calendar for any brand, product, or creator.</div>
+  <div class="cfoot">pm-gtm</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Onboarding Plan</div>
+  <div class="cdesc">Create a structured 30/60/90-day onboarding plan for any new hire.</div>
+  <div class="cfoot">pm-hr</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">RACI Matrix</div>
+  <div class="cdesc">Define a RACI matrix for a cross-functional project or process.</div>
+  <div class="cfoot">pm-operations</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Risk Register</div>
+  <div class="cdesc">Build and maintain a project or product risk register.</div>
+  <div class="cfoot">pm-operations</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Assumption Mapper</div>
+  <div class="cdesc">Extract and risk-rate hidden assumptions in a product brief or PRD.</div>
+  <div class="cfoot">pm-discovery</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Code Explainer</div>
+  <div class="cdesc">Explain what a piece of code does in plain English, at the depth the reader needs.</div>
+  <div class="cfoot">pm-engineering</div>
+</div></section>
+<section class="sheet skill"><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Customer Health Scorecard</div>
+  <div class="cdesc">Build a customer health scorecard for a specific account.</div>
+  <div class="cfoot">pm-cs</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Dependency Conflict Resolver</div>
+  <div class="cdesc">Resolve a dependency or version conflict (npm, pip, yarn, pnpm, Maven, Go modules) step by step.</div>
+  <div class="cfoot">pm-engineering</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Go-To-Market</div>
+  <div class="cdesc">Create go-to-market assets for any product or feature.</div>
+  <div class="cfoot">pm-gtm</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Metrics Framework</div>
+  <div class="cdesc">Build a metrics framework for any product, team, or business.</div>
+  <div class="cfoot">pm-data</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Privacy Policy Drafter</div>
+  <div class="cdesc">Draft a clear, plain-language privacy policy tailored to what a product actually collects and does with data.</div>
+  <div class="cfoot">pm-legal</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Roadmap Narrative</div>
+  <div class="cdesc">Transform a prioritised initiative list into a compelling strategic roadmap narrative.</div>
+  <div class="cfoot">pm-planning</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">User Story Writer</div>
+  <div class="cdesc">Write well-structured user stories with acceptance criteria and edge cases.</div>
+  <div class="cfoot">pm-delivery</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">AEO Optimizer</div>
+  <div class="cdesc">Optimize an article for Answer Engine Optimization (AEO) so AI engines like ChatGPT, Perplexity, and Claude can extract, quote, and cite it.</div>
+  <div class="cfoot">pm-writers</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Regex Builder &amp; Explainer</div>
+  <div class="cdesc">Build a regular expression from a plain-English description, or explain an existing one.</div>
+  <div class="cfoot">pm-engineering</div>
+</div></section>
+<section class="sheet skill"><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Competitive Analysis</div>
+  <div class="cdesc">Analyze competitors and create competitive landscape documentation with feature matrices, positioning maps, and strategic recommendations.</div>
+  <div class="cfoot">pm-essentials</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Executive Summary</div>
+  <div class="cdesc">Write an executive summary for any document, report, or proposal.</div>
+  <div class="cfoot">pm-cross</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">SQL Query Explainer</div>
+  <div class="cdesc">Explains, optimises, writes, and documents SQL queries.</div>
+  <div class="cfoot">pm-data</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Git Troubleshooter</div>
+  <div class="cdesc">Diagnose a tangled git situation and give the exact, safe commands to fix it.</div>
+  <div class="cfoot">pm-engineering</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Literature Review</div>
+  <div class="cdesc">Structure and write a literature review for any research topic.</div>
+  <div class="cfoot">pm-research</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Competitive Intelligence Monitor</div>
+  <div class="cdesc">Monitor competitor signals and surface strategic implications for your roadmap.</div>
+  <div class="cfoot">pm-strategy</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Cohort Analysis</div>
+  <div class="cdesc">Structure a cohort analysis for retention, LTV, or behavioural patterns.</div>
+  <div class="cfoot">pm-data</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Error Decoder</div>
+  <div class="cdesc">Decode an error message or stack trace into a plain-English cause, the exact fix, and how to prevent it.</div>
+  <div class="cfoot">pm-engineering</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Resume</div>
+  <div class="cdesc">Write a sharp, achievement-led resume/CV that passes ATS and earns the interview.</div>
+  <div class="cfoot">pm-personal</div>
+</div></section>
+<section class="sheet skill"><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">360-Degree Feedback Template</div>
+  <div class="cdesc">Design a 360-degree feedback survey or write a structured 360 feedback report.</div>
+  <div class="cfoot">pm-people</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">A/B Test Readout</div>
+  <div class="cdesc">Analyse a finished A/B test and write the readout — the result, whether it's statistically and practically significant, what it means, and the…</div>
+  <div class="cfoot">pm-data</div>
+</div><div class="card skill">
+  <div class="ctag">SKILL</div>
+  <div class="ctitle">Accessibility Audit</div>
+  <div class="cdesc">Generate a WCAG 2.2 accessibility audit checklist and remediation suggestions for any UI or design.</div>
+  <div class="cfoot">pm-design</div>
+</div></section>
+<section class="sheet sit"><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">The board meets Thursday and all you have is a Slack thread and three dashboards.</div>
+  <div class="cpar">par: <b>executive-update</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">A senior eng says the migration is "basically done." It is not basically done.</div>
+  <div class="cpar">par: <b>decision-forensics</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">Two features, one sprint, and the loudest stakeholder wants the wrong one.</div>
+  <div class="cpar">par: <b>rice-prioritisation</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">Prod went down for 40 minutes. Leadership wants to know it won't happen again.</div>
+  <div class="cpar">par: <b>incident-postmortem</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">A competitor just shipped the thing on your roadmap. Everyone is in your DMs.</div>
+  <div class="cpar">par: <b>competitor-teardown</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">Sales lost the Meridian deal and no one can agree on why.</div>
+  <div class="cpar">par: <b>win-loss-analysis</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">You have 90 minutes to explain a feature to an exec who reads one page.</div>
+  <div class="cpar">par: <b>one-pager</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">The quarter's "OKRs" are secretly just a task list with aspirations on top.</div>
+  <div class="cpar">par: <b>okr-builder</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">You're launching in six weeks and no one owns the checklist.</div>
+  <div class="cpar">par: <b>product-launch-checklist</b></div>
+</div></section>
+<section class="sheet sit"><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">Twelve user interviews, forty sticky notes, zero decisions.</div>
+  <div class="cpar">par: <b>user-research-synthesis</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">A price change is going out and support has no idea what to say.</div>
+  <div class="cpar">par: <b>crisis-comms</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">Churn ticked up two points and the CEO asked "why" in a one-line email.</div>
+  <div class="cpar">par: <b>churn-analysis</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">You need to tell a good performer a hard truth without breaking them.</div>
+  <div class="cpar">par: <b>performance-review</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">The A/B test came back "marginal" and everyone reads it their own way.</div>
+  <div class="cpar">par: <b>ab-test-planner</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">A new hire starts Monday and their first week is a blank calendar.</div>
+  <div class="cpar">par: <b>onboarding-plan</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">Marketing, sales, and product each describe the product differently.</div>
+  <div class="cpar">par: <b>positioning-statement</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">The roadmap is a wish-list and the CEO wants a story by Friday.</div>
+  <div class="cpar">par: <b>roadmap-builder</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">You're walking into a renewal negotiation with a nervous champion.</div>
+  <div class="cpar">par: <b>negotiation-prep</b></div>
+</div></section>
+<section class="sheet sit"><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">Legal, security, and design all need to sign off and nobody knows who decides.</div>
+  <div class="cpar">par: <b>raci-matrix</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">The release is done; now write the thing customers actually read.</div>
+  <div class="cpar">par: <b>release-notes</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">A cross-team project keeps stalling and everyone points at someone else.</div>
+  <div class="cpar">par: <b>team-charter</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">You have raw numbers and a skeptical room, and ten minutes.</div>
+  <div class="cpar">par: <b>executive-update</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">The pitch is in two days and the deck is forty slides of nouns.</div>
+  <div class="cpar">par: <b>pitch-deck</b></div>
+</div><div class="card sit">
+  <div class="ctag">SITUATION</div>
+  <div class="csit">A risky change ships next week and no one has written down what could break.</div>
+  <div class="cpar">par: <b>risk-register</b></div>
+</div></section>
+</body></html>
