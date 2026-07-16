@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>Read the fine print — paste your lease, bill, offer, or ToS and get it decoded</title>
+<meta name="description" content="Paste any document you're about to sign — a lease, medical bill, job offer, loan, terms of service, or HOA covenants — and get a plain-English decode with red flags ranked by how much they can hurt you. Free, in your browser, not legal advice." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .f-wrap { max-width: 760px; margin: 0 auto; padding: 16px 22px 70px; }
+  .hero { text-align: center; margin: 28px 0 18px; }
+  .hero h2 { font-size: 30px; margin: 0 0 8px; }
+  .hero p { color: #c7cfda; font-size: 15.5px; }
+  #doc { width: 100%; min-height: 220px; background: #0d1117; color: var(--fg); border: 1px solid var(--border); border-radius: 13px; padding: 14px; font-size: 13.5px; box-sizing: border-box; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; justify-content: center; }
+  .chip { border: 1px solid var(--border); border-radius: 999px; padding: 7px 14px; font-size: 13px; cursor: pointer; background: var(--panel); color: var(--fg); }
+  .chip.on { border-color: var(--accent); color: var(--accent); font-weight: 700; }
+  .verdict { text-align: center; color: var(--muted); font-size: 13px; min-height: 20px; margin: 4px 0 10px; }
+  .go { display: block; margin: 10px auto; }
+  .fine { color: var(--muted); font-size: 11.5px; text-align: center; margin-top: 22px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="" class="brand-logo" />
+    <div class="brand-text"><h1>The Fine Print</h1><p class="tagline">Nobody reads it. Paste it.</p></div></div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<div class="f-wrap">
+  <div class="hero">
+    <h2>About to sign something?</h2>
+    <p>Paste it below. You'll get a plain-English decode with the red flags <strong>ranked by how much they can hurt you</strong>, the questions to ask, and what's actually negotiable.</p>
+  </div>
+
+  <textarea id="doc" placeholder="Paste your lease, medical bill, job offer + benefits, loan offer, terms of service, or HOA covenants here… (it stays in your browser until you choose to run the decode)"></textarea>
+
+  <div class="verdict" id="verdict">The right decoder is picked automatically — or choose one:</div>
+  <div class="chips" id="chips"></div>
+
+  <button id="go" class="primary go" type="button">🔍 Decode it</button>
+
+  <p class="fine">Runs in the <a href="index.html">Skill Playground</a> — free sponsored runs or your own key; your document goes only to the AI provider you pick, never to us. Plain-language reading, <strong>not legal or financial advice</strong> — laws vary by jurisdiction; confirm anything load-bearing with a qualified professional.</p>
+</div>
+
+<script>
+const DECODERS = [
+  { skill: 'lease-decoder',        label: '🏠 Lease',          words: ['landlord','tenant','lease','rent ','security deposit','premises','sublet'] },
+  { skill: 'medical-bill-decoder', label: '🏥 Medical bill',   words: ['cpt','copay','deductible','eob','insurance paid','patient responsibility','billed','hospital'] },
+  { skill: 'benefits-decoder',     label: '💼 Job offer & benefits', words: ['vesting','equity','401k','pto','base salary','bonus','stock options','benefits'] },
+  { skill: 'loan-decoder',         label: '🏦 Loan',           words: ['apr','principal','amortization','prepayment','interest rate','borrower','origination'] },
+  { skill: 'tos-decoder',          label: '📜 Terms of service', words: ['terms of service','arbitration','class action','privacy policy','license to','user content','we may modify'] },
+  { skill: 'hoa-decoder',          label: '🏘 HOA covenants',  words: ['hoa','homeowners association','cc&r','covenant','assessment','common area','architectural'] },
+];
+let picked = null;
+const chipsEl = document.getElementById('chips');
+DECODERS.forEach((d, i) => {
+  const b = document.createElement('button');
+  b.className = 'chip'; b.type = 'button'; b.textContent = d.label; b.dataset.i = i;
+  b.onclick = () => { picked = i; render(); };
+  chipsEl.appendChild(b);
+});
+function detect(text) {
+  const t = text.toLowerCase();
+  let best = -1, bestScore = 0;
+  DECODERS.forEach((d, i) => {
+    const score = d.words.reduce((n, w) => n + (t.includes(w) ? 1 : 0), 0);
+    if (score > bestScore) { bestScore = score; best = i; }
+  });
+  return bestScore >= 2 ? best : -1;
+}
+function render() {
+  const text = document.getElementById('doc').value;
+  const auto = picked === null ? detect(text) : picked;
+  [...chipsEl.children].forEach((c, i) => c.classList.toggle('on', i === auto));
+  document.getElementById('verdict').textContent =
+    auto >= 0 ? `Looks like a ${DECODERS[auto].label.replace(/^\S+ /, '')} — ${picked === null ? 'auto-detected' : 'your pick'}.`
+    : 'The right decoder is picked automatically — or choose one:';
+  return auto;
+}
+document.getElementById('doc').addEventListener('input', () => { picked = null; render(); });
+document.getElementById('go').addEventListener('click', () => {
+  const text = document.getElementById('doc').value.trim();
+  const auto = render();
+  const d = DECODERS[auto >= 0 ? auto : 0];
+  const i = text ? '&i=' + encodeURIComponent(btoa(unescape(encodeURIComponent(JSON.stringify([text]))))) : '';
+  location.href = 'index.html?skill=' + d.skill + i;
+});
+window.__fineprintReady = DECODERS.length;
+if (window.pmTrack) pmTrack('fineprint/open');
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

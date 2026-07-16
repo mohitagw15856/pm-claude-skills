@@ -1,0 +1,7 @@
+{
+  "$comment": "The Registry of Conformant Libraries — public skills repos graded live by the SkillSpec badge service. Add your repo by PR: append an entry, keep the array alphabetical by repo. Grading is live (badge = minimum level across the repo), so there is nothing to keep in sync.",
+  "libraries": [
+    { "repo": "anthropics/skills", "note": "Anthropic's official Agent Skills examples" },
+    { "repo": "mohitagw15856/pm-claude-skills", "note": "the reference corpus — 515 skills, L3 CI-gated" }
+  ]
+}

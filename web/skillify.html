@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>Skillify — turn your team's SOP into a SKILL.md</title>
+<meta name="description" content="Paste a standard-operating-procedure, runbook, checklist, or Confluence page and get a drafted SKILL.md at the library's L3 bar — trigger description, required inputs, output template, quality checks, and anti-patterns extracted from how your team actually works." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
+<script src="providers.js"></script>
+<style>
+  .s-wrap { max-width: 900px; margin: 0 auto; padding: 16px 22px 70px; }
+  .lead { color: #c7cfda; font-size: 15px; }
+  textarea#sop { width: 100%; min-height: 200px; background: #0d1117; color: var(--fg); border: 1px solid var(--border); border-radius: 13px; padding: 14px; font-size: 13px; box-sizing: border-box; }
+  .actions { display: flex; gap: 10px; align-items: center; margin: 12px 0; flex-wrap: wrap; }
+  .out { border: 1px solid var(--border); border-radius: 13px; background: var(--panel); padding: 16px 20px; min-height: 120px; font-size: 13.5px; }
+  .status { color: var(--muted); font-size: 12.5px; }
+  .status.err { color: #e5534b; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="" class="brand-logo" />
+    <div class="brand-text"><h1>Skillify</h1><p class="tagline">Your SOP, as a skill.</p></div></div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="your key" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your SOP goes only to the AI provider you pick — never to us. The drafted skill is yours.</div>
+
+<div class="s-wrap">
+  <p class="lead">Your team already has judgment written down — it's just trapped in SOPs, runbooks, and Confluence pages nobody re-reads. Paste one below and get a drafted <code>SKILL.md</code> in the library's format: trigger description, required inputs, output template, <strong>quality checks and anti-patterns extracted from how your team actually works</strong>. Validate it with <code>npx skillspec-check</code>, then keep it private or PR it to the library.</p>
+
+  <textarea id="sop" placeholder="Paste the SOP / runbook / checklist / process doc here…"></textarea>
+  <div class="actions">
+    <button id="runBtn" class="primary" type="button">⚙️ Draft the skill</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+    <button id="dlBtn" class="exp-btn" type="button" hidden>⬇ Download SKILL.md</button>
+    <span id="status" class="status"></span>
+  </div>
+  <div class="out markdown" id="out"><span class="status">The drafted skill appears here.</span></div>
+  <p class="status" style="margin-top:14px">Want this done for your whole team's process library, privately, with a support contract? See <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/docs/SERVICES.md">Services</a>.</p>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let controller=null, RAW='';
+const SYS = [
+  'You convert a team\'s SOP/runbook/process document into a SKILL.md file for the pm-claude-skills library format. Output ONLY the complete SKILL.md file in a markdown code fence, nothing else.',
+  'Required structure: YAML frontmatter with `name` (lowercase-kebab, derived from the task) and `description` (ONE quoted string: what it does + "Use when [trigger phrases a user would type]" + "Produces [the concrete artifact]"). Body sections in order: # Title + one-line summary · ## What This Skill Produces · ## Required Inputs (ask-if-missing list) · a framework/method section that captures THE TEAM\'S ACTUAL METHOD from the document (their order of operations, their thresholds, their vocabulary) · ## Output Format (a concrete template) · ## Quality Checks (checklist) · ## Anti-Patterns (explicit "Do not" rules).',
+  'The judgment must come FROM the document: mine its warnings, exceptions, escalation rules, and hard-won specifics into the quality checks and anti-patterns. Where the document is silent on something the skill needs, write the section but mark the item <!-- CONFIRM: ... --> rather than inventing policy.',
+  'Write instructions TO the model ("Ask for…", "Flag…", "Never…"). Keep the body 2,500-4,000 characters. No network instructions, no credentials.'
+].join('\n');
+PMProviders.initProviderUI();
+el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+el('runBtn').addEventListener('click',run);
+el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+el('dlBtn').addEventListener('click',()=>{
+  const m=RAW.match(/```(?:markdown|md)?\n([\s\S]*?)```/); const body=(m?m[1]:RAW).trim()+'\n';
+  const name=(body.match(/^name:\s*(\S+)/m)||[])[1]||'my-skill';
+  const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([body],{type:'text/markdown'})); a.download=name+'.SKILL.md'; a.click();
+});
+function setStatus(t,err){ const s=el('status'); s.textContent=t; s.className='status'+(err?' err':''); }
+async function run(){
+  const sop=el('sop').value.trim();
+  if(sop.length<200) return setStatus('Paste the actual document — a real SOP is at least a few paragraphs.',true);
+  const out=el('out'); out.innerHTML=''; RAW='';
+  el('runBtn').disabled=true; el('stopBtn').hidden=false; el('dlBtn').hidden=true; controller=new AbortController();
+  setStatus('Drafting…');
+  if(window.pmTrack) pmTrack('skillify/run');
+  try{
+    RAW=await PMProviders.stream({ key:el('apiKey').value.trim(), model:el('model').value, system:SYS,
+      userMessage:'Convert this document into a SKILL.md:\n\n'+sop, signal:controller.signal,
+      onDelta:(a)=>{ RAW=a; out.innerHTML=DOMPurify.sanitize(marked.parse(a)); } });
+    setStatus('Done — download it, then validate: npx skillspec-check <folder>');
+    el('dlBtn').hidden=false;
+  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
+  el('runBtn').disabled=false; el('stopBtn').hidden=true;
+}
+window.__skillifyReady=true;
+if(window.pmTrack) pmTrack('skillify/open');
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

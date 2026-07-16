@@ -14,8 +14,23 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createInterface } from 'node:readline';
 import { createRequire } from 'node:module';
+import { parseInputs } from '../bin/lib/inputs.mjs';
 
 const PKG_ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
+
+// Typed inputs: each skill's "Required Inputs" section parsed into structured
+// fields (same parse the playground form and CLI prompting use). Cached lazily.
+const inputsCache = new Map();
+function skillInputs(s) {
+  if (!inputsCache.has(s.name)) {
+    const inputs = parseInputs(s.body).map((i) => ({
+      ...i,
+      arg: i.label.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_+|_+$/g, '').slice(0, 48) || 'input',
+    }));
+    inputsCache.set(s.name, inputs);
+  }
+  return inputsCache.get(s.name);
+}
 const VERSION = (() => { try { return createRequire(import.meta.url)('../package.json').version; } catch { return '0.0.0'; } })();
 const SERVER_NAME = 'pm-claude-skills';
 
@@ -107,8 +122,9 @@ const TOOLS = [
       properties: {
         name: { type: 'string', description: 'The skill to run (from list_skills / search_skills).' },
         input: { type: 'string', description: 'The user\'s input for the skill — the raw notes, brief, or task.' },
+        inputs: { type: 'object', description: 'Optional structured fields (from get_skill_inputs) — merged into the input as labeled lines.', additionalProperties: { type: 'string' } },
       },
-      required: ['name', 'input'],
+      required: ['name'],
     },
     annotations: { title: 'Run a skill', readOnlyHint: true, openWorldHint: false },
   },
@@ -164,6 +180,26 @@ const TOOLS = [
       required: ['name', 'instructions'],
     },
     annotations: { title: 'Get a skill', ...READONLY },
+  },
+  {
+    name: 'get_skill_inputs',
+    title: 'Get a skill\'s typed input schema',
+    description: 'Get the structured inputs a skill declares (parsed from its Required Inputs section) as a JSON-schema-shaped object — render a form or collect fields instead of sending a blob of free text. Pass the collected fields to run_skill as `inputs`.',
+    inputSchema: {
+      type: 'object',
+      additionalProperties: false,
+      properties: { name: { type: 'string', description: 'The exact skill id (from list_skills / search_skills).' } },
+      required: ['name'],
+    },
+    outputSchema: {
+      type: 'object',
+      properties: {
+        name: { type: 'string', description: 'The skill id.' },
+        schema: { type: 'object', description: 'JSON-schema object: one string property per declared input; required lists the non-optional ones.' },
+      },
+      required: ['name', 'schema'],
+    },
+    annotations: { title: 'Get skill input schema', ...READONLY },
   },
   {
     name: 'list_workflows',
@@ -261,6 +297,20 @@ function runTool(name, args = {}) {
     if (!s) throw new Error(`Unknown skill "${args.name}". Use search_skills or list_skills to find one.`);
     return { text: s.body, structured: { name: s.name, title: s.title, instructions: s.body } };
   }
+  if (name === 'get_skill_inputs') {
+    const s2 = byName.get(String(args.name || '').trim());
+    if (!s2) throw new Error(`Unknown skill: ${args.name}`);
+    const inputs = skillInputs(s2);
+    const schema = {
+      type: 'object',
+      properties: Object.fromEntries(inputs.map((i) => [i.arg, { type: 'string', description: i.label + (i.hint ? ' — ' + i.hint : '') }])),
+      required: inputs.filter((i) => !i.optional).map((i) => i.arg),
+    };
+    const text = inputs.length
+      ? `${s2.name} declares ${inputs.length} input(s):\n` + inputs.map((i) => `- ${i.arg}${i.optional ? ' (optional)' : ''}: ${i.label}${i.hint ? ' — ' + i.hint : ''}`).join('\n')
+      : `${s2.name} declares no structured inputs — pass free text to run_skill.`;
+    return { text, structured: { name: s2.name, schema } };
+  }
   if (name === 'list_workflows') {
     const text = WORKFLOWS.length
       ? WORKFLOWS.map((w) => `- ${w.id} (${w.lifecycle}) — ${w.summary}\n    chain: ${w.steps.map((s) => s.skill).join(' → ')}`).join('\n')
@@ -302,6 +352,15 @@ const RUN_SUFFIX =
 async function runSkillViaSampling(args) {
   const s = byName.get(String(args.name || '').trim());
   if (!s) throw new Error(`Unknown skill "${args.name}". Use search_skills or list_skills to find one.`);
+  // Structured fields (from get_skill_inputs) compose into labeled lines; free
+  // text rides along after. At least one of the two must carry content.
+  if (args.inputs && typeof args.inputs === 'object') {
+    const inputs = skillInputs(s);
+    const lines = inputs.filter((i) => args.inputs[i.arg] != null && args.inputs[i.arg] !== '')
+      .map((i) => `${i.label}: ${args.inputs[i.arg]}`);
+    args = { ...args, input: [lines.join('\n'), String(args.input || '')].filter(Boolean).join('\n\n') };
+  }
+  if (!String(args.input || '').trim()) throw new Error('Provide `input` (free text) and/or `inputs` (structured fields from get_skill_inputs).');
   if (!clientCapabilities.sampling) {
     throw new Error(
       'This MCP client does not support sampling, so the server cannot run the skill for you. ' +
@@ -361,13 +420,23 @@ function handle(msg) {
           name: s.name,
           title: s.title,
           description: s.description,
-          arguments: [{ name: 'task', description: 'The task or input to apply this skill to.', required: false }],
+          arguments: (() => {
+            const inputs = skillInputs(s);
+            return inputs.length
+              ? inputs.map((i) => ({ name: i.arg, description: i.label + (i.hint ? ' — ' + i.hint : ''), required: !i.optional }))
+              : [{ name: 'task', description: 'The task or input to apply this skill to.', required: false }];
+          })(),
         })),
       });
     case 'prompts/get': {
       const s = byName.get(params && params.name);
       if (!s) return fail(id, -32602, `Unknown prompt: ${params && params.name}`);
-      const task = (params && params.arguments && params.arguments.task) || '';
+      const supplied = (params && params.arguments) || {};
+      const inputs = skillInputs(s);
+      const lines = inputs
+        .filter((i) => supplied[i.arg] != null && supplied[i.arg] !== '')
+        .map((i) => `${i.label}: ${supplied[i.arg]}`);
+      const task = supplied.task || lines.join('\n');
       const text = s.body + (task ? `\n\n---\nApply this skill now to the following:\n${task}` : '');
       return reply(id, { description: s.description, messages: [{ role: 'user', content: { type: 'text', text } }] });
     }

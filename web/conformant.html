@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>The Registry of Conformant Libraries — live-graded SKILL.md repos</title>
+<meta name="description" content="Public skills libraries graded live against SkillSpec: every badge is computed from the repo's actual SKILL.md files right now — conformance level and security scan, no self-reporting. Add your library by PR." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .c-wrap { max-width: 860px; margin: 0 auto; padding: 16px 22px 70px; }
+  .lead { color: #c7cfda; font-size: 15.5px; }
+  table.reg { width: 100%; border-collapse: collapse; margin: 18px 0; }
+  .reg th, .reg td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+  .reg th { color: var(--muted); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+  .reg td a.repo { color: var(--accent); font-weight: 600; text-decoration: none; }
+  .reg td .note { color: var(--muted); font-size: 12.5px; }
+  .reg img { vertical-align: middle; }
+  .how { border: 1px solid var(--border); border-radius: 13px; background: var(--panel); padding: 16px 20px; margin-top: 22px; font-size: 13.5px; }
+  .how code { background: #0d1117; padding: 2px 6px; border-radius: 6px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="" class="brand-logo" />
+    <div class="brand-text"><h1>Registry of Conformant Libraries</h1><p class="tagline">Live-graded. No self-reporting.</p></div></div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<div class="c-wrap">
+  <p class="lead">Every badge on this page is computed <strong>right now</strong> from the repo's actual <code>SKILL.md</code> files by the open <a href="https://github.com/mohitagw15856/skillspec">SkillSpec</a> validator: the grade is the <em>minimum</em> conformance level across the library (a chain is as strong as…), and the security scan runs on every file. Nobody grades themselves here.</p>
+
+  <table class="reg" aria-label="Conformant libraries">
+    <thead><tr><th>Library</th><th>Live grade</th><th></th></tr></thead>
+    <tbody id="rows"><tr><td colspan="3">loading registry…</td></tr></tbody>
+  </table>
+
+  <div class="how">
+    <strong>Add your library</strong> — two steps:
+    <ol>
+      <li>Gate it yourself first: <code>npx skillspec-check --min-level 1</code> (fix mode scaffolds what's missing: <code>npx skillspec-check fix skills/</code>).</li>
+      <li>PR one line into <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/web/conformant.json">conformant.json</a>. The badge does the rest — forever, live.</li>
+    </ol>
+    Wear it in your README too:
+    <code>![SkillSpec](https://img.shields.io/endpoint?url=https%3A%2F%2Fpm-skills-mcp.pm-claude-skills.workers.dev%2Fbadge%3Frepo%3DYOU%2FREPO)</code>
+  </div>
+</div>
+
+<script>
+fetch('conformant.json').then(r => r.json()).then(d => {
+  const rows = d.libraries.map(l => {
+    const badge = 'https://img.shields.io/endpoint?url=' + encodeURIComponent('https://pm-skills-mcp.pm-claude-skills.workers.dev/badge?repo=' + l.repo);
+    return '<tr><td><a class="repo" href="https://github.com/' + l.repo + '">' + l.repo + '</a><div class="note">' + (l.note || '') + '</div></td>' +
+      '<td><img src="' + badge + '" alt="SkillSpec grade for ' + l.repo + '" loading="lazy" /></td>' +
+      '<td><a href="https://github.com/' + l.repo + '" aria-label="open repo">→</a></td></tr>';
+  }).join('');
+  document.getElementById('rows').innerHTML = rows;
+  window.__conformantReady = d.libraries.length;
+  if (window.pmTrack) pmTrack('conformant/open');
+});
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
