@@ -63,6 +63,7 @@
       ['remix.html', '🔀 Skill Remix'],
       ['path.html', '🧭 The Operator\'s Path'],
       ['trends.html', '📈 Trends'],
+      ['api.html', '🔌 API'],
       ['voice.html', '🎙️ Voice Mode'],
       ['capture.html', '📷 Live Capture'],
       ['video.html', '🎬 Video export'],

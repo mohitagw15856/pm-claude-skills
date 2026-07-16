@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>API — build on the whole library</title>
+<meta name="description" content="A read-only REST API over the entire professional-skills library: search it, list it, pull any skill's full instructions, browse workflow recipes. No key, open CORS. Try every endpoint live on this page, then copy the call." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .api-wrap { max-width: 940px; margin: 0 auto; padding: 16px 22px 70px; }
+  .api-lead { color: var(--muted); font-size: 15px; }
+  .base { display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin:14px 0; font-size:13px; }
+  .base code { background: var(--panel-2); border:1px solid var(--border); border-radius:8px; padding:6px 10px; font-family:ui-monospace,Menlo,monospace; }
+  .ep { border:1px solid var(--border); border-radius:14px; background:var(--panel); margin:14px 0; overflow:hidden; }
+  .ep summary { cursor:pointer; padding:13px 16px; font-weight:600; display:flex; gap:10px; align-items:center; list-style:none; }
+  .ep summary::-webkit-details-marker { display:none; }
+  .verb { font-family:ui-monospace,monospace; font-size:11.5px; font-weight:700; padding:3px 8px; border-radius:6px; background:#1f6feb22; color:var(--accent-2,#6cb6ff); border:1px solid var(--border); }
+  .verb.post { background:#3fb95022; color:#3fb950; }
+  .ep .path { font-family:ui-monospace,monospace; font-size:13.5px; }
+  .ep .desc { color:var(--muted); font-size:12.5px; margin-left:auto; }
+  .ep-body { padding:0 16px 16px; }
+  .ep-body p { font-size:13.5px; color:var(--muted); }
+  .try { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:8px 0; }
+  .try input { background:var(--panel-2); border:1px solid var(--border); border-radius:8px; color:var(--text); padding:8px 11px; font-size:13px; min-width:180px; }
+  pre.out { background:#0b0e14; border:1px solid var(--border); border-radius:10px; padding:12px 14px; overflow:auto; max-height:320px; font-size:12px; font-family:ui-monospace,Menlo,monospace; color:#c9d1d9; margin:8px 0 0; }
+  .curl { position:relative; }
+  .curl code { display:block; background:var(--panel-2); border:1px solid var(--border); border-radius:8px; padding:9px 12px; font-family:ui-monospace,monospace; font-size:12px; overflow-x:auto; white-space:nowrap; }
+  h2.sec { font-size:17px; margin:26px 0 6px; }
+  .own { border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:0 12px 12px 0; background:var(--panel); padding:12px 16px; }
+  .own pre { font-size:12px; overflow-x:auto; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>API</h1><p class="tagline">Build on the whole library.</p></div>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔓 A read-only REST API over every skill — no key, open CORS. Call it from a browser, an n8n / Make / Lovable flow, or your own agent. Try any endpoint live below.</div>
+
+<div class="api-wrap">
+  <p class="api-lead">The same public JSON that powers this playground, served from the edge. Search skills, pull any one's <strong>full instructions</strong> (use it as your model's system prompt), and browse workflow recipes. Running a skill against a model is a separate, key-gated step — do it yourself with your own key, or use the throttled <code>/try</code> convenience endpoint.</p>
+
+  <div class="base">
+    <span>Base URL</span>
+    <code id="base">https://pm-skills-mcp.pm-claude-skills.workers.dev</code>
+    <a class="chip" href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/integrations/api/openapi.yaml" target="_blank" rel="noopener">OpenAPI spec ↗</a>
+  </div>
+
+  <h2 class="sec">Endpoints — try them live</h2>
+
+  <details class="ep" open>
+    <summary><span class="verb">GET</span><span class="path">/v1/search</span><span class="desc">keyword search, ranked</span></summary>
+    <div class="ep-body">
+      <p>Describe the task in plain words; get the best-matching skills back.</p>
+      <div class="try">
+        <input id="q_search" value="explain a metric drop to my CEO" />
+        <button class="primary" type="button" data-run="search">Run</button>
+      </div>
+      <div class="curl"><code id="curl_search"></code></div>
+      <pre class="out" id="out_search" hidden></pre>
+    </div>
+  </details>
+
+  <details class="ep">
+    <summary><span class="verb">GET</span><span class="path">/v1/skills</span><span class="desc">list &amp; filter</span></summary>
+    <div class="ep-body">
+      <p>All skills, or filter with <code>?bundle=</code>, <code>?q=</code>, <code>?limit=</code>.</p>
+      <div class="try">
+        <input id="q_list" placeholder="?bundle=pm-delivery&limit=5" value="?limit=5" />
+        <button class="primary" type="button" data-run="list">Run</button>
+      </div>
+      <div class="curl"><code id="curl_list"></code></div>
+      <pre class="out" id="out_list" hidden></pre>
+    </div>
+  </details>
+
+  <details class="ep">
+    <summary><span class="verb">GET</span><span class="path">/v1/skills/{name}</span><span class="desc">one skill + full instructions</span></summary>
+    <div class="ep-body">
+      <p>The full skill, including <code>instructions</code> — that's the system prompt you feed your model. Add <code>?format=md</code> for raw markdown.</p>
+      <div class="try">
+        <input id="q_skill" value="executive-update" />
+        <button class="primary" type="button" data-run="skill">Run</button>
+      </div>
+      <div class="curl"><code id="curl_skill"></code></div>
+      <pre class="out" id="out_skill" hidden></pre>
+    </div>
+  </details>
+
+  <details class="ep">
+    <summary><span class="verb">GET</span><span class="path">/v1/workflows</span><span class="desc">skill-chain recipes</span></summary>
+    <div class="ep-body">
+      <p>Multi-step recipes that chain skills into a bigger job.</p>
+      <div class="try"><button class="primary" type="button" data-run="workflows">Run</button></div>
+      <div class="curl"><code id="curl_workflows"></code></div>
+      <pre class="out" id="out_workflows" hidden></pre>
+    </div>
+  </details>
+
+  <h2 class="sec">Run it yourself — bring your own key</h2>
+  <div class="own">
+    <p style="color:var(--muted);font-size:13.5px;margin-top:0">The production path: pull a skill's <code>instructions</code> and use it as your model's <strong>system prompt</strong>. Provider-neutral — the same field works for Claude, OpenAI, Gemini, or a local model.</p>
+    <pre id="ownCode">const skill = await (await fetch(
+  '<span class="b">BASE</span>/v1/skills/executive-update'
+)).json();
+
+const res = await fetch('https://api.anthropic.com/v1/messages', {
+  method: 'POST',
+  headers: { 'content-type': 'application/json', 'x-api-key': KEY, 'anthropic-version': '2023-06-01' },
+  body: JSON.stringify({
+    model: 'claude-sonnet-4-6',
+    max_tokens: 2000,
+    system: skill.instructions,          // ← the skill IS the system prompt
+    messages: [{ role: 'user', content: 'This week: shipped X, churn up 2pts…' }],
+  }),
+});</pre>
+  </div>
+</div>
+
+<script>
+const BASE='https://pm-skills-mcp.pm-claude-skills.workers.dev';
+const el=(id)=>document.getElementById(id);
+const urls={
+  search:()=>BASE+'/v1/search?q='+encodeURIComponent(el('q_search').value.trim()),
+  list:()=>BASE+'/v1/skills'+(el('q_list').value.trim()||''),
+  skill:()=>BASE+'/v1/skills/'+encodeURIComponent(el('q_skill').value.trim()),
+  workflows:()=>BASE+'/v1/workflows',
+};
+function refreshCurls(){ for(const k in urls){ const c=el('curl_'+k); if(c) c.textContent='curl \''+urls[k]()+'\''; } }
+['q_search','q_list','q_skill'].forEach(id=>el(id)&&el(id).addEventListener('input',refreshCurls));
+refreshCurls();
+document.querySelectorAll('[data-run]').forEach(b=>b.addEventListener('click',async()=>{
+  const k=b.dataset.run, out=el('out_'+k); out.hidden=false; out.textContent='…';
+  try{ const r=await fetch(urls[k]()); const t=await r.text();
+    try{ out.textContent=JSON.stringify(JSON.parse(t),null,2); }catch(_){ out.textContent=t; }
+  }catch(e){ out.textContent='Request failed: '+e.message+'\n(If offline, the endpoint is unreachable from here.)'; }
+}));
+// paint BASE into the code sample
+el('ownCode').innerHTML=el('ownCode').innerHTML.replace(/<span class="b">BASE<\/span>/,BASE);
+</script>
+<script src="i18n.js"></script>
+<script src="a11y.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

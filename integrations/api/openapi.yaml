@@ -1,0 +1,194 @@
+openapi: 3.1.0
+info:
+  title: PM Skills API
+  version: "1.0.0"
+  description: >
+    A read-only REST API over the whole professional-skills library — search it,
+    list it, pull one skill's full instructions, and browse workflow recipes.
+    It's the same public JSON that powers the playground, served from the edge
+    worker, with permissive CORS so you can call it from a browser, an n8n /
+    Make / Lovable flow, or your own agent. No key, no accounts, no rate ceremony.
+
+    Running a skill against the model is a separate, key-gated step: either call
+    the model yourself with a skill's `instructions` as the system prompt (see
+    `/v1/skills/{name}`), or POST to the free, throttled `/try` endpoint.
+  license:
+    name: MIT
+    url: https://github.com/mohitagw15856/pm-claude-skills/blob/main/LICENSE
+servers:
+  - url: https://pm-skills-mcp.pm-claude-skills.workers.dev
+    description: Public edge worker
+paths:
+  /v1:
+    get:
+      summary: API index
+      description: Lists the available endpoints and their filters.
+      responses:
+        "200":
+          description: The endpoint map.
+          content:
+            application/json:
+              schema:
+                type: object
+  /v1/skills:
+    get:
+      summary: List skills
+      parameters:
+        - name: bundle
+          in: query
+          description: Filter to one bundle/plugin (e.g. `pm-delivery`).
+          schema: { type: string }
+        - name: q
+          in: query
+          description: Keyword search within the list.
+          schema: { type: string }
+        - name: limit
+          in: query
+          description: Cap the number returned.
+          schema: { type: integer, minimum: 1 }
+      responses:
+        "200":
+          description: Matching skills (summary shape).
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count: { type: integer }
+                  skills:
+                    type: array
+                    items: { $ref: "#/components/schemas/SkillSummary" }
+  /v1/skills/{name}:
+    get:
+      summary: Get one skill (with full instructions)
+      parameters:
+        - name: name
+          in: path
+          required: true
+          description: The skill's slug, e.g. `executive-update`.
+          schema: { type: string }
+        - name: format
+          in: query
+          description: Pass `md` (or `markdown`) for the raw skill body as text/markdown instead of JSON.
+          schema: { type: string, enum: [md, markdown] }
+      responses:
+        "200":
+          description: The full skill, including its `instructions` (use as the model system prompt).
+          content:
+            application/json:
+              schema: { $ref: "#/components/schemas/SkillFull" }
+            text/markdown:
+              schema: { type: string }
+        "404":
+          description: No skill by that name.
+  /v1/search:
+    get:
+      summary: Search skills by keyword
+      parameters:
+        - name: q
+          in: query
+          required: true
+          description: The query, e.g. `explain a metric drop to my CEO`.
+          schema: { type: string }
+        - name: limit
+          in: query
+          schema: { type: integer, default: 10, minimum: 1 }
+      responses:
+        "200":
+          description: Ranked matches.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  query: { type: string }
+                  count: { type: integer }
+                  skills:
+                    type: array
+                    items: { $ref: "#/components/schemas/SkillSummary" }
+        "400":
+          description: Missing query.
+  /v1/workflows:
+    get:
+      summary: List workflow recipes (ordered skill chains)
+      responses:
+        "200":
+          description: The recipes and the skills each one chains.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count: { type: integer }
+                  workflows:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id: { type: string }
+                        name: { type: string }
+                        command: { type: string }
+                        summary: { type: string }
+                        steps:
+                          type: array
+                          items: { type: string }
+  /v1/workflows/{id}:
+    get:
+      summary: Get one workflow recipe with its full ordered steps
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        "200":
+          description: The recipe.
+          content:
+            application/json:
+              schema: { type: object }
+        "404":
+          description: No workflow by that id.
+  /try:
+    post:
+      summary: Run a skill against the model (free, throttled)
+      description: >
+        A best-effort, rate-limited convenience endpoint that runs a named (or
+        auto-matched) skill against the provided text using the project's key.
+        For production, prefer bringing your own key: GET the skill's
+        `instructions` and call your model provider directly.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                skill: { type: string, description: "Skill slug; omit to auto-match from `input`." }
+                input: { type: string, description: "The text the skill works on." }
+      responses:
+        "200":
+          description: The generated artifact.
+        "429":
+          description: Throttled — bring your own key.
+components:
+  schemas:
+    SkillSummary:
+      type: object
+      properties:
+        name: { type: string }
+        title: { type: string }
+        description: { type: string }
+        bundle: { type: string }
+        tier: { type: string }
+    SkillFull:
+      allOf:
+        - $ref: "#/components/schemas/SkillSummary"
+        - type: object
+          properties:
+            inputs:
+              type: array
+              items: { type: string }
+            source: { type: string }
+            instructions:
+              type: string
+              description: The full skill body — use this as your model's system prompt.
