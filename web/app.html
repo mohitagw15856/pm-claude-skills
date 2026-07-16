@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Prompt-to-App — describe a tool, get a working app</title>
+<meta name="description" content="Describe a small tool — a calculator, a tracker, a quiz, a decision matrix — and get a complete, self-contained working web app whose state lives in its URL, so a link captures the whole thing. No build step, no backend." />
+<link rel="stylesheet" href="styles.css" />
+<script src="providers.js"></script>
+<style>
+  .ap-wrap { max-width: 960px; margin: 0 auto; padding: 14px 22px 60px; }
+  .ap-lead { color: var(--muted); font-size: 15px; line-height: 1.55; }
+  .types { display:flex; gap:8px; flex-wrap:wrap; margin:12px 0; }
+  .type { border:1px solid var(--border); border-radius:12px; padding:9px 13px; cursor:pointer; font-size:13.5px; background:var(--panel); }
+  .type.sel { border-color: var(--accent); background: rgba(217,96,90,.07); }
+  textarea { width:100%; box-sizing:border-box; min-height:100px; padding:12px 14px; background:var(--panel); border:1px solid var(--border); border-radius:12px; color:var(--text); font-family:inherit; font-size:14px; }
+  .actions { margin:12px 0; display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  .frame { width:100%; height:520px; border:1px solid var(--border); border-radius:12px; background:#fff; margin-top:12px; }
+  .warn { font-size:12px; color:var(--muted); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Prompt-to-App</h1><p class="tagline">Describe a tool. Get a working app.</p></div>
+  </div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8" selected>Opus 4.8</option><option value="claude-sonnet-4-6">Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your key + prompt stay in your browser. The app is self-contained HTML you can host anywhere; its state lives in the URL, so a link captures it. Preview runs sandboxed.</div>
+
+<div class="ap-wrap">
+  <p class="ap-lead">A step past a static page: a real, <strong>working little app</strong>. Its state serialises into the URL hash, so once you host it, a link reproduces the exact inputs — perfect for shareable calculators, trackers, quizzes, and decision tools.</p>
+  <div class="types" id="types"></div>
+  <textarea id="brief" placeholder="Describe the tool — e.g. 'A mortgage affordability calculator: income, rate, term, deposit → monthly payment and a bar showing principal vs interest. Show the stress-tested payment at +2%.'"></textarea>
+  <div class="actions">
+    <button id="runBtn" class="primary" type="button">⚙️ Build the app</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+    <button id="dlBtn" class="ghost" type="button" hidden>⬇ Download .html</button>
+    <button id="openBtn" class="ghost" type="button" hidden>↗ Open in new tab</button>
+    <span id="status" class="status"></span>
+  </div>
+  <iframe id="frame" class="frame" sandbox="allow-scripts allow-forms" title="app preview" hidden></iframe>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let controller=null, LASTHTML='';
+const TYPES=[
+  ['calculator','🧮 Calculator','a calculator that computes a result from a few numeric inputs, with a small chart'],
+  ['tracker','📋 Tracker','a tracker/log where the user adds items that persist, with totals and progress'],
+  ['quiz','❓ Quiz / assessment','a short scored quiz or self-assessment that gives a result and advice at the end'],
+  ['matrix','⚖️ Decision matrix','a weighted decision matrix: options as rows, criteria with adjustable weights, a live ranked total'],
+  ['converter','🔁 Converter / estimator','a converter or estimator with live two-way updating fields'],
+];
+let sel='calculator';
+init();
+function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('types').innerHTML=TYPES.map(t=>`<span class="type${t[0]===sel?' sel':''}" data-id="${t[0]}">${t[1]}</span>`).join('');
+  document.querySelectorAll('.type').forEach(d=>d.addEventListener('click',()=>{ sel=d.dataset.id; document.querySelectorAll('.type').forEach(x=>x.classList.toggle('sel',x.dataset.id===sel)); }));
+  el('runBtn').addEventListener('click',run);
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+  el('dlBtn').addEventListener('click',()=>save(LASTHTML,sel+'-app.html'));
+  el('openBtn').addEventListener('click',()=>{ if(!LASTHTML)return; const u=URL.createObjectURL(new Blob([LASTHTML],{type:'text/html'})); window.open(u,'_blank','noopener'); setTimeout(()=>URL.revokeObjectURL(u),4000); });
+}
+function sysPrompt(){
+  const t=TYPES.find(x=>x[0]===sel);
+  return `You are a senior front-end engineer. Build ${t[2]} as ONE complete, self-contained, WORKING HTML app.
+
+Hard rules:
+- Output ONLY the HTML, starting with <!DOCTYPE html>. No markdown, no code fences, no commentary.
+- Everything inline (CSS in a style block, JS in a script block). NO external resources — vanilla JS only, system fonts, inline SVG for any chart. Works offline.
+- It must genuinely FUNCTION — real calculations/logic that update live as inputs change, with sensible validation.
+- STATE IN THE URL: serialise the user's inputs into location.hash (e.g. as URL-encoded JSON or key=value pairs); read it back on load so the app restores its state, and update it as inputs change. Add a "Copy shareable link" button that copies location.href. This is required.
+- Responsive; support light + dark via prefers-color-scheme; clean and polished.
+- No tracking, no network calls, no forms that post anywhere.`;
+}
+async function run(){
+  const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your provider key.',true);
+  const brief=el('brief').value.trim(); if(!brief) return setStatus('Describe the tool first.',true);
+  if(window.pmTrack) pmTrack('app/'+sel);
+  el('runBtn').disabled=true; el('stopBtn').hidden=false; el('dlBtn').hidden=true; el('openBtn').hidden=true; controller=new AbortController(); setStatus('Building the app…'); el('frame').hidden=false;
+  try{
+    const acc=await PMProviders.stream({key,model:el('model').value,system:sysPrompt(),userMessage:brief,signal:controller.signal,onDelta:(a)=>{ el('frame').srcdoc=strip(a); }});
+    LASTHTML=strip(acc); el('frame').srcdoc=LASTHTML; el('dlBtn').hidden=false; el('openBtn').hidden=false; setStatus('Done — try it above. Its state is in the URL.');
+  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
+  finally{ el('runBtn').disabled=false; el('stopBtn').hidden=true; controller=null; }
+}
+function strip(s){ return (s||'').replace(/^\s*```(?:html)?\s*/i,'').replace(/```\s*$/,'').trim(); }
+function save(html,name){ if(!html)return; const a=document.createElement('a'); a.href=URL.createObjectURL(new Blob([html],{type:'text/html'})); a.download=name; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1000); }
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

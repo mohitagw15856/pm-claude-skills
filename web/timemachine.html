@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Time Machine — replay your professional history</title>
+<meta name="description" content="Scrub through your decisions, predictions and milestones like a video: a draggable timeline that plays your professional history back, revealing events and your running state at any moment. Reads your local data or your own pasted timeline." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .tm-wrap { max-width: 940px; margin: 0 auto; padding: 14px 22px 60px; }
+  .tm-lead { color: var(--muted); font-size: 15px; }
+  .sources { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin: 12px 0; }
+  textarea { width:100%; box-sizing:border-box; min-height:90px; padding:11px 13px; background:var(--panel-2); border:1px solid var(--border); border-radius:10px; color:var(--text); font-family:ui-monospace,Menlo,monospace; font-size:12.5px; }
+  #ribbon { width:100%; height:150px; border:1px solid var(--border); border-radius:14px; background: linear-gradient(180deg,var(--panel),var(--panel-2)); display:block; margin: 12px 0; cursor: ew-resize; touch-action:none; }
+  .transport { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+  .nowdate { font-variant-numeric:tabular-nums; font-weight:700; font-size:18px; }
+  .events { display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:14px; }
+  @media(max-width:640px){ .events{ grid-template-columns:1fr; } }
+  .ev { border:1px solid var(--border); border-left:3px solid var(--accent); border-radius:0 10px 10px 0; padding:9px 12px; background:var(--panel); animation: slide .3s ease; }
+  @keyframes slide { from{ opacity:0; transform: translateX(-8px);} }
+  .ev .d { font-size:11px; color:var(--muted); } .ev .t { font-size:13.5px; }
+  .stat { display:inline-block; margin-right:16px; } .stat b { font-size:20px; }
+  .warn { font-size:12px; color:var(--muted); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>The Time Machine</h1><p class="tagline">Scrub through your professional history.</p></div>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Everything runs locally. Your timeline comes from this browser's data or what you paste — nothing is uploaded.</div>
+
+<div class="tm-wrap">
+  <p class="tm-lead">Your work isn't a snapshot — it's a story. Load your history and drag the playhead to watch decisions, predictions, and milestones land over time.</p>
+  <div class="sources">
+    <button id="scanBtn" class="ghost" type="button">🔎 Scan this browser</button>
+    <button id="demoBtn" class="ghost" type="button">▶ Load demo history</button>
+    <span class="warn">or paste <code>YYYY-MM-DD — event</code> lines below</span>
+  </div>
+  <textarea id="paste" placeholder="2026-01-08 — Shipped the referral program&#10;2026-02-14 — Predicted 70%: churn drops by Q2&#10;2026-03-30 — Won the Meridian renewal&#10;2026-05-02 — Gym negotiation: 34/40"></textarea>
+  <div class="sources"><button id="loadPaste" class="primary" type="button">Load pasted timeline</button><span id="status" class="status"></span></div>
+
+  <canvas id="ribbon" width="1800" height="300"></canvas>
+  <div class="transport">
+    <button id="playBtn" class="primary" type="button">▶ Play</button>
+    <span class="nowdate" id="nowdate">—</span>
+    <input id="scrub" type="range" min="0" max="1000" value="1000" style="flex:1;min-width:180px" />
+  </div>
+  <div id="stats" style="margin-top:12px"></div>
+  <div class="events" id="events"></div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let EV=[], t0=0, t1=0, pos=1, playing=false, raf=null;
+function init(){
+  el('scanBtn').addEventListener('click',scan);
+  el('demoBtn').addEventListener('click',demo);
+  el('loadPaste').addEventListener('click',()=>load(parsePaste(el('paste').value)));
+  el('playBtn').addEventListener('click',togglePlay);
+  el('scrub').addEventListener('input',()=>{ pos=+el('scrub').value/1000; playing=false; el('playBtn').textContent='▶ Play'; render(); });
+  el('ribbon').addEventListener('pointerdown',drag);
+  window.addEventListener('resize',()=>{ fit(); render(); });
+  fit();
+  demo();
+}
+function fit(){ const c=el('ribbon'); c.width=c.clientWidth*2; c.height=300; }
+function parsePaste(text){
+  return text.split('\n').map(l=>{ const m=l.match(/(\d{4}-\d{2}-\d{2})\s*[—:\-–]\s*(.+)/); if(!m)return null; const d=new Date(m[1]+'T00:00:00'); return isNaN(d)?null:{date:d,label:m[2].trim(),cat:cat(m[2])}; }).filter(Boolean);
+}
+function cat(s){ s=s.toLowerCase(); if(/predict|forecast|%/.test(s))return'prediction'; if(/won|shipped|launch|closed|hired|signed/.test(s))return'win'; if(/gym|gauntlet|score|\/40|\/100/.test(s))return'arena'; if(/lost|missed|churn|failed|slip/.test(s))return'loss'; return'event'; }
+const CATCOL={prediction:'#3fb950',win:'#58a6ff',arena:'#d29922',loss:'#f85149',event:'#8b949e'};
+function scan(){
+  const found=[];
+  for(let i=0;i<localStorage.length;i++){ const k=localStorage.key(i); let v; try{ v=JSON.parse(localStorage.getItem(k)); }catch(e){ continue; }
+    const arr=Array.isArray(v)?v:(v&&typeof v==='object')?Object.values(v):[];
+    for(const it of arr){ if(it&&typeof it==='object'){ const ds=it.date||it.created||it.ts||it.time||it.due||it.when; const d=ds?new Date(ds):null; if(d&&!isNaN(d)){ const label=it.label||it.title||it.name||it.claim||it.text||it.skill||k; found.push({date:d,label:String(label).slice(0,80),cat:cat(String(label)+' '+k)}); } } }
+  }
+  if(!found.length){ setStatus('No dated history found in this browser yet — try the demo, or paste your own.',true); return; }
+  load(found); setStatus('Loaded '+found.length+' events from this browser.');
+}
+function demo(){
+  const now=new Date(); const mk=(daysAgo,l)=>({date:new Date(now-daysAgo*864e5),label:l,cat:cat(l)});
+  load([mk(180,'Shipped the referral program'),mk(150,'Predicted 70%: churn drops by Q2'),mk(120,'Gauntlet: passed at 82/100'),mk(96,'Won the Meridian renewal'),mk(70,'Lost the Apex account to churn'),mk(48,'Gym negotiation scored 34/40'),mk(30,'Launched pm-decoders bundle'),mk(12,'Predicted 60%: hiring plan lands'),mk(3,'Published the Handbook paperback')]);
+  setStatus('Demo history loaded — drag the timeline or press Play.');
+}
+function load(events){
+  EV=events.sort((a,b)=>a.date-b.date); if(!EV.length)return;
+  t0=EV[0].date.getTime(); t1=EV[EV.length-1].date.getTime(); if(t1===t0)t1=t0+864e5;
+  pos=1; el('scrub').value=1000; render();
+}
+function togglePlay(){ playing=!playing; el('playBtn').textContent=playing?'⏸ Pause':'▶ Play'; if(playing){ if(pos>=1)pos=0; loop(); } else if(raf)cancelAnimationFrame(raf); }
+function loop(){ pos+=0.0025; if(pos>=1){ pos=1; playing=false; el('playBtn').textContent='▶ Play'; } el('scrub').value=pos*1000; render(); if(playing)raf=requestAnimationFrame(loop); }
+function drag(e){ const c=el('ribbon'); const move=(ev)=>{ const r=c.getBoundingClientRect(); pos=Math.max(0,Math.min(1,((ev.clientX||ev.touches?.[0]?.clientX)-r.left)/r.width)); el('scrub').value=pos*1000; playing=false; el('playBtn').textContent='▶ Play'; render(); }; move(e); const up=()=>{ window.removeEventListener('pointermove',move); window.removeEventListener('pointerup',up); }; window.addEventListener('pointermove',move); window.addEventListener('pointerup',up); }
+function nowTime(){ return t0+(t1-t0)*pos; }
+function render(){
+  const c=el('ribbon'), x=c.getContext('2d'), W=c.width, H=c.height; x.clearRect(0,0,W,H);
+  const midY=H*0.5, now=nowTime();
+  // baseline
+  x.strokeStyle='rgba(255,255,255,0.15)'; x.lineWidth=2; x.beginPath(); x.moveTo(20,midY); x.lineTo(W-20,midY); x.stroke();
+  // played portion
+  const px=20+(W-40)*pos;
+  x.strokeStyle='var(--accent)'; x.strokeStyle=getComputedStyle(document.documentElement).getPropertyValue('--accent')||'#d9605a';
+  x.lineWidth=3; x.beginPath(); x.moveTo(20,midY); x.lineTo(px,midY); x.stroke();
+  // events
+  EV.forEach(e=>{ const t=e.date.getTime(); const ex=20+(W-40)*((t-t0)/(t1-t0)); const past=t<=now; const col=CATCOL[e.cat]||'#8b949e';
+    x.globalAlpha=past?1:0.35; x.fillStyle=col; x.beginPath(); x.arc(ex,midY,past?9:6,0,7); x.fill();
+    if(past){ x.globalAlpha=0.9; x.strokeStyle=col; x.lineWidth=2; x.beginPath(); x.arc(ex,midY,14,0,7); x.stroke(); }
+    x.globalAlpha=1;
+  });
+  // playhead
+  x.strokeStyle='#fff'; x.lineWidth=2; x.beginPath(); x.moveTo(px,20); x.lineTo(px,H-20); x.stroke();
+  x.fillStyle='#fff'; x.beginPath(); x.moveTo(px-7,16); x.lineTo(px+7,16); x.lineTo(px,28); x.fill();
+  // panel
+  el('nowdate').textContent=new Date(now).toLocaleDateString([], {year:'numeric',month:'short',day:'numeric'});
+  const shown=EV.filter(e=>e.date.getTime()<=now);
+  const byCat={}; shown.forEach(e=>byCat[e.cat]=(byCat[e.cat]||0)+1);
+  el('stats').innerHTML='<span class="stat"><b>'+shown.length+'</b> <span class="warn">events</span></span>'+Object.entries(byCat).map(([k,v])=>`<span class="stat" style="color:${CATCOL[k]}"><b>${v}</b> <span class="warn">${k}</span></span>`).join('');
+  el('events').innerHTML=shown.slice(-8).reverse().map(e=>`<div class="ev" style="border-left-color:${CATCOL[e.cat]}"><div class="d">${e.date.toLocaleDateString()}</div><div class="t">${escape(e.label)}</div></div>`).join('');
+}
+function escape(s){ return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+init();
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
