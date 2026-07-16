@@ -10,15 +10,3 @@ node scripts/translate-skills.mjs --check                                # valid
 ```
 
 Supported language codes so far: `es` `pt` `hi` `ja` `de` `fr` `zh` `ko` — adding one is a single line in the script's `LANGS` map. Translation runs are also available as a manual GitHub Action (**Translate skills**), which commits results back.
-
-## Localized editions (public front door)
-
-Translated skills also get a **browsable landing page per language** — a titled grid of the localized skills, each linking into the playground, carrying the same machine-translation honesty note:
-
-```bash
-node scripts/build-localized-landing.mjs          # all languages present under i18n/
-node scripts/build-localized-landing.mjs --lang es
-# → web/editions/<lang>.html
-```
-
-The pages are self-contained (inline CSS, no build step) and cross-link every available edition plus the canonical English site. Regenerate after a translation run so new skills appear.
