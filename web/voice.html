@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Voice Mode — talk to the library, hands-free</title>
+<meta name="description" content="Talk to 515 professional skills out loud and hear the answer back — a hands-free voice agent fronted by a living orb that listens, thinks, and speaks. Runs entirely in your browser." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
+<script src="providers.js"></script>
+<style>
+  .v-wrap { max-width: 720px; margin: 0 auto; padding: 10px 22px 60px; text-align: center; }
+  #orb { width: min(78vw, 340px); height: min(78vw, 340px); display: block; margin: 8px auto 4px; cursor: pointer; }
+  .v-state { font-size: 13px; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); min-height: 18px; }
+  .v-pick { display: inline-flex; gap: 8px; align-items: center; margin: 6px 0 4px; }
+  .v-pick select { padding: 8px 11px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 13.5px; }
+  .v-transcript { max-width: 620px; margin: 12px auto; text-align: left; }
+  .bubble { padding: 10px 14px; border-radius: 14px; margin: 8px 0; font-size: 14px; line-height: 1.55; }
+  .bubble.me { background: var(--accent); color: #1a1207; border-bottom-right-radius: 4px; max-width: 80%; margin-left: auto; }
+  .bubble.ai { background: var(--panel); border: 1px solid var(--border); border-bottom-left-radius: 4px; }
+  .v-actions { margin: 6px 0; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+  .warn { font-size: 12.5px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Voice Mode</h1><p class="tagline">Talk to the library. It talks back.</p></div>
+  </div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your voice is transcribed in your browser (Web Speech). Only the text goes to your chosen provider — no audio is uploaded to us.</div>
+
+<div class="v-wrap">
+  <canvas id="orb" width="680" height="680" aria-label="voice orb"></canvas>
+  <div class="v-state" id="state">tap the orb to talk</div>
+  <div class="v-pick">
+    <span class="warn">Answer as</span>
+    <select id="skillSelect"><option value="">🧠 Assistant (any topic)</option></select>
+    <label class="warn"><input type="checkbox" id="handsfree"> hands-free</label>
+  </div>
+  <div class="v-actions">
+    <button id="talkBtn" class="primary" type="button">🎙️ Hold to talk</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+    <button id="muteBtn" class="ghost" type="button">🔊 Voice on</button>
+  </div>
+  <p class="warn" id="compat" hidden>Speech recognition needs Chrome, Edge, or Safari. You can still type in other browsers.</p>
+  <input id="typeIn" type="text" placeholder="…or type here and press Enter" style="width:100%;max-width:620px;box-sizing:border-box;margin-top:6px;padding:10px 13px;background:var(--panel-2);border:1px solid var(--border);border-radius:10px;color:var(--text)" />
+  <div class="v-transcript" id="transcript"></div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let controller=null, speakOn=true, history=[], recog=null, listening=false, handsfree=false;
+let state='idle', analyser=null, micStream=null, level=0;
+const COLORS={ idle:[120,130,150], listening:[86,150,255], thinking:[230,170,60], speaking:[80,210,140] };
+
+init();
+function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('orb').addEventListener('click',toggleTalk);
+  el('talkBtn').addEventListener('mousedown',startListen); el('talkBtn').addEventListener('mouseup',stopListen);
+  el('talkBtn').addEventListener('touchstart',(e)=>{e.preventDefault();startListen();}); el('talkBtn').addEventListener('touchend',(e)=>{e.preventDefault();stopListen();});
+  el('stopBtn').addEventListener('click',()=>{ if(controller)controller.abort(); window.speechSynthesis&&speechSynthesis.cancel(); setState('idle'); });
+  el('muteBtn').addEventListener('click',()=>{ speakOn=!speakOn; el('muteBtn').textContent=speakOn?'🔊 Voice on':'🔇 Voice off'; if(!speakOn)speechSynthesis.cancel(); });
+  el('handsfree').addEventListener('change',(e)=>{ handsfree=e.target.checked; });
+  el('typeIn').addEventListener('keydown',(e)=>{ if(e.key==='Enter'&&e.target.value.trim()){ ask(e.target.value.trim()); e.target.value=''; } });
+  setupRecog();
+  loadSkills();
+  requestAnimationFrame(draw);
+}
+async function loadSkills(){
+  try{ const s=(await (await fetch('skills.json')).json()).skills; s.sort((a,b)=>a.title.localeCompare(b.title)); window.SKILLS=s; for(const k of s){ const o=document.createElement('option'); o.value=k.name; o.textContent=k.title; el('skillSelect').appendChild(o);} }catch(e){}
+}
+function setState(s){ state=s; el('state').textContent = s==='idle'?'tap the orb to talk':s==='listening'?'listening…':s==='thinking'?'thinking…':'speaking…'; }
+
+// ---- Web Speech recognition ----
+function setupRecog(){
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){ el('compat').hidden=false; return; }
+  recog=new SR(); recog.lang='en-US'; recog.interimResults=false; recog.maxAlternatives=1;
+  recog.onresult=(e)=>{ const t=e.results[0][0].transcript.trim(); if(t) ask(t); };
+  recog.onend=()=>{ listening=false; if(state==='listening') setState('idle'); stopMic(); };
+  recog.onerror=()=>{ listening=false; setState('idle'); stopMic(); };
+}
+function toggleTalk(){ if(listening) stopListen(); else startListen(); }
+async function startListen(){
+  if(!recog){ el('typeIn').focus(); return; }
+  if(listening||state==='thinking') return;
+  window.speechSynthesis&&speechSynthesis.cancel();
+  try{ await startMic(); }catch(e){}
+  try{ recog.start(); listening=true; setState('listening'); }catch(e){}
+}
+function stopListen(){ if(recog&&listening){ try{ recog.stop(); }catch(e){} } }
+async function startMic(){
+  if(micStream) return;
+  micStream=await navigator.mediaDevices.getUserMedia({audio:true});
+  const ac=new (window.AudioContext||window.webkitAudioContext)();
+  const src=ac.createMediaStreamSource(micStream); analyser=ac.createAnalyser(); analyser.fftSize=256; src.connect(analyser);
+}
+function stopMic(){ if(micStream){ micStream.getTracks().forEach(t=>t.stop()); micStream=null; analyser=null; level=0; } }
+
+// ---- Ask a skill / assistant ----
+async function ask(text){
+  const key=el('apiKey').value.trim();
+  addBubble('me',text);
+  if(!key){ addBubble('ai','Add your provider key (top-right) so I can answer.'); return; }
+  const sk=window.SKILLS&&window.SKILLS.find(s=>s.name===el('skillSelect').value);
+  const system=(sk? sk.instructions+'\n\n' : 'You are a sharp, friendly professional assistant with command of a large library of professional skills. ')
+    +'This is a VOICE conversation: reply in a natural, spoken style — concise, no markdown headings, no bullet symbols, short sentences a person can listen to. Get to the point.';
+  setState('thinking'); el('stopBtn').hidden=false; controller=new AbortController();
+  const b=addBubble('ai','…');
+  try{
+    const acc=await PMProviders.stream({key,model:el('model').value,system,userMessage:text,signal:controller.signal,onDelta:(a)=>{ b.textContent=a; }});
+    b.innerHTML=DOMPurify.sanitize(marked.parse(acc));
+    if(window.pmTrack) pmTrack('voice/ask');
+    speak(acc);
+  }catch(e){ b.textContent='⚠️ '+(e.name==='AbortError'?'stopped':(e.message||'failed')); setState('idle'); }
+  finally{ el('stopBtn').hidden=true; controller=null; }
+}
+function addBubble(role,text){ const d=document.createElement('div'); d.className='bubble '+role; d.textContent=text; el('transcript').appendChild(d); d.scrollIntoView({behavior:'smooth',block:'end'}); return d; }
+
+// ---- TTS ----
+function speak(text){
+  if(!speakOn||!window.speechSynthesis){ setState('idle'); maybeReloop(); return; }
+  const plain=text.replace(/[#*`_>|]/g,'').replace(/\[(.+?)\]\(.+?\)/g,'$1').slice(0,1200);
+  const u=new SpeechSynthesisUtterance(plain); u.rate=1.03; u.pitch=1;
+  const vs=speechSynthesis.getVoices(); const pref=vs.find(v=>/Google US English|Samantha|Microsoft Aria|Jenny/i.test(v.name))||vs.find(v=>v.lang.startsWith('en')); if(pref)u.voice=pref;
+  u.onstart=()=>setState('speaking'); u.onend=()=>{ setState('idle'); maybeReloop(); };
+  speechSynthesis.cancel(); speechSynthesis.speak(u);
+}
+function maybeReloop(){ if(handsfree && recog) setTimeout(()=>startListen(), 500); }
+
+// ---- The living orb (canvas) ----
+function draw(t){
+  const c=el('orb'), x=c.getContext('2d'), W=c.width, H=c.height, cx=W/2, cy=H/2;
+  x.clearRect(0,0,W,H);
+  if(analyser){ const a=new Uint8Array(analyser.frequencyBinCount); analyser.getByteFrequencyData(a); let s=0; for(let i=0;i<a.length;i++)s+=a[i]; level=level*0.8+(s/a.length/255)*0.2; }
+  else { level*=0.94; }
+  const base=COLORS[state]||COLORS.idle;
+  const time=t/1000;
+  const react = state==='listening'? level*1.4 : state==='speaking'? (0.5+0.5*Math.sin(time*7)) : state==='thinking'? (0.5+0.5*Math.sin(time*3)) : 0.12;
+  const R=W*0.30*(1+react*0.16);
+  // glow
+  const g=x.createRadialGradient(cx,cy,R*0.2,cx,cy,R*1.7);
+  g.addColorStop(0,`rgba(${base[0]},${base[1]},${base[2]},0.55)`); g.addColorStop(1,'rgba(0,0,0,0)');
+  x.fillStyle=g; x.beginPath(); x.arc(cx,cy,R*1.7,0,7); x.fill();
+  // rippling rings
+  for(let k=0;k<4;k++){
+    const rr=R*(1+k*0.14)+Math.sin(time*2+k)*8*(0.4+react);
+    x.beginPath();
+    for(let i=0;i<=64;i++){ const ang=i/64*Math.PI*2; const wob=Math.sin(ang*5+time*3+k)*R*0.03*(0.5+react); const r=rr+wob; const px=cx+Math.cos(ang)*r, py=cy+Math.sin(ang)*r; i?x.lineTo(px,py):x.moveTo(px,py); }
+    x.closePath(); x.strokeStyle=`rgba(${base[0]},${base[1]},${base[2]},${0.5-k*0.1})`; x.lineWidth=2; x.stroke();
+  }
+  // core
+  const cg=x.createRadialGradient(cx-R*0.25,cy-R*0.25,R*0.1,cx,cy,R);
+  cg.addColorStop(0,`rgba(255,255,255,0.9)`); cg.addColorStop(0.3,`rgba(${base[0]},${base[1]},${base[2]},0.95)`); cg.addColorStop(1,`rgba(${base[0]*0.4|0},${base[1]*0.4|0},${base[2]*0.4|0},0.9)`);
+  x.fillStyle=cg; x.beginPath(); x.arc(cx,cy,R,0,7); x.fill();
+  requestAnimationFrame(draw);
+}
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The War Table — watch two AIs negotiate in real time</title>
+<meta name="description" content="Set a scenario and watch two AI agents negotiate or compete live — moves landing one by one, a tension meter swinging, the deal converging or collapsing before your eyes. A spectator sport for professional judgment." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
+<script src="providers.js"></script>
+<style>
+  .wt-wrap { max-width: 900px; margin: 0 auto; padding: 12px 22px 60px; }
+  .setup { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 12px 0; }
+  .setup select, .setup input { padding: 9px 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; }
+  .meters { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 14px 0; }
+  .meter { border: 1px solid var(--border); border-radius: 12px; padding: 10px 14px; background: var(--panel); }
+  .meter .lab { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+  .bar { height: 12px; border-radius: 8px; background: var(--panel-2); overflow: hidden; margin-top: 6px; }
+  .bar > i { display: block; height: 100%; border-radius: 8px; transition: width .6s ease; }
+  .board { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+  .side { border: 1px solid var(--border); border-radius: 14px; padding: 12px; background: var(--panel); min-height: 120px; }
+  .side h3 { margin: 0 0 4px; font-size: 15px; display:flex; align-items:center; gap:8px; }
+  .avatar { width: 30px; height: 30px; border-radius: 50%; display:inline-flex; align-items:center; justify-content:center; font-size:16px; }
+  .move { background: var(--panel-2); border-radius: 10px; padding: 9px 12px; margin: 8px 0; font-size: 13.5px; line-height: 1.5; animation: pop .35s ease; }
+  .side.active { box-shadow: 0 0 0 2px var(--accent); }
+  @keyframes pop { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+  .verdict { border: 1px solid var(--accent); border-radius: 14px; padding: 14px 16px; margin-top: 14px; }
+  .warn { font-size: 12.5px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>The War Table</h1><p class="tagline">Two AIs. One deal. Watch it land — or collapse.</p></div>
+  </div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your key stays in your browser. Each move is one model call to your chosen provider.</div>
+
+<div class="wt-wrap">
+  <div class="setup">
+    <span class="warn">Scenario</span>
+    <select id="scenario"></select>
+    <span class="warn">rounds</span>
+    <select id="rounds"><option>3</option><option selected>4</option><option>5</option></select>
+    <button id="startBtn" class="primary" type="button">▶ Start the standoff</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+    <span id="status" class="status"></span>
+  </div>
+
+  <div class="meters">
+    <div class="meter"><div class="lab">Tension</div><div class="bar"><i id="tension" style="width:20%;background:linear-gradient(90deg,#3fb950,#f85149)"></i></div></div>
+    <div class="meter"><div class="lab">Deal proximity</div><div class="bar"><i id="deal" style="width:10%;background:linear-gradient(90deg,#30363d,#3fb950)"></i></div></div>
+  </div>
+
+  <div class="board">
+    <div class="side" id="sideA"><h3><span class="avatar" style="background:#1f6feb33">🟦</span><span id="nameA"></span></h3><div id="movesA"></div></div>
+    <div class="side" id="sideB"><h3><span class="avatar" style="background:#f8514933">🟥</span><span id="nameB"></span></h3><div id="movesB"></div></div>
+  </div>
+
+  <div class="verdict" id="verdict" hidden></div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let controller=null, tension=20, deal=10;
+const SCENARIOS=[
+  { id:'salary', name:'Salary negotiation', topic:'a job offer negotiation',
+    A:{n:'Candidate',goal:'Push base from $145k toward $170k + more equity; you have a competing offer at $160k but prefer this team.'},
+    B:{n:'Hiring Manager',goal:'Budget tops out at $160k base; you can flex equity and signing bonus, not base. You want this hire but must stay fair to the band.'} },
+  { id:'vendor', name:'Vendor renewal', topic:'a SaaS contract renewal',
+    A:{n:'Customer (VP Ops)',goal:'Cut the renewal 20% and add an SLA; you have a cheaper competitor quote but migration is painful.'},
+    B:{n:'Account Exec',goal:'Hold price within 5%; you can give SLA credits and a longer term. Losing this logo hurts your quarter.'} },
+  { id:'acq', name:'Acquisition price', topic:'an acquisition price negotiation',
+    A:{n:'Founder',goal:'Anchor at 6x ARR ($60M); you can accept 4.5x if earnout is fair. You have modest runway, not desperate.'},
+    B:{n:'Corp Dev',goal:'Target 3.5x ARR; you can reach 4.5x with an earnout tied to retention. Board wants discipline.'} },
+  { id:'partner', name:'Partnership terms', topic:'a co-marketing partnership',
+    A:{n:'Startup BD',goal:'Get equal logo placement and a revenue share; you bring the hotter brand but less scale.'},
+    B:{n:'Enterprise BD',goal:'Give distribution but keep control of the customer and cap rev-share at 10%. You bring the scale.'} },
+];
+init();
+function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  for(const s of SCENARIOS){ const o=document.createElement('option'); o.value=s.id; o.textContent=s.name; el('scenario').appendChild(o); }
+  el('startBtn').addEventListener('click',start);
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+}
+function persona(sc, me, them){ return `You are ${me.n} in ${sc.topic}. Your private objective: ${me.goal}\nYou are negotiating against ${them.n}. Stay in character. Respond with your NEXT move only — 1 to 3 sentences, natural spoken negotiation, no stage directions, no markdown. Make a concrete offer, concession, or push. If a fair deal is on the table, you may accept and say so plainly.`; }
+function setMeter(id,v){ el(id).style.width=Math.max(2,Math.min(100,v))+'%'; }
+function scoreMove(text){ // crude live sentiment for the meters
+  const t=text.toLowerCase();
+  const warm=(t.match(/\b(agree|accept|deal|fair|works for me|happy to|great|yes|glad|appreciate|meet you|compromise|sounds good)\b/g)||[]).length;
+  const cold=(t.match(/\b(no|can't|cannot|won't|refuse|walk|final|non-negotiable|unacceptable|too (low|high)|not (enough|possible)|deadline)\b/g)||[]).length;
+  tension=Math.max(5,Math.min(100, tension + cold*11 - warm*9));
+  deal=Math.max(2,Math.min(100, deal + warm*16 - cold*7 + 4));
+  setMeter('tension',tension); setMeter('deal',deal);
+  return /\b(accept|we have a deal|i'll take it|done deal|agreed)\b/i.test(text);
+}
+async function start(){
+  const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your provider key.',true);
+  const sc=SCENARIOS.find(s=>s.id===el('scenario').value); const rounds=+el('rounds').value;
+  el('nameA').textContent=sc.A.n; el('nameB').textContent=sc.B.n; el('movesA').innerHTML=''; el('movesB').innerHTML=''; el('verdict').hidden=true;
+  tension=20; deal=10; setMeter('tension',tension); setMeter('deal',deal);
+  el('startBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController();
+  if(window.pmTrack) pmTrack('wartable/'+sc.id);
+  let transcript=[]; let closed=false;
+  try{
+    for(let r=0;r<rounds && !closed;r++){
+      for(const who of ['A','B']){
+        if(closed) break;
+        const me=sc[who], them=sc[who==='A'?'B':'A'];
+        el('side'+who).classList.add('active'); el('side'+(who==='A'?'B':'A')).classList.remove('active');
+        const bubble=addMove(who,'…');
+        const convo=transcript.length? transcript.map(m=>m.n+': '+m.t).join('\n') : '(you open the negotiation)';
+        setStatus(me.n+' is thinking…');
+        const acc=await PMProviders.stream({key,model:el('model').value,system:persona(sc,me,them),userMessage:'Conversation so far:\n'+convo+'\n\nYour move:',signal:controller.signal,onDelta:(a)=>{bubble.textContent=a;}});
+        bubble.textContent=acc; transcript.push({n:me.n,t:acc});
+        closed=scoreMove(acc);
+        await sleep(400);
+      }
+    }
+    verdict(closed, sc);
+  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
+  finally{ el('startBtn').disabled=false; el('stopBtn').hidden=true; el('sideA').classList.remove('active'); el('sideB').classList.remove('active'); controller=null; }
+}
+function addMove(who,text){ const d=document.createElement('div'); d.className='move'; d.textContent=text; el('moves'+who).appendChild(d); d.scrollIntoView({behavior:'smooth',block:'nearest'}); return d; }
+function verdict(closed,sc){ const v=el('verdict'); v.hidden=false;
+  v.innerHTML= closed
+    ? '🤝 <strong>Deal reached.</strong> They found terms both could sign — deal proximity '+Math.round(deal)+'%, tension cooled to '+Math.round(tension)+'%.'
+    : (deal>60? '⏳ <strong>Close, but no signature.</strong> Deal proximity '+Math.round(deal)+'% at the buzzer — one more round might have closed it.'
+              : '💥 <strong>Standoff.</strong> Tension '+Math.round(tension)+'%, deal proximity only '+Math.round(deal)+'%. They talked past each other.');
+  setStatus('Done.');
+}
+const sleep=(ms)=>new Promise(r=>setTimeout(r,ms));
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

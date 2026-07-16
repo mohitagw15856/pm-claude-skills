@@ -57,6 +57,11 @@
     { href: 'hub.html', label: '🧭 Journeys' },
     { href: 'galaxy3d.html', label: '🌌 Galaxy 3D' },
     { group: '🆕 New', items: [
+      ['voice.html', '🎙️ Voice Mode'],
+      ['capture.html', '📷 Live Capture'],
+      ['video.html', '🎬 Video export'],
+      ['wartable.html', '⚔️ The War Table'],
+      ['holo.html', '🎴 Holo Cards'],
       ['make.html', '🏭 Make it real'],
       ['meeting.html', '🗒️ Meeting → artifacts'],
       ['data.html', '📊 Bring your own data'],

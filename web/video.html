@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Video export — turn any output into a shareable animated clip</title>
+<meta name="description" content="Paste a pitch, a one-pager, or any skill output and render it into a short animated video (.webm) with motion, counting numbers, a soundtrack, and your brand colour — ready to post. All in your browser, no upload." />
+<link rel="stylesheet" href="styles.css" />
+<script src="brandkit.js"></script>
+<style>
+  .vd-wrap { max-width: 860px; margin: 0 auto; padding: 14px 22px 60px; }
+  .vd-lead { color: var(--muted); font-size: 15px; line-height: 1.55; }
+  textarea { width: 100%; box-sizing: border-box; min-height: 150px; padding: 12px 14px; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; color: var(--text); font-family: inherit; font-size: 14px; line-height: 1.5; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 12px 0; }
+  input[type=text] { padding: 9px 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; }
+  select { padding: 9px 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); }
+  #stage { width: 100%; max-width: 640px; border-radius: 14px; border: 1px solid var(--border); background:#000; display:block; margin: 12px auto; aspect-ratio: 16/9; }
+  #preview { width: 100%; max-width: 640px; border-radius: 14px; display:none; margin: 12px auto; }
+  .warn { font-size: 12.5px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Video export</h1><p class="tagline">Any output → a short animated clip you can post.</p></div>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Rendered entirely in your browser (canvas + MediaRecorder). Nothing is uploaded. Uses your Brand Kit colour if set.</div>
+
+<div class="vd-wrap">
+  <p class="vd-lead">Paste a pitch, a one-pager, a launch brief, or any skill output. The renderer pulls the headline, the big numbers, and the key takeaways and turns them into a **motion graphic** — counting figures, a soundtrack, your brand colour — as a <strong>.webm</strong> you can drop on LinkedIn or X.</p>
+  <div class="row">
+    <input id="title" type="text" placeholder="Title (optional — else taken from the first heading)" style="flex:1;min-width:220px" />
+    <select id="ratio"><option value="16:9">16:9 (landscape)</option><option value="1:1">1:1 (square)</option><option value="9:16">9:16 (vertical)</option></select>
+    <select id="sound"><option value="on">🔊 soundtrack on</option><option value="off">🔇 silent</option></select>
+  </div>
+  <textarea id="src" placeholder="Paste the content here — works best with a heading, some **42%**-style numbers, and a few '- bullet' takeaways."></textarea>
+  <div class="row">
+    <button id="renderBtn" class="primary" type="button">🎬 Render video</button>
+    <button id="dlBtn" class="ghost" type="button" hidden>⬇ Download .webm</button>
+    <span id="status" class="status"></span>
+  </div>
+  <canvas id="stage" width="1280" height="720"></canvas>
+  <video id="preview" controls playsinline></video>
+  <p class="warn" id="compat" hidden></p>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let rendering=false, LASTURL='';
+init();
+function init(){
+  el('renderBtn').addEventListener('click',render);
+  el('dlBtn').addEventListener('click',()=>{ if(!LASTURL)return; const a=document.createElement('a'); a.href=LASTURL; a.download='pm-skills-video.webm'; document.body.appendChild(a); a.click(); a.remove(); });
+  if(!('MediaRecorder' in window)){ el('compat').hidden=false; el('compat').textContent='Your browser can’t record canvas video. Try Chrome or Edge.'; el('renderBtn').disabled=true; }
+}
+function clean(s){ return s.replace(/\*\*(.+?)\*\*/g,'$1').replace(/[*`_#>]/g,'').replace(/\[(.+?)\]\(.+?\)/g,'$1').trim(); }
+function parse(md){
+  const lines=md.split('\n').map(l=>l.trim());
+  const title=el('title').value.trim() || clean(lines.find(l=>/^#\s/.test(l))||'') || 'PM Skills';
+  const stats=[]; const seen={};
+  const re=/(?:\*\*|`)?(\$?\d[\d,]*\.?\d*\s*[%x×]?[KMB]?)(?:\*\*|`)?\s*(?:[—:\-–]\s*|\()([A-Za-z][^\n.|)]{2,40})/g; let m;
+  while((m=re.exec(md))&&stats.length<4){ const k=m[1]+m[2]; if(seen[k])continue; seen[k]=1; stats.push({n:m[1].trim(),label:clean(m[2])}); }
+  const takeaways=lines.filter(l=>/^[-*+]\s+/.test(l)).slice(0,4).map(l=>clean(l.replace(/^[-*+]\s+/,''))).filter(Boolean);
+  return { title, stats, takeaways };
+}
+function dims(){ const r=el('ratio').value; return r==='1:1'?[1080,1080]:r==='9:16'?[720,1280]:[1280,720]; }
+function accent(){ const b=(window.PMBrand&&PMBrand.get())||{}; return b.accent||'#d9605a'; }
+function hexToRgb(h){ h=h.replace('#',''); if(h.length===3)h=h.split('').map(c=>c+c).join(''); const n=parseInt(h,16); return [n>>16&255,n>>8&255,n&255]; }
+
+async function render(){
+  const md=el('src').value.trim(); if(md.length<20) return setStatus('Paste some content first.',true);
+  if(rendering) return;
+  const data=parse(md); const [W,H]=dims(); const c=el('stage'); c.width=W; c.height=H;
+  const x=c.getContext('2d'); const ac=hexToRgb(accent());
+  el('preview').style.display='none'; el('dlBtn').hidden=true; setStatus('Rendering…'); rendering=true; el('renderBtn').disabled=true;
+
+  // audio track (a soft evolving pad) so the webm carries sound
+  let audioCtx=null, dest=null;
+  if(el('sound').value==='on'){ try{ audioCtx=new (window.AudioContext||window.webkitAudioContext)(); dest=audioCtx.createMediaStreamDestination();
+    [220,277,330].forEach((f,i)=>{ const o=audioCtx.createOscillator(),g=audioCtx.createGain(); o.type='sine'; o.frequency.value=f; g.gain.value=0.0; o.connect(g); g.connect(dest); o.start(); g.gain.setValueAtTime(0,audioCtx.currentTime); g.gain.linearRampToValueAtTime(0.05,audioCtx.currentTime+1.2+i*0.2); }); }catch(e){} }
+
+  const cstream=c.captureStream(30);
+  if(dest) dest.stream.getAudioTracks().forEach(t=>cstream.addTrack(t));
+  const mime=['video/webm;codecs=vp9','video/webm;codecs=vp8','video/webm'].find(m=>MediaRecorder.isTypeSupported(m))||'video/webm';
+  const rec=new MediaRecorder(cstream,{mimeType:mime, videoBitsPerSecond:4_000_000}); const chunks=[];
+  rec.ondataavailable=e=>{ if(e.data.size)chunks.push(e.data); };
+  const done=new Promise(res=>{ rec.onstop=res; });
+  rec.start();
+
+  const DUR=Math.min(20000, 6000+data.stats.length*1800+data.takeaways.length*900);
+  const t0=performance.now();
+  await new Promise(resolve=>{
+    function frame(t){
+      const e=t-t0; const p=e/DUR;
+      paint(x,W,H,ac,data,e);
+      if(e>=DUR){ resolve(); return; }
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  });
+  rec.stop(); await done; if(audioCtx) try{ audioCtx.close(); }catch(e){}
+  const blob=new Blob(chunks,{type:mime}); if(LASTURL)URL.revokeObjectURL(LASTURL); LASTURL=URL.createObjectURL(blob);
+  const pv=el('preview'); pv.src=LASTURL; pv.style.display='block'; el('dlBtn').hidden=false;
+  setStatus('Done — preview + download below ('+(blob.size/1e6).toFixed(1)+' MB).'); rendering=false; el('renderBtn').disabled=false;
+  if(window.pmTrack) pmTrack('video/render');
+}
+
+// Scene painter driven by elapsed ms.
+function paint(x,W,H,ac,data,e){
+  // animated gradient background
+  const g=x.createLinearGradient(0,0,W,H);
+  const s=0.5+0.5*Math.sin(e/2600);
+  g.addColorStop(0,`rgb(${ac[0]*0.16|0},${ac[1]*0.16|0},${ac[2]*0.18|0})`);
+  g.addColorStop(1,`rgb(${8+ac[0]*0.08*s|0},${10+ac[1]*0.06*s|0},${14})`);
+  x.fillStyle=g; x.fillRect(0,0,W,H);
+  // moving accent glow
+  x.save(); const gx=W*(0.3+0.4*Math.sin(e/3000)), gy=H*(0.35+0.3*Math.cos(e/3700));
+  const rg=x.createRadialGradient(gx,gy,0,gx,gy,W*0.5); rg.addColorStop(0,`rgba(${ac[0]},${ac[1]},${ac[2]},0.28)`); rg.addColorStop(1,'rgba(0,0,0,0)'); x.fillStyle=rg; x.fillRect(0,0,W,H); x.restore();
+
+  const U=W/1280; // scale unit
+  x.textAlign='center'; x.fillStyle='#fff';
+  const seg=1600; // ms per stat
+  const titleEnd=2200, statsStart=2200, statsDur=data.stats.length*seg, takeStart=statsStart+statsDur;
+
+  if(e<statsStart){ // title card
+    const a=Math.min(1,e/500)*Math.min(1,(statsStart-e)/500+1);
+    x.globalAlpha=Math.max(0,Math.min(1,a));
+    x.font=`700 ${64*U}px Inter,Arial,sans-serif`;
+    wrap(x, data.title, W/2, H/2-10*U, W*0.82, 74*U);
+    x.globalAlpha=1;
+  } else if(e<takeStart && data.stats.length){
+    const idx=Math.min(data.stats.length-1, Math.floor((e-statsStart)/seg));
+    const local=(e-statsStart)-idx*seg; const st=data.stats[idx];
+    const appear=Math.min(1,local/400);
+    x.globalAlpha=appear;
+    // big number (count up)
+    x.fillStyle=`rgb(${ac[0]},${ac[1]},${ac[2]})`;
+    x.font=`800 ${150*U}px Inter,Arial,sans-serif`;
+    x.fillText(countUp(st.n, local), W/2, H/2);
+    x.fillStyle='#fff'; x.font=`600 ${40*U}px Inter,Arial,sans-serif`;
+    wrap(x, st.label, W/2, H/2+70*U, W*0.8, 46*U);
+    x.globalAlpha=1;
+  } else { // takeaways
+    x.font=`700 ${44*U}px Inter,Arial,sans-serif`; x.fillStyle=`rgb(${ac[0]},${ac[1]},${ac[2]})`;
+    x.fillText('Key takeaways', W/2, H*0.22);
+    x.fillStyle='#fff'; x.textAlign='left'; x.font=`500 ${34*U}px Inter,Arial,sans-serif`;
+    const lt=e-takeStart;
+    data.takeaways.forEach((t,i)=>{ if(lt>i*700){ const a=Math.min(1,(lt-i*700)/400); x.globalAlpha=a; wrap(x,'•  '+t, W*0.12, H*0.34+i*70*U, W*0.76, 44*U, true); } });
+    x.globalAlpha=1; x.textAlign='center';
+  }
+  // footer brand
+  x.fillStyle='rgba(255,255,255,0.55)'; x.font=`500 ${22*U}px Inter,Arial,sans-serif`; x.textAlign='center';
+  x.fillText('mohitagw15856.github.io/pm-claude-skills', W/2, H-30*U);
+}
+function countUp(n, ms){ const m=n.match(/([\d,.]+)/); if(!m) return n; const target=parseFloat(m[1].replace(/,/g,'')); const p=Math.min(1,ms/700); const val=target*(0.2+0.8*(1-Math.pow(1-p,3))); const dec=(m[1].split('.')[1]||'').length; return n.replace(m[1], (dec?val.toFixed(dec):Math.round(val)).toLocaleString()); }
+function wrap(x,text,cx,cy,maxW,lh,left){
+  const words=text.split(' '); let line='',lines=[];
+  for(const w of words){ const test=line?line+' '+w:w; if(x.measureText(test).width>maxW&&line){ lines.push(line); line=w; } else line=test; }
+  if(line)lines.push(line);
+  lines.slice(0,3).forEach((ln,i)=>{ x.fillText(ln, cx, cy+i*lh - (left?0:(lines.length-1)*lh/2)); });
+}
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
