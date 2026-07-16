@@ -58,6 +58,9 @@
     { href: 'galaxy3d.html', label: '🌌 Galaxy 3D' },
     { group: '🆕 New', items: [
       ['make.html', '🏭 Make it real'],
+      ['meeting.html', '🗒️ Meeting → artifacts'],
+      ['data.html', '📊 Bring your own data'],
+      ['site.html', '🌐 Site builder'],
       ['teardown.html', '🔨 Teardown Engine'],
       ['deck.html', '🃏 Operator\'s Deck'],
       ['firm-game.html', '🎮 Run the Firm (game)'],

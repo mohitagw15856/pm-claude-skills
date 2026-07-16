@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bring your own data — run a skill grounded in your real numbers, export in any language</title>
+<meta name="description" content="Import a CSV, a pasted table, or a published Google Sheet, and run any skill grounded in your real data — not a made-up example. Then export the result as Word/PDF/Excel, and translate the finished artifact into another language in one click. All in your browser." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
+<script src="providers.js"></script>
+<script src="export-doc.js"></script>
+<style>
+  .dt-wrap { max-width: 840px; margin: 0 auto; padding: 16px 22px 70px; }
+  .dt-lead { color: var(--muted); font-size: 15px; line-height: 1.55; }
+  .card { border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; margin: 12px 0; background: var(--panel); }
+  label.fld { display: block; font-size: 13px; font-weight: 600; margin: 8px 0 5px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  select, input[type=text] { padding: 9px 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; }
+  textarea { width: 100%; box-sizing: border-box; padding: 12px 14px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-family: inherit; font-size: 14px; line-height: 1.5; }
+  #data { min-height: 120px; font-family: ui-monospace, Menlo, monospace; font-size: 12.5px; }
+  #instruction { min-height: 70px; }
+  .actions { margin: 12px 0; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .exp-btn { background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 8px 12px; cursor: pointer; font-size: 13px; }
+  .exp-btn:hover { border-color: var(--accent); }
+  .grid { overflow-x: auto; } table.prev { border-collapse: collapse; font-size: 12px; margin-top: 8px; } table.prev td, table.prev th { border: 1px solid var(--border); padding: 4px 8px; white-space: nowrap; } table.prev th { background: var(--panel-2); }
+  .mini { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Bring your own data</h1><p class="tagline">Ground a skill in your real numbers. Export in any language.</p></div>
+  </div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your key + data stay in your browser and go only to your chosen provider — never to us.</div>
+
+<div class="dt-wrap">
+  <p class="dt-lead">Most tools ask you to describe your data. This one <strong>uses it.</strong> Import a CSV or paste a table, pick what to produce, and the skill runs grounded in your actual rows — then export it, and translate the finished artifact into another language.</p>
+
+  <div class="card">
+    <label class="fld">1 · Your data</label>
+    <div class="row">
+      <input id="fileIn" type="file" accept=".csv,text/csv,text/plain" class="mini" />
+      <span class="mini">or paste below · or</span>
+      <input id="sheetUrl" type="text" placeholder="published Google Sheet CSV URL" style="flex:1;min-width:200px" />
+      <button id="fetchBtn" class="exp-btn" type="button">Fetch</button>
+    </div>
+    <textarea id="data" placeholder="Paste CSV or a table here — e.g.&#10;month,signups,revenue&#10;Jan,120,4300&#10;Feb,180,6600"></textarea>
+    <div id="preview" class="grid"></div>
+  </div>
+
+  <div class="card">
+    <label class="fld" for="skillSelect">2 · What to produce</label>
+    <div class="row">
+      <select id="skillSelect"><option value="">— free instruction —</option></select>
+    </div>
+    <label class="fld" for="instruction">Instruction (used as-is, or added to the skill)</label>
+    <textarea id="instruction" placeholder="e.g. 'Analyse this cohort data, call out the trend and the one number that worries you, and recommend next steps.'"></textarea>
+    <div class="actions">
+      <button id="runBtn" class="primary" type="button">Run on my data</button>
+      <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+      <span id="status" class="status"></span>
+    </div>
+  </div>
+
+  <div class="card" id="outCard" hidden>
+    <div class="actions">
+      <button class="exp-btn" data-x="pdf" type="button">⬇ PDF</button>
+      <button class="exp-btn" data-x="docx" type="button">⬇ Word</button>
+      <button class="exp-btn" data-x="xlsx" type="button">⬇ Excel</button>
+      <span class="mini">🌐 Translate &amp; download:</span>
+      <select id="lang"></select>
+      <button id="translateBtn" class="exp-btn" type="button">Translate</button>
+    </div>
+    <article id="out" class="output markdown"></article>
+  </div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let SKILLS=[], controller=null, LASTMD='';
+const LANGS=[['es','Spanish'],['fr','French'],['de','German'],['pt','Portuguese'],['hi','Hindi'],['ja','Japanese'],['zh','Chinese (Simplified)'],['ar','Arabic'],['it','Italian'],['ko','Korean']];
+
+init();
+async function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('fileIn').addEventListener('change',onFile);
+  el('fetchBtn').addEventListener('click',fetchSheet);
+  el('data').addEventListener('input',preview);
+  el('runBtn').addEventListener('click',run);
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+  el('translateBtn').addEventListener('click',translate);
+  document.querySelectorAll('#outCard [data-x]').forEach(b=>b.addEventListener('click',()=>doExport(b.dataset.x)));
+  for(const [c,n] of LANGS){ const o=document.createElement('option'); o.value=n; o.textContent=n; el('lang').appendChild(o); }
+  try{ SKILLS=(await (await fetch('skills.json')).json()).skills; SKILLS.sort((a,b)=>a.title.localeCompare(b.title)); for(const s of SKILLS){ const o=document.createElement('option'); o.value=s.name; o.textContent=s.title; el('skillSelect').appendChild(o);} }catch(e){}
+}
+function onFile(e){ const f=e.target.files[0]; if(!f) return; const r=new FileReader(); r.onload=()=>{ el('data').value=r.result; preview(); }; r.readAsText(f); }
+async function fetchSheet(){
+  const u=el('sheetUrl').value.trim(); if(!u) return;
+  setStatus('Fetching…');
+  try{ const t=await (await fetch(u)).text(); el('data').value=t; preview(); setStatus('Fetched.'); }
+  catch(e){ setStatus('Could not fetch (the sheet must be "published to web" as CSV and allow access). Paste or upload instead.',true); }
+}
+function parseCsv(text){
+  return text.trim().split(/\r?\n/).slice(0,200).map(line=>{
+    const out=[]; let cur='',q=false;
+    for(let i=0;i<line.length;i++){ const c=line[i]; if(q){ if(c==='"'){ if(line[i+1]==='"'){cur+='"';i++;} else q=false; } else cur+=c; } else { if(c==='"') q=true; else if(c===','){ out.push(cur); cur=''; } else cur+=c; } }
+    out.push(cur); return out;
+  });
+}
+function preview(){
+  const t=el('data').value.trim(); const p=el('preview'); if(!t){ p.innerHTML=''; return; }
+  const rows=parseCsv(t).slice(0,8); if(rows.length<2){ p.innerHTML='<span class="mini">Add a header row + at least one data row for a preview.</span>'; return; }
+  p.innerHTML='<table class="prev"><thead><tr>'+rows[0].map(h=>'<th>'+esc(h)+'</th>').join('')+'</tr></thead><tbody>'+rows.slice(1).map(r=>'<tr>'+r.map(c=>'<td>'+esc(c)+'</td>').join('')+'</tr>').join('')+'</tbody></table><span class="mini">'+(parseCsv(t).length-1)+' data rows loaded</span>';
+}
+function esc(s){ return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+function current(){ return SKILLS.find(s=>s.name===el('skillSelect').value); }
+async function run(){
+  const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your provider key first.',true);
+  const data=el('data').value.trim(); if(!data) return setStatus('Import or paste your data first.',true);
+  const instr=el('instruction').value.trim(); const s=current();
+  if(!s && !instr) return setStatus('Pick a skill or write an instruction.',true);
+  const system=(s? s.instructions+'\n\n' : 'You are a rigorous analyst. Follow the user instruction precisely.\n\n')
+    +'CRITICAL: Ground everything in the DATA the user provides below. Use its real values; cite specific numbers; do not invent rows or figures. If the data is insufficient for part of the task, say so.';
+  const userMessage=(instr?instr+'\n\n':'')+'DATA (CSV/table):\n"""\n'+data+'\n"""';
+  if(window.pmTrack) pmTrack('data/run');
+  el('outCard').hidden=false; const out=el('out'); out.innerHTML=''; out.dataset.raw='';
+  el('runBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController(); setStatus('Analysing your data…');
+  try{
+    const acc=await PMProviders.stream({key,model:el('model').value,system,userMessage,signal:controller.signal,onDelta:(a)=>{out.innerHTML=DOMPurify.sanitize(marked.parse(a));}});
+    out.dataset.raw=acc; LASTMD=acc; setStatus('Done — export or translate below.');
+  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
+  finally{ el('runBtn').disabled=false; el('stopBtn').hidden=true; controller=null; }
+}
+function doExport(kind){
+  const md=el('out').dataset.raw||LASTMD; if(!md) return;
+  const title=(current()&&current().name)||'analysis';
+  if(kind==='pdf') return PMExport.pdf(md,title,{theme:'modern'});
+  if(kind==='docx') return PMExport.word(md,title);
+  if(kind==='xlsx') return PMExport.xlsx(md,title);
+}
+async function translate(){
+  const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your provider key first.',true);
+  const md=el('out').dataset.raw||LASTMD; if(!md) return setStatus('Run something first.',true);
+  const lang=el('lang').value;
+  if(window.pmTrack) pmTrack('data/translate');
+  el('translateBtn').disabled=true; setStatus('Translating to '+lang+'…'); controller=new AbortController();
+  try{
+    const system='You are a professional translator. Translate the user\'s markdown document into '+lang+', preserving all markdown structure (headings, tables, lists, bold). Translate content and table cells; keep numbers, code, and proper nouns intact. Output only the translated markdown.';
+    const acc=await PMProviders.stream({key,model:el('model').value,system,userMessage:md,signal:controller.signal});
+    const title=((current()&&current().name)||'analysis')+'-'+lang.toLowerCase().replace(/[^a-z]+/g,'-');
+    PMExport.word(acc,title);
+    setStatus('Translated → downloaded '+title+'.doc');
+  }catch(e){ setStatus(e.message||'Translation failed.',true); }
+  finally{ el('translateBtn').disabled=false; controller=null; }
+}
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

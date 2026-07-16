@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Meeting → artifacts — a transcript becomes notes, an action tracker, and follow-up emails</title>
+<meta name="description" content="Paste a meeting transcript or rough notes and get three finished artifacts in one pass: clean minutes, an owner/due action tracker (export to Excel), and ready-to-send follow-up emails — then download the whole set as a zip. Runs in your browser." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
+<script src="providers.js"></script>
+<script src="export-doc.js"></script>
+<style>
+  .mt-wrap { max-width: 840px; margin: 0 auto; padding: 16px 22px 70px; }
+  .mt-lead { color: var(--muted); font-size: 15px; line-height: 1.55; }
+  textarea { width: 100%; box-sizing: border-box; min-height: 200px; padding: 12px 14px; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; color: var(--text); font-family: inherit; font-size: 14px; line-height: 1.5; }
+  .actions { margin: 14px 0; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .seg { border: 1px solid var(--border); border-radius: 14px; margin: 14px 0; overflow: hidden; }
+  .seg > header { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 11px 15px; background: var(--panel-2); font-weight: 600; font-size: 14px; }
+  .seg .body { padding: 14px 16px; }
+  .exp-btn { background: var(--panel); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 6px 11px; cursor: pointer; font-size: 12.5px; }
+  .exp-btn:hover { border-color: var(--accent); }
+  .mini { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Meeting → artifacts</h1><p class="tagline">A transcript in. Minutes, an action tracker, and the follow-up emails out.</p></div>
+  </div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your key + transcript stay in your browser and go only to your chosen provider — never to us.</div>
+
+<div class="mt-wrap">
+  <p class="mt-lead">Grounded in your real meeting — not a generic template. Paste the transcript (or messy notes) and get three finished artifacts in one pass, each exportable, plus a one-click zip of the set.</p>
+  <textarea id="transcript" placeholder="Paste the meeting transcript or your rough notes here…"></textarea>
+  <div class="actions">
+    <button id="runBtn" class="primary" type="button">Process the meeting</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+    <button id="zipBtn" class="ghost" type="button" hidden>⬇ Download all (.zip)</button>
+    <span id="status" class="status"></span>
+  </div>
+
+  <div id="segments"></div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let controller=null, PARTS={ notes:'', actions:'', emails:'' };
+const SEP={ notes:'===NOTES===', actions:'===ACTIONS===', emails:'===EMAILS===' };
+
+init();
+function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('runBtn').addEventListener('click',run);
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+  el('zipBtn').addEventListener('click',downloadZip);
+}
+function sysPrompt(){
+  return `You are an exacting chief-of-staff. From the meeting transcript/notes the user provides, produce THREE artifacts, each after its exact delimiter line and nothing before the first one:
+
+${SEP.notes}
+## Meeting notes
+Clean, skimmable minutes: a one-line summary, attendees if inferable, **Decisions** made, **Discussion** highlights (grouped by topic), and **Open questions**. Faithful to what was said — never invent outcomes.
+
+${SEP.actions}
+## Action items
+A single markdown table with columns exactly: | Action | Owner | Due | Priority |. One row per concrete commitment. Use "TBD" where unknown; infer dates only if clearly stated. If there are no actions, write a one-row table saying so.
+
+${SEP.emails}
+## Follow-up emails
+One short, ready-to-send email per person who owns actions (or a single recap email if owners are unclear). Each as: **To:** … / **Subject:** … then the body. Warm, specific, and brief.
+
+Output only those three delimited sections.`;
+}
+async function run(){
+  const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your provider key first.',true);
+  const tx=el('transcript').value.trim(); if(tx.length<40) return setStatus('Paste a real transcript or notes first.',true);
+  if(window.pmTrack) pmTrack('meeting/process');
+  el('runBtn').disabled=true; el('stopBtn').hidden=false; el('zipBtn').hidden=true; controller=new AbortController(); setStatus('Working…');
+  el('segments').innerHTML='';
+  try{
+    const acc=await PMProviders.stream({key,model:el('model').value,system:sysPrompt(),userMessage:tx,signal:controller.signal,onDelta:(a)=>{ render(split(a)); }});
+    PARTS=split(acc); render(PARTS); el('zipBtn').hidden=!(PARTS.notes||PARTS.actions||PARTS.emails); setStatus('Done — export below.');
+  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
+  finally{ el('runBtn').disabled=false; el('stopBtn').hidden=true; controller=null; }
+}
+function split(text){
+  const grab=(a,b)=>{ const i=text.indexOf(a); if(i<0) return ''; const s=i+a.length; const j=b?text.indexOf(b,s):-1; return text.slice(s, j<0?undefined:j).trim(); };
+  return { notes:grab(SEP.notes,SEP.actions), actions:grab(SEP.actions,SEP.emails), emails:grab(SEP.emails,null) };
+}
+const SEGS=[
+  ['notes','📝 Meeting notes',['docx','pdf']],
+  ['actions','✅ Action tracker',['xlsx','docx']],
+  ['emails','✉️ Follow-up emails',['docx']],
+];
+function render(parts){
+  el('segments').innerHTML=SEGS.filter(([k])=>parts[k]).map(([k,label,fmts])=>{
+    const btns=fmts.map(f=>`<button class="exp-btn" data-k="${k}" data-f="${f}">⬇ ${f==='xlsx'?'Excel':f==='pdf'?'PDF':'Word'}</button>`).join(' ');
+    return `<div class="seg"><header><span>${label}</span><span>${btns}</span></header><div class="body markdown" id="seg-${k}">${DOMPurify.sanitize(marked.parse(parts[k]))}</div></div>`;
+  }).join('');
+  document.querySelectorAll('#segments .exp-btn').forEach(b=>b.addEventListener('click',()=>expOne(b.dataset.k,b.dataset.f)));
+}
+function titleFor(k){ return k==='notes'?'meeting-notes':k==='actions'?'action-items':'follow-up-emails'; }
+function expOne(k,f){
+  const md=PARTS[k]; if(!md) return;
+  if(f==='xlsx') return PMExport.xlsx(md,titleFor(k));
+  if(f==='pdf') return PMExport.pdf(md,titleFor(k),{theme:'modern'});
+  return PMExport.word(md,titleFor(k));
+}
+// A lib-free .doc (Office-HTML) blob, so the zip needs only JSZip.
+function docBlob(md){ const html="<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><style>body{font-family:Calibri,Arial,sans-serif;font-size:11pt;line-height:1.5}table{border-collapse:collapse}td,th{border:1px solid #999;padding:4pt 8pt}</style></head><body>"+DOMPurify.sanitize(marked.parse(md||''))+"</body></html>"; return new Blob(['﻿',html],{type:'application/msword'}); }
+function csvFromActions(md){
+  const rows=(md||'').split('\n').filter(l=>/^\s*\|.*\|\s*$/.test(l) && !/^\s*\|?[\s:|-]+\|?\s*$/.test(l));
+  return rows.map(l=>l.trim().replace(/^\||\|$/g,'').split('|').map(c=>{const v=c.trim().replace(/\*\*/g,'').replace(/"/g,'""');return /[",\n]/.test(v)?'"'+v+'"':v;}).join(',')).join('\n');
+}
+async function downloadZip(){
+  setStatus('Zipping…');
+  try{
+    await new Promise((res,rej)=>{ if(window.JSZip) return res(); const s=document.createElement('script'); s.src='https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js'; s.integrity='sha384-+mbV2IY1Zk/X1p/nWllGySJSUN8uMs+gUAN10Or95UBH0fpj6GfKgPmgC5EXieXG'; s.crossOrigin='anonymous'; s.onload=res; s.onerror=()=>rej(new Error('Could not load zip library')); document.head.appendChild(s); });
+    const zip=new JSZip();
+    if(PARTS.notes) zip.file('meeting-notes.doc', docBlob(PARTS.notes));
+    if(PARTS.actions){ zip.file('action-items.doc', docBlob(PARTS.actions)); const csv=csvFromActions(PARTS.actions); if(csv) zip.file('action-items.csv', csv); }
+    if(PARTS.emails) zip.file('follow-up-emails.doc', docBlob(PARTS.emails));
+    const blob=await zip.generateAsync({type:'blob'});
+    const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='meeting-packet.zip'; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1000);
+    setStatus('Downloaded meeting-packet.zip.');
+  }catch(e){ setStatus(e.message||'Zip failed.',true); }
+}
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

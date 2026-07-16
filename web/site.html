@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Site &amp; interactive builder — turn a skill into a downloadable website or a living document</title>
+<meta name="description" content="Describe what you need and get a complete, self-contained web page you can host anywhere — a portfolio, a landing page, a one-pager microsite — or a living document (an editable checklist or weighted scorecard) that stays interactive after you download it. No build step, no backend." />
+<link rel="stylesheet" href="styles.css" />
+<script src="providers.js"></script>
+<style>
+  .st-wrap { max-width: 900px; margin: 0 auto; padding: 16px 22px 70px; }
+  .st-lead { color: var(--muted); font-size: 15px; line-height: 1.55; }
+  .types { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+  .type { border: 1px solid var(--border); border-radius: 12px; padding: 9px 13px; cursor: pointer; font-size: 13.5px; background: var(--panel); }
+  .type.sel { border-color: var(--accent); background: rgba(217,96,90,.07); }
+  textarea { width: 100%; box-sizing: border-box; min-height: 110px; padding: 12px 14px; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; color: var(--text); font-family: inherit; font-size: 14px; line-height: 1.5; }
+  .actions { margin: 12px 0; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .frame { width: 100%; height: 560px; border: 1px solid var(--border); border-radius: 12px; background: #fff; margin-top: 12px; }
+  .mini { font-size: 12px; color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Site &amp; interactive builder</h1><p class="tagline">A skill → a downloadable website, or a document that stays alive.</p></div>
+  </div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your key + brief stay in your browser. The generated page is self-contained HTML you can host anywhere. Preview runs sandboxed.</div>
+
+<div class="st-wrap">
+  <p class="st-lead">Skills don't have to stop at a document. Describe what you want and get a <strong>complete, single-file web page</strong> — everything inlined, no build step — that you can open, host, or send. Pick an <em>interactive</em> type and the download keeps working: tick the checklist, drag the weights, and it remembers.</p>
+
+  <div class="types" id="types"></div>
+  <textarea id="brief" placeholder="Describe it — e.g. 'A one-page portfolio for a product designer named Ravi: hero, 4 case studies, skills, contact. Calm, modern, dark theme.'"></textarea>
+  <div class="actions">
+    <button id="runBtn" class="primary" type="button">Build it</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+    <button id="dlBtn" class="ghost" type="button" hidden>⬇ Download .html</button>
+    <button id="openBtn" class="ghost" type="button" hidden>↗ Open in new tab</button>
+    <span id="status" class="status"></span>
+  </div>
+  <iframe id="frame" class="frame" sandbox="allow-scripts allow-forms" title="preview" hidden></iframe>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let controller=null, LASTHTML='';
+const TYPES=[
+  ['portfolio','🧑‍🎨 Portfolio','a personal portfolio site'],
+  ['landing','🚀 Landing page','a product landing page with a hero, features, and a call to action'],
+  ['onepager','📄 One-pager microsite','a single-scroll microsite that summarises a document or pitch'],
+  ['checklist','✅ Interactive checklist','a living checklist where each item is a real checkbox that saves its state to localStorage, with a progress bar'],
+  ['scorecard','🎚️ Interactive scorecard','a weighted scorecard where each criterion has an adjustable weight and score, and the total recomputes live'],
+];
+let sel='portfolio';
+init();
+function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('types').innerHTML=TYPES.map(t=>`<span class="type${t[0]===sel?' sel':''}" data-id="${t[0]}">${t[1]}</span>`).join('');
+  document.querySelectorAll('.type').forEach(d=>d.addEventListener('click',()=>{ sel=d.dataset.id; document.querySelectorAll('.type').forEach(x=>x.classList.toggle('sel',x.dataset.id===sel)); }));
+  el('runBtn').addEventListener('click',run);
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+  el('dlBtn').addEventListener('click',download);
+  el('openBtn').addEventListener('click',openTab);
+}
+function sysPrompt(){
+  const t=TYPES.find(x=>x[0]===sel);
+  const interactive=(sel==='checklist'||sel==='scorecard');
+  return `You are an expert front-end engineer and designer. Produce ${t[2]} as ONE complete, self-contained HTML document.
+
+Hard rules:
+- Output ONLY the HTML, starting with <!DOCTYPE html>. No markdown, no code fences, no commentary.
+- Everything inline: all CSS in a style block, all JS in one script block. NO external resources of any kind (no CDN links, no web fonts, no images by URL) — use system fonts, CSS, and inline SVG only, so the file works offline anywhere.
+- Responsive, accessible, and polished. Support light and dark via prefers-color-scheme.
+${interactive ? '- It MUST be genuinely interactive with vanilla JS: '+(sel==='checklist'?'real checkboxes that persist to localStorage and a live progress bar/percentage.':'number/range inputs for each weight and score, with a total that recomputes live and persists to localStorage.') : '- Fill it with sensible, specific placeholder content derived from the brief.'}
+- No tracking, no forms that post anywhere.`;
+}
+async function run(){
+  const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your provider key first.',true);
+  const brief=el('brief').value.trim(); if(!brief) return setStatus('Describe what to build first.',true);
+  if(window.pmTrack) pmTrack('site/'+sel);
+  el('runBtn').disabled=true; el('stopBtn').hidden=false; el('dlBtn').hidden=true; el('openBtn').hidden=true; controller=new AbortController(); setStatus('Building…');
+  el('frame').hidden=false;
+  try{
+    let acc='';
+    acc=await PMProviders.stream({key,model:el('model').value,system:sysPrompt(),userMessage:brief,signal:controller.signal,onDelta:(a)=>{ el('frame').srcdoc=stripFence(a); }});
+    LASTHTML=stripFence(acc); el('frame').srcdoc=LASTHTML;
+    el('dlBtn').hidden=false; el('openBtn').hidden=false; setStatus('Done — preview above. Download or open it.');
+  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
+  finally{ el('runBtn').disabled=false; el('stopBtn').hidden=true; controller=null; }
+}
+function stripFence(s){ return (s||'').replace(/^\s*```(?:html)?\s*/i,'').replace(/```\s*$/,'').trim(); }
+function download(){ if(!LASTHTML) return; const blob=new Blob([LASTHTML],{type:'text/html'}); const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=sel+'-site.html'; document.body.appendChild(a); a.click(); setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove();},1000); }
+function openTab(){ if(!LASTHTML) return; const blob=new Blob([LASTHTML],{type:'text/html'}); const u=URL.createObjectURL(blob); window.open(u,'_blank','noopener'); setTimeout(()=>URL.revokeObjectURL(u),4000); }
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
