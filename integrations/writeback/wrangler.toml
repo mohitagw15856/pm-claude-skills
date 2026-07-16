@@ -1,0 +1,18 @@
+name = "pm-skills-writeback"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+compatibility_flags = ["nodejs_compat"]
+
+# Write-back relay: POST a finished artifact + a destination and it creates the
+# object in the real tool (GitHub / Notion / Linear / Slack) using YOUR token.
+#
+# Deploy:
+#   cd integrations/writeback
+#   npm install
+#   npx wrangler deploy
+#
+# Secrets (only the ones you use):
+#   npx wrangler secret put GITHUB_TOKEN
+#   npx wrangler secret put NOTION_TOKEN
+#   npx wrangler secret put LINEAR_TOKEN
+#   npx wrangler secret put SLACK_BOT_TOKEN

@@ -1,0 +1,13 @@
+{
+  "name": "pm-skills-writeback",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Write a finished artifact back to the tool where the work lives — GitHub, Notion, Linear, Slack.",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
