@@ -1,0 +1,35 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "pm skills",
+      "intents": [
+        { "name": "AMAZON.HelpIntent", "samples": [] },
+        { "name": "AMAZON.StopIntent", "samples": [] },
+        { "name": "AMAZON.CancelIntent", "samples": [] },
+        {
+          "name": "RunSkillIntent",
+          "slots": [
+            { "name": "task", "type": "AMAZON.SearchQuery" }
+          ],
+          "samples": [
+            "help me with {task}",
+            "I need to {task}",
+            "how do I {task}",
+            "for {task}",
+            "give me a skill for {task}"
+          ]
+        },
+        {
+          "name": "FindSkillIntent",
+          "slots": [{ "name": "task", "type": "AMAZON.SearchQuery" }],
+          "samples": [
+            "which skill for {task}",
+            "find a skill for {task}",
+            "what should I use for {task}"
+          ]
+        }
+      ],
+      "types": []
+    }
+  }
+}
