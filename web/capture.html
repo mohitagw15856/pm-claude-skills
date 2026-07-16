@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Live Capture — point your camera, get the artifact</title>
+<meta name="description" content="Point your phone or webcam at a whiteboard, a contract, a shelf of files, or a screen — and turn what it sees into a structured artifact live, with a scanning overlay. Vision-powered, runs in your browser." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
+<script src="providers.js"></script>
+<style>
+  .c-wrap { max-width: 820px; margin: 0 auto; padding: 12px 22px 60px; }
+  .stage { position: relative; border-radius: 16px; overflow: hidden; background: #000; aspect-ratio: 4/3; max-height: 60vh; margin: 0 auto; }
+  #video { width: 100%; height: 100%; object-fit: cover; display: block; }
+  #scan { position: absolute; inset: 0; pointer-events: none; }
+  .pick { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 12px 0; }
+  .pick select { padding: 9px 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 14px; }
+  .actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 6px 0; }
+  .out { border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; margin-top: 14px; }
+  .warn { font-size: 12.5px; color: var(--muted); }
+  .exp-btn { background: var(--panel-2); border: 1px solid var(--border); color: var(--text); border-radius: 8px; padding: 7px 11px; cursor: pointer; font-size: 12.5px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Live Capture</h1><p class="tagline">Point the camera. Get the artifact.</p></div>
+  </div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (a vision-capable key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 The camera frame goes only to your chosen vision provider (Claude, Gemini, or OpenAI) — never to us. Only capture things you're allowed to.</div>
+
+<div class="c-wrap">
+  <div class="pick">
+    <button id="startCam" class="primary" type="button">📷 Start camera</button>
+    <button id="flipCam" class="ghost" type="button" hidden>🔄 Flip</button>
+    <span class="warn">then turn it into a</span>
+    <select id="mode">
+      <option value="auto">— auto: read what you see —</option>
+      <option value="whiteboard-to-spec">📝 Spec (from a whiteboard)</option>
+      <option value="screenshot-teardown">🔍 Teardown (from a screen)</option>
+      <option value="deck-autopsy">🎯 Slide critique</option>
+      <option value="table">📊 Data table (from a chart/sheet)</option>
+      <option value="contract">⚖️ Contract summary + red flags</option>
+      <option value="todo">✅ Action list (from notes)</option>
+    </select>
+  </div>
+
+  <div class="stage" id="stage" hidden>
+    <video id="video" playsinline muted></video>
+    <canvas id="scan"></canvas>
+  </div>
+
+  <div class="actions" style="margin-top:12px">
+    <button id="shoot" class="primary" type="button" hidden>✨ Capture &amp; read</button>
+    <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+    <span id="status" class="status"></span>
+  </div>
+  <p class="warn" id="err" hidden></p>
+
+  <div class="out" id="outCard" hidden>
+    <div class="actions">
+      <strong style="flex:1">Result</strong>
+      <button class="exp-btn" data-x="docx" type="button">⬇ Word</button>
+      <button class="exp-btn" data-x="pdf" type="button">⬇ PDF</button>
+      <button class="exp-btn" data-x="copy" type="button">Copy</button>
+    </div>
+    <article id="out" class="output markdown"></article>
+  </div>
+</div>
+
+<script src="export-doc.js"></script>
+<script>
+const el=(id)=>document.getElementById(id);
+let stream=null, facing='environment', controller=null, scanRAF=null, scanning=false, LASTMD='';
+const PROMPTS={
+  'auto':'Look at this image and produce the single most useful structured artifact from it — infer what it is (a whiteboard, a document, a screen, a chart, a shelf) and turn it into the appropriate professional output. Start by naming what you saw in one line.',
+  'whiteboard-to-spec':'This is a photo of a whiteboard or sketch. Turn it into a clean, structured spec: goal, requirements, open questions. Transcribe boxes/arrows faithfully; never invent.',
+  'screenshot-teardown':'This is a screenshot of a product UI or page. Give a sharp teardown: what works, the top usability/clarity problems (quote on-screen text), and the highest-leverage fixes.',
+  'deck-autopsy':'This is a photo of a slide. Critique it like a senior reviewer: the one message, what fights it, and a tighter rewrite of the headline + bullets.',
+  'table':'This image contains a chart or spreadsheet. Extract the data into a clean markdown table (exact values where legible; mark unclear cells). Add a one-line read of the trend.',
+  'contract':'This is a photo of a contract/agreement page. Summarise it in plain English and list the clauses that could hurt the signer, ranked, with the questions to ask. Note this is not legal advice.',
+  'todo':'This is a photo of handwritten or typed notes. Extract a clean, prioritised action list with owners/dates where stated (TBD otherwise).',
+};
+init();
+function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('startCam').addEventListener('click',start);
+  el('flipCam').addEventListener('click',flip);
+  el('shoot').addEventListener('click',shoot);
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+  document.querySelectorAll('#outCard [data-x]').forEach(b=>b.addEventListener('click',()=>doExport(b.dataset.x)));
+  window.addEventListener('resize',fitScan);
+}
+async function start(){
+  try{
+    stream&&stream.getTracks().forEach(t=>t.stop());
+    stream=await navigator.mediaDevices.getUserMedia({ video:{ facingMode:facing }, audio:false });
+    el('video').srcObject=stream; await el('video').play();
+    el('stage').hidden=false; el('shoot').hidden=false; el('flipCam').hidden=false; el('startCam').textContent='📷 Restart';
+    fitScan();
+  }catch(e){ el('err').hidden=false; el('err').textContent='Camera unavailable: '+(e.message||e)+'. On desktop, allow camera access; on iPhone use Safari.'; }
+}
+function flip(){ facing=facing==='environment'?'user':'environment'; start(); }
+function fitScan(){ const v=el('video'),s=el('scan'); s.width=v.clientWidth; s.height=v.clientHeight; }
+function animateScan(){
+  const s=el('scan'), x=s.getContext('2d'), W=s.width, H=s.height; scanning=true; let t0=performance.now();
+  (function loop(t){ if(!scanning){ x.clearRect(0,0,W,H); return; }
+    const p=((t-t0)%1600)/1600; x.clearRect(0,0,W,H);
+    x.strokeStyle='rgba(120,200,255,0.9)'; x.lineWidth=2; const y=p*H;
+    x.beginPath(); x.moveTo(0,y); x.lineTo(W,y); x.stroke();
+    const g=x.createLinearGradient(0,y-40,0,y); g.addColorStop(0,'rgba(120,200,255,0)'); g.addColorStop(1,'rgba(120,200,255,0.25)'); x.fillStyle=g; x.fillRect(0,y-40,W,40);
+    // corner brackets
+    x.strokeStyle='rgba(120,200,255,0.8)'; const m=18,L=30;
+    [[m,m,1,1],[W-m,m,-1,1],[m,H-m,1,-1],[W-m,H-m,-1,-1]].forEach(([cx,cy,dx,dy])=>{ x.beginPath(); x.moveTo(cx,cy+dy*L); x.lineTo(cx,cy); x.lineTo(cx+dx*L,cy); x.stroke(); });
+    scanRAF=requestAnimationFrame(loop);
+  })(t0);
+}
+function stopScan(){ scanning=false; if(scanRAF)cancelAnimationFrame(scanRAF); const s=el('scan'); s.getContext('2d').clearRect(0,0,s.width,s.height); }
+function grabFrame(){ const v=el('video'), c=document.createElement('canvas'); const w=Math.min(1280,v.videoWidth||1280); const scale=w/(v.videoWidth||w); c.width=w; c.height=(v.videoHeight||960)*scale; c.getContext('2d').drawImage(v,0,0,c.width,c.height); return c.toDataURL('image/jpeg',0.72).split(',')[1]; }
+async function shoot(){
+  const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter a vision-capable provider key.',true);
+  if(!stream) return setStatus('Start the camera first.',true);
+  const data=grabFrame();
+  const mode=el('mode').value;
+  const system='You are an expert who turns a photographed real-world artifact into a clean, structured professional deliverable in markdown. Be faithful to what is actually visible; if something is illegible, say so rather than guessing.';
+  const userMessage=PROMPTS[mode]||PROMPTS.auto;
+  if(window.pmTrack) pmTrack('capture/'+mode);
+  animateScan(); el('outCard').hidden=false; const out=el('out'); out.innerHTML=''; out.dataset.raw='';
+  el('shoot').disabled=true; el('stopBtn').hidden=false; controller=new AbortController(); setStatus('Reading the frame…');
+  try{
+    const acc=await PMProviders.stream({key,model:el('model').value,system,userMessage,images:[{media_type:'image/jpeg',data}],signal:controller.signal,onDelta:(a)=>{ out.innerHTML=DOMPurify.sanitize(marked.parse(a)); }});
+    out.dataset.raw=acc; LASTMD=acc; setStatus('Done.');
+  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed — does this provider/model support images?'),true); }
+  finally{ stopScan(); el('shoot').disabled=false; el('stopBtn').hidden=true; controller=null; }
+}
+function doExport(kind){ const md=LASTMD; if(!md) return; if(kind==='docx')return PMExport.word(md,'capture'); if(kind==='pdf')return PMExport.pdf(md,'capture',{theme:'modern'}); if(kind==='copy')navigator.clipboard.writeText(md); }
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

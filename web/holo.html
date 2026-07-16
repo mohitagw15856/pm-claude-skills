@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Holo Cards — open a pack of skills</title>
+<meta name="description" content="Tear open a booster pack and pull holographic, tilt-reactive cards from the library of 515 skills — foil shimmer, parallax depth, rarities. A delightful, shareable way to discover what's inside." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .h-wrap { max-width: 1000px; margin: 0 auto; padding: 14px 22px 60px; text-align: center; }
+  .h-lead { color: var(--muted); font-size: 15px; }
+  .pack { width: 220px; height: 320px; margin: 18px auto; border-radius: 18px; cursor: pointer; position: relative; overflow: hidden;
+    background: linear-gradient(150deg,#241a30,#3a2350 40%,#101318); border: 1px solid #4a3a6a; box-shadow: 0 20px 50px rgba(0,0,0,.5); transition: transform .3s; }
+  .pack:hover { transform: translateY(-6px) scale(1.02); }
+  .pack::after { content:''; position:absolute; inset:0; background: conic-gradient(from 0deg, transparent, rgba(255,255,255,.25), transparent 30%); animation: spin 5s linear infinite; mix-blend-mode: color-dodge; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .pack .plabel { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; z-index:2; color:#f4e6bf; text-shadow:0 2px 8px #000; }
+  .pack .plabel b { font-size: 22px; letter-spacing: 2px; } .pack .plabel span { font-size: 12px; opacity:.8; margin-top:6px; }
+  .cards { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; margin: 20px 0; perspective: 1200px; }
+  .card { width: 210px; height: 300px; border-radius: 16px; position: relative; transform-style: preserve-3d; transition: transform .12s ease-out; cursor: pointer;
+    background: linear-gradient(160deg, var(--c1), var(--c2)); border: 1px solid rgba(255,255,255,.18); box-shadow: 0 16px 40px rgba(0,0,0,.45); overflow: hidden; animation: deal .5s ease backwards; }
+  @keyframes deal { from { opacity:0; transform: translateY(30px) rotateY(40deg); } }
+  .card .foil { position:absolute; inset:0; background: linear-gradient(115deg, transparent 20%, rgba(255,255,255,.55) 45%, rgba(120,220,255,.4) 50%, rgba(255,180,255,.4) 55%, transparent 80%);
+    background-size: 300% 300%; mix-blend-mode: color-dodge; opacity:.55; pointer-events:none; }
+  .card.holo .foil { background: conic-gradient(from var(--a,0deg), #ff8ad8, #8affd8, #8ab8ff, #ffd98a, #ff8ad8); opacity:.4; }
+  .card .inner { position: relative; z-index:2; height:100%; padding: 16px 15px; display:flex; flex-direction:column; color:#fff; text-shadow:0 1px 3px rgba(0,0,0,.4); }
+  .card .rar { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; opacity:.9; }
+  .card .mono { font-size: 46px; font-weight:800; margin: 10px 0 4px; }
+  .card .nm { font-size: 17px; font-weight: 700; line-height: 1.2; }
+  .card .bd { font-size: 12px; opacity:.85; margin-top: auto; }
+  .card .desc { font-size: 11.5px; opacity:.9; margin-top: 8px; max-height: 92px; overflow:hidden; }
+  .card .cta { margin-top: 10px; display:flex; gap:6px; }
+  .card .cta a { font-size: 11px; background: rgba(0,0,0,.28); border:1px solid rgba(255,255,255,.3); color:#fff; border-radius: 6px; padding: 4px 8px; text-decoration:none; }
+  .actions { margin: 10px 0; display:flex; gap:8px; justify-content:center; flex-wrap:wrap; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Holo Cards</h1><p class="tagline">Open a pack. Pull a skill.</p></div>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<div class="h-wrap">
+  <p class="h-lead">515 skills, dealt as holographic cards. Tap the pack, tilt the cards, pull a rare. Every card links straight into the Playground.</p>
+
+  <div id="packView">
+    <div class="pack" id="pack"><div class="plabel"><b>PM SKILLS</b><span>BOOSTER PACK · tap to open</span></div></div>
+  </div>
+
+  <div class="actions" id="postOpen" hidden>
+    <button id="again" class="primary" type="button">🎴 Open another pack</button>
+    <a class="btn" href="deck.html">🃏 The full deck</a>
+    <a class="btn" href="catalog.html">📚 Browse all</a>
+  </div>
+  <div class="cards" id="cards"></div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let SKILLS=[];
+const PALETTES=[['#3a2350','#101318'],['#12384a','#0a1a24'],['#3a1230','#1a0a14'],['#123a2a','#0a1a14'],['#2a2a55','#101020'],['#4a3212','#1a1206']];
+init();
+async function init(){
+  el('pack').addEventListener('click',open);
+  el('again').addEventListener('click',open);
+  try{ SKILLS=(await (await fetch('skills.json')).json()).skills; }catch(e){}
+  const want=new URLSearchParams(location.search).get('skill');
+  if(want){ const s=SKILLS.find(k=>k.name===want); if(s){ el('packView').hidden=true; renderCards([s]); el('postOpen').hidden=false; } }
+}
+function rarity(s){ const sc=s.eval&&s.eval.score; if(sc>=4.6) return {r:'★ Holo Rare',holo:true}; if(sc>=4.2||/Production/i.test(s.tier||'')) return {r:'Rare',holo:true}; if(sc) return {r:'Uncommon',holo:false}; return {r:'Common',holo:false}; }
+function mono(s){ return (s.title||s.name).replace(/[^A-Za-z]/g,'').slice(0,2).toUpperCase()||'PM'; }
+function pick(n){ const out=[],used=new Set(); const pool=SKILLS.length?SKILLS:[]; let guard=0; while(out.length<n&&guard++<400){ const s=pool[Math.floor(Math.random()*pool.length)]; if(s&&!used.has(s.name)){ used.add(s.name); out.push(s); } } return out; }
+function open(){
+  el('packView').hidden=false; el('pack').style.transform='scale(1.15)'; el('pack').style.opacity='0.2';
+  setTimeout(()=>{ el('packView').hidden=true; el('pack').style.transform=''; el('pack').style.opacity=''; renderCards(pick(5)); el('postOpen').hidden=false; if(window.pmTrack)pmTrack('holo/open'); }, 320);
+}
+function renderCards(list){
+  el('cards').innerHTML=list.map((s,i)=>{
+    const rr=rarity(s); const pal=PALETTES[Math.abs(hash(s.name))%PALETTES.length];
+    const desc=(s.summary||s.description||'').slice(0,150);
+    return `<div class="card${rr.holo?' holo':''}" data-name="${s.name}" style="--c1:${pal[0]};--c2:${pal[1]};animation-delay:${i*0.08}s">
+      <div class="foil"></div>
+      <div class="inner">
+        <div class="rar">${rr.r}</div>
+        <div class="mono">${mono(s)}</div>
+        <div class="nm">${escape(s.title||s.name)}</div>
+        <div class="desc">${escape(desc)}</div>
+        <div class="bd">${escape(s.plugin||'pm-skills')}</div>
+        <div class="cta"><a href="index.html?skill=${encodeURIComponent(s.name)}">▶ Run</a><a href="holo.html?skill=${encodeURIComponent(s.name)}" onclick="event.stopPropagation()">🔗 Share</a></div>
+      </div></div>`;
+  }).join('');
+  document.querySelectorAll('.card').forEach(bindTilt);
+}
+function bindTilt(card){
+  function move(e){ const r=card.getBoundingClientRect(); const px=(e.clientX-r.left)/r.width, py=(e.clientY-r.top)/r.height;
+    const rx=(0.5-py)*18, ry=(px-0.5)*18; card.style.transform=`rotateX(${rx}deg) rotateY(${ry}deg) scale(1.04)`;
+    const f=card.querySelector('.foil'); f.style.backgroundPosition=(px*100)+'% '+(py*100)+'%'; card.style.setProperty('--a',(px*360)+'deg'); }
+  function reset(){ card.style.transform=''; }
+  card.addEventListener('mousemove',move); card.addEventListener('mouseleave',reset);
+  card.addEventListener('touchmove',(e)=>{ const t=e.touches[0]; move(t); },{passive:true}); card.addEventListener('touchend',reset);
+  window.addEventListener('deviceorientation',(e)=>{ if(e.gamma==null)return; const ry=Math.max(-14,Math.min(14,e.gamma)); const rx=Math.max(-14,Math.min(14,(e.beta-45))); card.style.transform=`rotateX(${-rx}deg) rotateY(${ry}deg)`; card.querySelector('.foil').style.backgroundPosition=(50+ry*3)+'% '+(50+rx*3)+'%'; });
+}
+function hash(s){ let h=0; for(let i=0;i<s.length;i++)h=(h*31+s.charCodeAt(i))|0; return h; }
+function escape(s){ return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
