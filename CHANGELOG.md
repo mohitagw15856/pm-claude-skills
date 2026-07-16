@@ -9,6 +9,32 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [51.0.0] — the artifact release: skills stop answering and start producing — 2026-07-16
+
+### Added — 🏭 "Make it real": every skill's output becomes a real deliverable
+- **[The Packet](https://mohitagw15856.github.io/pm-claude-skills/make.html)** — one brief, a **`.zip` of finished documents**. Pick a preset chain (🚀 Launch Kit, 🧭 Strategy Pack, 🏃 Delivery Pack) and each skill in it is rendered to its best format — `PRD.doc`, `plan.xlsx`, `deck.pptx`, `press-release.doc` — and bundled via JSZip (SRI-pinned, hash computed from the real file, not guessed).
+- **🎨 Brand Kit** ([brandkit.js](web/brandkit.js), `window.PMBrand`) — set a **logo, accent, font and footer once**; every export wears it (PDF header, PPTX title slide + accent rail, Word header, one-pager). Stored in `localStorage` only — the logo never leaves the tab.
+- **🧮 Live-formula Excel** — the XLSX export can now write a real `=SUM()` total row over numeric columns, so the file **recalculates like a spreadsheet** instead of shipping dead cells.
+- **🖼️ Infographic one-pager** — `PMExport.onePager()` lifts the headline, up to four "big numbers", and the key takeaways into a designed, print-ready A4 page.
+- **📄 Designed templates** — the four PDF themes surfaced as a document-template picker.
+
+### Added — 🚀 beyond the document: artifacts that aren't a single file
+- **[Meeting → artifacts](https://mohitagw15856.github.io/pm-claude-skills/meeting.html)** — paste a transcript, get **three finished artifacts in one pass**: clean minutes, an Owner/Due/Priority **action tracker** (→ Excel), and ready-to-send **follow-up emails** — plus a one-click `.zip` of the set.
+- **[Bring your own data](https://mohitagw15856.github.io/pm-claude-skills/data.html)** — import a **CSV**, paste a table, or fetch a **published Google Sheet**, and run any skill **grounded in your real rows** (cite the numbers; no invented figures), with a live table preview and Word/PDF/Excel export.
+- **🌐 Multilingual export** — translate the finished artifact into any of **10 languages** (markdown structure preserved) and download it, one click.
+- **[Site & interactive builder](https://mohitagw15856.github.io/pm-claude-skills/site.html)** — describe it and get **one complete, self-contained HTML page** (everything inlined, works offline) — portfolio, landing page, one-pager microsite — with a sandboxed live preview. The **checklist** and **weighted scorecard** types stay **interactive after download**: tick items, drag weights, state persists to `localStorage`.
+
+### Added — earlier in this wave (now documented)
+- **💬 [Consultant Mode](https://mohitagw15856.github.io/pm-claude-skills/consult.html)** — run any of the 515 skills as an **adaptive interview** instead of a one-shot template: it asks the two or three questions that actually change the answer, then delivers. Additive — no `SKILL.md` changed, so the marketplace/downloadable versions are untouched.
+- **🤖 [SkillBench model rankings](https://mohitagw15856.github.io/pm-claude-skills/modelbench.html)** — the public "which AI does professional work best" leaderboard, rendered from the reproducible harness results with per-domain breakdown and an honest skill-lift finding.
+- **🌱 The self-growing library** ([mine-gaps.mjs](scripts/mine-gaps.mjs)) — mines real requests against the catalog by lexical similarity, ranks the biggest gaps, scaffolds the top one under `proposals/`, and opens a PR (monthly + manual). Never writes to `skills/`, never auto-merges.
+- **📕 The Handbook, in print** — the paperback is [live on Lulu](https://www.lulu.com/shop/mohit-aggarwal/the-professional-work-handbook/paperback/product-65kwrpk.html); the [print kit](docs/print/) gained a step-by-step Amazon KDP runbook and paste-ready listing copy (description, keywords, categories).
+
+### Changed
+- `export-doc.js` gained blob variants (`wordBlob` / `pptxBlob` / `xlsxBlob`) so artifacts can be bundled, and reads the Brand Kit throughout — existing playground exports are unchanged (brand defaults to empty).
+- Five new surfaces added to the **🆕 New** nav group.
+- **Library:** **515 skills, 74 bundles** (this wave is capability, not count — the artifacts multiply what every existing skill can produce).
+
 ## [50.0.0] — the wow release: AI that reads your lease, argues back like opposing counsel, and shows you your exit waterfall — 2026-07-14
 
 ### Added — 🔍 pm-decoders: AI reads the fine print for you (6 skills)
