@@ -9,6 +9,8 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [53.0.0] — close the loop + go everywhere: trust/proof surfaces & the distribution wave — 2026-07-16
+
 ### Added — 🤝 Trust & proof (close the loop)
 - **[Outcome Ledger](https://mohitagw15856.github.io/pm-claude-skills/ledger.html)** — log what each artifact became in the real world (landed / mixed / no / pending) and see per-skill landed-rate; opt-in "claim" contributes anonymised counts. Local-first (`pm_outcome_ledger_v1`).
 - **[Cost & Privacy meter](https://mohitagw15856.github.io/pm-claude-skills/cost.html)** — per-run token-cost estimate, a running local total, and a plain-English "where your data went" panel. Backed by `web/pmcost.js` (`PMCost`).
