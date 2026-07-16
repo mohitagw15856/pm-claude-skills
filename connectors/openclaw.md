@@ -45,14 +45,17 @@ clawhub install @mohitagw15856/email-triage      # or: openclaw skills install @
 
 **✅ Tranche 2 published 2026-07-14 (43 skills total live):** the full `pm-decoders` and `pm-simulators` bundles, calculators wave 2 (exit-waterfall, offer-comparison, refinance-breakeven, fire-number), the four v50 singles, and the `pm-lifeadmin` + `pm-personal` bundles — all at v50.0.0, self-contained packages (library-local sections stripped by the export).
 
-**Tranche 3 — publish everything (v53.0.0):** the export already carries all **515** skills; only the first ~43 are live on ClawHub. To publish the rest and refresh the published bodies to the current release, run from the repo root:
+**Tranche 3 — publish everything:** the export already carries all **515** skills. Publish the rest and refresh bodies to the current release with `sync` (run from `exports/openclaw/`, or pass `--dir exports/openclaw`):
 
 ```bash
-clawhub sync --dry-run            # from exports/openclaw/ — review the full plan first (515 folders)
-clawhub sync --all --version 53.0.0
+clawhub sync --dir exports/openclaw --dry-run   # review the full plan first (515 folders)
+clawhub sync --dir exports/openclaw --all \
+  --source-repo mohitagw15856/pm-claude-skills --source-commit "$(git rev-parse HEAD)" --source-ref main
 ```
 
-`clawhub sync` scans the folders and uploads new/changed skills, so it's safe to re-run — existing skills update in place, the rest get created. Re-`sync` after every release so ClawHub never serves a stale body.
+`clawhub sync` scans the folders and uploads new/changed skills, so it's safe to re-run — existing skills update in place, the rest get created. (Note: `sync` has **no** `--version` flag — new skills publish at `1.0.0`; use `--bump patch|minor|major` for updates. The `--source-*` flags are all-or-nothing: pass repo **and** commit together.)
+
+> **⏳ Rate limit — the big-bang publish takes a few days.** ClawHub caps **new** skills at **200 per 24 hours**. A first full publish of 515 therefore rolls out in daily batches (~200 → ~200 → the rest); once the cap is hit, further publishes return `Rate limit: max 200 new skills per 24 hours` and the CLI retries until it stalls — that's expected, not a hang. **This is automated:** the [`clawhub-sync.yml`](../.github/workflows/clawhub-sync.yml) workflow runs `sync --all` daily (set the `CLAWHUB_TOKEN` repo secret) and keeps going until every skill is live, then no-ops. To do it by hand instead, just re-run the `sync` command above once a day until the dry-run shows nothing new.
 
 **Moderation note:** ClawHub may hold a newly-published skill for review before it goes live (e.g. `insurance-claim`). That's a ClawHub-side queue, not a defect — the skill passes this library's own security scan (`npx skillspec-check skills/insurance-claim` → **L3 Trustworthy**), so it's safe to approve from the [ClawHub dashboard](https://clawhub.ai/mohitagw15856).
 

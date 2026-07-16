@@ -1,0 +1,72 @@
+name: Publish to ClawHub
+
+# Keeps the OpenClaw/ClawHub listing in sync with the library. Runs `clawhub
+# sync --all` from the dressed export (exports/openclaw/), which scans every
+# skill and publishes the new/changed ones. ClawHub caps NEW skills at 200 per
+# 24h, so a first full publish of the whole library rolls out over a few days —
+# this daily run just keeps going until everything is live, then no-ops. It also
+# refreshes bodies after each release so ClawHub never serves a stale skill.
+#
+# Setup (one-time): add a repo secret CLAWHUB_TOKEN
+#   ClawHub → account → API token, then GitHub → Settings → Secrets and
+#   variables → Actions → New repository secret named CLAWHUB_TOKEN.
+# Without the secret the job exits cleanly (skips), so it's safe to merge first.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 6 * * *' # daily 06:17 UTC — off the :00 rush
+  # Optional: also run right after a release so bodies refresh immediately.
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: clawhub-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      # Secrets can't be used in `if:` expressions, so map it to env and gate in shell.
+      CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Guard — need the token
+        run: |
+          if [ -z "$CLAWHUB_TOKEN" ]; then
+            echo "No CLAWHUB_TOKEN secret set — nothing to do. Add it to enable publishing."
+            echo "SKIP=1" >> "$GITHUB_ENV"
+          fi
+
+      - name: Install ClawHub CLI
+        if: ${{ env.SKIP != '1' }}
+        run: npm i -g clawhub
+
+      - name: Log in
+        if: ${{ env.SKIP != '1' }}
+        run: clawhub login --token "$CLAWHUB_TOKEN" --no-browser --label "github-action"
+
+      - name: Sync (publish new/changed skills)
+        if: ${{ env.SKIP != '1' }}
+        # The CLI has no per-request timeout and retries against the 200/24h rate
+        # limit, so cap the run at 25 min and never fail the job on the cap — the
+        # next scheduled run resumes where this one stopped (sync is idempotent).
+        run: |
+          timeout 1500 clawhub sync \
+            --dir exports/openclaw --all \
+            --source-repo "${{ github.repository }}" \
+            --source-commit "${{ github.sha }}" \
+            --source-ref "${{ github.ref_name }}" || {
+              code=$?
+              echo "sync ended (exit $code) — likely the daily 200-new-skill cap or the 25-min guard."
+              echo "That's expected mid-rollout; tomorrow's run continues. Not failing the job."
+            }
