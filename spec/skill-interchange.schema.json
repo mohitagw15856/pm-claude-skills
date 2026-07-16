@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/mohitagw15856/pm-claude-skills/spec/skill-interchange.schema.json",
+  "title": "Agent Skill Interchange v0.1 — .skillpack manifest",
+  "description": "A portable envelope for moving a COLLECTION of skills between agent systems (a playground, an IDE, a registry, another vendor). SkillSpec (skill.schema.json) describes one SKILL.md; this describes the manifest that carries many of them together with provenance, integrity, and routing metadata. A .skillpack is a directory or archive containing this manifest as `skillpack.json` plus the referenced SKILL.md files.",
+  "type": "object",
+  "required": ["spec", "pack", "skills"],
+  "properties": {
+    "spec": {
+      "const": "agent-skill-interchange/0.1",
+      "description": "Format discriminator. Consumers MUST reject manifests whose spec they do not implement."
+    },
+    "pack": {
+      "type": "object",
+      "required": ["name", "version"],
+      "properties": {
+        "name": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "Kebab-case pack identifier." },
+        "version": { "type": "string", "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(-[0-9A-Za-z.-]+)?$", "description": "SemVer of the pack as a whole." },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "license": { "type": "string", "description": "SPDX identifier for the pack; individual skills MAY override." },
+        "homepage": { "type": "string", "format": "uri" },
+        "authors": { "type": "array", "items": { "type": "string" } },
+        "generated": { "type": "string", "format": "date-time", "description": "When this manifest was produced." },
+        "generator": { "type": "string", "description": "Tool + version that produced the pack, e.g. 'pm-skills-export/1.2.0'." }
+      },
+      "additionalProperties": true
+    },
+    "skills": {
+      "type": "array",
+      "minItems": 1,
+      "description": "The skills carried by this pack. Each entry is SkillSpec frontmatter plus a pointer to the body and an integrity hash.",
+      "items": {
+        "type": "object",
+        "required": ["name", "description", "path"],
+        "properties": {
+          "name": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$", "description": "Unique within the pack; equals the skill's directory/file stem." },
+          "description": { "type": "string", "minLength": 40, "description": "SkillSpec routing surface (what it does; 'Use when…'; 'Produces…')." },
+          "version": { "type": "string", "pattern": "^(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(-[0-9A-Za-z.-]+)?$" },
+          "license": { "type": "string" },
+          "path": { "type": "string", "description": "Relative path within the pack to the skill's SKILL.md (or provider-native file)." },
+          "format": { "type": "string", "enum": ["skillmd", "markdown", "text"], "default": "skillmd", "description": "Body format at `path`. 'skillmd' = SKILL.md with YAML frontmatter." },
+          "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$", "description": "Hex SHA-256 of the file at `path`. Consumers SHOULD verify and MUST reject on mismatch when `integrity` is 'required'." },
+          "bundle": { "type": "string", "description": "Optional grouping/plugin the skill belongs to." },
+          "provenance": {
+            "type": "object",
+            "description": "Where this skill came from, for attribution and update.",
+            "properties": {
+              "source": { "type": "string", "format": "uri" },
+              "commit": { "type": "string" },
+              "registry": { "type": "string" }
+            },
+            "additionalProperties": true
+          },
+          "metadata": { "type": "object", "additionalProperties": true, "description": "Open extension. Consumers MUST ignore unknown keys." }
+        },
+        "additionalProperties": false
+      }
+    },
+    "integrity": {
+      "type": "string",
+      "enum": ["none", "advisory", "required"],
+      "default": "advisory",
+      "description": "How consumers MUST treat `sha256`. 'required' = reject the pack on any missing/mismatched hash."
+    },
+    "compatibility": {
+      "type": "object",
+      "description": "Optional hints about what runtimes this pack targets. Purely advisory — packs are provider-neutral by design.",
+      "properties": {
+        "runtimes": { "type": "array", "items": { "type": "string" }, "description": "e.g. ['claude', 'openai', 'gemini', 'mcp']." },
+        "minSkillspec": { "type": "string", "description": "Minimum SkillSpec version the SKILL.md bodies conform to." }
+      },
+      "additionalProperties": true
+    },
+    "signatures": {
+      "type": "array",
+      "description": "Optional detached signatures over the canonicalised manifest, for provenance beyond per-file hashes.",
+      "items": {
+        "type": "object",
+        "required": ["algorithm", "value"],
+        "properties": {
+          "algorithm": { "type": "string", "description": "e.g. 'ed25519', 'sigstore'." },
+          "keyid": { "type": "string" },
+          "value": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": false
+}
