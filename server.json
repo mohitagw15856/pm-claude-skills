@@ -23,6 +23,14 @@
         },
         {
           "type": "positional",
+          "value": "-p"
+        },
+        {
+          "type": "positional",
+          "value": "pm-claude-skills"
+        },
+        {
+          "type": "positional",
           "value": "pm-claude-skills-mcp"
         }
       ]

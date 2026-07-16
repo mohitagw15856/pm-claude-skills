@@ -4,4 +4,4 @@ startCommand:
   type: stdio
   configSchema: {}
   commandFunction: |-
-    () => ({ command: 'npx', args: ['-y', 'pm-claude-skills-mcp'] })
+    () => ({ command: 'npx', args: ['-y', '-p', 'pm-claude-skills', 'pm-claude-skills-mcp'] })
