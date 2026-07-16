@@ -1,0 +1,41 @@
+name: Star history
+
+# Self-hosted star-history chart. The README used to embed star-history.com's
+# SVG, but that service makes anonymous GitHub API calls and gets rate-limited
+# (the image then shows a "please add a token" message). This regenerates the
+# chart ourselves with the repo's GITHUB_TOKEN (5,000 req/hr) and commits a
+# static SVG — no third party, never rate-limited. Run once now, then weekly.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 4 * * 1' # every Monday 04:17 UTC
+
+permissions:
+  contents: write
+
+concurrency:
+  group: star-history
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Regenerate the star-history chart
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/build-star-history.mjs
+
+      - name: Commit if it changed
+        run: |
+          git config user.name  "star-history-bot"
+          git config user.email "star-history-bot@users.noreply.github.com"
+          git add web/docs-assets/star-history.svg
+          git diff --cached --quiet || git commit -m "chore: refresh star-history chart"
+          git push

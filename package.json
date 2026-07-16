@@ -67,6 +67,7 @@
     "build:pages": "node scripts/build-skill-pages.mjs",
     "build:community": "node scripts/build-community.mjs",
     "build:og": "node scripts/build-og-images.mjs",
+    "build:star": "node scripts/build-star-history.mjs",
     "build:deck": "node scripts/build-deck.mjs",
     "build:show": "node scripts/build-morning-show.mjs",
     "grow": "node scripts/mine-gaps.mjs",

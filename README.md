@@ -1357,7 +1357,9 @@ Want a specific skill built? [Vote or request in SKILL_REQUEST.md](SKILL_REQUEST
 
 ### 📈 Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=mohitagw15856/pm-claude-skills&type=Date)](https://star-history.com/#mohitagw15856/pm-claude-skills&Date)
+[![Star History Chart](web/docs-assets/star-history.svg)](https://star-history.com/#mohitagw15856/pm-claude-skills&Date)
+
+<sub>Self-hosted chart (regenerated weekly by the [star-history workflow](.github/workflows/star-history.yml) with the repo token — no rate-limited third party). Click through for the live interactive version.</sub>
 
 ---
 

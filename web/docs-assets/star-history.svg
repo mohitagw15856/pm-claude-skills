@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" font-family="-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+  <rect width="760" height="420" rx="14" fill="#ffffff"/>
+  <rect x="0.5" y="0.5" width="759" height="419" rx="14" fill="none" stroke="#e6e8ec"/>
+  <text x="62" y="30" font-size="17" font-weight="700" fill="#1a1d23">⭐ Star History</text>
+  <text x="380" y="205" text-anchor="middle" font-size="16" fill="#5b6672">The chart populates on the first CI run.</text>
+  <text x="380" y="232" text-anchor="middle" font-size="13" fill="#8a909a">Actions → “Star history” → Run workflow — then it refreshes weekly.</text>
+  <text x="380" y="404" text-anchor="middle" font-size="10.5" fill="#b0b5bd">github.com/mohitagw15856/pm-claude-skills · self-hosted, no rate-limited third party</text>
+</svg>
