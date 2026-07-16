@@ -711,6 +711,12 @@ function initCmdBar() {
     const best = results.querySelector('.cmd-hit');
     if (best) best.click(); else show(input.value);
   });
+  // Deep link: ?q=… pre-fills the command bar (used by the browser extension's
+  // right-click "Browse the whole library…" on a text selection).
+  try {
+    const q = new URLSearchParams(location.search).get('q');
+    if (q) { input.value = q; show(q); input.focus(); }
+  } catch (_) { /* ignore */ }
 }
 
 function makeCard(s) {

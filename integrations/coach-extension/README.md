@@ -7,6 +7,12 @@ The library comes to *you*. As you draft a doc, an issue, or an email, a quiet n
 
 Works on **Google Docs, Gmail, GitHub, Linear, Notion, Jira/Confluence, and Slack**.
 
+### Or: right-click any text → send it to a skill
+
+Don't want to wait for a nudge? Select any text on **any** page, right-click, and choose **"Run a PM Skill on …"**. Pick one of a dozen everyday skills (Executive Update, PRD, Postmortem, Rewrite Clearer, …) and the playground opens with your selection already dropped into the skill's first input — ready to run. Or choose **"Browse the whole library…"** to send the selection to the command bar and pick the best fit from all 500+.
+
+This is handled by a small background service worker (`background.js`) using Chrome's `contextMenus` API. Like the coach, it sends nothing on its own — it just opens a link your browser navigates to.
+
 ## Private by design
 
 Everything runs locally. The text you type is matched against a **bundled skill index** in your browser — **nothing you write ever leaves the page**. The only thing that happens is a suggestion chip appears; clicking it opens the playground.
