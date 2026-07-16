@@ -74,6 +74,11 @@
       ['morningshow.html', '📻 Morning Show'],
       ['consult.html', '💬 Consultant Mode'],
       ['certified.html', '🎓 Operator\'s Exam'],
+      ['workos.html', '🛰️ Work OS'],
+      ['app.html', '⚙️ Prompt-to-App'],
+      ['timemachine.html', '⏳ Time Machine'],
+      ['cocanvas.html', '🧑‍🤝‍🧑 Co-Canvas'],
+      ['spatial.html', '🌌 Spatial 3D'],
     ] },
     { group: 'Tools', items: [
       ['firm.html', '🏢 The Firm'],

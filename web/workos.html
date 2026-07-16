@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Work OS — your professional mission control</title>
+<meta name="description" content="A cinematic command deck for your work: dump your open loops and this week, and get a prioritised battle plan that maps each item to the exact skill to run — with live clock, focus panel, and one-click launches." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
+<script src="providers.js"></script>
+<style>
+  .os-wrap { max-width: 1040px; margin: 0 auto; padding: 12px 22px 60px; }
+  .deck { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 720px){ .deck { grid-template-columns: 1fr; } }
+  .panel { border: 1px solid var(--border); border-radius: 14px; background: linear-gradient(160deg, var(--panel), var(--panel-2)); padding: 14px 16px; position: relative; overflow: hidden; }
+  .panel::before { content:''; position:absolute; top:0; left:0; right:0; height:2px; background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity:.7; }
+  .panel h3 { margin: 0 0 8px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); }
+  .clock { font-variant-numeric: tabular-nums; font-size: 40px; font-weight: 800; letter-spacing: 1px; }
+  .clock small { font-size: 14px; color: var(--muted); font-weight: 500; display:block; letter-spacing:0; }
+  textarea { width: 100%; box-sizing: border-box; min-height: 120px; padding: 11px 13px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-family: inherit; font-size: 14px; }
+  .actions { display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin-top:10px; }
+  .plan { margin-top: 8px; }
+  .plan .step { border-left: 3px solid var(--accent); padding: 8px 12px; margin: 8px 0; background: var(--panel-2); border-radius: 0 10px 10px 0; }
+  .plan .step a { font-size: 12px; }
+  .chips { display:flex; gap:8px; flex-wrap:wrap; }
+  .chip { border: 1px solid var(--border); border-radius: 999px; padding: 6px 12px; font-size: 13px; text-decoration:none; color: var(--text); background: var(--panel-2); }
+  .chip:hover { border-color: var(--accent); }
+  .full { grid-column: 1 / -1; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Work OS</h1><p class="tagline">Mission control for professional work.</p></div>
+  </div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="key-note">🔒 Your loops + key stay in your browser. Your notes are saved locally so the deck remembers them.</div>
+
+<div class="os-wrap">
+  <div class="deck">
+    <div class="panel"><h3>Local time</h3><div class="clock" id="clock">--:--</div><div id="greet" style="color:var(--muted);margin-top:6px"></div></div>
+    <div class="panel"><h3>Deploy next</h3><div class="chips" id="recos"></div></div>
+    <div class="panel full">
+      <h3>Open loops &amp; this week</h3>
+      <textarea id="loops" placeholder="Dump everything: the deck due Thursday, the reorg you're dreading, the churned account, the vague 'strategy' ask, the 1:1 you keep postponing…"></textarea>
+      <div class="actions">
+        <button id="planBtn" class="primary" type="button">🎯 Build my battle plan</button>
+        <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+        <span id="status" class="status"></span>
+      </div>
+    </div>
+    <div class="panel full" id="planPanel" hidden><h3>Today's battle plan</h3><div class="plan" id="plan"></div></div>
+  </div>
+</div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let SKILLS=[], controller=null;
+init();
+async function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  el('planBtn').addEventListener('click',plan);
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+  el('loops').value=localStorage.getItem('pm_workos_loops')||'';
+  el('loops').addEventListener('input',()=>localStorage.setItem('pm_workos_loops',el('loops').value));
+  tick(); setInterval(tick,1000);
+  try{ SKILLS=(await (await fetch('skills.json')).json()).skills; }catch(e){}
+  renderRecos();
+}
+function tick(){ const d=new Date(); el('clock').innerHTML=d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})+'<small>'+d.toLocaleDateString([], {weekday:'long',month:'short',day:'numeric'})+'</small>'; const h=d.getHours(); el('greet').textContent=(h<12?'Morning':h<18?'Afternoon':'Evening')+' — what are we winning today?'; }
+function renderRecos(){
+  if(!SKILLS.length) return;
+  const day=new Date().getDate();
+  const picks=[]; for(let i=0;i<6;i++){ picks.push(SKILLS[(day*7+i*53)%SKILLS.length]); }
+  el('recos').innerHTML=picks.filter(Boolean).map(s=>`<a class="chip" href="index.html?skill=${encodeURIComponent(s.name)}">${escape(s.title)}</a>`).join('');
+}
+async function plan(){
+  const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your provider key.',true);
+  const loops=el('loops').value.trim(); if(loops.length<15) return setStatus('Dump a few real open loops first.',true);
+  const names=SKILLS.map(s=>s.name).join(', ').slice(0,7000);
+  const system=`You are an elite chief-of-staff running someone's day. Given their open loops, produce a prioritised battle plan. For EACH item output exactly one line block:
+
+- **[priority P0/P1/P2] Title** — one sentence on the first concrete move · SKILL: <exact-skill-name-from-the-list-or-none>
+
+Rank ruthlessly (what actually matters today first). Pick the single most relevant skill name from this list for each, or "none" if nothing fits — never invent a skill name. Keep it to the top 6 items. Start with one bold line naming the single most important thing today.
+
+Available skill names: ${names}`;
+  if(window.pmTrack) pmTrack('workos/plan');
+  el('planPanel').hidden=false; const out=el('plan'); out.innerHTML='';
+  el('planBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController(); setStatus('Planning…');
+  try{
+    const acc=await PMProviders.stream({key,model:el('model').value,system,userMessage:loops,signal:controller.signal,onDelta:(a)=>{ out.innerHTML=renderPlan(a); }});
+    out.innerHTML=renderPlan(acc); setStatus('Plan ready.');
+  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
+  finally{ el('planBtn').disabled=false; el('stopBtn').hidden=true; controller=null; }
+}
+function renderPlan(md){
+  return md.split('\n').filter(l=>l.trim()).map(line=>{
+    const m=line.match(/SKILL:\s*([a-z0-9-]+)/i); const skill=m&&m[1]&&m[1]!=='none'?m[1]:null;
+    const body=DOMPurify.sanitize(marked.parseInline(line.replace(/·?\s*SKILL:.*$/i,'').replace(/^-\s*/,'')));
+    if(/^#|battle plan/i.test(line)&&!/^-/.test(line)) return '';
+    const link=skill?` <a href="index.html?skill=${encodeURIComponent(skill)}">▶ run ${escape(skill)}</a>`:'';
+    return line.trim().startsWith('-')||/P0|P1|P2/.test(line) ? `<div class="step">${body}${link}</div>` : `<p><strong>${body}</strong></p>`;
+  }).join('');
+}
+function escape(s){ return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

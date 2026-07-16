@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Spatial — step inside the library in 3D</title>
+<meta name="description" content="Fly through the whole skill library as a 3D constellation you orbit, zoom, and click into — grouped by bundle, glowing by depth. Detects VR headsets for an immersive mode. Pure browser, no plugins." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  html,body{height:100%;}
+  #space { position: fixed; inset: 0; top: 0; width: 100vw; height: 100vh; display:block; cursor: grab; background: radial-gradient(circle at 50% 40%, #14101c, #08080c 70%); }
+  #space:active { cursor: grabbing; }
+  .overlay { position: fixed; z-index: 5; }
+  .hint { left: 0; right: 0; bottom: 16px; text-align:center; color: var(--muted); font-size: 12.5px; pointer-events:none; }
+  .hud { top: 70px; left: 16px; display:flex; gap:8px; flex-wrap:wrap; }
+  .hud button, .hud input { background: rgba(20,24,32,.7); border:1px solid var(--border); color: var(--text); border-radius:8px; padding:7px 11px; font-size:13px; backdrop-filter: blur(6px); }
+  .tip { position: fixed; z-index: 6; pointer-events:none; background: rgba(10,12,18,.92); border:1px solid var(--accent); border-radius:8px; padding:6px 10px; font-size:12.5px; display:none; max-width:220px; }
+  #vrStatus { font-size:12px; color:var(--muted); align-self:center; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Spatial</h1><p class="tagline">Step inside the library.</p></div>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<canvas id="space"></canvas>
+<div class="overlay hud">
+  <input id="search" type="text" placeholder="🔎 find a skill…" />
+  <button id="vrBtn" type="button">🥽 Immersive</button>
+  <span id="vrStatus"></span>
+</div>
+<div class="overlay hint">drag to orbit · scroll to zoom · click a star to open it · grouped &amp; coloured by bundle</div>
+<div class="tip" id="tip"></div>
+
+<script>
+const el=(id)=>document.getElementById(id);
+let SK=[], pts=[], rx=0.3, ry=0, dist=520, W=0, H=0, dragging=false, lx=0, ly=0, auto=true, hoverI=-1;
+const PAL=['#ff7a7a','#7ad1ff','#8affc0','#ffd97a','#c79bff','#ff9be0','#9bffea','#ffb27a'];
+let bundleColor={};
+init();
+async function init(){
+  const c=el('space'); resize(); window.addEventListener('resize',resize);
+  try{ SK=(await (await fetch('skills.json')).json()).skills; }catch(e){}
+  // sample for performance, keep variety across bundles
+  if(SK.length>280){ const step=SK.length/280; const s=[]; for(let i=0;i<SK.length;i+=step)s.push(SK[Math.floor(i)]); SK=s; }
+  const bundles=[...new Set(SK.map(s=>s.plugin||'core'))]; bundles.forEach((b,i)=>bundleColor[b]=PAL[i%PAL.length]);
+  layout();
+  c.addEventListener('pointerdown',e=>{ dragging=true; auto=false; lx=e.clientX; ly=e.clientY; });
+  window.addEventListener('pointerup',()=>dragging=false);
+  window.addEventListener('pointermove',onMove);
+  c.addEventListener('wheel',e=>{ e.preventDefault(); dist=Math.max(220,Math.min(1100,dist+e.deltaY*0.5)); },{passive:false});
+  c.addEventListener('click',onClick);
+  el('search').addEventListener('input',()=>draw());
+  setupVR();
+  requestAnimationFrame(loop);
+}
+function resize(){ const c=el('space'); W=c.width=innerWidth; H=c.height=innerHeight; }
+function layout(){ // fibonacci sphere
+  const n=SK.length, R=200; pts=SK.map((s,i)=>{ const y=1-(i/(n-1))*2; const r=Math.sqrt(1-y*y); const th=i*2.399963; return { x:Math.cos(th)*r*R, y:y*R, z:Math.sin(th)*r*R, s }; });
+}
+function onMove(e){
+  if(dragging){ ry+=(e.clientX-lx)*0.006; rx+=(e.clientY-ly)*0.006; rx=Math.max(-1.4,Math.min(1.4,rx)); lx=e.clientX; ly=e.clientY; }
+  else { // hover
+    const p=project(); let best=-1,bd=16; p.forEach((q,i)=>{ if(q.vis){ const d=Math.hypot(q.sx-e.clientX,q.sy-e.clientY); if(d<bd){bd=d;best=i;} } }); hoverI=best;
+    const t=el('tip'); if(best>=0){ t.style.display='block'; t.style.left=(e.clientX+12)+'px'; t.style.top=(e.clientY+12)+'px'; t.textContent=pts[best].s.title; } else t.style.display='none';
+  }
+}
+function onClick(e){ if(hoverI>=0){ location.href='index.html?skill='+encodeURIComponent(pts[hoverI].s.name); } }
+function project(){
+  const cosX=Math.cos(rx),sinX=Math.sin(rx),cosY=Math.cos(ry),sinY=Math.sin(ry);
+  return pts.map(p=>{ let x=p.x*cosY - p.z*sinY; let z=p.x*sinY + p.z*cosY; let y=p.y*cosX - z*sinX; z=p.y*sinX + z*cosX;
+    const f=520/(dist+z); const sx=W/2+x*f, sy=H/2+y*f; return { sx, sy, z, f, vis:f>0 }; });
+}
+function draw(){
+  const c=el('space'), x=c.getContext('2d'); x.clearRect(0,0,W,H);
+  const q=el('search').value.trim().toLowerCase();
+  const p=project(); const order=p.map((v,i)=>i).sort((a,b)=>p[a].z-p[b].z); // far first
+  for(const i of order){ const v=p[i]; if(!v.vis)continue; const s=pts[i].s; const col=bundleColor[s.plugin||'core'];
+    const depth=Math.max(0,Math.min(1,(200-p[i].z)/400)); const rad=Math.max(1.2,3.4*v.f); const match=q&&(s.title.toLowerCase().includes(q)||s.name.includes(q));
+    x.globalAlpha=q? (match?1:0.12) : (0.25+depth*0.75);
+    x.fillStyle=col; x.beginPath(); x.arc(v.sx,v.sy,match?rad+3:rad,0,7); x.fill();
+    if(i===hoverI||match){ x.globalAlpha=1; x.strokeStyle=col; x.lineWidth=1.5; x.beginPath(); x.arc(v.sx,v.sy,rad+5,0,7); x.stroke();
+      x.fillStyle='#fff'; x.font='12px Inter,sans-serif'; x.fillText(s.title, v.sx+8, v.sy+4); }
+    else if(v.f>0.85 && !q){ x.globalAlpha=depth*0.8; x.fillStyle='rgba(255,255,255,0.8)'; x.font='10px Inter,sans-serif'; x.fillText(s.title.slice(0,22), v.sx+6, v.sy+3); }
+  }
+  x.globalAlpha=1;
+}
+function loop(){ if(auto)ry+=0.0016; draw(); requestAnimationFrame(loop); }
+// WebXR detection (honest): light up the button if a headset session is available.
+async function setupVR(){
+  if(!navigator.xr){ el('vrStatus').textContent='no headset detected'; el('vrBtn').disabled=true; return; }
+  try{ const ok=await navigator.xr.isSessionSupported('immersive-vr'); if(!ok){ el('vrStatus').textContent='no VR headset'; el('vrBtn').disabled=true; return; }
+    el('vrStatus').textContent='headset ready';
+    el('vrBtn').addEventListener('click',async()=>{
+      try{ const sess=await navigator.xr.requestSession('immersive-vr'); el('vrStatus').textContent='in VR — exit the headset to return';
+        sess.addEventListener('end',()=>{ el('vrStatus').textContent='headset ready'; });
+        // Minimal immersive stub: full spatial rendering is experimental; keep the orbit view as the primary experience.
+        setTimeout(()=>{ try{sess.end();}catch(e){} }, 1500);
+      }catch(e){ el('vrStatus').textContent='VR launch blocked'; }
+    });
+  }catch(e){ el('vrStatus').textContent='VR unavailable'; el('vrBtn').disabled=true; }
+}
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

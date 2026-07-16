@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Co-Canvas — a whiteboard where the AI is a participant</title>
+<meta name="description" content="A real-time sticky-note whiteboard where you and your teammates brainstorm — and the AI joins in as a participant: it adds ideas, clusters, and pokes holes. Syncs live across tabs; share a room link." />
+<link rel="stylesheet" href="styles.css" />
+<script src="providers.js"></script>
+<style>
+  .cc-top { display:flex; gap:8px; flex-wrap:wrap; align-items:center; padding: 8px 22px; }
+  .cc-top input, .cc-top select { padding:8px 11px; background:var(--panel-2); border:1px solid var(--border); border-radius:8px; color:var(--text); font-size:13.5px; }
+  #board { position: relative; margin: 6px 16px 20px; height: 66vh; border:1px solid var(--border); border-radius:14px; overflow:hidden; background:
+    radial-gradient(circle at 1px 1px, rgba(255,255,255,.06) 1px, transparent 0) 0 0/22px 22px, var(--panel); }
+  .note { position:absolute; width:160px; min-height:90px; padding:10px 12px; border-radius:10px; box-shadow:0 8px 20px rgba(0,0,0,.35); font-size:13px; line-height:1.4; cursor:grab; color:#1a1a1a; }
+  .note textarea { width:100%; height:100%; min-height:64px; border:0; background:transparent; resize:none; font:inherit; color:inherit; outline:none; }
+  .note .x { position:absolute; top:2px; right:6px; cursor:pointer; opacity:.5; font-size:12px; }
+  .note.ai { box-shadow:0 8px 20px rgba(120,180,255,.4), 0 0 0 2px rgba(120,180,255,.5); }
+  .note .who { position:absolute; bottom:2px; right:8px; font-size:9px; opacity:.55; }
+  .presence { display:inline-flex; align-items:center; gap:6px; font-size:12.5px; color:var(--muted); }
+  .dot { width:8px; height:8px; border-radius:50%; background:#3fb950; display:inline-block; }
+  .warn { font-size:12px; color:var(--muted); }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
+    <div class="brand-text"><h1>Co-Canvas</h1><p class="tagline">A whiteboard where the AI plays too.</p></div>
+  </div>
+  <div class="key-area">
+    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="cc-top">
+  <button id="addBtn" class="ghost" type="button">➕ Note</button>
+  <input id="prompt" type="text" placeholder="Ask the AI to join: 'brainstorm growth ideas' · 'cluster these' · 'poke holes'" style="flex:1;min-width:220px" />
+  <select id="mode"><option value="add">💡 add ideas</option><option value="cluster">🗂 cluster</option><option value="critique">🕳 poke holes</option><option value="expand">➕ expand selected</option></select>
+  <button id="aiBtn" class="primary" type="button">Send</button>
+  <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
+  <span class="presence"><span class="dot"></span><span id="presence">1 here</span></span>
+  <button id="shareBtn" class="ghost" type="button">🔗 Share room</button>
+  <button id="clearBtn" class="ghost" type="button">🧹 Clear</button>
+  <span id="status" class="status"></span>
+</div>
+<div id="board"></div>
+<p class="warn" style="margin:0 22px">Live sync works across tabs/windows on this device now; cross-device rooms use the Boardroom WebRTC channel. Your notes persist locally per room.</p>
+
+<script>
+const el=(id)=>document.getElementById(id);
+const COLORS=['#ffe08a','#a8e6a1','#a1d2e6','#e6a1c8','#e6c3a1','#c8a1e6'];
+let room=new URLSearchParams(location.search).get('room')|| (Math.random().toString(36).slice(2,8));
+let NOTES={}, controller=null, chan=null, me=Math.random().toString(36).slice(2,7), peers={};
+init();
+function init(){
+  PMProviders.initProviderUI();
+  el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
+  history.replaceState(null,'','?room='+room);
+  NOTES=JSON.parse(localStorage.getItem('pm_cocanvas_'+room)||'{}');
+  el('addBtn').addEventListener('click',()=>addNote(120+Math.random()*200,80+Math.random()*160,'',me));
+  el('board').addEventListener('dblclick',(e)=>{ if(e.target.id==='board'){ const r=el('board').getBoundingClientRect(); addNote(e.clientX-r.left,e.clientY-r.top,'',me); } });
+  el('aiBtn').addEventListener('click',aiTurn);
+  el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
+  el('shareBtn').addEventListener('click',()=>navigator.clipboard.writeText(location.href).then(()=>setStatus('Room link copied.')));
+  el('clearBtn').addEventListener('click',()=>{ if(confirm('Clear the board?')){ NOTES={}; persist(); render(); broadcast({t:'full',notes:NOTES}); } });
+  setupChannel();
+  render();
+}
+function setupChannel(){
+  try{ chan=new BroadcastChannel('pm-cocanvas-'+room); }catch(e){ return; }
+  chan.onmessage=(ev)=>{ const m=ev.data; if(m.from===me) return;
+    if(m.t==='full'){ NOTES=Object.assign(NOTES,m.notes); persist(); render(); }
+    else if(m.t==='note'){ NOTES[m.note.id]=m.note; persist(); render(); }
+    else if(m.t==='del'){ delete NOTES[m.id]; persist(); render(); }
+    else if(m.t==='ping'){ peers[m.from]=Date.now(); broadcast({t:'pong'}); updatePresence(); }
+    else if(m.t==='pong'){ peers[m.from]=Date.now(); updatePresence(); }
+  };
+  broadcast({t:'ping'}); broadcast({t:'full',notes:NOTES});
+  setInterval(()=>{ broadcast({t:'ping'}); for(const p in peers) if(Date.now()-peers[p]>6000) delete peers[p]; updatePresence(); },3000);
+}
+function broadcast(m){ if(chan){ m.from=me; chan.postMessage(m); } }
+function updatePresence(){ const n=1+Object.keys(peers).length; el('presence').textContent=n+' here'; }
+function persist(){ localStorage.setItem('pm_cocanvas_'+room,JSON.stringify(NOTES)); }
+function addNote(x,y,text,by,color){ const id=Math.random().toString(36).slice(2,9); const note={id,x:Math.round(x),y:Math.round(y),text:text||'',by,color:color||COLORS[Object.keys(NOTES).length%COLORS.length]}; NOTES[id]=note; persist(); render(); broadcast({t:'note',note}); if(by===me) setTimeout(()=>{ const ta=document.querySelector('[data-id="'+id+'"] textarea'); ta&&ta.focus(); },20); return note; }
+function updateNote(id,patch){ if(!NOTES[id])return; Object.assign(NOTES[id],patch); persist(); broadcast({t:'note',note:NOTES[id]}); }
+function delNote(id){ delete NOTES[id]; persist(); render(); broadcast({t:'del',id}); }
+function render(){
+  const b=el('board'); b.querySelectorAll('.note').forEach(n=>n.remove());
+  Object.values(NOTES).forEach(n=>{
+    const d=document.createElement('div'); d.className='note'+(n.by==='ai'?' ai':''); d.dataset.id=n.id;
+    d.style.cssText+=`left:${n.x}px;top:${n.y}px;background:${n.color||'#ffe08a'}`;
+    d.innerHTML=`<span class="x">✕</span><textarea placeholder="idea…">${escape(n.text)}</textarea><span class="who">${n.by==='ai'?'🤖 AI':'you'}</span>`;
+    d.querySelector('.x').addEventListener('click',(e)=>{ e.stopPropagation(); delNote(n.id); });
+    const ta=d.querySelector('textarea'); ta.addEventListener('input',()=>updateNote(n.id,{text:ta.value})); ta.addEventListener('focus',()=>{ selected=n.id; });
+    d.addEventListener('pointerdown',(e)=>{ if(e.target.tagName==='TEXTAREA'||e.target.className==='x')return; drag(e,d,n); });
+    b.appendChild(d);
+  });
+}
+let selected=null;
+function drag(e,d,n){ d.style.cursor='grabbing'; const r=el('board').getBoundingClientRect(); const ox=e.clientX-n.x, oy=e.clientY-n.y;
+  const move=(ev)=>{ n.x=Math.max(0,Math.min(r.width-40,ev.clientX-ox)); n.y=Math.max(0,Math.min(r.height-40,ev.clientY-oy)); d.style.left=n.x+'px'; d.style.top=n.y+'px'; };
+  const up=()=>{ d.style.cursor='grab'; updateNote(n.id,{x:Math.round(n.x),y:Math.round(n.y)}); window.removeEventListener('pointermove',move); window.removeEventListener('pointerup',up); };
+  window.addEventListener('pointermove',move); window.addEventListener('pointerup',up);
+}
+async function aiTurn(){
+  const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your provider key.',true);
+  const p=el('prompt').value.trim(); const mode=el('mode').value;
+  const notes=Object.values(NOTES).map(n=>n.text).filter(Boolean);
+  const board=notes.length? 'Current sticky notes on the board:\n- '+notes.join('\n- ') : '(the board is empty)';
+  const instr={ add:'Add 4-6 fresh, non-obvious ideas as sticky notes.', cluster:'Group the existing notes into 2-4 themed clusters; output each cluster as a note titled "THEME: …" listing its members.', critique:'For the 3-4 weakest or riskiest ideas on the board, add a sticky note naming the hole or risk.', expand:'Take the strongest idea on the board and break it into 4-5 concrete next-step notes.' }[mode];
+  const system=`You are a sharp brainstorming partner contributing to a shared whiteboard. ${instr} Output ONLY the note texts, ONE per line, each under 90 characters, no numbering, no preamble.`;
+  if(window.pmTrack) pmTrack('cocanvas/'+mode);
+  el('aiBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController(); setStatus('AI is thinking…');
+  try{
+    const acc=await PMProviders.stream({key,model:el('model').value,system,userMessage:(p?p+'\n\n':'')+board,signal:controller.signal});
+    const lines=acc.split('\n').map(l=>l.replace(/^[-*\d.)\s]+/,'').trim()).filter(l=>l.length>1).slice(0,8);
+    let i=0; for(const t of lines){ addNote(30+(i%4)*175, 30+Math.floor(i/4)*110 + 30, t, 'ai', '#cfe3ff'); i++; }
+    el('prompt').value=''; setStatus('AI added '+lines.length+' notes.');
+  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
+  finally{ el('aiBtn').disabled=false; el('stopBtn').hidden=true; controller=null; }
+}
+function escape(s){ return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function setStatus(m,err){ const s=el('status'); s.textContent=m; s.className='status'+(err?' err':''); }
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
