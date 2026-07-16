@@ -43,18 +43,45 @@ jobs:
         run: |
           pip install -q "huggingface_hub>=0.23"
           python3 - <<'EOF'
-          import os
+          import os, time
           from huggingface_hub import HfApi
+          from huggingface_hub.utils import HfHubHTTPError
+
+          # The Hub occasionally returns a transient 5xx / gateway timeout (e.g. a 504 on
+          # whoami-v2). Those are server-side blips, not real failures — so retry with
+          # exponential backoff instead of failing the whole release publish.
+          TRANSIENT = (500, 502, 503, 504, 408, 429)
+          def with_retry(desc, fn, attempts=5):
+              delay = 4
+              for i in range(1, attempts + 1):
+                  try:
+                      return fn()
+                  except HfHubHTTPError as e:
+                      code = getattr(getattr(e, "response", None), "status_code", None)
+                      if code not in TRANSIENT or i == attempts:
+                          raise
+                      print(f"::warning::{desc} got HTTP {code} (attempt {i}/{attempts}); retrying in {delay}s…")
+                  except Exception as e:  # connection resets / read timeouts
+                      if i == attempts:
+                          raise
+                      print(f"::warning::{desc} failed ({e.__class__.__name__}: {e}); retrying in {delay}s… ({i}/{attempts})")
+                  time.sleep(delay); delay = min(delay * 2, 60)
+
           api = HfApi(token=os.environ["HF_TOKEN"])
-          user = api.whoami()["name"]
-          repo = os.environ.get("HF_DATASET_REPO") or f"{user}/pm-skills-instruct"
-          api.create_repo(repo, repo_type="dataset", exist_ok=True)
+          repo = os.environ.get("HF_DATASET_REPO")
+          if not repo:
+              # Only hit whoami when we must derive the namespace — set HF_DATASET_REPO to skip it entirely.
+              user = with_retry("whoami", lambda: api.whoami()["name"])
+              repo = f"{user}/pm-skills-instruct"
+          with_retry("create_repo", lambda: api.create_repo(repo, repo_type="dataset", exist_ok=True))
           # The card becomes the dataset README on the Hub.
-          api.upload_file(path_or_fileobj="dataset/CARD.md", path_in_repo="README.md",
-                          repo_id=repo, repo_type="dataset")
+          with_retry("upload README", lambda: api.upload_file(
+              path_or_fileobj="dataset/CARD.md", path_in_repo="README.md",
+              repo_id=repo, repo_type="dataset"))
           for f in ("routing.jsonl", "sft-seeds.jsonl", "samples.jsonl"):
-              api.upload_file(path_or_fileobj=f"dataset/{f}", path_in_repo=f,
-                              repo_id=repo, repo_type="dataset",
-                              commit_message=f"release {os.environ['TAG']}")
+              with_retry(f"upload {f}", lambda f=f: api.upload_file(
+                  path_or_fileobj=f"dataset/{f}", path_in_repo=f,
+                  repo_id=repo, repo_type="dataset",
+                  commit_message=f"release {os.environ['TAG']}"))
           print(f"Published to https://huggingface.co/datasets/{repo}")
           EOF
