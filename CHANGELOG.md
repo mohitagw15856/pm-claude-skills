@@ -9,6 +9,29 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [52.0.0] — the sensory & spatial release: new ways in, out, and around the library — 2026-07-16
+
+### Added — 🎙️ sensory: new ways in and out
+- **[Voice Mode](https://mohitagw15856.github.io/pm-claude-skills/voice.html)** — a hands-free voice agent fronted by a living canvas **orb** that listens, thinks, and speaks in colour. Web Speech STT + `speechSynthesis` TTS; pick a skill or a free assistant; optional hands-free re-loop. Audio never leaves the browser — only the transcript reaches your provider.
+- **[Live Capture](https://mohitagw15856.github.io/pm-claude-skills/capture.html)** — point a camera at a whiteboard / contract / screen / chart and turn the frame into an artifact **live**, with an animated scanning overlay. Uses the multi-provider vision path (Claude / Gemini / OpenAI).
+- **[Video export](https://mohitagw15856.github.io/pm-claude-skills/video.html)** — paste any output and render a shareable animated **`.webm`** (motion graphic, counting numbers, a Web-Audio soundtrack, your Brand-Kit colour) via `canvas.captureStream` + `MediaRecorder`. No upload.
+
+### Added — 🌊 living visuals
+- **[The War Table](https://mohitagw15856.github.io/pm-claude-skills/wartable.html)** — watch two AI agents **negotiate live**: moves land one at a time, a tension meter and deal-proximity bar swing, and it ends in a verdict (deal / close / standoff). Four scenarios.
+- **[Holo Cards](https://mohitagw15856.github.io/pm-claude-skills/holo.html)** — tear open a **booster pack** and pull tilt-reactive, gyroscope-aware **holographic** skill cards with rarities; every card deep-links into the Playground.
+
+### Added — 🌐 immersive & interactive
+- **[Work OS](https://mohitagw15856.github.io/pm-claude-skills/workos.html)** — a cinematic mission-control deck: dump your open loops and get a **ranked battle plan** that maps each item to the exact skill to run (one-click launches), with a live clock and a "deploy next" rail.
+- **[Prompt-to-App](https://mohitagw15856.github.io/pm-claude-skills/app.html)** — describe a tool (calculator / tracker / quiz / decision matrix) and get a complete **working single-file app** whose state serialises into the URL, so a link reproduces it.
+- **[The Time Machine](https://mohitagw15856.github.io/pm-claude-skills/timemachine.html)** — a draggable, **playable timeline** that replays your professional history (scans local data, accepts pasted `YYYY-MM-DD — event` lines, or a demo) — events and running state animate as you scrub.
+- **[Co-Canvas](https://mohitagw15856.github.io/pm-claude-skills/cocanvas.html)** — a sticky-note whiteboard where **the AI is a participant** (add / cluster / poke holes / expand), with live cross-tab sync (`BroadcastChannel`), presence, and room share links.
+- **[Spatial 3D](https://mohitagw15856.github.io/pm-claude-skills/spatial.html)** — fly through the whole library as a **3D constellation** (hand-rolled canvas projection, no deps): orbit, zoom, search, click a star to open it, coloured by bundle; detects VR headsets via WebXR.
+
+### Changed
+- 10 new surfaces added to the **🆕 New** nav group; new README showcase strip with live screenshots.
+- Cheatsheet poster refreshed (74 bundles · 31 professions) and re-exported to PNG/PDF.
+- **Library:** **515 skills, 74 bundles** — capability, not count.
+
 ## [51.0.0] — the artifact release: skills stop answering and start producing — 2026-07-16
 
 ### Added — 🏭 "Make it real": every skill's output becomes a real deliverable
