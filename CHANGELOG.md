@@ -9,6 +9,30 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+### Added — 🤝 Trust & proof (close the loop)
+- **[Outcome Ledger](https://mohitagw15856.github.io/pm-claude-skills/ledger.html)** — log what each artifact became in the real world (landed / mixed / no / pending) and see per-skill landed-rate; opt-in "claim" contributes anonymised counts. Local-first (`pm_outcome_ledger_v1`).
+- **[Cost & Privacy meter](https://mohitagw15856.github.io/pm-claude-skills/cost.html)** — per-run token-cost estimate, a running local total, and a plain-English "where your data went" panel. Backed by `web/pmcost.js` (`PMCost`).
+- **[Model Duel](https://mohitagw15856.github.io/pm-claude-skills/duel.html)** — run the same task on three models side-by-side and pick a winner.
+- **Accessibility pass** — a site-wide `a11y.js` toolkit (high-contrast, dyslexia-friendly, large-text, reduced-motion, skip-link) wired into 67 pages.
+- **[Write-back to real tools](integrations/writeback/)** — a thin relay Worker that pushes a finished artifact into GitHub, Notion, Linear, or Slack using your own token.
+- **Right-click → send to a skill** — the coach browser extension now has a `contextMenus` background worker: select any text anywhere and drop it into a skill (pre-filled), or route it to the command bar (new `?q=` deep link).
+- **[Skill Remix](https://mohitagw15856.github.io/pm-claude-skills/remix.html)** — edit a skill's instructions, run the fork, word-diff against the original, share as a PR.
+- **[Trends dashboard](https://mohitagw15856.github.io/pm-claude-skills/trends.html)** — a privacy-preserving pulse of the library from opt-in ratings + eval scores.
+- **[The Operator's Path](https://mohitagw15856.github.io/pm-claude-skills/path.html)** — a 30-day certified-operator programme with streaks and review markers.
+- **[Scheduled reports](.github/workflows/scheduled-reports.yml)** — `config/scheduled-reports.json` + `scripts/scheduled-report.mjs` run a skill on a cadence and commit the output to `docs/reports/scheduled/`.
+
+### Added — 📦 Physical, standards & distribution
+- **[Skills API](https://mohitagw15856.github.io/pm-claude-skills/api.html)** — a live developer landing page over the existing edge REST API, plus a formal OpenAPI 3.1 contract (`integrations/api/openapi.yaml`) and BYO-key run guide.
+- **[The Operator's Journal](scripts/build-journal.mjs)** — a print-and-fill workbook generator: each spread is a real skill's output structure with lined space to draft by hand.
+- **[The Operator (tabletop game)](scripts/build-tabletop.mjs)** — a print-and-play party game about professional judgment (48 skill cards + 24 situations + rules), built from the real library.
+- **[E-ink desk companion](integrations/eink/)** — MicroPython for ESP32 + Waveshare e-paper showing "today's skill" from the public API; panel-agnostic driver adapter.
+- **[SkillBench working paper](docs/paper/skillbench.md)** — the professional-work benchmark's methodology, protocol, and honestly-negative initial skill-lift result.
+- **[Agent Skill Interchange (RFC-0001)](docs/rfcs/0001-skill-interchange.md)** — a provider-neutral `.skillpack` format for moving a *collection* of skills between agent systems, with provenance + integrity (`spec/skill-interchange.schema.json`).
+- **[Reports index](docs/reports/README.md)** — an index + shared methodology for the Institute's published reports.
+- **[Voice assistants](integrations/voice-assistants/)** — Alexa (interaction model + Lambda), Google Assistant (Actions webhook), and Apple Watch/Siri (Shortcuts recipe): name the best-fit skill by voice, push the full artifact to the phone.
+- **[Slack app](integrations/slack-app/) + [Zapier](integrations/zapier/) + [Make](integrations/make/)** — a `/skill` slash command and two automation-platform apps over the public API (BYO key; nothing stored).
+- **[Localized editions](scripts/build-localized-landing.mjs)** — a browsable public front door per translated language (`web/editions/<lang>.html`); ships the Spanish edition (50 skills).
+
 ## [52.0.0] — the sensory & spatial release: new ways in, out, and around the library — 2026-07-16
 
 ### Added — 🎙️ sensory: new ways in and out
