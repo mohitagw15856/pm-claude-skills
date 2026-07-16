@@ -17,7 +17,7 @@ bash <(curl -fsSL https://raw.githubusercontent.com/mohitagw15856/pm-claude-skil
 
 ## The dressed export
 
-[`exports/openclaw/`](../exports/openclaw/) carries all 496 skills as flat `<skill>/SKILL.md` folders with OpenClaw-native dressing on top of the canonical body: a top-level `homepage` (shown in the macOS Skills UI) and a `metadata.openclaw` block with a per-bundle emoji. Regenerated from `skills/` on every release — never hand-edited. Helper scripts stay in the source repo; per the [authoring standard](../SKILL-AUTHORING-STANDARD.md), every skill is useful with `SKILL.md` alone.
+[`exports/openclaw/`](../exports/openclaw/) carries all 515 skills as flat `<skill>/SKILL.md` folders with OpenClaw-native dressing on top of the canonical body: a top-level `homepage` (shown in the macOS Skills UI) and a `metadata.openclaw` block with a per-bundle emoji. Regenerated from `skills/` on every release — never hand-edited. Helper scripts stay in the source repo; per the [authoring standard](../SKILL-AUTHORING-STANDARD.md), every skill is useful with `SKILL.md` alone.
 
 ## Publishing to ClawHub (owner runbook, ~15 min)
 
@@ -45,7 +45,16 @@ clawhub install @mohitagw15856/email-triage      # or: openclaw skills install @
 
 **✅ Tranche 2 published 2026-07-14 (43 skills total live):** the full `pm-decoders` and `pm-simulators` bundles, calculators wave 2 (exit-waterfall, offer-comparison, refinance-breakeven, fire-number), the four v50 singles, and the `pm-lifeadmin` + `pm-personal` bundles — all at v50.0.0, self-contained packages (library-local sections stripped by the export).
 
-**Tranche 3 (the remaining ~470):** run `clawhub sync --dry-run` from `exports/openclaw/` after tranche 2 has a clean day of scans, then `clawhub sync --all`. Re-publish at each release so ClawHub never serves a stale body.
+**Tranche 3 — publish everything (v53.0.0):** the export already carries all **515** skills; only the first ~43 are live on ClawHub. To publish the rest and refresh the published bodies to the current release, run from the repo root:
+
+```bash
+clawhub sync --dry-run            # from exports/openclaw/ — review the full plan first (515 folders)
+clawhub sync --all --version 53.0.0
+```
+
+`clawhub sync` scans the folders and uploads new/changed skills, so it's safe to re-run — existing skills update in place, the rest get created. Re-`sync` after every release so ClawHub never serves a stale body.
+
+**Moderation note:** ClawHub may hold a newly-published skill for review before it goes live (e.g. `insurance-claim`). That's a ClawHub-side queue, not a defect — the skill passes this library's own security scan (`npx skillspec-check skills/insurance-claim` → **L3 Trustworthy**), so it's safe to approve from the [ClawHub dashboard](https://clawhub.ai/mohitagw15856).
 
 **House rule:** publish only from `exports/openclaw/` (the generated, dressed copies), and re-`sync` after each release so ClawHub never serves a stale body.
 
