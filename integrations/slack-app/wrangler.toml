@@ -1,0 +1,8 @@
+name = "pm-skills-slack"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# /skill slash command → runs a professional skill in Slack.
+# Deploy:  cd integrations/slack-app && npm install && npx wrangler deploy
+# Secrets: npx wrangler secret put SLACK_SIGNING_SECRET
+#          npx wrangler secret put ANTHROPIC_API_KEY

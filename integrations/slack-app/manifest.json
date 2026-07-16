@@ -1,0 +1,29 @@
+{
+  "display_information": {
+    "name": "PM Skills",
+    "description": "Run professional skills — PRDs, exec updates, postmortems — right in Slack.",
+    "background_color": "#1a1a2e"
+  },
+  "features": {
+    "bot_user": { "display_name": "PM Skills", "always_online": false },
+    "slash_commands": [
+      {
+        "command": "/skill",
+        "url": "https://REPLACE-with-your-worker.workers.dev",
+        "description": "Run a professional skill",
+        "usage_hint": "[skill-name | describe the task] your notes…",
+        "should_escape": false
+      }
+    ]
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": ["commands", "chat:write"]
+    }
+  },
+  "settings": {
+    "org_deploy_enabled": false,
+    "socket_mode_enabled": false,
+    "token_rotation_enabled": false
+  }
+}

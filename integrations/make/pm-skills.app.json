@@ -1,0 +1,79 @@
+{
+  "name": "pm-skills",
+  "label": "PM Skills",
+  "version": 1,
+  "description": "Find, fetch, and run professional skills (PRDs, exec updates, postmortems) in a Make scenario. Read actions need no key; Run uses your own Anthropic key.",
+  "language": "en",
+  "base": {
+    "baseUrl": "https://pm-skills-mcp.pm-claude-skills.workers.dev",
+    "headers": { "accept": "application/json" }
+  },
+  "modules": [
+    {
+      "name": "searchSkills",
+      "label": "Find a Skill",
+      "type": "search",
+      "description": "Search the library by keyword.",
+      "parameters": [
+        { "name": "query", "type": "text", "label": "Query", "required": true },
+        { "name": "limit", "type": "number", "label": "Max results", "default": 10 }
+      ],
+      "communication": {
+        "url": "/v1/search",
+        "method": "GET",
+        "qs": { "q": "{{parameters.query}}", "limit": "{{parameters.limit}}" },
+        "response": { "iterate": "{{body.skills}}", "output": "{{item}}" }
+      }
+    },
+    {
+      "name": "getSkill",
+      "label": "Get a Skill (with instructions)",
+      "type": "action",
+      "description": "Fetch one skill's full instructions — use as your model's system prompt.",
+      "parameters": [
+        { "name": "name", "type": "text", "label": "Skill name (slug)", "required": true }
+      ],
+      "communication": {
+        "url": "/v1/skills/{{parameters.name}}",
+        "method": "GET",
+        "response": { "output": "{{body}}" }
+      }
+    },
+    {
+      "name": "runSkill",
+      "label": "Run a Skill",
+      "type": "action",
+      "description": "Run a skill on your text using your Anthropic key. Returns the drafted artifact.",
+      "parameters": [
+        { "name": "name", "type": "text", "label": "Skill name (slug)", "required": true },
+        { "name": "input", "type": "text", "label": "Input text", "required": true },
+        { "name": "apiKey", "type": "password", "label": "Anthropic API key", "required": true },
+        { "name": "model", "type": "text", "label": "Model", "default": "claude-sonnet-4-6" }
+      ],
+      "communication": [
+        {
+          "url": "/v1/skills/{{parameters.name}}",
+          "method": "GET",
+          "response": { "output": { "instructions": "{{body.instructions}}", "title": "{{body.title}}" } },
+          "temp": { "skill": "{{body}}" }
+        },
+        {
+          "url": "https://api.anthropic.com/v1/messages",
+          "method": "POST",
+          "headers": {
+            "content-type": "application/json",
+            "x-api-key": "{{parameters.apiKey}}",
+            "anthropic-version": "2023-06-01"
+          },
+          "body": {
+            "model": "{{parameters.model}}",
+            "max_tokens": 2000,
+            "system": "{{temp.skill.instructions}}",
+            "messages": [{ "role": "user", "content": "{{parameters.input}}" }]
+          },
+          "response": { "output": { "title": "{{temp.skill.title}}", "output": "{{body.content[0].text}}" } }
+        }
+      ]
+    }
+  ]
+}

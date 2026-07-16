@@ -1,0 +1,10 @@
+{
+  "name": "pm-skills-zapier",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Zapier app — find, fetch, and run professional skills in any Zap.",
+  "main": "index.js",
+  "dependencies": {
+    "zapier-platform-core": "15.0.0"
+  }
+}
