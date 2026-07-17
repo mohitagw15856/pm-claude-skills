@@ -161,7 +161,18 @@
     'Tools': 'nav.tools', 'Explore': 'nav.explore',
   };
   var di = function (href) { return NAVKEY[href] ? ' data-i18n="' + NAVKEY[href] + '"' : ''; };
-  var link = function (href, lbl) { return '<a class="tool' + (href === file ? ' active' : '') + '"' + di(href) + ' href="' + href + '">' + lbl + '</a>'; };
+  // ROOT = the directory nav.js was loaded from — pages in subdirectories
+  // (/for/*, /skill/*) resolve every internal link against it.
+  var ROOT = (function () {
+    var scripts = document.getElementsByTagName('script');
+    for (var i = 0; i < scripts.length; i++) {
+      var m = (scripts[i].getAttribute('src') || '').match(/^(.*?)nav\.js/);
+      if (m) return m[1];
+    }
+    return '';
+  })();
+  var R = function (href) { return /^https?:/.test(href) ? href : ROOT + href; };
+  var link = function (href, lbl) { return '<a class="tool' + (href === file ? ' active' : '') + '"' + di(href) + ' href="' + R(href) + '">' + lbl + '</a>'; };
   nav.innerHTML = NAV.map(function (it) {
     if (it.external) return '<a class="tool' + (it.cta ? ' cta' : '') + '" href="' + it.href + '" target="_blank" rel="noopener">' + it.label + '</a>';
     if (it.href) return link(it.href, it.label);
@@ -204,7 +215,7 @@
     brand.setAttribute('role', 'link');
     brand.setAttribute('tabindex', '0');
     brand.title = 'Back to the Playground';
-    var goHome = function () { location.href = 'index.html'; };
+    var goHome = function () { location.href = R('index.html'); };
     brand.addEventListener('click', function (e) { if (!e.target.closest('a,button,select,input')) goHome(); });
     brand.addEventListener('keydown', function (e) { if (e.key === 'Enter') goHome(); });
   }
@@ -262,7 +273,7 @@
         return '<div data-h="' + pg[0] + '" style="padding:10px 16px;font-size:13.5px;cursor:pointer;color:' + (i === sel ? '#c9a227' : '#c7cfda') + ';background:' + (i === sel ? '#1a1f29' : 'transparent') + '">' + pg[1] + '</div>';
       }).join('') || '<div style="padding:12px 16px;color:#8b949e;font-size:13px">no page matches</div>';
       Array.prototype.forEach.call(hits.children, function (c) {
-        c.onclick = function () { if (c.dataset.h) location.href = c.dataset.h; };
+        c.onclick = function () { if (c.dataset.h) location.href = R(c.dataset.h); };
       });
     }
     q.addEventListener('input', function () { sel = 0; draw(); });
@@ -270,7 +281,7 @@
       if (e.key === 'Escape') { pal.remove(); pal = null; }
       if (e.key === 'ArrowDown') { sel++; draw(); e.preventDefault(); }
       if (e.key === 'ArrowUp') { sel = Math.max(0, sel - 1); draw(); e.preventDefault(); }
-      if (e.key === 'Enter' && cur[sel]) location.href = cur[sel][0];
+      if (e.key === 'Enter' && cur[sel]) location.href = R(cur[sel][0]);
     });
     pal.addEventListener('click', function (e) { if (e.target === pal) { pal.remove(); pal = null; } });
     draw(); q.focus();
@@ -291,10 +302,13 @@
 // ── PWA: manifest + offline service worker (registered from every page) ──────
 (function () {
   if (!document.querySelector('link[rel="manifest"]')) {
-    var l = document.createElement('link'); l.rel = 'manifest'; l.href = 'manifest.json';
+    var l = document.createElement('link'); l.rel = 'manifest';
+    var ns = document.querySelector('script[src*="nav.js"]');
+    var root2 = ns ? (ns.getAttribute('src').match(/^(.*?)nav\.js/) || ['', ''])[1] : '';
+    l.href = root2 + 'manifest.json';
     document.head.appendChild(l);
   }
   if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
-    navigator.serviceWorker.register('sw.js').catch(function () {});
+    navigator.serviceWorker.register((typeof root2 === 'string' ? root2 : '') + 'sw.js').catch(function () {});
   }
 })();

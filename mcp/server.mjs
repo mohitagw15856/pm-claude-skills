@@ -264,6 +264,32 @@ const TOOLS = [
   },
 ];
 
+// ── EXPERIMENTAL: MCP Apps (SEP-1300 draft) — an interactive skill picker the
+// host may render as an embedded UI. Off by default (MCP_APPS=1 enables);
+// the draft is moving, so this ships labeled experimental and additive-only.
+const MCP_APPS = process.env.MCP_APPS === '1';
+const PICKER_HTML = () => `<!DOCTYPE html><html><head><meta charset="utf-8"><style>
+body{font-family:system-ui;background:#0d1117;color:#e6edf3;margin:0;padding:14px}
+input,select,textarea{width:100%;box-sizing:border-box;background:#161b22;color:#e6edf3;border:1px solid #30363d;border-radius:8px;padding:8px;margin:4px 0}
+button{background:#8a5cf5;color:#fff;border:0;border-radius:8px;padding:9px 16px;font-weight:700;cursor:pointer;margin-top:8px}
+label{font-size:12px;color:#8b949e}</style></head><body>
+<h3 style="margin:0 0 8px">Run a skill</h3>
+<select id="sk">${SKILLS.slice().sort((a, b) => a.name.localeCompare(b.name)).map((s) => `<option value="${s.name}">${s.title}</option>`).join('')}</select>
+<div id="form"></div>
+<button id="go">Run</button>
+<script>
+const INPUTS=${JSON.stringify(Object.fromEntries(SKILLS.map((s) => [s.name, skillInputs(s)])))};
+const sk=document.getElementById('sk'),form=document.getElementById('form');
+function draw(){const list=INPUTS[sk.value]||[];form.innerHTML=list.map((i,n)=>'<label>'+i.label+(i.optional?' (optional)':'')+'</label>'+(i.long?'<textarea':'<input')+' data-arg="'+i.arg+'" id="f'+n+'"'+(i.long?'></textarea>':' />'))
+  .join('')||'<label>Your input</label><textarea id="f0" data-arg="task"></textarea>';}
+sk.addEventListener('change',draw);draw();
+document.getElementById('go').addEventListener('click',()=>{
+  const args={};form.querySelectorAll('[data-arg]').forEach((f)=>{if(f.value)args[f.dataset.arg]=f.value;});
+  // MCP Apps draft: the embedded app asks the host to call a tool on its behalf.
+  window.parent.postMessage({jsonrpc:'2.0',id:Date.now(),method:'tools/call',params:{name:'run_skill',arguments:{name:sk.value,inputs:args}}},'*');
+});
+</script></body></html>`;
+
 // Each tool returns { text, structured }: human-readable text content (back-compat) plus a
 // structured object matching the tool's outputSchema.
 const skillItem = (s) => ({ name: s.name, title: s.title, tier: s.tier, description: s.description });
@@ -442,10 +468,15 @@ function handle(msg) {
     }
     case 'resources/list':
       return reply(id, {
-        resources: SKILLS.map((s) => ({ uri: `skill://${s.name}`, name: s.title, description: s.description, mimeType: 'text/markdown' })),
+        resources: [
+          ...(MCP_APPS ? [{ uri: 'ui://pm-skills/picker', name: 'Skill picker (experimental MCP App)', description: 'Interactive skill picker + typed input form. Experimental: SEP-1300 draft.', mimeType: 'text/html' }] : []),
+          ...SKILLS.map((s) => ({ uri: `skill://${s.name}`, name: s.title, description: s.description, mimeType: 'text/markdown' })),
+        ],
       });
     case 'resources/read': {
       const uri = (params && params.uri) || '';
+      if (MCP_APPS && uri === 'ui://pm-skills/picker')
+        return reply(id, { contents: [{ uri, mimeType: 'text/html', text: PICKER_HTML() }] });
       const s = byName.get(uri.replace(/^skill:\/\//, ''));
       if (!s) return fail(id, -32602, `Unknown resource: ${uri}`);
       return reply(id, { contents: [{ uri, mimeType: 'text/markdown', text: `# ${s.title}\n\n${s.body}` }] });

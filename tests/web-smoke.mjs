@@ -231,6 +231,10 @@ const PAGES = [
       // in a browser the cockpit gate must show, not the app
       if (await p.locator('#app').isVisible()) throw new Error('cockpit-only UI leaked into the browser');
     } },
+  { url: 'for/construction-managers.html', async check(p) {
+      const n = await p.locator('.sk').count();
+      if (n < 4) throw new Error('profession page rendered ' + n + ' skills');
+    } },
   { url: 'atlas.html', settle: 2000, async check(p) {
       await p.waitForFunction(() => window.__atlasReady, null, { timeout: 20000 });
     } },
