@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-students",
+  "version": "1.0.0",
+  "description": "Skills for students who want to learn, not outsource: study-guide synthesis with retrieval practice, literature reviews that argue, thesis outlines an examiner respects, statement COACHING (the words stay yours - integrity is structural), financial-aid appeals that offices act on, and exam plans that survive a bad Tuesday.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "students",
+    "study",
+    "thesis",
+    "exam",
+    "university",
+    "scholarship",
+    "literature-review"
+  ]
+}

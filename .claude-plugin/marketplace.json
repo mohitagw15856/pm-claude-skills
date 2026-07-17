@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-students",
+      "description": "Skills for students who want to learn, not outsource: study-guide synthesis with retrieval practice, literature reviews that argue, thesis outlines an examiner respects, statement COACHING (the words stay yours - integrity is structural), financial-aid appeals that offices act on, and exam plans that survive a bad Tuesday.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-students",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-operator",
       "description": "The judgment layer for agents that ACT: inbox zero, calendar defrag, expense filing, form filling, and subscription audits — computer-use skills where analysis is free, every action is approval-gated per SkillSpec Execution blocks, and the irreversible button always belongs to the human.",
       "version": "1.0.0",
