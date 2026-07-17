@@ -20,6 +20,9 @@ on:
       - 'skills/**'
       - 'scripts/build-exports.mjs'
       - 'exports/**'
+      - 'web/build-skills.mjs'
+      - 'web/skills.json'
+  workflow_dispatch:
 
 jobs:
   check:
