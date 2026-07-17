@@ -3,7 +3,7 @@
   "name": "PM Skills",
   "version": "0.1.0",
   "minAppVersion": "1.4.0",
-  "description": "Insert any of 520+ professional AI skills (SKILL.md) into your note — prompts with quality checks and anti-patterns built in, for use with any AI plugin.",
+  "description": "Insert any of 526+ professional AI skills (SKILL.md) into your note — prompts with quality checks and anti-patterns built in, for use with any AI plugin.",
   "author": "Mohit Aggarwal",
   "authorUrl": "https://github.com/mohitagw15856/pm-claude-skills",
   "isDesktopOnly": false

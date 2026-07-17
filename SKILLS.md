@@ -1,4 +1,4 @@
-# 🗂️ All 520 Skills — full catalog
+# 🗂️ All 526 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -626,7 +626,7 @@
 | **Portfolio Page** (`portfolio-page`) | Structure a portfolio or case-study page that shows your work, not just lists it. | — |
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 
-## 🌍 Industries & Public Sector (153 skills)
+## 🌍 Industries & Public Sector (159 skills)
 
 ### `pm-agentnative` — 5 skills
 
@@ -891,6 +891,17 @@
 | **The Churning Customer** (`the-churning-customer`) | Simulate the exact customer who will quietly cancel in month 4 — their internal monologue through the lifecycle and the honest exit interview they… | — |
 | **VC Partner Meeting** (`vc-partner-meeting`) | Simulate the VC partner meeting that discusses your pitch after you leave the room — four partner archetypes debate, then write the internal… | — |
 
+### `pm-students` — 6 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Exam Prep Planner** (`exam-prep-planner`) | Build a realistic exam-prep schedule with spaced repetition and retrieval practice — the plan that survives contact with an actual week. | — |
+| **Financial Aid Appeal** (`financial-aid-appeal`) | Write a financial-aid appeal or scholarship request letter that aid offices act on — factual, documented, and specific about the ask. | — |
+| **Literature Review Builder** (`literature-review-builder`) | Structure a literature review that argues, not lists — thematic synthesis from your sources with the debate mapped and the gap identified. | — |
+| **Statement Coach** (`statement-coach`) | Coach a statement of purpose or personal essay to admission strength — structural diagnosis, specific feedback, and revision plans on YOUR draft… | — |
+| **Study Notes Synthesizer** (`study-notes-synthesizer`) | Turn lecture notes, slides, and readings into one exam-ready study guide — synthesis, not summary. | — |
+| **Thesis Outline** (`thesis-outline`) | Build a defensible thesis or dissertation outline — argument-first structure, chapter by chapter, with the through-line visible. | — |
+
 ### `pm-supplychain` — 6 skills
 
 | Skill | What it does | Eval |
@@ -923,4 +934,4 @@
 
 ---
 
-_520 skills across 75 bundles · 28 eval-scored (5%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_526 skills across 76 bundles · 28 eval-scored (5%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

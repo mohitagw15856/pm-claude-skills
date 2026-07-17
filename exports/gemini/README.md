@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-520 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+526 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -183,6 +183,7 @@
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/GEM_INSTRUCTIONS.md` |
 | Evidence Lock | `pm-research` | `pm-research/evidence-lock/GEM_INSTRUCTIONS.md` |
 | EVT/DVT/PVT Gate Review | `pm-hardware` | `pm-hardware/evt-dvt-pvt-gate-review/GEM_INSTRUCTIONS.md` |
+| Exam Prep Planner | `pm-students` | `pm-students/exam-prep-planner/GEM_INSTRUCTIONS.md` |
 | Excel Model | `pm-documents` | `pm-documents/excel-model/GEM_INSTRUCTIONS.md` |
 | Executing Plans | `pm-method` | `pm-method/executing-plans/GEM_INSTRUCTIONS.md` |
 | Executive Presence | `pm-comms` | `pm-comms/executive-presence/GEM_INSTRUCTIONS.md` |
@@ -209,6 +210,7 @@
 | Figma Spacing System | `pm-figma` | `pm-figma/figma-spacing-system/GEM_INSTRUCTIONS.md` |
 | Figma User Flow Planner | `pm-figma` | `pm-figma/figma-user-flow-planner/GEM_INSTRUCTIONS.md` |
 | Figma Variant Matrix | `pm-figma` | `pm-figma/figma-variant-matrix/GEM_INSTRUCTIONS.md` |
+| Financial Aid Appeal | `pm-students` | `pm-students/financial-aid-appeal/GEM_INSTRUCTIONS.md` |
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/GEM_INSTRUCTIONS.md` |
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/GEM_INSTRUCTIONS.md` |
 | Financial Statement Explainer | `pm-accounting` | `pm-accounting/financial-statement-explainer/GEM_INSTRUCTIONS.md` |
@@ -279,6 +281,7 @@
 | Lifecycle / CRM Plan | `pm-growth` | `pm-growth/lifecycle-crm-plan/GEM_INSTRUCTIONS.md` |
 | LinkedIn Profile | `pm-personal` | `pm-personal/linkedin-profile/GEM_INSTRUCTIONS.md` |
 | Literature Review | `pm-research` | `pm-research/literature-review/GEM_INSTRUCTIONS.md` |
+| Literature Review Builder | `pm-students` | `pm-students/literature-review-builder/GEM_INSTRUCTIONS.md` |
 | LLM Cost & Latency Budget | `pm-ai` | `pm-ai/llm-cost-latency-budget/GEM_INSTRUCTIONS.md` |
 | LLM Guardrails Spec | `pm-ai` | `pm-ai/llm-guardrails-spec/GEM_INSTRUCTIONS.md` |
 | Load Testing Plan | `pm-engineering` | `pm-engineering/load-testing-plan/GEM_INSTRUCTIONS.md` |
@@ -466,10 +469,12 @@
 | Stakeholder Influence Mapper | `pm-strategy` | `pm-strategy/stakeholder-influence-mapper/GEM_INSTRUCTIONS.md` |
 | Stakeholder Update | `pm-essentials` | `pm-essentials/stakeholder-update/GEM_INSTRUCTIONS.md` |
 | Startup Idea Validator | `pm-founders` | `pm-founders/startup-idea-validator/GEM_INSTRUCTIONS.md` |
+| Statement Coach | `pm-students` | `pm-students/statement-coach/GEM_INSTRUCTIONS.md` |
 | Statement of Work | `pm-consulting` | `pm-consulting/statement-of-work/GEM_INSTRUCTIONS.md` |
 | Strategic Narrative Generator | `pm-strategy` | `pm-strategy/strategic-narrative-generator/GEM_INSTRUCTIONS.md` |
 | Strategy Memo | `pm-business` | `pm-business/strategy-memo/GEM_INSTRUCTIONS.md` |
 | Student Feedback | `pm-education` | `pm-education/student-feedback/GEM_INSTRUCTIONS.md` |
+| Study Notes Synthesizer | `pm-students` | `pm-students/study-notes-synthesizer/GEM_INSTRUCTIONS.md` |
 | Style Fingerprint | `pm-essentials` | `pm-essentials/style-fingerprint/GEM_INSTRUCTIONS.md` |
 | Subagent Orchestration | `pm-method` | `pm-method/subagent-orchestration/GEM_INSTRUCTIONS.md` |
 | Subcontractor Scorecard | `pm-construction` | `pm-construction/subcontractor-scorecard/GEM_INSTRUCTIONS.md` |
@@ -495,6 +500,7 @@
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/GEM_INSTRUCTIONS.md` |
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/GEM_INSTRUCTIONS.md` |
 | The Churning Customer | `pm-simulators` | `pm-simulators/the-churning-customer/GEM_INSTRUCTIONS.md` |
+| Thesis Outline | `pm-students` | `pm-students/thesis-outline/GEM_INSTRUCTIONS.md` |
 | Threat Model | `pm-security` | `pm-security/threat-model/GEM_INSTRUCTIONS.md` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `pm-writers/thumbnail-creator/GEM_INSTRUCTIONS.md` |
 | Tooling Risk Assessment | `pm-hardware` | `pm-hardware/tooling-risk-assessment/GEM_INSTRUCTIONS.md` |

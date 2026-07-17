@@ -2,7 +2,7 @@
  "spec": "skill-federation/0.1",
  "built": "2026-07-17",
  "libraries": 1,
- "skills": 520,
+ "skills": 526,
  "members": [
   {
    "repo": "mohitagw15856/pm-claude-skills",
@@ -10,7 +10,7 @@
    "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
    "license": "MIT",
    "badge": "https://img.shields.io/endpoint?url=https%3A%2F%2Fpm-skills-mcp.pm-claude-skills.workers.dev%2Fbadge%3Frepo%3Dmohitagw15856%2Fpm-claude-skills",
-   "count": 520,
+   "count": 526,
    "skills": [
     {
      "name": "360-feedback-template",
@@ -713,6 +713,10 @@
      "description": "Run an NPI phase-gate review for EVT, DVT, or PVT — exit criteria per phase, open-issue triage, yield readout, waiver discipline, and a go/no-go call. Use when asked to run a gate review, decide EVT exit or DVT entry, review build results, assess whether to proceed to the next build, or triage open "
     },
     {
+     "name": "exam-prep-planner",
+     "description": "Build a realistic exam-prep schedule with spaced repetition and retrieval practice — the plan that survives contact with an actual week. Use when asked to plan my exam prep, make a study schedule, I have N weeks until finals, or how do I study for multiple exams. Produces a day-by-day plan across al"
+    },
+    {
      "name": "excel-model",
      "description": "Build a real, formula-driven Excel (.xlsx) model — not a static table. Use when asked to build an Excel model, a financial model, a budget/forecast spreadsheet, or any .xlsx with live formulas a user can edit. Produces an actual .xlsx file via a generated openpyxl script: an inputs/assumptions sheet"
     },
@@ -815,6 +819,10 @@
     {
      "name": "figma-variant-matrix",
      "description": "Define component variants and states systematically for Figma. Use when asked to plan component variants, define states for a component, set up a Figma variant matrix, or work out what properties a component needs before building it. Produces a complete variant matrix with all properties, values, an"
+    },
+    {
+     "name": "financial-aid-appeal",
+     "description": "Write a financial-aid appeal or scholarship request letter that aid offices act on — factual, documented, and specific about the ask. Use when asked to appeal my financial aid, write a scholarship letter, ask for more aid after circumstances changed, or respond to an aid decision. Produces the appea"
     },
     {
      "name": "financial-due-diligence",
@@ -1095,6 +1103,10 @@
     {
      "name": "literature-review",
      "description": "Structure and write a literature review for any research topic. Use when asked to write a literature review, systematic review summary, narrative review, or research background section. Produces a structured review with thematic organisation, critical analysis, and gap identification."
+    },
+    {
+     "name": "literature-review-builder",
+     "description": "Structure a literature review that argues, not lists — thematic synthesis from your sources with the debate mapped and the gap identified. Use when asked to write or structure a literature review, organize my sources, synthesize these papers, or find the gap for my thesis. Produces a themed review s"
     },
     {
      "name": "llm-cost-latency-budget",
@@ -1845,6 +1857,10 @@
      "description": "Pressure-test a startup idea the way a sharp investor or co-founder would — problem, market, wedge, moat, why-now, and the fastest cheap way to test it. Use when asked to validate a startup idea, evaluate a business idea, stress-test a concept, or decide whether something is worth building. Produces"
     },
     {
+     "name": "statement-coach",
+     "description": "Coach a statement of purpose or personal essay to admission strength — structural diagnosis, specific feedback, and revision plans on YOUR draft; the words stay yours. Use when asked to review my personal statement, improve my SOP, give feedback on my application essay, or why is my essay generic. P"
+    },
+    {
      "name": "statement-of-work",
      "description": "Write a tight Statement of Work (SOW) that prevents scope creep and payment disputes. Use when asked to write a SOW, a scope of work, a project agreement, or to formalise what was agreed after a proposal. Produces an SOW — scope (and explicit exclusions), deliverables with acceptance criteria, timel"
     },
@@ -1859,6 +1875,10 @@
     {
      "name": "student-feedback",
      "description": "Write constructive, specific feedback on student work that motivates and tells the student exactly how to improve. Use when asked to give feedback on a student's work, write grading comments, respond to an essay or assignment, or coach a learner. Produces feedback that names concrete strengths, prio"
+    },
+    {
+     "name": "study-notes-synthesizer",
+     "description": "Turn lecture notes, slides, and readings into one exam-ready study guide — synthesis, not summary. Use when asked to make a study guide, combine my notes, prep me for the exam, or organize this course material. Produces a structured guide: core concepts with plain-language explanations, connections "
     },
     {
      "name": "style-fingerprint",
@@ -1959,6 +1979,10 @@
     {
      "name": "the-churning-customer",
      "description": "Simulate the exact customer who will quietly cancel in month 4 — their internal monologue through the lifecycle and the honest exit interview they never gave you. Use when asked why do customers really churn, simulate a churning customer, roleplay the customer who cancels, or what does silent churn "
+    },
+    {
+     "name": "thesis-outline",
+     "description": "Build a defensible thesis or dissertation outline — argument-first structure, chapter by chapter, with the through-line visible. Use when asked to outline my thesis, structure my dissertation, plan my capstone, or organize my research into chapters. Produces a full outline: the one-sentence thesis, "
     },
     {
      "name": "threat-model",

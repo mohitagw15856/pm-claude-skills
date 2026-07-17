@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-520 skills exported. Copy a `SKILL.md` into the tool to use it.
+526 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -183,6 +183,7 @@
 | Eval Rubric Designer | `pm-ai` | `eval-rubric-designer/SKILL.md` |
 | Evidence Lock | `pm-research` | `evidence-lock/SKILL.md` |
 | EVT/DVT/PVT Gate Review | `pm-hardware` | `evt-dvt-pvt-gate-review/SKILL.md` |
+| Exam Prep Planner | `pm-students` | `exam-prep-planner/SKILL.md` |
 | Excel Model | `pm-documents` | `excel-model/SKILL.md` |
 | Executing Plans | `pm-method` | `executing-plans/SKILL.md` |
 | Executive Presence | `pm-comms` | `executive-presence/SKILL.md` |
@@ -209,6 +210,7 @@
 | Figma Spacing System | `pm-figma` | `figma-spacing-system/SKILL.md` |
 | Figma User Flow Planner | `pm-figma` | `figma-user-flow-planner/SKILL.md` |
 | Figma Variant Matrix | `pm-figma` | `figma-variant-matrix/SKILL.md` |
+| Financial Aid Appeal | `pm-students` | `financial-aid-appeal/SKILL.md` |
 | Financial Due Diligence | `pm-finance` | `financial-due-diligence/SKILL.md` |
 | Financial Model Narrative | `pm-finance` | `financial-model-narrative/SKILL.md` |
 | Financial Statement Explainer | `pm-accounting` | `financial-statement-explainer/SKILL.md` |
@@ -279,6 +281,7 @@
 | Lifecycle / CRM Plan | `pm-growth` | `lifecycle-crm-plan/SKILL.md` |
 | LinkedIn Profile | `pm-personal` | `linkedin-profile/SKILL.md` |
 | Literature Review | `pm-research` | `literature-review/SKILL.md` |
+| Literature Review Builder | `pm-students` | `literature-review-builder/SKILL.md` |
 | LLM Cost & Latency Budget | `pm-ai` | `llm-cost-latency-budget/SKILL.md` |
 | LLM Guardrails Spec | `pm-ai` | `llm-guardrails-spec/SKILL.md` |
 | Load Testing Plan | `pm-engineering` | `load-testing-plan/SKILL.md` |
@@ -466,10 +469,12 @@
 | Stakeholder Influence Mapper | `pm-strategy` | `stakeholder-influence-mapper/SKILL.md` |
 | Stakeholder Update | `pm-essentials` | `stakeholder-update/SKILL.md` |
 | Startup Idea Validator | `pm-founders` | `startup-idea-validator/SKILL.md` |
+| Statement Coach | `pm-students` | `statement-coach/SKILL.md` |
 | Statement of Work | `pm-consulting` | `statement-of-work/SKILL.md` |
 | Strategic Narrative Generator | `pm-strategy` | `strategic-narrative-generator/SKILL.md` |
 | Strategy Memo | `pm-business` | `strategy-memo/SKILL.md` |
 | Student Feedback | `pm-education` | `student-feedback/SKILL.md` |
+| Study Notes Synthesizer | `pm-students` | `study-notes-synthesizer/SKILL.md` |
 | Style Fingerprint | `pm-essentials` | `style-fingerprint/SKILL.md` |
 | Subagent Orchestration | `pm-method` | `subagent-orchestration/SKILL.md` |
 | Subcontractor Scorecard | `pm-construction` | `subcontractor-scorecard/SKILL.md` |
@@ -495,6 +500,7 @@
 | Test Case Writer | `pm-qa` | `test-case-writer/SKILL.md` |
 | Test Strategy Document | `pm-engineering` | `test-strategy-doc/SKILL.md` |
 | The Churning Customer | `pm-simulators` | `the-churning-customer/SKILL.md` |
+| Thesis Outline | `pm-students` | `thesis-outline/SKILL.md` |
 | Threat Model | `pm-security` | `threat-model/SKILL.md` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `thumbnail-creator/SKILL.md` |
 | Tooling Risk Assessment | `pm-hardware` | `tooling-risk-assessment/SKILL.md` |

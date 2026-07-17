@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-520 skills exported. Copy a `.md rule` into the tool to use it.
+526 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -183,6 +183,7 @@
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/eval-rubric-designer.md` |
 | Evidence Lock | `pm-research` | `pm-research/evidence-lock/evidence-lock.md` |
 | EVT/DVT/PVT Gate Review | `pm-hardware` | `pm-hardware/evt-dvt-pvt-gate-review/evt-dvt-pvt-gate-review.md` |
+| Exam Prep Planner | `pm-students` | `pm-students/exam-prep-planner/exam-prep-planner.md` |
 | Excel Model | `pm-documents` | `pm-documents/excel-model/excel-model.md` |
 | Executing Plans | `pm-method` | `pm-method/executing-plans/executing-plans.md` |
 | Executive Presence | `pm-comms` | `pm-comms/executive-presence/executive-presence.md` |
@@ -209,6 +210,7 @@
 | Figma Spacing System | `pm-figma` | `pm-figma/figma-spacing-system/figma-spacing-system.md` |
 | Figma User Flow Planner | `pm-figma` | `pm-figma/figma-user-flow-planner/figma-user-flow-planner.md` |
 | Figma Variant Matrix | `pm-figma` | `pm-figma/figma-variant-matrix/figma-variant-matrix.md` |
+| Financial Aid Appeal | `pm-students` | `pm-students/financial-aid-appeal/financial-aid-appeal.md` |
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/financial-due-diligence.md` |
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/financial-model-narrative.md` |
 | Financial Statement Explainer | `pm-accounting` | `pm-accounting/financial-statement-explainer/financial-statement-explainer.md` |
@@ -279,6 +281,7 @@
 | Lifecycle / CRM Plan | `pm-growth` | `pm-growth/lifecycle-crm-plan/lifecycle-crm-plan.md` |
 | LinkedIn Profile | `pm-personal` | `pm-personal/linkedin-profile/linkedin-profile.md` |
 | Literature Review | `pm-research` | `pm-research/literature-review/literature-review.md` |
+| Literature Review Builder | `pm-students` | `pm-students/literature-review-builder/literature-review-builder.md` |
 | LLM Cost & Latency Budget | `pm-ai` | `pm-ai/llm-cost-latency-budget/llm-cost-latency-budget.md` |
 | LLM Guardrails Spec | `pm-ai` | `pm-ai/llm-guardrails-spec/llm-guardrails-spec.md` |
 | Load Testing Plan | `pm-engineering` | `pm-engineering/load-testing-plan/load-testing-plan.md` |
@@ -466,10 +469,12 @@
 | Stakeholder Influence Mapper | `pm-strategy` | `pm-strategy/stakeholder-influence-mapper/stakeholder-influence-mapper.md` |
 | Stakeholder Update | `pm-essentials` | `pm-essentials/stakeholder-update/stakeholder-update.md` |
 | Startup Idea Validator | `pm-founders` | `pm-founders/startup-idea-validator/startup-idea-validator.md` |
+| Statement Coach | `pm-students` | `pm-students/statement-coach/statement-coach.md` |
 | Statement of Work | `pm-consulting` | `pm-consulting/statement-of-work/statement-of-work.md` |
 | Strategic Narrative Generator | `pm-strategy` | `pm-strategy/strategic-narrative-generator/strategic-narrative-generator.md` |
 | Strategy Memo | `pm-business` | `pm-business/strategy-memo/strategy-memo.md` |
 | Student Feedback | `pm-education` | `pm-education/student-feedback/student-feedback.md` |
+| Study Notes Synthesizer | `pm-students` | `pm-students/study-notes-synthesizer/study-notes-synthesizer.md` |
 | Style Fingerprint | `pm-essentials` | `pm-essentials/style-fingerprint/style-fingerprint.md` |
 | Subagent Orchestration | `pm-method` | `pm-method/subagent-orchestration/subagent-orchestration.md` |
 | Subcontractor Scorecard | `pm-construction` | `pm-construction/subcontractor-scorecard/subcontractor-scorecard.md` |
@@ -495,6 +500,7 @@
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/test-case-writer.md` |
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/test-strategy-doc.md` |
 | The Churning Customer | `pm-simulators` | `pm-simulators/the-churning-customer/the-churning-customer.md` |
+| Thesis Outline | `pm-students` | `pm-students/thesis-outline/thesis-outline.md` |
 | Threat Model | `pm-security` | `pm-security/threat-model/threat-model.md` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `pm-writers/thumbnail-creator/thumbnail-creator.md` |
 | Tooling Risk Assessment | `pm-hardware` | `pm-hardware/tooling-risk-assessment/tooling-risk-assessment.md` |

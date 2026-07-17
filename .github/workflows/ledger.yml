@@ -18,9 +18,10 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: '20' }
       - run: node scripts/build-ledger.mjs
+      - run: node scripts/build-downloads.mjs
       - run: |
           git config user.name 'ledger-bot'
           git config user.email 'actions@github.com'
-          git add newsletter web/feed.xml
+          git add newsletter web/feed.xml web/growth.json
           git diff --cached --quiet || git commit -m "chore(ledger): weekly digest $(date -u +%G-w%V)"
           git push

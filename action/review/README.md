@@ -1,6 +1,6 @@
 # 🧠 PM Skills Document Reviewer — a senior reviewer on every PR
 
-Reviews pull requests that touch **professional documents** — PRDs, postmortems, RFCs/ADRs, runbooks, changelogs, READMEs, launch plans, OKRs — against the matching skill's own quality checks, anti-patterns, and scoring rubric from the [520-skill library](https://github.com/mohitagw15856/pm-claude-skills). Code is never reviewed; builds are never failed. One comment per PR, updated in place.
+Reviews pull requests that touch **professional documents** — PRDs, postmortems, RFCs/ADRs, runbooks, changelogs, READMEs, launch plans, OKRs — against the matching skill's own quality checks, anti-patterns, and scoring rubric from the [526-skill library](https://github.com/mohitagw15856/pm-claude-skills). Code is never reviewed; builds are never failed. One comment per PR, updated in place.
 
 ## Install (2 minutes)
 

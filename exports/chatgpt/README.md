@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-520 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+526 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -183,6 +183,7 @@
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/SYSTEM_PROMPT.md` |
 | Evidence Lock | `pm-research` | `pm-research/evidence-lock/SYSTEM_PROMPT.md` |
 | EVT/DVT/PVT Gate Review | `pm-hardware` | `pm-hardware/evt-dvt-pvt-gate-review/SYSTEM_PROMPT.md` |
+| Exam Prep Planner | `pm-students` | `pm-students/exam-prep-planner/SYSTEM_PROMPT.md` |
 | Excel Model | `pm-documents` | `pm-documents/excel-model/SYSTEM_PROMPT.md` |
 | Executing Plans | `pm-method` | `pm-method/executing-plans/SYSTEM_PROMPT.md` |
 | Executive Presence | `pm-comms` | `pm-comms/executive-presence/SYSTEM_PROMPT.md` |
@@ -209,6 +210,7 @@
 | Figma Spacing System | `pm-figma` | `pm-figma/figma-spacing-system/SYSTEM_PROMPT.md` |
 | Figma User Flow Planner | `pm-figma` | `pm-figma/figma-user-flow-planner/SYSTEM_PROMPT.md` |
 | Figma Variant Matrix | `pm-figma` | `pm-figma/figma-variant-matrix/SYSTEM_PROMPT.md` |
+| Financial Aid Appeal | `pm-students` | `pm-students/financial-aid-appeal/SYSTEM_PROMPT.md` |
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/SYSTEM_PROMPT.md` |
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/SYSTEM_PROMPT.md` |
 | Financial Statement Explainer | `pm-accounting` | `pm-accounting/financial-statement-explainer/SYSTEM_PROMPT.md` |
@@ -279,6 +281,7 @@
 | Lifecycle / CRM Plan | `pm-growth` | `pm-growth/lifecycle-crm-plan/SYSTEM_PROMPT.md` |
 | LinkedIn Profile | `pm-personal` | `pm-personal/linkedin-profile/SYSTEM_PROMPT.md` |
 | Literature Review | `pm-research` | `pm-research/literature-review/SYSTEM_PROMPT.md` |
+| Literature Review Builder | `pm-students` | `pm-students/literature-review-builder/SYSTEM_PROMPT.md` |
 | LLM Cost & Latency Budget | `pm-ai` | `pm-ai/llm-cost-latency-budget/SYSTEM_PROMPT.md` |
 | LLM Guardrails Spec | `pm-ai` | `pm-ai/llm-guardrails-spec/SYSTEM_PROMPT.md` |
 | Load Testing Plan | `pm-engineering` | `pm-engineering/load-testing-plan/SYSTEM_PROMPT.md` |
@@ -466,10 +469,12 @@
 | Stakeholder Influence Mapper | `pm-strategy` | `pm-strategy/stakeholder-influence-mapper/SYSTEM_PROMPT.md` |
 | Stakeholder Update | `pm-essentials` | `pm-essentials/stakeholder-update/SYSTEM_PROMPT.md` |
 | Startup Idea Validator | `pm-founders` | `pm-founders/startup-idea-validator/SYSTEM_PROMPT.md` |
+| Statement Coach | `pm-students` | `pm-students/statement-coach/SYSTEM_PROMPT.md` |
 | Statement of Work | `pm-consulting` | `pm-consulting/statement-of-work/SYSTEM_PROMPT.md` |
 | Strategic Narrative Generator | `pm-strategy` | `pm-strategy/strategic-narrative-generator/SYSTEM_PROMPT.md` |
 | Strategy Memo | `pm-business` | `pm-business/strategy-memo/SYSTEM_PROMPT.md` |
 | Student Feedback | `pm-education` | `pm-education/student-feedback/SYSTEM_PROMPT.md` |
+| Study Notes Synthesizer | `pm-students` | `pm-students/study-notes-synthesizer/SYSTEM_PROMPT.md` |
 | Style Fingerprint | `pm-essentials` | `pm-essentials/style-fingerprint/SYSTEM_PROMPT.md` |
 | Subagent Orchestration | `pm-method` | `pm-method/subagent-orchestration/SYSTEM_PROMPT.md` |
 | Subcontractor Scorecard | `pm-construction` | `pm-construction/subcontractor-scorecard/SYSTEM_PROMPT.md` |
@@ -495,6 +500,7 @@
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/SYSTEM_PROMPT.md` |
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/SYSTEM_PROMPT.md` |
 | The Churning Customer | `pm-simulators` | `pm-simulators/the-churning-customer/SYSTEM_PROMPT.md` |
+| Thesis Outline | `pm-students` | `pm-students/thesis-outline/SYSTEM_PROMPT.md` |
 | Threat Model | `pm-security` | `pm-security/threat-model/SYSTEM_PROMPT.md` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `pm-writers/thumbnail-creator/SYSTEM_PROMPT.md` |
 | Tooling Risk Assessment | `pm-hardware` | `pm-hardware/tooling-risk-assessment/SYSTEM_PROMPT.md` |

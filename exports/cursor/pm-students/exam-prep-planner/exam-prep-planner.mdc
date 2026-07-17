@@ -1,0 +1,63 @@
+---
+description: "Build a realistic exam-prep schedule with spaced repetition and retrieval practice — the plan that survives contact with an actual week. Use when asked to plan my exam prep, make a study schedule, I have N weeks until finals, or how do I study for multiple exams. Produces a day-by-day plan across all exams: spaced blocks, retrieval-first sessions, weak-topic weighting, and built-in slack for the days that go wrong."
+globs:
+alwaysApply: false
+---
+
+# Exam Prep Planner Skill
+
+Most study plans are written for the student the planner wishes existed: six perfect hours daily, no bad days, rereading counted as studying. This skill plans for the student who exists — retrieval practice over rereading, spacing over cramming, weak topics weighted, and slack built in, because a plan that dies at its first missed day was never a plan.
+
+## What This Skill Produces
+
+- **The day-by-day schedule** — all exams interleaved, sessions with named topics and *methods*
+- **Retrieval-first sessions** — every block says what to *do* (blurt, past paper, teach-back), never "review chapter 4"
+- **Weighting** — weak and high-value topics get the prime slots and the most spaced repeats
+- **Slack and triage** — catch-up buffers, plus the pre-agreed what-to-drop list if time collapses
+
+## Required Inputs
+
+Ask for these if not provided:
+- **Exams, dates, and formats** — all of them; single-exam plans that ignore the others aren't plans
+- **Topic lists with self-rated confidence** (red/yellow/green per topic — honest ratings)
+- **Real available hours** — after work, sport, life; the actual number, not the aspirational one
+- **What "studying" has meant so far** — rereaders need the method change named explicitly
+
+## Framework
+
+1. **Retrieval beats rereading** — every session is active: closed-book blurts, past papers, self-testing, teach-it-aloud. Rereading appears only as a 10-minute pre-retrieval warmup.
+2. **Spacing beats massing:** each topic returns 3+ times with growing gaps (day 1 → day 3 → day 7 → pre-exam). The schedule interleaves subjects — blocked days feel productive and test worse.
+3. **Weight by (weakness × exam value):** red topics on high-weight exams own the morning slots; green topics get maintenance touches only.
+4. **The 80% rule:** schedule at most 80% of stated available hours — the other 20% is the buffer that saves the plan when Tuesday explodes.
+5. **Pre-agreed triage:** decide NOW what gets dropped if two days vanish (green topics first, then low-weight material) — triage decided in a panic always cuts the wrong thing.
+
+## Output Format
+
+# Exam Prep Plan: [N] weeks · [exams]
+**Real hours/week:** [stated] → **scheduled: 80% = [n]h** · **Method note:** [the change from current habits]
+
+## The schedule
+| Day | Slot | Exam/topic | Method (what you'll actually do) | Repeat # |
+|---|---|---|---|---|
+
+## Weekly retrieval checkpoints
+[End of each week: one mixed self-test across everything touched; scores drive next week's re-weighting]
+
+## If it goes wrong
+Missed 1 day → [absorb via buffer] · Missed 3+ → [the triage list, in drop order]
+
+## Quality Checks
+
+- [ ] Every session names a retrieval method — zero "review/reread" blocks
+- [ ] Every red topic appears ≥3 times with growing spacing
+- [ ] Total scheduled ≤ 80% of stated hours
+- [ ] All exams share the calendar, weighted by date and value
+- [ ] The triage list exists before it's needed
+
+## Anti-Patterns
+
+- [ ] Do not schedule rereading as studying — recognition feels like knowledge and tests like its absence
+- [ ] Do not plan 100% of available time — a plan without slack is a countdown to abandonment
+- [ ] Do not block whole days per subject — interleaving tests better than it feels
+- [ ] Do not spend prime hours on green topics because they're pleasant — comfort studying is procrastination with flashcards
+- [ ] Do not build guilt into the plan — a missed day triggers the buffer protocol, not a spiral; the plan's job is to survive

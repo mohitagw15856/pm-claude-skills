@@ -126,11 +126,13 @@
       ['modelbench.html', '🤖 Model rankings'],
       ['authors.html', '📈 Author stats'],
       ['status.html', '📈 Vitals'],
+      ['growth.html', '📈 Growth'],
       ['cost.html', '💰 Cost & Privacy'],
       ['trends.html', '📈 Trends'],
     ] },
     { group: '🗺 Explore', items: [
       ['semantic.html', '🧠 Semantic Search'],
+      ['museum.html', '🏛 Anti-Pattern Museum'],
       ['catalog.html', '📚 Catalog'],
       ['atlas.html', '🗺 The Atlas'],
       ['galaxy.html', '🗺 Galaxy (2D)'],

@@ -2,7 +2,7 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "pm-skills",
   "title": "PM Skills",
-  "description": "Search 520 professional AI skills, copy any SKILL.md into your clipboard, or open it in the free playground.",
+  "description": "Search 526 professional AI skills, copy any SKILL.md into your clipboard, or open it in the free playground.",
   "icon": "icon.png",
   "author": "mohitagw15856",
   "categories": ["Productivity", "Developer Tools"],

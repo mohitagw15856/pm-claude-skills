@@ -1,0 +1,17 @@
+name: 'PM Skills — Agent Conformance Certification'
+description: 'Certify that your agent uses Agent Skills correctly: discovery, restraint, structure, self-verification, and the honesty gate — 5 tasks, pass/fail, no API cost to this project.'
+author: 'Mohit Aggarwal'
+branding:
+  icon: 'award'
+  color: 'purple'
+inputs:
+  results_dir:
+    description: 'Directory containing your agent''s outputs: one <task-id>.md per conformance task (produce them however your agent runs).'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - shell: bash
+      run: |
+        git clone --depth 1 https://github.com/mohitagw15856/pm-claude-skills /tmp/pm-skills-conformance
+        node /tmp/pm-skills-conformance/conformance/verify.mjs "${{ inputs.results_dir }}"

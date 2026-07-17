@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
+<title>Growth — the library's public momentum, updated weekly</title>
+<meta name="description" content="Public install and adoption numbers for the open skills library: npm and PyPI monthly downloads, stars, forks — history preserved, updated by a weekly cron, no vanity math." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .g-wrap { max-width: 780px; margin: 0 auto; padding: 16px 22px 70px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); gap: 12px; margin: 18px 0; }
+  .stat { border: 1px solid var(--border); border-radius: 13px; background: var(--panel); padding: 16px; text-align: center; }
+  .stat .n { font-size: 28px; font-weight: 800; color: var(--accent); }
+  .stat .l { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  #chart { width: 100%; height: 220px; border: 1px solid var(--border); border-radius: 13px; background: var(--panel); }
+  .mini { color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><img src="assets/product-notes.jpg" alt="" class="brand-logo" />
+    <div class="brand-text"><h1>Growth</h1><p class="tagline">Momentum, public. No vanity math.</p></div></div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<div class="g-wrap">
+  <div class="stats" id="stats"></div>
+  <canvas id="chart"></canvas>
+  <p class="mini" id="asof"></p>
+  <p class="mini">Sources: npm registry API (monthly downloads of <code>pm-claude-skills</code>), pypistats (<code>pm-skills</code>), GitHub API. History appended weekly by the Ledger cron; the full series lives in <a href="growth.json">growth.json</a>. More live surfaces: <a href="status.html">Vitals</a> · <a href="trends.html">Trends</a> · <a href="authors.html">Author stats</a>.</p>
+</div>
+
+<script>
+fetch('growth.json').then((r) => r.json()).then((d) => {
+  const L = d.latest || {};
+  const items = [['stars', L.stars, '⭐ GitHub stars'], ['npm', L.npm_month, '📦 npm installs / month'], ['pypi', L.pypi_month, '🐍 PyPI installs / month'], ['forks', L.forks, '🍴 forks']];
+  document.getElementById('stats').innerHTML = items.filter(([, v]) => v != null)
+    .map(([, v, l]) => '<div class="stat"><div class="n">' + v.toLocaleString('en-US') + '</div><div class="l">' + l + '</div></div>').join('');
+  document.getElementById('asof').textContent = 'As of ' + d.updated + ' · ' + d.history.length + ' weekly data points and counting.';
+  // sparkline of stars over history
+  const cv = document.getElementById('chart'), x = cv.getContext('2d');
+  cv.width = cv.offsetWidth * devicePixelRatio; cv.height = 220 * devicePixelRatio;
+  const H = d.history.filter((h) => h.stars != null);
+  if (H.length > 1) {
+    const min = Math.min(...H.map((h) => h.stars)), max = Math.max(...H.map((h) => h.stars));
+    x.strokeStyle = '#c9a227'; x.lineWidth = 2 * devicePixelRatio; x.beginPath();
+    H.forEach((h, i) => {
+      const px = 20 + (cv.width - 40) * i / (H.length - 1);
+      const py = cv.height - 30 - (cv.height - 60) * ((h.stars - min) / Math.max(1, max - min));
+      i ? x.lineTo(px, py) : x.moveTo(px, py);
+    });
+    x.stroke();
+    x.fillStyle = '#8b949e'; x.font = (11 * devicePixelRatio) + 'px system-ui';
+    x.fillText(min.toLocaleString(), 20, cv.height - 10);
+    x.fillText(max.toLocaleString() + ' ⭐', 20, 20 * devicePixelRatio);
+  } else {
+    x.fillStyle = '#8b949e'; x.font = (13 * devicePixelRatio) + 'px system-ui';
+    x.fillText('The star chart draws itself as weekly points accumulate — check back.', 20, 110 * devicePixelRatio);
+  }
+  window.__growthReady = true;
+  if (window.pmTrack) pmTrack('growth/open');
+});
+</script>
+<script src="i18n.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

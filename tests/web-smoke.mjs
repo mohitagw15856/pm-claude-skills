@@ -235,6 +235,18 @@ const PAGES = [
       const n = await p.locator('.sk').count();
       if (n < 4) throw new Error('profession page rendered ' + n + ' skills');
     } },
+  { url: 'museum.html', async check(p) {
+      await p.waitForFunction(() => window.__museumReady > 2000, null, { timeout: 15000 });
+      await p.fill('#q', 'average');
+      await p.waitForTimeout(300);
+      if ((await p.locator('.exhibit').count()) < 1) throw new Error('museum search returned nothing');
+    } },
+  { url: 'growth.html', async check(p) {
+      await p.waitForFunction(() => window.__growthReady === true, null, { timeout: 15000 });
+    } },
+  { url: 'compare/vs-diy.html', async check(p) {
+      if ((await p.locator('table tr').count()) < 4) throw new Error('comparison table missing');
+    } },
   { url: 'atlas.html', settle: 2000, async check(p) {
       await p.waitForFunction(() => window.__atlasReady, null, { timeout: 20000 });
     } },

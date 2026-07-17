@@ -1,0 +1,49 @@
+# Model Day-One — run SkillBench the day a new model ships and publish the
+# first credible professional-work numbers. MANUAL ONLY (costs ~$2-5 of the
+# owner's API credit per run) — never scheduled, never auto-triggered.
+name: Model Day-One report
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: 'The new model id (e.g. claude-fable-5, gpt-5.2)'
+        required: true
+jobs:
+  bench:
+    runs-on: ubuntu-latest
+    permissions: { contents: write }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - name: Run SkillBench on the new model
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node skillbench/run-skillbench.mjs --models "${{ inputs.model }}"
+      - name: Publish the day-one report
+        run: |
+          node - <<'JS'
+          const fs = require('fs');
+          const r = JSON.parse(fs.readFileSync('skillbench/results.json', 'utf8'));
+          const m = '${{ inputs.model }}';
+          const today = new Date().toISOString().slice(0, 10);
+          const rows = (r.results || []).filter((x) => x.model === m);
+          const skilled = rows.filter((x) => x.mode === 'skilled'), bare = rows.filter((x) => x.mode === 'bare');
+          const avg = (a) => a.length ? (a.reduce((n, x) => n + x.overall, 0) / a.length) : null;
+          const s = avg(skilled), b = avg(bare);
+          const md = `# Day-One Report: ${m} — ${today}\n\n` +
+            `Run within hours of release on [SkillBench](../README.md)'s frozen v1 task set (12 professional tasks, pinned judge).\n\n` +
+            `| Metric | Score |\n|---|---|\n` +
+            `| SkillBench (skilled) | **${s ? s.toFixed(2) : 'n/a'}/5** |\n` +
+            `| Bare | ${b ? b.toFixed(2) : 'n/a'}/5 |\n` +
+            `| Skill lift | ${s && b ? (s - b >= 0 ? '+' : '') + (s - b).toFixed(2) : 'n/a'} |\n\n` +
+            `Caveats, honestly: single run, one judge, n=12 tasks — a day-one signal, not a verdict. Full per-task data in [results.json](../results.json).\n`;
+          fs.mkdirSync('skillbench/reports', { recursive: true });
+          fs.writeFileSync(`skillbench/reports/day-one-${m.replace(/[^a-zA-Z0-9.-]/g, '_')}-${today}.md`, md);
+          JS
+          git config user.name 'day-one-bot'; git config user.email 'actions@github.com'
+          git add skillbench
+          git commit -m "bench: day-one report for ${{ inputs.model }}"
+          git push
