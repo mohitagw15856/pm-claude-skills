@@ -9,6 +9,34 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [54.0.0] — the flywheel release: users who advertise you, surfaces you don't own, and a repo that writes its own newsletter — 2026-07-17
+
+### Added — 🚀 growth engines (make the users the distribution)
+- **⚡ Watch it work (5 seconds)** — one hero button runs a real skill on a real messy brief via the sponsored trial or the in-browser model: time-to-wow measured in seconds, no key wall.
+- **🟩 The Daily share grid** — same challenge for everyone, spoiler-free Wordle-style emoji grid + 7-day history + streak; one tap to any feed. Plus a 🔔 daily reminder (periodicSync, honest fallbacks).
+- **🧠 [PR Document Reviewer](action/review)** — a GitHub Action that reviews PRDs/postmortems/RFCs/runbooks on ANY repo's PRs against the matching skill rubric (owner's key, one updating comment, never fails builds).
+- **🪝 `pm-claude-skills hooks`** — one command installs the ambient pack into Claude Code (context loading, skill nudges, doc quality gates), with settings backup and clean removal.
+- **🔏 LinkedIn-shareable credentials** — signed certs now carry an Add-to-LinkedIn deep link with the verify URL attached.
+- **🤝 [Adopt-a-Profession](docs/ADOPT-A-PROFESSION.md)** — 10 open quests (#163–172): author a profession's bundle, your name on it, the infrastructure provided.
+- **🔎 29 [profession landing pages](https://mohitagw15856.github.io/pm-claude-skills/for/)** — "AI skills for construction managers" as real, sitemapped pages; nav is now root-aware for subdirectories.
+
+### Added — 🤖 the operator era
+- **🦾 [pm-operator](plugins/pm-operator)** (515 → 520 skills, 75 bundles) — inbox-zero-operator, calendar-defrag, expense-filer, form-filler-operator, subscription-auditor: computer-use skills where analysis is free, every action is an approval-gated Execution block, and sending/deleting/submitting/paying are structurally impossible.
+- **🧩 Experimental MCP Apps** — a `ui://` skill-picker with typed input forms (SEP-1300 draft, `MCP_APPS=1`).
+
+### Added — 🔁 compounding infrastructure
+- **📰 [The Ledger](web/feed.xml)** — the weekly digest that writes itself (new skills, releases, Season, quests) + RSS + Monday cron.
+- **📥 `pm-claude-skills import cursor|cline|windsurf|file`** — your existing rule files become skills: original content verbatim as the method, conformance scaffolded around it.
+- **⚖️ Verdict API** — `POST /verdict {text, skill, key}` grades any document against the skill's own rubric on the caller's key; rubrics become CI-usable infrastructure.
+- **🖥 Cockpit 0.2 → 0.3** — local-folder skill runs (your lease + Ollama = the document never leaves your machine), tray menu, and a **signed auto-updater**: every install from 0.3.0 self-updates on new tags.
+- **🏗 [pm-skills-library-template](https://github.com/mohitagw15856/pm-skills-library-template)** — your own conformant, federated library from one "Use this template" click; `pm-claude-skills serve` runs the Org Edition in one command (package trimmed 72→19 MB).
+- **🎰 Playground delight** — the skill slot machine (spins in each skill's identity colors), confetti on completion, intent-grouped nav (Create/Compete/Learn/Trust/Explore) and a `/` pages palette across 60+ pages.
+
+### Added — 📖 depth & reach
+- **Worked examples ×24** — every decoder, simulator, wave-2 calculator, v50 single, and operator skill now ships a gold-standard example (calculators embed their scripts' actual computed output); 74 skills carry examples total.
+- **🇪🇸 [Spanish translations](skills-i18n/es/)** — six flagship skills professionally translated, structure-parity verified, English canonical.
+- **📦 Store kits** — VS Code `.vsix` packaged + publish runbook, Raycast extension source, Vercel one-click deploy button.
+
 ## [53.0.0] — close the loop + go everywhere: trust/proof surfaces & the distribution wave — 2026-07-16
 
 ### Added — 🤝 Trust & proof (close the loop)
@@ -809,7 +837,8 @@ Earlier releases (v1.0.0 – v5.0.0) predate this changelog. See the
 [article series](README.md#-the-article-series) for the full history of how the
 library grew from the first PM toolkit to 100+ skills.
 
-[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v50.0.0...HEAD
+[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v54.0.0...HEAD
+[54.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v53.0.0...v54.0.0
 [50.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v49.0.0...v50.0.0
 [49.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v48.0.0...v49.0.0
 [48.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v47.0.0...v48.0.0
