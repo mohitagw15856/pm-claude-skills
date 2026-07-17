@@ -126,6 +126,14 @@ function titleFromName(name) {
 import { execSync } from 'node:child_process';
 const updatedMap = {};
 try {
+  // Shallow clones (CI checkouts) have truncated history — dates would be wrong
+  // and the artifact check would flap. Reuse the committed values instead.
+  const shallow = execSync('git rev-parse --is-shallow-repository', { cwd: join(__dirname, '..'), encoding: 'utf8' }).trim() === 'true';
+  if (shallow) {
+    const prev = JSON.parse(readFileSync(join(__dirname, 'skills.json'), 'utf8'));
+    for (const sk of prev.skills || []) if (sk.updated) updatedMap[sk.name] = sk.updated;
+    throw new Error('shallow — reused committed dates');
+  }
   const log = execSync('git log --pretty=format:"%as" --name-only -- skills/*/SKILL.md', { cwd: join(__dirname, '..'), encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
   let cur = null;
   for (const line of log.split('\n')) {
