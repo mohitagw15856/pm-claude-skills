@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-515 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+520 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -63,6 +63,7 @@
 | Budget Variance Analysis | `pm-finance` | `pm-finance/budget-variance-analysis/GEM_INSTRUCTIONS.md` |
 | Bug Diagnosis | `pm-craft` | `pm-craft/bug-diagnosis/GEM_INSTRUCTIONS.md` |
 | Bug Report | `pm-qa` | `pm-qa/bug-report/GEM_INSTRUCTIONS.md` |
+| Calendar Defrag | `pm-operator` | `pm-operator/calendar-defrag/GEM_INSTRUCTIONS.md` |
 | Candidate Scorecard | `pm-recruiting` | `pm-recruiting/candidate-scorecard/GEM_INSTRUCTIONS.md` |
 | Cap Table Explainer | `pm-founders` | `pm-founders/cap-table-explainer/GEM_INSTRUCTIONS.md` |
 | Capacity Planning | `pm-engineering` | `pm-engineering/capacity-planning/GEM_INSTRUCTIONS.md` |
@@ -189,6 +190,7 @@
 | Executive Update | `pm-strategy` | `pm-strategy/executive-update/GEM_INSTRUCTIONS.md` |
 | Exit Waterfall | `pm-calculators` | `pm-calculators/exit-waterfall/GEM_INSTRUCTIONS.md` |
 | Expense Audit | `pm-money` | `pm-money/expense-audit/GEM_INSTRUCTIONS.md` |
+| Expense Filer | `pm-operator` | `pm-operator/expense-filer/GEM_INSTRUCTIONS.md` |
 | Expense Policy | `pm-accounting` | `pm-accounting/expense-policy/GEM_INSTRUCTIONS.md` |
 | Experiment Designer | `pm-advanced` | `pm-advanced/experiment-designer/GEM_INSTRUCTIONS.md` |
 | Experiment Readout | `pm-dataeng` | `pm-dataeng/experiment-readout/GEM_INSTRUCTIONS.md` |
@@ -215,6 +217,7 @@
 | Flowchart | `pm-visuals` | `pm-visuals/flowchart/GEM_INSTRUCTIONS.md` |
 | FOIA / Public-Records Request | `pm-gov` | `pm-gov/foia-request/GEM_INSTRUCTIONS.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/GEM_INSTRUCTIONS.md` |
+| Form Filler Operator | `pm-operator` | `pm-operator/form-filler-operator/GEM_INSTRUCTIONS.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/GEM_INSTRUCTIONS.md` |
 | Frontend Design | `pm-design` | `pm-design/frontend-design/GEM_INSTRUCTIONS.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/GEM_INSTRUCTIONS.md` |
@@ -239,6 +242,7 @@
 | i18n Readiness Review | `pm-localization` | `pm-localization/i18n-readiness-review/GEM_INSTRUCTIONS.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/GEM_INSTRUCTIONS.md` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/GEM_INSTRUCTIONS.md` |
+| Inbox Zero Operator | `pm-operator` | `pm-operator/inbox-zero-operator/GEM_INSTRUCTIONS.md` |
 | Incident Postmortem | `pm-engineering` | `pm-engineering/incident-postmortem/GEM_INSTRUCTIONS.md` |
 | Incident Public Statement | `pm-crisis` | `pm-crisis/incident-public-statement/GEM_INSTRUCTIONS.md` |
 | Incremental Implementation | `pm-method` | `pm-method/incremental-implementation/GEM_INSTRUCTIONS.md` |
@@ -469,6 +473,7 @@
 | Style Fingerprint | `pm-essentials` | `pm-essentials/style-fingerprint/GEM_INSTRUCTIONS.md` |
 | Subagent Orchestration | `pm-method` | `pm-method/subagent-orchestration/GEM_INSTRUCTIONS.md` |
 | Subcontractor Scorecard | `pm-construction` | `pm-construction/subcontractor-scorecard/GEM_INSTRUCTIONS.md` |
+| Subscription Auditor | `pm-operator` | `pm-operator/subscription-auditor/GEM_INSTRUCTIONS.md` |
 | Substack Notes Scraper | `pm-writers` | `pm-writers/substack-notes-scraper/GEM_INSTRUCTIONS.md` |
 | Subtitle & Caption | `pm-localization` | `pm-localization/subtitle-caption/GEM_INSTRUCTIONS.md` |
 | Supplier Scorecard | `pm-supplychain` | `pm-supplychain/supplier-scorecard/GEM_INSTRUCTIONS.md` |

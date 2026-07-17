@@ -1,4 +1,4 @@
-# 🗂️ All 515 Skills — full catalog
+# 🗂️ All 520 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -626,7 +626,7 @@
 | **Portfolio Page** (`portfolio-page`) | Structure a portfolio or case-study page that shows your work, not just lists it. | — |
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 
-## 🌍 Industries & Public Sector (148 skills)
+## 🌍 Industries & Public Sector (153 skills)
 
 ### `pm-agentnative` — 5 skills
 
@@ -849,6 +849,16 @@
 | **Donor Update** (`donor-update`) | Write a warm donor update or stewardship message that makes a supporter feel their gift mattered. | — |
 | **Impact Report** (`impact-report`) | Write a compelling nonprofit impact or annual report that shows donors what their money achieved. | — |
 
+### `pm-operator` — 5 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Calendar Defrag** (`calendar-defrag`) | Defragment a work calendar through a tool-using agent — find the meeting debt, propose the consolidation, and (approval-gated) execute the moves. | — |
+| **Expense Filer** (`expense-filer`) | Turn a pile of receipts into a filed expense report through a tool-using agent — extraction, policy checks, and categorization done for you… | — |
+| **Form Filler Operator** (`form-filler-operator`) | Fill long web forms and applications through a computer-use agent — from a fact sheet you approve, field by field, with a full transcript and… | — |
+| **Inbox Zero Operator** (`inbox-zero-operator`) | Drive an email inbox to zero through a computer-use or tool-using agent — triage every message into act/delegate/defer/archive with drafts… | — |
+| **Subscription Auditor** (`subscription-auditor`) | Find the subscriptions you forgot you pay for — a tool-using agent audits statements and inboxes, prices the waste annually, and preps (never… | — |
+
 ### `pm-realestate` — 6 skills
 
 | Skill | What it does | Eval |
@@ -913,4 +923,4 @@
 
 ---
 
-_515 skills across 74 bundles · 28 eval-scored (5%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_520 skills across 75 bundles · 28 eval-scored (5%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

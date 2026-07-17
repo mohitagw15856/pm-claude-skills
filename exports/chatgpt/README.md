@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-515 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+520 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -63,6 +63,7 @@
 | Budget Variance Analysis | `pm-finance` | `pm-finance/budget-variance-analysis/SYSTEM_PROMPT.md` |
 | Bug Diagnosis | `pm-craft` | `pm-craft/bug-diagnosis/SYSTEM_PROMPT.md` |
 | Bug Report | `pm-qa` | `pm-qa/bug-report/SYSTEM_PROMPT.md` |
+| Calendar Defrag | `pm-operator` | `pm-operator/calendar-defrag/SYSTEM_PROMPT.md` |
 | Candidate Scorecard | `pm-recruiting` | `pm-recruiting/candidate-scorecard/SYSTEM_PROMPT.md` |
 | Cap Table Explainer | `pm-founders` | `pm-founders/cap-table-explainer/SYSTEM_PROMPT.md` |
 | Capacity Planning | `pm-engineering` | `pm-engineering/capacity-planning/SYSTEM_PROMPT.md` |
@@ -189,6 +190,7 @@
 | Executive Update | `pm-strategy` | `pm-strategy/executive-update/SYSTEM_PROMPT.md` |
 | Exit Waterfall | `pm-calculators` | `pm-calculators/exit-waterfall/SYSTEM_PROMPT.md` |
 | Expense Audit | `pm-money` | `pm-money/expense-audit/SYSTEM_PROMPT.md` |
+| Expense Filer | `pm-operator` | `pm-operator/expense-filer/SYSTEM_PROMPT.md` |
 | Expense Policy | `pm-accounting` | `pm-accounting/expense-policy/SYSTEM_PROMPT.md` |
 | Experiment Designer | `pm-advanced` | `pm-advanced/experiment-designer/SYSTEM_PROMPT.md` |
 | Experiment Readout | `pm-dataeng` | `pm-dataeng/experiment-readout/SYSTEM_PROMPT.md` |
@@ -215,6 +217,7 @@
 | Flowchart | `pm-visuals` | `pm-visuals/flowchart/SYSTEM_PROMPT.md` |
 | FOIA / Public-Records Request | `pm-gov` | `pm-gov/foia-request/SYSTEM_PROMPT.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/SYSTEM_PROMPT.md` |
+| Form Filler Operator | `pm-operator` | `pm-operator/form-filler-operator/SYSTEM_PROMPT.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/SYSTEM_PROMPT.md` |
 | Frontend Design | `pm-design` | `pm-design/frontend-design/SYSTEM_PROMPT.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/SYSTEM_PROMPT.md` |
@@ -239,6 +242,7 @@
 | i18n Readiness Review | `pm-localization` | `pm-localization/i18n-readiness-review/SYSTEM_PROMPT.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/SYSTEM_PROMPT.md` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/SYSTEM_PROMPT.md` |
+| Inbox Zero Operator | `pm-operator` | `pm-operator/inbox-zero-operator/SYSTEM_PROMPT.md` |
 | Incident Postmortem | `pm-engineering` | `pm-engineering/incident-postmortem/SYSTEM_PROMPT.md` |
 | Incident Public Statement | `pm-crisis` | `pm-crisis/incident-public-statement/SYSTEM_PROMPT.md` |
 | Incremental Implementation | `pm-method` | `pm-method/incremental-implementation/SYSTEM_PROMPT.md` |
@@ -469,6 +473,7 @@
 | Style Fingerprint | `pm-essentials` | `pm-essentials/style-fingerprint/SYSTEM_PROMPT.md` |
 | Subagent Orchestration | `pm-method` | `pm-method/subagent-orchestration/SYSTEM_PROMPT.md` |
 | Subcontractor Scorecard | `pm-construction` | `pm-construction/subcontractor-scorecard/SYSTEM_PROMPT.md` |
+| Subscription Auditor | `pm-operator` | `pm-operator/subscription-auditor/SYSTEM_PROMPT.md` |
 | Substack Notes Scraper | `pm-writers` | `pm-writers/substack-notes-scraper/SYSTEM_PROMPT.md` |
 | Subtitle & Caption | `pm-localization` | `pm-localization/subtitle-caption/SYSTEM_PROMPT.md` |
 | Supplier Scorecard | `pm-supplychain` | `pm-supplychain/supplier-scorecard/SYSTEM_PROMPT.md` |

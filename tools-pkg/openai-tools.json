@@ -1066,6 +1066,25 @@
  {
   "type": "function",
   "function": {
+   "name": "calendar_defrag",
+   "description": "Defragment a work calendar through a tool-using agent — find the meeting debt, propose the consolidation, and (approval-gated) execute the moves. Use when asked to defrag my calendar, get me focus time, audit my meetings, or fix my week. Produces the calendar audit (cost per meeting, fragmentation map), a defrag proposal with focus blocks, and an approval-gated execution plan.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "candidate_scorecard",
    "description": "Turn interview notes into a structured candidate scorecard and hire recommendation. Use when asked to write an interview scorecard, a candidate evaluation, an interview debrief, or to summarize feedback into a hire/no-hire call. Produces a per-competency assessment with evidence and ratings, an overall recommendation with confidence, and the open questions for the next round — evidence-based, bias-aware, and decision-ready.",
    "parameters": {
@@ -3441,6 +3460,25 @@
  {
   "type": "function",
   "function": {
+   "name": "expense_filer",
+   "description": "Turn a pile of receipts into a filed expense report through a tool-using agent — extraction, policy checks, and categorization done for you; submission gated on your approval. Use when asked to file my expenses, process these receipts, build my expense report, or expense this trip. Produces the itemized report with policy flags and an approval-gated filing plan.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "expense_policy",
    "description": "Write a clear company expense & reimbursement policy. Use when asked to write an expense policy, a reimbursement policy, a travel & expense (T&E) policy, or spending guidelines. Produces a practical policy — what's covered, limits by category, the approval and submission process, timelines, and what's not reimbursable — that's fair, easy to follow, and reduces finance back-and-forth. Not tax/legal advice.",
    "parameters": {
@@ -3935,6 +3973,25 @@
  {
   "type": "function",
   "function": {
+   "name": "form_filler_operator",
+   "description": "Fill long web forms and applications through a computer-use agent — from a fact sheet you approve, field by field, with a full transcript and nothing submitted without your word. Use when asked to fill this application for me, complete this government/vendor/insurance form, or do this registration. Produces the fact-to-field mapping, the filled form held at review, and a field-level transcript.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "founder_market_fit",
    "description": "Articulate founder-market fit — the why-you and why-now story investors and accelerators (YC-style) probe hardest. Use when asked to write the founder story, answer 'why are you the right team', draft YC / accelerator application answers, or explain founder-market fit. Produces a sharp narrative connecting the founder's unfair insight and earned secrets to this specific opportunity — concrete, not a humble-brag.",
    "parameters": {
@@ -4374,6 +4431,25 @@
   "function": {
    "name": "impact_report",
    "description": "Write a compelling nonprofit impact or annual report that shows donors what their money achieved. Use when asked to write an impact report, an annual report, a grant outcomes report, or to report results to funders/donors. Produces a structured report — mission and year in brief, outcomes with real numbers and a beneficiary story, financials at a glance, and a forward ask — that builds trust and renews giving.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "inbox_zero_operator",
+   "description": "Drive an email inbox to zero through a computer-use or tool-using agent — triage every message into act/delegate/defer/archive with drafts prepared, never a send. Use when asked to get my inbox to zero, triage my email hands-on, process my inbox for me, or run inbox zero. Produces the triage ledger, prepared reply drafts, and an approval-gated action plan the agent then executes read-mostly.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -8744,6 +8820,25 @@
   "function": {
    "name": "subcontractor_scorecard",
    "description": "Score a subcontractor's performance across schedule reliability, quality, safety, paperwork, and change-order behaviour with weighted anchors. Use when asked to evaluate a sub, build a subcontractor scorecard, decide whether to rebid or rehire a trade, review sub performance for prequalification, or justify removing a sub from the bid list. Produces a weighted scorecard with per-dimension anchored ratings, evidence notes, and an award/retention recommendation.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "subscription_auditor",
+   "description": "Find the subscriptions you forgot you pay for — a tool-using agent audits statements and inboxes, prices the waste annually, and preps (never executes) the cancellations. Use when asked to audit my subscriptions, find recurring charges, what am I paying for, or help me cancel unused services. Produces the subscription inventory with keep/cancel/downgrade verdicts, the annual-waste number, and approval-gated cancellation prep.",
    "parameters": {
     "type": "object",
     "properties": {

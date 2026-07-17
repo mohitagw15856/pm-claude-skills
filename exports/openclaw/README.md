@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-515 skills exported. Copy a `SKILL.md` into the tool to use it.
+520 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -63,6 +63,7 @@
 | Budget Variance Analysis | `pm-finance` | `budget-variance-analysis/SKILL.md` |
 | Bug Diagnosis | `pm-craft` | `bug-diagnosis/SKILL.md` |
 | Bug Report | `pm-qa` | `bug-report/SKILL.md` |
+| Calendar Defrag | `pm-operator` | `calendar-defrag/SKILL.md` |
 | Candidate Scorecard | `pm-recruiting` | `candidate-scorecard/SKILL.md` |
 | Cap Table Explainer | `pm-founders` | `cap-table-explainer/SKILL.md` |
 | Capacity Planning | `pm-engineering` | `capacity-planning/SKILL.md` |
@@ -189,6 +190,7 @@
 | Executive Update | `pm-strategy` | `executive-update/SKILL.md` |
 | Exit Waterfall | `pm-calculators` | `exit-waterfall/SKILL.md` |
 | Expense Audit | `pm-money` | `expense-audit/SKILL.md` |
+| Expense Filer | `pm-operator` | `expense-filer/SKILL.md` |
 | Expense Policy | `pm-accounting` | `expense-policy/SKILL.md` |
 | Experiment Designer | `pm-advanced` | `experiment-designer/SKILL.md` |
 | Experiment Readout | `pm-dataeng` | `experiment-readout/SKILL.md` |
@@ -215,6 +217,7 @@
 | Flowchart | `pm-visuals` | `flowchart/SKILL.md` |
 | FOIA / Public-Records Request | `pm-gov` | `foia-request/SKILL.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `follow-up-sequence/SKILL.md` |
+| Form Filler Operator | `pm-operator` | `form-filler-operator/SKILL.md` |
 | Founder-Market Fit | `pm-founders` | `founder-market-fit/SKILL.md` |
 | Frontend Design | `pm-design` | `frontend-design/SKILL.md` |
 | Fundraising FAQ | `pm-founders` | `fundraising-faq/SKILL.md` |
@@ -239,6 +242,7 @@
 | i18n Readiness Review | `pm-localization` | `i18n-readiness-review/SKILL.md` |
 | IEP Goal Support | `pm-education` | `iep-goal-support/SKILL.md` |
 | Impact Report | `pm-nonprofit` | `impact-report/SKILL.md` |
+| Inbox Zero Operator | `pm-operator` | `inbox-zero-operator/SKILL.md` |
 | Incident Postmortem | `pm-engineering` | `incident-postmortem/SKILL.md` |
 | Incident Public Statement | `pm-crisis` | `incident-public-statement/SKILL.md` |
 | Incremental Implementation | `pm-method` | `incremental-implementation/SKILL.md` |
@@ -469,6 +473,7 @@
 | Style Fingerprint | `pm-essentials` | `style-fingerprint/SKILL.md` |
 | Subagent Orchestration | `pm-method` | `subagent-orchestration/SKILL.md` |
 | Subcontractor Scorecard | `pm-construction` | `subcontractor-scorecard/SKILL.md` |
+| Subscription Auditor | `pm-operator` | `subscription-auditor/SKILL.md` |
 | Substack Notes Scraper | `pm-writers` | `substack-notes-scraper/SKILL.md` |
 | Subtitle & Caption | `pm-localization` | `subtitle-caption/SKILL.md` |
 | Supplier Scorecard | `pm-supplychain` | `supplier-scorecard/SKILL.md` |

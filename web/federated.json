@@ -1,8 +1,8 @@
 {
  "spec": "skill-federation/0.1",
- "built": "2026-07-16",
+ "built": "2026-07-17",
  "libraries": 1,
- "skills": 515,
+ "skills": 520,
  "members": [
   {
    "repo": "mohitagw15856/pm-claude-skills",
@@ -10,7 +10,7 @@
    "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
    "license": "MIT",
    "badge": "https://img.shields.io/endpoint?url=https%3A%2F%2Fpm-skills-mcp.pm-claude-skills.workers.dev%2Fbadge%3Frepo%3Dmohitagw15856%2Fpm-claude-skills",
-   "count": 515,
+   "count": 520,
    "skills": [
     {
      "name": "360-feedback-template",
@@ -235,6 +235,10 @@
     {
      "name": "bug-report",
      "description": "Write a clear, reproducible bug report that gets fixed fast. Use when asked to write a bug report, file a defect, report an issue, or turn 'it's broken' into an actionable ticket. Produces a structured report — a precise title, steps to reproduce, expected vs. actual, environment, severity/priority,"
+    },
+    {
+     "name": "calendar-defrag",
+     "description": "Defragment a work calendar through a tool-using agent — find the meeting debt, propose the consolidation, and (approval-gated) execute the moves. Use when asked to defrag my calendar, get me focus time, audit my meetings, or fix my week. Produces the calendar audit (cost per meeting, fragmentation m"
     },
     {
      "name": "candidate-scorecard",
@@ -737,6 +741,10 @@
      "description": "Audit spending to find leaks — recurring subscriptions, creep, and cuttable costs — ranked by impact. Use when asked to cut expenses, review subscriptions, find where money is going, or free up cash. Produces a categorized spend breakdown, a ranked list of cuts with dollar amounts, and the annualize"
     },
     {
+     "name": "expense-filer",
+     "description": "Turn a pile of receipts into a filed expense report through a tool-using agent — extraction, policy checks, and categorization done for you; submission gated on your approval. Use when asked to file my expenses, process these receipts, build my expense report, or expense this trip. Produces the item"
+    },
+    {
      "name": "expense-policy",
      "description": "Write a clear company expense & reimbursement policy. Use when asked to write an expense policy, a reimbursement policy, a travel & expense (T&E) policy, or spending guidelines. Produces a practical policy — what's covered, limits by category, the approval and submission process, timelines, and what"
     },
@@ -841,6 +849,10 @@
      "description": "Write the follow-up messages that keep a candidate on the radar without being annoying. Use when asked to write a post-interview thank-you, a follow-up after no reply, a nudge on a stalled application, or a check-in sequence during a job search. Produces a timed sequence — what to send, when, and th"
     },
     {
+     "name": "form-filler-operator",
+     "description": "Fill long web forms and applications through a computer-use agent — from a fact sheet you approve, field by field, with a full transcript and nothing submitted without your word. Use when asked to fill this application for me, complete this government/vendor/insurance form, or do this registration. "
+    },
+    {
      "name": "founder-market-fit",
      "description": "Articulate founder-market fit — the why-you and why-now story investors and accelerators (YC-style) probe hardest. Use when asked to write the founder story, answer 'why are you the right team', draft YC / accelerator application answers, or explain founder-market fit. Produces a sharp narrative con"
     },
@@ -935,6 +947,10 @@
     {
      "name": "impact-report",
      "description": "Write a compelling nonprofit impact or annual report that shows donors what their money achieved. Use when asked to write an impact report, an annual report, a grant outcomes report, or to report results to funders/donors. Produces a structured report — mission and year in brief, outcomes with real "
+    },
+    {
+     "name": "inbox-zero-operator",
+     "description": "Drive an email inbox to zero through a computer-use or tool-using agent — triage every message into act/delegate/defer/archive with drafts prepared, never a send. Use when asked to get my inbox to zero, triage my email hands-on, process my inbox for me, or run inbox zero. Produces the triage ledger,"
     },
     {
      "name": "incident-postmortem",
@@ -1855,6 +1871,10 @@
     {
      "name": "subcontractor-scorecard",
      "description": "Score a subcontractor's performance across schedule reliability, quality, safety, paperwork, and change-order behaviour with weighted anchors. Use when asked to evaluate a sub, build a subcontractor scorecard, decide whether to rebid or rehire a trade, review sub performance for prequalification, or"
+    },
+    {
+     "name": "subscription-auditor",
+     "description": "Find the subscriptions you forgot you pay for — a tool-using agent audits statements and inboxes, prices the waste annually, and preps (never executes) the cancellations. Use when asked to audit my subscriptions, find recurring charges, what am I paying for, or help me cancel unused services. Produc"
     },
     {
      "name": "substack-notes-scraper",

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-515 skills exported. Copy a `.md rule` into the tool to use it.
+520 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -63,6 +63,7 @@
 | Budget Variance Analysis | `pm-finance` | `pm-finance/budget-variance-analysis/budget-variance-analysis.md` |
 | Bug Diagnosis | `pm-craft` | `pm-craft/bug-diagnosis/bug-diagnosis.md` |
 | Bug Report | `pm-qa` | `pm-qa/bug-report/bug-report.md` |
+| Calendar Defrag | `pm-operator` | `pm-operator/calendar-defrag/calendar-defrag.md` |
 | Candidate Scorecard | `pm-recruiting` | `pm-recruiting/candidate-scorecard/candidate-scorecard.md` |
 | Cap Table Explainer | `pm-founders` | `pm-founders/cap-table-explainer/cap-table-explainer.md` |
 | Capacity Planning | `pm-engineering` | `pm-engineering/capacity-planning/capacity-planning.md` |
@@ -189,6 +190,7 @@
 | Executive Update | `pm-strategy` | `pm-strategy/executive-update/executive-update.md` |
 | Exit Waterfall | `pm-calculators` | `pm-calculators/exit-waterfall/exit-waterfall.md` |
 | Expense Audit | `pm-money` | `pm-money/expense-audit/expense-audit.md` |
+| Expense Filer | `pm-operator` | `pm-operator/expense-filer/expense-filer.md` |
 | Expense Policy | `pm-accounting` | `pm-accounting/expense-policy/expense-policy.md` |
 | Experiment Designer | `pm-advanced` | `pm-advanced/experiment-designer/experiment-designer.md` |
 | Experiment Readout | `pm-dataeng` | `pm-dataeng/experiment-readout/experiment-readout.md` |
@@ -215,6 +217,7 @@
 | Flowchart | `pm-visuals` | `pm-visuals/flowchart/flowchart.md` |
 | FOIA / Public-Records Request | `pm-gov` | `pm-gov/foia-request/foia-request.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/follow-up-sequence.md` |
+| Form Filler Operator | `pm-operator` | `pm-operator/form-filler-operator/form-filler-operator.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/founder-market-fit.md` |
 | Frontend Design | `pm-design` | `pm-design/frontend-design/frontend-design.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/fundraising-faq.md` |
@@ -239,6 +242,7 @@
 | i18n Readiness Review | `pm-localization` | `pm-localization/i18n-readiness-review/i18n-readiness-review.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/iep-goal-support.md` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/impact-report.md` |
+| Inbox Zero Operator | `pm-operator` | `pm-operator/inbox-zero-operator/inbox-zero-operator.md` |
 | Incident Postmortem | `pm-engineering` | `pm-engineering/incident-postmortem/incident-postmortem.md` |
 | Incident Public Statement | `pm-crisis` | `pm-crisis/incident-public-statement/incident-public-statement.md` |
 | Incremental Implementation | `pm-method` | `pm-method/incremental-implementation/incremental-implementation.md` |
@@ -469,6 +473,7 @@
 | Style Fingerprint | `pm-essentials` | `pm-essentials/style-fingerprint/style-fingerprint.md` |
 | Subagent Orchestration | `pm-method` | `pm-method/subagent-orchestration/subagent-orchestration.md` |
 | Subcontractor Scorecard | `pm-construction` | `pm-construction/subcontractor-scorecard/subcontractor-scorecard.md` |
+| Subscription Auditor | `pm-operator` | `pm-operator/subscription-auditor/subscription-auditor.md` |
 | Substack Notes Scraper | `pm-writers` | `pm-writers/substack-notes-scraper/substack-notes-scraper.md` |
 | Subtitle & Caption | `pm-localization` | `pm-localization/subtitle-caption/subtitle-caption.md` |
 | Supplier Scorecard | `pm-supplychain` | `pm-supplychain/supplier-scorecard/supplier-scorecard.md` |

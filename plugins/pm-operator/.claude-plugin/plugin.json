@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-operator",
+  "version": "1.0.0",
+  "description": "The judgment layer for agents that ACT: inbox zero, calendar defrag, expense filing, form filling, and subscription audits — computer-use skills where analysis is free, every action is approval-gated per SkillSpec Execution blocks, and the irreversible button always belongs to the human.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "computer-use",
+    "operator",
+    "automation",
+    "execution",
+    "inbox",
+    "calendar",
+    "expenses",
+    "agent"
+  ]
+}

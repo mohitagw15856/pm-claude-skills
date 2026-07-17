@@ -6,7 +6,7 @@
 // Content is rendered from the skill's own craft: inputs, Quality Checks,
 // Anti-Patterns, trigger phrases, deeper materials, sample output, and the
 // interconnection graph. Run after web/build-skills.mjs. No dependencies.
-import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -336,6 +336,10 @@ const urls = [
   `${BASE}/`, `${BASE}/catalog.html`, `${BASE}/examples.html`, `${BASE}/leaderboard.html`,
   `${BASE}/coverage.html`, `${BASE}/canvas.html`, `${BASE}/firm.html`, `${BASE}/boardroom.html`, `${BASE}/defend.html`, `${BASE}/verify.html`, `${BASE}/gym.html`, `${BASE}/gauntlet.html`, `${BASE}/xray.html`, `${BASE}/grade.html`, `${BASE}/benchmark.html`, `${BASE}/hiring.html`, `${BASE}/wrapped.html`, `${BASE}/academy.html`, `${BASE}/campaign.html`, `${BASE}/reckoning.html`, `${BASE}/handbook.html`, `${BASE}/charter.html`, `${BASE}/tower.html`, `${BASE}/stage.html`, `${BASE}/galaxy3d.html`, `${BASE}/city.html`, `${BASE}/trophy.html`, `${BASE}/status.html`, `${BASE}/season.html`, `${BASE}/atlas.html`, `${BASE}/morningshow.html`, `${BASE}/institute.html`,
   ...skills.map((s) => `${BASE}/skill/${s.name}.html`),
+  // profession landing pages (built by build-profession-pages.mjs)
+  ...(existsSync(join(root, 'web', 'for'))
+    ? readdirSync(join(root, 'web', 'for')).filter((f) => f.endsWith('.html')).map((f) => `${BASE}/for/${f}`)
+    : []),
 ];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
