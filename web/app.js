@@ -1680,3 +1680,47 @@ async function instantDemo() {
   setTimeout(() => { try { run(); } catch (_) {} }, 350);
 }
 if (el('instantDemo')) el('instantDemo').addEventListener('click', instantDemo);
+
+
+// ── First-visit tour: five spotlights, one minute, once. New visitors see
+// three of sixty surfaces without this; retention lives in the other 57.
+(function () {
+  if (localStorage.getItem('pm_tour_done') || navigator.webdriver) return;
+  const STEPS = [
+    ['#cmdInput', 'Describe any task in your own words — the command bar routes you to the right skill instantly. No API, no signup.'],
+    ['#instantDemo', 'Zero setup: this button runs a real skill on a real messy brief, free, in about five seconds.'],
+    ['#slotGo', 'Feeling lucky? The slot machine spins all 520 skills and lands somewhere useful.'],
+    ['.toolbar-nav', 'Everything lives up here — Create, Compete, Learn, Trust, Explore. Or press “/” anywhere to jump to any page.'],
+    ['#instantDemo', 'That’s the tour. Seriously though — press this button once. 🎉'],
+  ];
+  let i = 0, box, ring;
+  function cleanup() { box && box.remove(); ring && ring.remove(); localStorage.setItem('pm_tour_done', '1'); }
+  function show() {
+    const t = document.querySelector(STEPS[i][0]);
+    if (!t) { i++; return i < STEPS.length ? show() : cleanup(); }
+    const r = t.getBoundingClientRect();
+    if (!ring) {
+      ring = document.createElement('div');
+      ring.style.cssText = 'position:fixed;border:2px solid #c9a227;border-radius:12px;box-shadow:0 0 0 4000px rgba(5,7,12,.55);pointer-events:none;z-index:9998;transition:all .3s';
+      document.body.appendChild(ring);
+    }
+    ring.style.left = (r.left - 6) + 'px'; ring.style.top = (r.top - 6) + 'px';
+    ring.style.width = (r.width + 12) + 'px'; ring.style.height = (r.height + 12) + 'px';
+    if (!box) {
+      box = document.createElement('div');
+      box.style.cssText = 'position:fixed;z-index:9999;background:#161b22;border:1px solid #30363d;border-radius:12px;padding:14px 16px;max-width:300px;font-size:13.5px;color:#e6edf3;box-shadow:0 8px 30px rgba(0,0,0,.5)';
+      document.body.appendChild(box);
+    }
+    box.innerHTML = STEPS[i][1] +
+      '<div style="margin-top:10px;display:flex;gap:8px;justify-content:space-between;align-items:center">' +
+      '<span style="color:#8b949e;font-size:11px">' + (i + 1) + '/' + STEPS.length + '</span><span>' +
+      '<button id="tourSkip" style="background:none;border:0;color:#8b949e;cursor:pointer;font-size:12px">skip</button> ' +
+      '<button id="tourNext" style="background:#8a5cf5;border:0;color:#fff;border-radius:8px;padding:6px 14px;font-weight:700;cursor:pointer">' + (i === STEPS.length - 1 ? 'Done' : 'Next') + '</button></span></div>';
+    const below = r.bottom + 170 < innerHeight;
+    box.style.top = (below ? r.bottom + 12 : Math.max(8, r.top - box.offsetHeight - 12)) + 'px';
+    box.style.left = Math.min(Math.max(8, r.left), innerWidth - 320) + 'px';
+    box.querySelector('#tourNext').onclick = () => { i++; i < STEPS.length ? show() : (cleanup(), window.pmTrack && pmTrack('tour/done')); };
+    box.querySelector('#tourSkip').onclick = () => { cleanup(); if (window.pmTrack) pmTrack('tour/skip'); };
+  }
+  setTimeout(() => { if (document.querySelector('#cmdInput')) { show(); if (window.pmTrack) pmTrack('tour/start'); } }, 1400);
+})();

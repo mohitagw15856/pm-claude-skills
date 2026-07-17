@@ -275,7 +275,7 @@ function page(s) {
     <div class="inner">
       <h1>${esc(s.title)}</h1>
       <div class="row">
-        <span class="tier tier-${s.tier}">${dot} ${label}</span>
+        <span class="tier tier-${s.tier}">${dot} ${label}</span>${s.updated ? `<span class="tier" title="last change to this skill">🕐 updated ${s.updated}</span>` : ''}
         ${evalBadge}
         <span class="badge badge-l3">🔷 SkillSpec L3</span>
         ${cf.hasScript ? '<span class="badge badge-script">⚙ ships an executable helper</span>' : ''}

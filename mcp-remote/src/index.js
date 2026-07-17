@@ -545,6 +545,24 @@ export default {
     // tamper-evident and timestamped — it attests "these claims + this
     // transcript hash were presented at this time", not that the run was
     // proctored. Public key at /cred/pubkey; anyone verifies offline.
+    // ── Skill of the Day: deterministic by UTC date — same skill for everyone,
+    // embeddable anywhere. /today.json for apps; /today/badge for READMEs via
+    // shields endpoint. Zero state: the date is the seed.
+    if ((url.pathname === '/today.json' || url.pathname === '/today/badge') && (request.method === 'GET' || request.method === 'HEAD')) {
+      const skills = await getSkills();
+      const day = Math.floor(Date.now() / 86400000);
+      const s2 = skills[((day % skills.length) + skills.length) % skills.length];
+      if (url.pathname === '/today/badge') {
+        return new Response(JSON.stringify({ schemaVersion: 1, label: '🎯 skill of the day', message: s2.name, color: '8a5cf5', cacheSeconds: 3600 }),
+          { headers: { 'content-type': 'application/json', 'cache-control': 'public, max-age=3600', ...CORS } });
+      }
+      return new Response(JSON.stringify({
+        date: new Date().toISOString().slice(0, 10), name: s2.name, title: s2.title,
+        description: s2.description,
+        run: 'https://mohitagw15856.github.io/pm-claude-skills/index.html?skill=' + s2.name,
+        page: 'https://mohitagw15856.github.io/pm-claude-skills/skill/' + s2.name + '.html',
+      }, null, 2), { headers: { 'content-type': 'application/json', 'cache-control': 'public, max-age=3600', ...CORS } });
+    }
     // ── Verdict API: grade any text against a skill's own rubric, on the
     // CALLER's Anthropic key (never ours — zero cost to this service). The
     // rubrics become infrastructure: CI gates, editor plugins, anything.

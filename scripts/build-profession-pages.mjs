@@ -59,6 +59,17 @@ const page = ([slug, title, bundles, pitch]) => {
 <title>AI skills for ${esc(title)} — free, open-source, runs in your browser</title>
 <meta name="description" content="${esc(pitch)} ${list.length}+ free open-source AI skills for ${esc(title.toLowerCase())} — work with Claude, ChatGPT, Gemini and Cursor, no signup." />
 <link rel="canonical" href="${BASE}/for/${slug}.html" />
+<meta property="og:title" content="AI skills for ${esc(title)}" />
+<meta property="og:description" content="${esc(pitch)}" />
+<meta property="og:image" content="${BASE}/docs-assets/professions-hero.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">${JSON.stringify({
+  '@context': 'https://schema.org', '@type': 'FAQPage',
+  mainEntity: [
+    { '@type': 'Question', name: `What are AI skills for ${title.toLowerCase()}?`, acceptedAnswer: { '@type': 'Answer', text: `${pitch} Each skill is an open-source SKILL.md file that teaches Claude, ChatGPT, Gemini, or Cursor the structure a senior professional uses — free, no signup.` } },
+    { '@type': 'Question', name: 'Are they really free?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — MIT-licensed, usable in the browser playground with sponsored runs or your own API key, and copyable into any AI tool.' } },
+  ],
+})}</script>
 <link rel="stylesheet" href="../styles.css" />
 <style>
   .p-wrap { max-width: 780px; margin: 0 auto; padding: 16px 22px 70px; }

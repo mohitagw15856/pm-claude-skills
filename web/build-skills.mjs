@@ -122,6 +122,18 @@ function titleFromName(name) {
     .join(' ');
 }
 
+// Freshness: one git pass → skill name → last commit date (live-repo signal).
+import { execSync } from 'node:child_process';
+const updatedMap = {};
+try {
+  const log = execSync('git log --pretty=format:"%as" --name-only -- skills/*/SKILL.md', { cwd: join(__dirname, '..'), encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 });
+  let cur = null;
+  for (const line of log.split('\n')) {
+    if (/^\d{4}-\d{2}-\d{2}$/.test(line)) cur = line;
+    else if (line.startsWith('skills/')) { const n = line.split('/')[1]; if (n && !updatedMap[n]) updatedMap[n] = cur; }
+  }
+} catch { /* shallow clone etc. — field just stays absent */ }
+
 const skills = [];
 for (const name of readdirSync(skillsDir)) {
   const file = join(skillsDir, name, 'SKILL.md');
@@ -136,6 +148,7 @@ for (const name of readdirSync(skillsDir)) {
     summary: summarize(meta.description || ''),
     plugin: skillToPlugin[name] || 'other',
     tier: tierFor(name),
+    updated: updatedMap[name] || null,
     eval: evalScores[meta.name || name] || null,
     source: SOURCES[meta.name || name] || null,
     inputs: parseInputs(body),
