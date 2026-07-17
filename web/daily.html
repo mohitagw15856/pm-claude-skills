@@ -132,6 +132,8 @@
     else st.streak = 1;                                            // first day or streak broken
     st.total = (st.total || 0) + 1;
     st.lastDay = today;
+    st.days = (st.days || []).filter(function (d) { return d > today - 60; });
+    if (st.days.indexOf(today) < 0) st.days.push(today);
     save(st);
     render();
     document.getElementById('msg').textContent = 'Streak updated — 🔥 ' + st.streak + ' day' + (st.streak === 1 ? '' : 's') + '. See you tomorrow!';
@@ -141,7 +143,16 @@
   document.getElementById('runBtn').addEventListener('click', function () { markDone(); });
   document.getElementById('doneBtn').addEventListener('click', markDone);
   document.getElementById('shareBtn').addEventListener('click', function () {
-    var text = "Today's PM Skills challenge: " + ch.title + ' 🔥 ' + (st.streak || 0) + '-day streak. ' + location.href.split('?')[0];
+    // The grid IS the ad: everyone shares the same day number, so feeds show a
+    // recognizable pattern (the Wordle effect) with zero spoilers.
+    var days = st.days || (st.lastDay === today ? [today] : []);
+    var row = '';
+    for (var k = 6; k >= 0; k--) row += days.indexOf(today - k) >= 0 ? '🟩' : (k === 0 ? '🟨' : '⬛');
+    var text = 'PM Skills Daily — Day ' + (((today % 366) + 366) % 366) +
+      '\n' + row + ' 🔥' + (st.streak || 0) +
+      '\n“' + ch.title + '”' +
+      '\n' + location.origin + location.pathname;
+    if (window.pmTrack) pmTrack('daily/share-grid');
     if (navigator.share) { navigator.share({ title: 'PM Skills Daily Challenge', text: text }).catch(function () {}); return; }
     navigator.clipboard.writeText(text).then(
       function () { document.getElementById('msg').textContent = 'Copied — share your streak!'; },

@@ -292,6 +292,11 @@ else if (cmd === 'migrate') {
   try { process.exit(await run(process.argv.slice(3))); }
   catch (e) { console.error(`Error: ${e.message}`); process.exit(1); }
 }
+else if (cmd === 'hooks') {
+  const { run } = await import('./hooks.mjs');
+  try { process.exit(await run(process.argv.slice(3))); }
+  catch (e) { console.error(`Error: ${e.message}`); process.exit(1); }
+}
 else if (cmd === 'outdated') {
   const { run } = await import('./outdated.mjs');
   try { process.exit(await run(process.argv.slice(3))); }

@@ -1653,3 +1653,30 @@ function confettiBurst() {
     else c.remove();
   })();
 }
+
+
+// ── The five-second wow: one click → a real skill runs on a real messy brief,
+// free (sponsored trial when available, else the in-browser model). Time-to-wow
+// is the conversion bottleneck for every visitor a post brings — this removes it.
+const DEMO = {
+  skill: 'meeting-notes',
+  values: ["Team sync about the Q3 launch. Priya said infra migration slips two weeks because the vendor contract isn't signed - legal has it since Tuesday. Marcus wants to launch anyway with the old infra, Dana disagreed, said support load would double. Decision: launch date holds, migration decoupled, revisit in two weeks. Marcus owns the vendor escalation by Friday. Also - hiring: the staff eng offer was declined, recruiter restarts search Monday. Someone should tell the CEO before the board pre-read goes out Thursday."],
+};
+async function instantDemo() {
+  const s = SKILLS.find((x) => x.name === DEMO.skill);
+  if (!s) return;
+  if (window.pmTrack) pmTrack('demo/instant');
+  selectSkill(s);
+  const fields = [...el('inputForm').querySelectorAll('input, textarea')];
+  if (fields[0]) fields[0].value = DEMO.values[0];
+  // no key? prefer the sponsored trial, else the in-browser model — never block the wow on a paste-a-key wall
+  if (!el('apiKey').value.trim()) {
+    const ps = el('provider');
+    if (ps.querySelector('option[value="tryclaude"]')) { ps.value = 'tryclaude'; }
+    else { ps.value = 'webllm'; }
+    ps.dispatchEvent(new Event('change'));
+  }
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  setTimeout(() => { try { run(); } catch (_) {} }, 350);
+}
+if (el('instantDemo')) el('instantDemo').addEventListener('click', instantDemo);

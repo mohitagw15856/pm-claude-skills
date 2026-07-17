@@ -1,0 +1,36 @@
+name: 'PM Skills — Document Reviewer'
+description: 'Reviews PRs that touch professional documents (PRDs, RFCs, postmortems, runbooks, READMEs) against the matching skill rubric and comments a scored review.'
+author: 'Mohit Aggarwal'
+branding:
+  icon: 'check-square'
+  color: 'purple'
+
+inputs:
+  api_key:
+    description: 'Anthropic API key (store as a secret) — the review runs on your key.'
+    required: true
+  github_token:
+    description: 'Token for posting the comment (default: the workflow token).'
+    required: false
+    default: ${{ github.token }}
+  model:
+    description: 'Model for the review.'
+    required: false
+    default: 'claude-sonnet-4-6'
+  max_files:
+    description: 'Max changed documents to review per PR.'
+    required: false
+    default: '3'
+
+runs:
+  using: 'composite'
+  steps:
+    - shell: bash
+      env:
+        ANTHROPIC_API_KEY: ${{ inputs.api_key }}
+        GH_TOKEN: ${{ inputs.github_token }}
+        MODEL: ${{ inputs.model }}
+        MAX_FILES: ${{ inputs.max_files }}
+        PR: ${{ github.event.pull_request.number }}
+        REPO: ${{ github.repository }}
+      run: node ${{ github.action_path }}/review.mjs
