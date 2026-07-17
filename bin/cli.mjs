@@ -292,6 +292,17 @@ else if (cmd === 'migrate') {
   try { process.exit(await run(process.argv.slice(3))); }
   catch (e) { console.error(`Error: ${e.message}`); process.exit(1); }
 }
+else if (cmd === 'serve') {
+  // Your company's skill library on your laptop in one command — the Org
+  // Edition server (playground + /v1 API + private-skills overlay) without
+  // docker. `--private <dir>` overlays your own skills.
+  const { spawn } = await import('node:child_process');
+  const { fileURLToPath } = await import('node:url');
+  const path = await import('node:path');
+  const server = path.join(path.dirname(path.dirname(fileURLToPath(import.meta.url))), 'org', 'server.mjs');
+  const child = spawn(process.execPath, [server, ...process.argv.slice(3)], { stdio: 'inherit' });
+  child.on('exit', (c) => process.exit(c || 0));
+}
 else if (cmd === 'hooks') {
   const { run } = await import('./hooks.mjs');
   try { process.exit(await run(process.argv.slice(3))); }

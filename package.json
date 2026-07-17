@@ -53,7 +53,10 @@
     "connectors/",
     "skill-tiers.json",
     "skill-sources.json",
-    "workflows.json"
+    "workflows.json",
+    "org/",
+    "web/",
+    "!web/docs-assets/"
   ],
   "scripts": {
     "postinstall": "node bin/postinstall.mjs",

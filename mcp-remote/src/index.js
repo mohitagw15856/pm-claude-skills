@@ -545,23 +545,49 @@ export default {
     // tamper-evident and timestamped — it attests "these claims + this
     // transcript hash were presented at this time", not that the run was
     // proctored. Public key at /cred/pubkey; anyone verifies offline.
+    // ── Verdict API: grade any text against a skill's own rubric, on the
+    // CALLER's Anthropic key (never ours — zero cost to this service). The
+    // rubrics become infrastructure: CI gates, editor plugins, anything.
+    if (url.pathname === '/verdict' && request.method === 'POST') {
+      let body;
+      try { body = await request.json(); } catch { return jsonResponse({ error: 'bad json' }, 400); }
+      const { text, skill, key, model } = body || {};
+      if (!text || !skill || !key) return jsonResponse({ error: 'need { text, skill, key } — key is YOUR Anthropic key; it is forwarded to Anthropic and never stored' }, 400);
+      if (String(text).length > 60000) return jsonResponse({ error: 'text too large (60KB cap)' }, 413);
+      const skills = await getSkills();
+      const s = skills.find((x) => x.name === skill);
+      if (!s) return jsonResponse({ error: `unknown skill: ${skill}` }, 404);
+      const rubric = (s.instructions.match(/##\s*Scoring Rubric[\s\S]*?(?=\n##\s|$)/i) || [''])[0];
+      const sys = `You grade one document against the "${s.title}" skill's standard.\n\nThe skill:\n${s.instructions.slice(0, 20000)}\n\nReturn ONLY JSON: {"score": <0-40 integer${rubric ? ', per the skill\'s Scoring Rubric dimensions' : ', 4 dimensions x 0-10: structure, completeness, judgment, actionability'}>, "dimensions": {"<dim>": <0-10>, ...}, "verdict": "<SHIP|SHIP WITH FIXES|NEEDS WORK>", "top_fix": "<the single highest-impact fix, one sentence>"}`;
+      const r = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
+        body: JSON.stringify({ model: model || 'claude-haiku-4-5-20251001', max_tokens: 500, system: sys, messages: [{ role: 'user', content: String(text) }] }),
+      });
+      if (!r.ok) return jsonResponse({ error: `anthropic: ${r.status}`, detail: (await r.text()).slice(0, 300) }, 502);
+      const j = await r.json();
+      const raw = (j.content && j.content[0] && j.content[0].text) || '';
+      let graded;
+      try { graded = JSON.parse((raw.match(/\{[\s\S]*\}/) || ['{}'])[0]); } catch { graded = { raw }; }
+      return jsonResponse({ skill: s.name, max: 40, model: model || 'claude-haiku-4-5-20251001', ...graded }, 200);
+    }
     if (url.pathname === '/cred/pubkey' && (request.method === 'GET' || request.method === 'HEAD')) {
-      if (!env.SIGNING_JWK) return json({ error: 'signing not configured' }, 503);
+      if (!env.SIGNING_JWK) return jsonResponse({ error: 'signing not configured' }, 503);
       const { d, ...pub } = JSON.parse(env.SIGNING_JWK);
-      return json({ kid: 'pm-skills-2026', alg: 'Ed25519', jwk: pub });
+      return jsonResponse({ kid: 'pm-skills-2026', alg: 'Ed25519', jwk: pub });
     }
     if (url.pathname === '/cred/sign' && request.method === 'POST') {
-      if (!env.SIGNING_JWK) return json({ error: 'signing not configured' }, 503);
+      if (!env.SIGNING_JWK) return jsonResponse({ error: 'signing not configured' }, 503);
       let claims;
-      try { claims = await request.json(); } catch { return json({ error: 'bad json' }, 400); }
+      try { claims = await request.json(); } catch { return jsonResponse({ error: 'bad json' }, 400); }
       const body = JSON.stringify(claims);
-      if (body.length > 4096) return json({ error: 'claims too large' }, 413);
+      if (body.length > 4096) return jsonResponse({ error: 'claims too large' }, 413);
       const payload = { v: 1, kid: 'pm-skills-2026', iat: new Date().toISOString(), claims };
       const data = new TextEncoder().encode(JSON.stringify(payload));
       const key = await crypto.subtle.importKey('jwk', JSON.parse(env.SIGNING_JWK), { name: 'Ed25519' }, false, ['sign']);
       const sig = await crypto.subtle.sign('Ed25519', key, data);
       const b64u = (buf) => btoa(String.fromCharCode(...new Uint8Array(buf))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-      return json({ credential: b64u(data) + '.' + b64u(sig) });
+      return jsonResponse({ credential: b64u(data) + '.' + b64u(sig) });
     }
     if (url.pathname === '/badge' && (request.method === 'GET' || request.method === 'HEAD')) {
       const key = new Request(url.toString());
