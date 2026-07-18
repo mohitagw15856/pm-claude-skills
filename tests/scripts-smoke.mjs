@@ -131,6 +131,21 @@ const CASES = [
   { name: 'daycare vs stay-home (net + trajectory)', script: 'skills/daycare-vs-stay-home/scripts/daycare_vs_stay_home.py',
     args: ['--income', '62000', '--daycare', '1600'],
     expect: /= 26,160 net\/year \(13\.08\/hr effective\)[\s\S]*forgoes 329,166 gross[\s\S]*~64,687 vs 71,875 never-left/ },
+  { name: 'wedding budget (allocation + guest lever)', script: 'skills/wedding-budget/scripts/wedding_budget.py',
+    args: ['--budget', '30000', '--guests', '110'],
+    expect: /venue_and_catering {7}42\.0% {6}12,600[\s\S]*contingency {13}9\.0% {7}2,700[\s\S]*per guest: 114\.55 — cutting 10 guests frees ~1,145/ },
+  { name: 'student loan strategy (three paths)', script: 'skills/student-loan-strategy/scripts/student_loan_strategy.py',
+    args: ['--loan', 'grad:38000:6.8:410', '--loan', 'undergrad:12000:4.5:130', '--extra', '400'],
+    expect: /weighted APR 6\.25%[\s\S]*attack \(avalanche\): {2}debt-free in 68 mo \(5\.7 yr\) · interest 8,438\.12[\s\S]*minimums \+ invest: {3}debt-free in 132 mo · interest 18,796\.34 · portfolio ~74,529/ },
+  { name: 'solar breakeven (year table)', script: 'skills/solar-breakeven/scripts/solar_breakeven.py',
+    args: ['--cost', '22000', '--incentive', '6600', '--bill', '190'],
+    expect: /net cost after incentives: 15,400[\s\S]*1 {4}1,938 {9}1,938 {4}-13,462[\s\S]*breakeven: year 8/ },
+  { name: 'subscription audit (annualized ranking)', script: 'skills/subscription-audit/scripts/subscription_audit.py',
+    args: ['--sub', 'streaming-a:15.99:monthly', '--sub', 'cloud:2.99:monthly', '--sub', 'vpn:71.88:yearly', '--sub', 'gym:45:monthly'],
+    expect: /gym {19}monthly {5}45\.00 {6}540\.00[\s\S]*4 subscriptions = 839\.64\/year · 69\.97\/month · 2\.30\/day[\s\S]*top 3 are 95\.7%/ },
+  { name: 'college cost (all-in + loan tail)', script: 'skills/college-cost/scripts/college_cost.py',
+    args: ['--sticker', '32000', '--aid', '14000'],
+    expect: /net 4-year cost: 79,887 {2}\(39,943 cash \+ 39,943 borrowed\)[\s\S]*453\.55\/mo for 10 years = 54,426 repaid \(14,483 interest\)[\s\S]*true all-in \(cash \+ repayments\): 94,369/ },
 ];
 for (const c of CASES) {
   const r = spawnSync('python3', [join(root, c.script), ...c.args], { encoding: 'utf8', timeout: 30000 });
