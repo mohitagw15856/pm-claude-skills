@@ -84,11 +84,23 @@ That's the whole trick: it's markdown. Your agent reads it and gains the judgmen
 
 The library grew an ecosystem — all optional, all linked from the **[full showcase](docs/SHOWCASE.md)**:
 
-**[▶ Skill Playground](https://mohitagw15856.github.io/pm-claude-skills/)** — try any skill in your browser, no install · **[Anti-Pattern Museum](https://mohitagw15856.github.io/pm-claude-skills/museum.html)** — 2,900+ shareable rules · **[The Handbook](https://mohitagw15856.github.io/pm-claude-skills/handbook.html)** (also a [real printed book](docs/print/)) · **[Workflow recipes](WORKFLOWS.md)** · **[Subagents & slash commands](agents/)** · **[MCP server + REST API](mcp-remote/)** · **[n8n / Slack / Obsidian integrations](connectors/)** · **[The Boardroom](https://mohitagw15856.github.io/pm-claude-skills/boardroom.html)** · **[SkillBench](skillbench/)** · **[Org Edition](org/)** · **[🇪🇸 🇫🇷 🇨🇳 🇯🇵 translations](skills-i18n/)**
+**[▶ Skill Playground](https://mohitagw15856.github.io/pm-claude-skills/)** — try any skill in your browser, no install · **[📸 the Gallery](docs/GALLERY.md)** — the creative side, in screenshots · **[Anti-Pattern Museum](https://mohitagw15856.github.io/pm-claude-skills/museum.html)** — 2,900+ shareable rules · **[The Handbook](https://mohitagw15856.github.io/pm-claude-skills/handbook.html)** (also a [real printed book](docs/print/)) · **[Workflow recipes](WORKFLOWS.md)** · **[Subagents & slash commands](agents/)** · **[MCP server + REST API](mcp-remote/)** · **[n8n / Slack / Obsidian integrations](connectors/)** · **[The Boardroom](https://mohitagw15856.github.io/pm-claude-skills/boardroom.html)** · **[SkillBench](skillbench/)** · **[Org Edition](org/)** · **[🇪🇸 🇫🇷 🇨🇳 🇯🇵 translations](skills-i18n/)**
+
+## 📄 The one-page cheatsheet
+
+The whole library on one poster — start path, standout features, and install one-liners for every tool. Print it, share it, drop it in a slide.
+
+<p align="center">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/cheatsheet.html">
+    <img src="web/docs-assets/cheatsheet.png" width="80%" alt="PM Skills cheatsheet — one link to start, the standout features, and install paths for every tool on one poster." />
+  </a>
+</p>
+
+**[🖼️ PNG](https://mohitagw15856.github.io/pm-claude-skills/docs-assets/cheatsheet.png)** · **[📄 PDF](https://mohitagw15856.github.io/pm-claude-skills/docs-assets/cheatsheet.pdf)** · **[🌐 Live poster](https://mohitagw15856.github.io/pm-claude-skills/cheatsheet.html)** · **[📥 Markdown](CHEATSHEET.md)**
 
 ## 🆕 Latest
 
-**v55.0.0** — pm-students, the Anti-Pattern Museum, educators kit, Chrome/Obsidian/container distribution, and more · plus post-release waves: **the Layoff & Resignation Kits, decoders waves 2–4, simulators waves 2–3, calculators waves 3–4, health-admin, renters, parents, the keyless live-data family (17 skills), and Mandarin + Japanese translations**. Full history: **[CHANGELOG](CHANGELOG.md)** · [releases](https://github.com/mohitagw15856/pm-claude-skills/releases)
+**v56.0.0 — the life release:** 73 new skills for the days that actually happen — **the Layoff & Resignation Kits, decoders waves 2–4 (insurance, estimates), simulators waves 2–3, calculators waves 3–4, health-admin, renters, parents, freelance, the keyless live-data family (17 skills), skill-vetting, Mandarin + Japanese**, 15 worked examples, and the skills-first README. Full history: **[CHANGELOG](CHANGELOG.md)** · [releases](https://github.com/mohitagw15856/pm-claude-skills/releases)
 
 ## 🤝 Contributing
 

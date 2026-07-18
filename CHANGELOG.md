@@ -9,6 +9,52 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [56.0.0] — the life release: 73 new skills for the days that actually happen — 2026-07-18
+
+The library's biggest single jump (526 → **599 skills, 82 bundles**), aimed squarely at everyday high-stakes moments — plus a keyless live-data family, Mandarin & Japanese, and a README that finally puts the skills first.
+
+### Added — 💼 the career-moment kits
+- **[pm-layoff](plugins/pm-layoff)** — severance-agreement decoder, financial triage for the gap, the reference-request kit, and the announcement post that keeps doors open.
+- **[pm-resignation](plugins/pm-resignation)** — the three-sentence letter, the **counteroffer decoder** (retention theater vs. genuine correction, 🔴🟡🟢), exit-interview strategy (say/soften/skip), and the last-two-weeks handoff.
+- **pip-responder** (two tracks: perform visibly + search quietly, starting now) · **manager-first-90-days** (listen/decide/move, with forbidden moves per phase).
+
+### Added — 🔍 decoders waves 2–4 (14 new)
+- **Wave 2:** inspection-report, closing-disclosure (tolerance-tier leverage), car-lease (money factor × 2400), timeshare-contract (rescission clock first), pay-stub (the stopped-match catcher).
+- **Wave 3 — insurance:** policy decoder (ACV vs replacement, computed), **claim-denial decoder + point-by-point appeal letter**, 401k-plan decoder (fee drag in dollars-over-career), disability-insurance decoder (own-occ vs any-occ, the 24-month switch).
+- **Wave 4 — estimates:** auto-repair, home-contractor quote (the allowance audit), vet estimate (the staged-care magic sentence), moving-company (binding vs not, the hostage-load patterns).
+
+### Added — 🎭 simulators waves 2–3 (8 new)
+- the-promotion-committee · the-journalist-call · the-procurement-gauntlet · **discovery-eyes** (communication hygiene via opposing counsel's highlighter — prevention-only, structurally).
+- the-thesis-defense · **the-visa-interview** (truth-only, integrity structural) · the-due-diligence-call (the reconciliation game) · the-price-pushback (the client's grinding playbook, named move by move).
+
+### Added — 🧮 calculators waves 3–4 (8 new, all with deterministic stdlib scripts + byte-exact CI pins)
+- rent-vs-buy (the renter-invests-the-difference model, breakeven horizon) · car-tco (keep/used/new/lease on one basis) · freelance-rate (why it's not salary÷2000) · raise-vs-jump (trajectories + the vesting checklist).
+- debt-payoff (avalanche vs snowball, priced) · emergency-fund (risk-adjusted, not sloganized) · ev-vs-gas (crossover year) · daycare-vs-stay-home (marginal tax + trajectory, both timescales).
+
+### Added — 🏠 life admin, health, renters, parents (17 new)
+- **Life events:** new-parent-logistics (deadline-first), relocation-planner (dependency-ordered), caregiver-coordination (the invisible-load map).
+- **Health admin:** doctor-visit-prep (the 12-minute sheet), prescription-cost-navigator (the reduction ladder; the dose is never negotiable), second-opinion-request, medical-records-request.
+- **[pm-renters](plugins/pm-renters)** — security-deposit recovery (wear-vs-damage line), repair-request escalation (record-and-ladder), rent-increase response (validity first, then leverage).
+- **[pm-parents](plugins/pm-parents)** — parent-teacher-conference prep (no question answerable with "fine"), the IEP/504 meeting kit (measurable-goals discipline), the college-app parent guide (support without takeover; the essay line is bright).
+- **[pm-freelance](plugins/pm-freelance)** — pricing-your-services, scope-creep-response (the graduated middle path), late-invoice-escalation (the dated ladder).
+
+### Added — 📡 [pm-live](plugins/pm-live): 17 live-data skills, zero API keys
+- Inspired by what actually tops ClawHub: **capability skills with no setup.** weather-now (wttr.in + Open-Meteo) · air-quality · currency-rates (ECB) · crypto-prices · world-clock (DST from the API, never memory) · public-holidays (the `global` flag read properly) · dictionary-lookup · wiki-summary (live vs training-memory deltas, called out) · earthquake-watch (USGS) · hn-digest (positions, not "mixed reactions") · sun-and-moon (the UTC trap handled) · ip-lookup · dns-lookup (SPF/DMARC decoded) · rss-digest · sports-scores (ESPN public feeds) · flight-tracker (ADS-B positions, honestly bounded from schedules) · site-check (which *layer* is down).
+- Every endpoint curl-verified before writing; every skill carries fallbacks, timestamps, and the caveats live data owes. One casualty of honesty: country-facts was cut when restcountries went key-required.
+- **skill-vetting** (→ [pm-security](plugins/pm-security)) — vet any SKILL.md before installing: red-flag sweep, blast-radius audit, tiered verdict with quoted evidence; the prose layer audited as executable.
+
+### Added — 🌏 i18n: Mandarin & Japanese
+- **[skills-i18n/zh](skills-i18n/zh)** and **[skills-i18n/ja](skills-i18n/ja)** launch with the five flagships each (resume, executive-summary, lease/medical-bill/tos decoders) + language READMEs; **5 more Spanish decoders** (medical-bill, tos, loan, benefits, hoa). The parity gate learned the zh (规范版本) and ja (正本) canonicity markers — 88 checks green.
+
+### Added — 📚 depth
+- **15 new worked examples** — all six pm-students skills, decoders wave 2 (all five), calculators wave 3 (all four, interpreting real script runs).
+
+### Changed — 🧹 the README
+- **1,374 lines → ~130, skills-first.** The catalog is the front door: family tables with real links, a professions grid, what-a-skill-looks-like. The Playground is now billed as what it is — a great bonus. The full feature tour lives on in **[docs/SHOWCASE.md](docs/SHOWCASE.md)**, and the visual experiments got their own **[Gallery](docs/GALLERY.md)**.
+
+### Infra
+- scripts-smoke grew to 44 scripts / 24 exact-output functional pins · drift guard now watches SHOWCASE.md and knows the pm-live subset · i18n parity gate is 5-language aware.
+
 ## [55.0.0] — the fifteen-front release: students, the museum, and distribution everywhere — 2026-07-17
 
 ### Added — 🎓 new audiences (520 → 526 skills, 76 bundles)
@@ -858,6 +904,7 @@ Earlier releases (v1.0.0 – v5.0.0) predate this changelog. See the
 library grew from the first PM toolkit to 100+ skills.
 
 [Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v55.0.0...HEAD
+[56.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v55.0.0...v56.0.0
 [55.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v54.0.0...v55.0.0
 [54.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v53.0.0...v54.0.0
 [50.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v49.0.0...v50.0.0
