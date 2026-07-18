@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-626 skills exported. Copy a `.mdc rule` into the tool to use it.
+625 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -504,7 +504,6 @@
 | Schedule Monte Carlo | `pm-calculators` | `pm-calculators/schedule-monte-carlo/schedule-monte-carlo.mdc` |
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/schedule-recipe.mdc` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/schema-markup.mdc` |
-| ScienceScapes Journey Builder | `other` | `other/sciencescapes-journey/sciencescapes-journey.mdc` |
 | Scope Creep Response | `pm-freelance` | `pm-freelance/scope-creep-response/scope-creep-response.mdc` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/screenshot-teardown.mdc` |
 | Second Opinion Request | `pm-lifeadmin` | `pm-lifeadmin/second-opinion-request/second-opinion-request.mdc` |

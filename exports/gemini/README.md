@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-626 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+625 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -504,7 +504,6 @@
 | Schedule Monte Carlo | `pm-calculators` | `pm-calculators/schedule-monte-carlo/GEM_INSTRUCTIONS.md` |
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/GEM_INSTRUCTIONS.md` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/GEM_INSTRUCTIONS.md` |
-| ScienceScapes Journey Builder | `other` | `other/sciencescapes-journey/GEM_INSTRUCTIONS.md` |
 | Scope Creep Response | `pm-freelance` | `pm-freelance/scope-creep-response/GEM_INSTRUCTIONS.md` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/GEM_INSTRUCTIONS.md` |
 | Second Opinion Request | `pm-lifeadmin` | `pm-lifeadmin/second-opinion-request/GEM_INSTRUCTIONS.md` |

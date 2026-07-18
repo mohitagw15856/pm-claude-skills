@@ -23,4 +23,4 @@ SkillSpec adoption is capped by its address: authors of competing skill librarie
 ## Adopters (grows by PR — add yourself)
 | Project | What it uses |
 |---|---|
-| [pm-claude-skills](https://github.com/mohitagw15856/pm-claude-skills) | Full: 626 skills at L3, CI gate, badge, census grading |
+| [pm-claude-skills](https://github.com/mohitagw15856/pm-claude-skills) | Full: 625 skills at L3, CI gate, badge, census grading |

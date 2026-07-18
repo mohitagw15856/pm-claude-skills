@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-626 skills exported. Copy a `SKILL.md` into the tool to use it.
+625 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -504,7 +504,6 @@
 | Schedule Monte Carlo | `pm-calculators` | `schedule-monte-carlo/SKILL.md` |
 | Schedule Recipe | `pm-autopilot` | `schedule-recipe/SKILL.md` |
 | Schema Markup | `pm-growth` | `schema-markup/SKILL.md` |
-| ScienceScapes Journey Builder | `other` | `sciencescapes-journey/SKILL.md` |
 | Scope Creep Response | `pm-freelance` | `scope-creep-response/SKILL.md` |
 | Screenshot Teardown | `pm-vision` | `screenshot-teardown/SKILL.md` |
 | Second Opinion Request | `pm-lifeadmin` | `second-opinion-request/SKILL.md` |
