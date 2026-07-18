@@ -100,7 +100,7 @@ The whole library on one poster — start path, standout features, and install o
 
 ## 🆕 Latest
 
-**v56.0.0 — the life release:** 73 new skills for the days that actually happen — **the Layoff & Resignation Kits, decoders waves 2–4 (insurance, estimates), simulators waves 2–3, calculators waves 3–4, health-admin, renters, parents, freelance, the keyless live-data family (17 skills), skill-vetting, Mandarin + Japanese**, 15 worked examples, and the skills-first README. Full history: **[CHANGELOG](CHANGELOG.md)** · [releases](https://github.com/mohitagw15856/pm-claude-skills/releases)
+**v57.0.0 — the 600 crossing:** skill #600 is the **[decision-journal](skills/decision-journal/SKILL.md)**, and around it: **the Estate Pack** (when-someone-dies, the executor's ladder, digital legacy, beneficiary audit), **Scam Defense**, **the Wedding Pack**, the buying-gauntlet simulators (car dealership, insurance adjuster, open house), calculators wave 5, live-data wave 3 (incl. the ISS tracker), the side-hustle pack, **[what-to-ask](skills/what-to-ask/SKILL.md)**, 12 worked examples, and 10 more zh/ja translations. Full history: **[CHANGELOG](CHANGELOG.md)** · [releases](https://github.com/mohitagw15856/pm-claude-skills/releases)
 
 ## 🤝 Contributing
 

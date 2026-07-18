@@ -9,6 +9,52 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [57.0.0] — the 600 crossing: the decision journal, the estate pack, and 26 skills for the hardest weeks — 2026-07-18
+
+The library crosses 600 (599 → **625 skills, 86 bundles**) — and skill #600 is the one the whole library compounds through.
+
+### Added — 🎯 skill #600 and the front door
+- **decision-journal** (#600) — pre-registered reasoning, probabilities with dates, "I'm wrong if…" falsifiers, and the skill/variance/lucky/tuition review quadrants: the meta-skill of professional judgment, which is what this library is.
+- **what-to-ask** — the library's front door: name any signing/buying/agreeing situation → the five leverage-ranked questions, each with its bad-answer tell, handing off to the full decoder when one exists.
+
+### Added — 🕊 [pm-estate](plugins/pm-estate): the pack nobody wants to need
+- **when-someone-dies** — the first two weeks triaged (today / this week / should-wait), written for a reader who cannot think straight, with the order-more-death-certificates rule and the *you do not have to do this alone* line.
+- **estate-settlement-organizer** — the executor's ladder (authority → inventory → creditors → taxes → distribution) with the pay-nothing-before-inventory rule that keeps executors un-liable.
+- **digital-legacy-planner** — platform legacy tools + password-manager emergency access over the sticky note; the memorialize/delete wishes written while it's easy.
+- **beneficiary-audit** — the designation forms that quietly override wills, swept account by account, ex-spouses and missing contingents flagged.
+
+### Added — 🛡 [pm-scam-defense](plugins/pm-scam-defense)
+- **scam-message-decoder** — the pasted message matched against scam-family anatomies (fake fraud alerts, job scams, pig-butchering, the grandparent emergency), tells quoted from its own text, the independent-channel counter every time, and a shame-free already-clicked triage.
+- **data-breach-response** — the response keyed to *what leaked* (a password and an ID number are different emergencies), freeze-vs-monitoring explained as prevention-vs-detection.
+- **elder-scam-briefing** — dignity-first: the advice-asking open, the family code word (with the voice-cloning update), opt-in guardrails, and the pre-installed no-blame protocol.
+
+### Added — 💍 [pm-wedding](plugins/pm-wedding)
+- **wedding-budget** (script + CI pins) — allocation with the per-guest lever computed and the routinely-forgotten items (vendor meals, service charges, overtime) budgeted from day one.
+- **wedding-vendor-contract-decoder** — deposits-as-retainers decoded, the cancellation-cost timeline computed per date, and the postponement-vs-cancellation silence treated as the finding it is.
+- **wedding-logistics-planner** — the day as an operation: crowd-speed run sheet, vendor call sheet, a named decision-maker who isn't the couple, and contingency cards written while calm.
+
+### Added — 🎭 simulators wave 4: the buying gauntlets
+- **the-car-dealership** — both rooms: the four-square fog and payment-question trap out front, the rate-markup and add-on cascade in the finance office, with the ×72-months math said aloud.
+- **the-insurance-adjuster** — the friendly call where "fine, thanks" becomes a file note; recorded-statement branches, the quick-check anchor, and the get-a-lawyer triggers stated plainly.
+- **the-open-house** — the listing agent's profile of *you* assembling from small talk, the staging decode, and the gather-everything-volunteer-nothing discipline.
+
+### Added — 🧮 calculators wave 5 (scripts + byte-exact pins; suite now 49 scripts / 29 cases)
+- **student-loan-strategy** — attack vs invest vs forgiveness-ride simulated on the real loans, guaranteed-APR-vs-assumed-return framed honestly, extra-payments-hurt-forgiveness warned.
+- **solar-breakeven** — degradation, the inverter year, the zero-incentive sensitivity, and net-metering policy risk named as the unmodelable elephant.
+- **subscription-audit** — the leak annualized and ranked, with the hunt checklist (app stores, PayPal, the yearly-charge sweep).
+- **college-cost** — the award letter sorted (grants ≠ loans), the true all-in number, and the decade-long monthly tail stated next to starting salaries.
+
+### Added — 📡 live-data wave 3 (pm-live → 21)
+- **package-health** (npm + PyPI registries) · **github-repo-vitals** (rate-budget-aware, responsiveness *sampled*) · **stock-snapshot** (Yahoo public endpoint, heavily fenced, never advice) · **iss-tracker** (open-notify — the library's purest fun skill, coordinates translated to "over the South Pacific, heading for Chile").
+- The honest-filter struck twice: Stooq's CSV endpoint and wheretheiss failed live verification and were replaced with working sources before writing.
+
+### Added — 💼 [pm-sidehustle](plugins/pm-sidehustle)
+- **side-business-setup** (the employer-conflict check is step zero; money separation before logos; the LLC reflex slowed down and routed) · **first-client-contract** (the eight load-bearing clauses in plain language, with lawyer triggers) · **quarterly-tax-rhythm** (setaside-on-receipt, the one-way-glass rule, five-minute records).
+
+### Added — 📚 depth
+- **12 worked examples** — all four insurance decoders, all four estimate decoders, all four simulators wave 3 — several cross-linked (the freelance-rate example's Mara negotiates her own rate in the price-pushback example).
+- **10 translations** — benefits, loan, hoa, insurance-policy, and claim-denial decoders in both Mandarin and Japanese; parity gate now 128 checks green.
+
 ## [56.0.0] — the life release: 73 new skills for the days that actually happen — 2026-07-18
 
 The library's biggest single jump (526 → **599 skills, 82 bundles**), aimed squarely at everyday high-stakes moments — plus a keyless live-data family, Mandarin & Japanese, and a README that finally puts the skills first.
@@ -904,6 +950,7 @@ Earlier releases (v1.0.0 – v5.0.0) predate this changelog. See the
 library grew from the first PM toolkit to 100+ skills.
 
 [Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v55.0.0...HEAD
+[57.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v56.0.0...v57.0.0
 [56.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v55.0.0...v56.0.0
 [55.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v54.0.0...v55.0.0
 [54.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v53.0.0...v54.0.0
