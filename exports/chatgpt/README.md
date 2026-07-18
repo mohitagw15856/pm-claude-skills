@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-581 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+591 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -32,6 +32,7 @@
 | AI Product Canvas | `pm-advanced` | `pm-advanced/ai-product-canvas/SYSTEM_PROMPT.md` |
 | AI ROI Audit | `pm-aiwork` | `pm-aiwork/ai-roi-audit/SYSTEM_PROMPT.md` |
 | AI Usage Policy | `pm-aiwork` | `pm-aiwork/ai-usage-policy/SYSTEM_PROMPT.md` |
+| Air Quality | `pm-live` | `pm-live/air-quality/SYSTEM_PROMPT.md` |
 | Altitude Shifter | `pm-comms` | `pm-comms/altitude-shifter/SYSTEM_PROMPT.md` |
 | Ambiguity Resolver | `pm-strategy` | `pm-strategy/ambiguity-resolver/SYSTEM_PROMPT.md` |
 | Analyst Relations Brief | `pm-pmm` | `pm-pmm/analyst-relations-brief/SYSTEM_PROMPT.md` |
@@ -131,9 +132,11 @@
 | Creator Brand Kit | `pm-creator` | `pm-creator/creator-brand-kit/SYSTEM_PROMPT.md` |
 | Creator Media Kit | `pm-creator` | `pm-creator/creator-media-kit/SYSTEM_PROMPT.md` |
 | Credit Memo | `pm-banking` | `pm-banking/credit-memo/SYSTEM_PROMPT.md` |
+| Crypto Prices | `pm-live` | `pm-live/crypto-prices/SYSTEM_PROMPT.md` |
 | Customer Escalation Brief | `pm-cs` | `pm-cs/cs-escalation-brief/SYSTEM_PROMPT.md` |
 | Customer Health Scorecard | `pm-cs` | `pm-cs/cs-health-scorecard/SYSTEM_PROMPT.md` |
 | CSAT / NPS Analysis | `pm-support` | `pm-support/csat-nps-analysis/SYSTEM_PROMPT.md` |
+| Currency Rates | `pm-live` | `pm-live/currency-rates/SYSTEM_PROMPT.md` |
 | Customer Advisory Board | `pm-pmm` | `pm-pmm/customer-advisory-board/SYSTEM_PROMPT.md` |
 | Customer Journey Map | `pm-discovery` | `pm-discovery/customer-journey-map/SYSTEM_PROMPT.md` |
 | Customer Outage Notice | `pm-crisis` | `pm-crisis/customer-outage-notice/SYSTEM_PROMPT.md` |
@@ -168,6 +171,7 @@
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/SYSTEM_PROMPT.md` |
 | Developer Onboarding Document | `pm-engineering` | `pm-engineering/developer-onboarding-doc/SYSTEM_PROMPT.md` |
 | Devil's Twin | `pm-warroom` | `pm-warroom/devils-twin/SYSTEM_PROMPT.md` |
+| Dictionary Lookup | `pm-live` | `pm-live/dictionary-lookup/SYSTEM_PROMPT.md` |
 | Difficult Conversation | `pm-comms` | `pm-comms/difficult-conversation/SYSTEM_PROMPT.md` |
 | Disability Insurance Decoder | `pm-decoders` | `pm-decoders/disability-insurance-decoder/SYSTEM_PROMPT.md` |
 | Disaster Recovery Plan | `pm-engineering` | `pm-engineering/disaster-recovery-plan/SYSTEM_PROMPT.md` |
@@ -180,6 +184,7 @@
 | Doctor Visit Prep | `pm-lifeadmin` | `pm-lifeadmin/doctor-visit-prep/SYSTEM_PROMPT.md` |
 | Word Doc Tracked Changes | `pm-essentials` | `pm-essentials/docx-tracked-changes/SYSTEM_PROMPT.md` |
 | Donor Update | `pm-nonprofit` | `pm-nonprofit/donor-update/SYSTEM_PROMPT.md` |
+| Earthquake Watch | `pm-live` | `pm-live/earthquake-watch/SYSTEM_PROMPT.md` |
 | Email Campaign | `pm-gtm` | `pm-gtm/email-campaign/SYSTEM_PROMPT.md` |
 | Email Sequence | `pm-copy` | `pm-copy/email-sequence/SYSTEM_PROMPT.md` |
 | Email Triage | `pm-operations` | `pm-operations/email-triage/SYSTEM_PROMPT.md` |
@@ -256,6 +261,7 @@
 | Help Center Article | `pm-support` | `pm-support/help-center-article/SYSTEM_PROMPT.md` |
 | HIPAA Safeguards | `pm-compliance` | `pm-compliance/hipaa-safeguards/SYSTEM_PROMPT.md` |
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/SYSTEM_PROMPT.md` |
+| HN Digest | `pm-live` | `pm-live/hn-digest/SYSTEM_PROMPT.md` |
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/SYSTEM_PROMPT.md` |
 | Home Contractor Quote Decoder | `pm-decoders` | `pm-decoders/home-contractor-quote-decoder/SYSTEM_PROMPT.md` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/SYSTEM_PROMPT.md` |
@@ -412,6 +418,7 @@
 | Property Offer Letter | `pm-realestate` | `pm-realestate/property-offer-letter/SYSTEM_PROMPT.md` |
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/SYSTEM_PROMPT.md` |
 | Public Comment | `pm-gov` | `pm-gov/public-comment/SYSTEM_PROMPT.md` |
+| Public Holidays | `pm-live` | `pm-live/public-holidays/SYSTEM_PROMPT.md` |
 | Punch List Builder | `pm-construction` | `pm-construction/punch-list-builder/SYSTEM_PROMPT.md` |
 | QA Release Sign-off | `pm-qa` | `pm-qa/qa-release-signoff/SYSTEM_PROMPT.md` |
 | QBR Deck | `pm-cs` | `pm-cs/qbr-deck/SYSTEM_PROMPT.md` |
@@ -579,12 +586,15 @@
 | Voice Agent Design | `pm-agentnative` | `pm-agentnative/voice-agent-design/SYSTEM_PROMPT.md` |
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/SYSTEM_PROMPT.md` |
 | Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/SYSTEM_PROMPT.md` |
+| Weather Now | `pm-live` | `pm-live/weather-now/SYSTEM_PROMPT.md` |
 | Wedding Speech | `pm-lifeadmin` | `pm-lifeadmin/wedding-speech/SYSTEM_PROMPT.md` |
 | Which Skill Router | `pm-essentials` | `pm-essentials/which-skill/SYSTEM_PROMPT.md` |
 | Whiteboard To Spec | `pm-vision` | `pm-vision/whiteboard-to-spec/SYSTEM_PROMPT.md` |
+| Wiki Summary | `pm-live` | `pm-live/wiki-summary/SYSTEM_PROMPT.md` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/SYSTEM_PROMPT.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/SYSTEM_PROMPT.md` |
 | Workshop Facilitation Guide | `pm-operations` | `pm-operations/workshop-facilitation-guide/SYSTEM_PROMPT.md` |
+| World Clock | `pm-live` | `pm-live/world-clock/SYSTEM_PROMPT.md` |
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/SYSTEM_PROMPT.md` |
 | Writing Plans | `pm-method` | `pm-method/writing-plans/SYSTEM_PROMPT.md` |
 | YouTube Script Writer | `pm-writers` | `pm-writers/youtube-script-writer/SYSTEM_PROMPT.md` |

@@ -477,6 +477,25 @@
  {
   "type": "function",
   "function": {
+   "name": "air_quality",
+   "description": "Check live air quality anywhere with zero API keys — Open-Meteo's air-quality API via curl, decoded from raw PM2.5 and AQI numbers into what they mean for going outside. Use when asked what's the air quality, is it safe to run outside, AQI in my city, or pollution levels right now. Produces the current AQI and pollutant levels, the plain-language health read with the standard bands, and the rerunnable command.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "altitude_shifter",
    "description": "Re-pitch one piece of content for four audiences — the board, the engineers, a customer, a new hire — with a delta table showing what changed between altitudes and why. Use when asked to rewrite this for execs, explain this to the team, make this customer-facing, or say this four ways. Produces the four versions plus the delta table of what was cut, added, and reframed per altitude.",
    "parameters": {
@@ -2358,8 +2377,46 @@
  {
   "type": "function",
   "function": {
+   "name": "crypto_prices",
+   "description": "Fetch live cryptocurrency prices with zero API keys — CoinGecko's public endpoints primary, Coinbase spot fallback, via plain curl. Use when asked what's bitcoin at, ETH price in euros, how's the crypto market today, or price of some altcoin. Produces the current price with 24h context, the source and timestamp, the rerunnable command, and the volatility caveat that crypto answers must carry.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "csat_nps_analysis",
    "description": "Analyse CSAT / NPS / CES survey results and turn the score into actions. Use when asked to analyse NPS, CSAT, or CES data, compute an NPS score, interpret survey verbatims, or build a voice-of-customer readout. Produces a readout — the computed score, the trend & benchmark, themed analysis of the comments (what drives promoters vs. detractors), and prioritised actions. Includes a stdlib NPS/CSAT calculator.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "currency_rates",
+   "description": "Convert currencies and fetch live exchange rates with zero API keys — Frankfurter (ECB rates) primary, open.er-api.com fallback, via plain curl. Use when asked convert 500 dollars to euros, what's the USD-INR rate, how much is this in my currency, or historical exchange rate for a date. Produces the conversion with the rate and its date quoted, the rerunnable command, and the not-a-trading-quote caveat.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -3061,6 +3118,25 @@
  {
   "type": "function",
   "function": {
+   "name": "dictionary_lookup",
+   "description": "Look up word definitions, pronunciation, etymology and synonyms with zero API keys — the Free Dictionary API via curl, with honest handling of words it doesn't know. Use when asked define a word, how do you pronounce this, what's the origin of a word, or synonyms for something. Produces the definition set organized by part of speech, IPA pronunciation with audio link, and the rerunnable command — with the model's own knowledge clearly separated from the fetched source.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "difficult_conversation",
    "description": "Prepare for and script a hard conversation — conflict, bad news, a boundary, an apology. Use when asked to prepare for a difficult conversation, address a conflict, deliver bad news, confront a colleague, or have a hard talk with a manager/report/peer. Produces a prep brief — the real goal, the other side's likely view, an opening line, the key points, anticipated reactions with responses, and the outcome you want.",
    "parameters": {
@@ -3253,6 +3329,25 @@
   "function": {
    "name": "donor_update",
    "description": "Write a warm donor update or stewardship message that makes a supporter feel their gift mattered. Use when asked to write a donor update, a thank-you/stewardship email, a supporter newsletter, or a gift acknowledgement. Produces a donor-centred update — sincere thanks, the specific impact of their support, a brief story, and a light, optional next step — that strengthens the relationship and sets up the next gift.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "earthquake_watch",
+   "description": "Check recent earthquakes worldwide with zero API keys — USGS real-time GeoJSON feeds via curl, filtered by magnitude, region, and time window. Use when asked was there an earthquake just now, recent quakes near a place, any big earthquakes today, or monitor seismic activity somewhere. Produces the matching events with magnitude, depth, location and time, the felt/damage context bands, and the rerunnable command — with the official-guidance line safety questions require.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -4697,6 +4792,25 @@
   "function": {
    "name": "hiring_rubric",
    "description": "Generate a structured interview scorecard and interview guide for any role. Use when asked to create a hiring rubric, interview scorecard, structured interview guide, or assessment criteria for a job. Produces a scorecard with competencies, behavioural questions, and scoring guidance.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "hn_digest",
+   "description": "Pull the current Hacker News front page, top comments, or a topic search with zero API keys — the official Firebase API and Algolia search via curl, digested instead of dumped. Use when asked what's on Hacker News, summarize HN today, what's the discussion on this story, or has HN covered some topic. Produces a ranked digest with scores and comment counts, the discussion's actual argument threads when asked, and the rerunnable commands.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -7661,6 +7775,25 @@
   "function": {
    "name": "public_comment",
    "description": "Draft a persuasive public comment on a proposed rule, regulation, or plan. Use when asked to comment on a rulemaking, respond to a consultation, submit feedback on a proposed regulation, or write a comment to an agency. Produces a structured comment: your position, specific evidence-based arguments tied to the proposal's text, suggested edits, and the impact — the kind agencies must consider on the record.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "public_holidays",
+   "description": "Look up public holidays for any country and year with zero API keys — the Nager.Date API via curl, with long-weekend detection and cross-country planning. Use when asked what are the holidays in a country, is date X a holiday somewhere, find long weekends this year, or which days is the team in Japan and Germany both off. Produces the holiday list with local names, the specific-date answer, long-weekend candidates, and the rerunnable command.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -10851,6 +10984,25 @@
  {
   "type": "function",
   "function": {
+   "name": "weather_now",
+   "description": "Get current weather and forecasts with zero API keys — wttr.in one-liners for humans, Open-Meteo JSON for data, with the exact curl commands and format codes. Use when asked what's the weather, will it rain today, forecast for a city, or get me weather data for a location. Produces the live conditions or forecast pulled via curl, interpreted plainly, with the source timestamp and the command used shown so the user can rerun it.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "wedding_speech",
    "description": "A best-man/maid-of-honour/parent wedding toast that actually lands — funny without roasting, moving without syrup, short enough that nobody checks their phone. Use when someone has to give a wedding speech and has either nothing or a dangerous first draft. Produces a 2-4 minute toast built on one good story, plus delivery notes and the three jokes to cut.",
    "parameters": {
@@ -10891,6 +11043,25 @@
   "function": {
    "name": "whiteboard_to_spec",
    "description": "Turn photos of a whiteboard, sticky-note wall, or napkin sketch into a structured spec the team can execute. Use when given whiteboard photos after a workshop, sketch images of a flow or architecture, or asked to 'write up what we drew'. Produces a structured write-up — decisions, flows, open questions, owners — that preserves everything on the board and flags what was ambiguous. Requires image input.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "wiki_summary",
+   "description": "Fetch Wikipedia's current summary of any topic with zero API keys — the REST summary endpoint via curl, for answers that need today's article rather than training-data memory. Use when asked what does Wikipedia say about X, get me the current summary of a topic, check a fact against Wikipedia, or has this article changed. Produces the live extract with the article link, disambiguation handling, and a clean separation between what Wikipedia says and what the model adds.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -10967,6 +11138,25 @@
   "function": {
    "name": "workshop_facilitation_guide",
    "description": "Design and facilitate any workshop, working session, or collaborative meeting. Use when asked to plan a workshop, design a facilitated session, run a ideation session, or create a workshop agenda. Produces a complete facilitation guide with session design, activity instructions, timing, and materials.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "world_clock",
+   "description": "Get the current time anywhere and convert between time zones with zero API keys — timeapi.io via curl (worldtimeapi fallback), plus the DST-safe meeting-window math. Use when asked what time is it in a city, convert 3pm my time to Tokyo, find a meeting slot across time zones, or what's the UTC offset somewhere. Produces the local time(s), the conversion with DST handled by the API not by memory, and the overlap window for scheduling questions.",
    "parameters": {
     "type": "object",
     "properties": {

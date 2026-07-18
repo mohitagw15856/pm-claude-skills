@@ -1,4 +1,4 @@
-# 🗂️ All 581 Skills — full catalog
+# 🗂️ All 591 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -643,7 +643,7 @@
 | **Portfolio Page** (`portfolio-page`) | Structure a portfolio or case-study page that shows your work, not just lists it. | — |
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 
-## 🌍 Industries & Public Sector (197 skills)
+## 🌍 Industries & Public Sector (207 skills)
 
 ### `pm-agentnative` — 5 skills
 
@@ -862,6 +862,21 @@
 | **Reference Request Kit** (`reference-request-kit`) | Secure strong references after a departure — who to ask, the ask messages, the briefing sheet that makes their reference specific, and the… | — |
 | **Severance Agreement Decoder** (`severance-agreement-decoder`) | Decode a severance agreement before you sign it — what you're giving up, what's negotiable, and the deadlines that decide your leverage. | — |
 
+### `pm-live` — 10 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Air Quality** (`air-quality`) | Check live air quality anywhere with zero API keys — Open-Meteo's air-quality API via curl, decoded from raw PM2.5 and AQI numbers into what they… | — |
+| **Crypto Prices** (`crypto-prices`) | Fetch live cryptocurrency prices with zero API keys — CoinGecko's public endpoints primary, Coinbase spot fallback, via plain curl. | — |
+| **Currency Rates** (`currency-rates`) | Convert currencies and fetch live exchange rates with zero API keys — Frankfurter (ECB rates) primary, open.er-api.com fallback, via plain curl. | — |
+| **Dictionary Lookup** (`dictionary-lookup`) | Look up word definitions, pronunciation, etymology and synonyms with zero API keys — the Free Dictionary API via curl, with honest handling of… | — |
+| **Earthquake Watch** (`earthquake-watch`) | Check recent earthquakes worldwide with zero API keys — USGS real-time GeoJSON feeds via curl, filtered by magnitude, region, and time window. | — |
+| **HN Digest** (`hn-digest`) | Pull the current Hacker News front page, top comments, or a topic search with zero API keys — the official Firebase API and Algolia search via… | — |
+| **Public Holidays** (`public-holidays`) | Look up public holidays for any country and year with zero API keys — the Nager.Date API via curl, with long-weekend detection and cross-country… | — |
+| **Weather Now** (`weather-now`) | Get current weather and forecasts with zero API keys — wttr.in one-liners for humans, Open-Meteo JSON for data, with the exact curl commands and… | — |
+| **Wiki Summary** (`wiki-summary`) | Fetch Wikipedia's current summary of any topic with zero API keys — the REST summary endpoint via curl, for answers that need today's article… | — |
+| **World Clock** (`world-clock`) | Get the current time anywhere and convert between time zones with zero API keys — timeapi.io via curl (worldtimeapi fallback), plus the DST-safe… | — |
+
 ### `pm-localization` — 6 skills
 
 | Skill | What it does | Eval |
@@ -1014,4 +1029,4 @@
 
 ---
 
-_581 skills across 81 bundles · 28 eval-scored (5%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_591 skills across 82 bundles · 28 eval-scored (5%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

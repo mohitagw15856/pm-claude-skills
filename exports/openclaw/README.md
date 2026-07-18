@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-581 skills exported. Copy a `SKILL.md` into the tool to use it.
+591 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -32,6 +32,7 @@
 | AI Product Canvas | `pm-advanced` | `ai-product-canvas/SKILL.md` |
 | AI ROI Audit | `pm-aiwork` | `ai-roi-audit/SKILL.md` |
 | AI Usage Policy | `pm-aiwork` | `ai-usage-policy/SKILL.md` |
+| Air Quality | `pm-live` | `air-quality/SKILL.md` |
 | Altitude Shifter | `pm-comms` | `altitude-shifter/SKILL.md` |
 | Ambiguity Resolver | `pm-strategy` | `ambiguity-resolver/SKILL.md` |
 | Analyst Relations Brief | `pm-pmm` | `analyst-relations-brief/SKILL.md` |
@@ -131,9 +132,11 @@
 | Creator Brand Kit | `pm-creator` | `creator-brand-kit/SKILL.md` |
 | Creator Media Kit | `pm-creator` | `creator-media-kit/SKILL.md` |
 | Credit Memo | `pm-banking` | `credit-memo/SKILL.md` |
+| Crypto Prices | `pm-live` | `crypto-prices/SKILL.md` |
 | Customer Escalation Brief | `pm-cs` | `cs-escalation-brief/SKILL.md` |
 | Customer Health Scorecard | `pm-cs` | `cs-health-scorecard/SKILL.md` |
 | CSAT / NPS Analysis | `pm-support` | `csat-nps-analysis/SKILL.md` |
+| Currency Rates | `pm-live` | `currency-rates/SKILL.md` |
 | Customer Advisory Board | `pm-pmm` | `customer-advisory-board/SKILL.md` |
 | Customer Journey Map | `pm-discovery` | `customer-journey-map/SKILL.md` |
 | Customer Outage Notice | `pm-crisis` | `customer-outage-notice/SKILL.md` |
@@ -168,6 +171,7 @@
 | Design System Audit | `pm-design` | `design-system-audit/SKILL.md` |
 | Developer Onboarding Document | `pm-engineering` | `developer-onboarding-doc/SKILL.md` |
 | Devil's Twin | `pm-warroom` | `devils-twin/SKILL.md` |
+| Dictionary Lookup | `pm-live` | `dictionary-lookup/SKILL.md` |
 | Difficult Conversation | `pm-comms` | `difficult-conversation/SKILL.md` |
 | Disability Insurance Decoder | `pm-decoders` | `disability-insurance-decoder/SKILL.md` |
 | Disaster Recovery Plan | `pm-engineering` | `disaster-recovery-plan/SKILL.md` |
@@ -180,6 +184,7 @@
 | Doctor Visit Prep | `pm-lifeadmin` | `doctor-visit-prep/SKILL.md` |
 | Word Doc Tracked Changes | `pm-essentials` | `docx-tracked-changes/SKILL.md` |
 | Donor Update | `pm-nonprofit` | `donor-update/SKILL.md` |
+| Earthquake Watch | `pm-live` | `earthquake-watch/SKILL.md` |
 | Email Campaign | `pm-gtm` | `email-campaign/SKILL.md` |
 | Email Sequence | `pm-copy` | `email-sequence/SKILL.md` |
 | Email Triage | `pm-operations` | `email-triage/SKILL.md` |
@@ -256,6 +261,7 @@
 | Help Center Article | `pm-support` | `help-center-article/SKILL.md` |
 | HIPAA Safeguards | `pm-compliance` | `hipaa-safeguards/SKILL.md` |
 | Hiring Rubric | `pm-people` | `hiring-rubric/SKILL.md` |
+| HN Digest | `pm-live` | `hn-digest/SKILL.md` |
 | HOA Decoder | `pm-decoders` | `hoa-decoder/SKILL.md` |
 | Home Contractor Quote Decoder | `pm-decoders` | `home-contractor-quote-decoder/SKILL.md` |
 | Hook Writer | `pm-creator` | `hook-writer/SKILL.md` |
@@ -412,6 +418,7 @@
 | Property Offer Letter | `pm-realestate` | `property-offer-letter/SKILL.md` |
 | Proposal Writer | `pm-sales` | `proposal-writer/SKILL.md` |
 | Public Comment | `pm-gov` | `public-comment/SKILL.md` |
+| Public Holidays | `pm-live` | `public-holidays/SKILL.md` |
 | Punch List Builder | `pm-construction` | `punch-list-builder/SKILL.md` |
 | QA Release Sign-off | `pm-qa` | `qa-release-signoff/SKILL.md` |
 | QBR Deck | `pm-cs` | `qbr-deck/SKILL.md` |
@@ -579,12 +586,15 @@
 | Voice Agent Design | `pm-agentnative` | `voice-agent-design/SKILL.md` |
 | Voice of Customer Program | `pm-pmm` | `voice-of-customer-program/SKILL.md` |
 | Vulnerability Triage | `pm-security` | `vuln-triage/SKILL.md` |
+| Weather Now | `pm-live` | `weather-now/SKILL.md` |
 | Wedding Speech | `pm-lifeadmin` | `wedding-speech/SKILL.md` |
 | Which Skill Router | `pm-essentials` | `which-skill/SKILL.md` |
 | Whiteboard To Spec | `pm-vision` | `whiteboard-to-spec/SKILL.md` |
+| Wiki Summary | `pm-live` | `wiki-summary/SKILL.md` |
 | Win/Loss Analysis | `pm-pmm` | `win-loss-analysis/SKILL.md` |
 | Word Document | `pm-documents` | `word-document/SKILL.md` |
 | Workshop Facilitation Guide | `pm-operations` | `workshop-facilitation-guide/SKILL.md` |
+| World Clock | `pm-live` | `world-clock/SKILL.md` |
 | Writing Great Skills | `pm-engineering` | `writing-great-skills/SKILL.md` |
 | Writing Plans | `pm-method` | `writing-plans/SKILL.md` |
 | YouTube Script Writer | `pm-writers` | `youtube-script-writer/SKILL.md` |

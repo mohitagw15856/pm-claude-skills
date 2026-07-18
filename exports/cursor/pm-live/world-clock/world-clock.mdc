@@ -1,0 +1,59 @@
+---
+description: "Get the current time anywhere and convert between time zones with zero API keys — timeapi.io via curl (worldtimeapi fallback), plus the DST-safe meeting-window math. Use when asked what time is it in a city, convert 3pm my time to Tokyo, find a meeting slot across time zones, or what's the UTC offset somewhere. Produces the local time(s), the conversion with DST handled by the API not by memory, and the overlap window for scheduling questions."
+globs:
+alwaysApply: false
+---
+
+# World Clock Skill
+
+Time zone arithmetic is famously the thing to never do from memory — DST transitions, half-hour offsets (India), 45-minute offsets (Nepal), and zones that changed their rules last year all punish confidence. This skill fetches authoritative current time per IANA zone over keyless HTTPS and does conversions by *comparing fetched offsets*, not by recalling them. For scheduling questions it computes the civilized-overlap window rather than a single translated hour.
+
+## What This Skill Produces
+
+- **The time(s)** — current local time per requested place, with UTC offset and DST status
+- **Conversions** — "3pm here = X there," computed from fetched offsets
+- **The overlap window** — for scheduling: the hours that are civil (or least brutal) in every zone
+- **The command** — exact curl, rerunnable
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The places** — resolve cities to IANA zones (Tokyo → Asia/Tokyo); country-level ambiguity gets asked ("the US" spans six zones)
+- **For conversions:** the anchor time and its zone — "3pm" needs to know whose 3pm
+- **For scheduling:** everyone's zones and the civility bounds (default: 8am–9pm per person; ask if a zone may take the early/late hit)
+
+## Framework: Fetch, Don't Recall
+
+1. **timeapi.io — primary:** `curl -s "https://timeapi.io/api/time/current/zone?timeZone=Asia/Tokyo"` → local datetime, day of week. Conversion endpoint exists too: POST `/api/conversion/converttimezone`, but the simpler robust pattern is fetching both zones' current time and differencing offsets.
+2. **worldtimeapi — fallback:** `curl -s "https://worldtimeapi.org/api/timezone/Asia/Tokyo"` → includes `utc_offset` and `dst` flags directly; also `.../api/timezone` lists all IANA names for resolving. It's occasionally slow — hence fallback.
+3. **DST comes from the API, never from memory:** the offset fetched *now* embeds current DST; for a *future* meeting near a DST boundary (late March, late October/early November), say explicitly that the offset may shift by an hour on the transition date and verify against the meeting's actual date.
+4. **Half-hour zones exist:** India (+5:30), Iran, parts of Australia, Nepal (+5:45) — the fetched offset handles them; the skill's job is not flinching when the answer ends in :30.
+5. **Scheduling is a window, not a point:** intersect [8am–9pm] across all fetched offsets and present the overlap as a range with each city's local reading; when empty, show the least-bad options and name who takes the hit — that's a human decision, surfaced not made.
+
+## Output Format
+
+# Time: [places]
+
+**[City A]: [HH:MM day] (UTC[±X])** · **[City B]: …**
+
+[Conversion: "[anchor] in [zone A] = [result] in [zone B]"]
+[Scheduling: the overlap window as a table — one row per city, the window column in each local time]
+
+Source: [timeapi.io / worldtimeapi] · rerun: `[exact curl]`
+[Near a DST boundary: "note — [zone] shifts on [approx date]; verified against the meeting date" or the flag to do so]
+
+## Quality Checks
+
+- [ ] Every offset came from a fetch, not from recall
+- [ ] Cities resolved to IANA zones, ambiguous countries asked about
+- [ ] Conversions show both zone labels, not just times
+- [ ] Future times near DST boundaries carry the transition note
+- [ ] Empty overlap windows surface the least-bad options instead of silently picking one
+
+## Anti-Patterns
+
+- [ ] Do not do time zone math from memory — the entire skill exists because that fails
+- [ ] Do not assume whole-hour offsets — fetched offsets end in :30 and :45 more often than intuition says
+- [ ] Do not translate a future meeting with today's offset across a DST boundary without flagging it
+- [ ] Do not pick who suffers the 6am call — present the window; the humans choose
+- [ ] Do not present a timeout as an answer — fall back, or hand over the command

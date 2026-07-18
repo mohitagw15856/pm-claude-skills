@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-581 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+591 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -32,6 +32,7 @@
 | AI Product Canvas | `pm-advanced` | `pm-advanced/ai-product-canvas/GEM_INSTRUCTIONS.md` |
 | AI ROI Audit | `pm-aiwork` | `pm-aiwork/ai-roi-audit/GEM_INSTRUCTIONS.md` |
 | AI Usage Policy | `pm-aiwork` | `pm-aiwork/ai-usage-policy/GEM_INSTRUCTIONS.md` |
+| Air Quality | `pm-live` | `pm-live/air-quality/GEM_INSTRUCTIONS.md` |
 | Altitude Shifter | `pm-comms` | `pm-comms/altitude-shifter/GEM_INSTRUCTIONS.md` |
 | Ambiguity Resolver | `pm-strategy` | `pm-strategy/ambiguity-resolver/GEM_INSTRUCTIONS.md` |
 | Analyst Relations Brief | `pm-pmm` | `pm-pmm/analyst-relations-brief/GEM_INSTRUCTIONS.md` |
@@ -131,9 +132,11 @@
 | Creator Brand Kit | `pm-creator` | `pm-creator/creator-brand-kit/GEM_INSTRUCTIONS.md` |
 | Creator Media Kit | `pm-creator` | `pm-creator/creator-media-kit/GEM_INSTRUCTIONS.md` |
 | Credit Memo | `pm-banking` | `pm-banking/credit-memo/GEM_INSTRUCTIONS.md` |
+| Crypto Prices | `pm-live` | `pm-live/crypto-prices/GEM_INSTRUCTIONS.md` |
 | Customer Escalation Brief | `pm-cs` | `pm-cs/cs-escalation-brief/GEM_INSTRUCTIONS.md` |
 | Customer Health Scorecard | `pm-cs` | `pm-cs/cs-health-scorecard/GEM_INSTRUCTIONS.md` |
 | CSAT / NPS Analysis | `pm-support` | `pm-support/csat-nps-analysis/GEM_INSTRUCTIONS.md` |
+| Currency Rates | `pm-live` | `pm-live/currency-rates/GEM_INSTRUCTIONS.md` |
 | Customer Advisory Board | `pm-pmm` | `pm-pmm/customer-advisory-board/GEM_INSTRUCTIONS.md` |
 | Customer Journey Map | `pm-discovery` | `pm-discovery/customer-journey-map/GEM_INSTRUCTIONS.md` |
 | Customer Outage Notice | `pm-crisis` | `pm-crisis/customer-outage-notice/GEM_INSTRUCTIONS.md` |
@@ -168,6 +171,7 @@
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/GEM_INSTRUCTIONS.md` |
 | Developer Onboarding Document | `pm-engineering` | `pm-engineering/developer-onboarding-doc/GEM_INSTRUCTIONS.md` |
 | Devil's Twin | `pm-warroom` | `pm-warroom/devils-twin/GEM_INSTRUCTIONS.md` |
+| Dictionary Lookup | `pm-live` | `pm-live/dictionary-lookup/GEM_INSTRUCTIONS.md` |
 | Difficult Conversation | `pm-comms` | `pm-comms/difficult-conversation/GEM_INSTRUCTIONS.md` |
 | Disability Insurance Decoder | `pm-decoders` | `pm-decoders/disability-insurance-decoder/GEM_INSTRUCTIONS.md` |
 | Disaster Recovery Plan | `pm-engineering` | `pm-engineering/disaster-recovery-plan/GEM_INSTRUCTIONS.md` |
@@ -180,6 +184,7 @@
 | Doctor Visit Prep | `pm-lifeadmin` | `pm-lifeadmin/doctor-visit-prep/GEM_INSTRUCTIONS.md` |
 | Word Doc Tracked Changes | `pm-essentials` | `pm-essentials/docx-tracked-changes/GEM_INSTRUCTIONS.md` |
 | Donor Update | `pm-nonprofit` | `pm-nonprofit/donor-update/GEM_INSTRUCTIONS.md` |
+| Earthquake Watch | `pm-live` | `pm-live/earthquake-watch/GEM_INSTRUCTIONS.md` |
 | Email Campaign | `pm-gtm` | `pm-gtm/email-campaign/GEM_INSTRUCTIONS.md` |
 | Email Sequence | `pm-copy` | `pm-copy/email-sequence/GEM_INSTRUCTIONS.md` |
 | Email Triage | `pm-operations` | `pm-operations/email-triage/GEM_INSTRUCTIONS.md` |
@@ -256,6 +261,7 @@
 | Help Center Article | `pm-support` | `pm-support/help-center-article/GEM_INSTRUCTIONS.md` |
 | HIPAA Safeguards | `pm-compliance` | `pm-compliance/hipaa-safeguards/GEM_INSTRUCTIONS.md` |
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/GEM_INSTRUCTIONS.md` |
+| HN Digest | `pm-live` | `pm-live/hn-digest/GEM_INSTRUCTIONS.md` |
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/GEM_INSTRUCTIONS.md` |
 | Home Contractor Quote Decoder | `pm-decoders` | `pm-decoders/home-contractor-quote-decoder/GEM_INSTRUCTIONS.md` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/GEM_INSTRUCTIONS.md` |
@@ -412,6 +418,7 @@
 | Property Offer Letter | `pm-realestate` | `pm-realestate/property-offer-letter/GEM_INSTRUCTIONS.md` |
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/GEM_INSTRUCTIONS.md` |
 | Public Comment | `pm-gov` | `pm-gov/public-comment/GEM_INSTRUCTIONS.md` |
+| Public Holidays | `pm-live` | `pm-live/public-holidays/GEM_INSTRUCTIONS.md` |
 | Punch List Builder | `pm-construction` | `pm-construction/punch-list-builder/GEM_INSTRUCTIONS.md` |
 | QA Release Sign-off | `pm-qa` | `pm-qa/qa-release-signoff/GEM_INSTRUCTIONS.md` |
 | QBR Deck | `pm-cs` | `pm-cs/qbr-deck/GEM_INSTRUCTIONS.md` |
@@ -579,12 +586,15 @@
 | Voice Agent Design | `pm-agentnative` | `pm-agentnative/voice-agent-design/GEM_INSTRUCTIONS.md` |
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/GEM_INSTRUCTIONS.md` |
 | Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/GEM_INSTRUCTIONS.md` |
+| Weather Now | `pm-live` | `pm-live/weather-now/GEM_INSTRUCTIONS.md` |
 | Wedding Speech | `pm-lifeadmin` | `pm-lifeadmin/wedding-speech/GEM_INSTRUCTIONS.md` |
 | Which Skill Router | `pm-essentials` | `pm-essentials/which-skill/GEM_INSTRUCTIONS.md` |
 | Whiteboard To Spec | `pm-vision` | `pm-vision/whiteboard-to-spec/GEM_INSTRUCTIONS.md` |
+| Wiki Summary | `pm-live` | `pm-live/wiki-summary/GEM_INSTRUCTIONS.md` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/GEM_INSTRUCTIONS.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/GEM_INSTRUCTIONS.md` |
 | Workshop Facilitation Guide | `pm-operations` | `pm-operations/workshop-facilitation-guide/GEM_INSTRUCTIONS.md` |
+| World Clock | `pm-live` | `pm-live/world-clock/GEM_INSTRUCTIONS.md` |
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/GEM_INSTRUCTIONS.md` |
 | Writing Plans | `pm-method` | `pm-method/writing-plans/GEM_INSTRUCTIONS.md` |
 | YouTube Script Writer | `pm-writers` | `pm-writers/youtube-script-writer/GEM_INSTRUCTIONS.md` |

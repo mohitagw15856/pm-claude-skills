@@ -2,7 +2,7 @@
  "spec": "skill-federation/0.1",
  "built": "2026-07-18",
  "libraries": 1,
- "skills": 581,
+ "skills": 591,
  "members": [
   {
    "repo": "mohitagw15856/pm-claude-skills",
@@ -10,7 +10,7 @@
    "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
    "license": "MIT",
    "badge": "https://img.shields.io/endpoint?url=https%3A%2F%2Fpm-skills-mcp.pm-claude-skills.workers.dev%2Fbadge%3Frepo%3Dmohitagw15856%2Fpm-claude-skills",
-   "count": 581,
+   "count": 591,
    "skills": [
     {
      "name": "360-feedback-template",
@@ -111,6 +111,10 @@
     {
      "name": "ai-assisted-performance-review",
      "description": "Evaluate performance fairly when output is AI-assisted — what still measures the human, what now measures the tooling, and how to run the review conversation. Use when reviewing someone whose work is heavily AI-assisted, when output volume stopped meaning anything, when calibrating a team with uneve"
+    },
+    {
+     "name": "air-quality",
+     "description": "Check live air quality anywhere with zero API keys — Open-Meteo's air-quality API via curl, decoded from raw PM2.5 and AQI numbers into what they mean for going outside. Use when asked what's the air quality, is it safe to run outside, AQI in my city, or pollution levels right now. Produces the curr"
     },
     {
      "name": "altitude-shifter",
@@ -509,8 +513,16 @@
      "description": "Write a credit memo for a lending decision: borrower story, facility structure, repayment sources, financial-ratio spread with covenant headroom, risk factors with mitigants, risk-rating rationale, and a recommendation. Use when asked to write a credit memo, credit application, credit paper, loan wr"
     },
     {
+     "name": "crypto-prices",
+     "description": "Fetch live cryptocurrency prices with zero API keys — CoinGecko's public endpoints primary, Coinbase spot fallback, via plain curl. Use when asked what's bitcoin at, ETH price in euros, how's the crypto market today, or price of some altcoin. Produces the current price with 24h context, the source a"
+    },
+    {
      "name": "csat-nps-analysis",
      "description": "Analyse CSAT / NPS / CES survey results and turn the score into actions. Use when asked to analyse NPS, CSAT, or CES data, compute an NPS score, interpret survey verbatims, or build a voice-of-customer readout. Produces a readout — the computed score, the trend & benchmark, themed analysis of the co"
+    },
+    {
+     "name": "currency-rates",
+     "description": "Convert currencies and fetch live exchange rates with zero API keys — Frankfurter (ECB rates) primary, open.er-api.com fallback, via plain curl. Use when asked convert 500 dollars to euros, what's the USD-INR rate, how much is this in my currency, or historical exchange rate for a date. Produces the"
     },
     {
      "name": "customer-advisory-board",
@@ -657,6 +669,10 @@
      "description": "The strongest possible case AGAINST what you just wrote — argued to win, not to check a box. Use when a document is about to ship and everyone around it already agrees: the twin writes the opposition's best memo (not a critique of yours), so you meet the real counter-argument before your audience do"
     },
     {
+     "name": "dictionary-lookup",
+     "description": "Look up word definitions, pronunciation, etymology and synonyms with zero API keys — the Free Dictionary API via curl, with honest handling of words it doesn't know. Use when asked define a word, how do you pronounce this, what's the origin of a word, or synonyms for something. Produces the definiti"
+    },
+    {
      "name": "difficult-conversation",
      "description": "Prepare for and script a hard conversation — conflict, bad news, a boundary, an apology. Use when asked to prepare for a difficult conversation, address a conflict, deliver bad news, confront a colleague, or have a hard talk with a manager/report/peer. Produces a prep brief — the real goal, the othe"
     },
@@ -699,6 +715,10 @@
     {
      "name": "donor-update",
      "description": "Write a warm donor update or stewardship message that makes a supporter feel their gift mattered. Use when asked to write a donor update, a thank-you/stewardship email, a supporter newsletter, or a gift acknowledgement. Produces a donor-centred update — sincere thanks, the specific impact of their s"
+    },
+    {
+     "name": "earthquake-watch",
+     "description": "Check recent earthquakes worldwide with zero API keys — USGS real-time GeoJSON feeds via curl, filtered by magnitude, region, and time window. Use when asked was there an earthquake just now, recent quakes near a place, any big earthquakes today, or monitor seismic activity somewhere. Produces the m"
     },
     {
      "name": "email-campaign",
@@ -1003,6 +1023,10 @@
     {
      "name": "hiring-rubric",
      "description": "Generate a structured interview scorecard and interview guide for any role. Use when asked to create a hiring rubric, interview scorecard, structured interview guide, or assessment criteria for a job. Produces a scorecard with competencies, behavioural questions, and scoring guidance."
+    },
+    {
+     "name": "hn-digest",
+     "description": "Pull the current Hacker News front page, top comments, or a topic search with zero API keys — the official Firebase API and Algolia search via curl, digested instead of dumped. Use when asked what's on Hacker News, summarize HN today, what's the discussion on this story, or has HN covered some topic"
     },
     {
      "name": "hoa-decoder",
@@ -1627,6 +1651,10 @@
     {
      "name": "public-comment",
      "description": "Draft a persuasive public comment on a proposed rule, regulation, or plan. Use when asked to comment on a rulemaking, respond to a consultation, submit feedback on a proposed regulation, or write a comment to an agency. Produces a structured comment: your position, specific evidence-based arguments "
+    },
+    {
+     "name": "public-holidays",
+     "description": "Look up public holidays for any country and year with zero API keys — the Nager.Date API via curl, with long-weekend detection and cross-country planning. Use when asked what are the holidays in a country, is date X a holiday somewhere, find long weekends this year, or which days is the team in Japa"
     },
     {
      "name": "punch-list-builder",
@@ -2297,6 +2325,10 @@
      "description": "Triage a vulnerability or scanner finding — assess real severity, exploitability, and how urgently to fix. Use when asked to triage a CVE, prioritize scanner/pentest findings, assess a vuln's risk, or decide what to patch first. Produces a triage verdict: CVSS-informed severity adjusted for your con"
     },
     {
+     "name": "weather-now",
+     "description": "Get current weather and forecasts with zero API keys — wttr.in one-liners for humans, Open-Meteo JSON for data, with the exact curl commands and format codes. Use when asked what's the weather, will it rain today, forecast for a city, or get me weather data for a location. Produces the live conditio"
+    },
+    {
      "name": "wedding-speech",
      "description": "A best-man/maid-of-honour/parent wedding toast that actually lands — funny without roasting, moving without syrup, short enough that nobody checks their phone. Use when someone has to give a wedding speech and has either nothing or a dangerous first draft. Produces a 2-4 minute toast built on one go"
     },
@@ -2307,6 +2339,10 @@
     {
      "name": "whiteboard-to-spec",
      "description": "Turn photos of a whiteboard, sticky-note wall, or napkin sketch into a structured spec the team can execute. Use when given whiteboard photos after a workshop, sketch images of a flow or architecture, or asked to 'write up what we drew'. Produces a structured write-up — decisions, flows, open questi"
+    },
+    {
+     "name": "wiki-summary",
+     "description": "Fetch Wikipedia's current summary of any topic with zero API keys — the REST summary endpoint via curl, for answers that need today's article rather than training-data memory. Use when asked what does Wikipedia say about X, get me the current summary of a topic, check a fact against Wikipedia, or ha"
     },
     {
      "name": "win-loss-analysis",
@@ -2323,6 +2359,10 @@
     {
      "name": "workshop-facilitation-guide",
      "description": "Design and facilitate any workshop, working session, or collaborative meeting. Use when asked to plan a workshop, design a facilitated session, run a ideation session, or create a workshop agenda. Produces a complete facilitation guide with session design, activity instructions, timing, and material"
+    },
+    {
+     "name": "world-clock",
+     "description": "Get the current time anywhere and convert between time zones with zero API keys — timeapi.io via curl (worldtimeapi fallback), plus the DST-safe meeting-window math. Use when asked what time is it in a city, convert 3pm my time to Tokyo, find a meeting slot across time zones, or what's the UTC offse"
     },
     {
      "name": "writing-great-skills",

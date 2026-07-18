@@ -150,6 +150,12 @@
   "description": "Evaluate performance fairly when output is AI-assisted — what still measures the human, what now measures the tooling, and how to run the review conversation. Use when reviewing someone whose work is heavily AI-assisted, when output volume stopped meaning anything, when calibrating a team with uneven AI adoption, or when writing review criteria for the AI era. Produces review guidance: a what-measures-whom analysis, rewritten criteria, calibration rules for mixed-adoption teams, and conversation scripts. For the general review document use performance-review; for redesigning the role itself use role-redesign-for-ai."
  },
  {
+  "name": "air_quality",
+  "skill": "air-quality",
+  "bundle": "pm-live",
+  "description": "Check live air quality anywhere with zero API keys — Open-Meteo's air-quality API via curl, decoded from raw PM2.5 and AQI numbers into what they mean for going outside. Use when asked what's the air quality, is it safe to run outside, AQI in my city, or pollution levels right now. Produces the current AQI and pollutant levels, the plain-language health read with the standard bands, and the rerunnable command."
+ },
+ {
   "name": "altitude_shifter",
   "skill": "altitude-shifter",
   "bundle": "pm-comms",
@@ -744,10 +750,22 @@
   "description": "Write a credit memo for a lending decision: borrower story, facility structure, repayment sources, financial-ratio spread with covenant headroom, risk factors with mitigants, risk-rating rationale, and a recommendation. Use when asked to write a credit memo, credit application, credit paper, loan write-up, or prepare a deal for credit committee. Produces a complete credit memo ready for committee review."
  },
  {
+  "name": "crypto_prices",
+  "skill": "crypto-prices",
+  "bundle": "pm-live",
+  "description": "Fetch live cryptocurrency prices with zero API keys — CoinGecko's public endpoints primary, Coinbase spot fallback, via plain curl. Use when asked what's bitcoin at, ETH price in euros, how's the crypto market today, or price of some altcoin. Produces the current price with 24h context, the source and timestamp, the rerunnable command, and the volatility caveat that crypto answers must carry."
+ },
+ {
   "name": "csat_nps_analysis",
   "skill": "csat-nps-analysis",
   "bundle": "pm-support",
   "description": "Analyse CSAT / NPS / CES survey results and turn the score into actions. Use when asked to analyse NPS, CSAT, or CES data, compute an NPS score, interpret survey verbatims, or build a voice-of-customer readout. Produces a readout — the computed score, the trend & benchmark, themed analysis of the comments (what drives promoters vs. detractors), and prioritised actions. Includes a stdlib NPS/CSAT calculator."
+ },
+ {
+  "name": "currency_rates",
+  "skill": "currency-rates",
+  "bundle": "pm-live",
+  "description": "Convert currencies and fetch live exchange rates with zero API keys — Frankfurter (ECB rates) primary, open.er-api.com fallback, via plain curl. Use when asked convert 500 dollars to euros, what's the USD-INR rate, how much is this in my currency, or historical exchange rate for a date. Produces the conversion with the rate and its date quoted, the rerunnable command, and the not-a-trading-quote caveat."
  },
  {
   "name": "customer_advisory_board",
@@ -966,6 +984,12 @@
   "description": "The strongest possible case AGAINST what you just wrote — argued to win, not to check a box. Use when a document is about to ship and everyone around it already agrees: the twin writes the opposition's best memo (not a critique of yours), so you meet the real counter-argument before your audience does. Produces the opposing memo, the map of which of your claims it defeats/dents/leaves standing, and the pre-emption paragraph worth adding."
  },
  {
+  "name": "dictionary_lookup",
+  "skill": "dictionary-lookup",
+  "bundle": "pm-live",
+  "description": "Look up word definitions, pronunciation, etymology and synonyms with zero API keys — the Free Dictionary API via curl, with honest handling of words it doesn't know. Use when asked define a word, how do you pronounce this, what's the origin of a word, or synonyms for something. Produces the definition set organized by part of speech, IPA pronunciation with audio link, and the rerunnable command — with the model's own knowledge clearly separated from the fetched source."
+ },
+ {
   "name": "difficult_conversation",
   "skill": "difficult-conversation",
   "bundle": "pm-comms",
@@ -1030,6 +1054,12 @@
   "skill": "donor-update",
   "bundle": "pm-nonprofit",
   "description": "Write a warm donor update or stewardship message that makes a supporter feel their gift mattered. Use when asked to write a donor update, a thank-you/stewardship email, a supporter newsletter, or a gift acknowledgement. Produces a donor-centred update — sincere thanks, the specific impact of their support, a brief story, and a light, optional next step — that strengthens the relationship and sets up the next gift."
+ },
+ {
+  "name": "earthquake_watch",
+  "skill": "earthquake-watch",
+  "bundle": "pm-live",
+  "description": "Check recent earthquakes worldwide with zero API keys — USGS real-time GeoJSON feeds via curl, filtered by magnitude, region, and time window. Use when asked was there an earthquake just now, recent quakes near a place, any big earthquakes today, or monitor seismic activity somewhere. Produces the matching events with magnitude, depth, location and time, the felt/damage context bands, and the rerunnable command — with the official-guidance line safety questions require."
  },
  {
   "name": "email_campaign",
@@ -1486,6 +1516,12 @@
   "skill": "hiring-rubric",
   "bundle": "pm-people",
   "description": "Generate a structured interview scorecard and interview guide for any role. Use when asked to create a hiring rubric, interview scorecard, structured interview guide, or assessment criteria for a job. Produces a scorecard with competencies, behavioural questions, and scoring guidance."
+ },
+ {
+  "name": "hn_digest",
+  "skill": "hn-digest",
+  "bundle": "pm-live",
+  "description": "Pull the current Hacker News front page, top comments, or a topic search with zero API keys — the official Firebase API and Algolia search via curl, digested instead of dumped. Use when asked what's on Hacker News, summarize HN today, what's the discussion on this story, or has HN covered some topic. Produces a ranked digest with scores and comment counts, the discussion's actual argument threads when asked, and the rerunnable commands."
  },
  {
   "name": "hoa_decoder",
@@ -2422,6 +2458,12 @@
   "skill": "public-comment",
   "bundle": "pm-gov",
   "description": "Draft a persuasive public comment on a proposed rule, regulation, or plan. Use when asked to comment on a rulemaking, respond to a consultation, submit feedback on a proposed regulation, or write a comment to an agency. Produces a structured comment: your position, specific evidence-based arguments tied to the proposal's text, suggested edits, and the impact — the kind agencies must consider on the record."
+ },
+ {
+  "name": "public_holidays",
+  "skill": "public-holidays",
+  "bundle": "pm-live",
+  "description": "Look up public holidays for any country and year with zero API keys — the Nager.Date API via curl, with long-weekend detection and cross-country planning. Use when asked what are the holidays in a country, is date X a holiday somewhere, find long weekends this year, or which days is the team in Japan and Germany both off. Produces the holiday list with local names, the specific-date answer, long-weekend candidates, and the rerunnable command."
  },
  {
   "name": "punch_list_builder",
@@ -3426,6 +3468,12 @@
   "description": "Triage a vulnerability or scanner finding — assess real severity, exploitability, and how urgently to fix. Use when asked to triage a CVE, prioritize scanner/pentest findings, assess a vuln's risk, or decide what to patch first. Produces a triage verdict: CVSS-informed severity adjusted for your context, exploitability, real risk, a fix/mitigation, and an SLA — so you fix what matters, not just what's red."
  },
  {
+  "name": "weather_now",
+  "skill": "weather-now",
+  "bundle": "pm-live",
+  "description": "Get current weather and forecasts with zero API keys — wttr.in one-liners for humans, Open-Meteo JSON for data, with the exact curl commands and format codes. Use when asked what's the weather, will it rain today, forecast for a city, or get me weather data for a location. Produces the live conditions or forecast pulled via curl, interpreted plainly, with the source timestamp and the command used shown so the user can rerun it."
+ },
+ {
   "name": "wedding_speech",
   "skill": "wedding-speech",
   "bundle": "pm-lifeadmin",
@@ -3442,6 +3490,12 @@
   "skill": "whiteboard-to-spec",
   "bundle": "pm-vision",
   "description": "Turn photos of a whiteboard, sticky-note wall, or napkin sketch into a structured spec the team can execute. Use when given whiteboard photos after a workshop, sketch images of a flow or architecture, or asked to 'write up what we drew'. Produces a structured write-up — decisions, flows, open questions, owners — that preserves everything on the board and flags what was ambiguous. Requires image input."
+ },
+ {
+  "name": "wiki_summary",
+  "skill": "wiki-summary",
+  "bundle": "pm-live",
+  "description": "Fetch Wikipedia's current summary of any topic with zero API keys — the REST summary endpoint via curl, for answers that need today's article rather than training-data memory. Use when asked what does Wikipedia say about X, get me the current summary of a topic, check a fact against Wikipedia, or has this article changed. Produces the live extract with the article link, disambiguation handling, and a clean separation between what Wikipedia says and what the model adds."
  },
  {
   "name": "win_loss_analysis",
@@ -3466,6 +3520,12 @@
   "skill": "workshop-facilitation-guide",
   "bundle": "pm-operations",
   "description": "Design and facilitate any workshop, working session, or collaborative meeting. Use when asked to plan a workshop, design a facilitated session, run a ideation session, or create a workshop agenda. Produces a complete facilitation guide with session design, activity instructions, timing, and materials."
+ },
+ {
+  "name": "world_clock",
+  "skill": "world-clock",
+  "bundle": "pm-live",
+  "description": "Get the current time anywhere and convert between time zones with zero API keys — timeapi.io via curl (worldtimeapi fallback), plus the DST-safe meeting-window math. Use when asked what time is it in a city, convert 3pm my time to Tokyo, find a meeting slot across time zones, or what's the UTC offset somewhere. Produces the local time(s), the conversion with DST handled by the API not by memory, and the overlap window for scheduling questions."
  },
  {
   "name": "writing_great_skills",

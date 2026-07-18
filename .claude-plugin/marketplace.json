@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-live",
+      "description": "Live data, zero API keys: weather, air quality, currency, crypto, world clock, holidays, dictionary, Wikipedia, earthquakes, and Hacker News — all over plain curl with fallbacks and honest sourcing",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-live",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-parents",
       "description": "School-age parenting ops: parent-teacher conferences that inform, IEP/504 meetings walked in prepared, and college applications supported without takeover",
       "version": "1.0.0",

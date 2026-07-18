@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-live",
+  "version": "1.0.0",
+  "description": "Live data, zero API keys: weather, air quality, currency, crypto, world clock, holidays, dictionary, Wikipedia, earthquakes, and Hacker News — all over plain curl with fallbacks and honest sourcing",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "live-data",
+    "weather",
+    "currency",
+    "crypto",
+    "no-api-key",
+    "curl"
+  ]
+}
