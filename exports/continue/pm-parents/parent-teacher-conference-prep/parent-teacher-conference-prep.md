@@ -1,0 +1,66 @@
+---
+name: "Get real information out of a 15-minute parent-teacher confe"
+description: "Get real information out of a 15-minute parent-teacher conference — the questions that beat 'how's she doing', the data to bring from home, and the follow-up that makes the meeting matter. Use when asked prepare me for the parent teacher conference, what should I ask my kid's teacher, the conference is 15 minutes what do I prioritize, or how do I raise a concern without making it adversarial. Produces the prioritized question list, the home-observations brief, the concern-raising scripts, and the follow-up plan with owners."
+---
+
+# Parent Teacher Conference Prep Skill
+
+"How's she doing?" earns the answer it deserves: "She's doing fine." Fifteen minutes with the person who watches your child think for a thousand hours a year is an interview worth preparing — specific questions that force specific answers, home observations the teacher can't see, and concerns raised as shared problems rather than filed complaints. This skill preps that quarter hour like the high-density meeting it is, and builds the follow-up that separates a conversation from a formality.
+
+## What This Skill Produces
+
+- **The ranked question list** — top 3 first, each engineered to be unanswerable with "fine"
+- **The home brief** — the 60-second version of what you see that the teacher can't
+- **The concern scripts** — raising academic, social, or classroom-fit worries in ally frame
+- **The follow-up plan** — what was agreed, who owns what, and the check-in date that makes it real
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The child's situation** — age/grade, how school seems to be going *from home* (homework mood, what they say at dinner, what changed this year)
+- **The parent's real questions and worries** — including the awkward ones (the friend situation, the teacher-fit doubt, the is-this-normal question); the prep exists to make those sayable
+- **What's known from school so far** — grades, prior teacher comments, any tests or supports in place
+- **The logistics** — how long the slot is, both parents or one, any language/interpreter needs
+
+## Framework: The Fifteen-Minute Rules
+
+1. **Specific questions get specific answers:** "What does she do when she's stuck on something hard?" · "Where is he compared to where you'd want him in reading — and what does the gap look like?" · "Who does she work with, and who does she choose when she can choose?" · "What's one thing we could do at home that would actually help?" — each targets observation the teacher genuinely has and small talk never surfaces.
+2. **Bring the home data:** the teacher sees the classroom child; you see the 6pm child. Homework taking triple the expected time, the subject that causes stomachaches, the reading that stopped being fun — sixty seconds of this converts the meeting from report-delivery to information-exchange, and it's the half the teacher can't get anywhere else.
+3. **Concerns arrive as shared puzzles:** "We're seeing X at home — do you see anything like that here? What do you make of it?" recruits the teacher; "Why is X happening in your class?" recruits a defense attorney. Same concern, opposite meetings. The scripts hold the ally frame even for hard topics (bullying, a possible learning difference, teacher fit).
+4. **Push past "fine" once, politely:** when the general answer comes anyway — "That's good to hear. What's one thing she finds genuinely difficult right now?" Every child has one; a teacher who can't name it is itself information.
+5. **The last two minutes are the meeting:** restate what was agreed, who does what, and ask for the check-in — "Can I email you in three weeks to see if the reading plan is taking?" A conference without a follow-up date was a pleasant chat. If big topics surfaced (evaluation questions, persistent struggles), the ask is a separate meeting — fifteen minutes shouldn't be forced to hold what it can't (see [iep-504-meeting-kit](../iep-504-meeting-kit/SKILL.md) when the conversation heads toward formal supports).
+
+## Output Format
+
+# Conference Prep: [child, grade] — [slot length]
+
+## Your Top 3 (in order)
+1. … 2. … 3. … [each with the follow-up if the answer is general]
+
+## The Home Brief (60 seconds, near the start)
+[What you see: the 3–4 concrete observations, dated where possible]
+
+## If Raising the Concern
+[The shared-puzzle script for this specific worry, verbatim · the escalation ask if it needs its own meeting]
+
+## Below the Line (if time allows)
+[Questions 4–6]
+
+## The Close
+"So we're agreed: [teacher does X], [we do Y at home] — can I check in by email on [date]?"
+
+## Quality Checks
+
+- [ ] No question on the list is answerable with "fine"
+- [ ] The home brief contains observations, not conclusions ("homework takes 90 minutes" not "he's struggling")
+- [ ] Concerns are phrased as shared puzzles with a question mark, not verdicts
+- [ ] The close assigns owners and a date
+- [ ] Big topics get routed to their own meeting, not crammed
+
+## Anti-Patterns
+
+- [ ] Do not open with the grievance — even a justified one lands better at minute 6 than minute 1
+- [ ] Do not spend the slot on logistics a portal answers — grades are homework; the meeting is for what only this teacher knows
+- [ ] Do not speak for the child's inner life as fact — report the observations, ask what they see
+- [ ] Do not accept the whole meeting in generalities — one polite push past "fine" is owed to the child
+- [ ] Do not leave without the follow-up date — it's the difference between a meeting and a ritual

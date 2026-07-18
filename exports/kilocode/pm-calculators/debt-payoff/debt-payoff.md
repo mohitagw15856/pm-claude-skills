@@ -1,0 +1,73 @@
+# Debt Payoff Skill
+
+The avalanche-vs-snowball debate has a correct answer (avalanche, arithmetically) and a true objection (plans people abandon save nobody anything) — and the only honest way to weigh them is to price the difference on the *actual* debts. Sometimes morale costs $40; sometimes it costs $4,000. This skill runs both strategies month by month with the script, shows what choosing early wins actually costs, and builds the plan around the constraint that matters most: it has to survive contact with a real budget.
+
+## What This Skill Produces
+
+- **The head-to-head** — debt-free date and total interest for avalanche and snowball, simulated on the real debts
+- **The payoff order** — which debt dies when, under the chosen strategy
+- **The morale price tag** — what snowball's early wins cost in interest, in dollars, so the choice is informed
+- **The survival rules** — minimum-viable version for bad months, and the windfall protocol
+
+## Required Inputs
+
+Ask for these if not provided:
+- **Every debt** — name, balance, APR, minimum payment; the plan is only as real as this list (and finding a forgotten debt later breaks more than math)
+- **The extra amount** — monthly money beyond the minimums, the honest number; zero is an answer that changes the conversation to budget or income first
+- **Any special terms** — promotional 0% windows ending (a deferred-interest cliff outranks every APR), variable rates, loans with payoff penalties (rare, but ask)
+- **The track record** — have they started and abandoned plans before? It weighs the morale argument with evidence instead of vibes
+
+## Programmatic Helper
+
+```bash
+python3 scripts/debt_payoff.py --debt "visa:9000:24.9:180" --debt "loan:3000:6:60" --extra 200
+python3 scripts/debt_payoff.py --debt "a:2000:19:50" --debt "b:9000:6:180" --extra 150 --json
+```
+
+Deterministic month-by-month simulation: interest accrues, minimums are paid, the surplus cascades onto the strategy's target debt, and freed-up minimums roll forward. Fixed APRs, on-time payments, no new charges — the assumptions are printed with the result.
+
+## Framework: The Choosing Rules
+
+- **Price the difference before debating it** — the interest gap between strategies on these debts is a number, not a philosophy; under ~$200 it's noise and snowball's momentum wins free
+- **A minimum that doesn't cover interest is an emergency** — a balance growing at its minimum (the script makes this visible) jumps every queue; that debt is on fire in a way the others aren't
+- **Deferred-interest cliffs outrank APR order** — a promotional balance that back-charges all accrued interest at month 24 gets paid off before its cliff regardless of strategy
+- **The plan needs a bad-month setting** — define now what happens when the extra can't be paid: minimums-only is a paused plan, not a failed one; the difference is whether it restarts
+- **Windfalls have a protocol** — tax refunds and bonuses go to the current target debt *by prior decision*, because in-the-moment decisions about windfalls have a known winner and it isn't the debt
+
+## Output Format
+
+---
+
+# Debt Payoff Plan: [N] debts, [total]
+
+## The Head-to-Head
+[Script output: both strategies, dates, interest totals, the avalanche savings]
+
+## The Call
+[Which strategy and why, in two sentences — citing the priced difference and the track record, not doctrine]
+
+## The Payoff Order
+[Debt by debt with projected month — the countdown that makes progress visible]
+
+## Survival Rules
+Bad month: [minimums-only protocol, restart trigger] · Windfalls: [target-debt rule] · Cliff watch: [any promotional deadlines, calendared]
+
+*Assumes fixed rates and no new charges — the plan's silent partner is the spending that stops. Educational model, not financial advice — verify with a licensed professional before acting on it.*
+
+---
+
+## Quality Checks
+
+- [ ] Every debt appears with balance, APR, and minimum — no "roughly" balances
+- [ ] The strategy choice cites the priced difference on these debts, not general doctrine
+- [ ] Growing-at-minimum debts are flagged as emergencies regardless of strategy
+- [ ] Promotional/deferred-interest deadlines are calendared above APR order
+- [ ] The bad-month protocol exists before the first bad month
+
+## Anti-Patterns
+
+- [ ] Do not preach avalanche when the difference is trivial — momentum is worth $40
+- [ ] Do not endorse snowball without showing its price — informed morale, not managed ignorance
+- [ ] Do not build a plan that requires a perfect year — perfect-year plans have a 100% failure rate
+- [ ] Do not ignore the income side — past a point, the plan's bottleneck is earnings, and saying so is the honest output
+- [ ] Do not touch consolidation/refinancing recommendations beyond naming them as options to research — product choice is advice territory

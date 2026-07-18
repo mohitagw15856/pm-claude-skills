@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-resignation",
+  "version": "1.0.0",
+  "description": "The clean-exit kit: the three-sentence resignation letter, the counteroffer decoded, exit-interview strategy, and the handoff that makes you missed for the right reasons",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "resignation",
+    "quitting",
+    "counteroffer",
+    "exit-interview",
+    "handoff"
+  ]
+}

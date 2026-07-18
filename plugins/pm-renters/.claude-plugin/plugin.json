@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-renters",
+  "version": "1.0.0",
+  "description": "Renter's rights toolkit: recover the security deposit, escalate ignored repairs, and answer a rent increase with leverage instead of resignation",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "renting",
+    "deposit",
+    "repairs",
+    "rent-increase",
+    "tenant"
+  ]
+}

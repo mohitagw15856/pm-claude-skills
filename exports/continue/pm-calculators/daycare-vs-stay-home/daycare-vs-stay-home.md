@@ -1,0 +1,79 @@
+---
+name: "Run the real math on a parent leaving work versus paying for"
+description: "Run the real math on a parent leaving work versus paying for childcare — the second income net of daycare, marginal taxes, and work costs, AND the career-trajectory cost of years out, over horizons instead of one brutal year. Use when asked does it make sense for me to keep working, daycare costs my whole salary, stay-home vs daycare math, or what does leaving work for 5 years really cost. Produces both sides of the ledger from the script, the horizon comparison, and the decision sheet that lets the non-financials vote."
+---
+
+# Daycare vs Stay-Home Skill
+
+"Daycare eats my whole salary" is usually computed wrong twice: it compares childcare against *gross* pay (marginal taxes were eating part of that anyway), and it prices exactly one year of a decision whose costs live in the following decade — the raises not compounded, the re-entry discount, the retirement match not collected. This skill runs both sides honestly: what working *nets* this year, and what stepping out costs over the horizon. Then it hands the decision back, because the spreadsheet gets a vote, not a veto.
+
+## What This Skill Produces
+
+- **This year's ledger** — second income minus marginal tax, childcare, and work costs, plus the match: the real net, from the script
+- **The horizon view** — earnings forgone over the years out, and the re-entry salary vs. the never-left trajectory
+- **The middle options** — part-time, one-parent-flex, cheaper-care mixes — sketched against the same ledger
+- **The decision sheet** — money on both sides plus the non-financials, with their explicit permission to win
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The second earner's income** — and which parent's leaving is actually on the table (the framing "second income" is doing work; make it explicit)
+- **Childcare cost** — per child per month, the real local quote; number of kids and their ages (the cost cliff at school age is the model's built-in expiry date)
+- **The marginal tax rate** — marginal, not average; flag it as verify-yours, and note childcare tax credits/subsidies are jurisdiction-specific and often large
+- **Career shape** — expected raises, how re-entry works in their field (the default penalty is a placeholder; fields differ wildly), and the years-out being considered
+
+## Programmatic Helper
+
+```bash
+python3 scripts/daycare_vs_stay_home.py --income 62000 --daycare 1600
+python3 scripts/daycare_vs_stay_home.py --income 62000 --daycare 1600 --kids 2 --marginal-tax 28 --years-out 4 --json
+```
+
+Deterministic. The re-entry penalty default (10%) is a labeled placeholder — research varies widely; set it to the field's reality or treat it as a sensitivity axis.
+
+## Framework: The Honest-Ledger Rules
+
+- **Marginal, not average, not gross** — the second income is taxed at the household's marginal rate, so childcare compares against take-home-at-the-margin; both directions of error are common and both flip decisions
+- **Childcare is temporary; trajectory is compounding** — the brutal net-$1,200-a-month year ends at kindergarten, but the missed raises and match keep compounding; horizons are the honest unit, and the artifact must show both timescales
+- **Work costs count, both ways** — commuting, wardrobe, convenience meals are real subtractions; so is what a staying parent's unpaid labor replaces (nanny-share, aftercare, summer camps in the alternative) — the ledger cuts both directions
+- **The middle is underrated** — part-time, staggered schedules, and family care mixes often dominate both pure options on the ledger; sketch at least one
+- **The spreadsheet votes, the family decides** — wanting to be home, or wanting to work, is a legitimate deciding input; the skill's job is making sure it decides *with* the numbers visible, not instead of them
+
+## Output Format
+
+---
+
+# Daycare vs Stay-Home: [household]
+
+## This Year's Ledger
+[Script output: gross → net after tax/care/costs+match, effective hourly]
+
+## The Horizon View
+[Script output: forgone earnings, re-entry vs never-left salary, the compounding gap — read against when childcare costs end]
+
+## The Middle Options
+[1–2 sketched: part-time at X hours → the same ledger recomputed roughly]
+
+## Decision Sheet
+Money says: [one honest sentence, both timescales] · Not modeled and often decisive: childcare credits/subsidies (check yours — often large), job-tied benefits, and what each parent actually wants — which is allowed to win.
+
+*Educational model, not financial or career advice — tax treatment and re-entry realities vary; verify the load-bearing numbers.*
+
+---
+
+## Quality Checks
+
+- [ ] The comparison uses marginal tax and net income — never gross vs. daycare
+- [ ] Both timescales appear: the temporary childcare years and the compounding trajectory
+- [ ] The re-entry penalty is labeled a placeholder and treated as a sensitivity, not a fact
+- [ ] Childcare tax credits/subsidies are flagged as jurisdiction-specific and often large
+- [ ] At least one middle option is sketched
+- [ ] The non-financials get explicit permission to decide
+
+## Anti-Patterns
+
+- [ ] Do not run gross-salary-vs-daycare — it's the error this skill exists to correct
+- [ ] Do not price only year one — the decision's cost curve is a decade long and mostly later
+- [ ] Do not gender the framing — "the second earner" is whoever the household says it is
+- [ ] Do not let the model moralize either choice — working and staying home both survive honest math
+- [ ] Do not present the re-entry penalty as settled science — it's a field-dependent range wearing a default

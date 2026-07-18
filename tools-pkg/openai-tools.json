@@ -21,6 +21,25 @@
  {
   "type": "function",
   "function": {
+   "name": "401k_plan_decoder",
+   "description": "Decode a 401k or workplace retirement plan — the real cost of its funds, the match's fine print, vesting math, and the plan features worth using or avoiding. Use when someone asks 'is my 401k any good', 'decode my 401k plan', 'which funds should I look at', or 'what fees am I paying'. Produces a fee decode in dollars-over-time, match and vesting math, a fund-lineup triage by cost, and the questions for HR or the plan administrator.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "ab_test_planner",
    "description": "Design statistically rigorous A/B tests for product features, UI changes, onboarding flows, and pricing experiments. Use when asked to set up an experiment, design an A/B test, calculate sample size, or interpret test results. Produces a complete test plan with hypothesis, variant definitions, sample size, duration estimate, guardrail metrics, and a results interpretation guide.",
    "parameters": {
@@ -688,6 +707,25 @@
   "function": {
    "name": "async_decision_memo",
    "description": "Run a decision asynchronously — the memo, the silent-read window, the comment protocol, and the deadline that makes it land without a meeting. Use when asked to decide something async, replace a decision meeting with a document, run an Amazon-style written decision process, or when a decision keeps stalling in comment threads. Produces the decision memo plus the process wrapper: reader roles, response windows, comment-resolution rules, and the tie-breaker. For the document structure alone use decision-memo; this skill runs the process around it.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "auto_repair_estimate_decoder",
+   "description": "Decode an auto repair estimate — what each line actually is, which items are urgent vs upsell, and the questions that separate a fair shop from a fishing expedition. Use when someone asks 'is this repair quote fair', 'decode my mechanic's estimate', 'do I really need all this', or 'is the shop ripping me off'. Produces a line-by-line decode with urgency triage, parts/labor sanity checks, ranked red flags, and the exact questions to ask the shop before authorizing.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -1484,6 +1522,25 @@
  {
   "type": "function",
   "function": {
+   "name": "claim_denial_decoder",
+   "description": "Decode an insurance claim denial letter — what the cited reason actually means, whether it's commonly overturnable, and the appeal letter that answers it point by point. Use when someone asks 'my insurance claim was denied what do I do', 'decode this denial letter', 'can I appeal this denial', or 'write my insurance appeal'. Produces the denial decode with overturn-likelihood framing, the evidence checklist, the point-by-point appeal letter, and the escalation ladder past the insurer.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "claims_triage",
    "description": "Triage an incoming insurance claim: check the coverage trigger against policy wording, band severity and complexity, screen for fraud indicators, set a first-pass reserve range, and route with an SLA. Use when asked to triage a claim, review a first notice of loss (FNOL), assess a new claim, decide fast-track vs adjuster routing, or screen a claim for SIU referral. Produces a structured triage note with coverage view, severity band, indicator screen, reserve range, and a routing recommendation.",
    "parameters": {
@@ -1790,6 +1847,25 @@
   "function": {
    "name": "collections_email",
    "description": "Write a polite-but-firm payment-reminder / collections email sequence for overdue invoices. Use when asked to write a collections email, a payment reminder, a dunning sequence, or to chase an overdue invoice. Produces a staged sequence — gentle pre-due nudge through escalating overdue reminders to a final notice — that stays professional, keeps the relationship intact, and makes paying easy. Not legal advice.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "college_app_parent_guide",
+   "description": "Support a teenager through college applications without taking them over — the parent's actual jobs (logistics, finances, emotional ballast), the ownership lines that keep the application theirs, and the scripts for the hard moments. Use when asked how do I help my kid with college apps, how involved should I be, my teenager won't start their essays, or we disagree about the college list. Produces the role split, the family timeline, the money conversation framework, and the scripts for deadlock, rejection, and the essay you must not write.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -2151,6 +2227,25 @@
   "function": {
    "name": "conversion_rate_optimization",
    "description": "Audit a landing page or funnel step and produce a prioritised CRO test plan. Use when asked to improve conversion rate, audit a landing/signup/checkout page, reduce funnel drop-off, or plan A/B tests for a page. Produces a CRO plan — a heuristic conversion audit, the diagnosed friction, prioritised test hypotheses (ICE), test designs with sample-size math, and the measurement guardrails.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "counteroffer_decoder",
+   "description": "Decode a counteroffer after you resign — what the raise, promotion promise, or title bump really signals, the statistics-informed risks of staying, and a clear-eyed decision framework. Use when asked my company countered my resignation, should I accept a counteroffer, they offered me more to stay, or decode this retention offer. Produces a component-by-component decode with 🔴🟡🟢 severity, the questions that expose which promises are real, and the stay/go decision sheet.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -2586,8 +2681,46 @@
  {
   "type": "function",
   "function": {
+   "name": "daycare_vs_stay_home",
+   "description": "Run the real math on a parent leaving work versus paying for childcare — the second income net of daycare, marginal taxes, and work costs, AND the career-trajectory cost of years out, over horizons instead of one brutal year. Use when asked does it make sense for me to keep working, daycare costs my whole salary, stay-home vs daycare math, or what does leaving work for 5 years really cost. Produces both sides of the ledger from the script, the horizon comparison, and the decision sheet that lets the non-financials vote.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "dbt_model_spec",
    "description": "Spec a dbt model — its grain, sources, transformations, tests, and materialization. Use when asked to design a dbt model, plan a data transformation, write a staging/intermediate/mart model spec, or define dbt tests for a table. Produces a model spec — purpose & grain, lineage (sources → refs), the transformation logic, column definitions, dbt tests, materialization choice, and the skeleton SQL/YAML.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "debt_payoff",
+   "description": "Build a debt payoff plan — avalanche vs snowball simulated month by month on your actual debts, the real payoff dates, and the psychology-vs-arithmetic tradeoff priced in dollars. Use when asked how do I pay off my debts, avalanche or snowball, make me a debt payoff plan, or when will I be debt-free. Produces the month-by-month comparison from the script, the payoff order with dates, the interest cost of choosing morale over math, and the plan-survival rules.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -2947,6 +3080,25 @@
  {
   "type": "function",
   "function": {
+   "name": "disability_insurance_decoder",
+   "description": "Decode a disability insurance policy or employer LTD plan — own-occupation vs any-occupation, the benefit math after offsets and taxes, and the definitions that decide whether it pays. Use when someone asks 'is my disability insurance any good', 'decode my LTD policy', 'what does own-occupation mean', or 'how much would I actually get'. Produces a definition decode of the clauses that decide claims, the real benefit math after offsets, ranked red flags, and the questions to ask before relying on the coverage.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "disaster_recovery_plan",
    "description": "Write a disaster recovery plan for a service or system — covering RPO/RTO targets, failure scenario runbooks, backup and restore procedures, DR testing cadence, and communication templates. Use when asked to write a DR plan, document failover procedures, create recovery runbooks, define RTO/RPO targets, or prepare for a disaster recovery game day. Produces a full DR document with per-scenario recovery runbooks, backup validation procedures, testing schedule, and communication templates.",
    "parameters": {
@@ -3080,6 +3232,25 @@
  {
   "type": "function",
   "function": {
+   "name": "doctor_visit_prep",
+   "description": "Prepare for a doctor's appointment so the 12 minutes actually get used — the symptom timeline in the format clinicians think in, the prioritized question list, and the advocacy scripts for being heard. Use when asked help me prepare for my doctor appointment, what should I tell my doctor, organize my symptoms, or I always forget what to ask. Produces the one-page visit sheet: symptom history with timeline, medications, the top-3 questions, and the phrases that get concerns taken seriously.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "donor_update",
    "description": "Write a warm donor update or stewardship message that makes a supporter feel their gift mattered. Use when asked to write a donor update, a thank-you/stewardship email, a supporter newsletter, or a gift acknowledgement. Produces a donor-centred update — sincere thanks, the specific impact of their support, a brief story, and a light, optional next step — that strengthens the relationship and sets up the next gift.",
    "parameters": {
@@ -3139,6 +3310,25 @@
   "function": {
    "name": "email_triage",
    "description": "Triage a Gmail inbox down to only what needs you. Use when asked to triage email, clear an inbox, find what needs a reply, or summarise recent mail. Produces a prioritised list of items needing action — replies, decisions, follow-ups — for a configurable window (default last 8 hours), filtering out receipts, notifications, and newsletters.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "emergency_fund",
+   "description": "Size an emergency fund from essential spend and real risk factors — not a one-size 'six months' — with the funding timeline and where the money should sit. Use when asked how big should my emergency fund be, do I have enough saved, emergency fund or invest, or how many months of expenses do I need. Produces the risk-adjusted target from the script, the essential-spend worksheet, the funding plan, and the what-counts-as-an-emergency rules.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -3365,6 +3555,25 @@
  {
   "type": "function",
   "function": {
+   "name": "ev_vs_gas",
+   "description": "Compare an EV against a comparable gas car on total cost — upfront gap after incentives, energy vs fuel per year, maintenance delta, and the crossover year when the EV pulls ahead (or doesn't). Use when asked is an EV worth it, EV vs gas total cost, when does an EV pay for itself, or should my next car be electric. Produces the year-by-year cumulative comparison from the script, the crossover year, the per-mile energy math, and the honest not-modeled list.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "eval_rubric_designer",
    "description": "Design a scoring rubric and LLM-as-judge prompt to evaluate the quality of an AI feature's output. Use when asked to create an eval rubric, define quality dimensions, build an LLM judge, or decide how to measure whether AI output is good. Produces a rubric with weighted dimensions and concrete 1–5 anchors, a ready-to-run judge prompt, a labelling guide, and notes on judge reliability.",
    "parameters": {
@@ -3519,6 +3728,25 @@
   "function": {
    "name": "executive_update",
    "description": "Transform detailed product updates into concise executive briefings. Use when asked to write an executive update, leadership update, product update for the exec team, or a C-suite product briefing. Produces a structured 250-word briefing with headline, key metrics, progress, risks, decisions needed, and next steps.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "exit_interview_strategy",
+   "description": "Walk into an exit interview knowing what it's for, what to say, and what to keep — honest-but-strategic answers that protect references and leave the door open. Use when asked what do I say in my exit interview, should I be honest in my exit interview, prep me for my exit interview, or is the exit interview confidential. Produces the goals-and-risks brief, prepared answers for the standard questions, the say/soften/skip sorting of your real feedback, and the scripts for the questions that are traps.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -4505,6 +4733,25 @@
  {
   "type": "function",
   "function": {
+   "name": "home_contractor_quote_decoder",
+   "description": "Decode a home renovation or repair quote — allowances that aren't prices, exclusions that become change orders, payment schedules that shift risk, and what a comparable-bids check should cover. Use when someone asks 'is this contractor quote fair', 'decode this renovation bid', 'what should be in a contractor contract', or 'why do these three bids differ so much'. Produces a section-by-section decode, the allowance and exclusion audit, payment-schedule risk analysis, and the questions that make bids comparable.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "hook_writer",
    "description": "Generate scroll-stopping hooks — the first line of a post, thread, video, or email that decides whether anyone keeps reading. Use when asked to write a hook, an opener, a first line, a thread starter, a video cold-open, or to make something more clickable. Produces multiple distinct hook options across proven angles (curiosity, contrarian, result, story, stakes), each labelled with why it works and which platform it fits.",
    "parameters": {
@@ -4545,6 +4792,25 @@
   "function": {
    "name": "i18n_readiness_review",
    "description": "Review a product/codebase for internationalization readiness before you localize. Use when asked if a product is ready to localize, to review i18n readiness, find hard-coded strings/locale bugs, or prep for going multilingual. Produces a readiness audit — externalized strings, locale-aware formatting, layout/expansion, encoding/RTL, and a prioritised list of i18n fixes to make before translation starts.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "iep_504_meeting_kit",
+   "description": "Walk into an IEP or 504 meeting prepared and effective — the process decoded in plain language, the parent-input statement that gets read, the questions that make goals measurable, and advocacy that stays collaborative. Use when asked prepare me for my child's IEP meeting, what's the difference between an IEP and a 504, how do I disagree with the school's plan, or make sure the accommodations actually happen. Produces the process map, the parent-input statement, the goal-quality checklist, the meeting scripts, and the paper-trail habits.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -4754,6 +5020,25 @@
   "function": {
    "name": "insurance_claim",
    "description": "Write a clear insurance claim letter or appeal that supports a payout. Use when asked to write an insurance claim, file a claim letter, document a loss for insurance, or appeal a denied claim. Produces a structured claim — policy and incident details, the documented loss, the amount claimed, and the evidence — or an appeal that rebuts the denial reason, ready to submit.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "insurance_policy_decoder",
+   "description": "Decode a home, renters, or auto insurance policy into what's actually covered, what's excluded, and what the payout math really looks like before you need it. Use when someone asks 'what does my insurance actually cover', 'decode my policy', 'is this deductible normal', or 'actual cash value vs replacement cost'. Produces a coverage decode with real payout scenarios, ranked exclusion red flags, the ACV-vs-replacement-cost math, and the questions to ask your agent before renewal.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -5096,6 +5381,25 @@
   "function": {
    "name": "last_30_days_research",
    "description": "Searches Reddit, X/Twitter, and the broader web for recent opinions, sentiment, and signal on any topic. Use when you need to know what real people are saying about a tool, product, trend, or event in the past 30 days — cutting through SEO content to surface genuine community reaction. Produces a structured report with consensus findings, pain points, positive signals, contrarian takes, source links, and a signal confidence rating.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "last_two_weeks_handoff",
+   "description": "Turn your notice period into a handoff that makes you missed for the right reasons — the transition doc nobody has to call you about, the knowledge-transfer sessions, and the graceful goodbye mechanics. Use when asked I just resigned how do I hand off my work, write my transition document, plan my last two weeks, or what do I do before I leave my job. Produces the handoff inventory, the transition doc template filled with your reality, the KT session plan, and the last-day checklist.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -5702,6 +6006,25 @@
  {
   "type": "function",
   "function": {
+   "name": "medical_records_request",
+   "description": "Request your medical records and actually get them — what to ask for, the request letter that can't be shuffled aside, the timelines and fee rules to cite (jurisdiction-flagged), and the escalation path for stonewalls. Use when asked how do I get my medical records, write a records request, my doctor's office won't send my records, or what records should I collect. Produces the itemized request letter, the delivery and format choices decoded, the follow-up ladder, and the personal health-file structure for keeping them.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "meeting_notes",
    "description": "Structure and format meeting notes following PM best practices. Use when asked to create meeting notes, format discussion notes, capture action items, or document decisions from any meeting type. Produces structured notes with decisions, action items (owner + deadline), open questions, and next steps.",
    "parameters": {
@@ -5951,6 +6274,25 @@
   "function": {
    "name": "morning_intelligence",
    "description": "Interviews you across 15 questions to capture your role, topics, sources, exclusions, and format preferences, then writes a master prompt you can paste into a scheduled task or Claude Code Routine. Use when you want to set up a personalised daily news brief, build a reusable morning news prompt, or create an automated intelligence briefing. Produces a confirmed summary of your preferences, a ready-to-paste master prompt, and setup instructions for both Cowork Scheduled Tasks and Claude Code Routines.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "moving_company_estimate_decoder",
+   "description": "Decode a moving company estimate — binding vs non-binding, the weight and cubic-feet games, valuation vs insurance, and the red flags that precede hostage-load stories. Use when someone asks 'is this moving quote legit', 'decode my moving estimate', 'binding vs non-binding estimate', or 'how do I avoid moving scams'. Produces an estimate-type decode with what-you'll-actually-pay scenarios, ranked red flags, the valuation decode, and the questions that separate real movers from brokers.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -6386,6 +6728,25 @@
  {
   "type": "function",
   "function": {
+   "name": "parent_teacher_conference_prep",
+   "description": "Get real information out of a 15-minute parent-teacher conference — the questions that beat 'how's she doing', the data to bring from home, and the follow-up that makes the meeting matter. Use when asked prepare me for the parent teacher conference, what should I ask my kid's teacher, the conference is 15 minutes what do I prioritize, or how do I raise a concern without making it adversarial. Produces the prioritized question list, the home-observations brief, the concern-raising scripts, and the follow-up plan with owners.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "partnership_proposal",
    "description": "Write a B2B partnership proposal or business case. Use when asked to write a partnership proposal, draft a partnership brief, structure a co-marketing proposal, or create a business case for a strategic partnership. Produces a structured proposal with value proposition, partnership model, commercial terms, and mutual commitments.",
    "parameters": {
@@ -6768,6 +7129,25 @@
   "function": {
    "name": "premortem_assassin",
    "description": "Kill the plan on paper before reality does it for money. Use when a plan, launch, migration, or strategy is about to be committed to and nobody has tried hard to murder it yet — the assassin attacks through twelve named failure vectors and writes the post-mortem of the failure that hasn't happened. Produces a premortem: the death narrative, the twelve-vector attack with survival verdicts, the three kill-shots most likely to land, and the cheap tripwires that would give early warning.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "prescription_cost_navigator",
+   "description": "Work down the cost of a prescription systematically — the generic and therapeutic-alternative conversation, discount programs vs insurance math, pharmacy price variance, and manufacturer/assistance programs, in the order that saves the most first. Use when asked my prescription is too expensive, how do I save on my meds, is there a cheaper version of this drug, or I can't afford my medication. Produces the cost-reduction ladder for the specific prescription, the scripts for pharmacist and prescriber conversations, and the never-do list (skipping doses is not a savings plan).",
    "parameters": {
     "type": "object",
     "properties": {
@@ -7811,6 +8191,25 @@
  {
   "type": "function",
   "function": {
+   "name": "rent_increase_response",
+   "description": "Respond to a rent increase strategically — check its validity first, price your alternatives honestly, then negotiate with the leverage tenants forget they have (turnover costs the landlord more than a compromise). Use when asked my rent is going up what can I do, negotiate my rent increase, is this increase even legal, or should I stay or move. Produces the validity checklist, the stay-vs-move math, the negotiation letter with its trade menu, and the decision timeline against the notice period.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "rent_vs_buy",
    "description": "Model rent-vs-buy honestly — year-by-year net position for both paths including the assumption everyone drops (the renter invests the difference), with a breakeven horizon instead of a verdict. Use when asked should I rent or buy, does buying beat renting in my city, when does buying break even, or run the rent-vs-buy numbers. Produces the year-by-year comparison table, the breakeven year, the assumption list with defaults labeled, and the not-modeled list.",
    "parameters": {
@@ -7849,8 +8248,46 @@
  {
   "type": "function",
   "function": {
+   "name": "repair_request_escalation",
+   "description": "Get a landlord to actually fix things — the repair request that creates a record, the escalation ladder from reminder to habitability leverage, and the jurisdiction-flagged map of tenant remedies with their prerequisites. Use when asked my landlord won't fix anything, write a repair request, how long can they ignore a broken heater, or what are my options if repairs never happen. Produces the documented request, the severity triage, the escalation ladder with letters, and the remedies decode with the do-not-DIY warnings.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "research_protocol",
    "description": "Write a structured research protocol or study design document. Use when asked to write a research protocol, study protocol, research plan, methodology section, or research proposal. Produces a complete protocol with objectives, methodology, ethical considerations, and analysis plan.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "resignation_letter",
+   "description": "Write a resignation letter that closes a chapter without burning it — short, warm, legally clean, and silent on everything that doesn't belong in a permanent file. Use when asked write my resignation letter, how do I resign professionally, what do I say when I quit, or review my resignation email. Produces the letter itself, the tell-your-manager-first script, the timing plan, and the list of things that must NOT go in writing.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -8573,6 +9010,44 @@
   "function": {
    "name": "screenshot_teardown",
    "description": "Tear down a competitor's product from screenshots of its actual UI — onboarding, pricing page, core flows. Use when given screenshots of a rival's app or website and asked what they're doing, how their flow works, or what to learn/steal/avoid. Produces a UX-and-strategy teardown grounded in what is visibly on screen, with an inferences-vs-observations split. Requires image input. For a market-level teardown without screenshots use competitor-teardown.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "second_opinion_request",
+   "description": "Get a second medical opinion without torching the first relationship — when it's warranted, how to raise it with the current doctor, the records package the consulting doctor needs, and how to weigh two opinions that disagree. Use when asked should I get a second opinion, how do I ask for a second opinion without offending my doctor, what records do I send, or the two doctors disagree now what. Produces the warranted-or-not framing, the raising-it scripts, the records checklist, and the disagreement-weighing framework.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "security_deposit_recovery",
+   "description": "Get your security deposit back — the move-out documentation that wins disputes before they start, the itemized-deduction challenge, the demand-letter ladder, and the small-claims decision point. Use when asked how do I get my deposit back, my landlord is keeping my deposit, dispute these deposit deductions, or write a deposit demand letter. Produces the move-out evidence protocol, the deduction-by-deduction challenge with the wear-and-tear line drawn, the escalation ladder with letters, and the small-claims prep sheet.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -9749,8 +10224,46 @@
  {
   "type": "function",
   "function": {
+   "name": "the_due_diligence_call",
+   "description": "Simulate the due-diligence call where an acquirer's or investor's analyst takes your metrics apart — the questions behind the spreadsheet, the moment a number wobbles, and a debrief on which answers create risk. Use when asked simulate due diligence on my startup, stress-test my metrics before the raise, what will the acquirer's analyst ask, or prep me for the DD call. Produces the call transcript with the analyst's private notes, the internal memo they write afterward, and a debrief separating fixable presentation from fix-the-business findings.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "the_journalist_call",
    "description": "Simulate a hostile-but-fair journalist interview about your company or announcement — the questions you fear, live follow-ups on every dodge, then the story they'd file. Use when asked to media-train me, simulate a press interview, prep me for a journalist call, or how will this announcement be covered. Produces the interview transcript with your likely stumbles, the article they would write from it, and a debrief with bridge lines and the quotes to prepare.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "the_price_pushback",
+   "description": "Simulate the client who grinds on your price — the budget theater, the competitor quote, the scope squeeze — against your actual offer, with a debrief on where you caved and what holding would have sounded like. Use when asked simulate a client negotiating my rate, practice price pushback, they said I'm too expensive, or stress-test my pricing conversation. Produces the negotiation transcript with the client's private playbook notes, the deal outcome, and a debrief on every concession with its stronger alternative.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -9789,6 +10302,44 @@
   "function": {
    "name": "the_promotion_committee",
    "description": "Simulate the calibration meeting that discusses your promotion after your manager leaves the room — the debate, the packet's holes, the verdict. Use when asked will I get promoted, simulate the promo committee, stress-test my promotion packet, or why did my promo get rejected. Produces the committee transcript (four archetypes on YOUR packet), the internal verdict with the real reason, and a debrief separating fixable gaps from timing politics.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "the_thesis_defense",
+   "description": "Simulate your thesis defense before the real one — a committee of examiner archetypes probing YOUR actual thesis, the questions you hoped nobody would ask, and a debrief with preparation priorities. Use when asked simulate my thesis defense, grill me on my dissertation, what will my committee ask, or prep me for my viva. Produces the defense transcript with your answers stress-tested, the committee's private deliberation, and a debrief ranking the exposed weaknesses by preparability.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "the_visa_interview",
+   "description": "Simulate a consular visa interview — the 90-second assessment, the questions behind the questions, and a debrief on which answers helped and hurt. Use when asked prep me for my visa interview, simulate the consular interview, why might my visa be denied, or practice my student visa questions. Produces the interview transcript with the officer's internal read after each answer, the decision with its real basis, and a debrief on answer-shapes — preparation, never coaching to misrepresent.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -10188,6 +10739,25 @@
   "function": {
    "name": "verification_before_completion",
    "description": "Verify work actually meets its brief BEFORE declaring it done — a structured self-review pass that catches the gaps, unmet requirements, and untested claims that 'looks finished' hides. Use before handing over any deliverable (document, code, analysis, plan), when past work kept coming back with 'you missed…', or as the standing final step of any multi-step task. Produces the verified deliverable plus a short verification record: what was checked, what was found and fixed, what remains open.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "vet_estimate_decoder",
+   "description": "Decode a veterinary treatment estimate — what each line is for, which items are core vs precautionary, and how to have the options conversation nobody offers you. Use when someone asks 'is this vet estimate reasonable', 'decode my vet's treatment plan', 'do we need all these tests', or 'I can't afford this vet bill what are my options'. Produces a line-by-line decode with core/precautionary/comfort triage, the questions that surface the tiered options vets keep in reserve, and the payment and assistance paths.",
    "parameters": {
     "type": "object",
     "properties": {

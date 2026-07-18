@@ -1,4 +1,4 @@
-# 🗂️ All 551 Skills — full catalog
+# 🗂️ All 581 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -415,7 +415,7 @@
 | **Support Macro** (`support-macro`) | Write reusable support macros / canned responses that sound human, not robotic. | — |
 | **Support Runbook** (`support-runbook`) | Write a support runbook for handling a recurring issue type consistently. | — |
 
-## 💰 Finance, Ops & Business (68 skills)
+## 💰 Finance, Ops & Business (72 skills)
 
 ### `pm-accounting` — 6 skills
 
@@ -441,12 +441,16 @@
 | **Job Application** (`job-application`) | Tailors a CV and cover letter to a specific job description. | — |
 | **Strategy Memo** (`strategy-memo`) | Write a strategy memo that commits to a bet and says what you won't do. | — |
 
-### `pm-calculators` — 19 skills
+### `pm-calculators` — 23 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Car TCO** (`car-tco`) | Compare the total cost of car ownership across buy-new, buy-used, lease, and keep-your-current-car — depreciation, insurance, maintenance ramp… | — |
 | **Cohort Curve Model** (`cohort-curve-model`) | Fit a retention curve to observed cohort data and project LTV — computed, not estimated. | — |
+| **Daycare vs Stay-Home** (`daycare-vs-stay-home`) | Run the real math on a parent leaving work versus paying for childcare — the second income net of daycare, marginal taxes, and work costs, AND the… | — |
+| **Debt Payoff** (`debt-payoff`) | Build a debt payoff plan — avalanche vs snowball simulated month by month on your actual debts, the real payoff dates, and the… | — |
+| **Emergency Fund** (`emergency-fund`) | Size an emergency fund from essential spend and real risk factors — not a one-size 'six months' — with the funding timeline and where the money… | — |
+| **EV vs Gas** (`ev-vs-gas`) | Compare an EV against a comparable gas car on total cost — upfront gap after incentives, energy vs fuel per year, maintenance delta, and the… | — |
 | **Exit Waterfall** (`exit-waterfall`) | Compute who gets what at each exit price from a cap table — liquidation preferences, conversion points, and where the founders' share collapses. | — |
 | **FIRE Number** (`fire-number`) | Compute a financial-independence (FIRE) target and years-to-reach with every assumption labeled as an assumption — plus a sensitivity table… | — |
 | **Freelance Rate** (`freelance-rate`) | Derive a freelance day/hourly rate backwards from target income, honest billable utilization, overhead, and the self-employment tax premium — the… | — |
@@ -550,7 +554,7 @@
 | **NDA Analyser** (`nda-analyser`) | Analyses a Non-Disclosure Agreement clause by clause and flags unusual terms, one-sided provisions, and negotiation points. | — |
 | **Privacy Policy Drafter** (`privacy-policy-drafter`) | Draft a clear, plain-language privacy policy tailored to what a product actually collects and does with data. | ✅ 4.8/5 |
 
-## 🧑 You & Career (48 skills)
+## 🧑 You & Career (52 skills)
 
 ### `pm-career` — 7 skills
 
@@ -596,20 +600,24 @@
 | **JD Decoder** (`jd-decoder`) | Decode a job description to find what they actually want beneath the buzzwords. | — |
 | **Outreach Message** (`outreach-message`) | Write cold outreach and networking messages that actually get replies. | — |
 
-### `pm-lifeadmin` — 11 skills
+### `pm-lifeadmin` — 15 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Caregiver Coordination** (`caregiver-coordination`) | Organize care for an aging or ill family member across multiple helpers — the shared care map, a fair rotation with backup rules, the information… | — |
 | **Complaint Letter** (`complaint-letter`) | Write a firm, effective complaint letter that gets a resolution. | — |
 | **Dispute Letter** (`dispute-letter`) | Write a letter to dispute an incorrect charge, bill, or record. | — |
+| **Doctor Visit Prep** (`doctor-visit-prep`) | Prepare for a doctor's appointment so the 12 minutes actually get used — the symptom timeline in the format clinicians think in, the prioritized… | — |
 | **Eulogy Writer** (`eulogy-writer`) | Help someone write a eulogy — the hardest writing most people ever do, at the worst possible time. | — |
 | **Fine Appeal Letter** (`fine-appeal-letter`) | Appeal a parking ticket, penalty charge, or administrative fine with the grounds that actually get appeals granted — not indignation. | — |
 | **Insurance Claim** (`insurance-claim`) | Write a clear insurance claim letter or appeal that supports a payout. | — |
+| **Medical Records Request** (`medical-records-request`) | Request your medical records and actually get them — what to ask for, the request letter that can't be shuffled aside, the timelines and fee rules… | — |
 | **New Parent Logistics** (`new-parent-logistics`) | Turn the pre-baby chaos into a staged logistics plan — leave paperwork, insurance deadlines, the hospital-bag/home-setup checklists, and the… | — |
+| **Prescription Cost Navigator** (`prescription-cost-navigator`) | Work down the cost of a prescription systematically — the generic and therapeutic-alternative conversation, discount programs vs insurance math… | — |
 | **Reference Letter** (`reference-letter`) | Write a credible, specific letter of recommendation or reference. | — |
 | **Relocation Planner** (`relocation-planner`) | Plan a move — across town or across a border — as a dependency-ordered project: the lease/housing chain, address-change cascade, utilities… | — |
 | **Rental Application** (`rental-application`) | Write a standout rental application / cover letter to a landlord or letting agent. | — |
+| **Second Opinion Request** (`second-opinion-request`) | Get a second medical opinion without torching the first relationship — when it's warranted, how to raise it with the current doctor, the records… | — |
 | **Wedding Speech** (`wedding-speech`) | A best-man/maid-of-honour/parent wedding toast that actually lands — funny without roasting, moving without syrup, short enough that nobody checks… | — |
 
 ### `pm-people` — 6 skills
@@ -635,7 +643,7 @@
 | **Portfolio Page** (`portfolio-page`) | Structure a portfolio or case-study page that shows your work, not just lists it. | — |
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 
-## 🌍 Industries & Public Sector (175 skills)
+## 🌍 Industries & Public Sector (197 skills)
 
 ### `pm-agentnative` — 5 skills
 
@@ -732,21 +740,29 @@
 | **Sycophancy Challenger** (`sycophancy-challenger`) | Flip Claude’s default from validation to adversarial critique. | — |
 | **Teaching Lesson Plan** (`teaching-lesson-plan`) | Design a structured lesson plan for any subject, audience, or format. | — |
 
-### `pm-decoders` — 11 skills
+### `pm-decoders` — 19 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **401k Plan Decoder** (`401k-plan-decoder`) | Decode a 401k or workplace retirement plan — the real cost of its funds, the match's fine print, vesting math, and the plan features worth using… | — |
+| **Auto Repair Estimate Decoder** (`auto-repair-estimate-decoder`) | Decode an auto repair estimate — what each line actually is, which items are urgent vs upsell, and the questions that separate a fair shop from a… | — |
 | **Benefits Decoder** (`benefits-decoder`) | Decode an employment benefits package into what it's actually worth and where the fine print bites. | — |
 | **Car Lease Decoder** (`car-lease-decoder`) | Decode a car lease offer — the money factor converted to APR, the cap-cost math, mileage and disposition traps, and what to negotiate. | — |
+| **Claim Denial Decoder** (`claim-denial-decoder`) | Decode an insurance claim denial letter — what the cited reason actually means, whether it's commonly overturnable, and the appeal letter that… | — |
 | **Closing Disclosure Decoder** (`closing-disclosure-decoder`) | Decode a mortgage Closing Disclosure line by line — which fees are real, which are shoppable or junk, and what changed since the Loan Estimate. | — |
+| **Disability Insurance Decoder** (`disability-insurance-decoder`) | Decode a disability insurance policy or employer LTD plan — own-occupation vs any-occupation, the benefit math after offsets and taxes, and the… | — |
 | **HOA Decoder** (`hoa-decoder`) | Decode HOA covenants (CC&Rs) and the fee structure before you buy into them. | — |
+| **Home Contractor Quote Decoder** (`home-contractor-quote-decoder`) | Decode a home renovation or repair quote — allowances that aren't prices, exclusions that become change orders, payment schedules that shift risk… | — |
 | **Inspection Report Decoder** (`inspection-report-decoder`) | Decode a home inspection report into what's cosmetic, what's expensive, and what kills deals — with repair-cost ranges and the negotiation list. | — |
+| **Insurance Policy Decoder** (`insurance-policy-decoder`) | Decode a home, renters, or auto insurance policy into what's actually covered, what's excluded, and what the payout math really looks like before… | — |
 | **Lease Decoder** (`lease-decoder`) | Decode a residential lease into plain English and rank the clauses that can hurt you. | — |
 | **Loan Decoder** (`loan-decoder`) | Decode a personal, auto, or mortgage loan offer into what it really costs and where the traps are. | — |
 | **Medical Bill Decoder** (`medical-bill-decoder`) | Decode an itemized medical bill or EOB into plain English and find the charges worth disputing. | — |
+| **Moving Company Estimate Decoder** (`moving-company-estimate-decoder`) | Decode a moving company estimate — binding vs non-binding, the weight and cubic-feet games, valuation vs insurance, and the red flags that precede… | — |
 | **Pay Stub Decoder** (`pay-stub-decoder`) | Decode a pay stub line by line — every deduction explained, the gross-to-net story, and the errors worth catching. | — |
 | **Timeshare Contract Decoder** (`timeshare-contract-decoder`) | Decode a timeshare contract before signing — the lifetime cost math, the perpetuity and fee-escalation clauses, the rescission window, and the… | — |
 | **ToS Decoder** (`tos-decoder`) | Decode a terms of service or privacy policy into what you're actually agreeing to, ranked by real-world impact. | — |
+| **Vet Estimate Decoder** (`vet-estimate-decoder`) | Decode a veterinary treatment estimate — what each line is for, which items are core vs precautionary, and how to have the options conversation… | — |
 
 ### `pm-devrel` — 6 skills
 
@@ -890,6 +906,14 @@
 | **Inbox Zero Operator** (`inbox-zero-operator`) | Drive an email inbox to zero through a computer-use or tool-using agent — triage every message into act/delegate/defer/archive with drafts… | — |
 | **Subscription Auditor** (`subscription-auditor`) | Find the subscriptions you forgot you pay for — a tool-using agent audits statements and inboxes, prices the waste annually, and preps (never… | — |
 
+### `pm-parents` — 3 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **College App Parent Guide** (`college-app-parent-guide`) | Support a teenager through college applications without taking them over — the parent's actual jobs (logistics, finances, emotional ballast), the… | — |
+| **IEP 504 Meeting Kit** (`iep-504-meeting-kit`) | Walk into an IEP or 504 meeting prepared and effective — the process decoded in plain language, the parent-input statement that gets read, the… | — |
+| **Parent Teacher Conference Prep** (`parent-teacher-conference-prep`) | Get real information out of a 15-minute parent-teacher conference — the questions that beat 'how's she doing', the data to bring from home, and… | — |
+
 ### `pm-realestate` — 6 skills
 
 | Skill | What it does | Eval |
@@ -900,6 +924,14 @@
 | **Property Listing** (`property-listing`) | Write a compelling, accurate real-estate listing description. | — |
 | **Property Offer Letter** (`property-offer-letter`) | Write a buyer's offer cover letter to a seller to strengthen a real-estate bid. | — |
 | **Tenant Screening Guide** (`tenant-screening-guide`) | Design a fair, consistent tenant screening process for a rental. | — |
+
+### `pm-renters` — 3 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Rent Increase Response** (`rent-increase-response`) | Respond to a rent increase strategically — check its validity first, price your alternatives honestly, then negotiate with the leverage tenants… | — |
+| **Repair Request Escalation** (`repair-request-escalation`) | Get a landlord to actually fix things — the repair request that creates a record, the escalation ladder from reminder to habitability leverage… | — |
+| **Security Deposit Recovery** (`security-deposit-recovery`) | Get your security deposit back — the move-out documentation that wins disputes before they start, the itemized-deduction challenge, the… | — |
 
 ### `pm-research` — 6 skills · 1 eval-scored
 
@@ -912,7 +944,16 @@
 | **Research Protocol** (`research-protocol`) | Write a structured research protocol or study design document. | — |
 | **Synthetic User Research** (`synthetic-user-research`) | Use AI personas for early-stage research signal — with hard guardrails on what synthetic methods can and cannot validate. Use when asked to run… | — |
 
-### `pm-simulators` — 9 skills
+### `pm-resignation` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Counteroffer Decoder** (`counteroffer-decoder`) | Decode a counteroffer after you resign — what the raise, promotion promise, or title bump really signals, the statistics-informed risks of… | — |
+| **Exit Interview Strategy** (`exit-interview-strategy`) | Walk into an exit interview knowing what it's for, what to say, and what to keep — honest-but-strategic answers that protect references and leave… | — |
+| **Last Two Weeks Handoff** (`last-two-weeks-handoff`) | Turn your notice period into a handoff that makes you missed for the right reasons — the transition doc nobody has to call you about, the… | — |
+| **Resignation Letter** (`resignation-letter`) | Write a resignation letter that closes a chapter without burning it — short, warm, legally clean, and silent on everything that doesn't belong in… | — |
+
+### `pm-simulators` — 12 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -921,12 +962,15 @@
 | **Opposing Counsel** (`opposing-counsel`) | Read a contract the way the counterparty's lawyer will — hunting for leverage, not fairness. | — |
 | **Regulator Eyes** (`regulator-eyes`) | Read your marketing claims, landing page, or ad copy the way a consumer-protection investigator would (FTC/ASA framing) and draft the inquiry… | — |
 | **The Churning Customer** (`the-churning-customer`) | Simulate the exact customer who will quietly cancel in month 4 — their internal monologue through the lifecycle and the honest exit interview they… | — |
+| **The Due Diligence Call** (`the-due-diligence-call`) | Simulate the due-diligence call where an acquirer's or investor's analyst takes your metrics apart — the questions behind the spreadsheet, the… | — |
 | **The Journalist Call** (`the-journalist-call`) | Simulate a hostile-but-fair journalist interview about your company or announcement — the questions you fear, live follow-ups on every dodge, then… | — |
+| **The Price Pushback** (`the-price-pushback`) | Simulate the client who grinds on your price — the budget theater, the competitor quote, the scope squeeze — against your actual offer, with a… | — |
 | **The Procurement Gauntlet** (`the-procurement-gauntlet`) | Simulate enterprise procurement and security review of your product before your first big deal meets it for real — the questionnaire, the gaps… | — |
 | **The Promotion Committee** (`the-promotion-committee`) | Simulate the calibration meeting that discusses your promotion after your manager leaves the room — the debate, the packet's holes, the verdict. | — |
+| **The Visa Interview** (`the-visa-interview`) | Simulate a consular visa interview — the 90-second assessment, the questions behind the questions, and a debrief on which answers helped and hurt. | — |
 | **VC Partner Meeting** (`vc-partner-meeting`) | Simulate the VC partner meeting that discusses your pitch after you leave the room — four partner archetypes debate, then write the internal… | — |
 
-### `pm-students` — 6 skills
+### `pm-students` — 7 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -935,6 +979,7 @@
 | **Literature Review Builder** (`literature-review-builder`) | Structure a literature review that argues, not lists — thematic synthesis from your sources with the debate mapped and the gap identified. | — |
 | **Statement Coach** (`statement-coach`) | Coach a statement of purpose or personal essay to admission strength — structural diagnosis, specific feedback, and revision plans on YOUR draft… | — |
 | **Study Notes Synthesizer** (`study-notes-synthesizer`) | Turn lecture notes, slides, and readings into one exam-ready study guide — synthesis, not summary. | — |
+| **The Thesis Defense** (`the-thesis-defense`) | Simulate your thesis defense before the real one — a committee of examiner archetypes probing YOUR actual thesis, the questions you hoped nobody… | — |
 | **Thesis Outline** (`thesis-outline`) | Build a defensible thesis or dissertation outline — argument-first structure, chapter by chapter, with the through-line visible. | — |
 
 ### `pm-supplychain` — 6 skills
@@ -969,4 +1014,4 @@
 
 ---
 
-_551 skills across 78 bundles · 28 eval-scored (5%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_581 skills across 81 bundles · 28 eval-scored (5%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

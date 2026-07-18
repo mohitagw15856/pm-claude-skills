@@ -1,0 +1,72 @@
+---
+description: "Decode an auto repair estimate — what each line actually is, which items are urgent vs upsell, and the questions that separate a fair shop from a fishing expedition. Use when someone asks 'is this repair quote fair', 'decode my mechanic's estimate', 'do I really need all this', or 'is the shop ripping me off'. Produces a line-by-line decode with urgency triage, parts/labor sanity checks, ranked red flags, and the exact questions to ask the shop before authorizing."
+globs:
+alwaysApply: false
+---
+
+# Auto Repair Estimate Decoder Skill
+
+Repair estimates mix three different things on one page: what your car needs now, what it will need eventually, and what the shop would like to sell you this week. This skill separates them — decoding each line into plain language, triaging by "what happens if I don't," and flagging the patterns (fluid-flush bundles, replace-instead-of-repair, labor-hour padding) that distinguish an estimate from an invoice-in-waiting. It works from the estimate text; it never diagnoses the car.
+
+## What This Skill Produces
+
+- A line-by-line decode: what each item is, what it does, what happens if deferred
+- Urgency triage: safety-now / soon-with-timeframe / eventually / optional-upsell
+- Sanity checks: labor hours vs. the job's typical shape, parts pricing patterns, diagnostic-fee handling
+- Ranked red flags and the authorize/decline/second-opinion recommendation per line, plus the questions to ask
+
+## Required Inputs
+
+Ask for these only if they aren't already provided:
+
+- **The estimate text** — every line with prices; photos of the writeup work. Partial estimates get decoded with the missing pieces named.
+- **The car and the symptom** — year/make/model/mileage, and what brought it in (the estimate should connect to the symptom; lines that don't are the interesting ones).
+- **Context** — how long they plan to keep the car, and whether this shop has history with them.
+
+## Framework: Severity Scale
+
+- 🔴 **Challenge before authorizing** — repairs unrelated to the presenting symptom appearing without explanation, "replace" where "repair/resurface" is standard practice for the condition described, fluid-flush bundles on intervals far shorter than typical service schedules, labor hours that imply the job twice ("remove and replace" charged for overlapping operations), vague lines ("front end work") with specific prices, diagnostic fees charged *and* not credited toward authorized work (shop-dependent — ask).
+- 🟡 **Verify — reasonable questions to ask** — OEM vs. aftermarket parts pricing unstated, "while we're in there" additions (sometimes genuinely economical — labor overlap is real; make them show the overlap math), preventive recommendations stated without the wear measurement that justifies them ("brakes at 4mm" is information; "brakes soon" is a mood).
+- 🟢 **Looks standard** — lines that match the symptom, itemized parts+labor, wear items at plausible mileage; say so — most shops are honest, and knowing which lines are fine is half the value.
+
+Triage every line by the deferral question: **what specifically happens if this isn't done today?** Safety items (brakes at spec limits, steering, tires at cords) get named as safety items. "Eventually" items get a mileage/timeframe. Anything the shop can't attach a consequence to is optional by definition. Frame typical-cost comparisons as *ranges to verify locally*, never as fact — labor rates vary wildly by region.
+
+## Output Format
+
+### Repair Estimate Decode: [vehicle — shop, date]
+
+**1. The verdict** — total quoted vs. the defensible-now subset, in two sentences.
+
+**2. Line-by-line decode**
+
+| Line | What it actually is | If you defer it | Urgency | Severity |
+|---|---|---|---|---|
+
+**3. 🚩 Red flags, ranked** — the quoted line, the pattern it matches, and the question that resolves it.
+
+**4. Questions for the shop** — 4–6, specific: "What's the measured pad thickness?", "Is the diagnostic fee credited if I authorize?", "Can you show me the old part?", "What's the labor overlap if these are done together?"
+
+**5. The authorization plan** — authorize now / get the measurement first / decline / second-opinion, per line; and the it's-your-car reminder that declining maintenance is a scheduling decision, not a moral failing.
+
+End the artifact with, verbatim: *"This is a plain-language reading, not legal/financial advice — laws vary by jurisdiction; confirm anything load-bearing with a qualified professional."*
+
+## Quality Checks
+
+- [ ] Every line gets a deferral consequence or is labeled optional
+- [ ] Safety-critical items are named as such and never bundled with upsell critique
+- [ ] Cost comparisons are framed as verify-locally ranges, not asserted facts
+- [ ] Lines unrelated to the presenting symptom are flagged for explanation, not assumed fraudulent
+- [ ] The questions are specific enough that a shop's answers are checkable
+- [ ] The disclaimer line appears verbatim in the artifact
+
+## Anti-Patterns
+
+- [ ] Do not diagnose the vehicle — decode the estimate; the car itself is the mechanic's domain
+- [ ] Do not treat every recommendation as a scam — wear items exist; the triage is the value, not the cynicism
+- [ ] Do not soften a genuine red flag — double-charged labor is double-charged labor
+- [ ] Do not invent typical prices as fact — regional labor rates make national numbers fiction
+- [ ] Do not let safety items get deferred silently — if brakes are at spec limits, that line leads
+
+## Based On
+
+Consumer-side repair-order review practice — symptom-to-line reconciliation, urgency triage, labor-overlap questioning.

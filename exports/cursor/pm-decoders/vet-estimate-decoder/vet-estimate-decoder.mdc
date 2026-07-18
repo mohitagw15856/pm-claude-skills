@@ -1,0 +1,73 @@
+---
+description: "Decode a veterinary treatment estimate — what each line is for, which items are core vs precautionary, and how to have the options conversation nobody offers you. Use when someone asks 'is this vet estimate reasonable', 'decode my vet's treatment plan', 'do we need all these tests', or 'I can't afford this vet bill what are my options'. Produces a line-by-line decode with core/precautionary/comfort triage, the questions that surface the tiered options vets keep in reserve, and the payment and assistance paths."
+globs:
+alwaysApply: false
+---
+
+# Vet Estimate Decoder Skill
+
+Vet estimates arrive at the worst possible moment — with a sick animal in the room and love doing the negotiating. Most clinics genuinely have tiered options ("gold standard" down to "reasonable and safe"), but the estimate shows only the top tier unless someone asks. This skill decodes what each line does, which items drive the diagnosis versus round it out, and scripts the options conversation — respectfully, because the vet is an ally, not an adversary. It decodes the estimate; it never practices medicine.
+
+## What This Skill Produces
+
+- A line-by-line decode: what each test/treatment is for, in plain language
+- Triage: core-to-the-presenting-problem / precautionary-broadening / comfort-and-monitoring — as questions to confirm with the vet, not verdicts
+- The options-conversation script: asking for the tiered plan without signaling neglect
+- The money paths: staged diagnostics, payment plans, assistance programs, and the insurance-claim angle if covered
+
+## Required Inputs
+
+Ask for these only if they aren't already provided:
+
+- **The estimate text** — every line with prices; ranges included (vet estimates often quote low–high).
+- **The situation** — the animal, the presenting symptom, and whether this is emergency or scheduled care (emergency pricing and stakes differ; the script changes).
+- **The constraint, honestly** — the real budget; the options conversation is built around it.
+- **Insurance status** — covered, and if so, what's known about the policy.
+
+## Framework: Severity Scale
+
+- 🔴 **Ask before authorizing** — panels and imaging not connected to the presenting symptom (sometimes justified — the question is "what would this change about treatment?"), duplicated diagnostics (bloodwork repeated within days without a stated reason), hospitalization line-items where outpatient management may be an option (ask — it often is), estimate-range totals authorized at the high end by default.
+- 🟡 **Understand the choice being made** — "gold standard" items with cheaper adequate alternatives (pre-anesthetic panels scaled to age/risk, brand vs. generic medications, overnight monitoring vs. recheck tomorrow), items that are monitoring-frequency choices rather than medical necessities.
+- 🟢 **Standard and connected** — diagnostics that map directly to the symptom, pain management, the consult fee; label them so the worry can focus where it belongs.
+
+The load-bearing question for every line is: **"What decision does this test/treatment inform, and what happens if we stage it?"** Staging (treat the likely thing, escalate if no improvement) is a legitimate medical strategy vets use constantly — but usually only when asked. The script's magic sentence: *"We want to do right by her and we have a real budget — if this were your animal and money mattered, what would the plan look like?"* Vets answer that question honestly and gratefully almost every time.
+
+## Output Format
+
+### Vet Estimate Decode: [animal — clinic, presenting problem]
+
+**1. The verdict** — total (low–high), the core subset, and the two questions most worth asking, in three sentences.
+
+**2. Line-by-line decode**
+
+| Line | What it's for | Triage (to confirm with vet) | Price |
+|---|---|---|---|
+
+**3. Questions for the vet** — 4–6, each opening a real option: "What would the staged version look like?", "Which of these change today's treatment?", "Is outpatient with a recheck viable?", "What's the must-do subset if we're prioritizing?"
+
+**4. The options script** — the budget-honest conversation, word for word, including the magic sentence.
+
+**5. Money paths** — clinic payment plans, assistance programs (breed/condition/region-specific ones exist — list types to search, don't invent names), care-credit-style financing decoded (deferred-interest traps flagged), insurance claim steps if covered.
+
+End the artifact with, verbatim: *"This is a plain-language reading, not legal/financial advice — laws vary by jurisdiction; confirm anything load-bearing with a qualified professional."*
+
+## Quality Checks
+
+- [ ] Every triage label is phrased as a question for the vet, never a medical verdict
+- [ ] The staging option appears wherever diagnostics stack
+- [ ] The script preserves the vet-as-ally frame throughout
+- [ ] Financing options include the deferred-interest warning
+- [ ] Emergency vs. scheduled context shapes the urgency framing
+- [ ] The disclaimer line appears verbatim in the artifact
+
+## Anti-Patterns
+
+- [ ] Do not practice veterinary medicine — no line is called unnecessary; lines get *questions*, the vet gets the medicine
+- [ ] Do not frame the clinic as predatory — estimate-maximalism is mostly liability and love, not greed; the fix is the conversation
+- [ ] Do not let guilt authorize the high end silently — the range exists; engaging with it is responsible ownership
+- [ ] Do not invent assistance-program names or coverage claims — list the *types* and where to search
+- [ ] Do not skip the staged-care question — it's the single highest-value sentence in the room
+
+## Based On
+
+Client-side veterinary cost-conversation practice — line triage, staged-diagnostics questioning, tiered-plan elicitation.

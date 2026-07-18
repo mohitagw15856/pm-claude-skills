@@ -3,11 +3,12 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-551 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+581 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
 | 360-Degree Feedback Template | `pm-people` | `pm-people/360-feedback-template/GEM_INSTRUCTIONS.md` |
+| 401k Plan Decoder | `pm-decoders` | `pm-decoders/401k-plan-decoder/GEM_INSTRUCTIONS.md` |
 | A/B Test Planner | `pm-delivery` | `pm-delivery/ab-test-planner/GEM_INSTRUCTIONS.md` |
 | A/B Test Readout | `pm-data` | `pm-data/ab-test-readout/GEM_INSTRUCTIONS.md` |
 | Accessibility Audit | `pm-design` | `pm-design/accessibility-audit/GEM_INSTRUCTIONS.md` |
@@ -44,6 +45,7 @@
 | Assumption Bounty | `pm-warroom` | `pm-warroom/assumption-bounty/GEM_INSTRUCTIONS.md` |
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/GEM_INSTRUCTIONS.md` |
 | Async Decision Memo | `pm-operations` | `pm-operations/async-decision-memo/GEM_INSTRUCTIONS.md` |
+| Auto Repair Estimate Decoder | `pm-decoders` | `pm-decoders/auto-repair-estimate-decoder/GEM_INSTRUCTIONS.md` |
 | Autopilot Charter | `pm-autopilot` | `pm-autopilot/autopilot-charter/GEM_INSTRUCTIONS.md` |
 | Benefits Decoder | `pm-decoders` | `pm-decoders/benefits-decoder/GEM_INSTRUCTIONS.md` |
 | Bid / Tender Review | `pm-construction` | `pm-construction/bid-tender-review/GEM_INSTRUCTIONS.md` |
@@ -85,6 +87,7 @@
 | Chart Data Extractor | `pm-vision` | `pm-vision/chart-data-extractor/GEM_INSTRUCTIONS.md` |
 | Churn Analysis | `pm-cs` | `pm-cs/churn-analysis/GEM_INSTRUCTIONS.md` |
 | CI/CD Playbook | `pm-engineering` | `pm-engineering/cicd-playbook/GEM_INSTRUCTIONS.md` |
+| Claim Denial Decoder | `pm-decoders` | `pm-decoders/claim-denial-decoder/GEM_INSTRUCTIONS.md` |
 | Claims Triage | `pm-insurance` | `pm-insurance/claims-triage/GEM_INSTRUCTIONS.md` |
 | Claude Superpowers | `pm-engineering` | `pm-engineering/claude-superpowers/GEM_INSTRUCTIONS.md` |
 | Clause Explainer | `pm-legal` | `pm-legal/clause-explainer/GEM_INSTRUCTIONS.md` |
@@ -102,6 +105,7 @@
 | Cohort Curve Model | `pm-calculators` | `pm-calculators/cohort-curve-model/GEM_INSTRUCTIONS.md` |
 | Cold Email | `pm-copy` | `pm-copy/cold-email/GEM_INSTRUCTIONS.md` |
 | Collections Email | `pm-accounting` | `pm-accounting/collections-email/GEM_INSTRUCTIONS.md` |
+| College App Parent Guide | `pm-parents` | `pm-parents/college-app-parent-guide/GEM_INSTRUCTIONS.md` |
 | Community Management Playbook | `pm-social` | `pm-social/community-management-playbook/GEM_INSTRUCTIONS.md` |
 | Company Brief | `pm-jobsearch` | `pm-jobsearch/company-brief/GEM_INSTRUCTIONS.md` |
 | Comparative Market Analysis | `pm-realestate` | `pm-realestate/comparative-market-analysis/GEM_INSTRUCTIONS.md` |
@@ -121,6 +125,7 @@
 | Contract Review | `pm-legal` | `pm-legal/contract-review/GEM_INSTRUCTIONS.md` |
 | Contributor Guide | `pm-devrel` | `pm-devrel/contributor-guide/GEM_INSTRUCTIONS.md` |
 | Conversion Rate Optimization | `pm-growth` | `pm-growth/conversion-rate-optimization/GEM_INSTRUCTIONS.md` |
+| Counteroffer Decoder | `pm-resignation` | `pm-resignation/counteroffer-decoder/GEM_INSTRUCTIONS.md` |
 | Cover Letter | `pm-personal` | `pm-personal/cover-letter/GEM_INSTRUCTIONS.md` |
 | Coverage Gap Analysis | `pm-insurance` | `pm-insurance/coverage-gap-analysis/GEM_INSTRUCTIONS.md` |
 | Creator Brand Kit | `pm-creator` | `pm-creator/creator-brand-kit/GEM_INSTRUCTIONS.md` |
@@ -143,7 +148,9 @@
 | Database Migration Plan | `pm-engineering` | `pm-engineering/database-migration-plan/GEM_INSTRUCTIONS.md` |
 | Database Schema Design | `pm-engineering` | `pm-engineering/database-schema-design/GEM_INSTRUCTIONS.md` |
 | Dataset Datasheet | `pm-ai` | `pm-ai/dataset-datasheet/GEM_INSTRUCTIONS.md` |
+| Daycare vs Stay-Home | `pm-calculators` | `pm-calculators/daycare-vs-stay-home/GEM_INSTRUCTIONS.md` |
 | dbt Model Spec | `pm-dataeng` | `pm-dataeng/dbt-model-spec/GEM_INSTRUCTIONS.md` |
+| Debt Payoff | `pm-calculators` | `pm-calculators/debt-payoff/GEM_INSTRUCTIONS.md` |
 | Debt Payoff Plan | `pm-money` | `pm-money/debt-payoff-plan/GEM_INSTRUCTIONS.md` |
 | Debugging Log Analyser | `pm-engineering` | `pm-engineering/debugging-log-analyser/GEM_INSTRUCTIONS.md` |
 | Decision Autopsy | `pm-warroom` | `pm-warroom/decision-autopsy/GEM_INSTRUCTIONS.md` |
@@ -162,6 +169,7 @@
 | Developer Onboarding Document | `pm-engineering` | `pm-engineering/developer-onboarding-doc/GEM_INSTRUCTIONS.md` |
 | Devil's Twin | `pm-warroom` | `pm-warroom/devils-twin/GEM_INSTRUCTIONS.md` |
 | Difficult Conversation | `pm-comms` | `pm-comms/difficult-conversation/GEM_INSTRUCTIONS.md` |
+| Disability Insurance Decoder | `pm-decoders` | `pm-decoders/disability-insurance-decoder/GEM_INSTRUCTIONS.md` |
 | Disaster Recovery Plan | `pm-engineering` | `pm-engineering/disaster-recovery-plan/GEM_INSTRUCTIONS.md` |
 | Discharge Summary | `pm-health` | `pm-health/discharge-summary/GEM_INSTRUCTIONS.md` |
 | Discovery Call Prep | `pm-sales` | `pm-sales/discovery-call-prep/GEM_INSTRUCTIONS.md` |
@@ -169,11 +177,13 @@
 | Discovery Interview Guide | `pm-discovery` | `pm-discovery/discovery-interview-guide/GEM_INSTRUCTIONS.md` |
 | Dispute Letter | `pm-lifeadmin` | `pm-lifeadmin/dispute-letter/GEM_INSTRUCTIONS.md` |
 | Docs Quickstart | `pm-devrel` | `pm-devrel/docs-quickstart/GEM_INSTRUCTIONS.md` |
+| Doctor Visit Prep | `pm-lifeadmin` | `pm-lifeadmin/doctor-visit-prep/GEM_INSTRUCTIONS.md` |
 | Word Doc Tracked Changes | `pm-essentials` | `pm-essentials/docx-tracked-changes/GEM_INSTRUCTIONS.md` |
 | Donor Update | `pm-nonprofit` | `pm-nonprofit/donor-update/GEM_INSTRUCTIONS.md` |
 | Email Campaign | `pm-gtm` | `pm-gtm/email-campaign/GEM_INSTRUCTIONS.md` |
 | Email Sequence | `pm-copy` | `pm-copy/email-sequence/GEM_INSTRUCTIONS.md` |
 | Email Triage | `pm-operations` | `pm-operations/email-triage/GEM_INSTRUCTIONS.md` |
+| Emergency Fund | `pm-calculators` | `pm-calculators/emergency-fund/GEM_INSTRUCTIONS.md` |
 | Employee Engagement Survey | `pm-hr` | `pm-hr/employee-engagement-survey/GEM_INSTRUCTIONS.md` |
 | Empty State Writer | `pm-uxwriting` | `pm-uxwriting/empty-state-writer/GEM_INSTRUCTIONS.md` |
 | Engagement Retro | `pm-consulting` | `pm-consulting/engagement-retro/GEM_INSTRUCTIONS.md` |
@@ -185,6 +195,7 @@
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/GEM_INSTRUCTIONS.md` |
 | ESG Disclosure Draft | `pm-climate` | `pm-climate/esg-disclosure-draft/GEM_INSTRUCTIONS.md` |
 | Eulogy Writer | `pm-lifeadmin` | `pm-lifeadmin/eulogy-writer/GEM_INSTRUCTIONS.md` |
+| EV vs Gas | `pm-calculators` | `pm-calculators/ev-vs-gas/GEM_INSTRUCTIONS.md` |
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/GEM_INSTRUCTIONS.md` |
 | Evidence Lock | `pm-research` | `pm-research/evidence-lock/GEM_INSTRUCTIONS.md` |
 | EVT/DVT/PVT Gate Review | `pm-hardware` | `pm-hardware/evt-dvt-pvt-gate-review/GEM_INSTRUCTIONS.md` |
@@ -194,6 +205,7 @@
 | Executive Presence | `pm-comms` | `pm-comms/executive-presence/GEM_INSTRUCTIONS.md` |
 | Executive Summary | `pm-cross` | `pm-cross/executive-summary/GEM_INSTRUCTIONS.md` |
 | Executive Update | `pm-strategy` | `pm-strategy/executive-update/GEM_INSTRUCTIONS.md` |
+| Exit Interview Strategy | `pm-resignation` | `pm-resignation/exit-interview-strategy/GEM_INSTRUCTIONS.md` |
 | Exit Waterfall | `pm-calculators` | `pm-calculators/exit-waterfall/GEM_INSTRUCTIONS.md` |
 | Expense Audit | `pm-money` | `pm-money/expense-audit/GEM_INSTRUCTIONS.md` |
 | Expense Filer | `pm-operator` | `pm-operator/expense-filer/GEM_INSTRUCTIONS.md` |
@@ -245,9 +257,11 @@
 | HIPAA Safeguards | `pm-compliance` | `pm-compliance/hipaa-safeguards/GEM_INSTRUCTIONS.md` |
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/GEM_INSTRUCTIONS.md` |
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/GEM_INSTRUCTIONS.md` |
+| Home Contractor Quote Decoder | `pm-decoders` | `pm-decoders/home-contractor-quote-decoder/GEM_INSTRUCTIONS.md` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/GEM_INSTRUCTIONS.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/GEM_INSTRUCTIONS.md` |
 | i18n Readiness Review | `pm-localization` | `pm-localization/i18n-readiness-review/GEM_INSTRUCTIONS.md` |
+| IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/GEM_INSTRUCTIONS.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/GEM_INSTRUCTIONS.md` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/GEM_INSTRUCTIONS.md` |
 | Inbox Zero Operator | `pm-operator` | `pm-operator/inbox-zero-operator/GEM_INSTRUCTIONS.md` |
@@ -259,6 +273,7 @@
 | Inspection Report Decoder | `pm-decoders` | `pm-decoders/inspection-report-decoder/GEM_INSTRUCTIONS.md` |
 | Instagram Post Downloader | `pm-writers` | `pm-writers/instagram-post-downloader/GEM_INSTRUCTIONS.md` |
 | Insurance Claim | `pm-lifeadmin` | `pm-lifeadmin/insurance-claim/GEM_INSTRUCTIONS.md` |
+| Insurance Policy Decoder | `pm-decoders` | `pm-decoders/insurance-policy-decoder/GEM_INSTRUCTIONS.md` |
 | Interview Me | `pm-method` | `pm-method/interview-me/GEM_INSTRUCTIONS.md` |
 | Interview Prep | `pm-jobsearch` | `pm-jobsearch/interview-prep/GEM_INSTRUCTIONS.md` |
 | Interview Question Bank | `pm-recruiting` | `pm-recruiting/interview-question-bank/GEM_INSTRUCTIONS.md` |
@@ -277,6 +292,7 @@
 | KYC Escalation | `pm-banking` | `pm-banking/kyc-escalation/GEM_INSTRUCTIONS.md` |
 | Landing Page Copy | `pm-copy` | `pm-copy/landing-page-copy/GEM_INSTRUCTIONS.md` |
 | Last 30 Days Research | `pm-cross` | `pm-cross/last-30-days-research/GEM_INSTRUCTIONS.md` |
+| Last Two Weeks Handoff | `pm-resignation` | `pm-resignation/last-two-weeks-handoff/GEM_INSTRUCTIONS.md` |
 | Late Invoice Escalation | `pm-freelance` | `pm-freelance/late-invoice-escalation/GEM_INSTRUCTIONS.md` |
 | Launch Post | `pm-devrel` | `pm-devrel/launch-post/GEM_INSTRUCTIONS.md` |
 | Launch Readiness | `pm-delivery` | `pm-delivery/launch-readiness/GEM_INSTRUCTIONS.md` |
@@ -308,6 +324,7 @@
 | MCP Server Spec | `pm-agentnative` | `pm-agentnative/mcp-server-spec/GEM_INSTRUCTIONS.md` |
 | Media Pitch | `pm-gtm` | `pm-gtm/media-pitch/GEM_INSTRUCTIONS.md` |
 | Medical Bill Decoder | `pm-decoders` | `pm-decoders/medical-bill-decoder/GEM_INSTRUCTIONS.md` |
+| Medical Records Request | `pm-lifeadmin` | `pm-lifeadmin/medical-records-request/GEM_INSTRUCTIONS.md` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/GEM_INSTRUCTIONS.md` |
 | Messaging Framework | `pm-growth` | `pm-growth/messaging-framework/GEM_INSTRUCTIONS.md` |
 | Metric Gaslighting Detector | `pm-warroom` | `pm-warroom/metric-gaslighting-detector/GEM_INSTRUCTIONS.md` |
@@ -322,6 +339,7 @@
 | Model Selection Advisor | `pm-ai` | `pm-ai/model-selection-advisor/GEM_INSTRUCTIONS.md` |
 | Monitoring Setup Guide | `pm-engineering` | `pm-engineering/monitoring-setup-guide/GEM_INSTRUCTIONS.md` |
 | Morning Intelligence | `pm-operations` | `pm-operations/morning-intelligence/GEM_INSTRUCTIONS.md` |
+| Moving Company Estimate Decoder | `pm-decoders` | `pm-decoders/moving-company-estimate-decoder/GEM_INSTRUCTIONS.md` |
 | Multi-Source Signal Synthesiser | `pm-advanced` | `pm-advanced/multi-source-signal-synthesiser/GEM_INSTRUCTIONS.md` |
 | NDA Analyser | `pm-legal` | `pm-legal/nda-analyser/GEM_INSTRUCTIONS.md` |
 | Net Worth Statement | `pm-money` | `pm-money/net-worth-statement/GEM_INSTRUCTIONS.md` |
@@ -344,6 +362,7 @@
 | Outreach Message | `pm-jobsearch` | `pm-jobsearch/outreach-message/GEM_INSTRUCTIONS.md` |
 | Paid Acquisition Plan | `pm-growth` | `pm-growth/paid-acquisition-plan/GEM_INSTRUCTIONS.md` |
 | Parent Communication | `pm-education` | `pm-education/parent-communication/GEM_INSTRUCTIONS.md` |
+| Parent Teacher Conference Prep | `pm-parents` | `pm-parents/parent-teacher-conference-prep/GEM_INSTRUCTIONS.md` |
 | Partnership Proposal | `pm-sales` | `pm-sales/partnership-proposal/GEM_INSTRUCTIONS.md` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/GEM_INSTRUCTIONS.md` |
 | Pay Stub Decoder | `pm-decoders` | `pm-decoders/pay-stub-decoder/GEM_INSTRUCTIONS.md` |
@@ -365,6 +384,7 @@
 | PR Description Writer | `pm-engineering` | `pm-engineering/pr-description-writer/GEM_INSTRUCTIONS.md` |
 | PRD Template | `pm-essentials` | `pm-essentials/prd-template/GEM_INSTRUCTIONS.md` |
 | Premortem Assassin | `pm-warroom` | `pm-warroom/premortem-assassin/GEM_INSTRUCTIONS.md` |
+| Prescription Cost Navigator | `pm-lifeadmin` | `pm-lifeadmin/prescription-cost-navigator/GEM_INSTRUCTIONS.md` |
 | Press Release | `pm-cross` | `pm-cross/press-release/GEM_INSTRUCTIONS.md` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/GEM_INSTRUCTIONS.md` |
 | Pricing Page Copy | `pm-pmm` | `pm-pmm/pricing-page-copy/GEM_INSTRUCTIONS.md` |
@@ -419,9 +439,12 @@
 | Regulatory Impact Analysis | `pm-gov` | `pm-gov/regulatory-impact-analysis/GEM_INSTRUCTIONS.md` |
 | Relocation Planner | `pm-lifeadmin` | `pm-lifeadmin/relocation-planner/GEM_INSTRUCTIONS.md` |
 | Renewal Playbook | `pm-cs` | `pm-cs/renewal-playbook/GEM_INSTRUCTIONS.md` |
+| Rent Increase Response | `pm-renters` | `pm-renters/rent-increase-response/GEM_INSTRUCTIONS.md` |
 | Rent vs Buy | `pm-calculators` | `pm-calculators/rent-vs-buy/GEM_INSTRUCTIONS.md` |
 | Rental Application | `pm-lifeadmin` | `pm-lifeadmin/rental-application/GEM_INSTRUCTIONS.md` |
+| Repair Request Escalation | `pm-renters` | `pm-renters/repair-request-escalation/GEM_INSTRUCTIONS.md` |
 | Research Protocol | `pm-research` | `pm-research/research-protocol/GEM_INSTRUCTIONS.md` |
+| Resignation Letter | `pm-resignation` | `pm-resignation/resignation-letter/GEM_INSTRUCTIONS.md` |
 | Resume | `pm-personal` | `pm-personal/resume/GEM_INSTRUCTIONS.md` |
 | Retention Analysis | `pm-analytics` | `pm-analytics/retention-analysis/GEM_INSTRUCTIONS.md` |
 | Retention Loop Design | `pm-growth` | `pm-growth/retention-loop-design/GEM_INSTRUCTIONS.md` |
@@ -459,6 +482,8 @@
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/GEM_INSTRUCTIONS.md` |
 | Scope Creep Response | `pm-freelance` | `pm-freelance/scope-creep-response/GEM_INSTRUCTIONS.md` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/GEM_INSTRUCTIONS.md` |
+| Second Opinion Request | `pm-lifeadmin` | `pm-lifeadmin/second-opinion-request/GEM_INSTRUCTIONS.md` |
+| Security Deposit Recovery | `pm-renters` | `pm-renters/security-deposit-recovery/GEM_INSTRUCTIONS.md` |
 | Security Incident Response | `pm-security` | `pm-security/security-incident-response/GEM_INSTRUCTIONS.md` |
 | Security Review | `pm-security` | `pm-security/security-review/GEM_INSTRUCTIONS.md` |
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/GEM_INSTRUCTIONS.md` |
@@ -521,9 +546,13 @@
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/GEM_INSTRUCTIONS.md` |
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/GEM_INSTRUCTIONS.md` |
 | The Churning Customer | `pm-simulators` | `pm-simulators/the-churning-customer/GEM_INSTRUCTIONS.md` |
+| The Due Diligence Call | `pm-simulators` | `pm-simulators/the-due-diligence-call/GEM_INSTRUCTIONS.md` |
 | The Journalist Call | `pm-simulators` | `pm-simulators/the-journalist-call/GEM_INSTRUCTIONS.md` |
+| The Price Pushback | `pm-simulators` | `pm-simulators/the-price-pushback/GEM_INSTRUCTIONS.md` |
 | The Procurement Gauntlet | `pm-simulators` | `pm-simulators/the-procurement-gauntlet/GEM_INSTRUCTIONS.md` |
 | The Promotion Committee | `pm-simulators` | `pm-simulators/the-promotion-committee/GEM_INSTRUCTIONS.md` |
+| The Thesis Defense | `pm-students` | `pm-students/the-thesis-defense/GEM_INSTRUCTIONS.md` |
+| The Visa Interview | `pm-simulators` | `pm-simulators/the-visa-interview/GEM_INSTRUCTIONS.md` |
 | Thesis Outline | `pm-students` | `pm-students/thesis-outline/GEM_INSTRUCTIONS.md` |
 | Threat Model | `pm-security` | `pm-security/threat-model/GEM_INSTRUCTIONS.md` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `pm-writers/thumbnail-creator/GEM_INSTRUCTIONS.md` |
@@ -545,6 +574,7 @@
 | Vendor Evaluation | `pm-operations` | `pm-operations/vendor-evaluation/GEM_INSTRUCTIONS.md` |
 | Vendor Security Review | `pm-compliance` | `pm-compliance/vendor-security-review/GEM_INSTRUCTIONS.md` |
 | Verification Before Completion | `pm-method` | `pm-method/verification-before-completion/GEM_INSTRUCTIONS.md` |
+| Vet Estimate Decoder | `pm-decoders` | `pm-decoders/vet-estimate-decoder/GEM_INSTRUCTIONS.md` |
 | Viral Content Framework | `pm-social` | `pm-social/viral-content-framework/GEM_INSTRUCTIONS.md` |
 | Voice Agent Design | `pm-agentnative` | `pm-agentnative/voice-agent-design/GEM_INSTRUCTIONS.md` |
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/GEM_INSTRUCTIONS.md` |

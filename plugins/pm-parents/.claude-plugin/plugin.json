@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-parents",
+  "version": "1.0.0",
+  "description": "School-age parenting ops: parent-teacher conferences that inform, IEP/504 meetings walked in prepared, and college applications supported without takeover",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "parenting",
+    "school",
+    "iep",
+    "college",
+    "conference"
+  ]
+}
