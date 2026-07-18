@@ -9,6 +9,11 @@
 | [lease-decoder](lease-decoder/SKILL.md) | 賃貸契約書の解読と危険信号 |
 | [medical-bill-decoder](medical-bill-decoder/SKILL.md) | 医療請求書の行ごとの解読 + 交渉台本 |
 | [tos-decoder](tos-decoder/SKILL.md) | 利用規約：あなたが本当に同意していること |
+| [benefits-decoder](benefits-decoder/SKILL.md) | 福利厚生パッケージの実際の価値と罠 |
+| [loan-decoder](loan-decoder/SKILL.md) | ローンの実際の総コスト |
+| [hoa-decoder](hoa-decoder/SKILL.md) | HOA 規約と費用エクスポージャー |
+| [insurance-policy-decoder](insurance-policy-decoder/SKILL.md) | 保険証券が実際に補償するもの |
+| [claim-denial-decoder](claim-denial-decoder/SKILL.md) | 支払拒否の解読と不服申立て |
 
 ## 使い方
 

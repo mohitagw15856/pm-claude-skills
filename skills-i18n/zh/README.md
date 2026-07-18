@@ -9,6 +9,11 @@
 | [lease-decoder](lease-decoder/SKILL.md) | 你的租房合同，解读并标出警示信号 |
 | [medical-bill-decoder](medical-bill-decoder/SKILL.md) | 医疗账单逐行解读 + 谈判话术 |
 | [tos-decoder](tos-decoder/SKILL.md) | 服务条款：你真正在同意什么 |
+| [benefits-decoder](benefits-decoder/SKILL.md) | 福利包的真实价值与陷阱 |
+| [loan-decoder](loan-decoder/SKILL.md) | 贷款的真实总成本 |
+| [hoa-decoder](hoa-decoder/SKILL.md) | HOA 规约与费用敞口 |
+| [insurance-policy-decoder](insurance-policy-decoder/SKILL.md) | 保单真正保什么 |
+| [claim-denial-decoder](claim-denial-decoder/SKILL.md) | 拒赔解读与申诉信 |
 
 ## 如何使用
 
