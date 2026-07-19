@@ -207,10 +207,12 @@ const BUNDLE_EMOJI = {
 
 // ── Helpers (shared shape with web/build-skills.mjs) ────────────────────────
 function parseFrontmatter(text) {
-  const m = text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+  // Tolerate CRLF so skills authored on Windows don't silently export with
+  // an empty description (skillcheck.mjs already tolerates it).
+  const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
   if (!m) return { meta: {}, body: text };
   const meta = {};
-  for (const line of m[1].split('\n')) {
+  for (const line of m[1].split(/\r?\n/)) {
     const kv = line.match(/^(\w[\w-]*):\s*(.*)$/);
     if (kv) {
       let v = kv[2].trim();
