@@ -71,7 +71,7 @@ Rules: be specific to the documentation provided; turn its rules/process into th
 export async function run(argv) {
   const from = getArg(argv, 'from');
   if (!from || argv.includes('--help')) {
-    console.log('Usage: pm-claude-skills generate --from <url|file> [--name x] [--out dir] [--model m] [--dry-run]');
+    console.log('Usage: pm-claude-skills generate --from <url|file> [--name x] [--out dir] [--model m] [--dry-run] [--force]');
     return from ? 0 : 1;
   }
   const apiKey = process.env.ANTHROPIC_API_KEY || '';
@@ -101,9 +101,14 @@ export async function run(argv) {
     return 0;
   }
   const dir = join(outDir, name);
+  const file = join(dir, 'SKILL.md');
+  if (existsSync(file) && !argv.includes('--force')) {
+    console.error(`Error: ${file} already exists (use --force to overwrite).`);
+    return 1;
+  }
   mkdirSync(dir, { recursive: true });
-  writeFileSync(join(dir, 'SKILL.md'), cleaned + '\n');
-  console.log(`Created ${join(dir, 'SKILL.md')}`);
+  writeFileSync(file, cleaned + '\n');
+  console.log(`Created ${file}`);
   console.log('Next: review it, then validate — node scripts/skillcheck.mjs && node scripts/skill-audit.mjs');
   return 0;
 }
