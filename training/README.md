@@ -6,7 +6,7 @@ The pipeline to train **the first open model distilled from a skills library**: 
 
 | Step | State |
 |---|---|
-| 1. Dataset | ✅ `node training/build-sft-dataset.mjs` → `sft.jsonl` (646 pairs: routing + structure, from all 730 skills + the 153 eval inputs) |
+| 1. Dataset | ✅ `node training/build-sft-dataset.mjs` → `sft.jsonl` (646 pairs: routing + structure, from all 731 skills + the 153 eval inputs) |
 | 2. Teacher pass (optional, better) | 🔑 optional upgrade: generate full teacher completions for the 153 real inputs via `pm-claude-skills run` in a loop (~$3-5 on your key) and merge them in as richer targets — not yet scripted, straightforward when wanted |
 | 3. Train | ▶️ press-go recipes below (~$10-25 GPU) |
 | 4. Publish | `huggingface-cli upload` to your HF account, model card in `training/MODEL_CARD.md` |
@@ -21,7 +21,7 @@ axolotl train training/axolotl-config.yml     # Qwen2.5-7B-Instruct + LoRA r=16,
 
 **B. Free-tier Colab (T4, slower, smaller):** open a notebook, `pip install unsloth`, load `unsloth/Qwen2.5-7B-Instruct-bnb-4bit`, train on `sft.jsonl` with the same hyperparameters (config comments map 1:1).
 
-**Honest expectations:** a 7B LoRA on 646 pairs learns *routing* and *structural discipline* convincingly; it does not learn the full depth of 730 skills. It's a demonstration artifact and a fast local router — the claim to publish is exactly that, no more.
+**Honest expectations:** a 7B LoRA on 646 pairs learns *routing* and *structural discipline* convincingly; it does not learn the full depth of 731 skills. It's a demonstration artifact and a fast local router — the claim to publish is exactly that, no more.
 
 ## Hyperparameters (in axolotl-config.yml)
 LoRA r=16 α=32 dropout=0.05 · lr 2e-4 cosine · 2 epochs · bf16 · seq len 2048 · chatml template.

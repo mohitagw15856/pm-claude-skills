@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-730 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+731 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -434,6 +434,7 @@
 | Onboarding Buddy Plan | `pm-cowork` | `pm-cowork/onboarding-buddy-plan/SYSTEM_PROMPT.md` |
 | Onboarding Copy | `pm-uxwriting` | `pm-uxwriting/onboarding-copy/SYSTEM_PROMPT.md` |
 | Onboarding Plan | `pm-hr` | `pm-hr/onboarding-plan/SYSTEM_PROMPT.md` |
+| On-Call Handoff | `pm-engineering` | `pm-engineering/oncall-handoff/SYSTEM_PROMPT.md` |
 | On-Call Runbook | `pm-engineering` | `pm-engineering/oncall-runbook/SYSTEM_PROMPT.md` |
 | One-on-One Prep | `pm-career` | `pm-career/one-on-one-prep/SYSTEM_PROMPT.md` |
 | One-Pager | `pm-personal` | `pm-personal/one-pager/SYSTEM_PROMPT.md` |

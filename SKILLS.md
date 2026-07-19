@@ -1,4 +1,4 @@
-# 🗂️ All 730 Skills — full catalog
+# 🗂️ All 731 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -168,7 +168,7 @@
 | **Social Media Audit** (`social-media-audit`) | Audit an existing social media presence across all active platforms. | — |
 | **Viral Content Framework** (`viral-content-framework`) | Build a framework for creating shareable, high-reach social media content. | — |
 
-## 💻 Engineering & AI (81 skills)
+## 💻 Engineering & AI (82 skills)
 
 ### `pm-ai` — 13 skills
 
@@ -209,7 +209,7 @@
 | **Metric Semantic Layer** (`metric-semantic-layer`) | Define a metric in a semantic layer so it means one thing everywhere. | — |
 | **SQL Optimizer** (`sql-optimizer`) | Diagnose a slow SQL query and produce a concrete optimization plan. | — |
 
-### `pm-engineering` — 45 skills · 6 eval-scored
+### `pm-engineering` — 46 skills · 6 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -242,6 +242,7 @@
 | **Local Dev Setup** (`local-dev-setup`) | Write a local development environment setup guide for a service or project — covering prerequisites, repository setup, environment variables… | — |
 | **Microservices Decomposition** (`microservices-decomposition`) | Design a microservices decomposition for a monolith or new system, defining service boundaries, ownership, communication patterns, and migration plan. | — |
 | **Monitoring Setup Guide** (`monitoring-setup-guide`) | Write a monitoring setup guide for a service — defining what to measure, how to alert on it, and how to build the observability stack covering the… | — |
+| **On-Call Handoff** (`oncall-handoff`) | Write a structured end-of-shift on-call handoff so the incoming engineer inherits state, not surprises. | — |
 | **On-Call Runbook** (`oncall-runbook`) | Write an on-call runbook for a service — covering alert definitions, escalation paths, common incident responses, and on-call handoff procedures. | — |
 | **Performance Budget** (`performance-budget`) | Define and document performance budgets for a web service or application. | — |
 | **PR Description Writer** (`pr-description-writer`) | Write a clear, structured pull request description from a git diff, branch summary, or commit list. | — |
@@ -1198,4 +1199,4 @@
 
 ---
 
-_730 skills across 88 bundles · 28 eval-scored (4%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_731 skills across 88 bundles · 28 eval-scored (4%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

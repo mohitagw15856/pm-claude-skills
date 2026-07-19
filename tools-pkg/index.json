@@ -2538,6 +2538,12 @@
   "description": "Create well-structured OKRs (Objectives and Key Results) for product teams, startups, and individuals. Use when asked to write OKRs, set quarterly goals, define key results, or review existing OKRs. Produces a complete OKR set with objectives, measurable key results, baselines, and a scoring guide."
  },
  {
+  "name": "oncall_handoff",
+  "skill": "oncall-handoff",
+  "bundle": "pm-engineering",
+  "description": "Write a structured end-of-shift on-call handoff so the incoming engineer inherits state, not surprises. Use when asked to write an on-call handoff, oncall handover, shift handoff, pager handoff, or end-of-week SRE summary. Produces a handoff note with open incidents, watchlist alerts, in-flight investigations, recent changes, and one-line asks."
+ },
+ {
   "name": "oncall_runbook",
   "skill": "oncall-runbook",
   "bundle": "pm-engineering",

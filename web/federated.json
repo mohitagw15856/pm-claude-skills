@@ -2,7 +2,7 @@
  "spec": "skill-federation/0.1",
  "built": "2026-07-19",
  "libraries": 1,
- "skills": 730,
+ "skills": 731,
  "members": [
   {
    "repo": "mohitagw15856/pm-claude-skills",
@@ -10,7 +10,7 @@
    "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
    "license": "MIT",
    "badge": "https://img.shields.io/endpoint?url=https%3A%2F%2Fpm-skills-mcp.pm-claude-skills.workers.dev%2Fbadge%3Frepo%3Dmohitagw15856%2Fpm-claude-skills",
-   "count": 730,
+   "count": 731,
    "skills": [
     {
      "name": "360-feedback-template",
@@ -1703,6 +1703,10 @@
     {
      "name": "okr-builder",
      "description": "Create well-structured OKRs (Objectives and Key Results) for product teams, startups, and individuals. Use when asked to write OKRs, set quarterly goals, define key results, or review existing OKRs. Produces a complete OKR set with objectives, measurable key results, baselines, and a scoring guide."
+    },
+    {
+     "name": "oncall-handoff",
+     "description": "Write a structured end-of-shift on-call handoff so the incoming engineer inherits state, not surprises. Use when asked to write an on-call handoff, oncall handover, shift handoff, pager handoff, or end-of-week SRE summary. Produces a handoff note with open incidents, watchlist alerts, in-flight inve"
     },
     {
      "name": "oncall-runbook",

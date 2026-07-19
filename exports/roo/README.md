@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-730 skills exported. Copy a `.md rule` into the tool to use it.
+731 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -434,6 +434,7 @@
 | Onboarding Buddy Plan | `pm-cowork` | `pm-cowork/onboarding-buddy-plan/onboarding-buddy-plan.md` |
 | Onboarding Copy | `pm-uxwriting` | `pm-uxwriting/onboarding-copy/onboarding-copy.md` |
 | Onboarding Plan | `pm-hr` | `pm-hr/onboarding-plan/onboarding-plan.md` |
+| On-Call Handoff | `pm-engineering` | `pm-engineering/oncall-handoff/oncall-handoff.md` |
 | On-Call Runbook | `pm-engineering` | `pm-engineering/oncall-runbook/oncall-runbook.md` |
 | One-on-One Prep | `pm-career` | `pm-career/one-on-one-prep/one-on-one-prep.md` |
 | One-Pager | `pm-personal` | `pm-personal/one-pager/one-pager.md` |
