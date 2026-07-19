@@ -3,7 +3,7 @@
  "cases": [
   {
    "skill": "rice-prioritisation",
-   "input": "Rank these for next quarter:\n1. Onboarding redesign \u2014 reach ~5000 users/qtr, big activation impact, ~3 person-months.\n2. Dark mode \u2014 ~8000 users want it, low impact, ~1 person-month.\n3. SSO for enterprise \u2014 ~400 accounts, high deal impact, ~4 person-months, low confidence."
+   "input": "Rank these for next quarter:\n1. Onboarding redesign — reach ~5000 users/qtr, big activation impact, ~3 person-months.\n2. Dark mode — ~8000 users want it, low impact, ~1 person-month.\n3. SSO for enterprise — ~400 accounts, high deal impact, ~4 person-months, low confidence."
   },
   {
    "skill": "prd-template",
@@ -115,7 +115,7 @@
   },
   {
    "skill": "prompt-optimizer",
-   "input": "Improve this prompt. It's flaky \u2014 sometimes it returns prose, sometimes a list, and it occasionally makes up ticket fields that don't exist.\nPrompt: \"Summarize this support ticket and tell me how urgent it is and what to do.\"\nDesired output: a JSON object with fields summary (1-2 sentences), priority (P1-P4), and next_action. It runs on every inbound ticket. Only use information present in the ticket; if priority is unclear, use P3."
+   "input": "Improve this prompt. It's flaky — sometimes it returns prose, sometimes a list, and it occasionally makes up ticket fields that don't exist.\nPrompt: \"Summarize this support ticket and tell me how urgent it is and what to do.\"\nDesired output: a JSON object with fields summary (1-2 sentences), priority (P1-P4), and next_action. It runs on every inbound ticket. Only use information present in the ticket; if priority is unclear, use P3."
   },
   {
    "skill": "eval-rubric-designer",
@@ -131,7 +131,7 @@
   },
   {
    "skill": "agent-design-review",
-   "input": "Review this agent design. It's a 'research assistant': given a question, it loops \u2014 search the web, read a page, decide if it has enough, otherwise search again \u2014 then writes a summary with sources. It has tools: web_search, fetch_url, and send_email (to email the summary). Control flow is a ReAct loop with no explicit step cap. Each step re-sends the full conversation. Runs interactively; cost has spiked on some runs. Input is untrusted."
+   "input": "Review this agent design. It's a 'research assistant': given a question, it loops — search the web, read a page, decide if it has enough, otherwise search again — then writes a summary with sources. It has tools: web_search, fetch_url, and send_email (to email the summary). Control flow is a ReAct loop with no explicit step cap. Each step re-sends the full conversation. Runs interactively; cost has spiked on some runs. Input is untrusted."
   },
   {
    "skill": "model-selection-advisor",
@@ -211,7 +211,7 @@
   },
   {
    "skill": "donor-update",
-   "input": "Write a year-end donor update/thank-you email to our recurring donors. Because of their support this year we provided 12,000 meals and opened a second community kitchen. We want them to feel appreciated and part of the mission, with a short story and only a very light, optional invitation to a volunteer day \u2014 no hard ask. Warm, personal tone. Mark any invented specifics for us to replace."
+   "input": "Write a year-end donor update/thank-you email to our recurring donors. Because of their support this year we provided 12,000 meals and opened a second community kitchen. We want them to feel appreciated and part of the mission, with a short story and only a very light, optional invitation to a volunteer day — no hard ask. Warm, personal tone. Mark any invented specifics for us to replace."
   },
   {
    "skill": "product-description",
@@ -247,7 +247,7 @@
   },
   {
    "skill": "empty-state-writer",
-   "input": "Write the empty states for a 'Projects' screen in a team task-management app. Cover: (1) first use \u2014 a brand-new account with no projects yet, where we want them to create their first project; (2) a search/filter that returns no matching projects; (3) all projects archived/completed. Voice is encouraging and concise. For each give headline, supporting line, and action(s)."
+   "input": "Write the empty states for a 'Projects' screen in a team task-management app. Cover: (1) first use — a brand-new account with no projects yet, where we want them to create their first project; (2) a search/filter that returns no matching projects; (3) all projects archived/completed. Voice is encouraging and concise. For each give headline, supporting line, and action(s)."
   },
   {
    "skill": "product-naming",
@@ -255,11 +255,11 @@
   },
   {
    "skill": "content-style-guide",
-   "input": "Create a content style guide for our B2B fintech app aimed at small-business owners. We want to sound clear, trustworthy, and human \u2014 never stuffy or jargon-heavy. US English. It applies to product UI, marketing, and support. Include voice principles with before/after examples, tone by context, mechanics, a do/don't word list, and accessibility rules. Mark anything you infer for us to confirm."
+   "input": "Create a content style guide for our B2B fintech app aimed at small-business owners. We want to sound clear, trustworthy, and human — never stuffy or jargon-heavy. US English. It applies to product UI, marketing, and support. Include voice principles with before/after examples, tone by context, mechanics, a do/don't word list, and accessibility rules. Mark anything you infer for us to confirm."
   },
   {
    "skill": "onboarding-copy",
-   "input": "Write the in-product onboarding copy for a personal habit-tracking app. The first win is the user creating their first habit and checking it off once. The path: welcome \u2192 name a habit \u2192 set a reminder time \u2192 mark it done today. Format is a mix of a welcome modal and tooltips, and steps should be skippable. Encouraging, concise voice. Include the welcome, the step tooltips, a checklist, and the first-win success moment."
+   "input": "Write the in-product onboarding copy for a personal habit-tracking app. The first win is the user creating their first habit and checking it off once. The path: welcome → name a habit → set a reminder time → mark it done today. Format is a mix of a welcome modal and tooltips, and steps should be skippable. Encouraging, concise voice. Include the welcome, the step tooltips, a checklist, and the first-win success moment."
   },
   {
    "skill": "boolean-search-builder",
@@ -275,7 +275,7 @@
   },
   {
    "skill": "candidate-scorecard",
-   "input": "Turn my interview notes into a scorecard for a Senior PM candidate. Notes: Product sense \u2014 gave a sharp critique of our onboarding and a prioritization rationale (RICE), strong. Execution \u2014 described shipping a payments revamp but was vague on how they handled the cross-team conflict. Data \u2014 comfortable, cited specific metrics (activation 31%\u219244%). Stakeholder influence \u2014 not really tested this round. Scale is 1-4 (strong no to strong yes). Give per-competency ratings with evidence, risks, open questions, and a recommendation with confidence."
+   "input": "Turn my interview notes into a scorecard for a Senior PM candidate. Notes: Product sense — gave a sharp critique of our onboarding and a prioritization rationale (RICE), strong. Execution — described shipping a payments revamp but was vague on how they handled the cross-team conflict. Data — comfortable, cited specific metrics (activation 31%→44%). Stakeholder influence — not really tested this round. Scale is 1-4 (strong no to strong yes). Give per-competency ratings with evidence, risks, open questions, and a recommendation with confidence."
   },
   {
    "skill": "offer-letter",
@@ -287,7 +287,7 @@
   },
   {
    "skill": "invoice-generator",
-   "input": "Create an invoice. From: Jordan Lee Design (freelance, jordan@jldesign.com). To: Acme Corp, accounts@acme.com, PO #4471, project 'Marketing site redesign'. Line items: Homepage design \u2014 1 @ $1,200; Landing page templates \u2014 3 @ $400; Logo refresh \u2014 1 @ $600. Terms: Net 30, pay by bank transfer. No sales tax (I'll confirm tax separately). Use invoice number INV-2026-014, issued today. Show the totals."
+   "input": "Create an invoice. From: Jordan Lee Design (freelance, jordan@jldesign.com). To: Acme Corp, accounts@acme.com, PO #4471, project 'Marketing site redesign'. Line items: Homepage design — 1 @ $1,200; Landing page templates — 3 @ $400; Logo refresh — 1 @ $600. Terms: Net 30, pay by bank transfer. No sales tax (I'll confirm tax separately). Use invoice number INV-2026-014, issued today. Show the totals."
   },
   {
    "skill": "expense-policy",
@@ -299,7 +299,7 @@
   },
   {
    "skill": "financial-statement-explainer",
-   "input": "Explain this P&L to me in plain English \u2014 I'm a founder, not an accountant. For last quarter: Revenue $480,000; Cost of goods sold $144,000; Gross profit $336,000; Operating expenses $300,000 (of which sales & marketing $180,000, R&D $80,000, G&A $40,000); Operating income $36,000; Net income $28,000. Tell me what each part means, the margins and numbers that matter, and the story \u2014 are we healthy?"
+   "input": "Explain this P&L to me in plain English — I'm a founder, not an accountant. For last quarter: Revenue $480,000; Cost of goods sold $144,000; Gross profit $336,000; Operating expenses $300,000 (of which sales & marketing $180,000, R&D $80,000, G&A $40,000); Operating income $36,000; Net income $28,000. Tell me what each part means, the margins and numbers that matter, and the story — are we healthy?"
   },
   {
    "skill": "bookkeeping-categorization",
@@ -327,7 +327,7 @@
   },
   {
    "skill": "qa-release-signoff",
-   "input": "Write a QA sign-off for release v4.8.0 shipping Friday. Testing done: full regression on web (98% pass), smoke on mobile, and exploratory on the new checkout. Open defects: BUG-101 (major \u2014 discount code occasionally not applied on first try, workaround: refresh), BUG-118 (minor \u2014 alignment issue on the confirmation page). The new checkout has a feature flag and we can roll back. Mobile wasn't fully regression-tested. Give me a go/no-go with conditions, the risk, and a rollback note."
+   "input": "Write a QA sign-off for release v4.8.0 shipping Friday. Testing done: full regression on web (98% pass), smoke on mobile, and exploratory on the new checkout. Open defects: BUG-101 (major — discount code occasionally not applied on first try, workaround: refresh), BUG-118 (minor — alignment issue on the confirmation page). The new checkout has a feature flag and we can roll back. Mobile wasn't fully regression-tested. Give me a go/no-go with conditions, the risk, and a rollback note."
   },
   {
    "skill": "api-test-plan",
@@ -347,7 +347,7 @@
   },
   {
    "skill": "property-investment-analysis",
-   "input": "Analyze a rental investment. Purchase price $300,000, ~$8,000 closing costs, no rehab. Financing: 25% down, 7% interest, 30-year loan. Rent $2,400/month. I haven't given you operating costs \u2014 use realistic placeholder assumptions for vacancy, maintenance, property management, taxes, insurance, and a capex reserve, and flag them. My target is at least 8% cash-on-cash and positive monthly cash flow. Show the formulas, the returns, a verdict, and a downside check."
+   "input": "Analyze a rental investment. Purchase price $300,000, ~$8,000 closing costs, no rehab. Financing: 25% down, 7% interest, 30-year loan. Rent $2,400/month. I haven't given you operating costs — use realistic placeholder assumptions for vacancy, maintenance, property management, taxes, insurance, and a capex reserve, and flag them. My target is at least 8% cash-on-cash and positive monthly cash flow. Show the formulas, the returns, a verdict, and a downside check."
   },
   {
    "skill": "open-house-plan",
@@ -359,11 +359,11 @@
   },
   {
    "skill": "board-minutes",
-   "input": "Draft formal board minutes for Northwind Robotics Inc. The regular board meeting was held on 12 March 2025, 10:00-11:30, by video conference. Present: Priya Shah (Chair), Daniel Okoro (CEO), Lena Fischer (CFO), Marcus Webb (independent director). Apologies: Ana Ruiz. In attendance: Tom Reilly (company secretary, minutes). Quorum was confirmed. Agenda and notes: (1) Previous minutes from 5 Feb approved without amendment. (2) Q1 financials \u2014 CFO presented; revenue $4.2M, 11% ahead of plan; cash runway 16 months. Board noted the results. (3) Series B fundraise \u2014 proposed raising $25M; board discussed dilution and lead investor terms; resolved to authorize management to proceed with term-sheet negotiations up to a $120M pre-money valuation and report back before signing. Marcus Webb declared a conflict as an advisor to one prospective investor and recused himself from this item. (4) Annual budget \u2014 approved as presented. Actions: CFO to circulate the revised runway model by 20 March; CEO to bring the lead-investor term sheet to the next meeting. Next meeting 9 April 2025 by video conference. Flag anything that needs governance or legal review, and mark anything unknown as to confirm."
+   "input": "Draft formal board minutes for Northwind Robotics Inc. The regular board meeting was held on 12 March 2025, 10:00-11:30, by video conference. Present: Priya Shah (Chair), Daniel Okoro (CEO), Lena Fischer (CFO), Marcus Webb (independent director). Apologies: Ana Ruiz. In attendance: Tom Reilly (company secretary, minutes). Quorum was confirmed. Agenda and notes: (1) Previous minutes from 5 Feb approved without amendment. (2) Q1 financials — CFO presented; revenue $4.2M, 11% ahead of plan; cash runway 16 months. Board noted the results. (3) Series B fundraise — proposed raising $25M; board discussed dilution and lead investor terms; resolved to authorize management to proceed with term-sheet negotiations up to a $120M pre-money valuation and report back before signing. Marcus Webb declared a conflict as an advisor to one prospective investor and recused himself from this item. (4) Annual budget — approved as presented. Actions: CFO to circulate the revised runway model by 20 March; CEO to bring the lead-investor term sheet to the next meeting. Next meeting 9 April 2025 by video conference. Flag anything that needs governance or legal review, and mark anything unknown as to confirm."
   },
   {
    "skill": "win-loss-analysis",
-   "input": "Run a win/loss analysis on last quarter's deals for our B2B analytics product. Data: 40 closed-won worth $1.9M and 55 closed-lost worth $3.1M. Common closed-lost reasons in CRM: 'price too high' (18), 'missing SSO/SAML' (12), 'went with Looker' (9), 'no decision/timing' (10), 'poor fit' (6). Wins skew mid-market; enterprise win rate looks weak. Interview snippets: one lost buyer said 'your dashboards are great but procurement needs SOC 2 and SSO', a won buyer said 'setup took a day vs weeks with the incumbent'. Primary competitors: Looker and Tableau. This feeds our QBR and roadmap review \u2014 give themes, win rate by cut, controllable vs structural, and prioritized actions with owners."
+   "input": "Run a win/loss analysis on last quarter's deals for our B2B analytics product. Data: 40 closed-won worth $1.9M and 55 closed-lost worth $3.1M. Common closed-lost reasons in CRM: 'price too high' (18), 'missing SSO/SAML' (12), 'went with Looker' (9), 'no decision/timing' (10), 'poor fit' (6). Wins skew mid-market; enterprise win rate looks weak. Interview snippets: one lost buyer said 'your dashboards are great but procurement needs SOC 2 and SSO', a won buyer said 'setup took a day vs weeks with the incumbent'. Primary competitors: Looker and Tableau. This feeds our QBR and roadmap review — give themes, win rate by cut, controllable vs structural, and prioritized actions with owners."
   },
   {
    "skill": "sales-enablement-kit",
@@ -395,7 +395,7 @@
   },
   {
    "skill": "which-skill",
-   "input": "My boss wants something on our competitors for the board next week \u2014 we have three main rivals and one of them just announced a pricing change. Which skill should I use?"
+   "input": "My boss wants something on our competitors for the board next week — we have three main rivals and one of them just announced a pricing change. Which skill should I use?"
   },
   {
    "skill": "autopilot-charter",
@@ -439,7 +439,7 @@
   },
   {
    "skill": "screenshot-teardown",
-   "input": "Attached: 4 screenshots of Rival A's new onboarding flow (signup, workspace setup, template picker, paywall). We are redesigning our own onboarding next sprint \u2014 what are they optimising for and what should we steal or avoid?"
+   "input": "Attached: 4 screenshots of Rival A's new onboarding flow (signup, workspace setup, template picker, paywall). We are redesigning our own onboarding next sprint — what are they optimising for and what should we steal or avoid?"
   },
   {
    "skill": "deck-autopsy",
@@ -451,7 +451,7 @@
   },
   {
    "skill": "evidence-lock",
-   "input": "Sources: our Q2 churn analysis, the pricing experiment readout, and 12 win/loss interview summaries [pasted]. Task: write the 'why we are changing pricing' section of the board memo in hard-lock mode \u2014 the CFO checks footnotes for sport."
+   "input": "Sources: our Q2 churn analysis, the pricing experiment readout, and 12 win/loss interview summaries [pasted]. Task: write the 'why we are changing pricing' section of the board memo in hard-lock mode — the CFO checks footnotes for sport."
   },
   {
    "skill": "mcp-server-spec",
@@ -527,7 +527,7 @@
   },
   {
    "skill": "executing-plans",
-   "input": "Here is the plan we agreed [migration plan with 6 steps, step 2 says 'verify shortcode converter handles all 400 posts']. I am starting execution now. Walk me through it \u2014 and step 2 just failed on 37 posts that use a custom pricing-table shortcode."
+   "input": "Here is the plan we agreed [migration plan with 6 steps, step 2 says 'verify shortcode converter handles all 400 posts']. I am starting execution now. Walk me through it — and step 2 just failed on 37 posts that use a custom pricing-table shortcode."
   },
   {
    "skill": "verification-before-completion",
@@ -535,7 +535,7 @@
   },
   {
    "skill": "subagent-orchestration",
-   "input": "I need to research 5 competitors (pricing, recent launches, hiring signals), update 12 API endpoint docs to a new format, and write a summary memo. I have parallel subagents available. Orchestrate this \u2014 last time two agents both edited the same docs file and I got merge conflicts."
+   "input": "I need to research 5 competitors (pricing, recent launches, hiring signals), update 12 API endpoint docs to a new format, and write a summary memo. I have parallel subagents available. Orchestrate this — last time two agents both edited the same docs file and I got merge conflicts."
   },
   {
    "skill": "incremental-implementation",
@@ -607,11 +607,15 @@
   },
   {
    "skill": "fine-appeal-letter",
-   "input": "Parking ticket for \u00a370 in a loading bay. I was loading \u2014 carrying boxes from a shop to my van, took about 12 minutes, warden ticketed at minute 9. The bay sign says 'loading only, 20 min max'. I have the shop receipt with timestamp and a photo of the sign. Notice number PCN-88213, deadline 14 days."
+   "input": "Parking ticket for £70 in a loading bay. I was loading — carrying boxes from a shop to my van, took about 12 minutes, warden ticketed at minute 9. The bay sign says 'loading only, 20 min max'. I have the shop receipt with timestamp and a photo of the sign. Notice number PCN-88213, deadline 14 days."
   },
   {
    "skill": "skill-fusion",
    "input": "Fuse incident-postmortem with executive-update: our payment processor was down 4 hours Tuesday, board update due Friday. The board needs the update; two of them will audit the postmortem details. Write the fused brief and structure."
+  },
+  {
+   "skill": "oncall-handoff",
+   "input": "Handoff for backend on-call, week ending 2026-07-19 Asia/Kolkata. Open: INC-4821 S2 payments-api p99 latency 380ms since Thu 14:00, mitigation is 2x replicas, root cause TBD, owner me. Silenced kafka-lag alert until 2026-07-22 (broker replacement). Investigating whether the CDN egress spike on Wed correlates with the checkout 5xx bump — dashboard link in Notion. Deployed a rate-limiter config change 36h ago, rollback is: kubectl rollout undo deploy/edge-gateway. Next week: launch push planned Wed 10:00 IST."
   }
  ]
 }
