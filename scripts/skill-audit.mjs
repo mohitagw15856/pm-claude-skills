@@ -115,7 +115,8 @@ if (asJson) {
   console.log(JSON.stringify({ scanned: 'skills/**', high, medium, low, findings }, null, 2));
 } else {
   const icon = { high: '🔴', medium: '🟠', low: '🟡' };
-  for (const f of findings.sort((a, b) => (a.severity < b.severity ? -1 : 1))) {
+  const RANK = { high: 0, medium: 1, low: 2 };
+  for (const f of findings.sort((a, b) => RANK[a.severity] - RANK[b.severity])) {
     console.log(`  ${icon[f.severity]} [${f.severity}] ${f.file}:${f.line} (${f.id}) — ${f.why}`);
     if (f.snippet) console.log(`      ↳ ${f.snippet}`);
   }
