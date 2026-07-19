@@ -146,6 +146,15 @@ const CASES = [
   { name: 'college cost (all-in + loan tail)', script: 'skills/college-cost/scripts/college_cost.py',
     args: ['--sticker', '32000', '--aid', '14000'],
     expect: /net 4-year cost: 79,887 {2}\(39,943 cash \+ 39,943 borrowed\)[\s\S]*453\.55\/mo for 10 years = 54,426 repaid \(14,483 interest\)[\s\S]*true all-in \(cash \+ repayments\): 94,369/ },
+  { name: 'context crush (json schema+stats)', script: 'skills/context-crusher/scripts/context_crush.py',
+    args: ['--mode', 'json', '--file', w('crush-pin.json', JSON.stringify(Array.from({ length: 30 }, (_, i) => ({ i }))))],
+    expect: /\[context-crush json: ~\d+ -> ~\d+ tokens, \d+% smaller[\s\S]*"__crushed__":"array of 30 items","schema":\{"i":"int"\}[\s\S]*"mean":14\.5/ },
+  { name: 'repo map (symbols + token math)', script: 'skills/repo-map/scripts/repo_map.py',
+    args: ['skills/context-crusher'],
+    expect: /this map ≈ \d+ tokens[\s\S]*context_crush\.py\s+\d+L\s+→ toks, summarize_array, crush_json, crush_log, crush_text, main[\s\S]*the map is the index, not the territory/ },
+  { name: 'token cost (heuristics + price math)', script: 'skills/token-cost/scripts/token_cost.py',
+    args: ['--file', w('cost-pin.txt', 'aaaa '.repeat(100)), '--price-in', '3', '--calls', '10'],
+    expect: /~129 tokens {2}\(chars\/4: 125 · words\*4\/3: 133 — heuristics, ±15%\)[\s\S]*\$0\.000387\/call · \$0\.0039 across 10 calls at \$3\/M/ },
 ];
 for (const c of CASES) {
   const r = spawnSync('python3', [join(root, c.script), ...c.args], { encoding: 'utf8', timeout: 30000 });
