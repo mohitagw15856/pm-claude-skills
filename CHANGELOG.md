@@ -9,6 +9,21 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [58.0.0] — the frugal stack: token optimization for every stage of the agent journey — 2026-07-19
+
+Inspired by what's winning in the ecosystem (Caveman's output register, Headroom's context layer, Graphify's map-not-files navigation) — rebuilt as one coherent, keyless, zero-dependency family. 630 skills, 87 bundles.
+
+### Added — 🪙 [pm-tokens](plugins/pm-tokens): the whole journey in one bundle
+- **context-crusher** + `context_crush.py` — structural compression of tool outputs before they enter the window: JSON arrays → schema + samples + *computed* stats (98% smaller on uniform data), logs → dedupe-with-counts with every error line guaranteed to survive, honest no-gain handling on small inputs. Deterministic, stdlib, no API.
+- **repo-map** + `repo_map.py` — navigate code by map instead of reading files: deterministic tree + top-level symbols (regex, ~10 languages, nothing leaves the machine), printing its own economics — a typical map costs ~3% of reading everything.
+- **token-diet** — the telegraphic output register systematized: three levels with examples, the real economics (output prices at 3–5× input; single-shots shouldn't diet), and the never-diet list (legal text, human deliverables, teaching content).
+- **context-budget** — the window planned as the budget it is: load/link/fetch allocation, the **cache-aware prefix layout** (stable-first — one volatile byte re-prices everything below it), per-turn cost shapes, and pre-decided eviction rules.
+- **token-cost** + `token_cost.py` — measurement before optimization: local estimates with a permanent ±15% honesty label, cost at *your* prices × *your* call volume (never baked-in prices), and before/after comparisons that end in a worth-it verdict.
+- **session-handoff** — the existing skill adopted into the family: state transfer at ~5% of transcript size across compactions and agent baton-passes.
+
+### Infra
+- scripts-smoke: 52 scripts / 32 byte-exact functional cases · every script deterministic-verified · inspirations credited with links in each skill's Based On section.
+
 ## [57.0.0] — the 600 crossing: the decision journal, the estate pack, and 26 skills for the hardest weeks — 2026-07-18
 
 The library crosses 600 (599 → **625 skills, 86 bundles**) — and skill #600 is the one the whole library compounds through.
@@ -950,6 +965,7 @@ Earlier releases (v1.0.0 – v5.0.0) predate this changelog. See the
 library grew from the first PM toolkit to 100+ skills.
 
 [Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v55.0.0...HEAD
+[58.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v57.0.0...v58.0.0
 [57.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v56.0.0...v57.0.0
 [56.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v55.0.0...v56.0.0
 [55.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v54.0.0...v55.0.0
