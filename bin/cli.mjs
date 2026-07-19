@@ -205,7 +205,13 @@ function add(opts) {
     }
     // Claude Code also gets subagents, slash commands, and output-styles.
     if (agent === 'claude') {
-      const claudeRoot = dirname(target);
+      // Extras are siblings of `skills/` (…/.claude/{skills,agents,commands}),
+      // so `dirname(target)` is only correct when the caller kept that layout.
+      // With a custom --target that doesn't end in "skills", we'd otherwise
+      // write agents/commands/output-styles into the parent of target and
+      // pollute an unrelated directory. In that case, drop the extras next to
+      // the skills instead of blindly walking up.
+      const claudeRoot = basename(target) === 'skills' ? dirname(target) : target;
       for (const kind of ['agents', 'commands', 'output-styles']) {
         const src = join(PKG_ROOT, kind);
         if (!existsSync(src)) continue;
