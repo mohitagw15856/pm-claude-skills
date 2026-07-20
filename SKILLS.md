@@ -649,7 +649,7 @@
 | **Portfolio Page** (`portfolio-page`) | Structure a portfolio or case-study page that shows your work, not just lists it. | — |
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 
-## 🌍 Industries & Public Sector (341 skills)
+## 🌍 Industries & Public Sector (353 skills)
 
 ### `pm-agentnative` — 5 skills
 
@@ -823,6 +823,23 @@
 | **Weekly Review Ritual** (`weekly-review-ritual`) | Install the weekly review that keeps work from managing you — the 30-minute Friday ritual: close the week's loops, sweep the capture points… | — |
 | **Working Agreements** (`working-agreements`) | Write a team's working agreements — the small set of explicit norms (communication, meetings, decisions, conflict) that replace the assumptions… | — |
 | **Workshop Designer** (`workshop-designer`) | Design working sessions that produce artifacts, not vibes — the outcome-backwards agenda, the activity formats that beat open discussion (silent… | — |
+
+### `pm-cowork-live` — 12 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Async Standup Compiler (Live)** (`async-standup-compiler`) | Compile the team's REAL updates into one async standup — pull what people posted in Slack (and moved in Notion/Linear), not a template for running… | — |
+| **Changelog from Commits (Live)** (`changelog-from-commits`) | Write a human changelog from the REAL commit history — read the actual commit range via the GitHub connector, not a template. | — |
+| **Deck from Doc (Live)** (`deck-from-doc`) | Turn the user's REAL doc into a slide deck — open the source, structure the narrative, and build the actual .pptx — not slide-writing tips. | — |
+| **Doc Restructure (Live)** (`doc-restructure-live`) | Restructure the user's REAL Google Doc — open it, tighten and reorganise it, and return a clean version — not advice on how to edit it. | — |
+| **Follow-up Sweep (Live)** (`followup-sweep`) | Sweep the user's REAL mail and calendar for dropped balls — threads awaiting their reply, promises they made, and replies they're owed — then… | — |
+| **Inbox Triage (Live)** (`inbox-triage-live`) | Triage the user's REAL inbox through the Gmail connector — not a framework they run by hand. | — |
+| **Issue Triage (Live)** (`issue-triage-live`) | Triage the user's REAL issue tracker — read open issues via the GitHub/Linear connector, label / prioritise / dedupe / flag them, and apply the… | — |
+| **Meeting Prep (Live)** (`meeting-prep-live`) | Prepare the user for a REAL upcoming meeting by pulling the actual Calendar event, its attendees, the linked Drive docs, and the last email/Slack… | — |
+| **Notion DB Hygiene (Live)** (`notion-db-hygiene`) | Clean the user's REAL Notion database — read it, find stale/incomplete/duplicate entries, and fix them via the connector — not advice on keeping… | — |
+| **PR Description (Live)** (`pr-description-live`) | Write a PR description grounded in the REAL diff — read the branch's actual changes via the GitHub connector, not a template the user fills in. | — |
+| **Spreadsheet Audit (Live)** (`spreadsheet-audit-live`) | Audit the user's REAL spreadsheet by opening it in the Cowork sandbox — not by reading a description of it. | — |
+| **Thread to Decision (Live)** (`thread-to-decision-live`) | Turn a REAL Slack thread (or channel) into a logged decision — read it, extract what was decided, who owns what, and record it in Notion — not a… | — |
 
 ### `pm-crisis` — 6 skills
 
@@ -1199,4 +1216,4 @@
 
 ---
 
-_731 skills across 89 bundles · 28 eval-scored (4%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_743 skills across 89 bundles · 28 eval-scored (4%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

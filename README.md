@@ -135,7 +135,7 @@ The whole library on one poster — start path, standout features, and install o
 
 ## 🆕 Latest
 
-**v60.0.0 — Cowork goes live:** **[pm-cowork-live](plugins/pm-cowork-live)** — 12 Claude Cowork-*native* skills that act on your **real data** through connectors (Gmail, Calendar, Drive/Docs/Sheets, Notion, Slack, GitHub/Linear) and the sandbox, and return an artifact — inbox triage on the actual inbox, meeting prep from real events, spreadsheet audits that open the file, decision logs to Notion, PR descriptions from the real diff. Where the v59 [pm-cowork](plugins/pm-cowork) 100 teach the *frameworks*, these *do the work*. *Earlier — v59, the cowork century:* [pm-cowork](plugins/pm-cowork), 100 AI-coworker framework skills (630 → 731). Full history: **[CHANGELOG](CHANGELOG.md)** · [releases](https://github.com/mohitagw15856/pm-claude-skills/releases)
+**v60.0.0 — Cowork goes live:** **[pm-cowork-live](plugins/pm-cowork-live)** — 12 Claude Cowork-*native* skills that act on your **real data** through connectors (Gmail, Calendar, Drive/Docs/Sheets, Notion, Slack, GitHub/Linear) and the sandbox, and return an artifact — inbox triage on the actual inbox, meeting prep from real events, spreadsheet audits that open the file, decision logs to Notion, PR descriptions from the real diff. Where the v59 [pm-cowork](plugins/pm-cowork) 100 teach the *frameworks*, these *do the work*. *Earlier — v59, the cowork century:* [pm-cowork](plugins/pm-cowork), 100 AI-coworker framework skills (630 → 743). Full history: **[CHANGELOG](CHANGELOG.md)** · [releases](https://github.com/mohitagw15856/pm-claude-skills/releases)
 
 ## 🤝 Contributing
 

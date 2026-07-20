@@ -819,6 +819,25 @@
  {
   "type": "function",
   "function": {
+   "name": "async_standup_compiler",
+   "description": "Compile the team's REAL updates into one async standup — pull what people posted in Slack (and moved in Notion/Linear), not a template for running standups. Use when asked to compile today's standup, pull the team's updates into one post, what did the team ship, or run async standup in Cowork. Reads a Slack channel and (optionally) the tracker via connectors, groups updates by person into shipped / in-progress / blocked, surfaces the blockers needing attention, and produces a standup-digest artifact ready to post back.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "async_update_format",
    "description": "Write status updates people actually read — the traffic-light-plus-narrative format (state first, story second), the blockers-are-asks rule, and the skimmable structure that respects a reader with thirty seconds. Use when asked write my weekly update, format our team's status posts, nobody reads my updates, or what goes in a good async check-in. Produces the update format with a filled example, the blockers-as-asks discipline, and the reader-time contract.",
    "parameters": {
@@ -1581,6 +1600,25 @@
   "function": {
    "name": "changelog_for_humans",
    "description": "Write changelogs and release notes readers actually benefit from — changes translated to so-whats, grouped by reader impact (breaking first, gifts second, plumbing last), with the upgrade path stated and the marketing kept honest. Use when asked write the release notes, turn this commit list into a changelog, announce this update to users, or why does nobody read our changelogs. Produces the impact-grouped changelog, the so-what translations, the breaking-changes block with migration steps, and the two-audience split when needed.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "changelog_from_commits",
+   "description": "Write a human changelog from the REAL commit history — read the actual commit range via the GitHub connector, not a template. Use when asked to write the changelog for this release, what changed since the last tag, draft release notes from my commits, or summarise this range for users in Cowork. Reads commits/PRs between two refs via the GitHub connector, groups them into user-facing changes (features / fixes / breaking), translates commit-speak into human benefit, and produces a changelog artifact ready for the release.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -3403,6 +3441,25 @@
  {
   "type": "function",
   "function": {
+   "name": "deck_from_doc",
+   "description": "Turn the user's REAL doc into a slide deck — open the source, structure the narrative, and build the actual .pptx — not slide-writing tips. Use when asked to make a deck from this doc, turn my brief into slides, build the presentation from my Drive doc, or deckify this in Cowork. Reads the document via the Google Drive/Docs connector, maps it to a one-idea-per-slide narrative, and produces a real presentation artifact (.pptx) with speaker notes plus a slide-by-slide outline.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "deck_narrative_arc",
    "description": "Give a deck a spine the room can follow — the situation-complication-resolution arc, the tension that makes the recommendation feel necessary, the transitions that carry the thread between slides, and the arc-check that catches sag. Use when asked make this deck flow, my presentation feels like disconnected slides, structure the story of this pitch/readout, or the room got lost in the middle. Produces the arc mapping, the tension line, the transition script, and the sag diagnosis.",
    "parameters": {
@@ -3956,6 +4013,25 @@
   "function": {
    "name": "dns_lookup",
    "description": "Query DNS records and domain registration data with zero API keys — DNS-over-HTTPS via dns.google and domain registration via RDAP, through plain curl. Use when asked what does this domain resolve to, check the MX or TXT records, who registered this domain, when does it expire, or has DNS propagated. Produces the records decoded (SPF/DKIM/DMARC read, not just dumped), the registration facts from RDAP, and the rerunnable commands.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "doc_restructure_live",
+   "description": "Restructure the user's REAL Google Doc — open it, tighten and reorganise it, and return a clean version — not advice on how to edit it. Use when asked to clean up this doc, restructure my draft in Drive, make this readable, or tighten the doc for review in Cowork. Reads the document via the Google Drive/Docs connector, applies a structure-and-concision pass (BLUF, one idea per section, cut the filler), and produces a restructured-document artifact plus a change summary — as a new copy, never overwriting the original.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -5512,6 +5588,25 @@
  {
   "type": "function",
   "function": {
+   "name": "followup_sweep",
+   "description": "Sweep the user's REAL mail and calendar for dropped balls — threads awaiting their reply, promises they made, and replies they're owed — then draft the nudges. Use when asked what am I forgetting, what have I not replied to, who owes me a reply, or chase my open threads in Cowork. Reads sent/received mail via the Gmail connector and recent events via Calendar, finds the open loops, and produces a follow-up-list artifact plus ready-to-send draft nudges.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "form_filler_operator",
    "description": "Fill long web forms and applications through a computer-use agent — from a fact sheet you approve, field by field, with a full transcript and nothing submitted without your word. Use when asked to fill this application for me, complete this government/vendor/insurance form, or do this registration. Produces the fact-to-field mapping, the filled form held at review, and a field-level transcript.",
    "parameters": {
@@ -6139,6 +6234,25 @@
  {
   "type": "function",
   "function": {
+   "name": "inbox_triage_live",
+   "description": "Triage the user's REAL inbox through the Gmail connector — not a framework they run by hand. Use when asked to clear my inbox, get me to inbox zero on the actual account, triage my unread, or process my email backlog in Cowork. Reads unread via the Gmail connector, sorts every message into archive / reply-now / task / park, applies labels and archives in place, drafts the reply-now messages as real Gmail drafts. Produces a triage-report artifact of what it did and what still needs the user.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "inbox_unsubscribe_purge",
    "description": "Cut inbox volume at the source — the unsubscribe purge that classifies recurring senders into kill/digest/keep, executes safely (real unsubscribes vs. spam-report vs. never-click), and installs the filters that catch the rest. Use when asked my inbox is all newsletters, mass unsubscribe safely, cut my email volume, or set up filters for the noise. Produces the sender census, the kill/digest/keep sort, the safe-unsubscribe rules, and the filter set.",
    "parameters": {
@@ -6578,6 +6692,25 @@
   "function": {
    "name": "iss_tracker",
    "description": "Track the International Space Station live with keyless curl — where it is right now, what it's over, and when to look up, with the orbital math translated into human terms. Use when asked where is the ISS right now, is the space station overhead, when can I see the ISS tonight, or track the station for the kids. Produces the live position translated to a place name, the overhead-math explained, the visibility rules of thumb, and the rerunnable command — the library's proof that live data can also just be delightful.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "issue_triage_live",
+   "description": "Triage the user's REAL issue tracker — read open issues via the GitHub/Linear connector, label / prioritise / dedupe / flag them, and apply the safe changes — not advice on triage. Use when asked to triage my issues, clean up the backlog, label and prioritise open issues, or sort my GitHub issues in Cowork. Reads open issues via the connector, classifies by type / severity / duplicate, applies labels and priorities, and produces a triage-report artifact with the applied changes and the ones needing a human call.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -7450,6 +7583,25 @@
  {
   "type": "function",
   "function": {
+   "name": "meeting_prep_live",
+   "description": "Prepare the user for a REAL upcoming meeting by pulling the actual Calendar event, its attendees, the linked Drive docs, and the last email/Slack thread — then producing a brief. Use when asked to prep me for my next meeting, get me ready for the 2pm, or what do I need for the sync with X in Cowork. Reads the event via the Google Calendar connector, gathers the attached and related material via Drive/Gmail, and produces a one-page meeting-brief artifact with objective, context, open threads, and the questions to ask.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "meeting_prep_pack",
    "description": "Arrive at a meeting armed in fifteen minutes — the prep pack: what this meeting decides, your position with its reasons, the other attendees' likely stances, the questions to ask, and the outcome you're steering toward. Use when asked prep me for this meeting, what should I know before this call, I have 15 minutes before a big meeting, or help me not wing it. Produces the one-page prep pack with position, stances, questions, and the walk-away-with list.",
    "parameters": {
@@ -7908,6 +8060,25 @@
   "function": {
    "name": "notes_humanizer",
    "description": "Strips AI writing patterns from text and rewrites it to sound genuinely human by removing statistical defaults and injecting the specific signals that human writers produce. Use when a draft reads as AI-generated, over-polished, or rhythmically uniform — including blog posts, emails, LinkedIn posts, or any prose that needs to sound like a real person wrote it. Produces a pattern audit, side-by-side comparison, itemised change log, and clean rewritten output ready to paste.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "notion_db_hygiene",
+   "description": "Clean the user's REAL Notion database — read it, find stale/incomplete/duplicate entries, and fix them via the connector — not advice on keeping Notion tidy. Use when asked to clean up my Notion database, my tracker is a mess, find the stale and duplicate entries, or tidy my projects DB in Cowork. Reads the database via the Notion connector, audits for staleness / missing required fields / duplicates / status drift, and produces a hygiene-report artifact plus the applied fixes (with a preview-and-confirm step before any change).",
    "parameters": {
     "type": "object",
     "properties": {
@@ -8820,6 +8991,25 @@
   "function": {
    "name": "pr_description",
    "description": "Write a clear pull-request description that gets reviewed fast and merged with confidence. Use when opening a PR, summarizing a change for review, or asked to write a PR/merge-request description. Produces a structured PR: what changed and why, how it was tested, risk and rollout, and a focused reviewer guide — so the reviewer understands intent before reading a single diff line.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "pr_description_live",
+   "description": "Write a PR description grounded in the REAL diff — read the branch's actual changes via the GitHub connector, not a template the user fills in. Use when asked to write my PR description, describe this pull request, draft the PR body from my branch, or document these changes in Cowork. Reads the commits and diff via the GitHub connector, derives what changed and why from the code itself, and produces a PR-description artifact (summary, changes, testing, risk) ready to paste — matching the repo's PR template if one exists.",
    "parameters": {
     "type": "object",
     "properties": {
@@ -11668,6 +11858,25 @@
  {
   "type": "function",
   "function": {
+   "name": "spreadsheet_audit_live",
+   "description": "Audit the user's REAL spreadsheet by opening it in the Cowork sandbox — not by reading a description of it. Use when asked to check this sheet before we present it, audit the model in my Drive, why don't these numbers add up, or is this spreadsheet safe to build on. Pulls the file via the Google Drive connector (or an uploaded .xlsx), opens it programmatically in the sandbox to trace formulas, hunts hardcodes / broken ranges / unit mixes, and produces a ranked findings artifact with a verified-vs-suspect ledger and a fix list.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "spreadsheet_handover",
    "description": "Hand over a spreadsheet so it survives its author leaving — the README tab that decodes the sheet's logic, the update runbook with sources and cadence, the fragility warnings, and the walkthrough that transfers the judgment. Use when asked document this spreadsheet before I leave, hand over the model to the team, make this sheet survivable without me, or we inherited a workbook nobody understands. Produces the README tab content, the update runbook, the known-fragilities list, and the handover walkthrough agenda.",
    "parameters": {
@@ -12848,6 +13057,25 @@
   "function": {
    "name": "thread_to_decision",
    "description": "Land a sprawling chat thread on an actual decision — the summarize-and-fork move (positions restated, the question isolated), the decider-and-deadline injection, and the recorded close that ends the forty-message orbit. Use when asked this thread is going in circles, get a decision out of this discussion, summarize where we landed, or why do our threads never conclude. Produces the thread summary with positions attributed, the isolated decision question, the closure message, and the decision record.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
+   "name": "thread_to_decision_live",
+   "description": "Turn a REAL Slack thread (or channel) into a logged decision — read it, extract what was decided, who owns what, and record it in Notion — not a template for writing decisions. Use when asked to capture the decision from this thread, log what we agreed, turn this Slack discussion into a decision record, or close this out in Cowork. Reads the thread via the Slack connector, distils the decision / owners / next steps / open questions, and produces a decision-record artifact written to a Notion database (with the source thread linked).",
    "parameters": {
     "type": "object",
     "properties": {
