@@ -23,7 +23,7 @@ A directory of **skill repos and packs built by the community** that follow the
 
 | Skill / pack | Author | What it does | Repo |
 |---|---|---|---|
-| _Be the first — open a PR to add yours!_ | | | |
+| [Crew](https://github.com/Honorboxx/crew) | [@Honorboxx](https://github.com/Honorboxx) | Reviewer, debugger and planner agents plus scope/verify/git skills that size a task before coding and turn "done" into observed evidence. | https://github.com/Honorboxx/crew |
 
 <!-- COMMUNITY-SKILLS:ROWS-BELOW
   Add your row directly above this comment, keeping the four columns in order:
