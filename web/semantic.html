@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
 <title>Semantic Search — find skills by meaning, fully offline</title>
-<meta name="description" content="Search 731 skills by what you mean, not what you type: a real embedding model (MiniLM) runs in your browser — nothing leaves your machine, works offline after first load. Falls back to instant keyword search while the model warms." />
+<meta name="description" content="Search 743 skills by what you mean, not what you type: a real embedding model (MiniLM) runs in your browser — nothing leaves your machine, works offline after first load. Falls back to instant keyword search while the model warms." />
 <link rel="stylesheet" href="styles.css" />
 <style>
   .m-wrap { max-width: 780px; margin: 0 auto; padding: 16px 22px 70px; }
@@ -66,7 +66,7 @@ async function enableSemantic() {
     embedder = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2', {
       progress_callback: (p) => { if (p.progress) el('prog').value = p.progress; },
     });
-    el('pstat').textContent = 'embedding 731 skills (one-time, ~20s)…';
+    el('pstat').textContent = 'embedding 743 skills (one-time, ~20s)…';
     VECS = [];
     for (let i = 0; i < SKILLS.length; i += 32) {
       const batch = SKILLS.slice(i, i + 32);

@@ -1,13 +1,21 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "59.0.0",
+  "version": "60.0.0",
   "description": "PM stands for Professional, not just Product Management. 515 Claude Skills + 4 agent templates across 74 bundles covering 31 professions \u2014 engineering, security, AI/ML, customer success, legal, government & policy, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "plugins": [
+    {
+      "name": "pm-cowork-live",
+      "description": "12 Claude Cowork-native skills that act on your real data through connectors and the sandbox — Gmail/Calendar inbox triage, meeting prep and follow-up sweeps; Drive/Docs/Sheets audits, restructures and decks; Notion/Slack decision logs, DB hygiene and async standups; GitHub/Linear issue triage, PR descriptions and changelogs. Each drives real tools and returns an artifact — not a framework you run by hand.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-cowork-live",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
     {
       "name": "pm-cowork",
       "description": "100 cowork skills for the AI-coworker era: inbox and email ops, files and folders, spreadsheets, documents, meetings, team collaboration, research, presentations, personal work ops, and office admin — the office knowledge work an AI coworker actually does",

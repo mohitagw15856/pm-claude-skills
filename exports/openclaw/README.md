@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-731 skills exported. Copy a `SKILL.md` into the tool to use it.
+743 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -50,6 +50,7 @@
 | Assumption Mapper | `pm-discovery` | `assumption-mapper/SKILL.md` |
 | Async Decision Memo | `pm-operations` | `async-decision-memo/SKILL.md` |
 | Async Instead | `pm-cowork` | `async-instead/SKILL.md` |
+| Async Standup Compiler (Live) | `pm-cowork-live` | `async-standup-compiler/SKILL.md` |
 | Async Update Format | `pm-cowork` | `async-update-format/SKILL.md` |
 | Auto Repair Estimate Decoder | `pm-decoders` | `auto-repair-estimate-decoder/SKILL.md` |
 | Autopilot Charter | `pm-autopilot` | `autopilot-charter/SKILL.md` |
@@ -91,6 +92,7 @@
 | Change Management Plan | `pm-hr` | `change-management-plan/SKILL.md` |
 | Change Order Writer | `pm-construction` | `change-order-writer/SKILL.md` |
 | Changelog For Humans | `pm-cowork` | `changelog-for-humans/SKILL.md` |
+| Changelog from Commits (Live) | `pm-cowork-live` | `changelog-from-commits/SKILL.md` |
 | Changelog Generator | `pm-engineering` | `changelog-generator/SKILL.md` |
 | Changelog Writer | `pm-devrel` | `changelog-writer/SKILL.md` |
 | Channel Hygiene | `pm-cowork` | `channel-hygiene/SKILL.md` |
@@ -186,6 +188,7 @@
 | Decision Meeting Format | `pm-cowork` | `decision-meeting-format/SKILL.md` |
 | Decision Memo | `pm-business` | `decision-memo/SKILL.md` |
 | Deck Autopsy | `pm-vision` | `deck-autopsy/SKILL.md` |
+| Deck from Doc (Live) | `pm-cowork-live` | `deck-from-doc/SKILL.md` |
 | Deck Narrative Arc | `pm-cowork` | `deck-narrative-arc/SKILL.md` |
 | Deck Outline First | `pm-cowork` | `deck-outline-first/SKILL.md` |
 | Deck Review Rubric | `pm-cowork` | `deck-review-rubric/SKILL.md` |
@@ -216,6 +219,7 @@
 | Discovery Interview Guide | `pm-discovery` | `discovery-interview-guide/SKILL.md` |
 | Dispute Letter | `pm-lifeadmin` | `dispute-letter/SKILL.md` |
 | DNS Lookup | `pm-live` | `dns-lookup/SKILL.md` |
+| Doc Restructure (Live) | `pm-cowork-live` | `doc-restructure-live/SKILL.md` |
 | Doc Versioning Discipline | `pm-cowork` | `doc-versioning-discipline/SKILL.md` |
 | Docs Quickstart | `pm-devrel` | `docs-quickstart/SKILL.md` |
 | Doctor Visit Prep | `pm-lifeadmin` | `doctor-visit-prep/SKILL.md` |
@@ -298,6 +302,7 @@
 | Folder Structure Designer | `pm-cowork` | `folder-structure-designer/SKILL.md` |
 | Follow-Up Chaser | `pm-cowork` | `follow-up-chaser/SKILL.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `follow-up-sequence/SKILL.md` |
+| Follow-up Sweep (Live) | `pm-cowork-live` | `followup-sweep/SKILL.md` |
 | Form Filler Operator | `pm-operator` | `form-filler-operator/SKILL.md` |
 | Formula Detangler | `pm-cowork` | `formula-detangler/SKILL.md` |
 | Founder-Market Fit | `pm-founders` | `founder-market-fit/SKILL.md` |
@@ -331,6 +336,7 @@
 | IEP 504 Meeting Kit | `pm-parents` | `iep-504-meeting-kit/SKILL.md` |
 | IEP Goal Support | `pm-education` | `iep-goal-support/SKILL.md` |
 | Impact Report | `pm-nonprofit` | `impact-report/SKILL.md` |
+| Inbox Triage (Live) | `pm-cowork-live` | `inbox-triage-live/SKILL.md` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `inbox-unsubscribe-purge/SKILL.md` |
 | Inbox Zero Operator | `pm-operator` | `inbox-zero-operator/SKILL.md` |
 | Incident Postmortem | `pm-engineering` | `incident-postmortem/SKILL.md` |
@@ -355,6 +361,7 @@
 | IP Lookup | `pm-live` | `ip-lookup/SKILL.md` |
 | ISO 27001 ISMS | `pm-compliance` | `iso-27001-isms/SKILL.md` |
 | ISS Tracker | `pm-live` | `iss-tracker/SKILL.md` |
+| Issue Triage (Live) | `pm-cowork-live` | `issue-triage-live/SKILL.md` |
 | JD Decoder | `pm-jobsearch` | `jd-decoder/SKILL.md` |
 | Job Application | `pm-business` | `job-application/SKILL.md` |
 | Job Description Writer | `pm-hr` | `job-description-writer/SKILL.md` |
@@ -400,6 +407,7 @@
 | Medical Records Request | `pm-lifeadmin` | `medical-records-request/SKILL.md` |
 | Meeting Cost Meter | `pm-cowork` | `meeting-cost-meter/SKILL.md` |
 | Meeting Notes | `pm-essentials` | `meeting-notes/SKILL.md` |
+| Meeting Prep (Live) | `pm-cowork-live` | `meeting-prep-live/SKILL.md` |
 | Meeting Prep Pack | `pm-cowork` | `meeting-prep-pack/SKILL.md` |
 | Meeting Room Etiquette | `pm-cowork` | `meeting-room-etiquette/SKILL.md` |
 | Messaging Framework | `pm-growth` | `messaging-framework/SKILL.md` |
@@ -425,6 +433,7 @@
 | Newsletter Writer | `pm-creator` | `newsletter-writer/SKILL.md` |
 | NotebookLM Connector | `pm-cross` | `notebooklm-connector/SKILL.md` |
 | Notes Humanizer | `pm-writers` | `notes-humanizer/SKILL.md` |
+| Notion DB Hygiene (Live) | `pm-cowork-live` | `notion-db-hygiene/SKILL.md` |
 | Offer Comparison | `pm-calculators` | `offer-comparison/SKILL.md` |
 | Offer Letter | `pm-recruiting` | `offer-letter/SKILL.md` |
 | Office Hours Design | `pm-cowork` | `office-hours-design/SKILL.md` |
@@ -473,6 +482,7 @@
 | PPTX Slide Auditor | `pm-delivery` | `pptx-slide-auditor/SKILL.md` |
 | PR Crisis Response | `pm-crisis` | `pr-crisis-response/SKILL.md` |
 | PR Description | `pm-craft` | `pr-description/SKILL.md` |
+| PR Description (Live) | `pm-cowork-live` | `pr-description-live/SKILL.md` |
 | PR Description Writer | `pm-engineering` | `pr-description-writer/SKILL.md` |
 | PRD Template | `pm-essentials` | `prd-template/SKILL.md` |
 | Premortem Assassin | `pm-warroom` | `premortem-assassin/SKILL.md` |
@@ -622,6 +632,7 @@
 | Sourcing Strategy | `pm-recruiting` | `sourcing-strategy/SKILL.md` |
 | Sports Scores | `pm-live` | `sports-scores/SKILL.md` |
 | Spreadsheet Audit | `pm-cowork` | `spreadsheet-audit/SKILL.md` |
+| Spreadsheet Audit (Live) | `pm-cowork-live` | `spreadsheet-audit-live/SKILL.md` |
 | Spreadsheet Handover | `pm-cowork` | `spreadsheet-handover/SKILL.md` |
 | Spreadsheet Or Database | `pm-cowork` | `spreadsheet-or-database/SKILL.md` |
 | Sprint Brief | `pm-delivery` | `sprint-brief/SKILL.md` |
@@ -685,6 +696,7 @@
 | The Visa Interview | `pm-simulators` | `the-visa-interview/SKILL.md` |
 | Thesis Outline | `pm-students` | `thesis-outline/SKILL.md` |
 | Thread To Decision | `pm-cowork` | `thread-to-decision/SKILL.md` |
+| Thread to Decision (Live) | `pm-cowork-live` | `thread-to-decision-live/SKILL.md` |
 | Threat Model | `pm-security` | `threat-model/SKILL.md` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `thumbnail-creator/SKILL.md` |
 | Timeshare Contract Decoder | `pm-decoders` | `timeshare-contract-decoder/SKILL.md` |

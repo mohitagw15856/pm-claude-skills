@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-731 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+743 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -50,6 +50,7 @@
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/SYSTEM_PROMPT.md` |
 | Async Decision Memo | `pm-operations` | `pm-operations/async-decision-memo/SYSTEM_PROMPT.md` |
 | Async Instead | `pm-cowork` | `pm-cowork/async-instead/SYSTEM_PROMPT.md` |
+| Async Standup Compiler (Live) | `pm-cowork-live` | `pm-cowork-live/async-standup-compiler/SYSTEM_PROMPT.md` |
 | Async Update Format | `pm-cowork` | `pm-cowork/async-update-format/SYSTEM_PROMPT.md` |
 | Auto Repair Estimate Decoder | `pm-decoders` | `pm-decoders/auto-repair-estimate-decoder/SYSTEM_PROMPT.md` |
 | Autopilot Charter | `pm-autopilot` | `pm-autopilot/autopilot-charter/SYSTEM_PROMPT.md` |
@@ -91,6 +92,7 @@
 | Change Management Plan | `pm-hr` | `pm-hr/change-management-plan/SYSTEM_PROMPT.md` |
 | Change Order Writer | `pm-construction` | `pm-construction/change-order-writer/SYSTEM_PROMPT.md` |
 | Changelog For Humans | `pm-cowork` | `pm-cowork/changelog-for-humans/SYSTEM_PROMPT.md` |
+| Changelog from Commits (Live) | `pm-cowork-live` | `pm-cowork-live/changelog-from-commits/SYSTEM_PROMPT.md` |
 | Changelog Generator | `pm-engineering` | `pm-engineering/changelog-generator/SYSTEM_PROMPT.md` |
 | Changelog Writer | `pm-devrel` | `pm-devrel/changelog-writer/SYSTEM_PROMPT.md` |
 | Channel Hygiene | `pm-cowork` | `pm-cowork/channel-hygiene/SYSTEM_PROMPT.md` |
@@ -186,6 +188,7 @@
 | Decision Meeting Format | `pm-cowork` | `pm-cowork/decision-meeting-format/SYSTEM_PROMPT.md` |
 | Decision Memo | `pm-business` | `pm-business/decision-memo/SYSTEM_PROMPT.md` |
 | Deck Autopsy | `pm-vision` | `pm-vision/deck-autopsy/SYSTEM_PROMPT.md` |
+| Deck from Doc (Live) | `pm-cowork-live` | `pm-cowork-live/deck-from-doc/SYSTEM_PROMPT.md` |
 | Deck Narrative Arc | `pm-cowork` | `pm-cowork/deck-narrative-arc/SYSTEM_PROMPT.md` |
 | Deck Outline First | `pm-cowork` | `pm-cowork/deck-outline-first/SYSTEM_PROMPT.md` |
 | Deck Review Rubric | `pm-cowork` | `pm-cowork/deck-review-rubric/SYSTEM_PROMPT.md` |
@@ -216,6 +219,7 @@
 | Discovery Interview Guide | `pm-discovery` | `pm-discovery/discovery-interview-guide/SYSTEM_PROMPT.md` |
 | Dispute Letter | `pm-lifeadmin` | `pm-lifeadmin/dispute-letter/SYSTEM_PROMPT.md` |
 | DNS Lookup | `pm-live` | `pm-live/dns-lookup/SYSTEM_PROMPT.md` |
+| Doc Restructure (Live) | `pm-cowork-live` | `pm-cowork-live/doc-restructure-live/SYSTEM_PROMPT.md` |
 | Doc Versioning Discipline | `pm-cowork` | `pm-cowork/doc-versioning-discipline/SYSTEM_PROMPT.md` |
 | Docs Quickstart | `pm-devrel` | `pm-devrel/docs-quickstart/SYSTEM_PROMPT.md` |
 | Doctor Visit Prep | `pm-lifeadmin` | `pm-lifeadmin/doctor-visit-prep/SYSTEM_PROMPT.md` |
@@ -298,6 +302,7 @@
 | Folder Structure Designer | `pm-cowork` | `pm-cowork/folder-structure-designer/SYSTEM_PROMPT.md` |
 | Follow-Up Chaser | `pm-cowork` | `pm-cowork/follow-up-chaser/SYSTEM_PROMPT.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/SYSTEM_PROMPT.md` |
+| Follow-up Sweep (Live) | `pm-cowork-live` | `pm-cowork-live/followup-sweep/SYSTEM_PROMPT.md` |
 | Form Filler Operator | `pm-operator` | `pm-operator/form-filler-operator/SYSTEM_PROMPT.md` |
 | Formula Detangler | `pm-cowork` | `pm-cowork/formula-detangler/SYSTEM_PROMPT.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/SYSTEM_PROMPT.md` |
@@ -331,6 +336,7 @@
 | IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/SYSTEM_PROMPT.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/SYSTEM_PROMPT.md` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/SYSTEM_PROMPT.md` |
+| Inbox Triage (Live) | `pm-cowork-live` | `pm-cowork-live/inbox-triage-live/SYSTEM_PROMPT.md` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `pm-cowork/inbox-unsubscribe-purge/SYSTEM_PROMPT.md` |
 | Inbox Zero Operator | `pm-operator` | `pm-operator/inbox-zero-operator/SYSTEM_PROMPT.md` |
 | Incident Postmortem | `pm-engineering` | `pm-engineering/incident-postmortem/SYSTEM_PROMPT.md` |
@@ -355,6 +361,7 @@
 | IP Lookup | `pm-live` | `pm-live/ip-lookup/SYSTEM_PROMPT.md` |
 | ISO 27001 ISMS | `pm-compliance` | `pm-compliance/iso-27001-isms/SYSTEM_PROMPT.md` |
 | ISS Tracker | `pm-live` | `pm-live/iss-tracker/SYSTEM_PROMPT.md` |
+| Issue Triage (Live) | `pm-cowork-live` | `pm-cowork-live/issue-triage-live/SYSTEM_PROMPT.md` |
 | JD Decoder | `pm-jobsearch` | `pm-jobsearch/jd-decoder/SYSTEM_PROMPT.md` |
 | Job Application | `pm-business` | `pm-business/job-application/SYSTEM_PROMPT.md` |
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/SYSTEM_PROMPT.md` |
@@ -400,6 +407,7 @@
 | Medical Records Request | `pm-lifeadmin` | `pm-lifeadmin/medical-records-request/SYSTEM_PROMPT.md` |
 | Meeting Cost Meter | `pm-cowork` | `pm-cowork/meeting-cost-meter/SYSTEM_PROMPT.md` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/SYSTEM_PROMPT.md` |
+| Meeting Prep (Live) | `pm-cowork-live` | `pm-cowork-live/meeting-prep-live/SYSTEM_PROMPT.md` |
 | Meeting Prep Pack | `pm-cowork` | `pm-cowork/meeting-prep-pack/SYSTEM_PROMPT.md` |
 | Meeting Room Etiquette | `pm-cowork` | `pm-cowork/meeting-room-etiquette/SYSTEM_PROMPT.md` |
 | Messaging Framework | `pm-growth` | `pm-growth/messaging-framework/SYSTEM_PROMPT.md` |
@@ -425,6 +433,7 @@
 | Newsletter Writer | `pm-creator` | `pm-creator/newsletter-writer/SYSTEM_PROMPT.md` |
 | NotebookLM Connector | `pm-cross` | `pm-cross/notebooklm-connector/SYSTEM_PROMPT.md` |
 | Notes Humanizer | `pm-writers` | `pm-writers/notes-humanizer/SYSTEM_PROMPT.md` |
+| Notion DB Hygiene (Live) | `pm-cowork-live` | `pm-cowork-live/notion-db-hygiene/SYSTEM_PROMPT.md` |
 | Offer Comparison | `pm-calculators` | `pm-calculators/offer-comparison/SYSTEM_PROMPT.md` |
 | Offer Letter | `pm-recruiting` | `pm-recruiting/offer-letter/SYSTEM_PROMPT.md` |
 | Office Hours Design | `pm-cowork` | `pm-cowork/office-hours-design/SYSTEM_PROMPT.md` |
@@ -473,6 +482,7 @@
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/SYSTEM_PROMPT.md` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/SYSTEM_PROMPT.md` |
 | PR Description | `pm-craft` | `pm-craft/pr-description/SYSTEM_PROMPT.md` |
+| PR Description (Live) | `pm-cowork-live` | `pm-cowork-live/pr-description-live/SYSTEM_PROMPT.md` |
 | PR Description Writer | `pm-engineering` | `pm-engineering/pr-description-writer/SYSTEM_PROMPT.md` |
 | PRD Template | `pm-essentials` | `pm-essentials/prd-template/SYSTEM_PROMPT.md` |
 | Premortem Assassin | `pm-warroom` | `pm-warroom/premortem-assassin/SYSTEM_PROMPT.md` |
@@ -622,6 +632,7 @@
 | Sourcing Strategy | `pm-recruiting` | `pm-recruiting/sourcing-strategy/SYSTEM_PROMPT.md` |
 | Sports Scores | `pm-live` | `pm-live/sports-scores/SYSTEM_PROMPT.md` |
 | Spreadsheet Audit | `pm-cowork` | `pm-cowork/spreadsheet-audit/SYSTEM_PROMPT.md` |
+| Spreadsheet Audit (Live) | `pm-cowork-live` | `pm-cowork-live/spreadsheet-audit-live/SYSTEM_PROMPT.md` |
 | Spreadsheet Handover | `pm-cowork` | `pm-cowork/spreadsheet-handover/SYSTEM_PROMPT.md` |
 | Spreadsheet Or Database | `pm-cowork` | `pm-cowork/spreadsheet-or-database/SYSTEM_PROMPT.md` |
 | Sprint Brief | `pm-delivery` | `pm-delivery/sprint-brief/SYSTEM_PROMPT.md` |
@@ -685,6 +696,7 @@
 | The Visa Interview | `pm-simulators` | `pm-simulators/the-visa-interview/SYSTEM_PROMPT.md` |
 | Thesis Outline | `pm-students` | `pm-students/thesis-outline/SYSTEM_PROMPT.md` |
 | Thread To Decision | `pm-cowork` | `pm-cowork/thread-to-decision/SYSTEM_PROMPT.md` |
+| Thread to Decision (Live) | `pm-cowork-live` | `pm-cowork-live/thread-to-decision-live/SYSTEM_PROMPT.md` |
 | Threat Model | `pm-security` | `pm-security/threat-model/SYSTEM_PROMPT.md` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `pm-writers/thumbnail-creator/SYSTEM_PROMPT.md` |
 | Timeshare Contract Decoder | `pm-decoders` | `pm-decoders/timeshare-contract-decoder/SYSTEM_PROMPT.md` |

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-731 skills exported. Copy a `.md rule` into the tool to use it.
+743 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -50,6 +50,7 @@
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/assumption-mapper.md` |
 | Async Decision Memo | `pm-operations` | `pm-operations/async-decision-memo/async-decision-memo.md` |
 | Async Instead | `pm-cowork` | `pm-cowork/async-instead/async-instead.md` |
+| Async Standup Compiler (Live) | `pm-cowork-live` | `pm-cowork-live/async-standup-compiler/async-standup-compiler.md` |
 | Async Update Format | `pm-cowork` | `pm-cowork/async-update-format/async-update-format.md` |
 | Auto Repair Estimate Decoder | `pm-decoders` | `pm-decoders/auto-repair-estimate-decoder/auto-repair-estimate-decoder.md` |
 | Autopilot Charter | `pm-autopilot` | `pm-autopilot/autopilot-charter/autopilot-charter.md` |
@@ -91,6 +92,7 @@
 | Change Management Plan | `pm-hr` | `pm-hr/change-management-plan/change-management-plan.md` |
 | Change Order Writer | `pm-construction` | `pm-construction/change-order-writer/change-order-writer.md` |
 | Changelog For Humans | `pm-cowork` | `pm-cowork/changelog-for-humans/changelog-for-humans.md` |
+| Changelog from Commits (Live) | `pm-cowork-live` | `pm-cowork-live/changelog-from-commits/changelog-from-commits.md` |
 | Changelog Generator | `pm-engineering` | `pm-engineering/changelog-generator/changelog-generator.md` |
 | Changelog Writer | `pm-devrel` | `pm-devrel/changelog-writer/changelog-writer.md` |
 | Channel Hygiene | `pm-cowork` | `pm-cowork/channel-hygiene/channel-hygiene.md` |
@@ -186,6 +188,7 @@
 | Decision Meeting Format | `pm-cowork` | `pm-cowork/decision-meeting-format/decision-meeting-format.md` |
 | Decision Memo | `pm-business` | `pm-business/decision-memo/decision-memo.md` |
 | Deck Autopsy | `pm-vision` | `pm-vision/deck-autopsy/deck-autopsy.md` |
+| Deck from Doc (Live) | `pm-cowork-live` | `pm-cowork-live/deck-from-doc/deck-from-doc.md` |
 | Deck Narrative Arc | `pm-cowork` | `pm-cowork/deck-narrative-arc/deck-narrative-arc.md` |
 | Deck Outline First | `pm-cowork` | `pm-cowork/deck-outline-first/deck-outline-first.md` |
 | Deck Review Rubric | `pm-cowork` | `pm-cowork/deck-review-rubric/deck-review-rubric.md` |
@@ -216,6 +219,7 @@
 | Discovery Interview Guide | `pm-discovery` | `pm-discovery/discovery-interview-guide/discovery-interview-guide.md` |
 | Dispute Letter | `pm-lifeadmin` | `pm-lifeadmin/dispute-letter/dispute-letter.md` |
 | DNS Lookup | `pm-live` | `pm-live/dns-lookup/dns-lookup.md` |
+| Doc Restructure (Live) | `pm-cowork-live` | `pm-cowork-live/doc-restructure-live/doc-restructure-live.md` |
 | Doc Versioning Discipline | `pm-cowork` | `pm-cowork/doc-versioning-discipline/doc-versioning-discipline.md` |
 | Docs Quickstart | `pm-devrel` | `pm-devrel/docs-quickstart/docs-quickstart.md` |
 | Doctor Visit Prep | `pm-lifeadmin` | `pm-lifeadmin/doctor-visit-prep/doctor-visit-prep.md` |
@@ -298,6 +302,7 @@
 | Folder Structure Designer | `pm-cowork` | `pm-cowork/folder-structure-designer/folder-structure-designer.md` |
 | Follow-Up Chaser | `pm-cowork` | `pm-cowork/follow-up-chaser/follow-up-chaser.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/follow-up-sequence.md` |
+| Follow-up Sweep (Live) | `pm-cowork-live` | `pm-cowork-live/followup-sweep/followup-sweep.md` |
 | Form Filler Operator | `pm-operator` | `pm-operator/form-filler-operator/form-filler-operator.md` |
 | Formula Detangler | `pm-cowork` | `pm-cowork/formula-detangler/formula-detangler.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/founder-market-fit.md` |
@@ -331,6 +336,7 @@
 | IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/iep-504-meeting-kit.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/iep-goal-support.md` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/impact-report.md` |
+| Inbox Triage (Live) | `pm-cowork-live` | `pm-cowork-live/inbox-triage-live/inbox-triage-live.md` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `pm-cowork/inbox-unsubscribe-purge/inbox-unsubscribe-purge.md` |
 | Inbox Zero Operator | `pm-operator` | `pm-operator/inbox-zero-operator/inbox-zero-operator.md` |
 | Incident Postmortem | `pm-engineering` | `pm-engineering/incident-postmortem/incident-postmortem.md` |
@@ -355,6 +361,7 @@
 | IP Lookup | `pm-live` | `pm-live/ip-lookup/ip-lookup.md` |
 | ISO 27001 ISMS | `pm-compliance` | `pm-compliance/iso-27001-isms/iso-27001-isms.md` |
 | ISS Tracker | `pm-live` | `pm-live/iss-tracker/iss-tracker.md` |
+| Issue Triage (Live) | `pm-cowork-live` | `pm-cowork-live/issue-triage-live/issue-triage-live.md` |
 | JD Decoder | `pm-jobsearch` | `pm-jobsearch/jd-decoder/jd-decoder.md` |
 | Job Application | `pm-business` | `pm-business/job-application/job-application.md` |
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/job-description-writer.md` |
@@ -400,6 +407,7 @@
 | Medical Records Request | `pm-lifeadmin` | `pm-lifeadmin/medical-records-request/medical-records-request.md` |
 | Meeting Cost Meter | `pm-cowork` | `pm-cowork/meeting-cost-meter/meeting-cost-meter.md` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/meeting-notes.md` |
+| Meeting Prep (Live) | `pm-cowork-live` | `pm-cowork-live/meeting-prep-live/meeting-prep-live.md` |
 | Meeting Prep Pack | `pm-cowork` | `pm-cowork/meeting-prep-pack/meeting-prep-pack.md` |
 | Meeting Room Etiquette | `pm-cowork` | `pm-cowork/meeting-room-etiquette/meeting-room-etiquette.md` |
 | Messaging Framework | `pm-growth` | `pm-growth/messaging-framework/messaging-framework.md` |
@@ -425,6 +433,7 @@
 | Newsletter Writer | `pm-creator` | `pm-creator/newsletter-writer/newsletter-writer.md` |
 | NotebookLM Connector | `pm-cross` | `pm-cross/notebooklm-connector/notebooklm-connector.md` |
 | Notes Humanizer | `pm-writers` | `pm-writers/notes-humanizer/notes-humanizer.md` |
+| Notion DB Hygiene (Live) | `pm-cowork-live` | `pm-cowork-live/notion-db-hygiene/notion-db-hygiene.md` |
 | Offer Comparison | `pm-calculators` | `pm-calculators/offer-comparison/offer-comparison.md` |
 | Offer Letter | `pm-recruiting` | `pm-recruiting/offer-letter/offer-letter.md` |
 | Office Hours Design | `pm-cowork` | `pm-cowork/office-hours-design/office-hours-design.md` |
@@ -473,6 +482,7 @@
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/pptx-slide-auditor.md` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/pr-crisis-response.md` |
 | PR Description | `pm-craft` | `pm-craft/pr-description/pr-description.md` |
+| PR Description (Live) | `pm-cowork-live` | `pm-cowork-live/pr-description-live/pr-description-live.md` |
 | PR Description Writer | `pm-engineering` | `pm-engineering/pr-description-writer/pr-description-writer.md` |
 | PRD Template | `pm-essentials` | `pm-essentials/prd-template/prd-template.md` |
 | Premortem Assassin | `pm-warroom` | `pm-warroom/premortem-assassin/premortem-assassin.md` |
@@ -622,6 +632,7 @@
 | Sourcing Strategy | `pm-recruiting` | `pm-recruiting/sourcing-strategy/sourcing-strategy.md` |
 | Sports Scores | `pm-live` | `pm-live/sports-scores/sports-scores.md` |
 | Spreadsheet Audit | `pm-cowork` | `pm-cowork/spreadsheet-audit/spreadsheet-audit.md` |
+| Spreadsheet Audit (Live) | `pm-cowork-live` | `pm-cowork-live/spreadsheet-audit-live/spreadsheet-audit-live.md` |
 | Spreadsheet Handover | `pm-cowork` | `pm-cowork/spreadsheet-handover/spreadsheet-handover.md` |
 | Spreadsheet Or Database | `pm-cowork` | `pm-cowork/spreadsheet-or-database/spreadsheet-or-database.md` |
 | Sprint Brief | `pm-delivery` | `pm-delivery/sprint-brief/sprint-brief.md` |
@@ -685,6 +696,7 @@
 | The Visa Interview | `pm-simulators` | `pm-simulators/the-visa-interview/the-visa-interview.md` |
 | Thesis Outline | `pm-students` | `pm-students/thesis-outline/thesis-outline.md` |
 | Thread To Decision | `pm-cowork` | `pm-cowork/thread-to-decision/thread-to-decision.md` |
+| Thread to Decision (Live) | `pm-cowork-live` | `pm-cowork-live/thread-to-decision-live/thread-to-decision-live.md` |
 | Threat Model | `pm-security` | `pm-security/threat-model/threat-model.md` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `pm-writers/thumbnail-creator/thumbnail-creator.md` |
 | Timeshare Contract Decoder | `pm-decoders` | `pm-decoders/timeshare-contract-decoder/timeshare-contract-decoder.md` |

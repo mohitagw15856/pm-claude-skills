@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-731 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+743 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -50,6 +50,7 @@
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/GEM_INSTRUCTIONS.md` |
 | Async Decision Memo | `pm-operations` | `pm-operations/async-decision-memo/GEM_INSTRUCTIONS.md` |
 | Async Instead | `pm-cowork` | `pm-cowork/async-instead/GEM_INSTRUCTIONS.md` |
+| Async Standup Compiler (Live) | `pm-cowork-live` | `pm-cowork-live/async-standup-compiler/GEM_INSTRUCTIONS.md` |
 | Async Update Format | `pm-cowork` | `pm-cowork/async-update-format/GEM_INSTRUCTIONS.md` |
 | Auto Repair Estimate Decoder | `pm-decoders` | `pm-decoders/auto-repair-estimate-decoder/GEM_INSTRUCTIONS.md` |
 | Autopilot Charter | `pm-autopilot` | `pm-autopilot/autopilot-charter/GEM_INSTRUCTIONS.md` |
@@ -91,6 +92,7 @@
 | Change Management Plan | `pm-hr` | `pm-hr/change-management-plan/GEM_INSTRUCTIONS.md` |
 | Change Order Writer | `pm-construction` | `pm-construction/change-order-writer/GEM_INSTRUCTIONS.md` |
 | Changelog For Humans | `pm-cowork` | `pm-cowork/changelog-for-humans/GEM_INSTRUCTIONS.md` |
+| Changelog from Commits (Live) | `pm-cowork-live` | `pm-cowork-live/changelog-from-commits/GEM_INSTRUCTIONS.md` |
 | Changelog Generator | `pm-engineering` | `pm-engineering/changelog-generator/GEM_INSTRUCTIONS.md` |
 | Changelog Writer | `pm-devrel` | `pm-devrel/changelog-writer/GEM_INSTRUCTIONS.md` |
 | Channel Hygiene | `pm-cowork` | `pm-cowork/channel-hygiene/GEM_INSTRUCTIONS.md` |
@@ -186,6 +188,7 @@
 | Decision Meeting Format | `pm-cowork` | `pm-cowork/decision-meeting-format/GEM_INSTRUCTIONS.md` |
 | Decision Memo | `pm-business` | `pm-business/decision-memo/GEM_INSTRUCTIONS.md` |
 | Deck Autopsy | `pm-vision` | `pm-vision/deck-autopsy/GEM_INSTRUCTIONS.md` |
+| Deck from Doc (Live) | `pm-cowork-live` | `pm-cowork-live/deck-from-doc/GEM_INSTRUCTIONS.md` |
 | Deck Narrative Arc | `pm-cowork` | `pm-cowork/deck-narrative-arc/GEM_INSTRUCTIONS.md` |
 | Deck Outline First | `pm-cowork` | `pm-cowork/deck-outline-first/GEM_INSTRUCTIONS.md` |
 | Deck Review Rubric | `pm-cowork` | `pm-cowork/deck-review-rubric/GEM_INSTRUCTIONS.md` |
@@ -216,6 +219,7 @@
 | Discovery Interview Guide | `pm-discovery` | `pm-discovery/discovery-interview-guide/GEM_INSTRUCTIONS.md` |
 | Dispute Letter | `pm-lifeadmin` | `pm-lifeadmin/dispute-letter/GEM_INSTRUCTIONS.md` |
 | DNS Lookup | `pm-live` | `pm-live/dns-lookup/GEM_INSTRUCTIONS.md` |
+| Doc Restructure (Live) | `pm-cowork-live` | `pm-cowork-live/doc-restructure-live/GEM_INSTRUCTIONS.md` |
 | Doc Versioning Discipline | `pm-cowork` | `pm-cowork/doc-versioning-discipline/GEM_INSTRUCTIONS.md` |
 | Docs Quickstart | `pm-devrel` | `pm-devrel/docs-quickstart/GEM_INSTRUCTIONS.md` |
 | Doctor Visit Prep | `pm-lifeadmin` | `pm-lifeadmin/doctor-visit-prep/GEM_INSTRUCTIONS.md` |
@@ -298,6 +302,7 @@
 | Folder Structure Designer | `pm-cowork` | `pm-cowork/folder-structure-designer/GEM_INSTRUCTIONS.md` |
 | Follow-Up Chaser | `pm-cowork` | `pm-cowork/follow-up-chaser/GEM_INSTRUCTIONS.md` |
 | Follow-Up Sequence | `pm-jobsearch` | `pm-jobsearch/follow-up-sequence/GEM_INSTRUCTIONS.md` |
+| Follow-up Sweep (Live) | `pm-cowork-live` | `pm-cowork-live/followup-sweep/GEM_INSTRUCTIONS.md` |
 | Form Filler Operator | `pm-operator` | `pm-operator/form-filler-operator/GEM_INSTRUCTIONS.md` |
 | Formula Detangler | `pm-cowork` | `pm-cowork/formula-detangler/GEM_INSTRUCTIONS.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/GEM_INSTRUCTIONS.md` |
@@ -331,6 +336,7 @@
 | IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/GEM_INSTRUCTIONS.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/GEM_INSTRUCTIONS.md` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/GEM_INSTRUCTIONS.md` |
+| Inbox Triage (Live) | `pm-cowork-live` | `pm-cowork-live/inbox-triage-live/GEM_INSTRUCTIONS.md` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `pm-cowork/inbox-unsubscribe-purge/GEM_INSTRUCTIONS.md` |
 | Inbox Zero Operator | `pm-operator` | `pm-operator/inbox-zero-operator/GEM_INSTRUCTIONS.md` |
 | Incident Postmortem | `pm-engineering` | `pm-engineering/incident-postmortem/GEM_INSTRUCTIONS.md` |
@@ -355,6 +361,7 @@
 | IP Lookup | `pm-live` | `pm-live/ip-lookup/GEM_INSTRUCTIONS.md` |
 | ISO 27001 ISMS | `pm-compliance` | `pm-compliance/iso-27001-isms/GEM_INSTRUCTIONS.md` |
 | ISS Tracker | `pm-live` | `pm-live/iss-tracker/GEM_INSTRUCTIONS.md` |
+| Issue Triage (Live) | `pm-cowork-live` | `pm-cowork-live/issue-triage-live/GEM_INSTRUCTIONS.md` |
 | JD Decoder | `pm-jobsearch` | `pm-jobsearch/jd-decoder/GEM_INSTRUCTIONS.md` |
 | Job Application | `pm-business` | `pm-business/job-application/GEM_INSTRUCTIONS.md` |
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/GEM_INSTRUCTIONS.md` |
@@ -400,6 +407,7 @@
 | Medical Records Request | `pm-lifeadmin` | `pm-lifeadmin/medical-records-request/GEM_INSTRUCTIONS.md` |
 | Meeting Cost Meter | `pm-cowork` | `pm-cowork/meeting-cost-meter/GEM_INSTRUCTIONS.md` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/GEM_INSTRUCTIONS.md` |
+| Meeting Prep (Live) | `pm-cowork-live` | `pm-cowork-live/meeting-prep-live/GEM_INSTRUCTIONS.md` |
 | Meeting Prep Pack | `pm-cowork` | `pm-cowork/meeting-prep-pack/GEM_INSTRUCTIONS.md` |
 | Meeting Room Etiquette | `pm-cowork` | `pm-cowork/meeting-room-etiquette/GEM_INSTRUCTIONS.md` |
 | Messaging Framework | `pm-growth` | `pm-growth/messaging-framework/GEM_INSTRUCTIONS.md` |
@@ -425,6 +433,7 @@
 | Newsletter Writer | `pm-creator` | `pm-creator/newsletter-writer/GEM_INSTRUCTIONS.md` |
 | NotebookLM Connector | `pm-cross` | `pm-cross/notebooklm-connector/GEM_INSTRUCTIONS.md` |
 | Notes Humanizer | `pm-writers` | `pm-writers/notes-humanizer/GEM_INSTRUCTIONS.md` |
+| Notion DB Hygiene (Live) | `pm-cowork-live` | `pm-cowork-live/notion-db-hygiene/GEM_INSTRUCTIONS.md` |
 | Offer Comparison | `pm-calculators` | `pm-calculators/offer-comparison/GEM_INSTRUCTIONS.md` |
 | Offer Letter | `pm-recruiting` | `pm-recruiting/offer-letter/GEM_INSTRUCTIONS.md` |
 | Office Hours Design | `pm-cowork` | `pm-cowork/office-hours-design/GEM_INSTRUCTIONS.md` |
@@ -473,6 +482,7 @@
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/GEM_INSTRUCTIONS.md` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/GEM_INSTRUCTIONS.md` |
 | PR Description | `pm-craft` | `pm-craft/pr-description/GEM_INSTRUCTIONS.md` |
+| PR Description (Live) | `pm-cowork-live` | `pm-cowork-live/pr-description-live/GEM_INSTRUCTIONS.md` |
 | PR Description Writer | `pm-engineering` | `pm-engineering/pr-description-writer/GEM_INSTRUCTIONS.md` |
 | PRD Template | `pm-essentials` | `pm-essentials/prd-template/GEM_INSTRUCTIONS.md` |
 | Premortem Assassin | `pm-warroom` | `pm-warroom/premortem-assassin/GEM_INSTRUCTIONS.md` |
@@ -622,6 +632,7 @@
 | Sourcing Strategy | `pm-recruiting` | `pm-recruiting/sourcing-strategy/GEM_INSTRUCTIONS.md` |
 | Sports Scores | `pm-live` | `pm-live/sports-scores/GEM_INSTRUCTIONS.md` |
 | Spreadsheet Audit | `pm-cowork` | `pm-cowork/spreadsheet-audit/GEM_INSTRUCTIONS.md` |
+| Spreadsheet Audit (Live) | `pm-cowork-live` | `pm-cowork-live/spreadsheet-audit-live/GEM_INSTRUCTIONS.md` |
 | Spreadsheet Handover | `pm-cowork` | `pm-cowork/spreadsheet-handover/GEM_INSTRUCTIONS.md` |
 | Spreadsheet Or Database | `pm-cowork` | `pm-cowork/spreadsheet-or-database/GEM_INSTRUCTIONS.md` |
 | Sprint Brief | `pm-delivery` | `pm-delivery/sprint-brief/GEM_INSTRUCTIONS.md` |
@@ -685,6 +696,7 @@
 | The Visa Interview | `pm-simulators` | `pm-simulators/the-visa-interview/GEM_INSTRUCTIONS.md` |
 | Thesis Outline | `pm-students` | `pm-students/thesis-outline/GEM_INSTRUCTIONS.md` |
 | Thread To Decision | `pm-cowork` | `pm-cowork/thread-to-decision/GEM_INSTRUCTIONS.md` |
+| Thread to Decision (Live) | `pm-cowork-live` | `pm-cowork-live/thread-to-decision-live/GEM_INSTRUCTIONS.md` |
 | Threat Model | `pm-security` | `pm-security/threat-model/GEM_INSTRUCTIONS.md` |
 | Thumbnail Creator Skill (via Gemini) | `pm-writers` | `pm-writers/thumbnail-creator/GEM_INSTRUCTIONS.md` |
 | Timeshare Contract Decoder | `pm-decoders` | `pm-decoders/timeshare-contract-decoder/GEM_INSTRUCTIONS.md` |

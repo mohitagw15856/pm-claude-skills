@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-cowork-live",
+  "version": "1.0.0",
+  "description": "12 Claude Cowork-native skills that act on your real data through connectors and the sandbox — Gmail/Calendar inbox triage, meeting prep and follow-up sweeps; Drive/Docs/Sheets audits, restructures and decks; Notion/Slack decision logs, DB hygiene and async standups; GitHub/Linear issue triage, PR descriptions and changelogs. Each drives real tools and returns an artifact — not a framework you run by hand.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "cowork",
+    "connectors",
+    "gmail",
+    "drive",
+    "notion",
+    "slack",
+    "github",
+    "artifacts"
+  ]
+}

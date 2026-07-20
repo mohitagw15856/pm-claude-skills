@@ -2,7 +2,7 @@
  "spec": "skill-federation/0.1",
  "built": "2026-07-19",
  "libraries": 1,
- "skills": 731,
+ "skills": 743,
  "members": [
   {
    "repo": "mohitagw15856/pm-claude-skills",
@@ -10,7 +10,7 @@
    "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
    "license": "MIT",
    "badge": "https://img.shields.io/endpoint?url=https%3A%2F%2Fpm-skills-mcp.pm-claude-skills.workers.dev%2Fbadge%3Frepo%3Dmohitagw15856%2Fpm-claude-skills",
-   "count": 731,
+   "count": 743,
    "skills": [
     {
      "name": "360-feedback-template",

@@ -9,6 +9,19 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [60.0.0] — Cowork goes live: 12 connector-native skills that act on your real data — 2026-07-20
+
+Where v59's [pm-cowork](plugins/pm-cowork) 100 teach the *frameworks* an AI coworker follows, **[pm-cowork-live](plugins/pm-cowork-live)** (12 skills) *does the work* — each drives Claude Cowork's connectors + sandbox on your **real** data and returns an artifact, rather than being a template you run by hand. **743 skills, 89 bundles.**
+
+### Added — ⚡ [pm-cowork-live](plugins/pm-cowork-live): 12 Claude Cowork-native skills across 4 connector surfaces
+
+- **Gmail + Calendar** — [inbox-triage-live](skills/inbox-triage-live/SKILL.md) (triage the real inbox: label/archive/draft), [meeting-prep-live](skills/meeting-prep-live/SKILL.md) (brief from the real event, attendees, linked docs & last thread), [followup-sweep](skills/followup-sweep/SKILL.md) (find dropped balls in sent/received mail, draft the nudges).
+- **Drive / Docs / Sheets** — [spreadsheet-audit-live](skills/spreadsheet-audit-live/SKILL.md) (open the real file in the sandbox, trace formulas, hunt hardcodes), [doc-restructure-live](skills/doc-restructure-live/SKILL.md) (open the real Doc, restructure to a new copy), [deck-from-doc](skills/deck-from-doc/SKILL.md) (build a real .pptx from a Drive doc).
+- **Notion + Slack** — [thread-to-decision-live](skills/thread-to-decision-live/SKILL.md) (Slack thread → decision record in Notion), [notion-db-hygiene](skills/notion-db-hygiene/SKILL.md) (audit & fix a real database, preview-then-apply), [async-standup-compiler](skills/async-standup-compiler/SKILL.md) (compile the real channel into one digest).
+- **GitHub / Linear** — [issue-triage-live](skills/issue-triage-live/SKILL.md) (label/prioritise/dedupe real issues), [pr-description-live](skills/pr-description-live/SKILL.md) (write the PR body from the real diff), [changelog-from-commits](skills/changelog-from-commits/SKILL.md) (human changelog from the real commit range).
+
+Each skill carries an **Execution (Cowork)** section naming the connector/tool calls, safe-by-default guardrails (draft don't send, preview don't overwrite, escalate the ambiguous), and an artifact output. All L3 / SkillSpec-conformant. A follow-up wave will upgrade the v59 pm-cowork 100 in place with the same connector-native execution.
+
 ## [59.0.0] — the cowork century: 100 skills for the AI-coworker era — 2026-07-19
 
 The library's biggest single bundle and biggest single jump (630 → **730 skills, 88 bundles**): **[pm-cowork](plugins/pm-cowork)** — the office knowledge work an AI coworker actually does, in ten families of ten.
