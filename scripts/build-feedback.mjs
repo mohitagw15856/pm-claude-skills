@@ -27,12 +27,28 @@ const start = hour(new Date(Date.now() - 90 * 864e5));
 const end = hour(new Date());
 const url = `https://${SITE}.goatcounter.com/api/v0/stats/hits?start=${encodeURIComponent(start)}&end=${encodeURIComponent(end)}&limit=200`;
 
-const res = await fetch(url, { headers: { authorization: 'Bearer ' + TOKEN } });
-if (!res.ok) {
-  console.error(`GoatCounter API ${res.status} for ${url}\n${(await res.text()).slice(0, 300)}`);
-  process.exit(1);
+// Best-effort refresh: GoatCounter being down, rate-limiting, or changing the
+// endpoint must NOT break CI — this is a proof-badge refresh, not a build gate.
+// On any non-OK or non-JSON response we warn and leave web/feedback.json as-is,
+// exactly like the no-token path above.
+let res;
+try {
+  res = await fetch(url, { headers: { authorization: 'Bearer ' + TOKEN } });
+} catch (e) {
+  console.warn(`GoatCounter fetch failed (${e.message}) — leaving web/feedback.json unchanged.`);
+  process.exit(0);
 }
-const data = await res.json();
+if (!res.ok) {
+  console.warn(`GoatCounter API ${res.status} for ${url} — leaving web/feedback.json unchanged.\n${(await res.text()).slice(0, 200)}`);
+  process.exit(0);
+}
+let data;
+try {
+  data = await res.json();
+} catch (e) {
+  console.warn(`GoatCounter returned non-JSON (${e.message}) — leaving web/feedback.json unchanged.`);
+  process.exit(0);
+}
 const allHits = data.hits || [];
 const num = (c) => Array.isArray(c) ? (c[0] || 0) : (typeof c === 'number' ? c : 0);
 const count = (h) => num(h.count) || (h.stats || []).reduce((a, s) => a + (s.daily || s.count || 0), 0) || 0;
