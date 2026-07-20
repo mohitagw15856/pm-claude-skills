@@ -18,7 +18,7 @@ const API_URL = 'https://api.anthropic.com/v1/messages';
  * @param {number} [o.retries]   - Retries on timeout / 429 / 5xx (default 2).
  * @returns {Promise<string>}
  */
-export async function complete({ apiKey, model = 'claude-sonnet-4-6', system, messages, maxTokens = 4096, timeoutMs = 120000, retries = 5 }) {
+export async function complete({ apiKey, model = 'claude-sonnet-4-6', system, messages, maxTokens = 4096, timeoutMs = 120000, retries = 5, withUsage = false }) {
   if (!apiKey) throw new Error('Missing Anthropic API key (set ANTHROPIC_API_KEY).');
   let lastErr;
   for (let attempt = 0; attempt <= retries; attempt++) {
@@ -38,7 +38,11 @@ export async function complete({ apiKey, model = 'claude-sonnet-4-6', system, me
       });
       if (res.ok) {
         const data = await res.json();
-        return (data.content || []).map((c) => c.text || '').join('').trim();
+        const text = (data.content || []).map((c) => c.text || '').join('').trim();
+        // withUsage: return the real token accounting (the prove harness runs on
+        // measured usage, never estimates) alongside the text.
+        if (withUsage) return { text, usage: data.usage || {}, model: data.model, stopReason: data.stop_reason };
+        return text;
       }
       const body = await res.text().catch(() => '');
       // Retry transient server / rate-limit / overloaded errors; fail fast on other 4xx.
