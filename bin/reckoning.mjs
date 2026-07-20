@@ -25,12 +25,12 @@ function parse(file) {
   const meta = {};
   if (m) for (const line of m[1].split(/\r?\n/)) { const kv = line.match(/^([\w-]+):\s*(.*)$/); if (kv) meta[kv[1]] = kv[2].trim(); }
   const body = (m ? m[2] : text).trim();
-  // Confidence: frontmatter wins; else "(70%)" in the text.
-  let conf = parseFloat(meta.confidence);
-  if (!conf) { const c = body.match(/\((\d{1,2})\s*%\)/); if (c) conf = parseFloat(c[1]); }
+  // Confidence: frontmatter wins; else "(70%)" or "(100%)" in the text.
+  let conf = meta.confidence !== undefined ? parseFloat(meta.confidence) : NaN;
+  if (!Number.isFinite(conf)) { const c = body.match(/\((\d{1,3})\s*%\)/); if (c) conf = parseFloat(c[1]); }
   return { file, text: body.split('\n')[0].slice(0, 120), status: meta.status || 'pending', by: meta.by || 'you',
     recorded: meta.recorded || file.slice(0, 10), due: meta.due || null, resolved: meta.resolved || null,
-    confidence: conf && conf > 1 && conf < 100 ? conf : null, raw: text };
+    confidence: Number.isFinite(conf) && conf >= 0 && conf <= 100 ? conf : null, raw: text };
 }
 function load() {
   if (!existsSync(DIR)) return [];
