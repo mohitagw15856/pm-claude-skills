@@ -10,7 +10,7 @@
 //
 // Pure Node (system tar only for .tgz). Spec: docs/rfcs/0001-skill-interchange.md
 import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync, cpSync, rmSync } from 'node:fs';
-import { join, dirname, resolve, basename } from 'node:path';
+import { join, dirname, resolve, basename, relative, isAbsolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
 import { execFileSync } from 'node:child_process';
@@ -102,8 +102,10 @@ export function verify(argv, quiet = false) {
   for (const s of m.skills || []) {
     if (seen.has(s.name)) { console.error(`✗ duplicate skill name: ${s.name}`); bad++; continue; }
     seen.add(s.name);
-    const p = resolve(dir, s.path);
-    if (!p.startsWith(resolve(dir))) { console.error(`✗ ${s.name}: path escapes the pack — MUST reject.`); return { code: 1 } ; }
+    const base = resolve(dir);
+    const p = resolve(base, s.path);
+    const rel = relative(base, p);
+    if (!rel || rel.startsWith('..') || isAbsolute(rel)) { console.error(`✗ ${s.name}: path escapes the pack — MUST reject.`); return { code: 1 } ; }
     if (!existsSync(p)) { console.error(`✗ ${s.name}: missing ${s.path}`); bad++; continue; }
     if (m.integrity === 'required') {
       const h = sha256(readFileSync(p));
