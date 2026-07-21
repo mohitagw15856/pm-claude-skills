@@ -17,9 +17,9 @@ const REPO = 'https://github.com/mohitagw15856/pm-claude-skills';
 const PLAY = 'https://mohitagw15856.github.io/pm-claude-skills';
 
 function parseFrontmatter(text) {
-  const m = text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+  const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
   const meta = {};
-  if (m) for (const line of m[1].split('\n')) {
+  if (m) for (const line of m[1].split(/\r?\n/)) {
     const kv = line.match(/^(\w[\w-]*):\s*(.*)$/);
     if (kv) { let v = kv[2].trim(); if (/^["'].*["']$/.test(v)) v = v.slice(1, -1); meta[kv[1]] = v; }
   }

@@ -20,9 +20,9 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const skillsDir = join(root, 'skills');
 
 function parse(md) {
-  const m = md.match(/^---\n([\s\S]*?)\n---/);
+  const m = md.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   const meta = {};
-  if (m) for (const line of m[1].split('\n')) {
+  if (m) for (const line of m[1].split(/\r?\n/)) {
     const mm = line.match(/^(\w+):\s*(.*)$/);
     if (mm) meta[mm[1]] = mm[2].replace(/^["']|["']$/g, '');
   }

@@ -81,7 +81,7 @@ async function validateLive(s) {
     const actual = createHash('sha256').update(text).digest('hex');
     if (actual !== s.sha256.replace(/^sha256:/, '')) errs.push(`${s.name}: INTEGRITY — fetched content does not match the pinned sha256 (expected ${s.sha256.slice(0, 19)}…, got sha256:${actual.slice(0, 12)}…)`);
   }
-  const fm = text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+  const fm = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
   if (!fm) return [`${s.name}: no YAML frontmatter — fails SkillSpec L1`];
   const name = (fm[1].match(/^name:\s*["']?([\w-]+)["']?\s*$/m) || [])[1];
   const desc = (fm[1].match(/^description:/m) || [])[0];

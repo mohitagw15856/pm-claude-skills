@@ -36,7 +36,7 @@ function readSkill(dir, name) {
   const p = join(dir, name, 'SKILL.md');
   if (!existsSync(p)) return null;
   const raw = readFileSync(p, 'utf8');
-  const fm = raw.match(/^---\n([\s\S]*?)\n---/);
+  const fm = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   const block = fm ? fm[1] : '';
   const nm = (block.match(/^name:\s*(.+)$/m) || [])[1];
   const desc = (block.match(/^description:\s*"?([\s\S]*?)"?\s*$/m) || [])[1] || '';

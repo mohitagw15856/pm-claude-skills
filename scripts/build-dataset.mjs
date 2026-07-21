@@ -28,7 +28,7 @@ for (const name of readdirSync(skillsDir).sort()) {
   const f = join(skillsDir, name, 'SKILL.md');
   if (!existsSync(f)) continue;
   const raw = readFileSync(f, 'utf8');
-  const m = raw.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
+  const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
   if (!m) continue;
   const desc = (m[1].match(/^description:\s*["']?([\s\S]*?)["']?\s*$/m) || [])[1] || '';
   skills.push({ name, description: desc.replace(/\s+/g, ' ').trim(), body: m[2].trim() });
