@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-749 skills exported. Copy a `.mdc rule` into the tool to use it.
+750 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -580,6 +580,7 @@
 | Roadmap Presentation | `pm-planning` | `pm-planning/roadmap-presentation/roadmap-presentation.mdc` |
 | ROI Estimator | `pm-calculators` | `pm-calculators/roi-estimator/roi-estimator.mdc` |
 | Role Redesign For AI | `pm-aiwork` | `pm-aiwork/role-redesign-for-ai/role-redesign-for-ai.mdc` |
+| Rollback Plan | `pm-engineering` | `pm-engineering/rollback-plan/rollback-plan.mdc` |
 | RSS Digest | `pm-live` | `pm-live/rss-digest/rss-digest.mdc` |
 | Rubric Builder | `pm-education` | `pm-education/rubric-builder/rubric-builder.mdc` |
 | Runbook Writer | `pm-engineering` | `pm-engineering/runbook-writer/runbook-writer.mdc` |

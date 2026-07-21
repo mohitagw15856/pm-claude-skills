@@ -1,4 +1,4 @@
-# 🗂️ All 749 Skills — full catalog
+# 🗂️ All 750 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -168,7 +168,7 @@
 | **Social Media Audit** (`social-media-audit`) | Audit an existing social media presence across all active platforms. | — |
 | **Viral Content Framework** (`viral-content-framework`) | Build a framework for creating shareable, high-reach social media content. | — |
 
-## 💻 Engineering & AI (82 skills)
+## 💻 Engineering & AI (83 skills)
 
 ### `pm-ai` — 13 skills
 
@@ -209,7 +209,7 @@
 | **Metric Semantic Layer** (`metric-semantic-layer`) | Define a metric in a semantic layer so it means one thing everywhere. | — |
 | **SQL Optimizer** (`sql-optimizer`) | Diagnose a slow SQL query and produce a concrete optimization plan. | — |
 
-### `pm-engineering` — 46 skills · 6 eval-scored
+### `pm-engineering` — 47 skills · 6 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -248,6 +248,7 @@
 | **PR Description Writer** (`pr-description-writer`) | Write a clear, structured pull request description from a git diff, branch summary, or commit list. | — |
 | **Regex Builder & Explainer** (`regex-builder`) | Build a regular expression from a plain-English description, or explain an existing one. | ✅ 4.5/5 |
 | **RFC Writer** (`rfc-writer`) | Write an engineering RFC (Request for Comments) for a technical decision, architectural change, or significant implementation approach. | — |
+| **Rollback Plan** (`rollback-plan`) | Write a concrete rollback plan for a risky change (deploy, migration, feature-flag flip, config rollout) so the reverse is one command away — not… | — |
 | **Runbook Writer** (`runbook-writer`) | Write an operational runbook for a service, incident type, or deployment procedure. | — |
 | **Security Threat Model** (`security-threat-model`) | Write a STRIDE-based threat model for a service or feature. | — |
 | **Service Catalog Entry** (`service-catalog-entry`) | Write a service catalog entry for a microservice or internal platform service — covering service identity, purpose, architecture context, SLAs… | — |
@@ -1227,4 +1228,4 @@
 
 ---
 
-_749 skills across 90 bundles · 28 eval-scored (4%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_750 skills across 90 bundles · 28 eval-scored (4%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

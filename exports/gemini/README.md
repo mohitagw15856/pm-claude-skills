@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-749 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+750 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -580,6 +580,7 @@
 | Roadmap Presentation | `pm-planning` | `pm-planning/roadmap-presentation/GEM_INSTRUCTIONS.md` |
 | ROI Estimator | `pm-calculators` | `pm-calculators/roi-estimator/GEM_INSTRUCTIONS.md` |
 | Role Redesign For AI | `pm-aiwork` | `pm-aiwork/role-redesign-for-ai/GEM_INSTRUCTIONS.md` |
+| Rollback Plan | `pm-engineering` | `pm-engineering/rollback-plan/GEM_INSTRUCTIONS.md` |
 | RSS Digest | `pm-live` | `pm-live/rss-digest/GEM_INSTRUCTIONS.md` |
 | Rubric Builder | `pm-education` | `pm-education/rubric-builder/GEM_INSTRUCTIONS.md` |
 | Runbook Writer | `pm-engineering` | `pm-engineering/runbook-writer/GEM_INSTRUCTIONS.md` |

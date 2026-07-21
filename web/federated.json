@@ -2,7 +2,7 @@
  "spec": "skill-federation/0.1",
  "built": "2026-07-21",
  "libraries": 1,
- "skills": 749,
+ "skills": 750,
  "members": [
   {
    "repo": "mohitagw15856/pm-claude-skills",
@@ -10,7 +10,7 @@
    "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
    "license": "MIT",
    "badge": "https://img.shields.io/endpoint?url=https%3A%2F%2Fpm-skills-mcp.pm-claude-skills.workers.dev%2Fbadge%3Frepo%3Dmohitagw15856%2Fpm-claude-skills",
-   "count": 749,
+   "count": 750,
    "skills": [
     {
      "name": "360-feedback-template",
@@ -2299,6 +2299,10 @@
     {
      "name": "role-redesign-for-ai",
      "description": "Redesign a job role that AI now does a large part of — deliberately, instead of quietly expecting the same headcount to absorb 140% output. Use when AI has changed what a role spends time on, when writing a revised role charter or job description post-AI, when a team asks 'what is my job now', or wh"
+    },
+    {
+     "name": "rollback-plan",
+     "description": "Write a concrete rollback plan for a risky change (deploy, migration, feature-flag flip, config rollout) so the reverse is one command away — not an improvised debate at 2am. Use when asked to write a rollback plan, back-out plan, revert plan, or 'what if we need to undo this'. Produces a rollback p"
     },
     {
      "name": "rss-digest",
