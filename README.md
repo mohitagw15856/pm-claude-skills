@@ -154,7 +154,7 @@ The whole library on one poster — start path, standout features, and install o
 
 ## 🆕 Latest
 
-**v60.0.0 — Cowork goes live:** **[pm-cowork-live](plugins/pm-cowork-live)** — 12 Claude Cowork-*native* skills that act on your **real data** through connectors (Gmail, Calendar, Drive/Docs/Sheets, Notion, Slack, GitHub/Linear) and the sandbox, and return an artifact — inbox triage on the actual inbox, meeting prep from real events, spreadsheet audits that open the file, decision logs to Notion, PR descriptions from the real diff. Where the v59 [pm-cowork](plugins/pm-cowork) 100 teach the *frameworks*, these *do the work*. *Earlier — v59, the cowork century:* [pm-cowork](plugins/pm-cowork), 100 AI-coworker framework skills (630 → 749). Full history: **[CHANGELOG](CHANGELOG.md)** · [releases](https://github.com/mohitagw15856/pm-claude-skills/releases)
+**v61.0.0 — the trust layer:** two CLI tools — **[prove](CHANGELOG.md)** (A/B-verify any skill with real token counts, sha-pinned receipt) and **mcp-audit** (measure the token rent your MCP servers charge) — plus **[pm-seatbelt](plugins/pm-seatbelt)** (6 agent-safety pre-flight skills), **[RFC 0002 HANDOFF.md](docs/rfcs/0002-agent-handoff-file.md)** (session memory as a file, not a server), and the [Cowork](https://mohitagw15856.github.io/pm-claude-skills/cowork.html) + cross-tool [AI Spend](https://mohitagw15856.github.io/pm-claude-skills/spend.html) pages. *Earlier — v60, Cowork goes live:* [pm-cowork-live](plugins/pm-cowork-live), 12 connector-native skills that act on your real data. Full history: **[CHANGELOG](CHANGELOG.md)** · [releases](https://github.com/mohitagw15856/pm-claude-skills/releases)
 
 ## 🤝 Contributing
 

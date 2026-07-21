@@ -9,6 +9,30 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [61.0.0] — the trust layer: prove your skill, audit your MCP rent, buckle the seatbelt — 2026-07-21
+
+Six fronts on the problems the ecosystem hand-waves — verification, MCP overhead, agent safety, session memory, Cowork distribution, and cross-tool spend. 743 → **749 skills, 90 bundles**, plus two new CLI tools.
+
+### Added — 🔬 prove: paired A/B skill verification (`bin/prove.mjs`)
+- `pm-claude-skills prove --skill <dir> --tasks <file>` runs the same tasks with the skill **on vs off**, taking token counts from the API's real `usage` fields — never estimates. Optional `--judge` adds a blind, order-shuffled quality comparison; `--runs N` tightens variance; `--dry-run` prints the plan and call count while spending nothing.
+- The receipt is JSON, pins the skill's **sha256**, and carries honesty caveats (single-run variance, output-tokens-aren't-quality). Prints a ready-to-paste README badge. The honest-broker harness for a space full of unmeasured "65% better!" claims.
+
+### Added — 🏠 mcp-audit: measure the rent your MCP servers charge (`bin/mcp-audit.mjs`)
+- Reads `~/.claude.json` + `./.mcp.json`, scans `~/.claude/projects/**.jsonl` for real `mcp__server__` usage → last-used dates, and with `--connect` speaks actual MCP (initialize + tools/list) to each stdio server to count the schema tokens that ride **every message**. Output: "disconnect these three, save X tokens per message." Your MCP servers are charging you rent; this is the meter.
+
+### Added — 🛡 [pm-seatbelt](plugins/pm-seatbelt): 6 agent-safety pre-flight skills
+- **email-agent-preflight** (read≠send tiers, injection-in-body, the send-gate wall) · **browser-agent-preflight** (isolate the profile, page-content-as-untrusted, action gates) · **file-access-preflight** (scope boundary, secrets sweep, path-traversal guard) · **injection-spotter** (the four payloads — override/exfiltration/action/deception — quoted from the content) · **tool-permission-review** (blast-radius inventory, least-privilege, the dangerous-combination flags) · **blast-radius-drill** (assume total compromise, then bound it). The seatbelts you fasten before an agent touches the real world.
+
+### Added — 🤝 RFC 0002: HANDOFF.md — a session-handoff convention
+- [docs/rfcs/0002-agent-handoff-file.md](docs/rfcs/0002-agent-handoff-file.md): a dead-simple `HANDOFF.md` file + convention (five fixed sections, a machine-readable marker) that survives tool churn because it's markdown, not a server — zero per-turn token cost, portable across Claude Code / Codex / Cursor. Reference [hooks](hooks/) (`handoff-read.sh` on SessionStart, `handoff-write.sh` on SessionEnd) make it automatic. Builds on the [session-handoff skill](skills/session-handoff/SKILL.md). *Your agent, but it remembers Monday.*
+
+### Added — 🌐 web: Cowork landing + cross-tool AI Spend
+- **[cowork.html](https://mohitagw15856.github.io/pm-claude-skills/cowork.html)** — the definitive-library landing for Claude Cowork: the 100-skill framework library + the 12 connector-native live skills, with the describe-your-mess adoption guide.
+- **[spend.html](https://mohitagw15856.github.io/pm-claude-skills/spend.html)** — every agent's cost in one meter: paste Claude Code JSONL (real usage fields), any tool's CSV, and flat-subscription meters → one number, all in-browser. Crowded on the Claude-only side (ccusage); this is the cross-tool view.
+
+### Changed
+- README: the 🔬 "Prove it, and stop paying rent" section (prove + mcp-audit + seatbelt + the handoff RFC). `complete()` in the API lib gained an opt-in `withUsage` return so prove runs on measured tokens.
+
 ## [60.0.0] — Cowork goes live: 12 connector-native skills that act on your real data — 2026-07-20
 
 Where v59's [pm-cowork](plugins/pm-cowork) 100 teach the *frameworks* an AI coworker follows, **[pm-cowork-live](plugins/pm-cowork-live)** (12 skills) *does the work* — each drives Claude Cowork's connectors + sandbox on your **real** data and returns an artifact, rather than being a template you run by hand. **743 skills, 89 bundles.**
@@ -1000,6 +1024,8 @@ Earlier releases (v1.0.0 – v5.0.0) predate this changelog. See the
 library grew from the first PM toolkit to 100+ skills.
 
 [Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v55.0.0...HEAD
+[61.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v60.0.0...v61.0.0
+[60.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v59.0.0...v60.0.0
 [59.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v58.0.0...v59.0.0
 [58.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v57.0.0...v58.0.0
 [57.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v56.0.0...v57.0.0
