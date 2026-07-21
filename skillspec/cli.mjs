@@ -40,6 +40,16 @@ const BANNED = [
 ];
 const CURL_REVIEW = /curl\s+-?[a-z]*\s*https?:\/\/(?!localhost|127\.0\.0\.1|raw\.githubusercontent|github\.com|docs\.)/i;
 
+// Security-education skills legitimately quote the attack phrases the BANNED rules
+// match — they document injection so agents can spot it. Human-audited exception,
+// mirroring scripts/skill-audit.mjs ALLOWLIST. The security scan is skipped for these
+// names only; every other skill is still scanned.
+const SECURITY_ALLOWLIST = new Set([
+  'skill-security-auditor', 'llm-guardrails-spec', 'skill-vetting',
+  'injection-spotter', 'email-agent-preflight', 'browser-agent-preflight',
+  'file-access-preflight', 'tool-permission-review', 'blast-radius-drill',
+]);
+
 // Advisory feed — extra security patterns published after release (CVE-style).
 // JSON shape: { advisories: [{ id, pattern, flags?, why, severity: "error"|"warn" }] }
 const ADVISORIES = [];
@@ -106,9 +116,11 @@ function check(file) {
   const l3 = l2 && /##\s*Quality Checks/i.test(body) && /##\s*Anti-Patterns/i.test(body);
   if (l2 && !l3) warnings.push('missing "Quality Checks" and/or "Anti-Patterns" — stops at L2');
 
-  // Security scan (any level).
-  for (const [re, why] of BANNED) if (re.test(text)) errors.push(`SECURITY — ${why}`);
-  for (const [re, why, isError] of ADVISORIES) if (re.test(text)) (isError ? errors : warnings).push(`ADVISORY — ${why}`);
+  // Security scan (any level) — skipped for the human-audited security-education skills.
+  if (!SECURITY_ALLOWLIST.has(meta.name)) {
+    for (const [re, why] of BANNED) if (re.test(text)) errors.push(`SECURITY — ${why}`);
+    for (const [re, why, isError] of ADVISORIES) if (re.test(text)) (isError ? errors : warnings).push(`ADVISORY — ${why}`);
+  }
   if (CURL_REVIEW.test(text)) warnings.push('contains a curl to an external URL — fine in docs/examples; review that it is not an instruction to exfiltrate');
 
   // Hygiene.

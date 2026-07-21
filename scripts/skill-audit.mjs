@@ -91,7 +91,11 @@ function walk(dir, exts, out) {
 // Skills whose job is to *document* attack patterns (so they legitimately contain
 // the phrases the rules look for — e.g. a threat model listing "jailbreak" or a rule
 // to "never reveal the system prompt"). Audited by humans, skipped by the scanner.
-const ALLOWLIST = new Set(['skill-security-auditor', 'llm-guardrails-spec']);
+// pm-seatbelt skills teach agent safety, so they quote the very injection/override
+// phrases the rules match — they are the human-audited exception, not a violation.
+const ALLOWLIST = new Set(['skill-security-auditor', 'llm-guardrails-spec',
+  'injection-spotter', 'email-agent-preflight', 'browser-agent-preflight',
+  'file-access-preflight', 'tool-permission-review', 'blast-radius-drill']);
 
 const findings = [];
 if (existsSync(skillsDir)) {
