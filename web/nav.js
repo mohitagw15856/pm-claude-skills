@@ -52,6 +52,7 @@
   // stays short. To add/move a tool, edit this list only.
   var NAV = [
     { href: 'index.html', label: '▶ Playground' },
+    { href: 'find.html', label: '🔎 Find a skill' },
     { href: 'daily.html', label: '🔥 Daily' },
     { href: 'galaxy3d.html', label: '🌌 Galaxy 3D' },
     // Intent-based groups: what do you want to DO right now?

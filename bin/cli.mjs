@@ -252,6 +252,70 @@ function list() {
   console.log(`\n${STAR}`);
 }
 
+// --- `find` — natural-language task→skill router -----------------------------
+// Unlike `search` (a substring AND-filter that returns nothing for a real sentence),
+// `find` tokenizes a task, drops stopwords, and RANKS every skill by term overlap
+// against title+description, nudged by tier and (existing) eval score. No API/network.
+const FIND_STOP = new Set(('a an the of to in on or and for with your you i we my our need want help me please how do can could make write create build draft produce prepare prep get set run use using when asked into that this from each will able about more also not no is are be as at any one it its their them they then over same first start new mine give me').split(/\s+/));
+const findTokens = (s) => (String(s).toLowerCase().match(/[a-z0-9]+/g) || []).filter((w) => w.length > 2 && !FIND_STOP.has(w));
+// Present the eval field honestly — a real measured score or an explicit "no claim",
+// never an invented number. Mirrors the badge shown on the web catalog.
+function evalBadge(ev) {
+  if (ev && typeof ev.score === 'number') return `✅ measured ${ev.score}/5${ev.runs ? ` · ${ev.runs} run${ev.runs > 1 ? 's' : ''}` : ''}`;
+  return '· unmeasured (no claim)';
+}
+// Prefer the rich catalog (title/tier/eval) if it's been built; else the lean index.
+function catalogForFind() {
+  const cat = join(PKG_ROOT, 'web', 'skills.json');
+  if (existsSync(cat)) {
+    try {
+      const j = JSON.parse(readFileSync(cat, 'utf8'));
+      const a = Array.isArray(j) ? j : j.skills;
+      if (Array.isArray(a) && a.length) return a;
+    } catch { /* fall through */ }
+  }
+  return readSkillIndex().map((s) => ({ ...s, title: s.name, tier: 'stable', eval: null, plugin: null }));
+}
+function find(opts) {
+  const query = opts._.slice(1).join(' ').trim();
+  if (!query) { console.error('Usage: pm-claude-skills find "<describe your task>" [--limit N] [--json]'); process.exit(2); }
+  const qset = new Set(findTokens(query));
+  if (!qset.size) { console.error('Nothing to search on — add a few descriptive words.'); process.exit(2); }
+  const TIER_BOOST = { production: 1.15, stable: 1, experimental: 0.9 };
+  const ql = query.toLowerCase();
+  const scored = catalogForFind().map((s) => {
+    const titleSet = new Set(findTokens(`${s.title || s.name} ${s.name}`));
+    const hset = new Set([...titleSet, ...findTokens(s.description || '')]);
+    let overlap = 0, titleHits = 0;
+    for (const t of qset) { if (hset.has(t)) overlap++; if (titleSet.has(t)) titleHits++; }
+    const phrase = (s.description || '').toLowerCase().includes(ql) ? 2 : 0;
+    let score = (overlap + titleHits * 1.5 + phrase) * (TIER_BOOST[s.tier] || 1);
+    if (s.eval && typeof s.eval.score === 'number') score += (s.eval.score - 4) * 0.15; // gentle nudge for measured-good
+    return { s, score, overlap };
+  }).filter((r) => r.overlap > 0).sort((a, b) => b.score - a.score || a.s.name.localeCompare(b.s.name));
+
+  let limit = 8;
+  if (opts.limit != null) {
+    const n = Number(opts.limit);
+    if (!Number.isInteger(n) || n < 1) { console.error(`Error: --limit must be a positive integer (got "${opts.limit}").`); process.exit(2); }
+    limit = n;
+  }
+  const top = scored.slice(0, limit);
+  if (opts.json) {
+    console.log(JSON.stringify(top.map((r) => ({ name: r.s.name, title: r.s.title, plugin: r.s.plugin, tier: r.s.tier, eval: r.s.eval, score: Math.round(r.score * 100) / 100 })), null, 2));
+    return;
+  }
+  if (!top.length) { console.log(`No skill matched "${query}". Try fewer or different words, or: npx pm-claude-skills list`); return; }
+  console.log(`\nTop ${top.length} skill${top.length > 1 ? 's' : ''} for: "${query}"\n`);
+  top.forEach((r, i) => {
+    const s = r.s;
+    console.log(`  ${String(i + 1).padStart(2)}. ${s.name}${s.plugin && s.plugin !== 'other' ? `  (${s.plugin})` : ''}`);
+    console.log(`      ${(s.summary || s.description || '').slice(0, 104)}`);
+    console.log(`      ${s.tier || 'stable'} · ${evalBadge(s.eval)}`);
+  });
+  console.log(`\nRun one:  npx pm-claude-skills run ${top[0].s.name} --text "…"\n`);
+}
+
 const HELP = `pm-claude-skills — install professional Agent Skills into any AI coding tool.
 
 👋 New here? Two fast ways to start:
@@ -262,6 +326,7 @@ const HELP = `pm-claude-skills — install professional Agent Skills into any AI
 Usage:
   npx pm-claude-skills add --agent <claude|hermes|codex|openclaw|cursor|windsurf|aider> [--target <path>] [--link] [--dry-run]
   npx pm-claude-skills run <skill> [--text "…" | --input <file>] [--model <m>] [--out <file>]
+  npx pm-claude-skills find "<describe your task>" [--json] [--limit <n>]   # ranked task→skill router (start here)
   npx pm-claude-skills search [query…] [--json] [--limit <n>]
   npx pm-claude-skills install <owner/repo>   # install skills from ANY GitHub repo — security-scanned + SkillSpec-graded
   npx pm-claude-skills prove --skill <dir> --tasks <file>  # A/B-verify a skill: on vs off, real token counts\n  npx pm-claude-skills mcp-audit [--connect]        # your MCP servers are charging you rent - measure it
@@ -285,7 +350,8 @@ Examples:
   npx pm-claude-skills add --agent windsurf   # .md rules into ./.windsurf/rules
   npx pm-claude-skills add --agent codex --link
 
-  npx pm-claude-skills search board            # find skills by name/description
+  npx pm-claude-skills find "prep a QBR for an at-risk account"   # describe the task, get ranked skills + a measured/unmeasured badge
+  npx pm-claude-skills search board            # exact keyword filter by name/description
   npx pm-claude-skills search launch --json    # machine-readable (Raycast/Alfred/scripts)
 
   npx pm-claude-skills run prd-template --text "a referral program for B2B users"   # run a skill (needs ANTHROPIC_API_KEY)
@@ -303,6 +369,7 @@ if (opts.version) console.log(VERSION);
 else if (!cmd || cmd === 'help' || (opts.help && !['run', 'generate', 'install', 'chain', 'init', 'reckoning', 'council', 'migrate'].includes(cmd))) console.log(HELP);
 else if (cmd === 'list') list();
 else if (cmd === 'search') search(opts);
+else if (cmd === 'find') find(opts);
 else if (cmd === 'add') add(opts);
 else if (cmd === 'migrate') {
   const { run } = await import('./migrate.mjs');

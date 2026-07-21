@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Find a skill — describe your task, get the right one</title>
+<meta name="description" content="750+ Agent Skills is a lot to scroll. Describe what you're trying to do and get the ranked skills that fit — each stamped with whether it's been measured or is an honest 'no claim'. Runs entirely in your browser." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .fn-wrap { max-width: 820px; margin: 0 auto; padding: 16px 22px 70px; }
+  .fn-lead { color: var(--muted); font-size: 15px; }
+  .fn-box { position: sticky; top: 8px; z-index: 5; background: var(--bg, #0d1117); padding: 10px 0 6px; }
+  .fn-box input { width: 100%; box-sizing: border-box; padding: 13px 15px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-size: 16px; }
+  .fn-ex { margin: 8px 0 2px; display: flex; gap: 6px; flex-wrap: wrap; }
+  .fn-ex button { background: transparent; color: var(--muted); border: 1px solid var(--border); border-radius: 14px; padding: 4px 11px; font-size: 12px; cursor: pointer; }
+  .fn-ex button:hover { color: var(--text); border-color: var(--accent, #d97757); }
+  .hit { border: 1px solid var(--border); border-radius: 12px; padding: 13px 15px; background: var(--panel); margin: 10px 0; }
+  .hit h3 { margin: 0 0 3px; font-size: 15px; }
+  .hit h3 a { color: var(--text); text-decoration: none; }
+  .hit h3 a:hover { color: var(--accent, #d97757); }
+  .hit p { margin: 0 0 8px; font-size: 13px; color: var(--muted); line-height: 1.45; }
+  .meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 11.5px; }
+  .pill { display: inline-block; padding: 2px 9px; border: 1px solid var(--border); border-radius: 11px; color: var(--muted); }
+  .pill.plugin { color: var(--text); }
+  .pill.production { border-color: #3fb950; color: #3fb950; }
+  .pill.experimental { border-color: #d29922; color: #d29922; }
+  .badge-measured { color: #3fb950; }
+  .badge-none { color: var(--muted); }
+  .run { font-family: ui-monospace, monospace; font-size: 11.5px; color: var(--muted); margin-left: auto; }
+  .empty { color: var(--muted); font-size: 14px; padding: 24px 0; text-align: center; }
+  .why { border: 1px solid var(--border); border-left: 3px solid #3fb950; border-radius: 0 12px 12px 0; padding: 11px 15px; margin: 14px 0; background: var(--panel); font-size: 12.5px; color: var(--muted); }
+  .count { font-size: 12px; color: var(--muted); margin: 6px 2px; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="PM Skills" class="brand-logo" />
+    <div class="brand-text"><h1>Find a skill</h1><p class="tagline">Describe the task. Get the right one.</p></div>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<div class="fn-wrap">
+  <p class="fn-lead">There are <strong id="total">hundreds of</strong> skills — too many to scroll. Say what you're trying to do in plain words; this ranks the ones that fit. Each result shows whether it's been <strong>measured</strong> (a real eval score) or carries <strong>no claim</strong> — never an invented number. All matching runs in your browser.</p>
+
+  <div class="fn-box">
+    <input id="q" type="search" placeholder="e.g. prep a QBR for an at-risk account" autofocus autocomplete="off" />
+    <div class="fn-ex" id="examples"></div>
+  </div>
+
+  <div class="count" id="count"></div>
+  <div id="results"></div>
+
+  <div class="why">
+    <strong>How the ranking works.</strong> Deterministic term-overlap between your words and each skill's title + description, weighted toward title matches and nudged by tier and any measured eval score. No model, no network call, no tracking — the whole catalog ships as one JSON file and the matching is the JavaScript on this page. Want it in your terminal? <code>npx pm-claude-skills find "your task"</code>.
+  </div>
+</div>
+
+<script src="nav.js"></script>
+<script>
+const STOP = new Set(('a an the of to in on or and for with your you i we my our need want help me please how do can could make write create build draft produce prepare prep get set run use using when asked into that this from each will able about more also not no is are be as at any one it its their them they then over same first start new mine give').split(/\s+/));
+const tok = (s) => (String(s || '').toLowerCase().match(/[a-z0-9]+/g) || []).filter((w) => w.length > 2 && !STOP.has(w));
+const TIER_BOOST = { production: 1.15, stable: 1, experimental: 0.9 };
+const EXAMPLES = ['prep a QBR for an at-risk account', 'write a product launch announcement', 'plan an A/B test', 'turn messy notes into a PRD', 'draft a difficult performance review', 'decode a SAFE note'];
+let SKILLS = [];
+
+function badge(ev) {
+  if (ev && typeof ev.score === 'number') return `<span class="badge-measured">✅ measured ${ev.score}/5${ev.runs ? ` · ${ev.runs} run${ev.runs > 1 ? 's' : ''}` : ''}</span>`;
+  return `<span class="badge-none">· unmeasured (no claim)</span>`;
+}
+
+function rank(query) {
+  const qset = new Set(tok(query));
+  if (!qset.size) return [];
+  const ql = query.toLowerCase();
+  return SKILLS.map((s) => {
+    const titleSet = new Set(tok(`${s.title || s.name} ${s.name}`));
+    const hset = new Set([...titleSet, ...tok(s.description)]);
+    let overlap = 0, titleHits = 0;
+    for (const t of qset) { if (hset.has(t)) overlap++; if (titleSet.has(t)) titleHits++; }
+    const phrase = (s.description || '').toLowerCase().includes(ql) ? 2 : 0;
+    let score = (overlap + titleHits * 1.5 + phrase) * (TIER_BOOST[s.tier] || 1);
+    if (s.eval && typeof s.eval.score === 'number') score += (s.eval.score - 4) * 0.15;
+    return { s, score, overlap };
+  }).filter((r) => r.overlap > 0).sort((a, b) => b.score - a.score || a.s.name.localeCompare(b.s.name)).slice(0, 12);
+}
+
+function render(query) {
+  const box = document.getElementById('results');
+  const cnt = document.getElementById('count');
+  if (!query.trim()) { box.innerHTML = ''; cnt.textContent = ''; return; }
+  const hits = rank(query);
+  if (!hits.length) { box.innerHTML = `<div class="empty">No skill matched “${query}”. Try fewer or different words.</div>`; cnt.textContent = ''; return; }
+  cnt.textContent = `${hits.length} match${hits.length > 1 ? 'es' : ''}, best first`;
+  box.innerHTML = hits.map(({ s }) => {
+    const tierPill = s.tier && s.tier !== 'stable' ? `<span class="pill ${s.tier}">${s.tier}</span>` : `<span class="pill">stable</span>`;
+    const plug = s.plugin && s.plugin !== 'other' ? `<span class="pill plugin">${s.plugin}</span>` : '';
+    return `<div class="hit">
+      <h3><a href="index.html?skill=${encodeURIComponent(s.name)}">${s.title || s.name}</a></h3>
+      <p>${(s.summary || s.description || '').slice(0, 180)}</p>
+      <div class="meta">${tierPill}${plug}${badge(s.eval)}<span class="run">npx pm-claude-skills run ${s.name}</span></div>
+    </div>`;
+  }).join('');
+}
+
+fetch('skills.json').then((r) => r.json()).then((j) => {
+  SKILLS = Array.isArray(j) ? j : (j.skills || []);
+  document.getElementById('total').textContent = SKILLS.length.toLocaleString();
+  const inp = document.getElementById('q');
+  const ex = document.getElementById('examples');
+  ex.innerHTML = EXAMPLES.map((e) => `<button>${e}</button>`).join('');
+  ex.querySelectorAll('button').forEach((b) => b.onclick = () => { inp.value = b.textContent; render(inp.value); inp.focus(); });
+  inp.addEventListener('input', () => render(inp.value));
+  // Deep-link support: /find.html?q=...
+  const q0 = new URLSearchParams(location.search).get('q');
+  if (q0) { inp.value = q0; render(q0); }
+}).catch(() => { document.getElementById('results').innerHTML = '<div class="empty">Could not load the catalog.</div>'; });
+</script>
+</body>
+</html>
