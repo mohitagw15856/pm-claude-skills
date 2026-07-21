@@ -8,18 +8,30 @@ import { execSync } from 'node:child_process';
 
 const PREFIX = 'com.pm-skills.';
 
+// XML-escape a value going into a plist <string>…</string> node. Without this,
+// a cwd or arg containing &, <, >, or a quote produces a malformed plist and
+// launchctl load fails silently.
+const xml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
+
+// POSIX-shell-quote a value going into a crontab line. Single-quotes are
+// literal in bash; embedded single quotes need the '\'' trick. JSON.stringify
+// produces double-quoted strings, where $var, `cmd`, and \ are still expanded.
+const sh = (s) => `'${String(s).replace(/'/g, "'\\''")}'`;
+
 export function install(name, argvArray, { hour = 5, minute = 30, cron = null } = {}) {
   if (platform() === 'darwin') {
     const label = PREFIX + name;
+    const cwd = process.cwd();
+    const logPath = join(cwd, '.pm-skills', name + '.log');
     const plist = `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0"><dict>
-  <key>Label</key><string>${label}</string>
-  <key>ProgramArguments</key><array>${argvArray.map((a) => `<string>${a}</string>`).join('')}</array>
+  <key>Label</key><string>${xml(label)}</string>
+  <key>ProgramArguments</key><array>${argvArray.map((a) => `<string>${xml(a)}</string>`).join('')}</array>
   <key>StartCalendarInterval</key><dict><key>Hour</key><integer>${hour}</integer><key>Minute</key><integer>${minute}</integer></dict>
-  <key>WorkingDirectory</key><string>${process.cwd()}</string>
-  <key>StandardOutPath</key><string>${join(process.cwd(), '.pm-skills', name + '.log')}</string>
-  <key>StandardErrorPath</key><string>${join(process.cwd(), '.pm-skills', name + '.log')}</string>
+  <key>WorkingDirectory</key><string>${xml(cwd)}</string>
+  <key>StandardOutPath</key><string>${xml(logPath)}</string>
+  <key>StandardErrorPath</key><string>${xml(logPath)}</string>
 </dict></plist>`;
     const p = join(homedir(), 'Library', 'LaunchAgents', label + '.plist');
     writeFileSync(p, plist);
@@ -28,7 +40,7 @@ export function install(name, argvArray, { hour = 5, minute = 30, cron = null } 
     return { kind: 'launchd', path: p, when: `daily ${String(hour).padStart(2, '0')}:${String(minute).padStart(2, '0')}` };
   }
   // Linux: append a labeled crontab line.
-  const line = `${cron || `${minute} ${hour} * * *`} cd ${process.cwd()} && ${argvArray.map((a) => JSON.stringify(a)).join(' ')} >> .pm-skills/${name}.log 2>&1 # ${PREFIX}${name}`;
+  const line = `${cron || `${minute} ${hour} * * *`} cd ${sh(process.cwd())} && ${argvArray.map(sh).join(' ')} >> .pm-skills/${name}.log 2>&1 # ${PREFIX}${name}`;
   const current = (() => { try { return execSync('crontab -l').toString(); } catch { return ''; } })();
   const cleaned = current.split('\n').filter((l) => !l.includes(`# ${PREFIX}${name}`)).join('\n').trim();
   execSync('crontab -', { input: cleaned + '\n' + line + '\n' });
