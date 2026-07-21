@@ -9,6 +9,7 @@ loadout. Switch with `/output-style` in Claude Code, or install them with the sk
 | `Growth Marketer` | Funnel & experiment driven | positioning, GTM, content, A/B tests |
 | `Solo Founder` | Ruthless prioritisation, leverage | prioritisation, positioning, ops |
 | `Product Leader` | Outcome-oriented, crisp comms | PRDs, OKRs, roadmap, stakeholder comms |
+| `Plain & Honest Prose` | Plain, concrete, no AI tells, no faked specificity | any writing task — the house prose voice ([`docs/prose-style.md`](../docs/prose-style.md)) |
 
 ## Install
 
