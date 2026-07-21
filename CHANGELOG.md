@@ -9,6 +9,29 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [61.1.0] — the demand side: find the right skill, trust the badge, adopt the spec — 2026-07-21
+
+Four systems that turn a 750-skill factory into something a person can actually navigate and trust. **750 skills, 90 bundles** — no new wave, all depth.
+
+### Added — 🔎 find: a natural-language task→skill router
+- `pm-claude-skills find "prep a QBR for an at-risk account"` ranks the whole catalog by term overlap (title-weighted, tier-nudged), where the old substring `search` returned nothing for a real sentence. `--json` for the bot/tooling.
+- **[find.html](https://mohitagw15856.github.io/pm-claude-skills/find.html)** runs the same ranking client-side over `skills.json` — no API, no network, nothing leaves the browser. Wired into the nav and sitemap.
+
+### Added — ✅ honest per-skill quality badge
+- Every result (CLI and web) carries a real **measured** eval score from `evals/results.json` — or an explicit **"unmeasured (no claim)"**. Never an invented number. The honest-broker stance, made visible per skill.
+
+### Added — 🕓 per-skill versioning + auto changelog
+- Optional `version:` frontmatter (semver), surfaced in the catalog and documented in the authoring standard.
+- `scripts/build-skill-changelog.mjs` derives a per-skill history (date · subject · sha) from git into `web/skill-changelog.json`; `pm-claude-skills changelog <skill>` reads it. No hand-maintained changelogs — the history is a pure function of git.
+
+### Added — 🏅 SkillSpec as an adoptable standard
+- `skillspec-check --badge` emits a shields.io endpoint object (minimum level across all skills + count) that **any** repo earns from its own CI — recomputed every run, so it can't drift from reality.
+- **[conformance/REGISTRY.md](conformance/REGISTRY.md)** + `registry.json` + `verify-registry.mjs`: a public registry of conformant skill repos, structurally gated in CI, seeded with this repo (`L3 · 750`) and dogfooded via a live README endpoint badge.
+
+### Fixed
+- CRLF-fragile frontmatter parsing carried to completion across six more scripts (`check-registry`, `gen-eval-cases`, `build-localized-landing`, `skill-of-the-week`, `build-dataset`, `build-samples`) — Windows-authored `SKILL.md` files no longer silently parse to nothing. Extends @thejesh23's fixes (#177, #194).
+- Morning Show weekly-newsletter workflow now opens a PR instead of pushing to a protected `main`.
+
 ## [61.0.0] — the trust layer: prove your skill, audit your MCP rent, buckle the seatbelt — 2026-07-21
 
 Six fronts on the problems the ecosystem hand-waves — verification, MCP overhead, agent safety, session memory, Cowork distribution, and cross-tool spend. 743 → **749 skills, 90 bundles**, plus two new CLI tools.
@@ -1023,7 +1046,8 @@ Earlier releases (v1.0.0 – v5.0.0) predate this changelog. See the
 [article series](README.md#-the-article-series) for the full history of how the
 library grew from the first PM toolkit to 100+ skills.
 
-[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v55.0.0...HEAD
+[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.1.0...HEAD
+[61.1.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.0.0...v61.1.0
 [61.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v60.0.0...v61.0.0
 [60.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v59.0.0...v60.0.0
 [59.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v58.0.0...v59.0.0
