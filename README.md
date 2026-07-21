@@ -1,4 +1,4 @@
-# 🧠 PM Skills — 743 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
+# 🧠 PM Skills — 749 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
 
 [![In the official Anthropic plugin directory](https://img.shields.io/badge/Anthropic%20Plugin%20Directory-Published-D97757?logo=anthropic&logoColor=white)](#-quick-start)
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
@@ -11,7 +11,7 @@
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4)](https://github.com/sponsors/mohitagw15856)
 
-**A library of 743 skills — each one a plain `SKILL.md` file that teaches your AI assistant to do one professional task properly.** Decode a lease before you sign it. Write a PRD your team can execute. Simulate the promotion committee before the real one meets. Check the weather with zero API keys. Generic AI gives you filler; these give you the structure a senior professional actually uses.
+**A library of 749 skills — each one a plain `SKILL.md` file that teaches your AI assistant to do one professional task properly.** Decode a lease before you sign it. Write a PRD your team can execute. Simulate the promotion committee before the real one meets. Check the weather with zero API keys. Generic AI gives you filler; these give you the structure a senior professional actually uses.
 
 Works natively in **Claude Code** and **Hermes Agent**, with ready-to-paste exports for **ChatGPT, Gemini, Cursor, Codex** and 8 more tools. *(PM stands for Professional, not just Product Management.)*
 
@@ -29,7 +29,7 @@ No `npm install` needed — `npx pm-claude-skills …` always runs the latest. `
 
 ## 📚 The skills
 
-Every skill follows the same discipline: what it produces, the inputs it needs, a real framework (severity scales, decision rules — not vibes), a concrete output template, quality checks, and anti-patterns. All 743 pass the [SkillSpec](SKILLSPEC.md) L3 gate and a security audit in CI.
+Every skill follows the same discipline: what it produces, the inputs it needs, a real framework (severity scales, decision rules — not vibes), a concrete output template, quality checks, and anti-patterns. All 749 pass the [SkillSpec](SKILLSPEC.md) L3 gate and a security audit in CI.
 
 ### For everyone — life's paperwork and decisions
 
@@ -54,7 +54,7 @@ Every skill follows the same discipline: what it produces, the inputs it needs, 
 | 🎨 [Design & UX](plugins/pm-design/) | ⚖️ [Legal](plugins/pm-legal/) | 💰 [Finance](plugins/pm-finance/) |
 | 🚀 [Founders](plugins/pm-founders/) | 🔐 [Security](plugins/pm-security/) | 🏛 [Government](plugins/pm-gov/) |
 
-…plus HR, sales, operations, research, healthcare, educators, writers, social media, and more — **[the full profession index](SKILLS.md)**, or by bundle in [`plugins/`](plugins/) (89 bundles). Install any bundle: `/plugin install pm-decoders@pm-skills`.
+…plus HR, sales, operations, research, healthcare, educators, writers, social media, and more — **[the full profession index](SKILLS.md)**, or by bundle in [`plugins/`](plugins/) (90 bundles). Install any bundle: `/plugin install pm-decoders@pm-skills`.
 
 ### Meta
 
@@ -108,6 +108,25 @@ The **[pm-cowork](plugins/pm-cowork)** bundle is 100 skills for the office work 
 
 **Three habits that compound:** (1) **The weekly review is the keystone** — it feeds [task-triage-matrix](skills/task-triage-matrix/SKILL.md), [deep-work-blocking](skills/deep-work-blocking/SKILL.md), and [personal-wip-limits](skills/personal-wip-limits/SKILL.md) automatically. (2) **The skills chain on purpose** — email-to-tasks feeds the task triage; the meeting audit feeds async-instead; delegation-brief hands off what the triage says to shed — follow the links inside each skill. (3) **Teams adopt one norm at a time** — start with [agenda-or-cancel](skills/agenda-or-cancel/SKILL.md) or [working-agreements](skills/working-agreements/SKILL.md), let it stick, then add the next; the ten-norms-on-Monday rollout is how none of them survive.
 
+## 🔬 Prove it, and stop paying rent
+
+Two CLI tools for the trust-and-cost problems the ecosystem keeps hand-waving — both keyless-to-inspect, both one command:
+
+```bash
+# Does your skill actually work? Prove it. Paired A/B — skill on vs off, same tasks,
+# REAL token counts from the API's usage fields, optional blind judge, sha-pinned receipt.
+npx pm-claude-skills prove --skill ./my-skill --tasks tasks.txt --runs 2 --judge
+npx pm-claude-skills prove --skill ./my-skill --tasks tasks.txt --dry-run   # plan + call count, spends nothing
+
+# Your MCP servers are charging you rent. Measure it: per-server token cost,
+# unused-in-N-days flags, "disconnect these three, save X tokens per message".
+npx pm-claude-skills mcp-audit --connect
+```
+
+`prove` exists because the ecosystem is full of "65% better!" claims and almost none are measured — it's the honest-broker harness (the JetBrains "advertised 65%, measured 8.5%" story is exactly why). `mcp-audit` reads your Claude configs, speaks real MCP to each server to count its schema tokens, and scans your session logs for what you actually use. See also the **[📊 AI Spend](https://mohitagw15856.github.io/pm-claude-skills/spend.html)** page — every agent's cost (Claude Code, Codex, Copilot) in one meter, all in-browser.
+
+**Agent safety:** the **[pm-seatbelt](plugins/pm-seatbelt)** bundle is the pre-flight checklist before an agent touches email, the browser, or files — least-privilege reviews, [prompt-injection spotting](skills/injection-spotter/SKILL.md), and the [blast-radius drill](skills/blast-radius-drill/SKILL.md) for going autonomous. And **[RFC 0002 — HANDOFF.md](docs/rfcs/0002-agent-handoff-file.md)** is a dead-simple session-handoff convention (*your agent, but it remembers Monday*) — a file, not a server, with [reference hooks](hooks/).
+
 ## ✅ Quality, not just quantity
 
 - **Every skill passes the [SkillSpec](SKILLSPEC.md) L3 gate** — structure, framework, quality checks, anti-patterns — enforced in CI on every commit
@@ -135,7 +154,7 @@ The whole library on one poster — start path, standout features, and install o
 
 ## 🆕 Latest
 
-**v60.0.0 — Cowork goes live:** **[pm-cowork-live](plugins/pm-cowork-live)** — 12 Claude Cowork-*native* skills that act on your **real data** through connectors (Gmail, Calendar, Drive/Docs/Sheets, Notion, Slack, GitHub/Linear) and the sandbox, and return an artifact — inbox triage on the actual inbox, meeting prep from real events, spreadsheet audits that open the file, decision logs to Notion, PR descriptions from the real diff. Where the v59 [pm-cowork](plugins/pm-cowork) 100 teach the *frameworks*, these *do the work*. *Earlier — v59, the cowork century:* [pm-cowork](plugins/pm-cowork), 100 AI-coworker framework skills (630 → 743). Full history: **[CHANGELOG](CHANGELOG.md)** · [releases](https://github.com/mohitagw15856/pm-claude-skills/releases)
+**v60.0.0 — Cowork goes live:** **[pm-cowork-live](plugins/pm-cowork-live)** — 12 Claude Cowork-*native* skills that act on your **real data** through connectors (Gmail, Calendar, Drive/Docs/Sheets, Notion, Slack, GitHub/Linear) and the sandbox, and return an artifact — inbox triage on the actual inbox, meeting prep from real events, spreadsheet audits that open the file, decision logs to Notion, PR descriptions from the real diff. Where the v59 [pm-cowork](plugins/pm-cowork) 100 teach the *frameworks*, these *do the work*. *Earlier — v59, the cowork century:* [pm-cowork](plugins/pm-cowork), 100 AI-coworker framework skills (630 → 749). Full history: **[CHANGELOG](CHANGELOG.md)** · [releases](https://github.com/mohitagw15856/pm-claude-skills/releases)
 
 ## 🤝 Contributing
 
@@ -151,4 +170,4 @@ MIT — use them, fork them, ship them at work. Skills are judgment, and judgmen
 
 ---
 
-*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 743 skills · 89 bundles · 31 professions · every commit gated. The long version of this README — every feature, wave, and frontier bet — lives in the **[Showcase](docs/SHOWCASE.md)**.*
+*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 749 skills · 90 bundles · 31 professions · every commit gated. The long version of this README — every feature, wave, and frontier bet — lives in the **[Showcase](docs/SHOWCASE.md)**.*

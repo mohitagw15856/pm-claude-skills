@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI Spend — every agent, one meter</title>
+<meta name="description" content="You run Claude Code, Codex, and Copilot side by side with three different meters. Paste your usage logs and see one number, all agents, real costs — entirely in your browser." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .sp-wrap { max-width: 900px; margin: 0 auto; padding: 16px 22px 70px; }
+  .sp-lead { color: var(--muted); font-size: 15px; }
+  .meter { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+  .m { flex: 1; min-width: 150px; border: 1px solid var(--border); border-radius: 12px; padding: 14px; background: var(--panel); }
+  .m b { font-size: 24px; display: block; } .m span { font-size: 12px; color: var(--muted); }
+  .src { border: 1px solid var(--border); border-radius: 12px; padding: 14px; background: var(--panel); margin: 12px 0; }
+  .src h3 { margin: 0 0 4px; font-size: 14px; } .src p { margin: 0 0 8px; font-size: 12.5px; color: var(--muted); }
+  textarea { width: 100%; box-sizing: border-box; min-height: 90px; padding: 10px 12px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-family: ui-monospace, monospace; font-size: 12px; }
+  .row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 8px; }
+  .row input { padding: 8px 10px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); font-size: 13px; width: 120px; }
+  button.primary { background: var(--accent, #d97757); color: #fff; border: 0; border-radius: 8px; padding: 9px 16px; font-size: 14px; cursor: pointer; }
+  button.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); border-radius: 8px; padding: 8px 14px; font-size: 13px; cursor: pointer; }
+  table.spend { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 12px; }
+  table.spend th { color: var(--muted); text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; padding: 6px 8px; border-bottom: 1px solid var(--border); }
+  table.spend td { padding: 8px; border-bottom: 1px solid var(--border); }
+  table.spend td.num { text-align: right; font-variant-numeric: tabular-nums; }
+  .bar { height: 8px; border-radius: 4px; background: #d97757; }
+  .privacy { border: 1px solid var(--border); border-left: 3px solid #3fb950; border-radius: 0 12px 12px 0; padding: 12px 15px; margin: 16px 0; background: var(--panel); font-size: 13px; }
+  .mini { font-size: 12px; color: var(--muted); }
+  .tag { display: inline-block; font-size: 10.5px; padding: 1px 7px; border: 1px solid var(--border); border-radius: 10px; color: var(--muted); }
+  details.src summary { cursor: pointer; font-size: 14px; font-weight: 600; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="PM Skills" class="brand-logo" />
+    <div class="brand-text"><h1>AI Spend</h1><p class="tagline">Every agent, one meter.</p></div>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<div class="sp-wrap">
+  <p class="sp-lead">You run Claude Code, Codex, and Copilot side by side — three tools, three different meters, no single number. This is the cross-tool view: paste what each one gives you (or just type the totals) and see the whole bill in one place. <strong>Nothing leaves your browser</strong> — the parsing is JavaScript, the numbers are yours.</p>
+
+  <div class="meter">
+    <div class="m"><b id="mTotal">$0.00</b><span>total, all tools</span></div>
+    <div class="m"><b id="mTokens">0</b><span>total tokens</span></div>
+    <div class="m"><b id="mTools">0</b><span>tools metered</span></div>
+    <div class="m"><b id="mTop">—</b><span>biggest line</span></div>
+  </div>
+
+  <details class="src" open>
+    <summary>① Claude Code — paste session JSONL</summary>
+    <p>From <code>~/.claude/projects/&lt;project&gt;/*.jsonl</code>. Paste one or many files' lines — this reads the <code>usage</code> fields (input/output/cache tokens) and prices them at the rates below. (This is the same data <code>ccusage</code> reads; here it's one input among several.)</p>
+    <textarea id="ccInput" placeholder='{"type":"assistant","message":{"model":"claude-sonnet-4-6","usage":{"input_tokens":1200,"output_tokens":800,"cache_read_input_tokens":40000}}}
+… (paste more lines)'></textarea>
+  </details>
+
+  <details class="src">
+    <summary>② Any tool — paste a CSV</summary>
+    <p>Two columns any tool exports or you assemble: <code>label,cost</code> (e.g. <code>Codex,12.40</code>) — or <code>label,input_tokens,output_tokens</code> to price by tokens. Header row optional.</p>
+    <textarea id="csvInput" placeholder="Codex,12.40
+Copilot,10.00
+Cursor,20.00"></textarea>
+  </details>
+
+  <details class="src">
+    <summary>③ Manual meters — the flat subscriptions</summary>
+    <p>The ones with no export: type them straight in. <code>label,monthly$</code> per line.</p>
+    <textarea id="manualInput" placeholder="Copilot (seat),10
+ChatGPT Plus,20"></textarea>
+  </details>
+
+  <div class="row">
+    <span class="mini">Claude price ($/M):</span>
+    <label class="mini">in <input id="pIn" type="number" step="0.1" value="3" /></label>
+    <label class="mini">out <input id="pOut" type="number" step="0.1" value="15" /></label>
+    <label class="mini">cache-read <input id="pCache" type="number" step="0.01" value="0.3" /></label>
+    <button class="primary" id="calc" type="button">Meter it →</button>
+    <button class="ghost" id="sample" type="button">✨ Sample</button>
+  </div>
+
+  <table class="spend" id="tbl" style="display:none">
+    <thead><tr><th>Source</th><th class="num">Tokens</th><th class="num">Cost</th><th style="width:140px">Share</th></tr></thead>
+    <tbody id="tbody"></tbody>
+  </table>
+  <p class="mini" id="note" style="margin-top:10px"></p>
+
+  <div class="privacy">
+    <strong>🔒 100% in your browser.</strong> No upload, no account, no key — paste, meter, done. Prices are yours to set (they change; today's go in the boxes). Claude token costs are computed from real <code>usage</code> fields; CSV/manual are whatever you enter. Estimates, not an invoice.
+    <div class="mini" style="margin-top:6px">Want to shrink these numbers? The <a href="https://github.com/mohitagw15856/pm-claude-skills/tree/main/plugins/pm-tokens">pm-tokens</a> bundle + the <a href="tokens.html">Token Dashboard</a> cut what rides your context; <code>pm-claude-skills mcp-audit</code> finds the MCP servers charging rent.</div>
+  </div>
+</div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const fmt = (v) => v >= 100 ? '$' + v.toFixed(0) : '$' + v.toFixed(2);
+
+function parseCC(text, pIn, pOut, pCache) {
+  let inT = 0, outT = 0, cacheT = 0, n = 0;
+  for (const line of text.split('\n')) {
+    const s = line.trim(); if (!s) continue;
+    let o; try { o = JSON.parse(s); } catch { continue; }
+    const u = o?.message?.usage || o?.usage; if (!u) continue;
+    inT += u.input_tokens || 0; outT += u.output_tokens || 0;
+    cacheT += (u.cache_read_input_tokens || 0) + (u.cache_creation_input_tokens || 0);
+    n++;
+  }
+  const cost = (inT * pIn + outT * pOut + cacheT * pCache) / 1e6;
+  return { rows: n ? [{ label: `Claude Code (${n} msgs)`, tokens: inT + outT + cacheT, cost }] : [] };
+}
+function parseCSV(text) {
+  const rows = [];
+  for (const line of text.split('\n')) {
+    const s = line.trim(); if (!s) continue;
+    const parts = s.split(',').map((x) => x.trim());
+    if (/^(label|name|tool)$/i.test(parts[0])) continue; // header
+    if (parts.length >= 3 && !isNaN(parts[1]) && !isNaN(parts[2])) {
+      const inT = +parts[1], outT = +parts[2];
+      rows.push({ label: parts[0], tokens: inT + outT, cost: (inT * (+$('pIn').value) + outT * (+$('pOut').value)) / 1e6 });
+    } else if (parts.length >= 2 && !isNaN(parts[parts.length - 1])) {
+      rows.push({ label: parts.slice(0, -1).join(','), tokens: 0, cost: +parts[parts.length - 1] });
+    }
+  }
+  return { rows };
+}
+function parseManual(text) {
+  const rows = [];
+  for (const line of text.split('\n')) {
+    const s = line.trim(); if (!s) continue;
+    const parts = s.split(',').map((x) => x.trim());
+    if (parts.length >= 2 && !isNaN(parts[parts.length - 1])) rows.push({ label: parts.slice(0, -1).join(',') + ' (sub)', tokens: 0, cost: +parts[parts.length - 1] });
+  }
+  return { rows };
+}
+
+function meter() {
+  const pIn = +$('pIn').value || 0, pOut = +$('pOut').value || 0, pCache = +$('pCache').value || 0;
+  const rows = [
+    ...parseCC($('ccInput').value, pIn, pOut, pCache).rows,
+    ...parseCSV($('csvInput').value).rows,
+    ...parseManual($('manualInput').value).rows,
+  ].sort((a, b) => b.cost - a.cost);
+  const total = rows.reduce((a, r) => a + r.cost, 0);
+  const totalTok = rows.reduce((a, r) => a + r.tokens, 0);
+  const max = Math.max(1, ...rows.map((r) => r.cost));
+  $('tbody').innerHTML = rows.map((r) => `<tr><td>${r.label}</td><td class="num">${r.tokens ? r.tokens.toLocaleString() : '—'}</td><td class="num">${fmt(r.cost)}</td><td><div class="bar" style="width:${Math.round(r.cost / max * 100)}%"></div></td></tr>`).join('');
+  $('tbl').style.display = rows.length ? '' : 'none';
+  $('mTotal').textContent = fmt(total);
+  $('mTokens').textContent = totalTok ? totalTok.toLocaleString() : '0';
+  $('mTools').textContent = rows.length;
+  $('mTop').textContent = rows.length ? rows[0].label.split(' (')[0] : '—';
+  $('note').textContent = rows.length ? `${rows.length} lines metered · biggest: ${rows[0].label} at ${fmt(rows[0].cost)} (${Math.round(rows[0].cost / total * 100)}% of the bill).` : 'Paste some usage above, then Meter it.';
+}
+$('calc').onclick = meter;
+$('sample').onclick = () => {
+  $('ccInput').value = '{"message":{"model":"claude-sonnet-4-6","usage":{"input_tokens":320000,"output_tokens":180000,"cache_read_input_tokens":2400000}}}';
+  $('csvInput').value = 'Codex,12.40\nCursor,20.00';
+  $('manualInput').value = 'Copilot (seat),10\nChatGPT Plus,20';
+  meter();
+};
+meter();
+</script>
+<script src="nav.js"></script>
+</body>
+</html>

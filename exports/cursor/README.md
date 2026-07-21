@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-743 skills exported. Copy a `.mdc rule` into the tool to use it.
+749 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -57,6 +57,7 @@
 | Beneficiary Audit | `pm-estate` | `pm-estate/beneficiary-audit/beneficiary-audit.mdc` |
 | Benefits Decoder | `pm-decoders` | `pm-decoders/benefits-decoder/benefits-decoder.mdc` |
 | Bid / Tender Review | `pm-construction` | `pm-construction/bid-tender-review/bid-tender-review.mdc` |
+| Blast Radius Drill | `pm-seatbelt` | `pm-seatbelt/blast-radius-drill/blast-radius-drill.mdc` |
 | Board Deck Narrative | `pm-business` | `pm-business/board-deck-narrative/board-deck-narrative.mdc` |
 | Board Minutes | `pm-business` | `pm-business/board-minutes/board-minutes.mdc` |
 | Board Pre-Read | `pm-business` | `pm-business/board-pre-read/board-pre-read.mdc` |
@@ -70,6 +71,7 @@
 | Brief Builder | `pm-cross` | `pm-cross/brief-builder/brief-builder.mdc` |
 | Brief From Pile | `pm-cowork` | `pm-cowork/brief-from-pile/brief-from-pile.mdc` |
 | Briefing Note | `pm-gov` | `pm-gov/briefing-note/briefing-note.mdc` |
+| Browser Agent Preflight | `pm-seatbelt` | `pm-seatbelt/browser-agent-preflight/browser-agent-preflight.mdc` |
 | Budget Builder | `pm-money` | `pm-money/budget-builder/budget-builder.mdc` |
 | Budget Tracker Design | `pm-cowork` | `pm-cowork/budget-tracker-design/budget-tracker-design.mdc` |
 | Budget Variance Analysis | `pm-finance` | `pm-finance/budget-variance-analysis/budget-variance-analysis.mdc` |
@@ -230,6 +232,7 @@
 | Downloads Triage | `pm-cowork` | `pm-cowork/downloads-triage/downloads-triage.mdc` |
 | Earthquake Watch | `pm-live` | `pm-live/earthquake-watch/earthquake-watch.mdc` |
 | Elder Scam Briefing | `pm-scam-defense` | `pm-scam-defense/elder-scam-briefing/elder-scam-briefing.mdc` |
+| Email Agent Preflight | `pm-seatbelt` | `pm-seatbelt/email-agent-preflight/email-agent-preflight.mdc` |
 | Email Campaign | `pm-gtm` | `pm-gtm/email-campaign/email-campaign.mdc` |
 | Email Sequence | `pm-copy` | `pm-copy/email-sequence/email-sequence.mdc` |
 | Email To Tasks | `pm-cowork` | `pm-cowork/email-to-tasks/email-to-tasks.mdc` |
@@ -288,6 +291,7 @@
 | Figma Spacing System | `pm-figma` | `pm-figma/figma-spacing-system/figma-spacing-system.mdc` |
 | Figma User Flow Planner | `pm-figma` | `pm-figma/figma-user-flow-planner/figma-user-flow-planner.mdc` |
 | Figma Variant Matrix | `pm-figma` | `pm-figma/figma-variant-matrix/figma-variant-matrix.mdc` |
+| File Access Preflight | `pm-seatbelt` | `pm-seatbelt/file-access-preflight/file-access-preflight.mdc` |
 | Filename Convention | `pm-cowork` | `pm-cowork/filename-convention/filename-convention.mdc` |
 | Financial Aid Appeal | `pm-students` | `pm-students/financial-aid-appeal/financial-aid-appeal.mdc` |
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/financial-due-diligence.mdc` |
@@ -344,6 +348,7 @@
 | Incremental Implementation | `pm-method` | `pm-method/incremental-implementation/incremental-implementation.mdc` |
 | Influencer Brief | `pm-social` | `pm-social/influencer-brief/influencer-brief.mdc` |
 | Infrastructure-as-Code Review | `pm-engineering` | `pm-engineering/infra-as-code-review/infra-as-code-review.mdc` |
+| Injection Spotter | `pm-seatbelt` | `pm-seatbelt/injection-spotter/injection-spotter.mdc` |
 | Inspection Report Decoder | `pm-decoders` | `pm-decoders/inspection-report-decoder/inspection-report-decoder.mdc` |
 | Instagram Post Downloader | `pm-writers` | `pm-writers/instagram-post-downloader/instagram-post-downloader.mdc` |
 | Insurance Claim | `pm-lifeadmin` | `pm-lifeadmin/insurance-claim/insurance-claim.mdc` |
@@ -702,6 +707,7 @@
 | Timeshare Contract Decoder | `pm-decoders` | `pm-decoders/timeshare-contract-decoder/timeshare-contract-decoder.mdc` |
 | Token Cost | `pm-tokens` | `pm-tokens/token-cost/token-cost.mdc` |
 | Token Diet | `pm-tokens` | `pm-tokens/token-diet/token-diet.mdc` |
+| Tool Permission Review | `pm-seatbelt` | `pm-seatbelt/tool-permission-review/tool-permission-review.mdc` |
 | Tool Procurement Eval | `pm-cowork` | `pm-cowork/tool-procurement-eval/tool-procurement-eval.mdc` |
 | Tooling Risk Assessment | `pm-hardware` | `pm-hardware/tooling-risk-assessment/tooling-risk-assessment.mdc` |
 | Tornado Sensitivity | `pm-calculators` | `pm-calculators/tornado-sensitivity/tornado-sensitivity.mdc` |

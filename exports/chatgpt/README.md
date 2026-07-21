@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-743 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+749 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -57,6 +57,7 @@
 | Beneficiary Audit | `pm-estate` | `pm-estate/beneficiary-audit/SYSTEM_PROMPT.md` |
 | Benefits Decoder | `pm-decoders` | `pm-decoders/benefits-decoder/SYSTEM_PROMPT.md` |
 | Bid / Tender Review | `pm-construction` | `pm-construction/bid-tender-review/SYSTEM_PROMPT.md` |
+| Blast Radius Drill | `pm-seatbelt` | `pm-seatbelt/blast-radius-drill/SYSTEM_PROMPT.md` |
 | Board Deck Narrative | `pm-business` | `pm-business/board-deck-narrative/SYSTEM_PROMPT.md` |
 | Board Minutes | `pm-business` | `pm-business/board-minutes/SYSTEM_PROMPT.md` |
 | Board Pre-Read | `pm-business` | `pm-business/board-pre-read/SYSTEM_PROMPT.md` |
@@ -70,6 +71,7 @@
 | Brief Builder | `pm-cross` | `pm-cross/brief-builder/SYSTEM_PROMPT.md` |
 | Brief From Pile | `pm-cowork` | `pm-cowork/brief-from-pile/SYSTEM_PROMPT.md` |
 | Briefing Note | `pm-gov` | `pm-gov/briefing-note/SYSTEM_PROMPT.md` |
+| Browser Agent Preflight | `pm-seatbelt` | `pm-seatbelt/browser-agent-preflight/SYSTEM_PROMPT.md` |
 | Budget Builder | `pm-money` | `pm-money/budget-builder/SYSTEM_PROMPT.md` |
 | Budget Tracker Design | `pm-cowork` | `pm-cowork/budget-tracker-design/SYSTEM_PROMPT.md` |
 | Budget Variance Analysis | `pm-finance` | `pm-finance/budget-variance-analysis/SYSTEM_PROMPT.md` |
@@ -230,6 +232,7 @@
 | Downloads Triage | `pm-cowork` | `pm-cowork/downloads-triage/SYSTEM_PROMPT.md` |
 | Earthquake Watch | `pm-live` | `pm-live/earthquake-watch/SYSTEM_PROMPT.md` |
 | Elder Scam Briefing | `pm-scam-defense` | `pm-scam-defense/elder-scam-briefing/SYSTEM_PROMPT.md` |
+| Email Agent Preflight | `pm-seatbelt` | `pm-seatbelt/email-agent-preflight/SYSTEM_PROMPT.md` |
 | Email Campaign | `pm-gtm` | `pm-gtm/email-campaign/SYSTEM_PROMPT.md` |
 | Email Sequence | `pm-copy` | `pm-copy/email-sequence/SYSTEM_PROMPT.md` |
 | Email To Tasks | `pm-cowork` | `pm-cowork/email-to-tasks/SYSTEM_PROMPT.md` |
@@ -288,6 +291,7 @@
 | Figma Spacing System | `pm-figma` | `pm-figma/figma-spacing-system/SYSTEM_PROMPT.md` |
 | Figma User Flow Planner | `pm-figma` | `pm-figma/figma-user-flow-planner/SYSTEM_PROMPT.md` |
 | Figma Variant Matrix | `pm-figma` | `pm-figma/figma-variant-matrix/SYSTEM_PROMPT.md` |
+| File Access Preflight | `pm-seatbelt` | `pm-seatbelt/file-access-preflight/SYSTEM_PROMPT.md` |
 | Filename Convention | `pm-cowork` | `pm-cowork/filename-convention/SYSTEM_PROMPT.md` |
 | Financial Aid Appeal | `pm-students` | `pm-students/financial-aid-appeal/SYSTEM_PROMPT.md` |
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/SYSTEM_PROMPT.md` |
@@ -344,6 +348,7 @@
 | Incremental Implementation | `pm-method` | `pm-method/incremental-implementation/SYSTEM_PROMPT.md` |
 | Influencer Brief | `pm-social` | `pm-social/influencer-brief/SYSTEM_PROMPT.md` |
 | Infrastructure-as-Code Review | `pm-engineering` | `pm-engineering/infra-as-code-review/SYSTEM_PROMPT.md` |
+| Injection Spotter | `pm-seatbelt` | `pm-seatbelt/injection-spotter/SYSTEM_PROMPT.md` |
 | Inspection Report Decoder | `pm-decoders` | `pm-decoders/inspection-report-decoder/SYSTEM_PROMPT.md` |
 | Instagram Post Downloader | `pm-writers` | `pm-writers/instagram-post-downloader/SYSTEM_PROMPT.md` |
 | Insurance Claim | `pm-lifeadmin` | `pm-lifeadmin/insurance-claim/SYSTEM_PROMPT.md` |
@@ -702,6 +707,7 @@
 | Timeshare Contract Decoder | `pm-decoders` | `pm-decoders/timeshare-contract-decoder/SYSTEM_PROMPT.md` |
 | Token Cost | `pm-tokens` | `pm-tokens/token-cost/SYSTEM_PROMPT.md` |
 | Token Diet | `pm-tokens` | `pm-tokens/token-diet/SYSTEM_PROMPT.md` |
+| Tool Permission Review | `pm-seatbelt` | `pm-seatbelt/tool-permission-review/SYSTEM_PROMPT.md` |
 | Tool Procurement Eval | `pm-cowork` | `pm-cowork/tool-procurement-eval/SYSTEM_PROMPT.md` |
 | Tooling Risk Assessment | `pm-hardware` | `pm-hardware/tooling-risk-assessment/SYSTEM_PROMPT.md` |
 | Tornado Sensitivity | `pm-calculators` | `pm-calculators/tornado-sensitivity/SYSTEM_PROMPT.md` |

@@ -129,6 +129,8 @@
       ['growth.html', '📈 Growth'],
       ['cost.html', '💰 Cost & Privacy'],
       ['tokens.html', '🪙 Token Dashboard'],
+      ['spend.html', '📊 AI Spend'],
+      ['cowork.html', '🤝 Cowork'],
       ['trends.html', '📈 Trends'],
     ] },
     { group: '🗺 Explore', items: [

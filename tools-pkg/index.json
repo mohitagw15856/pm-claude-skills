@@ -300,6 +300,12 @@
   "description": "Analyse a construction bid or tender package for scope gaps, risk-shifting exclusions, unit-rate red flags, and front-loading in the schedule of values. Use when asked to review a bid, level bids, check a tender for gaps, compare sub quotes, or vet a schedule of values before award. Produces a structured bid review with a gap register, exclusion risk table, pricing red flags, and an award recommendation with pre-award clarifications."
  },
  {
+  "name": "blast_radius_drill",
+  "skill": "blast-radius-drill",
+  "bundle": "pm-seatbelt",
+  "description": "Run the worst-case drill before an agent goes autonomous — the 'if this agent were fully hijacked right now, what's the damage' walk-through, the containment controls (caps, kill-switch, reversibility, isolation), and the recovery plan. Use when asked what's the worst my agent could do, run a blast-radius assessment, prepare for an agent going rogue, or am I ready to let this run unattended. Produces the worst-case walk-through, the containment controls, the reversibility audit, and the incident-recovery runbook."
+ },
+ {
   "name": "board_deck_narrative",
   "skill": "board-deck-narrative",
   "bundle": "pm-business",
@@ -376,6 +382,12 @@
   "skill": "briefing-note",
   "bundle": "pm-gov",
   "description": "Write a one-page briefing note that gets a busy principal up to speed fast. Use when asked to brief a minister/executive/official, prepare a briefing note or read-ahead, or summarize an issue for a decision or meeting. Produces a tight, single-page note: purpose, background, key facts/considerations, and a recommendation or the decision sought — scannable in two minutes."
+ },
+ {
+  "name": "browser_agent_preflight",
+  "skill": "browser-agent-preflight",
+  "bundle": "pm-seatbelt",
+  "description": "Run the pre-flight checklist before an agent drives a browser — the untrusted-web-content threat (every page is attacker-controllable), the credential and session-cookie exposure, the action-confirmation gates for purchases and posts, and the sandboxing that limits the damage. Use when asked let my agent browse safely, is it safe to give the agent computer/browser use, guardrails before the agent uses my browser, or review my browser agent's setup. Produces the sandbox decision, the content-injection defenses, the action gates, and the credential-isolation rules."
  },
  {
   "name": "budget_builder",
@@ -1332,6 +1344,12 @@
   "description": "Protect aging parents from the scams that target them — the conversation that doesn't condescend, the family code word, the top patterns aimed at seniors, and the guardrails that help without taking over. Use when asked how do I talk to my parents about scams, my mom almost sent money to someone, set up scam protection for my dad, or what scams target the elderly. Produces the briefing conversation script (dignity-first), the household defenses, the pattern one-pager to leave behind, and the if-it-already-happened response."
  },
  {
+  "name": "email_agent_preflight",
+  "skill": "email-agent-preflight",
+  "bundle": "pm-seatbelt",
+  "description": "Run the pre-flight checklist before an agent touches an inbox — the read-vs-send permission line, the injection-in-email-body threat, the send-guard rules, and the blast-radius limits that keep a compromised agent from mailing the company. Use when asked let my agent read/send email safely, set up guardrails before the agent touches my inbox, is it safe to give the agent email access, or review my email agent's permissions. Produces the permission tier, the injection defenses, the send-gate rules, and the incident kill-switch."
+ },
+ {
   "name": "email_campaign",
   "skill": "email-campaign",
   "bundle": "pm-gtm",
@@ -1680,6 +1698,12 @@
   "description": "Define component variants and states systematically for Figma. Use when asked to plan component variants, define states for a component, set up a Figma variant matrix, or work out what properties a component needs before building it. Produces a complete variant matrix with all properties, values, and combinations needed."
  },
  {
+  "name": "file_access_preflight",
+  "skill": "file-access-preflight",
+  "bundle": "pm-seatbelt",
+  "description": "Run the pre-flight checklist before an agent gets filesystem access — the scope boundary (which directories, read vs write), the secrets-exposure sweep, the destructive-operation gates, and the path-traversal and untrusted-file defenses. Use when asked let my agent access my files safely, is it safe to give the agent file/computer access, guardrails before the agent touches my filesystem, or scope down my coding agent's reach. Produces the scope boundary, the secrets sweep, the write/delete gates, and the untrusted-content rules."
+ },
+ {
   "name": "filename_convention",
   "skill": "filename-convention",
   "bundle": "pm-cowork",
@@ -2014,6 +2038,12 @@
   "skill": "infra-as-code-review",
   "bundle": "pm-engineering",
   "description": "Write an infrastructure-as-code review checklist and conduct a structured review of Terraform, CloudFormation, Pulumi, or Ansible code. Use when asked to review IaC code, audit infrastructure configurations, check cloud security posture, or produce a reusable IaC review checklist. Produces a structured review report with severity-categorized findings, remediation guidance, and a reusable checklist."
+ },
+ {
+  "name": "injection_spotter",
+  "skill": "injection-spotter",
+  "bundle": "pm-seatbelt",
+  "description": "Spot prompt-injection in untrusted content before an agent acts on it — the anatomy of injected instructions across the channels attackers use (email, web, files, tool outputs, documents), the tell-list, and the safe-handling response. Use when asked is this content trying to hijack my agent, check this page or email or file for prompt injection, spot the injection, or why did my agent go off-task. Produces the injection verdict with quoted tells, the channel-specific patterns, and the safe-handling protocol."
  },
  {
   "name": "inspection_report_decoder",
@@ -4162,6 +4192,12 @@
   "skill": "token-diet",
   "bundle": "pm-tokens",
   "description": "Cut LLM output tokens 40–70% by stripping grammatical scaffolding while preserving every fact — telegraphic output modes, when they pay (pipelines, long sessions) and when they don't (single shots, human-facing prose), with the mode lines to switch on demand. Use when asked make the model respond tersely, cut output token costs, caveman mode, or compress agent-to-agent messages. Produces the diet-mode instruction block ready to paste, the three compression levels with examples, the economics of when each pays, and the never-diet list."
+ },
+ {
+  "name": "tool_permission_review",
+  "skill": "tool-permission-review",
+  "bundle": "pm-seatbelt",
+  "description": "Review what an agent is actually allowed to do before you turn it loose — the tool-by-tool audit (each capability's blast radius), the least-privilege pass that removes what the task doesn't need, the dangerous-combination check, and the allow/ask/deny tiering. Use when asked review my agent's permissions, what can this agent actually do, lock down my agent's tools, or is this MCP/tool set safe to grant. Produces the permission inventory with blast radius, the least-privilege cuts, the dangerous-combo flags, and the allow/ask/deny assignments."
  },
  {
   "name": "tool_procurement_eval",

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Skills for Claude Cowork — the office work, done</title>
+<meta name="description" content="Claude Cowork is Claude for the whole team, not just developers. These are the skills built for it: 100 cowork skills plus 12 connector-native ones that read your real Calendar, Drive, Gmail, and Notion. The definitive library for the newest surface." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .cw-wrap { max-width: 900px; margin: 0 auto; padding: 16px 22px 70px; }
+  .cw-hero { text-align: center; padding: 12px 0 20px; }
+  .cw-hero h2 { font-size: 26px; margin: 6px 0; }
+  .cw-lead { color: var(--muted); font-size: 15px; max-width: 660px; margin: 0 auto; }
+  .fam { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; margin: 18px 0; }
+  .card { border: 1px solid var(--border); border-radius: 12px; padding: 14px; background: var(--panel); }
+  .card h3 { margin: 0 0 4px; font-size: 15px; } .card p { margin: 0; font-size: 12.5px; color: var(--muted); }
+  .card a { color: #58a6ff; text-decoration: none; }
+  .live { border-left: 3px solid #3fb950; }
+  .band { border: 1px solid var(--border); border-radius: 12px; padding: 16px; background: var(--panel); margin: 16px 0; }
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin-top: 10px; }
+  .step { font-size: 13px; } .step b { color: var(--accent, #d97757); }
+  code { background: var(--panel-2); padding: 1px 6px; border-radius: 5px; font-size: 12.5px; }
+  .mini { font-size: 12px; color: var(--muted); }
+  .tag { display: inline-block; font-size: 10.5px; padding: 1px 7px; border: 1px solid var(--border); border-radius: 10px; color: var(--muted); margin-left: 6px; }
+  .tag.live { border-color: #3fb950; color: #3fb950; }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="PM Skills" class="brand-logo" />
+    <div class="brand-text"><h1>Skills for Cowork</h1><p class="tagline">The office work, done.</p></div>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<div class="cw-wrap">
+  <div class="cw-hero">
+    <h2>The definitive skill library for Claude Cowork</h2>
+    <p class="cw-lead">Cowork is Claude for the whole team, not just developers — and the skills ecosystem around it is where Claude Code's was a year ago: empty, about to fill. Here's the head start: <strong>112 skills</strong> for it, spanning the office work Cowork is built to do, including <strong>12 connector-native</strong> ones that read your real Calendar, Drive, Gmail, and Notion.</p>
+  </div>
+
+  <div class="band">
+    <strong>🟢 Connector-native (built for Cowork specifically)</strong> — these read your <em>actual</em> data through Cowork's connectors, not a pasted copy.
+    <div class="fam" style="margin-top:12px">
+      <div class="card live"><h3>Meeting Prep <span class="tag live">live</span></h3><p>Pulls the real Calendar event, attendees, linked Drive docs, and last thread → a one-page brief. <a href="?skill=meeting-prep-live">open</a></p></div>
+      <div class="card live"><h3>Inbox Triage <span class="tag live">live</span></h3><p>Reads your actual Gmail, sorts by the four verbs, drafts the two-minute replies. <a href="?skill=inbox-triage-live">open</a></p></div>
+      <div class="card live"><h3>Follow-up Sweep <span class="tag live">live</span></h3><p>Finds the threads you owe a reply and the asks that went silent. <a href="?skill=followup-sweep">open</a></p></div>
+      <div class="card live"><h3>Thread → Decision <span class="tag live">live</span></h3><p>Lands a sprawling real thread on a recorded decision. <a href="?skill=thread-to-decision-live">open</a></p></div>
+      <div class="card live"><h3>Async Standup <span class="tag live">live</span></h3><p>Compiles the team's real updates into one digest. <a href="?skill=async-standup-compiler">open</a></p></div>
+      <div class="card live"><h3>Notion DB Hygiene <span class="tag live">live</span></h3><p>Audits a real Notion database for the drift that breaks views. <a href="?skill=notion-db-hygiene">open</a></p></div>
+      <div class="card live"><h3>Spreadsheet Audit <span class="tag live">live</span></h3><p>Reads the real Sheet and flags the errors worth catching. <a href="?skill=spreadsheet-audit-live">open</a></p></div>
+      <div class="card live"><h3>Deck from Doc <span class="tag live">live</span></h3><p>Turns a real Drive doc into a structured deck outline. <a href="?skill=deck-from-doc">open</a></p></div>
+      <div class="card live"><h3>+ 4 more</h3><p>doc-restructure, PR description, issue triage, changelog-from-commits — all connector-native. <a href="catalog.html?q=live">see all</a></p></div>
+    </div>
+    <p class="mini">Bundle: <code>pm-cowork-live</code> · install: <code>/plugin install pm-cowork-live@pm-skills</code></p>
+  </div>
+
+  <div class="band">
+    <strong>🤝 The 100-skill cowork library</strong> — the office knowledge work, in ten families. Works in Cowork, Claude Code, and every export target.
+    <div class="fam" style="margin-top:12px">
+      <div class="card"><h3>📧 Inbox & email</h3><p>Triage, tone-matched replies, follow-up chaser, the OOO that routes. <a href="catalog.html?q=email">explore</a></p></div>
+      <div class="card"><h3>📁 Files & folders</h3><p>Structures that stick, the naming that bans "final", downloads triage. <a href="catalog.html?q=folder">explore</a></p></div>
+      <div class="card"><h3>📊 Spreadsheets</h3><p>The audit, the formula detangler, sheet-or-database, chart choice. <a href="catalog.html?q=spreadsheet">explore</a></p></div>
+      <div class="card"><h3>📄 Documents</h3><p>Outline-first, the comment resolver, policy drafting, plain-language rewrite. <a href="catalog.html?q=doc">explore</a></p></div>
+      <div class="card"><h3>📅 Meetings</h3><p>Agenda-or-cancel, the cost meter, the standing-meeting audit, async-instead. <a href="catalog.html?q=meeting">explore</a></p></div>
+      <div class="card"><h3>🤝 Team collab</h3><p>Update formats, working agreements, the decision log, the status pipeline. <a href="catalog.html?q=async">explore</a></p></div>
+      <div class="card"><h3>🔬 Research</h3><p>Source triangulation, interview synthesis, evidence grading, brief-from-pile. <a href="catalog.html?q=research">explore</a></p></div>
+      <div class="card"><h3>🎤 Presentations</h3><p>Deck outline-first, exec-vs-working, the demo script, pitch-vs-teach. <a href="catalog.html?q=deck">explore</a></p></div>
+      <div class="card"><h3>⚡ Personal ops</h3><p>The weekly review, WIP limits, saying no kindly, the shutdown ritual. <a href="catalog.html?q=weekly">explore</a></p></div>
+      <div class="card"><h3>🏢 Office admin</h3><p>Renewal tracking, vendor matrices, the office-move runbook, room etiquette. <a href="catalog.html?q=vendor">explore</a></p></div>
+    </div>
+    <p class="mini">Bundle: <code>pm-cowork</code> · install: <code>/plugin install pm-cowork@pm-skills</code></p>
+  </div>
+
+  <div class="band">
+    <strong>Make the most of it</strong> — the trick is to describe your mess, not name the skill.
+    <div class="steps">
+      <div class="step"><b>1.</b> Install the bundle: <code>/plugin install pm-cowork@pm-skills</code></div>
+      <div class="step"><b>2.</b> Say what's wrong — <em>"my inbox is 4,000 deep"</em>, <em>"prep me for the 2pm"</em> — the right skill activates on the ask.</div>
+      <div class="step"><b>3.</b> Start where it hurts, let one habit stick (the weekly review is the keystone), then add the next.</div>
+    </div>
+    <p class="mini" style="margin-top:10px">Full guide in the <a href="https://github.com/mohitagw15856/pm-claude-skills#-make-the-most-of-the-cowork-skills">README</a> · try any skill free in the <a href="./">Playground</a>.</p>
+  </div>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

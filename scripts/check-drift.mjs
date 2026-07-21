@@ -46,8 +46,8 @@ const LIVING = [
 // Legitimate non-total numbers that may precede the word "skills":
 // 50 = production tier · 45 = pm-engineering · 28 = eval-scored (update when a
 // new eval run lands) · small numbers = bundle sizes in prose.
-// 17 = the pm-live keyless live-data family · 100 = the pm-cowork bundle
-const ALLOWED = new Set([skillCount, bundleCount, 100, 50, 45, 28, 17, 12, 30, 15, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
+// 17 = the pm-live keyless live-data family · 100 = pm-cowork · 112 = cowork total (100 + 12 live)
+const ALLOWED = new Set([skillCount, bundleCount, 112, 100, 50, 45, 28, 17, 12, 30, 15, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]);
 // Several claim shapes; each regex's first capture group is the number.
 const CLAIMS = [
   /\b(\d{2,4})\s+(?:(?:professional|open-source|curated|AI)\s+){0,2}(?:Agent\s+)?skills?\b/gi,

@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-seatbelt",
+      "description": "Agent safety seatbelts: the pre-flight security checklists you run before an agent touches email, the browser, files, or goes autonomous — least-privilege reviews, prompt-injection spotting, and the blast-radius drill",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-seatbelt",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-cowork-live",
       "description": "12 Claude Cowork-native skills that act on your real data through connectors and the sandbox — Gmail/Calendar inbox triage, meeting prep and follow-up sweeps; Drive/Docs/Sheets audits, restructures and decks; Notion/Slack decision logs, DB hygiene and async standups; GitHub/Linear issue triage, PR descriptions and changelogs. Each drives real tools and returns an artifact — not a framework you run by hand.",
       "version": "1.0.0",

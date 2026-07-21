@@ -1,4 +1,4 @@
-# 🗂️ All 743 Skills — full catalog
+# 🗂️ All 749 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -649,7 +649,7 @@
 | **Portfolio Page** (`portfolio-page`) | Structure a portfolio or case-study page that shows your work, not just lists it. | — |
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 
-## 🌍 Industries & Public Sector (353 skills)
+## 🌍 Industries & Public Sector (359 skills)
 
 ### `pm-agentnative` — 5 skills
 
@@ -1125,6 +1125,17 @@
 | **Elder Scam Briefing** (`elder-scam-briefing`) | Protect aging parents from the scams that target them — the conversation that doesn't condescend, the family code word, the top patterns aimed at… | — |
 | **Scam Message Decoder** (`scam-message-decoder`) | Decode a suspicious message — text, email, call transcript, or DM — against the anatomy of known scam families, with a 🔴🟡🟢 read and the safe… | — |
 
+### `pm-seatbelt` — 6 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Blast Radius Drill** (`blast-radius-drill`) | Run the worst-case drill before an agent goes autonomous — the 'if this agent were fully hijacked right now, what's the damage' walk-through, the… | — |
+| **Browser Agent Preflight** (`browser-agent-preflight`) | Run the pre-flight checklist before an agent drives a browser — the untrusted-web-content threat (every page is attacker-controllable), the… | — |
+| **Email Agent Preflight** (`email-agent-preflight`) | Run the pre-flight checklist before an agent touches an inbox — the read-vs-send permission line, the injection-in-email-body threat, the… | — |
+| **File Access Preflight** (`file-access-preflight`) | Run the pre-flight checklist before an agent gets filesystem access — the scope boundary (which directories, read vs write), the secrets-exposure… | — |
+| **Injection Spotter** (`injection-spotter`) | Spot prompt-injection in untrusted content before an agent acts on it — the anatomy of injected instructions across the channels attackers use… | — |
+| **Tool Permission Review** (`tool-permission-review`) | Review what an agent is actually allowed to do before you turn it loose — the tool-by-tool audit (each capability's blast radius), the… | — |
+
 ### `pm-sidehustle` — 3 skills
 
 | Skill | What it does | Eval |
@@ -1216,4 +1227,4 @@
 
 ---
 
-_743 skills across 89 bundles · 28 eval-scored (4%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_749 skills across 90 bundles · 28 eval-scored (4%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

@@ -1,8 +1,8 @@
 {
  "spec": "skill-federation/0.1",
- "built": "2026-07-20",
+ "built": "2026-07-21",
  "libraries": 1,
- "skills": 743,
+ "skills": 749,
  "members": [
   {
    "repo": "mohitagw15856/pm-claude-skills",
@@ -10,7 +10,7 @@
    "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
    "license": "MIT",
    "badge": "https://img.shields.io/endpoint?url=https%3A%2F%2Fpm-skills-mcp.pm-claude-skills.workers.dev%2Fbadge%3Frepo%3Dmohitagw15856%2Fpm-claude-skills",
-   "count": 743,
+   "count": 749,
    "skills": [
     {
      "name": "360-feedback-template",
@@ -213,6 +213,10 @@
      "description": "Analyse a construction bid or tender package for scope gaps, risk-shifting exclusions, unit-rate red flags, and front-loading in the schedule of values. Use when asked to review a bid, level bids, check a tender for gaps, compare sub quotes, or vet a schedule of values before award. Produces a struc"
     },
     {
+     "name": "blast-radius-drill",
+     "description": "Run the worst-case drill before an agent goes autonomous — the 'if this agent were fully hijacked right now, what's the damage' walk-through, the containment controls (caps, kill-switch, reversibility, isolation), and the recovery plan. Use when asked what's the worst my agent could do, run a blast-"
+    },
+    {
      "name": "board-deck-narrative",
      "description": "Build the storyline and slide structure for a board presentation. Use when asked to create a board deck, board presentation narrative, board meeting slides, or quarterly board update. Produces a complete slide-by-slide structure with narrative beats, talking points, and slide content guidance."
     },
@@ -263,6 +267,10 @@
     {
      "name": "briefing-note",
      "description": "Write a one-page briefing note that gets a busy principal up to speed fast. Use when asked to brief a minister/executive/official, prepare a briefing note or read-ahead, or summarize an issue for a decision or meeting. Produces a tight, single-page note: purpose, background, key facts/considerations"
+    },
+    {
+     "name": "browser-agent-preflight",
+     "description": "Run the pre-flight checklist before an agent drives a browser — the untrusted-web-content threat (every page is attacker-controllable), the credential and session-cookie exposure, the action-confirmation gates for purchases and posts, and the sandboxing that limits the damage. Use when asked let my "
     },
     {
      "name": "budget-builder",
@@ -901,6 +909,10 @@
      "description": "Protect aging parents from the scams that target them — the conversation that doesn't condescend, the family code word, the top patterns aimed at seniors, and the guardrails that help without taking over. Use when asked how do I talk to my parents about scams, my mom almost sent money to someone, se"
     },
     {
+     "name": "email-agent-preflight",
+     "description": "Run the pre-flight checklist before an agent touches an inbox — the read-vs-send permission line, the injection-in-email-body threat, the send-guard rules, and the blast-radius limits that keep a compromised agent from mailing the company. Use when asked let my agent read/send email safely, set up g"
+    },
+    {
      "name": "email-campaign",
      "description": "Write and sequence multi-email nurture or launch campaigns. Use when asked for an email sequence, drip campaign, onboarding emails, product launch emails, or nurture flow. Produces subject lines, preview text, full email body, and send-timing recommendations for each email in the sequence."
     },
@@ -1133,6 +1145,10 @@
      "description": "Define component variants and states systematically for Figma. Use when asked to plan component variants, define states for a component, set up a Figma variant matrix, or work out what properties a component needs before building it. Produces a complete variant matrix with all properties, values, an"
     },
     {
+     "name": "file-access-preflight",
+     "description": "Run the pre-flight checklist before an agent gets filesystem access — the scope boundary (which directories, read vs write), the secrets-exposure sweep, the destructive-operation gates, and the path-traversal and untrusted-file defenses. Use when asked let my agent access my files safely, is it safe"
+    },
+    {
      "name": "filename-convention",
      "description": "Set a filename convention that sorts, searches, and survives — date-first ISO format, the descriptor grammar, version suffixes that end the FINAL-final2 era, and the rollout that gets a team actually using it. Use when asked set up file naming rules, our filenames are chaos, what should we call our "
     },
@@ -1355,6 +1371,10 @@
     {
      "name": "infra-as-code-review",
      "description": "Write an infrastructure-as-code review checklist and conduct a structured review of Terraform, CloudFormation, Pulumi, or Ansible code. Use when asked to review IaC code, audit infrastructure configurations, check cloud security posture, or produce a reusable IaC review checklist. Produces a structu"
+    },
+    {
+     "name": "injection-spotter",
+     "description": "Spot prompt-injection in untrusted content before an agent acts on it — the anatomy of injected instructions across the channels attackers use (email, web, files, tool outputs, documents), the tell-list, and the safe-handling response. Use when asked is this content trying to hijack my agent, check "
     },
     {
      "name": "inspection-report-decoder",
@@ -2787,6 +2807,10 @@
     {
      "name": "token-diet",
      "description": "Cut LLM output tokens 40–70% by stripping grammatical scaffolding while preserving every fact — telegraphic output modes, when they pay (pipelines, long sessions) and when they don't (single shots, human-facing prose), with the mode lines to switch on demand. Use when asked make the model respond te"
+    },
+    {
+     "name": "tool-permission-review",
+     "description": "Review what an agent is actually allowed to do before you turn it loose — the tool-by-tool audit (each capability's blast radius), the least-privilege pass that removes what the task doesn't need, the dangerous-combination check, and the allow/ask/deny tiering. Use when asked review my agent's permi"
     },
     {
      "name": "tool-procurement-eval",

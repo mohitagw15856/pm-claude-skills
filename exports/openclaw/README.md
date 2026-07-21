@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-743 skills exported. Copy a `SKILL.md` into the tool to use it.
+749 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -57,6 +57,7 @@
 | Beneficiary Audit | `pm-estate` | `beneficiary-audit/SKILL.md` |
 | Benefits Decoder | `pm-decoders` | `benefits-decoder/SKILL.md` |
 | Bid / Tender Review | `pm-construction` | `bid-tender-review/SKILL.md` |
+| Blast Radius Drill | `pm-seatbelt` | `blast-radius-drill/SKILL.md` |
 | Board Deck Narrative | `pm-business` | `board-deck-narrative/SKILL.md` |
 | Board Minutes | `pm-business` | `board-minutes/SKILL.md` |
 | Board Pre-Read | `pm-business` | `board-pre-read/SKILL.md` |
@@ -70,6 +71,7 @@
 | Brief Builder | `pm-cross` | `brief-builder/SKILL.md` |
 | Brief From Pile | `pm-cowork` | `brief-from-pile/SKILL.md` |
 | Briefing Note | `pm-gov` | `briefing-note/SKILL.md` |
+| Browser Agent Preflight | `pm-seatbelt` | `browser-agent-preflight/SKILL.md` |
 | Budget Builder | `pm-money` | `budget-builder/SKILL.md` |
 | Budget Tracker Design | `pm-cowork` | `budget-tracker-design/SKILL.md` |
 | Budget Variance Analysis | `pm-finance` | `budget-variance-analysis/SKILL.md` |
@@ -230,6 +232,7 @@
 | Downloads Triage | `pm-cowork` | `downloads-triage/SKILL.md` |
 | Earthquake Watch | `pm-live` | `earthquake-watch/SKILL.md` |
 | Elder Scam Briefing | `pm-scam-defense` | `elder-scam-briefing/SKILL.md` |
+| Email Agent Preflight | `pm-seatbelt` | `email-agent-preflight/SKILL.md` |
 | Email Campaign | `pm-gtm` | `email-campaign/SKILL.md` |
 | Email Sequence | `pm-copy` | `email-sequence/SKILL.md` |
 | Email To Tasks | `pm-cowork` | `email-to-tasks/SKILL.md` |
@@ -288,6 +291,7 @@
 | Figma Spacing System | `pm-figma` | `figma-spacing-system/SKILL.md` |
 | Figma User Flow Planner | `pm-figma` | `figma-user-flow-planner/SKILL.md` |
 | Figma Variant Matrix | `pm-figma` | `figma-variant-matrix/SKILL.md` |
+| File Access Preflight | `pm-seatbelt` | `file-access-preflight/SKILL.md` |
 | Filename Convention | `pm-cowork` | `filename-convention/SKILL.md` |
 | Financial Aid Appeal | `pm-students` | `financial-aid-appeal/SKILL.md` |
 | Financial Due Diligence | `pm-finance` | `financial-due-diligence/SKILL.md` |
@@ -344,6 +348,7 @@
 | Incremental Implementation | `pm-method` | `incremental-implementation/SKILL.md` |
 | Influencer Brief | `pm-social` | `influencer-brief/SKILL.md` |
 | Infrastructure-as-Code Review | `pm-engineering` | `infra-as-code-review/SKILL.md` |
+| Injection Spotter | `pm-seatbelt` | `injection-spotter/SKILL.md` |
 | Inspection Report Decoder | `pm-decoders` | `inspection-report-decoder/SKILL.md` |
 | Instagram Post Downloader | `pm-writers` | `instagram-post-downloader/SKILL.md` |
 | Insurance Claim | `pm-lifeadmin` | `insurance-claim/SKILL.md` |
@@ -702,6 +707,7 @@
 | Timeshare Contract Decoder | `pm-decoders` | `timeshare-contract-decoder/SKILL.md` |
 | Token Cost | `pm-tokens` | `token-cost/SKILL.md` |
 | Token Diet | `pm-tokens` | `token-diet/SKILL.md` |
+| Tool Permission Review | `pm-seatbelt` | `tool-permission-review/SKILL.md` |
 | Tool Procurement Eval | `pm-cowork` | `tool-procurement-eval/SKILL.md` |
 | Tooling Risk Assessment | `pm-hardware` | `tooling-risk-assessment/SKILL.md` |
 | Tornado Sensitivity | `pm-calculators` | `tornado-sensitivity/SKILL.md` |

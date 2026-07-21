@@ -68,6 +68,17 @@ const PAGES = [
       });
       if (!ok) throw new Error('PMArtifacts renderer failed');
     } },
+  { url: 'spend.html', async check(p) {
+      await p.click('#sample'); await p.waitForTimeout(150);
+      const total = await p.locator('#mTotal').textContent();
+      if (!/\$\d/.test(total || '')) throw new Error('spend meter produced no total');
+      const rows = await p.locator('#tbody tr').count();
+      if (rows < 3) throw new Error('spend sample produced ' + rows + ' rows');
+    } },
+  { url: 'cowork.html', async check(p) {
+      const cards = await p.locator('.card').count();
+      if (cards < 10) throw new Error('cowork page has ' + cards + ' cards');
+    } },
   { url: 'tokens.html', async check(p) {
       // the sample session must produce a breakdown with computed crusher savings
       await p.click('#sampleBtn'); await p.waitForTimeout(200);

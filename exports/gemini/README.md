@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-743 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+749 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -57,6 +57,7 @@
 | Beneficiary Audit | `pm-estate` | `pm-estate/beneficiary-audit/GEM_INSTRUCTIONS.md` |
 | Benefits Decoder | `pm-decoders` | `pm-decoders/benefits-decoder/GEM_INSTRUCTIONS.md` |
 | Bid / Tender Review | `pm-construction` | `pm-construction/bid-tender-review/GEM_INSTRUCTIONS.md` |
+| Blast Radius Drill | `pm-seatbelt` | `pm-seatbelt/blast-radius-drill/GEM_INSTRUCTIONS.md` |
 | Board Deck Narrative | `pm-business` | `pm-business/board-deck-narrative/GEM_INSTRUCTIONS.md` |
 | Board Minutes | `pm-business` | `pm-business/board-minutes/GEM_INSTRUCTIONS.md` |
 | Board Pre-Read | `pm-business` | `pm-business/board-pre-read/GEM_INSTRUCTIONS.md` |
@@ -70,6 +71,7 @@
 | Brief Builder | `pm-cross` | `pm-cross/brief-builder/GEM_INSTRUCTIONS.md` |
 | Brief From Pile | `pm-cowork` | `pm-cowork/brief-from-pile/GEM_INSTRUCTIONS.md` |
 | Briefing Note | `pm-gov` | `pm-gov/briefing-note/GEM_INSTRUCTIONS.md` |
+| Browser Agent Preflight | `pm-seatbelt` | `pm-seatbelt/browser-agent-preflight/GEM_INSTRUCTIONS.md` |
 | Budget Builder | `pm-money` | `pm-money/budget-builder/GEM_INSTRUCTIONS.md` |
 | Budget Tracker Design | `pm-cowork` | `pm-cowork/budget-tracker-design/GEM_INSTRUCTIONS.md` |
 | Budget Variance Analysis | `pm-finance` | `pm-finance/budget-variance-analysis/GEM_INSTRUCTIONS.md` |
@@ -230,6 +232,7 @@
 | Downloads Triage | `pm-cowork` | `pm-cowork/downloads-triage/GEM_INSTRUCTIONS.md` |
 | Earthquake Watch | `pm-live` | `pm-live/earthquake-watch/GEM_INSTRUCTIONS.md` |
 | Elder Scam Briefing | `pm-scam-defense` | `pm-scam-defense/elder-scam-briefing/GEM_INSTRUCTIONS.md` |
+| Email Agent Preflight | `pm-seatbelt` | `pm-seatbelt/email-agent-preflight/GEM_INSTRUCTIONS.md` |
 | Email Campaign | `pm-gtm` | `pm-gtm/email-campaign/GEM_INSTRUCTIONS.md` |
 | Email Sequence | `pm-copy` | `pm-copy/email-sequence/GEM_INSTRUCTIONS.md` |
 | Email To Tasks | `pm-cowork` | `pm-cowork/email-to-tasks/GEM_INSTRUCTIONS.md` |
@@ -288,6 +291,7 @@
 | Figma Spacing System | `pm-figma` | `pm-figma/figma-spacing-system/GEM_INSTRUCTIONS.md` |
 | Figma User Flow Planner | `pm-figma` | `pm-figma/figma-user-flow-planner/GEM_INSTRUCTIONS.md` |
 | Figma Variant Matrix | `pm-figma` | `pm-figma/figma-variant-matrix/GEM_INSTRUCTIONS.md` |
+| File Access Preflight | `pm-seatbelt` | `pm-seatbelt/file-access-preflight/GEM_INSTRUCTIONS.md` |
 | Filename Convention | `pm-cowork` | `pm-cowork/filename-convention/GEM_INSTRUCTIONS.md` |
 | Financial Aid Appeal | `pm-students` | `pm-students/financial-aid-appeal/GEM_INSTRUCTIONS.md` |
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/GEM_INSTRUCTIONS.md` |
@@ -344,6 +348,7 @@
 | Incremental Implementation | `pm-method` | `pm-method/incremental-implementation/GEM_INSTRUCTIONS.md` |
 | Influencer Brief | `pm-social` | `pm-social/influencer-brief/GEM_INSTRUCTIONS.md` |
 | Infrastructure-as-Code Review | `pm-engineering` | `pm-engineering/infra-as-code-review/GEM_INSTRUCTIONS.md` |
+| Injection Spotter | `pm-seatbelt` | `pm-seatbelt/injection-spotter/GEM_INSTRUCTIONS.md` |
 | Inspection Report Decoder | `pm-decoders` | `pm-decoders/inspection-report-decoder/GEM_INSTRUCTIONS.md` |
 | Instagram Post Downloader | `pm-writers` | `pm-writers/instagram-post-downloader/GEM_INSTRUCTIONS.md` |
 | Insurance Claim | `pm-lifeadmin` | `pm-lifeadmin/insurance-claim/GEM_INSTRUCTIONS.md` |
@@ -702,6 +707,7 @@
 | Timeshare Contract Decoder | `pm-decoders` | `pm-decoders/timeshare-contract-decoder/GEM_INSTRUCTIONS.md` |
 | Token Cost | `pm-tokens` | `pm-tokens/token-cost/GEM_INSTRUCTIONS.md` |
 | Token Diet | `pm-tokens` | `pm-tokens/token-diet/GEM_INSTRUCTIONS.md` |
+| Tool Permission Review | `pm-seatbelt` | `pm-seatbelt/tool-permission-review/GEM_INSTRUCTIONS.md` |
 | Tool Procurement Eval | `pm-cowork` | `pm-cowork/tool-procurement-eval/GEM_INSTRUCTIONS.md` |
 | Tooling Risk Assessment | `pm-hardware` | `pm-hardware/tooling-risk-assessment/GEM_INSTRUCTIONS.md` |
 | Tornado Sensitivity | `pm-calculators` | `pm-calculators/tornado-sensitivity/GEM_INSTRUCTIONS.md` |
