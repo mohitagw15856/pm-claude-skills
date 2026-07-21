@@ -1,0 +1,14 @@
+{
+  "spec": "skillspec-registry/1",
+  "note": "Public registry of repositories whose skills conform to SkillSpec. To be listed, PR an entry here; CI re-runs `skillspec-check <your repo> --min-level <level>` to confirm the claimed level. See conformance/REGISTRY.md.",
+  "repos": [
+    {
+      "name": "pm-claude-skills",
+      "url": "https://github.com/mohitagw15856/pm-claude-skills",
+      "skills": 750,
+      "level": 3,
+      "verifiedAt": "2026-07-21",
+      "note": "Reference implementation — every skill gates at L3 in CI (SkillCheck + the published skillspec validator)."
+    }
+  ]
+}

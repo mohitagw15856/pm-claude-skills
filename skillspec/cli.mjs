@@ -8,6 +8,7 @@
 //   npx skillspec-check skills/ path/to/SKILL.md # specific dirs/files
 //   npx skillspec-check --min-level 2 --strict   # gate CI on conformance
 //   npx skillspec-check --json                   # machine-readable
+//   npx skillspec-check skills/ --badge          # shields.io endpoint JSON (earned badge)
 //   npx skillspec-check fix skills/ [--dry-run]  # scaffold missing L2/L3 sections
 //   npx skillspec-check --advisories <file|url>  # extra security patterns (ADV feed)
 //
@@ -21,6 +22,7 @@ const fixMode = rawArgs[0] === 'fix';
 const args = fixMode ? rawArgs.slice(1) : rawArgs;
 const strict = args.includes('--strict');
 const asJson = args.includes('--json');
+const asBadge = args.includes('--badge');
 const dryRun = args.includes('--dry-run');
 const minLevel = (() => { const i = args.indexOf('--min-level'); return i >= 0 ? parseInt(args[i + 1], 10) || 0 : 0; })();
 const advisoriesSrc = (() => { const i = args.indexOf('--advisories'); return i >= 0 ? args[i + 1] : null; })();
@@ -182,6 +184,29 @@ if (fixMode) {
 
 const results = files.map(check);
 const L = ['L0 not loadable', 'L1 Loadable', 'L2 Structured', 'L3 Trustworthy'];
+
+// --badge — emit a shields.io endpoint object so ANY repo can display an *earned*
+// SkillSpec badge from its own CI: the message is the minimum level across all
+// scanned skills (a chain is only as strong as its weakest skill) + the count.
+// Wire it up: shields.io/badges/endpoint-badge pointed at this JSON in your repo.
+//   npx skillspec-check skills/ --badge > badge.json
+if (asBadge) {
+  const counts = [0, 0, 0, 0];
+  results.forEach((r) => counts[r.level]++);
+  const anyError = results.some((r) => r.errors.length);
+  const min = Math.min(...results.map((r) => r.level));
+  const COLOR = ['red', 'orange', 'yellow', 'brightgreen'];
+  const message = anyError
+    ? `failing · ${results.length} skills`
+    : `L${min} · ${results.length} skill${results.length === 1 ? '' : 's'}`;
+  console.log(JSON.stringify({
+    schemaVersion: 1,
+    label: 'SkillSpec',
+    message,
+    color: anyError ? 'red' : COLOR[min] || 'lightgrey',
+  }));
+  process.exit(0);
+}
 
 if (asJson) {
   console.log(JSON.stringify({ spec: 'skillspec/1', results }, null, 2));

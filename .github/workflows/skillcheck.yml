@@ -11,6 +11,7 @@ on:
       - 'skill-tiers.json'
       - 'scripts/skillcheck.mjs'
       - 'skillspec/**'
+      - 'conformance/**'
       - '.github/workflows/skillcheck.yml'
   pull_request:
     paths:
@@ -18,6 +19,7 @@ on:
       - 'skill-tiers.json'
       - 'scripts/skillcheck.mjs'
       - 'skillspec/**'
+      - 'conformance/**'
       - '.github/workflows/skillcheck.yml'
 
 jobs:
@@ -36,3 +38,5 @@ jobs:
         run: node scripts/skillcheck.mjs
       - name: SkillSpec conformance gate (dogfooding the published validator)
         run: node skillspec/cli.mjs skills/ --min-level 3
+      - name: Validate the SkillSpec conformance registry
+        run: node conformance/verify-registry.mjs
