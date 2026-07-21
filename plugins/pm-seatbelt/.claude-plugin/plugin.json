@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-seatbelt",
+  "version": "1.0.0",
+  "description": "Agent safety seatbelts: the pre-flight security checklists you run before an agent touches email, the browser, files, or goes autonomous — least-privilege reviews, prompt-injection spotting, and the blast-radius drill",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "agent-safety",
+    "prompt-injection",
+    "least-privilege",
+    "preflight"
+  ]
+}
