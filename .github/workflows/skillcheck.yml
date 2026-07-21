@@ -10,12 +10,14 @@ on:
       - 'skills/**'
       - 'skill-tiers.json'
       - 'scripts/skillcheck.mjs'
+      - 'skillspec/**'
       - '.github/workflows/skillcheck.yml'
   pull_request:
     paths:
       - 'skills/**'
       - 'skill-tiers.json'
       - 'scripts/skillcheck.mjs'
+      - 'skillspec/**'
       - '.github/workflows/skillcheck.yml'
 
 jobs:
