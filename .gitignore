@@ -51,3 +51,4 @@ node_modules/
 .self-improve.json
 .self-improve-backups/
 pm-skills-course.zip
+web/skill-changelog.json

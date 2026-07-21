@@ -20,6 +20,7 @@ on:
       - 'scripts/build-leaderboard.mjs'
       - 'scripts/build-coverage.mjs'
       - 'scripts/build-skill-pages.mjs'
+      - 'scripts/build-skill-changelog.mjs'
       - 'scripts/build-community.mjs'
       - 'scripts/build-samples.mjs'
       - 'examples/samples/**'
@@ -62,6 +63,9 @@ jobs:
 
       - name: Build per-skill SEO pages + sitemap (web/skill/*.html)
         run: node scripts/build-skill-pages.mjs
+
+      - name: Build per-skill change history (web/skill-changelog.json)
+        run: node scripts/build-skill-changelog.mjs
 
       - name: Build the community hub (web/community.html)
         env:

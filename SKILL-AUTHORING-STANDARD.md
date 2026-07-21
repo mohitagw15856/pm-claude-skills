@@ -46,6 +46,14 @@ deciding whether to load the skill. It must contain three things:
 
 Keep it under ~3 sentences. Write triggers from the user's vocabulary, not internal jargon.
 
+### Optional frontmatter
+
+- **`version:`** — a semver string (e.g. `version: 1.2.0`). Optional but recommended for
+  skills that change behavior over time; it surfaces in the catalog and lets consumers pin
+  or detect updates. Bump it when the skill's output contract changes (not for typo fixes).
+  A per-skill change history is generated automatically from git, so you don't hand-maintain
+  a changelog — see `npx pm-claude-skills changelog <skill>`.
+
 ## 3. Body sections
 
 Use this section order. Not every skill needs every section, but strong skills include

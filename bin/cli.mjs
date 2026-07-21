@@ -15,6 +15,7 @@
 import { readdirSync, existsSync, mkdirSync, rmSync, cpSync, symlinkSync, copyFileSync, statSync, readFileSync } from 'node:fs';
 import { join, dirname, basename, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execSync } from 'node:child_process';
 import { homedir } from 'node:os';
 import { createRequire } from 'node:module';
 
@@ -316,6 +317,36 @@ function find(opts) {
   console.log(`\nRun one:  npx pm-claude-skills run ${top[0].s.name} --text "…"\n`);
 }
 
+// `changelog <skill>` — what changed in a skill and when. Reads the built
+// web/skill-changelog.json (per-skill git history) if present; otherwise falls
+// back to live `git log` when run inside the repo. Honest about an empty history.
+function changelog(opts) {
+  const name = opts._[1];
+  if (!name) { console.error('Usage: pm-claude-skills changelog <skill>'); process.exit(2); }
+  let history = null;
+  const built = join(PKG_ROOT, 'web', 'skill-changelog.json');
+  if (existsSync(built)) {
+    // The artifact enumerates every real skill, so a missing key = not a real skill.
+    try {
+      const skills = JSON.parse(readFileSync(built, 'utf8')).skills || {};
+      if (!(name in skills)) { console.error(`No skill named "${name}". Try: pm-claude-skills find "${name}"`); process.exit(1); }
+      history = skills[name];
+    } catch { /* fall through to git */ }
+  }
+  if (history == null) {
+    try {
+      const out = execSync(`git log --pretty=format:"%as %h %s" -- "skills/${name}/"`, { cwd: PKG_ROOT, encoding: 'utf8' }).trim();
+      history = out ? out.split('\n').map((l) => { const m = l.match(/^(\S+)\s+(\S+)\s+(.*)$/); return m ? { date: m[1], sha: m[2], subject: m[3] } : null; }).filter(Boolean) : [];
+    } catch { history = null; }
+  }
+  if (history == null) { console.error(`No history available for "${name}". (Is it a real skill? Try: pm-claude-skills find "${name}")`); process.exit(1); }
+  if (opts.json) { console.log(JSON.stringify({ skill: name, history }, null, 2)); return; }
+  if (!history.length) { console.log(`${name}: no recorded changes yet.`); return; }
+  console.log(`\n${name} — ${history.length} change${history.length > 1 ? 's' : ''}\n`);
+  for (const e of history) console.log(`  ${e.date}  ${e.sha}  ${e.subject}`);
+  console.log('');
+}
+
 const HELP = `pm-claude-skills — install professional Agent Skills into any AI coding tool.
 
 👋 New here? Two fast ways to start:
@@ -341,6 +372,7 @@ Usage:
   npx pm-claude-skills stats       # the project's public vitals (runs served, stars, benchmark)
   npx pm-claude-skills reckoning   # your prediction ledger: due calls, hit rate, calibration curve, Brier score
   npx pm-claude-skills doctor      # checkup: what's installed, what's stale, what to fix (read-only)
+  npx pm-claude-skills changelog <skill>      # what changed in a skill, and when (per-skill git history)
   npx pm-claude-skills list
   npx pm-claude-skills --version
 
@@ -370,6 +402,7 @@ else if (!cmd || cmd === 'help' || (opts.help && !['run', 'generate', 'install',
 else if (cmd === 'list') list();
 else if (cmd === 'search') search(opts);
 else if (cmd === 'find') find(opts);
+else if (cmd === 'changelog') changelog(opts);
 else if (cmd === 'add') add(opts);
 else if (cmd === 'migrate') {
   const { run } = await import('./migrate.mjs');
