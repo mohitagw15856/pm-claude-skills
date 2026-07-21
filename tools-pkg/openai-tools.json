@@ -10870,6 +10870,25 @@
  {
   "type": "function",
   "function": {
+   "name": "rollback_plan",
+   "description": "Write a concrete rollback plan for a risky change (deploy, migration, feature-flag flip, config rollout) so the reverse is one command away — not an improvised debate at 2am. Use when asked to write a rollback plan, back-out plan, revert plan, or 'what if we need to undo this'. Produces a rollback plan with the signals that trigger it, exact reverse commands, verification steps, data-safety notes, and a communications template.",
+   "parameters": {
+    "type": "object",
+    "properties": {
+     "input": {
+      "type": "string",
+      "description": "The user's raw input for this skill — notes, brief, data, or task."
+     }
+    },
+    "required": [
+     "input"
+    ]
+   }
+  }
+ },
+ {
+  "type": "function",
+  "function": {
    "name": "rss_digest",
    "description": "Fetch and digest any RSS or Atom feed with zero API keys — curl plus disciplined parsing into a ranked, deduplicated briefing instead of a link dump. Use when asked summarize this feed, what's new on this blog, digest these RSS feeds, or build me a morning briefing from these sources. Produces the digest with dates and one-line what-it-is summaries, cross-feed dedup, and the rerunnable commands per feed.",
    "parameters": {

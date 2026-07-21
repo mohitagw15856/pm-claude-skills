@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-749 skills exported. Copy a `SKILL.md` into the tool to use it.
+750 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -580,6 +580,7 @@
 | Roadmap Presentation | `pm-planning` | `roadmap-presentation/SKILL.md` |
 | ROI Estimator | `pm-calculators` | `roi-estimator/SKILL.md` |
 | Role Redesign For AI | `pm-aiwork` | `role-redesign-for-ai/SKILL.md` |
+| Rollback Plan | `pm-engineering` | `rollback-plan/SKILL.md` |
 | RSS Digest | `pm-live` | `rss-digest/SKILL.md` |
 | Rubric Builder | `pm-education` | `rubric-builder/SKILL.md` |
 | Runbook Writer | `pm-engineering` | `runbook-writer/SKILL.md` |

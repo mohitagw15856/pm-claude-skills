@@ -616,6 +616,10 @@
   {
    "skill": "oncall-handoff",
    "input": "Handoff for backend on-call, week ending 2026-07-19 Asia/Kolkata. Open: INC-4821 S2 payments-api p99 latency 380ms since Thu 14:00, mitigation is 2x replicas, root cause TBD, owner me. Silenced kafka-lag alert until 2026-07-22 (broker replacement). Investigating whether the CDN egress spike on Wed correlates with the checkout 5xx bump \u2014 dashboard link in Notion. Deployed a rate-limiter config change 36h ago, rollback is: kubectl rollout undo deploy/edge-gateway. Next week: launch push planned Wed 10:00 IST."
+  },
+  {
+   "skill": "rollback-plan",
+   "input": "Rollback plan for the checkout-v2 deploy scheduled Wed 2026-08-05 10:00 IST. Ships as a canary 5/25/100 over 90 min. Owner: me. Change: new order-splitting logic in checkout-svc, writes a new order_parts table (write-only from new code path; old code untouched, no schema change to existing tables). Downstream: fulfillment-worker + billing-svc consume orders topic. Signals we care about: checkout-conversion p95, order-create p99 latency, 5xx rate on /checkout, fulfillment lag. Rollback = flip \"checkout_split\" LaunchDarkly flag off, then kubectl rollout undo deploy/checkout-svc, then quarantine order_parts rows created in the window. Approver: platform lead (Priya)."
   }
  ]
 }
