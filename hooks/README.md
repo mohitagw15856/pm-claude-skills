@@ -45,3 +45,10 @@ Learn more in the [Claude Code hooks docs](https://code.claude.com/docs/en/hooks
 ## ☀️ chief-of-staff.sh — the morning brief (SessionStart)
 
 Opens every session with this project's professional state: **predictions due for settling** (from `brain/predictions/`), the **latest Firm minutes / Boardroom verdicts** (so you revise documents with their verdicts in mind), and the brain's **open hypotheses**. Pure file reads, zero API cost, prints nothing when there's nothing to say. Pairs with `npx pm-claude-skills init`.
+
+## Agent handoff (RFC 0002)
+
+- `handoff-read.sh` — SessionStart: loads `HANDOFF.md` so a fresh session opens oriented.
+- `handoff-write.sh` — SessionEnd/PreCompact: prompts the agent to overwrite `HANDOFF.md` with current state.
+
+The convention: [docs/rfcs/0002-agent-handoff-file.md](../docs/rfcs/0002-agent-handoff-file.md). Pairs with the [session-handoff skill](../skills/session-handoff/SKILL.md). *Your agent, but it remembers Monday.*
