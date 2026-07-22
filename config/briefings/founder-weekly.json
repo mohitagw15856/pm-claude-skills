@@ -1,0 +1,24 @@
+{
+  "id": "founder-weekly",
+  "title": "Founder Weekly",
+  "role": "Founder / CEO",
+  "cadence": "weekly",
+  "intro": "The week's leverage points in one read: the investor-ready update, the top competitive move to watch, and the single most important decision.",
+  "sections": [
+    {
+      "heading": "Investor / board update",
+      "skill": "executive-update",
+      "prompt": "Draft this week's investor update. INPUT: {{notes}}. Lead with the one number that matters. If inputs are missing, produce a labelled template with [FILL IN] — never invent metrics."
+    },
+    {
+      "heading": "Competitive watch",
+      "skill": "competitive-analysis",
+      "prompt": "A short competitive read for this week from: {{market}}. The one move to watch and the one response option. Mark unknowns [FILL IN]."
+    },
+    {
+      "heading": "The decision to force",
+      "skill": "decision-forensics",
+      "prompt": "The single highest-stakes open decision this week: {{decision}}. Frame it, the options, and the reversibility. If none is provided, output the framework."
+    }
+  ]
+}
