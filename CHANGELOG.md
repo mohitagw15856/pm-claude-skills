@@ -9,7 +9,9 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
-## [61.2.0] — the builder's toolkit: prove it, harden it, run it your way — 2026-07-22
+## [61.2.1] — the builder's toolkit: prove it, harden it, run it your way — 2026-07-22
+
+> _(61.2.0 was skipped: its release tag was cut before the version-bump merged, and GitHub's immutable-release lock prevented reusing the tag. Nothing published under 61.2.0 — this is the same release, re-cut cleanly.)_
 
 No new skills — this release is about the *infrastructure* around the 750: proving quality against real references, red-teaming robustness, testing skills before a PR, running them offline, signing what they produce, and a house prose standard the whole library writes to. **750 skills, 92 bundles.**
 
