@@ -9,6 +9,15 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+### Added — ✍️ house prose rules (three tiers)
+- **[docs/prose-style.md](docs/prose-style.md)** — the full writing standard for prose the library *produces* and the prose in its own skills/docs: write for the job, calibrate voice to genre, concrete anchors, **never invent specificity**, ordinary words, cut the staged parts, don't fake humanity, keep useful structure, revise by cutting.
+- **[output-styles/plain-honest-prose.md](output-styles/plain-honest-prose.md)** — the same rules as a Claude Code output-style persona (applies the house voice to any skill's output).
+- **[AGENTS.md](AGENTS.md)** — a root agent-guidance file (new) carrying the mini prose ruleset + repo working conventions.
+
+### Changed — 🧽 notes-humanizer hardened
+- Added a **genre-calibration gate** (Phase 0): neutral docs/summaries get tells stripped and *nothing injected*; only personal/persuasive text gets earned voice.
+- Reframed the "inject" moves from mandatory quotas to **earned-or-absent**, and added explicit guardrails: **no faked humanity** (no manufactured typos/slang/length-variance/staged messiness) and **no invented specificity** (never fabricate a number, quote, or fact to sound concrete).
+
 ## [61.1.0] — the demand side: find the right skill, trust the badge, adopt the spec — 2026-07-21
 
 Four systems that turn a 750-skill factory into something a person can actually navigate and trust. **750 skills, 90 bundles** — no new wave, all depth.
