@@ -59,8 +59,8 @@ CHANGES MADE
    → "X and Y. Z is different — [expanded thought]"
    Why: all three items had identical rhythm; broke the pattern
 
-4. Added short sentence: "That's the problem."
-   Why: needed a sub-8-word sentence to vary rhythm
+4. Split a 30-word sentence where the point turned: "…and it failed. That's the problem."
+   Why: the meaning lands on a short beat here — the brevity is earned, not inserted for variance
 
 5. Added sentence starting with "But"
    Why: human writers do this; AI avoids it as a statistical default
@@ -83,6 +83,16 @@ The full rewritten text, ready to copy and paste — no annotations, no formatti
 ---
 
 ## Instructions for Claude
+
+### Phase 0: Calibrate to genre (do this first)
+
+Before touching anything, decide what kind of text this is — the genre sets how far Phase 2 goes:
+
+- **Neutral / informational** (documentation, reference, summaries, status reports, official notices, most business comms): run **Phase 1 only**. Strip the tells and stop. Do **not** inject opinion, asides, or personality — a clean doc is the goal, not a voice. Injected "humanity" here reads as unprofessional.
+- **Personal / persuasive / social** (opinion pieces, blog posts, founder notes, LinkedIn, marketing, personal emails): run **Phase 1 + Phase 2**. Here earned voice is the point.
+- **Unsure or mixed:** default to the lighter touch (Phase 1, plus only the Phase 2 moves the content genuinely earns), and say which genre you assumed.
+
+The single rule underneath: **calibrate voice to the job of the text.** Never dismantle useful structure (a scannable doc, a real list) just to look less templated.
 
 ### Phase 1: Audit
 
@@ -108,19 +118,19 @@ Read the full text before making any changes. Identify and count every instance 
 
 Do not remove every em dash — only the ones used as parenthetical substitutes. Do not remove all hedging — only empty hedging that adds no information.
 
-### Phase 2: Inject
+### Phase 2: Inject (personal / persuasive genres only — see Phase 0)
 
-After stripping patterns, add the following signals. Each one should emerge from the actual content — don't add generic filler:
+Only for text where earned voice is the point. These are **options the content earns, not a checklist to complete** — apply the ones the material genuinely supports and **skip any that would be forced**. A move inserted to hit a quota is itself an AI tell. Never fake humanity: no invented typos, no forced slang, no staged messiness, and no chopping or padding sentences just to manufacture rhythm variance.
 
-1. **One genuine opinion or take.** The author appears to actually believe something specific. State it without hedging. ("This approach works, and I think most people underestimate how rarely the alternative does.")
+1. **A genuine opinion or take** *(if the author clearly holds one).* State the belief the text already implies, without hedging. Don't manufacture an opinion the author never expressed.
 
-2. **One specific detail, example, or number.** Ground the most abstract claim in the text with something concrete. If the text says "this happens frequently," add a real or illustrative number. If it says "many companies do this," name the type of company.
+2. **A specific detail or example** *(only if a real one exists).* Ground the most abstract claim in something concrete the author actually knows. **Never invent a number, quote, date, name, or fact to sound specific** — that's fake specificity, a worse tell than vagueness. If no real detail is available, ask the author for one or keep the honest abstraction; do not fabricate.
 
-3. **One aside or parenthetical thought that breaks the fourth wall slightly.** This is the signal most synthetic text lacks — the writer momentarily steps out of the formal argument to say something human. ("(I've seen this specific mistake made by people who absolutely should have known better.)")
+3. **An aside that steps out of the formal argument** *(where it fits the register).* The signal most synthetic text lacks — but only in genres that welcome it, and only when it connects to a real point. Forced or cutesy asides are worse than none.
 
-4. **At least one sentence under 8 words.** Make it land on a point, not a transition.
+4. **Let a sentence be short where the point lands on a short beat.** Follow the meaning, not a word count. Never shorten a sentence just to add "variance."
 
-5. **One sentence that starts with "And" or "But."** Place it where the rhythm earns it, not randomly.
+5. **Start a sentence with "And" or "But" only where the rhythm truly earns it.** If no place does, don't add one — a random "But" is a tell, not a fix.
 
 ### Phase 3: Report
 
@@ -136,20 +146,25 @@ Present the output in the four-section structure defined above. The change log m
 
 ## Quality Checks
 
+- [ ] Genre was assessed first (Phase 0); neutral/informational text got Phase 1 only, with no injected opinion, aside, or personality
 - [ ] Audit was completed before rewriting (patterns counted, not just detected)
 - [ ] Every removed pattern is listed in the change log with a specific reason
 - [ ] Em dashes were assessed individually — only parenthetical-substitute uses were removed
 - [ ] Rule-of-three lists: the rhythm was actually checked, not just the fact that there were three items
-- [ ] At least one sentence under 8 words was added (or was already present)
-- [ ] At least one sentence starts with "And" or "But" in the final text
+- [ ] No fact, number, quote, date, or name was invented to add specificity
+- [ ] Any Phase 2 moves applied were earned by the content — none inserted to hit a quota (short sentence / "And"/"But" opener / aside added only where the material genuinely called for it, or not at all)
 - [ ] The specific detail or example added connects to an actual claim in the text, not floated in generically
-- [ ] The aside breaks the fourth wall slightly without being forced or cutesy
+- [ ] The aside (if any) breaks the fourth wall slightly without being forced or cutesy
 - [ ] The change log lists specific instances, not categories
 - [ ] The clean output section has no annotations or formatting artifacts — ready to paste
 - [ ] If the original was already clean, that was stated explicitly rather than changes invented
 
 ## Anti-Patterns
 
+- [ ] Do not fake humanity: no invented typos, no forced slang, no staged messiness, and no programmatic sentence-length variation added to hit a target — faked signals are themselves AI tells
+- [ ] Do not inject voice into neutral genres — documentation, summaries, reports, and official comms get the tells stripped and nothing added; personality there reads as unprofessional
+- [ ] Do not invent specificity — never add a number, quote, date, name, or fact that isn't real to make prose sound concrete; ask for the detail or keep the honest abstraction
+- [ ] Do not dismantle useful structure (a scannable layout, a genuine list) just to look less templated
 - [ ] Do not remove all em dashes — only the ones functioning as parenthetical substitutes should be removed; genuine dramatic pauses are valid
 - [ ] Do not invent problems to justify changes when the original is already clean — report what was found honestly, even if the answer is "this text is mostly fine"
 - [ ] Do not add the aside or opinion generically — the injected human signals must connect to an actual claim or argument in the text, not float in as decoration
