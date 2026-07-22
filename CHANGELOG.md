@@ -9,6 +9,24 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+### Added — 🧰 ten builder/quality/trust tools
+
+Quality & proof:
+- **Gold-standard corpus** ([evals/gold](evals/gold), [scripts/gold-eval.mjs](scripts/gold-eval.mjs)) — grade a skill's output against a concrete human-authored reference artifact + rubric, not only the LLM judge (answers the circularity limit in [the SkillBench paper](docs/paper/skillbench.md) §6).
+- **Adversarial robustness eval** ([evals/robustness](evals/robustness), [scripts/robustness-eval.mjs](scripts/robustness-eval.mjs)) — red-team each skill: thin input (fabrication), prompt injection (hijack), out-of-scope (clean refusal) → a per-skill robustness grade.
+- **[scripts/grade-output.mjs](scripts/grade-output.mjs)** — deterministic, offline prose gate enforcing the house rules (AI tells, effort words, reading level, templated cadence); `--max-tells` as a CI gate.
+
+Builder & ecosystem:
+- **Author's test bench** — `npx pm-claude-skills test <skill> --runs N` scores a skill vs its eval case with variance, locally, before a PR.
+- **[SkillSpec Action](action/skillspec/)** — a reusable GitHub Action that lints *any* repo's `SKILL.md` files for L0–L3 conformance + security, with min-level gating and an earned badge.
+- **Private overlay** — `add --private <dir>` merges a company's own skills over the public library without forking; [docs/private-overlay.md](docs/private-overlay.md) documents all three overlay paths.
+
+Privacy, provenance & distribution:
+- **[scripts/run-local.mjs](scripts/run-local.mjs)** — run any skill against a local model (Ollama/LM Studio/llama.cpp/vLLM), fully offline, no API key.
+- **[scripts/skill-receipt.mjs](scripts/skill-receipt.mjs)** — ed25519-signed provenance receipts for a run (skill, version, model, input/output hashes); `verify` catches tampering. No deps, hashes only.
+- **Role briefing packs** ([config/briefings](config/briefings), [scripts/briefing.mjs](scripts/briefing.mjs)) — a role's weekly cycle (e.g. "PM Monday") composed into one artifact. Ships PM Monday + Founder Weekly.
+- **[scripts/render-diagram.mjs](scripts/render-diagram.mjs)** — turn the Mermaid the 13 diagram skills produce into a committable SVG/PNG/HTML image (for email/slides/PDF that don't render mermaid).
+
 ### Added — ✍️ house prose rules (three tiers)
 - **[docs/prose-style.md](docs/prose-style.md)** — the full writing standard for prose the library *produces* and the prose in its own skills/docs: write for the job, calibrate voice to genre, concrete anchors, **never invent specificity**, ordinary words, cut the staged parts, don't fake humanity, keep useful structure, revise by cutting.
 - **[output-styles/plain-honest-prose.md](output-styles/plain-honest-prose.md)** — the same rules as a Claude Code output-style persona (applies the house voice to any skill's output).

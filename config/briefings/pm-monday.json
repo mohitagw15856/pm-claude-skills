@@ -1,0 +1,24 @@
+{
+  "id": "pm-monday",
+  "title": "PM Monday",
+  "role": "Product Manager",
+  "cadence": "weekly",
+  "intro": "Your week, assembled: what shipped, where the roadmap stands, and the update your stakeholders need — one artifact, one command.",
+  "sections": [
+    {
+      "heading": "This week's stakeholder update",
+      "skill": "executive-update",
+      "prompt": "Draft this week's stakeholder update. INPUT (paste your raw notes/metrics, or wire this to a source): {{notes}}. If inputs are missing, produce a clearly-labelled TEMPLATE with [FILL IN] rather than inventing facts."
+    },
+    {
+      "heading": "Roadmap health check",
+      "skill": "roadmap-narrative",
+      "prompt": "Give a short roadmap health read for the current quarter from: {{roadmap}}. Flag slippage and the one sequencing risk. Mark unknowns [FILL IN]."
+    },
+    {
+      "heading": "The one decision to force this week",
+      "skill": "rice-prioritisation",
+      "prompt": "From the current backlog: {{backlog}} — surface the single highest-leverage item to push and why. If the backlog isn't provided, output the framework and what to gather."
+    }
+  ]
+}

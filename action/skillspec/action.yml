@@ -1,0 +1,64 @@
+name: 'SkillSpec Conformance Check'
+description: 'Lint the SKILL.md files in your repo for SkillSpec conformance (L0-L3) and known security patterns — on every PR. Wraps the published skillspec-check CLI. No API key, no cost.'
+author: 'Mohit Aggarwal'
+branding:
+  icon: 'check-circle'
+  color: 'blue'
+inputs:
+  path:
+    description: 'Directory (or glob) of SKILL.md files to check.'
+    required: false
+    default: '.'
+  min-level:
+    description: 'Fail if any skill is below this conformance level (0=loadable, 1, 2, 3=trustworthy). 0 = report only.'
+    required: false
+    default: '0'
+  strict:
+    description: 'Treat warnings as failures.'
+    required: false
+    default: 'false'
+  badge:
+    description: 'Also write a shields.io endpoint JSON to badge-output for an earned conformance badge.'
+    required: false
+    default: 'false'
+  badge-output:
+    description: 'Where to write the badge JSON when badge=true.'
+    required: false
+    default: 'skillspec-badge.json'
+  version:
+    description: 'skillspec-check version to run (npm dist-tag or version).'
+    required: false
+    default: 'latest'
+outputs:
+  badge-file:
+    description: 'Path to the written badge JSON (when badge=true).'
+    value: ${{ inputs.badge-output }}
+runs:
+  using: 'composite'
+  steps:
+    - shell: bash
+      run: |
+        set -e
+        FLAGS=""
+        [ "${{ inputs.strict }}" = "true" ] && FLAGS="$FLAGS --strict"
+        [ "${{ inputs.min-level }}" != "0" ] && FLAGS="$FLAGS --min-level ${{ inputs.min-level }}"
+
+        echo "::group::SkillSpec check (${{ inputs.path }})"
+        # Human-readable report → job summary; also drives the pass/fail exit code.
+        npx -y skillspec-check@${{ inputs.version }} "${{ inputs.path }}" $FLAGS | tee "$RUNNER_TEMP/skillspec.txt"
+        code=${PIPESTATUS[0]}
+        echo "::endgroup::"
+
+        {
+          echo "### SkillSpec conformance"
+          echo '```'
+          cat "$RUNNER_TEMP/skillspec.txt"
+          echo '```'
+        } >> "$GITHUB_STEP_SUMMARY"
+
+        if [ "${{ inputs.badge }}" = "true" ]; then
+          npx -y skillspec-check@${{ inputs.version }} "${{ inputs.path }}" --badge > "${{ inputs.badge-output }}" || true
+          echo "Wrote badge JSON to ${{ inputs.badge-output }}"
+        fi
+
+        exit $code
