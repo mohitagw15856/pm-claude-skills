@@ -197,12 +197,28 @@ function add(opts) {
       else copyFileSync(f, dest);
       count++;
     }
+    if (opts.private) console.log('  note: --private overlay applies to native agents (claude/hermes/codex/openclaw); for rule-file agents, use `serve --private` or export your private skills first.');
   } else {
     for (const name of readdirSync(skillsDir)) {
       const src = join(skillsDir, name);
       if (!existsSync(join(src, 'SKILL.md'))) continue;
       placeDir(src, join(target, name), opts);
       count++;
+    }
+    // Private overlay: a company's own skills merged on top of the public library
+    // WITHOUT forking. Same-named private skills override the public one; the
+    // rest are additive. (Mirrors `serve --private`; see docs/private-overlay.md.)
+    if (opts.private) {
+      const priv = resolve(opts.private);
+      if (!existsSync(priv)) { console.error(`Error: --private dir not found: ${priv}`); process.exit(1); }
+      let pc = 0;
+      for (const name of readdirSync(priv)) {
+        const src = join(priv, name);
+        if (!statSync(src).isDirectory() || !existsSync(join(src, 'SKILL.md'))) continue;
+        placeDir(src, join(target, name), opts);   // same name → overrides the public skill
+        pc++; count++;
+      }
+      console.log(`  ${opts.dryRun ? 'would overlay' : 'overlaid'} ${pc} private skill(s) from ${priv}`);
     }
     // Claude Code also gets subagents, slash commands, and output-styles.
     if (agent === 'claude') {
@@ -387,6 +403,7 @@ Examples:
   npx pm-claude-skills search launch --json    # machine-readable (Raycast/Alfred/scripts)
 
   npx pm-claude-skills run prd-template --text "a referral program for B2B users"   # run a skill (needs ANTHROPIC_API_KEY)
+  npx pm-claude-skills test prd-template --runs 3   # author's test bench: score a skill vs its eval case + variance
   cat notes.txt | npx pm-claude-skills run meeting-notes --out summary.md           # pipe input, write the artifact
   cat notes.txt | npx pm-claude-skills chain run-discovery --deck                   # notes → 4 artifacts + a real .pptx
   npx pm-claude-skills install acme/their-skills --dry-run                          # audit a third-party skill repo
@@ -404,6 +421,11 @@ else if (cmd === 'search') search(opts);
 else if (cmd === 'find') find(opts);
 else if (cmd === 'changelog') changelog(opts);
 else if (cmd === 'add') add(opts);
+else if (cmd === 'test') {
+  const { run } = await import('./test.mjs');
+  try { process.exit(await run(process.argv.slice(3))); }
+  catch (e) { console.error(`Error: ${e.message}`); process.exit(1); }
+}
 else if (cmd === 'migrate') {
   const { run } = await import('./migrate.mjs');
   try { process.exit(await run(process.argv.slice(3))); }
