@@ -9,6 +9,18 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [61.3.0] — most-requested: three skills people actually asked for — 2026-07-23
+
+Built straight from the demand-ranked request queue (`data/skill-requests.json`). **754 skills, 90 bundles.**
+
+### Added
+- **reference-check-script** (pm-recruiting) — run a rigorous candidate reference check: a structured question set, probing follow-ups, a 🟢🟡🔴 rubric, and legal guardrails, designed to get past "they were great." (The mirror of `reference-request-kit`, which helps a jobseeker secure their *own* references.)
+- **deprecation-comms-plan** (pm-devrel) — the customer-communications program for sunsetting a product/API/feature: staged timeline with grace periods, messaging tiered by dependence, a migration-guide outline, channel cadence, and an escalation playbook for at-risk accounts. Distinct from `feature-sunset-plan` (the kill decision + code removal).
+- **community-moderation-policy** (pm-social) — a fair, enforceable moderation policy for a user community (forum/Discord/subreddit): code of conduct with examples, a graduated enforcement ladder, appeals, and moderator guidelines. Distinct from `community-management-playbook` (brand social-media channels).
+
+### Notes
+- A fourth request ("RFP response") was **not** built — it's already covered by the existing `rfp-response` + `rfp-scoring-matrix`. No duplicate shipped.
+
 ## [61.2.2] — youtube-script: long-form video scripting — 2026-07-23
 
 Video content was a direct ask. `short-form-script` covers 15–60s vertical and explicitly excludes long-form, so this fills the gap. **751 skills, 90 bundles.**
@@ -1088,7 +1100,8 @@ Earlier releases (v1.0.0 – v5.0.0) predate this changelog. See the
 [article series](README.md#-the-article-series) for the full history of how the
 library grew from the first PM toolkit to 100+ skills.
 
-[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.2.2...HEAD
+[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.3.0...HEAD
+[61.3.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.2.2...v61.3.0
 [61.2.2]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.2.1...v61.2.2
 [61.2.1]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.1.0...v61.2.1
 [61.1.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.0.0...v61.1.0

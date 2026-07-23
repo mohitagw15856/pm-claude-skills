@@ -1,15 +1,74 @@
 {
   "note": "Real-world professional requests the library measures itself against. The grow workflow appends items harvested from GitHub issues labelled 'skill-request'; you can also add rows by hand. Fields: topic (short name), ask (the request in the user's words), demand (rough weight, ≥1), optional slug (kebab-case skill name) and description (a starter SKILL.md description). scripts/mine-gaps.mjs scores each against the catalog and drafts the biggest uncovered one.",
   "requests": [
-    { "topic": "PRD writing", "ask": "Help me write a product requirements document for a new feature", "demand": 9 },
-    { "topic": "Cold outreach email", "ask": "Write a cold sales email that gets a reply", "demand": 7 },
-    { "topic": "Incident postmortem", "ask": "Run a blameless postmortem after an outage", "demand": 6 },
-    { "topic": "Board meeting deck", "ask": "Prepare the narrative for a board deck", "demand": 5 },
-    { "topic": "Reference check script", "ask": "Give me structured questions and a rubric to run a candidate reference check by phone", "demand": 4, "slug": "reference-check-script", "description": "Run a rigorous candidate reference check. Use when asked to prepare or conduct reference calls for a job candidate. Produces a structured question set, probing follow-ups, and a scoring rubric that surfaces real signal without leading the referee." },
-    { "topic": "Deprecation communication plan", "ask": "We're sunsetting an API — help me plan the customer communications and migration timeline", "demand": 4, "slug": "deprecation-comms-plan", "description": "Plan the communications for deprecating a product, API, or feature. Use when winding down something customers depend on. Produces a staged timeline, tiered customer messaging, a migration guide outline, and an internal escalation plan." },
-    { "topic": "RFP response", "ask": "Help me respond to a procurement RFP and score our fit before we commit", "demand": 5, "slug": "rfp-response-builder", "description": "Draft a competitive response to a request-for-proposal and qualify the opportunity first. Use when responding to an RFP/RFI. Produces a bid/no-bid assessment, a compliance matrix, win-theme messaging, and a structured response outline." },
-    { "topic": "On-call handoff", "ask": "Write a clean end-of-shift on-call handoff so nothing gets dropped", "demand": 4, "slug": "oncall-handoff", "description": "Produce a rigorous on-call / shift handoff. Use at the end of an on-call rotation or support shift. Produces a prioritised list of open incidents, watch items, recent changes, and explicit owner/next-step for each so nothing is dropped." },
-    { "topic": "Usage-based pricing model", "ask": "Model a usage-based pricing scheme with tiers and guardrails against bill shock", "demand": 5 },
-    { "topic": "Community moderation policy", "ask": "Draft a moderation policy and escalation ladder for our user community", "demand": 3, "slug": "community-moderation-policy", "description": "Write a fair, enforceable community moderation policy. Use when standing up or overhauling moderation for a forum, Discord, or user community. Produces conduct rules, a graduated enforcement ladder, appeals process, and moderator guidelines." }
+    {
+      "topic": "PRD writing",
+      "ask": "Help me write a product requirements document for a new feature",
+      "demand": 9
+    },
+    {
+      "topic": "Cold outreach email",
+      "ask": "Write a cold sales email that gets a reply",
+      "demand": 7
+    },
+    {
+      "topic": "Incident postmortem",
+      "ask": "Run a blameless postmortem after an outage",
+      "demand": 6
+    },
+    {
+      "topic": "Board meeting deck",
+      "ask": "Prepare the narrative for a board deck",
+      "demand": 5
+    },
+    {
+      "topic": "Reference check script",
+      "ask": "Give me structured questions and a rubric to run a candidate reference check by phone",
+      "demand": 4,
+      "slug": "reference-check-script",
+      "description": "Run a rigorous candidate reference check. Use when asked to prepare or conduct reference calls for a job candidate. Produces a structured question set, probing follow-ups, and a scoring rubric that surfaces real signal without leading the referee.",
+      "built": true,
+      "builtAt": "2026-07-23"
+    },
+    {
+      "topic": "Deprecation communication plan",
+      "ask": "We're sunsetting an API — help me plan the customer communications and migration timeline",
+      "demand": 4,
+      "slug": "deprecation-comms-plan",
+      "description": "Plan the communications for deprecating a product, API, or feature. Use when winding down something customers depend on. Produces a staged timeline, tiered customer messaging, a migration guide outline, and an internal escalation plan.",
+      "built": true,
+      "builtAt": "2026-07-23"
+    },
+    {
+      "topic": "RFP response",
+      "ask": "Help me respond to a procurement RFP and score our fit before we commit",
+      "demand": 5,
+      "description": "Draft a competitive response to a request-for-proposal and qualify the opportunity first. Use when responding to an RFP/RFI. Produces a bid/no-bid assessment, a compliance matrix, win-theme messaging, and a structured response outline.",
+      "built": true,
+      "builtAt": "2026-07-23",
+      "builtAs": "rfp-response",
+      "note": "covered by existing rfp-response (+ rfp-scoring-matrix)"
+    },
+    {
+      "topic": "On-call handoff",
+      "ask": "Write a clean end-of-shift on-call handoff so nothing gets dropped",
+      "demand": 4,
+      "slug": "oncall-handoff",
+      "description": "Produce a rigorous on-call / shift handoff. Use at the end of an on-call rotation or support shift. Produces a prioritised list of open incidents, watch items, recent changes, and explicit owner/next-step for each so nothing is dropped."
+    },
+    {
+      "topic": "Usage-based pricing model",
+      "ask": "Model a usage-based pricing scheme with tiers and guardrails against bill shock",
+      "demand": 5
+    },
+    {
+      "topic": "Community moderation policy",
+      "ask": "Draft a moderation policy and escalation ladder for our user community",
+      "demand": 3,
+      "slug": "community-moderation-policy",
+      "description": "Write a fair, enforceable community moderation policy. Use when standing up or overhauling moderation for a forum, Discord, or user community. Produces conduct rules, a graduated enforcement ladder, appeals process, and moderator guidelines.",
+      "built": true,
+      "builtAt": "2026-07-23"
+    }
   ]
 }

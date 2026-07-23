@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-751 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+754 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -126,6 +126,7 @@
 | College App Parent Guide | `pm-parents` | `pm-parents/college-app-parent-guide/SYSTEM_PROMPT.md` |
 | College Cost | `pm-calculators` | `pm-calculators/college-cost/SYSTEM_PROMPT.md` |
 | Community Management Playbook | `pm-social` | `pm-social/community-management-playbook/SYSTEM_PROMPT.md` |
+| Community Moderation Policy | `pm-social` | `pm-social/community-moderation-policy/SYSTEM_PROMPT.md` |
 | Company Brief | `pm-jobsearch` | `pm-jobsearch/company-brief/SYSTEM_PROMPT.md` |
 | Company Event Ops | `pm-cowork` | `pm-cowork/company-event-ops/SYSTEM_PROMPT.md` |
 | Comparative Market Analysis | `pm-realestate` | `pm-realestate/comparative-market-analysis/SYSTEM_PROMPT.md` |
@@ -203,6 +204,7 @@
 | Demo Script | `pm-cowork` | `pm-cowork/demo-script/SYSTEM_PROMPT.md` |
 | Dependency Audit | `pm-engineering` | `pm-engineering/dependency-audit/SYSTEM_PROMPT.md` |
 | Dependency Conflict Resolver | `pm-engineering` | `pm-engineering/dependency-conflict-resolver/SYSTEM_PROMPT.md` |
+| Deprecation Comms Plan | `pm-devrel` | `pm-devrel/deprecation-comms-plan/SYSTEM_PROMPT.md` |
 | Design Critique | `pm-design` | `pm-design/design-critique/SYSTEM_PROMPT.md` |
 | Design Handoff Brief | `pm-advanced` | `pm-advanced/design-handoff-brief/SYSTEM_PROMPT.md` |
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/SYSTEM_PROMPT.md` |
@@ -541,6 +543,7 @@
 | Red-Team Review | `pm-cross` | `pm-cross/red-team-review/SYSTEM_PROMPT.md` |
 | Redundancy Consultation | `pm-hr` | `pm-hr/redundancy-consultation/SYSTEM_PROMPT.md` |
 | Refactoring Plan | `pm-craft` | `pm-craft/refactoring-plan/SYSTEM_PROMPT.md` |
+| Reference Check Script | `pm-recruiting` | `pm-recruiting/reference-check-script/SYSTEM_PROMPT.md` |
 | Reference Letter | `pm-lifeadmin` | `pm-lifeadmin/reference-letter/SYSTEM_PROMPT.md` |
 | Reference Request Kit | `pm-layoff` | `pm-layoff/reference-request-kit/SYSTEM_PROMPT.md` |
 | Referral Program | `pm-growth` | `pm-growth/referral-program/SYSTEM_PROMPT.md` |

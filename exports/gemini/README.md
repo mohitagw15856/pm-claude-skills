@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-751 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+754 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -126,6 +126,7 @@
 | College App Parent Guide | `pm-parents` | `pm-parents/college-app-parent-guide/GEM_INSTRUCTIONS.md` |
 | College Cost | `pm-calculators` | `pm-calculators/college-cost/GEM_INSTRUCTIONS.md` |
 | Community Management Playbook | `pm-social` | `pm-social/community-management-playbook/GEM_INSTRUCTIONS.md` |
+| Community Moderation Policy | `pm-social` | `pm-social/community-moderation-policy/GEM_INSTRUCTIONS.md` |
 | Company Brief | `pm-jobsearch` | `pm-jobsearch/company-brief/GEM_INSTRUCTIONS.md` |
 | Company Event Ops | `pm-cowork` | `pm-cowork/company-event-ops/GEM_INSTRUCTIONS.md` |
 | Comparative Market Analysis | `pm-realestate` | `pm-realestate/comparative-market-analysis/GEM_INSTRUCTIONS.md` |
@@ -203,6 +204,7 @@
 | Demo Script | `pm-cowork` | `pm-cowork/demo-script/GEM_INSTRUCTIONS.md` |
 | Dependency Audit | `pm-engineering` | `pm-engineering/dependency-audit/GEM_INSTRUCTIONS.md` |
 | Dependency Conflict Resolver | `pm-engineering` | `pm-engineering/dependency-conflict-resolver/GEM_INSTRUCTIONS.md` |
+| Deprecation Comms Plan | `pm-devrel` | `pm-devrel/deprecation-comms-plan/GEM_INSTRUCTIONS.md` |
 | Design Critique | `pm-design` | `pm-design/design-critique/GEM_INSTRUCTIONS.md` |
 | Design Handoff Brief | `pm-advanced` | `pm-advanced/design-handoff-brief/GEM_INSTRUCTIONS.md` |
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/GEM_INSTRUCTIONS.md` |
@@ -541,6 +543,7 @@
 | Red-Team Review | `pm-cross` | `pm-cross/red-team-review/GEM_INSTRUCTIONS.md` |
 | Redundancy Consultation | `pm-hr` | `pm-hr/redundancy-consultation/GEM_INSTRUCTIONS.md` |
 | Refactoring Plan | `pm-craft` | `pm-craft/refactoring-plan/GEM_INSTRUCTIONS.md` |
+| Reference Check Script | `pm-recruiting` | `pm-recruiting/reference-check-script/GEM_INSTRUCTIONS.md` |
 | Reference Letter | `pm-lifeadmin` | `pm-lifeadmin/reference-letter/GEM_INSTRUCTIONS.md` |
 | Reference Request Kit | `pm-layoff` | `pm-layoff/reference-request-kit/GEM_INSTRUCTIONS.md` |
 | Referral Program | `pm-growth` | `pm-growth/referral-program/GEM_INSTRUCTIONS.md` |

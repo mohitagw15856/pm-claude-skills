@@ -1,4 +1,4 @@
-# 🧠 PM Skills — 751 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
+# 🧠 PM Skills — 754 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
 
 [![In the official Anthropic plugin directory](https://img.shields.io/badge/Anthropic%20Plugin%20Directory-Published-D97757?logo=anthropic&logoColor=white)](#-quick-start)
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
@@ -12,7 +12,7 @@
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4)](https://github.com/sponsors/mohitagw15856)
 
-**A library of 751 skills — each one a plain `SKILL.md` file that teaches your AI assistant to do one professional task properly.** Decode a lease before you sign it. Write a PRD your team can execute. Simulate the promotion committee before the real one meets. Check the weather with zero API keys. Generic AI gives you filler; these give you the structure a senior professional actually uses.
+**A library of 754 skills — each one a plain `SKILL.md` file that teaches your AI assistant to do one professional task properly.** Decode a lease before you sign it. Write a PRD your team can execute. Simulate the promotion committee before the real one meets. Check the weather with zero API keys. Generic AI gives you filler; these give you the structure a senior professional actually uses.
 
 Works natively in **Claude Code** and **Hermes Agent**, with ready-to-paste exports for **ChatGPT, Gemini, Cursor, Codex** and 8 more tools. *(PM stands for Professional, not just Product Management.)*
 
@@ -30,7 +30,7 @@ No `npm install` needed — `npx pm-claude-skills …` always runs the latest. `
 
 ## 📚 The skills
 
-Every skill follows the same discipline: what it produces, the inputs it needs, a real framework (severity scales, decision rules — not vibes), a concrete output template, quality checks, and anti-patterns. All 751 pass the [SkillSpec](SKILLSPEC.md) L3 gate and a security audit in CI.
+Every skill follows the same discipline: what it produces, the inputs it needs, a real framework (severity scales, decision rules — not vibes), a concrete output template, quality checks, and anti-patterns. All 754 pass the [SkillSpec](SKILLSPEC.md) L3 gate and a security audit in CI.
 
 ### For everyone — life's paperwork and decisions
 
@@ -155,7 +155,7 @@ The whole library on one poster — start path, standout features, and install o
 
 ## 🆕 Latest
 
-**v61.2.2 — long-form video:** **[youtube-script](skills/youtube-script/SKILL.md)** — a full YouTube script (explainer/tutorial/video essay) engineered for watch-time: title + thumbnail concepts, a timed cold open, retention beats with B-roll cues, and chapter timestamps. Sibling to [short-form-script](skills/short-form-script/SKILL.md); for other languages, [professional-translator](skills/professional-translator/SKILL.md). *Earlier — v61.2, the builder's toolkit:* prove quality against real references, red-team robustness, test skills before a PR, run them offline, and sign what they produce. *v61.1, the demand side:* **[find](https://mohitagw15856.github.io/pm-claude-skills/find.html)** (task→skill router) with an honest per-skill **measured / no-claim** badge, per-skill versioning, and **[SkillSpec as an adoptable standard](conformance/REGISTRY.md)** (earnable `--badge` + public registry). Full history: **[CHANGELOG](CHANGELOG.md)** · [releases](https://github.com/mohitagw15856/pm-claude-skills/releases)
+**v61.3.0 — most-requested:** three skills built straight from the demand queue — **[reference-check-script](skills/reference-check-script/SKILL.md)** (rigorous candidate reference calls with a scoring rubric), **[deprecation-comms-plan](skills/deprecation-comms-plan/SKILL.md)** (the customer-comms program for sunsetting an API/feature), and **[community-moderation-policy](skills/community-moderation-policy/SKILL.md)** (a fair, enforceable moderation policy + enforcement ladder for a user community). *Earlier — v61.2.2:* **[youtube-script](skills/youtube-script/SKILL.md)** (long-form video). *v61.2, the builder's toolkit;* *v61.1, the demand side:* **[find](https://mohitagw15856.github.io/pm-claude-skills/find.html)** (task→skill router) with an honest **measured / no-claim** badge and **[SkillSpec as an adoptable standard](conformance/REGISTRY.md)**. Full history: **[CHANGELOG](CHANGELOG.md)** · [releases](https://github.com/mohitagw15856/pm-claude-skills/releases)
 
 ## 🤝 Contributing
 
@@ -171,4 +171,4 @@ MIT — use them, fork them, ship them at work. Skills are judgment, and judgmen
 
 ---
 
-*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 751 skills · 90 bundles · 31 professions · every commit gated. The long version of this README — every feature, wave, and frontier bet — lives in the **[Showcase](docs/SHOWCASE.md)**.*
+*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 754 skills · 90 bundles · 31 professions · every commit gated. The long version of this README — every feature, wave, and frontier bet — lives in the **[Showcase](docs/SHOWCASE.md)**.*

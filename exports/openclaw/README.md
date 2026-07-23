@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-751 skills exported. Copy a `SKILL.md` into the tool to use it.
+754 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -126,6 +126,7 @@
 | College App Parent Guide | `pm-parents` | `college-app-parent-guide/SKILL.md` |
 | College Cost | `pm-calculators` | `college-cost/SKILL.md` |
 | Community Management Playbook | `pm-social` | `community-management-playbook/SKILL.md` |
+| Community Moderation Policy | `pm-social` | `community-moderation-policy/SKILL.md` |
 | Company Brief | `pm-jobsearch` | `company-brief/SKILL.md` |
 | Company Event Ops | `pm-cowork` | `company-event-ops/SKILL.md` |
 | Comparative Market Analysis | `pm-realestate` | `comparative-market-analysis/SKILL.md` |
@@ -203,6 +204,7 @@
 | Demo Script | `pm-cowork` | `demo-script/SKILL.md` |
 | Dependency Audit | `pm-engineering` | `dependency-audit/SKILL.md` |
 | Dependency Conflict Resolver | `pm-engineering` | `dependency-conflict-resolver/SKILL.md` |
+| Deprecation Comms Plan | `pm-devrel` | `deprecation-comms-plan/SKILL.md` |
 | Design Critique | `pm-design` | `design-critique/SKILL.md` |
 | Design Handoff Brief | `pm-advanced` | `design-handoff-brief/SKILL.md` |
 | Design System Audit | `pm-design` | `design-system-audit/SKILL.md` |
@@ -541,6 +543,7 @@
 | Red-Team Review | `pm-cross` | `red-team-review/SKILL.md` |
 | Redundancy Consultation | `pm-hr` | `redundancy-consultation/SKILL.md` |
 | Refactoring Plan | `pm-craft` | `refactoring-plan/SKILL.md` |
+| Reference Check Script | `pm-recruiting` | `reference-check-script/SKILL.md` |
 | Reference Letter | `pm-lifeadmin` | `reference-letter/SKILL.md` |
 | Reference Request Kit | `pm-layoff` | `reference-request-kit/SKILL.md` |
 | Referral Program | `pm-growth` | `referral-program/SKILL.md` |

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-751 skills exported. Copy a `.md rule` into the tool to use it.
+754 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -126,6 +126,7 @@
 | College App Parent Guide | `pm-parents` | `pm-parents/college-app-parent-guide/college-app-parent-guide.md` |
 | College Cost | `pm-calculators` | `pm-calculators/college-cost/college-cost.md` |
 | Community Management Playbook | `pm-social` | `pm-social/community-management-playbook/community-management-playbook.md` |
+| Community Moderation Policy | `pm-social` | `pm-social/community-moderation-policy/community-moderation-policy.md` |
 | Company Brief | `pm-jobsearch` | `pm-jobsearch/company-brief/company-brief.md` |
 | Company Event Ops | `pm-cowork` | `pm-cowork/company-event-ops/company-event-ops.md` |
 | Comparative Market Analysis | `pm-realestate` | `pm-realestate/comparative-market-analysis/comparative-market-analysis.md` |
@@ -203,6 +204,7 @@
 | Demo Script | `pm-cowork` | `pm-cowork/demo-script/demo-script.md` |
 | Dependency Audit | `pm-engineering` | `pm-engineering/dependency-audit/dependency-audit.md` |
 | Dependency Conflict Resolver | `pm-engineering` | `pm-engineering/dependency-conflict-resolver/dependency-conflict-resolver.md` |
+| Deprecation Comms Plan | `pm-devrel` | `pm-devrel/deprecation-comms-plan/deprecation-comms-plan.md` |
 | Design Critique | `pm-design` | `pm-design/design-critique/design-critique.md` |
 | Design Handoff Brief | `pm-advanced` | `pm-advanced/design-handoff-brief/design-handoff-brief.md` |
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/design-system-audit.md` |
@@ -541,6 +543,7 @@
 | Red-Team Review | `pm-cross` | `pm-cross/red-team-review/red-team-review.md` |
 | Redundancy Consultation | `pm-hr` | `pm-hr/redundancy-consultation/redundancy-consultation.md` |
 | Refactoring Plan | `pm-craft` | `pm-craft/refactoring-plan/refactoring-plan.md` |
+| Reference Check Script | `pm-recruiting` | `pm-recruiting/reference-check-script/reference-check-script.md` |
 | Reference Letter | `pm-lifeadmin` | `pm-lifeadmin/reference-letter/reference-letter.md` |
 | Reference Request Kit | `pm-layoff` | `pm-layoff/reference-request-kit/reference-request-kit.md` |
 | Referral Program | `pm-growth` | `pm-growth/referral-program/referral-program.md` |

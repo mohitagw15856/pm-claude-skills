@@ -1,4 +1,4 @@
-# 🗂️ All 751 Skills — full catalog
+# 🗂️ All 754 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -88,7 +88,7 @@
 | **Stakeholder Influence Mapper** (`stakeholder-influence-mapper`) | Map stakeholders for a product decision and produce a tailored influence strategy with talking points. | — |
 | **Strategic Narrative Generator** (`strategic-narrative-generator`) | Generate the strategic story connecting a product roadmap to company goals in a form non-technical stakeholders can repeat. | — |
 
-## 📣 Marketing & Growth (49 skills)
+## 📣 Marketing & Growth (50 skills)
 
 ### `pm-copy` — 7 skills
 
@@ -159,11 +159,12 @@
 | **Voice of Customer Program** (`voice-of-customer-program`) | Stand up a Voice of Customer (VoC) program that turns feedback into action. | — |
 | **Win/Loss Analysis** (`win-loss-analysis`) | Analyze why deals are won and lost and turn it into an action plan. | — |
 
-### `pm-social` — 5 skills
+### `pm-social` — 6 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Community Management Playbook** (`community-management-playbook`) | Build a community management playbook for a brand's social media channels. | — |
+| **Community Moderation Policy** (`community-moderation-policy`) | Write a fair, enforceable community moderation policy. | — |
 | **Influencer Brief** (`influencer-brief`) | Create a structured brief for an influencer or creator partnership campaign. | — |
 | **Social Ad Campaign** (`social-ad-campaign`) | Plan and write a paid social advertising campaign. | — |
 | **Social Media Audit** (`social-media-audit`) | Audit an existing social media presence across all active platforms. | — |
@@ -373,7 +374,7 @@
 | **Thumbnail Creator Skill (via Gemini)** (`thumbnail-creator`) | Generate article or newsletter thumbnail candidates using the Gemini API from inside Claude Code. | — |
 | **YouTube Script Writer** (`youtube-script-writer`) | Write engaging, high-retention YouTube video scripts with visual and audio cues. | — |
 
-## 🤝 Customers & Sales (24 skills)
+## 🤝 Customers & Sales (25 skills)
 
 ### `pm-cs` — 6 skills · 2 eval-scored
 
@@ -386,7 +387,7 @@
 | **QBR Deck** (`qbr-deck`) | Build a Quarterly Business Review (QBR) deck structure and narrative for a customer account. | — |
 | **Renewal Playbook** (`renewal-playbook`) | Build a structured renewal playbook for a customer account. | — |
 
-### `pm-recruiting` — 6 skills
+### `pm-recruiting` — 7 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -395,6 +396,7 @@
 | **Interview Question Bank** (`interview-question-bank`) | Build a structured, role-specific interview question bank with what good answers look like. | — |
 | **Offer Letter** (`offer-letter`) | Draft a job offer — the written offer letter and a verbal-offer script. | — |
 | **Recruiter Outreach** (`recruiter-outreach`) | Write personalized candidate outreach that gets replies. | — |
+| **Reference Check Script** (`reference-check-script`) | Run a rigorous candidate reference check that surfaces real signal. | — |
 | **Sourcing Strategy** (`sourcing-strategy`) | Build a talent sourcing strategy for a hard-to-fill role. | — |
 
 ### `pm-sales` — 6 skills
@@ -651,7 +653,7 @@
 | **Portfolio Page** (`portfolio-page`) | Structure a portfolio or case-study page that shows your work, not just lists it. | — |
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 
-## 🌍 Industries & Public Sector (359 skills)
+## 🌍 Industries & Public Sector (360 skills)
 
 ### `pm-agentnative` — 5 skills
 
@@ -895,13 +897,14 @@
 | **Vet Estimate Decoder** (`vet-estimate-decoder`) | Decode a veterinary treatment estimate — what each line is for, which items are core vs precautionary, and how to have the options conversation… | — |
 | **What To Ask** (`what-to-ask`) | Get the five questions that matter before you sign, buy, or agree to anything — the front door to the decoder family, routed by situation. | — |
 
-### `pm-devrel` — 6 skills
+### `pm-devrel` — 7 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Changelog Writer** (`changelog-writer`) | Turn a list of changes, commits, or PRs into clean release notes / a changelog entry. | — |
 | **Conference Talk Proposal** (`conference-talk-proposal`) | Write a conference talk proposal / CFP submission for a tech or developer conference. | — |
 | **Contributor Guide** (`contributor-guide`) | Write a CONTRIBUTING guide that helps people contribute to an open-source project without friction. | — |
+| **Deprecation Comms Plan** (`deprecation-comms-plan`) | Plan the communications for deprecating a product, API, endpoint, or feature that customers depend on. | — |
 | **Docs Quickstart** (`docs-quickstart`) | Write a 'get started in 5 minutes' quickstart for a tool, library, or API. | — |
 | **Launch Post** (`launch-post`) | Write a developer-audience launch post — Show HN, a Product Hunt blurb, a 'we shipped X' dev blog intro, or a launch tweet thread. | — |
 | **README Writer** (`readme-writer`) | Write a clear, well-structured README for a software project or open-source repo. | — |
@@ -1229,4 +1232,4 @@
 
 ---
 
-_751 skills across 90 bundles · 28 eval-scored (4%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_754 skills across 90 bundles · 28 eval-scored (4%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
