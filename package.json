@@ -1,6 +1,6 @@
 {
   "name": "pm-claude-skills",
-  "version": "61.2.1",
+  "version": "61.2.2",
   "type": "module",
   "mcpName": "io.github.mohitagw15856/pm-claude-skills",
   "description": "751 professional Agent Skills (SKILL.md) + subagents + slash commands for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes. It's a CLI, not a library: run `npx pm-claude-skills add --agent <tool>` to install into your AI tool — no `npm install` needed. Or try any skill free at https://mohitagw15856.github.io/pm-claude-skills/",

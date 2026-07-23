@@ -9,6 +9,15 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [61.2.2] — youtube-script: long-form video scripting — 2026-07-23
+
+Video content was a direct ask. `short-form-script` covers 15–60s vertical and explicitly excludes long-form, so this fills the gap. **751 skills, 90 bundles.**
+
+### Added — 🎬 youtube-script
+- Write a long-form video script for YouTube — explainer, tutorial, video essay, review, or talking-head. Built on the packaging→cold-open→value-stack→retention structure that survives the watch-time cliffs (first 30s, ~2min, midpoint).
+- Produces title + thumbnail concepts, a timed cold open, a segmented body with retention devices and B-roll cues, integrated CTAs, an outro/end-screen, and a description with chapter timestamps. L3, in `pm-creator` beside its short-form sibling.
+- On the languages side of the same ask: `professional-translator` + `localization-brief` already cover generating/adapting text in other languages — no duplicate skill.
+
 ## [61.2.1] — the builder's toolkit: prove it, harden it, run it your way — 2026-07-22
 
 > _(61.2.0 was skipped: its release tag was cut before the version-bump merged, and GitHub's immutable-release lock prevented reusing the tag. Nothing published under 61.2.0 — this is the same release, re-cut cleanly.)_
@@ -1079,7 +1088,9 @@ Earlier releases (v1.0.0 – v5.0.0) predate this changelog. See the
 [article series](README.md#-the-article-series) for the full history of how the
 library grew from the first PM toolkit to 100+ skills.
 
-[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.1.0...HEAD
+[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.2.2...HEAD
+[61.2.2]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.2.1...v61.2.2
+[61.2.1]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.1.0...v61.2.1
 [61.1.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.0.0...v61.1.0
 [61.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v60.0.0...v61.0.0
 [60.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v59.0.0...v60.0.0
