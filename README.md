@@ -1,4 +1,4 @@
-# 🧠 PM Skills — 750 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
+# 🧠 PM Skills — 751 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
 
 [![In the official Anthropic plugin directory](https://img.shields.io/badge/Anthropic%20Plugin%20Directory-Published-D97757?logo=anthropic&logoColor=white)](#-quick-start)
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
@@ -12,7 +12,7 @@
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
 [![Sponsor](https://img.shields.io/badge/sponsor-❤️-ff69b4)](https://github.com/sponsors/mohitagw15856)
 
-**A library of 750 skills — each one a plain `SKILL.md` file that teaches your AI assistant to do one professional task properly.** Decode a lease before you sign it. Write a PRD your team can execute. Simulate the promotion committee before the real one meets. Check the weather with zero API keys. Generic AI gives you filler; these give you the structure a senior professional actually uses.
+**A library of 751 skills — each one a plain `SKILL.md` file that teaches your AI assistant to do one professional task properly.** Decode a lease before you sign it. Write a PRD your team can execute. Simulate the promotion committee before the real one meets. Check the weather with zero API keys. Generic AI gives you filler; these give you the structure a senior professional actually uses.
 
 Works natively in **Claude Code** and **Hermes Agent**, with ready-to-paste exports for **ChatGPT, Gemini, Cursor, Codex** and 8 more tools. *(PM stands for Professional, not just Product Management.)*
 
@@ -30,7 +30,7 @@ No `npm install` needed — `npx pm-claude-skills …` always runs the latest. `
 
 ## 📚 The skills
 
-Every skill follows the same discipline: what it produces, the inputs it needs, a real framework (severity scales, decision rules — not vibes), a concrete output template, quality checks, and anti-patterns. All 750 pass the [SkillSpec](SKILLSPEC.md) L3 gate and a security audit in CI.
+Every skill follows the same discipline: what it produces, the inputs it needs, a real framework (severity scales, decision rules — not vibes), a concrete output template, quality checks, and anti-patterns. All 751 pass the [SkillSpec](SKILLSPEC.md) L3 gate and a security audit in CI.
 
 ### For everyone — life's paperwork and decisions
 
@@ -171,4 +171,4 @@ MIT — use them, fork them, ship them at work. Skills are judgment, and judgmen
 
 ---
 
-*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 750 skills · 90 bundles · 31 professions · every commit gated. The long version of this README — every feature, wave, and frontier bet — lives in the **[Showcase](docs/SHOWCASE.md)**.*
+*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 751 skills · 90 bundles · 31 professions · every commit gated. The long version of this README — every feature, wave, and frontier bet — lives in the **[Showcase](docs/SHOWCASE.md)**.*

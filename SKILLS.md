@@ -1,4 +1,4 @@
-# 🗂️ All 750 Skills — full catalog
+# 🗂️ All 751 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -88,7 +88,7 @@
 | **Stakeholder Influence Mapper** (`stakeholder-influence-mapper`) | Map stakeholders for a product decision and produce a tailored influence strategy with talking points. | — |
 | **Strategic Narrative Generator** (`strategic-narrative-generator`) | Generate the strategic story connecting a product roadmap to company goals in a form non-technical stakeholders can repeat. | — |
 
-## 📣 Marketing & Growth (48 skills)
+## 📣 Marketing & Growth (49 skills)
 
 ### `pm-copy` — 7 skills
 
@@ -102,7 +102,7 @@
 | **Sales Page** (`sales-page`) | Write a long-form sales page that takes a cold reader to a purchase. | — |
 | **Value Proposition** (`value-proposition`) | Craft a sharp value proposition that says who it's for, the outcome, and why you over the alternative. | — |
 
-### `pm-creator` — 6 skills
+### `pm-creator` — 7 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -112,6 +112,7 @@
 | **Hook Writer** (`hook-writer`) | Generate scroll-stopping hooks — the first line of a post, thread, video, or email that decides whether anyone keeps reading. | — |
 | **Newsletter Writer** (`newsletter-writer`) | Write a full creator newsletter issue — subject line, preview text, hook, body with a clear takeaway, and a CTA — in the writer's voice, for… | — |
 | **Short-Form Script** (`short-form-script`) | Write a short-form video script for TikTok, Instagram Reels, or YouTube Shorts — built on the hook→retention→payoff structure that drives watch-time. | — |
+| **YouTube Script** (`youtube-script`) | Write a long-form video script for YouTube — an explainer, tutorial, video essay, review, or talking-head — built on the… | — |
 
 ### `pm-growth` — 14 skills
 
@@ -367,7 +368,7 @@
 |---|---|---|
 | **AEO Optimizer** (`aeo-optimizer`) | Optimize an article for Answer Engine Optimization (AEO) so AI engines like ChatGPT, Perplexity, and Claude can extract, quote, and cite it. | ✅ 4.5/5 |
 | **Instagram Post Downloader** (`instagram-post-downloader`) | Download and save Instagram posts as high-resolution files. | — |
-| **Notes Humanizer** (`notes-humanizer`) | Strips AI writing patterns from text and rewrites it to sound genuinely human by removing statistical defaults and injecting the specific signals… | — |
+| **Notes Humanizer** (`notes-humanizer`) | Strips AI writing patterns from text and rewrites it to sound genuinely human — removing the statistical defaults, then adding earned voice… | — |
 | **Substack Notes Scraper** (`substack-notes-scraper`) | Scrapes a Substack Notes page and exports engagement data to a formatted .xlsx file. | — |
 | **Thumbnail Creator Skill (via Gemini)** (`thumbnail-creator`) | Generate article or newsletter thumbnail candidates using the Gemini API from inside Claude Code. | — |
 | **YouTube Script Writer** (`youtube-script-writer`) | Write engaging, high-retention YouTube video scripts with visual and audio cues. | — |
@@ -1228,4 +1229,4 @@
 
 ---
 
-_750 skills across 90 bundles · 28 eval-scored (4%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_751 skills across 90 bundles · 28 eval-scored (4%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

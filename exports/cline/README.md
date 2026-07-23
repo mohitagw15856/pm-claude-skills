@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-750 skills exported. Copy a `.md rule` into the tool to use it.
+751 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -756,4 +756,5 @@
 | World Clock | `pm-live` | `pm-live/world-clock/world-clock.md` |
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/writing-great-skills.md` |
 | Writing Plans | `pm-method` | `pm-method/writing-plans/writing-plans.md` |
+| YouTube Script | `pm-creator` | `pm-creator/youtube-script/youtube-script.md` |
 | YouTube Script Writer | `pm-writers` | `pm-writers/youtube-script-writer/youtube-script-writer.md` |

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-750 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+751 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -756,4 +756,5 @@
 | World Clock | `pm-live` | `pm-live/world-clock/GEM_INSTRUCTIONS.md` |
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/GEM_INSTRUCTIONS.md` |
 | Writing Plans | `pm-method` | `pm-method/writing-plans/GEM_INSTRUCTIONS.md` |
+| YouTube Script | `pm-creator` | `pm-creator/youtube-script/GEM_INSTRUCTIONS.md` |
 | YouTube Script Writer | `pm-writers` | `pm-writers/youtube-script-writer/GEM_INSTRUCTIONS.md` |

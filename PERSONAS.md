@@ -2,7 +2,7 @@
 
 > **A persona = a skill loadout + a workflow recipe + a subagent.** Pick the role closest to your job
 > and you get the handful of skills to start with, the chained recipe for your most common end-to-end
-> task, and (where one exists) a specialist subagent. It's the fastest way in — no scrolling 750 skills.
+> task, and (where one exists) a specialist subagent. It's the fastest way in — no scrolling 751 skills.
 
 Personas drive the **"What do you do?"** chips in the [playground](https://mohitagw15856.github.io/pm-claude-skills/)
 and are defined once in [`web/personas.json`](web/personas.json). Use a loadout three ways:

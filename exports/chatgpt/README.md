@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-750 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+751 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -756,4 +756,5 @@
 | World Clock | `pm-live` | `pm-live/world-clock/SYSTEM_PROMPT.md` |
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/SYSTEM_PROMPT.md` |
 | Writing Plans | `pm-method` | `pm-method/writing-plans/SYSTEM_PROMPT.md` |
+| YouTube Script | `pm-creator` | `pm-creator/youtube-script/SYSTEM_PROMPT.md` |
 | YouTube Script Writer | `pm-writers` | `pm-writers/youtube-script-writer/SYSTEM_PROMPT.md` |
