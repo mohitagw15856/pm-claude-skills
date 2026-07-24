@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "61.3.0",
-  "description": "PM stands for Professional, not just Product Management. 515 Claude Skills + 4 agent templates across 74 bundles covering 31 professions \u2014 engineering, security, AI/ML, customer success, legal, government & policy, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
+  "version": "62.0.0",
+  "description": "PM stands for Professional, not just Product Management. 515 Claude Skills + 4 agent templates across 74 bundles covering 31 professions — engineering, security, AI/ML, customer success, legal, government & policy, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
@@ -202,7 +202,7 @@
     },
     {
       "name": "pm-warroom",
-      "description": "The adversarial bundle \u2014 skills that attack your work before reality does: Premortem Assassin, Devil's Twin, Metric Gaslighting Detector, Decision Autopsy, Assumption Bounty.",
+      "description": "The adversarial bundle — skills that attack your work before reality does: Premortem Assassin, Devil's Twin, Metric Gaslighting Detector, Decision Autopsy, Assumption Bounty.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-warroom",
@@ -210,7 +210,7 @@
     },
     {
       "name": "pm-method",
-      "description": "Process discipline for professional work \u2014 the difference between an agent that produces output and one that produces outcomes. Interview the requester before building, brainstorm divergent-then-convergent, write and execute real plans, verify before declaring done, orchestrate subagents, work incrementally, and simplify what you built.",
+      "description": "Process discipline for professional work — the difference between an agent that produces output and one that produces outcomes. Interview the requester before building, brainstorm divergent-then-convergent, write and execute real plans, verify before declaring done, orchestrate subagents, work incrementally, and simplify what you built.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-method",
@@ -234,7 +234,7 @@
     },
     {
       "name": "pm-vision",
-      "description": "Vision-first skills: point a camera or screenshot at the work and get the structured artifact \u2014 whiteboard photos become specs, competitor screenshots become teardowns, slide photos become board pre-reads, chart images become data tables. Built for multimodal models (Fable 5, Sonnet, Gemini); attach images in the playground or paste them in Claude Code.",
+      "description": "Vision-first skills: point a camera or screenshot at the work and get the structured artifact — whiteboard photos become specs, competitor screenshots become teardowns, slide photos become board pre-reads, chart images become data tables. Built for multimodal models (Fable 5, Sonnet, Gemini); attach images in the playground or paste them in Claude Code.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-vision",
@@ -242,7 +242,7 @@
     },
     {
       "name": "pm-agentops",
-      "description": "Operate AI agents and LLM features in production: prompt regression suites, model migration plans, context-engineering reviews, agent incident postmortems, and observability specs \u2014 plus the pm-ai evaluation and cost skills they build on.",
+      "description": "Operate AI agents and LLM features in production: prompt regression suites, model migration plans, context-engineering reviews, agent incident postmortems, and observability specs — plus the pm-ai evaluation and cost skills they build on.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-agentops",
@@ -266,7 +266,7 @@
     },
     {
       "name": "pm-gov",
-      "description": "Government & public-policy skills: RFP Response, Policy Memo, Public Comment, Briefing Note, FOIA Request, and Regulatory Impact Analysis. For public servants, GovTech vendors, and policy teams \u2014 drafting aids, not legal advice.",
+      "description": "Government & public-policy skills: RFP Response, Policy Memo, Public Comment, Briefing Note, FOIA Request, and Regulatory Impact Analysis. For public servants, GovTech vendors, and policy teams — drafting aids, not legal advice.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-gov",
@@ -290,7 +290,7 @@
     },
     {
       "name": "pm-money",
-      "description": "Personal-finance skills for individuals: Budget Builder, Debt Payoff Plan, Investing Policy Statement, Net Worth Statement, Savings Goal Plan, and Expense Audit. Educational planning aids \u2014 not regulated financial advice.",
+      "description": "Personal-finance skills for individuals: Budget Builder, Debt Payoff Plan, Investing Policy Statement, Net Worth Statement, Savings Goal Plan, and Expense Audit. Educational planning aids — not regulated financial advice.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-money",
@@ -306,7 +306,7 @@
     },
     {
       "name": "pm-realestate",
-      "description": "Real-estate skills for agents, buyers, and investors: Property Listing, Comparative Market Analysis, Property Offer Letter, Property Investment Analysis, Open House Plan, and Tenant Screening Guide. Market, price, and evaluate property \u2014 Fair-Housing-aware drafting aids, not legal advice.",
+      "description": "Real-estate skills for agents, buyers, and investors: Property Listing, Comparative Market Analysis, Property Offer Letter, Property Investment Analysis, Open House Plan, and Tenant Screening Guide. Market, price, and evaluate property — Fair-Housing-aware drafting aids, not legal advice.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-realestate",
@@ -322,7 +322,7 @@
     },
     {
       "name": "pm-visuals",
-      "description": "Turn ideas into visuals: Flowchart, Architecture Diagram, User Journey Map, Org Chart, Sequence Diagram, Mind Map, Gantt Roadmap, ER Diagram, and Chart (bar/line/pie) \u2014 plus Announcement & Quote cards. Diagram & chart skills render live in the playground and export to PNG/SVG.",
+      "description": "Turn ideas into visuals: Flowchart, Architecture Diagram, User Journey Map, Org Chart, Sequence Diagram, Mind Map, Gantt Roadmap, ER Diagram, and Chart (bar/line/pie) — plus Announcement & Quote cards. Diagram & chart skills render live in the playground and export to PNG/SVG.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-visuals",
@@ -330,7 +330,7 @@
     },
     {
       "name": "pm-localization",
-      "description": "Translation & localization skills: Professional Translator, Transcreation, Localization Brief, Subtitle & Caption, Glossary Builder, and i18n Readiness Review. Reach every market \u2014 translation as a real job, not word-for-word.",
+      "description": "Translation & localization skills: Professional Translator, Transcreation, Localization Brief, Subtitle & Caption, Glossary Builder, and i18n Readiness Review. Reach every market — translation as a real job, not word-for-word.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-localization",
@@ -338,7 +338,7 @@
     },
     {
       "name": "pm-accounting",
-      "description": "Accounting & bookkeeping skills for finance ops and small businesses: Invoice Generator, Expense Policy, Collections Email, Financial Statement Explainer, Bookkeeping Categorization, and Cash Flow Forecast. Practical money admin \u2014 drafting aids, not tax/accounting advice.",
+      "description": "Accounting & bookkeeping skills for finance ops and small businesses: Invoice Generator, Expense Policy, Collections Email, Financial Statement Explainer, Bookkeeping Categorization, and Cash Flow Forecast. Practical money admin — drafting aids, not tax/accounting advice.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-accounting",
@@ -346,7 +346,7 @@
     },
     {
       "name": "pm-recruiting",
-      "description": "Recruiting & talent-sourcing skills: Boolean Search Builder, Recruiter Outreach, Interview Question Bank, Candidate Scorecard, Offer Letter, and Sourcing Strategy. Source, assess, and close candidates \u2014 structured and fair.",
+      "description": "Recruiting & talent-sourcing skills: Boolean Search Builder, Recruiter Outreach, Interview Question Bank, Candidate Scorecard, Offer Letter, and Sourcing Strategy. Source, assess, and close candidates — structured and fair.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-recruiting",
@@ -378,7 +378,7 @@
     },
     {
       "name": "pm-consulting",
-      "description": "Consulting & freelance skills: Consulting Proposal, Statement of Work, Client Discovery, Case Study Write-up, Rate Card, and Engagement Retro. Win, scope, deliver, and grow client work \u2014 pairs with the themed PDF export.",
+      "description": "Consulting & freelance skills: Consulting Proposal, Statement of Work, Client Discovery, Case Study Write-up, Rate Card, and Engagement Retro. Win, scope, deliver, and grow client work — pairs with the themed PDF export.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-consulting",
@@ -394,7 +394,7 @@
     },
     {
       "name": "pm-documents",
-      "description": "Produce real, editable Office files (not markdown): Excel Model (live formulas), Slide Deck (.pptx), and Word Document (.docx). Generated via openpyxl / python-pptx / python-docx \u2014 needs a code-execution environment (Claude Code, API code tool, or Claude.ai).",
+      "description": "Produce real, editable Office files (not markdown): Excel Model (live formulas), Slide Deck (.pptx), and Word Document (.docx). Generated via openpyxl / python-pptx / python-docx — needs a code-execution environment (Claude Code, API code tool, or Claude.ai).",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-documents",
@@ -434,7 +434,7 @@
     },
     {
       "name": "pm-calculators",
-      "description": "Executable business calculators & models \u2014 each ships a stdlib script: Unit Economics (LTV/CAC), SaaS Metrics (NRR/quick ratio), Runway (default alive/dead), Pricing, ROI/NPV \u2014 plus computed models that emit real .xlsx with live formulas: cohort curve fitting (LTV), Monte Carlo runway (P10/P50/P90), and Van Westendorp pricing. Verifiable math, not vibes.",
+      "description": "Executable business calculators & models — each ships a stdlib script: Unit Economics (LTV/CAC), SaaS Metrics (NRR/quick ratio), Runway (default alive/dead), Pricing, ROI/NPV — plus computed models that emit real .xlsx with live formulas: cohort curve fitting (LTV), Monte Carlo runway (P10/P50/P90), and Van Westendorp pricing. Verifiable math, not vibes.",
       "version": "1.1.0",
       "category": "productivity",
       "source": "./plugins/pm-calculators",
@@ -442,7 +442,7 @@
     },
     {
       "name": "pm-copy",
-      "description": "Copywriting & conversion skills: Value Proposition, Landing Page Copy, Sales Page, Ad Copy, Cold Email, Headline Options, and Email Sequence. Words that convert \u2014 pairs with the themed PDF export.",
+      "description": "Copywriting & conversion skills: Value Proposition, Landing Page Copy, Sales Page, Ad Copy, Cold Email, Headline Options, and Email Sequence. Words that convert — pairs with the themed PDF export.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-copy",
@@ -450,7 +450,7 @@
     },
     {
       "name": "pm-jobsearch",
-      "description": "Land the job: JD Decoder, Company Brief, Outreach Message, Follow-Up Sequence, and Interview Prep. The active-job-hunt toolkit \u2014 pairs with the pm-personal documents (resume, cover letter, LinkedIn) and the Job Search hub.",
+      "description": "Land the job: JD Decoder, Company Brief, Outreach Message, Follow-Up Sequence, and Interview Prep. The active-job-hunt toolkit — pairs with the pm-personal documents (resume, cover letter, LinkedIn) and the Job Search hub.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-jobsearch",
@@ -506,7 +506,7 @@
     },
     {
       "name": "pm-discovery",
-      "description": "Discovery & research skills: Discovery Interview Guide, Job Story Mapper, User Interview Synthesis, Assumption Mapper, Customer Journey Map. Structure user research from screener to synthesis \u2014 including end-to-end journey mapping with touchpoints, emotions, and prioritised opportunities.",
+      "description": "Discovery & research skills: Discovery Interview Guide, Job Story Mapper, User Interview Synthesis, Assumption Mapper, Customer Journey Map. Structure user research from screener to synthesis — including end-to-end journey mapping with touchpoints, emotions, and prioritised opportunities.",
       "version": "3.1.0",
       "category": "productivity",
       "source": "./plugins/pm-discovery",
@@ -546,7 +546,7 @@
     },
     {
       "name": "pm-advanced",
-      "description": "Advanced PM skills: AI Product Canvas, Multi-Source Signal Synthesiser, Experiment Designer, Design Handoff Brief, AI Ethics Review. For senior PMs working on complex products \u2014 including a structured ethical review framework for AI/ML features covering fairness, transparency, privacy, safety, and accountability.",
+      "description": "Advanced PM skills: AI Product Canvas, Multi-Source Signal Synthesiser, Experiment Designer, Design Handoff Brief, AI Ethics Review. For senior PMs working on complex products — including a structured ethical review framework for AI/ML features covering fairness, transparency, privacy, safety, and accountability.",
       "version": "3.1.0",
       "category": "productivity",
       "source": "./plugins/pm-advanced",
@@ -570,7 +570,7 @@
     },
     {
       "name": "pm-engineering",
-      "description": "Engineering & tech skills: Code Review Checklist, Incident Postmortem, API Docs Writer, Architecture Decision Record, Debugging Log Analyser, PR Description Writer, System Design Interview, Changelog Generator, Test Strategy Doc, Runbook Writer, CI/CD Playbook, SLO & Error Budget, Developer Onboarding Doc, On-Call Runbook, Security Threat Model, Performance Budget, Database Schema Design, Database Migration Plan, Technical Debt Register, RFC Writer, Capacity Planning, Load Testing Plan, Disaster Recovery Plan, Feature Flag Guide, Dependency Audit, Service Catalog Entry, Monitoring Setup Guide, Local Dev Setup, API Versioning Strategy, Infra-as-Code Review, Engineering Weekly Report, Tech Radar, Sprint Velocity Analysis, Microservices Decomposition, Engineering Hiring Rubric, Context Mode, Claude Superpowers, Skill Security Auditor, Error Decoder, Regex Builder, Git Troubleshooter, Dependency Conflict Resolver, Code Explainer, Writing Great Skills. 44 structured skills for engineering teams, SREs, technical PMs, and Claude Code power users \u2014 including dev-troubleshooting skills (errors, regex, git, dependencies, code explanation), a security audit for any SKILL.md / system prompt before you install or merge it, and a meta-skill for authoring high-quality skills.",
+      "description": "Engineering & tech skills: Code Review Checklist, Incident Postmortem, API Docs Writer, Architecture Decision Record, Debugging Log Analyser, PR Description Writer, System Design Interview, Changelog Generator, Test Strategy Doc, Runbook Writer, CI/CD Playbook, SLO & Error Budget, Developer Onboarding Doc, On-Call Runbook, Security Threat Model, Performance Budget, Database Schema Design, Database Migration Plan, Technical Debt Register, RFC Writer, Capacity Planning, Load Testing Plan, Disaster Recovery Plan, Feature Flag Guide, Dependency Audit, Service Catalog Entry, Monitoring Setup Guide, Local Dev Setup, API Versioning Strategy, Infra-as-Code Review, Engineering Weekly Report, Tech Radar, Sprint Velocity Analysis, Microservices Decomposition, Engineering Hiring Rubric, Context Mode, Claude Superpowers, Skill Security Auditor, Error Decoder, Regex Builder, Git Troubleshooter, Dependency Conflict Resolver, Code Explainer, Writing Great Skills. 44 structured skills for engineering teams, SREs, technical PMs, and Claude Code power users — including dev-troubleshooting skills (errors, regex, git, dependencies, code explanation), a security audit for any SKILL.md / system prompt before you install or merge it, and a meta-skill for authoring high-quality skills.",
       "version": "4.4.0",
       "category": "productivity",
       "source": "./plugins/pm-engineering",
@@ -610,7 +610,7 @@
     },
     {
       "name": "pm-business",
-      "description": "Business, strategy & C-suite skills: Investor Update, Board Deck Narrative, Board Pre-Read, Decision Memo, Strategy Memo, Capital Allocation, Job Application. Drive decisions with crisp memos, run board meetings on pre-reads, allocate budget by return \u00d7 strategic fit, and articulate a real strategy with explicit non-goals.",
+      "description": "Business, strategy & C-suite skills: Investor Update, Board Deck Narrative, Board Pre-Read, Decision Memo, Strategy Memo, Capital Allocation, Job Application. Drive decisions with crisp memos, run board meetings on pre-reads, allocate budget by return × strategic fit, and articulate a real strategy with explicit non-goals.",
       "version": "1.1.0",
       "category": "productivity",
       "source": "./plugins/pm-business",
@@ -634,7 +634,7 @@
     },
     {
       "name": "pm-education",
-      "description": "Educator skills: Lesson Plan, Rubric Builder, Quiz Generator, Parent Communication, IEP Goal Support, Student Feedback. Build standards-aligned lessons with differentiation, fair grading rubrics, quizzes with answer keys, warm parent messages, measurable SMART IEP goals, and constructive feedback that tells students how to improve. A drafting aid for teachers \u2014 not legal advice.",
+      "description": "Educator skills: Lesson Plan, Rubric Builder, Quiz Generator, Parent Communication, IEP Goal Support, Student Feedback. Build standards-aligned lessons with differentiation, fair grading rubrics, quizzes with answer keys, warm parent messages, measurable SMART IEP goals, and constructive feedback that tells students how to improve. A drafting aid for teachers — not legal advice.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-education",
@@ -642,7 +642,7 @@
     },
     {
       "name": "pm-creator",
-      "description": "Content creator skills: Content Repurposer, Hook Writer, Short-Form Script, Newsletter Writer, Creator Brand Kit, Creator Media Kit. Atomize one piece into a multi-platform pack (thread, LinkedIn, newsletter, carousel, Reel), write scroll-stopping hooks, script TikToks/Reels/Shorts, draft newsletter issues, define your niche/voice/pillars, and land sponsorships. The craft layer of the creator stack \u2014 pairs with the ContentGoldMine app for one-click automation.",
+      "description": "Content creator skills: Content Repurposer, Hook Writer, Short-Form Script, Newsletter Writer, Creator Brand Kit, Creator Media Kit. Atomize one piece into a multi-platform pack (thread, LinkedIn, newsletter, carousel, Reel), write scroll-stopping hooks, script TikToks/Reels/Shorts, draft newsletter issues, define your niche/voice/pillars, and land sponsorships. The craft layer of the creator stack — pairs with the ContentGoldMine app for one-click automation.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-creator",
@@ -698,7 +698,7 @@
     },
     {
       "name": "pm-cross",
-      "description": "Cross-profession skills: Press Release, Grant Proposal, Executive Summary, Teaching Lesson Plan, Sycophancy Challenger, Last 30 Days Research, NotebookLM Connector, Professional Brain, Action Runner. Get genuine push-back on your ideas, gather multi-platform research, automate NotebookLM \u2014 plus the Professional Brain: a durable local memory skills read & write back (provenance-tagged), and Action Runner to execute a skill's recommendations (open tickets, post updates) safely behind a dry-run approval gate.",
+      "description": "Cross-profession skills: Press Release, Grant Proposal, Executive Summary, Teaching Lesson Plan, Sycophancy Challenger, Last 30 Days Research, NotebookLM Connector, Professional Brain, Action Runner. Get genuine push-back on your ideas, gather multi-platform research, automate NotebookLM — plus the Professional Brain: a durable local memory skills read & write back (provenance-tagged), and Action Runner to execute a skill's recommendations (open tickets, post updates) safely behind a dry-run approval gate.",
       "version": "1.3.0",
       "category": "productivity",
       "source": "./plugins/pm-cross",
@@ -726,6 +726,38 @@
       "version": "1.1.0",
       "category": "productivity",
       "source": "./plugins/pm-writers",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-teaching",
+      "description": "The K-12 teaching pack: standards-aligned lesson plans, measurable IEP goals, parent-conference prep for the hard conversations, and function-based behavior intervention plans",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-teaching",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-hospitality",
+      "description": "The restaurants & hospitality pack: menu costing and pricing, health-inspection self-audits, demand-matched shift schedules, front-of-house training, and defensible guest-incident logs",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-hospitality",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-journalism",
+      "description": "The journalism pack: sharpen a story pitch an editor will buy, prep source and accountability interviews, run a claim-by-claim fact-check pass, and protect a confidential source",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-journalism",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-veterinary",
+      "description": "The veterinary practice pack: tiered treatment plans with honest owner estimates, the compassionate euthanasia conversation, plain-language discharge notes, and life-stage wellness plans",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-veterinary",
       "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
     }
   ]

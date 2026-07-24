@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-veterinary",
+  "version": "1.0.0",
+  "description": "The veterinary practice pack: tiered treatment plans with honest owner estimates, the compassionate euthanasia conversation, plain-language discharge notes, and life-stage wellness plans",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "veterinary",
+    "vet",
+    "animal-health",
+    "pet-care",
+    "clinical"
+  ]
+}

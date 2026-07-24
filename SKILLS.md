@@ -1,4 +1,4 @@
-# 🗂️ All 754 Skills — full catalog
+# 🗂️ All 771 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -653,7 +653,7 @@
 | **Portfolio Page** (`portfolio-page`) | Structure a portfolio or case-study page that shows your work, not just lists it. | — |
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 
-## 🌍 Industries & Public Sector (360 skills)
+## 🌍 Industries & Public Sector (377 skills)
 
 ### `pm-agentnative` — 5 skills
 
@@ -987,6 +987,16 @@
 | **Prior Authorization Letter** (`prior-authorization-letter`) | Write a persuasive prior-authorization / medical-necessity letter to an insurer. | — |
 | **SOAP Note** (`soap-note`) | Structure a clinical encounter into a clean SOAP note. | — |
 
+### `pm-hospitality` — 5 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Guest Incident Log** (`guest-incident-log`) | Document a guest incident at a hospitality venue — injury, illness, foodborne complaint, altercation, or property loss — into a clear, defensible… | — |
+| **Health Inspection Prep** (`health-inspection-prep`) | Run a self-audit of a food establishment before the health inspector arrives, focused on the violations that actually close kitchens. | — |
+| **Menu Cost Engineer** (`menu-cost-engineer`) | Cost a menu item to a plate cost and food-cost percentage, then price it for a target margin. | — |
+| **Server Training Guide** (`server-training-guide`) | Build an onboarding and training guide for restaurant front-of-house staff (servers, hosts, bartenders). | — |
+| **Shift Schedule Builder** (`shift-schedule-builder`) | Build a staff shift schedule that matches coverage to demand while hitting a labor-cost target. | — |
+
 ### `pm-insurance` — 4 skills
 
 | Skill | What it does | Eval |
@@ -995,6 +1005,15 @@
 | **Coverage Gap Analysis** (`coverage-gap-analysis`) | Map an organisation's risks against its insurance policy portfolio to find what's uncovered, underinsured, or double-covered. | — |
 | **Policy Renewal Review** (`policy-renewal-review`) | Run a pre-renewal review of an insurance programme: scan coverage gaps against current operations, test limit adequacy against inflation and… | — |
 | **Underwriting Narrative** (`underwriting-narrative`) | Write the underwriting file narrative for a risk: the risk story, exposure quantification, loss-history read, mitigating and aggravating factors… | — |
+
+### `pm-journalism` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Fact-Check Pass** (`fact-check-pass`) | Run a claim-by-claim fact-check pass on a draft article, script, or report before publication. | — |
+| **Source Interview Prep** (`source-interview-prep`) | Prepare a journalist to interview a source or subject — including hostile or accountability interviews. | — |
+| **Source Protection Plan** (`source-protection-plan`) | Assess and reduce the risk of exposing a confidential journalistic source. | — |
+| **Story Pitch** (`story-pitch`) | Pitch a news or feature story to an editor — the angle, why now, and how you'll report it. | — |
 
 ### `pm-layoff` — 4 skills
 
@@ -1192,6 +1211,15 @@
 | **S&OP Meeting Prep** (`sop-meeting-prep`) | Prepare an S&OP cycle readout that surfaces the demand-supply gaps and forces the three decisions the meeting must make. | — |
 | **Supplier Scorecard** (`supplier-scorecard`) | Build a quarterly supplier performance scorecard with a weighted grade and a clear escalate/develop/exit call. | — |
 
+### `pm-teaching` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Behavior Intervention Plan** (`behavior-intervention-plan`) | Build a tiered classroom behavior intervention plan (BIP) for a K-12 student, grounded in the function of the behavior. | — |
+| **IEP Goal Writer** (`iep-goal-writer`) | Write measurable IEP goals and matching accommodations for a K-12 student with an IEP or 504 plan. | — |
+| **Lesson Plan Builder** (`lesson-plan-builder`) | Build a standards-aligned K-12 lesson plan with clear objectives, a timed activity sequence, checks for understanding, and differentiation. | — |
+| **Parent Conference Prep** (`parent-conference-prep`) | Prepare for a K-12 parent-teacher conference — including the hard ones. | — |
+
 ### `pm-tokens` — 6 skills
 
 | Skill | What it does | Eval |
@@ -1202,6 +1230,15 @@
 | **Session Handoff** (`session-handoff`) | Write a handoff summary so another agent or person (or a fresh session) can pick up the work with full context. | — |
 | **Token Cost** (`token-cost`) | Measure before optimizing — estimate token counts locally with stated heuristics, price them at your model's rates, and quantify before/after… | — |
 | **Token Diet** (`token-diet`) | Cut LLM output tokens 40–70% by stripping grammatical scaffolding while preserving every fact — telegraphic output modes, when they pay… | — |
+
+### `pm-veterinary` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Client Discharge Notes** (`client-discharge-notes`) | Write clear at-home care instructions for a pet owner after a veterinary visit, procedure, or hospitalization. | — |
+| **Euthanasia Conversation** (`euthanasia-conversation`) | Guide a veterinary team through a compassionate end-of-life conversation with a pet owner — quality-of-life assessment, the recommendation, and… | — |
+| **Treatment Plan Estimate** (`treatment-plan-estimate`) | Build a veterinary treatment plan with tiered options and a cost estimate to discuss with a pet owner. | — |
+| **Wellness Plan** (`wellness-plan`) | Build a preventive-care (wellness) plan for a pet by species, breed, and life stage. | — |
 
 ### `pm-vision` — 4 skills
 
@@ -1232,4 +1269,4 @@
 
 ---
 
-_754 skills across 90 bundles · 28 eval-scored (4%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_771 skills across 94 bundles · 28 eval-scored (4%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

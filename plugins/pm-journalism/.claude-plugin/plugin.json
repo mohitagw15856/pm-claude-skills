@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-journalism",
+  "version": "1.0.0",
+  "description": "The journalism pack: sharpen a story pitch an editor will buy, prep source and accountability interviews, run a claim-by-claim fact-check pass, and protect a confidential source",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "journalism",
+    "reporting",
+    "fact-check",
+    "interview",
+    "editorial"
+  ]
+}

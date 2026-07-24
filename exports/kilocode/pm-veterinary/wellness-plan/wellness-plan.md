@@ -1,0 +1,54 @@
+# Wellness Plan Skill
+
+Most pet owners only see the vet when something's wrong — and miss the cheap, preventable problems that become expensive, serious ones. This skill lays out a life-stage wellness plan so the owner knows what care their pet needs, when, and why: the shots, the parasite prevention, the dental, the screenings that catch disease early.
+
+## Working from a brief
+
+Given the pet, **produce the full plan** — tailor to species, breed predispositions, and life stage, and note that specifics (vaccine cores/non-cores, parasite risk) vary by region and lifestyle and should be confirmed with the attending veterinarian. Do not present this as a substitute for an exam.
+
+## Required Inputs
+
+Ask for (if not provided, else infer and label):
+- **Species, breed, age/life stage**, and rough **location/lifestyle** (indoor/outdoor, travel, other pets)
+- **Current status** — known vaccines, spay/neuter, existing conditions
+- **Owner priorities/constraints** if any (budget, first-time owner)
+
+## Output Format
+
+### Life stage & what it means
+Puppy/kitten · adult · senior — the care priorities that shift with each, and any breed-specific predispositions to watch.
+
+### Preventive-care schedule
+
+| Area | Recommendation | Timing / frequency | Why |
+|---|---|---|---|
+| Vaccinations | core + lifestyle-based non-core | series / boosters | |
+| Parasite prevention | heartworm, flea/tick, deworming | | |
+| Dental | home care + professional cleaning | | |
+| Nutrition & weight | diet for life stage, body-condition target | | |
+| Screening diagnostics | baseline/senior bloodwork, etc. | | |
+| Spay/neuter | if applicable | | |
+| Behavior | socialization, training, enrichment | | |
+
+### The rationale
+Short, plain "why this matters" for the owner — especially the preventable-becomes-serious cases (heartworm, dental disease, obesity, early kidney disease).
+
+### The year ahead
+A simple timeline of the next 12 months' visits/actions so it reads as a plan, with a note that the vet will tailor it at the exam.
+
+## Quality Checks
+
+- [ ] The plan is tailored to species, breed predispositions, and life stage
+- [ ] It covers vaccines, parasite prevention, dental, nutrition, screening, and behavior
+- [ ] Each recommendation has a timing and a plain-language rationale
+- [ ] Regional/lifestyle variation and the need to confirm with the vet are noted
+- [ ] It's framed as a proactive plan (a 12-month view), not a one-off list
+- [ ] It doesn't present as a substitute for a physical exam
+
+## Anti-Patterns
+
+- A generic schedule that ignores species, breed, and region
+- Vaccine/parasite specifics stated as universal when they vary by locale and lifestyle
+- Skipping dental, weight, and behavior (the commonly-neglected pillars)
+- No rationale, so the owner sees cost without understanding value
+- Positioning it as a replacement for a veterinary exam

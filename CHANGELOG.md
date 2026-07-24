@@ -9,6 +9,28 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [62.0.0] — adopt-a-profession: four new verticals — 2026-07-24
+
+A new wave built from the open "Adopt a profession" issues (#163–#172): four professions the library didn't cover, each a coherent starter bundle. **771 skills, 94 bundles, 35 professions.**
+
+### Added — 🏫 pm-teaching (K-12)
+- **lesson-plan-builder** — standards-aligned plan with measurable objectives, a bell-to-bell timeline, checks for understanding, and differentiation.
+- **iep-goal-writer** — SMART IEP goals (baseline/condition/criterion/measurement) with objectives and matched accommodations, written to be defensible and monitorable.
+- **parent-conference-prep** — strengths-first agenda, the hard message said without labels, anticipated reactions, and shared next steps.
+- **behavior-intervention-plan** — a function-based BIP: prevention, a taught replacement behavior, a consistent response plan, and simple data tracking.
+
+### Added — 🍽 pm-hospitality (restaurants)
+- **menu-cost-engineer**, **health-inspection-prep**, **shift-schedule-builder**, **server-training-guide**, **guest-incident-log** — plate costing to a margin, the pre-inspection self-audit, demand-matched rotas, FOH onboarding, and defensible incident records.
+
+### Added — 📰 pm-journalism
+- **story-pitch**, **source-interview-prep**, **fact-check-pass**, **source-protection-plan** — an angle an editor buys, source/accountability interview prep, claim-by-claim verification, and confidential-source risk reduction.
+
+### Added — 🐾 pm-veterinary
+- **treatment-plan-estimate**, **euthanasia-conversation**, **client-discharge-notes**, **wellness-plan** — tiered owner-facing estimates, the compassionate end-of-life talk, plain-language go-home notes, and life-stage preventive care.
+
+### Notes
+- Duplicates were deliberately not shipped: `rubric-builder`, `foia-request`, and a generic patient intake (covered by `soap-note`) already exist and are reused rather than re-created. Closes #163, #168, #170, #171.
+
 ## [61.3.0] — most-requested: three skills people actually asked for — 2026-07-23
 
 Built straight from the demand-ranked request queue (`data/skill-requests.json`). **754 skills, 90 bundles.**
@@ -1100,7 +1122,8 @@ Earlier releases (v1.0.0 – v5.0.0) predate this changelog. See the
 [article series](README.md#-the-article-series) for the full history of how the
 library grew from the first PM toolkit to 100+ skills.
 
-[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.3.0...HEAD
+[Unreleased]: https://github.com/mohitagw15856/pm-claude-skills/compare/v62.0.0...HEAD
+[62.0.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.3.0...v62.0.0
 [61.3.0]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.2.2...v61.3.0
 [61.2.2]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.2.1...v61.2.2
 [61.2.1]: https://github.com/mohitagw15856/pm-claude-skills/compare/v61.1.0...v61.2.1

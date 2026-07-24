@@ -1,0 +1,56 @@
+---
+description: "Guide a veterinary team through a compassionate end-of-life conversation with a pet owner — quality-of-life assessment, the recommendation, and the logistics. Use when asked to help discuss euthanasia, assess quality of life, prepare for a difficult end-of-life conversation, or support an owner facing the decision. Produces a quality-of-life framework, empathetic language for the conversation, how to answer the hard questions (is it time, will it hurt, should the kids be there), and the practical steps (the process, aftercare options, grief support)."
+globs:
+alwaysApply: false
+---
+
+# Euthanasia Conversation Skill
+
+This is the conversation that makes or breaks how an owner remembers their pet's death — and their trust in the practice. Done well, it relieves guilt and gives a peaceful goodbye; done clumsily, it haunts people for years. This skill helps the team assess quality of life honestly, guide the decision without pushing it, and handle the moment with clarity and warmth.
+
+## Working from a brief
+
+Given the patient's condition and the owner's situation, **produce the guidance** — offer a quality-of-life read, language for the conversation, and the logistics. Support the owner's decision without pressuring in either direction; be honest about prognosis without being blunt to the point of cruelty.
+
+## Required Inputs
+
+Ask for (if not provided, else infer and label):
+- **The patient** — condition, prognosis, and current quality of life indicators
+- **Where the owner is** — considering it, resisting, asking for permission, or in denial
+- **Any specifics** — kids involved, home vs. clinic, cultural/religious considerations
+
+## Output Format
+
+### Quality-of-life read
+A structured assessment (e.g. the HHHHHMM-style factors: hurt/pain, hunger, hydration, hygiene, happiness, mobility, more-good-days-than-bad) — an honest picture to ground the conversation, not a verdict imposed on the owner.
+
+### The conversation
+Empathetic, plain language for:
+- Opening it gently and giving the owner space.
+- Sharing the medical reality and your **professional recommendation** (owners often need to be told it's okay).
+- Answering the hard questions: _"How will I know it's time?" · "Will it hurt?" · "Am I giving up too soon / holding on too long?" · "Should the children be present?"_
+- Silence and presence — when not to fill the space.
+
+### The logistics
+What the process actually involves (sedation, the steps, that it's peaceful), options for **where** (clinic, home, comfort room), **being present or not** (no judgment), aftercare (burial, cremation options, paw print/keepsake), and payment handled gently.
+
+### Aftercare & grief
+Acknowledging the loss, grief-support resources, and any follow-up (a condolence card) the practice offers.
+
+## Quality Checks
+
+- [ ] The quality-of-life read is honest and structured, offered to inform — not to override — the owner
+- [ ] The team gives a clear professional recommendation (owners often need permission)
+- [ ] The hard questions (is it time, will it hurt, the kids) are addressed with warmth
+- [ ] Logistics cover the process, location options, presence choice, and aftercare
+- [ ] Payment and grief support are handled gently, not transactionally
+- [ ] Tone respects the owner's pace, culture, and decision either way
+
+## Anti-Patterns
+
+- Pushing the decision (either "it's time" or "there's always more to try") onto the owner
+- Medical bluntness with no warmth, or false hope with no honesty
+- Refusing to give a recommendation when the owner is begging for guidance
+- Clinical euphemism that leaves the owner unclear what will happen
+- Handling payment or aftercare coldly in the moment
+- Ignoring children, cultural, or presence preferences

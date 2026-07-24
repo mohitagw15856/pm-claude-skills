@@ -1,0 +1,47 @@
+# Shift Schedule Builder Skill
+
+A schedule is a bet on demand: overstaff and you burn margin, understaff and service (and your best people) walk. This skill builds coverage from the demand curve out — enough hands at the rush, lean in the lulls — then checks the labor cost and the human constraints before it's posted.
+
+## Working from a brief
+
+Given the team, hours, and demand pattern, **produce the full schedule** — infer the day-part demand shape from the business type if no forecast is given (label it). Respect stated availability and time-off; never schedule someone into a conflict you were told about.
+
+## Required Inputs
+
+Ask for (if not provided, else infer and label):
+- **Team** — names/roles, pay rates or an average, and availability/time-off
+- **Operating hours** and the **demand pattern** (covers by day-part, peak times, events)
+- **Labor-cost target** (% of revenue or a dollar cap) and any rules (max hours, required rest, minors)
+
+## Output Format
+
+### Coverage plan
+Demand mapped to required heads per role per day-part:
+
+| Day-part | Forecast demand | Cooks | Servers | Support | Notes |
+|---|---|---|---|---|---|
+
+### The schedule
+Person-by-person shifts across the week (start–end, role, station), with total hours per person.
+
+### Labor cost check
+Projected labor hours × rates → labor cost, as a % of forecast revenue vs. the target, with the gap and where to trim/add.
+
+### Guardrails flagged
+Overtime risk, insufficient rest between close/open ("clopening"), availability conflicts, minor-hour limits, and anyone over/under their expected hours.
+
+## Quality Checks
+
+- [ ] Staffing per day-part is driven by the demand pattern, not flat coverage
+- [ ] Projected labor cost is computed and compared to the target
+- [ ] No one is scheduled against stated availability or time-off
+- [ ] Rest-between-shifts, overtime, and minor-hour rules are checked and flagged
+- [ ] Hours are distributed with an eye to fairness, not just cost
+
+## Anti-Patterns
+
+- Flat staffing that ignores the rush-and-lull demand curve
+- Posting a schedule without checking the labor-cost %
+- Scheduling "clopens" or overtime by accident
+- Ignoring stated availability (the fastest way to lose staff)
+- Cutting so lean that service and food quality collapse at peak

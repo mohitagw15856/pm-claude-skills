@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-teaching",
+  "version": "1.0.0",
+  "description": "The K-12 teaching pack: standards-aligned lesson plans, measurable IEP goals, parent-conference prep for the hard conversations, and function-based behavior intervention plans",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "teaching",
+    "education",
+    "k-12",
+    "lesson-plan",
+    "iep"
+  ]
+}
