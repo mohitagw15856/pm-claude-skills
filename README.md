@@ -1,5 +1,7 @@
 # 🧠 PM Skills — 771 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
 
+[![MCP Toplist](https://mcptoplist.com/badge/io.github.mohitagw15856%2Fpm-claude-skills.svg)](https://mcptoplist.com/server/io.github.mohitagw15856%2Fpm-claude-skills)
+
 [![In the official Anthropic plugin directory](https://img.shields.io/badge/Anthropic%20Plugin%20Directory-Published-D97757?logo=anthropic&logoColor=white)](#-quick-start)
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
 [![npm](https://img.shields.io/npm/v/pm-claude-skills?logo=npm&color=cb3837)](https://www.npmjs.com/package/pm-claude-skills)
