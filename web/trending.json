@@ -1,14 +1,18 @@
 {
-  "generatedAt": "2026-07-20T09:58:52.788Z",
+  "generatedAt": "2026-08-03T10:41:18.849Z",
   "window": "7d",
   "skills": [
     {
-      "name": "meeting-notes",
-      "count": 3
+      "name": "executive-update",
+      "count": 1
     },
     {
-      "name": "roadmap-narrative",
-      "count": 2
+      "name": "infra-as-code-review",
+      "count": 1
+    },
+    {
+      "name": "ai-code-review",
+      "count": 1
     }
   ]
 }
