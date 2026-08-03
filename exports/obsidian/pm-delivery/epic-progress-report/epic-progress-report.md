@@ -1,0 +1,84 @@
+---
+aliases: ["Epic Progress Report"]
+tags: [pm-skills, skill]
+skill: epic-progress-report
+description: "Report on an epic or initiative deeper than a status bullet — child work broken down by status, the riskiest unfinished pieces, and honest suggested cuts to hit the date. Use when asked for an epic progress report, where are we on this initiative, break down epic status, or what can we cut to ship on time. Produces the completion picture by child status, the critical-path and riskiest remaining work, a scope-cut menu with impact, and a straight call on whether the target date is realistic."
+---
+
+# Epic Progress Report
+
+"Epic is 60% done" is the least useful sentence in delivery — 60% of what, and is the remaining 40% the easy part or the terrifying part? This breaks the epic into its child work by status, surfaces the pieces most likely to blow the date, and — instead of just reporting — offers a cut menu and an honest read on whether the deadline survives contact with reality.
+
+## What This Skill Produces
+
+- **The completion picture** — child items grouped by status (done / in progress / not started / blocked), with what % and *which* work remains
+- **The riskiest remaining work** — the unfinished pieces most likely to slip (unknowns, dependencies, the hard 20%)
+- **The cut menu** — what could be descoped or deferred, and the impact of each cut
+- **The date call** — will it make the target as-is; if not, what has to give
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The epic & its children** — the stories/tasks under it and their statuses (a board export or list)
+- **The target date & goal** — what "done" means for this epic and when it's needed
+- **Dependencies & unknowns** — anything waiting on another team, or work that's still fuzzy
+- **Who it's for** — a standup, a stakeholder, or a go/no-go — tunes depth and bluntness
+
+## Framework: Progress You Can Act On
+
+1. **Remaining work, not just percent.** Report what's *left* and how hard it is — the last 20% is often the risky 80%.
+2. **Status by child, honestly.** Blocked and not-started are different from in-progress; don't average them into a comforting number.
+3. **Name the riskiest pieces.** Dependencies, unknowns, and the one hard component are where dates die — call them out.
+4. **Offer cuts, don't just warn.** A scope-cut menu with impact turns "we might slip" into a decision the team can make.
+5. **Give a straight date call.** "On track," "at risk — here's why," or "won't make it without cuts." Vague green status is the enemy.
+
+## Output Format
+
+### Epic: [name] · target [date] · for [audience]
+
+### Completion
+| Status | Count | Which work |
+|---|---|---|
+| ✅ Done | | |
+| 🔨 In progress | | |
+| ⬜ Not started | | |
+| ⛔ Blocked | | |
+
+### Riskiest remaining
+- [item] — why it's risky (unknown / dependency / complexity).
+
+### Cut menu (to protect the date)
+| Could cut/defer | Saves | Impact if cut |
+|---|---|---|
+
+### Date call
+> **On track / At risk / Won't make it without cuts** — because [reason].
+
+## Quality Checks
+- [ ] Remaining work is described, not just a percentage
+- [ ] Children are grouped by real status (blocked ≠ in-progress ≠ not-started)
+- [ ] The riskiest unfinished pieces are named with why
+- [ ] A concrete cut menu with impact is offered, not just a risk warning
+- [ ] A straight date call is made — not a vague "green"
+- [ ] No invented statuses — unknowns are marked unknown
+
+## Anti-Patterns
+- **A single % with no breakdown** — hides where the risk is.
+- **Averaging blocked and not-started** into a reassuring number.
+- **Warning of slip with no options** — leaves the reader stuck.
+- **Watermelon status** (green outside, red inside) — a comfortable date call that isn't true.
+- **Guessing a child's status** instead of flagging it unknown.
+
+## Example Trigger Phrases
+- "Give me an epic progress report for the checkout revamp."
+- "Where are we really on this initiative, and can we cut to hit the date?"
+- "Break down this epic's status by child work and flag the risky bits."
+- "Is this epic going to make the deadline? What would we have to drop?"
+
+---
+<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
+     variable for the highlighted text — replace it with your plugin's equivalent
+     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
+Apply the skill above to the following input:
+
+{{selection}}
