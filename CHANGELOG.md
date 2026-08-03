@@ -9,6 +9,28 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [68.0.0] — the missing-tasks wave: ten high-demand skills into existing bundles — 2026-07-26
+
+Ten specific, frequently-needed tasks that the library didn't yet cover — added to the bundles where they belong. **832 skills, 104 bundles.**
+
+### Added — 🧩 ten skills filling real gaps
+
+Professional & enterprise:
+- **[pip-writer](skills/pip-writer/SKILL.md)** (pm-people) — a manager-side Performance Improvement Plan: measurable goals, real support, honest stakes (complements the employee-side `pip-responder`).
+- **[dpa-review](skills/dpa-review/SKILL.md)** (pm-legal) — read a Data Processing Agreement before signing: sub-processors, transfers, breach window, deletion, 🔴🟡🟢 risk.
+- **[security-questionnaire-autofill](skills/security-questionnaire-autofill/SKILL.md)** (pm-compliance) — draft SIG/CAIQ answers from your real controls; flag gaps, never fabricate a "yes".
+- **[customer-incident-update](skills/customer-incident-update/SKILL.md)** (pm-crisis) — the customer-facing status-page/email update, in the right tense for the stage (distinct from `incident-postmortem`).
+- **[winback-playbook](skills/winback-playbook/SKILL.md)** (pm-cs) — diagnose churn before discounting; the save ladder, the sequence, and the walk-away line.
+- **[price-increase-announcement](skills/price-increase-announcement/SKILL.md)** (pm-pmm) — announce a price rise without a churn spike: rationale, grandfathering, FAQ, internal brief.
+
+Personal & life moments:
+- **[estate-planning-kit](skills/estate-planning-kit/SKILL.md)** (pm-money) — get your affairs in order *before*: beneficiaries-first checklist + the document-locator sheet.
+- **[year-in-review](skills/year-in-review/SKILL.md)** (pm-career) — an honest personal retrospective + one theme, not a resolution list that dies in February.
+- **[immigration-document-checklist](skills/immigration-document-checklist/SKILL.md)** (pm-personal) — organise the visa/permit/residency paperwork, slow items first, with rejection-trigger checks.
+- **[chargeback-dispute-response](skills/chargeback-dispute-response/SKILL.md)** (pm-ecommerce) — match the reason code to the winning evidence and write the merchant rebuttal (with an honest winnability call).
+
+All ten pass the L3 / SkillSpec gate and the security audit; sensitive domains (legal, HR, estate, immigration) carry a "flag, don't fabricate / see a professional" guardrail.
+
 ## [67.0.0] — the everywhere wave: six new rooms the library walks into — 2026-07-26
 
 ### Added — six new bundles + additions (**822 skills, 104 bundles**)

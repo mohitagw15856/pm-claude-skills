@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-822 skills exported. Copy a `.md rule` into the tool to use it.
+832 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -110,6 +110,7 @@
 | Changelog Generator | `pm-engineering` | `pm-engineering/changelog-generator/changelog-generator.md` |
 | Changelog Writer | `pm-devrel` | `pm-devrel/changelog-writer/changelog-writer.md` |
 | Channel Hygiene | `pm-cowork` | `pm-cowork/channel-hygiene/channel-hygiene.md` |
+| Chargeback Dispute Response | `pm-ecommerce` | `pm-ecommerce/chargeback-dispute-response/chargeback-dispute-response.md` |
 | Chart | `pm-visuals` | `pm-visuals/chart/chart.md` |
 | Chart Choice | `pm-cowork` | `pm-cowork/chart-choice/chart-choice.md` |
 | Chart Data Extractor | `pm-vision` | `pm-vision/chart-data-extractor/chart-data-extractor.md` |
@@ -181,6 +182,7 @@
 | CSAT / NPS Analysis | `pm-support` | `pm-support/csat-nps-analysis/csat-nps-analysis.md` |
 | Currency Rates | `pm-live` | `pm-live/currency-rates/currency-rates.md` |
 | Customer Advisory Board | `pm-pmm` | `pm-pmm/customer-advisory-board/customer-advisory-board.md` |
+| Customer Incident Update | `pm-crisis` | `pm-crisis/customer-incident-update/customer-incident-update.md` |
 | Customer Journey Map | `pm-discovery` | `pm-discovery/customer-journey-map/customer-journey-map.md` |
 | Customer Outage Notice | `pm-crisis` | `pm-crisis/customer-outage-notice/customer-outage-notice.md` |
 | Customer Success Plan | `pm-cs` | `pm-cs/customer-success-plan/customer-success-plan.md` |
@@ -252,6 +254,7 @@
 | Donor Update | `pm-nonprofit` | `pm-nonprofit/donor-update/donor-update.md` |
 | Double Opt-In Intro | `pm-cowork` | `pm-cowork/double-opt-in-intro/double-opt-in-intro.md` |
 | Downloads Triage | `pm-cowork` | `pm-cowork/downloads-triage/downloads-triage.md` |
+| DPA Review | `pm-legal` | `pm-legal/dpa-review/dpa-review.md` |
 | Earthquake Watch | `pm-live` | `pm-live/earthquake-watch/earthquake-watch.md` |
 | Elder Scam Briefing | `pm-scam-defense` | `pm-scam-defense/elder-scam-briefing/elder-scam-briefing.md` |
 | Email Agent Preflight | `pm-seatbelt` | `pm-seatbelt/email-agent-preflight/email-agent-preflight.md` |
@@ -273,6 +276,7 @@
 | Escalation Email | `pm-cowork` | `pm-cowork/escalation-email/escalation-email.md` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/escalation-tree.md` |
 | ESG Disclosure Draft | `pm-climate` | `pm-climate/esg-disclosure-draft/esg-disclosure-draft.md` |
+| Estate Planning Kit | `pm-money` | `pm-money/estate-planning-kit/estate-planning-kit.md` |
 | Estate Settlement Organizer | `pm-estate` | `pm-estate/estate-settlement-organizer/estate-settlement-organizer.md` |
 | Eulogy Writer | `pm-lifeadmin` | `pm-lifeadmin/eulogy-writer/eulogy-writer.md` |
 | Euthanasia Conversation | `pm-veterinary` | `pm-veterinary/euthanasia-conversation/euthanasia-conversation.md` |
@@ -371,6 +375,7 @@
 | IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/iep-504-meeting-kit.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/iep-goal-support.md` |
 | IEP Goal Writer | `pm-teaching` | `pm-teaching/iep-goal-writer/iep-goal-writer.md` |
+| Immigration Document Checklist | `pm-personal` | `pm-personal/immigration-document-checklist/immigration-document-checklist.md` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/impact-report.md` |
 | Inbox Triage (Live) | `pm-cowork-live` | `pm-cowork-live/inbox-triage-live/inbox-triage-live.md` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `pm-cowork/inbox-unsubscribe-purge/inbox-unsubscribe-purge.md` |
@@ -516,6 +521,7 @@
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/persuasion-brief.md` |
 | Photo Library Rescue | `pm-cowork` | `pm-cowork/photo-library-rescue/photo-library-rescue.md` |
 | PIP Responder | `pm-career` | `pm-career/pip-responder/pip-responder.md` |
+| PIP Writer | `pm-people` | `pm-people/pip-writer/pip-writer.md` |
 | Pitch Vs Teach | `pm-cowork` | `pm-cowork/pitch-vs-teach/pitch-vs-teach.md` |
 | Pivot Analysis Planner | `pm-cowork` | `pm-cowork/pivot-analysis-planner/pivot-analysis-planner.md` |
 | Pixel GIF Maker | `other` | `other/pixel-gif-maker/pixel-gif-maker.md` |
@@ -536,6 +542,7 @@
 | Presenter Notes | `pm-cowork` | `pm-cowork/presenter-notes/presenter-notes.md` |
 | Press Kit EPK | `pm-musician` | `pm-musician/press-kit-epk/press-kit-epk.md` |
 | Press Release | `pm-cross` | `pm-cross/press-release/press-release.md` |
+| Price Increase Announcement | `pm-pmm` | `pm-pmm/price-increase-announcement/price-increase-announcement.md` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/pricing-calculator.md` |
 | Pricing Page Copy | `pm-pmm` | `pm-pmm/pricing-page-copy/pricing-page-copy.md` |
 | Pricing Sensitivity Model (Van Westendorp) | `pm-calculators` | `pm-calculators/pricing-sensitivity-model/pricing-sensitivity-model.md` |
@@ -654,6 +661,7 @@
 | Second Opinion Request | `pm-lifeadmin` | `pm-lifeadmin/second-opinion-request/second-opinion-request.md` |
 | Security Deposit Recovery | `pm-renters` | `pm-renters/security-deposit-recovery/security-deposit-recovery.md` |
 | Security Incident Response | `pm-security` | `pm-security/security-incident-response/security-incident-response.md` |
+| Security Questionnaire Autofill | `pm-compliance` | `pm-compliance/security-questionnaire-autofill/security-questionnaire-autofill.md` |
 | Security Review | `pm-security` | `pm-security/security-review/security-review.md` |
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/security-threat-model.md` |
 | Self-Review | `pm-career` | `pm-career/self-review/self-review.md` |
@@ -820,6 +828,7 @@
 | Whiteboard To Spec | `pm-vision` | `pm-vision/whiteboard-to-spec/whiteboard-to-spec.md` |
 | Wiki Summary | `pm-live` | `pm-live/wiki-summary/wiki-summary.md` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/win-loss-analysis.md` |
+| Win-back Playbook | `pm-cs` | `pm-cs/winback-playbook/winback-playbook.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/word-document.md` |
 | Working Agreements | `pm-cowork` | `pm-cowork/working-agreements/working-agreements.md` |
 | Workshop Designer | `pm-cowork` | `pm-cowork/workshop-designer/workshop-designer.md` |
@@ -827,5 +836,6 @@
 | World Clock | `pm-live` | `pm-live/world-clock/world-clock.md` |
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/writing-great-skills.md` |
 | Writing Plans | `pm-method` | `pm-method/writing-plans/writing-plans.md` |
+| Year in Review | `pm-career` | `pm-career/year-in-review/year-in-review.md` |
 | YouTube Script | `pm-creator` | `pm-creator/youtube-script/youtube-script.md` |
 | YouTube Script Writer | `pm-writers` | `pm-writers/youtube-script-writer/youtube-script-writer.md` |
