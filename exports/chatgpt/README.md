@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-822 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+832 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -110,6 +110,7 @@
 | Changelog Generator | `pm-engineering` | `pm-engineering/changelog-generator/SYSTEM_PROMPT.md` |
 | Changelog Writer | `pm-devrel` | `pm-devrel/changelog-writer/SYSTEM_PROMPT.md` |
 | Channel Hygiene | `pm-cowork` | `pm-cowork/channel-hygiene/SYSTEM_PROMPT.md` |
+| Chargeback Dispute Response | `pm-ecommerce` | `pm-ecommerce/chargeback-dispute-response/SYSTEM_PROMPT.md` |
 | Chart | `pm-visuals` | `pm-visuals/chart/SYSTEM_PROMPT.md` |
 | Chart Choice | `pm-cowork` | `pm-cowork/chart-choice/SYSTEM_PROMPT.md` |
 | Chart Data Extractor | `pm-vision` | `pm-vision/chart-data-extractor/SYSTEM_PROMPT.md` |
@@ -181,6 +182,7 @@
 | CSAT / NPS Analysis | `pm-support` | `pm-support/csat-nps-analysis/SYSTEM_PROMPT.md` |
 | Currency Rates | `pm-live` | `pm-live/currency-rates/SYSTEM_PROMPT.md` |
 | Customer Advisory Board | `pm-pmm` | `pm-pmm/customer-advisory-board/SYSTEM_PROMPT.md` |
+| Customer Incident Update | `pm-crisis` | `pm-crisis/customer-incident-update/SYSTEM_PROMPT.md` |
 | Customer Journey Map | `pm-discovery` | `pm-discovery/customer-journey-map/SYSTEM_PROMPT.md` |
 | Customer Outage Notice | `pm-crisis` | `pm-crisis/customer-outage-notice/SYSTEM_PROMPT.md` |
 | Customer Success Plan | `pm-cs` | `pm-cs/customer-success-plan/SYSTEM_PROMPT.md` |
@@ -252,6 +254,7 @@
 | Donor Update | `pm-nonprofit` | `pm-nonprofit/donor-update/SYSTEM_PROMPT.md` |
 | Double Opt-In Intro | `pm-cowork` | `pm-cowork/double-opt-in-intro/SYSTEM_PROMPT.md` |
 | Downloads Triage | `pm-cowork` | `pm-cowork/downloads-triage/SYSTEM_PROMPT.md` |
+| DPA Review | `pm-legal` | `pm-legal/dpa-review/SYSTEM_PROMPT.md` |
 | Earthquake Watch | `pm-live` | `pm-live/earthquake-watch/SYSTEM_PROMPT.md` |
 | Elder Scam Briefing | `pm-scam-defense` | `pm-scam-defense/elder-scam-briefing/SYSTEM_PROMPT.md` |
 | Email Agent Preflight | `pm-seatbelt` | `pm-seatbelt/email-agent-preflight/SYSTEM_PROMPT.md` |
@@ -273,6 +276,7 @@
 | Escalation Email | `pm-cowork` | `pm-cowork/escalation-email/SYSTEM_PROMPT.md` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/SYSTEM_PROMPT.md` |
 | ESG Disclosure Draft | `pm-climate` | `pm-climate/esg-disclosure-draft/SYSTEM_PROMPT.md` |
+| Estate Planning Kit | `pm-money` | `pm-money/estate-planning-kit/SYSTEM_PROMPT.md` |
 | Estate Settlement Organizer | `pm-estate` | `pm-estate/estate-settlement-organizer/SYSTEM_PROMPT.md` |
 | Eulogy Writer | `pm-lifeadmin` | `pm-lifeadmin/eulogy-writer/SYSTEM_PROMPT.md` |
 | Euthanasia Conversation | `pm-veterinary` | `pm-veterinary/euthanasia-conversation/SYSTEM_PROMPT.md` |
@@ -371,6 +375,7 @@
 | IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/SYSTEM_PROMPT.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/SYSTEM_PROMPT.md` |
 | IEP Goal Writer | `pm-teaching` | `pm-teaching/iep-goal-writer/SYSTEM_PROMPT.md` |
+| Immigration Document Checklist | `pm-personal` | `pm-personal/immigration-document-checklist/SYSTEM_PROMPT.md` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/SYSTEM_PROMPT.md` |
 | Inbox Triage (Live) | `pm-cowork-live` | `pm-cowork-live/inbox-triage-live/SYSTEM_PROMPT.md` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `pm-cowork/inbox-unsubscribe-purge/SYSTEM_PROMPT.md` |
@@ -516,6 +521,7 @@
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/SYSTEM_PROMPT.md` |
 | Photo Library Rescue | `pm-cowork` | `pm-cowork/photo-library-rescue/SYSTEM_PROMPT.md` |
 | PIP Responder | `pm-career` | `pm-career/pip-responder/SYSTEM_PROMPT.md` |
+| PIP Writer | `pm-people` | `pm-people/pip-writer/SYSTEM_PROMPT.md` |
 | Pitch Vs Teach | `pm-cowork` | `pm-cowork/pitch-vs-teach/SYSTEM_PROMPT.md` |
 | Pivot Analysis Planner | `pm-cowork` | `pm-cowork/pivot-analysis-planner/SYSTEM_PROMPT.md` |
 | Pixel GIF Maker | `other` | `other/pixel-gif-maker/SYSTEM_PROMPT.md` |
@@ -536,6 +542,7 @@
 | Presenter Notes | `pm-cowork` | `pm-cowork/presenter-notes/SYSTEM_PROMPT.md` |
 | Press Kit EPK | `pm-musician` | `pm-musician/press-kit-epk/SYSTEM_PROMPT.md` |
 | Press Release | `pm-cross` | `pm-cross/press-release/SYSTEM_PROMPT.md` |
+| Price Increase Announcement | `pm-pmm` | `pm-pmm/price-increase-announcement/SYSTEM_PROMPT.md` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/SYSTEM_PROMPT.md` |
 | Pricing Page Copy | `pm-pmm` | `pm-pmm/pricing-page-copy/SYSTEM_PROMPT.md` |
 | Pricing Sensitivity Model (Van Westendorp) | `pm-calculators` | `pm-calculators/pricing-sensitivity-model/SYSTEM_PROMPT.md` |
@@ -654,6 +661,7 @@
 | Second Opinion Request | `pm-lifeadmin` | `pm-lifeadmin/second-opinion-request/SYSTEM_PROMPT.md` |
 | Security Deposit Recovery | `pm-renters` | `pm-renters/security-deposit-recovery/SYSTEM_PROMPT.md` |
 | Security Incident Response | `pm-security` | `pm-security/security-incident-response/SYSTEM_PROMPT.md` |
+| Security Questionnaire Autofill | `pm-compliance` | `pm-compliance/security-questionnaire-autofill/SYSTEM_PROMPT.md` |
 | Security Review | `pm-security` | `pm-security/security-review/SYSTEM_PROMPT.md` |
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/SYSTEM_PROMPT.md` |
 | Self-Review | `pm-career` | `pm-career/self-review/SYSTEM_PROMPT.md` |
@@ -820,6 +828,7 @@
 | Whiteboard To Spec | `pm-vision` | `pm-vision/whiteboard-to-spec/SYSTEM_PROMPT.md` |
 | Wiki Summary | `pm-live` | `pm-live/wiki-summary/SYSTEM_PROMPT.md` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/SYSTEM_PROMPT.md` |
+| Win-back Playbook | `pm-cs` | `pm-cs/winback-playbook/SYSTEM_PROMPT.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/SYSTEM_PROMPT.md` |
 | Working Agreements | `pm-cowork` | `pm-cowork/working-agreements/SYSTEM_PROMPT.md` |
 | Workshop Designer | `pm-cowork` | `pm-cowork/workshop-designer/SYSTEM_PROMPT.md` |
@@ -827,5 +836,6 @@
 | World Clock | `pm-live` | `pm-live/world-clock/SYSTEM_PROMPT.md` |
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/SYSTEM_PROMPT.md` |
 | Writing Plans | `pm-method` | `pm-method/writing-plans/SYSTEM_PROMPT.md` |
+| Year in Review | `pm-career` | `pm-career/year-in-review/SYSTEM_PROMPT.md` |
 | YouTube Script | `pm-creator` | `pm-creator/youtube-script/SYSTEM_PROMPT.md` |
 | YouTube Script Writer | `pm-writers` | `pm-writers/youtube-script-writer/SYSTEM_PROMPT.md` |

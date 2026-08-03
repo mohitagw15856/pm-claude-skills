@@ -1,0 +1,85 @@
+---
+aliases: ["Estate Planning Kit"]
+tags: [pm-skills, skill]
+skill: estate-planning-kit
+description: "Get your affairs in order before you need to — a will/beneficiary/healthcare-directive checklist and the 'what my family needs to find' document, in the right order. Use when asked to help with estate planning, make a will checklist, get my affairs in order, or prepare what my family needs if something happens to me. Produces the estate-planning checklist ranked by priority, the document-locator sheet, the key decisions to make, and the professional-help flags — for the living, not the executor. Complements the estate/after-death pack."
+---
+
+# Estate Planning Kit
+
+Most people avoid estate planning because it's morbid and unclear where to start — so their family inherits a scavenger hunt on top of grief. This is the *before* version: the ordered checklist of what to set up (will, beneficiaries, directives), the one document that tells your family where everything is, and honest flags for when you need a lawyer, not a template.
+
+> Not legal or financial advice. Wills, trusts, and directives are governed by local law — this organises the work and flags where a professional is required; it does not replace one.
+
+## What This Skill Produces
+
+- **The priority checklist** — what to put in place, ordered by "if only one thing, do this"
+- **The document-locator sheet** — the "what my family needs to find and where" document (accounts, policies, passwords vault, key contacts)
+- **The key decisions** — the choices only you can make (executor, guardians, beneficiaries, care wishes)
+- **Professional-help flags** — where a template is fine vs. where a lawyer/advisor is required
+
+## Required Inputs
+
+Ask for these if not provided:
+- **Your situation** — dependents (kids, aging parents), rough asset picture, business ownership, marital status
+- **What exists** — any current will, beneficiaries named, insurance, directives
+- **Jurisdiction** — country/state (rules and required documents vary)
+- **Complexity flags** — blended family, cross-border assets, a business, special-needs dependent
+
+## Framework: In the Right Order
+
+1. **Beneficiaries first.** Retirement/insurance beneficiary designations override a will and take minutes — the highest-leverage, most-skipped step.
+2. **A will (and guardians if you have kids).** Who gets what, and who raises your children — the decision that most needs to be explicit.
+3. **Healthcare directive + power of attorney.** Who decides for you if you can't — medical and financial.
+4. **The locator document.** Where everything lives, so nothing is lost to a forgotten account.
+5. **Know when to escalate.** Trusts, business succession, cross-border, or special-needs planning need a professional — flag, don't wing.
+
+## Output Format
+
+### Estate Planning Checklist — [name] · [jurisdiction]
+| Priority | Item | Status | DIY-ok / See a pro |
+|---|---|---|---|
+| 1 | Update beneficiary designations | ☐ | DIY |
+| 2 | Will + guardianship | ☐ | Pro if [complexity] |
+
+### Decisions only you can make
+- Executor: ___ · Guardians: ___ · Healthcare proxy: ___ · Care wishes: ___
+
+### Document locator (for your family)
+| What | Where it is | Contact |
+|---|---|---|
+| Will | … | [lawyer] |
+| Insurance policies | … | … |
+| Accounts / passwords | [vault] | … |
+
+### See a professional for
+- [flagged complexities]
+
+## Quality Checks
+- [ ] Beneficiary designations are called out as the first, highest-leverage step
+- [ ] Guardianship is prompted if there are minor children
+- [ ] Both healthcare and financial power-of-attorney are covered
+- [ ] The locator sheet names where each item lives, not just that it exists
+- [ ] Complexity (trusts, business, cross-border, special-needs) is flagged for a professional
+- [ ] Jurisdiction is acknowledged; no jurisdiction-specific legal claims are invented
+
+## Anti-Patterns
+- **Starting with the will** and skipping beneficiary designations that legally override it.
+- **A checklist with no locator** — the family still can't find anything.
+- **Pretending a template covers a trust or a business** — flag the escalation.
+- **Inventing jurisdiction-specific rules** — organise the work, defer the law to a pro.
+- **Guilt-tripping** — this is logistics, done calmly, not a lecture on mortality.
+
+## Example Trigger Phrases
+- "Help me get my affairs in order."
+- "Make me an estate-planning checklist — I have two young kids."
+- "Prepare the document my family needs if something happens to me."
+- "Where do I start with a will and directives?"
+
+---
+<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
+     variable for the highlighted text — replace it with your plugin's equivalent
+     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
+Apply the skill above to the following input:
+
+{{selection}}
