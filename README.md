@@ -64,6 +64,11 @@ Works natively in **Claude Code** and **Hermes Agent**, with ready-to-paste expo
 
 It's not just a folder of files — the whole library is explorable, runnable, and a little bit magic. All of this runs **in your browser, free, nothing to install:**
 
+<p align="center">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/"><img src="web/docs-assets/playground-demo.gif" width="90%" alt="The Skill Playground: pick the Executive Update skill, fill in a few notes, hit run, and watch a structured executive briefing stream out — all in the browser" /></a>
+  <br /><sub><b>▶ Pick a skill → fill a short form → run it → a senior-grade artifact streams out.</b> No install, your key stays in your browser (or run free with no key).</sub>
+</p>
+
 <table>
 <tr>
 <td width="50%" align="center">
