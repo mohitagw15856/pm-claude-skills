@@ -60,6 +60,25 @@ Works natively in **Claude Code** and **Hermes Agent**, with ready-to-paste expo
 
 **Don't know what to look for?** Describe your task in plain words at **[🔎 find](https://mohitagw15856.github.io/pm-claude-skills/find.html)** — *"my landlord kept my deposit"*, *"board meeting on Thursday"* — and it names the skill.
 
+## ✨ See it in action
+
+It's not just a folder of files — the whole library is explorable, runnable, and a little bit magic. All of this runs **in your browser, free, nothing to install:**
+
+<table>
+<tr>
+<td width="50%" align="center">
+<a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="web/docs-assets/demo-galaxy.gif" width="100%" alt="Galaxy 3D — fly through all 832 skills as a glowing constellation you orbit and click into" /></a>
+<br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html">Galaxy 3D</a></b> — fly through all 832 skills as a living constellation. The ones you've run burn brighter.</sub>
+</td>
+<td width="50%" align="center">
+<a href="https://mohitagw15856.github.io/pm-claude-skills/wrapped.html"><img src="web/docs-assets/demo-holo.gif" width="100%" alt="PM Skills Wrapped — your practice turned into a shareable, Spotify-Wrapped-style story" /></a>
+<br /><sub><b>🎁 <a href="https://mohitagw15856.github.io/pm-claude-skills/wrapped.html">Wrapped</a></b> — your practice, as a shareable story. 100% local — nothing leaves your browser.</sub>
+</td>
+</tr>
+</table>
+
+▶ **[Open the Playground](https://mohitagw15856.github.io/pm-claude-skills/)** to run any of the 832 skills with your own key — or just [browse them all](SKILLS.md).
+
 ## 💬 What can I ask it to do?
 
 Anything below is a real ask that activates a real skill — say it in your own words, the description does the routing:
