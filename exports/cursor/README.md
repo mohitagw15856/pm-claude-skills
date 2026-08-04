@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-848 skills exported. Copy a `.mdc rule` into the tool to use it.
+849 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -446,6 +446,7 @@
 | Local Dev Setup | `pm-engineering` | `pm-engineering/local-dev-setup/local-dev-setup.mdc` |
 | Localization Brief | `pm-localization` | `pm-localization/localization-brief/localization-brief.mdc` |
 | Logistics Incident Report | `pm-supplychain` | `pm-supplychain/logistics-incident-report/logistics-incident-report.mdc` |
+| Lower My Bill | `pm-money` | `pm-money/lower-my-bill/lower-my-bill.mdc` |
 | Machiavelli Counsel | `pm-dead-mentors` | `pm-dead-mentors/machiavelli-counsel/machiavelli-counsel.mdc` |
 | Maintainer Triage | `pm-maintainer` | `pm-maintainer/maintainer-triage/maintainer-triage.mdc` |
 | Manager First 90 Days | `pm-people` | `pm-people/manager-first-90-days/manager-first-90-days.mdc` |

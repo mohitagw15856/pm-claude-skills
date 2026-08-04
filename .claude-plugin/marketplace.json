@@ -370,7 +370,7 @@
     },
     {
       "name": "pm-money",
-      "description": "Personal-finance skills for individuals: Budget Builder, Debt Payoff Plan, Investing Policy Statement, Net Worth Statement, Savings Goal Plan, and Expense Audit. Educational planning aids — not regulated financial advice.",
+      "description": "Personal-finance skills for individuals: Budget Builder, Debt Payoff Plan, Investing Policy Statement, Net Worth Statement, Savings Goal Plan, Expense Audit, and Lower My Bill. Educational planning aids — not regulated financial advice.",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-money",

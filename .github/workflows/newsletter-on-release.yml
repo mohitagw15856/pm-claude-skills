@@ -1,11 +1,15 @@
-name: Newsletter draft on release
+name: Newsletter on release
 
-# When you publish a GitHub Release, this drafts a newsletter in Buttondown from
-# the release notes — so subscribers can be told about new skills. It creates a
-# DRAFT (never auto-sends), so you review and hit send in Buttondown yourself.
+# When you publish a GitHub Release, this builds a branded HTML announcement
+# email from the release notes and makes it effortless to send:
 #
-# Setup: add a repo secret BUTTONDOWN_API_KEY (Buttondown → Settings → API).
-# Without the secret, the job skips cleanly.
+#   • FREE plan (no secret needed): the email is uploaded as a downloadable
+#     artifact AND printed into the workflow summary — copy it straight into
+#     Buttondown → new email → HTML, and hit send. Nothing to configure.
+#
+#   • PAID plan (optional): add a repo secret BUTTONDOWN_API_KEY and the job
+#     also creates a DRAFT in Buttondown with the same HTML. It never
+#     auto-sends — you review and send it yourself.
 
 on:
   release:
@@ -13,49 +17,62 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: 'Existing release tag to draft from (e.g. v69.0.0)'
+        description: 'Existing release tag to build from (e.g. v70.0.0)'
         required: false
 
 permissions:
   contents: read
 
 jobs:
-  draft:
+  newsletter:
     runs-on: ubuntu-latest
+    env:
+      BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
     steps:
-      - name: Draft the newsletter
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build the announcement email
+        id: build
         env:
-          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
           REL_NAME: ${{ github.event.release.name }}
           REL_TAG: ${{ github.event.release.tag_name || github.event.inputs.tag }}
           REL_BODY: ${{ github.event.release.body }}
           REL_URL: ${{ github.event.release.html_url }}
         run: |
-          if [ -z "$BUTTONDOWN_API_KEY" ]; then
-            echo "No BUTTONDOWN_API_KEY secret set — skipping newsletter draft."
-            exit 0
-          fi
+          node scripts/build-newsletter.mjs > /dev/null
+          TAG="${REL_TAG:-latest}"
+          SAFE="${TAG//[^A-Za-z0-9._-]/_}"
+          echo "safe_tag=$SAFE" >> "$GITHUB_OUTPUT"
+          echo "html_path=newsletters/$SAFE.html" >> "$GITHUB_OUTPUT"
 
-          SUBJECT="New skills: ${REL_NAME:-$REL_TAG}"
-          # Fall back to a friendly note if the release had no body.
-          INTRO="${REL_BODY:-New skills just landed in PM Skills ($REL_TAG).}"
-          FOOTER=$'\n\n—\nBrowse the catalogue: https://mohitagw15856.github.io/pm-claude-skills/\nFull release: '"${REL_URL:-https://github.com/mohitagw15856/pm-claude-skills/releases}"
-          BODY="${INTRO}${FOOTER}"
+      - name: Upload email as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: email-html
+          path: newsletters/${{ steps.build.outputs.safe_tag }}.*
 
-          # Build the JSON payload safely (jq escapes newlines/quotes).
-          payload=$(jq -n --arg s "$SUBJECT" --arg b "$BODY" \
-            '{subject: $s, body: $b, status: "draft"}')
-
+      - name: Draft in Buttondown (paid plan only — optional)
+        if: ${{ env.BUTTONDOWN_API_KEY != '' }}
+        env:
+          REL_NAME: ${{ github.event.release.name }}
+          REL_TAG: ${{ github.event.release.tag_name || github.event.inputs.tag }}
+        run: |
+          SUBJECT="${REL_NAME:-New skills ($REL_TAG)}"
+          BODY_HTML=$(cat "${{ steps.build.outputs.html_path }}")
+          payload=$(jq -n --arg s "$SUBJECT" --arg b "$BODY_HTML" \
+            '{subject: $s, body: $b, status: "draft", email_type: "public"}')
           code=$(curl -sS -o /tmp/resp.json -w "%{http_code}" \
             -X POST https://api.buttondown.email/v1/emails \
             -H "Authorization: Token $BUTTONDOWN_API_KEY" \
             -H "Content-Type: application/json" \
             -d "$payload")
-
           echo "Buttondown responded $code"
           if [ "$code" = "201" ] || [ "$code" = "200" ]; then
-            echo "✓ Draft newsletter created in Buttondown — review and send it there."
+            echo "✓ Draft created in Buttondown — review and send it there."
           else
-            echo "::warning::Buttondown draft not created (HTTP $code). Response:"; cat /tmp/resp.json || true
-            # Don't fail the release over a newsletter draft.
+            echo "::warning::Buttondown draft not created (HTTP $code):"; cat /tmp/resp.json || true
           fi

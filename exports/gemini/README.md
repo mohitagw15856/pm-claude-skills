@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-848 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+849 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -446,6 +446,7 @@
 | Local Dev Setup | `pm-engineering` | `pm-engineering/local-dev-setup/GEM_INSTRUCTIONS.md` |
 | Localization Brief | `pm-localization` | `pm-localization/localization-brief/GEM_INSTRUCTIONS.md` |
 | Logistics Incident Report | `pm-supplychain` | `pm-supplychain/logistics-incident-report/GEM_INSTRUCTIONS.md` |
+| Lower My Bill | `pm-money` | `pm-money/lower-my-bill/GEM_INSTRUCTIONS.md` |
 | Machiavelli Counsel | `pm-dead-mentors` | `pm-dead-mentors/machiavelli-counsel/GEM_INSTRUCTIONS.md` |
 | Maintainer Triage | `pm-maintainer` | `pm-maintainer/maintainer-triage/GEM_INSTRUCTIONS.md` |
 | Manager First 90 Days | `pm-people` | `pm-people/manager-first-90-days/GEM_INSTRUCTIONS.md` |

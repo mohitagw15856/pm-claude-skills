@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-848 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+849 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -446,6 +446,7 @@
 | Local Dev Setup | `pm-engineering` | `pm-engineering/local-dev-setup/SYSTEM_PROMPT.md` |
 | Localization Brief | `pm-localization` | `pm-localization/localization-brief/SYSTEM_PROMPT.md` |
 | Logistics Incident Report | `pm-supplychain` | `pm-supplychain/logistics-incident-report/SYSTEM_PROMPT.md` |
+| Lower My Bill | `pm-money` | `pm-money/lower-my-bill/SYSTEM_PROMPT.md` |
 | Machiavelli Counsel | `pm-dead-mentors` | `pm-dead-mentors/machiavelli-counsel/SYSTEM_PROMPT.md` |
 | Maintainer Triage | `pm-maintainer` | `pm-maintainer/maintainer-triage/SYSTEM_PROMPT.md` |
 | Manager First 90 Days | `pm-people` | `pm-people/manager-first-90-days/SYSTEM_PROMPT.md` |

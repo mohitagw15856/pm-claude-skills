@@ -1,4 +1,4 @@
-# 🗂️ All 848 Skills — full catalog
+# 🗂️ All 849 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -6,7 +6,7 @@
 
 **Jump to:** [🚀 Product](#product) · [📣 Marketing & Growth](#marketing-growth) · [💻 Engineering & AI](#engineering-ai) · [📊 Data & Analytics](#data-analytics) · [🎨 Design & Content](#design-content) · [🤝 Customers & Sales](#customers-sales) · [💰 Finance, Ops & Business](#finance-ops-business) · [⚖️ Legal & Compliance](#legal-compliance) · [🧑 You & Career](#you-career) · [🌍 Industries & Public Sector](#industries-public-sector)
 
-## 🚀 Product (45 skills)
+## 🚀 Product (50 skills)
 
 ### `pm-advanced` — 6 skills
 
@@ -19,11 +19,13 @@
 | **Multi-Source Signal Synthesiser** (`multi-source-signal-synthesiser`) | Synthesises user signals from multiple research sources into a unified, weighted insight brief. | — |
 | **Skill Fusion** (`skill-fusion`) | Fuse two skills from this library into one hybrid brief for a task that sits between them — the meta-skill. | — |
 
-### `pm-delivery` — 10 skills · 3 eval-scored
+### `pm-delivery` — 13 skills · 3 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **A/B Test Planner** (`ab-test-planner`) | Design statistically rigorous A/B tests for product features, UI changes, onboarding flows, and pricing experiments. | ✅ 4.8/5 |
+| **Epic Progress Report** (`epic-progress-report`) | Report on an epic or initiative deeper than a status bullet — child work broken down by status, the riskiest unfinished pieces, and honest… | — |
+| **Flow Metrics Interpreter** (`flow-metrics-interpreter`) | Read your team's flow metrics — cycle time, throughput, WIP, aging work — and say what they actually mean and what to try, not just restate the… | — |
 | **Go-to-Market Planner** (`go-to-market-planner`) | Build a go-to-market plan for any product launch, feature release, or new market entry. | — |
 | **Launch Readiness** (`launch-readiness`) | Assesses pre-launch readiness across every function and produces an explicit Go / Conditional Go / No-Go recommendation. | — |
 | **PPTX Slide Auditor** (`pptx-slide-auditor`) | Audit a PowerPoint presentation for layout issues, text overflow, visual hierarchy problems, and consistency gaps. | — |
@@ -31,6 +33,7 @@
 | **Retrospective Analysis** (`retro-analysis`) | Analyses sprint delivery data and produces a structured retrospective brief. | — |
 | **Sprint Brief** (`sprint-brief`) | Generate a structured sprint brief from sprint data and goals. | — |
 | **Sprint Planning** (`sprint-planning`) | Structure and facilitate sprint planning sessions. | ✅ 3.8/5 |
+| **Sprint Retro Facilitator** (`sprint-retro-facilitator`) | Run a sprint retrospective that produces real change — themes from what actually happened, honest start/stop/continue, and owned action items, not… | — |
 | **Technical Spec Template** (`technical-spec-template`) | Create structured technical specification documents that bridge product requirements and engineering implementation. | — |
 | **User Story Writer** (`user-story-writer`) | Write well-structured user stories with acceptance criteria and edge cases. | ✅ 4.8/5 |
 
@@ -44,13 +47,14 @@
 | **Job Story Mapper** (`job-story-mapper`) | Write Jobs-to-be-Done (JTBD) job stories and map customer jobs across functional, social, and emotional dimensions. | — |
 | **User Interview Synthesis** (`user-interview-synthesis`) | Synthesises user interview transcripts into structured research findings. | — |
 
-### `pm-essentials` — 9 skills · 3 eval-scored
+### `pm-essentials` — 10 skills · 3 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Competitive Analysis** (`competitive-analysis`) | Analyze competitors and create competitive landscape documentation with feature matrices, positioning maps, and strategic recommendations. | ✅ 4.3/5 |
 | **Decision Journal** (`decision-journal`) | Record decisions the way good judgment compounds — the reasoning, the alternatives, the probabilities, and what would change your mind, written… | — |
 | **Word Doc Tracked Changes** (`docx-tracked-changes`) | Produce properly-formatted tracked changes for a Word document. | — |
+| **Meeting Action Extractor** (`meeting-action-extractor`) | Pull the action items and decisions out of meeting notes or a transcript — each with an owner, a due date, and enough context to become a ticket —… | — |
 | **Meeting Notes** (`meeting-notes`) | Structure and format meeting notes following PM best practices. | — |
 | **PRD Template** (`prd-template`) | Create a Product Requirements Document following proven PM template structure. | ✅ 4.8/5 |
 | **Stakeholder Update** (`stakeholder-update`) | Create concise executive stakeholder updates using the BLUF (Bottom Line Up Front) framework. | ✅ 4.8/5 |
@@ -71,10 +75,11 @@
 | **Roadmap Narrative** (`roadmap-narrative`) | Transform a prioritised initiative list into a compelling strategic roadmap narrative. | ✅ 4.8/5 |
 | **Roadmap Presentation** (`roadmap-presentation`) | Create structured roadmap presentations calibrated to any audience. | — |
 
-### `pm-rituals` — 1 skill
+### `pm-rituals` — 2 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Plan My Day** (`plan-my-day`) | Turn a messy to-do brain-dump into a realistic, time-blocked day — top priorities first, everything slotted with buffer, and an honest 'this won't… | — |
 | **PM Weekly Review** (`pm-weekly-review`) | Structure a PM's weekly review and planning session. | — |
 
 ### `pm-strategy` — 6 skills · 1 eval-scored
@@ -88,7 +93,7 @@
 | **Stakeholder Influence Mapper** (`stakeholder-influence-mapper`) | Map stakeholders for a product decision and produce a tailored influence strategy with talking points. | — |
 | **Strategic Narrative Generator** (`strategic-narrative-generator`) | Generate the strategic story connecting a product roadmap to company goals in a form non-technical stakeholders can repeat. | — |
 
-## 📣 Marketing & Growth (50 skills)
+## 📣 Marketing & Growth (51 skills)
 
 ### `pm-copy` — 7 skills
 
@@ -146,13 +151,14 @@
 | **SEO Content Brief** (`seo-content-brief`) | Create a structured SEO content brief for any target keyword or topic. | — |
 | **Social Media Strategy** (`social-media-strategy`) | Build a social media strategy for a brand, product, or creator. | — |
 
-### `pm-pmm` — 8 skills
+### `pm-pmm` — 9 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Analyst Relations Brief** (`analyst-relations-brief`) | Prepare for an industry analyst briefing (Gartner, Forrester, IDC and similar). | — |
 | **Customer Advisory Board** (`customer-advisory-board`) | Plan and run a customer advisory board (CAB). | — |
 | **Launch Tiering Framework** (`launch-tiering-framework`) | Tier a product launch (T1/T2/T3) and scope the right go-to-market effort. | — |
+| **Price Increase Announcement** (`price-increase-announcement`) | Announce a price increase without triggering a churn spike — the rationale, grandfathering, effective dates, the FAQ, and the internal brief so… | — |
 | **Pricing Page Copy** (`pricing-page-copy`) | Write pricing page copy that helps buyers self-select the right plan and convert. | — |
 | **Sales Demo Script** (`sales-demo-script`) | Write a product demo script that tells a value story instead of a feature tour. | — |
 | **Sales Enablement Kit** (`sales-enablement-kit`) | Build a sales enablement kit so reps can sell a product, feature, or launch confidently. | — |
@@ -170,7 +176,7 @@
 | **Social Media Audit** (`social-media-audit`) | Audit an existing social media presence across all active platforms. | — |
 | **Viral Content Framework** (`viral-content-framework`) | Build a framework for creating shareable, high-reach social media content. | — |
 
-## 💻 Engineering & AI (83 skills)
+## 💻 Engineering & AI (85 skills)
 
 ### `pm-ai` — 13 skills
 
@@ -263,13 +269,15 @@
 | **Test Strategy Document** (`test-strategy-doc`) | Write a test strategy document from a feature spec, PRD, or system description. | — |
 | **Writing Great Skills** (`writing-great-skills`) | Author a high-quality Agent Skill (SKILL.md) that an AI reliably triggers and executes well — strong frontmatter, a sharp description with trigger… | — |
 
-### `pm-qa` — 6 skills
+### `pm-qa` — 8 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **API Test Plan** (`api-test-plan`) | Plan tests for an API endpoint or service — functional, negative, and contract. | — |
 | **Bug Report** (`bug-report`) | Write a clear, reproducible bug report that gets fixed fast. | — |
+| **Bug Triage Pack** (`bug-triage-pack`) | Triage a raw bug report into something a team can act on — clean repro steps, a defensible severity/priority, environment, likely area/owner, and… | — |
 | **Exploratory Test Charter** (`exploratory-test-charter`) | Write session-based exploratory testing charters to find what scripted tests miss. | — |
+| **QA Handoff Package** (`qa-handoff-package`) | Turn a story and its change into a clean 'ready for QA' package — test scenarios, edge cases, the data and environment setup, and what's… | — |
 | **QA Release Sign-off** (`qa-release-signoff`) | Produce a QA release sign-off / go-no-go readiness report. | — |
 | **Regression Test Plan** (`regression-test-plan`) | Design and prioritize a regression test suite so changes don't break what worked. | — |
 | **Test Case Writer** (`test-case-writer`) | Turn a requirement or user story into clear, executable test cases. | — |
@@ -374,9 +382,9 @@
 | **Thumbnail Creator Skill (via Gemini)** (`thumbnail-creator`) | Generate article or newsletter thumbnail candidates using the Gemini API from inside Claude Code. | — |
 | **YouTube Script Writer** (`youtube-script-writer`) | Write engaging, high-retention YouTube video scripts with visual and audio cues. | — |
 
-## 🤝 Customers & Sales (25 skills)
+## 🤝 Customers & Sales (26 skills)
 
-### `pm-cs` — 6 skills · 2 eval-scored
+### `pm-cs` — 7 skills · 2 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -386,6 +394,7 @@
 | **Customer Success Plan** (`customer-success-plan`) | Build a joint customer success plan for a specific account. | — |
 | **QBR Deck** (`qbr-deck`) | Build a Quarterly Business Review (QBR) deck structure and narrative for a customer account. | — |
 | **Renewal Playbook** (`renewal-playbook`) | Build a structured renewal playbook for a customer account. | — |
+| **Win-back Playbook** (`winback-playbook`) | Turn an at-risk or churned account into a save play — root-cause hypothesis, the offer ladder, the outreach sequence, and the honest call on when… | — |
 
 ### `pm-recruiting` — 7 skills
 
@@ -421,7 +430,7 @@
 | **Support Macro** (`support-macro`) | Write reusable support macros / canned responses that sound human, not robotic. | — |
 | **Support Runbook** (`support-runbook`) | Write a support runbook for handling a recurring issue type consistently. | — |
 
-## 💰 Finance, Ops & Business (76 skills)
+## 💰 Finance, Ops & Business (78 skills)
 
 ### `pm-accounting` — 6 skills
 
@@ -511,14 +520,16 @@
 | **Runway Planner** (`runway-planner`) | Turn burn and cash into a clear runway picture and a raise decision — months left, default-alive vs default-dead, and what to cut or change. | — |
 | **Startup Idea Validator** (`startup-idea-validator`) | Pressure-test a startup idea the way a sharp investor or co-founder would — problem, market, wedge, moat, why-now, and the fastest cheap way to… | — |
 
-### `pm-money` — 6 skills
+### `pm-money` — 8 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Budget Builder** (`budget-builder`) | Build a realistic personal monthly budget from someone's income and expenses. | — |
 | **Debt Payoff Plan** (`debt-payoff-plan`) | Build a debt-payoff plan across multiple debts using the avalanche or snowball method. | — |
+| **Estate Planning Kit** (`estate-planning-kit`) | Get your affairs in order before you need to — a will/beneficiary/healthcare-directive checklist and the 'what my family needs to find' document… | — |
 | **Expense Audit** (`expense-audit`) | Audit spending to find leaks — recurring subscriptions, creep, and cuttable costs — ranked by impact. | — |
 | **Investing Policy Statement** (`investing-policy-statement`) | Draft a personal investing policy statement (IPS) — the rules someone sets for their own investing. | — |
+| **Lower My Bill** (`lower-my-bill`) | Negotiate a recurring bill down — internet, phone, insurance, cable, gym — with a ready-to-read script, the competitor leverage that actually… | — |
 | **Net Worth Statement** (`net-worth-statement`) | Produce a personal net-worth statement — assets minus liabilities — and a way to track it. | — |
 | **Savings Goal Plan** (`savings-goal-plan`) | Turn a savings goal into a month-by-month funding plan. | — |
 
@@ -539,9 +550,9 @@
 | **Vendor Evaluation** (`vendor-evaluation`) | Create a structured vendor evaluation framework for any procurement decision. | — |
 | **Workshop Facilitation Guide** (`workshop-facilitation-guide`) | Design and facilitate any workshop, working session, or collaborative meeting. | — |
 
-## ⚖️ Legal & Compliance (13 skills)
+## ⚖️ Legal & Compliance (15 skills)
 
-### `pm-compliance` — 6 skills
+### `pm-compliance` — 7 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -549,10 +560,11 @@
 | **GDPR Compliance** (`gdpr-compliance`) | Assess GDPR compliance and build the core records (ROPA, lawful basis, DSAR, DPIA triggers). | — |
 | **HIPAA Safeguards** (`hipaa-safeguards`) | Map HIPAA Security Rule safeguards and run a risk analysis for systems handling PHI. | — |
 | **ISO 27001 ISMS** (`iso-27001-isms`) | Scope an ISO 27001 ISMS and build the Statement of Applicability across Annex A controls. | — |
+| **Security Questionnaire Autofill** (`security-questionnaire-autofill`) | Draft answers to a vendor security questionnaire (SIG, CAIQ, or a custom sheet) from your real controls — fast, consistent, and honest about gaps. | — |
 | **SOC 2 Readiness** (`soc2-readiness`) | Assess SOC 2 readiness across the Trust Services Criteria and produce a gap remediation plan. | — |
 | **Vendor Security Review** (`vendor-security-review`) | Run a third-party / vendor security review and assign a risk tier with required controls. | — |
 
-### `pm-legal` — 7 skills · 1 eval-scored
+### `pm-legal` — 8 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -560,13 +572,14 @@
 | **Compliance Checklist** (`compliance-checklist`) | Generate a prioritised compliance checklist for GDPR, SOC 2, ISO 27001, FCA, HIPAA, or other frameworks with a gap analysis. | — |
 | **Contract Review** (`contract-review`) | Review and summarise any contract or legal agreement. | — |
 | **Demand Letter** (`demand-letter`) | Draft a firm, professional demand letter that states the facts, the legal/contractual basis, the specific demand, and a deadline. | — |
+| **DPA Review** (`dpa-review`) | Read a Data Processing Agreement before you sign it — sub-processors, transfer mechanism, breach-notice window, deletion, audit rights — in plain… | — |
 | **Legal Brief** (`legal-brief`) | Draft a structured legal brief, case summary, or legal argument outline. | — |
 | **NDA Analyser** (`nda-analyser`) | Analyses a Non-Disclosure Agreement clause by clause and flags unusual terms, one-sided provisions, and negotiation points. | — |
 | **Privacy Policy Drafter** (`privacy-policy-drafter`) | Draft a clear, plain-language privacy policy tailored to what a product actually collects and does with data. | ✅ 4.8/5 |
 
-## 🧑 You & Career (52 skills)
+## 🧑 You & Career (63 skills)
 
-### `pm-career` — 7 skills
+### `pm-career` — 8 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -577,18 +590,24 @@
 | **Promotion Packet** (`promotion-packet`) | Build a promotion case that proves you're already operating at the next level. | — |
 | **Salary Negotiation** (`salary-negotiation`) | Plan a compensation negotiation grounded in numbers and leverage, not nerves. | — |
 | **Self-Review** (`self-review`) | Write a performance self-review that's specific, evidenced, and balanced. | — |
+| **Year in Review** (`year-in-review`) | Run an honest personal year-in-review and set next year's direction — wins, misses, an energy audit, and one theme, not a resolution list that… | — |
 
-### `pm-comms` — 7 skills
+### `pm-comms` — 12 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Altitude Shifter** (`altitude-shifter`) | Re-pitch one piece of content for four audiences — the board, the engineers, a customer, a new hire — with a delta table showing what changed… | — |
+| **Awkward Message Helper** (`awkward-message-helper`) | Draft the hard personal message you keep putting off — chasing money a friend owes, backing out of plans, checking in after a fight, following up… | — |
 | **Difficult Conversation** (`difficult-conversation`) | Prepare for and script a hard conversation — conflict, bad news, a boundary, an apology. | — |
 | **Executive Presence** (`executive-presence`) | Sharpen how you show up in high-stakes rooms — communicate with gravitas, concision, and confidence. | — |
+| **Explain Simply** (`explain-simply`) | Explain anything in plain language — a contract clause, a medical term, a tax rule, a tech acronym, a news story — layered from a one-liner to as… | — |
 | **Giving Feedback** (`giving-feedback`) | Turn a vague concern into specific, kind, actionable feedback. | — |
 | **Managing Up** (`managing-up`) | Work more effectively with your manager — communicate, align, escalate, and get what you need. | — |
+| **Message for the Moment** (`message-for-the-moment`) | Write the short message you freeze on — a thank-you, condolence, congratulations, apology, or a graceful 'no' to an invite — warm, specific, and… | — |
 | **Persuasion Brief** (`persuasion-brief`) | Build the case to win someone over to a decision, idea, or change. | — |
 | **Saying No** (`saying-no`) | Decline a request, push back on scope, or protect priorities without burning the relationship. | — |
+| **Summarize Anything** (`summarize-anything`) | Turn a long article, email thread, document, or transcript into a tight summary you can act on — the gist, the key points, and what it means for you. | — |
+| **Tone Fixer** (`tone-fixer`) | Rewrite a message to the tone you actually want — less harsh, more confident, warmer, firmer, or shorter — without losing your point. | — |
 
 ### `pm-hr` — 5 skills
 
@@ -630,7 +649,7 @@
 | **Second Opinion Request** (`second-opinion-request`) | Get a second medical opinion without torching the first relationship — when it's warranted, how to raise it with the current doctor, the records… | — |
 | **Wedding Speech** (`wedding-speech`) | A best-man/maid-of-honour/parent wedding toast that actually lands — funny without roasting, moving without syrup, short enough that nobody checks… | — |
 
-### `pm-people` — 6 skills
+### `pm-people` — 7 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -638,22 +657,27 @@
 | **Hiring Rubric** (`hiring-rubric`) | Generate a structured interview scorecard and interview guide for any role. | — |
 | **Manager First 90 Days** (`manager-first-90-days`) | Plan a new manager's first 90 days — first-time or new-to-team — as listen/decide/move phases: the 1:1 listening tour with real questions, the… | — |
 | **Performance Review** (`performance-review`) | Write structured, balanced performance reviews from bullet-point inputs. | — |
+| **PIP Writer** (`pip-writer`) | Write a Performance Improvement Plan a manager can defend and an employee can actually act on — specific concerns, measurable goals, real support… | — |
 | **Team Health Check** (`team-health-check`) | Runs a structured team health assessment across key dimensions. | — |
 | **Team Offsite Planner** (`team-offsite-planner`) | Plan a team offsite from goals to full agenda. | — |
 
-### `pm-personal` — 7 skills · 1 eval-scored
+### `pm-personal` — 11 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Cover Letter** (`cover-letter`) | Write a specific, non-generic cover letter that connects your evidence to the role. | — |
+| **Decision Helper** (`decision-helper`) | Help me decide between options with a weighted pros/cons that actually reaches a recommendation — not just two lists. | — |
+| **Gift Finder** (`gift-finder`) | Find a genuinely good gift for a specific person and occasion within a budget — thoughtful and non-obvious, not a generic 'top 10 gifts' list. | — |
+| **Immigration Document Checklist** (`immigration-document-checklist`) | Organise the document pile for a visa, work-permit, or residency application — what to gather, in what order, and the common rejection triggers to… | — |
 | **LinkedIn Profile** (`linkedin-profile`) | Optimise a LinkedIn profile to be found and to convert. | — |
 | **One-Pager** (`one-pager`) | Distil anything — a startup, product, project, or idea — into a single persuasive page. | — |
 | **Personal Bio** (`personal-bio`) | Write a professional bio in the three lengths you actually need. | — |
 | **Personal Board of Directors** (`personal-board-of-directors`) | Five standing advisors — the Operator, the Skeptic, the CFO, the Coach, the Customer — debate your decision on paper and vote. | — |
 | **Portfolio Page** (`portfolio-page`) | Structure a portfolio or case-study page that shows your work, not just lists it. | — |
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
+| **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (428 skills)
+## 🌍 Industries & Public Sector (431 skills)
 
 ### `other` — 4 skills
 
@@ -885,12 +909,13 @@
 | **Spreadsheet Audit (Live)** (`spreadsheet-audit-live`) | Audit the user's REAL spreadsheet by opening it in the Cowork sandbox — not by reading a description of it. | — |
 | **Thread to Decision (Live)** (`thread-to-decision-live`) | Turn a REAL Slack thread (or channel) into a logged decision — read it, extract what was decided, who owns what, and record it in Notion — not a… | — |
 
-### `pm-crisis` — 6 skills
+### `pm-crisis` — 7 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Apology Letter** (`apology-letter`) | Write a sincere, effective apology to a customer, group, or the public. | — |
 | **Brand Impersonation Response** (`brand-impersonation-response`) | Respond to a brand or executive impersonation incident — deepfaked executives, cloned support lines, fake apps, spoofed domains, or AI-generated… | — |
+| **Customer Incident Update** (`customer-incident-update`) | Write the customer-facing incident update during an outage — status-page post or email — that's honest about impact without over-promising. | — |
 | **Customer Outage Notice** (`customer-outage-notice`) | Write clear customer-facing outage and service-disruption notifications. | — |
 | **Incident Public Statement** (`incident-public-statement`) | Write a single clear, honest public statement about an incident. | — |
 | **Layoff Communication** (`layoff-communication`) | Plan and write the communications for a layoff or restructure with clarity and dignity. | — |
@@ -967,11 +992,12 @@
 | **Slide Deck** (`slide-deck`) | Build a real, editable PowerPoint (.pptx) deck from an outline or brief. | — |
 | **Word Document** (`word-document`) | Build a real, formatted Word (.docx) document — headings, styles, tables, TOC-ready. | — |
 
-### `pm-ecommerce` — 6 skills
+### `pm-ecommerce` — 7 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Category Page Brief** (`category-page-brief`) | Plan an e-commerce category / collection page that ranks and merchandises well. | — |
+| **Chargeback Dispute Response** (`chargeback-dispute-response`) | Win a chargeback dispute — read the reason code, assemble the evidence packet, and write the rebuttal that actually persuades the bank. | — |
 | **Marketplace Listing Optimizer** (`marketplace-listing-optimizer`) | Audit and optimize a marketplace listing (Amazon, Etsy, eBay, Walmart) to rank and convert. | — |
 | **Product Description** (`product-description`) | Write a product description / listing that sells and ranks. | — |
 | **Promotion Plan** (`promotion-plan`) | Plan a sale or promotion that drives revenue without wrecking margin. | — |
@@ -1065,12 +1091,13 @@
 | **Source Protection Plan** (`source-protection-plan`) | Assess and reduce the risk of exposing a confidential journalistic source. | — |
 | **Story Pitch** (`story-pitch`) | Pitch a news or feature story to an editor — the angle, why now, and how you'll report it. | — |
 
-### `pm-kitchen` — 2 skills
+### `pm-kitchen` — 3 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Grocery Budget Audit** (`grocery-budget-audit`) | Find where the food money actually goes — a no-shame ledger built from real receipts/statements, the four leak categories (waste, convenience… | — |
 | **Meal Prep OS** (`meal-prep-os`) | Turn what's actually in the fridge and 90 minutes on Sunday into a week that mostly feeds itself — a cook-once-eat-thrice batch plan, the… | — |
+| **What's for Dinner** (`whats-for-dinner`) | Decide what to cook tonight from what you already have and how much time/energy you've got — no shopping trip, no recipe rabbit hole. | — |
 
 ### `pm-layoff` — 4 skills
 
@@ -1375,4 +1402,4 @@
 
 ---
 
-_822 skills across 105 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_849 skills across 105 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

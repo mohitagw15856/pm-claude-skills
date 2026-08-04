@@ -2,9 +2,20 @@
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "pm-money",
   "version": "1.0.0",
-  "description": "Personal-finance skills for individuals: Budget Builder, Debt Payoff Plan, Investing Policy Statement, Net Worth Statement, Savings Goal Plan, and Expense Audit. Educational planning aids — not regulated financial advice.",
-  "author": { "name": "Mohit Aggarwal", "email": "mohit15856@gmail.com" },
+  "description": "Personal-finance skills for individuals: Budget Builder, Debt Payoff Plan, Investing Policy Statement, Net Worth Statement, Savings Goal Plan, Expense Audit, and Lower My Bill. Educational planning aids — not regulated financial advice.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
   "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
   "license": "MIT",
-  "keywords": ["personal-finance", "budget", "money", "debt", "investing", "savings", "net-worth"]
+  "keywords": [
+    "personal-finance",
+    "budget",
+    "money",
+    "debt",
+    "investing",
+    "savings",
+    "net-worth"
+  ]
 }
