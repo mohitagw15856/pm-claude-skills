@@ -14,8 +14,9 @@ No build step. Static files + one function.
 1. **New Project** in Vercel → import this repo (`mohitagw15856/pm-claude-skills`).
 2. Set **Root Directory** to **`site`**. *(This keeps it separate from the main `web/` deploy at the repo root.)*
 3. Framework preset: **Other** (it's static). No build command, output directory `.` — already set in `site/vercel.json`.
-4. Add an **Environment Variable**:
-   - `BUTTONDOWN_API_KEY` — from Buttondown → **Settings → API**.
+4. Add **one** Environment Variable (either works):
+   - **Free plan:** `BUTTONDOWN_USERNAME` — your Buttondown handle (the `buttondown.com/<username>`). The signup posts to Buttondown's public embed endpoint — no API key, no paid plan.
+   - **Paid plan:** `BUTTONDOWN_API_KEY` — from Buttondown → **Settings → API/Programming** (only on paid plans; adds tag support). If both are set, the API key wins.
 5. Deploy. Your site is live; the signup form posts to `/api/subscribe` → Buttondown.
 
 > The catalogue fetches `https://mohitagw15856.github.io/pm-claude-skills/skills.json` at runtime, so it always shows the current library. To pin it to a snapshot instead, change `CATALOG_URL` in `assets/app.js`.
