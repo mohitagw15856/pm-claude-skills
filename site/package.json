@@ -1,0 +1,8 @@
+{
+  "name": "pm-skills-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "PM Skills catalogue + newsletter site (static + one serverless function). Deploy on Vercel with Root Directory = site.",
+  "license": "MIT"
+}

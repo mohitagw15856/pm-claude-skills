@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Catalogue — PM Skills</title>
+  <meta name="description" content="Browse the full catalogue of professional Agent Skills. Search by task or filter by profession and tier." />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="/">🧠 PM <span>Skills</span></a>
+    <a href="/catalogue.html">Catalogue</a>
+    <a href="https://mohitagw15856.github.io/pm-claude-skills/" target="_blank" rel="noopener">Playground</a>
+    <div class="spacer"></div>
+    <a class="cta" href="/#subscribe">Get the newsletter</a>
+  </nav>
+
+  <main class="wrap" style="padding-top:28px;">
+    <h1 style="margin:8px 0;">The skill catalogue</h1>
+    <p style="color:var(--muted);margin:0;">Every skill turns a rough input into a professional-grade output. Search, or filter by profession and maturity.</p>
+
+    <div class="filters">
+      <input id="search" type="search" placeholder="Search 800+ skills — e.g. lease, postmortem, negotiation…" aria-label="Search skills" />
+      <select id="bundleFilter" aria-label="Filter by bundle"></select>
+      <select id="tierFilter" aria-label="Filter by tier">
+        <option value="">All tiers</option>
+        <option value="production">🏆 Production-ready</option>
+        <option value="stable">✓ Stable</option>
+        <option value="experimental">⚗ Experimental</option>
+      </select>
+    </div>
+    <div class="result-count" id="resultCount">Loading…</div>
+    <div class="grid" id="grid"></div>
+  </main>
+
+  <footer>
+    <p><a href="/">Home</a> · <a href="https://github.com/mohitagw15856/pm-claude-skills" target="_blank" rel="noopener">GitHub</a> · <a href="https://mohitagw15856.github.io/pm-claude-skills/" target="_blank" rel="noopener">Playground</a></p>
+  </footer>
+  <script src="/assets/app.js"></script>
+</body>
+</html>

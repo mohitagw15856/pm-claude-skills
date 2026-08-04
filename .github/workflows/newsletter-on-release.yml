@@ -1,0 +1,61 @@
+name: Newsletter draft on release
+
+# When you publish a GitHub Release, this drafts a newsletter in Buttondown from
+# the release notes — so subscribers can be told about new skills. It creates a
+# DRAFT (never auto-sends), so you review and hit send in Buttondown yourself.
+#
+# Setup: add a repo secret BUTTONDOWN_API_KEY (Buttondown → Settings → API).
+# Without the secret, the job skips cleanly.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing release tag to draft from (e.g. v69.0.0)'
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Draft the newsletter
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+          REL_NAME: ${{ github.event.release.name }}
+          REL_TAG: ${{ github.event.release.tag_name || github.event.inputs.tag }}
+          REL_BODY: ${{ github.event.release.body }}
+          REL_URL: ${{ github.event.release.html_url }}
+        run: |
+          if [ -z "$BUTTONDOWN_API_KEY" ]; then
+            echo "No BUTTONDOWN_API_KEY secret set — skipping newsletter draft."
+            exit 0
+          fi
+
+          SUBJECT="New skills: ${REL_NAME:-$REL_TAG}"
+          # Fall back to a friendly note if the release had no body.
+          INTRO="${REL_BODY:-New skills just landed in PM Skills ($REL_TAG).}"
+          FOOTER=$'\n\n—\nBrowse the catalogue: https://mohitagw15856.github.io/pm-claude-skills/\nFull release: '"${REL_URL:-https://github.com/mohitagw15856/pm-claude-skills/releases}"
+          BODY="${INTRO}${FOOTER}"
+
+          # Build the JSON payload safely (jq escapes newlines/quotes).
+          payload=$(jq -n --arg s "$SUBJECT" --arg b "$BODY" \
+            '{subject: $s, body: $b, status: "draft"}')
+
+          code=$(curl -sS -o /tmp/resp.json -w "%{http_code}" \
+            -X POST https://api.buttondown.email/v1/emails \
+            -H "Authorization: Token $BUTTONDOWN_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d "$payload")
+
+          echo "Buttondown responded $code"
+          if [ "$code" = "201" ] || [ "$code" = "200" ]; then
+            echo "✓ Draft newsletter created in Buttondown — review and send it there."
+          else
+            echo "::warning::Buttondown draft not created (HTTP $code). Response:"; cat /tmp/resp.json || true
+            # Don't fail the release over a newsletter draft.
+          fi
