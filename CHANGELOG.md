@@ -9,6 +9,34 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [69.0.0] — the everyday wave: 16 skills people actually reach for daily — 2026-07-26
+
+Ten everyday skills (the messages, decisions, and life logistics people use constantly) plus six generic delivery/QA gaps. **848 skills, 104 bundles.**
+
+### Added — 🗓️ ten everyday skills
+
+- **[message-for-the-moment](skills/message-for-the-moment/SKILL.md)** (pm-comms) — thank-you, condolence, congrats, apology, or a graceful decline, in your voice.
+- **[tone-fixer](skills/tone-fixer/SKILL.md)** (pm-comms) — rewrite a message less harsh / more confident / warmer, meaning unchanged.
+- **[awkward-message-helper](skills/awkward-message-helper/SKILL.md)** (pm-comms) — the hard personal text (chasing money, backing out, checking in) — honest, not harsh.
+- **[explain-simply](skills/explain-simply/SKILL.md)** (pm-comms) — ELI5 anything, layered, simple-not-wrong.
+- **[summarize-anything](skills/summarize-anything/SKILL.md)** (pm-comms) — TL;DR + key points + actions, faithful to the source.
+- **[decision-helper](skills/decision-helper/SKILL.md)** (pm-personal) — weighted pros/cons that actually recommends, plus the tiebreaker question.
+- **[whats-for-dinner](skills/whats-for-dinner/SKILL.md)** (pm-kitchen) — 3 options from what's in the fridge, ranked by effort.
+- **[trip-planner](skills/trip-planner/SKILL.md)** (pm-personal) — a realistic day-by-day itinerary + packing + rough budget.
+- **[gift-finder](skills/gift-finder/SKILL.md)** (pm-personal) — tailored, non-obvious gift ideas for a specific person and budget.
+- **[plan-my-day](skills/plan-my-day/SKILL.md)** (pm-rituals) — a brain-dump → a time-blocked day with an honest cut list.
+
+### Added — 🏗️ six generic delivery/QA skills (base layer for team-specific overlays)
+
+- **[sprint-retro-facilitator](skills/sprint-retro-facilitator/SKILL.md)** (pm-delivery) — evidence-grounded themes + owned actions + last-retro follow-up.
+- **[flow-metrics-interpreter](skills/flow-metrics-interpreter/SKILL.md)** (pm-delivery) — read cycle time / throughput / WIP / aging → bottleneck + experiments.
+- **[epic-progress-report](skills/epic-progress-report/SKILL.md)** (pm-delivery) — child breakdown, riskiest remaining, a cut menu, a straight date call.
+- **[meeting-action-extractor](skills/meeting-action-extractor/SKILL.md)** (pm-essentials) — ticket-ready actions (owner + due + context) + orphan flags.
+- **[bug-triage-pack](skills/bug-triage-pack/SKILL.md)** (pm-qa) — repro + defensible severity/priority + routing + duplicate check.
+- **[qa-handoff-package](skills/qa-handoff-package/SKILL.md)** (pm-qa) — scenarios by AC + edge cases + data/env setup + out-of-scope.
+
+All 16 pass the L3 / SkillSpec gate; the sensitive everyday ones (condolence, apology) carry a "specific and honest, never generic or fabricated" guardrail.
+
 ## [68.0.0] — the missing-tasks wave: ten high-demand skills into existing bundles — 2026-07-26
 
 Ten specific, frequently-needed tasks that the library didn't yet cover — added to the bundles where they belong. **832 skills, 104 bundles.**

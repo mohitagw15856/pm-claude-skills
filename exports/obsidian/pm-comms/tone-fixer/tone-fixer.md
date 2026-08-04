@@ -1,0 +1,72 @@
+---
+aliases: ["Tone Fixer"]
+tags: [pm-skills, skill]
+skill: tone-fixer
+description: "Rewrite a message to the tone you actually want — less harsh, more confident, warmer, firmer, or shorter — without losing your point. Use when asked to make this sound less rude, soften this email, make me sound more confident, make this nicer/firmer, or fix the tone of a message. Produces two or three rewrites at the target tone, a note on exactly what was changed and why, and a flag if the original's tone was fine as-is."
+---
+
+# Tone Fixer
+
+The most-sent-and-deleted message in the world is the one where the words are right but the tone is off — too blunt, too apologetic, too eager, too cold. This keeps your meaning and your facts exactly, and only moves the register: it shows you the rewrite, names the specific phrases that were doing the damage, and won't invent problems if your draft was already fine.
+
+## What This Skill Produces
+
+- **2–3 rewrites** at the requested tone (and a "dial it further" version if useful)
+- **The change log** — the exact words/phrases that set the wrong tone, and what they became
+- **The honesty flag** — if the original tone was already appropriate, it says so instead of over-editing
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The message** — paste it
+- **The target tone** — less harsh / more confident / warmer / firmer / more formal / shorter (or describe it)
+- **The context** — who it's to and what's at stake (a boss, a customer, a landlord — the ceiling for "firm" shifts)
+
+## Framework: Move the Register, Not the Meaning
+
+1. **Preserve the point and the facts.** Tone-editing never changes what you're actually saying or the details.
+2. **Find the tone-carriers.** A few words do most of the damage — hedges ("just," "sorry to bother"), absolutes ("you always"), or curtness. Target those.
+3. **Confidence = remove the apology tax.** "I just think maybe we could…" → "I recommend we…". Drop the pre-emptive sorries.
+4. **Warmth = acknowledge the person**, not more words. One line of recognition beats a softer everything.
+5. **Firm ≠ rude.** Clear, direct, and calm; state the ask and the consequence without heat.
+
+## Output Format
+
+### Rewrites → [target tone]
+**Option A:** …
+**Option B (a touch more [tone]):** …
+
+### What changed
+| Original phrase | Became | Why |
+|---|---|---|
+
+### Verdict
+- [If applicable] Your original was already appropriate for this context — here's a lighter touch, or leave it.
+
+## Quality Checks
+- [ ] Meaning and all facts are unchanged — only the register moved
+- [ ] The change log names specific phrases, not vague "made it nicer"
+- [ ] For "more confident": hedges and reflexive apologies were removed
+- [ ] For "firmer": still calm and professional, not aggressive
+- [ ] If the original tone was fine, that was stated rather than changes invented
+
+## Anti-Patterns
+- **Changing the message's substance** while "fixing tone."
+- **Over-softening into mush** — "warmer" shouldn't bury the ask.
+- **Inventing problems** to justify a rewrite when the draft was already right.
+- **Making "firm" mean hostile** — heat undermines authority.
+
+## Example Trigger Phrases
+- "Make this email sound less harsh: [paste]"
+- "Rewrite this so I sound more confident, not apologetic."
+- "Soften this message to my landlord but keep it firm."
+- "This came out rude — fix the tone: [paste]"
+- "Make this shorter and warmer."
+
+---
+<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
+     variable for the highlighted text — replace it with your plugin's equivalent
+     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
+Apply the skill above to the following input:
+
+{{selection}}

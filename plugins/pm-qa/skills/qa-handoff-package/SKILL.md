@@ -1,0 +1,74 @@
+---
+name: qa-handoff-package
+description: "Turn a story and its change into a clean 'ready for QA' package — test scenarios, edge cases, the data and environment setup, and what's explicitly out of scope. Use when asked to prep a QA handoff, what should QA test here, write test scenarios for this story, or make this ready for QA. Produces the scenarios mapped to acceptance criteria, the edge/negative cases devs forget, the exact data and environment setup to reproduce, the risk areas to probe, and the out-of-scope list so QA doesn't chase the wrong things."
+---
+
+# QA Handoff Package
+
+The "ready for QA" that isn't — a story tossed over the wall with no test data, no edge cases, and no idea what changed — is how bugs slip and QA burns a day setting up. This turns the story and its change into a real handoff: scenarios tied to the acceptance criteria, the negative and edge cases developers reliably forget, the exact data/environment to reproduce, and a clear line around what's *not* in scope, so testing is focused, not archaeology.
+
+## What This Skill Produces
+
+- **Test scenarios mapped to acceptance criteria** — every AC has at least one way to verify it
+- **Edge & negative cases** — empty/boundary/invalid inputs, permissions, concurrency, the forgotten paths
+- **Data & environment setup** — the exact accounts, feature flags, seed data, and env needed to reproduce
+- **Risk areas to probe** — where this change is most likely to have broken something (incl. nearby regressions)
+- **Out of scope** — what QA should *not* spend time on for this change
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The story & acceptance criteria** — what it's meant to do
+- **The change** — what was built (a summary or the MR/PR diff), so scenarios match reality
+- **Environments & data** — where QA tests, and what setup/flags/accounts are needed
+- **Known risk/complexity** — anything the dev is worried about, or areas the change touches indirectly
+
+## Framework: A Handoff QA Can Run
+
+1. **Cover every AC.** Each acceptance criterion gets a concrete scenario — no AC left unverified.
+2. **The happy path is the easy 30%.** The value is the edge and negative cases: empty, max, invalid, unauthorised, offline, concurrent, mid-migration.
+3. **Reproducibility is setup.** Name the exact data, accounts, roles, and flags — "test it" without setup wastes QA's morning.
+4. **Point at the risk.** Where the diff touches shared code or a fragile area, call it out — including regressions in neighbouring features.
+5. **Bound it.** State what's out of scope so QA doesn't test the whole app for a small change.
+6. **Ground in the actual change.** Scenarios match what was built, not what the story wished for.
+
+## Output Format
+
+### QA Handoff — [story] · build: [MR/PR ref]
+
+### Scenarios (by acceptance criterion)
+| AC | Scenario | Expected |
+|---|---|---|
+
+### Edge & negative cases
+- [empty / boundary / invalid / permission / concurrency / offline …]
+
+### Setup to reproduce
+- Environment: … · Accounts/roles: … · Feature flags: … · Seed data: …
+
+### Risk areas / possible regressions
+- [where this change might have broken something nearby].
+
+### Out of scope
+- [what not to test for this change].
+
+## Quality Checks
+- [ ] Every acceptance criterion has at least one scenario
+- [ ] Edge and negative cases are included, not just the happy path
+- [ ] Exact data/environment/flag setup is specified for reproducibility
+- [ ] Risk areas and possible regressions are called out
+- [ ] An explicit out-of-scope list bounds the testing
+- [ ] Scenarios reflect what was actually built, not just the story text
+
+## Anti-Patterns
+- **Happy-path only** — the bugs live in the edges.
+- **"Just test the story"** with no data/environment setup — a lost QA morning.
+- **No scope boundary** — QA re-tests the whole app for a one-line change.
+- **Ignoring regressions** in features the change touches indirectly.
+- **Scenarios from the story, not the build** — testing what was wished, not what shipped.
+
+## Example Trigger Phrases
+- "Prep a QA handoff for this story and its MR."
+- "What should QA test here, including edge cases and setup?"
+- "Write test scenarios mapped to these acceptance criteria."
+- "Make this ready for QA — what's in and out of scope?"

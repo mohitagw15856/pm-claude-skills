@@ -7,7 +7,7 @@
 | Signal | Files (GitHub estimate) | What it means |
 |---|---:|---|
 | Any `SKILL.md` | ~4,087,808 | The raw surface — includes forks, exports, experiments |
-| With frontmatter `description:` | ~3,448,832 | Loadable by agents — the working definition of a skill |
+| With frontmatter `description:` | ~3,448,848 | Loadable by agents — the working definition of a skill |
 | With **"Use when"** triggers | ~310,848 | Auto-discovery discipline (the convention that makes skills fire) |
 | With **Anti-Patterns** | ~349,184 | Self-critical craft — the L3 signal |
 | With **Quality Checks** | ~43,776 | Full self-verification (SkillSpec L3 house style) |

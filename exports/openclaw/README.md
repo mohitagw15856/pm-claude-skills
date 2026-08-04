@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-832 skills exported. Copy a `SKILL.md` into the tool to use it.
+848 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -62,6 +62,7 @@
 | Attention Reset | `pm-newgen` | `attention-reset/SKILL.md` |
 | Auto Repair Estimate Decoder | `pm-decoders` | `auto-repair-estimate-decoder/SKILL.md` |
 | Autopilot Charter | `pm-autopilot` | `autopilot-charter/SKILL.md` |
+| Awkward Message Helper | `pm-comms` | `awkward-message-helper/SKILL.md` |
 | Band Agreement | `pm-musician` | `band-agreement/SKILL.md` |
 | Behavior Intervention Plan | `pm-teaching` | `behavior-intervention-plan/SKILL.md` |
 | Beneficiary Audit | `pm-estate` | `beneficiary-audit/SKILL.md` |
@@ -89,6 +90,7 @@
 | Budget Variance Analysis | `pm-finance` | `budget-variance-analysis/SKILL.md` |
 | Bug Diagnosis | `pm-craft` | `bug-diagnosis/SKILL.md` |
 | Bug Report | `pm-qa` | `bug-report/SKILL.md` |
+| Bug Triage Pack | `pm-qa` | `bug-triage-pack/SKILL.md` |
 | Calendar Defrag | `pm-operator` | `calendar-defrag/SKILL.md` |
 | Candidate Scorecard | `pm-recruiting` | `candidate-scorecard/SKILL.md` |
 | Cap Table Explainer | `pm-founders` | `cap-table-explainer/SKILL.md` |
@@ -207,6 +209,7 @@
 | Debugging Log Analyser | `pm-engineering` | `debugging-log-analyser/SKILL.md` |
 | Decision Autopsy | `pm-warroom` | `decision-autopsy/SKILL.md` |
 | Decision Forensics | `pm-method` | `decision-forensics/SKILL.md` |
+| Decision Helper | `pm-personal` | `decision-helper/SKILL.md` |
 | Decision Journal | `pm-essentials` | `decision-journal/SKILL.md` |
 | Decision Log Setup | `pm-cowork` | `decision-log-setup/SKILL.md` |
 | Decision Meeting Format | `pm-cowork` | `decision-meeting-format/SKILL.md` |
@@ -271,6 +274,7 @@
 | Engineering Hiring Rubric | `pm-engineering` | `engineering-hiring-rubric/SKILL.md` |
 | Engineering Weekly Report | `pm-engineering` | `engineering-weekly-report/SKILL.md` |
 | Entity-Relationship Diagram | `pm-visuals` | `entity-relationship-diagram/SKILL.md` |
+| Epic Progress Report | `pm-delivery` | `epic-progress-report/SKILL.md` |
 | Error Decoder | `pm-engineering` | `error-decoder/SKILL.md` |
 | Error Message Writer | `pm-uxwriting` | `error-message-writer/SKILL.md` |
 | Escalation Email | `pm-cowork` | `escalation-email/SKILL.md` |
@@ -302,6 +306,7 @@
 | Experiment Designer | `pm-advanced` | `experiment-designer/SKILL.md` |
 | Experiment Readout | `pm-dataeng` | `experiment-readout/SKILL.md` |
 | Expert Interview Prep | `pm-cowork` | `expert-interview-prep/SKILL.md` |
+| Explain Simply | `pm-comms` | `explain-simply/SKILL.md` |
 | Exploratory Test Charter | `pm-qa` | `exploratory-test-charter/SKILL.md` |
 | Fact-Check Pass | `pm-journalism` | `fact-check-pass/SKILL.md` |
 | Factory Acceptance Test | `pm-hardware` | `factory-acceptance-test/SKILL.md` |
@@ -330,6 +335,7 @@
 | First Client Contract | `pm-sidehustle` | `first-client-contract/SKILL.md` |
 | First Maintainer Month | `pm-maintainer` | `first-maintainer-month/SKILL.md` |
 | Flight Tracker | `pm-live` | `flight-tracker/SKILL.md` |
+| Flow Metrics Interpreter | `pm-delivery` | `flow-metrics-interpreter/SKILL.md` |
 | Flowchart | `pm-visuals` | `flowchart/SKILL.md` |
 | FOIA / Public-Records Request | `pm-gov` | `foia-request/SKILL.md` |
 | Folder Structure Designer | `pm-cowork` | `folder-structure-designer/SKILL.md` |
@@ -346,6 +352,7 @@
 | Game Night Planner | `pm-tabletop` | `game-night-planner/SKILL.md` |
 | Gantt / Roadmap | `pm-visuals` | `gantt-roadmap/SKILL.md` |
 | GDPR Compliance | `pm-compliance` | `gdpr-compliance/SKILL.md` |
+| Gift Finder | `pm-personal` | `gift-finder/SKILL.md` |
 | Git Troubleshooter | `pm-engineering` | `git-troubleshooter/SKILL.md` |
 | GitHub Repo Vitals | `pm-live` | `github-repo-vitals/SKILL.md` |
 | Giving Feedback | `pm-comms` | `giving-feedback/SKILL.md` |
@@ -452,12 +459,14 @@
 | Media Pitch | `pm-gtm` | `media-pitch/SKILL.md` |
 | Medical Bill Decoder | `pm-decoders` | `medical-bill-decoder/SKILL.md` |
 | Medical Records Request | `pm-lifeadmin` | `medical-records-request/SKILL.md` |
+| Meeting Action Extractor | `pm-essentials` | `meeting-action-extractor/SKILL.md` |
 | Meeting Cost Meter | `pm-cowork` | `meeting-cost-meter/SKILL.md` |
 | Meeting Notes | `pm-essentials` | `meeting-notes/SKILL.md` |
 | Meeting Prep (Live) | `pm-cowork-live` | `meeting-prep-live/SKILL.md` |
 | Meeting Prep Pack | `pm-cowork` | `meeting-prep-pack/SKILL.md` |
 | Meeting Room Etiquette | `pm-cowork` | `meeting-room-etiquette/SKILL.md` |
 | Menu Cost Engineer | `pm-hospitality` | `menu-cost-engineer/SKILL.md` |
+| Message for the Moment | `pm-comms` | `message-for-the-moment/SKILL.md` |
 | Messaging Framework | `pm-growth` | `messaging-framework/SKILL.md` |
 | Metric Gaslighting Detector | `pm-warroom` | `metric-gaslighting-detector/SKILL.md` |
 | Metric Semantic Layer | `pm-dataeng` | `metric-semantic-layer/SKILL.md` |
@@ -526,6 +535,7 @@
 | Pivot Analysis Planner | `pm-cowork` | `pivot-analysis-planner/SKILL.md` |
 | Pixel GIF Maker | `other` | `pixel-gif-maker/SKILL.md` |
 | Plain Language Rewrite | `pm-cowork` | `plain-language-rewrite/SKILL.md` |
+| Plan My Day | `pm-rituals` | `plan-my-day/SKILL.md` |
 | PM Weekly Review | `pm-rituals` | `pm-weekly-review/SKILL.md` |
 | Policy Drafter | `pm-cowork` | `policy-drafter/SKILL.md` |
 | Policy Memo | `pm-gov` | `policy-memo/SKILL.md` |
@@ -573,6 +583,7 @@
 | Public Holidays | `pm-live` | `public-holidays/SKILL.md` |
 | Punch List Builder | `pm-construction` | `punch-list-builder/SKILL.md` |
 | Purchase Justification | `pm-cowork` | `purchase-justification/SKILL.md` |
+| QA Handoff Package | `pm-qa` | `qa-handoff-package/SKILL.md` |
 | QA Release Sign-off | `pm-qa` | `qa-release-signoff/SKILL.md` |
 | QBR Deck | `pm-cs` | `qbr-deck/SKILL.md` |
 | Quarterly Tax Rhythm | `pm-sidehustle` | `quarterly-tax-rhythm/SKILL.md` |
@@ -705,6 +716,7 @@
 | Spreadsheet Or Database | `pm-cowork` | `spreadsheet-or-database/SKILL.md` |
 | Sprint Brief | `pm-delivery` | `sprint-brief/SKILL.md` |
 | Sprint Planning | `pm-delivery` | `sprint-planning/SKILL.md` |
+| Sprint Retro Facilitator | `pm-delivery` | `sprint-retro-facilitator/SKILL.md` |
 | Sprint Velocity Analysis | `pm-engineering` | `sprint-velocity-analysis/SKILL.md` |
 | SQL Optimizer | `pm-dataeng` | `sql-optimizer/SKILL.md` |
 | SQL Query Explainer | `pm-data` | `sql-query-explainer/SKILL.md` |
@@ -731,6 +743,7 @@
 | Subscription Auditor | `pm-operator` | `subscription-auditor/SKILL.md` |
 | Substack Notes Scraper | `pm-writers` | `substack-notes-scraper/SKILL.md` |
 | Subtitle & Caption | `pm-localization` | `subtitle-caption/SKILL.md` |
+| Summarize Anything | `pm-comms` | `summarize-anything/SKILL.md` |
 | Sun and Moon | `pm-live` | `sun-and-moon/SKILL.md` |
 | Sun Tzu Strategy Brief | `pm-dead-mentors` | `sun-tzu-strategy-brief/SKILL.md` |
 | Supplier Scorecard | `pm-supplychain` | `supplier-scorecard/SKILL.md` |
@@ -781,6 +794,7 @@
 | Timeshare Contract Decoder | `pm-decoders` | `timeshare-contract-decoder/SKILL.md` |
 | Token Cost | `pm-tokens` | `token-cost/SKILL.md` |
 | Token Diet | `pm-tokens` | `token-diet/SKILL.md` |
+| Tone Fixer | `pm-comms` | `tone-fixer/SKILL.md` |
 | Tool Permission Review | `pm-seatbelt` | `tool-permission-review/SKILL.md` |
 | Tool Procurement Eval | `pm-cowork` | `tool-procurement-eval/SKILL.md` |
 | Tooling Risk Assessment | `pm-hardware` | `tooling-risk-assessment/SKILL.md` |
@@ -790,6 +804,7 @@
 | Transcreation | `pm-localization` | `transcreation/SKILL.md` |
 | Travel Brief | `pm-cowork` | `travel-brief/SKILL.md` |
 | Treatment Plan Estimate | `pm-veterinary` | `treatment-plan-estimate/SKILL.md` |
+| Trip Planner | `pm-personal` | `trip-planner/SKILL.md` |
 | TTRPG Session Forge | `pm-newgen` | `ttrpg-session-forge/SKILL.md` |
 | Unblock Protocol | `pm-cowork` | `unblock-protocol/SKILL.md` |
 | Underwriting Narrative | `pm-insurance` | `underwriting-narrative/SKILL.md` |
@@ -823,6 +838,7 @@
 | Weekly Review Ritual | `pm-cowork` | `weekly-review-ritual/SKILL.md` |
 | Wellness Plan | `pm-veterinary` | `wellness-plan/SKILL.md` |
 | What To Ask | `pm-decoders` | `what-to-ask/SKILL.md` |
+| What's for Dinner | `pm-kitchen` | `whats-for-dinner/SKILL.md` |
 | When Someone Dies | `pm-estate` | `when-someone-dies/SKILL.md` |
 | Which Skill Router | `pm-essentials` | `which-skill/SKILL.md` |
 | Whiteboard To Spec | `pm-vision` | `whiteboard-to-spec/SKILL.md` |
