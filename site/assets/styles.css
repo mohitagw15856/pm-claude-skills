@@ -43,6 +43,8 @@ form.newsletter button:disabled { opacity: .6; cursor: default; }
 .nl-msg { width: 100%; margin-top: 10px; font-size: 14px; min-height: 18px; }
 .nl-msg.ok { color: #1a7f37; } .nl-msg.bad { color: var(--accent); }
 @media (prefers-color-scheme: dark) { .nl-msg.ok { color: #3fb950; } }
+/* Buttondown embed (runs Cloudflare Turnstile in-browser — the free-plan path). */
+.nl-embed { width: 100%; min-height: 180px; border: 0; border-radius: 10px; background: #fff; color-scheme: light; display: block; }
 
 /* Sections */
 section.block { padding: 48px 0; }
