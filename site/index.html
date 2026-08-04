@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PM Skills — professional Agent Skills for your AI, and a newsletter when new ones drop</title>
+  <meta name="description" content="A growing library of professional Agent Skills — plain SKILL.md files that teach your AI to do one professional task properly. Browse the catalogue, see each skill's power, and get an email when new skills launch." />
+  <meta property="og:title" content="PM Skills — professional Agent Skills + new-skill newsletter" />
+  <meta property="og:description" content="Browse the catalogue, see each skill's power with an example, and subscribe to hear when new skills launch." />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="/">🧠 PM <span>Skills</span></a>
+    <a href="/catalogue.html">Catalogue</a>
+    <a href="https://mohitagw15856.github.io/pm-claude-skills/" target="_blank" rel="noopener">Playground</a>
+    <div class="spacer"></div>
+    <a class="cta" href="#subscribe">Get the newsletter</a>
+  </nav>
+
+  <header class="hero wrap">
+    <h1>Give your AI the structure a <span class="grad">senior professional</span> actually uses.</h1>
+    <p class="sub">A growing library of <b><span id="skillCount">800+</span> Agent Skills</b> — plain <code>SKILL.md</code> files that teach Claude, ChatGPT, Gemini, Cursor &amp; Codex to do one professional task properly. Browse the catalogue, see each skill's power, and get a heads-up when new ones drop.</p>
+    <div class="nl-box" id="subscribe">
+      <h2>📬 New skills, in your inbox</h2>
+      <p class="small">A short email whenever new skills launch — what they do and how to use them. No spam, unsubscribe anytime.</p>
+      <form class="newsletter">
+        <input type="email" required placeholder="you@example.com" aria-label="Email address" />
+        <button type="submit">Subscribe</button>
+        <div class="nl-msg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+    <div class="badges">
+      <span><b id="skillCount2"></b></span>
+      <span>·&nbsp; MIT licensed</span>
+      <span>·&nbsp; Works with <b>Claude · ChatGPT · Gemini · Cursor · Codex</b></span>
+      <span>·&nbsp; <a href="https://mohitagw15856.github.io/pm-claude-skills/" target="_blank" rel="noopener">Run any one free</a></span>
+    </div>
+  </header>
+
+  <section class="block wrap">
+    <h2 class="center">See the power of a skill</h2>
+    <p class="center">Each skill turns a rough input into a senior-grade artifact. A few favourites:</p>
+    <div class="features" id="featured"></div>
+    <p class="center" style="margin-top:28px"><a class="cta" href="/catalogue.html" style="padding:11px 20px;border-radius:10px;">Browse the full catalogue →</a></p>
+  </section>
+
+  <section class="block wrap" style="background:var(--panel);border-radius:18px;">
+    <h2 class="center">How it works</h2>
+    <div class="features">
+      <div class="feature"><h3>1 · Find the skill</h3><p>Search the catalogue by task or profession. Every skill says exactly what it produces and what it needs.</p></div>
+      <div class="feature"><h3>2 · Run it anywhere</h3><p>Try it free in the browser Playground, or install: <code>/plugin</code> in Claude Code, or <code>npx pm-claude-skills add</code>.</p></div>
+      <div class="feature"><h3>3 · Stay current</h3><p>Subscribe once and get an email each time new skills launch — so your toolkit keeps growing.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="/catalogue.html">Catalogue</a> · <a href="https://github.com/mohitagw15856/pm-claude-skills" target="_blank" rel="noopener">GitHub</a> · <a href="https://mohitagw15856.github.io/pm-claude-skills/" target="_blank" rel="noopener">Playground</a> · <a href="#subscribe">Newsletter</a></p>
+    <p>Open-source · MIT · Built by a PM, used by everyone.</p>
+  </footer>
+
+  <script src="/assets/app.js"></script>
+  <script>document.addEventListener('DOMContentLoaded',()=>{const c=document.getElementById('skillCount');const obs=new MutationObserver(()=>{const n=c.textContent;const b=document.getElementById('skillCount2');if(b)b.textContent=n+' skills';});obs.observe(c,{childList:true});});</script>
+</body>
+</html>
