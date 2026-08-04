@@ -62,6 +62,12 @@ Works natively in **Claude Code** and **Hermes Agent**, with ready-to-paste expo
 
 **Don't know what to look for?** Describe your task in plain words at **[🔎 find](https://mohitagw15856.github.io/pm-claude-skills/find.html)** — *"my landlord kept my deposit"*, *"board meeting on Thursday"* — and it names the skill.
 
+<p align="center">
+  <a href="https://site-jet-seven-34.vercel.app/#subscribe"><img src="https://img.shields.io/badge/📬_Get_the_newsletter-Subscribe_free-d9605a?style=for-the-badge" alt="Subscribe to the PM Skills newsletter"></a>
+</p>
+
+**Never miss a new skill.** New ones drop regularly — **[subscribe to the newsletter](https://site-jet-seven-34.vercel.app/#subscribe)** and get a short email with a real example whenever they launch. No spam, unsubscribe anytime.
+
 ## ✨ See it in action
 
 It's not just a folder of files — the whole library is explorable, runnable, and a little bit magic. All of this runs **in your browser, free, nothing to install:**
