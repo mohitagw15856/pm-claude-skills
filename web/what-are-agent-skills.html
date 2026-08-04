@@ -38,11 +38,11 @@
 <nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
 <div class="g-wrap">
 <h1>What are agent skills? The SKILL.md format, explained</h1>
-<p class="updated">By the maintainers of the 848-skill PM Skills library · Updated 2026-07-26</p>
+<p class="updated">By the maintainers of the 849-skill PM Skills library · Updated 2026-07-26</p>
 
 <h2>What are agent skills?</h2>
 <div class="capsule">Agent skills are plain-markdown instruction files — conventionally named <code>SKILL.md</code> — that teach an AI assistant to perform one task to a professional standard. A skill contains a name, a description that tells the assistant when to activate, and a body with the working method: required inputs, decision rules, an output template, quality checks, and anti-patterns. The assistant loads it on demand and applies the judgment it encodes.</div>
-<p>The idea shipped with Anthropic's Claude (Claude Code and Claude.ai read skills natively), but the format is just markdown — any assistant that accepts system instructions can use one. Our library maintains 848 of them under MIT, which is where the numbers and examples on this page come from.</p>
+<p>The idea shipped with Anthropic's Claude (Claude Code and Claude.ai read skills natively), but the format is just markdown — any assistant that accepts system instructions can use one. Our library maintains 849 of them under MIT, which is where the numbers and examples on this page come from.</p>
 
 <h2>What does a SKILL.md file contain?</h2>
 <div class="capsule">A SKILL.md file has two parts: YAML frontmatter holding the skill's name and an activation description, and a markdown body holding the working framework — required inputs, the method or scoring rules, a concrete output template, quality checks, and anti-patterns. Well-formed skills are self-contained: one file, no runtime, readable by the model and by humans.</div>
@@ -78,7 +78,7 @@ description: "Decode a residential lease into plain English and rank the
 <div class="capsule">Good skills encode judgment the model lacks, not structure it already produces: severity scales with dollar consequences, decision rules with thresholds, anti-patterns naming real failure modes. Our benchmark found frontier models score near-ceiling on generic document structure — a skill earns its place by adding the parts a senior professional knows and a model guesses.</div>
 <p>The <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/SKILLSPEC.md">SkillSpec standard</a> formalises this as conformance levels L1–L3; the finding about structure comes from the <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skillbench/REPORT.md">SkillBench technical report</a>, negative results included.</p>
 
-<p style="margin-top:36px"><a href="index.html">▶ Try 848 skills in the playground</a> · <a href="catalog.html">browse the catalog</a> · <a href="https://github.com/mohitagw15856/pm-claude-skills">GitHub</a></p>
+<p style="margin-top:36px"><a href="index.html">▶ Try 849 skills in the playground</a> · <a href="catalog.html">browse the catalog</a> · <a href="https://github.com/mohitagw15856/pm-claude-skills">GitHub</a></p>
 </div>
 <script src="nav.js"></script>
 </body>
