@@ -20,6 +20,7 @@
 [![Listed in Awesome Claude Skills](https://img.shields.io/badge/Awesome%20Claude%20Skills-listed-fc60a8?logo=awesomelists&logoColor=white)](https://github.com/BehiSecc/awesome-claude-skills)
 [![Skill of the day](https://img.shields.io/endpoint?url=https%3A%2F%2Fpm-skills-mcp.pm-claude-skills.workers.dev%2Ftoday%2Fbadge)](https://pm-skills-mcp.pm-claude-skills.workers.dev/today.json)
 [![Free runs served](https://img.shields.io/endpoint?url=https%3A%2F%2Fpm-skills-mcp.pm-claude-skills.workers.dev%2Ftry%2Fstats)](https://mohitagw15856.github.io/pm-claude-skills/)
+[![Website & newsletter](https://img.shields.io/badge/website-catalogue%20%26%20newsletter-d9605a)](https://site-jet-seven-34.vercel.app)
 
 ## What is PM Skills?
 
@@ -55,6 +56,7 @@ Works natively in **Claude Code** and **Hermes Agent**, with ready-to-paste expo
 1. **Just looking →** open the **[▶ Playground](https://mohitagw15856.github.io/pm-claude-skills/)** and run a skill in your browser. Nothing to install, nothing to sign up for.
 2. **You use Claude Code →** type `/plugin`, search **pm-skills**, install. Done — ask *"decode this lease"* and watch.
 3. **You use anything else →** `npx pm-claude-skills add` and pick your tool from the menu (Cursor, Codex, Windsurf, ChatGPT, Gemini…).
+4. **Want the guided tour →** browse the searchable **[catalogue site](https://site-jet-seven-34.vercel.app)** and subscribe to get an email whenever new skills launch.
 
 **Nothing here can scare your setup.** A skill is a markdown file your AI reads — no runtime, no telemetry, no accounts. Installing copies text files; uninstalling is deleting them. Skeptical? Good instinct: [read one first](skills/lease-decoder/SKILL.md) — it's designed to be read by humans too.
 
