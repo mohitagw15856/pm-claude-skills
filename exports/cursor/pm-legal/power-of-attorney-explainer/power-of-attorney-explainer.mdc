@@ -1,0 +1,68 @@
+---
+description: "Understand power of attorney — which type you need, what it covers, and how to set one up properly — so the right person can act for you or a loved one when needed. Use when asked what is power of attorney, do I need a POA, help me set up power of attorney for a parent, or which type of POA. Produces a plain-English explainer of the main POA types (financial vs health, durable, springing), a which-do-you-need read for the situation, the setup steps and safeguards against abuse, and a strong flag to use proper legal forms/advice for your jurisdiction. Not legal advice."
+globs:
+alwaysApply: false
+---
+
+# Power of Attorney Explainer
+
+Power of attorney is one of the most useful — and most misunderstood — legal tools: it lets someone act for you if you can't. But the types matter (financial vs. health, durable vs. springing), and a badly-set-up POA is either useless when needed or an open door to abuse. This explains the options in plain language, helps you figure out which fits, and lays out how to set one up safely — pointing you to proper legal forms and advice, because it isn't legal advice.
+
+## What This Skill Produces
+
+- **A plain-English types guide** — financial/property vs. health/medical POA, durable (survives incapacity) vs. springing (starts on incapacity), and general vs. limited
+- **A which-do-you-need read** — matching the situation (aging parent, your own planning, a specific transaction) to the right type(s)
+- **The setup steps** — choosing a trustworthy agent, defining powers, and the execution formalities (witnessing/notarization) that make it valid
+- **Abuse safeguards** — limits, oversight, successor agents, and revocation, so the power isn't misused
+- **A jurisdiction flag** — forms and rules are location-specific; use proper legal resources. Not legal advice.
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The purpose** — your own future planning, acting for a parent/relative, or a one-off transaction
+- **Financial, health, or both** — the kind of decisions to cover
+- **When it should apply** — now, only on incapacity, or ongoing
+- **Who'd be the agent** — the person to hold it, and any concerns about trust/oversight
+- **Location** — determines the valid forms and formalities
+
+## Framework: Right Type, Trustworthy Agent, Valid Execution
+
+1. **Explain the types simply.** Financial vs. health, durable vs. springing, general vs. limited — the person needs to grasp which power does what before choosing.
+2. **Match to the situation.** Aging-parent care often needs durable financial + health POAs; a single transaction may need only a limited one. Recommend the fit.
+3. **Choose the agent carefully.** The agent should be someone genuinely trustworthy; name a successor in case the first can't serve.
+4. **Execute it validly.** POAs must meet local formalities (witnesses/notarization) or they're worthless when needed — flag this hard.
+5. **Build in safeguards.** Limit powers where sensible, consider oversight/reporting, and know how to revoke — POA abuse is a real risk, especially with vulnerable people.
+6. **Use proper legal resources.** Point to jurisdiction-correct forms and, for anything significant, a lawyer — this is an explainer, not legal advice.
+
+## Output Format
+
+### Power of attorney: purpose [x] · [financial/health/both] · [region]
+
+**The types (plain English):** financial vs health · durable vs springing · general vs limited.
+**You likely need:** [type(s)] — because [situation].
+**Set it up:** choose a trustworthy agent (+ a successor) → define powers → execute with [local witnessing/notarization].
+**Safeguards:** [limits · oversight · revocation · watch for abuse].
+
+> Not legal advice. POA forms and formalities are jurisdiction-specific — use official/legal forms for your area, and consult a lawyer for anything significant.
+
+## Quality Checks
+- [ ] Explains the main POA types in plain language
+- [ ] Recommends the type(s) fitting the situation
+- [ ] Covers choosing a trustworthy agent and a successor
+- [ ] Stresses valid execution formalities (witnessing/notarization)
+- [ ] Includes abuse safeguards and revocation
+- [ ] Flags jurisdiction-specificity / not legal advice
+
+## Anti-Patterns
+- **Treating POA as one thing** instead of distinct types.
+- **Ignoring durable vs springing** — the difference that matters at incapacity.
+- **Downplaying execution formalities** that make it valid.
+- **No abuse safeguards** for a vulnerable principal.
+- **Presenting as legal advice** rather than pointing to proper forms/lawyer.
+
+## Example Trigger Phrases
+- "What is power of attorney and do I need one?"
+- "Help me set up POA for my elderly mother."
+- "What's the difference between financial and health power of attorney?"
+- "Which type of POA do I need for someone with dementia?"
+- "How do I make a power of attorney valid, and how do I revoke one?"

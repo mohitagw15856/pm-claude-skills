@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-906 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+916 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -111,6 +111,7 @@
 | Case Study Write-up | `pm-consulting` | `pm-consulting/case-study-writeup/SYSTEM_PROMPT.md` |
 | Cash Flow Forecast | `pm-accounting` | `pm-accounting/cash-flow-forecast/SYSTEM_PROMPT.md` |
 | Category Page Brief | `pm-ecommerce` | `pm-ecommerce/category-page-brief/SYSTEM_PROMPT.md` |
+| Cease-and-Desist Letter | `pm-legal` | `pm-legal/cease-and-desist-letter/SYSTEM_PROMPT.md` |
 | Change Management Plan | `pm-hr` | `pm-hr/change-management-plan/SYSTEM_PROMPT.md` |
 | Change Order Writer | `pm-construction` | `pm-construction/change-order-writer/SYSTEM_PROMPT.md` |
 | Changelog For Humans | `pm-cowork` | `pm-cowork/changelog-for-humans/SYSTEM_PROMPT.md` |
@@ -176,6 +177,7 @@
 | Context Engineering Review | `pm-agentops` | `pm-agentops/context-engineering-review/SYSTEM_PROMPT.md` |
 | Context Mode | `pm-engineering` | `pm-engineering/context-mode/SYSTEM_PROMPT.md` |
 | Context Switch Budget | `pm-cowork` | `pm-cowork/context-switch-budget/SYSTEM_PROMPT.md` |
+| Contract Red Flags | `pm-legal` | `pm-legal/contract-red-flags/SYSTEM_PROMPT.md` |
 | Contract Renewal Tracker | `pm-cowork` | `pm-cowork/contract-renewal-tracker/SYSTEM_PROMPT.md` |
 | Contract Review | `pm-legal` | `pm-legal/contract-review/SYSTEM_PROMPT.md` |
 | Contributor Guide | `pm-devrel` | `pm-devrel/contributor-guide/SYSTEM_PROMPT.md` |
@@ -233,6 +235,7 @@
 | Deck Review Rubric | `pm-cowork` | `pm-cowork/deck-review-rubric/SYSTEM_PROMPT.md` |
 | Deep Work Blocking | `pm-cowork` | `pm-cowork/deep-work-blocking/SYSTEM_PROMPT.md` |
 | Deepfake Drill | `pm-2027` | `pm-2027/deepfake-drill/SYSTEM_PROMPT.md` |
+| Defamation Response | `pm-legal` | `pm-legal/defamation-response/SYSTEM_PROMPT.md` |
 | Delay Claim Letter | `pm-construction` | `pm-construction/delay-claim-letter/SYSTEM_PROMPT.md` |
 | Delegation Brief | `pm-cowork` | `pm-cowork/delegation-brief/SYSTEM_PROMPT.md` |
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/SYSTEM_PROMPT.md` |
@@ -395,6 +398,7 @@
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/SYSTEM_PROMPT.md` |
 | HN Digest | `pm-live` | `pm-live/hn-digest/SYSTEM_PROMPT.md` |
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/SYSTEM_PROMPT.md` |
+| HOA Violation Response | `pm-legal` | `pm-legal/hoa-violation-response/SYSTEM_PROMPT.md` |
 | Hobby Starter Kit | `pm-hobbies` | `pm-hobbies/hobby-starter-kit/SYSTEM_PROMPT.md` |
 | Home Contractor Quote Decoder | `pm-decoders` | `pm-decoders/home-contractor-quote-decoder/SYSTEM_PROMPT.md` |
 | Home Workout Builder | `pm-wellbeing` | `pm-wellbeing/home-workout-builder/SYSTEM_PROMPT.md` |
@@ -443,6 +447,7 @@
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/SYSTEM_PROMPT.md` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/SYSTEM_PROMPT.md` |
 | Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/SYSTEM_PROMPT.md` |
+| Jury Duty Guide | `pm-legal` | `pm-legal/jury-duty-guide/SYSTEM_PROMPT.md` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/SYSTEM_PROMPT.md` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/SYSTEM_PROMPT.md` |
 | Kids' Online-Safety Plan | `pm-digital-safety` | `pm-digital-safety/kids-online-safety-plan/SYSTEM_PROMPT.md` |
@@ -462,6 +467,7 @@
 | Layoff Financial Triage | `pm-layoff` | `pm-layoff/layoff-financial-triage/SYSTEM_PROMPT.md` |
 | Lease Decoder | `pm-decoders` | `pm-decoders/lease-decoder/SYSTEM_PROMPT.md` |
 | Legal Brief | `pm-legal` | `pm-legal/legal-brief/SYSTEM_PROMPT.md` |
+| Lemon Law Check | `pm-legal` | `pm-legal/lemon-law-check/SYSTEM_PROMPT.md` |
 | Lending Risk Brief | `pm-banking` | `pm-banking/lending-risk-brief/SYSTEM_PROMPT.md` |
 | Lesson Plan | `pm-education` | `pm-education/lesson-plan/SYSTEM_PROMPT.md` |
 | Lesson Plan Builder | `pm-teaching` | `pm-teaching/lesson-plan-builder/SYSTEM_PROMPT.md` |
@@ -580,6 +586,7 @@
 | Policy Renewal Review | `pm-insurance` | `pm-insurance/policy-renewal-review/SYSTEM_PROMPT.md` |
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/SYSTEM_PROMPT.md` |
 | Posture Reset Plan | `pm-wellbeing` | `pm-wellbeing/posture-reset-plan/SYSTEM_PROMPT.md` |
+| Power of Attorney Explainer | `pm-legal` | `pm-legal/power-of-attorney-explainer/SYSTEM_PROMPT.md` |
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/SYSTEM_PROMPT.md` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/SYSTEM_PROMPT.md` |
 | PR Description | `pm-craft` | `pm-craft/pr-description/SYSTEM_PROMPT.md` |
@@ -618,6 +625,7 @@
 | Property Investment Analysis | `pm-realestate` | `pm-realestate/property-investment-analysis/SYSTEM_PROMPT.md` |
 | Property Listing | `pm-realestate` | `pm-realestate/property-listing/SYSTEM_PROMPT.md` |
 | Property Offer Letter | `pm-realestate` | `pm-realestate/property-offer-letter/SYSTEM_PROMPT.md` |
+| Property Tax Appeal | `pm-legal` | `pm-legal/property-tax-appeal/SYSTEM_PROMPT.md` |
 | Proposal Skeleton | `pm-cowork` | `pm-cowork/proposal-skeleton/SYSTEM_PROMPT.md` |
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/SYSTEM_PROMPT.md` |
 | Public Comment | `pm-gov` | `pm-gov/public-comment/SYSTEM_PROMPT.md` |
@@ -820,6 +828,7 @@
 | Technical Debt Register | `pm-engineering` | `pm-engineering/technical-debt-register/SYSTEM_PROMPT.md` |
 | Technical Spec Template | `pm-delivery` | `pm-delivery/technical-spec-template/SYSTEM_PROMPT.md` |
 | Template Designer | `pm-cowork` | `pm-cowork/template-designer/SYSTEM_PROMPT.md` |
+| Tenant Rights Explainer | `pm-legal` | `pm-legal/tenant-rights-explainer/SYSTEM_PROMPT.md` |
 | Tenant Screening Guide | `pm-realestate` | `pm-realestate/tenant-screening-guide/SYSTEM_PROMPT.md` |
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/SYSTEM_PROMPT.md` |
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/SYSTEM_PROMPT.md` |
@@ -903,6 +912,7 @@
 | Win-back Playbook | `pm-cs` | `pm-cs/winback-playbook/SYSTEM_PROMPT.md` |
 | Windfall Plan | `pm-money` | `pm-money/windfall-plan/SYSTEM_PROMPT.md` |
 | Wine Pairing | `pm-hobbies` | `pm-hobbies/wine-pairing/SYSTEM_PROMPT.md` |
+| Witness Statement Writer | `pm-legal` | `pm-legal/witness-statement-writer/SYSTEM_PROMPT.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/SYSTEM_PROMPT.md` |
 | Working Agreements | `pm-cowork` | `pm-cowork/working-agreements/SYSTEM_PROMPT.md` |
 | Workshop Designer | `pm-cowork` | `pm-cowork/workshop-designer/SYSTEM_PROMPT.md` |

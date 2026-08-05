@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-906 skills exported. Copy a `.mdc rule` into the tool to use it.
+916 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -111,6 +111,7 @@
 | Case Study Write-up | `pm-consulting` | `pm-consulting/case-study-writeup/case-study-writeup.mdc` |
 | Cash Flow Forecast | `pm-accounting` | `pm-accounting/cash-flow-forecast/cash-flow-forecast.mdc` |
 | Category Page Brief | `pm-ecommerce` | `pm-ecommerce/category-page-brief/category-page-brief.mdc` |
+| Cease-and-Desist Letter | `pm-legal` | `pm-legal/cease-and-desist-letter/cease-and-desist-letter.mdc` |
 | Change Management Plan | `pm-hr` | `pm-hr/change-management-plan/change-management-plan.mdc` |
 | Change Order Writer | `pm-construction` | `pm-construction/change-order-writer/change-order-writer.mdc` |
 | Changelog For Humans | `pm-cowork` | `pm-cowork/changelog-for-humans/changelog-for-humans.mdc` |
@@ -176,6 +177,7 @@
 | Context Engineering Review | `pm-agentops` | `pm-agentops/context-engineering-review/context-engineering-review.mdc` |
 | Context Mode | `pm-engineering` | `pm-engineering/context-mode/context-mode.mdc` |
 | Context Switch Budget | `pm-cowork` | `pm-cowork/context-switch-budget/context-switch-budget.mdc` |
+| Contract Red Flags | `pm-legal` | `pm-legal/contract-red-flags/contract-red-flags.mdc` |
 | Contract Renewal Tracker | `pm-cowork` | `pm-cowork/contract-renewal-tracker/contract-renewal-tracker.mdc` |
 | Contract Review | `pm-legal` | `pm-legal/contract-review/contract-review.mdc` |
 | Contributor Guide | `pm-devrel` | `pm-devrel/contributor-guide/contributor-guide.mdc` |
@@ -233,6 +235,7 @@
 | Deck Review Rubric | `pm-cowork` | `pm-cowork/deck-review-rubric/deck-review-rubric.mdc` |
 | Deep Work Blocking | `pm-cowork` | `pm-cowork/deep-work-blocking/deep-work-blocking.mdc` |
 | Deepfake Drill | `pm-2027` | `pm-2027/deepfake-drill/deepfake-drill.mdc` |
+| Defamation Response | `pm-legal` | `pm-legal/defamation-response/defamation-response.mdc` |
 | Delay Claim Letter | `pm-construction` | `pm-construction/delay-claim-letter/delay-claim-letter.mdc` |
 | Delegation Brief | `pm-cowork` | `pm-cowork/delegation-brief/delegation-brief.mdc` |
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/delta-briefing.mdc` |
@@ -395,6 +398,7 @@
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/hiring-rubric.mdc` |
 | HN Digest | `pm-live` | `pm-live/hn-digest/hn-digest.mdc` |
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/hoa-decoder.mdc` |
+| HOA Violation Response | `pm-legal` | `pm-legal/hoa-violation-response/hoa-violation-response.mdc` |
 | Hobby Starter Kit | `pm-hobbies` | `pm-hobbies/hobby-starter-kit/hobby-starter-kit.mdc` |
 | Home Contractor Quote Decoder | `pm-decoders` | `pm-decoders/home-contractor-quote-decoder/home-contractor-quote-decoder.mdc` |
 | Home Workout Builder | `pm-wellbeing` | `pm-wellbeing/home-workout-builder/home-workout-builder.mdc` |
@@ -443,6 +447,7 @@
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/job-description-writer.mdc` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/job-story-mapper.mdc` |
 | Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/journaling-prompts.mdc` |
+| Jury Duty Guide | `pm-legal` | `pm-legal/jury-duty-guide/jury-duty-guide.mdc` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/karaoke-song-picker.mdc` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/kb-audit.mdc` |
 | Kids' Online-Safety Plan | `pm-digital-safety` | `pm-digital-safety/kids-online-safety-plan/kids-online-safety-plan.mdc` |
@@ -462,6 +467,7 @@
 | Layoff Financial Triage | `pm-layoff` | `pm-layoff/layoff-financial-triage/layoff-financial-triage.mdc` |
 | Lease Decoder | `pm-decoders` | `pm-decoders/lease-decoder/lease-decoder.mdc` |
 | Legal Brief | `pm-legal` | `pm-legal/legal-brief/legal-brief.mdc` |
+| Lemon Law Check | `pm-legal` | `pm-legal/lemon-law-check/lemon-law-check.mdc` |
 | Lending Risk Brief | `pm-banking` | `pm-banking/lending-risk-brief/lending-risk-brief.mdc` |
 | Lesson Plan | `pm-education` | `pm-education/lesson-plan/lesson-plan.mdc` |
 | Lesson Plan Builder | `pm-teaching` | `pm-teaching/lesson-plan-builder/lesson-plan-builder.mdc` |
@@ -580,6 +586,7 @@
 | Policy Renewal Review | `pm-insurance` | `pm-insurance/policy-renewal-review/policy-renewal-review.mdc` |
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/portfolio-page.mdc` |
 | Posture Reset Plan | `pm-wellbeing` | `pm-wellbeing/posture-reset-plan/posture-reset-plan.mdc` |
+| Power of Attorney Explainer | `pm-legal` | `pm-legal/power-of-attorney-explainer/power-of-attorney-explainer.mdc` |
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/pptx-slide-auditor.mdc` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/pr-crisis-response.mdc` |
 | PR Description | `pm-craft` | `pm-craft/pr-description/pr-description.mdc` |
@@ -618,6 +625,7 @@
 | Property Investment Analysis | `pm-realestate` | `pm-realestate/property-investment-analysis/property-investment-analysis.mdc` |
 | Property Listing | `pm-realestate` | `pm-realestate/property-listing/property-listing.mdc` |
 | Property Offer Letter | `pm-realestate` | `pm-realestate/property-offer-letter/property-offer-letter.mdc` |
+| Property Tax Appeal | `pm-legal` | `pm-legal/property-tax-appeal/property-tax-appeal.mdc` |
 | Proposal Skeleton | `pm-cowork` | `pm-cowork/proposal-skeleton/proposal-skeleton.mdc` |
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/proposal-writer.mdc` |
 | Public Comment | `pm-gov` | `pm-gov/public-comment/public-comment.mdc` |
@@ -820,6 +828,7 @@
 | Technical Debt Register | `pm-engineering` | `pm-engineering/technical-debt-register/technical-debt-register.mdc` |
 | Technical Spec Template | `pm-delivery` | `pm-delivery/technical-spec-template/technical-spec-template.mdc` |
 | Template Designer | `pm-cowork` | `pm-cowork/template-designer/template-designer.mdc` |
+| Tenant Rights Explainer | `pm-legal` | `pm-legal/tenant-rights-explainer/tenant-rights-explainer.mdc` |
 | Tenant Screening Guide | `pm-realestate` | `pm-realestate/tenant-screening-guide/tenant-screening-guide.mdc` |
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/test-case-writer.mdc` |
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/test-strategy-doc.mdc` |
@@ -903,6 +912,7 @@
 | Win-back Playbook | `pm-cs` | `pm-cs/winback-playbook/winback-playbook.mdc` |
 | Windfall Plan | `pm-money` | `pm-money/windfall-plan/windfall-plan.mdc` |
 | Wine Pairing | `pm-hobbies` | `pm-hobbies/wine-pairing/wine-pairing.mdc` |
+| Witness Statement Writer | `pm-legal` | `pm-legal/witness-statement-writer/witness-statement-writer.mdc` |
 | Word Document | `pm-documents` | `pm-documents/word-document/word-document.mdc` |
 | Working Agreements | `pm-cowork` | `pm-cowork/working-agreements/working-agreements.mdc` |
 | Workshop Designer | `pm-cowork` | `pm-cowork/workshop-designer/workshop-designer.mdc` |

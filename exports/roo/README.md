@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-906 skills exported. Copy a `.md rule` into the tool to use it.
+916 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -111,6 +111,7 @@
 | Case Study Write-up | `pm-consulting` | `pm-consulting/case-study-writeup/case-study-writeup.md` |
 | Cash Flow Forecast | `pm-accounting` | `pm-accounting/cash-flow-forecast/cash-flow-forecast.md` |
 | Category Page Brief | `pm-ecommerce` | `pm-ecommerce/category-page-brief/category-page-brief.md` |
+| Cease-and-Desist Letter | `pm-legal` | `pm-legal/cease-and-desist-letter/cease-and-desist-letter.md` |
 | Change Management Plan | `pm-hr` | `pm-hr/change-management-plan/change-management-plan.md` |
 | Change Order Writer | `pm-construction` | `pm-construction/change-order-writer/change-order-writer.md` |
 | Changelog For Humans | `pm-cowork` | `pm-cowork/changelog-for-humans/changelog-for-humans.md` |
@@ -176,6 +177,7 @@
 | Context Engineering Review | `pm-agentops` | `pm-agentops/context-engineering-review/context-engineering-review.md` |
 | Context Mode | `pm-engineering` | `pm-engineering/context-mode/context-mode.md` |
 | Context Switch Budget | `pm-cowork` | `pm-cowork/context-switch-budget/context-switch-budget.md` |
+| Contract Red Flags | `pm-legal` | `pm-legal/contract-red-flags/contract-red-flags.md` |
 | Contract Renewal Tracker | `pm-cowork` | `pm-cowork/contract-renewal-tracker/contract-renewal-tracker.md` |
 | Contract Review | `pm-legal` | `pm-legal/contract-review/contract-review.md` |
 | Contributor Guide | `pm-devrel` | `pm-devrel/contributor-guide/contributor-guide.md` |
@@ -233,6 +235,7 @@
 | Deck Review Rubric | `pm-cowork` | `pm-cowork/deck-review-rubric/deck-review-rubric.md` |
 | Deep Work Blocking | `pm-cowork` | `pm-cowork/deep-work-blocking/deep-work-blocking.md` |
 | Deepfake Drill | `pm-2027` | `pm-2027/deepfake-drill/deepfake-drill.md` |
+| Defamation Response | `pm-legal` | `pm-legal/defamation-response/defamation-response.md` |
 | Delay Claim Letter | `pm-construction` | `pm-construction/delay-claim-letter/delay-claim-letter.md` |
 | Delegation Brief | `pm-cowork` | `pm-cowork/delegation-brief/delegation-brief.md` |
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/delta-briefing.md` |
@@ -395,6 +398,7 @@
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/hiring-rubric.md` |
 | HN Digest | `pm-live` | `pm-live/hn-digest/hn-digest.md` |
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/hoa-decoder.md` |
+| HOA Violation Response | `pm-legal` | `pm-legal/hoa-violation-response/hoa-violation-response.md` |
 | Hobby Starter Kit | `pm-hobbies` | `pm-hobbies/hobby-starter-kit/hobby-starter-kit.md` |
 | Home Contractor Quote Decoder | `pm-decoders` | `pm-decoders/home-contractor-quote-decoder/home-contractor-quote-decoder.md` |
 | Home Workout Builder | `pm-wellbeing` | `pm-wellbeing/home-workout-builder/home-workout-builder.md` |
@@ -443,6 +447,7 @@
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/job-description-writer.md` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/job-story-mapper.md` |
 | Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/journaling-prompts.md` |
+| Jury Duty Guide | `pm-legal` | `pm-legal/jury-duty-guide/jury-duty-guide.md` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/karaoke-song-picker.md` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/kb-audit.md` |
 | Kids' Online-Safety Plan | `pm-digital-safety` | `pm-digital-safety/kids-online-safety-plan/kids-online-safety-plan.md` |
@@ -462,6 +467,7 @@
 | Layoff Financial Triage | `pm-layoff` | `pm-layoff/layoff-financial-triage/layoff-financial-triage.md` |
 | Lease Decoder | `pm-decoders` | `pm-decoders/lease-decoder/lease-decoder.md` |
 | Legal Brief | `pm-legal` | `pm-legal/legal-brief/legal-brief.md` |
+| Lemon Law Check | `pm-legal` | `pm-legal/lemon-law-check/lemon-law-check.md` |
 | Lending Risk Brief | `pm-banking` | `pm-banking/lending-risk-brief/lending-risk-brief.md` |
 | Lesson Plan | `pm-education` | `pm-education/lesson-plan/lesson-plan.md` |
 | Lesson Plan Builder | `pm-teaching` | `pm-teaching/lesson-plan-builder/lesson-plan-builder.md` |
@@ -580,6 +586,7 @@
 | Policy Renewal Review | `pm-insurance` | `pm-insurance/policy-renewal-review/policy-renewal-review.md` |
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/portfolio-page.md` |
 | Posture Reset Plan | `pm-wellbeing` | `pm-wellbeing/posture-reset-plan/posture-reset-plan.md` |
+| Power of Attorney Explainer | `pm-legal` | `pm-legal/power-of-attorney-explainer/power-of-attorney-explainer.md` |
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/pptx-slide-auditor.md` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/pr-crisis-response.md` |
 | PR Description | `pm-craft` | `pm-craft/pr-description/pr-description.md` |
@@ -618,6 +625,7 @@
 | Property Investment Analysis | `pm-realestate` | `pm-realestate/property-investment-analysis/property-investment-analysis.md` |
 | Property Listing | `pm-realestate` | `pm-realestate/property-listing/property-listing.md` |
 | Property Offer Letter | `pm-realestate` | `pm-realestate/property-offer-letter/property-offer-letter.md` |
+| Property Tax Appeal | `pm-legal` | `pm-legal/property-tax-appeal/property-tax-appeal.md` |
 | Proposal Skeleton | `pm-cowork` | `pm-cowork/proposal-skeleton/proposal-skeleton.md` |
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/proposal-writer.md` |
 | Public Comment | `pm-gov` | `pm-gov/public-comment/public-comment.md` |
@@ -820,6 +828,7 @@
 | Technical Debt Register | `pm-engineering` | `pm-engineering/technical-debt-register/technical-debt-register.md` |
 | Technical Spec Template | `pm-delivery` | `pm-delivery/technical-spec-template/technical-spec-template.md` |
 | Template Designer | `pm-cowork` | `pm-cowork/template-designer/template-designer.md` |
+| Tenant Rights Explainer | `pm-legal` | `pm-legal/tenant-rights-explainer/tenant-rights-explainer.md` |
 | Tenant Screening Guide | `pm-realestate` | `pm-realestate/tenant-screening-guide/tenant-screening-guide.md` |
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/test-case-writer.md` |
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/test-strategy-doc.md` |
@@ -903,6 +912,7 @@
 | Win-back Playbook | `pm-cs` | `pm-cs/winback-playbook/winback-playbook.md` |
 | Windfall Plan | `pm-money` | `pm-money/windfall-plan/windfall-plan.md` |
 | Wine Pairing | `pm-hobbies` | `pm-hobbies/wine-pairing/wine-pairing.md` |
+| Witness Statement Writer | `pm-legal` | `pm-legal/witness-statement-writer/witness-statement-writer.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/word-document.md` |
 | Working Agreements | `pm-cowork` | `pm-cowork/working-agreements/working-agreements.md` |
 | Workshop Designer | `pm-cowork` | `pm-cowork/workshop-designer/workshop-designer.md` |

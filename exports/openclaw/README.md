@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-906 skills exported. Copy a `SKILL.md` into the tool to use it.
+916 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -111,6 +111,7 @@
 | Case Study Write-up | `pm-consulting` | `case-study-writeup/SKILL.md` |
 | Cash Flow Forecast | `pm-accounting` | `cash-flow-forecast/SKILL.md` |
 | Category Page Brief | `pm-ecommerce` | `category-page-brief/SKILL.md` |
+| Cease-and-Desist Letter | `pm-legal` | `cease-and-desist-letter/SKILL.md` |
 | Change Management Plan | `pm-hr` | `change-management-plan/SKILL.md` |
 | Change Order Writer | `pm-construction` | `change-order-writer/SKILL.md` |
 | Changelog For Humans | `pm-cowork` | `changelog-for-humans/SKILL.md` |
@@ -176,6 +177,7 @@
 | Context Engineering Review | `pm-agentops` | `context-engineering-review/SKILL.md` |
 | Context Mode | `pm-engineering` | `context-mode/SKILL.md` |
 | Context Switch Budget | `pm-cowork` | `context-switch-budget/SKILL.md` |
+| Contract Red Flags | `pm-legal` | `contract-red-flags/SKILL.md` |
 | Contract Renewal Tracker | `pm-cowork` | `contract-renewal-tracker/SKILL.md` |
 | Contract Review | `pm-legal` | `contract-review/SKILL.md` |
 | Contributor Guide | `pm-devrel` | `contributor-guide/SKILL.md` |
@@ -233,6 +235,7 @@
 | Deck Review Rubric | `pm-cowork` | `deck-review-rubric/SKILL.md` |
 | Deep Work Blocking | `pm-cowork` | `deep-work-blocking/SKILL.md` |
 | Deepfake Drill | `pm-2027` | `deepfake-drill/SKILL.md` |
+| Defamation Response | `pm-legal` | `defamation-response/SKILL.md` |
 | Delay Claim Letter | `pm-construction` | `delay-claim-letter/SKILL.md` |
 | Delegation Brief | `pm-cowork` | `delegation-brief/SKILL.md` |
 | Delta Briefing | `pm-autopilot` | `delta-briefing/SKILL.md` |
@@ -395,6 +398,7 @@
 | Hiring Rubric | `pm-people` | `hiring-rubric/SKILL.md` |
 | HN Digest | `pm-live` | `hn-digest/SKILL.md` |
 | HOA Decoder | `pm-decoders` | `hoa-decoder/SKILL.md` |
+| HOA Violation Response | `pm-legal` | `hoa-violation-response/SKILL.md` |
 | Hobby Starter Kit | `pm-hobbies` | `hobby-starter-kit/SKILL.md` |
 | Home Contractor Quote Decoder | `pm-decoders` | `home-contractor-quote-decoder/SKILL.md` |
 | Home Workout Builder | `pm-wellbeing` | `home-workout-builder/SKILL.md` |
@@ -443,6 +447,7 @@
 | Job Description Writer | `pm-hr` | `job-description-writer/SKILL.md` |
 | Job Story Mapper | `pm-discovery` | `job-story-mapper/SKILL.md` |
 | Journaling Prompts | `pm-wellbeing` | `journaling-prompts/SKILL.md` |
+| Jury Duty Guide | `pm-legal` | `jury-duty-guide/SKILL.md` |
 | Karaoke Song Picker | `pm-hobbies` | `karaoke-song-picker/SKILL.md` |
 | Knowledge Base Audit | `pm-support` | `kb-audit/SKILL.md` |
 | Kids' Online-Safety Plan | `pm-digital-safety` | `kids-online-safety-plan/SKILL.md` |
@@ -462,6 +467,7 @@
 | Layoff Financial Triage | `pm-layoff` | `layoff-financial-triage/SKILL.md` |
 | Lease Decoder | `pm-decoders` | `lease-decoder/SKILL.md` |
 | Legal Brief | `pm-legal` | `legal-brief/SKILL.md` |
+| Lemon Law Check | `pm-legal` | `lemon-law-check/SKILL.md` |
 | Lending Risk Brief | `pm-banking` | `lending-risk-brief/SKILL.md` |
 | Lesson Plan | `pm-education` | `lesson-plan/SKILL.md` |
 | Lesson Plan Builder | `pm-teaching` | `lesson-plan-builder/SKILL.md` |
@@ -580,6 +586,7 @@
 | Policy Renewal Review | `pm-insurance` | `policy-renewal-review/SKILL.md` |
 | Portfolio Page | `pm-personal` | `portfolio-page/SKILL.md` |
 | Posture Reset Plan | `pm-wellbeing` | `posture-reset-plan/SKILL.md` |
+| Power of Attorney Explainer | `pm-legal` | `power-of-attorney-explainer/SKILL.md` |
 | PPTX Slide Auditor | `pm-delivery` | `pptx-slide-auditor/SKILL.md` |
 | PR Crisis Response | `pm-crisis` | `pr-crisis-response/SKILL.md` |
 | PR Description | `pm-craft` | `pr-description/SKILL.md` |
@@ -618,6 +625,7 @@
 | Property Investment Analysis | `pm-realestate` | `property-investment-analysis/SKILL.md` |
 | Property Listing | `pm-realestate` | `property-listing/SKILL.md` |
 | Property Offer Letter | `pm-realestate` | `property-offer-letter/SKILL.md` |
+| Property Tax Appeal | `pm-legal` | `property-tax-appeal/SKILL.md` |
 | Proposal Skeleton | `pm-cowork` | `proposal-skeleton/SKILL.md` |
 | Proposal Writer | `pm-sales` | `proposal-writer/SKILL.md` |
 | Public Comment | `pm-gov` | `public-comment/SKILL.md` |
@@ -820,6 +828,7 @@
 | Technical Debt Register | `pm-engineering` | `technical-debt-register/SKILL.md` |
 | Technical Spec Template | `pm-delivery` | `technical-spec-template/SKILL.md` |
 | Template Designer | `pm-cowork` | `template-designer/SKILL.md` |
+| Tenant Rights Explainer | `pm-legal` | `tenant-rights-explainer/SKILL.md` |
 | Tenant Screening Guide | `pm-realestate` | `tenant-screening-guide/SKILL.md` |
 | Test Case Writer | `pm-qa` | `test-case-writer/SKILL.md` |
 | Test Strategy Document | `pm-engineering` | `test-strategy-doc/SKILL.md` |
@@ -903,6 +912,7 @@
 | Win-back Playbook | `pm-cs` | `winback-playbook/SKILL.md` |
 | Windfall Plan | `pm-money` | `windfall-plan/SKILL.md` |
 | Wine Pairing | `pm-hobbies` | `wine-pairing/SKILL.md` |
+| Witness Statement Writer | `pm-legal` | `witness-statement-writer/SKILL.md` |
 | Word Document | `pm-documents` | `word-document/SKILL.md` |
 | Working Agreements | `pm-cowork` | `working-agreements/SKILL.md` |
 | Workshop Designer | `pm-cowork` | `workshop-designer/SKILL.md` |

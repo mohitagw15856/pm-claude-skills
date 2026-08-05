@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-906 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+916 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -111,6 +111,7 @@
 | Case Study Write-up | `pm-consulting` | `pm-consulting/case-study-writeup/GEM_INSTRUCTIONS.md` |
 | Cash Flow Forecast | `pm-accounting` | `pm-accounting/cash-flow-forecast/GEM_INSTRUCTIONS.md` |
 | Category Page Brief | `pm-ecommerce` | `pm-ecommerce/category-page-brief/GEM_INSTRUCTIONS.md` |
+| Cease-and-Desist Letter | `pm-legal` | `pm-legal/cease-and-desist-letter/GEM_INSTRUCTIONS.md` |
 | Change Management Plan | `pm-hr` | `pm-hr/change-management-plan/GEM_INSTRUCTIONS.md` |
 | Change Order Writer | `pm-construction` | `pm-construction/change-order-writer/GEM_INSTRUCTIONS.md` |
 | Changelog For Humans | `pm-cowork` | `pm-cowork/changelog-for-humans/GEM_INSTRUCTIONS.md` |
@@ -176,6 +177,7 @@
 | Context Engineering Review | `pm-agentops` | `pm-agentops/context-engineering-review/GEM_INSTRUCTIONS.md` |
 | Context Mode | `pm-engineering` | `pm-engineering/context-mode/GEM_INSTRUCTIONS.md` |
 | Context Switch Budget | `pm-cowork` | `pm-cowork/context-switch-budget/GEM_INSTRUCTIONS.md` |
+| Contract Red Flags | `pm-legal` | `pm-legal/contract-red-flags/GEM_INSTRUCTIONS.md` |
 | Contract Renewal Tracker | `pm-cowork` | `pm-cowork/contract-renewal-tracker/GEM_INSTRUCTIONS.md` |
 | Contract Review | `pm-legal` | `pm-legal/contract-review/GEM_INSTRUCTIONS.md` |
 | Contributor Guide | `pm-devrel` | `pm-devrel/contributor-guide/GEM_INSTRUCTIONS.md` |
@@ -233,6 +235,7 @@
 | Deck Review Rubric | `pm-cowork` | `pm-cowork/deck-review-rubric/GEM_INSTRUCTIONS.md` |
 | Deep Work Blocking | `pm-cowork` | `pm-cowork/deep-work-blocking/GEM_INSTRUCTIONS.md` |
 | Deepfake Drill | `pm-2027` | `pm-2027/deepfake-drill/GEM_INSTRUCTIONS.md` |
+| Defamation Response | `pm-legal` | `pm-legal/defamation-response/GEM_INSTRUCTIONS.md` |
 | Delay Claim Letter | `pm-construction` | `pm-construction/delay-claim-letter/GEM_INSTRUCTIONS.md` |
 | Delegation Brief | `pm-cowork` | `pm-cowork/delegation-brief/GEM_INSTRUCTIONS.md` |
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/GEM_INSTRUCTIONS.md` |
@@ -395,6 +398,7 @@
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/GEM_INSTRUCTIONS.md` |
 | HN Digest | `pm-live` | `pm-live/hn-digest/GEM_INSTRUCTIONS.md` |
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/GEM_INSTRUCTIONS.md` |
+| HOA Violation Response | `pm-legal` | `pm-legal/hoa-violation-response/GEM_INSTRUCTIONS.md` |
 | Hobby Starter Kit | `pm-hobbies` | `pm-hobbies/hobby-starter-kit/GEM_INSTRUCTIONS.md` |
 | Home Contractor Quote Decoder | `pm-decoders` | `pm-decoders/home-contractor-quote-decoder/GEM_INSTRUCTIONS.md` |
 | Home Workout Builder | `pm-wellbeing` | `pm-wellbeing/home-workout-builder/GEM_INSTRUCTIONS.md` |
@@ -443,6 +447,7 @@
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/GEM_INSTRUCTIONS.md` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/GEM_INSTRUCTIONS.md` |
 | Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/GEM_INSTRUCTIONS.md` |
+| Jury Duty Guide | `pm-legal` | `pm-legal/jury-duty-guide/GEM_INSTRUCTIONS.md` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/GEM_INSTRUCTIONS.md` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/GEM_INSTRUCTIONS.md` |
 | Kids' Online-Safety Plan | `pm-digital-safety` | `pm-digital-safety/kids-online-safety-plan/GEM_INSTRUCTIONS.md` |
@@ -462,6 +467,7 @@
 | Layoff Financial Triage | `pm-layoff` | `pm-layoff/layoff-financial-triage/GEM_INSTRUCTIONS.md` |
 | Lease Decoder | `pm-decoders` | `pm-decoders/lease-decoder/GEM_INSTRUCTIONS.md` |
 | Legal Brief | `pm-legal` | `pm-legal/legal-brief/GEM_INSTRUCTIONS.md` |
+| Lemon Law Check | `pm-legal` | `pm-legal/lemon-law-check/GEM_INSTRUCTIONS.md` |
 | Lending Risk Brief | `pm-banking` | `pm-banking/lending-risk-brief/GEM_INSTRUCTIONS.md` |
 | Lesson Plan | `pm-education` | `pm-education/lesson-plan/GEM_INSTRUCTIONS.md` |
 | Lesson Plan Builder | `pm-teaching` | `pm-teaching/lesson-plan-builder/GEM_INSTRUCTIONS.md` |
@@ -580,6 +586,7 @@
 | Policy Renewal Review | `pm-insurance` | `pm-insurance/policy-renewal-review/GEM_INSTRUCTIONS.md` |
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/GEM_INSTRUCTIONS.md` |
 | Posture Reset Plan | `pm-wellbeing` | `pm-wellbeing/posture-reset-plan/GEM_INSTRUCTIONS.md` |
+| Power of Attorney Explainer | `pm-legal` | `pm-legal/power-of-attorney-explainer/GEM_INSTRUCTIONS.md` |
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/GEM_INSTRUCTIONS.md` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/GEM_INSTRUCTIONS.md` |
 | PR Description | `pm-craft` | `pm-craft/pr-description/GEM_INSTRUCTIONS.md` |
@@ -618,6 +625,7 @@
 | Property Investment Analysis | `pm-realestate` | `pm-realestate/property-investment-analysis/GEM_INSTRUCTIONS.md` |
 | Property Listing | `pm-realestate` | `pm-realestate/property-listing/GEM_INSTRUCTIONS.md` |
 | Property Offer Letter | `pm-realestate` | `pm-realestate/property-offer-letter/GEM_INSTRUCTIONS.md` |
+| Property Tax Appeal | `pm-legal` | `pm-legal/property-tax-appeal/GEM_INSTRUCTIONS.md` |
 | Proposal Skeleton | `pm-cowork` | `pm-cowork/proposal-skeleton/GEM_INSTRUCTIONS.md` |
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/GEM_INSTRUCTIONS.md` |
 | Public Comment | `pm-gov` | `pm-gov/public-comment/GEM_INSTRUCTIONS.md` |
@@ -820,6 +828,7 @@
 | Technical Debt Register | `pm-engineering` | `pm-engineering/technical-debt-register/GEM_INSTRUCTIONS.md` |
 | Technical Spec Template | `pm-delivery` | `pm-delivery/technical-spec-template/GEM_INSTRUCTIONS.md` |
 | Template Designer | `pm-cowork` | `pm-cowork/template-designer/GEM_INSTRUCTIONS.md` |
+| Tenant Rights Explainer | `pm-legal` | `pm-legal/tenant-rights-explainer/GEM_INSTRUCTIONS.md` |
 | Tenant Screening Guide | `pm-realestate` | `pm-realestate/tenant-screening-guide/GEM_INSTRUCTIONS.md` |
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/GEM_INSTRUCTIONS.md` |
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/GEM_INSTRUCTIONS.md` |
@@ -903,6 +912,7 @@
 | Win-back Playbook | `pm-cs` | `pm-cs/winback-playbook/GEM_INSTRUCTIONS.md` |
 | Windfall Plan | `pm-money` | `pm-money/windfall-plan/GEM_INSTRUCTIONS.md` |
 | Wine Pairing | `pm-hobbies` | `pm-hobbies/wine-pairing/GEM_INSTRUCTIONS.md` |
+| Witness Statement Writer | `pm-legal` | `pm-legal/witness-statement-writer/GEM_INSTRUCTIONS.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/GEM_INSTRUCTIONS.md` |
 | Working Agreements | `pm-cowork` | `pm-cowork/working-agreements/GEM_INSTRUCTIONS.md` |
 | Workshop Designer | `pm-cowork` | `pm-cowork/workshop-designer/GEM_INSTRUCTIONS.md` |

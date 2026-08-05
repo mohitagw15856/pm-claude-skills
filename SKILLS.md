@@ -1,4 +1,4 @@
-# 🗂️ All 906 Skills — full catalog
+# 🗂️ All 916 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -564,7 +564,7 @@
 | **Vendor Evaluation** (`vendor-evaluation`) | Create a structured vendor evaluation framework for any procurement decision. | — |
 | **Workshop Facilitation Guide** (`workshop-facilitation-guide`) | Design and facilitate any workshop, working session, or collaborative meeting. | — |
 
-## ⚖️ Legal & Compliance (16 skills)
+## ⚖️ Legal & Compliance (26 skills)
 
 ### `pm-compliance` — 7 skills
 
@@ -578,19 +578,29 @@
 | **SOC 2 Readiness** (`soc2-readiness`) | Assess SOC 2 readiness across the Trust Services Criteria and produce a gap remediation plan. | — |
 | **Vendor Security Review** (`vendor-security-review`) | Run a third-party / vendor security review and assign a risk tier with required controls. | — |
 
-### `pm-legal` — 9 skills · 1 eval-scored
+### `pm-legal` — 19 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Cease-and-Desist Letter** (`cease-and-desist-letter`) | Draft a firm, professional cease-and-desist letter to stop harassment, defamation, IP misuse, or unwanted contact — clear about what must stop and… | — |
 | **Clause Explainer** (`clause-explainer`) | Explain a contract clause in plain English — what it means, who it favours, the realistic risk, and what to negotiate. | — |
 | **Compliance Checklist** (`compliance-checklist`) | Generate a prioritised compliance checklist for GDPR, SOC 2, ISO 27001, FCA, HIPAA, or other frameworks with a gap analysis. | — |
+| **Contract Red Flags** (`contract-red-flags`) | Scan a contract you're about to sign in plain language — surface the clauses that could bite you, what they mean, and what to question or renegotiate. | — |
 | **Contract Review** (`contract-review`) | Review and summarise any contract or legal agreement. | — |
+| **Defamation Response** (`defamation-response`) | Respond to false, damaging statements about you or your business — decide what actually counts as defamation, preserve evidence, and choose the… | — |
 | **Demand Letter** (`demand-letter`) | Draft a firm, professional demand letter that states the facts, the legal/contractual basis, the specific demand, and a deadline. | — |
 | **DPA Review** (`dpa-review`) | Read a Data Processing Agreement before you sign it — sub-processors, transfer mechanism, breach-notice window, deletion, audit rights — in plain… | — |
+| **HOA Violation Response** (`hoa-violation-response`) | Respond to an HOA or condo-association violation notice or fine — decide whether to comply, cure, or dispute, and do it on the record. | — |
+| **Jury Duty Guide** (`jury-duty-guide`) | Understand a jury-duty summons and handle it right — what's required, whether you can defer or be excused, and what to expect on the day. | — |
 | **Legal Brief** (`legal-brief`) | Draft a structured legal brief, case summary, or legal argument outline. | — |
+| **Lemon Law Check** (`lemon-law-check`) | Figure out whether your problem car might qualify for a refund or replacement under lemon law or warranty — and build the paper trail to claim it. | — |
 | **NDA Analyser** (`nda-analyser`) | Analyses a Non-Disclosure Agreement clause by clause and flags unusual terms, one-sided provisions, and negotiation points. | — |
+| **Power of Attorney Explainer** (`power-of-attorney-explainer`) | Understand power of attorney — which type you need, what it covers, and how to set one up properly — so the right person can act for you or a… | — |
 | **Privacy Policy Drafter** (`privacy-policy-drafter`) | Draft a clear, plain-language privacy policy tailored to what a product actually collects and does with data. | ✅ 4.8/5 |
+| **Property Tax Appeal** (`property-tax-appeal`) | Challenge an over-assessed property tax bill — check whether your assessment is too high, build the evidence, and file the appeal before the deadline. | — |
 | **Small-Claims Prep** (`small-claims-prep`) | Prepare a small-claims case end to end — the demand letter that often settles it first, the evidence pack, what to file, and a plain-English… | — |
+| **Tenant Rights Explainer** (`tenant-rights-explainer`) | Understand your rights as a renter in a specific situation — repairs ignored, a rent increase, an eviction notice, deposit disputes, or entry… | — |
+| **Witness Statement Writer** (`witness-statement-writer`) | Write a clear, factual witness statement or account of an incident — for an insurance claim, small claims, a workplace matter, or the police —… | — |
 
 ## 🧑 You & Career (67 skills)
 
@@ -1474,4 +1484,4 @@
 
 ---
 
-_906 skills across 108 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_916 skills across 108 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
