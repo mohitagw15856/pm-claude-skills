@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-916 skills exported. Copy a `.mdc rule` into the tool to use it.
+928 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -75,6 +75,7 @@
 | Big-Purchase Timing | `pm-money` | `pm-money/big-purchase-timing/big-purchase-timing.mdc` |
 | Birdwatching Log | `pm-hobbies` | `pm-hobbies/birdwatching-log/birdwatching-log.mdc` |
 | Blast Radius Drill | `pm-seatbelt` | `pm-seatbelt/blast-radius-drill/blast-radius-drill.mdc` |
+| Blended-Family Plan | `pm-family` | `pm-family/blended-family-plan/blended-family-plan.mdc` |
 | Board Deck Narrative | `pm-business` | `pm-business/board-deck-narrative/board-deck-narrative.mdc` |
 | Board Game Designer | `pm-tabletop` | `pm-tabletop/board-game-designer/board-game-designer.mdc` |
 | Board Game Night Planner | `pm-hobbies` | `pm-hobbies/board-game-night-planner/board-game-night-planner.mdc` |
@@ -124,6 +125,7 @@
 | Chart Choice | `pm-cowork` | `pm-cowork/chart-choice/chart-choice.mdc` |
 | Chart Data Extractor | `pm-vision` | `pm-vision/chart-data-extractor/chart-data-extractor.mdc` |
 | Chess Opening Coach | `pm-hobbies` | `pm-hobbies/chess-opening-coach/chess-opening-coach.mdc` |
+| Childcare Comparison | `pm-family` | `pm-family/childcare-comparison/childcare-comparison.mdc` |
 | Churn Analysis | `pm-cs` | `pm-cs/churn-analysis/churn-analysis.mdc` |
 | CI/CD Playbook | `pm-engineering` | `pm-engineering/cicd-playbook/cicd-playbook.mdc` |
 | Citation Hygiene | `pm-cowork` | `pm-cowork/citation-hygiene/citation-hygiene.mdc` |
@@ -141,6 +143,7 @@
 | Clone Brief | `pm-2027` | `pm-2027/clone-brief/clone-brief.mdc` |
 | Closing Disclosure Decoder | `pm-decoders` | `pm-decoders/closing-disclosure-decoder/closing-disclosure-decoder.mdc` |
 | Co-Marketing | `pm-growth` | `pm-growth/co-marketing/co-marketing.mdc` |
+| Co-Parenting Messages | `pm-family` | `pm-family/co-parenting-messages/co-parenting-messages.mdc` |
 | Cocktail From What I Have | `pm-hobbies` | `pm-hobbies/cocktail-from-what-i-have/cocktail-from-what-i-have.mdc` |
 | Code Explainer | `pm-engineering` | `pm-engineering/code-explainer/code-explainer.mdc` |
 | Code Review Checklist | `pm-engineering` | `pm-engineering/code-review-checklist/code-review-checklist.mdc` |
@@ -166,6 +169,7 @@
 | Competitor Teardown | `pm-gtm` | `pm-gtm/competitor-teardown/competitor-teardown.mdc` |
 | Complaint Letter | `pm-lifeadmin` | `pm-lifeadmin/complaint-letter/complaint-letter.mdc` |
 | Compliance Checklist | `pm-legal` | `pm-legal/compliance-checklist/compliance-checklist.mdc` |
+| Condolence Message Helper | `pm-family` | `pm-family/condolence-message-helper/condolence-message-helper.mdc` |
 | Conference Talk Proposal | `pm-devrel` | `pm-devrel/conference-talk-proposal/conference-talk-proposal.mdc` |
 | Consulting Proposal | `pm-consulting` | `pm-consulting/consulting-proposal/consulting-proposal.mdc` |
 | Content Calendar | `pm-gtm` | `pm-gtm/content-calendar/content-calendar.mdc` |
@@ -328,6 +332,7 @@
 | Exploratory Test Charter | `pm-qa` | `pm-qa/exploratory-test-charter/exploratory-test-charter.mdc` |
 | Fact-Check Pass | `pm-journalism` | `pm-journalism/fact-check-pass/fact-check-pass.mdc` |
 | Factory Acceptance Test | `pm-hardware` | `pm-hardware/factory-acceptance-test/factory-acceptance-test.mdc` |
+| Family Emergency Plan | `pm-family` | `pm-family/family-emergency-plan/family-emergency-plan.mdc` |
 | Fantasy League Drafter | `pm-hobbies` | `pm-hobbies/fantasy-league-drafter/fantasy-league-drafter.mdc` |
 | FAQ Builder | `pm-cowork` | `pm-cowork/faq-builder/faq-builder.mdc` |
 | Feature Flag Guide | `pm-engineering` | `pm-engineering/feature-flag-guide/feature-flag-guide.mdc` |
@@ -414,6 +419,7 @@
 | IEP Goal Writer | `pm-teaching` | `pm-teaching/iep-goal-writer/iep-goal-writer.mdc` |
 | Immigration Document Checklist | `pm-personal` | `pm-personal/immigration-document-checklist/immigration-document-checklist.mdc` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/impact-report.mdc` |
+| In-Law Boundary Scripts | `pm-family` | `pm-family/in-law-boundary-scripts/in-law-boundary-scripts.mdc` |
 | Inbox Triage (Live) | `pm-cowork-live` | `pm-cowork-live/inbox-triage-live/inbox-triage-live.mdc` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `pm-cowork/inbox-unsubscribe-purge/inbox-unsubscribe-purge.mdc` |
 | Inbox Zero Operator | `pm-operator` | `pm-operator/inbox-zero-operator/inbox-zero-operator.mdc` |
@@ -483,6 +489,8 @@
 | Local Dev Setup | `pm-engineering` | `pm-engineering/local-dev-setup/local-dev-setup.mdc` |
 | Localization Brief | `pm-localization` | `pm-localization/localization-brief/localization-brief.mdc` |
 | Logistics Incident Report | `pm-supplychain` | `pm-supplychain/logistics-incident-report/logistics-incident-report.mdc` |
+| Long-Distance Relationship Plan | `pm-family` | `pm-family/long-distance-relationship-plan/long-distance-relationship-plan.mdc` |
+| Love-Letter Helper | `pm-family` | `pm-family/love-letter-helper/love-letter-helper.mdc` |
 | Lower My Bill | `pm-money` | `pm-money/lower-my-bill/lower-my-bill.mdc` |
 | Machiavelli Counsel | `pm-dead-mentors` | `pm-dead-mentors/machiavelli-counsel/machiavelli-counsel.mdc` |
 | Maintainer Triage | `pm-maintainer` | `pm-maintainer/maintainer-triage/maintainer-triage.mdc` |
@@ -527,6 +535,7 @@
 | NDA Analyser | `pm-legal` | `pm-legal/nda-analyser/nda-analyser.mdc` |
 | Neighbor-Dispute Resolver | `pm-lifeadmin` | `pm-lifeadmin/neighbor-dispute-resolver/neighbor-dispute-resolver.mdc` |
 | Net Worth Statement | `pm-money` | `pm-money/net-worth-statement/net-worth-statement.mdc` |
+| New-Baby Logistics | `pm-family` | `pm-family/new-baby-logistics/new-baby-logistics.mdc` |
 | New Parent Logistics | `pm-lifeadmin` | `pm-lifeadmin/new-parent-logistics/new-parent-logistics.mdc` |
 | Newsletter Digest Brief | `pm-cowork` | `pm-cowork/newsletter-digest-brief/newsletter-digest-brief.mdc` |
 | Newsletter Writer | `pm-creator` | `pm-creator/newsletter-writer/newsletter-writer.mdc` |
@@ -663,6 +672,7 @@
 | Regression Test Plan | `pm-qa` | `pm-qa/regression-test-plan/regression-test-plan.mdc` |
 | Regulator Eyes | `pm-simulators` | `pm-simulators/regulator-eyes/regulator-eyes.mdc` |
 | Regulatory Impact Analysis | `pm-gov` | `pm-gov/regulatory-impact-analysis/regulatory-impact-analysis.mdc` |
+| Relationship Check-In | `pm-family` | `pm-family/relationship-check-in/relationship-check-in.mdc` |
 | Release Day Countdown | `pm-musician` | `pm-musician/release-day-countdown/release-day-countdown.mdc` |
 | Relocation Planner | `pm-lifeadmin` | `pm-lifeadmin/relocation-planner/relocation-planner.mdc` |
 | Renewal Playbook | `pm-cs` | `pm-cs/renewal-playbook/renewal-playbook.mdc` |
@@ -720,6 +730,7 @@
 | Schedule Monte Carlo | `pm-calculators` | `pm-calculators/schedule-monte-carlo/schedule-monte-carlo.mdc` |
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/schedule-recipe.mdc` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/schema-markup.mdc` |
+| School Choice Decision | `pm-family` | `pm-family/school-choice-decision/school-choice-decision.mdc` |
 | Scope Creep Response | `pm-freelance` | `pm-freelance/scope-creep-response/scope-creep-response.mdc` |
 | Screen-Time Detox | `pm-wellbeing` | `pm-wellbeing/screen-time-detox/screen-time-detox.mdc` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/screenshot-teardown.mdc` |
@@ -900,6 +911,7 @@
 | Wedding Logistics Planner | `pm-wedding` | `pm-wedding/wedding-logistics-planner/wedding-logistics-planner.mdc` |
 | Wedding Speech | `pm-lifeadmin` | `pm-lifeadmin/wedding-speech/wedding-speech.mdc` |
 | Wedding Vendor Contract Decoder | `pm-wedding` | `pm-wedding/wedding-vendor-contract-decoder/wedding-vendor-contract-decoder.mdc` |
+| Wedding Vows Writer | `pm-family` | `pm-family/wedding-vows-writer/wedding-vows-writer.mdc` |
 | Weekly Review Ritual | `pm-cowork` | `pm-cowork/weekly-review-ritual/weekly-review-ritual.mdc` |
 | Wellness Plan | `pm-veterinary` | `pm-veterinary/wellness-plan/wellness-plan.mdc` |
 | What To Ask | `pm-decoders` | `pm-decoders/what-to-ask/what-to-ask.mdc` |

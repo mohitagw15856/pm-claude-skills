@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-family",
+      "description": "Family, care & relationships skills: new-baby logistics, childcare & school choice, co-parenting messages, family emergency planning, wedding vows, love letters, long-distance relationships, in-law boundaries, condolences, relationship check-ins, and blending families.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-family",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-digital-safety",
       "description": "Consumer digital self-defense skills: identity-theft recovery, data-broker removal, account recovery, ransomware first response, backups, phishing triage, passwords & 2FA, kids' online safety, securing a lost phone, oversharing audit, doxxing response, and safe online shopping.",
       "version": "1.0.0",

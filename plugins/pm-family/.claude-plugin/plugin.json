@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-family",
+  "version": "1.0.0",
+  "description": "Family, care & relationships skills: new-baby logistics, childcare & school choice, co-parenting messages, family emergency planning, wedding vows, love letters, long-distance relationships, in-law boundaries, condolences, relationship check-ins, and blending families.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "family",
+    "relationships",
+    "parenting",
+    "kids",
+    "couples",
+    "care"
+  ]
+}

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-916 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+928 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -75,6 +75,7 @@
 | Big-Purchase Timing | `pm-money` | `pm-money/big-purchase-timing/GEM_INSTRUCTIONS.md` |
 | Birdwatching Log | `pm-hobbies` | `pm-hobbies/birdwatching-log/GEM_INSTRUCTIONS.md` |
 | Blast Radius Drill | `pm-seatbelt` | `pm-seatbelt/blast-radius-drill/GEM_INSTRUCTIONS.md` |
+| Blended-Family Plan | `pm-family` | `pm-family/blended-family-plan/GEM_INSTRUCTIONS.md` |
 | Board Deck Narrative | `pm-business` | `pm-business/board-deck-narrative/GEM_INSTRUCTIONS.md` |
 | Board Game Designer | `pm-tabletop` | `pm-tabletop/board-game-designer/GEM_INSTRUCTIONS.md` |
 | Board Game Night Planner | `pm-hobbies` | `pm-hobbies/board-game-night-planner/GEM_INSTRUCTIONS.md` |
@@ -124,6 +125,7 @@
 | Chart Choice | `pm-cowork` | `pm-cowork/chart-choice/GEM_INSTRUCTIONS.md` |
 | Chart Data Extractor | `pm-vision` | `pm-vision/chart-data-extractor/GEM_INSTRUCTIONS.md` |
 | Chess Opening Coach | `pm-hobbies` | `pm-hobbies/chess-opening-coach/GEM_INSTRUCTIONS.md` |
+| Childcare Comparison | `pm-family` | `pm-family/childcare-comparison/GEM_INSTRUCTIONS.md` |
 | Churn Analysis | `pm-cs` | `pm-cs/churn-analysis/GEM_INSTRUCTIONS.md` |
 | CI/CD Playbook | `pm-engineering` | `pm-engineering/cicd-playbook/GEM_INSTRUCTIONS.md` |
 | Citation Hygiene | `pm-cowork` | `pm-cowork/citation-hygiene/GEM_INSTRUCTIONS.md` |
@@ -141,6 +143,7 @@
 | Clone Brief | `pm-2027` | `pm-2027/clone-brief/GEM_INSTRUCTIONS.md` |
 | Closing Disclosure Decoder | `pm-decoders` | `pm-decoders/closing-disclosure-decoder/GEM_INSTRUCTIONS.md` |
 | Co-Marketing | `pm-growth` | `pm-growth/co-marketing/GEM_INSTRUCTIONS.md` |
+| Co-Parenting Messages | `pm-family` | `pm-family/co-parenting-messages/GEM_INSTRUCTIONS.md` |
 | Cocktail From What I Have | `pm-hobbies` | `pm-hobbies/cocktail-from-what-i-have/GEM_INSTRUCTIONS.md` |
 | Code Explainer | `pm-engineering` | `pm-engineering/code-explainer/GEM_INSTRUCTIONS.md` |
 | Code Review Checklist | `pm-engineering` | `pm-engineering/code-review-checklist/GEM_INSTRUCTIONS.md` |
@@ -166,6 +169,7 @@
 | Competitor Teardown | `pm-gtm` | `pm-gtm/competitor-teardown/GEM_INSTRUCTIONS.md` |
 | Complaint Letter | `pm-lifeadmin` | `pm-lifeadmin/complaint-letter/GEM_INSTRUCTIONS.md` |
 | Compliance Checklist | `pm-legal` | `pm-legal/compliance-checklist/GEM_INSTRUCTIONS.md` |
+| Condolence Message Helper | `pm-family` | `pm-family/condolence-message-helper/GEM_INSTRUCTIONS.md` |
 | Conference Talk Proposal | `pm-devrel` | `pm-devrel/conference-talk-proposal/GEM_INSTRUCTIONS.md` |
 | Consulting Proposal | `pm-consulting` | `pm-consulting/consulting-proposal/GEM_INSTRUCTIONS.md` |
 | Content Calendar | `pm-gtm` | `pm-gtm/content-calendar/GEM_INSTRUCTIONS.md` |
@@ -328,6 +332,7 @@
 | Exploratory Test Charter | `pm-qa` | `pm-qa/exploratory-test-charter/GEM_INSTRUCTIONS.md` |
 | Fact-Check Pass | `pm-journalism` | `pm-journalism/fact-check-pass/GEM_INSTRUCTIONS.md` |
 | Factory Acceptance Test | `pm-hardware` | `pm-hardware/factory-acceptance-test/GEM_INSTRUCTIONS.md` |
+| Family Emergency Plan | `pm-family` | `pm-family/family-emergency-plan/GEM_INSTRUCTIONS.md` |
 | Fantasy League Drafter | `pm-hobbies` | `pm-hobbies/fantasy-league-drafter/GEM_INSTRUCTIONS.md` |
 | FAQ Builder | `pm-cowork` | `pm-cowork/faq-builder/GEM_INSTRUCTIONS.md` |
 | Feature Flag Guide | `pm-engineering` | `pm-engineering/feature-flag-guide/GEM_INSTRUCTIONS.md` |
@@ -414,6 +419,7 @@
 | IEP Goal Writer | `pm-teaching` | `pm-teaching/iep-goal-writer/GEM_INSTRUCTIONS.md` |
 | Immigration Document Checklist | `pm-personal` | `pm-personal/immigration-document-checklist/GEM_INSTRUCTIONS.md` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/GEM_INSTRUCTIONS.md` |
+| In-Law Boundary Scripts | `pm-family` | `pm-family/in-law-boundary-scripts/GEM_INSTRUCTIONS.md` |
 | Inbox Triage (Live) | `pm-cowork-live` | `pm-cowork-live/inbox-triage-live/GEM_INSTRUCTIONS.md` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `pm-cowork/inbox-unsubscribe-purge/GEM_INSTRUCTIONS.md` |
 | Inbox Zero Operator | `pm-operator` | `pm-operator/inbox-zero-operator/GEM_INSTRUCTIONS.md` |
@@ -483,6 +489,8 @@
 | Local Dev Setup | `pm-engineering` | `pm-engineering/local-dev-setup/GEM_INSTRUCTIONS.md` |
 | Localization Brief | `pm-localization` | `pm-localization/localization-brief/GEM_INSTRUCTIONS.md` |
 | Logistics Incident Report | `pm-supplychain` | `pm-supplychain/logistics-incident-report/GEM_INSTRUCTIONS.md` |
+| Long-Distance Relationship Plan | `pm-family` | `pm-family/long-distance-relationship-plan/GEM_INSTRUCTIONS.md` |
+| Love-Letter Helper | `pm-family` | `pm-family/love-letter-helper/GEM_INSTRUCTIONS.md` |
 | Lower My Bill | `pm-money` | `pm-money/lower-my-bill/GEM_INSTRUCTIONS.md` |
 | Machiavelli Counsel | `pm-dead-mentors` | `pm-dead-mentors/machiavelli-counsel/GEM_INSTRUCTIONS.md` |
 | Maintainer Triage | `pm-maintainer` | `pm-maintainer/maintainer-triage/GEM_INSTRUCTIONS.md` |
@@ -527,6 +535,7 @@
 | NDA Analyser | `pm-legal` | `pm-legal/nda-analyser/GEM_INSTRUCTIONS.md` |
 | Neighbor-Dispute Resolver | `pm-lifeadmin` | `pm-lifeadmin/neighbor-dispute-resolver/GEM_INSTRUCTIONS.md` |
 | Net Worth Statement | `pm-money` | `pm-money/net-worth-statement/GEM_INSTRUCTIONS.md` |
+| New-Baby Logistics | `pm-family` | `pm-family/new-baby-logistics/GEM_INSTRUCTIONS.md` |
 | New Parent Logistics | `pm-lifeadmin` | `pm-lifeadmin/new-parent-logistics/GEM_INSTRUCTIONS.md` |
 | Newsletter Digest Brief | `pm-cowork` | `pm-cowork/newsletter-digest-brief/GEM_INSTRUCTIONS.md` |
 | Newsletter Writer | `pm-creator` | `pm-creator/newsletter-writer/GEM_INSTRUCTIONS.md` |
@@ -663,6 +672,7 @@
 | Regression Test Plan | `pm-qa` | `pm-qa/regression-test-plan/GEM_INSTRUCTIONS.md` |
 | Regulator Eyes | `pm-simulators` | `pm-simulators/regulator-eyes/GEM_INSTRUCTIONS.md` |
 | Regulatory Impact Analysis | `pm-gov` | `pm-gov/regulatory-impact-analysis/GEM_INSTRUCTIONS.md` |
+| Relationship Check-In | `pm-family` | `pm-family/relationship-check-in/GEM_INSTRUCTIONS.md` |
 | Release Day Countdown | `pm-musician` | `pm-musician/release-day-countdown/GEM_INSTRUCTIONS.md` |
 | Relocation Planner | `pm-lifeadmin` | `pm-lifeadmin/relocation-planner/GEM_INSTRUCTIONS.md` |
 | Renewal Playbook | `pm-cs` | `pm-cs/renewal-playbook/GEM_INSTRUCTIONS.md` |
@@ -720,6 +730,7 @@
 | Schedule Monte Carlo | `pm-calculators` | `pm-calculators/schedule-monte-carlo/GEM_INSTRUCTIONS.md` |
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/GEM_INSTRUCTIONS.md` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/GEM_INSTRUCTIONS.md` |
+| School Choice Decision | `pm-family` | `pm-family/school-choice-decision/GEM_INSTRUCTIONS.md` |
 | Scope Creep Response | `pm-freelance` | `pm-freelance/scope-creep-response/GEM_INSTRUCTIONS.md` |
 | Screen-Time Detox | `pm-wellbeing` | `pm-wellbeing/screen-time-detox/GEM_INSTRUCTIONS.md` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/GEM_INSTRUCTIONS.md` |
@@ -900,6 +911,7 @@
 | Wedding Logistics Planner | `pm-wedding` | `pm-wedding/wedding-logistics-planner/GEM_INSTRUCTIONS.md` |
 | Wedding Speech | `pm-lifeadmin` | `pm-lifeadmin/wedding-speech/GEM_INSTRUCTIONS.md` |
 | Wedding Vendor Contract Decoder | `pm-wedding` | `pm-wedding/wedding-vendor-contract-decoder/GEM_INSTRUCTIONS.md` |
+| Wedding Vows Writer | `pm-family` | `pm-family/wedding-vows-writer/GEM_INSTRUCTIONS.md` |
 | Weekly Review Ritual | `pm-cowork` | `pm-cowork/weekly-review-ritual/GEM_INSTRUCTIONS.md` |
 | Wellness Plan | `pm-veterinary` | `pm-veterinary/wellness-plan/GEM_INSTRUCTIONS.md` |
 | What To Ask | `pm-decoders` | `pm-decoders/what-to-ask/GEM_INSTRUCTIONS.md` |

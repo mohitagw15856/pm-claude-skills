@@ -1,4 +1,4 @@
-# 🗂️ All 916 Skills — full catalog
+# 🗂️ All 928 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -706,7 +706,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (469 skills)
+## 🌍 Industries & Public Sector (481 skills)
 
 ### `other` — 4 skills
 
@@ -1069,6 +1069,23 @@
 | **Digital Legacy Planner** (`digital-legacy-planner`) | Plan what happens to your digital life — the account inventory, the access plan that doesn't violate terms or law, platform legacy settings, and… | — |
 | **Estate Settlement Organizer** (`estate-settlement-organizer`) | Organize an executor's work — the settlement ladder from will-to-probate-to-distribution, the asset/debt inventory, the creditor and beneficiary… | — |
 | **When Someone Dies** (`when-someone-dies`) | The first two weeks after a death, organized — what genuinely needs doing now, what only feels urgent, who to notify in what order, and the… | — |
+
+### `pm-family` — 12 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Blended-Family Plan** (`blended-family-plan`) | Plan the merging of two families thoughtfully — roles, rules, routines, and relationships — so a blended household starts on the right foot… | — |
+| **Childcare Comparison** (`childcare-comparison`) | Compare childcare options — nursery/daycare, childminder, nanny, family, or a mix — for your family's real needs, budget, and values. | — |
+| **Co-Parenting Messages** (`co-parenting-messages`) | Write calm, businesslike co-parenting messages that keep the focus on the kids and stay out of the old conflict — for scheduling, expenses… | — |
+| **Condolence Message Helper** (`condolence-message-helper`) | Write a sincere condolence or sympathy message when someone has died or a friend is grieving — warm, personal, and free of the clichés that hurt… | — |
+| **Family Emergency Plan** (`family-emergency-plan`) | Build a family emergency plan — contacts, meeting points, key documents, and 'if something happens to me' info — so your household isn't… | — |
+| **In-Law Boundary Scripts** (`in-law-boundary-scripts`) | Set a boundary with in-laws or extended family kindly and clearly — the words to say, a united-front approach with your partner, and a plan for… | — |
+| **Long-Distance Relationship Plan** (`long-distance-relationship-plan`) | Build a plan to keep a long-distance relationship close and healthy — communication rhythms, visits, shared experiences, and a shared sense of the… | — |
+| **Love-Letter Helper** (`love-letter-helper`) | Help you write a heartfelt letter to someone you love — for an anniversary, a hard time, a birthday, or just because — that sounds like you and… | — |
+| **New-Baby Logistics** (`new-baby-logistics`) | Turn 'we're having a baby' into a calm, timed logistics plan — the admin, leave, registrations, and prep that has to happen, sequenced so nothing… | — |
+| **Relationship Check-In** (`relationship-check-in`) | Run a calm, regular relationship check-in with your partner — a structured 'how are we doing' conversation that catches small things before they… | — |
+| **School Choice Decision** (`school-choice-decision`) | Choose the right school for a specific child by weighing what actually matters to them and your family — not just rankings. | — |
+| **Wedding Vows Writer** (`wedding-vows-writer`) | Write personal wedding vows that sound like you — specific, heartfelt, and the right length — instead of generic or cheesy. | — |
 
 ### `pm-freelance` — 4 skills
 
@@ -1484,4 +1501,4 @@
 
 ---
 
-_916 skills across 108 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_928 skills across 109 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
