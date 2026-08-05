@@ -1,0 +1,93 @@
+---
+aliases: ["Small-Claims Prep"]
+tags: [pm-skills, skill]
+skill: small-claims-prep
+description: "Prepare a small-claims case end to end — the demand letter that often settles it first, the evidence pack, what to file, and a plain-English walkthrough of the hearing. Use when asked to take someone to small claims, sue in small claims court, prepare a small claims case, or someone owes me money and won't pay. Produces a final demand letter, the claim summary with amount and legal-ish basis, the organized evidence pack, a filing checklist, and a calm hearing script — flagging jurisdiction limits to verify. Not legal advice."
+---
+
+# Small-Claims Prep
+
+Small-claims court is built for people without lawyers — but it still rewards the side that shows up organized. Most cases never reach a judge: a clear final demand that shows you're ready to file often triggers payment. This prepares the whole path — the demand letter, the money story, the evidence in order, the filing steps, and what to actually say at the hearing — while being honest that limits and procedures vary by place and this isn't legal advice.
+
+## What This Skill Produces
+
+- **The final demand letter** — the "pay by [date] or I file" letter that settles many disputes before court
+- **The claim summary** — who owes what, why, the amount, and the basis (contract, unpaid invoice, damage, deposit, faulty goods)
+- **The evidence pack** — everything organized into a timeline: contracts, messages, invoices, photos, receipts
+- **The filing checklist** — what most small-claims processes need (correct defendant name/address, the amount, the fee, the forms) — with "verify locally" flags
+- **The hearing script** — a calm, chronological way to present it, the documents to hand up, and how to answer the judge
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The dispute** — what happened, who the other party is (exact legal name/address), and when
+- **The amount** — what you're claiming and how you calculated it
+- **The basis** — unpaid invoice, broken contract, property damage, withheld deposit, defective goods/service
+- **Your evidence** — what you have (agreements, messages, photos, receipts) and any gaps
+- **Where** — your location/jurisdiction (drives the claim limit, fees, and process — to verify)
+
+## Framework: Settle If You Can, File If You Must
+
+1. **Demand first, in writing.** A dated final demand with a specific amount and a "or I will file on [date]" line resolves a large share of cases — and becomes evidence you tried.
+2. **Tell the money story simply.** Amount + why you're owed it + how you calculated it. Judges reward a clear number over a grievance.
+3. **Order the evidence as a timeline.** Chronological, labeled, one point per document. Confusion loses winnable cases.
+4. **Get the defendant right.** The correct legal name and address is the boring detail that sinks claims when wrong — nail it before filing.
+5. **Know the limits — and verify them.** Claim caps, fees, forms, and whether you can recover costs vary by jurisdiction. Treat all specifics as "confirm with your local court," never asserted.
+6. **Present, don't perform.** At the hearing: calm, chronological, stick to the facts and the number, hand up documents when asked.
+
+## Output Format
+
+### Small claim: [you] v [defendant legal name] · [amount] · basis: [type]
+
+**Step 1 — Final demand letter**
+> [Amount, why owed, how calculated, a firm pay-by date, "or I will file a claim on [date]"]
+
+**Step 2 — Claim summary**
+- Amount: [X] · Basis: [contract/invoice/damage/deposit/goods] · How calculated: […]
+
+**Step 3 — Evidence pack (timeline)**
+| Date | Document | What it proves |
+|---|---|---|
+
+**Step 4 — Filing checklist** *(verify with your local court)*
+- [ ] Correct defendant legal name + address
+- [ ] Amount within the local small-claims limit
+- [ ] Required form(s) + filing fee
+- [ ] Copies for court and defendant
+
+**Step 5 — Hearing script**
+> [Chronological facts → the amount → "my evidence shows…" → answer questions calmly]
+
+**Note:** general preparation aid, not legal advice. Limits, fees, and procedure vary — verify locally, and consider proper advice for complex or high-value claims.
+
+## Quality Checks
+- [ ] A final demand letter precedes any filing
+- [ ] The amount is stated with how it was calculated
+- [ ] Evidence is organized as a labeled timeline
+- [ ] The defendant's correct legal name/address is flagged as critical
+- [ ] Jurisdiction specifics (limit, fees, forms) are marked "verify locally," not asserted
+- [ ] A calm, factual hearing script is included
+- [ ] The "not legal advice" boundary is stated
+
+## Anti-Patterns
+- **Filing before demanding** — skipping the letter that often settles it.
+- **A grievance instead of a number** — no clear amount or calculation.
+- **Disorganized evidence** — a pile, not a timeline.
+- **Wrong defendant details** — suing a trading name instead of the legal entity.
+- **Asserting the claim limit or fees** as fixed instead of "verify locally."
+- **Coaching courtroom theatrics** instead of calm facts.
+
+## Example Trigger Phrases
+- "A contractor took my deposit and vanished — I want to take them to small claims."
+- "Client owes me $1,800 and won't pay. Help me prepare a case."
+- "Write me a final demand letter before I sue in small claims."
+- "My landlord kept my deposit unfairly — how do I file?"
+- "What evidence do I need and what do I say at the hearing?"
+
+---
+<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
+     variable for the highlighted text — replace it with your plugin's equivalent
+     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
+Apply the skill above to the following input:
+
+{{selection}}

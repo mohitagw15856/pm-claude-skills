@@ -1,56 +1,410 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0"><channel>
-  <title>PM Skills — The Ledger</title>
-  <link>https://mohitagw15856.github.io/pm-claude-skills/</link>
-  <description>The weekly digest of the open professional-skills library — new skills, releases, the Season, and the ecosystem. Written by the repo itself.</description>
-  <language>en</language>
-  <item>
-    <title>The Ledger — week 29, 2026</title>
-    <link>https://github.com/mohitagw15856/pm-claude-skills/blob/main/newsletter/2026-w29.md</link>
-    <guid>https://mohitagw15856.github.io/pm-claude-skills/feed.xml#2026-w29.md</guid>
-    <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
-    <description><![CDATA[> The week in the open library, written by the repo itself. 520 skills · [playground](https://mohitagw15856.github.io/pm-claude-skills/) · [subscribe](https://mohitagw15856.github.io/pm-claude-skills/feed.xml)
-
-## 🆕 54 new skills
-
-- **[Calendar Defrag](https://mohitagw15856.github.io/pm-claude-skills/skill/calendar-defrag.html)** — Defragment a work calendar through a tool-using agent — find the meeting debt, propose the consolidation, and (approval-gated) execute the moves.
-- **[Expense Filer](https://mohitagw15856.github.io/pm-claude-skills/skill/expense-filer.html)** — Turn a pile of receipts into a filed expense report through a tool-using agent — extraction, policy checks, and categorization done for you…
-- **[Form Filler Operator](https://mohitagw15856.github.io/pm-claude-skills/skill/form-filler-operator.html)** — Fill long web forms and applications through a computer-use agent — from a fact sheet you approve, field by field, with a full transcript and…
-- **[Inbox Zero Operator](https://mohitagw15856.github.io/pm-claude-skills/skill/inbox-zero-operator.html)** — Drive an email inbox to zero through a computer-use or tool-using agent — triage every message into act/delegate/defer/archive with drafts…
-- **[Subscription Auditor](https://mohitagw15856.github.io/pm-claude-skills/skill/subscription-auditor.html)** — Find the subscriptions you forgot you pay for — a tool-using agent audits statements and inboxes, prices the waste annually, and preps (never…
-- **[Acquirer Red Team](https://mohitagw15856.github.io/pm-claude-skills/skill/acquirer-red-team.html)** — Simulate the acquirer's diligence team hunting for reasons to cut your price — their internal red-flags memo with a price-chip estimate per finding.
-- **[Altitude Shifter](https://mohitagw15856.github.io/pm-claude-skills/skill/altitude-shifter.html)** — Re-pitch one piece of content for four audiences — the board, the engineers, a customer, a new hire — with a delta table showing what changed…
-- **[Benefits Decoder](https://mohitagw15856.github.io/pm-claude-skills/skill/benefits-decoder.html)** — Decode an employment benefits package into what it's actually worth and where the fine print bites.
-- **[Decision Forensics](https://mohitagw15856.github.io/pm-claude-skills/skill/decision-forensics.html)** — Reconstruct the decision actually made in a messy Slack, email, or meeting thread into a proper de]]></description>
-  </item>
-  <item>
-    <title>PM Skills Weekly — Issue 28</title>
-    <link>https://github.com/mohitagw15856/pm-claude-skills/blob/main/newsletter/2026-w28.md</link>
-    <guid>https://mohitagw15856.github.io/pm-claude-skills/feed.xml#2026-w28.md</guid>
-    <pubDate>Thu, 09 Jul 2026 00:00:00 GMT</pubDate>
-    <description><![CDATA[
-Your weekly minute on doing professional work with AI — one skill to master, a few to try, and the numbers.
-
-## 🌟 Skill of the week: Git Troubleshooter
-Diagnose a tangled git situation and give the exact, safe commands to fix it.
-**→ [Run it free](https://mohitagw15856.github.io/pm-claude-skills/?skill=git-troubleshooter)** · `git-troubleshooter` · ✅ 4/5
-
-## 🔥 Fresh picks
-- **[GDPR Compliance](https://mohitagw15856.github.io/pm-claude-skills/?skill=gdpr-compliance)** — Assess GDPR compliance and build the core records (ROPA, lawful basis, DSAR, DPIA triggers).
-- **[Headline Options](https://mohitagw15856.github.io/pm-claude-skills/?skill=headline-options)** — Generate and pressure-test headline options across proven formulas.
-- **[Impact Report](https://mohitagw15856.github.io/pm-claude-skills/?skill=impact-report)** — Write a compelling nonprofit impact or annual report that shows donors what their money achieved.
-
-## 📊 By the numbers
-**466** professional skills · **66** bundles · **28** eval-scored (avg 4.4/5).
-
----
-
-### 🎙️ Show script (for TTS / the podcast)
-> Good morning — this is PM Skills Weekly, issue 28. This week's skill to master is **Git Troubleshooter**: diagnose a tangled git situation and give the exact, safe commands to fix it. If you only try one thing this week, make it that one. A few fresh picks worth a look: GDPR Compliance, Headline Options, Impact Report. The library now stands at 466 skills across 66 bundles, 28 of them eval-scored. Run any of them free in your browser — no signup. That's your minute. See you next week.
-
----
-
-*Browse everything at [mohitagw15856.github.io/pm-claude-skills](https://mohitagw15856.github.io/pm-claude-skills) · [subscribe / archive](README.md) · open-source (MIT).*
-]]></description>
-  </item>
-</channel></rss>
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>PM Skills — new Agent Skills</title>
+  <subtitle>New professional Agent Skills as they land. Follow without email.</subtitle>
+  <link href="https://mohitagw15856.github.io/pm-claude-skills/feed.xml" rel="self"/>
+  <link href="https://mohitagw15856.github.io/pm-claude-skills/"/>
+  <id>https://mohitagw15856.github.io/pm-claude-skills/feed.xml</id>
+  <updated>2026-07-26T00:00:00Z</updated>
+  <author><name>PM Skills</name></author>
+  <entry>
+    <title>Agent Hiring Panel</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/agent-hiring-panel/SKILL.md"/>
+    <id>tag:pm-claude-skills,agent-hiring-panel</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-2027"/>
+    <summary>Hire an AI agent the way you'd hire an employee — a role spec with success criteria, a structured work-sample interview run on your real tasks…</summary>
+  </entry>
+  <entry>
+    <title>Agent Severance</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/agent-severance/SKILL.md"/>
+    <id>tag:pm-claude-skills,agent-severance</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-2027"/>
+    <summary>Offboard an AI agent the way you'd offboard an employee — inventory what it knew and touched, export then purge its memory, revoke every…</summary>
+  </entry>
+  <entry>
+    <title>AI Disclosure Policy</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/ai-disclosure-policy/SKILL.md"/>
+    <id>tag:pm-claude-skills,ai-disclosure-policy</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-2027"/>
+    <summary>Decide when and how your product and communications must (or should) label AI-generated content, and write the disclosure policy —…</summary>
+  </entry>
+  <entry>
+    <title>API For Yourself</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/api-for-yourself/SKILL.md"/>
+    <id>tag:pm-claude-skills,api-for-yourself</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-2027"/>
+    <summary>Publish 'how to work with me' as a literal API spec — endpoints (what to ask me for and what you'll get back), rate limits (meeting and interrupt…</summary>
+  </entry>
+  <entry>
+    <title>Attention Reset</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/attention-reset/SKILL.md"/>
+    <id>tag:pm-claude-skills,attention-reset</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-newgen"/>
+    <summary>Get your attention back with a 30-day protocol that assumes you'll break it — a screen-time ledger without moralizing, friction engineering (what…</summary>
+  </entry>
+  <entry>
+    <title>Bennett Time Audit</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/bennett-time-audit/SKILL.md"/>
+    <id>tag:pm-claude-skills,bennett-time-audit</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-dead-mentors"/>
+    <summary>Audit a week the way Arnold Bennett's 'How to Live on 24 Hours a Day' (1908) prescribes — time as the one income that cannot be increased, the…</summary>
+  </entry>
+  <entry>
+    <title>Board Game Designer</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/board-game-designer/SKILL.md"/>
+    <id>tag:pm-claude-skills,board-game-designer</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-tabletop"/>
+    <summary>Take a board game idea from 'wouldn't it be cool if' to a playtestable prototype — core loop, tension source, components you can make tonight…</summary>
+  </entry>
+  <entry>
+    <title>Clip Factory</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/clip-factory/SKILL.md"/>
+    <id>tag:pm-claude-skills,clip-factory</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-newgen"/>
+    <summary>Turn one long video, podcast, or stream transcript into 8-12 short-form clips — each with a hook line, cut timestamps, captions, and a platform…</summary>
+  </entry>
+  <entry>
+    <title>Clone Brief</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/clone-brief/SKILL.md"/>
+    <id>tag:pm-claude-skills,clone-brief</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-2027"/>
+    <summary>Send your position to a meeting instead of your body — a one-page brief carrying your stances, fallbacks, red lines, tradables, and delegation…</summary>
+  </entry>
+  <entry>
+    <title>Context Bankruptcy</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/context-bankruptcy/SKILL.md"/>
+    <id>tag:pm-claude-skills,context-bankruptcy</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-2027"/>
+    <summary>Declare bankruptcy on a long-lived AI agent's accumulated memory — audit what it currently believes, separate ground truth from stale and wrong…</summary>
+  </entry>
+  <entry>
+    <title>Creator Deal Decoder</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/creator-deal-decoder/SKILL.md"/>
+    <id>tag:pm-claude-skills,creator-deal-decoder</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-newgen"/>
+    <summary>Decode a brand deal or UGC contract before signing — usage rights, exclusivity windows, whitelisting, payment terms, and kill clauses ranked…</summary>
+  </entry>
+  <entry>
+    <title>Dating Profile Doctor</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/dating-profile-doctor/SKILL.md"/>
+    <id>tag:pm-claude-skills,dating-profile-doctor</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-newgen"/>
+    <summary>Rewrite a dating profile so it sounds like you on a good day — mined from how you actually talk, specific instead of generic, with photo order…</summary>
+  </entry>
+  <entry>
+    <title>Deepfake Drill</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/deepfake-drill/SKILL.md"/>
+    <id>tag:pm-claude-skills,deepfake-drill</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-2027"/>
+    <summary>Run a tabletop drill of a voice-clone or deepfake fraud attempt — the 'CEO needs this wire today' call — against your actual approval process…</summary>
+  </entry>
+  <entry>
+    <title>Franklin Decision Ledger</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/franklin-decision-ledger/SKILL.md"/>
+    <id>tag:pm-claude-skills,franklin-decision-ledger</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-dead-mentors"/>
+    <summary>Run a hard two-option decision through Benjamin Franklin's 'moral or prudential algebra' — the weighted pro/con method he described to Joseph…</summary>
+  </entry>
+  <entry>
+    <title>Game Night Planner</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/game-night-planner/SKILL.md"/>
+    <id>tag:pm-claude-skills,game-night-planner</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-tabletop"/>
+    <summary>Plan a game night that actually works for the specific people coming — the right lineup for player count, weight tolerance, and time, sequenced…</summary>
+  </entry>
+  <entry>
+    <title>Machiavelli Counsel</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/machiavelli-counsel/SKILL.md"/>
+    <id>tag:pm-claude-skills,machiavelli-counsel</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-dead-mentors"/>
+    <summary>Analyse a workplace power situation the way Machiavelli's The Prince (1532) would — who holds power, whose support you need, what fortune can take…</summary>
+  </entry>
+  <entry>
+    <title>Micro Retirement Planner</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/micro-retirement-planner/SKILL.md"/>
+    <id>tag:pm-claude-skills,micro-retirement-planner</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-newgen"/>
+    <summary>Plan a deliberate career break — 3 to 12 months off between chapters — with honest runway math, the re-entry story rehearsed before you leave…</summary>
+  </entry>
+  <entry>
+    <title>Pixel GIF Maker</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/pixel-gif-maker/SKILL.md"/>
+    <id>tag:pm-claude-skills,pixel-gif-maker</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="other"/>
+    <summary>Generate retro pixel-text animated GIFs for Slack, Teams, or a PR comment — scrolling marquees, heartbeat pulses, confetti parties, twinkling…</summary>
+  </entry>
+  <entry>
+    <title>Ranked Climb Coach</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/ranked-climb-coach/SKILL.md"/>
+    <id>tag:pm-claude-skills,ranked-climb-coach</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-newgen"/>
+    <summary>Climb ranked on purpose instead of on tilt — a VOD-review protocol (three deaths per game, one pattern per week), a tilt debrief that ends…</summary>
+  </entry>
+  <entry>
+    <title>Resale Flip Kit</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/resale-flip-kit/SKILL.md"/>
+    <id>tag:pm-claude-skills,resale-flip-kit</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-newgen"/>
+    <summary>Sell secondhand like someone who's done it 500 times — honest condition grading, comps-based pricing with a floor and an anchor, listing titles…</summary>
+  </entry>
+  <entry>
+    <title>Roommate Agreement</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/roommate-agreement/SKILL.md"/>
+    <id>tag:pm-claude-skills,roommate-agreement</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-newgen"/>
+    <summary>Write the flat's constitution before the first passive-aggressive note — money, chores, guests, noise, food, and the exit plan, decided while…</summary>
+  </entry>
+  <entry>
+    <title>Rules Lawyer</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/rules-lawyer/SKILL.md"/>
+    <id>tag:pm-claude-skills,rules-lawyer</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-tabletop"/>
+    <summary>Settle a board game rules dispute like a fair judge — reconstruct the situation, rule from the rulebook text (pasted or known), separate…</summary>
+  </entry>
+  <entry>
+    <title>Stoic Setback Debrief</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/stoic-setback-debrief/SKILL.md"/>
+    <id>tag:pm-claude-skills,stoic-setback-debrief</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-dead-mentors"/>
+    <summary>Recover from a professional setback — a failed launch, brutal feedback, a public mistake, a lost deal, a layoff — using the actual exercises from…</summary>
+  </entry>
+  <entry>
+    <title>Sun Tzu Strategy Brief</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/sun-tzu-strategy-brief/SKILL.md"/>
+    <id>tag:pm-claude-skills,sun-tzu-strategy-brief</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-dead-mentors"/>
+    <summary>Prepare for a specific contest — a competitive deal, a negotiation, a market entry, a turf fight — using the actual planning framework from Sun…</summary>
+  </entry>
+  <entry>
+    <title>Tabletop Negotiator</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/tabletop-negotiator/SKILL.md"/>
+    <id>tag:pm-claude-skills,tabletop-negotiator</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-tabletop"/>
+    <summary>Practice the table-talk that wins negotiation board games — play out a Catan-style trade, a Diplomacy-style alliance, or a Monopoly-style deal…</summary>
+  </entry>
+  <entry>
+    <title>Teach The Game</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/teach-the-game/SKILL.md"/>
+    <id>tag:pm-claude-skills,teach-the-game</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-tabletop"/>
+    <summary>Build a 5-minute teach script for any board game so the table starts playing instead of listening — theme first, goal second, a turn third…</summary>
+  </entry>
+  <entry>
+    <title>The Org Simulator</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/the-org-simulator/SKILL.md"/>
+    <id>tag:pm-claude-skills,the-org-simulator</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-2027"/>
+    <summary>Stress-test a proposed org change before announcing it — simulate who gains, who loses, who blocks, where friction erupts in the first 90 days…</summary>
+  </entry>
+  <entry>
+    <title>The Time Capsule</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/the-time-capsule/SKILL.md"/>
+    <id>tag:pm-claude-skills,the-time-capsule</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-2027"/>
+    <summary>Write a sealed memo to your future self or successor — the honest state of things, falsifiable predictions with confidence levels, and the advice…</summary>
+  </entry>
+  <entry>
+    <title>The Understudy</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/the-understudy/SKILL.md"/>
+    <id>tag:pm-claude-skills,the-understudy</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-2027"/>
+    <summary>Study 3-5 samples of the user's real writing and decisions, build an explicit 'how you think' profile, then draft new work as their understudy —…</summary>
+  </entry>
+  <entry>
+    <title>The Vibe Check</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/the-vibe-check/SKILL.md"/>
+    <id>tag:pm-claude-skills,the-vibe-check</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-newgen"/>
+    <summary>Harden a vibe-coded app before strangers use it — the audit for prototypes built fast with AI: exposed secrets, missing auth checks, unvalidated…</summary>
+  </entry>
+  <entry>
+    <title>TTRPG Session Forge</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/ttrpg-session-forge/SKILL.md"/>
+    <id>tag:pm-claude-skills,ttrpg-session-forge</id>
+    <updated>2026-07-26T00:00:00Z</updated>
+    <category term="pm-newgen"/>
+    <summary>Prep tonight's TTRPG session in 30 minutes — three scenes with stakes, NPC voice cards, a flexible encounter, treasure/clues, and the 'players did…</summary>
+  </entry>
+  <entry>
+    <title>Behavior Intervention Plan</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/behavior-intervention-plan/SKILL.md"/>
+    <id>tag:pm-claude-skills,behavior-intervention-plan</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-teaching"/>
+    <summary>Build a tiered classroom behavior intervention plan (BIP) for a K-12 student, grounded in the function of the behavior.</summary>
+  </entry>
+  <entry>
+    <title>Client Discharge Notes</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/client-discharge-notes/SKILL.md"/>
+    <id>tag:pm-claude-skills,client-discharge-notes</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-veterinary"/>
+    <summary>Write clear at-home care instructions for a pet owner after a veterinary visit, procedure, or hospitalization.</summary>
+  </entry>
+  <entry>
+    <title>Euthanasia Conversation</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/euthanasia-conversation/SKILL.md"/>
+    <id>tag:pm-claude-skills,euthanasia-conversation</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-veterinary"/>
+    <summary>Guide a veterinary team through a compassionate end-of-life conversation with a pet owner — quality-of-life assessment, the recommendation, and…</summary>
+  </entry>
+  <entry>
+    <title>Fact-Check Pass</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/fact-check-pass/SKILL.md"/>
+    <id>tag:pm-claude-skills,fact-check-pass</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-journalism"/>
+    <summary>Run a claim-by-claim fact-check pass on a draft article, script, or report before publication.</summary>
+  </entry>
+  <entry>
+    <title>Guest Incident Log</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/guest-incident-log/SKILL.md"/>
+    <id>tag:pm-claude-skills,guest-incident-log</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-hospitality"/>
+    <summary>Document a guest incident at a hospitality venue — injury, illness, foodborne complaint, altercation, or property loss — into a clear, defensible…</summary>
+  </entry>
+  <entry>
+    <title>Health Inspection Prep</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/health-inspection-prep/SKILL.md"/>
+    <id>tag:pm-claude-skills,health-inspection-prep</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-hospitality"/>
+    <summary>Run a self-audit of a food establishment before the health inspector arrives, focused on the violations that actually close kitchens.</summary>
+  </entry>
+  <entry>
+    <title>IEP Goal Writer</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/iep-goal-writer/SKILL.md"/>
+    <id>tag:pm-claude-skills,iep-goal-writer</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-teaching"/>
+    <summary>Write measurable IEP goals and matching accommodations for a K-12 student with an IEP or 504 plan.</summary>
+  </entry>
+  <entry>
+    <title>Lesson Plan Builder</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/lesson-plan-builder/SKILL.md"/>
+    <id>tag:pm-claude-skills,lesson-plan-builder</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-teaching"/>
+    <summary>Build a standards-aligned K-12 lesson plan with clear objectives, a timed activity sequence, checks for understanding, and differentiation.</summary>
+  </entry>
+  <entry>
+    <title>Menu Cost Engineer</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/menu-cost-engineer/SKILL.md"/>
+    <id>tag:pm-claude-skills,menu-cost-engineer</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-hospitality"/>
+    <summary>Cost a menu item to a plate cost and food-cost percentage, then price it for a target margin.</summary>
+  </entry>
+  <entry>
+    <title>Parent Conference Prep</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/parent-conference-prep/SKILL.md"/>
+    <id>tag:pm-claude-skills,parent-conference-prep</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-teaching"/>
+    <summary>Prepare for a K-12 parent-teacher conference — including the hard ones.</summary>
+  </entry>
+  <entry>
+    <title>Server Training Guide</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/server-training-guide/SKILL.md"/>
+    <id>tag:pm-claude-skills,server-training-guide</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-hospitality"/>
+    <summary>Build an onboarding and training guide for restaurant front-of-house staff (servers, hosts, bartenders).</summary>
+  </entry>
+  <entry>
+    <title>Shift Schedule Builder</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/shift-schedule-builder/SKILL.md"/>
+    <id>tag:pm-claude-skills,shift-schedule-builder</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-hospitality"/>
+    <summary>Build a staff shift schedule that matches coverage to demand while hitting a labor-cost target.</summary>
+  </entry>
+  <entry>
+    <title>Source Interview Prep</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/source-interview-prep/SKILL.md"/>
+    <id>tag:pm-claude-skills,source-interview-prep</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-journalism"/>
+    <summary>Prepare a journalist to interview a source or subject — including hostile or accountability interviews.</summary>
+  </entry>
+  <entry>
+    <title>Source Protection Plan</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/source-protection-plan/SKILL.md"/>
+    <id>tag:pm-claude-skills,source-protection-plan</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-journalism"/>
+    <summary>Assess and reduce the risk of exposing a confidential journalistic source.</summary>
+  </entry>
+  <entry>
+    <title>Story Pitch</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/story-pitch/SKILL.md"/>
+    <id>tag:pm-claude-skills,story-pitch</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-journalism"/>
+    <summary>Pitch a news or feature story to an editor — the angle, why now, and how you'll report it.</summary>
+  </entry>
+  <entry>
+    <title>Treatment Plan Estimate</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/treatment-plan-estimate/SKILL.md"/>
+    <id>tag:pm-claude-skills,treatment-plan-estimate</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-veterinary"/>
+    <summary>Build a veterinary treatment plan with tiered options and a cost estimate to discuss with a pet owner.</summary>
+  </entry>
+  <entry>
+    <title>Wellness Plan</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/wellness-plan/SKILL.md"/>
+    <id>tag:pm-claude-skills,wellness-plan</id>
+    <updated>2026-07-24T00:00:00Z</updated>
+    <category term="pm-veterinary"/>
+    <summary>Build a preventive-care (wellness) plan for a pet by species, breed, and life stage.</summary>
+  </entry>
+  <entry>
+    <title>Community Moderation Policy</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/community-moderation-policy/SKILL.md"/>
+    <id>tag:pm-claude-skills,community-moderation-policy</id>
+    <updated>2026-07-23T00:00:00Z</updated>
+    <category term="pm-social"/>
+    <summary>Write a fair, enforceable community moderation policy.</summary>
+  </entry>
+  <entry>
+    <title>Deprecation Comms Plan</title>
+    <link href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/deprecation-comms-plan/SKILL.md"/>
+    <id>tag:pm-claude-skills,deprecation-comms-plan</id>
+    <updated>2026-07-23T00:00:00Z</updated>
+    <category term="pm-devrel"/>
+    <summary>Plan the communications for deprecating a product, API, endpoint, or feature that customers depend on.</summary>
+  </entry>
+</feed>

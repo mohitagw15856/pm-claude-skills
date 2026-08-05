@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-849 skills exported. Copy a `.md rule` into the tool to use it.
+858 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -334,6 +334,7 @@
 | FIRE Number | `pm-calculators` | `pm-calculators/fire-number/fire-number.md` |
 | First Client Contract | `pm-sidehustle` | `pm-sidehustle/first-client-contract/first-client-contract.md` |
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/first-maintainer-month.md` |
+| Flight-Delay Compensation | `pm-lifeadmin` | `pm-lifeadmin/flight-delay-compensation/flight-delay-compensation.md` |
 | Flight Tracker | `pm-live` | `pm-live/flight-tracker/flight-tracker.md` |
 | Flow Metrics Interpreter | `pm-delivery` | `pm-delivery/flow-metrics-interpreter/flow-metrics-interpreter.md` |
 | Flowchart | `pm-visuals` | `pm-visuals/flowchart/flowchart.md` |
@@ -396,6 +397,7 @@
 | Inspection Report Decoder | `pm-decoders` | `pm-decoders/inspection-report-decoder/inspection-report-decoder.md` |
 | Instagram Post Downloader | `pm-writers` | `pm-writers/instagram-post-downloader/instagram-post-downloader.md` |
 | Insurance Claim | `pm-lifeadmin` | `pm-lifeadmin/insurance-claim/insurance-claim.md` |
+| Insurance Claim Appeal | `pm-insurance` | `pm-insurance/insurance-claim-appeal/insurance-claim-appeal.md` |
 | Insurance Policy Decoder | `pm-decoders` | `pm-decoders/insurance-policy-decoder/insurance-policy-decoder.md` |
 | Interview Me | `pm-method` | `pm-method/interview-me/interview-me.md` |
 | Interview Prep | `pm-jobsearch` | `pm-jobsearch/interview-prep/interview-prep.md` |
@@ -422,6 +424,7 @@
 | Landing Page Copy | `pm-copy` | `pm-copy/landing-page-copy/landing-page-copy.md` |
 | Last 30 Days Research | `pm-cross` | `pm-cross/last-30-days-research/last-30-days-research.md` |
 | Last Two Weeks Handoff | `pm-resignation` | `pm-resignation/last-two-weeks-handoff/last-two-weeks-handoff.md` |
+| Late-Invoice Chaser | `pm-freelance` | `pm-freelance/late-invoice-chaser/late-invoice-chaser.md` |
 | Late Invoice Escalation | `pm-freelance` | `pm-freelance/late-invoice-escalation/late-invoice-escalation.md` |
 | Launch Post | `pm-devrel` | `pm-devrel/launch-post/launch-post.md` |
 | Launch Readiness | `pm-delivery` | `pm-delivery/launch-readiness/launch-readiness.md` |
@@ -484,8 +487,10 @@
 | Monitoring Setup Guide | `pm-engineering` | `pm-engineering/monitoring-setup-guide/monitoring-setup-guide.md` |
 | Morning Intelligence | `pm-operations` | `pm-operations/morning-intelligence/morning-intelligence.md` |
 | Moving Company Estimate Decoder | `pm-decoders` | `pm-decoders/moving-company-estimate-decoder/moving-company-estimate-decoder.md` |
+| Moving House Checklist | `pm-lifeadmin` | `pm-lifeadmin/moving-house-checklist/moving-house-checklist.md` |
 | Multi-Source Signal Synthesiser | `pm-advanced` | `pm-advanced/multi-source-signal-synthesiser/multi-source-signal-synthesiser.md` |
 | NDA Analyser | `pm-legal` | `pm-legal/nda-analyser/nda-analyser.md` |
+| Neighbor-Dispute Resolver | `pm-lifeadmin` | `pm-lifeadmin/neighbor-dispute-resolver/neighbor-dispute-resolver.md` |
 | Net Worth Statement | `pm-money` | `pm-money/net-worth-statement/net-worth-statement.md` |
 | New Parent Logistics | `pm-lifeadmin` | `pm-lifeadmin/new-parent-logistics/new-parent-logistics.md` |
 | Newsletter Digest Brief | `pm-cowork` | `pm-cowork/newsletter-digest-brief/newsletter-digest-brief.md` |
@@ -554,6 +559,7 @@
 | Press Kit EPK | `pm-musician` | `pm-musician/press-kit-epk/press-kit-epk.md` |
 | Press Release | `pm-cross` | `pm-cross/press-release/press-release.md` |
 | Price Increase Announcement | `pm-pmm` | `pm-pmm/price-increase-announcement/price-increase-announcement.md` |
+| Price-Match Request | `pm-money` | `pm-money/price-match-request/price-match-request.md` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/pricing-calculator.md` |
 | Pricing Page Copy | `pm-pmm` | `pm-pmm/pricing-page-copy/pricing-page-copy.md` |
 | Pricing Sensitivity Model (Van Westendorp) | `pm-calculators` | `pm-calculators/pricing-sensitivity-model/pricing-sensitivity-model.md` |
@@ -567,6 +573,7 @@
 | Product Launch Checklist | `pm-delivery` | `pm-delivery/product-launch-checklist/product-launch-checklist.md` |
 | Product Naming | `pm-uxwriting` | `pm-uxwriting/product-naming/product-naming.md` |
 | Product Positioning Doc | `pm-gtm` | `pm-gtm/product-positioning-doc/product-positioning-doc.md` |
+| Product-Recall Check | `pm-lifeadmin` | `pm-lifeadmin/product-recall-check/product-recall-check.md` |
 | Professional Brain | `pm-cross` | `pm-cross/professional-brain/professional-brain.md` |
 | Professional Translator | `pm-localization` | `pm-localization/professional-translator/professional-translator.md` |
 | Programmatic SEO | `pm-growth` | `pm-growth/programmatic-seo/programmatic-seo.md` |
@@ -697,6 +704,7 @@
 | Slide Deck | `pm-documents` | `pm-documents/slide-deck/slide-deck.md` |
 | Slide Density Rules | `pm-cowork` | `pm-cowork/slide-density-rules/slide-density-rules.md` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/slo-error-budget.md` |
+| Small-Claims Prep | `pm-legal` | `pm-legal/small-claims-prep/small-claims-prep.md` |
 | SOAP Note | `pm-health` | `pm-health/soap-note/soap-note.md` |
 | SOC 2 Readiness | `pm-compliance` | `pm-compliance/soc2-readiness/soc2-readiness.md` |
 | Social Ad Campaign | `pm-social` | `pm-social/social-ad-campaign/social-ad-campaign.md` |
@@ -831,6 +839,7 @@
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/voice-of-customer-program.md` |
 | Volunteer Treasurer Basics | `pm-committee` | `pm-committee/volunteer-treasurer-basics/volunteer-treasurer-basics.md` |
 | Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/vuln-triage.md` |
+| Warranty Claim | `pm-money` | `pm-money/warranty-claim/warranty-claim.md` |
 | Weather Now | `pm-live` | `pm-live/weather-now/weather-now.md` |
 | Wedding Budget | `pm-wedding` | `pm-wedding/wedding-budget/wedding-budget.md` |
 | Wedding Logistics Planner | `pm-wedding` | `pm-wedding/wedding-logistics-planner/wedding-logistics-planner.md` |
