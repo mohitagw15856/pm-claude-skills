@@ -1,0 +1,73 @@
+---
+description: "Handle a neighbor conflict — noise, boundaries, parking, shared costs, pets — with a measured approach that de-escalates first and keeps a paper trail if it has to go formal. Use when asked to deal with a neighbor dispute, my neighbor is [too loud / over the boundary / blocking me], how do I talk to my neighbor about, or write a letter to my neighbor. Produces a read on the situation, a calm first conversation or friendly note, a firmer written follow-up if that fails, the documentation habit for escalation, and the right next step (mediation / landlord / HOA / council) — steering away from making it worse."
+globs:
+alwaysApply: false
+---
+
+# Neighbor-Dispute Resolver
+
+Neighbor disputes escalate fast because the first move is usually made angry. The people who resolve them start soft and specific, keep it about the behavior not the person, and only build a paper trail when goodwill runs out. This helps you pick the right opening move, write it without heat, and know the real escalation path — so you protect both your peace and, often, a relationship you can't move away from.
+
+## What This Skill Produces
+
+- **The situation read** — how serious it is, whether it's likely a one-off or a pattern, and the lowest-heat move that could still work
+- **The first approach** — a calm face-to-face opener or a friendly note, specific about the behavior and the ask, assuming good faith
+- **The firmer follow-up** — a measured written message if the first try fails, clear about the impact and what you need, still not hostile
+- **The documentation habit** — a dated log of incidents and messages, for if it goes to a landlord, HOA, mediator, or authority
+- **The escalation path** — mediation, landlord/property manager, HOA, or council/authority — matched to the issue, with "keep it proportionate" guidance
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The issue** — noise, boundary/fence, parking, shared costs, pets, mess, or other; and how often
+- **History** — first time raising it, or ongoing? Any prior conversations?
+- **The relationship** — friendly, neutral, or already tense
+- **Your setup** — own or rent; is there a landlord, HOA, or building management involved?
+- **Your goal** — just make it stop, preserve the relationship, or both
+
+## Framework: Soft First, Documented Always
+
+1. **Start at the lowest heat that could work.** For most first-time issues, a calm in-person word or a friendly note beats a formal letter — and doesn't poison the well.
+2. **Behavior, not character.** "The music after 11 makes it hard to sleep" lands; "you're inconsiderate" starts a war. Name the specific behavior, time, and impact, then a clear, reasonable ask.
+3. **Assume good faith once.** Many neighbors genuinely don't realize. Give them a clean chance to fix it before escalating.
+4. **Document from the start anyway.** Keep a dated log of incidents and every message — quietly. If it escalates, this is the difference between "he said / she said" and a case.
+5. **Escalate proportionately.** Only when direct attempts fail: mediation (often free and effective), then landlord/HOA/management, then the relevant authority for the specific issue (noise, boundaries, safety). Match the response to the problem — don't call in the heavy option for a first offense.
+
+## Output Format
+
+### Neighbor issue: [type] · [one-off / ongoing] · relationship: [friendly/neutral/tense]
+
+**Read:** [seriousness + lowest-heat move likely to work].
+
+**Step 1 — First approach** *(in person or a friendly note)*
+> [Specific behavior + when + impact + a reasonable ask, warm and good-faith]
+
+**Step 2 — Firmer follow-up** *(if step 1 fails)*
+> [Restate the issue, the impact, what you need, and a calm note that you'd like to sort it directly]
+
+**Document (quietly):** dated log of each incident + copies of every message.
+
+**Escalation path (only if needed):** [mediation → landlord/HOA/management → the right authority for this issue] — kept proportionate.
+
+## Quality Checks
+- [ ] Opens with the lowest-heat approach that could plausibly work
+- [ ] Language targets the behavior and impact, not the person
+- [ ] Gives the neighbor a good-faith chance before escalating
+- [ ] Includes a quiet documentation habit from the start
+- [ ] Escalation is proportionate and matched to the issue
+- [ ] Tuned to own/rent and any landlord/HOA involvement
+
+## Anti-Patterns
+- **Opening with a formal/legal letter** over a first-time annoyance.
+- **Attacking character** instead of naming the behavior.
+- **Threats or retaliation** — escalates and can put you in the wrong.
+- **No documentation** — leaving nothing for mediation or authorities.
+- **Jumping straight to the authorities** for something a conversation could fix.
+- **Vague asks** — complaining without saying what would resolve it.
+
+## Example Trigger Phrases
+- "My upstairs neighbor plays loud music every night — how do I raise it without a fight?"
+- "Neighbor's fence is over my boundary. Write me a measured letter."
+- "They keep parking across my driveway. What do I do first?"
+- "Shared hedge, and they won't split the cost — how should I approach it?"
+- "I've asked nicely twice about the barking. What's the next step?"

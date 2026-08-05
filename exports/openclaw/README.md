@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-849 skills exported. Copy a `SKILL.md` into the tool to use it.
+858 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -334,6 +334,7 @@
 | FIRE Number | `pm-calculators` | `fire-number/SKILL.md` |
 | First Client Contract | `pm-sidehustle` | `first-client-contract/SKILL.md` |
 | First Maintainer Month | `pm-maintainer` | `first-maintainer-month/SKILL.md` |
+| Flight-Delay Compensation | `pm-lifeadmin` | `flight-delay-compensation/SKILL.md` |
 | Flight Tracker | `pm-live` | `flight-tracker/SKILL.md` |
 | Flow Metrics Interpreter | `pm-delivery` | `flow-metrics-interpreter/SKILL.md` |
 | Flowchart | `pm-visuals` | `flowchart/SKILL.md` |
@@ -396,6 +397,7 @@
 | Inspection Report Decoder | `pm-decoders` | `inspection-report-decoder/SKILL.md` |
 | Instagram Post Downloader | `pm-writers` | `instagram-post-downloader/SKILL.md` |
 | Insurance Claim | `pm-lifeadmin` | `insurance-claim/SKILL.md` |
+| Insurance Claim Appeal | `pm-insurance` | `insurance-claim-appeal/SKILL.md` |
 | Insurance Policy Decoder | `pm-decoders` | `insurance-policy-decoder/SKILL.md` |
 | Interview Me | `pm-method` | `interview-me/SKILL.md` |
 | Interview Prep | `pm-jobsearch` | `interview-prep/SKILL.md` |
@@ -422,6 +424,7 @@
 | Landing Page Copy | `pm-copy` | `landing-page-copy/SKILL.md` |
 | Last 30 Days Research | `pm-cross` | `last-30-days-research/SKILL.md` |
 | Last Two Weeks Handoff | `pm-resignation` | `last-two-weeks-handoff/SKILL.md` |
+| Late-Invoice Chaser | `pm-freelance` | `late-invoice-chaser/SKILL.md` |
 | Late Invoice Escalation | `pm-freelance` | `late-invoice-escalation/SKILL.md` |
 | Launch Post | `pm-devrel` | `launch-post/SKILL.md` |
 | Launch Readiness | `pm-delivery` | `launch-readiness/SKILL.md` |
@@ -484,8 +487,10 @@
 | Monitoring Setup Guide | `pm-engineering` | `monitoring-setup-guide/SKILL.md` |
 | Morning Intelligence | `pm-operations` | `morning-intelligence/SKILL.md` |
 | Moving Company Estimate Decoder | `pm-decoders` | `moving-company-estimate-decoder/SKILL.md` |
+| Moving House Checklist | `pm-lifeadmin` | `moving-house-checklist/SKILL.md` |
 | Multi-Source Signal Synthesiser | `pm-advanced` | `multi-source-signal-synthesiser/SKILL.md` |
 | NDA Analyser | `pm-legal` | `nda-analyser/SKILL.md` |
+| Neighbor-Dispute Resolver | `pm-lifeadmin` | `neighbor-dispute-resolver/SKILL.md` |
 | Net Worth Statement | `pm-money` | `net-worth-statement/SKILL.md` |
 | New Parent Logistics | `pm-lifeadmin` | `new-parent-logistics/SKILL.md` |
 | Newsletter Digest Brief | `pm-cowork` | `newsletter-digest-brief/SKILL.md` |
@@ -554,6 +559,7 @@
 | Press Kit EPK | `pm-musician` | `press-kit-epk/SKILL.md` |
 | Press Release | `pm-cross` | `press-release/SKILL.md` |
 | Price Increase Announcement | `pm-pmm` | `price-increase-announcement/SKILL.md` |
+| Price-Match Request | `pm-money` | `price-match-request/SKILL.md` |
 | Pricing Calculator | `pm-calculators` | `pricing-calculator/SKILL.md` |
 | Pricing Page Copy | `pm-pmm` | `pricing-page-copy/SKILL.md` |
 | Pricing Sensitivity Model (Van Westendorp) | `pm-calculators` | `pricing-sensitivity-model/SKILL.md` |
@@ -567,6 +573,7 @@
 | Product Launch Checklist | `pm-delivery` | `product-launch-checklist/SKILL.md` |
 | Product Naming | `pm-uxwriting` | `product-naming/SKILL.md` |
 | Product Positioning Doc | `pm-gtm` | `product-positioning-doc/SKILL.md` |
+| Product-Recall Check | `pm-lifeadmin` | `product-recall-check/SKILL.md` |
 | Professional Brain | `pm-cross` | `professional-brain/SKILL.md` |
 | Professional Translator | `pm-localization` | `professional-translator/SKILL.md` |
 | Programmatic SEO | `pm-growth` | `programmatic-seo/SKILL.md` |
@@ -697,6 +704,7 @@
 | Slide Deck | `pm-documents` | `slide-deck/SKILL.md` |
 | Slide Density Rules | `pm-cowork` | `slide-density-rules/SKILL.md` |
 | SLO and Error Budget | `pm-engineering` | `slo-error-budget/SKILL.md` |
+| Small-Claims Prep | `pm-legal` | `small-claims-prep/SKILL.md` |
 | SOAP Note | `pm-health` | `soap-note/SKILL.md` |
 | SOC 2 Readiness | `pm-compliance` | `soc2-readiness/SKILL.md` |
 | Social Ad Campaign | `pm-social` | `social-ad-campaign/SKILL.md` |
@@ -831,6 +839,7 @@
 | Voice of Customer Program | `pm-pmm` | `voice-of-customer-program/SKILL.md` |
 | Volunteer Treasurer Basics | `pm-committee` | `volunteer-treasurer-basics/SKILL.md` |
 | Vulnerability Triage | `pm-security` | `vuln-triage/SKILL.md` |
+| Warranty Claim | `pm-money` | `warranty-claim/SKILL.md` |
 | Weather Now | `pm-live` | `weather-now/SKILL.md` |
 | Wedding Budget | `pm-wedding` | `wedding-budget/SKILL.md` |
 | Wedding Logistics Planner | `pm-wedding` | `wedding-logistics-planner/SKILL.md` |

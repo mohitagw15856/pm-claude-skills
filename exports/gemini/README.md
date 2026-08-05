@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-849 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+858 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -334,6 +334,7 @@
 | FIRE Number | `pm-calculators` | `pm-calculators/fire-number/GEM_INSTRUCTIONS.md` |
 | First Client Contract | `pm-sidehustle` | `pm-sidehustle/first-client-contract/GEM_INSTRUCTIONS.md` |
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/GEM_INSTRUCTIONS.md` |
+| Flight-Delay Compensation | `pm-lifeadmin` | `pm-lifeadmin/flight-delay-compensation/GEM_INSTRUCTIONS.md` |
 | Flight Tracker | `pm-live` | `pm-live/flight-tracker/GEM_INSTRUCTIONS.md` |
 | Flow Metrics Interpreter | `pm-delivery` | `pm-delivery/flow-metrics-interpreter/GEM_INSTRUCTIONS.md` |
 | Flowchart | `pm-visuals` | `pm-visuals/flowchart/GEM_INSTRUCTIONS.md` |
@@ -396,6 +397,7 @@
 | Inspection Report Decoder | `pm-decoders` | `pm-decoders/inspection-report-decoder/GEM_INSTRUCTIONS.md` |
 | Instagram Post Downloader | `pm-writers` | `pm-writers/instagram-post-downloader/GEM_INSTRUCTIONS.md` |
 | Insurance Claim | `pm-lifeadmin` | `pm-lifeadmin/insurance-claim/GEM_INSTRUCTIONS.md` |
+| Insurance Claim Appeal | `pm-insurance` | `pm-insurance/insurance-claim-appeal/GEM_INSTRUCTIONS.md` |
 | Insurance Policy Decoder | `pm-decoders` | `pm-decoders/insurance-policy-decoder/GEM_INSTRUCTIONS.md` |
 | Interview Me | `pm-method` | `pm-method/interview-me/GEM_INSTRUCTIONS.md` |
 | Interview Prep | `pm-jobsearch` | `pm-jobsearch/interview-prep/GEM_INSTRUCTIONS.md` |
@@ -422,6 +424,7 @@
 | Landing Page Copy | `pm-copy` | `pm-copy/landing-page-copy/GEM_INSTRUCTIONS.md` |
 | Last 30 Days Research | `pm-cross` | `pm-cross/last-30-days-research/GEM_INSTRUCTIONS.md` |
 | Last Two Weeks Handoff | `pm-resignation` | `pm-resignation/last-two-weeks-handoff/GEM_INSTRUCTIONS.md` |
+| Late-Invoice Chaser | `pm-freelance` | `pm-freelance/late-invoice-chaser/GEM_INSTRUCTIONS.md` |
 | Late Invoice Escalation | `pm-freelance` | `pm-freelance/late-invoice-escalation/GEM_INSTRUCTIONS.md` |
 | Launch Post | `pm-devrel` | `pm-devrel/launch-post/GEM_INSTRUCTIONS.md` |
 | Launch Readiness | `pm-delivery` | `pm-delivery/launch-readiness/GEM_INSTRUCTIONS.md` |
@@ -484,8 +487,10 @@
 | Monitoring Setup Guide | `pm-engineering` | `pm-engineering/monitoring-setup-guide/GEM_INSTRUCTIONS.md` |
 | Morning Intelligence | `pm-operations` | `pm-operations/morning-intelligence/GEM_INSTRUCTIONS.md` |
 | Moving Company Estimate Decoder | `pm-decoders` | `pm-decoders/moving-company-estimate-decoder/GEM_INSTRUCTIONS.md` |
+| Moving House Checklist | `pm-lifeadmin` | `pm-lifeadmin/moving-house-checklist/GEM_INSTRUCTIONS.md` |
 | Multi-Source Signal Synthesiser | `pm-advanced` | `pm-advanced/multi-source-signal-synthesiser/GEM_INSTRUCTIONS.md` |
 | NDA Analyser | `pm-legal` | `pm-legal/nda-analyser/GEM_INSTRUCTIONS.md` |
+| Neighbor-Dispute Resolver | `pm-lifeadmin` | `pm-lifeadmin/neighbor-dispute-resolver/GEM_INSTRUCTIONS.md` |
 | Net Worth Statement | `pm-money` | `pm-money/net-worth-statement/GEM_INSTRUCTIONS.md` |
 | New Parent Logistics | `pm-lifeadmin` | `pm-lifeadmin/new-parent-logistics/GEM_INSTRUCTIONS.md` |
 | Newsletter Digest Brief | `pm-cowork` | `pm-cowork/newsletter-digest-brief/GEM_INSTRUCTIONS.md` |
@@ -554,6 +559,7 @@
 | Press Kit EPK | `pm-musician` | `pm-musician/press-kit-epk/GEM_INSTRUCTIONS.md` |
 | Press Release | `pm-cross` | `pm-cross/press-release/GEM_INSTRUCTIONS.md` |
 | Price Increase Announcement | `pm-pmm` | `pm-pmm/price-increase-announcement/GEM_INSTRUCTIONS.md` |
+| Price-Match Request | `pm-money` | `pm-money/price-match-request/GEM_INSTRUCTIONS.md` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/GEM_INSTRUCTIONS.md` |
 | Pricing Page Copy | `pm-pmm` | `pm-pmm/pricing-page-copy/GEM_INSTRUCTIONS.md` |
 | Pricing Sensitivity Model (Van Westendorp) | `pm-calculators` | `pm-calculators/pricing-sensitivity-model/GEM_INSTRUCTIONS.md` |
@@ -567,6 +573,7 @@
 | Product Launch Checklist | `pm-delivery` | `pm-delivery/product-launch-checklist/GEM_INSTRUCTIONS.md` |
 | Product Naming | `pm-uxwriting` | `pm-uxwriting/product-naming/GEM_INSTRUCTIONS.md` |
 | Product Positioning Doc | `pm-gtm` | `pm-gtm/product-positioning-doc/GEM_INSTRUCTIONS.md` |
+| Product-Recall Check | `pm-lifeadmin` | `pm-lifeadmin/product-recall-check/GEM_INSTRUCTIONS.md` |
 | Professional Brain | `pm-cross` | `pm-cross/professional-brain/GEM_INSTRUCTIONS.md` |
 | Professional Translator | `pm-localization` | `pm-localization/professional-translator/GEM_INSTRUCTIONS.md` |
 | Programmatic SEO | `pm-growth` | `pm-growth/programmatic-seo/GEM_INSTRUCTIONS.md` |
@@ -697,6 +704,7 @@
 | Slide Deck | `pm-documents` | `pm-documents/slide-deck/GEM_INSTRUCTIONS.md` |
 | Slide Density Rules | `pm-cowork` | `pm-cowork/slide-density-rules/GEM_INSTRUCTIONS.md` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/GEM_INSTRUCTIONS.md` |
+| Small-Claims Prep | `pm-legal` | `pm-legal/small-claims-prep/GEM_INSTRUCTIONS.md` |
 | SOAP Note | `pm-health` | `pm-health/soap-note/GEM_INSTRUCTIONS.md` |
 | SOC 2 Readiness | `pm-compliance` | `pm-compliance/soc2-readiness/GEM_INSTRUCTIONS.md` |
 | Social Ad Campaign | `pm-social` | `pm-social/social-ad-campaign/GEM_INSTRUCTIONS.md` |
@@ -831,6 +839,7 @@
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/GEM_INSTRUCTIONS.md` |
 | Volunteer Treasurer Basics | `pm-committee` | `pm-committee/volunteer-treasurer-basics/GEM_INSTRUCTIONS.md` |
 | Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/GEM_INSTRUCTIONS.md` |
+| Warranty Claim | `pm-money` | `pm-money/warranty-claim/GEM_INSTRUCTIONS.md` |
 | Weather Now | `pm-live` | `pm-live/weather-now/GEM_INSTRUCTIONS.md` |
 | Wedding Budget | `pm-wedding` | `pm-wedding/wedding-budget/GEM_INSTRUCTIONS.md` |
 | Wedding Logistics Planner | `pm-wedding` | `pm-wedding/wedding-logistics-planner/GEM_INSTRUCTIONS.md` |

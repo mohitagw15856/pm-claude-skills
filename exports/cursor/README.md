@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-849 skills exported. Copy a `.mdc rule` into the tool to use it.
+858 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -334,6 +334,7 @@
 | FIRE Number | `pm-calculators` | `pm-calculators/fire-number/fire-number.mdc` |
 | First Client Contract | `pm-sidehustle` | `pm-sidehustle/first-client-contract/first-client-contract.mdc` |
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/first-maintainer-month.mdc` |
+| Flight-Delay Compensation | `pm-lifeadmin` | `pm-lifeadmin/flight-delay-compensation/flight-delay-compensation.mdc` |
 | Flight Tracker | `pm-live` | `pm-live/flight-tracker/flight-tracker.mdc` |
 | Flow Metrics Interpreter | `pm-delivery` | `pm-delivery/flow-metrics-interpreter/flow-metrics-interpreter.mdc` |
 | Flowchart | `pm-visuals` | `pm-visuals/flowchart/flowchart.mdc` |
@@ -396,6 +397,7 @@
 | Inspection Report Decoder | `pm-decoders` | `pm-decoders/inspection-report-decoder/inspection-report-decoder.mdc` |
 | Instagram Post Downloader | `pm-writers` | `pm-writers/instagram-post-downloader/instagram-post-downloader.mdc` |
 | Insurance Claim | `pm-lifeadmin` | `pm-lifeadmin/insurance-claim/insurance-claim.mdc` |
+| Insurance Claim Appeal | `pm-insurance` | `pm-insurance/insurance-claim-appeal/insurance-claim-appeal.mdc` |
 | Insurance Policy Decoder | `pm-decoders` | `pm-decoders/insurance-policy-decoder/insurance-policy-decoder.mdc` |
 | Interview Me | `pm-method` | `pm-method/interview-me/interview-me.mdc` |
 | Interview Prep | `pm-jobsearch` | `pm-jobsearch/interview-prep/interview-prep.mdc` |
@@ -422,6 +424,7 @@
 | Landing Page Copy | `pm-copy` | `pm-copy/landing-page-copy/landing-page-copy.mdc` |
 | Last 30 Days Research | `pm-cross` | `pm-cross/last-30-days-research/last-30-days-research.mdc` |
 | Last Two Weeks Handoff | `pm-resignation` | `pm-resignation/last-two-weeks-handoff/last-two-weeks-handoff.mdc` |
+| Late-Invoice Chaser | `pm-freelance` | `pm-freelance/late-invoice-chaser/late-invoice-chaser.mdc` |
 | Late Invoice Escalation | `pm-freelance` | `pm-freelance/late-invoice-escalation/late-invoice-escalation.mdc` |
 | Launch Post | `pm-devrel` | `pm-devrel/launch-post/launch-post.mdc` |
 | Launch Readiness | `pm-delivery` | `pm-delivery/launch-readiness/launch-readiness.mdc` |
@@ -484,8 +487,10 @@
 | Monitoring Setup Guide | `pm-engineering` | `pm-engineering/monitoring-setup-guide/monitoring-setup-guide.mdc` |
 | Morning Intelligence | `pm-operations` | `pm-operations/morning-intelligence/morning-intelligence.mdc` |
 | Moving Company Estimate Decoder | `pm-decoders` | `pm-decoders/moving-company-estimate-decoder/moving-company-estimate-decoder.mdc` |
+| Moving House Checklist | `pm-lifeadmin` | `pm-lifeadmin/moving-house-checklist/moving-house-checklist.mdc` |
 | Multi-Source Signal Synthesiser | `pm-advanced` | `pm-advanced/multi-source-signal-synthesiser/multi-source-signal-synthesiser.mdc` |
 | NDA Analyser | `pm-legal` | `pm-legal/nda-analyser/nda-analyser.mdc` |
+| Neighbor-Dispute Resolver | `pm-lifeadmin` | `pm-lifeadmin/neighbor-dispute-resolver/neighbor-dispute-resolver.mdc` |
 | Net Worth Statement | `pm-money` | `pm-money/net-worth-statement/net-worth-statement.mdc` |
 | New Parent Logistics | `pm-lifeadmin` | `pm-lifeadmin/new-parent-logistics/new-parent-logistics.mdc` |
 | Newsletter Digest Brief | `pm-cowork` | `pm-cowork/newsletter-digest-brief/newsletter-digest-brief.mdc` |
@@ -554,6 +559,7 @@
 | Press Kit EPK | `pm-musician` | `pm-musician/press-kit-epk/press-kit-epk.mdc` |
 | Press Release | `pm-cross` | `pm-cross/press-release/press-release.mdc` |
 | Price Increase Announcement | `pm-pmm` | `pm-pmm/price-increase-announcement/price-increase-announcement.mdc` |
+| Price-Match Request | `pm-money` | `pm-money/price-match-request/price-match-request.mdc` |
 | Pricing Calculator | `pm-calculators` | `pm-calculators/pricing-calculator/pricing-calculator.mdc` |
 | Pricing Page Copy | `pm-pmm` | `pm-pmm/pricing-page-copy/pricing-page-copy.mdc` |
 | Pricing Sensitivity Model (Van Westendorp) | `pm-calculators` | `pm-calculators/pricing-sensitivity-model/pricing-sensitivity-model.mdc` |
@@ -567,6 +573,7 @@
 | Product Launch Checklist | `pm-delivery` | `pm-delivery/product-launch-checklist/product-launch-checklist.mdc` |
 | Product Naming | `pm-uxwriting` | `pm-uxwriting/product-naming/product-naming.mdc` |
 | Product Positioning Doc | `pm-gtm` | `pm-gtm/product-positioning-doc/product-positioning-doc.mdc` |
+| Product-Recall Check | `pm-lifeadmin` | `pm-lifeadmin/product-recall-check/product-recall-check.mdc` |
 | Professional Brain | `pm-cross` | `pm-cross/professional-brain/professional-brain.mdc` |
 | Professional Translator | `pm-localization` | `pm-localization/professional-translator/professional-translator.mdc` |
 | Programmatic SEO | `pm-growth` | `pm-growth/programmatic-seo/programmatic-seo.mdc` |
@@ -697,6 +704,7 @@
 | Slide Deck | `pm-documents` | `pm-documents/slide-deck/slide-deck.mdc` |
 | Slide Density Rules | `pm-cowork` | `pm-cowork/slide-density-rules/slide-density-rules.mdc` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/slo-error-budget.mdc` |
+| Small-Claims Prep | `pm-legal` | `pm-legal/small-claims-prep/small-claims-prep.mdc` |
 | SOAP Note | `pm-health` | `pm-health/soap-note/soap-note.mdc` |
 | SOC 2 Readiness | `pm-compliance` | `pm-compliance/soc2-readiness/soc2-readiness.mdc` |
 | Social Ad Campaign | `pm-social` | `pm-social/social-ad-campaign/social-ad-campaign.mdc` |
@@ -831,6 +839,7 @@
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/voice-of-customer-program.mdc` |
 | Volunteer Treasurer Basics | `pm-committee` | `pm-committee/volunteer-treasurer-basics/volunteer-treasurer-basics.mdc` |
 | Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/vuln-triage.mdc` |
+| Warranty Claim | `pm-money` | `pm-money/warranty-claim/warranty-claim.mdc` |
 | Weather Now | `pm-live` | `pm-live/weather-now/weather-now.mdc` |
 | Wedding Budget | `pm-wedding` | `pm-wedding/wedding-budget/wedding-budget.mdc` |
 | Wedding Logistics Planner | `pm-wedding` | `pm-wedding/wedding-logistics-planner/wedding-logistics-planner.mdc` |

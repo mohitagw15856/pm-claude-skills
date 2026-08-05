@@ -1,4 +1,4 @@
-# 🗂️ All 849 Skills — full catalog
+# 🗂️ All 858 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -430,7 +430,7 @@
 | **Support Macro** (`support-macro`) | Write reusable support macros / canned responses that sound human, not robotic. | — |
 | **Support Runbook** (`support-runbook`) | Write a support runbook for handling a recurring issue type consistently. | — |
 
-## 💰 Finance, Ops & Business (78 skills)
+## 💰 Finance, Ops & Business (80 skills)
 
 ### `pm-accounting` — 6 skills
 
@@ -520,7 +520,7 @@
 | **Runway Planner** (`runway-planner`) | Turn burn and cash into a clear runway picture and a raise decision — months left, default-alive vs default-dead, and what to cut or change. | — |
 | **Startup Idea Validator** (`startup-idea-validator`) | Pressure-test a startup idea the way a sharp investor or co-founder would — problem, market, wedge, moat, why-now, and the fastest cheap way to… | — |
 
-### `pm-money` — 8 skills
+### `pm-money` — 10 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -531,7 +531,9 @@
 | **Investing Policy Statement** (`investing-policy-statement`) | Draft a personal investing policy statement (IPS) — the rules someone sets for their own investing. | — |
 | **Lower My Bill** (`lower-my-bill`) | Negotiate a recurring bill down — internet, phone, insurance, cable, gym — with a ready-to-read script, the competitor leverage that actually… | — |
 | **Net Worth Statement** (`net-worth-statement`) | Produce a personal net-worth statement — assets minus liabilities — and a way to track it. | — |
+| **Price-Match Request** (`price-match-request`) | Get a retailer to match a lower price you found — or refund the difference when the price drops right after you bought — with the request written… | — |
 | **Savings Goal Plan** (`savings-goal-plan`) | Turn a savings goal into a month-by-month funding plan. | — |
+| **Warranty Claim** (`warranty-claim`) | Get a broken product repaired, replaced, or refunded under warranty — with the claim message written, the proof to attach, and the consumer-law… | — |
 
 ### `pm-operations` — 12 skills
 
@@ -550,7 +552,7 @@
 | **Vendor Evaluation** (`vendor-evaluation`) | Create a structured vendor evaluation framework for any procurement decision. | — |
 | **Workshop Facilitation Guide** (`workshop-facilitation-guide`) | Design and facilitate any workshop, working session, or collaborative meeting. | — |
 
-## ⚖️ Legal & Compliance (15 skills)
+## ⚖️ Legal & Compliance (16 skills)
 
 ### `pm-compliance` — 7 skills
 
@@ -564,7 +566,7 @@
 | **SOC 2 Readiness** (`soc2-readiness`) | Assess SOC 2 readiness across the Trust Services Criteria and produce a gap remediation plan. | — |
 | **Vendor Security Review** (`vendor-security-review`) | Run a third-party / vendor security review and assign a risk tier with required controls. | — |
 
-### `pm-legal` — 8 skills · 1 eval-scored
+### `pm-legal` — 9 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -576,8 +578,9 @@
 | **Legal Brief** (`legal-brief`) | Draft a structured legal brief, case summary, or legal argument outline. | — |
 | **NDA Analyser** (`nda-analyser`) | Analyses a Non-Disclosure Agreement clause by clause and flags unusual terms, one-sided provisions, and negotiation points. | — |
 | **Privacy Policy Drafter** (`privacy-policy-drafter`) | Draft a clear, plain-language privacy policy tailored to what a product actually collects and does with data. | ✅ 4.8/5 |
+| **Small-Claims Prep** (`small-claims-prep`) | Prepare a small-claims case end to end — the demand letter that often settles it first, the evidence pack, what to file, and a plain-English… | — |
 
-## 🧑 You & Career (63 skills)
+## 🧑 You & Career (67 skills)
 
 ### `pm-career` — 8 skills
 
@@ -629,7 +632,7 @@
 | **JD Decoder** (`jd-decoder`) | Decode a job description to find what they actually want beneath the buzzwords. | — |
 | **Outreach Message** (`outreach-message`) | Write cold outreach and networking messages that actually get replies. | — |
 
-### `pm-lifeadmin` — 15 skills
+### `pm-lifeadmin` — 19 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -639,10 +642,14 @@
 | **Doctor Visit Prep** (`doctor-visit-prep`) | Prepare for a doctor's appointment so the 12 minutes actually get used — the symptom timeline in the format clinicians think in, the prioritized… | — |
 | **Eulogy Writer** (`eulogy-writer`) | Help someone write a eulogy — the hardest writing most people ever do, at the worst possible time. | — |
 | **Fine Appeal Letter** (`fine-appeal-letter`) | Appeal a parking ticket, penalty charge, or administrative fine with the grounds that actually get appeals granted — not indignation. | — |
+| **Flight-Delay Compensation** (`flight-delay-compensation`) | Work out whether a delayed, cancelled, or overbooked flight likely owes you compensation — and draft the claim with the right rule cited. | — |
 | **Insurance Claim** (`insurance-claim`) | Write a clear insurance claim letter or appeal that supports a payout. | — |
 | **Medical Records Request** (`medical-records-request`) | Request your medical records and actually get them — what to ask for, the request letter that can't be shuffled aside, the timelines and fee rules… | — |
+| **Moving House Checklist** (`moving-house-checklist`) | Turn a move date into a calm, timed plan — every address change, utility switch, deposit-recovery step, and packing wave scheduled so nothing gets… | — |
+| **Neighbor-Dispute Resolver** (`neighbor-dispute-resolver`) | Handle a neighbor conflict — noise, boundaries, parking, shared costs, pets — with a measured approach that de-escalates first and keeps a paper… | — |
 | **New Parent Logistics** (`new-parent-logistics`) | Turn the pre-baby chaos into a staged logistics plan — leave paperwork, insurance deadlines, the hospital-bag/home-setup checklists, and the… | — |
 | **Prescription Cost Navigator** (`prescription-cost-navigator`) | Work down the cost of a prescription systematically — the generic and therapeutic-alternative conversation, discount programs vs insurance math… | — |
+| **Product-Recall Check** (`product-recall-check`) | Find out whether something you own — a car, appliance, car seat, food item, or gadget — is under a safety recall, and what to do about it. | — |
 | **Reference Letter** (`reference-letter`) | Write a credible, specific letter of recommendation or reference. | — |
 | **Relocation Planner** (`relocation-planner`) | Plan a move — across town or across a border — as a dependency-ordered project: the lease/housing chain, address-change cascade, utilities… | — |
 | **Rental Application** (`rental-application`) | Write a standout rental application / cover letter to a landlord or letting agent. | — |
@@ -677,7 +684,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (431 skills)
+## 🌍 Industries & Public Sector (433 skills)
 
 ### `other` — 4 skills
 
@@ -1024,10 +1031,11 @@
 | **Estate Settlement Organizer** (`estate-settlement-organizer`) | Organize an executor's work — the settlement ladder from will-to-probate-to-distribution, the asset/debt inventory, the creditor and beneficiary… | — |
 | **When Someone Dies** (`when-someone-dies`) | The first two weeks after a death, organized — what genuinely needs doing now, what only feels urgent, who to notify in what order, and the… | — |
 
-### `pm-freelance` — 3 skills
+### `pm-freelance` — 4 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Late-Invoice Chaser** (`late-invoice-chaser`) | Chase an overdue invoice and actually get paid — a firm-but-friendly escalation ladder that protects the client relationship until it's clear the… | — |
 | **Late Invoice Escalation** (`late-invoice-escalation`) | Collect overdue invoices with a graduated escalation ladder — friendly nudge to firm notice to work-stop to final demand, each with send-ready… | — |
 | **Pricing Your Services** (`pricing-your-services`) | Design a freelance/consulting pricing structure — hourly vs day-rate vs project vs retainer chosen per engagement type, anchored packages, and the… | — |
 | **Scope Creep Response** (`scope-creep-response`) | Handle scope creep on client work without torching the relationship — classify the ask against the agreement, respond with the… | — |
@@ -1073,12 +1081,13 @@
 | **Server Training Guide** (`server-training-guide`) | Build an onboarding and training guide for restaurant front-of-house staff (servers, hosts, bartenders). | — |
 | **Shift Schedule Builder** (`shift-schedule-builder`) | Build a staff shift schedule that matches coverage to demand while hitting a labor-cost target. | — |
 
-### `pm-insurance` — 4 skills
+### `pm-insurance` — 5 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Claims Triage** (`claims-triage`) | Triage an incoming insurance claim: check the coverage trigger against policy wording, band severity and complexity, screen for fraud indicators… | — |
 | **Coverage Gap Analysis** (`coverage-gap-analysis`) | Map an organisation's risks against its insurance policy portfolio to find what's uncovered, underinsured, or double-covered. | — |
+| **Insurance Claim Appeal** (`insurance-claim-appeal`) | Appeal a denied insurance claim — read the real reason for the denial, find the strongest grounds, and draft the appeal with the evidence that… | — |
 | **Policy Renewal Review** (`policy-renewal-review`) | Run a pre-renewal review of an insurance programme: scan coverage gaps against current operations, test limit adequacy against inflation and… | — |
 | **Underwriting Narrative** (`underwriting-narrative`) | Write the underwriting file narrative for a risk: the risk story, exposure quantification, loss-history read, mitigating and aggravating factors… | — |
 
@@ -1402,4 +1411,4 @@
 
 ---
 
-_849 skills across 105 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_858 skills across 105 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
