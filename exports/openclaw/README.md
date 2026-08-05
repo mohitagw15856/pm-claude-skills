@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-946 skills exported. Copy a `SKILL.md` into the tool to use it.
+952 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -100,6 +100,7 @@
 | Bug Report | `pm-qa` | `bug-report/SKILL.md` |
 | Bug Triage Pack | `pm-qa` | `bug-triage-pack/SKILL.md` |
 | Burnout Recovery Plan | `pm-career` | `burnout-recovery-plan/SKILL.md` |
+| Business-Idea Validator | `pm-freelance` | `business-idea-validator/SKILL.md` |
 | Calendar Defrag | `pm-operator` | `calendar-defrag/SKILL.md` |
 | Candidate Scorecard | `pm-recruiting` | `candidate-scorecard/SKILL.md` |
 | Cap Table Explainer | `pm-founders` | `cap-table-explainer/SKILL.md` |
@@ -140,6 +141,9 @@
 | Clause Explainer | `pm-legal` | `clause-explainer/SKILL.md` |
 | Client Discharge Notes | `pm-veterinary` | `client-discharge-notes/SKILL.md` |
 | Client Discovery | `pm-consulting` | `client-discovery/SKILL.md` |
+| Client Offboarding | `pm-freelance` | `client-offboarding/SKILL.md` |
+| Client-Onboarding Kit | `pm-freelance` | `client-onboarding-kit/SKILL.md` |
+| Client Red Flags | `pm-freelance` | `client-red-flags/SKILL.md` |
 | Climate Risk Assessment | `pm-climate` | `climate-risk-assessment/SKILL.md` |
 | Clinical Case Summary | `pm-research` | `clinical-case-summary/SKILL.md` |
 | Clinical Trial Protocol | `pm-health` | `clinical-trial-protocol/SKILL.md` |
@@ -156,6 +160,7 @@
 | Cohort Analysis | `pm-data` | `cohort-analysis/SKILL.md` |
 | Cohort Curve Model | `pm-calculators` | `cohort-curve-model/SKILL.md` |
 | Cold Email | `pm-copy` | `cold-email/SKILL.md` |
+| Cold Outreach That Isn't Spam | `pm-freelance` | `cold-outreach-that-isnt-spam/SKILL.md` |
 | Collaboration Contract | `pm-cowork` | `collaboration-contract/SKILL.md` |
 | Collections Email | `pm-accounting` | `collections-email/SKILL.md` |
 | College App Parent Guide | `pm-parents` | `college-app-parent-guide/SKILL.md` |
@@ -860,6 +865,7 @@
 | Tenant Screening Guide | `pm-realestate` | `tenant-screening-guide/SKILL.md` |
 | Test Case Writer | `pm-qa` | `test-case-writer/SKILL.md` |
 | Test Strategy Document | `pm-engineering` | `test-strategy-doc/SKILL.md` |
+| Testimonial Request | `pm-freelance` | `testimonial-request/SKILL.md` |
 | The Car Dealership | `pm-simulators` | `the-car-dealership/SKILL.md` |
 | The Churning Customer | `pm-simulators` | `the-churning-customer/SKILL.md` |
 | The Due Diligence Call | `pm-simulators` | `the-due-diligence-call/SKILL.md` |

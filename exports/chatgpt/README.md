@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-946 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+952 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -100,6 +100,7 @@
 | Bug Report | `pm-qa` | `pm-qa/bug-report/SYSTEM_PROMPT.md` |
 | Bug Triage Pack | `pm-qa` | `pm-qa/bug-triage-pack/SYSTEM_PROMPT.md` |
 | Burnout Recovery Plan | `pm-career` | `pm-career/burnout-recovery-plan/SYSTEM_PROMPT.md` |
+| Business-Idea Validator | `pm-freelance` | `pm-freelance/business-idea-validator/SYSTEM_PROMPT.md` |
 | Calendar Defrag | `pm-operator` | `pm-operator/calendar-defrag/SYSTEM_PROMPT.md` |
 | Candidate Scorecard | `pm-recruiting` | `pm-recruiting/candidate-scorecard/SYSTEM_PROMPT.md` |
 | Cap Table Explainer | `pm-founders` | `pm-founders/cap-table-explainer/SYSTEM_PROMPT.md` |
@@ -140,6 +141,9 @@
 | Clause Explainer | `pm-legal` | `pm-legal/clause-explainer/SYSTEM_PROMPT.md` |
 | Client Discharge Notes | `pm-veterinary` | `pm-veterinary/client-discharge-notes/SYSTEM_PROMPT.md` |
 | Client Discovery | `pm-consulting` | `pm-consulting/client-discovery/SYSTEM_PROMPT.md` |
+| Client Offboarding | `pm-freelance` | `pm-freelance/client-offboarding/SYSTEM_PROMPT.md` |
+| Client-Onboarding Kit | `pm-freelance` | `pm-freelance/client-onboarding-kit/SYSTEM_PROMPT.md` |
+| Client Red Flags | `pm-freelance` | `pm-freelance/client-red-flags/SYSTEM_PROMPT.md` |
 | Climate Risk Assessment | `pm-climate` | `pm-climate/climate-risk-assessment/SYSTEM_PROMPT.md` |
 | Clinical Case Summary | `pm-research` | `pm-research/clinical-case-summary/SYSTEM_PROMPT.md` |
 | Clinical Trial Protocol | `pm-health` | `pm-health/clinical-trial-protocol/SYSTEM_PROMPT.md` |
@@ -156,6 +160,7 @@
 | Cohort Analysis | `pm-data` | `pm-data/cohort-analysis/SYSTEM_PROMPT.md` |
 | Cohort Curve Model | `pm-calculators` | `pm-calculators/cohort-curve-model/SYSTEM_PROMPT.md` |
 | Cold Email | `pm-copy` | `pm-copy/cold-email/SYSTEM_PROMPT.md` |
+| Cold Outreach That Isn't Spam | `pm-freelance` | `pm-freelance/cold-outreach-that-isnt-spam/SYSTEM_PROMPT.md` |
 | Collaboration Contract | `pm-cowork` | `pm-cowork/collaboration-contract/SYSTEM_PROMPT.md` |
 | Collections Email | `pm-accounting` | `pm-accounting/collections-email/SYSTEM_PROMPT.md` |
 | College App Parent Guide | `pm-parents` | `pm-parents/college-app-parent-guide/SYSTEM_PROMPT.md` |
@@ -860,6 +865,7 @@
 | Tenant Screening Guide | `pm-realestate` | `pm-realestate/tenant-screening-guide/SYSTEM_PROMPT.md` |
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/SYSTEM_PROMPT.md` |
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/SYSTEM_PROMPT.md` |
+| Testimonial Request | `pm-freelance` | `pm-freelance/testimonial-request/SYSTEM_PROMPT.md` |
 | The Car Dealership | `pm-simulators` | `pm-simulators/the-car-dealership/SYSTEM_PROMPT.md` |
 | The Churning Customer | `pm-simulators` | `pm-simulators/the-churning-customer/SYSTEM_PROMPT.md` |
 | The Due Diligence Call | `pm-simulators` | `pm-simulators/the-due-diligence-call/SYSTEM_PROMPT.md` |

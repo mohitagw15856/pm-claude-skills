@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-946 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+952 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -100,6 +100,7 @@
 | Bug Report | `pm-qa` | `pm-qa/bug-report/GEM_INSTRUCTIONS.md` |
 | Bug Triage Pack | `pm-qa` | `pm-qa/bug-triage-pack/GEM_INSTRUCTIONS.md` |
 | Burnout Recovery Plan | `pm-career` | `pm-career/burnout-recovery-plan/GEM_INSTRUCTIONS.md` |
+| Business-Idea Validator | `pm-freelance` | `pm-freelance/business-idea-validator/GEM_INSTRUCTIONS.md` |
 | Calendar Defrag | `pm-operator` | `pm-operator/calendar-defrag/GEM_INSTRUCTIONS.md` |
 | Candidate Scorecard | `pm-recruiting` | `pm-recruiting/candidate-scorecard/GEM_INSTRUCTIONS.md` |
 | Cap Table Explainer | `pm-founders` | `pm-founders/cap-table-explainer/GEM_INSTRUCTIONS.md` |
@@ -140,6 +141,9 @@
 | Clause Explainer | `pm-legal` | `pm-legal/clause-explainer/GEM_INSTRUCTIONS.md` |
 | Client Discharge Notes | `pm-veterinary` | `pm-veterinary/client-discharge-notes/GEM_INSTRUCTIONS.md` |
 | Client Discovery | `pm-consulting` | `pm-consulting/client-discovery/GEM_INSTRUCTIONS.md` |
+| Client Offboarding | `pm-freelance` | `pm-freelance/client-offboarding/GEM_INSTRUCTIONS.md` |
+| Client-Onboarding Kit | `pm-freelance` | `pm-freelance/client-onboarding-kit/GEM_INSTRUCTIONS.md` |
+| Client Red Flags | `pm-freelance` | `pm-freelance/client-red-flags/GEM_INSTRUCTIONS.md` |
 | Climate Risk Assessment | `pm-climate` | `pm-climate/climate-risk-assessment/GEM_INSTRUCTIONS.md` |
 | Clinical Case Summary | `pm-research` | `pm-research/clinical-case-summary/GEM_INSTRUCTIONS.md` |
 | Clinical Trial Protocol | `pm-health` | `pm-health/clinical-trial-protocol/GEM_INSTRUCTIONS.md` |
@@ -156,6 +160,7 @@
 | Cohort Analysis | `pm-data` | `pm-data/cohort-analysis/GEM_INSTRUCTIONS.md` |
 | Cohort Curve Model | `pm-calculators` | `pm-calculators/cohort-curve-model/GEM_INSTRUCTIONS.md` |
 | Cold Email | `pm-copy` | `pm-copy/cold-email/GEM_INSTRUCTIONS.md` |
+| Cold Outreach That Isn't Spam | `pm-freelance` | `pm-freelance/cold-outreach-that-isnt-spam/GEM_INSTRUCTIONS.md` |
 | Collaboration Contract | `pm-cowork` | `pm-cowork/collaboration-contract/GEM_INSTRUCTIONS.md` |
 | Collections Email | `pm-accounting` | `pm-accounting/collections-email/GEM_INSTRUCTIONS.md` |
 | College App Parent Guide | `pm-parents` | `pm-parents/college-app-parent-guide/GEM_INSTRUCTIONS.md` |
@@ -860,6 +865,7 @@
 | Tenant Screening Guide | `pm-realestate` | `pm-realestate/tenant-screening-guide/GEM_INSTRUCTIONS.md` |
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/GEM_INSTRUCTIONS.md` |
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/GEM_INSTRUCTIONS.md` |
+| Testimonial Request | `pm-freelance` | `pm-freelance/testimonial-request/GEM_INSTRUCTIONS.md` |
 | The Car Dealership | `pm-simulators` | `pm-simulators/the-car-dealership/GEM_INSTRUCTIONS.md` |
 | The Churning Customer | `pm-simulators` | `pm-simulators/the-churning-customer/GEM_INSTRUCTIONS.md` |
 | The Due Diligence Call | `pm-simulators` | `pm-simulators/the-due-diligence-call/GEM_INSTRUCTIONS.md` |

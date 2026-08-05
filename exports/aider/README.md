@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-946 skills exported. Copy a `.md rule` into the tool to use it.
+952 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -100,6 +100,7 @@
 | Bug Report | `pm-qa` | `pm-qa/bug-report/bug-report.md` |
 | Bug Triage Pack | `pm-qa` | `pm-qa/bug-triage-pack/bug-triage-pack.md` |
 | Burnout Recovery Plan | `pm-career` | `pm-career/burnout-recovery-plan/burnout-recovery-plan.md` |
+| Business-Idea Validator | `pm-freelance` | `pm-freelance/business-idea-validator/business-idea-validator.md` |
 | Calendar Defrag | `pm-operator` | `pm-operator/calendar-defrag/calendar-defrag.md` |
 | Candidate Scorecard | `pm-recruiting` | `pm-recruiting/candidate-scorecard/candidate-scorecard.md` |
 | Cap Table Explainer | `pm-founders` | `pm-founders/cap-table-explainer/cap-table-explainer.md` |
@@ -140,6 +141,9 @@
 | Clause Explainer | `pm-legal` | `pm-legal/clause-explainer/clause-explainer.md` |
 | Client Discharge Notes | `pm-veterinary` | `pm-veterinary/client-discharge-notes/client-discharge-notes.md` |
 | Client Discovery | `pm-consulting` | `pm-consulting/client-discovery/client-discovery.md` |
+| Client Offboarding | `pm-freelance` | `pm-freelance/client-offboarding/client-offboarding.md` |
+| Client-Onboarding Kit | `pm-freelance` | `pm-freelance/client-onboarding-kit/client-onboarding-kit.md` |
+| Client Red Flags | `pm-freelance` | `pm-freelance/client-red-flags/client-red-flags.md` |
 | Climate Risk Assessment | `pm-climate` | `pm-climate/climate-risk-assessment/climate-risk-assessment.md` |
 | Clinical Case Summary | `pm-research` | `pm-research/clinical-case-summary/clinical-case-summary.md` |
 | Clinical Trial Protocol | `pm-health` | `pm-health/clinical-trial-protocol/clinical-trial-protocol.md` |
@@ -156,6 +160,7 @@
 | Cohort Analysis | `pm-data` | `pm-data/cohort-analysis/cohort-analysis.md` |
 | Cohort Curve Model | `pm-calculators` | `pm-calculators/cohort-curve-model/cohort-curve-model.md` |
 | Cold Email | `pm-copy` | `pm-copy/cold-email/cold-email.md` |
+| Cold Outreach That Isn't Spam | `pm-freelance` | `pm-freelance/cold-outreach-that-isnt-spam/cold-outreach-that-isnt-spam.md` |
 | Collaboration Contract | `pm-cowork` | `pm-cowork/collaboration-contract/collaboration-contract.md` |
 | Collections Email | `pm-accounting` | `pm-accounting/collections-email/collections-email.md` |
 | College App Parent Guide | `pm-parents` | `pm-parents/college-app-parent-guide/college-app-parent-guide.md` |
@@ -860,6 +865,7 @@
 | Tenant Screening Guide | `pm-realestate` | `pm-realestate/tenant-screening-guide/tenant-screening-guide.md` |
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/test-case-writer.md` |
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/test-strategy-doc.md` |
+| Testimonial Request | `pm-freelance` | `pm-freelance/testimonial-request/testimonial-request.md` |
 | The Car Dealership | `pm-simulators` | `pm-simulators/the-car-dealership/the-car-dealership.md` |
 | The Churning Customer | `pm-simulators` | `pm-simulators/the-churning-customer/the-churning-customer.md` |
 | The Due Diligence Call | `pm-simulators` | `pm-simulators/the-due-diligence-call/the-due-diligence-call.md` |

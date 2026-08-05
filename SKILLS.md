@@ -1,4 +1,4 @@
-# 🗂️ All 946 Skills — full catalog
+# 🗂️ All 952 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -724,7 +724,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (481 skills)
+## 🌍 Industries & Public Sector (487 skills)
 
 ### `other` — 4 skills
 
@@ -1105,14 +1105,20 @@
 | **School Choice Decision** (`school-choice-decision`) | Choose the right school for a specific child by weighing what actually matters to them and your family — not just rankings. | — |
 | **Wedding Vows Writer** (`wedding-vows-writer`) | Write personal wedding vows that sound like you — specific, heartfelt, and the right length — instead of generic or cheesy. | — |
 
-### `pm-freelance` — 4 skills
+### `pm-freelance` — 10 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Business-Idea Validator** (`business-idea-validator`) | Pressure-test a business or side-hustle idea before you sink money and months into it — find the real demand, the risky assumptions, and the… | — |
+| **Client Offboarding** (`client-offboarding`) | Wrap up a client project the right way — a clean handoff, a strong final impression, and the moves that turn a finished project into referrals and… | — |
+| **Client-Onboarding Kit** (`client-onboarding-kit`) | Build a smooth client-onboarding process that starts projects on the right foot — clear expectations, the info you need, and a professional first… | — |
+| **Client Red Flags** (`client-red-flags`) | Spot a bad client before you sign — the warning signs of the projects that turn into unpaid, scope-creeping nightmares, and how to screen, price… | — |
+| **Cold Outreach That Isn't Spam** (`cold-outreach-that-isnt-spam`) | Write cold outreach to potential clients that gets replies — specific, useful, and about them — instead of the templated pitch that gets deleted. | — |
 | **Late-Invoice Chaser** (`late-invoice-chaser`) | Chase an overdue invoice and actually get paid — a firm-but-friendly escalation ladder that protects the client relationship until it's clear the… | — |
 | **Late Invoice Escalation** (`late-invoice-escalation`) | Collect overdue invoices with a graduated escalation ladder — friendly nudge to firm notice to work-stop to final demand, each with send-ready… | — |
 | **Pricing Your Services** (`pricing-your-services`) | Design a freelance/consulting pricing structure — hourly vs day-rate vs project vs retainer chosen per engagement type, anchored packages, and the… | — |
 | **Scope Creep Response** (`scope-creep-response`) | Handle scope creep on client work without torching the relationship — classify the ask against the agreement, respond with the… | — |
+| **Testimonial Request** (`testimonial-request`) | Ask happy clients for a testimonial or review the right way — timed well, easy to give, and specific enough to actually persuade future clients. | — |
 
 ### `pm-gov` — 6 skills
 
@@ -1519,4 +1525,4 @@
 
 ---
 
-_946 skills across 109 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_952 skills across 109 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
