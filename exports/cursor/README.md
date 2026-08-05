@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-858 skills exported. Copy a `.mdc rule` into the tool to use it.
+870 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -69,9 +69,11 @@
 | Benefits Decoder | `pm-decoders` | `pm-decoders/benefits-decoder/benefits-decoder.mdc` |
 | Bennett Time Audit | `pm-dead-mentors` | `pm-dead-mentors/bennett-time-audit/bennett-time-audit.mdc` |
 | Bid / Tender Review | `pm-construction` | `pm-construction/bid-tender-review/bid-tender-review.mdc` |
+| Birdwatching Log | `pm-hobbies` | `pm-hobbies/birdwatching-log/birdwatching-log.mdc` |
 | Blast Radius Drill | `pm-seatbelt` | `pm-seatbelt/blast-radius-drill/blast-radius-drill.mdc` |
 | Board Deck Narrative | `pm-business` | `pm-business/board-deck-narrative/board-deck-narrative.mdc` |
 | Board Game Designer | `pm-tabletop` | `pm-tabletop/board-game-designer/board-game-designer.mdc` |
+| Board Game Night Planner | `pm-hobbies` | `pm-hobbies/board-game-night-planner/board-game-night-planner.mdc` |
 | Board Minutes | `pm-business` | `pm-business/board-minutes/board-minutes.mdc` |
 | Board Pre-Read | `pm-business` | `pm-business/board-pre-read/board-pre-read.mdc` |
 | BOM Cost Review | `pm-hardware` | `pm-hardware/bom-cost-review/bom-cost-review.mdc` |
@@ -116,6 +118,7 @@
 | Chart | `pm-visuals` | `pm-visuals/chart/chart.mdc` |
 | Chart Choice | `pm-cowork` | `pm-cowork/chart-choice/chart-choice.mdc` |
 | Chart Data Extractor | `pm-vision` | `pm-vision/chart-data-extractor/chart-data-extractor.mdc` |
+| Chess Opening Coach | `pm-hobbies` | `pm-hobbies/chess-opening-coach/chess-opening-coach.mdc` |
 | Churn Analysis | `pm-cs` | `pm-cs/churn-analysis/churn-analysis.mdc` |
 | CI/CD Playbook | `pm-engineering` | `pm-engineering/cicd-playbook/cicd-playbook.mdc` |
 | Citation Hygiene | `pm-cowork` | `pm-cowork/citation-hygiene/citation-hygiene.mdc` |
@@ -132,6 +135,7 @@
 | Clone Brief | `pm-2027` | `pm-2027/clone-brief/clone-brief.mdc` |
 | Closing Disclosure Decoder | `pm-decoders` | `pm-decoders/closing-disclosure-decoder/closing-disclosure-decoder.mdc` |
 | Co-Marketing | `pm-growth` | `pm-growth/co-marketing/co-marketing.mdc` |
+| Cocktail From What I Have | `pm-hobbies` | `pm-hobbies/cocktail-from-what-i-have/cocktail-from-what-i-have.mdc` |
 | Code Explainer | `pm-engineering` | `pm-engineering/code-explainer/code-explainer.mdc` |
 | Code Review Checklist | `pm-engineering` | `pm-engineering/code-review-checklist/code-review-checklist.mdc` |
 | Code Review Guide | `pm-craft` | `pm-craft/code-review-guide/code-review-guide.mdc` |
@@ -247,6 +251,7 @@
 | Discovery Eyes | `pm-simulators` | `pm-simulators/discovery-eyes/discovery-eyes.mdc` |
 | Discovery Interview Guide | `pm-discovery` | `pm-discovery/discovery-interview-guide/discovery-interview-guide.mdc` |
 | Dispute Letter | `pm-lifeadmin` | `pm-lifeadmin/dispute-letter/dispute-letter.mdc` |
+| Tabletop Campaign Starter | `pm-hobbies` | `pm-hobbies/dnd-campaign-starter/dnd-campaign-starter.mdc` |
 | DNS Lookup | `pm-live` | `pm-live/dns-lookup/dns-lookup.mdc` |
 | Doc Restructure (Live) | `pm-cowork-live` | `pm-cowork-live/doc-restructure-live/doc-restructure-live.mdc` |
 | Doc Versioning Discipline | `pm-cowork` | `pm-cowork/doc-versioning-discipline/doc-versioning-discipline.mdc` |
@@ -310,6 +315,7 @@
 | Exploratory Test Charter | `pm-qa` | `pm-qa/exploratory-test-charter/exploratory-test-charter.mdc` |
 | Fact-Check Pass | `pm-journalism` | `pm-journalism/fact-check-pass/fact-check-pass.mdc` |
 | Factory Acceptance Test | `pm-hardware` | `pm-hardware/factory-acceptance-test/factory-acceptance-test.mdc` |
+| Fantasy League Drafter | `pm-hobbies` | `pm-hobbies/fantasy-league-drafter/fantasy-league-drafter.mdc` |
 | FAQ Builder | `pm-cowork` | `pm-cowork/faq-builder/faq-builder.mdc` |
 | Feature Flag Guide | `pm-engineering` | `pm-engineering/feature-flag-guide/feature-flag-guide.mdc` |
 | Feature Prioritisation | `pm-planning` | `pm-planning/feature-prioritisation/feature-prioritisation.mdc` |
@@ -375,9 +381,11 @@
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/hiring-rubric.mdc` |
 | HN Digest | `pm-live` | `pm-live/hn-digest/hn-digest.mdc` |
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/hoa-decoder.mdc` |
+| Hobby Starter Kit | `pm-hobbies` | `pm-hobbies/hobby-starter-kit/hobby-starter-kit.mdc` |
 | Home Contractor Quote Decoder | `pm-decoders` | `pm-decoders/home-contractor-quote-decoder/home-contractor-quote-decoder.mdc` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/hook-writer.mdc` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/house-style-enforcer.mdc` |
+| Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/houseplant-care.mdc` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/human-in-the-loop-design.mdc` |
 | i18n Readiness Review | `pm-localization` | `pm-localization/i18n-readiness-review/i18n-readiness-review.mdc` |
 | IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/iep-504-meeting-kit.mdc` |
@@ -417,6 +425,7 @@
 | Job Application | `pm-business` | `pm-business/job-application/job-application.mdc` |
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/job-description-writer.mdc` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/job-story-mapper.mdc` |
+| Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/karaoke-song-picker.mdc` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/kb-audit.mdc` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/knowledge-gardening.mdc` |
 | KPI Tracker Design | `pm-cowork` | `pm-cowork/kpi-tracker-design/kpi-tracker-design.mdc` |
@@ -717,6 +726,7 @@
 | Source Protection Plan | `pm-journalism` | `pm-journalism/source-protection-plan/source-protection-plan.mdc` |
 | Source Triangulation | `pm-cowork` | `pm-cowork/source-triangulation/source-triangulation.mdc` |
 | Sourcing Strategy | `pm-recruiting` | `pm-recruiting/sourcing-strategy/sourcing-strategy.mdc` |
+| Sourdough Troubleshooter | `pm-hobbies` | `pm-hobbies/sourdough-troubleshooter/sourdough-troubleshooter.mdc` |
 | Speak At The Council | `pm-committee` | `pm-committee/speak-at-the-council/speak-at-the-council.mdc` |
 | Sports Scores | `pm-live` | `pm-live/sports-scores/sports-scores.mdc` |
 | Spreadsheet Audit | `pm-cowork` | `pm-cowork/spreadsheet-audit/spreadsheet-audit.mdc` |
@@ -733,6 +743,7 @@
 | Stakeholder Influence Mapper | `pm-strategy` | `pm-strategy/stakeholder-influence-mapper/stakeholder-influence-mapper.mdc` |
 | Stakeholder Update | `pm-essentials` | `pm-essentials/stakeholder-update/stakeholder-update.mdc` |
 | Standing Meeting Audit | `pm-cowork` | `pm-cowork/standing-meeting-audit/standing-meeting-audit.mdc` |
+| Stargazing Tonight | `pm-hobbies` | `pm-hobbies/stargazing-tonight/stargazing-tonight.mdc` |
 | Startup Idea Validator | `pm-founders` | `pm-founders/startup-idea-validator/startup-idea-validator.mdc` |
 | Statement Coach | `pm-students` | `pm-students/statement-coach/statement-coach.mdc` |
 | Statement of Work | `pm-consulting` | `pm-consulting/statement-of-work/statement-of-work.mdc` |
@@ -855,6 +866,7 @@
 | Wiki Summary | `pm-live` | `pm-live/wiki-summary/wiki-summary.mdc` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/win-loss-analysis.mdc` |
 | Win-back Playbook | `pm-cs` | `pm-cs/winback-playbook/winback-playbook.mdc` |
+| Wine Pairing | `pm-hobbies` | `pm-hobbies/wine-pairing/wine-pairing.mdc` |
 | Word Document | `pm-documents` | `pm-documents/word-document/word-document.mdc` |
 | Working Agreements | `pm-cowork` | `pm-cowork/working-agreements/working-agreements.mdc` |
 | Workshop Designer | `pm-cowork` | `pm-cowork/workshop-designer/workshop-designer.mdc` |

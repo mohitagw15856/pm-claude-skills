@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-858 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+870 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -69,9 +69,11 @@
 | Benefits Decoder | `pm-decoders` | `pm-decoders/benefits-decoder/SYSTEM_PROMPT.md` |
 | Bennett Time Audit | `pm-dead-mentors` | `pm-dead-mentors/bennett-time-audit/SYSTEM_PROMPT.md` |
 | Bid / Tender Review | `pm-construction` | `pm-construction/bid-tender-review/SYSTEM_PROMPT.md` |
+| Birdwatching Log | `pm-hobbies` | `pm-hobbies/birdwatching-log/SYSTEM_PROMPT.md` |
 | Blast Radius Drill | `pm-seatbelt` | `pm-seatbelt/blast-radius-drill/SYSTEM_PROMPT.md` |
 | Board Deck Narrative | `pm-business` | `pm-business/board-deck-narrative/SYSTEM_PROMPT.md` |
 | Board Game Designer | `pm-tabletop` | `pm-tabletop/board-game-designer/SYSTEM_PROMPT.md` |
+| Board Game Night Planner | `pm-hobbies` | `pm-hobbies/board-game-night-planner/SYSTEM_PROMPT.md` |
 | Board Minutes | `pm-business` | `pm-business/board-minutes/SYSTEM_PROMPT.md` |
 | Board Pre-Read | `pm-business` | `pm-business/board-pre-read/SYSTEM_PROMPT.md` |
 | BOM Cost Review | `pm-hardware` | `pm-hardware/bom-cost-review/SYSTEM_PROMPT.md` |
@@ -116,6 +118,7 @@
 | Chart | `pm-visuals` | `pm-visuals/chart/SYSTEM_PROMPT.md` |
 | Chart Choice | `pm-cowork` | `pm-cowork/chart-choice/SYSTEM_PROMPT.md` |
 | Chart Data Extractor | `pm-vision` | `pm-vision/chart-data-extractor/SYSTEM_PROMPT.md` |
+| Chess Opening Coach | `pm-hobbies` | `pm-hobbies/chess-opening-coach/SYSTEM_PROMPT.md` |
 | Churn Analysis | `pm-cs` | `pm-cs/churn-analysis/SYSTEM_PROMPT.md` |
 | CI/CD Playbook | `pm-engineering` | `pm-engineering/cicd-playbook/SYSTEM_PROMPT.md` |
 | Citation Hygiene | `pm-cowork` | `pm-cowork/citation-hygiene/SYSTEM_PROMPT.md` |
@@ -132,6 +135,7 @@
 | Clone Brief | `pm-2027` | `pm-2027/clone-brief/SYSTEM_PROMPT.md` |
 | Closing Disclosure Decoder | `pm-decoders` | `pm-decoders/closing-disclosure-decoder/SYSTEM_PROMPT.md` |
 | Co-Marketing | `pm-growth` | `pm-growth/co-marketing/SYSTEM_PROMPT.md` |
+| Cocktail From What I Have | `pm-hobbies` | `pm-hobbies/cocktail-from-what-i-have/SYSTEM_PROMPT.md` |
 | Code Explainer | `pm-engineering` | `pm-engineering/code-explainer/SYSTEM_PROMPT.md` |
 | Code Review Checklist | `pm-engineering` | `pm-engineering/code-review-checklist/SYSTEM_PROMPT.md` |
 | Code Review Guide | `pm-craft` | `pm-craft/code-review-guide/SYSTEM_PROMPT.md` |
@@ -247,6 +251,7 @@
 | Discovery Eyes | `pm-simulators` | `pm-simulators/discovery-eyes/SYSTEM_PROMPT.md` |
 | Discovery Interview Guide | `pm-discovery` | `pm-discovery/discovery-interview-guide/SYSTEM_PROMPT.md` |
 | Dispute Letter | `pm-lifeadmin` | `pm-lifeadmin/dispute-letter/SYSTEM_PROMPT.md` |
+| Tabletop Campaign Starter | `pm-hobbies` | `pm-hobbies/dnd-campaign-starter/SYSTEM_PROMPT.md` |
 | DNS Lookup | `pm-live` | `pm-live/dns-lookup/SYSTEM_PROMPT.md` |
 | Doc Restructure (Live) | `pm-cowork-live` | `pm-cowork-live/doc-restructure-live/SYSTEM_PROMPT.md` |
 | Doc Versioning Discipline | `pm-cowork` | `pm-cowork/doc-versioning-discipline/SYSTEM_PROMPT.md` |
@@ -310,6 +315,7 @@
 | Exploratory Test Charter | `pm-qa` | `pm-qa/exploratory-test-charter/SYSTEM_PROMPT.md` |
 | Fact-Check Pass | `pm-journalism` | `pm-journalism/fact-check-pass/SYSTEM_PROMPT.md` |
 | Factory Acceptance Test | `pm-hardware` | `pm-hardware/factory-acceptance-test/SYSTEM_PROMPT.md` |
+| Fantasy League Drafter | `pm-hobbies` | `pm-hobbies/fantasy-league-drafter/SYSTEM_PROMPT.md` |
 | FAQ Builder | `pm-cowork` | `pm-cowork/faq-builder/SYSTEM_PROMPT.md` |
 | Feature Flag Guide | `pm-engineering` | `pm-engineering/feature-flag-guide/SYSTEM_PROMPT.md` |
 | Feature Prioritisation | `pm-planning` | `pm-planning/feature-prioritisation/SYSTEM_PROMPT.md` |
@@ -375,9 +381,11 @@
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/SYSTEM_PROMPT.md` |
 | HN Digest | `pm-live` | `pm-live/hn-digest/SYSTEM_PROMPT.md` |
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/SYSTEM_PROMPT.md` |
+| Hobby Starter Kit | `pm-hobbies` | `pm-hobbies/hobby-starter-kit/SYSTEM_PROMPT.md` |
 | Home Contractor Quote Decoder | `pm-decoders` | `pm-decoders/home-contractor-quote-decoder/SYSTEM_PROMPT.md` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/SYSTEM_PROMPT.md` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/SYSTEM_PROMPT.md` |
+| Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/SYSTEM_PROMPT.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/SYSTEM_PROMPT.md` |
 | i18n Readiness Review | `pm-localization` | `pm-localization/i18n-readiness-review/SYSTEM_PROMPT.md` |
 | IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/SYSTEM_PROMPT.md` |
@@ -417,6 +425,7 @@
 | Job Application | `pm-business` | `pm-business/job-application/SYSTEM_PROMPT.md` |
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/SYSTEM_PROMPT.md` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/SYSTEM_PROMPT.md` |
+| Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/SYSTEM_PROMPT.md` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/SYSTEM_PROMPT.md` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/SYSTEM_PROMPT.md` |
 | KPI Tracker Design | `pm-cowork` | `pm-cowork/kpi-tracker-design/SYSTEM_PROMPT.md` |
@@ -717,6 +726,7 @@
 | Source Protection Plan | `pm-journalism` | `pm-journalism/source-protection-plan/SYSTEM_PROMPT.md` |
 | Source Triangulation | `pm-cowork` | `pm-cowork/source-triangulation/SYSTEM_PROMPT.md` |
 | Sourcing Strategy | `pm-recruiting` | `pm-recruiting/sourcing-strategy/SYSTEM_PROMPT.md` |
+| Sourdough Troubleshooter | `pm-hobbies` | `pm-hobbies/sourdough-troubleshooter/SYSTEM_PROMPT.md` |
 | Speak At The Council | `pm-committee` | `pm-committee/speak-at-the-council/SYSTEM_PROMPT.md` |
 | Sports Scores | `pm-live` | `pm-live/sports-scores/SYSTEM_PROMPT.md` |
 | Spreadsheet Audit | `pm-cowork` | `pm-cowork/spreadsheet-audit/SYSTEM_PROMPT.md` |
@@ -733,6 +743,7 @@
 | Stakeholder Influence Mapper | `pm-strategy` | `pm-strategy/stakeholder-influence-mapper/SYSTEM_PROMPT.md` |
 | Stakeholder Update | `pm-essentials` | `pm-essentials/stakeholder-update/SYSTEM_PROMPT.md` |
 | Standing Meeting Audit | `pm-cowork` | `pm-cowork/standing-meeting-audit/SYSTEM_PROMPT.md` |
+| Stargazing Tonight | `pm-hobbies` | `pm-hobbies/stargazing-tonight/SYSTEM_PROMPT.md` |
 | Startup Idea Validator | `pm-founders` | `pm-founders/startup-idea-validator/SYSTEM_PROMPT.md` |
 | Statement Coach | `pm-students` | `pm-students/statement-coach/SYSTEM_PROMPT.md` |
 | Statement of Work | `pm-consulting` | `pm-consulting/statement-of-work/SYSTEM_PROMPT.md` |
@@ -855,6 +866,7 @@
 | Wiki Summary | `pm-live` | `pm-live/wiki-summary/SYSTEM_PROMPT.md` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/SYSTEM_PROMPT.md` |
 | Win-back Playbook | `pm-cs` | `pm-cs/winback-playbook/SYSTEM_PROMPT.md` |
+| Wine Pairing | `pm-hobbies` | `pm-hobbies/wine-pairing/SYSTEM_PROMPT.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/SYSTEM_PROMPT.md` |
 | Working Agreements | `pm-cowork` | `pm-cowork/working-agreements/SYSTEM_PROMPT.md` |
 | Workshop Designer | `pm-cowork` | `pm-cowork/workshop-designer/SYSTEM_PROMPT.md` |

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-858 skills exported. Copy a `SKILL.md` into the tool to use it.
+870 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -69,9 +69,11 @@
 | Benefits Decoder | `pm-decoders` | `benefits-decoder/SKILL.md` |
 | Bennett Time Audit | `pm-dead-mentors` | `bennett-time-audit/SKILL.md` |
 | Bid / Tender Review | `pm-construction` | `bid-tender-review/SKILL.md` |
+| Birdwatching Log | `pm-hobbies` | `birdwatching-log/SKILL.md` |
 | Blast Radius Drill | `pm-seatbelt` | `blast-radius-drill/SKILL.md` |
 | Board Deck Narrative | `pm-business` | `board-deck-narrative/SKILL.md` |
 | Board Game Designer | `pm-tabletop` | `board-game-designer/SKILL.md` |
+| Board Game Night Planner | `pm-hobbies` | `board-game-night-planner/SKILL.md` |
 | Board Minutes | `pm-business` | `board-minutes/SKILL.md` |
 | Board Pre-Read | `pm-business` | `board-pre-read/SKILL.md` |
 | BOM Cost Review | `pm-hardware` | `bom-cost-review/SKILL.md` |
@@ -116,6 +118,7 @@
 | Chart | `pm-visuals` | `chart/SKILL.md` |
 | Chart Choice | `pm-cowork` | `chart-choice/SKILL.md` |
 | Chart Data Extractor | `pm-vision` | `chart-data-extractor/SKILL.md` |
+| Chess Opening Coach | `pm-hobbies` | `chess-opening-coach/SKILL.md` |
 | Churn Analysis | `pm-cs` | `churn-analysis/SKILL.md` |
 | CI/CD Playbook | `pm-engineering` | `cicd-playbook/SKILL.md` |
 | Citation Hygiene | `pm-cowork` | `citation-hygiene/SKILL.md` |
@@ -132,6 +135,7 @@
 | Clone Brief | `pm-2027` | `clone-brief/SKILL.md` |
 | Closing Disclosure Decoder | `pm-decoders` | `closing-disclosure-decoder/SKILL.md` |
 | Co-Marketing | `pm-growth` | `co-marketing/SKILL.md` |
+| Cocktail From What I Have | `pm-hobbies` | `cocktail-from-what-i-have/SKILL.md` |
 | Code Explainer | `pm-engineering` | `code-explainer/SKILL.md` |
 | Code Review Checklist | `pm-engineering` | `code-review-checklist/SKILL.md` |
 | Code Review Guide | `pm-craft` | `code-review-guide/SKILL.md` |
@@ -247,6 +251,7 @@
 | Discovery Eyes | `pm-simulators` | `discovery-eyes/SKILL.md` |
 | Discovery Interview Guide | `pm-discovery` | `discovery-interview-guide/SKILL.md` |
 | Dispute Letter | `pm-lifeadmin` | `dispute-letter/SKILL.md` |
+| Tabletop Campaign Starter | `pm-hobbies` | `dnd-campaign-starter/SKILL.md` |
 | DNS Lookup | `pm-live` | `dns-lookup/SKILL.md` |
 | Doc Restructure (Live) | `pm-cowork-live` | `doc-restructure-live/SKILL.md` |
 | Doc Versioning Discipline | `pm-cowork` | `doc-versioning-discipline/SKILL.md` |
@@ -310,6 +315,7 @@
 | Exploratory Test Charter | `pm-qa` | `exploratory-test-charter/SKILL.md` |
 | Fact-Check Pass | `pm-journalism` | `fact-check-pass/SKILL.md` |
 | Factory Acceptance Test | `pm-hardware` | `factory-acceptance-test/SKILL.md` |
+| Fantasy League Drafter | `pm-hobbies` | `fantasy-league-drafter/SKILL.md` |
 | FAQ Builder | `pm-cowork` | `faq-builder/SKILL.md` |
 | Feature Flag Guide | `pm-engineering` | `feature-flag-guide/SKILL.md` |
 | Feature Prioritisation | `pm-planning` | `feature-prioritisation/SKILL.md` |
@@ -375,9 +381,11 @@
 | Hiring Rubric | `pm-people` | `hiring-rubric/SKILL.md` |
 | HN Digest | `pm-live` | `hn-digest/SKILL.md` |
 | HOA Decoder | `pm-decoders` | `hoa-decoder/SKILL.md` |
+| Hobby Starter Kit | `pm-hobbies` | `hobby-starter-kit/SKILL.md` |
 | Home Contractor Quote Decoder | `pm-decoders` | `home-contractor-quote-decoder/SKILL.md` |
 | Hook Writer | `pm-creator` | `hook-writer/SKILL.md` |
 | House Style Enforcer | `pm-cowork` | `house-style-enforcer/SKILL.md` |
+| Houseplant Care | `pm-hobbies` | `houseplant-care/SKILL.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `human-in-the-loop-design/SKILL.md` |
 | i18n Readiness Review | `pm-localization` | `i18n-readiness-review/SKILL.md` |
 | IEP 504 Meeting Kit | `pm-parents` | `iep-504-meeting-kit/SKILL.md` |
@@ -417,6 +425,7 @@
 | Job Application | `pm-business` | `job-application/SKILL.md` |
 | Job Description Writer | `pm-hr` | `job-description-writer/SKILL.md` |
 | Job Story Mapper | `pm-discovery` | `job-story-mapper/SKILL.md` |
+| Karaoke Song Picker | `pm-hobbies` | `karaoke-song-picker/SKILL.md` |
 | Knowledge Base Audit | `pm-support` | `kb-audit/SKILL.md` |
 | Knowledge Gardening | `pm-cowork` | `knowledge-gardening/SKILL.md` |
 | KPI Tracker Design | `pm-cowork` | `kpi-tracker-design/SKILL.md` |
@@ -717,6 +726,7 @@
 | Source Protection Plan | `pm-journalism` | `source-protection-plan/SKILL.md` |
 | Source Triangulation | `pm-cowork` | `source-triangulation/SKILL.md` |
 | Sourcing Strategy | `pm-recruiting` | `sourcing-strategy/SKILL.md` |
+| Sourdough Troubleshooter | `pm-hobbies` | `sourdough-troubleshooter/SKILL.md` |
 | Speak At The Council | `pm-committee` | `speak-at-the-council/SKILL.md` |
 | Sports Scores | `pm-live` | `sports-scores/SKILL.md` |
 | Spreadsheet Audit | `pm-cowork` | `spreadsheet-audit/SKILL.md` |
@@ -733,6 +743,7 @@
 | Stakeholder Influence Mapper | `pm-strategy` | `stakeholder-influence-mapper/SKILL.md` |
 | Stakeholder Update | `pm-essentials` | `stakeholder-update/SKILL.md` |
 | Standing Meeting Audit | `pm-cowork` | `standing-meeting-audit/SKILL.md` |
+| Stargazing Tonight | `pm-hobbies` | `stargazing-tonight/SKILL.md` |
 | Startup Idea Validator | `pm-founders` | `startup-idea-validator/SKILL.md` |
 | Statement Coach | `pm-students` | `statement-coach/SKILL.md` |
 | Statement of Work | `pm-consulting` | `statement-of-work/SKILL.md` |
@@ -855,6 +866,7 @@
 | Wiki Summary | `pm-live` | `wiki-summary/SKILL.md` |
 | Win/Loss Analysis | `pm-pmm` | `win-loss-analysis/SKILL.md` |
 | Win-back Playbook | `pm-cs` | `winback-playbook/SKILL.md` |
+| Wine Pairing | `pm-hobbies` | `wine-pairing/SKILL.md` |
 | Word Document | `pm-documents` | `word-document/SKILL.md` |
 | Working Agreements | `pm-cowork` | `working-agreements/SKILL.md` |
 | Workshop Designer | `pm-cowork` | `workshop-designer/SKILL.md` |

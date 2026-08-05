@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-hobbies",
+      "description": "Skills for hobbies & leisure: wine pairing, cocktails from what you have, houseplant care, sourdough troubleshooting, board-game nights, tabletop campaigns, stargazing, birdwatching, chess openings, karaoke picks, fantasy-league drafting, and starting any new hobby.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-hobbies",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-musician",
       "description": "Musician skills.",
       "version": "1.0.0",

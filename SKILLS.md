@@ -1,4 +1,4 @@
-# 🗂️ All 858 Skills — full catalog
+# 🗂️ All 870 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -684,7 +684,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (433 skills)
+## 🌍 Industries & Public Sector (445 skills)
 
 ### `other` — 4 skills
 
@@ -1071,6 +1071,23 @@
 | **Prior Authorization Letter** (`prior-authorization-letter`) | Write a persuasive prior-authorization / medical-necessity letter to an insurer. | — |
 | **SOAP Note** (`soap-note`) | Structure a clinical encounter into a clean SOAP note. | — |
 
+### `pm-hobbies` — 12 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Birdwatching Log** (`birdwatching-log`) | Get started birding from where you are — what you're likely to see, how to tell confusing species apart, and a simple life-list to track sightings. | — |
+| **Board Game Night Planner** (`board-game-night-planner`) | Plan a board game night that actually lands — the right games for your group size, mix, and time, in a running order that keeps energy up. | — |
+| **Chess Opening Coach** (`chess-opening-coach`) | Build a small, coherent opening repertoire that fits your style and level — the few lines actually worth learning, plus the plans and traps behind… | — |
+| **Cocktail From What I Have** (`cocktail-from-what-i-have`) | Make a genuinely good drink from the bottles already on your shelf — no special trip, no 12-ingredient recipe. | — |
+| **Tabletop Campaign Starter** (`dnd-campaign-starter`) | Spin up a tabletop RPG one-shot or a session-zero for a new campaign — a hook, a map of the first adventure, NPCs, and encounters tuned to your party. | — |
+| **Fantasy League Drafter** (`fantasy-league-drafter`) | Build a fantasy-sports draft strategy and weekly plan that fits your league's exact settings — so you draft with a plan instead of vibes. | — |
+| **Hobby Starter Kit** (`hobby-starter-kit`) | Turn 'I want to try [hobby]' into a real first month — the minimal starter gear, the first skills to practice, and a beginner-friendly plan that… | — |
+| **Houseplant Care** (`houseplant-care`) | Diagnose why a houseplant is struggling and set a care routine it'll actually thrive on — matched to your light, home, and how much attention… | — |
+| **Karaoke Song Picker** (`karaoke-song-picker`) | Pick the karaoke song that actually fits your voice and the room — so you land it instead of dying on a key change. | — |
+| **Sourdough Troubleshooter** (`sourdough-troubleshooter`) | Figure out why the loaf came out dense, flat, or gummy — and what to change next bake. | — |
+| **Stargazing Tonight** (`stargazing-tonight`) | Plan a stargazing session for tonight from where you are — what's worth looking for, when and where to look, and how to see it with just your eyes… | — |
+| **Wine Pairing** (`wine-pairing`) | Pick a wine that flatters tonight's meal — at your budget, from what's actually available — without the sommelier mystique. | — |
+
 ### `pm-hospitality` — 5 skills
 
 | Skill | What it does | Eval |
@@ -1411,4 +1428,4 @@
 
 ---
 
-_858 skills across 105 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_870 skills across 106 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
