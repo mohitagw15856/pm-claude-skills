@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-882 skills exported. Copy a `SKILL.md` into the tool to use it.
+894 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -13,6 +13,7 @@
 | A/B Test Readout | `pm-data` | `ab-test-readout/SKILL.md` |
 | Accessibility Audit | `pm-design` | `accessibility-audit/SKILL.md` |
 | Account Plan | `pm-sales` | `account-plan/SKILL.md` |
+| Account Recovery Plan | `pm-digital-safety` | `account-recovery-plan/SKILL.md` |
 | Acquirer Red Team | `pm-simulators` | `acquirer-red-team/SKILL.md` |
 | Action Runner | `pm-cross` | `action-runner/SKILL.md` |
 | Ad Copy | `pm-copy` | `ad-copy/SKILL.md` |
@@ -63,6 +64,7 @@
 | Auto Repair Estimate Decoder | `pm-decoders` | `auto-repair-estimate-decoder/SKILL.md` |
 | Autopilot Charter | `pm-autopilot` | `autopilot-charter/SKILL.md` |
 | Awkward Message Helper | `pm-comms` | `awkward-message-helper/SKILL.md` |
+| Backup Strategy | `pm-digital-safety` | `backup-strategy/SKILL.md` |
 | Band Agreement | `pm-musician` | `band-agreement/SKILL.md` |
 | Behavior Intervention Plan | `pm-teaching` | `behavior-intervention-plan/SKILL.md` |
 | Beneficiary Audit | `pm-estate` | `beneficiary-audit/SKILL.md` |
@@ -196,6 +198,7 @@
 | Dashboard Brief | `pm-data` | `dashboard-brief/SKILL.md` |
 | Data Analysis Standard | `pm-analytics` | `data-analysis-standard/SKILL.md` |
 | Data Breach Response | `pm-scam-defense` | `data-breach-response/SKILL.md` |
+| Data-Broker Removal | `pm-digital-safety` | `data-broker-removal/SKILL.md` |
 | Data Cleaning Pass | `pm-cowork` | `data-cleaning-pass/SKILL.md` |
 | Data Contract | `pm-dataeng` | `data-contract/SKILL.md` |
 | Data Pipeline Spec | `pm-data` | `data-pipeline-spec/SKILL.md` |
@@ -264,6 +267,7 @@
 | Donor Update | `pm-nonprofit` | `donor-update/SKILL.md` |
 | Double Opt-In Intro | `pm-cowork` | `double-opt-in-intro/SKILL.md` |
 | Downloads Triage | `pm-cowork` | `downloads-triage/SKILL.md` |
+| Doxxing Response | `pm-digital-safety` | `doxxing-response/SKILL.md` |
 | DPA Review | `pm-legal` | `dpa-review/SKILL.md` |
 | Earthquake Watch | `pm-live` | `earthquake-watch/SKILL.md` |
 | Elder Scam Briefing | `pm-scam-defense` | `elder-scam-briefing/SKILL.md` |
@@ -394,6 +398,7 @@
 | Human-in-the-Loop Design | `pm-agentnative` | `human-in-the-loop-design/SKILL.md` |
 | Hydration & Energy Plan | `pm-wellbeing` | `hydration-and-energy-plan/SKILL.md` |
 | i18n Readiness Review | `pm-localization` | `i18n-readiness-review/SKILL.md` |
+| Identity Theft Recovery | `pm-digital-safety` | `identity-theft-recovery/SKILL.md` |
 | IEP 504 Meeting Kit | `pm-parents` | `iep-504-meeting-kit/SKILL.md` |
 | IEP Goal Support | `pm-education` | `iep-goal-support/SKILL.md` |
 | IEP Goal Writer | `pm-teaching` | `iep-goal-writer/SKILL.md` |
@@ -434,6 +439,7 @@
 | Journaling Prompts | `pm-wellbeing` | `journaling-prompts/SKILL.md` |
 | Karaoke Song Picker | `pm-hobbies` | `karaoke-song-picker/SKILL.md` |
 | Knowledge Base Audit | `pm-support` | `kb-audit/SKILL.md` |
+| Kids' Online-Safety Plan | `pm-digital-safety` | `kids-online-safety-plan/SKILL.md` |
 | Knowledge Gardening | `pm-cowork` | `knowledge-gardening/SKILL.md` |
 | KPI Tracker Design | `pm-cowork` | `kpi-tracker-design/SKILL.md` |
 | KYC Escalation | `pm-banking` | `kyc-escalation/SKILL.md` |
@@ -534,12 +540,14 @@
 | Outcome Tracker | `pm-autopilot` | `outcome-tracker/SKILL.md` |
 | Outline Before Prose | `pm-cowork` | `outline-before-prose/SKILL.md` |
 | Outreach Message | `pm-jobsearch` | `outreach-message/SKILL.md` |
+| Oversharing Audit | `pm-digital-safety` | `oversharing-audit/SKILL.md` |
 | Package Health | `pm-live` | `package-health/SKILL.md` |
 | Paid Acquisition Plan | `pm-growth` | `paid-acquisition-plan/SKILL.md` |
 | Parent Communication | `pm-education` | `parent-communication/SKILL.md` |
 | Parent Conference Prep | `pm-teaching` | `parent-conference-prep/SKILL.md` |
 | Parent Teacher Conference Prep | `pm-parents` | `parent-teacher-conference-prep/SKILL.md` |
 | Partnership Proposal | `pm-sales` | `partnership-proposal/SKILL.md` |
+| Password & 2FA Setup | `pm-digital-safety` | `password-and-2fa-setup/SKILL.md` |
 | Patient Communication | `pm-research` | `patient-communication/SKILL.md` |
 | Pay Stub Decoder | `pm-decoders` | `pay-stub-decoder/SKILL.md` |
 | Paywall Optimization | `pm-growth` | `paywall-optimization/SKILL.md` |
@@ -550,6 +558,7 @@
 | Personal Board of Directors | `pm-personal` | `personal-board-of-directors/SKILL.md` |
 | Personal WIP Limits | `pm-cowork` | `personal-wip-limits/SKILL.md` |
 | Persuasion Brief | `pm-comms` | `persuasion-brief/SKILL.md` |
+| Phishing Triage | `pm-digital-safety` | `phishing-triage/SKILL.md` |
 | Photo Library Rescue | `pm-cowork` | `photo-library-rescue/SKILL.md` |
 | PIP Responder | `pm-career` | `pip-responder/SKILL.md` |
 | PIP Writer | `pm-people` | `pip-writer/SKILL.md` |
@@ -619,6 +628,7 @@
 | RAG Design Doc | `pm-ai` | `rag-design-doc/SKILL.md` |
 | Raise vs Jump | `pm-calculators` | `raise-vs-jump/SKILL.md` |
 | Ranked Climb Coach | `pm-newgen` | `ranked-climb-coach/SKILL.md` |
+| Ransomware First Response | `pm-digital-safety` | `ransomware-first-response/SKILL.md` |
 | Rate Card | `pm-consulting` | `rate-card/SKILL.md` |
 | README Writer | `pm-devrel` | `readme-writer/SKILL.md` |
 | Receipts Audit | `pm-method` | `receipts-audit/SKILL.md` |
@@ -680,6 +690,7 @@
 | Runway Monte Carlo | `pm-calculators` | `runway-monte-carlo/SKILL.md` |
 | Runway Planner | `pm-founders` | `runway-planner/SKILL.md` |
 | SaaS Metrics | `pm-calculators` | `saas-metrics/SKILL.md` |
+| Safe Online Shopping | `pm-digital-safety` | `safe-online-shopping/SKILL.md` |
 | Salary Negotiation | `pm-career` | `salary-negotiation/SKILL.md` |
 | Sales Battlecard | `pm-sales` | `sales-battlecard/SKILL.md` |
 | Sales Demo Script | `pm-pmm` | `sales-demo-script/SKILL.md` |
@@ -697,6 +708,7 @@
 | Screen-Time Detox | `pm-wellbeing` | `screen-time-detox/SKILL.md` |
 | Screenshot Teardown | `pm-vision` | `screenshot-teardown/SKILL.md` |
 | Second Opinion Request | `pm-lifeadmin` | `second-opinion-request/SKILL.md` |
+| Secure a Lost Phone | `pm-digital-safety` | `secure-a-lost-phone/SKILL.md` |
 | Security Deposit Recovery | `pm-renters` | `security-deposit-recovery/SKILL.md` |
 | Security Incident Response | `pm-security` | `security-incident-response/SKILL.md` |
 | Security Questionnaire Autofill | `pm-compliance` | `security-questionnaire-autofill/SKILL.md` |

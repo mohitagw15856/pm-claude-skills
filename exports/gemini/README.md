@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-882 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+894 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -13,6 +13,7 @@
 | A/B Test Readout | `pm-data` | `pm-data/ab-test-readout/GEM_INSTRUCTIONS.md` |
 | Accessibility Audit | `pm-design` | `pm-design/accessibility-audit/GEM_INSTRUCTIONS.md` |
 | Account Plan | `pm-sales` | `pm-sales/account-plan/GEM_INSTRUCTIONS.md` |
+| Account Recovery Plan | `pm-digital-safety` | `pm-digital-safety/account-recovery-plan/GEM_INSTRUCTIONS.md` |
 | Acquirer Red Team | `pm-simulators` | `pm-simulators/acquirer-red-team/GEM_INSTRUCTIONS.md` |
 | Action Runner | `pm-cross` | `pm-cross/action-runner/GEM_INSTRUCTIONS.md` |
 | Ad Copy | `pm-copy` | `pm-copy/ad-copy/GEM_INSTRUCTIONS.md` |
@@ -63,6 +64,7 @@
 | Auto Repair Estimate Decoder | `pm-decoders` | `pm-decoders/auto-repair-estimate-decoder/GEM_INSTRUCTIONS.md` |
 | Autopilot Charter | `pm-autopilot` | `pm-autopilot/autopilot-charter/GEM_INSTRUCTIONS.md` |
 | Awkward Message Helper | `pm-comms` | `pm-comms/awkward-message-helper/GEM_INSTRUCTIONS.md` |
+| Backup Strategy | `pm-digital-safety` | `pm-digital-safety/backup-strategy/GEM_INSTRUCTIONS.md` |
 | Band Agreement | `pm-musician` | `pm-musician/band-agreement/GEM_INSTRUCTIONS.md` |
 | Behavior Intervention Plan | `pm-teaching` | `pm-teaching/behavior-intervention-plan/GEM_INSTRUCTIONS.md` |
 | Beneficiary Audit | `pm-estate` | `pm-estate/beneficiary-audit/GEM_INSTRUCTIONS.md` |
@@ -196,6 +198,7 @@
 | Dashboard Brief | `pm-data` | `pm-data/dashboard-brief/GEM_INSTRUCTIONS.md` |
 | Data Analysis Standard | `pm-analytics` | `pm-analytics/data-analysis-standard/GEM_INSTRUCTIONS.md` |
 | Data Breach Response | `pm-scam-defense` | `pm-scam-defense/data-breach-response/GEM_INSTRUCTIONS.md` |
+| Data-Broker Removal | `pm-digital-safety` | `pm-digital-safety/data-broker-removal/GEM_INSTRUCTIONS.md` |
 | Data Cleaning Pass | `pm-cowork` | `pm-cowork/data-cleaning-pass/GEM_INSTRUCTIONS.md` |
 | Data Contract | `pm-dataeng` | `pm-dataeng/data-contract/GEM_INSTRUCTIONS.md` |
 | Data Pipeline Spec | `pm-data` | `pm-data/data-pipeline-spec/GEM_INSTRUCTIONS.md` |
@@ -264,6 +267,7 @@
 | Donor Update | `pm-nonprofit` | `pm-nonprofit/donor-update/GEM_INSTRUCTIONS.md` |
 | Double Opt-In Intro | `pm-cowork` | `pm-cowork/double-opt-in-intro/GEM_INSTRUCTIONS.md` |
 | Downloads Triage | `pm-cowork` | `pm-cowork/downloads-triage/GEM_INSTRUCTIONS.md` |
+| Doxxing Response | `pm-digital-safety` | `pm-digital-safety/doxxing-response/GEM_INSTRUCTIONS.md` |
 | DPA Review | `pm-legal` | `pm-legal/dpa-review/GEM_INSTRUCTIONS.md` |
 | Earthquake Watch | `pm-live` | `pm-live/earthquake-watch/GEM_INSTRUCTIONS.md` |
 | Elder Scam Briefing | `pm-scam-defense` | `pm-scam-defense/elder-scam-briefing/GEM_INSTRUCTIONS.md` |
@@ -394,6 +398,7 @@
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/GEM_INSTRUCTIONS.md` |
 | Hydration & Energy Plan | `pm-wellbeing` | `pm-wellbeing/hydration-and-energy-plan/GEM_INSTRUCTIONS.md` |
 | i18n Readiness Review | `pm-localization` | `pm-localization/i18n-readiness-review/GEM_INSTRUCTIONS.md` |
+| Identity Theft Recovery | `pm-digital-safety` | `pm-digital-safety/identity-theft-recovery/GEM_INSTRUCTIONS.md` |
 | IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/GEM_INSTRUCTIONS.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/GEM_INSTRUCTIONS.md` |
 | IEP Goal Writer | `pm-teaching` | `pm-teaching/iep-goal-writer/GEM_INSTRUCTIONS.md` |
@@ -434,6 +439,7 @@
 | Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/GEM_INSTRUCTIONS.md` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/GEM_INSTRUCTIONS.md` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/GEM_INSTRUCTIONS.md` |
+| Kids' Online-Safety Plan | `pm-digital-safety` | `pm-digital-safety/kids-online-safety-plan/GEM_INSTRUCTIONS.md` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/GEM_INSTRUCTIONS.md` |
 | KPI Tracker Design | `pm-cowork` | `pm-cowork/kpi-tracker-design/GEM_INSTRUCTIONS.md` |
 | KYC Escalation | `pm-banking` | `pm-banking/kyc-escalation/GEM_INSTRUCTIONS.md` |
@@ -534,12 +540,14 @@
 | Outcome Tracker | `pm-autopilot` | `pm-autopilot/outcome-tracker/GEM_INSTRUCTIONS.md` |
 | Outline Before Prose | `pm-cowork` | `pm-cowork/outline-before-prose/GEM_INSTRUCTIONS.md` |
 | Outreach Message | `pm-jobsearch` | `pm-jobsearch/outreach-message/GEM_INSTRUCTIONS.md` |
+| Oversharing Audit | `pm-digital-safety` | `pm-digital-safety/oversharing-audit/GEM_INSTRUCTIONS.md` |
 | Package Health | `pm-live` | `pm-live/package-health/GEM_INSTRUCTIONS.md` |
 | Paid Acquisition Plan | `pm-growth` | `pm-growth/paid-acquisition-plan/GEM_INSTRUCTIONS.md` |
 | Parent Communication | `pm-education` | `pm-education/parent-communication/GEM_INSTRUCTIONS.md` |
 | Parent Conference Prep | `pm-teaching` | `pm-teaching/parent-conference-prep/GEM_INSTRUCTIONS.md` |
 | Parent Teacher Conference Prep | `pm-parents` | `pm-parents/parent-teacher-conference-prep/GEM_INSTRUCTIONS.md` |
 | Partnership Proposal | `pm-sales` | `pm-sales/partnership-proposal/GEM_INSTRUCTIONS.md` |
+| Password & 2FA Setup | `pm-digital-safety` | `pm-digital-safety/password-and-2fa-setup/GEM_INSTRUCTIONS.md` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/GEM_INSTRUCTIONS.md` |
 | Pay Stub Decoder | `pm-decoders` | `pm-decoders/pay-stub-decoder/GEM_INSTRUCTIONS.md` |
 | Paywall Optimization | `pm-growth` | `pm-growth/paywall-optimization/GEM_INSTRUCTIONS.md` |
@@ -550,6 +558,7 @@
 | Personal Board of Directors | `pm-personal` | `pm-personal/personal-board-of-directors/GEM_INSTRUCTIONS.md` |
 | Personal WIP Limits | `pm-cowork` | `pm-cowork/personal-wip-limits/GEM_INSTRUCTIONS.md` |
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/GEM_INSTRUCTIONS.md` |
+| Phishing Triage | `pm-digital-safety` | `pm-digital-safety/phishing-triage/GEM_INSTRUCTIONS.md` |
 | Photo Library Rescue | `pm-cowork` | `pm-cowork/photo-library-rescue/GEM_INSTRUCTIONS.md` |
 | PIP Responder | `pm-career` | `pm-career/pip-responder/GEM_INSTRUCTIONS.md` |
 | PIP Writer | `pm-people` | `pm-people/pip-writer/GEM_INSTRUCTIONS.md` |
@@ -619,6 +628,7 @@
 | RAG Design Doc | `pm-ai` | `pm-ai/rag-design-doc/GEM_INSTRUCTIONS.md` |
 | Raise vs Jump | `pm-calculators` | `pm-calculators/raise-vs-jump/GEM_INSTRUCTIONS.md` |
 | Ranked Climb Coach | `pm-newgen` | `pm-newgen/ranked-climb-coach/GEM_INSTRUCTIONS.md` |
+| Ransomware First Response | `pm-digital-safety` | `pm-digital-safety/ransomware-first-response/GEM_INSTRUCTIONS.md` |
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/GEM_INSTRUCTIONS.md` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/GEM_INSTRUCTIONS.md` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/GEM_INSTRUCTIONS.md` |
@@ -680,6 +690,7 @@
 | Runway Monte Carlo | `pm-calculators` | `pm-calculators/runway-monte-carlo/GEM_INSTRUCTIONS.md` |
 | Runway Planner | `pm-founders` | `pm-founders/runway-planner/GEM_INSTRUCTIONS.md` |
 | SaaS Metrics | `pm-calculators` | `pm-calculators/saas-metrics/GEM_INSTRUCTIONS.md` |
+| Safe Online Shopping | `pm-digital-safety` | `pm-digital-safety/safe-online-shopping/GEM_INSTRUCTIONS.md` |
 | Salary Negotiation | `pm-career` | `pm-career/salary-negotiation/GEM_INSTRUCTIONS.md` |
 | Sales Battlecard | `pm-sales` | `pm-sales/sales-battlecard/GEM_INSTRUCTIONS.md` |
 | Sales Demo Script | `pm-pmm` | `pm-pmm/sales-demo-script/GEM_INSTRUCTIONS.md` |
@@ -697,6 +708,7 @@
 | Screen-Time Detox | `pm-wellbeing` | `pm-wellbeing/screen-time-detox/GEM_INSTRUCTIONS.md` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/GEM_INSTRUCTIONS.md` |
 | Second Opinion Request | `pm-lifeadmin` | `pm-lifeadmin/second-opinion-request/GEM_INSTRUCTIONS.md` |
+| Secure a Lost Phone | `pm-digital-safety` | `pm-digital-safety/secure-a-lost-phone/GEM_INSTRUCTIONS.md` |
 | Security Deposit Recovery | `pm-renters` | `pm-renters/security-deposit-recovery/GEM_INSTRUCTIONS.md` |
 | Security Incident Response | `pm-security` | `pm-security/security-incident-response/GEM_INSTRUCTIONS.md` |
 | Security Questionnaire Autofill | `pm-compliance` | `pm-compliance/security-questionnaire-autofill/GEM_INSTRUCTIONS.md` |

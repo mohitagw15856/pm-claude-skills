@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-882 skills exported. Copy a `.mdc rule` into the tool to use it.
+894 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -13,6 +13,7 @@
 | A/B Test Readout | `pm-data` | `pm-data/ab-test-readout/ab-test-readout.mdc` |
 | Accessibility Audit | `pm-design` | `pm-design/accessibility-audit/accessibility-audit.mdc` |
 | Account Plan | `pm-sales` | `pm-sales/account-plan/account-plan.mdc` |
+| Account Recovery Plan | `pm-digital-safety` | `pm-digital-safety/account-recovery-plan/account-recovery-plan.mdc` |
 | Acquirer Red Team | `pm-simulators` | `pm-simulators/acquirer-red-team/acquirer-red-team.mdc` |
 | Action Runner | `pm-cross` | `pm-cross/action-runner/action-runner.mdc` |
 | Ad Copy | `pm-copy` | `pm-copy/ad-copy/ad-copy.mdc` |
@@ -63,6 +64,7 @@
 | Auto Repair Estimate Decoder | `pm-decoders` | `pm-decoders/auto-repair-estimate-decoder/auto-repair-estimate-decoder.mdc` |
 | Autopilot Charter | `pm-autopilot` | `pm-autopilot/autopilot-charter/autopilot-charter.mdc` |
 | Awkward Message Helper | `pm-comms` | `pm-comms/awkward-message-helper/awkward-message-helper.mdc` |
+| Backup Strategy | `pm-digital-safety` | `pm-digital-safety/backup-strategy/backup-strategy.mdc` |
 | Band Agreement | `pm-musician` | `pm-musician/band-agreement/band-agreement.mdc` |
 | Behavior Intervention Plan | `pm-teaching` | `pm-teaching/behavior-intervention-plan/behavior-intervention-plan.mdc` |
 | Beneficiary Audit | `pm-estate` | `pm-estate/beneficiary-audit/beneficiary-audit.mdc` |
@@ -196,6 +198,7 @@
 | Dashboard Brief | `pm-data` | `pm-data/dashboard-brief/dashboard-brief.mdc` |
 | Data Analysis Standard | `pm-analytics` | `pm-analytics/data-analysis-standard/data-analysis-standard.mdc` |
 | Data Breach Response | `pm-scam-defense` | `pm-scam-defense/data-breach-response/data-breach-response.mdc` |
+| Data-Broker Removal | `pm-digital-safety` | `pm-digital-safety/data-broker-removal/data-broker-removal.mdc` |
 | Data Cleaning Pass | `pm-cowork` | `pm-cowork/data-cleaning-pass/data-cleaning-pass.mdc` |
 | Data Contract | `pm-dataeng` | `pm-dataeng/data-contract/data-contract.mdc` |
 | Data Pipeline Spec | `pm-data` | `pm-data/data-pipeline-spec/data-pipeline-spec.mdc` |
@@ -264,6 +267,7 @@
 | Donor Update | `pm-nonprofit` | `pm-nonprofit/donor-update/donor-update.mdc` |
 | Double Opt-In Intro | `pm-cowork` | `pm-cowork/double-opt-in-intro/double-opt-in-intro.mdc` |
 | Downloads Triage | `pm-cowork` | `pm-cowork/downloads-triage/downloads-triage.mdc` |
+| Doxxing Response | `pm-digital-safety` | `pm-digital-safety/doxxing-response/doxxing-response.mdc` |
 | DPA Review | `pm-legal` | `pm-legal/dpa-review/dpa-review.mdc` |
 | Earthquake Watch | `pm-live` | `pm-live/earthquake-watch/earthquake-watch.mdc` |
 | Elder Scam Briefing | `pm-scam-defense` | `pm-scam-defense/elder-scam-briefing/elder-scam-briefing.mdc` |
@@ -394,6 +398,7 @@
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/human-in-the-loop-design.mdc` |
 | Hydration & Energy Plan | `pm-wellbeing` | `pm-wellbeing/hydration-and-energy-plan/hydration-and-energy-plan.mdc` |
 | i18n Readiness Review | `pm-localization` | `pm-localization/i18n-readiness-review/i18n-readiness-review.mdc` |
+| Identity Theft Recovery | `pm-digital-safety` | `pm-digital-safety/identity-theft-recovery/identity-theft-recovery.mdc` |
 | IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/iep-504-meeting-kit.mdc` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/iep-goal-support.mdc` |
 | IEP Goal Writer | `pm-teaching` | `pm-teaching/iep-goal-writer/iep-goal-writer.mdc` |
@@ -434,6 +439,7 @@
 | Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/journaling-prompts.mdc` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/karaoke-song-picker.mdc` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/kb-audit.mdc` |
+| Kids' Online-Safety Plan | `pm-digital-safety` | `pm-digital-safety/kids-online-safety-plan/kids-online-safety-plan.mdc` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/knowledge-gardening.mdc` |
 | KPI Tracker Design | `pm-cowork` | `pm-cowork/kpi-tracker-design/kpi-tracker-design.mdc` |
 | KYC Escalation | `pm-banking` | `pm-banking/kyc-escalation/kyc-escalation.mdc` |
@@ -534,12 +540,14 @@
 | Outcome Tracker | `pm-autopilot` | `pm-autopilot/outcome-tracker/outcome-tracker.mdc` |
 | Outline Before Prose | `pm-cowork` | `pm-cowork/outline-before-prose/outline-before-prose.mdc` |
 | Outreach Message | `pm-jobsearch` | `pm-jobsearch/outreach-message/outreach-message.mdc` |
+| Oversharing Audit | `pm-digital-safety` | `pm-digital-safety/oversharing-audit/oversharing-audit.mdc` |
 | Package Health | `pm-live` | `pm-live/package-health/package-health.mdc` |
 | Paid Acquisition Plan | `pm-growth` | `pm-growth/paid-acquisition-plan/paid-acquisition-plan.mdc` |
 | Parent Communication | `pm-education` | `pm-education/parent-communication/parent-communication.mdc` |
 | Parent Conference Prep | `pm-teaching` | `pm-teaching/parent-conference-prep/parent-conference-prep.mdc` |
 | Parent Teacher Conference Prep | `pm-parents` | `pm-parents/parent-teacher-conference-prep/parent-teacher-conference-prep.mdc` |
 | Partnership Proposal | `pm-sales` | `pm-sales/partnership-proposal/partnership-proposal.mdc` |
+| Password & 2FA Setup | `pm-digital-safety` | `pm-digital-safety/password-and-2fa-setup/password-and-2fa-setup.mdc` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/patient-communication.mdc` |
 | Pay Stub Decoder | `pm-decoders` | `pm-decoders/pay-stub-decoder/pay-stub-decoder.mdc` |
 | Paywall Optimization | `pm-growth` | `pm-growth/paywall-optimization/paywall-optimization.mdc` |
@@ -550,6 +558,7 @@
 | Personal Board of Directors | `pm-personal` | `pm-personal/personal-board-of-directors/personal-board-of-directors.mdc` |
 | Personal WIP Limits | `pm-cowork` | `pm-cowork/personal-wip-limits/personal-wip-limits.mdc` |
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/persuasion-brief.mdc` |
+| Phishing Triage | `pm-digital-safety` | `pm-digital-safety/phishing-triage/phishing-triage.mdc` |
 | Photo Library Rescue | `pm-cowork` | `pm-cowork/photo-library-rescue/photo-library-rescue.mdc` |
 | PIP Responder | `pm-career` | `pm-career/pip-responder/pip-responder.mdc` |
 | PIP Writer | `pm-people` | `pm-people/pip-writer/pip-writer.mdc` |
@@ -619,6 +628,7 @@
 | RAG Design Doc | `pm-ai` | `pm-ai/rag-design-doc/rag-design-doc.mdc` |
 | Raise vs Jump | `pm-calculators` | `pm-calculators/raise-vs-jump/raise-vs-jump.mdc` |
 | Ranked Climb Coach | `pm-newgen` | `pm-newgen/ranked-climb-coach/ranked-climb-coach.mdc` |
+| Ransomware First Response | `pm-digital-safety` | `pm-digital-safety/ransomware-first-response/ransomware-first-response.mdc` |
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/rate-card.mdc` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/readme-writer.mdc` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/receipts-audit.mdc` |
@@ -680,6 +690,7 @@
 | Runway Monte Carlo | `pm-calculators` | `pm-calculators/runway-monte-carlo/runway-monte-carlo.mdc` |
 | Runway Planner | `pm-founders` | `pm-founders/runway-planner/runway-planner.mdc` |
 | SaaS Metrics | `pm-calculators` | `pm-calculators/saas-metrics/saas-metrics.mdc` |
+| Safe Online Shopping | `pm-digital-safety` | `pm-digital-safety/safe-online-shopping/safe-online-shopping.mdc` |
 | Salary Negotiation | `pm-career` | `pm-career/salary-negotiation/salary-negotiation.mdc` |
 | Sales Battlecard | `pm-sales` | `pm-sales/sales-battlecard/sales-battlecard.mdc` |
 | Sales Demo Script | `pm-pmm` | `pm-pmm/sales-demo-script/sales-demo-script.mdc` |
@@ -697,6 +708,7 @@
 | Screen-Time Detox | `pm-wellbeing` | `pm-wellbeing/screen-time-detox/screen-time-detox.mdc` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/screenshot-teardown.mdc` |
 | Second Opinion Request | `pm-lifeadmin` | `pm-lifeadmin/second-opinion-request/second-opinion-request.mdc` |
+| Secure a Lost Phone | `pm-digital-safety` | `pm-digital-safety/secure-a-lost-phone/secure-a-lost-phone.mdc` |
 | Security Deposit Recovery | `pm-renters` | `pm-renters/security-deposit-recovery/security-deposit-recovery.mdc` |
 | Security Incident Response | `pm-security` | `pm-security/security-incident-response/security-incident-response.mdc` |
 | Security Questionnaire Autofill | `pm-compliance` | `pm-compliance/security-questionnaire-autofill/security-questionnaire-autofill.mdc` |

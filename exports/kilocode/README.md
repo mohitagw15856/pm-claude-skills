@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-882 skills exported. Copy a `.md rule` into the tool to use it.
+894 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -13,6 +13,7 @@
 | A/B Test Readout | `pm-data` | `pm-data/ab-test-readout/ab-test-readout.md` |
 | Accessibility Audit | `pm-design` | `pm-design/accessibility-audit/accessibility-audit.md` |
 | Account Plan | `pm-sales` | `pm-sales/account-plan/account-plan.md` |
+| Account Recovery Plan | `pm-digital-safety` | `pm-digital-safety/account-recovery-plan/account-recovery-plan.md` |
 | Acquirer Red Team | `pm-simulators` | `pm-simulators/acquirer-red-team/acquirer-red-team.md` |
 | Action Runner | `pm-cross` | `pm-cross/action-runner/action-runner.md` |
 | Ad Copy | `pm-copy` | `pm-copy/ad-copy/ad-copy.md` |
@@ -63,6 +64,7 @@
 | Auto Repair Estimate Decoder | `pm-decoders` | `pm-decoders/auto-repair-estimate-decoder/auto-repair-estimate-decoder.md` |
 | Autopilot Charter | `pm-autopilot` | `pm-autopilot/autopilot-charter/autopilot-charter.md` |
 | Awkward Message Helper | `pm-comms` | `pm-comms/awkward-message-helper/awkward-message-helper.md` |
+| Backup Strategy | `pm-digital-safety` | `pm-digital-safety/backup-strategy/backup-strategy.md` |
 | Band Agreement | `pm-musician` | `pm-musician/band-agreement/band-agreement.md` |
 | Behavior Intervention Plan | `pm-teaching` | `pm-teaching/behavior-intervention-plan/behavior-intervention-plan.md` |
 | Beneficiary Audit | `pm-estate` | `pm-estate/beneficiary-audit/beneficiary-audit.md` |
@@ -196,6 +198,7 @@
 | Dashboard Brief | `pm-data` | `pm-data/dashboard-brief/dashboard-brief.md` |
 | Data Analysis Standard | `pm-analytics` | `pm-analytics/data-analysis-standard/data-analysis-standard.md` |
 | Data Breach Response | `pm-scam-defense` | `pm-scam-defense/data-breach-response/data-breach-response.md` |
+| Data-Broker Removal | `pm-digital-safety` | `pm-digital-safety/data-broker-removal/data-broker-removal.md` |
 | Data Cleaning Pass | `pm-cowork` | `pm-cowork/data-cleaning-pass/data-cleaning-pass.md` |
 | Data Contract | `pm-dataeng` | `pm-dataeng/data-contract/data-contract.md` |
 | Data Pipeline Spec | `pm-data` | `pm-data/data-pipeline-spec/data-pipeline-spec.md` |
@@ -264,6 +267,7 @@
 | Donor Update | `pm-nonprofit` | `pm-nonprofit/donor-update/donor-update.md` |
 | Double Opt-In Intro | `pm-cowork` | `pm-cowork/double-opt-in-intro/double-opt-in-intro.md` |
 | Downloads Triage | `pm-cowork` | `pm-cowork/downloads-triage/downloads-triage.md` |
+| Doxxing Response | `pm-digital-safety` | `pm-digital-safety/doxxing-response/doxxing-response.md` |
 | DPA Review | `pm-legal` | `pm-legal/dpa-review/dpa-review.md` |
 | Earthquake Watch | `pm-live` | `pm-live/earthquake-watch/earthquake-watch.md` |
 | Elder Scam Briefing | `pm-scam-defense` | `pm-scam-defense/elder-scam-briefing/elder-scam-briefing.md` |
@@ -394,6 +398,7 @@
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/human-in-the-loop-design.md` |
 | Hydration & Energy Plan | `pm-wellbeing` | `pm-wellbeing/hydration-and-energy-plan/hydration-and-energy-plan.md` |
 | i18n Readiness Review | `pm-localization` | `pm-localization/i18n-readiness-review/i18n-readiness-review.md` |
+| Identity Theft Recovery | `pm-digital-safety` | `pm-digital-safety/identity-theft-recovery/identity-theft-recovery.md` |
 | IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/iep-504-meeting-kit.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/iep-goal-support.md` |
 | IEP Goal Writer | `pm-teaching` | `pm-teaching/iep-goal-writer/iep-goal-writer.md` |
@@ -434,6 +439,7 @@
 | Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/journaling-prompts.md` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/karaoke-song-picker.md` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/kb-audit.md` |
+| Kids' Online-Safety Plan | `pm-digital-safety` | `pm-digital-safety/kids-online-safety-plan/kids-online-safety-plan.md` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/knowledge-gardening.md` |
 | KPI Tracker Design | `pm-cowork` | `pm-cowork/kpi-tracker-design/kpi-tracker-design.md` |
 | KYC Escalation | `pm-banking` | `pm-banking/kyc-escalation/kyc-escalation.md` |
@@ -534,12 +540,14 @@
 | Outcome Tracker | `pm-autopilot` | `pm-autopilot/outcome-tracker/outcome-tracker.md` |
 | Outline Before Prose | `pm-cowork` | `pm-cowork/outline-before-prose/outline-before-prose.md` |
 | Outreach Message | `pm-jobsearch` | `pm-jobsearch/outreach-message/outreach-message.md` |
+| Oversharing Audit | `pm-digital-safety` | `pm-digital-safety/oversharing-audit/oversharing-audit.md` |
 | Package Health | `pm-live` | `pm-live/package-health/package-health.md` |
 | Paid Acquisition Plan | `pm-growth` | `pm-growth/paid-acquisition-plan/paid-acquisition-plan.md` |
 | Parent Communication | `pm-education` | `pm-education/parent-communication/parent-communication.md` |
 | Parent Conference Prep | `pm-teaching` | `pm-teaching/parent-conference-prep/parent-conference-prep.md` |
 | Parent Teacher Conference Prep | `pm-parents` | `pm-parents/parent-teacher-conference-prep/parent-teacher-conference-prep.md` |
 | Partnership Proposal | `pm-sales` | `pm-sales/partnership-proposal/partnership-proposal.md` |
+| Password & 2FA Setup | `pm-digital-safety` | `pm-digital-safety/password-and-2fa-setup/password-and-2fa-setup.md` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/patient-communication.md` |
 | Pay Stub Decoder | `pm-decoders` | `pm-decoders/pay-stub-decoder/pay-stub-decoder.md` |
 | Paywall Optimization | `pm-growth` | `pm-growth/paywall-optimization/paywall-optimization.md` |
@@ -550,6 +558,7 @@
 | Personal Board of Directors | `pm-personal` | `pm-personal/personal-board-of-directors/personal-board-of-directors.md` |
 | Personal WIP Limits | `pm-cowork` | `pm-cowork/personal-wip-limits/personal-wip-limits.md` |
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/persuasion-brief.md` |
+| Phishing Triage | `pm-digital-safety` | `pm-digital-safety/phishing-triage/phishing-triage.md` |
 | Photo Library Rescue | `pm-cowork` | `pm-cowork/photo-library-rescue/photo-library-rescue.md` |
 | PIP Responder | `pm-career` | `pm-career/pip-responder/pip-responder.md` |
 | PIP Writer | `pm-people` | `pm-people/pip-writer/pip-writer.md` |
@@ -619,6 +628,7 @@
 | RAG Design Doc | `pm-ai` | `pm-ai/rag-design-doc/rag-design-doc.md` |
 | Raise vs Jump | `pm-calculators` | `pm-calculators/raise-vs-jump/raise-vs-jump.md` |
 | Ranked Climb Coach | `pm-newgen` | `pm-newgen/ranked-climb-coach/ranked-climb-coach.md` |
+| Ransomware First Response | `pm-digital-safety` | `pm-digital-safety/ransomware-first-response/ransomware-first-response.md` |
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/rate-card.md` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/readme-writer.md` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/receipts-audit.md` |
@@ -680,6 +690,7 @@
 | Runway Monte Carlo | `pm-calculators` | `pm-calculators/runway-monte-carlo/runway-monte-carlo.md` |
 | Runway Planner | `pm-founders` | `pm-founders/runway-planner/runway-planner.md` |
 | SaaS Metrics | `pm-calculators` | `pm-calculators/saas-metrics/saas-metrics.md` |
+| Safe Online Shopping | `pm-digital-safety` | `pm-digital-safety/safe-online-shopping/safe-online-shopping.md` |
 | Salary Negotiation | `pm-career` | `pm-career/salary-negotiation/salary-negotiation.md` |
 | Sales Battlecard | `pm-sales` | `pm-sales/sales-battlecard/sales-battlecard.md` |
 | Sales Demo Script | `pm-pmm` | `pm-pmm/sales-demo-script/sales-demo-script.md` |
@@ -697,6 +708,7 @@
 | Screen-Time Detox | `pm-wellbeing` | `pm-wellbeing/screen-time-detox/screen-time-detox.md` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/screenshot-teardown.md` |
 | Second Opinion Request | `pm-lifeadmin` | `pm-lifeadmin/second-opinion-request/second-opinion-request.md` |
+| Secure a Lost Phone | `pm-digital-safety` | `pm-digital-safety/secure-a-lost-phone/secure-a-lost-phone.md` |
 | Security Deposit Recovery | `pm-renters` | `pm-renters/security-deposit-recovery/security-deposit-recovery.md` |
 | Security Incident Response | `pm-security` | `pm-security/security-incident-response/security-incident-response.md` |
 | Security Questionnaire Autofill | `pm-compliance` | `pm-compliance/security-questionnaire-autofill/security-questionnaire-autofill.md` |

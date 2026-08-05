@@ -1,4 +1,4 @@
-# 🗂️ All 882 Skills — full catalog
+# 🗂️ All 894 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -684,7 +684,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (457 skills)
+## 🌍 Industries & Public Sector (469 skills)
 
 ### `other` — 4 skills
 
@@ -990,6 +990,23 @@
 | **Docs Quickstart** (`docs-quickstart`) | Write a 'get started in 5 minutes' quickstart for a tool, library, or API. | — |
 | **Launch Post** (`launch-post`) | Write a developer-audience launch post — Show HN, a Product Hunt blurb, a 'we shipped X' dev blog intro, or a launch tweet thread. | — |
 | **README Writer** (`readme-writer`) | Write a clear, well-structured README for a software project or open-source repo. | — |
+
+### `pm-digital-safety` — 12 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Account Recovery Plan** (`account-recovery-plan`) | Get back into a locked or hacked account the right way — the official recovery routes, what proof you'll need, and how to re-secure it so it… | — |
+| **Backup Strategy** (`backup-strategy`) | Set up a backup system that actually protects your photos, files, and devices — built on the 3-2-1 rule and, crucially, tested so it works when… | — |
+| **Data-Broker Removal** (`data-broker-removal`) | Get your personal info off people-search and data-broker sites — a prioritized opt-out plan that targets the sites that matter and keeps them from… | — |
+| **Doxxing Response** (`doxxing-response`) | Respond fast and safely if your personal information has been exposed or you're being doxxed — contain the spread, protect your safety and… | — |
+| **Identity Theft Recovery** (`identity-theft-recovery`) | Take back control after identity theft — the right first moves, in the right order, so you contain the damage and rebuild. | — |
+| **Kids' Online-Safety Plan** (`kids-online-safety-plan`) | Build an age-appropriate online-safety plan for a child — the settings, the agreements, and the conversations — that protects without just spying… | — |
+| **Oversharing Audit** (`oversharing-audit`) | Audit what your public online presence quietly reveals — and tighten it — before a stranger, employer, or scammer uses it. | — |
+| **Password & 2FA Setup** (`password-and-2fa-setup`) | Set up a sane password and two-factor-authentication baseline that's genuinely secure and actually sustainable — a password manager, unique… | — |
+| **Phishing Triage** (`phishing-triage`) | Decide fast whether a suspicious message is a phishing scam — and what to do next — without clicking anything. | — |
+| **Ransomware First Response** (`ransomware-first-response`) | Handle the first hour of a suspected ransomware or malware infection calmly and correctly — contain it, preserve options, and avoid the moves that… | — |
+| **Safe Online Shopping** (`safe-online-shopping`) | Check whether an online store or seller is legit before you pay — and pay in a way you can get your money back if it isn't. | — |
+| **Secure a Lost Phone** (`secure-a-lost-phone`) | Do the right things fast when your phone is lost or stolen — lock it, protect your accounts and money, and decide on wipe vs. | — |
 
 ### `pm-documents` — 3 skills
 
@@ -1445,4 +1462,4 @@
 
 ---
 
-_882 skills across 107 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_894 skills across 108 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

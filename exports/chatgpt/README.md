@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-882 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+894 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -13,6 +13,7 @@
 | A/B Test Readout | `pm-data` | `pm-data/ab-test-readout/SYSTEM_PROMPT.md` |
 | Accessibility Audit | `pm-design` | `pm-design/accessibility-audit/SYSTEM_PROMPT.md` |
 | Account Plan | `pm-sales` | `pm-sales/account-plan/SYSTEM_PROMPT.md` |
+| Account Recovery Plan | `pm-digital-safety` | `pm-digital-safety/account-recovery-plan/SYSTEM_PROMPT.md` |
 | Acquirer Red Team | `pm-simulators` | `pm-simulators/acquirer-red-team/SYSTEM_PROMPT.md` |
 | Action Runner | `pm-cross` | `pm-cross/action-runner/SYSTEM_PROMPT.md` |
 | Ad Copy | `pm-copy` | `pm-copy/ad-copy/SYSTEM_PROMPT.md` |
@@ -63,6 +64,7 @@
 | Auto Repair Estimate Decoder | `pm-decoders` | `pm-decoders/auto-repair-estimate-decoder/SYSTEM_PROMPT.md` |
 | Autopilot Charter | `pm-autopilot` | `pm-autopilot/autopilot-charter/SYSTEM_PROMPT.md` |
 | Awkward Message Helper | `pm-comms` | `pm-comms/awkward-message-helper/SYSTEM_PROMPT.md` |
+| Backup Strategy | `pm-digital-safety` | `pm-digital-safety/backup-strategy/SYSTEM_PROMPT.md` |
 | Band Agreement | `pm-musician` | `pm-musician/band-agreement/SYSTEM_PROMPT.md` |
 | Behavior Intervention Plan | `pm-teaching` | `pm-teaching/behavior-intervention-plan/SYSTEM_PROMPT.md` |
 | Beneficiary Audit | `pm-estate` | `pm-estate/beneficiary-audit/SYSTEM_PROMPT.md` |
@@ -196,6 +198,7 @@
 | Dashboard Brief | `pm-data` | `pm-data/dashboard-brief/SYSTEM_PROMPT.md` |
 | Data Analysis Standard | `pm-analytics` | `pm-analytics/data-analysis-standard/SYSTEM_PROMPT.md` |
 | Data Breach Response | `pm-scam-defense` | `pm-scam-defense/data-breach-response/SYSTEM_PROMPT.md` |
+| Data-Broker Removal | `pm-digital-safety` | `pm-digital-safety/data-broker-removal/SYSTEM_PROMPT.md` |
 | Data Cleaning Pass | `pm-cowork` | `pm-cowork/data-cleaning-pass/SYSTEM_PROMPT.md` |
 | Data Contract | `pm-dataeng` | `pm-dataeng/data-contract/SYSTEM_PROMPT.md` |
 | Data Pipeline Spec | `pm-data` | `pm-data/data-pipeline-spec/SYSTEM_PROMPT.md` |
@@ -264,6 +267,7 @@
 | Donor Update | `pm-nonprofit` | `pm-nonprofit/donor-update/SYSTEM_PROMPT.md` |
 | Double Opt-In Intro | `pm-cowork` | `pm-cowork/double-opt-in-intro/SYSTEM_PROMPT.md` |
 | Downloads Triage | `pm-cowork` | `pm-cowork/downloads-triage/SYSTEM_PROMPT.md` |
+| Doxxing Response | `pm-digital-safety` | `pm-digital-safety/doxxing-response/SYSTEM_PROMPT.md` |
 | DPA Review | `pm-legal` | `pm-legal/dpa-review/SYSTEM_PROMPT.md` |
 | Earthquake Watch | `pm-live` | `pm-live/earthquake-watch/SYSTEM_PROMPT.md` |
 | Elder Scam Briefing | `pm-scam-defense` | `pm-scam-defense/elder-scam-briefing/SYSTEM_PROMPT.md` |
@@ -394,6 +398,7 @@
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/SYSTEM_PROMPT.md` |
 | Hydration & Energy Plan | `pm-wellbeing` | `pm-wellbeing/hydration-and-energy-plan/SYSTEM_PROMPT.md` |
 | i18n Readiness Review | `pm-localization` | `pm-localization/i18n-readiness-review/SYSTEM_PROMPT.md` |
+| Identity Theft Recovery | `pm-digital-safety` | `pm-digital-safety/identity-theft-recovery/SYSTEM_PROMPT.md` |
 | IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/SYSTEM_PROMPT.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/SYSTEM_PROMPT.md` |
 | IEP Goal Writer | `pm-teaching` | `pm-teaching/iep-goal-writer/SYSTEM_PROMPT.md` |
@@ -434,6 +439,7 @@
 | Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/SYSTEM_PROMPT.md` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/SYSTEM_PROMPT.md` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/SYSTEM_PROMPT.md` |
+| Kids' Online-Safety Plan | `pm-digital-safety` | `pm-digital-safety/kids-online-safety-plan/SYSTEM_PROMPT.md` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/SYSTEM_PROMPT.md` |
 | KPI Tracker Design | `pm-cowork` | `pm-cowork/kpi-tracker-design/SYSTEM_PROMPT.md` |
 | KYC Escalation | `pm-banking` | `pm-banking/kyc-escalation/SYSTEM_PROMPT.md` |
@@ -534,12 +540,14 @@
 | Outcome Tracker | `pm-autopilot` | `pm-autopilot/outcome-tracker/SYSTEM_PROMPT.md` |
 | Outline Before Prose | `pm-cowork` | `pm-cowork/outline-before-prose/SYSTEM_PROMPT.md` |
 | Outreach Message | `pm-jobsearch` | `pm-jobsearch/outreach-message/SYSTEM_PROMPT.md` |
+| Oversharing Audit | `pm-digital-safety` | `pm-digital-safety/oversharing-audit/SYSTEM_PROMPT.md` |
 | Package Health | `pm-live` | `pm-live/package-health/SYSTEM_PROMPT.md` |
 | Paid Acquisition Plan | `pm-growth` | `pm-growth/paid-acquisition-plan/SYSTEM_PROMPT.md` |
 | Parent Communication | `pm-education` | `pm-education/parent-communication/SYSTEM_PROMPT.md` |
 | Parent Conference Prep | `pm-teaching` | `pm-teaching/parent-conference-prep/SYSTEM_PROMPT.md` |
 | Parent Teacher Conference Prep | `pm-parents` | `pm-parents/parent-teacher-conference-prep/SYSTEM_PROMPT.md` |
 | Partnership Proposal | `pm-sales` | `pm-sales/partnership-proposal/SYSTEM_PROMPT.md` |
+| Password & 2FA Setup | `pm-digital-safety` | `pm-digital-safety/password-and-2fa-setup/SYSTEM_PROMPT.md` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/SYSTEM_PROMPT.md` |
 | Pay Stub Decoder | `pm-decoders` | `pm-decoders/pay-stub-decoder/SYSTEM_PROMPT.md` |
 | Paywall Optimization | `pm-growth` | `pm-growth/paywall-optimization/SYSTEM_PROMPT.md` |
@@ -550,6 +558,7 @@
 | Personal Board of Directors | `pm-personal` | `pm-personal/personal-board-of-directors/SYSTEM_PROMPT.md` |
 | Personal WIP Limits | `pm-cowork` | `pm-cowork/personal-wip-limits/SYSTEM_PROMPT.md` |
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/SYSTEM_PROMPT.md` |
+| Phishing Triage | `pm-digital-safety` | `pm-digital-safety/phishing-triage/SYSTEM_PROMPT.md` |
 | Photo Library Rescue | `pm-cowork` | `pm-cowork/photo-library-rescue/SYSTEM_PROMPT.md` |
 | PIP Responder | `pm-career` | `pm-career/pip-responder/SYSTEM_PROMPT.md` |
 | PIP Writer | `pm-people` | `pm-people/pip-writer/SYSTEM_PROMPT.md` |
@@ -619,6 +628,7 @@
 | RAG Design Doc | `pm-ai` | `pm-ai/rag-design-doc/SYSTEM_PROMPT.md` |
 | Raise vs Jump | `pm-calculators` | `pm-calculators/raise-vs-jump/SYSTEM_PROMPT.md` |
 | Ranked Climb Coach | `pm-newgen` | `pm-newgen/ranked-climb-coach/SYSTEM_PROMPT.md` |
+| Ransomware First Response | `pm-digital-safety` | `pm-digital-safety/ransomware-first-response/SYSTEM_PROMPT.md` |
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/SYSTEM_PROMPT.md` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/SYSTEM_PROMPT.md` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/SYSTEM_PROMPT.md` |
@@ -680,6 +690,7 @@
 | Runway Monte Carlo | `pm-calculators` | `pm-calculators/runway-monte-carlo/SYSTEM_PROMPT.md` |
 | Runway Planner | `pm-founders` | `pm-founders/runway-planner/SYSTEM_PROMPT.md` |
 | SaaS Metrics | `pm-calculators` | `pm-calculators/saas-metrics/SYSTEM_PROMPT.md` |
+| Safe Online Shopping | `pm-digital-safety` | `pm-digital-safety/safe-online-shopping/SYSTEM_PROMPT.md` |
 | Salary Negotiation | `pm-career` | `pm-career/salary-negotiation/SYSTEM_PROMPT.md` |
 | Sales Battlecard | `pm-sales` | `pm-sales/sales-battlecard/SYSTEM_PROMPT.md` |
 | Sales Demo Script | `pm-pmm` | `pm-pmm/sales-demo-script/SYSTEM_PROMPT.md` |
@@ -697,6 +708,7 @@
 | Screen-Time Detox | `pm-wellbeing` | `pm-wellbeing/screen-time-detox/SYSTEM_PROMPT.md` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/SYSTEM_PROMPT.md` |
 | Second Opinion Request | `pm-lifeadmin` | `pm-lifeadmin/second-opinion-request/SYSTEM_PROMPT.md` |
+| Secure a Lost Phone | `pm-digital-safety` | `pm-digital-safety/secure-a-lost-phone/SYSTEM_PROMPT.md` |
 | Security Deposit Recovery | `pm-renters` | `pm-renters/security-deposit-recovery/SYSTEM_PROMPT.md` |
 | Security Incident Response | `pm-security` | `pm-security/security-incident-response/SYSTEM_PROMPT.md` |
 | Security Questionnaire Autofill | `pm-compliance` | `pm-compliance/security-questionnaire-autofill/SYSTEM_PROMPT.md` |

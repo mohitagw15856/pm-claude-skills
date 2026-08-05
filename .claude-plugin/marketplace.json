@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-digital-safety",
+      "description": "Consumer digital self-defense skills: identity-theft recovery, data-broker removal, account recovery, ransomware first response, backups, phishing triage, passwords & 2FA, kids' online safety, securing a lost phone, oversharing audit, doxxing response, and safe online shopping.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-digital-safety",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-wellbeing",
       "description": "Personal wellbeing & self-improvement skills: home workouts, stretching & mobility, posture, habit-building, journaling, gratitude, sleep, couch-to-5K, desk ergonomics, energy, screen-time, and recovery days. Educational — not medical advice.",
       "version": "1.0.0",
