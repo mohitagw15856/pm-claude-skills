@@ -1,4 +1,4 @@
-# 🗂️ All 894 Skills — full catalog
+# 🗂️ All 906 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -430,7 +430,7 @@
 | **Support Macro** (`support-macro`) | Write reusable support macros / canned responses that sound human, not robotic. | — |
 | **Support Runbook** (`support-runbook`) | Write a support runbook for handling a recurring issue type consistently. | — |
 
-## 💰 Finance, Ops & Business (80 skills)
+## 💰 Finance, Ops & Business (92 skills)
 
 ### `pm-accounting` — 6 skills
 
@@ -520,20 +520,32 @@
 | **Runway Planner** (`runway-planner`) | Turn burn and cash into a clear runway picture and a raise decision — months left, default-alive vs default-dead, and what to cut or change. | — |
 | **Startup Idea Validator** (`startup-idea-validator`) | Pressure-test a startup idea the way a sharp investor or co-founder would — problem, market, wedge, moat, why-now, and the fastest cheap way to… | — |
 
-### `pm-money` — 10 skills
+### `pm-money` — 22 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Bank Fee Refund** (`bank-fee-refund`) | Get a bank fee waived or refunded — overdraft, late, maintenance, ATM, or foreign-transaction — with the ask written and the leverage that works. | — |
+| **Big-Purchase Timing** (`big-purchase-timing`) | Decide when to buy a big-ticket item to get the best price — the sales cycles, model-refresh timing, and 'buy now vs wait' math for the specific… | — |
 | **Budget Builder** (`budget-builder`) | Build a realistic personal monthly budget from someone's income and expenses. | — |
+| **Class-Action Claim Finder** (`class-action-claim-finder`) | Work out whether you're eligible for a class-action settlement or refund program — and actually file the claim before the deadline. | — |
+| **Debt Collector Response** (`debt-collector-response`) | Respond to a debt collector correctly — know your rights, make them prove the debt, and avoid the mistakes that reset the clock or admit liability. | — |
 | **Debt Payoff Plan** (`debt-payoff-plan`) | Build a debt-payoff plan across multiple debts using the avalanche or snowball method. | — |
 | **Estate Planning Kit** (`estate-planning-kit`) | Get your affairs in order before you need to — a will/beneficiary/healthcare-directive checklist and the 'what my family needs to find' document… | — |
 | **Expense Audit** (`expense-audit`) | Audit spending to find leaks — recurring subscriptions, creep, and cuttable costs — ranked by impact. | — |
+| **Gift-Card Recovery** (`gift-card-recovery`) | Reclaim value stuck in gift cards, store credit, and forgotten balances — check what's left, use it before it's lost, and know your rights on… | — |
+| **Hidden-Fee Auditor** (`hidden-fee-auditor`) | Scan a bill, contract, or quote for junk and hidden fees — the padding buried in the fine print — and get them questioned or removed. | — |
 | **Investing Policy Statement** (`investing-policy-statement`) | Draft a personal investing policy statement (IPS) — the rules someone sets for their own investing. | — |
 | **Lower My Bill** (`lower-my-bill`) | Negotiate a recurring bill down — internet, phone, insurance, cable, gym — with a ready-to-read script, the competitor leverage that actually… | — |
+| **Money Priorities Order** (`money-priorities-order`) | Decide where your next dollar should go — the order to tackle emergency fund, high-interest debt, retirement match, and saving/investing — so you… | — |
 | **Net Worth Statement** (`net-worth-statement`) | Produce a personal net-worth statement — assets minus liabilities — and a way to track it. | — |
 | **Price-Match Request** (`price-match-request`) | Get a retailer to match a lower price you found — or refund the difference when the price drops right after you bought — with the request written… | — |
+| **Rewards Optimizer** (`rewards-optimizer`) | Figure out the best card or payment route for a purchase (or your everyday spending) to maximize cashback/points — without overspending or… | — |
 | **Savings Goal Plan** (`savings-goal-plan`) | Turn a savings goal into a month-by-month funding plan. | — |
+| **Tax Deduction Finder** (`tax-deduction-finder`) | Surface the personal tax deductions and credits you might be missing — so you can research them or raise them with your tax preparer before you file. | — |
+| **Unclaimed-Money Tracer** (`unclaimed-money-tracer`) | Track down money that's yours but forgotten — dormant accounts, old deposits, uncashed checks, lost pensions, insurance payouts, and… | — |
+| **Utility Switch Advisor** (`utility-switch-advisor`) | Decide whether to switch energy, broadband, or mobile providers — compare the real total cost, dodge the traps, and time it right. | — |
 | **Warranty Claim** (`warranty-claim`) | Get a broken product repaired, replaced, or refunded under warranty — with the claim message written, the proof to attach, and the consumer-law… | — |
+| **Windfall Plan** (`windfall-plan`) | Make a smart plan for a lump sum — a bonus, inheritance, tax refund, settlement, or sale — so it builds your future instead of evaporating into… | — |
 
 ### `pm-operations` — 12 skills
 
@@ -1462,4 +1474,4 @@
 
 ---
 
-_894 skills across 108 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_906 skills across 108 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

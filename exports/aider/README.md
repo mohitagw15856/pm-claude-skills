@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-894 skills exported. Copy a `.md rule` into the tool to use it.
+906 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -66,11 +66,13 @@
 | Awkward Message Helper | `pm-comms` | `pm-comms/awkward-message-helper/awkward-message-helper.md` |
 | Backup Strategy | `pm-digital-safety` | `pm-digital-safety/backup-strategy/backup-strategy.md` |
 | Band Agreement | `pm-musician` | `pm-musician/band-agreement/band-agreement.md` |
+| Bank Fee Refund | `pm-money` | `pm-money/bank-fee-refund/bank-fee-refund.md` |
 | Behavior Intervention Plan | `pm-teaching` | `pm-teaching/behavior-intervention-plan/behavior-intervention-plan.md` |
 | Beneficiary Audit | `pm-estate` | `pm-estate/beneficiary-audit/beneficiary-audit.md` |
 | Benefits Decoder | `pm-decoders` | `pm-decoders/benefits-decoder/benefits-decoder.md` |
 | Bennett Time Audit | `pm-dead-mentors` | `pm-dead-mentors/bennett-time-audit/bennett-time-audit.md` |
 | Bid / Tender Review | `pm-construction` | `pm-construction/bid-tender-review/bid-tender-review.md` |
+| Big-Purchase Timing | `pm-money` | `pm-money/big-purchase-timing/big-purchase-timing.md` |
 | Birdwatching Log | `pm-hobbies` | `pm-hobbies/birdwatching-log/birdwatching-log.md` |
 | Blast Radius Drill | `pm-seatbelt` | `pm-seatbelt/blast-radius-drill/blast-radius-drill.md` |
 | Board Deck Narrative | `pm-business` | `pm-business/board-deck-narrative/board-deck-narrative.md` |
@@ -126,6 +128,7 @@
 | Citation Hygiene | `pm-cowork` | `pm-cowork/citation-hygiene/citation-hygiene.md` |
 | Claim Denial Decoder | `pm-decoders` | `pm-decoders/claim-denial-decoder/claim-denial-decoder.md` |
 | Claims Triage | `pm-insurance` | `pm-insurance/claims-triage/claims-triage.md` |
+| Class-Action Claim Finder | `pm-money` | `pm-money/class-action-claim-finder/class-action-claim-finder.md` |
 | Claude Superpowers | `pm-engineering` | `pm-engineering/claude-superpowers/claude-superpowers.md` |
 | Clause Explainer | `pm-legal` | `pm-legal/clause-explainer/clause-explainer.md` |
 | Client Discharge Notes | `pm-veterinary` | `pm-veterinary/client-discharge-notes/client-discharge-notes.md` |
@@ -212,6 +215,7 @@
 | Dating Profile Doctor | `pm-newgen` | `pm-newgen/dating-profile-doctor/dating-profile-doctor.md` |
 | Daycare vs Stay-Home | `pm-calculators` | `pm-calculators/daycare-vs-stay-home/daycare-vs-stay-home.md` |
 | dbt Model Spec | `pm-dataeng` | `pm-dataeng/dbt-model-spec/dbt-model-spec.md` |
+| Debt Collector Response | `pm-money` | `pm-money/debt-collector-response/debt-collector-response.md` |
 | Debt Payoff | `pm-calculators` | `pm-calculators/debt-payoff/debt-payoff.md` |
 | Debt Payoff Plan | `pm-money` | `pm-money/debt-payoff-plan/debt-payoff-plan.md` |
 | Debugging Log Analyser | `pm-engineering` | `pm-engineering/debugging-log-analyser/debugging-log-analyser.md` |
@@ -365,6 +369,7 @@
 | Game Night Planner | `pm-tabletop` | `pm-tabletop/game-night-planner/game-night-planner.md` |
 | Gantt / Roadmap | `pm-visuals` | `pm-visuals/gantt-roadmap/gantt-roadmap.md` |
 | GDPR Compliance | `pm-compliance` | `pm-compliance/gdpr-compliance/gdpr-compliance.md` |
+| Gift-Card Recovery | `pm-money` | `pm-money/gift-card-recovery/gift-card-recovery.md` |
 | Gift Finder | `pm-personal` | `pm-personal/gift-finder/gift-finder.md` |
 | Git Troubleshooter | `pm-engineering` | `pm-engineering/git-troubleshooter/git-troubleshooter.md` |
 | GitHub Repo Vitals | `pm-live` | `pm-live/github-repo-vitals/github-repo-vitals.md` |
@@ -385,6 +390,7 @@
 | Headline Options | `pm-copy` | `pm-copy/headline-options/headline-options.md` |
 | Health Inspection Prep | `pm-hospitality` | `pm-hospitality/health-inspection-prep/health-inspection-prep.md` |
 | Help Center Article | `pm-support` | `pm-support/help-center-article/help-center-article.md` |
+| Hidden-Fee Auditor | `pm-money` | `pm-money/hidden-fee-auditor/hidden-fee-auditor.md` |
 | HIPAA Safeguards | `pm-compliance` | `pm-compliance/hipaa-safeguards/hipaa-safeguards.md` |
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/hiring-rubric.md` |
 | HN Digest | `pm-live` | `pm-live/hn-digest/hn-digest.md` |
@@ -506,6 +512,7 @@
 | Model Card | `pm-ai` | `pm-ai/model-card/model-card.md` |
 | Model Migration Plan | `pm-agentops` | `pm-agentops/model-migration-plan/model-migration-plan.md` |
 | Model Selection Advisor | `pm-ai` | `pm-ai/model-selection-advisor/model-selection-advisor.md` |
+| Money Priorities Order | `pm-money` | `pm-money/money-priorities-order/money-priorities-order.md` |
 | Monitoring Setup Guide | `pm-engineering` | `pm-engineering/monitoring-setup-guide/monitoring-setup-guide.md` |
 | Morning Intelligence | `pm-operations` | `pm-operations/morning-intelligence/morning-intelligence.md` |
 | Moving Company Estimate Decoder | `pm-decoders` | `pm-decoders/moving-company-estimate-decoder/moving-company-estimate-decoder.md` |
@@ -668,6 +675,7 @@
 | Return & Refund Policy | `pm-ecommerce` | `pm-ecommerce/return-refund-policy/return-refund-policy.md` |
 | Review Comments Resolver | `pm-cowork` | `pm-cowork/review-comments-resolver/review-comments-resolver.md` |
 | Review Response | `pm-ecommerce` | `pm-ecommerce/review-response/review-response.md` |
+| Rewards Optimizer | `pm-money` | `pm-money/rewards-optimizer/rewards-optimizer.md` |
 | RFC Writer | `pm-engineering` | `pm-engineering/rfc-writer/rfc-writer.md` |
 | RFP Response | `pm-gov` | `pm-gov/rfp-response/rfp-response.md` |
 | RFP Scoring Matrix | `pm-supplychain` | `pm-supplychain/rfp-scoring-matrix/rfp-scoring-matrix.md` |
@@ -800,6 +808,7 @@
 | System Design Interview | `pm-engineering` | `pm-engineering/system-design-interview/system-design-interview.md` |
 | Tabletop Negotiator | `pm-tabletop` | `pm-tabletop/tabletop-negotiator/tabletop-negotiator.md` |
 | Task Triage Matrix | `pm-cowork` | `pm-cowork/task-triage-matrix/task-triage-matrix.md` |
+| Tax Deduction Finder | `pm-money` | `pm-money/tax-deduction-finder/tax-deduction-finder.md` |
 | Tax Planning Checklist | `pm-finance` | `pm-finance/tax-planning-checklist/tax-planning-checklist.md` |
 | TDD Workflow | `pm-craft` | `pm-craft/tdd-workflow/tdd-workflow.md` |
 | Teach The Game | `pm-tabletop` | `pm-tabletop/teach-the-game/teach-the-game.md` |
@@ -851,6 +860,7 @@
 | Trip Planner | `pm-personal` | `pm-personal/trip-planner/trip-planner.md` |
 | TTRPG Session Forge | `pm-newgen` | `pm-newgen/ttrpg-session-forge/ttrpg-session-forge.md` |
 | Unblock Protocol | `pm-cowork` | `pm-cowork/unblock-protocol/unblock-protocol.md` |
+| Unclaimed-Money Tracer | `pm-money` | `pm-money/unclaimed-money-tracer/unclaimed-money-tracer.md` |
 | Underwriting Narrative | `pm-insurance` | `pm-insurance/underwriting-narrative/underwriting-narrative.md` |
 | Unit Economics | `pm-calculators` | `pm-calculators/unit-economics/unit-economics.md` |
 | Used Car Decoder | `other` | `other/used-car-decoder/used-car-decoder.md` |
@@ -858,6 +868,7 @@
 | User Journey Map | `pm-visuals` | `pm-visuals/user-journey-map/user-journey-map.md` |
 | User Research Synthesis | `pm-essentials` | `pm-essentials/user-research-synthesis/user-research-synthesis.md` |
 | User Story Writer | `pm-delivery` | `pm-delivery/user-story-writer/user-story-writer.md` |
+| Utility Switch Advisor | `pm-money` | `pm-money/utility-switch-advisor/utility-switch-advisor.md` |
 | UX Research Plan | `pm-design` | `pm-design/ux-research-plan/ux-research-plan.md` |
 | Value Proposition | `pm-copy` | `pm-copy/value-proposition/value-proposition.md` |
 | VC Partner Meeting | `pm-simulators` | `pm-simulators/vc-partner-meeting/vc-partner-meeting.md` |
@@ -890,6 +901,7 @@
 | Wiki Summary | `pm-live` | `pm-live/wiki-summary/wiki-summary.md` |
 | Win/Loss Analysis | `pm-pmm` | `pm-pmm/win-loss-analysis/win-loss-analysis.md` |
 | Win-back Playbook | `pm-cs` | `pm-cs/winback-playbook/winback-playbook.md` |
+| Windfall Plan | `pm-money` | `pm-money/windfall-plan/windfall-plan.md` |
 | Wine Pairing | `pm-hobbies` | `pm-hobbies/wine-pairing/wine-pairing.md` |
 | Word Document | `pm-documents` | `pm-documents/word-document/word-document.md` |
 | Working Agreements | `pm-cowork` | `pm-cowork/working-agreements/working-agreements.md` |

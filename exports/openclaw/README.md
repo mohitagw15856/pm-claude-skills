@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-894 skills exported. Copy a `SKILL.md` into the tool to use it.
+906 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -66,11 +66,13 @@
 | Awkward Message Helper | `pm-comms` | `awkward-message-helper/SKILL.md` |
 | Backup Strategy | `pm-digital-safety` | `backup-strategy/SKILL.md` |
 | Band Agreement | `pm-musician` | `band-agreement/SKILL.md` |
+| Bank Fee Refund | `pm-money` | `bank-fee-refund/SKILL.md` |
 | Behavior Intervention Plan | `pm-teaching` | `behavior-intervention-plan/SKILL.md` |
 | Beneficiary Audit | `pm-estate` | `beneficiary-audit/SKILL.md` |
 | Benefits Decoder | `pm-decoders` | `benefits-decoder/SKILL.md` |
 | Bennett Time Audit | `pm-dead-mentors` | `bennett-time-audit/SKILL.md` |
 | Bid / Tender Review | `pm-construction` | `bid-tender-review/SKILL.md` |
+| Big-Purchase Timing | `pm-money` | `big-purchase-timing/SKILL.md` |
 | Birdwatching Log | `pm-hobbies` | `birdwatching-log/SKILL.md` |
 | Blast Radius Drill | `pm-seatbelt` | `blast-radius-drill/SKILL.md` |
 | Board Deck Narrative | `pm-business` | `board-deck-narrative/SKILL.md` |
@@ -126,6 +128,7 @@
 | Citation Hygiene | `pm-cowork` | `citation-hygiene/SKILL.md` |
 | Claim Denial Decoder | `pm-decoders` | `claim-denial-decoder/SKILL.md` |
 | Claims Triage | `pm-insurance` | `claims-triage/SKILL.md` |
+| Class-Action Claim Finder | `pm-money` | `class-action-claim-finder/SKILL.md` |
 | Claude Superpowers | `pm-engineering` | `claude-superpowers/SKILL.md` |
 | Clause Explainer | `pm-legal` | `clause-explainer/SKILL.md` |
 | Client Discharge Notes | `pm-veterinary` | `client-discharge-notes/SKILL.md` |
@@ -212,6 +215,7 @@
 | Dating Profile Doctor | `pm-newgen` | `dating-profile-doctor/SKILL.md` |
 | Daycare vs Stay-Home | `pm-calculators` | `daycare-vs-stay-home/SKILL.md` |
 | dbt Model Spec | `pm-dataeng` | `dbt-model-spec/SKILL.md` |
+| Debt Collector Response | `pm-money` | `debt-collector-response/SKILL.md` |
 | Debt Payoff | `pm-calculators` | `debt-payoff/SKILL.md` |
 | Debt Payoff Plan | `pm-money` | `debt-payoff-plan/SKILL.md` |
 | Debugging Log Analyser | `pm-engineering` | `debugging-log-analyser/SKILL.md` |
@@ -365,6 +369,7 @@
 | Game Night Planner | `pm-tabletop` | `game-night-planner/SKILL.md` |
 | Gantt / Roadmap | `pm-visuals` | `gantt-roadmap/SKILL.md` |
 | GDPR Compliance | `pm-compliance` | `gdpr-compliance/SKILL.md` |
+| Gift-Card Recovery | `pm-money` | `gift-card-recovery/SKILL.md` |
 | Gift Finder | `pm-personal` | `gift-finder/SKILL.md` |
 | Git Troubleshooter | `pm-engineering` | `git-troubleshooter/SKILL.md` |
 | GitHub Repo Vitals | `pm-live` | `github-repo-vitals/SKILL.md` |
@@ -385,6 +390,7 @@
 | Headline Options | `pm-copy` | `headline-options/SKILL.md` |
 | Health Inspection Prep | `pm-hospitality` | `health-inspection-prep/SKILL.md` |
 | Help Center Article | `pm-support` | `help-center-article/SKILL.md` |
+| Hidden-Fee Auditor | `pm-money` | `hidden-fee-auditor/SKILL.md` |
 | HIPAA Safeguards | `pm-compliance` | `hipaa-safeguards/SKILL.md` |
 | Hiring Rubric | `pm-people` | `hiring-rubric/SKILL.md` |
 | HN Digest | `pm-live` | `hn-digest/SKILL.md` |
@@ -506,6 +512,7 @@
 | Model Card | `pm-ai` | `model-card/SKILL.md` |
 | Model Migration Plan | `pm-agentops` | `model-migration-plan/SKILL.md` |
 | Model Selection Advisor | `pm-ai` | `model-selection-advisor/SKILL.md` |
+| Money Priorities Order | `pm-money` | `money-priorities-order/SKILL.md` |
 | Monitoring Setup Guide | `pm-engineering` | `monitoring-setup-guide/SKILL.md` |
 | Morning Intelligence | `pm-operations` | `morning-intelligence/SKILL.md` |
 | Moving Company Estimate Decoder | `pm-decoders` | `moving-company-estimate-decoder/SKILL.md` |
@@ -668,6 +675,7 @@
 | Return & Refund Policy | `pm-ecommerce` | `return-refund-policy/SKILL.md` |
 | Review Comments Resolver | `pm-cowork` | `review-comments-resolver/SKILL.md` |
 | Review Response | `pm-ecommerce` | `review-response/SKILL.md` |
+| Rewards Optimizer | `pm-money` | `rewards-optimizer/SKILL.md` |
 | RFC Writer | `pm-engineering` | `rfc-writer/SKILL.md` |
 | RFP Response | `pm-gov` | `rfp-response/SKILL.md` |
 | RFP Scoring Matrix | `pm-supplychain` | `rfp-scoring-matrix/SKILL.md` |
@@ -800,6 +808,7 @@
 | System Design Interview | `pm-engineering` | `system-design-interview/SKILL.md` |
 | Tabletop Negotiator | `pm-tabletop` | `tabletop-negotiator/SKILL.md` |
 | Task Triage Matrix | `pm-cowork` | `task-triage-matrix/SKILL.md` |
+| Tax Deduction Finder | `pm-money` | `tax-deduction-finder/SKILL.md` |
 | Tax Planning Checklist | `pm-finance` | `tax-planning-checklist/SKILL.md` |
 | TDD Workflow | `pm-craft` | `tdd-workflow/SKILL.md` |
 | Teach The Game | `pm-tabletop` | `teach-the-game/SKILL.md` |
@@ -851,6 +860,7 @@
 | Trip Planner | `pm-personal` | `trip-planner/SKILL.md` |
 | TTRPG Session Forge | `pm-newgen` | `ttrpg-session-forge/SKILL.md` |
 | Unblock Protocol | `pm-cowork` | `unblock-protocol/SKILL.md` |
+| Unclaimed-Money Tracer | `pm-money` | `unclaimed-money-tracer/SKILL.md` |
 | Underwriting Narrative | `pm-insurance` | `underwriting-narrative/SKILL.md` |
 | Unit Economics | `pm-calculators` | `unit-economics/SKILL.md` |
 | Used Car Decoder | `other` | `used-car-decoder/SKILL.md` |
@@ -858,6 +868,7 @@
 | User Journey Map | `pm-visuals` | `user-journey-map/SKILL.md` |
 | User Research Synthesis | `pm-essentials` | `user-research-synthesis/SKILL.md` |
 | User Story Writer | `pm-delivery` | `user-story-writer/SKILL.md` |
+| Utility Switch Advisor | `pm-money` | `utility-switch-advisor/SKILL.md` |
 | UX Research Plan | `pm-design` | `ux-research-plan/SKILL.md` |
 | Value Proposition | `pm-copy` | `value-proposition/SKILL.md` |
 | VC Partner Meeting | `pm-simulators` | `vc-partner-meeting/SKILL.md` |
@@ -890,6 +901,7 @@
 | Wiki Summary | `pm-live` | `wiki-summary/SKILL.md` |
 | Win/Loss Analysis | `pm-pmm` | `win-loss-analysis/SKILL.md` |
 | Win-back Playbook | `pm-cs` | `winback-playbook/SKILL.md` |
+| Windfall Plan | `pm-money` | `windfall-plan/SKILL.md` |
 | Wine Pairing | `pm-hobbies` | `wine-pairing/SKILL.md` |
 | Word Document | `pm-documents` | `word-document/SKILL.md` |
 | Working Agreements | `pm-cowork` | `working-agreements/SKILL.md` |

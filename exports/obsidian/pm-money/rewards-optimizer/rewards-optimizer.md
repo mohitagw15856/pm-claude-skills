@@ -1,0 +1,83 @@
+---
+aliases: ["Rewards Optimizer"]
+tags: [pm-skills, skill]
+skill: rewards-optimizer
+description: "Figure out the best card or payment route for a purchase (or your everyday spending) to maximize cashback/points — without overspending or drowning in complexity. Use when asked which card should I use for [purchase], maximize my credit card rewards, best card for [category], or optimize my points. Produces the best-value route for the spend from the cards/programs you actually have, a simple everyday cheat-sheet by category, redemption tips, and honest guardrails (pay in full, don't chase points into debt or clutter). Not financial advice."
+---
+
+# Rewards Optimizer
+
+Reward programs are designed to be confusing so most value goes unclaimed. This cuts through it: given the cards and programs you actually have, it tells you the best one to use for a specific purchase or builds a simple by-category cheat-sheet for everyday spending — while keeping the golden rule front and center: rewards are only worth it if you pay in full and don't spend more to earn them.
+
+## What This Skill Produces
+
+- **The best route for this spend** — which of your cards/programs earns most for the specific purchase or category
+- **An everyday cheat-sheet** — a simple "use card X for groceries, Y for dining, Z for everything else" map
+- **Redemption tips** — how to get the most value when cashing in (transfer partners, statement credit vs travel, avoiding devaluation)
+- **Guardrails** — pay-in-full always, don't chase sign-ups into debt, keep it simple enough to actually follow
+- **A "worth it?" check** — when an annual fee or a new card does or doesn't pay off for your spending
+
+## Required Inputs
+
+Ask for these if not provided:
+- **Your cards/programs** — what you have (issuers, categories, any annual fees)
+- **The question** — a specific purchase/category, or optimizing everyday spending
+- **Your spending shape** — rough monthly by category (groceries, dining, travel, gas, bills)
+- **Redemption goal** — cashback, travel, or points flexibility
+- **Complexity tolerance** — max value vs. keep-it-simple
+
+## Framework: Value First, Never Into Debt
+
+1. **Match the card to the category.** Use whichever card earns the highest rate for that specific spend — bonus categories are where the value is.
+2. **Keep the everyday map simple.** A two-or-three-card routine most people can actually remember beats a 10-card optimization nobody follows.
+3. **Redeem smartly.** Points aren't all worth the same — flag high-value redemptions and watch for devaluation; sometimes plain cashback wins.
+4. **Judge fees honestly.** An annual fee only pays off if your spending in its categories clears the fee in rewards — do that math.
+5. **Guardrail hard.** Rewards are worthless if you carry a balance or overspend to earn them — pay in full, don't chase. Say this plainly.
+
+## Output Format
+
+### Rewards: [specific spend / everyday] · cards: [yours]
+
+**For this purchase:** use [card] — earns [rate/value] because [category bonus].
+
+**Everyday cheat-sheet**
+| Category | Best card | Why |
+|---|---|---|
+| Groceries | [card] | [rate] |
+| Dining | [card] | [rate] |
+| Everything else | [card] | [base rate] |
+
+**Redeem for max value:** [best redemption path + watch-outs].
+**Fee check:** [card] fee pays off if you spend ~[x] in [category].
+
+> Not financial advice. Only worth it if you pay the balance in full every month and don't spend more to earn rewards.
+
+## Quality Checks
+- [ ] Recommends the highest-earning card for the actual category
+- [ ] Everyday cheat-sheet is simple enough to follow
+- [ ] Includes redemption-value guidance, not just earning
+- [ ] Does honest annual-fee math
+- [ ] Leads with pay-in-full / don't-overspend guardrails
+- [ ] Uses only the cards/programs the person has
+
+## Anti-Patterns
+- **Optimizing into complexity** nobody will follow.
+- **Ignoring the pay-in-full rule** — interest erases all rewards.
+- **Encouraging spend** to hit bonuses.
+- **Treating all points as equal value.**
+- **Recommending a fee card** without the break-even math.
+
+## Example Trigger Phrases
+- "Which card should I use for booking a flight?"
+- "Help me maximize my cashback across my cards."
+- "Best card for groceries and dining from what I have?"
+- "Is this card's annual fee worth it for my spending?"
+- "Set me up a simple system for which card to use where."
+
+---
+<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
+     variable for the highlighted text — replace it with your plugin's equivalent
+     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
+Apply the skill above to the following input:
+
+{{selection}}
