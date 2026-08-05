@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-952 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+958 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -323,6 +323,7 @@
 | Evidence Lock | `pm-research` | `pm-research/evidence-lock/GEM_INSTRUCTIONS.md` |
 | EVT/DVT/PVT Gate Review | `pm-hardware` | `pm-hardware/evt-dvt-pvt-gate-review/GEM_INSTRUCTIONS.md` |
 | Exam Prep Planner | `pm-students` | `pm-students/exam-prep-planner/GEM_INSTRUCTIONS.md` |
+| Exam Study Plan | `pm-students` | `pm-students/exam-study-plan/GEM_INSTRUCTIONS.md` |
 | Excel Model | `pm-documents` | `pm-documents/excel-model/GEM_INSTRUCTIONS.md` |
 | Exec Vs Working Deck | `pm-cowork` | `pm-cowork/exec-vs-working-deck/GEM_INSTRUCTIONS.md` |
 | Executing Plans | `pm-method` | `pm-method/executing-plans/GEM_INSTRUCTIONS.md` |
@@ -477,6 +478,7 @@
 | KPI Tracker Design | `pm-cowork` | `pm-cowork/kpi-tracker-design/GEM_INSTRUCTIONS.md` |
 | KYC Escalation | `pm-banking` | `pm-banking/kyc-escalation/GEM_INSTRUCTIONS.md` |
 | Landing Page Copy | `pm-copy` | `pm-copy/landing-page-copy/GEM_INSTRUCTIONS.md` |
+| Language-Learning Plan | `pm-students` | `pm-students/language-learning-plan/GEM_INSTRUCTIONS.md` |
 | Last 30 Days Research | `pm-cross` | `pm-cross/last-30-days-research/GEM_INSTRUCTIONS.md` |
 | Last Two Weeks Handoff | `pm-resignation` | `pm-resignation/last-two-weeks-handoff/GEM_INSTRUCTIONS.md` |
 | Late-Invoice Chaser | `pm-freelance` | `pm-freelance/late-invoice-chaser/GEM_INSTRUCTIONS.md` |
@@ -528,6 +530,7 @@
 | Meeting Prep (Live) | `pm-cowork-live` | `pm-cowork-live/meeting-prep-live/GEM_INSTRUCTIONS.md` |
 | Meeting Prep Pack | `pm-cowork` | `pm-cowork/meeting-prep-pack/GEM_INSTRUCTIONS.md` |
 | Meeting Room Etiquette | `pm-cowork` | `pm-cowork/meeting-room-etiquette/GEM_INSTRUCTIONS.md` |
+| Memoir Story Capture | `pm-writers` | `pm-writers/memoir-story-capture/GEM_INSTRUCTIONS.md` |
 | Menu Cost Engineer | `pm-hospitality` | `pm-hospitality/menu-cost-engineer/GEM_INSTRUCTIONS.md` |
 | Message for the Moment | `pm-comms` | `pm-comms/message-for-the-moment/GEM_INSTRUCTIONS.md` |
 | Messaging Framework | `pm-growth` | `pm-growth/messaging-framework/GEM_INSTRUCTIONS.md` |
@@ -598,6 +601,7 @@
 | Performance Review | `pm-people` | `pm-people/performance-review/GEM_INSTRUCTIONS.md` |
 | Personal Bio | `pm-personal` | `pm-personal/personal-bio/GEM_INSTRUCTIONS.md` |
 | Personal Board of Directors | `pm-personal` | `pm-personal/personal-board-of-directors/GEM_INSTRUCTIONS.md` |
+| Personal Statement | `pm-students` | `pm-students/personal-statement/GEM_INSTRUCTIONS.md` |
 | Personal WIP Limits | `pm-cowork` | `pm-cowork/personal-wip-limits/GEM_INSTRUCTIONS.md` |
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/GEM_INSTRUCTIONS.md` |
 | Phishing Triage | `pm-digital-safety` | `pm-digital-safety/phishing-triage/GEM_INSTRUCTIONS.md` |
@@ -659,6 +663,7 @@
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/GEM_INSTRUCTIONS.md` |
 | Public Comment | `pm-gov` | `pm-gov/public-comment/GEM_INSTRUCTIONS.md` |
 | Public Holidays | `pm-live` | `pm-live/public-holidays/GEM_INSTRUCTIONS.md` |
+| Public-Speaking Prep | `pm-comms` | `pm-comms/public-speaking-prep/GEM_INSTRUCTIONS.md` |
 | Punch List Builder | `pm-construction` | `pm-construction/punch-list-builder/GEM_INSTRUCTIONS.md` |
 | Purchase Justification | `pm-cowork` | `pm-cowork/purchase-justification/GEM_INSTRUCTIONS.md` |
 | QA Handoff Package | `pm-qa` | `pm-qa/qa-handoff-package/GEM_INSTRUCTIONS.md` |
@@ -752,6 +757,7 @@
 | Schedule Monte Carlo | `pm-calculators` | `pm-calculators/schedule-monte-carlo/GEM_INSTRUCTIONS.md` |
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/GEM_INSTRUCTIONS.md` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/GEM_INSTRUCTIONS.md` |
+| Scholarship Essay | `pm-students` | `pm-students/scholarship-essay/GEM_INSTRUCTIONS.md` |
 | School Choice Decision | `pm-family` | `pm-family/school-choice-decision/GEM_INSTRUCTIONS.md` |
 | Scope Creep Response | `pm-freelance` | `pm-freelance/scope-creep-response/GEM_INSTRUCTIONS.md` |
 | Screen-Time Detox | `pm-wellbeing` | `pm-wellbeing/screen-time-detox/GEM_INSTRUCTIONS.md` |

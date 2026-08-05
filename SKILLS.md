@@ -1,4 +1,4 @@
-# 🗂️ All 952 Skills — full catalog
+# 🗂️ All 958 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -316,7 +316,7 @@
 | **Metrics Framework** (`metrics-framework`) | Build a metrics framework for any product, team, or business. | ✅ 4.8/5 |
 | **SQL Query Explainer** (`sql-query-explainer`) | Explains, optimises, writes, and documents SQL queries. | ✅ 4.3/5 |
 
-## 🎨 Design & Content (39 skills)
+## 🎨 Design & Content (40 skills)
 
 ### `pm-design` — 6 skills
 
@@ -371,12 +371,13 @@
 | **Sequence Diagram** (`sequence-diagram`) | Diagram an interaction as a sequence of messages between participants over time. | — |
 | **User Journey Map** (`user-journey-map`) | Map a user's journey through a product or experience, phase by phase, with their actions and how they feel. | — |
 
-### `pm-writers` — 6 skills · 1 eval-scored
+### `pm-writers` — 7 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **AEO Optimizer** (`aeo-optimizer`) | Optimize an article for Answer Engine Optimization (AEO) so AI engines like ChatGPT, Perplexity, and Claude can extract, quote, and cite it. | ✅ 4.5/5 |
 | **Instagram Post Downloader** (`instagram-post-downloader`) | Download and save Instagram posts as high-resolution files. | — |
+| **Memoir Story Capture** (`memoir-story-capture`) | Capture a life story — your own or a parent's/grandparent's — into a keepsake, using good interview questions and a structure that turns memories… | — |
 | **Notes Humanizer** (`notes-humanizer`) | Strips AI writing patterns from text and rewrites it to sound genuinely human — removing the statistical defaults, then adding earned voice… | — |
 | **Substack Notes Scraper** (`substack-notes-scraper`) | Scrapes a Substack Notes page and exports engagement data to a formatted .xlsx file. | — |
 | **Thumbnail Creator Skill (via Gemini)** (`thumbnail-creator`) | Generate article or newsletter thumbnail candidates using the Gemini API from inside Claude Code. | — |
@@ -602,7 +603,7 @@
 | **Tenant Rights Explainer** (`tenant-rights-explainer`) | Understand your rights as a renter in a specific situation — repairs ignored, a rent increase, an eviction notice, deposit disputes, or entry… | — |
 | **Witness Statement Writer** (`witness-statement-writer`) | Write a clear, factual witness statement or account of an incident — for an insurance claim, small claims, a workplace matter, or the police —… | — |
 
-## 🧑 You & Career (85 skills)
+## 🧑 You & Career (86 skills)
 
 ### `pm-career` — 16 skills
 
@@ -625,7 +626,7 @@
 | **Self-Review** (`self-review`) | Write a performance self-review that's specific, evidenced, and balanced. | — |
 | **Year in Review** (`year-in-review`) | Run an honest personal year-in-review and set next year's direction — wins, misses, an energy audit, and one theme, not a resolution list that… | — |
 
-### `pm-comms` — 12 skills
+### `pm-comms` — 13 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -638,6 +639,7 @@
 | **Managing Up** (`managing-up`) | Work more effectively with your manager — communicate, align, escalate, and get what you need. | — |
 | **Message for the Moment** (`message-for-the-moment`) | Write the short message you freeze on — a thank-you, condolence, congratulations, apology, or a graceful 'no' to an invite — warm, specific, and… | — |
 | **Persuasion Brief** (`persuasion-brief`) | Build the case to win someone over to a decision, idea, or change. | — |
+| **Public-Speaking Prep** (`public-speaking-prep`) | Prepare for a specific talk, presentation, or speech — a clear structure, a strong open and close, delivery and nerves handling, and a rehearsal… | — |
 | **Saying No** (`saying-no`) | Decline a request, push back on scope, or protect priorities without burning the relationship. | — |
 | **Summarize Anything** (`summarize-anything`) | Turn a long article, email thread, document, or transcript into a tight summary you can act on — the gist, the key points, and what it means for you. | — |
 | **Tone Fixer** (`tone-fixer`) | Rewrite a message to the tone you actually want — less harsh, more confident, warmer, firmer, or shorter — without losing your point. | — |
@@ -724,7 +726,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (487 skills)
+## 🌍 Industries & Public Sector (491 skills)
 
 ### `other` — 4 skills
 
@@ -1409,13 +1411,17 @@
 | **The Visa Interview** (`the-visa-interview`) | Simulate a consular visa interview — the 90-second assessment, the questions behind the questions, and a debrief on which answers helped and hurt. | — |
 | **VC Partner Meeting** (`vc-partner-meeting`) | Simulate the VC partner meeting that discusses your pitch after you leave the room — four partner archetypes debate, then write the internal… | — |
 
-### `pm-students` — 7 skills
+### `pm-students` — 11 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Exam Prep Planner** (`exam-prep-planner`) | Build a realistic exam-prep schedule with spaced repetition and retrieval practice — the plan that survives contact with an actual week. | — |
+| **Exam Study Plan** (`exam-study-plan`) | Build a backward-planned study schedule for an exam — using proven learning methods, not just re-reading — so you cover what matters and actually… | — |
 | **Financial Aid Appeal** (`financial-aid-appeal`) | Write a financial-aid appeal or scholarship request letter that aid offices act on — factual, documented, and specific about the ask. | — |
+| **Language-Learning Plan** (`language-learning-plan`) | Build a realistic plan to learn a language for your actual goal — travel, conversation, work, or fluency — focused on what moves the needle… | — |
 | **Literature Review Builder** (`literature-review-builder`) | Structure a literature review that argues, not lists — thematic synthesis from your sources with the debate mapped and the gap identified. | — |
+| **Personal Statement** (`personal-statement`) | Write a personal statement for a university, grad-school, or job application that's specific, coherent, and unmistakably you — showing fit and… | — |
+| **Scholarship Essay** (`scholarship-essay`) | Write a scholarship essay that stands out — a genuine, specific story that answers the prompt and shows why you deserve the award, without clichés. | — |
 | **Statement Coach** (`statement-coach`) | Coach a statement of purpose or personal essay to admission strength — structural diagnosis, specific feedback, and revision plans on YOUR draft… | — |
 | **Study Notes Synthesizer** (`study-notes-synthesizer`) | Turn lecture notes, slides, and readings into one exam-ready study guide — synthesis, not summary. | — |
 | **The Thesis Defense** (`the-thesis-defense`) | Simulate your thesis defense before the real one — a committee of examiner archetypes probing YOUR actual thesis, the questions you hoped nobody… | — |
@@ -1525,4 +1531,4 @@
 
 ---
 
-_952 skills across 109 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_958 skills across 109 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

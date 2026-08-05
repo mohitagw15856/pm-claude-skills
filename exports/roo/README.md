@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-952 skills exported. Copy a `.md rule` into the tool to use it.
+958 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -323,6 +323,7 @@
 | Evidence Lock | `pm-research` | `pm-research/evidence-lock/evidence-lock.md` |
 | EVT/DVT/PVT Gate Review | `pm-hardware` | `pm-hardware/evt-dvt-pvt-gate-review/evt-dvt-pvt-gate-review.md` |
 | Exam Prep Planner | `pm-students` | `pm-students/exam-prep-planner/exam-prep-planner.md` |
+| Exam Study Plan | `pm-students` | `pm-students/exam-study-plan/exam-study-plan.md` |
 | Excel Model | `pm-documents` | `pm-documents/excel-model/excel-model.md` |
 | Exec Vs Working Deck | `pm-cowork` | `pm-cowork/exec-vs-working-deck/exec-vs-working-deck.md` |
 | Executing Plans | `pm-method` | `pm-method/executing-plans/executing-plans.md` |
@@ -477,6 +478,7 @@
 | KPI Tracker Design | `pm-cowork` | `pm-cowork/kpi-tracker-design/kpi-tracker-design.md` |
 | KYC Escalation | `pm-banking` | `pm-banking/kyc-escalation/kyc-escalation.md` |
 | Landing Page Copy | `pm-copy` | `pm-copy/landing-page-copy/landing-page-copy.md` |
+| Language-Learning Plan | `pm-students` | `pm-students/language-learning-plan/language-learning-plan.md` |
 | Last 30 Days Research | `pm-cross` | `pm-cross/last-30-days-research/last-30-days-research.md` |
 | Last Two Weeks Handoff | `pm-resignation` | `pm-resignation/last-two-weeks-handoff/last-two-weeks-handoff.md` |
 | Late-Invoice Chaser | `pm-freelance` | `pm-freelance/late-invoice-chaser/late-invoice-chaser.md` |
@@ -528,6 +530,7 @@
 | Meeting Prep (Live) | `pm-cowork-live` | `pm-cowork-live/meeting-prep-live/meeting-prep-live.md` |
 | Meeting Prep Pack | `pm-cowork` | `pm-cowork/meeting-prep-pack/meeting-prep-pack.md` |
 | Meeting Room Etiquette | `pm-cowork` | `pm-cowork/meeting-room-etiquette/meeting-room-etiquette.md` |
+| Memoir Story Capture | `pm-writers` | `pm-writers/memoir-story-capture/memoir-story-capture.md` |
 | Menu Cost Engineer | `pm-hospitality` | `pm-hospitality/menu-cost-engineer/menu-cost-engineer.md` |
 | Message for the Moment | `pm-comms` | `pm-comms/message-for-the-moment/message-for-the-moment.md` |
 | Messaging Framework | `pm-growth` | `pm-growth/messaging-framework/messaging-framework.md` |
@@ -598,6 +601,7 @@
 | Performance Review | `pm-people` | `pm-people/performance-review/performance-review.md` |
 | Personal Bio | `pm-personal` | `pm-personal/personal-bio/personal-bio.md` |
 | Personal Board of Directors | `pm-personal` | `pm-personal/personal-board-of-directors/personal-board-of-directors.md` |
+| Personal Statement | `pm-students` | `pm-students/personal-statement/personal-statement.md` |
 | Personal WIP Limits | `pm-cowork` | `pm-cowork/personal-wip-limits/personal-wip-limits.md` |
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/persuasion-brief.md` |
 | Phishing Triage | `pm-digital-safety` | `pm-digital-safety/phishing-triage/phishing-triage.md` |
@@ -659,6 +663,7 @@
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/proposal-writer.md` |
 | Public Comment | `pm-gov` | `pm-gov/public-comment/public-comment.md` |
 | Public Holidays | `pm-live` | `pm-live/public-holidays/public-holidays.md` |
+| Public-Speaking Prep | `pm-comms` | `pm-comms/public-speaking-prep/public-speaking-prep.md` |
 | Punch List Builder | `pm-construction` | `pm-construction/punch-list-builder/punch-list-builder.md` |
 | Purchase Justification | `pm-cowork` | `pm-cowork/purchase-justification/purchase-justification.md` |
 | QA Handoff Package | `pm-qa` | `pm-qa/qa-handoff-package/qa-handoff-package.md` |
@@ -752,6 +757,7 @@
 | Schedule Monte Carlo | `pm-calculators` | `pm-calculators/schedule-monte-carlo/schedule-monte-carlo.md` |
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/schedule-recipe.md` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/schema-markup.md` |
+| Scholarship Essay | `pm-students` | `pm-students/scholarship-essay/scholarship-essay.md` |
 | School Choice Decision | `pm-family` | `pm-family/school-choice-decision/school-choice-decision.md` |
 | Scope Creep Response | `pm-freelance` | `pm-freelance/scope-creep-response/scope-creep-response.md` |
 | Screen-Time Detox | `pm-wellbeing` | `pm-wellbeing/screen-time-detox/screen-time-detox.md` |

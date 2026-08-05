@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-952 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+958 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -323,6 +323,7 @@
 | Evidence Lock | `pm-research` | `pm-research/evidence-lock/SYSTEM_PROMPT.md` |
 | EVT/DVT/PVT Gate Review | `pm-hardware` | `pm-hardware/evt-dvt-pvt-gate-review/SYSTEM_PROMPT.md` |
 | Exam Prep Planner | `pm-students` | `pm-students/exam-prep-planner/SYSTEM_PROMPT.md` |
+| Exam Study Plan | `pm-students` | `pm-students/exam-study-plan/SYSTEM_PROMPT.md` |
 | Excel Model | `pm-documents` | `pm-documents/excel-model/SYSTEM_PROMPT.md` |
 | Exec Vs Working Deck | `pm-cowork` | `pm-cowork/exec-vs-working-deck/SYSTEM_PROMPT.md` |
 | Executing Plans | `pm-method` | `pm-method/executing-plans/SYSTEM_PROMPT.md` |
@@ -477,6 +478,7 @@
 | KPI Tracker Design | `pm-cowork` | `pm-cowork/kpi-tracker-design/SYSTEM_PROMPT.md` |
 | KYC Escalation | `pm-banking` | `pm-banking/kyc-escalation/SYSTEM_PROMPT.md` |
 | Landing Page Copy | `pm-copy` | `pm-copy/landing-page-copy/SYSTEM_PROMPT.md` |
+| Language-Learning Plan | `pm-students` | `pm-students/language-learning-plan/SYSTEM_PROMPT.md` |
 | Last 30 Days Research | `pm-cross` | `pm-cross/last-30-days-research/SYSTEM_PROMPT.md` |
 | Last Two Weeks Handoff | `pm-resignation` | `pm-resignation/last-two-weeks-handoff/SYSTEM_PROMPT.md` |
 | Late-Invoice Chaser | `pm-freelance` | `pm-freelance/late-invoice-chaser/SYSTEM_PROMPT.md` |
@@ -528,6 +530,7 @@
 | Meeting Prep (Live) | `pm-cowork-live` | `pm-cowork-live/meeting-prep-live/SYSTEM_PROMPT.md` |
 | Meeting Prep Pack | `pm-cowork` | `pm-cowork/meeting-prep-pack/SYSTEM_PROMPT.md` |
 | Meeting Room Etiquette | `pm-cowork` | `pm-cowork/meeting-room-etiquette/SYSTEM_PROMPT.md` |
+| Memoir Story Capture | `pm-writers` | `pm-writers/memoir-story-capture/SYSTEM_PROMPT.md` |
 | Menu Cost Engineer | `pm-hospitality` | `pm-hospitality/menu-cost-engineer/SYSTEM_PROMPT.md` |
 | Message for the Moment | `pm-comms` | `pm-comms/message-for-the-moment/SYSTEM_PROMPT.md` |
 | Messaging Framework | `pm-growth` | `pm-growth/messaging-framework/SYSTEM_PROMPT.md` |
@@ -598,6 +601,7 @@
 | Performance Review | `pm-people` | `pm-people/performance-review/SYSTEM_PROMPT.md` |
 | Personal Bio | `pm-personal` | `pm-personal/personal-bio/SYSTEM_PROMPT.md` |
 | Personal Board of Directors | `pm-personal` | `pm-personal/personal-board-of-directors/SYSTEM_PROMPT.md` |
+| Personal Statement | `pm-students` | `pm-students/personal-statement/SYSTEM_PROMPT.md` |
 | Personal WIP Limits | `pm-cowork` | `pm-cowork/personal-wip-limits/SYSTEM_PROMPT.md` |
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/SYSTEM_PROMPT.md` |
 | Phishing Triage | `pm-digital-safety` | `pm-digital-safety/phishing-triage/SYSTEM_PROMPT.md` |
@@ -659,6 +663,7 @@
 | Proposal Writer | `pm-sales` | `pm-sales/proposal-writer/SYSTEM_PROMPT.md` |
 | Public Comment | `pm-gov` | `pm-gov/public-comment/SYSTEM_PROMPT.md` |
 | Public Holidays | `pm-live` | `pm-live/public-holidays/SYSTEM_PROMPT.md` |
+| Public-Speaking Prep | `pm-comms` | `pm-comms/public-speaking-prep/SYSTEM_PROMPT.md` |
 | Punch List Builder | `pm-construction` | `pm-construction/punch-list-builder/SYSTEM_PROMPT.md` |
 | Purchase Justification | `pm-cowork` | `pm-cowork/purchase-justification/SYSTEM_PROMPT.md` |
 | QA Handoff Package | `pm-qa` | `pm-qa/qa-handoff-package/SYSTEM_PROMPT.md` |
@@ -752,6 +757,7 @@
 | Schedule Monte Carlo | `pm-calculators` | `pm-calculators/schedule-monte-carlo/SYSTEM_PROMPT.md` |
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/SYSTEM_PROMPT.md` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/SYSTEM_PROMPT.md` |
+| Scholarship Essay | `pm-students` | `pm-students/scholarship-essay/SYSTEM_PROMPT.md` |
 | School Choice Decision | `pm-family` | `pm-family/school-choice-decision/SYSTEM_PROMPT.md` |
 | Scope Creep Response | `pm-freelance` | `pm-freelance/scope-creep-response/SYSTEM_PROMPT.md` |
 | Screen-Time Detox | `pm-wellbeing` | `pm-wellbeing/screen-time-detox/SYSTEM_PROMPT.md` |

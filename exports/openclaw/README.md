@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-952 skills exported. Copy a `SKILL.md` into the tool to use it.
+958 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -323,6 +323,7 @@
 | Evidence Lock | `pm-research` | `evidence-lock/SKILL.md` |
 | EVT/DVT/PVT Gate Review | `pm-hardware` | `evt-dvt-pvt-gate-review/SKILL.md` |
 | Exam Prep Planner | `pm-students` | `exam-prep-planner/SKILL.md` |
+| Exam Study Plan | `pm-students` | `exam-study-plan/SKILL.md` |
 | Excel Model | `pm-documents` | `excel-model/SKILL.md` |
 | Exec Vs Working Deck | `pm-cowork` | `exec-vs-working-deck/SKILL.md` |
 | Executing Plans | `pm-method` | `executing-plans/SKILL.md` |
@@ -477,6 +478,7 @@
 | KPI Tracker Design | `pm-cowork` | `kpi-tracker-design/SKILL.md` |
 | KYC Escalation | `pm-banking` | `kyc-escalation/SKILL.md` |
 | Landing Page Copy | `pm-copy` | `landing-page-copy/SKILL.md` |
+| Language-Learning Plan | `pm-students` | `language-learning-plan/SKILL.md` |
 | Last 30 Days Research | `pm-cross` | `last-30-days-research/SKILL.md` |
 | Last Two Weeks Handoff | `pm-resignation` | `last-two-weeks-handoff/SKILL.md` |
 | Late-Invoice Chaser | `pm-freelance` | `late-invoice-chaser/SKILL.md` |
@@ -528,6 +530,7 @@
 | Meeting Prep (Live) | `pm-cowork-live` | `meeting-prep-live/SKILL.md` |
 | Meeting Prep Pack | `pm-cowork` | `meeting-prep-pack/SKILL.md` |
 | Meeting Room Etiquette | `pm-cowork` | `meeting-room-etiquette/SKILL.md` |
+| Memoir Story Capture | `pm-writers` | `memoir-story-capture/SKILL.md` |
 | Menu Cost Engineer | `pm-hospitality` | `menu-cost-engineer/SKILL.md` |
 | Message for the Moment | `pm-comms` | `message-for-the-moment/SKILL.md` |
 | Messaging Framework | `pm-growth` | `messaging-framework/SKILL.md` |
@@ -598,6 +601,7 @@
 | Performance Review | `pm-people` | `performance-review/SKILL.md` |
 | Personal Bio | `pm-personal` | `personal-bio/SKILL.md` |
 | Personal Board of Directors | `pm-personal` | `personal-board-of-directors/SKILL.md` |
+| Personal Statement | `pm-students` | `personal-statement/SKILL.md` |
 | Personal WIP Limits | `pm-cowork` | `personal-wip-limits/SKILL.md` |
 | Persuasion Brief | `pm-comms` | `persuasion-brief/SKILL.md` |
 | Phishing Triage | `pm-digital-safety` | `phishing-triage/SKILL.md` |
@@ -659,6 +663,7 @@
 | Proposal Writer | `pm-sales` | `proposal-writer/SKILL.md` |
 | Public Comment | `pm-gov` | `public-comment/SKILL.md` |
 | Public Holidays | `pm-live` | `public-holidays/SKILL.md` |
+| Public-Speaking Prep | `pm-comms` | `public-speaking-prep/SKILL.md` |
 | Punch List Builder | `pm-construction` | `punch-list-builder/SKILL.md` |
 | Purchase Justification | `pm-cowork` | `purchase-justification/SKILL.md` |
 | QA Handoff Package | `pm-qa` | `qa-handoff-package/SKILL.md` |
@@ -752,6 +757,7 @@
 | Schedule Monte Carlo | `pm-calculators` | `schedule-monte-carlo/SKILL.md` |
 | Schedule Recipe | `pm-autopilot` | `schedule-recipe/SKILL.md` |
 | Schema Markup | `pm-growth` | `schema-markup/SKILL.md` |
+| Scholarship Essay | `pm-students` | `scholarship-essay/SKILL.md` |
 | School Choice Decision | `pm-family` | `school-choice-decision/SKILL.md` |
 | Scope Creep Response | `pm-freelance` | `scope-creep-response/SKILL.md` |
 | Screen-Time Detox | `pm-wellbeing` | `screen-time-detox/SKILL.md` |
