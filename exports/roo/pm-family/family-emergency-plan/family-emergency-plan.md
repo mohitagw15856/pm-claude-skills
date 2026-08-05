@@ -1,0 +1,65 @@
+# Family Emergency Plan
+
+In a real emergency — a medical event, a fire, a natural disaster — the difference between calm and chaos is having decided things in advance: who calls whom, where you meet, where the important documents are, and what someone needs to know if you can't tell them. This builds that plan for your household, sized to your family and the risks where you live.
+
+## What This Skill Produces
+
+- **A communication plan** — who contacts whom, an out-of-area contact, and how you'll reach each other if phones/networks are down
+- **Meeting points** — a spot near home and one further away if you can't get home
+- **Emergency contacts / ICE** — the list everyone carries, and In-Case-of-Emergency info on phones
+- **A key-documents & info map** — where the important documents, accounts, medical info, and instructions live (and who can access them)
+- **A supplies/go-bag checklist** — a basic kit sized to your household and local risks
+- **An "if something happens to me" note** — the essentials someone would need to keep the household running
+
+## Required Inputs
+
+Ask for these if not provided:
+- **Household** — who's in it (kids, elderly, pets, anyone with medical needs)
+- **Location & risks** — likely local emergencies (fire, flood, quake, storms, power cuts)
+- **Current state** — what's already in place (contacts, documents organized, supplies)
+- **Concern driver** — general preparedness or a specific worry
+- **Access** — who should be able to reach key info/documents
+
+## Framework: Decide In Advance, Write It Down
+
+1. **Plan communication and reunification.** Agree who calls whom, an out-of-area contact (local lines may jam), and meeting points near and far — decided before, not during.
+2. **Make emergency info reachable.** ICE contacts on phones, a carried contact card (for kids especially), and medical/allergy info accessible.
+3. **Map the important stuff.** List where key documents, account info, medical details, and instructions live, and ensure a trusted person can access them.
+4. **Prep basic supplies.** A right-sized kit/go-bag for your household and local risks — water, meds, essentials, pet and kid needs — not a doomsday bunker.
+5. **Cover the 'if I can't tell you' case.** A simple note of what someone would need to keep things running (bills, care, contacts) if you're incapacitated or worse.
+6. **Tailor to the household.** Kids, elderly members, pets, and medical needs each add specific steps.
+
+## Output Format
+
+### Family emergency plan: [household] · [location/risks]
+
+**Communication:** who calls whom · out-of-area contact · if networks are down: [plan].
+**Meeting points:** near home [x] · further away [y].
+**Emergency contacts / ICE:** [list everyone carries + phone ICE setup].
+**Key documents & info map:** [what lives where + who can access].
+**Supplies / go-bag:** [right-sized checklist for household + local risks].
+**If something happens to me:** [the essentials someone needs — bills, care, contacts, instructions].
+
+**Tailored:** [kids/elderly/pets/medical specifics].
+
+## Quality Checks
+- [ ] Covers communication and near/far meeting points
+- [ ] Sets up ICE/emergency contacts everyone can reach
+- [ ] Maps where key documents/info live and who can access them
+- [ ] Includes a right-sized supplies/go-bag checklist
+- [ ] Includes an "if something happens to me" essentials note
+- [ ] Tailored to the household and local risks
+
+## Anti-Patterns
+- **A generic checklist** ignoring the household's actual makeup and risks.
+- **Contacts nobody has written down** or can reach when phones fail.
+- **Documents organized but inaccessible** to anyone else.
+- **A doomsday-prepper overkit** instead of a practical kit.
+- **No incapacity plan** — leaving the household unable to function.
+
+## Example Trigger Phrases
+- "Help me make a family emergency plan."
+- "How do we prepare for a natural disaster where we live?"
+- "I want to organize our important info in case something happens to me."
+- "What should be in our family go-bag?"
+- "Set up an emergency communication plan for our household."

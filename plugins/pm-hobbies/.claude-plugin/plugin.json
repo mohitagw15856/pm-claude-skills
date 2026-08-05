@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-hobbies",
+  "version": "1.0.0",
+  "description": "Skills for hobbies & leisure: wine pairing, cocktails from what you have, houseplant care, sourdough troubleshooting, board-game nights, tabletop campaigns, stargazing, birdwatching, chess openings, karaoke picks, fantasy-league drafting, and starting any new hobby.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "hobbies",
+    "leisure",
+    "games",
+    "cooking",
+    "music",
+    "outdoors"
+  ]
+}

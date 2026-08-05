@@ -1,0 +1,66 @@
+# Appliance Buying Guide
+
+Appliance shopping is deliberately confusing: dozens of near-identical models, features you'll never use priced as premiums, and salespeople pushing extended warranties. This starts from what *you* actually need, separates the meaningful features from the marketing, checks it'll fit and perform, and times the purchase — so you buy the right machine, not the most upsold one.
+
+## What This Skill Produces
+
+- **A needs-based feature shortlist** — must-haves for your household vs. nice-to-haves vs. marketing fluff you can ignore
+- **Fit & capacity checks** — measurements, capacity for your household, and installation/utility requirements
+- **Reliability & running cost** — durability and repairability considerations, plus energy/water running costs over the life
+- **Warranty guidance** — the standard warranty, and an honest take on whether an extended warranty is worth it for this category
+- **Timing tips** — when this category tends to be discounted
+- **A verify note** — models, specs, and prices change constantly; confirm current details before buying
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The appliance & need** — type, household size, and how you'll use it
+- **The space** — dimensions, and any install constraints (utilities, doorways, venting)
+- **Priorities** — reliability, quiet, efficiency, capacity, specific features, budget
+- **Pain points** — what your current one lacks or does wrong
+- **Timeline** — need it now or can wait for a sale
+
+## Framework: Needs First, Ignore The Fluff
+
+1. **Start from use, not features.** Define how the household actually uses it — that determines the few features that matter and the many that don't.
+2. **Sort must-have from marketing.** Flag the genuinely useful features and call out the premium-priced gimmicks you won't use.
+3. **Check it fits and performs.** Confirm dimensions, capacity for the household, and any utility/install requirements before falling for a model.
+4. **Weigh reliability and running cost.** A cheaper unit that fails or guzzles energy costs more over its life — factor durability, repairability, and running costs.
+5. **Judge the warranty honestly.** Note the standard coverage and give a straight take on extended warranties for this category (often not worth it, sometimes is).
+6. **Time it and verify.** Point to typical sale windows, and stress confirming current models/specs/prices since lineups change frequently.
+
+## Output Format
+
+### Appliance: [type] · household [x] · space [dims] · budget [y]
+
+**Features**
+- ✅ Must-have (for you): [list]. 🤔 Nice-to-have: [list]. 🚩 Marketing fluff: [ignore].
+
+**Fit & capacity:** [dimensions · capacity · utility/install needs].
+**Reliability & running cost:** [durability/repairability · energy/water cost].
+**Warranty:** standard [x] · extended warranty — [worth it? honest take].
+**Timing:** [typical discount windows].
+
+> Verify current models, specs, and prices before buying — appliance lineups and deals change constantly.
+
+## Quality Checks
+- [ ] Features are derived from the household's actual use
+- [ ] Separates must-have from nice-to-have from marketing fluff
+- [ ] Checks fit, capacity, and install requirements
+- [ ] Considers reliability and lifetime running cost
+- [ ] Gives an honest extended-warranty take
+- [ ] Notes to verify current models/prices
+
+## Anti-Patterns
+- **Chasing premium features** the household won't use.
+- **Ignoring fit/utility** requirements until delivery day.
+- **Buying on sticker price** without running costs/reliability.
+- **Defaulting to the extended warranty** upsell.
+- **Asserting a specific current model/price** as fixed.
+
+## Example Trigger Phrases
+- "Which washing machine should I buy? So many models."
+- "Help me choose a fridge for a family of four."
+- "What dishwasher features actually matter?"
+- "Is this appliance worth the extra money, or is it marketing?"
+- "Should I get the extended warranty on a new dryer?"

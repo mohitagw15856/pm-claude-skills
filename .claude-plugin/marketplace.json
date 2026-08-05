@@ -1,13 +1,45 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "71.0.0",
+  "version": "72.0.0",
   "description": "PM stands for Professional, not just Product Management. 515 Claude Skills + 4 agent templates across 74 bundles covering 31 professions — engineering, security, AI/ML, customer success, legal, government & policy, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "plugins": [
+    {
+      "name": "pm-family",
+      "description": "Family, care & relationships skills: new-baby logistics, childcare & school choice, co-parenting messages, family emergency planning, wedding vows, love letters, long-distance relationships, in-law boundaries, condolences, relationship check-ins, and blending families.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-family",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-digital-safety",
+      "description": "Consumer digital self-defense skills: identity-theft recovery, data-broker removal, account recovery, ransomware first response, backups, phishing triage, passwords & 2FA, kids' online safety, securing a lost phone, oversharing audit, doxxing response, and safe online shopping.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-digital-safety",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-wellbeing",
+      "description": "Personal wellbeing & self-improvement skills: home workouts, stretching & mobility, posture, habit-building, journaling, gratitude, sleep, couch-to-5K, desk ergonomics, energy, screen-time, and recovery days. Educational — not medical advice.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-wellbeing",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-hobbies",
+      "description": "Skills for hobbies & leisure: wine pairing, cocktails from what you have, houseplant care, sourdough troubleshooting, board-game nights, tabletop campaigns, stargazing, birdwatching, chess openings, karaoke picks, fantasy-league drafting, and starting any new hobby.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-hobbies",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
     {
       "name": "pm-musician",
       "description": "Musician skills.",

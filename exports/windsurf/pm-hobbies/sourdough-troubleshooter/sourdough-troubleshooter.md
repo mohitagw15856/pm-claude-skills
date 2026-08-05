@@ -1,0 +1,65 @@
+---
+trigger: model_decision
+description: "Figure out why the loaf came out dense, flat, or gummy — and what to change next bake. Use when asked why is my sourdough [dense/flat/gummy/not rising], my starter isn't bubbling, help fix my bread, or troubleshoot my sourdough. Produces a likely-cause diagnosis from your symptoms and process, the specific fix for the next bake, a starter-health check, and a simple timing/temperature adjustment — no dogma, just the variable that's actually off."
+---
+
+# Sourdough Troubleshooter
+
+Sourdough fails for a short list of reasons — an underpowered starter, under- or over-proofing, weak shaping, or temperature. This reads your symptoms *and* your process, names the single variable most likely at fault, and tells you what to change next time, instead of drowning you in conflicting internet advice.
+
+## What This Skill Produces
+
+- **A symptom-based diagnosis** — what "dense / flat / gummy / no rise / no ears" most likely means for *your* process
+- **The one fix that matters** — the single variable to change next bake, not ten at once
+- **A starter check** — is it strong enough to rise the dough (float test, feeding rhythm, timing of use)
+- **A timing/temperature tweak** — proofing time adjusted for your kitchen's warmth
+- **What to keep the same** — so you change one thing and actually learn from it
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The symptom** — dense, flat, gummy crumb, no oven spring, pale crust, tight/sour
+- **Your starter** — how old, feeding schedule, how bubbly, float test result
+- **The process** — hydration, bulk time, shaping, cold proof or not, bake temp/vessel
+- **Your kitchen** — rough temperature (dough proofs much faster when warm)
+- **What changed** — worked before and stopped, or first attempts
+
+## Framework: Change One Variable
+
+1. **Start with the starter.** A sluggish starter can't rise dough — confirm it doubles reliably and passes a float test before blaming technique.
+2. **Read the crumb.** Gummy = often underbaked or under-fermented; tight and dense = under-proofed or weak starter; flat and spreading = over-proofed or weak shaping.
+3. **Anchor proofing to temperature, not the clock.** A recipe's "4 hours" is for its kitchen; judge by dough behavior (rise, jiggle, poke test) and adjust for your warmth.
+4. **Isolate one change.** Fix the single most-likely variable and hold the rest — otherwise you never learn which lever worked.
+5. **Bake it through.** Under-baking masquerades as a fermentation problem; check internal temp / longer bake before re-engineering the dough.
+
+## Output Format
+
+### Loaf: [symptom] · starter [age/activity] · kitchen ~[temp]
+
+**Most likely cause:** [diagnosis] — because [symptom + process detail].
+**Change this next bake:** [one specific fix].
+**Keep the same:** [so the test is clean].
+
+**Starter check:** [strong / needs building — do X].
+**Proofing tweak:** [more/less time for your kitchen temp; how to judge doneness].
+
+## Quality Checks
+- [ ] Diagnosis ties the specific symptom to a likely cause
+- [ ] Recommends changing one variable, not many
+- [ ] Includes a starter-strength check
+- [ ] Proofing advice is tied to temperature/dough behavior, not a fixed clock
+- [ ] Rules out under-baking before blaming fermentation
+
+## Anti-Patterns
+- **Changing five things at once** so nothing is learned.
+- **Blaming technique** when the starter is simply weak.
+- **Clock-based proofing advice** that ignores kitchen temperature.
+- **Dogma** ("you must do X") over the variable that's actually off.
+- **Missing under-bake** and re-engineering a fine dough.
+
+## Example Trigger Phrases
+- "My sourdough is dense and gummy — what went wrong?"
+- "Loaf came out flat and spread sideways. Why?"
+- "My starter isn't bubbling anymore, help."
+- "No oven spring and a pale crust — what do I change?"
+- "It worked last month and now every loaf is a brick."

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-wellbeing",
+  "version": "1.0.0",
+  "description": "Personal wellbeing & self-improvement skills: home workouts, stretching & mobility, posture, habit-building, journaling, gratitude, sleep, couch-to-5K, desk ergonomics, energy, screen-time, and recovery days. Educational — not medical advice.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "wellbeing",
+    "fitness",
+    "habits",
+    "sleep",
+    "wellness",
+    "self-improvement"
+  ]
+}

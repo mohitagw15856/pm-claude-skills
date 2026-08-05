@@ -1,0 +1,70 @@
+---
+name: home-energy-savings
+description: "Cut your home energy bills with a prioritized plan — the free and cheap fixes first, then the upgrades that actually pay back. Use when asked how to lower my energy bill, make my home more energy efficient, reduce heating/cooling costs, or save energy at home. Produces a read on where your energy (and money) likely goes, a ranked list of fixes from free behavior changes to low-cost improvements to bigger investments with payback estimates, quick wins to start today, and what to measure — flagging that savings and any rebates depend on your home and region."
+---
+
+# Home Energy Savings
+
+Energy advice usually jumps to expensive upgrades, but the biggest early wins are free or cheap: sealing drafts, adjusting the thermostat, tackling the handful of appliances that dominate the bill. This finds where your energy likely goes and gives a ranked plan — free behavior changes first, then low-cost fixes, then the bigger investments with honest payback — so you save without overspending to save.
+
+## What This Skill Produces
+
+- **A where-it-goes read** — the likely big energy users in your home (heating/cooling usually dominate, then water heating, then appliances)
+- **A ranked plan** — free behavior changes → low-cost fixes (sealing, draft-proofing, LEDs, smart thermostat) → bigger investments (insulation, windows, heat pump) with rough payback
+- **Quick wins** — a few things to do today for immediate savings
+- **Payback estimates** — so you don't spend $5k to save $50/year
+- **Rebate awareness** — a nudge to check local incentives/rebates that change the math
+- **What to measure** — how to track whether it's working
+
+## Required Inputs
+
+Ask for these if not provided:
+- **Your bills** — rough energy cost and any seasonal spikes
+- **The home** — type, age, size, insulation/windows condition, own or rent
+- **Heating/cooling** — system type and how you run it
+- **Climate** — heating-dominated, cooling-dominated, or both
+- **Budget & tenure** — what you'll spend, and whether you own (affects big upgrades)
+
+## Framework: Free First, Then Payback-Ranked
+
+1. **Find the big users.** Heating and cooling usually dominate; target the biggest energy sinks first rather than fiddling with minor loads.
+2. **Start free.** Thermostat setbacks, closing off unused spaces, shorter/cooler washes, and unplugging phantom loads cost nothing and add up.
+3. **Then cheap fixes.** Draft-sealing, weatherstripping, LEDs, a smart/programmable thermostat, and water-heater tweaks are low-cost, high-return.
+4. **Rank big investments by payback.** Insulation, windows, and heating upgrades matter but cost a lot — give rough payback so the spend is justified, and note renters should skip owner-only upgrades.
+5. **Check rebates and measure.** Local incentives can transform the payback; and tracking the bill confirms what's working. Flag that all figures depend on the home and region.
+
+## Output Format
+
+### Energy savings: bills ~[x] · [home type/age] · climate [y]
+
+**Where it likely goes:** [heating/cooling · water heating · appliances].
+
+**Do now (free):** [thermostat · phantom loads · washing · unused rooms].
+**Cheap fixes (high return):** [seal drafts · weatherstrip · LEDs · smart thermostat · water heater].
+**Bigger investments (payback):** [insulation ~[payback] · windows ~[payback] · heating upgrade ~[payback]] — owners only.
+**Check rebates:** [local incentives can change the math].
+**Measure:** [track the bill / usage].
+
+> Savings and rebates depend on your home and region — treat estimates as guides and check local incentives.
+
+## Quality Checks
+- [ ] Targets the biggest energy users first
+- [ ] Leads with free/behavioral changes before purchases
+- [ ] Ranks bigger investments by rough payback
+- [ ] Flags renter vs owner appropriateness
+- [ ] Nudges checking local rebates/incentives
+- [ ] Notes savings depend on home/region
+
+## Anti-Patterns
+- **Jumping to expensive upgrades** before free wins.
+- **Fiddling with minor loads** while ignoring heating/cooling.
+- **Recommending owner-only upgrades** to renters.
+- **Big spends with no payback math.**
+- **Asserting exact savings** regardless of home/region.
+
+## Example Trigger Phrases
+- "How do I lower my energy bill?"
+- "Make my home more energy efficient on a budget."
+- "My heating costs are brutal — what actually helps?"
+- "What energy upgrades are worth the money?"
+- "Cheap ways to cut my electricity usage."

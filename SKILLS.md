@@ -1,4 +1,4 @@
-# 🗂️ All 858 Skills — full catalog
+# 🗂️ All 958 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -316,7 +316,7 @@
 | **Metrics Framework** (`metrics-framework`) | Build a metrics framework for any product, team, or business. | ✅ 4.8/5 |
 | **SQL Query Explainer** (`sql-query-explainer`) | Explains, optimises, writes, and documents SQL queries. | ✅ 4.3/5 |
 
-## 🎨 Design & Content (39 skills)
+## 🎨 Design & Content (40 skills)
 
 ### `pm-design` — 6 skills
 
@@ -371,12 +371,13 @@
 | **Sequence Diagram** (`sequence-diagram`) | Diagram an interaction as a sequence of messages between participants over time. | — |
 | **User Journey Map** (`user-journey-map`) | Map a user's journey through a product or experience, phase by phase, with their actions and how they feel. | — |
 
-### `pm-writers` — 6 skills · 1 eval-scored
+### `pm-writers` — 7 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **AEO Optimizer** (`aeo-optimizer`) | Optimize an article for Answer Engine Optimization (AEO) so AI engines like ChatGPT, Perplexity, and Claude can extract, quote, and cite it. | ✅ 4.5/5 |
 | **Instagram Post Downloader** (`instagram-post-downloader`) | Download and save Instagram posts as high-resolution files. | — |
+| **Memoir Story Capture** (`memoir-story-capture`) | Capture a life story — your own or a parent's/grandparent's — into a keepsake, using good interview questions and a structure that turns memories… | — |
 | **Notes Humanizer** (`notes-humanizer`) | Strips AI writing patterns from text and rewrites it to sound genuinely human — removing the statistical defaults, then adding earned voice… | — |
 | **Substack Notes Scraper** (`substack-notes-scraper`) | Scrapes a Substack Notes page and exports engagement data to a formatted .xlsx file. | — |
 | **Thumbnail Creator Skill (via Gemini)** (`thumbnail-creator`) | Generate article or newsletter thumbnail candidates using the Gemini API from inside Claude Code. | — |
@@ -430,7 +431,7 @@
 | **Support Macro** (`support-macro`) | Write reusable support macros / canned responses that sound human, not robotic. | — |
 | **Support Runbook** (`support-runbook`) | Write a support runbook for handling a recurring issue type consistently. | — |
 
-## 💰 Finance, Ops & Business (80 skills)
+## 💰 Finance, Ops & Business (92 skills)
 
 ### `pm-accounting` — 6 skills
 
@@ -520,20 +521,32 @@
 | **Runway Planner** (`runway-planner`) | Turn burn and cash into a clear runway picture and a raise decision — months left, default-alive vs default-dead, and what to cut or change. | — |
 | **Startup Idea Validator** (`startup-idea-validator`) | Pressure-test a startup idea the way a sharp investor or co-founder would — problem, market, wedge, moat, why-now, and the fastest cheap way to… | — |
 
-### `pm-money` — 10 skills
+### `pm-money` — 22 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Bank Fee Refund** (`bank-fee-refund`) | Get a bank fee waived or refunded — overdraft, late, maintenance, ATM, or foreign-transaction — with the ask written and the leverage that works. | — |
+| **Big-Purchase Timing** (`big-purchase-timing`) | Decide when to buy a big-ticket item to get the best price — the sales cycles, model-refresh timing, and 'buy now vs wait' math for the specific… | — |
 | **Budget Builder** (`budget-builder`) | Build a realistic personal monthly budget from someone's income and expenses. | — |
+| **Class-Action Claim Finder** (`class-action-claim-finder`) | Work out whether you're eligible for a class-action settlement or refund program — and actually file the claim before the deadline. | — |
+| **Debt Collector Response** (`debt-collector-response`) | Respond to a debt collector correctly — know your rights, make them prove the debt, and avoid the mistakes that reset the clock or admit liability. | — |
 | **Debt Payoff Plan** (`debt-payoff-plan`) | Build a debt-payoff plan across multiple debts using the avalanche or snowball method. | — |
 | **Estate Planning Kit** (`estate-planning-kit`) | Get your affairs in order before you need to — a will/beneficiary/healthcare-directive checklist and the 'what my family needs to find' document… | — |
 | **Expense Audit** (`expense-audit`) | Audit spending to find leaks — recurring subscriptions, creep, and cuttable costs — ranked by impact. | — |
+| **Gift-Card Recovery** (`gift-card-recovery`) | Reclaim value stuck in gift cards, store credit, and forgotten balances — check what's left, use it before it's lost, and know your rights on… | — |
+| **Hidden-Fee Auditor** (`hidden-fee-auditor`) | Scan a bill, contract, or quote for junk and hidden fees — the padding buried in the fine print — and get them questioned or removed. | — |
 | **Investing Policy Statement** (`investing-policy-statement`) | Draft a personal investing policy statement (IPS) — the rules someone sets for their own investing. | — |
 | **Lower My Bill** (`lower-my-bill`) | Negotiate a recurring bill down — internet, phone, insurance, cable, gym — with a ready-to-read script, the competitor leverage that actually… | — |
+| **Money Priorities Order** (`money-priorities-order`) | Decide where your next dollar should go — the order to tackle emergency fund, high-interest debt, retirement match, and saving/investing — so you… | — |
 | **Net Worth Statement** (`net-worth-statement`) | Produce a personal net-worth statement — assets minus liabilities — and a way to track it. | — |
 | **Price-Match Request** (`price-match-request`) | Get a retailer to match a lower price you found — or refund the difference when the price drops right after you bought — with the request written… | — |
+| **Rewards Optimizer** (`rewards-optimizer`) | Figure out the best card or payment route for a purchase (or your everyday spending) to maximize cashback/points — without overspending or… | — |
 | **Savings Goal Plan** (`savings-goal-plan`) | Turn a savings goal into a month-by-month funding plan. | — |
+| **Tax Deduction Finder** (`tax-deduction-finder`) | Surface the personal tax deductions and credits you might be missing — so you can research them or raise them with your tax preparer before you file. | — |
+| **Unclaimed-Money Tracer** (`unclaimed-money-tracer`) | Track down money that's yours but forgotten — dormant accounts, old deposits, uncashed checks, lost pensions, insurance payouts, and… | — |
+| **Utility Switch Advisor** (`utility-switch-advisor`) | Decide whether to switch energy, broadband, or mobile providers — compare the real total cost, dodge the traps, and time it right. | — |
 | **Warranty Claim** (`warranty-claim`) | Get a broken product repaired, replaced, or refunded under warranty — with the claim message written, the proof to attach, and the consumer-law… | — |
+| **Windfall Plan** (`windfall-plan`) | Make a smart plan for a lump sum — a bonus, inheritance, tax refund, settlement, or sale — so it builds your future instead of evaporating into… | — |
 
 ### `pm-operations` — 12 skills
 
@@ -552,7 +565,7 @@
 | **Vendor Evaluation** (`vendor-evaluation`) | Create a structured vendor evaluation framework for any procurement decision. | — |
 | **Workshop Facilitation Guide** (`workshop-facilitation-guide`) | Design and facilitate any workshop, working session, or collaborative meeting. | — |
 
-## ⚖️ Legal & Compliance (16 skills)
+## ⚖️ Legal & Compliance (26 skills)
 
 ### `pm-compliance` — 7 skills
 
@@ -566,36 +579,54 @@
 | **SOC 2 Readiness** (`soc2-readiness`) | Assess SOC 2 readiness across the Trust Services Criteria and produce a gap remediation plan. | — |
 | **Vendor Security Review** (`vendor-security-review`) | Run a third-party / vendor security review and assign a risk tier with required controls. | — |
 
-### `pm-legal` — 9 skills · 1 eval-scored
+### `pm-legal` — 19 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Cease-and-Desist Letter** (`cease-and-desist-letter`) | Draft a firm, professional cease-and-desist letter to stop harassment, defamation, IP misuse, or unwanted contact — clear about what must stop and… | — |
 | **Clause Explainer** (`clause-explainer`) | Explain a contract clause in plain English — what it means, who it favours, the realistic risk, and what to negotiate. | — |
 | **Compliance Checklist** (`compliance-checklist`) | Generate a prioritised compliance checklist for GDPR, SOC 2, ISO 27001, FCA, HIPAA, or other frameworks with a gap analysis. | — |
+| **Contract Red Flags** (`contract-red-flags`) | Scan a contract you're about to sign in plain language — surface the clauses that could bite you, what they mean, and what to question or renegotiate. | — |
 | **Contract Review** (`contract-review`) | Review and summarise any contract or legal agreement. | — |
+| **Defamation Response** (`defamation-response`) | Respond to false, damaging statements about you or your business — decide what actually counts as defamation, preserve evidence, and choose the… | — |
 | **Demand Letter** (`demand-letter`) | Draft a firm, professional demand letter that states the facts, the legal/contractual basis, the specific demand, and a deadline. | — |
 | **DPA Review** (`dpa-review`) | Read a Data Processing Agreement before you sign it — sub-processors, transfer mechanism, breach-notice window, deletion, audit rights — in plain… | — |
+| **HOA Violation Response** (`hoa-violation-response`) | Respond to an HOA or condo-association violation notice or fine — decide whether to comply, cure, or dispute, and do it on the record. | — |
+| **Jury Duty Guide** (`jury-duty-guide`) | Understand a jury-duty summons and handle it right — what's required, whether you can defer or be excused, and what to expect on the day. | — |
 | **Legal Brief** (`legal-brief`) | Draft a structured legal brief, case summary, or legal argument outline. | — |
+| **Lemon Law Check** (`lemon-law-check`) | Figure out whether your problem car might qualify for a refund or replacement under lemon law or warranty — and build the paper trail to claim it. | — |
 | **NDA Analyser** (`nda-analyser`) | Analyses a Non-Disclosure Agreement clause by clause and flags unusual terms, one-sided provisions, and negotiation points. | — |
+| **Power of Attorney Explainer** (`power-of-attorney-explainer`) | Understand power of attorney — which type you need, what it covers, and how to set one up properly — so the right person can act for you or a… | — |
 | **Privacy Policy Drafter** (`privacy-policy-drafter`) | Draft a clear, plain-language privacy policy tailored to what a product actually collects and does with data. | ✅ 4.8/5 |
+| **Property Tax Appeal** (`property-tax-appeal`) | Challenge an over-assessed property tax bill — check whether your assessment is too high, build the evidence, and file the appeal before the deadline. | — |
 | **Small-Claims Prep** (`small-claims-prep`) | Prepare a small-claims case end to end — the demand letter that often settles it first, the evidence pack, what to file, and a plain-English… | — |
+| **Tenant Rights Explainer** (`tenant-rights-explainer`) | Understand your rights as a renter in a specific situation — repairs ignored, a rent increase, an eviction notice, deposit disputes, or entry… | — |
+| **Witness Statement Writer** (`witness-statement-writer`) | Write a clear, factual witness statement or account of an incident — for an insurance claim, small claims, a workplace matter, or the police —… | — |
 
-## 🧑 You & Career (67 skills)
+## 🧑 You & Career (86 skills)
 
-### `pm-career` — 8 skills
+### `pm-career` — 16 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Brag Doc** (`brag-doc`) | Keep a running brag document of your accomplishments so reviews and promo cases write themselves. | — |
+| **Burnout Recovery Plan** (`burnout-recovery-plan`) | Build a realistic recovery plan for burnout — address the causes, not just the symptoms — with changes you can actually make at work and outside it. | — |
 | **Career Ladder Map** (`career-ladder-map`) | Map where you are against the next level and build a concrete plan to close the gap. | — |
+| **Career Pivot Plan** (`career-pivot-plan`) | Build a realistic plan to change careers — mapping your transferable skills, the real gaps, and a bridge that doesn't require torching your income… | — |
+| **First-Hire Plan** (`first-hire-plan`) | Plan your first hire — whether to hire at all yet, contractor vs employee, what role to hire, and how to do it right when you've never hired before. | — |
+| **Informational-Interview Prep** (`informational-interview-prep`) | Prepare for an informational interview — the outreach, the questions, and the follow-up — so a 20-minute chat actually helps your career instead… | — |
+| **Layoff: First 72 Hours** (`layoff-first-72-hours`) | Steady the first 72 hours after being laid off — the practical, financial, and emotional moves in the right order, before panic-applying to… | — |
+| **Networking Outreach** (`networking-outreach`) | Write networking messages that actually get replies — warm, specific, and easy to say yes to — for reconnecting, cold outreach, referrals, or… | — |
+| **New Manager: First 90 Days** (`new-manager-first-90-days`) | Plan your first 90 days as a new manager — build trust, learn before changing, and avoid the classic first-time-manager mistakes. | — |
 | **One-on-One Prep** (`one-on-one-prep`) | Prepare for a 1:1 so it drives outcomes instead of becoming a status update. | — |
 | **PIP Responder** (`pip-responder`) | Respond to a performance improvement plan strategically — decode what the PIP really is, decide fight-vs-land-softly with clear eyes, build the… | — |
 | **Promotion Packet** (`promotion-packet`) | Build a promotion case that proves you're already operating at the next level. | — |
+| **Salary Benchmarking** (`salary-benchmarking`) | Build a defensible salary range for a role — what it actually pays given the market, location, level, and your value — so you can ask, counter, or… | — |
 | **Salary Negotiation** (`salary-negotiation`) | Plan a compensation negotiation grounded in numbers and leverage, not nerves. | — |
 | **Self-Review** (`self-review`) | Write a performance self-review that's specific, evidenced, and balanced. | — |
 | **Year in Review** (`year-in-review`) | Run an honest personal year-in-review and set next year's direction — wins, misses, an energy audit, and one theme, not a resolution list that… | — |
 
-### `pm-comms` — 12 skills
+### `pm-comms` — 13 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -608,6 +639,7 @@
 | **Managing Up** (`managing-up`) | Work more effectively with your manager — communicate, align, escalate, and get what you need. | — |
 | **Message for the Moment** (`message-for-the-moment`) | Write the short message you freeze on — a thank-you, condolence, congratulations, apology, or a graceful 'no' to an invite — warm, specific, and… | — |
 | **Persuasion Brief** (`persuasion-brief`) | Build the case to win someone over to a decision, idea, or change. | — |
+| **Public-Speaking Prep** (`public-speaking-prep`) | Prepare for a specific talk, presentation, or speech — a clear structure, a strong open and close, delivery and nerves handling, and a rehearsal… | — |
 | **Saying No** (`saying-no`) | Decline a request, push back on scope, or protect priorities without burning the relationship. | — |
 | **Summarize Anything** (`summarize-anything`) | Turn a long article, email thread, document, or transcript into a tight summary you can act on — the gist, the key points, and what it means for you. | — |
 | **Tone Fixer** (`tone-fixer`) | Rewrite a message to the tone you actually want — less harsh, more confident, warmer, firmer, or shorter — without losing your point. | — |
@@ -632,28 +664,38 @@
 | **JD Decoder** (`jd-decoder`) | Decode a job description to find what they actually want beneath the buzzwords. | — |
 | **Outreach Message** (`outreach-message`) | Write cold outreach and networking messages that actually get replies. | — |
 
-### `pm-lifeadmin` — 19 skills
+### `pm-lifeadmin` — 29 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Appliance Buying Guide** (`appliance-buying-guide`) | Cut through the model soup to buy the right appliance — the features that actually matter for you, the ones that are marketing, and when to buy. | — |
+| **Car-Buying Negotiation** (`car-buying-negotiation`) | Negotiate a car purchase without getting played — know the real target price, handle the dealership tactics, and keep the financing and add-ons… | — |
 | **Caregiver Coordination** (`caregiver-coordination`) | Organize care for an aging or ill family member across multiple helpers — the shared care map, a fair rotation with backup rules, the information… | — |
 | **Complaint Letter** (`complaint-letter`) | Write a firm, effective complaint letter that gets a resolution. | — |
+| **Contractor Dispute** (`contractor-dispute`) | Handle a dispute with a contractor — unfinished work, poor quality, overcharging, or a no-show — with a path that protects your money and your… | — |
+| **Declutter By Room** (`declutter-by-room`) | Declutter a room (or a whole home) with a plan that actually finishes — a sensible order, quick decision rules, and a way to keep it from creeping… | — |
 | **Dispute Letter** (`dispute-letter`) | Write a letter to dispute an incorrect charge, bill, or record. | — |
 | **Doctor Visit Prep** (`doctor-visit-prep`) | Prepare for a doctor's appointment so the 12 minutes actually get used — the symptom timeline in the format clinicians think in, the prioritized… | — |
 | **Eulogy Writer** (`eulogy-writer`) | Help someone write a eulogy — the hardest writing most people ever do, at the worst possible time. | — |
 | **Fine Appeal Letter** (`fine-appeal-letter`) | Appeal a parking ticket, penalty charge, or administrative fine with the grounds that actually get appeals granted — not indignation. | — |
 | **Flight-Delay Compensation** (`flight-delay-compensation`) | Work out whether a delayed, cancelled, or overbooked flight likely owes you compensation — and draft the claim with the right rule cited. | — |
+| **Home Energy Savings** (`home-energy-savings`) | Cut your home energy bills with a prioritized plan — the free and cheap fixes first, then the upgrades that actually pay back. | — |
+| **Home-Inspection Decoder** (`home-inspection-decoder`) | Make sense of a home-inspection report before you buy — what's serious vs cosmetic, what to negotiate, and what to investigate further. | — |
+| **Home-Maintenance Calendar** (`home-maintenance-calendar`) | Build a seasonal home-maintenance calendar so the small upkeep gets done before it becomes an expensive repair. | — |
 | **Insurance Claim** (`insurance-claim`) | Write a clear insurance claim letter or appeal that supports a payout. | — |
 | **Medical Records Request** (`medical-records-request`) | Request your medical records and actually get them — what to ask for, the request letter that can't be shuffled aside, the timelines and fee rules… | — |
 | **Moving House Checklist** (`moving-house-checklist`) | Turn a move date into a calm, timed plan — every address change, utility switch, deposit-recovery step, and packing wave scheduled so nothing gets… | — |
+| **Moving-Quote Decoder** (`moving-quote-decoder`) | Decode a moving-company quote and spot the lowball, the padding, and the outright scam before you book. | — |
 | **Neighbor-Dispute Resolver** (`neighbor-dispute-resolver`) | Handle a neighbor conflict — noise, boundaries, parking, shared costs, pets — with a measured approach that de-escalates first and keeps a paper… | — |
 | **New Parent Logistics** (`new-parent-logistics`) | Turn the pre-baby chaos into a staged logistics plan — leave paperwork, insurance deadlines, the hospital-bag/home-setup checklists, and the… | — |
 | **Prescription Cost Navigator** (`prescription-cost-navigator`) | Work down the cost of a prescription systematically — the generic and therapeutic-alternative conversation, discount programs vs insurance math… | — |
 | **Product-Recall Check** (`product-recall-check`) | Find out whether something you own — a car, appliance, car seat, food item, or gadget — is under a safety recall, and what to do about it. | — |
 | **Reference Letter** (`reference-letter`) | Write a credible, specific letter of recommendation or reference. | — |
 | **Relocation Planner** (`relocation-planner`) | Plan a move — across town or across a border — as a dependency-ordered project: the lease/housing chain, address-change cascade, utilities… | — |
+| **Renovation Scope & Budget** (`renovation-scope-and-budget`) | Turn a renovation idea into a realistic scope, budget, and sequence before you hire anyone — so you go in informed instead of getting… | — |
 | **Rental Application** (`rental-application`) | Write a standout rental application / cover letter to a landlord or letting agent. | — |
 | **Second Opinion Request** (`second-opinion-request`) | Get a second medical opinion without torching the first relationship — when it's warranted, how to raise it with the current doctor, the records… | — |
+| **Vehicle-Maintenance Schedule** (`vehicle-maintenance-schedule`) | Build a maintenance schedule for your car so it stays reliable and holds value — the service intervals, the DIY-vs-shop split, and the checks that… | — |
 | **Wedding Speech** (`wedding-speech`) | A best-man/maid-of-honour/parent wedding toast that actually lands — funny without roasting, moving without syrup, short enough that nobody checks… | — |
 
 ### `pm-people` — 7 skills
@@ -684,7 +726,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (433 skills)
+## 🌍 Industries & Public Sector (491 skills)
 
 ### `other` — 4 skills
 
@@ -991,6 +1033,23 @@
 | **Launch Post** (`launch-post`) | Write a developer-audience launch post — Show HN, a Product Hunt blurb, a 'we shipped X' dev blog intro, or a launch tweet thread. | — |
 | **README Writer** (`readme-writer`) | Write a clear, well-structured README for a software project or open-source repo. | — |
 
+### `pm-digital-safety` — 12 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Account Recovery Plan** (`account-recovery-plan`) | Get back into a locked or hacked account the right way — the official recovery routes, what proof you'll need, and how to re-secure it so it… | — |
+| **Backup Strategy** (`backup-strategy`) | Set up a backup system that actually protects your photos, files, and devices — built on the 3-2-1 rule and, crucially, tested so it works when… | — |
+| **Data-Broker Removal** (`data-broker-removal`) | Get your personal info off people-search and data-broker sites — a prioritized opt-out plan that targets the sites that matter and keeps them from… | — |
+| **Doxxing Response** (`doxxing-response`) | Respond fast and safely if your personal information has been exposed or you're being doxxed — contain the spread, protect your safety and… | — |
+| **Identity Theft Recovery** (`identity-theft-recovery`) | Take back control after identity theft — the right first moves, in the right order, so you contain the damage and rebuild. | — |
+| **Kids' Online-Safety Plan** (`kids-online-safety-plan`) | Build an age-appropriate online-safety plan for a child — the settings, the agreements, and the conversations — that protects without just spying… | — |
+| **Oversharing Audit** (`oversharing-audit`) | Audit what your public online presence quietly reveals — and tighten it — before a stranger, employer, or scammer uses it. | — |
+| **Password & 2FA Setup** (`password-and-2fa-setup`) | Set up a sane password and two-factor-authentication baseline that's genuinely secure and actually sustainable — a password manager, unique… | — |
+| **Phishing Triage** (`phishing-triage`) | Decide fast whether a suspicious message is a phishing scam — and what to do next — without clicking anything. | — |
+| **Ransomware First Response** (`ransomware-first-response`) | Handle the first hour of a suspected ransomware or malware infection calmly and correctly — contain it, preserve options, and avoid the moves that… | — |
+| **Safe Online Shopping** (`safe-online-shopping`) | Check whether an online store or seller is legit before you pay — and pay in a way you can get your money back if it isn't. | — |
+| **Secure a Lost Phone** (`secure-a-lost-phone`) | Do the right things fast when your phone is lost or stolen — lock it, protect your accounts and money, and decide on wipe vs. | — |
+
 ### `pm-documents` — 3 skills
 
 | Skill | What it does | Eval |
@@ -1031,14 +1090,37 @@
 | **Estate Settlement Organizer** (`estate-settlement-organizer`) | Organize an executor's work — the settlement ladder from will-to-probate-to-distribution, the asset/debt inventory, the creditor and beneficiary… | — |
 | **When Someone Dies** (`when-someone-dies`) | The first two weeks after a death, organized — what genuinely needs doing now, what only feels urgent, who to notify in what order, and the… | — |
 
-### `pm-freelance` — 4 skills
+### `pm-family` — 12 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Blended-Family Plan** (`blended-family-plan`) | Plan the merging of two families thoughtfully — roles, rules, routines, and relationships — so a blended household starts on the right foot… | — |
+| **Childcare Comparison** (`childcare-comparison`) | Compare childcare options — nursery/daycare, childminder, nanny, family, or a mix — for your family's real needs, budget, and values. | — |
+| **Co-Parenting Messages** (`co-parenting-messages`) | Write calm, businesslike co-parenting messages that keep the focus on the kids and stay out of the old conflict — for scheduling, expenses… | — |
+| **Condolence Message Helper** (`condolence-message-helper`) | Write a sincere condolence or sympathy message when someone has died or a friend is grieving — warm, personal, and free of the clichés that hurt… | — |
+| **Family Emergency Plan** (`family-emergency-plan`) | Build a family emergency plan — contacts, meeting points, key documents, and 'if something happens to me' info — so your household isn't… | — |
+| **In-Law Boundary Scripts** (`in-law-boundary-scripts`) | Set a boundary with in-laws or extended family kindly and clearly — the words to say, a united-front approach with your partner, and a plan for… | — |
+| **Long-Distance Relationship Plan** (`long-distance-relationship-plan`) | Build a plan to keep a long-distance relationship close and healthy — communication rhythms, visits, shared experiences, and a shared sense of the… | — |
+| **Love-Letter Helper** (`love-letter-helper`) | Help you write a heartfelt letter to someone you love — for an anniversary, a hard time, a birthday, or just because — that sounds like you and… | — |
+| **New-Baby Logistics** (`new-baby-logistics`) | Turn 'we're having a baby' into a calm, timed logistics plan — the admin, leave, registrations, and prep that has to happen, sequenced so nothing… | — |
+| **Relationship Check-In** (`relationship-check-in`) | Run a calm, regular relationship check-in with your partner — a structured 'how are we doing' conversation that catches small things before they… | — |
+| **School Choice Decision** (`school-choice-decision`) | Choose the right school for a specific child by weighing what actually matters to them and your family — not just rankings. | — |
+| **Wedding Vows Writer** (`wedding-vows-writer`) | Write personal wedding vows that sound like you — specific, heartfelt, and the right length — instead of generic or cheesy. | — |
+
+### `pm-freelance` — 10 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Business-Idea Validator** (`business-idea-validator`) | Pressure-test a business or side-hustle idea before you sink money and months into it — find the real demand, the risky assumptions, and the… | — |
+| **Client Offboarding** (`client-offboarding`) | Wrap up a client project the right way — a clean handoff, a strong final impression, and the moves that turn a finished project into referrals and… | — |
+| **Client-Onboarding Kit** (`client-onboarding-kit`) | Build a smooth client-onboarding process that starts projects on the right foot — clear expectations, the info you need, and a professional first… | — |
+| **Client Red Flags** (`client-red-flags`) | Spot a bad client before you sign — the warning signs of the projects that turn into unpaid, scope-creeping nightmares, and how to screen, price… | — |
+| **Cold Outreach That Isn't Spam** (`cold-outreach-that-isnt-spam`) | Write cold outreach to potential clients that gets replies — specific, useful, and about them — instead of the templated pitch that gets deleted. | — |
 | **Late-Invoice Chaser** (`late-invoice-chaser`) | Chase an overdue invoice and actually get paid — a firm-but-friendly escalation ladder that protects the client relationship until it's clear the… | — |
 | **Late Invoice Escalation** (`late-invoice-escalation`) | Collect overdue invoices with a graduated escalation ladder — friendly nudge to firm notice to work-stop to final demand, each with send-ready… | — |
 | **Pricing Your Services** (`pricing-your-services`) | Design a freelance/consulting pricing structure — hourly vs day-rate vs project vs retainer chosen per engagement type, anchored packages, and the… | — |
 | **Scope Creep Response** (`scope-creep-response`) | Handle scope creep on client work without torching the relationship — classify the ask against the agreement, respond with the… | — |
+| **Testimonial Request** (`testimonial-request`) | Ask happy clients for a testimonial or review the right way — timed well, easy to give, and specific enough to actually persuade future clients. | — |
 
 ### `pm-gov` — 6 skills
 
@@ -1070,6 +1152,23 @@
 | **Discharge Summary** (`discharge-summary`) | Turn a hospital stay into a complete, well-structured discharge summary. | — |
 | **Prior Authorization Letter** (`prior-authorization-letter`) | Write a persuasive prior-authorization / medical-necessity letter to an insurer. | — |
 | **SOAP Note** (`soap-note`) | Structure a clinical encounter into a clean SOAP note. | — |
+
+### `pm-hobbies` — 12 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Birdwatching Log** (`birdwatching-log`) | Get started birding from where you are — what you're likely to see, how to tell confusing species apart, and a simple life-list to track sightings. | — |
+| **Board Game Night Planner** (`board-game-night-planner`) | Plan a board game night that actually lands — the right games for your group size, mix, and time, in a running order that keeps energy up. | — |
+| **Chess Opening Coach** (`chess-opening-coach`) | Build a small, coherent opening repertoire that fits your style and level — the few lines actually worth learning, plus the plans and traps behind… | — |
+| **Cocktail From What I Have** (`cocktail-from-what-i-have`) | Make a genuinely good drink from the bottles already on your shelf — no special trip, no 12-ingredient recipe. | — |
+| **Tabletop Campaign Starter** (`dnd-campaign-starter`) | Spin up a tabletop RPG one-shot or a session-zero for a new campaign — a hook, a map of the first adventure, NPCs, and encounters tuned to your party. | — |
+| **Fantasy League Drafter** (`fantasy-league-drafter`) | Build a fantasy-sports draft strategy and weekly plan that fits your league's exact settings — so you draft with a plan instead of vibes. | — |
+| **Hobby Starter Kit** (`hobby-starter-kit`) | Turn 'I want to try [hobby]' into a real first month — the minimal starter gear, the first skills to practice, and a beginner-friendly plan that… | — |
+| **Houseplant Care** (`houseplant-care`) | Diagnose why a houseplant is struggling and set a care routine it'll actually thrive on — matched to your light, home, and how much attention… | — |
+| **Karaoke Song Picker** (`karaoke-song-picker`) | Pick the karaoke song that actually fits your voice and the room — so you land it instead of dying on a key change. | — |
+| **Sourdough Troubleshooter** (`sourdough-troubleshooter`) | Figure out why the loaf came out dense, flat, or gummy — and what to change next bake. | — |
+| **Stargazing Tonight** (`stargazing-tonight`) | Plan a stargazing session for tonight from where you are — what's worth looking for, when and where to look, and how to see it with just your eyes… | — |
+| **Wine Pairing** (`wine-pairing`) | Pick a wine that flatters tonight's meal — at your budget, from what's actually available — without the sommelier mystique. | — |
 
 ### `pm-hospitality` — 5 skills
 
@@ -1312,13 +1411,17 @@
 | **The Visa Interview** (`the-visa-interview`) | Simulate a consular visa interview — the 90-second assessment, the questions behind the questions, and a debrief on which answers helped and hurt. | — |
 | **VC Partner Meeting** (`vc-partner-meeting`) | Simulate the VC partner meeting that discusses your pitch after you leave the room — four partner archetypes debate, then write the internal… | — |
 
-### `pm-students` — 7 skills
+### `pm-students` — 11 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Exam Prep Planner** (`exam-prep-planner`) | Build a realistic exam-prep schedule with spaced repetition and retrieval practice — the plan that survives contact with an actual week. | — |
+| **Exam Study Plan** (`exam-study-plan`) | Build a backward-planned study schedule for an exam — using proven learning methods, not just re-reading — so you cover what matters and actually… | — |
 | **Financial Aid Appeal** (`financial-aid-appeal`) | Write a financial-aid appeal or scholarship request letter that aid offices act on — factual, documented, and specific about the ask. | — |
+| **Language-Learning Plan** (`language-learning-plan`) | Build a realistic plan to learn a language for your actual goal — travel, conversation, work, or fluency — focused on what moves the needle… | — |
 | **Literature Review Builder** (`literature-review-builder`) | Structure a literature review that argues, not lists — thematic synthesis from your sources with the debate mapped and the gap identified. | — |
+| **Personal Statement** (`personal-statement`) | Write a personal statement for a university, grad-school, or job application that's specific, coherent, and unmistakably you — showing fit and… | — |
+| **Scholarship Essay** (`scholarship-essay`) | Write a scholarship essay that stands out — a genuine, specific story that answers the prompt and shows why you deserve the award, without clichés. | — |
 | **Statement Coach** (`statement-coach`) | Coach a statement of purpose or personal essay to admission strength — structural diagnosis, specific feedback, and revision plans on YOUR draft… | — |
 | **Study Notes Synthesizer** (`study-notes-synthesizer`) | Turn lecture notes, slides, and readings into one exam-ready study guide — synthesis, not summary. | — |
 | **The Thesis Defense** (`the-thesis-defense`) | Simulate your thesis defense before the real one — a committee of examiner archetypes probing YOUR actual thesis, the questions you hoped nobody… | — |
@@ -1409,6 +1512,23 @@
 | **Wedding Logistics Planner** (`wedding-logistics-planner`) | Plan the wedding day as the operation it is — the minute-level run sheet, the vendor call sheet, the who-handles-problems roster, and the buffer… | — |
 | **Wedding Vendor Contract Decoder** (`wedding-vendor-contract-decoder`) | Decode a wedding vendor contract — venue, photographer, caterer, band — before signing: deposits and their refundability, cancellation and… | — |
 
+### `pm-wellbeing` — 12 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Couch-to-Goal Runner** (`couch-to-goal-runner`) | Build a beginner running plan from wherever you are to a real goal — first nonstop mile, 5K, or 10K — that builds up slowly enough to avoid injury. | — |
+| **Desk Ergonomics Audit** (`desk-ergonomics-audit`) | Audit your desk setup and fix what's hurting your neck, back, wrists, or eyes — with specific, mostly-free adjustments before you buy anything. | — |
+| **Gratitude Practice** (`gratitude-practice`) | Set up a gratitude practice that survives past week one — a specific format, a realistic cadence, and prompts that avoid the toxic-positivity trap. | — |
+| **Habit Builder** (`habit-builder`) | Design one habit so it actually sticks — small enough to be unmissable, anchored to something you already do, with a plan for the days you slip. | — |
+| **Home Workout Builder** (`home-workout-builder`) | Build a home workout plan that fits your gear, time, and goal — a real weekly structure, not a random list of exercises. | — |
+| **Hydration & Energy Plan** (`hydration-and-energy-plan`) | Beat the afternoon crash with a realistic hydration, food-timing, and movement plan — not a caffeine-and-sugar band-aid. | — |
+| **Journaling Prompts** (`journaling-prompts`) | Get journaling prompts tuned to what you're actually working through — a decision, a rough patch, a goal, or just building the habit — not generic… | — |
+| **Posture Reset Plan** (`posture-reset-plan`) | Fix the screen-hunch with a realistic plan — the desk fixes, the two or three exercises that counter it, and movement habits that beat any single… | — |
+| **Recovery Day Planner** (`recovery-day-planner`) | Plan a real rest day — active recovery, genuine downtime, and a reset — instead of either grinding through or collapsing into a guilt-scroll. | — |
+| **Screen-Time Detox** (`screen-time-detox`) | Cut compulsive screen and phone use with a workable plan — friction, environment, and replacement habits — instead of relying on willpower or… | — |
+| **Sleep Reset Plan** (`sleep-reset-plan`) | Build a realistic plan to fix bad sleep — a wind-down routine, a consistent schedule, and the daytime and environment fixes that actually move the… | — |
+| **Stretching Routine** (`stretching-routine`) | Build a targeted stretching or mobility routine for the tightness you actually have — desk-stiff hips, a tight back, post-run legs — not a generic… | — |
+
 ---
 
-_858 skills across 105 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_958 skills across 109 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

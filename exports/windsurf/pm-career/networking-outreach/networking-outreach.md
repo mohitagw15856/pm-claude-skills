@@ -1,0 +1,66 @@
+---
+trigger: model_decision
+description: "Write networking messages that actually get replies — warm, specific, and easy to say yes to — for reconnecting, cold outreach, referrals, or asking for advice. Use when asked to help me network, write a message to reconnect / to a recruiter / to someone at [company], reach out for a referral, or networking message help. Produces a message tuned to the relationship and the ask, a specific and genuine hook, a low-friction request the person can easily grant, follow-up guidance, and a note on giving value — not a generic 'pick your brain' that gets ignored."
+---
+
+# Networking Outreach
+
+Most networking messages get ignored because they're generic, all about the sender, and ask for too much ("can I pick your brain?"). The ones that work are specific, respectful of the person's time, and easy to say yes to. This writes outreach tuned to who you're contacting and what you actually want — reconnecting, a referral, advice, or a cold intro — so you get replies, not silence.
+
+## What This Skill Produces
+
+- **A tuned message** — matched to the relationship (old colleague, cold contact, recruiter, someone at a target company) and your actual goal
+- **A specific, genuine hook** — a real reason you're reaching out to *them* (shared connection, their work, a specific interest), not a mass template
+- **A low-friction ask** — a request that's easy and quick to grant (a specific question, a 15-minute call, a pointer) rather than an open-ended time sink
+- **Follow-up guidance** — how and when to follow up once without being annoying
+- **A give-value angle** — how to offer something or at least make it effortless, so it's not purely extractive
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The goal** — reconnect, referral, advice, informational chat, job lead, or intro
+- **The person** — who they are and your relationship (or none) with them
+- **The connection** — anything shared (a mutual contact, their work, a common background)
+- **The channel** — LinkedIn, email, or a warm intro
+- **Your context** — enough that the hook is genuine (job search, career interest, etc.)
+
+## Framework: Specific, Easy, Respectful
+
+1. **Make it about them and specific.** Open with a genuine, particular reason you're contacting this person — their work, a shared connection, a real interest. Generic = ignored.
+2. **Get to a clear, small ask.** Say what you'd like plainly, and make it low-friction — one specific question or a short call, not "pick your brain" open-endedly.
+3. **Respect their time.** Keep it short, acknowledge they're busy, and make saying yes (or a quick pointer) easy.
+4. **Offer or ease, don't just extract.** Where you can, offer something or at least frame it so it costs them little — reciprocity, even small, changes the response.
+5. **Follow up once, gracefully.** A single, polite follow-up after a reasonable gap is fine; more isn't.
+
+## Output Format
+
+### Networking message: [relationship] · goal [x] · channel [y]
+
+**Message**
+> [Specific genuine hook — why them] … [brief context] … [the clear, low-friction ask] … [make it easy to say yes] … [warm close].
+
+**The ask, sized right:** [one specific question / 15-min call / a pointer].
+**Give-value angle:** [what you can offer or how you're minimizing their effort].
+**Follow-up:** [when + a light one-liner], once only.
+
+## Quality Checks
+- [ ] Message is specific to the person, not a template
+- [ ] Contains one clear, low-friction ask
+- [ ] Is short and respects the person's time
+- [ ] Includes a give-value or effort-minimizing angle
+- [ ] Provides graceful single follow-up guidance
+- [ ] Tuned to the relationship and channel
+
+## Anti-Patterns
+- **"Can I pick your brain?"** — vague and time-expensive.
+- **Generic templates** with no personal hook.
+- **Long, all-about-me** messages.
+- **A huge ask** from a cold contact.
+- **Multiple pushy follow-ups.**
+
+## Example Trigger Phrases
+- "Help me write a message to reconnect with an old colleague."
+- "Reach out to someone at a company I want to work for."
+- "Message a recruiter on LinkedIn without sounding desperate."
+- "Ask a contact for a referral, politely."
+- "Cold-email someone whose work I admire for advice."

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-digital-safety",
+  "version": "1.0.0",
+  "description": "Consumer digital self-defense skills: identity-theft recovery, data-broker removal, account recovery, ransomware first response, backups, phishing triage, passwords & 2FA, kids' online safety, securing a lost phone, oversharing audit, doxxing response, and safe online shopping.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "security",
+    "privacy",
+    "scams",
+    "identity-theft",
+    "phishing",
+    "online-safety"
+  ]
+}
