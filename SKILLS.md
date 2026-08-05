@@ -1,4 +1,4 @@
-# 🗂️ All 928 Skills — full catalog
+# 🗂️ All 938 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -602,7 +602,7 @@
 | **Tenant Rights Explainer** (`tenant-rights-explainer`) | Understand your rights as a renter in a specific situation — repairs ignored, a rent increase, an eviction notice, deposit disputes, or entry… | — |
 | **Witness Statement Writer** (`witness-statement-writer`) | Write a clear, factual witness statement or account of an incident — for an insurance claim, small claims, a workplace matter, or the police —… | — |
 
-## 🧑 You & Career (67 skills)
+## 🧑 You & Career (77 skills)
 
 ### `pm-career` — 8 skills
 
@@ -654,28 +654,38 @@
 | **JD Decoder** (`jd-decoder`) | Decode a job description to find what they actually want beneath the buzzwords. | — |
 | **Outreach Message** (`outreach-message`) | Write cold outreach and networking messages that actually get replies. | — |
 
-### `pm-lifeadmin` — 19 skills
+### `pm-lifeadmin` — 29 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Appliance Buying Guide** (`appliance-buying-guide`) | Cut through the model soup to buy the right appliance — the features that actually matter for you, the ones that are marketing, and when to buy. | — |
+| **Car-Buying Negotiation** (`car-buying-negotiation`) | Negotiate a car purchase without getting played — know the real target price, handle the dealership tactics, and keep the financing and add-ons… | — |
 | **Caregiver Coordination** (`caregiver-coordination`) | Organize care for an aging or ill family member across multiple helpers — the shared care map, a fair rotation with backup rules, the information… | — |
 | **Complaint Letter** (`complaint-letter`) | Write a firm, effective complaint letter that gets a resolution. | — |
+| **Contractor Dispute** (`contractor-dispute`) | Handle a dispute with a contractor — unfinished work, poor quality, overcharging, or a no-show — with a path that protects your money and your… | — |
+| **Declutter By Room** (`declutter-by-room`) | Declutter a room (or a whole home) with a plan that actually finishes — a sensible order, quick decision rules, and a way to keep it from creeping… | — |
 | **Dispute Letter** (`dispute-letter`) | Write a letter to dispute an incorrect charge, bill, or record. | — |
 | **Doctor Visit Prep** (`doctor-visit-prep`) | Prepare for a doctor's appointment so the 12 minutes actually get used — the symptom timeline in the format clinicians think in, the prioritized… | — |
 | **Eulogy Writer** (`eulogy-writer`) | Help someone write a eulogy — the hardest writing most people ever do, at the worst possible time. | — |
 | **Fine Appeal Letter** (`fine-appeal-letter`) | Appeal a parking ticket, penalty charge, or administrative fine with the grounds that actually get appeals granted — not indignation. | — |
 | **Flight-Delay Compensation** (`flight-delay-compensation`) | Work out whether a delayed, cancelled, or overbooked flight likely owes you compensation — and draft the claim with the right rule cited. | — |
+| **Home Energy Savings** (`home-energy-savings`) | Cut your home energy bills with a prioritized plan — the free and cheap fixes first, then the upgrades that actually pay back. | — |
+| **Home-Inspection Decoder** (`home-inspection-decoder`) | Make sense of a home-inspection report before you buy — what's serious vs cosmetic, what to negotiate, and what to investigate further. | — |
+| **Home-Maintenance Calendar** (`home-maintenance-calendar`) | Build a seasonal home-maintenance calendar so the small upkeep gets done before it becomes an expensive repair. | — |
 | **Insurance Claim** (`insurance-claim`) | Write a clear insurance claim letter or appeal that supports a payout. | — |
 | **Medical Records Request** (`medical-records-request`) | Request your medical records and actually get them — what to ask for, the request letter that can't be shuffled aside, the timelines and fee rules… | — |
 | **Moving House Checklist** (`moving-house-checklist`) | Turn a move date into a calm, timed plan — every address change, utility switch, deposit-recovery step, and packing wave scheduled so nothing gets… | — |
+| **Moving-Quote Decoder** (`moving-quote-decoder`) | Decode a moving-company quote and spot the lowball, the padding, and the outright scam before you book. | — |
 | **Neighbor-Dispute Resolver** (`neighbor-dispute-resolver`) | Handle a neighbor conflict — noise, boundaries, parking, shared costs, pets — with a measured approach that de-escalates first and keeps a paper… | — |
 | **New Parent Logistics** (`new-parent-logistics`) | Turn the pre-baby chaos into a staged logistics plan — leave paperwork, insurance deadlines, the hospital-bag/home-setup checklists, and the… | — |
 | **Prescription Cost Navigator** (`prescription-cost-navigator`) | Work down the cost of a prescription systematically — the generic and therapeutic-alternative conversation, discount programs vs insurance math… | — |
 | **Product-Recall Check** (`product-recall-check`) | Find out whether something you own — a car, appliance, car seat, food item, or gadget — is under a safety recall, and what to do about it. | — |
 | **Reference Letter** (`reference-letter`) | Write a credible, specific letter of recommendation or reference. | — |
 | **Relocation Planner** (`relocation-planner`) | Plan a move — across town or across a border — as a dependency-ordered project: the lease/housing chain, address-change cascade, utilities… | — |
+| **Renovation Scope & Budget** (`renovation-scope-and-budget`) | Turn a renovation idea into a realistic scope, budget, and sequence before you hire anyone — so you go in informed instead of getting… | — |
 | **Rental Application** (`rental-application`) | Write a standout rental application / cover letter to a landlord or letting agent. | — |
 | **Second Opinion Request** (`second-opinion-request`) | Get a second medical opinion without torching the first relationship — when it's warranted, how to raise it with the current doctor, the records… | — |
+| **Vehicle-Maintenance Schedule** (`vehicle-maintenance-schedule`) | Build a maintenance schedule for your car so it stays reliable and holds value — the service intervals, the DIY-vs-shop split, and the checks that… | — |
 | **Wedding Speech** (`wedding-speech`) | A best-man/maid-of-honour/parent wedding toast that actually lands — funny without roasting, moving without syrup, short enough that nobody checks… | — |
 
 ### `pm-people` — 7 skills
@@ -1501,4 +1511,4 @@
 
 ---
 
-_928 skills across 109 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_938 skills across 109 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

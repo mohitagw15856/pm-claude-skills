@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-928 skills exported. Copy a `SKILL.md` into the tool to use it.
+938 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -50,6 +50,7 @@
 | API Test Plan | `pm-qa` | `api-test-plan/SKILL.md` |
 | API Versioning Strategy | `pm-engineering` | `api-versioning-strategy/SKILL.md` |
 | Apology Letter | `pm-crisis` | `apology-letter/SKILL.md` |
+| Appliance Buying Guide | `pm-lifeadmin` | `appliance-buying-guide/SKILL.md` |
 | Apprentice First Week | `pm-trades` | `apprentice-first-week/SKILL.md` |
 | Architecture Decision Record (ADR) | `pm-engineering` | `architecture-decision-record/SKILL.md` |
 | Architecture Diagram | `pm-visuals` | `architecture-diagram/SKILL.md` |
@@ -103,6 +104,7 @@
 | Cap Table Explainer | `pm-founders` | `cap-table-explainer/SKILL.md` |
 | Capacity Planning | `pm-engineering` | `capacity-planning/SKILL.md` |
 | Capital Allocation | `pm-business` | `capital-allocation/SKILL.md` |
+| Car-Buying Negotiation | `pm-lifeadmin` | `car-buying-negotiation/SKILL.md` |
 | Car Lease Decoder | `pm-decoders` | `car-lease-decoder/SKILL.md` |
 | Car TCO | `pm-calculators` | `car-tco/SKILL.md` |
 | Carbon Accounting Check | `pm-climate` | `carbon-accounting-check/SKILL.md` |
@@ -184,6 +186,7 @@
 | Contract Red Flags | `pm-legal` | `contract-red-flags/SKILL.md` |
 | Contract Renewal Tracker | `pm-cowork` | `contract-renewal-tracker/SKILL.md` |
 | Contract Review | `pm-legal` | `contract-review/SKILL.md` |
+| Contractor Dispute | `pm-lifeadmin` | `contractor-dispute/SKILL.md` |
 | Contributor Guide | `pm-devrel` | `contributor-guide/SKILL.md` |
 | Conversion Rate Optimization | `pm-growth` | `conversion-rate-optimization/SKILL.md` |
 | Couch-to-Goal Runner | `pm-wellbeing` | `couch-to-goal-runner/SKILL.md` |
@@ -237,6 +240,7 @@
 | Deck Narrative Arc | `pm-cowork` | `deck-narrative-arc/SKILL.md` |
 | Deck Outline First | `pm-cowork` | `deck-outline-first/SKILL.md` |
 | Deck Review Rubric | `pm-cowork` | `deck-review-rubric/SKILL.md` |
+| Declutter By Room | `pm-lifeadmin` | `declutter-by-room/SKILL.md` |
 | Deep Work Blocking | `pm-cowork` | `deep-work-blocking/SKILL.md` |
 | Deepfake Drill | `pm-2027` | `deepfake-drill/SKILL.md` |
 | Defamation Response | `pm-legal` | `defamation-response/SKILL.md` |
@@ -406,6 +410,9 @@
 | HOA Violation Response | `pm-legal` | `hoa-violation-response/SKILL.md` |
 | Hobby Starter Kit | `pm-hobbies` | `hobby-starter-kit/SKILL.md` |
 | Home Contractor Quote Decoder | `pm-decoders` | `home-contractor-quote-decoder/SKILL.md` |
+| Home Energy Savings | `pm-lifeadmin` | `home-energy-savings/SKILL.md` |
+| Home-Inspection Decoder | `pm-lifeadmin` | `home-inspection-decoder/SKILL.md` |
+| Home-Maintenance Calendar | `pm-lifeadmin` | `home-maintenance-calendar/SKILL.md` |
 | Home Workout Builder | `pm-wellbeing` | `home-workout-builder/SKILL.md` |
 | Hook Writer | `pm-creator` | `hook-writer/SKILL.md` |
 | House Style Enforcer | `pm-cowork` | `house-style-enforcer/SKILL.md` |
@@ -531,6 +538,7 @@
 | Morning Intelligence | `pm-operations` | `morning-intelligence/SKILL.md` |
 | Moving Company Estimate Decoder | `pm-decoders` | `moving-company-estimate-decoder/SKILL.md` |
 | Moving House Checklist | `pm-lifeadmin` | `moving-house-checklist/SKILL.md` |
+| Moving-Quote Decoder | `pm-lifeadmin` | `moving-quote-decoder/SKILL.md` |
 | Multi-Source Signal Synthesiser | `pm-advanced` | `multi-source-signal-synthesiser/SKILL.md` |
 | NDA Analyser | `pm-legal` | `nda-analyser/SKILL.md` |
 | Neighbor-Dispute Resolver | `pm-lifeadmin` | `neighbor-dispute-resolver/SKILL.md` |
@@ -676,6 +684,7 @@
 | Release Day Countdown | `pm-musician` | `release-day-countdown/SKILL.md` |
 | Relocation Planner | `pm-lifeadmin` | `relocation-planner/SKILL.md` |
 | Renewal Playbook | `pm-cs` | `renewal-playbook/SKILL.md` |
+| Renovation Scope & Budget | `pm-lifeadmin` | `renovation-scope-and-budget/SKILL.md` |
 | Rent Increase Response | `pm-renters` | `rent-increase-response/SKILL.md` |
 | Rent vs Buy | `pm-calculators` | `rent-vs-buy/SKILL.md` |
 | Rental Application | `pm-lifeadmin` | `rental-application/SKILL.md` |
@@ -892,6 +901,7 @@
 | UX Research Plan | `pm-design` | `ux-research-plan/SKILL.md` |
 | Value Proposition | `pm-copy` | `value-proposition/SKILL.md` |
 | VC Partner Meeting | `pm-simulators` | `vc-partner-meeting/SKILL.md` |
+| Vehicle-Maintenance Schedule | `pm-lifeadmin` | `vehicle-maintenance-schedule/SKILL.md` |
 | Vendor Breakup Email | `pm-cowork` | `vendor-breakup-email/SKILL.md` |
 | Vendor Comparison Matrix | `pm-cowork` | `vendor-comparison-matrix/SKILL.md` |
 | Vendor Contract Checklist | `pm-operations` | `vendor-contract-checklist/SKILL.md` |

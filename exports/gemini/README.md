@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-928 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+938 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -50,6 +50,7 @@
 | API Test Plan | `pm-qa` | `pm-qa/api-test-plan/GEM_INSTRUCTIONS.md` |
 | API Versioning Strategy | `pm-engineering` | `pm-engineering/api-versioning-strategy/GEM_INSTRUCTIONS.md` |
 | Apology Letter | `pm-crisis` | `pm-crisis/apology-letter/GEM_INSTRUCTIONS.md` |
+| Appliance Buying Guide | `pm-lifeadmin` | `pm-lifeadmin/appliance-buying-guide/GEM_INSTRUCTIONS.md` |
 | Apprentice First Week | `pm-trades` | `pm-trades/apprentice-first-week/GEM_INSTRUCTIONS.md` |
 | Architecture Decision Record (ADR) | `pm-engineering` | `pm-engineering/architecture-decision-record/GEM_INSTRUCTIONS.md` |
 | Architecture Diagram | `pm-visuals` | `pm-visuals/architecture-diagram/GEM_INSTRUCTIONS.md` |
@@ -103,6 +104,7 @@
 | Cap Table Explainer | `pm-founders` | `pm-founders/cap-table-explainer/GEM_INSTRUCTIONS.md` |
 | Capacity Planning | `pm-engineering` | `pm-engineering/capacity-planning/GEM_INSTRUCTIONS.md` |
 | Capital Allocation | `pm-business` | `pm-business/capital-allocation/GEM_INSTRUCTIONS.md` |
+| Car-Buying Negotiation | `pm-lifeadmin` | `pm-lifeadmin/car-buying-negotiation/GEM_INSTRUCTIONS.md` |
 | Car Lease Decoder | `pm-decoders` | `pm-decoders/car-lease-decoder/GEM_INSTRUCTIONS.md` |
 | Car TCO | `pm-calculators` | `pm-calculators/car-tco/GEM_INSTRUCTIONS.md` |
 | Carbon Accounting Check | `pm-climate` | `pm-climate/carbon-accounting-check/GEM_INSTRUCTIONS.md` |
@@ -184,6 +186,7 @@
 | Contract Red Flags | `pm-legal` | `pm-legal/contract-red-flags/GEM_INSTRUCTIONS.md` |
 | Contract Renewal Tracker | `pm-cowork` | `pm-cowork/contract-renewal-tracker/GEM_INSTRUCTIONS.md` |
 | Contract Review | `pm-legal` | `pm-legal/contract-review/GEM_INSTRUCTIONS.md` |
+| Contractor Dispute | `pm-lifeadmin` | `pm-lifeadmin/contractor-dispute/GEM_INSTRUCTIONS.md` |
 | Contributor Guide | `pm-devrel` | `pm-devrel/contributor-guide/GEM_INSTRUCTIONS.md` |
 | Conversion Rate Optimization | `pm-growth` | `pm-growth/conversion-rate-optimization/GEM_INSTRUCTIONS.md` |
 | Couch-to-Goal Runner | `pm-wellbeing` | `pm-wellbeing/couch-to-goal-runner/GEM_INSTRUCTIONS.md` |
@@ -237,6 +240,7 @@
 | Deck Narrative Arc | `pm-cowork` | `pm-cowork/deck-narrative-arc/GEM_INSTRUCTIONS.md` |
 | Deck Outline First | `pm-cowork` | `pm-cowork/deck-outline-first/GEM_INSTRUCTIONS.md` |
 | Deck Review Rubric | `pm-cowork` | `pm-cowork/deck-review-rubric/GEM_INSTRUCTIONS.md` |
+| Declutter By Room | `pm-lifeadmin` | `pm-lifeadmin/declutter-by-room/GEM_INSTRUCTIONS.md` |
 | Deep Work Blocking | `pm-cowork` | `pm-cowork/deep-work-blocking/GEM_INSTRUCTIONS.md` |
 | Deepfake Drill | `pm-2027` | `pm-2027/deepfake-drill/GEM_INSTRUCTIONS.md` |
 | Defamation Response | `pm-legal` | `pm-legal/defamation-response/GEM_INSTRUCTIONS.md` |
@@ -406,6 +410,9 @@
 | HOA Violation Response | `pm-legal` | `pm-legal/hoa-violation-response/GEM_INSTRUCTIONS.md` |
 | Hobby Starter Kit | `pm-hobbies` | `pm-hobbies/hobby-starter-kit/GEM_INSTRUCTIONS.md` |
 | Home Contractor Quote Decoder | `pm-decoders` | `pm-decoders/home-contractor-quote-decoder/GEM_INSTRUCTIONS.md` |
+| Home Energy Savings | `pm-lifeadmin` | `pm-lifeadmin/home-energy-savings/GEM_INSTRUCTIONS.md` |
+| Home-Inspection Decoder | `pm-lifeadmin` | `pm-lifeadmin/home-inspection-decoder/GEM_INSTRUCTIONS.md` |
+| Home-Maintenance Calendar | `pm-lifeadmin` | `pm-lifeadmin/home-maintenance-calendar/GEM_INSTRUCTIONS.md` |
 | Home Workout Builder | `pm-wellbeing` | `pm-wellbeing/home-workout-builder/GEM_INSTRUCTIONS.md` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/GEM_INSTRUCTIONS.md` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/GEM_INSTRUCTIONS.md` |
@@ -531,6 +538,7 @@
 | Morning Intelligence | `pm-operations` | `pm-operations/morning-intelligence/GEM_INSTRUCTIONS.md` |
 | Moving Company Estimate Decoder | `pm-decoders` | `pm-decoders/moving-company-estimate-decoder/GEM_INSTRUCTIONS.md` |
 | Moving House Checklist | `pm-lifeadmin` | `pm-lifeadmin/moving-house-checklist/GEM_INSTRUCTIONS.md` |
+| Moving-Quote Decoder | `pm-lifeadmin` | `pm-lifeadmin/moving-quote-decoder/GEM_INSTRUCTIONS.md` |
 | Multi-Source Signal Synthesiser | `pm-advanced` | `pm-advanced/multi-source-signal-synthesiser/GEM_INSTRUCTIONS.md` |
 | NDA Analyser | `pm-legal` | `pm-legal/nda-analyser/GEM_INSTRUCTIONS.md` |
 | Neighbor-Dispute Resolver | `pm-lifeadmin` | `pm-lifeadmin/neighbor-dispute-resolver/GEM_INSTRUCTIONS.md` |
@@ -676,6 +684,7 @@
 | Release Day Countdown | `pm-musician` | `pm-musician/release-day-countdown/GEM_INSTRUCTIONS.md` |
 | Relocation Planner | `pm-lifeadmin` | `pm-lifeadmin/relocation-planner/GEM_INSTRUCTIONS.md` |
 | Renewal Playbook | `pm-cs` | `pm-cs/renewal-playbook/GEM_INSTRUCTIONS.md` |
+| Renovation Scope & Budget | `pm-lifeadmin` | `pm-lifeadmin/renovation-scope-and-budget/GEM_INSTRUCTIONS.md` |
 | Rent Increase Response | `pm-renters` | `pm-renters/rent-increase-response/GEM_INSTRUCTIONS.md` |
 | Rent vs Buy | `pm-calculators` | `pm-calculators/rent-vs-buy/GEM_INSTRUCTIONS.md` |
 | Rental Application | `pm-lifeadmin` | `pm-lifeadmin/rental-application/GEM_INSTRUCTIONS.md` |
@@ -892,6 +901,7 @@
 | UX Research Plan | `pm-design` | `pm-design/ux-research-plan/GEM_INSTRUCTIONS.md` |
 | Value Proposition | `pm-copy` | `pm-copy/value-proposition/GEM_INSTRUCTIONS.md` |
 | VC Partner Meeting | `pm-simulators` | `pm-simulators/vc-partner-meeting/GEM_INSTRUCTIONS.md` |
+| Vehicle-Maintenance Schedule | `pm-lifeadmin` | `pm-lifeadmin/vehicle-maintenance-schedule/GEM_INSTRUCTIONS.md` |
 | Vendor Breakup Email | `pm-cowork` | `pm-cowork/vendor-breakup-email/GEM_INSTRUCTIONS.md` |
 | Vendor Comparison Matrix | `pm-cowork` | `pm-cowork/vendor-comparison-matrix/GEM_INSTRUCTIONS.md` |
 | Vendor Contract Checklist | `pm-operations` | `pm-operations/vendor-contract-checklist/GEM_INSTRUCTIONS.md` |
