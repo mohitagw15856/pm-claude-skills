@@ -128,6 +128,8 @@ const FEATURED = [
   ['whats-for-dinner', "What's in the fridge → three dinners tonight, ranked by effort. No shopping trip."],
   ['lower-my-bill', 'Your provider hiked the price → a call script + the leverage that actually lowers the bill.'],
   ['warranty-claim', 'It broke just out of warranty → the claim, the proof, and the consumer-law backstop.'],
+  ['identity-theft-recovery', 'Your identity was stolen → the calm, correct first moves to contain the damage and rebuild.'],
+  ['houseplant-care', 'Your plant is dying → the real cause, the fix, and a care routine it will actually thrive on.'],
 ];
 async function initFeatured() {
   const el = document.getElementById('featured');
