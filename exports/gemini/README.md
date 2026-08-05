@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-938 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+946 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -99,6 +99,7 @@
 | Bug Diagnosis | `pm-craft` | `pm-craft/bug-diagnosis/GEM_INSTRUCTIONS.md` |
 | Bug Report | `pm-qa` | `pm-qa/bug-report/GEM_INSTRUCTIONS.md` |
 | Bug Triage Pack | `pm-qa` | `pm-qa/bug-triage-pack/GEM_INSTRUCTIONS.md` |
+| Burnout Recovery Plan | `pm-career` | `pm-career/burnout-recovery-plan/GEM_INSTRUCTIONS.md` |
 | Calendar Defrag | `pm-operator` | `pm-operator/calendar-defrag/GEM_INSTRUCTIONS.md` |
 | Candidate Scorecard | `pm-recruiting` | `pm-recruiting/candidate-scorecard/GEM_INSTRUCTIONS.md` |
 | Cap Table Explainer | `pm-founders` | `pm-founders/cap-table-explainer/GEM_INSTRUCTIONS.md` |
@@ -109,6 +110,7 @@
 | Car TCO | `pm-calculators` | `pm-calculators/car-tco/GEM_INSTRUCTIONS.md` |
 | Carbon Accounting Check | `pm-climate` | `pm-climate/carbon-accounting-check/GEM_INSTRUCTIONS.md` |
 | Career Ladder Map | `pm-career` | `pm-career/career-ladder-map/GEM_INSTRUCTIONS.md` |
+| Career Pivot Plan | `pm-career` | `pm-career/career-pivot-plan/GEM_INSTRUCTIONS.md` |
 | Caregiver Coordination | `pm-lifeadmin` | `pm-lifeadmin/caregiver-coordination/GEM_INSTRUCTIONS.md` |
 | Case for Support | `pm-nonprofit` | `pm-nonprofit/case-for-support/GEM_INSTRUCTIONS.md` |
 | Case Study Write-up | `pm-consulting` | `pm-consulting/case-study-writeup/GEM_INSTRUCTIONS.md` |
@@ -361,6 +363,7 @@
 | Fine Appeal Letter | `pm-lifeadmin` | `pm-lifeadmin/fine-appeal-letter/GEM_INSTRUCTIONS.md` |
 | FIRE Number | `pm-calculators` | `pm-calculators/fire-number/GEM_INSTRUCTIONS.md` |
 | First Client Contract | `pm-sidehustle` | `pm-sidehustle/first-client-contract/GEM_INSTRUCTIONS.md` |
+| First-Hire Plan | `pm-career` | `pm-career/first-hire-plan/GEM_INSTRUCTIONS.md` |
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/GEM_INSTRUCTIONS.md` |
 | Flight-Delay Compensation | `pm-lifeadmin` | `pm-lifeadmin/flight-delay-compensation/GEM_INSTRUCTIONS.md` |
 | Flight Tracker | `pm-live` | `pm-live/flight-tracker/GEM_INSTRUCTIONS.md` |
@@ -434,6 +437,7 @@
 | Incident Public Statement | `pm-crisis` | `pm-crisis/incident-public-statement/GEM_INSTRUCTIONS.md` |
 | Incremental Implementation | `pm-method` | `pm-method/incremental-implementation/GEM_INSTRUCTIONS.md` |
 | Influencer Brief | `pm-social` | `pm-social/influencer-brief/GEM_INSTRUCTIONS.md` |
+| Informational-Interview Prep | `pm-career` | `pm-career/informational-interview-prep/GEM_INSTRUCTIONS.md` |
 | Infrastructure-as-Code Review | `pm-engineering` | `pm-engineering/infra-as-code-review/GEM_INSTRUCTIONS.md` |
 | Injection Spotter | `pm-seatbelt` | `pm-seatbelt/injection-spotter/GEM_INSTRUCTIONS.md` |
 | Inspection Report Decoder | `pm-decoders` | `pm-decoders/inspection-report-decoder/GEM_INSTRUCTIONS.md` |
@@ -478,6 +482,7 @@
 | Layoff Announcement | `pm-layoff` | `pm-layoff/layoff-announcement/GEM_INSTRUCTIONS.md` |
 | Layoff Communication | `pm-crisis` | `pm-crisis/layoff-communication/GEM_INSTRUCTIONS.md` |
 | Layoff Financial Triage | `pm-layoff` | `pm-layoff/layoff-financial-triage/GEM_INSTRUCTIONS.md` |
+| Layoff: First 72 Hours | `pm-career` | `pm-career/layoff-first-72-hours/GEM_INSTRUCTIONS.md` |
 | Lease Decoder | `pm-decoders` | `pm-decoders/lease-decoder/GEM_INSTRUCTIONS.md` |
 | Legal Brief | `pm-legal` | `pm-legal/legal-brief/GEM_INSTRUCTIONS.md` |
 | Lemon Law Check | `pm-legal` | `pm-legal/lemon-law-check/GEM_INSTRUCTIONS.md` |
@@ -543,7 +548,9 @@
 | NDA Analyser | `pm-legal` | `pm-legal/nda-analyser/GEM_INSTRUCTIONS.md` |
 | Neighbor-Dispute Resolver | `pm-lifeadmin` | `pm-lifeadmin/neighbor-dispute-resolver/GEM_INSTRUCTIONS.md` |
 | Net Worth Statement | `pm-money` | `pm-money/net-worth-statement/GEM_INSTRUCTIONS.md` |
+| Networking Outreach | `pm-career` | `pm-career/networking-outreach/GEM_INSTRUCTIONS.md` |
 | New-Baby Logistics | `pm-family` | `pm-family/new-baby-logistics/GEM_INSTRUCTIONS.md` |
+| New Manager: First 90 Days | `pm-career` | `pm-career/new-manager-first-90-days/GEM_INSTRUCTIONS.md` |
 | New Parent Logistics | `pm-lifeadmin` | `pm-lifeadmin/new-parent-logistics/GEM_INSTRUCTIONS.md` |
 | Newsletter Digest Brief | `pm-cowork` | `pm-cowork/newsletter-digest-brief/GEM_INSTRUCTIONS.md` |
 | Newsletter Writer | `pm-creator` | `pm-creator/newsletter-writer/GEM_INSTRUCTIONS.md` |
@@ -726,6 +733,7 @@
 | Runway Planner | `pm-founders` | `pm-founders/runway-planner/GEM_INSTRUCTIONS.md` |
 | SaaS Metrics | `pm-calculators` | `pm-calculators/saas-metrics/GEM_INSTRUCTIONS.md` |
 | Safe Online Shopping | `pm-digital-safety` | `pm-digital-safety/safe-online-shopping/GEM_INSTRUCTIONS.md` |
+| Salary Benchmarking | `pm-career` | `pm-career/salary-benchmarking/GEM_INSTRUCTIONS.md` |
 | Salary Negotiation | `pm-career` | `pm-career/salary-negotiation/GEM_INSTRUCTIONS.md` |
 | Sales Battlecard | `pm-sales` | `pm-sales/sales-battlecard/GEM_INSTRUCTIONS.md` |
 | Sales Demo Script | `pm-pmm` | `pm-pmm/sales-demo-script/GEM_INSTRUCTIONS.md` |

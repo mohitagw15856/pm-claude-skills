@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-938 skills exported. Copy a `SKILL.md` into the tool to use it.
+946 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -99,6 +99,7 @@
 | Bug Diagnosis | `pm-craft` | `bug-diagnosis/SKILL.md` |
 | Bug Report | `pm-qa` | `bug-report/SKILL.md` |
 | Bug Triage Pack | `pm-qa` | `bug-triage-pack/SKILL.md` |
+| Burnout Recovery Plan | `pm-career` | `burnout-recovery-plan/SKILL.md` |
 | Calendar Defrag | `pm-operator` | `calendar-defrag/SKILL.md` |
 | Candidate Scorecard | `pm-recruiting` | `candidate-scorecard/SKILL.md` |
 | Cap Table Explainer | `pm-founders` | `cap-table-explainer/SKILL.md` |
@@ -109,6 +110,7 @@
 | Car TCO | `pm-calculators` | `car-tco/SKILL.md` |
 | Carbon Accounting Check | `pm-climate` | `carbon-accounting-check/SKILL.md` |
 | Career Ladder Map | `pm-career` | `career-ladder-map/SKILL.md` |
+| Career Pivot Plan | `pm-career` | `career-pivot-plan/SKILL.md` |
 | Caregiver Coordination | `pm-lifeadmin` | `caregiver-coordination/SKILL.md` |
 | Case for Support | `pm-nonprofit` | `case-for-support/SKILL.md` |
 | Case Study Write-up | `pm-consulting` | `case-study-writeup/SKILL.md` |
@@ -361,6 +363,7 @@
 | Fine Appeal Letter | `pm-lifeadmin` | `fine-appeal-letter/SKILL.md` |
 | FIRE Number | `pm-calculators` | `fire-number/SKILL.md` |
 | First Client Contract | `pm-sidehustle` | `first-client-contract/SKILL.md` |
+| First-Hire Plan | `pm-career` | `first-hire-plan/SKILL.md` |
 | First Maintainer Month | `pm-maintainer` | `first-maintainer-month/SKILL.md` |
 | Flight-Delay Compensation | `pm-lifeadmin` | `flight-delay-compensation/SKILL.md` |
 | Flight Tracker | `pm-live` | `flight-tracker/SKILL.md` |
@@ -434,6 +437,7 @@
 | Incident Public Statement | `pm-crisis` | `incident-public-statement/SKILL.md` |
 | Incremental Implementation | `pm-method` | `incremental-implementation/SKILL.md` |
 | Influencer Brief | `pm-social` | `influencer-brief/SKILL.md` |
+| Informational-Interview Prep | `pm-career` | `informational-interview-prep/SKILL.md` |
 | Infrastructure-as-Code Review | `pm-engineering` | `infra-as-code-review/SKILL.md` |
 | Injection Spotter | `pm-seatbelt` | `injection-spotter/SKILL.md` |
 | Inspection Report Decoder | `pm-decoders` | `inspection-report-decoder/SKILL.md` |
@@ -478,6 +482,7 @@
 | Layoff Announcement | `pm-layoff` | `layoff-announcement/SKILL.md` |
 | Layoff Communication | `pm-crisis` | `layoff-communication/SKILL.md` |
 | Layoff Financial Triage | `pm-layoff` | `layoff-financial-triage/SKILL.md` |
+| Layoff: First 72 Hours | `pm-career` | `layoff-first-72-hours/SKILL.md` |
 | Lease Decoder | `pm-decoders` | `lease-decoder/SKILL.md` |
 | Legal Brief | `pm-legal` | `legal-brief/SKILL.md` |
 | Lemon Law Check | `pm-legal` | `lemon-law-check/SKILL.md` |
@@ -543,7 +548,9 @@
 | NDA Analyser | `pm-legal` | `nda-analyser/SKILL.md` |
 | Neighbor-Dispute Resolver | `pm-lifeadmin` | `neighbor-dispute-resolver/SKILL.md` |
 | Net Worth Statement | `pm-money` | `net-worth-statement/SKILL.md` |
+| Networking Outreach | `pm-career` | `networking-outreach/SKILL.md` |
 | New-Baby Logistics | `pm-family` | `new-baby-logistics/SKILL.md` |
+| New Manager: First 90 Days | `pm-career` | `new-manager-first-90-days/SKILL.md` |
 | New Parent Logistics | `pm-lifeadmin` | `new-parent-logistics/SKILL.md` |
 | Newsletter Digest Brief | `pm-cowork` | `newsletter-digest-brief/SKILL.md` |
 | Newsletter Writer | `pm-creator` | `newsletter-writer/SKILL.md` |
@@ -726,6 +733,7 @@
 | Runway Planner | `pm-founders` | `runway-planner/SKILL.md` |
 | SaaS Metrics | `pm-calculators` | `saas-metrics/SKILL.md` |
 | Safe Online Shopping | `pm-digital-safety` | `safe-online-shopping/SKILL.md` |
+| Salary Benchmarking | `pm-career` | `salary-benchmarking/SKILL.md` |
 | Salary Negotiation | `pm-career` | `salary-negotiation/SKILL.md` |
 | Sales Battlecard | `pm-sales` | `sales-battlecard/SKILL.md` |
 | Sales Demo Script | `pm-pmm` | `sales-demo-script/SKILL.md` |

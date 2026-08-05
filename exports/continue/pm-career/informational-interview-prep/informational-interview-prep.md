@@ -1,0 +1,70 @@
+---
+name: "Prepare for an informational interview — the outreach, the q"
+description: "Prepare for an informational interview — the outreach, the questions, and the follow-up — so a 20-minute chat actually helps your career instead of wasting their time. Use when asked to prep for an informational interview, questions to ask someone in [field], how to reach out for a career chat, or coffee chat prep. Produces a low-friction outreach message, a focused question set tuned to your goal (exploring a field, breaking in, a specific company), how to run the conversation, what NOT to do (don't ask for a job), and a follow-up that keeps the relationship warm."
+---
+
+# Informational-Interview Prep
+
+An informational interview is one of the best career tools — a short, low-pressure conversation to learn about a field, role, or company from someone doing it. But done wrong (vague questions, or angling for a job) it wastes their time and yours. This preps the whole thing: the ask, the right questions for your goal, how to run it, and a follow-up that turns a chat into a relationship.
+
+## What This Skill Produces
+
+- **The outreach ask** — a short, specific, low-friction request for a brief chat (not a job)
+- **A focused question set** — tuned to your goal (exploring a field, breaking in, learning about a company/role), from their path to practical advice
+- **Conversation flow** — how to open, keep it their-story-centered, and use the time well
+- **What not to do** — the mistakes (asking for a job, dominating, being unprepared) that sour these
+- **A follow-up** — a thank-you and a way to keep the connection warm, including any offered next step
+- **Prep notes** — what to research about them beforehand
+
+## Required Inputs
+
+Ask for these if not provided:
+- **Your goal** — exploring a field, trying to break in, targeting a company/role, or broad learning
+- **The person** — who they are, their role, and your connection (if any)
+- **Your background** — enough to tailor relevant questions
+- **The format** — call, coffee, video, and how long
+- **Where you are** — early exploration vs. active job search (changes tone)
+
+## Framework: Learn, Don't Pitch
+
+1. **Ask small and specific.** Request a brief (15–20 min) chat to learn, name why them, and make it easy to grant — never open with a job ask.
+2. **Prepare targeted questions.** Match questions to your goal: their path and day-to-day, how they got in, what they wish they'd known, and specific advice for your situation — not things you could Google.
+3. **Center their story.** Let them talk, listen actively, and go deeper on what's useful; you're there to learn, not to perform.
+4. **Don't ask for a job.** The fastest way to sour an informational is to turn it into a pitch — build the relationship; opportunities follow later.
+5. **Follow up well.** Thank them specifically, act on any advice/intro they offered, and keep the door open for a light future touch.
+6. **Do your homework.** Research them enough to ask informed questions and not waste the time.
+
+## Output Format
+
+### Informational interview: goal [x] · [person/role] · [format/length]
+
+**Outreach ask**
+> [Specific, brief request to learn + why them + easy to say yes — no job ask].
+
+**Questions (tuned to your goal):** [their path · day-to-day · how they broke in · what they wish they'd known · specific advice for you].
+**Run it:** [open warmly · their story first · go deeper on useful bits · watch the time].
+**Don't:** ask for a job · dominate · show up unprepared.
+**Follow up:** [specific thank-you · act on advice/intros · keep it warm].
+**Prep:** [what to research about them].
+
+## Quality Checks
+- [ ] Outreach asks for a short chat to learn, not a job
+- [ ] Questions are tuned to the goal and not Google-able
+- [ ] Guidance centers the other person's story
+- [ ] Explicitly warns against turning it into a job pitch
+- [ ] Includes a specific, relationship-building follow-up
+- [ ] Notes what to research beforehand
+
+## Anti-Patterns
+- **Opening with a job ask** or angling for one.
+- **Generic questions** answerable by a quick search.
+- **Dominating** or making it about you.
+- **Showing up unprepared** about the person.
+- **No follow-up** — wasting the connection.
+
+## Example Trigger Phrases
+- "Help me prep for an informational interview with someone in product management."
+- "What should I ask someone whose career I want to learn about?"
+- "How do I reach out for a coffee chat without it being weird?"
+- "I have a call with someone at a company I'm interested in — what do I ask?"
+- "Questions for an informational interview to help me break into a field."

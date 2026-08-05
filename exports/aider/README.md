@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-938 skills exported. Copy a `.md rule` into the tool to use it.
+946 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -99,6 +99,7 @@
 | Bug Diagnosis | `pm-craft` | `pm-craft/bug-diagnosis/bug-diagnosis.md` |
 | Bug Report | `pm-qa` | `pm-qa/bug-report/bug-report.md` |
 | Bug Triage Pack | `pm-qa` | `pm-qa/bug-triage-pack/bug-triage-pack.md` |
+| Burnout Recovery Plan | `pm-career` | `pm-career/burnout-recovery-plan/burnout-recovery-plan.md` |
 | Calendar Defrag | `pm-operator` | `pm-operator/calendar-defrag/calendar-defrag.md` |
 | Candidate Scorecard | `pm-recruiting` | `pm-recruiting/candidate-scorecard/candidate-scorecard.md` |
 | Cap Table Explainer | `pm-founders` | `pm-founders/cap-table-explainer/cap-table-explainer.md` |
@@ -109,6 +110,7 @@
 | Car TCO | `pm-calculators` | `pm-calculators/car-tco/car-tco.md` |
 | Carbon Accounting Check | `pm-climate` | `pm-climate/carbon-accounting-check/carbon-accounting-check.md` |
 | Career Ladder Map | `pm-career` | `pm-career/career-ladder-map/career-ladder-map.md` |
+| Career Pivot Plan | `pm-career` | `pm-career/career-pivot-plan/career-pivot-plan.md` |
 | Caregiver Coordination | `pm-lifeadmin` | `pm-lifeadmin/caregiver-coordination/caregiver-coordination.md` |
 | Case for Support | `pm-nonprofit` | `pm-nonprofit/case-for-support/case-for-support.md` |
 | Case Study Write-up | `pm-consulting` | `pm-consulting/case-study-writeup/case-study-writeup.md` |
@@ -361,6 +363,7 @@
 | Fine Appeal Letter | `pm-lifeadmin` | `pm-lifeadmin/fine-appeal-letter/fine-appeal-letter.md` |
 | FIRE Number | `pm-calculators` | `pm-calculators/fire-number/fire-number.md` |
 | First Client Contract | `pm-sidehustle` | `pm-sidehustle/first-client-contract/first-client-contract.md` |
+| First-Hire Plan | `pm-career` | `pm-career/first-hire-plan/first-hire-plan.md` |
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/first-maintainer-month.md` |
 | Flight-Delay Compensation | `pm-lifeadmin` | `pm-lifeadmin/flight-delay-compensation/flight-delay-compensation.md` |
 | Flight Tracker | `pm-live` | `pm-live/flight-tracker/flight-tracker.md` |
@@ -434,6 +437,7 @@
 | Incident Public Statement | `pm-crisis` | `pm-crisis/incident-public-statement/incident-public-statement.md` |
 | Incremental Implementation | `pm-method` | `pm-method/incremental-implementation/incremental-implementation.md` |
 | Influencer Brief | `pm-social` | `pm-social/influencer-brief/influencer-brief.md` |
+| Informational-Interview Prep | `pm-career` | `pm-career/informational-interview-prep/informational-interview-prep.md` |
 | Infrastructure-as-Code Review | `pm-engineering` | `pm-engineering/infra-as-code-review/infra-as-code-review.md` |
 | Injection Spotter | `pm-seatbelt` | `pm-seatbelt/injection-spotter/injection-spotter.md` |
 | Inspection Report Decoder | `pm-decoders` | `pm-decoders/inspection-report-decoder/inspection-report-decoder.md` |
@@ -478,6 +482,7 @@
 | Layoff Announcement | `pm-layoff` | `pm-layoff/layoff-announcement/layoff-announcement.md` |
 | Layoff Communication | `pm-crisis` | `pm-crisis/layoff-communication/layoff-communication.md` |
 | Layoff Financial Triage | `pm-layoff` | `pm-layoff/layoff-financial-triage/layoff-financial-triage.md` |
+| Layoff: First 72 Hours | `pm-career` | `pm-career/layoff-first-72-hours/layoff-first-72-hours.md` |
 | Lease Decoder | `pm-decoders` | `pm-decoders/lease-decoder/lease-decoder.md` |
 | Legal Brief | `pm-legal` | `pm-legal/legal-brief/legal-brief.md` |
 | Lemon Law Check | `pm-legal` | `pm-legal/lemon-law-check/lemon-law-check.md` |
@@ -543,7 +548,9 @@
 | NDA Analyser | `pm-legal` | `pm-legal/nda-analyser/nda-analyser.md` |
 | Neighbor-Dispute Resolver | `pm-lifeadmin` | `pm-lifeadmin/neighbor-dispute-resolver/neighbor-dispute-resolver.md` |
 | Net Worth Statement | `pm-money` | `pm-money/net-worth-statement/net-worth-statement.md` |
+| Networking Outreach | `pm-career` | `pm-career/networking-outreach/networking-outreach.md` |
 | New-Baby Logistics | `pm-family` | `pm-family/new-baby-logistics/new-baby-logistics.md` |
+| New Manager: First 90 Days | `pm-career` | `pm-career/new-manager-first-90-days/new-manager-first-90-days.md` |
 | New Parent Logistics | `pm-lifeadmin` | `pm-lifeadmin/new-parent-logistics/new-parent-logistics.md` |
 | Newsletter Digest Brief | `pm-cowork` | `pm-cowork/newsletter-digest-brief/newsletter-digest-brief.md` |
 | Newsletter Writer | `pm-creator` | `pm-creator/newsletter-writer/newsletter-writer.md` |
@@ -726,6 +733,7 @@
 | Runway Planner | `pm-founders` | `pm-founders/runway-planner/runway-planner.md` |
 | SaaS Metrics | `pm-calculators` | `pm-calculators/saas-metrics/saas-metrics.md` |
 | Safe Online Shopping | `pm-digital-safety` | `pm-digital-safety/safe-online-shopping/safe-online-shopping.md` |
+| Salary Benchmarking | `pm-career` | `pm-career/salary-benchmarking/salary-benchmarking.md` |
 | Salary Negotiation | `pm-career` | `pm-career/salary-negotiation/salary-negotiation.md` |
 | Sales Battlecard | `pm-sales` | `pm-sales/sales-battlecard/sales-battlecard.md` |
 | Sales Demo Script | `pm-pmm` | `pm-pmm/sales-demo-script/sales-demo-script.md` |

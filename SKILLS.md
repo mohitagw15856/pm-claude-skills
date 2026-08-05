@@ -1,4 +1,4 @@
-# 🗂️ All 938 Skills — full catalog
+# 🗂️ All 946 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -602,17 +602,25 @@
 | **Tenant Rights Explainer** (`tenant-rights-explainer`) | Understand your rights as a renter in a specific situation — repairs ignored, a rent increase, an eviction notice, deposit disputes, or entry… | — |
 | **Witness Statement Writer** (`witness-statement-writer`) | Write a clear, factual witness statement or account of an incident — for an insurance claim, small claims, a workplace matter, or the police —… | — |
 
-## 🧑 You & Career (77 skills)
+## 🧑 You & Career (85 skills)
 
-### `pm-career` — 8 skills
+### `pm-career` — 16 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Brag Doc** (`brag-doc`) | Keep a running brag document of your accomplishments so reviews and promo cases write themselves. | — |
+| **Burnout Recovery Plan** (`burnout-recovery-plan`) | Build a realistic recovery plan for burnout — address the causes, not just the symptoms — with changes you can actually make at work and outside it. | — |
 | **Career Ladder Map** (`career-ladder-map`) | Map where you are against the next level and build a concrete plan to close the gap. | — |
+| **Career Pivot Plan** (`career-pivot-plan`) | Build a realistic plan to change careers — mapping your transferable skills, the real gaps, and a bridge that doesn't require torching your income… | — |
+| **First-Hire Plan** (`first-hire-plan`) | Plan your first hire — whether to hire at all yet, contractor vs employee, what role to hire, and how to do it right when you've never hired before. | — |
+| **Informational-Interview Prep** (`informational-interview-prep`) | Prepare for an informational interview — the outreach, the questions, and the follow-up — so a 20-minute chat actually helps your career instead… | — |
+| **Layoff: First 72 Hours** (`layoff-first-72-hours`) | Steady the first 72 hours after being laid off — the practical, financial, and emotional moves in the right order, before panic-applying to… | — |
+| **Networking Outreach** (`networking-outreach`) | Write networking messages that actually get replies — warm, specific, and easy to say yes to — for reconnecting, cold outreach, referrals, or… | — |
+| **New Manager: First 90 Days** (`new-manager-first-90-days`) | Plan your first 90 days as a new manager — build trust, learn before changing, and avoid the classic first-time-manager mistakes. | — |
 | **One-on-One Prep** (`one-on-one-prep`) | Prepare for a 1:1 so it drives outcomes instead of becoming a status update. | — |
 | **PIP Responder** (`pip-responder`) | Respond to a performance improvement plan strategically — decode what the PIP really is, decide fight-vs-land-softly with clear eyes, build the… | — |
 | **Promotion Packet** (`promotion-packet`) | Build a promotion case that proves you're already operating at the next level. | — |
+| **Salary Benchmarking** (`salary-benchmarking`) | Build a defensible salary range for a role — what it actually pays given the market, location, level, and your value — so you can ask, counter, or… | — |
 | **Salary Negotiation** (`salary-negotiation`) | Plan a compensation negotiation grounded in numbers and leverage, not nerves. | — |
 | **Self-Review** (`self-review`) | Write a performance self-review that's specific, evidenced, and balanced. | — |
 | **Year in Review** (`year-in-review`) | Run an honest personal year-in-review and set next year's direction — wins, misses, an energy audit, and one theme, not a resolution list that… | — |
@@ -1511,4 +1519,4 @@
 
 ---
 
-_938 skills across 109 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_946 skills across 109 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
