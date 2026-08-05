@@ -1,6 +1,11 @@
 {
-  "count": 1,
+  "count": 2,
   "issues": [
+    {
+      "tag": "v71.0.0",
+      "title": "9 new skills: get your money back 💷",
+      "href": "v71.0.0.html"
+    },
     {
       "tag": "v70.0.0",
       "title": "New skill: Lower My Bill 💸",

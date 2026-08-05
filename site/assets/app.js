@@ -126,6 +126,8 @@ const FEATURED = [
   ['salary-negotiation', 'Rehearse the real conversation against a tough counterpart, then debrief.'],
   ['decision-helper', 'Torn between two options → a weighted call and the one question that breaks the tie.'],
   ['whats-for-dinner', "What's in the fridge → three dinners tonight, ranked by effort. No shopping trip."],
+  ['lower-my-bill', 'Your provider hiked the price → a call script + the leverage that actually lowers the bill.'],
+  ['warranty-claim', 'It broke just out of warranty → the claim, the proof, and the consumer-law backstop.'],
 ];
 async function initFeatured() {
   const el = document.getElementById('featured');
