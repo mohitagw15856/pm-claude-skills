@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-870 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+882 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -175,6 +175,7 @@
 | Contract Review | `pm-legal` | `pm-legal/contract-review/GEM_INSTRUCTIONS.md` |
 | Contributor Guide | `pm-devrel` | `pm-devrel/contributor-guide/GEM_INSTRUCTIONS.md` |
 | Conversion Rate Optimization | `pm-growth` | `pm-growth/conversion-rate-optimization/GEM_INSTRUCTIONS.md` |
+| Couch-to-Goal Runner | `pm-wellbeing` | `pm-wellbeing/couch-to-goal-runner/GEM_INSTRUCTIONS.md` |
 | Counteroffer Decoder | `pm-resignation` | `pm-resignation/counteroffer-decoder/GEM_INSTRUCTIONS.md` |
 | Cover Letter | `pm-personal` | `pm-personal/cover-letter/GEM_INSTRUCTIONS.md` |
 | Coverage Gap Analysis | `pm-insurance` | `pm-insurance/coverage-gap-analysis/GEM_INSTRUCTIONS.md` |
@@ -237,6 +238,7 @@
 | Design Critique | `pm-design` | `pm-design/design-critique/GEM_INSTRUCTIONS.md` |
 | Design Handoff Brief | `pm-advanced` | `pm-advanced/design-handoff-brief/GEM_INSTRUCTIONS.md` |
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/GEM_INSTRUCTIONS.md` |
+| Desk Ergonomics Audit | `pm-wellbeing` | `pm-wellbeing/desk-ergonomics-audit/GEM_INSTRUCTIONS.md` |
 | Desk Research Sprint | `pm-cowork` | `pm-cowork/desk-research-sprint/GEM_INSTRUCTIONS.md` |
 | Desktop Zero | `pm-cowork` | `pm-cowork/desktop-zero/GEM_INSTRUCTIONS.md` |
 | Developer Onboarding Document | `pm-engineering` | `pm-engineering/developer-onboarding-doc/GEM_INSTRUCTIONS.md` |
@@ -367,11 +369,13 @@
 | Go-To-Market | `pm-gtm` | `pm-gtm/go-to-market/GEM_INSTRUCTIONS.md` |
 | Go-to-Market Planner | `pm-delivery` | `pm-delivery/go-to-market-planner/GEM_INSTRUCTIONS.md` |
 | Grant Proposal | `pm-cross` | `pm-cross/grant-proposal/GEM_INSTRUCTIONS.md` |
+| Gratitude Practice | `pm-wellbeing` | `pm-wellbeing/gratitude-practice/GEM_INSTRUCTIONS.md` |
 | Greenwashing Self-Audit | `pm-climate` | `pm-climate/greenwashing-self-audit/GEM_INSTRUCTIONS.md` |
 | Grocery Budget Audit | `pm-kitchen` | `pm-kitchen/grocery-budget-audit/GEM_INSTRUCTIONS.md` |
 | Group Trip Negotiator | `other` | `other/group-trip-negotiator/GEM_INSTRUCTIONS.md` |
 | Growth Experiment Backlog | `pm-growth` | `pm-growth/growth-experiment-backlog/GEM_INSTRUCTIONS.md` |
 | Guest Incident Log | `pm-hospitality` | `pm-hospitality/guest-incident-log/GEM_INSTRUCTIONS.md` |
+| Habit Builder | `pm-wellbeing` | `pm-wellbeing/habit-builder/GEM_INSTRUCTIONS.md` |
 | Handbook Page | `pm-cowork` | `pm-cowork/handbook-page/GEM_INSTRUCTIONS.md` |
 | Hardware PRD | `pm-hardware` | `pm-hardware/hardware-prd/GEM_INSTRUCTIONS.md` |
 | Headline Options | `pm-copy` | `pm-copy/headline-options/GEM_INSTRUCTIONS.md` |
@@ -383,10 +387,12 @@
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/GEM_INSTRUCTIONS.md` |
 | Hobby Starter Kit | `pm-hobbies` | `pm-hobbies/hobby-starter-kit/GEM_INSTRUCTIONS.md` |
 | Home Contractor Quote Decoder | `pm-decoders` | `pm-decoders/home-contractor-quote-decoder/GEM_INSTRUCTIONS.md` |
+| Home Workout Builder | `pm-wellbeing` | `pm-wellbeing/home-workout-builder/GEM_INSTRUCTIONS.md` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/GEM_INSTRUCTIONS.md` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/GEM_INSTRUCTIONS.md` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/GEM_INSTRUCTIONS.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/GEM_INSTRUCTIONS.md` |
+| Hydration & Energy Plan | `pm-wellbeing` | `pm-wellbeing/hydration-and-energy-plan/GEM_INSTRUCTIONS.md` |
 | i18n Readiness Review | `pm-localization` | `pm-localization/i18n-readiness-review/GEM_INSTRUCTIONS.md` |
 | IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/GEM_INSTRUCTIONS.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/GEM_INSTRUCTIONS.md` |
@@ -425,6 +431,7 @@
 | Job Application | `pm-business` | `pm-business/job-application/GEM_INSTRUCTIONS.md` |
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/GEM_INSTRUCTIONS.md` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/GEM_INSTRUCTIONS.md` |
+| Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/GEM_INSTRUCTIONS.md` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/GEM_INSTRUCTIONS.md` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/GEM_INSTRUCTIONS.md` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/GEM_INSTRUCTIONS.md` |
@@ -556,6 +563,7 @@
 | Policy Memo | `pm-gov` | `pm-gov/policy-memo/GEM_INSTRUCTIONS.md` |
 | Policy Renewal Review | `pm-insurance` | `pm-insurance/policy-renewal-review/GEM_INSTRUCTIONS.md` |
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/GEM_INSTRUCTIONS.md` |
+| Posture Reset Plan | `pm-wellbeing` | `pm-wellbeing/posture-reset-plan/GEM_INSTRUCTIONS.md` |
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/GEM_INSTRUCTIONS.md` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/GEM_INSTRUCTIONS.md` |
 | PR Description | `pm-craft` | `pm-craft/pr-description/GEM_INSTRUCTIONS.md` |
@@ -614,6 +622,7 @@
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/GEM_INSTRUCTIONS.md` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/GEM_INSTRUCTIONS.md` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/GEM_INSTRUCTIONS.md` |
+| Recovery Day Planner | `pm-wellbeing` | `pm-wellbeing/recovery-day-planner/GEM_INSTRUCTIONS.md` |
 | Recruiter Outreach | `pm-recruiting` | `pm-recruiting/recruiter-outreach/GEM_INSTRUCTIONS.md` |
 | Recurring Meeting Pruner | `pm-cowork` | `pm-cowork/recurring-meeting-pruner/GEM_INSTRUCTIONS.md` |
 | Red-Team Review | `pm-cross` | `pm-cross/red-team-review/GEM_INSTRUCTIONS.md` |
@@ -685,6 +694,7 @@
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/GEM_INSTRUCTIONS.md` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/GEM_INSTRUCTIONS.md` |
 | Scope Creep Response | `pm-freelance` | `pm-freelance/scope-creep-response/GEM_INSTRUCTIONS.md` |
+| Screen-Time Detox | `pm-wellbeing` | `pm-wellbeing/screen-time-detox/GEM_INSTRUCTIONS.md` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/GEM_INSTRUCTIONS.md` |
 | Second Opinion Request | `pm-lifeadmin` | `pm-lifeadmin/second-opinion-request/GEM_INSTRUCTIONS.md` |
 | Security Deposit Recovery | `pm-renters` | `pm-renters/security-deposit-recovery/GEM_INSTRUCTIONS.md` |
@@ -710,6 +720,7 @@
 | Skill Fusion | `pm-advanced` | `pm-advanced/skill-fusion/GEM_INSTRUCTIONS.md` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/GEM_INSTRUCTIONS.md` |
 | Skill Vetting | `pm-security` | `pm-security/skill-vetting/GEM_INSTRUCTIONS.md` |
+| Sleep Reset Plan | `pm-wellbeing` | `pm-wellbeing/sleep-reset-plan/GEM_INSTRUCTIONS.md` |
 | Slide Deck | `pm-documents` | `pm-documents/slide-deck/GEM_INSTRUCTIONS.md` |
 | Slide Density Rules | `pm-cowork` | `pm-cowork/slide-density-rules/GEM_INSTRUCTIONS.md` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/GEM_INSTRUCTIONS.md` |
@@ -753,6 +764,7 @@
 | Story Pitch | `pm-journalism` | `pm-journalism/story-pitch/GEM_INSTRUCTIONS.md` |
 | Strategic Narrative Generator | `pm-strategy` | `pm-strategy/strategic-narrative-generator/GEM_INSTRUCTIONS.md` |
 | Strategy Memo | `pm-business` | `pm-business/strategy-memo/GEM_INSTRUCTIONS.md` |
+| Stretching Routine | `pm-wellbeing` | `pm-wellbeing/stretching-routine/GEM_INSTRUCTIONS.md` |
 | Student Feedback | `pm-education` | `pm-education/student-feedback/GEM_INSTRUCTIONS.md` |
 | Student Loan Strategy | `pm-calculators` | `pm-calculators/student-loan-strategy/GEM_INSTRUCTIONS.md` |
 | Study Notes Synthesizer | `pm-students` | `pm-students/study-notes-synthesizer/GEM_INSTRUCTIONS.md` |

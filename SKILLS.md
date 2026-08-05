@@ -1,4 +1,4 @@
-# 🗂️ All 870 Skills — full catalog
+# 🗂️ All 882 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -684,7 +684,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (445 skills)
+## 🌍 Industries & Public Sector (457 skills)
 
 ### `other` — 4 skills
 
@@ -1426,6 +1426,23 @@
 | **Wedding Logistics Planner** (`wedding-logistics-planner`) | Plan the wedding day as the operation it is — the minute-level run sheet, the vendor call sheet, the who-handles-problems roster, and the buffer… | — |
 | **Wedding Vendor Contract Decoder** (`wedding-vendor-contract-decoder`) | Decode a wedding vendor contract — venue, photographer, caterer, band — before signing: deposits and their refundability, cancellation and… | — |
 
+### `pm-wellbeing` — 12 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Couch-to-Goal Runner** (`couch-to-goal-runner`) | Build a beginner running plan from wherever you are to a real goal — first nonstop mile, 5K, or 10K — that builds up slowly enough to avoid injury. | — |
+| **Desk Ergonomics Audit** (`desk-ergonomics-audit`) | Audit your desk setup and fix what's hurting your neck, back, wrists, or eyes — with specific, mostly-free adjustments before you buy anything. | — |
+| **Gratitude Practice** (`gratitude-practice`) | Set up a gratitude practice that survives past week one — a specific format, a realistic cadence, and prompts that avoid the toxic-positivity trap. | — |
+| **Habit Builder** (`habit-builder`) | Design one habit so it actually sticks — small enough to be unmissable, anchored to something you already do, with a plan for the days you slip. | — |
+| **Home Workout Builder** (`home-workout-builder`) | Build a home workout plan that fits your gear, time, and goal — a real weekly structure, not a random list of exercises. | — |
+| **Hydration & Energy Plan** (`hydration-and-energy-plan`) | Beat the afternoon crash with a realistic hydration, food-timing, and movement plan — not a caffeine-and-sugar band-aid. | — |
+| **Journaling Prompts** (`journaling-prompts`) | Get journaling prompts tuned to what you're actually working through — a decision, a rough patch, a goal, or just building the habit — not generic… | — |
+| **Posture Reset Plan** (`posture-reset-plan`) | Fix the screen-hunch with a realistic plan — the desk fixes, the two or three exercises that counter it, and movement habits that beat any single… | — |
+| **Recovery Day Planner** (`recovery-day-planner`) | Plan a real rest day — active recovery, genuine downtime, and a reset — instead of either grinding through or collapsing into a guilt-scroll. | — |
+| **Screen-Time Detox** (`screen-time-detox`) | Cut compulsive screen and phone use with a workable plan — friction, environment, and replacement habits — instead of relying on willpower or… | — |
+| **Sleep Reset Plan** (`sleep-reset-plan`) | Build a realistic plan to fix bad sleep — a wind-down routine, a consistent schedule, and the daytime and environment fixes that actually move the… | — |
+| **Stretching Routine** (`stretching-routine`) | Build a targeted stretching or mobility routine for the tightness you actually have — desk-stiff hips, a tight back, post-run legs — not a generic… | — |
+
 ---
 
-_870 skills across 106 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_882 skills across 107 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

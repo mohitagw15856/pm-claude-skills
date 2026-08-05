@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-870 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+882 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -175,6 +175,7 @@
 | Contract Review | `pm-legal` | `pm-legal/contract-review/SYSTEM_PROMPT.md` |
 | Contributor Guide | `pm-devrel` | `pm-devrel/contributor-guide/SYSTEM_PROMPT.md` |
 | Conversion Rate Optimization | `pm-growth` | `pm-growth/conversion-rate-optimization/SYSTEM_PROMPT.md` |
+| Couch-to-Goal Runner | `pm-wellbeing` | `pm-wellbeing/couch-to-goal-runner/SYSTEM_PROMPT.md` |
 | Counteroffer Decoder | `pm-resignation` | `pm-resignation/counteroffer-decoder/SYSTEM_PROMPT.md` |
 | Cover Letter | `pm-personal` | `pm-personal/cover-letter/SYSTEM_PROMPT.md` |
 | Coverage Gap Analysis | `pm-insurance` | `pm-insurance/coverage-gap-analysis/SYSTEM_PROMPT.md` |
@@ -237,6 +238,7 @@
 | Design Critique | `pm-design` | `pm-design/design-critique/SYSTEM_PROMPT.md` |
 | Design Handoff Brief | `pm-advanced` | `pm-advanced/design-handoff-brief/SYSTEM_PROMPT.md` |
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/SYSTEM_PROMPT.md` |
+| Desk Ergonomics Audit | `pm-wellbeing` | `pm-wellbeing/desk-ergonomics-audit/SYSTEM_PROMPT.md` |
 | Desk Research Sprint | `pm-cowork` | `pm-cowork/desk-research-sprint/SYSTEM_PROMPT.md` |
 | Desktop Zero | `pm-cowork` | `pm-cowork/desktop-zero/SYSTEM_PROMPT.md` |
 | Developer Onboarding Document | `pm-engineering` | `pm-engineering/developer-onboarding-doc/SYSTEM_PROMPT.md` |
@@ -367,11 +369,13 @@
 | Go-To-Market | `pm-gtm` | `pm-gtm/go-to-market/SYSTEM_PROMPT.md` |
 | Go-to-Market Planner | `pm-delivery` | `pm-delivery/go-to-market-planner/SYSTEM_PROMPT.md` |
 | Grant Proposal | `pm-cross` | `pm-cross/grant-proposal/SYSTEM_PROMPT.md` |
+| Gratitude Practice | `pm-wellbeing` | `pm-wellbeing/gratitude-practice/SYSTEM_PROMPT.md` |
 | Greenwashing Self-Audit | `pm-climate` | `pm-climate/greenwashing-self-audit/SYSTEM_PROMPT.md` |
 | Grocery Budget Audit | `pm-kitchen` | `pm-kitchen/grocery-budget-audit/SYSTEM_PROMPT.md` |
 | Group Trip Negotiator | `other` | `other/group-trip-negotiator/SYSTEM_PROMPT.md` |
 | Growth Experiment Backlog | `pm-growth` | `pm-growth/growth-experiment-backlog/SYSTEM_PROMPT.md` |
 | Guest Incident Log | `pm-hospitality` | `pm-hospitality/guest-incident-log/SYSTEM_PROMPT.md` |
+| Habit Builder | `pm-wellbeing` | `pm-wellbeing/habit-builder/SYSTEM_PROMPT.md` |
 | Handbook Page | `pm-cowork` | `pm-cowork/handbook-page/SYSTEM_PROMPT.md` |
 | Hardware PRD | `pm-hardware` | `pm-hardware/hardware-prd/SYSTEM_PROMPT.md` |
 | Headline Options | `pm-copy` | `pm-copy/headline-options/SYSTEM_PROMPT.md` |
@@ -383,10 +387,12 @@
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/SYSTEM_PROMPT.md` |
 | Hobby Starter Kit | `pm-hobbies` | `pm-hobbies/hobby-starter-kit/SYSTEM_PROMPT.md` |
 | Home Contractor Quote Decoder | `pm-decoders` | `pm-decoders/home-contractor-quote-decoder/SYSTEM_PROMPT.md` |
+| Home Workout Builder | `pm-wellbeing` | `pm-wellbeing/home-workout-builder/SYSTEM_PROMPT.md` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/SYSTEM_PROMPT.md` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/SYSTEM_PROMPT.md` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/SYSTEM_PROMPT.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/SYSTEM_PROMPT.md` |
+| Hydration & Energy Plan | `pm-wellbeing` | `pm-wellbeing/hydration-and-energy-plan/SYSTEM_PROMPT.md` |
 | i18n Readiness Review | `pm-localization` | `pm-localization/i18n-readiness-review/SYSTEM_PROMPT.md` |
 | IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/SYSTEM_PROMPT.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/SYSTEM_PROMPT.md` |
@@ -425,6 +431,7 @@
 | Job Application | `pm-business` | `pm-business/job-application/SYSTEM_PROMPT.md` |
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/SYSTEM_PROMPT.md` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/SYSTEM_PROMPT.md` |
+| Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/SYSTEM_PROMPT.md` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/SYSTEM_PROMPT.md` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/SYSTEM_PROMPT.md` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/SYSTEM_PROMPT.md` |
@@ -556,6 +563,7 @@
 | Policy Memo | `pm-gov` | `pm-gov/policy-memo/SYSTEM_PROMPT.md` |
 | Policy Renewal Review | `pm-insurance` | `pm-insurance/policy-renewal-review/SYSTEM_PROMPT.md` |
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/SYSTEM_PROMPT.md` |
+| Posture Reset Plan | `pm-wellbeing` | `pm-wellbeing/posture-reset-plan/SYSTEM_PROMPT.md` |
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/SYSTEM_PROMPT.md` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/SYSTEM_PROMPT.md` |
 | PR Description | `pm-craft` | `pm-craft/pr-description/SYSTEM_PROMPT.md` |
@@ -614,6 +622,7 @@
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/SYSTEM_PROMPT.md` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/SYSTEM_PROMPT.md` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/SYSTEM_PROMPT.md` |
+| Recovery Day Planner | `pm-wellbeing` | `pm-wellbeing/recovery-day-planner/SYSTEM_PROMPT.md` |
 | Recruiter Outreach | `pm-recruiting` | `pm-recruiting/recruiter-outreach/SYSTEM_PROMPT.md` |
 | Recurring Meeting Pruner | `pm-cowork` | `pm-cowork/recurring-meeting-pruner/SYSTEM_PROMPT.md` |
 | Red-Team Review | `pm-cross` | `pm-cross/red-team-review/SYSTEM_PROMPT.md` |
@@ -685,6 +694,7 @@
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/SYSTEM_PROMPT.md` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/SYSTEM_PROMPT.md` |
 | Scope Creep Response | `pm-freelance` | `pm-freelance/scope-creep-response/SYSTEM_PROMPT.md` |
+| Screen-Time Detox | `pm-wellbeing` | `pm-wellbeing/screen-time-detox/SYSTEM_PROMPT.md` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/SYSTEM_PROMPT.md` |
 | Second Opinion Request | `pm-lifeadmin` | `pm-lifeadmin/second-opinion-request/SYSTEM_PROMPT.md` |
 | Security Deposit Recovery | `pm-renters` | `pm-renters/security-deposit-recovery/SYSTEM_PROMPT.md` |
@@ -710,6 +720,7 @@
 | Skill Fusion | `pm-advanced` | `pm-advanced/skill-fusion/SYSTEM_PROMPT.md` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/SYSTEM_PROMPT.md` |
 | Skill Vetting | `pm-security` | `pm-security/skill-vetting/SYSTEM_PROMPT.md` |
+| Sleep Reset Plan | `pm-wellbeing` | `pm-wellbeing/sleep-reset-plan/SYSTEM_PROMPT.md` |
 | Slide Deck | `pm-documents` | `pm-documents/slide-deck/SYSTEM_PROMPT.md` |
 | Slide Density Rules | `pm-cowork` | `pm-cowork/slide-density-rules/SYSTEM_PROMPT.md` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/SYSTEM_PROMPT.md` |
@@ -753,6 +764,7 @@
 | Story Pitch | `pm-journalism` | `pm-journalism/story-pitch/SYSTEM_PROMPT.md` |
 | Strategic Narrative Generator | `pm-strategy` | `pm-strategy/strategic-narrative-generator/SYSTEM_PROMPT.md` |
 | Strategy Memo | `pm-business` | `pm-business/strategy-memo/SYSTEM_PROMPT.md` |
+| Stretching Routine | `pm-wellbeing` | `pm-wellbeing/stretching-routine/SYSTEM_PROMPT.md` |
 | Student Feedback | `pm-education` | `pm-education/student-feedback/SYSTEM_PROMPT.md` |
 | Student Loan Strategy | `pm-calculators` | `pm-calculators/student-loan-strategy/SYSTEM_PROMPT.md` |
 | Study Notes Synthesizer | `pm-students` | `pm-students/study-notes-synthesizer/SYSTEM_PROMPT.md` |

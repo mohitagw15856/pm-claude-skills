@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-870 skills exported. Copy a `.mdc rule` into the tool to use it.
+882 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -175,6 +175,7 @@
 | Contract Review | `pm-legal` | `pm-legal/contract-review/contract-review.mdc` |
 | Contributor Guide | `pm-devrel` | `pm-devrel/contributor-guide/contributor-guide.mdc` |
 | Conversion Rate Optimization | `pm-growth` | `pm-growth/conversion-rate-optimization/conversion-rate-optimization.mdc` |
+| Couch-to-Goal Runner | `pm-wellbeing` | `pm-wellbeing/couch-to-goal-runner/couch-to-goal-runner.mdc` |
 | Counteroffer Decoder | `pm-resignation` | `pm-resignation/counteroffer-decoder/counteroffer-decoder.mdc` |
 | Cover Letter | `pm-personal` | `pm-personal/cover-letter/cover-letter.mdc` |
 | Coverage Gap Analysis | `pm-insurance` | `pm-insurance/coverage-gap-analysis/coverage-gap-analysis.mdc` |
@@ -237,6 +238,7 @@
 | Design Critique | `pm-design` | `pm-design/design-critique/design-critique.mdc` |
 | Design Handoff Brief | `pm-advanced` | `pm-advanced/design-handoff-brief/design-handoff-brief.mdc` |
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/design-system-audit.mdc` |
+| Desk Ergonomics Audit | `pm-wellbeing` | `pm-wellbeing/desk-ergonomics-audit/desk-ergonomics-audit.mdc` |
 | Desk Research Sprint | `pm-cowork` | `pm-cowork/desk-research-sprint/desk-research-sprint.mdc` |
 | Desktop Zero | `pm-cowork` | `pm-cowork/desktop-zero/desktop-zero.mdc` |
 | Developer Onboarding Document | `pm-engineering` | `pm-engineering/developer-onboarding-doc/developer-onboarding-doc.mdc` |
@@ -367,11 +369,13 @@
 | Go-To-Market | `pm-gtm` | `pm-gtm/go-to-market/go-to-market.mdc` |
 | Go-to-Market Planner | `pm-delivery` | `pm-delivery/go-to-market-planner/go-to-market-planner.mdc` |
 | Grant Proposal | `pm-cross` | `pm-cross/grant-proposal/grant-proposal.mdc` |
+| Gratitude Practice | `pm-wellbeing` | `pm-wellbeing/gratitude-practice/gratitude-practice.mdc` |
 | Greenwashing Self-Audit | `pm-climate` | `pm-climate/greenwashing-self-audit/greenwashing-self-audit.mdc` |
 | Grocery Budget Audit | `pm-kitchen` | `pm-kitchen/grocery-budget-audit/grocery-budget-audit.mdc` |
 | Group Trip Negotiator | `other` | `other/group-trip-negotiator/group-trip-negotiator.mdc` |
 | Growth Experiment Backlog | `pm-growth` | `pm-growth/growth-experiment-backlog/growth-experiment-backlog.mdc` |
 | Guest Incident Log | `pm-hospitality` | `pm-hospitality/guest-incident-log/guest-incident-log.mdc` |
+| Habit Builder | `pm-wellbeing` | `pm-wellbeing/habit-builder/habit-builder.mdc` |
 | Handbook Page | `pm-cowork` | `pm-cowork/handbook-page/handbook-page.mdc` |
 | Hardware PRD | `pm-hardware` | `pm-hardware/hardware-prd/hardware-prd.mdc` |
 | Headline Options | `pm-copy` | `pm-copy/headline-options/headline-options.mdc` |
@@ -383,10 +387,12 @@
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/hoa-decoder.mdc` |
 | Hobby Starter Kit | `pm-hobbies` | `pm-hobbies/hobby-starter-kit/hobby-starter-kit.mdc` |
 | Home Contractor Quote Decoder | `pm-decoders` | `pm-decoders/home-contractor-quote-decoder/home-contractor-quote-decoder.mdc` |
+| Home Workout Builder | `pm-wellbeing` | `pm-wellbeing/home-workout-builder/home-workout-builder.mdc` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/hook-writer.mdc` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/house-style-enforcer.mdc` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/houseplant-care.mdc` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/human-in-the-loop-design.mdc` |
+| Hydration & Energy Plan | `pm-wellbeing` | `pm-wellbeing/hydration-and-energy-plan/hydration-and-energy-plan.mdc` |
 | i18n Readiness Review | `pm-localization` | `pm-localization/i18n-readiness-review/i18n-readiness-review.mdc` |
 | IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/iep-504-meeting-kit.mdc` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/iep-goal-support.mdc` |
@@ -425,6 +431,7 @@
 | Job Application | `pm-business` | `pm-business/job-application/job-application.mdc` |
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/job-description-writer.mdc` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/job-story-mapper.mdc` |
+| Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/journaling-prompts.mdc` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/karaoke-song-picker.mdc` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/kb-audit.mdc` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/knowledge-gardening.mdc` |
@@ -556,6 +563,7 @@
 | Policy Memo | `pm-gov` | `pm-gov/policy-memo/policy-memo.mdc` |
 | Policy Renewal Review | `pm-insurance` | `pm-insurance/policy-renewal-review/policy-renewal-review.mdc` |
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/portfolio-page.mdc` |
+| Posture Reset Plan | `pm-wellbeing` | `pm-wellbeing/posture-reset-plan/posture-reset-plan.mdc` |
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/pptx-slide-auditor.mdc` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/pr-crisis-response.mdc` |
 | PR Description | `pm-craft` | `pm-craft/pr-description/pr-description.mdc` |
@@ -614,6 +622,7 @@
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/rate-card.mdc` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/readme-writer.mdc` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/receipts-audit.mdc` |
+| Recovery Day Planner | `pm-wellbeing` | `pm-wellbeing/recovery-day-planner/recovery-day-planner.mdc` |
 | Recruiter Outreach | `pm-recruiting` | `pm-recruiting/recruiter-outreach/recruiter-outreach.mdc` |
 | Recurring Meeting Pruner | `pm-cowork` | `pm-cowork/recurring-meeting-pruner/recurring-meeting-pruner.mdc` |
 | Red-Team Review | `pm-cross` | `pm-cross/red-team-review/red-team-review.mdc` |
@@ -685,6 +694,7 @@
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/schedule-recipe.mdc` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/schema-markup.mdc` |
 | Scope Creep Response | `pm-freelance` | `pm-freelance/scope-creep-response/scope-creep-response.mdc` |
+| Screen-Time Detox | `pm-wellbeing` | `pm-wellbeing/screen-time-detox/screen-time-detox.mdc` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/screenshot-teardown.mdc` |
 | Second Opinion Request | `pm-lifeadmin` | `pm-lifeadmin/second-opinion-request/second-opinion-request.mdc` |
 | Security Deposit Recovery | `pm-renters` | `pm-renters/security-deposit-recovery/security-deposit-recovery.mdc` |
@@ -710,6 +720,7 @@
 | Skill Fusion | `pm-advanced` | `pm-advanced/skill-fusion/skill-fusion.mdc` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/skill-security-auditor.mdc` |
 | Skill Vetting | `pm-security` | `pm-security/skill-vetting/skill-vetting.mdc` |
+| Sleep Reset Plan | `pm-wellbeing` | `pm-wellbeing/sleep-reset-plan/sleep-reset-plan.mdc` |
 | Slide Deck | `pm-documents` | `pm-documents/slide-deck/slide-deck.mdc` |
 | Slide Density Rules | `pm-cowork` | `pm-cowork/slide-density-rules/slide-density-rules.mdc` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/slo-error-budget.mdc` |
@@ -753,6 +764,7 @@
 | Story Pitch | `pm-journalism` | `pm-journalism/story-pitch/story-pitch.mdc` |
 | Strategic Narrative Generator | `pm-strategy` | `pm-strategy/strategic-narrative-generator/strategic-narrative-generator.mdc` |
 | Strategy Memo | `pm-business` | `pm-business/strategy-memo/strategy-memo.mdc` |
+| Stretching Routine | `pm-wellbeing` | `pm-wellbeing/stretching-routine/stretching-routine.mdc` |
 | Student Feedback | `pm-education` | `pm-education/student-feedback/student-feedback.mdc` |
 | Student Loan Strategy | `pm-calculators` | `pm-calculators/student-loan-strategy/student-loan-strategy.mdc` |
 | Study Notes Synthesizer | `pm-students` | `pm-students/study-notes-synthesizer/study-notes-synthesizer.mdc` |

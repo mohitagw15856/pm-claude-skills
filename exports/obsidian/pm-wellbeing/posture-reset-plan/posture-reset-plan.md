@@ -1,0 +1,80 @@
+---
+aliases: ["Posture Reset Plan"]
+tags: [pm-skills, skill]
+skill: posture-reset-plan
+description: "Fix the screen-hunch with a realistic plan — the desk fixes, the two or three exercises that counter it, and movement habits that beat any single stretch. Use when asked how to fix my posture, I have bad posture from sitting, tech neck, or rounded shoulders help. Produces a quick posture-cause read, immediate desk/setup fixes, a few high-value strengthening and mobility moves, movement-break habits, and honest expectations — plus a 'see a professional for pain/numbness' flag."
+---
+
+# Posture Reset Plan
+
+"Sit up straight" doesn't work because posture isn't willpower — it's a setup and a habit. This tackles the real drivers of the desk-hunch: an ergonomics fix so your body isn't fighting the chair, a couple of exercises to strengthen what's weak and open what's tight, and movement breaks — because the best posture is the next position, not one perfect pose.
+
+## What This Skill Produces
+
+- **The cause read** — what's likely driving it (forward head, rounded shoulders, tight hips) from your description
+- **Immediate setup fixes** — screen height, chair, keyboard, phone habits that remove the root cause
+- **The few moves that matter** — strengthen the upper back/core, open the chest/hip flexors
+- **Movement habits** — break cadence and micro-resets that beat any single stretch
+- **Honest expectations & safety** — this takes weeks of consistency; see a professional for pain, numbness, or tingling
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The complaint** — rounded shoulders, forward head/"tech neck", hunched back, or general
+- **Your setup** — desk/laptop/monitor, chair, hours seated, phone use
+- **Symptoms** — stiffness vs actual pain/numbness (changes the advice)
+- **Time** — what you'll realistically do daily
+- **Activity level** — sedentary, some exercise, active
+
+## Framework: Setup, Strengthen, Move
+
+1. **Fix the environment first.** Screen at eye level, elbows ~90°, feet supported — no exercise overcomes a setup that pulls you into the hunch all day.
+2. **Strengthen the weak, open the tight.** The desk pattern usually means a weak upper back/deep neck and tight chest/hip flexors — target those, not everything.
+3. **Prioritize movement over posture policing.** Frequent position changes and short breaks beat trying to hold one "correct" pose.
+4. **Keep it minimal and daily.** Two or three moves done daily beat a long routine done rarely.
+5. **Set real expectations and flag pain.** Change takes consistent weeks; pain, numbness, or tingling means see a professional, not push harder.
+
+## Output Format
+
+### Posture reset: [complaint] · [setup] · [time/day]
+
+**Likely driver:** [forward head / rounded shoulders / …].
+
+**Fix your setup now**
+- Screen: [height] · Chair: [support] · Phone: [raise it] · Keyboard/mouse: [position].
+
+**Do these (daily)**
+1. [Strengthen move] — [reps]. 2. [Mobility move] — [hold]. 3. [Reset] — [when].
+
+**Movement habit:** [break every X min — a specific cue].
+**Expect:** weeks of consistency. **See a pro if:** pain, numbness, or tingling.
+
+## Quality Checks
+- [ ] Addresses the ergonomic setup as the root cause, not just exercises
+- [ ] Targets the specific weak/tight pattern from the complaint
+- [ ] Emphasizes movement/breaks over holding one pose
+- [ ] Routine is minimal and daily-doable
+- [ ] Flags pain/numbness as a see-a-professional signal
+- [ ] Sets honest timeline expectations
+
+## Anti-Patterns
+- **"Just sit up straight"** — ignores setup and habit.
+- **Only exercises**, leaving the desk pulling them back into the hunch.
+- **A huge routine** they won't sustain.
+- **Promising a quick fix** — it takes weeks.
+- **Treating pain/numbness** as something to stretch through.
+
+## Example Trigger Phrases
+- "How do I fix my posture from working at a laptop all day?"
+- "I've got tech neck — help."
+- "My shoulders are really rounded, what should I do?"
+- "Desk setup and exercises to stop hunching."
+- "Simple daily routine to improve my posture."
+
+---
+<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
+     variable for the highlighted text — replace it with your plugin's equivalent
+     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
+Apply the skill above to the following input:
+
+{{selection}}

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-870 skills exported. Copy a `SKILL.md` into the tool to use it.
+882 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -175,6 +175,7 @@
 | Contract Review | `pm-legal` | `contract-review/SKILL.md` |
 | Contributor Guide | `pm-devrel` | `contributor-guide/SKILL.md` |
 | Conversion Rate Optimization | `pm-growth` | `conversion-rate-optimization/SKILL.md` |
+| Couch-to-Goal Runner | `pm-wellbeing` | `couch-to-goal-runner/SKILL.md` |
 | Counteroffer Decoder | `pm-resignation` | `counteroffer-decoder/SKILL.md` |
 | Cover Letter | `pm-personal` | `cover-letter/SKILL.md` |
 | Coverage Gap Analysis | `pm-insurance` | `coverage-gap-analysis/SKILL.md` |
@@ -237,6 +238,7 @@
 | Design Critique | `pm-design` | `design-critique/SKILL.md` |
 | Design Handoff Brief | `pm-advanced` | `design-handoff-brief/SKILL.md` |
 | Design System Audit | `pm-design` | `design-system-audit/SKILL.md` |
+| Desk Ergonomics Audit | `pm-wellbeing` | `desk-ergonomics-audit/SKILL.md` |
 | Desk Research Sprint | `pm-cowork` | `desk-research-sprint/SKILL.md` |
 | Desktop Zero | `pm-cowork` | `desktop-zero/SKILL.md` |
 | Developer Onboarding Document | `pm-engineering` | `developer-onboarding-doc/SKILL.md` |
@@ -367,11 +369,13 @@
 | Go-To-Market | `pm-gtm` | `go-to-market/SKILL.md` |
 | Go-to-Market Planner | `pm-delivery` | `go-to-market-planner/SKILL.md` |
 | Grant Proposal | `pm-cross` | `grant-proposal/SKILL.md` |
+| Gratitude Practice | `pm-wellbeing` | `gratitude-practice/SKILL.md` |
 | Greenwashing Self-Audit | `pm-climate` | `greenwashing-self-audit/SKILL.md` |
 | Grocery Budget Audit | `pm-kitchen` | `grocery-budget-audit/SKILL.md` |
 | Group Trip Negotiator | `other` | `group-trip-negotiator/SKILL.md` |
 | Growth Experiment Backlog | `pm-growth` | `growth-experiment-backlog/SKILL.md` |
 | Guest Incident Log | `pm-hospitality` | `guest-incident-log/SKILL.md` |
+| Habit Builder | `pm-wellbeing` | `habit-builder/SKILL.md` |
 | Handbook Page | `pm-cowork` | `handbook-page/SKILL.md` |
 | Hardware PRD | `pm-hardware` | `hardware-prd/SKILL.md` |
 | Headline Options | `pm-copy` | `headline-options/SKILL.md` |
@@ -383,10 +387,12 @@
 | HOA Decoder | `pm-decoders` | `hoa-decoder/SKILL.md` |
 | Hobby Starter Kit | `pm-hobbies` | `hobby-starter-kit/SKILL.md` |
 | Home Contractor Quote Decoder | `pm-decoders` | `home-contractor-quote-decoder/SKILL.md` |
+| Home Workout Builder | `pm-wellbeing` | `home-workout-builder/SKILL.md` |
 | Hook Writer | `pm-creator` | `hook-writer/SKILL.md` |
 | House Style Enforcer | `pm-cowork` | `house-style-enforcer/SKILL.md` |
 | Houseplant Care | `pm-hobbies` | `houseplant-care/SKILL.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `human-in-the-loop-design/SKILL.md` |
+| Hydration & Energy Plan | `pm-wellbeing` | `hydration-and-energy-plan/SKILL.md` |
 | i18n Readiness Review | `pm-localization` | `i18n-readiness-review/SKILL.md` |
 | IEP 504 Meeting Kit | `pm-parents` | `iep-504-meeting-kit/SKILL.md` |
 | IEP Goal Support | `pm-education` | `iep-goal-support/SKILL.md` |
@@ -425,6 +431,7 @@
 | Job Application | `pm-business` | `job-application/SKILL.md` |
 | Job Description Writer | `pm-hr` | `job-description-writer/SKILL.md` |
 | Job Story Mapper | `pm-discovery` | `job-story-mapper/SKILL.md` |
+| Journaling Prompts | `pm-wellbeing` | `journaling-prompts/SKILL.md` |
 | Karaoke Song Picker | `pm-hobbies` | `karaoke-song-picker/SKILL.md` |
 | Knowledge Base Audit | `pm-support` | `kb-audit/SKILL.md` |
 | Knowledge Gardening | `pm-cowork` | `knowledge-gardening/SKILL.md` |
@@ -556,6 +563,7 @@
 | Policy Memo | `pm-gov` | `policy-memo/SKILL.md` |
 | Policy Renewal Review | `pm-insurance` | `policy-renewal-review/SKILL.md` |
 | Portfolio Page | `pm-personal` | `portfolio-page/SKILL.md` |
+| Posture Reset Plan | `pm-wellbeing` | `posture-reset-plan/SKILL.md` |
 | PPTX Slide Auditor | `pm-delivery` | `pptx-slide-auditor/SKILL.md` |
 | PR Crisis Response | `pm-crisis` | `pr-crisis-response/SKILL.md` |
 | PR Description | `pm-craft` | `pr-description/SKILL.md` |
@@ -614,6 +622,7 @@
 | Rate Card | `pm-consulting` | `rate-card/SKILL.md` |
 | README Writer | `pm-devrel` | `readme-writer/SKILL.md` |
 | Receipts Audit | `pm-method` | `receipts-audit/SKILL.md` |
+| Recovery Day Planner | `pm-wellbeing` | `recovery-day-planner/SKILL.md` |
 | Recruiter Outreach | `pm-recruiting` | `recruiter-outreach/SKILL.md` |
 | Recurring Meeting Pruner | `pm-cowork` | `recurring-meeting-pruner/SKILL.md` |
 | Red-Team Review | `pm-cross` | `red-team-review/SKILL.md` |
@@ -685,6 +694,7 @@
 | Schedule Recipe | `pm-autopilot` | `schedule-recipe/SKILL.md` |
 | Schema Markup | `pm-growth` | `schema-markup/SKILL.md` |
 | Scope Creep Response | `pm-freelance` | `scope-creep-response/SKILL.md` |
+| Screen-Time Detox | `pm-wellbeing` | `screen-time-detox/SKILL.md` |
 | Screenshot Teardown | `pm-vision` | `screenshot-teardown/SKILL.md` |
 | Second Opinion Request | `pm-lifeadmin` | `second-opinion-request/SKILL.md` |
 | Security Deposit Recovery | `pm-renters` | `security-deposit-recovery/SKILL.md` |
@@ -710,6 +720,7 @@
 | Skill Fusion | `pm-advanced` | `skill-fusion/SKILL.md` |
 | Skill Security Auditor | `pm-engineering` | `skill-security-auditor/SKILL.md` |
 | Skill Vetting | `pm-security` | `skill-vetting/SKILL.md` |
+| Sleep Reset Plan | `pm-wellbeing` | `sleep-reset-plan/SKILL.md` |
 | Slide Deck | `pm-documents` | `slide-deck/SKILL.md` |
 | Slide Density Rules | `pm-cowork` | `slide-density-rules/SKILL.md` |
 | SLO and Error Budget | `pm-engineering` | `slo-error-budget/SKILL.md` |
@@ -753,6 +764,7 @@
 | Story Pitch | `pm-journalism` | `story-pitch/SKILL.md` |
 | Strategic Narrative Generator | `pm-strategy` | `strategic-narrative-generator/SKILL.md` |
 | Strategy Memo | `pm-business` | `strategy-memo/SKILL.md` |
+| Stretching Routine | `pm-wellbeing` | `stretching-routine/SKILL.md` |
 | Student Feedback | `pm-education` | `student-feedback/SKILL.md` |
 | Student Loan Strategy | `pm-calculators` | `student-loan-strategy/SKILL.md` |
 | Study Notes Synthesizer | `pm-students` | `study-notes-synthesizer/SKILL.md` |

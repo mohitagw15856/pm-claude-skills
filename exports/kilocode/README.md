@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-870 skills exported. Copy a `.md rule` into the tool to use it.
+882 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -175,6 +175,7 @@
 | Contract Review | `pm-legal` | `pm-legal/contract-review/contract-review.md` |
 | Contributor Guide | `pm-devrel` | `pm-devrel/contributor-guide/contributor-guide.md` |
 | Conversion Rate Optimization | `pm-growth` | `pm-growth/conversion-rate-optimization/conversion-rate-optimization.md` |
+| Couch-to-Goal Runner | `pm-wellbeing` | `pm-wellbeing/couch-to-goal-runner/couch-to-goal-runner.md` |
 | Counteroffer Decoder | `pm-resignation` | `pm-resignation/counteroffer-decoder/counteroffer-decoder.md` |
 | Cover Letter | `pm-personal` | `pm-personal/cover-letter/cover-letter.md` |
 | Coverage Gap Analysis | `pm-insurance` | `pm-insurance/coverage-gap-analysis/coverage-gap-analysis.md` |
@@ -237,6 +238,7 @@
 | Design Critique | `pm-design` | `pm-design/design-critique/design-critique.md` |
 | Design Handoff Brief | `pm-advanced` | `pm-advanced/design-handoff-brief/design-handoff-brief.md` |
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/design-system-audit.md` |
+| Desk Ergonomics Audit | `pm-wellbeing` | `pm-wellbeing/desk-ergonomics-audit/desk-ergonomics-audit.md` |
 | Desk Research Sprint | `pm-cowork` | `pm-cowork/desk-research-sprint/desk-research-sprint.md` |
 | Desktop Zero | `pm-cowork` | `pm-cowork/desktop-zero/desktop-zero.md` |
 | Developer Onboarding Document | `pm-engineering` | `pm-engineering/developer-onboarding-doc/developer-onboarding-doc.md` |
@@ -367,11 +369,13 @@
 | Go-To-Market | `pm-gtm` | `pm-gtm/go-to-market/go-to-market.md` |
 | Go-to-Market Planner | `pm-delivery` | `pm-delivery/go-to-market-planner/go-to-market-planner.md` |
 | Grant Proposal | `pm-cross` | `pm-cross/grant-proposal/grant-proposal.md` |
+| Gratitude Practice | `pm-wellbeing` | `pm-wellbeing/gratitude-practice/gratitude-practice.md` |
 | Greenwashing Self-Audit | `pm-climate` | `pm-climate/greenwashing-self-audit/greenwashing-self-audit.md` |
 | Grocery Budget Audit | `pm-kitchen` | `pm-kitchen/grocery-budget-audit/grocery-budget-audit.md` |
 | Group Trip Negotiator | `other` | `other/group-trip-negotiator/group-trip-negotiator.md` |
 | Growth Experiment Backlog | `pm-growth` | `pm-growth/growth-experiment-backlog/growth-experiment-backlog.md` |
 | Guest Incident Log | `pm-hospitality` | `pm-hospitality/guest-incident-log/guest-incident-log.md` |
+| Habit Builder | `pm-wellbeing` | `pm-wellbeing/habit-builder/habit-builder.md` |
 | Handbook Page | `pm-cowork` | `pm-cowork/handbook-page/handbook-page.md` |
 | Hardware PRD | `pm-hardware` | `pm-hardware/hardware-prd/hardware-prd.md` |
 | Headline Options | `pm-copy` | `pm-copy/headline-options/headline-options.md` |
@@ -383,10 +387,12 @@
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/hoa-decoder.md` |
 | Hobby Starter Kit | `pm-hobbies` | `pm-hobbies/hobby-starter-kit/hobby-starter-kit.md` |
 | Home Contractor Quote Decoder | `pm-decoders` | `pm-decoders/home-contractor-quote-decoder/home-contractor-quote-decoder.md` |
+| Home Workout Builder | `pm-wellbeing` | `pm-wellbeing/home-workout-builder/home-workout-builder.md` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/hook-writer.md` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/house-style-enforcer.md` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/houseplant-care.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/human-in-the-loop-design.md` |
+| Hydration & Energy Plan | `pm-wellbeing` | `pm-wellbeing/hydration-and-energy-plan/hydration-and-energy-plan.md` |
 | i18n Readiness Review | `pm-localization` | `pm-localization/i18n-readiness-review/i18n-readiness-review.md` |
 | IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/iep-504-meeting-kit.md` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/iep-goal-support.md` |
@@ -425,6 +431,7 @@
 | Job Application | `pm-business` | `pm-business/job-application/job-application.md` |
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/job-description-writer.md` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/job-story-mapper.md` |
+| Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/journaling-prompts.md` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/karaoke-song-picker.md` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/kb-audit.md` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/knowledge-gardening.md` |
@@ -556,6 +563,7 @@
 | Policy Memo | `pm-gov` | `pm-gov/policy-memo/policy-memo.md` |
 | Policy Renewal Review | `pm-insurance` | `pm-insurance/policy-renewal-review/policy-renewal-review.md` |
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/portfolio-page.md` |
+| Posture Reset Plan | `pm-wellbeing` | `pm-wellbeing/posture-reset-plan/posture-reset-plan.md` |
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/pptx-slide-auditor.md` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/pr-crisis-response.md` |
 | PR Description | `pm-craft` | `pm-craft/pr-description/pr-description.md` |
@@ -614,6 +622,7 @@
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/rate-card.md` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/readme-writer.md` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/receipts-audit.md` |
+| Recovery Day Planner | `pm-wellbeing` | `pm-wellbeing/recovery-day-planner/recovery-day-planner.md` |
 | Recruiter Outreach | `pm-recruiting` | `pm-recruiting/recruiter-outreach/recruiter-outreach.md` |
 | Recurring Meeting Pruner | `pm-cowork` | `pm-cowork/recurring-meeting-pruner/recurring-meeting-pruner.md` |
 | Red-Team Review | `pm-cross` | `pm-cross/red-team-review/red-team-review.md` |
@@ -685,6 +694,7 @@
 | Schedule Recipe | `pm-autopilot` | `pm-autopilot/schedule-recipe/schedule-recipe.md` |
 | Schema Markup | `pm-growth` | `pm-growth/schema-markup/schema-markup.md` |
 | Scope Creep Response | `pm-freelance` | `pm-freelance/scope-creep-response/scope-creep-response.md` |
+| Screen-Time Detox | `pm-wellbeing` | `pm-wellbeing/screen-time-detox/screen-time-detox.md` |
 | Screenshot Teardown | `pm-vision` | `pm-vision/screenshot-teardown/screenshot-teardown.md` |
 | Second Opinion Request | `pm-lifeadmin` | `pm-lifeadmin/second-opinion-request/second-opinion-request.md` |
 | Security Deposit Recovery | `pm-renters` | `pm-renters/security-deposit-recovery/security-deposit-recovery.md` |
@@ -710,6 +720,7 @@
 | Skill Fusion | `pm-advanced` | `pm-advanced/skill-fusion/skill-fusion.md` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/skill-security-auditor.md` |
 | Skill Vetting | `pm-security` | `pm-security/skill-vetting/skill-vetting.md` |
+| Sleep Reset Plan | `pm-wellbeing` | `pm-wellbeing/sleep-reset-plan/sleep-reset-plan.md` |
 | Slide Deck | `pm-documents` | `pm-documents/slide-deck/slide-deck.md` |
 | Slide Density Rules | `pm-cowork` | `pm-cowork/slide-density-rules/slide-density-rules.md` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/slo-error-budget.md` |
@@ -753,6 +764,7 @@
 | Story Pitch | `pm-journalism` | `pm-journalism/story-pitch/story-pitch.md` |
 | Strategic Narrative Generator | `pm-strategy` | `pm-strategy/strategic-narrative-generator/strategic-narrative-generator.md` |
 | Strategy Memo | `pm-business` | `pm-business/strategy-memo/strategy-memo.md` |
+| Stretching Routine | `pm-wellbeing` | `pm-wellbeing/stretching-routine/stretching-routine.md` |
 | Student Feedback | `pm-education` | `pm-education/student-feedback/student-feedback.md` |
 | Student Loan Strategy | `pm-calculators` | `pm-calculators/student-loan-strategy/student-loan-strategy.md` |
 | Study Notes Synthesizer | `pm-students` | `pm-students/study-notes-synthesizer/study-notes-synthesizer.md` |
