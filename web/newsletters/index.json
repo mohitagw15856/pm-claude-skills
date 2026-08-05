@@ -1,6 +1,11 @@
 {
-  "count": 2,
+  "count": 3,
   "issues": [
+    {
+      "tag": "v72.0.0",
+      "title": "100 new skills: the Everyday Life update 🎉",
+      "href": "v72.0.0.html"
+    },
     {
       "tag": "v71.0.0",
       "title": "9 new skills: get your money back 💷",
