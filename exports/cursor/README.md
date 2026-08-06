@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-958 skills exported. Copy a `.mdc rule` into the tool to use it.
+982 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -55,6 +55,7 @@
 | Architecture Decision Record (ADR) | `pm-engineering` | `pm-engineering/architecture-decision-record/architecture-decision-record.mdc` |
 | Architecture Diagram | `pm-visuals` | `pm-visuals/architecture-diagram/architecture-diagram.mdc` |
 | Archive Strategy | `pm-cowork` | `pm-cowork/archive-strategy/archive-strategy.mdc` |
+| Assumption Audit | `pm-thinking` | `pm-thinking/assumption-audit/assumption-audit.mdc` |
 | Assumption Bounty | `pm-warroom` | `pm-warroom/assumption-bounty/assumption-bounty.mdc` |
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/assumption-mapper.mdc` |
 | Async Decision Memo | `pm-operations` | `pm-operations/async-decision-memo/async-decision-memo.mdc` |
@@ -204,6 +205,7 @@
 | Creator Deal Decoder | `pm-newgen` | `pm-newgen/creator-deal-decoder/creator-deal-decoder.mdc` |
 | Creator Media Kit | `pm-creator` | `pm-creator/creator-media-kit/creator-media-kit.mdc` |
 | Credit Memo | `pm-banking` | `pm-banking/credit-memo/credit-memo.mdc` |
+| Cross-Examine Me | `pm-thinking` | `pm-thinking/cross-examine-me/cross-examine-me.mdc` |
 | Crypto Prices | `pm-live` | `pm-live/crypto-prices/crypto-prices.mdc` |
 | Customer Escalation Brief | `pm-cs` | `pm-cs/cs-escalation-brief/cs-escalation-brief.mdc` |
 | Customer Health Scorecard | `pm-cs` | `pm-cs/cs-health-scorecard/cs-health-scorecard.mdc` |
@@ -242,6 +244,7 @@
 | Decision Log Setup | `pm-cowork` | `pm-cowork/decision-log-setup/decision-log-setup.mdc` |
 | Decision Meeting Format | `pm-cowork` | `pm-cowork/decision-meeting-format/decision-meeting-format.mdc` |
 | Decision Memo | `pm-business` | `pm-business/decision-memo/decision-memo.mdc` |
+| Decision Panel | `pm-thinking` | `pm-thinking/decision-panel/decision-panel.mdc` |
 | Deck Autopsy | `pm-vision` | `pm-vision/deck-autopsy/deck-autopsy.mdc` |
 | Deck from Doc (Live) | `pm-cowork-live` | `pm-cowork-live/deck-from-doc/deck-from-doc.mdc` |
 | Deck Narrative Arc | `pm-cowork` | `pm-cowork/deck-narrative-arc/deck-narrative-arc.mdc` |
@@ -267,6 +270,7 @@
 | Desk Research Sprint | `pm-cowork` | `pm-cowork/desk-research-sprint/desk-research-sprint.mdc` |
 | Desktop Zero | `pm-cowork` | `pm-cowork/desktop-zero/desktop-zero.mdc` |
 | Developer Onboarding Document | `pm-engineering` | `pm-engineering/developer-onboarding-doc/developer-onboarding-doc.mdc` |
+| Devil's Advocate On Demand | `pm-thinking` | `pm-thinking/devils-advocate-on-demand/devils-advocate-on-demand.mdc` |
 | Devil's Twin | `pm-warroom` | `pm-warroom/devils-twin/devils-twin.mdc` |
 | Dictionary Lookup | `pm-live` | `pm-live/dictionary-lookup/dictionary-lookup.mdc` |
 | Difficult Conversation | `pm-comms` | `pm-comms/difficult-conversation/difficult-conversation.mdc` |
@@ -340,6 +344,7 @@
 | Experiment Designer | `pm-advanced` | `pm-advanced/experiment-designer/experiment-designer.mdc` |
 | Experiment Readout | `pm-dataeng` | `pm-dataeng/experiment-readout/experiment-readout.mdc` |
 | Expert Interview Prep | `pm-cowork` | `pm-cowork/expert-interview-prep/expert-interview-prep.mdc` |
+| Explain My Decision To Me | `pm-thinking` | `pm-thinking/explain-my-decision-to-me/explain-my-decision-to-me.mdc` |
 | Explain Simply | `pm-comms` | `pm-comms/explain-simply/explain-simply.mdc` |
 | Exploratory Test Charter | `pm-qa` | `pm-qa/exploratory-test-charter/exploratory-test-charter.mdc` |
 | Fact-Check Pass | `pm-journalism` | `pm-journalism/fact-check-pass/fact-check-pass.mdc` |
@@ -371,6 +376,7 @@
 | First Client Contract | `pm-sidehustle` | `pm-sidehustle/first-client-contract/first-client-contract.mdc` |
 | First-Hire Plan | `pm-career` | `pm-career/first-hire-plan/first-hire-plan.mdc` |
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/first-maintainer-month.mdc` |
+| Five Minds | `pm-thinking` | `pm-thinking/five-minds/five-minds.mdc` |
 | Flight-Delay Compensation | `pm-lifeadmin` | `pm-lifeadmin/flight-delay-compensation/flight-delay-compensation.mdc` |
 | Flight Tracker | `pm-live` | `pm-live/flight-tracker/flight-tracker.mdc` |
 | Flow Metrics Interpreter | `pm-delivery` | `pm-delivery/flow-metrics-interpreter/flow-metrics-interpreter.mdc` |
@@ -385,11 +391,14 @@
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/founder-market-fit.mdc` |
 | Franklin Decision Ledger | `pm-dead-mentors` | `pm-dead-mentors/franklin-decision-ledger/franklin-decision-ledger.mdc` |
 | Freelance Rate | `pm-calculators` | `pm-calculators/freelance-rate/freelance-rate.mdc` |
+| From First Principles | `pm-thinking` | `pm-thinking/from-first-principles/from-first-principles.mdc` |
 | Frontend Design | `pm-design` | `pm-design/frontend-design/frontend-design.mdc` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/fundraising-faq.mdc` |
+| Future Selves Council | `pm-thinking` | `pm-thinking/future-selves-council/future-selves-council.mdc` |
 | Game Night Planner | `pm-tabletop` | `pm-tabletop/game-night-planner/game-night-planner.mdc` |
 | Gantt / Roadmap | `pm-visuals` | `pm-visuals/gantt-roadmap/gantt-roadmap.mdc` |
 | GDPR Compliance | `pm-compliance` | `pm-compliance/gdpr-compliance/gdpr-compliance.mdc` |
+| Generate, Then Execute | `pm-thinking` | `pm-thinking/generate-then-execute/generate-then-execute.mdc` |
 | Gift-Card Recovery | `pm-money` | `pm-money/gift-card-recovery/gift-card-recovery.mdc` |
 | Gift Finder | `pm-personal` | `pm-personal/gift-finder/gift-finder.mdc` |
 | Git Troubleshooter | `pm-engineering` | `pm-engineering/git-troubleshooter/git-troubleshooter.mdc` |
@@ -429,6 +438,7 @@
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/human-in-the-loop-design.mdc` |
 | Hydration & Energy Plan | `pm-wellbeing` | `pm-wellbeing/hydration-and-energy-plan/hydration-and-energy-plan.mdc` |
 | i18n Readiness Review | `pm-localization` | `pm-localization/i18n-readiness-review/i18n-readiness-review.mdc` |
+| Idea Storm | `pm-thinking` | `pm-thinking/idea-storm/idea-storm.mdc` |
 | Identity Theft Recovery | `pm-digital-safety` | `pm-digital-safety/identity-theft-recovery/identity-theft-recovery.mdc` |
 | IEP 504 Meeting Kit | `pm-parents` | `pm-parents/iep-504-meeting-kit/iep-504-meeting-kit.mdc` |
 | IEP Goal Support | `pm-education` | `pm-education/iep-goal-support/iep-goal-support.mdc` |
@@ -456,12 +466,14 @@
 | Interview Question Bank | `pm-recruiting` | `pm-recruiting/interview-question-bank/interview-question-bank.mdc` |
 | Interview Synthesis | `pm-cowork` | `pm-cowork/interview-synthesis/interview-synthesis.mdc` |
 | Inventory Policy | `pm-supplychain` | `pm-supplychain/inventory-policy/inventory-policy.mdc` |
+| Inversion Thinking | `pm-thinking` | `pm-thinking/inversion-thinking/inversion-thinking.mdc` |
 | Investing Policy Statement | `pm-money` | `pm-money/investing-policy-statement/investing-policy-statement.mdc` |
 | Investor Cold Email | `pm-founders` | `pm-founders/investor-cold-email/investor-cold-email.mdc` |
 | Investor Pitch Deck | `pm-finance` | `pm-finance/investor-pitch-deck/investor-pitch-deck.mdc` |
 | Investor Update | `pm-business` | `pm-business/investor-update/investor-update.mdc` |
 | Invoice Generator | `pm-accounting` | `pm-accounting/invoice-generator/invoice-generator.mdc` |
 | IP Lookup | `pm-live` | `pm-live/ip-lookup/ip-lookup.mdc` |
+| Is This Actually Good | `pm-thinking` | `pm-thinking/is-this-actually-good/is-this-actually-good.mdc` |
 | ISO 27001 ISMS | `pm-compliance` | `pm-compliance/iso-27001-isms/iso-27001-isms.mdc` |
 | ISS Tracker | `pm-live` | `pm-live/iss-tracker/iss-tracker.mdc` |
 | Issue Triage (Live) | `pm-cowork-live` | `pm-cowork-live/issue-triage-live/issue-triage-live.mdc` |
@@ -588,6 +600,7 @@
 | Oversharing Audit | `pm-digital-safety` | `pm-digital-safety/oversharing-audit/oversharing-audit.mdc` |
 | Package Health | `pm-live` | `pm-live/package-health/package-health.mdc` |
 | Paid Acquisition Plan | `pm-growth` | `pm-growth/paid-acquisition-plan/paid-acquisition-plan.mdc` |
+| Panel of Experts | `pm-thinking` | `pm-thinking/panel-of-experts/panel-of-experts.mdc` |
 | Parent Communication | `pm-education` | `pm-education/parent-communication/parent-communication.mdc` |
 | Parent Conference Prep | `pm-teaching` | `pm-teaching/parent-conference-prep/parent-conference-prep.mdc` |
 | Parent Teacher Conference Prep | `pm-parents` | `pm-parents/parent-teacher-conference-prep/parent-teacher-conference-prep.mdc` |
@@ -614,6 +627,7 @@
 | Plain Language Rewrite | `pm-cowork` | `pm-cowork/plain-language-rewrite/plain-language-rewrite.mdc` |
 | Plan My Day | `pm-rituals` | `pm-rituals/plan-my-day/plan-my-day.mdc` |
 | PM Weekly Review | `pm-rituals` | `pm-rituals/pm-weekly-review/pm-weekly-review.mdc` |
+| Poke Holes In This | `pm-thinking` | `pm-thinking/poke-holes-in-this/poke-holes-in-this.mdc` |
 | Policy Drafter | `pm-cowork` | `pm-cowork/policy-drafter/policy-drafter.mdc` |
 | Policy Memo | `pm-gov` | `pm-gov/policy-memo/policy-memo.mdc` |
 | Policy Renewal Review | `pm-insurance` | `pm-insurance/policy-renewal-review/policy-renewal-review.mdc` |
@@ -626,6 +640,7 @@
 | PR Description (Live) | `pm-cowork-live` | `pm-cowork-live/pr-description-live/pr-description-live.mdc` |
 | PR Description Writer | `pm-engineering` | `pm-engineering/pr-description-writer/pr-description-writer.mdc` |
 | PRD Template | `pm-essentials` | `pm-essentials/prd-template/prd-template.mdc` |
+| Pre-Mortem Panel | `pm-thinking` | `pm-thinking/pre-mortem-panel/pre-mortem-panel.mdc` |
 | Premortem Assassin | `pm-warroom` | `pm-warroom/premortem-assassin/premortem-assassin.mdc` |
 | Prescription Cost Navigator | `pm-lifeadmin` | `pm-lifeadmin/prescription-cost-navigator/prescription-cost-navigator.mdc` |
 | Presenter Notes | `pm-cowork` | `pm-cowork/presenter-notes/presenter-notes.mdc` |
@@ -684,6 +699,7 @@
 | Recovery Day Planner | `pm-wellbeing` | `pm-wellbeing/recovery-day-planner/recovery-day-planner.mdc` |
 | Recruiter Outreach | `pm-recruiting` | `pm-recruiting/recruiter-outreach/recruiter-outreach.mdc` |
 | Recurring Meeting Pruner | `pm-cowork` | `pm-cowork/recurring-meeting-pruner/recurring-meeting-pruner.mdc` |
+| Red-Team My Plan | `pm-thinking` | `pm-thinking/red-team-my-plan/red-team-my-plan.mdc` |
 | Red-Team Review | `pm-cross` | `pm-cross/red-team-review/red-team-review.mdc` |
 | Redundancy Consultation | `pm-hr` | `pm-hr/redundancy-consultation/redundancy-consultation.mdc` |
 | Refactoring Plan | `pm-craft` | `pm-craft/refactoring-plan/refactoring-plan.mdc` |
@@ -826,6 +842,7 @@
 | Statement Coach | `pm-students` | `pm-students/statement-coach/statement-coach.mdc` |
 | Statement of Work | `pm-consulting` | `pm-consulting/statement-of-work/statement-of-work.mdc` |
 | Status Report Pipeline | `pm-cowork` | `pm-cowork/status-report-pipeline/status-report-pipeline.mdc` |
+| Steelman the Weird Option | `pm-thinking` | `pm-thinking/steelman-the-weird-option/steelman-the-weird-option.mdc` |
 | Stock Snapshot | `pm-live` | `pm-live/stock-snapshot/stock-snapshot.mdc` |
 | Stoic Setback Debrief | `pm-dead-mentors` | `pm-dead-mentors/stoic-setback-debrief/stoic-setback-debrief.mdc` |
 | Story Pitch | `pm-journalism` | `pm-journalism/story-pitch/story-pitch.mdc` |
@@ -872,6 +889,7 @@
 | Test Case Writer | `pm-qa` | `pm-qa/test-case-writer/test-case-writer.mdc` |
 | Test Strategy Document | `pm-engineering` | `pm-engineering/test-strategy-doc/test-strategy-doc.mdc` |
 | Testimonial Request | `pm-freelance` | `pm-freelance/testimonial-request/testimonial-request.mdc` |
+| The Boring Answer Detector | `pm-thinking` | `pm-thinking/the-boring-answer-detector/the-boring-answer-detector.mdc` |
 | The Car Dealership | `pm-simulators` | `pm-simulators/the-car-dealership/the-car-dealership.mdc` |
 | The Churning Customer | `pm-simulators` | `pm-simulators/the-churning-customer/the-churning-customer.mdc` |
 | The Due Diligence Call | `pm-simulators` | `pm-simulators/the-due-diligence-call/the-due-diligence-call.mdc` |
@@ -883,12 +901,17 @@
 | The Price Pushback | `pm-simulators` | `pm-simulators/the-price-pushback/the-price-pushback.mdc` |
 | The Procurement Gauntlet | `pm-simulators` | `pm-simulators/the-procurement-gauntlet/the-procurement-gauntlet.mdc` |
 | The Promotion Committee | `pm-simulators` | `pm-simulators/the-promotion-committee/the-promotion-committee.mdc` |
+| The Second Opinion | `pm-thinking` | `pm-thinking/the-second-opinion/the-second-opinion.mdc` |
+| The Skeptic and the Believer | `pm-thinking` | `pm-thinking/the-skeptic-and-the-believer/the-skeptic-and-the-believer.mdc` |
+| The Strong No | `pm-thinking` | `pm-thinking/the-strong-no/the-strong-no.mdc` |
 | The Thesis Defense | `pm-students` | `pm-students/the-thesis-defense/the-thesis-defense.mdc` |
+| The Third Answer | `pm-thinking` | `pm-thinking/the-third-answer/the-third-answer.mdc` |
 | The Time Capsule | `pm-2027` | `pm-2027/the-time-capsule/the-time-capsule.mdc` |
 | The Understudy | `pm-2027` | `pm-2027/the-understudy/the-understudy.mdc` |
 | The Vibe Check | `pm-newgen` | `pm-newgen/the-vibe-check/the-vibe-check.mdc` |
 | The Visa Interview | `pm-simulators` | `pm-simulators/the-visa-interview/the-visa-interview.mdc` |
 | Thesis Outline | `pm-students` | `pm-students/thesis-outline/thesis-outline.mdc` |
+| Think From Another Angle | `pm-thinking` | `pm-thinking/think-from-another-angle/think-from-another-angle.mdc` |
 | Thread To Decision | `pm-cowork` | `pm-cowork/thread-to-decision/thread-to-decision.mdc` |
 | Thread to Decision (Live) | `pm-cowork-live` | `pm-cowork-live/thread-to-decision-live/thread-to-decision-live.mdc` |
 | Threat Model | `pm-security` | `pm-security/threat-model/threat-model.mdc` |
@@ -944,6 +967,7 @@
 | Wedding Vows Writer | `pm-family` | `pm-family/wedding-vows-writer/wedding-vows-writer.mdc` |
 | Weekly Review Ritual | `pm-cowork` | `pm-cowork/weekly-review-ritual/weekly-review-ritual.mdc` |
 | Wellness Plan | `pm-veterinary` | `pm-veterinary/wellness-plan/wellness-plan.mdc` |
+| What Am I Not Seeing | `pm-thinking` | `pm-thinking/what-am-i-not-seeing/what-am-i-not-seeing.mdc` |
 | What To Ask | `pm-decoders` | `pm-decoders/what-to-ask/what-to-ask.mdc` |
 | What's for Dinner | `pm-kitchen` | `pm-kitchen/whats-for-dinner/whats-for-dinner.mdc` |
 | When Someone Dies | `pm-estate` | `pm-estate/when-someone-dies/when-someone-dies.mdc` |

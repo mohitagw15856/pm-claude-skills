@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-thinking",
+      "description": "Thinking-mode skills that change HOW your AI reasons, not just what it does: escape the generic answer, run cognitive panels, and adversarially stress-test your own decisions. Inspired by parallel-divergent-ideation research.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-thinking",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-family",
       "description": "Family, care & relationships skills: new-baby logistics, childcare & school choice, co-parenting messages, family emergency planning, wedding vows, love letters, long-distance relationships, in-law boundaries, condolences, relationship check-ins, and blending families.",
       "version": "1.0.0",

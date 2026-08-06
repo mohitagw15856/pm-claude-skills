@@ -1,4 +1,4 @@
-# 🗂️ All 958 Skills — full catalog
+# 🗂️ All 982 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -726,7 +726,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (491 skills)
+## 🌍 Industries & Public Sector (515 skills)
 
 ### `other` — 4 skills
 
@@ -1457,6 +1457,35 @@
 | **Lesson Plan Builder** (`lesson-plan-builder`) | Build a standards-aligned K-12 lesson plan with clear objectives, a timed activity sequence, checks for understanding, and differentiation. | — |
 | **Parent Conference Prep** (`parent-conference-prep`) | Prepare for a K-12 parent-teacher conference — including the hard ones. | — |
 
+### `pm-thinking` — 24 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Assumption Audit** (`assumption-audit`) | Surface the hidden assumptions a plan or belief rests on, then test what happens when each one is wrong. | — |
+| **Cross-Examine Me** (`cross-examine-me`) | Stress-test a decision or claim through a sharp, fair Q&A — the questions a good lawyer or skeptical friend would ask before you commit. | — |
+| **Decision Panel** (`decision-panel`) | Run a decision past a panel of clashing advisors — an optimist, a pessimist, a numbers person, an ethicist, and future-you — then get a chair's… | — |
+| **Devil's Advocate On Demand** (`devils-advocate-on-demand`) | Argue hard against whatever you just concluded — so your decision has to survive a real challenge instead of an echo chamber. | — |
+| **Explain My Decision To Me** (`explain-my-decision-to-me`) | Talk through a decision out loud with a patient thinking partner that reflects your reasoning back, so the answer you already half-know becomes clear. | — |
+| **Five Minds** (`five-minds`) | Answer a question five completely different ways — as five independent minds with clashing worldviews — then converge on what survives. | — |
+| **From First Principles** (`from-first-principles`) | Strip a problem down to what's actually true — the physics, economics, and human basics — and rebuild the answer from there, ignoring 'how it's… | — |
+| **Future Selves Council** (`future-selves-council`) | Bring three versions of future-you into a decision — you in a week, in a year, and in ten years — because they each want different things. | — |
+| **Generate, Then Execute** (`generate-then-execute`) | Separate raw idea-generation from judgment so creativity isn't strangled by your inner critic — diverge with zero evaluation, then switch to hard… | — |
+| **Idea Storm** (`idea-storm`) | Generate a big, wide spread of ideas for anything by running the prompt through many different lenses at once, then clustering and picking. | — |
+| **Inversion Thinking** (`inversion-thinking`) | Solve a problem backwards — ask how to guarantee the worst outcome, then avoid all of it. | — |
+| **Is This Actually Good** (`is-this-actually-good`) | Get an honest verdict on whether something you made is actually good — not the reflexive 'this is great!' but a real, criteria-based judgment. | — |
+| **Panel of Experts** (`panel-of-experts`) | Get the take of the specific experts a situation actually needs — a lawyer, a therapist, an accountant, a doctor-minded thinker, whoever fits —… | — |
+| **Poke Holes In This** (`poke-holes-in-this`) | Get only the weaknesses in something you made — no praise, no encouragement padding, just the holes and how to fix them. | — |
+| **Pre-Mortem Panel** (`pre-mortem-panel`) | Imagine your plan already failed, then get five independent 'here's why it died' stories — before you commit. | — |
+| **Red-Team My Plan** (`red-team-my-plan`) | Attack your own plan the way a smart adversary would — find the weakest point, the thing you're hoping nobody notices, and where it breaks under… | — |
+| **Steelman the Weird Option** (`steelman-the-weird-option`) | Take the option you dismissed in two seconds and build the strongest possible case for it — to check whether your fast 'no' was wisdom or just bias. | — |
+| **The Boring Answer Detector** (`the-boring-answer-detector`) | Scan a plan, draft, or idea for the generic, textbook, everyone-would-say-that lines — and push each toward something sharper and more specific. | — |
+| **The Second Opinion** (`the-second-opinion`) | Deliberately take the opposite position from your leaning and make you defend yours — a forced second opinion that isn't just an echo. | — |
+| **The Skeptic and the Believer** (`the-skeptic-and-the-believer`) | See an idea through two committed extremes — a true believer and a hard skeptic — so you get the full range before settling in the middle. | — |
+| **The Strong No** (`the-strong-no`) | Find the real reason to NOT do the exciting thing you're about to commit to — the honest case against, before the excitement carries you in. | — |
+| **The Third Answer** (`the-third-answer`) | Push past the first few obvious answers to a question and surface the non-obvious idea worth having. | — |
+| **Think From Another Angle** (`think-from-another-angle`) | Get unstuck on a problem by deliberately re-framing it through a different lens — a child's, an outsider's, another industry's, the reverse, the… | — |
+| **What Am I Not Seeing** (`what-am-i-not-seeing`) | Surface the blind spot — the missing stakeholder, the ignored option, the risk outside your frame, the thing you're too close to notice. | — |
+
 ### `pm-tokens` — 6 skills
 
 | Skill | What it does | Eval |
@@ -1531,4 +1560,4 @@
 
 ---
 
-_958 skills across 109 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_982 skills across 110 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

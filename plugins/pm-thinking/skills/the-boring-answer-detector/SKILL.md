@@ -1,0 +1,62 @@
+---
+name: the-boring-answer-detector
+description: "Scan a plan, draft, or idea for the generic, textbook, everyone-would-say-that lines — and push each toward something sharper and more specific. Use when asked is this too generic, make this less boring, why does my plan feel bland, or spot the clichés in my thinking. Produces a line-by-line flag of the mediocre and predictable parts, why each is forgettable, and a sharper, more specific, or more surprising alternative for each — so the output stops sounding like the average of the internet."
+---
+
+# The Boring Answer Detector
+
+AI (and tired humans) default to the safe, average, textbook answer — technically correct and utterly forgettable. This audits your plan or draft for exactly those lines: the generic advice, the predictable framing, the thing anyone would say. Then it pushes each toward something specific, surprising, or actually yours. It's a bland-o-meter with a fix attached.
+
+## What This Skill Produces
+
+- **The boring-line flags** — the specific parts that are generic, predictable, or textbook
+- **Why each is forgettable** — what makes it the average answer (it applies to anyone; it's advice everyone's heard; it says nothing false but nothing new)
+- **A sharper version** — a more specific, concrete, or non-obvious alternative for each
+- **The keepers** — the parts that are already sharp, so you don't over-edit
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The content** — the plan, draft, pitch, or idea to scan (paste it)
+- **The goal** — what it's for and who it's for (specificity depends on audience)
+- **How bold** — sharpen-but-safe, or make-it-provocative
+- **Anything fixed** — parts that must stay as-is
+
+## Framework: Flag The Average, Sharpen It
+
+1. **Spot the generic tells.** Advice that applies to literally anyone, framings everyone uses, hedged non-statements, and "best-practice" boilerplate are the boring parts.
+2. **Name why it's flat.** For each, say what makes it forgettable — usually it's true but says nothing specific to *this* situation.
+3. **Sharpen with specificity.** The cure for generic is concrete: a real detail, a number, a named tradeoff, a strong stance, or a non-obvious angle.
+4. **Push one or two toward surprise.** Where it fits, replace a safe line with a genuinely non-obvious take.
+5. **Leave the good parts alone.** Flag what's already sharp so the edit doesn't flatten it or over-spice everything.
+
+## Output Format
+
+### Scanning: [the content] · for [audience]
+
+| Boring line | Why it's flat | Sharper version |
+|---|---|---|
+| "[generic line]" | [applies to anyone / cliché / hedged] | "[specific, concrete, or surprising rewrite]" |
+
+**Already sharp (keep):** [the strong parts].
+**Overall:** [how generic it is + the one change with the most impact].
+
+## Quality Checks
+- [ ] Flags the genuinely generic/predictable lines, specifically
+- [ ] Explains why each is forgettable
+- [ ] Offers a concrete, sharper alternative for each
+- [ ] Pushes at least one toward the non-obvious
+- [ ] Identifies what's already good so it isn't over-edited
+
+## Anti-Patterns
+- **Calling everything boring** including the good parts.
+- **"Make it punchier"** with no specific rewrite.
+- **Swapping one cliché for another.**
+- **Over-spicing** until it's gimmicky instead of sharp.
+
+## Example Trigger Phrases
+- "Is my plan too generic? Sharpen it."
+- "This draft feels bland — flag the boring bits."
+- "Why does my pitch sound like everyone else's?"
+- "Spot the clichés in this and fix them."
+- "Make this less textbook and more specific."
