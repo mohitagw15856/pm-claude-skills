@@ -1,6 +1,11 @@
 {
-  "count": 4,
+  "count": 5,
   "issues": [
+    {
+      "tag": "v74.0.0",
+      "title": "The life-expansion wave — 5 new bundles, 50 skills",
+      "href": "v74.0.0.html"
+    },
     {
       "tag": "v73.0.0",
       "title": "Think differently: 50 skills that change how your AI reasons 🧠",
