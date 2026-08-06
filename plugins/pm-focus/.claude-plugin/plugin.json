@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-focus",
+  "version": "1.0.0",
+  "description": "Executive-function & focus skills for getting unstuck and running your own brain: beat activation-energy paralysis, triage overwhelm, protect your energy, build a personal memory file, and make hard decisions when depleted. ADHD-friendly, useful for everyone.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "focus",
+    "adhd",
+    "executive-function",
+    "productivity",
+    "momentum",
+    "decisions"
+  ]
+}

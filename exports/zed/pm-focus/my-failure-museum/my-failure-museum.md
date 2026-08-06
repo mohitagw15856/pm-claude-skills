@@ -1,0 +1,57 @@
+# My Failure Museum
+
+A mistake you don't examine is one you'll make again; a mistake you turn into a rule never costs you twice. This does the turning: a short, honest, blame-free autopsy of what went wrong, the *real* root cause underneath the obvious one, and the specific rule or trigger that stops the repeat — captured as a one-line entry for a growing collection. Over time, your failure museum becomes your hardest-won operating manual.
+
+## What This Skill Produces
+
+- **The honest autopsy** — what actually happened, blame-free (self-flagellation teaches nothing; analysis does)
+- **The real root cause** — the underlying reason, not the surface one ("I was busy" → "I don't build in buffer time")
+- **The prevention rule** — a specific, actionable rule or trigger that would have caught it, and will next time
+- **The one-line museum entry** — a compact, keepable lesson to add to your collection
+- **A pattern check** — whether this is a one-off or part of a recurring theme worth a bigger fix
+
+## Required Inputs
+
+Ask for these if not provided:
+- **What happened** — the mistake or failure
+- **The consequence** — what it cost
+- **Your read on why** — your first explanation (we'll dig past it)
+- **Has it happened before** — to spot a pattern
+
+## Framework: Autopsy Without Blame, Extract The Rule
+
+1. **Examine, don't flagellate.** Approach it like an investigator, not a judge — blame shuts down learning; curiosity opens it.
+2. **Dig past the surface cause.** "I forgot" or "I was busy" is rarely the real cause — find the system or habit underneath ("no reminder system," "I over-commit").
+3. **Extract a specific rule.** Convert the root cause into an actionable rule or trigger ("before saying yes, check the calendar"; "always CC myself"). Vague resolutions don't work; specific rules do.
+4. **Write the one-liner.** Compress it into a single memorable entry for the museum — short enough to actually reread.
+5. **Check the pattern.** If this echoes past failures, name the recurring theme — that's the higher-leverage fix.
+
+## Output Format
+
+### Failure: [what happened] · cost: [consequence]
+
+**Autopsy (blame-free):** [what actually happened].
+**Real root cause:** [the underlying system/habit, past the surface].
+**Prevention rule:** [specific, actionable rule or trigger].
+**📓 Museum entry (one line):** "[compact lesson]."
+**Pattern?** [one-off / part of a recurring theme → the bigger fix].
+
+## Quality Checks
+- [ ] The autopsy is honest but blame-free
+- [ ] It digs past the surface cause to the real one
+- [ ] The prevention is a specific rule/trigger, not a vague resolution
+- [ ] It produces a compact, keepable one-line entry
+- [ ] It checks whether this is part of a pattern
+
+## Anti-Patterns
+- **Self-flagellation** dressed as reflection.
+- **Stopping at the surface cause** ("I was careless").
+- **A vague resolution** ("I'll be more careful") instead of a rule.
+- **Missing the recurring pattern.**
+
+## Example Trigger Phrases
+- "I messed up — help me actually learn from it."
+- "I keep making the same mistake. Why, and how do I stop?"
+- "Turn this failure into a lesson I'll remember."
+- "Do a blame-free post-mortem on my screw-up."
+- "Add this to my list of lessons — what's the rule?"

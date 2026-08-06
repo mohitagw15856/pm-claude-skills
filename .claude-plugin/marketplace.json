@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-focus",
+      "description": "Executive-function & focus skills for getting unstuck and running your own brain: beat activation-energy paralysis, triage overwhelm, protect your energy, build a personal memory file, and make hard decisions when depleted. ADHD-friendly, useful for everyone.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-focus",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-thinking",
       "description": "Thinking-mode skills that change HOW your AI reasons, not just what it does: escape the generic answer, run cognitive panels, and adversarially stress-test your own decisions. Inspired by parallel-divergent-ideation research.",
       "version": "1.0.0",

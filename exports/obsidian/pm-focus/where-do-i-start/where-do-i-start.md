@@ -1,0 +1,74 @@
+---
+aliases: ["Where Do I Start"]
+tags: [pm-skills, skill]
+skill: where-do-i-start
+description: "Turn a chaotic pile of everything-in-your-head into one clear first action — the antidote to the paralysis of too much at once. Use when asked I don't know where to start, I'm overwhelmed with everything I have to do, help me get going, or just tell me what to do first. Produces your brain-dump organized into a simple ordered list, the single next physical action to take right now, and the rest deliberately hidden so it can't overwhelm — outsourcing the executive-function job of structuring, so you can just execute."
+---
+
+# Where Do I Start
+
+When everything feels urgent, the brain jams — not from laziness but from too many open loops competing at once (a real executive-function load, not a character flaw). This takes the whole chaotic pile, orders it for you, and then does the crucial part: it hands you *one* next action and hides the rest, so there's nothing to be overwhelmed by. Structuring is outsourced; you just move.
+
+## What This Skill Produces
+
+- **The dump, captured** — everything in your head, out and listed (so it stops swirling)
+- **A simple order** — the list sequenced by a clear logic (quick wins, dependencies, or what unblocks the most)
+- **The one next action** — a single, concrete, physical first step you can do right now
+- **The rest, hidden** — everything else deliberately set aside so it can't overwhelm you
+- **A "then what"** — only revealed after the first thing is done
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The pile** — everything on your mind (dump it messy — that's the point)
+- **Any hard deadlines** — things that genuinely can't wait
+- **Your energy right now** — running on empty or okay
+- **What "start" means today** — just get moving, or make real progress
+
+## Framework: Capture, Order, Reveal One
+
+1. **Get it all out.** Have the person dump everything — half-formed is fine. An unlisted pile is what overwhelms; a listed one is just a list.
+2. **Order by a simple logic.** Sequence by quick momentum-wins, or what unblocks the most, or hard deadlines — pick one clear principle, not a complex system.
+3. **Reveal exactly one.** Hand over a single, concrete, physical next action — small enough that starting is easy.
+4. **Hide the rest.** Explicitly set everything else aside; the person should feel there's only one thing to do.
+5. **Reveal the next only after.** Keep it one-at-a-time so the pile never re-forms in their head.
+
+## Output Format
+
+### Your pile (captured): [the dump, listed]
+
+**Ordered by:** [the simple logic used].
+
+### 👉 Start here — the only thing right now:
+**[one concrete, physical action]** — takes ~[time].
+
+*(Everything else is parked. Come back and say "done" and I'll give you the next one — one at a time.)*
+
+## Quality Checks
+- [ ] The full pile is captured and listed
+- [ ] It's ordered by one clear, simple logic
+- [ ] Exactly one concrete next action is surfaced
+- [ ] The rest is explicitly hidden/parked
+- [ ] The first action is small enough to start easily
+- [ ] Next steps are revealed one at a time, not all at once
+
+## Anti-Patterns
+- **Handing back the whole ordered list** — re-creates the overwhelm.
+- **A vague first step** ("start working on the project").
+- **A complex prioritization system** for someone who just needs to move.
+- **Five "next" actions** at once.
+
+## Example Trigger Phrases
+- "I have a million things to do and I'm frozen — where do I start?"
+- "I'm so overwhelmed I can't begin. Just tell me the first thing."
+- "Help me get going, my brain is a mess of tasks."
+- "Everything feels urgent. What do I do first?"
+- "I don't know where to start with any of this."
+
+---
+<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
+     variable for the highlighted text — replace it with your plugin's equivalent
+     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
+Apply the skill above to the following input:
+
+{{selection}}

@@ -1,4 +1,4 @@
-# 🗂️ All 982 Skills — full catalog
+# 🗂️ All 1008 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -726,7 +726,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (515 skills)
+## 🌍 Industries & Public Sector (541 skills)
 
 ### `other` — 4 skills
 
@@ -1106,6 +1106,37 @@
 | **Relationship Check-In** (`relationship-check-in`) | Run a calm, regular relationship check-in with your partner — a structured 'how are we doing' conversation that catches small things before they… | — |
 | **School Choice Decision** (`school-choice-decision`) | Choose the right school for a specific child by weighing what actually matters to them and your family — not just rankings. | — |
 | **Wedding Vows Writer** (`wedding-vows-writer`) | Write personal wedding vows that sound like you — specific, heartfelt, and the right length — instead of generic or cheesy. | — |
+
+### `pm-focus` — 26 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Body-Doubling Partner** (`body-doubling-partner`) | Act as a body-double for a work session — a present, low-pressure companion that keeps you accountable and moving through the task without doing… | — |
+| **Build My Memory File** (`build-my-memory-file`) | Interview you into a durable personal MEMORY.md — your decision rules, patterns, past failures, and preferences — that any AI can read to help you… | — |
+| **Context-Switch Recovery** (`context-switch-recovery`) | Reconstruct where you were and what's next after an interruption, so a broken focus doesn't cost you the whole thread. | — |
+| **Decision When Tired** (`decision-when-tired`) | Make a decent decision when you're too depleted to think well — a low-energy protocol that protects you from bad tired-brain choices. | — |
+| **Dependency Check** (`dependency-check`) | Honestly measure how dependent you've become on a tool, app, substance-free habit, or even AI itself — and reclaim the capability you've outsourced. | — |
+| **Good-Enough Detector** (`good-enough-detector`) | Tell you when to stop polishing and ship — the point where more effort stops adding real value. | — |
+| **Hyperfocus Exit** (`hyperfocus-exit`) | Give yourself a gentle, structured off-ramp from hyperfocus before it costs you sleep, meals, or the rest of your life. | — |
+| **Make Me a** (`make-me-a-skill`) | Turn a task you repeat every week into a reusable personal skill or prompt — so you say 'do this' instead of re-explaining it every time. | — |
+| **Momentum Map** (`momentum-map`) | Break a stuck, stalled week with three tiny wins sequenced for momentum — because motion creates motivation, not the other way around. | — |
+| **My Energy Map** (`my-energy-map`) | Map your real energy through the day and week, then match your tasks to it — hard things when you're sharp, easy things when you're not. | — |
+| **My Failure Museum** (`my-failure-museum`) | Turn a mistake into a reusable lesson — a short, unsentimental 'here's what happened and the rule so it doesn't happen again' entry you can… | — |
+| **Name What I'm Feeling** (`name-what-im-feeling`) | Turn a vague bad mood or 'off' feeling into a precisely-named emotion and its likely cause — because naming it is what starts to defuse it. | — |
+| **One Hard Truth** (`one-hard-truth`) | Get the single honest thing you're avoiding about a situation — said kindly but not softened away. | — |
+| **Overwhelm Triage** (`overwhelm-triage`) | When everything feels urgent and equally impossible, sort it fast into do-now / schedule / drop / delegate — so the panic becomes a short, calm list. | — |
+| **Personal Operating Manual** (`personal-operating-manual`) | Write the manual for how you work best — your energy, triggers, communication style, and non-negotiables — to share with a manager, team, or… | — |
+| **Regret Minimizer** (`regret-minimizer`) | Reframe a hard choice through the lens of future regret — which option will you regret less at 80? — to cut through short-term noise. | — |
+| **Rejection-Sensitivity Reframe** (`rejection-sensitivity-reframe`) | Reread a harsh message, criticism, or perceived slight without the emotional spike — separate what was actually said from what your brain is… | — |
+| **Should I Quit or Push** (`should-i-quit-or-push`) | Get an honest read on whether to quit or keep going on a project, job, hobby, or goal that's become a slog — distinguishing a dip worth pushing… | — |
+| **Should I Send This** (`should-i-send-this`) | Gut-check a message before you send it — is it going to land the way you intend, or will you regret it in an hour? Use when asked should I send… | — |
+| **Stop Overthinking This** (`stop-overthinking-this`) | Break an analysis-paralysis loop on a small or reversible decision — set a limit, force a call, and move on. | — |
+| **Task to First Step** (`task-to-first-step`) | Shrink a task you're avoiding down to a first step so small it's almost impossible not to do — beating activation-energy paralysis. | — |
+| **The 2-Minute Launch** (`the-2-minute-launch`) | Break the paralysis on the thing you keep not starting with a 2-minute launch sequence — a countdown into motion before the resistance can win. | — |
+| **The One Thing** (`the-one-thing`) | Cut a full plate down to the single highest-leverage move — the one thing that, done today, makes everything else easier or unnecessary. | — |
+| **The Worry Decompiler** (`the-worry-decompiler`) | Turn an anxious spiral into a concrete list — separate the specific worries from the vague dread, sort what you can act on from what you can't… | — |
+| **Weekly Unstuck** (`weekly-unstuck`) | A short weekly ritual that clears the mental backlog, picks the one thing that matters, and keeps you honest about your dependence on autopilot. | — |
+| **Where Do I Start** (`where-do-i-start`) | Turn a chaotic pile of everything-in-your-head into one clear first action — the antidote to the paralysis of too much at once. | — |
 
 ### `pm-freelance` — 10 skills
 
@@ -1560,4 +1591,4 @@
 
 ---
 
-_982 skills across 110 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1008 skills across 111 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
