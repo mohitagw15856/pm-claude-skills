@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1038 skills exported. Copy a `SKILL.md` into the tool to use it.
+1048 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -27,6 +27,7 @@
 | Agent Readiness Audit | `pm-agentnative` | `agent-readiness-audit/SKILL.md` |
 | Agent Severance | `pm-2027` | `agent-severance/SKILL.md` |
 | Agent Spec | `pm-ai` | `agent-spec/SKILL.md` |
+| Aging-in-Place Assessment | `pm-caregiving` | `aging-in-place-assessment/SKILL.md` |
 | Aging Parent Talks | `pm-aging-parents` | `aging-parent-talks/SKILL.md` |
 | AGM In A Box | `pm-committee` | `agm-in-a-box/SKILL.md` |
 | AI-Assisted Performance Review | `pm-aiwork` | `ai-assisted-performance-review/SKILL.md` |
@@ -115,8 +116,11 @@
 | Car Lease Decoder | `pm-decoders` | `car-lease-decoder/SKILL.md` |
 | Car TCO | `pm-calculators` | `car-tco/SKILL.md` |
 | Carbon Accounting Check | `pm-climate` | `carbon-accounting-check/SKILL.md` |
+| Care-Decision Family Meeting | `pm-caregiving` | `care-decision-family-meeting/SKILL.md` |
+| Care-Team Coordinator | `pm-caregiving` | `care-team-coordinator/SKILL.md` |
 | Career Ladder Map | `pm-career` | `career-ladder-map/SKILL.md` |
 | Career Pivot Plan | `pm-career` | `career-pivot-plan/SKILL.md` |
+| Caregiver-Burnout Check | `pm-caregiving` | `caregiver-burnout-check/SKILL.md` |
 | Caregiver Coordination | `pm-lifeadmin` | `caregiver-coordination/SKILL.md` |
 | Case for Support | `pm-nonprofit` | `case-for-support/SKILL.md` |
 | Case Study Write-up | `pm-consulting` | `case-study-writeup/SKILL.md` |
@@ -316,6 +320,7 @@
 | Emergency Fund | `pm-calculators` | `emergency-fund/SKILL.md` |
 | Employee Engagement Survey | `pm-hr` | `employee-engagement-survey/SKILL.md` |
 | Empty State Writer | `pm-uxwriting` | `empty-state-writer/SKILL.md` |
+| End-of-Life Wishes Conversation | `pm-caregiving` | `end-of-life-wishes-conversation/SKILL.md` |
 | Energy Scheduling | `pm-cowork` | `energy-scheduling/SKILL.md` |
 | Engagement Retro | `pm-consulting` | `engagement-retro/SKILL.md` |
 | Engineering Hiring Rubric | `pm-engineering` | `engineering-hiring-rubric/SKILL.md` |
@@ -449,6 +454,7 @@
 | Home-Maintenance Calendar | `pm-lifeadmin` | `home-maintenance-calendar/SKILL.md` |
 | Home Workout Builder | `pm-wellbeing` | `home-workout-builder/SKILL.md` |
 | Hook Writer | `pm-creator` | `hook-writer/SKILL.md` |
+| Hospital-Stay Plan | `pm-caregiving` | `hospital-stay-plan/SKILL.md` |
 | House Style Enforcer | `pm-cowork` | `house-style-enforcer/SKILL.md` |
 | Houseplant Care | `pm-hobbies` | `houseplant-care/SKILL.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `human-in-the-loop-design/SKILL.md` |
@@ -544,6 +550,7 @@
 | Localization Brief | `pm-localization` | `localization-brief/SKILL.md` |
 | Logistics Incident Report | `pm-supplychain` | `logistics-incident-report/SKILL.md` |
 | Long-Distance Relationship Plan | `pm-family` | `long-distance-relationship-plan/SKILL.md` |
+| Long-Term Care Options | `pm-caregiving` | `long-term-care-options/SKILL.md` |
 | Love-Letter Helper | `pm-family` | `love-letter-helper/SKILL.md` |
 | Lower My Bill | `pm-money` | `lower-my-bill/SKILL.md` |
 | Machiavelli Counsel | `pm-dead-mentors` | `machiavelli-counsel/SKILL.md` |
@@ -559,8 +566,10 @@
 | Meal Prep OS | `pm-kitchen` | `meal-prep-os/SKILL.md` |
 | Mechanic Quote Decoder | `other` | `mechanic-quote-decoder/SKILL.md` |
 | Media Pitch | `pm-gtm` | `media-pitch/SKILL.md` |
+| Medical-Appointment Advocate | `pm-caregiving` | `medical-appointment-advocate/SKILL.md` |
 | Medical Bill Decoder | `pm-decoders` | `medical-bill-decoder/SKILL.md` |
 | Medical Records Request | `pm-lifeadmin` | `medical-records-request/SKILL.md` |
+| Medication-Management System | `pm-caregiving` | `medication-management-system/SKILL.md` |
 | Meeting Action Extractor | `pm-essentials` | `meeting-action-extractor/SKILL.md` |
 | Meeting Cost Meter | `pm-cowork` | `meeting-cost-meter/SKILL.md` |
 | Meeting Notes | `pm-essentials` | `meeting-notes/SKILL.md` |
@@ -770,6 +779,7 @@
 | Research Protocol | `pm-research` | `research-protocol/SKILL.md` |
 | Research Repo Setup | `pm-cowork` | `research-repo-setup/SKILL.md` |
 | Resignation Letter | `pm-resignation` | `resignation-letter/SKILL.md` |
+| Respite-Care Plan | `pm-caregiving` | `respite-care-plan/SKILL.md` |
 | Resume | `pm-personal` | `resume/SKILL.md` |
 | Retention Analysis | `pm-analytics` | `retention-analysis/SKILL.md` |
 | Retention Loop Design | `pm-growth` | `retention-loop-design/SKILL.md` |

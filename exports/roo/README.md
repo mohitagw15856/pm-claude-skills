@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1038 skills exported. Copy a `.md rule` into the tool to use it.
+1048 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -27,6 +27,7 @@
 | Agent Readiness Audit | `pm-agentnative` | `pm-agentnative/agent-readiness-audit/agent-readiness-audit.md` |
 | Agent Severance | `pm-2027` | `pm-2027/agent-severance/agent-severance.md` |
 | Agent Spec | `pm-ai` | `pm-ai/agent-spec/agent-spec.md` |
+| Aging-in-Place Assessment | `pm-caregiving` | `pm-caregiving/aging-in-place-assessment/aging-in-place-assessment.md` |
 | Aging Parent Talks | `pm-aging-parents` | `pm-aging-parents/aging-parent-talks/aging-parent-talks.md` |
 | AGM In A Box | `pm-committee` | `pm-committee/agm-in-a-box/agm-in-a-box.md` |
 | AI-Assisted Performance Review | `pm-aiwork` | `pm-aiwork/ai-assisted-performance-review/ai-assisted-performance-review.md` |
@@ -115,8 +116,11 @@
 | Car Lease Decoder | `pm-decoders` | `pm-decoders/car-lease-decoder/car-lease-decoder.md` |
 | Car TCO | `pm-calculators` | `pm-calculators/car-tco/car-tco.md` |
 | Carbon Accounting Check | `pm-climate` | `pm-climate/carbon-accounting-check/carbon-accounting-check.md` |
+| Care-Decision Family Meeting | `pm-caregiving` | `pm-caregiving/care-decision-family-meeting/care-decision-family-meeting.md` |
+| Care-Team Coordinator | `pm-caregiving` | `pm-caregiving/care-team-coordinator/care-team-coordinator.md` |
 | Career Ladder Map | `pm-career` | `pm-career/career-ladder-map/career-ladder-map.md` |
 | Career Pivot Plan | `pm-career` | `pm-career/career-pivot-plan/career-pivot-plan.md` |
+| Caregiver-Burnout Check | `pm-caregiving` | `pm-caregiving/caregiver-burnout-check/caregiver-burnout-check.md` |
 | Caregiver Coordination | `pm-lifeadmin` | `pm-lifeadmin/caregiver-coordination/caregiver-coordination.md` |
 | Case for Support | `pm-nonprofit` | `pm-nonprofit/case-for-support/case-for-support.md` |
 | Case Study Write-up | `pm-consulting` | `pm-consulting/case-study-writeup/case-study-writeup.md` |
@@ -316,6 +320,7 @@
 | Emergency Fund | `pm-calculators` | `pm-calculators/emergency-fund/emergency-fund.md` |
 | Employee Engagement Survey | `pm-hr` | `pm-hr/employee-engagement-survey/employee-engagement-survey.md` |
 | Empty State Writer | `pm-uxwriting` | `pm-uxwriting/empty-state-writer/empty-state-writer.md` |
+| End-of-Life Wishes Conversation | `pm-caregiving` | `pm-caregiving/end-of-life-wishes-conversation/end-of-life-wishes-conversation.md` |
 | Energy Scheduling | `pm-cowork` | `pm-cowork/energy-scheduling/energy-scheduling.md` |
 | Engagement Retro | `pm-consulting` | `pm-consulting/engagement-retro/engagement-retro.md` |
 | Engineering Hiring Rubric | `pm-engineering` | `pm-engineering/engineering-hiring-rubric/engineering-hiring-rubric.md` |
@@ -449,6 +454,7 @@
 | Home-Maintenance Calendar | `pm-lifeadmin` | `pm-lifeadmin/home-maintenance-calendar/home-maintenance-calendar.md` |
 | Home Workout Builder | `pm-wellbeing` | `pm-wellbeing/home-workout-builder/home-workout-builder.md` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/hook-writer.md` |
+| Hospital-Stay Plan | `pm-caregiving` | `pm-caregiving/hospital-stay-plan/hospital-stay-plan.md` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/house-style-enforcer.md` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/houseplant-care.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/human-in-the-loop-design.md` |
@@ -544,6 +550,7 @@
 | Localization Brief | `pm-localization` | `pm-localization/localization-brief/localization-brief.md` |
 | Logistics Incident Report | `pm-supplychain` | `pm-supplychain/logistics-incident-report/logistics-incident-report.md` |
 | Long-Distance Relationship Plan | `pm-family` | `pm-family/long-distance-relationship-plan/long-distance-relationship-plan.md` |
+| Long-Term Care Options | `pm-caregiving` | `pm-caregiving/long-term-care-options/long-term-care-options.md` |
 | Love-Letter Helper | `pm-family` | `pm-family/love-letter-helper/love-letter-helper.md` |
 | Lower My Bill | `pm-money` | `pm-money/lower-my-bill/lower-my-bill.md` |
 | Machiavelli Counsel | `pm-dead-mentors` | `pm-dead-mentors/machiavelli-counsel/machiavelli-counsel.md` |
@@ -559,8 +566,10 @@
 | Meal Prep OS | `pm-kitchen` | `pm-kitchen/meal-prep-os/meal-prep-os.md` |
 | Mechanic Quote Decoder | `other` | `other/mechanic-quote-decoder/mechanic-quote-decoder.md` |
 | Media Pitch | `pm-gtm` | `pm-gtm/media-pitch/media-pitch.md` |
+| Medical-Appointment Advocate | `pm-caregiving` | `pm-caregiving/medical-appointment-advocate/medical-appointment-advocate.md` |
 | Medical Bill Decoder | `pm-decoders` | `pm-decoders/medical-bill-decoder/medical-bill-decoder.md` |
 | Medical Records Request | `pm-lifeadmin` | `pm-lifeadmin/medical-records-request/medical-records-request.md` |
+| Medication-Management System | `pm-caregiving` | `pm-caregiving/medication-management-system/medication-management-system.md` |
 | Meeting Action Extractor | `pm-essentials` | `pm-essentials/meeting-action-extractor/meeting-action-extractor.md` |
 | Meeting Cost Meter | `pm-cowork` | `pm-cowork/meeting-cost-meter/meeting-cost-meter.md` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/meeting-notes.md` |
@@ -770,6 +779,7 @@
 | Research Protocol | `pm-research` | `pm-research/research-protocol/research-protocol.md` |
 | Research Repo Setup | `pm-cowork` | `pm-cowork/research-repo-setup/research-repo-setup.md` |
 | Resignation Letter | `pm-resignation` | `pm-resignation/resignation-letter/resignation-letter.md` |
+| Respite-Care Plan | `pm-caregiving` | `pm-caregiving/respite-care-plan/respite-care-plan.md` |
 | Resume | `pm-personal` | `pm-personal/resume/resume.md` |
 | Retention Analysis | `pm-analytics` | `pm-analytics/retention-analysis/retention-analysis.md` |
 | Retention Loop Design | `pm-growth` | `pm-growth/retention-loop-design/retention-loop-design.md` |

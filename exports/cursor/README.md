@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1038 skills exported. Copy a `.mdc rule` into the tool to use it.
+1048 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -27,6 +27,7 @@
 | Agent Readiness Audit | `pm-agentnative` | `pm-agentnative/agent-readiness-audit/agent-readiness-audit.mdc` |
 | Agent Severance | `pm-2027` | `pm-2027/agent-severance/agent-severance.mdc` |
 | Agent Spec | `pm-ai` | `pm-ai/agent-spec/agent-spec.mdc` |
+| Aging-in-Place Assessment | `pm-caregiving` | `pm-caregiving/aging-in-place-assessment/aging-in-place-assessment.mdc` |
 | Aging Parent Talks | `pm-aging-parents` | `pm-aging-parents/aging-parent-talks/aging-parent-talks.mdc` |
 | AGM In A Box | `pm-committee` | `pm-committee/agm-in-a-box/agm-in-a-box.mdc` |
 | AI-Assisted Performance Review | `pm-aiwork` | `pm-aiwork/ai-assisted-performance-review/ai-assisted-performance-review.mdc` |
@@ -115,8 +116,11 @@
 | Car Lease Decoder | `pm-decoders` | `pm-decoders/car-lease-decoder/car-lease-decoder.mdc` |
 | Car TCO | `pm-calculators` | `pm-calculators/car-tco/car-tco.mdc` |
 | Carbon Accounting Check | `pm-climate` | `pm-climate/carbon-accounting-check/carbon-accounting-check.mdc` |
+| Care-Decision Family Meeting | `pm-caregiving` | `pm-caregiving/care-decision-family-meeting/care-decision-family-meeting.mdc` |
+| Care-Team Coordinator | `pm-caregiving` | `pm-caregiving/care-team-coordinator/care-team-coordinator.mdc` |
 | Career Ladder Map | `pm-career` | `pm-career/career-ladder-map/career-ladder-map.mdc` |
 | Career Pivot Plan | `pm-career` | `pm-career/career-pivot-plan/career-pivot-plan.mdc` |
+| Caregiver-Burnout Check | `pm-caregiving` | `pm-caregiving/caregiver-burnout-check/caregiver-burnout-check.mdc` |
 | Caregiver Coordination | `pm-lifeadmin` | `pm-lifeadmin/caregiver-coordination/caregiver-coordination.mdc` |
 | Case for Support | `pm-nonprofit` | `pm-nonprofit/case-for-support/case-for-support.mdc` |
 | Case Study Write-up | `pm-consulting` | `pm-consulting/case-study-writeup/case-study-writeup.mdc` |
@@ -316,6 +320,7 @@
 | Emergency Fund | `pm-calculators` | `pm-calculators/emergency-fund/emergency-fund.mdc` |
 | Employee Engagement Survey | `pm-hr` | `pm-hr/employee-engagement-survey/employee-engagement-survey.mdc` |
 | Empty State Writer | `pm-uxwriting` | `pm-uxwriting/empty-state-writer/empty-state-writer.mdc` |
+| End-of-Life Wishes Conversation | `pm-caregiving` | `pm-caregiving/end-of-life-wishes-conversation/end-of-life-wishes-conversation.mdc` |
 | Energy Scheduling | `pm-cowork` | `pm-cowork/energy-scheduling/energy-scheduling.mdc` |
 | Engagement Retro | `pm-consulting` | `pm-consulting/engagement-retro/engagement-retro.mdc` |
 | Engineering Hiring Rubric | `pm-engineering` | `pm-engineering/engineering-hiring-rubric/engineering-hiring-rubric.mdc` |
@@ -449,6 +454,7 @@
 | Home-Maintenance Calendar | `pm-lifeadmin` | `pm-lifeadmin/home-maintenance-calendar/home-maintenance-calendar.mdc` |
 | Home Workout Builder | `pm-wellbeing` | `pm-wellbeing/home-workout-builder/home-workout-builder.mdc` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/hook-writer.mdc` |
+| Hospital-Stay Plan | `pm-caregiving` | `pm-caregiving/hospital-stay-plan/hospital-stay-plan.mdc` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/house-style-enforcer.mdc` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/houseplant-care.mdc` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/human-in-the-loop-design.mdc` |
@@ -544,6 +550,7 @@
 | Localization Brief | `pm-localization` | `pm-localization/localization-brief/localization-brief.mdc` |
 | Logistics Incident Report | `pm-supplychain` | `pm-supplychain/logistics-incident-report/logistics-incident-report.mdc` |
 | Long-Distance Relationship Plan | `pm-family` | `pm-family/long-distance-relationship-plan/long-distance-relationship-plan.mdc` |
+| Long-Term Care Options | `pm-caregiving` | `pm-caregiving/long-term-care-options/long-term-care-options.mdc` |
 | Love-Letter Helper | `pm-family` | `pm-family/love-letter-helper/love-letter-helper.mdc` |
 | Lower My Bill | `pm-money` | `pm-money/lower-my-bill/lower-my-bill.mdc` |
 | Machiavelli Counsel | `pm-dead-mentors` | `pm-dead-mentors/machiavelli-counsel/machiavelli-counsel.mdc` |
@@ -559,8 +566,10 @@
 | Meal Prep OS | `pm-kitchen` | `pm-kitchen/meal-prep-os/meal-prep-os.mdc` |
 | Mechanic Quote Decoder | `other` | `other/mechanic-quote-decoder/mechanic-quote-decoder.mdc` |
 | Media Pitch | `pm-gtm` | `pm-gtm/media-pitch/media-pitch.mdc` |
+| Medical-Appointment Advocate | `pm-caregiving` | `pm-caregiving/medical-appointment-advocate/medical-appointment-advocate.mdc` |
 | Medical Bill Decoder | `pm-decoders` | `pm-decoders/medical-bill-decoder/medical-bill-decoder.mdc` |
 | Medical Records Request | `pm-lifeadmin` | `pm-lifeadmin/medical-records-request/medical-records-request.mdc` |
+| Medication-Management System | `pm-caregiving` | `pm-caregiving/medication-management-system/medication-management-system.mdc` |
 | Meeting Action Extractor | `pm-essentials` | `pm-essentials/meeting-action-extractor/meeting-action-extractor.mdc` |
 | Meeting Cost Meter | `pm-cowork` | `pm-cowork/meeting-cost-meter/meeting-cost-meter.mdc` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/meeting-notes.mdc` |
@@ -770,6 +779,7 @@
 | Research Protocol | `pm-research` | `pm-research/research-protocol/research-protocol.mdc` |
 | Research Repo Setup | `pm-cowork` | `pm-cowork/research-repo-setup/research-repo-setup.mdc` |
 | Resignation Letter | `pm-resignation` | `pm-resignation/resignation-letter/resignation-letter.mdc` |
+| Respite-Care Plan | `pm-caregiving` | `pm-caregiving/respite-care-plan/respite-care-plan.mdc` |
 | Resume | `pm-personal` | `pm-personal/resume/resume.mdc` |
 | Retention Analysis | `pm-analytics` | `pm-analytics/retention-analysis/retention-analysis.mdc` |
 | Retention Loop Design | `pm-growth` | `pm-growth/retention-loop-design/retention-loop-design.mdc` |

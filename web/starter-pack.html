@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
 <title>Your Skill Starter Pack — 60-second quiz | PM Skills</title>
-<meta name="description" content="Answer two questions, get your personal starter pack: the right skill bundle for your role and week, with a one-line install command. 1038 skills, free, MIT." />
+<meta name="description" content="Answer two questions, get your personal starter pack: the right skill bundle for your role and week, with a one-line install command. 1048 skills, free, MIT." />
 <link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/starter-pack.html" />
 <link rel="stylesheet" href="styles.css" />
 <style>
@@ -85,7 +85,7 @@ function pickPain(roleKey) {
 function result(roleKey, painKey) {
   const pack = ROLES[roleKey].packs[painKey];
   const install = 'npx pm-claude-skills add --agent claude --bundle ' + pack.bundle;
-  const share = 'My AI starter pack: the ' + pack.bundle + ' bundle from PM Skills (1038 free professional skills) — first up: ' + pack.first.join(', ') + '. https://mohitagw15856.github.io/pm-claude-skills/starter-pack.html';
+  const share = 'My AI starter pack: the ' + pack.bundle + ' bundle from PM Skills (1048 free professional skills) — first up: ' + pack.first.join(', ') + '. https://mohitagw15856.github.io/pm-claude-skills/starter-pack.html';
   app.innerHTML = '<div class="card"><h2>🎒 The ' + pack.bundle + ' pack</h2>' +
     '<div class="why">' + pack.why + '</div>' +
     '<ul>' + pack.first.map((s) => '<li><a href="skill/' + s + '.html">' + s + '</a></li>').join('') + '</ul>' +

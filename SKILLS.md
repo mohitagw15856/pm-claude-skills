@@ -1,4 +1,4 @@
-# 🗂️ All 1038 Skills — full catalog
+# 🗂️ All 1048 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -726,7 +726,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (571 skills)
+## 🌍 Industries & Public Sector (581 skills)
 
 ### `other` — 14 skills
 
@@ -816,6 +816,21 @@
 | **KYC Escalation** (`kyc-escalation`) | Write an internal KYC/AML escalation memo: a factual time-stamped trigger description, customer-profile vs activity mismatch analysis, red-flag… | — |
 | **Lending Risk Brief** (`lending-risk-brief`) | Write a portfolio-level lending risk brief: concentration analysis by sector, geography and single name, vintage performance, migration matrix… | — |
 | **Loan Covenant Review** (`loan-covenant-review`) | Run a quarterly loan covenant compliance review: covenant table with required vs actual vs headroom, trend and trajectory-to-breach analysis… | — |
+
+### `pm-caregiving` — 10 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Aging-in-Place Assessment** (`aging-in-place-assessment`) | Assess whether and how someone can safely stay in their own home as they age — the home hazards, the support gaps, and the modifications and… | — |
+| **Care-Decision Family Meeting** (`care-decision-family-meeting`) | Run a family meeting to make a big care decision together — so it's a shared, informed decision instead of a fight or one person deciding alone. | — |
+| **Care-Team Coordinator** (`care-team-coordinator`) | Organize the people and information involved in caring for someone — family, doctors, helpers — so care doesn't fall through the cracks or all… | — |
+| **Caregiver-Burnout Check** (`caregiver-burnout-check`) | Check whether you're burning out as a caregiver — and get a realistic plan to protect yourself before you can't keep going. | — |
+| **End-of-Life Wishes Conversation** (`end-of-life-wishes-conversation`) | Have the conversation about someone's end-of-life wishes — before a crisis forces it — gently, respectfully, and thoroughly enough to actually… | — |
+| **Hospital-Stay Plan** (`hospital-stay-plan`) | Navigate a hospital stay — for yourself or someone you care for — from admission through a safe discharge, so nothing critical falls through the… | — |
+| **Long-Term Care Options** (`long-term-care-options`) | Understand the long-term care options for an older or ill loved one — from in-home care to assisted living to nursing care — so you can compare… | — |
+| **Medical-Appointment Advocate** (`medical-appointment-advocate`) | Prepare to get the most out of a medical appointment — for yourself or someone you care for — with the right questions, the information to bring… | — |
+| **Medication-Management System** (`medication-management-system`) | Set up a system to manage medications safely — for yourself or someone you care for — so doses aren't missed, doubled, or dangerously combined. | — |
+| **Respite-Care Plan** (`respite-care-plan`) | Plan a genuine break from caregiving — arrange the coverage, hand off the essentials, and actually rest — because respite is what lets you keep going. | — |
 
 ### `pm-climate` — 4 skills
 
@@ -1631,4 +1646,4 @@
 
 ---
 
-_1038 skills across 113 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1048 skills across 114 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

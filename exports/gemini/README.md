@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1038 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1048 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -27,6 +27,7 @@
 | Agent Readiness Audit | `pm-agentnative` | `pm-agentnative/agent-readiness-audit/GEM_INSTRUCTIONS.md` |
 | Agent Severance | `pm-2027` | `pm-2027/agent-severance/GEM_INSTRUCTIONS.md` |
 | Agent Spec | `pm-ai` | `pm-ai/agent-spec/GEM_INSTRUCTIONS.md` |
+| Aging-in-Place Assessment | `pm-caregiving` | `pm-caregiving/aging-in-place-assessment/GEM_INSTRUCTIONS.md` |
 | Aging Parent Talks | `pm-aging-parents` | `pm-aging-parents/aging-parent-talks/GEM_INSTRUCTIONS.md` |
 | AGM In A Box | `pm-committee` | `pm-committee/agm-in-a-box/GEM_INSTRUCTIONS.md` |
 | AI-Assisted Performance Review | `pm-aiwork` | `pm-aiwork/ai-assisted-performance-review/GEM_INSTRUCTIONS.md` |
@@ -115,8 +116,11 @@
 | Car Lease Decoder | `pm-decoders` | `pm-decoders/car-lease-decoder/GEM_INSTRUCTIONS.md` |
 | Car TCO | `pm-calculators` | `pm-calculators/car-tco/GEM_INSTRUCTIONS.md` |
 | Carbon Accounting Check | `pm-climate` | `pm-climate/carbon-accounting-check/GEM_INSTRUCTIONS.md` |
+| Care-Decision Family Meeting | `pm-caregiving` | `pm-caregiving/care-decision-family-meeting/GEM_INSTRUCTIONS.md` |
+| Care-Team Coordinator | `pm-caregiving` | `pm-caregiving/care-team-coordinator/GEM_INSTRUCTIONS.md` |
 | Career Ladder Map | `pm-career` | `pm-career/career-ladder-map/GEM_INSTRUCTIONS.md` |
 | Career Pivot Plan | `pm-career` | `pm-career/career-pivot-plan/GEM_INSTRUCTIONS.md` |
+| Caregiver-Burnout Check | `pm-caregiving` | `pm-caregiving/caregiver-burnout-check/GEM_INSTRUCTIONS.md` |
 | Caregiver Coordination | `pm-lifeadmin` | `pm-lifeadmin/caregiver-coordination/GEM_INSTRUCTIONS.md` |
 | Case for Support | `pm-nonprofit` | `pm-nonprofit/case-for-support/GEM_INSTRUCTIONS.md` |
 | Case Study Write-up | `pm-consulting` | `pm-consulting/case-study-writeup/GEM_INSTRUCTIONS.md` |
@@ -316,6 +320,7 @@
 | Emergency Fund | `pm-calculators` | `pm-calculators/emergency-fund/GEM_INSTRUCTIONS.md` |
 | Employee Engagement Survey | `pm-hr` | `pm-hr/employee-engagement-survey/GEM_INSTRUCTIONS.md` |
 | Empty State Writer | `pm-uxwriting` | `pm-uxwriting/empty-state-writer/GEM_INSTRUCTIONS.md` |
+| End-of-Life Wishes Conversation | `pm-caregiving` | `pm-caregiving/end-of-life-wishes-conversation/GEM_INSTRUCTIONS.md` |
 | Energy Scheduling | `pm-cowork` | `pm-cowork/energy-scheduling/GEM_INSTRUCTIONS.md` |
 | Engagement Retro | `pm-consulting` | `pm-consulting/engagement-retro/GEM_INSTRUCTIONS.md` |
 | Engineering Hiring Rubric | `pm-engineering` | `pm-engineering/engineering-hiring-rubric/GEM_INSTRUCTIONS.md` |
@@ -449,6 +454,7 @@
 | Home-Maintenance Calendar | `pm-lifeadmin` | `pm-lifeadmin/home-maintenance-calendar/GEM_INSTRUCTIONS.md` |
 | Home Workout Builder | `pm-wellbeing` | `pm-wellbeing/home-workout-builder/GEM_INSTRUCTIONS.md` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/GEM_INSTRUCTIONS.md` |
+| Hospital-Stay Plan | `pm-caregiving` | `pm-caregiving/hospital-stay-plan/GEM_INSTRUCTIONS.md` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/GEM_INSTRUCTIONS.md` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/GEM_INSTRUCTIONS.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/GEM_INSTRUCTIONS.md` |
@@ -544,6 +550,7 @@
 | Localization Brief | `pm-localization` | `pm-localization/localization-brief/GEM_INSTRUCTIONS.md` |
 | Logistics Incident Report | `pm-supplychain` | `pm-supplychain/logistics-incident-report/GEM_INSTRUCTIONS.md` |
 | Long-Distance Relationship Plan | `pm-family` | `pm-family/long-distance-relationship-plan/GEM_INSTRUCTIONS.md` |
+| Long-Term Care Options | `pm-caregiving` | `pm-caregiving/long-term-care-options/GEM_INSTRUCTIONS.md` |
 | Love-Letter Helper | `pm-family` | `pm-family/love-letter-helper/GEM_INSTRUCTIONS.md` |
 | Lower My Bill | `pm-money` | `pm-money/lower-my-bill/GEM_INSTRUCTIONS.md` |
 | Machiavelli Counsel | `pm-dead-mentors` | `pm-dead-mentors/machiavelli-counsel/GEM_INSTRUCTIONS.md` |
@@ -559,8 +566,10 @@
 | Meal Prep OS | `pm-kitchen` | `pm-kitchen/meal-prep-os/GEM_INSTRUCTIONS.md` |
 | Mechanic Quote Decoder | `other` | `other/mechanic-quote-decoder/GEM_INSTRUCTIONS.md` |
 | Media Pitch | `pm-gtm` | `pm-gtm/media-pitch/GEM_INSTRUCTIONS.md` |
+| Medical-Appointment Advocate | `pm-caregiving` | `pm-caregiving/medical-appointment-advocate/GEM_INSTRUCTIONS.md` |
 | Medical Bill Decoder | `pm-decoders` | `pm-decoders/medical-bill-decoder/GEM_INSTRUCTIONS.md` |
 | Medical Records Request | `pm-lifeadmin` | `pm-lifeadmin/medical-records-request/GEM_INSTRUCTIONS.md` |
+| Medication-Management System | `pm-caregiving` | `pm-caregiving/medication-management-system/GEM_INSTRUCTIONS.md` |
 | Meeting Action Extractor | `pm-essentials` | `pm-essentials/meeting-action-extractor/GEM_INSTRUCTIONS.md` |
 | Meeting Cost Meter | `pm-cowork` | `pm-cowork/meeting-cost-meter/GEM_INSTRUCTIONS.md` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/GEM_INSTRUCTIONS.md` |
@@ -770,6 +779,7 @@
 | Research Protocol | `pm-research` | `pm-research/research-protocol/GEM_INSTRUCTIONS.md` |
 | Research Repo Setup | `pm-cowork` | `pm-cowork/research-repo-setup/GEM_INSTRUCTIONS.md` |
 | Resignation Letter | `pm-resignation` | `pm-resignation/resignation-letter/GEM_INSTRUCTIONS.md` |
+| Respite-Care Plan | `pm-caregiving` | `pm-caregiving/respite-care-plan/GEM_INSTRUCTIONS.md` |
 | Resume | `pm-personal` | `pm-personal/resume/GEM_INSTRUCTIONS.md` |
 | Retention Analysis | `pm-analytics` | `pm-analytics/retention-analysis/GEM_INSTRUCTIONS.md` |
 | Retention Loop Design | `pm-growth` | `pm-growth/retention-loop-design/GEM_INSTRUCTIONS.md` |

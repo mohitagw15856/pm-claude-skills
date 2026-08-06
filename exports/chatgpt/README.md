@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1038 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1048 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -27,6 +27,7 @@
 | Agent Readiness Audit | `pm-agentnative` | `pm-agentnative/agent-readiness-audit/SYSTEM_PROMPT.md` |
 | Agent Severance | `pm-2027` | `pm-2027/agent-severance/SYSTEM_PROMPT.md` |
 | Agent Spec | `pm-ai` | `pm-ai/agent-spec/SYSTEM_PROMPT.md` |
+| Aging-in-Place Assessment | `pm-caregiving` | `pm-caregiving/aging-in-place-assessment/SYSTEM_PROMPT.md` |
 | Aging Parent Talks | `pm-aging-parents` | `pm-aging-parents/aging-parent-talks/SYSTEM_PROMPT.md` |
 | AGM In A Box | `pm-committee` | `pm-committee/agm-in-a-box/SYSTEM_PROMPT.md` |
 | AI-Assisted Performance Review | `pm-aiwork` | `pm-aiwork/ai-assisted-performance-review/SYSTEM_PROMPT.md` |
@@ -115,8 +116,11 @@
 | Car Lease Decoder | `pm-decoders` | `pm-decoders/car-lease-decoder/SYSTEM_PROMPT.md` |
 | Car TCO | `pm-calculators` | `pm-calculators/car-tco/SYSTEM_PROMPT.md` |
 | Carbon Accounting Check | `pm-climate` | `pm-climate/carbon-accounting-check/SYSTEM_PROMPT.md` |
+| Care-Decision Family Meeting | `pm-caregiving` | `pm-caregiving/care-decision-family-meeting/SYSTEM_PROMPT.md` |
+| Care-Team Coordinator | `pm-caregiving` | `pm-caregiving/care-team-coordinator/SYSTEM_PROMPT.md` |
 | Career Ladder Map | `pm-career` | `pm-career/career-ladder-map/SYSTEM_PROMPT.md` |
 | Career Pivot Plan | `pm-career` | `pm-career/career-pivot-plan/SYSTEM_PROMPT.md` |
+| Caregiver-Burnout Check | `pm-caregiving` | `pm-caregiving/caregiver-burnout-check/SYSTEM_PROMPT.md` |
 | Caregiver Coordination | `pm-lifeadmin` | `pm-lifeadmin/caregiver-coordination/SYSTEM_PROMPT.md` |
 | Case for Support | `pm-nonprofit` | `pm-nonprofit/case-for-support/SYSTEM_PROMPT.md` |
 | Case Study Write-up | `pm-consulting` | `pm-consulting/case-study-writeup/SYSTEM_PROMPT.md` |
@@ -316,6 +320,7 @@
 | Emergency Fund | `pm-calculators` | `pm-calculators/emergency-fund/SYSTEM_PROMPT.md` |
 | Employee Engagement Survey | `pm-hr` | `pm-hr/employee-engagement-survey/SYSTEM_PROMPT.md` |
 | Empty State Writer | `pm-uxwriting` | `pm-uxwriting/empty-state-writer/SYSTEM_PROMPT.md` |
+| End-of-Life Wishes Conversation | `pm-caregiving` | `pm-caregiving/end-of-life-wishes-conversation/SYSTEM_PROMPT.md` |
 | Energy Scheduling | `pm-cowork` | `pm-cowork/energy-scheduling/SYSTEM_PROMPT.md` |
 | Engagement Retro | `pm-consulting` | `pm-consulting/engagement-retro/SYSTEM_PROMPT.md` |
 | Engineering Hiring Rubric | `pm-engineering` | `pm-engineering/engineering-hiring-rubric/SYSTEM_PROMPT.md` |
@@ -449,6 +454,7 @@
 | Home-Maintenance Calendar | `pm-lifeadmin` | `pm-lifeadmin/home-maintenance-calendar/SYSTEM_PROMPT.md` |
 | Home Workout Builder | `pm-wellbeing` | `pm-wellbeing/home-workout-builder/SYSTEM_PROMPT.md` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/SYSTEM_PROMPT.md` |
+| Hospital-Stay Plan | `pm-caregiving` | `pm-caregiving/hospital-stay-plan/SYSTEM_PROMPT.md` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/SYSTEM_PROMPT.md` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/SYSTEM_PROMPT.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/SYSTEM_PROMPT.md` |
@@ -544,6 +550,7 @@
 | Localization Brief | `pm-localization` | `pm-localization/localization-brief/SYSTEM_PROMPT.md` |
 | Logistics Incident Report | `pm-supplychain` | `pm-supplychain/logistics-incident-report/SYSTEM_PROMPT.md` |
 | Long-Distance Relationship Plan | `pm-family` | `pm-family/long-distance-relationship-plan/SYSTEM_PROMPT.md` |
+| Long-Term Care Options | `pm-caregiving` | `pm-caregiving/long-term-care-options/SYSTEM_PROMPT.md` |
 | Love-Letter Helper | `pm-family` | `pm-family/love-letter-helper/SYSTEM_PROMPT.md` |
 | Lower My Bill | `pm-money` | `pm-money/lower-my-bill/SYSTEM_PROMPT.md` |
 | Machiavelli Counsel | `pm-dead-mentors` | `pm-dead-mentors/machiavelli-counsel/SYSTEM_PROMPT.md` |
@@ -559,8 +566,10 @@
 | Meal Prep OS | `pm-kitchen` | `pm-kitchen/meal-prep-os/SYSTEM_PROMPT.md` |
 | Mechanic Quote Decoder | `other` | `other/mechanic-quote-decoder/SYSTEM_PROMPT.md` |
 | Media Pitch | `pm-gtm` | `pm-gtm/media-pitch/SYSTEM_PROMPT.md` |
+| Medical-Appointment Advocate | `pm-caregiving` | `pm-caregiving/medical-appointment-advocate/SYSTEM_PROMPT.md` |
 | Medical Bill Decoder | `pm-decoders` | `pm-decoders/medical-bill-decoder/SYSTEM_PROMPT.md` |
 | Medical Records Request | `pm-lifeadmin` | `pm-lifeadmin/medical-records-request/SYSTEM_PROMPT.md` |
+| Medication-Management System | `pm-caregiving` | `pm-caregiving/medication-management-system/SYSTEM_PROMPT.md` |
 | Meeting Action Extractor | `pm-essentials` | `pm-essentials/meeting-action-extractor/SYSTEM_PROMPT.md` |
 | Meeting Cost Meter | `pm-cowork` | `pm-cowork/meeting-cost-meter/SYSTEM_PROMPT.md` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/SYSTEM_PROMPT.md` |
@@ -770,6 +779,7 @@
 | Research Protocol | `pm-research` | `pm-research/research-protocol/SYSTEM_PROMPT.md` |
 | Research Repo Setup | `pm-cowork` | `pm-cowork/research-repo-setup/SYSTEM_PROMPT.md` |
 | Resignation Letter | `pm-resignation` | `pm-resignation/resignation-letter/SYSTEM_PROMPT.md` |
+| Respite-Care Plan | `pm-caregiving` | `pm-caregiving/respite-care-plan/SYSTEM_PROMPT.md` |
 | Resume | `pm-personal` | `pm-personal/resume/SYSTEM_PROMPT.md` |
 | Retention Analysis | `pm-analytics` | `pm-analytics/retention-analysis/SYSTEM_PROMPT.md` |
 | Retention Loop Design | `pm-growth` | `pm-growth/retention-loop-design/SYSTEM_PROMPT.md` |

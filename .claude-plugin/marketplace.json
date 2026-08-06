@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-caregiving",
+      "description": "Caregiving & aging skills for looking after a loved one: advocate at medical appointments, navigate a hospital stay, coordinate the care team, manage medications, assess aging in place, compare long-term-care options, prevent caregiver burnout, arrange respite, and have the end-of-life and family-decision conversations. Not medical, legal, or financial advice.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-caregiving",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-wealth",
       "description": "Money-building skills (the offense to pm-money's defense): investing basics, index funds, asking for a raise, your first milestone, compounding, FI roadmap, and a financial checkup. Educational — not financial advice; account/tax specifics are jurisdiction-dependent.",
       "version": "1.0.0",
