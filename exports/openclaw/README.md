@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1048 skills exported. Copy a `SKILL.md` into the tool to use it.
+1058 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -33,13 +33,17 @@
 | AI-Assisted Performance Review | `pm-aiwork` | `ai-assisted-performance-review/SKILL.md` |
 | AI Code Review | `pm-engineering` | `ai-code-review/SKILL.md` |
 | AI Content Audit | `pm-aiwork` | `ai-content-audit/SKILL.md` |
+| AI-Context Primer | `pm-ai-native` | `ai-context-primer/SKILL.md` |
 | AI Disclosure Policy | `pm-2027` | `ai-disclosure-policy/SKILL.md` |
 | AI Ethics Review | `pm-advanced` | `ai-ethics-review/SKILL.md` |
 | AI Eval Plan | `pm-ai` | `ai-eval-plan/SKILL.md` |
 | AI Feature PRD | `pm-ai` | `ai-feature-prd/SKILL.md` |
+| AI-Output Verifier | `pm-ai-native` | `ai-output-verifier/SKILL.md` |
 | AI Product Canvas | `pm-advanced` | `ai-product-canvas/SKILL.md` |
 | AI ROI Audit | `pm-aiwork` | `ai-roi-audit/SKILL.md` |
+| AI-Tool Picker | `pm-ai-native` | `ai-tool-picker/SKILL.md` |
 | AI Usage Policy | `pm-aiwork` | `ai-usage-policy/SKILL.md` |
+| AI-Workflow Designer | `pm-ai-native` | `ai-workflow-designer/SKILL.md` |
 | Air Quality | `pm-live` | `air-quality/SKILL.md` |
 | All Hands Deck | `pm-cowork` | `all-hands-deck/SKILL.md` |
 | Altitude Shifter | `pm-comms` | `altitude-shifter/SKILL.md` |
@@ -267,6 +271,7 @@
 | Deepfake Drill | `pm-2027` | `deepfake-drill/SKILL.md` |
 | Defamation Response | `pm-legal` | `defamation-response/SKILL.md` |
 | Delay Claim Letter | `pm-construction` | `delay-claim-letter/SKILL.md` |
+| Delegate to AI | `pm-ai-native` | `delegate-to-ai/SKILL.md` |
 | Delegation Brief | `pm-cowork` | `delegation-brief/SKILL.md` |
 | Deliberate-Practice Plan | `pm-learning` | `deliberate-practice-plan/SKILL.md` |
 | Delta Briefing | `pm-autopilot` | `delta-briefing/SKILL.md` |
@@ -418,6 +423,7 @@
 | Gantt / Roadmap | `pm-visuals` | `gantt-roadmap/SKILL.md` |
 | GDPR Compliance | `pm-compliance` | `gdpr-compliance/SKILL.md` |
 | Generate, Then Execute | `pm-thinking` | `generate-then-execute/SKILL.md` |
+| Get More From AI | `pm-ai-native` | `get-more-from-ai/SKILL.md` |
 | Gift-Card Recovery | `pm-money` | `gift-card-recovery/SKILL.md` |
 | Gift Finder | `pm-personal` | `gift-finder/SKILL.md` |
 | Git Troubleshooter | `pm-engineering` | `git-troubleshooter/SKILL.md` |
@@ -577,6 +583,7 @@
 | Meeting Prep Pack | `pm-cowork` | `meeting-prep-pack/SKILL.md` |
 | Meeting Room Etiquette | `pm-cowork` | `meeting-room-etiquette/SKILL.md` |
 | Memoir Story Capture | `pm-writers` | `memoir-story-capture/SKILL.md` |
+| Memory-File Maintenance | `pm-ai-native` | `memory-file-maintenance/SKILL.md` |
 | Menu Cost Engineer | `pm-hospitality` | `menu-cost-engineer/SKILL.md` |
 | Message for the Moment | `pm-comms` | `message-for-the-moment/SKILL.md` |
 | Messaging Framework | `pm-growth` | `messaging-framework/SKILL.md` |
@@ -713,6 +720,7 @@
 | Project Status Report | `pm-operations` | `project-status-report/SKILL.md` |
 | Promotion Packet | `pm-career` | `promotion-packet/SKILL.md` |
 | Promotion Plan | `pm-ecommerce` | `promotion-plan/SKILL.md` |
+| Prompt-Library Builder | `pm-ai-native` | `prompt-library-builder/SKILL.md` |
 | Prompt Optimizer | `pm-ai` | `prompt-optimizer/SKILL.md` |
 | Prompt Regression Suite | `pm-agentops` | `prompt-regression-suite/SKILL.md` |
 | Property Investment Analysis | `pm-realestate` | `property-investment-analysis/SKILL.md` |
@@ -805,6 +813,7 @@
 | RSS Digest | `pm-live` | `rss-digest/SKILL.md` |
 | Rubric Builder | `pm-education` | `rubric-builder/SKILL.md` |
 | Rules Lawyer | `pm-tabletop` | `rules-lawyer/SKILL.md` |
+| Run an Agent Team | `pm-ai-native` | `run-an-agent-team/SKILL.md` |
 | Runbook Writer | `pm-engineering` | `runbook-writer/SKILL.md` |
 | Runway Calculator | `pm-calculators` | `runway-calculator/SKILL.md` |
 | Runway Monte Carlo | `pm-calculators` | `runway-monte-carlo/SKILL.md` |
@@ -880,6 +889,7 @@
 | Spaced-Repetition Setup | `pm-learning` | `spaced-repetition-setup/SKILL.md` |
 | Speak At The Council | `pm-committee` | `speak-at-the-council/SKILL.md` |
 | Sports Scores | `pm-live` | `sports-scores/SKILL.md` |
+| Spot AI Mistakes | `pm-ai-native` | `spot-ai-mistakes/SKILL.md` |
 | Spreadsheet Audit | `pm-cowork` | `spreadsheet-audit/SKILL.md` |
 | Spreadsheet Audit (Live) | `pm-cowork-live` | `spreadsheet-audit-live/SKILL.md` |
 | Spreadsheet Handover | `pm-cowork` | `spreadsheet-handover/SKILL.md` |

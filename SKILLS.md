@@ -1,4 +1,4 @@
-# 🗂️ All 1048 Skills — full catalog
+# 🗂️ All 1058 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -726,7 +726,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (581 skills)
+## 🌍 Industries & Public Sector (591 skills)
 
 ### `other` — 14 skills
 
@@ -788,6 +788,21 @@
 |---|---|---|
 | **Aging Parent Talks** (`aging-parent-talks`) | Prepare the conversations with aging parents that everyone postpones — the driving talk, the money talk, the care-options talk, the moving talk —… | — |
 | **Sibling Care Summit** (`sibling-care-summit`) | Get siblings onto one team about aging parents before the crisis does it for them — a structured family meeting with an agenda that prevents… | — |
+
+### `pm-ai-native` — 10 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **AI-Context Primer** (`ai-context-primer`) | Build the context an AI needs to do a task well — the background, constraints, examples, and format it can't guess — so you get a great result on… | — |
+| **AI-Output Verifier** (`ai-output-verifier`) | Check AI output before you trust or use it — where it's likely wrong, what to verify, and how to catch confident-sounding errors. | — |
+| **AI-Tool Picker** (`ai-tool-picker`) | Figure out which AI tool actually fits the task in front of you — chatbot, coding assistant, image model, agent, or none — instead of forcing one… | — |
+| **AI-Workflow Designer** (`ai-workflow-designer`) | Design an AI-assisted workflow for a recurring task — which steps to hand to AI, which to keep human, and how they connect — so you get leverage… | — |
+| **Delegate to AI** (`delegate-to-ai`) | Decide what in your workload to hand to AI and what to keep yourself — like managing a fast, capable, but unreliable new hire — so you get… | — |
+| **Get More From AI** (`get-more-from-ai`) | Level up how you actually use AI — from basic one-shot questions to the techniques that get dramatically better results — matched to what you… | — |
+| **Memory-File Maintenance** (`memory-file-maintenance`) | Keep your AI memory/context file (MEMORY.md, CLAUDE.md, custom instructions) healthy over time — pruning the stale, adding the new, and keeping it… | — |
+| **Prompt-Library Builder** (`prompt-library-builder`) | Build a personal library of reusable prompts for the things you ask AI again and again — so you stop rewriting the same request from scratch. | — |
+| **Run an Agent Team** (`run-an-agent-team`) | Design a small team of AI agents to tackle a complex task in parallel — who does what, how they hand off, and how to keep them coordinated —… | — |
+| **Spot AI Mistakes** (`spot-ai-mistakes`) | Learn to recognize where and how AI tends to go wrong — the specific failure patterns — so you catch its mistakes on sight instead of getting… | — |
 
 ### `pm-aiwork` — 5 skills
 
@@ -1646,4 +1661,4 @@
 
 ---
 
-_1048 skills across 114 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1058 skills across 115 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

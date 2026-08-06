@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1048 skills exported. Copy a `.md rule` into the tool to use it.
+1058 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -33,13 +33,17 @@
 | AI-Assisted Performance Review | `pm-aiwork` | `pm-aiwork/ai-assisted-performance-review/ai-assisted-performance-review.md` |
 | AI Code Review | `pm-engineering` | `pm-engineering/ai-code-review/ai-code-review.md` |
 | AI Content Audit | `pm-aiwork` | `pm-aiwork/ai-content-audit/ai-content-audit.md` |
+| AI-Context Primer | `pm-ai-native` | `pm-ai-native/ai-context-primer/ai-context-primer.md` |
 | AI Disclosure Policy | `pm-2027` | `pm-2027/ai-disclosure-policy/ai-disclosure-policy.md` |
 | AI Ethics Review | `pm-advanced` | `pm-advanced/ai-ethics-review/ai-ethics-review.md` |
 | AI Eval Plan | `pm-ai` | `pm-ai/ai-eval-plan/ai-eval-plan.md` |
 | AI Feature PRD | `pm-ai` | `pm-ai/ai-feature-prd/ai-feature-prd.md` |
+| AI-Output Verifier | `pm-ai-native` | `pm-ai-native/ai-output-verifier/ai-output-verifier.md` |
 | AI Product Canvas | `pm-advanced` | `pm-advanced/ai-product-canvas/ai-product-canvas.md` |
 | AI ROI Audit | `pm-aiwork` | `pm-aiwork/ai-roi-audit/ai-roi-audit.md` |
+| AI-Tool Picker | `pm-ai-native` | `pm-ai-native/ai-tool-picker/ai-tool-picker.md` |
 | AI Usage Policy | `pm-aiwork` | `pm-aiwork/ai-usage-policy/ai-usage-policy.md` |
+| AI-Workflow Designer | `pm-ai-native` | `pm-ai-native/ai-workflow-designer/ai-workflow-designer.md` |
 | Air Quality | `pm-live` | `pm-live/air-quality/air-quality.md` |
 | All Hands Deck | `pm-cowork` | `pm-cowork/all-hands-deck/all-hands-deck.md` |
 | Altitude Shifter | `pm-comms` | `pm-comms/altitude-shifter/altitude-shifter.md` |
@@ -267,6 +271,7 @@
 | Deepfake Drill | `pm-2027` | `pm-2027/deepfake-drill/deepfake-drill.md` |
 | Defamation Response | `pm-legal` | `pm-legal/defamation-response/defamation-response.md` |
 | Delay Claim Letter | `pm-construction` | `pm-construction/delay-claim-letter/delay-claim-letter.md` |
+| Delegate to AI | `pm-ai-native` | `pm-ai-native/delegate-to-ai/delegate-to-ai.md` |
 | Delegation Brief | `pm-cowork` | `pm-cowork/delegation-brief/delegation-brief.md` |
 | Deliberate-Practice Plan | `pm-learning` | `pm-learning/deliberate-practice-plan/deliberate-practice-plan.md` |
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/delta-briefing.md` |
@@ -418,6 +423,7 @@
 | Gantt / Roadmap | `pm-visuals` | `pm-visuals/gantt-roadmap/gantt-roadmap.md` |
 | GDPR Compliance | `pm-compliance` | `pm-compliance/gdpr-compliance/gdpr-compliance.md` |
 | Generate, Then Execute | `pm-thinking` | `pm-thinking/generate-then-execute/generate-then-execute.md` |
+| Get More From AI | `pm-ai-native` | `pm-ai-native/get-more-from-ai/get-more-from-ai.md` |
 | Gift-Card Recovery | `pm-money` | `pm-money/gift-card-recovery/gift-card-recovery.md` |
 | Gift Finder | `pm-personal` | `pm-personal/gift-finder/gift-finder.md` |
 | Git Troubleshooter | `pm-engineering` | `pm-engineering/git-troubleshooter/git-troubleshooter.md` |
@@ -577,6 +583,7 @@
 | Meeting Prep Pack | `pm-cowork` | `pm-cowork/meeting-prep-pack/meeting-prep-pack.md` |
 | Meeting Room Etiquette | `pm-cowork` | `pm-cowork/meeting-room-etiquette/meeting-room-etiquette.md` |
 | Memoir Story Capture | `pm-writers` | `pm-writers/memoir-story-capture/memoir-story-capture.md` |
+| Memory-File Maintenance | `pm-ai-native` | `pm-ai-native/memory-file-maintenance/memory-file-maintenance.md` |
 | Menu Cost Engineer | `pm-hospitality` | `pm-hospitality/menu-cost-engineer/menu-cost-engineer.md` |
 | Message for the Moment | `pm-comms` | `pm-comms/message-for-the-moment/message-for-the-moment.md` |
 | Messaging Framework | `pm-growth` | `pm-growth/messaging-framework/messaging-framework.md` |
@@ -713,6 +720,7 @@
 | Project Status Report | `pm-operations` | `pm-operations/project-status-report/project-status-report.md` |
 | Promotion Packet | `pm-career` | `pm-career/promotion-packet/promotion-packet.md` |
 | Promotion Plan | `pm-ecommerce` | `pm-ecommerce/promotion-plan/promotion-plan.md` |
+| Prompt-Library Builder | `pm-ai-native` | `pm-ai-native/prompt-library-builder/prompt-library-builder.md` |
 | Prompt Optimizer | `pm-ai` | `pm-ai/prompt-optimizer/prompt-optimizer.md` |
 | Prompt Regression Suite | `pm-agentops` | `pm-agentops/prompt-regression-suite/prompt-regression-suite.md` |
 | Property Investment Analysis | `pm-realestate` | `pm-realestate/property-investment-analysis/property-investment-analysis.md` |
@@ -805,6 +813,7 @@
 | RSS Digest | `pm-live` | `pm-live/rss-digest/rss-digest.md` |
 | Rubric Builder | `pm-education` | `pm-education/rubric-builder/rubric-builder.md` |
 | Rules Lawyer | `pm-tabletop` | `pm-tabletop/rules-lawyer/rules-lawyer.md` |
+| Run an Agent Team | `pm-ai-native` | `pm-ai-native/run-an-agent-team/run-an-agent-team.md` |
 | Runbook Writer | `pm-engineering` | `pm-engineering/runbook-writer/runbook-writer.md` |
 | Runway Calculator | `pm-calculators` | `pm-calculators/runway-calculator/runway-calculator.md` |
 | Runway Monte Carlo | `pm-calculators` | `pm-calculators/runway-monte-carlo/runway-monte-carlo.md` |
@@ -880,6 +889,7 @@
 | Spaced-Repetition Setup | `pm-learning` | `pm-learning/spaced-repetition-setup/spaced-repetition-setup.md` |
 | Speak At The Council | `pm-committee` | `pm-committee/speak-at-the-council/speak-at-the-council.md` |
 | Sports Scores | `pm-live` | `pm-live/sports-scores/sports-scores.md` |
+| Spot AI Mistakes | `pm-ai-native` | `pm-ai-native/spot-ai-mistakes/spot-ai-mistakes.md` |
 | Spreadsheet Audit | `pm-cowork` | `pm-cowork/spreadsheet-audit/spreadsheet-audit.md` |
 | Spreadsheet Audit (Live) | `pm-cowork-live` | `pm-cowork-live/spreadsheet-audit-live/spreadsheet-audit-live.md` |
 | Spreadsheet Handover | `pm-cowork` | `pm-cowork/spreadsheet-handover/spreadsheet-handover.md` |

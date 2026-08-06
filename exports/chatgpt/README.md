@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1048 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1058 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -33,13 +33,17 @@
 | AI-Assisted Performance Review | `pm-aiwork` | `pm-aiwork/ai-assisted-performance-review/SYSTEM_PROMPT.md` |
 | AI Code Review | `pm-engineering` | `pm-engineering/ai-code-review/SYSTEM_PROMPT.md` |
 | AI Content Audit | `pm-aiwork` | `pm-aiwork/ai-content-audit/SYSTEM_PROMPT.md` |
+| AI-Context Primer | `pm-ai-native` | `pm-ai-native/ai-context-primer/SYSTEM_PROMPT.md` |
 | AI Disclosure Policy | `pm-2027` | `pm-2027/ai-disclosure-policy/SYSTEM_PROMPT.md` |
 | AI Ethics Review | `pm-advanced` | `pm-advanced/ai-ethics-review/SYSTEM_PROMPT.md` |
 | AI Eval Plan | `pm-ai` | `pm-ai/ai-eval-plan/SYSTEM_PROMPT.md` |
 | AI Feature PRD | `pm-ai` | `pm-ai/ai-feature-prd/SYSTEM_PROMPT.md` |
+| AI-Output Verifier | `pm-ai-native` | `pm-ai-native/ai-output-verifier/SYSTEM_PROMPT.md` |
 | AI Product Canvas | `pm-advanced` | `pm-advanced/ai-product-canvas/SYSTEM_PROMPT.md` |
 | AI ROI Audit | `pm-aiwork` | `pm-aiwork/ai-roi-audit/SYSTEM_PROMPT.md` |
+| AI-Tool Picker | `pm-ai-native` | `pm-ai-native/ai-tool-picker/SYSTEM_PROMPT.md` |
 | AI Usage Policy | `pm-aiwork` | `pm-aiwork/ai-usage-policy/SYSTEM_PROMPT.md` |
+| AI-Workflow Designer | `pm-ai-native` | `pm-ai-native/ai-workflow-designer/SYSTEM_PROMPT.md` |
 | Air Quality | `pm-live` | `pm-live/air-quality/SYSTEM_PROMPT.md` |
 | All Hands Deck | `pm-cowork` | `pm-cowork/all-hands-deck/SYSTEM_PROMPT.md` |
 | Altitude Shifter | `pm-comms` | `pm-comms/altitude-shifter/SYSTEM_PROMPT.md` |
@@ -267,6 +271,7 @@
 | Deepfake Drill | `pm-2027` | `pm-2027/deepfake-drill/SYSTEM_PROMPT.md` |
 | Defamation Response | `pm-legal` | `pm-legal/defamation-response/SYSTEM_PROMPT.md` |
 | Delay Claim Letter | `pm-construction` | `pm-construction/delay-claim-letter/SYSTEM_PROMPT.md` |
+| Delegate to AI | `pm-ai-native` | `pm-ai-native/delegate-to-ai/SYSTEM_PROMPT.md` |
 | Delegation Brief | `pm-cowork` | `pm-cowork/delegation-brief/SYSTEM_PROMPT.md` |
 | Deliberate-Practice Plan | `pm-learning` | `pm-learning/deliberate-practice-plan/SYSTEM_PROMPT.md` |
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/SYSTEM_PROMPT.md` |
@@ -418,6 +423,7 @@
 | Gantt / Roadmap | `pm-visuals` | `pm-visuals/gantt-roadmap/SYSTEM_PROMPT.md` |
 | GDPR Compliance | `pm-compliance` | `pm-compliance/gdpr-compliance/SYSTEM_PROMPT.md` |
 | Generate, Then Execute | `pm-thinking` | `pm-thinking/generate-then-execute/SYSTEM_PROMPT.md` |
+| Get More From AI | `pm-ai-native` | `pm-ai-native/get-more-from-ai/SYSTEM_PROMPT.md` |
 | Gift-Card Recovery | `pm-money` | `pm-money/gift-card-recovery/SYSTEM_PROMPT.md` |
 | Gift Finder | `pm-personal` | `pm-personal/gift-finder/SYSTEM_PROMPT.md` |
 | Git Troubleshooter | `pm-engineering` | `pm-engineering/git-troubleshooter/SYSTEM_PROMPT.md` |
@@ -577,6 +583,7 @@
 | Meeting Prep Pack | `pm-cowork` | `pm-cowork/meeting-prep-pack/SYSTEM_PROMPT.md` |
 | Meeting Room Etiquette | `pm-cowork` | `pm-cowork/meeting-room-etiquette/SYSTEM_PROMPT.md` |
 | Memoir Story Capture | `pm-writers` | `pm-writers/memoir-story-capture/SYSTEM_PROMPT.md` |
+| Memory-File Maintenance | `pm-ai-native` | `pm-ai-native/memory-file-maintenance/SYSTEM_PROMPT.md` |
 | Menu Cost Engineer | `pm-hospitality` | `pm-hospitality/menu-cost-engineer/SYSTEM_PROMPT.md` |
 | Message for the Moment | `pm-comms` | `pm-comms/message-for-the-moment/SYSTEM_PROMPT.md` |
 | Messaging Framework | `pm-growth` | `pm-growth/messaging-framework/SYSTEM_PROMPT.md` |
@@ -713,6 +720,7 @@
 | Project Status Report | `pm-operations` | `pm-operations/project-status-report/SYSTEM_PROMPT.md` |
 | Promotion Packet | `pm-career` | `pm-career/promotion-packet/SYSTEM_PROMPT.md` |
 | Promotion Plan | `pm-ecommerce` | `pm-ecommerce/promotion-plan/SYSTEM_PROMPT.md` |
+| Prompt-Library Builder | `pm-ai-native` | `pm-ai-native/prompt-library-builder/SYSTEM_PROMPT.md` |
 | Prompt Optimizer | `pm-ai` | `pm-ai/prompt-optimizer/SYSTEM_PROMPT.md` |
 | Prompt Regression Suite | `pm-agentops` | `pm-agentops/prompt-regression-suite/SYSTEM_PROMPT.md` |
 | Property Investment Analysis | `pm-realestate` | `pm-realestate/property-investment-analysis/SYSTEM_PROMPT.md` |
@@ -805,6 +813,7 @@
 | RSS Digest | `pm-live` | `pm-live/rss-digest/SYSTEM_PROMPT.md` |
 | Rubric Builder | `pm-education` | `pm-education/rubric-builder/SYSTEM_PROMPT.md` |
 | Rules Lawyer | `pm-tabletop` | `pm-tabletop/rules-lawyer/SYSTEM_PROMPT.md` |
+| Run an Agent Team | `pm-ai-native` | `pm-ai-native/run-an-agent-team/SYSTEM_PROMPT.md` |
 | Runbook Writer | `pm-engineering` | `pm-engineering/runbook-writer/SYSTEM_PROMPT.md` |
 | Runway Calculator | `pm-calculators` | `pm-calculators/runway-calculator/SYSTEM_PROMPT.md` |
 | Runway Monte Carlo | `pm-calculators` | `pm-calculators/runway-monte-carlo/SYSTEM_PROMPT.md` |
@@ -880,6 +889,7 @@
 | Spaced-Repetition Setup | `pm-learning` | `pm-learning/spaced-repetition-setup/SYSTEM_PROMPT.md` |
 | Speak At The Council | `pm-committee` | `pm-committee/speak-at-the-council/SYSTEM_PROMPT.md` |
 | Sports Scores | `pm-live` | `pm-live/sports-scores/SYSTEM_PROMPT.md` |
+| Spot AI Mistakes | `pm-ai-native` | `pm-ai-native/spot-ai-mistakes/SYSTEM_PROMPT.md` |
 | Spreadsheet Audit | `pm-cowork` | `pm-cowork/spreadsheet-audit/SYSTEM_PROMPT.md` |
 | Spreadsheet Audit (Live) | `pm-cowork-live` | `pm-cowork-live/spreadsheet-audit-live/SYSTEM_PROMPT.md` |
 | Spreadsheet Handover | `pm-cowork` | `pm-cowork/spreadsheet-handover/SYSTEM_PROMPT.md` |

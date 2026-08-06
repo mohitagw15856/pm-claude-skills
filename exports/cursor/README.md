@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1048 skills exported. Copy a `.mdc rule` into the tool to use it.
+1058 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -33,13 +33,17 @@
 | AI-Assisted Performance Review | `pm-aiwork` | `pm-aiwork/ai-assisted-performance-review/ai-assisted-performance-review.mdc` |
 | AI Code Review | `pm-engineering` | `pm-engineering/ai-code-review/ai-code-review.mdc` |
 | AI Content Audit | `pm-aiwork` | `pm-aiwork/ai-content-audit/ai-content-audit.mdc` |
+| AI-Context Primer | `pm-ai-native` | `pm-ai-native/ai-context-primer/ai-context-primer.mdc` |
 | AI Disclosure Policy | `pm-2027` | `pm-2027/ai-disclosure-policy/ai-disclosure-policy.mdc` |
 | AI Ethics Review | `pm-advanced` | `pm-advanced/ai-ethics-review/ai-ethics-review.mdc` |
 | AI Eval Plan | `pm-ai` | `pm-ai/ai-eval-plan/ai-eval-plan.mdc` |
 | AI Feature PRD | `pm-ai` | `pm-ai/ai-feature-prd/ai-feature-prd.mdc` |
+| AI-Output Verifier | `pm-ai-native` | `pm-ai-native/ai-output-verifier/ai-output-verifier.mdc` |
 | AI Product Canvas | `pm-advanced` | `pm-advanced/ai-product-canvas/ai-product-canvas.mdc` |
 | AI ROI Audit | `pm-aiwork` | `pm-aiwork/ai-roi-audit/ai-roi-audit.mdc` |
+| AI-Tool Picker | `pm-ai-native` | `pm-ai-native/ai-tool-picker/ai-tool-picker.mdc` |
 | AI Usage Policy | `pm-aiwork` | `pm-aiwork/ai-usage-policy/ai-usage-policy.mdc` |
+| AI-Workflow Designer | `pm-ai-native` | `pm-ai-native/ai-workflow-designer/ai-workflow-designer.mdc` |
 | Air Quality | `pm-live` | `pm-live/air-quality/air-quality.mdc` |
 | All Hands Deck | `pm-cowork` | `pm-cowork/all-hands-deck/all-hands-deck.mdc` |
 | Altitude Shifter | `pm-comms` | `pm-comms/altitude-shifter/altitude-shifter.mdc` |
@@ -267,6 +271,7 @@
 | Deepfake Drill | `pm-2027` | `pm-2027/deepfake-drill/deepfake-drill.mdc` |
 | Defamation Response | `pm-legal` | `pm-legal/defamation-response/defamation-response.mdc` |
 | Delay Claim Letter | `pm-construction` | `pm-construction/delay-claim-letter/delay-claim-letter.mdc` |
+| Delegate to AI | `pm-ai-native` | `pm-ai-native/delegate-to-ai/delegate-to-ai.mdc` |
 | Delegation Brief | `pm-cowork` | `pm-cowork/delegation-brief/delegation-brief.mdc` |
 | Deliberate-Practice Plan | `pm-learning` | `pm-learning/deliberate-practice-plan/deliberate-practice-plan.mdc` |
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/delta-briefing.mdc` |
@@ -418,6 +423,7 @@
 | Gantt / Roadmap | `pm-visuals` | `pm-visuals/gantt-roadmap/gantt-roadmap.mdc` |
 | GDPR Compliance | `pm-compliance` | `pm-compliance/gdpr-compliance/gdpr-compliance.mdc` |
 | Generate, Then Execute | `pm-thinking` | `pm-thinking/generate-then-execute/generate-then-execute.mdc` |
+| Get More From AI | `pm-ai-native` | `pm-ai-native/get-more-from-ai/get-more-from-ai.mdc` |
 | Gift-Card Recovery | `pm-money` | `pm-money/gift-card-recovery/gift-card-recovery.mdc` |
 | Gift Finder | `pm-personal` | `pm-personal/gift-finder/gift-finder.mdc` |
 | Git Troubleshooter | `pm-engineering` | `pm-engineering/git-troubleshooter/git-troubleshooter.mdc` |
@@ -577,6 +583,7 @@
 | Meeting Prep Pack | `pm-cowork` | `pm-cowork/meeting-prep-pack/meeting-prep-pack.mdc` |
 | Meeting Room Etiquette | `pm-cowork` | `pm-cowork/meeting-room-etiquette/meeting-room-etiquette.mdc` |
 | Memoir Story Capture | `pm-writers` | `pm-writers/memoir-story-capture/memoir-story-capture.mdc` |
+| Memory-File Maintenance | `pm-ai-native` | `pm-ai-native/memory-file-maintenance/memory-file-maintenance.mdc` |
 | Menu Cost Engineer | `pm-hospitality` | `pm-hospitality/menu-cost-engineer/menu-cost-engineer.mdc` |
 | Message for the Moment | `pm-comms` | `pm-comms/message-for-the-moment/message-for-the-moment.mdc` |
 | Messaging Framework | `pm-growth` | `pm-growth/messaging-framework/messaging-framework.mdc` |
@@ -713,6 +720,7 @@
 | Project Status Report | `pm-operations` | `pm-operations/project-status-report/project-status-report.mdc` |
 | Promotion Packet | `pm-career` | `pm-career/promotion-packet/promotion-packet.mdc` |
 | Promotion Plan | `pm-ecommerce` | `pm-ecommerce/promotion-plan/promotion-plan.mdc` |
+| Prompt-Library Builder | `pm-ai-native` | `pm-ai-native/prompt-library-builder/prompt-library-builder.mdc` |
 | Prompt Optimizer | `pm-ai` | `pm-ai/prompt-optimizer/prompt-optimizer.mdc` |
 | Prompt Regression Suite | `pm-agentops` | `pm-agentops/prompt-regression-suite/prompt-regression-suite.mdc` |
 | Property Investment Analysis | `pm-realestate` | `pm-realestate/property-investment-analysis/property-investment-analysis.mdc` |
@@ -805,6 +813,7 @@
 | RSS Digest | `pm-live` | `pm-live/rss-digest/rss-digest.mdc` |
 | Rubric Builder | `pm-education` | `pm-education/rubric-builder/rubric-builder.mdc` |
 | Rules Lawyer | `pm-tabletop` | `pm-tabletop/rules-lawyer/rules-lawyer.mdc` |
+| Run an Agent Team | `pm-ai-native` | `pm-ai-native/run-an-agent-team/run-an-agent-team.mdc` |
 | Runbook Writer | `pm-engineering` | `pm-engineering/runbook-writer/runbook-writer.mdc` |
 | Runway Calculator | `pm-calculators` | `pm-calculators/runway-calculator/runway-calculator.mdc` |
 | Runway Monte Carlo | `pm-calculators` | `pm-calculators/runway-monte-carlo/runway-monte-carlo.mdc` |
@@ -880,6 +889,7 @@
 | Spaced-Repetition Setup | `pm-learning` | `pm-learning/spaced-repetition-setup/spaced-repetition-setup.mdc` |
 | Speak At The Council | `pm-committee` | `pm-committee/speak-at-the-council/speak-at-the-council.mdc` |
 | Sports Scores | `pm-live` | `pm-live/sports-scores/sports-scores.mdc` |
+| Spot AI Mistakes | `pm-ai-native` | `pm-ai-native/spot-ai-mistakes/spot-ai-mistakes.mdc` |
 | Spreadsheet Audit | `pm-cowork` | `pm-cowork/spreadsheet-audit/spreadsheet-audit.mdc` |
 | Spreadsheet Audit (Live) | `pm-cowork-live` | `pm-cowork-live/spreadsheet-audit-live/spreadsheet-audit-live.mdc` |
 | Spreadsheet Handover | `pm-cowork` | `pm-cowork/spreadsheet-handover/spreadsheet-handover.mdc` |

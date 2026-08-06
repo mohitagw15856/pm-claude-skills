@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1048 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1058 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -33,13 +33,17 @@
 | AI-Assisted Performance Review | `pm-aiwork` | `pm-aiwork/ai-assisted-performance-review/GEM_INSTRUCTIONS.md` |
 | AI Code Review | `pm-engineering` | `pm-engineering/ai-code-review/GEM_INSTRUCTIONS.md` |
 | AI Content Audit | `pm-aiwork` | `pm-aiwork/ai-content-audit/GEM_INSTRUCTIONS.md` |
+| AI-Context Primer | `pm-ai-native` | `pm-ai-native/ai-context-primer/GEM_INSTRUCTIONS.md` |
 | AI Disclosure Policy | `pm-2027` | `pm-2027/ai-disclosure-policy/GEM_INSTRUCTIONS.md` |
 | AI Ethics Review | `pm-advanced` | `pm-advanced/ai-ethics-review/GEM_INSTRUCTIONS.md` |
 | AI Eval Plan | `pm-ai` | `pm-ai/ai-eval-plan/GEM_INSTRUCTIONS.md` |
 | AI Feature PRD | `pm-ai` | `pm-ai/ai-feature-prd/GEM_INSTRUCTIONS.md` |
+| AI-Output Verifier | `pm-ai-native` | `pm-ai-native/ai-output-verifier/GEM_INSTRUCTIONS.md` |
 | AI Product Canvas | `pm-advanced` | `pm-advanced/ai-product-canvas/GEM_INSTRUCTIONS.md` |
 | AI ROI Audit | `pm-aiwork` | `pm-aiwork/ai-roi-audit/GEM_INSTRUCTIONS.md` |
+| AI-Tool Picker | `pm-ai-native` | `pm-ai-native/ai-tool-picker/GEM_INSTRUCTIONS.md` |
 | AI Usage Policy | `pm-aiwork` | `pm-aiwork/ai-usage-policy/GEM_INSTRUCTIONS.md` |
+| AI-Workflow Designer | `pm-ai-native` | `pm-ai-native/ai-workflow-designer/GEM_INSTRUCTIONS.md` |
 | Air Quality | `pm-live` | `pm-live/air-quality/GEM_INSTRUCTIONS.md` |
 | All Hands Deck | `pm-cowork` | `pm-cowork/all-hands-deck/GEM_INSTRUCTIONS.md` |
 | Altitude Shifter | `pm-comms` | `pm-comms/altitude-shifter/GEM_INSTRUCTIONS.md` |
@@ -267,6 +271,7 @@
 | Deepfake Drill | `pm-2027` | `pm-2027/deepfake-drill/GEM_INSTRUCTIONS.md` |
 | Defamation Response | `pm-legal` | `pm-legal/defamation-response/GEM_INSTRUCTIONS.md` |
 | Delay Claim Letter | `pm-construction` | `pm-construction/delay-claim-letter/GEM_INSTRUCTIONS.md` |
+| Delegate to AI | `pm-ai-native` | `pm-ai-native/delegate-to-ai/GEM_INSTRUCTIONS.md` |
 | Delegation Brief | `pm-cowork` | `pm-cowork/delegation-brief/GEM_INSTRUCTIONS.md` |
 | Deliberate-Practice Plan | `pm-learning` | `pm-learning/deliberate-practice-plan/GEM_INSTRUCTIONS.md` |
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/GEM_INSTRUCTIONS.md` |
@@ -418,6 +423,7 @@
 | Gantt / Roadmap | `pm-visuals` | `pm-visuals/gantt-roadmap/GEM_INSTRUCTIONS.md` |
 | GDPR Compliance | `pm-compliance` | `pm-compliance/gdpr-compliance/GEM_INSTRUCTIONS.md` |
 | Generate, Then Execute | `pm-thinking` | `pm-thinking/generate-then-execute/GEM_INSTRUCTIONS.md` |
+| Get More From AI | `pm-ai-native` | `pm-ai-native/get-more-from-ai/GEM_INSTRUCTIONS.md` |
 | Gift-Card Recovery | `pm-money` | `pm-money/gift-card-recovery/GEM_INSTRUCTIONS.md` |
 | Gift Finder | `pm-personal` | `pm-personal/gift-finder/GEM_INSTRUCTIONS.md` |
 | Git Troubleshooter | `pm-engineering` | `pm-engineering/git-troubleshooter/GEM_INSTRUCTIONS.md` |
@@ -577,6 +583,7 @@
 | Meeting Prep Pack | `pm-cowork` | `pm-cowork/meeting-prep-pack/GEM_INSTRUCTIONS.md` |
 | Meeting Room Etiquette | `pm-cowork` | `pm-cowork/meeting-room-etiquette/GEM_INSTRUCTIONS.md` |
 | Memoir Story Capture | `pm-writers` | `pm-writers/memoir-story-capture/GEM_INSTRUCTIONS.md` |
+| Memory-File Maintenance | `pm-ai-native` | `pm-ai-native/memory-file-maintenance/GEM_INSTRUCTIONS.md` |
 | Menu Cost Engineer | `pm-hospitality` | `pm-hospitality/menu-cost-engineer/GEM_INSTRUCTIONS.md` |
 | Message for the Moment | `pm-comms` | `pm-comms/message-for-the-moment/GEM_INSTRUCTIONS.md` |
 | Messaging Framework | `pm-growth` | `pm-growth/messaging-framework/GEM_INSTRUCTIONS.md` |
@@ -713,6 +720,7 @@
 | Project Status Report | `pm-operations` | `pm-operations/project-status-report/GEM_INSTRUCTIONS.md` |
 | Promotion Packet | `pm-career` | `pm-career/promotion-packet/GEM_INSTRUCTIONS.md` |
 | Promotion Plan | `pm-ecommerce` | `pm-ecommerce/promotion-plan/GEM_INSTRUCTIONS.md` |
+| Prompt-Library Builder | `pm-ai-native` | `pm-ai-native/prompt-library-builder/GEM_INSTRUCTIONS.md` |
 | Prompt Optimizer | `pm-ai` | `pm-ai/prompt-optimizer/GEM_INSTRUCTIONS.md` |
 | Prompt Regression Suite | `pm-agentops` | `pm-agentops/prompt-regression-suite/GEM_INSTRUCTIONS.md` |
 | Property Investment Analysis | `pm-realestate` | `pm-realestate/property-investment-analysis/GEM_INSTRUCTIONS.md` |
@@ -805,6 +813,7 @@
 | RSS Digest | `pm-live` | `pm-live/rss-digest/GEM_INSTRUCTIONS.md` |
 | Rubric Builder | `pm-education` | `pm-education/rubric-builder/GEM_INSTRUCTIONS.md` |
 | Rules Lawyer | `pm-tabletop` | `pm-tabletop/rules-lawyer/GEM_INSTRUCTIONS.md` |
+| Run an Agent Team | `pm-ai-native` | `pm-ai-native/run-an-agent-team/GEM_INSTRUCTIONS.md` |
 | Runbook Writer | `pm-engineering` | `pm-engineering/runbook-writer/GEM_INSTRUCTIONS.md` |
 | Runway Calculator | `pm-calculators` | `pm-calculators/runway-calculator/GEM_INSTRUCTIONS.md` |
 | Runway Monte Carlo | `pm-calculators` | `pm-calculators/runway-monte-carlo/GEM_INSTRUCTIONS.md` |
@@ -880,6 +889,7 @@
 | Spaced-Repetition Setup | `pm-learning` | `pm-learning/spaced-repetition-setup/GEM_INSTRUCTIONS.md` |
 | Speak At The Council | `pm-committee` | `pm-committee/speak-at-the-council/GEM_INSTRUCTIONS.md` |
 | Sports Scores | `pm-live` | `pm-live/sports-scores/GEM_INSTRUCTIONS.md` |
+| Spot AI Mistakes | `pm-ai-native` | `pm-ai-native/spot-ai-mistakes/GEM_INSTRUCTIONS.md` |
 | Spreadsheet Audit | `pm-cowork` | `pm-cowork/spreadsheet-audit/GEM_INSTRUCTIONS.md` |
 | Spreadsheet Audit (Live) | `pm-cowork-live` | `pm-cowork-live/spreadsheet-audit-live/GEM_INSTRUCTIONS.md` |
 | Spreadsheet Handover | `pm-cowork` | `pm-cowork/spreadsheet-handover/GEM_INSTRUCTIONS.md` |
