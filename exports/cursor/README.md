@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1008 skills exported. Copy a `.mdc rule` into the tool to use it.
+1012 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -360,6 +360,7 @@
 | Feature Flag Guide | `pm-engineering` | `pm-engineering/feature-flag-guide/feature-flag-guide.mdc` |
 | Feature Prioritisation | `pm-planning` | `pm-planning/feature-prioritisation/feature-prioritisation.mdc` |
 | Feature Sunset Plan | `pm-planning` | `pm-planning/feature-sunset-plan/feature-sunset-plan.mdc` |
+| Feynman Explainer | `other` | `other/feynman-explainer/feynman-explainer.mdc` |
 | Figma Annotation Guide | `pm-figma` | `pm-figma/figma-annotation-guide/figma-annotation-guide.mdc` |
 | Figma Component Audit | `pm-figma` | `pm-figma/figma-component-audit/figma-component-audit.mdc` |
 | Figma Design Brief | `pm-figma` | `pm-figma/figma-design-brief/figma-design-brief.mdc` |
@@ -509,6 +510,7 @@
 | Layoff Communication | `pm-crisis` | `pm-crisis/layoff-communication/layoff-communication.mdc` |
 | Layoff Financial Triage | `pm-layoff` | `pm-layoff/layoff-financial-triage/layoff-financial-triage.mdc` |
 | Layoff: First 72 Hours | `pm-career` | `pm-career/layoff-first-72-hours/layoff-first-72-hours.mdc` |
+| Learn-Anything Roadmap | `other` | `other/learn-anything-roadmap/learn-anything-roadmap.mdc` |
 | Lease Decoder | `pm-decoders` | `pm-decoders/lease-decoder/lease-decoder.mdc` |
 | Legal Brief | `pm-legal` | `pm-legal/legal-brief/legal-brief.mdc` |
 | Lemon Law Check | `pm-legal` | `pm-legal/lemon-law-check/lemon-law-check.mdc` |
@@ -820,6 +822,7 @@
 | Site Check | `pm-live` | `pm-live/site-check/site-check.mdc` |
 | Site Safety Briefing | `pm-construction` | `pm-construction/site-safety-briefing/site-safety-briefing.mdc` |
 | Skill Fusion | `pm-advanced` | `pm-advanced/skill-fusion/skill-fusion.mdc` |
+| Skill-Plateau Breaker | `other` | `other/skill-plateau-breaker/skill-plateau-breaker.mdc` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/skill-security-auditor.mdc` |
 | Skill Vetting | `pm-security` | `pm-security/skill-vetting/skill-vetting.mdc` |
 | Sleep Reset Plan | `pm-wellbeing` | `pm-wellbeing/sleep-reset-plan/sleep-reset-plan.mdc` |
@@ -840,6 +843,7 @@
 | Source Triangulation | `pm-cowork` | `pm-cowork/source-triangulation/source-triangulation.mdc` |
 | Sourcing Strategy | `pm-recruiting` | `pm-recruiting/sourcing-strategy/sourcing-strategy.mdc` |
 | Sourdough Troubleshooter | `pm-hobbies` | `pm-hobbies/sourdough-troubleshooter/sourdough-troubleshooter.mdc` |
+| Spaced-Repetition Setup | `other` | `other/spaced-repetition-setup/spaced-repetition-setup.mdc` |
 | Speak At The Council | `pm-committee` | `pm-committee/speak-at-the-council/speak-at-the-council.mdc` |
 | Sports Scores | `pm-live` | `pm-live/sports-scores/sports-scores.mdc` |
 | Spreadsheet Audit | `pm-cowork` | `pm-cowork/spreadsheet-audit/spreadsheet-audit.mdc` |

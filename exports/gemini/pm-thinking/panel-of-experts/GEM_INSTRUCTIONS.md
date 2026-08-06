@@ -36,7 +36,7 @@ Ask for these if not provided:
 
 **Panel:** [the experts chosen, and why they fit].
 
-**👩‍⚖️ [Expert]:** [their take + what a layperson misses].
+**⚖️ [Expert]:** [their take + what a layperson misses].
 **🧠 [Expert]:** [their take + blind spot].
 **💰 [Expert]:** [their take + blind spot].
 

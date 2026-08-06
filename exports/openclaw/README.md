@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1008 skills exported. Copy a `SKILL.md` into the tool to use it.
+1012 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -360,6 +360,7 @@
 | Feature Flag Guide | `pm-engineering` | `feature-flag-guide/SKILL.md` |
 | Feature Prioritisation | `pm-planning` | `feature-prioritisation/SKILL.md` |
 | Feature Sunset Plan | `pm-planning` | `feature-sunset-plan/SKILL.md` |
+| Feynman Explainer | `other` | `feynman-explainer/SKILL.md` |
 | Figma Annotation Guide | `pm-figma` | `figma-annotation-guide/SKILL.md` |
 | Figma Component Audit | `pm-figma` | `figma-component-audit/SKILL.md` |
 | Figma Design Brief | `pm-figma` | `figma-design-brief/SKILL.md` |
@@ -509,6 +510,7 @@
 | Layoff Communication | `pm-crisis` | `layoff-communication/SKILL.md` |
 | Layoff Financial Triage | `pm-layoff` | `layoff-financial-triage/SKILL.md` |
 | Layoff: First 72 Hours | `pm-career` | `layoff-first-72-hours/SKILL.md` |
+| Learn-Anything Roadmap | `other` | `learn-anything-roadmap/SKILL.md` |
 | Lease Decoder | `pm-decoders` | `lease-decoder/SKILL.md` |
 | Legal Brief | `pm-legal` | `legal-brief/SKILL.md` |
 | Lemon Law Check | `pm-legal` | `lemon-law-check/SKILL.md` |
@@ -820,6 +822,7 @@
 | Site Check | `pm-live` | `site-check/SKILL.md` |
 | Site Safety Briefing | `pm-construction` | `site-safety-briefing/SKILL.md` |
 | Skill Fusion | `pm-advanced` | `skill-fusion/SKILL.md` |
+| Skill-Plateau Breaker | `other` | `skill-plateau-breaker/SKILL.md` |
 | Skill Security Auditor | `pm-engineering` | `skill-security-auditor/SKILL.md` |
 | Skill Vetting | `pm-security` | `skill-vetting/SKILL.md` |
 | Sleep Reset Plan | `pm-wellbeing` | `sleep-reset-plan/SKILL.md` |
@@ -840,6 +843,7 @@
 | Source Triangulation | `pm-cowork` | `source-triangulation/SKILL.md` |
 | Sourcing Strategy | `pm-recruiting` | `sourcing-strategy/SKILL.md` |
 | Sourdough Troubleshooter | `pm-hobbies` | `sourdough-troubleshooter/SKILL.md` |
+| Spaced-Repetition Setup | `other` | `spaced-repetition-setup/SKILL.md` |
 | Speak At The Council | `pm-committee` | `speak-at-the-council/SKILL.md` |
 | Sports Scores | `pm-live` | `sports-scores/SKILL.md` |
 | Spreadsheet Audit | `pm-cowork` | `spreadsheet-audit/SKILL.md` |

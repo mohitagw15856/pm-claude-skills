@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1008 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1012 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -360,6 +360,7 @@
 | Feature Flag Guide | `pm-engineering` | `pm-engineering/feature-flag-guide/GEM_INSTRUCTIONS.md` |
 | Feature Prioritisation | `pm-planning` | `pm-planning/feature-prioritisation/GEM_INSTRUCTIONS.md` |
 | Feature Sunset Plan | `pm-planning` | `pm-planning/feature-sunset-plan/GEM_INSTRUCTIONS.md` |
+| Feynman Explainer | `other` | `other/feynman-explainer/GEM_INSTRUCTIONS.md` |
 | Figma Annotation Guide | `pm-figma` | `pm-figma/figma-annotation-guide/GEM_INSTRUCTIONS.md` |
 | Figma Component Audit | `pm-figma` | `pm-figma/figma-component-audit/GEM_INSTRUCTIONS.md` |
 | Figma Design Brief | `pm-figma` | `pm-figma/figma-design-brief/GEM_INSTRUCTIONS.md` |
@@ -509,6 +510,7 @@
 | Layoff Communication | `pm-crisis` | `pm-crisis/layoff-communication/GEM_INSTRUCTIONS.md` |
 | Layoff Financial Triage | `pm-layoff` | `pm-layoff/layoff-financial-triage/GEM_INSTRUCTIONS.md` |
 | Layoff: First 72 Hours | `pm-career` | `pm-career/layoff-first-72-hours/GEM_INSTRUCTIONS.md` |
+| Learn-Anything Roadmap | `other` | `other/learn-anything-roadmap/GEM_INSTRUCTIONS.md` |
 | Lease Decoder | `pm-decoders` | `pm-decoders/lease-decoder/GEM_INSTRUCTIONS.md` |
 | Legal Brief | `pm-legal` | `pm-legal/legal-brief/GEM_INSTRUCTIONS.md` |
 | Lemon Law Check | `pm-legal` | `pm-legal/lemon-law-check/GEM_INSTRUCTIONS.md` |
@@ -820,6 +822,7 @@
 | Site Check | `pm-live` | `pm-live/site-check/GEM_INSTRUCTIONS.md` |
 | Site Safety Briefing | `pm-construction` | `pm-construction/site-safety-briefing/GEM_INSTRUCTIONS.md` |
 | Skill Fusion | `pm-advanced` | `pm-advanced/skill-fusion/GEM_INSTRUCTIONS.md` |
+| Skill-Plateau Breaker | `other` | `other/skill-plateau-breaker/GEM_INSTRUCTIONS.md` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/GEM_INSTRUCTIONS.md` |
 | Skill Vetting | `pm-security` | `pm-security/skill-vetting/GEM_INSTRUCTIONS.md` |
 | Sleep Reset Plan | `pm-wellbeing` | `pm-wellbeing/sleep-reset-plan/GEM_INSTRUCTIONS.md` |
@@ -840,6 +843,7 @@
 | Source Triangulation | `pm-cowork` | `pm-cowork/source-triangulation/GEM_INSTRUCTIONS.md` |
 | Sourcing Strategy | `pm-recruiting` | `pm-recruiting/sourcing-strategy/GEM_INSTRUCTIONS.md` |
 | Sourdough Troubleshooter | `pm-hobbies` | `pm-hobbies/sourdough-troubleshooter/GEM_INSTRUCTIONS.md` |
+| Spaced-Repetition Setup | `other` | `other/spaced-repetition-setup/GEM_INSTRUCTIONS.md` |
 | Speak At The Council | `pm-committee` | `pm-committee/speak-at-the-council/GEM_INSTRUCTIONS.md` |
 | Sports Scores | `pm-live` | `pm-live/sports-scores/GEM_INSTRUCTIONS.md` |
 | Spreadsheet Audit | `pm-cowork` | `pm-cowork/spreadsheet-audit/GEM_INSTRUCTIONS.md` |
