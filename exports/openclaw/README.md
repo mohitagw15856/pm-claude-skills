@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1028 skills exported. Copy a `SKILL.md` into the tool to use it.
+1038 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -88,6 +88,7 @@
 | BOM Cost Review | `pm-hardware` | `bom-cost-review/SKILL.md` |
 | Bookkeeping Categorization | `pm-accounting` | `bookkeeping-categorization/SKILL.md` |
 | Boolean Search Builder | `pm-recruiting` | `boolean-search-builder/SKILL.md` |
+| Boundary-Setting Scripts | `other` | `boundary-setting-scripts/SKILL.md` |
 | Brag Doc | `pm-career` | `brag-doc/SKILL.md` |
 | Brainstorming | `pm-method` | `brainstorming/SKILL.md` |
 | Brand Guidelines | `pm-design` | `brand-guidelines/SKILL.md` |
@@ -185,6 +186,7 @@
 | Compound-Growth Explainer | `pm-wealth` | `compound-growth-explainer/SKILL.md` |
 | Condolence Message Helper | `pm-family` | `condolence-message-helper/SKILL.md` |
 | Conference Talk Proposal | `pm-devrel` | `conference-talk-proposal/SKILL.md` |
+| Conflict De-escalation | `other` | `conflict-deescalation/SKILL.md` |
 | Consulting Proposal | `pm-consulting` | `consulting-proposal/SKILL.md` |
 | Content Calendar | `pm-gtm` | `content-calendar/SKILL.md` |
 | Content Repurposer | `pm-creator` | `content-repurposer/SKILL.md` |
@@ -415,6 +417,7 @@
 | Gift Finder | `pm-personal` | `gift-finder/SKILL.md` |
 | Git Troubleshooter | `pm-engineering` | `git-troubleshooter/SKILL.md` |
 | GitHub Repo Vitals | `pm-live` | `github-repo-vitals/SKILL.md` |
+| Give Hard Feedback Kindly | `other` | `give-hard-feedback-kindly/SKILL.md` |
 | Giving Feedback | `pm-comms` | `giving-feedback/SKILL.md` |
 | Glossary Builder | `pm-localization` | `glossary-builder/SKILL.md` |
 | Go-To-Market | `pm-gtm` | `go-to-market/SKILL.md` |
@@ -545,6 +548,7 @@
 | Lower My Bill | `pm-money` | `lower-my-bill/SKILL.md` |
 | Machiavelli Counsel | `pm-dead-mentors` | `machiavelli-counsel/SKILL.md` |
 | Maintainer Triage | `pm-maintainer` | `maintainer-triage/SKILL.md` |
+| Make Friends as an Adult | `other` | `make-friends-as-an-adult/SKILL.md` |
 | Make Me a | `pm-focus` | `make-me-a-skill/SKILL.md` |
 | Manager First 90 Days | `pm-people` | `manager-first-90-days/SKILL.md` |
 | Managing Up | `pm-comms` | `managing-up/SKILL.md` |
@@ -594,6 +598,7 @@
 | NDA Analyser | `pm-legal` | `nda-analyser/SKILL.md` |
 | Neighbor-Dispute Resolver | `pm-lifeadmin` | `neighbor-dispute-resolver/SKILL.md` |
 | Net Worth Statement | `pm-money` | `net-worth-statement/SKILL.md` |
+| Networking for Introverts | `other` | `networking-for-introverts/SKILL.md` |
 | Networking Outreach | `pm-career` | `networking-outreach/SKILL.md` |
 | New-Baby Logistics | `pm-family` | `new-baby-logistics/SKILL.md` |
 | New Manager: First 90 Days | `pm-career` | `new-manager-first-90-days/SKILL.md` |
@@ -725,9 +730,11 @@
 | Ranked Climb Coach | `pm-newgen` | `ranked-climb-coach/SKILL.md` |
 | Ransomware First Response | `pm-digital-safety` | `ransomware-first-response/SKILL.md` |
 | Rate Card | `pm-consulting` | `rate-card/SKILL.md` |
+| Read the Room | `other` | `read-the-room/SKILL.md` |
 | Reading Retention System | `pm-learning` | `reading-retention-system/SKILL.md` |
 | README Writer | `pm-devrel` | `readme-writer/SKILL.md` |
 | Receipts Audit | `pm-method` | `receipts-audit/SKILL.md` |
+| Reconnect With Someone | `other` | `reconnect-with-someone/SKILL.md` |
 | Recovery Day Planner | `pm-wellbeing` | `recovery-day-planner/SKILL.md` |
 | Recruiter Outreach | `pm-recruiting` | `recruiter-outreach/SKILL.md` |
 | Recurring Meeting Pruner | `pm-cowork` | `recurring-meeting-pruner/SKILL.md` |
@@ -755,6 +762,7 @@
 | Rent Increase Response | `pm-renters` | `rent-increase-response/SKILL.md` |
 | Rent vs Buy | `pm-calculators` | `rent-vs-buy/SKILL.md` |
 | Rental Application | `pm-lifeadmin` | `rental-application/SKILL.md` |
+| Repair After a Fight | `other` | `repair-after-a-fight/SKILL.md` |
 | Repair Request Escalation | `pm-renters` | `repair-request-escalation/SKILL.md` |
 | Reply In Their Tone | `pm-cowork` | `reply-in-their-tone/SKILL.md` |
 | Repo Map | `pm-tokens` | `repo-map/SKILL.md` |
@@ -845,6 +853,7 @@
 | Slide Density Rules | `pm-cowork` | `slide-density-rules/SKILL.md` |
 | SLO and Error Budget | `pm-engineering` | `slo-error-budget/SKILL.md` |
 | Small-Claims Prep | `pm-legal` | `small-claims-prep/SKILL.md` |
+| Small-Talk Survival | `other` | `small-talk-survival/SKILL.md` |
 | SOAP Note | `pm-health` | `soap-note/SKILL.md` |
 | SOC 2 Readiness | `pm-compliance` | `soc2-readiness/SKILL.md` |
 | Social Ad Campaign | `pm-social` | `social-ad-campaign/SKILL.md` |
@@ -902,6 +911,7 @@
 | Sun and Moon | `pm-live` | `sun-and-moon/SKILL.md` |
 | Sun Tzu Strategy Brief | `pm-dead-mentors` | `sun-tzu-strategy-brief/SKILL.md` |
 | Supplier Scorecard | `pm-supplychain` | `supplier-scorecard/SKILL.md` |
+| Support a Friend in Crisis | `other` | `support-a-friend-in-crisis/SKILL.md` |
 | Support Macro | `pm-support` | `support-macro/SKILL.md` |
 | Support Runbook | `pm-support` | `support-runbook/SKILL.md` |
 | Support Staffing Model | `pm-calculators` | `support-staffing-model/SKILL.md` |

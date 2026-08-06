@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1028 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1038 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -88,6 +88,7 @@
 | BOM Cost Review | `pm-hardware` | `pm-hardware/bom-cost-review/SYSTEM_PROMPT.md` |
 | Bookkeeping Categorization | `pm-accounting` | `pm-accounting/bookkeeping-categorization/SYSTEM_PROMPT.md` |
 | Boolean Search Builder | `pm-recruiting` | `pm-recruiting/boolean-search-builder/SYSTEM_PROMPT.md` |
+| Boundary-Setting Scripts | `other` | `other/boundary-setting-scripts/SYSTEM_PROMPT.md` |
 | Brag Doc | `pm-career` | `pm-career/brag-doc/SYSTEM_PROMPT.md` |
 | Brainstorming | `pm-method` | `pm-method/brainstorming/SYSTEM_PROMPT.md` |
 | Brand Guidelines | `pm-design` | `pm-design/brand-guidelines/SYSTEM_PROMPT.md` |
@@ -185,6 +186,7 @@
 | Compound-Growth Explainer | `pm-wealth` | `pm-wealth/compound-growth-explainer/SYSTEM_PROMPT.md` |
 | Condolence Message Helper | `pm-family` | `pm-family/condolence-message-helper/SYSTEM_PROMPT.md` |
 | Conference Talk Proposal | `pm-devrel` | `pm-devrel/conference-talk-proposal/SYSTEM_PROMPT.md` |
+| Conflict De-escalation | `other` | `other/conflict-deescalation/SYSTEM_PROMPT.md` |
 | Consulting Proposal | `pm-consulting` | `pm-consulting/consulting-proposal/SYSTEM_PROMPT.md` |
 | Content Calendar | `pm-gtm` | `pm-gtm/content-calendar/SYSTEM_PROMPT.md` |
 | Content Repurposer | `pm-creator` | `pm-creator/content-repurposer/SYSTEM_PROMPT.md` |
@@ -415,6 +417,7 @@
 | Gift Finder | `pm-personal` | `pm-personal/gift-finder/SYSTEM_PROMPT.md` |
 | Git Troubleshooter | `pm-engineering` | `pm-engineering/git-troubleshooter/SYSTEM_PROMPT.md` |
 | GitHub Repo Vitals | `pm-live` | `pm-live/github-repo-vitals/SYSTEM_PROMPT.md` |
+| Give Hard Feedback Kindly | `other` | `other/give-hard-feedback-kindly/SYSTEM_PROMPT.md` |
 | Giving Feedback | `pm-comms` | `pm-comms/giving-feedback/SYSTEM_PROMPT.md` |
 | Glossary Builder | `pm-localization` | `pm-localization/glossary-builder/SYSTEM_PROMPT.md` |
 | Go-To-Market | `pm-gtm` | `pm-gtm/go-to-market/SYSTEM_PROMPT.md` |
@@ -545,6 +548,7 @@
 | Lower My Bill | `pm-money` | `pm-money/lower-my-bill/SYSTEM_PROMPT.md` |
 | Machiavelli Counsel | `pm-dead-mentors` | `pm-dead-mentors/machiavelli-counsel/SYSTEM_PROMPT.md` |
 | Maintainer Triage | `pm-maintainer` | `pm-maintainer/maintainer-triage/SYSTEM_PROMPT.md` |
+| Make Friends as an Adult | `other` | `other/make-friends-as-an-adult/SYSTEM_PROMPT.md` |
 | Make Me a | `pm-focus` | `pm-focus/make-me-a-skill/SYSTEM_PROMPT.md` |
 | Manager First 90 Days | `pm-people` | `pm-people/manager-first-90-days/SYSTEM_PROMPT.md` |
 | Managing Up | `pm-comms` | `pm-comms/managing-up/SYSTEM_PROMPT.md` |
@@ -594,6 +598,7 @@
 | NDA Analyser | `pm-legal` | `pm-legal/nda-analyser/SYSTEM_PROMPT.md` |
 | Neighbor-Dispute Resolver | `pm-lifeadmin` | `pm-lifeadmin/neighbor-dispute-resolver/SYSTEM_PROMPT.md` |
 | Net Worth Statement | `pm-money` | `pm-money/net-worth-statement/SYSTEM_PROMPT.md` |
+| Networking for Introverts | `other` | `other/networking-for-introverts/SYSTEM_PROMPT.md` |
 | Networking Outreach | `pm-career` | `pm-career/networking-outreach/SYSTEM_PROMPT.md` |
 | New-Baby Logistics | `pm-family` | `pm-family/new-baby-logistics/SYSTEM_PROMPT.md` |
 | New Manager: First 90 Days | `pm-career` | `pm-career/new-manager-first-90-days/SYSTEM_PROMPT.md` |
@@ -725,9 +730,11 @@
 | Ranked Climb Coach | `pm-newgen` | `pm-newgen/ranked-climb-coach/SYSTEM_PROMPT.md` |
 | Ransomware First Response | `pm-digital-safety` | `pm-digital-safety/ransomware-first-response/SYSTEM_PROMPT.md` |
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/SYSTEM_PROMPT.md` |
+| Read the Room | `other` | `other/read-the-room/SYSTEM_PROMPT.md` |
 | Reading Retention System | `pm-learning` | `pm-learning/reading-retention-system/SYSTEM_PROMPT.md` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/SYSTEM_PROMPT.md` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/SYSTEM_PROMPT.md` |
+| Reconnect With Someone | `other` | `other/reconnect-with-someone/SYSTEM_PROMPT.md` |
 | Recovery Day Planner | `pm-wellbeing` | `pm-wellbeing/recovery-day-planner/SYSTEM_PROMPT.md` |
 | Recruiter Outreach | `pm-recruiting` | `pm-recruiting/recruiter-outreach/SYSTEM_PROMPT.md` |
 | Recurring Meeting Pruner | `pm-cowork` | `pm-cowork/recurring-meeting-pruner/SYSTEM_PROMPT.md` |
@@ -755,6 +762,7 @@
 | Rent Increase Response | `pm-renters` | `pm-renters/rent-increase-response/SYSTEM_PROMPT.md` |
 | Rent vs Buy | `pm-calculators` | `pm-calculators/rent-vs-buy/SYSTEM_PROMPT.md` |
 | Rental Application | `pm-lifeadmin` | `pm-lifeadmin/rental-application/SYSTEM_PROMPT.md` |
+| Repair After a Fight | `other` | `other/repair-after-a-fight/SYSTEM_PROMPT.md` |
 | Repair Request Escalation | `pm-renters` | `pm-renters/repair-request-escalation/SYSTEM_PROMPT.md` |
 | Reply In Their Tone | `pm-cowork` | `pm-cowork/reply-in-their-tone/SYSTEM_PROMPT.md` |
 | Repo Map | `pm-tokens` | `pm-tokens/repo-map/SYSTEM_PROMPT.md` |
@@ -845,6 +853,7 @@
 | Slide Density Rules | `pm-cowork` | `pm-cowork/slide-density-rules/SYSTEM_PROMPT.md` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/SYSTEM_PROMPT.md` |
 | Small-Claims Prep | `pm-legal` | `pm-legal/small-claims-prep/SYSTEM_PROMPT.md` |
+| Small-Talk Survival | `other` | `other/small-talk-survival/SYSTEM_PROMPT.md` |
 | SOAP Note | `pm-health` | `pm-health/soap-note/SYSTEM_PROMPT.md` |
 | SOC 2 Readiness | `pm-compliance` | `pm-compliance/soc2-readiness/SYSTEM_PROMPT.md` |
 | Social Ad Campaign | `pm-social` | `pm-social/social-ad-campaign/SYSTEM_PROMPT.md` |
@@ -902,6 +911,7 @@
 | Sun and Moon | `pm-live` | `pm-live/sun-and-moon/SYSTEM_PROMPT.md` |
 | Sun Tzu Strategy Brief | `pm-dead-mentors` | `pm-dead-mentors/sun-tzu-strategy-brief/SYSTEM_PROMPT.md` |
 | Supplier Scorecard | `pm-supplychain` | `pm-supplychain/supplier-scorecard/SYSTEM_PROMPT.md` |
+| Support a Friend in Crisis | `other` | `other/support-a-friend-in-crisis/SYSTEM_PROMPT.md` |
 | Support Macro | `pm-support` | `pm-support/support-macro/SYSTEM_PROMPT.md` |
 | Support Runbook | `pm-support` | `pm-support/support-runbook/SYSTEM_PROMPT.md` |
 | Support Staffing Model | `pm-calculators` | `pm-calculators/support-staffing-model/SYSTEM_PROMPT.md` |

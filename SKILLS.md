@@ -1,4 +1,4 @@
-# 🗂️ All 1028 Skills — full catalog
+# 🗂️ All 1038 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -726,15 +726,25 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (561 skills)
+## 🌍 Industries & Public Sector (571 skills)
 
-### `other` — 4 skills
+### `other` — 14 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Boundary-Setting Scripts** (`boundary-setting-scripts`) | Set a boundary with someone — a friend, family member, coworker, or partner — clearly and kindly, with the actual words and a plan for the pushback. | — |
+| **Conflict De-escalation** (`conflict-deescalation`) | Calm a heated conflict — in person or in writing — before it does damage, by lowering the temperature instead of winning the point. | — |
+| **Give Hard Feedback Kindly** (`give-hard-feedback-kindly`) | Give someone difficult feedback — a report, a peer, a friend — so it actually lands and helps, without crushing them or dodging the point. | — |
 | **Group Trip Negotiator** (`group-trip-negotiator`) | Save the group trip from the group chat — budget alignment before anything gets booked (the awkward conversation, scripted), a decision protocol… | — |
+| **Make Friends as an Adult** (`make-friends-as-an-adult`) | Build a real plan to make friends as an adult — where to meet people you'd actually click with, how to turn acquaintances into friends, and past… | — |
 | **Mechanic Quote Decoder** (`mechanic-quote-decoder`) | Read a garage quote or invoice like someone who can't be padded — which line items connect to your actual symptom, which are while-we're-in-there… | — |
+| **Networking for Introverts** (`networking-for-introverts`) | Network in a way that actually works for introverts — depth over breadth, one-on-one over rooms, and energy managed — instead of forcing yourself… | — |
 | **Pixel GIF Maker** (`pixel-gif-maker`) | Generate retro pixel-text animated GIFs for Slack, Teams, or a PR comment — scrolling marquees, heartbeat pulses, confetti parties, twinkling… | — |
+| **Read the Room** (`read-the-room`) | Figure out the real social dynamics of a situation — the unspoken mood, who holds influence, what's actually going on beneath the surface — so you… | — |
+| **Reconnect With Someone** (`reconnect-with-someone`) | Reach back out to a friend or person you've lost touch with — past the awkwardness of the gap — with a message that reopens the door warmly. | — |
+| **Repair After a Fight** (`repair-after-a-fight`) | Repair a relationship after an argument — reconnect, own your part, and rebuild trust — instead of the cold silence that lets damage set. | — |
+| **Small-Talk Survival** (`small-talk-survival`) | Survive (and even enjoy) small talk — how to start it, keep it going past the weather, and exit gracefully — for people who find it painful. | — |
+| **Support a Friend in Crisis** (`support-a-friend-in-crisis`) | Show up well for someone going through something hard — loss, illness, a breakup, a crisis — with the right words, the right presence, and… | — |
 | **Used Car Decoder** (`used-car-decoder`) | Decode a used-car listing before you drive an hour to see it — what the seller's phrasing is hiding, the history-check items that matter, a… | — |
 
 ### `pm-2027` — 10 skills
@@ -1621,4 +1631,4 @@
 
 ---
 
-_1028 skills across 113 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1038 skills across 113 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

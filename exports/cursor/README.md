@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1028 skills exported. Copy a `.mdc rule` into the tool to use it.
+1038 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -88,6 +88,7 @@
 | BOM Cost Review | `pm-hardware` | `pm-hardware/bom-cost-review/bom-cost-review.mdc` |
 | Bookkeeping Categorization | `pm-accounting` | `pm-accounting/bookkeeping-categorization/bookkeeping-categorization.mdc` |
 | Boolean Search Builder | `pm-recruiting` | `pm-recruiting/boolean-search-builder/boolean-search-builder.mdc` |
+| Boundary-Setting Scripts | `other` | `other/boundary-setting-scripts/boundary-setting-scripts.mdc` |
 | Brag Doc | `pm-career` | `pm-career/brag-doc/brag-doc.mdc` |
 | Brainstorming | `pm-method` | `pm-method/brainstorming/brainstorming.mdc` |
 | Brand Guidelines | `pm-design` | `pm-design/brand-guidelines/brand-guidelines.mdc` |
@@ -185,6 +186,7 @@
 | Compound-Growth Explainer | `pm-wealth` | `pm-wealth/compound-growth-explainer/compound-growth-explainer.mdc` |
 | Condolence Message Helper | `pm-family` | `pm-family/condolence-message-helper/condolence-message-helper.mdc` |
 | Conference Talk Proposal | `pm-devrel` | `pm-devrel/conference-talk-proposal/conference-talk-proposal.mdc` |
+| Conflict De-escalation | `other` | `other/conflict-deescalation/conflict-deescalation.mdc` |
 | Consulting Proposal | `pm-consulting` | `pm-consulting/consulting-proposal/consulting-proposal.mdc` |
 | Content Calendar | `pm-gtm` | `pm-gtm/content-calendar/content-calendar.mdc` |
 | Content Repurposer | `pm-creator` | `pm-creator/content-repurposer/content-repurposer.mdc` |
@@ -415,6 +417,7 @@
 | Gift Finder | `pm-personal` | `pm-personal/gift-finder/gift-finder.mdc` |
 | Git Troubleshooter | `pm-engineering` | `pm-engineering/git-troubleshooter/git-troubleshooter.mdc` |
 | GitHub Repo Vitals | `pm-live` | `pm-live/github-repo-vitals/github-repo-vitals.mdc` |
+| Give Hard Feedback Kindly | `other` | `other/give-hard-feedback-kindly/give-hard-feedback-kindly.mdc` |
 | Giving Feedback | `pm-comms` | `pm-comms/giving-feedback/giving-feedback.mdc` |
 | Glossary Builder | `pm-localization` | `pm-localization/glossary-builder/glossary-builder.mdc` |
 | Go-To-Market | `pm-gtm` | `pm-gtm/go-to-market/go-to-market.mdc` |
@@ -545,6 +548,7 @@
 | Lower My Bill | `pm-money` | `pm-money/lower-my-bill/lower-my-bill.mdc` |
 | Machiavelli Counsel | `pm-dead-mentors` | `pm-dead-mentors/machiavelli-counsel/machiavelli-counsel.mdc` |
 | Maintainer Triage | `pm-maintainer` | `pm-maintainer/maintainer-triage/maintainer-triage.mdc` |
+| Make Friends as an Adult | `other` | `other/make-friends-as-an-adult/make-friends-as-an-adult.mdc` |
 | Make Me a | `pm-focus` | `pm-focus/make-me-a-skill/make-me-a-skill.mdc` |
 | Manager First 90 Days | `pm-people` | `pm-people/manager-first-90-days/manager-first-90-days.mdc` |
 | Managing Up | `pm-comms` | `pm-comms/managing-up/managing-up.mdc` |
@@ -594,6 +598,7 @@
 | NDA Analyser | `pm-legal` | `pm-legal/nda-analyser/nda-analyser.mdc` |
 | Neighbor-Dispute Resolver | `pm-lifeadmin` | `pm-lifeadmin/neighbor-dispute-resolver/neighbor-dispute-resolver.mdc` |
 | Net Worth Statement | `pm-money` | `pm-money/net-worth-statement/net-worth-statement.mdc` |
+| Networking for Introverts | `other` | `other/networking-for-introverts/networking-for-introverts.mdc` |
 | Networking Outreach | `pm-career` | `pm-career/networking-outreach/networking-outreach.mdc` |
 | New-Baby Logistics | `pm-family` | `pm-family/new-baby-logistics/new-baby-logistics.mdc` |
 | New Manager: First 90 Days | `pm-career` | `pm-career/new-manager-first-90-days/new-manager-first-90-days.mdc` |
@@ -725,9 +730,11 @@
 | Ranked Climb Coach | `pm-newgen` | `pm-newgen/ranked-climb-coach/ranked-climb-coach.mdc` |
 | Ransomware First Response | `pm-digital-safety` | `pm-digital-safety/ransomware-first-response/ransomware-first-response.mdc` |
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/rate-card.mdc` |
+| Read the Room | `other` | `other/read-the-room/read-the-room.mdc` |
 | Reading Retention System | `pm-learning` | `pm-learning/reading-retention-system/reading-retention-system.mdc` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/readme-writer.mdc` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/receipts-audit.mdc` |
+| Reconnect With Someone | `other` | `other/reconnect-with-someone/reconnect-with-someone.mdc` |
 | Recovery Day Planner | `pm-wellbeing` | `pm-wellbeing/recovery-day-planner/recovery-day-planner.mdc` |
 | Recruiter Outreach | `pm-recruiting` | `pm-recruiting/recruiter-outreach/recruiter-outreach.mdc` |
 | Recurring Meeting Pruner | `pm-cowork` | `pm-cowork/recurring-meeting-pruner/recurring-meeting-pruner.mdc` |
@@ -755,6 +762,7 @@
 | Rent Increase Response | `pm-renters` | `pm-renters/rent-increase-response/rent-increase-response.mdc` |
 | Rent vs Buy | `pm-calculators` | `pm-calculators/rent-vs-buy/rent-vs-buy.mdc` |
 | Rental Application | `pm-lifeadmin` | `pm-lifeadmin/rental-application/rental-application.mdc` |
+| Repair After a Fight | `other` | `other/repair-after-a-fight/repair-after-a-fight.mdc` |
 | Repair Request Escalation | `pm-renters` | `pm-renters/repair-request-escalation/repair-request-escalation.mdc` |
 | Reply In Their Tone | `pm-cowork` | `pm-cowork/reply-in-their-tone/reply-in-their-tone.mdc` |
 | Repo Map | `pm-tokens` | `pm-tokens/repo-map/repo-map.mdc` |
@@ -845,6 +853,7 @@
 | Slide Density Rules | `pm-cowork` | `pm-cowork/slide-density-rules/slide-density-rules.mdc` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/slo-error-budget.mdc` |
 | Small-Claims Prep | `pm-legal` | `pm-legal/small-claims-prep/small-claims-prep.mdc` |
+| Small-Talk Survival | `other` | `other/small-talk-survival/small-talk-survival.mdc` |
 | SOAP Note | `pm-health` | `pm-health/soap-note/soap-note.mdc` |
 | SOC 2 Readiness | `pm-compliance` | `pm-compliance/soc2-readiness/soc2-readiness.mdc` |
 | Social Ad Campaign | `pm-social` | `pm-social/social-ad-campaign/social-ad-campaign.mdc` |
@@ -902,6 +911,7 @@
 | Sun and Moon | `pm-live` | `pm-live/sun-and-moon/sun-and-moon.mdc` |
 | Sun Tzu Strategy Brief | `pm-dead-mentors` | `pm-dead-mentors/sun-tzu-strategy-brief/sun-tzu-strategy-brief.mdc` |
 | Supplier Scorecard | `pm-supplychain` | `pm-supplychain/supplier-scorecard/supplier-scorecard.mdc` |
+| Support a Friend in Crisis | `other` | `other/support-a-friend-in-crisis/support-a-friend-in-crisis.mdc` |
 | Support Macro | `pm-support` | `pm-support/support-macro/support-macro.mdc` |
 | Support Runbook | `pm-support` | `pm-support/support-runbook/support-runbook.mdc` |
 | Support Staffing Model | `pm-calculators` | `pm-calculators/support-staffing-model/support-staffing-model.mdc` |

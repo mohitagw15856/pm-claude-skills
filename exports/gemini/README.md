@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1028 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1038 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -88,6 +88,7 @@
 | BOM Cost Review | `pm-hardware` | `pm-hardware/bom-cost-review/GEM_INSTRUCTIONS.md` |
 | Bookkeeping Categorization | `pm-accounting` | `pm-accounting/bookkeeping-categorization/GEM_INSTRUCTIONS.md` |
 | Boolean Search Builder | `pm-recruiting` | `pm-recruiting/boolean-search-builder/GEM_INSTRUCTIONS.md` |
+| Boundary-Setting Scripts | `other` | `other/boundary-setting-scripts/GEM_INSTRUCTIONS.md` |
 | Brag Doc | `pm-career` | `pm-career/brag-doc/GEM_INSTRUCTIONS.md` |
 | Brainstorming | `pm-method` | `pm-method/brainstorming/GEM_INSTRUCTIONS.md` |
 | Brand Guidelines | `pm-design` | `pm-design/brand-guidelines/GEM_INSTRUCTIONS.md` |
@@ -185,6 +186,7 @@
 | Compound-Growth Explainer | `pm-wealth` | `pm-wealth/compound-growth-explainer/GEM_INSTRUCTIONS.md` |
 | Condolence Message Helper | `pm-family` | `pm-family/condolence-message-helper/GEM_INSTRUCTIONS.md` |
 | Conference Talk Proposal | `pm-devrel` | `pm-devrel/conference-talk-proposal/GEM_INSTRUCTIONS.md` |
+| Conflict De-escalation | `other` | `other/conflict-deescalation/GEM_INSTRUCTIONS.md` |
 | Consulting Proposal | `pm-consulting` | `pm-consulting/consulting-proposal/GEM_INSTRUCTIONS.md` |
 | Content Calendar | `pm-gtm` | `pm-gtm/content-calendar/GEM_INSTRUCTIONS.md` |
 | Content Repurposer | `pm-creator` | `pm-creator/content-repurposer/GEM_INSTRUCTIONS.md` |
@@ -415,6 +417,7 @@
 | Gift Finder | `pm-personal` | `pm-personal/gift-finder/GEM_INSTRUCTIONS.md` |
 | Git Troubleshooter | `pm-engineering` | `pm-engineering/git-troubleshooter/GEM_INSTRUCTIONS.md` |
 | GitHub Repo Vitals | `pm-live` | `pm-live/github-repo-vitals/GEM_INSTRUCTIONS.md` |
+| Give Hard Feedback Kindly | `other` | `other/give-hard-feedback-kindly/GEM_INSTRUCTIONS.md` |
 | Giving Feedback | `pm-comms` | `pm-comms/giving-feedback/GEM_INSTRUCTIONS.md` |
 | Glossary Builder | `pm-localization` | `pm-localization/glossary-builder/GEM_INSTRUCTIONS.md` |
 | Go-To-Market | `pm-gtm` | `pm-gtm/go-to-market/GEM_INSTRUCTIONS.md` |
@@ -545,6 +548,7 @@
 | Lower My Bill | `pm-money` | `pm-money/lower-my-bill/GEM_INSTRUCTIONS.md` |
 | Machiavelli Counsel | `pm-dead-mentors` | `pm-dead-mentors/machiavelli-counsel/GEM_INSTRUCTIONS.md` |
 | Maintainer Triage | `pm-maintainer` | `pm-maintainer/maintainer-triage/GEM_INSTRUCTIONS.md` |
+| Make Friends as an Adult | `other` | `other/make-friends-as-an-adult/GEM_INSTRUCTIONS.md` |
 | Make Me a | `pm-focus` | `pm-focus/make-me-a-skill/GEM_INSTRUCTIONS.md` |
 | Manager First 90 Days | `pm-people` | `pm-people/manager-first-90-days/GEM_INSTRUCTIONS.md` |
 | Managing Up | `pm-comms` | `pm-comms/managing-up/GEM_INSTRUCTIONS.md` |
@@ -594,6 +598,7 @@
 | NDA Analyser | `pm-legal` | `pm-legal/nda-analyser/GEM_INSTRUCTIONS.md` |
 | Neighbor-Dispute Resolver | `pm-lifeadmin` | `pm-lifeadmin/neighbor-dispute-resolver/GEM_INSTRUCTIONS.md` |
 | Net Worth Statement | `pm-money` | `pm-money/net-worth-statement/GEM_INSTRUCTIONS.md` |
+| Networking for Introverts | `other` | `other/networking-for-introverts/GEM_INSTRUCTIONS.md` |
 | Networking Outreach | `pm-career` | `pm-career/networking-outreach/GEM_INSTRUCTIONS.md` |
 | New-Baby Logistics | `pm-family` | `pm-family/new-baby-logistics/GEM_INSTRUCTIONS.md` |
 | New Manager: First 90 Days | `pm-career` | `pm-career/new-manager-first-90-days/GEM_INSTRUCTIONS.md` |
@@ -725,9 +730,11 @@
 | Ranked Climb Coach | `pm-newgen` | `pm-newgen/ranked-climb-coach/GEM_INSTRUCTIONS.md` |
 | Ransomware First Response | `pm-digital-safety` | `pm-digital-safety/ransomware-first-response/GEM_INSTRUCTIONS.md` |
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/GEM_INSTRUCTIONS.md` |
+| Read the Room | `other` | `other/read-the-room/GEM_INSTRUCTIONS.md` |
 | Reading Retention System | `pm-learning` | `pm-learning/reading-retention-system/GEM_INSTRUCTIONS.md` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/GEM_INSTRUCTIONS.md` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/GEM_INSTRUCTIONS.md` |
+| Reconnect With Someone | `other` | `other/reconnect-with-someone/GEM_INSTRUCTIONS.md` |
 | Recovery Day Planner | `pm-wellbeing` | `pm-wellbeing/recovery-day-planner/GEM_INSTRUCTIONS.md` |
 | Recruiter Outreach | `pm-recruiting` | `pm-recruiting/recruiter-outreach/GEM_INSTRUCTIONS.md` |
 | Recurring Meeting Pruner | `pm-cowork` | `pm-cowork/recurring-meeting-pruner/GEM_INSTRUCTIONS.md` |
@@ -755,6 +762,7 @@
 | Rent Increase Response | `pm-renters` | `pm-renters/rent-increase-response/GEM_INSTRUCTIONS.md` |
 | Rent vs Buy | `pm-calculators` | `pm-calculators/rent-vs-buy/GEM_INSTRUCTIONS.md` |
 | Rental Application | `pm-lifeadmin` | `pm-lifeadmin/rental-application/GEM_INSTRUCTIONS.md` |
+| Repair After a Fight | `other` | `other/repair-after-a-fight/GEM_INSTRUCTIONS.md` |
 | Repair Request Escalation | `pm-renters` | `pm-renters/repair-request-escalation/GEM_INSTRUCTIONS.md` |
 | Reply In Their Tone | `pm-cowork` | `pm-cowork/reply-in-their-tone/GEM_INSTRUCTIONS.md` |
 | Repo Map | `pm-tokens` | `pm-tokens/repo-map/GEM_INSTRUCTIONS.md` |
@@ -845,6 +853,7 @@
 | Slide Density Rules | `pm-cowork` | `pm-cowork/slide-density-rules/GEM_INSTRUCTIONS.md` |
 | SLO and Error Budget | `pm-engineering` | `pm-engineering/slo-error-budget/GEM_INSTRUCTIONS.md` |
 | Small-Claims Prep | `pm-legal` | `pm-legal/small-claims-prep/GEM_INSTRUCTIONS.md` |
+| Small-Talk Survival | `other` | `other/small-talk-survival/GEM_INSTRUCTIONS.md` |
 | SOAP Note | `pm-health` | `pm-health/soap-note/GEM_INSTRUCTIONS.md` |
 | SOC 2 Readiness | `pm-compliance` | `pm-compliance/soc2-readiness/GEM_INSTRUCTIONS.md` |
 | Social Ad Campaign | `pm-social` | `pm-social/social-ad-campaign/GEM_INSTRUCTIONS.md` |
@@ -902,6 +911,7 @@
 | Sun and Moon | `pm-live` | `pm-live/sun-and-moon/GEM_INSTRUCTIONS.md` |
 | Sun Tzu Strategy Brief | `pm-dead-mentors` | `pm-dead-mentors/sun-tzu-strategy-brief/GEM_INSTRUCTIONS.md` |
 | Supplier Scorecard | `pm-supplychain` | `pm-supplychain/supplier-scorecard/GEM_INSTRUCTIONS.md` |
+| Support a Friend in Crisis | `other` | `other/support-a-friend-in-crisis/GEM_INSTRUCTIONS.md` |
 | Support Macro | `pm-support` | `pm-support/support-macro/GEM_INSTRUCTIONS.md` |
 | Support Runbook | `pm-support` | `pm-support/support-runbook/GEM_INSTRUCTIONS.md` |
 | Support Staffing Model | `pm-calculators` | `pm-calculators/support-staffing-model/GEM_INSTRUCTIONS.md` |
