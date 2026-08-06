@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1012 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1018 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -260,6 +260,7 @@
 | Defamation Response | `pm-legal` | `pm-legal/defamation-response/SYSTEM_PROMPT.md` |
 | Delay Claim Letter | `pm-construction` | `pm-construction/delay-claim-letter/SYSTEM_PROMPT.md` |
 | Delegation Brief | `pm-cowork` | `pm-cowork/delegation-brief/SYSTEM_PROMPT.md` |
+| Deliberate-Practice Plan | `pm-learning` | `pm-learning/deliberate-practice-plan/SYSTEM_PROMPT.md` |
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/SYSTEM_PROMPT.md` |
 | Demand Forecast Review | `pm-supplychain` | `pm-supplychain/demand-forecast-review/SYSTEM_PROMPT.md` |
 | Demand Letter | `pm-legal` | `pm-legal/demand-letter/SYSTEM_PROMPT.md` |
@@ -360,7 +361,7 @@
 | Feature Flag Guide | `pm-engineering` | `pm-engineering/feature-flag-guide/SYSTEM_PROMPT.md` |
 | Feature Prioritisation | `pm-planning` | `pm-planning/feature-prioritisation/SYSTEM_PROMPT.md` |
 | Feature Sunset Plan | `pm-planning` | `pm-planning/feature-sunset-plan/SYSTEM_PROMPT.md` |
-| Feynman Explainer | `other` | `other/feynman-explainer/SYSTEM_PROMPT.md` |
+| Feynman Explainer | `pm-learning` | `pm-learning/feynman-explainer/SYSTEM_PROMPT.md` |
 | Figma Annotation Guide | `pm-figma` | `pm-figma/figma-annotation-guide/SYSTEM_PROMPT.md` |
 | Figma Component Audit | `pm-figma` | `pm-figma/figma-component-audit/SYSTEM_PROMPT.md` |
 | Figma Design Brief | `pm-figma` | `pm-figma/figma-design-brief/SYSTEM_PROMPT.md` |
@@ -494,6 +495,7 @@
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/SYSTEM_PROMPT.md` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/SYSTEM_PROMPT.md` |
 | Kids' Online-Safety Plan | `pm-digital-safety` | `pm-digital-safety/kids-online-safety-plan/SYSTEM_PROMPT.md` |
+| Knowledge-Gap Map | `pm-learning` | `pm-learning/knowledge-gap-map/SYSTEM_PROMPT.md` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/SYSTEM_PROMPT.md` |
 | KPI Tracker Design | `pm-cowork` | `pm-cowork/kpi-tracker-design/SYSTEM_PROMPT.md` |
 | KYC Escalation | `pm-banking` | `pm-banking/kyc-escalation/SYSTEM_PROMPT.md` |
@@ -510,7 +512,8 @@
 | Layoff Communication | `pm-crisis` | `pm-crisis/layoff-communication/SYSTEM_PROMPT.md` |
 | Layoff Financial Triage | `pm-layoff` | `pm-layoff/layoff-financial-triage/SYSTEM_PROMPT.md` |
 | Layoff: First 72 Hours | `pm-career` | `pm-career/layoff-first-72-hours/SYSTEM_PROMPT.md` |
-| Learn-Anything Roadmap | `other` | `other/learn-anything-roadmap/SYSTEM_PROMPT.md` |
+| Learn-Anything Roadmap | `pm-learning` | `pm-learning/learn-anything-roadmap/SYSTEM_PROMPT.md` |
+| Learn From a Project | `pm-learning` | `pm-learning/learn-from-a-project/SYSTEM_PROMPT.md` |
 | Lease Decoder | `pm-decoders` | `pm-decoders/lease-decoder/SYSTEM_PROMPT.md` |
 | Legal Brief | `pm-legal` | `pm-legal/legal-brief/SYSTEM_PROMPT.md` |
 | Lemon Law Check | `pm-legal` | `pm-legal/lemon-law-check/SYSTEM_PROMPT.md` |
@@ -588,6 +591,7 @@
 | New Parent Logistics | `pm-lifeadmin` | `pm-lifeadmin/new-parent-logistics/SYSTEM_PROMPT.md` |
 | Newsletter Digest Brief | `pm-cowork` | `pm-cowork/newsletter-digest-brief/SYSTEM_PROMPT.md` |
 | Newsletter Writer | `pm-creator` | `pm-creator/newsletter-writer/SYSTEM_PROMPT.md` |
+| Note-Taking System | `pm-learning` | `pm-learning/note-taking-system/SYSTEM_PROMPT.md` |
 | NotebookLM Connector | `pm-cross` | `pm-cross/notebooklm-connector/SYSTEM_PROMPT.md` |
 | Notes Humanizer | `pm-writers` | `pm-writers/notes-humanizer/SYSTEM_PROMPT.md` |
 | Notion DB Hygiene (Live) | `pm-cowork-live` | `pm-cowork-live/notion-db-hygiene/SYSTEM_PROMPT.md` |
@@ -711,6 +715,7 @@
 | Ranked Climb Coach | `pm-newgen` | `pm-newgen/ranked-climb-coach/SYSTEM_PROMPT.md` |
 | Ransomware First Response | `pm-digital-safety` | `pm-digital-safety/ransomware-first-response/SYSTEM_PROMPT.md` |
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/SYSTEM_PROMPT.md` |
+| Reading Retention System | `pm-learning` | `pm-learning/reading-retention-system/SYSTEM_PROMPT.md` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/SYSTEM_PROMPT.md` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/SYSTEM_PROMPT.md` |
 | Recovery Day Planner | `pm-wellbeing` | `pm-wellbeing/recovery-day-planner/SYSTEM_PROMPT.md` |
@@ -822,7 +827,7 @@
 | Site Check | `pm-live` | `pm-live/site-check/SYSTEM_PROMPT.md` |
 | Site Safety Briefing | `pm-construction` | `pm-construction/site-safety-briefing/SYSTEM_PROMPT.md` |
 | Skill Fusion | `pm-advanced` | `pm-advanced/skill-fusion/SYSTEM_PROMPT.md` |
-| Skill-Plateau Breaker | `other` | `other/skill-plateau-breaker/SYSTEM_PROMPT.md` |
+| Skill-Plateau Breaker | `pm-learning` | `pm-learning/skill-plateau-breaker/SYSTEM_PROMPT.md` |
 | Skill Security Auditor | `pm-engineering` | `pm-engineering/skill-security-auditor/SYSTEM_PROMPT.md` |
 | Skill Vetting | `pm-security` | `pm-security/skill-vetting/SYSTEM_PROMPT.md` |
 | Sleep Reset Plan | `pm-wellbeing` | `pm-wellbeing/sleep-reset-plan/SYSTEM_PROMPT.md` |
@@ -843,7 +848,7 @@
 | Source Triangulation | `pm-cowork` | `pm-cowork/source-triangulation/SYSTEM_PROMPT.md` |
 | Sourcing Strategy | `pm-recruiting` | `pm-recruiting/sourcing-strategy/SYSTEM_PROMPT.md` |
 | Sourdough Troubleshooter | `pm-hobbies` | `pm-hobbies/sourdough-troubleshooter/SYSTEM_PROMPT.md` |
-| Spaced-Repetition Setup | `other` | `other/spaced-repetition-setup/SYSTEM_PROMPT.md` |
+| Spaced-Repetition Setup | `pm-learning` | `pm-learning/spaced-repetition-setup/SYSTEM_PROMPT.md` |
 | Speak At The Council | `pm-committee` | `pm-committee/speak-at-the-council/SYSTEM_PROMPT.md` |
 | Sports Scores | `pm-live` | `pm-live/sports-scores/SYSTEM_PROMPT.md` |
 | Spreadsheet Audit | `pm-cowork` | `pm-cowork/spreadsheet-audit/SYSTEM_PROMPT.md` |
@@ -900,6 +905,7 @@
 | Tax Deduction Finder | `pm-money` | `pm-money/tax-deduction-finder/SYSTEM_PROMPT.md` |
 | Tax Planning Checklist | `pm-finance` | `pm-finance/tax-planning-checklist/SYSTEM_PROMPT.md` |
 | TDD Workflow | `pm-craft` | `pm-craft/tdd-workflow/SYSTEM_PROMPT.md` |
+| Teach Me in Layers | `pm-learning` | `pm-learning/teach-me-in-layers/SYSTEM_PROMPT.md` |
 | Teach The Game | `pm-tabletop` | `pm-tabletop/teach-the-game/SYSTEM_PROMPT.md` |
 | Teaching Lesson Plan | `pm-cross` | `pm-cross/teaching-lesson-plan/SYSTEM_PROMPT.md` |
 | Team Budget Tracker | `pm-cowork` | `pm-cowork/team-budget-tracker/SYSTEM_PROMPT.md` |

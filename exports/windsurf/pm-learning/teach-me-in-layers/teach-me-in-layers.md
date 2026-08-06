@@ -1,0 +1,65 @@
+---
+trigger: model_decision
+description: "Learn a complex topic in progressive layers — a one-sentence version, then a paragraph, then the real depth — so you build a mental scaffold instead of drowning in detail. Use when asked explain this in layers, teach me X from simple to deep, I need to understand this progressively, or start simple then go deeper. Produces a topic explained at escalating depth (ELI5 → informed-adult → the real thing), each layer building on the last, checkpoints to make sure a layer landed before the next, and where to stop for your actual need — so you never get lost in detail without a frame to hang it on."
+---
+
+# Teach Me in Layers
+
+Dumping the full complexity of a topic on a beginner guarantees they drown — no scaffold to hang the details on. Learning in layers fixes that: first the one-sentence gist, then a paragraph with the key pieces, then the real depth, each layer giving you a frame for the next. This teaches any topic that way, checking each layer landed before going deeper, and stopping at the depth you actually need.
+
+## What This Skill Produces
+
+- **Layer 1 — the gist** — a one-sentence, ELI5 version that gives you a mental hook
+- **Layer 2 — the shape** — a paragraph with the key components and how they fit (the informed-adult version)
+- **Layer 3 — the real thing** — the actual depth, nuance, and mechanisms, now that there's a scaffold to hold them
+- **Checkpoints** — a quick "does this layer make sense?" before adding the next, so nothing is built on a gap
+- **A stop point** — the layer that's deep enough for *your* need (you don't always need layer 3)
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The topic** — what you want to understand
+- **Why** — the depth you actually need (curiosity, a decision, an exam, teaching it)
+- **Your starting point** — total beginner or some background
+- **How deep** — just the gist, or all the way
+
+## Framework: Build The Scaffold, Then Fill It
+
+1. **Start with the one-sentence gist.** A simple, even slightly-imperfect first version gives a hook — everything else attaches to it.
+2. **Add the shape.** The key components and how they relate — the paragraph version — before any detail.
+3. **Check it landed.** Confirm each layer makes sense before going deeper; a layer built on a misunderstanding collapses.
+4. **Then add real depth.** With the scaffold in place, the nuances and mechanisms have somewhere to attach instead of floating loose.
+5. **Stop at the right layer.** Match the final depth to the person's need — don't force layer 3 on someone who needed the gist, and offer to go deeper if they want.
+
+## Output Format
+
+### Topic: [what you're learning] · depth needed: [x]
+
+**🥚 Layer 1 (the gist):** [one plain sentence].
+*Make sense? →*
+**🐣 Layer 2 (the shape):** [a paragraph: key pieces + how they fit].
+*Still with it? →*
+**🐔 Layer 3 (the real thing):** [the actual depth, nuance, mechanisms].
+
+**Deep enough for you at:** [the layer that matches your need]. Want to go further? [offer].
+
+## Quality Checks
+- [ ] Starts with a genuine one-sentence gist
+- [ ] Each layer builds on the previous scaffold
+- [ ] Checkpoints confirm a layer landed before deepening
+- [ ] Depth escalates from ELI5 to real nuance
+- [ ] Stops at (or offers) the depth matching the person's need
+
+## Anti-Patterns
+- **Full complexity up front** with no scaffold.
+- **Layers that don't build** on each other.
+- **Skipping the "did that land?"** checks.
+- **Forcing maximum depth** on someone who needed the gist.
+- **An oversimplified gist** that's actually wrong (imperfect-but-useful is fine; wrong isn't).
+
+## Example Trigger Phrases
+- "Explain how the immune system works, in layers."
+- "Teach me blockchain from simple to deep."
+- "I need to understand inflation progressively — start simple."
+- "Explain quantum computing, building up gradually."
+- "Give me the gist first, then go deeper if I get it."

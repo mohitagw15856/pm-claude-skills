@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1012 skills exported. Copy a `SKILL.md` into the tool to use it.
+1018 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -260,6 +260,7 @@
 | Defamation Response | `pm-legal` | `defamation-response/SKILL.md` |
 | Delay Claim Letter | `pm-construction` | `delay-claim-letter/SKILL.md` |
 | Delegation Brief | `pm-cowork` | `delegation-brief/SKILL.md` |
+| Deliberate-Practice Plan | `pm-learning` | `deliberate-practice-plan/SKILL.md` |
 | Delta Briefing | `pm-autopilot` | `delta-briefing/SKILL.md` |
 | Demand Forecast Review | `pm-supplychain` | `demand-forecast-review/SKILL.md` |
 | Demand Letter | `pm-legal` | `demand-letter/SKILL.md` |
@@ -360,7 +361,7 @@
 | Feature Flag Guide | `pm-engineering` | `feature-flag-guide/SKILL.md` |
 | Feature Prioritisation | `pm-planning` | `feature-prioritisation/SKILL.md` |
 | Feature Sunset Plan | `pm-planning` | `feature-sunset-plan/SKILL.md` |
-| Feynman Explainer | `other` | `feynman-explainer/SKILL.md` |
+| Feynman Explainer | `pm-learning` | `feynman-explainer/SKILL.md` |
 | Figma Annotation Guide | `pm-figma` | `figma-annotation-guide/SKILL.md` |
 | Figma Component Audit | `pm-figma` | `figma-component-audit/SKILL.md` |
 | Figma Design Brief | `pm-figma` | `figma-design-brief/SKILL.md` |
@@ -494,6 +495,7 @@
 | Karaoke Song Picker | `pm-hobbies` | `karaoke-song-picker/SKILL.md` |
 | Knowledge Base Audit | `pm-support` | `kb-audit/SKILL.md` |
 | Kids' Online-Safety Plan | `pm-digital-safety` | `kids-online-safety-plan/SKILL.md` |
+| Knowledge-Gap Map | `pm-learning` | `knowledge-gap-map/SKILL.md` |
 | Knowledge Gardening | `pm-cowork` | `knowledge-gardening/SKILL.md` |
 | KPI Tracker Design | `pm-cowork` | `kpi-tracker-design/SKILL.md` |
 | KYC Escalation | `pm-banking` | `kyc-escalation/SKILL.md` |
@@ -510,7 +512,8 @@
 | Layoff Communication | `pm-crisis` | `layoff-communication/SKILL.md` |
 | Layoff Financial Triage | `pm-layoff` | `layoff-financial-triage/SKILL.md` |
 | Layoff: First 72 Hours | `pm-career` | `layoff-first-72-hours/SKILL.md` |
-| Learn-Anything Roadmap | `other` | `learn-anything-roadmap/SKILL.md` |
+| Learn-Anything Roadmap | `pm-learning` | `learn-anything-roadmap/SKILL.md` |
+| Learn From a Project | `pm-learning` | `learn-from-a-project/SKILL.md` |
 | Lease Decoder | `pm-decoders` | `lease-decoder/SKILL.md` |
 | Legal Brief | `pm-legal` | `legal-brief/SKILL.md` |
 | Lemon Law Check | `pm-legal` | `lemon-law-check/SKILL.md` |
@@ -588,6 +591,7 @@
 | New Parent Logistics | `pm-lifeadmin` | `new-parent-logistics/SKILL.md` |
 | Newsletter Digest Brief | `pm-cowork` | `newsletter-digest-brief/SKILL.md` |
 | Newsletter Writer | `pm-creator` | `newsletter-writer/SKILL.md` |
+| Note-Taking System | `pm-learning` | `note-taking-system/SKILL.md` |
 | NotebookLM Connector | `pm-cross` | `notebooklm-connector/SKILL.md` |
 | Notes Humanizer | `pm-writers` | `notes-humanizer/SKILL.md` |
 | Notion DB Hygiene (Live) | `pm-cowork-live` | `notion-db-hygiene/SKILL.md` |
@@ -711,6 +715,7 @@
 | Ranked Climb Coach | `pm-newgen` | `ranked-climb-coach/SKILL.md` |
 | Ransomware First Response | `pm-digital-safety` | `ransomware-first-response/SKILL.md` |
 | Rate Card | `pm-consulting` | `rate-card/SKILL.md` |
+| Reading Retention System | `pm-learning` | `reading-retention-system/SKILL.md` |
 | README Writer | `pm-devrel` | `readme-writer/SKILL.md` |
 | Receipts Audit | `pm-method` | `receipts-audit/SKILL.md` |
 | Recovery Day Planner | `pm-wellbeing` | `recovery-day-planner/SKILL.md` |
@@ -822,7 +827,7 @@
 | Site Check | `pm-live` | `site-check/SKILL.md` |
 | Site Safety Briefing | `pm-construction` | `site-safety-briefing/SKILL.md` |
 | Skill Fusion | `pm-advanced` | `skill-fusion/SKILL.md` |
-| Skill-Plateau Breaker | `other` | `skill-plateau-breaker/SKILL.md` |
+| Skill-Plateau Breaker | `pm-learning` | `skill-plateau-breaker/SKILL.md` |
 | Skill Security Auditor | `pm-engineering` | `skill-security-auditor/SKILL.md` |
 | Skill Vetting | `pm-security` | `skill-vetting/SKILL.md` |
 | Sleep Reset Plan | `pm-wellbeing` | `sleep-reset-plan/SKILL.md` |
@@ -843,7 +848,7 @@
 | Source Triangulation | `pm-cowork` | `source-triangulation/SKILL.md` |
 | Sourcing Strategy | `pm-recruiting` | `sourcing-strategy/SKILL.md` |
 | Sourdough Troubleshooter | `pm-hobbies` | `sourdough-troubleshooter/SKILL.md` |
-| Spaced-Repetition Setup | `other` | `spaced-repetition-setup/SKILL.md` |
+| Spaced-Repetition Setup | `pm-learning` | `spaced-repetition-setup/SKILL.md` |
 | Speak At The Council | `pm-committee` | `speak-at-the-council/SKILL.md` |
 | Sports Scores | `pm-live` | `sports-scores/SKILL.md` |
 | Spreadsheet Audit | `pm-cowork` | `spreadsheet-audit/SKILL.md` |
@@ -900,6 +905,7 @@
 | Tax Deduction Finder | `pm-money` | `tax-deduction-finder/SKILL.md` |
 | Tax Planning Checklist | `pm-finance` | `tax-planning-checklist/SKILL.md` |
 | TDD Workflow | `pm-craft` | `tdd-workflow/SKILL.md` |
+| Teach Me in Layers | `pm-learning` | `teach-me-in-layers/SKILL.md` |
 | Teach The Game | `pm-tabletop` | `teach-the-game/SKILL.md` |
 | Teaching Lesson Plan | `pm-cross` | `teaching-lesson-plan/SKILL.md` |
 | Team Budget Tracker | `pm-cowork` | `team-budget-tracker/SKILL.md` |

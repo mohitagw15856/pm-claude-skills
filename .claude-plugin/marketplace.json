@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-learning",
+      "description": "Learning & mastery skills: build a roadmap for any skill, remember what you read and study (spaced repetition, active reading), learn by doing, break plateaus, and map your knowledge gaps.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-learning",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-focus",
       "description": "Executive-function & focus skills for getting unstuck and running your own brain: beat activation-energy paralysis, triage overwhelm, protect your energy, build a personal memory file, and make hard decisions when depleted. ADHD-friendly, useful for everyone.",
       "version": "1.0.0",

@@ -1,4 +1,4 @@
-# 🗂️ All 1008 Skills — full catalog
+# 🗂️ All 1018 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -726,7 +726,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (541 skills)
+## 🌍 Industries & Public Sector (551 skills)
 
 ### `other` — 4 skills
 
@@ -1247,6 +1247,21 @@
 | **Reference Request Kit** (`reference-request-kit`) | Secure strong references after a departure — who to ask, the ask messages, the briefing sheet that makes their reference specific, and the… | — |
 | **Severance Agreement Decoder** (`severance-agreement-decoder`) | Decode a severance agreement before you sign it — what you're giving up, what's negotiable, and the deadlines that decide your leverage. | — |
 
+### `pm-learning` — 10 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Deliberate-Practice Plan** (`deliberate-practice-plan`) | Design deliberate practice that actually builds a skill — targeted, effortful, feedback-driven — instead of mindless repetition that just… | — |
+| **Feynman Explainer** (`feynman-explainer`) | Learn something deeply by trying to explain it simply — the Feynman technique — surfacing exactly the gaps where your understanding is fake. | — |
+| **Knowledge-Gap Map** (`knowledge-gap-map`) | Map what you don't know about a subject — including the gaps you can't see — so your learning targets the holes instead of re-covering what you… | — |
+| **Learn-Anything Roadmap** (`learn-anything-roadmap`) | Turn 'I want to learn X' into a realistic, staged roadmap — the fundamentals to master first, the order that avoids overwhelm, and the milestones… | — |
+| **Learn From a Project** (`learn-from-a-project`) | Design a real project to learn a skill by building something — the fastest way to actually get good, instead of endless tutorials. | — |
+| **Note-Taking System** (`note-taking-system`) | Set up a note-taking system that you'll actually use and that makes your notes findable and useful later — not a graveyard of notes you never reopen. | — |
+| **Reading Retention System** (`reading-retention-system`) | Actually remember and use what you read — an active-reading system that beats the highlight-and-forget cycle. | — |
+| **Skill-Plateau Breaker** (`skill-plateau-breaker`) | Diagnose why you've stopped improving at something and get a plan to break through the plateau. | — |
+| **Spaced-Repetition Setup** (`spaced-repetition-setup`) | Set up a spaced-repetition system to actually remember what you learn — good cards, the right review rhythm, and the mistakes that make flashcards… | — |
+| **Teach Me in Layers** (`teach-me-in-layers`) | Learn a complex topic in progressive layers — a one-sentence version, then a paragraph, then the real depth — so you build a mental scaffold… | — |
+
 ### `pm-live` — 21 skills
 
 | Skill | What it does | Eval |
@@ -1591,4 +1606,4 @@
 
 ---
 
-_1008 skills across 111 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1018 skills across 112 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
