@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1018 skills exported. Copy a `.mdc rule` into the tool to use it.
+1028 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -55,6 +55,7 @@
 | Architecture Decision Record (ADR) | `pm-engineering` | `pm-engineering/architecture-decision-record/architecture-decision-record.mdc` |
 | Architecture Diagram | `pm-visuals` | `pm-visuals/architecture-diagram/architecture-diagram.mdc` |
 | Archive Strategy | `pm-cowork` | `pm-cowork/archive-strategy/archive-strategy.mdc` |
+| Ask for a Raise | `pm-wealth` | `pm-wealth/ask-for-a-raise/ask-for-a-raise.mdc` |
 | Assumption Audit | `pm-thinking` | `pm-thinking/assumption-audit/assumption-audit.mdc` |
 | Assumption Bounty | `pm-warroom` | `pm-warroom/assumption-bounty/assumption-bounty.mdc` |
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/assumption-mapper.mdc` |
@@ -181,6 +182,7 @@
 | Competitor Teardown | `pm-gtm` | `pm-gtm/competitor-teardown/competitor-teardown.mdc` |
 | Complaint Letter | `pm-lifeadmin` | `pm-lifeadmin/complaint-letter/complaint-letter.mdc` |
 | Compliance Checklist | `pm-legal` | `pm-legal/compliance-checklist/compliance-checklist.mdc` |
+| Compound-Growth Explainer | `pm-wealth` | `pm-wealth/compound-growth-explainer/compound-growth-explainer.mdc` |
 | Condolence Message Helper | `pm-family` | `pm-family/condolence-message-helper/condolence-message-helper.mdc` |
 | Conference Talk Proposal | `pm-devrel` | `pm-devrel/conference-talk-proposal/conference-talk-proposal.mdc` |
 | Consulting Proposal | `pm-consulting` | `pm-consulting/consulting-proposal/consulting-proposal.mdc` |
@@ -375,11 +377,14 @@
 | File Access Preflight | `pm-seatbelt` | `pm-seatbelt/file-access-preflight/file-access-preflight.mdc` |
 | Filename Convention | `pm-cowork` | `pm-cowork/filename-convention/filename-convention.mdc` |
 | Financial Aid Appeal | `pm-students` | `pm-students/financial-aid-appeal/financial-aid-appeal.mdc` |
+| Financial Checkup | `pm-wealth` | `pm-wealth/financial-checkup/financial-checkup.mdc` |
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/financial-due-diligence.mdc` |
+| Financial-Independence Roadmap | `pm-wealth` | `pm-wealth/financial-independence-roadmap/financial-independence-roadmap.mdc` |
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/financial-model-narrative.mdc` |
 | Financial Statement Explainer | `pm-accounting` | `pm-accounting/financial-statement-explainer/financial-statement-explainer.mdc` |
 | Fine Appeal Letter | `pm-lifeadmin` | `pm-lifeadmin/fine-appeal-letter/fine-appeal-letter.mdc` |
 | FIRE Number | `pm-calculators` | `pm-calculators/fire-number/fire-number.mdc` |
+| First 100k Plan | `pm-wealth` | `pm-wealth/first-100k-plan/first-100k-plan.mdc` |
 | First Client Contract | `pm-sidehustle` | `pm-sidehustle/first-client-contract/first-client-contract.mdc` |
 | First-Hire Plan | `pm-career` | `pm-career/first-hire-plan/first-hire-plan.mdc` |
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/first-maintainer-month.mdc` |
@@ -461,6 +466,7 @@
 | Incident Postmortem | `pm-engineering` | `pm-engineering/incident-postmortem/incident-postmortem.mdc` |
 | Incident Public Statement | `pm-crisis` | `pm-crisis/incident-public-statement/incident-public-statement.mdc` |
 | Incremental Implementation | `pm-method` | `pm-method/incremental-implementation/incremental-implementation.mdc` |
+| Index-Fund Starter | `pm-wealth` | `pm-wealth/index-fund-starter/index-fund-starter.mdc` |
 | Influencer Brief | `pm-social` | `pm-social/influencer-brief/influencer-brief.mdc` |
 | Informational-Interview Prep | `pm-career` | `pm-career/informational-interview-prep/informational-interview-prep.mdc` |
 | Infrastructure-as-Code Review | `pm-engineering` | `pm-engineering/infra-as-code-review/infra-as-code-review.mdc` |
@@ -476,7 +482,9 @@
 | Interview Synthesis | `pm-cowork` | `pm-cowork/interview-synthesis/interview-synthesis.mdc` |
 | Inventory Policy | `pm-supplychain` | `pm-supplychain/inventory-policy/inventory-policy.mdc` |
 | Inversion Thinking | `pm-thinking` | `pm-thinking/inversion-thinking/inversion-thinking.mdc` |
+| Investing for Beginners | `pm-wealth` | `pm-wealth/investing-for-beginners/investing-for-beginners.mdc` |
 | Investing Policy Statement | `pm-money` | `pm-money/investing-policy-statement/investing-policy-statement.mdc` |
+| Investment-Account Picker | `pm-wealth` | `pm-wealth/investment-account-picker/investment-account-picker.mdc` |
 | Investor Cold Email | `pm-founders` | `pm-founders/investor-cold-email/investor-cold-email.mdc` |
 | Investor Pitch Deck | `pm-finance` | `pm-finance/investor-pitch-deck/investor-pitch-deck.mdc` |
 | Investor Update | `pm-business` | `pm-business/investor-update/investor-update.mdc` |
@@ -572,6 +580,7 @@
 | Model Migration Plan | `pm-agentops` | `pm-agentops/model-migration-plan/model-migration-plan.mdc` |
 | Model Selection Advisor | `pm-ai` | `pm-ai/model-selection-advisor/model-selection-advisor.mdc` |
 | Momentum Map | `pm-focus` | `pm-focus/momentum-map/momentum-map.mdc` |
+| Money Mindset Reset | `pm-wealth` | `pm-wealth/money-mindset-reset/money-mindset-reset.mdc` |
 | Money Priorities Order | `pm-money` | `pm-money/money-priorities-order/money-priorities-order.mdc` |
 | Monitoring Setup Guide | `pm-engineering` | `pm-engineering/monitoring-setup-guide/monitoring-setup-guide.mdc` |
 | Morning Intelligence | `pm-operations` | `pm-operations/morning-intelligence/morning-intelligence.mdc` |
@@ -625,6 +634,7 @@
 | Parent Conference Prep | `pm-teaching` | `pm-teaching/parent-conference-prep/parent-conference-prep.mdc` |
 | Parent Teacher Conference Prep | `pm-parents` | `pm-parents/parent-teacher-conference-prep/parent-teacher-conference-prep.mdc` |
 | Partnership Proposal | `pm-sales` | `pm-sales/partnership-proposal/partnership-proposal.mdc` |
+| Passive-Income Reality Check | `pm-wealth` | `pm-wealth/passive-income-reality-check/passive-income-reality-check.mdc` |
 | Password & 2FA Setup | `pm-digital-safety` | `pm-digital-safety/password-and-2fa-setup/password-and-2fa-setup.mdc` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/patient-communication.mdc` |
 | Pay Stub Decoder | `pm-decoders` | `pm-decoders/pay-stub-decoder/pay-stub-decoder.mdc` |

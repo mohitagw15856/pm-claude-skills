@@ -1,4 +1,4 @@
-# 🗂️ All 1018 Skills — full catalog
+# 🗂️ All 1028 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -726,7 +726,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (551 skills)
+## 🌍 Industries & Public Sector (561 skills)
 
 ### `other` — 4 skills
 
@@ -1579,6 +1579,21 @@
 | **Metric Gaslighting Detector** (`metric-gaslighting-detector`) | Find out how a dashboard, KPI report, or metrics slide is lying to you — before you repeat its story in a bigger room. | — |
 | **Premortem Assassin** (`premortem-assassin`) | Kill the plan on paper before reality does it for money. | — |
 
+### `pm-wealth` — 10 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Ask for a Raise** (`ask-for-a-raise`) | Build and deliver a raise request that actually works — the evidence, the number, the timing, and the exact words — instead of hoping it gets noticed. | — |
+| **Compound-Growth Explainer** (`compound-growth-explainer`) | Make compound growth actually click — see how small, consistent amounts become large over time, and why starting now beats starting bigger later. | — |
+| **Financial Checkup** (`financial-checkup`) | Run an annual (or anytime) financial health check across the key areas — so you catch problems and opportunities instead of drifting. | — |
+| **Financial-Independence Roadmap** (`financial-independence-roadmap`) | Map a realistic path toward financial independence — the number you'd actually need, your savings rate's massive effect on the timeline, and the… | — |
+| **First 100k Plan** (`first-100k-plan`) | Build a realistic plan to reach your first major savings/investing milestone — the hardest one — by focusing on the levers that actually move it… | — |
+| **Index-Fund Starter** (`index-fund-starter`) | Understand index-fund investing and how to actually get started with the simplest evidence-backed approach — plus the details that quietly matter… | — |
+| **Investing for Beginners** (`investing-for-beginners`) | Understand the basics of investing enough to start sensibly — the core concepts, the simple default that works for most people, and the traps that… | — |
+| **Investment-Account Picker** (`investment-account-picker`) | Understand which type of investment/savings account to use for your goal — the tax-advantaged vs taxable question, and which wrapper fits which… | — |
+| **Money Mindset Reset** (`money-mindset-reset`) | Untangle the money beliefs and emotions that quietly sabotage your finances — the scripts from childhood, the avoidance, the guilt or fear — and… | — |
+| **Passive-Income Reality Check** (`passive-income-reality-check`) | Cut through passive-income hype to what's actually realistic for you — the real effort, capital, and risk behind each option, and which (if any)… | — |
+
 ### `pm-wedding` — 3 skills
 
 | Skill | What it does | Eval |
@@ -1606,4 +1621,4 @@
 
 ---
 
-_1018 skills across 112 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1028 skills across 113 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

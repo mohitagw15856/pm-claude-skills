@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1018 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1028 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -55,6 +55,7 @@
 | Architecture Decision Record (ADR) | `pm-engineering` | `pm-engineering/architecture-decision-record/SYSTEM_PROMPT.md` |
 | Architecture Diagram | `pm-visuals` | `pm-visuals/architecture-diagram/SYSTEM_PROMPT.md` |
 | Archive Strategy | `pm-cowork` | `pm-cowork/archive-strategy/SYSTEM_PROMPT.md` |
+| Ask for a Raise | `pm-wealth` | `pm-wealth/ask-for-a-raise/SYSTEM_PROMPT.md` |
 | Assumption Audit | `pm-thinking` | `pm-thinking/assumption-audit/SYSTEM_PROMPT.md` |
 | Assumption Bounty | `pm-warroom` | `pm-warroom/assumption-bounty/SYSTEM_PROMPT.md` |
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/SYSTEM_PROMPT.md` |
@@ -181,6 +182,7 @@
 | Competitor Teardown | `pm-gtm` | `pm-gtm/competitor-teardown/SYSTEM_PROMPT.md` |
 | Complaint Letter | `pm-lifeadmin` | `pm-lifeadmin/complaint-letter/SYSTEM_PROMPT.md` |
 | Compliance Checklist | `pm-legal` | `pm-legal/compliance-checklist/SYSTEM_PROMPT.md` |
+| Compound-Growth Explainer | `pm-wealth` | `pm-wealth/compound-growth-explainer/SYSTEM_PROMPT.md` |
 | Condolence Message Helper | `pm-family` | `pm-family/condolence-message-helper/SYSTEM_PROMPT.md` |
 | Conference Talk Proposal | `pm-devrel` | `pm-devrel/conference-talk-proposal/SYSTEM_PROMPT.md` |
 | Consulting Proposal | `pm-consulting` | `pm-consulting/consulting-proposal/SYSTEM_PROMPT.md` |
@@ -375,11 +377,14 @@
 | File Access Preflight | `pm-seatbelt` | `pm-seatbelt/file-access-preflight/SYSTEM_PROMPT.md` |
 | Filename Convention | `pm-cowork` | `pm-cowork/filename-convention/SYSTEM_PROMPT.md` |
 | Financial Aid Appeal | `pm-students` | `pm-students/financial-aid-appeal/SYSTEM_PROMPT.md` |
+| Financial Checkup | `pm-wealth` | `pm-wealth/financial-checkup/SYSTEM_PROMPT.md` |
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/SYSTEM_PROMPT.md` |
+| Financial-Independence Roadmap | `pm-wealth` | `pm-wealth/financial-independence-roadmap/SYSTEM_PROMPT.md` |
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/SYSTEM_PROMPT.md` |
 | Financial Statement Explainer | `pm-accounting` | `pm-accounting/financial-statement-explainer/SYSTEM_PROMPT.md` |
 | Fine Appeal Letter | `pm-lifeadmin` | `pm-lifeadmin/fine-appeal-letter/SYSTEM_PROMPT.md` |
 | FIRE Number | `pm-calculators` | `pm-calculators/fire-number/SYSTEM_PROMPT.md` |
+| First 100k Plan | `pm-wealth` | `pm-wealth/first-100k-plan/SYSTEM_PROMPT.md` |
 | First Client Contract | `pm-sidehustle` | `pm-sidehustle/first-client-contract/SYSTEM_PROMPT.md` |
 | First-Hire Plan | `pm-career` | `pm-career/first-hire-plan/SYSTEM_PROMPT.md` |
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/SYSTEM_PROMPT.md` |
@@ -461,6 +466,7 @@
 | Incident Postmortem | `pm-engineering` | `pm-engineering/incident-postmortem/SYSTEM_PROMPT.md` |
 | Incident Public Statement | `pm-crisis` | `pm-crisis/incident-public-statement/SYSTEM_PROMPT.md` |
 | Incremental Implementation | `pm-method` | `pm-method/incremental-implementation/SYSTEM_PROMPT.md` |
+| Index-Fund Starter | `pm-wealth` | `pm-wealth/index-fund-starter/SYSTEM_PROMPT.md` |
 | Influencer Brief | `pm-social` | `pm-social/influencer-brief/SYSTEM_PROMPT.md` |
 | Informational-Interview Prep | `pm-career` | `pm-career/informational-interview-prep/SYSTEM_PROMPT.md` |
 | Infrastructure-as-Code Review | `pm-engineering` | `pm-engineering/infra-as-code-review/SYSTEM_PROMPT.md` |
@@ -476,7 +482,9 @@
 | Interview Synthesis | `pm-cowork` | `pm-cowork/interview-synthesis/SYSTEM_PROMPT.md` |
 | Inventory Policy | `pm-supplychain` | `pm-supplychain/inventory-policy/SYSTEM_PROMPT.md` |
 | Inversion Thinking | `pm-thinking` | `pm-thinking/inversion-thinking/SYSTEM_PROMPT.md` |
+| Investing for Beginners | `pm-wealth` | `pm-wealth/investing-for-beginners/SYSTEM_PROMPT.md` |
 | Investing Policy Statement | `pm-money` | `pm-money/investing-policy-statement/SYSTEM_PROMPT.md` |
+| Investment-Account Picker | `pm-wealth` | `pm-wealth/investment-account-picker/SYSTEM_PROMPT.md` |
 | Investor Cold Email | `pm-founders` | `pm-founders/investor-cold-email/SYSTEM_PROMPT.md` |
 | Investor Pitch Deck | `pm-finance` | `pm-finance/investor-pitch-deck/SYSTEM_PROMPT.md` |
 | Investor Update | `pm-business` | `pm-business/investor-update/SYSTEM_PROMPT.md` |
@@ -572,6 +580,7 @@
 | Model Migration Plan | `pm-agentops` | `pm-agentops/model-migration-plan/SYSTEM_PROMPT.md` |
 | Model Selection Advisor | `pm-ai` | `pm-ai/model-selection-advisor/SYSTEM_PROMPT.md` |
 | Momentum Map | `pm-focus` | `pm-focus/momentum-map/SYSTEM_PROMPT.md` |
+| Money Mindset Reset | `pm-wealth` | `pm-wealth/money-mindset-reset/SYSTEM_PROMPT.md` |
 | Money Priorities Order | `pm-money` | `pm-money/money-priorities-order/SYSTEM_PROMPT.md` |
 | Monitoring Setup Guide | `pm-engineering` | `pm-engineering/monitoring-setup-guide/SYSTEM_PROMPT.md` |
 | Morning Intelligence | `pm-operations` | `pm-operations/morning-intelligence/SYSTEM_PROMPT.md` |
@@ -625,6 +634,7 @@
 | Parent Conference Prep | `pm-teaching` | `pm-teaching/parent-conference-prep/SYSTEM_PROMPT.md` |
 | Parent Teacher Conference Prep | `pm-parents` | `pm-parents/parent-teacher-conference-prep/SYSTEM_PROMPT.md` |
 | Partnership Proposal | `pm-sales` | `pm-sales/partnership-proposal/SYSTEM_PROMPT.md` |
+| Passive-Income Reality Check | `pm-wealth` | `pm-wealth/passive-income-reality-check/SYSTEM_PROMPT.md` |
 | Password & 2FA Setup | `pm-digital-safety` | `pm-digital-safety/password-and-2fa-setup/SYSTEM_PROMPT.md` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/SYSTEM_PROMPT.md` |
 | Pay Stub Decoder | `pm-decoders` | `pm-decoders/pay-stub-decoder/SYSTEM_PROMPT.md` |

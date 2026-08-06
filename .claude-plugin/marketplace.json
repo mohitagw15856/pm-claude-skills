@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-wealth",
+      "description": "Money-building skills (the offense to pm-money's defense): investing basics, index funds, asking for a raise, your first milestone, compounding, FI roadmap, and a financial checkup. Educational — not financial advice; account/tax specifics are jurisdiction-dependent.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-wealth",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-learning",
       "description": "Learning & mastery skills: build a roadmap for any skill, remember what you read and study (spaced repetition, active reading), learn by doing, break plateaus, and map your knowledge gaps.",
       "version": "1.0.0",

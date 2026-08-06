@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1018 skills exported. Copy a `SKILL.md` into the tool to use it.
+1028 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -55,6 +55,7 @@
 | Architecture Decision Record (ADR) | `pm-engineering` | `architecture-decision-record/SKILL.md` |
 | Architecture Diagram | `pm-visuals` | `architecture-diagram/SKILL.md` |
 | Archive Strategy | `pm-cowork` | `archive-strategy/SKILL.md` |
+| Ask for a Raise | `pm-wealth` | `ask-for-a-raise/SKILL.md` |
 | Assumption Audit | `pm-thinking` | `assumption-audit/SKILL.md` |
 | Assumption Bounty | `pm-warroom` | `assumption-bounty/SKILL.md` |
 | Assumption Mapper | `pm-discovery` | `assumption-mapper/SKILL.md` |
@@ -181,6 +182,7 @@
 | Competitor Teardown | `pm-gtm` | `competitor-teardown/SKILL.md` |
 | Complaint Letter | `pm-lifeadmin` | `complaint-letter/SKILL.md` |
 | Compliance Checklist | `pm-legal` | `compliance-checklist/SKILL.md` |
+| Compound-Growth Explainer | `pm-wealth` | `compound-growth-explainer/SKILL.md` |
 | Condolence Message Helper | `pm-family` | `condolence-message-helper/SKILL.md` |
 | Conference Talk Proposal | `pm-devrel` | `conference-talk-proposal/SKILL.md` |
 | Consulting Proposal | `pm-consulting` | `consulting-proposal/SKILL.md` |
@@ -375,11 +377,14 @@
 | File Access Preflight | `pm-seatbelt` | `file-access-preflight/SKILL.md` |
 | Filename Convention | `pm-cowork` | `filename-convention/SKILL.md` |
 | Financial Aid Appeal | `pm-students` | `financial-aid-appeal/SKILL.md` |
+| Financial Checkup | `pm-wealth` | `financial-checkup/SKILL.md` |
 | Financial Due Diligence | `pm-finance` | `financial-due-diligence/SKILL.md` |
+| Financial-Independence Roadmap | `pm-wealth` | `financial-independence-roadmap/SKILL.md` |
 | Financial Model Narrative | `pm-finance` | `financial-model-narrative/SKILL.md` |
 | Financial Statement Explainer | `pm-accounting` | `financial-statement-explainer/SKILL.md` |
 | Fine Appeal Letter | `pm-lifeadmin` | `fine-appeal-letter/SKILL.md` |
 | FIRE Number | `pm-calculators` | `fire-number/SKILL.md` |
+| First 100k Plan | `pm-wealth` | `first-100k-plan/SKILL.md` |
 | First Client Contract | `pm-sidehustle` | `first-client-contract/SKILL.md` |
 | First-Hire Plan | `pm-career` | `first-hire-plan/SKILL.md` |
 | First Maintainer Month | `pm-maintainer` | `first-maintainer-month/SKILL.md` |
@@ -461,6 +466,7 @@
 | Incident Postmortem | `pm-engineering` | `incident-postmortem/SKILL.md` |
 | Incident Public Statement | `pm-crisis` | `incident-public-statement/SKILL.md` |
 | Incremental Implementation | `pm-method` | `incremental-implementation/SKILL.md` |
+| Index-Fund Starter | `pm-wealth` | `index-fund-starter/SKILL.md` |
 | Influencer Brief | `pm-social` | `influencer-brief/SKILL.md` |
 | Informational-Interview Prep | `pm-career` | `informational-interview-prep/SKILL.md` |
 | Infrastructure-as-Code Review | `pm-engineering` | `infra-as-code-review/SKILL.md` |
@@ -476,7 +482,9 @@
 | Interview Synthesis | `pm-cowork` | `interview-synthesis/SKILL.md` |
 | Inventory Policy | `pm-supplychain` | `inventory-policy/SKILL.md` |
 | Inversion Thinking | `pm-thinking` | `inversion-thinking/SKILL.md` |
+| Investing for Beginners | `pm-wealth` | `investing-for-beginners/SKILL.md` |
 | Investing Policy Statement | `pm-money` | `investing-policy-statement/SKILL.md` |
+| Investment-Account Picker | `pm-wealth` | `investment-account-picker/SKILL.md` |
 | Investor Cold Email | `pm-founders` | `investor-cold-email/SKILL.md` |
 | Investor Pitch Deck | `pm-finance` | `investor-pitch-deck/SKILL.md` |
 | Investor Update | `pm-business` | `investor-update/SKILL.md` |
@@ -572,6 +580,7 @@
 | Model Migration Plan | `pm-agentops` | `model-migration-plan/SKILL.md` |
 | Model Selection Advisor | `pm-ai` | `model-selection-advisor/SKILL.md` |
 | Momentum Map | `pm-focus` | `momentum-map/SKILL.md` |
+| Money Mindset Reset | `pm-wealth` | `money-mindset-reset/SKILL.md` |
 | Money Priorities Order | `pm-money` | `money-priorities-order/SKILL.md` |
 | Monitoring Setup Guide | `pm-engineering` | `monitoring-setup-guide/SKILL.md` |
 | Morning Intelligence | `pm-operations` | `morning-intelligence/SKILL.md` |
@@ -625,6 +634,7 @@
 | Parent Conference Prep | `pm-teaching` | `parent-conference-prep/SKILL.md` |
 | Parent Teacher Conference Prep | `pm-parents` | `parent-teacher-conference-prep/SKILL.md` |
 | Partnership Proposal | `pm-sales` | `partnership-proposal/SKILL.md` |
+| Passive-Income Reality Check | `pm-wealth` | `passive-income-reality-check/SKILL.md` |
 | Password & 2FA Setup | `pm-digital-safety` | `password-and-2fa-setup/SKILL.md` |
 | Patient Communication | `pm-research` | `patient-communication/SKILL.md` |
 | Pay Stub Decoder | `pm-decoders` | `pay-stub-decoder/SKILL.md` |

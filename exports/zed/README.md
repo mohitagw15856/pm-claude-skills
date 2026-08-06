@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1018 skills exported. Copy a `.md rule` into the tool to use it.
+1028 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -55,6 +55,7 @@
 | Architecture Decision Record (ADR) | `pm-engineering` | `pm-engineering/architecture-decision-record/architecture-decision-record.md` |
 | Architecture Diagram | `pm-visuals` | `pm-visuals/architecture-diagram/architecture-diagram.md` |
 | Archive Strategy | `pm-cowork` | `pm-cowork/archive-strategy/archive-strategy.md` |
+| Ask for a Raise | `pm-wealth` | `pm-wealth/ask-for-a-raise/ask-for-a-raise.md` |
 | Assumption Audit | `pm-thinking` | `pm-thinking/assumption-audit/assumption-audit.md` |
 | Assumption Bounty | `pm-warroom` | `pm-warroom/assumption-bounty/assumption-bounty.md` |
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/assumption-mapper.md` |
@@ -181,6 +182,7 @@
 | Competitor Teardown | `pm-gtm` | `pm-gtm/competitor-teardown/competitor-teardown.md` |
 | Complaint Letter | `pm-lifeadmin` | `pm-lifeadmin/complaint-letter/complaint-letter.md` |
 | Compliance Checklist | `pm-legal` | `pm-legal/compliance-checklist/compliance-checklist.md` |
+| Compound-Growth Explainer | `pm-wealth` | `pm-wealth/compound-growth-explainer/compound-growth-explainer.md` |
 | Condolence Message Helper | `pm-family` | `pm-family/condolence-message-helper/condolence-message-helper.md` |
 | Conference Talk Proposal | `pm-devrel` | `pm-devrel/conference-talk-proposal/conference-talk-proposal.md` |
 | Consulting Proposal | `pm-consulting` | `pm-consulting/consulting-proposal/consulting-proposal.md` |
@@ -375,11 +377,14 @@
 | File Access Preflight | `pm-seatbelt` | `pm-seatbelt/file-access-preflight/file-access-preflight.md` |
 | Filename Convention | `pm-cowork` | `pm-cowork/filename-convention/filename-convention.md` |
 | Financial Aid Appeal | `pm-students` | `pm-students/financial-aid-appeal/financial-aid-appeal.md` |
+| Financial Checkup | `pm-wealth` | `pm-wealth/financial-checkup/financial-checkup.md` |
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/financial-due-diligence.md` |
+| Financial-Independence Roadmap | `pm-wealth` | `pm-wealth/financial-independence-roadmap/financial-independence-roadmap.md` |
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/financial-model-narrative.md` |
 | Financial Statement Explainer | `pm-accounting` | `pm-accounting/financial-statement-explainer/financial-statement-explainer.md` |
 | Fine Appeal Letter | `pm-lifeadmin` | `pm-lifeadmin/fine-appeal-letter/fine-appeal-letter.md` |
 | FIRE Number | `pm-calculators` | `pm-calculators/fire-number/fire-number.md` |
+| First 100k Plan | `pm-wealth` | `pm-wealth/first-100k-plan/first-100k-plan.md` |
 | First Client Contract | `pm-sidehustle` | `pm-sidehustle/first-client-contract/first-client-contract.md` |
 | First-Hire Plan | `pm-career` | `pm-career/first-hire-plan/first-hire-plan.md` |
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/first-maintainer-month.md` |
@@ -461,6 +466,7 @@
 | Incident Postmortem | `pm-engineering` | `pm-engineering/incident-postmortem/incident-postmortem.md` |
 | Incident Public Statement | `pm-crisis` | `pm-crisis/incident-public-statement/incident-public-statement.md` |
 | Incremental Implementation | `pm-method` | `pm-method/incremental-implementation/incremental-implementation.md` |
+| Index-Fund Starter | `pm-wealth` | `pm-wealth/index-fund-starter/index-fund-starter.md` |
 | Influencer Brief | `pm-social` | `pm-social/influencer-brief/influencer-brief.md` |
 | Informational-Interview Prep | `pm-career` | `pm-career/informational-interview-prep/informational-interview-prep.md` |
 | Infrastructure-as-Code Review | `pm-engineering` | `pm-engineering/infra-as-code-review/infra-as-code-review.md` |
@@ -476,7 +482,9 @@
 | Interview Synthesis | `pm-cowork` | `pm-cowork/interview-synthesis/interview-synthesis.md` |
 | Inventory Policy | `pm-supplychain` | `pm-supplychain/inventory-policy/inventory-policy.md` |
 | Inversion Thinking | `pm-thinking` | `pm-thinking/inversion-thinking/inversion-thinking.md` |
+| Investing for Beginners | `pm-wealth` | `pm-wealth/investing-for-beginners/investing-for-beginners.md` |
 | Investing Policy Statement | `pm-money` | `pm-money/investing-policy-statement/investing-policy-statement.md` |
+| Investment-Account Picker | `pm-wealth` | `pm-wealth/investment-account-picker/investment-account-picker.md` |
 | Investor Cold Email | `pm-founders` | `pm-founders/investor-cold-email/investor-cold-email.md` |
 | Investor Pitch Deck | `pm-finance` | `pm-finance/investor-pitch-deck/investor-pitch-deck.md` |
 | Investor Update | `pm-business` | `pm-business/investor-update/investor-update.md` |
@@ -572,6 +580,7 @@
 | Model Migration Plan | `pm-agentops` | `pm-agentops/model-migration-plan/model-migration-plan.md` |
 | Model Selection Advisor | `pm-ai` | `pm-ai/model-selection-advisor/model-selection-advisor.md` |
 | Momentum Map | `pm-focus` | `pm-focus/momentum-map/momentum-map.md` |
+| Money Mindset Reset | `pm-wealth` | `pm-wealth/money-mindset-reset/money-mindset-reset.md` |
 | Money Priorities Order | `pm-money` | `pm-money/money-priorities-order/money-priorities-order.md` |
 | Monitoring Setup Guide | `pm-engineering` | `pm-engineering/monitoring-setup-guide/monitoring-setup-guide.md` |
 | Morning Intelligence | `pm-operations` | `pm-operations/morning-intelligence/morning-intelligence.md` |
@@ -625,6 +634,7 @@
 | Parent Conference Prep | `pm-teaching` | `pm-teaching/parent-conference-prep/parent-conference-prep.md` |
 | Parent Teacher Conference Prep | `pm-parents` | `pm-parents/parent-teacher-conference-prep/parent-teacher-conference-prep.md` |
 | Partnership Proposal | `pm-sales` | `pm-sales/partnership-proposal/partnership-proposal.md` |
+| Passive-Income Reality Check | `pm-wealth` | `pm-wealth/passive-income-reality-check/passive-income-reality-check.md` |
 | Password & 2FA Setup | `pm-digital-safety` | `pm-digital-safety/password-and-2fa-setup/password-and-2fa-setup.md` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/patient-communication.md` |
 | Pay Stub Decoder | `pm-decoders` | `pm-decoders/pay-stub-decoder/pay-stub-decoder.md` |

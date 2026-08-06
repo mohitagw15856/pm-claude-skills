@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1018 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1028 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -55,6 +55,7 @@
 | Architecture Decision Record (ADR) | `pm-engineering` | `pm-engineering/architecture-decision-record/GEM_INSTRUCTIONS.md` |
 | Architecture Diagram | `pm-visuals` | `pm-visuals/architecture-diagram/GEM_INSTRUCTIONS.md` |
 | Archive Strategy | `pm-cowork` | `pm-cowork/archive-strategy/GEM_INSTRUCTIONS.md` |
+| Ask for a Raise | `pm-wealth` | `pm-wealth/ask-for-a-raise/GEM_INSTRUCTIONS.md` |
 | Assumption Audit | `pm-thinking` | `pm-thinking/assumption-audit/GEM_INSTRUCTIONS.md` |
 | Assumption Bounty | `pm-warroom` | `pm-warroom/assumption-bounty/GEM_INSTRUCTIONS.md` |
 | Assumption Mapper | `pm-discovery` | `pm-discovery/assumption-mapper/GEM_INSTRUCTIONS.md` |
@@ -181,6 +182,7 @@
 | Competitor Teardown | `pm-gtm` | `pm-gtm/competitor-teardown/GEM_INSTRUCTIONS.md` |
 | Complaint Letter | `pm-lifeadmin` | `pm-lifeadmin/complaint-letter/GEM_INSTRUCTIONS.md` |
 | Compliance Checklist | `pm-legal` | `pm-legal/compliance-checklist/GEM_INSTRUCTIONS.md` |
+| Compound-Growth Explainer | `pm-wealth` | `pm-wealth/compound-growth-explainer/GEM_INSTRUCTIONS.md` |
 | Condolence Message Helper | `pm-family` | `pm-family/condolence-message-helper/GEM_INSTRUCTIONS.md` |
 | Conference Talk Proposal | `pm-devrel` | `pm-devrel/conference-talk-proposal/GEM_INSTRUCTIONS.md` |
 | Consulting Proposal | `pm-consulting` | `pm-consulting/consulting-proposal/GEM_INSTRUCTIONS.md` |
@@ -375,11 +377,14 @@
 | File Access Preflight | `pm-seatbelt` | `pm-seatbelt/file-access-preflight/GEM_INSTRUCTIONS.md` |
 | Filename Convention | `pm-cowork` | `pm-cowork/filename-convention/GEM_INSTRUCTIONS.md` |
 | Financial Aid Appeal | `pm-students` | `pm-students/financial-aid-appeal/GEM_INSTRUCTIONS.md` |
+| Financial Checkup | `pm-wealth` | `pm-wealth/financial-checkup/GEM_INSTRUCTIONS.md` |
 | Financial Due Diligence | `pm-finance` | `pm-finance/financial-due-diligence/GEM_INSTRUCTIONS.md` |
+| Financial-Independence Roadmap | `pm-wealth` | `pm-wealth/financial-independence-roadmap/GEM_INSTRUCTIONS.md` |
 | Financial Model Narrative | `pm-finance` | `pm-finance/financial-model-narrative/GEM_INSTRUCTIONS.md` |
 | Financial Statement Explainer | `pm-accounting` | `pm-accounting/financial-statement-explainer/GEM_INSTRUCTIONS.md` |
 | Fine Appeal Letter | `pm-lifeadmin` | `pm-lifeadmin/fine-appeal-letter/GEM_INSTRUCTIONS.md` |
 | FIRE Number | `pm-calculators` | `pm-calculators/fire-number/GEM_INSTRUCTIONS.md` |
+| First 100k Plan | `pm-wealth` | `pm-wealth/first-100k-plan/GEM_INSTRUCTIONS.md` |
 | First Client Contract | `pm-sidehustle` | `pm-sidehustle/first-client-contract/GEM_INSTRUCTIONS.md` |
 | First-Hire Plan | `pm-career` | `pm-career/first-hire-plan/GEM_INSTRUCTIONS.md` |
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/GEM_INSTRUCTIONS.md` |
@@ -461,6 +466,7 @@
 | Incident Postmortem | `pm-engineering` | `pm-engineering/incident-postmortem/GEM_INSTRUCTIONS.md` |
 | Incident Public Statement | `pm-crisis` | `pm-crisis/incident-public-statement/GEM_INSTRUCTIONS.md` |
 | Incremental Implementation | `pm-method` | `pm-method/incremental-implementation/GEM_INSTRUCTIONS.md` |
+| Index-Fund Starter | `pm-wealth` | `pm-wealth/index-fund-starter/GEM_INSTRUCTIONS.md` |
 | Influencer Brief | `pm-social` | `pm-social/influencer-brief/GEM_INSTRUCTIONS.md` |
 | Informational-Interview Prep | `pm-career` | `pm-career/informational-interview-prep/GEM_INSTRUCTIONS.md` |
 | Infrastructure-as-Code Review | `pm-engineering` | `pm-engineering/infra-as-code-review/GEM_INSTRUCTIONS.md` |
@@ -476,7 +482,9 @@
 | Interview Synthesis | `pm-cowork` | `pm-cowork/interview-synthesis/GEM_INSTRUCTIONS.md` |
 | Inventory Policy | `pm-supplychain` | `pm-supplychain/inventory-policy/GEM_INSTRUCTIONS.md` |
 | Inversion Thinking | `pm-thinking` | `pm-thinking/inversion-thinking/GEM_INSTRUCTIONS.md` |
+| Investing for Beginners | `pm-wealth` | `pm-wealth/investing-for-beginners/GEM_INSTRUCTIONS.md` |
 | Investing Policy Statement | `pm-money` | `pm-money/investing-policy-statement/GEM_INSTRUCTIONS.md` |
+| Investment-Account Picker | `pm-wealth` | `pm-wealth/investment-account-picker/GEM_INSTRUCTIONS.md` |
 | Investor Cold Email | `pm-founders` | `pm-founders/investor-cold-email/GEM_INSTRUCTIONS.md` |
 | Investor Pitch Deck | `pm-finance` | `pm-finance/investor-pitch-deck/GEM_INSTRUCTIONS.md` |
 | Investor Update | `pm-business` | `pm-business/investor-update/GEM_INSTRUCTIONS.md` |
@@ -572,6 +580,7 @@
 | Model Migration Plan | `pm-agentops` | `pm-agentops/model-migration-plan/GEM_INSTRUCTIONS.md` |
 | Model Selection Advisor | `pm-ai` | `pm-ai/model-selection-advisor/GEM_INSTRUCTIONS.md` |
 | Momentum Map | `pm-focus` | `pm-focus/momentum-map/GEM_INSTRUCTIONS.md` |
+| Money Mindset Reset | `pm-wealth` | `pm-wealth/money-mindset-reset/GEM_INSTRUCTIONS.md` |
 | Money Priorities Order | `pm-money` | `pm-money/money-priorities-order/GEM_INSTRUCTIONS.md` |
 | Monitoring Setup Guide | `pm-engineering` | `pm-engineering/monitoring-setup-guide/GEM_INSTRUCTIONS.md` |
 | Morning Intelligence | `pm-operations` | `pm-operations/morning-intelligence/GEM_INSTRUCTIONS.md` |
@@ -625,6 +634,7 @@
 | Parent Conference Prep | `pm-teaching` | `pm-teaching/parent-conference-prep/GEM_INSTRUCTIONS.md` |
 | Parent Teacher Conference Prep | `pm-parents` | `pm-parents/parent-teacher-conference-prep/GEM_INSTRUCTIONS.md` |
 | Partnership Proposal | `pm-sales` | `pm-sales/partnership-proposal/GEM_INSTRUCTIONS.md` |
+| Passive-Income Reality Check | `pm-wealth` | `pm-wealth/passive-income-reality-check/GEM_INSTRUCTIONS.md` |
 | Password & 2FA Setup | `pm-digital-safety` | `pm-digital-safety/password-and-2fa-setup/GEM_INSTRUCTIONS.md` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/GEM_INSTRUCTIONS.md` |
 | Pay Stub Decoder | `pm-decoders` | `pm-decoders/pay-stub-decoder/GEM_INSTRUCTIONS.md` |
