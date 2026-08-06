@@ -1,4 +1,4 @@
-# 🗂️ All 958 Skills — full catalog
+# 🗂️ All 1058 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -726,15 +726,25 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (491 skills)
+## 🌍 Industries & Public Sector (591 skills)
 
-### `other` — 4 skills
+### `other` — 14 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Boundary-Setting Scripts** (`boundary-setting-scripts`) | Set a boundary with someone — a friend, family member, coworker, or partner — clearly and kindly, with the actual words and a plan for the pushback. | — |
+| **Conflict De-escalation** (`conflict-deescalation`) | Calm a heated conflict — in person or in writing — before it does damage, by lowering the temperature instead of winning the point. | — |
+| **Give Hard Feedback Kindly** (`give-hard-feedback-kindly`) | Give someone difficult feedback — a report, a peer, a friend — so it actually lands and helps, without crushing them or dodging the point. | — |
 | **Group Trip Negotiator** (`group-trip-negotiator`) | Save the group trip from the group chat — budget alignment before anything gets booked (the awkward conversation, scripted), a decision protocol… | — |
+| **Make Friends as an Adult** (`make-friends-as-an-adult`) | Build a real plan to make friends as an adult — where to meet people you'd actually click with, how to turn acquaintances into friends, and past… | — |
 | **Mechanic Quote Decoder** (`mechanic-quote-decoder`) | Read a garage quote or invoice like someone who can't be padded — which line items connect to your actual symptom, which are while-we're-in-there… | — |
+| **Networking for Introverts** (`networking-for-introverts`) | Network in a way that actually works for introverts — depth over breadth, one-on-one over rooms, and energy managed — instead of forcing yourself… | — |
 | **Pixel GIF Maker** (`pixel-gif-maker`) | Generate retro pixel-text animated GIFs for Slack, Teams, or a PR comment — scrolling marquees, heartbeat pulses, confetti parties, twinkling… | — |
+| **Read the Room** (`read-the-room`) | Figure out the real social dynamics of a situation — the unspoken mood, who holds influence, what's actually going on beneath the surface — so you… | — |
+| **Reconnect With Someone** (`reconnect-with-someone`) | Reach back out to a friend or person you've lost touch with — past the awkwardness of the gap — with a message that reopens the door warmly. | — |
+| **Repair After a Fight** (`repair-after-a-fight`) | Repair a relationship after an argument — reconnect, own your part, and rebuild trust — instead of the cold silence that lets damage set. | — |
+| **Small-Talk Survival** (`small-talk-survival`) | Survive (and even enjoy) small talk — how to start it, keep it going past the weather, and exit gracefully — for people who find it painful. | — |
+| **Support a Friend in Crisis** (`support-a-friend-in-crisis`) | Show up well for someone going through something hard — loss, illness, a breakup, a crisis — with the right words, the right presence, and… | — |
 | **Used Car Decoder** (`used-car-decoder`) | Decode a used-car listing before you drive an hour to see it — what the seller's phrasing is hiding, the history-check items that matter, a… | — |
 
 ### `pm-2027` — 10 skills
@@ -779,6 +789,21 @@
 | **Aging Parent Talks** (`aging-parent-talks`) | Prepare the conversations with aging parents that everyone postpones — the driving talk, the money talk, the care-options talk, the moving talk —… | — |
 | **Sibling Care Summit** (`sibling-care-summit`) | Get siblings onto one team about aging parents before the crisis does it for them — a structured family meeting with an agenda that prevents… | — |
 
+### `pm-ai-native` — 10 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **AI-Context Primer** (`ai-context-primer`) | Build the context an AI needs to do a task well — the background, constraints, examples, and format it can't guess — so you get a great result on… | — |
+| **AI-Output Verifier** (`ai-output-verifier`) | Check AI output before you trust or use it — where it's likely wrong, what to verify, and how to catch confident-sounding errors. | — |
+| **AI-Tool Picker** (`ai-tool-picker`) | Figure out which AI tool actually fits the task in front of you — chatbot, coding assistant, image model, agent, or none — instead of forcing one… | — |
+| **AI-Workflow Designer** (`ai-workflow-designer`) | Design an AI-assisted workflow for a recurring task — which steps to hand to AI, which to keep human, and how they connect — so you get leverage… | — |
+| **Delegate to AI** (`delegate-to-ai`) | Decide what in your workload to hand to AI and what to keep yourself — like managing a fast, capable, but unreliable new hire — so you get… | — |
+| **Get More From AI** (`get-more-from-ai`) | Level up how you actually use AI — from basic one-shot questions to the techniques that get dramatically better results — matched to what you… | — |
+| **Memory-File Maintenance** (`memory-file-maintenance`) | Keep your AI memory/context file (MEMORY.md, CLAUDE.md, custom instructions) healthy over time — pruning the stale, adding the new, and keeping it… | — |
+| **Prompt-Library Builder** (`prompt-library-builder`) | Build a personal library of reusable prompts for the things you ask AI again and again — so you stop rewriting the same request from scratch. | — |
+| **Run an Agent Team** (`run-an-agent-team`) | Design a small team of AI agents to tackle a complex task in parallel — who does what, how they hand off, and how to keep them coordinated —… | — |
+| **Spot AI Mistakes** (`spot-ai-mistakes`) | Learn to recognize where and how AI tends to go wrong — the specific failure patterns — so you catch its mistakes on sight instead of getting… | — |
+
 ### `pm-aiwork` — 5 skills
 
 | Skill | What it does | Eval |
@@ -806,6 +831,21 @@
 | **KYC Escalation** (`kyc-escalation`) | Write an internal KYC/AML escalation memo: a factual time-stamped trigger description, customer-profile vs activity mismatch analysis, red-flag… | — |
 | **Lending Risk Brief** (`lending-risk-brief`) | Write a portfolio-level lending risk brief: concentration analysis by sector, geography and single name, vintage performance, migration matrix… | — |
 | **Loan Covenant Review** (`loan-covenant-review`) | Run a quarterly loan covenant compliance review: covenant table with required vs actual vs headroom, trend and trajectory-to-breach analysis… | — |
+
+### `pm-caregiving` — 10 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Aging-in-Place Assessment** (`aging-in-place-assessment`) | Assess whether and how someone can safely stay in their own home as they age — the home hazards, the support gaps, and the modifications and… | — |
+| **Care-Decision Family Meeting** (`care-decision-family-meeting`) | Run a family meeting to make a big care decision together — so it's a shared, informed decision instead of a fight or one person deciding alone. | — |
+| **Care-Team Coordinator** (`care-team-coordinator`) | Organize the people and information involved in caring for someone — family, doctors, helpers — so care doesn't fall through the cracks or all… | — |
+| **Caregiver-Burnout Check** (`caregiver-burnout-check`) | Check whether you're burning out as a caregiver — and get a realistic plan to protect yourself before you can't keep going. | — |
+| **End-of-Life Wishes Conversation** (`end-of-life-wishes-conversation`) | Have the conversation about someone's end-of-life wishes — before a crisis forces it — gently, respectfully, and thoroughly enough to actually… | — |
+| **Hospital-Stay Plan** (`hospital-stay-plan`) | Navigate a hospital stay — for yourself or someone you care for — from admission through a safe discharge, so nothing critical falls through the… | — |
+| **Long-Term Care Options** (`long-term-care-options`) | Understand the long-term care options for an older or ill loved one — from in-home care to assisted living to nursing care — so you can compare… | — |
+| **Medical-Appointment Advocate** (`medical-appointment-advocate`) | Prepare to get the most out of a medical appointment — for yourself or someone you care for — with the right questions, the information to bring… | — |
+| **Medication-Management System** (`medication-management-system`) | Set up a system to manage medications safely — for yourself or someone you care for — so doses aren't missed, doubled, or dangerously combined. | — |
+| **Respite-Care Plan** (`respite-care-plan`) | Plan a genuine break from caregiving — arrange the coverage, hand off the essentials, and actually rest — because respite is what lets you keep going. | — |
 
 ### `pm-climate` — 4 skills
 
@@ -1107,6 +1147,37 @@
 | **School Choice Decision** (`school-choice-decision`) | Choose the right school for a specific child by weighing what actually matters to them and your family — not just rankings. | — |
 | **Wedding Vows Writer** (`wedding-vows-writer`) | Write personal wedding vows that sound like you — specific, heartfelt, and the right length — instead of generic or cheesy. | — |
 
+### `pm-focus` — 26 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Body-Doubling Partner** (`body-doubling-partner`) | Act as a body-double for a work session — a present, low-pressure companion that keeps you accountable and moving through the task without doing… | — |
+| **Build My Memory File** (`build-my-memory-file`) | Interview you into a durable personal MEMORY.md — your decision rules, patterns, past failures, and preferences — that any AI can read to help you… | — |
+| **Context-Switch Recovery** (`context-switch-recovery`) | Reconstruct where you were and what's next after an interruption, so a broken focus doesn't cost you the whole thread. | — |
+| **Decision When Tired** (`decision-when-tired`) | Make a decent decision when you're too depleted to think well — a low-energy protocol that protects you from bad tired-brain choices. | — |
+| **Dependency Check** (`dependency-check`) | Honestly measure how dependent you've become on a tool, app, substance-free habit, or even AI itself — and reclaim the capability you've outsourced. | — |
+| **Good-Enough Detector** (`good-enough-detector`) | Tell you when to stop polishing and ship — the point where more effort stops adding real value. | — |
+| **Hyperfocus Exit** (`hyperfocus-exit`) | Give yourself a gentle, structured off-ramp from hyperfocus before it costs you sleep, meals, or the rest of your life. | — |
+| **Make Me a** (`make-me-a-skill`) | Turn a task you repeat every week into a reusable personal skill or prompt — so you say 'do this' instead of re-explaining it every time. | — |
+| **Momentum Map** (`momentum-map`) | Break a stuck, stalled week with three tiny wins sequenced for momentum — because motion creates motivation, not the other way around. | — |
+| **My Energy Map** (`my-energy-map`) | Map your real energy through the day and week, then match your tasks to it — hard things when you're sharp, easy things when you're not. | — |
+| **My Failure Museum** (`my-failure-museum`) | Turn a mistake into a reusable lesson — a short, unsentimental 'here's what happened and the rule so it doesn't happen again' entry you can… | — |
+| **Name What I'm Feeling** (`name-what-im-feeling`) | Turn a vague bad mood or 'off' feeling into a precisely-named emotion and its likely cause — because naming it is what starts to defuse it. | — |
+| **One Hard Truth** (`one-hard-truth`) | Get the single honest thing you're avoiding about a situation — said kindly but not softened away. | — |
+| **Overwhelm Triage** (`overwhelm-triage`) | When everything feels urgent and equally impossible, sort it fast into do-now / schedule / drop / delegate — so the panic becomes a short, calm list. | — |
+| **Personal Operating Manual** (`personal-operating-manual`) | Write the manual for how you work best — your energy, triggers, communication style, and non-negotiables — to share with a manager, team, or… | — |
+| **Regret Minimizer** (`regret-minimizer`) | Reframe a hard choice through the lens of future regret — which option will you regret less at 80? — to cut through short-term noise. | — |
+| **Rejection-Sensitivity Reframe** (`rejection-sensitivity-reframe`) | Reread a harsh message, criticism, or perceived slight without the emotional spike — separate what was actually said from what your brain is… | — |
+| **Should I Quit or Push** (`should-i-quit-or-push`) | Get an honest read on whether to quit or keep going on a project, job, hobby, or goal that's become a slog — distinguishing a dip worth pushing… | — |
+| **Should I Send This** (`should-i-send-this`) | Gut-check a message before you send it — is it going to land the way you intend, or will you regret it in an hour? Use when asked should I send… | — |
+| **Stop Overthinking This** (`stop-overthinking-this`) | Break an analysis-paralysis loop on a small or reversible decision — set a limit, force a call, and move on. | — |
+| **Task to First Step** (`task-to-first-step`) | Shrink a task you're avoiding down to a first step so small it's almost impossible not to do — beating activation-energy paralysis. | — |
+| **The 2-Minute Launch** (`the-2-minute-launch`) | Break the paralysis on the thing you keep not starting with a 2-minute launch sequence — a countdown into motion before the resistance can win. | — |
+| **The One Thing** (`the-one-thing`) | Cut a full plate down to the single highest-leverage move — the one thing that, done today, makes everything else easier or unnecessary. | — |
+| **The Worry Decompiler** (`the-worry-decompiler`) | Turn an anxious spiral into a concrete list — separate the specific worries from the vague dread, sort what you can act on from what you can't… | — |
+| **Weekly Unstuck** (`weekly-unstuck`) | A short weekly ritual that clears the mental backlog, picks the one thing that matters, and keeps you honest about your dependence on autopilot. | — |
+| **Where Do I Start** (`where-do-i-start`) | Turn a chaotic pile of everything-in-your-head into one clear first action — the antidote to the paralysis of too much at once. | — |
+
 ### `pm-freelance` — 10 skills
 
 | Skill | What it does | Eval |
@@ -1215,6 +1286,21 @@
 | **Layoff Financial Triage** (`layoff-financial-triage`) | The first-72-hours money plan after a layoff — runway computed, deadlines caught, bleeding stopped, in priority order. | — |
 | **Reference Request Kit** (`reference-request-kit`) | Secure strong references after a departure — who to ask, the ask messages, the briefing sheet that makes their reference specific, and the… | — |
 | **Severance Agreement Decoder** (`severance-agreement-decoder`) | Decode a severance agreement before you sign it — what you're giving up, what's negotiable, and the deadlines that decide your leverage. | — |
+
+### `pm-learning` — 10 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Deliberate-Practice Plan** (`deliberate-practice-plan`) | Design deliberate practice that actually builds a skill — targeted, effortful, feedback-driven — instead of mindless repetition that just… | — |
+| **Feynman Explainer** (`feynman-explainer`) | Learn something deeply by trying to explain it simply — the Feynman technique — surfacing exactly the gaps where your understanding is fake. | — |
+| **Knowledge-Gap Map** (`knowledge-gap-map`) | Map what you don't know about a subject — including the gaps you can't see — so your learning targets the holes instead of re-covering what you… | — |
+| **Learn-Anything Roadmap** (`learn-anything-roadmap`) | Turn 'I want to learn X' into a realistic, staged roadmap — the fundamentals to master first, the order that avoids overwhelm, and the milestones… | — |
+| **Learn From a Project** (`learn-from-a-project`) | Design a real project to learn a skill by building something — the fastest way to actually get good, instead of endless tutorials. | — |
+| **Note-Taking System** (`note-taking-system`) | Set up a note-taking system that you'll actually use and that makes your notes findable and useful later — not a graveyard of notes you never reopen. | — |
+| **Reading Retention System** (`reading-retention-system`) | Actually remember and use what you read — an active-reading system that beats the highlight-and-forget cycle. | — |
+| **Skill-Plateau Breaker** (`skill-plateau-breaker`) | Diagnose why you've stopped improving at something and get a plan to break through the plateau. | — |
+| **Spaced-Repetition Setup** (`spaced-repetition-setup`) | Set up a spaced-repetition system to actually remember what you learn — good cards, the right review rhythm, and the mistakes that make flashcards… | — |
+| **Teach Me in Layers** (`teach-me-in-layers`) | Learn a complex topic in progressive layers — a one-sentence version, then a paragraph, then the real depth — so you build a mental scaffold… | — |
 
 ### `pm-live` — 21 skills
 
@@ -1457,6 +1543,35 @@
 | **Lesson Plan Builder** (`lesson-plan-builder`) | Build a standards-aligned K-12 lesson plan with clear objectives, a timed activity sequence, checks for understanding, and differentiation. | — |
 | **Parent Conference Prep** (`parent-conference-prep`) | Prepare for a K-12 parent-teacher conference — including the hard ones. | — |
 
+### `pm-thinking` — 24 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Assumption Audit** (`assumption-audit`) | Surface the hidden assumptions a plan or belief rests on, then test what happens when each one is wrong. | — |
+| **Cross-Examine Me** (`cross-examine-me`) | Stress-test a decision or claim through a sharp, fair Q&A — the questions a good lawyer or skeptical friend would ask before you commit. | — |
+| **Decision Panel** (`decision-panel`) | Run a decision past a panel of clashing advisors — an optimist, a pessimist, a numbers person, an ethicist, and future-you — then get a chair's… | — |
+| **Devil's Advocate On Demand** (`devils-advocate-on-demand`) | Argue hard against whatever you just concluded — so your decision has to survive a real challenge instead of an echo chamber. | — |
+| **Explain My Decision To Me** (`explain-my-decision-to-me`) | Talk through a decision out loud with a patient thinking partner that reflects your reasoning back, so the answer you already half-know becomes clear. | — |
+| **Five Minds** (`five-minds`) | Answer a question five completely different ways — as five independent minds with clashing worldviews — then converge on what survives. | — |
+| **From First Principles** (`from-first-principles`) | Strip a problem down to what's actually true — the physics, economics, and human basics — and rebuild the answer from there, ignoring 'how it's… | — |
+| **Future Selves Council** (`future-selves-council`) | Bring three versions of future-you into a decision — you in a week, in a year, and in ten years — because they each want different things. | — |
+| **Generate, Then Execute** (`generate-then-execute`) | Separate raw idea-generation from judgment so creativity isn't strangled by your inner critic — diverge with zero evaluation, then switch to hard… | — |
+| **Idea Storm** (`idea-storm`) | Generate a big, wide spread of ideas for anything by running the prompt through many different lenses at once, then clustering and picking. | — |
+| **Inversion Thinking** (`inversion-thinking`) | Solve a problem backwards — ask how to guarantee the worst outcome, then avoid all of it. | — |
+| **Is This Actually Good** (`is-this-actually-good`) | Get an honest verdict on whether something you made is actually good — not the reflexive 'this is great!' but a real, criteria-based judgment. | — |
+| **Panel of Experts** (`panel-of-experts`) | Get the take of the specific experts a situation actually needs — a lawyer, a therapist, an accountant, a doctor-minded thinker, whoever fits —… | — |
+| **Poke Holes In This** (`poke-holes-in-this`) | Get only the weaknesses in something you made — no praise, no encouragement padding, just the holes and how to fix them. | — |
+| **Pre-Mortem Panel** (`pre-mortem-panel`) | Imagine your plan already failed, then get five independent 'here's why it died' stories — before you commit. | — |
+| **Red-Team My Plan** (`red-team-my-plan`) | Attack your own plan the way a smart adversary would — find the weakest point, the thing you're hoping nobody notices, and where it breaks under… | — |
+| **Steelman the Weird Option** (`steelman-the-weird-option`) | Take the option you dismissed in two seconds and build the strongest possible case for it — to check whether your fast 'no' was wisdom or just bias. | — |
+| **The Boring Answer Detector** (`the-boring-answer-detector`) | Scan a plan, draft, or idea for the generic, textbook, everyone-would-say-that lines — and push each toward something sharper and more specific. | — |
+| **The Second Opinion** (`the-second-opinion`) | Deliberately take the opposite position from your leaning and make you defend yours — a forced second opinion that isn't just an echo. | — |
+| **The Skeptic and the Believer** (`the-skeptic-and-the-believer`) | See an idea through two committed extremes — a true believer and a hard skeptic — so you get the full range before settling in the middle. | — |
+| **The Strong No** (`the-strong-no`) | Find the real reason to NOT do the exciting thing you're about to commit to — the honest case against, before the excitement carries you in. | — |
+| **The Third Answer** (`the-third-answer`) | Push past the first few obvious answers to a question and surface the non-obvious idea worth having. | — |
+| **Think From Another Angle** (`think-from-another-angle`) | Get unstuck on a problem by deliberately re-framing it through a different lens — a child's, an outsider's, another industry's, the reverse, the… | — |
+| **What Am I Not Seeing** (`what-am-i-not-seeing`) | Surface the blind spot — the missing stakeholder, the ignored option, the risk outside your frame, the thing you're too close to notice. | — |
+
 ### `pm-tokens` — 6 skills
 
 | Skill | What it does | Eval |
@@ -1504,6 +1619,21 @@
 | **Metric Gaslighting Detector** (`metric-gaslighting-detector`) | Find out how a dashboard, KPI report, or metrics slide is lying to you — before you repeat its story in a bigger room. | — |
 | **Premortem Assassin** (`premortem-assassin`) | Kill the plan on paper before reality does it for money. | — |
 
+### `pm-wealth` — 10 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Ask for a Raise** (`ask-for-a-raise`) | Build and deliver a raise request that actually works — the evidence, the number, the timing, and the exact words — instead of hoping it gets noticed. | — |
+| **Compound-Growth Explainer** (`compound-growth-explainer`) | Make compound growth actually click — see how small, consistent amounts become large over time, and why starting now beats starting bigger later. | — |
+| **Financial Checkup** (`financial-checkup`) | Run an annual (or anytime) financial health check across the key areas — so you catch problems and opportunities instead of drifting. | — |
+| **Financial-Independence Roadmap** (`financial-independence-roadmap`) | Map a realistic path toward financial independence — the number you'd actually need, your savings rate's massive effect on the timeline, and the… | — |
+| **First 100k Plan** (`first-100k-plan`) | Build a realistic plan to reach your first major savings/investing milestone — the hardest one — by focusing on the levers that actually move it… | — |
+| **Index-Fund Starter** (`index-fund-starter`) | Understand index-fund investing and how to actually get started with the simplest evidence-backed approach — plus the details that quietly matter… | — |
+| **Investing for Beginners** (`investing-for-beginners`) | Understand the basics of investing enough to start sensibly — the core concepts, the simple default that works for most people, and the traps that… | — |
+| **Investment-Account Picker** (`investment-account-picker`) | Understand which type of investment/savings account to use for your goal — the tax-advantaged vs taxable question, and which wrapper fits which… | — |
+| **Money Mindset Reset** (`money-mindset-reset`) | Untangle the money beliefs and emotions that quietly sabotage your finances — the scripts from childhood, the avoidance, the guilt or fear — and… | — |
+| **Passive-Income Reality Check** (`passive-income-reality-check`) | Cut through passive-income hype to what's actually realistic for you — the real effort, capital, and risk behind each option, and which (if any)… | — |
+
 ### `pm-wedding` — 3 skills
 
 | Skill | What it does | Eval |
@@ -1531,4 +1661,4 @@
 
 ---
 
-_958 skills across 109 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1058 skills across 115 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

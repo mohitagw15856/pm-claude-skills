@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-learning",
+  "version": "1.0.0",
+  "description": "Learning & mastery skills: build a roadmap for any skill, remember what you read and study (spaced repetition, active reading), learn by doing, break plateaus, and map your knowledge gaps.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "learning",
+    "study",
+    "mastery",
+    "memory",
+    "skills",
+    "education"
+  ]
+}

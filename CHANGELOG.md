@@ -9,6 +9,30 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [74.0.0] — the life-expansion wave: five bundles for life beyond the office — 2026-08-06
+
+Fifty new skills across five new bundles, extending the library past work into learning, money, relationships, caregiving, and using AI itself well. **1058 skills, 115 bundles.**
+
+### Added — 📖 pm-learning (learn anything and make it stick)
+
+- **[learn-anything-roadmap](skills/learn-anything-roadmap/SKILL.md)**, **[feynman-explainer](skills/feynman-explainer/SKILL.md)**, **[spaced-repetition-setup](skills/spaced-repetition-setup/SKILL.md)**, **[skill-plateau-breaker](skills/skill-plateau-breaker/SKILL.md)**, **[deliberate-practice-plan](skills/deliberate-practice-plan/SKILL.md)**, **[teach-me-in-layers](skills/teach-me-in-layers/SKILL.md)**, **[reading-retention-system](skills/reading-retention-system/SKILL.md)**, **[note-taking-system](skills/note-taking-system/SKILL.md)**, **[learn-from-a-project](skills/learn-from-a-project/SKILL.md)**, **[knowledge-gap-map](skills/knowledge-gap-map/SKILL.md)**.
+
+### Added — 💰 pm-wealth (build wealth on purpose — educational, not financial advice)
+
+- **[investing-for-beginners](skills/investing-for-beginners/SKILL.md)**, **[index-fund-starter](skills/index-fund-starter/SKILL.md)**, **[ask-for-a-raise](skills/ask-for-a-raise/SKILL.md)**, **[first-100k-plan](skills/first-100k-plan/SKILL.md)**, **[compound-growth-explainer](skills/compound-growth-explainer/SKILL.md)**, **[passive-income-reality-check](skills/passive-income-reality-check/SKILL.md)**, **[money-mindset-reset](skills/money-mindset-reset/SKILL.md)**, **[financial-independence-roadmap](skills/financial-independence-roadmap/SKILL.md)**, **[financial-checkup](skills/financial-checkup/SKILL.md)**, **[investment-account-picker](skills/investment-account-picker/SKILL.md)**.
+
+### Added — 🤝 pm-social (the human conversations)
+
+- **[make-friends-as-an-adult](skills/make-friends-as-an-adult/SKILL.md)**, **[networking-for-introverts](skills/networking-for-introverts/SKILL.md)**, **[reconnect-with-someone](skills/reconnect-with-someone/SKILL.md)**, **[small-talk-survival](skills/small-talk-survival/SKILL.md)**, **[boundary-setting-scripts](skills/boundary-setting-scripts/SKILL.md)**, **[conflict-deescalation](skills/conflict-deescalation/SKILL.md)**, **[give-hard-feedback-kindly](skills/give-hard-feedback-kindly/SKILL.md)**, **[repair-after-a-fight](skills/repair-after-a-fight/SKILL.md)**, **[read-the-room](skills/read-the-room/SKILL.md)**, **[support-a-friend-in-crisis](skills/support-a-friend-in-crisis/SKILL.md)**.
+
+### Added — 🩺 pm-caregiving (care for aging parents — not medical/legal/financial advice)
+
+- **[medical-appointment-advocate](skills/medical-appointment-advocate/SKILL.md)**, **[hospital-stay-plan](skills/hospital-stay-plan/SKILL.md)**, **[care-team-coordinator](skills/care-team-coordinator/SKILL.md)**, **[medication-management-system](skills/medication-management-system/SKILL.md)**, **[aging-in-place-assessment](skills/aging-in-place-assessment/SKILL.md)**, **[long-term-care-options](skills/long-term-care-options/SKILL.md)**, **[caregiver-burnout-check](skills/caregiver-burnout-check/SKILL.md)**, **[respite-care-plan](skills/respite-care-plan/SKILL.md)**, **[end-of-life-wishes-conversation](skills/end-of-life-wishes-conversation/SKILL.md)**, **[care-decision-family-meeting](skills/care-decision-family-meeting/SKILL.md)**.
+
+### Added — 🤖 pm-ai-native (use AI itself well)
+
+- **[prompt-library-builder](skills/prompt-library-builder/SKILL.md)**, **[run-an-agent-team](skills/run-an-agent-team/SKILL.md)**, **[memory-file-maintenance](skills/memory-file-maintenance/SKILL.md)**, **[ai-workflow-designer](skills/ai-workflow-designer/SKILL.md)**, **[ai-output-verifier](skills/ai-output-verifier/SKILL.md)**, **[ai-tool-picker](skills/ai-tool-picker/SKILL.md)**, **[delegate-to-ai](skills/delegate-to-ai/SKILL.md)**, **[ai-context-primer](skills/ai-context-primer/SKILL.md)**, **[spot-ai-mistakes](skills/spot-ai-mistakes/SKILL.md)**, **[get-more-from-ai](skills/get-more-from-ai/SKILL.md)**.
+
 ## [69.0.0] — the everyday wave: 16 skills people actually reach for daily — 2026-07-26
 
 Ten everyday skills (the messages, decisions, and life logistics people use constantly) plus six generic delivery/QA gaps. **848 skills, 104 bundles.**

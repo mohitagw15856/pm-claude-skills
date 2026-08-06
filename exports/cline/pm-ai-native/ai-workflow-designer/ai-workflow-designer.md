@@ -1,0 +1,67 @@
+# AI-Workflow Designer
+
+The mistake people make with AI is bolting it onto a task randomly — or trying to fully automate something that needs judgment, then losing trust when it goes wrong. Real leverage comes from designing the workflow: deciding which steps AI does well, which need a human, and where the checkpoints are. This maps that for your recurring task, so you get the speed of AI with the reliability of human judgment where it matters — and you stay in control.
+
+## What This Skill Produces
+
+- **The step map** — the task broken into steps, each labeled: 🤖 AI does it · 🧑 human does it · ✅ human checks it (AI drafts, human approves)
+- **The right tool/prompt per AI step** — what to use and how to prompt it for each automated step
+- **Hand-offs & checkpoints** — how outputs pass between steps and where the human review points are (so errors are caught, not propagated)
+- **Failure modes & guards** — where this workflow could go wrong (AI errors, hallucination, edge cases) and the checks that catch them
+- **A start-small rollout** — how to introduce it incrementally and build trust before relying on it
+- **The keep-human line** — the steps that should stay human (judgment, relationships, high-stakes calls) and why
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The task/process** — the recurring thing you want AI to help with
+- **The current steps** — how you do it now, manually
+- **The stakes** — how much errors cost (drives how many human checkpoints)
+- **Your tools** — the AI tools/access you have
+- **Your comfort** — how much you want to automate vs. keep hands-on
+
+## Framework: Split The Steps, Check The Seams
+
+1. **Map the current steps.** Lay out how the task is done now — you can't design the AI version without seeing the manual one.
+2. **Sort each step.** For each: is it something AI does reliably (drafting, summarizing, extracting, transforming), something needing human judgment (decisions, relationships, high-stakes), or something AI drafts and a human approves?
+3. **Pick tools and prompts.** For each AI step, the right tool and a reliable prompt (often from a prompt library) — so the step works consistently.
+4. **Design the seams.** Where outputs hand off between steps is where errors hide — add review checkpoints at the seams, especially before anything irreversible or external-facing.
+5. **Guard the failure modes.** Name where AI could err (wrong facts, edge cases, confident nonsense) and the specific check that catches it before it matters.
+6. **Roll out small.** Start with the low-risk steps, verify the quality, and expand — building trust rather than automating everything and hoping.
+7. **Keep humans where it counts.** Be clear which steps should stay human — judgment, empathy, and high-stakes calls aren't candidates for automation.
+
+## Output Format
+
+### AI workflow: [the task]
+
+**Step map**
+| Step | Who | Tool/prompt (if AI) |
+|---|---|---|
+| [step] | 🤖 AI / 🧑 human / ✅ AI-drafts-human-approves | |
+
+**Checkpoints:** [human review points — esp. before irreversible/external steps].
+**Failure modes & guards:** [where AI could err → the check that catches it].
+**Keep human:** [the judgment/relationship/high-stakes steps] — and why.
+**Roll out:** [start with low-risk steps → verify → expand].
+
+## Quality Checks
+- [ ] Maps the current manual steps first
+- [ ] Sorts each step into AI / human / AI-drafts-human-approves
+- [ ] Assigns the right tool/prompt to each AI step
+- [ ] Puts review checkpoints at the hand-off seams
+- [ ] Names failure modes and specific guards
+- [ ] Keeps human judgment steps human; rolls out incrementally
+
+## Anti-Patterns
+- **Bolting AI on randomly** with no step analysis.
+- **Fully automating** a task that needs judgment.
+- **No checkpoints** at the seams — errors propagate.
+- **Ignoring failure modes** until something breaks.
+- **Big-bang automation** instead of a trust-building rollout.
+
+## Example Trigger Phrases
+- "How do I use AI for my weekly reporting process?"
+- "Design an AI-assisted workflow for handling customer emails."
+- "Where does AI fit in my content process, and where shouldn't it?"
+- "Help me automate part of this task with AI without losing control."
+- "Map out an AI workflow for my recurring [task]."

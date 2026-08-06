@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-thinking",
+  "version": "1.0.0",
+  "description": "Thinking-mode skills that change HOW your AI reasons, not just what it does: escape the generic answer, run cognitive panels, and adversarially stress-test your own decisions. Inspired by parallel-divergent-ideation research.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "thinking",
+    "decisions",
+    "creativity",
+    "reasoning",
+    "critique",
+    "brainstorming"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-caregiving",
+  "version": "1.0.0",
+  "description": "Caregiving & aging skills for looking after a loved one: advocate at medical appointments, navigate a hospital stay, coordinate the care team, manage medications, assess aging in place, compare long-term-care options, prevent caregiver burnout, arrange respite, and have the end-of-life and family-decision conversations. Not medical, legal, or financial advice.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "caregiving",
+    "aging",
+    "elder-care",
+    "health",
+    "family",
+    "caregiver"
+  ]
+}

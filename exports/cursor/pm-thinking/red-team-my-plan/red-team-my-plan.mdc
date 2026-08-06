@@ -1,0 +1,65 @@
+---
+description: "Attack your own plan the way a smart adversary would — find the weakest point, the thing you're hoping nobody notices, and where it breaks under pressure. Use when asked to red-team this, attack my plan, find the holes, or where does this break. Produces an adversarial breakdown of the plan's weakest points, the single move an opponent (or reality) would make to break it, the part you're quietly hoping holds, and the fixes that close the biggest gaps — a hostile stress-test done by your own side, before someone else does it for real."
+globs:
+alwaysApply: false
+---
+
+# Red-Team My Plan
+
+You're the worst judge of your own plan because you want it to work. This puts on the adversary's hat: it hunts for the weakest link, the optimistic hand-wave, the single point of failure, and the move a competitor or reality would make to knock it over — then hands you the fixes. Better a friendly attack now than a real one later.
+
+## What This Skill Produces
+
+- **The weak points** — where the plan is most vulnerable, ranked
+- **The killer move** — the single thing an adversary (or reality) would do to break it fastest
+- **The hope-it-holds part** — the spot you're quietly relying on without proof
+- **Single points of failure** — where one thing going wrong takes down everything
+- **The fixes** — the specific changes that close the biggest gaps, prioritized
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The plan** — what you intend to do
+- **The context** — competitors, dependencies, who might oppose it
+- **What you're confident about** — often where the weakness hides
+- **What "broken" means** — the outcome you're trying to protect
+
+## Framework: Attack It Like You Want It To Fail
+
+1. **Adopt the adversary's goal.** Genuinely try to make the plan fail — a real red team, not a gentle review.
+2. **Find the weakest link.** Plans break at their weakest point, not their average — locate it.
+3. **Name the killer move.** What's the single most effective thing an opponent or reality would do to break it? That's your priority to defend.
+4. **Expose the hopes.** Flag every place the plan quietly assumes something will hold without evidence.
+5. **Hunt single points of failure.** Where does one failure cascade into total failure?
+6. **Then hand over fixes.** Convert the biggest vulnerabilities into concrete, prioritized changes.
+
+## Output Format
+
+### Red-teaming: [the plan]
+
+**Weakest points (ranked):** [1, 2, 3].
+**The killer move:** [what an adversary/reality does to break it fastest].
+**You're hoping this holds:** [the unproven assumption you're relying on].
+**Single points of failure:** [where one thing breaks everything].
+**Fixes (prioritized):** [close the biggest gaps].
+
+## Quality Checks
+- [ ] Genuinely adversarial, not a soft review
+- [ ] Identifies the weakest link specifically
+- [ ] Names the single most effective breaking move
+- [ ] Exposes the unproven hopes
+- [ ] Flags single points of failure
+- [ ] Ends with concrete, prioritized fixes
+
+## Anti-Patterns
+- **A gentle review** that pulls its punches.
+- **Listing generic risks** instead of the killer move.
+- **Attacking the plan's strengths** instead of its weak link.
+- **No fixes** — just tearing it down.
+
+## Example Trigger Phrases
+- "Red-team my business plan."
+- "Attack this strategy — where does it break?"
+- "Find the holes in my argument before I present it."
+- "What's the weakest part of this plan?"
+- "How would a competitor break what I'm building?"

@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-wealth",
+  "version": "1.0.0",
+  "description": "Money-building skills (the offense to pm-money's defense): investing basics, index funds, asking for a raise, your first milestone, compounding, FI roadmap, and a financial checkup. Educational — not financial advice; account/tax specifics are jurisdiction-dependent.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "investing",
+    "wealth",
+    "money",
+    "finance",
+    "fire",
+    "raise"
+  ]
+}

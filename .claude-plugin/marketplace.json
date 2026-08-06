@@ -1,13 +1,61 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "72.0.0",
+  "version": "74.0.0",
   "description": "PM stands for Professional, not just Product Management. 515 Claude Skills + 4 agent templates across 74 bundles covering 31 professions — engineering, security, AI/ML, customer success, legal, government & policy, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "plugins": [
+    {
+      "name": "pm-ai-native",
+      "description": "Skills for using AI itself well — picking the right tool, delegating to it, briefing it with context, designing AI workflows, verifying its output, and catching its mistakes.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-ai-native",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-caregiving",
+      "description": "Caregiving & aging skills for looking after a loved one: advocate at medical appointments, navigate a hospital stay, coordinate the care team, manage medications, assess aging in place, compare long-term-care options, prevent caregiver burnout, arrange respite, and have the end-of-life and family-decision conversations. Not medical, legal, or financial advice.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-caregiving",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-wealth",
+      "description": "Money-building skills (the offense to pm-money's defense): investing basics, index funds, asking for a raise, your first milestone, compounding, FI roadmap, and a financial checkup. Educational — not financial advice; account/tax specifics are jurisdiction-dependent.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-wealth",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-learning",
+      "description": "Learning & mastery skills: build a roadmap for any skill, remember what you read and study (spaced repetition, active reading), learn by doing, break plateaus, and map your knowledge gaps.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-learning",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-focus",
+      "description": "Executive-function & focus skills for getting unstuck and running your own brain: beat activation-energy paralysis, triage overwhelm, protect your energy, build a personal memory file, and make hard decisions when depleted. ADHD-friendly, useful for everyone.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-focus",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-thinking",
+      "description": "Thinking-mode skills that change HOW your AI reasons, not just what it does: escape the generic answer, run cognitive panels, and adversarially stress-test your own decisions. Inspired by parallel-divergent-ideation research.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-thinking",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
     {
       "name": "pm-family",
       "description": "Family, care & relationships skills: new-baby logistics, childcare & school choice, co-parenting messages, family emergency planning, wedding vows, love letters, long-distance relationships, in-law boundaries, condolences, relationship check-ins, and blending families.",

@@ -1,0 +1,79 @@
+---
+aliases: ["Passive-Income Reality Check"]
+tags: [pm-skills, skill]
+skill: passive-income-reality-check
+description: "Cut through passive-income hype to what's actually realistic for you — the real effort, capital, and risk behind each option, and which (if any) fit your situation. Use when asked how do I make passive income, is passive income real, best passive income ideas, or help me build income streams. Produces an honest teardown of the popular passive-income options (what they really require, how 'passive' they actually are, typical returns and risks), a match to your capital/skills/time, the scams and get-rich-quick traps to avoid, and a grounded next step — replacing the fantasy with a realistic path. Not financial advice."
+---
+
+# Passive-Income Reality Check
+
+"Passive income" is the internet's favorite fantasy — most of what's sold as passive is either a job in disguise, requires serious capital, or is a course selling you the dream. This gives the honest version: what each popular option *actually* requires (effort, money, risk), how passive it really is, and which — if any — fit your situation. The goal is a realistic path, not another rabbit hole. Not financial advice.
+
+## What This Skill Produces
+
+- **The honest teardown** — the popular options (dividends/investing, rentals, digital products, content, lending, a business) with what each *really* requires in capital, effort, and time, and how passive it actually is
+- **Risk & realistic returns** — the real risk and typical (not hyped) returns of each, including the ways they lose money
+- **The fit** — which options match your actual capital, skills, and time (most people don't have the capital for the "easy" ones)
+- **The traps** — the get-rich-quick schemes, "passive income" courses, and outright scams to avoid
+- **A grounded next step** — the most realistic option for you and how to test it small
+
+## Required Inputs
+
+Ask for these if not provided:
+- **Your resources** — capital available, relevant skills, and time you can invest upfront
+- **Your goal** — a side trickle, replacing income, or long-term wealth
+- **Your risk tolerance** — and whether you can afford to lose the capital
+- **What you've been eyeing** — options you've seen (to reality-check)
+
+## Framework: Reality Over Hype
+
+1. **Define "passive" honestly.** Almost nothing is truly passive; most options need significant upfront work, capital, or ongoing maintenance. Rate how passive each really is.
+2. **Show the real requirements.** For each option, the actual capital, effort, and skill needed — and strip the hype from the returns.
+3. **Match to the person.** Investing income needs capital; content/products need skill and a long ramp; rentals need money and work. Fit options to what they actually have.
+4. **Flag the traps.** "Passive income" courses selling the dream, dropshipping/crypto get-rich-quick pitches, and anything promising easy returns are usually the actual product being sold.
+5. **Give a grounded step.** The single most realistic option for them, and a small, low-risk way to test it before betting big.
+
+## Output Format
+
+### Passive income reality: capital [x] · skills [y] · time [z]
+
+**The options, honestly**
+| Option | Really needs | How passive | Real risk/return |
+|---|---|---|---|
+| [dividends/investing · rentals · digital products · content · lending · business] | | | |
+
+**Fits you:** [the realistic options given your resources].
+**Avoid:** get-rich-quick courses · "passive income" gurus · anything promising easy returns.
+**Grounded next step:** [most realistic option + a small way to test it].
+
+> Not financial advice. Returns and risks vary; most "passive" income requires real upfront work or capital. Test small before committing.
+
+## Quality Checks
+- [ ] Rates how passive each option really is (usually: not very)
+- [ ] Shows the real capital/effort/skill each requires
+- [ ] Strips hype from the returns and names the risks
+- [ ] Matches options to the person's actual resources
+- [ ] Flags the get-rich-quick/course/scam traps
+- [ ] Gives a grounded, testable next step; not financial advice
+
+## Anti-Patterns
+- **Repeating the hype** ("make money while you sleep!").
+- **Ignoring the capital/effort** each option really needs.
+- **Recommending options** the person can't resource.
+- **Missing the "course selling the dream"** trap.
+- **Presenting as financial advice.**
+
+## Example Trigger Phrases
+- "How do I make passive income? Give it to me straight."
+- "Is passive income actually real or is it all hype?"
+- "Best realistic passive income ideas for my situation?"
+- "I keep seeing passive income gurus — what's actually legit?"
+- "Reality-check these passive income ideas for me."
+
+---
+<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
+     variable for the highlighted text — replace it with your plugin's equivalent
+     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
+Apply the skill above to the following input:
+
+{{selection}}
