@@ -55,14 +55,42 @@ It outputs a ranked table with computed RICE scores and auto-flags **quick-win**
 - **`references/estimate-calibration.md`** — how to anchor each of the four estimates (reach sources, the impact scale with reserve-it-for examples, evidence-based confidence, cross-functional effort) and the cross-checks to run on the finished ranking. Apply it when challenging the user's inputs.
 - **`templates/scoring-worksheet.md`** — a fill-in worksheet whose evidence columns force each score to name its source. Offer it when a team wants to score together rather than have the ranking generated.
 
-## Process
-1. For each initiative provided, gather or estimate R, I, C, E values
-2. Flag where estimates are weak and note what data would improve them
-3. Calculate RICE score for each
-4. Rank highest to lowest
-5. Flag any "quick wins" (high RICE score, low effort) and "moonshots" (high impact, high effort)
-6. Note dependencies between items that affect sequencing
-7. **Validate** — Cross-check: if the top-ranked item surprises the team, investigate whether an estimate is inflated. RICE is a tool, not a verdict.
+## Where this sits — scoring on the spine
+
+Third in the product-decision spine: **`/assumption-mapper` → `/prd-template` →
+`rice-prioritisation` → `/roadmap-narrative`**. It receives **the success metric** from
+each initiative's PRD — RICE's *Impact* is the estimated move on *that* baselined number,
+not a fresh guess — and hands `/roadmap-narrative` **the ranked initiatives with their
+scores** to group into themes. The four RICE terms are defined once in
+[`docs/craft/product-decisions.md`](../../docs/craft/product-decisions.md); *Confidence*
+there is the honesty valve, and this skill lives or dies on using it.
+
+## The loop
+
+RICE fails when estimates are invented to produce a desired ranking. The loop's job is
+to keep every score honest; Phase 2 is where that happens.
+
+1. **Gather the four estimates per initiative.** Reach (real count per period), Impact
+   (magnitude on the PRD's success metric), Confidence (0–1), Effort (person-months).
+   Pull Impact from the upstream PRD's metric where it exists.
+   **Done when:** every initiative has all four, and each carries a provenance tag on
+   its source.
+2. **Interrogate confidence — the anti-gaming phase.** For each estimate, confidence
+   must reflect *evidence*, not enthusiasm: a bold impact with no data gets a low
+   confidence, and the score self-corrects. Challenge weak inputs and name what data
+   would raise them (the disclosed [estimate-calibration](references/estimate-calibration.md)
+   reference is the how).
+   **Done when:** no [hunch] estimate wears a high confidence, and the person who owns
+   the estimate would defend each number out loud.
+3. **Score, rank, and stress the top.** Compute RICE, rank, flag *quick wins* (high
+   score, low effort) and *moonshots* (high impact, high effort), note dependencies.
+   Then the cross-check: if the top item surprises the team, an estimate is probably
+   inflated — RICE is a tool, not a verdict.
+   **Done when:** the ranking is computed and the top result has survived one honest
+   "does this feel right, and if not, which estimate is lying?"
+4. **Hand off.** Pass the ranked table (with scores and dependencies) to
+   `/roadmap-narrative` so it groups by theme rather than re-deriving priorities.
+   **Done when:** `/roadmap-narrative` could theme these without re-scoring.
 
 ## Output Structure
 

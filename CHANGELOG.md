@@ -9,6 +9,26 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [75.1.0] — the craft release: depth over breadth on the flagship spine — 2026-08-08
+
+### Changed — the product-decision spine, upgraded to flagship quality
+
+No new skills — a deliberate depth pass, after studying the skills that set the craft
+bar. Four flagship skills now behave like *processes*, not templates:
+
+- **[assumption-mapper](skills/assumption-mapper/SKILL.md) → [prd-template](skills/prd-template/SKILL.md) → [rice-prioritisation](skills/rice-prioritisation/SKILL.md) → [roadmap-narrative](skills/roadmap-narrative/SKILL.md)** now each run a **phased loop with completion criteria** ("Done when: …") instead of an action checklist — so the agent takes the same *process* every run, not just produces a similar shape.
+- They **compose as a spine**: each takes one named artifact from upstream and hands one downstream, invoking neighbors by `/skill` name and reading upstream output instead of re-deriving it.
+- Shared vocabulary is defined **once** in a new reference, [docs/craft/product-decisions.md](docs/craft/product-decisions.md) (problem statement, hypothesis, assumption, success metric, RICE terms, provenance) — the way an engineering skill defers to one design-vocabulary skill.
+
+### Added
+
+- **[docs/AUTHORING-DEPTH.md](docs/AUTHORING-DEPTH.md)** — the craft standard for raising any skill to flagship quality: process loops + completion criteria, composition spines, progressive disclosure, load-bearing prose. Linked from [SKILL-AUTHORING-STANDARD.md](SKILL-AUTHORING-STANDARD.md); the product-decision spine is its worked example, so the pattern can propagate to the rest of the library.
+
+### Notes
+
+Inspired by the craft in [mattpocock/skills](https://github.com/mattpocock/skills). This is the first upgraded cluster; the incident/analysis cluster is the obvious next.
+
+
 ## [75.0.0] — the human-edges wave: 20 skills for the parts of life nobody built tools for — 2026-08-07
 
 ### Added — three new bundles + additions (**1078 skills, 117 bundles**)

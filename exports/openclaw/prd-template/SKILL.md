@@ -12,6 +12,42 @@ metadata:
 
 This skill helps create professional Product Requirements Documents following industry best practices.
 
+## Where this sits — the middle of the spine
+
+Second in the product-decision spine: **`/assumption-mapper` → `prd-template` →
+`/rice-prioritisation` → `/roadmap-narrative`**. It receives **the riskiest assumption**
+from `/assumption-mapper` (if that ran, read its map instead of re-guessing the risks)
+and hands `/rice-prioritisation` **the PRD's success metric** — the one baselined number
+that becomes RICE's *Impact*. Shared terms (problem statement, hypothesis, success
+metric, provenance) live once in
+[`docs/craft/product-decisions.md`](../../docs/craft/product-decisions.md); use them
+exactly.
+
+## The loop
+
+A PRD is written outside-in — problem before solution, always — in four phases. Phase 1
+is load-bearing: a PRD built on a fuzzy problem is polished the whole way down and still
+wrong.
+
+1. **Lock the problem statement.** One sentence: who has what problem, when, and the
+   cost of leaving it. No solution language. Everything below must ladder to this.
+   **Done when:** the problem statement stands alone with no feature named in it, and a
+   stranger could tell what "solved" means.
+2. **Baseline the success metric.** The one number that proves the problem got solved —
+   with its *current baseline* and the move that counts as success. Carry any upstream
+   `/assumption-mapper` risk here as an Open Question, not a silent bet.
+   **Done when:** the metric has a baseline (or is explicitly flagged un-baselined),
+   and it measures the problem, not activity.
+3. **Draft the sections, each tracing up.** Fill the template (below) so every
+   requirement and story traces to the problem statement; drop anything that doesn't.
+   Tag facts with provenance — a guessed number is a [hunch], labeled.
+   **Done when:** every requirement traces to the problem statement, and every claimed
+   fact carries [data]/[hunch]/[assumption].
+4. **Hand off.** Surface the success metric and the initiative(s) so
+   `/rice-prioritisation` can score Impact from *this* metric, not a re-invented one.
+   **Done when:** the PRD names the metric and scope `/rice-prioritisation` would need
+   to score it without re-asking.
+
 ## Required Inputs
 
 Ask the user for these if not provided:

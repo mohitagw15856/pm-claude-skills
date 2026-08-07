@@ -8,6 +8,11 @@ skill, match this standard.
 It complements [CONTRIBUTING.md](CONTRIBUTING.md) (how to submit) — this document is
 about *what a good skill contains*.
 
+**Raising a skill to flagship quality?** This standard is the floor. The depth bar —
+process loops with completion criteria, composition into spines, progressive
+disclosure, load-bearing prose — is in [docs/AUTHORING-DEPTH.md](docs/AUTHORING-DEPTH.md),
+with the [product-decision spine](docs/craft/product-decisions.md) as the worked example.
+
 ---
 
 ## 1. File layout

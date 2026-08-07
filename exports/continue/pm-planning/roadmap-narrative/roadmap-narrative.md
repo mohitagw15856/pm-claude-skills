@@ -25,13 +25,39 @@ You will often get a short brief (a few themes, an audience) without a full init
 - **Audience** (all-hands, board, investors, sales team — changes tone and depth)
 - **Items explicitly NOT on the roadmap** (optional but strengthens credibility)
 
-## Process
-1. Review the prioritised initiative list and company OKRs provided
-2. Identify 2-3 strategic themes that group the initiatives naturally
-3. For each theme, articulate: the problem it addresses, the customer it serves, the metric it moves
-4. Write a quarter-level narrative that shows progression — how does H1 set up H2?
-5. Draft an executive summary (3-4 sentences max) that non-technical stakeholders can repeat
-6. **Validate** — Confirm every initiative maps to a theme. If an initiative is orphaned, either create a theme or flag it as a narrative gap to address
+## Where this sits — the spine's terminus
+
+Last in the product-decision spine: **`/assumption-mapper` → `/prd-template` →
+`/rice-prioritisation` → `roadmap-narrative`**. It receives **the ranked initiatives with
+their RICE scores** and turns them into a *theme*-level story leadership can repeat. It
+adds no new priorities — the ranking is upstream's job; this skill narrates it. *Theme*
+and *provenance* are defined once in
+[`docs/craft/product-decisions.md`](../../docs/craft/product-decisions.md): a roadmap
+narrates in themes, and it may not launder an upstream [hunch] into a confident promise.
+
+## The loop
+
+The failure mode is a narrative that overstates certainty or orphans an initiative.
+Phase 1 sets the honesty ceiling; every later claim inherits it.
+
+1. **Inherit priorities and provenance — don't re-rank.** Read the RICE output and the
+   OKRs. Carry each initiative's confidence through: a low-confidence bet is narrated as
+   a bet ("we believe"), not a commitment ("we will").
+   **Done when:** every claim's certainty matches its upstream provenance tag, and no
+   [hunch] has been promoted to a promise.
+2. **Group into 2–3 themes that ladder to strategy.** Themes are the unit of the story;
+   RICE rows are their evidence. For each theme name the problem it addresses, the
+   customer it serves, and the metric it moves (the PRDs' success metrics).
+   **Done when:** every ranked initiative maps to exactly one theme — no orphans; an
+   orphan is either a missing theme or a flagged narrative gap, never ignored.
+3. **Draw the progression.** Write the quarter/half arc that shows how earlier work sets
+   up later work — why *this* order, not just *this* list. Then the executive summary:
+   3–4 sentences a non-technical stakeholder can repeat verbatim.
+   **Done when:** the sequence has a stated reason beyond RICE order, and the summary
+   survives being repeated by someone who wasn't in the room.
+4. **Name what's *not* on the roadmap.** The deliberate no's are half the strategy;
+   state them, so the narrative reads as choices made, not everything attempted.
+   **Done when:** the "not now" section exists and each entry has a one-line why.
 
 ## Output Structure
 

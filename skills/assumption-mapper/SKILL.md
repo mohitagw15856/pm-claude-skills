@@ -13,19 +13,44 @@ Ask the user for these if not provided:
 - **Product brief, PRD, or concept description** (even rough notes work)
 - **Stage** (concept / discovery / pre-build / post-launch — affects which assumptions matter most)
 
-## Process
-1. Read the provided brief, PRD, or concept description
-2. Extract assumptions across four categories:
-   - **Desirability** (do users want this?)
-   - **Feasibility** (can we build it?)
-   - **Viability** (will it sustain the business?)
-   - **Usability** (can users actually use it?)
-3. Score each assumption:
-   - Confidence (1-5): How sure are we this is true?
-   - Impact (1-5): How badly does the plan fail if this assumption is wrong?
-   - Priority = Impact − Confidence (higher = test first)
-4. **Validate completeness** — Ensure at least one assumption per category. If a category is empty, re-read the brief looking specifically for that type.
-5. Output a ranked list with recommended validation methods
+## Where this sits — the spine's entry point
+
+This is the front of the product-decision spine: **`assumption-mapper` → `/prd-template`
+→ `/rice-prioritisation` → `/roadmap-narrative`**. It takes a raw idea or brief and
+hands the next skill one thing: **the riskiest assumption, and whether it survived a
+cheap test.** Shared terms (assumption, load-bearing, confidence, provenance) are
+defined once in [`docs/craft/product-decisions.md`](../../docs/craft/product-decisions.md) —
+consult it rather than re-deriving them. Writing a PRD on top of an untested
+load-bearing assumption is the failure this skill exists to prevent, so run it *before*
+`/prd-template`, not after.
+
+## The loop
+
+Four phases. Phase 3 is the skill; the rest feed it. Each ends on a completion
+criterion — don't advance until it's met.
+
+1. **Surface across all four lenses.** Extract assumptions in *Desirability* (do users
+   want it?), *Feasibility* (can we build it?), *Viability* (will the business
+   sustain it?), *Usability* (can users actually use it?). The dangerous assumptions
+   are the ones so obvious no one wrote them down.
+   **Done when:** at least one assumption per lens, and re-reading the brief for the
+   emptiest lens surfaces nothing new.
+2. **Rate on the two axes only.** For each: *load-bearing* (1–5, does the plan collapse
+   if it's false?) and *confidence* (1–5, how sure are we it's true?). Priority =
+   load-bearing − confidence. Tag each fact's provenance ([data]/[hunch]).
+   **Done when:** every assumption has both scores and a provenance tag, and the
+   highest-priority one is genuinely the scariest — not the easiest to test.
+3. **Find and pressure the riskiest.** The top-priority assumption (high-load-bearing ×
+   low-confidence) is the one that can sink the whole plan. Name the *cheapest test*
+   that could disprove it before a line of code is written (see the disclosed
+   [cheap-tests](references/cheap-tests.md) reference for the menu).
+   **Done when:** the single riskiest assumption is named, with a test that could run
+   this week and a clear "what a fail looks like."
+4. **Hand off.** Output the ranked map, and state explicitly which assumption
+   `/prd-template` must treat as validated-or-open. An unresolved riskiest assumption
+   becomes an Open Question in the PRD, not a silent bet.
+   **Done when:** the downstream skill could start from this output without re-asking
+   what the risky bet is.
 
 ## Output Structure
 

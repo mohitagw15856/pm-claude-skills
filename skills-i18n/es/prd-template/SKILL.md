@@ -10,6 +10,46 @@ description: "Crea un Documento de Requerimientos de Producto (PRD) siguiendo un
 
 Esta habilidad ayuda a crear Documentos de Requerimientos de Producto profesionales siguiendo las mejores prácticas de la industria.
 
+## Dónde encaja — el centro de la cadena
+
+Segunda en la cadena de decisiones de producto: **`/assumption-mapper` → `prd-template`
+→ `/rice-prioritisation` → `/roadmap-narrative`**. Recibe **la suposición más riesgosa**
+de `/assumption-mapper` (si se ejecutó, lee su mapa en vez de re-adivinar los riesgos) y
+le entrega a `/rice-prioritisation` **la métrica de éxito del PRD** — el único número con
+línea base que se convierte en el *Impacto* de RICE. Los términos compartidos
+(planteamiento del problema, hipótesis, métrica de éxito, procedencia) están definidos una
+sola vez en [`docs/craft/product-decisions.md`](../../docs/craft/product-decisions.md);
+úsalos con exactitud.
+
+## El bucle
+
+Un PRD se escribe de afuera hacia adentro — el problema antes que la solución, siempre —
+en cuatro fases. La fase 1 es la que sostiene todo: un PRD construido sobre un problema
+difuso se pule hasta el final y sigue estando equivocado.
+
+1. **Fija el planteamiento del problema.** Una frase: quién tiene qué problema, cuándo, y
+   el costo de dejarlo sin resolver. Sin lenguaje de solución. Todo lo de abajo debe
+   remontar a esto.
+   **Listo cuando:** el planteamiento se sostiene solo sin nombrar ninguna funcionalidad,
+   y un extraño podría decir qué significa "resuelto".
+2. **Establece la línea base de la métrica de éxito.** El número que prueba que el
+   problema se resolvió — con su *línea base actual* y el movimiento que cuenta como
+   éxito. Lleva cualquier riesgo de `/assumption-mapper` aquí como Pregunta Abierta, no
+   como apuesta silenciosa.
+   **Listo cuando:** la métrica tiene línea base (o está marcada explícitamente sin
+   línea base), y mide el problema, no la actividad.
+3. **Redacta las secciones, cada una remontando hacia arriba.** Completa la plantilla
+   (abajo) de modo que cada requerimiento e historia remonte al planteamiento del
+   problema; descarta lo que no. Etiqueta los hechos con procedencia — un número adivinado
+   es un [hunch], etiquetado.
+   **Listo cuando:** cada requerimiento remonta al planteamiento del problema, y cada
+   hecho afirmado lleva [data]/[hunch]/[assumption].
+4. **Entrega.** Expón la métrica de éxito y la(s) iniciativa(s) para que
+   `/rice-prioritisation` puntúe el Impacto a partir de *esta* métrica, no de una
+   reinventada.
+   **Listo cuando:** el PRD nombra la métrica y el alcance que `/rice-prioritisation`
+   necesitaría para puntuar sin volver a preguntar.
+
 ## Entradas requeridas
 
 Pídele al usuario lo siguiente si no lo proporcionó:
