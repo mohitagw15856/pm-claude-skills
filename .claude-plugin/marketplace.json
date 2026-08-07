@@ -1,13 +1,37 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "74.0.0",
+  "version": "75.0.0",
   "description": "PM stands for Professional, not just Product Management. 515 Claude Skills + 4 agent templates across 74 bundles covering 31 professions — engineering, security, AI/ML, customer success, legal, government & policy, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "plugins": [
+    {
+      "name": "pm-identity",
+      "description": "Identity skills.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-identity",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-invisible-illness",
+      "description": "Invisible Illness skills.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-invisible-illness",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-neurodivergent",
+      "description": "Neurodivergent skills.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-neurodivergent",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
     {
       "name": "pm-ai-native",
       "description": "Skills for using AI itself well — picking the right tool, delegating to it, briefing it with context, designing AI workflows, verifying its output, and catching its mistakes.",
