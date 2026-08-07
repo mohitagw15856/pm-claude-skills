@@ -9,6 +9,25 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [75.0.0] — the human-edges wave: 20 skills for the parts of life nobody built tools for — 2026-08-07
+
+### Added — three new bundles + additions (**1078 skills, 117 bundles**)
+
+The library goes where the tooling never does: neurodivergence, invisible illness, grief, identity, and the hardest conversations.
+
+- **🧠 [pm-neurodivergent](plugins/pm-neurodivergent)** — [masking-budget](skills/masking-budget/SKILL.md) (treat passing-as-NT as an energy budget), [nt-translator](skills/nt-translator/SKILL.md) (decode the workplace both ways), [sensory-audit](skills/sensory-audit/SKILL.md), [meltdown-map](skills/meltdown-map/SKILL.md) (your own early-warning system + a one-pager for helpers), [body-double-session](skills/body-double-session/SKILL.md)
+- **🩺 [pm-invisible-illness](plugins/pm-invisible-illness)** — [diagnosis-limbo-kit](skills/diagnosis-limbo-kit/SKILL.md) (run the multi-year undiagnosed campaign), [spoon-planner](skills/spoon-planner/SKILL.md) (energy accounting that respects the crash), [perimenopause-navigator](skills/perimenopause-navigator/SKILL.md), [flare-day-planner](skills/flare-day-planner/SKILL.md)
+- **🏳️‍🌈 [pm-identity](plugins/pm-identity)** — [coming-out-rehearsal](skills/coming-out-rehearsal/SKILL.md) (safety-first, never pushes), [name-change-navigator](skills/name-change-navigator/SKILL.md) (the 40-institution slog, ordered), [two-worlds-translator](skills/two-worlds-translator/SKILL.md), [faith-transition-companion](skills/faith-transition-companion/SKILL.md) (takes no side on belief)
+- **🕊 pm-estate grows** — [grief-admin](skills/grief-admin/SKILL.md) (the death-admin mountain, triaged, with permission to go slow), [digital-death-plan](skills/digital-death-plan/SKILL.md), [legacy-letter](skills/legacy-letter/SKILL.md)
+- **💭 pm-thinking grows** — [future-self-interview](skills/future-self-interview/SKILL.md), [life-premortem](skills/life-premortem/SKILL.md) (write the failure story in advance)
+- **⚡ pm-newgen grows** — [the-ick-decoder](skills/the-ick-decoder/SKILL.md) (real red flag, or self-sabotage?)
+- **👪 pm-family grows** — [rabbit-hole-rescue](skills/rabbit-hole-rescue/SKILL.md) (talk someone back from a conspiracy spiral without losing them)
+
+### Notes
+
+Every sensitive skill carries an explicit guardrail — not therapy, not medical/legal advice, safety and the user own the outcome, and a clear "this needs a human" line. One eval case per skill (226 total). Collision-checked: three planned names already existed (regret-minimizer, a devils-advocate, second-opinion) and were swapped.
+
+
 ## [74.0.0] — the life-expansion wave: five bundles for life beyond the office — 2026-08-06
 
 Fifty new skills across five new bundles, extending the library past work into learning, money, relationships, caregiving, and using AI itself well. **1058 skills, 115 bundles.**

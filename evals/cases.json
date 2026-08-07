@@ -824,6 +824,86 @@
     {
       "skill": "mechanic-quote-decoder",
       "input": "Took the car in because of a squeal when braking. Garage called: front pads and discs 340, but also rear pads nearly done 180, brake fluid flush overdue 89, both wiper blades 32, air con regas recommended 120, and an advisory on a slightly perished aux belt 95. Total 856. The squeal quote alone was fine but this escalated. What do I actually say when I call back?"
+    },
+    {
+      "skill": "masking-budget",
+      "input": "I am autistic and I finish every workday completely hollow even when the work was fine. Meetings, the open-plan office, lunch small talk. By Friday I have nothing left for my partner and I sleep all weekend. I do not want to quit but I cannot keep crashing like this."
+    },
+    {
+      "skill": "nt-translator",
+      "input": "My manager replied to my direct message flagging a real problem with the timeline with: \"Thanks for the flag! Lots to think about here, let us take it offline and circle back when the dust settles.\" What does that actually mean, and how should I have phrased my original message? People keep calling me blunt."
+    },
+    {
+      "skill": "sensory-audit",
+      "input": "My open-plan office wrecks me by 2pm and I cannot figure out why the work itself is fine. Fluorescent lights, someone always microwaving fish, constant chatter, my monitor, a squeaky chair nearby. I rent a desk so cannot change much structurally. Autistic, sound and light sensitive."
+    },
+    {
+      "skill": "meltdown-map",
+      "input": "My autistic meltdowns feel like they come from nowhere and then I have said things I regret and I am wrecked for a day. My partner wants to help but hovers and asks questions which makes it worse. Help me build a map and something I can hand them."
+    },
+    {
+      "skill": "body-double-session",
+      "input": "ADHD. I have a tax form that has been sitting for three weeks and I physically cannot start it, but I know if my friend is just on a call I will do it. How do I set this up and what do I even ask her? And what do I do the days no one is free?"
+    },
+    {
+      "skill": "diagnosis-limbo-kit",
+      "input": "I have been sick for almost three years — fatigue, joint pain, weird flares, brain fog. I have seen a GP, a rheumatologist, an endocrinologist. Bloods keep coming back mostly normal so everyone shrugs or says stress. Every new doctor I start from scratch and fumble the history. I am exhausted and losing hope."
+    },
+    {
+      "skill": "spoon-planner",
+      "input": "I have long COVID with post-exertional malaise — if I overdo it today I crash for two days. I keep having an okay morning, doing too much, and paying for it all week. I have a part-time job I need to keep and a toddler. Help me actually pace instead of boom-busting."
+    },
+    {
+      "skill": "perimenopause-navigator",
+      "input": "I am 44 and blindsided — rage out of nowhere, no sleep, brain fog making me fumble at work, joint aches, periods gone haywire. My GP offered me antidepressants and said I am too young for menopause. I do not think this is depression. Help me prepare to go back and be taken seriously."
+    },
+    {
+      "skill": "flare-day-planner",
+      "input": "I have rheumatoid arthritis and my flares blindside me — I wake up unable to do much, then I cancel everything badly, do not eat properly, and spiral into guilt. There are usually signs the day before that I ignore. Help me prepare so a flare is a plan, not a disaster."
+    },
+    {
+      "skill": "grief-admin",
+      "input": "My dad died two weeks ago. The funeral is done. Now there is this mountain of admin — his bank, his pension, the house is rented, utilities, his email and Facebook, subscriptions, and I do not even know where to start. I am the executor. I am completely overwhelmed and can barely function. UK."
+    },
+    {
+      "skill": "digital-death-plan",
+      "input": "I am doing my will and realized none of my online life is covered. If I died tomorrow my family could not get into my email, my photos are all in the cloud, I have some crypto, a couple of subscriptions, my social media. My wife is not very techy. Help me plan this properly."
+    },
+    {
+      "skill": "legacy-letter",
+      "input": "I have been diagnosed with something serious and I want to write letters to my two kids, 6 and 9, for them to have later. I do not know where to start and every time I try I freeze or it comes out like a greeting card. I am funny and a bit sweary normally. Help me write something that actually sounds like me."
+    },
+    {
+      "skill": "coming-out-rehearsal",
+      "input": "I want to come out as bi to my parents at Christmas. My mum will probably be okay eventually but my dad is old-school and I genuinely do not know how he will react — I still live at home and depend on them financially while I finish my degree. Help me prepare and rehearse, and be honest about the risk."
+    },
+    {
+      "skill": "name-change-navigator",
+      "input": "I got married and am taking my wife's surname, and we have a honeymoon booked in 7 weeks with flights already in my old name. I have no idea what order to update everything — passport, driving licence, banks, work, the mortgage, everything. UK. Where do I even start so I do not create a mess?"
+    },
+    {
+      "skill": "two-worlds-translator",
+      "input": "My parents are from Pakistan, I was born in the UK, and my white British partner thinks they are controlling because they call every day, expect us at every family event, and keep asking when we are getting married and having kids. My parents think he is cold and disrespectful because he is direct and does not do the deference. I am shattered being in the middle. Help."
+    },
+    {
+      "skill": "faith-transition-companion",
+      "input": "I was raised evangelical, very devout family, and over the last year I have quietly stopped believing. My parents will be devastated — to them it means they failed and that I am going to hell. My whole social world is the church. I have not told anyone and I feel like I am grieving and terrified at once. I do not want to be argued back in, I just need to get through this."
+    },
+    {
+      "skill": "future-self-interview",
+      "input": "I have a stable, decent, slightly boring job and an offer to join a risky early startup for less money but work I would love. I am 34, have some savings, no kids yet. I keep going back and forth every single day and I am paralyzed. Interview my future self about this."
+    },
+    {
+      "skill": "life-premortem",
+      "input": "My partner and I are about to move from London to rural Portugal to \"live slower\" — new country, we do not speak Portuguese, both going remote, sinking most of our savings into it. Everyone is telling us it is a dream. Run a premortem on this before we commit."
+    },
+    {
+      "skill": "the-ick-decoder",
+      "input": "I have been seeing a guy for six weeks who is genuinely kind, texts when he says he will, is clearly into me — and this week I suddenly got the ick and started finding him a bit pathetic and needy. The thing is I ALWAYS do this right when it gets real, and my last three relationships ended the same way. Is this a red flag or am I sabotaging?"
+    },
+    {
+      "skill": "rabbit-hole-rescue",
+      "input": "My dad has gone down a deep conspiracy hole over the last two years — it started with health stuff and now it is everything, the news, elections, secret cabals. Every family dinner turns into a fight because I try to argue the facts and it just makes him dig in. I am scared of losing him but I also cannot stand it. He is not hateful, just... gone. Help."
     }
   ]
 }
