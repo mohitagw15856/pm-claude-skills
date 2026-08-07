@@ -1,0 +1,115 @@
+# Two Worlds Translator Skill
+
+Living between cultures is a permanent translation job that no one trained you for:
+your parents' world runs on obligations, indirectness, and expectations your partner
+reads as controlling; your adopted world runs on independence and directness your
+parents read as cold or disrespectful. You're the cable between them, and it's
+exhausting — every holiday, every "when are you giving us grandchildren," every money
+conversation is a potential collision. This skill translates a specific collision in
+both directions, gives you the scripts, and helps you hold a boundary that doesn't
+require choosing one world and amputating the other. The goal isn't to pick a side —
+it's to stop being torn in half.
+
+## What This Skill Produces
+
+- A **two-way translation** of the specific collision: what each side actually means
+  and fears beneath the surface behavior (your dad's "you've changed" often means "I'm
+  scared I'm losing you"; your partner's "why do you let them?" often means "I'm scared
+  of losing you to them")
+- **Scripts in both directions**: how to explain your family's world to your partner
+  so they see love not control, and how to talk to your family in a way that lands as
+  respect not rebellion
+- A **boundary that honors both**: the third path between "obey the family and lose
+  yourself" and "cut them off and lose your roots" — the boundary that keeps the
+  relationship and the self
+- A **code-switch relief note**: naming the specific exhaustion and where you can drop
+  the switching, so the translation labor stops being invisible and total
+
+## Required Inputs
+
+Ask for (if not already provided):
+- The specific collision (a holiday expectation, a money obligation, a marriage/kids
+  question, a "come home," a partner-meets-parents dread) — concrete beats abstract
+- The two worlds: rough cultural context of the family, and of the adopted culture/
+  partner, without stereotyping (ask what's true for THIS family, not the culture)
+- What each side has actually said, and what the user suspects each is really afraid of
+- What the user wants: to keep both relationships intact, mostly — and where they
+  refuse to bend
+
+## Framework
+
+1. **Translate to the fear underneath, not the behavior on top.** Cross-cultural
+   collisions almost always have the same root on both sides — love expressed in
+   incompatible dialects, and fear of loss. The parent's control and the partner's
+   frustration are often both "I'm afraid this person is being taken from me."
+   Surfacing the shared fear defuses more than any tactic.
+2. **Explain the family's world as a logic, not a problem.** To the partner:
+   translate obligation-culture as a coherent value system (interdependence, respect,
+   sacrifice) rather than dysfunction — so they stop seeing villains. Specific,
+   non-stereotyping ("in my family, X means love") because the partner's contempt is
+   usually just untranslated unfamiliarity.
+3. **Speak to the family in their dialect of respect.** To the parents: frame the
+   user's independence in terms *they* value — not "I'm my own person" (reads as
+   rejection) but "I'm building the life you sacrificed for" (reads as honoring). Same
+   boundary, packaged as continuity of the family's own values rather than a break
+   from them.
+4. **Find the third path.** The false binary is obey-and-erase-yourself vs
+   rebel-and-lose-them. The boundary that works usually keeps the relationship warm
+   while declining a specific demand, framed as "I love you AND I'm choosing X" — and
+   accepts that some disappointment is survivable and not the same as rupture. Name
+   what the user genuinely won't bend on, and hold it kindly.
+5. **Name the code-switch tax.** The exhaustion of being the permanent translator is
+   real and usually unspoken. Acknowledge it, identify where the user can put the
+   switching down (with whom they can be undivided), and note that being the bridge is
+   a labor, not a defect — so they stop blaming themselves for being tired.
+
+## Output Format
+
+```
+## The collision, translated both ways
+What your family means/fears: … · What your partner (or adopted world) means/fears: …
+The shared root: [usually the same fear, in two dialects]
+
+## Scripts
+To your partner (family's world as love, not control): …
+To your family (your path in their dialect of respect): …
+
+## The boundary that keeps both
+[The third path: the specific "I love you AND I'm choosing X" · what you won't bend on ·
+that some disappointment ≠ rupture]
+
+## The code-switch tax
+[Naming the labor · where you can stop switching · you're a bridge, not broken]
+```
+
+## Quality Checks
+
+- [ ] The translation reaches the fear/value under the behavior on both sides, not
+      just the surface conflict
+- [ ] The family's world is explained to the partner as a coherent logic, without
+      stereotyping — built from THIS family, not the culture in general
+- [ ] The family script frames the boundary in the family's own values, not as
+      Western-individualist rejection
+- [ ] A genuine third path exists (not "pick a side"), with the user's real
+      non-negotiable named
+- [ ] The code-switch labor is acknowledged, not ignored
+
+## Anti-Patterns
+
+- [ ] Do not stereotype either culture — ask what's true for this specific family;
+      "your culture is X" is both wrong and insulting
+- [ ] Do not take a side or frame one world as backward and the other as enlightened
+      — both are coherent, both love in their dialect
+- [ ] Do not counsel cutting off family as the default modern answer, nor total
+      submission as the default traditional one — the third path is the point
+- [ ] Do not pretend all disappointment is avoidable — sometimes a boundary
+      disappoints, and surviving that is part of the skill
+- [ ] Do not treat serious situations (abuse, forced marriage, real coercion) as a
+      translation problem — name plainly when something needs safety help, not scripts
+
+## Related
+
+[[coming-out-rehearsal]] when identity and culture collide; [[aging-parent-talks]]
+for the caregiving version of the two-worlds pull; [[nt-translator]] shares the
+two-way-translation engine; [[faith-transition-companion]] when religion is the
+third party.

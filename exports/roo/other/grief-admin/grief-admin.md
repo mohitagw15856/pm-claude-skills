@@ -1,0 +1,115 @@
+# Grief Admin Skill
+
+Grief arrives with a second job: dozens of phone calls, forms, and account closures,
+each requiring you to say "they've died" again to a stranger — and it lands exactly
+when you have the least capacity to do any of it. Most guides make this worse by
+dumping an overwhelming master checklist. This one triages: what truly can't wait
+(days), what should happen soon (weeks), and the large majority that can genuinely
+wait months — because almost nothing on the list is as urgent as the internet
+implies, and permission to do it slowly is part of the help. It handles the humane
+logistics and points clearly at the parts that need a professional.
+
+## What This Skill Produces
+
+- A **triaged task list**: 🔴 urgent (days) · 🟡 soon (weeks) · 🟢 whenever (months,
+  and that's fine) — so you're not carrying the whole thing at once
+- **Notification scripts**: the short, kind phone/email lines for banks, employers,
+  utilities, subscriptions, so you don't have to compose "they died" thirty times
+- A **who-to-tell-and-close list** built for this person's actual life (accounts,
+  services, memberships, the digital ones people forget)
+- A **do-it-in-pieces sequence**: the order that reduces stress, with the explicit
+  standing permission to pause, delegate, and leave the 🟢 pile for later
+- **Clear hand-offs** to the professional bits (probate/estate, tax, benefits)
+  without pretending to be them
+
+## Required Inputs
+
+Ask for (if not already provided):
+- The relationship to the person and the rough shape of their life (worked? rented/
+  owned? married/partnered? dependents? online life?)
+- What's already been handled (death certificate, funeral) and what's looming
+- The user's own state and support — are they doing this alone, exhausted, able to
+  delegate any of it?
+- Country/region, so the professional-process pointers (registration, probate,
+  benefits) route correctly — flagged for local verification, not asserted
+
+## Framework
+
+1. **Triage hard — most of it can wait.** The relief is in the sorting. 🔴 Truly
+   urgent: register the death where required, secure the home/pets/dependents,
+   anything time-boxed by law or safety. 🟡 Soon: employer, main bank, landlord/
+   mortgage, benefits that must be stopped or claimed. 🟢 Whenever: subscriptions,
+   memberships, social accounts, sentimental admin — months, no rush, and saying so
+   is the point.
+2. **Script the "they died" call once.** The repeated disclosure is a specific
+   cruelty. Provide the short, calm template ("I'm calling to report a death and
+   close/settle an account — the person is [name], date of death [date]") plus what
+   they'll typically ask for (death certificate copies, account details), so each
+   call is a form to fill, not a fresh wound.
+3. **Build the list from THIS life.** Generic checklists miss the person's actual
+   footprint. Reconstruct it: income sources, the direct debits, the phone/energy/
+   water, the digital accounts (email is the master key — see [[digital-death-plan]]),
+   the memberships, the pet, the plants. Order-of-notification matters (some accounts
+   need others closed first); the sequence handles it.
+4. **Permission to go slow and delegate.** The most useful sentence in the whole
+   skill: almost nothing here is as urgent as it feels, and the 🟢 pile can wait
+   until you can face it. Name what can be delegated (a friend can make cancellation
+   calls with a letter of authority), what can be paused, and that leaving things
+   undone for a while is normal, not negligent.
+5. **Hand off the professional parts cleanly.** Probate/estate administration, tax,
+   and benefits are real processes with real rules that vary by place — the skill
+   names them, flags "get proper advice / use the official service," and does NOT
+   improvise law. It gets you organized enough to make those conversations short.
+
+## Output Format
+
+```
+## First, breathe — here's what actually can't wait
+🔴 Urgent (days): [short, with why]
+
+## Soon (weeks)
+🟡 [employer, main bank, landlord/mortgage, benefits to stop/claim…]
+
+## Whenever you can (months — genuinely fine to wait)
+🟢 [subscriptions, memberships, social accounts, the sentimental admin]
+
+## The "reporting a death" script (use for every call)
+[The calm template + what they'll ask you for]
+
+## Get proper help for these (not DIY)
+[Probate/estate · tax · benefits — with "use the official service / a solicitor",
+verify-local]
+
+## Permission
+[What you can delegate · what you can pause · you're not behind]
+```
+
+## Quality Checks
+
+- [ ] The list is triaged into days/weeks/months, and the 🟢 pile is genuinely large
+      — the reassurance that most of it can wait is real, not token
+- [ ] The reporting-a-death script exists so the user composes it once, not thirty times
+- [ ] The task list reflects this person's actual life, including digital accounts
+- [ ] Legal/tax/benefits/probate are handed to professionals and the official process,
+      flagged verify-local, never improvised
+- [ ] Explicit permission to go slow and delegate is present and prominent
+
+## Anti-Patterns
+
+- [ ] Do not dump an undifferentiated master checklist — the triage IS the help; an
+      unsorted list adds to the overwhelm
+- [ ] Do not give legal, tax, or probate advice — name the process, route to the
+      official service or a solicitor, verify-local
+- [ ] Do not manufacture urgency — most tasks aren't time-critical, and pretending
+      they are is cruel; say what can wait
+- [ ] Do not rush the person or imply they're behind — grief has no admin deadline
+      for the 🟢 pile
+- [ ] Do not forget the person's dignity in the logistics — this is a life being
+      closed down, and the tone holds that even while listing tasks
+
+## Related
+
+[[estate-settlement-organizer]] for the formal estate side; [[digital-death-plan]] for
+the online accounts (and to make your own easier for others); [[legacy-letter]] for
+the human, non-admin part; [[caregiver-burnout-check]] if the death followed a long
+illness.

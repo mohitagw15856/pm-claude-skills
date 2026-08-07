@@ -1,4 +1,4 @@
-# 🗂️ All 1058 Skills — full catalog
+# 🗂️ All 1078 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -726,25 +726,32 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (591 skills)
+## 🌍 Industries & Public Sector (611 skills)
 
-### `other` — 14 skills
+### `other` — 21 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Boundary-Setting Scripts** (`boundary-setting-scripts`) | Set a boundary with someone — a friend, family member, coworker, or partner — clearly and kindly, with the actual words and a plan for the pushback. | — |
 | **Conflict De-escalation** (`conflict-deescalation`) | Calm a heated conflict — in person or in writing — before it does damage, by lowering the temperature instead of winning the point. | — |
+| **Digital Death Plan** (`digital-death-plan`) | Plan what happens to your digital life when you die — accounts, photos, passwords, money, and social profiles — so someone you trust can actually… | — |
+| **Future Self Interview** (`future-self-interview`) | Interview your future self about a decision or a stuck moment — a structured perspective-shift that pulls you out of present emotion and into the… | — |
 | **Give Hard Feedback Kindly** (`give-hard-feedback-kindly`) | Give someone difficult feedback — a report, a peer, a friend — so it actually lands and helps, without crushing them or dodging the point. | — |
+| **Grief Admin** (`grief-admin`) | Get through the brutal logistics after a death — who to notify, what accounts and services to close, in what order, and what genuinely can't wait… | — |
 | **Group Trip Negotiator** (`group-trip-negotiator`) | Save the group trip from the group chat — budget alignment before anything gets booked (the awkward conversation, scripted), a decision protocol… | — |
+| **Legacy Letter** (`legacy-letter`) | Write a letter to the people you love, to be read later — the things you'd want them to know, the stories only you hold, the permission and the… | — |
+| **Life Premortem** (`life-premortem`) | Write the failure story of your year, relationship, move, or big life bet in advance — imagine it's a year later and it went wrong, tell that… | — |
 | **Make Friends as an Adult** (`make-friends-as-an-adult`) | Build a real plan to make friends as an adult — where to meet people you'd actually click with, how to turn acquaintances into friends, and past… | — |
 | **Mechanic Quote Decoder** (`mechanic-quote-decoder`) | Read a garage quote or invoice like someone who can't be padded — which line items connect to your actual symptom, which are while-we're-in-there… | — |
 | **Networking for Introverts** (`networking-for-introverts`) | Network in a way that actually works for introverts — depth over breadth, one-on-one over rooms, and energy managed — instead of forcing yourself… | — |
 | **Pixel GIF Maker** (`pixel-gif-maker`) | Generate retro pixel-text animated GIFs for Slack, Teams, or a PR comment — scrolling marquees, heartbeat pulses, confetti parties, twinkling… | — |
+| **Rabbit Hole Rescue** (`rabbit-hole-rescue`) | Talk to a family member or friend who's gone down a conspiracy, misinformation, or extremism rabbit hole — without blowing up the relationship or… | — |
 | **Read the Room** (`read-the-room`) | Figure out the real social dynamics of a situation — the unspoken mood, who holds influence, what's actually going on beneath the surface — so you… | — |
 | **Reconnect With Someone** (`reconnect-with-someone`) | Reach back out to a friend or person you've lost touch with — past the awkwardness of the gap — with a message that reopens the door warmly. | — |
 | **Repair After a Fight** (`repair-after-a-fight`) | Repair a relationship after an argument — reconnect, own your part, and rebuild trust — instead of the cold silence that lets damage set. | — |
 | **Small-Talk Survival** (`small-talk-survival`) | Survive (and even enjoy) small talk — how to start it, keep it going past the weather, and exit gracefully — for people who find it painful. | — |
 | **Support a Friend in Crisis** (`support-a-friend-in-crisis`) | Show up well for someone going through something hard — loss, illness, a breakup, a crisis — with the right words, the right presence, and… | — |
+| **The Ick Decoder** (`the-ick-decoder`) | Figure out whether 'the ick' about someone you're dating is a real incompatibility, a genuine red flag, or an anxious/avoidant self-sabotage… | — |
 | **Used Car Decoder** (`used-car-decoder`) | Decode a used-car listing before you drive an hour to see it — what the seller's phrasing is hiding, the history-check items that matter, a… | — |
 
 ### `pm-2027` — 10 skills
@@ -1251,6 +1258,15 @@
 | **Server Training Guide** (`server-training-guide`) | Build an onboarding and training guide for restaurant front-of-house staff (servers, hosts, bartenders). | — |
 | **Shift Schedule Builder** (`shift-schedule-builder`) | Build a staff shift schedule that matches coverage to demand while hitting a labor-cost target. | — |
 
+### `pm-identity` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Coming Out Rehearsal** (`coming-out-rehearsal`) | Prepare and rehearse a coming-out conversation, tuned to the specific person and the real risk — what to say, how to open, how to handle the… | — |
+| **Faith Transition Companion** (`faith-transition-companion`) | Navigate questioning, leaving, or changing your religion — especially a high-control or all-encompassing one — with the relationship-preservation… | — |
+| **Name Change Navigator** (`name-change-navigator`) | Get through the 40-institution slog of changing your name — after marriage, divorce, transition, or just because — in the right order, so one… | — |
+| **Two Worlds Translator** (`two-worlds-translator`) | Bridge the gap between your home culture and your adopted one — explain your immigrant parents to your partner (and vice versa), navigate the… | — |
+
 ### `pm-insurance` — 5 skills
 
 | Skill | What it does | Eval |
@@ -1260,6 +1276,15 @@
 | **Insurance Claim Appeal** (`insurance-claim-appeal`) | Appeal a denied insurance claim — read the real reason for the denial, find the strongest grounds, and draft the appeal with the evidence that… | — |
 | **Policy Renewal Review** (`policy-renewal-review`) | Run a pre-renewal review of an insurance programme: scan coverage gaps against current operations, test limit adequacy against inflation and… | — |
 | **Underwriting Narrative** (`underwriting-narrative`) | Write the underwriting file narrative for a risk: the risk story, exposure quantification, loss-history read, mitigating and aggravating factors… | — |
+
+### `pm-invisible-illness` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Diagnosis Limbo Kit** (`diagnosis-limbo-kit`) | Run the multi-year campaign of being chronically ill with no diagnosis — track patterns across specialists so nothing resets, avoid the 'it's just… | — |
+| **Flare Day Planner** (`flare-day-planner`) | Plan around flare days before they ambush you — spot your early warning signs, pre-build the reduced 'flare mode' version of your life, prepare… | — |
+| **Perimenopause Navigator** (`perimenopause-navigator`) | Make sense of perimenopause symptoms nobody warned you about and prepare the GP conversation that actually helps — a symptom tracker mapped to… | — |
+| **Spoon Planner** (`spoon-planner`) | Budget limited energy the way spoon theory describes it — count your realistic daily 'spoons', price what each task actually costs (including the… | — |
 
 ### `pm-journalism` — 4 skills
 
@@ -1369,6 +1394,16 @@
 | **Band Agreement** (`band-agreement`) | Write the band agreement before the money or the breakup arrives — who owns the songs, how money splits (writing vs performing distinguished), who… | — |
 | **Press Kit EPK** (`press-kit-epk`) | Build an electronic press kit that bookers and blogs actually read — the three-sentence bio that isn't 'genre-defying', a one-page layout with… | — |
 | **Release Day Countdown** (`release-day-countdown`) | Plan an independent music release backwards from release day — the 8-week countdown with distributor upload deadlines flagged, playlist pitch… | — |
+
+### `pm-neurodivergent` — 5 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Body Double Session** (`body-double-session`) | Set up and run a body-doubling session — using another person's presence (in the room, on a call, or a chat check-in) to start and stay on the… | — |
+| **Masking Budget** (`masking-budget`) | Treat neurodivergent masking as a daily energy budget — audit what passing as neurotypical actually costs you, where the spend is worth it, where… | — |
+| **Meltdown Map** (`meltdown-map`) | Build your personal early-warning system for meltdowns or shutdowns — your specific rising signs, the triggers that stack, what actually helps at… | — |
+| **NT Translator** (`nt-translator`) | Translate both directions across the neurodivergent↔neurotypical gap at work — decode what an indirect message actually meant ('let's circle back'… | — |
+| **Sensory Audit** (`sensory-audit`) | Walk a space — home, office, commute, classroom — and find the sensory landmines quietly draining or overloading you, with fixes ranked by cost… | — |
 
 ### `pm-newgen` — 10 skills
 
@@ -1661,4 +1696,4 @@
 
 ---
 
-_1058 skills across 115 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1078 skills across 118 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

@@ -1,0 +1,106 @@
+---
+description: "Walk a space — home, office, commute, classroom — and find the sensory landmines quietly draining or overloading you, with fixes ranked by cost and impact. Use when someone says 'my office wrecks me and I don't know why', 'I'm overstimulated all the time', 'make my home autism/ADHD-friendly', or lives with SPD, autism, migraine, or misophonia. Produces a room-by-room sensory map, a ranked fix list (free → cheap → invest), and a portable kit for spaces you can't change. A self-help audit, not a clinical assessment."
+globs:
+alwaysApply: false
+---
+
+# Sensory Audit Skill
+
+Sensory overload rarely announces itself — it's the fluorescent flicker you stopped
+noticing, the fridge hum, the tag on the shirt, the open-plan chatter — each below
+the threshold of complaint but adding up to an inexplicable end-of-day wreckage.
+For autistic, ADHD, SPD, migraine-prone, and misophonic people, the environment is
+doing invisible damage that "just push through" advice makes worse. This skill runs
+the audit a good OT would prompt: go sense by sense through a space, name the
+landmines, and fix them in cost order — most of the highest-impact fixes are free.
+
+## What This Skill Produces
+
+- A **sensory map** of the space, by sense: sight (light, flicker, clutter,
+  screens), sound (hums, echo, unpredictable noise), touch (textures, temperature,
+  clothing), smell, and the often-missed ones — proprioception, interoception,
+  vestibular
+- A **ranked fix list**: free (move the desk, kill the overhead light) → cheap
+  (earplugs, a lamp, felt pads) → invest (acoustic panels, noise-cancelling) —
+  each tagged with the landmine it removes and rough impact
+- A **portable sensory kit** for spaces you can't change (the office, the train,
+  the family home): what to carry and how to use it without a scene
+- A **quick-win list**: the three changes to make today
+
+## Required Inputs
+
+Ask for (if not already provided):
+- The space and how it's used (the desk you sit at 8 hours, the bedroom you can't
+  sleep in, the commute that frays you)
+- What the user already notices bothers them, and what they suspect but aren't sure
+  of ("I'm wiped after work but the work is fine")
+- Which senses run hot vs seek input — some people are overwhelmed by sound but
+  crave deep pressure; sensory profiles are individual, so ask, don't assume
+- Constraints: rented (can't drill), shared space, budget, a boss to negotiate with
+
+## Framework
+
+1. **Go sense by sense, deliberately.** Overload hides in the senses we don't name.
+   Walk sight → sound → touch → smell → temperature → movement/body. For each,
+   ask what's constant, what's unpredictable (unpredictable is worse), and what the
+   user has habituated to but is still paying for.
+2. **Distinguish over- from under-stimulation.** Not all sensory need is "too
+   much" — many ND people *seek* input (movement, pressure, chewing, noise) and
+   suffer without it. The audit finds both the landmines to remove and the inputs
+   to add (a fidget, a weighted lap pad, a walk).
+3. **Flicker and hum are the usual villains.** Fluorescent/LED flicker and constant
+   low hums (HVAC, fridges, monitors) are top offenders that people rarely suspect.
+   Flag them specifically; the fix (warm lamp instead of overhead, white noise to
+   mask unpredictable sound) is often free-to-cheap and high-impact.
+4. **Rank by cost, front-load the free.** Most transformative fixes cost nothing —
+   relocating the desk away from the walkway, switching off the overhead light,
+   headphones. Put those first; reserve "invest" for the genuine bottlenecks.
+5. **Pack for the immovable spaces.** For the office/train/relatives' house: a kit
+   (loop earplugs, tinted glasses, a fidget, a scent you control, an exit-and-reset
+   plan) plus, where relevant, a plainly-worded accommodation ask — but the kit
+   works even when the ask isn't safe.
+
+## Output Format
+
+```
+## Sensory map — [space]
+| Sense | Landmine (constant/unpredictable) | Over or under? | Currently costing |
+
+## Fix list (ranked)
+Free today: … · Cheap: … · Invest: …
+Add (input-seeking): [fidgets, pressure, movement — if relevant]
+
+## Portable kit (for spaces you can't change)
+[What to carry · how to use it low-key · the reset plan]
+
+## Do these three today
+[The highest impact-per-effort wins]
+```
+
+## Quality Checks
+
+- [ ] All senses walked, including the easily-missed (proprioception, temperature,
+      interoception), not just sight/sound
+- [ ] The audit distinguishes over-stimulation from input-seeking, per this user
+- [ ] Flicker and constant hums are specifically checked
+- [ ] The free fixes are listed first and the today-list is genuinely doable today
+- [ ] The portable kit works even where the user can't modify the space or disclose
+
+## Anti-Patterns
+
+- [ ] Do not assume a generic sensory profile — ask what runs hot vs seeks input;
+      two ND people can need opposite things
+- [ ] Do not lead with expensive gear — the highest-ROI fixes are usually free
+      rearrangement and switching off the overhead light
+- [ ] Do not frame sensory needs as fussiness or something to toughen up against
+- [ ] Do not require disclosure or accommodation to help — the kit and the free
+      fixes are the user's to deploy privately
+- [ ] Do not diagnose — this audits an environment; SPD/autism/migraine assessment
+      belongs with a clinician, and persistent overload that fixes don't touch
+      deserves one
+
+## Related
+
+[[masking-budget]] — ambient sensory cost is a huge hidden line in the mask budget;
+[[meltdown-map]] when overload tips into shutdown; [[attention-reset]] for the
+digital-sensory layer.
