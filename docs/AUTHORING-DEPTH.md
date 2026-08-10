@@ -66,4 +66,8 @@ A skill has reached the flagship standard when: its process has phase completion
 criteria; it names its place in a spine and invokes neighbors; its heavy reference is
 disclosed behind pointers to a shared vocabulary; and no line is decoration. The
 [product-decision spine](craft/product-decisions.md) — `assumption-mapper` →
-`prd-template` → `rice-prioritisation` → `roadmap-narrative` — is the worked example.
+`prd-template` → `rice-prioritisation` → `roadmap-narrative` — is the worked example,
+and the [incident-response spine](craft/incident-response.md) — `slo-error-budget` →
+`debugging-log-analyser` → `incident-postmortem` → `oncall-runbook` — is the second.
+
+Run `node scripts/depth-lint.mjs` for the ranked worklist of skills still to upgrade.

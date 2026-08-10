@@ -12,6 +12,42 @@ metadata:
 
 Parses raw error logs, stack traces, and crash reports into a structured diagnosis with probable root cause, affected code path, and specific next steps — no hand-waving.
 
+## Where this sits — the diagnosis step
+
+Second in the incident-response spine: **`/slo-error-budget` (frame) →
+`debugging-log-analyser` → `/incident-postmortem` → `/oncall-runbook`**. It takes the raw
+symptoms of a live incident and hands `/incident-postmortem` **the root-cause diagnosis
+and the fix** — so the postmortem builds on the diagnosis instead of re-deriving it.
+Shared terms (root cause vs contributing factors, mitigation vs resolution) are defined
+once in [`docs/craft/incident-response.md`](../../docs/craft/incident-response.md).
+
+## The loop
+
+Debugging fails when it jumps to a fix before the evidence supports it. Phase 2 is the
+skill — a diagnosis is only as good as its confidence, and false certainty sends
+responders down the wrong path at the worst time.
+
+1. **Classify and read the evidence.** Categorise the error, walk the stack trace to the
+   actual failing frame (not the framework noise), and note what the logs do and don't
+   show. Redact secrets in anything you quote back.
+   **Done when:** the failing frame is identified, and the evidence gap (what the logs
+   can't tell you) is stated rather than filled with a guess.
+2. **Reach a root cause with an honest confidence level.** Name the most probable root
+   cause *and* its confidence (confirmed / likely / uncertain), plus the alternative if
+   it's not certain. A diagnosis without a confidence level is a guess wearing a lab coat.
+   **Done when:** the root cause carries a confidence label and, if not confirmed, the
+   next observation that would confirm or refute it.
+3. **Specify the fix and the mitigation separately.** Give the concrete code-level fix
+   for the root cause — and, distinctly, the fastest mitigation to stop user impact now
+   (rollback, flag-off), because stopping the bleeding and fixing the wound are different
+   moves at different urgencies.
+   **Done when:** there's a specific fix for the root cause AND an immediate mitigation,
+   and they're not conflated.
+4. **Hand off to the postmortem.** Surface the diagnosis, the fix, and the timings so
+   `/incident-postmortem` can build the timeline and contributing factors from evidence,
+   not memory.
+   **Done when:** the postmortem could start from this output without re-diagnosing.
+
 ## Required Inputs
 
 Ask for these if not provided:

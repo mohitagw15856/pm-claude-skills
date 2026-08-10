@@ -8,6 +8,41 @@ Produce a complete, implementable SLO document for a service — covering what t
 
 A good SLO is not a target to hit. It is an agreement about what reliability means for your users — and a framework for making principled trade-offs between reliability and velocity.
 
+## Where this sits — the frame of the spine
+
+This is the governor of the incident-response spine: **`slo-error-budget` (frame) →
+`/debugging-log-analyser` → `/incident-postmortem` → `/oncall-runbook`**. It sets the
+**error budget** the whole loop runs inside — the objective forcing function that later
+decides whether a postmortem's action items get done now (budget spent) or deferred
+(budget healthy). Shared terms (SLO, error budget, incident, action item) are defined
+once in [`docs/craft/incident-response.md`](../../docs/craft/incident-response.md).
+
+## The loop
+
+An SLO fails when it's aspirational instead of user-derived, or when the budget has no
+teeth. Phase 1 is load-bearing: a target picked from "100% minus a bit" defends nothing.
+
+1. **Derive the target from users, not from 100%.** Pick the SLIs that track what users
+   actually feel (success rate, latency, freshness) and a target from what they need —
+   the point where more reliability stops mattering to them.
+   **Done when:** each SLO target traces to a stated user need, and none is 100% or a
+   round number chosen for looking good.
+2. **Turn the target into a budget with math.** Compute the error budget (100% minus the
+   SLO, over the window) as a concrete allowance — requests, minutes, or events — not a
+   percentage nobody feels.
+   **Done when:** the budget is expressed as a countable allowance for the window, and
+   burn-rate alerts fire before it's spent, not after.
+3. **Give the budget teeth — the policy is the point.** Write what *changes* at each
+   budget level: healthy → ship; at risk → slow and shore up; exhausted → stop feature
+   work and fix reliability. A budget with no policy is a dashboard nobody obeys.
+   **Done when:** each budget level names a specific, enforced consequence — including a
+   real feature-freeze trigger — that a team would actually follow.
+4. **Hand off as the loop's governor.** State that this budget is what prioritises
+   `/incident-postmortem` action items: budget spent makes them urgent, budget healthy
+   lets them wait.
+   **Done when:** the loop downstream could use this budget to decide action-item urgency
+   without re-litigating the reliability target.
+
 ## Required Inputs
 
 Ask for these if not already provided:

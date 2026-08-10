@@ -9,6 +9,20 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [76.1.0] — craft: the incident-response spine goes flagship — 2026-08-10
+
+### Changed — the second flagship spine (no new skills)
+
+Continuing the depth work: four ops skills now run as *processes* with completion criteria and compose as a spine, mirroring the product-decision spine.
+
+- **[slo-error-budget](skills/slo-error-budget/SKILL.md) → [debugging-log-analyser](skills/debugging-log-analyser/SKILL.md) → [incident-postmortem](skills/incident-postmortem/SKILL.md) → [oncall-runbook](skills/oncall-runbook/SKILL.md)** — each gains a phased loop with `Done when:` criteria, an explicit spine (named handoff artifacts, `/skill` invocation, read-upstream-instead-of-re-deriving), and a shared vocabulary defined once in [docs/craft/incident-response.md](docs/craft/incident-response.md). The error budget is the governor; blameless is the load-bearing rule.
+- Depth-lint now reports **8 skills with completion criteria (up from 4)** and 5 fully flagship-shaped.
+
+### Notes
+
+es/incident-postmortem translation kept in parity. SkillCheck 0 errors, drift clean, i18n parity 128/128.
+
+
 ## [76.0.0] — the systems wave: 20 skills for navigating the systems that run your life — 2026-08-10
 
 ### Added — four new bundles (**1098 skills, 121 bundles**)

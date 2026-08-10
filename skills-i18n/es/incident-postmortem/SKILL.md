@@ -14,6 +14,47 @@ Esta skill produce un documento de postmortem completo y sin culpas, siguiendo e
 
 Las acciones no tienen que quedarse en el papel: entrégalas a [`action-runner`](../action-runner/SKILL.md), que las previsualiza (dry-run, clasificadas por riesgo), ejecuta solo lo que apruebes mediante el MCP de acciones conectado, y registra lo hecho de vuelta en el brain. Típico: **abrir un issue de seguimiento por cada acción** (🟡), asignado a su responsable con fecha límite. Esta skill propone; action-runner controla y ejecuta — nunca en silencio.
 
+## Dónde encaja — convertir un incidente en arreglos
+
+Tercera en la cadena de respuesta a incidentes: **`/slo-error-budget` (marco) →
+`/debugging-log-analyser` → `incident-postmortem` → `/oncall-runbook`**. Recibe el
+**diagnóstico de causa raíz** de `/debugging-log-analyser` (léelo en vez de rediagnosticar)
+y le entrega a `/oncall-runbook` los **factores contribuyentes y las acciones priorizadas**
+— y el presupuesto de error de `/slo-error-budget` decide cuán urgentes son esas acciones.
+*Sin culpa (blameless)*, *causa raíz vs factores contribuyentes* y *acción* se definen una
+sola vez en [`docs/craft/incident-response.md`](../../docs/craft/incident-response.md); lo
+"sin culpa" es la regla que lo sostiene todo.
+
+## El bucle
+
+Un postmortem fracasa en el momento en que asigna culpa — los datos honestos se secan y
+cada incidente futuro se subreporta. La fase 1 fija ese marco; todo lo demás depende de él.
+
+1. **Establece el marco sin culpa primero.** Declara desde el inicio que esto examina el
+   *sistema* que permitió que una persona competente hiciera lo que hizo, nunca a la
+   persona. No es cortesía — es la condición previa para la línea de tiempo veraz que
+   necesita el resto de la skill.
+   **Listo cuando:** el marco es explícito y ninguna frase del documento culpa a un
+   individuo; los fallos se atribuyen a huecos del sistema.
+2. **Construye la línea de tiempo con evidencia.** Reconstruye inicio → detección →
+   mitigación → resolución con marcas de tiempo reales (del diagnóstico y los logs, no de
+   la memoria). Detección, mitigación y resolución son eventos distintos — registra cada uno.
+   **Listo cuando:** la línea de tiempo tiene marcas de tiempo reales y separa detección/
+   mitigación/resolución, y el impacto está cuantificado (usuarios, duración, alcance).
+3. **Encuentra la causa raíz Y los factores contribuyentes.** La causa raíz es una cosa;
+   los factores contribuyentes son lo que dejó que llegara a los usuarios y persistiera (la
+   alerta ausente, el canary omitido, el runbook poco claro). Un postmortem con una causa
+   raíz y sin factores contribuyentes no ha mirado con suficiente detenimiento.
+   **Listo cuando:** al menos los factores contribuyentes que sostienen el fallo están
+   nombrados, cada uno apuntando a un hueco del sistema que se puede arreglar.
+4. **Lleva a acciones con responsable y fecha — gobernadas por el presupuesto.** Convierte
+   los factores en acciones específicas, cada una con responsable y fecha; las acciones
+   vagas ("mejorar el monitoreo") se marchitan. Priorízalas contra el presupuesto de error
+   (gastado → ahora; sano → pronto).
+   **Listo cuando:** cada acción tiene responsable y fecha, y `/oncall-runbook` podría
+   convertir los aprendizajes de detección/mitigación en una entrada sin volver a analizar
+   el incidente.
+
 ## Entradas requeridas
 
 Pídelas si no vienen ya en la solicitud:

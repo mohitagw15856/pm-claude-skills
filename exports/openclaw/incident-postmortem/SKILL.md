@@ -16,6 +16,44 @@ This skill produces a complete, blameless incident postmortem document following
 
 The action items don't have to stay on the page: hand them to [`action-runner`](../action-runner/SKILL.md), which previews them (dry-run, risk-rated), runs only what you approve via the connected action MCP, and records what was done back to the brain. Typical: **file a follow-up issue per action item** (🟡), assigned to its owner with a due date. This skill proposes; action-runner gates and runs — never silently.
 
+## Where this sits — turning an incident into fixes
+
+Third in the incident-response spine: **`/slo-error-budget` (frame) →
+`/debugging-log-analyser` → `incident-postmortem` → `/oncall-runbook`**. It receives the
+**root-cause diagnosis** from `/debugging-log-analyser` (read it rather than
+re-diagnosing) and hands `/oncall-runbook` **the contributing factors and prioritised
+action items** — and the error budget from `/slo-error-budget` decides how urgent those
+actions are. *Blameless*, *root cause vs contributing factors*, and *action item* are
+defined once in [`docs/craft/incident-response.md`](../../docs/craft/incident-response.md);
+blameless is the load-bearing rule.
+
+## The loop
+
+A postmortem fails the moment it assigns blame — the honest data dries up and every
+future incident is under-reported. Phase 1 sets that frame; everything depends on it.
+
+1. **Establish blameless framing first.** State up front that this examines the *system*
+   that let a competent person make the move, never the person. This isn't politeness —
+   it's the precondition for the truthful timeline the rest of the skill needs.
+   **Done when:** the framing is explicit and no sentence in the document blames an
+   individual; failures are attributed to system gaps.
+2. **Build the timeline from evidence.** Reconstruct start → detection → mitigation →
+   resolution with real timestamps (from the diagnosis and logs, not memory). Detection,
+   mitigation, and resolution are distinct events — track each.
+   **Done when:** the timeline has real timestamps and separates detection/mitigation/
+   resolution, and the impact is quantified (users, duration, scope).
+3. **Find the root cause AND the contributing factors.** The root cause is one thing;
+   the contributing factors are what let it reach users and persist (the missing alert,
+   the skipped canary, the unclear runbook). A postmortem with a root cause and no
+   contributing factors hasn't looked hard enough.
+   **Done when:** at least the load-bearing contributing factors are named, each pointing
+   at a system gap that's fixable.
+4. **Drive to owned, dated action items — governed by the budget.** Convert factors into
+   specific action items, each with an owner and a date; vague "improve monitoring"
+   items decay. Prioritise them against the error budget (spent → now; healthy → soon).
+   **Done when:** every action item has an owner and a date, and `/oncall-runbook` could
+   turn the detection/mitigation learnings into an entry without re-analysing the incident.
+
 ## Required Inputs
 
 Ask the user for these if not provided:
