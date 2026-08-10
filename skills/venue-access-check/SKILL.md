@@ -1,0 +1,104 @@
+---
+name: venue-access-check
+description: "Check whether a specific venue — a restaurant, office, event space, Airbnb, clinic — will actually work for your access needs, before you commit, with the exact questions to ask and the red flags in the answers. Use when someone says 'will this place work for my wheelchair', 'check if this venue is accessible', 'questions to ask a venue about access', or 'is this restaurant/office actually accessible'. Produces a tailored question list, how to read the answers, and a go/adapt/avoid verdict. For personal access decisions; not a formal accessibility audit."
+---
+
+# Venue Access Check Skill
+
+"Is it accessible?" is the wrong question — venues answer yes to it reflexively, and
+the disabled visitor discovers the truth at the door: the "accessible" entrance that's
+a phone-call-and-wait around the back, the "step-free" route with one step, the toilet
+that's an accessible sign on a cupboard. This skill replaces the yes/no with the
+specific questions that surface reality, tailored to *your* needs, and teaches you to
+read the answers — because *how* a venue answers ("let me check and send a photo" vs
+"yeah should be fine") tells you as much as what they say. It's for personal go/no-go
+decisions, not a formal WCAG-style audit (that's [[accessibility-audit]]).
+
+## What This Skill Produces
+
+- A **tailored question list**: the specific things to confirm for *this* venue and
+  *your* needs — entrance and route, thresholds and widths, the accessible toilet's
+  reality, seating, lighting/noise, hearing loops, level changes, parking/drop-off
+- **How to read the answers**: the reassuring-but-empty replies vs the credible ones,
+  and the follow-ups that catch the "should be fine"
+- The **photo/evidence ask**: how to get pictures or a measurement rather than a
+  promise (the single most reliable move)
+- A **go / adapt / avoid verdict** with the reasoning, plus what to arrange in advance
+  if it's a "go with adaptations"
+
+## Required Inputs
+
+Ask for (if not already provided):
+- The venue and what for (a meal, a meeting, an overnight, an appointment, an event)
+- The specific access needs (wheelchair/mobility aid and transfer ability, sensory
+  needs, fatigue, service animal, dietary-medical) — the questions flex to these
+- How much is at stake / how reversible (a casual coffee vs a booked event you can't
+  redo)
+- Any info the venue has already given
+
+## Framework
+
+1. **Translate the need into specific, checkable questions.** "Accessible?" becomes
+   "Is there a step at the main entrance, and if so is there a genuinely step-free
+   alternative that's staffed at all times?", "What's the clear width of the toilet
+   door?", "Is the accessible toilet used for storage?" (a real and common problem).
+   Specific questions can't be waved away with a reflexive yes.
+2. **Ask for evidence, not assurance.** The reliability upgrade: request a photo of the
+   entrance/route/bathroom, or a measurement. A venue that sends one is credible; a
+   venue that can't or won't is a flag. This one move prevents most bad surprises.
+3. **Read the answer's shape.** "Let me physically check and get back to you" and
+   specific numbers signal a venue that understands access. "Yeah it should be fine" and
+   "we've never had complaints" signal a venue that doesn't — and "should be fine" has
+   failed more disabled visitors than any other phrase. Teach the follow-up that tests it.
+4. **Verdict with adaptations.** Go (confirmed workable), adapt (workable with
+   pre-arrangement — reserve the accessible table, arrange the staffed entrance, bring
+   the ramp), or avoid (the barrier is real and unfixable). For "adapt," list exactly
+   what to arrange and confirm before arriving.
+5. **Have the day-of fallback.** Even confirmed access fails sometimes; note the quick
+   check on arrival and the backup (a nearby alternative, the "this isn't as described"
+   line) so a bad answer at the door isn't the end of the plan.
+
+## Output Format
+
+```
+## Questions for this venue (ask these — get specifics)
+[Entrance/route · thresholds & widths · the accessible toilet's reality · seating ·
+sensory · parking/drop-off — tailored to your needs]
+
+## Get evidence
+[The photo/measurement ask — the single most reliable move]
+
+## Reading their answers
+[Credible signals vs the empty "should be fine" · the follow-up that tests it]
+
+## Verdict: GO / ADAPT / AVOID
+[The reasoning · if ADAPT, exactly what to arrange and confirm first]
+
+## Day-of fallback
+[Quick arrival check · the backup if it's not as described]
+```
+
+## Quality Checks
+
+- [ ] Questions are specific and checkable, tailored to the user's actual needs — never
+      a bare "is it accessible?"
+- [ ] The photo/measurement evidence ask is included
+- [ ] The user is taught to read the *shape* of the answer, not just its content
+- [ ] The verdict is committed (go/adapt/avoid) with what to pre-arrange for "adapt"
+- [ ] A day-of fallback exists for when confirmed access fails anyway
+
+## Anti-Patterns
+
+- [ ] Do not accept "accessible" or "should be fine" as an answer — the whole skill
+      exists to get past that
+- [ ] Do not confuse this with a formal audit — it's a personal go/no-go; route to
+      [[accessibility-audit]] for a WCAG/standards review
+- [ ] Do not assume one disability's needs — the questions flex to this person
+- [ ] Do not skip the evidence ask — a promise is not access
+- [ ] Do not leave the user without a fallback for the door-step surprise
+
+## Related
+
+[[accessible-travel-planner]] for the whole trip; [[accessibility-audit]] for a formal
+digital/UI standards audit; [[accommodation-request]] when the venue is your workplace;
+[[report-a-hazard]] if a public venue's access is unlawfully absent.

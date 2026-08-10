@@ -1,0 +1,121 @@
+---
+name: disability-benefit-appeal
+description: "Appeal a denied disability benefit (SSDI/SSI, PIP, DLA, ESA and similar) — decode the denial reason, build the evidence-backed case that answers it, hit the deadline, and prepare for the hearing. Use when someone says 'my disability benefit was denied', 'appeal my PIP/SSDI decision', 'they said I don't qualify', or 'how do I challenge a benefits decision'. Produces a decoded denial, an appeal strategy mapped to the criteria, an evidence checklist, and a statement draft. Not legal advice — it organizes YOUR case and routes to free specialist advice."
+homepage: https://mohitagw15856.github.io/pm-claude-skills/skill/disability-benefit-appeal.html
+metadata:
+  {
+    "openclaw": { "emoji": "🧠" }
+  }
+---
+
+# Disability Benefit Appeal Skill
+
+Disability benefits are denied at high rates on first application, and a large share
+of those denials are overturned on appeal — which means a denial is often the start
+of the process, not the end. But appeals are lost on avoidable things: missing the
+short deadline, re-submitting the same application instead of *answering the specific
+reason for refusal*, and describing a good day instead of the worst day. This skill
+decodes why you were denied, builds the case that speaks to the actual eligibility
+criteria, and gets you organized for the hearing. It does not give legal advice or
+guarantee outcomes — it structures your evidence and routes you to the free
+specialist advice that materially raises success rates.
+
+## What This Skill Produces
+
+- A **decoded denial**: what the decision letter actually says you failed to meet, in
+  plain language, separated from boilerplate
+- An **appeal strategy mapped to the criteria**: for each point of refusal, the
+  specific evidence and description that answers it — appeals are won by rebutting the
+  refusal, not restating the claim
+- An **evidence checklist**: the medical records, functional descriptions, and
+  third-party statements that carry weight, and how to request them ([[medical-records-request]])
+- A **personal statement draft** in the framework assessors use (how the condition
+  affects daily function on a *bad* day, consistently, not at your best) and
+  **hearing prep** if it goes that far
+
+## Required Inputs
+
+Ask for (if not already provided):
+- The benefit and country/system (SSDI/SSI in the US, PIP/DLA/ESA/UC in the UK, etc. —
+  criteria and process differ completely), and the denial letter's stated reasons
+- The appeal deadline (often short — this is the first thing to pin down)
+- The condition(s) and how they actually affect daily function, honestly and at worst
+- What evidence exists already and what's missing
+
+## Framework
+
+1. **Deadline first — it's a hard gate.** Appeal windows are short and missing them can
+   end the case regardless of merit. Pin the exact deadline from the letter and make
+   the whole plan fit inside it; if it's tight, the request-more-time or interim step
+   comes first.
+2. **Decode the actual refusal.** The letter's boilerplate hides a few specific
+   findings ("you can walk 50m," "you scored X points," "your condition isn't
+   'severe'"). Extract those — the appeal must answer *these*, not make the original
+   case louder.
+3. **Map evidence to each refusal point.** For every finding, name what would rebut it:
+   a consultant's letter on mobility, a functional report, a medication list, statements
+   from people who see your daily reality. Generic "I'm unwell" evidence loses; evidence
+   aimed at the specific criterion wins.
+4. **Describe the bad day, consistently.** The single most common self-inflicted loss:
+   describing function on a good day, or "managing." Assessors judge against criteria
+   about repeatability, safety, and reliability — so the statement describes the worst
+   and typical days, what you *can't* do reliably/safely/repeatedly, with concrete
+   examples. Honest, not exaggerated — but not stoically minimized either.
+5. **Get free specialist help and prep the hearing.** Disability-benefit advice
+   services (welfare-rights orgs, legal aid, disability charities — free, and strongly
+   correlated with success) should be engaged; the skill routes there explicitly. For a
+   tribunal/hearing, prepare what to expect, the questions, and bringing a
+   representative or supporter.
+
+## Output Format
+
+```
+## Deadline (pin this first)
+[The exact appeal deadline from your letter · the plan fits inside it]
+
+## Why you were actually denied (decoded)
+[The specific findings, extracted from the boilerplate]
+
+## Your appeal, point by point
+| Their refusal finding | What answers it | Evidence to get |
+
+## Your statement (draft)
+[Function on a bad/typical day — what you can't do reliably, safely, repeatedly, with
+concrete examples · honest, not minimized]
+
+## Get free specialist help
+[The welfare-rights / disability advice services to contact — they raise success rates]
+
+## If it goes to a hearing
+[What to expect · bring a representative/supporter · the likely questions]
+
+⚠ This organizes your case; it is not legal advice. A free welfare-rights adviser or
+legal-aid solicitor for your benefit and country should review it.
+```
+
+## Quality Checks
+
+- [ ] The appeal deadline is identified first and the plan fits within it
+- [ ] The specific refusal findings are decoded, and the appeal answers each one
+- [ ] Evidence is mapped to criteria, not generic
+- [ ] The statement describes worst/typical function (reliably/safely/repeatedly), not a
+      good day — honestly
+- [ ] Free specialist advice services are named and the not-legal-advice line is present
+
+## Anti-Patterns
+
+- [ ] Do not give legal advice or assert eligibility rules/scores as fact — systems
+      differ and change; organize the case and route to a specialist
+- [ ] Do not coach exaggeration or fabrication — describe the genuine worst/typical
+      reality; false claims are both wrong and detectable
+- [ ] Do not let the user re-submit the original claim — the appeal must rebut the
+      specific refusal
+- [ ] Do not miss the deadline framing — it's the most common avoidable loss
+- [ ] Do not treat this as a substitute for a welfare-rights adviser — it prepares you
+      to use one well
+
+## Related
+
+[[claim-denial-decoder]] and [[insurance-claim-appeal]] for private-insurance denials
+(different system); [[medical-records-request]] for the evidence; [[accommodation-request]]
+for the workplace side; [[spoon-planner]] for surviving the process.

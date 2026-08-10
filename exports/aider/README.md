@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1078 skills exported. Copy a `.md rule` into the tool to use it.
+1098 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -12,12 +12,15 @@
 | A/B Test Planner | `pm-delivery` | `pm-delivery/ab-test-planner/ab-test-planner.md` |
 | A/B Test Readout | `pm-data` | `pm-data/ab-test-readout/ab-test-readout.md` |
 | Accessibility Audit | `pm-design` | `pm-design/accessibility-audit/accessibility-audit.md` |
+| Accessible Travel Planner | `pm-accessibility` | `pm-accessibility/accessible-travel-planner/accessible-travel-planner.md` |
+| Accommodation Request | `pm-accessibility` | `pm-accessibility/accommodation-request/accommodation-request.md` |
 | Account Plan | `pm-sales` | `pm-sales/account-plan/account-plan.md` |
 | Account Recovery Plan | `pm-digital-safety` | `pm-digital-safety/account-recovery-plan/account-recovery-plan.md` |
 | Acquirer Red Team | `pm-simulators` | `pm-simulators/acquirer-red-team/acquirer-red-team.md` |
 | Action Runner | `pm-cross` | `pm-cross/action-runner/action-runner.md` |
 | Ad Copy | `pm-copy` | `pm-copy/ad-copy/ad-copy.md` |
 | AEO Optimizer | `pm-writers` | `pm-writers/aeo-optimizer/aeo-optimizer.md` |
+| After The Disaster | `pm-emergency` | `pm-emergency/after-the-disaster/after-the-disaster.md` |
 | Agenda Or Cancel | `pm-cowork` | `pm-cowork/agenda-or-cancel/agenda-or-cancel.md` |
 | Agent Design Review | `pm-ai` | `pm-ai/agent-design-review/agent-design-review.md` |
 | Agent Era Pricing | `pm-agentnative` | `pm-agentnative/agent-era-pricing/agent-era-pricing.md` |
@@ -60,6 +63,7 @@
 | Architecture Decision Record (ADR) | `pm-engineering` | `pm-engineering/architecture-decision-record/architecture-decision-record.md` |
 | Architecture Diagram | `pm-visuals` | `pm-visuals/architecture-diagram/architecture-diagram.md` |
 | Archive Strategy | `pm-cowork` | `pm-cowork/archive-strategy/archive-strategy.md` |
+| Arrival Setup | `pm-newcomer` | `pm-newcomer/arrival-setup/arrival-setup.md` |
 | Ask for a Raise | `pm-wealth` | `pm-wealth/ask-for-a-raise/ask-for-a-raise.md` |
 | Assumption Audit | `pm-thinking` | `pm-thinking/assumption-audit/assumption-audit.md` |
 | Assumption Bounty | `pm-warroom` | `pm-warroom/assumption-bounty/assumption-bounty.md` |
@@ -221,6 +225,8 @@
 | Creator Brand Kit | `pm-creator` | `pm-creator/creator-brand-kit/creator-brand-kit.md` |
 | Creator Deal Decoder | `pm-newgen` | `pm-newgen/creator-deal-decoder/creator-deal-decoder.md` |
 | Creator Media Kit | `pm-creator` | `pm-creator/creator-media-kit/creator-media-kit.md` |
+| Credential Recognition | `pm-newcomer` | `pm-newcomer/credential-recognition/credential-recognition.md` |
+| Credit From Scratch | `pm-newcomer` | `pm-newcomer/credit-from-scratch/credit-from-scratch.md` |
 | Credit Memo | `pm-banking` | `pm-banking/credit-memo/credit-memo.md` |
 | Cross-Examine Me | `pm-thinking` | `pm-thinking/cross-examine-me/cross-examine-me.md` |
 | Crypto Prices | `pm-live` | `pm-live/crypto-prices/crypto-prices.md` |
@@ -298,6 +304,8 @@
 | Difficult Conversation | `pm-comms` | `pm-comms/difficult-conversation/difficult-conversation.md` |
 | Digital Death Plan | `other` | `other/digital-death-plan/digital-death-plan.md` |
 | Digital Legacy Planner | `pm-estate` | `pm-estate/digital-legacy-planner/digital-legacy-planner.md` |
+| Disability Benefit Appeal | `pm-accessibility` | `pm-accessibility/disability-benefit-appeal/disability-benefit-appeal.md` |
+| Disability Disclosure Decision | `pm-accessibility` | `pm-accessibility/disability-disclosure-decision/disability-disclosure-decision.md` |
 | Disability Insurance Decoder | `pm-decoders` | `pm-decoders/disability-insurance-decoder/disability-insurance-decoder.md` |
 | Disaster Recovery Plan | `pm-engineering` | `pm-engineering/disaster-recovery-plan/disaster-recovery-plan.md` |
 | Discharge Summary | `pm-health` | `pm-health/discharge-summary/discharge-summary.md` |
@@ -320,12 +328,14 @@
 | DPA Review | `pm-legal` | `pm-legal/dpa-review/dpa-review.md` |
 | Earthquake Watch | `pm-live` | `pm-live/earthquake-watch/earthquake-watch.md` |
 | Elder Scam Briefing | `pm-scam-defense` | `pm-scam-defense/elder-scam-briefing/elder-scam-briefing.md` |
+| Elected Rep Letter | `pm-civic` | `pm-civic/elected-rep-letter/elected-rep-letter.md` |
 | Email Agent Preflight | `pm-seatbelt` | `pm-seatbelt/email-agent-preflight/email-agent-preflight.md` |
 | Email Campaign | `pm-gtm` | `pm-gtm/email-campaign/email-campaign.md` |
 | Email Sequence | `pm-copy` | `pm-copy/email-sequence/email-sequence.md` |
 | Email To Tasks | `pm-cowork` | `pm-cowork/email-to-tasks/email-to-tasks.md` |
 | Email Triage | `pm-operations` | `pm-operations/email-triage/email-triage.md` |
 | Email Triage System | `pm-cowork` | `pm-cowork/email-triage-system/email-triage-system.md` |
+| Emergency Doc Kit | `pm-emergency` | `pm-emergency/emergency-doc-kit/emergency-doc-kit.md` |
 | Emergency Fund | `pm-calculators` | `pm-calculators/emergency-fund/emergency-fund.md` |
 | Employee Engagement Survey | `pm-hr` | `pm-hr/employee-engagement-survey/employee-engagement-survey.md` |
 | Empty State Writer | `pm-uxwriting` | `pm-uxwriting/empty-state-writer/empty-state-writer.md` |
@@ -438,6 +448,7 @@
 | Give Hard Feedback Kindly | `other` | `other/give-hard-feedback-kindly/give-hard-feedback-kindly.md` |
 | Giving Feedback | `pm-comms` | `pm-comms/giving-feedback/giving-feedback.md` |
 | Glossary Builder | `pm-localization` | `pm-localization/glossary-builder/glossary-builder.md` |
+| Go-Bag Builder | `pm-emergency` | `pm-emergency/go-bag-builder/go-bag-builder.md` |
 | Go-To-Market | `pm-gtm` | `pm-gtm/go-to-market/go-to-market.md` |
 | Go-to-Market Planner | `pm-delivery` | `pm-delivery/go-to-market-planner/go-to-market-planner.md` |
 | Good-Enough Detector | `pm-focus` | `pm-focus/good-enough-detector/good-enough-detector.md` |
@@ -452,8 +463,10 @@
 | Habit Builder | `pm-wellbeing` | `pm-wellbeing/habit-builder/habit-builder.md` |
 | Handbook Page | `pm-cowork` | `pm-cowork/handbook-page/handbook-page.md` |
 | Hardware PRD | `pm-hardware` | `pm-hardware/hardware-prd/hardware-prd.md` |
+| Hazard Risk Map | `pm-emergency` | `pm-emergency/hazard-risk-map/hazard-risk-map.md` |
 | Headline Options | `pm-copy` | `pm-copy/headline-options/headline-options.md` |
 | Health Inspection Prep | `pm-hospitality` | `pm-hospitality/health-inspection-prep/health-inspection-prep.md` |
+| Healthcare System Primer | `pm-newcomer` | `pm-newcomer/healthcare-system-primer/healthcare-system-primer.md` |
 | Help Center Article | `pm-support` | `pm-support/help-center-article/help-center-article.md` |
 | Hidden-Fee Auditor | `pm-money` | `pm-money/hidden-fee-auditor/hidden-fee-auditor.md` |
 | HIPAA Safeguards | `pm-compliance` | `pm-compliance/hipaa-safeguards/hipaa-safeguards.md` |
@@ -523,6 +536,7 @@
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/job-story-mapper.md` |
 | Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/journaling-prompts.md` |
 | Jury Duty Guide | `pm-legal` | `pm-legal/jury-duty-guide/jury-duty-guide.md` |
+| Jury Duty Navigator | `pm-civic` | `pm-civic/jury-duty-navigator/jury-duty-navigator.md` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/karaoke-song-picker.md` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/kb-audit.md` |
 | Kids' Online-Safety Plan | `pm-digital-safety` | `pm-digital-safety/kids-online-safety-plan/kids-online-safety-plan.md` |
@@ -678,6 +692,7 @@
 | Performance Budget | `pm-engineering` | `pm-engineering/performance-budget/performance-budget.md` |
 | Performance Review | `pm-people` | `pm-people/performance-review/performance-review.md` |
 | Perimenopause Navigator | `pm-invisible-illness` | `pm-invisible-illness/perimenopause-navigator/perimenopause-navigator.md` |
+| Permit Navigator | `pm-civic` | `pm-civic/permit-navigator/permit-navigator.md` |
 | Personal Bio | `pm-personal` | `pm-personal/personal-bio/personal-bio.md` |
 | Personal Board of Directors | `pm-personal` | `pm-personal/personal-board-of-directors/personal-board-of-directors.md` |
 | Personal Operating Manual | `pm-focus` | `pm-focus/personal-operating-manual/personal-operating-manual.md` |
@@ -701,6 +716,7 @@
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/portfolio-page.md` |
 | Posture Reset Plan | `pm-wellbeing` | `pm-wellbeing/posture-reset-plan/posture-reset-plan.md` |
 | Power of Attorney Explainer | `pm-legal` | `pm-legal/power-of-attorney-explainer/power-of-attorney-explainer.md` |
+| Power Outage Plan | `pm-emergency` | `pm-emergency/power-outage-plan/power-outage-plan.md` |
 | PPTX Slide Auditor | `pm-delivery` | `pm-delivery/pptx-slide-auditor/pptx-slide-auditor.md` |
 | PR Crisis Response | `pm-crisis` | `pm-crisis/pr-crisis-response/pr-crisis-response.md` |
 | PR Description | `pm-craft` | `pm-craft/pr-description/pr-description.md` |
@@ -799,6 +815,7 @@
 | Repair Request Escalation | `pm-renters` | `pm-renters/repair-request-escalation/repair-request-escalation.md` |
 | Reply In Their Tone | `pm-cowork` | `pm-cowork/reply-in-their-tone/reply-in-their-tone.md` |
 | Repo Map | `pm-tokens` | `pm-tokens/repo-map/repo-map.md` |
+| Report A Hazard | `pm-civic` | `pm-civic/report-a-hazard/report-a-hazard.md` |
 | Resale Flip Kit | `pm-newgen` | `pm-newgen/resale-flip-kit/resale-flip-kit.md` |
 | Research Protocol | `pm-research` | `pm-research/research-protocol/research-protocol.md` |
 | Research Repo Setup | `pm-cowork` | `pm-cowork/research-repo-setup/research-repo-setup.md` |
@@ -962,6 +979,7 @@
 | Task Triage Matrix | `pm-cowork` | `pm-cowork/task-triage-matrix/task-triage-matrix.md` |
 | Tax Deduction Finder | `pm-money` | `pm-money/tax-deduction-finder/tax-deduction-finder.md` |
 | Tax Planning Checklist | `pm-finance` | `pm-finance/tax-planning-checklist/tax-planning-checklist.md` |
+| Tax Residency Primer | `pm-newcomer` | `pm-newcomer/tax-residency-primer/tax-residency-primer.md` |
 | TDD Workflow | `pm-craft` | `pm-craft/tdd-workflow/tdd-workflow.md` |
 | Teach Me in Layers | `pm-learning` | `pm-learning/teach-me-in-layers/teach-me-in-layers.md` |
 | Teach The Game | `pm-tabletop` | `pm-tabletop/teach-the-game/teach-the-game.md` |
@@ -1044,6 +1062,7 @@
 | Vendor Contract Checklist | `pm-operations` | `pm-operations/vendor-contract-checklist/vendor-contract-checklist.md` |
 | Vendor Evaluation | `pm-operations` | `pm-operations/vendor-evaluation/vendor-evaluation.md` |
 | Vendor Security Review | `pm-compliance` | `pm-compliance/vendor-security-review/vendor-security-review.md` |
+| Venue Access Check | `pm-accessibility` | `pm-accessibility/venue-access-check/venue-access-check.md` |
 | Verification Before Completion | `pm-method` | `pm-method/verification-before-completion/verification-before-completion.md` |
 | Version Chaos Untangler | `pm-cowork` | `pm-cowork/version-chaos-untangler/version-chaos-untangler.md` |
 | Vet Estimate Decoder | `pm-decoders` | `pm-decoders/vet-estimate-decoder/vet-estimate-decoder.md` |
@@ -1051,6 +1070,7 @@
 | Voice Agent Design | `pm-agentnative` | `pm-agentnative/voice-agent-design/voice-agent-design.md` |
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/voice-of-customer-program.md` |
 | Volunteer Treasurer Basics | `pm-committee` | `pm-committee/volunteer-treasurer-basics/volunteer-treasurer-basics.md` |
+| Voting Navigator | `pm-civic` | `pm-civic/voting-navigator/voting-navigator.md` |
 | Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/vuln-triage.md` |
 | Warranty Claim | `pm-money` | `pm-money/warranty-claim/warranty-claim.md` |
 | Weather Now | `pm-live` | `pm-live/weather-now/weather-now.md` |

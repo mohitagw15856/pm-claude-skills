@@ -904,6 +904,86 @@
     {
       "skill": "rabbit-hole-rescue",
       "input": "My dad has gone down a deep conspiracy hole over the last two years — it started with health stuff and now it is everything, the news, elections, secret cabals. Every family dinner turns into a fight because I try to argue the facts and it just makes him dig in. I am scared of losing him but I also cannot stand it. He is not hateful, just... gone. Help."
+    },
+    {
+      "skill": "voting-navigator",
+      "input": "There is a state election in about 5 weeks and I honestly do not know if I am even registered at my new address, what the deadline is, or whether I can vote by mail since I will be travelling that week. I am in California. Help me make a plan."
+    },
+    {
+      "skill": "permit-navigator",
+      "input": "I want to convert my garage into a home office/studio and maybe rent it on Airbnb sometimes. I own the house, it is in a residential zone in a mid-size US city. Do I need permits, in what order, and what will trip me up?"
+    },
+    {
+      "skill": "jury-duty-navigator",
+      "input": "I got a jury summons for a date that clashes with a non-refundable holiday I booked months ago. Also my mum got a call last week saying she missed jury duty and owes a fine payable by gift card, which felt off. UK. What do I do about both?"
+    },
+    {
+      "skill": "elected-rep-letter",
+      "input": "The council wants to close the pedestrian crossing near our primary school to speed up traffic. I am furious and want to write to someone who can stop it, but my last angry email to the council was ignored. Help me write something that actually works, and who do I even send it to."
+    },
+    {
+      "skill": "report-a-hazard",
+      "input": "There is a deep pothole on my street that has already damaged two cars, plus a streetlight that has been out for a month making the corner dangerous at night. I reported the pothole once online weeks ago and nothing happened. How do I get these actually fixed?"
+    },
+    {
+      "skill": "disability-benefit-appeal",
+      "input": "My PIP claim was refused. The letter says I scored 4 points and need 8, and that I can walk more than 50 metres and prepare a meal, which is just not true on my bad days with my condition. I have 28 days to challenge it. I feel defeated. UK. Help me appeal."
+    },
+    {
+      "skill": "accommodation-request",
+      "input": "I have ADHD and the open-plan office plus back-to-back meetings are wrecking my work. I want to ask for some adjustments (a quiet space, fewer meetings, written follow-ups) but I do not want to hand over my whole medical history or seem like I am making excuses. How do I request this properly? UK employer."
+    },
+    {
+      "skill": "accessible-travel-planner",
+      "input": "I use a powered wheelchair and want to fly from London to Barcelona for a long weekend with my partner. I am nervous about the flight (they damaged my chair last time), the hotel being actually accessible not just labelled it, and my meds. Help me plan this so it does not go wrong."
+    },
+    {
+      "skill": "venue-access-check",
+      "input": "A friend picked a restaurant for a group dinner and said it is wheelchair accessible. I use a wheelchair and have been burned before by places that say that and have a step at the door or an accessible toilet full of boxes. What exactly should I ask them before I commit?"
+    },
+    {
+      "skill": "disability-disclosure-decision",
+      "input": "I have a chronic illness that mostly I manage but sometimes need flexibility for. I am starting a new job in two weeks. I keep going back and forth on whether to tell them, when, and how much. The team seems nice but I do not know them. I do not want pity or to be seen as unreliable, but hiding it is exhausting. Help me think it through."
+    },
+    {
+      "skill": "arrival-setup",
+      "input": "I just moved to Germany from India for a job that starts in 3 weeks. I am staying in a temporary Airbnb. I need a bank account, but they want an address registration (Anmeldung), and the landlord stuff needs a bank account, and I am completely lost on the order. What do I do first?"
+    },
+    {
+      "skill": "credential-recognition",
+      "input": "I am a registered nurse from the Philippines and just moved to Canada. Can I work as a nurse here with my qualifications, or do I have to requalify from scratch? Where do I even start and how long does this take?"
+    },
+    {
+      "skill": "tax-residency-primer",
+      "input": "I moved from the UK to Portugal in September for remote work, but I still have a UK employer paying me into a UK account and I own a flat in London I now rent out. Am I paying tax in both countries? I am worried I am doing something wrong. Orient me on what I need to sort out."
+    },
+    {
+      "skill": "healthcare-system-primer",
+      "input": "I just moved to the US from the UK where I never thought about health insurance. I have a job that starts next month with some kind of health plan, but I need to understand how this all works, whether I am covered now, and what to do because I take a daily medication I cannot run out of."
+    },
+    {
+      "skill": "credit-from-scratch",
+      "input": "I moved to the US six months ago with an excellent credit history in the UK, and here I am basically invisible — got rejected for a phone contract and a normal credit card despite a good salary. How do I build credit here, and how long until I could rent an apartment or get a car loan?"
+    },
+    {
+      "skill": "go-bag-builder",
+      "input": "We live in Northern California near the wildland edge and had to evacuate for a wildfire two years ago in a total panic grabbing random things. Household is me, my husband, our 3-year-old, my elderly mother who takes several medications, and a dog. Help me build a proper go-bag so next time we just grab and go."
+    },
+    {
+      "skill": "hazard-risk-map",
+      "input": "We just bought a house in a small town and I want to actually prepare for emergencies but I have no idea what is realistic here versus me being paranoid. It is near a river, moderately rural, temperate climate, occasional storms. My dad lives with us and uses an oxygen concentrator. Where do I start?"
+    },
+    {
+      "skill": "power-outage-plan",
+      "input": "Our area has started doing multi-day power shutoffs during storms and wildfire season. My biggest worry is my father who uses a home oxygen concentrator and CPAP that both need power. We also have a fridge full of my insulin. Help me plan for a 2-3 day outage properly."
+    },
+    {
+      "skill": "emergency-doc-kit",
+      "input": "After seeing neighbors lose everything in a fire, I realized if our house burned down we could not prove who we are, what we owned, or find our insurance details — it is all in a drawer that would burn. Help me put together a proper emergency document kit that would survive that."
+    },
+    {
+      "skill": "after-the-disaster",
+      "input": "Our ground floor flooded badly last night after the river burst. We are all safe and staying with family. The water has gone down but everything downstairs is ruined and it smells awful. I do not know what to do first — start cleaning, call insurance, what? I am overwhelmed. UK."
     }
   ]
 }

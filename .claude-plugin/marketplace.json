@@ -1,13 +1,45 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "75.1.0",
+  "version": "76.0.0",
   "description": "PM stands for Professional, not just Product Management. 515 Claude Skills + 4 agent templates across 74 bundles covering 31 professions — engineering, security, AI/ML, customer success, legal, government & policy, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "plugins": [
+    {
+      "name": "pm-emergency",
+      "description": "Emergency skills.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-emergency",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-newcomer",
+      "description": "Newcomer skills.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-newcomer",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-accessibility",
+      "description": "Accessibility skills.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-accessibility",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-civic",
+      "description": "Civic skills.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-civic",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
     {
       "name": "pm-identity",
       "description": "Identity skills.",

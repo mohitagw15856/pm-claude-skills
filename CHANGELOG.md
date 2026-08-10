@@ -9,6 +9,26 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [76.0.0] — the systems wave: 20 skills for navigating the systems that run your life — 2026-08-10
+
+### Added — four new bundles (**1098 skills, 121 bundles**)
+
+The bureaucracies and emergencies most people face alone and unprepared — civic, disability, immigration, disaster. Every skill routes to official sources (rules are local and change) and carries the honest guardrails: not legal/tax/medical advice, verify-local, safety-first, and a clear "get a professional/a human" line.
+
+- **🏛 [pm-civic](plugins/pm-civic)** — [voting-navigator](skills/voting-navigator/SKILL.md) (non-partisan, procedure only), [permit-navigator](skills/permit-navigator/SKILL.md), [jury-duty-navigator](skills/jury-duty-navigator/SKILL.md), [elected-rep-letter](skills/elected-rep-letter/SKILL.md) (the letter that gets action), [report-a-hazard](skills/report-a-hazard/SKILL.md)
+- **♿ [pm-accessibility](plugins/pm-accessibility)** — [disability-benefit-appeal](skills/disability-benefit-appeal/SKILL.md) (denials are overturned on appeal — here's how), [accommodation-request](skills/accommodation-request/SKILL.md) (barrier→adjustment, not diagnosis), [accessible-travel-planner](skills/accessible-travel-planner/SKILL.md), [venue-access-check](skills/venue-access-check/SKILL.md), [disability-disclosure-decision](skills/disability-disclosure-decision/SKILL.md) (never pushes disclosure)
+- **✈️ [pm-newcomer](plugins/pm-newcomer)** — [arrival-setup](skills/arrival-setup/SKILL.md) (break the chicken-and-egg loops), [credential-recognition](skills/credential-recognition/SKILL.md) (the doctor-driving-a-taxi fix), [tax-residency-primer](skills/tax-residency-primer/SKILL.md), [healthcare-system-primer](skills/healthcare-system-primer/SKILL.md), [credit-from-scratch](skills/credit-from-scratch/SKILL.md)
+- **🚨 [pm-emergency](plugins/pm-emergency)** — [go-bag-builder](skills/go-bag-builder/SKILL.md) (personalised, not generic), [hazard-risk-map](skills/hazard-risk-map/SKILL.md) (your real local risks), [power-outage-plan](skills/power-outage-plan/SKILL.md) (medical-power first; the CO warning that saves lives), [emergency-doc-kit](skills/emergency-doc-kit/SKILL.md), [after-the-disaster](skills/after-the-disaster/SKILL.md) (safety → document → claim → recover)
+
+### Added — the depth-lint tool
+
+- **[scripts/depth-lint.mjs](scripts/depth-lint.mjs)** — measures the whole library against the flagship-craft bar ([docs/AUTHORING-DEPTH.md](docs/AUTHORING-DEPTH.md)) and writes a ranked upgrade worklist to [docs/craft/DEPTH-REPORT.md](docs/craft/DEPTH-REPORT.md). Currently 4/1098 are flagship-shaped — the honest map for the depth work ahead.
+
+### Notes
+
+Collision-checked (4 planned names already existed — foia-request, small-claims-prep, family-emergency-plan, immigration-document-checklist — and the new skills were differentiated to complement, not duplicate them). One eval case per skill (246 total).
+
+
 ## [75.1.0] — the craft release: depth over breadth on the flagship spine — 2026-08-08
 
 ### Changed — the product-decision spine, upgraded to flagship quality
