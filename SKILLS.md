@@ -1,4 +1,4 @@
-# 🗂️ All 1078 Skills — full catalog
+# 🗂️ All 1098 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -726,7 +726,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (611 skills)
+## 🌍 Industries & Public Sector (631 skills)
 
 ### `other` — 21 skills
 
@@ -768,6 +768,16 @@
 | **The Org Simulator** (`the-org-simulator`) | Stress-test a proposed org change before announcing it — simulate who gains, who loses, who blocks, where friction erupts in the first 90 days… | — |
 | **The Time Capsule** (`the-time-capsule`) | Write a sealed memo to your future self or successor — the honest state of things, falsifiable predictions with confidence levels, and the advice… | — |
 | **The Understudy** (`the-understudy`) | Study 3-5 samples of the user's real writing and decisions, build an explicit 'how you think' profile, then draft new work as their understudy —… | — |
+
+### `pm-accessibility` — 5 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Accessible Travel Planner** (`accessible-travel-planner`) | Plan a trip that actually works with a disability or access need — confirm real accessibility (not just 'accessible' labels), book the assistance… | — |
+| **Accommodation Request** (`accommodation-request`) | Request a reasonable accommodation at work or in education — frame it around the barrier and the adjustment (not your diagnosis), cite the right… | — |
+| **Disability Benefit Appeal** (`disability-benefit-appeal`) | Appeal a denied disability benefit (SSDI/SSI, PIP, DLA, ESA and similar) — decode the denial reason, build the evidence-backed case that answers… | — |
+| **Disability Disclosure Decision** (`disability-disclosure-decision`) | Decide whether, when, how, and to whom to disclose a disability or health condition at work — weighing the real benefits (accommodations… | — |
+| **Venue Access Check** (`venue-access-check`) | Check whether a specific venue — a restaurant, office, event space, Airbnb, clinic — will actually work for your access needs, before you commit… | — |
 
 ### `pm-agentnative` — 5 skills
 
@@ -853,6 +863,16 @@
 | **Medical-Appointment Advocate** (`medical-appointment-advocate`) | Prepare to get the most out of a medical appointment — for yourself or someone you care for — with the right questions, the information to bring… | — |
 | **Medication-Management System** (`medication-management-system`) | Set up a system to manage medications safely — for yourself or someone you care for — so doses aren't missed, doubled, or dangerously combined. | — |
 | **Respite-Care Plan** (`respite-care-plan`) | Plan a genuine break from caregiving — arrange the coverage, hand off the essentials, and actually rest — because respite is what lets you keep going. | — |
+
+### `pm-civic` — 5 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Elected Rep Letter** (`elected-rep-letter`) | Write to an elected representative in a way that actually gets action — a specific ask, your local stake, why it's in their interest to respond… | — |
+| **Jury Duty Navigator** (`jury-duty-navigator`) | Handle a jury summons calmly — confirm it's real, understand what's actually required, request a deferral or excusal the right way if you… | — |
+| **Permit Navigator** (`permit-navigator`) | Work out which permits a project actually needs and the order to get them — building/renovation, business licensing, events, signage, home… | — |
+| **Report A Hazard** (`report-a-hazard`) | Report a public hazard or code problem to the authority that can actually fix it — a pothole, broken streetlight, illegal dump, unsafe building… | — |
+| **Voting Navigator** (`voting-navigator`) | Work out how to actually vote in a specific election — am I registered, what's the deadline, how do I vote (in person / mail / early), what ID do… | — |
 
 ### `pm-climate` — 4 skills
 
@@ -1127,6 +1147,16 @@
 | **Quiz Generator** (`quiz-generator`) | Generate a quiz or test on any topic with a balanced mix of question types and difficulty, plus a complete answer key with explanations. | — |
 | **Rubric Builder** (`rubric-builder`) | Create a clear grading rubric with criteria and performance-level descriptors that make scoring fair, fast, and consistent. | — |
 | **Student Feedback** (`student-feedback`) | Write constructive, specific feedback on student work that motivates and tells the student exactly how to improve. | — |
+
+### `pm-emergency` — 5 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **After The Disaster** (`after-the-disaster`) | Work through the first hours and days after a disaster — a fire, flood, storm, or evacuation — in the right order: safety and people first, then… | — |
+| **Emergency Doc Kit** (`emergency-doc-kit`) | Assemble the grab-and-go document and information kit for a disaster — the IDs, insurance, medical, financial, and property records (physical… | — |
+| **Go-Bag Builder** (`go-bag-builder`) | Build an emergency go-bag tailored to your actual household and your most likely local hazards — not a generic list — covering the people, pets… | — |
+| **Hazard Risk Map** (`hazard-risk-map`) | Figure out which disasters and emergencies your specific location actually faces — and the concrete prep each one demands — so your readiness… | — |
+| **Power Outage Plan** (`power-outage-plan`) | Plan for an extended power outage — keeping medically-essential devices running, food safe, the home warm or cool enough, and communication alive… | — |
 
 ### `pm-estate` — 4 skills
 
@@ -1404,6 +1434,16 @@
 | **Meltdown Map** (`meltdown-map`) | Build your personal early-warning system for meltdowns or shutdowns — your specific rising signs, the triggers that stack, what actually helps at… | — |
 | **NT Translator** (`nt-translator`) | Translate both directions across the neurodivergent↔neurotypical gap at work — decode what an indirect message actually meant ('let's circle back'… | — |
 | **Sensory Audit** (`sensory-audit`) | Walk a space — home, office, commute, classroom — and find the sensory landmines quietly draining or overloading you, with fixes ranked by cost… | — |
+
+### `pm-newcomer` — 5 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Arrival Setup** (`arrival-setup`) | Set up the essentials in the right order after moving to a new country — the ID/registration, bank account, phone, address, and social/tax number… | — |
+| **Credential Recognition** (`credential-recognition`) | Get foreign qualifications, degrees, or professional licenses recognised in a new country — figure out whether recognition is even needed, which… | — |
+| **Credit From Scratch** (`credit-from-scratch`) | Build a credit history from zero in a new country — understand that credit doesn't transfer across borders, get the first products that report… | — |
+| **Healthcare System Primer** (`healthcare-system-primer`) | Understand and enrol in a new country's healthcare system — how it works (public/private/insurance-based), what you're entitled to with your… | — |
+| **Tax Residency Primer** (`tax-residency-primer`) | Orient yourself on your tax-residency situation after moving countries — the questions that determine where you owe tax, the double-taxation and… | — |
 
 ### `pm-newgen` — 10 skills
 
@@ -1696,4 +1736,4 @@
 
 ---
 
-_1078 skills across 118 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1098 skills across 122 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
