@@ -649,3 +649,5 @@ html[data-theme="light"] body::before { display: none; }
    fallback, so a persona without a built face is never a broken image. */
 .role-chip { display: inline-flex; align-items: center; gap: .5rem; }
 .role-face { border-radius: 50%; flex: none; vertical-align: middle; }
+.starter-banner span { display: inline-flex; align-items: center; gap: .5rem; }
+.starter-face { border-radius: 50%; flex: none; vertical-align: middle; }

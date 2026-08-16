@@ -293,7 +293,7 @@
 | Design Critique | `pm-design` | `design-critique/SKILL.md` |
 | Design Handoff Brief | `pm-advanced` | `design-handoff-brief/SKILL.md` |
 | Design System Audit | `pm-design` | `design-system-audit/SKILL.md` |
-| Design System Generate | `other` | `design-system-generate/SKILL.md` |
+| Design System Generate | `pm-design` | `design-system-generate/SKILL.md` |
 | Desk Ergonomics Audit | `pm-wellbeing` | `desk-ergonomics-audit/SKILL.md` |
 | Desk Research Sprint | `pm-cowork` | `desk-research-sprint/SKILL.md` |
 | Desktop Zero | `pm-cowork` | `desktop-zero/SKILL.md` |

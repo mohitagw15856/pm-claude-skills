@@ -875,8 +875,15 @@ function renderGallery(featuredNames, roleLabel) {
     const list = featuredNames.map((n) => SKILLS.find((s) => s.name === n)).filter(Boolean);
     const banner = document.createElement('div');
     banner.className = 'starter-banner';
+    // The persona's face, if this pack came from a role. The onboarding chips
+    // only appear on a first visit, so without this the faces are effectively
+    // never seen after day one.
+    const rp = roleLabel ? PERSONAS.find((x) => x.name === roleLabel) : null;
+    const face = rp && rp.id
+      ? `<img class="starter-face" src="personas/${rp.id}.svg" alt="" width="32" height="32" loading="lazy" onerror="this.remove()">`
+      : '';
     banner.innerHTML =
-      `<span><strong>Your starter pack${roleLabel ? ' for ' + escapeHtml(roleLabel) : ''}</strong> — try these first.</span>` +
+      `<span>${face}<strong>Your starter pack${roleLabel ? ' for ' + escapeHtml(roleLabel) : ''}</strong> — try these first.</span>` +
       `<button class="link-btn" type="button">Show all ${SKILLS.length} skills →</button>`;
     banner.querySelector('.link-btn').addEventListener('click', () => { showAll = true; renderGallery(); });
     gallery.appendChild(banner);

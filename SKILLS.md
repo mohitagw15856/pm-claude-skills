@@ -316,9 +316,9 @@
 | **Metrics Framework** (`metrics-framework`) | Build a metrics framework for any product, team, or business. | ✅ 4.8/5 |
 | **SQL Query Explainer** (`sql-query-explainer`) | Explains, optimises, writes, and documents SQL queries. | ✅ 4.3/5 |
 
-## 🎨 Design & Content (40 skills)
+## 🎨 Design & Content (41 skills)
 
-### `pm-design` — 6 skills
+### `pm-design` — 7 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -326,6 +326,7 @@
 | **Brand Guidelines** (`brand-guidelines`) | Extract a brand's visual and verbal identity into an applicable guideline kit — tokens, voice rules, and do/don't pairs — then apply it… | — |
 | **Design Critique** (`design-critique`) | Give structured, constructive feedback on any design using UX frameworks. | — |
 | **Design System Audit** (`design-system-audit`) | Audit a design system for consistency, coverage, and quality. | — |
+| **Design System Generate** (`design-system-generate`) | Generate a complete, accessibility-checked design system from scratch — colour ramps, type scale, spacing, elevation, and exports for CSS… | — |
 | **Frontend Design** (`frontend-design`) | Produce frontend UI that actually looks designed — a working spacing/type system, deliberate color use, real states, and restraint — instead of… | — |
 | **UX Research Plan** (`ux-research-plan`) | Create a structured UX research plan for any product question or feature. | — |
 
@@ -726,15 +727,14 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (632 skills)
+## 🌍 Industries & Public Sector (631 skills)
 
-### `other` — 22 skills
+### `other` — 21 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Boundary-Setting Scripts** (`boundary-setting-scripts`) | Set a boundary with someone — a friend, family member, coworker, or partner — clearly and kindly, with the actual words and a plan for the pushback. | — |
 | **Conflict De-escalation** (`conflict-deescalation`) | Calm a heated conflict — in person or in writing — before it does damage, by lowering the temperature instead of winning the point. | — |
-| **Design System Generate** (`design-system-generate`) | Generate a complete, accessibility-checked design system from scratch — colour ramps, type scale, spacing, elevation, and exports for CSS… | — |
 | **Digital Death Plan** (`digital-death-plan`) | Plan what happens to your digital life when you die — accounts, photos, passwords, money, and social profiles — so someone you trust can actually… | — |
 | **Future Self Interview** (`future-self-interview`) | Interview your future self about a decision or a stuck moment — a structured perspective-shift that pulls you out of present emotion and into the… | — |
 | **Give Hard Feedback Kindly** (`give-hard-feedback-kindly`) | Give someone difficult feedback — a report, a peer, a friend — so it actually lands and helps, without crushing them or dodging the point. | — |

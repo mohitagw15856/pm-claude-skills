@@ -293,7 +293,7 @@
 | Design Critique | `pm-design` | `pm-design/design-critique/design-critique.md` |
 | Design Handoff Brief | `pm-advanced` | `pm-advanced/design-handoff-brief/design-handoff-brief.md` |
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/design-system-audit.md` |
-| Design System Generate | `other` | `other/design-system-generate/design-system-generate.md` |
+| Design System Generate | `pm-design` | `pm-design/design-system-generate/design-system-generate.md` |
 | Desk Ergonomics Audit | `pm-wellbeing` | `pm-wellbeing/desk-ergonomics-audit/desk-ergonomics-audit.md` |
 | Desk Research Sprint | `pm-cowork` | `pm-cowork/desk-research-sprint/desk-research-sprint.md` |
 | Desktop Zero | `pm-cowork` | `pm-cowork/desktop-zero/desktop-zero.md` |
