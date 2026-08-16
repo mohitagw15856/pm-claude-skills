@@ -354,13 +354,28 @@ function updateContextStatus() {
 // ---------- Role-based onboarding ----------
 function initOnboarding() {
   const chips = el('roleChips');
-  const emojiFor = (name) => (PERSONAS.find((p) => p.name === name) || {}).emoji || '';
+  const personaFor = (name) => PERSONAS.find((p) => p.name === name) || {};
   for (const role of Object.keys(ROLES)) {
     const b = document.createElement('button');
     b.type = 'button';
     b.className = 'role-chip';
-    const e = emojiFor(role);
-    b.textContent = e ? `${e} ${role}` : role;
+    const p = personaFor(role);
+    // A generated face if one has been built, the emoji if not. The emoji stays
+    // as the fallback so a new persona is never a broken image.
+    if (p.id) {
+      const img = document.createElement('img');
+      img.className = 'role-face';
+      img.src = `personas/${p.id}.svg`;
+      img.alt = '';
+      img.loading = 'lazy';
+      img.width = 28;
+      img.height = 28;
+      img.addEventListener('error', () => {
+        img.replaceWith(document.createTextNode(p.emoji ? `${p.emoji} ` : ''));
+      });
+      b.appendChild(img);
+    }
+    b.appendChild(document.createTextNode(p.id ? role : p.emoji ? `${p.emoji} ${role}` : role));
     b.addEventListener('click', () => chooseRole(role));
     chips.appendChild(b);
   }

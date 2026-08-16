@@ -19,6 +19,30 @@ Produces a complete set of developer handoff annotations for a Figma screen or c
 - **Interaction type** (static / interactive / animated / form)
 - **Developer audience** (mobile / frontend / full-stack)
 
+
+## Programmatic Helper
+
+Contrast ratios cannot be eyeballed. The AA line sits at 4.5:1, and `#777777`
+on white is 4.478 (fails) while `#767676` is 4.54 (passes) — no amount of
+looking at a screenshot separates those. Compute them:
+
+```bash
+npx --yes notugly fix "#8ab4f8" "#ffffff"     # ratio, APCA, and the nearest passing colour
+npx --yes notugly onepager <url> --out review.html   # every pairing, printable
+npx --yes notugly vision                      # which colours merge for colour-blind viewers
+```
+
+`notugly fix` returns the ratio, the APCA lightness contrast, and the closest
+colour to the one already chosen that passes — same hue, same chroma. Paste
+those numbers into the tables below rather than estimating them.
+
+Deterministic, zero dependencies, and **no model call** — so it costs nothing to
+run and gives the same answer every time.
+
+Contrast annotations should carry the computed ratio and the target, e.g.
+"4.52:1 — passes AA for body text". An annotation that says "check contrast" is
+a task, not an annotation.
+
 ## Output Structure
 
 ### 1. Screen/Component Overview

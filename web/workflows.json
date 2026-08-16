@@ -144,6 +144,19 @@
         "ai-assisted-performance-review",
         "ai-roi-audit"
       ]
+    },
+    {
+      "id": "design-review",
+      "name": "Design Review",
+      "command": "/design-review",
+      "lifecycle": "React → Measure → Diagnose → Hand over",
+      "summary": "Review a design end to end and finish with measured numbers rather than adjectives — every contrast ratio computed, and the fixes split into find-and-replace versus decisions somebody has to make.",
+      "skills": [
+        "design-critique",
+        "accessibility-audit",
+        "design-system-audit",
+        "design-handoff-brief"
+      ]
     }
   ]
 }

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 100 100" role="img" aria-label="Compliance / Security Lead"><defs><clipPath id="c1nw8x2s"><circle cx="50" cy="50" r="50"/></clipPath></defs><g clip-path="url(#c1nw8x2s)">
+    <rect width="100" height="100" fill="#00b5db"/>
+    
+    <path d="M26 44 l4 -20 l17 10 z" fill="#7497bc"/>
+    <path d="M74 44 l-4 -20 l-17 10 z" fill="#7497bc"/>
+    <ellipse cx="50" cy="56" rx="27" ry="24" fill="#7497bc"/>
+    <path d="M34.60067444923334 52 q4 4 8 0" stroke="#00202d" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+         <path d="M57.39932555076666 52 q4 4 8 0" stroke="#00202d" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    <path d="M47 63 l3 3 l3 -3 z" fill="#00202d"/>
+    <path d="M50 66 q-4 4 -8 1 M50 66 q4 4 8 1" stroke="#00202d" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <g stroke="#00202d" stroke-width="1.6" stroke-linecap="round" opacity=".7">
+      <path d="M22 58 h9 M22 64 h9 M78 58 h-9 M78 64 h-9"/>
+    </g>
+    </g></svg>

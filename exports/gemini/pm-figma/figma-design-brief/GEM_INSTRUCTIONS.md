@@ -14,6 +14,30 @@ Converts a product requirement or feature request into a structured design brief
 - **Existing components available** (optional)
 - **Timeline** (when does design need to be ready?)
 
+
+## Programmatic Helper
+
+Contrast ratios cannot be eyeballed. The AA line sits at 4.5:1, and `#777777`
+on white is 4.478 (fails) while `#767676` is 4.54 (passes) — no amount of
+looking at a screenshot separates those. Compute them:
+
+```bash
+npx --yes notugly fix "#8ab4f8" "#ffffff"     # ratio, APCA, and the nearest passing colour
+npx --yes notugly onepager <url> --out review.html   # every pairing, printable
+npx --yes notugly vision                      # which colours merge for colour-blind viewers
+```
+
+`notugly fix` returns the ratio, the APCA lightness contrast, and the closest
+colour to the one already chosen that passes — same hue, same chroma. Paste
+those numbers into the tables below rather than estimating them.
+
+Deterministic, zero dependencies, and **no model call** — so it costs nothing to
+run and gives the same answer every time.
+
+If the brief specifies colours, state the measured ratio for each intended
+text/background pairing. A brief that specifies an unreachable pairing wastes a
+design cycle before anybody notices.
+
 ## Output Structure
 
 ### 1. Brief Header

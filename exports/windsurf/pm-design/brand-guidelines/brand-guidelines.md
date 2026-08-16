@@ -20,6 +20,29 @@ Ask for (if not already provided):
 - **The artifact and its audience** (apply mode): what's being branded and for whom
 - **The formality of truth**: is there an official guidelines doc this must defer to, or is this creating the de-facto one?
 
+## Programmatic Helper
+
+Extract mode says "the exact hex values, not memory". Reading them off a
+screenshot *is* memory. Read them off the site:
+
+```bash
+npx --yes notugly steal example.com        # palette with usage counts, fonts, radii, shadows
+npx --yes notugly spec example.com         # the same, as a table you can paste in
+npx --yes notugly name "#4f76b6"           # "Hydrangea" — a name a stakeholder can argue with
+```
+
+`steal` parses the real stylesheets and returns each colour with **how many
+times it is used**, which is what separates a brand colour from a one-off in a
+footer. `spec` adds a measured contrast ratio and an inferred role per colour.
+
+For Apply mode, `npx notugly fix "#fg" "#bg"` gives the nearest passing colour
+to the brand's own — same hue, same chroma — which is how you honour rule 3
+below without abandoning the palette.
+
+Deterministic, zero dependencies, **no model call**. It reads the stylesheets a
+browser fetches on first load, so it sees what a browser sees and not what
+JavaScript adds later — a partial sample, honestly labelled.
+
 ## Extract Method
 
 1. **Mine artifacts, not aspirations.** Pull from what the brand actually ships: the exact hex values (from the site's CSS/screenshots, not memory), the real font stack, how much whitespace they genuinely use, how their headlines are actually written. The "About" page says "bold and human"; the evidence says what that means in practice.
@@ -32,7 +55,7 @@ Ask for (if not already provided):
 
 1. **Token-map the artifact first** — inventory its current colors/fonts/spacings, then map each to the kit's equivalent. Wholesale mapping beats spot-fixing (spot-fixing produces the half-branded artifact, which reads worse than unbranded).
 2. **Apply voice, not just paint** — retitle headings in the brand's headline pattern, sweep for banned phrases, adjust register. A perfectly-colored deck in the wrong voice still feels off-brand.
-3. **Respect the hierarchy of the artifact** — branding never overrides legibility: contrast checks still bind, dense tables stay functional; the brand's job is recognition, not decoration.
+3. **Respect the hierarchy of the artifact** — branding never overrides legibility: contrast checks still bind (measure them — `npx notugly fix` returns the nearest passing colour in the same hue rather than making you abandon the brand colour), dense tables stay functional; the brand's job is recognition, not decoration.
 4. **Note conformance honestly** — what was applied, what couldn't be (font unavailable → declared substitute), what needs a human/designer call.
 
 ## Output Format

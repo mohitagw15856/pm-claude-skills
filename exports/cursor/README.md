@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1098 skills exported. Copy a `.mdc rule` into the tool to use it.
+1099 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -293,6 +293,7 @@
 | Design Critique | `pm-design` | `pm-design/design-critique/design-critique.mdc` |
 | Design Handoff Brief | `pm-advanced` | `pm-advanced/design-handoff-brief/design-handoff-brief.mdc` |
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/design-system-audit.mdc` |
+| Design System Generate | `other` | `other/design-system-generate/design-system-generate.mdc` |
 | Desk Ergonomics Audit | `pm-wellbeing` | `pm-wellbeing/desk-ergonomics-audit/desk-ergonomics-audit.mdc` |
 | Desk Research Sprint | `pm-cowork` | `pm-cowork/desk-research-sprint/desk-research-sprint.mdc` |
 | Desktop Zero | `pm-cowork` | `pm-cowork/desktop-zero/desktop-zero.mdc` |

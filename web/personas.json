@@ -46,8 +46,8 @@
     {
       "id": "designer", "name": "Designer", "emoji": "🎨",
       "useWhen": "You own the experience, from flows to handoff.",
-      "skills": ["figma-design-review", "design-critique", "customer-journey-map", "design-system-audit", "accessibility-audit", "design-handoff-brief"],
-      "recipe": null, "subagent": null
+      "skills": ["figma-design-review", "design-critique", "design-system-generate", "design-system-audit", "accessibility-audit", "design-handoff-brief"],
+      "recipe": "design-review", "subagent": null
     }
   ]
 }

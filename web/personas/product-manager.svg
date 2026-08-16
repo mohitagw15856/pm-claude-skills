@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 100 100" role="img" aria-label="Product Manager"><defs><clipPath id="csnbkmn"><circle cx="50" cy="50" r="50"/></clipPath></defs><g clip-path="url(#csnbkmn)">
+    <rect width="100" height="100" fill="#75bc6d"/>
+    
+    <circle cx="50" cy="52" r="30" fill="#f1cda4"/>
+    <path d="M28 36 q10 -18 32 -14 q10 2 12 12 q-20 -10 -44 2z" fill="#072105"/>
+    <circle cx="35.35601361677982" cy="50" r="2.696077584428713" fill="#072105"/>
+         <circle cx="64.64398638322018" cy="50" r="2.696077584428713" fill="#072105"/>
+    <g fill="none" stroke="#a149af" stroke-width="3.4157637170515955">
+      <circle cx="35.35601361677982" cy="50" r="11.185146240750328"/>
+      <circle cx="64.64398638322018" cy="50" r="11.185146240750328"/>
+      <path d="M46.54115985753015 50 h6.917680284939706"/>
+      <path d="M24.17086737602949 49 l-6 -3"/>
+      <path d="M75.82913262397051 49 l6 -3"/>
+    </g>
+    <path d="M44 66 q6 6 12 0" fill="none" stroke="#072105" stroke-width="2.6" stroke-linecap="round"/>
+    </g></svg>

@@ -37,6 +37,31 @@ Ask the user for these if not provided:
 6. Write a "not in scope" section to prevent scope creep in design
 7. **Validate** — Confirm every edge case listed is specific enough to design for, and every out-of-scope item is concrete enough to say "no" to
 
+
+## Programmatic Helper
+
+Contrast ratios cannot be eyeballed. The AA line sits at 4.5:1, and `#777777`
+on white is 4.478 (fails) while `#767676` is 4.54 (passes) — no amount of
+looking at a screenshot separates those. Compute them:
+
+```bash
+npx --yes notugly fix "#8ab4f8" "#ffffff"     # ratio, APCA, and the nearest passing colour
+npx --yes notugly onepager <url> --out review.html   # every pairing, printable
+npx --yes notugly vision                      # which colours merge for colour-blind viewers
+```
+
+`notugly fix` returns the ratio, the APCA lightness contrast, and the closest
+colour to the one already chosen that passes — same hue, same chroma. Paste
+those numbers into the tables below rather than estimating them.
+
+Deterministic, zero dependencies, and **no model call** — so it costs nothing to
+run and gives the same answer every time.
+
+Handoff is exactly where contrast gets lost: a designer picks a colour in a tool
+with no contrast checker, and an engineer implements it faithfully. Put the
+measured ratio next to every colour in the handoff table so the number travels
+with the value.
+
 ## Output Structure
 
 ### Design Brief: [Feature Name]

@@ -17,6 +17,31 @@ Ask the user for these if not provided:
 - **Known assistive technology users?** (Yes/No — if yes, which: screen reader / switch access / voice control / magnification)
 - **Platform** (Web / iOS / Android / Desktop app)
 
+
+## Programmatic Helper
+
+Contrast ratios cannot be eyeballed. The AA line sits at 4.5:1, and `#777777`
+on white is 4.478 (fails) while `#767676` is 4.54 (passes) — no amount of
+looking at a screenshot separates those. Compute them:
+
+```bash
+npx --yes notugly fix "#8ab4f8" "#ffffff"     # ratio, APCA, and the nearest passing colour
+npx --yes notugly onepager <url> --out review.html   # every pairing, printable
+npx --yes notugly vision                      # which colours merge for colour-blind viewers
+```
+
+`notugly fix` returns the ratio, the APCA lightness contrast, and the closest
+colour to the one already chosen that passes — same hue, same chroma. Paste
+those numbers into the tables below rather than estimating them.
+
+Deterministic, zero dependencies, and **no model call** — so it costs nothing to
+run and gives the same answer every time.
+
+**For 1.4.3 Contrast (Minimum) and 1.4.11 Non-text Contrast**, every row in the
+remediation table should carry a measured ratio, not an assessment. If the user
+supplied a screenshot rather than hex values, say so explicitly in the audit —
+an inferred ratio is not an audit finding.
+
 ## Output Structure
 
 ---

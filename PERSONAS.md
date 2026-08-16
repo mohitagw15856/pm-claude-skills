@@ -2,7 +2,7 @@
 
 > **A persona = a skill loadout + a workflow recipe + a subagent.** Pick the role closest to your job
 > and you get the handful of skills to start with, the chained recipe for your most common end-to-end
-> task, and (where one exists) a specialist subagent. It's the fastest way in — no scrolling 1098 skills.
+> task, and (where one exists) a specialist subagent. It's the fastest way in — no scrolling 1099 skills.
 
 Personas drive the **"What do you do?"** chips in the [playground](https://mohitagw15856.github.io/pm-claude-skills/)
 and are defined once in [`web/personas.json`](web/personas.json). Use a loadout three ways:
@@ -20,6 +20,8 @@ and are defined once in [`web/personas.json`](web/personas.json). Use a loadout 
 | 🤝 **Customer Success** | cs-health-scorecard · churn-analysis · cs-escalation-brief · renewal-playbook · qbr-deck · account-plan | `/rescue-an-account` | [`cs-guardian`](agents/cs-guardian.md) |
 | 📈 **Growth / Marketing** | marketing-funnel-plan · growth-experiment-backlog · retention-loop-design · lifecycle-crm-plan · paid-acquisition-plan · messaging-framework | `/grow-a-product` | — |
 | 🛡️ **Compliance / Security Lead** | soc2-readiness · gdpr-compliance · iso-27001-isms · vendor-security-review · data-retention-policy · security-threat-model | — | — |
-| 🎨 **Designer** | figma-design-review · design-critique · customer-journey-map · design-system-audit · accessibility-audit · design-handoff-brief | — | — |
+| 🎨 **Designer** | figma-design-review · design-critique · design-system-generate · design-system-audit · accessibility-audit · design-handoff-brief | `/design-review` | — |
 
 **Add or edit a persona:** edit [`web/personas.json`](web/personas.json) (name, emoji, loadout, recipe, subagent). The playground onboarding and this table both read from it.
+
+**Faces.** Each persona also has a generated face in [`web/personas/`](web/personas/), used on the playground chips with the emoji as a fallback. They are deterministic from the persona id — same face forever, nothing to host, nothing to redraw when a persona is renamed. Rebuild with `node scripts/build-persona-faces.mjs` (needs `npm i -D notugly`); a persona with no cast entry is reported loudly rather than silently skipped.

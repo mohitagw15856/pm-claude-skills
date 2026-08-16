@@ -644,3 +644,8 @@ html[data-theme="light"] body::before { display: none; }
   .skill-card, .cmd-results { animation: none !important; }
   .cmd-go:hover, .cmd-hit:hover { transform: none; }
 }
+
+/* Generated persona faces on the onboarding chips. The emoji remains the
+   fallback, so a persona without a built face is never a broken image. */
+.role-chip { display: inline-flex; align-items: center; gap: .5rem; }
+.role-face { border-radius: 50%; flex: none; vertical-align: middle; }

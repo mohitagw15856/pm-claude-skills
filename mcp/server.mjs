@@ -112,6 +112,36 @@ const READONLY = { readOnlyHint: true, destructiveHint: false, idempotentHint: t
 
 const TOOLS = [
   {
+    name: 'check_contrast',
+    title: 'Check colour contrast',
+    description:
+      'Compute the real WCAG 2.1 contrast ratio and APCA lightness contrast for a foreground/background pair, and return the nearest passing colour in the same hue. Use whenever a skill needs a contrast number — accessibility-audit, design-system-audit, design-handoff-brief, brand-guidelines, any Figma review. A ratio cannot be judged by eye: #777777 on white is 4.478 (fails AA) and #767676 is 4.542 (passes), and no amount of looking separates those. Deterministic arithmetic — no model call, no network.',
+    inputSchema: {
+      type: 'object',
+      additionalProperties: false,
+      properties: {
+        foreground: { type: 'string', description: 'The text colour, as a six-digit hex, e.g. "#8ab4f8".' },
+        background: { type: 'string', description: 'The colour it sits on, as a six-digit hex, e.g. "#ffffff".' },
+        level: { type: 'string', enum: ['AA', 'AA-large', 'AAA'], description: 'The bar to clear. Defaults to AA (4.5:1), the legal standard in most jurisdictions.' },
+      },
+      required: ['foreground', 'background'],
+    },
+    outputSchema: {
+      type: 'object',
+      properties: {
+        ratio: { type: 'number', description: 'WCAG 2.1 contrast ratio, 1 to 21.' },
+        passes: { type: 'boolean', description: 'Whether it clears the requested level.' },
+        grade: { type: 'string', description: 'fail / aa-large / aa / aaa.' },
+        apca: { type: 'number', description: 'APCA Lc, signed. Positive is dark text on light.' },
+        apcaUse: { type: 'string', description: 'What APCA says this contrast is good enough for.' },
+        nearestPassing: { type: 'string', description: 'A close colour to the foreground that clears the level, holding the hue roughly steady. Null if it already passes. For an exact perceptual answer on saturated colours, run `npx notugly fix <fg> <bg>`, which walks OKLCh lightness instead of RGB.' },
+        says: { type: 'string', description: 'A one-line summary suitable for pasting into an audit table.' },
+      },
+      required: ['ratio', 'passes', 'grade', 'says'],
+    },
+    annotations: { title: 'Check colour contrast', ...READONLY },
+  },
+  {
     name: 'run_skill',
     title: 'Run a skill (no API key — uses YOUR model via MCP sampling)',
     description:
@@ -294,7 +324,104 @@ document.getElementById('go').addEventListener('click',()=>{
 // structured object matching the tool's outputSchema.
 const skillItem = (s) => ({ name: s.name, title: s.title, tier: s.tier, description: s.description });
 
+
+// --- contrast ----------------------------------------------------------------
+//
+// Inlined rather than imported. This server is the thing people run with npx and
+// it has no dependencies; adding one for forty lines of arithmetic would be a
+// poor trade. The maths is WCAG 2.1 relative luminance and APCA-W3 0.1.9 — the
+// same implementation as notugly, which is where the fuller toolkit lives
+// (npx notugly fix / onepager / vision) if a skill needs more than one pair.
+
+const HEX = (h) => {
+  const m = String(h).trim().replace(/^#/, '');
+  const full = m.length === 3 ? m.split('').map((c) => c + c).join('') : m.slice(0, 6);
+  if (!/^[0-9a-f]{6}$/i.test(full)) throw new Error(`"${h}" is not a six-digit hex colour.`);
+  return [0, 2, 4].map((i) => parseInt(full.slice(i, i + 2), 16));
+};
+
+const luminance = (hex) => {
+  const [r, g, b] = HEX(hex).map((v) => {
+    const s = v / 255;
+    return s <= 0.04045 ? s / 12.92 : ((s + 0.055) / 1.055) ** 2.4;
+  });
+  return 0.2126 * r + 0.7152 * g + 0.0722 * b;
+};
+
+const ratioOf = (a, b) => {
+  const [x, y] = [luminance(a), luminance(b)].sort((p, q) => q - p);
+  return (x + 0.05) / (y + 0.05);
+};
+
+// APCA-W3 0.1.9. Asymmetric on purpose: dark-on-light and light-on-dark are not
+// equally readable, which WCAG 2 does not model.
+const apcaOf = (text, bg) => {
+  const Y = (hex) => {
+    const [r, g, b] = HEX(hex);
+    return 0.2126729 * (r / 255) ** 2.4 + 0.7151522 * (g / 255) ** 2.4 + 0.072175 * (b / 255) ** 2.4;
+  };
+  const clamp = (y) => (y < 0.022 ? y + (0.022 - y) ** 1.414 : y);
+  const t = clamp(Y(text));
+  const b = clamp(Y(bg));
+  if (Math.abs(b - t) < 0.0005) return 0;
+  const sapc = b > t ? (b ** 0.56 - t ** 0.57) * 1.14 : (b ** 0.65 - t ** 0.62) * 1.14;
+  const out = b > t ? (sapc < 0.1 ? 0 : sapc - 0.027) : sapc > -0.1 ? 0 : sapc + 0.027;
+  return +(out * 100).toFixed(2);
+};
+
+const APCA_USE = [
+  [90, 'anything, including thin body text'],
+  [75, 'body text at normal weight'],
+  [60, 'body text at 16px or larger'],
+  [45, 'large or bold text only'],
+  [30, 'headlines and non-essential text'],
+  [15, 'decorative only — do not put words here'],
+  [0, 'invisible'],
+];
+
+function checkContrast(args) {
+  const fg = String(args.foreground || '');
+  const bg = String(args.background || '');
+  const target = { AA: 4.5, 'AA-large': 3, AAA: 7 }[args.level] ?? 4.5;
+
+  const ratio = +ratioOf(fg, bg).toFixed(2);
+  const passes = ratio >= target;
+  const grade = ratio >= 7 ? 'aaa' : ratio >= 4.5 ? 'aa' : ratio >= 3 ? 'aa-large' : 'fail';
+  const lc = apcaOf(fg, bg);
+  const apcaUse = (APCA_USE.find(([min]) => Math.abs(lc) >= min) || [0, 'invisible'])[1];
+
+  // Walk all three channels outward together until it clears. That holds hue
+  // roughly steady and is within a fraction of a degree of the proper OKLCh
+  // answer for mid-chroma colours — but near the gamut edge a channel clips and
+  // the hue drifts, so the output points at `npx notugly fix` for that case
+  // rather than quietly being slightly wrong.
+  //
+  // Both directions, because the obvious one is wrong more often than you would
+  // think — a mid-grey on a mid-blue is sometimes cheaper to fix by lightening.
+  let nearestPassing = null;
+  if (!passes) {
+    const [r, g, b] = HEX(fg);
+    for (let step = 1; step <= 255 && !nearestPassing; step++) {
+      for (const dir of [-1, 1]) {
+        const shift = (v) => Math.max(0, Math.min(255, Math.round(v + dir * step)));
+        const cand = '#' + [shift(r), shift(g), shift(b)].map((v) => v.toString(16).padStart(2, '0')).join('');
+        if (ratioOf(cand, bg) >= target) { nearestPassing = cand; break; }
+      }
+    }
+  }
+
+  const says = passes
+    ? `${fg} on ${bg} is ${ratio}:1 — passes ${args.level || 'AA'} (${grade.toUpperCase()}). APCA Lc ${lc}, good for ${apcaUse}.`
+    : `${fg} on ${bg} is ${ratio}:1 — needs ${target}. ${nearestPassing ? `${nearestPassing} clears it.` : 'Nothing at this hue clears it; the background is the problem.'}`;
+
+  return {
+    text: says,
+    structured: { ratio, passes, grade, apca: lc, apcaUse, nearestPassing, says },
+  };
+}
+
 function runTool(name, args = {}) {
+  if (name === 'check_contrast') return checkContrast(args);
   if (name === 'list_skills') {
     const list = SKILLS.filter((s) => !args.tier || s.tier === args.tier);
     const text = `${list.length} skills:\n` + list.map((s) => `- ${s.name} [${s.tier}] — ${s.description}`).join('\n');

@@ -1,4 +1,4 @@
-# 🗂️ All 1098 Skills — full catalog
+# 🗂️ All 1099 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -726,14 +726,15 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (631 skills)
+## 🌍 Industries & Public Sector (632 skills)
 
-### `other` — 21 skills
+### `other` — 22 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Boundary-Setting Scripts** (`boundary-setting-scripts`) | Set a boundary with someone — a friend, family member, coworker, or partner — clearly and kindly, with the actual words and a plan for the pushback. | — |
 | **Conflict De-escalation** (`conflict-deescalation`) | Calm a heated conflict — in person or in writing — before it does damage, by lowering the temperature instead of winning the point. | — |
+| **Design System Generate** (`design-system-generate`) | Generate a complete, accessibility-checked design system from scratch — colour ramps, type scale, spacing, elevation, and exports for CSS… | — |
 | **Digital Death Plan** (`digital-death-plan`) | Plan what happens to your digital life when you die — accounts, photos, passwords, money, and social profiles — so someone you trust can actually… | — |
 | **Future Self Interview** (`future-self-interview`) | Interview your future self about a decision or a stuck moment — a structured perspective-shift that pulls you out of present emotion and into the… | — |
 | **Give Hard Feedback Kindly** (`give-hard-feedback-kindly`) | Give someone difficult feedback — a report, a peer, a friend — so it actually lands and helps, without crushing them or dodging the point. | — |
@@ -1736,4 +1737,4 @@
 
 ---
 
-_1098 skills across 122 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1099 skills across 122 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

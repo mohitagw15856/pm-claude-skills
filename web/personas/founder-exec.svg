@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 100 100" role="img" aria-label="Founder / Exec"><defs><clipPath id="c47oka0"><circle cx="50" cy="50" r="50"/></clipPath></defs><g clip-path="url(#c47oka0)">
+    <rect width="100" height="100" fill="#c7a032"/>
+    
+    <circle cx="50" cy="52" r="26" fill="#daaea6"/>
+    <path d="M29 35 q4 -18 21 -18 q17 0 21 18 q-21 -8 -42 0z" fill="#261800"/>
+    <circle cx="34" cy="47" r="3.581886692298576" fill="#261800"/>
+         <circle cx="66" cy="47" r="3.581886692298576" fill="#261800"/>
+         <circle cx="35.4" cy="45.6" r="1.1939622307661921" fill="#f7eed8"/>
+         <circle cx="67.4" cy="45.6" r="1.1939622307661921" fill="#f7eed8"/>
+    
+    
+    <ellipse cx="28" cy="58" rx="5" ry="3" fill="#ffa84b" fill-opacity="0.55"/>
+         <ellipse cx="72" cy="58" rx="5" ry="3" fill="#ffa84b" fill-opacity="0.55"/>
+    <path d="M43 64 h14" stroke="#261800" stroke-width="3" stroke-linecap="round"/>
+    </g></svg>

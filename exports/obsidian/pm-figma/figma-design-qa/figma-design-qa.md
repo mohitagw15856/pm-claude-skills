@@ -18,6 +18,30 @@ Ask the user for these if not provided:
 - **Handoff tool** (Figma Inspect / Zeplin / Storybook / Direct link)
 - **QA depth** (quick 15 min / standard 30 min / thorough 60 min)
 
+
+## Programmatic Helper
+
+Contrast ratios cannot be eyeballed. The AA line sits at 4.5:1, and `#777777`
+on white is 4.478 (fails) while `#767676` is 4.54 (passes) — no amount of
+looking at a screenshot separates those. Compute them:
+
+```bash
+npx --yes notugly fix "#8ab4f8" "#ffffff"     # ratio, APCA, and the nearest passing colour
+npx --yes notugly onepager <url> --out review.html   # every pairing, printable
+npx --yes notugly vision                      # which colours merge for colour-blind viewers
+```
+
+`notugly fix` returns the ratio, the APCA lightness contrast, and the closest
+colour to the one already chosen that passes — same hue, same chroma. Paste
+those numbers into the tables below rather than estimating them.
+
+Deterministic, zero dependencies, and **no model call** — so it costs nothing to
+run and gives the same answer every time.
+
+QA is a pass/fail activity, so every contrast row needs a number and a verdict.
+For a deployed build, `npx notugly check <url>` **exits non-zero** on a failure,
+which makes it usable directly in CI rather than only by hand.
+
 ## Output Structure
 
 QA Report: [Feature] | [Date] | [Platform]

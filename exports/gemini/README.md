@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1098 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1099 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -293,6 +293,7 @@
 | Design Critique | `pm-design` | `pm-design/design-critique/GEM_INSTRUCTIONS.md` |
 | Design Handoff Brief | `pm-advanced` | `pm-advanced/design-handoff-brief/GEM_INSTRUCTIONS.md` |
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/GEM_INSTRUCTIONS.md` |
+| Design System Generate | `other` | `other/design-system-generate/GEM_INSTRUCTIONS.md` |
 | Desk Ergonomics Audit | `pm-wellbeing` | `pm-wellbeing/desk-ergonomics-audit/GEM_INSTRUCTIONS.md` |
 | Desk Research Sprint | `pm-cowork` | `pm-cowork/desk-research-sprint/GEM_INSTRUCTIONS.md` |
 | Desktop Zero | `pm-cowork` | `pm-cowork/desktop-zero/GEM_INSTRUCTIONS.md` |

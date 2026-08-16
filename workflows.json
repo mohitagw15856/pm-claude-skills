@@ -329,6 +329,35 @@
           "passes": "the renewal decisions"
         }
       ]
+    },
+    {
+      "id": "design-review",
+      "command": "/design-review",
+      "name": "Design Review",
+      "lifecycle": "React → Measure → Diagnose → Hand over",
+      "summary": "Review a design end to end and finish with measured numbers rather than adjectives — every contrast ratio computed, and the fixes split into find-and-replace versus decisions somebody has to make.",
+      "steps": [
+        {
+          "skill": "design-critique",
+          "produces": "an honest read of intent versus execution, written before the measurements",
+          "passes": "what the design is trying to do"
+        },
+        {
+          "skill": "accessibility-audit",
+          "produces": "a WCAG audit with every contrast row computed rather than assessed",
+          "passes": "the measured failures and their nearest passing colours"
+        },
+        {
+          "skill": "design-system-audit",
+          "produces": "whether this is a one-off or a token problem underneath",
+          "passes": "the systemic findings"
+        },
+        {
+          "skill": "design-handoff-brief",
+          "produces": "the decisions, the measured values, and the open questions in buildable form",
+          "passes": "the handoff"
+        }
+      ]
     }
   ]
 }

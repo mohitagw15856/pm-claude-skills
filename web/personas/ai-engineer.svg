@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 100 100" role="img" aria-label="AI/ML Engineer"><defs><clipPath id="c1hsw02w"><circle cx="50" cy="50" r="50"/></clipPath></defs><g clip-path="url(#c1hsw02w)">
+    <rect width="100" height="100" fill="#d3a510"/>
+    
+    <circle cx="50" cy="52" r="30" fill="#eeb4ae"/>
+    <path d="M28 34 q22 -14 44 0 q-22 -6 -44 0z" fill="#261800"/>
+    <circle cx="36.73682490806095" cy="50" r="3.161140980105847" fill="#261800"/>
+         <circle cx="63.26317509193905" cy="50" r="3.161140980105847" fill="#261800"/>
+    <g fill="none" stroke="#e87467" stroke-width="3.1914409602992238">
+      <circle cx="36.73682490806095" cy="50" r="12.091287087881938"/>
+      <circle cx="63.26317509193905" cy="50" r="12.091287087881938"/>
+      <path d="M48.82811199594289 50 h2.3437760081142187"/>
+      <path d="M24.645537820179015 49 l-6 -3"/>
+      <path d="M75.35446217982098 49 l6 -3"/>
+    </g>
+    <path d="M45 67 h10" stroke="#261800" stroke-width="2.6" stroke-linecap="round"/>
+    </g></svg>

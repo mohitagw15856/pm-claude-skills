@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1098 skills exported. Copy a `SKILL.md` into the tool to use it.
+1099 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -293,6 +293,7 @@
 | Design Critique | `pm-design` | `design-critique/SKILL.md` |
 | Design Handoff Brief | `pm-advanced` | `design-handoff-brief/SKILL.md` |
 | Design System Audit | `pm-design` | `design-system-audit/SKILL.md` |
+| Design System Generate | `other` | `design-system-generate/SKILL.md` |
 | Desk Ergonomics Audit | `pm-wellbeing` | `desk-ergonomics-audit/SKILL.md` |
 | Desk Research Sprint | `pm-cowork` | `desk-research-sprint/SKILL.md` |
 | Desktop Zero | `pm-cowork` | `desktop-zero/SKILL.md` |

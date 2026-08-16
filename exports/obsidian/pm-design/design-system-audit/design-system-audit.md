@@ -20,6 +20,42 @@ Ask the user for these if not provided:
 - **Governance model** — centralised team / federated contributors / no dedicated team?
 - **Goal of the audit** — improve adoption / prepare for a rebrand / onboard new teams / justify investment?
 
+
+## Programmatic Helper
+
+Contrast ratios cannot be eyeballed. The AA line sits at 4.5:1, and `#777777`
+on white is 4.478 (fails) while `#767676` is 4.54 (passes) — no amount of
+looking at a screenshot separates those. Compute them:
+
+```bash
+npx --yes notugly fix "#8ab4f8" "#ffffff"     # ratio, APCA, and the nearest passing colour
+npx --yes notugly onepager <url> --out review.html   # every pairing, printable
+npx --yes notugly vision                      # which colours merge for colour-blind viewers
+```
+
+`notugly fix` returns the ratio, the APCA lightness contrast, and the closest
+colour to the one already chosen that passes — same hue, same chroma. Paste
+those numbers into the tables below rather than estimating them.
+
+Deterministic, zero dependencies, and **no model call** — so it costs nothing to
+run and gives the same answer every time.
+
+**For the token consistency and accessibility sections**, point it at the token
+file directly:
+
+```bash
+npx --yes notugly tokens tokens.json    # W3C design tokens or a Figma variables export
+```
+
+That names the failing pairs semantically — `color.text.danger on
+surface.default is 2.99:1 — needs 4.5` — which is a bug with an owner, rather
+than a general note about contrast. It also flags one colour defined under
+several token names, which is the usual sign a system grew by copy-paste.
+
+For drift over time, `npx notugly watch <url> baseline.json` distinguishes "a
+new colour" from "a colour 0.003 away from one that already existed, because
+somebody could not find the token".
+
 ## Output Structure
 
 ---

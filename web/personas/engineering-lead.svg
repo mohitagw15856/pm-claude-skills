@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 100 100" role="img" aria-label="Engineering Lead"><defs><clipPath id="cui5pso"><circle cx="50" cy="50" r="50"/></clipPath></defs><g clip-path="url(#cui5pso)">
+    <rect width="100" height="100" fill="#00a3a5"/>
+    
+    
+    <path d="M30.5 74 v13.500154993031174" stroke="#1667c6" stroke-width="6" stroke-linecap="round"/><path d="M43.5 74 v10.950173389632255" stroke="#1667c6" stroke-width="6" stroke-linecap="round"/><path d="M56.5 74 v13.565040576737374" stroke="#1667c6" stroke-width="6" stroke-linecap="round"/><path d="M69.5 74 v8.888121343683451" stroke="#1667c6" stroke-width="6" stroke-linecap="round"/>
+    <rect x="24" y="28" width="52" height="48" rx="20.09790387377143" fill="#1667c6"/>
+    <circle cx="41" cy="46" r="7" fill="#d8f5f5"/>
+            <circle cx="42.68318618088961" cy="45.629797655157745" r="3.15" fill="#002223"/><circle cx="59" cy="46" r="7" fill="#d8f5f5"/>
+            <circle cx="58.1952811004594" cy="46.51316529326141" r="3.15" fill="#002223"/>
+    <path d="M40 62 h20 v4 l-4 -2 l-4 3 l-4 -3 l-4 2z" fill="#002223"/>
+    <circle cx="30" cy="60" r="4" fill="#8ad663" fill-opacity=".5"/><circle cx="70" cy="60" r="4" fill="#8ad663" fill-opacity=".5"/>
+    </g></svg>

@@ -6,7 +6,7 @@ Run one as a slash command in Claude Code (e.g. `/ship-a-feature a referral prog
 
 <!-- Generated from workflows.json by scripts/build-workflows.mjs — do not edit by hand. -->
 
-There are **11 recipes** today:
+There are **12 recipes** today:
 
 | Recipe | Command | Lifecycle | Chains |
 |--------|---------|-----------|--------|
@@ -21,6 +21,7 @@ There are **11 recipes** today:
 | **Land a Job** | `/land-a-job` | Decode → Research → Apply → Interview | 4 skills |
 | **Ship an MCP Server** | `/ship-an-mcp-server` | Spec → Audit → Price | 4 skills |
 | **Adopt AI Properly** | `/adopt-ai-properly` | Policy → Roles → Proof | 4 skills |
+| **Design Review** | `/design-review` | React → Measure → Diagnose → Hand over | 4 skills |
 
 ## Ship a Feature — `/ship-a-feature`
 
@@ -144,6 +145,17 @@ There are **11 recipes** today:
 2. **role-redesign-for-ai** → produces redesigned role charters with capacity deliberately reallocated.
 3. **ai-assisted-performance-review** → produces review criteria that measure judgment, verification, outcomes, and leverage.
 4. **ai-roi-audit** → produces per-tool keep/consolidate/cut verdicts with the measurement behind each number.
+
+## Design Review — `/design-review`
+
+*React → Measure → Diagnose → Hand over* · Review a design end to end and finish with measured numbers rather than adjectives — every contrast ratio computed, and the fixes split into find-and-replace versus decisions somebody has to make.
+
+`design-critique` → `accessibility-audit` → `design-system-audit` → `design-handoff-brief`
+
+1. **design-critique** → produces an honest read of intent versus execution, written before the measurements.
+2. **accessibility-audit** → produces a WCAG audit with every contrast row computed rather than assessed.
+3. **design-system-audit** → produces whether this is a one-off or a token problem underneath.
+4. **design-handoff-brief** → produces the decisions, the measured values, and the open questions in buildable form.
 
 ---
 

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1098 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1099 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -293,6 +293,7 @@
 | Design Critique | `pm-design` | `pm-design/design-critique/SYSTEM_PROMPT.md` |
 | Design Handoff Brief | `pm-advanced` | `pm-advanced/design-handoff-brief/SYSTEM_PROMPT.md` |
 | Design System Audit | `pm-design` | `pm-design/design-system-audit/SYSTEM_PROMPT.md` |
+| Design System Generate | `other` | `other/design-system-generate/SYSTEM_PROMPT.md` |
 | Desk Ergonomics Audit | `pm-wellbeing` | `pm-wellbeing/desk-ergonomics-audit/SYSTEM_PROMPT.md` |
 | Desk Research Sprint | `pm-cowork` | `pm-cowork/desk-research-sprint/SYSTEM_PROMPT.md` |
 | Desktop Zero | `pm-cowork` | `pm-cowork/desktop-zero/SYSTEM_PROMPT.md` |
