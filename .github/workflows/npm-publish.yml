@@ -44,7 +44,25 @@ jobs:
             exit 1
           fi
 
+      # Skip rather than fail when the version is already on npm. A maintainer
+      # who published by hand before tagging, or a re-run of this workflow, both
+      # hit E403 "cannot publish over the previously published versions" — which
+      # leaves a red X on a release that is in fact fine. The tag/version match
+      # is checked above, so the only way to reach here with the version already
+      # present is a duplicate publish, not a wrong one.
+      - name: Is this version already on npm?
+        id: published
+        run: |
+          PKG="$(node -p "require('./package.json').version")"
+          if npm view "pm-claude-skills@${PKG}" version >/dev/null 2>&1; then
+            echo "already=true" >> "$GITHUB_OUTPUT"
+            echo "::notice::pm-claude-skills@${PKG} is already on npm — nothing to publish."
+          else
+            echo "already=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Publish to npm (public, with provenance)
+        if: steps.published.outputs.already == 'false'
         run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
