@@ -26,6 +26,26 @@ Ask for these if not provided:
 - **The vibe** — competitive, co-op, party/laughs, strategy
 - **Constraints** — non-gamers present, kids, language, someone who hates conflict/losing
 
+## Programmatic Helper
+
+Two of the things that actually derail a game night — the teach going long, and
+an argument nobody can settle — have a lookup rather than an opinion behind them:
+
+```bash
+npx --yes @mohitagw15856/rulebook find --players 5 --minutes 45   # what fits the slot
+npx --yes @mohitagw15856/rulebook teach catan                     # a teach script, timed
+npx --yes @mohitagw15856/rulebook ruling catan "can we trade on someone else's turn"
+```
+
+`find` filters 37 games by player count, length, weight and downtime. `teach`
+gives a running order for explaining one, with honest timings. `ruling` returns
+the actual rule *and* how commonly each house rule is played — which is what
+ends the argument, because the disagreement is usually between two groups who
+each learned it differently and are both partly right.
+
+Use the teach times from `teach` in the running order below rather than
+estimating them. A night runs long because the teach ran long.
+
 ## Framework: Fit The Group, Build The Arc
 
 1. **Player count first.** Filter to games that play well at your exact number — the most common reason a night flops.

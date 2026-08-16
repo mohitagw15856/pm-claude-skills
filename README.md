@@ -311,17 +311,28 @@ The library grew an ecosystem — all optional, all linked from the **[full show
 
 **[▶ Skill Playground](https://mohitagw15856.github.io/pm-claude-skills/)** — try any skill in your browser, no install · **[📸 the Gallery](docs/GALLERY.md)** — the creative side, in screenshots · **[Anti-Pattern Museum](https://mohitagw15856.github.io/pm-claude-skills/museum.html)** — 2,900+ shareable rules · **[The Handbook](https://mohitagw15856.github.io/pm-claude-skills/handbook.html)** (also a [real printed book](docs/print/)) · **[Workflow recipes](WORKFLOWS.md)** · **[Subagents & slash commands](agents/)** · **[MCP server + REST API](mcp-remote/)** · **[n8n / Slack / Obsidian integrations](connectors/)** · **[The Boardroom](https://mohitagw15856.github.io/pm-claude-skills/boardroom.html)** · **[SkillBench](skillbench/)** · **[Org Edition](org/)** · **[🇪🇸 🇫🇷 🇨🇳 🇯🇵 translations](skills-i18n/)**
 
-### Design skills that compute rather than estimate
+### Companion tools — for the bits a skill shouldn't guess
 
-A contrast ratio cannot be judged by eye — `#777777` on white is 4.478 and fails
-AA, `#767676` is 4.542 and passes. So the design skills call
-**[notugly](https://github.com/mohitagw15856/notugly)** for the numbers:
+A skill can tell a model to check the contrast. Only arithmetic can actually
+check it. Where a question has a *right answer* rather than a good one, the
+skill calls out to a tool instead of estimating — both are MIT, zero-dependency,
+and **neither makes a model call**, so they cost nothing to run and return the
+same answer every time.
+
+**[notugly](https://github.com/mohitagw15856/notugly)** — design systems that are
+provably not ugly. `#777777` on white is 4.478 and fails AA; `#767676` is 4.542
+and passes, and no amount of looking at a screenshot separates those.
 `accessibility-audit`, `design-system-audit`, `design-handoff-brief`,
-`brand-guidelines` and the Figma reviews all fill their contrast rows from
-`npx notugly`, and the MCP server exposes `check_contrast` directly.
+`brand-guidelines` and the Figma reviews now fill their contrast rows from
+`npx notugly`; the MCP server exposes `check_contrast` directly; and
+[`design-system-generate`](skills/design-system-generate/) wraps it for the case
+where there is no design system and something ships on Thursday.
 
-Deterministic, zero dependencies, **no model call** — so it costs nothing to run
-and returns the same answer every time.
+**[rulebook](https://github.com/mohitagw15856/rulebook)** — 37 games, 203
+rulings, and how commonly each house rule is actually played.
+[`board-game-night-planner`](skills/board-game-night-planner/) uses it for teach
+times and for settling the argument, because a rules disagreement is usually two
+groups who learned it differently and are both partly right.
 
 ## 📄 The one-page cheatsheet
 
