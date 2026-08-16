@@ -3,9 +3,9 @@
 # The name has to be unique across every action, user and organisation on
 # GitHub, which is why the listing is not called "pm-claude-skills".
 name: Validate Agent Skills
-description: >-
-  Lint your SKILL.md files in CI — frontmatter, trigger clauses, template
-  placeholders and structure — with findings annotated inline on the pull request.
+# Marketplace caps this at 125 characters, and the folded (>-) form still
+# counts the joined string — so it has to be short, not just short per line.
+description: 'Lint your SKILL.md files in CI. Findings land inline on the pull request diff, not in a log nobody opens.'
 author: mohitagw15856
 
 branding:
