@@ -311,6 +311,23 @@ The library grew an ecosystem — all optional, all linked from the **[full show
 
 **[▶ Skill Playground](https://mohitagw15856.github.io/pm-claude-skills/)** — try any skill in your browser, no install · **[📸 the Gallery](docs/GALLERY.md)** — the creative side, in screenshots · **[Anti-Pattern Museum](https://mohitagw15856.github.io/pm-claude-skills/museum.html)** — 2,900+ shareable rules · **[The Handbook](https://mohitagw15856.github.io/pm-claude-skills/handbook.html)** (also a [real printed book](docs/print/)) · **[Workflow recipes](WORKFLOWS.md)** · **[Subagents & slash commands](agents/)** · **[MCP server + REST API](mcp-remote/)** · **[n8n / Slack / Obsidian integrations](connectors/)** · **[The Boardroom](https://mohitagw15856.github.io/pm-claude-skills/boardroom.html)** · **[SkillBench](skillbench/)** · **[Org Edition](org/)** · **[🇪🇸 🇫🇷 🇨🇳 🇯🇵 translations](skills-i18n/)**
 
+### Lint your own skills in CI
+
+The validator that keeps these 1,099 honest, as a GitHub Action:
+
+```yaml
+- uses: mohitagw15856/pm-claude-skills@v76
+  with:
+    path: .claude/skills   # optional — it finds them otherwise
+```
+
+It checks frontmatter, the `Use when …` trigger clause a model actually matches
+on, leftover template text, and structure — and **annotates each finding inline
+on the pull request diff**, because a finding on the line beats a finding in a
+log nobody opens. Also available as `npx pm-claude-skills skillcheck`.
+
+Zero dependencies, no Docker image, no model call.
+
 ### Companion tools — for the bits a skill shouldn't guess
 
 A skill can tell a model to check the contrast. Only arithmetic can actually

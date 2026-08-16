@@ -1,0 +1,85 @@
+# Validate Agent Skills — the SKILL.md linter from pm-claude-skills, as an Action.
+#
+# The name has to be unique across every action, user and organisation on
+# GitHub, which is why the listing is not called "pm-claude-skills".
+name: Validate Agent Skills
+description: >-
+  Lint your SKILL.md files in CI — frontmatter, trigger clauses, template
+  placeholders and structure — with findings annotated inline on the pull request.
+author: mohitagw15856
+
+branding:
+  icon: check-square
+  color: purple
+
+inputs:
+  path:
+    description: >-
+      Where your skills live. Each skill is a folder containing a SKILL.md.
+      Leave unset to search skills/, .claude/skills/, src/skills/ and the
+      repository root in that order.
+    required: false
+    default: ''
+  strict:
+    description: >-
+      Treat warnings as errors. Warnings are style advice — a missing "Use
+      when …" clause, no Quality Checks section — so this is worth turning on
+      once a library is established and premature while one is being written.
+    required: false
+    default: 'false'
+  annotate:
+    description: >-
+      Annotate findings inline on the pull request diff. On by default, because
+      a finding on the line beats a finding in a log nobody opens.
+    required: false
+    default: 'true'
+  version:
+    description: >-
+      The pm-claude-skills version to run. Pinned to a major range by default —
+      an action that floats on `latest` breaks every user the day a major lands.
+    required: false
+    default: '^76.0.0'
+
+outputs:
+  errors:
+    description: Number of errors found.
+    value: ${{ steps.check.outputs.errors }}
+  warnings:
+    description: Number of warnings found.
+    value: ${{ steps.check.outputs.warnings }}
+  skills:
+    description: Number of skills checked.
+    value: ${{ steps.check.outputs.skills }}
+
+runs:
+  using: composite
+  steps:
+    # No install step and no Docker image: the validator has no dependencies, so
+    # npx fetches one package and nothing else.
+    - name: Validate SKILL.md files
+      id: check
+      shell: bash
+      run: |
+        set -o pipefail
+
+        ARGS=()
+        [ -n "${{ inputs.path }}" ] && ARGS+=(--dir "${{ inputs.path }}")
+        [ "${{ inputs.strict }}" = "true" ] && ARGS+=(--strict)
+        [ "${{ inputs.annotate }}" != "true" ] && ARGS+=(--no-annotate)
+
+        # Run twice on purpose. The JSON pass populates the outputs even when the
+        # check fails; the human pass writes the annotations and sets the exit
+        # code. Parsing the annotated output for numbers would be fragile.
+        set +e
+        REPORT=$(npx --yes "pm-claude-skills@${{ inputs.version }}" skillcheck "${ARGS[@]}" --json --no-annotate 2>/dev/null)
+        set -e
+
+        if [ -n "$REPORT" ]; then
+          {
+            echo "errors=$(node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{console.log(JSON.parse(s).errors??0)}catch{console.log(0)}})' <<< "$REPORT")"
+            echo "warnings=$(node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{console.log(JSON.parse(s).warnings??0)}catch{console.log(0)}})' <<< "$REPORT")"
+            echo "skills=$(node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{try{console.log(JSON.parse(s).skills??0)}catch{console.log(0)}})' <<< "$REPORT")"
+          } >> "$GITHUB_OUTPUT"
+        fi
+
+        npx --yes "pm-claude-skills@${{ inputs.version }}" skillcheck "${ARGS[@]}"

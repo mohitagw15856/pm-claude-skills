@@ -1,0 +1,44 @@
+# The SkillCheck action, run against this repo's own 1,099 skills.
+#
+# Dogfooding, and also the honest test: a linter that cannot keep its own
+# library tidy has no business in anybody else's pipeline. This uses the action
+# by path (./) so a change to action.yml is exercised in the same PR that makes
+# it, rather than only after a release.
+name: skillcheck action
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**'
+      - 'bin/skillcheck.mjs'
+      - 'action.yml'
+      - '.github/workflows/skillcheck-action.yml'
+  pull_request:
+    paths:
+      - 'skills/**'
+      - 'bin/skillcheck.mjs'
+      - 'action.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Run the local validator rather than the published one, so a change is
+      # tested before it ships. Consumers get the npx path in action.yml.
+      - name: Validate every SKILL.md
+        run: node bin/skillcheck.mjs --dir skills
+
+      - name: Fail on a skill with no trigger clause
+        # Not --strict on the whole library yet: six skills predate the rule and
+        # fixing them is a separate change from adding the linter.
+        continue-on-error: true
+        run: node bin/skillcheck.mjs --dir skills --strict

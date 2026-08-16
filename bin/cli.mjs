@@ -377,7 +377,7 @@ Usage:
   npx pm-claude-skills search [query…] [--json] [--limit <n>]
   npx pm-claude-skills install <owner/repo>   # install skills from ANY GitHub repo — security-scanned + SkillSpec-graded
   npx pm-claude-skills prove --skill <dir> --tasks <file>  # A/B-verify a skill: on vs off, real token counts\n  npx pm-claude-skills mcp-audit [--connect]        # your MCP servers are charging you rent - measure it
-  npx pm-claude-skills verify                 # integrity check: detect drift in anything "install" brought in
+  npx pm-claude-skills skillcheck [--dir <path>]    # validate your own SKILL.md files (--strict, --json)\n  npx pm-claude-skills verify                 # integrity check: detect drift in anything "install" brought in
   npx pm-claude-skills chain <workflow>       # run a whole multi-skill pipeline (chain --list to see them)
   npx pm-claude-skills council <skill>        # author -> cross-vendor critique -> arbiter (2+ provider keys)
   npx pm-claude-skills migrate <dir>          # convert a folder of prompts/SOPs into SkillSpec skills
@@ -481,6 +481,14 @@ else if (cmd === 'prove') {
   const { run } = await import('./prove.mjs');
   try { process.exit(await run(process.argv.slice(3))); }
   catch (e) { console.error(`Error: ${e.message}`); process.exit(1); }
+}
+else if (cmd === 'skillcheck') {
+  // Validate SKILL.md files against the authoring standard — this repo's own
+  // validator, pointed at anybody's skills directory. It reads process.argv
+  // itself, so hand it the subcommand's arguments.
+  process.argv = [process.argv[0], process.argv[1], ...process.argv.slice(3)];
+  const { run } = await import('./skillcheck.mjs');
+  run();
 }
 else if (cmd === 'verify') {
   const { run } = await import('./verify.mjs');
