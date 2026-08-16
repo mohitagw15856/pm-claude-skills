@@ -106,6 +106,19 @@ Fifty new skills across five new bundles, extending the library past work into l
 
 - **[prompt-library-builder](skills/prompt-library-builder/SKILL.md)**, **[run-an-agent-team](skills/run-an-agent-team/SKILL.md)**, **[memory-file-maintenance](skills/memory-file-maintenance/SKILL.md)**, **[ai-workflow-designer](skills/ai-workflow-designer/SKILL.md)**, **[ai-output-verifier](skills/ai-output-verifier/SKILL.md)**, **[ai-tool-picker](skills/ai-tool-picker/SKILL.md)**, **[delegate-to-ai](skills/delegate-to-ai/SKILL.md)**, **[ai-context-primer](skills/ai-context-primer/SKILL.md)**, **[spot-ai-mistakes](skills/spot-ai-mistakes/SKILL.md)**, **[get-more-from-ai](skills/get-more-from-ai/SKILL.md)**.
 
+## [73.0.0] — think differently
+
+two bundles that change *how* your AI reasons, not just what it does — [💭 pm-thinking](plugins/pm-thinking) (escape the generic answer: [the-third-answer](skills/the-third-answer/SKILL.md), [five-minds](skills/five-minds/SKILL.md), [red-team-my-plan](skills/red-team-my-plan/SKILL.md), [devils-advocate](skills/devils-advocate-on-demand/SKILL.md)) and [🎯 pm-focus](plugins/pm-focus) (ADHD-friendly executive function: [where-do-i-start](skills/where-do-i-start/SKILL.md), [overwhelm-triage](skills/overwhelm-triage/SKILL.md), [build-my-memory-file](skills/build-my-memory-file/SKILL.md)) — 50 skills inspired by parallel-divergent-ideation research; passes the 1,000 mark — now 1099 skills, 110 bundles.
+
+<!-- Backfilled from the README, which was the only record of this release. -->
+
+## [72.0.0] — the Everyday Life update
+
+the biggest single drop yet — **100 new skills** across four new bundles: [🎲 hobbies](plugins/pm-hobbies) (wine pairing, board-game nights, D&D), [💪 wellbeing](plugins/pm-wellbeing) (workouts, sleep, habits), [🔐 digital self-defense](plugins/pm-digital-safety) (identity-theft recovery, phishing triage, doxxing response), and [👪 family](plugins/pm-family) (new-baby logistics, wedding vows, condolences) — plus new money, legal, home, career, freelance and learning skills; **1099 skills, 108 bundles**.
+
+<!-- Backfilled from the README, which was the only record of this release. -->
+
+
 ## [69.0.0] — the everyday wave: 16 skills people actually reach for daily — 2026-07-26
 
 Ten everyday skills (the messages, decisions, and life logistics people use constantly) plus six generic delivery/QA gaps. **848 skills, 104 bundles.**
