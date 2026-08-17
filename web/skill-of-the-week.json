@@ -1,12 +1,12 @@
 {
-  "week": 2953,
-  "skill": "assumption-mapper",
-  "title": "Assumption Mapper",
-  "summary": "Extract and risk-rate hidden assumptions in a product brief or PRD.",
-  "link": "https://mohitagw15856.github.io/pm-claude-skills/index.html?skill=assumption-mapper",
-  "generatedAt": "2026-08-10T10:09:24.037Z",
+  "week": 2954,
+  "skill": "changelog-generator",
+  "title": "Changelog Generator",
+  "summary": "Convert a git log, commit list, or release notes into a polished, user-facing changelog.",
+  "link": "https://mohitagw15856.github.io/pm-claude-skills/index.html?skill=changelog-generator",
+  "generatedAt": "2026-08-17T09:31:21.931Z",
   "posts": {
-    "x": "🛠️ Skill of the week: Assumption Mapper\n\nExtract and risk-rate hidden assumptions in a product brief or PRD.\n\nRun it free in your browser (no install) 👇\nhttps://mohitagw15856.github.io/pm-claude-skills/index.html?skill=assumption-mapper\n\n#ClaudeAI #AItools #ProductManagement",
-    "linkedin": "🛠️ Skill of the week: Assumption Mapper\n\nExtract and risk-rate hidden assumptions in a product brief or PRD.\n\nIt's one of 174 open-source AI skills that make Claude, ChatGPT, and Gemini produce real professional work. Try this one free in the browser — no install:\nhttps://mohitagw15856.github.io/pm-claude-skills/index.html?skill=assumption-mapper\n\n⭐ https://github.com/mohitagw15856/pm-claude-skills"
+    "x": "🛠️ Skill of the week: Changelog Generator\n\nConvert a git log, commit list, or release notes into a polished, user-facing changelog.\n\nRun it free in your browser (no install) 👇\nhttps://mohitagw15856.github.io/pm-claude-skills/index.html?skill=changelog-generator\n\n#ClaudeAI #AItools #ProductManagement",
+    "linkedin": "🛠️ Skill of the week: Changelog Generator\n\nConvert a git log, commit list, or release notes into a polished, user-facing changelog.\n\nIt's one of 174 open-source AI skills that make Claude, ChatGPT, and Gemini produce real professional work. Try this one free in the browser — no install:\nhttps://mohitagw15856.github.io/pm-claude-skills/index.html?skill=changelog-generator\n\n⭐ https://github.com/mohitagw15856/pm-claude-skills"
   }
 }
