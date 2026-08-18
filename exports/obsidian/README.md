@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1099 skills exported. Copy a `.md rule` into the tool to use it.
+1117 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -33,6 +33,7 @@
 | Aging-in-Place Assessment | `pm-caregiving` | `pm-caregiving/aging-in-place-assessment/aging-in-place-assessment.md` |
 | Aging Parent Talks | `pm-aging-parents` | `pm-aging-parents/aging-parent-talks/aging-parent-talks.md` |
 | AGM In A Box | `pm-committee` | `pm-committee/agm-in-a-box/agm-in-a-box.md` |
+| AI-Agent Reliability | `pm-ai-native` | `pm-ai-native/ai-agent-reliability/ai-agent-reliability.md` |
 | AI-Assisted Performance Review | `pm-aiwork` | `pm-aiwork/ai-assisted-performance-review/ai-assisted-performance-review.md` |
 | AI Code Review | `pm-engineering` | `pm-engineering/ai-code-review/ai-code-review.md` |
 | AI Content Audit | `pm-aiwork` | `pm-aiwork/ai-content-audit/ai-content-audit.md` |
@@ -79,8 +80,10 @@
 | Backup Strategy | `pm-digital-safety` | `pm-digital-safety/backup-strategy/backup-strategy.md` |
 | Band Agreement | `pm-musician` | `pm-musician/band-agreement/band-agreement.md` |
 | Bank Fee Refund | `pm-money` | `pm-money/bank-fee-refund/bank-fee-refund.md` |
+| Bankruptcy Decision | `pm-hardship` | `pm-hardship/bankruptcy-decision/bankruptcy-decision.md` |
 | Behavior Intervention Plan | `pm-teaching` | `pm-teaching/behavior-intervention-plan/behavior-intervention-plan.md` |
 | Beneficiary Audit | `pm-estate` | `pm-estate/beneficiary-audit/beneficiary-audit.md` |
+| Benefits-Cliff Check | `pm-hardship` | `pm-hardship/benefits-cliff-check/benefits-cliff-check.md` |
 | Benefits Decoder | `pm-decoders` | `pm-decoders/benefits-decoder/benefits-decoder.md` |
 | Bennett Time Audit | `pm-dead-mentors` | `pm-dead-mentors/bennett-time-audit/bennett-time-audit.md` |
 | Bid / Tender Review | `pm-construction` | `pm-construction/bid-tender-review/bid-tender-review.md` |
@@ -155,6 +158,7 @@
 | Claim Denial Decoder | `pm-decoders` | `pm-decoders/claim-denial-decoder/claim-denial-decoder.md` |
 | Claims Triage | `pm-insurance` | `pm-insurance/claims-triage/claims-triage.md` |
 | Class-Action Claim Finder | `pm-money` | `pm-money/class-action-claim-finder/class-action-claim-finder.md` |
+| Claude Project Setup | `pm-ai-native` | `pm-ai-native/claude-project-setup/claude-project-setup.md` |
 | Claude Superpowers | `pm-engineering` | `pm-engineering/claude-superpowers/claude-superpowers.md` |
 | Clause Explainer | `pm-legal` | `pm-legal/clause-explainer/clause-explainer.md` |
 | Client Discharge Notes | `pm-veterinary` | `pm-veterinary/client-discharge-notes/client-discharge-notes.md` |
@@ -257,6 +261,7 @@
 | Daycare vs Stay-Home | `pm-calculators` | `pm-calculators/daycare-vs-stay-home/daycare-vs-stay-home.md` |
 | dbt Model Spec | `pm-dataeng` | `pm-dataeng/dbt-model-spec/dbt-model-spec.md` |
 | Debt Collector Response | `pm-money` | `pm-money/debt-collector-response/debt-collector-response.md` |
+| Debt-Collector Scripts | `pm-hardship` | `pm-hardship/debt-collector-scripts/debt-collector-scripts.md` |
 | Debt Payoff | `pm-calculators` | `pm-calculators/debt-payoff/debt-payoff.md` |
 | Debt Payoff Plan | `pm-money` | `pm-money/debt-payoff-plan/debt-payoff-plan.md` |
 | Debugging Log Analyser | `pm-engineering` | `pm-engineering/debugging-log-analyser/debugging-log-analyser.md` |
@@ -354,6 +359,7 @@
 | ESG Disclosure Draft | `pm-climate` | `pm-climate/esg-disclosure-draft/esg-disclosure-draft.md` |
 | Estate Planning Kit | `pm-money` | `pm-money/estate-planning-kit/estate-planning-kit.md` |
 | Estate Settlement Organizer | `pm-estate` | `pm-estate/estate-settlement-organizer/estate-settlement-organizer.md` |
+| Eulogy & Obituary Writer | `pm-grief` | `pm-grief/eulogy-and-obituary-writer/eulogy-and-obituary-writer.md` |
 | Eulogy Writer | `pm-lifeadmin` | `pm-lifeadmin/eulogy-writer/eulogy-writer.md` |
 | Euthanasia Conversation | `pm-veterinary` | `pm-veterinary/euthanasia-conversation/euthanasia-conversation.md` |
 | EV vs Gas | `pm-calculators` | `pm-calculators/ev-vs-gas/ev-vs-gas.md` |
@@ -382,6 +388,7 @@
 | Explain My Decision To Me | `pm-thinking` | `pm-thinking/explain-my-decision-to-me/explain-my-decision-to-me.md` |
 | Explain Simply | `pm-comms` | `pm-comms/explain-simply/explain-simply.md` |
 | Exploratory Test Charter | `pm-qa` | `pm-qa/exploratory-test-charter/exploratory-test-charter.md` |
+| Expungement Navigator | `pm-reentry` | `pm-reentry/expungement-navigator/expungement-navigator.md` |
 | Fact-Check Pass | `pm-journalism` | `pm-journalism/fact-check-pass/fact-check-pass.md` |
 | Factory Acceptance Test | `pm-hardware` | `pm-hardware/factory-acceptance-test/factory-acceptance-test.md` |
 | Faith Transition Companion | `pm-identity` | `pm-identity/faith-transition-companion/faith-transition-companion.md` |
@@ -413,6 +420,7 @@
 | Fine Appeal Letter | `pm-lifeadmin` | `pm-lifeadmin/fine-appeal-letter/fine-appeal-letter.md` |
 | FIRE Number | `pm-calculators` | `pm-calculators/fire-number/fire-number.md` |
 | First 100k Plan | `pm-wealth` | `pm-wealth/first-100k-plan/first-100k-plan.md` |
+| First 90 Days Out | `pm-reentry` | `pm-reentry/first-90-days-out/first-90-days-out.md` |
 | First Client Contract | `pm-sidehustle` | `pm-sidehustle/first-client-contract/first-client-contract.md` |
 | First-Hire Plan | `pm-career` | `pm-career/first-hire-plan/first-hire-plan.md` |
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/first-maintainer-month.md` |
@@ -457,6 +465,7 @@
 | Gratitude Practice | `pm-wellbeing` | `pm-wellbeing/gratitude-practice/gratitude-practice.md` |
 | Greenwashing Self-Audit | `pm-climate` | `pm-climate/greenwashing-self-audit/greenwashing-self-audit.md` |
 | Grief Admin | `other` | `other/grief-admin/grief-admin.md` |
+| Grieving at Work | `pm-grief` | `pm-grief/grieving-at-work/grieving-at-work.md` |
 | Grocery Budget Audit | `pm-kitchen` | `pm-kitchen/grocery-budget-audit/grocery-budget-audit.md` |
 | Group Trip Negotiator | `other` | `other/group-trip-negotiator/group-trip-negotiator.md` |
 | Growth Experiment Backlog | `pm-growth` | `pm-growth/growth-experiment-backlog/growth-experiment-backlog.md` |
@@ -485,6 +494,7 @@
 | Hospital-Stay Plan | `pm-caregiving` | `pm-caregiving/hospital-stay-plan/hospital-stay-plan.md` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/house-style-enforcer.md` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/houseplant-care.md` |
+| Housing With a Record | `pm-reentry` | `pm-reentry/housing-with-a-record/housing-with-a-record.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/human-in-the-loop-design.md` |
 | Hydration & Energy Plan | `pm-wellbeing` | `pm-wellbeing/hydration-and-energy-plan/hydration-and-energy-plan.md` |
 | Hyperfocus Exit | `pm-focus` | `pm-focus/hyperfocus-exit/hyperfocus-exit.md` |
@@ -534,6 +544,7 @@
 | JD Decoder | `pm-jobsearch` | `pm-jobsearch/jd-decoder/jd-decoder.md` |
 | Job Application | `pm-business` | `pm-business/job-application/job-application.md` |
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/job-description-writer.md` |
+| Job Search With a Record | `pm-reentry` | `pm-reentry/job-search-with-a-record/job-search-with-a-record.md` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/job-story-mapper.md` |
 | Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/journaling-prompts.md` |
 | Jury Duty Guide | `pm-legal` | `pm-legal/jury-duty-guide/jury-duty-guide.md` |
@@ -652,6 +663,7 @@
 | Note-Taking System | `pm-learning` | `pm-learning/note-taking-system/note-taking-system.md` |
 | NotebookLM Connector | `pm-cross` | `pm-cross/notebooklm-connector/notebooklm-connector.md` |
 | Notes Humanizer | `pm-writers` | `pm-writers/notes-humanizer/notes-humanizer.md` |
+| Notify Everyone of a Death | `pm-grief` | `pm-grief/notify-everyone-of-a-death/notify-everyone-of-a-death.md` |
 | Notion DB Hygiene (Live) | `pm-cowork-live` | `pm-cowork-live/notion-db-hygiene/notion-db-hygiene.md` |
 | NT Translator | `pm-neurodivergent` | `pm-neurodivergent/nt-translator/nt-translator.md` |
 | Offer Comparison | `pm-calculators` | `pm-calculators/offer-comparison/offer-comparison.md` |
@@ -752,6 +764,7 @@
 | Project Status Report | `pm-operations` | `pm-operations/project-status-report/project-status-report.md` |
 | Promotion Packet | `pm-career` | `pm-career/promotion-packet/promotion-packet.md` |
 | Promotion Plan | `pm-ecommerce` | `pm-ecommerce/promotion-plan/promotion-plan.md` |
+| Prompt Debugging | `pm-ai-native` | `pm-ai-native/prompt-debugging/prompt-debugging.md` |
 | Prompt-Library Builder | `pm-ai-native` | `pm-ai-native/prompt-library-builder/prompt-library-builder.md` |
 | Prompt Optimizer | `pm-ai` | `pm-ai/prompt-optimizer/prompt-optimizer.md` |
 | Prompt Regression Suite | `pm-agentops` | `pm-agentops/prompt-regression-suite/prompt-regression-suite.md` |
@@ -784,6 +797,7 @@
 | Reading Retention System | `pm-learning` | `pm-learning/reading-retention-system/reading-retention-system.md` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/readme-writer.md` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/receipts-audit.md` |
+| Reconnect After Time Away | `pm-reentry` | `pm-reentry/reconnect-after-time-away/reconnect-after-time-away.md` |
 | Reconnect With Someone | `other` | `other/reconnect-with-someone/reconnect-with-someone.md` |
 | Recovery Day Planner | `pm-wellbeing` | `pm-wellbeing/recovery-day-planner/recovery-day-planner.md` |
 | Recruiter Outreach | `pm-recruiting` | `pm-recruiting/recruiter-outreach/recruiter-outreach.md` |
@@ -949,6 +963,7 @@
 | Stock Snapshot | `pm-live` | `pm-live/stock-snapshot/stock-snapshot.md` |
 | Stoic Setback Debrief | `pm-dead-mentors` | `pm-dead-mentors/stoic-setback-debrief/stoic-setback-debrief.md` |
 | Stop Overthinking This | `pm-focus` | `pm-focus/stop-overthinking-this/stop-overthinking-this.md` |
+| Stop-the-Bleed Triage | `pm-hardship` | `pm-hardship/stop-the-bleed-triage/stop-the-bleed-triage.md` |
 | Story Pitch | `pm-journalism` | `pm-journalism/story-pitch/story-pitch.md` |
 | Strategic Narrative Generator | `pm-strategy` | `pm-strategy/strategic-narrative-generator/strategic-narrative-generator.md` |
 | Strategy Memo | `pm-business` | `pm-business/strategy-memo/strategy-memo.md` |
@@ -971,6 +986,7 @@
 | Support Macro | `pm-support` | `pm-support/support-macro/support-macro.md` |
 | Support Runbook | `pm-support` | `pm-support/support-runbook/support-runbook.md` |
 | Support Staffing Model | `pm-calculators` | `pm-calculators/support-staffing-model/support-staffing-model.md` |
+| Support the Bereaved | `pm-grief` | `pm-grief/support-the-bereaved/support-the-bereaved.md` |
 | Survey Design Basics | `pm-cowork` | `pm-cowork/survey-design-basics/survey-design-basics.md` |
 | Sycophancy Challenger | `pm-cross` | `pm-cross/sycophancy-challenger/sycophancy-challenger.md` |
 | Synthetic User Research | `pm-research` | `pm-research/synthetic-user-research/synthetic-user-research.md` |
@@ -1022,6 +1038,7 @@
 | The Vibe Check | `pm-newgen` | `pm-newgen/the-vibe-check/the-vibe-check.md` |
 | The Visa Interview | `pm-simulators` | `pm-simulators/the-visa-interview/the-visa-interview.md` |
 | The Worry Decompiler | `pm-focus` | `pm-focus/the-worry-decompiler/the-worry-decompiler.md` |
+| The Year of Firsts | `pm-grief` | `pm-grief/the-year-of-firsts/the-year-of-firsts.md` |
 | Thesis Outline | `pm-students` | `pm-students/thesis-outline/thesis-outline.md` |
 | Think From Another Angle | `pm-thinking` | `pm-thinking/think-from-another-angle/think-from-another-angle.md` |
 | Thread To Decision | `pm-cowork` | `pm-cowork/thread-to-decision/thread-to-decision.md` |
@@ -1073,6 +1090,7 @@
 | Volunteer Treasurer Basics | `pm-committee` | `pm-committee/volunteer-treasurer-basics/volunteer-treasurer-basics.md` |
 | Voting Navigator | `pm-civic` | `pm-civic/voting-navigator/voting-navigator.md` |
 | Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/vuln-triage.md` |
+| Wage-Garnishment Response | `pm-hardship` | `pm-hardship/wage-garnishment-response/wage-garnishment-response.md` |
 | Warranty Claim | `pm-money` | `pm-money/warranty-claim/warranty-claim.md` |
 | Weather Now | `pm-live` | `pm-live/weather-now/weather-now.md` |
 | Wedding Budget | `pm-wedding` | `pm-wedding/wedding-budget/wedding-budget.md` |

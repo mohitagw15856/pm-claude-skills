@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-reentry",
+  "version": "1.0.0",
+  "description": "Rebuilding life after incarceration — expungement, work and housing with a record, the first 90 days out, and reconnecting with family.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "reentry",
+    "record",
+    "expungement",
+    "justice",
+    "dignity"
+  ]
+}
