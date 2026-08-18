@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1099 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1117 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -33,6 +33,7 @@
 | Aging-in-Place Assessment | `pm-caregiving` | `pm-caregiving/aging-in-place-assessment/SYSTEM_PROMPT.md` |
 | Aging Parent Talks | `pm-aging-parents` | `pm-aging-parents/aging-parent-talks/SYSTEM_PROMPT.md` |
 | AGM In A Box | `pm-committee` | `pm-committee/agm-in-a-box/SYSTEM_PROMPT.md` |
+| AI-Agent Reliability | `pm-ai-native` | `pm-ai-native/ai-agent-reliability/SYSTEM_PROMPT.md` |
 | AI-Assisted Performance Review | `pm-aiwork` | `pm-aiwork/ai-assisted-performance-review/SYSTEM_PROMPT.md` |
 | AI Code Review | `pm-engineering` | `pm-engineering/ai-code-review/SYSTEM_PROMPT.md` |
 | AI Content Audit | `pm-aiwork` | `pm-aiwork/ai-content-audit/SYSTEM_PROMPT.md` |
@@ -79,8 +80,10 @@
 | Backup Strategy | `pm-digital-safety` | `pm-digital-safety/backup-strategy/SYSTEM_PROMPT.md` |
 | Band Agreement | `pm-musician` | `pm-musician/band-agreement/SYSTEM_PROMPT.md` |
 | Bank Fee Refund | `pm-money` | `pm-money/bank-fee-refund/SYSTEM_PROMPT.md` |
+| Bankruptcy Decision | `pm-hardship` | `pm-hardship/bankruptcy-decision/SYSTEM_PROMPT.md` |
 | Behavior Intervention Plan | `pm-teaching` | `pm-teaching/behavior-intervention-plan/SYSTEM_PROMPT.md` |
 | Beneficiary Audit | `pm-estate` | `pm-estate/beneficiary-audit/SYSTEM_PROMPT.md` |
+| Benefits-Cliff Check | `pm-hardship` | `pm-hardship/benefits-cliff-check/SYSTEM_PROMPT.md` |
 | Benefits Decoder | `pm-decoders` | `pm-decoders/benefits-decoder/SYSTEM_PROMPT.md` |
 | Bennett Time Audit | `pm-dead-mentors` | `pm-dead-mentors/bennett-time-audit/SYSTEM_PROMPT.md` |
 | Bid / Tender Review | `pm-construction` | `pm-construction/bid-tender-review/SYSTEM_PROMPT.md` |
@@ -155,6 +158,7 @@
 | Claim Denial Decoder | `pm-decoders` | `pm-decoders/claim-denial-decoder/SYSTEM_PROMPT.md` |
 | Claims Triage | `pm-insurance` | `pm-insurance/claims-triage/SYSTEM_PROMPT.md` |
 | Class-Action Claim Finder | `pm-money` | `pm-money/class-action-claim-finder/SYSTEM_PROMPT.md` |
+| Claude Project Setup | `pm-ai-native` | `pm-ai-native/claude-project-setup/SYSTEM_PROMPT.md` |
 | Claude Superpowers | `pm-engineering` | `pm-engineering/claude-superpowers/SYSTEM_PROMPT.md` |
 | Clause Explainer | `pm-legal` | `pm-legal/clause-explainer/SYSTEM_PROMPT.md` |
 | Client Discharge Notes | `pm-veterinary` | `pm-veterinary/client-discharge-notes/SYSTEM_PROMPT.md` |
@@ -257,6 +261,7 @@
 | Daycare vs Stay-Home | `pm-calculators` | `pm-calculators/daycare-vs-stay-home/SYSTEM_PROMPT.md` |
 | dbt Model Spec | `pm-dataeng` | `pm-dataeng/dbt-model-spec/SYSTEM_PROMPT.md` |
 | Debt Collector Response | `pm-money` | `pm-money/debt-collector-response/SYSTEM_PROMPT.md` |
+| Debt-Collector Scripts | `pm-hardship` | `pm-hardship/debt-collector-scripts/SYSTEM_PROMPT.md` |
 | Debt Payoff | `pm-calculators` | `pm-calculators/debt-payoff/SYSTEM_PROMPT.md` |
 | Debt Payoff Plan | `pm-money` | `pm-money/debt-payoff-plan/SYSTEM_PROMPT.md` |
 | Debugging Log Analyser | `pm-engineering` | `pm-engineering/debugging-log-analyser/SYSTEM_PROMPT.md` |
@@ -354,6 +359,7 @@
 | ESG Disclosure Draft | `pm-climate` | `pm-climate/esg-disclosure-draft/SYSTEM_PROMPT.md` |
 | Estate Planning Kit | `pm-money` | `pm-money/estate-planning-kit/SYSTEM_PROMPT.md` |
 | Estate Settlement Organizer | `pm-estate` | `pm-estate/estate-settlement-organizer/SYSTEM_PROMPT.md` |
+| Eulogy & Obituary Writer | `pm-grief` | `pm-grief/eulogy-and-obituary-writer/SYSTEM_PROMPT.md` |
 | Eulogy Writer | `pm-lifeadmin` | `pm-lifeadmin/eulogy-writer/SYSTEM_PROMPT.md` |
 | Euthanasia Conversation | `pm-veterinary` | `pm-veterinary/euthanasia-conversation/SYSTEM_PROMPT.md` |
 | EV vs Gas | `pm-calculators` | `pm-calculators/ev-vs-gas/SYSTEM_PROMPT.md` |
@@ -382,6 +388,7 @@
 | Explain My Decision To Me | `pm-thinking` | `pm-thinking/explain-my-decision-to-me/SYSTEM_PROMPT.md` |
 | Explain Simply | `pm-comms` | `pm-comms/explain-simply/SYSTEM_PROMPT.md` |
 | Exploratory Test Charter | `pm-qa` | `pm-qa/exploratory-test-charter/SYSTEM_PROMPT.md` |
+| Expungement Navigator | `pm-reentry` | `pm-reentry/expungement-navigator/SYSTEM_PROMPT.md` |
 | Fact-Check Pass | `pm-journalism` | `pm-journalism/fact-check-pass/SYSTEM_PROMPT.md` |
 | Factory Acceptance Test | `pm-hardware` | `pm-hardware/factory-acceptance-test/SYSTEM_PROMPT.md` |
 | Faith Transition Companion | `pm-identity` | `pm-identity/faith-transition-companion/SYSTEM_PROMPT.md` |
@@ -413,6 +420,7 @@
 | Fine Appeal Letter | `pm-lifeadmin` | `pm-lifeadmin/fine-appeal-letter/SYSTEM_PROMPT.md` |
 | FIRE Number | `pm-calculators` | `pm-calculators/fire-number/SYSTEM_PROMPT.md` |
 | First 100k Plan | `pm-wealth` | `pm-wealth/first-100k-plan/SYSTEM_PROMPT.md` |
+| First 90 Days Out | `pm-reentry` | `pm-reentry/first-90-days-out/SYSTEM_PROMPT.md` |
 | First Client Contract | `pm-sidehustle` | `pm-sidehustle/first-client-contract/SYSTEM_PROMPT.md` |
 | First-Hire Plan | `pm-career` | `pm-career/first-hire-plan/SYSTEM_PROMPT.md` |
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/SYSTEM_PROMPT.md` |
@@ -457,6 +465,7 @@
 | Gratitude Practice | `pm-wellbeing` | `pm-wellbeing/gratitude-practice/SYSTEM_PROMPT.md` |
 | Greenwashing Self-Audit | `pm-climate` | `pm-climate/greenwashing-self-audit/SYSTEM_PROMPT.md` |
 | Grief Admin | `other` | `other/grief-admin/SYSTEM_PROMPT.md` |
+| Grieving at Work | `pm-grief` | `pm-grief/grieving-at-work/SYSTEM_PROMPT.md` |
 | Grocery Budget Audit | `pm-kitchen` | `pm-kitchen/grocery-budget-audit/SYSTEM_PROMPT.md` |
 | Group Trip Negotiator | `other` | `other/group-trip-negotiator/SYSTEM_PROMPT.md` |
 | Growth Experiment Backlog | `pm-growth` | `pm-growth/growth-experiment-backlog/SYSTEM_PROMPT.md` |
@@ -485,6 +494,7 @@
 | Hospital-Stay Plan | `pm-caregiving` | `pm-caregiving/hospital-stay-plan/SYSTEM_PROMPT.md` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/SYSTEM_PROMPT.md` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/SYSTEM_PROMPT.md` |
+| Housing With a Record | `pm-reentry` | `pm-reentry/housing-with-a-record/SYSTEM_PROMPT.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/SYSTEM_PROMPT.md` |
 | Hydration & Energy Plan | `pm-wellbeing` | `pm-wellbeing/hydration-and-energy-plan/SYSTEM_PROMPT.md` |
 | Hyperfocus Exit | `pm-focus` | `pm-focus/hyperfocus-exit/SYSTEM_PROMPT.md` |
@@ -534,6 +544,7 @@
 | JD Decoder | `pm-jobsearch` | `pm-jobsearch/jd-decoder/SYSTEM_PROMPT.md` |
 | Job Application | `pm-business` | `pm-business/job-application/SYSTEM_PROMPT.md` |
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/SYSTEM_PROMPT.md` |
+| Job Search With a Record | `pm-reentry` | `pm-reentry/job-search-with-a-record/SYSTEM_PROMPT.md` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/SYSTEM_PROMPT.md` |
 | Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/SYSTEM_PROMPT.md` |
 | Jury Duty Guide | `pm-legal` | `pm-legal/jury-duty-guide/SYSTEM_PROMPT.md` |
@@ -652,6 +663,7 @@
 | Note-Taking System | `pm-learning` | `pm-learning/note-taking-system/SYSTEM_PROMPT.md` |
 | NotebookLM Connector | `pm-cross` | `pm-cross/notebooklm-connector/SYSTEM_PROMPT.md` |
 | Notes Humanizer | `pm-writers` | `pm-writers/notes-humanizer/SYSTEM_PROMPT.md` |
+| Notify Everyone of a Death | `pm-grief` | `pm-grief/notify-everyone-of-a-death/SYSTEM_PROMPT.md` |
 | Notion DB Hygiene (Live) | `pm-cowork-live` | `pm-cowork-live/notion-db-hygiene/SYSTEM_PROMPT.md` |
 | NT Translator | `pm-neurodivergent` | `pm-neurodivergent/nt-translator/SYSTEM_PROMPT.md` |
 | Offer Comparison | `pm-calculators` | `pm-calculators/offer-comparison/SYSTEM_PROMPT.md` |
@@ -752,6 +764,7 @@
 | Project Status Report | `pm-operations` | `pm-operations/project-status-report/SYSTEM_PROMPT.md` |
 | Promotion Packet | `pm-career` | `pm-career/promotion-packet/SYSTEM_PROMPT.md` |
 | Promotion Plan | `pm-ecommerce` | `pm-ecommerce/promotion-plan/SYSTEM_PROMPT.md` |
+| Prompt Debugging | `pm-ai-native` | `pm-ai-native/prompt-debugging/SYSTEM_PROMPT.md` |
 | Prompt-Library Builder | `pm-ai-native` | `pm-ai-native/prompt-library-builder/SYSTEM_PROMPT.md` |
 | Prompt Optimizer | `pm-ai` | `pm-ai/prompt-optimizer/SYSTEM_PROMPT.md` |
 | Prompt Regression Suite | `pm-agentops` | `pm-agentops/prompt-regression-suite/SYSTEM_PROMPT.md` |
@@ -784,6 +797,7 @@
 | Reading Retention System | `pm-learning` | `pm-learning/reading-retention-system/SYSTEM_PROMPT.md` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/SYSTEM_PROMPT.md` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/SYSTEM_PROMPT.md` |
+| Reconnect After Time Away | `pm-reentry` | `pm-reentry/reconnect-after-time-away/SYSTEM_PROMPT.md` |
 | Reconnect With Someone | `other` | `other/reconnect-with-someone/SYSTEM_PROMPT.md` |
 | Recovery Day Planner | `pm-wellbeing` | `pm-wellbeing/recovery-day-planner/SYSTEM_PROMPT.md` |
 | Recruiter Outreach | `pm-recruiting` | `pm-recruiting/recruiter-outreach/SYSTEM_PROMPT.md` |
@@ -949,6 +963,7 @@
 | Stock Snapshot | `pm-live` | `pm-live/stock-snapshot/SYSTEM_PROMPT.md` |
 | Stoic Setback Debrief | `pm-dead-mentors` | `pm-dead-mentors/stoic-setback-debrief/SYSTEM_PROMPT.md` |
 | Stop Overthinking This | `pm-focus` | `pm-focus/stop-overthinking-this/SYSTEM_PROMPT.md` |
+| Stop-the-Bleed Triage | `pm-hardship` | `pm-hardship/stop-the-bleed-triage/SYSTEM_PROMPT.md` |
 | Story Pitch | `pm-journalism` | `pm-journalism/story-pitch/SYSTEM_PROMPT.md` |
 | Strategic Narrative Generator | `pm-strategy` | `pm-strategy/strategic-narrative-generator/SYSTEM_PROMPT.md` |
 | Strategy Memo | `pm-business` | `pm-business/strategy-memo/SYSTEM_PROMPT.md` |
@@ -971,6 +986,7 @@
 | Support Macro | `pm-support` | `pm-support/support-macro/SYSTEM_PROMPT.md` |
 | Support Runbook | `pm-support` | `pm-support/support-runbook/SYSTEM_PROMPT.md` |
 | Support Staffing Model | `pm-calculators` | `pm-calculators/support-staffing-model/SYSTEM_PROMPT.md` |
+| Support the Bereaved | `pm-grief` | `pm-grief/support-the-bereaved/SYSTEM_PROMPT.md` |
 | Survey Design Basics | `pm-cowork` | `pm-cowork/survey-design-basics/SYSTEM_PROMPT.md` |
 | Sycophancy Challenger | `pm-cross` | `pm-cross/sycophancy-challenger/SYSTEM_PROMPT.md` |
 | Synthetic User Research | `pm-research` | `pm-research/synthetic-user-research/SYSTEM_PROMPT.md` |
@@ -1022,6 +1038,7 @@
 | The Vibe Check | `pm-newgen` | `pm-newgen/the-vibe-check/SYSTEM_PROMPT.md` |
 | The Visa Interview | `pm-simulators` | `pm-simulators/the-visa-interview/SYSTEM_PROMPT.md` |
 | The Worry Decompiler | `pm-focus` | `pm-focus/the-worry-decompiler/SYSTEM_PROMPT.md` |
+| The Year of Firsts | `pm-grief` | `pm-grief/the-year-of-firsts/SYSTEM_PROMPT.md` |
 | Thesis Outline | `pm-students` | `pm-students/thesis-outline/SYSTEM_PROMPT.md` |
 | Think From Another Angle | `pm-thinking` | `pm-thinking/think-from-another-angle/SYSTEM_PROMPT.md` |
 | Thread To Decision | `pm-cowork` | `pm-cowork/thread-to-decision/SYSTEM_PROMPT.md` |
@@ -1073,6 +1090,7 @@
 | Volunteer Treasurer Basics | `pm-committee` | `pm-committee/volunteer-treasurer-basics/SYSTEM_PROMPT.md` |
 | Voting Navigator | `pm-civic` | `pm-civic/voting-navigator/SYSTEM_PROMPT.md` |
 | Vulnerability Triage | `pm-security` | `pm-security/vuln-triage/SYSTEM_PROMPT.md` |
+| Wage-Garnishment Response | `pm-hardship` | `pm-hardship/wage-garnishment-response/SYSTEM_PROMPT.md` |
 | Warranty Claim | `pm-money` | `pm-money/warranty-claim/SYSTEM_PROMPT.md` |
 | Weather Now | `pm-live` | `pm-live/weather-now/SYSTEM_PROMPT.md` |
 | Wedding Budget | `pm-wedding` | `pm-wedding/wedding-budget/SYSTEM_PROMPT.md` |

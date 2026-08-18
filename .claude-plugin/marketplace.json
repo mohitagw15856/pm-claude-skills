@@ -1,13 +1,37 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "76.1.0",
+  "version": "77.0.0",
   "description": "PM stands for Professional, not just Product Management. 515 Claude Skills + 4 agent templates across 74 bundles covering 31 professions — engineering, security, AI/ML, customer success, legal, government & policy, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "plugins": [
+    {
+      "name": "pm-hardship",
+      "description": "Money in crisis — debt collectors, the benefits cliff, the bankruptcy decision, wage garnishment, and triaging which bills to pay first.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-hardship",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-grief",
+      "description": "The logistics and the human side of losing someone — notifications, the year of firsts, eulogies, grieving at work, and supporting the bereaved.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-grief",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-reentry",
+      "description": "Rebuilding life after incarceration — expungement, work and housing with a record, the first 90 days out, and reconnecting with family.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-reentry",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
     {
       "name": "pm-emergency",
       "description": "Emergency skills.",

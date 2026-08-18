@@ -1,4 +1,4 @@
-# 🗂️ All 1099 Skills — full catalog
+# 🗂️ All 1117 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -727,7 +727,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (631 skills)
+## 🌍 Industries & Public Sector (649 skills)
 
 ### `other` — 21 skills
 
@@ -807,17 +807,20 @@
 | **Aging Parent Talks** (`aging-parent-talks`) | Prepare the conversations with aging parents that everyone postpones — the driving talk, the money talk, the care-options talk, the moving talk —… | — |
 | **Sibling Care Summit** (`sibling-care-summit`) | Get siblings onto one team about aging parents before the crisis does it for them — a structured family meeting with an agenda that prevents… | — |
 
-### `pm-ai-native` — 10 skills
+### `pm-ai-native` — 13 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **AI-Agent Reliability** (`ai-agent-reliability`) | Make an AI agent or automation reliable enough to trust — the tests, checks, and guardrails that catch its failures before they reach anything real. | — |
 | **AI-Context Primer** (`ai-context-primer`) | Build the context an AI needs to do a task well — the background, constraints, examples, and format it can't guess — so you get a great result on… | — |
 | **AI-Output Verifier** (`ai-output-verifier`) | Check AI output before you trust or use it — where it's likely wrong, what to verify, and how to catch confident-sounding errors. | — |
 | **AI-Tool Picker** (`ai-tool-picker`) | Figure out which AI tool actually fits the task in front of you — chatbot, coding assistant, image model, agent, or none — instead of forcing one… | — |
 | **AI-Workflow Designer** (`ai-workflow-designer`) | Design an AI-assisted workflow for a recurring task — which steps to hand to AI, which to keep human, and how they connect — so you get leverage… | — |
+| **Claude Project Setup** (`claude-project-setup`) | Set up a repo or project so an AI coding agent works well in it — the CLAUDE.md, the context, the guardrails, and the conventions the agent needs… | — |
 | **Delegate to AI** (`delegate-to-ai`) | Decide what in your workload to hand to AI and what to keep yourself — like managing a fast, capable, but unreliable new hire — so you get… | — |
 | **Get More From AI** (`get-more-from-ai`) | Level up how you actually use AI — from basic one-shot questions to the techniques that get dramatically better results — matched to what you… | — |
 | **Memory-File Maintenance** (`memory-file-maintenance`) | Keep your AI memory/context file (MEMORY.md, CLAUDE.md, custom instructions) healthy over time — pruning the stale, adding the new, and keeping it… | — |
+| **Prompt Debugging** (`prompt-debugging`) | Figure out why a prompt isn't working and fix it — diagnose the actual failure (ambiguity, missing context, wrong format, conflicting… | — |
 | **Prompt-Library Builder** (`prompt-library-builder`) | Build a personal library of reusable prompts for the things you ask AI again and again — so you stop rewriting the same request from scratch. | — |
 | **Run an Agent Team** (`run-an-agent-team`) | Design a small team of AI agents to tackle a complex task in parallel — who does what, how they hand off, and how to keep them coordinated —… | — |
 | **Spot AI Mistakes** (`spot-ai-mistakes`) | Learn to recognize where and how AI tends to go wrong — the specific failure patterns — so you catch its mistakes on sight instead of getting… | — |
@@ -1242,6 +1245,26 @@
 | **Regulatory Impact Analysis** (`regulatory-impact-analysis`) | Produce a regulatory impact analysis (RIA) weighing the costs, benefits, and alternatives of a proposed rule. | — |
 | **RFP Response** (`rfp-response`) | Write a compliant, competitive response to an RFP/RFQ/ITT (government or enterprise procurement). | — |
 
+### `pm-grief` — 5 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Eulogy & Obituary Writer** (`eulogy-and-obituary-writer`) | Write a eulogy or obituary for someone you loved when you're grieving and the words won't come — a true, warm piece that sounds like them and like… | — |
+| **Grieving at Work** (`grieving-at-work`) | Handle work while grieving — what to tell your manager and team, how much leave you can take, and how to function (or not) when you're back but… | — |
+| **Notify Everyone of a Death** (`notify-everyone-of-a-death`) | Work through who and what has to be notified after someone dies — the people, agencies, banks, and accounts — in a sane order, so nothing critical… | — |
+| **Support the Bereaved** (`support-the-bereaved`) | Know what to actually say and do for someone who's grieving — the real help instead of the empty 'let me know if you need anything.' Use when… | — |
+| **The Year of Firsts** (`the-year-of-firsts`) | Get through the first year after losing someone — the birthdays, holidays, and ordinary triggers that ambush you — with a gentle plan for the hard… | — |
+
+### `pm-hardship` — 5 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Bankruptcy Decision** (`bankruptcy-decision`) | Think clearly about whether bankruptcy is the right move, or whether another path fits better — without shame and without a sales pitch. | — |
+| **Benefits-Cliff Check** (`benefits-cliff-check`) | Check whether a raise, more hours, or a new job could cost you more in lost benefits than you gain — the 'benefits cliff' — before you accept it. | — |
+| **Debt-Collector Scripts** (`debt-collector-scripts`) | Handle debt collectors without getting bullied or tricked — what to say, what never to say, and the rights that protect you from harassment and… | — |
+| **Stop-the-Bleed Triage** (`stop-the-bleed-triage`) | When money is in free-fall, triage the crisis — what to pay first, what to let slide, and what to protect at all costs — so you cover the… | — |
+| **Wage-Garnishment Response** (`wage-garnishment-response`) | Respond fast when your wages are being garnished or about to be — the deadlines, the exemptions that can reduce or stop it, and the steps that… | — |
+
 ### `pm-hardware` — 6 skills
 
 | Skill | What it does | Eval |
@@ -1498,6 +1521,16 @@
 | **Property Offer Letter** (`property-offer-letter`) | Write a buyer's offer cover letter to a seller to strengthen a real-estate bid. | — |
 | **Tenant Screening Guide** (`tenant-screening-guide`) | Design a fair, consistent tenant screening process for a rental. | — |
 
+### `pm-reentry` — 5 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Expungement Navigator** (`expungement-navigator`) | Figure out whether your record can be sealed or expunged, and map the steps to do it — eligibility, waiting periods, forms, and where to get help. | — |
+| **First 90 Days Out** (`first-90-days-out`) | Build a concrete plan for the first 90 days after release from incarceration — the ID, benefits, housing, check-ins, and money moves that have to… | — |
+| **Housing With a Record** (`housing-with-a-record`) | Find and land a place to live when a criminal record keeps triggering rejections — where to apply, how to present the record, and the rights that… | — |
+| **Job Search With a Record** (`job-search-with-a-record`) | Run a job search when you have a criminal record — where to apply, when and how to disclose, and how to turn the question into a short, confident… | — |
+| **Reconnect After Time Away** (`reconnect-after-time-away`) | Rebuild relationships with family, kids, and friends after incarceration or a long absence — how to reach out, repair trust at the other person's… | — |
+
 ### `pm-renters` — 3 skills
 
 | Skill | What it does | Eval |
@@ -1737,4 +1770,4 @@
 
 ---
 
-_1099 skills across 122 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1117 skills across 125 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
