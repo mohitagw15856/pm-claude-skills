@@ -6,6 +6,13 @@
   </a>
 </p>
 
+> **Your landlord kept your deposit. Your mom got a medical bill that makes no sense. You got laid off on a Tuesday. Someone you love died, and no one handed you the checklist.**
+>
+> Generic AI gives you filler for the moments that matter most. **PM Skills** gives your AI the exact framework a senior professional would use — for 1,117 real tasks, across work *and* life.
+
+#### 👉 Start with your moment, not the catalogue → **[Skill Packs](PACKS.md)**
+🍼 New parent · 💼 Just laid off · 🌍 New to this country · 👵 Caring for a parent · 🕊️ Losing someone · 💸 Money in crisis · 🔑 Starting over · 🤖 Getting serious about AI
+
 [![In the official Anthropic plugin directory](https://img.shields.io/badge/Anthropic%20Plugin%20Directory-Published-D97757?logo=anthropic&logoColor=white)](#-quick-start)
 [![Stars](https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social)](https://github.com/mohitagw15856/pm-claude-skills/stargazers)
 [![npm](https://img.shields.io/npm/v/pm-claude-skills?logo=npm&color=cb3837)](https://www.npmjs.com/package/pm-claude-skills)
