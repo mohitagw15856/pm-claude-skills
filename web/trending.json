@@ -1,26 +1,10 @@
 {
-  "generatedAt": "2026-08-10T08:25:04.672Z",
+  "generatedAt": "2026-08-17T07:51:15.522Z",
   "window": "7d",
   "skills": [
     {
       "name": "meeting-notes",
-      "count": 7
-    },
-    {
-      "name": "prd-template",
-      "count": 2
-    },
-    {
-      "name": "competitive-scan-lite",
-      "count": 1
-    },
-    {
-      "name": "claude-superpowers",
-      "count": 1
-    },
-    {
-      "name": "user-interview-synthesis",
-      "count": 1
+      "count": 8
     }
   ]
 }
