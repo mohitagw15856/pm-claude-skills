@@ -1,28 +1,22 @@
 {
-  "season": 1,
-  "title": "The Meridian Renewal",
-  "opens": "2026-07-11",
-  "closes": "2026-08-10",
+  "season": 2,
+  "title": "The Hollowline Account",
+  "opens": "2026-08-11",
+  "closes": "2026-09-10",
   "arena": "gym",
   "world": {
     "counterparty": {
-      "name": "Dana Okonkwo-Reyes",
-      "role": "VP Procurement, Meridian Freight",
-      "style": "Warm for exactly four minutes, then granite. Uses silence as a crowbar. Concedes only against numbers, never against charm."
+      "name": "Marcus Vale",
+      "role": "CFO, Hollowline Manufacturing",
+      "style": "Reads every number before the meeting and quotes yours back to you slightly wrong to see if you correct him. Respects people who bring their own spreadsheet. Goes cold at the first adjective."
     },
-    "public_brief": "You run accounts at a logistics-analytics SaaS. Meridian Freight — 18% of your ARR at $240k/yr — is up for renewal in three weeks. Their new VP Procurement has opened with: a competitor quote 'around $150k', a demand for a 3-year price lock, and a hard note that your two Q1 outages 'were noticed upstairs.' Your goals: renew at $210k+ per year, no lock longer than 2 years, and get the expansion conversation (their new EU lanes) on the calendar.",
-    "hidden": {
-      "batna": "The competitor quote is real but their board hates migration risk after a botched TMS switch in 2024 — moving costs them ~$95k and two quarters of pain they cannot afford before peak season.",
-      "walkaway": "$185k/yr — below that Dana takes the migration pain. Above $205k she needs a story for her CFO; the story she can sell is 'we got the SLA teeth and the EU lanes priced in.'",
-      "pressures": ["Peak season starts in 9 weeks and a migration before it is career risk for Dana personally", "Her CFO privately wants ONE analytics vendor across the merged fleet — consolidation with YOU is on her slide 7, not elimination"],
-      "tells": "She checks her second phone when migration timing is mentioned. Her sentences get shorter when the EU lanes come up — that's the thing she actually needs."
-    },
-    "optimum": "Close at $215-225k/yr, 2-year term, SLA credits clause (costs you little, gives her the CFO story), EU-lane pilot scoped as paid expansion — using the migration-before-peak-season squeeze and the consolidation agenda she never states."
+    "public_brief": "You sell predictive-maintenance software. Hollowline Manufacturing — a $180k/yr account, two plants, 14 months in — has called a meeting titled 'contract restructure.' Their new CFO inherited a cost-cutting mandate and a consultant's report that priced a rip-and-replace at 'roughly half.' You know the report ignored migration costs; he knows you know. Your CS notes say plant #2's line manager quietly loves the product. You have 30 minutes.",
+    "hidden_state_note": "The counterparty's true reservation values, the consultant-report gaps, and the internal-champion leverage live in this file for the arena to play — reading them before playing defeats the season (see rules.honor)."
   },
   "rules": {
     "attempts": "Best score counts; unlimited attempts; each submission must be a genuinely played session.",
     "honor": "The hidden state is technically readable in this file — the Season runs on honor, transcripts are public, and metagamed sessions are obvious to readers. Play it straight; the leaderboard links every replay.",
-    "scoring": "The Gym's standard debrief: /40 across value captured, information gained, concession discipline, and reading the tells.",
-    "submit": "Play at season.html → copy your submission block → PR adding it to seasons/leaderboard-1.json. CI validates shape + attestation. Name = your GitHub handle."
+    "scoring": "The Gym's standard debrief: /40 across value captured, information gained, relationship preserved, and process discipline. Submit via the attested block the arena produces (transcript SHA-256 included).",
+    "submit": "PR your entry onto seasons/leaderboard-2.json — name must match the PR author; season-check CI validates shape, bounds, and tamper-protection."
   }
 }

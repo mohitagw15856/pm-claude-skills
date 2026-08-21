@@ -51,4 +51,9 @@ jobs:
           git add seasons/HALL.md
           git commit -m "season: freeze podium into the Hall (champion: $CHAMP)"
           git push -f origin "season-rollover-$NEXT"
+          # Don't re-file if last run's issue is still open (e.g. the Hall commit
+          # hasn't been merged to main yet, so the freeze guard keeps re-firing).
+          if gh issue list --state open --limit 200 --json title -q '.[].title' | grep -qxF "🏆 Open Season $NEXT"; then
+            echo "Season $NEXT issue already open — not filing a duplicate"; exit 0
+          fi
           gh issue create --title "🏆 Open Season $NEXT" --body "$(printf 'Season closed — the Hall podium is frozen on branch season-rollover-%s (merge it).\n\nChampion: **%s** — add the permanent README line and offer scenario-theme first pick.\n\nOpening checklist for Season %s:\n- [ ] Author seasons/season-%s.json (hand-written scenario — the craft stays human)\n- [ ] Empty seasons/leaderboard-%s.json\n- [ ] cp seasons/season-%s.json web/season-current.json\n- [ ] Announce (the Morning Show + newsletter pick it up automatically)' "$NEXT" "$CHAMP" "$NEXT" "$NEXT" "$NEXT" "$NEXT")" || true

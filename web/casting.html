@@ -56,7 +56,7 @@ async function init(){
   document.getElementById('count').textContent = end > 0 ? Math.ceil(end / 86400e3) + ' days left' : 'season closed — rollover imminent';
   try {
     const nxt = await (await fetch('season-next.json')).json();
-    if (nxt && !/TODO/.test(nxt.title)) {
+    if (nxt && nxt.season > cur.season && !/TODO/.test(nxt.title)) {
       const n = document.getElementById('next');
       n.hidden = false;
       n.innerHTML = '<strong>📣 Next up — Season ' + nxt.season + ': ' + nxt.title + '</strong> (opens ' + nxt.opens + '). ' +
