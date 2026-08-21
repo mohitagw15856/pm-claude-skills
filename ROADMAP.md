@@ -15,20 +15,39 @@ or [request a skill](SKILL_REQUEST.md).
 
 ## 🔭 Now (in progress)
 
-- Growing **per-skill depth** — `references/` and `templates/` for the most-used skills.
-- A browsable **docs site** beyond the catalog (per-tool install guides, search).
+- **Proving what's here.** 1117 skills, 28 with published eval scores. Coverage,
+  not more content, is the constraint — see [evals/README.md](evals/README.md).
+- Growing **per-skill depth** — `references/` and `templates/` for the most-used
+  skills (108 have references today, 52 have templates).
 
 ## ⏭️ Next
 
-- More **export/install targets** as the `SKILL.md` standard spreads (OpenCode, Windsurf rule modes). ✅ Kilo Code shipped.
-- **Skill chaining** helpers to make the [orchestration patterns](ORCHESTRATION.md) one-command.
-- Expanding **Production-Ready** coverage — promoting Stable skills as they prove out.
+- Expanding **Production-Ready** coverage — 50 of 1117 are promoted; the tier
+  ladder needs a promotion round, not a new rung.
+- **Consolidation.** The [duplicate detector](scripts/skill-dupes.mjs) gates new
+  PRs; the pairs already marked "pending a content merge" in
+  [skill-dupes-allow.json](skill-dupes-allow.json) still need an author pass.
+- More **export/install targets** as the `SKILL.md` standard spreads.
+- A public **contributor leaderboard** — the [Hall of Seasons](seasons/HALL.md)
+  machinery already exists to build it on.
 
 ## 🌠 Later
 
-- Community **skill packs** (curated bundles for a role/industry).
-- Internationalised skill descriptions.
-- A public **contributor leaderboard**.
+- Internationalised skill descriptions. Currently a stub: 12 Spanish, 11
+  Japanese, 11 Chinese, 1 French against 1117 skills. Either it gets done at
+  scale or the stubs should be retired honestly.
+- Deeper arenas for the Season beyond the gym.
+
+## ✅ Shipped since this file was last true
+
+These were listed above as upcoming for longer than they were unbuilt:
+
+- **Skill chaining** — `pm-claude-skills chain <workflow>` runs a whole recipe
+  headless ([bin/chain.mjs](bin/chain.mjs), [WORKFLOWS.md](WORKFLOWS.md)).
+- **A docs site beyond the catalog** — [`docs/`](docs/) and [`site/`](site/).
+- **Community skill packs** — [`packs/`](packs/), [PACKS.md](PACKS.md).
+- **A deprecation contract** — skills can now be retired without breaking a
+  published name ([docs/DEPRECATION.md](docs/DEPRECATION.md)).
 
 ---
 

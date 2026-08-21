@@ -37,7 +37,7 @@ Plus: **🌌 [the Skill Galaxy](https://mohitagw15856.github.io/pm-claude-skills
 
 ## 🗂 What's inside
 
-**1117 skills · 104 profession bundles · 35 fields** — product, engineering, customer success, marketing/GTM, data, design, sales, HR, legal, finance, founders, security, government, healthcare, education, real estate, and more. Highlights by job-to-do:
+**1117 skills · 124 profession bundles · 35 fields** — product, engineering, customer success, marketing/GTM, data, design, sales, HR, legal, finance, founders, security, government, healthcare, education, real estate, and more. Highlights by job-to-do:
 
 | You need… | Reach for |
 |---|---|
@@ -85,6 +85,6 @@ The **[Professional Brain](BRAIN.md)**: a local, plain-markdown memory the skill
 
 ---
 
-**The numbers:** 1117 skills · 104 bundles · 35 professions · 206 curated eval cases · 28 skills with published judge scores ([leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)) · 11 recipes · MIT · everything runs client-side with **your** key.
+**The numbers:** 1117 skills · 124 bundles · 35 professions · 206 curated eval cases · 28 skills with published judge scores ([leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)) · 11 recipes · MIT · everything runs client-side with **your** key.
 
 <sub>⭐ **Star & share:** https://github.com/mohitagw15856/pm-claude-skills · 🚀 **Start:** https://mohitagw15856.github.io/pm-claude-skills/ · Built by [Mohit Aggarwal](https://medium.com/@mohit15856) · *PM stands for Professional.*</sub>
