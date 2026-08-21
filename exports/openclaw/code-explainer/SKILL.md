@@ -18,7 +18,11 @@ Infer the language and intent from the code itself; label assumptions *(assumed 
 
 ## Input
 
-The code snippet or file, plus (if given) the language, the reader's level, and what they're trying to understand. Infer the rest.
+Ask for these if not provided:
+- **The code** — the snippet or file to explain (paste it, or point at the path)
+- **The language or runtime** — if it is not obvious from the code
+- **The reader** — who this is for and how much they already know
+- **What they are trying to understand** — the bug, the review, the handover; infer the rest
 
 ## Output Structure
 

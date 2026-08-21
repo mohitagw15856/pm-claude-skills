@@ -1,0 +1,101 @@
+---
+trigger: model_decision
+description: "Reduce driver turnover by fixing what actually makes drivers leave — the pay comparison that is real, the home-time reliability, the dispatch relationship, and the first ninety days where most departures are decided. Use when asked to improve driver retention, reduce turnover, understand why drivers are leaving, or design a driver onboarding or referral programme. Produces the turnover analysis by tenure and cause, the true cost of turnover, the exit-driver findings, the prioritised interventions, and the first-90-days plan."
+---
+
+# Driver Retention Plan
+
+Drivers rarely leave over the pay rate itself; they leave over the gap between what was described at hiring and what the job turned out to be. Home time that slips, a dispatcher who favours other drivers, equipment that keeps breaking, and a first month with no support. This finds which of those is actually costing you drivers, prices the turnover honestly, and fixes the ones that matter.
+
+## What This Skill Produces
+
+- **Turnover analysis by tenure** — because leaving at 30 days and leaving at three years have entirely different causes
+- **The true cost of turnover** — recruiting, onboarding, unseated truck days, and the productivity ramp, which together are usually far larger than assumed
+- **Exit and stay findings** — what leavers say, and more usefully what current drivers say before they leave
+- **The reality-versus-promise gap** — what recruiting describes against what the job delivers
+- **Prioritised interventions** — ranked by drivers retained per pound, not by ease
+- **The first-90-days plan** — where most turnover is actually determined
+
+## Required Inputs
+
+Ask for these if not provided:
+- **Turnover data** — by tenure band, by fleet or lane, by dispatcher, and over time
+- **Exit reasons** — what leavers gave, and whether anyone probed past the first answer
+- **The pay picture** — actual take-home including detention and accessorials, versus the market for the same work
+- **Home time** — what is promised at recruitment and what is actually delivered
+- **The equipment and dispatch position** — vehicle age and reliability, and how loads are assigned
+
+## Framework: Segment by Tenure, Price the Loss, Fix the Promise Gap
+
+1. **Split turnover by tenure.** Under 90 days is a recruiting-and-onboarding failure. One to two years is usually pay or home time. Long-tenure departures are often equipment or a specific dispatcher. One number hides all three.
+2. **Price turnover properly.** Recruiting, training, onboarding, the unseated truck's lost revenue, and the ramp to full productivity. The real figure per driver is usually large enough to change the conversation about pay.
+3. **Compare take-home, not rate per mile.** Drivers compare what lands in their account. Detention that goes unpaid and miles that do not materialise both show up there.
+4. **Measure home-time reliability, not the policy.** The promise is rarely the problem; the variance is. Track promised versus actual and show it.
+5. **Look at dispatch as a retention factor.** Turnover concentrated under one dispatcher is a management finding, and a common one.
+6. **Talk to stayers, not just leavers.** Exit interviews capture a rehearsed reason. Stay interviews find the problem while it is still fixable.
+7. **Fix the first 90 days first.** It is usually the largest single band and the cheapest to change.
+
+## Output Format
+
+### Driver retention plan: [operation] · [period]
+
+**Turnover**
+| Tenure band | Leavers | Rate | Stated reason | Probable actual cause |
+|---|---|---|---|---|
+| 0–90 days | | | | |
+| 90 days–1 year | | | | |
+| 1–2 years | | | | |
+| 2 years+ | | | | |
+By dispatcher: [concentration, if any] · By lane/fleet: [concentration]
+
+**Cost of turnover**
+| Component | Per driver |
+|---|---|
+| Recruiting and advertising | |
+| Onboarding, training, orientation | |
+| Unseated truck (days × revenue per day) | |
+| Productivity ramp | |
+| **Total per departure** | |
+Annual cost: [leavers × total] — **against a [amount] annual pay increase across [n] drivers**
+
+**Promise vs reality**
+| Recruiting says | Reality | Gap |
+|---|---|---|
+| Home time [promise] | [actual, and variance] | |
+| Earnings [promise] | [actual take-home] | |
+| Equipment [promise] | [actual age/condition] | |
+| Miles [promise] | [actual] | |
+
+**Interventions** — ranked by drivers retained per pound
+| Intervention | Addresses | Est. drivers retained | Cost | Priority |
+|---|---|---|---|---|
+
+**First 90 days:** day 1 [what] · week 1 [check-in, by whom] · day 30 [structured conversation] · day 60 [ ] · day 90 [ ] · **assigned mentor:** [role]
+
+**Stay interviews:** [cadence, who runs them, what is asked, where answers go]
+
+## Quality Checks
+- [ ] Turnover is segmented by tenure, not reported as one rate
+- [ ] Concentration by dispatcher and by lane was checked
+- [ ] The cost of turnover includes unseated truck days and the productivity ramp
+- [ ] Pay is compared as actual take-home, not rate per mile
+- [ ] Home-time reliability is measured as variance against promise
+- [ ] Stay interviews are in place, not only exit interviews
+- [ ] Interventions are ranked by retention per pound spent
+- [ ] The first 90 days has a specific, owned plan
+
+## Anti-Patterns
+- **One turnover number.** Hides three different problems with three different fixes.
+- **Believing the exit-interview reason.** 'Better opportunity' is a polite closing statement, not a cause.
+- **Comparing rate per mile.** Drivers compare take-home, and so should you.
+- **Auditing the home-time policy instead of the delivery.** The variance is the complaint.
+- **Ignoring dispatcher concentration.** Frequently the single largest and most fixable factor.
+- **Recruiting harder instead of retaining.** Costs more per seated truck every time.
+- **Overselling at recruitment.** Every exaggeration becomes a 60-day departure.
+
+## Example Trigger Phrases
+- "Why are our drivers leaving?"
+- "Build a driver retention plan"
+- "What does turnover actually cost us per driver?"
+- "Most of our leavers go within 90 days — what do we fix?"
+- "Design a driver onboarding programme"

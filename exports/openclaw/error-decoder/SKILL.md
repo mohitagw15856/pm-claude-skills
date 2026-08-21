@@ -18,7 +18,11 @@ You'll often get just an error string or a partial stack trace, with no surround
 
 ## Input
 
-The error message, stack trace, or crash output — plus (if given) the language/runtime, the relevant code, and what the user was doing. Infer anything missing.
+Ask for these if not provided:
+- **The error** — the message, stack trace, or crash output, unabridged
+- **The language or runtime** — and version, if the error does not name it
+- **The relevant code** — the frame the trace points at, if available
+- **What the user was doing** — the command or action that triggered it; infer anything missing
 
 ## Output Structure
 

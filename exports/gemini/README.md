@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1117 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1153 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -61,6 +61,9 @@
 | Apology Letter | `pm-crisis` | `pm-crisis/apology-letter/GEM_INSTRUCTIONS.md` |
 | Appliance Buying Guide | `pm-lifeadmin` | `pm-lifeadmin/appliance-buying-guide/GEM_INSTRUCTIONS.md` |
 | Apprentice First Week | `pm-trades` | `pm-trades/apprentice-first-week/GEM_INSTRUCTIONS.md` |
+| Architectural Programme Brief | `pm-architecture` | `pm-architecture/architectural-programme-brief/GEM_INSTRUCTIONS.md` |
+| Architectural Specification Section | `pm-architecture` | `pm-architecture/architectural-specification/GEM_INSTRUCTIONS.md` |
+| Architecture Client Presentation | `pm-architecture` | `pm-architecture/architecture-client-presentation/GEM_INSTRUCTIONS.md` |
 | Architecture Decision Record (ADR) | `pm-engineering` | `pm-engineering/architecture-decision-record/GEM_INSTRUCTIONS.md` |
 | Architecture Diagram | `pm-visuals` | `pm-visuals/architecture-diagram/GEM_INSTRUCTIONS.md` |
 | Archive Strategy | `pm-cowork` | `pm-cowork/archive-strategy/GEM_INSTRUCTIONS.md` |
@@ -202,9 +205,11 @@
 | Complaint Letter | `pm-lifeadmin` | `pm-lifeadmin/complaint-letter/GEM_INSTRUCTIONS.md` |
 | Compliance Checklist | `pm-legal` | `pm-legal/compliance-checklist/GEM_INSTRUCTIONS.md` |
 | Compound-Growth Explainer | `pm-wealth` | `pm-wealth/compound-growth-explainer/GEM_INSTRUCTIONS.md` |
+| Compounding Record | `pm-pharmacy` | `pm-pharmacy/compounding-record/GEM_INSTRUCTIONS.md` |
 | Condolence Message Helper | `pm-family` | `pm-family/condolence-message-helper/GEM_INSTRUCTIONS.md` |
 | Conference Talk Proposal | `pm-devrel` | `pm-devrel/conference-talk-proposal/GEM_INSTRUCTIONS.md` |
 | Conflict De-escalation | `other` | `other/conflict-deescalation/GEM_INSTRUCTIONS.md` |
+| Construction RFI Response | `pm-architecture` | `pm-architecture/construction-rfi-response/GEM_INSTRUCTIONS.md` |
 | Consulting Proposal | `pm-consulting` | `pm-consulting/consulting-proposal/GEM_INSTRUCTIONS.md` |
 | Content Calendar | `pm-gtm` | `pm-gtm/content-calendar/GEM_INSTRUCTIONS.md` |
 | Content Repurposer | `pm-creator` | `pm-creator/content-repurposer/GEM_INSTRUCTIONS.md` |
@@ -221,6 +226,7 @@
 | Contract Review | `pm-legal` | `pm-legal/contract-review/GEM_INSTRUCTIONS.md` |
 | Contractor Dispute | `pm-lifeadmin` | `pm-lifeadmin/contractor-dispute/GEM_INSTRUCTIONS.md` |
 | Contributor Guide | `pm-devrel` | `pm-devrel/contributor-guide/GEM_INSTRUCTIONS.md` |
+| Controlled Substance Reconciliation & Audit | `pm-pharmacy` | `pm-pharmacy/controlled-substance-audit/GEM_INSTRUCTIONS.md` |
 | Conversion Rate Optimization | `pm-growth` | `pm-growth/conversion-rate-optimization/GEM_INSTRUCTIONS.md` |
 | Couch-to-Goal Runner | `pm-wellbeing` | `pm-wellbeing/couch-to-goal-runner/GEM_INSTRUCTIONS.md` |
 | Counteroffer Decoder | `pm-resignation` | `pm-resignation/counteroffer-decoder/GEM_INSTRUCTIONS.md` |
@@ -291,6 +297,11 @@
 | Demand Forecast Review | `pm-supplychain` | `pm-supplychain/demand-forecast-review/GEM_INSTRUCTIONS.md` |
 | Demand Letter | `pm-legal` | `pm-legal/demand-letter/GEM_INSTRUCTIONS.md` |
 | Demo Script | `pm-cowork` | `pm-cowork/demo-script/GEM_INSTRUCTIONS.md` |
+| Dental Clinical Note | `pm-dentistry` | `pm-dentistry/dental-clinical-note/GEM_INSTRUCTIONS.md` |
+| Dental Emergency Triage | `pm-dentistry` | `pm-dentistry/dental-emergency-triage/GEM_INSTRUCTIONS.md` |
+| Dental Pre-Authorisation & Claim Narrative | `pm-dentistry` | `pm-dentistry/dental-insurance-preauth/GEM_INSTRUCTIONS.md` |
+| Dental Recall & Reactivation | `pm-dentistry` | `pm-dentistry/dental-recall-reactivation/GEM_INSTRUCTIONS.md` |
+| Dental Referral Letter | `pm-dentistry` | `pm-dentistry/dental-referral-letter/GEM_INSTRUCTIONS.md` |
 | Dependency Audit | `pm-engineering` | `pm-engineering/dependency-audit/GEM_INSTRUCTIONS.md` |
 | Dependency Check | `pm-focus` | `pm-focus/dependency-check/GEM_INSTRUCTIONS.md` |
 | Dependency Conflict Resolver | `pm-engineering` | `pm-engineering/dependency-conflict-resolver/GEM_INSTRUCTIONS.md` |
@@ -332,6 +343,9 @@
 | Downloads Triage | `pm-cowork` | `pm-cowork/downloads-triage/GEM_INSTRUCTIONS.md` |
 | Doxxing Response | `pm-digital-safety` | `pm-digital-safety/doxxing-response/GEM_INSTRUCTIONS.md` |
 | DPA Review | `pm-legal` | `pm-legal/dpa-review/GEM_INSTRUCTIONS.md` |
+| Driver Incident Investigation | `pm-fleet` | `pm-fleet/driver-incident-investigation/GEM_INSTRUCTIONS.md` |
+| Driver Retention Plan | `pm-fleet` | `pm-fleet/driver-retention-plan/GEM_INSTRUCTIONS.md` |
+| Clinical Intervention Record | `pm-pharmacy` | `pm-pharmacy/drug-interaction-intervention/GEM_INSTRUCTIONS.md` |
 | Earthquake Watch | `pm-live` | `pm-live/earthquake-watch/GEM_INSTRUCTIONS.md` |
 | Elder Scam Briefing | `pm-scam-defense` | `pm-scam-defense/elder-scam-briefing/GEM_INSTRUCTIONS.md` |
 | Elected Rep Letter | `pm-civic` | `pm-civic/elected-rep-letter/GEM_INSTRUCTIONS.md` |
@@ -364,6 +378,10 @@
 | Euthanasia Conversation | `pm-veterinary` | `pm-veterinary/euthanasia-conversation/GEM_INSTRUCTIONS.md` |
 | EV vs Gas | `pm-calculators` | `pm-calculators/ev-vs-gas/GEM_INSTRUCTIONS.md` |
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/GEM_INSTRUCTIONS.md` |
+| Event Budget Plan | `pm-events` | `pm-events/event-budget-plan/GEM_INSTRUCTIONS.md` |
+| Event Run of Show | `pm-events` | `pm-events/event-run-of-show/GEM_INSTRUCTIONS.md` |
+| Event Safety Plan | `pm-events` | `pm-events/event-safety-plan/GEM_INSTRUCTIONS.md` |
+| Event Vendor Brief | `pm-events` | `pm-events/event-vendor-brief/GEM_INSTRUCTIONS.md` |
 | Evidence Grading | `pm-cowork` | `pm-cowork/evidence-grading/GEM_INSTRUCTIONS.md` |
 | Evidence Lock | `pm-research` | `pm-research/evidence-lock/GEM_INSTRUCTIONS.md` |
 | EVT/DVT/PVT Gate Review | `pm-hardware` | `pm-hardware/evt-dvt-pvt-gate-review/GEM_INSTRUCTIONS.md` |
@@ -426,6 +444,8 @@
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/GEM_INSTRUCTIONS.md` |
 | Five Minds | `pm-thinking` | `pm-thinking/five-minds/GEM_INSTRUCTIONS.md` |
 | Flare Day Planner | `pm-invisible-illness` | `pm-invisible-illness/flare-day-planner/GEM_INSTRUCTIONS.md` |
+| Fleet Compliance Audit Preparation | `pm-fleet` | `pm-fleet/fleet-compliance-audit-prep/GEM_INSTRUCTIONS.md` |
+| Fleet Maintenance Programme | `pm-fleet` | `pm-fleet/fleet-maintenance-programme/GEM_INSTRUCTIONS.md` |
 | Flight-Delay Compensation | `pm-lifeadmin` | `pm-lifeadmin/flight-delay-compensation/GEM_INSTRUCTIONS.md` |
 | Flight Tracker | `pm-live` | `pm-live/flight-tracker/GEM_INSTRUCTIONS.md` |
 | Flow Metrics Interpreter | `pm-delivery` | `pm-delivery/flow-metrics-interpreter/GEM_INSTRUCTIONS.md` |
@@ -440,6 +460,7 @@
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/GEM_INSTRUCTIONS.md` |
 | Franklin Decision Ledger | `pm-dead-mentors` | `pm-dead-mentors/franklin-decision-ledger/GEM_INSTRUCTIONS.md` |
 | Freelance Rate | `pm-calculators` | `pm-calculators/freelance-rate/GEM_INSTRUCTIONS.md` |
+| Freight Rate Quote | `pm-fleet` | `pm-fleet/freight-rate-quote/GEM_INSTRUCTIONS.md` |
 | From First Principles | `pm-thinking` | `pm-thinking/from-first-principles/GEM_INSTRUCTIONS.md` |
 | Frontend Design | `pm-design` | `pm-design/frontend-design/GEM_INSTRUCTIONS.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/GEM_INSTRUCTIONS.md` |
@@ -492,6 +513,7 @@
 | Home Workout Builder | `pm-wellbeing` | `pm-wellbeing/home-workout-builder/GEM_INSTRUCTIONS.md` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/GEM_INSTRUCTIONS.md` |
 | Hospital-Stay Plan | `pm-caregiving` | `pm-caregiving/hospital-stay-plan/GEM_INSTRUCTIONS.md` |
+| Driver Hours Compliance Check | `pm-fleet` | `pm-fleet/hours-of-service-check/GEM_INSTRUCTIONS.md` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/GEM_INSTRUCTIONS.md` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/GEM_INSTRUCTIONS.md` |
 | Housing With a Record | `pm-reentry` | `pm-reentry/housing-with-a-record/GEM_INSTRUCTIONS.md` |
@@ -613,6 +635,7 @@
 | Medical Bill Decoder | `pm-decoders` | `pm-decoders/medical-bill-decoder/GEM_INSTRUCTIONS.md` |
 | Medical Records Request | `pm-lifeadmin` | `pm-lifeadmin/medical-records-request/GEM_INSTRUCTIONS.md` |
 | Medication-Management System | `pm-caregiving` | `pm-caregiving/medication-management-system/GEM_INSTRUCTIONS.md` |
+| Medication Therapy Review | `pm-pharmacy` | `pm-pharmacy/medication-therapy-review/GEM_INSTRUCTIONS.md` |
 | Meeting Action Extractor | `pm-essentials` | `pm-essentials/meeting-action-extractor/GEM_INSTRUCTIONS.md` |
 | Meeting Cost Meter | `pm-cowork` | `pm-cowork/meeting-cost-meter/GEM_INSTRUCTIONS.md` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/GEM_INSTRUCTIONS.md` |
@@ -699,6 +722,7 @@
 | Passive-Income Reality Check | `pm-wealth` | `pm-wealth/passive-income-reality-check/GEM_INSTRUCTIONS.md` |
 | Password & 2FA Setup | `pm-digital-safety` | `pm-digital-safety/password-and-2fa-setup/GEM_INSTRUCTIONS.md` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/GEM_INSTRUCTIONS.md` |
+| Patient Education Explainer | `pm-physio` | `pm-physio/patient-education-explainer/GEM_INSTRUCTIONS.md` |
 | Pay Stub Decoder | `pm-decoders` | `pm-decoders/pay-stub-decoder/GEM_INSTRUCTIONS.md` |
 | Paywall Optimization | `pm-growth` | `pm-growth/paywall-optimization/GEM_INSTRUCTIONS.md` |
 | Penetration Test Report | `pm-security` | `pm-security/pentest-report/GEM_INSTRUCTIONS.md` |
@@ -712,8 +736,12 @@
 | Personal Statement | `pm-students` | `pm-students/personal-statement/GEM_INSTRUCTIONS.md` |
 | Personal WIP Limits | `pm-cowork` | `pm-cowork/personal-wip-limits/GEM_INSTRUCTIONS.md` |
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/GEM_INSTRUCTIONS.md` |
+| Pharmacy Counselling Script | `pm-pharmacy` | `pm-pharmacy/pharmacy-counselling-script/GEM_INSTRUCTIONS.md` |
 | Phishing Triage | `pm-digital-safety` | `pm-digital-safety/phishing-triage/GEM_INSTRUCTIONS.md` |
 | Photo Library Rescue | `pm-cowork` | `pm-cowork/photo-library-rescue/GEM_INSTRUCTIONS.md` |
+| Physiotherapy Discharge Summary | `pm-physio` | `pm-physio/physio-discharge-summary/GEM_INSTRUCTIONS.md` |
+| Physiotherapy Initial Assessment | `pm-physio` | `pm-physio/physio-initial-assessment/GEM_INSTRUCTIONS.md` |
+| Physiotherapy Progress Note | `pm-physio` | `pm-physio/physio-progress-note/GEM_INSTRUCTIONS.md` |
 | PIP Responder | `pm-career` | `pm-career/pip-responder/GEM_INSTRUCTIONS.md` |
 | PIP Writer | `pm-people` | `pm-people/pip-writer/GEM_INSTRUCTIONS.md` |
 | Pitch Vs Teach | `pm-cowork` | `pm-cowork/pitch-vs-teach/GEM_INSTRUCTIONS.md` |
@@ -721,12 +749,14 @@
 | Pixel GIF Maker | `other` | `other/pixel-gif-maker/GEM_INSTRUCTIONS.md` |
 | Plain Language Rewrite | `pm-cowork` | `pm-cowork/plain-language-rewrite/GEM_INSTRUCTIONS.md` |
 | Plan My Day | `pm-rituals` | `pm-rituals/plan-my-day/GEM_INSTRUCTIONS.md` |
+| Planning Application Statement | `pm-architecture` | `pm-architecture/planning-application-statement/GEM_INSTRUCTIONS.md` |
 | PM Weekly Review | `pm-rituals` | `pm-rituals/pm-weekly-review/GEM_INSTRUCTIONS.md` |
 | Poke Holes In This | `pm-thinking` | `pm-thinking/poke-holes-in-this/GEM_INSTRUCTIONS.md` |
 | Policy Drafter | `pm-cowork` | `pm-cowork/policy-drafter/GEM_INSTRUCTIONS.md` |
 | Policy Memo | `pm-gov` | `pm-gov/policy-memo/GEM_INSTRUCTIONS.md` |
 | Policy Renewal Review | `pm-insurance` | `pm-insurance/policy-renewal-review/GEM_INSTRUCTIONS.md` |
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/GEM_INSTRUCTIONS.md` |
+| Post-Event Debrief | `pm-events` | `pm-events/post-event-debrief/GEM_INSTRUCTIONS.md` |
 | Posture Reset Plan | `pm-wellbeing` | `pm-wellbeing/posture-reset-plan/GEM_INSTRUCTIONS.md` |
 | Power of Attorney Explainer | `pm-legal` | `pm-legal/power-of-attorney-explainer/GEM_INSTRUCTIONS.md` |
 | Power Outage Plan | `pm-emergency` | `pm-emergency/power-outage-plan/GEM_INSTRUCTIONS.md` |
@@ -739,6 +769,7 @@
 | Pre-Mortem Panel | `pm-thinking` | `pm-thinking/pre-mortem-panel/GEM_INSTRUCTIONS.md` |
 | Premortem Assassin | `pm-warroom` | `pm-warroom/premortem-assassin/GEM_INSTRUCTIONS.md` |
 | Prescription Cost Navigator | `pm-lifeadmin` | `pm-lifeadmin/prescription-cost-navigator/GEM_INSTRUCTIONS.md` |
+| Declining to Dispense | `pm-pharmacy` | `pm-pharmacy/prescription-refusal-to-fill/GEM_INSTRUCTIONS.md` |
 | Presenter Notes | `pm-cowork` | `pm-cowork/presenter-notes/GEM_INSTRUCTIONS.md` |
 | Press Kit EPK | `pm-musician` | `pm-musician/press-kit-epk/GEM_INSTRUCTIONS.md` |
 | Press Release | `pm-cross` | `pm-cross/press-release/GEM_INSTRUCTIONS.md` |
@@ -817,6 +848,7 @@
 | Regret Minimizer | `pm-focus` | `pm-focus/regret-minimizer/GEM_INSTRUCTIONS.md` |
 | Regulator Eyes | `pm-simulators` | `pm-simulators/regulator-eyes/GEM_INSTRUCTIONS.md` |
 | Regulatory Impact Analysis | `pm-gov` | `pm-gov/regulatory-impact-analysis/GEM_INSTRUCTIONS.md` |
+| Rehabilitation Programme Design | `pm-physio` | `pm-physio/rehab-programme-design/GEM_INSTRUCTIONS.md` |
 | Rejection-Sensitivity Reframe | `pm-focus` | `pm-focus/rejection-sensitivity-reframe/GEM_INSTRUCTIONS.md` |
 | Relationship Check-In | `pm-family` | `pm-family/relationship-check-in/GEM_INSTRUCTIONS.md` |
 | Release Day Countdown | `pm-musician` | `pm-musician/release-day-countdown/GEM_INSTRUCTIONS.md` |
@@ -841,6 +873,7 @@
 | Retention Loop Design | `pm-growth` | `pm-growth/retention-loop-design/GEM_INSTRUCTIONS.md` |
 | Retrospective Analysis | `pm-delivery` | `pm-delivery/retro-analysis/GEM_INSTRUCTIONS.md` |
 | Return & Refund Policy | `pm-ecommerce` | `pm-ecommerce/return-refund-policy/GEM_INSTRUCTIONS.md` |
+| Return-to-Activity Criteria | `pm-physio` | `pm-physio/return-to-activity-criteria/GEM_INSTRUCTIONS.md` |
 | Review Comments Resolver | `pm-cowork` | `pm-cowork/review-comments-resolver/GEM_INSTRUCTIONS.md` |
 | Review Response | `pm-ecommerce` | `pm-ecommerce/review-response/GEM_INSTRUCTIONS.md` |
 | Rewards Optimizer | `pm-money` | `pm-money/rewards-optimizer/GEM_INSTRUCTIONS.md` |
@@ -910,6 +943,7 @@
 | Shutdown Ritual | `pm-cowork` | `pm-cowork/shutdown-ritual/GEM_INSTRUCTIONS.md` |
 | Sibling Care Summit | `pm-aging-parents` | `pm-aging-parents/sibling-care-summit/GEM_INSTRUCTIONS.md` |
 | Side Business Setup | `pm-sidehustle` | `pm-sidehustle/side-business-setup/GEM_INSTRUCTIONS.md` |
+| Site Analysis Report | `pm-architecture` | `pm-architecture/site-analysis-report/GEM_INSTRUCTIONS.md` |
 | Site Check | `pm-live` | `pm-live/site-check/GEM_INSTRUCTIONS.md` |
 | Site Safety Briefing | `pm-construction` | `pm-construction/site-safety-briefing/GEM_INSTRUCTIONS.md` |
 | Skill Fusion | `pm-advanced` | `pm-advanced/skill-fusion/GEM_INSTRUCTIONS.md` |
@@ -1058,6 +1092,7 @@
 | Transcreation | `pm-localization` | `pm-localization/transcreation/GEM_INSTRUCTIONS.md` |
 | Travel Brief | `pm-cowork` | `pm-cowork/travel-brief/GEM_INSTRUCTIONS.md` |
 | Treatment Plan Estimate | `pm-veterinary` | `pm-veterinary/treatment-plan-estimate/GEM_INSTRUCTIONS.md` |
+| Dental Treatment Plan Presentation | `pm-dentistry` | `pm-dentistry/treatment-plan-presentation/GEM_INSTRUCTIONS.md` |
 | Trip Planner | `pm-personal` | `pm-personal/trip-planner/GEM_INSTRUCTIONS.md` |
 | TTRPG Session Forge | `pm-newgen` | `pm-newgen/ttrpg-session-forge/GEM_INSTRUCTIONS.md` |
 | Two Worlds Translator | `pm-identity` | `pm-identity/two-worlds-translator/GEM_INSTRUCTIONS.md` |
@@ -1081,6 +1116,7 @@
 | Vendor Evaluation | `pm-operations` | `pm-operations/vendor-evaluation/GEM_INSTRUCTIONS.md` |
 | Vendor Security Review | `pm-compliance` | `pm-compliance/vendor-security-review/GEM_INSTRUCTIONS.md` |
 | Venue Access Check | `pm-accessibility` | `pm-accessibility/venue-access-check/GEM_INSTRUCTIONS.md` |
+| Venue Contract Review | `pm-events` | `pm-events/venue-contract-review/GEM_INSTRUCTIONS.md` |
 | Verification Before Completion | `pm-method` | `pm-method/verification-before-completion/GEM_INSTRUCTIONS.md` |
 | Version Chaos Untangler | `pm-cowork` | `pm-cowork/version-chaos-untangler/GEM_INSTRUCTIONS.md` |
 | Vet Estimate Decoder | `pm-decoders` | `pm-decoders/vet-estimate-decoder/GEM_INSTRUCTIONS.md` |

@@ -1,6 +1,6 @@
 ---
 name: jury-duty-navigator
-description: "Handle a jury summons calmly — confirm it's real, understand what's actually required, request a deferral or excusal the right way if you genuinely need one, arrange work and pay, and know what to expect on the day. Use when someone says 'I got a jury summons', 'can I get out of jury duty', 'how do I defer jury service', or 'what happens at jury duty'. Produces a response plan, a deferral/excusal request if warranted, and a what-to-expect brief. Routes to the court for anything binding; never coaches dodging a legal obligation."
+description: "Handle a jury summons calmly — confirm it's real, understand what's actually required, request a deferral or excusal the right way if you genuinely need one, arrange work and pay, and know what to expect at selection and on the day. Use when someone says I got a jury summons, can I get out of jury duty, how do I defer jury service, or what happens at jury duty. Produces a response plan, a deferral/excusal request if warranted, and a what-to-expect brief, with a clear warning that ignoring a summons has consequences. Not legal advice; routes to the court for anything binding and never coaches dodging a legal obligation."
 homepage: https://mohitagw15856.github.io/pm-claude-skills/skill/jury-duty-navigator.html
 metadata:
   {

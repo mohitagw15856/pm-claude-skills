@@ -12,7 +12,11 @@ Infer the package manager and ecosystem from the error or files mentioned; label
 
 ## Input
 
-The install error / conflict output, plus (if given) the manifest (package.json, requirements.txt, go.mod…) and lockfile, and the manager. Infer what's missing.
+Ask for these if not provided:
+- **The install error** — the conflict output exactly as the tool printed it
+- **The manifest** — package.json, requirements.txt, go.mod, pom.xml, whichever applies
+- **The lockfile** — if one exists, since it is usually where the conflict is pinned
+- **The package manager** — npm, pnpm, yarn, pip, Maven, Go modules; infer what's missing
 
 ## Output Structure
 

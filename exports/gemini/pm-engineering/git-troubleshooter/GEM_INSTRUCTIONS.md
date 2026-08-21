@@ -12,7 +12,11 @@ Infer the current state from what the user describes (and typical git output); l
 
 ## Input
 
-What happened / what they want (e.g. "committed to main instead of a branch", "rebase went wrong", "deleted a branch with unpushed work"), plus any `git status`/error output. Infer the rest.
+Ask for these if not provided:
+- **What happened** — e.g. committed to main instead of a branch, rebase went wrong, deleted a branch with unpushed work
+- **What they want instead** — the end state they are trying to reach
+- **The output** — `git status`, `git log --oneline -5`, and any error text
+- **Whether it is pushed** — whether the bad state has left their machine, which decides how safe the fix is
 
 ## Output Structure
 

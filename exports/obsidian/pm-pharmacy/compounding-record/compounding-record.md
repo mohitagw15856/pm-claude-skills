@@ -1,0 +1,103 @@
+---
+aliases: ["Compounding Record"]
+tags: [pm-skills, skill]
+skill: compounding-record
+description: "Write a compounding worksheet and record that reproduces the preparation exactly and survives inspection — formula, calculations shown, components with lot numbers, in-process checks, and the beyond-use date with its basis. Use when asked to document a compounded preparation, write a master formulation record, create a compounding worksheet, or prepare compounding documentation for inspection. Produces the master formula, the batch record, the component and lot table, in-process checks, labelling, and the beyond-use-date rationale. Documentation only; standards and stability data must come from current official references."
+---
+
+# Compounding Record
+
+A compounding record has two readers: the person repeating the preparation next month, and an inspector asking how you arrived at a beyond-use date. Both need the same thing — the arithmetic visible, the components traceable to lot, and the reasoning written down rather than remembered. This produces a record that answers both without a phone call.
+
+## What This Skill Produces
+
+- **The master formulation record** — the reproducible formula, separate from any single batch
+- **The batch record** — this preparation, with every calculation shown rather than just its result
+- **A component table** — each ingredient with source, lot number, expiry, and quantity used
+- **In-process checks** — what was verified during preparation, by whom, and at what point
+- **Beyond-use date with its basis** — the date and the reference or data it derives from, which is what inspection asks about
+- **The label and its required elements** — assembled against your jurisdiction's requirements
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The preparation** — final product, strength, dosage form, and total quantity
+- **The formula** — ingredients and amounts, and the source of the formula
+- **The components** — actual products used, with lot numbers and expiry dates
+- **Equipment and environment** — what was used and where, including any controlled environment
+- **The standards you work to** — your jurisdiction's compounding standard and the reference used for beyond-use dating
+
+## Framework: Show the Arithmetic, Trace the Lot, Justify the Date
+
+1. **Separate the master formula from the batch.** The master is the recipe and does not change; the batch is what happened today. Conflating them is the most common documentation failure.
+2. **Write every calculation out.** Including the aliquot arithmetic and any potency or salt-form adjustment. A result without its working cannot be checked, and checking is the point.
+3. **Have the calculation verified independently** where your standard requires it, and record who verified.
+4. **Trace every component to a lot.** An ingredient without a lot number makes a recall impossible.
+5. **Derive the beyond-use date, do not choose it.** State the reference or stability data it comes from. 'Thirty days' with no basis is the finding inspectors write up.
+6. **Record the in-process checks as they happen.** Weight verification, appearance, pH, mixing time — at the point of the check, not reconstructed afterwards.
+
+## Output Format
+
+### Compounding record: [preparation] · [batch/Rx no.] · [date]
+
+**MASTER FORMULATION RECORD**
+Preparation: [name, strength, dosage form] · Source of formula: [reference]
+| Ingredient | Amount per unit | Role |
+|---|---|---|
+| [ingredient] | [amount] | [active / vehicle / preservative] |
+Equipment: [list] · Environment: [bench / controlled area, classification]
+
+**BATCH RECORD**
+Quantity prepared: [amount] · Prepared by: [name] · Date/time: [when]
+
+**Calculations** — shown in full
+```
+[the working, step by step, including aliquots and any potency or salt-form adjustment]
+```
+Verified by: [second person, where required] · [date/time]
+
+**Components used**
+| Ingredient | Manufacturer/source | Lot | Expiry | Quantity used |
+|---|---|---|---|---|
+
+**In-process checks:** [weight verification · appearance · pH · mixing time — each with the result, who checked, and when]
+
+**Final product:** appearance [description] · yield [actual vs theoretical] · **discrepancy investigated:** [if any]
+
+**Beyond-use date:** [date] · **Basis:** [the reference, stability data, or standard relied on — cited]
+
+**Label:** [product, strength, quantity, BUD, storage, prepared-by, batch number, and every element your jurisdiction requires]
+
+> A documentation framework only. Compounding standards, permitted preparations, environmental requirements, verification rules and beyond-use dating are governed by your jurisdiction's official standards and must be taken from current official references — never from this template and never from recall. Sterile compounding carries requirements this structure does not attempt to cover.
+
+## Quality Checks
+- [ ] Master formula and batch record are separate documents
+- [ ] Every calculation is written out, not just its result
+- [ ] Independent verification is recorded where the standard requires it
+- [ ] Every component has a lot number and expiry
+- [ ] In-process checks were recorded at the time, with the checker named
+- [ ] Actual yield is compared against theoretical, and any discrepancy is investigated
+- [ ] The beyond-use date cites the specific basis it derives from
+
+## Anti-Patterns
+- **A result with no working.** Uncheckable, and the first thing an inspector asks to see.
+- **Components without lot numbers.** Makes a recall impossible and is a serious finding.
+- **A beyond-use date by habit.** '30 days' with no cited basis is written up every time.
+- **Reconstructing in-process checks afterwards.** A check recorded later is not a check.
+- **One document for formula and batch.** The recipe becomes unreproducible once it is entangled with a single day's numbers.
+- **Ignoring a yield discrepancy.** An uninvestigated shortfall is the sign of an error nobody chased.
+
+## Example Trigger Phrases
+- "Write a compounding record for this suspension"
+- "Create a master formulation record"
+- "How do I document beyond-use dating for an inspection?"
+- "We are being inspected — what should our compounding records show?"
+- "Write a batch record with the calculations shown"
+
+---
+<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
+     variable for the highlighted text — replace it with your plugin's equivalent
+     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
+Apply the skill above to the following input:
+
+{{selection}}

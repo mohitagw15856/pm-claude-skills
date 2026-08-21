@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1117 skills exported. Copy a `.mdc rule` into the tool to use it.
+1153 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -61,6 +61,9 @@
 | Apology Letter | `pm-crisis` | `pm-crisis/apology-letter/apology-letter.mdc` |
 | Appliance Buying Guide | `pm-lifeadmin` | `pm-lifeadmin/appliance-buying-guide/appliance-buying-guide.mdc` |
 | Apprentice First Week | `pm-trades` | `pm-trades/apprentice-first-week/apprentice-first-week.mdc` |
+| Architectural Programme Brief | `pm-architecture` | `pm-architecture/architectural-programme-brief/architectural-programme-brief.mdc` |
+| Architectural Specification Section | `pm-architecture` | `pm-architecture/architectural-specification/architectural-specification.mdc` |
+| Architecture Client Presentation | `pm-architecture` | `pm-architecture/architecture-client-presentation/architecture-client-presentation.mdc` |
 | Architecture Decision Record (ADR) | `pm-engineering` | `pm-engineering/architecture-decision-record/architecture-decision-record.mdc` |
 | Architecture Diagram | `pm-visuals` | `pm-visuals/architecture-diagram/architecture-diagram.mdc` |
 | Archive Strategy | `pm-cowork` | `pm-cowork/archive-strategy/archive-strategy.mdc` |
@@ -202,9 +205,11 @@
 | Complaint Letter | `pm-lifeadmin` | `pm-lifeadmin/complaint-letter/complaint-letter.mdc` |
 | Compliance Checklist | `pm-legal` | `pm-legal/compliance-checklist/compliance-checklist.mdc` |
 | Compound-Growth Explainer | `pm-wealth` | `pm-wealth/compound-growth-explainer/compound-growth-explainer.mdc` |
+| Compounding Record | `pm-pharmacy` | `pm-pharmacy/compounding-record/compounding-record.mdc` |
 | Condolence Message Helper | `pm-family` | `pm-family/condolence-message-helper/condolence-message-helper.mdc` |
 | Conference Talk Proposal | `pm-devrel` | `pm-devrel/conference-talk-proposal/conference-talk-proposal.mdc` |
 | Conflict De-escalation | `other` | `other/conflict-deescalation/conflict-deescalation.mdc` |
+| Construction RFI Response | `pm-architecture` | `pm-architecture/construction-rfi-response/construction-rfi-response.mdc` |
 | Consulting Proposal | `pm-consulting` | `pm-consulting/consulting-proposal/consulting-proposal.mdc` |
 | Content Calendar | `pm-gtm` | `pm-gtm/content-calendar/content-calendar.mdc` |
 | Content Repurposer | `pm-creator` | `pm-creator/content-repurposer/content-repurposer.mdc` |
@@ -221,6 +226,7 @@
 | Contract Review | `pm-legal` | `pm-legal/contract-review/contract-review.mdc` |
 | Contractor Dispute | `pm-lifeadmin` | `pm-lifeadmin/contractor-dispute/contractor-dispute.mdc` |
 | Contributor Guide | `pm-devrel` | `pm-devrel/contributor-guide/contributor-guide.mdc` |
+| Controlled Substance Reconciliation & Audit | `pm-pharmacy` | `pm-pharmacy/controlled-substance-audit/controlled-substance-audit.mdc` |
 | Conversion Rate Optimization | `pm-growth` | `pm-growth/conversion-rate-optimization/conversion-rate-optimization.mdc` |
 | Couch-to-Goal Runner | `pm-wellbeing` | `pm-wellbeing/couch-to-goal-runner/couch-to-goal-runner.mdc` |
 | Counteroffer Decoder | `pm-resignation` | `pm-resignation/counteroffer-decoder/counteroffer-decoder.mdc` |
@@ -291,6 +297,11 @@
 | Demand Forecast Review | `pm-supplychain` | `pm-supplychain/demand-forecast-review/demand-forecast-review.mdc` |
 | Demand Letter | `pm-legal` | `pm-legal/demand-letter/demand-letter.mdc` |
 | Demo Script | `pm-cowork` | `pm-cowork/demo-script/demo-script.mdc` |
+| Dental Clinical Note | `pm-dentistry` | `pm-dentistry/dental-clinical-note/dental-clinical-note.mdc` |
+| Dental Emergency Triage | `pm-dentistry` | `pm-dentistry/dental-emergency-triage/dental-emergency-triage.mdc` |
+| Dental Pre-Authorisation & Claim Narrative | `pm-dentistry` | `pm-dentistry/dental-insurance-preauth/dental-insurance-preauth.mdc` |
+| Dental Recall & Reactivation | `pm-dentistry` | `pm-dentistry/dental-recall-reactivation/dental-recall-reactivation.mdc` |
+| Dental Referral Letter | `pm-dentistry` | `pm-dentistry/dental-referral-letter/dental-referral-letter.mdc` |
 | Dependency Audit | `pm-engineering` | `pm-engineering/dependency-audit/dependency-audit.mdc` |
 | Dependency Check | `pm-focus` | `pm-focus/dependency-check/dependency-check.mdc` |
 | Dependency Conflict Resolver | `pm-engineering` | `pm-engineering/dependency-conflict-resolver/dependency-conflict-resolver.mdc` |
@@ -332,6 +343,9 @@
 | Downloads Triage | `pm-cowork` | `pm-cowork/downloads-triage/downloads-triage.mdc` |
 | Doxxing Response | `pm-digital-safety` | `pm-digital-safety/doxxing-response/doxxing-response.mdc` |
 | DPA Review | `pm-legal` | `pm-legal/dpa-review/dpa-review.mdc` |
+| Driver Incident Investigation | `pm-fleet` | `pm-fleet/driver-incident-investigation/driver-incident-investigation.mdc` |
+| Driver Retention Plan | `pm-fleet` | `pm-fleet/driver-retention-plan/driver-retention-plan.mdc` |
+| Clinical Intervention Record | `pm-pharmacy` | `pm-pharmacy/drug-interaction-intervention/drug-interaction-intervention.mdc` |
 | Earthquake Watch | `pm-live` | `pm-live/earthquake-watch/earthquake-watch.mdc` |
 | Elder Scam Briefing | `pm-scam-defense` | `pm-scam-defense/elder-scam-briefing/elder-scam-briefing.mdc` |
 | Elected Rep Letter | `pm-civic` | `pm-civic/elected-rep-letter/elected-rep-letter.mdc` |
@@ -364,6 +378,10 @@
 | Euthanasia Conversation | `pm-veterinary` | `pm-veterinary/euthanasia-conversation/euthanasia-conversation.mdc` |
 | EV vs Gas | `pm-calculators` | `pm-calculators/ev-vs-gas/ev-vs-gas.mdc` |
 | Eval Rubric Designer | `pm-ai` | `pm-ai/eval-rubric-designer/eval-rubric-designer.mdc` |
+| Event Budget Plan | `pm-events` | `pm-events/event-budget-plan/event-budget-plan.mdc` |
+| Event Run of Show | `pm-events` | `pm-events/event-run-of-show/event-run-of-show.mdc` |
+| Event Safety Plan | `pm-events` | `pm-events/event-safety-plan/event-safety-plan.mdc` |
+| Event Vendor Brief | `pm-events` | `pm-events/event-vendor-brief/event-vendor-brief.mdc` |
 | Evidence Grading | `pm-cowork` | `pm-cowork/evidence-grading/evidence-grading.mdc` |
 | Evidence Lock | `pm-research` | `pm-research/evidence-lock/evidence-lock.mdc` |
 | EVT/DVT/PVT Gate Review | `pm-hardware` | `pm-hardware/evt-dvt-pvt-gate-review/evt-dvt-pvt-gate-review.mdc` |
@@ -426,6 +444,8 @@
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/first-maintainer-month.mdc` |
 | Five Minds | `pm-thinking` | `pm-thinking/five-minds/five-minds.mdc` |
 | Flare Day Planner | `pm-invisible-illness` | `pm-invisible-illness/flare-day-planner/flare-day-planner.mdc` |
+| Fleet Compliance Audit Preparation | `pm-fleet` | `pm-fleet/fleet-compliance-audit-prep/fleet-compliance-audit-prep.mdc` |
+| Fleet Maintenance Programme | `pm-fleet` | `pm-fleet/fleet-maintenance-programme/fleet-maintenance-programme.mdc` |
 | Flight-Delay Compensation | `pm-lifeadmin` | `pm-lifeadmin/flight-delay-compensation/flight-delay-compensation.mdc` |
 | Flight Tracker | `pm-live` | `pm-live/flight-tracker/flight-tracker.mdc` |
 | Flow Metrics Interpreter | `pm-delivery` | `pm-delivery/flow-metrics-interpreter/flow-metrics-interpreter.mdc` |
@@ -440,6 +460,7 @@
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/founder-market-fit.mdc` |
 | Franklin Decision Ledger | `pm-dead-mentors` | `pm-dead-mentors/franklin-decision-ledger/franklin-decision-ledger.mdc` |
 | Freelance Rate | `pm-calculators` | `pm-calculators/freelance-rate/freelance-rate.mdc` |
+| Freight Rate Quote | `pm-fleet` | `pm-fleet/freight-rate-quote/freight-rate-quote.mdc` |
 | From First Principles | `pm-thinking` | `pm-thinking/from-first-principles/from-first-principles.mdc` |
 | Frontend Design | `pm-design` | `pm-design/frontend-design/frontend-design.mdc` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/fundraising-faq.mdc` |
@@ -492,6 +513,7 @@
 | Home Workout Builder | `pm-wellbeing` | `pm-wellbeing/home-workout-builder/home-workout-builder.mdc` |
 | Hook Writer | `pm-creator` | `pm-creator/hook-writer/hook-writer.mdc` |
 | Hospital-Stay Plan | `pm-caregiving` | `pm-caregiving/hospital-stay-plan/hospital-stay-plan.mdc` |
+| Driver Hours Compliance Check | `pm-fleet` | `pm-fleet/hours-of-service-check/hours-of-service-check.mdc` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/house-style-enforcer.mdc` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/houseplant-care.mdc` |
 | Housing With a Record | `pm-reentry` | `pm-reentry/housing-with-a-record/housing-with-a-record.mdc` |
@@ -613,6 +635,7 @@
 | Medical Bill Decoder | `pm-decoders` | `pm-decoders/medical-bill-decoder/medical-bill-decoder.mdc` |
 | Medical Records Request | `pm-lifeadmin` | `pm-lifeadmin/medical-records-request/medical-records-request.mdc` |
 | Medication-Management System | `pm-caregiving` | `pm-caregiving/medication-management-system/medication-management-system.mdc` |
+| Medication Therapy Review | `pm-pharmacy` | `pm-pharmacy/medication-therapy-review/medication-therapy-review.mdc` |
 | Meeting Action Extractor | `pm-essentials` | `pm-essentials/meeting-action-extractor/meeting-action-extractor.mdc` |
 | Meeting Cost Meter | `pm-cowork` | `pm-cowork/meeting-cost-meter/meeting-cost-meter.mdc` |
 | Meeting Notes | `pm-essentials` | `pm-essentials/meeting-notes/meeting-notes.mdc` |
@@ -699,6 +722,7 @@
 | Passive-Income Reality Check | `pm-wealth` | `pm-wealth/passive-income-reality-check/passive-income-reality-check.mdc` |
 | Password & 2FA Setup | `pm-digital-safety` | `pm-digital-safety/password-and-2fa-setup/password-and-2fa-setup.mdc` |
 | Patient Communication | `pm-research` | `pm-research/patient-communication/patient-communication.mdc` |
+| Patient Education Explainer | `pm-physio` | `pm-physio/patient-education-explainer/patient-education-explainer.mdc` |
 | Pay Stub Decoder | `pm-decoders` | `pm-decoders/pay-stub-decoder/pay-stub-decoder.mdc` |
 | Paywall Optimization | `pm-growth` | `pm-growth/paywall-optimization/paywall-optimization.mdc` |
 | Penetration Test Report | `pm-security` | `pm-security/pentest-report/pentest-report.mdc` |
@@ -712,8 +736,12 @@
 | Personal Statement | `pm-students` | `pm-students/personal-statement/personal-statement.mdc` |
 | Personal WIP Limits | `pm-cowork` | `pm-cowork/personal-wip-limits/personal-wip-limits.mdc` |
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/persuasion-brief.mdc` |
+| Pharmacy Counselling Script | `pm-pharmacy` | `pm-pharmacy/pharmacy-counselling-script/pharmacy-counselling-script.mdc` |
 | Phishing Triage | `pm-digital-safety` | `pm-digital-safety/phishing-triage/phishing-triage.mdc` |
 | Photo Library Rescue | `pm-cowork` | `pm-cowork/photo-library-rescue/photo-library-rescue.mdc` |
+| Physiotherapy Discharge Summary | `pm-physio` | `pm-physio/physio-discharge-summary/physio-discharge-summary.mdc` |
+| Physiotherapy Initial Assessment | `pm-physio` | `pm-physio/physio-initial-assessment/physio-initial-assessment.mdc` |
+| Physiotherapy Progress Note | `pm-physio` | `pm-physio/physio-progress-note/physio-progress-note.mdc` |
 | PIP Responder | `pm-career` | `pm-career/pip-responder/pip-responder.mdc` |
 | PIP Writer | `pm-people` | `pm-people/pip-writer/pip-writer.mdc` |
 | Pitch Vs Teach | `pm-cowork` | `pm-cowork/pitch-vs-teach/pitch-vs-teach.mdc` |
@@ -721,12 +749,14 @@
 | Pixel GIF Maker | `other` | `other/pixel-gif-maker/pixel-gif-maker.mdc` |
 | Plain Language Rewrite | `pm-cowork` | `pm-cowork/plain-language-rewrite/plain-language-rewrite.mdc` |
 | Plan My Day | `pm-rituals` | `pm-rituals/plan-my-day/plan-my-day.mdc` |
+| Planning Application Statement | `pm-architecture` | `pm-architecture/planning-application-statement/planning-application-statement.mdc` |
 | PM Weekly Review | `pm-rituals` | `pm-rituals/pm-weekly-review/pm-weekly-review.mdc` |
 | Poke Holes In This | `pm-thinking` | `pm-thinking/poke-holes-in-this/poke-holes-in-this.mdc` |
 | Policy Drafter | `pm-cowork` | `pm-cowork/policy-drafter/policy-drafter.mdc` |
 | Policy Memo | `pm-gov` | `pm-gov/policy-memo/policy-memo.mdc` |
 | Policy Renewal Review | `pm-insurance` | `pm-insurance/policy-renewal-review/policy-renewal-review.mdc` |
 | Portfolio Page | `pm-personal` | `pm-personal/portfolio-page/portfolio-page.mdc` |
+| Post-Event Debrief | `pm-events` | `pm-events/post-event-debrief/post-event-debrief.mdc` |
 | Posture Reset Plan | `pm-wellbeing` | `pm-wellbeing/posture-reset-plan/posture-reset-plan.mdc` |
 | Power of Attorney Explainer | `pm-legal` | `pm-legal/power-of-attorney-explainer/power-of-attorney-explainer.mdc` |
 | Power Outage Plan | `pm-emergency` | `pm-emergency/power-outage-plan/power-outage-plan.mdc` |
@@ -739,6 +769,7 @@
 | Pre-Mortem Panel | `pm-thinking` | `pm-thinking/pre-mortem-panel/pre-mortem-panel.mdc` |
 | Premortem Assassin | `pm-warroom` | `pm-warroom/premortem-assassin/premortem-assassin.mdc` |
 | Prescription Cost Navigator | `pm-lifeadmin` | `pm-lifeadmin/prescription-cost-navigator/prescription-cost-navigator.mdc` |
+| Declining to Dispense | `pm-pharmacy` | `pm-pharmacy/prescription-refusal-to-fill/prescription-refusal-to-fill.mdc` |
 | Presenter Notes | `pm-cowork` | `pm-cowork/presenter-notes/presenter-notes.mdc` |
 | Press Kit EPK | `pm-musician` | `pm-musician/press-kit-epk/press-kit-epk.mdc` |
 | Press Release | `pm-cross` | `pm-cross/press-release/press-release.mdc` |
@@ -817,6 +848,7 @@
 | Regret Minimizer | `pm-focus` | `pm-focus/regret-minimizer/regret-minimizer.mdc` |
 | Regulator Eyes | `pm-simulators` | `pm-simulators/regulator-eyes/regulator-eyes.mdc` |
 | Regulatory Impact Analysis | `pm-gov` | `pm-gov/regulatory-impact-analysis/regulatory-impact-analysis.mdc` |
+| Rehabilitation Programme Design | `pm-physio` | `pm-physio/rehab-programme-design/rehab-programme-design.mdc` |
 | Rejection-Sensitivity Reframe | `pm-focus` | `pm-focus/rejection-sensitivity-reframe/rejection-sensitivity-reframe.mdc` |
 | Relationship Check-In | `pm-family` | `pm-family/relationship-check-in/relationship-check-in.mdc` |
 | Release Day Countdown | `pm-musician` | `pm-musician/release-day-countdown/release-day-countdown.mdc` |
@@ -841,6 +873,7 @@
 | Retention Loop Design | `pm-growth` | `pm-growth/retention-loop-design/retention-loop-design.mdc` |
 | Retrospective Analysis | `pm-delivery` | `pm-delivery/retro-analysis/retro-analysis.mdc` |
 | Return & Refund Policy | `pm-ecommerce` | `pm-ecommerce/return-refund-policy/return-refund-policy.mdc` |
+| Return-to-Activity Criteria | `pm-physio` | `pm-physio/return-to-activity-criteria/return-to-activity-criteria.mdc` |
 | Review Comments Resolver | `pm-cowork` | `pm-cowork/review-comments-resolver/review-comments-resolver.mdc` |
 | Review Response | `pm-ecommerce` | `pm-ecommerce/review-response/review-response.mdc` |
 | Rewards Optimizer | `pm-money` | `pm-money/rewards-optimizer/rewards-optimizer.mdc` |
@@ -910,6 +943,7 @@
 | Shutdown Ritual | `pm-cowork` | `pm-cowork/shutdown-ritual/shutdown-ritual.mdc` |
 | Sibling Care Summit | `pm-aging-parents` | `pm-aging-parents/sibling-care-summit/sibling-care-summit.mdc` |
 | Side Business Setup | `pm-sidehustle` | `pm-sidehustle/side-business-setup/side-business-setup.mdc` |
+| Site Analysis Report | `pm-architecture` | `pm-architecture/site-analysis-report/site-analysis-report.mdc` |
 | Site Check | `pm-live` | `pm-live/site-check/site-check.mdc` |
 | Site Safety Briefing | `pm-construction` | `pm-construction/site-safety-briefing/site-safety-briefing.mdc` |
 | Skill Fusion | `pm-advanced` | `pm-advanced/skill-fusion/skill-fusion.mdc` |
@@ -1058,6 +1092,7 @@
 | Transcreation | `pm-localization` | `pm-localization/transcreation/transcreation.mdc` |
 | Travel Brief | `pm-cowork` | `pm-cowork/travel-brief/travel-brief.mdc` |
 | Treatment Plan Estimate | `pm-veterinary` | `pm-veterinary/treatment-plan-estimate/treatment-plan-estimate.mdc` |
+| Dental Treatment Plan Presentation | `pm-dentistry` | `pm-dentistry/treatment-plan-presentation/treatment-plan-presentation.mdc` |
 | Trip Planner | `pm-personal` | `pm-personal/trip-planner/trip-planner.mdc` |
 | TTRPG Session Forge | `pm-newgen` | `pm-newgen/ttrpg-session-forge/ttrpg-session-forge.mdc` |
 | Two Worlds Translator | `pm-identity` | `pm-identity/two-worlds-translator/two-worlds-translator.mdc` |
@@ -1081,6 +1116,7 @@
 | Vendor Evaluation | `pm-operations` | `pm-operations/vendor-evaluation/vendor-evaluation.mdc` |
 | Vendor Security Review | `pm-compliance` | `pm-compliance/vendor-security-review/vendor-security-review.mdc` |
 | Venue Access Check | `pm-accessibility` | `pm-accessibility/venue-access-check/venue-access-check.mdc` |
+| Venue Contract Review | `pm-events` | `pm-events/venue-contract-review/venue-contract-review.mdc` |
 | Verification Before Completion | `pm-method` | `pm-method/verification-before-completion/verification-before-completion.mdc` |
 | Version Chaos Untangler | `pm-cowork` | `pm-cowork/version-chaos-untangler/version-chaos-untangler.mdc` |
 | Vet Estimate Decoder | `pm-decoders` | `pm-decoders/vet-estimate-decoder/vet-estimate-decoder.mdc` |

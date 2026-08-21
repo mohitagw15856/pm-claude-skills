@@ -12,7 +12,11 @@ Always deliver the full review even if the plan is thin. Where detail is missing
 
 ## Input
 
-The plan/strategy/PRD/launch to stress-test, plus (if given) the goal, audience, timeline, and constraints. If the objective isn't stated, infer it and say so.
+Ask for these if not provided:
+- **The artifact** — the plan, strategy, PRD, or launch to stress-test
+- **The objective** — what it is meant to achieve; if it is not stated, infer it and say so
+- **Audience and timeline** — who it must convince and by when
+- **The constraints** — budget, headcount, dependencies, or anything already decided
 
 ## Output Structure
 

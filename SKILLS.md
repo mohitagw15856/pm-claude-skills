@@ -1,4 +1,4 @@
-# 🗂️ All 1117 Skills — full catalog
+# 🗂️ All 1153 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -202,7 +202,7 @@
 |---|---|---|
 | **Bug Diagnosis** (`bug-diagnosis`) | Diagnose a bug systematically instead of guessing — reproduce, isolate, form hypotheses, and test them to root cause. | — |
 | **Code Review Guide** (`code-review-guide`) | Review a pull request or diff like a thoughtful senior engineer — prioritized, kind, and focused on what matters. | — |
-| **PR Description** (`pr-description`) | Write a clear pull-request description that gets reviewed fast and merged with confidence. | — |
+| **PR Description** (`pr-description`) | Write a clear pull-request description that gets reviewed fast and merged with confidence, from a git diff, branch summary, or commit list. | — |
 | **Refactoring Plan** (`refactoring-plan`) | Plan a safe, incremental refactor of messy code without changing behavior. | — |
 | **TDD Workflow** (`tdd-workflow`) | Drive a feature with a disciplined test-driven development loop — red, green, refactor. | — |
 
@@ -727,7 +727,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (649 skills)
+## 🌍 Industries & Public Sector (685 skills)
 
 ### `other` — 21 skills
 
@@ -834,6 +834,17 @@
 | **AI ROI Audit** (`ai-roi-audit`) | Audit whether the organisation's AI spend actually paid — measured against baselines, not vendor math or vibes. | — |
 | **AI Usage Policy** (`ai-usage-policy`) | Write an AI usage policy people can actually follow — approved tools, data rules, disclosure duties, and review obligations, in one page instead… | — |
 | **Role Redesign For AI** (`role-redesign-for-ai`) | Redesign a job role that AI now does a large part of — deliberately, instead of quietly expecting the same headcount to absorb 140% output. | — |
+
+### `pm-architecture` — 6 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Architectural Programme Brief** (`architectural-programme-brief`) | Turn a client's wishes into an architectural brief that can actually be designed against — the accommodation schedule, the adjacencies, the budget… | — |
+| **Architectural Specification Section** (`architectural-specification`) | Write a specification section that a contractor can price accurately and a site can build from — performance stated, products defined, workmanship… | — |
+| **Architecture Client Presentation** (`architecture-client-presentation`) | Present a design to a client so they can make a decision rather than react to a picture — the brief restated, the moves explained against it, the… | — |
+| **Construction RFI Response** (`construction-rfi-response`) | Answer a construction request for information so the site can act on it — a direct answer, the drawing or specification reference that supports… | — |
+| **Planning Application Statement** (`planning-application-statement`) | Write the design and access statement that supports a planning application — the site analysis, the design rationale, the policy compliance, and… | — |
+| **Site Analysis Report** (`site-analysis-report`) | Analyse a site before designing on it — what is physically there, what the law and the neighbours allow, and which constraints will actually shape… | — |
 
 ### `pm-autopilot` — 4 skills
 
@@ -1092,6 +1103,17 @@
 | **Vet Estimate Decoder** (`vet-estimate-decoder`) | Decode a veterinary treatment estimate — what each line is for, which items are core vs precautionary, and how to have the options conversation… | — |
 | **What To Ask** (`what-to-ask`) | Get the five questions that matter before you sign, buy, or agree to anything — the front door to the decoder family, routed by situation. | — |
 
+### `pm-dentistry` — 6 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Dental Clinical Note** (`dental-clinical-note`) | Write a dental chart note that survives an insurance audit, a recall years later, and a colleague picking up the case cold — the finding, the… | — |
+| **Dental Emergency Triage** (`dental-emergency-triage`) | Triage a dental emergency call so the right patient is seen today and the rest are safely scheduled — the red flags that are medical rather than… | — |
+| **Dental Pre-Authorisation & Claim Narrative** (`dental-insurance-preauth`) | Write a dental pre-authorisation request or claim narrative that gets approved the first time — the diagnosis, the documented failure of lesser… | — |
+| **Dental Recall & Reactivation** (`dental-recall-reactivation`) | Build a dental recall and reactivation system that brings lapsed patients back without nagging — the segments worth contacting, the message that… | — |
+| **Dental Referral Letter** (`dental-referral-letter`) | Write a dental referral letter a specialist can act on without ringing you back — the question you are actually asking, the findings and images… | — |
+| **Dental Treatment Plan Presentation** (`treatment-plan-presentation`) | Present a dental treatment plan the patient actually understands and accepts — sequenced by clinical priority, costed with their coverage applied… | — |
+
 ### `pm-devrel` — 7 skills
 
 | Skill | What it does | Eval |
@@ -1171,6 +1193,17 @@
 | **Estate Settlement Organizer** (`estate-settlement-organizer`) | Organize an executor's work — the settlement ladder from will-to-probate-to-distribution, the asset/debt inventory, the creditor and beneficiary… | — |
 | **When Someone Dies** (`when-someone-dies`) | The first two weeks after a death, organized — what genuinely needs doing now, what only feels urgent, who to notify in what order, and the… | — |
 
+### `pm-events` — 6 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Event Budget Plan** (`event-budget-plan`) | Build an event budget that survives the event — every cost line including the ones people forget, the contingency sized to the actual risk, and… | — |
+| **Event Run of Show** (`event-run-of-show`) | Build the minute-by-minute run of show that lets an event run without the planner being asked anything — every cue, who owns it, what happens if… | — |
+| **Event Safety Plan** (`event-safety-plan`) | Produce the event safety documentation that satisfies a venue or licensing authority and actually works on the day — the risk assessment, crowd… | — |
+| **Event Vendor Brief** (`event-vendor-brief`) | Brief an event supplier so they quote accurately and deliver what you pictured — the outcome, the constraints, the deliverables, and the questions… | — |
+| **Post-Event Debrief** (`post-event-debrief`) | Run an event debrief that changes the next event — what the numbers say, what actually went wrong versus what felt stressful, and the specific… | — |
+| **Venue Contract Review** (`venue-contract-review`) | Read a venue contract for the clauses that actually cost money — the minimum spend, the cancellation ladder, the attrition clause, and everything… | — |
+
 ### `pm-family` — 12 skills
 
 | Skill | What it does | Eval |
@@ -1187,6 +1220,17 @@
 | **Relationship Check-In** (`relationship-check-in`) | Run a calm, regular relationship check-in with your partner — a structured 'how are we doing' conversation that catches small things before they… | — |
 | **School Choice Decision** (`school-choice-decision`) | Choose the right school for a specific child by weighing what actually matters to them and your family — not just rankings. | — |
 | **Wedding Vows Writer** (`wedding-vows-writer`) | Write personal wedding vows that sound like you — specific, heartfelt, and the right length — instead of generic or cheesy. | — |
+
+### `pm-fleet` — 6 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Driver Incident Investigation** (`driver-incident-investigation`) | Investigate a commercial vehicle incident so the record is defensible and the cause is actually found — evidence secured in the first hours, the… | — |
+| **Driver Retention Plan** (`driver-retention-plan`) | Reduce driver turnover by fixing what actually makes drivers leave — the pay comparison that is real, the home-time reliability, the dispatch… | — |
+| **Fleet Compliance Audit Preparation** (`fleet-compliance-audit-prep`) | Prepare a transport operation for a regulatory audit — the records an auditor asks for in order, the findings your own file will produce, and the… | — |
+| **Fleet Maintenance Programme** (`fleet-maintenance-programme`) | Design a preventive maintenance programme that keeps vehicles legal and out of the workshop at the wrong moment — intervals set by duty cycle, the… | — |
+| **Freight Rate Quote** (`freight-rate-quote`) | Build a freight rate that covers the cost of actually running the load — the per-mile economics, the deadhead and detention nobody prices, and the… | — |
+| **Driver Hours Compliance Check** (`hours-of-service-check`) | Audit driver hours records for the violations that actually get cited — the falsification patterns, the edit trails, and the scheduling that makes… | — |
 
 ### `pm-focus` — 26 skills
 
@@ -1510,6 +1554,28 @@
 | **IEP 504 Meeting Kit** (`iep-504-meeting-kit`) | Walk into an IEP or 504 meeting prepared and effective — the process decoded in plain language, the parent-input statement that gets read, the… | — |
 | **Parent Teacher Conference Prep** (`parent-teacher-conference-prep`) | Get real information out of a 15-minute parent-teacher conference — the questions that beat 'how's she doing', the data to bring from home, and… | — |
 
+### `pm-pharmacy` — 6 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Compounding Record** (`compounding-record`) | Write a compounding worksheet and record that reproduces the preparation exactly and survives inspection — formula, calculations shown, components… | — |
+| **Controlled Substance Reconciliation & Audit** (`controlled-substance-audit`) | Reconcile controlled-substance records and prepare for an inspection — the count against the register, the discrepancy investigation, the… | — |
+| **Clinical Intervention Record** (`drug-interaction-intervention`) | Document a pharmacist's clinical intervention — the interaction or error spotted, what was done, what the prescriber decided, and the outcome — so… | — |
+| **Medication Therapy Review** (`medication-therapy-review`) | Structure a pharmacist's medication therapy review so it finds the problems worth escalating and documents them in a form a prescriber will act on. | — |
+| **Pharmacy Counselling Script** (`pharmacy-counselling-script`) | Write the counselling a patient will actually follow when collecting a new or changed medicine — what it is for, how to take it, what to expect… | — |
+| **Declining to Dispense** (`prescription-refusal-to-fill`) | Handle a prescription you are not going to dispense — the professional judgement recorded, the patient conversation, the prescriber contact, and… | — |
+
+### `pm-physio` — 6 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Patient Education Explainer** (`patient-education-explainer`) | Explain a condition, a scan result, or why movement helps, in language that reduces fear instead of adding to it — the reframe, the honest… | — |
+| **Physiotherapy Discharge Summary** (`physio-discharge-summary`) | Write a physiotherapy discharge summary that closes the episode properly — outcomes against the goals that were set, what the patient is leaving… | — |
+| **Physiotherapy Initial Assessment** (`physio-initial-assessment`) | Structure a physiotherapy initial assessment so the subjective drives the objective and the plan follows from both — the history that localises… | — |
+| **Physiotherapy Progress Note** (`physio-progress-note`) | Write a physiotherapy progress note that shows clinical reasoning rather than attendance — what changed against the reassessment markers, what… | — |
+| **Rehabilitation Programme Design** (`rehab-programme-design`) | Design a rehabilitation programme the patient will actually do — dosed and progressed against stated criteria, built around their week rather than… | — |
+| **Return-to-Activity Criteria** (`return-to-activity-criteria`) | Set criteria-based return-to-activity milestones so the decision rests on what the patient can demonstrate rather than on how long it has been —… | — |
+
 ### `pm-realestate` — 6 skills
 
 | Skill | What it does | Eval |
@@ -1770,4 +1836,4 @@
 
 ---
 
-_1117 skills across 125 bundles · 28 eval-scored (3%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1153 skills across 131 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
