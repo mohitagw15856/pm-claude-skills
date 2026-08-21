@@ -31,6 +31,10 @@ let ROLES = {
 
 const el = (id) => document.getElementById(id);
 let SKILLS = [];
+// Every skill including retired ones. SKILLS holds only the live catalogue —
+// browse, search and counts must not surface a tombstone — but a direct link to
+// a retired skill has to keep resolving. See docs/DEPRECATION.md.
+let ALL_SKILLS = [];
 let current = null;
 let controller = null;
 let lastRunUsedBrain = false;
@@ -218,7 +222,8 @@ async function init() {
   try {
     const res = await fetch('skills.json');
     const data = await res.json();
-    SKILLS = data.skills;
+    ALL_SKILLS = data.skills;
+    SKILLS = ALL_SKILLS.filter((x) => !x.deprecated);
   } catch (e) {
     el('gallery').innerHTML = '<p class="empty-msg">Could not load skills.json. Run <code>node web/build-skills.mjs</code> and serve this folder over HTTP.</p>';
     return;
@@ -634,7 +639,7 @@ function applyShareLink() {
   const params = new URLSearchParams(location.search);
   const name = params.get('skill');
   if (!name) return;
-  const s = SKILLS.find((x) => x.name === name);
+  const s = ALL_SKILLS.find((x) => x.name === name);
   if (!s) return;
   selectSkill(s);
   const packed = params.get('i');
@@ -1067,6 +1072,27 @@ function renderVisionAttach(s) {
   });
 }
 
+// A retired skill still opens from a direct link, but it says so and points at
+// its successor. See docs/DEPRECATION.md.
+function renderDeprecation(s) {
+  let box = el('skillDeprecated');
+  if (!box) {
+    const desc = el('skillDesc');
+    if (!desc || !desc.parentNode) return;
+    box = document.createElement('div');
+    box.id = 'skillDeprecated';
+    box.className = 'deprecated-note';
+    desc.parentNode.insertBefore(box, desc.nextSibling);
+  }
+  if (!s.deprecated) { box.hidden = true; box.innerHTML = ''; return; }
+  const heir = s.supersededBy && ALL_SKILLS.find((x) => x.name === s.supersededBy);
+  box.innerHTML = '🪦 <strong>Retired</strong> on ' + escapeHtml(String(s.deprecated)) + '. '
+    + (heir
+      ? 'Use <a href="?skill=' + encodeURIComponent(heir.name) + '">' + escapeHtml(heir.title) + '</a> instead.'
+      : 'It still runs, but it is no longer maintained.');
+  box.hidden = false;
+}
+
 function selectSkill(s) {
   current = s;
   try { COACH.on = !!(el('coachToggle') && el('coachToggle').checked); coachInit(s); } catch (_) {}
@@ -1099,6 +1125,7 @@ function selectSkill(s) {
   }
   el('skillTitle').textContent = s.title;
   el('skillDesc').textContent = s.description;
+  renderDeprecation(s);
   const srcEl = el('skillSource');
   if (s.source) {
     srcEl.innerHTML = `📚 Based on ${escapeHtml(s.source).replace(/\*(.+?)\*/g, '<em>$1</em>')}`;

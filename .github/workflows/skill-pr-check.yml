@@ -2,6 +2,7 @@ name: Skill PR Check (structure)
 
 # Every PR that touches skills/ gets a fast, free structural quality gate:
 #   - skillcheck validates structure (frontmatter, required sections) — no API, no cost.
+#   - skill-dupes blocks a new skill that duplicates one already in the library.
 # Skills are NOT eval-scored on the PR. Scoring is decided later, after merge, via the
 # manual "Evaluate selected bundles" Action (.github/workflows/eval-bundles.yml) — so
 # opening a PR never spends tokens, and you choose when/what to score.
@@ -33,6 +34,9 @@ jobs:
         id: skillcheck
         run: |
           if node scripts/skillcheck.mjs; then echo "result=pass" >> "$GITHUB_OUTPUT"; else echo "result=fail" >> "$GITHUB_OUTPUT"; exit 1; fi
+
+      - name: Duplicate check (skill-dupes)
+        run: node scripts/skill-dupes.mjs --check
 
       - name: Build PR comment
         if: ${{ always() }}

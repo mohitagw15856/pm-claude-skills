@@ -1,0 +1,220 @@
+{
+  "_comment": "Skill pairs that score as near-duplicates but are deliberately separate. Every entry is a reviewed decision — see docs/DEPRECATION.md, 'When not to deprecate'. Regenerate the report with `node scripts/skill-dupes.mjs`.",
+  "pairs": [
+    {
+      "a": "open-house-plan",
+      "b": "the-open-house",
+      "reason": "Opposite sides of the same event: planning an open house as the seller's agent vs simulating one as the buyer being read by that agent."
+    },
+    {
+      "a": "parent-conference-prep",
+      "b": "parent-teacher-conference-prep",
+      "reason": "Opposite sides of the same meeting — the teacher preparing to run it vs the parent preparing to get information out of it."
+    },
+    {
+      "a": "go-to-market",
+      "b": "go-to-market-planner",
+      "reason": "Assets vs plan: one writes the launch collateral, the other sequences the launch itself."
+    },
+    {
+      "a": "code-review-checklist",
+      "b": "code-review-guide",
+      "reason": "Generating a checklist tailored to a change vs conducting the review with senior judgment."
+    },
+    {
+      "a": "ai-code-review",
+      "b": "code-review-guide",
+      "reason": "AI-authored code has its own failure modes (hallucinated APIs, plausible-but-wrong logic) that a general review guide does not cover."
+    },
+    {
+      "a": "code-review-guide",
+      "b": "infra-as-code-review",
+      "reason": "Terraform/CloudFormation review is a different risk surface from application-code review."
+    },
+    {
+      "a": "engineering-hiring-rubric",
+      "b": "hiring-rubric",
+      "reason": "Domain specialisation — technical interview scorecards vs a rubric for any role."
+    },
+    {
+      "a": "insurance-claim",
+      "b": "insurance-claim-appeal",
+      "reason": "Adjacent stages: filing the claim vs fighting a denial, which needs the denial reason and different evidence."
+    },
+    {
+      "a": "cold-email",
+      "b": "investor-cold-email",
+      "reason": "Investor outreach is traction-forward with a different ask structure from B2B sales outreach."
+    },
+    {
+      "a": "informational-interview-prep",
+      "b": "interview-prep",
+      "reason": "A career-advice chat you requested vs a job interview you are being assessed in."
+    },
+    {
+      "a": "expert-interview-prep",
+      "b": "interview-prep",
+      "reason": "Extracting knowledge from an expert vs being evaluated as a candidate."
+    },
+    {
+      "a": "interview-prep",
+      "b": "source-interview-prep",
+      "reason": "Journalistic source interviews, including hostile ones, are a different craft from job interviews."
+    },
+    {
+      "a": "interview-synthesis",
+      "b": "user-interview-synthesis",
+      "reason": "General interview note synthesis vs the product-discovery research pipeline; overlapping but separately maintained for their own audiences."
+    },
+    {
+      "a": "offsite-planner",
+      "b": "team-offsite-planner",
+      "reason": "Kept pending a content merge — both cover team offsites and one should eventually retire; not merged yet because neither body is a clear superset."
+    },
+    {
+      "a": "saying-no",
+      "b": "saying-no-kindly",
+      "reason": "Kept pending a content merge — same job, and the richer body should absorb the other rather than either being tombstoned blind."
+    },
+    {
+      "a": "agent-incident-postmortem",
+      "b": "incident-postmortem",
+      "reason": "Agent incidents have failure modes (runaway tool use, shipped hallucinations) that a general postmortem does not prompt for."
+    },
+    {
+      "a": "agent-observability-spec",
+      "b": "agent-spec",
+      "reason": "Specifying an agent's behaviour before building vs specifying its tracing and alerting in production."
+    },
+    {
+      "a": "eulogy-and-obituary-writer",
+      "b": "eulogy-writer",
+      "reason": "Kept pending a content merge — the combined eulogy/obituary skill likely supersedes the eulogy-only one, but this is grief-adjacent content that deserves a careful read before retiring either."
+    },
+    {
+      "a": "literature-review",
+      "b": "literature-review-builder",
+      "reason": "Academic researcher writing for publication vs a student building an argued review from a reading list."
+    },
+    {
+      "a": "meeting-prep-live",
+      "b": "meeting-prep-pack",
+      "reason": "Connector-backed twin — one reads the real Calendar event and linked docs, the other builds the pack from what you paste."
+    },
+    {
+      "a": "meeting-prep-live",
+      "b": "sop-meeting-prep",
+      "reason": "Name collision only: S&OP is supply-chain sales-and-operations planning, unrelated to general meeting prep."
+    },
+    {
+      "a": "offer-letter",
+      "b": "property-offer-letter",
+      "reason": "Name collision only: a job offer to a candidate vs a buyer's cover letter to a property seller."
+    },
+    {
+      "a": "youtube-script",
+      "b": "youtube-script-writer",
+      "reason": "Kept pending a content merge — long-form explainer scripting vs retention-focused scripting with A/V cues; the two bodies differ enough that a merge needs an author pass."
+    },
+    {
+      "a": "async-decision-memo",
+      "b": "decision-memo",
+      "reason": "Running a decision asynchronously (read window, comment protocol, deadline) vs writing the memo itself."
+    },
+    {
+      "a": "car-lease-decoder",
+      "b": "lease-decoder",
+      "reason": "Name collision only: a car lease's money factor and cap cost vs a residential tenancy agreement."
+    },
+    {
+      "a": "car-lease-decoder",
+      "b": "used-car-decoder",
+      "reason": "Leasing terms vs reading a used-car listing before viewing it."
+    },
+    {
+      "a": "context-budget",
+      "b": "context-switch-budget",
+      "reason": "Name collision only: an LLM context window vs human attention fragmentation across a week."
+    },
+    {
+      "a": "demo-script",
+      "b": "sales-demo-script",
+      "reason": "Kept pending a content merge — both script product demos; the general one is richer but the sales-specific framing has its own audience."
+    },
+    {
+      "a": "email-triage",
+      "b": "email-triage-system",
+      "reason": "Triaging a live Gmail inbox down to what needs you vs installing a durable four-verb habit."
+    },
+    {
+      "a": "security-review",
+      "b": "vendor-security-review",
+      "reason": "Reviewing your own design vs assessing a third party and assigning a risk tier."
+    },
+    {
+      "a": "policy-drafter",
+      "b": "privacy-policy-drafter",
+      "reason": "An internal policy people follow vs an external, legally-shaped privacy notice."
+    },
+    {
+      "a": "second-opinion-request",
+      "b": "the-second-opinion",
+      "reason": "Name collision only: requesting a second medical opinion vs a thinking tool that argues against your own position."
+    },
+    {
+      "a": "care-decision-family-meeting",
+      "b": "decision-meeting-format",
+      "reason": "A family care decision with its own emotional dynamics vs a general decision-meeting format."
+    },
+    {
+      "a": "ai-assisted-performance-review",
+      "b": "performance-review",
+      "reason": "Judging performance when output is AI-assisted raises attribution questions a standard review does not."
+    },
+    {
+      "a": "design-critique",
+      "b": "figma-design-critique-pm",
+      "reason": "General UX critique frameworks vs a PM-lens critique run against a Figma file."
+    },
+    {
+      "a": "figma-design-brief",
+      "b": "figma-design-qa",
+      "reason": "Briefing a design before it exists vs QA-ing one that does."
+    },
+    {
+      "a": "figma-design-qa",
+      "b": "figma-design-review",
+      "reason": "Spec-conformance QA vs holistic design review."
+    },
+    {
+      "a": "figma-design-critique-pm",
+      "b": "figma-design-qa",
+      "reason": "Product-outcome critique vs implementation-fidelity QA."
+    },
+    {
+      "a": "pr-description-live",
+      "b": "pr-description-writer",
+      "reason": "Both are variants of pr-description; the -live twin reads the real diff via the GitHub connector."
+    },
+    {
+      "a": "build-my-memory-file",
+      "b": "memory-file-maintenance",
+      "reason": "Creating a memory file from scratch vs pruning and maintaining one that has drifted."
+    },
+    {
+      "a": "red-team-my-plan",
+      "b": "red-team-review",
+      "reason": "Stress-testing your own plan vs running a structured red-team review of someone else's."
+    },
+    {
+      "a": "acquirer-red-team",
+      "b": "red-team-my-plan",
+      "reason": "Modelling how an acquirer will attack your numbers in diligence vs general plan stress-testing."
+    },
+    {
+      "a": "pm-weekly-review",
+      "b": "weekly-review-ritual",
+      "reason": "A PM's weekly product review vs a personal GTD-style weekly ritual."
+    }
+  ]
+}

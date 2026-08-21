@@ -157,6 +157,8 @@ for (const name of readdirSync(skillsDir)) {
     plugin: skillToPlugin[name] || 'other',
     tier: tierFor(name),
     version: meta.version || null,
+    deprecated: meta.deprecated || null,
+    supersededBy: meta.supersededBy || null,
     updated: updatedMap[name] || null,
     eval: evalScores[meta.name || name] || null,
     source: SOURCES[meta.name || name] || null,

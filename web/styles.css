@@ -169,6 +169,14 @@ button { font-family: inherit; }
   display: inline-block; font-size: 11px; font-weight: 600; padding: 3px 9px;
   border-radius: 99px; margin: 0 0 8px 6px; border: 1px solid transparent;
 }
+/* A retired skill still opens from a direct link — it just says so. */
+.deprecated-note {
+  margin: 10px 0 0; padding: 9px 12px; font-size: 12.5px; line-height: 1.5;
+  color: var(--muted); background: rgba(217,119,87,.08);
+  border: 1px solid var(--border); border-left: 3px solid var(--accent);
+  border-radius: 8px;
+}
+.deprecated-note strong { color: var(--accent-2); }
 
 /* ---------- Use in another tool ---------- */
 .elsewhere {

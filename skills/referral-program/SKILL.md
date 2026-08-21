@@ -1,6 +1,8 @@
 ---
 name: referral-program
 description: "Design a referral program that drives real word-of-mouth growth. Use when asked to build a referral or refer-a-friend program, create an incentive/reward structure, or turn happy users into a growth channel. Produces the incentive design (who gets what, when), the mechanics and trigger moment, fraud guardrails, and the unit-economics check — a program that pays back, not one that just burns budget."
+deprecated: 2026-08-21
+supersededBy: referral-program-design
 ---
 
 # Referral Program Skill

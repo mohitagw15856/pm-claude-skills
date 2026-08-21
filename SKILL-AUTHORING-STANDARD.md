@@ -59,6 +59,10 @@ Keep it under ~3 sentences. Write triggers from the user's vocabulary, not inter
   A per-skill change history is generated automatically from git, so you don't hand-maintain
   a changelog — see `npx pm-claude-skills changelog <skill>`.
 
+- **`deprecated:`** / **`supersededBy:`** — mark a retired skill and name the one that
+  replaces it. A published skill name never breaks, so retiring is frontmatter, not
+  deletion. See [docs/DEPRECATION.md](docs/DEPRECATION.md).
+
 ## 3. Body sections
 
 Use this section order. Not every skill needs every section, but strong skills include
