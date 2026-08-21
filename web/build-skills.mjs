@@ -79,22 +79,71 @@ function parseFrontmatter(text) {
 // --- Extract input fields from the "Required Inputs" style section ---
 function parseInputs(body) {
   const lines = body.split('\n');
-  const headingRe = /^#{2,3}\s+.*(required inputs|inputs needed|information needed|what (i|you).*need)/i;
+  // "Required Inputs" is the house heading, but a few skills use a bare "Input" /
+  // "Inputs" or "Inputs (infer any not provided)". The trailing anchor keeps
+  // this from matching an unrelated heading that merely starts with the word,
+  // e.g. accessibility-audit's "### Input Modalities".
+  const headingRe = /^#{2,3}\s+(?:(?:required|the)\s+)?inputs?\b\s*(?:\(.*\))?\s*$|^#{2,3}\s+.*(?:required inputs|inputs needed|information needed|what (?:i|you).*need)/i;
   let i = lines.findIndex((l) => headingRe.test(l));
   if (i === -1) return [];
-  const inputs = [];
+
+  // Gather the section's bullets, re-joining wrapped continuation lines. Many
+  // skills write a Required Inputs bullet as a full sentence across two or
+  // three lines; reading line-by-line truncated those to their first fragment.
+  const bullets = [];
+  const rows = []; // some skills declare inputs as a markdown table instead
   for (let j = i + 1; j < lines.length; j++) {
     const line = lines[j];
     if (/^#{1,3}\s/.test(line)) break; // next section
-    const bullet = line.match(/^\s*[-*]\s+(.*)$/);
-    if (!bullet) continue;
-    const content = bullet[1];
+    if (/^\s*\|/.test(line)) {
+      const cells = line.trim().replace(/^\||\|$/g, '').split('|').map((c) => c.trim());
+      // Skip the header row and the |---|---| separator.
+      if (cells.every((c) => /^:?-{2,}:?$/.test(c))) { rows.length = 0; continue; }
+      rows.push(cells);
+      continue;
+    }
+    const bullet = line.match(/^\s*(?:[-*]|\d+\.)\s+(.*)$/);
+    if (bullet) { bullets.push(bullet[1]); continue; }
+    if (bullets.length && line.trim()) {
+      bullets[bullets.length - 1] += ' ' + line.trim(); // continuation of the last bullet
+    }
+  }
+  if (!bullets.length && rows.length) {
+    return rows.filter((r) => r[0]).map((r) => ({
+      label: r[0].replace(/\*\*/g, '').trim(),
+      hint: (r[2] || '').replace(/\*\*/g, '').trim(),
+      optional: /^(no|optional)$/i.test((r[1] || '').trim()),
+      long: /notes|description|summary|data|content|details|paste|context|draft/i.test(r.join(' ')),
+    }));
+  }
+
+  const inputs = [];
+  for (const content of bullets) {
     const boldMatch = content.match(/\*\*(.+?)\*\*/);
-    if (!boldMatch) continue;
-    let label = boldMatch[1].replace(/\s*\/\s*/g, ' / ').trim();
-    // hint = remainder after the first bold label
-    let rest = content.replace(/\*\*(.+?)\*\*/, '').replace(/^[\s—:-]+/, '').trim();
-    rest = rest.replace(/\*\*/g, '').replace(/^\((.*)\)$/, '$1').trim();
+    let label;
+    let rest;
+    if (boldMatch) {
+      label = boldMatch[1].replace(/\s*\/\s*/g, ' / ').trim();
+      rest = content.replace(/\*\*(.+?)\*\*/, '').replace(/^[\s—:-]+/, '').trim();
+    } else {
+      // No bold label: split the sentence at its first natural break so the
+      // form still gets a short field name and keeps the detail as the hint.
+      // Without this, a skill written in prose bullets declared no inputs at
+      // all and rendered as a bare textarea.
+      const plain = content.replace(/\*\*/g, '').trim();
+      const brk = plain.match(/^(.{3,64}?)(\s+[—–-]\s+|:\s+|\s+\()/);
+      if (brk) {
+        label = brk[1].trim().replace(/[,;]$/, '');
+        rest = plain.slice(brk[0].length - (brk[2].startsWith(' (') ? 1 : 0)).trim();
+      } else {
+        const words = plain.split(/\s+/);
+        label = words.slice(0, 8).join(' ').replace(/[,;.]$/, '');
+        rest = words.length > 8 ? words.slice(8).join(' ') : '';
+      }
+    }
+    if (!label) continue;
+    label = label.replace(/^(the|your|any)\s+/i, (m) => m).trim();
+    rest = (rest || '').replace(/\*\*/g, '').replace(/^\(([^)]*)\)$/, '$1').trim();
     const optional = /optional/i.test(content);
     const long = /notes|description|summary|data|what happened|details|paste|context/i.test(
       label + ' ' + rest

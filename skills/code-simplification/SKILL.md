@@ -13,6 +13,14 @@ Code accretes defensive complexity: abstractions for futures that never came, op
 - A **removal ledger**: each simplification, why it was safe, and what future it forecloses (honestly)
 - Verification evidence that behaviour held
 
+## Required Inputs
+
+Ask for these if not provided:
+- **The code** — what works today and should keep working
+- **The pressure** — what made it feel complex: onboarding, a bug, a review comment
+- **What must not change** — the public API, behaviour, or performance envelope
+- **Test coverage** — whether there are tests to prove the simplification is safe
+
 ## What to Hunt (in order of payoff)
 
 1. **Speculative generality** — the interface with one implementation, the parameter always called with the same value, the config option no caller sets, the "pluggable" thing nothing plugs into. Rule: *the future that justified it must be on a roadmap, not in an imagination.* YAGNI is a removal warrant.
