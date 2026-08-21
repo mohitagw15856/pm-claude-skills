@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-dentistry",
+  "version": "1.0.0",
+  "description": "Dental practice: treatment plan presentation, clinical notes, insurance pre-auth, emergency triage, recall and referrals.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "dentistry",
+    "dental",
+    "clinical",
+    "practice"
+  ]
+}

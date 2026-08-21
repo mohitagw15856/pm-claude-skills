@@ -9,6 +9,54 @@
   },
   "plugins": [
     {
+      "name": "pm-physio",
+      "description": "Physiotherapy and rehab: initial assessment, programme design, progress notes, return-to-activity criteria, discharge and patient education.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-physio",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-fleet",
+      "description": "Trucking and fleet operations: incident investigation, hours compliance, maintenance programmes, freight rates, audits and driver retention.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-fleet",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-events",
+      "description": "Event planning: run of show, budgets, venue contracts, supplier briefs, safety plans and post-event debriefs.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-events",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-architecture",
+      "description": "Architectural practice: project briefs, site analysis, planning statements, specifications, RFIs and client design presentations.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-architecture",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-pharmacy",
+      "description": "Pharmacy practice: medication reviews, patient counselling, clinical interventions, dispensing decisions and controlled-substance audits.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-pharmacy",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-dentistry",
+      "description": "Dental practice: treatment plan presentation, clinical notes, insurance pre-auth, emergency triage, recall and referrals.",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-dentistry",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-hardship",
       "description": "Money in crisis — debt collectors, the benefits cliff, the bankruptcy decision, wage garnishment, and triaging which bills to pay first.",
       "version": "1.0.0",

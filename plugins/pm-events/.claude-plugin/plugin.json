@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-events",
+  "version": "1.0.0",
+  "description": "Event planning: run of show, budgets, venue contracts, supplier briefs, safety plans and post-event debriefs.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "events",
+    "event-planning",
+    "production",
+    "venue"
+  ]
+}

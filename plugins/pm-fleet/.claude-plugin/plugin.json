@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-fleet",
+  "version": "1.0.0",
+  "description": "Trucking and fleet operations: incident investigation, hours compliance, maintenance programmes, freight rates, audits and driver retention.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "fleet",
+    "trucking",
+    "logistics",
+    "transport",
+    "compliance"
+  ]
+}

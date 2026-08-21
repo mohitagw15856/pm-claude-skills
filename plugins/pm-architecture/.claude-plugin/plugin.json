@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-architecture",
+  "version": "1.0.0",
+  "description": "Architectural practice: project briefs, site analysis, planning statements, specifications, RFIs and client design presentations.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "architecture",
+    "construction",
+    "planning",
+    "design"
+  ]
+}

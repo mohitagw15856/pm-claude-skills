@@ -215,6 +215,16 @@
       "a": "pm-weekly-review",
       "b": "weekly-review-ritual",
       "reason": "A PM's weekly product review vs a personal GTD-style weekly ritual."
+    },
+    {
+      "a": "contract-review",
+      "b": "venue-contract-review",
+      "reason": "General contract review vs the venue-specific commercial exposure — minimum spend, attrition, cancellation ladder — that a general review does not look for."
+    },
+    {
+      "a": "discharge-summary",
+      "b": "physio-discharge-summary",
+      "reason": "A hospital inpatient discharge summary vs closing an outpatient physiotherapy episode against the goals set at assessment."
     }
   ]
 }

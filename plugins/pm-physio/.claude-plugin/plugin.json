@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-physio",
+  "version": "1.0.0",
+  "description": "Physiotherapy and rehab: initial assessment, programme design, progress notes, return-to-activity criteria, discharge and patient education.",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "physiotherapy",
+    "rehab",
+    "clinical",
+    "musculoskeletal"
+  ]
+}
