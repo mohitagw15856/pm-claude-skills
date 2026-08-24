@@ -381,7 +381,7 @@
 | **Memoir Story Capture** (`memoir-story-capture`) | Capture a life story — your own or a parent's/grandparent's — into a keepsake, using good interview questions and a structure that turns memories… | — |
 | **Notes Humanizer** (`notes-humanizer`) | Strips AI writing patterns from text and rewrites it to sound genuinely human — removing the statistical defaults, then adding earned voice… | — |
 | **Substack Notes Scraper** (`substack-notes-scraper`) | Scrapes a Substack Notes page and exports engagement data to a formatted .xlsx file. | — |
-| **Thumbnail Creator Skill (via Gemini)** (`thumbnail-creator`) | Generate article or newsletter thumbnail candidates using the Gemini API from inside Claude Code. | — |
+| **Thumbnail Creator** (`thumbnail-creator`) | Generate article or newsletter thumbnail candidates using Gemini or the optional Atlas Cloud provider from inside Claude Code. | — |
 | **YouTube Script Writer** (`youtube-script-writer`) | Write engaging, high-retention YouTube video scripts with visual and audio cues. | — |
 
 ## 🤝 Customers & Sales (26 skills)

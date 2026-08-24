@@ -1078,7 +1078,7 @@
 | Thread To Decision | `pm-cowork` | `pm-cowork/thread-to-decision/GEM_INSTRUCTIONS.md` |
 | Thread to Decision (Live) | `pm-cowork-live` | `pm-cowork-live/thread-to-decision-live/GEM_INSTRUCTIONS.md` |
 | Threat Model | `pm-security` | `pm-security/threat-model/GEM_INSTRUCTIONS.md` |
-| Thumbnail Creator Skill (via Gemini) | `pm-writers` | `pm-writers/thumbnail-creator/GEM_INSTRUCTIONS.md` |
+| Thumbnail Creator | `pm-writers` | `pm-writers/thumbnail-creator/GEM_INSTRUCTIONS.md` |
 | Timeshare Contract Decoder | `pm-decoders` | `pm-decoders/timeshare-contract-decoder/GEM_INSTRUCTIONS.md` |
 | Token Cost | `pm-tokens` | `pm-tokens/token-cost/GEM_INSTRUCTIONS.md` |
 | Token Diet | `pm-tokens` | `pm-tokens/token-diet/GEM_INSTRUCTIONS.md` |

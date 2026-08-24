@@ -1078,7 +1078,7 @@
 | Thread To Decision | `pm-cowork` | `thread-to-decision/SKILL.md` |
 | Thread to Decision (Live) | `pm-cowork-live` | `thread-to-decision-live/SKILL.md` |
 | Threat Model | `pm-security` | `threat-model/SKILL.md` |
-| Thumbnail Creator Skill (via Gemini) | `pm-writers` | `thumbnail-creator/SKILL.md` |
+| Thumbnail Creator | `pm-writers` | `thumbnail-creator/SKILL.md` |
 | Timeshare Contract Decoder | `pm-decoders` | `timeshare-contract-decoder/SKILL.md` |
 | Token Cost | `pm-tokens` | `token-cost/SKILL.md` |
 | Token Diet | `pm-tokens` | `token-diet/SKILL.md` |

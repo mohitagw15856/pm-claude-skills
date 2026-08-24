@@ -1,11 +1,11 @@
 ---
 name: thumbnail-creator
-description: "Generate article or newsletter thumbnail candidates using the Gemini API from inside Claude Code. Claude reads article copy, proposes composition concepts, writes image generation prompts incorporating brand specs, calls Gemini to generate the images, evaluates the results via computer vision, and returns ranked candidates with rationale. Use when asked to create thumbnails, generate cover images, or produce visual candidates for an article or newsletter."
+description: "Generate article or newsletter thumbnail candidates using Gemini or the optional Atlas Cloud provider from inside Claude Code. Claude reads article copy, proposes composition concepts, writes image generation prompts incorporating brand specs, generates the images after approval, evaluates the results via computer vision, and returns ranked candidates with rationale. Use when asked to create thumbnails, generate cover images, or produce visual candidates for an article or newsletter."
 ---
 
-# Thumbnail Creator Skill (via Gemini)
+# Thumbnail Creator Skill
 
-Generates article and newsletter thumbnail candidates by acting as an image-generation agent inside Claude Code. Instead of switching between tools and prompting Gemini's web UI one image at a time, this skill makes Claude do the full loop: read the copy, propose compositions, write tailored prompts, call the Gemini API, evaluate the outputs, and return ranked results with brief rationale.
+Generates article and newsletter thumbnail candidates by acting as an image-generation agent inside Claude Code. Gemini remains the default provider; Atlas Cloud is an explicit opt-in for teams that already use it. The skill handles the full loop: read the copy, propose compositions, write tailored prompts, generate approved candidates, evaluate the outputs, and return ranked results with brief rationale.
 
 The output is production-ready thumbnail candidates you can drop directly into your CMS, newsletter tool, or social scheduler.
 
@@ -13,9 +13,9 @@ The output is production-ready thumbnail candidates you can drop directly into y
 
 ## Prerequisites
 
-Both of these must be in place before the skill can generate images:
+Choose a provider, then make sure the matching key and the script are available.
 
-### 1. Gemini API Key
+### 1. Provider API key
 
 Get a free key from [Google AI Studio](https://aistudio.google.com/app/apikey).
 
@@ -32,10 +32,18 @@ echo 'export GEMINI_API_KEY="your-key-here"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-Verify it is set:
+Atlas Cloud is optional. To select it for a run:
 
 ```bash
-echo $GEMINI_API_KEY
+export IMAGE_PROVIDER="atlas-cloud"
+export ATLASCLOUD_API_KEY="your-key-here"
+```
+
+Never print either key. Verify presence without revealing the value:
+
+```bash
+test -n "${GEMINI_API_KEY:-}" && echo "Gemini key is set"
+test -n "${ATLASCLOUD_API_KEY:-}" && echo "Atlas Cloud key is set"
 ```
 
 ### 2. generate_image.py Script
@@ -45,13 +53,13 @@ This script must exist at `./generate_image.py` in the project root. The full te
 **Python dependencies:**
 
 ```bash
-pip install google-generativeai Pillow requests
+pip install google-generativeai Pillow
 ```
 
 Or with uv:
 
 ```bash
-uv pip install google-generativeai Pillow requests
+uv pip install google-generativeai Pillow
 ```
 
 ---
@@ -68,6 +76,7 @@ Claude will ask for these if not provided:
 | Style reference description | Recommended | E.g. "flat illustration, minimal, like Stripe's marketing site" or "photorealistic, dark background, high contrast". A style image URL can also be provided. |
 | Output dimensions | No | Defaults to `1792x1024` (landscape, standard article thumbnail). Options: `1024x1024` (square), `1024x1792` (portrait/mobile). |
 | Number of candidates | No | Defaults to 4. Min 1, max 8 (API limits and cost). |
+| Image provider | No | Defaults to `gemini`. Use `atlas-cloud` only when the user explicitly chooses it and has `ATLASCLOUD_API_KEY`. |
 | Article title (if different from H1) | No | Used as the primary text element in image prompts. |
 | Candidate selection | No | After proposing compositions, Claude asks which to generate. User can say "all" or pick by number. |
 
@@ -135,7 +144,7 @@ Claude evaluates each returned image via computer vision and produces:
 
 ```
 Thumbnail Evaluation — "[Article Title]"
-Generated: 2026-05-27  |  Model: Gemini Imagen  |  Dimensions: 1792x1024
+Generated: 2026-05-27  |  Provider / model: Gemini / Imagen 3  |  Dimensions: 1792x1024
 
 | # | Candidate | Composition | Brand Fit /10 | Text Legibility /10 | Recommendation |
 |---|---|---|---|---|---|
@@ -206,7 +215,7 @@ Write 3-4 composition concepts tailored to the article's tone and content. Each 
 
 After presenting the concepts, ask which to generate. Wait for user confirmation before making any API calls.
 
-### Step 4 — Write Gemini image generation prompts
+### Step 4 — Write image generation prompts
 
 For each selected composition, write a detailed image generation prompt. Image generation prompts follow a different grammar than text prompts — they are descriptive, not instructional.
 
@@ -229,7 +238,7 @@ no illustration required. Avoid: clip art, drop shadows, low contrast, crowded l
 **Prompt rules:**
 - Include exact hex colours when brand colours are provided
 - Specify the exact headline text to appear in the image
-- Name the style explicitly ("flat design", "editorial", "photorealistic") — Gemini responds well to style category names
+- Name the style explicitly ("flat design", "editorial", "photorealistic")
 - Add a negative prompt ("Avoid: ...") at the end to reduce drift from brand style
 - Keep prompts under 300 words — longer prompts do not reliably produce better outputs
 
@@ -238,14 +247,18 @@ no illustration required. Avoid: clip art, drop shadows, low contrast, crowded l
 Before calling the API, verify:
 
 ```bash
-# Check API key is set
-echo $GEMINI_API_KEY
+# Check the selected provider key without printing it
+if [ "${IMAGE_PROVIDER:-gemini}" = "atlas-cloud" ]; then
+  test -n "${ATLASCLOUD_API_KEY:-}" && echo "Atlas Cloud key is set"
+else
+  test -n "${GEMINI_API_KEY:-}" && echo "Gemini key is set"
+fi
 
 # Check script exists
 ls -la ./generate_image.py
 
-# Check dependencies
-python3 -c "import google.generativeai, PIL, requests; print('Dependencies OK')"
+# Check common dependency; Gemini also needs google-generativeai
+python3 -c "import PIL; print('Pillow OK')"
 ```
 
 If the script is missing, offer to create it using the template in the Script Template section below.
@@ -254,6 +267,7 @@ Run the generation script for each prompt:
 
 ```bash
 python3 generate_image.py \
+  --provider "${IMAGE_PROVIDER:-gemini}" \
   --prompt "your full prompt here" \
   --output "./thumbnails/article-slug/candidate_01_bold_claim.png" \
   --width 1792 \
@@ -263,8 +277,12 @@ python3 generate_image.py \
 Or pass all prompts in a batch config file:
 
 ```bash
-python3 generate_image.py --config ./thumbnails/article-slug/prompts.json
+python3 generate_image.py \
+  --provider "${IMAGE_PROVIDER:-gemini}" \
+  --config ./thumbnails/article-slug/prompts.json
 ```
+
+The Atlas Cloud path targets `google/nano-banana-2-lite/text-to-image`. Before changing that model in the template, fetch the current Atlas Cloud model catalog and the replacement model's schema, then update the request fields to match it.
 
 ### Step 6 — Evaluate generated images
 
@@ -282,7 +300,7 @@ After each image is saved, examine it using computer vision. Evaluate on two dim
 - Is there sufficient contrast between text and background? (2 points)
 - Is the text placement within safe zones (not cut off at edges)? (2 points)
 
-Note: Gemini Imagen sometimes renders text with spelling errors or distorted letterforms. If this happens, note it in the evaluation and suggest the user add the text overlay manually in Canva or Figma.
+Note: image models can render text with spelling errors or distorted letterforms. If this happens, note it in the evaluation and suggest the user add the text overlay manually in Canva or Figma.
 
 ### Step 7 — Produce the evaluation report
 
@@ -292,7 +310,7 @@ Include:
 - One-line rationale for each score
 - A top pick recommendation per use case (web, email/mobile, social)
 - Any production notes (e.g. "text rendering is imperfect on candidate_02 — overlay text manually")
-- The full prompts used, so the user can iterate directly in AI Studio if needed
+- The provider, model, and full prompts used, so the user can reproduce or iterate on the run
 
 ### Step 8 — Offer iteration
 
@@ -305,7 +323,7 @@ Options:
 - Adjust colours or style on a specific candidate
 - Try a different composition concept
 - Change the headline text
-- Rerun with different Gemini parameters (different temperature/seed)
+- Rerun with supported parameters for the selected provider
 - Generate additional variants of the top pick
 
 Just tell me what to change.
@@ -320,10 +338,13 @@ Claude should offer to write this file if `generate_image.py` is not present. Th
 ```python
 #!/usr/bin/env python3
 """
-generate_image.py — Gemini Imagen wrapper for Thumbnail Creator skill.
+generate_image.py — Gemini/Atlas Cloud wrapper for Thumbnail Creator skill.
+
+Gemini is the default. Atlas Cloud is used only with --provider atlas-cloud.
 
 Usage:
-    python3 generate_image.py --prompt "..." --output "./out.png" [--width 1792] [--height 1024]
+    python3 generate_image.py --prompt "..." --output "./out.png"
+    python3 generate_image.py --provider atlas-cloud --prompt "..." --output "./out.png"
     python3 generate_image.py --config ./prompts.json
 
 Config JSON format:
@@ -332,7 +353,8 @@ Config JSON format:
         "prompt": "...",
         "output": "./thumbnails/slug/candidate_01.png",
         "width": 1792,
-        "height": 1024
+        "height": 1024,
+        "provider": "gemini"
       }
     ]
 
@@ -340,36 +362,175 @@ Requirements:
     pip install google-generativeai Pillow
 """
 
+import argparse
+import io
+import json
 import os
 import sys
-import json
-import argparse
-import base64
+import time
 from pathlib import Path
-
-try:
-    import google.generativeai as genai
-    from google.generativeai import types as genai_types
-except ImportError:
-    print("ERROR: google-generativeai not installed. Run: pip install google-generativeai")
-    sys.exit(1)
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 
 try:
     from PIL import Image
-    import io
 except ImportError:
     print("ERROR: Pillow not installed. Run: pip install Pillow")
     sys.exit(1)
 
 
-def get_api_key() -> str:
-    key = os.environ.get("GEMINI_API_KEY", "")
+ATLAS_API_BASE = "https://api.atlascloud.ai/api/v1"
+ATLAS_DEFAULT_MODEL = "google/nano-banana-2-lite/text-to-image"
+
+
+def get_api_key(provider: str) -> str:
+    env_name = "ATLASCLOUD_API_KEY" if provider == "atlas-cloud" else "GEMINI_API_KEY"
+    key = os.environ.get(env_name, "")
     if not key:
-        print("ERROR: GEMINI_API_KEY environment variable is not set.")
-        print("Get a key at: https://aistudio.google.com/app/apikey")
-        print("Then run: export GEMINI_API_KEY='your-key-here'")
+        print(f"ERROR: {env_name} environment variable is not set.")
         sys.exit(1)
     return key
+
+
+def aspect_ratio_for(width: int, height: int) -> str:
+    ratio = width / height
+    if abs(ratio - 16 / 9) < 0.1:
+        return "16:9"
+    if abs(ratio - 1.0) < 0.1:
+        return "1:1"
+    if abs(ratio - 9 / 16) < 0.1:
+        return "9:16"
+    return "16:9"
+
+
+def save_png(image_bytes: bytes, output_path: str, width: int, height: int) -> None:
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    image = Image.open(io.BytesIO(image_bytes))
+    if image.size != (width, height):
+        image = image.resize((width, height), Image.LANCZOS)
+    image.save(output_path, format="PNG", optimize=True)
+    print(f"  Saved: {output_path} ({image.size[0]}x{image.size[1]})")
+
+
+def generate_with_gemini(prompt: str, output_path: str, width: int, height: int) -> bool:
+    try:
+        import google.generativeai as genai
+    except ImportError:
+        print("ERROR: google-generativeai not installed. Run: pip install google-generativeai")
+        return False
+
+    try:
+        genai.configure(api_key=get_api_key("gemini"))
+        imagen_model = genai.ImageGenerationModel("imagen-3.0-generate-002")
+        result = imagen_model.generate_images(
+            prompt=prompt,
+            number_of_images=1,
+            aspect_ratio=aspect_ratio_for(width, height),
+            safety_filter_level="block_only_high",
+            person_generation="allow_adult",
+        )
+        if not result.images:
+            print(f"  No images returned for: {output_path}")
+            return False
+
+        image_data = result.images[0]
+        if hasattr(image_data, "_image_bytes"):
+            image_bytes = image_data._image_bytes
+        elif hasattr(image_data, "image"):
+            image_bytes = image_data.image
+        else:
+            image_bytes = bytes(image_data)
+        save_png(image_bytes, output_path, width, height)
+        return True
+    except Exception as exc:
+        print(f"  ERROR generating image with Gemini: {exc}")
+        return False
+
+
+def atlas_request(url: str, api_key: str, method: str = "GET", payload=None):
+    data = json.dumps(payload).encode("utf-8") if payload is not None else None
+    request = Request(
+        url,
+        data=data,
+        method=method,
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        },
+    )
+    with urlopen(request, timeout=50) as response:
+        return json.loads(response.read().decode("utf-8"))
+
+
+def generate_with_atlas(
+    prompt: str,
+    output_path: str,
+    width: int,
+    height: int,
+) -> bool:
+    api_key = get_api_key("atlas-cloud")
+    payload = {
+        "model": ATLAS_DEFAULT_MODEL,
+        "prompt": prompt,
+        "aspect_ratio": aspect_ratio_for(width, height),
+        "resolution": "1k",
+    }
+
+    try:
+        # Generation submission is deliberately attempted exactly once.
+        submitted = atlas_request(
+            f"{ATLAS_API_BASE}/model/generateImage",
+            api_key,
+            method="POST",
+            payload=payload,
+        )
+        prediction_id = submitted["data"]["id"]
+        print(f"  Atlas Cloud task submitted: {prediction_id}")
+    except (HTTPError, URLError, KeyError, ValueError) as exc:
+        print(f"  ERROR submitting Atlas Cloud generation: {exc}")
+        return False
+
+    delay = 2.0
+    for _ in range(40):
+        time.sleep(delay)
+        try:
+            result = atlas_request(
+                f"{ATLAS_API_BASE}/model/prediction/{prediction_id}",
+                api_key,
+            )["data"]
+        except HTTPError as exc:
+            if exc.code != 429 and exc.code < 500:
+                print(f"  ERROR polling Atlas Cloud generation: HTTP {exc.code}")
+                return False
+            delay = min(delay * 1.5, 10.0)
+            continue
+        except (URLError, KeyError, ValueError):
+            delay = min(delay * 1.5, 10.0)
+            continue
+
+        status = result.get("status", "unknown")
+        if status in {"completed", "succeeded"}:
+            outputs = result.get("outputs") or result.get("output") or []
+            if isinstance(outputs, str):
+                outputs = [outputs]
+            if not outputs:
+                print("  ERROR: Atlas Cloud completed without an output URL")
+                return False
+            try:
+                with urlopen(outputs[0], timeout=50) as response:
+                    save_png(response.read(), output_path, width, height)
+                return True
+            except (HTTPError, URLError, OSError) as exc:
+                print(f"  ERROR downloading Atlas Cloud output: {exc}")
+                return False
+        if status in {"failed", "canceled", "cancelled"}:
+            print(f"  ERROR: Atlas Cloud generation ended with status {status}")
+            return False
+
+        delay = min(delay * 1.25, 10.0)
+
+    print("  ERROR: Atlas Cloud generation timed out")
+    return False
 
 
 def generate_image(
@@ -377,114 +538,62 @@ def generate_image(
     output_path: str,
     width: int = 1792,
     height: int = 1024,
+    provider: str = "gemini",
 ) -> bool:
-    """
-    Call Gemini Imagen to generate a single image and save it to output_path.
-    Returns True on success, False on failure.
-    """
-    api_key = get_api_key()
-    genai.configure(api_key=api_key)
-
-    # Determine aspect ratio from dimensions
-    ratio = width / height
-    if abs(ratio - 16/9) < 0.1:
-        aspect_ratio = "16:9"
-    elif abs(ratio - 1.0) < 0.1:
-        aspect_ratio = "1:1"
-    elif abs(ratio - 9/16) < 0.1:
-        aspect_ratio = "9:16"
-    else:
-        aspect_ratio = "16:9"  # default fallback
-
-    try:
-        imagen_model = genai.ImageGenerationModel("imagen-3.0-generate-002")
-
-        result = imagen_model.generate_images(
-            prompt=prompt,
-            number_of_images=1,
-            aspect_ratio=aspect_ratio,
-            safety_filter_level="block_only_high",
-            person_generation="allow_adult",
-        )
-
-        if not result.images:
-            print(f"  No images returned for: {output_path}")
-            return False
-
-        image_data = result.images[0]
-
-        # Ensure output directory exists
-        Path(output_path).parent.mkdir(parents=True, exist_ok=True)
-
-        # Save the image
-        if hasattr(image_data, '_image_bytes'):
-            img_bytes = image_data._image_bytes
-        elif hasattr(image_data, 'image'):
-            img_bytes = image_data.image
-        else:
-            # Fallback: try to access raw data
-            img_bytes = bytes(image_data)
-
-        img = Image.open(io.BytesIO(img_bytes))
-
-        # Resize to exact dimensions if needed
-        if img.size != (width, height):
-            img = img.resize((width, height), Image.LANCZOS)
-
-        img.save(output_path, format="PNG", optimize=True)
-        print(f"  Saved: {output_path} ({img.size[0]}x{img.size[1]})")
-        return True
-
-    except Exception as e:
-        print(f"  ERROR generating image: {e}")
-        return False
+    if provider == "atlas-cloud":
+        return generate_with_atlas(prompt, output_path, width, height)
+    return generate_with_gemini(prompt, output_path, width, height)
 
 
 def run_from_args():
-    parser = argparse.ArgumentParser(description="Gemini Imagen wrapper for thumbnail generation")
+    parser = argparse.ArgumentParser(description="Image generation wrapper for thumbnails")
     parser.add_argument("--prompt", type=str, help="Image generation prompt")
     parser.add_argument("--output", type=str, help="Output file path (.png)")
     parser.add_argument("--width", type=int, default=1792, help="Image width in pixels")
     parser.add_argument("--height", type=int, default=1024, help="Image height in pixels")
     parser.add_argument("--config", type=str, help="JSON config file with batch of prompts")
+    parser.add_argument(
+        "--provider",
+        choices=("gemini", "atlas-cloud"),
+        default=os.environ.get("IMAGE_PROVIDER", "gemini"),
+    )
     args = parser.parse_args()
 
     if args.config:
-        # Batch mode
-        with open(args.config, "r") as f:
-            items = json.load(f)
+        with open(args.config, "r", encoding="utf-8") as config_file:
+            items = json.load(config_file)
         print(f"Batch mode: {len(items)} image(s) to generate")
         results = []
-        for i, item in enumerate(items, start=1):
-            print(f"\n[{i}/{len(items)}] Generating: {item['output']}")
+        for index, item in enumerate(items, start=1):
+            print(f"\n[{index}/{len(items)}] Generating: {item['output']}")
             ok = generate_image(
                 prompt=item["prompt"],
                 output_path=item["output"],
                 width=item.get("width", 1792),
                 height=item.get("height", 1024),
+                provider=item.get("provider", args.provider),
             )
             results.append({"output": item["output"], "ok": ok})
 
         print(f"\nBatch complete: {sum(r['ok'] for r in results)}/{len(results)} succeeded")
-        for r in results:
-            status = "OK " if r["ok"] else "ERR"
-            print(f"  {status}  {r['output']}")
+        for result in results:
+            status = "OK " if result["ok"] else "ERR"
+            print(f"  {status}  {result['output']}")
 
     elif args.prompt and args.output:
-        # Single image mode
-        print(f"Generating: {args.output}")
+        print(f"Generating with {args.provider}: {args.output}")
         ok = generate_image(
             prompt=args.prompt,
             output_path=args.output,
             width=args.width,
             height=args.height,
+            provider=args.provider,
         )
         if ok:
             print("Done.")
         else:
             print("Failed.")
             sys.exit(1)
-
     else:
         parser.print_help()
         sys.exit(1)
@@ -504,7 +613,7 @@ ls ./generate_image.py || echo "Script missing — Claude will create it"
 
 ## Prompt Writing Reference
 
-Claude should use this reference when writing image generation prompts. These patterns produce the most consistent results with Gemini Imagen.
+Claude should use this reference when writing image generation prompts. These patterns are provider-neutral and should be adjusted to the selected model's supported parameters.
 
 ### Composition patterns
 
@@ -516,7 +625,7 @@ Claude should use this reference when writing image generation prompts. These pa
 | Split layout | "Vertical split: left half [colour], right half white. Headline on left side, supporting text on right" |
 | Photography style | "Photorealistic [scene description], [mood] lighting, [colour] colour grade, text overlay area at [position]" |
 
-### Style modifiers that work well with Gemini
+### Style modifiers
 
 - `flat design, no gradients` — clean vector-style outputs
 - `editorial magazine style` — sophisticated, typographic
@@ -537,7 +646,7 @@ cluttered layout, lens flares, watermarks, low contrast text, AI artefacts.
 
 ### Text rendering note
 
-Gemini Imagen sometimes renders short text phrases accurately and longer headlines poorly. If the article headline is longer than 6 words, consider splitting it in the prompt:
+Image models often render short text phrases more accurately than longer headlines. If the article headline is longer than 6 words, consider splitting it in the prompt:
 
 ```
 Primary headline: "[First 4-5 words]"
@@ -553,12 +662,13 @@ Or instruct the user to add text overlay manually in Canva after generation if l
 | Issue | Cause | Fix |
 |---|---|---|
 | `GEMINI_API_KEY not set` | Environment variable missing | Run `export GEMINI_API_KEY="your-key"` and retry |
+| `ATLASCLOUD_API_KEY not set` | Atlas Cloud was selected without its key | Set the key, or remove `--provider atlas-cloud` to use Gemini |
 | `ModuleNotFoundError: google.generativeai` | Dependency missing | Run `pip install google-generativeai` |
 | `No images returned` | Safety filter triggered | Revise prompt to remove any ambiguous language; check that the prompt doesn't describe faces, violence, or brand logos |
-| Generated image has garbled text | Imagen text rendering limitation | Use shorter headline in prompt, or plan to add text overlay in Canva/Figma post-generation |
+| Generated image has garbled text | Image-model text rendering limitation | Use shorter headline in prompt, or plan to add text overlay in Canva/Figma post-generation |
 | Image is the wrong size | Aspect ratio mismatch | Confirm `--width` and `--height` args match one of the supported ratios (16:9, 1:1, 9:16) |
 | `generate_image.py not found` | Script not created yet | Ask Claude to create it using the template above |
-| API quota exceeded | Free tier limit | Wait or upgrade to Gemini API paid tier |
+| API quota exceeded | Provider account limit | Check the selected provider's account limits before making another request |
 | Style drift from brand | Prompt not specific enough | Add exact hex codes and specific style descriptors; add stronger negative prompt |
 
 ---
@@ -567,10 +677,11 @@ Or instruct the user to add text overlay manually in Canva after generation if l
 
 Before marking the task complete, verify each item:
 
-- [ ] `GEMINI_API_KEY` environment variable confirmed set before any API calls
+- [ ] The selected provider's key is confirmed present without printing it
 - [ ] `generate_image.py` script exists in project root — created from template if missing
-- [ ] All Python dependencies installed and verified (`google-generativeai`, `Pillow`)
+- [ ] `Pillow` is installed; `google-generativeai` is installed when using Gemini
 - [ ] Composition proposals were presented and user confirmed which to generate before any API calls
+- [ ] Atlas Cloud is used only after explicit provider selection; each candidate gets one generation POST and read-only bounded polling
 - [ ] Each composition proposal is specific to this article's content — not generic placeholders
 - [ ] Brand colours (hex codes) are included in the image generation prompts
 - [ ] Negative prompt appended to every image generation prompt
@@ -601,6 +712,7 @@ Before marking the task complete, verify each item:
 - "Generate cover image candidates for my newsletter"
 - "Make me 4 thumbnail options for this post"
 - "Can you generate some thumbnail ideas using Gemini?"
+- "Use Atlas Cloud to create thumbnail options for this article"
 - "I need a featured image for this article — use my brand colours"
 - "Create a thumbnail for this piece using Gemini" [followed by article text or URL]
 - "Generate article cover images for these brand specs: [colours, style]"
@@ -615,18 +727,10 @@ Before marking the task complete, verify each item:
 
 ## Cost and Rate Limits
 
-**Gemini AI Studio free tier (as of early 2026):**
-- Imagen 3: 10 images per day (free)
-- Rate limit: varies by region and account tier
-
-**Paid tier:**
-- Imagen 3 pricing: approximately $0.03-0.05 per image (check current Google Cloud pricing)
-- For a typical session generating 4-8 candidates, total cost is under $0.40
-
-**Recommendation:**
-- Use the free tier for exploration and iteration
-- Generate final production candidates on paid tier for higher daily limits
-- For newsletter teams generating thumbnails weekly, the paid tier is more practical
+- Check the selected provider's current model page before generating; prices and quotas change.
+- Confirm the number of candidates with the user before any paid request.
+- Do not automatically retry a failed generation submission. Atlas Cloud polling retries only read-only status checks with a bounded backoff.
+- Record the provider and model in `evaluation_report.md` so the run can be reproduced.
 
 ---
 
