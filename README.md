@@ -421,6 +421,10 @@ Add a skill via PR ([the standard](SKILL-AUTHORING-STANDARD.md), [CONTRIBUTING](
 
 If a skill saved you real money or a real mistake, **[star the repo](https://github.com/mohitagw15856/pm-claude-skills/stargazers)** — it's how others find it. Sponsors fund the playground's free runs and get [naming rights, not influence](docs/SPONSORSHIP.md): **[become a sponsor](https://github.com/sponsors/mohitagw15856)**.
 
+### 🏢 Sponsor the project
+
+Individuals sponsor via **[GitHub Sponsors](https://github.com/sponsors/mohitagw15856)**. **Organisations** interested in a sponsored logo + link: **[email me](mailto:mohit15856@gmail.com)** about a clearly-disclosed placement in this section — that's the whole arrangement: a logo and link only, never product integration or a product endorsement. I keep full editorial independence and may decline any sponsor whose product conflicts with users' interests.
+
 ## 📄 License
 
 MIT — use them, fork them, ship them at work. Skills are judgment, and judgment wants to be free.
