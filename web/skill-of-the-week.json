@@ -1,12 +1,12 @@
 {
-  "week": 2954,
-  "skill": "changelog-generator",
-  "title": "Changelog Generator",
-  "summary": "Convert a git log, commit list, or release notes into a polished, user-facing changelog.",
-  "link": "https://mohitagw15856.github.io/pm-claude-skills/index.html?skill=changelog-generator",
-  "generatedAt": "2026-08-17T09:31:21.931Z",
+  "week": 2955,
+  "skill": "churn-analysis",
+  "title": "Churn Analysis",
+  "summary": "Produce a structured churn analysis that separates avoidable from unavoidable churn.",
+  "link": "https://mohitagw15856.github.io/pm-claude-skills/index.html?skill=churn-analysis",
+  "generatedAt": "2026-08-24T09:36:51.157Z",
   "posts": {
-    "x": "🛠️ Skill of the week: Changelog Generator\n\nConvert a git log, commit list, or release notes into a polished, user-facing changelog.\n\nRun it free in your browser (no install) 👇\nhttps://mohitagw15856.github.io/pm-claude-skills/index.html?skill=changelog-generator\n\n#ClaudeAI #AItools #ProductManagement",
-    "linkedin": "🛠️ Skill of the week: Changelog Generator\n\nConvert a git log, commit list, or release notes into a polished, user-facing changelog.\n\nIt's one of 174 open-source AI skills that make Claude, ChatGPT, and Gemini produce real professional work. Try this one free in the browser — no install:\nhttps://mohitagw15856.github.io/pm-claude-skills/index.html?skill=changelog-generator\n\n⭐ https://github.com/mohitagw15856/pm-claude-skills"
+    "x": "🛠️ Skill of the week: Churn Analysis\n\nProduce a structured churn analysis that separates avoidable from unavoidable churn.\n\nRun it free in your browser (no install) 👇\nhttps://mohitagw15856.github.io/pm-claude-skills/index.html?skill=churn-analysis\n\n#ClaudeAI #AItools #ProductManagement",
+    "linkedin": "🛠️ Skill of the week: Churn Analysis\n\nProduce a structured churn analysis that separates avoidable from unavoidable churn.\n\nIt's one of 174 open-source AI skills that make Claude, ChatGPT, and Gemini produce real professional work. Try this one free in the browser — no install:\nhttps://mohitagw15856.github.io/pm-claude-skills/index.html?skill=churn-analysis\n\n⭐ https://github.com/mohitagw15856/pm-claude-skills"
   }
 }
