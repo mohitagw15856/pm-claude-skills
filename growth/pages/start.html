@@ -1,0 +1,57 @@
+<!doctype html>
+<!--
+  Post-install landing page (growth idea #4). Self-contained, theme-aware.
+  Move to web/start.html to go live, then point the CLI/clawhub/npm at it.
+  Replace [LINKS] with real URLs before shipping.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>You're in — PM Skills</title>
+<style>
+  :root{--bg:#fff;--fg:#1a1a2e;--muted:#5b5b73;--card:#f6f6fb;--accent:#d9605a;--border:#e6e6f0}
+  @media (prefers-color-scheme:dark){:root{--bg:#12121a;--fg:#f0f0f5;--muted:#a0a0b8;--card:#1c1c28;--accent:#e97b76;--border:#2a2a3a}}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:2.5rem 1.25rem}
+  main{max-width:640px;margin:0 auto}
+  h1{font-size:2rem;margin:.2rem 0 .4rem}
+  .sub{color:var(--muted);margin:0 0 2rem}
+  .step{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.1rem 1.25rem;margin:.8rem 0;display:flex;gap:.9rem;align-items:flex-start}
+  .n{font-weight:700;color:var(--accent);font-size:1.15rem;line-height:1.4}
+  .step h2{font-size:1.05rem;margin:.1rem 0 .25rem}
+  .step p{margin:0;color:var(--muted);font-size:.95rem}
+  a{color:var(--accent);font-weight:600;text-decoration:none}
+  a:hover{text-decoration:underline}
+  .foot{color:var(--muted);font-size:.85rem;text-align:center;margin-top:2rem}
+</style>
+</head>
+<body>
+<main>
+  <h1>You're in. Here's what to do next. 🎉</h1>
+  <p class="sub">1,153 professional skills, now available to your AI. No accounts, no telemetry.</p>
+
+  <div class="step"><div class="n">1</div><div>
+    <h2>Try it now</h2>
+    <p>Ask your AI a real task — <em>"decode this lease,"</em> <em>"write a postmortem for Friday's outage."</em> → <a href="[BROWSE_LINK]">Browse all skills</a></p>
+  </div></div>
+
+  <div class="step"><div class="n">2</div><div>
+    <h2>Start with your moment</h2>
+    <p>Not sure where to look? → <a href="[PACKS_LINK]">Skill Packs</a> — new parent · laid off · money in crisis · caring for a parent · and more.</p>
+  </div></div>
+
+  <div class="step"><div class="n">3</div><div>
+    <h2>Get new skills by email</h2>
+    <p>~50 new skills land every wave. → <a href="[SUBSCRIBE_LINK]">Subscribe (free)</a></p>
+  </div></div>
+
+  <div class="step"><div class="n">4</div><div>
+    <h2>If it helped, star it</h2>
+    <p>It's how others find it. → <a href="[GITHUB_LINK]">⭐ Star on GitHub</a></p>
+  </div></div>
+
+  <p class="foot">Skills are markdown your AI reads — no runtime, no telemetry, no accounts. MIT-licensed.</p>
+</main>
+</body>
+</html>
