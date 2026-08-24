@@ -18,8 +18,13 @@ One page that shows the project's scale — for you (optimization), visitors (so
 - clawhub/npm/PyPI public download stats
 - newsletter tool — subscriber count
 
+## Snapshot (as of 2026-08-24, real)
+- ⬇️ 55.5k+ clawhub · **~10,800/mo npm** · **~2,600/mo PyPI**
+- ⭐ ~1.3k stars · 📚 1,153 skills / 130 bundles
+- ▶️ playground runs: live from the worker counter · 📬 subs: fill from Buttondown
+
 ## The ready page
-`../pages/impact.html` is a self-contained, theme-aware page with placeholder numbers and clearly-marked spots to wire the live endpoints. Move it to `web/impact.html` when you want it live, and link it from the README badge row ("📊 Impact").
+`../pages/impact.html` is self-contained and theme-aware, pre-filled with the real snapshot above **and wired to refresh ⭐ stars, ▶️ runs, and 📚 skills live** (via the shields badge, the stats worker, and `skills.json`) — each fetch wrapped so a CORS/network failure silently keeps the snapshot value. Move it to `web/impact.html` when you want it live (there it's same-origin with `skills.json`), and link it from the README badge row ("📊 Impact").
 
 ## Why it earns its keep
 - **Social proof compounds:** "55k downloads · 1.3k stars · N runs" is screenshot-able and gets shared.

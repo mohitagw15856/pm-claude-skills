@@ -35,13 +35,16 @@
   <p class="sub">The scale of an open-source, MIT-licensed, vendor-neutral skill library. Public, aggregate numbers only — no user tracking.</p>
 
   <div class="grid">
-    <div class="stat"><div class="num" data-src="downloads">55.5k+</div><div class="lbl">Downloads</div></div>
-    <div class="stat"><div class="num" data-src="stars">1.3k+</div><div class="lbl">GitHub stars</div></div>
-    <div class="stat"><div class="num" data-src="runs">[wire /try/stats]</div><div class="lbl">Playground runs served</div></div>
-    <div class="stat"><div class="num" data-src="subs">[wire]</div><div class="lbl">Newsletter subscribers</div></div>
-    <div class="stat"><div class="num" data-src="skills">1,153</div><div class="lbl">Skills</div></div>
-    <div class="stat"><div class="num" data-src="bundles">130</div><div class="lbl">Bundles</div></div>
+    <div class="stat"><div class="num" id="downloads">55.5k+</div><div class="lbl">clawhub downloads</div></div>
+    <div class="stat"><div class="num" id="npm">10.8k</div><div class="lbl">npm / month</div></div>
+    <div class="stat"><div class="num" id="pypi">2.6k</div><div class="lbl">PyPI / month</div></div>
+    <div class="stat"><div class="num" id="stars">1.3k</div><div class="lbl">GitHub stars <span style="opacity:.6">(live)</span></div></div>
+    <div class="stat"><div class="num" id="runs">—</div><div class="lbl">Playground runs <span style="opacity:.6">(live)</span></div></div>
+    <div class="stat"><div class="num" id="subs">[set]</div><div class="lbl">Newsletter subs</div></div>
+    <div class="stat"><div class="num" id="skills">1,153</div><div class="lbl">Skills <span style="opacity:.6">(live)</span></div></div>
+    <div class="stat"><div class="num" id="bundles">130</div><div class="lbl">Bundles</div></div>
   </div>
+  <p style="color:var(--muted);font-size:.8rem;margin:.6rem 0 0">Snapshot as of 2026-08-24; ⭐, runs, and skills update live where the browser allows. Monthly figures are 30-day windows from public registry APIs.</p>
 
   <h2>🔥 Top skills this week</h2>
   <ul data-src="trending">
@@ -56,5 +59,21 @@
 
   <p class="foot">Numbers are public/aggregate (registry stats, GitHub API, the hosted playground's own counter). Nothing is collected from users' machines — the library ships with no telemetry and no accounts.</p>
 </main>
+<script>
+  // Best-effort live refresh of the public, aggregate signals only. Each call
+  // is wrapped so a CORS/network failure silently leaves the snapshot value.
+  (async () => {
+    const set = (id, v) => { const el = document.getElementById(id); if (el && v != null) el.textContent = v; };
+    const grab = async (url, pick) => { try { const r = await fetch(url, { mode: 'cors' }); if (!r.ok) return; set(...(await pick(r))); } catch (_) {} };
+    // GitHub stars (shields JSON badge, permissive CORS)
+    grab('https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills.json',
+         async r => ['stars', (await r.json()).message]);
+    // Free playground runs served (the project's own stats worker)
+    grab('https://pm-skills-mcp.pm-claude-skills.workers.dev/try/stats',
+         async r => ['runs', String((await r.json()).message || '').replace(/[^\d,.kKmM+]/g, '') || '—']);
+    // Skills count (same-origin when hosted under the Pages site)
+    grab('/skills.json', async r => ['skills', Number((await r.json()).count).toLocaleString()]);
+  })();
+</script>
 </body>
 </html>

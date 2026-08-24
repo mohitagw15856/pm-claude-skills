@@ -8,13 +8,18 @@ Now that the README invites org sponsors, go get them. This is the one-pager. Fi
 
 **What it is:** an open-source library of **1,153** professional Agent Skills for Claude, ChatGPT, Gemini, Cursor & Codex. In Anthropic's official plugin directory. MIT-licensed, vendor-neutral.
 
-**Reach (why it's worth sponsoring):**
-- ⭐ **[live number]** GitHub stars
-- ⬇️ **55.5k+** downloads (clawhub) — plus npm / PyPI / MCP
-- ▶️ **[live number]** free playground runs served / month
-- 📬 **[live number]** newsletter subscribers
-- 🏛️ Listed in Anthropic's plugin directory + awesome-lists
+**Reach (snapshot as of 2026-08-24 — refresh before sending):**
+- ⬇️ **55.5k+** downloads on clawhub
+- ⬇️ **~10,800 / month** on npm (`pm-claude-skills`) · **~3,700 / week**
+- ⬇️ **~2,600 / month** on PyPI (`pm-skills`)
+- ⭐ **~1.3k** GitHub stars
+- 📚 **1,153 skills · 130 bundles**, every one spec- and security-gated in CI
+- 🏛️ Listed in Anthropic's official plugin directory + awesome-lists
+- ▶️ Free in-browser playground (sponsor-funded runs) — live counter: `pm-skills-mcp…/try/stats`
+- 📬 **[newsletter subscribers — fill from your Buttondown dashboard]**
 - 👥 Audience: developers, PMs, founders, and everyday people using AI for real work and life tasks
+
+> Numbers above are real as of the date shown (npm/PyPI public download APIs, GitHub, clawhub). Update the month figures before each send so the prospectus never overstates.
 
 **What sponsorship is:**
 A **clearly-disclosed logo + link** in the repo's Support section (and, by tier, the site/newsletter). That's it.
@@ -43,6 +48,6 @@ A **clearly-disclosed logo + link** in the repo's Support section (and, by tier,
 - **Note on Atlas Cloud:** given the prior soured sponsorship + the PR that tried to embed their API for free (see `../../` PR history), if they re-approach, the terms are the same for everyone — disclosed placement only, paid, no integration. Don't give via a back-door PR what wasn't paid for at the front.
 
 ## The pitch email (short)
-> Subject: Sponsoring PM Skills (55k+ downloads, [x]k stars)
+> Subject: Sponsoring PM Skills (55k+ downloads, ~1.3k stars)
 >
-> Hi [name] — I maintain PM Skills, an open-source Agent Skills library (1,153 skills, in Anthropic's directory, 55k+ downloads). I've opened disclosed logo/link sponsorships that fund the free in-browser playground. Given [company]'s audience overlap, thought it might be a fit. One-pager attached; happy to share live traffic numbers. Placement only — no integration, no endorsement implied. — [name]
+> Hi [name] — I maintain PM Skills, an open-source Agent Skills library (1,153 skills, in Anthropic's directory, 55k+ downloads, ~1.3k stars). I've opened disclosed logo/link sponsorships that fund the free in-browser playground. Given [company]'s audience overlap, thought it might be a fit. One-pager attached; happy to share live traffic numbers. Placement only — no integration, no endorsement implied. — [name]

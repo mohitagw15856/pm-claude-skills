@@ -15,14 +15,14 @@ Legend: ✅ done · 🟡 partial (amplify) · 🔴 build · 🧑 human action (a
 |---|---|---|---|
 | 1 | Treat the clawhub listing like an app-store page | 🧑 | Copy in `clawhub-listing.md` — paste into the hub. |
 | 2 | Put the star/subscribe CTA where clawhub users land | 🟡 | CTA block in `clawhub-listing.md` + output footer (#3). |
-| 3 | Opt-out attribution footer on skill outputs | 🔴 | Spec + exclusion list in `attribution-footer.md`. |
+| 3 | Opt-out attribution footer on skill outputs | ✅ | **Implemented, default-off** — `scripts/attribution.mjs` (9/9 self-test) + `config/attribution.json` (sensitive bundles/skills excluded). Ships off; flip when ready. See `attribution-footer.md`. |
 | 4 | One post-install landing URL for every channel | 🔴 | Copy + ready page in `post-install-landing.md`. |
 
 ## B. Monetize the proven demand
 | # | Move | Status | Deliverable |
 |---|---|---|---|
 | 5 | Teams/Pro tier (skills stay free) | 🔴 | `teams-pro-tier.md` — tiers + what's paid. |
-| 6 | Proactive sponsor pitch with the numbers | 🧑 | `sponsor-prospectus.md` — one-pager, live-number placeholders. |
+| 6 | Proactive sponsor pitch with the numbers | 🧑 | `sponsor-prospectus.md` — **real numbers filled** (55.5k clawhub · ~10.8k/mo npm · ~2.6k/mo PyPI · ~1.3k stars, as of 2026-08-24); just add newsletter subs + send. |
 | 7 | Paid MCP/API tier | 🔴 | API-tier section in `teams-pro-tier.md`. |
 | 8 | "Build your company's skill library" service | 🧑 | `services.md`. |
 
@@ -44,7 +44,7 @@ Legend: ✅ done · 🟡 partial (amplify) · 🔴 build · 🧑 human action (a
 ## E. Proof & community flywheel
 | # | Move | Status | Deliverable |
 |---|---|---|---|
-| 16 | Public impact dashboard | 🔴 | Spec + ready page in `impact-dashboard.md` / `../pages/impact.html`. |
+| 16 | Public impact dashboard | 🟡 | Ready page `../pages/impact.html` — **real snapshot numbers + live wiring** for stars/runs/skills (graceful fallback). Move to `web/impact.html` to go live. |
 | 17 | Harvest ROI stories | 🟡 | `roi-stories-campaign.md` (the `roi-story` template exists). |
 | 18 | Turn heavy-use skills into contribution magnets | 🔴 | Ready issue list in `good-first-skill-issues.md`. |
 

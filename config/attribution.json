@@ -1,0 +1,27 @@
+{
+  "$comment": "Attribution footer policy (growth idea #3). DEFAULT OFF. The footer is appended to a skill's rendered output ONLY when attribution is enabled AND the skill is not excluded. Enable via this file (enabled:true), or per-user opt-in at runtime; PM_SKILLS_ATTRIBUTION=off always forces it off. Never enable for the excluded bundles/skills below — see growth/downloads/attribution-footer.md.",
+  "enabled": false,
+  "footer": "— generated with a PM Skill · https://github.com/mohitagw15856/pm-claude-skills",
+  "excludeBundles": [
+    "pm-grief",
+    "pm-hardship",
+    "pm-reentry",
+    "pm-caregiving",
+    "pm-invisible-illness",
+    "pm-neurodivergent",
+    "pm-identity",
+    "pm-accessibility",
+    "pm-health",
+    "pm-crisis",
+    "pm-scam-defense"
+  ],
+  "excludeSkills": [
+    "support-a-friend-in-crisis",
+    "end-of-life-wishes-conversation",
+    "condolence-message-helper",
+    "medical-bill-decoder",
+    "disability-benefit-appeal",
+    "identity-theft-recovery",
+    "doxxing-response"
+  ]
+}

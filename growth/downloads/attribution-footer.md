@@ -21,6 +21,17 @@ Small, single line, at the very end. Never mid-content.
 ## Why it's worth the care
 An artifact with a footer travels to people who've never heard of the project — it's word-of-mouth at the speed of copy-paste. But a branded grief checklist or debt-collector letter would be a serious misstep, so the exclusion list is the feature, not an afterthought.
 
-## Decision needed from you
-- Default-on (max reach) vs. default-off-with-prompt (max trust)? **Recommendation: default-off with a one-time "enable attribution?" prompt** on first CLI use — it respects the no-telemetry brand and still reaches opt-in users.
-- Confirm the sensitive-skill exclusion list before any default-on rollout.
+## ✅ Implemented (default-off, this is the shipped policy)
+
+Decision taken: **default-off-with-opt-in** — max trust, honors the no-telemetry brand, still reaches opt-in users.
+
+- **`config/attribution.json`** — ships with `"enabled": false`, the footer text, and the sensitive exclusion lists (`excludeBundles`: pm-grief, pm-hardship, pm-reentry, pm-caregiving, pm-invisible-illness, pm-neurodivergent, pm-identity, pm-accessibility, pm-health, pm-crisis, pm-scam-defense; plus `excludeSkills` for individually sensitive ones like medical-bill-decoder, disability-benefit-appeal, identity-theft-recovery).
+- **`scripts/attribution.mjs`** — the tested policy module. `attributionFor({skill,bundle})` returns the footer or `''`. Precedence: `PM_SKILLS_ATTRIBUTION=off` (hard opt-out) → `=on` → runtime per-user preference → config default (off). Verified by `node scripts/attribution.mjs --selftest` (9/9 pass), including "excluded bundle never shows footer even when enabled."
+
+**How to turn it on** (when you decide to): flip `enabled` to `true` in the config for a build-time default, or pass a per-user preference at runtime (e.g. a Playground localStorage toggle) — excluded skills stay off automatically either way.
+
+**Integration points (each a 1-liner):**
+- Playground render: `output = withAttribution(output, {skill, bundle}, {enabled: userPref})`
+- Export build (if ever default-on): same call, keyed off the config.
+
+It ships **off**, so nothing changes for anyone until you choose to enable it — the mechanism and the sensitive-skill safety are in place and tested, ready to flip.
