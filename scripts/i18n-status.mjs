@@ -36,19 +36,27 @@ for (const lang of langs) {
   if (pick && lang !== pick) continue;
   const dir = join(i18nDir, lang, 'skills');
   const names = readdirSync(dir).filter((n) => existsSync(join(dir, n, 'SKILL.md')));
-  let reviewed = 0, stale = 0;
+  let reviewed = 0, stale = 0, drifted = 0;
   const unreviewed = [];
   for (const n of names) {
-    const fm = (readFileSync(join(dir, n, 'SKILL.md'), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/) || [, ''])[1];
+    const body = readFileSync(join(dir, n, 'SKILL.md'), 'utf8');
+    const fm = (body.match(/^---\r?\n([\s\S]*?)\r?\n---/) || [, ''])[1];
     const rev = (fm.match(/^review:\s*(.+)$/m) || [, 'pending'])[1].trim();
     if (rev && rev !== 'pending') reviewed++; else unreviewed.push(n);
-    if (!existsSync(join(skillsDir, n, 'SKILL.md'))) stale++;
+    const srcPath = join(skillsDir, n, 'SKILL.md');
+    if (!existsSync(srcPath)) { stale++; continue; }
+    // Structural drift: the English source gained or lost sections after the
+    // translation was made, so the translation is now incomplete. This is the
+    // failure mode that makes full-body translation expensive to maintain —
+    // every edit to an English skill silently invalidates its translations.
+    const sections = (x) => (x.match(/^## /gm) || []).length;
+    if (sections(body) !== sections(readFileSync(srcPath, 'utf8'))) drifted++;
   }
   const descFile = join(i18nDir, lang, 'descriptions.json');
   const descs = existsSync(descFile)
     ? Object.keys(JSON.parse(readFileSync(descFile, 'utf8')).descriptions || {}).length : 0;
   report.push({
-    lang, translated: names.length, reviewed, pending: names.length - reviewed, stale,
+    lang, translated: names.length, reviewed, pending: names.length - reviewed, stale, drifted,
     coverage: +(100 * names.length / total).toFixed(1),
     descriptions: descs, descriptionCoverage: +(100 * descs / total).toFixed(1),
     unreviewed,
@@ -74,11 +82,11 @@ if (has('json')) {
 } else {
   console.log(`English skills (canonical): ${total}\n`);
   console.log('Machine-translated (i18n/) — bodies and descriptions');
-  console.log('lang  bodies  coverage  reviewed  pending  stale   descriptions  coverage');
+  console.log('lang  bodies  coverage  reviewed  pending  stale  drifted   descriptions  coverage');
   for (const r of report) console.log([
     r.lang.padEnd(4), String(r.translated).padStart(6), (r.coverage + '%').padStart(8),
     String(r.reviewed).padStart(8), String(r.pending).padStart(7), String(r.stale).padStart(5),
-    String(r.descriptions).padStart(13), (r.descriptionCoverage + '%').padStart(9),
+    String(r.drifted).padStart(7), String(r.descriptions).padStart(13), (r.descriptionCoverage + '%').padStart(9),
   ].join('  '));
   if (!report.length) console.log('  (none yet — run scripts/translate-skills.mjs)');
   console.log('\nCommunity-translated (skills-i18n/) — parity-gated, human-written');

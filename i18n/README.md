@@ -28,6 +28,17 @@ the thing that actually matters — at roughly 2% of the tokens of a full pass,
 and it completes rather than trailing off at 4%. Full bodies stay worthwhile for
 the Production-Ready tier, where somebody will genuinely sit and read the skill.
 
+## Why bodies rot
+
+`node scripts/translate-skills.mjs --check` currently reports **50 of 50**
+Spanish bodies as structurally drifted: the English sources gained sections
+after translation, so every one is now incomplete. Nothing was broken — this is
+simply what full-body translation costs. Each edit to an English skill silently
+invalidates its translations, and `i18n-status` now shows that as a `drifted`
+column rather than letting it accumulate unseen.
+
+Descriptions drift far less, and re-running them is cheap enough to be routine.
+
 ## Three surfaces, deliberately
 
 `node scripts/i18n-status.mjs` reports all of them, because reporting one made
