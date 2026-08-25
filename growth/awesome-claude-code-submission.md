@@ -1,45 +1,64 @@
-# awesome-claude-code — submission draft (paste into the form)
+# awesome-claude-code — do not resubmit; update the open submission
 
 [hesreallyhim/awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code)
-(★53k) is the highest-value remaining target, and it is the one that **has to be
-submitted by hand**. Its CONTRIBUTING is explicit:
+(★53k). **There is already an open, validated submission.** Do not file another.
 
-> **ALL RECOMMENDATIONS MUST BE MADE USING THE WEB UI ISSUE FORM TEMPLATE, OR YOU
-> RISK BEING RESTRICTED FROM INTERACTING WITH THIS REPOSITORY TEMPORARILY.**
-> […] Do not open a PR. […] It is **not** possible to submit a resource
-> recommendation using the `gh` CLI. […] Although resources themselves may be
-> partially or entirely written by a coding agent, resource recommendations must
-> be created by human beings.
+| Issue | Date | State | Note |
+|---|---|---|---|
+| [#2073](https://github.com/hesreallyhim/awesome-claude-code/issues/2073) | 2026-06-19 | **OPEN**, `validation-passed` | The live submission. Bot: "All validation checks passed. Your submission is ready for review by a maintainer." |
+| [#2628](https://github.com/hesreallyhim/awesome-claude-code/issues/2628) | 2026-08-25 | closed, `auto-closed` | A second recommendation filed while #2073 was open. |
 
-So: no PR, no CLI, and the recommendation itself has to come from a person. This
-file is the content, ready to paste — you are the human submitting it.
+## Why #2628 was auto-closed
 
-**Eligibility check (their ground rules):** the project needs 14+ days of history
-with continued commits, *or* 100+ stars. It clears both comfortably.
+Not the ground rules — the project clears them comfortably (**1,308 stars**
+against a 100 bar; created 2026-01-29; 77 commits in the last 30 days; MIT
+detected). The rule it hit is further down the same section:
 
-## → [Open the form](https://github.com/hesreallyhim/awesome-claude-code/issues/new?template=recommend-resource.yml)
+> In addition: **You may not recommend more than one resource at a time.**
 
-Fill it in exactly as below. One resource per submission — do not add a second.
+#2073 was still open, so #2628 was a second simultaneous recommendation. The
+bot's message is generic, which is why this reads as a criteria failure when it
+is a duplicate.
 
-An automated bot validates the form and posts the result as a comment. Passing
-validation only means the recommendation was *received* — a maintainer approves
-at their discretion, and there is no guaranteed response.
+## What #2073 needs
+
+It is nine weeks old and materially stale — it describes **174 skills across 18
+professions**; there are now **1,153 across 35**. It also uses the category
+"Agent Skills", which no longer exists in the form's dropdown (now "Skills").
+
+Post this as a **comment on #2073**. Do not edit the original body — the
+validator ran against it and passed, and re-triggering validation on an edited
+form risks losing the `validation-passed` state.
 
 ---
 
-**Add a title**
+```
+Updating this submission with current numbers — it has moved on a good deal since June.
 
-GitHub pre-fills `[Resource]: <name of your resource>`. Keep the `[Resource]: `
-prefix — the validator keys on it — and replace only the placeholder:
+Description (replacing the one in the form above):
+
+A library of 1,153 Agent Skills as plain-markdown SKILL.md files across 35 professions, installable into Claude Code as 127 plugin bundles or individually, with an MCP server, a browser playground, and CI gates for structural conformance and security.
+
+Claude Code specifics, since the guidelines favour them: it ships as a plugin marketplace (/plugin marketplace add mohitagw15856/pm-claude-skills), and alongside the skills it provides slash commands, subagents, output-style personas, and hooks.
+
+Also worth noting the category "Agent Skills" used above no longer appears in the form; the current equivalent is "Skills". Happy to refile under the new taxonomy if that is easier than amending this one — I did not want to open a second issue given the one-at-a-time rule.
+
+Everything else in the original submission still holds: MIT, no executable code in the skills themselves, and the playground still verifies a skill's effect without installing anything.
+```
+
+---
+
+## If you would rather start clean
+
+Close #2073 **first**, wait for it to register as closed, then file a fresh
+submission using the fields below. Do not do both at once — that is what
+triggered the auto-close.
+
+**Title** — keep the `[Resource]: ` prefix GitHub pre-fills:
 
 ```
 [Resource]: PM Skills
 ```
-
-The `resource-submission` and `validation-pending` labels are applied
-automatically; do not add labels by hand.
-
----
 
 **Display Name**
 
@@ -71,36 +90,29 @@ mohitagw15856
 https://github.com/mohitagw15856
 ```
 
-**Description**
-
-Their style rule: a description, not a pitch. Don't address the reader, one
-line, no emojis. This is written to that:
+**Description** — their style rule is a description, not a pitch: don't address
+the reader, one line, no emojis.
 
 ```
 A library of 1,153 Agent Skills as plain-markdown SKILL.md files spanning 35 professions, installable into Claude Code as 127 plugin bundles or individually, with an MCP server, a browser playground, and CI gates for structural conformance and security.
 ```
 
-If a shorter line is wanted:
+## Expectations
 
-```
-A library of 1,153 plain-markdown Agent Skills across 35 professions, installable into Claude Code as plugin bundles or individually, with an MCP server and CI-enforced structural and security gates.
-```
+Their CONTRIBUTING is blunt about this, and it is worth reading plainly rather
+than as an obstacle:
 
----
+> Recommendations are reviewed in a best-effort way, and no guarantee is made as
+> to whether you will receive a response. […] If "getting on the list" is any
+> part of a promotional strategy for your project, you should be prepared to
+> have a backup plan.
 
-## If the bot asks for anything else
-
-- **License** — MIT, declared in a standard `LICENSE` file at the repo root, so
-  GitHub's license detection picks it up automatically.
-- **Claude Code specificity** — the guideline favours resources that use Claude
-  Code's own features. Worth mentioning in a follow-up comment if asked: it ships
-  as a Claude Code plugin marketplace (`/plugin marketplace add
-  mohitagw15856/pm-claude-skills`), 127 bundles, plus slash commands, subagents,
-  output-style personas, and hooks.
+Passing validation means received, not accepted. #2073 has been open and valid
+since June; the realistic move is to keep it accurate and leave it.
 
 ## Afterwards
 
-If it is accepted, the badge goes in the README:
+If accepted:
 
 ```markdown
 [![Mentioned in Awesome Claude Code](https://awesome.re/mentioned-badge.svg)](https://github.com/hesreallyhim/awesome-claude-code)
