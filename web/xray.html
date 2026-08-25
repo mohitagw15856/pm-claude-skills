@@ -49,7 +49,7 @@
     <div class="brand-text"><h1>Document X-ray</h1><p class="tagline">See the evidence skeleton under your prose.</p></div></div>
   <div class="key-area">
     <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
-    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" / aria-label="sk-ant-… (your Anthropic API key)"><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
     <select id="model" title="Model"><option value="claude-fable-5">Fable 5 ✨</option><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
   </div>
 </header>
@@ -59,7 +59,7 @@
 <div class="xr-wrap">
   <p class="lead">Paste a document and see it like an MRI: every sentence classified by what's holding it up — <strong style="color:#5ad19a">data</strong>, <strong style="color:#6aa9ff">sourced claim</strong>, <strong style="color:#ffb454">bare assertion</strong>, <strong style="color:#ff5c5c">unsupported superlative</strong>, or <strong style="color:#c9a4ff">hidden assumption</strong> — with the load-bearing sentences outlined. Then fix the red ones before someone in the meeting finds them for you.</p>
 
-  <textarea id="doc" class="doc-in" placeholder="Paste the document — a PRD, strategy memo, pitch, exec update…"></textarea>
+  <textarea id="doc" class="doc-in" placeholder="Paste the document — a PRD, strategy memo, pitch, exec update…" aria-label="Paste the document — a PRD, strategy memo, pitch, exec update"></textarea>
   <div class="bar">
     <button id="runBtn" class="primary" type="button">🩻 X-ray it</button>
     <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>

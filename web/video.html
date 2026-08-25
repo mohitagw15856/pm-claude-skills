@@ -32,11 +32,11 @@
 <div class="vd-wrap">
   <p class="vd-lead">Paste a pitch, a one-pager, a launch brief, or any skill output. The renderer pulls the headline, the big numbers, and the key takeaways and turns them into a **motion graphic** — counting figures, a soundtrack, your brand colour — as a <strong>.webm</strong> you can drop on LinkedIn or X.</p>
   <div class="row">
-    <input id="title" type="text" placeholder="Title (optional — else taken from the first heading)" style="flex:1;min-width:220px" />
-    <select id="ratio"><option value="16:9">16:9 (landscape)</option><option value="1:1">1:1 (square)</option><option value="9:16">9:16 (vertical)</option></select>
-    <select id="sound"><option value="on">🔊 soundtrack on</option><option value="off">🔇 silent</option></select>
+    <input id="title" type="text" placeholder="Title (optional — else taken from the first heading)" style="flex:1;min-width:220px" / aria-label="Title (optional — else taken from the first heading)">
+    <select id="ratio" aria-label="Aspect ratio"><option value="16:9">16:9 (landscape)</option><option value="1:1">1:1 (square)</option><option value="9:16">9:16 (vertical)</option></select>
+    <select id="sound" aria-label="Soundtrack"><option value="on">🔊 soundtrack on</option><option value="off">🔇 silent</option></select>
   </div>
-  <textarea id="src" placeholder="Paste the content here — works best with a heading, some **42%**-style numbers, and a few '- bullet' takeaways."></textarea>
+  <textarea id="src" placeholder="Paste the content here — works best with a heading, some **42%**-style numbers, and a few '- bullet' takeaways." aria-label="Paste the content here — works best with a heading, some **42%**-style numbers, and a f…"></textarea>
   <div class="row">
     <button id="renderBtn" class="primary" type="button">🎬 Render video</button>
     <button id="dlBtn" class="ghost" type="button" hidden>⬇ Download .webm</button>

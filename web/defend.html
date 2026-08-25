@@ -55,7 +55,7 @@
     <div class="brand-text"><h1>The Defense</h1><p class="tagline">Defend your document against the bench — before the real meeting.</p></div></div>
   <div class="key-area">
     <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
-    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" / aria-label="sk-ant-… (your Anthropic API key)"><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
     <select id="model" title="Model"><option value="claude-fable-5">Fable 5 ✨</option><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
   </div>
 </header>
@@ -65,8 +65,8 @@
 <div class="def-wrap">
   <p class="lead">The <a href="boardroom.html">Boardroom</a> reviews the <em>document</em>. This reviews <strong>you</strong>. Paste what you're presenting; up to three executives cross-examine you one question at a time — then a neutral Chair scores your defense and tells you exactly what to prepare before the real meeting. Saying "I don't know" honestly scores better than bluffing.</p>
 
-  <textarea id="doc" class="doc-in" placeholder="Paste the document you'll be defending — a PRD, launch plan, investor pitch, pricing proposal, strategy memo…"></textarea>
-  <input id="ctx" class="ctx-in" placeholder="Optional context: who the real meeting is with, what decision you're asking for, what you're most nervous about…" />
+  <textarea id="doc" class="doc-in" placeholder="Paste the document you'll be defending — a PRD, launch plan, investor pitch, pricing proposal, strategy memo…" aria-label="Paste the document you'll be defending — a PRD, launch plan, investor pitch, pricing pr…"></textarea>
+  <input id="ctx" class="ctx-in" placeholder="Optional context: who the real meeting is with, what decision you're asking for, what you're most nervous about…" / aria-label="Optional context: who the real meeting is with, what decision you're asking for, what y…">
 
   <div class="bench" id="bench" aria-label="The examiners — click to seat or excuse (three maximum)"></div>
 
@@ -209,7 +209,7 @@ function waitForAnswer(n,total){
   return new Promise((resolve,reject)=>{
     const box=document.createElement('div'); box.className='answer-box';
     box.innerHTML=`<div class="hint">Your answer (${n}/${total}) — "I don't know, but here's how I'd find out" beats a bluff. Ctrl/Cmd+Enter to submit.</div>
-      <textarea placeholder="Answer the question as you would in the real meeting…"></textarea>
+      <textarea placeholder="Answer the question as you would in the real meeting…" aria-label="Answer the question as you would in the real meeting"></textarea>
       <div class="out-actions" style="margin:8px 0 0"><button class="primary" type="button">Submit answer</button><button class="ghost mic" type="button" title="Answer out loud (browser speech recognition)">🎙</button></div>`;
     el('feed').appendChild(box); box.scrollIntoView({behavior:'smooth',block:'end'});
     const ta=box.querySelector('textarea'), btn=box.querySelector('button');

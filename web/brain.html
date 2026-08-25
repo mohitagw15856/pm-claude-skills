@@ -50,10 +50,10 @@
 
   <div class="brain-bar">
     <span class="view-toggle"><button id="viewEdit" class="on" type="button">✏️ Edit</button><button id="viewGraph" type="button">🕸️ Graph</button></span>
-    <label title="When on, the playground prepends your brain to every skill run"><input type="checkbox" id="useBrain" /> Use my brain in every skill run</label>
+    <label title="When on, the playground prepends your brain to every skill run"><input type="checkbox" id="useBrain" / aria-label="Use Brain context"> Use my brain in every skill run</label>
     <span class="spacer"></span>
     <button id="seedBtn" class="ghost" type="button" title="Fill the sections with the example brain">Load example</button>
-    <label class="file-load ghost" style="padding:6px 12px;border:1px solid var(--border);border-radius:8px" title="Import a brain markdown export">📥 Import .md<input type="file" id="importFile" accept=".md,.txt" hidden /></label>
+    <label class="file-load ghost" style="padding:6px 12px;border:1px solid var(--border);border-radius:8px" title="Import a brain markdown export">📥 Import .md<input type="file" id="importFile" accept=".md,.txt" hidden / aria-label="Import a Brain file"></label>
     <button id="exportBtn" class="ghost" type="button" title="Download your brain as markdown (for files / Obsidian)">📤 Export .md</button>
     <button id="clearBtn" class="ghost" type="button">Clear</button>
     <span id="savedMsg"></span>
@@ -104,7 +104,7 @@ function render() {
   PMBrain.SECTIONS.forEach((s) => {
     const d = document.createElement('div');
     d.className = 'sect';
-    d.innerHTML = `<h3>${s}<span class="hint">${HINTS[s] || ''}</span></h3><textarea data-s="${s}" placeholder="Markdown — one fact per line, provenance-tagged"></textarea>`;
+    d.innerHTML = `<h3>${s}<span class="hint">${HINTS[s] || ''}</span></h3><textarea data-s="${s}" placeholder="Markdown — one fact per line, provenance-tagged" aria-label="Markdown — one fact per line, provenance-tagged"></textarea>`;
     const ta = d.querySelector('textarea');
     ta.value = PMBrain.get(s);
     ta.addEventListener('input', () => { PMBrain.set(s, ta.value); flash('Saved'); });

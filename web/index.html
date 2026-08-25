@@ -89,7 +89,7 @@
         <option value="ollama">Ollama (local)</option>
       </select>
       <div class="key-field">
-        <input id="apiKey" type="password" placeholder="AIza… (free Google AI Studio key — no credit card)" autocomplete="off" spellcheck="false" />
+        <input id="apiKey" type="password" placeholder="AIza… (free Google AI Studio key — no credit card)" autocomplete="off" spellcheck="false" / aria-label="AIza… (free Google AI Studio key — no credit card)">
         <button id="keyToggle" type="button" class="show-toggle">Show</button>
       </div>
       <select id="model" title="Model">
@@ -148,9 +148,9 @@
 
   <details class="context-box" id="contextBox">
     <summary><span data-i18n="page.contextSummary">🧠 Your context — set once, every skill uses it</span> <span id="contextStatus" class="context-status"></span></summary>
-    <textarea id="contextInput" rows="4" placeholder="About you & your company: product, who it's for, your voice/tone, key metrics, competitors, constraints. Tip: add a line like 'Brand color: #1B365D' and the themed PDF export tints your documents to match. Saved in your browser and added to every run, so outputs come back tailored to you — no re-typing."></textarea>
+    <textarea id="contextInput" rows="4" placeholder="About you & your company: product, who it's for, your voice/tone, key metrics, competitors, constraints. Tip: add a line like 'Brand color: #1B365D' and the themed PDF export tints your documents to match. Saved in your browser and added to every run, so outputs come back tailored to you — no re-typing." aria-label="About you & your company: product, who it's for, your voice/tone, key metrics, competit…"></textarea>
     <div class="context-actions-row">
-      <label class="file-load" title="Load a CSV / markdown / text file so skills ground on your real data">📎 Ground in a file<input type="file" id="contextFile" accept=".txt,.md,.csv,.json,.tsv,.log" hidden /></label>
+      <label class="file-load" title="Load a CSV / markdown / text file so skills ground on your real data">📎 Ground in a file<input type="file" id="contextFile" accept=".txt,.md,.csv,.json,.tsv,.log" hidden / aria-label="Context file"></label>
       <input id="ghIssueUrl" type="text" class="gh-issue-input" placeholder="…or paste a public GitHub issue / PR URL" title="Pull a public GitHub issue or PR (title + body) into your context" />
       <button id="ghIssueBtn" type="button" class="ghost" title="Fetch the issue/PR and add it to your context">⬇ Pull</button>
       <span id="contextFileMsg" class="context-hint" style="margin:0"></span>
@@ -159,20 +159,20 @@
   </details>
 
   <div class="recommend" id="recommend">
-    <input id="recommendInput" type="text" data-i18n-ph="page.recommendPh" placeholder="🧭 Not sure which skill? Describe your task — e.g. “explain a metric drop to my CEO”" />
+    <input id="recommendInput" type="text" data-i18n-ph="page.recommendPh" placeholder="🧭 Not sure which skill? Describe your task — e.g. “explain a metric drop to my CEO”" / aria-label="🧭 Not sure which skill? Describe your task — e.g. “explain a metric drop to my CEO”">
     <div id="recommendResults" class="recommend-results" hidden></div>
   </div>
 
   <div class="controls" id="controls">
-    <input id="search" type="search" data-i18n-ph="page.searchPh" placeholder="Search skills…" />
-    <select id="pluginFilter"><option value="" data-i18n="page.allBundles">All bundles</option></select>
+    <input id="search" type="search" data-i18n-ph="page.searchPh" placeholder="Search skills…" / aria-label="Search skills">
+    <select id="pluginFilter" aria-label="Filter by bundle"><option value="" data-i18n="page.allBundles">All bundles</option></select>
     <select id="tierFilter" title="Maturity tier">
       <option value="" data-i18n="page.allTiers">All tiers</option>
       <option value="production" data-i18n="page.tierProd">🟢 Production-Ready</option>
       <option value="stable" data-i18n="page.tierStable">🔵 Stable</option>
       <option value="experimental" data-i18n="page.tierExp">🟡 Experimental</option>
     </select>
-    <label class="eval-filter" title="Show only skills scored by the eval harness"><input type="checkbox" id="evalFilter" /> <span data-i18n="page.evalFilter">✅ Eval-scored</span></label>
+    <label class="eval-filter" title="Show only skills scored by the eval harness"><input type="checkbox" id="evalFilter" / aria-label="Show eval-scored skills only"> <span data-i18n="page.evalFilter">✅ Eval-scored</span></label>
     <button id="historyBtn" class="ghost" type="button" data-i18n="page.history" title="Your saved runs (stored only in this browser)">🕘 History</button>
     <span id="count" class="count"></span>
   </div>
@@ -215,7 +215,7 @@
       </details>
 
       <div class="mode-bar">
-        <label class="mode-toggle" title="Switch between generating a new artifact and grading an existing one"><input type="checkbox" id="critiqueToggle" /> 📝 Critique mode — grade my existing draft</label>
+        <label class="mode-toggle" title="Switch between generating a new artifact and grading an existing one"><input type="checkbox" id="critiqueToggle" / aria-label="Critique an existing draft instead of writing one"> 📝 Critique mode — grade my existing draft</label>
       </div>
 
       <form id="inputForm" class="input-form"></form>
@@ -223,7 +223,7 @@
       <details class="remix" id="remixBox">
         <summary>✏️ Remix this skill <span id="remixActive" class="remix-active" hidden>· active</span></summary>
         <p class="remix-note">Add your own instructions on top of this skill — a tone, a format, a must-have section, a language. They're layered onto the skill when you run it, and travel in the Share link so others get your version.</p>
-        <textarea id="remixInput" rows="3" placeholder="e.g. Always write in a warm, plain-English tone. Add a 'Risks' section at the end. Keep it under 400 words."></textarea>
+        <textarea id="remixInput" rows="3" placeholder="e.g. Always write in a warm, plain-English tone. Add a 'Risks' section at the end. Keep it under 400 words." aria-label="e.g. Always write in a warm, plain-English tone. Add a 'Risks' section at the end. Keep…"></textarea>
         <div class="remix-actions">
           <button id="remixShareBtn" class="ghost" type="button" title="Copy a link that opens this skill with your remix applied">🔗 Share my remix</button>
           <button id="remixClearBtn" class="ghost" type="button">Clear</button>
@@ -239,10 +239,10 @@
       <div class="actions">
         <button id="runBtn" class="primary" type="button">Run with my Claude key</button>
         <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
-        <label class="compare-toggle" title="Run the same inputs with and without the skill, side by side"><input type="checkbox" id="compareToggle" /> ⚖️ Compare vs. plain prompt</label>
-        <label class="compare-toggle" title="Run this skill across Opus, Sonnet & Haiku side by side"><input type="checkbox" id="modelsToggle" /> 🤖 Compare models</label>
+        <label class="compare-toggle" title="Run the same inputs with and without the skill, side by side"><input type="checkbox" id="compareToggle" / aria-label="Compare two runs side by side"> ⚖️ Compare vs. plain prompt</label>
+        <label class="compare-toggle" title="Run this skill across Opus, Sonnet & Haiku side by side"><input type="checkbox" id="modelsToggle" / aria-label="Compare across models"> 🤖 Compare models</label>
         <label class="lang-select" title="Get the output in another language — every skill works in any language">🌐
-          <select id="outputLang">
+          <select id="outputLang" aria-label="Output language">
             <option value="">English</option>
             <option value="Spanish">Español</option>
             <option value="Mandarin Chinese">中文 (Mandarin)</option>
@@ -300,12 +300,12 @@
           <span class="bs-title">🧠 Remember this →</span>
           <select id="brainSaveSection" class="ghost" title="Which part of your brain"></select>
           <select id="brainSaveTag" class="ghost" title="How strong is the evidence?"></select>
-          <input id="brainSaveText" type="text" placeholder="One durable fact / decision to remember…" />
+          <input id="brainSaveText" type="text" placeholder="One durable fact / decision to remember…" / aria-label="One durable fact / decision to remember">
           <button id="brainSaveGo" class="primary" type="button">Save</button>
           <button id="brainSaveCancel" class="ghost" type="button">Cancel</button>
           <a class="bs-link" href="brain.html" title="Open your Brain">edit brain →</a>
         </div>
-        <label style="font-size:11.5px;color:var(--muted);display:inline-flex;gap:5px;align-items:center;margin:4px 0"><input type="checkbox" id="coachToggle" /> 🎓 Coach mode — tick the skill's quality checks as the output streams</label>
+        <label style="font-size:11.5px;color:var(--muted);display:inline-flex;gap:5px;align-items:center;margin:4px 0"><input type="checkbox" id="coachToggle" / aria-label="Live quality coach"> 🎓 Coach mode — tick the skill's quality checks as the output streams</label>
         <aside id="coachBox" hidden style="border:1px dashed var(--border);border-radius:10px;padding:10px 14px;margin:6px 0;background:var(--panel)"></aside>
         <article id="output" class="output markdown"></article>
         <div id="compareGrid" class="compare-grid" hidden></div>
@@ -322,7 +322,7 @@
 
   <div class="cmdk-overlay" id="cmdkOverlay" hidden>
     <div class="cmdk" role="dialog" aria-label="Quick search">
-      <input id="cmdkInput" type="text" placeholder="Search skills and tools…  (Esc to close)" autocomplete="off" />
+      <input id="cmdkInput" type="text" placeholder="Search skills and tools…  (Esc to close)" autocomplete="off" / aria-label="Search skills and tools… (Esc to close)">
       <div class="cmdk-list" id="cmdkList"></div>
     </div>
   </div>

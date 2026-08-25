@@ -46,10 +46,10 @@
   <p class="lead">Professionals make predictions all day — in roadmaps, forecasts, hiring calls — and never check the tape. The Reckoning is the tape: record a call <strong>with a confidence and a due date</strong>, settle it when the date arrives, and your <strong>calibration curve</strong> builds over months. When you say 80%, does it happen 80% of the time? All local, no API key. The <a href="firm.html">Firm's</a> staff predictions count too.</p>
 
   <div class="add">
-    <textarea id="ptext" placeholder="The prediction — falsifiable, with a number and a date in it. e.g. 'Activation exceeds 50% by end of Q3'"></textarea>
+    <textarea id="ptext" placeholder="The prediction — falsifiable, with a number and a date in it. e.g. 'Activation exceeds 50% by end of Q3'" aria-label="The prediction — falsifiable, with a number and a date in it. e.g. 'Activation exceeds…"></textarea>
     <div class="addbar">
-      <label>Confidence <input id="pconf" type="range" min="50" max="99" value="75" /> <span class="confval" id="confval">75%</span></label>
-      <label>Due <input id="pdue" type="date" /></label>
+      <label>Confidence <input id="pconf" type="range" min="50" max="99" value="75" / aria-label="Confidence"> <span class="confval" id="confval">75%</span></label>
+      <label>Due <input id="pdue" type="date" / aria-label="Resolution date"></label>
       <button id="padd" class="primary" type="button">📌 Record it</button>
     </div>
     <p class="hint">50% = coin flip (don't bother) · 99% = you'd bet the roadmap on it. The discipline is the number, not the prediction.</p>

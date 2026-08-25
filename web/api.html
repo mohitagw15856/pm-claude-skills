@@ -56,7 +56,7 @@
     <div class="ep-body">
       <p>Describe the task in plain words; get the best-matching skills back.</p>
       <div class="try">
-        <input id="q_search" value="explain a metric drop to my CEO" />
+        <input id="q_search" value="explain a metric drop to my CEO" / aria-label="Task description to search skills for">
         <button class="primary" type="button" data-run="search">Run</button>
       </div>
       <div class="curl"><code id="curl_search"></code></div>
@@ -69,7 +69,7 @@
     <div class="ep-body">
       <p>All skills, or filter with <code>?bundle=</code>, <code>?q=</code>, <code>?limit=</code>.</p>
       <div class="try">
-        <input id="q_list" placeholder="?bundle=pm-delivery&limit=5" value="?limit=5" />
+        <input id="q_list" placeholder="?bundle=pm-delivery&limit=5" value="?limit=5" / aria-label="?bundle=pm-delivery&limit=5">
         <button class="primary" type="button" data-run="list">Run</button>
       </div>
       <div class="curl"><code id="curl_list"></code></div>
@@ -82,7 +82,7 @@
     <div class="ep-body">
       <p>The full skill, including <code>instructions</code> — that's the system prompt you feed your model. Add <code>?format=md</code> for raw markdown.</p>
       <div class="try">
-        <input id="q_skill" value="executive-update" />
+        <input id="q_skill" value="executive-update" / aria-label="Skill name">
         <button class="primary" type="button" data-run="skill">Run</button>
       </div>
       <div class="curl"><code id="curl_skill"></code></div>

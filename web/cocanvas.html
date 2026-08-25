@@ -30,15 +30,15 @@
   </div>
   <div class="key-area">
     <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
-    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your key)" autocomplete="off" / aria-label="sk-ant-… (your key)"><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
     <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
   </div>
 </header>
 <nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
 <div class="cc-top">
   <button id="addBtn" class="ghost" type="button">➕ Note</button>
-  <input id="prompt" type="text" placeholder="Ask the AI to join: 'brainstorm growth ideas' · 'cluster these' · 'poke holes'" style="flex:1;min-width:220px" />
-  <select id="mode"><option value="add">💡 add ideas</option><option value="cluster">🗂 cluster</option><option value="critique">🕳 poke holes</option><option value="expand">➕ expand selected</option></select>
+  <input id="prompt" type="text" placeholder="Ask the AI to join: 'brainstorm growth ideas' · 'cluster these' · 'poke holes'" style="flex:1;min-width:220px" / aria-label="Ask the AI to join: 'brainstorm growth ideas' · 'cluster these' · 'poke holes'">
+  <select id="mode" aria-label="Capture mode"><option value="add">💡 add ideas</option><option value="cluster">🗂 cluster</option><option value="critique">🕳 poke holes</option><option value="expand">➕ expand selected</option></select>
   <button id="aiBtn" class="primary" type="button">Send</button>
   <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
   <span class="presence"><span class="dot"></span><span id="presence">1 here</span></span>
@@ -92,7 +92,7 @@ function render(){
   Object.values(NOTES).forEach(n=>{
     const d=document.createElement('div'); d.className='note'+(n.by==='ai'?' ai':''); d.dataset.id=n.id;
     d.style.cssText+=`left:${n.x}px;top:${n.y}px;background:${n.color||'#ffe08a'}`;
-    d.innerHTML=`<span class="x">✕</span><textarea placeholder="idea…">${escape(n.text)}</textarea><span class="who">${n.by==='ai'?'🤖 AI':'you'}</span>`;
+    d.innerHTML=`<span class="x">✕</span><textarea placeholder="idea…" aria-label="idea">${escape(n.text)}</textarea><span class="who">${n.by==='ai'?'🤖 AI':'you'}</span>`;
     d.querySelector('.x').addEventListener('click',(e)=>{ e.stopPropagation(); delNote(n.id); });
     const ta=d.querySelector('textarea'); ta.addEventListener('input',()=>updateNote(n.id,{text:ta.value})); ta.addEventListener('focus',()=>{ selected=n.id; });
     d.addEventListener('pointerdown',(e)=>{ if(e.target.tagName==='TEXTAREA'||e.target.className==='x')return; drag(e,d,n); });

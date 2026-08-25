@@ -36,10 +36,10 @@
   <p class="lead">A <a href="boardroom.html">Boardroom</a> attestation is a tamper-evident record that <em>this exact text</em> received <em>this verdict</em>. Paste both below — this page recomputes the document's SHA-256 locally and compares it to the attested hash. A single changed character fails the match.</p>
 
   <label>The document (exact text that was reviewed)</label>
-  <textarea id="doc" rows="8" placeholder="Paste the full document text…"></textarea>
+  <textarea id="doc" rows="8" placeholder="Paste the full document text…" aria-label="Paste the full document text"></textarea>
 
   <label>The attestation (boardroom-attestation.json)</label>
-  <textarea id="att" rows="6" placeholder='Paste the attestation JSON… {"spec":"pm-skills-attestation/1", …}'></textarea>
+  <textarea id="att" rows="6" placeholder='Paste the attestation JSON… {"spec":"pm-skills-attestation/1", …}' aria-label="Paste the attestation JSON… {&quot;spec&quot;:&quot;pm-skills-attestation/1&quot;, …}"></textarea>
 
   <div class="bar">
     <button id="go" class="primary" type="button">🔏 Verify</button>

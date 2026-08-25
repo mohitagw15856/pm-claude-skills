@@ -46,7 +46,7 @@
   </div>
   <div class="key-area">
     <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
-    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" / aria-label="sk-ant-… (your Anthropic API key)"><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
     <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
   </div>
 </header>
@@ -67,7 +67,7 @@
     <div class="card">
       <div class="row">
         <label class="fld" style="margin:0">Run</label>
-        <select id="skillSelect"></select>
+        <select id="skillSelect" aria-label="Choose a skill"></select>
         <button id="runBtn" class="primary" type="button">Run</button>
         <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
         <span id="status" class="status"></span>
@@ -92,7 +92,7 @@
         <button class="exp-btn" data-x="docx" type="button">⬇ Word</button>
         <button class="exp-btn" data-x="pptx" type="button">⬇ PowerPoint</button>
         <button class="exp-btn" data-x="xlsx" type="button">⬇ Excel</button>
-        <label class="mini"><input type="checkbox" id="liveFormulas" checked> live formulas</label>
+        <label class="mini"><input type="checkbox" id="liveFormulas" checked aria-label="Include live spreadsheet formulas"> live formulas</label>
         <button class="exp-btn" data-x="onepager" type="button">🖼️ One-pager</button>
       </div>
       <article id="out" class="output markdown" style="border-top:1px solid var(--border);padding-top:12px"></article>
@@ -121,7 +121,7 @@
       <label class="fld" for="bOrg">Organisation / name</label>
       <input id="bOrg" type="text" placeholder="Acme Inc." style="width:100%;box-sizing:border-box" />
       <div class="row" style="margin-top:10px">
-        <div><label class="fld">Accent colour</label><input id="bAccent" type="color" value="#d9605a" style="width:56px;height:38px;border:1px solid var(--border);border-radius:8px;background:var(--panel-2)" /></div>
+        <div><label class="fld">Accent colour</label><input id="bAccent" type="color" value="#d9605a" style="width:56px;height:38px;border:1px solid var(--border);border-radius:8px;background:var(--panel-2)" / aria-label="Brand accent colour"></div>
         <div style="flex:1;min-width:180px"><label class="fld" for="bFont">Font</label>
           <select id="bFont" style="width:100%"><option value="system">System sans</option><option value="inter">Inter</option><option value="serif">Serif (Charter/Georgia)</option><option value="mono">IBM Plex Sans</option></select>
         </div>

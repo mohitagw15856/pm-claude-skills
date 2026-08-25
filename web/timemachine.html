@@ -40,14 +40,14 @@
     <button id="demoBtn" class="ghost" type="button">▶ Load demo history</button>
     <span class="warn">or paste <code>YYYY-MM-DD — event</code> lines below</span>
   </div>
-  <textarea id="paste" placeholder="2026-01-08 — Shipped the referral program&#10;2026-02-14 — Predicted 70%: churn drops by Q2&#10;2026-03-30 — Won the Meridian renewal&#10;2026-05-02 — Gym negotiation: 34/40"></textarea>
+  <textarea id="paste" placeholder="2026-01-08 — Shipped the referral program&#10;2026-02-14 — Predicted 70%: churn drops by Q2&#10;2026-03-30 — Won the Meridian renewal&#10;2026-05-02 — Gym negotiation: 34/40" aria-label="2026-01-08 — Shipped the referral program&#10;2026-02-14 — Predicted 70%: churn drops b…"></textarea>
   <div class="sources"><button id="loadPaste" class="primary" type="button">Load pasted timeline</button><span id="status" class="status"></span></div>
 
   <canvas id="ribbon" width="1800" height="300"></canvas>
   <div class="transport">
     <button id="playBtn" class="primary" type="button">▶ Play</button>
     <span class="nowdate" id="nowdate">—</span>
-    <input id="scrub" type="range" min="0" max="1000" value="1000" style="flex:1;min-width:180px" />
+    <input id="scrub" type="range" min="0" max="1000" value="1000" style="flex:1;min-width:180px" / aria-label="Timeline position">
   </div>
   <div id="stats" style="margin-top:12px"></div>
   <div class="events" id="events"></div>

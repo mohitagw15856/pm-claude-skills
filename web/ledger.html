@@ -57,8 +57,8 @@
   <div class="add">
     <div class="row">
       <span class="mini">I made a</span>
-      <select id="skill"><option value="">— pick a skill —</option></select>
-      <input id="title" type="text" class="grow" placeholder="what it was — e.g. 'Q3 referral-program PRD for the leadership review'" />
+      <select id="skill" aria-label="Choose a skill"><option value="">— pick a skill —</option></select>
+      <input id="title" type="text" class="grow" placeholder="what it was — e.g. 'Q3 referral-program PRD for the leadership review'" / aria-label="what it was — e.g. 'Q3 referral-program PRD for the leadership review'">
     </div>
     <div class="row">
       <button id="addBtn" class="primary" type="button">➕ Log it</button>
@@ -75,7 +75,7 @@
   <div class="actions">
     <button id="exportBtn" class="exp-btn" type="button">⬇ Export my ledger (JSON)</button>
     <button id="importBtn" class="exp-btn" type="button">⬆ Import</button>
-    <input id="importFile" type="file" accept="application/json" hidden />
+    <input id="importFile" type="file" accept="application/json" hidden / aria-label="Import a Brain file">
     <button id="claimBtn" class="exp-btn" type="button">📢 Contribute my landed-rates (anonymised PR)</button>
     <span id="status" class="mini"></span>
   </div>

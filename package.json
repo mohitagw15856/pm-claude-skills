@@ -88,7 +88,8 @@
     "test:scripts": "python3 -m unittest discover -s tests -p 'test_*.py'",
     "test:skillcheck": "node tests/skillcheck-test.mjs",
     "check:conflicts": "node scripts/check-antipattern-conflicts.mjs",
-    "build:badge": "node scripts/build-conformance-badge.mjs"
+    "build:badge": "node scripts/build-conformance-badge.mjs",
+    "check:a11y": "node scripts/check-a11y.mjs --check"
   },
   "devDependencies": {
     "qrcode": "^1.5.4"

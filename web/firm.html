@@ -62,7 +62,7 @@
     <div class="brand-text"><h1>The Firm</h1><p class="tagline">Don't run tools. Employ a staff.</p></div></div>
   <div class="key-area">
     <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
-    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" / aria-label="sk-ant-… (your Anthropic API key)"><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
     <select id="model" title="Model"><option value="claude-fable-5">Fable 5 ✨</option><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
   </div>
 </header>
@@ -73,13 +73,13 @@
   <p class="lead">Every other page is <em>pull</em> — you show up and run a tool. The Firm is <strong>push</strong>: charter a standing staff once, and each time you convene, every member files a <strong>delta-aware memo</strong> on their beat (what changed, not what they said last time), ending in a <strong>falsifiable prediction</strong>. Then the staff hold a <strong>boardroom session without you</strong> and send you the minutes — decisions, dissent preserved. Score the predictions as reality lands, and watch which of your staff has <em>earned</em> trust.</p>
 
   <h2 class="sec">📜 The charter — what your staff knows</h2>
-  <textarea id="charter" class="charter-in" placeholder="Your product, stage, audience, current numbers, this quarter's goals, known worries… (pre-filled from your Skill Memory if you've set it in the playground)"></textarea>
+  <textarea id="charter" class="charter-in" placeholder="Your product, stage, audience, current numbers, this quarter's goals, known worries… (pre-filled from your Skill Memory if you've set it in the playground)" aria-label="Your product, stage, audience, current numbers, this quarter's goals, known worries… (p…"></textarea>
 
   <h2 class="sec">🪪 The staff — hire or excuse</h2>
   <div class="org" id="org"></div>
 
   <div class="bar">
-    <input id="agenda" class="agenda-in" placeholder="This session's board agenda (optional — otherwise the staff pick the sharpest open question from their own memos)" />
+    <input id="agenda" class="agenda-in" placeholder="This session's board agenda (optional — otherwise the staff pick the sharpest open question from their own memos)" / aria-label="This session's board agenda (optional — otherwise the staff pick the sharpest open ques…">
     <button id="runBtn" class="primary" type="button">🏢 Convene the Firm</button>
     <span id="wsChip" hidden></span>
     <button id="stopBtn" class="ghost" type="button" hidden>Adjourn</button>

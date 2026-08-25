@@ -60,7 +60,7 @@
     <div class="brand-text"><h1>The Boardroom</h1><p class="tagline">Five AI executives pressure-test your document — live.</p></div></div>
   <div class="key-area">
     <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
-    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" / aria-label="sk-ant-… (your Anthropic API key)"><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
     <select id="model" title="Model"><option value="claude-fable-5">Fable 5 ✨</option><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
   </div>
 </header>
@@ -70,8 +70,8 @@
 <div class="board-wrap">
   <p class="lead">Every tool here helps you <em>write</em> the document. This is where you find out if it <strong>survives contact with a leadership team</strong> — before the real one sees it. Paste a PRD, launch plan, pitch, or strategy memo; the bench debates it in rounds, then the Chair issues a verdict memo with the changes that would survive the room.</p>
 
-  <textarea id="doc" class="doc-in" placeholder="Paste the document on the table — a PRD, launch plan, investor pitch, pricing proposal, strategy memo…"></textarea>
-  <input id="ctx" class="ctx-in" placeholder="Optional context: company stage, budget reality, deadline, what decision this document is asking for…" />
+  <textarea id="doc" class="doc-in" placeholder="Paste the document on the table — a PRD, launch plan, investor pitch, pricing proposal, strategy memo…" aria-label="Paste the document on the table — a PRD, launch plan, investor pitch, pricing proposal,…"></textarea>
+  <input id="ctx" class="ctx-in" placeholder="Optional context: company stage, budget reality, deadline, what decision this document is asking for…" / aria-label="Optional context: company stage, budget reality, deadline, what decision this document…">
 
   <div class="bar" style="margin:12px 0 2px">
     <select id="benchPreset" class="ghost" title="Swap the whole panel for a bench built for your document type" style="padding:8px 10px;border-radius:9px;background:var(--panel);color:var(--text);border:1px solid var(--border);font-family:inherit">
@@ -344,7 +344,7 @@ function liveBroadcast(who,text,round){ if(LIVE) LIVE.send({t:'turn',r:round,id:
   try{
     const w=await PMLive.watch(room);
     w.onOpen(()=>{ banner.innerHTML='👥 <b>LIVE — session '+room+'</b>. Turns stream in below. '+
-      '<input id="suggestIn" placeholder="Tag in: suggest a line to the presenter…" style="width:min(340px,60%);margin-left:8px;padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:var(--panel);color:var(--text)"/>'+
+      '<input id="suggestIn" placeholder="Tag in: suggest a line to the presenter…" style="width:min(340px,60%);margin-left:8px;padding:6px 10px;border-radius:8px;border:1px solid var(--border);background:var(--panel);color:var(--text)"/ aria-label="Tag in: suggest a line to the presenter">'+
       '<button id="suggestGo" class="ghost" style="margin-left:6px" type="button">Send</button>';
       document.getElementById('suggestGo').addEventListener('click',()=>{
         const v=document.getElementById('suggestIn').value.trim(); if(!v) return;

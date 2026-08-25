@@ -31,7 +31,7 @@
   </div>
   <div class="key-area">
     <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
-    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" / aria-label="sk-ant-… (your Anthropic API key)"><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
     <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
   </div>
 </header>
@@ -45,12 +45,12 @@
   </div>
   <div class="grade-pick" id="skillPick">
     <span>Grade my</span>
-    <select id="skillSelect"></select>
+    <select id="skillSelect" aria-label="Choose a skill"></select>
     <span>against its framework.</span>
   </div>
   <div class="grade-pick" id="viralPick" hidden>
     <span>Score this for</span>
-    <select id="platform">
+    <select id="platform" aria-label="Target platform">
       <option value="auto" selected>auto-detect platform</option>
       <option value="X/Twitter">X / Twitter</option>
       <option value="LinkedIn">LinkedIn</option>
@@ -61,7 +61,7 @@
     </select>
   </div>
   <p class="based" id="based" hidden></p>
-  <textarea id="draft" class="grade-draft" placeholder="Paste your existing draft here — e.g. your PRD, OKRs, roadmap, exec update, postmortem…"></textarea>
+  <textarea id="draft" class="grade-draft" placeholder="Paste your existing draft here — e.g. your PRD, OKRs, roadmap, exec update, postmortem…" aria-label="Paste your existing draft here — e.g. your PRD, OKRs, roadmap, exec update, postmortem"></textarea>
   <div class="actions">
     <button id="runBtn" class="primary" type="button">Grade it</button>
     <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>

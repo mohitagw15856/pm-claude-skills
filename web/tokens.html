@@ -53,9 +53,9 @@
   <p class="tk-lead">Paste the things that ride in your agent's context — the system prompt, tool outputs, logs, code, history. This page estimates each piece's tokens, prices them at <strong>your</strong> rates across <strong>your</strong> turns, and computes (not claims) what each <a href="https://github.com/mohitagw15856/pm-claude-skills/tree/main/plugins/pm-tokens">pm-tokens</a> skill would save — by actually running the same compression logic in your browser.</p>
 
   <div class="setup">
-    <div><label>$ / M input tokens</label><input id="priceIn" type="number" step="0.1" value="3" /></div>
-    <div><label>$ / M cached input <span class="mini">(0 = no cache pricing)</span></label><input id="priceCache" type="number" step="0.1" value="0.3" /></div>
-    <div><label>Turns per session</label><input id="turns" type="number" value="30" /></div>
+    <div><label>$ / M input tokens</label><input id="priceIn" type="number" step="0.1" value="3" / aria-label="Input token price"></div>
+    <div><label>$ / M cached input <span class="mini">(0 = no cache pricing)</span></label><input id="priceCache" type="number" step="0.1" value="0.3" / aria-label="Cached token price"></div>
+    <div><label>Turns per session</label><input id="turns" type="number" value="30" / aria-label="Number of turns"></div>
     <button class="ghost" id="sampleBtn" type="button">✨ Load a sample session</button>
     <button class="ghost" id="clearBtn" type="button">Clear</button>
   </div>
@@ -68,10 +68,10 @@
   </div>
 
   <div class="addbox">
-    <textarea id="pieceText" placeholder="Paste a context piece: your CLAUDE.md / system prompt, a JSON tool response, a build log, a code file, chat history…"></textarea>
+    <textarea id="pieceText" placeholder="Paste a context piece: your CLAUDE.md / system prompt, a JSON tool response, a build log, a code file, chat history…" aria-label="Paste a context piece: your CLAUDE.md / system prompt, a JSON tool response, a build lo…"></textarea>
     <div class="row">
-      <input id="pieceName" type="text" placeholder="Name (e.g. CLAUDE.md)" />
-      <select id="pieceKind">
+      <input id="pieceName" type="text" placeholder="Name (e.g. CLAUDE.md)" / aria-label="Name (e.g. CLAUDE.md)">
+      <select id="pieceKind" aria-label="Context piece type">
         <option value="auto">Auto-detect type</option>
         <option value="json">JSON tool output</option>
         <option value="log">Log</option>
@@ -80,8 +80,8 @@
         <option value="history">Chat history</option>
         <option value="output">Model output sample</option>
       </select>
-      <select id="pieceRides"><option value="turn">Rides every turn</option><option value="demand">Loaded once / on demand</option></select>
-      <select id="pieceStable"><option value="stable">Stable (cacheable)</option><option value="volatile">Changes mid-session</option></select>
+      <select id="pieceRides" aria-label="How often this piece is sent"><option value="turn">Rides every turn</option><option value="demand">Loaded once / on demand</option></select>
+      <select id="pieceStable" aria-label="Whether this piece is cacheable"><option value="stable">Stable (cacheable)</option><option value="volatile">Changes mid-session</option></select>
       <button class="primary" id="addBtn" type="button">＋ Add to dashboard</button>
     </div>
   </div>

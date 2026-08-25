@@ -35,7 +35,7 @@
   </div>
   <div class="key-area">
     <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
-    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" / aria-label="sk-ant-… (your Anthropic API key)"><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
     <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
   </div>
 </header>
@@ -46,7 +46,7 @@
   <p class="cs-sub">Same skills you already know — but run as a conversation. Pick one, describe your situation in a line, and it'll ask the two or three questions that actually change the answer before it writes anything. A blank page that thinks with you, instead of a template you fill in alone.</p>
   <div class="cs-pick">
     <span>Consult me on</span>
-    <select id="skillSelect"></select>
+    <select id="skillSelect" aria-label="Choose a skill"></select>
     <button id="startBtn" class="primary" type="button">Start</button>
     <button id="resetBtn" class="ghost" type="button" hidden>New session</button>
     <span id="status" class="status"></span>
@@ -56,7 +56,7 @@
   <div class="thread" id="thread"></div>
 
   <div class="composer" id="composer" hidden>
-    <textarea id="reply" placeholder="Type your answer… (Enter to send, Shift+Enter for a new line)"></textarea>
+    <textarea id="reply" placeholder="Type your answer… (Enter to send, Shift+Enter for a new line)" aria-label="Type your answer… (Enter to send, Shift+Enter for a new line)"></textarea>
     <button id="sendBtn" class="primary" type="button">Send</button>
     <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
   </div>

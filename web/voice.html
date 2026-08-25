@@ -31,7 +31,7 @@
   </div>
   <div class="key-area">
     <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
-    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" / aria-label="sk-ant-… (your Anthropic API key)"><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
     <select id="model" title="Model"><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
   </div>
 </header>
@@ -43,8 +43,8 @@
   <div class="v-state" id="state">tap the orb to talk</div>
   <div class="v-pick">
     <span class="warn">Answer as</span>
-    <select id="skillSelect"><option value="">🧠 Assistant (any topic)</option></select>
-    <label class="warn"><input type="checkbox" id="handsfree"> hands-free</label>
+    <select id="skillSelect" aria-label="Choose a skill"><option value="">🧠 Assistant (any topic)</option></select>
+    <label class="warn"><input type="checkbox" id="handsfree" aria-label="Hands-free mode"> hands-free</label>
   </div>
   <div class="v-actions">
     <button id="talkBtn" class="primary" type="button">🎙️ Hold to talk</button>
@@ -52,7 +52,7 @@
     <button id="muteBtn" class="ghost" type="button">🔊 Voice on</button>
   </div>
   <p class="warn" id="compat" hidden>Speech recognition needs Chrome, Edge, or Safari. You can still type in other browsers.</p>
-  <input id="typeIn" type="text" placeholder="…or type here and press Enter" style="width:100%;max-width:620px;box-sizing:border-box;margin-top:6px;padding:10px 13px;background:var(--panel-2);border:1px solid var(--border);border-radius:10px;color:var(--text)" />
+  <input id="typeIn" type="text" placeholder="…or type here and press Enter" style="width:100%;max-width:620px;box-sizing:border-box;margin-top:6px;padding:10px 13px;background:var(--panel-2);border:1px solid var(--border);border-radius:10px;color:var(--text)" / aria-label="…or type here and press Enter">
   <div class="v-transcript" id="transcript"></div>
 </div>
 

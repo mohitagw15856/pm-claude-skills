@@ -28,7 +28,7 @@
     <div class="brand-text"><h1>Auto-Agent</h1><p class="tagline">Describe a goal — it picks the skills and runs them.</p></div></div>
   <div class="key-area">
     <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
-    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" / aria-label="sk-ant-… (your Anthropic API key)"><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
     <select id="model" title="Model"><option value="claude-fable-5">Fable 5 ✨</option><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
   </div>
 </header>
@@ -37,7 +37,7 @@
 
 <div class="agent">
   <p class="lead">Don't know which skills to use? Just say what you're trying to do. The agent picks the right ones from all 244 and runs them as a chain — each step building on the last.</p>
-  <textarea id="goal" class="goal" rows="3" placeholder="e.g. We're launching a referral program for activated B2B users next quarter — help me take it from idea to launch."></textarea>
+  <textarea id="goal" class="goal" rows="3" placeholder="e.g. We're launching a referral program for activated B2B users next quarter — help me take it from idea to launch." aria-label="e.g. We're launching a referral program for activated B2B users next quarter — help me…"></textarea>
   <div class="actions" style="margin:12px 0; display:flex; gap:10px; align-items:center; flex-wrap:wrap">
     <button id="runBtn" class="primary" type="button">✨ Plan &amp; run</button>
     <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>

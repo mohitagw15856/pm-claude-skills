@@ -5,10 +5,10 @@ name: Web smoke tests
 # routing, artifact renderers, attestation round-trip, galaxy fly-to). Free, ~2 min.
 on:
   pull_request:
-    paths: ['web/**', 'tests/**', 'skills/*/scripts/**', 'web-budget.json', 'scripts/check-web-weight.mjs']
+    paths: ['web/**', 'tests/**', 'skills/*/scripts/**', 'web-budget.json', 'scripts/check-web-weight.mjs', 'scripts/check-a11y.mjs']
   push:
     branches: [main]
-    paths: ['web/**', 'tests/**', 'skills/*/scripts/**', 'web-budget.json', 'scripts/check-web-weight.mjs']
+    paths: ['web/**', 'tests/**', 'skills/*/scripts/**', 'web-budget.json', 'scripts/check-web-weight.mjs', 'scripts/check-a11y.mjs']
   workflow_dispatch: {}
 
 jobs:
@@ -36,6 +36,8 @@ jobs:
         run: node web/build-skills.mjs
       - name: Page-weight budget
         run: node scripts/check-web-weight.mjs --check
+      - name: Accessibility audit (markup-level WCAG)
+        run: node scripts/check-a11y.mjs --check
 
   scripts-smoke:
     # "Standard library only" is the authoring rule, which means these helpers

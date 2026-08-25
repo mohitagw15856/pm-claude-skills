@@ -36,7 +36,7 @@
   </div>
   <div class="key-area">
     <select id="provider" title="Model provider"><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="gemini">Gemini (free key)</option><option value="ollama">Ollama (local)</option></select>
-    <div class="key-field"><input id="apiKey" type="password" placeholder="key for the chosen provider" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="key for the chosen provider" autocomplete="off" / aria-label="key for the chosen provider"><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
     <span class="mini" style="align-self:center">all three columns use this provider</span>
   </div>
 </header>
@@ -46,12 +46,12 @@
 <div class="d-wrap">
   <p class="d-lead">Benchmarks rank models on someone else's tasks. This is a bake-off on <strong>yours</strong>: pick a skill (or write a free prompt), give a brief, and watch three models answer at once. Pick the winner — the choice is remembered.</p>
   <div class="setup">
-    <select id="skill"><option value="">— free prompt —</option></select>
+    <select id="skill" aria-label="Choose a skill"><option value="">— free prompt —</option></select>
     <button id="runBtn" class="primary" type="button">⚔️ Run the duel</button>
     <button id="stopBtn" class="ghost" type="button" hidden>Stop all</button>
     <span id="status" class="status"></span>
   </div>
-  <textarea id="brief" placeholder="Your brief / task — the same input goes to all three models."></textarea>
+  <textarea id="brief" placeholder="Your brief / task — the same input goes to all three models." aria-label="Your brief / task — the same input goes to all three models."></textarea>
   <div class="grid" id="grid"></div>
 </div>
 

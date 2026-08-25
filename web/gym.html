@@ -41,7 +41,7 @@
     <div class="brand-text"><h1>The Gym</h1><p class="tagline">Negotiate against an AI with a secret bottom line.</p></div></div>
   <div class="key-area">
     <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
-    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" / aria-label="sk-ant-… (your Anthropic API key)"><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
     <select id="model" title="Model"><option value="claude-fable-5">Fable 5 ✨</option><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
   </div>
 </header>
@@ -52,14 +52,14 @@
   <p class="lead">The <a href="defend.html">Defense</a> asks you questions. The Gym plays against you <strong>with secrets</strong>: your counterparty has a hidden bottom line, hidden pressures, and a concession style you'll have to read from behaviour. Close the deal (or walk), and only then does the debrief reveal what was actually achievable — and score you against it.</p>
 
   <div class="setup" id="setup">
-    <select id="scenario">
+    <select id="scenario" aria-label="Scenario">
       <option value="salary">💼 Salary negotiation — you got the offer, now improve it</option>
       <option value="renewal">🤝 Renewal save — your customer wants a discount to stay</option>
       <option value="vendor">📦 Vendor deal — you're buying, they're anchoring high</option>
       <option value="exec">🎯 Exec pushback — win resources for your roadmap from a sceptical VP</option>
     </select>
-    <input id="ctx" type="text" placeholder="Optional context: your role, numbers you know (current salary / contract value / budget)…" />
-    <select id="difficulty">
+    <input id="ctx" type="text" placeholder="Optional context: your role, numbers you know (current salary / contract value / budget)…" / aria-label="Optional context: your role, numbers you know (current salary / contract value / budget)">
+    <select id="difficulty" aria-label="Difficulty">
       <option value="fair">🎓 Fair — a reasonable counterparty</option>
       <option value="tough" selected>🎯 Tough — professional, self-interested, reads your tells</option>
       <option value="shark">🦈 Shark — exploits every mistake you make</option>
@@ -77,7 +77,7 @@
     <div class="table-hint">At the table</div>
     <div class="chat" id="chat"></div>
     <div class="say" id="say">
-      <textarea id="sayText" placeholder="Say something… (Enter to send, Shift+Enter for a new line)"></textarea>
+      <textarea id="sayText" placeholder="Say something… (Enter to send, Shift+Enter for a new line)" aria-label="Say something… (Enter to send, Shift+Enter for a new line)"></textarea>
       <button id="sendBtn" class="primary" type="button">Send</button>
     </div>
     <div class="bar">

@@ -31,7 +31,7 @@
     <div class="brand-text"><h1>The Tower of Claims</h1><p class="tagline">Every sentence is a block. The evidence is the material. Physics is the reviewer.</p></div></div>
   <div class="key-area">
     <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
-    <div class="key-field"><input id="apiKey" type="password" placeholder="key (only needed for live grading)" autocomplete="off" /><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
+    <div class="key-field"><input id="apiKey" type="password" placeholder="key (only needed for live grading)" autocomplete="off" / aria-label="key (only needed for live grading)"><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
     <select id="model" title="Model"><option value="claude-fable-5">Fable 5 ✨</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
   </div>
 </header>
@@ -39,7 +39,7 @@
 
 <div class="t-wrap">
   <p class="lead">Paste a document and it becomes a <strong>tower</strong>: sentences are blocks, evidence is material — <b>steel</b> for data, <b>stone</b> for sourced claims, <b>wood</b> for assertions, <b>cardboard</b> for hype, <b>glass</b> for hidden assumptions. Then gravity gets a vote: weak blocks shatter under the weight above them, and the argument <em>stands or falls in front of you</em>.</p>
-  <textarea id="doc" placeholder="Paste your PRD, pitch, or plan… (or just press the demo button — no key needed)"></textarea>
+  <textarea id="doc" placeholder="Paste your PRD, pitch, or plan… (or just press the demo button — no key needed)" aria-label="Paste your PRD, pitch, or plan… (or just press the demo button — no key needed)"></textarea>
   <div class="bar">
     <button id="demo" class="primary" type="button">🏗 Demo tower — no key needed</button>
     <button id="grade" class="ghost" type="button">🔬 Grade MY document & build (uses your key)</button>

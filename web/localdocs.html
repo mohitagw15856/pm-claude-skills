@@ -32,12 +32,12 @@
   <div id="app" hidden>
     <p class="mini">Point at a folder; text documents (≤512KB) are listed. Pick one, pick a skill, and it opens pre-filled in the playground. <strong>Select Ollama as the provider and the document never leaves this machine.</strong></p>
     <div class="row">
-      <input id="folder" placeholder="/Users/you/Documents/contracts" />
+      <input id="folder" placeholder="/Users/you/Documents/contracts" / aria-label="/Users/you/Documents/contracts">
       <button id="scan" class="primary" type="button">📂 Scan</button>
     </div>
     <div class="row">
       <label class="mini" style="align-self:center">Run with:</label>
-      <select id="skillPick"><option value="lease-decoder">lease-decoder</option></select>
+      <select id="skillPick" aria-label="Choose a skill"><option value="lease-decoder">lease-decoder</option></select>
     </div>
     <div id="files"></div>
   </div>
