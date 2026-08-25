@@ -1,8 +1,15 @@
 #!/usr/bin/env node
-// Translation coverage & review status, per language — the number the community
-// pipeline runs on. Reads i18n/<lang>/skills/*/SKILL.md, counts what exists and
-// what a native speaker has actually reviewed (frontmatter `review:` ≠ pending),
-// and prints a table plus optional JSON for the site.
+// Translation coverage & review status, per language.
+//
+// There are three separate translation surfaces and this used to report only
+// one of them, which made the honest picture impossible to see:
+//   i18n/<lang>/skills/       machine-translated full skill bodies
+//   i18n/<lang>/descriptions.json   machine-translated descriptions — the
+//                             discovery layer, and the cheap high-leverage unit
+//   skills-i18n/<lang>/       human/community translations, parity-gated by
+//                             tests/i18n-parity.mjs
+// All three are counted here, because "4.3% translated" was only ever true of
+// the first one.
 //
 //   node scripts/i18n-status.mjs             # table
 //   node scripts/i18n-status.mjs --json      # machine-readable (for web/)
@@ -37,16 +44,47 @@ for (const lang of langs) {
     if (rev && rev !== 'pending') reviewed++; else unreviewed.push(n);
     if (!existsSync(join(skillsDir, n, 'SKILL.md'))) stale++;
   }
-  report.push({ lang, translated: names.length, reviewed, pending: names.length - reviewed, stale, coverage: +(100 * names.length / total).toFixed(1), unreviewed });
+  const descFile = join(i18nDir, lang, 'descriptions.json');
+  const descs = existsSync(descFile)
+    ? Object.keys(JSON.parse(readFileSync(descFile, 'utf8')).descriptions || {}).length : 0;
+  report.push({
+    lang, translated: names.length, reviewed, pending: names.length - reviewed, stale,
+    coverage: +(100 * names.length / total).toFixed(1),
+    descriptions: descs, descriptionCoverage: +(100 * descs / total).toFixed(1),
+    unreviewed,
+  });
+}
+
+// Community translations live in a different tree with a different contract.
+const communityDir = join(root, 'skills-i18n');
+const community = [];
+if (existsSync(communityDir)) {
+  for (const lang of readdirSync(communityDir).filter((l) => /^[a-z]{2}(-[A-Z]{2})?$/.test(l))) {
+    const n = readdirSync(join(communityDir, lang)).filter((d) => existsSync(join(communityDir, lang, d, 'SKILL.md'))).length;
+    if (n) community.push({ lang, translated: n, coverage: +(100 * n / total).toFixed(1) });
+  }
 }
 
 if (has('json')) {
-  console.log(JSON.stringify({ totalSkills: total, languages: report.map(({ unreviewed, ...r }) => r) }, null, 2));
+  console.log(JSON.stringify({
+    totalSkills: total,
+    machine: report.map(({ unreviewed, ...r }) => r),
+    community,
+  }, null, 2));
 } else {
   console.log(`English skills (canonical): ${total}\n`);
-  console.log('lang  translated  coverage  reviewed  pending  stale');
-  for (const r of report) console.log([r.lang.padEnd(4), String(r.translated).padStart(10), (r.coverage + '%').padStart(8), String(r.reviewed).padStart(8), String(r.pending).padStart(7), String(r.stale).padStart(5)].join('  '));
-  if (!report.length) console.log('(no i18n/<lang>/skills trees yet — run scripts/translate-skills.mjs first)');
+  console.log('Machine-translated (i18n/) — bodies and descriptions');
+  console.log('lang  bodies  coverage  reviewed  pending  stale   descriptions  coverage');
+  for (const r of report) console.log([
+    r.lang.padEnd(4), String(r.translated).padStart(6), (r.coverage + '%').padStart(8),
+    String(r.reviewed).padStart(8), String(r.pending).padStart(7), String(r.stale).padStart(5),
+    String(r.descriptions).padStart(13), (r.descriptionCoverage + '%').padStart(9),
+  ].join('  '));
+  if (!report.length) console.log('  (none yet — run scripts/translate-skills.mjs)');
+  console.log('\nCommunity-translated (skills-i18n/) — parity-gated, human-written');
+  console.log('lang  skills  coverage');
+  for (const c of community) console.log([c.lang.padEnd(4), String(c.translated).padStart(6), (c.coverage + '%').padStart(8)].join('  '));
+  if (!community.length) console.log('  (none)');
   if (pick && report[0]) {
     console.log(`\nAwaiting native-speaker review in ${pick} (${report[0].unreviewed.length}):`);
     for (const n of report[0].unreviewed.slice(0, 40)) console.log('  - ' + n);

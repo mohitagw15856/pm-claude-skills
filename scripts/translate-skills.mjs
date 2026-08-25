@@ -8,7 +8,17 @@
 //   … --lang pt --skills prd-template,meeting-notes     # subset
 //   … --lang hi --tier production                        # Production-Ready tier only (default)
 //   … --lang ja --all                                    # the whole library (costs real tokens)
+//   … --lang de --descriptions --all                     # descriptions only — the discovery layer
 //   … --check                                            # validate existing i18n/ files, no API
+//
+// Two units of translation, deliberately:
+//   full body      the whole SKILL.md. Expensive, and only worth it for skills
+//                  a speaker of that language will actually sit and read.
+//   descriptions   just the frontmatter description, into
+//                  i18n/<lang>/descriptions.json. The description is the entire
+//                  basis on which a model decides a skill is relevant, so
+//                  translating it is what makes the library *findable* in a
+//                  language — at roughly 2% of the tokens of a full pass.
 //
 // Rules the translator enforces (in the prompt AND post-checked here):
 //   • frontmatter `name` stays identical (routing key, never translated)
@@ -92,6 +102,62 @@ async function translate(md) {
   const j = await res.json();
   if (!res.ok) throw new Error(j.error?.message || res.status);
   return j.content?.[0]?.text || '';
+}
+
+// ── --descriptions: translate the discovery layer only ───────────────────────
+if (has('descriptions')) {
+  const outFile = join(root, 'i18n', lang, 'descriptions.json');
+  const existing = existsSync(outFile) ? JSON.parse(readFileSync(outFile, 'utf8')) : { lang, review: 'pending', descriptions: {} };
+  const pending = names.filter((n) => !existing.descriptions[n] || has('force'));
+  console.log(`Translating ${pending.length} description(s) → ${langName} (${model}); ${names.length - pending.length} already present.`);
+
+  const DESC_SYSTEM = `You translate one-line AI skill descriptions into ${langName}.
+Preserve the three-part shape exactly: what it does / "Use when…" triggers / "Produces…".
+The triggers must be what a ${langName}-speaking professional would actually type, not a literal translation of the English.
+Keep domain terms that ${langName} professionals use in English (PRD, OKR, sprint, churn) in English.
+Output ONLY the translated description, as one line, with no quotes around it and no preamble.`;
+
+  let dOk = 0, dFail = 0;
+  // Batched to keep the request count sane over 1153 skills.
+  const BATCH = 20;
+  for (let i = 0; i < pending.length; i += BATCH) {
+    const chunk = pending.slice(i, i + BATCH);
+    const payload = chunk.map((n) => {
+      const src = readFileSync(join(root, 'skills', n, 'SKILL.md'), 'utf8');
+      const d = (src.match(/^description:\s*"?([\s\S]*?)"?\s*$/m) || [, ''])[1];
+      return { name: n, description: d.trim() };
+    }).filter((x) => x.description);
+    if (!payload.length) continue;
+    try {
+      const res = await fetch('https://api.anthropic.com/v1/messages', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' },
+        body: JSON.stringify({
+          model, max_tokens: 8192,
+          system: `${DESC_SYSTEM}\n\nYou will receive a JSON array of {name, description}. Reply with ONLY a JSON object mapping each name to its translated description.`,
+          messages: [{ role: 'user', content: JSON.stringify(payload) }],
+        }),
+      });
+      const j = await res.json();
+      if (!res.ok) throw new Error(j.error?.message || res.status);
+      const text = (j.content?.[0]?.text || '').trim();
+      const parsed = JSON.parse(text.slice(text.indexOf('{'), text.lastIndexOf('}') + 1));
+      for (const { name } of payload) {
+        if (parsed[name]) { existing.descriptions[name] = parsed[name]; dOk++; }
+        else dFail++;
+      }
+      process.stdout.write(`  ${Math.min(i + BATCH, pending.length)}/${pending.length}\r`);
+    } catch (e) {
+      console.error(`\n  ✗ batch ${i / BATCH + 1}: ${e.message}`);
+      dFail += payload.length;
+    }
+  }
+  existing.lang = lang;
+  existing.source = 'machine-translated; review: pending';
+  mkdirSync(dirname(outFile), { recursive: true });
+  writeFileSync(outFile, JSON.stringify(existing, null, 1) + '\n');
+  console.log(`\n${dOk} description(s) → i18n/${lang}/descriptions.json · ${dFail} failed · ${Object.keys(existing.descriptions).length} total`);
+  process.exit(dFail && !dOk ? 1 : 0);
 }
 
 const outBase = join(root, 'i18n', lang, 'skills');

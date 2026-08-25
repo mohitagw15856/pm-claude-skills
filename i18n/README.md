@@ -9,4 +9,36 @@ ANTHROPIC_API_KEY=… node scripts/translate-skills.mjs --lang es          # Pro
 node scripts/translate-skills.mjs --check                                # validate all translations, no API
 ```
 
+## The strategy: descriptions first
+
+At 1153 skills, translating every body in every language is not a project anyone
+finishes — the previous approach reached **4.3% of one language, none of it
+reviewed**, which reads worse to a visitor than no translations at all.
+
+So the unit of translation is the **description**, not the body:
+
+```bash
+ANTHROPIC_API_KEY=… node scripts/translate-skills.mjs --lang de --descriptions --all
+# → i18n/de/descriptions.json
+```
+
+The description is the entire basis on which a model decides a skill is
+relevant. Translating it makes the library *findable* in a language — which is
+the thing that actually matters — at roughly 2% of the tokens of a full pass,
+and it completes rather than trailing off at 4%. Full bodies stay worthwhile for
+the Production-Ready tier, where somebody will genuinely sit and read the skill.
+
+## Three surfaces, deliberately
+
+`node scripts/i18n-status.mjs` reports all of them, because reporting one made
+the real coverage impossible to see:
+
+| Tree | What it is | Contract |
+|---|---|---|
+| `i18n/<lang>/skills/` | Machine-translated full bodies | Structure-checked against the English source (`--check`) |
+| `i18n/<lang>/descriptions.json` | Machine-translated descriptions | The discovery layer; one file per language |
+| `skills-i18n/<lang>/` | Human/community translations | Parity-gated by `tests/i18n-parity.mjs` |
+
+The English `skills/` tree is canonical in all three cases.
+
 Supported language codes so far: `es` `pt` `hi` `ja` `de` `fr` `zh` `ko` — adding one is a single line in the script's `LANGS` map. Translation runs are also available as a manual GitHub Action (**Translate skills**), which commits results back.
