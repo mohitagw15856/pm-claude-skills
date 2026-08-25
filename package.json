@@ -86,7 +86,8 @@
     "lint:exports": "node tests/exports-lint.mjs",
     "check:weight": "node scripts/check-web-weight.mjs --check",
     "test:scripts": "python3 -m unittest discover -s tests -p 'test_*.py'",
-    "test:skillcheck": "node tests/skillcheck-test.mjs"
+    "test:skillcheck": "node tests/skillcheck-test.mjs",
+    "check:conflicts": "node scripts/check-antipattern-conflicts.mjs"
   },
   "devDependencies": {
     "qrcode": "^1.5.4"
