@@ -38,12 +38,21 @@ jobs:
         run: node scripts/check-web-weight.mjs --check
 
   scripts-smoke:
+    # "Standard library only" is the authoring rule, which means these helpers
+    # must work on whatever python3 a user already has. Testing one version
+    # proved that on exactly one version.
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.9', '3.11', '3.13']
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: '24' }
       - uses: actions/setup-python@v5
-        with: { python-version: '3.x' }
-      - name: Executable-skills smoke (29 scripts, 3 tiers)
+        with: { python-version: '${{ matrix.python }}' }
+      - name: Executable-skills smoke (3 tiers)
         run: node tests/scripts-smoke.mjs
+      - name: Script contract tests
+        run: python3 -m unittest discover -s tests -p 'test_*.py' -v

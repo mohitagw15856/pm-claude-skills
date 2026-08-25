@@ -102,7 +102,11 @@ function checkSkill(skillsDir, name) {
   } else {
     const d = meta.description;
     const dl = lines.description ?? 1;
-    if (/your-skill-name|one sentence\.|trigger condition|output description/i.test(d))
+    // Placeholder wording from every scaffolder that writes a SKILL.md. The
+    // bracketed forms and "Summarise what X does in one line" come from
+    // scripts/new-bundle.mjs, whose stubs previously passed this check — so a
+    // freshly scaffolded, entirely unwritten bundle validated green.
+    if (/your-skill-name|one sentence\.|trigger condition|output description|\[trigger phrases|\[the concrete artifact\]|summarise what .{0,40} does in one line|\bTODO\b/i.test(d))
       errors.push(at(dl, 'Description still contains template placeholder text.'));
     // The trigger clause is the single highest-value line in a skill: it is what
     // a model matches on when deciding whether this skill applies at all.

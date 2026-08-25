@@ -10,6 +10,8 @@ on:
       - 'skills/**'
       - 'skill-tiers.json'
       - 'scripts/skillcheck.mjs'
+      - 'bin/skillcheck.mjs'
+      - 'tests/skillcheck-test.mjs'
       - 'scripts/skill-dupes.mjs'
       - 'skill-dupes-allow.json'
       - 'skillspec/**'
@@ -20,6 +22,8 @@ on:
       - 'skills/**'
       - 'skill-tiers.json'
       - 'scripts/skillcheck.mjs'
+      - 'bin/skillcheck.mjs'
+      - 'tests/skillcheck-test.mjs'
       - 'scripts/skill-dupes.mjs'
       - 'skill-dupes-allow.json'
       - 'skillspec/**'
@@ -38,6 +42,8 @@ jobs:
         with:
           node-version: '24'
 
+      - name: Test the validator itself
+        run: node tests/skillcheck-test.mjs
       - name: Run SkillCheck
         run: node scripts/skillcheck.mjs
       - name: Duplicate check (skill-dupes)

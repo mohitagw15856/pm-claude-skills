@@ -84,7 +84,9 @@
     "eval:all": "node scripts/gen-eval-cases.mjs && node evals/run-evals.mjs --cases evals/cases.full.json --models claude-haiku-4-5-20251001 --judge claude-haiku-4-5-20251001",
     "check:drift": "node scripts/check-drift.mjs",
     "lint:exports": "node tests/exports-lint.mjs",
-    "check:weight": "node scripts/check-web-weight.mjs --check"
+    "check:weight": "node scripts/check-web-weight.mjs --check",
+    "test:scripts": "python3 -m unittest discover -s tests -p 'test_*.py'",
+    "test:skillcheck": "node tests/skillcheck-test.mjs"
   },
   "devDependencies": {
     "qrcode": "^1.5.4"
