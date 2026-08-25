@@ -66,6 +66,12 @@ jobs:
           git config user.email "actions@github.com"
           git rm -r --cached scripts skillspec community 2>/dev/null || true
           rm -rf scripts skillspec community docs err.log 2>/dev/null || true
-          git add history.json reports 2>/dev/null || git add history.json
+          # This branch is data, not a site: one history.json and no web/. The
+          # root Vercel project deploys every branch and expects outputDirectory
+          # "web", so each daily push here failed a Preview build. Opting the
+          # branch out has to live on the branch itself, because that is the
+          # commit Vercel reads.
+          printf '%s\n' '{ "git": { "deploymentEnabled": { "vitals-data": false } } }' > vercel.json
+          git add history.json reports vercel.json 2>/dev/null || git add history.json vercel.json
           git diff --cached --quiet || git commit -m "vitals: $(date +%Y-%m-%d)"
           git push -f origin vitals-data
