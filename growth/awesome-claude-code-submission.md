@@ -21,6 +21,24 @@ with continued commits, *or* 100+ stars. It clears both comfortably.
 
 Fill it in exactly as below. One resource per submission — do not add a second.
 
+An automated bot validates the form and posts the result as a comment. Passing
+validation only means the recommendation was *received* — a maintainer approves
+at their discretion, and there is no guaranteed response.
+
+---
+
+**Add a title**
+
+GitHub pre-fills `[Resource]: <name of your resource>`. Keep the `[Resource]: `
+prefix — the validator keys on it — and replace only the placeholder:
+
+```
+[Resource]: PM Skills
+```
+
+The `resource-submission` and `validation-pending` labels are applied
+automatically; do not add labels by hand.
+
 ---
 
 **Display Name**
