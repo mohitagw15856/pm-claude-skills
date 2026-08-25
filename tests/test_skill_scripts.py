@@ -44,18 +44,47 @@ def find_scripts():
 
 SCRIPTS = find_scripts()
 
-# Modules that ship with CPython. sys.stdlib_module_names exists from 3.10; the
-# fallback keeps this suite runnable on 3.9, which is part of the point.
+# Modules that ship with CPython. sys.stdlib_module_names is exact and needs no
+# import, but only exists from 3.10. Below that, ask the import system where a
+# module lives rather than maintaining a hand-written list — the first version
+# of this used a list, and it was missing `shutil` and `tempfile`, which failed
+# two perfectly correct scripts on 3.9.
 try:
     STDLIB = set(sys.stdlib_module_names)
 except AttributeError:  # pragma: no cover - only on <3.10
-    STDLIB = set(sys.builtin_module_names) | {
-        "argparse", "ast", "csv", "collections", "dataclasses", "datetime",
-        "decimal", "difflib", "enum", "functools", "glob", "hashlib", "io",
-        "itertools", "json", "math", "os", "pathlib", "random", "re",
-        "statistics", "string", "struct", "subprocess", "sys", "textwrap",
-        "typing", "unittest", "urllib", "uuid", "xml", "zipfile", "zlib",
-    }
+    import importlib.util
+    import sysconfig
+
+    _STDLIB_DIR = sysconfig.get_paths().get("stdlib", "")
+
+    def _is_stdlib(name):
+        if name in sys.builtin_module_names:
+            return True
+        try:
+            spec = importlib.util.find_spec(name)
+        except (ImportError, ValueError, ModuleNotFoundError):
+            return False
+        if spec is None:
+            return False
+        origin = spec.origin or ""
+        if origin in ("built-in", "frozen"):
+            return True
+        # Site-packages lives under the stdlib prefix on some layouts, so an
+        # installed third-party package must not read as stdlib.
+        return origin.startswith(_STDLIB_DIR) and "site-packages" not in origin
+
+    class _StdlibSet:
+        """Set-like, resolved lazily so nothing is probed unless asked."""
+
+        def __init__(self):
+            self._cache = {}
+
+        def __contains__(self, name):
+            if name not in self._cache:
+                self._cache[name] = _is_stdlib(name)
+            return self._cache[name]
+
+    STDLIB = _StdlibSet()
 
 
 def top_level_imports(tree):
