@@ -277,8 +277,16 @@ for (const s of skills) {
 // is in sync with the source skills (a timestamp would make every build differ).
 const out = { count: skills.length, skills };
 writeFileSync(join(__dirname, 'skills.json'), JSON.stringify(out));
+
+// A slim index for first paint. `instructions` is the full skill body and
+// accounts for ~75% of skills.json, but nothing on the landing screen needs it
+// — the playground renders the gallery from this and hydrates the bodies in
+// the background. skills.json itself is unchanged: it is the public, CORS-
+// exposed API and every other page still reads it.
+const slim = skills.map(({ instructions, ...rest }) => rest);
+writeFileSync(join(__dirname, 'skills-index.json'), JSON.stringify({ count: slim.length, skills: slim }));
 const tierCounts = skills.reduce((a, s) => ((a[s.tier] = (a[s.tier] || 0) + 1), a), {});
 console.log(
-  `Wrote web/skills.json — ${skills.length} skills, ${new Set(skills.map((s) => s.plugin)).size} bundles ` +
+  `Wrote web/skills.json + skills-index.json — ${skills.length} skills, ${new Set(skills.map((s) => s.plugin)).size} bundles ` +
   `(production: ${tierCounts.production || 0}, stable: ${tierCounts.stable || 0}, experimental: ${tierCounts.experimental || 0}).`
 );

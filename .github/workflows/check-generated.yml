@@ -14,6 +14,7 @@ on:
       - 'scripts/build-exports.mjs'
       - 'exports/**'
       - 'web/skills.json'
+      - 'web/skills-index.json'
       - 'skill-dupes-allow.json'
       - 'scripts/build-disambiguation.mjs'
   push:
@@ -24,6 +25,7 @@ on:
       - 'exports/**'
       - 'web/build-skills.mjs'
       - 'web/skills.json'
+      - 'web/skills-index.json'
       - 'skill-dupes-allow.json'
       - 'scripts/build-disambiguation.mjs'
   workflow_dispatch:
@@ -46,8 +48,8 @@ jobs:
       - name: Verify web/skills.json is up to date
         run: |
           node web/build-skills.mjs
-          git diff --exit-code -- web/skills.json \
-            || (echo "::error::web/skills.json is stale — run 'node web/build-skills.mjs' and commit." && exit 1)
+          git diff --exit-code -- web/skills.json web/skills-index.json \
+            || (echo "::error::web/skills.json or web/skills-index.json is stale — run 'node web/build-skills.mjs' and commit." && exit 1)
 
       - name: Verify DISAMBIGUATION.md is up to date
         run: node scripts/build-disambiguation.mjs --check

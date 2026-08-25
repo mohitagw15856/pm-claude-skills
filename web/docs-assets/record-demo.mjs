@@ -4,7 +4,9 @@
 // recording needs no API key. Re-run with a live key to capture a real call.
 //
 // Usage:  node web/docs-assets/record-demo.mjs
-// Then convert the .webm to playground-demo.gif (see record-demo.sh).
+// Then convert the .webm to playground-demo.webp:
+//   ffmpeg -i playground-demo.webm -vf "fps=9,scale=900:-1:flags=lanczos,split[a][b];[a]palettegen[p];[b][p]paletteuse" /tmp/playground-demo.gif
+//   gif2webp -q 72 -m 6 -mixed /tmp/playground-demo.gif -o web/docs-assets/playground-demo.webp
 
 import { fileURLToPath } from 'url';
 import path from 'path';

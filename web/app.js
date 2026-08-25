@@ -220,10 +220,16 @@ async function init() {
   } catch (_) {}
 
   try {
-    const res = await fetch('skills.json');
+    // skills-index.json is skills.json minus `instructions` — about a quarter of
+    // the bytes. Nothing on the landing screen needs the skill bodies, so they
+    // load in the background instead of blocking first paint. Falls back to the
+    // full file if the index has not been generated (e.g. a bare checkout).
+    let res = await fetch('skills-index.json');
+    if (!res.ok) res = await fetch('skills.json');
     const data = await res.json();
     ALL_SKILLS = data.skills;
     SKILLS = ALL_SKILLS.filter((x) => !x.deprecated);
+    hydrateBodies();
   } catch (e) {
     el('gallery').innerHTML = '<p class="empty-msg">Could not load skills.json. Run <code>node web/build-skills.mjs</code> and serve this folder over HTTP.</p>';
     return;
@@ -1072,6 +1078,26 @@ function renderVisionAttach(s) {
   });
 }
 
+// Pull the skill bodies in after first paint and merge them into the records
+// the gallery is already holding. Anything that needs `instructions` awaits
+// this; it resolves immediately once done, so the cost is paid at most once.
+let BODIES = null;
+function hydrateBodies() {
+  if (BODIES) return BODIES;
+  BODIES = fetch('skills.json')
+    .then((r) => r.json())
+    .then((data) => {
+      const byName = new Map(data.skills.map((x) => [x.name, x]));
+      for (const s of ALL_SKILLS) {
+        const full = byName.get(s.name);
+        if (full && full.instructions) s.instructions = full.instructions;
+      }
+      return true;
+    })
+    .catch(() => false); // search and run degrade rather than break
+  return BODIES;
+}
+
 // A retired skill still opens from a direct link, but it says so and points at
 // its successor. See docs/DEPRECATION.md.
 function renderDeprecation(s) {
@@ -1095,7 +1121,12 @@ function renderDeprecation(s) {
 
 function selectSkill(s) {
   current = s;
-  try { COACH.on = !!(el('coachToggle') && el('coachToggle').checked); coachInit(s); } catch (_) {}
+  try {
+    COACH.on = !!(el('coachToggle') && el('coachToggle').checked);
+    // The coach parses Quality Checks out of the body; re-run once it arrives.
+    if (s.instructions) coachInit(s);
+    else hydrateBodies().then(() => { if (current === s) { try { coachInit(s); } catch (_) {} } });
+  } catch (_) {}
   renderVisionAttach(s);
   recordRecent(s.name);
   // Reset any remix from a previously-open skill (a shared remix link re-applies it after this).
@@ -1304,6 +1335,7 @@ const SKILL_SUFFIX =
 
 // ---------- Run ----------
 async function run() {
+  await hydrateBodies(); // the skill body is the system prompt
   const key = el('apiKey').value.trim();
   const localModel = !!P().local; // in-browser model needs no key
   if (!key && !localModel) { flagMissingKey(); return setStatus(`👆 Paste your ${P().name} API key (top-right) to run — or pick "In-browser (no key)".`, true); }

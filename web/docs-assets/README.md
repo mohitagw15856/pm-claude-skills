@@ -2,7 +2,7 @@
 
 Images used in the main README and in articles.
 
-- `playground-demo.gif` — animated hero demo (shown in the README).
+- `playground-demo.webp` — animated hero demo (shown in the README).
 - `playground.png` — static screenshot / fallback.
 - `galaxy.png` — the **Skill Galaxy** (`galaxy.html`) constellation, clustered by profession.
 - `brain.png` — the **in-browser Brain** (`brain.html`), the six provenance-tagged sections.
@@ -49,7 +49,7 @@ V=$(ls *.webm | head -1)
 ffmpeg -y -i "$V" -vf "fps=13,scale=1080:-1:flags=lanczos,palettegen=stats_mode=diff" /tmp/palette.png
 ffmpeg -y -i "$V" -i /tmp/palette.png \
   -lavfi "fps=13,scale=1080:-1:flags=lanczos[x];[x][1:v]paletteuse=dither=bayer:bayer_scale=3:diff_mode=rectangle" \
-  playground-demo.gif
+  playground-demo.webp
 rm -f *.webm
 ```
 
@@ -65,8 +65,8 @@ To replace the static screenshot with a short looping demo:
    - **macOS:** [Kap](https://getkap.co/) (free) or QuickTime screen recording.
    - **Windows:** [ScreenToGif](https://www.screentogif.com/) (free) records straight to GIF.
    - **Cross-platform:** [Peek](https://github.com/phw/peek) (Linux), or record an `.mp4` and convert with `gifski`.
-2. **Export as GIF** named `playground-demo.gif`, ideally ≤ ~1200px wide and < 5 MB
+2. **Export as GIF** named `playground-demo.webp`, ideally ≤ ~1200px wide and < 5 MB
    (GitHub renders it inline; keep it small so the README loads fast).
-   - From an mp4: `npx gifski --fps 12 --width 1100 -o playground-demo.gif demo.mp4`
+   - From an mp4: `npx gifski --fps 12 --width 1100 -o playground-demo.webp demo.mp4`
 3. Drop it in this folder and update the README hero image from `playground.png` to
-   `playground-demo.gif` (the `<!-- DEMO -->` comment in the README marks the spot).
+   `playground-demo.webp` (the `<!-- DEMO -->` comment in the README marks the spot).

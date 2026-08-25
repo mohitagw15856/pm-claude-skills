@@ -5,10 +5,10 @@ name: Web smoke tests
 # routing, artifact renderers, attestation round-trip, galaxy fly-to). Free, ~2 min.
 on:
   pull_request:
-    paths: ['web/**', 'tests/**', 'skills/*/scripts/**']
+    paths: ['web/**', 'tests/**', 'skills/*/scripts/**', 'web-budget.json', 'scripts/check-web-weight.mjs']
   push:
     branches: [main]
-    paths: ['web/**', 'tests/**', 'skills/*/scripts/**']
+    paths: ['web/**', 'tests/**', 'skills/*/scripts/**', 'web-budget.json', 'scripts/check-web-weight.mjs']
   workflow_dispatch: {}
 
 jobs:
@@ -23,6 +23,19 @@ jobs:
         run: npm i --no-save playwright && npx playwright install --with-deps chromium
       - name: Run the suite
         run: node tests/web-smoke.mjs
+
+  weight:
+    # Page weight is a build-time fact — no browser needed, so it runs per push
+    # rather than waiting for the weekly Lighthouse pass. See web-budget.json.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '24' }
+      - name: Build generated pages
+        run: node web/build-skills.mjs
+      - name: Page-weight budget
+        run: node scripts/check-web-weight.mjs --check
 
   scripts-smoke:
     runs-on: ubuntu-latest

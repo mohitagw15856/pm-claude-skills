@@ -1,10 +1,13 @@
 // Records the Boardroom and Firm demos as videos, driving the REAL pages with
 // Playwright while a mocked SSE stream plays each model turn (so no API key is
-// needed and the streaming UI genuinely streams). Convert to GIF afterwards:
+// needed and the streaming UI genuinely streams). Convert to animated WebP
+// afterwards — roughly half the bytes of the equivalent GIF, and GitHub renders
+// it in Markdown:
 //
 //   node web/docs-assets/record-arena-demos.mjs
-//   ffmpeg -i boardroom-demo.webm -vf "fps=9,scale=900:-1:flags=lanczos,split[a][b];[a]palettegen[p];[b][p]paletteuse" web/docs-assets/boardroom-demo.gif
-//   (same for firm-demo.webm → firm-demo.gif)
+//   ffmpeg -i boardroom-demo.webm -vf "fps=9,scale=900:-1:flags=lanczos,split[a][b];[a]palettegen[p];[b][p]paletteuse" /tmp/boardroom-demo.gif
+//   gif2webp -q 72 -m 6 -mixed /tmp/boardroom-demo.gif -o web/docs-assets/boardroom-demo.webp
+//   (same for firm-demo.webm → firm-demo.webp)
 //
 // Playwright resolves from the local install or the npx cache (PLAYWRIGHT_DIR).
 import { existsSync, readdirSync, renameSync } from 'node:fs';

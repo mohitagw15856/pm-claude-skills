@@ -16,7 +16,7 @@ Every skill a star, every bundle a constellation; fly through the library instea
 
 [![The Galaxy](../web/docs-assets/showcase/galaxy.png)](https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html)
 
-![Galaxy flythrough](../web/docs-assets/demo-galaxy.gif)
+![Galaxy flythrough](../web/docs-assets/demo-galaxy.webp)
 
 ## 🏢 The Firm — don't run tools, employ a staff
 
@@ -38,7 +38,7 @@ The catalog as a holographic projection — because a JSON file deserves at leas
 
 [![Holo](../web/docs-assets/showcase/holo.png)](https://mohitagw15856.github.io/pm-claude-skills/holo.html)
 
-![Holo demo](../web/docs-assets/demo-holo.gif)
+![Holo demo](../web/docs-assets/demo-holo.webp)
 
 ## 🎙 Voice mode — talk to the library
 
@@ -70,14 +70,14 @@ Scrub through every version and watch the library grow from 12 skills to 599.
 
 | Demo | What it shows |
 |---|---|
-| ![playground](../web/docs-assets/playground-demo.gif) | The Playground — pick a skill, fill the form, run it |
-| ![boardroom](../web/docs-assets/boardroom-demo.gif) | The Boardroom deliberating |
-| ![agent](../web/docs-assets/agent-demo.gif) | The agent template running a skill end-to-end |
-| ![canvas](../web/docs-assets/canvas-demo.gif) | The Canvas — skills composed visually |
-| ![compare](../web/docs-assets/compare-demo.gif) | Model comparison on one brief |
-| ![firm](../web/docs-assets/firm-demo.gif) | Hiring from The Firm |
-| ![stage](../web/docs-assets/demo-stage.gif) | The Stage |
-| ![tower](../web/docs-assets/demo-tower.gif) | The Tower |
+| ![playground](../web/docs-assets/playground-demo.webp) | The Playground — pick a skill, fill the form, run it |
+| ![boardroom](../web/docs-assets/boardroom-demo.webp) | The Boardroom deliberating |
+| ![agent](../web/docs-assets/agent-demo.webp) | The agent template running a skill end-to-end |
+| ![canvas](../web/docs-assets/canvas-demo.webp) | The Canvas — skills composed visually |
+| ![compare](../web/docs-assets/compare-demo.webp) | Model comparison on one brief |
+| ![firm](../web/docs-assets/firm-demo.webp) | Hiring from The Firm |
+| ![stage](../web/docs-assets/demo-stage.webp) | The Stage |
+| ![tower](../web/docs-assets/demo-tower.webp) | The Tower |
 
 ---
 

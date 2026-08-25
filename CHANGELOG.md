@@ -1245,7 +1245,7 @@ The biggest update yet — the 174 skills become a *system*, not just a catalog.
   the `npx` CLI, and one-line `windsurf-install.sh` / `aider-install.sh`. The library now
   exports to **5 platforms** (ChatGPT, Gemini, Cursor, Windsurf, Aider).
 - **Hero demo placement** — README "See it in action" block linking to the live Playground,
-  ready to swap a `playground-demo.gif` in (recording guide in `web/docs-assets/README.md`).
+  ready to swap a `playground-demo.webp` in (recording guide in `web/docs-assets/README.md`).
 - **Automated npm publishing** — `.github/workflows/npm-publish.yml` publishes the package
   to npm (with provenance) when a GitHub Release is published. Requires a one-time
   `NPM_TOKEN` repo secret; no local npm needed.

@@ -14,8 +14,8 @@ real links filled in, lead assets ready. Post **mid-week (Tue–Thu), ~8–10am 
 - **Live Playground:** https://mohitagw15856.github.io/pm-claude-skills/
 - **Sample outputs:** https://mohitagw15856.github.io/pm-claude-skills/examples.html
 - **Example skill page (great for sharing):** https://mohitagw15856.github.io/pm-claude-skills/skill/prd-template.html
-- **Hero demo GIF:** `web/docs-assets/playground-demo.gif`
-- **Compare-mode GIF (the "proof" asset):** `web/docs-assets/compare-demo.gif`
+- **Hero demo GIF:** `web/docs-assets/playground-demo.webp`
+- **Compare-mode GIF (the "proof" asset):** `web/docs-assets/compare-demo.webp`
 
 ## The hooks that make this different (use these — competitors don't have them)
 1. **Eval-verified** — skills are scored against held-out cases, not just counted.
@@ -101,7 +101,7 @@ real links filled in, lead assets ready. Post **mid-week (Tue–Thu), ~8–10am 
 
 ## 3. X / Twitter thread
 
-**1/** *(attach `compare-demo.gif`)*
+**1/** *(attach `compare-demo.webp`)*
 > Everyone says "AI writes my docs." Then you read them and rewrite everything.
 >
 > I built 174 open-source skills that teach Claude/ChatGPT/Gemini how senior pros actually work.

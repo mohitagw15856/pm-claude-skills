@@ -117,18 +117,18 @@ ADHD-friendly executive function (useful for everyone):
 It's not just a folder of files — the whole library is explorable, runnable, and a little bit magic. All of this runs **in your browser, free, nothing to install:**
 
 <p align="center">
-  <a href="https://mohitagw15856.github.io/pm-claude-skills/"><img src="web/docs-assets/playground-demo.gif" width="90%" alt="The Skill Playground: pick the Executive Update skill, fill in a few notes, hit run, and watch a structured executive briefing stream out — all in the browser" /></a>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/"><img src="web/docs-assets/playground-demo.webp" width="90%" alt="The Skill Playground: pick the Executive Update skill, fill in a few notes, hit run, and watch a structured executive briefing stream out — all in the browser" /></a>
   <br /><sub><b>▶ Pick a skill → fill a short form → run it → a senior-grade artifact streams out.</b> No install, your key stays in your browser (or run free with no key).</sub>
 </p>
 
 <table>
 <tr>
 <td width="50%" align="center">
-<a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="web/docs-assets/demo-galaxy.gif" width="100%" alt="Galaxy 3D — fly through all 1153 skills as a glowing constellation you orbit and click into" /></a>
+<a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="web/docs-assets/demo-galaxy.webp" width="100%" alt="Galaxy 3D — fly through all 1153 skills as a glowing constellation you orbit and click into" /></a>
 <br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html">Galaxy 3D</a></b> — fly through all 1153 skills as a living constellation. The ones you've run burn brighter.</sub>
 </td>
 <td width="50%" align="center">
-<a href="https://mohitagw15856.github.io/pm-claude-skills/wrapped.html"><img src="web/docs-assets/demo-holo.gif" width="100%" alt="PM Skills Wrapped — your practice turned into a shareable, Spotify-Wrapped-style story" /></a>
+<a href="https://mohitagw15856.github.io/pm-claude-skills/wrapped.html"><img src="web/docs-assets/demo-holo.webp" width="100%" alt="PM Skills Wrapped — your practice turned into a shareable, Spotify-Wrapped-style story" /></a>
 <br /><sub><b>🎁 <a href="https://mohitagw15856.github.io/pm-claude-skills/wrapped.html">Wrapped</a></b> — your practice, as a shareable story. 100% local — nothing leaves your browser.</sub>
 </td>
 </tr>

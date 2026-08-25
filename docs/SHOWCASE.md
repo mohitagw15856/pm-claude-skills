@@ -108,7 +108,7 @@ A community-built library of professional skills for every field — product man
 
 ## 🏢 The Firm — don't run tools, employ a staff
 
-[![The Firm — a live session: staff memos streaming in, the board meeting without you, minutes with dissent preserved](../web/docs-assets/firm-demo.gif)](https://mohitagw15856.github.io/pm-claude-skills/firm.html)
+[![The Firm — a live session: staff memos streaming in, the board meeting without you, minutes with dissent preserved](../web/docs-assets/firm-demo.webp)](https://mohitagw15856.github.io/pm-claude-skills/firm.html)
 
 Everything below is *pull*: you show up and run something. **[The Firm](https://mohitagw15856.github.io/pm-claude-skills/firm.html)** is *push* — the endgame the whole library was building toward. Charter a standing team once, then convene: your **💰 CFO**, **❤️ Chief Customer Officer**, **🛠️ CTO**, and **🦈 Head of Strategy** (hire 📣 Growth and ⚖️ Counsel too, or excuse anyone) each file a **delta-aware memo** on their beat — what *changed*, never a restatement — ending in a **falsifiable prediction** with a check-by date. Then the staff **hold a boardroom session without you** and send you the minutes: decisions, asks, **dissent preserved**. As reality lands, score the predictions — and each staff member's card shows a live **calibration record**. You can performance-review your AI staff.
 
@@ -313,9 +313,9 @@ Individual skills are great. **Chaining** them is the superpower. A *recipe* run
 
 **Or build your own visually.** The [**Workflow Canvas**](https://mohitagw15856.github.io/pm-claude-skills/canvas.html) lets you drag any skills into a custom chain and run it in the browser — each step's output feeds the next. Like n8n, but for professional thinking. Don't know which skills to use? The [**✨ Auto-Agent**](https://mohitagw15856.github.io/pm-claude-skills/agent.html) takes a plain-English goal, **plans which skills to chain**, and runs them for you — each step feeding the next:
 
-[![Auto-Agent — a goal becomes a planned chain of skills that runs end to end](../web/docs-assets/agent-demo.gif)](https://mohitagw15856.github.io/pm-claude-skills/agent.html)
+[![Auto-Agent — a goal becomes a planned chain of skills that runs end to end](../web/docs-assets/agent-demo.webp)](https://mohitagw15856.github.io/pm-claude-skills/agent.html)
 
-[![Workflow Canvas — drag skills into a chain and run it, each step feeding the next](../web/docs-assets/canvas-demo.gif)](https://mohitagw15856.github.io/pm-claude-skills/canvas.html)
+[![Workflow Canvas — drag skills into a chain and run it, each step feeding the next](../web/docs-assets/canvas-demo.webp)](https://mohitagw15856.github.io/pm-claude-skills/canvas.html)
 
 </details>
 
@@ -331,7 +331,7 @@ Paste a PRD, launch plan, investor pitch, or strategy memo. A bench of five AI e
 
 Seat or excuse executives, set the grill level (🤝 constructive → 🔥 brutal), and download the decision memo. Runs entirely in your browser with your own key — same as the playground. **[Convene the board →](https://mohitagw15856.github.io/pm-claude-skills/boardroom.html)**
 
-[![The Boardroom — a live session: severity-tagged openings streaming, cross-examination, the Chair's verdict](../web/docs-assets/boardroom-demo.gif)](https://mohitagw15856.github.io/pm-claude-skills/boardroom.html)
+[![The Boardroom — a live session: severity-tagged openings streaming, cross-examination, the Chair's verdict](../web/docs-assets/boardroom-demo.webp)](https://mohitagw15856.github.io/pm-claude-skills/boardroom.html)
 
 It anchors a whole **pressure-test suite** — and with 🔊 **Theatre mode** the executives now *speak their turns aloud* in distinct voices, while 🎙 lets you answer the Defense and the Gauntlet's interviewer out loud (browser speech, zero API):
 
@@ -383,8 +383,8 @@ Connect the Firm or the Boardroom to a **real folder on disk** (the 🗂 chip, C
 ### 🌌 The library in 3D
 
 <p align="center">
-  <a href="https://mohitagw15856.github.io/pm-claude-skills/tower.html"><img src="../web/docs-assets/demo-tower.gif" width="420" alt="The Tower of Claims — the argument collapses because the conclusion rested on glass" /></a>
-  <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="../web/docs-assets/demo-galaxy.gif" width="420" alt="Galaxy 3D — hyperspace warp between skill constellations" /></a>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/tower.html"><img src="../web/docs-assets/demo-tower.webp" width="420" alt="The Tower of Claims — the argument collapses because the conclusion rested on glass" /></a>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="../web/docs-assets/demo-galaxy.webp" width="420" alt="Galaxy 3D — hyperspace warp between skill constellations" /></a>
 </p>
 
 
@@ -482,7 +482,7 @@ That's not luck — it's a [self-improving pipeline](../scripts/improve-skill.mj
 
 **See the difference for yourself.** The Playground's *Compare* toggle runs the same inputs with and without the skill, side by side — structured, shippable output on the left; generic mush on the right:
 
-[![Compare mode — the same prompt with and without the skill, side by side](../web/docs-assets/compare-demo.gif)](https://mohitagw15856.github.io/pm-claude-skills/)
+[![Compare mode — the same prompt with and without the skill, side by side](../web/docs-assets/compare-demo.webp)](https://mohitagw15856.github.io/pm-claude-skills/)
 
 **Already have a draft?** Flip on **📝 Critique mode** in the Playground — or use the standalone [**Grade your work**](https://mohitagw15856.github.io/pm-claude-skills/grade.html) tool — to paste an existing PRD/roadmap/update and get a rubric score, ranked gaps, and a redline graded against the skill's framework. Before you ship, run [**`/red-team`**](../skills/red-team-review/SKILL.md) to stress-test the plan against a room of hostile expert personas.
 
