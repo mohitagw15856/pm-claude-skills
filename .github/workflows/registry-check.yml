@@ -11,6 +11,10 @@ on:
     - cron: '0 6 * * 1'
   workflow_dispatch: {}
 
+concurrency:
+  group: registry-check
+  cancel-in-progress: false
+
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -18,5 +22,5 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
       - run: node scripts/check-registry.mjs --fetch

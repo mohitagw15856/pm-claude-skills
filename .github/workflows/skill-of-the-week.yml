@@ -12,6 +12,10 @@ on:
     - cron: '0 9 * * 1' # every Monday 09:00 UTC
   workflow_dispatch: {}
 
+concurrency:
+  group: skill-of-the-week
+  cancel-in-progress: false
+
 permissions:
   contents: write
   pull-requests: write
@@ -23,7 +27,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Pick & compose the skill of the week
         env:

@@ -8,7 +8,11 @@ name: Morning Show (weekly newsletter)
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 13 * * 1' # every Monday 13:00 UTC
+    - cron: '19 13 * * 1' # every Monday 13:00 UTC
+
+concurrency:
+  group: morning-show
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -21,7 +25,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Compose this week's issue
         run: node scripts/build-morning-show.mjs

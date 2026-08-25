@@ -10,6 +10,8 @@ on:
       - 'skills/**'
       - 'skill-tiers.json'
       - 'scripts/skillcheck.mjs'
+      - 'scripts/skill-dupes.mjs'
+      - 'skill-dupes-allow.json'
       - 'skillspec/**'
       - 'conformance/**'
       - '.github/workflows/skillcheck.yml'
@@ -18,6 +20,8 @@ on:
       - 'skills/**'
       - 'skill-tiers.json'
       - 'scripts/skillcheck.mjs'
+      - 'scripts/skill-dupes.mjs'
+      - 'skill-dupes-allow.json'
       - 'skillspec/**'
       - 'conformance/**'
       - '.github/workflows/skillcheck.yml'
@@ -32,10 +36,12 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Run SkillCheck
         run: node scripts/skillcheck.mjs
+      - name: Duplicate check (skill-dupes)
+        run: node scripts/skill-dupes.mjs --check
       - name: SkillSpec conformance gate (dogfooding the published validator)
         run: node skillspec/cli.mjs skills/ --min-level 3
       - name: Validate the SkillSpec conformance registry

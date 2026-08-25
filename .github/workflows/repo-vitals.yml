@@ -13,6 +13,10 @@ on:
     - cron: '43 6 * * 1'    # weekly census + registry re-scan (Mondays)
   workflow_dispatch:
 
+concurrency:
+  group: repo-vitals
+  cancel-in-progress: false
+
 permissions:
   contents: write
   issues: write
@@ -26,7 +30,7 @@ jobs:
       - uses: actions/checkout@v4
         with: { fetch-depth: 0 }
       - uses: actions/setup-node@v4
-        with: { node-version: '20' }
+        with: { node-version: '24' }
 
       - name: Snapshot vitals (daily)
         run: |

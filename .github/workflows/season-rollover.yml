@@ -8,6 +8,10 @@ on:
     - cron: '0 8 * * *'    # daily check; acts only when a season has closed
   workflow_dispatch:
 
+concurrency:
+  group: season-rollover
+  cancel-in-progress: false
+
 permissions:
   contents: write
   issues: write
@@ -19,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: '20' }
+        with: { node-version: '24' }
       - name: Check close + freeze podium
         run: |
           node - <<'JS'

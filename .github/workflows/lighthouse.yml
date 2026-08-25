@@ -8,6 +8,10 @@ on:
     - cron: '7 4 * * 2'   # Tuesdays
   workflow_dispatch:
 
+concurrency:
+  group: lighthouse
+  cancel-in-progress: false
+
 permissions:
   contents: read
 
@@ -17,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: '20' }
+        with: { node-version: '24' }
       - name: Build generated pages
         run: node web/build-skills.mjs
       - name: Lighthouse with budgets

@@ -15,6 +15,10 @@ on:
   schedule:
     - cron: '0 13 * * *' # daily 13:00 UTC — the script filters to what's due
 
+concurrency:
+  group: scheduled-reports
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -25,7 +29,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Generate due reports
         env:

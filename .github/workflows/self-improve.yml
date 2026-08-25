@@ -28,7 +28,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Rewrite the lowest-scoring skills
         id: pick
@@ -53,7 +53,7 @@ jobs:
 
       - name: Open a PR with the improvements
         if: steps.reconcile.outputs.improved != '0'
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v7
         with:
           branch: bot/self-improve
           title: 'bot: self-improve ${{ steps.reconcile.outputs.improved }} skill(s)'

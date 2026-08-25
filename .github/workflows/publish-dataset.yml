@@ -30,7 +30,7 @@ jobs:
       - uses: actions/setup-node@v4
         if: steps.gate.outputs.enabled == 'true'
         with:
-          node-version: '20'
+          node-version: '24'
       - name: Rebuild the dataset from canonical sources
         if: steps.gate.outputs.enabled == 'true'
         run: node scripts/build-dataset.mjs

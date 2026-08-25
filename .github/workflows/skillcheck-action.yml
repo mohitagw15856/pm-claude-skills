@@ -30,7 +30,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       # Run the local validator rather than the published one, so a change is
       # tested before it ships. Consumers get the npx path in action.yml.

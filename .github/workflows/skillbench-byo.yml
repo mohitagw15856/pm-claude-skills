@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: '20' }
+        with: { node-version: '24' }
       - name: Run SkillBench
         env:
           OPENAI_API_KEY: ${{ secrets.BYO_API_KEY }}

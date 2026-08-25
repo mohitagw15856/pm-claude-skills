@@ -47,7 +47,7 @@ jobs:
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       - name: Rebuild skills.json from SKILL.md files
         run: node web/build-skills.mjs
