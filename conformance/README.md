@@ -10,7 +10,7 @@ SkillBench tests models. This suite tests **agents and frameworks**: does your a
 The five tasks test: **discovery** · **restraint** (the negative case most agents fail) · **structure adherence** · **quality-check self-verification** · **anti-pattern adherence** (the honesty-gate refusal).
 
 ## Get certified (listed + badge)
-PR your run to `conformance/certified/<agent-name>/` containing: the 5 result files, `run.json` (`{agent, version, model, date, runner}`), and nothing else. CI re-verifies; merged = listed below with the **SkillSpec Conformant Agent** badge for your README:
+PR your run to [`conformance/certified/<agent-name>/`](certified/README.md) containing: the 5 result files, `run.json` (`{agent, version, model, date, runner}`), and nothing else. The **Conformance check** workflow re-runs `verify.mjs` against your files on the PR — the same verifier you ran locally, so no surprises. Merged = listed below with the **SkillSpec Conformant Agent** badge for your README:
 
 ```markdown
 ![SkillSpec Conformant](https://img.shields.io/badge/SkillSpec-Conformant_Agent-8a2be2)

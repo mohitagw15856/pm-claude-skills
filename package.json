@@ -78,7 +78,7 @@
     "grow": "node scripts/mine-gaps.mjs",
     "build:modelbench": "node scripts/build-modelbench.mjs",
     "skill-of-the-week": "node scripts/skill-of-the-week.mjs",
-    "check": "node scripts/skillcheck.mjs && node scripts/skill-dupes.mjs --check && node scripts/check-drift.mjs && node scripts/build-exports.mjs --check && node scripts/build-workflows.mjs --check && node web/build-skills.mjs && node scripts/build-samples.mjs && node scripts/build-skills-md.mjs && node tests/exports-lint.mjs && node tests/i18n-parity.mjs && node scripts/build-disambiguation.mjs && git diff --exit-code -- web/skills.json web/skills-index.json web/samples.json SKILLS.md DISAMBIGUATION.md",
+    "check": "node scripts/skillcheck.mjs && node scripts/skill-dupes.mjs --check && node scripts/check-drift.mjs && node scripts/build-conformance-badge.mjs --check && node scripts/build-exports.mjs --check && node scripts/build-workflows.mjs --check && node web/build-skills.mjs && node scripts/build-samples.mjs && node scripts/build-skills-md.mjs && node tests/exports-lint.mjs && node tests/i18n-parity.mjs && node scripts/build-disambiguation.mjs && git diff --exit-code -- web/skills.json web/skills-index.json web/samples.json SKILLS.md DISAMBIGUATION.md",
     "improve": "node scripts/improve-skill.mjs",
     "eval:gen-cases": "node scripts/gen-eval-cases.mjs",
     "eval:all": "node scripts/gen-eval-cases.mjs && node evals/run-evals.mjs --cases evals/cases.full.json --models claude-haiku-4-5-20251001 --judge claude-haiku-4-5-20251001",
@@ -87,7 +87,8 @@
     "check:weight": "node scripts/check-web-weight.mjs --check",
     "test:scripts": "python3 -m unittest discover -s tests -p 'test_*.py'",
     "test:skillcheck": "node tests/skillcheck-test.mjs",
-    "check:conflicts": "node scripts/check-antipattern-conflicts.mjs"
+    "check:conflicts": "node scripts/check-antipattern-conflicts.mjs",
+    "build:badge": "node scripts/build-conformance-badge.mjs"
   },
   "devDependencies": {
     "qrcode": "^1.5.4"

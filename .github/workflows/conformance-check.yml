@@ -1,0 +1,64 @@
+name: Conformance check
+
+# The conformance program told adopters to PR a run into conformance/certified/
+# and said "CI re-verifies" — but no workflow did, and the directory did not
+# exist. This is that job: every submitted run is re-graded with the same
+# verifier the submitter ran locally, so certification means something.
+#
+# Also keeps the badge honest: conformance/badge.json is generated from the real
+# skill count and the level CI actually gates at, never hand-typed.
+on:
+  pull_request:
+    paths:
+      - 'conformance/**'
+      - 'skills/**'
+      - 'scripts/build-conformance-badge.mjs'
+  push:
+    branches: [main]
+    paths:
+      - 'conformance/**'
+      - 'skills/**'
+      - 'scripts/build-conformance-badge.mjs'
+  workflow_dispatch:
+
+concurrency:
+  group: conformance-check-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '24' }
+
+      - name: Badge is generated, not hand-typed
+        run: node scripts/build-conformance-badge.mjs --check
+
+      - name: Re-verify every certified run
+        run: |
+          shopt -s nullglob
+          found=0
+          failed=0
+          for dir in conformance/certified/*/; do
+            [ -f "$dir/run.json" ] || continue
+            found=$((found + 1))
+            echo "::group::$(basename "$dir")"
+            if node conformance/verify.mjs "$dir"; then
+              echo "  ✓ $(basename "$dir")"
+            else
+              echo "::error::$(basename "$dir") no longer passes conformance"
+              failed=$((failed + 1))
+            fi
+            echo "::endgroup::"
+          done
+          if [ "$found" -eq 0 ]; then
+            echo "No certified runs submitted yet — nothing to re-verify."
+          else
+            echo "$found certified run(s), $failed failing."
+          fi
+          exit $([ "$failed" -eq 0 ] && echo 0 || echo 1)
