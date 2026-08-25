@@ -72,6 +72,7 @@ stale count — always check for an existing PR before opening one.
 | awesome-mcp-servers | [#12850](https://github.com/punkpeye/awesome-mcp-servers/pull/12850) | open — Product Management, agent fast-track opted in |
 | awesome-ai-coding-tools | [#652](https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/652) | open — Developer Productivity Tools |
 | awesome-llm-apps | [#1119](https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1119) | open — Agent Skills, external entry |
+| awesome-cursorrules | [#362](https://github.com/PatrickJS/awesome-cursorrules/pull/362) | open — new `.mdc` rule, Documentation |
 
 ## Not submitted, and why
 
@@ -81,8 +82,7 @@ risked the account.
 
 | List | Why not |
 |---|---|
-| awesome-claude-code | **Needs a human.** CONTRIBUTING forbids PRs ("do not open a PR"), requires the web-UI issue form, states it is not possible via the `gh` CLI, and says recommendations "must be created by human beings". Opening one "risks being restricted from interacting with this repository". **This is the one worth doing by hand** — ★53k, and the project clears their 100-star / 14-day bar comfortably. |
-| awesome-cursorrules | Accepts only `.mdc` rule files under `rules/`, plus a two-item directory of rule *directories*. A repo link fits neither shape. |
+| awesome-claude-code | **Needs a human** — draft ready in [awesome-claude-code-submission.md](awesome-claude-code-submission.md). CONTRIBUTING forbids PRs ("do not open a PR"), requires the web-UI issue form, states it is not possible via the `gh` CLI, and says recommendations "must be created by human beings". Opening one "risks being restricted from interacting with this repository". **This is the one worth doing by hand** — ★53k, and the project clears their 100-star / 14-day bar comfortably. |
 | awesome-gemini | Wrong Gemini — it covers the `gemini://` internet protocol, not Google's model. The original plan assumed the latter. |
 | awesome-chatgpt-prompts | A prompts dataset (CSV + README), not a directory of projects. |
 | awesome-ai-agents | States it is "only for AI assistants and agents" and redirects tools to a sibling list. A skill library is not an agent. |
