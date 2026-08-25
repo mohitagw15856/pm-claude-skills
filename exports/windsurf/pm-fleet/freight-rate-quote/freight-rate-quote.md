@@ -35,6 +35,10 @@ Ask for these if not provided:
 6. **Weigh the reload.** A good rate into a dead market is worse than a modest rate into a strong one. Total round-trip revenue per day is the honest measure.
 7. **Know your floor and say no below it.** A lane run below break-even to keep a truck moving loses money faster than a parked truck.
 
+## Deeper Material
+
+- **[`references/worked-example.md`](references/worked-example.md)** — a Manchester–Aberdeen round that looks excellent per loaded mile and merely acceptable per day. Read it when the shape of a good output is unclear, or to calibrate how specific the entries should be.
+
 ## Output Format
 
 ### Rate quote: [lane] · [equipment] · [date]

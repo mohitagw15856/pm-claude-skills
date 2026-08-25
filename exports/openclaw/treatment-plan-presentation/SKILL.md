@@ -39,6 +39,10 @@ Ask for these if not provided:
 5. **Then the money.** Per phase, with coverage applied and the remaining balance stated as a number, not a range.
 6. **Ask for the decision on phase one only.** The commitment that fits in one appointment is the one that gets made.
 
+## Deeper Material
+
+- **[`references/worked-example.md`](references/worked-example.md)** — a four-year-absent patient with a cracked cusp, active perio, and £950 of remaining coverage — phased, with the honest minimum endorsed. Read it when the shape of a good output is unclear, or to calibrate how specific the entries should be.
+
 ## Output Format
 
 ### Treatment plan: [patient] · [date] · presented by [clinician]

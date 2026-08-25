@@ -34,6 +34,10 @@ Ask for these if not provided:
 5. **Prioritise by harm potential.** The anticoagulant interaction outranks the vitamin nobody needs.
 6. **Write each recommendation as one action.** A prescriber acts on 'consider stopping X because Y'; they do not act on a paragraph of context.
 
+## Deeper Material
+
+- **[`references/worked-example.md`](references/worked-example.md)** — eleven medicines, three prescribers, and a post-fall referral where four of six problems live in the gap between the record and what the patient actually takes. Read it when the shape of a good output is unclear, or to calibrate how specific the entries should be.
+
 ## Output Format
 
 ### Medication review: [patient] · [date] · [pharmacist]

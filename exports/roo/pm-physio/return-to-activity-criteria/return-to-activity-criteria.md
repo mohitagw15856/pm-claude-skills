@@ -30,6 +30,10 @@ Ask for these if not provided:
 6. **Be honest about residual risk.** Meeting criteria reduces risk; it does not remove it. The patient is entitled to know that before deciding.
 7. **Record the decision and its basis.** Who decided, on what evidence, what was explained, and what the patient chose — particularly where the patient elects to return early against advice.
 
+## Deeper Material
+
+- **[`references/worked-example.md`](references/worked-example.md)** — an ACL return three weeks before a play-off, declined against criteria written 24 weeks earlier. Read it when the shape of a good output is unclear, or to calibrate how specific the entries should be.
+
 ## Output Format
 
 ### Return-to-activity plan: [patient] · [injury/condition] · [target activity] · [date]
