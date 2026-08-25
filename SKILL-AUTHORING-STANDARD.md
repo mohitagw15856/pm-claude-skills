@@ -66,18 +66,18 @@ Keep it under ~3 sentences. Write triggers from the user's vocabulary, not inter
 ## 3. Body sections
 
 Use this section order. Not every skill needs every section, but strong skills include
-most of them, and the **bold** ones are required.
+most of them.
 
-| Section | Purpose |
-|---|---|
-| `# Skill Title` + one-line summary | **Required.** Restate the value in plain language. |
-| **What This Skill Produces** | Bullet list of the deliverables. Sets expectations. |
-| **Required Inputs** | What to ask the user for if it isn't provided. Prevents guessing. |
-| Framework / Formula / Scale | The method, rubric, weights, or formula the skill applies. |
-| Programmatic Helper | If the skill has a script, show how to run it and what it returns. |
-| **Output Format** | A concrete template (headings, tables) of the final artifact. |
-| **Quality Checks** | A checklist the output must pass before it's handed over. |
-| **Anti-Patterns** | Explicit "Do not…" rules — the mistakes this skill prevents. |
+| Section | Status | Purpose |
+|---|---|---|
+| `# Skill Title` + one-line summary | Required | Restate the value in plain language. |
+| What This Skill Produces | Required | Bullet list of the deliverables. Sets expectations. |
+| Required Inputs | Required | What to ask the user for if it isn't provided. Prevents guessing. |
+| Framework / Formula / Scale | Optional | The method, rubric, weights, or formula the skill applies. |
+| Programmatic Helper | Conditional | Required only if the skill ships a script: how to run it and what it returns. |
+| Output Format | Required | A concrete template (headings, tables) of the final artifact. |
+| Quality Checks | Required | A checklist the output must pass before it's handed over. |
+| Anti-Patterns | Required | Explicit "Do not…" rules — the mistakes this skill prevents. |
 
 ## 4. Quality bar
 
