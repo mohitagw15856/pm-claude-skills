@@ -1,7 +1,7 @@
 # 🧭 Disambiguation — you want *this* one, not that one
 
 > **Generated — do not edit.** Run `node scripts/build-disambiguation.mjs`.
-> 1146 live skills across 130 bundles, plus 7 retired names that still resolve.
+> 1141 live skills across 130 bundles, plus 12 retired names that still resolve.
 
 At this size the hard part is not finding *a* skill — it is telling two similar ones apart, and
 knowing whether the thing you are about to write already exists under a different noun.
@@ -33,12 +33,10 @@ choosing between them.
 | Cold Email / Investor Cold Email | `cold-email` | `investor-cold-email` | Investor outreach is traction-forward with a different ask structure from B2B sales outreach. |
 | Context Budget / Context Switch Budget | `context-budget` | `context-switch-budget` | Name collision only: an LLM context window vs human attention fragmentation across a week. |
 | Contract Review / Venue Contract Review | `contract-review` | `venue-contract-review` | General contract review vs the venue-specific commercial exposure — minimum spend, attrition, cancellation ladder — that a general review does not look for. |
-| Demo Script / Sales Demo Script | `demo-script` | `sales-demo-script` | Kept pending a content merge — both script product demos; the general one is richer but the sales-specific framing has its own audience. |
 | Design Critique / Figma Design Critique — PM Perspective | `design-critique` | `figma-design-critique-pm` | General UX critique frameworks vs a PM-lens critique run against a Figma file. |
 | Discharge Summary / Physiotherapy Discharge Summary | `discharge-summary` | `physio-discharge-summary` | A hospital inpatient discharge summary vs closing an outpatient physiotherapy episode against the goals set at assessment. |
 | Email Triage / Email Triage System | `email-triage` | `email-triage-system` | Triaging a live Gmail inbox down to what needs you vs installing a durable four-verb habit. |
 | Engineering Hiring Rubric / Hiring Rubric | `engineering-hiring-rubric` | `hiring-rubric` | Domain specialisation — technical interview scorecards vs a rubric for any role. |
-| Eulogy & Obituary Writer / Eulogy Writer | `eulogy-and-obituary-writer` | `eulogy-writer` | Kept pending a content merge — the combined eulogy/obituary skill likely supersedes the eulogy-only one, but this is grief-adjacent content that deserves a careful read before retiring either. |
 | Expert Interview Prep / Interview Prep | `expert-interview-prep` | `interview-prep` | Extracting knowledge from an expert vs being evaluated as a candidate. |
 | Figma Design Brief / Figma Design QA | `figma-design-brief` | `figma-design-qa` | Briefing a design before it exists vs QA-ing one that does. |
 | Figma Design Critique — PM Perspective / Figma Design QA | `figma-design-critique-pm` | `figma-design-qa` | Product-outcome critique vs implementation-fidelity QA. |
@@ -52,17 +50,14 @@ choosing between them.
 | Meeting Prep (Live) / Meeting Prep Pack | `meeting-prep-live` | `meeting-prep-pack` | Connector-backed twin — one reads the real Calendar event and linked docs, the other builds the pack from what you paste. |
 | Meeting Prep (Live) / S&OP Meeting Prep | `meeting-prep-live` | `sop-meeting-prep` | Name collision only: S&OP is supply-chain sales-and-operations planning, unrelated to general meeting prep. |
 | Offer Letter / Property Offer Letter | `offer-letter` | `property-offer-letter` | Name collision only: a job offer to a candidate vs a buyer's cover letter to a property seller. |
-| Offsite Planner / Team Offsite Planner | `offsite-planner` | `team-offsite-planner` | Kept pending a content merge — both cover team offsites and one should eventually retire; not merged yet because neither body is a clear superset. |
 | Open House Plan / The Open House | `open-house-plan` | `the-open-house` | Opposite sides of the same event: planning an open house as the seller's agent vs simulating one as the buyer being read by that agent. |
 | Parent Conference Prep / Parent Teacher Conference Prep | `parent-conference-prep` | `parent-teacher-conference-prep` | Opposite sides of the same meeting — the teacher preparing to run it vs the parent preparing to get information out of it. |
 | PM Weekly Review / Weekly Review Ritual | `pm-weekly-review` | `weekly-review-ritual` | A PM's weekly product review vs a personal GTD-style weekly ritual. |
 | Policy Drafter / Privacy Policy Drafter | `policy-drafter` | `privacy-policy-drafter` | An internal policy people follow vs an external, legally-shaped privacy notice. |
 | PR Description (Live) / PR Description Writer | `pr-description-live` | `pr-description-writer` | Both are variants of pr-description; the -live twin reads the real diff via the GitHub connector. |
 | Red-Team My Plan / Red-Team Review | `red-team-my-plan` | `red-team-review` | Stress-testing your own plan vs running a structured red-team review of someone else's. |
-| Saying No / Saying No Kindly | `saying-no` | `saying-no-kindly` | Kept pending a content merge — same job, and the richer body should absorb the other rather than either being tombstoned blind. |
 | Second Opinion Request / The Second Opinion | `second-opinion-request` | `the-second-opinion` | Name collision only: requesting a second medical opinion vs a thinking tool that argues against your own position. |
 | Security Review / Vendor Security Review | `security-review` | `vendor-security-review` | Reviewing your own design vs assessing a third party and assigning a risk tier. |
-| YouTube Script / YouTube Script Writer | `youtube-script` | `youtube-script-writer` | Kept pending a content merge — long-form explainer scripting vs retention-focused scripting with A/V cues; the two bodies differ enough that a merge needs an author pass. |
 
 ## Retired names that still work
 
@@ -73,11 +68,16 @@ point at their successor. See [docs/DEPRECATION.md](docs/DEPRECATION.md).
 |---|---|---|
 | `board-game-night-planner` | `game-night-planner` — Game Night Planner | 2026-08-21 |
 | `debt-payoff-plan` | `debt-payoff` — Debt Payoff | 2026-08-21 |
+| `demo-script` | `sales-demo-script` — Sales Demo Script | 2026-08-25 |
+| `eulogy-writer` | `eulogy-and-obituary-writer` — Eulogy & Obituary Writer | 2026-08-25 |
 | `jury-duty-guide` | `jury-duty-navigator` — Jury Duty Navigator | 2026-08-21 |
 | `new-manager-first-90-days` | `manager-first-90-days` — Manager First 90 Days | 2026-08-21 |
+| `offsite-planner` | `team-offsite-planner` — Team Offsite Planner | 2026-08-25 |
 | `pr-description-writer` | `pr-description` — PR Description | 2026-08-21 |
 | `referral-program` | `referral-program-design` — Referral Program Design | 2026-08-21 |
+| `saying-no` | `saying-no-kindly` — Saying No Kindly | 2026-08-25 |
 | `security-threat-model` | `threat-model` — Threat Model | 2026-08-21 |
+| `youtube-script` | `youtube-script-writer` — YouTube Script Writer | 2026-08-25 |
 
 ## Name families
 
@@ -283,7 +283,7 @@ assuming the skill you want is missing.
 **`sales-*`** (5)
 
 - `sales-battlecard` · pm-sales — Create a competitive sales battlecard for any competitor.
-- `sales-demo-script` · pm-pmm — Write a product demo script that tells a value story instead of a feature tour.
+- `sales-demo-script` · pm-pmm — Write a product demo script that tells a value story instead of a feature tour — the buyer's-workflow storyline, the golden path rehearsed with fallbacks, the wow moment placed early, and the demo-death contingencies (backup video, reset state, narration bridge).
 - `sales-enablement-kit` · pm-pmm — Build a sales enablement kit so reps can sell a product, feature, or launch confidently.
 - `sales-forecasting-model` · pm-sales — Build a structured sales forecast framework for any business or team.
 - `sales-page` · pm-copy — Write a long-form sales page that takes a cold reader to a purchase.

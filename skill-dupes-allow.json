@@ -67,16 +67,6 @@
       "reason": "General interview note synthesis vs the product-discovery research pipeline; overlapping but separately maintained for their own audiences."
     },
     {
-      "a": "offsite-planner",
-      "b": "team-offsite-planner",
-      "reason": "Kept pending a content merge — both cover team offsites and one should eventually retire; not merged yet because neither body is a clear superset."
-    },
-    {
-      "a": "saying-no",
-      "b": "saying-no-kindly",
-      "reason": "Kept pending a content merge — same job, and the richer body should absorb the other rather than either being tombstoned blind."
-    },
-    {
       "a": "agent-incident-postmortem",
       "b": "incident-postmortem",
       "reason": "Agent incidents have failure modes (runaway tool use, shipped hallucinations) that a general postmortem does not prompt for."
@@ -85,11 +75,6 @@
       "a": "agent-observability-spec",
       "b": "agent-spec",
       "reason": "Specifying an agent's behaviour before building vs specifying its tracing and alerting in production."
-    },
-    {
-      "a": "eulogy-and-obituary-writer",
-      "b": "eulogy-writer",
-      "reason": "Kept pending a content merge — the combined eulogy/obituary skill likely supersedes the eulogy-only one, but this is grief-adjacent content that deserves a careful read before retiring either."
     },
     {
       "a": "literature-review",
@@ -112,11 +97,6 @@
       "reason": "Name collision only: a job offer to a candidate vs a buyer's cover letter to a property seller."
     },
     {
-      "a": "youtube-script",
-      "b": "youtube-script-writer",
-      "reason": "Kept pending a content merge — long-form explainer scripting vs retention-focused scripting with A/V cues; the two bodies differ enough that a merge needs an author pass."
-    },
-    {
       "a": "async-decision-memo",
       "b": "decision-memo",
       "reason": "Running a decision asynchronously (read window, comment protocol, deadline) vs writing the memo itself."
@@ -135,11 +115,6 @@
       "a": "context-budget",
       "b": "context-switch-budget",
       "reason": "Name collision only: an LLM context window vs human attention fragmentation across a week."
-    },
-    {
-      "a": "demo-script",
-      "b": "sales-demo-script",
-      "reason": "Kept pending a content merge — both script product demos; the general one is richer but the sales-specific framing has its own audience."
     },
     {
       "a": "email-triage",

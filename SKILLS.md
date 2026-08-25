@@ -160,7 +160,7 @@
 | **Launch Tiering Framework** (`launch-tiering-framework`) | Tier a product launch (T1/T2/T3) and scope the right go-to-market effort. | — |
 | **Price Increase Announcement** (`price-increase-announcement`) | Announce a price increase without triggering a churn spike — the rationale, grandfathering, effective dates, the FAQ, and the internal brief so… | — |
 | **Pricing Page Copy** (`pricing-page-copy`) | Write pricing page copy that helps buyers self-select the right plan and convert. | — |
-| **Sales Demo Script** (`sales-demo-script`) | Write a product demo script that tells a value story instead of a feature tour. | — |
+| **Sales Demo Script** (`sales-demo-script`) | Write a product demo script that tells a value story instead of a feature tour — the buyer's-workflow storyline, the golden path rehearsed with… | — |
 | **Sales Enablement Kit** (`sales-enablement-kit`) | Build a sales enablement kit so reps can sell a product, feature, or launch confidently. | — |
 | **Voice of Customer Program** (`voice-of-customer-program`) | Stand up a Voice of Customer (VoC) program that turns feedback into action. | — |
 | **Win/Loss Analysis** (`win-loss-analysis`) | Analyze why deals are won and lost and turn it into an action plan. | — |
@@ -382,7 +382,7 @@
 | **Notes Humanizer** (`notes-humanizer`) | Strips AI writing patterns from text and rewrites it to sound genuinely human — removing the statistical defaults, then adding earned voice… | — |
 | **Substack Notes Scraper** (`substack-notes-scraper`) | Scrapes a Substack Notes page and exports engagement data to a formatted .xlsx file. | — |
 | **Thumbnail Creator Skill (via Gemini)** (`thumbnail-creator`) | Generate article or newsletter thumbnail candidates using the Gemini API from inside Claude Code. | — |
-| **YouTube Script Writer** (`youtube-script-writer`) | Write engaging, high-retention YouTube video scripts with visual and audio cues. | — |
+| **YouTube Script Writer** (`youtube-script-writer`) | Write a high-retention YouTube script — explainer, tutorial, video essay, review, or talking head — on the packaging then cold-open then… | — |
 
 ## 🤝 Customers & Sales (26 skills)
 
@@ -709,7 +709,7 @@
 | **Performance Review** (`performance-review`) | Write structured, balanced performance reviews from bullet-point inputs. | — |
 | **PIP Writer** (`pip-writer`) | Write a Performance Improvement Plan a manager can defend and an employee can actually act on — specific concerns, measurable goals, real support… | — |
 | **Team Health Check** (`team-health-check`) | Runs a structured team health assessment across key dimensions. | — |
-| **Team Offsite Planner** (`team-offsite-planner`) | Plan a team offsite from goals to full agenda. | — |
+| **Team Offsite Planner** (`team-offsite-planner`) | Plan a team offsite that earns its cost — the purpose split (connection vs decisions vs planning, weighted deliberately), an agenda that… | — |
 
 ### `pm-personal` — 11 skills · 1 eval-scored
 

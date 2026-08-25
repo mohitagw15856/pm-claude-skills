@@ -1,6 +1,6 @@
 ---
 name: saying-no-kindly
-description: "Decline requests without damaging relationships or your standing — the fast-clear-warm formula, the alternative-attached no, the no-to-the-boss version (tradeoffs, not refusal), and the scripts for the asks that recur. Use when asked how do I say no to this, decline this project politely, I say yes to everything and drown, or push back on my manager's request. Produces the decline scripts by relationship, the tradeoff framing for upward nos, the alternative menu, and the yes-audit that finds what to stop."
+description: "Decline requests without damaging relationships or your standing — the fast-clear-warm formula, the alternative-attached no, the no-to-the-boss version (tradeoffs, not refusal), and scripts for the asks that recur. Use when asked how do I say no to this, turn down a request, decline extra work politely, I say yes to everything and drown, push back on my manager, or protect the roadmap from a pet feature. Produces the decline scripts by relationship, the tradeoff framing, and the exact wording tuned to who is asking."
 homepage: https://mohitagw15856.github.io/pm-claude-skills/skill/saying-no-kindly.html
 metadata:
   {
