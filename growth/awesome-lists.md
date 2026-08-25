@@ -11,11 +11,15 @@ path. This is a systematic afternoon: one focused PR per list.
 
 ## Two corrections to the previous version of this plan
 
-- It said the repo was **✅ already listed in awesome-claude-skills**. It is not
-  in [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)
-  (★73.2k), and a GitHub code search for `pm-claude-skills` returns only three
-  unrelated repositories, none of them an awesome-list. Treat that row as an
-  open target, not a completed one.
+- The entry in **awesome-claude-skills is real but stale.** The listing is in
+  [BehiSecc/awesome-claude-skills](https://github.com/BehiSecc/awesome-claude-skills)
+  (★10.1k) — the repo the README badge points at — and it still reads *"771
+  professional skills across 35 professions"* against an actual 1,153. That row
+  is a **refresh**, not a new submission.
+  (A separate, larger [ComposioHQ/awesome-claude-skills](https://github.com/ComposioHQ/awesome-claude-skills)
+  (★73.2k) exists and does **not** list the repo — it is a genuine open target.
+  Searching for the list by name returns ComposioHQ's first, which is how these
+  two got confused.)
 - The entry text said **1,117 skills**. It is 1,153. Counts in outbound copy
   rot the same way counts in docs do — regenerate before you send.
 
@@ -23,6 +27,7 @@ path. This is a systematic afternoon: one focused PR per list.
 
 | List | Repo | Stars | CONTRIBUTING | Angle to pitch |
 |---|---|---:|---|---|
+| awesome-claude-skills **(listed)** | `BehiSecc/awesome-claude-skills` | 10.1k | — | **Refresh only** — entry says 771 skills, actual is 1,153 |
 | awesome-claude-skills | `ComposioHQ/awesome-claude-skills` | 73.2k | yes | 1,153 skills as a single installable library |
 | awesome-claude-code | `hesreallyhim/awesome-claude-code` | 53.0k | yes | Native Claude Code plugin + 127 bundles |
 | awesome-mcp-servers | `punkpeye/awesome-mcp-servers` | 92.8k | yes | The MCP server — search and pull skills on demand |
@@ -56,18 +61,36 @@ Regenerate the count before sending: `node -e "console.log(require('./web/skills
 
 ## Tracking
 
-| List | PR opened | URL | Status |
-|---|---|---|---|
-| awesome-claude-skills | | | not started |
-| awesome-claude-code | | | not started |
-| awesome-mcp-servers | | | not started |
-| awesome-llm-apps | | | not started |
-| awesome-ai-agents | | | not started |
-| awesome-cursorrules | | | not started |
-| awesome-chatgpt-prompts | | | not started |
-| awesome-ai-coding-tools | | | not started |
-| awesome-gemini | | | not started |
-| awesome-open-source-alternatives | | | not started |
+Submitted 2026-08-25. Three were **updates to PRs that were already open** at a
+stale count — always check for an existing PR before opening one.
+
+| List | PR | State |
+|---|---|---|
+| awesome-claude-skills (BehiSecc) | [#624](https://github.com/BehiSecc/awesome-claude-skills/pull/624) | open — refresh 771 → 1,153 |
+| awesome-claude-skills (ComposioHQ) | [#1439](https://github.com/ComposioHQ/awesome-claude-skills/pull/1439) | open — existing PR refreshed |
+| awesome-claude-skills (travisvn) | [#1038](https://github.com/travisvn/awesome-claude-skills/pull/1038) | open — existing PR refreshed; duplicate #885 closed |
+| awesome-mcp-servers | [#12850](https://github.com/punkpeye/awesome-mcp-servers/pull/12850) | open — Product Management, agent fast-track opted in |
+| awesome-ai-coding-tools | [#652](https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/652) | open — Developer Productivity Tools |
+| awesome-llm-apps | [#1119](https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1119) | open — Agent Skills, external entry |
+
+## Not submitted, and why
+
+Six targets from the original list do not actually accept an entry like this.
+Submitting anyway would have wasted a maintainer's time and, in the first case,
+risked the account.
+
+| List | Why not |
+|---|---|
+| awesome-claude-code | **Needs a human.** CONTRIBUTING forbids PRs ("do not open a PR"), requires the web-UI issue form, states it is not possible via the `gh` CLI, and says recommendations "must be created by human beings". Opening one "risks being restricted from interacting with this repository". **This is the one worth doing by hand** — ★53k, and the project clears their 100-star / 14-day bar comfortably. |
+| awesome-cursorrules | Accepts only `.mdc` rule files under `rules/`, plus a two-item directory of rule *directories*. A repo link fits neither shape. |
+| awesome-gemini | Wrong Gemini — it covers the `gemini://` internet protocol, not Google's model. The original plan assumed the latter. |
+| awesome-chatgpt-prompts | A prompts dataset (CSV + README), not a directory of projects. |
+| awesome-ai-agents | States it is "only for AI assistants and agents" and redirects tools to a sibling list. A skill library is not an agent. |
+| awesome-open-source-alternatives | Entries are "X, an open-source alternative to \<proprietary product\>". There is no proprietary product this replaces. |
+
+Also considered and skipped: `e2b-dev/awesome-sdks-for-ai-agents` (SDKs and
+observability platforms, ★1.2k, semi-dormant) and
+`Chat2AnyLLM/awesome-claude-skills` (★146, a previous submission was closed).
 
 ## Bonus: get *others* to list you
 
