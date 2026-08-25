@@ -77,6 +77,11 @@ function loadSkills() {
       title: (titleMatch ? titleMatch[1] : name).replace(/\s+Skill$/i, ''),
       description: meta.description || '',
       tier: tiers[name] || 'stable',
+      // docs/DEPRECATION.md promises a retired name keeps resolving here while
+      // dropping out of the catalogue. That was documented but never carried
+      // through to this server, so retired skills were still being listed.
+      deprecated: meta.deprecated || null,
+      supersededBy: meta.supersededBy || null,
       body: body.trim(),
     });
   }
@@ -84,6 +89,8 @@ function loadSkills() {
 }
 
 const SKILLS = loadSkills();
+// SKILLS resolves any name ever published; LIVE is what browse and search show.
+const LIVE = SKILLS.filter((s) => !s.deprecated);
 const byName = new Map(SKILLS.map((s) => [s.name, s]));
 
 // Workflow recipes (chains of skills). Optional — absent in older installs.
@@ -193,6 +200,30 @@ const TOOLS = [
       required: ['query', 'matches'],
     },
     annotations: { title: 'Search skills', ...READONLY },
+  },
+  {
+    name: 'disambiguate_skill',
+    title: 'Choose between similar skills',
+    description: 'When two or more skills look like they do the same job, this says which one to use and why. Call it after search_skills returns near-identical candidates, or before assuming a skill is missing — the library has 1000+ skills and the same job is often named differently than you expect.',
+    inputSchema: {
+      type: 'object',
+      additionalProperties: false,
+      properties: {
+        name: { type: 'string', description: 'A skill id you are considering, e.g. "threat-model". Returns its confusable neighbours, whether it has been retired, and the family of skills sharing its first word.' },
+      },
+      required: ['name'],
+    },
+    outputSchema: {
+      type: 'object',
+      properties: {
+        name: { type: 'string', description: 'The skill asked about.' },
+        retired: { type: ['object', 'null'], description: 'Set when this name is retired; names the successor to use instead.' },
+        confusable: { type: 'array', description: 'Skills that look like this one, each with the rule for choosing between them.', items: { type: 'object' } },
+        family: { type: 'array', description: 'Other skills sharing the same first word — where a guessed name usually lands.', items: { type: 'object' } },
+      },
+      required: ['name', 'confusable'],
+    },
+    annotations: { title: 'Choose between similar skills', ...READONLY },
   },
   {
     name: 'get_skill',
@@ -420,10 +451,59 @@ function checkContrast(args) {
   };
 }
 
+// Reviewed look-alike pairs and their tie-break reasons, from the same file
+// that gates duplicate detection in CI. Read lazily so a missing file degrades
+// to "no guidance" rather than breaking the server.
+let DUPE_PAIRS = null;
+function dupePairs() {
+  if (DUPE_PAIRS) return DUPE_PAIRS;
+  try {
+    DUPE_PAIRS = JSON.parse(readFileSync(join(PKG_ROOT, 'skill-dupes-allow.json'), 'utf8')).pairs || [];
+  } catch { DUPE_PAIRS = []; }
+  return DUPE_PAIRS;
+}
+
 function runTool(name, args = {}) {
   if (name === 'check_contrast') return checkContrast(args);
+  if (name === 'disambiguate_skill') {
+    const want = String(args.name || '').trim();
+    if (!want) throw new Error('name is required');
+    const self = SKILLS.find((s) => s.name === want);
+
+    const confusable = dupePairs()
+      .filter((p) => p.a === want || p.b === want)
+      .map((p) => {
+        const other = p.a === want ? p.b : p.a;
+        const o = SKILLS.find((s) => s.name === other);
+        return { other, title: o ? o.title : null, howToChoose: p.reason };
+      });
+
+    const retired = self && self.deprecated
+      ? { since: self.deprecated, useInstead: self.supersededBy || null }
+      : null;
+
+    const head = want.split('-')[0];
+    const family = head.length < 3 ? [] : SKILLS
+      .filter((s) => s.name !== want && s.name.split('-')[0] === head && !s.deprecated)
+      .map((s) => ({ name: s.name, title: s.title, summary: (s.description || '').split(/(?<=\.)\s/)[0] }));
+
+    const lines = [];
+    if (!self) lines.push(`No skill named "${want}". It may have been renamed — check the family below, or call search_skills.`);
+    if (retired) lines.push(`"${want}" is retired (${retired.since})${retired.useInstead ? `. Use "${retired.useInstead}" instead.` : ' and is no longer maintained.'}`);
+    if (confusable.length) {
+      lines.push(`${confusable.length} skill(s) are commonly confused with "${want}":`);
+      for (const c of confusable) lines.push(`- ${c.other} — ${c.howToChoose}`);
+    } else if (self && !retired) {
+      lines.push(`No skill is commonly confused with "${want}".`);
+    }
+    if (family.length) {
+      lines.push('', `Others in the "${head}-*" family:`);
+      for (const f of family.slice(0, 15)) lines.push(`- ${f.name} — ${f.summary}`);
+    }
+    return { text: lines.join('\n'), structured: { name: want, retired, confusable, family } };
+  }
   if (name === 'list_skills') {
-    const list = SKILLS.filter((s) => !args.tier || s.tier === args.tier);
+    const list = LIVE.filter((s) => !args.tier || s.tier === args.tier);
     const text = `${list.length} skills:\n` + list.map((s) => `- ${s.name} [${s.tier}] — ${s.description}`).join('\n');
     return { text, structured: { count: list.length, skills: list.map(skillItem) } };
   }
@@ -431,7 +511,7 @@ function runTool(name, args = {}) {
     const q = String(args.query || '').toLowerCase().trim();
     if (!q) throw new Error('query is required');
     const terms = q.split(/\s+/);
-    const scored = SKILLS.map((s) => {
+    const scored = LIVE.map((s) => {
       const hay = (s.name + ' ' + s.description + ' ' + s.body).toLowerCase();
       let score = 0;
       for (const t of terms) {
@@ -448,7 +528,18 @@ function runTool(name, args = {}) {
   if (name === 'get_skill') {
     const s = byName.get(String(args.name || '').trim());
     if (!s) throw new Error(`Unknown skill "${args.name}". Use search_skills or list_skills to find one.`);
-    return { text: s.body, structured: { name: s.name, title: s.title, instructions: s.body } };
+    // A retired name still returns its instructions — that is the contract —
+    // but the caller is told, once, where the maintained version lives.
+    const notice = s.deprecated
+      ? `> This skill was retired on ${s.deprecated}${s.supersededBy ? ` and is superseded by "${s.supersededBy}"` : ''}. It still runs; prefer the successor for new work.\n\n`
+      : '';
+    return {
+      text: notice + s.body,
+      structured: {
+        name: s.name, title: s.title, instructions: s.body,
+        ...(s.deprecated ? { deprecated: s.deprecated, supersededBy: s.supersededBy } : {}),
+      },
+    };
   }
   if (name === 'get_skill_inputs') {
     const s2 = byName.get(String(args.name || '').trim());

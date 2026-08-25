@@ -16,7 +16,8 @@ That's it — all 174 skills and 5 workflow recipes are now available in every C
 |---|---|
 | `list_skills` | List every skill (name, tier, one-line description). Optional `tier` filter. |
 | `search_skills` | Keyword search across name, description, and body — returns the best matches. |
-| `get_skill` | Return the full instructions for one skill by name, ready to apply. |
+| `disambiguate_skill` | Which of two similar skills to use, and why. Returns the confusable neighbours with the rule for choosing, whether the name has been retired and what replaced it, and the family of skills sharing its first word. Call it when search returns near-identical candidates, or before concluding a skill is missing. |
+| `get_skill` | Return the full instructions for one skill by name, ready to apply. A retired name still resolves and comes back with a one-line notice naming its successor. |
 | `list_workflows` | List workflow recipes — named chains of skills (e.g. ship-a-feature). |
 | `get_workflow` | Return one recipe: the ordered skills to run and what each produces. |
 | `run_skill` | **Execute a skill with zero API key** — via [MCP sampling](https://modelcontextprotocol.io/docs/concepts/sampling), the generation runs on *your client's* model. Pass `name` + `input`, get the finished artifact back. If your client doesn't support sampling yet, the tool says so and points you at `get_skill`. |
