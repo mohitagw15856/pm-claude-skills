@@ -1,12 +1,12 @@
 {
-  "week": 2955,
-  "skill": "churn-analysis",
-  "title": "Churn Analysis",
-  "summary": "Produce a structured churn analysis that separates avoidable from unavoidable churn.",
-  "link": "https://mohitagw15856.github.io/pm-claude-skills/index.html?skill=churn-analysis",
-  "generatedAt": "2026-08-24T09:36:51.157Z",
+  "week": 2956,
+  "skill": "code-review-checklist",
+  "title": "Code Review Checklist",
+  "summary": "Generate a tailored code review checklist for any pull request based on the language, type of change, and risk level.",
+  "link": "https://mohitagw15856.github.io/pm-claude-skills/index.html?skill=code-review-checklist",
+  "generatedAt": "2026-08-31T16:32:19.026Z",
   "posts": {
-    "x": "🛠️ Skill of the week: Churn Analysis\n\nProduce a structured churn analysis that separates avoidable from unavoidable churn.\n\nRun it free in your browser (no install) 👇\nhttps://mohitagw15856.github.io/pm-claude-skills/index.html?skill=churn-analysis\n\n#ClaudeAI #AItools #ProductManagement",
-    "linkedin": "🛠️ Skill of the week: Churn Analysis\n\nProduce a structured churn analysis that separates avoidable from unavoidable churn.\n\nIt's one of 174 open-source AI skills that make Claude, ChatGPT, and Gemini produce real professional work. Try this one free in the browser — no install:\nhttps://mohitagw15856.github.io/pm-claude-skills/index.html?skill=churn-analysis\n\n⭐ https://github.com/mohitagw15856/pm-claude-skills"
+    "x": "🛠️ Skill of the week: Code Review Checklist\n\nGenerate a tailored code review checklist for any pull request based on the language, type of change, and risk level.\n\nRun it free in your browser (no install) 👇\nhttps://mohitagw15856.github.io/pm-claude-skills/index.html?skill=code-review-checklist\n\n#ClaudeAI #AItools #ProductManagement",
+    "linkedin": "🛠️ Skill of the week: Code Review Checklist\n\nGenerate a tailored code review checklist for any pull request based on the language, type of change, and risk level.\n\nIt's one of 174 open-source AI skills that make Claude, ChatGPT, and Gemini produce real professional work. Try this one free in the browser — no install:\nhttps://mohitagw15856.github.io/pm-claude-skills/index.html?skill=code-review-checklist\n\n⭐ https://github.com/mohitagw15856/pm-claude-skills"
   }
 }
