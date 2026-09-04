@@ -71,7 +71,7 @@ stale count — always check for an existing PR before opening one.
 | awesome-claude-skills (travisvn) | [#1038](https://github.com/travisvn/awesome-claude-skills/pull/1038) | open — existing PR refreshed; duplicate #885 closed |
 | awesome-mcp-servers | [#12850](https://github.com/punkpeye/awesome-mcp-servers/pull/12850) | open — Product Management, agent fast-track opted in |
 | awesome-ai-coding-tools | [#652](https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/652) | open — Developer Productivity Tools |
-| awesome-llm-apps | [#1119](https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1119) | open — Agent Skills, external entry |
+| awesome-llm-apps | [#1119](https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1119) → [#1140](https://github.com/Shubhamsaboo/awesome-llm-apps/pull/1140) | #1119 closed (they host code, not links — fair). #1140 contributes runway-monte-carlo *into* their repo: skill + script + 13-check deterministic eval + trigger spec, their schemas exactly. |
 | awesome-cursorrules | [#362](https://github.com/PatrickJS/awesome-cursorrules/pull/362) | open — new `.mdc` rule, Documentation |
 
 ## Not submitted, and why
