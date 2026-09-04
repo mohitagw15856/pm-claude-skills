@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1154 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1169 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -132,6 +132,7 @@
 | Car TCO | `pm-calculators` | `pm-calculators/car-tco/SYSTEM_PROMPT.md` |
 | Carbon Accounting Check | `pm-climate` | `pm-climate/carbon-accounting-check/SYSTEM_PROMPT.md` |
 | Care-Decision Family Meeting | `pm-caregiving` | `pm-caregiving/care-decision-family-meeting/SYSTEM_PROMPT.md` |
+| Care-Home Contract Decoder | `pm-decoders` | `pm-decoders/care-home-contract-decoder/SYSTEM_PROMPT.md` |
 | Care-Team Coordinator | `pm-caregiving` | `pm-caregiving/care-team-coordinator/SYSTEM_PROMPT.md` |
 | Career Ladder Map | `pm-career` | `pm-career/career-ladder-map/SYSTEM_PROMPT.md` |
 | Career Pivot Plan | `pm-career` | `pm-career/career-pivot-plan/SYSTEM_PROMPT.md` |
@@ -279,6 +280,7 @@
 | Decision Meeting Format | `pm-cowork` | `pm-cowork/decision-meeting-format/SYSTEM_PROMPT.md` |
 | Decision Memo | `pm-business` | `pm-business/decision-memo/SYSTEM_PROMPT.md` |
 | Decision Panel | `pm-thinking` | `pm-thinking/decision-panel/SYSTEM_PROMPT.md` |
+| Decision Tree Solver | `pm-calculators` | `pm-calculators/decision-tree-solver/SYSTEM_PROMPT.md` |
 | Decision When Tired | `pm-focus` | `pm-focus/decision-when-tired/SYSTEM_PROMPT.md` |
 | Deck Autopsy | `pm-vision` | `pm-vision/deck-autopsy/SYSTEM_PROMPT.md` |
 | Deck from Doc (Live) | `pm-cowork-live` | `pm-cowork-live/deck-from-doc/SYSTEM_PROMPT.md` |
@@ -324,6 +326,7 @@
 | Disability Benefit Appeal | `pm-accessibility` | `pm-accessibility/disability-benefit-appeal/SYSTEM_PROMPT.md` |
 | Disability Disclosure Decision | `pm-accessibility` | `pm-accessibility/disability-disclosure-decision/SYSTEM_PROMPT.md` |
 | Disability Insurance Decoder | `pm-decoders` | `pm-decoders/disability-insurance-decoder/SYSTEM_PROMPT.md` |
+| Disagreeing Experts | `pm-thinking` | `pm-thinking/disagreeing-experts/SYSTEM_PROMPT.md` |
 | Disaster Recovery Plan | `pm-engineering` | `pm-engineering/disaster-recovery-plan/SYSTEM_PROMPT.md` |
 | Discharge Summary | `pm-health` | `pm-health/discharge-summary/SYSTEM_PROMPT.md` |
 | Discovery Call Prep | `pm-sales` | `pm-sales/discovery-call-prep/SYSTEM_PROMPT.md` |
@@ -409,7 +412,9 @@
 | Expungement Navigator | `pm-reentry` | `pm-reentry/expungement-navigator/SYSTEM_PROMPT.md` |
 | Fact-Check Pass | `pm-journalism` | `pm-journalism/fact-check-pass/SYSTEM_PROMPT.md` |
 | Factory Acceptance Test | `pm-hardware` | `pm-hardware/factory-acceptance-test/SYSTEM_PROMPT.md` |
+| Fair Split | `pm-calculators` | `pm-calculators/fair-split/SYSTEM_PROMPT.md` |
 | Faith Transition Companion | `pm-identity` | `pm-identity/faith-transition-companion/SYSTEM_PROMPT.md` |
+| Family Cookbook Archivist | `pm-family` | `pm-family/family-cookbook-archivist/SYSTEM_PROMPT.md` |
 | Family Emergency Plan | `pm-family` | `pm-family/family-emergency-plan/SYSTEM_PROMPT.md` |
 | Fantasy League Drafter | `pm-hobbies` | `pm-hobbies/fantasy-league-drafter/SYSTEM_PROMPT.md` |
 | FAQ Builder | `pm-cowork` | `pm-cowork/faq-builder/SYSTEM_PROMPT.md` |
@@ -458,12 +463,14 @@
 | Form Filler Operator | `pm-operator` | `pm-operator/form-filler-operator/SYSTEM_PROMPT.md` |
 | Formula Detangler | `pm-cowork` | `pm-cowork/formula-detangler/SYSTEM_PROMPT.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/SYSTEM_PROMPT.md` |
+| Franchise Decoder | `pm-decoders` | `pm-decoders/franchise-decoder/SYSTEM_PROMPT.md` |
 | Franklin Decision Ledger | `pm-dead-mentors` | `pm-dead-mentors/franklin-decision-ledger/SYSTEM_PROMPT.md` |
 | Freelance Rate | `pm-calculators` | `pm-calculators/freelance-rate/SYSTEM_PROMPT.md` |
 | Freight Rate Quote | `pm-fleet` | `pm-fleet/freight-rate-quote/SYSTEM_PROMPT.md` |
 | From First Principles | `pm-thinking` | `pm-thinking/from-first-principles/SYSTEM_PROMPT.md` |
 | Frontend Design | `pm-design` | `pm-design/frontend-design/SYSTEM_PROMPT.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/SYSTEM_PROMPT.md` |
+| Funeral Pricing Decoder | `pm-decoders` | `pm-decoders/funeral-pricing-decoder/SYSTEM_PROMPT.md` |
 | Future Self Interview | `other` | `other/future-self-interview/SYSTEM_PROMPT.md` |
 | Future Selves Council | `pm-thinking` | `pm-thinking/future-selves-council/SYSTEM_PROMPT.md` |
 | Game Night Planner | `pm-tabletop` | `pm-tabletop/game-night-planner/SYSTEM_PROMPT.md` |
@@ -515,6 +522,7 @@
 | Hospital-Stay Plan | `pm-caregiving` | `pm-caregiving/hospital-stay-plan/SYSTEM_PROMPT.md` |
 | Driver Hours Compliance Check | `pm-fleet` | `pm-fleet/hours-of-service-check/SYSTEM_PROMPT.md` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/SYSTEM_PROMPT.md` |
+| Household Constitution | `pm-family` | `pm-family/household-constitution/SYSTEM_PROMPT.md` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/SYSTEM_PROMPT.md` |
 | Housing With a Record | `pm-reentry` | `pm-reentry/housing-with-a-record/SYSTEM_PROMPT.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/SYSTEM_PROMPT.md` |
@@ -705,6 +713,7 @@
 | One-Pager | `pm-personal` | `pm-personal/one-pager/SYSTEM_PROMPT.md` |
 | Open House Plan | `pm-realestate` | `pm-realestate/open-house-plan/SYSTEM_PROMPT.md` |
 | Opposing Counsel | `pm-simulators` | `pm-simulators/opposing-counsel/SYSTEM_PROMPT.md` |
+| Oral History Kit | `pm-family` | `pm-family/oral-history-kit/SYSTEM_PROMPT.md` |
 | Org Chart | `pm-visuals` | `pm-visuals/org-chart/SYSTEM_PROMPT.md` |
 | Out Of Office Designer | `pm-cowork` | `pm-cowork/out-of-office-designer/SYSTEM_PROMPT.md` |
 | Outcome Tracker | `pm-autopilot` | `pm-autopilot/outcome-tracker/SYSTEM_PROMPT.md` |
@@ -1052,16 +1061,21 @@
 | The Car Dealership | `pm-simulators` | `pm-simulators/the-car-dealership/SYSTEM_PROMPT.md` |
 | The Churning Customer | `pm-simulators` | `pm-simulators/the-churning-customer/SYSTEM_PROMPT.md` |
 | The Due Diligence Call | `pm-simulators` | `pm-simulators/the-due-diligence-call/SYSTEM_PROMPT.md` |
+| The Ethics Board | `pm-simulators` | `pm-simulators/the-ethics-board/SYSTEM_PROMPT.md` |
 | The Ick Decoder | `other` | `other/the-ick-decoder/SYSTEM_PROMPT.md` |
 | The Insurance Adjuster | `pm-simulators` | `pm-simulators/the-insurance-adjuster/SYSTEM_PROMPT.md` |
 | The Journalist Call | `pm-simulators` | `pm-simulators/the-journalist-call/SYSTEM_PROMPT.md` |
+| The Loan Officer | `pm-simulators` | `pm-simulators/the-loan-officer/SYSTEM_PROMPT.md` |
 | The Maintainer's No | `pm-maintainer` | `pm-maintainer/the-maintainers-no/SYSTEM_PROMPT.md` |
 | The One Thing | `pm-focus` | `pm-focus/the-one-thing/SYSTEM_PROMPT.md` |
 | The Open House | `pm-simulators` | `pm-simulators/the-open-house/SYSTEM_PROMPT.md` |
 | The Org Simulator | `pm-2027` | `pm-2027/the-org-simulator/SYSTEM_PROMPT.md` |
+| The Planning Committee | `pm-simulators` | `pm-simulators/the-planning-committee/SYSTEM_PROMPT.md` |
 | The Price Pushback | `pm-simulators` | `pm-simulators/the-price-pushback/SYSTEM_PROMPT.md` |
 | The Procurement Gauntlet | `pm-simulators` | `pm-simulators/the-procurement-gauntlet/SYSTEM_PROMPT.md` |
 | The Promotion Committee | `pm-simulators` | `pm-simulators/the-promotion-committee/SYSTEM_PROMPT.md` |
+| The Ruthless Editor | `pm-craft` | `pm-craft/the-ruthless-editor/SYSTEM_PROMPT.md` |
+| The School Appeal | `pm-simulators` | `pm-simulators/the-school-appeal/SYSTEM_PROMPT.md` |
 | The Second Opinion | `pm-thinking` | `pm-thinking/the-second-opinion/SYSTEM_PROMPT.md` |
 | The Skeptic and the Believer | `pm-thinking` | `pm-thinking/the-skeptic-and-the-believer/SYSTEM_PROMPT.md` |
 | The Strong No | `pm-thinking` | `pm-thinking/the-strong-no/SYSTEM_PROMPT.md` |
@@ -1069,6 +1083,7 @@
 | The Third Answer | `pm-thinking` | `pm-thinking/the-third-answer/SYSTEM_PROMPT.md` |
 | The Time Capsule | `pm-2027` | `pm-2027/the-time-capsule/SYSTEM_PROMPT.md` |
 | The Understudy | `pm-2027` | `pm-2027/the-understudy/SYSTEM_PROMPT.md` |
+| The Union Table | `pm-simulators` | `pm-simulators/the-union-table/SYSTEM_PROMPT.md` |
 | The Vibe Check | `pm-newgen` | `pm-newgen/the-vibe-check/SYSTEM_PROMPT.md` |
 | The Visa Interview | `pm-simulators` | `pm-simulators/the-visa-interview/SYSTEM_PROMPT.md` |
 | The Worry Decompiler | `pm-focus` | `pm-focus/the-worry-decompiler/SYSTEM_PROMPT.md` |

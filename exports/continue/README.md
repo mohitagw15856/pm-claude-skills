@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1154 skills exported. Copy a `.md rule` into the tool to use it.
+1169 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -132,6 +132,7 @@
 | Car TCO | `pm-calculators` | `pm-calculators/car-tco/car-tco.md` |
 | Carbon Accounting Check | `pm-climate` | `pm-climate/carbon-accounting-check/carbon-accounting-check.md` |
 | Care-Decision Family Meeting | `pm-caregiving` | `pm-caregiving/care-decision-family-meeting/care-decision-family-meeting.md` |
+| Care-Home Contract Decoder | `pm-decoders` | `pm-decoders/care-home-contract-decoder/care-home-contract-decoder.md` |
 | Care-Team Coordinator | `pm-caregiving` | `pm-caregiving/care-team-coordinator/care-team-coordinator.md` |
 | Career Ladder Map | `pm-career` | `pm-career/career-ladder-map/career-ladder-map.md` |
 | Career Pivot Plan | `pm-career` | `pm-career/career-pivot-plan/career-pivot-plan.md` |
@@ -279,6 +280,7 @@
 | Decision Meeting Format | `pm-cowork` | `pm-cowork/decision-meeting-format/decision-meeting-format.md` |
 | Decision Memo | `pm-business` | `pm-business/decision-memo/decision-memo.md` |
 | Decision Panel | `pm-thinking` | `pm-thinking/decision-panel/decision-panel.md` |
+| Decision Tree Solver | `pm-calculators` | `pm-calculators/decision-tree-solver/decision-tree-solver.md` |
 | Decision When Tired | `pm-focus` | `pm-focus/decision-when-tired/decision-when-tired.md` |
 | Deck Autopsy | `pm-vision` | `pm-vision/deck-autopsy/deck-autopsy.md` |
 | Deck from Doc (Live) | `pm-cowork-live` | `pm-cowork-live/deck-from-doc/deck-from-doc.md` |
@@ -324,6 +326,7 @@
 | Disability Benefit Appeal | `pm-accessibility` | `pm-accessibility/disability-benefit-appeal/disability-benefit-appeal.md` |
 | Disability Disclosure Decision | `pm-accessibility` | `pm-accessibility/disability-disclosure-decision/disability-disclosure-decision.md` |
 | Disability Insurance Decoder | `pm-decoders` | `pm-decoders/disability-insurance-decoder/disability-insurance-decoder.md` |
+| Disagreeing Experts | `pm-thinking` | `pm-thinking/disagreeing-experts/disagreeing-experts.md` |
 | Disaster Recovery Plan | `pm-engineering` | `pm-engineering/disaster-recovery-plan/disaster-recovery-plan.md` |
 | Discharge Summary | `pm-health` | `pm-health/discharge-summary/discharge-summary.md` |
 | Discovery Call Prep | `pm-sales` | `pm-sales/discovery-call-prep/discovery-call-prep.md` |
@@ -409,7 +412,9 @@
 | Expungement Navigator | `pm-reentry` | `pm-reentry/expungement-navigator/expungement-navigator.md` |
 | Fact-Check Pass | `pm-journalism` | `pm-journalism/fact-check-pass/fact-check-pass.md` |
 | Factory Acceptance Test | `pm-hardware` | `pm-hardware/factory-acceptance-test/factory-acceptance-test.md` |
+| Fair Split | `pm-calculators` | `pm-calculators/fair-split/fair-split.md` |
 | Faith Transition Companion | `pm-identity` | `pm-identity/faith-transition-companion/faith-transition-companion.md` |
+| Family Cookbook Archivist | `pm-family` | `pm-family/family-cookbook-archivist/family-cookbook-archivist.md` |
 | Family Emergency Plan | `pm-family` | `pm-family/family-emergency-plan/family-emergency-plan.md` |
 | Fantasy League Drafter | `pm-hobbies` | `pm-hobbies/fantasy-league-drafter/fantasy-league-drafter.md` |
 | FAQ Builder | `pm-cowork` | `pm-cowork/faq-builder/faq-builder.md` |
@@ -458,12 +463,14 @@
 | Form Filler Operator | `pm-operator` | `pm-operator/form-filler-operator/form-filler-operator.md` |
 | Formula Detangler | `pm-cowork` | `pm-cowork/formula-detangler/formula-detangler.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/founder-market-fit.md` |
+| Franchise Decoder | `pm-decoders` | `pm-decoders/franchise-decoder/franchise-decoder.md` |
 | Franklin Decision Ledger | `pm-dead-mentors` | `pm-dead-mentors/franklin-decision-ledger/franklin-decision-ledger.md` |
 | Freelance Rate | `pm-calculators` | `pm-calculators/freelance-rate/freelance-rate.md` |
 | Freight Rate Quote | `pm-fleet` | `pm-fleet/freight-rate-quote/freight-rate-quote.md` |
 | From First Principles | `pm-thinking` | `pm-thinking/from-first-principles/from-first-principles.md` |
 | Frontend Design | `pm-design` | `pm-design/frontend-design/frontend-design.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/fundraising-faq.md` |
+| Funeral Pricing Decoder | `pm-decoders` | `pm-decoders/funeral-pricing-decoder/funeral-pricing-decoder.md` |
 | Future Self Interview | `other` | `other/future-self-interview/future-self-interview.md` |
 | Future Selves Council | `pm-thinking` | `pm-thinking/future-selves-council/future-selves-council.md` |
 | Game Night Planner | `pm-tabletop` | `pm-tabletop/game-night-planner/game-night-planner.md` |
@@ -515,6 +522,7 @@
 | Hospital-Stay Plan | `pm-caregiving` | `pm-caregiving/hospital-stay-plan/hospital-stay-plan.md` |
 | Driver Hours Compliance Check | `pm-fleet` | `pm-fleet/hours-of-service-check/hours-of-service-check.md` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/house-style-enforcer.md` |
+| Household Constitution | `pm-family` | `pm-family/household-constitution/household-constitution.md` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/houseplant-care.md` |
 | Housing With a Record | `pm-reentry` | `pm-reentry/housing-with-a-record/housing-with-a-record.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/human-in-the-loop-design.md` |
@@ -705,6 +713,7 @@
 | One-Pager | `pm-personal` | `pm-personal/one-pager/one-pager.md` |
 | Open House Plan | `pm-realestate` | `pm-realestate/open-house-plan/open-house-plan.md` |
 | Opposing Counsel | `pm-simulators` | `pm-simulators/opposing-counsel/opposing-counsel.md` |
+| Oral History Kit | `pm-family` | `pm-family/oral-history-kit/oral-history-kit.md` |
 | Org Chart | `pm-visuals` | `pm-visuals/org-chart/org-chart.md` |
 | Out Of Office Designer | `pm-cowork` | `pm-cowork/out-of-office-designer/out-of-office-designer.md` |
 | Outcome Tracker | `pm-autopilot` | `pm-autopilot/outcome-tracker/outcome-tracker.md` |
@@ -1052,16 +1061,21 @@
 | The Car Dealership | `pm-simulators` | `pm-simulators/the-car-dealership/the-car-dealership.md` |
 | The Churning Customer | `pm-simulators` | `pm-simulators/the-churning-customer/the-churning-customer.md` |
 | The Due Diligence Call | `pm-simulators` | `pm-simulators/the-due-diligence-call/the-due-diligence-call.md` |
+| The Ethics Board | `pm-simulators` | `pm-simulators/the-ethics-board/the-ethics-board.md` |
 | The Ick Decoder | `other` | `other/the-ick-decoder/the-ick-decoder.md` |
 | The Insurance Adjuster | `pm-simulators` | `pm-simulators/the-insurance-adjuster/the-insurance-adjuster.md` |
 | The Journalist Call | `pm-simulators` | `pm-simulators/the-journalist-call/the-journalist-call.md` |
+| The Loan Officer | `pm-simulators` | `pm-simulators/the-loan-officer/the-loan-officer.md` |
 | The Maintainer's No | `pm-maintainer` | `pm-maintainer/the-maintainers-no/the-maintainers-no.md` |
 | The One Thing | `pm-focus` | `pm-focus/the-one-thing/the-one-thing.md` |
 | The Open House | `pm-simulators` | `pm-simulators/the-open-house/the-open-house.md` |
 | The Org Simulator | `pm-2027` | `pm-2027/the-org-simulator/the-org-simulator.md` |
+| The Planning Committee | `pm-simulators` | `pm-simulators/the-planning-committee/the-planning-committee.md` |
 | The Price Pushback | `pm-simulators` | `pm-simulators/the-price-pushback/the-price-pushback.md` |
 | The Procurement Gauntlet | `pm-simulators` | `pm-simulators/the-procurement-gauntlet/the-procurement-gauntlet.md` |
 | The Promotion Committee | `pm-simulators` | `pm-simulators/the-promotion-committee/the-promotion-committee.md` |
+| The Ruthless Editor | `pm-craft` | `pm-craft/the-ruthless-editor/the-ruthless-editor.md` |
+| The School Appeal | `pm-simulators` | `pm-simulators/the-school-appeal/the-school-appeal.md` |
 | The Second Opinion | `pm-thinking` | `pm-thinking/the-second-opinion/the-second-opinion.md` |
 | The Skeptic and the Believer | `pm-thinking` | `pm-thinking/the-skeptic-and-the-believer/the-skeptic-and-the-believer.md` |
 | The Strong No | `pm-thinking` | `pm-thinking/the-strong-no/the-strong-no.md` |
@@ -1069,6 +1083,7 @@
 | The Third Answer | `pm-thinking` | `pm-thinking/the-third-answer/the-third-answer.md` |
 | The Time Capsule | `pm-2027` | `pm-2027/the-time-capsule/the-time-capsule.md` |
 | The Understudy | `pm-2027` | `pm-2027/the-understudy/the-understudy.md` |
+| The Union Table | `pm-simulators` | `pm-simulators/the-union-table/the-union-table.md` |
 | The Vibe Check | `pm-newgen` | `pm-newgen/the-vibe-check/the-vibe-check.md` |
 | The Visa Interview | `pm-simulators` | `pm-simulators/the-visa-interview/the-visa-interview.md` |
 | The Worry Decompiler | `pm-focus` | `pm-focus/the-worry-decompiler/the-worry-decompiler.md` |

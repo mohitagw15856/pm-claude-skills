@@ -1,7 +1,7 @@
 # 🧭 Disambiguation — you want *this* one, not that one
 
 > **Generated — do not edit.** Run `node scripts/build-disambiguation.mjs`.
-> 1142 live skills across 130 bundles, plus 12 retired names that still resolve.
+> 1157 live skills across 130 bundles, plus 12 retired names that still resolve.
 
 At this size the hard part is not finding *a* skill — it is telling two similar ones apart, and
 knowing whether the thing you are about to write already exists under a different noun.
@@ -84,23 +84,28 @@ point at their successor. See [docs/DEPRECATION.md](docs/DEPRECATION.md).
 Groups sharing a first word — where a guessed name usually lands. Skim the family before
 assuming the skill you want is missing.
 
-**`the-*`** (26)
+**`the-*`** (32)
 
 - `the-2-minute-launch` · pm-focus — Break the paralysis on the thing you keep not starting with a 2-minute launch sequence — a countdown into motion before the resistance can win.
 - `the-boring-answer-detector` · pm-thinking — Scan a plan, draft, or idea for the generic, textbook, everyone-would-say-that lines — and push each toward something sharper and more specific.
 - `the-car-dealership` · pm-simulators — Simulate the car-buying gauntlet before you walk in — the four-square worksheet, the payment-question trap, the trade-in shuffle, and the finance office's second sales floor, all run against your actual deal.
 - `the-churning-customer` · pm-simulators — Simulate the exact customer who will quietly cancel in month 4 — their internal monologue through the lifecycle and the honest exit interview they never gave you.
 - `the-due-diligence-call` · pm-simulators — Simulate the due-diligence call where an acquirer's or investor's analyst takes your metrics apart — the questions behind the spreadsheet, the moment a number wobbles, and a debrief on which answers create risk.
+- `the-ethics-board` · pm-simulators — Simulate defending your study or protocol before an ethics committee — the consent-comprehension probe, the vulnerable-participant challenge, the minimal-risk fight, the data-retention question you did not prepare for — with a debrief mapping every wobble to the protocol section that needs rewriting.
 - `the-ick-decoder` — Figure out whether 'the ick' about someone you're dating is a real incompatibility, a genuine red flag, or an anxious/avoidant self-sabotage pattern worth pushing through — by interrogating the specific ick honestly.
 - `the-insurance-adjuster` · pm-simulators — Simulate the adjuster's settlement call after your accident or loss — the recorded-statement asks, the quick-settlement anchor, the friendly minimization — run against your actual claim, with a debrief on every answer that shrank it.
 - `the-journalist-call` · pm-simulators — Simulate a hostile-but-fair journalist interview about your company or announcement — the questions you fear, live follow-ups on every dodge, then the story they'd file.
+- `the-loan-officer` · pm-simulators — Simulate the mortgage or business-loan underwriting conversation before you have it for real — the deposit-source probe, the any-other-debts completeness test, the casual question about your job plans that can sink the file — run against your actual numbers, with a debrief on every answer that raised a flag.
 - `the-maintainers-no` · pm-maintainer — Say no as an open-source maintainer without burning contributors or yourself — the feature that doesn't fit, the PR that took someone a weekend but can't merge, the company that wants free support, the fork suggestion said kindly.
 - `the-one-thing` · pm-focus — Cut a full plate down to the single highest-leverage move — the one thing that, done today, makes everything else easier or unnecessary.
 - `the-open-house` · pm-simulators — Simulate the open house and the listing agent's read of you — the questions that profile your budget and urgency, the staging that hides what inspection finds, and the offer-pressure choreography, run before you fall in love with anything.
 - `the-org-simulator` · pm-2027 — Stress-test a proposed org change before announcing it — simulate who gains, who loses, who blocks, where friction erupts in the first 90 days, and run the memo leak test: how does this land when it leaks before you announce it? Use when planning a reorg, changing reporting lines, merging or splitting teams, moving a function, or 'how will this org change land?'.
+- `the-planning-committee` · pm-simulators — Simulate defending your planning application before the committee that decides it — the neighbour objections read into the record, the character-of-the-area catch-all, the parking pile-on, the councillor with a pet issue — run against your actual scheme, inside a three-minute speaking slot.
 - `the-price-pushback` · pm-simulators — Simulate the client who grinds on your price — the budget theater, the competitor quote, the scope squeeze — against your actual offer, with a debrief on where you caved and what holding would have sounded like.
 - `the-procurement-gauntlet` · pm-simulators — Simulate enterprise procurement and security review of your product before your first big deal meets it for real — the questionnaire, the gaps, the deal-slowing findings.
 - `the-promotion-committee` · pm-simulators — Simulate the calibration meeting that discusses your promotion after your manager leaves the room — the debate, the packet's holes, the verdict.
+- `the-ruthless-editor` · pm-craft — Run any draft through the editor who owes you nothing — the buried lede surfaced, the throat-clearing cut, the hedges un-stacked, every paragraph made to answer so what — with a target of 30% shorter and the voice intact.
+- `the-school-appeal` · pm-simulators — Simulate a school-place appeal panel before you face the real one — the two questions the panel is actually deciding, the probe that separates grounds from feelings, the prejudice balance your case must tip — run against your actual reasons, with a debrief on which answers built a case and which only expressed one.
 - `the-second-opinion` · pm-thinking — Deliberately take the opposite position from your leaning and make you defend yours — a forced second opinion that isn't just an echo.
 - `the-skeptic-and-the-believer` · pm-thinking — See an idea through two committed extremes — a true believer and a hard skeptic — so you get the full range before settling in the middle.
 - `the-strong-no` · pm-thinking — Find the real reason to NOT do the exciting thing you're about to commit to — the honest case against, before the excitement carries you in.
@@ -108,6 +113,7 @@ assuming the skill you want is missing.
 - `the-third-answer` · pm-thinking — Push past the first few obvious answers to a question and surface the non-obvious idea worth having.
 - `the-time-capsule` · pm-2027 — Write a sealed memo to your future self or successor — the honest state of things, falsifiable predictions with confidence levels, and the advice you suspect they'll need — with an open-on date and a scoring ritual for when it's opened.
 - `the-understudy` · pm-2027 — Study 3-5 samples of the user's real writing and decisions, build an explicit 'how you think' profile, then draft new work as their understudy — always with a 'what I couldn't infer about you' list so the gaps are visible instead of guessed.
+- `the-union-table` · pm-simulators — Simulate a collective-bargaining session from either chair — the package-versus-item trap, the caucus break used as a weapon, the mandate check, the costing challenge, the last-minute add — run against your actual negotiation, with a debrief on every concession that left the table unpaid-for.
 - `the-vibe-check` · pm-newgen — Harden a vibe-coded app before strangers use it — the audit for prototypes built fast with AI: exposed secrets, missing auth checks, unvalidated input, data with no deletion path, and the five embarrassing holes every weekend build has.
 - `the-visa-interview` · pm-simulators — Simulate a consular visa interview — the 90-second assessment, the questions behind the questions, and a debrief on which answers helped and hurt.
 - `the-worry-decompiler` · pm-focus — Turn an anxious spiral into a concrete list — separate the specific worries from the vague dread, sort what you can act on from what you can't, and get one action.
@@ -126,6 +132,19 @@ assuming the skill you want is missing.
 - `data-retention-policy` · pm-compliance — Build a data retention and deletion schedule grounded in legal basis.
 - `data-slide-design` · pm-cowork — Design slides where the data makes the argument — the takeaway-titled chart, the one-chart-per-slide rule, the annotation layer that guides the eye to the point, and the honesty pass on projected data.
 
+**`decision-*`** (10)
+
+- `decision-autopsy` · pm-warroom — Judge a past decision by its PROCESS, not its outcome — because good decisions lose and bad decisions win, and teams that can't tell the difference learn the wrong lessons.
+- `decision-forensics` · pm-method — Reconstruct the decision actually made in a messy Slack, email, or meeting thread into a proper decision record — commitments named, silent assumptions surfaced, non-decisions called out.
+- `decision-helper` · pm-personal — Help me decide between options with a weighted pros/cons that actually reaches a recommendation — not just two lists.
+- `decision-journal` · pm-essentials — Record decisions the way good judgment compounds — the reasoning, the alternatives, the probabilities, and what would change your mind, written down BEFORE the outcome arrives, then reviewed against reality.
+- `decision-log-setup` · pm-cowork — Set up the team decision log that ends relitigation — the one-line-per-decision format (what, why, who, when, reopening rule), the capture moments wired into existing rituals, and the lookup habit that makes it pay.
+- `decision-meeting-format` · pm-cowork — Run meetings that actually decide — the pre-read-then-decide format, the options-on-the-table rule, the decider named before debate starts, and the recorded-or-it-didn't-happen close.
+- `decision-memo` · pm-business — Write a crisp decision memo that drives a clear decision, not a discussion.
+- `decision-panel` · pm-thinking — Run a decision past a panel of clashing advisors — an optimist, a pessimist, a numbers person, an ethicist, and future-you — then get a chair's verdict.
+- `decision-tree-solver` · pm-calculators — Turn a fork-in-the-road decision into a computed expected-value tree — settle or sue, launch or wait, fix or replace — rolled back by the bundled script, with the break-even probability where the answer flips.
+- `decision-when-tired` · pm-focus — Make a decent decision when you're too depleted to think well — a low-energy protocol that protects you from bad tired-brain choices.
+
 **`figma-*`** (10)
 
 - `figma-annotation-guide` · pm-figma — Generate structured developer handoff annotations for a Figma screen or component.
@@ -138,18 +157,6 @@ assuming the skill you want is missing.
 - `figma-spacing-system` · pm-figma — Design a spacing and layout token system for a Figma design system.
 - `figma-user-flow-planner` · pm-figma — Plan user flows and screen states for a Figma design before any designing starts.
 - `figma-variant-matrix` · pm-figma — Define component variants and states systematically for Figma.
-
-**`decision-*`** (9)
-
-- `decision-autopsy` · pm-warroom — Judge a past decision by its PROCESS, not its outcome — because good decisions lose and bad decisions win, and teams that can't tell the difference learn the wrong lessons.
-- `decision-forensics` · pm-method — Reconstruct the decision actually made in a messy Slack, email, or meeting thread into a proper decision record — commitments named, silent assumptions surfaced, non-decisions called out.
-- `decision-helper` · pm-personal — Help me decide between options with a weighted pros/cons that actually reaches a recommendation — not just two lists.
-- `decision-journal` · pm-essentials — Record decisions the way good judgment compounds — the reasoning, the alternatives, the probabilities, and what would change your mind, written down BEFORE the outcome arrives, then reviewed against reality.
-- `decision-log-setup` · pm-cowork — Set up the team decision log that ends relitigation — the one-line-per-decision format (what, why, who, when, reopening rule), the capture moments wired into existing rituals, and the lookup habit that makes it pay.
-- `decision-meeting-format` · pm-cowork — Run meetings that actually decide — the pre-read-then-decide format, the options-on-the-table rule, the decider named before debate starts, and the recorded-or-it-didn't-happen close.
-- `decision-memo` · pm-business — Write a crisp decision memo that drives a clear decision, not a discussion.
-- `decision-panel` · pm-thinking — Run a decision past a panel of clashing advisors — an optimist, a pessimist, a numbers person, an ethicist, and future-you — then get a chair's verdict.
-- `decision-when-tired` · pm-focus — Make a decent decision when you're too depleted to think well — a low-energy protocol that protects you from bad tired-brain choices.
 
 **`agent-*`** (8)
 

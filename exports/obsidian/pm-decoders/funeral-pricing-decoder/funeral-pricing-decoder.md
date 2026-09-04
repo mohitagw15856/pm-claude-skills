@@ -1,0 +1,84 @@
+---
+aliases: ["Funeral Pricing Decoder"]
+tags: [pm-skills, skill]
+skill: funeral-pricing-decoder
+description: "Decode a funeral home price list while grieving — the package maths versus the itemised list, the non-declinable basic fee, the upsells that arrive as care, and the direct-cremation benchmark that anchors every other number. Use when asked to compare funeral quotes, is this funeral price fair, what can we decline, or help me read this price list. Produces a line-by-line decode, the decline-safely list, package-versus-itemised maths, questions for the director, and a comparison across homes. Consumer information, not legal advice; disclosure rules are strongest in the US (FTC Funeral Rule)."
+---
+
+# Funeral Pricing Decoder
+
+Funeral pricing is the only major purchase routinely made inside seventy-two hours, by someone in grief, from a seller who is also a comforter — and the price list reflects that. Packages bundle the declinable with the mandatory; the casket room is arranged around the middle-priced model; and phrases like *protective* and *what most families choose* do work that would be illegal in most other retail. This decodes the list line by line: what the law (where it applies) says must be itemised, what can be declined, what the direct-cremation figure reveals about every other number on the page — so the decision can be made with love *and* arithmetic, which are not opposites.
+
+## What This Skill Produces
+
+- **A line-by-line decode** — every item on the price list classified: mandatory fee, required-if-chosen, freely declinable, or third-party pass-through
+- **The decline-safely list** — what can be refused without disrespect: embalming in many circumstances, the package's bundled extras, the home's own casket
+- **Package vs itemised maths** — the package unbundled and re-priced from the itemised list, with the difference shown
+- **The benchmark anchor** — the home's direct-cremation and immediate-burial figures, which price the *service minimum* and expose the margin on everything above
+- **Questions for the director** — phrased for a conversation that stays warm while the numbers get answered
+- **A comparison table** — the same funeral specified across multiple homes, like-for-like
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The price list(s)** — pasted or summarised; if the home has not provided one in writing, that fact is itself a finding
+- **What is wanted** — burial or cremation, service type and size, any religious or cultural requirements that fix certain choices
+- **The budget reality** — stated plainly; the skill's whole job is making the money conversation possible
+- **The country** — disclosure rights differ sharply: the US FTC Funeral Rule mandates itemised general price lists and third-party casket acceptance; elsewhere protections vary and the skill flags what to verify locally
+
+## Framework: Read the List Like a Buyer, Not a Mourner
+
+1. **Find the non-declinable fee first.** Most lists carry a basic-services fee that applies regardless of choices — it is the real price of engaging that home, and comparing *it* across homes is the fastest meaningful comparison.
+2. **Unbundle every package.** Re-price the package from the home's own itemised list. Packages that cost more than their parts are common; packages that hide declinable items inside "everything taken care of" are the norm.
+3. **Anchor on direct cremation / immediate burial.** These minimum-service figures reveal each home's floor. A home whose floor is double another's prices everything from a different baseline — grief does not change that arithmetic.
+4. **Decode the casket room.** Markup concentrates here. *Protective* caskets (gaskets, sealers) do not preserve remains — where the US Rule applies, homes may not claim otherwise — and third-party caskets generally must be accepted without a handling fee there. Elsewhere: ask, in writing.
+5. **Question embalming as a default.** It is frequently presented as required; in many jurisdictions it is not, outside specific circumstances (some public viewings, some transport). The decode marks it required-if-chosen at most, pending local verification.
+6. **Separate the home from the cash advances.** Flowers, obituaries, clergy, cemetery fees are often pass-throughs — ask whether they are marked up, and take any the family would rather handle directly.
+7. **Keep the warmth.** Every question here can be asked kindly. Directors who welcome them are common and worth choosing; a home that resists itemised discussion has answered a different question.
+
+## Output Format
+
+### Funeral price decode: [home(s)] · [burial/cremation] · [date]
+
+**The non-declinable floor:** basic-services fee [amount] · direct-cremation benchmark [amount] · immediate-burial benchmark [amount]
+
+**Line-by-line**
+| Item | Price | Class | Note |
+|---|---|---|---|
+| [item] | [amount] | mandatory / required-if-chosen / declinable / pass-through | [what the phrasing is doing] |
+
+**Package check:** [package name] at [price] vs unbundled [sum] → **difference [amount]** · bundled declinables: [list]
+
+**Decline-safely list:** [items, each with the one-line reason and any verify-locally flag]
+
+**Questions for the director** — [warm phrasings that get numbers]
+
+**Across homes** (like-for-like: [specification])
+| Home | Basic fee | This funeral, itemised | Notes |
+|---|---|---|---|
+
+> Consumer information, not legal advice. Itemisation rights, embalming rules, and casket-acceptance duties vary by country; the strongest stated protections referenced here are US (FTC Funeral Rule) — verify locally elsewhere. None of this arithmetic is a comment on how much anyone loved anyone.
+
+## Quality Checks
+- [ ] Every line is classified, and no item is left as ambiguous prose
+- [ ] The package is re-priced from the home's own itemised numbers
+- [ ] The benchmark figures appear and are used as the anchor
+- [ ] Protective-casket and embalming claims are decoded with the verify-locally flag where the US Rule does not apply
+- [ ] Questions are phrased to keep the conversation warm
+- [ ] The tone never implies spending less means grieving less
+
+## Anti-Patterns
+- **Decoding with contempt.** Most funeral directors are decent; the decode targets pricing structure, not the profession.
+- **Letting the package stand unexamined** because "it's easier right now" — easier is what the bundle is priced on.
+- **Treating embalming or the protective casket as fact** rather than claims with jurisdictions attached.
+- **Comparing homes on the package price** instead of the like-for-like itemised build.
+- **Rushing the reader.** Nothing here expires in an afternoon; a family that takes a day to compare loses nothing.
+- **Ever equating cost with love.** The skill exists to break that equation, not reinforce it.
+
+---
+<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
+     variable for the highlighted text — replace it with your plugin's equivalent
+     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
+Apply the skill above to the following input:
+
+{{selection}}

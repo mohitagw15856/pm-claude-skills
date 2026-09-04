@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1154 skills exported. Copy a `.mdc rule` into the tool to use it.
+1169 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -132,6 +132,7 @@
 | Car TCO | `pm-calculators` | `pm-calculators/car-tco/car-tco.mdc` |
 | Carbon Accounting Check | `pm-climate` | `pm-climate/carbon-accounting-check/carbon-accounting-check.mdc` |
 | Care-Decision Family Meeting | `pm-caregiving` | `pm-caregiving/care-decision-family-meeting/care-decision-family-meeting.mdc` |
+| Care-Home Contract Decoder | `pm-decoders` | `pm-decoders/care-home-contract-decoder/care-home-contract-decoder.mdc` |
 | Care-Team Coordinator | `pm-caregiving` | `pm-caregiving/care-team-coordinator/care-team-coordinator.mdc` |
 | Career Ladder Map | `pm-career` | `pm-career/career-ladder-map/career-ladder-map.mdc` |
 | Career Pivot Plan | `pm-career` | `pm-career/career-pivot-plan/career-pivot-plan.mdc` |
@@ -279,6 +280,7 @@
 | Decision Meeting Format | `pm-cowork` | `pm-cowork/decision-meeting-format/decision-meeting-format.mdc` |
 | Decision Memo | `pm-business` | `pm-business/decision-memo/decision-memo.mdc` |
 | Decision Panel | `pm-thinking` | `pm-thinking/decision-panel/decision-panel.mdc` |
+| Decision Tree Solver | `pm-calculators` | `pm-calculators/decision-tree-solver/decision-tree-solver.mdc` |
 | Decision When Tired | `pm-focus` | `pm-focus/decision-when-tired/decision-when-tired.mdc` |
 | Deck Autopsy | `pm-vision` | `pm-vision/deck-autopsy/deck-autopsy.mdc` |
 | Deck from Doc (Live) | `pm-cowork-live` | `pm-cowork-live/deck-from-doc/deck-from-doc.mdc` |
@@ -324,6 +326,7 @@
 | Disability Benefit Appeal | `pm-accessibility` | `pm-accessibility/disability-benefit-appeal/disability-benefit-appeal.mdc` |
 | Disability Disclosure Decision | `pm-accessibility` | `pm-accessibility/disability-disclosure-decision/disability-disclosure-decision.mdc` |
 | Disability Insurance Decoder | `pm-decoders` | `pm-decoders/disability-insurance-decoder/disability-insurance-decoder.mdc` |
+| Disagreeing Experts | `pm-thinking` | `pm-thinking/disagreeing-experts/disagreeing-experts.mdc` |
 | Disaster Recovery Plan | `pm-engineering` | `pm-engineering/disaster-recovery-plan/disaster-recovery-plan.mdc` |
 | Discharge Summary | `pm-health` | `pm-health/discharge-summary/discharge-summary.mdc` |
 | Discovery Call Prep | `pm-sales` | `pm-sales/discovery-call-prep/discovery-call-prep.mdc` |
@@ -409,7 +412,9 @@
 | Expungement Navigator | `pm-reentry` | `pm-reentry/expungement-navigator/expungement-navigator.mdc` |
 | Fact-Check Pass | `pm-journalism` | `pm-journalism/fact-check-pass/fact-check-pass.mdc` |
 | Factory Acceptance Test | `pm-hardware` | `pm-hardware/factory-acceptance-test/factory-acceptance-test.mdc` |
+| Fair Split | `pm-calculators` | `pm-calculators/fair-split/fair-split.mdc` |
 | Faith Transition Companion | `pm-identity` | `pm-identity/faith-transition-companion/faith-transition-companion.mdc` |
+| Family Cookbook Archivist | `pm-family` | `pm-family/family-cookbook-archivist/family-cookbook-archivist.mdc` |
 | Family Emergency Plan | `pm-family` | `pm-family/family-emergency-plan/family-emergency-plan.mdc` |
 | Fantasy League Drafter | `pm-hobbies` | `pm-hobbies/fantasy-league-drafter/fantasy-league-drafter.mdc` |
 | FAQ Builder | `pm-cowork` | `pm-cowork/faq-builder/faq-builder.mdc` |
@@ -458,12 +463,14 @@
 | Form Filler Operator | `pm-operator` | `pm-operator/form-filler-operator/form-filler-operator.mdc` |
 | Formula Detangler | `pm-cowork` | `pm-cowork/formula-detangler/formula-detangler.mdc` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/founder-market-fit.mdc` |
+| Franchise Decoder | `pm-decoders` | `pm-decoders/franchise-decoder/franchise-decoder.mdc` |
 | Franklin Decision Ledger | `pm-dead-mentors` | `pm-dead-mentors/franklin-decision-ledger/franklin-decision-ledger.mdc` |
 | Freelance Rate | `pm-calculators` | `pm-calculators/freelance-rate/freelance-rate.mdc` |
 | Freight Rate Quote | `pm-fleet` | `pm-fleet/freight-rate-quote/freight-rate-quote.mdc` |
 | From First Principles | `pm-thinking` | `pm-thinking/from-first-principles/from-first-principles.mdc` |
 | Frontend Design | `pm-design` | `pm-design/frontend-design/frontend-design.mdc` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/fundraising-faq.mdc` |
+| Funeral Pricing Decoder | `pm-decoders` | `pm-decoders/funeral-pricing-decoder/funeral-pricing-decoder.mdc` |
 | Future Self Interview | `other` | `other/future-self-interview/future-self-interview.mdc` |
 | Future Selves Council | `pm-thinking` | `pm-thinking/future-selves-council/future-selves-council.mdc` |
 | Game Night Planner | `pm-tabletop` | `pm-tabletop/game-night-planner/game-night-planner.mdc` |
@@ -515,6 +522,7 @@
 | Hospital-Stay Plan | `pm-caregiving` | `pm-caregiving/hospital-stay-plan/hospital-stay-plan.mdc` |
 | Driver Hours Compliance Check | `pm-fleet` | `pm-fleet/hours-of-service-check/hours-of-service-check.mdc` |
 | House Style Enforcer | `pm-cowork` | `pm-cowork/house-style-enforcer/house-style-enforcer.mdc` |
+| Household Constitution | `pm-family` | `pm-family/household-constitution/household-constitution.mdc` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/houseplant-care.mdc` |
 | Housing With a Record | `pm-reentry` | `pm-reentry/housing-with-a-record/housing-with-a-record.mdc` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/human-in-the-loop-design.mdc` |
@@ -705,6 +713,7 @@
 | One-Pager | `pm-personal` | `pm-personal/one-pager/one-pager.mdc` |
 | Open House Plan | `pm-realestate` | `pm-realestate/open-house-plan/open-house-plan.mdc` |
 | Opposing Counsel | `pm-simulators` | `pm-simulators/opposing-counsel/opposing-counsel.mdc` |
+| Oral History Kit | `pm-family` | `pm-family/oral-history-kit/oral-history-kit.mdc` |
 | Org Chart | `pm-visuals` | `pm-visuals/org-chart/org-chart.mdc` |
 | Out Of Office Designer | `pm-cowork` | `pm-cowork/out-of-office-designer/out-of-office-designer.mdc` |
 | Outcome Tracker | `pm-autopilot` | `pm-autopilot/outcome-tracker/outcome-tracker.mdc` |
@@ -1052,16 +1061,21 @@
 | The Car Dealership | `pm-simulators` | `pm-simulators/the-car-dealership/the-car-dealership.mdc` |
 | The Churning Customer | `pm-simulators` | `pm-simulators/the-churning-customer/the-churning-customer.mdc` |
 | The Due Diligence Call | `pm-simulators` | `pm-simulators/the-due-diligence-call/the-due-diligence-call.mdc` |
+| The Ethics Board | `pm-simulators` | `pm-simulators/the-ethics-board/the-ethics-board.mdc` |
 | The Ick Decoder | `other` | `other/the-ick-decoder/the-ick-decoder.mdc` |
 | The Insurance Adjuster | `pm-simulators` | `pm-simulators/the-insurance-adjuster/the-insurance-adjuster.mdc` |
 | The Journalist Call | `pm-simulators` | `pm-simulators/the-journalist-call/the-journalist-call.mdc` |
+| The Loan Officer | `pm-simulators` | `pm-simulators/the-loan-officer/the-loan-officer.mdc` |
 | The Maintainer's No | `pm-maintainer` | `pm-maintainer/the-maintainers-no/the-maintainers-no.mdc` |
 | The One Thing | `pm-focus` | `pm-focus/the-one-thing/the-one-thing.mdc` |
 | The Open House | `pm-simulators` | `pm-simulators/the-open-house/the-open-house.mdc` |
 | The Org Simulator | `pm-2027` | `pm-2027/the-org-simulator/the-org-simulator.mdc` |
+| The Planning Committee | `pm-simulators` | `pm-simulators/the-planning-committee/the-planning-committee.mdc` |
 | The Price Pushback | `pm-simulators` | `pm-simulators/the-price-pushback/the-price-pushback.mdc` |
 | The Procurement Gauntlet | `pm-simulators` | `pm-simulators/the-procurement-gauntlet/the-procurement-gauntlet.mdc` |
 | The Promotion Committee | `pm-simulators` | `pm-simulators/the-promotion-committee/the-promotion-committee.mdc` |
+| The Ruthless Editor | `pm-craft` | `pm-craft/the-ruthless-editor/the-ruthless-editor.mdc` |
+| The School Appeal | `pm-simulators` | `pm-simulators/the-school-appeal/the-school-appeal.mdc` |
 | The Second Opinion | `pm-thinking` | `pm-thinking/the-second-opinion/the-second-opinion.mdc` |
 | The Skeptic and the Believer | `pm-thinking` | `pm-thinking/the-skeptic-and-the-believer/the-skeptic-and-the-believer.mdc` |
 | The Strong No | `pm-thinking` | `pm-thinking/the-strong-no/the-strong-no.mdc` |
@@ -1069,6 +1083,7 @@
 | The Third Answer | `pm-thinking` | `pm-thinking/the-third-answer/the-third-answer.mdc` |
 | The Time Capsule | `pm-2027` | `pm-2027/the-time-capsule/the-time-capsule.mdc` |
 | The Understudy | `pm-2027` | `pm-2027/the-understudy/the-understudy.mdc` |
+| The Union Table | `pm-simulators` | `pm-simulators/the-union-table/the-union-table.mdc` |
 | The Vibe Check | `pm-newgen` | `pm-newgen/the-vibe-check/the-vibe-check.mdc` |
 | The Visa Interview | `pm-simulators` | `pm-simulators/the-visa-interview/the-visa-interview.mdc` |
 | The Worry Decompiler | `pm-focus` | `pm-focus/the-worry-decompiler/the-worry-decompiler.mdc` |

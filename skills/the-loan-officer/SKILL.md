@@ -1,0 +1,68 @@
+---
+name: the-loan-officer
+description: "Simulate the mortgage or business-loan underwriting conversation before you have it for real — the deposit-source probe, the any-other-debts completeness test, the casual question about your job plans that can sink the file — run against your actual numbers, with a debrief on every answer that raised a flag. Use when asked to practice a mortgage interview, prep for a loan application meeting, why might the bank decline us, or what will the underwriter ask. Produces the interview transcript with the officer's file notes, the flag list by severity, and a debrief with the document that answers each flag. Not financial advice; never coaches concealment."
+---
+
+# The Loan Officer Skill
+
+The person across the desk is pleasant, unhurried, and building a file that a stranger in underwriting will read without you in the room. Every answer either becomes a document request, a note, or a flag — and the flags you create in conversation are the ones hardest to un-create later. This skill plays that interview against your actual numbers: the deposit question that is really an anti-money-laundering check, the "any other commitments?" that is a completeness test against your credit file they have already pulled, the friendly "any plans to change jobs?" that can void an approval. The debrief shows what entered the file, and which document answers each flag better than any explanation could.
+
+## What This Skill Produces
+
+- **The interview transcript** — 10–14 exchanges, with the officer's *file note* after each answer showing what the underwriter will read
+- **The flag list** — every flag raised, sorted by severity: kills-the-file, needs-a-document, needs-a-sentence
+- **The debrief** — answers sorted helped/neutral/hurt, each hurt one paired with the document or the precise phrasing that fixes it
+- **The bright lines** — the rules that hold for the real meeting, starting with the only fatal one: nothing on the application may be untrue
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The loan** — mortgage, remortgage, or business loan; amount, term, and deposit or security offered
+- **The numbers** — income and its shape (salaried, variable, self-employed years), existing debts and their payments, the deposit's source
+- **The rough spots, honestly** — the overdraft months, the gap in employment, the gifted deposit, the side income without paperwork, the old default. The simulation probes exactly these; rehearsing only the clean parts trains nothing
+- **The stage** — first conversation, full application, or responding to an underwriter query
+
+## Framework: The Officer's Moves
+
+1. **The credit file is already open.** "Any other loans or commitments?" is not a question, it is a cross-check — the car finance you forgot is on the screen in front of them, and an omission reads as concealment even when it was memory. The trained answer lists everything and lets the documents reconcile.
+2. **The deposit question is a provenance check.** "Lovely — and where did the deposit come from?" needs a paper trail, not a story. Gifted money needs the gift letter and the giver's ability to gift; savings need statements showing accumulation; a sudden lump needs its source document. The simulation shows an undocumented answer becoming a file note that stalls everything.
+3. **The affordability test runs at the stress rate, not your rate.** The payment you are comfortable with is not the test; the test is the payment at several points higher. The officer's "and if rates moved, how would that feel?" is scoring resilience — the good answer shows margin, not optimism.
+4. **The casual futures question is load-bearing.** "Any big changes coming — job, family, plans?" A job change between approval and completion can void the approval; announced honestly and early it can often be worked with, discovered later it reads as material non-disclosure. The simulation runs both timelines.
+5. **Bank statements are read line by line.** The gambling transactions, the payday-loan repayment, the monthly transfer to an account you did not mention — each appears as the officer, mid-interview, glancing down and asking about a specific line. The trained behaviour is knowing your own statements before they do.
+6. **The broker trigger, stated out of character:** complex income, a thin file, a prior decline, or a case that needs *placing* rather than merely applying is broker territory — the simulation says when the case has outgrown a branch conversation.
+
+## Output Format
+
+# Loan Interview: [loan type, amount] — [stage]
+
+> Simulation — a plausible underwriting read, not a lender's actual policy. Criteria vary by lender and jurisdiction.
+
+## The Transcript
+[The interview. *File note:* after each answer — what the underwriter will read, and the flag category it fed]
+
+## The Flag List
+| Flag | Severity | What raised it | What answers it |
+|---|---|---|---|
+[kills-the-file / needs-a-document / needs-a-sentence]
+
+## Debrief — out of character
+[Answers sorted helped/neutral/hurt · the document set to bring · the phrasings that state facts without volunteering appraisal]
+
+> Not financial advice, and never a coaching script for concealment — a false statement on a credit application is fraud in most jurisdictions, and the debrief's whole method is documents over stories. Where the case is complex, a regulated broker or adviser is the right room.
+
+## Quality Checks
+
+- [ ] Every file note names what the underwriter will actually read
+- [ ] The deposit-provenance beat appears and demands paper, not narrative
+- [ ] The stress-rate affordability question is asked and scored on margin
+- [ ] The futures question shows both timelines — disclosed early vs discovered late
+- [ ] The debrief pairs every hurt answer with a document or exact phrasing
+- [ ] The broker trigger appears out of character where the case warrants it
+
+## Anti-Patterns
+
+- [ ] Do not coach concealment or massaging of numbers — the training is completeness and paper, and a file built on omission collapses at underwriting
+- [ ] Do not make the officer hostile — the friendliness is real and the file is still adverse; both at once is the lesson
+- [ ] Do not let the forgotten car finance pass unnoted — the already-pulled-credit-file beat is the skill's signature
+- [ ] Do not quote lender criteria as fact — thresholds vary and change; the simulation trains the conversation, not the rulebook
+- [ ] Do not stay in character in the debrief

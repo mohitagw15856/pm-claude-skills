@@ -1,4 +1,4 @@
-# 🗂️ All 1154 Skills — full catalog
+# 🗂️ All 1169 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -176,7 +176,7 @@
 | **Social Media Audit** (`social-media-audit`) | Audit an existing social media presence across all active platforms. | — |
 | **Viral Content Framework** (`viral-content-framework`) | Build a framework for creating shareable, high-reach social media content. | — |
 
-## 💻 Engineering & AI (85 skills)
+## 💻 Engineering & AI (86 skills)
 
 ### `pm-ai` — 13 skills
 
@@ -196,7 +196,7 @@
 | **RAG Architecture Review** (`rag-architecture-review`) | Review an existing Retrieval-Augmented Generation system and find why it underperforms. | — |
 | **RAG Design Doc** (`rag-design-doc`) | Design a Retrieval-Augmented Generation system end to end. | — |
 
-### `pm-craft` — 5 skills
+### `pm-craft` — 6 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -205,6 +205,7 @@
 | **PR Description** (`pr-description`) | Write a clear pull-request description that gets reviewed fast and merged with confidence, from a git diff, branch summary, or commit list. | — |
 | **Refactoring Plan** (`refactoring-plan`) | Plan a safe, incremental refactor of messy code without changing behavior. | — |
 | **TDD Workflow** (`tdd-workflow`) | Drive a feature with a disciplined test-driven development loop — red, green, refactor. | — |
+| **The Ruthless Editor** (`the-ruthless-editor`) | Run any draft through the editor who owes you nothing — the buried lede surfaced, the throat-clearing cut, the hedges un-stacked, every paragraph… | — |
 
 ### `pm-dataeng` — 6 skills
 
@@ -432,7 +433,7 @@
 | **Support Macro** (`support-macro`) | Write reusable support macros / canned responses that sound human, not robotic. | — |
 | **Support Runbook** (`support-runbook`) | Write a support runbook for handling a recurring issue type consistently. | — |
 
-## 💰 Finance, Ops & Business (92 skills)
+## 💰 Finance, Ops & Business (94 skills)
 
 ### `pm-accounting` — 6 skills
 
@@ -458,7 +459,7 @@
 | **Job Application** (`job-application`) | Tailors a CV and cover letter to a specific job description. | — |
 | **Strategy Memo** (`strategy-memo`) | Write a strategy memo that commits to a bet and says what you won't do. | — |
 
-### `pm-calculators` — 27 skills
+### `pm-calculators` — 29 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -467,9 +468,11 @@
 | **College Cost** (`college-cost`) | Compute what a degree will actually cost — sticker minus real aid, inflated per year, split into cash and loans, with the loan's decade-long… | — |
 | **Daycare vs Stay-Home** (`daycare-vs-stay-home`) | Run the real math on a parent leaving work versus paying for childcare — the second income net of daycare, marginal taxes, and work costs, AND the… | — |
 | **Debt Payoff** (`debt-payoff`) | Build a debt payoff plan — avalanche vs snowball simulated month by month on your actual debts, the real payoff dates, and the… | — |
+| **Decision Tree Solver** (`decision-tree-solver`) | Turn a fork-in-the-road decision into a computed expected-value tree — settle or sue, launch or wait, fix or replace — rolled back by the bundled… | — |
 | **Emergency Fund** (`emergency-fund`) | Size an emergency fund from essential spend and real risk factors — not a one-size 'six months' — with the funding timeline and where the money… | — |
 | **EV vs Gas** (`ev-vs-gas`) | Compare an EV against a comparable gas car on total cost — upfront gap after incentives, energy vs fuel per year, maintenance delta, and the… | — |
 | **Exit Waterfall** (`exit-waterfall`) | Compute who gets what at each exit price from a cap table — liquidation preferences, conversion points, and where the founders' share collapses. | — |
+| **Fair Split** (`fair-split`) | Divide things that cannot be divided — an inherited house, a dissolved partnership, the furniture after a breakup — using sealed-bid fair division… | — |
 | **FIRE Number** (`fire-number`) | Compute a financial-independence (FIRE) target and years-to-reach with every assumption labeled as an assumption — plus a sensitivity table… | — |
 | **Freelance Rate** (`freelance-rate`) | Derive a freelance day/hourly rate backwards from target income, honest billable utilization, overhead, and the self-employment tax premium — the… | — |
 | **Offer Comparison** (`offer-comparison`) | Compare two or more job offers as total-comp curves over four years — vesting cliffs, bonuses, 401(k) match, and the crossover year computed, not… | — |
@@ -727,7 +730,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (686 skills)
+## 🌍 Industries & Public Sector (698 skills)
 
 ### `other` — 22 skills
 
@@ -1079,7 +1082,7 @@
 | **Stoic Setback Debrief** (`stoic-setback-debrief`) | Recover from a professional setback — a failed launch, brutal feedback, a public mistake, a lost deal, a layoff — using the actual exercises from… | — |
 | **Sun Tzu Strategy Brief** (`sun-tzu-strategy-brief`) | Prepare for a specific contest — a competitive deal, a negotiation, a market entry, a turf fight — using the actual planning framework from Sun… | — |
 
-### `pm-decoders` — 20 skills
+### `pm-decoders` — 23 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -1087,9 +1090,12 @@
 | **Auto Repair Estimate Decoder** (`auto-repair-estimate-decoder`) | Decode an auto repair estimate — what each line actually is, which items are urgent vs upsell, and the questions that separate a fair shop from a… | — |
 | **Benefits Decoder** (`benefits-decoder`) | Decode an employment benefits package into what it's actually worth and where the fine print bites. | — |
 | **Car Lease Decoder** (`car-lease-decoder`) | Decode a car lease offer — the money factor converted to APR, the cap-cost math, mileage and disposition traps, and what to negotiate. | — |
+| **Care-Home Contract Decoder** (`care-home-contract-decoder`) | Decode a care-home contract before a parent moves in — the fee-escalation clause with no cap, the needs-can-no-longer-be-met eviction trigger, the… | — |
 | **Claim Denial Decoder** (`claim-denial-decoder`) | Decode an insurance claim denial letter — what the cited reason actually means, whether it's commonly overturnable, and the appeal letter that… | — |
 | **Closing Disclosure Decoder** (`closing-disclosure-decoder`) | Decode a mortgage Closing Disclosure line by line — which fees are real, which are shoppable or junk, and what changed since the Loan Estimate. | — |
 | **Disability Insurance Decoder** (`disability-insurance-decoder`) | Decode a disability insurance policy or employer LTD plan — own-occupation vs any-occupation, the benefit math after offsets and taxes, and the… | — |
+| **Franchise Decoder** (`franchise-decoder`) | Decode a franchise offering before you sign away a decade — the earnings claims and their absence, the territory that is not exclusive, the… | — |
+| **Funeral Pricing Decoder** (`funeral-pricing-decoder`) | Decode a funeral home price list while grieving — the package maths versus the itemised list, the non-declinable basic fee, the upsells that… | — |
 | **HOA Decoder** (`hoa-decoder`) | Decode HOA covenants (CC&Rs) and the fee structure before you buy into them. | — |
 | **Home Contractor Quote Decoder** (`home-contractor-quote-decoder`) | Decode a home renovation or repair quote — allowances that aren't prices, exclusions that become change orders, payment schedules that shift risk… | — |
 | **Inspection Report Decoder** (`inspection-report-decoder`) | Decode a home inspection report into what's cosmetic, what's expensive, and what kills deals — with repair-cost ranges and the negotiation list. | — |
@@ -1205,7 +1211,7 @@
 | **Post-Event Debrief** (`post-event-debrief`) | Run an event debrief that changes the next event — what the numbers say, what actually went wrong versus what felt stressful, and the specific… | — |
 | **Venue Contract Review** (`venue-contract-review`) | Read a venue contract for the clauses that actually cost money — the minimum spend, the cancellation ladder, the attrition clause, and everything… | — |
 
-### `pm-family` — 12 skills
+### `pm-family` — 15 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -1213,11 +1219,14 @@
 | **Childcare Comparison** (`childcare-comparison`) | Compare childcare options — nursery/daycare, childminder, nanny, family, or a mix — for your family's real needs, budget, and values. | — |
 | **Co-Parenting Messages** (`co-parenting-messages`) | Write calm, businesslike co-parenting messages that keep the focus on the kids and stay out of the old conflict — for scheduling, expenses… | — |
 | **Condolence Message Helper** (`condolence-message-helper`) | Write a sincere condolence or sympathy message when someone has died or a friend is grieving — warm, personal, and free of the clichés that hurt… | — |
+| **Family Cookbook Archivist** (`family-cookbook-archivist`) | Rescue the recipes that exist only in someone's hands — the interview that converts a handful of this and cook until it looks right into… | — |
 | **Family Emergency Plan** (`family-emergency-plan`) | Build a family emergency plan — contacts, meeting points, key documents, and 'if something happens to me' info — so your household isn't… | — |
+| **Household Constitution** (`household-constitution`) | Turn the household unwritten rules into a short charter everyone actually agreed to — screens, chores, money, guests, quiet — drafted together… | — |
 | **In-Law Boundary Scripts** (`in-law-boundary-scripts`) | Set a boundary with in-laws or extended family kindly and clearly — the words to say, a united-front approach with your partner, and a plan for… | — |
 | **Long-Distance Relationship Plan** (`long-distance-relationship-plan`) | Build a plan to keep a long-distance relationship close and healthy — communication rhythms, visits, shared experiences, and a shared sense of the… | — |
 | **Love-Letter Helper** (`love-letter-helper`) | Help you write a heartfelt letter to someone you love — for an anniversary, a hard time, a birthday, or just because — that sounds like you and… | — |
 | **New-Baby Logistics** (`new-baby-logistics`) | Turn 'we're having a baby' into a calm, timed logistics plan — the admin, leave, registrations, and prep that has to happen, sequenced so nothing… | — |
+| **Oral History Kit** (`oral-history-kit`) | Record a parent's or grandparent's life while they can still tell it — the question arcs that unlock real stories instead of resume facts, the… | — |
 | **Relationship Check-In** (`relationship-check-in`) | Run a calm, regular relationship check-in with your partner — a structured 'how are we doing' conversation that catches small things before they… | — |
 | **School Choice Decision** (`school-choice-decision`) | Choose the right school for a specific child by weighing what actually matters to them and your family — not just rankings. | — |
 | **Wedding Vows Writer** (`wedding-vows-writer`) | Write personal wedding vows that sound like you — specific, heartfelt, and the right length — instead of generic or cheesy. | — |
@@ -1653,7 +1662,7 @@
 | **Quarterly Tax Rhythm** (`quarterly-tax-rhythm`) | Build the tax habit self-employment requires — the setaside percentage from day one, the quarterly calendar, the records that make filing boring… | — |
 | **Side Business Setup** (`side-business-setup`) | Set up a side business in the right order — the do-first sequence (separate money, basic terms, simple records) vs. | — |
 
-### `pm-simulators` — 15 skills
+### `pm-simulators` — 20 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -1664,12 +1673,17 @@
 | **The Car Dealership** (`the-car-dealership`) | Simulate the car-buying gauntlet before you walk in — the four-square worksheet, the payment-question trap, the trade-in shuffle, and the finance… | — |
 | **The Churning Customer** (`the-churning-customer`) | Simulate the exact customer who will quietly cancel in month 4 — their internal monologue through the lifecycle and the honest exit interview they… | — |
 | **The Due Diligence Call** (`the-due-diligence-call`) | Simulate the due-diligence call where an acquirer's or investor's analyst takes your metrics apart — the questions behind the spreadsheet, the… | — |
+| **The Ethics Board** (`the-ethics-board`) | Simulate defending your study or protocol before an ethics committee — the consent-comprehension probe, the vulnerable-participant challenge, the… | — |
 | **The Insurance Adjuster** (`the-insurance-adjuster`) | Simulate the adjuster's settlement call after your accident or loss — the recorded-statement asks, the quick-settlement anchor, the friendly… | — |
 | **The Journalist Call** (`the-journalist-call`) | Simulate a hostile-but-fair journalist interview about your company or announcement — the questions you fear, live follow-ups on every dodge, then… | — |
+| **The Loan Officer** (`the-loan-officer`) | Simulate the mortgage or business-loan underwriting conversation before you have it for real — the deposit-source probe, the any-other-debts… | — |
 | **The Open House** (`the-open-house`) | Simulate the open house and the listing agent's read of you — the questions that profile your budget and urgency, the staging that hides what… | — |
+| **The Planning Committee** (`the-planning-committee`) | Simulate defending your planning application before the committee that decides it — the neighbour objections read into the record, the… | — |
 | **The Price Pushback** (`the-price-pushback`) | Simulate the client who grinds on your price — the budget theater, the competitor quote, the scope squeeze — against your actual offer, with a… | — |
 | **The Procurement Gauntlet** (`the-procurement-gauntlet`) | Simulate enterprise procurement and security review of your product before your first big deal meets it for real — the questionnaire, the gaps… | — |
 | **The Promotion Committee** (`the-promotion-committee`) | Simulate the calibration meeting that discusses your promotion after your manager leaves the room — the debate, the packet's holes, the verdict. | — |
+| **The School Appeal** (`the-school-appeal`) | Simulate a school-place appeal panel before you face the real one — the two questions the panel is actually deciding, the probe that separates… | — |
+| **The Union Table** (`the-union-table`) | Simulate a collective-bargaining session from either chair — the package-versus-item trap, the caucus break used as a weapon, the mandate check… | — |
 | **The Visa Interview** (`the-visa-interview`) | Simulate a consular visa interview — the 90-second assessment, the questions behind the questions, and a debrief on which answers helped and hurt. | — |
 | **VC Partner Meeting** (`vc-partner-meeting`) | Simulate the VC partner meeting that discusses your pitch after you leave the room — four partner archetypes debate, then write the internal… | — |
 
@@ -1719,7 +1733,7 @@
 | **Lesson Plan Builder** (`lesson-plan-builder`) | Build a standards-aligned K-12 lesson plan with clear objectives, a timed activity sequence, checks for understanding, and differentiation. | — |
 | **Parent Conference Prep** (`parent-conference-prep`) | Prepare for a K-12 parent-teacher conference — including the hard ones. | — |
 
-### `pm-thinking` — 24 skills
+### `pm-thinking` — 25 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -1727,6 +1741,7 @@
 | **Cross-Examine Me** (`cross-examine-me`) | Stress-test a decision or claim through a sharp, fair Q&A — the questions a good lawyer or skeptical friend would ask before you commit. | — |
 | **Decision Panel** (`decision-panel`) | Run a decision past a panel of clashing advisors — an optimist, a pessimist, a numbers person, an ethicist, and future-you — then get a chair's… | — |
 | **Devil's Advocate On Demand** (`devils-advocate-on-demand`) | Argue hard against whatever you just concluded — so your decision has to survive a real challenge instead of an echo chamber. | — |
+| **Disagreeing Experts** (`disagreeing-experts`) | Put one situation in front of three professionals chosen to disagree — the lawyer, the accountant, and the therapist read the same divorce — each… | — |
 | **Explain My Decision To Me** (`explain-my-decision-to-me`) | Talk through a decision out loud with a patient thinking partner that reflects your reasoning back, so the answer you already half-know becomes clear. | — |
 | **Five Minds** (`five-minds`) | Answer a question five completely different ways — as five independent minds with clashing worldviews — then converge on what survives. | — |
 | **From First Principles** (`from-first-principles`) | Strip a problem down to what's actually true — the physics, economics, and human basics — and rebuild the answer from there, ignoring 'how it's… | — |
@@ -1837,4 +1852,4 @@
 
 ---
 
-_1154 skills across 131 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1169 skills across 131 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

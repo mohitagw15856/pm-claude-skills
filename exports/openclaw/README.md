@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1154 skills exported. Copy a `SKILL.md` into the tool to use it.
+1169 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -132,6 +132,7 @@
 | Car TCO | `pm-calculators` | `car-tco/SKILL.md` |
 | Carbon Accounting Check | `pm-climate` | `carbon-accounting-check/SKILL.md` |
 | Care-Decision Family Meeting | `pm-caregiving` | `care-decision-family-meeting/SKILL.md` |
+| Care-Home Contract Decoder | `pm-decoders` | `care-home-contract-decoder/SKILL.md` |
 | Care-Team Coordinator | `pm-caregiving` | `care-team-coordinator/SKILL.md` |
 | Career Ladder Map | `pm-career` | `career-ladder-map/SKILL.md` |
 | Career Pivot Plan | `pm-career` | `career-pivot-plan/SKILL.md` |
@@ -279,6 +280,7 @@
 | Decision Meeting Format | `pm-cowork` | `decision-meeting-format/SKILL.md` |
 | Decision Memo | `pm-business` | `decision-memo/SKILL.md` |
 | Decision Panel | `pm-thinking` | `decision-panel/SKILL.md` |
+| Decision Tree Solver | `pm-calculators` | `decision-tree-solver/SKILL.md` |
 | Decision When Tired | `pm-focus` | `decision-when-tired/SKILL.md` |
 | Deck Autopsy | `pm-vision` | `deck-autopsy/SKILL.md` |
 | Deck from Doc (Live) | `pm-cowork-live` | `deck-from-doc/SKILL.md` |
@@ -324,6 +326,7 @@
 | Disability Benefit Appeal | `pm-accessibility` | `disability-benefit-appeal/SKILL.md` |
 | Disability Disclosure Decision | `pm-accessibility` | `disability-disclosure-decision/SKILL.md` |
 | Disability Insurance Decoder | `pm-decoders` | `disability-insurance-decoder/SKILL.md` |
+| Disagreeing Experts | `pm-thinking` | `disagreeing-experts/SKILL.md` |
 | Disaster Recovery Plan | `pm-engineering` | `disaster-recovery-plan/SKILL.md` |
 | Discharge Summary | `pm-health` | `discharge-summary/SKILL.md` |
 | Discovery Call Prep | `pm-sales` | `discovery-call-prep/SKILL.md` |
@@ -409,7 +412,9 @@
 | Expungement Navigator | `pm-reentry` | `expungement-navigator/SKILL.md` |
 | Fact-Check Pass | `pm-journalism` | `fact-check-pass/SKILL.md` |
 | Factory Acceptance Test | `pm-hardware` | `factory-acceptance-test/SKILL.md` |
+| Fair Split | `pm-calculators` | `fair-split/SKILL.md` |
 | Faith Transition Companion | `pm-identity` | `faith-transition-companion/SKILL.md` |
+| Family Cookbook Archivist | `pm-family` | `family-cookbook-archivist/SKILL.md` |
 | Family Emergency Plan | `pm-family` | `family-emergency-plan/SKILL.md` |
 | Fantasy League Drafter | `pm-hobbies` | `fantasy-league-drafter/SKILL.md` |
 | FAQ Builder | `pm-cowork` | `faq-builder/SKILL.md` |
@@ -458,12 +463,14 @@
 | Form Filler Operator | `pm-operator` | `form-filler-operator/SKILL.md` |
 | Formula Detangler | `pm-cowork` | `formula-detangler/SKILL.md` |
 | Founder-Market Fit | `pm-founders` | `founder-market-fit/SKILL.md` |
+| Franchise Decoder | `pm-decoders` | `franchise-decoder/SKILL.md` |
 | Franklin Decision Ledger | `pm-dead-mentors` | `franklin-decision-ledger/SKILL.md` |
 | Freelance Rate | `pm-calculators` | `freelance-rate/SKILL.md` |
 | Freight Rate Quote | `pm-fleet` | `freight-rate-quote/SKILL.md` |
 | From First Principles | `pm-thinking` | `from-first-principles/SKILL.md` |
 | Frontend Design | `pm-design` | `frontend-design/SKILL.md` |
 | Fundraising FAQ | `pm-founders` | `fundraising-faq/SKILL.md` |
+| Funeral Pricing Decoder | `pm-decoders` | `funeral-pricing-decoder/SKILL.md` |
 | Future Self Interview | `other` | `future-self-interview/SKILL.md` |
 | Future Selves Council | `pm-thinking` | `future-selves-council/SKILL.md` |
 | Game Night Planner | `pm-tabletop` | `game-night-planner/SKILL.md` |
@@ -515,6 +522,7 @@
 | Hospital-Stay Plan | `pm-caregiving` | `hospital-stay-plan/SKILL.md` |
 | Driver Hours Compliance Check | `pm-fleet` | `hours-of-service-check/SKILL.md` |
 | House Style Enforcer | `pm-cowork` | `house-style-enforcer/SKILL.md` |
+| Household Constitution | `pm-family` | `household-constitution/SKILL.md` |
 | Houseplant Care | `pm-hobbies` | `houseplant-care/SKILL.md` |
 | Housing With a Record | `pm-reentry` | `housing-with-a-record/SKILL.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `human-in-the-loop-design/SKILL.md` |
@@ -705,6 +713,7 @@
 | One-Pager | `pm-personal` | `one-pager/SKILL.md` |
 | Open House Plan | `pm-realestate` | `open-house-plan/SKILL.md` |
 | Opposing Counsel | `pm-simulators` | `opposing-counsel/SKILL.md` |
+| Oral History Kit | `pm-family` | `oral-history-kit/SKILL.md` |
 | Org Chart | `pm-visuals` | `org-chart/SKILL.md` |
 | Out Of Office Designer | `pm-cowork` | `out-of-office-designer/SKILL.md` |
 | Outcome Tracker | `pm-autopilot` | `outcome-tracker/SKILL.md` |
@@ -1052,16 +1061,21 @@
 | The Car Dealership | `pm-simulators` | `the-car-dealership/SKILL.md` |
 | The Churning Customer | `pm-simulators` | `the-churning-customer/SKILL.md` |
 | The Due Diligence Call | `pm-simulators` | `the-due-diligence-call/SKILL.md` |
+| The Ethics Board | `pm-simulators` | `the-ethics-board/SKILL.md` |
 | The Ick Decoder | `other` | `the-ick-decoder/SKILL.md` |
 | The Insurance Adjuster | `pm-simulators` | `the-insurance-adjuster/SKILL.md` |
 | The Journalist Call | `pm-simulators` | `the-journalist-call/SKILL.md` |
+| The Loan Officer | `pm-simulators` | `the-loan-officer/SKILL.md` |
 | The Maintainer's No | `pm-maintainer` | `the-maintainers-no/SKILL.md` |
 | The One Thing | `pm-focus` | `the-one-thing/SKILL.md` |
 | The Open House | `pm-simulators` | `the-open-house/SKILL.md` |
 | The Org Simulator | `pm-2027` | `the-org-simulator/SKILL.md` |
+| The Planning Committee | `pm-simulators` | `the-planning-committee/SKILL.md` |
 | The Price Pushback | `pm-simulators` | `the-price-pushback/SKILL.md` |
 | The Procurement Gauntlet | `pm-simulators` | `the-procurement-gauntlet/SKILL.md` |
 | The Promotion Committee | `pm-simulators` | `the-promotion-committee/SKILL.md` |
+| The Ruthless Editor | `pm-craft` | `the-ruthless-editor/SKILL.md` |
+| The School Appeal | `pm-simulators` | `the-school-appeal/SKILL.md` |
 | The Second Opinion | `pm-thinking` | `the-second-opinion/SKILL.md` |
 | The Skeptic and the Believer | `pm-thinking` | `the-skeptic-and-the-believer/SKILL.md` |
 | The Strong No | `pm-thinking` | `the-strong-no/SKILL.md` |
@@ -1069,6 +1083,7 @@
 | The Third Answer | `pm-thinking` | `the-third-answer/SKILL.md` |
 | The Time Capsule | `pm-2027` | `the-time-capsule/SKILL.md` |
 | The Understudy | `pm-2027` | `the-understudy/SKILL.md` |
+| The Union Table | `pm-simulators` | `the-union-table/SKILL.md` |
 | The Vibe Check | `pm-newgen` | `the-vibe-check/SKILL.md` |
 | The Visa Interview | `pm-simulators` | `the-visa-interview/SKILL.md` |
 | The Worry Decompiler | `pm-focus` | `the-worry-decompiler/SKILL.md` |

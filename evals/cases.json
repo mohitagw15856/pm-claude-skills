@@ -988,6 +988,66 @@
   {
    "skill": "usage-based-pricing-model",
    "input": "We sell an AI document-processing API, currently $499/mo flat per customer. Marginal cost is about $0.002 per page processed. Usage across 180 customers: P10 = 800 pages/mo, P50 = 6,000, P90 = 55,000, P99 = 400,000. The flat price is losing money on the top decile and scaring off small teams. Finance wants predictable revenue; two enterprise customers have asked for a fixed annual number. Design usage-based pricing with tiers and guardrails against bill shock."
+  },
+  {
+   "skill": "the-loan-officer",
+   "input": "Practice my mortgage interview. Buying at 385k with 40k deposit — 25k saved over three years, 15k a gift from my mum. Salary 52k, plus about 6k/yr freelance I don't have paperwork for. Car finance 210/mo, and I went into my overdraft twice this winter. I'm also interviewing at another company right now."
+  },
+  {
+   "skill": "the-planning-committee",
+   "input": "My rear extension application goes to committee next Thursday. Officer recommends approval. 14 objections: overshadowing next door's kitchen, 'overdevelopment of the street', and everyone says parking. One councillor campaigns against extensions. I get three minutes. Rehearse me."
+  },
+  {
+   "skill": "the-school-appeal",
+   "input": "We didn't get our daughter into Parkfield Primary — allocated a school 40 minutes away by bus. Her brother is at Parkfield until 2028, she has mild anxiety her GP has written about, and we measured the distance as inside last year's cutoff. Appeal hearing is in three weeks. Prepare me."
+  },
+  {
+   "skill": "the-union-table",
+   "input": "I'm the employer-side lead negotiating with our union next month: their claim is 7% pay, a 4-day-week trial, and no compulsory redundancy for 2 years. Our budget stretches to 3.5% and we need shift-pattern changes. Relationship is tense after last year. Rehearse the session against me."
+  },
+  {
+   "skill": "the-ethics-board",
+   "input": "Rehearse my ethics review. Study: interviewing 30 of my own undergraduate students about academic stress, 20 pounds voucher each, recordings kept on my laptop for future projects, consent form says data may be used in related research. Board meets in two weeks."
+  },
+  {
+   "skill": "funeral-pricing-decoder",
+   "input": "Dad died Tuesday. The funeral home quoted a 'Tranquility package' at 6,800 — includes a Guardian protective casket, embalming which they said is needed for the viewing, cars, and 'all professional services'. Their itemised list is attached. Direct cremation on the same sheet says 1,195. What can we decline and is this fair?"
+  },
+  {
+   "skill": "franchise-decoder",
+   "input": "Evaluating a coffee franchise: 42k entry fee, investment range 180-260k, 6% royalty plus 2% marketing on gross, must buy beans and cups from their supplier, 'protected' 3-mile territory, 10-year term renewable 'on then-current terms'. The salesman told me most stores clear 90k profit but the FDD's Item 19 only shows average revenue. Decode this before I sign."
+  },
+  {
+   "skill": "care-home-contract-decoder",
+   "input": "Mum moves into Willowbrook next month, 1,450/week. Contract says fees 'reviewed annually in line with costs', they can end the placement if 'the home can no longer meet the resident's needs', I'm asked to sign as 'responsible party', and fees continue 14 days after death. Her savings will last about 3 years. What am I agreeing to?"
+  },
+  {
+   "skill": "fair-split",
+   "input": "Three siblings inheriting: the family house, dad's boat, the piano, and his tools. Will says 50% to me (I cared for him), 25% each to my brothers. My brother wants the house but I grew up in it. Everyone's arguing. Give us a fair process and run the numbers once we bid."
+  },
+  {
+   "skill": "decision-tree-solver",
+   "input": "Being sued for 200k. Settling now costs 50k. Trial costs 30k in fees; my lawyer says roughly 60% chance we win and pay nothing, 40% we lose the full 200k plus fees. There's also a mid-trial settlement usually possible around 80k. Build the tree — and tell me at what win probability trial becomes right."
+  },
+  {
+   "skill": "oral-history-kit",
+   "input": "My grandmother is 87, sharp but tiring quickly, and nobody's ever recorded her life — she fled Punjab in 1947 and never talks about it, but tells wonderful stories about her bakery years. I have a phone and visit Sundays. Set me up to capture this properly without exhausting or upsetting her."
+  },
+  {
+   "skill": "family-cookbook-archivist",
+   "input": "My mum makes about ten dishes nobody has ever written down — her biryani takes two days and she measures nothing, 'a handful of this, cook till it smells right'. She's 74 and thinks writing them down is morbid. I'm visiting for two weeks. How do I rescue these recipes?"
+  },
+  {
+   "skill": "household-constitution",
+   "input": "Our house is at war: two teenagers (13, 16) about screens and chores, and my husband and I disagree about enforcement. Same three arguments every week — phones at dinner, whose turn is the dishwasher, and the 16-year-old's gaming until 1am. Help us make rules that actually stick this time."
+  },
+  {
+   "skill": "the-ruthless-editor",
+   "input": "Edit this ruthlessly — it's my 1,400-word investor update and I know it's flabby: [draft pasted]. Our lead investor reads these on his phone. Keep my voice but I hedge everything and I know the good news is buried somewhere in the middle."
+  },
+  {
+   "skill": "disagreeing-experts",
+   "input": "I'm 58, divorcing after 30 years, and everyone gives me one-sided advice. We own a business together (I run it, she owns 40%), the house is paid off, and our daughter works in the business. Give me the lawyer's read, the accountant's read, and the therapist's read — and show me exactly where they'd fight."
   }
  ]
 }
