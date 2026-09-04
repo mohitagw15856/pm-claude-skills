@@ -1,4 +1,4 @@
-# 🗂️ All 1153 Skills — full catalog
+# 🗂️ All 1154 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -727,9 +727,9 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (685 skills)
+## 🌍 Industries & Public Sector (686 skills)
 
-### `other` — 21 skills
+### `other` — 22 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -753,6 +753,7 @@
 | **Small-Talk Survival** (`small-talk-survival`) | Survive (and even enjoy) small talk — how to start it, keep it going past the weather, and exit gracefully — for people who find it painful. | — |
 | **Support a Friend in Crisis** (`support-a-friend-in-crisis`) | Show up well for someone going through something hard — loss, illness, a breakup, a crisis — with the right words, the right presence, and… | — |
 | **The Ick Decoder** (`the-ick-decoder`) | Figure out whether 'the ick' about someone you're dating is a real incompatibility, a genuine red flag, or an anxious/avoidant self-sabotage… | — |
+| **Usage-Based Pricing Model** (`usage-based-pricing-model`) | Design a usage-based pricing scheme that scales revenue with value without scaring customers away — the metric that tracks value, tiers with… | — |
 | **Used Car Decoder** (`used-car-decoder`) | Decode a used-car listing before you drive an hour to see it — what the seller's phrasing is hiding, the history-check items that matter, a… | — |
 
 ### `pm-2027` — 10 skills
@@ -1836,4 +1837,4 @@
 
 ---
 
-_1153 skills across 131 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1154 skills across 131 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

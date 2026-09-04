@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1153 skills exported. Copy a `.md rule` into the tool to use it.
+1154 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -1100,6 +1100,7 @@
 | Unclaimed-Money Tracer | `pm-money` | `pm-money/unclaimed-money-tracer/unclaimed-money-tracer.md` |
 | Underwriting Narrative | `pm-insurance` | `pm-insurance/underwriting-narrative/underwriting-narrative.md` |
 | Unit Economics | `pm-calculators` | `pm-calculators/unit-economics/unit-economics.md` |
+| Usage-Based Pricing Model | `other` | `other/usage-based-pricing-model/usage-based-pricing-model.md` |
 | Used Car Decoder | `other` | `other/used-car-decoder/used-car-decoder.md` |
 | User Interview Synthesis | `pm-discovery` | `pm-discovery/user-interview-synthesis/user-interview-synthesis.md` |
 | User Journey Map | `pm-visuals` | `pm-visuals/user-journey-map/user-journey-map.md` |

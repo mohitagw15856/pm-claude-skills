@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1153 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1154 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -1100,6 +1100,7 @@
 | Unclaimed-Money Tracer | `pm-money` | `pm-money/unclaimed-money-tracer/SYSTEM_PROMPT.md` |
 | Underwriting Narrative | `pm-insurance` | `pm-insurance/underwriting-narrative/SYSTEM_PROMPT.md` |
 | Unit Economics | `pm-calculators` | `pm-calculators/unit-economics/SYSTEM_PROMPT.md` |
+| Usage-Based Pricing Model | `other` | `other/usage-based-pricing-model/SYSTEM_PROMPT.md` |
 | Used Car Decoder | `other` | `other/used-car-decoder/SYSTEM_PROMPT.md` |
 | User Interview Synthesis | `pm-discovery` | `pm-discovery/user-interview-synthesis/SYSTEM_PROMPT.md` |
 | User Journey Map | `pm-visuals` | `pm-visuals/user-journey-map/SYSTEM_PROMPT.md` |

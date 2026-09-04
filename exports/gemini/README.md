@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1153 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1154 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -1100,6 +1100,7 @@
 | Unclaimed-Money Tracer | `pm-money` | `pm-money/unclaimed-money-tracer/GEM_INSTRUCTIONS.md` |
 | Underwriting Narrative | `pm-insurance` | `pm-insurance/underwriting-narrative/GEM_INSTRUCTIONS.md` |
 | Unit Economics | `pm-calculators` | `pm-calculators/unit-economics/GEM_INSTRUCTIONS.md` |
+| Usage-Based Pricing Model | `other` | `other/usage-based-pricing-model/GEM_INSTRUCTIONS.md` |
 | Used Car Decoder | `other` | `other/used-car-decoder/GEM_INSTRUCTIONS.md` |
 | User Interview Synthesis | `pm-discovery` | `pm-discovery/user-interview-synthesis/GEM_INSTRUCTIONS.md` |
 | User Journey Map | `pm-visuals` | `pm-visuals/user-journey-map/GEM_INSTRUCTIONS.md` |
