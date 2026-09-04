@@ -62,6 +62,11 @@ Keep it under ~3 sentences. Write triggers from the user's vocabulary, not inter
 - **`deprecated:`** / **`supersededBy:`** — mark a retired skill and name the one that
   replaces it. A published skill name never breaks, so retiring is frontmatter, not
   deletion. See [docs/DEPRECATION.md](docs/DEPRECATION.md).
+- **`verified:`** — ISO date (`verified: 2026-09-04`) a human last ran the skill against
+  a current model and confirmed the output passes the skill's own Quality Checks. Git
+  tracks when a skill was *edited*; this records when it was last *known to work* —
+  a different and more valuable claim. The staleness board
+  (`node scripts/check-staleness.mjs`) ranks skills by whichever is fresher.
 
 ## 3. Body sections
 

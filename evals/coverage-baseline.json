@@ -1,0 +1,4 @@
+{
+  "_comment": "Eval-coverage ratchet floor — the number of skills with at least one case in evals/cases.json. CI fails if coverage falls below this. Updated by scripts/check-eval-coverage.mjs; never lower it by hand without a reason in the commit.",
+  "skillsWithCases": 247
+}

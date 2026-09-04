@@ -14,6 +14,9 @@ on:
       - 'tests/skillcheck-test.mjs'
       - 'scripts/skill-dupes.mjs'
       - 'skill-dupes-allow.json'
+      - 'evals/cases.json'
+      - 'evals/coverage-baseline.json'
+      - 'scripts/check-eval-coverage.mjs'
       - 'skillspec/**'
       - 'conformance/**'
       - '.github/workflows/skillcheck.yml'
@@ -26,6 +29,9 @@ on:
       - 'tests/skillcheck-test.mjs'
       - 'scripts/skill-dupes.mjs'
       - 'skill-dupes-allow.json'
+      - 'evals/cases.json'
+      - 'evals/coverage-baseline.json'
+      - 'scripts/check-eval-coverage.mjs'
       - 'skillspec/**'
       - 'conformance/**'
       - '.github/workflows/skillcheck.yml'
@@ -48,6 +54,19 @@ jobs:
         run: node scripts/skillcheck.mjs
       - name: Duplicate check (skill-dupes)
         run: node scripts/skill-dupes.mjs --check
+      - name: Eval-coverage ratchet
+        # On PRs, diff against the base branch; on push, against the previous
+        # commit — either way a new skill must arrive with an eval case.
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            git fetch --no-tags --depth=1 origin "${{ github.base_ref }}"
+            BASE="origin/${{ github.base_ref }}"
+          else
+            git fetch --no-tags --depth=2 origin "${{ github.sha }}" 2>/dev/null || true
+            BASE="${{ github.event.before }}"
+          fi
+          node scripts/check-eval-coverage.mjs --check --base "$BASE"
+
       - name: SkillSpec conformance gate (dogfooding the published validator)
         run: node skillspec/cli.mjs skills/ --min-level 3
       - name: Validate the SkillSpec conformance registry

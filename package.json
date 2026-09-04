@@ -89,7 +89,10 @@
     "test:skillcheck": "node tests/skillcheck-test.mjs",
     "check:conflicts": "node scripts/check-antipattern-conflicts.mjs",
     "build:badge": "node scripts/build-conformance-badge.mjs",
-    "check:a11y": "node scripts/check-a11y.mjs --check"
+    "check:a11y": "node scripts/check-a11y.mjs --check",
+    "check:evals": "node scripts/check-eval-coverage.mjs --check",
+    "tier-review": "node scripts/tier-review.mjs",
+    "staleness": "node scripts/check-staleness.mjs"
   },
   "devDependencies": {
     "qrcode": "^1.5.4"

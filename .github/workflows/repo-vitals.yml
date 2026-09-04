@@ -53,6 +53,13 @@ jobs:
         continue-on-error: true
         run: node scripts/skill-census.mjs --sample 100 && mkdir -p reports && cp docs/reports/state-of-agent-skills-*.md reports/ 2>/dev/null || true
 
+      - name: Weekly staleness board (Mondays)
+        if: github.event.schedule == '43 6 * * 1' || github.event_name == 'workflow_dispatch'
+        continue-on-error: true
+        # Date-relative output, so it is published as a weekly report rather
+        # than committed to main where it would break deterministic-build checks.
+        run: mkdir -p reports && node scripts/check-staleness.mjs --md > reports/staleness.md
+
       - name: Weekly registry re-scan (Mondays)
         if: github.event.schedule == '43 6 * * 1' || github.event_name == 'workflow_dispatch'
         run: |

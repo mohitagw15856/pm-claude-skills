@@ -14,7 +14,7 @@ strongest work and know what to expect from the rest.
 
 ---
 
-## 🟢 Production-Ready (47)
+## 🟢 Production-Ready (59)
 
 These are the skills to reach for first — the most-used, most-refined frameworks in the
 library.
@@ -45,6 +45,9 @@ library.
 
 **Cross-profession**
 `executive-summary` · `press-release` · `skill-security-auditor`
+
+**Modelling & simulation** _(promoted 2026-09-04 — the first round through [`scripts/tier-review.mjs`](scripts/tier-review.mjs): eval case + references/ or a helper script + zero SkillCheck warnings)_
+`cohort-curve-model` ⚙️ · `runway-monte-carlo` ⚙️ · `schedule-monte-carlo` ⚙️ · `pricing-sensitivity-model` ⚙️ · `tornado-sensitivity` ⚙️ · `support-staffing-model` ⚙️ · `outcome-tracker` ⚙️ · `win-loss-analysis` · `pixel-gif-maker` ⚙️
 
 ---
 
