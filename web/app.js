@@ -852,6 +852,24 @@ function renderLanding() {
   frag.appendChild(galleryHead('✨ Start here — popular & broadly useful'));
   starts.forEach((s) => frag.appendChild(makeCard(s)));
 
+  // "Most run" — real aggregate usage from the worker's public counter, not
+  // curation. Appears only once there is genuine signal, so an empty counter
+  // never renders an empty section. Loads after first paint; failure is silent.
+  const mostRunSlot = document.createElement('div');
+  frag.appendChild(mostRunSlot);
+  fetch('https://pm-skills-mcp.pm-claude-skills.workers.dev/stats/skills')
+    .then((r) => r.json())
+    .then((data) => {
+      const rows = (data.skills || []).map((r) => ({ ...r, s: find(r.skill) }))
+        .filter((r) => r.s && r.count >= 3).slice(0, 8);
+      if (rows.length < 4) return; // not enough signal to be honest about
+      const inner = document.createDocumentFragment();
+      inner.appendChild(galleryHead('🔥 Most run — live counts across everyone'));
+      rows.forEach((r) => inner.appendChild(makeCard(r.s)));
+      mostRunSlot.appendChild(inner);
+    })
+    .catch(() => {});
+
   // Browse-by-category chips (full-width row).
   frag.appendChild(galleryHead('🗂️ Browse by category'));
   const chips = document.createElement('div');
@@ -1341,6 +1359,7 @@ async function run() {
   if (!key && !localModel) { flagMissingKey(); return setStatus(`👆 Paste your ${P().name} API key (top-right) to run — or pick "In-browser (no key)".`, true); }
   if (!current) return;
   if (window.pmTrack) pmTrack('run/' + current.name);
+  if (window.pmUsage) pmUsage(current.name);
 
   const ctx = getContext();
   const brain = (window.PMBrain && PMBrain.isEnabled()) ? PMBrain.recallBlock() : '';

@@ -38,12 +38,20 @@ jobs:
           git checkout main -- scripts/ skillspec/ community/ 2>/dev/null || true
           RUNS=$(curl -sf "https://pm-skills-mcp.pm-claude-skills.workers.dev/try/stats?format=json" | node -e "process.stdin.on('data',d=>console.log(JSON.parse(d).freeRunsServed))" || echo null)
           STARS=$(gh api repos/${{ github.repository }} --jq .stargazers_count || echo null)
+          # Distribution: weekly npm downloads per package, monthly PyPI. The
+          # install claims in the growth docs had no tracked source — these are it.
+          # Every fetch degrades to null; a flaky stats API must not fail vitals.
+          NPMW=$(curl -sf "https://api.npmjs.org/downloads/point/last-week/pm-claude-skills" | node -e "process.stdin.on('data',d=>console.log(JSON.parse(d).downloads))" || echo null)
+          NPMTOOLS=$(curl -sf "https://api.npmjs.org/downloads/point/last-week/pm-skills-tools" | node -e "process.stdin.on('data',d=>console.log(JSON.parse(d).downloads))" || echo null)
+          NPMSPEC=$(curl -sf "https://api.npmjs.org/downloads/point/last-week/skillspec-check" | node -e "process.stdin.on('data',d=>console.log(JSON.parse(d).downloads))" || echo null)
+          PYPI=$(curl -sf "https://pypistats.org/api/packages/pm-skills/recent" | node -e "process.stdin.on('data',d=>console.log(JSON.parse(d).data.last_month))" || echo null)
+          SKILLPINGS=$(curl -sf "https://pm-skills-mcp.pm-claude-skills.workers.dev/stats/skills" | node -e "let b='';process.stdin.on('data',d=>b+=d).on('end',()=>console.log(JSON.parse(b).total||0))" || echo null)
           node -e "
             const fs=require('fs');
             let h=[]; try{h=JSON.parse(fs.readFileSync('history.json','utf8'))}catch(_){}
             const today=new Date().toISOString().slice(0,10);
             h=h.filter(x=>x.d!==today);
-            h.push({d:today, runs:${RUNS}, stars:${STARS}});
+            h.push({d:today, runs:${RUNS}, stars:${STARS}, npmWeek:${NPMW}, npmToolsWeek:${NPMTOOLS}, npmSpecWeek:${NPMSPEC}, pypiMonth:${PYPI}, skillPings:${SKILLPINGS}});
             fs.writeFileSync('history.json', JSON.stringify(h,null,1)+'\n');
             console.log('history:', h.length, 'days');
           "

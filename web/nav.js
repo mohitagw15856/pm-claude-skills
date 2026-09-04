@@ -47,7 +47,20 @@
     window.pmTrack = function (name) {
       try { if (window.goatcounter && window.goatcounter.count) window.goatcounter.count({ path: String(name).slice(0, 80), event: true }); } catch (e) {}
     };
+    // Per-skill run counter — one POST with the skill name, nothing else, to the
+    // same worker the CLI's opt-in telemetry uses (counts only; no IP/UA kept).
+    // Rides the same ANALYTICS_CODE switch as pmTrack: empty the code and both
+    // stop. The aggregate feeds the "Most run" strip on the landing page.
+    window.pmUsage = function (skill) {
+      try {
+        fetch('https://pm-skills-mcp.pm-claude-skills.workers.dev/ping', {
+          method: 'POST', mode: 'no-cors', keepalive: true,
+          body: JSON.stringify({ skill: String(skill).slice(0, 64) }),
+        }).catch(function () {});
+      } catch (e) {}
+    };
   }
+  if (!window.pmUsage) window.pmUsage = function () {}; // no-op when analytics is off
   // Top-level links stay flat; everything else is tucked into two dropdown groups so the bar
   // stays short. To add/move a tool, edit this list only.
   var NAV = [

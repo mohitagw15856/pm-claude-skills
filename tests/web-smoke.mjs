@@ -302,6 +302,10 @@ const ctx = await browser.newContext({ viewport: { width: 1280, height: 850 } })
 await ctx.route(/pm-skills-mcp.*workers\.dev/, (route) => {
   const u = route.request().url();
   if (u.endsWith('/try') && route.request().method() === 'GET') return route.fulfill({ json: { enabled: false } });
+  // Read-only public counters get a benign empty answer instead of a 503 —
+  // the pages must degrade gracefully, not log console errors over telemetry.
+  if (u.endsWith('/stats/skills') && route.request().method() === 'GET') return route.fulfill({ json: { total: 0, skills: [] } });
+  if (u.endsWith('/ping') && route.request().method() === 'POST') return route.fulfill({ json: { ok: true } });
   return route.fulfill({ status: 503, json: { error: 'blocked-in-ci' } });
 });
 // Badge images: stub with a tiny SVG — conformant.html embeds live-graded
