@@ -1,25 +1,29 @@
 {
-  "generatedAt": "2026-08-10T08:25:04.672Z",
+  "generatedAt": "2026-08-31T15:11:21.847Z",
   "window": "7d",
   "skills": [
     {
       "name": "meeting-notes",
-      "count": 7
+      "count": 8
     },
     {
-      "name": "prd-template",
-      "count": 2
-    },
-    {
-      "name": "competitive-scan-lite",
+      "name": "managing-up",
       "count": 1
     },
     {
-      "name": "claude-superpowers",
+      "name": "figma-design-review",
       "count": 1
     },
     {
-      "name": "user-interview-synthesis",
+      "name": "executive-update",
+      "count": 1
+    },
+    {
+      "name": "competitive-analysis",
+      "count": 1
+    },
+    {
+      "name": "roadmap-narrative",
       "count": 1
     }
   ]
