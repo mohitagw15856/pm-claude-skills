@@ -1,17 +1,21 @@
 {
-  "generatedAt": "2026-08-10T08:25:04.672Z",
+  "generatedAt": "2026-09-07T13:33:42.301Z",
   "window": "7d",
   "skills": [
     {
       "name": "meeting-notes",
-      "count": 7
+      "count": 4
     },
     {
-      "name": "prd-template",
-      "count": 2
+      "name": "professional-translator",
+      "count": 1
     },
     {
-      "name": "competitive-scan-lite",
+      "name": "design-handoff-brief",
+      "count": 1
+    },
+    {
+      "name": "desk-research-sprint",
       "count": 1
     },
     {
@@ -19,7 +23,11 @@
       "count": 1
     },
     {
-      "name": "user-interview-synthesis",
+      "name": "roadmap-narrative",
+      "count": 1
+    },
+    {
+      "name": "prd-template",
       "count": 1
     }
   ]
