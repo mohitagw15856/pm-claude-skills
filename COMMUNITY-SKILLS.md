@@ -24,6 +24,7 @@ A directory of **skill repos and packs built by the community** that follow the
 | Skill / pack | Author | What it does | Repo |
 |---|---|---|---|
 | [Crew](https://github.com/Honorboxx/crew) | [@Honorboxx](https://github.com/Honorboxx) | Reviewer, debugger and planner agents plus scope/verify/git skills that size a task before coding and turn "done" into observed evidence. | https://github.com/Honorboxx/crew |
+| [YYLO Skills](https://github.com/yylo-dev/yylo-skills) | [@yylo-dev](https://github.com/yylo-dev) | Seven reusable agent skills for Claude Code, Codex, and Pi built around YYLO Ledger: task management, wiki and workflow Records, provenance-bound evidence, and validated task delivery. | https://github.com/yylo-dev/yylo-skills |
 
 <!-- COMMUNITY-SKILLS:ROWS-BELOW
   Add your row directly above this comment, keeping the four columns in order:
