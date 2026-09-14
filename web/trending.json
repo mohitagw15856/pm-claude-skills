@@ -1,25 +1,29 @@
 {
-  "generatedAt": "2026-08-10T08:25:04.672Z",
+  "generatedAt": "2026-09-14T14:14:20.155Z",
   "window": "7d",
   "skills": [
     {
       "name": "meeting-notes",
-      "count": 7
-    },
-    {
-      "name": "prd-template",
       "count": 2
     },
     {
-      "name": "competitive-scan-lite",
+      "name": "workshop-facilitation-guide",
       "count": 1
     },
     {
-      "name": "claude-superpowers",
+      "name": "language-learning-plan",
       "count": 1
     },
     {
-      "name": "user-interview-synthesis",
+      "name": "executive-update",
+      "count": 1
+    },
+    {
+      "name": "ai-feature-prd",
+      "count": 1
+    },
+    {
+      "name": "prd-template",
       "count": 1
     }
   ]
