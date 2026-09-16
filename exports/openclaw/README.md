@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1174 skills exported. Copy a `SKILL.md` into the tool to use it.
+1175 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -738,6 +738,7 @@
 | Patient Education Explainer | `pm-physio` | `patient-education-explainer/SKILL.md` |
 | Pay Stub Decoder | `pm-decoders` | `pay-stub-decoder/SKILL.md` |
 | Paywall Optimization | `pm-growth` | `paywall-optimization/SKILL.md` |
+| PDR Task Planner | `other` | `pdr-task-planner/SKILL.md` |
 | Penetration Test Report | `pm-security` | `pentest-report/SKILL.md` |
 | Performance Budget | `pm-engineering` | `performance-budget/SKILL.md` |
 | Performance Review | `pm-people` | `performance-review/SKILL.md` |

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1174 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1175 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -738,6 +738,7 @@
 | Patient Education Explainer | `pm-physio` | `pm-physio/patient-education-explainer/GEM_INSTRUCTIONS.md` |
 | Pay Stub Decoder | `pm-decoders` | `pm-decoders/pay-stub-decoder/GEM_INSTRUCTIONS.md` |
 | Paywall Optimization | `pm-growth` | `pm-growth/paywall-optimization/GEM_INSTRUCTIONS.md` |
+| PDR Task Planner | `other` | `other/pdr-task-planner/GEM_INSTRUCTIONS.md` |
 | Penetration Test Report | `pm-security` | `pm-security/pentest-report/GEM_INSTRUCTIONS.md` |
 | Performance Budget | `pm-engineering` | `pm-engineering/performance-budget/GEM_INSTRUCTIONS.md` |
 | Performance Review | `pm-people` | `pm-people/performance-review/GEM_INSTRUCTIONS.md` |
