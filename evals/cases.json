@@ -1068,6 +1068,10 @@
   {
    "skill": "investing-vocabulary-explainer",
    "input": "In the attached annual report, what do 'goodwill', 'deferred revenue', and 'diluted EPS' mean, and is the share price cheap given the EPS on page 61?"
+  },
+  {
+   "skill": "pdr-task-planner",
+   "input": "Plan the CSV export redesign for our analytics app and register the work. Request from sales ops: exports keep timing out past 10k rows; they want column selection, saved presets, and scheduled emails. Current behavior: one blocking /export call that builds the whole file in memory, 30s gateway timeout, no presets. Constraints: no new infrastructure this quarter, keep the existing API path. Repo is github.com/acme/analytics and the ledger CLI is installed. Don't start building anything yet."
   }
  ]
 }

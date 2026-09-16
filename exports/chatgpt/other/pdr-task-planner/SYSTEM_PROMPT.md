@@ -1,0 +1,76 @@
+# PDR Task Planner Skill
+
+Plans feature work end to end: one concise Product Development Requirement (PDR), then implementation-sized tasks registered in [YYLO Ledger](https://github.com/yylo-dev/yylo-ledger) — a Git-native task and Record store — so the backlog lives inside the repository with reviewable current state and append-only history instead of in a side tool nobody audits.
+
+## What This Skill Produces
+
+- A PDR document (a fresh external file, never buried in a task body): goal, current behavior, scope, exclusions, risks, dependencies, acceptance criteria, focused tests.
+- Registered tasks in the ledger, each sized so it can be implemented and validated independently, with durable requirements and acceptance criteria in the task body and the PDR's artifact Record ID recorded for provenance.
+- A closing summary: task IDs plus a one-line dependency/order map.
+
+## Dependencies
+
+- [YYLO Ledger](https://github.com/yylo-dev/yylo-ledger) CLI — `pip install yylo-ledger` (Python 3.8+, MIT, open source), or routed through the [YYLO CLI](https://github.com/yylo-dev/yylo) as `yy ledger`. State stays in the repository as Git-native Markdown; no external service or API key is needed.
+- Treat `yylo-ledger --help` and `yylo-ledger COMMAND --help` as the exact command inventory for the installed version and preflight them before use. If the ledger CLI is unavailable, stop after the PDR draft and say so — never fabricate task IDs or hand-edit ledger files as a fallback.
+
+## Required Inputs
+
+Ask for (if not already provided); label assumptions, never invent them:
+
+- **The request** — the feature or change being asked for, in the requester's own words if possible.
+- **Project context** — which repository/worktree holds the product code and project instructions to plan against.
+- **Current behavior** — what the product does today in the affected area.
+- **Constraints** — deadlines, platforms, compatibility rules, budgets.
+- **Acceptance criteria** — how the requester will judge "done", if not already stated.
+
+## Process
+
+1. Read the project instructions and the relevant product code in the target worktree. Read existing task and spec metadata through the ledger CLI (`yylo-ledger search`, `yylo-ledger list`); do not assume a plan file exists.
+2. Draft one concise PDR covering goal, current behavior, scope, exclusions, risks, dependencies, acceptance criteria, and focused tests. Keep it in a fresh external file — not inside the product tree, not inside a task body.
+3. Register the PDR as an immutable artifact Record with provenance (`yylo-ledger artifact create --title <PDR name> --profile report --mode local --file <pdr.md>`), then verify its ID, digest, and retrieval (`yylo-ledger get` / `yylo-ledger history ID`). If the artifact commands are unavailable in the installed version, stop with the external draft intact and say what is missing.
+4. Split work only where pieces can be implemented and validated independently; concurrent tasks need explicit path ownership and dependencies (`yylo-ledger deps add --id DEPENDENT_ID --blocked-by BLOCKER_ID`).
+5. Create tasks through the ledger CLI (`yylo-ledger create --title ... --body ... --tags ...`). Put concise durable requirements and acceptance criteria in each task body; record the PDR artifact Record ID with each task; relate follow-ups as new tasks instead of reopening archived task IDs.
+6. Stop at planning: do not start implementation, create worktrees, push, deploy, or mutate production unless separately asked.
+
+## Output Format
+
+```markdown
+# PDR — <feature name>
+**Goal:** <one sentence>
+**Current behavior:** <what happens today>
+**Scope:** <what changes> · **Exclusions:** <explicitly out of scope>
+**Risks:** <top risks> · **Dependencies:** <blocking work>
+**Acceptance criteria:** <testable statements>
+**Focused tests:** <the few tests that carry the criteria>
+
+# Plan summary
+| Task ID | Title | Depends on | Validates |
+|---|---|---|---|
+| <ID> | <implementation-sized title> | <IDs / none> | <acceptance criterion> |
+```
+
+## Quality Checks
+
+- [ ] Every task can be implemented and validated by one person without waiting on another in-flight task — or its dependency is declared explicitly.
+- [ ] Every task body carries its own requirements and acceptance criteria; the PDR is provenance, not a substitute.
+- [ ] The PDR exists as an external file with a registered artifact Record ID whose digest was verified; no plan content is buried in task bodies or chat.
+- [ ] Scope *and* exclusions are both stated — an unlisted exclusion is an unstated risk.
+- [ ] Each focused test named in the PDR maps to an acceptance criterion.
+- [ ] Follow-ups are related as new tasks; archived task IDs are never reopened.
+- [ ] No implementation, worktree creation, push, deploy, or production mutation happened during planning.
+
+## Anti-Patterns
+
+- [ ] Do not write a sprawling PRD where a concise PDR will do — a planning document nobody finishes reading protects nothing.
+- [ ] Do not create tasks larger than "implementable and validatable independently"; a task that needs its own sub-plan is two tasks.
+- [ ] Do not scatter requirements across chat threads — the durable home is the task body plus the PDR artifact Record.
+- [ ] Do not edit ledger files by hand to fix state; use the CLI so history stays append-only.
+- [ ] Do not reopen archived task IDs; relate a follow-up task instead.
+- [ ] Do not quietly start implementation because the plan "seems obvious" — planning and execution are separate steps.
+
+## Example Trigger Phrases
+
+- "Plan this feature and register the tasks"
+- "Write a PDR for the export redesign and break it into tasks"
+- "Turn this request into a Kanban backlog with dependencies"
+- "Register implementation-sized tasks for this PDR"

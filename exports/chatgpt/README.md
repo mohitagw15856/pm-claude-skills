@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1174 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1175 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -738,6 +738,7 @@
 | Patient Education Explainer | `pm-physio` | `pm-physio/patient-education-explainer/SYSTEM_PROMPT.md` |
 | Pay Stub Decoder | `pm-decoders` | `pm-decoders/pay-stub-decoder/SYSTEM_PROMPT.md` |
 | Paywall Optimization | `pm-growth` | `pm-growth/paywall-optimization/SYSTEM_PROMPT.md` |
+| PDR Task Planner | `other` | `other/pdr-task-planner/SYSTEM_PROMPT.md` |
 | Penetration Test Report | `pm-security` | `pm-security/pentest-report/SYSTEM_PROMPT.md` |
 | Performance Budget | `pm-engineering` | `pm-engineering/performance-budget/SYSTEM_PROMPT.md` |
 | Performance Review | `pm-people` | `pm-people/performance-review/SYSTEM_PROMPT.md` |

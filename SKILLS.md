@@ -1,4 +1,4 @@
-# 🗂️ All 1174 Skills — full catalog
+# 🗂️ All 1175 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -730,9 +730,9 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (703 skills)
+## 🌍 Industries & Public Sector (704 skills)
 
-### `other` — 22 skills
+### `other` — 23 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -748,6 +748,7 @@
 | **Make Friends as an Adult** (`make-friends-as-an-adult`) | Build a real plan to make friends as an adult — where to meet people you'd actually click with, how to turn acquaintances into friends, and past… | — |
 | **Mechanic Quote Decoder** (`mechanic-quote-decoder`) | Read a garage quote or invoice like someone who can't be padded — which line items connect to your actual symptom, which are while-we're-in-there… | — |
 | **Networking for Introverts** (`networking-for-introverts`) | Network in a way that actually works for introverts — depth over breadth, one-on-one over rooms, and energy managed — instead of forcing yourself… | — |
+| **PDR Task Planner** (`pdr-task-planner`) | Turn a feature request into a concise Product Development Requirement plus implementation-sized tasks registered in a Git-backed task ledger. | — |
 | **Pixel GIF Maker** (`pixel-gif-maker`) | Generate retro pixel-text animated GIFs for Slack, Teams, or a PR comment — scrolling marquees, heartbeat pulses, confetti parties, twinkling… | — |
 | **Rabbit Hole Rescue** (`rabbit-hole-rescue`) | Talk to a family member or friend who's gone down a conspiracy, misinformation, or extremism rabbit hole — without blowing up the relationship or… | — |
 | **Read the Room** (`read-the-room`) | Figure out the real social dynamics of a situation — the unspoken mood, who holds influence, what's actually going on beneath the surface — so you… | — |
@@ -1862,4 +1863,4 @@
 
 ---
 
-_1174 skills across 132 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1175 skills across 132 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
