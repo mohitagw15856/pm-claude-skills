@@ -1,0 +1,25 @@
+# CODEOWNERS — per-bundle review ownership (governance idea #16)
+#
+# GitHub requests a review from the owner(s) of any changed path. At 1,170+
+# skills across 130+ bundles, one reviewer is a throughput and bus-factor
+# risk; this file lets trusted co-maintainers own the bundles they know.
+#
+# Today every path resolves to the maintainer. As co-maintainers join
+# (see MAINTAINERS.md), add a line per bundle ABOVE the catch-all — later
+# lines win, so specific bundle rules must come after the default.
+
+# Default: everything
+*                                   @mohitagw15856
+
+# Governance, spec and tooling stay with the maintainer
+/SKILLSPEC.md                       @mohitagw15856
+/scripts/                           @mohitagw15856
+/config/                            @mohitagw15856
+/.github/                           @mohitagw15856
+
+# --- Bundle ownership (add co-maintainers here; examples, not yet assigned) ---
+# /skills/prd-template/              @mohitagw15856 @<pm-comaintainer>
+# /plugins/pm-essentials/            @mohitagw15856 @<pm-comaintainer>
+# /plugins/pm-engineering/           @mohitagw15856 @<eng-comaintainer>
+# /plugins/pm-hardship/              @mohitagw15856 @<consumer-finance-reviewer>
+# /plugins/pm-grief/                 @mohitagw15856 @<grief-support-reviewer>

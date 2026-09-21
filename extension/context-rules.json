@@ -1,0 +1,73 @@
+{
+  "$comment": "Contextual-discovery rules for the browser extension (reach idea #7). The existing MV3 extension inserts skills on demand; these rules let it SUGGEST a skill from the page the user is already on — a lease PDF, a job posting, a medical portal, a benefits site. Each rule matches on host fragments, URL regex, or on-page keywords (case-insensitive; a rule fires when any host/url matches OR ≥2 keywords appear). 'suggest' lists skill names in priority order; 'label' is the one-line nudge. Load from content.js; never fire on banking/login pages (see 'never').",
+  "never": {
+    "hosts": ["accounts.google.com", "login.", "signin.", "auth.", "bank", "paypal.com", "venmo.com"],
+    "reason": "no suggestions on authentication or banking surfaces"
+  },
+  "rules": [
+    {
+      "id": "lease",
+      "keywords": ["lease agreement", "tenancy agreement", "security deposit", "landlord", "tenant shall"],
+      "suggest": ["lease-decoder", "security-deposit-recovery", "tenant-rights-explainer"],
+      "label": "Reading a lease? Decode it before you sign."
+    },
+    {
+      "id": "job-posting",
+      "hosts": ["linkedin.com/jobs", "indeed.com", "glassdoor.com", "greenhouse.io", "lever.co", "workday"],
+      "keywords": ["we are hiring", "job description", "responsibilities", "compensation"],
+      "suggest": ["salary-negotiation", "benefits-decoder", "resume"],
+      "label": "Looking at an offer or posting? Know your number first."
+    },
+    {
+      "id": "medical-bill",
+      "keywords": ["explanation of benefits", "patient responsibility", "amount due", "cpt", "itemized statement", "billing statement"],
+      "suggest": ["medical-bill-decoder", "insurance-claim-appeal", "prior-authorization-letter"],
+      "label": "That medical bill can be challenged. Decode it."
+    },
+    {
+      "id": "benefits",
+      "hosts": ["benefits.gov", "ssa.gov", "medicaid", "snap", "gov.uk/benefits"],
+      "keywords": ["eligibility", "income limit", "benefit amount", "recertification"],
+      "suggest": ["benefits-cliff-check", "disability-benefit-appeal", "benefits-decoder"],
+      "label": "Checking benefits? See how income changes affect them."
+    },
+    {
+      "id": "collections",
+      "keywords": ["debt collector", "collection agency", "past due", "final notice", "garnishment", "validation notice"],
+      "suggest": ["debt-collector-scripts", "wage-garnishment-response", "stop-the-bleed-triage"],
+      "label": "Collections notice? Know your rights before you respond."
+    },
+    {
+      "id": "severance",
+      "keywords": ["severance agreement", "separation agreement", "release of claims", "non-compete", "termination date"],
+      "suggest": ["severance-agreement-decoder", "pip-responder", "salary-negotiation"],
+      "label": "Don't sign a severance before decoding it."
+    },
+    {
+      "id": "funeral",
+      "keywords": ["funeral home", "obituary", "death certificate", "memorial service", "cremation"],
+      "suggest": ["notify-everyone-of-a-death", "eulogy-and-obituary-writer", "funeral-pricing-decoder"],
+      "label": "Handling a death? Here's the checklist no one gives you."
+    },
+    {
+      "id": "contract",
+      "keywords": ["terms and conditions", "hereinafter", "indemnify", "governing law", "auto-renew", "this agreement"],
+      "suggest": ["contract-red-flags", "tos-decoder", "clause-explainer"],
+      "label": "Signing something? Find the clauses that can hurt you."
+    },
+    {
+      "id": "immigration",
+      "hosts": ["uscis.gov", "gov.uk/visas", "canada.ca/immigration"],
+      "keywords": ["visa interview", "work permit", "residency", "immigration status"],
+      "suggest": ["the-visa-interview", "arrival-setup", "credential-recognition"],
+      "label": "Navigating immigration paperwork? Start here."
+    },
+    {
+      "id": "incident",
+      "hosts": ["pagerduty.com", "statuspage.io", "opsgenie"],
+      "keywords": ["incident", "postmortem", "root cause", "sev1", "outage"],
+      "suggest": ["incident-postmortem", "customer-outage-notice", "incident-public-statement"],
+      "label": "Incident in progress? Run the postmortem properly after."
+    }
+  ]
+}

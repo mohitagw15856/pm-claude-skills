@@ -1,0 +1,15 @@
+{
+  "id": "new-parent",
+  "name": "New parent",
+  "emoji": "🍼",
+  "triggers": ["we're having a baby", "bringing the baby home next week", "should one of us stay home"],
+  "boundary": "Not medical advice — anything about the baby's health goes to a pediatrician or emergency services. Not legal or financial advice; leave and benefits rules vary by country and employer.",
+  "ask_first": "What stage are you at — expecting, home this week, or a few months in? We give the next few things in order, not everything at once.",
+  "steps": [
+    { "skill": "new-baby-logistics", "why": "The setup and paperwork, sequenced, so nothing critical slips in the fog.", "carry": ["paperwork filed", "setup done", "still to do"] },
+    { "skill": "benefits-decoder", "why": "What the leave and benefits paperwork actually means, and the deadlines inside it.", "carry": ["leave dates", "actions with deadlines"] },
+    { "skill": "daycare-vs-stay-home", "why": "The honest, deterministic comparison with every assumption labeled — no false precision.", "carry": ["the decision", "the assumptions"], "optional": true },
+    { "skill": "sleep-reset-plan", "why": "A realistic plan for the parents' sleep, not another app streak.", "carry": ["the plan", "who covers which nights"] }
+  ],
+  "done_when": "The paperwork is filed, the benefits are understood with their deadlines, the childcare decision is made (or consciously deferred), and both parents have a sleep plan."
+}

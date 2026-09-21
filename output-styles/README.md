@@ -10,6 +10,8 @@ loadout. Switch with `/output-style` in Claude Code, or install them with the sk
 | `Solo Founder` | Ruthless prioritisation, leverage | prioritisation, positioning, ops |
 | `Product Leader` | Outcome-oriented, crisp comms | PRDs, OKRs, roadmap, stakeholder comms |
 | `Plain & Honest Prose` | Plain, concrete, no AI tells, no faked specificity | any writing task — the house prose voice ([`docs/prose-style.md`](../docs/prose-style.md)) |
+| `Plain Language` | Short sentences, everyday words, action first — for stressed or second-language readers | the life skills: money, grief, caregiving, immigration, benefits |
+| `Hands-Free Voice` | Spoken, one step at a time, no tables, "say next or repeat" | caregiving, medication, appointments, emergencies; any voice journey ([`JOURNEYS.md`](../JOURNEYS.md)) |
 
 ## Install
 

@@ -1,0 +1,17 @@
+{
+  "id": "hands-free-caregiver",
+  "name": "Caring for a parent — hands-free",
+  "emoji": "🎧",
+  "voice": true,
+  "triggers": ["I'm driving to my mom's", "read me the medication list", "what do I ask the doctor tomorrow"],
+  "boundary": "Not medical, legal, or financial advice. A nurse, care manager, or social worker is the right person for decisions; this helps you get organized and ask better questions. Spoken output — say the next step, one at a time.",
+  "ask_first": "Are you hands-free right now? If so, we'll go one short step at a time and you can say 'next' or 'repeat'.",
+  "steps": [
+    { "skill": "medical-appointment-advocate", "why": "The questions to ask and the things to say so the appointment actually gets your parent what they need.", "carry": ["questions list", "answers to record"] },
+    { "skill": "medication-management-system", "why": "Every medication, dose, and time — read back plainly, so nothing gets missed or doubled.", "carry": ["medication list", "schedule", "refills due"] },
+    { "skill": "care-team-coordinator", "why": "Who does what, and how they hear from each other — so you're not the only switchboard.", "carry": ["care team roster", "update cadence"] },
+    { "skill": "caregiver-burnout-check", "why": "An honest read on how you're doing, and the one thing to change this week.", "carry": ["burnout signals", "one change"] },
+    { "skill": "respite-care-plan", "why": "Real relief, arranged — who covers, when, and how to accept it without guilt.", "carry": ["respite arranged"], "optional": true }
+  ],
+  "done_when": "The next appointment is prepared, the medications are straight, the care team knows its roles, and you have relief on the calendar."
+}

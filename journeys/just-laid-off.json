@@ -1,0 +1,16 @@
+{
+  "id": "just-laid-off",
+  "name": "Just laid off",
+  "emoji": "💼",
+  "triggers": ["I just got laid off", "they let me go today", "I got a severance agreement"],
+  "boundary": "Not legal or financial advice. Severance, non-competes, and unemployment rules vary by jurisdiction and change — confirm specifics locally; an employment lawyer's review of a severance can pay for itself.",
+  "ask_first": "Is there a severance sign-by date? That is the most time-sensitive thing and decides the order.",
+  "steps": [
+    { "skill": "severance-agreement-decoder", "why": "The clock is usually running. Decode what you're signing and what can hurt you before anything else.", "carry": ["severance terms", "sign-by date", "non-compete / release clauses"] },
+    { "skill": "stop-the-bleed-triage", "why": "Stabilize the money before the search: what to pay first, what to protect, who to call this week.", "carry": ["monthly gap", "bills protected", "assistance applied for"] },
+    { "skill": "benefits-decoder", "why": "Know exactly what continues (health cover, unused leave, equity) and what you must act on.", "carry": ["benefits ending dates", "actions with deadlines"] },
+    { "skill": "layoff-communication", "why": "Tell your network and references in a way that opens doors instead of closing them.", "carry": ["your one-line story", "people to reach"] },
+    { "skill": "salary-negotiation", "why": "Practice the next offer before the real one — know your number and the walk-away.", "carry": ["target number", "walk-away"] }
+  ],
+  "done_when": "Severance decided, money stable for the next 60 days, network told, and a number ready for the first offer."
+}

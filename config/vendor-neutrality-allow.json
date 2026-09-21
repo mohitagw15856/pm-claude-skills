@@ -1,0 +1,4 @@
+{
+  "$comment": "Reviewed exceptions to scripts/check-vendor-neutrality.mjs — skill names allowed to reference a required tool. Add a name only after a maintainer has read the skill and agreed the dependency is open-source, optional-by-design, and honestly disclosed. Keep this list short.",
+  "allow": []
+}

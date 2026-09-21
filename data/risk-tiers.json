@@ -1,0 +1,4706 @@
+{
+ "generated": "2026-09-21",
+ "counts": {
+  "consequential": 185,
+  "high-stakes": 143,
+  "informational": 846
+ },
+ "tiers": {
+  "360-feedback-template": {
+   "tier": "consequential",
+   "via": "bundle:pm-people"
+  },
+  "401k-plan-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "ab-test-planner": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ab-test-readout": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "accessibility-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "accessible-travel-planner": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-accessibility"
+  },
+  "accommodation-request": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-accessibility"
+  },
+  "account-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "account-recovery-plan": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-digital-safety"
+  },
+  "acquirer-red-team": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "action-runner": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ad-copy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "aeo-optimizer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "after-the-disaster": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-emergency"
+  },
+  "agenda-or-cancel": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "agent-design-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "agent-era-pricing": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "agent-hiring-panel": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "agent-incident-postmortem": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "agent-observability-spec": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "agent-readiness-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "agent-severance": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "agent-spec": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "aging-in-place-assessment": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-caregiving"
+  },
+  "aging-parent-talks": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-aging-parents"
+  },
+  "agm-in-a-box": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ai-agent-reliability": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ai-assisted-performance-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ai-code-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ai-content-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ai-context-primer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ai-disclosure-policy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ai-ethics-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ai-eval-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ai-feature-prd": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ai-output-verifier": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ai-product-canvas": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ai-roi-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ai-tool-picker": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ai-usage-policy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ai-workflow-designer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "air-quality": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "all-hands-deck": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "altitude-shifter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ambiguity-resolver": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "analyst-relations-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "announcement-card": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "annual-report-tutor": {
+   "tier": "consequential",
+   "via": "bundle:pm-investing-literacy"
+  },
+  "api-docs-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "api-for-yourself": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "api-test-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "api-versioning-strategy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "apology-letter": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-crisis"
+  },
+  "appliance-buying-guide": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "apprentice-first-week": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "architectural-programme-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "architectural-specification": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "architecture-client-presentation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "architecture-decision-record": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "architecture-diagram": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "archive-strategy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "arrival-setup": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-newcomer"
+  },
+  "ask-for-a-raise": {
+   "tier": "consequential",
+   "via": "bundle:pm-wealth"
+  },
+  "assumption-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "assumption-bounty": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "assumption-mapper": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "async-decision-memo": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "async-instead": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "async-standup-compiler": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "async-update-format": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "attention-reset": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "audited-boundary-check": {
+   "tier": "consequential",
+   "via": "bundle:pm-investing-literacy"
+  },
+  "auto-repair-estimate-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "autopilot-charter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "awkward-message-helper": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "backup-strategy": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-digital-safety"
+  },
+  "band-agreement": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "bank-fee-refund": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "bankruptcy-decision": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-hardship"
+  },
+  "behavior-intervention-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "beneficiary-audit": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-estate"
+  },
+  "benefits-cliff-check": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-hardship"
+  },
+  "benefits-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "bennett-time-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "bid-tender-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "big-purchase-timing": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "birdwatching-log": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "blast-radius-drill": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "blended-family-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-family"
+  },
+  "board-deck-narrative": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "board-game-designer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "board-game-night-planner": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "board-minutes": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "board-pre-read": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "body-double-session": {
+   "tier": "consequential",
+   "via": "bundle:pm-neurodivergent"
+  },
+  "body-doubling-partner": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "bom-cost-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "bookkeeping-categorization": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "boolean-search-builder": {
+   "tier": "consequential",
+   "via": "bundle:pm-recruiting"
+  },
+  "boundary-setting-scripts": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "brag-doc": {
+   "tier": "consequential",
+   "via": "bundle:pm-career"
+  },
+  "brainstorming": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "brand-guidelines": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "brand-impersonation-response": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-crisis"
+  },
+  "brief-builder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "brief-from-pile": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "briefing-note": {
+   "tier": "consequential",
+   "via": "bundle:pm-gov"
+  },
+  "browser-agent-preflight": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "budget-builder": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "budget-tracker-design": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "budget-variance-analysis": {
+   "tier": "consequential",
+   "via": "bundle:pm-finance"
+  },
+  "bug-diagnosis": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "bug-report": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "bug-triage-pack": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "build-my-memory-file": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "burnout-recovery-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-career"
+  },
+  "business-idea-validator": {
+   "tier": "consequential",
+   "via": "bundle:pm-freelance"
+  },
+  "calendar-defrag": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "candidate-scorecard": {
+   "tier": "consequential",
+   "via": "bundle:pm-recruiting"
+  },
+  "cap-table-explainer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "capacity-planning": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "capital-allocation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "car-buying-negotiation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "car-lease-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "car-tco": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "carbon-accounting-check": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "care-decision-family-meeting": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-caregiving"
+  },
+  "care-home-contract-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "care-team-coordinator": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-caregiving"
+  },
+  "career-ladder-map": {
+   "tier": "consequential",
+   "via": "bundle:pm-career"
+  },
+  "career-pivot-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-career"
+  },
+  "caregiver-burnout-check": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-caregiving"
+  },
+  "caregiver-coordination": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "case-for-support": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "case-study-writeup": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cash-flow-forecast": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "category-page-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cease-and-desist-letter": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "change-management-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-hr"
+  },
+  "change-order-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "changelog-for-humans": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "changelog-from-commits": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "changelog-generator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "changelog-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "channel-hygiene": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "chargeback-dispute-response": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "chart": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "chart-choice": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "chart-data-extractor": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "chess-opening-coach": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "childcare-comparison": {
+   "tier": "consequential",
+   "via": "bundle:pm-family"
+  },
+  "churn-analysis": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cicd-playbook": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "citation-hygiene": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "claim-denial-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "claims-triage": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-insurance"
+  },
+  "class-action-claim-finder": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "claude-project-setup": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "claude-superpowers": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "clause-explainer": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "client-discharge-notes": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "client-discovery": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "client-offboarding": {
+   "tier": "consequential",
+   "via": "bundle:pm-freelance"
+  },
+  "client-onboarding-kit": {
+   "tier": "consequential",
+   "via": "bundle:pm-freelance"
+  },
+  "client-red-flags": {
+   "tier": "consequential",
+   "via": "bundle:pm-freelance"
+  },
+  "climate-risk-assessment": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "clinical-case-summary": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "clinical-trial-protocol": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-health"
+  },
+  "clip-factory": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "clone-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "closing-disclosure-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "co-marketing": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "co-parenting-messages": {
+   "tier": "consequential",
+   "via": "bundle:pm-family"
+  },
+  "cocktail-from-what-i-have": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "code-explainer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "code-review-checklist": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "code-review-guide": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "code-simplification": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cohort-analysis": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cohort-curve-model": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cold-email": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cold-outreach-that-isnt-spam": {
+   "tier": "consequential",
+   "via": "bundle:pm-freelance"
+  },
+  "collaboration-contract": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "collections-email": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "college-app-parent-guide": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-parents"
+  },
+  "college-cost": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "coming-out-rehearsal": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-identity"
+  },
+  "committee-handover-pack": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "community-management-playbook": {
+   "tier": "consequential",
+   "via": "bundle:pm-social"
+  },
+  "community-moderation-policy": {
+   "tier": "consequential",
+   "via": "bundle:pm-social"
+  },
+  "company-brief": {
+   "tier": "consequential",
+   "via": "bundle:pm-jobsearch"
+  },
+  "company-compare-same-definitions": {
+   "tier": "consequential",
+   "via": "bundle:pm-investing-literacy"
+  },
+  "company-event-ops": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "comparative-market-analysis": {
+   "tier": "consequential",
+   "via": "bundle:pm-realestate"
+  },
+  "competitive-analysis": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "competitive-intelligence-monitor": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "competitive-scan-lite": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "competitor-signal-tracker": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "competitor-teardown": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "complaint-letter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "compliance-checklist": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "compound-growth-explainer": {
+   "tier": "consequential",
+   "via": "bundle:pm-wealth"
+  },
+  "compounding-record": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "condolence-message-helper": {
+   "tier": "consequential",
+   "via": "bundle:pm-family"
+  },
+  "conference-talk-proposal": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "conflict-deescalation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "construction-rfi-response": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "consulting-proposal": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "content-calendar": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "content-repurposer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "content-style-guide": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "context-bankruptcy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "context-budget": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "context-crusher": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "context-engineering-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "context-mode": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "context-switch-budget": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "context-switch-recovery": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "contract-red-flags": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "contract-renewal-tracker": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "contract-review": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "contractor-dispute": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "contributor-guide": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "controlled-substance-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "conversion-rate-optimization": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "couch-to-goal-runner": {
+   "tier": "consequential",
+   "via": "bundle:pm-wellbeing"
+  },
+  "counteroffer-decoder": {
+   "tier": "consequential",
+   "via": "bundle:pm-resignation"
+  },
+  "cover-letter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "coverage-gap-analysis": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-insurance"
+  },
+  "creator-brand-kit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "creator-deal-decoder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "creator-media-kit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "credential-recognition": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-newcomer"
+  },
+  "credit-from-scratch": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-newcomer"
+  },
+  "credit-memo": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-banking"
+  },
+  "cross-examine-me": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "crypto-prices": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cs-escalation-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cs-health-scorecard": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "csat-nps-analysis": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "currency-rates": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "customer-advisory-board": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "customer-incident-update": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-crisis"
+  },
+  "customer-journey-map": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "customer-outage-notice": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-crisis"
+  },
+  "customer-success-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "dashboard-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "data-analysis-standard": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "data-breach-response": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-scam-defense"
+  },
+  "data-broker-removal": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-digital-safety"
+  },
+  "data-cleaning-pass": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "data-contract": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "data-pipeline-spec": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "data-quality-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "data-quality-checks": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "data-retention-policy": {
+   "tier": "consequential",
+   "via": "bundle:pm-compliance"
+  },
+  "data-slide-design": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "database-migration-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "database-schema-design": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "dataset-datasheet": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "dating-profile-doctor": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "daycare-vs-stay-home": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "dbt-model-spec": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "debt-collector-response": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "debt-collector-scripts": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-hardship"
+  },
+  "debt-payoff": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "debt-payoff-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "debugging-log-analyser": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "decision-autopsy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "decision-forensics": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "decision-helper": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "decision-journal": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "decision-log-setup": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "decision-meeting-format": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "decision-memo": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "decision-panel": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "decision-tree-solver": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "decision-when-tired": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "deck-autopsy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "deck-from-doc": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "deck-narrative-arc": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "deck-outline-first": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "deck-review-rubric": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "declutter-by-room": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "deep-work-blocking": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "deepfake-drill": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "defamation-response": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "delay-claim-letter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "delegate-to-ai": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "delegation-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "deliberate-practice-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "delta-briefing": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "demand-forecast-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "demand-letter": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "demo-script": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "dental-clinical-note": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "dental-emergency-triage": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "dental-insurance-preauth": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "dental-recall-reactivation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "dental-referral-letter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "dependency-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "dependency-check": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "dependency-conflict-resolver": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "deprecation-comms-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "design-critique": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "design-handoff-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "design-system-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "design-system-generate": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "desk-ergonomics-audit": {
+   "tier": "consequential",
+   "via": "bundle:pm-wellbeing"
+  },
+  "desk-research-sprint": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "desktop-zero": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "developer-onboarding-doc": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "devils-advocate-on-demand": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "devils-twin": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "diagnosis-limbo-kit": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-invisible-illness"
+  },
+  "dictionary-lookup": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "difficult-conversation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "digital-death-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "digital-legacy-planner": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-estate"
+  },
+  "disability-benefit-appeal": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-accessibility"
+  },
+  "disability-disclosure-decision": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-accessibility"
+  },
+  "disability-insurance-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "disagreeing-experts": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "disaster-recovery-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "discharge-summary": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-health"
+  },
+  "discovery-call-prep": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "discovery-eyes": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "discovery-interview-guide": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "dispute-letter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "dnd-campaign-starter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "dns-lookup": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "doc-restructure-live": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "doc-versioning-discipline": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "docs-quickstart": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "doctor-visit-prep": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "document-retention-map": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "docx-tracked-changes": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "donor-update": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "double-opt-in-intro": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "downloads-triage": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "doxxing-response": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-digital-safety"
+  },
+  "dpa-review": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "driver-incident-investigation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "driver-retention-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "drug-interaction-intervention": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "earthquake-watch": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "elder-scam-briefing": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-scam-defense"
+  },
+  "elected-rep-letter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "email-agent-preflight": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "email-campaign": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "email-sequence": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "email-to-tasks": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "email-triage": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "email-triage-system": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "emergency-doc-kit": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-emergency"
+  },
+  "emergency-fund": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "employee-engagement-survey": {
+   "tier": "consequential",
+   "via": "bundle:pm-hr"
+  },
+  "empty-state-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "end-of-life-wishes-conversation": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-caregiving"
+  },
+  "energy-scheduling": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "engagement-retro": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "engineering-hiring-rubric": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "engineering-weekly-report": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "entity-relationship-diagram": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "epic-progress-report": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "error-decoder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "error-message-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "escalation-email": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "escalation-tree": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "esg-disclosure-draft": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "estate-planning-kit": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "estate-settlement-organizer": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-estate"
+  },
+  "eulogy-and-obituary-writer": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-grief"
+  },
+  "eulogy-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "euthanasia-conversation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ev-vs-gas": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "eval-rubric-designer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "event-budget-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "event-run-of-show": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "event-safety-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "event-vendor-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "evidence-grading": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "evidence-lock": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "evt-dvt-pvt-gate-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "exam-prep-planner": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "exam-study-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "excel-model": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "exec-vs-working-deck": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "executing-plans": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "executive-presence": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "executive-summary": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "executive-update": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "exit-interview-strategy": {
+   "tier": "consequential",
+   "via": "bundle:pm-resignation"
+  },
+  "exit-waterfall": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "expense-audit": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "expense-discipline": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "expense-filer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "expense-policy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "expense-sheet-design": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "experiment-designer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "experiment-readout": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "expert-interview-prep": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "explain-my-decision-to-me": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "explain-simply": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "exploratory-test-charter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "expungement-navigator": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-reentry"
+  },
+  "fact-check-pass": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "factory-acceptance-test": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "fair-split": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "faith-transition-companion": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-identity"
+  },
+  "family-cookbook-archivist": {
+   "tier": "consequential",
+   "via": "bundle:pm-family"
+  },
+  "family-emergency-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-family"
+  },
+  "fantasy-league-drafter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "faq-builder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "feature-flag-guide": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "feature-prioritisation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "feature-sunset-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "feynman-explainer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "figma-annotation-guide": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "figma-component-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "figma-design-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "figma-design-critique-pm": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "figma-design-qa": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "figma-design-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "figma-prototype-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "figma-spacing-system": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "figma-user-flow-planner": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "figma-variant-matrix": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "file-access-preflight": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "filename-convention": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "financial-aid-appeal": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "financial-checkup": {
+   "tier": "consequential",
+   "via": "bundle:pm-wealth"
+  },
+  "financial-due-diligence": {
+   "tier": "consequential",
+   "via": "bundle:pm-finance"
+  },
+  "financial-independence-roadmap": {
+   "tier": "consequential",
+   "via": "bundle:pm-wealth"
+  },
+  "financial-model-narrative": {
+   "tier": "consequential",
+   "via": "bundle:pm-finance"
+  },
+  "financial-statement-explainer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "fine-appeal-letter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "fire-number": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "first-100k-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-wealth"
+  },
+  "first-90-days-out": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-reentry"
+  },
+  "first-client-contract": {
+   "tier": "consequential",
+   "via": "bundle:pm-sidehustle"
+  },
+  "first-hire-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-career"
+  },
+  "first-maintainer-month": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "five-minds": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "flare-day-planner": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-invisible-illness"
+  },
+  "fleet-compliance-audit-prep": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "fleet-maintenance-programme": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "flight-delay-compensation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "flight-tracker": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "flow-metrics-interpreter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "flowchart": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "foia-request": {
+   "tier": "consequential",
+   "via": "bundle:pm-gov"
+  },
+  "folder-structure-designer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "follow-up-chaser": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "follow-up-sequence": {
+   "tier": "consequential",
+   "via": "bundle:pm-jobsearch"
+  },
+  "followup-sweep": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "form-filler-operator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "formula-detangler": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "founder-market-fit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "franchise-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "franklin-decision-ledger": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "freelance-rate": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "freight-rate-quote": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "from-first-principles": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "frontend-design": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "fundraising-faq": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "funeral-pricing-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "future-self-interview": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "future-selves-council": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "game-night-planner": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "gantt-roadmap": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "gdpr-compliance": {
+   "tier": "consequential",
+   "via": "bundle:pm-compliance"
+  },
+  "generate-then-execute": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "get-more-from-ai": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "gift-card-recovery": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "gift-finder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "git-troubleshooter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "github-repo-vitals": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "give-hard-feedback-kindly": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "giving-feedback": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "glossary-builder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "go-bag-builder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-emergency"
+  },
+  "go-to-market": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "go-to-market-planner": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "good-enough-detector": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "grant-proposal": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "gratitude-practice": {
+   "tier": "consequential",
+   "via": "bundle:pm-wellbeing"
+  },
+  "greenwashing-self-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "grief-admin": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "grieving-at-work": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-grief"
+  },
+  "grocery-budget-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "group-trip-negotiator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "growth-experiment-backlog": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "guest-incident-log": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "habit-builder": {
+   "tier": "consequential",
+   "via": "bundle:pm-wellbeing"
+  },
+  "handbook-page": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "hardware-prd": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "hazard-risk-map": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-emergency"
+  },
+  "headline-options": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "health-inspection-prep": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "healthcare-system-primer": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-newcomer"
+  },
+  "help-center-article": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "hidden-fee-auditor": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "hipaa-safeguards": {
+   "tier": "consequential",
+   "via": "bundle:pm-compliance"
+  },
+  "hiring-rubric": {
+   "tier": "consequential",
+   "via": "bundle:pm-people"
+  },
+  "hn-digest": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "hoa-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "hoa-violation-response": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "hobby-starter-kit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "home-contractor-quote-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "home-energy-savings": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "home-inspection-decoder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "home-maintenance-calendar": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "home-workout-builder": {
+   "tier": "consequential",
+   "via": "bundle:pm-wellbeing"
+  },
+  "hook-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "hospital-stay-plan": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-caregiving"
+  },
+  "hours-of-service-check": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "house-style-enforcer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "household-constitution": {
+   "tier": "consequential",
+   "via": "bundle:pm-family"
+  },
+  "houseplant-care": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "housing-with-a-record": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-reentry"
+  },
+  "human-in-the-loop-design": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "hydration-and-energy-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-wellbeing"
+  },
+  "hyperfocus-exit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "i18n-readiness-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "idea-storm": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "identity-theft-recovery": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-digital-safety"
+  },
+  "iep-504-meeting-kit": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-parents"
+  },
+  "iep-goal-support": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "iep-goal-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "immigration-document-checklist": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "impact-report": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "in-law-boundary-scripts": {
+   "tier": "consequential",
+   "via": "bundle:pm-family"
+  },
+  "inbox-triage-live": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "inbox-unsubscribe-purge": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "inbox-zero-operator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "incident-postmortem": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "incident-public-statement": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-crisis"
+  },
+  "incremental-implementation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "index-fund-starter": {
+   "tier": "consequential",
+   "via": "bundle:pm-wealth"
+  },
+  "influencer-brief": {
+   "tier": "consequential",
+   "via": "bundle:pm-social"
+  },
+  "informational-interview-prep": {
+   "tier": "consequential",
+   "via": "bundle:pm-career"
+  },
+  "infra-as-code-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "injection-spotter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "inspection-report-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "instagram-post-downloader": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "insurance-claim": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "insurance-claim-appeal": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-insurance"
+  },
+  "insurance-policy-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "interview-me": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "interview-prep": {
+   "tier": "consequential",
+   "via": "bundle:pm-jobsearch"
+  },
+  "interview-question-bank": {
+   "tier": "consequential",
+   "via": "bundle:pm-recruiting"
+  },
+  "interview-synthesis": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "inventory-policy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "inversion-thinking": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "investing-for-beginners": {
+   "tier": "consequential",
+   "via": "bundle:pm-wealth"
+  },
+  "investing-policy-statement": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "investing-vocabulary-explainer": {
+   "tier": "consequential",
+   "via": "bundle:pm-investing-literacy"
+  },
+  "investment-account-picker": {
+   "tier": "consequential",
+   "via": "bundle:pm-wealth"
+  },
+  "investor-cold-email": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "investor-pitch-deck": {
+   "tier": "consequential",
+   "via": "bundle:pm-finance"
+  },
+  "investor-update": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "invoice-generator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ip-lookup": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "is-this-actually-good": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "iso-27001-isms": {
+   "tier": "consequential",
+   "via": "bundle:pm-compliance"
+  },
+  "iss-tracker": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "issue-triage-live": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "jd-decoder": {
+   "tier": "consequential",
+   "via": "bundle:pm-jobsearch"
+  },
+  "job-application": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "job-description-writer": {
+   "tier": "consequential",
+   "via": "bundle:pm-hr"
+  },
+  "job-search-with-a-record": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-reentry"
+  },
+  "job-story-mapper": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "journaling-prompts": {
+   "tier": "consequential",
+   "via": "bundle:pm-wellbeing"
+  },
+  "jury-duty-guide": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "jury-duty-navigator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "karaoke-song-picker": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "kb-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "kids-online-safety-plan": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-digital-safety"
+  },
+  "knowledge-gap-map": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "knowledge-gardening": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "kpi-tracker-design": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "kyc-escalation": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-banking"
+  },
+  "landing-page-copy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "language-learning-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "last-30-days-research": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "last-two-weeks-handoff": {
+   "tier": "consequential",
+   "via": "bundle:pm-resignation"
+  },
+  "late-invoice-chaser": {
+   "tier": "consequential",
+   "via": "bundle:pm-freelance"
+  },
+  "late-invoice-escalation": {
+   "tier": "consequential",
+   "via": "bundle:pm-freelance"
+  },
+  "launch-post": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "launch-readiness": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "launch-tiering-framework": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "layoff-announcement": {
+   "tier": "consequential",
+   "via": "bundle:pm-layoff"
+  },
+  "layoff-communication": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-crisis"
+  },
+  "layoff-financial-triage": {
+   "tier": "consequential",
+   "via": "bundle:pm-layoff"
+  },
+  "layoff-first-72-hours": {
+   "tier": "consequential",
+   "via": "bundle:pm-career"
+  },
+  "learn-anything-roadmap": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "learn-from-a-project": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "lease-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "legacy-letter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "legal-brief": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "lemon-law-check": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "lending-risk-brief": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-banking"
+  },
+  "lesson-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "lesson-plan-builder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "life-premortem": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "lifecycle-crm-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "linkedin-profile": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "literature-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "literature-review-builder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "llm-cost-latency-budget": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "llm-guardrails-spec": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "load-testing-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "loan-covenant-review": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-banking"
+  },
+  "loan-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "local-dev-setup": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "localization-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "logistics-incident-report": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "long-distance-relationship-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-family"
+  },
+  "long-term-care-options": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-caregiving"
+  },
+  "love-letter-helper": {
+   "tier": "consequential",
+   "via": "bundle:pm-family"
+  },
+  "lower-my-bill": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "machiavelli-counsel": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "maintainer-triage": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "make-friends-as-an-adult": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "make-me-a-skill": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "manager-first-90-days": {
+   "tier": "consequential",
+   "via": "bundle:pm-people"
+  },
+  "managing-up": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "marketing-funnel-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "marketing-psychology": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "marketplace-listing-optimizer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "masking-budget": {
+   "tier": "consequential",
+   "via": "bundle:pm-neurodivergent"
+  },
+  "mcp-server-spec": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "meal-prep-os": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "mechanic-quote-decoder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "media-pitch": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "medical-appointment-advocate": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-caregiving"
+  },
+  "medical-bill-decoder": {
+   "tier": "high-stakes",
+   "via": "skill"
+  },
+  "medical-records-request": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "medication-management-system": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-caregiving"
+  },
+  "medication-therapy-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "meeting-action-extractor": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "meeting-cost-meter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "meeting-notes": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "meeting-prep-live": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "meeting-prep-pack": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "meeting-room-etiquette": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "meltdown-map": {
+   "tier": "consequential",
+   "via": "bundle:pm-neurodivergent"
+  },
+  "memoir-story-capture": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "memory-file-maintenance": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "menu-cost-engineer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "message-for-the-moment": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "messaging-framework": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "metric-gaslighting-detector": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "metric-semantic-layer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "metric-tree-builder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "metrics-framework": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "micro-retirement-planner": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "microcopy-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "microservices-decomposition": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "migration-day-runbook": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "mind-map": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "model-card": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "model-migration-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "model-selection-advisor": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "momentum-map": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "money-mindset-reset": {
+   "tier": "consequential",
+   "via": "bundle:pm-wealth"
+  },
+  "money-priorities-order": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "monitoring-setup-guide": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "morning-intelligence": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "moving-company-estimate-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "moving-house-checklist": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "moving-quote-decoder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "multi-source-signal-synthesiser": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "my-energy-map": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "my-failure-museum": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "name-change-navigator": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-identity"
+  },
+  "name-what-im-feeling": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "nda-analyser": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "neighbor-dispute-resolver": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "net-worth-statement": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "networking-for-introverts": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "networking-outreach": {
+   "tier": "consequential",
+   "via": "bundle:pm-career"
+  },
+  "new-baby-logistics": {
+   "tier": "consequential",
+   "via": "bundle:pm-family"
+  },
+  "new-manager-first-90-days": {
+   "tier": "consequential",
+   "via": "bundle:pm-career"
+  },
+  "new-parent-logistics": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "newsletter-digest-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "newsletter-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "note-taking-system": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "notebooklm-connector": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "notes-humanizer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "notify-everyone-of-a-death": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-grief"
+  },
+  "notion-db-hygiene": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "nt-translator": {
+   "tier": "consequential",
+   "via": "bundle:pm-neurodivergent"
+  },
+  "offer-comparison": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "offer-letter": {
+   "tier": "consequential",
+   "via": "bundle:pm-recruiting"
+  },
+  "office-hours-design": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "office-move-runbook": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "offsite-planner": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "okr-builder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "onboarding-buddy-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "onboarding-copy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "onboarding-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-hr"
+  },
+  "oncall-handoff": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "oncall-runbook": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "one-hard-truth": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "one-on-one-prep": {
+   "tier": "consequential",
+   "via": "bundle:pm-career"
+  },
+  "one-pager": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "open-house-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-realestate"
+  },
+  "opposing-counsel": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "oral-history-kit": {
+   "tier": "consequential",
+   "via": "bundle:pm-family"
+  },
+  "org-chart": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "out-of-office-designer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "outcome-tracker": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "outline-before-prose": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "outreach-message": {
+   "tier": "consequential",
+   "via": "bundle:pm-jobsearch"
+  },
+  "oversharing-audit": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-digital-safety"
+  },
+  "overwhelm-triage": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "package-health": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "paid-acquisition-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "panel-of-experts": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "parent-communication": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "parent-conference-prep": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "parent-teacher-conference-prep": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-parents"
+  },
+  "partnership-proposal": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "passive-income-reality-check": {
+   "tier": "consequential",
+   "via": "bundle:pm-wealth"
+  },
+  "password-and-2fa-setup": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-digital-safety"
+  },
+  "patient-communication": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "patient-education-explainer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "pay-stub-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "paywall-optimization": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "pentest-report": {
+   "tier": "consequential",
+   "via": "bundle:pm-security"
+  },
+  "performance-budget": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "performance-review": {
+   "tier": "consequential",
+   "via": "bundle:pm-people"
+  },
+  "perimenopause-navigator": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-invisible-illness"
+  },
+  "permit-navigator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "personal-bio": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "personal-board-of-directors": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "personal-operating-manual": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "personal-statement": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "personal-wip-limits": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "persuasion-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "pharmacy-counselling-script": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "phishing-triage": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-digital-safety"
+  },
+  "photo-library-rescue": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "physio-discharge-summary": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "physio-initial-assessment": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "physio-progress-note": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "pip-responder": {
+   "tier": "high-stakes",
+   "via": "skill"
+  },
+  "pip-writer": {
+   "tier": "consequential",
+   "via": "bundle:pm-people"
+  },
+  "pitch-vs-teach": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "pivot-analysis-planner": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "pixel-gif-maker": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "plain-language-rewrite": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "plan-my-day": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "planning-application-statement": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "pm-weekly-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "poke-holes-in-this": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "policy-drafter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "policy-memo": {
+   "tier": "consequential",
+   "via": "bundle:pm-gov"
+  },
+  "policy-renewal-review": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-insurance"
+  },
+  "portfolio-page": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "post-event-debrief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "posture-reset-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-wellbeing"
+  },
+  "power-of-attorney-explainer": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "power-outage-plan": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-emergency"
+  },
+  "pptx-slide-auditor": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "pr-crisis-response": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-crisis"
+  },
+  "pr-description": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "pr-description-live": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "pr-description-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "prd-template": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "pre-mortem-panel": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "premortem-assassin": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "prescription-cost-navigator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "prescription-refusal-to-fill": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "presenter-notes": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "press-kit-epk": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "press-release": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "price-increase-announcement": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "price-match-request": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "pricing-calculator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "pricing-page-copy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "pricing-sensitivity-model": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "pricing-strategy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "pricing-your-services": {
+   "tier": "consequential",
+   "via": "bundle:pm-freelance"
+  },
+  "prior-authorization-letter": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-health"
+  },
+  "privacy-policy-drafter": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "process-documentation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "product-description": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "product-health-analysis": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "product-launch-checklist": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "product-naming": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "product-positioning-doc": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "product-recall-check": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "professional-brain": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "professional-translator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "profit-to-cash-walk": {
+   "tier": "consequential",
+   "via": "bundle:pm-investing-literacy"
+  },
+  "programmatic-seo": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "project-status-report": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "promotion-packet": {
+   "tier": "consequential",
+   "via": "bundle:pm-career"
+  },
+  "promotion-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "prompt-debugging": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "prompt-library-builder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "prompt-optimizer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "prompt-regression-suite": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "property-investment-analysis": {
+   "tier": "consequential",
+   "via": "bundle:pm-realestate"
+  },
+  "property-listing": {
+   "tier": "consequential",
+   "via": "bundle:pm-realestate"
+  },
+  "property-offer-letter": {
+   "tier": "consequential",
+   "via": "bundle:pm-realestate"
+  },
+  "property-tax-appeal": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "proposal-skeleton": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "proposal-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "public-comment": {
+   "tier": "consequential",
+   "via": "bundle:pm-gov"
+  },
+  "public-holidays": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "public-speaking-prep": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "punch-list-builder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "purchase-justification": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "qa-handoff-package": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "qa-release-signoff": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "qbr-deck": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "quarterly-tax-rhythm": {
+   "tier": "consequential",
+   "via": "bundle:pm-sidehustle"
+  },
+  "quiz-generator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "quote-card": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "rabbit-hole-rescue": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "raci-matrix": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "rag-architecture-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "rag-design-doc": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "raise-vs-jump": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ranked-climb-coach": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ransomware-first-response": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-digital-safety"
+  },
+  "rate-card": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "read-the-room": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "reading-retention-system": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "readme-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "receipts-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "reconnect-after-time-away": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-reentry"
+  },
+  "reconnect-with-someone": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "recovery-day-planner": {
+   "tier": "consequential",
+   "via": "bundle:pm-wellbeing"
+  },
+  "recruiter-outreach": {
+   "tier": "consequential",
+   "via": "bundle:pm-recruiting"
+  },
+  "recurring-meeting-pruner": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "red-team-my-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "red-team-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "redundancy-consultation": {
+   "tier": "consequential",
+   "via": "bundle:pm-hr"
+  },
+  "refactoring-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "reference-check-script": {
+   "tier": "consequential",
+   "via": "bundle:pm-recruiting"
+  },
+  "reference-letter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "reference-request-kit": {
+   "tier": "consequential",
+   "via": "bundle:pm-layoff"
+  },
+  "referral-program": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "referral-program-design": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "refinance-breakeven": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "regex-builder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "regression-test-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "regret-minimizer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "regulator-eyes": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "regulatory-impact-analysis": {
+   "tier": "consequential",
+   "via": "bundle:pm-gov"
+  },
+  "rehab-programme-design": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "rejection-sensitivity-reframe": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "relationship-check-in": {
+   "tier": "consequential",
+   "via": "bundle:pm-family"
+  },
+  "release-day-countdown": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "relocation-planner": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "renewal-playbook": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "renovation-scope-and-budget": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "rent-increase-response": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-renters"
+  },
+  "rent-vs-buy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "rental-application": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "repair-after-a-fight": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "repair-request-escalation": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-renters"
+  },
+  "reply-in-their-tone": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "repo-map": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "report-a-hazard": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "resale-flip-kit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "research-protocol": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "research-repo-setup": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "resignation-letter": {
+   "tier": "consequential",
+   "via": "bundle:pm-resignation"
+  },
+  "respite-care-plan": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-caregiving"
+  },
+  "resume": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "retention-analysis": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "retention-loop-design": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "retro-analysis": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "return-refund-policy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "return-to-activity-criteria": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "review-comments-resolver": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "review-response": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "rewards-optimizer": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "rfc-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "rfp-response": {
+   "tier": "consequential",
+   "via": "bundle:pm-gov"
+  },
+  "rfp-scoring-matrix": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "rfp-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "rice-impact-matrix": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "rice-prioritisation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "risk-register": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "rma-failure-analysis": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "roadmap-narrative": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "roadmap-presentation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "roi-estimator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "role-redesign-for-ai": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "rollback-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "roommate-agreement": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "rss-digest": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "rubric-builder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "rules-lawyer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "run-an-agent-team": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "runbook-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "runway-calculator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "runway-monte-carlo": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "runway-planner": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "saas-metrics": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "safe-online-shopping": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-digital-safety"
+  },
+  "salary-benchmarking": {
+   "tier": "consequential",
+   "via": "bundle:pm-career"
+  },
+  "salary-negotiation": {
+   "tier": "high-stakes",
+   "via": "skill"
+  },
+  "sales-battlecard": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sales-demo-script": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sales-enablement-kit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sales-forecasting-model": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sales-page": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "savings-goal-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "saying-no": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "saying-no-kindly": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "scam-message-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "schedule-monte-carlo": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "schedule-recipe": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "schema-markup": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "scholarship-essay": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "school-choice-decision": {
+   "tier": "consequential",
+   "via": "bundle:pm-family"
+  },
+  "scope-creep-response": {
+   "tier": "consequential",
+   "via": "bundle:pm-freelance"
+  },
+  "screen-time-detox": {
+   "tier": "consequential",
+   "via": "bundle:pm-wellbeing"
+  },
+  "screenshot-teardown": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "second-opinion-request": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "secure-a-lost-phone": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-digital-safety"
+  },
+  "security-deposit-recovery": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-renters"
+  },
+  "security-incident-response": {
+   "tier": "consequential",
+   "via": "bundle:pm-security"
+  },
+  "security-questionnaire-autofill": {
+   "tier": "consequential",
+   "via": "bundle:pm-compliance"
+  },
+  "security-review": {
+   "tier": "consequential",
+   "via": "bundle:pm-security"
+  },
+  "security-threat-model": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "self-review": {
+   "tier": "consequential",
+   "via": "bundle:pm-career"
+  },
+  "sensory-audit": {
+   "tier": "consequential",
+   "via": "bundle:pm-neurodivergent"
+  },
+  "seo-content-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sequence-diagram": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "server-training-guide": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "service-catalog-entry": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "session-handoff": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "severance-agreement-decoder": {
+   "tier": "high-stakes",
+   "via": "skill"
+  },
+  "shared-drive-cleanup": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "shift-schedule-builder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "short-form-script": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "should-i-quit-or-push": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "should-i-send-this": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "shutdown-ritual": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sibling-care-summit": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-aging-parents"
+  },
+  "side-business-setup": {
+   "tier": "consequential",
+   "via": "bundle:pm-sidehustle"
+  },
+  "site-analysis-report": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "site-check": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "site-safety-briefing": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "skill-fusion": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "skill-plateau-breaker": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "skill-security-auditor": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "skill-vetting": {
+   "tier": "consequential",
+   "via": "bundle:pm-security"
+  },
+  "sleep-reset-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-wellbeing"
+  },
+  "slide-deck": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "slide-density-rules": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "slo-error-budget": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "small-claims-prep": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "small-talk-survival": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "soap-note": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-health"
+  },
+  "soc2-readiness": {
+   "tier": "consequential",
+   "via": "bundle:pm-compliance"
+  },
+  "social-ad-campaign": {
+   "tier": "consequential",
+   "via": "bundle:pm-social"
+  },
+  "social-media-audit": {
+   "tier": "consequential",
+   "via": "bundle:pm-social"
+  },
+  "social-media-strategy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "solar-breakeven": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sop-meeting-prep": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sop-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "source-interview-prep": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "source-protection-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "source-triangulation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sourcing-strategy": {
+   "tier": "consequential",
+   "via": "bundle:pm-recruiting"
+  },
+  "sourdough-troubleshooter": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "spaced-repetition-setup": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "speak-at-the-council": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "spoon-planner": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-invisible-illness"
+  },
+  "sports-scores": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "spot-ai-mistakes": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "spreadsheet-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "spreadsheet-audit-live": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "spreadsheet-handover": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "spreadsheet-or-database": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sprint-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sprint-planning": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sprint-retro-facilitator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sprint-velocity-analysis": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sql-optimizer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sql-query-explainer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "stage-payment-shield": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "stakeholder-influence-mapper": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "stakeholder-update": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "standing-meeting-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "stargazing-tonight": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "startup-idea-validator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "statement-coach": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "statement-of-work": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "status-report-pipeline": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "steelman-the-weird-option": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "stock-snapshot": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "stoic-setback-debrief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "stop-overthinking-this": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "stop-the-bleed-triage": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-hardship"
+  },
+  "story-pitch": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "strategic-narrative-generator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "strategy-memo": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "stretching-routine": {
+   "tier": "consequential",
+   "via": "bundle:pm-wellbeing"
+  },
+  "student-feedback": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "student-loan-strategy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "study-notes-synthesizer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "style-fingerprint": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "subagent-orchestration": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "subcontractor-scorecard": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "subscription-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "subscription-auditor": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "substack-notes-scraper": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "subtitle-caption": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "summarize-anything": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sun-and-moon": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sun-tzu-strategy-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "supplier-scorecard": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "support-a-friend-in-crisis": {
+   "tier": "high-stakes",
+   "via": "skill"
+  },
+  "support-macro": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "support-runbook": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "support-staffing-model": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "support-the-bereaved": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-grief"
+  },
+  "survey-design-basics": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "sycophancy-challenger": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "synthetic-user-research": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "system-design-interview": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "tabletop-negotiator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "task-to-first-step": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "task-triage-matrix": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "tax-deduction-finder": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "tax-planning-checklist": {
+   "tier": "consequential",
+   "via": "bundle:pm-finance"
+  },
+  "tax-residency-primer": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-newcomer"
+  },
+  "tdd-workflow": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "teach-me-in-layers": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "teach-the-game": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "teaching-lesson-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "team-budget-tracker": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "team-health-check": {
+   "tier": "consequential",
+   "via": "bundle:pm-people"
+  },
+  "team-offsite-planner": {
+   "tier": "consequential",
+   "via": "bundle:pm-people"
+  },
+  "tech-radar": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "technical-debt-register": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "technical-spec-template": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "template-designer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "tenant-rights-explainer": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "tenant-screening-guide": {
+   "tier": "consequential",
+   "via": "bundle:pm-realestate"
+  },
+  "test-case-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "test-strategy-doc": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "testimonial-request": {
+   "tier": "consequential",
+   "via": "bundle:pm-freelance"
+  },
+  "the-2-minute-launch": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "the-boring-answer-detector": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "the-car-dealership": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "the-churning-customer": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "the-due-diligence-call": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "the-ethics-board": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "the-ick-decoder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "the-insurance-adjuster": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "the-journalist-call": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "the-loan-officer": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "the-maintainers-no": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "the-one-thing": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "the-open-house": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "the-org-simulator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "the-planning-committee": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "the-price-pushback": {
+   "tier": "consequential",
+   "via": "bundle:pm-freelance"
+  },
+  "the-procurement-gauntlet": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "the-promotion-committee": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "the-ruthless-editor": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "the-school-appeal": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "the-second-opinion": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "the-skeptic-and-the-believer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "the-strong-no": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "the-thesis-defense": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "the-third-answer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "the-time-capsule": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "the-understudy": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "the-union-table": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "the-vibe-check": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "the-visa-interview": {
+   "tier": "high-stakes",
+   "via": "skill"
+  },
+  "the-worry-decompiler": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "the-year-of-firsts": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-grief"
+  },
+  "thesis-outline": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "think-from-another-angle": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "thread-to-decision": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "thread-to-decision-live": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "threat-model": {
+   "tier": "consequential",
+   "via": "bundle:pm-security"
+  },
+  "thumbnail-creator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "timeshare-contract-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "token-cost": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "token-diet": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "tone-fixer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "tool-permission-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "tool-procurement-eval": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "tooling-risk-assessment": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "tornado-sensitivity": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "tos-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "trade-quote-builder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "transcreation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "travel-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "treatment-plan-estimate": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "treatment-plan-presentation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "trip-planner": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ttrpg-session-forge": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "two-worlds-translator": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-identity"
+  },
+  "unblock-protocol": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "unclaimed-money-tracer": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "underwriting-narrative": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-insurance"
+  },
+  "unit-economics": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "usage-based-pricing-model": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "used-car-decoder": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "user-interview-synthesis": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "user-journey-map": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "user-research-synthesis": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "user-story-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "utility-switch-advisor": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "ux-research-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "value-proposition": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "vc-partner-meeting": {
+   "tier": "consequential",
+   "via": "bundle:pm-simulators"
+  },
+  "vehicle-maintenance-schedule": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "vendor-breakup-email": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "vendor-comparison-matrix": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "vendor-contract-checklist": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "vendor-evaluation": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "vendor-security-review": {
+   "tier": "consequential",
+   "via": "bundle:pm-compliance"
+  },
+  "venue-access-check": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-accessibility"
+  },
+  "venue-contract-review": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "verification-before-completion": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "version-chaos-untangler": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "vet-estimate-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "viral-content-framework": {
+   "tier": "consequential",
+   "via": "bundle:pm-social"
+  },
+  "voice-agent-design": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "voice-of-customer-program": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "volunteer-treasurer-basics": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "voting-navigator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "vuln-triage": {
+   "tier": "consequential",
+   "via": "bundle:pm-security"
+  },
+  "wage-garnishment-response": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-hardship"
+  },
+  "warranty-claim": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "weather-now": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "wedding-budget": {
+   "tier": "consequential",
+   "via": "bundle:pm-wedding"
+  },
+  "wedding-logistics-planner": {
+   "tier": "consequential",
+   "via": "bundle:pm-wedding"
+  },
+  "wedding-speech": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "wedding-vendor-contract-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "wedding-vows-writer": {
+   "tier": "consequential",
+   "via": "bundle:pm-family"
+  },
+  "weekly-review-ritual": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "weekly-unstuck": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "wellness-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "what-am-i-not-seeing": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "what-to-ask": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
+  },
+  "whats-for-dinner": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "when-someone-dies": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-estate"
+  },
+  "where-do-i-start": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "which-skill": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "whiteboard-to-spec": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "wiki-summary": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "win-loss-analysis": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "winback-playbook": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "windfall-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
+  "wine-pairing": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "witness-statement-writer": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-legal"
+  },
+  "word-document": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "working-agreements": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "workshop-designer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "workshop-facilitation-guide": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "world-clock": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "writing-great-skills": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "writing-plans": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "year-in-review": {
+   "tier": "consequential",
+   "via": "bundle:pm-career"
+  },
+  "youtube-script": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "youtube-script-writer": {
+   "tier": "informational",
+   "via": "default"
+  }
+ }
+}

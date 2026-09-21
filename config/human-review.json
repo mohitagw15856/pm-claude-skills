@@ -1,0 +1,5 @@
+{
+  "$comment": "Human / expert review registry (trust ideas #1 and #4). One entry per completed review of a skill by a real person. High-stakes skills (data/risk-tiers.json) are expected to carry a current, un-expired review; scripts/check-human-review.mjs reports coverage and flags missing or overdue ones. NEVER add an entry without a real reviewer who actually read the skill — an invented review is worse than none. 'credential' is free text ('licensed attorney, CA', 'RN', 'AFC financial counselor', 'lived experience — reentry'); 'expires' defaults to 12 months after 'date'. Starts empty on purpose.",
+  "review_validity_months": 12,
+  "reviews": []
+}

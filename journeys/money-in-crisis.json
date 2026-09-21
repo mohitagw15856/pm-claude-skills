@@ -1,0 +1,16 @@
+{
+  "id": "money-in-crisis",
+  "name": "Money in crisis",
+  "emoji": "💸",
+  "triggers": ["I can't pay all my bills", "a debt collector keeps calling", "I got a garnishment notice", "I'm broke and panicking"],
+  "boundary": "Educational, not financial or legal advice. Rules vary by jurisdiction and change. Non-profit credit counselors and legal aid are free or low-cost — using them is smart triage, not failure. If you're thinking about harming yourself, contact a crisis line first.",
+  "ask_first": "Is anything threatened right now — an eviction, shutoff, repossession, or garnishment notice? Those jump the queue.",
+  "steps": [
+    { "skill": "stop-the-bleed-triage", "why": "Turn panic into a sequence: essentials first, unsecured debt last, and the few calls to make in the next 24 hours.", "carry": ["the gap", "protect-at-all-costs list", "calls made"] },
+    { "skill": "debt-collector-scripts", "why": "The calls stop being frightening once you know the script and the rights behind it.", "carry": ["validation requested", "disputes filed", "paper trail started"] },
+    { "skill": "wage-garnishment-response", "why": "If pay is being taken, there's a short window to claim exemptions — act inside it.", "carry": ["deadline", "exemptions claimed", "legal aid contacted"], "optional": true },
+    { "skill": "benefits-cliff-check", "why": "Before taking more hours or a raise, check it doesn't cost more in lost benefits than it adds.", "carry": ["net read", "cliffs to watch"], "optional": true },
+    { "skill": "bankruptcy-decision", "why": "Only if the numbers say so: whether it fits, the trade-offs, the alternatives — and why to see an attorney (free consults exist).", "carry": ["fit read", "alternatives weighed"], "optional": true }
+  ],
+  "done_when": "Essentials are covered for this month, collectors are handled in writing, any garnishment is contested inside its window, and the bigger decision is on the table with real help."
+}

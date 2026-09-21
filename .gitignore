@@ -54,3 +54,6 @@ pm-skills-course.zip
 web/skill-changelog.json
 org/sessions-data/
 org/white-label/branding.json
+
+# Offline bundle output (regenerate with scripts/build-offline-bundle.mjs)
+dist/

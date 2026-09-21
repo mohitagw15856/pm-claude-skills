@@ -1,0 +1,33 @@
+{
+  "$comment": "Structured risk tier per skill (trust idea #3). Resolution: skill override > highest tier of any bundle the skill belongs to > default. Tiers drive disclaimers, the human-review requirement (config/human-review.json), and UI labelling. Bundles/skills listed here must exist; scripts/check-risk-tiers.mjs validates that and emits data/risk-tiers.json.",
+  "tiers": {
+    "high-stakes": "Being wrong can cost money, rights, health, or safety. Requires a not-advice boundary, routes to a professional, and a current human review.",
+    "consequential": "Affects a job, a relationship, or a material decision. Requires a clear not-advice boundary where relevant.",
+    "informational": "Reading, drafting, planning, thinking. Standard quality gates only."
+  },
+  "default": "informational",
+  "bundles": {
+    "high-stakes": [
+      "pm-hardship", "pm-grief", "pm-reentry", "pm-caregiving", "pm-aging-parents",
+      "pm-legal", "pm-estate", "pm-insurance", "pm-banking", "pm-scam-defense",
+      "pm-health", "pm-crisis", "pm-invisible-illness", "pm-accessibility",
+      "pm-newcomer", "pm-decoders", "pm-emergency", "pm-identity",
+      "pm-digital-safety", "pm-renters", "pm-parents"
+    ],
+    "consequential": [
+      "pm-wealth", "pm-money", "pm-finance", "pm-investing-literacy", "pm-hr",
+      "pm-people", "pm-layoff", "pm-resignation", "pm-jobsearch", "pm-career",
+      "pm-compliance", "pm-security", "pm-gov", "pm-recruiting", "pm-neurodivergent",
+      "pm-family", "pm-social", "pm-wellbeing", "pm-freelance", "pm-sidehustle",
+      "pm-wedding", "pm-realestate", "pm-simulators"
+    ]
+  },
+  "skills": {
+    "high-stakes": [
+      "salary-negotiation", "the-visa-interview", "medical-bill-decoder",
+      "severance-agreement-decoder", "pip-responder", "support-a-friend-in-crisis"
+    ],
+    "consequential": [],
+    "informational": []
+  }
+}

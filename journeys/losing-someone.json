@@ -1,0 +1,16 @@
+{
+  "id": "losing-someone",
+  "name": "Losing someone",
+  "emoji": "🕊️",
+  "triggers": ["my dad died", "someone I love passed away", "I have to plan a funeral", "I have to write a eulogy"],
+  "boundary": "Not therapy, not legal or financial advice. Estate and probate steps vary by jurisdiction. Grief counseling and support groups are there — and if there's any concern about safety, a crisis line comes first.",
+  "ask_first": "Do you need the logistics (who to notify, paperwork), the words (a eulogy or a message), or just getting through today? We start wherever you are.",
+  "steps": [
+    { "skill": "notify-everyone-of-a-death", "why": "The administrative avalanche, turned into a calm order — and the death certificates ordered early.", "carry": ["certificates ordered", "notified: people / government / financial / digital", "what can wait"] },
+    { "skill": "eulogy-and-obituary-writer", "why": "A true, warm piece from your memories — not clichés — with a copy you can read through tears.", "carry": ["the draft", "delivery plan"], "optional": true },
+    { "skill": "estate-settlement-organizer", "why": "The paperwork after the service, in order, with the right professional named for each part.", "carry": ["executor tasks", "professionals engaged"], "optional": true },
+    { "skill": "grieving-at-work", "why": "What to tell your manager, the leave you can take, and a soft way back.", "carry": ["leave arranged", "re-entry plan"], "optional": true },
+    { "skill": "the-year-of-firsts", "why": "The hard days ahead, seen in advance — with permission for each and someone told beforehand.", "carry": ["hard-days calendar", "support person named"] }
+  ],
+  "done_when": "The notifications are sequenced, the service is honored, the paperwork has an order and the right help, and the year ahead has a plan and a person beside you."
+}
