@@ -1,8 +1,10 @@
-# 🗂️ All 1174 Skills — full catalog
+# 🗂️ All 1162 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
 > _Auto-generated from `web/skills.json` by `scripts/build-skills-md.mjs` — do not edit by hand; run `node scripts/build-skills-md.mjs`._
+
+> _12 retired skills are not listed here; their names still resolve and point to a successor — see [docs/DEPRECATION.md](docs/DEPRECATION.md)._
 
 **Jump to:** [🚀 Product](#product) · [📣 Marketing & Growth](#marketing-growth) · [💻 Engineering & AI](#engineering-ai) · [📊 Data & Analytics](#data-analytics) · [🎨 Design & Content](#design-content) · [🤝 Customers & Sales](#customers-sales) · [💰 Finance, Ops & Business](#finance-ops-business) · [⚖️ Legal & Compliance](#legal-compliance) · [🧑 You & Career](#you-career) · [🌍 Industries & Public Sector](#industries-public-sector)
 
@@ -93,7 +95,7 @@
 | **Stakeholder Influence Mapper** (`stakeholder-influence-mapper`) | Map stakeholders for a product decision and produce a tailored influence strategy with talking points. | — |
 | **Strategic Narrative Generator** (`strategic-narrative-generator`) | Generate the strategic story connecting a product roadmap to company goals in a form non-technical stakeholders can repeat. | — |
 
-## 📣 Marketing & Growth (51 skills)
+## 📣 Marketing & Growth (49 skills)
 
 ### `pm-copy` — 7 skills
 
@@ -107,7 +109,7 @@
 | **Sales Page** (`sales-page`) | Write a long-form sales page that takes a cold reader to a purchase. | — |
 | **Value Proposition** (`value-proposition`) | Craft a sharp value proposition that says who it's for, the outcome, and why you over the alternative. | — |
 
-### `pm-creator` — 7 skills
+### `pm-creator` — 6 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -117,9 +119,8 @@
 | **Hook Writer** (`hook-writer`) | Generate scroll-stopping hooks — the first line of a post, thread, video, or email that decides whether anyone keeps reading. | — |
 | **Newsletter Writer** (`newsletter-writer`) | Write a full creator newsletter issue — subject line, preview text, hook, body with a clear takeaway, and a CTA — in the writer's voice, for… | — |
 | **Short-Form Script** (`short-form-script`) | Write a short-form video script for TikTok, Instagram Reels, or YouTube Shorts — built on the hook→retention→payoff structure that drives watch-time. | — |
-| **YouTube Script** (`youtube-script`) | Write a long-form video script for YouTube — an explainer, tutorial, video essay, review, or talking-head — built on the… | — |
 
-### `pm-growth` — 14 skills
+### `pm-growth` — 13 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -133,7 +134,6 @@
 | **Paid Acquisition Plan** (`paid-acquisition-plan`) | Plan a paid acquisition / performance marketing program with unit economics that work. | — |
 | **Paywall Optimization** (`paywall-optimization`) | Design or optimize a paywall / upgrade screen to convert free users to paid without killing trust. | — |
 | **Programmatic SEO** (`programmatic-seo`) | Plan a programmatic SEO strategy — generate many ranking pages from a data set and a template. | — |
-| **Referral Program** (`referral-program`) | Design a referral program that drives real word-of-mouth growth. | — |
 | **Referral Program Design** (`referral-program-design`) | Design a referral or viral-loop program that actually drives growth. | — |
 | **Retention Loop Design** (`retention-loop-design`) | Design retention and engagement loops that bring users back. | — |
 | **Schema Markup** (`schema-markup`) | Generate structured-data (Schema.org / JSON-LD) markup to win rich results in search. | — |
@@ -176,7 +176,7 @@
 | **Social Media Audit** (`social-media-audit`) | Audit an existing social media presence across all active platforms. | — |
 | **Viral Content Framework** (`viral-content-framework`) | Build a framework for creating shareable, high-reach social media content. | — |
 
-## 💻 Engineering & AI (86 skills)
+## 💻 Engineering & AI (84 skills)
 
 ### `pm-ai` — 13 skills
 
@@ -218,7 +218,7 @@
 | **Metric Semantic Layer** (`metric-semantic-layer`) | Define a metric in a semantic layer so it means one thing everywhere. | — |
 | **SQL Optimizer** (`sql-optimizer`) | Diagnose a slow SQL query and produce a concrete optimization plan. | — |
 
-### `pm-engineering` — 47 skills · 6 eval-scored
+### `pm-engineering` — 45 skills · 6 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -254,12 +254,10 @@
 | **On-Call Handoff** (`oncall-handoff`) | Write a structured end-of-shift on-call handoff so the incoming engineer inherits state, not surprises. | — |
 | **On-Call Runbook** (`oncall-runbook`) | Write an on-call runbook for a service — covering alert definitions, escalation paths, common incident responses, and on-call handoff procedures. | — |
 | **Performance Budget** (`performance-budget`) | Define and document performance budgets for a web service or application. | — |
-| **PR Description Writer** (`pr-description-writer`) | Write a clear, structured pull request description from a git diff, branch summary, or commit list. | — |
 | **Regex Builder & Explainer** (`regex-builder`) | Build a regular expression from a plain-English description, or explain an existing one. | ✅ 4.5/5 |
 | **RFC Writer** (`rfc-writer`) | Write an engineering RFC (Request for Comments) for a technical decision, architectural change, or significant implementation approach. | — |
 | **Rollback Plan** (`rollback-plan`) | Write a concrete rollback plan for a risky change (deploy, migration, feature-flag flip, config rollout) so the reverse is one command away — not… | — |
 | **Runbook Writer** (`runbook-writer`) | Write an operational runbook for a service, incident type, or deployment procedure. | — |
-| **Security Threat Model** (`security-threat-model`) | Write a STRIDE-based threat model for a service or feature. | — |
 | **Service Catalog Entry** (`service-catalog-entry`) | Write a service catalog entry for a microservice or internal platform service — covering service identity, purpose, architecture context, SLAs… | — |
 | **Skill Security Auditor** (`skill-security-auditor`) | Audit a Claude/Agent SKILL.md (or any AI skill / system prompt) for safety before installing or merging it. | — |
 | **SLO and Error Budget** (`slo-error-budget`) | Define Service Level Objectives (SLOs) and an error budget policy for a service. | — |
@@ -433,7 +431,7 @@
 | **Support Macro** (`support-macro`) | Write reusable support macros / canned responses that sound human, not robotic. | — |
 | **Support Runbook** (`support-runbook`) | Write a support runbook for handling a recurring issue type consistently. | — |
 
-## 💰 Finance, Ops & Business (94 skills)
+## 💰 Finance, Ops & Business (93 skills)
 
 ### `pm-accounting` — 6 skills
 
@@ -525,7 +523,7 @@
 | **Runway Planner** (`runway-planner`) | Turn burn and cash into a clear runway picture and a raise decision — months left, default-alive vs default-dead, and what to cut or change. | — |
 | **Startup Idea Validator** (`startup-idea-validator`) | Pressure-test a startup idea the way a sharp investor or co-founder would — problem, market, wedge, moat, why-now, and the fastest cheap way to… | — |
 
-### `pm-money` — 22 skills
+### `pm-money` — 21 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -534,7 +532,6 @@
 | **Budget Builder** (`budget-builder`) | Build a realistic personal monthly budget from someone's income and expenses. | — |
 | **Class-Action Claim Finder** (`class-action-claim-finder`) | Work out whether you're eligible for a class-action settlement or refund program — and actually file the claim before the deadline. | — |
 | **Debt Collector Response** (`debt-collector-response`) | Respond to a debt collector correctly — know your rights, make them prove the debt, and avoid the mistakes that reset the clock or admit liability. | — |
-| **Debt Payoff Plan** (`debt-payoff-plan`) | Build a debt-payoff plan across multiple debts using the avalanche or snowball method. | — |
 | **Estate Planning Kit** (`estate-planning-kit`) | Get your affairs in order before you need to — a will/beneficiary/healthcare-directive checklist and the 'what my family needs to find' document… | — |
 | **Expense Audit** (`expense-audit`) | Audit spending to find leaks — recurring subscriptions, creep, and cuttable costs — ranked by impact. | — |
 | **Gift-Card Recovery** (`gift-card-recovery`) | Reclaim value stuck in gift cards, store credit, and forgotten balances — check what's left, use it before it's lost, and know your rights on… | — |
@@ -569,7 +566,7 @@
 | **Vendor Evaluation** (`vendor-evaluation`) | Create a structured vendor evaluation framework for any procurement decision. | — |
 | **Workshop Facilitation Guide** (`workshop-facilitation-guide`) | Design and facilitate any workshop, working session, or collaborative meeting. | — |
 
-## ⚖️ Legal & Compliance (26 skills)
+## ⚖️ Legal & Compliance (25 skills)
 
 ### `pm-compliance` — 7 skills
 
@@ -583,7 +580,7 @@
 | **SOC 2 Readiness** (`soc2-readiness`) | Assess SOC 2 readiness across the Trust Services Criteria and produce a gap remediation plan. | — |
 | **Vendor Security Review** (`vendor-security-review`) | Run a third-party / vendor security review and assign a risk tier with required controls. | — |
 
-### `pm-legal` — 19 skills · 1 eval-scored
+### `pm-legal` — 18 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -596,7 +593,6 @@
 | **Demand Letter** (`demand-letter`) | Draft a firm, professional demand letter that states the facts, the legal/contractual basis, the specific demand, and a deadline. | — |
 | **DPA Review** (`dpa-review`) | Read a Data Processing Agreement before you sign it — sub-processors, transfer mechanism, breach-notice window, deletion, audit rights — in plain… | — |
 | **HOA Violation Response** (`hoa-violation-response`) | Respond to an HOA or condo-association violation notice or fine — decide whether to comply, cure, or dispute, and do it on the record. | — |
-| **Jury Duty Guide** (`jury-duty-guide`) | Understand a jury-duty summons and handle it right — what's required, whether you can defer or be excused, and what to expect on the day. | — |
 | **Legal Brief** (`legal-brief`) | Draft a structured legal brief, case summary, or legal argument outline. | — |
 | **Lemon Law Check** (`lemon-law-check`) | Figure out whether your problem car might qualify for a refund or replacement under lemon law or warranty — and build the paper trail to claim it. | — |
 | **NDA Analyser** (`nda-analyser`) | Analyses a Non-Disclosure Agreement clause by clause and flags unusual terms, one-sided provisions, and negotiation points. | — |
@@ -607,9 +603,9 @@
 | **Tenant Rights Explainer** (`tenant-rights-explainer`) | Understand your rights as a renter in a specific situation — repairs ignored, a rent increase, an eviction notice, deposit disputes, or entry… | — |
 | **Witness Statement Writer** (`witness-statement-writer`) | Write a clear, factual witness statement or account of an incident — for an insurance claim, small claims, a workplace matter, or the police —… | — |
 
-## 🧑 You & Career (86 skills)
+## 🧑 You & Career (83 skills)
 
-### `pm-career` — 16 skills
+### `pm-career` — 15 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -621,7 +617,6 @@
 | **Informational-Interview Prep** (`informational-interview-prep`) | Prepare for an informational interview — the outreach, the questions, and the follow-up — so a 20-minute chat actually helps your career instead… | — |
 | **Layoff: First 72 Hours** (`layoff-first-72-hours`) | Steady the first 72 hours after being laid off — the practical, financial, and emotional moves in the right order, before panic-applying to… | — |
 | **Networking Outreach** (`networking-outreach`) | Write networking messages that actually get replies — warm, specific, and easy to say yes to — for reconnecting, cold outreach, referrals, or… | — |
-| **New Manager: First 90 Days** (`new-manager-first-90-days`) | Plan your first 90 days as a new manager — build trust, learn before changing, and avoid the classic first-time-manager mistakes. | — |
 | **One-on-One Prep** (`one-on-one-prep`) | Prepare for a 1:1 so it drives outcomes instead of becoming a status update. | — |
 | **PIP Responder** (`pip-responder`) | Respond to a performance improvement plan strategically — decode what the PIP really is, decide fight-vs-land-softly with clear eyes, build the… | — |
 | **Promotion Packet** (`promotion-packet`) | Build a promotion case that proves you're already operating at the next level. | — |
@@ -630,7 +625,7 @@
 | **Self-Review** (`self-review`) | Write a performance self-review that's specific, evidenced, and balanced. | — |
 | **Year in Review** (`year-in-review`) | Run an honest personal year-in-review and set next year's direction — wins, misses, an energy audit, and one theme, not a resolution list that… | — |
 
-### `pm-comms` — 13 skills
+### `pm-comms` — 12 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -644,7 +639,6 @@
 | **Message for the Moment** (`message-for-the-moment`) | Write the short message you freeze on — a thank-you, condolence, congratulations, apology, or a graceful 'no' to an invite — warm, specific, and… | — |
 | **Persuasion Brief** (`persuasion-brief`) | Build the case to win someone over to a decision, idea, or change. | — |
 | **Public-Speaking Prep** (`public-speaking-prep`) | Prepare for a specific talk, presentation, or speech — a clear structure, a strong open and close, delivery and nerves handling, and a rehearsal… | — |
-| **Saying No** (`saying-no`) | Decline a request, push back on scope, or protect priorities without burning the relationship. | — |
 | **Summarize Anything** (`summarize-anything`) | Turn a long article, email thread, document, or transcript into a tight summary you can act on — the gist, the key points, and what it means for you. | — |
 | **Tone Fixer** (`tone-fixer`) | Rewrite a message to the tone you actually want — less harsh, more confident, warmer, firmer, or shorter — without losing your point. | — |
 
@@ -668,7 +662,7 @@
 | **JD Decoder** (`jd-decoder`) | Decode a job description to find what they actually want beneath the buzzwords. | — |
 | **Outreach Message** (`outreach-message`) | Write cold outreach and networking messages that actually get replies. | — |
 
-### `pm-lifeadmin` — 29 skills
+### `pm-lifeadmin` — 28 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -680,7 +674,6 @@
 | **Declutter By Room** (`declutter-by-room`) | Declutter a room (or a whole home) with a plan that actually finishes — a sensible order, quick decision rules, and a way to keep it from creeping… | — |
 | **Dispute Letter** (`dispute-letter`) | Write a letter to dispute an incorrect charge, bill, or record. | — |
 | **Doctor Visit Prep** (`doctor-visit-prep`) | Prepare for a doctor's appointment so the 12 minutes actually get used — the symptom timeline in the format clinicians think in, the prioritized… | — |
-| **Eulogy Writer** (`eulogy-writer`) | Help someone write a eulogy — the hardest writing most people ever do, at the worst possible time. | — |
 | **Fine Appeal Letter** (`fine-appeal-letter`) | Appeal a parking ticket, penalty charge, or administrative fine with the grounds that actually get appeals granted — not indignation. | — |
 | **Flight-Delay Compensation** (`flight-delay-compensation`) | Work out whether a delayed, cancelled, or overbooked flight likely owes you compensation — and draft the claim with the right rule cited. | — |
 | **Home Energy Savings** (`home-energy-savings`) | Cut your home energy bills with a prioritized plan — the free and cheap fixes first, then the upgrades that actually pay back. | — |
@@ -730,7 +723,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (703 skills)
+## 🌍 Industries & Public Sector (700 skills)
 
 ### `other` — 22 skills
 
@@ -922,7 +915,7 @@
 | **Site Safety Briefing** (`site-safety-briefing`) | Produce a toolbox talk or pre-task safety briefing from the day's planned construction work. | — |
 | **Subcontractor Scorecard** (`subcontractor-scorecard`) | Score a subcontractor's performance across schedule reliability, quality, safety, paperwork, and change-order behaviour with weighted anchors. | — |
 
-### `pm-cowork` — 100 skills
+### `pm-cowork` — 98 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -951,7 +944,6 @@
 | **Deck Review Rubric** (`deck-review-rubric`) | Review a deck against a rubric instead of taste — the five dimensions (argument, evidence, density, arc, honesty), the severity-sorted feedback… | — |
 | **Deep Work Blocking** (`deep-work-blocking`) | Protect focus time that actually survives the week — the block placement matched to real energy hours, the defense rules (what moves a block, what… | — |
 | **Delegation Brief** (`delegation-brief`) | Delegate so the work comes back right the first time — the brief that transfers outcome, context, and constraints (not just the task), the… | — |
-| **Demo Script** (`demo-script`) | Script a product demo that lands — the audience's-workflow storyline (their day, not your feature list), the golden path rehearsed with fallbacks… | — |
 | **Desk Research Sprint** (`desk-research-sprint`) | Run a timeboxed desk-research sprint that ends with an answer instead of forty tabs — the question decomposition, the source plan by question… | — |
 | **Desktop Zero** (`desktop-zero`) | Clear the desktop that's become a hundred-icon guilt mosaic — the fast triage that empties it today, the honest read of what the desktop was being… | — |
 | **Doc Versioning Discipline** (`doc-versioning-discipline`) | Keep living documents trustworthy over time — the status header (draft/active/superseded) that tells readers what they're holding, the… | — |
@@ -985,7 +977,6 @@
 | **Newsletter Digest Brief** (`newsletter-digest-brief`) | Turn a pile of newsletters and subscriptions into one skimmable brief — the items that matter to YOUR interests extracted with sources, the noise… | — |
 | **Office Hours Design** (`office-hours-design`) | Replace ad-hoc interruptions with office hours that actually get used — the slot design (cadence, length, format), the routing rules that tell… | — |
 | **Office Move Runbook** (`office-move-runbook`) | Run an office move or reconfiguration without losing a week of work — the dependency-ordered plan (internet lead times rule everything), the… | — |
-| **Offsite Planner** (`offsite-planner`) | Plan a team offsite that earns its cost — the purpose split (connection vs. | — |
 | **Onboarding Buddy Plan** (`onboarding-buddy-plan`) | Design the buddy system that makes new-hire onboarding human — the buddy's actual job (context and safety, not training), the 30-day touchpoint… | — |
 | **Out Of Office Designer** (`out-of-office-designer`) | Design an out-of-office that actually protects the time off — the auto-reply that routes instead of apologizes, the coverage map behind it, and… | — |
 | **Outline Before Prose** (`outline-before-prose`) | Outline documents before drafting them — the argument skeleton that gets alignment cheaply, the one-line-per-section discipline, and the… | — |
@@ -1339,12 +1330,11 @@
 | **Prior Authorization Letter** (`prior-authorization-letter`) | Write a persuasive prior-authorization / medical-necessity letter to an insurer. | — |
 | **SOAP Note** (`soap-note`) | Structure a clinical encounter into a clean SOAP note. | — |
 
-### `pm-hobbies` — 12 skills
+### `pm-hobbies` — 11 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Birdwatching Log** (`birdwatching-log`) | Get started birding from where you are — what you're likely to see, how to tell confusing species apart, and a simple life-list to track sightings. | — |
-| **Board Game Night Planner** (`board-game-night-planner`) | Plan a board game night that actually lands — the right games for your group size, mix, and time, in a running order that keeps energy up. | — |
 | **Chess Opening Coach** (`chess-opening-coach`) | Build a small, coherent opening repertoire that fits your style and level — the few lines actually worth learning, plus the plans and traps behind… | — |
 | **Cocktail From What I Have** (`cocktail-from-what-i-have`) | Make a genuinely good drink from the bottles already on your shelf — no special trip, no 12-ingredient recipe. | — |
 | **Tabletop Campaign Starter** (`dnd-campaign-starter`) | Spin up a tabletop RPG one-shot or a session-zero for a new campaign — a hook, a map of the first adventure, NPCs, and encounters tuned to your party. | — |
@@ -1862,4 +1852,4 @@
 
 ---
 
-_1174 skills across 132 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1162 skills across 132 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

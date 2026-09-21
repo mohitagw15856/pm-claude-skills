@@ -18,8 +18,14 @@ const out = join(root, 'conformance', 'badge.json');
 const check = process.argv.includes('--check');
 
 const skillsDir = join(root, 'skills');
+// Live skills only — a deprecated skill (frontmatter `deprecated:`) is not advertised,
+// so the badge matches the README, the playground and check-drift.
+const isDeprecated = (n) => {
+  const fm = (readFileSync(join(skillsDir, n, 'SKILL.md'), 'utf8').match(/^---\n([\s\S]*?)\n---/) || [, ''])[1];
+  return /^deprecated:/m.test(fm);
+};
 const count = readdirSync(skillsDir).filter((n) => {
-  try { return statSync(join(skillsDir, n)).isDirectory() && existsSync(join(skillsDir, n, 'SKILL.md')); }
+  try { return statSync(join(skillsDir, n)).isDirectory() && existsSync(join(skillsDir, n, 'SKILL.md')) && !isDeprecated(n); }
   catch { return false; }
 }).length;
 

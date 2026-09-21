@@ -275,7 +275,12 @@ for (const s of skills) {
 
 // No wall-clock timestamp: the output must be deterministic so CI can verify it
 // is in sync with the source skills (a timestamp would make every build differ).
-const out = { count: skills.length, skills };
+// `count` is the headline number — LIVE skills only. Deprecated skills stay in the
+// array so old names keep resolving, but they are hidden from browse and not
+// advertised; `total` keeps the full figure for anyone who needs it. This is the
+// number the README badge and the playground both show, so they agree.
+const live = skills.filter((s) => !s.deprecated).length;
+const out = { count: live, total: skills.length, skills };
 writeFileSync(join(__dirname, 'skills.json'), JSON.stringify(out));
 
 // A slim index for first paint. `instructions` is the full skill body and
@@ -284,7 +289,7 @@ writeFileSync(join(__dirname, 'skills.json'), JSON.stringify(out));
 // the background. skills.json itself is unchanged: it is the public, CORS-
 // exposed API and every other page still reads it.
 const slim = skills.map(({ instructions, ...rest }) => rest);
-writeFileSync(join(__dirname, 'skills-index.json'), JSON.stringify({ count: slim.length, skills: slim }));
+writeFileSync(join(__dirname, 'skills-index.json'), JSON.stringify({ count: live, total: slim.length, skills: slim }));
 const tierCounts = skills.reduce((a, s) => ((a[s.tier] = (a[s.tier] || 0) + 1), a), {});
 console.log(
   `Wrote web/skills.json + skills-index.json — ${skills.length} skills, ${new Set(skills.map((s) => s.plugin)).size} bundles ` +

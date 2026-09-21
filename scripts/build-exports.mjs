@@ -256,6 +256,9 @@ function loadSkills() {
       description: meta.description || '',
       body,
       bundle: bundleMap[name] || 'other',
+      // Retired skills are still exported (docs/DEPRECATION.md: no install breaks
+      // mid-version) but are not counted in the advertised number.
+      deprecated: !!meta.deprecated,
     });
   }
   skills.sort((a, b) => a.name.localeCompare(b.name));
@@ -335,6 +338,9 @@ function writeRootReadme(activePlatforms, skillCount) {
     '',
     ...activePlatforms.map(([, p]) => `- **${p.label}** → \`${p.dir}/\``),
     '',
+    'Retired skills are exported too, so an existing install never breaks — they are',
+    'just not counted above. See `docs/DEPRECATION.md`.',
+    '',
     'Adding a new platform is a few lines in the `PLATFORMS` registry of',
     '`scripts/build-exports.mjs` — no content is duplicated.',
     '',
@@ -362,7 +368,7 @@ for (const [key, platform] of active) {
 }
 // The root index always lists every registered platform, not just the filtered
 // subset, so `--platform x` never drops the others from the overview.
-planned.set(join(exportsDir, 'README.md'), writeRootReadme(Object.entries(PLATFORMS), skills.length));
+planned.set(join(exportsDir, 'README.md'), writeRootReadme(Object.entries(PLATFORMS), skills.filter((s) => !s.deprecated).length));
 
 if (checkMode) {
   let drift = 0;

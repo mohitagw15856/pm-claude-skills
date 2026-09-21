@@ -8,7 +8,7 @@ by hand; edit the source skill and run:
 node scripts/build-exports.mjs
 ```
 
-Currently exporting **1174 skills** to:
+Currently exporting **1162 skills** to:
 
 - **ChatGPT — Custom GPT instructions** → `exports/chatgpt/`
 - **Google Gemini — Gem instructions** → `exports/gemini/`
@@ -22,6 +22,9 @@ Currently exporting **1174 skills** to:
 - **Kilo Code — .kilocode/rules/ rule (.md)** → `exports/kilocode/`
 - **Obsidian — vault skill note (AI-plugin prompt)** → `exports/obsidian/`
 - **OpenClaw — native SKILL.md with metadata block** → `exports/openclaw/`
+
+Retired skills are exported too, so an existing install never breaks — they are
+just not counted above. See `docs/DEPRECATION.md`.
 
 Adding a new platform is a few lines in the `PLATFORMS` registry of
 `scripts/build-exports.mjs` — no content is duplicated.

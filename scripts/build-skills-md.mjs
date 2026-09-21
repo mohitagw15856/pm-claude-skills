@@ -8,7 +8,11 @@ import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const check = process.argv.includes('--check');
-const { skills } = JSON.parse(readFileSync(join(root, 'web', 'skills.json'), 'utf8'));
+const { skills: allSkills } = JSON.parse(readFileSync(join(root, 'web', 'skills.json'), 'utf8'));
+// The catalog lists LIVE skills. Deprecated ones are hidden from browse (docs/DEPRECATION.md);
+// their names still resolve, and the retired count is noted in the intro so nothing vanishes silently.
+const skills = allSkills.filter((s) => !s.deprecated);
+const retired = allSkills.length - skills.length;
 
 // Same domain grouping as the playground landing (web/app.js DOMAINS), so docs and UI agree.
 const DOMAINS = [
@@ -36,6 +40,7 @@ const evalBadge = (s) => (s.eval ? `✅ ${s.eval.score}/5` : '—');
 let out = `# 🗂️ All ${skills.length} Skills — full catalog\n\n`;
 out += `> The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).\n>\n`;
 out += `> _Auto-generated from \`web/skills.json\` by \`scripts/build-skills-md.mjs\` — do not edit by hand; run \`node scripts/build-skills-md.mjs\`._\n\n`;
+if (retired) out += `> _${retired} retired skills are not listed here; their names still resolve and point to a successor — see [docs/DEPRECATION.md](docs/DEPRECATION.md)._\n\n`;
 
 // Contents
 out += `**Jump to:** ${DOMAINS.map((d) => `[${d.emoji} ${d.label}](#${d.label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')})`).join(' · ')}\n\n`;

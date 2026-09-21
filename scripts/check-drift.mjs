@@ -19,8 +19,15 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const read = (p) => readFileSync(join(root, p), 'utf8');
 
 // ── Canonical numbers, derived ────────────────────────────────────────────────
+// Live skills only. A deprecated skill (frontmatter `deprecated:`) still resolves for
+// installs and the MCP server, but it is hidden from the catalogue and playground —
+// so the headline count everywhere is the number of skills a person can browse.
+const isDeprecated = (n) => {
+  const fm = (read(`skills/${n}/SKILL.md`).match(/^---\n([\s\S]*?)\n---/) || [, ''])[1];
+  return /^deprecated:/m.test(fm);
+};
 const skillCount = readdirSync(join(root, 'skills')).filter((n) => {
-  try { return statSync(join(root, 'skills', n)).isDirectory() && existsSync(join(root, 'skills', n, 'SKILL.md')); }
+  try { return statSync(join(root, 'skills', n)).isDirectory() && existsSync(join(root, 'skills', n, 'SKILL.md')) && !isDeprecated(n); }
   catch { return false; }
 }).length;
 const bundleCount = JSON.parse(read('.claude-plugin/marketplace.json')).plugins.length;

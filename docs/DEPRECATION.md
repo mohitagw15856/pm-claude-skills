@@ -41,6 +41,7 @@ unchanged. Nothing about the body has to change.
 |---|---|
 | `npx pm-claude-skills add` / `run` | Still resolves. Prints a one-line notice naming the successor. |
 | Catalogue & playground | Hidden from browse and search; the direct URL still works and shows the notice. |
+| Headline count (README, badges, `skills.json.count`) | Excluded. The advertised number is live skills only; `skills.json.total` keeps the full figure. `check-drift` holds the docs to the live count, so a deprecation lowers the headline by one rather than inflating it with an alias. |
 | `exports/`, `tools-pkg/` | Still generated, so no downstream install breaks mid-version. |
 | `plugins/` | Removed from the bundle at the next bundle build — bundles are curations, not addresses. |
 | Duplicate detector | Excluded from `skill-dupes` pairing; a retired twin is not a duplicate. |
