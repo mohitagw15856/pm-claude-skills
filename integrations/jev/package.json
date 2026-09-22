@@ -5,7 +5,7 @@
   "type": "module",
   "main": "picker.mjs",
   "exports": { ".": "./picker.mjs", "./client": "./client.mjs", "./index.json": "./index.json" },
-  "files": ["picker.mjs", "route.mjs", "client.mjs", "catalog.mjs", "index.json", "README.md"],
+  "files": ["picker.mjs", "route.mjs", "client.mjs", "catalog.mjs", "adapter.mjs", "index.json", "README.md"],
   "engines": { "node": ">=18" },
   "keywords": ["jev", "typesafe", "system-one", "router", "agent-skills", "claude", "skills", "classification"],
   "author": "Mohit Aggarwal <mohit15856@gmail.com>",

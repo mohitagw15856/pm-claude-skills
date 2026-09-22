@@ -12,6 +12,8 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 ### Changed
 - Decision layer: the client now speaks to three providers — TypeSafe direct, **Vercel AI Gateway** (`AI_GATEWAY_API_KEY`, `typesafe-ai/jev`) and **Cloudflare Workers AI** (`CLOUDFLARE_API_TOKEN` + account id, `typesafe/jev`) — picking the first credential present (`JEV_PROVIDER` forces one). TypeSafe signups are closed; the gateways are not.
 - Hosted worker: `/route` and the `/try` guard run through a Workers AI binding (`[ai] binding = "AI"`), so they are live with no key; `GET /route` reports the provider. `skillbench/route-bench.mjs --worker <url>` benchmarks through it.
+- **Claude adapter** (`integrations/jev/adapter.mjs`): the System One request shape answered by a Claude model on `ANTHROPIC_API_KEY` — the last-resort provider, labelled `adapter:<model>` and never presented as Jev. The worker tries key → Workers AI → adapter and caps adapter-backed `/route` calls per IP and per day.
+- Banner and GitHub About text carry the current count (they said 1098). README rewritten again: door table, a without-vs-with table, the count explained in the FAQ (1178 directories, 12 deprecated, 1166 browsable).
 
 ## [79.0.0] — the decision layer — 2026-09-22
 

@@ -11,6 +11,8 @@
 //   typesafe   JEV_API_KEY=sk-…                         (api.typesafe.ai, model jev-latest)
 //   vercel     AI_GATEWAY_API_KEY=vck_…                 (ai-gateway.vercel.sh/typesafe, model typesafe-ai/jev)
 //   cloudflare CLOUDFLARE_API_TOKEN=… CLOUDFLARE_ACCOUNT_ID=…  (Workers AI REST, model typesafe/jev)
+//   adapter    ANTHROPIC_API_KEY=…                          (adapter.mjs: the same questions answered by a
+//                                                           Claude model — labelled, NOT Jev; last resort)
 // JEV_PROVIDER forces one; otherwise the first configured provider above wins.
 // JEV_BASE_URL / JEV_MODEL override the preset.
 
@@ -38,11 +40,13 @@ export function resolveProvider(env = process.env) {
     vercel:     () => has('AI_GATEWAY_API_KEY') ? { name: 'vercel', apiKey: env.AI_GATEWAY_API_KEY }
                     : has('JEV_API_KEY') && /^vck_/.test(env.JEV_API_KEY) ? { name: 'vercel', apiKey: env.JEV_API_KEY } : null,
     cloudflare: () => has('CLOUDFLARE_API_TOKEN') && has('CLOUDFLARE_ACCOUNT_ID') ? { name: 'cloudflare', apiKey: env.CLOUDFLARE_API_TOKEN, account: env.CLOUDFLARE_ACCOUNT_ID } : null,
+    adapter:    () => has('ANTHROPIC_API_KEY') ? { name: 'adapter', apiKey: env.ANTHROPIC_API_KEY, model: env.JEV_ADAPTER_MODEL || 'claude-haiku-4-5' } : null,
   };
   if (forced) { const p = candidates[forced]?.(); return p ? finish(p, env) : null; }
-  for (const k of ['typesafe', 'vercel', 'cloudflare']) { const p = candidates[k](); if (p) return finish(p, env); }
+  for (const k of ['typesafe', 'vercel', 'cloudflare', 'adapter']) { const p = candidates[k](); if (p) return finish(p, env); }
   return null;
   function finish(p, env) {
+    if (p.name === 'adapter') return { ...p, url: null, model: p.model };
     const preset = PROVIDERS[p.name];
     const baseUrl = (env.JEV_BASE_URL || preset.baseUrl).replace(/\/$/, '');
     const url = baseUrl + preset.path.replace('{account}', p.account || '');
@@ -132,9 +136,9 @@ export function mockTransport(answerFor, { model = 'jev-mock' } = {}) {
 export async function ask(state, questions, opts = {}) {
   const env = opts.env || process.env;
   const provider = opts.transport ? null : resolveProvider(env);
-  const transport = opts.transport || httpTransport({
-    apiKey: provider?.apiKey, url: provider?.url, timeoutMs: opts.timeoutMs, retries: opts.retries, fetchFn: opts.fetchFn,
-  });
+  const transport = opts.transport || (provider?.name === 'adapter'
+    ? (await import('./adapter.mjs')).adapterTransport({ apiKey: provider.apiKey, model: provider.model, fetchFn: opts.fetchFn })
+    : httpTransport({ apiKey: provider?.apiKey, url: provider?.url, timeoutMs: opts.timeoutMs, retries: opts.retries, fetchFn: opts.fetchFn }));
   const body = { model: opts.model || provider?.model || env.JEV_MODEL || DEFAULTS.model, state, questions };
   const t0 = Date.now();
   const res = await transport(body);
@@ -200,6 +204,10 @@ export async function selftest() {
   ok(resolveProvider({ JEV_API_KEY: 'vck_2' }).name === 'vercel', 'a vck_ key in JEV_API_KEY is routed to vercel');
   const c = resolveProvider({ CLOUDFLARE_API_TOKEN: 't', CLOUDFLARE_ACCOUNT_ID: 'acc1' }); ok(c.name === 'cloudflare' && c.model === 'typesafe/jev' && /accounts\/acc1\/ai\/run$/.test(c.url), 'cloudflare preset');
   ok(resolveProvider({ JEV_PROVIDER: 'cloudflare', JEV_API_KEY: 'sk-1' }) === null, 'forced provider without creds → null');
+  const ad = resolveProvider({ ANTHROPIC_API_KEY: 'a' }); ok(ad.name === 'adapter' && ad.model === 'claude-haiku-4-5', 'adapter is the last-resort provider');
+  ok(resolveProvider({ ANTHROPIC_API_KEY: 'a', JEV_API_KEY: 'sk-1' }).name === 'typesafe', 'a real Jev key beats the adapter');
+  const adr = await ask('s', { n: noul('q') }, { env: { ANTHROPIC_API_KEY: 'a' }, fetchFn: async () => ({ ok: true, json: async () => ({ model: 'claude-haiku-4-5', content: [{ type: 'text', text: '{"answers":{"n":{"probability":0.42}}}' }] }) }) });
+  ok(adr.model === 'adapter:claude-haiku-4-5' && adr.answers.n.noul === 0.42, 'ask() routes through the adapter and labels the model');
   ok(resolveProvider({ JEV_API_KEY: 'sk-1', JEV_BASE_URL: 'https://proxy.example', JEV_MODEL: 'jev-1.13.0' }).url === 'https://proxy.example/v1/systemone', 'base url override');
   let seen; const cf = await ask('s', { n: noul('q') }, { env: { CLOUDFLARE_API_TOKEN: 't', CLOUDFLARE_ACCOUNT_ID: 'a' }, fetchFn: async (u, o) => { seen = { u, body: JSON.parse(o.body) }; return { ok: true, json: async () => ({ success: true, result: { model: 'jev-1.13.0', answers: { n: { type: 'noul', noul: 0.6 } } } }) }; } });
   ok(seen.body.model === 'typesafe/jev' && /ai\/run$/.test(seen.u) && cf.answers.n.noul === 0.6, 'cloudflare call shape + envelope unwrap');

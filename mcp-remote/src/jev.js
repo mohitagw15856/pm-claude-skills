@@ -10,24 +10,45 @@
 //   2. env.AI  — Cloudflare Workers AI binding ([ai] binding = "AI" in wrangler.toml), model typesafe/jev.
 //                No key, no TypeSafe account, but Jev is a third-party model there: it draws on prepaid
 //                AI Gateway credits (error 2021 "Insufficient AI Gateway credits" until topped up).
-// Force one with JEV_PROVIDER=workers-ai|typesafe|vercel.
+//   3. ANTHROPIC_API_KEY (already present for /try) — the SAME typed questions answered by a Claude
+//                model (adapter, default claude-haiku-4-5; JEV_ADAPTER_MODEL overrides). Labelled
+//                `adapter:<model>`; not Jev, no calibration guarantee. Rate-capped through TRY_KV.
+// Providers are tried in order and the next one is used when one fails (a 403 gateway, no credits…).
+// Force one with JEV_PROVIDER=workers-ai|typesafe|vercel|adapter.
 
-export function jevProvider(env) {
-  if (!env) return null;
+export function jevProviders(env) {
+  if (!env) return [];
   const forced = (env.JEV_PROVIDER || '').toLowerCase();
   const ai = env.AI && typeof env.AI.run === 'function' ? { name: 'workers-ai', model: env.JEV_MODEL || 'typesafe/jev' } : null;
   const key = env.JEV_API_KEY ? (/^vck_/.test(env.JEV_API_KEY)
     ? { name: 'vercel', url: `${(env.JEV_BASE_URL || 'https://ai-gateway.vercel.sh/typesafe').replace(/\/$/, '')}/v1/systemone`, model: env.JEV_MODEL || 'typesafe-ai/jev', apiKey: env.JEV_API_KEY }
     : { name: 'typesafe', url: `${(env.JEV_BASE_URL || 'https://api.typesafe.ai').replace(/\/$/, '')}/v1/systemone`, model: env.JEV_MODEL || 'jev-latest', apiKey: env.JEV_API_KEY }) : null;
-  if (forced === 'workers-ai') return ai; if (forced === 'typesafe' || forced === 'vercel') return key && key.name === forced ? key : null;
-  return key || ai;
+  const adapter = env.ANTHROPIC_API_KEY ? { name: 'adapter', model: env.JEV_ADAPTER_MODEL || 'claude-haiku-4-5', apiKey: env.ANTHROPIC_API_KEY } : null;
+  const all = [key, ai, adapter].filter(Boolean);
+  if (forced) return all.filter((p) => p.name === forced);
+  return all;
 }
-export function jevConfigured(env) { return jevProvider(env) !== null; }
-export function jevMethod(env) { const p = jevProvider(env); return p ? `jev-two-stage via ${p.name}` : 'off'; }
+export function jevProvider(env) { return jevProviders(env)[0] || null; }
+export function jevConfigured(env) { return jevProviders(env).length > 0; }
+export function jevMethod(env) { const ps = jevProviders(env); return ps.length ? `jev-two-stage via ${ps.map((p) => p.name === 'adapter' ? `adapter:${p.model}` : p.name).join(' → ')}` : 'off'; }
 
-export async function jevAsk(env, state, questions, { timeoutMs = 8000 } = {}) {
-  const p = jevProvider(env);
-  if (!p) throw new Error('jev not configured');
+// Remember which provider last worked so a dead first choice doesn't cost a failed call every time.
+let PREFERRED = null;
+export async function jevAsk(env, state, questions, opts = {}) {
+  const ps = jevProviders(env);
+  if (!ps.length) throw new Error('jev not configured');
+  const order = PREFERRED ? [...ps.filter((p) => p.name === PREFERRED), ...ps.filter((p) => p.name !== PREFERRED)] : ps;
+  const errors = [];
+  for (const p of order) {
+    try { const a = await askOne(env, p, state, questions, opts); PREFERRED = p.name; return a; }
+    catch (e) { errors.push(`${p.name}: ${String(e && e.message || e).slice(0, 120)}`); }
+  }
+  throw new Error(errors.join(' | '));
+}
+export function jevLastProvider() { return PREFERRED; }
+
+async function askOne(env, p, state, questions, { timeoutMs = 8000 } = {}) {
+  if (p.name === 'adapter') return adapterAsk(p, state, questions, timeoutMs * 4);
   if (p.name === 'workers-ai') {
     let data;
     try { data = await Promise.race([env.AI.run(p.model, { state, questions }), new Promise((_, rej) => setTimeout(() => rej(new Error('jev timeout')), timeoutMs))]); }
@@ -96,4 +117,44 @@ export async function guardInput(env, text, { injectionThreshold = 0.7, piiThres
     if (pii >= piiThreshold) reasons.push('pii');
     return { method: 'jev', block: reasons.length > 0, reasons, injection, pii };
   } catch (e) { return { method: 'error', block: false }; }
+}
+
+// ── Claude-backed adapter (mirrors integrations/jev/adapter.mjs) ─────────────────
+const ADAPTER_SYSTEM = `You are a calibrated decision engine. You do not write prose. You read a STATE and answer typed QUESTIONS with probabilities.
+Rules:
+- For a "choice" question, give a probability for EVERY option key (they must sum to 1). Read the option descriptions; pick by meaning, not by name.
+- For a "score" question, give a probability for every level index "0".."n-1" in the order the levels are listed (sum to 1).
+- For a "noul" question, give one probability that the statement is true.
+- Be calibrated: spread probability when you are unsure, concentrate it when the answer is clear. Never output 1.0 unless it is certain.
+Output ONLY a JSON object: {"answers": {"<question id>": {"probabilities": {...}} | {"probability": p}}}. No markdown, no commentary.`;
+
+async function adapterAsk(p, state, questions, timeoutMs) {
+  const q = {};
+  for (const [id, x] of Object.entries(questions)) {
+    if (x.type === 'choice') q[id] = { type: 'choice', instructions: x.instructions, options: x.criteria };
+    else if (x.type === 'score') q[id] = { type: 'score', instructions: x.instructions, levels: Object.fromEntries(x.criteria.map((d, i) => [String(i), d])) };
+    else q[id] = { type: 'noul', instructions: x.instructions, ...(x.criteria ? { criteria: x.criteria } : {}) };
+  }
+  const ctrl = new AbortController(); const t = setTimeout(() => ctrl.abort(), timeoutMs);
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': p.apiKey, 'anthropic-version': '2023-06-01' }, body: JSON.stringify({ model: p.model, max_tokens: 1024, system: [{ type: 'text', text: ADAPTER_SYSTEM, cache_control: { type: 'ephemeral' } }], messages: [{ role: 'user', content: JSON.stringify({ state, questions: q }) }] }), signal: ctrl.signal });
+    if (!res.ok) throw new Error(`anthropic ${res.status}`);
+    const data = await res.json();
+    const text = (data.content || []).map((c) => c.text || '').join('');
+    const m = text.match(/\{[\s\S]*\}/); if (!m) throw new Error('adapter: no JSON');
+    const raw = (JSON.parse(m[0]).answers) || {}; const answers = {};
+    for (const [id, x] of Object.entries(questions)) {
+      const a = raw[id] || {};
+      if (x.type === 'noul') { answers[id] = { type: 'noul', noul: Math.min(1, Math.max(0, +(a.probability ?? a.noul ?? 0) || 0)) }; continue; }
+      const keys = x.type === 'choice' ? Object.keys(x.criteria) : x.criteria.map((_, i) => String(i));
+      const pr = {}; let sum = 0; for (const k of keys) { const v = Math.max(0, +(a.probabilities?.[k] ?? 0) || 0); pr[k] = v; sum += v; }
+      if (sum <= 0) { for (const k of keys) pr[k] = 1 / keys.length; sum = 1; }
+      for (const k of keys) pr[k] = pr[k] / sum;
+      const sorted = keys.slice().sort((u, v) => pr[v] - pr[u]);
+      const confidence = keys.length > 1 ? +(pr[sorted[0]] - pr[sorted[1]]).toFixed(4) : 1;
+      if (x.type === 'choice') answers[id] = { type: 'choice', choice: sorted[0], probabilities: pr, confidence };
+      else answers[id] = { type: 'score', score: +keys.reduce((acc, k) => acc + (+k) * pr[k], 0).toFixed(4), probabilities: pr, confidence };
+    }
+    return answers;
+  } finally { clearTimeout(t); }
 }

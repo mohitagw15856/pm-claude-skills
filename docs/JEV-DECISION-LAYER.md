@@ -55,6 +55,6 @@ node scripts/example-output-gate.mjs --dir candidates/   # when back-filling exa
 ```
 
 ## The human steps that unlock the rest
-1. **Pick a credential** — TypeSafe signups are closed, so use a gateway: a Vercel AI Gateway key (`AI_GATEWAY_API_KEY=vck_…`, any Vercel account) or a Cloudflare API token with Workers AI (`CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID`). Export it locally and the hook, judge, queue and bench go live. The hosted worker already serves `/route` and the `/try` guard through its Workers AI binding with no key at all.
+1. **Pick a credential, or don't** — TypeSafe signups are closed and both gateways (Vercel AI Gateway, Cloudflare Workers AI) want a payment method on file before they serve Jev. Until one of those is acceptable, everything runs on the **Claude adapter** (`ANTHROPIC_API_KEY`, `integrations/jev/adapter.mjs`): same typed questions, answered by `claude-haiku-4-5`, labelled `adapter:` so no number is ever mistaken for a Jev number. The hosted worker already falls through to it. When a Jev credential appears (`JEV_API_KEY`, `AI_GATEWAY_API_KEY`, or the Cloudflare pair), it wins automatically and the bench gains real Jev rows.
 2. **Publish the picker** and open the awesome-jev PR (Agent Tooling category).
 3. **Submit the cookbook** to the TypeSafe docs.

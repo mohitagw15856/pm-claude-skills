@@ -9,7 +9,7 @@
 import { WIDGETS, UI_TOOLS, runUiTool } from './widgets.js';
 import { handleScan, handlePing, handleStats } from './scan.js';
 
-import { jevConfigured, jevMethod, routeSkill, guardInput } from './jev.js';
+import { jevConfigured, jevMethod, jevLastProvider, jevProviders, routeSkill, guardInput } from './jev.js';
 const SKILLS_URL = 'https://mohitagw15856.github.io/pm-claude-skills/skills.json';
 const WORKFLOWS_URL = 'https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/workflows.json';
 const REGISTRY_URL = 'https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/community/registry.json';
@@ -415,6 +415,7 @@ async function handleA2A(request) {
 // users are nudged to bring their own key (free Gemini or their own Claude).
 const TRY = { model: 'claude-haiku-4-5-20251001', maxTokens: 1200, perIpPerDay: 5, globalPerDay: 100, maxInputChars: 8000 };
 
+const ROUTE_CAP = { perIpPerDay: 400, globalPerDay: 5000 };   // adapter-backed /route only; Jev providers are uncapped
 function tryConfigured(env) { return !!(env && env.ANTHROPIC_API_KEY && env.TRY_KV && env.TRY_ENABLED !== 'false'); }
 // GET /try/stats — public runs-served counter (counts only, never content).
 // Default: shields.io endpoint JSON for a README badge; ?format=json for raw.
@@ -654,10 +655,20 @@ export default {
       let rb; try { rb = await request.json(); } catch { return jsonResponse({ error: 'bad_json' }, 400); }
       const rp = String(rb.prompt || '').slice(0, 2000);
       if (!rp.trim()) return jsonResponse({ error: 'no_prompt' }, 400);
+      // The adapter provider spends the sponsor-funded Anthropic key, so it gets the same
+      // kind of cap as /try (counted only when the adapter is what would answer).
+      if (env.TRY_KV && jevProviders(env).some((p) => p.name === 'adapter')) {
+        const ip = request.headers.get('cf-connecting-ip') || 'anon', day = new Date().toISOString().slice(0, 10);
+        const [ipN, gN] = await Promise.all([env.TRY_KV.get(`route:ip:${day}:${ip}`), env.TRY_KV.get(`route:global:${day}`)]);
+        if (+(gN || 0) >= ROUTE_CAP.globalPerDay || +(ipN || 0) >= ROUTE_CAP.perIpPerDay) return jsonResponse({ error: 'cap', message: 'Router daily cap reached — the fallback model is sponsor-funded. Try tomorrow or run the keyword router in the playground.' }, 429);
+        await Promise.all([env.TRY_KV.put(`route:ip:${day}:${ip}`, String(+(ipN || 0) + 1), { expirationTtl: 172800 }), env.TRY_KV.put(`route:global:${day}`, String(+(gN || 0) + 1), { expirationTtl: 172800 })]);
+      }
       try {
         const skills = await getSkills();
         const r = await routeSkill(env, rp, skills);
-        return jsonResponse({ ...r, method: jevMethod(env) });
+        const via = jevLastProvider();
+        const prov = jevProviders(env).find((p) => p.name === via);
+        return jsonResponse({ ...r, method: `jev-two-stage via ${via === 'adapter' ? `adapter:${prov?.model}` : via}`, jev: via !== 'adapter' });
       } catch (e) { return jsonResponse({ error: 'upstream', message: 'Router unavailable — try again.', detail: String(e && e.message || e).slice(0, 300) }, 502); }
     }
     if (url.pathname === '/route/badge') {

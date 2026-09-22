@@ -14,8 +14,9 @@ TypeSafe's own signups are closed at the moment; the same model is served by two
 | **Vercel AI Gateway** | `AI_GATEWAY_API_KEY=vck_…` | Vercel dashboard → AI Gateway → API keys (any Vercel account) | `ai-gateway.vercel.sh/typesafe/v1/systemone`, model `typesafe-ai/jev`, $0.042 / M input tokens |
 | **Cloudflare Workers AI** | `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` | dash.cloudflare.com → My Profile → API Tokens (template *Workers AI*) | `api.cloudflare.com/client/v4/accounts/<id>/ai/run`, model `typesafe/jev`, 10k neurons/day free |
 | **TypeSafe direct** | `JEV_API_KEY=sk-…` | console.typesafe.ai, when signups reopen | `api.typesafe.ai/v1/systemone`, model `jev-latest` |
+| **Claude adapter** (last resort) | `ANTHROPIC_API_KEY` | the key you already have | `adapter.mjs` — the same typed questions answered by a Claude model (default `claude-haiku-4-5`, `JEV_ADAPTER_MODEL` overrides). Labelled `adapter:<model>`; **not Jev**, no calibration guarantee — the honest fallback and the comparison row, not the thing being benchmarked |
 
-The hosted worker needs **none of these**: it calls Jev through the Workers AI binding (`[ai] binding = "AI"` in `mcp-remote/wrangler.toml`), so `POST /route` and the `/try` guard are live on the deployed worker without any key.
+The hosted worker tries its providers in order — a `JEV_API_KEY` secret, the Workers AI binding, then the Claude adapter on the key that already funds `/try` — and moves on when one fails (the two gateways need a payment method on file; the adapter does not). `GET /route` shows the chain; every answer says which one served it. Adapter-backed routes are capped per IP and per day like the free runs.
 
 ```bash
 export AI_GATEWAY_API_KEY=vck_…      # or the Cloudflare pair, or JEV_API_KEY
