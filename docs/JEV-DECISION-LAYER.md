@@ -37,7 +37,7 @@ Legend: ✅ built and self-tested · 🟡 built, needs a key or a human step to 
 |---|---|---|---|
 | 15 | `pm-skills-jev-picker` npm package | 🟡 | `integrations/jev/package.json` + `picker.mjs` + bundled `index.json`; workflow `publish-jev-picker.yml`. Publishing and the awesome-jev PR are the human steps |
 | 16 | Cookbook PR to TypeSafe docs | 🧑 | `docs/cookbooks/jev-routing-1000-skills.md` — submission-ready |
-| 17 | Route-bench | ✅ | `skillbench/route-bench.mjs --write` → `skillbench/reports/route-bench.md` — keyword floor committed (**51.7% top-1 / 65.2% top-3** on 267 cases); model rows fill with a key |
+| 17 | Route-bench | ✅ | `skillbench/route-bench.mjs --write` → `skillbench/reports/route-bench.md` — on 271 cases: keyword floor **50.9% top-1 / 64.2% top-3**, Claude adapter through the worker **62.4% / 64.9%** at ~2.4 s; the Jev row fills the moment a credential exists |
 | 18 | Skill of the week, on signal | ✅ | `scripts/skill-of-the-week-jev.mjs` — demand + shipped-recently + seasonal + tier → one Choice; rotation stays the fallback |
 
 ## E. Product surface

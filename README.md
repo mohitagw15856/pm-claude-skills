@@ -120,7 +120,7 @@ npm run route -- "my landlord kept my deposit"
 |---|---|
 | **Route** | a Claude Code [hook](hooks/suggest-skill-jev.sh) · `POST /route` on the [worker](mcp-remote/) · the [`pm-skills-jev-picker`](integrations/jev/) npm package · the **[Skill Router](https://mohitagw15856.github.io/pm-claude-skills/router.html)** page: paste your week's prompts, see the skills you should have used |
 | **Guard** | [input guard](integrations/jev/guard.mjs) on the free runs · [crisis router](integrations/jev/crisis.mjs) for public bots · [risk-tier second opinion](scripts/classify-risk-tiers.mjs) · [human-review queue](docs/HUMAN-REVIEW-QUEUE.md) ranked by harm |
-| **Judge** | a [typed eval judge](evals/jev-judge.mjs) · [sycophancy scan](skillbench/SYCOPHANCY.md) · [route-bench](skillbench/reports/route-bench.md), where the keyword router sets the floor and every model has to beat it |
+| **Judge** | a [typed eval judge](evals/jev-judge.mjs) · [sycophancy scan](skillbench/SYCOPHANCY.md) · [route-bench](skillbench/reports/route-bench.md): keyword floor 50.9% top-1 on 271 cases, the Claude adapter 62.4%, the Jev row waiting on a credential |
 | **Decide** | **[pm-decisions](plugins/pm-decisions/)** — [ship-or-slip](skills/ship-or-slip/SKILL.md) · [escalate-or-hold](skills/escalate-or-hold/SKILL.md) · [renew-or-churn-call](skills/renew-or-churn-call/SKILL.md) · [hire-or-pass](skills/hire-or-pass/SKILL.md): a state schema, defined options, thresholds, and a probability per option. A person still owns the call; the distribution is evidence |
 
 No skill depends on a vendor. The SKILL.md files describe *contracts* any model can serve; the adapters live in [`integrations/jev/`](integrations/jev/), and a CI gate keeps it that way.

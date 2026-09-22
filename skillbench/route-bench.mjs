@@ -24,20 +24,21 @@ export function cases(limit = 0) {
 const median = (a) => { const s = [...a].sort((x, y) => x - y); return s.length ? s[Math.floor(s.length / 2)] : 0; };
 
 export async function runMethod(method, list, catalog, { transport, worker, fetchFn = globalThis.fetch } = {}) {
-  let top1 = 0, top3 = 0; const lat = []; let calls = 0; const misses = [];
+  let top1 = 0, top3 = 0; const lat = []; let calls = 0; const misses = []; let served = null;
   for (const c of list) {
     const t0 = Date.now(); let got, alts = [];
     if (method === 'keyword') { const kr = keywordRank(c.input, catalog.skills, { topK: 3 }); got = kr[0]?.skill; alts = kr.slice(1).map((x) => x.skill); calls += 0; }
     else if (method === 'worker') {
       const res = await fetchFn(`${worker.replace(/\/$/, '')}/route`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ prompt: c.input }) });
       const r = res.ok ? await res.json() : {}; got = r.skill || null; alts = r.alternatives || []; calls += 2;
+      if (!served && r.method) served = String(r.method).replace(/^jev-two-stage via /, '');
     }
     else { const r = await routePrompt(c.input, { catalog, transport, twoStage: method === 'jev-2s' }); got = r.skill; alts = r.alternatives || []; calls += (r.stages || []).length; }
     lat.push(Date.now() - t0);
     if (got === c.skill) { top1++; top3++; } else if (alts.includes(c.skill)) top3++; else misses.push({ want: c.skill, got });
   }
   const n = list.length || 1;
-  return { method, n: list.length, top1: +(top1 / n).toFixed(3), top3: +(top3 / n).toFixed(3), medianMs: median(lat), callsPerRoute: +(calls / n).toFixed(2), misses: misses.slice(0, 10) };
+  return { method: served ? `worker · ${served}` : method, n: list.length, top1: +(top1 / n).toFixed(3), top3: +(top3 / n).toFixed(3), medianMs: median(lat), callsPerRoute: +(calls / n).toFixed(2), misses: misses.slice(0, 10) };
 }
 export function render(rows, note) {
   const L = ['# Route-bench — which router finds the right skill?', '', `Generated ${new Date().toISOString().slice(0, 10)} by \`skillbench/route-bench.mjs\`. Ground truth: \`evals/cases.json\` (one curated ask per skill). A route is **top-1** when the router's pick is the case's skill, **top-3** when it is among the pick and the two alternatives.`, '', '| Method | Cases | Top-1 | Top-3 | Median ms | Model calls / route |', '|---|---:|---:|---:|---:|---:|'];
@@ -54,7 +55,7 @@ export async function selftest() {
   const catalog = loadCatalog();
   const k = await runMethod('keyword', list, catalog); ok(k.top1 >= 0 && k.top1 <= 1 && k.n === 20, `keyword baseline runs (top-1 ${k.top1})`);
   const j = await runMethod('jev-2s', list.slice(0, 5), catalog, { transport: keywordMock(catalog) }); ok(j.n === 5 && j.callsPerRoute >= 2, `mock jev-2s runs with ${j.callsPerRoute} calls/route`);
-  const w = await runMethod('worker', list.slice(0, 3), catalog, { worker: 'https://w.example', fetchFn: async (u, o) => ({ ok: true, json: async () => ({ skill: JSON.parse(o.body).prompt ? list.find((c) => c.input === JSON.parse(o.body).prompt)?.skill : null, alternatives: [] }) }) }); ok(w.n === 3 && w.top1 === 1 && w.callsPerRoute === 2, 'worker method posts to /route');
+  const w = await runMethod('worker', list.slice(0, 3), catalog, { worker: 'https://w.example', fetchFn: async (u, o) => ({ ok: true, json: async () => ({ skill: JSON.parse(o.body).prompt ? list.find((c) => c.input === JSON.parse(o.body).prompt)?.skill : null, alternatives: [] }) }) }); ok(w.n === 3 && w.top1 === 1 && w.callsPerRoute === 2 && /^worker/.test(w.method), 'worker method posts to /route');
   ok(/Top-1/.test(render([k, j])), 'renders');
   console.log(`route-bench self-test: ${pass} passed · ${fail} failed`);
   return fail ? 1 : 0;
