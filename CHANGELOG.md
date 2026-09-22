@@ -9,6 +9,10 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+### Changed
+- Decision layer: the client now speaks to three providers — TypeSafe direct, **Vercel AI Gateway** (`AI_GATEWAY_API_KEY`, `typesafe-ai/jev`) and **Cloudflare Workers AI** (`CLOUDFLARE_API_TOKEN` + account id, `typesafe/jev`) — picking the first credential present (`JEV_PROVIDER` forces one). TypeSafe signups are closed; the gateways are not.
+- Hosted worker: `/route` and the `/try` guard run through a Workers AI binding (`[ai] binding = "AI"`), so they are live with no key; `GET /route` reports the provider. `skillbench/route-bench.mjs --worker <url>` benchmarks through it.
+
 ## [79.0.0] — the decision layer — 2026-09-22
 
 **1166 skills · 132 bundles** (from 1162 · 131 at v78).

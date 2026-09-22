@@ -6,18 +6,29 @@ A Jev request is a **state** plus **typed questions** (`choice` over defined opt
 
 > **Vendor neutrality.** No skill in `skills/` depends on this. The SKILL.md files describe decision *contracts* (state schema, options, thresholds) that any model can serve; this folder is one adapter. The CI gate `scripts/check-vendor-neutrality.mjs` keeps it that way.
 
-## Setup
+## Setup — three ways in, no TypeSafe account required
+TypeSafe's own signups are closed at the moment; the same model is served by two gateways. The client picks the first credential it finds (force one with `JEV_PROVIDER=typesafe|vercel|cloudflare`):
+
+| Provider | Credential | Where it comes from | Endpoint the client uses |
+|---|---|---|---|
+| **Vercel AI Gateway** | `AI_GATEWAY_API_KEY=vck_…` | Vercel dashboard → AI Gateway → API keys (any Vercel account) | `ai-gateway.vercel.sh/typesafe/v1/systemone`, model `typesafe-ai/jev`, $0.042 / M input tokens |
+| **Cloudflare Workers AI** | `CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID` | dash.cloudflare.com → My Profile → API Tokens (template *Workers AI*) | `api.cloudflare.com/client/v4/accounts/<id>/ai/run`, model `typesafe/jev`, 10k neurons/day free |
+| **TypeSafe direct** | `JEV_API_KEY=sk-…` | console.typesafe.ai, when signups reopen | `api.typesafe.ai/v1/systemone`, model `jev-latest` |
+
+The hosted worker needs **none of these**: it calls Jev through the Workers AI binding (`[ai] binding = "AI"` in `mcp-remote/wrangler.toml`), so `POST /route` and the `/try` guard are live on the deployed worker without any key.
+
 ```bash
-export JEV_API_KEY=…            # from typesafe.ai (early access)
-# optional: JEV_BASE_URL (default https://api.typesafe.ai) · JEV_MODEL (jev-latest)
+export AI_GATEWAY_API_KEY=vck_…      # or the Cloudflare pair, or JEV_API_KEY
 node integrations/jev/route.mjs "my landlord kept my deposit"
+# no key at all? route through the deployed worker instead:
+node skillbench/route-bench.mjs --worker https://pm-skills-mcp.pm-claude-skills.workers.dev --limit 20
 ```
-Every script here and in `scripts/` that uses the model has `--selftest` (offline, mocked transport) and a **labelled fallback** when the key is missing — keyword routing, heuristics, or "off". Nothing breaks without a key; it just says so.
+Every script here and in `scripts/` that uses the model has `--selftest` (offline, mocked transport) and a **labelled fallback** when no credential is present — keyword routing, heuristics, or "off". Nothing breaks without one; it just says so.
 
 ## What's here
 | File | What it does |
 |---|---|
-| `client.mjs` | `ask(state, questions)`, builders `choice/score/noul`, `decide()` thresholds, retries on 429/529, `mockTransport` for tests |
+| `client.mjs` | `ask(state, questions)`, builders `choice/score/noul`, `decide()` thresholds, provider presets (TypeSafe / Vercel AI Gateway / Cloudflare Workers AI), retries on 429/529, `mockTransport` for tests |
 | `catalog.mjs` | The catalogue as criteria: packs → skills, `criteriaFor()`, and the **keyword baseline** every route is measured against |
 | `route.mjs` | `routePrompt()` — pack → skill in two Choice calls (or chunked flat). CLI: `node integrations/jev/route.mjs "…"` |
 | `suggest.mjs` + `../../hooks/suggest-skill-jev.sh` | Claude Code `UserPromptSubmit` hook: one nudge line when the pick is confident; falls back to the keyword hook |

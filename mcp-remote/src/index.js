@@ -9,7 +9,7 @@
 import { WIDGETS, UI_TOOLS, runUiTool } from './widgets.js';
 import { handleScan, handlePing, handleStats } from './scan.js';
 
-import { jevConfigured, routeSkill, guardInput } from './jev.js';
+import { jevConfigured, jevMethod, routeSkill, guardInput } from './jev.js';
 const SKILLS_URL = 'https://mohitagw15856.github.io/pm-claude-skills/skills.json';
 const WORKFLOWS_URL = 'https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/workflows.json';
 const REGISTRY_URL = 'https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/community/registry.json';
@@ -648,16 +648,16 @@ export default {
     // Two typed Choice calls (pack → skill) against a calibrated decision model. GET /route reports
     // whether it is on; /route/badge is a shields.io endpoint. Off (503) without the JEV_API_KEY secret.
     if (url.pathname === '/route') {
-      if (request.method === 'GET') return jsonResponse({ enabled: jevConfigured(env), method: jevConfigured(env) ? 'jev-two-stage' : 'off', hint: 'POST {"prompt":"…"}' });
+      if (request.method === 'GET') return jsonResponse({ enabled: jevConfigured(env), method: jevMethod(env), hint: 'POST {"prompt":"…"}' });
       if (request.method !== 'POST') return new Response('Method Not Allowed', { status: 405, headers: CORS });
-      if (!jevConfigured(env)) return jsonResponse({ error: 'disabled', message: 'Router not enabled here (JEV_API_KEY secret missing). Use the keyword search in the playground.' }, 503);
+      if (!jevConfigured(env)) return jsonResponse({ error: 'disabled', message: 'Router not enabled here (no Workers AI binding and no JEV_API_KEY secret). Use the keyword search in the playground.' }, 503);
       let rb; try { rb = await request.json(); } catch { return jsonResponse({ error: 'bad_json' }, 400); }
       const rp = String(rb.prompt || '').slice(0, 2000);
       if (!rp.trim()) return jsonResponse({ error: 'no_prompt' }, 400);
       try {
         const skills = await getSkills();
         const r = await routeSkill(env, rp, skills);
-        return jsonResponse({ ...r, method: 'jev-two-stage' });
+        return jsonResponse({ ...r, method: jevMethod(env) });
       } catch (e) { return jsonResponse({ error: 'upstream', message: 'Router unavailable — try again.' }, 502); }
     }
     if (url.pathname === '/route/badge') {

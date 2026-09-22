@@ -10,7 +10,7 @@ Legend: ✅ built and self-tested · 🟡 built, needs a key or a human step to 
 | # | Move | Status | What landed |
 |---|---|---|---|
 | 1 | Jev-backed suggest-skill hook | ✅ | `hooks/suggest-skill-jev.sh` + `integrations/jev/suggest.mjs` — one nudge line when confident; falls back to `suggest-skill.sh` without a key, on timeout, on any error |
-| 2 | `/route` on the hosted worker | 🟡 | `mcp-remote/src/jev.js` + `POST /route`, `GET /route`, `/route/badge` in `src/index.js`. Live once `npx wrangler secret put JEV_API_KEY` |
+| 2 | `/route` on the hosted worker | ✅ | `mcp-remote/src/jev.js` + `POST /route`, `GET /route`, `/route/badge` in `src/index.js`. **Live** through the Workers AI binding (`typesafe/jev`), no key; a TypeSafe or Vercel key via `JEV_API_KEY` overrides |
 | 3 | Pack-first triage | ✅ | `integrations/jev/route.mjs` — pack → skill in two Choice calls, widening to top-3 packs on a weak pick; `--flat` for chunked comparison |
 | 4 | Extension contextual discovery v2 | 🟡 | `extension/jev-suggest.js` — opt-in (key in extension storage), never on auth/banking hosts, title + host + 500 words only; rules stay the fallback. Wiring + store copy: `extension/CONTEXTUAL-DISCOVERY.md` |
 | 5 | Journey step gating | ✅ | `scripts/journey-gate.mjs` — Score (empty/partial/complete) + Noul (carry-forward present) → proceed/hold; contract in `journeys/SESSION-MODE.md` |
@@ -20,7 +20,7 @@ Legend: ✅ built and self-tested · 🟡 built, needs a key or a human step to 
 |---|---|---|---|
 | 6 | Risk-tier second opinion | ✅ | `scripts/classify-risk-tiers.mjs --changed` — scores each description against the three tier definitions, reports under-tiering; config stays authoritative |
 | 7 | Crisis router for public bots | ✅ | `integrations/jev/crisis.mjs` — danger (noul, threshold 0.3: better a false positive) + lane; crisis lines by country; keyword fallback. Wired in `docs/PUBLIC-BOT-RUNBOOK.md` |
-| 8 | Input guard on `/try` | 🟡 | `guardInput()` in the worker — injection + PII before a sponsor-funded call; fail-open; 400 `guarded` when blocked |
+| 8 | Input guard on `/try` | ✅ | `guardInput()` in the worker — injection + PII before a sponsor-funded call; fail-open; 400 `guarded` when blocked. Live via the Workers AI binding |
 | 9 | Vendor-neutrality, semantic pass | ✅ | `scripts/check-vendor-neutrality-semantic.mjs` — one Noul per changed skill; advisory (`--strict` to gate); the regex gate remains authoritative |
 | 10 | Human-review queue prioritiser | ✅ | `scripts/human-review-queue.mjs --write` → `docs/HUMAN-REVIEW-QUEUE.md` + `data/human-review-queue.json` — the unreviewed high-stakes skills ranked by harm-if-wrong (heuristic now, model-scored with a key) |
 
@@ -55,6 +55,6 @@ node scripts/example-output-gate.mjs --dir candidates/   # when back-filling exa
 ```
 
 ## The human steps that unlock the rest
-1. **Get a key** (typesafe.ai early access) → `npx wrangler secret put JEV_API_KEY` turns on `/route` and the `/try` guard; export it locally and the hook, judge, queue and bench go live.
+1. **Pick a credential** — TypeSafe signups are closed, so use a gateway: a Vercel AI Gateway key (`AI_GATEWAY_API_KEY=vck_…`, any Vercel account) or a Cloudflare API token with Workers AI (`CLOUDFLARE_API_TOKEN` + `CLOUDFLARE_ACCOUNT_ID`). Export it locally and the hook, judge, queue and bench go live. The hosted worker already serves `/route` and the `/try` guard through its Workers AI binding with no key at all.
 2. **Publish the picker** and open the awesome-jev PR (Agent Tooling category).
 3. **Submit the cookbook** to the TypeSafe docs.

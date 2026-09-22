@@ -24,9 +24,14 @@ compatibility_date = "2025-01-01"
 binding = "TRY_KV"
 id = "6118d589c097433e9d09e0a63fbfba93"
 
-# ── Optional: typed skill router + input guard (POST /route, guard on /try) ──
-# Backed by a calibrated decision model (TypeSafe Jev). Both are OFF without the
-# secret: /route answers 503 and the /try guard fails open. To turn on:
-#   npx wrangler secret put JEV_API_KEY        # from typesafe.ai
-#   (optional) JEV_BASE_URL, JEV_MODEL          # defaults: api.typesafe.ai, jev-latest
+# ── Typed skill router + input guard (POST /route, guard on /try) ──
+# Backed by TypeSafe's Jev decision model, served here by Cloudflare Workers AI
+# through the binding below — no TypeSafe account or key needed; usage is billed
+# as Workers AI neurons (10,000/day free, then $0.011 per 1,000). Remove the [ai]
+# block to turn it off (then /route answers 503 and the /try guard fails open).
+# Alternative/override: npx wrangler secret put JEV_API_KEY (a TypeSafe sk-… key,
+# or a Vercel AI Gateway vck_… key); JEV_PROVIDER=workers-ai|typesafe|vercel forces one.
 # Badge: https://img.shields.io/endpoint?url=<this-worker>/route/badge
+[ai]
+binding = "AI"
+

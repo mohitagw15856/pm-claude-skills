@@ -1,21 +1,44 @@
 // Decision-model helpers for the hosted worker (Cloudflare). Self-contained copy of
 // the essentials in integrations/jev/ so the worker has no cross-directory imports.
-//   jevConfigured(env)            — JEV_API_KEY secret present
-//   jevAsk(env, state, questions) — POST /v1/systemone with a 3s budget
+//   jevConfigured(env)            — a provider is available (see order below)
+//   jevAsk(env, state, questions) — one System One call with a 3s budget
 //   routeSkill(env, prompt, skills) — pack → skill, two Choice calls
 //   guardInput(env, text)         — injection + PII yes/no; fail-open
-// Secrets: npx wrangler secret put JEV_API_KEY   (optional JEV_BASE_URL, JEV_MODEL)
+// Provider order — first one present wins:
+//   1. env.AI  — Cloudflare Workers AI binding ([ai] binding = "AI" in wrangler.toml), model typesafe/jev.
+//                No key, no TypeSafe account; billed as Workers AI neurons (10k/day free).
+//   2. JEV_API_KEY secret — TypeSafe directly, or Vercel AI Gateway when the key starts with vck_
+//                (base https://ai-gateway.vercel.sh/typesafe, model typesafe-ai/jev). JEV_BASE_URL / JEV_MODEL override.
+// Force one with JEV_PROVIDER=workers-ai|typesafe|vercel.
 
-export function jevConfigured(env) { return !!(env && env.JEV_API_KEY); }
+export function jevProvider(env) {
+  if (!env) return null;
+  const forced = (env.JEV_PROVIDER || '').toLowerCase();
+  const ai = env.AI && typeof env.AI.run === 'function' ? { name: 'workers-ai', model: env.JEV_MODEL || 'typesafe/jev' } : null;
+  const key = env.JEV_API_KEY ? (/^vck_/.test(env.JEV_API_KEY)
+    ? { name: 'vercel', url: `${(env.JEV_BASE_URL || 'https://ai-gateway.vercel.sh/typesafe').replace(/\/$/, '')}/v1/systemone`, model: env.JEV_MODEL || 'typesafe-ai/jev', apiKey: env.JEV_API_KEY }
+    : { name: 'typesafe', url: `${(env.JEV_BASE_URL || 'https://api.typesafe.ai').replace(/\/$/, '')}/v1/systemone`, model: env.JEV_MODEL || 'jev-latest', apiKey: env.JEV_API_KEY }) : null;
+  if (forced === 'workers-ai') return ai; if (forced === 'typesafe' || forced === 'vercel') return key && key.name === forced ? key : null;
+  return ai || key;
+}
+export function jevConfigured(env) { return jevProvider(env) !== null; }
+export function jevMethod(env) { const p = jevProvider(env); return p ? `jev-two-stage via ${p.name}` : 'off'; }
 
 export async function jevAsk(env, state, questions, { timeoutMs = 3000 } = {}) {
+  const p = jevProvider(env);
+  if (!p) throw new Error('jev not configured');
+  if (p.name === 'workers-ai') {
+    const data = await Promise.race([env.AI.run(p.model, { state, questions }), new Promise((_, rej) => setTimeout(() => rej(new Error('jev timeout')), timeoutMs))]);
+    const out = data && data.result && data.success !== undefined ? data.result : data;
+    return (out && out.answers) || {};
+  }
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), timeoutMs);
   try {
-    const res = await fetch(`${(env.JEV_BASE_URL || 'https://api.typesafe.ai').replace(/\/$/, '')}/v1/systemone`, {
+    const res = await fetch(p.url, {
       method: 'POST',
-      headers: { 'content-type': 'application/json', authorization: `Bearer ${env.JEV_API_KEY}` },
-      body: JSON.stringify({ model: env.JEV_MODEL || 'jev-latest', state, questions }),
+      headers: { 'content-type': 'application/json', authorization: `Bearer ${p.apiKey}` },
+      body: JSON.stringify({ model: p.model, state, questions }),
       signal: ctrl.signal,
     });
     if (!res.ok) throw new Error(`jev ${res.status}`);

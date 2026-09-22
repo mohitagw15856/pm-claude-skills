@@ -6,8 +6,13 @@
 //   const { answers } = await ask(prompt, { lane: choice('Which lane?', { a: '…', b: '…' }) });
 //
 // Every caller in this repo passes a `transport` in --selftest so nothing here
-// needs a network or a key to be exercised. Set JEV_API_KEY to go live.
-// Optional: JEV_BASE_URL (default https://api.typesafe.ai), JEV_MODEL (jev-latest).
+// needs a network or a key to be exercised. Three ways to go live (no TypeSafe
+// account needed for the last two):
+//   typesafe   JEV_API_KEY=sk-…                         (api.typesafe.ai, model jev-latest)
+//   vercel     AI_GATEWAY_API_KEY=vck_…                 (ai-gateway.vercel.sh/typesafe, model typesafe-ai/jev)
+//   cloudflare CLOUDFLARE_API_TOKEN=… CLOUDFLARE_ACCOUNT_ID=…  (Workers AI REST, model typesafe/jev)
+// JEV_PROVIDER forces one; otherwise the first configured provider above wins.
+// JEV_BASE_URL / JEV_MODEL override the preset.
 
 export const DEFAULTS = Object.freeze({
   baseUrl: 'https://api.typesafe.ai',
@@ -18,7 +23,33 @@ export const DEFAULTS = Object.freeze({
   maxScoreLevels: 10,
 });
 
-export function configured(env = process.env) { return typeof env.JEV_API_KEY === 'string' && env.JEV_API_KEY.length > 0; }
+export const PROVIDERS = Object.freeze({
+  typesafe:   { baseUrl: 'https://api.typesafe.ai',              path: '/v1/systemone', model: 'jev-latest' },
+  vercel:     { baseUrl: 'https://ai-gateway.vercel.sh/typesafe', path: '/v1/systemone', model: 'typesafe-ai/jev' },
+  cloudflare: { baseUrl: 'https://api.cloudflare.com/client/v4', path: '/accounts/{account}/ai/run', model: 'typesafe/jev' },
+});
+
+// Resolve which provider is usable from the environment (or null).
+export function resolveProvider(env = process.env) {
+  const forced = (env.JEV_PROVIDER || '').toLowerCase();
+  const has = (k) => typeof env[k] === 'string' && env[k].length > 0;
+  const candidates = {
+    typesafe:   () => has('JEV_API_KEY') && !/^vck_/.test(env.JEV_API_KEY) ? { name: 'typesafe', apiKey: env.JEV_API_KEY } : null,
+    vercel:     () => has('AI_GATEWAY_API_KEY') ? { name: 'vercel', apiKey: env.AI_GATEWAY_API_KEY }
+                    : has('JEV_API_KEY') && /^vck_/.test(env.JEV_API_KEY) ? { name: 'vercel', apiKey: env.JEV_API_KEY } : null,
+    cloudflare: () => has('CLOUDFLARE_API_TOKEN') && has('CLOUDFLARE_ACCOUNT_ID') ? { name: 'cloudflare', apiKey: env.CLOUDFLARE_API_TOKEN, account: env.CLOUDFLARE_ACCOUNT_ID } : null,
+  };
+  if (forced) { const p = candidates[forced]?.(); return p ? finish(p, env) : null; }
+  for (const k of ['typesafe', 'vercel', 'cloudflare']) { const p = candidates[k](); if (p) return finish(p, env); }
+  return null;
+  function finish(p, env) {
+    const preset = PROVIDERS[p.name];
+    const baseUrl = (env.JEV_BASE_URL || preset.baseUrl).replace(/\/$/, '');
+    const url = baseUrl + preset.path.replace('{account}', p.account || '');
+    return { ...p, url, model: env.JEV_MODEL || preset.model };
+  }
+}
+export function configured(env = process.env) { return resolveProvider(env) !== null; }
 
 // ── question builders ─────────────────────────────────────────────────────────
 export function noul(instructions, criteria) {
@@ -41,22 +72,23 @@ export function score(instructions, levels) {
 const RETRYABLE = new Set([429, 529, 502, 503]);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-export function httpTransport({ apiKey, baseUrl = DEFAULTS.baseUrl, timeoutMs = DEFAULTS.timeoutMs, retries = DEFAULTS.retries, fetchFn = globalThis.fetch } = {}) {
-  if (!apiKey) throw new Error('JEV_API_KEY is not set');
+export function httpTransport({ apiKey, baseUrl = DEFAULTS.baseUrl, url, timeoutMs = DEFAULTS.timeoutMs, retries = DEFAULTS.retries, fetchFn = globalThis.fetch } = {}) {
+  if (!apiKey) throw new Error('no decision-model credential: set JEV_API_KEY, AI_GATEWAY_API_KEY, or CLOUDFLARE_API_TOKEN + CLOUDFLARE_ACCOUNT_ID');
   if (typeof fetchFn !== 'function') throw new Error('fetch is unavailable (Node 18+ required)');
+  const endpoint = url || `${baseUrl.replace(/\/$/, '')}/v1/systemone`;
   return async function send(body) {
     let lastErr;
     for (let attempt = 0; attempt <= retries; attempt++) {
       const ctrl = new AbortController();
       const t = setTimeout(() => ctrl.abort(), timeoutMs);
       try {
-        const res = await fetchFn(`${baseUrl.replace(/\/$/, '')}/v1/systemone`, {
+        const res = await fetchFn(endpoint, {
           method: 'POST',
           headers: { 'content-type': 'application/json', authorization: `Bearer ${apiKey}` },
           body: JSON.stringify(body),
           signal: ctrl.signal,
         });
-        if (res.ok) return await res.json();
+        if (res.ok) { const j = await res.json(); return j && j.result && j.success !== undefined ? j.result : j; }   // Cloudflare wraps in {result, success}
         const text = await res.text().catch(() => '');
         lastErr = new Error(`jev ${res.status}: ${text.slice(0, 200)}`);
         lastErr.status = res.status;
@@ -99,10 +131,11 @@ export function mockTransport(answerFor, { model = 'jev-mock' } = {}) {
 // ── ask ───────────────────────────────────────────────────────────────────────
 export async function ask(state, questions, opts = {}) {
   const env = opts.env || process.env;
+  const provider = opts.transport ? null : resolveProvider(env);
   const transport = opts.transport || httpTransport({
-    apiKey: env.JEV_API_KEY, baseUrl: env.JEV_BASE_URL || opts.baseUrl, timeoutMs: opts.timeoutMs, retries: opts.retries, fetchFn: opts.fetchFn,
+    apiKey: provider?.apiKey, url: provider?.url, timeoutMs: opts.timeoutMs, retries: opts.retries, fetchFn: opts.fetchFn,
   });
-  const body = { model: opts.model || env.JEV_MODEL || DEFAULTS.model, state, questions };
+  const body = { model: opts.model || provider?.model || env.JEV_MODEL || DEFAULTS.model, state, questions };
   const t0 = Date.now();
   const res = await transport(body);
   return { answers: normalise(res.answers || {}), model: res.model, usage: res.usage, ms: Date.now() - t0 };
@@ -160,6 +193,16 @@ export async function selftest() {
   const r = await ask('s', { n: noul('q') }, { transport: httpTransport({ apiKey: 'k', fetchFn, retries: 1 }) });
   ok(calls === 2 && r.answers.n.noul === 0.3, 'retries once on 429');
   ok(normalise({ b: { type: 'boolean', probability: 0.7 } }).b.noul === 0.7, 'normalises SDK boolean shape');
+  // providers
+  ok(resolveProvider({}) === null && !configured({}), 'no creds → not configured');
+  ok(resolveProvider({ JEV_API_KEY: 'sk-1' }).name === 'typesafe' && /api\.typesafe\.ai\/v1\/systemone$/.test(resolveProvider({ JEV_API_KEY: 'sk-1' }).url), 'typesafe preset');
+  const v = resolveProvider({ AI_GATEWAY_API_KEY: 'vck_1' }); ok(v.name === 'vercel' && v.model === 'typesafe-ai/jev' && /ai-gateway\.vercel\.sh\/typesafe\/v1\/systemone$/.test(v.url), 'vercel preset');
+  ok(resolveProvider({ JEV_API_KEY: 'vck_2' }).name === 'vercel', 'a vck_ key in JEV_API_KEY is routed to vercel');
+  const c = resolveProvider({ CLOUDFLARE_API_TOKEN: 't', CLOUDFLARE_ACCOUNT_ID: 'acc1' }); ok(c.name === 'cloudflare' && c.model === 'typesafe/jev' && /accounts\/acc1\/ai\/run$/.test(c.url), 'cloudflare preset');
+  ok(resolveProvider({ JEV_PROVIDER: 'cloudflare', JEV_API_KEY: 'sk-1' }) === null, 'forced provider without creds → null');
+  ok(resolveProvider({ JEV_API_KEY: 'sk-1', JEV_BASE_URL: 'https://proxy.example', JEV_MODEL: 'jev-1.13.0' }).url === 'https://proxy.example/v1/systemone', 'base url override');
+  let seen; const cf = await ask('s', { n: noul('q') }, { env: { CLOUDFLARE_API_TOKEN: 't', CLOUDFLARE_ACCOUNT_ID: 'a' }, fetchFn: async (u, o) => { seen = { u, body: JSON.parse(o.body) }; return { ok: true, json: async () => ({ success: true, result: { model: 'jev-1.13.0', answers: { n: { type: 'noul', noul: 0.6 } } } }) }; } });
+  ok(seen.body.model === 'typesafe/jev' && /ai\/run$/.test(seen.u) && cf.answers.n.noul === 0.6, 'cloudflare call shape + envelope unwrap');
   console.log(`jev client self-test: ${pass} passed · ${fail} failed`);
   return fail ? 1 : 0;
 }
