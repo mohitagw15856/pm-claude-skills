@@ -1084,6 +1084,22 @@
   {
    "skill": "hire-or-pass",
    "input": "Role: Senior PM, L5. Must-haves: customer discovery, prioritisation, stakeholder writing, execution. Evidence — discovery: strong (ran 12 interviews, shown by R and J), counter: none. Prioritisation: split — R saw a clear RICE-style tradeoff, J felt it was hand-wavy. Writing: strong (sample doc, seen by M). Execution: untested (interviewer sick). Scores 4/4/3/–, 3/2/4/–, 4/–/4/–. No references yet. No red flags."
+  },
+  {
+   "skill": "promoter-scan",
+   "input": "Here is the scan output from my Claude Code transcripts (43 user turns). Top clusters: 'write release notes log' x14, 'draft update notes stakeholder' x6, 'summarise thread decisions owners' x5. Tell me which to promote first and why, and flag any that are really two jobs."
+  },
+  {
+   "skill": "promoter-draft",
+   "input": "Promote this pattern into a skill: 14 prompts like 'write release notes from this git log', 'changelog entry from these commits', 'turn commits into release notes'. My usual corrections: shorter, group by feature and fix, user-facing tone, drop chores. Bundle: pm-release."
+  },
+  {
+   "skill": "promoter-test",
+   "input": "Draft evals for the skill 'release-notes-from-git-log' whose description is: 'Turn a git log into user-facing release notes grouped by feature and fix. Use when asked for release notes from this git log, a changelog entry from these commits, or to turn commits into release notes. Produces a grouped changelog.' Include near-miss negatives and report precision and recall."
+  },
+  {
+   "skill": "promoter-publish",
+   "input": "Publish the skill release-notes-from-git-log into a new bundle pm-release as version 80.0.0. Give me the full release package: files, marketplace stanza, count changes, CHANGELOG entry, gates and git commands, and ask before pushing."
   }
  ]
 }

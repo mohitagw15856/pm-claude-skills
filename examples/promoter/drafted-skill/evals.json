@@ -1,0 +1,22 @@
+{
+  "should_fire": [
+    "write release notes from this git log",
+    "release notes for v3 from the git log",
+    "changelog entry from these commits",
+    "turn these commits into release notes",
+    "draft the release notes for the new tag",
+    "make release notes out of the log below, keep it short"
+  ],
+  "should_not_fire": [
+    "write the announcement post for the launch",
+    "summarise this thread into decisions",
+    "fix the failing test in auth.py",
+    "explain this regex",
+    "write a haiku about deploys"
+  ],
+  "golden": [
+    {"input": "git log: feat: dark mode; fix: crash on empty cart; chore: bump deps", "expect": ["Features", "dark mode", "Fixes", "empty cart"], "not_expect": ["bump deps"]},
+    {"input": "git log: feat!: rename getUser to fetchUser", "expect": ["Changes", "Migration"]},
+    {"input": "git log: fix: login button unresponsive on mobile", "expect": ["Fixes", "login"]}
+  ]
+}

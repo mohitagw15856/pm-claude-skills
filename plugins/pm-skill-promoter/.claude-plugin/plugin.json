@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-skill-promoter",
+  "version": "1.0.0",
+  "description": "Close the loop between what you keep asking your assistant for and reusable skills: scan your transcripts for recurring patterns, draft a skill in this library's format, test its triggers, and publish a complete release package",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "promote",
+    "transcripts",
+    "patterns",
+    "skill-authoring",
+    "evals",
+    "release"
+  ]
+}

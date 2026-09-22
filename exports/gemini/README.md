@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1178 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1182 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -809,6 +809,10 @@
 | Profit to Cash Walk | `pm-investing-literacy` | `pm-investing-literacy/profit-to-cash-walk/GEM_INSTRUCTIONS.md` |
 | Programmatic SEO | `pm-growth` | `pm-growth/programmatic-seo/GEM_INSTRUCTIONS.md` |
 | Project Status Report | `pm-operations` | `pm-operations/project-status-report/GEM_INSTRUCTIONS.md` |
+| Promoter Draft | `pm-skill-promoter` | `pm-skill-promoter/promoter-draft/GEM_INSTRUCTIONS.md` |
+| Promoter Publish | `pm-skill-promoter` | `pm-skill-promoter/promoter-publish/GEM_INSTRUCTIONS.md` |
+| Promoter Scan | `pm-skill-promoter` | `pm-skill-promoter/promoter-scan/GEM_INSTRUCTIONS.md` |
+| Promoter Test | `pm-skill-promoter` | `pm-skill-promoter/promoter-test/GEM_INSTRUCTIONS.md` |
 | Promotion Packet | `pm-career` | `pm-career/promotion-packet/GEM_INSTRUCTIONS.md` |
 | Promotion Plan | `pm-ecommerce` | `pm-ecommerce/promotion-plan/GEM_INSTRUCTIONS.md` |
 | Prompt Debugging | `pm-ai-native` | `pm-ai-native/prompt-debugging/GEM_INSTRUCTIONS.md` |

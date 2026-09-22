@@ -1,4 +1,4 @@
-# 🗂️ All 1166 Skills — full catalog
+# 🗂️ All 1170 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -723,7 +723,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (704 skills)
+## 🌍 Industries & Public Sector (708 skills)
 
 ### `other` — 22 skills
 
@@ -1696,6 +1696,15 @@
 | **The Visa Interview** (`the-visa-interview`) | Simulate a consular visa interview — the 90-second assessment, the questions behind the questions, and a debrief on which answers helped and hurt. | — |
 | **VC Partner Meeting** (`vc-partner-meeting`) | Simulate the VC partner meeting that discusses your pitch after you leave the room — four partner archetypes debate, then write the internal… | — |
 
+### `pm-skill-promoter` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Promoter Draft** (`promoter-draft`) | Turn one recurring pattern from a promoter scan into a complete, reusable skill in this library's format: a SKILL.md with a strong trigger… | — |
+| **Promoter Publish** (`promoter-publish`) | Register a finished skill in this library and produce the complete release package: the bundle wiring and marketplace entry, the regenerated… | — |
+| **Promoter Scan** (`promoter-scan`) | Find the requests you keep making to your AI assistant by scanning Claude Code transcripts and claude.ai exports, clustering them by intent, and… | — |
+| **Promoter Test** (`promoter-test`) | Generate an evals file for a drafted skill and measure whether its trigger description fires on the right requests: five to eight phrases that… | — |
+
 ### `pm-students` — 11 skills
 
 | Skill | What it does | Eval |
@@ -1861,4 +1870,4 @@
 
 ---
 
-_1166 skills across 133 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1170 skills across 134 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

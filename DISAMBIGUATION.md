@@ -1,7 +1,7 @@
 # 🧭 Disambiguation — you want *this* one, not that one
 
 > **Generated — do not edit.** Run `node scripts/build-disambiguation.mjs`.
-> 1166 live skills across 132 bundles, plus 12 retired names that still resolve.
+> 1170 live skills across 133 bundles, plus 12 retired names that still resolve.
 
 At this size the hard part is not finding *a* skill — it is telling two similar ones apart, and
 knowing whether the thing you are about to write already exists under a different noun.
@@ -388,6 +388,13 @@ assuming the skill you want is missing.
 - `layoff-communication` · pm-crisis — Plan and write the communications for a layoff or restructure with clarity and dignity.
 - `layoff-financial-triage` · pm-layoff — The first-72-hours money plan after a layoff — runway computed, deadlines caught, bleeding stopped, in priority order.
 - `layoff-first-72-hours` · pm-career — Steady the first 72 hours after being laid off — the practical, financial, and emotional moves in the right order, before panic-applying to everything.
+
+**`promoter-*`** (4)
+
+- `promoter-draft` · pm-skill-promoter — Turn one recurring pattern from a promoter scan into a complete, reusable skill in this library's format: a SKILL.md with a strong trigger description, required inputs, a framework, an output template, quality checks, anti-patterns, and three worked examples derived from the user's real prompts, plus the bundle manifest.
+- `promoter-publish` · pm-skill-promoter — Register a finished skill in this library and produce the complete release package: the bundle wiring and marketplace entry, the regenerated catalogue and exports, the headline count in every living document, the CHANGELOG entry, the gates to run, and the exact git and release commands.
+- `promoter-scan` · pm-skill-promoter — Find the requests you keep making to your AI assistant by scanning Claude Code transcripts and claude.ai exports, clustering them by intent, and ranking each recurring pattern by how promotable it is into a reusable skill.
+- `promoter-test` · pm-skill-promoter — Generate an evals file for a drafted skill and measure whether its trigger description fires on the right requests: five to eight phrases that should trigger it, five that should not, three golden input and output pairs, then precision and recall against the description, with a rewrite loop when precision is below 0.8.
 
 **`prompt-*`** (4)
 

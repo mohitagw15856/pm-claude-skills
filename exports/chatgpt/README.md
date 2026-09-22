@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1178 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1182 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -809,6 +809,10 @@
 | Profit to Cash Walk | `pm-investing-literacy` | `pm-investing-literacy/profit-to-cash-walk/SYSTEM_PROMPT.md` |
 | Programmatic SEO | `pm-growth` | `pm-growth/programmatic-seo/SYSTEM_PROMPT.md` |
 | Project Status Report | `pm-operations` | `pm-operations/project-status-report/SYSTEM_PROMPT.md` |
+| Promoter Draft | `pm-skill-promoter` | `pm-skill-promoter/promoter-draft/SYSTEM_PROMPT.md` |
+| Promoter Publish | `pm-skill-promoter` | `pm-skill-promoter/promoter-publish/SYSTEM_PROMPT.md` |
+| Promoter Scan | `pm-skill-promoter` | `pm-skill-promoter/promoter-scan/SYSTEM_PROMPT.md` |
+| Promoter Test | `pm-skill-promoter` | `pm-skill-promoter/promoter-test/SYSTEM_PROMPT.md` |
 | Promotion Packet | `pm-career` | `pm-career/promotion-packet/SYSTEM_PROMPT.md` |
 | Promotion Plan | `pm-ecommerce` | `pm-ecommerce/promotion-plan/SYSTEM_PROMPT.md` |
 | Prompt Debugging | `pm-ai-native` | `pm-ai-native/prompt-debugging/SYSTEM_PROMPT.md` |

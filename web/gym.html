@@ -141,7 +141,7 @@ if(/#season=/.test(location.hash)){
     SEASON=s;
     el('scenario').disabled=true; el('difficulty').disabled=true; el('ctx').disabled=true;
     const b=el('duelBanner'); b.hidden=false;
-    b.style.cssText='border:1.5px solid #c9a227;border-radius:13px;background:linear-gradient(90deg,rgba(201,166,39,.12),transparent 70%),var(--panel);padding:13px 16px;margin:12px 0;font-size:13.8px;line-height:1.5;';
+    b.style.cssText='border:1.5px solid #c9a227;border-radius:13px;background:linear-gradient(90deg,rgba(201,170,39,.12),transparent 70%),var(--panel);padding:13px 16px;margin:12px 0;font-size:13.8px;line-height:1.5;';
     b.innerHTML='<b>🏆 Season '+s.season+' — '+s.title+'</b> · closes '+s.closes+'. Everyone on Earth faces this exact counterparty and hidden state. Best score to the <a href="season.html">global leaderboard</a>. '+
       '<div style="font-size:11.5px;color:var(--muted);margin-top:5px">'+s.rules.honor+'</div>';
   }).catch(()=>{});

@@ -1,0 +1,53 @@
+{
+ "turns": 45,
+ "clusters": [
+  {
+   "rank": 1,
+   "pattern": "write release notes log",
+   "count": 14,
+   "score": 82,
+   "frequency": 1.0,
+   "consistency": 0.55,
+   "clear_io": 0.79,
+   "examples": [
+    "make release notes out of this git log, keep it short",
+    "draft release notes for the v6 tag from git log",
+    "write release notes: here is the git log",
+    "turn these commits into release notes",
+    "write release notes from this git log"
+   ]
+  },
+  {
+   "rank": 2,
+   "pattern": "draft update notes stakeholder",
+   "count": 6,
+   "score": 71,
+   "frequency": 0.89,
+   "consistency": 0.32,
+   "clear_io": 0.83,
+   "examples": [
+    "stakeholder update from these bullets, one page",
+    "draft the weekly stakeholder update from these notes",
+    "weekly update for the exec team from these notes",
+    "draft the stakeholder update, notes below",
+    "write this week's stakeholder update from my notes"
+   ]
+  },
+  {
+   "rank": 3,
+   "pattern": "summarise thread decisions owners",
+   "count": 5,
+   "score": 60,
+   "frequency": 0.74,
+   "consistency": 0.38,
+   "clear_io": 0.6,
+   "examples": [
+    "summarise this slack thread into decisions and owners",
+    "summarise the thread as decisions, owners, dates",
+    "summarise the thread below: decisions, owners, open questions",
+    "summarise this thread into a decision record",
+    "summarise this email thread into decisions and next steps"
+   ]
+  }
+ ]
+}

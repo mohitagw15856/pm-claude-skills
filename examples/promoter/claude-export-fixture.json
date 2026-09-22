@@ -1,0 +1,26 @@
+{
+ "conversations": [
+  {
+   "name": "release notes again",
+   "chat_messages": [
+    {
+     "sender": "human",
+     "text": "write the release notes for v9 from this git log"
+    },
+    {
+     "sender": "assistant",
+     "text": "..."
+    }
+   ]
+  },
+  {
+   "name": "thread",
+   "chat_messages": [
+    {
+     "sender": "human",
+     "text": "summarise this thread into decisions and owners"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,86 @@
+{"type": "user", "uuid": "u000", "timestamp": 1758503110, "message": {"role": "user", "content": "summarise this slack thread into decisions and owners"}}
+{"type": "assistant", "uuid": "a000", "timestamp": 1758503115, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u001", "timestamp": 1758503968, "message": {"role": "user", "content": "make release notes out of this git log, keep it short"}}
+{"type": "assistant", "uuid": "a001", "timestamp": 1758503973, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u002", "timestamp": 1758508515, "message": {"role": "user", "content": "convert this csv to json"}}
+{"type": "assistant", "uuid": "a002", "timestamp": 1758508520, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u003", "timestamp": 1758509089, "message": {"role": "user", "content": "summarise the thread as decisions, owners, dates"}}
+{"type": "assistant", "uuid": "a003", "timestamp": 1758509094, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u004", "timestamp": 1758513772, "message": {"role": "user", "content": "password: hunter2 for the staging box"}}
+{"type": "assistant", "uuid": "a004", "timestamp": 1758513777, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u005", "timestamp": 1758514320, "message": {"role": "user", "content": "turn this thread into a decision log"}}
+{"type": "assistant", "uuid": "a005", "timestamp": 1758514325, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u006", "timestamp": 1758516067, "message": {"role": "user", "content": "draft release notes for the v6 tag from git log"}}
+{"type": "assistant", "uuid": "a006", "timestamp": 1758516072, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u007", "timestamp": 1758520193, "message": {"role": "user", "content": "summarise the thread below: decisions, owners, open questions"}}
+{"type": "assistant", "uuid": "a007", "timestamp": 1758520198, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u008", "timestamp": 1758524608, "message": {"role": "user", "content": "write release notes: here is the git log"}}
+{"type": "assistant", "uuid": "a008", "timestamp": 1758524613, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u009", "timestamp": 1758528170, "message": {"role": "user", "content": "why is my docker build slow"}}
+{"type": "assistant", "uuid": "a009", "timestamp": 1758528175, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u010", "timestamp": 1758530803, "message": {"role": "user", "content": "my api key is sk-live-abcdefghijklmnop12345 please use it in the script"}}
+{"type": "assistant", "uuid": "a010", "timestamp": 1758530808, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u011", "timestamp": 1758534677, "message": {"role": "user", "content": "the card number is 4111 1111 1111 1111 for the test fixture"}}
+{"type": "assistant", "uuid": "a011", "timestamp": 1758534682, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u012", "timestamp": 1758539533, "message": {"role": "user", "content": "turn these commits into release notes"}}
+{"type": "assistant", "uuid": "a012", "timestamp": 1758539538, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u013", "timestamp": 1758543305, "message": {"role": "user", "content": "write release notes from this git log"}}
+{"type": "assistant", "uuid": "a013", "timestamp": 1758543310, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u014", "timestamp": 1758546327, "message": {"role": "user", "content": "deploy token ghp_ABCDEFGHIJKLMNOPQRSTUVWXYZ123456 in the env"}}
+{"type": "assistant", "uuid": "a014", "timestamp": 1758546332, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u015", "timestamp": 1758548842, "message": {"role": "user", "content": "stakeholder update from these bullets, one page"}}
+{"type": "assistant", "uuid": "a015", "timestamp": 1758548847, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u016", "timestamp": 1758550937, "message": {"role": "user", "content": "the git log is below, write the release notes"}}
+{"type": "assistant", "uuid": "a016", "timestamp": 1758550942, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u017", "timestamp": 1758552469, "message": {"role": "user", "content": "draft the weekly stakeholder update from these notes"}}
+{"type": "assistant", "uuid": "a017", "timestamp": 1758552474, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u018", "timestamp": 1758554528, "message": {"role": "user", "content": "summarise this thread into a decision record"}}
+{"type": "assistant", "uuid": "a018", "timestamp": 1758554533, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u019", "timestamp": 1758555258, "message": {"role": "user", "content": "weekly update for the exec team from these notes"}}
+{"type": "assistant", "uuid": "a019", "timestamp": 1758555263, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u020", "timestamp": 1758560023, "message": {"role": "user", "content": "what does this error mean"}}
+{"type": "assistant", "uuid": "a020", "timestamp": 1758560028, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u021", "timestamp": 1758562542, "message": {"role": "user", "content": "what decisions were made in this thread, with owners"}}
+{"type": "assistant", "uuid": "a021", "timestamp": 1758562547, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u022", "timestamp": 1758566904, "message": {"role": "user", "content": "turn this git log into release notes for v3"}}
+{"type": "assistant", "uuid": "a022", "timestamp": 1758566909, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u023", "timestamp": 1758571019, "message": {"role": "user", "content": "explain this regex"}}
+{"type": "assistant", "uuid": "a023", "timestamp": 1758571024, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u024", "timestamp": 1758573892, "message": {"role": "user", "content": "summarise this email thread into decisions and next steps"}}
+{"type": "assistant", "uuid": "a024", "timestamp": 1758573897, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u025", "timestamp": 1758577628, "message": {"role": "user", "content": "draft the stakeholder update, notes below"}}
+{"type": "assistant", "uuid": "a025", "timestamp": 1758577633, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u026", "timestamp": 1758580046, "message": {"role": "user", "content": "write the v5 release notes from this log"}}
+{"type": "assistant", "uuid": "a026", "timestamp": 1758580051, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u027", "timestamp": 1758580705, "message": {"role": "user", "content": "fix the failing test in auth.py"}}
+{"type": "assistant", "uuid": "a027", "timestamp": 1758580710, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u028", "timestamp": 1758581732, "message": {"role": "user", "content": "what is the capital of peru"}}
+{"type": "assistant", "uuid": "a028", "timestamp": 1758581737, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u029", "timestamp": 1758585985, "message": {"role": "user", "content": "review this pull request for security issues"}}
+{"type": "assistant", "uuid": "a029", "timestamp": 1758585990, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u030", "timestamp": 1758589470, "message": {"role": "user", "content": "rename this variable everywhere"}}
+{"type": "assistant", "uuid": "a030", "timestamp": 1758589475, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u031", "timestamp": 1758590881, "message": {"role": "user", "content": "draft the release notes for v3 from the commits below"}}
+{"type": "assistant", "uuid": "a031", "timestamp": 1758590886, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u032", "timestamp": 1758593743, "message": {"role": "user", "content": "release notes from commits, bullet per change"}}
+{"type": "assistant", "uuid": "a032", "timestamp": 1758593748, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u033", "timestamp": 1758595048, "message": {"role": "user", "content": "how do i center a div"}}
+{"type": "assistant", "uuid": "a033", "timestamp": 1758595053, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u034", "timestamp": 1758599113, "message": {"role": "user", "content": "email the report to jane.doe@example.com and cc +44 7700 900123"}}
+{"type": "assistant", "uuid": "a034", "timestamp": 1758599118, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u035", "timestamp": 1758602627, "message": {"role": "user", "content": "write this week's stakeholder update from my notes"}}
+{"type": "assistant", "uuid": "a035", "timestamp": 1758602632, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u036", "timestamp": 1758603008, "message": {"role": "user", "content": "release notes for v5 from the git log, grouped by feature and fix"}}
+{"type": "assistant", "uuid": "a036", "timestamp": 1758603013, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u037", "timestamp": 1758603703, "message": {"role": "user", "content": "write a haiku about deploys"}}
+{"type": "assistant", "uuid": "a037", "timestamp": 1758603708, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u038", "timestamp": 1758608334, "message": {"role": "user", "content": "can you write the changelog entry from these commits"}}
+{"type": "assistant", "uuid": "a038", "timestamp": 1758608339, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u039", "timestamp": 1758613088, "message": {"role": "user", "content": "release notes please, from git log --oneline since the last tag"}}
+{"type": "assistant", "uuid": "a039", "timestamp": 1758613093, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u040", "timestamp": 1758615718, "message": {"role": "user", "content": "turn my notes into the weekly update for stakeholders"}}
+{"type": "assistant", "uuid": "a040", "timestamp": 1758615723, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u041", "timestamp": 1758618564, "message": {"role": "user", "content": "release notes from the log below, user-facing tone"}}
+{"type": "assistant", "uuid": "a041", "timestamp": 1758618569, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}
+{"type": "user", "uuid": "u042", "timestamp": 1758621492, "message": {"role": "user", "content": "decision summary of this thread please"}}
+{"type": "assistant", "uuid": "a042", "timestamp": 1758621497, "message": {"role": "assistant", "content": [{"type": "text", "text": "(assistant reply omitted from fixture)"}]}}

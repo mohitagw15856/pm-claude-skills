@@ -3,7 +3,7 @@
  "counts": {
   "consequential": 189,
   "high-stakes": 143,
-  "informational": 846
+  "informational": 850
  },
  "tiers": {
   "360-feedback-template": {
@@ -3211,6 +3211,22 @@
    "via": "default"
   },
   "project-status-report": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "promoter-draft": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "promoter-publish": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "promoter-scan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "promoter-test": {
    "tier": "informational",
    "via": "default"
   },

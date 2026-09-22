@@ -9,6 +9,17 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [80.0.0] — the promote loop — 2026-09-22
+
+**1170 skills · 133 bundles** (from 1166 · 132 at v79).
+
+### Added
+- **pm-skill-promoter** (4) — closes the loop between what you keep asking your assistant for and reusable skills: `promoter-scan` (cluster and rank recurring requests from Claude Code transcripts or a claude.ai export, redaction first, promotability score), `promoter-draft` (a complete SKILL.md in the library's format with three generalised worked examples and the bundle stanza), `promoter-test` (positives, near-miss negatives and goldens; precision and recall of the trigger description with a rewrite loop at 0.8), `promoter-publish` (the full release package: wiring, generators, count, gates, version, CHANGELOG, commands, one confirmation before push). Three stdlib helper scripts with `--selftest`.
+- `/promote` slash command running scan → choose → draft → test → publish.
+- `docs/PROMOTE-LOOP.md` with an end-to-end example on the synthetic fixture in `examples/promoter/` (transcript with planted secrets, the scan report, a drafted skill and its evals; the test scores 1.0 precision and recall).
+- README: a promote-loop section with the worked example, and a "what do I keep asking you for?" row.
+
+
 ### Changed
 - Decision layer: the client now speaks to three providers — TypeSafe direct, **Vercel AI Gateway** (`AI_GATEWAY_API_KEY`, `typesafe-ai/jev`) and **Cloudflare Workers AI** (`CLOUDFLARE_API_TOKEN` + account id, `typesafe/jev`) — picking the first credential present (`JEV_PROVIDER` forces one). TypeSafe signups are closed; the gateways are not.
 - Hosted worker: `/route` and the `/try` guard run through a Workers AI binding (`[ai] binding = "AI"`), so they are live with no key; `GET /route` reports the provider. `skillbench/route-bench.mjs --worker <url>` benchmarks through it.

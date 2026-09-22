@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1178 skills exported. Copy a `SKILL.md` into the tool to use it.
+1182 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -809,6 +809,10 @@
 | Profit to Cash Walk | `pm-investing-literacy` | `profit-to-cash-walk/SKILL.md` |
 | Programmatic SEO | `pm-growth` | `programmatic-seo/SKILL.md` |
 | Project Status Report | `pm-operations` | `project-status-report/SKILL.md` |
+| Promoter Draft | `pm-skill-promoter` | `promoter-draft/SKILL.md` |
+| Promoter Publish | `pm-skill-promoter` | `promoter-publish/SKILL.md` |
+| Promoter Scan | `pm-skill-promoter` | `promoter-scan/SKILL.md` |
+| Promoter Test | `pm-skill-promoter` | `promoter-test/SKILL.md` |
 | Promotion Packet | `pm-career` | `promotion-packet/SKILL.md` |
 | Promotion Plan | `pm-ecommerce` | `promotion-plan/SKILL.md` |
 | Prompt Debugging | `pm-ai-native` | `prompt-debugging/SKILL.md` |

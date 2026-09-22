@@ -1,0 +1,67 @@
+# Promoter Test
+
+A skill that fires on the wrong requests is worse than no skill, and one that never fires is invisible. The trigger is the description, so the description is what gets tested. This skill writes the labelled phrases, runs them against the description with the same keyword matching the library's suggestion hook uses, reports precision and recall, and rewrites the description until precision clears 0.8.
+
+Third step of the promote loop. Follows `promoter-draft`; feeds `promoter-publish`.
+
+## What This Skill Produces
+
+- **`skills/<name>/evals.json`**: `should_fire` (5 to 8 phrases), `should_not_fire` (5 phrases, including near misses), `golden` (3 input and expected-output pairs)
+- **One curated case in `evals/cases.json`** for the library's coverage ratchet and the judged leaderboard
+- **A precision and recall report** with the phrases that were missed and the false alarms listed
+- **A rewritten description** when precision was below 0.8, and the re-run numbers
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The drafted skill** (path to its SKILL.md)
+- **The scan pattern it came from**, for the real phrasings; otherwise ask the user for five ways they would say it
+- **Two or three near-miss jobs**: things that sound similar but should go to a different skill (these become the hardest negatives)
+
+## Framework: Precision First
+
+- **Positives** are the user's own phrasings, generalised, plus one or two a colleague would use.
+- **Negatives** must include near misses. "Write a haiku about deploys" is an easy negative for a release-notes skill; "write the announcement post for the launch" is the one that matters.
+- **Goldens** are the three worked examples from the draft, with the expected output abridged to the parts a judge can check.
+- **The match** is keyword overlap: a phrase fires when at least a third of its content terms appear in the description. It is deliberately crude, because that is what a model's first glance at 1,000 descriptions is like.
+- **The loop**: precision below 0.8 means the description is too broad or a negative shares its vocabulary; recall below 0.8 means a phrasing is missing from "Use when". Rewrite, re-run, stop at 0.8 precision with the best recall that allows.
+
+## Programmatic Helper
+
+```bash
+python3 skills/promoter-test/scripts/promoter_test.py skills/<name>/SKILL.md skills/<name>/evals.json
+python3 skills/promoter-test/scripts/promoter_test.py skills/<name>/SKILL.md skills/<name>/evals.json --rewrite
+```
+
+Exit code 0 when precision is 0.8 or above, 2 otherwise. `--rewrite` prints a proposed description that adds the missed trigger terms and lists terms that only appear in negatives.
+
+## Output Format
+
+### Trigger test: `<name>`
+| Run | Precision | Recall | Missed | False alarms |
+|---|---:|---:|---|---|
+| 1 | 0.67 | 0.83 | ... | ... |
+| 2 (rewritten) | 0.86 | 0.83 | ... | ... |
+
+Final description: "..."
+
+Files written: `skills/<name>/evals.json`, `evals/cases.json` (+1 case)
+
+## Quality Checks
+- [ ] 5 to 8 positives, 5 negatives with at least two near misses, 3 goldens
+- [ ] Precision 0.8 or above on the final run, recall reported honestly
+- [ ] Every rewrite is shown, not just the winning description
+- [ ] The evals/cases.json entry uses the first golden's input
+- [ ] Nothing in the phrases names a real person, company or dataset
+
+## Anti-Patterns
+- **Easy negatives only.** If nothing in the negatives shares a word with the skill, the test proves nothing.
+- **Chasing recall by stuffing the description.** A description that lists forty phrases fires on everything.
+- **Skipping the library case.** The coverage ratchet fails the pull request without it.
+- **Testing against the body instead of the description.** Only the description is read at trigger time.
+
+## Example Trigger Phrases
+- "Test the triggers on the new skill."
+- "Write evals for release-notes-from-git-log."
+- "Does this description fire on the right prompts?"
+- "Run the third step of the promote loop."

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1178 skills exported. Copy a `.md rule` into the tool to use it.
+1182 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -809,6 +809,10 @@
 | Profit to Cash Walk | `pm-investing-literacy` | `pm-investing-literacy/profit-to-cash-walk/profit-to-cash-walk.md` |
 | Programmatic SEO | `pm-growth` | `pm-growth/programmatic-seo/programmatic-seo.md` |
 | Project Status Report | `pm-operations` | `pm-operations/project-status-report/project-status-report.md` |
+| Promoter Draft | `pm-skill-promoter` | `pm-skill-promoter/promoter-draft/promoter-draft.md` |
+| Promoter Publish | `pm-skill-promoter` | `pm-skill-promoter/promoter-publish/promoter-publish.md` |
+| Promoter Scan | `pm-skill-promoter` | `pm-skill-promoter/promoter-scan/promoter-scan.md` |
+| Promoter Test | `pm-skill-promoter` | `pm-skill-promoter/promoter-test/promoter-test.md` |
 | Promotion Packet | `pm-career` | `pm-career/promotion-packet/promotion-packet.md` |
 | Promotion Plan | `pm-ecommerce` | `pm-ecommerce/promotion-plan/promotion-plan.md` |
 | Prompt Debugging | `pm-ai-native` | `pm-ai-native/prompt-debugging/prompt-debugging.md` |
