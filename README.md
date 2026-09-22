@@ -2,7 +2,11 @@
 
 <p align="center">
   <a href="https://mohitagw15856.github.io/pm-claude-skills/">
-    <img src="web/docs-assets/hero.svg" width="100%" alt="PM Skills — 1166 professional skills your AI assistant can read. Plain markdown, works with Claude, ChatGPT, Gemini, Cursor, and Codex. MIT licensed." />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="web/docs-assets/hero.svg">
+      <source media="(prefers-color-scheme: light)" srcset="web/docs-assets/hero-light.svg">
+      <img src="web/docs-assets/hero.svg" width="100%" alt="PM Skills — 1166 professional skills your AI assistant can read. Plain markdown, works with Claude, ChatGPT, Gemini, Cursor, and Codex. MIT licensed." />
+    </picture>
   </a>
 </p>
 
@@ -106,7 +110,7 @@ PM Skills is an open-source library of 1166 Agent Skills — plain-markdown SKIL
 ## 🎯 New: the decision layer
 
 <p align="center">
-  <a href="docs/JEV-DECISION-LAYER.md"><img src="web/docs-assets/decision-layer.svg" width="100%" alt="The decision layer: a prompt goes in, a calibrated decision model picks the pack then the skill with probabilities, the skill runs, the artifact comes out — and the same typed questions guard inputs, gate journeys and judge evals" /></a>
+  <a href="docs/JEV-DECISION-LAYER.md"><picture><source media="(prefers-color-scheme: dark)" srcset="web/docs-assets/decision-layer.svg"><source media="(prefers-color-scheme: light)" srcset="web/docs-assets/decision-layer-light.svg"><img src="web/docs-assets/decision-layer.svg" width="100%" alt="The decision layer: a prompt goes in, a calibrated decision model picks the pack then the skill with probabilities, the skill runs, the artifact comes out — and the same typed questions guard inputs, gate journeys and judge evals" /></picture></a>
 </p>
 
 Some questions deserve a **number, not a paragraph**: *which of 1166 skills?* · *is this input safe?* · *escalate or hold?* · *does this output clear the bar?* The library now answers those with typed questions — defined options in, one answer with a probability per option out — served by [TypeSafe Jev](https://docs.typesafe.ai) where you have access, and by a labelled Claude-backed adapter where you don't. Every piece falls back honestly; nothing breaks without a key. **[The full map, all 20 pieces →](docs/JEV-DECISION-LAYER.md)**
