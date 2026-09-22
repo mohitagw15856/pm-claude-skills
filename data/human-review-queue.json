@@ -1,0 +1,1008 @@
+{
+ "generated": "2026-09-22",
+ "method": "heuristic",
+ "unreviewed": 143,
+ "rows": [
+  {
+   "skill": "benefits-cliff-check",
+   "harm": 3,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 1
+  },
+  {
+   "skill": "disability-benefit-appeal",
+   "harm": 3,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 2
+  },
+  {
+   "skill": "flare-day-planner",
+   "harm": 3,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 3
+  },
+  {
+   "skill": "go-bag-builder",
+   "harm": 3,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 4
+  },
+  {
+   "skill": "power-outage-plan",
+   "harm": 3,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 5
+  },
+  {
+   "skill": "prior-authorization-letter",
+   "harm": 3,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 6
+  },
+  {
+   "skill": "property-tax-appeal",
+   "harm": 3,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 7
+  },
+  {
+   "skill": "spoon-planner",
+   "harm": 3,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 8
+  },
+  {
+   "skill": "tenant-rights-explainer",
+   "harm": 3,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 9
+  },
+  {
+   "skill": "wage-garnishment-response",
+   "harm": 3,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 10
+  },
+  {
+   "skill": "accessible-travel-planner",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 11
+  },
+  {
+   "skill": "accommodation-request",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 12
+  },
+  {
+   "skill": "bankruptcy-decision",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 13
+  },
+  {
+   "skill": "care-home-contract-decoder",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 14
+  },
+  {
+   "skill": "care-team-coordinator",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 15
+  },
+  {
+   "skill": "claim-denial-decoder",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 16
+  },
+  {
+   "skill": "diagnosis-limbo-kit",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 17
+  },
+  {
+   "skill": "discharge-summary",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 18
+  },
+  {
+   "skill": "emergency-doc-kit",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 19
+  },
+  {
+   "skill": "end-of-life-wishes-conversation",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 20
+  },
+  {
+   "skill": "healthcare-system-primer",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 21
+  },
+  {
+   "skill": "hoa-violation-response",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 22
+  },
+  {
+   "skill": "insurance-claim-appeal",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 23
+  },
+  {
+   "skill": "medical-appointment-advocate",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 24
+  },
+  {
+   "skill": "medical-bill-decoder",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 25
+  },
+  {
+   "skill": "medication-management-system",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 26
+  },
+  {
+   "skill": "name-change-navigator",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 27
+  },
+  {
+   "skill": "perimenopause-navigator",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 28
+  },
+  {
+   "skill": "small-claims-prep",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 29
+  },
+  {
+   "skill": "the-visa-interview",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 30
+  },
+  {
+   "skill": "witness-statement-writer",
+   "harm": 3,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 31
+  },
+  {
+   "skill": "after-the-disaster",
+   "harm": 2,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 32
+  },
+  {
+   "skill": "disability-disclosure-decision",
+   "harm": 2,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 33
+  },
+  {
+   "skill": "first-90-days-out",
+   "harm": 2,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 34
+  },
+  {
+   "skill": "lemon-law-check",
+   "harm": 2,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 35
+  },
+  {
+   "skill": "policy-renewal-review",
+   "harm": 2,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 36
+  },
+  {
+   "skill": "401k-plan-decoder",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 37
+  },
+  {
+   "skill": "arrival-setup",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 38
+  },
+  {
+   "skill": "beneficiary-audit",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 39
+  },
+  {
+   "skill": "benefits-decoder",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 40
+  },
+  {
+   "skill": "claims-triage",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 41
+  },
+  {
+   "skill": "closing-disclosure-decoder",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 42
+  },
+  {
+   "skill": "coverage-gap-analysis",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 43
+  },
+  {
+   "skill": "credit-from-scratch",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 44
+  },
+  {
+   "skill": "credit-memo",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 45
+  },
+  {
+   "skill": "disability-insurance-decoder",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 46
+  },
+  {
+   "skill": "estate-settlement-organizer",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 47
+  },
+  {
+   "skill": "franchise-decoder",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 48
+  },
+  {
+   "skill": "insurance-policy-decoder",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 49
+  },
+  {
+   "skill": "kyc-escalation",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 50
+  },
+  {
+   "skill": "lending-risk-brief",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 51
+  },
+  {
+   "skill": "loan-covenant-review",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 52
+  },
+  {
+   "skill": "loan-decoder",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 53
+  },
+  {
+   "skill": "moving-company-estimate-decoder",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 54
+  },
+  {
+   "skill": "pay-stub-decoder",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 55
+  },
+  {
+   "skill": "security-deposit-recovery",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 56
+  },
+  {
+   "skill": "severance-agreement-decoder",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 57
+  },
+  {
+   "skill": "stop-the-bleed-triage",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 58
+  },
+  {
+   "skill": "tax-residency-primer",
+   "harm": 2,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 59
+  },
+  {
+   "skill": "demand-letter",
+   "harm": 1,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 60
+  },
+  {
+   "skill": "inspection-report-decoder",
+   "harm": 1,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 61
+  },
+  {
+   "skill": "what-to-ask",
+   "harm": 1,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 62
+  },
+  {
+   "skill": "car-lease-decoder",
+   "harm": 1,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 63
+  },
+  {
+   "skill": "clause-explainer",
+   "harm": 1,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 64
+  },
+  {
+   "skill": "contract-red-flags",
+   "harm": 1,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 65
+  },
+  {
+   "skill": "contract-review",
+   "harm": 1,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 66
+  },
+  {
+   "skill": "home-contractor-quote-decoder",
+   "harm": 1,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 67
+  },
+  {
+   "skill": "lease-decoder",
+   "harm": 1,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 68
+  },
+  {
+   "skill": "nda-analyser",
+   "harm": 1,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 69
+  },
+  {
+   "skill": "pip-responder",
+   "harm": 1,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 70
+  },
+  {
+   "skill": "rent-increase-response",
+   "harm": 1,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 71
+  },
+  {
+   "skill": "salary-negotiation",
+   "harm": 1,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 72
+  },
+  {
+   "skill": "timeshare-contract-decoder",
+   "harm": 1,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 73
+  },
+  {
+   "skill": "wedding-vendor-contract-decoder",
+   "harm": 1,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 74
+  },
+  {
+   "skill": "auto-repair-estimate-decoder",
+   "harm": 0,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 75
+  },
+  {
+   "skill": "backup-strategy",
+   "harm": 0,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 76
+  },
+  {
+   "skill": "caregiver-burnout-check",
+   "harm": 0,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 77
+  },
+  {
+   "skill": "cease-and-desist-letter",
+   "harm": 0,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 78
+  },
+  {
+   "skill": "coming-out-rehearsal",
+   "harm": 0,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 79
+  },
+  {
+   "skill": "hazard-risk-map",
+   "harm": 0,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 80
+  },
+  {
+   "skill": "hoa-decoder",
+   "harm": 0,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 81
+  },
+  {
+   "skill": "housing-with-a-record",
+   "harm": 0,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 82
+  },
+  {
+   "skill": "oversharing-audit",
+   "harm": 0,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 83
+  },
+  {
+   "skill": "phishing-triage",
+   "harm": 0,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 84
+  },
+  {
+   "skill": "scam-message-decoder",
+   "harm": 0,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 85
+  },
+  {
+   "skill": "support-a-friend-in-crisis",
+   "harm": 0,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 86
+  },
+  {
+   "skill": "support-the-bereaved",
+   "harm": 0,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 87
+  },
+  {
+   "skill": "the-year-of-firsts",
+   "harm": 0,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 88
+  },
+  {
+   "skill": "two-worlds-translator",
+   "harm": 0,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 89
+  },
+  {
+   "skill": "venue-access-check",
+   "harm": 0,
+   "figures": 0.5,
+   "method": "heuristic",
+   "rank": 90
+  },
+  {
+   "skill": "account-recovery-plan",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 91
+  },
+  {
+   "skill": "aging-in-place-assessment",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 92
+  },
+  {
+   "skill": "aging-parent-talks",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 93
+  },
+  {
+   "skill": "apology-letter",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 94
+  },
+  {
+   "skill": "brand-impersonation-response",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 95
+  },
+  {
+   "skill": "care-decision-family-meeting",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 96
+  },
+  {
+   "skill": "clinical-trial-protocol",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 97
+  },
+  {
+   "skill": "college-app-parent-guide",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 98
+  },
+  {
+   "skill": "compliance-checklist",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 99
+  },
+  {
+   "skill": "credential-recognition",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 100
+  },
+  {
+   "skill": "customer-incident-update",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 101
+  },
+  {
+   "skill": "customer-outage-notice",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 102
+  },
+  {
+   "skill": "data-breach-response",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 103
+  },
+  {
+   "skill": "data-broker-removal",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 104
+  },
+  {
+   "skill": "debt-collector-scripts",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 105
+  },
+  {
+   "skill": "defamation-response",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 106
+  },
+  {
+   "skill": "digital-legacy-planner",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 107
+  },
+  {
+   "skill": "doxxing-response",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 108
+  },
+  {
+   "skill": "dpa-review",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 109
+  },
+  {
+   "skill": "elder-scam-briefing",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 110
+  },
+  {
+   "skill": "eulogy-and-obituary-writer",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 111
+  },
+  {
+   "skill": "expungement-navigator",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 112
+  },
+  {
+   "skill": "faith-transition-companion",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 113
+  },
+  {
+   "skill": "funeral-pricing-decoder",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 114
+  },
+  {
+   "skill": "grieving-at-work",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 115
+  },
+  {
+   "skill": "hospital-stay-plan",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 116
+  },
+  {
+   "skill": "identity-theft-recovery",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 117
+  },
+  {
+   "skill": "iep-504-meeting-kit",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 118
+  },
+  {
+   "skill": "incident-public-statement",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 119
+  },
+  {
+   "skill": "job-search-with-a-record",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 120
+  },
+  {
+   "skill": "jury-duty-guide",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 121
+  },
+  {
+   "skill": "kids-online-safety-plan",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 122
+  },
+  {
+   "skill": "layoff-communication",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 123
+  },
+  {
+   "skill": "legal-brief",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 124
+  },
+  {
+   "skill": "long-term-care-options",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 125
+  },
+  {
+   "skill": "notify-everyone-of-a-death",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 126
+  },
+  {
+   "skill": "parent-teacher-conference-prep",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 127
+  },
+  {
+   "skill": "password-and-2fa-setup",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 128
+  },
+  {
+   "skill": "power-of-attorney-explainer",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 129
+  },
+  {
+   "skill": "pr-crisis-response",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 130
+  },
+  {
+   "skill": "privacy-policy-drafter",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 131
+  },
+  {
+   "skill": "ransomware-first-response",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 132
+  },
+  {
+   "skill": "reconnect-after-time-away",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 133
+  },
+  {
+   "skill": "repair-request-escalation",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 134
+  },
+  {
+   "skill": "respite-care-plan",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 135
+  },
+  {
+   "skill": "safe-online-shopping",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 136
+  },
+  {
+   "skill": "secure-a-lost-phone",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 137
+  },
+  {
+   "skill": "sibling-care-summit",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 138
+  },
+  {
+   "skill": "soap-note",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 139
+  },
+  {
+   "skill": "tos-decoder",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 140
+  },
+  {
+   "skill": "underwriting-narrative",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 141
+  },
+  {
+   "skill": "vet-estimate-decoder",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 142
+  },
+  {
+   "skill": "when-someone-dies",
+   "harm": 0,
+   "figures": 0,
+   "method": "heuristic",
+   "rank": 143
+  }
+ ]
+}

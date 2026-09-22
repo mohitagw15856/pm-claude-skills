@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1174 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1178 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -374,6 +374,7 @@
 | Epic Progress Report | `pm-delivery` | `pm-delivery/epic-progress-report/SYSTEM_PROMPT.md` |
 | Error Decoder | `pm-engineering` | `pm-engineering/error-decoder/SYSTEM_PROMPT.md` |
 | Error Message Writer | `pm-uxwriting` | `pm-uxwriting/error-message-writer/SYSTEM_PROMPT.md` |
+| Escalate or Hold | `pm-decisions` | `pm-decisions/escalate-or-hold/SYSTEM_PROMPT.md` |
 | Escalation Email | `pm-cowork` | `pm-cowork/escalation-email/SYSTEM_PROMPT.md` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/SYSTEM_PROMPT.md` |
 | ESG Disclosure Draft | `pm-climate` | `pm-climate/esg-disclosure-draft/SYSTEM_PROMPT.md` |
@@ -511,6 +512,7 @@
 | Help Center Article | `pm-support` | `pm-support/help-center-article/SYSTEM_PROMPT.md` |
 | Hidden-Fee Auditor | `pm-money` | `pm-money/hidden-fee-auditor/SYSTEM_PROMPT.md` |
 | HIPAA Safeguards | `pm-compliance` | `pm-compliance/hipaa-safeguards/SYSTEM_PROMPT.md` |
+| Hire or Pass | `pm-decisions` | `pm-decisions/hire-or-pass/SYSTEM_PROMPT.md` |
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/SYSTEM_PROMPT.md` |
 | HN Digest | `pm-live` | `pm-live/hn-digest/SYSTEM_PROMPT.md` |
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/SYSTEM_PROMPT.md` |
@@ -867,6 +869,7 @@
 | Relationship Check-In | `pm-family` | `pm-family/relationship-check-in/SYSTEM_PROMPT.md` |
 | Release Day Countdown | `pm-musician` | `pm-musician/release-day-countdown/SYSTEM_PROMPT.md` |
 | Relocation Planner | `pm-lifeadmin` | `pm-lifeadmin/relocation-planner/SYSTEM_PROMPT.md` |
+| Renew or Churn Call | `pm-decisions` | `pm-decisions/renew-or-churn-call/SYSTEM_PROMPT.md` |
 | Renewal Playbook | `pm-cs` | `pm-cs/renewal-playbook/SYSTEM_PROMPT.md` |
 | Renovation Scope & Budget | `pm-lifeadmin` | `pm-lifeadmin/renovation-scope-and-budget/SYSTEM_PROMPT.md` |
 | Rent Increase Response | `pm-renters` | `pm-renters/rent-increase-response/SYSTEM_PROMPT.md` |
@@ -951,6 +954,7 @@
 | Severance Agreement Decoder | `pm-layoff` | `pm-layoff/severance-agreement-decoder/SYSTEM_PROMPT.md` |
 | Shared Drive Cleanup | `pm-cowork` | `pm-cowork/shared-drive-cleanup/SYSTEM_PROMPT.md` |
 | Shift Schedule Builder | `pm-hospitality` | `pm-hospitality/shift-schedule-builder/SYSTEM_PROMPT.md` |
+| Ship or Slip | `pm-decisions` | `pm-decisions/ship-or-slip/SYSTEM_PROMPT.md` |
 | Short-Form Script | `pm-creator` | `pm-creator/short-form-script/SYSTEM_PROMPT.md` |
 | Should I Quit or Push | `pm-focus` | `pm-focus/should-i-quit-or-push/SYSTEM_PROMPT.md` |
 | Should I Send This | `pm-focus` | `pm-focus/should-i-send-this/SYSTEM_PROMPT.md` |

@@ -1,4 +1,4 @@
-# 🗂️ All 1162 Skills — full catalog
+# 🗂️ All 1166 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -723,7 +723,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (700 skills)
+## 🌍 Industries & Public Sector (704 skills)
 
 ### `other` — 22 skills
 
@@ -1072,6 +1072,15 @@
 | **Machiavelli Counsel** (`machiavelli-counsel`) | Analyse a workplace power situation the way Machiavelli's The Prince (1532) would — who holds power, whose support you need, what fortune can take… | — |
 | **Stoic Setback Debrief** (`stoic-setback-debrief`) | Recover from a professional setback — a failed launch, brutal feedback, a public mistake, a lost deal, a layoff — using the actual exercises from… | — |
 | **Sun Tzu Strategy Brief** (`sun-tzu-strategy-brief`) | Prepare for a specific contest — a competitive deal, a negotiation, a market entry, a turf fight — using the actual planning framework from Sun… | — |
+
+### `pm-decisions` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Escalate or Hold** (`escalate-or-hold`) | Decide whether an issue gets escalated now, held with a re-check time, or closed — as a typed decision with probabilities rather than a judgment… | — |
+| **Hire or Pass** (`hire-or-pass`) | Turn a hiring debrief into a typed decision — hire, hire at a different level, get more signal, or pass — from rubric evidence only, with… | — |
+| **Renew or Churn Call** (`renew-or-churn-call`) | Score an account's renewal likelihood on a five-level scale with probabilities, and name the next move for the account owner. | — |
+| **Ship or Slip** (`ship-or-slip`) | Turn a release-readiness argument into one typed decision — ship, ship reduced, or slip — with a defined state, defined options, and a probability… | — |
 
 ### `pm-decoders` — 23 skills
 
@@ -1852,4 +1861,4 @@
 
 ---
 
-_1162 skills across 132 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1166 skills across 133 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

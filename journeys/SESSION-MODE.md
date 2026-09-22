@@ -30,3 +30,6 @@ The UI's job is small: hold the conversation, feed step *N*'s prompt when step *
 
 ## Why this is the biggest UX lever left
 A pack turns a warehouse into a path; a session turns the path into a *guide*. For someone in a crisis, "do this next" beats "here are five skills" every time.
+
+## Gating a step (auto-advance)
+A session should advance itself when a step's output is complete and carries what the next step needs — and stop to ask only when it isn't. `scripts/journey-gate.mjs <journey> <stepIndex> --output <file>` returns `proceed: true|false` from two typed questions (completeness as a 3-level score; carry-forward present as yes/no) and exits 0 / 3 accordingly. Without a decision-model key it uses a structural heuristic and says so (`method: heuristic`). The `carry` list on each step is the contract the gate checks.

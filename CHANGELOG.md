@@ -9,6 +9,23 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [79.0.0] — the decision layer — 2026-09-22
+
+**1166 skills · 132 bundles** (from 1162 · 131 at v78).
+
+### Added
+- **The decision layer** — twenty additive pieces on a calibrated decision model (TypeSafe Jev, "System One": defined options in, one typed answer with probabilities out). Shared client in `integrations/jev/` (`ask`, `choice`/`score`/`noul`, `decide()` thresholds, retries, mock transport); every script has `--selftest` and a labelled fallback without `JEV_API_KEY`. Map with status: `docs/JEV-DECISION-LAYER.md`.
+- **Routing:** `hooks/suggest-skill-jev.sh` (one typed nudge, falls back to the keyword hook) · `integrations/jev/route.mjs` (pack → skill in two Choice calls; `--flat`) · `POST /route` + `/route/badge` on the hosted worker · `extension/jev-suggest.js` (opt-in contextual discovery v2) · `scripts/journey-gate.mjs` (auto-advance a session step) · the **Skill Router** page `web/router.html` · the `pm-skills-jev-picker` npm package (`integrations/jev/package.json`, `publish-jev-picker.yml`).
+- **Trust:** `scripts/classify-risk-tiers.mjs` (under-tiering second opinion) · `integrations/jev/crisis.mjs` (danger + lane for public bots, wired in the runbook) · input guard on `/try` (injection + PII, fail-open) · `scripts/check-vendor-neutrality-semantic.mjs` (advisory) · `scripts/human-review-queue.mjs` → `docs/HUMAN-REVIEW-QUEUE.md` (harm-ranked).
+- **Quality:** `evals/jev-judge.mjs` (typed four-dimension judge) · `scripts/sycophancy-scan.mjs` → `skillbench/SYCOPHANCY.md` · `scripts/drift-triage.mjs` (breaking / semantic / cosmetic) · `scripts/example-output-gate.mjs` · `skillbench/route-bench.mjs` → `skillbench/reports/route-bench.md` (keyword floor 51.7% top-1 / 65.2% top-3 on 267 cases) · `scripts/skill-of-the-week-jev.mjs` (signal-based pick).
+- **pm-decisions** (4) — `ship-or-slip`, `escalate-or-hold`, `renew-or-churn-call`, `hire-or-pass`: typed decision contracts (state schema, defined options, thresholds, on-hold rule) with adapters in `integrations/jev/decisions/` and the runner `integrations/jev/decide.mjs`. Tiered consequential. Eval cases added.
+- Cookbook `docs/cookbooks/jev-routing-1000-skills.md`, `npm run route`, `npm run check:jev`.
+
+### Changed
+- README rewritten: crisper, more visual — stats strip, door table, the decision-layer diagram (`web/docs-assets/decision-layer.svg`), quality and ecosystem tables; the long cowork/tokens/prove prose moved to their own docs.
+- Site nav gains 🎯 Skill router; `web/risk-tiers.json` published for the router page.
+
+
 ## [78.0.1] — security: no eval, no shell strings — 2026-09-15
 
 ### Fixed

@@ -1,13 +1,21 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
-  "version": "78.0.1",
+  "version": "79.0.0",
   "description": "PM stands for Professional, not just Product Management. 515 Claude Skills + 4 agent templates across 74 bundles covering 31 professions — engineering, security, AI/ML, customer success, legal, government & policy, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "plugins": [
+    {
+      "name": "pm-decisions",
+      "description": "Typed, calibrated decisions instead of prose: renew-or-churn, escalate-or-hold, ship-or-slip, hire-or-pass — each with a state schema, defined options, and thresholds a program or a person can act on",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-decisions",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
     {
       "name": "pm-investing-literacy",
       "description": "Financial literacy for reading company accounts: a beginner's tutor for an uploaded annual report, an audited-boundary check on every headline figure, a profit-to-cash walk with the arithmetic shown, a same-definitions comparison of two companies, and a vocabulary explainer anchored to the document. Every figure carries a page reference and anything missing is marked not disclosed. Educational — not financial advice; decisions with real money belong with a regulated adviser.",

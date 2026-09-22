@@ -9,6 +9,7 @@
 import { WIDGETS, UI_TOOLS, runUiTool } from './widgets.js';
 import { handleScan, handlePing, handleStats } from './scan.js';
 
+import { jevConfigured, routeSkill, guardInput } from './jev.js';
 const SKILLS_URL = 'https://mohitagw15856.github.io/pm-claude-skills/skills.json';
 const WORKFLOWS_URL = 'https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/workflows.json';
 const REGISTRY_URL = 'https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/community/registry.json';
@@ -443,6 +444,10 @@ async function handleTry(request, env) {
   const prompt = String(payload.prompt || '').slice(0, TRY.maxInputChars);
   const system = String(payload.system || '').slice(0, 12000);
   if (!prompt.trim()) return jsonResponse({ error: 'no_prompt' }, 400);
+  // Decision-model input guard (fail-open; see src/jev.js). Blocks obvious prompt
+  // injection and raw PII before a sponsor-funded model call is spent on it.
+  const guard = await guardInput(env, prompt);
+  if (guard.block) return jsonResponse({ error: 'guarded', reasons: guard.reasons, message: 'That input looks like a prompt-injection attempt or contains sensitive identifiers. Remove account numbers / IDs and try again.' }, 400);
 
   // Count first (fail-safe: a hammered endpoint can't exceed the cap even if a call errors).
   const total = +((await env.TRY_KV.get('try:total')) || 0) + 1;
@@ -638,6 +643,26 @@ export default {
     // Capped, sponsored "try Claude free, no key" endpoint (off until configured — see handleTry).
     if (url.pathname === '/try/stats' && (request.method === 'GET' || request.method === 'HEAD')) {
       return tryStats(url, env);
+    }
+    // ── Skill router: POST /route {prompt} → {skill, pack, confidence, probability, auto, alternatives, ms}
+    // Two typed Choice calls (pack → skill) against a calibrated decision model. GET /route reports
+    // whether it is on; /route/badge is a shields.io endpoint. Off (503) without the JEV_API_KEY secret.
+    if (url.pathname === '/route') {
+      if (request.method === 'GET') return jsonResponse({ enabled: jevConfigured(env), method: jevConfigured(env) ? 'jev-two-stage' : 'off', hint: 'POST {"prompt":"…"}' });
+      if (request.method !== 'POST') return new Response('Method Not Allowed', { status: 405, headers: CORS });
+      if (!jevConfigured(env)) return jsonResponse({ error: 'disabled', message: 'Router not enabled here (JEV_API_KEY secret missing). Use the keyword search in the playground.' }, 503);
+      let rb; try { rb = await request.json(); } catch { return jsonResponse({ error: 'bad_json' }, 400); }
+      const rp = String(rb.prompt || '').slice(0, 2000);
+      if (!rp.trim()) return jsonResponse({ error: 'no_prompt' }, 400);
+      try {
+        const skills = await getSkills();
+        const r = await routeSkill(env, rp, skills);
+        return jsonResponse({ ...r, method: 'jev-two-stage' });
+      } catch (e) { return jsonResponse({ error: 'upstream', message: 'Router unavailable — try again.' }, 502); }
+    }
+    if (url.pathname === '/route/badge') {
+      const on = jevConfigured(env);
+      return new Response(JSON.stringify({ schemaVersion: 1, label: 'skill router', message: on ? 'live · typed decisions' : 'off', color: on ? 'brightgreen' : 'lightgrey' }), { headers: { 'content-type': 'application/json', 'cache-control': 'public, s-maxage=3600', ...CORS } });
     }
     if (url.pathname === '/try') {
       if (request.method === 'GET') return tryStatus(env);   // frontend probes this to show/hide the button (already a Response)

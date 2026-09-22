@@ -1,0 +1,22 @@
+{
+  "id": "hire-or-pass",
+  "skill": "hire-or-pass",
+  "question": "Based on the structured debrief evidence only, what should the hiring decision be?",
+  "state_schema": {
+    "role": "title, level, the 3–5 must-have competencies from the rubric",
+    "evidence": "per competency: the strongest observed example and the strongest counter-example, with which interviewer saw it",
+    "scores": "rubric scores per interviewer per competency (not overall vibes)",
+    "references": "if taken: what they confirmed or contradicted",
+    "risks": "gaps, level mismatch, red flags with the evidence behind them",
+    "process": "any missed interviews or untested competencies"
+  },
+  "type": "choice",
+  "criteria": {
+    "hire": "every must-have competency has positive evidence from at least two interviewers and no red flag has evidence behind it",
+    "hire_at_different_level": "the evidence supports the competencies at a different level than the role was opened at",
+    "more_signal": "a must-have competency was untested or the evidence is split between interviewers — one targeted extra conversation decides it",
+    "pass": "a must-have competency has negative evidence, or a red flag is substantiated"
+  },
+  "thresholds": { "minConfidence": 0.65, "minProbability": 0.7 },
+  "on_hold": "A close hire/pass is a more_signal outcome by definition — name the competency to test and who tests it. Never decide on the distribution alone; a person owns the hiring decision."
+}

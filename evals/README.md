@@ -23,6 +23,9 @@ ANTHROPIC_API_KEY=sk-ant-... node evals/run-evals.mjs
 node scripts/build-leaderboard.mjs       # render web/leaderboard.html
 ```
 
+## A second, typed judge
+`evals/jev-judge.mjs` asks the same four dimensions as **Score questions with five described levels** to a calibrated decision model, returning the identical `{ scores, overall }` shape plus a confidence per dimension — cheaper, reproducible, and a cross-family check on the LLM judge. `node evals/jev-judge.mjs --skill prd-template --output out.md` (needs `JEV_API_KEY`; `--selftest` runs offline).
+
 ## 💸 Keeping it cheap
 
 Evals call the API, so the defaults are deliberately frugal and **nothing runs on a schedule** — every eval/improve workflow is manual (`workflow_dispatch`).

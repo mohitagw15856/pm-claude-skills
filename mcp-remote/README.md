@@ -119,3 +119,6 @@ reach it. Skills come from
 updates to the library appear automatically without redeploying.
 
 No secrets, no state, no database — and the Cloudflare free tier comfortably covers it.
+
+## Skill router (optional): `POST /route`
+Body `{"prompt":"…"}` → `{ skill, pack, confidence, probability, auto, alternatives, ms }` from two typed Choice calls (pack → skill) against a calibrated decision model. `GET /route` says whether it is on; `/route/badge` is a shields.io endpoint. Off (503) until `npx wrangler secret put JEV_API_KEY`. The same secret turns on the input guard on `/try` (injection + PII, fail-open). Code: `src/jev.js`; library side: [`integrations/jev/`](../integrations/jev/).

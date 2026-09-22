@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-decisions",
+  "version": "1.0.0",
+  "description": "Typed, calibrated decisions instead of prose: renew-or-churn, escalate-or-hold, ship-or-slip, hire-or-pass — each with a state schema, defined options, and thresholds a program or a person can act on",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "decisions",
+    "calibrated",
+    "probabilities",
+    "routing",
+    "system-one"
+  ]
+}

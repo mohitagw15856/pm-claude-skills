@@ -1068,6 +1068,22 @@
   {
    "skill": "investing-vocabulary-explainer",
    "input": "In the attached annual report, what do 'goodwill', 'deferred revenue', and 'diluted EPS' mean, and is the share price cheap given the EPS on page 61?"
+  },
+  {
+   "skill": "ship-or-slip",
+   "input": "Release 3.2 targeted Friday. Open blockers: 1 sev-1 (payments double-charge on retry, owner Priya, ETA Thursday night). Tests 97% pass, 4 flaky. Rollback not tested since 3.0. Two enterprise customers were promised the new export on Friday; the export is green. Reports dashboard is red but cuttable."
+  },
+  {
+   "skill": "escalate-or-hold",
+   "input": "Issue: search latency p95 at 4s since 09:10, first reported 09:20, status investigating. Impact: ~12% of sessions, no SLA breach yet (breach at 6s for 30 min). Owner: on-call Sam, last update 09:45 with a suspected index rebuild. Trend: stable for 40 minutes. Never escalated before. Reporter (support lead) wants a status page post."
+  },
+  {
+   "skill": "renew-or-churn-call",
+   "input": "Account Northwind, ARR $84k, renews 30 Nov, annual. Usage: 41 of 60 seats active, down 15% over 90 days, reporting module unused. Engagement: last exec touch in May, no QBR this year, 2 open tickets (billing), NPS 6. Champion left in July; replacement unknown. 8% price increase at renewal; no competitor signal. One credit issued last year for downtime."
+  },
+  {
+   "skill": "hire-or-pass",
+   "input": "Role: Senior PM, L5. Must-haves: customer discovery, prioritisation, stakeholder writing, execution. Evidence — discovery: strong (ran 12 interviews, shown by R and J), counter: none. Prioritisation: split — R saw a clear RICE-style tradeoff, J felt it was hand-wavy. Writing: strong (sample doc, seen by M). Execution: untested (interviewer sick). Scores 4/4/3/–, 3/2/4/–, 4/–/4/–. No references yet. No red flags."
   }
  ]
 }

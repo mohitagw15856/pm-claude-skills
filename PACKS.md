@@ -1,8 +1,8 @@
 # 🎒 Skill Packs — curated sets for a moment in your life
 
-1162 skills is a lot to face. These packs are hand-picked sets for **one situation you're actually in** — start here, not with the full catalogue. Each is a reading list of existing skills; install the whole bundle in Claude Code with `/plugin`, or open any skill in the [Playground](https://mohitagw15856.github.io/pm-claude-skills/).
+1166 skills is a lot to face. These packs are hand-picked sets for **one situation you're actually in** — start here, not with the full catalogue. Each is a reading list of existing skills; install the whole bundle in Claude Code with `/plugin`, or open any skill in the [Playground](https://mohitagw15856.github.io/pm-claude-skills/).
 
-> Not a person in one of these moments? The [full catalogue](SKILLS.md) has all 1162, or describe your problem at [🔎 find](https://mohitagw15856.github.io/pm-claude-skills/find.html).
+> Not a person in one of these moments? The [full catalogue](SKILLS.md) has all 1166, or describe your problem at [🔎 find](https://mohitagw15856.github.io/pm-claude-skills/find.html).
 
 ---
 

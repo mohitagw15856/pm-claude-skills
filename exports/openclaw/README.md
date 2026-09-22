@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1174 skills exported. Copy a `SKILL.md` into the tool to use it.
+1178 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -374,6 +374,7 @@
 | Epic Progress Report | `pm-delivery` | `epic-progress-report/SKILL.md` |
 | Error Decoder | `pm-engineering` | `error-decoder/SKILL.md` |
 | Error Message Writer | `pm-uxwriting` | `error-message-writer/SKILL.md` |
+| Escalate or Hold | `pm-decisions` | `escalate-or-hold/SKILL.md` |
 | Escalation Email | `pm-cowork` | `escalation-email/SKILL.md` |
 | Escalation Tree | `pm-support` | `escalation-tree/SKILL.md` |
 | ESG Disclosure Draft | `pm-climate` | `esg-disclosure-draft/SKILL.md` |
@@ -511,6 +512,7 @@
 | Help Center Article | `pm-support` | `help-center-article/SKILL.md` |
 | Hidden-Fee Auditor | `pm-money` | `hidden-fee-auditor/SKILL.md` |
 | HIPAA Safeguards | `pm-compliance` | `hipaa-safeguards/SKILL.md` |
+| Hire or Pass | `pm-decisions` | `hire-or-pass/SKILL.md` |
 | Hiring Rubric | `pm-people` | `hiring-rubric/SKILL.md` |
 | HN Digest | `pm-live` | `hn-digest/SKILL.md` |
 | HOA Decoder | `pm-decoders` | `hoa-decoder/SKILL.md` |
@@ -867,6 +869,7 @@
 | Relationship Check-In | `pm-family` | `relationship-check-in/SKILL.md` |
 | Release Day Countdown | `pm-musician` | `release-day-countdown/SKILL.md` |
 | Relocation Planner | `pm-lifeadmin` | `relocation-planner/SKILL.md` |
+| Renew or Churn Call | `pm-decisions` | `renew-or-churn-call/SKILL.md` |
 | Renewal Playbook | `pm-cs` | `renewal-playbook/SKILL.md` |
 | Renovation Scope & Budget | `pm-lifeadmin` | `renovation-scope-and-budget/SKILL.md` |
 | Rent Increase Response | `pm-renters` | `rent-increase-response/SKILL.md` |
@@ -951,6 +954,7 @@
 | Severance Agreement Decoder | `pm-layoff` | `severance-agreement-decoder/SKILL.md` |
 | Shared Drive Cleanup | `pm-cowork` | `shared-drive-cleanup/SKILL.md` |
 | Shift Schedule Builder | `pm-hospitality` | `shift-schedule-builder/SKILL.md` |
+| Ship or Slip | `pm-decisions` | `ship-or-slip/SKILL.md` |
 | Short-Form Script | `pm-creator` | `short-form-script/SKILL.md` |
 | Should I Quit or Push | `pm-focus` | `should-i-quit-or-push/SKILL.md` |
 | Should I Send This | `pm-focus` | `should-i-send-this/SKILL.md` |

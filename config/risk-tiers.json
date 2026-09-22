@@ -19,8 +19,7 @@
       "pm-people", "pm-layoff", "pm-resignation", "pm-jobsearch", "pm-career",
       "pm-compliance", "pm-security", "pm-gov", "pm-recruiting", "pm-neurodivergent",
       "pm-family", "pm-social", "pm-wellbeing", "pm-freelance", "pm-sidehustle",
-      "pm-wedding", "pm-realestate", "pm-simulators"
-    ]
+      "pm-wedding", "pm-realestate", "pm-simulators", "pm-decisions"]
   },
   "skills": {
     "high-stakes": [

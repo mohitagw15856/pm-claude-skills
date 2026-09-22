@@ -18,6 +18,18 @@ Your best skills (`pm-hardship`, `pm-grief`, `pm-caregiving`, `pm-newcomer`) are
 4. **Rate limits + abuse.** Per-user daily cap; block obvious abuse; a `/report` command.
 5. **Jurisdiction ask.** For money/legal packs, ask the country first so replies can say what's verified vs. not (and use `variants/` where they exist).
 
+## Crisis routing — the implementation
+`integrations/jev/crisis.mjs` is the first thing every inbound message hits, before any menu or skill:
+```js
+import { routeInbound } from '../integrations/jev/crisis.mjs';
+const r = await routeInbound(text, { country: user.country });   // { danger, dangerP, lane, reply }
+if (r.danger) return send(r.reply);          // crisis line first, stop the skill
+if (r.lane === 'human') return handoff(text);
+if (r.lane === 'menu') return sendMenu();
+// lane === 'skill' → route to a pack/skill
+```
+Danger is a calibrated yes/no with the threshold set **low on purpose** (0.3 → yes); the lane is a four-way choice (hotline / human / skill / menu). Without a key it falls back to a phrase list and labels itself `method: keyword` — still test the dozen phrasings in the checklist against whichever path is live.
+
 ## Launch checklist
 - [ ] BotFather token in a secret, not in code; `/privacy` and `/help` commands live.
 - [ ] Menus wired to the 7 packs; every reply carries the boundary line.

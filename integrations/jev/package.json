@@ -1,0 +1,15 @@
+{
+  "name": "pm-skills-jev-picker",
+  "version": "1.0.0",
+  "description": "Route any prompt to the right one of 1000+ professional agent skills with one typed decision call (TypeSafe Jev / System One). Keyword fallback, zero dependencies.",
+  "type": "module",
+  "main": "picker.mjs",
+  "exports": { ".": "./picker.mjs", "./client": "./client.mjs", "./index.json": "./index.json" },
+  "files": ["picker.mjs", "route.mjs", "client.mjs", "catalog.mjs", "index.json", "README.md"],
+  "engines": { "node": ">=18" },
+  "keywords": ["jev", "typesafe", "system-one", "router", "agent-skills", "claude", "skills", "classification"],
+  "author": "Mohit Aggarwal <mohit15856@gmail.com>",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/mohitagw15856/pm-claude-skills.git", "directory": "integrations/jev" },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills/tree/main/integrations/jev"
+}

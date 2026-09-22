@@ -1,0 +1,21 @@
+{
+  "id": "ship-or-slip",
+  "skill": "ship-or-slip",
+  "question": "Given this release's state, should the team ship on the date, slip it, or ship a reduced scope?",
+  "state_schema": {
+    "release": "name and target date",
+    "open_blockers": "count and one line each (severity, owner, ETA)",
+    "test_status": "pass rate, flaky count, last green build",
+    "rollback": "tested? time to roll back",
+    "customer_commitments": "who was promised what, and when",
+    "scope_cuttable": "which items could be dropped without breaking the promise"
+  },
+  "type": "choice",
+  "criteria": {
+    "ship": "no open severity-1 blockers, rollback tested, tests green — the date holds and the risk is understood",
+    "ship_reduced": "the promised core is ready but a non-core item is red — ship without it and say so",
+    "slip": "a severity-1 blocker, untested rollback or a red core path — the date moves; slipping is cheaper than a bad release"
+  },
+  "thresholds": { "minConfidence": 0.6, "minProbability": 0.7 },
+  "on_hold": "Present the distribution to the release owner with the two closest options and the single fact that separates them."
+}

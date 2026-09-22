@@ -1,0 +1,24 @@
+{
+  "id": "renew-or-churn-call",
+  "skill": "renew-or-churn-call",
+  "question": "How likely is this account to renew, and what is the right next move for the account owner?",
+  "state_schema": {
+    "account": "name, ARR, renewal date, term",
+    "usage": "active seats vs licensed, 90-day trend, key feature adoption",
+    "engagement": "last exec touch, QBR held, support tickets open/closed, NPS or CSAT",
+    "champion": "still in role? sponsor alignment",
+    "commercial": "price change at renewal, competitor in play, procurement signals",
+    "history": "prior escalations, credits, missed commitments"
+  },
+  "type": "score",
+  "criteria": [
+    "will churn — champion gone, usage collapsing, competitor selected or procurement told us",
+    "at risk — usage down, exec contact stale, open escalation or a price objection",
+    "uncertain — mixed signals: healthy usage but no sponsor, or engaged but under-adopted",
+    "likely renew — usage steady, sponsor engaged, no open blockers, price accepted",
+    "will renew and expand — growing usage, seats capped, expansion asked for"
+  ],
+  "moves": { "0": "escalate now: exec-to-exec call, save play with a concession budget", "1": "run the renewal playbook with a 60-day save plan", "2": "book a discovery call to find the sponsor and the value gap", "3": "standard renewal motion, confirm timeline with procurement", "4": "expansion proposal before renewal paperwork" },
+  "thresholds": { "minConfidence": 0.55, "minProbability": 0.6 },
+  "on_hold": "Show the full distribution; a 40/40 split between at-risk and likely-renew is a discovery call, not a save play."
+}

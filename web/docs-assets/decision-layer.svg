@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="t d">
+  <title id="t">The decision layer: one typed call routes a prompt to the right skill</title>
+  <desc id="d">A prompt enters, a calibrated decision model picks the pack then the skill with probabilities, and the skill produces the artifact. Guards, gates and judges use the same typed questions.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#d97757"/><stop offset="1" stop-color="#8a5cf5"/></linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f1117"/><stop offset="1" stop-color="#171a23"/></linearGradient>
+    <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#9aa3b2"/></marker>
+  </defs>
+  <rect width="1200" height="360" rx="20" fill="url(#bg)"/>
+  <text x="600" y="44" text-anchor="middle" font-family="ui-sans-serif,system-ui,Segoe UI,Helvetica,Arial" font-size="22" font-weight="700" fill="#e7ebf0">Decision layer — typed choices, not paragraphs</text>
+  <text x="600" y="68" text-anchor="middle" font-family="ui-sans-serif,system-ui" font-size="13.5" fill="#9aa3b2">state + defined options in · one answer with probabilities out · 70–500 ms · no text generated</text>
+  <!-- prompt -->
+  <g font-family="ui-sans-serif,system-ui" font-size="14">
+    <rect x="40" y="130" width="230" height="96" rx="14" fill="#1e2230" stroke="#2b3040"/>
+    <text x="155" y="160" text-anchor="middle" fill="#e7ebf0" font-weight="700">“my landlord kept</text>
+    <text x="155" y="182" text-anchor="middle" fill="#e7ebf0" font-weight="700">my deposit”</text>
+    <text x="155" y="208" text-anchor="middle" fill="#9aa3b2" font-size="12">prompt · page · ticket · release state</text>
+    <path d="M272 178 L318 178" stroke="#9aa3b2" stroke-width="2" marker-end="url(#ar)"/>
+    <!-- decision -->
+    <rect x="322" y="106" width="300" height="144" rx="16" fill="#151827" stroke="url(#g)" stroke-width="2"/>
+    <text x="472" y="134" text-anchor="middle" fill="#e7ebf0" font-weight="700">Choice → pack, Choice → skill</text>
+    <g font-size="12.5" fill="#c8ceda">
+      <text x="342" y="162">pm-renters</text><rect x="430" y="152" width="150" height="12" rx="6" fill="#2b3040"/><rect x="430" y="152" width="132" height="12" rx="6" fill="url(#g)"/><text x="590" y="162" fill="#e7ebf0">.88</text>
+      <text x="342" y="186">security-deposit-recovery</text><rect x="500" y="176" width="80" height="12" rx="6" fill="#2b3040"/><rect x="500" y="176" width="73" height="12" rx="6" fill="url(#g)"/><text x="590" y="186" fill="#e7ebf0">.91</text>
+      <text x="342" y="210">lease-decoder</text><rect x="500" y="200" width="80" height="12" rx="6" fill="#2b3040"/><rect x="500" y="200" width="6" height="12" rx="6" fill="url(#g)"/><text x="590" y="210" fill="#e7ebf0">.07</text>
+      <text x="342" y="236" fill="#9aa3b2">confidence .83 → act · below threshold → ask the person</text>
+    </g>
+    <path d="M624 178 L670 178" stroke="#9aa3b2" stroke-width="2" marker-end="url(#ar)"/>
+    <!-- skill -->
+    <rect x="674" y="130" width="230" height="96" rx="14" fill="#1e2230" stroke="#2b3040"/>
+    <text x="789" y="160" text-anchor="middle" fill="#e7ebf0" font-weight="700">SKILL.md runs</text>
+    <text x="789" y="182" text-anchor="middle" fill="#c8ceda" font-size="12.5">framework · template · checks</text>
+    <text x="789" y="208" text-anchor="middle" fill="#9aa3b2" font-size="12">in Claude, ChatGPT, Gemini, Cursor…</text>
+    <path d="M906 178 L952 178" stroke="#9aa3b2" stroke-width="2" marker-end="url(#ar)"/>
+    <!-- artifact -->
+    <rect x="956" y="130" width="204" height="96" rx="14" fill="#1e2230" stroke="#2b3040"/>
+    <text x="1058" y="160" text-anchor="middle" fill="#e7ebf0" font-weight="700">the artifact</text>
+    <text x="1058" y="182" text-anchor="middle" fill="#c8ceda" font-size="12.5">demand letter · PRD · call</text>
+    <text x="1058" y="208" text-anchor="middle" fill="#9aa3b2" font-size="12">gated · judged · logged</text>
+  </g>
+  <!-- bottom chips -->
+  <g font-family="ui-sans-serif,system-ui" font-size="12.5" fill="#c8ceda">
+    <rect x="40" y="282" width="1120" height="1" fill="#2b3040"/>
+    <text x="600" y="312" text-anchor="middle">same typed questions, everywhere it matters →</text>
+    <g fill="#e7ebf0" font-weight="600">
+      <text x="120" y="340" text-anchor="middle">input guard</text><text x="290" y="340" text-anchor="middle">crisis router</text><text x="460" y="340" text-anchor="middle">risk tiers</text><text x="620" y="340" text-anchor="middle">journey gates</text><text x="790" y="340" text-anchor="middle">typed eval judge</text><text x="960" y="340" text-anchor="middle">hire · ship · renew · escalate</text><text x="1120" y="340" text-anchor="middle">/route</text>
+    </g>
+  </g>
+</svg>

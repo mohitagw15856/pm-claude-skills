@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1174 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1178 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -374,6 +374,7 @@
 | Epic Progress Report | `pm-delivery` | `pm-delivery/epic-progress-report/GEM_INSTRUCTIONS.md` |
 | Error Decoder | `pm-engineering` | `pm-engineering/error-decoder/GEM_INSTRUCTIONS.md` |
 | Error Message Writer | `pm-uxwriting` | `pm-uxwriting/error-message-writer/GEM_INSTRUCTIONS.md` |
+| Escalate or Hold | `pm-decisions` | `pm-decisions/escalate-or-hold/GEM_INSTRUCTIONS.md` |
 | Escalation Email | `pm-cowork` | `pm-cowork/escalation-email/GEM_INSTRUCTIONS.md` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/GEM_INSTRUCTIONS.md` |
 | ESG Disclosure Draft | `pm-climate` | `pm-climate/esg-disclosure-draft/GEM_INSTRUCTIONS.md` |
@@ -511,6 +512,7 @@
 | Help Center Article | `pm-support` | `pm-support/help-center-article/GEM_INSTRUCTIONS.md` |
 | Hidden-Fee Auditor | `pm-money` | `pm-money/hidden-fee-auditor/GEM_INSTRUCTIONS.md` |
 | HIPAA Safeguards | `pm-compliance` | `pm-compliance/hipaa-safeguards/GEM_INSTRUCTIONS.md` |
+| Hire or Pass | `pm-decisions` | `pm-decisions/hire-or-pass/GEM_INSTRUCTIONS.md` |
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/GEM_INSTRUCTIONS.md` |
 | HN Digest | `pm-live` | `pm-live/hn-digest/GEM_INSTRUCTIONS.md` |
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/GEM_INSTRUCTIONS.md` |
@@ -867,6 +869,7 @@
 | Relationship Check-In | `pm-family` | `pm-family/relationship-check-in/GEM_INSTRUCTIONS.md` |
 | Release Day Countdown | `pm-musician` | `pm-musician/release-day-countdown/GEM_INSTRUCTIONS.md` |
 | Relocation Planner | `pm-lifeadmin` | `pm-lifeadmin/relocation-planner/GEM_INSTRUCTIONS.md` |
+| Renew or Churn Call | `pm-decisions` | `pm-decisions/renew-or-churn-call/GEM_INSTRUCTIONS.md` |
 | Renewal Playbook | `pm-cs` | `pm-cs/renewal-playbook/GEM_INSTRUCTIONS.md` |
 | Renovation Scope & Budget | `pm-lifeadmin` | `pm-lifeadmin/renovation-scope-and-budget/GEM_INSTRUCTIONS.md` |
 | Rent Increase Response | `pm-renters` | `pm-renters/rent-increase-response/GEM_INSTRUCTIONS.md` |
@@ -951,6 +954,7 @@
 | Severance Agreement Decoder | `pm-layoff` | `pm-layoff/severance-agreement-decoder/GEM_INSTRUCTIONS.md` |
 | Shared Drive Cleanup | `pm-cowork` | `pm-cowork/shared-drive-cleanup/GEM_INSTRUCTIONS.md` |
 | Shift Schedule Builder | `pm-hospitality` | `pm-hospitality/shift-schedule-builder/GEM_INSTRUCTIONS.md` |
+| Ship or Slip | `pm-decisions` | `pm-decisions/ship-or-slip/GEM_INSTRUCTIONS.md` |
 | Short-Form Script | `pm-creator` | `pm-creator/short-form-script/GEM_INSTRUCTIONS.md` |
 | Should I Quit or Push | `pm-focus` | `pm-focus/should-i-quit-or-push/GEM_INSTRUCTIONS.md` |
 | Should I Send This | `pm-focus` | `pm-focus/should-i-send-this/GEM_INSTRUCTIONS.md` |

@@ -1,0 +1,32 @@
+name: Publish pm-skills-jev-picker to npm
+
+# Publishes the decision-layer router package (integrations/jev/). Manual dispatch only —
+# refresh the bundled catalogue first (node integrations/jev/build-index.mjs) and bump
+# integrations/jev/package.json. Reuses the NPM_TOKEN secret.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write   # npm provenance
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          registry-url: 'https://registry.npmjs.org'
+      - name: Freshness + self-test
+        run: |
+          node integrations/jev/build-index.mjs
+          git diff --exit-code -- integrations/jev/index.json || (echo "::error::index.json is stale — regenerate and commit before publishing." && exit 1)
+          node integrations/jev/client.mjs --selftest
+          node integrations/jev/route.mjs --selftest
+      - name: Publish (public, with provenance)
+        working-directory: integrations/jev
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

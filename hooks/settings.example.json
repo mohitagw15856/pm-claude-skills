@@ -1,5 +1,5 @@
 {
-  "_comment": "Example Claude Code hooks for PM Skills. Merge the `hooks` block into your ~/.claude/settings.json (or .claude/settings.json in a project). Replace /ABSOLUTE/PATH with where you cloned this repo. All hooks are best-effort and non-blocking; session-brief.sh is the only one that writes (an append-only ledger line) \u2014 remove it for a strictly read-only set. Docs: hooks/README.md",
+  "_comment": "Example Claude Code hooks for PM Skills. Merge the `hooks` block into your ~/.claude/settings.json (or .claude/settings.json in a project). Replace /ABSOLUTE/PATH with where you cloned this repo. All hooks are best-effort and non-blocking; session-brief.sh is the only one that writes (an append-only ledger line) \u2014 remove it for a strictly read-only set. Docs: hooks/README.md Swap suggest-skill.sh for suggest-skill-jev.sh to route with a typed decision model (needs JEV_API_KEY; falls back automatically).",
   "hooks": {
     "UserPromptSubmit": [
       {

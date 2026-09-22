@@ -20,3 +20,8 @@ The extension already lets people **insert** a skill into ChatGPT/Claude/Gemini.
 
 ## Adding a rule
 Copy an entry in `context-rules.json`. Keep `keywords` to distinctive phrases (`"security deposit"`, not `"deposit"`), `suggest` to real skill names (validate with `node scripts/skillcheck.mjs`), and `label` to one sentence that names the situation, not the product.
+
+## v2 — the model picks the situation (opt-in)
+`jev-suggest.js` adds an **opt-in** second path: when the user has saved a decision-model key in the extension's storage (`chrome.storage.local.jevApiKey`), the page's **title, host and first 500 words** are sent with one Choice question over the rule labels (plus `none`), and the model picks the situation with a probability. The rules in `context-rules.json` remain the zero-network default and the fallback; the `never` list is honoured before anything is read.
+
+Wiring (after step 5 above): `const jev = pmJevSuggest; const key = await jev.loadKey(chrome.storage.local); const pick = key ? await jev.pickSkillForPage({ rules, never, doc: document, host: location.hostname, apiKey: key }) : null;` — use `pick` if non-null, else the rule scorer. Add `jev-suggest.js` before `content.js` in the manifest's content script list, add an options field for the key, and **update `STORE.md`**: "with a key saved, page title + host + first 500 words are sent to the decision model; never on auth/banking pages; nothing stored." Node self-test: `node extension/jev-suggest.js --selftest`.

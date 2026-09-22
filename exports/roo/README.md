@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1174 skills exported. Copy a `.md rule` into the tool to use it.
+1178 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -374,6 +374,7 @@
 | Epic Progress Report | `pm-delivery` | `pm-delivery/epic-progress-report/epic-progress-report.md` |
 | Error Decoder | `pm-engineering` | `pm-engineering/error-decoder/error-decoder.md` |
 | Error Message Writer | `pm-uxwriting` | `pm-uxwriting/error-message-writer/error-message-writer.md` |
+| Escalate or Hold | `pm-decisions` | `pm-decisions/escalate-or-hold/escalate-or-hold.md` |
 | Escalation Email | `pm-cowork` | `pm-cowork/escalation-email/escalation-email.md` |
 | Escalation Tree | `pm-support` | `pm-support/escalation-tree/escalation-tree.md` |
 | ESG Disclosure Draft | `pm-climate` | `pm-climate/esg-disclosure-draft/esg-disclosure-draft.md` |
@@ -511,6 +512,7 @@
 | Help Center Article | `pm-support` | `pm-support/help-center-article/help-center-article.md` |
 | Hidden-Fee Auditor | `pm-money` | `pm-money/hidden-fee-auditor/hidden-fee-auditor.md` |
 | HIPAA Safeguards | `pm-compliance` | `pm-compliance/hipaa-safeguards/hipaa-safeguards.md` |
+| Hire or Pass | `pm-decisions` | `pm-decisions/hire-or-pass/hire-or-pass.md` |
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/hiring-rubric.md` |
 | HN Digest | `pm-live` | `pm-live/hn-digest/hn-digest.md` |
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/hoa-decoder.md` |
@@ -867,6 +869,7 @@
 | Relationship Check-In | `pm-family` | `pm-family/relationship-check-in/relationship-check-in.md` |
 | Release Day Countdown | `pm-musician` | `pm-musician/release-day-countdown/release-day-countdown.md` |
 | Relocation Planner | `pm-lifeadmin` | `pm-lifeadmin/relocation-planner/relocation-planner.md` |
+| Renew or Churn Call | `pm-decisions` | `pm-decisions/renew-or-churn-call/renew-or-churn-call.md` |
 | Renewal Playbook | `pm-cs` | `pm-cs/renewal-playbook/renewal-playbook.md` |
 | Renovation Scope & Budget | `pm-lifeadmin` | `pm-lifeadmin/renovation-scope-and-budget/renovation-scope-and-budget.md` |
 | Rent Increase Response | `pm-renters` | `pm-renters/rent-increase-response/rent-increase-response.md` |
@@ -951,6 +954,7 @@
 | Severance Agreement Decoder | `pm-layoff` | `pm-layoff/severance-agreement-decoder/severance-agreement-decoder.md` |
 | Shared Drive Cleanup | `pm-cowork` | `pm-cowork/shared-drive-cleanup/shared-drive-cleanup.md` |
 | Shift Schedule Builder | `pm-hospitality` | `pm-hospitality/shift-schedule-builder/shift-schedule-builder.md` |
+| Ship or Slip | `pm-decisions` | `pm-decisions/ship-or-slip/ship-or-slip.md` |
 | Short-Form Script | `pm-creator` | `pm-creator/short-form-script/short-form-script.md` |
 | Should I Quit or Push | `pm-focus` | `pm-focus/should-i-quit-or-push/should-i-quit-or-push.md` |
 | Should I Send This | `pm-focus` | `pm-focus/should-i-send-this/should-i-send-this.md` |

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Skill Router — replay your prompts, see the skill you should have used | PM Skills</title>
+<meta name="description" content="Paste your last prompts (or drop your Claude Code history) and see which professional skill each one routes to, with confidence and risk tier. Runs in your browser; the typed router is optional." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/router.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .r-wrap { max-width: 980px; margin: 0 auto; padding: 16px 22px 70px; }
+  .r-wrap h1 { font-size: 26px; margin-bottom: 4px; }
+  .lead { color: var(--muted); }
+  textarea { width: 100%; min-height: 150px; border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 12px; padding: 12px 14px; font: inherit; font-size: 14px; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 12px 0; }
+  .btn { border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 10px; padding: 9px 14px; cursor: pointer; font-size: 13.5px; }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .pill { font-size: 12px; border: 1px solid var(--border); border-radius: 999px; padding: 3px 10px; color: var(--muted); }
+  .pill.on { border-color: var(--accent); color: var(--text); }
+  table { width: 100%; border-collapse: collapse; margin-top: 14px; font-size: 13.5px; }
+  th, td { text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 12.5px; }
+  td.p { max-width: 380px; color: var(--muted); }
+  .bar { height: 8px; border-radius: 6px; background: var(--panel-2); overflow: hidden; min-width: 90px; }
+  .bar > i { display: block; height: 100%; background: var(--accent-grad, var(--accent)); }
+  .tier-high-stakes { color: #ff8a80; } .tier-consequential { color: #ffcc80; } .tier-informational { color: var(--muted); }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; margin-top: 16px; }
+  .stat { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 12px 14px; }
+  .stat b { display: block; font-size: 22px; } .stat span { color: var(--muted); font-size: 12.5px; }
+  .crumb { color: var(--muted); font-size: 12.5px; margin-top: 20px; }
+  a.sk { color: var(--text); font-weight: 600; }
+  input[type=file] { font-size: 13px; }
+  details { margin-top: 10px; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<div class="r-wrap">
+  <h1>🎯 Skill Router</h1>
+  <p class="lead">Paste the prompts you actually typed this week — one per line — and see which skill each one should have used. Everything runs in your browser. Turn on the typed router to replace keyword matching with one calibrated decision per prompt.</p>
+  <textarea id="prompts" placeholder="write the PRD for our referral feature&#10;my landlord kept my deposit&#10;should we ship friday or slip"></textarea>
+  <div class="row">
+    <button class="btn primary" id="run">Route them</button>
+    <label class="btn">Load Claude Code history <input type="file" id="hist" accept=".jsonl,.json,.txt" hidden></label>
+    <span class="pill" id="mode">keyword · local</span>
+    <span class="pill" id="count"></span>
+  </div>
+  <details><summary>Typed router (optional)</summary>
+    <p>Set the worker URL of a PM Skills MCP deployment with a <code>JEV_API_KEY</code> secret (see <a href="https://github.com/mohitagw15856/pm-claude-skills/tree/main/mcp-remote">mcp-remote</a>). Prompts are sent to that worker and to the decision model only when this is set; nothing is stored.</p>
+    <div class="row"><input id="worker" type="url" placeholder="https://pm-skills-mcp.…workers.dev" style="flex:1;min-width:260px;border:1px solid var(--border);background:var(--panel);color:var(--text);border-radius:10px;padding:8px 12px;font:inherit;font-size:13.5px"><button class="btn" id="probe">Check</button></div>
+  </details>
+  <div class="stats" id="stats" hidden></div>
+  <table id="out" hidden><thead><tr><th>Prompt</th><th>Skill</th><th>Confidence</th><th>Tier</th></tr></thead><tbody></tbody></table>
+  <p class="crumb">The same router runs as a <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/hooks/suggest-skill-jev.sh">Claude Code hook</a>, an <a href="https://github.com/mohitagw15856/pm-claude-skills/tree/main/integrations/jev">npm package</a>, and <code>POST /route</code> on the worker. Prefer to browse? <a href="find.html">describe your task</a> · <a href="catalog.html">the catalog</a>.</p>
+</div>
+<script src="nav.js" defer></script>
+<script>
+(async () => {
+  const $ = (s) => document.querySelector(s);
+  const idx = await fetch('skills-index.json').then((r) => r.json()).catch(() => ({ skills: [] }));
+  const SKILLS = (idx.skills || []).filter((s) => !s.deprecated);
+  let TIERS = {}; try { TIERS = (await fetch('risk-tiers.json').then((r) => r.ok ? r.json() : null))?.tiers || {}; } catch {}
+  $('#count').textContent = `${SKILLS.length} skills loaded`;
+  const STOP = new Set(['this','that','with','from','have','what','when','your','about','into','them','they','will','been','were','than','then','there','their','here','just','like','want','need','help','make','some','more','also','should','would','could','write','draft','create','please','give']);
+  const terms = (t) => [...new Set(t.toLowerCase().replace(/[^a-z0-9]+/g, ' ').split(' ').filter((w) => w.length > 3 && !STOP.has(w)))];
+  function keyword(prompt) {
+    const ts = terms(prompt); if (!ts.length) return null;
+    let best = null;
+    for (const s of SKILLS) { let sc = 0; const n = s.name, ti = (s.title || '').toLowerCase(), d = (s.description || '').toLowerCase(); for (const t of ts) { if (n.includes(t)) sc += 3; else if (ti.includes(t)) sc += 2; else if (d.includes(t)) sc += 1; } if (sc > 0 && (!best || sc > best.sc)) best = { sc, s }; }
+    return best ? { skill: best.s.name, confidence: null, method: 'keyword' } : null;
+  }
+  let WORKER = ''; try { WORKER = localStorage.getItem('pm-router-worker') || ''; } catch {}
+  $('#worker').value = WORKER;
+  async function probe() {
+    WORKER = $('#worker').value.trim().replace(/\/$/, '');
+    try { localStorage.setItem('pm-router-worker', WORKER); } catch {}
+    if (!WORKER) { $('#mode').textContent = 'keyword · local'; $('#mode').classList.remove('on'); return false; }
+    try { const j = await fetch(WORKER + '/route').then((r) => r.json()); const on = !!j.enabled; $('#mode').textContent = on ? 'typed router · live' : 'worker found · router off'; $('#mode').classList.toggle('on', on); return on; } catch { $('#mode').textContent = 'worker unreachable · keyword'; $('#mode').classList.remove('on'); return false; }
+  }
+  $('#probe').addEventListener('click', probe);
+  if (WORKER) probe();
+  async function routeOne(prompt, live) {
+    if (live) { try { const j = await fetch(WORKER + '/route', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ prompt }) }).then((r) => r.json()); if (j.skill) return { skill: j.skill, confidence: j.confidence, method: 'jev' }; } catch {} }
+    return keyword(prompt);
+  }
+  $('#hist').addEventListener('change', async (e) => {
+    const f = e.target.files[0]; if (!f) return; const text = await f.text(); const lines = [];
+    for (const l of text.split('\n')) { try { const j = JSON.parse(l); const p = j.display || j.prompt || j.text || (typeof j.message === 'string' ? j.message : ''); if (p) lines.push(String(p).replace(/\s+/g, ' ').slice(0, 300)); } catch { if (l.trim()) lines.push(l.trim().slice(0, 300)); } }
+    $('#prompts').value = lines.slice(-50).join('\n');
+  });
+  $('#run').addEventListener('click', async () => {
+    const list = $('#prompts').value.split('\n').map((l) => l.trim()).filter(Boolean).slice(0, 100);
+    if (!list.length) return;
+    const live = $('#mode').classList.contains('on');
+    const tb = $('#out tbody'); tb.innerHTML = ''; $('#out').hidden = false;
+    let routed = 0, high = 0; const seen = {};
+    for (const p of list) {
+      const r = await routeOne(p, live);
+      const tier = r ? (TIERS[r.skill]?.tier || '') : '';
+      if (r) { routed++; seen[r.skill] = (seen[r.skill] || 0) + 1; if (tier === 'high-stakes') high++; }
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td class="p"></td><td></td><td></td><td class="tier-${tier}"></td>`;
+      tr.children[0].textContent = p;
+      tr.children[1].innerHTML = r ? `<a class="sk" href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/${encodeURIComponent(r.skill)}/SKILL.md" target="_blank" rel="noopener"></a>` : '<span style="color:var(--muted)">no match</span>';
+      if (r) tr.children[1].firstChild.textContent = r.skill;
+      tr.children[2].innerHTML = r && r.confidence != null ? `<div class="bar" title="${r.confidence.toFixed(2)}"><i style="width:${Math.round(r.confidence * 100)}%"></i></div>` : (r ? '<span class="pill">keyword</span>' : '');
+      tr.children[3].textContent = tier;
+      tb.appendChild(tr);
+    }
+    const top = Object.entries(seen).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([s, n]) => `${s} ×${n}`).join(' · ') || '—';
+    $('#stats').hidden = false;
+    $('#stats').innerHTML = `<div class="stat"><b>${routed}/${list.length}</b><span>prompts with a matching skill</span></div><div class="stat"><b>${Object.keys(seen).length}</b><span>distinct skills you could be using</span></div><div class="stat"><b>${high}</b><span>high-stakes asks (keep the boundary)</span></div><div class="stat"><b style="font-size:14px">${top}</b><span>most-needed skills</span></div>`;
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "id": "escalate-or-hold",
+  "skill": "escalate-or-hold",
+  "question": "Should this issue be escalated now, held with a plan, or closed?",
+  "state_schema": {
+    "issue": "what happened, when first reported, current status",
+    "impact": "customers or revenue affected, SLA state, regulatory or safety angle",
+    "owner": "who has it, their capacity, last update time",
+    "trend": "getting worse, stable, or improving",
+    "prior_escalations": "has this been escalated before, and what happened",
+    "asks": "what the reporter is asking for"
+  },
+  "type": "choice",
+  "criteria": {
+    "escalate": "impact is growing or a commitment/SLA/safety line is crossed and the current owner cannot fix it in time — bring in the next level now",
+    "hold": "impact is bounded, the owner has a credible plan and a next update time — hold and re-check at that time",
+    "close": "resolved, a duplicate, or impact was misjudged — close with a note to the reporter"
+  },
+  "thresholds": { "minConfidence": 0.6, "minProbability": 0.7 },
+  "on_hold": "When escalate and hold are close, hold with a hard re-check time (hours, not days) and tell the reporter the time."
+}

@@ -22,6 +22,9 @@ They may request edits before signing off. The review is recorded in `config/hum
 
 A reviewed skill can show **"✔ Reviewed by [credential], [month year]"** on its page and in the Playground, sourced from the registry — never hand-typed. Reviewers are credited by name/credential (or "a licensed X" if they prefer anonymity) on a Reviewers section of the README.
 
+## Where to start
+[HUMAN-REVIEW-QUEUE.md](HUMAN-REVIEW-QUEUE.md) ranks the unreviewed high-stakes skills by realistic harm if the output is wrong (regenerate with `node scripts/human-review-queue.mjs --write`). Reviewers take the top of the list first.
+
 ## Who to recruit, for which bundles
 
 | Bundle(s) | Reviewer profile |
