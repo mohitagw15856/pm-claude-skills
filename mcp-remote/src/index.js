@@ -415,7 +415,18 @@ async function handleA2A(request) {
 // users are nudged to bring their own key (free Gemini or their own Claude).
 const TRY = { model: 'claude-haiku-4-5-20251001', maxTokens: 1200, perIpPerDay: 5, globalPerDay: 100, maxInputChars: 8000 };
 
-const ROUTE_CAP = { perIpPerDay: 400, globalPerDay: 5000 };   // adapter-backed /route only; Jev providers are uncapped
+const ROUTE_CAP = { perIpPerDay: 400, globalPerDay: 5000 };
+// Aggregate country counter for the profile's visitor map: one integer per ISO country
+// code, bumped on every free run and every route. No IPs, no timestamps, no bodies.
+async function bumpGeo(env, request) {
+  try { if (!env.TRY_KV) return; const cc = String((request.cf && request.cf.country) || 'ZZ').slice(0, 2).toUpperCase(); const k = `geo:${cc}`; const n = +((await env.TRY_KV.get(k)) || 0) + 1; await env.TRY_KV.put(k, String(n)); } catch {}
+}
+async function geoJson(env) {
+  if (!env.TRY_KV) return jsonResponse({ countries: {}, note: 'no kv' });
+  const out = {}; let cursor;
+  do { const page = await env.TRY_KV.list({ prefix: 'geo:', cursor }); for (const k of page.keys) out[k.name.slice(4)] = +((await env.TRY_KV.get(k.name)) || 0); cursor = page.list_complete ? null : page.cursor; } while (cursor);
+  return new Response(JSON.stringify({ countries: out, total: Object.values(out).reduce((a, b) => a + b, 0) }), { headers: { 'content-type': 'application/json', 'cache-control': 'public, s-maxage=600', ...CORS } });
+}   // adapter-backed /route only; Jev providers are uncapped
 function tryConfigured(env) { return !!(env && env.ANTHROPIC_API_KEY && env.TRY_KV && env.TRY_ENABLED !== 'false'); }
 // GET /try/stats — public runs-served counter (counts only, never content).
 // Default: shields.io endpoint JSON for a README badge; ?format=json for raw.
@@ -458,6 +469,7 @@ async function handleTry(request, env) {
     env.TRY_KV.put('try:total', String(total)),   // cumulative, never expires
   ]);
 
+  await bumpGeo(env, request);
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-api-key': env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01' },
@@ -663,6 +675,7 @@ export default {
         if (+(gN || 0) >= ROUTE_CAP.globalPerDay || +(ipN || 0) >= ROUTE_CAP.perIpPerDay) return jsonResponse({ error: 'cap', message: 'Router daily cap reached — the fallback model is sponsor-funded. Try tomorrow or run the keyword router in the playground.' }, 429);
         await Promise.all([env.TRY_KV.put(`route:ip:${day}:${ip}`, String(+(ipN || 0) + 1), { expirationTtl: 172800 }), env.TRY_KV.put(`route:global:${day}`, String(+(gN || 0) + 1), { expirationTtl: 172800 })]);
       }
+      await bumpGeo(env, request);
       try {
         const skills = await getSkills();
         const r = await routeSkill(env, rp, skills);
@@ -671,6 +684,7 @@ export default {
         return jsonResponse({ ...r, method: `jev-two-stage via ${via === 'adapter' ? `adapter:${prov?.model}` : via}`, jev: via !== 'adapter' });
       } catch (e) { return jsonResponse({ error: 'upstream', message: 'Router unavailable — try again.', detail: String(e && e.message || e).slice(0, 300) }, 502); }
     }
+    if (url.pathname === '/geo.json') return geoJson(env);
     if (url.pathname === '/route/badge') {
       const on = jevConfigured(env);
       return new Response(JSON.stringify({ schemaVersion: 1, label: 'skill router', message: on ? 'live · typed decisions' : 'off', color: on ? 'brightgreen' : 'lightgrey' }), { headers: { 'content-type': 'application/json', 'cache-control': 'public, s-maxage=3600', ...CORS } });
