@@ -5,10 +5,11 @@
 //   routeSkill(env, prompt, skills) — pack → skill, two Choice calls
 //   guardInput(env, text)         — injection + PII yes/no; fail-open
 // Provider order — first one present wins:
-//   1. env.AI  — Cloudflare Workers AI binding ([ai] binding = "AI" in wrangler.toml), model typesafe/jev.
-//                No key, no TypeSafe account; billed as Workers AI neurons (10k/day free).
-//   2. JEV_API_KEY secret — TypeSafe directly, or Vercel AI Gateway when the key starts with vck_
+//   1. JEV_API_KEY secret — TypeSafe directly, or Vercel AI Gateway when the key starts with vck_
 //                (base https://ai-gateway.vercel.sh/typesafe, model typesafe-ai/jev). JEV_BASE_URL / JEV_MODEL override.
+//   2. env.AI  — Cloudflare Workers AI binding ([ai] binding = "AI" in wrangler.toml), model typesafe/jev.
+//                No key, no TypeSafe account, but Jev is a third-party model there: it draws on prepaid
+//                AI Gateway credits (error 2021 "Insufficient AI Gateway credits" until topped up).
 // Force one with JEV_PROVIDER=workers-ai|typesafe|vercel.
 
 export function jevProvider(env) {
@@ -19,7 +20,7 @@ export function jevProvider(env) {
     ? { name: 'vercel', url: `${(env.JEV_BASE_URL || 'https://ai-gateway.vercel.sh/typesafe').replace(/\/$/, '')}/v1/systemone`, model: env.JEV_MODEL || 'typesafe-ai/jev', apiKey: env.JEV_API_KEY }
     : { name: 'typesafe', url: `${(env.JEV_BASE_URL || 'https://api.typesafe.ai').replace(/\/$/, '')}/v1/systemone`, model: env.JEV_MODEL || 'jev-latest', apiKey: env.JEV_API_KEY }) : null;
   if (forced === 'workers-ai') return ai; if (forced === 'typesafe' || forced === 'vercel') return key && key.name === forced ? key : null;
-  return ai || key;
+  return key || ai;
 }
 export function jevConfigured(env) { return jevProvider(env) !== null; }
 export function jevMethod(env) { const p = jevProvider(env); return p ? `jev-two-stage via ${p.name}` : 'off'; }

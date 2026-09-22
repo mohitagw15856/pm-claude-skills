@@ -8,6 +8,7 @@ name: Deploy MCP + REST Worker
 # One-time setup — add two repo secrets (Settings → Secrets and variables → Actions):
 #   CLOUDFLARE_API_TOKEN   a token with the "Edit Cloudflare Workers" permission
 #   CLOUDFLARE_ACCOUNT_ID  your Cloudflare account id
+#   JEV_API_KEY (optional) a Vercel AI Gateway vck_… or TypeSafe sk-… key → synced to the worker on deploy
 
 on:
   push:
@@ -27,6 +28,8 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    env:
+      JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
     steps:
       - uses: actions/checkout@v4
 
@@ -44,6 +47,22 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           workingDirectory: mcp-remote
           command: deploy
+
+      # Optional: a decision-model key for /route and the /try guard. Add a repo secret
+      # JEV_API_KEY (a Vercel AI Gateway vck_… key, or a TypeSafe sk-… key) and every
+      # deploy syncs it to the worker. Absent → the worker falls back to its Workers AI
+      # binding, which needs prepaid Cloudflare AI Gateway credits for this model.
+      - name: Sync JEV_API_KEY to the worker (if the repo secret exists)
+        if: env.JEV_API_KEY != ''
+        uses: cloudflare/wrangler-action@v3
+        env:
+          JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: mcp-remote
+          secrets: |
+            JEV_API_KEY
 
       - name: Smoke-test the live /v1 REST API
         run: |
