@@ -16,8 +16,8 @@ export const DEFAULT_ADAPTER_MODEL = 'claude-haiku-4-5';
 
 export const SYSTEM = `You are a calibrated decision engine. You do not write prose. You read a STATE and answer typed QUESTIONS with probabilities.
 Rules:
-- For a "choice" question, give a probability for EVERY option key (they must sum to 1). Read the option descriptions; pick by meaning, not by name.
-- For a "score" question, give a probability for every level index "0".."n-1" in the order the levels are listed (sum to 1).
+- For a "choice" question, read the option descriptions and pick by meaning, not by name. List only the options with probability ≥ 0.01 (at most 8 of them, summing to about 1); omitted options count as 0.
+- For a "score" question, give a probability for every level index "0".."n-1" in the order the levels are listed (sum to 1). Keys are the index strings, not the level text.
 - For a "noul" question, give one probability that the statement is true.
 - Be calibrated: spread probability when you are unsure, concentrate it when the answer is clear. Never output 1.0 unless it is certain.
 Output ONLY a JSON object: {"answers": {"<question id>": {"probabilities": {...}} | {"probability": p}}}. No markdown, no commentary.`;
@@ -62,7 +62,7 @@ export function adapterTransport({ apiKey, model = DEFAULT_ADAPTER_MODEL, fetchF
     for (let attempt = 0; attempt <= retries; attempt++) {
       const ctrl = new AbortController(); const t = setTimeout(() => ctrl.abort(), timeoutMs);
       try {
-        const res = await fetchFn(API_URL, { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' }, body: JSON.stringify({ model, max_tokens: 1024, system: [{ type: 'text', text: SYSTEM, cache_control: { type: 'ephemeral' } }], messages: [{ role: 'user', content: user }] }), signal: ctrl.signal });
+        const res = await fetchFn(API_URL, { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01' }, body: JSON.stringify({ model, max_tokens: 2048, system: [{ type: 'text', text: SYSTEM, cache_control: { type: 'ephemeral' } }], messages: [{ role: 'user', content: user }] }), signal: ctrl.signal });
         if (res.ok) {
           const data = await res.json();
           const text = (data.content || []).map((c) => c.text || '').join('');
