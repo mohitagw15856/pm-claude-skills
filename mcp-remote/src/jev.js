@@ -24,11 +24,13 @@ export function jevProvider(env) {
 export function jevConfigured(env) { return jevProvider(env) !== null; }
 export function jevMethod(env) { const p = jevProvider(env); return p ? `jev-two-stage via ${p.name}` : 'off'; }
 
-export async function jevAsk(env, state, questions, { timeoutMs = 3000 } = {}) {
+export async function jevAsk(env, state, questions, { timeoutMs = 8000 } = {}) {
   const p = jevProvider(env);
   if (!p) throw new Error('jev not configured');
   if (p.name === 'workers-ai') {
-    const data = await Promise.race([env.AI.run(p.model, { state, questions }), new Promise((_, rej) => setTimeout(() => rej(new Error('jev timeout')), timeoutMs))]);
+    let data;
+    try { data = await Promise.race([env.AI.run(p.model, { state, questions }), new Promise((_, rej) => setTimeout(() => rej(new Error('jev timeout')), timeoutMs))]); }
+    catch (e) { throw new Error(`workers-ai ${p.model}: ${String(e && e.message || e).slice(0, 200)}`); }
     const out = data && data.result && data.success !== undefined ? data.result : data;
     return (out && out.answers) || {};
   }

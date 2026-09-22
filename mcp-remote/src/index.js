@@ -658,7 +658,7 @@ export default {
         const skills = await getSkills();
         const r = await routeSkill(env, rp, skills);
         return jsonResponse({ ...r, method: jevMethod(env) });
-      } catch (e) { return jsonResponse({ error: 'upstream', message: 'Router unavailable — try again.' }, 502); }
+      } catch (e) { return jsonResponse({ error: 'upstream', message: 'Router unavailable — try again.', detail: String(e && e.message || e).slice(0, 300) }, 502); }
     }
     if (url.pathname === '/route/badge') {
       const on = jevConfigured(env);
