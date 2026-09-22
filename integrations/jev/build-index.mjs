@@ -11,5 +11,5 @@ const skills = src.skills.filter((s) => !s.deprecated).map(slim).map(({ descript
 let tiers = {};
 try { tiers = JSON.parse(readFileSync(join(HERE, '..', '..', 'data', 'risk-tiers.json'), 'utf8')).tiers || {}; } catch {}
 for (const s of skills) s.risk = tiers[s.name]?.tier || null;
-writeFileSync(join(HERE, 'index.json'), JSON.stringify({ generated: new Date().toISOString().slice(0, 10), count: skills.length, skills }));
+writeFileSync(join(HERE, 'index.json'), JSON.stringify({ count: skills.length, skills })); // no timestamp: the publish workflow diffs this file for freshness
 console.log(`integrations/jev/index.json — ${skills.length} skills`);
