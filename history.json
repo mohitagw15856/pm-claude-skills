@@ -473,5 +473,15 @@
   "npmSpecWeek": 5,
   "pypiMonth": 586,
   "skillPings": 85
+ },
+ {
+  "d": "2026-09-27",
+  "runs": 134,
+  "stars": 1406,
+  "npmWeek": 4249,
+  "npmToolsWeek": 2,
+  "npmSpecWeek": 5,
+  "pypiMonth": 586,
+  "skillPings": 91
  }
 ]
