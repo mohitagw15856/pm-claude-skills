@@ -1,6 +1,10 @@
 # Dependency updates. Grouped and monthly, so this produces a handful of pull
 # requests a month, not one per package. Security updates are raised by
 # GitHub as soon as they are known, whatever the schedule here says.
+#
+# Major versions are left out everywhere except GitHub Actions. Nothing in CI
+# builds or tests the integrations, the desktop app or the container against a
+# new major version, so those upgrades are made by hand, one at a time.
 version: 2
 
 updates:
@@ -29,6 +33,10 @@ updates:
         patterns: ['*']
 
   # The integrations and the desktop app that have dependencies of their own.
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+
   - package-ecosystem: npm
     directories:
       - /cockpit
@@ -48,6 +56,10 @@ updates:
         patterns: ['*']
 
   # The Python package.
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+
   - package-ecosystem: pip
     directory: /python
     schedule:
@@ -60,6 +72,10 @@ updates:
         patterns: ['*']
 
   # The desktop app's Rust side.
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+
   - package-ecosystem: cargo
     directory: /cockpit/src-tauri
     schedule:
@@ -72,6 +88,10 @@ updates:
         patterns: ['*']
 
   # The base image of the container.
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+
   - package-ecosystem: docker
     directory: /
     schedule:
@@ -79,3 +99,6 @@ updates:
     open-pull-requests-limit: 1
     commit-message:
       prefix: chore(deps)
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
