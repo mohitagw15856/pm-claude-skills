@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "announcement": {
+    "id": "mcp-command-package-form",
+    "level": "action",
+    "title": "The MCP install command changed",
+    "body": "If you registered the MCP server with the short command, it will not start. Register it again with: claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp",
+    "url": "https://github.com/mohitagw15856/pm-claude-skills/blob/main/mcp/README.md",
+    "from": "2026-09-28",
+    "until": "2026-11-30"
+  }
+}

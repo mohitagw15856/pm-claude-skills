@@ -6,6 +6,7 @@ import { readdirSync, existsSync, readFileSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { homedir } from 'node:os';
+import { readAnnouncement, formatAnnouncement } from './lib/announce.mjs';
 
 const PKG_ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const HOME = homedir();
@@ -54,6 +55,10 @@ export async function run() {
   const rx = []; // prescriptions: [severity 0=critical 1=important 2=nice, text]
 
   lines.push(`\x1b[1m🩺 pm-skills doctor\x1b[0m ${dim(`— read-only checkup · library has ${bundled.size} skills`)}\n`);
+
+  // ── 0. The current announcement, if one is active (read from the package) ──
+  const notice = readAnnouncement(PKG_ROOT);
+  if (notice) lines.push(`${formatAnnouncement(notice)}\n`);
 
   // ── 1. Skills installed per agent ─────────────────────────────────────────
   lines.push('\x1b[1mSkills\x1b[0m');
