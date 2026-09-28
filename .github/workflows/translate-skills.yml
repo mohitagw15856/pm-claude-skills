@@ -23,8 +23,8 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with: { node-version: '24' }
       - run: node scripts/translate-skills.mjs --check
 
@@ -32,8 +32,8 @@ jobs:
     if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with: { node-version: '24' }
       - name: Translate
         env:
@@ -44,7 +44,7 @@ jobs:
           node scripts/translate-skills.mjs --lang "${{ inputs.lang }}" $EXTRA
       # Insurance: paid API output must survive even if the push is rejected.
       - name: Upload translations as artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: i18n-${{ inputs.lang }}
           path: i18n/

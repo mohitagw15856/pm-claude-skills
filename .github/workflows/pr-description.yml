@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Check for API key and an empty PR body
         id: gate
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         with:
           script: |
             const hasKey = !!process.env.ANTHROPIC_API_KEY;
@@ -33,7 +33,7 @@ jobs:
 
       - name: Checkout
         if: steps.gate.outputs.go == 'true'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with: { fetch-depth: 0 }
 
       - name: Collect the diff
@@ -59,7 +59,7 @@ jobs:
 
       - name: Update the PR body
         if: steps.gate.outputs.go == 'true'
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           BODY: ${{ steps.skill.outputs.result }}
         with:
