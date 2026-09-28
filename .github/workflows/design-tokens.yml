@@ -1,0 +1,34 @@
+name: Design tokens
+
+# The design system document must match the stylesheet, and the number of
+# stray values in the stylesheet may only go down. See DESIGN.md.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/styles.css'
+      - 'design-system/**'
+      - 'scripts/check-design-tokens.mjs'
+      - '.github/workflows/design-tokens.yml'
+  pull_request:
+    paths:
+      - 'web/styles.css'
+      - 'design-system/**'
+      - 'scripts/check-design-tokens.mjs'
+      - '.github/workflows/design-tokens.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '24' }
+      - name: Selftest
+        run: node scripts/check-design-tokens.mjs --selftest
+      - name: Tokens match, counts have not gone up
+        run: node scripts/check-design-tokens.mjs

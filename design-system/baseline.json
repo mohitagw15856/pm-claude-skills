@@ -1,0 +1,10 @@
+{
+  "_comment": "Ratchet for web/styles.css. scripts/check-design-tokens.mjs fails if a count goes above these. Lower a number when you remove stray values; never raise one without a reason in the commit.",
+  "measured": "2026-09-28",
+  "counts": {
+    "rawColours": 22,
+    "fontSizes": 20,
+    "radii": 14,
+    "spacingValues": 26
+  }
+}
