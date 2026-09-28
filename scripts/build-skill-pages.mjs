@@ -302,7 +302,7 @@ function page(s) {
   <h2>Install</h2>
   <pre><code>npx pm-claude-skills add --agent claude   # or codex · cursor · gemini · hermes
 # or one-line MCP (every skill, any client):
-claude mcp add pm-skills -- npx -y pm-claude-skills-mcp</code></pre>
+claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp</code></pre>
 
   ${sample}
   ${relatedHtml}

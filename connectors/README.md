@@ -11,7 +11,7 @@ you copy-pasting context.
 
 **Claude Code** — one line each:
 ```bash
-claude mcp add pm-skills   -- npx -y pm-claude-skills-mcp
+claude mcp add pm-skills   -- npx -y -p pm-claude-skills pm-claude-skills-mcp
 claude mcp add filesystem  -- npx -y @modelcontextprotocol/server-filesystem /path/to/your/project
 claude mcp add github      -- npx -y @modelcontextprotocol/server-github      # set GITHUB_PERSONAL_ACCESS_TOKEN
 ```

@@ -71,14 +71,14 @@ even *act* without you running scripts. Add only what you want:
 | You want… | Add this MCP | Command |
 |---|---|---|
 | Claude to read/write the `brain/` files itself | **filesystem** | `claude mcp add filesystem -- npx -y @modelcontextprotocol/server-filesystem .` |
-| The skills + brain available in every session | **pm-skills** | `claude mcp add pm-skills -- npx -y pm-claude-skills-mcp` |
+| The skills + brain available in every session | **pm-skills** | `claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp` |
 | `action-runner` to actually open tickets / post | **GitHub** | `claude mcp add github -- npx -y @modelcontextprotocol/server-github` (set a token) |
 | …or 500+ apps (Jira, Slack, Notion, Linear) | **Composio** | see [connectors/composio.md](connectors/composio.md) |
 
 ### 👀 Worked example — the full hands-free loop
 One-time setup:
 ```bash
-claude mcp add pm-skills   -- npx -y pm-claude-skills-mcp
+claude mcp add pm-skills   -- npx -y -p pm-claude-skills pm-claude-skills-mcp
 claude mcp add filesystem  -- npx -y @modelcontextprotocol/server-filesystem .
 claude mcp add github      -- npx -y @modelcontextprotocol/server-github      # for actions
 ```

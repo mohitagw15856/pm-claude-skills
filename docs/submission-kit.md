@@ -51,7 +51,7 @@ Each entry below is paste-ready. Do them in any order; each takes 5-15 minutes.
 ### 1. PulseMCP (pulsemcp.com)
 Submit at pulsemcp.com → "Submit a server".
 - **Name:** PM Skills
-- **Server URL / package:** `npx -y pm-claude-skills-mcp` · hosted: `https://pm-skills-mcp.pm-claude-skills.workers.dev/`
+- **Server URL / package:** `npx -y -p pm-claude-skills pm-claude-skills-mcp` · hosted: `https://pm-skills-mcp.pm-claude-skills.workers.dev/`
 - **Description:** 454 professional Agent Skills (PRDs, launches, postmortems, negotiations, compliance…) as MCP tools: search_skills, get_skill, workflow recipes, and run_skill via MCP sampling — execute any skill with ZERO API key (your client's model does the work). Community registry + REST API included.
 - **Repo:** https://github.com/mohitagw15856/pm-claude-skills
 

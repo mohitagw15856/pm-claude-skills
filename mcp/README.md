@@ -5,7 +5,7 @@ A zero-dependency [Model Context Protocol](https://modelcontextprotocol.io) serv
 ## One-line install (Claude Code)
 
 ```bash
-claude mcp add pm-skills -- npx -y pm-claude-skills-mcp
+claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp
 ```
 
 That's it — all 174 skills and 5 workflow recipes are now available in every Claude Code session, on any project.
@@ -31,7 +31,7 @@ That's it — all 174 skills and 5 workflow recipes are now available in every C
   "mcpServers": {
     "pm-claude-skills": {
       "command": "npx",
-      "args": ["-y", "pm-claude-skills-mcp"]
+      "args": ["-y", "-p", "pm-claude-skills", "pm-claude-skills-mcp"]
     }
   }
 }

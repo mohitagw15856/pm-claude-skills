@@ -45,7 +45,7 @@ try {
     `  ${A('https://mohitagw15856.github.io/pm-claude-skills/')}`,
     '',
     `  ${B('Want them in every Claude session?')} Add the MCP server:`,
-    `  ${B('claude mcp add pm-skills -- npx -y pm-claude-skills-mcp')}`,
+    `  ${B('claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp')}`,
     '',
     D('  Tip: you can skip `npm install` entirely — `npx pm-claude-skills …` always runs the latest.'),
     '',

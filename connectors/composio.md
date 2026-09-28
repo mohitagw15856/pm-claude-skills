@@ -10,7 +10,7 @@ Pair `pm-skills` (the *structure* layer) with Composio (the *action* layer) and 
 
 1. **Add the `pm-skills` server** (structure layer — no auth):
    ```bash
-   claude mcp add pm-skills -- npx -y pm-claude-skills-mcp
+   claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp
    ```
 2. **Add Composio** (action layer) and authorize the apps you want. Composio handles each app's OAuth for you — you connect Gmail/Slack/Jira/etc. **once** in Composio, then the assistant can act through it. See [Composio's MCP docs](https://docs.composio.dev) for the current `mcp add` command and your hosted server URL; it looks like:
    ```bash

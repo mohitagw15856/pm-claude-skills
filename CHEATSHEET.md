@@ -59,7 +59,7 @@ Every **Production-Ready** skill ships `references/` (the judgment calls) + `tem
 |---|---|
 | **Claude Code** (skills + 4 agents + 21 commands + hooks) | `npx pm-claude-skills add --agent claude` |
 | **Cursor / Codex / Windsurf / 60+ agents** | `npx pm-claude-skills add --agent cursor` *(etc.)* |
-| **Any MCP client, on demand** | `claude mcp add pm-skills -- npx -y pm-claude-skills-mcp` |
+| **Any MCP client, on demand** | `claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp` |
 | **ChatGPT / Claude.ai connector (hosted)** | `https://pm-skills-mcp.pm-claude-skills.workers.dev/` |
 | **Python (LangChain / CrewAI)** | `pip install pm-skills` |
 | **Claude Code plugin marketplace** | `/plugin marketplace add mohitagw15856/pm-claude-skills` |

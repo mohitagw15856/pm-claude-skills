@@ -1,6 +1,6 @@
 # 🌐 Remote MCP server — add PM Skills to ChatGPT, Claude.ai & Cursor with a URL
 
-The local MCP server (`npx -y pm-claude-skills-mcp`) is great for Claude Code / Desktop. This
+The local MCP server (`npx -y -p pm-claude-skills pm-claude-skills-mcp`) is great for Claude Code / Desktop. This
 is its **hosted twin**: a tiny Cloudflare Worker that speaks MCP over **Streamable HTTP**, so
 anyone can add the whole skill library as a **URL connector** — no install, no Node.
 

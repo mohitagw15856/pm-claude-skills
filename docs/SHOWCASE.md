@@ -64,7 +64,7 @@
 |---|---|
 | **Just try it** (no install) | Open the **[Playground](https://mohitagw15856.github.io/pm-claude-skills/)** → pick a skill → run it in your browser. |
 | **Use it in Claude Code / Cursor / Codex** | `npx pm-claude-skills add --agent claude` &nbsp;*(or `cursor`, `codex`, `windsurf`…)* |
-| **Have it in every AI session** | `claude mcp add pm-skills -- npx -y pm-claude-skills-mcp` |
+| **Have it in every AI session** | `claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp` |
 
 *Not sure? Start with the Playground.* This is a **CLI, not a library** — you don't need `npm install`; `npx pm-claude-skills …` always runs the latest. Browse everything first with `npx pm-claude-skills list`.
 
@@ -544,7 +544,7 @@ npx pm-claude-skills add --agent claude     # or: codex · cursor · hermes · o
 **Or one-line MCP** — make all 1176 skills + 11 workflow recipes available in *every* session of any MCP client (Claude Code, Claude Desktop, Cursor, Windsurf), no per-file install:
 
 ```bash
-claude mcp add pm-skills -- npx -y pm-claude-skills-mcp
+claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp
 ```
 
 Your assistant can then *"search the skills for churn"* or *"run the ship-a-feature workflow"* on demand. Details: [mcp/README.md](../mcp/README.md).
@@ -610,7 +610,7 @@ The same 1176 skills reach you through every channel — pick whatever fits your
 | 📦 **npm** | `npx pm-claude-skills add --agent claude` (or codex · cursor · hermes · openclaw) |
 | 🔌 **`skills` CLI** | `npx skills add mohitagw15856/pm-claude-skills` (works across 60+ agents) |
 | 🐍 **Python / PyPI** | `pip install pm-skills` → `search_skills` / `get_skill` + **LangChain & CrewAI** tools |
-| 🧠 **MCP (local)** | `npx -y pm-claude-skills-mcp` — tools, **prompts & resources**. Listed in the [official MCP registry](https://github.com/mohitagw15856/pm-claude-skills/blob/main/server.json). |
+| 🧠 **MCP (local)** | `npx -y -p pm-claude-skills pm-claude-skills-mcp` — tools, **prompts & resources**. Listed in the [official MCP registry](https://github.com/mohitagw15856/pm-claude-skills/blob/main/server.json). |
 | ⚡ **MCP (hosted)** | Add **`https://pm-skills-mcp.pm-claude-skills.workers.dev/`** as a connector URL in **ChatGPT, Claude.ai, or Cursor** — no install. Also on **[Smithery](https://smithery.ai/servers/mohit15856/pm-skills)**. ([build your own](../mcp-remote/)) |
 | 🧩 **Browser extension** | A skill picker inside ChatGPT, Claude.ai & Gemini — [`extension/`](../extension/) |
 | 🚀 **Raycast / Alfred** | Search every skill from your launcher, then open, run, or install it — [`integrations/raycast/`](../integrations/raycast/) · [`integrations/alfred/`](../integrations/alfred/) |
@@ -652,7 +652,7 @@ body as a system prompt — for those we ship ready-made [exports](#ready-to-use
 | **OpenAI Codex · OpenClaw** | Native `SKILL.md`. One-line install (see [below](#one-line-install-for-coding-agents)) or `./scripts/install.sh --agent codex`. OpenClaw also gets a [dressed export + ClawHub guide](../connectors/openclaw.md). | ✅ Yes |
 | **Cursor · Windsurf · Aider** | Generated rules (`.cursor/rules/`, `.windsurf/rules/`, `aider --read`). `npx pm-claude-skills add --agent cursor` (or windsurf / aider). | ⚙️ By description |
 | **Cline · Continue · Zed · Roo** | Generated rule files under [`exports/`](../exports/) (`.clinerules/`, Continue rules, Zed `.rules`, `.roo/rules/`). | ⚙️ By description |
-| **MCP clients** (Claude Desktop, Cline, …) | Run the [MCP server](../mcp/) — searches & pulls skills on demand via `npx -y pm-claude-skills-mcp`. Now also serves skills as MCP **prompts + resources**. | ✅ On demand |
+| **MCP clients** (Claude Desktop, Cline, …) | Run the [MCP server](../mcp/) — searches & pulls skills on demand via `npx -y -p pm-claude-skills pm-claude-skills-mcp`. Now also serves skills as MCP **prompts + resources**. | ✅ On demand |
 | **ChatGPT · Claude.ai · Cursor (remote MCP)** | Deploy the [remote connector](../mcp-remote/) and add **one URL** — no install. | ✅ On demand |
 | **Python agents** (LangChain, CrewAI, LlamaIndex) | [`pip install pm-skills`](../python/) → `search_skills` / `get_skill` / ready-made tool adapters. | ✅ On demand |
 | **Run on your own key** (Claude / OpenAI / Gemini / Ollama) | The [Playground](https://mohitagw15856.github.io/pm-claude-skills/) runs any skill live — pick a provider, paste a key (or point at local Ollama). | ▶ In browser |
@@ -765,7 +765,7 @@ For MCP clients (Claude Desktop, Cline, …), there's a zero-dependency [**MCP s
 ```json
 {
   "mcpServers": {
-    "pm-claude-skills": { "command": "npx", "args": ["-y", "pm-claude-skills-mcp"] }
+    "pm-claude-skills": { "command": "npx", "args": ["-y", "-p", "pm-claude-skills", "pm-claude-skills-mcp"] }
   }
 }
 ```

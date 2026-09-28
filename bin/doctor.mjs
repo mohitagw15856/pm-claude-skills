@@ -115,7 +115,7 @@ export async function run() {
   if (/pm-skills|pm-claude-skills/.test(mcpTxt)) lines.push(ok('pm-skills MCP server registered with Claude Code'));
   else {
     lines.push(warn('pm-skills MCP server not registered — agents can\'t search/fetch skills on demand'));
-    rx.push([1, 'Register the MCP server: \x1b[1mclaude mcp add pm-skills -- npx -y pm-claude-skills-mcp\x1b[0m (or use the hosted URL from the README in any MCP client)']);
+    rx.push([1, 'Register the MCP server: \x1b[1mclaude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp\x1b[0m (or use the hosted URL from the README in any MCP client)']);
   }
 
   // ── 4. The brain & workspace (current directory) ──────────────────────────

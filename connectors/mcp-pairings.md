@@ -45,7 +45,7 @@ The skills are reachable from every agent convention in the wild — pick whiche
 
 | Protocol | How |
 |---|---|
-| **MCP** (Claude Desktop/Code, Cursor, ChatGPT…) | `claude mcp add pm-skills -- npx -y pm-claude-skills-mcp`, or the hosted URL as a connector. Includes `run_skill` via **MCP sampling** (zero API key). |
+| **MCP** (Claude Desktop/Code, Cursor, ChatGPT…) | `claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp`, or the hosted URL as a connector. Includes `run_skill` via **MCP sampling** (zero API key). |
 | **A2A** (Google agent ecosystem) | Discovery card at `https://pm-skills-mcp.pm-claude-skills.workers.dev/.well-known/agent-card.json`; JSON-RPC `message/send` at `/a2a`. |
 | **AGENTS.md** (Codex, Jules, et al.) | `npx pm-claude-skills init` writes an AGENTS.md wiring the brain, the skills, and the arena artifacts for any agent that reads the convention. |
 | **Function calling** (OpenAI SDK, Vercel AI SDK, LangChain) | `npm i pm-skills-tools` — the library as typed tools with pick()/search(). |
