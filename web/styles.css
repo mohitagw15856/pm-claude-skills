@@ -493,7 +493,13 @@ input:focus, select:focus, textarea:focus { outline: none; box-shadow: 0 0 0 3px
 .compare-pane .output { padding: 12px 14px; }
 
 @media (max-width: 620px) {
-  .key-field input { width: 200px; }
+  /* The key row wraps and fills the width, so the page never scrolls sideways. */
+  .key-area { flex-wrap: wrap; width: 100%; }
+  .key-field { flex: 1 1 100%; min-width: 0; }
+  .key-field input { width: 100%; max-width: none; }
+  .key-area select { flex: 1 1 0; min-width: 0; }
+  /* Sections are flex items of body; let them shrink below their content width. */
+  .cmdbar { width: 100%; min-width: 0; }
   .brand-text h1 { font-size: 15px; }
   .gallery { grid-template-columns: 1fr; }
   .compare-grid { grid-template-columns: 1fr; }

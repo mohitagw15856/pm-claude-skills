@@ -96,7 +96,7 @@ const html = `<!DOCTYPE html>
 <nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
 <script src="i18n.js"></script>
 <script src="nav.js"></script>
-<div class="controls"><input id="q" type="search" placeholder="Filter ${skills.length} skills…" oninput="filter()" /></div>
+<div class="controls"><input id="q" type="search" aria-label="Filter skills" placeholder="Filter ${skills.length} skills…" oninput="filter()" /></div>
 <main id="main">
 ${sections}
   <p class="empty" id="empty" hidden>No skills match.</p>
