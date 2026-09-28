@@ -74,7 +74,9 @@ const runSkill = {
 
 module.exports = {
   version: require('./package.json').version,
-  platformVersion: '15.0.0',
+  // Read from the installed package, so the two can never disagree. Zapier
+  // rejects an app whose platformVersion differs from zapier-platform-core.
+  platformVersion: require('zapier-platform-core').version,
   searches: { [searchSkills.key]: searchSkills, [getSkill.key]: getSkill },
   creates: { [runSkill.key]: runSkill },
 };
