@@ -1,4 +1,4 @@
-# 🗂️ All 1170 Skills — full catalog
+# 🗂️ All 1176 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -723,7 +723,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (708 skills)
+## 🌍 Industries & Public Sector (714 skills)
 
 ### `other` — 22 skills
 
@@ -1120,6 +1120,17 @@
 | **Dental Recall & Reactivation** (`dental-recall-reactivation`) | Build a dental recall and reactivation system that brings lapsed patients back without nagging — the segments worth contacting, the message that… | — |
 | **Dental Referral Letter** (`dental-referral-letter`) | Write a dental referral letter a specialist can act on without ringing you back — the question you are actually asking, the findings and images… | — |
 | **Dental Treatment Plan Presentation** (`treatment-plan-presentation`) | Present a dental treatment plan the patient actually understands and accepts — sequenced by clinical priority, costed with their coverage applied… | — |
+
+### `pm-design-taste` — 6 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Emil Design Eng (pointer)** (`emil-design-eng-pointer`) | Point to Emil Kowalski's emil-design-eng skill and explain when to use it. | — |
+| **Frontend Design (pointer)** (`frontend-design-pointer`) | Point to Anthropic's frontend-design skill and explain when to use it. | — |
+| **Impeccable (pointer)** (`impeccable-pointer`) | Point to Paul Bakaus's Impeccable design skill and explain when to use it. | — |
+| **Playwright CLI (pointer)** (`playwright-cli-pointer`) | Point to Microsoft's playwright-cli and its skill, and explain when to use it. | — |
+| **UI Design Pipeline** (`ui-design-pipeline`) | Run a five-stage UI design pipeline (direction, system, motion, critique, verification) so the result does not look like generic AI output. | — |
+| **UI UX Pro Max (pointer)** (`ui-ux-pro-max-pointer`) | Point to the ui-ux-pro-max skill by nextlevelbuilder and explain when to use it. | — |
 
 ### `pm-devrel` — 7 skills
 
@@ -1870,4 +1881,4 @@
 
 ---
 
-_1170 skills across 134 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1176 skills across 135 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

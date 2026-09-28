@@ -1,11 +1,11 @@
-# 🧠 PM Skills — 1170 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
+# 🧠 PM Skills — 1176 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
 
 <p align="center">
   <a href="https://mohitagw15856.github.io/pm-claude-skills/">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="web/docs-assets/hero.svg">
       <source media="(prefers-color-scheme: light)" srcset="web/docs-assets/hero-light.svg">
-      <img src="web/docs-assets/hero.svg" width="100%" alt="PM Skills — 1170 professional skills your AI assistant can read. Plain markdown, works with Claude, ChatGPT, Gemini, Cursor, and Codex. MIT licensed." />
+      <img src="web/docs-assets/hero.svg" width="100%" alt="PM Skills — 1176 professional skills your AI assistant can read. Plain markdown, works with Claude, ChatGPT, Gemini, Cursor, and Codex. MIT licensed." />
     </picture>
   </a>
 </p>
@@ -30,14 +30,14 @@
 
 > **Your landlord kept your deposit. Your mom got a medical bill that makes no sense. You got laid off on a Tuesday. Someone you love died, and no one handed you the checklist.**
 >
-> Generic AI is a very confident intern. **PM Skills** is the senior colleague's notes — 1170 of them, one markdown file each, for the moments at work *and* in life where "it depends" is not an answer. *(PM stands for Professional, not just Product Management. Yes, we get asked.)*
+> Generic AI is a very confident intern. **PM Skills** is the senior colleague's notes — 1176 of them, one markdown file each, for the moments at work *and* in life where "it depends" is not an answer. *(PM stands for Professional, not just Product Management. Yes, we get asked.)*
 
 <!-- AEO Answer Capsule — 68 words -->
-PM Skills is an open-source library of 1170 Agent Skills — plain-markdown SKILL.md files that teach an AI assistant to do one professional task to a senior professional's standard, from writing a PRD to decoding a lease or running a blameless postmortem. Each skill bundles the framework, an output template, quality checks, and anti-patterns. It is MIT-licensed and works with Claude, ChatGPT, Gemini, Cursor, and Codex.
+PM Skills is an open-source library of 1176 Agent Skills — plain-markdown SKILL.md files that teach an AI assistant to do one professional task to a senior professional's standard, from writing a PRD to decoding a lease or running a blameless postmortem. Each skill bundles the framework, an output template, quality checks, and anti-patterns. It is MIT-licensed and works with Claude, ChatGPT, Gemini, Cursor, and Codex.
 <!-- End AEO Capsule -->
 
 <table align="center"><tr>
-<td align="center"><b>1170</b><br><sub>skills</sub></td>
+<td align="center"><b>1176</b><br><sub>skills</sub></td>
 <td align="center"><b>132</b><br><sub>bundles</sub></td>
 <td align="center"><b>35</b><br><sub>professions</sub></td>
 <td align="center"><b>12</b><br><sub>platforms</sub></td>
@@ -97,8 +97,8 @@ PM Skills is an open-source library of 1170 Agent Skills — plain-markdown SKIL
 <table>
 <tr>
 <td width="50%" align="center">
-<a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="web/docs-assets/demo-galaxy.webp" width="100%" alt="Galaxy 3D — fly through all 1170 skills as a glowing constellation you orbit and click into" /></a>
-<br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html">Galaxy 3D</a></b> — all 1170 skills as a constellation. The ones you've run burn brighter. Zero productivity value, 100% recommended.</sub>
+<a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="web/docs-assets/demo-galaxy.webp" width="100%" alt="Galaxy 3D — fly through all 1176 skills as a glowing constellation you orbit and click into" /></a>
+<br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html">Galaxy 3D</a></b> — all 1176 skills as a constellation. The ones you've run burn brighter. Zero productivity value, 100% recommended.</sub>
 </td>
 <td width="50%" align="center">
 <a href="https://mohitagw15856.github.io/pm-claude-skills/wrapped.html"><img src="web/docs-assets/demo-holo.webp" width="100%" alt="PM Skills Wrapped — your practice turned into a shareable, Spotify-Wrapped-style story" /></a>
@@ -106,6 +106,33 @@ PM Skills is an open-source library of 1170 Agent Skills — plain-markdown SKIL
 </td>
 </tr>
 </table>
+
+## 🎨 New: design taste
+
+Ask an assistant for a landing page and you get the same one everybody gets. The **[pm-design-taste](plugins/pm-design-taste/)** bundle fixes the order of decisions instead of adding more rules: `ui-design-pipeline` runs five stages in sequence and hands each one to a specialist skill if you have it installed.
+
+| Stage | What happens | Hands off to | Pointer skill |
+|---|---|---|---|
+| 1. Direction | Commit to an aesthetic stance from audience and purpose, before any code | frontend-design (Anthropic) | [`frontend-design-pointer`](skills/frontend-design-pointer/SKILL.md) |
+| 2. System | Lock the direction into a persisted design system file so later pages do not drift | ui-ux-pro-max (nextlevelbuilder) | [`ui-ux-pro-max-pointer`](skills/ui-ux-pro-max-pointer/SKILL.md) |
+| 3. Motion | Enter animations ease out, most motion under 300ms, animate only where it helps | emil-design-eng (Emil Kowalski) | [`emil-design-eng-pointer`](skills/emil-design-eng-pointer/SKILL.md) |
+| 4. Critique | Hierarchy, spacing, typography, and "too safe vs too loud" | impeccable (Paul Bakaus) | [`impeccable-pointer`](skills/impeccable-pointer/SKILL.md) |
+| 5. Verification | Real browser, mobile and desktop widths, screenshot each step, fix and re-check | playwright-cli (Microsoft) | [`playwright-cli-pointer`](skills/playwright-cli-pointer/SKILL.md) |
+
+The orchestrator is [`ui-design-pipeline`](skills/ui-design-pipeline/SKILL.md). If a specialist skill is missing it uses its own built-in guidance and tells you the install command. It never loads all the design skills at once, because they give conflicting instructions.
+
+```
+/plugin install pm-design-taste@pm-claude-skills
+```
+
+Try it:
+
+- "Run the design pipeline on this landing page."
+- "This dashboard looks AI-generated. Fix it properly."
+- "Which design skills do I have installed, and what is missing for the pipeline?"
+- "Check the signup page in a real browser at mobile and desktop widths."
+
+The five specialist skills are third-party projects. Nothing of theirs is copied here: the pointers give the install command and credit the author. Authors, licences and links are in [`THIRD_PARTY.md`](plugins/pm-design-taste/THIRD_PARTY.md). More prompts in [`examples/pm-design-taste-example.md`](examples/pm-design-taste-example.md).
 
 ## ♻️ New: promote what you keep asking for
 
@@ -141,7 +168,7 @@ Then [`promoter-publish`](skills/promoter-publish/SKILL.md) prints the entire re
   <a href="docs/JEV-DECISION-LAYER.md"><picture><source media="(prefers-color-scheme: dark)" srcset="web/docs-assets/decision-layer.svg"><source media="(prefers-color-scheme: light)" srcset="web/docs-assets/decision-layer-light.svg"><img src="web/docs-assets/decision-layer.svg" width="100%" alt="The decision layer: a prompt goes in, a calibrated decision model picks the pack then the skill with probabilities, the skill runs, the artifact comes out — and the same typed questions guard inputs, gate journeys and judge evals" /></picture></a>
 </p>
 
-Some questions deserve a **number, not a paragraph**: *which of 1170 skills?* · *is this input safe?* · *escalate or hold?* · *does this output clear the bar?* The library now answers those with typed questions — defined options in, one answer with a probability per option out — served by [TypeSafe Jev](https://docs.typesafe.ai) where you have access, and by a labelled Claude-backed adapter where you don't. Every piece falls back honestly; nothing breaks without a key. **[The full map, all 20 pieces →](docs/JEV-DECISION-LAYER.md)**
+Some questions deserve a **number, not a paragraph**: *which of 1176 skills?* · *is this input safe?* · *escalate or hold?* · *does this output clear the bar?* The library now answers those with typed questions — defined options in, one answer with a probability per option out — served by [TypeSafe Jev](https://docs.typesafe.ai) where you have access, and by a labelled Claude-backed adapter where you don't. Every piece falls back honestly; nothing breaks without a key. **[The full map, all 20 pieces →](docs/JEV-DECISION-LAYER.md)**
 
 ```bash
 npm run route -- "my landlord kept my deposit"
@@ -168,7 +195,7 @@ Say it in your own words. The description does the routing:
 | 🛂 *"prep me for the visa interview"* → [the-visa-interview](skills/the-visa-interview/SKILL.md) | 🔨 *"is this contractor quote fair?"* → [home-contractor-quote-decoder](skills/home-contractor-quote-decoder/SKILL.md) | 🏡 *"should we rent or buy?"* → [rent-vs-buy](skills/rent-vs-buy/SKILL.md) |
 | 📝 *"draft my self-review honestly"* → [performance-review](skills/performance-review/SKILL.md) | 🚢 *"ship Friday or slip a week?"* → [ship-or-slip](skills/ship-or-slip/SKILL.md) | ♻️ *"what do I keep asking you for?"* → [promoter-scan](skills/promoter-scan/SKILL.md) |
 
-…all 1170 live in **[the catalog](SKILLS.md)**.
+…all 1176 live in **[the catalog](SKILLS.md)**.
 
 ## ⚡ Quick start
 
@@ -185,7 +212,7 @@ No `npm install` needed — `npx pm-claude-skills …` always runs the latest. P
 
 ## 📚 The skills
 
-Every skill follows the same discipline: what it produces, the inputs it needs, a real framework (severity scales, decision rules, not vibes), a concrete output template, quality checks, and anti-patterns. All 1170 pass the [SkillSpec](SKILLSPEC.md) L3 gate and a security audit in CI.
+Every skill follows the same discipline: what it produces, the inputs it needs, a real framework (severity scales, decision rules, not vibes), a concrete output template, quality checks, and anti-patterns. All 1176 pass the [SkillSpec](SKILLSPEC.md) L3 gate and a security audit in CI.
 
 <table align="center">
   <tr align="center">
@@ -211,9 +238,9 @@ Every skill follows the same discipline: what it produces, the inputs it needs, 
 </table>
 
 <p align="center">
-  <b><a href="SKILLS.md">Browse all 1170 →</a></b> ·
+  <b><a href="SKILLS.md">Browse all 1176 →</a></b> ·
   <b><a href="https://mohitagw15856.github.io/pm-claude-skills/">try one in your browser →</a></b> ·
-  <b><a href="plugins/">133 bundles →</a></b>
+  <b><a href="plugins/">134 bundles →</a></b>
 </p>
 
 <details>
@@ -262,7 +289,7 @@ Every skill follows the same discipline: what it produces, the inputs it needs, 
 | <img src="web/docs-assets/logos/pm-design.svg" width="20" alt=""/> [Design & UX](plugins/pm-design/) | <img src="web/docs-assets/logos/pm-legal.svg" width="20" alt=""/> [Legal](plugins/pm-legal/) | <img src="web/docs-assets/logos/pm-finance.svg" width="20" alt=""/> [Finance](plugins/pm-finance/) |
 | <img src="web/docs-assets/logos/pm-founders.svg" width="20" alt=""/> [Founders](plugins/pm-founders/) | <img src="web/docs-assets/logos/pm-security.svg" width="20" alt=""/> [Security](plugins/pm-security/) | <img src="web/docs-assets/logos/pm-gov.svg" width="20" alt=""/> [Government](plugins/pm-gov/) |
 
-…plus HR, sales, operations, research, healthcare, educators, writers, social media, and more — **[the full profession index](SKILLS.md)**, or by bundle in [`plugins/`](plugins/) (133 bundles). Install any bundle: `/plugin install pm-decoders@pm-skills`.
+…plus HR, sales, operations, research, healthcare, educators, writers, social media, and more — **[the full profession index](SKILLS.md)**, or by bundle in [`plugins/`](plugins/) (134 bundles). Install any bundle: `/plugin install pm-decoders@pm-skills`.
 
 ### Meta
 
@@ -349,18 +376,18 @@ Checks frontmatter, the `Use when …` trigger clause a model actually matches o
 
 ## 🆕 Latest
 
-**[v80.0.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)** — the promote loop: scan your transcripts for what you keep asking, draft it as a skill, test the triggers, publish. v79 added the decision layer. Everything else is in the **[changelog](CHANGELOG.md)**.
+**[v80.1.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)**: design taste, a five-stage UI pipeline (direction, system, motion, critique, verification) with pointers to five specialist design skills. v80.0.0 added the promote loop and v79 the decision layer. Everything else is in the **[changelog](CHANGELOG.md)**.
 
 ## ❓ Straight answers
 
 <details><summary><b>Is it actually free?</b></summary>
-Yes — MIT, all 1170 skills, forever. The skills are markdown; there is nothing to gate. Sponsors fund the playground's free model runs, not access.
+Yes — MIT, all 1176 skills, forever. The skills are markdown; there is nothing to gate. Sponsors fund the playground's free model runs, not access.
 </details>
 <details><summary><b>Do I need an API key?</b></summary>
 Not to browse, read, install, or use skills inside a tool you already have. The playground serves a few sponsor-funded free runs a day. A key only matters for optional extras: running skills from CI, or the typed decision layer (which falls back to keyword routing without one).
 </details>
-<details><summary><b>The catalog says 1170 but the folder has more. Which is it?</b></summary>
-Both. There are <b>1178</b> directories under <code>skills/</code>; <b>12</b> of them are <a href="docs/DEPRECATION.md">deprecated</a> (marked in their frontmatter, each pointing at the skill that replaced it). They stay on disk so an old install command or a bookmarked name never breaks, and they are hidden from the catalog, the playground and the headline count. 1170 is what a person can browse; 1178 is what an installer can resolve.
+<details><summary><b>The catalog says 1176 but the folder has more. Which is it?</b></summary>
+Both. There are <b>1178</b> directories under <code>skills/</code>; <b>12</b> of them are <a href="docs/DEPRECATION.md">deprecated</a> (marked in their frontmatter, each pointing at the skill that replaced it). They stay on disk so an old install command or a bookmarked name never breaks, and they are hidden from the catalog, the playground and the headline count. 1176 is what a person can browse; 1178 is what an installer can resolve.
 </details>
 <details><summary><b>I'm not a product manager. Is this for me?</b></summary>
 PM stands for <i>Professional</i> here. Most of the library is decoders for leases and medical bills, salary-negotiation practice, career-moment kits, life admin, and 35 professions from teaching to veterinary. The product-management corner is just where it started.
@@ -392,4 +419,4 @@ MIT — use them, fork them, ship them at work. Skills are judgment, and judgmen
 
 ---
 
-*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 1170 skills · 133 bundles · 35 professions · every commit gated. The long version — every feature, wave, and frontier bet — lives in the **[Showcase](docs/SHOWCASE.md)**.*
+*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 1176 skills · 134 bundles · 35 professions · every commit gated. The long version — every feature, wave, and frontier bet — lives in the **[Showcase](docs/SHOWCASE.md)**.*

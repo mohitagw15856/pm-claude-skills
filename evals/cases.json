@@ -1100,6 +1100,30 @@
   {
    "skill": "promoter-publish",
    "input": "Publish the skill release-notes-from-git-log into a new bundle pm-release as version 80.0.0. Give me the full release package: files, marketplace stanza, count changes, CHANGELOG entry, gates and git commands, and ask before pushing."
+  },
+  {
+   "skill": "ui-design-pipeline",
+   "input": "Design a pricing page for a bookkeeping tool aimed at UK sole traders. Run the full design pipeline: direction, system, motion, critique, verification. I have no design skills installed. Do not give me a purple gradient hero."
+  },
+  {
+   "skill": "frontend-design-pointer",
+   "input": "How do I install Anthropic's frontend-design skill, when should I use it, and what licence is it under?"
+  },
+  {
+   "skill": "ui-ux-pro-max-pointer",
+   "input": "I have picked a visual direction for my dashboard. Which skill can turn it into a design system saved to a file, how do I install it, and does it need anything on my machine?"
+  },
+  {
+   "skill": "emil-design-eng-pointer",
+   "input": "My modal and dropdown transitions feel sluggish. Which skill should I install for motion polish, what is the install command, and who wrote it?"
+  },
+  {
+   "skill": "impeccable-pointer",
+   "input": "I ran npx impeccable install. What do I run next, and when in the design pipeline should I use it?"
+  },
+  {
+   "skill": "playwright-cli-pointer",
+   "input": "Set me up to verify my signup page in a real browser at mobile and desktop widths with screenshots at each step. What do I install, and is there an audit I can run afterwards?"
   }
  ]
 }

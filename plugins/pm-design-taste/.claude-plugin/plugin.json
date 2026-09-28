@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-design-taste",
+  "version": "1.0.0",
+  "description": "The design taste pack: a five-stage UI pipeline (direction, system, motion, critique, verification) that stops generic AI-looking interfaces, plus pointers to five specialist design skills with install commands and author credit",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "design",
+    "ui",
+    "taste",
+    "frontend",
+    "motion",
+    "critique",
+    "verification"
+  ]
+}

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1182 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1188 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -363,6 +363,7 @@
 | Email Triage System | `pm-cowork` | `pm-cowork/email-triage-system/GEM_INSTRUCTIONS.md` |
 | Emergency Doc Kit | `pm-emergency` | `pm-emergency/emergency-doc-kit/GEM_INSTRUCTIONS.md` |
 | Emergency Fund | `pm-calculators` | `pm-calculators/emergency-fund/GEM_INSTRUCTIONS.md` |
+| Emil Design Eng (pointer) | `pm-design-taste` | `pm-design-taste/emil-design-eng-pointer/GEM_INSTRUCTIONS.md` |
 | Employee Engagement Survey | `pm-hr` | `pm-hr/employee-engagement-survey/GEM_INSTRUCTIONS.md` |
 | Empty State Writer | `pm-uxwriting` | `pm-uxwriting/empty-state-writer/GEM_INSTRUCTIONS.md` |
 | End-of-Life Wishes Conversation | `pm-caregiving` | `pm-caregiving/end-of-life-wishes-conversation/GEM_INSTRUCTIONS.md` |
@@ -473,6 +474,7 @@
 | Freight Rate Quote | `pm-fleet` | `pm-fleet/freight-rate-quote/GEM_INSTRUCTIONS.md` |
 | From First Principles | `pm-thinking` | `pm-thinking/from-first-principles/GEM_INSTRUCTIONS.md` |
 | Frontend Design | `pm-design` | `pm-design/frontend-design/GEM_INSTRUCTIONS.md` |
+| Frontend Design (pointer) | `pm-design-taste` | `pm-design-taste/frontend-design-pointer/GEM_INSTRUCTIONS.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/GEM_INSTRUCTIONS.md` |
 | Funeral Pricing Decoder | `pm-decoders` | `pm-decoders/funeral-pricing-decoder/GEM_INSTRUCTIONS.md` |
 | Future Self Interview | `other` | `other/future-self-interview/GEM_INSTRUCTIONS.md` |
@@ -541,6 +543,7 @@
 | IEP Goal Writer | `pm-teaching` | `pm-teaching/iep-goal-writer/GEM_INSTRUCTIONS.md` |
 | Immigration Document Checklist | `pm-personal` | `pm-personal/immigration-document-checklist/GEM_INSTRUCTIONS.md` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/GEM_INSTRUCTIONS.md` |
+| Impeccable (pointer) | `pm-design-taste` | `pm-design-taste/impeccable-pointer/GEM_INSTRUCTIONS.md` |
 | In-Law Boundary Scripts | `pm-family` | `pm-family/in-law-boundary-scripts/GEM_INSTRUCTIONS.md` |
 | Inbox Triage (Live) | `pm-cowork-live` | `pm-cowork-live/inbox-triage-live/GEM_INSTRUCTIONS.md` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `pm-cowork/inbox-unsubscribe-purge/GEM_INSTRUCTIONS.md` |
@@ -765,6 +768,7 @@
 | Plain Language Rewrite | `pm-cowork` | `pm-cowork/plain-language-rewrite/GEM_INSTRUCTIONS.md` |
 | Plan My Day | `pm-rituals` | `pm-rituals/plan-my-day/GEM_INSTRUCTIONS.md` |
 | Planning Application Statement | `pm-architecture` | `pm-architecture/planning-application-statement/GEM_INSTRUCTIONS.md` |
+| Playwright CLI (pointer) | `pm-design-taste` | `pm-design-taste/playwright-cli-pointer/GEM_INSTRUCTIONS.md` |
 | PM Weekly Review | `pm-rituals` | `pm-rituals/pm-weekly-review/GEM_INSTRUCTIONS.md` |
 | Poke Holes In This | `pm-thinking` | `pm-thinking/poke-holes-in-this/GEM_INSTRUCTIONS.md` |
 | Policy Drafter | `pm-cowork` | `pm-cowork/policy-drafter/GEM_INSTRUCTIONS.md` |
@@ -1124,6 +1128,8 @@
 | Trip Planner | `pm-personal` | `pm-personal/trip-planner/GEM_INSTRUCTIONS.md` |
 | TTRPG Session Forge | `pm-newgen` | `pm-newgen/ttrpg-session-forge/GEM_INSTRUCTIONS.md` |
 | Two Worlds Translator | `pm-identity` | `pm-identity/two-worlds-translator/GEM_INSTRUCTIONS.md` |
+| UI Design Pipeline | `pm-design-taste` | `pm-design-taste/ui-design-pipeline/GEM_INSTRUCTIONS.md` |
+| UI UX Pro Max (pointer) | `pm-design-taste` | `pm-design-taste/ui-ux-pro-max-pointer/GEM_INSTRUCTIONS.md` |
 | Unblock Protocol | `pm-cowork` | `pm-cowork/unblock-protocol/GEM_INSTRUCTIONS.md` |
 | Unclaimed-Money Tracer | `pm-money` | `pm-money/unclaimed-money-tracer/GEM_INSTRUCTIONS.md` |
 | Underwriting Narrative | `pm-insurance` | `pm-insurance/underwriting-narrative/GEM_INSTRUCTIONS.md` |

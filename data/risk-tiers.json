@@ -1,9 +1,9 @@
 {
- "generated": "2026-09-22",
+ "generated": "2026-09-28",
  "counts": {
   "consequential": 189,
   "high-stakes": 143,
-  "informational": 850
+  "informational": 856
  },
  "tiers": {
   "360-feedback-template": {
@@ -1430,6 +1430,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "emil-design-eng-pointer": {
+   "tier": "informational",
+   "via": "default"
+  },
   "employee-engagement-survey": {
    "tier": "consequential",
    "via": "bundle:pm-hr"
@@ -1870,6 +1874,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "frontend-design-pointer": {
+   "tier": "informational",
+   "via": "default"
+  },
   "fundraising-faq": {
    "tier": "informational",
    "via": "default"
@@ -2139,6 +2147,10 @@
    "via": "default"
   },
   "impact-report": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "impeccable-pointer": {
    "tier": "informational",
    "via": "default"
   },
@@ -3035,6 +3047,10 @@
    "via": "default"
   },
   "planning-application-statement": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "playwright-cli-pointer": {
    "tier": "informational",
    "via": "default"
   },
@@ -4473,6 +4489,14 @@
   "two-worlds-translator": {
    "tier": "high-stakes",
    "via": "bundle:pm-identity"
+  },
+  "ui-design-pipeline": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "ui-ux-pro-max-pointer": {
+   "tier": "informational",
+   "via": "default"
   },
   "unblock-protocol": {
    "tier": "informational",

@@ -200,6 +200,11 @@
       "a": "discharge-summary",
       "b": "physio-discharge-summary",
       "reason": "A hospital inpatient discharge summary vs closing an outpatient physiotherapy episode against the goals set at assessment."
+    },
+    {
+      "a": "frontend-design",
+      "b": "frontend-design-pointer",
+      "reason": "This library's own UI-building skill vs a pointer to Anthropic's separate upstream skill of the same name: install command, fit and attribution only, no design guidance."
     }
   ]
 }

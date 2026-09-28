@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1182 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1188 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -363,6 +363,7 @@
 | Email Triage System | `pm-cowork` | `pm-cowork/email-triage-system/SYSTEM_PROMPT.md` |
 | Emergency Doc Kit | `pm-emergency` | `pm-emergency/emergency-doc-kit/SYSTEM_PROMPT.md` |
 | Emergency Fund | `pm-calculators` | `pm-calculators/emergency-fund/SYSTEM_PROMPT.md` |
+| Emil Design Eng (pointer) | `pm-design-taste` | `pm-design-taste/emil-design-eng-pointer/SYSTEM_PROMPT.md` |
 | Employee Engagement Survey | `pm-hr` | `pm-hr/employee-engagement-survey/SYSTEM_PROMPT.md` |
 | Empty State Writer | `pm-uxwriting` | `pm-uxwriting/empty-state-writer/SYSTEM_PROMPT.md` |
 | End-of-Life Wishes Conversation | `pm-caregiving` | `pm-caregiving/end-of-life-wishes-conversation/SYSTEM_PROMPT.md` |
@@ -473,6 +474,7 @@
 | Freight Rate Quote | `pm-fleet` | `pm-fleet/freight-rate-quote/SYSTEM_PROMPT.md` |
 | From First Principles | `pm-thinking` | `pm-thinking/from-first-principles/SYSTEM_PROMPT.md` |
 | Frontend Design | `pm-design` | `pm-design/frontend-design/SYSTEM_PROMPT.md` |
+| Frontend Design (pointer) | `pm-design-taste` | `pm-design-taste/frontend-design-pointer/SYSTEM_PROMPT.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/SYSTEM_PROMPT.md` |
 | Funeral Pricing Decoder | `pm-decoders` | `pm-decoders/funeral-pricing-decoder/SYSTEM_PROMPT.md` |
 | Future Self Interview | `other` | `other/future-self-interview/SYSTEM_PROMPT.md` |
@@ -541,6 +543,7 @@
 | IEP Goal Writer | `pm-teaching` | `pm-teaching/iep-goal-writer/SYSTEM_PROMPT.md` |
 | Immigration Document Checklist | `pm-personal` | `pm-personal/immigration-document-checklist/SYSTEM_PROMPT.md` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/SYSTEM_PROMPT.md` |
+| Impeccable (pointer) | `pm-design-taste` | `pm-design-taste/impeccable-pointer/SYSTEM_PROMPT.md` |
 | In-Law Boundary Scripts | `pm-family` | `pm-family/in-law-boundary-scripts/SYSTEM_PROMPT.md` |
 | Inbox Triage (Live) | `pm-cowork-live` | `pm-cowork-live/inbox-triage-live/SYSTEM_PROMPT.md` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `pm-cowork/inbox-unsubscribe-purge/SYSTEM_PROMPT.md` |
@@ -765,6 +768,7 @@
 | Plain Language Rewrite | `pm-cowork` | `pm-cowork/plain-language-rewrite/SYSTEM_PROMPT.md` |
 | Plan My Day | `pm-rituals` | `pm-rituals/plan-my-day/SYSTEM_PROMPT.md` |
 | Planning Application Statement | `pm-architecture` | `pm-architecture/planning-application-statement/SYSTEM_PROMPT.md` |
+| Playwright CLI (pointer) | `pm-design-taste` | `pm-design-taste/playwright-cli-pointer/SYSTEM_PROMPT.md` |
 | PM Weekly Review | `pm-rituals` | `pm-rituals/pm-weekly-review/SYSTEM_PROMPT.md` |
 | Poke Holes In This | `pm-thinking` | `pm-thinking/poke-holes-in-this/SYSTEM_PROMPT.md` |
 | Policy Drafter | `pm-cowork` | `pm-cowork/policy-drafter/SYSTEM_PROMPT.md` |
@@ -1124,6 +1128,8 @@
 | Trip Planner | `pm-personal` | `pm-personal/trip-planner/SYSTEM_PROMPT.md` |
 | TTRPG Session Forge | `pm-newgen` | `pm-newgen/ttrpg-session-forge/SYSTEM_PROMPT.md` |
 | Two Worlds Translator | `pm-identity` | `pm-identity/two-worlds-translator/SYSTEM_PROMPT.md` |
+| UI Design Pipeline | `pm-design-taste` | `pm-design-taste/ui-design-pipeline/SYSTEM_PROMPT.md` |
+| UI UX Pro Max (pointer) | `pm-design-taste` | `pm-design-taste/ui-ux-pro-max-pointer/SYSTEM_PROMPT.md` |
 | Unblock Protocol | `pm-cowork` | `pm-cowork/unblock-protocol/SYSTEM_PROMPT.md` |
 | Unclaimed-Money Tracer | `pm-money` | `pm-money/unclaimed-money-tracer/SYSTEM_PROMPT.md` |
 | Underwriting Narrative | `pm-insurance` | `pm-insurance/underwriting-narrative/SYSTEM_PROMPT.md` |

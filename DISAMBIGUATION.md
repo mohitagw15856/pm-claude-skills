@@ -1,7 +1,7 @@
 # 🧭 Disambiguation — you want *this* one, not that one
 
 > **Generated — do not edit.** Run `node scripts/build-disambiguation.mjs`.
-> 1170 live skills across 133 bundles, plus 12 retired names that still resolve.
+> 1176 live skills across 134 bundles, plus 12 retired names that still resolve.
 
 At this size the hard part is not finding *a* skill — it is telling two similar ones apart, and
 knowing whether the thing you are about to write already exists under a different noun.
@@ -41,6 +41,7 @@ choosing between them.
 | Figma Design Brief / Figma Design QA | `figma-design-brief` | `figma-design-qa` | Briefing a design before it exists vs QA-ing one that does. |
 | Figma Design Critique — PM Perspective / Figma Design QA | `figma-design-critique-pm` | `figma-design-qa` | Product-outcome critique vs implementation-fidelity QA. |
 | Figma Design QA / Figma Design Review | `figma-design-qa` | `figma-design-review` | Spec-conformance QA vs holistic design review. |
+| Frontend Design / Frontend Design (pointer) | `frontend-design` | `frontend-design-pointer` | This library's own UI-building skill vs a pointer to Anthropic's separate upstream skill of the same name: install command, fit and attribution only, no design guidance. |
 | Go-To-Market / Go-to-Market Planner | `go-to-market` | `go-to-market-planner` | Assets vs plan: one writes the launch collateral, the other sequences the launch itself. |
 | Informational-Interview Prep / Interview Prep | `informational-interview-prep` | `interview-prep` | A career-advice chat you requested vs a job interview you are being assessed in. |
 | Insurance Claim / Insurance Claim Appeal | `insurance-claim` | `insurance-claim-appeal` | Adjacent stages: filing the claim vs fighting a denial, which needs the denial reason and different evidence. |

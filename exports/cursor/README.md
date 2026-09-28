@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1182 skills exported. Copy a `.mdc rule` into the tool to use it.
+1188 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -363,6 +363,7 @@
 | Email Triage System | `pm-cowork` | `pm-cowork/email-triage-system/email-triage-system.mdc` |
 | Emergency Doc Kit | `pm-emergency` | `pm-emergency/emergency-doc-kit/emergency-doc-kit.mdc` |
 | Emergency Fund | `pm-calculators` | `pm-calculators/emergency-fund/emergency-fund.mdc` |
+| Emil Design Eng (pointer) | `pm-design-taste` | `pm-design-taste/emil-design-eng-pointer/emil-design-eng-pointer.mdc` |
 | Employee Engagement Survey | `pm-hr` | `pm-hr/employee-engagement-survey/employee-engagement-survey.mdc` |
 | Empty State Writer | `pm-uxwriting` | `pm-uxwriting/empty-state-writer/empty-state-writer.mdc` |
 | End-of-Life Wishes Conversation | `pm-caregiving` | `pm-caregiving/end-of-life-wishes-conversation/end-of-life-wishes-conversation.mdc` |
@@ -473,6 +474,7 @@
 | Freight Rate Quote | `pm-fleet` | `pm-fleet/freight-rate-quote/freight-rate-quote.mdc` |
 | From First Principles | `pm-thinking` | `pm-thinking/from-first-principles/from-first-principles.mdc` |
 | Frontend Design | `pm-design` | `pm-design/frontend-design/frontend-design.mdc` |
+| Frontend Design (pointer) | `pm-design-taste` | `pm-design-taste/frontend-design-pointer/frontend-design-pointer.mdc` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/fundraising-faq.mdc` |
 | Funeral Pricing Decoder | `pm-decoders` | `pm-decoders/funeral-pricing-decoder/funeral-pricing-decoder.mdc` |
 | Future Self Interview | `other` | `other/future-self-interview/future-self-interview.mdc` |
@@ -541,6 +543,7 @@
 | IEP Goal Writer | `pm-teaching` | `pm-teaching/iep-goal-writer/iep-goal-writer.mdc` |
 | Immigration Document Checklist | `pm-personal` | `pm-personal/immigration-document-checklist/immigration-document-checklist.mdc` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/impact-report.mdc` |
+| Impeccable (pointer) | `pm-design-taste` | `pm-design-taste/impeccable-pointer/impeccable-pointer.mdc` |
 | In-Law Boundary Scripts | `pm-family` | `pm-family/in-law-boundary-scripts/in-law-boundary-scripts.mdc` |
 | Inbox Triage (Live) | `pm-cowork-live` | `pm-cowork-live/inbox-triage-live/inbox-triage-live.mdc` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `pm-cowork/inbox-unsubscribe-purge/inbox-unsubscribe-purge.mdc` |
@@ -765,6 +768,7 @@
 | Plain Language Rewrite | `pm-cowork` | `pm-cowork/plain-language-rewrite/plain-language-rewrite.mdc` |
 | Plan My Day | `pm-rituals` | `pm-rituals/plan-my-day/plan-my-day.mdc` |
 | Planning Application Statement | `pm-architecture` | `pm-architecture/planning-application-statement/planning-application-statement.mdc` |
+| Playwright CLI (pointer) | `pm-design-taste` | `pm-design-taste/playwright-cli-pointer/playwright-cli-pointer.mdc` |
 | PM Weekly Review | `pm-rituals` | `pm-rituals/pm-weekly-review/pm-weekly-review.mdc` |
 | Poke Holes In This | `pm-thinking` | `pm-thinking/poke-holes-in-this/poke-holes-in-this.mdc` |
 | Policy Drafter | `pm-cowork` | `pm-cowork/policy-drafter/policy-drafter.mdc` |
@@ -1124,6 +1128,8 @@
 | Trip Planner | `pm-personal` | `pm-personal/trip-planner/trip-planner.mdc` |
 | TTRPG Session Forge | `pm-newgen` | `pm-newgen/ttrpg-session-forge/ttrpg-session-forge.mdc` |
 | Two Worlds Translator | `pm-identity` | `pm-identity/two-worlds-translator/two-worlds-translator.mdc` |
+| UI Design Pipeline | `pm-design-taste` | `pm-design-taste/ui-design-pipeline/ui-design-pipeline.mdc` |
+| UI UX Pro Max (pointer) | `pm-design-taste` | `pm-design-taste/ui-ux-pro-max-pointer/ui-ux-pro-max-pointer.mdc` |
 | Unblock Protocol | `pm-cowork` | `pm-cowork/unblock-protocol/unblock-protocol.mdc` |
 | Unclaimed-Money Tracer | `pm-money` | `pm-money/unclaimed-money-tracer/unclaimed-money-tracer.mdc` |
 | Underwriting Narrative | `pm-insurance` | `pm-insurance/underwriting-narrative/underwriting-narrative.mdc` |

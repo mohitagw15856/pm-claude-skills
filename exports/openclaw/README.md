@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1182 skills exported. Copy a `SKILL.md` into the tool to use it.
+1188 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -363,6 +363,7 @@
 | Email Triage System | `pm-cowork` | `email-triage-system/SKILL.md` |
 | Emergency Doc Kit | `pm-emergency` | `emergency-doc-kit/SKILL.md` |
 | Emergency Fund | `pm-calculators` | `emergency-fund/SKILL.md` |
+| Emil Design Eng (pointer) | `pm-design-taste` | `emil-design-eng-pointer/SKILL.md` |
 | Employee Engagement Survey | `pm-hr` | `employee-engagement-survey/SKILL.md` |
 | Empty State Writer | `pm-uxwriting` | `empty-state-writer/SKILL.md` |
 | End-of-Life Wishes Conversation | `pm-caregiving` | `end-of-life-wishes-conversation/SKILL.md` |
@@ -473,6 +474,7 @@
 | Freight Rate Quote | `pm-fleet` | `freight-rate-quote/SKILL.md` |
 | From First Principles | `pm-thinking` | `from-first-principles/SKILL.md` |
 | Frontend Design | `pm-design` | `frontend-design/SKILL.md` |
+| Frontend Design (pointer) | `pm-design-taste` | `frontend-design-pointer/SKILL.md` |
 | Fundraising FAQ | `pm-founders` | `fundraising-faq/SKILL.md` |
 | Funeral Pricing Decoder | `pm-decoders` | `funeral-pricing-decoder/SKILL.md` |
 | Future Self Interview | `other` | `future-self-interview/SKILL.md` |
@@ -541,6 +543,7 @@
 | IEP Goal Writer | `pm-teaching` | `iep-goal-writer/SKILL.md` |
 | Immigration Document Checklist | `pm-personal` | `immigration-document-checklist/SKILL.md` |
 | Impact Report | `pm-nonprofit` | `impact-report/SKILL.md` |
+| Impeccable (pointer) | `pm-design-taste` | `impeccable-pointer/SKILL.md` |
 | In-Law Boundary Scripts | `pm-family` | `in-law-boundary-scripts/SKILL.md` |
 | Inbox Triage (Live) | `pm-cowork-live` | `inbox-triage-live/SKILL.md` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `inbox-unsubscribe-purge/SKILL.md` |
@@ -765,6 +768,7 @@
 | Plain Language Rewrite | `pm-cowork` | `plain-language-rewrite/SKILL.md` |
 | Plan My Day | `pm-rituals` | `plan-my-day/SKILL.md` |
 | Planning Application Statement | `pm-architecture` | `planning-application-statement/SKILL.md` |
+| Playwright CLI (pointer) | `pm-design-taste` | `playwright-cli-pointer/SKILL.md` |
 | PM Weekly Review | `pm-rituals` | `pm-weekly-review/SKILL.md` |
 | Poke Holes In This | `pm-thinking` | `poke-holes-in-this/SKILL.md` |
 | Policy Drafter | `pm-cowork` | `policy-drafter/SKILL.md` |
@@ -1124,6 +1128,8 @@
 | Trip Planner | `pm-personal` | `trip-planner/SKILL.md` |
 | TTRPG Session Forge | `pm-newgen` | `ttrpg-session-forge/SKILL.md` |
 | Two Worlds Translator | `pm-identity` | `two-worlds-translator/SKILL.md` |
+| UI Design Pipeline | `pm-design-taste` | `ui-design-pipeline/SKILL.md` |
+| UI UX Pro Max (pointer) | `pm-design-taste` | `ui-ux-pro-max-pointer/SKILL.md` |
 | Unblock Protocol | `pm-cowork` | `unblock-protocol/SKILL.md` |
 | Unclaimed-Money Tracer | `pm-money` | `unclaimed-money-tracer/SKILL.md` |
 | Underwriting Narrative | `pm-insurance` | `underwriting-narrative/SKILL.md` |

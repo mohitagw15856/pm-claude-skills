@@ -9,6 +9,26 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [80.1.0] - design taste - 2026-09-28
+
+**1176 skills · 134 bundles** (from 1170 · 133 at v80.0.0).
+
+### Added
+- **pm-design-taste** (6): stop assistants producing generic AI-looking interfaces by fixing the order of decisions. `ui-design-pipeline` is an original orchestrator that runs five stages in sequence, never in parallel: direction (commit to an aesthetic stance from audience and purpose before any code), system (lock it into a persisted design system file), motion (enter animations ease out, most motion under 300ms, animate only where it helps), critique (hierarchy, spacing, typography, too safe vs too loud) and verification (real browser, mobile and desktop widths, screenshot each step, fix and re-check). It detects which specialist skills are installed, hands off one per stage, falls back to built-in guidance with the install command when one is missing, and warns against loading every design skill at once. It carries a dated "current AI tells" checklist and says plainly that the list goes stale.
+- Five pointer skills, one per upstream project, with when to use it, the install command and author credit: `frontend-design-pointer` (Anthropic), `ui-ux-pro-max-pointer` (nextlevelbuilder), `emil-design-eng-pointer` (Emil Kowalski), `impeccable-pointer` (Paul Bakaus), `playwright-cli-pointer` (Microsoft, with Vercel's web-design-guidelines as an optional audit step). No upstream SKILL.md content is copied.
+- `plugins/pm-design-taste/THIRD_PARTY.md`: project, author, licence and link for each upstream, with the date checked.
+- `examples/pm-design-taste-example.md`: trigger prompts and output excerpts.
+- Six eval cases; the coverage baseline moves from 275 to 281.
+- README: a design taste section with the stage table and trigger prompts.
+
+### Changed
+- `skill-dupes-allow.json`: `frontend-design` and `frontend-design-pointer` declared as a deliberate pair (this library's own skill vs a pointer to Anthropic's skill of the same name).
+- `.claude-plugin/marketplace.json` description carries the current skill and bundle counts (it said 515 and 74).
+
+### Notes
+- Pointer skills end in `-pointer` so they never shadow the upstream skill of the same name once it is installed, and so the pipeline's detection step cannot mistake a pointer for the real thing.
+- Upstream changes found on 2026-09-28: `emilkowalski/skill` is now `emilkowalski/skills` and its README installs with `npx skills@latest add emilkowalski/skills`; `anthropics/skills` has no root licence, the `frontend-design` skill carries its own Apache 2.0 `LICENSE.txt`.
+
 ## [80.0.0] — the promote loop — 2026-09-22
 
 **1170 skills · 133 bundles** (from 1166 · 132 at v79).

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1182 skills exported. Copy a `.md rule` into the tool to use it.
+1188 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -363,6 +363,7 @@
 | Email Triage System | `pm-cowork` | `pm-cowork/email-triage-system/email-triage-system.md` |
 | Emergency Doc Kit | `pm-emergency` | `pm-emergency/emergency-doc-kit/emergency-doc-kit.md` |
 | Emergency Fund | `pm-calculators` | `pm-calculators/emergency-fund/emergency-fund.md` |
+| Emil Design Eng (pointer) | `pm-design-taste` | `pm-design-taste/emil-design-eng-pointer/emil-design-eng-pointer.md` |
 | Employee Engagement Survey | `pm-hr` | `pm-hr/employee-engagement-survey/employee-engagement-survey.md` |
 | Empty State Writer | `pm-uxwriting` | `pm-uxwriting/empty-state-writer/empty-state-writer.md` |
 | End-of-Life Wishes Conversation | `pm-caregiving` | `pm-caregiving/end-of-life-wishes-conversation/end-of-life-wishes-conversation.md` |
@@ -473,6 +474,7 @@
 | Freight Rate Quote | `pm-fleet` | `pm-fleet/freight-rate-quote/freight-rate-quote.md` |
 | From First Principles | `pm-thinking` | `pm-thinking/from-first-principles/from-first-principles.md` |
 | Frontend Design | `pm-design` | `pm-design/frontend-design/frontend-design.md` |
+| Frontend Design (pointer) | `pm-design-taste` | `pm-design-taste/frontend-design-pointer/frontend-design-pointer.md` |
 | Fundraising FAQ | `pm-founders` | `pm-founders/fundraising-faq/fundraising-faq.md` |
 | Funeral Pricing Decoder | `pm-decoders` | `pm-decoders/funeral-pricing-decoder/funeral-pricing-decoder.md` |
 | Future Self Interview | `other` | `other/future-self-interview/future-self-interview.md` |
@@ -541,6 +543,7 @@
 | IEP Goal Writer | `pm-teaching` | `pm-teaching/iep-goal-writer/iep-goal-writer.md` |
 | Immigration Document Checklist | `pm-personal` | `pm-personal/immigration-document-checklist/immigration-document-checklist.md` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/impact-report.md` |
+| Impeccable (pointer) | `pm-design-taste` | `pm-design-taste/impeccable-pointer/impeccable-pointer.md` |
 | In-Law Boundary Scripts | `pm-family` | `pm-family/in-law-boundary-scripts/in-law-boundary-scripts.md` |
 | Inbox Triage (Live) | `pm-cowork-live` | `pm-cowork-live/inbox-triage-live/inbox-triage-live.md` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `pm-cowork/inbox-unsubscribe-purge/inbox-unsubscribe-purge.md` |
@@ -765,6 +768,7 @@
 | Plain Language Rewrite | `pm-cowork` | `pm-cowork/plain-language-rewrite/plain-language-rewrite.md` |
 | Plan My Day | `pm-rituals` | `pm-rituals/plan-my-day/plan-my-day.md` |
 | Planning Application Statement | `pm-architecture` | `pm-architecture/planning-application-statement/planning-application-statement.md` |
+| Playwright CLI (pointer) | `pm-design-taste` | `pm-design-taste/playwright-cli-pointer/playwright-cli-pointer.md` |
 | PM Weekly Review | `pm-rituals` | `pm-rituals/pm-weekly-review/pm-weekly-review.md` |
 | Poke Holes In This | `pm-thinking` | `pm-thinking/poke-holes-in-this/poke-holes-in-this.md` |
 | Policy Drafter | `pm-cowork` | `pm-cowork/policy-drafter/policy-drafter.md` |
@@ -1124,6 +1128,8 @@
 | Trip Planner | `pm-personal` | `pm-personal/trip-planner/trip-planner.md` |
 | TTRPG Session Forge | `pm-newgen` | `pm-newgen/ttrpg-session-forge/ttrpg-session-forge.md` |
 | Two Worlds Translator | `pm-identity` | `pm-identity/two-worlds-translator/two-worlds-translator.md` |
+| UI Design Pipeline | `pm-design-taste` | `pm-design-taste/ui-design-pipeline/ui-design-pipeline.md` |
+| UI UX Pro Max (pointer) | `pm-design-taste` | `pm-design-taste/ui-ux-pro-max-pointer/ui-ux-pro-max-pointer.md` |
 | Unblock Protocol | `pm-cowork` | `pm-cowork/unblock-protocol/unblock-protocol.md` |
 | Unclaimed-Money Tracer | `pm-money` | `pm-money/unclaimed-money-tracer/unclaimed-money-tracer.md` |
 | Underwriting Narrative | `pm-insurance` | `pm-insurance/underwriting-narrative/underwriting-narrative.md` |
