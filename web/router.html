@@ -38,7 +38,7 @@
 <div class="r-wrap">
   <h1>🎯 Skill Router</h1>
   <p class="lead">Paste the prompts you actually typed this week — one per line — and see which skill each one should have used. Everything runs in your browser. Turn on the typed router to replace keyword matching with one calibrated decision per prompt.</p>
-  <textarea id="prompts" placeholder="write the PRD for our referral feature&#10;my landlord kept my deposit&#10;should we ship friday or slip"></textarea>
+  <textarea id="prompts" aria-label="Prompts to route, one per line" placeholder="write the PRD for our referral feature&#10;my landlord kept my deposit&#10;should we ship friday or slip"></textarea>
   <div class="row">
     <button class="btn primary" id="run">Route them</button>
     <label class="btn">Load Claude Code history <input type="file" id="hist" accept=".jsonl,.json,.txt" hidden></label>
@@ -47,7 +47,7 @@
   </div>
   <details><summary>Typed router (optional)</summary>
     <p>Set the worker URL of a PM Skills MCP deployment with a <code>JEV_API_KEY</code> secret (see <a href="https://github.com/mohitagw15856/pm-claude-skills/tree/main/mcp-remote">mcp-remote</a>). Prompts are sent to that worker and to the decision model only when this is set; nothing is stored.</p>
-    <div class="row"><input id="worker" type="url" placeholder="https://pm-skills-mcp.…workers.dev" style="flex:1;min-width:260px;border:1px solid var(--border);background:var(--panel);color:var(--text);border-radius:10px;padding:8px 12px;font:inherit;font-size:13.5px"><button class="btn" id="probe">Check</button></div>
+    <div class="row"><input id="worker" type="url" aria-label="Worker address of a PM Skills MCP deployment" placeholder="https://pm-skills-mcp.…workers.dev" style="flex:1;min-width:260px;border:1px solid var(--border);background:var(--panel);color:var(--text);border-radius:10px;padding:8px 12px;font:inherit;font-size:13.5px"><button class="btn" id="probe">Check</button></div>
   </details>
   <div class="stats" id="stats" hidden></div>
   <table id="out" hidden><thead><tr><th>Prompt</th><th>Skill</th><th>Confidence</th><th>Tier</th></tr></thead><tbody></tbody></table>

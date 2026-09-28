@@ -16,7 +16,9 @@ if (!existsSync(skillsJson)) {
   console.error('web/skills.json not found — run: node web/build-skills.mjs');
   process.exit(1);
 }
-const { skills } = JSON.parse(readFileSync(skillsJson, 'utf8'));
+// Live skills only. A deprecated skill still resolves for installs, but it is
+// hidden from the catalogue and is not part of the headline count.
+const skills = JSON.parse(readFileSync(skillsJson, 'utf8')).skills.filter((s) => !s.deprecated);
 
 const esc = (s) => String(s || '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const TIER = {
@@ -96,7 +98,7 @@ const html = `<!DOCTYPE html>
 <nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
 <script src="i18n.js"></script>
 <script src="nav.js"></script>
-<div class="controls"><input id="q" type="search" placeholder="Filter ${skills.length} skills…" oninput="filter()" /></div>
+<div class="controls"><input id="q" type="search" aria-label="Filter skills" placeholder="Filter ${skills.length} skills…" oninput="filter()" /></div>
 <main id="main">
 ${sections}
   <p class="empty" id="empty" hidden>No skills match.</p>
