@@ -5,6 +5,6 @@
   "description": "A ready-to-run Claude Agent SDK agent grounded in your pm-skills workspace: your brain, your skills, your standards.",
   "type": "module",
   "scripts": { "start": "node index.mjs" },
-  "dependencies": { "@anthropic-ai/claude-agent-sdk": "^0.1.0" },
+  "dependencies": { "@anthropic-ai/claude-agent-sdk": "^0.3.282" },
   "engines": { "node": ">=18" }
 }
