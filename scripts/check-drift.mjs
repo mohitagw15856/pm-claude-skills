@@ -47,7 +47,7 @@ for (const f of ['package.json', 'server.json']) {
 // (small tolerance for subset claims like "50 production skills").
 const LIVING = [
   'README.md', 'CHEATSHEET.md', 'PERSONAS.md', 'CONTRIBUTING.md', 'docs/SHOWCASE.md',
-  'REPO-MAP.md', 'QUICKSTART.md', 'AGENTS.md', 'TIERS.md', 'PACKS.md',
+  'REPO-MAP.md', 'QUICKSTART.md', 'AGENTS.md', 'TIERS.md', 'PACKS.md', 'ROADMAP.md',
   'docs/FOUNDATION.md', 'docs/print/README.md', 'training/README.md', 'training/MODEL_CARD.md',
   ...readdirSync(join(root, 'web')).filter((n) => n.endsWith('.html')).map((n) => `web/${n}`),
 ];
