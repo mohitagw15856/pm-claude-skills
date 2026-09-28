@@ -1,0 +1,50 @@
+name: Release verify
+
+# Proves that a release is actually installable. The publish workflows can go
+# green on GitHub while npm or PyPI stay on the previous version, and a
+# documented command can point at a package that is not ours. This installs the
+# published package in a clean directory and runs it.
+#
+# Fires on each release (waiting for the registries), once a day to catch a
+# release that was published by hand later, and from the Actions tab.
+
+on:
+  release:
+    types: [published]
+  schedule:
+    - cron: '30 9 * * *'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to verify (default: package.json)'
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-verify
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '24' }
+      - name: Selftest
+        run: node scripts/release-verify.mjs --selftest
+      - name: Verify the published release
+        env:
+          INPUT_VERSION: ${{ inputs.version }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          WAIT=0
+          if [ "$EVENT_NAME" = "release" ]; then WAIT=15; fi
+          if [ -n "$INPUT_VERSION" ]; then
+            node scripts/release-verify.mjs --version "$INPUT_VERSION" --wait "$WAIT"
+          else
+            node scripts/release-verify.mjs --wait "$WAIT"
+          fi
