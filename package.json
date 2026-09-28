@@ -65,6 +65,7 @@
     "new-bundle": "node scripts/new-bundle.mjs",
     "skillcheck": "node scripts/skillcheck.mjs",
     "skill-dupes": "node scripts/skill-dupes.mjs",
+    "skill-release": "node scripts/skill-release.mjs",
     "build:disambiguation": "node scripts/build-disambiguation.mjs",
     "build:exports": "node scripts/build-exports.mjs",
     "build:web": "node web/build-skills.mjs",

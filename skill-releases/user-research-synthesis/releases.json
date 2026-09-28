@@ -1,0 +1,10 @@
+[
+  {
+    "version": "1.0.0",
+    "releasedAt": "2026-09-28",
+    "notes": "First pinned release of a flagship skill",
+    "dir": "1.0.0",
+    "files": 4,
+    "sha256": "da5d4a87034a53d449afe7c7b728da2a599118ada24b02fa5752cb6de5955d68"
+  }
+]

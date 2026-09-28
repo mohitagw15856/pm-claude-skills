@@ -1,0 +1,32 @@
+name: Skill releases
+
+# A skill release is a frozen copy of one skill. This proves the frozen copies
+# have not been edited and that the release lists are in order.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skill-releases/**'
+      - 'scripts/skill-release.mjs'
+      - '.github/workflows/skill-releases.yml'
+  pull_request:
+    paths:
+      - 'skill-releases/**'
+      - 'scripts/skill-release.mjs'
+      - '.github/workflows/skill-releases.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '24' }
+      - name: Selftest
+        run: node scripts/skill-release.mjs --selftest
+      - name: Frozen copies untouched, lists in order
+        run: node scripts/skill-release.mjs --check
