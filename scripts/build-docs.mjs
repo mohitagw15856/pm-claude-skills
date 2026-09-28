@@ -16,7 +16,9 @@ if (!existsSync(skillsJson)) {
   console.error('web/skills.json not found — run: node web/build-skills.mjs');
   process.exit(1);
 }
-const { skills } = JSON.parse(readFileSync(skillsJson, 'utf8'));
+// Live skills only. A deprecated skill still resolves for installs, but it is
+// hidden from the catalogue and is not part of the headline count.
+const skills = JSON.parse(readFileSync(skillsJson, 'utf8')).skills.filter((s) => !s.deprecated);
 
 const esc = (s) => String(s || '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const TIER = {
