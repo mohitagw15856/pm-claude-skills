@@ -1,25 +1,33 @@
 {
-  "generatedAt": "2026-09-14T14:14:20.155Z",
+  "generatedAt": "2026-09-21T14:19:50.664Z",
   "window": "7d",
   "skills": [
     {
       "name": "meeting-notes",
-      "count": 2
+      "count": 6
     },
     {
-      "name": "workshop-facilitation-guide",
+      "name": "api-test-plan",
       "count": 1
     },
     {
-      "name": "language-learning-plan",
+      "name": "sql-query-explainer",
       "count": 1
     },
     {
-      "name": "executive-update",
+      "name": "dbt-model-spec",
       "count": 1
     },
     {
-      "name": "ai-feature-prd",
+      "name": "data-pipeline-spec",
+      "count": 1
+    },
+    {
+      "name": "technical-spec-template",
+      "count": 1
+    },
+    {
+      "name": "product-launch-checklist",
       "count": 1
     },
     {
