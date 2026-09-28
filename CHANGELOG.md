@@ -9,6 +9,13 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+### Changed
+- README restructured for a faster first read: a link row under the banner, eight badges in place of fourteen, a "How it works" table, a "right for you if" checklist, a compact "Works with" table in place of fifteen platform buttons, a "What PM Skills is not" section, a roadmap preview and a privacy and telemetry summary.
+- The three long "New" sections (design taste, the promote loop, the decision layer) moved in full to `docs/WHATS-NEW.md`; the README keeps a three-row summary.
+
+### Fixed
+- README stat table said 132 bundles (134) and the FAQ said 1178 skill directories (1188). Neither shape was covered by the drift check.
+
 ## [80.1.0] - design taste - 2026-09-28
 
 **1176 skills · 134 bundles** (from 1170 · 133 at v80.0.0).
