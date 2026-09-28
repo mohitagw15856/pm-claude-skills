@@ -1,0 +1,36 @@
+name: Announcement check
+
+# Validates announcements/current.json (the single current notice shown by
+# `doctor` and the playground) and that web/announcement.json is in step.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'announcements/**'
+      - 'web/announcement.json'
+      - 'bin/lib/announce.mjs'
+      - 'scripts/check-announcement.mjs'
+      - '.github/workflows/announcement-check.yml'
+  pull_request:
+    paths:
+      - 'announcements/**'
+      - 'web/announcement.json'
+      - 'bin/lib/announce.mjs'
+      - 'scripts/check-announcement.mjs'
+      - '.github/workflows/announcement-check.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '24' }
+      - name: Selftest
+        run: node scripts/check-announcement.mjs --selftest
+      - name: Validate the announcement and its web copy
+        run: node scripts/check-announcement.mjs --check
