@@ -123,11 +123,12 @@ PM Skills is an open-source library of 1176 Agent Skills — plain-markdown SKIL
 
 | Release | What it adds | Try saying | Read more |
 |---|---|---|---|
-| **[v80.1.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)** design taste | A five-stage UI pipeline (direction, system, motion, critique, verification) that stops generic AI-looking interfaces, with pointers to five specialist design skills | *"Run the design pipeline on this landing page."* | [pm-design-taste](plugins/pm-design-taste/) · [credits](plugins/pm-design-taste/THIRD_PARTY.md) |
+| **[v80.2.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)** trust in a release | The MCP install command fixed, a check that every release installs and runs, announcements in `doctor` and the playground, and frozen versions of the flagship skills that a team can pin | *"Run the doctor."* | [CHANGELOG.md](CHANGELOG.md) · [skill releases](docs/SKILL-RELEASES.md) |
+| **[v80.1.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v80.1.0)** design taste | A five-stage UI pipeline (direction, system, motion, critique, verification) that stops generic AI-looking interfaces, with pointers to five specialist design skills | *"Run the design pipeline on this landing page."* | [pm-design-taste](plugins/pm-design-taste/) · [credits](plugins/pm-design-taste/THIRD_PARTY.md) |
 | **v80.0.0** the promote loop | Scans your own transcripts for what you keep asking, drafts it as a skill, tests the triggers, publishes it | *"What do I keep asking you for?"* | [PROMOTE-LOOP.md](docs/PROMOTE-LOOP.md) |
 | **v79.0.0** the decision layer | Typed questions with a probability per option: which skill, is this input safe, ship or slip | *"Should we ship Friday?"* | [JEV-DECISION-LAYER.md](docs/JEV-DECISION-LAYER.md) |
 
-The full write-up of all three, with examples: **[docs/WHATS-NEW.md](docs/WHATS-NEW.md)**. Everything older: **[CHANGELOG.md](CHANGELOG.md)**.
+The full write-up of the three feature releases, with examples: **[docs/WHATS-NEW.md](docs/WHATS-NEW.md)**. Everything older: **[CHANGELOG.md](CHANGELOG.md)**.
 
 ## 💬 What can I ask it to do?
 
