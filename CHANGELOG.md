@@ -9,12 +9,31 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
-### Changed
-- README restructured for a faster first read: a link row under the banner, eight badges in place of fourteen, a "How it works" table, a "right for you if" checklist, a compact "Works with" table in place of fifteen platform buttons, a "What PM Skills is not" section, a roadmap preview and a privacy and telemetry summary.
-- The three long "New" sections (design taste, the promote loop, the decision layer) moved in full to `docs/WHATS-NEW.md`; the README keeps a three-row summary.
+## [80.2.0] - trust in a release - 2026-09-28
+
+**1176 skills · 134 bundles** (unchanged from v80.1.0). No new skills: this release is about being able to trust what is published.
 
 ### Fixed
+- **The documented MCP command did not work.** `npx -y pm-claude-skills-mcp` resolves an npm package of that name, which is a security holding package and not this library. The working form is `npx -y -p pm-claude-skills pm-claude-skills-mcp`. Corrected in 20 files, including the hints printed by `doctor` and the postinstall message. If you registered the server with the old command, register it again.
+- Zapier app: `platformVersion` is read from the installed `zapier-platform-core`. It was hard-coded, so any update to that package would have broken the push.
 - README stat table said 132 bundles (134) and the FAQ said 1178 skill directories (1188). Neither shape was covered by the drift check.
+- `ROADMAP.md` still said 1117 skills and listed paused work as upcoming. Rewritten from measured numbers and added to the drift check.
+
+### Added
+- **Release verify** (`npm run verify:release`, and a workflow on each release, daily, and on demand): checks that npm and PyPI carry the released versions, that the CLI runs from a clean directory, that the MCP server starts through `npx` and lists its tools, and that no living document shows the broken MCP command.
+- **Announcements**: `announcements/current.json` holds one current notice. `doctor` prints it from the package with no network call, and the playground shows a dismissible bar from a same-origin copy. Plain text only, `https` links only, and it expires by date. See `docs/ANNOUNCEMENTS.md`.
+- **Versioned skill releases** (`npm run skill-release`): frozen copies of a skill that a team can pin, with a hash for each. First releases, all 1.0.0: `prd-template`, `meeting-notes`, `stakeholder-update`, `user-research-synthesis`, `competitive-analysis`. See `docs/SKILL-RELEASES.md`.
+- **promptfoo evals** (`npm run evals:promptfoo`, `npm run evals:promptfoo:smoke`): the 281 curated eval cases, runnable against any provider. The smoke run needs no API key. See `evals/promptfoo/README.md`.
+- **`DESIGN.md` and `design-system/MASTER.md`**: the library's own design pipeline applied to the web pages, with a check (`npm run check:design`) that fails when the document and the stylesheet disagree or when the count of stray values goes up.
+- **Dependabot** for GitHub Actions, npm, pip, cargo and the container image: monthly, grouped, and without major versions except for Actions.
+- Pull request template: three gates at the top (searched for duplicates, checked the roadmap, declared dependencies).
+
+### Changed
+- README restructured for a faster first read: a link row under the banner, eight badges in place of fourteen, a "How it works" table, a "right for you if" checklist, a compact "Works with" table in place of fifteen platform buttons, a "What PM Skills is not" section, a roadmap preview and a privacy and telemetry summary.
+- The three long "New" sections (design taste, the promote loop, the decision layer) moved in full to `docs/WHATS-NEW.md`; the README keeps a short summary table.
+- The container runs on `node:24-alpine`. Node 20 has reached end of life.
+- GitHub Actions moved to their current major versions across all workflows.
+- Seasons are paused. Season 2 is recorded in the Hall as closed with no champion.
 
 ## [80.1.0] - design taste - 2026-09-28
 
