@@ -175,6 +175,8 @@ In your PR description, include:
 - Skills that just wrap a single simple prompt (a skill should have structure and logic)
 - Duplicate skills — check the existing skills list before submitting
 - Skills that require external API keys or services not everyone has access to (unless clearly documented)
+- Skills built around one named product, where the skill stops working if that product is not installed. Name the tool as one option among alternatives, and declare your relationship to it in the PR. The [vendor-neutrality gate](scripts/check-vendor-neutrality.mjs) checks this in CI
+- PRs that skip the three gates at the top of the [PR template](.github/PULL_REQUEST_TEMPLATE.md): searched first, checked the roadmap, declared dependencies
 
 ---
 
