@@ -15,7 +15,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Check for HF_TOKEN
         id: gate
         env:
@@ -27,7 +27,7 @@ jobs:
           else
             echo "enabled=true" >> "$GITHUB_OUTPUT"
           fi
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         if: steps.gate.outputs.enabled == 'true'
         with:
           node-version: '24'

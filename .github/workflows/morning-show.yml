@@ -22,8 +22,8 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: '24'
 
@@ -33,7 +33,7 @@ jobs:
       # Direct pushes to main are blocked by branch protection, so open a PR
       # (matching trending/skill-of-the-week). No-op when newsletter/ is unchanged.
       - name: Open a PR with this week's issue
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           add-paths: newsletter/
           branch: newsletter-weekly

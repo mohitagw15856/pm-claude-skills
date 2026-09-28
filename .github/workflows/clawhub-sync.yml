@@ -34,9 +34,9 @@ jobs:
       # Secrets can't be used in `if:` expressions, so map it to env and gate in shell.
       CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: '24'
 

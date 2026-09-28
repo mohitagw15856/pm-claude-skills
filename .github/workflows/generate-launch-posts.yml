@@ -29,8 +29,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: '24'
 
@@ -50,7 +50,7 @@ jobs:
 
       # main is protected (requires PRs), so open a PR instead of pushing directly.
       - name: Open a PR with the launch draft
-        uses: peter-evans/create-pull-request@v7
+        uses: peter-evans/create-pull-request@v8
         with:
           add-paths: docs/launch-drafts
           branch: launch-posts-draft

@@ -14,8 +14,8 @@ jobs:
       matrix: { os: [macos-latest, ubuntu-latest, windows-latest] }
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with: { node-version: '22' }
       - uses: dtolnay/rust-toolchain@stable
       - name: Linux deps
@@ -25,7 +25,7 @@ jobs:
         env:
           TAURI_SIGNING_PRIVATE_KEY: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY }}
           TAURI_SIGNING_PRIVATE_KEY_PASSWORD: ${{ secrets.TAURI_SIGNING_PRIVATE_KEY_PASSWORD }}
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: cockpit-${{ matrix.os }}
           path: |
@@ -40,7 +40,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@v8
         with: { path: dist, merge-multiple: true }
       - name: Compose updater manifest (cockpit-latest.json)
         run: |
@@ -66,6 +66,6 @@ jobs:
           }, null, 2));
           console.log('cockpit-latest.json:', Object.keys(platforms));
           JS
-      - uses: softprops/action-gh-release@v2
+      - uses: softprops/action-gh-release@v3
         with:
           files: dist/**/*

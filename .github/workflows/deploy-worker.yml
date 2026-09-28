@@ -31,7 +31,7 @@ jobs:
     env:
       JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Guard — secrets present
         run: |
@@ -41,7 +41,7 @@ jobs:
           fi
 
       - name: Deploy with Wrangler
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
@@ -54,7 +54,7 @@ jobs:
       # binding, which needs prepaid Cloudflare AI Gateway credits for this model.
       - name: Sync JEV_API_KEY to the worker (if the repo secret exists)
         if: env.JEV_API_KEY != ''
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v4
         env:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
         with:

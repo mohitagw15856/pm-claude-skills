@@ -15,8 +15,8 @@ jobs:
   smoke:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version: '24'
       - name: Install Playwright (chromium only)
@@ -29,8 +29,8 @@ jobs:
     # rather than waiting for the weekly Lighthouse pass. See web-budget.json.
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with: { node-version: '24' }
       - name: Build generated pages
         run: node web/build-skills.mjs
@@ -49,10 +49,10 @@ jobs:
         python: ['3.9', '3.11', '3.13']
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with: { node-version: '24' }
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with: { python-version: '${{ matrix.python }}' }
       - name: Executable-skills smoke (3 tiers)
         run: node tests/scripts-smoke.mjs
