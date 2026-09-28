@@ -1,0 +1,81 @@
+# Dependency updates. Grouped and monthly, so this produces a handful of pull
+# requests a month, not one per package. Security updates are raised by
+# GitHub as soon as they are known, whatever the schedule here says.
+version: 2
+
+updates:
+  # The actions every workflow runs. One grouped pull request.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: chore(deps)
+    groups:
+      actions:
+        patterns: ['*']
+
+  # The published npm package.
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: chore(deps)
+    groups:
+      npm-root:
+        patterns: ['*']
+
+  # The integrations and the desktop app that have dependencies of their own.
+  - package-ecosystem: npm
+    directories:
+      - /cockpit
+      - /integrations/email
+      - /integrations/raycast
+      - /integrations/slack-app
+      - /integrations/writeback
+      - /integrations/zapier
+      - /templates/apprentice
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 3
+    commit-message:
+      prefix: chore(deps)
+    groups:
+      npm-integrations:
+        patterns: ['*']
+
+  # The Python package.
+  - package-ecosystem: pip
+    directory: /python
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 2
+    commit-message:
+      prefix: chore(deps)
+    groups:
+      python:
+        patterns: ['*']
+
+  # The desktop app's Rust side.
+  - package-ecosystem: cargo
+    directory: /cockpit/src-tauri
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 2
+    commit-message:
+      prefix: chore(deps)
+    groups:
+      cargo:
+        patterns: ['*']
+
+  # The base image of the container.
+  - package-ecosystem: docker
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 1
+    commit-message:
+      prefix: chore(deps)
