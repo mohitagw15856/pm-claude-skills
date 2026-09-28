@@ -82,6 +82,8 @@
     "improve": "node scripts/improve-skill.mjs",
     "eval:gen-cases": "node scripts/gen-eval-cases.mjs",
     "eval:all": "node scripts/gen-eval-cases.mjs && node evals/run-evals.mjs --cases evals/cases.full.json --models claude-haiku-4-5-20251001 --judge claude-haiku-4-5-20251001",
+    "evals:promptfoo": "cd evals/promptfoo && PROMPTFOO_DISABLE_TELEMETRY=1 npx -y promptfoo@0.123.1 eval -c promptfooconfig.yaml",
+    "evals:promptfoo:smoke": "cd evals/promptfoo && PROMPTFOO_DISABLE_TELEMETRY=1 npx -y promptfoo@0.123.1 eval -c promptfooconfig.smoke.yaml --no-cache --no-write --no-progress-bar --no-table",
     "check:drift": "node scripts/check-drift.mjs",
     "lint:exports": "node tests/exports-lint.mjs",
     "check:weight": "node scripts/check-web-weight.mjs --check",

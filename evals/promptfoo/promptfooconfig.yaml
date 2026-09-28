@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+#
+# The library's curated eval cases, runnable with promptfoo against any
+# provider. Cases are read from ../cases.json at run time by tests.cjs.
+# See README.md in this folder.
+description: PM Skills curated eval cases
+
+prompts:
+  - file://prompts/skill-chat.cjs
+
+providers:
+  - id: anthropic:messages:claude-haiku-4-5-20251001
+    config:
+      max_tokens: 4096
+      temperature: 0
+
+tests: file://tests.cjs
+
+defaultTest:
+  assert:
+    - type: javascript
+      metric: not-empty
+      value: "String(output).trim().length >= 200"
+    - type: not-icontains
+      metric: no-placeholder
+      value: "[insert"
+    - type: not-icontains
+      metric: no-placeholder
+      value: "lorem ipsum"
+    - type: llm-rubric
+      metric: quality
+      value: |
+        You are a strict evaluator of a professional work artifact.
+        The artifact was produced by a skill whose job is: "{{description}}"
+        Pass the artifact only if all four of these hold:
+        1. Structure: it follows a clear, expected structure for this kind of output.
+        2. Completeness: it covers what the task needs, with nothing important missing.
+        3. Usefulness: it is specific and useful to a professional, not generic.
+        4. Grounding: it stays grounded in the given input, with no invented facts or metrics.
+        An artifact that asks for missing required inputs, without inventing them, passes on grounding.
