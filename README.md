@@ -150,7 +150,7 @@ Say it in your own words. The description does the routing:
 | **Install in Claude Code** | `/plugin` → search **pm-skills** *(official Anthropic directory)* — or `npx pm-claude-skills add --agent claude` |
 | **Install in Cursor / Codex / Windsurf / Cline…** | `npx pm-claude-skills add --agent cursor` *(or `codex`, `windsurf`, `aider`, `cline`, `zed`…)* |
 | **Use one skill in ChatGPT / Gemini** | copy from [`exports/chatgpt/`](exports/chatgpt/) or [`exports/gemini/`](exports/gemini/) and paste as instructions |
-| **Skills over MCP, in any session** | `claude mcp add pm-skills -- npx -y pm-claude-skills-mcp` |
+| **Skills over MCP, in any session** | `claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp` |
 | **Route a prompt to a skill** | `npm run route -- "board meeting on Thursday"` |
 
 No `npm install` needed — `npx pm-claude-skills …` always runs the latest. Per-tool instructions: **[docs/installation.md](docs/installation.md)**.

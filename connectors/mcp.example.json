@@ -3,7 +3,7 @@
   "mcpServers": {
     "pm-skills": {
       "command": "npx",
-      "args": ["-y", "pm-claude-skills-mcp"]
+      "args": ["-y", "-p", "pm-claude-skills", "pm-claude-skills-mcp"]
     },
     "filesystem": {
       "command": "npx",

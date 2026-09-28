@@ -150,7 +150,7 @@
     <tr><th>You use…</th><th>Command / how</th></tr>
     <tr><td>Claude Code</td><td><code>npx pm-claude-skills add --agent claude</code></td></tr>
     <tr><td>Cursor / Codex / 60+ agents</td><td><code>npx skills add mohitagw15856/pm-claude-skills</code></td></tr>
-    <tr><td>MCP (any client, on demand)</td><td><code>claude mcp add pm-skills -- npx -y pm-claude-skills-mcp</code></td></tr>
+    <tr><td>MCP (any client, on demand)</td><td><code>claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp</code></td></tr>
     <tr><td>ChatGPT / Claude.ai / Cursor (hosted)</td><td>add connector URL <code>pm-skills-mcp.pm-claude-skills.workers.dev</code></td></tr>
     <tr><td>Python (LangChain / CrewAI)</td><td><code>pip install pm-skills</code></td></tr>
     <tr><td>ChatGPT / Gemini (copy-paste)</td><td>paste an export from <code>exports/</code> into a Custom GPT / Gem</td></tr>
@@ -334,7 +334,7 @@ Competitors: BigCo (we win on time-to-value)</pre>
   <h3>On your real data (the big unlock)</h3>
   <p>A skill gives <i>structure</i>; a connector gives it <i>your facts</i>. Run the <code>pm-skills</code> MCP server alongside a data server (filesystem, GitHub, a database) and a skill acts on what that server exposes:</p>
   <pre><span class="c"># Claude Code: add both, once</span>
-claude mcp add pm-skills  -- npx -y pm-claude-skills-mcp
+claude mcp add pm-skills  -- npx -y -p pm-claude-skills pm-claude-skills-mcp
 claude mcp add github     -- npx -y @modelcontextprotocol/server-github
 
 <span class="c"># then just ask:</span>

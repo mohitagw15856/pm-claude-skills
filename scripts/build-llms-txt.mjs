@@ -21,7 +21,7 @@ const head =
   `> Open-source SKILL.md instruction files that teach any AI (Claude, ChatGPT, Gemini, local models) to produce professional-grade work — PRDs, launch plans, postmortems, rubrics, contracts, pitch decks and more — across 35 professions. ${skills.filter((s) => s.eval).length} are eval-scored (avg ~4.8/5). Run free in the browser, install via the \`skills\` CLI or \`npx pm-claude-skills\`, or connect over MCP.\n\n` +
   `## Use\n` +
   `- [Playground](${BASE}/): run any skill in your browser with your own Claude/OpenAI/Gemini/Ollama key\n` +
-  `- [MCP server](https://github.com/mohitagw15856/pm-claude-skills/tree/main/mcp): \`npx -y pm-claude-skills-mcp\` — search & fetch skills on demand\n` +
+  `- [MCP server](https://github.com/mohitagw15856/pm-claude-skills/tree/main/mcp): \`npx -y -p pm-claude-skills pm-claude-skills-mcp\` — search & fetch skills on demand\n` +
   `- [Catalog](${BASE}/catalog.html) · [Leaderboard](${BASE}/leaderboard.html) · [GitHub](https://github.com/mohitagw15856/pm-claude-skills)\n`;
 
 const index = [head];

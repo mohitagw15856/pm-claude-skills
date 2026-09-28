@@ -2,9 +2,9 @@
 // pm-claude-skills MCP server — exposes the skill library to any MCP client
 // (Claude Desktop, etc.) over stdio. Tools: list_skills, search_skills, get_skill.
 //
-// Run directly: node mcp/server.mjs   (or, once published: npx pm-claude-skills-mcp)
+// Run directly: node mcp/server.mjs   (or, once published: npx -y -p pm-claude-skills pm-claude-skills-mcp)
 // Configure in an MCP client, e.g. Claude Desktop claude_desktop_config.json:
-//   { "mcpServers": { "pm-claude-skills": { "command": "npx", "args": ["-y", "pm-claude-skills-mcp"] } } }
+//   { "mcpServers": { "pm-claude-skills": { "command": "npx", "args": ["-y", "-p", "pm-claude-skills", "pm-claude-skills-mcp"] } } }
 //
 // Pure Node standard library — no dependencies. Protocol: newline-delimited
 // JSON-RPC 2.0 (the MCP stdio transport). All logging goes to stderr so it

@@ -25,7 +25,7 @@ PM Skills is the **craft layer** for content creators: skills that teach an AI *
 ContentGoldMine's per-platform transformers are exactly the kind of structured instructions these skills encode. Instead of hand-maintaining prompts, you can have it pull them from this library's MCP server:
 
 ```bash
-claude mcp add pm-skills -- npx -y pm-claude-skills-mcp
+claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp
 ```
 
 Then a transformer fetches the relevant skill (`get_skill content-repurposer`, `get_skill short-form-script`, `get_skill newsletter-writer`) and applies it — so the app and the open library stay in sync. See [`../mcp/README.md`](../mcp/README.md).
