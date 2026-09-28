@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+#
+# Smoke run: no API key and no cost. The echo provider returns the prompt it
+# was given, which proves that every case loads and every prompt is built.
+# It says nothing about quality; use promptfooconfig.yaml for that.
+description: PM Skills eval cases, smoke run (no credentials)
+
+prompts:
+  - file://prompts/skill-chat.cjs
+
+providers:
+  - echo
+
+tests: file://tests.cjs
+
+defaultTest:
+  assert:
+    - type: javascript
+      metric: prompt-built
+      # promptfoo trims variables, so compare trimmed text.
+      value: |
+        let messages = output;
+        if (typeof output === 'string') {
+          try { messages = JSON.parse(output); } catch (e) { return false; }
+        }
+        const same = (a, b) => String(a).trim() === String(b).trim();
+        return Array.isArray(messages) && messages.length === 2 &&
+          messages[0].role === 'system' && same(messages[0].content, context.vars.skill_body) &&
+          messages[1].role === 'user' && same(messages[1].content, context.vars.input);

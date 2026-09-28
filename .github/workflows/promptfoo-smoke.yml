@@ -1,0 +1,40 @@
+name: promptfoo smoke
+
+# Proves the curated eval cases still load and build prompts under promptfoo.
+# Uses the echo provider: no API key, no cost.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'evals/cases.json'
+      - 'evals/promptfoo/**'
+      - '.github/workflows/promptfoo-smoke.yml'
+  pull_request:
+    paths:
+      - 'evals/cases.json'
+      - 'evals/promptfoo/**'
+      - '.github/workflows/promptfoo-smoke.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '24' }
+      - name: Loader selftest
+        run: node evals/promptfoo/tests.cjs --selftest
+      - name: Validate both configs
+        working-directory: evals/promptfoo
+        env: { PROMPTFOO_DISABLE_TELEMETRY: '1', PROMPTFOO_DISABLE_UPDATE: '1' }
+        run: |
+          npx -y promptfoo@0.123.1 validate -c promptfooconfig.yaml
+          npx -y promptfoo@0.123.1 validate -c promptfooconfig.smoke.yaml
+      - name: Smoke run, every case, echo provider
+        working-directory: evals/promptfoo
+        env: { PROMPTFOO_DISABLE_TELEMETRY: '1', PROMPTFOO_DISABLE_UPDATE: '1' }
+        run: npx -y promptfoo@0.123.1 eval -c promptfooconfig.smoke.yaml --no-cache --no-write --no-progress-bar --no-table
