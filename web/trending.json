@@ -1,37 +1,21 @@
 {
-  "generatedAt": "2026-09-21T14:19:50.664Z",
+  "generatedAt": "2026-09-28T15:37:55.532Z",
   "window": "7d",
   "skills": [
     {
       "name": "meeting-notes",
-      "count": 6
+      "count": 3
     },
     {
-      "name": "api-test-plan",
+      "name": "brief-builder",
       "count": 1
     },
     {
-      "name": "sql-query-explainer",
+      "name": "disaster-recovery-plan",
       "count": 1
     },
     {
-      "name": "dbt-model-spec",
-      "count": 1
-    },
-    {
-      "name": "data-pipeline-spec",
-      "count": 1
-    },
-    {
-      "name": "technical-spec-template",
-      "count": 1
-    },
-    {
-      "name": "product-launch-checklist",
-      "count": 1
-    },
-    {
-      "name": "prd-template",
+      "name": "content-repurposer",
       "count": 1
     }
   ]
