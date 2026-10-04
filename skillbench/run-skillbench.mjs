@@ -17,6 +17,9 @@
 // gemini-* → Google, and the Chinese providers through their OpenAI-compatible APIs:
 // deepseek-* (DEEPSEEK_API_KEY), qwen-* (DASHSCOPE_API_KEY), kimi-*/moonshot-*
 // (MOONSHOT_API_KEY), glm-* (ZHIPU_API_KEY), doubao-* (ARK_API_KEY). No dependencies.
+// Free routes, no top-up needed: modelscope:<org>/<model> uses ModelScope API-Inference's
+// daily free quota (MODELSCOPE_TOKEN), hf:<org>/<model> uses Hugging Face Inference
+// Providers' monthly free credits (HF_TOKEN). The prefix is stripped before the call.
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -43,6 +46,8 @@ const outPath = arg('out', join(__dirname, 'results.json'));
 // OpenAI-compatible endpoints, matched by model-id prefix: [pattern, base URL, key env var].
 // Same hosts as the playground's providers (web/providers.js).
 const COMPAT = [
+  [/^modelscope:/, process.env.MODELSCOPE_INFERENCE_URL || 'https://api-inference.modelscope.ai/v1', 'MODELSCOPE_TOKEN', 'modelscope:'],
+  [/^hf:/, 'https://router.huggingface.co/v1', 'HF_TOKEN', 'hf:'],
   [/^(gpt|o\d|chatgpt)/, process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1', 'OPENAI_API_KEY'],
   [/^deepseek/, 'https://api.deepseek.com', 'DEEPSEEK_API_KEY'],
   [/^qwen/, 'https://dashscope.aliyuncs.com/compatible-mode/v1', 'DASHSCOPE_API_KEY'],
@@ -54,7 +59,7 @@ function providerOf(model) {
   if (/^claude/.test(model)) return 'anthropic';
   if (COMPAT.some(([re]) => re.test(model))) return 'openai';
   if (/^gemini/.test(model)) return 'google';
-  throw new Error(`Cannot infer provider for "${model}" (expected claude-*, gpt-*, gemini-*, deepseek-*, qwen-*, kimi-*, glm-* or doubao-*).`);
+  throw new Error(`Cannot infer provider for "${model}" (expected claude-*, gpt-*, gemini-*, deepseek-*, qwen-*, kimi-*, glm-*, doubao-*, modelscope:* or hf:*).`);
 }
 async function complete({ model, system, user, maxTokens = 4096 }) {
   const prov = providerOf(model);
@@ -71,7 +76,7 @@ async function complete({ model, system, user, maxTokens = 4096 }) {
     return j.content?.[0]?.text || '';
   }
   if (prov === 'openai') {
-    const [, base, keyVar] = COMPAT.find(([re]) => re.test(model));
+    const [, base, keyVar, prefix = ''] = COMPAT.find(([re]) => re.test(model));
     const key = process.env[keyVar];
     if (!key) throw new Error(keyVar + ' not set (needed for ' + model + ')');
     const msgs = [];
@@ -80,7 +85,7 @@ async function complete({ model, system, user, maxTokens = 4096 }) {
     const res = await fetch(base.replace(/\/$/, '') + '/chat/completions', {
       method: 'POST',
       headers: { 'content-type': 'application/json', authorization: 'Bearer ' + key },
-      body: JSON.stringify({ model, max_tokens: maxTokens, messages: msgs }),
+      body: JSON.stringify({ model: model.slice(prefix.length), max_tokens: maxTokens, messages: msgs }),
     });
     const j = await res.json();
     if (!res.ok) throw new Error(`${model}: ${j.error?.message || res.status}`);

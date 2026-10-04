@@ -9,6 +9,9 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+### Added
+- **Free Chinese models**: the playground offers ModelScope (daily free quota) and Hugging Face (free monthly credits) for DeepSeek, Qwen, GLM, ERNIE, MiniMax and Kimi, each visitor with their own free token. The Chinese SkillBench runs on the same free routes (`modelscope:*`, `hf:*`) with the tokens the repo already has.
+
 ### Fixed
 - The Dify plugin package is served from the site at https://mohitagw15856.github.io/pm-claude-skills/dify/pm_skills.difypkg, since releases are immutable and cannot take assets after publishing.
 

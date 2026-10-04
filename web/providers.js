@@ -136,7 +136,31 @@
     url: 'https://ark.cn-beijing.volces.com/api/v3/chat/completions',
     models: [['doubao-seed-2-1-lite-260915', 'Doubao Seed 2.1 Lite'], ['doubao-seed-2-1-pro-260915', 'Doubao Seed 2.1 Pro']],
   });
-  var CN_PROVIDERS = ['deepseek', 'qwen', 'kimi', 'glm', 'doubao'];
+  // Free routes to the same models, no top-up: ModelScope API-Inference gives every
+  // account a daily free quota, Hugging Face Inference Providers a monthly free credit.
+  // Each visitor uses their own free token. Model lists checked on 2026-10-04.
+  PROVIDERS.modelscope = openAICompatible({
+    name: 'ModelScope', label: '魔搭 ModelScope（免费）', keyStore: 'modelscope_cn_token', free: true,
+    placeholder: 'ms-… (ModelScope access token / 魔搭访问令牌)', keyUrl: 'https://modelscope.cn/my/myaccesstoken',
+    url: 'https://api-inference.modelscope.cn/v1/chat/completions',
+    models: [['deepseek-ai/DeepSeek-V4.1-Flash', 'DeepSeek V4.1 Flash'], ['Qwen/Qwen3.8-27B', 'Qwen3.8 27B'],
+      ['ZhipuAI/GLM-5.2', 'GLM-5.2'], ['PaddlePaddle/ERNIE-4.5-300B-A47B-PT', 'ERNIE 4.5 文心'], ['MiniMax/MiniMax-M3', 'MiniMax M3']],
+  });
+  PROVIDERS.modelscope_intl = openAICompatible({
+    name: 'ModelScope', label: 'ModelScope international (free)', keyStore: 'modelscope_ai_token', free: true,
+    placeholder: 'ms-… (modelscope.ai access token)', keyUrl: 'https://modelscope.ai/my/myaccesstoken',
+    url: 'https://api-inference.modelscope.ai/v1/chat/completions',
+    models: [['deepseek-ai/DeepSeek-V4.1-Flash', 'DeepSeek V4.1 Flash'], ['Qwen/Qwen3.8-27B', 'Qwen3.8 27B'],
+      ['zai-org/GLM-5.2', 'GLM-5.2'], ['PaddlePaddle/ERNIE-4.5-300B-A47B-PT', 'ERNIE 4.5'], ['MiniMax/MiniMax-M3', 'MiniMax M3']],
+  });
+  PROVIDERS.hf = openAICompatible({
+    name: 'Hugging Face', label: 'Hugging Face (Kimi, free credits)', keyStore: 'hf_token', free: true,
+    placeholder: 'hf_… (Hugging Face access token)', keyUrl: 'https://huggingface.co/settings/tokens',
+    url: 'https://router.huggingface.co/v1/chat/completions',
+    models: [['moonshotai/Kimi-K3', 'Kimi K3'], ['deepseek-ai/DeepSeek-V4.1-Flash', 'DeepSeek V4.1 Flash'],
+      ['zai-org/GLM-5.3', 'GLM-5.3'], ['Qwen/Qwen3.8-27B', 'Qwen3.8 27B']],
+  });
+  var CN_PROVIDERS = ['modelscope', 'modelscope_intl', 'hf', 'deepseek', 'qwen', 'kimi', 'glm', 'doubao'];
   function customModelKey(p) { return 'pm_custom_model_' + p; }
 
   // In-browser model — zero key, zero cost, fully private. Runs via WebLLM on WebGPU.
