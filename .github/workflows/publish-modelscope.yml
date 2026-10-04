@@ -65,6 +65,8 @@ jobs:
           git clone --depth 1 "https://${MODELSCOPE_HOST}/datasets/${MODELSCOPE_DATASET}.git" ms
           find ms -mindepth 1 -maxdepth 1 ! -name .git ! -name .gitattributes -exec rm -rf {} +
           cp -R dataset/. ms/
+          # Same card as Hugging Face: CARD.md carries the YAML metadata (licence, task, configs).
+          cp dataset/CARD.md ms/README.md
           cd ms
           git add -A
           if git diff --cached --quiet; then echo "No dataset changes."; exit 0; fi
