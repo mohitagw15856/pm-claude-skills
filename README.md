@@ -245,7 +245,7 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
 </p>
 
 <p align="center">
-  <a href="https://mohitagw15856.github.io/pm-claude-skills/modelbench.html">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/modelbench.html?set=zh">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/modelbench-zh-en.svg">
       <source media="(prefers-color-scheme: light)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/modelbench-zh-en-light.svg">

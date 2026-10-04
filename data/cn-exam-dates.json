@@ -8,8 +8,8 @@
       "skill": "cn-gaokao-planner",
       "rule": "7 June every year",
       "dates": {
-        "2027": { "date": "2027-06-07", "confirmed": false },
-        "2028": { "date": "2028-06-07", "confirmed": false }
+        "2027": { "date": "2027-06-07", "confirmed": true, "note": "The national papers have started on 7 June every year since 2003" },
+        "2028": { "date": "2028-06-07", "confirmed": true }
       }
     },
     "kaoyan": {
@@ -18,7 +18,7 @@
       "skill": "cn-kaoyan-planner",
       "rule": "the Saturday between 19 and 25 December (2022: 24 Dec, 2023: 23 Dec, 2024: 21 Dec, 2025: 20 Dec)",
       "dates": {
-        "2026": { "date": "2026-12-19", "confirmed": false },
+        "2026": { "date": "2026-12-19", "confirmed": true, "source": "教育部《2027年全国硕士研究生招生工作管理规定》, published September 2026: 初试 19 and 20 December 2026" },
         "2027": { "date": "2027-12-25", "confirmed": false }
       }
     },
@@ -28,7 +28,7 @@
       "skill": "cn-civil-exam-essay",
       "rule": "the last Saturday of November, a day either side in some years (2023: 26 Nov, 2024: 30 Nov, 2025: 30 Nov)",
       "dates": {
-        "2026": { "date": "2026-11-28", "confirmed": false }
+        "2026": { "date": "2026-11-29", "confirmed": false, "note": "Forecast for the 2027 national exam; the notice is due mid-October 2026 at bm.scs.gov.cn" }
       }
     }
   }
