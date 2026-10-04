@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-china-yearend",
+  "version": "1.0.0",
+  "description": "The Chinese year-end season pack (述职季): the year-end review (年终总结 / 述职报告), the 述职 PPT outline and timed speaking script, the year-end bonus explained (年终奖, 13薪 and how the bonus is taxed, marked to confirm), and next year's personal OKR and development plan (个人发展计划), written in Chinese",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "china",
+    "chinese",
+    "year-end",
+    "shuzhi",
+    "bonus",
+    "okr",
+    "idp"
+  ]
+}

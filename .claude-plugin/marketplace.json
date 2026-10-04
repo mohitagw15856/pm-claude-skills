@@ -9,8 +9,16 @@
   },
   "plugins": [
     {
+      "name": "pm-china-yearend",
+      "description": "The Chinese year-end season pack (述职季): the year-end review (年终总结 / 述职报告), the 述职 PPT outline and timed speaking script, the year-end bonus explained (年终奖, 13薪 and how the bonus is taxed, marked to confirm), and next year's personal OKR and development plan (个人发展计划), written in Chinese",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-china-yearend",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-hk-tw",
-      "description": "Hong Kong and Taiwan life admin in Traditional Chinese: the Mandatory Provident Fund (強積金) and Taiwan's Labor Standards Act (勞動基準法), with worked calculations and where to get help",
+      "description": "Hong Kong and Taiwan in Traditional Chinese: the Mandatory Provident Fund (強積金), Taiwan's Labor Standards Act (勞動基準法) with worked calculations and where to get help, and Hong Kong marketing copy and social posts in written Cantonese (粵語文案)",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-hk-tw",
@@ -74,7 +82,7 @@
     },
     {
       "name": "pm-china-work",
-      "description": "The Chinese workplace pack: weekly and monthly reports (周报), the year-end review (述职 / 年终总结), the promotion defence (晋升答辩), the 复盘 project review, PRD reviews (需求评审), job-level comparison (职级对标), official documents to GB/T 9704 (公文), and Feishu docs, DingTalk logs and WeCom announcements, written in Chinese to the conventions managers expect",
+      "description": "The Chinese workplace pack: weekly and monthly reports (周报), the year-end review (述职 / 年终总结), the promotion defence (晋升答辩), the 复盘 project review, PRD reviews (需求评审), job-level comparison (职级对标), official documents to GB/T 9704 (公文), a jargon translator that turns 互联网黑话 into plain words (and back, for fun), and Feishu docs, DingTalk logs and WeCom announcements, written in Chinese to the conventions managers expect",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-china-work",

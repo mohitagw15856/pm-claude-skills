@@ -1,4 +1,4 @@
-# 🗂️ All 1250 Skills — full catalog
+# 🗂️ All 1255 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -723,7 +723,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (788 skills)
+## 🌍 Industries & Public Sector (793 skills)
 
 ### `other` — 22 skills
 
@@ -926,15 +926,24 @@
 | Skill | What it does | Eval |
 |---|---|---|
 | **复盘 (Fupan)** (`cn-fupan`) | Run a 复盘 (fupan), the structured project review widely used in Chinese companies: review the goal, assess the result, analyse why, and draw rules… | — |
+| **Chinese Internet Jargon Translator (互联网黑话翻译器)** (`cn-jargon-translator`) | Use when asked 把这段黑话翻译成人话, 这句话到底什么意思, 帮我把周报去黑话, 用大厂黑话改写这段, 互联网黑话词典, 对齐抓手闭环是什么意思, or translate Chinese internet-company jargon (互联网黑话) into plain… | — |
 | **Level Mapper (职级对标)** (`cn-level-mapper`) | Compare job levels (职级) across Chinese technology companies and against international ladders, to judge an offer, a job move or a promotion… | — |
 | **Official Document (公文)** (`cn-official-document`) | Use when asked 帮我写公文, 写一份请示, 写通知 / 报告 / 函 / 纪要, 公文格式怎么排, check this document against GB/T 9704, or draft an official document for a Chinese… | — |
 | **PRD Review (需求评审)** (`cn-prd-review`) | Prepare for and run a product requirements review (需求评审 / PRD 评审会) the way Chinese internet teams do it: a pre-read the engineers, testers and… | — |
 | **Promotion Defence (晋升答辩)** (`cn-promotion-defence`) | Prepare a promotion defence (晋升答辩) for a level-based promotion process common at Chinese technology companies: the materials, the presentation… | — |
 | **Chinese Weekly Report (周报)** (`cn-weekly-report`) | Write a Chinese workplace weekly or monthly report (周报 / 月报) for a manager: results with numbers, progress against goals, risks raised early, next… | — |
-| **Chinese Year-End Review (述职报告 / 年终总结)** (`cn-year-end-review`) | Write a Chinese annual self-review (述职报告 / 年终总结) for a performance cycle: results against OKR or KPI with evidence, the two or three things that… | — |
 | **DingTalk Work Log (钉钉日志)** (`dingtalk-work-log`) | Write a DingTalk work log (钉钉日志): the daily report (日报), weekly report (周报) or monthly report (月报) in the fields DingTalk's built-in log templates… | — |
 | **Feishu Doc Writer (飞书文档)** (`feishu-doc-writer`) | Write a document for Feishu / Lark Docs (飞书文档) in the shape Feishu readers expect: a summary callout at the top, headed sections that work with… | — |
 | **WeCom Announcement (企业微信公告)** (`wecom-announcement`) | Write an internal announcement for WeCom (企业微信) or a company group chat: policy changes, office notices, system outages, holiday arrangements and… | — |
+
+### `pm-china-yearend` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Next Year's OKR and Development Plan (明年个人 OKR 与个人发展计划)** (`cn-next-year-plan`) | Use when asked 帮我定明年的个人 OKR, 写个人发展计划, IDP 怎么写, 明年目标怎么跟老板对齐, 个人 KPI 怎么定, 年初定目标, or plan next year's personal goals at a Chinese employer. Produces… | — |
+| **述职 PPT Builder (述职 PPT 大纲与讲稿)** (`cn-shuzhi-deck`) | Use when asked 帮我做述职 PPT, 述职 PPT 大纲, 年终述职怎么讲, 10 分钟述职讲稿, 述职 PPT 每页写什么, or turn a written year-end review into a 述职 presentation. Produces a… | — |
+| **Year-End Bonus Clarifier (年终奖、13薪与个税)** (`cn-year-end-bonus`) | Use when asked 年终奖怎么算, 13薪和年终奖有什么区别, 年终奖怎么交税, 单独计税还是并入综合所得, 年终奖被扣了怎么办, 离职了年终奖还发吗, 怎么问 HR 年终奖, or understand a year-end bonus in mainland China.… | — |
+| **Chinese Year-End Review (述职报告 / 年终总结)** (`cn-year-end-review`) | Write a Chinese annual self-review (述职报告 / 年终总结) for a performance cycle: results against OKR or KPI with evidence, the two or three things that… | — |
 
 ### `pm-chuhai` — 4 skills
 
@@ -1444,10 +1453,11 @@
 | **Prior Authorization Letter** (`prior-authorization-letter`) | Write a persuasive prior-authorization / medical-necessity letter to an insurer. | — |
 | **SOAP Note** (`soap-note`) | Structure a clinical encounter into a clean SOAP note. | — |
 
-### `pm-hk-tw` — 2 skills
+### `pm-hk-tw` — 3 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Hong Kong Cantonese Copy (香港粵語文案)** (`hk-cantonese-copy`) | Use when asked 幫我寫廣東話文案, 寫香港 IG post, 改成港式口語, Facebook 專頁帖文點寫, Threads 文案, 寫粵語廣告, or write marketing copy and social posts for a Hong Kong… | — |
 | **Hong Kong MPF Explainer (強積金)** (`hk-mpf-explainer`) | Use when asked 強積金點計, 強積金幾時可以攞, 轉強積金計劃, 僱主有冇供強積金, 自願供款扣稅, eMPF 點用, or understand Hong Kong's Mandatory Provident Fund (MPF). Produces how… | — |
 | **Taiwan Labour Standards (勞動基準法)** (`tw-labour-standards`) | Use when asked 加班費怎麼算, 特休有幾天, 被資遣可以拿多少, 預告期間是多久, 勞退 6% 雇主有沒有提繳, 這樣合法嗎 勞基法, or check work terms against Taiwan's Labor Standards Act (勞動基準法).… | — |
 
@@ -2005,4 +2015,4 @@
 
 ---
 
-_1250 skills across 145 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1255 skills across 146 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

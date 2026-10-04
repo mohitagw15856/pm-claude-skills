@@ -1,9 +1,9 @@
 {
  "generated": "2026-10-04",
  "counts": {
-  "consequential": 228,
+  "consequential": 231,
   "high-stakes": 154,
-  "informational": 880
+  "informational": 882
  },
  "tiers": {
   "360-feedback-template": {
@@ -766,6 +766,10 @@
    "tier": "high-stakes",
    "via": "bundle:pm-china-life"
   },
+  "cn-jargon-translator": {
+   "tier": "informational",
+   "via": "skill"
+  },
   "cn-kaoyan-planner": {
    "tier": "informational",
    "via": "default"
@@ -786,6 +790,10 @@
    "tier": "consequential",
    "via": "bundle:pm-china-compliance"
   },
+  "cn-next-year-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-yearend"
+  },
   "cn-official-document": {
    "tier": "consequential",
    "via": "bundle:pm-china-work"
@@ -805,6 +813,10 @@
   "cn-severance-calculator": {
    "tier": "high-stakes",
    "via": "bundle:pm-china-life"
+  },
+  "cn-shuzhi-deck": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-yearend"
   },
   "cn-small-business-tax": {
    "tier": "high-stakes",
@@ -829,6 +841,10 @@
   "cn-weekly-report": {
    "tier": "consequential",
    "via": "bundle:pm-china-work"
+  },
+  "cn-year-end-bonus": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-yearend"
   },
   "cn-year-end-review": {
    "tier": "consequential",
@@ -2265,6 +2281,10 @@
   "hiring-rubric": {
    "tier": "consequential",
    "via": "bundle:pm-people"
+  },
+  "hk-cantonese-copy": {
+   "tier": "informational",
+   "via": "skill"
   },
   "hk-mpf-explainer": {
    "tier": "high-stakes",
