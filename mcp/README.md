@@ -1,6 +1,6 @@
 # MCP Server
 
-A zero-dependency [Model Context Protocol](https://modelcontextprotocol.io) server that exposes this skill library to **any MCP client** (Claude Code, Claude Desktop, Cursor, Windsurf, Cline…). Instead of installing 174 files, your assistant can **search and pull skills — and run workflow recipes — on demand**.
+A zero-dependency [Model Context Protocol](https://modelcontextprotocol.io) server that exposes this skill library to **any MCP client** (Claude Code, Claude Desktop, Cursor, Windsurf, Cline…). Instead of installing more than a thousand files, your assistant can **search and pull skills — and run workflow recipes — on demand**.
 
 ## One-line install (Claude Code)
 
@@ -8,7 +8,7 @@ A zero-dependency [Model Context Protocol](https://modelcontextprotocol.io) serv
 claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp
 ```
 
-That's it — all 174 skills and 5 workflow recipes are now available in every Claude Code session, on any project.
+That's it: every skill and workflow recipe in the library is now available in every Claude Code session, on any project.
 
 ## Tools
 
