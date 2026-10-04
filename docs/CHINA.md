@@ -106,7 +106,7 @@ What is in place, and what still needs an account or a decision.
 |---|---|---|
 | npm mirror install line | Done | Nothing. npmmirror syncs from npmjs automatically |
 | Gitee mirror | Workflow ready: `.github/workflows/mirror-gitee.yml` | Create the Gitee repository, add an SSH deploy key with push access, then set secret `GITEE_SSH_KEY` and variable `GITEE_REPO` |
-| ModelScope dataset mirror | Workflow ready: `.github/workflows/publish-modelscope.yml` | Create the dataset on ModelScope, add secret `MODELSCOPE_TOKEN` and variable `MODELSCOPE_DATASET` |
+| ModelScope dataset mirror | Workflow ready: `.github/workflows/publish-modelscope.yml` | Create the dataset on ModelScope, add secret `MODELSCOPE_TOKEN` and variable `MODELSCOPE_DATASET`; for an account on modelscope.ai also set `MODELSCOPE_HOST=www.modelscope.ai` |
 | Chinese model providers in the playground | Done in `web/providers.js` | Doubao is untested with a real key: its error responses carry no CORS headers, so only a valid key and activated model will work |
 | Trae, Qoder, Lingma, CodeBuddy | Done in `bin/cli.mjs` (`--agent`) | Rule files are generated at install time, not committed |
 | Router understands Chinese | Done (`integrations/jev/catalog.mjs`, `find`) | Coverage grows with every translated description in `skills-i18n/zh/` |
