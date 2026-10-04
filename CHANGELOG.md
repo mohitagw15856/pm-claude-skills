@@ -9,6 +9,30 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [81.0.0] - Chinese support and the CV studio - 2026-10-04
+
+**1212 skills · 139 bundles** (from 1176 · 134 at v80.2.0).
+
+### Added
+- **pm-cv** (20): a CV shaped for one company and role from its applicant tracking system, the country, the sector, its published values and the job ad, with every choice sourced and dated. `career-inventory` interviews the experience first; sector and situation formats (consulting and banking, academic, US federal, UK civil service and NHS, career changer, graduate, returner, executive); `bilingual-cv-zh-en`; `recruiter-scan-simulator`; `cv-honesty-check`; `referral-request`; `application-tracker`; and `cv-docx-export`. Helpers: `ats_detect.py`, `jd_gap.py`, `cv_docx.py`.
+- **pm-china-work** (4): `cn-weekly-report` (周报), `cn-year-end-review` (述职 / 年终总结), `cn-promotion-defence` (晋升答辩), `cn-fupan` (复盘).
+- **pm-china-life** (5, high-stakes): `cn-labour-contract-decoder`, `cn-severance-calculator` (N, N+1, 2N, with `cn_severance.py`), `cn-iit-reconciliation` (with `cn_iit.py`), `cn-social-insurance-explainer`, `cn-gaokao-planner`.
+- **pm-chuhai** (3): `chuhai-market-entry`, `cross-border-listing`, `pipl-gdpr-crosswalk`.
+- **pm-zh-content** (4): `xiaohongshu-note`, `wechat-article`, `douyin-script`, `livestream-sales-script`, each with a restricted-claims check.
+- **Chinese model providers in the playground**: DeepSeek, Qwen, Kimi, GLM and Doubao, bring your own key, with an "Other model ID" field. Browsers set to Simplified Chinese default to GLM's free model.
+- **Trae, Qoder, Lingma and CodeBuddy** in `npx pm-claude-skills add --agent`, with rule files generated at install time, and `--bundle` to install only some bundles.
+- **Chinese routing**: Chinese requests are matched as two-character pieces, translated descriptions take part, and acronyms such as PRD and OKR are kept inside Chinese requests.
+- **Translations**: 50 skills in Simplified Chinese and 25 in Traditional Chinese; `README.zh-CN.md`; `docs/CHINA.md`; drafts in `docs/china-launch/`.
+- **Mirrors**: workflows for a Gitee mirror and a ModelScope dataset mirror.
+
+### Changed
+- README: a Chinese banner and a bilingual Chinese support section on the first screen.
+- Eval coverage: 281 to 317 curated cases. Keyword routing: 55.5% top-1 on 317 cases.
+
+### Fixed
+- The router dropped Chinese descriptions from the catalogue.
+- The browser extension's never-host list changed shape and crashed its check.
+
 ## [80.2.0] - trust in a release - 2026-09-28
 
 **1176 skills · 134 bundles** (unchanged from v80.1.0). No new skills: this release is about being able to trust what is published.
