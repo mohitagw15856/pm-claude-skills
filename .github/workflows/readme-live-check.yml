@@ -1,0 +1,44 @@
+name: README live images check
+
+# Two gates for the live README cards (scripts/build-readme-live.mjs):
+#   check-readme-live.mjs  every /live/ URL in a README is produced by the build
+#   check-date-data.mjs    the exam dates and solar-term tables have not run out
+# Runs on pull requests that touch the READMEs or the card sources, and weekly,
+# so stale date data shows up as a failed run before a badge goes wrong.
+
+on:
+  pull_request:
+    paths:
+      - 'README*.md'
+      - 'scripts/build-readme-live.mjs'
+      - 'scripts/build-live-png.mjs'
+      - 'scripts/check-readme-live.mjs'
+      - 'scripts/check-date-data.mjs'
+      - 'bin/today.mjs'
+      - 'data/cn-exam-dates.json'
+      - 'data/solar-terms.json'
+      - '.github/workflows/readme-live-check.yml'
+  schedule:
+    - cron: '30 1 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+
+      - name: Every README live link is produced by the build
+        run: node scripts/check-readme-live.mjs
+
+      - name: Exam dates and solar terms have not run out
+        run: node scripts/check-date-data.mjs --check

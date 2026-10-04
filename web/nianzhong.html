@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>年终总结与述职提纲生成器 | PM Skills</title>
+<meta name="description" content="填几条今年的成果和数字，生成一份结构清楚的年终总结或述职提纲，一键复制。不调用 AI，不上传任何内容，全部在浏览器里完成。" />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/nianzhong.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .nz-wrap { max-width: 720px; margin: 0 auto; padding: 16px 22px 70px; }
+  .nz-wrap h1 { font-size: 26px; margin-bottom: 6px; }
+  .lead { color: var(--muted); line-height: 1.6; }
+  .panel { border: 1px solid var(--border); border-radius: 16px; background: var(--panel); padding: 20px 22px; margin: 20px 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px 16px; }
+  .field label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .field select, .field input, .field textarea { width: 100%; box-sizing: border-box; border: 1px solid var(--border); background: var(--bg); color: var(--text); border-radius: 10px; padding: 10px 12px; font-size: 15px; font-family: inherit; }
+  .field textarea { min-height: 96px; resize: vertical; line-height: 1.6; }
+  .full { margin-top: 14px; }
+  .hint { color: var(--muted); font-size: 12.5px; margin-top: 4px; }
+  .out { white-space: pre-wrap; font-size: 15px; line-height: 1.8; min-height: 160px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; align-items: center; }
+  .btn { display: inline-block; border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 10px; padding: 10px 16px; cursor: pointer; font-size: 14.5px; text-decoration: none; }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .note { color: var(--muted); font-size: 13px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="工具"></nav>
+<main class="nz-wrap">
+  <h1>📋 年终总结与述职提纲</h1>
+  <p class="lead">先把今年做成的事和数字填进来，这里帮你排成一份领导愿意看的提纲：结论在前，数据撑腰，问题坦白，明年有计划。不调用 AI，不上传任何内容。</p>
+
+  <form class="panel" id="form" onsubmit="return false">
+    <div class="grid">
+      <div class="field">
+        <label for="kind">用途</label>
+        <select id="kind">
+          <option value="summary">年终总结（写给团队和领导）</option>
+          <option value="shuzhi">述职（晋升或年度述职答辩）</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="role">岗位与职级</label>
+        <input id="role" type="text" maxlength="40" placeholder="例如：高级产品经理 P6" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="year">年度</label>
+        <select id="year"></select>
+      </div>
+    </div>
+    <div class="field full">
+      <label for="wins">今年的成果（每行一条，尽量带数字）</label>
+      <textarea id="wins" placeholder="支付页改版上线，转化率 3.1% 提到 3.6%&#10;牵头搭建埋点规范，数据问题工单减少 40%&#10;带两位新人，三个月内独立负责需求"></textarea>
+      <p class="hint">按重要性排序，第一条就是你最想让人记住的那件事。</p>
+    </div>
+    <div class="field full">
+      <label for="issues">问题与反思（可选，每行一条）</label>
+      <textarea id="issues" placeholder="会员项目延期两周，根因是需求评审太晚引入法务"></textarea>
+    </div>
+    <div class="field full">
+      <label for="plans">明年的计划（每行一条）</label>
+      <textarea id="plans" placeholder="把新用户七日留存从 22% 提到 28%&#10;推动 A/B 测试平台在团队落地"></textarea>
+    </div>
+    <div class="field full">
+      <label for="asks">需要的支持（可选，每行一条）</label>
+      <textarea id="asks" placeholder="一名数据分析师的固定支持"></textarea>
+    </div>
+  </form>
+
+  <section class="panel" aria-labelledby="outTitle">
+    <h2 id="outTitle" style="font-size:15px;color:var(--muted);margin:0 0 10px;font-weight:600">你的提纲</h2>
+    <div class="out" id="out" aria-live="polite"></div>
+    <div class="actions">
+      <button type="button" class="btn primary" id="copyBtn">复制提纲</button>
+    </div>
+  </section>
+
+  <p class="note">提纲只是骨架。把它和你的原始材料一起交给 AI 助手，加载 <a href="skill/cn-year-end-review.html">cn-year-end-review</a>（年终总结）、<a href="skill/cn-shuzhi-deck.html">cn-shuzhi-deck</a>（述职 PPT）或 <a href="skill/cn-next-year-plan.html">cn-next-year-plan</a>（明年计划），就能写成完整的文档。</p>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const lines = (id) => $(id).value.split('\n').map((s) => s.trim()).filter(Boolean);
+const num = ['一', '二', '三', '四', '五', '六', '七'];
+
+(function fillYears() {
+  const now = new Date(Date.now() + 8 * 3600e3);
+  // From October on, the review being written is for this year.
+  const y = now.getUTCMonth() >= 9 ? now.getUTCFullYear() : now.getUTCFullYear() - 1;
+  for (const v of [y, y - 1]) { const o = document.createElement('option'); o.value = v; o.textContent = `${v} 年`; $('year').appendChild(o); }
+})();
+
+function compose() {
+  const kind = $('kind').value, y = $('year').value, role = $('role').value.trim();
+  const wins = lines('wins'), issues = lines('issues'), plans = lines('plans'), asks = lines('asks');
+  const sec = []; let k = 0;
+  const head = kind === 'shuzhi' ? `${y} 年度述职${role ? `（${role}）` : ''}` : `${y} 年年终总结${role ? `（${role}）` : ''}`;
+  sec.push(`${num[k++]}、一句话概述\n  ${wins[0] ? `今年最重要的成果：${wins[0]}。` : '用一句话说清今年最重要的成果和它带来的变化。'}`);
+  sec.push(`${num[k++]}、重点成果${kind === 'shuzhi' ? '（对照岗位职责和职级要求）' : '（按影响大小排序）'}\n${(wins.length ? wins : ['（每条成果：做了什么、结果数字、对业务的影响）']).map((w, i) => `  ${i + 1}. ${w}\n     影响：这件事让谁、在哪个指标上变好了多少？`).join('\n')}`);
+  if (kind === 'shuzhi') sec.push(`${num[k++]}、能力与成长\n  对照职级要求，各举一个例子：专业能力、推动协作、带人或影响力。`);
+  sec.push(`${num[k++]}、问题与反思\n${(issues.length ? issues : ['（选一两件真实的问题：发生了什么、根因、你改了什么）']).map((w, i) => `  ${i + 1}. ${w}\n     改进：下次会怎么做？`).join('\n')}`);
+  sec.push(`${num[k++]}、${Number(y) + 1} 年计划\n${(plans.length ? plans : ['（目标写成可衡量的结果，不写“持续优化”）']).map((w, i) => `  ${i + 1}. ${w}`).join('\n')}`);
+  if (asks.length) sec.push(`${num[k++]}、需要的支持\n${asks.map((w, i) => `  ${i + 1}. ${w}`).join('\n')}`);
+  if (kind === 'shuzhi') sec.push(`${num[k++]}、答辩准备\n  预想三个最可能被问的问题，各准备一个带数字的回答。`);
+  $('out').textContent = `${head}\n\n${sec.join('\n\n')}`;
+}
+
+$('form').addEventListener('input', compose);
+$('form').addEventListener('change', compose);
+$('copyBtn').addEventListener('click', async () => {
+  const text = $('out').textContent;
+  try { await navigator.clipboard.writeText(text); }
+  catch {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('aria-hidden', 'true'); ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch { /* nothing more to try */ }
+    ta.remove();
+  }
+  $('copyBtn').textContent = '已复制 ✓';
+  setTimeout(() => { $('copyBtn').textContent = '复制提纲'; }, 1600);
+});
+compose();
+</script>
+<script src="nav.js"></script>
+</body>
+</html>

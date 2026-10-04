@@ -471,6 +471,7 @@ Usage:
   npx pm-claude-skills subscribe   # standing skills: scheduled runs that report what CHANGED
   npx pm-claude-skills brief       # the chief-of-staff: predictions due, latest verdicts, open hypotheses
   npx pm-claude-skills stats       # the project's public vitals (runs served, stars, benchmark)
+  npx pm-claude-skills today [--lang zh|zh-TW] [--json] [--offline]   # the skill of the day, same pick as the README card
   npx pm-claude-skills reckoning   # your prediction ledger: due calls, hit rate, calibration curve, Brier score
   npx pm-claude-skills doctor      # checkup: what's installed, what's stale, what to fix (read-only)
   npx pm-claude-skills changelog <skill>      # what changed in a skill, and when (per-skill git history)
@@ -591,6 +592,10 @@ else if (cmd === 'subscribe') {
   const { run } = await import('./subscribe.mjs');
   try { process.exit(await run(process.argv.slice(3))); }
   catch (e) { console.error(`Error: ${e.message}`); process.exit(1); }
+}
+else if (cmd === 'today') {
+  const { runToday } = await import('./today.mjs');
+  process.exit(await runToday({ root: PKG_ROOT, lang: opts.lang || 'en', json: !!opts.json, offline: 'offline' in opts }));
 }
 else if (cmd === 'brief' || cmd === 'stats') {
   const m = await import('./brief.mjs');

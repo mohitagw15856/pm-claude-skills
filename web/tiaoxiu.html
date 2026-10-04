@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>调休规划器 · 放假日历、休假自动回复和团队通知 | PM Skills</title>
+<meta name="description" content="输入官方放假安排和调休上班日，得到放假日历、连休天数，以及休假自动回复和团队通知草稿。不调用 AI，不上传任何内容。" />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/tiaoxiu.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .tx-wrap { max-width: 760px; margin: 0 auto; padding: 16px 22px 70px; }
+  .tx-wrap h1 { font-size: 26px; margin-bottom: 6px; }
+  .lead { color: var(--muted); line-height: 1.6; }
+  .panel { border: 1px solid var(--border); border-radius: 16px; background: var(--panel); padding: 20px 22px; margin: 20px 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px 16px; }
+  .field label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .field select, .field input { width: 100%; box-sizing: border-box; border: 1px solid var(--border); background: var(--bg); color: var(--text); border-radius: 10px; padding: 9px 12px; font-size: 15px; font-family: inherit; }
+  .workdays { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; margin-top: 14px; }
+  .workdays .field { min-width: 170px; }
+  .btn { display: inline-block; border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 10px; padding: 9px 14px; cursor: pointer; font-size: 14px; text-decoration: none; }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .summary { font-size: 17px; font-weight: 700; margin: 0 0 12px; }
+  .months { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .month h3 { font-size: 14px; margin: 0 0 6px; }
+  .cal { width: 100%; border-collapse: collapse; font-size: 13px; text-align: center; }
+  .cal th { color: var(--muted); font-weight: 500; padding: 3px 0; }
+  .cal td { padding: 4px 0; border-radius: 6px; }
+  .cal td.off { background: #2d9a5c; color: #fff; }
+  .cal td.work { background: #c9821b; color: #fff; }
+  .cal td.wknd { color: var(--muted); }
+  .cal small { display: block; font-size: 10px; line-height: 1; }
+  .legend { color: var(--muted); font-size: 12.5px; margin-top: 10px; }
+  .draft { white-space: pre-wrap; font-size: 14.5px; line-height: 1.75; border: 1px dashed var(--border); border-radius: 12px; padding: 12px 14px; }
+  .actions { display: flex; gap: 8px; margin: 10px 0 18px; }
+  .note { color: var(--muted); font-size: 13px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="工具"></nav>
+<main class="tx-wrap">
+  <h1>🗓 调休规划器</h1>
+  <p class="lead">把官方通知里的放假日期和调休上班日填进来，看清到底连休几天、哪个周末要上班，再顺手生成休假自动回复和团队通知。日期以国务院办公厅的通知为准，这里不预设任何安排。</p>
+
+  <form class="panel" id="form" onsubmit="return false">
+    <div class="grid">
+      <div class="field">
+        <label for="hname">假期名称</label>
+        <input id="hname" type="text" maxlength="20" value="国庆节、中秋节" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="start">放假第一天</label>
+        <input id="start" type="date" />
+      </div>
+      <div class="field">
+        <label for="end">放假最后一天</label>
+        <input id="end" type="date" />
+      </div>
+      <div class="field">
+        <label for="me">你的名字（用于自动回复）</label>
+        <input id="me" type="text" maxlength="20" placeholder="例如：小陈" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="backup">紧急事项联系人（可选）</label>
+        <input id="backup" type="text" maxlength="30" placeholder="例如：王磊，电话 138xxxx" autocomplete="off" />
+      </div>
+    </div>
+    <div class="workdays" id="workdays"></div>
+    <div style="margin-top:12px"><button type="button" class="btn" id="addWork">＋ 添加一个调休上班日</button></div>
+  </form>
+
+  <section class="panel" aria-labelledby="calTitle">
+    <h2 id="calTitle" style="font-size:15px;color:var(--muted);margin:0 0 10px;font-weight:600">放假日历</h2>
+    <p class="summary" id="summary" aria-live="polite"></p>
+    <div class="months" id="months"></div>
+    <p class="legend">绿色“休”是放假，橙色“班”是调休上班，灰色是普通周末。</p>
+  </section>
+
+  <section class="panel" aria-labelledby="draftTitle">
+    <h2 id="draftTitle" style="font-size:15px;color:var(--muted);margin:0 0 10px;font-weight:600">休假自动回复</h2>
+    <div class="draft" id="ooo"></div>
+    <div class="actions"><button type="button" class="btn primary" data-copy="ooo">复制自动回复</button></div>
+    <h2 style="font-size:15px;color:var(--muted);margin:0 0 10px;font-weight:600">团队通知</h2>
+    <div class="draft" id="notice"></div>
+    <div class="actions"><button type="button" class="btn primary" data-copy="notice">复制团队通知</button></div>
+  </section>
+
+  <p class="note">要写更正式的放假通知，可以用 <a href="skill/wecom-announcement.html">wecom-announcement</a> 技能；想查其他国家和地区的公众假期，用 <a href="skill/public-holidays.html">public-holidays</a> 技能。所有计算都在你的浏览器里完成。</p>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const D = (s) => new Date(`${s}T00:00:00Z`);
+const iso = (d) => d.toISOString().slice(0, 10);
+const add = (s, n) => iso(new Date(D(s).getTime() + n * 864e5));
+const md = (s) => `${+s.slice(5, 7)}月${+s.slice(8, 10)}日`;
+const wk = (s) => '日一二三四五六'[D(s).getUTCDay()];
+let wid = 0;
+
+function addWorkday(value = '') {
+  wid++;
+  const div = document.createElement('div');
+  div.className = 'field';
+  div.innerHTML = `<label for="w${wid}">调休上班日 ${wid}</label><input id="w${wid}" type="date" class="wd" value="${value}" />`;
+  $('workdays').appendChild(div);
+}
+
+function compose() {
+  const start = $('start').value, end = $('end').value;
+  const name = $('hname').value.trim() || '假期';
+  const works = [...document.querySelectorAll('.wd')].map((i) => i.value).filter(Boolean).sort();
+  if (!start || !end || end < start) { $('summary').textContent = '先填放假第一天和最后一天。'; $('months').innerHTML = ''; $('ooo').textContent = ''; $('notice').textContent = ''; return; }
+  const off = new Set(); for (let d = start; d <= end; d = add(d, 1)) off.add(d);
+  const isOff = (d) => off.has(d) || (!works.includes(d) && [0, 6].includes(D(d).getUTCDay()));
+  // Extend across adjoining ordinary weekends to get the real run of days off.
+  let a = start, b = end;
+  while (isOff(add(a, -1))) a = add(a, -1);
+  while (isOff(add(b, 1))) b = add(b, 1);
+  const run = (D(b) - D(a)) / 864e5 + 1;
+  const back = add(b, 1);
+  $('summary').textContent = `${name}：${md(a)}（周${wk(a)}）到 ${md(b)}（周${wk(b)}）连休 ${run} 天，${md(back)}（周${wk(back)}）上班${works.length ? `；调休上班 ${works.map((w) => `${md(w)}（周${wk(w)}）`).join('、')}` : ''}。`;
+  // Months to draw: from the first relevant date to the last.
+  const all = [a, b, ...works].sort();
+  const first = all[0].slice(0, 7), last = all[all.length - 1].slice(0, 7);
+  let html = '';
+  for (let ym = first; ym <= last; ym = iso(new Date(Date.UTC(+ym.slice(0, 4), +ym.slice(5, 7), 1))).slice(0, 7)) {
+    const y = +ym.slice(0, 4), m = +ym.slice(5, 7);
+    const days = new Date(Date.UTC(y, m, 0)).getUTCDate();
+    const lead = new Date(Date.UTC(y, m - 1, 1)).getUTCDay();
+    let cells = '<tr>' + '<td></td>'.repeat(lead);
+    for (let day = 1; day <= days; day++) {
+      const d = `${ym}-${String(day).padStart(2, '0')}`;
+      const dow = D(d).getUTCDay();
+      const cls = off.has(d) ? 'off' : works.includes(d) ? 'work' : [0, 6].includes(dow) ? 'wknd' : '';
+      const tag = cls === 'off' ? '<small>休</small>' : cls === 'work' ? '<small>班</small>' : '';
+      cells += `<td class="${cls}">${day}${tag}</td>`;
+      if (dow === 6 && day < days) cells += '</tr><tr>';
+    }
+    cells += '</tr>';
+    html += `<div class="month"><h3>${y} 年 ${m} 月</h3><table class="cal"><caption class="sr-only" style="position:absolute;left:-9999px">${y} 年 ${m} 月放假安排</caption><thead><tr>${'日一二三四五六'.split('').map((c) => `<th scope="col">${c}</th>`).join('')}</tr></thead><tbody>${cells}</tbody></table></div>`;
+  }
+  $('months').innerHTML = html;
+  const me = $('me').value.trim();
+  const backup = $('backup').value.trim();
+  $('ooo').textContent = `您好，${me ? `我是${me}，` : ''}${md(a)}至${md(b)}${name}休假期间，消息可能无法及时回复，${md(back)}恢复正常处理。${backup ? `紧急事项请联系${backup}。` : ''}祝您假期愉快！`;
+  $('notice').textContent = `【${name}放假安排】\n各位同事：\n根据国务院办公厅通知，${name}放假时间为${md(start)}至${md(end)}${run > (D(end) - D(start)) / 864e5 + 1 ? `，连同周末共休 ${run} 天` : `，共 ${run} 天`}。${works.length ? `\n${works.map((w) => `${md(w)}（周${wk(w)}）`).join('、')}正常上班。` : ''}\n请大家在放假前做好工作交接，重要事项提前同步给相关负责人${backup ? `；值班联系人：${backup}` : ''}。\n祝大家假期愉快，注意出行安全！`;
+}
+
+(function init() {
+  // An example to start from: a made-up seven-day break with one weekend workday. Replace it with the official dates.
+  const y = new Date(Date.now() + 8 * 3600e3).getUTCFullYear();
+  $('start').value = `${y}-10-01`; $('end').value = `${y}-10-07`;
+  addWorkday();
+})();
+$('addWork').addEventListener('click', () => { addWorkday(); compose(); });
+$('form').addEventListener('input', compose);
+$('form').addEventListener('change', compose);
+document.querySelectorAll('[data-copy]').forEach((btn) => btn.addEventListener('click', async () => {
+  const text = $(btn.dataset.copy).textContent;
+  try { await navigator.clipboard.writeText(text); }
+  catch {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('aria-hidden', 'true'); ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch { /* nothing more to try */ }
+    ta.remove();
+  }
+  const old = btn.textContent; btn.textContent = '已复制 ✓';
+  setTimeout(() => { btn.textContent = old; }, 1600);
+}));
+compose();
+</script>
+<script src="nav.js"></script>
+</body>
+</html>

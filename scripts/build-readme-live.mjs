@@ -29,6 +29,7 @@
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { fnv, localSkill, pickSkillOfTheDay } from '../bin/today.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const argv = process.argv.slice(2);
@@ -102,7 +103,6 @@ function wrap(s, maxW, size, maxLines) {
 const clip = (s, maxW, size) => { let t = String(s); if (tw(t, size) <= maxW) return t; while (t && tw(`${t}…`, size) > maxW) t = [...t].slice(0, -1).join(''); return `${t}…`; };
 
 // Deterministic, so the same date always gives the same pick.
-const fnv = (s) => { let h = 0x811c9dc5; for (const ch of s) { h ^= ch.codePointAt(0); h = Math.imul(h, 0x01000193) >>> 0; } return h; };
 const rng = (seed) => { let x = fnv(seed) || 1; return () => { x ^= x << 13; x >>>= 0; x ^= x >> 17; x ^= x << 5; x >>>= 0; return x / 4294967296; }; };
 
 // ── Dates (all as Beijing calendar days) ────────────────────────────────────
@@ -122,63 +122,6 @@ const catalogue = (readJSON(join(root, 'web', 'skills.json'), { skills: [] }).sk
 const COUNT = catalogue.length;
 const BUNDLES = new Set(catalogue.map((s) => s.plugin).filter((p) => p && p !== 'other')).size; // 'other' is the catch-all, not a bundle
 const byName = new Map(catalogue.map((s) => [s.name, s]));
-
-function frontmatter(raw) {
-  const m = raw.replace(/\r\n/g, '\n').match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
-  if (!m) return { fm: {}, body: raw };
-  const fm = {};
-  for (const line of m[1].split('\n')) {
-    const kv = line.match(/^([a-zA-Z_-]+):\s*(.*)$/);
-    if (kv) fm[kv[1]] = kv[2].replace(/^["']|["']$/g, '').trim();
-  }
-  return { fm, body: m[2] };
-}
-
-// A first-person prompt to try, taken from the skill's own trigger phrases.
-function enPrompt(desc) {
-  const q = desc.match(/(?:^|\s)["“‘']([A-Za-z][^"”’']{8,64}?)["”’'](?=[\s,.;:)]|$)/);
-  if (q) return q[1][0].toUpperCase() + q[1].slice(1) + (/[?.!]$/.test(q[1]) ? '' : '');
-  const m = desc.match(/Use when (?:asked|someone asks|the user asks|you are asked)\s+(to|for|how to|how do I)\s+([^,.;]+)/i);
-  if (!m) return null;
-  const clause = m[2].trim().replace(/\s+(or|and)$/i, '');
-  if (clause.length < 8 || clause.length > 64 || /\b(this|these)\b$/.test(clause)) return null;
-  const kind = m[1].toLowerCase();
-  if (kind === 'for') return `I need ${clause}.`;
-  if (kind === 'how do i') return `How do I ${clause}?`;
-  return `Help me ${clause}.`;
-}
-function zhPrompt(desc) {
-  const q = desc.match(/[‘“「']([^’”」']{3,24})[’”」']/);
-  if (q) return q[1];
-  const m = desc.match(/当(被要求|被问到|用户要求|有人问|需要)?([^。；]*?)时(?:使用)?/);
-  if (!m) return null;
-  let item = m[2].split(/[、，,]|或者|或/)[0].trim().replace(/^[“"'‘]|[”"'’]$/g, '');
-  if (item.length < 3 || item.length > 22) return null;
-  if (m[1] === '被问到' || m[1] === '有人问') return /[？?吗呢]$/.test(item) ? item : `${item}？`;
-  if (m[1]) return item.startsWith('帮我') ? item : `帮我${item}`;
-  return /^(撰写|写|准备|制定|分析|生成|规划|比较|整理|做|起草)/.test(item) ? `帮我${item}` : null;
-}
-
-function zhSkill(name) {
-  const f = join(root, 'skills-i18n', 'zh', name, 'SKILL.md');
-  if (!existsSync(f)) return null;
-  const { fm, body } = frontmatter(readFileSync(f, 'utf8'));
-  const title = ((body.match(/^# (.+)$/m) || [])[1] || name).trim();
-  const desc = fm.description || '';
-  return { name, title, desc, summary: (desc.split('。')[0] || desc) + '。', prompt: zhPrompt(desc) };
-}
-
-function skillOfTheDay() {
-  const enPool = catalogue.filter((s) => s.summary && enPrompt(s.description || '')).sort((a, b) => a.name.localeCompare(b.name));
-  const en = enPool[fnv(`${DATE}:en`) % enPool.length];
-  const zhDir = join(root, 'skills-i18n', 'zh');
-  const zhPool = (existsSync(zhDir) ? readdirSync(zhDir) : []).filter((n) => byName.has(n)).map(zhSkill).filter((s) => s && s.prompt).sort((a, b) => a.name.localeCompare(b.name));
-  const zhPick = zhPool.length ? zhPool[fnv(`${DATE}:zh`) % zhPool.length] : null;
-  return {
-    en: en && { name: en.name, title: en.title || en.name, summary: en.summary, prompt: enPrompt(en.description), bundle: en.plugin },
-    zh: zhPick && { ...zhPick, bundle: byName.get(zhPick.name).plugin },
-  };
-}
 
 // ── Network (optional) ──────────────────────────────────────────────────────
 async function get(url, { json = true, headers = {} } = {}) {
@@ -250,7 +193,7 @@ function sotdCard(theme, lang, s) {
     ? { kicker: `今日技能 · ${zhFull(DATE)}`, try: '试着这样说', side: `每天换一个 · 共 ${n0(COUNT)} 个技能`, aria: `今日技能：${s.title}（${s.name}）。${s.summary} 试着这样说：${s.prompt}` }
     : { kicker: `Skill of the day · ${enDate(DATE)}`, try: 'Try saying', side: `A new one every day · ${n0(COUNT)} skills`, aria: `Skill of the day: ${s.title} (${s.name}). ${s.summary} Try saying: ${s.prompt}` };
   const title = clip(s.title, 780, 24);
-  const desc = wrap(s.summary.replace(/\s*[\u2014\u2013]\s*/g, ', '), 780, 15, 2);
+  const desc = wrap(s.summary.replace(/\s*[\u2014\u2013]\s*/g, ', '), 730, 15, 2);
   const prompt = clip(s.prompt, 700, 15);
   const askW = Math.ceil(tw(prompt, 15)) + 30;
   const chipW = Math.ceil(tw(`⚡ ${s.name}`, 13, true)) + 28;
@@ -285,7 +228,7 @@ function sotdCard(theme, lang, s) {
   <g class="u" style="animation-delay:.5s">${desc.map((l, i) => `<text x="40" y="${162 + i * 22}" class="d">${esc(l)}</text>`).join('')}</g>
   <text x="40" y="${H - 72}" class="lbl">${esc(L.try)}</text>
   <rect x="40" y="${H - 62}" width="${askW + 4}" height="38" rx="14" fill="${c.user}"/>
-  <clipPath id="tc"><rect class="ty" x="46" y="${H - 58}" width="0" height="30"/></clipPath>
+  <clipPath id="tc"><rect class="ty" x="46" y="${H - 58}" width="${askW}" height="30"/></clipPath>
   <text x="54" y="${H - 38}" class="ask" clip-path="url(#tc)">${esc(prompt)}</text>
 </svg>
 `;
@@ -341,25 +284,44 @@ function statusBadge(ch) {
 // ── 4. Exam countdowns ──────────────────────────────────────────────────────
 const lastSat = (y, m) => { const d = new Date(Date.UTC(y, m, 0)); while (d.getUTCDay() !== 6) d.setUTCDate(d.getUTCDate() - 1); return iso(d); };
 const satBetween = (y, m, a) => { for (let dd = a; dd < a + 7; dd++) { const d = new Date(Date.UTC(y, m - 1, dd)); if (d.getUTCDay() === 6) return iso(d); } return null; };
-const RULES = { gaokao: (y) => `${y}-06-07`, kaoyan: (y) => satBetween(y, 12, 19), guokao: (y) => lastSat(y, 11) };
-const SPAN = { gaokao: 3, kaoyan: 1, guokao: 1 }; // extra exam days after the first
-function examCountdowns() {
-  const data = readJSON(join(root, 'data', 'cn-exam-dates.json'), { exams: {} }).exams || {};
-  return Object.entries(RULES).map(([id, rule]) => {
-    const e = data[id] || {};
-    const dateFor = (y) => (e.dates && e.dates[y] && e.dates[y].date) || rule(y);
-    const confirmedFor = (y) => !!(e.dates && e.dates[y] && e.dates[y].confirmed);
-    let y = YEAR, date = dateFor(y);
-    if (diff(date, DATE) > SPAN[id]) { y += 1; date = dateFor(y); }
-    const left = diff(DATE, date);
-    return { id, label: e.label || id, skill: e.skill, date, confirmed: confirmedFor(y), left };
+const nthSat = (y, m, n) => { const d = new Date(Date.UTC(y, m - 1, 1)); while (d.getUTCDay() !== 6) d.setUTCDate(d.getUTCDate() + 1); d.setUTCDate(d.getUTCDate() + 7 * (n - 1)); return iso(d); };
+// Fallback rules: every sitting in a year, used when the data file has no date for it.
+const RULES = {
+  gaokao: (y) => [`${y}-06-07`],
+  kaoyan: (y) => [satBetween(y, 12, 19)],
+  guokao: (y) => [lastSat(y, 11)],
+  cet: (y) => [satBetween(y, 6, 12), satBetween(y, 12, 12)],
+  ntce: (y) => [nthSat(y, 3, 2), nthSat(y, 11, 1)],
+  fakao: (y) => [nthSat(y, 9, 2)],
+};
+const EXAMS = readJSON(join(root, 'data', 'cn-exam-dates.json'), { exams: {} }).exams || {};
+// Each sitting: the data file's date for that year (or year-month key) wins over the rule.
+function sittings(id, y) {
+  const dates = (EXAMS[id] || {}).dates || {};
+  const rules = RULES[id](y);
+  return rules.map((ruleDate) => {
+    const keyed = dates[ruleDate.slice(0, 7)] || (rules.length === 1 ? dates[y] : null);
+    return keyed ? { date: keyed.date, confirmed: !!keyed.confirmed } : { date: ruleDate, confirmed: false };
+  });
+}
+// The plan ends on its last item the day before the exam, so 考场准备 always lands at the end.
+const sprintFocus = (plan, left) => plan[(plan.length - (left % plan.length)) % plan.length];
+function examCountdowns(date = DATE) {
+  const y = +date.slice(0, 4);
+  return Object.keys(RULES).map((id) => {
+    const e = EXAMS[id] || {}; const span = e.span ?? 1;
+    const next = [...sittings(id, y), ...sittings(id, y + 1)].sort((a, b) => a.date.localeCompare(b.date)).find((x) => diff(x.date, date) <= span);
+    const left = diff(date, next.date);
+    const sprint = e.sprint || [];
+    return { id, label: e.label || id, skill: e.skill, skills: [e.skill], date: next.date, confirmed: next.confirmed, left,
+      sprintDay: left > 0 && left <= 30 ? 31 - left : 0, focus: left > 0 && left <= 30 && sprint.length ? sprintFocus(sprint, left) : null };
   });
 }
 function examBadge(x) {
   const [value, color] = x.left > 0
-    ? [`还有 ${x.left} 天 · ${zhDate(x.date)}${x.confirmed ? '' : '（预计）'}`, x.left <= 30 ? '#d0453a' : x.left <= 100 ? '#c9821b' : '#3a6fb0']
+    ? [`${x.sprintDay ? `冲刺第 ${x.sprintDay} 天 · ` : ''}还有 ${x.left} 天 · ${zhDate(x.date)}${x.confirmed ? '' : '（预计）'}`, x.left <= 30 ? '#d0453a' : x.left <= 100 ? '#c9821b' : '#3a6fb0']
     : x.left === 0 ? ['今天开考，加油！', '#d0453a'] : ['考试进行中，加油！', '#d0453a'];
-  return badge(x.label, value, color, `${x.label}：${value}。点击打开 ${x.skill} 技能`);
+  return badge(x.label, value, color, `${x.label}：${value}。${x.focus ? `今日重点：${x.focus}。` : ''}点击打开${x.sprintDay ? '冲刺页' : ` ${x.skill} 技能`}`);
 }
 
 // ── 5. Seasonal banner ──────────────────────────────────────────────────────
@@ -378,7 +340,7 @@ function solarTerm(date) {
   if (!cur || !next) return null; // outside the table: no term shown rather than a guess
   return { ...cur, index: TERM_ORDER.indexOf(cur.name) + 1, today: cur.date === date, next, nextIn: diff(date, next.date) };
 }
-function season(date) {
+function season(date, lang = 'zh') {
   const y = +date.slice(0, 4), m = +date.slice(5, 7), d = +date.slice(8, 10);
   const F = CAL.festivals || {};
   const term = solarTerm(date);
@@ -390,8 +352,9 @@ function season(date) {
   const zq = F[y] && F[y].zhongqiu;
   const inGuoqing = m === 10 && d <= 7;
   if (zq) { const off = diff(zq, date); if (off >= -5 && off <= 1) return { kind: 'zhongqiu', off, zhongqiu: zq, guoqing: inGuoqing || (m === 9 && d === 30 && off === 0), term }; }
-  if (inGuoqing) return { kind: 'guoqing', day: d, term };
-  if (m === 6 && d <= 18) return { kind: '618', left: 18 - d, term };
+  // Taiwan's national day is 10 October and 618 is a mainland festival, so the Traditional banner skips both.
+  if (inGuoqing && lang !== 'tw') return { kind: 'guoqing', day: d, term };
+  if (m === 6 && d <= 18 && lang !== 'tw') return { kind: '618', left: 18 - d, term };
   if ((m === 10 && d >= 20) || (m === 11 && d <= 11)) return { kind: 's11', left: diff(date, `${y}-11-11`), term };
   return { kind: 'term', term };
 }
@@ -429,7 +392,10 @@ function particles(kind, p, n, seed) {
     : `@keyframes pf{0%{transform:translate(0,-230px) rotate(0);opacity:0}8%{opacity:1}90%{opacity:1}100%{transform:translate(-36px,40px) rotate(320deg);opacity:0}}`;
   return { defs: shapes[kind], uses, css: `${kf}.pf{transform-box:fill-box;transform-origin:center;animation:pf 8s linear infinite}` };
 }
-function seasonBanner(s, sotdZh) {
+const S2T = {'万': '萬', '两': '兩', '个': '個', '临': '臨', '乐': '樂', '书': '書', '亚': '亞', '从': '從', '会': '會', '发': '發', '冻': '凍', '凉': '涼', '划': '劃', '卖': '賣', '双': '雙', '团': '團', '国': '國', '圆': '圓', '处': '處', '备': '備', '复': '復', '岁': '歲', '对': '對', '将': '將', '帮': '幫', '庆': '慶', '当': '當', '总': '總', '惊': '驚', '愿': '願', '战': '戰', '扫': '掃', '报': '報', '携': '攜', '数': '數', '时': '時', '昼': '晝', '术': '術', '条': '條', '来': '來', '极': '極', '浓': '濃', '渐': '漸', '温': '溫', '满': '滿', '点': '點', '热': '熱', '种': '種', '笔': '筆', '红': '紅', '终': '終', '结': '結', '给': '給', '续': '續', '规': '規', '计': '計', '记': '記', '试': '試', '话': '話', '语': '語', '说': '說', '调': '調', '谷': '穀', '货': '貨', '财': '財', '转': '轉', '运': '運', '还': '還', '选': '選', '逊': '遜', '键': '鍵', '长': '長', '阖': '闔', '马': '馬', '鸣': '鳴', '麦': '麥', '苏': '蘇', '节': '節', '荐': '薦', '虫': '蟲', '蛰': '蟄', '写': '寫', '气': '氣', '开': '開', '着': '著', '游': '遊', '婵': '嬋', '冲': '衝', '职': '職', '场': '場', '题': '題', '页': '頁', '们': '們', '这': '這', '为': '為', '车': '車', '东': '東', '门': '門', '问': '問', '间': '間', '业': '業', '广': '廣', '买': '買', '园': '園', '动': '動', '无': '無', '应': '應', '现': '現', '视': '視', '让': '讓', '产': '產', '历': '歷', '际': '際', '级': '級', '习': '習', '单': '單', '码': '碼', '网': '網', '线': '線', '内': '內', '读': '讀', '绍': '紹', '译': '譯', '体': '體', '优': '優', '质': '質', '务': '務', '进': '進', '达': '達', '过': '過', '远': '遠', '连': '連', '适': '適', '尝': '嘗', '识': '識', '认': '認', '证': '證', '讲': '講', '谢': '謝', '请': '請', '价': '價', '钱': '錢', '银': '銀', '铺': '鋪', '设': '設', '购': '購', '纳': '納', '灵': '靈', '剧': '劇', '订': '訂', '贺': '賀', '礼': '禮'};
+// Simplified to Traditional for the banner's own strings only (not a general converter).
+const toTW = (str) => [...String(str)].map((c) => S2T[c] || c).join('');
+function seasonBanner(s, sotdZh, lang = 'zh') {
   const W = 860, H = 220;
   const t = s.term;
   const kindKey = s.kind === 'term' ? (t ? ['spring', 'summer', 'autumn', 'winter'][Math.floor((t.index - 1) / 6)] : 'autumn') : s.kind;
@@ -479,6 +445,8 @@ function seasonBanner(s, sotdZh) {
     link = SITE;
   }
   if (s.kind !== 'term' && t) tag = `${t.today ? '今日' : '节气 · '}${t.name}`;
+  const isTW = lang === 'tw';
+  if (isTW) [title, sub, tip, tag] = [title, sub, tip, tag].map(toTW);
   if (fx) css += fx.css;
   const tagW = tag ? Math.ceil(tw(tag, 12.5)) + 24 : 0;
   const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(`${title}。${sub}。${tip}`)}">
@@ -504,7 +472,7 @@ function seasonBanner(s, sotdZh) {
   <g class="u" style="animation-delay:.5s"><text x="44" y="184" class="tip">${esc(clip(`${tip} →`, 640, 14))}</text></g>
 </svg>
 `;
-  return { svg, link, title };
+  return { svg: isTW ? svg.replace(/'PingFang SC', 'Noto Sans CJK SC', 'Microsoft YaHei'/g, "'PingFang TC', 'Noto Sans CJK TC', 'Microsoft JhengHei'").replace(`>${esc(zhFull(DATE))}<`, `>${esc(toTW(zhFull(DATE)))}<`) : svg, link, title };
 }
 function lanterns(p) {
   const one = (x, del) => `<g class="sw" style="transform-origin:${x}px 0px;animation-delay:${del}s"><path d="M${x} 0V40" stroke="${p.accent}" stroke-width="1.5"/><ellipse cx="${x}" cy="66" rx="30" ry="26" fill="#e8322f"/><path d="M${x - 30} 66H${x + 30}M${x} 40V92" stroke="${p.accent}" stroke-width="1" opacity=".7"/><rect x="${x - 12}" y="38" width="24" height="6" rx="2" fill="${p.accent}"/><rect x="${x - 12}" y="88" width="24" height="6" rx="2" fill="${p.accent}"/><path d="M${x - 4} 94V114M${x} 94V118M${x + 4} 94V114" stroke="${p.accent}" stroke-width="1.5"/><text x="${x}" y="74" text-anchor="middle" font-size="22" font-weight="700" fill="${p.accent}">福</text></g>`;
@@ -607,6 +575,228 @@ function benchCard(theme, lang, mb) {
   <rect x="40" y="${ly - 10}" width="22" height="10" rx="5" fill="${c.accent}"/><text x="68" y="${ly}" class="k">${esc(T.skilled)}</text>
   <path d="M${150 + tw(T.skilled, 12.5)} ${ly - 12}V${ly + 2}" stroke="${c.ink}" stroke-width="2.5"/><text x="${160 + tw(T.skilled, 12.5)}" y="${ly}" class="k">${esc(T.bare)}</text>
 </svg>
+`;
+}
+
+// ── 7. China status history (no commits: the previous file is read back from Pages) ──
+async function statusHistory(status) {
+  let prev = [];
+  if (!OFFLINE) {
+    const r = await get(`${SITE}/live/cn-status-history.json`);
+    if (r.ok && Array.isArray(r.body?.days)) prev = r.body.days.filter((d) => d && /^\d{4}-\d{2}-\d{2}$/.test(d.date));
+  }
+  const today = { date: DATE, ...Object.fromEntries(status.map((c) => [c.id, c.state])) };
+  const days = [...prev.filter((d) => d.date < DATE), today].sort((a, b) => a.date.localeCompare(b.date)).slice(-30);
+  return { _comment: 'Daily reachability of the China channels, checked from GitHub servers. Rebuilt at deploy time from the previous copy on Pages; never committed.', days };
+}
+function historyCard(theme, hist) {
+  const c = THEMES[theme];
+  const W = 860, H = 236, x0 = 176, sz = 16, gap = 4;
+  const byDate = new Map(hist.days.map((d) => [d.date, d]));
+  const cols = Array.from({ length: 30 }, (_, i) => addDays(DATE, i - 29));
+  const colour = { up: c.good, down: '#c9821b', unknown: c.line };
+  const rows = CHANNELS.map((ch, r) => {
+    const y = 78 + r * 30;
+    const cells = cols.map((d, i) => {
+      const st = byDate.get(d)?.[ch.id];
+      return `<rect x="${x0 + i * (sz + gap)}" y="${y - 13}" width="${sz}" height="${sz}" rx="4" fill="${st ? colour[st] || c.line : 'none'}" stroke="${c.line}"${st ? '' : ' stroke-dasharray="2 2"'}><title>${d} ${esc(ch.label)}：${st === 'up' ? '在线' : st === 'down' ? '未响应' : st === 'unknown' ? '未检测' : '无记录'}</title></rect>`;
+    }).join('');
+    const ups = hist.days.filter((d) => d[ch.id] === 'up').length, seen = hist.days.filter((d) => d[ch.id] && d[ch.id] !== 'unknown').length;
+    return `<text x="40" y="${y}" class="l">${esc(ch.label)}</text>${cells}<text x="${W - 40}" y="${y}" text-anchor="end" class="k">${seen ? `${ups}/${seen}` : '-'}</text>`;
+  }).join('\n  ');
+  const aria = `国内渠道近 30 天在线记录：${CHANNELS.map((ch) => `${ch.label} ${hist.days.filter((d) => d[ch.id] === 'up').length} 天在线`).join('，')}。从 GitHub 服务器检测，不代表国内访问速度。`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(aria)}">
+  <style>text{font-family:${ZH_FONT}}.t{font-size:15px;font-weight:700;fill:${c.ink}}.l{font-size:13px;fill:${c.ink}}.k{font-size:12px;fill:${c.muted}}</style>
+  <rect width="${W}" height="${H}" rx="18" fill="${c.bg}"/>
+  <text x="40" y="40" class="t">国内渠道 · 近 30 天在线记录</text>
+  <text x="${W - 40}" y="40" text-anchor="end" class="k">每天从 GitHub 服务器检测一次，不代表国内访问速度</text>
+  ${rows}
+  <text x="${x0}" y="${H - 22}" class="k">${zhDate(cols[0])}</text><text x="${x0 + 29 * (sz + gap) + sz}" y="${H - 22}" text-anchor="end" class="k">${zhDate(DATE)}</text>
+  <rect x="${x0 + 200}" y="${H - 33}" width="12" height="12" rx="3" fill="${c.good}"/><text x="${x0 + 218}" y="${H - 22}" class="k">在线</text>
+  <rect x="${x0 + 262}" y="${H - 33}" width="12" height="12" rx="3" fill="#c9821b"/><text x="${x0 + 280}" y="${H - 22}" class="k">未响应</text>
+  <rect x="${x0 + 336}" y="${H - 33}" width="12" height="12" rx="3" fill="none" stroke="${c.line}" stroke-dasharray="2 2"/><text x="${x0 + 354}" y="${H - 22}" class="k">无记录</text>
+</svg>
+`;
+}
+
+// ── 8. What's new (top of CHANGELOG.md) ────────────────────────────────────
+function whatsNew() {
+  const md = readFileSync(join(root, 'CHANGELOG.md'), 'utf8').replace(/\r\n/g, '\n');
+  const clean = (b) => b.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/\*\*([^*]+)\*\*/g, '$1').replace(/`([^`]+)`/g, '$1').replace(/\s*[\u2014\u2013]\s*/g, ', ').trim();
+  for (const sec of md.split(/^## /m).slice(1)) {
+    const head = sec.split('\n')[0].trim();
+    const bullets = [...sec.matchAll(/^- (.+)$/gm)].map((m) => clean(m[1]));
+    if (!bullets.length || /^\[unreleased\]/i.test(head)) continue; // the card shows the latest release
+    const m = head.match(/^\[([^\]]+)\](?: - (.+?))?(?: - (\d{4}-\d{2}-\d{2}))?$/) || [];
+    return { version: m[1] || head, title: m[2] || '', date: m[3] || '', items: bullets.slice(0, 3) };
+  }
+  return null;
+}
+function whatsNewCard(theme, wn) {
+  const c = THEMES[theme];
+  const W = 860, H = 236;
+  const ver = /unreleased/i.test(wn.version) ? 'Coming in the next release' : `v${wn.version}${wn.date ? ` · ${enDate(wn.date)}` : ''}`;
+  const items = wn.items.map((it) => {
+    const m = it.match(/^([^:]{2,48}):\s*(.+)$/);
+    return m ? [m[1], m[2]] : ['', it];
+  });
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(`What's new, ${ver}. ${wn.items.join(' ')}`)}">
+  <style>
+    text{font-family:${FONT}}
+    .lbl{font-size:12px;fill:${c.muted};letter-spacing:.06em;text-transform:uppercase}
+    .t{font-size:21px;font-weight:700;fill:${c.ink}}
+    .b{font-size:14.5px;fill:${c.ink}}
+    .bb{font-weight:700;fill:${c.accent}}
+    @keyframes up{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .u{animation:up .6s ease-out both}
+    ${REDUCED()}
+  </style>
+  <rect width="${W}" height="${H}" rx="18" fill="${c.bg}"/>
+  <rect x="16" y="16" width="${W - 32}" height="${H - 32}" rx="14" fill="${c.card}" stroke="${c.line}"/>
+  <text x="40" y="51" class="lbl">${esc(`What's new · ${ver}`)}</text>
+  <text x="40" y="86" class="t">${esc(clip(wn.title || 'Latest changes', 780, 21))}</text>
+  ${items.map(([h, rest], i) => `<g class="u" style="animation-delay:${(0.15 + i * 0.2).toFixed(2)}s"><circle cx="46" cy="${122 + i * 30}" r="3.5" fill="${c.accent}"/><text x="60" y="${127 + i * 30}" class="b">${h ? `<tspan class="bb">${esc(h)}: </tspan>` : ''}${esc(clip(rest, 680 - (h ? tw(`${h}: `, 14.5) * 1.1 : 0), 14.5))}</text></g>`).join('\n  ')}
+</svg>
+`;
+}
+
+// ── 9. Per-skill badges ─────────────────────────────────────────────────────
+function skillBadge(s) {
+  const ev = s.eval && Number.isFinite(s.eval.score) ? s.eval.score : null;
+  const value = ev != null ? `eval ${ev.toFixed(1)} / 5${s.updated ? ` · ${s.updated.slice(0, 7)}` : ''}` : s.updated ? `updated ${s.updated.slice(0, 7)}` : (s.tier || 'skill');
+  const color = ev == null ? '#5d6670' : ev >= 4.5 ? '#2e8b57' : ev >= 4 ? '#3a6fb0' : '#c9821b';
+  return badge(`PM Skills · ${s.name}`, value, color, `${s.name} on PM Skills: ${value}`);
+}
+
+// ── 10. Calendar feed (.ics) ────────────────────────────────────────────────
+function calendarICS(examsNow) {
+  const from = addDays(DATE, -30), to = addDays(DATE, 400);
+  const inRange = (d) => d >= from && d <= to;
+  const ev = [];
+  const add = (date, days, summary, description, url, uid) => { if (inRange(date)) ev.push({ date, days, summary, description, url, uid }); };
+  const skillUrl = (n) => `${SITE}/skill/${n}.html`;
+  for (const t of allTerms) add(t.date, 1, `节气 · ${t.name}`, `${TERM_NOTE[t.name] || ''}，${t.time} 交节（北京时间）。`, `${SITE}/live/season.html`, `term-${t.date}`);
+  for (const [y, f] of Object.entries(CAL.festivals || {})) {
+    add(addDays(f.chunjie, -1), 1, '除夕', `${f.zodiac}年除夕。拜年话可以用拜年语生成器。`, `${SITE}/bainian.html`, `chuxi-${y}`);
+    add(f.chunjie, 1, `春节 · ${f.zodiac}年`, '新春快乐。', `${SITE}/bainian.html`, `chunjie-${y}`);
+    add(addDays(f.chunjie, 14), 1, '元宵节', '正月十五。', `${SITE}/bainian.html`, `yuanxiao-${y}`);
+    add(f.zhongqiu, 1, '中秋节', '但愿人长久，千里共婵娟。', `${SITE}/zhufu.html`, `zhongqiu-${y}`);
+    add(`${y}-10-01`, 7, '国庆假期（以官方安排为准）', '出游、调休和复工计划可以用调休规划器排。', `${SITE}/tiaoxiu.html`, `guoqing-${y}`);
+    add(`${y}-05-20`, 1, '618 备战开始', '跨境上新、平台报名、内容种草：pm-chuhai 与 pm-zh-content 技能包。', `${REPO}/tree/main/plugins/pm-chuhai`, `618-prep-${y}`);
+    add(`${y}-06-18`, 1, '618 年中大促', '复盘可以用 retro-analysis 技能。', `${REPO}/tree/main/plugins/pm-chuhai`, `618-${y}`);
+    add(`${y}-10-20`, 1, '双 11 备战开始', '种草笔记、直播话术、跨境 listing：pm-zh-content 与 pm-chuhai 技能包。', `${REPO}/tree/main/plugins/pm-zh-content`, `s11-prep-${y}`);
+    add(`${y}-11-11`, 1, '双 11', '大促当天。', `${REPO}/tree/main/plugins/pm-zh-content`, `s11-${y}`);
+  }
+  const years = [YEAR, YEAR + 1];
+  for (const id of Object.keys(RULES)) {
+    const e = EXAMS[id] || {};
+    for (const y of years) for (const sit of sittings(id, y)) {
+      add(sit.date, (e.span ?? 1) + 1, `${e.label || id}${sit.confirmed ? '' : '（预计）'}`, `${sit.confirmed ? '官方日期。' : '按往年规律推算，请以官方公告为准。'}备考技能：${e.skill}。`, skillUrl(e.skill), `exam-${id}-${sit.date}`);
+      add(addDays(sit.date, -30), 1, `${e.label || id} 冲刺开始（还有 30 天）`, '每日冲刺重点见冲刺页。', `${SITE}/live/sprint-${id}.html`, `sprint-${id}-${sit.date}`);
+    }
+  }
+  const icsEsc = (t) => String(t).replace(/\\/g, '\\\\').replace(/;/g, '\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
+  const fold = (line) => {
+    const out = []; let cur = '', bytes = 0;
+    for (const ch of line) {
+      const b = Buffer.byteLength(ch);
+      if (bytes + b > (out.length ? 74 : 75)) { out.push(cur); cur = ''; bytes = 0; }
+      cur += ch; bytes += b;
+    }
+    out.push(cur);
+    return out.join('\r\n ');
+  };
+  const ymd = (d) => d.replace(/-/g, '');
+  const stamp = `${new Date().toISOString().replace(/[-:]/g, '').slice(0, 15)}Z`;
+  const lines = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//PM Skills//China work calendar//ZH', 'CALSCALE:GREGORIAN', 'METHOD:PUBLISH',
+    'X-WR-CALNAME:PM Skills 中国工作日历', 'X-WR-CALDESC:二十四节气、节日、考试与大促节点，每个事件附上对应的技能。考试日期标“预计”的以官方公告为准。', 'X-WR-TIMEZONE:Asia/Shanghai',
+    'REFRESH-INTERVAL;VALUE=DURATION:P1D', 'X-PUBLISHED-TTL:P1D'];
+  for (const e of ev.sort((a, b) => a.date.localeCompare(b.date))) {
+    lines.push('BEGIN:VEVENT', `UID:${e.uid}@pm-claude-skills`, `DTSTAMP:${stamp}`, `DTSTART;VALUE=DATE:${ymd(e.date)}`, `DTEND;VALUE=DATE:${ymd(addDays(e.date, e.days))}`,
+      `SUMMARY:${icsEsc(e.summary)}`, `DESCRIPTION:${icsEsc(`${e.description}\n${e.url}`)}`, `URL:${e.url}`, 'TRANSP:TRANSPARENT', 'END:VEVENT');
+  }
+  lines.push('END:VCALENDAR');
+  return { ics: lines.map(fold).join('\r\n') + '\r\n', count: ev.length };
+}
+
+// ── 11. Exam sprint pages ───────────────────────────────────────────────────
+function sprintPage(x) {
+  const e = EXAMS[x.id] || {}; const plan = e.sprint || [];
+  const skillUrl = `${SITE}/skill/${x.skill}.html`;
+  const days = x.sprintDay ? Array.from({ length: x.left }, (_, i) => ({ date: addDays(DATE, i), focus: sprintFocus(plan, x.left - i) })) : [];
+  const head = x.sprintDay
+    ? `<p class="lead">今天是冲刺第 <b>${x.sprintDay}</b> 天，距离${esc(x.label)}（${zhDate(x.date)}${x.confirmed ? '' : '，预计'}）还有 <b>${x.left}</b> 天。</p>
+<div class="today"><span class="k">今日重点</span><p class="focus">${esc(x.focus || '')}</p></div>`
+    : x.left > 30 ? `<p class="lead">距离${esc(x.label)}（${zhDate(x.date)}${x.confirmed ? '' : '，预计'}）还有 <b>${x.left}</b> 天。最后 30 天，这里会自动变成每日冲刺计划。</p>`
+      : `<p class="lead">${esc(x.label)}正在进行或刚刚结束，祝你顺利！</p>`;
+  return `<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>${esc(x.label)}冲刺计划 | PM Skills</title>
+<meta name="robots" content="noindex" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  .sp-wrap { max-width: 640px; margin: 0 auto; padding: 24px 22px 70px; }
+  .lead { color: var(--muted); line-height: 1.7; }
+  .today { border: 1px solid var(--border); border-radius: 16px; background: var(--panel); padding: 18px 22px; margin: 18px 0; }
+  .k { color: var(--muted); font-size: 12.5px; }
+  .focus { font-size: 20px; font-weight: 700; margin: 6px 0 0; }
+  ol { line-height: 1.9; padding-left: 22px; }
+  .note { color: var(--muted); font-size: 13px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<main class="sp-wrap">
+<h1>${esc(x.label)}冲刺计划</h1>
+${head}
+${days.length ? `<h2 style="font-size:16px">剩下的每一天</h2>\n<ol>${days.map((d) => `<li>${zhDate(d.date)}：${esc(d.focus)}</li>`).join('')}</ol>` : plan.length ? `<h2 style="font-size:16px">冲刺期轮换的重点</h2>\n<ol>${plan.map((f) => `<li>${esc(f)}</li>`).join('')}</ol>` : ''}
+<p>想要按你的薄弱项排一份完整计划？打开 <a href="${esc(skillUrl)}">${esc(x.skill)}</a> 技能，告诉它你的目标分数、剩余天数和每天能学几小时。</p>
+<p class="note">考试日期${x.confirmed ? '来自官方公告' : '按往年规律推算，请以官方公告为准'}。也可以订阅 <a href="cn-calendar.ics">中国工作日历</a>，冲刺开始和考试当天都会提醒。每天北京时间零点后更新。</p>
+</main>
+</body>
+</html>
+`;
+}
+
+// ── 12. Solar-term post drafts ──────────────────────────────────────────────
+function termPost(t, pick) {
+  if (!t || !pick) return null;
+  const note = TERM_NOTE[t.name] || '';
+  const title = pick.title.replace(/技能$/, '');
+  return `<!-- 草稿：由 scripts/build-readme-live.mjs 按节气生成。发布前请用自己的话改写，加上真实的使用体验。 -->
+# ${t.name} · 内容草稿（${zhDate(t.date)} ${t.time} 交节）
+
+本期技能：「${title}」（${pick.name}）  
+技能页：${SITE}/skill/${pick.name}.html
+
+## 小红书
+
+标题：${t.name}｜${note.split('，')[0]}，顺手把「${title}」用起来
+
+封面文字：${t.name} · ${title}
+
+正文：
+${t.name}到了，${note}。
+这个节气我在用一个 AI 技能：「${title}」。
+它能做什么：${pick.summary}
+怎么用：装好 PM Skills 以后，直接对 AI 说「${pick.prompt}」。
+安装（国内镜像）：npx --registry=https://registry.npmmirror.com pm-claude-skills add
+
+#${t.name} #二十四节气 #AI工具 #效率工具 #打工人
+
+## 公众号
+
+标题：${t.name}｜${note}
+摘要：一个节气，一个能直接上手的 AI 技能：「${title}」。
+
+正文提纲：
+一、${t.name}：${note}（${zhDate(t.date)} ${t.time} 交节）
+二、本期技能：「${title}」。${pick.summary}
+三、试一试：对 AI 说「${pick.prompt}」
+四、怎么装：npx --registry=https://registry.npmmirror.com pm-claude-skills add，源码在 Gitee 镜像 https://gitee.com/mohitagw/pm-claude-skills
+五、下一个节气：${t.next.name}（${zhDate(t.next.date)}）
 `;
 }
 
@@ -742,7 +932,7 @@ function constellation(theme, lang) {
   let names;
   if (zh) {
     const zhDir = join(root, 'skills-i18n', 'zh');
-    names = (existsSync(zhDir) ? readdirSync(zhDir) : []).map(zhSkill).filter(Boolean).map((s) => s.title.replace(/技能$/, '')).filter((t) => t.length <= 10);
+    names = (existsSync(zhDir) ? readdirSync(zhDir) : []).map((n) => localSkill(root, 'zh', n)).filter(Boolean).map((s) => s.title.replace(/技能$/, '')).filter((t) => t.length <= 10);
   } else names = CONSTELLATION_NAMES.filter((n) => byName.has(n));
   const r = rng(`constellation-${lang}`);
   const order = names.map((n) => [r(), n]).sort((a, b) => a[0] - b[0]).map((x) => x[1]);
@@ -799,11 +989,15 @@ if (STATIC) {
     written.push(write(`constellation${sfx}.svg`, constellation(theme, lang)));
   }
 } else {
-  const sotd = skillOfTheDay();
-  const [stats, status] = await Promise.all([liveStats(), chinaStatus()]);
   const exams = examCountdowns();
+  const sotd = pickSkillOfTheDay({ root, date: DATE, catalogue, exams });
+  const [stats, status] = await Promise.all([liveStats(), chinaStatus()]);
+  const hist = await statusHistory(status);
   const s = season(DATE);
   const banner = seasonBanner(s, sotd.zh);
+  const sTW = season(DATE, 'tw');
+  const bannerTW = seasonBanner(sTW, sotd.zhTW, 'tw');
+  const wn = whatsNew();
   const mbPath = resolve(root, opt('modelbench', 'web/modelbench-zh.json'));
   const mb = readJSON(mbPath, null);
   for (const theme of ['dark', 'light']) {
@@ -814,19 +1008,42 @@ if (STATIC) {
     written.push(write(`stats-zh${t}.svg`, statsCard(theme, 'zh', stats)));
     written.push(write(`modelbench-zh${t}.svg`, benchCard(theme, 'zh', mb)));
     written.push(write(`modelbench-zh-en${t}.svg`, benchCard(theme, 'en', mb)));
+    written.push(write(`cn-status-history${t}.svg`, historyCard(theme, hist)));
+    if (wn) written.push(write(`whats-new${t}.svg`, whatsNewCard(theme, wn)));
   }
   for (const ch of status) written.push(write(`cn-status-${ch.id}.svg`, statusBadge(ch)));
-  for (const x of exams) written.push(write(`exam-${x.id}.svg`, examBadge(x)));
+  written.push(write('cn-status-history.json', JSON.stringify(hist, null, 2) + '\n'));
+  for (const x of exams) {
+    written.push(write(`exam-${x.id}.svg`, examBadge(x)));
+    written.push(write(`sprint-${x.id}.html`, sprintPage(x)));
+    written.push(write(`exam-${x.id}.html`, redirectPage(x.sprintDay ? `${SITE}/live/sprint-${x.id}.html` : `${SITE}/skill/${x.skill}.html`, x.sprintDay ? `${x.label}冲刺计划` : x.skill)));
+  }
   written.push(write('season.svg', banner.svg));
   written.push(write('season.html', redirectPage(banner.link, banner.title)));
+  written.push(write('season-tw.svg', bannerTW.svg));
+  written.push(write('season-tw.html', redirectPage(bannerTW.link, bannerTW.title, 'zh-TW')));
   if (sotd.en) written.push(write('skill-of-the-day.html', redirectPage(`${SITE}/skill/${sotd.en.name}.html`, sotd.en.title, 'en')));
   if (sotd.zh) written.push(write('skill-of-the-day-zh.html', redirectPage(`${SITE}/skill/${sotd.zh.name}.html`, sotd.zh.title)));
+  if (wn) written.push(write('whats-new.html', redirectPage(`${REPO}/blob/main/CHANGELOG.md`, `What's new: ${wn.version}`, 'en')));
+  // One badge per skill, for authors who link a skill from elsewhere.
+  mkdirSync(join(OUT, 'badge'), { recursive: true });
+  let badges = 0;
+  for (const sk of catalogue) if (/^[a-z0-9][a-z0-9-]*$/.test(sk.name)) { writeFileSync(join(OUT, 'badge', `${sk.name}.svg`), skillBadge(sk)); badges++; }
+  const cal = calendarICS(exams);
+  written.push(write('cn-calendar.ics', cal.ics));
+  const termPick = s.term ? pickSkillOfTheDay({ root, date: s.term.date, catalogue }).zh : null;
+  const post = termPost(s.term, termPick);
+  if (post) written.push(write('term-post.md', post));
   written.push(write('index.json', JSON.stringify({
     _comment: 'Generated by scripts/build-readme-live.mjs at Pages build time. Not committed.',
     date: DATE, generated: new Date().toISOString(), offline: OFFLINE,
-    skillOfTheDay: sotd, stats, chinaStatus: status, exams, season: { kind: s.kind, title: banner.title, link: banner.link, term: s.term && { name: s.term.name, date: s.term.date, today: s.term.today } },
+    skillOfTheDay: sotd, stats, chinaStatus: status, exams,
+    season: { kind: s.kind, title: banner.title, link: banner.link, term: s.term && { name: s.term.name, date: s.term.date, today: s.term.today } },
+    seasonTW: { kind: sTW.kind, title: bannerTW.title, link: bannerTW.link },
+    whatsNew: wn, badges, calendarEvents: cal.count, termPost: post ? { term: s.term.name, skill: termPick.name } : null,
     modelbench: { models: (mb && mb.models ? mb.models.length : 0) },
   }, null, 2) + '\n'));
+  console.log(`Also wrote ${badges} per-skill badges to badge/.`);
 }
 const rel = OUT.startsWith(root) ? OUT.slice(root.length + 1) : OUT;
 console.log(`Wrote ${written.length} file(s) to ${rel}/ for ${DATE}${OFFLINE ? ' (offline)' : ''}.`);

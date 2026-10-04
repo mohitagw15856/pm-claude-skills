@@ -296,6 +296,8 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
   <a href="https://www.modelscope.ai/datasets/mohitagw15856/pm-skills-instruct"><img alt="ModelScope dataset status" src="https://mohitagw15856.github.io/pm-claude-skills/live/cn-status-modelscope-dataset.svg"></a>
 </p>
 
+📅 [China work calendar](https://mohitagw15856.github.io/pm-claude-skills/live/cn-calendar.ics) (.ics): solar terms, festivals, exam dates and 618 and Double 11 milestones, each linked to a skill. [Live cards](https://mohitagw15856.github.io/pm-claude-skills/live-cards.html): embed any of these images, or grab a PNG for WeChat.
+
 <p align="center">
   <a href="https://mohitagw15856.github.io/pm-claude-skills/modelbench.html?set=zh">
     <picture>
@@ -366,6 +368,16 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
 
 ## 🆕 What's new
 
+<p align="center">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/live/whats-new.html">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/whats-new.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/whats-new-light.svg">
+    <img alt="What's new: the latest release, rebuilt from the changelog on every deploy" src="https://mohitagw15856.github.io/pm-claude-skills/live/whats-new-light.svg" width="100%">
+  </picture>
+  </a>
+</p>
+
 | Release | What it adds | Try saying |
 |---|---|---|
 | **[v81.2.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)** China compliance, Hong Kong and Taiwan | Data compliance for China (等保, 数据出境, PIPL, 大模型备案), Hong Kong and Taiwan in Traditional Chinese, a Dify plugin and 12 Dify apps, and every Chinese skill on ModelScope | *"帮我写个人信息保护影响评估"* · *"被資遣可以拿多少？"* |
@@ -397,6 +409,7 @@ Everything older: **[CHANGELOG.md](CHANGELOG.md)** · the write-ups: **[docs/WHA
 
 | You want to… | Do this |
 |---|---|
+| **See today's skill** | `npx pm-claude-skills today` *(or `--lang zh`)*: the same pick as the card above |
 | **Install in Claude Code** | `/plugin` → search **pm-skills** *(official Anthropic directory)*, or `npx pm-claude-skills add --agent claude` |
 | **Install in Cursor, Codex, Windsurf, Cline…** | `npx pm-claude-skills add --agent cursor` *(or `codex`, `windsurf`, `aider`, `cline`, `zed`…)* |
 | **Use one skill in ChatGPT or Gemini** | copy from [`exports/chatgpt/`](exports/chatgpt/) or [`exports/gemini/`](exports/gemini/) and paste it as instructions |

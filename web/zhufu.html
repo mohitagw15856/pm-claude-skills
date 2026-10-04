@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>祝福语生成器 · 中秋、教师节、生日、送别、感谢 | PM Skills</title>
+<meta name="description" content="中秋、教师节、生日、离职送别和感谢的祝福语：选场合、对象和语气，生成一条得体的话，一键复制。不调用 AI，不上传任何内容。" />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/zhufu.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .zf-wrap { max-width: 680px; margin: 0 auto; padding: 16px 22px 70px; }
+  .zf-wrap h1 { font-size: 26px; margin-bottom: 6px; }
+  .lead { color: var(--muted); line-height: 1.6; }
+  .panel { border: 1px solid var(--border); border-radius: 16px; background: var(--panel); padding: 20px 22px; margin: 20px 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px 16px; }
+  .field label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .field select, .field input { width: 100%; box-sizing: border-box; border: 1px solid var(--border); background: var(--bg); color: var(--text); border-radius: 10px; padding: 10px 12px; font-size: 15px; }
+  fieldset { border: 0; margin: 16px 0 0; padding: 0; }
+  legend { font-size: 13px; color: var(--muted); margin-bottom: 8px; padding: 0; }
+  .tones { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tones label { border: 1px solid var(--border); border-radius: 999px; padding: 8px 14px; cursor: pointer; font-size: 14px; }
+  .tones input { margin: 0 6px 0 0; accent-color: var(--accent); }
+  .out { white-space: pre-wrap; font-size: 16px; line-height: 1.8; min-height: 110px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; align-items: center; }
+  .btn { display: inline-block; border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 10px; padding: 10px 16px; cursor: pointer; font-size: 14.5px; text-decoration: none; }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .count { color: var(--muted); font-size: 12.5px; margin-left: auto; }
+  .note { color: var(--muted); font-size: 13px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="工具"></nav>
+<main class="zf-wrap">
+  <h1>💌 祝福语生成器</h1>
+  <p class="lead">中秋、教师节、生日、离职送别和感谢，选好场合、对象和语气，就能得到一条祝福。春节拜年请用 <a href="bainian.html">拜年语生成器</a>。不调用 AI，不上传任何内容；发出去之前，记得改成你自己的话。</p>
+
+  <form class="panel" id="form" onsubmit="return false">
+    <div class="grid">
+      <div class="field">
+        <label for="occasion">场合</label>
+        <select id="occasion">
+          <option value="zhongqiu">中秋节</option>
+          <option value="teacher">教师节</option>
+          <option value="birthday">生日</option>
+          <option value="farewell">离职、送别</option>
+          <option value="thanks">感谢</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="who">发给谁</label>
+        <select id="who">
+          <option value="elder">长辈</option>
+          <option value="boss">领导</option>
+          <option value="colleague" selected>同事</option>
+          <option value="client">客户</option>
+          <option value="friend">朋友</option>
+          <option value="teacher">老师</option>
+          <option value="partner">爱人</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="name">对方称呼（可选）</label>
+        <input id="name" type="text" maxlength="20" placeholder="例如：王总、李老师" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="sign">你的署名（可选）</label>
+        <input id="sign" type="text" maxlength="20" placeholder="例如：小陈" autocomplete="off" />
+      </div>
+    </div>
+    <fieldset>
+      <legend>语气</legend>
+      <div class="tones">
+        <label><input type="radio" name="tone" value="formal" />正式得体</label>
+        <label><input type="radio" name="tone" value="warm" checked />温暖走心</label>
+        <label><input type="radio" name="tone" value="playful" />轻松俏皮</label>
+      </div>
+    </fieldset>
+  </form>
+
+  <section class="panel" aria-labelledby="outTitle">
+    <h2 id="outTitle" style="font-size:15px;color:var(--muted);margin:0 0 10px;font-weight:600">你的祝福</h2>
+    <div class="out" id="out" aria-live="polite"></div>
+    <div class="actions">
+      <button type="button" class="btn primary" id="copyBtn">复制</button>
+      <button type="button" class="btn" id="nextBtn">换一条</button>
+      <span class="count" id="count"></span>
+    </div>
+  </section>
+
+  <p class="note">想写得更具体？把你们今年一起经历的事告诉 AI 助手，装上 <a href="https://github.com/mohitagw15856/pm-claude-skills">PM Skills</a> 后，它能帮你写一条只属于你们的话。</p>
+</main>
+<script>
+const WHO = {
+  elder: { sal: '敬爱的长辈', you: '您' }, boss: { sal: '尊敬的领导', you: '您' }, colleague: { sal: '亲爱的伙伴', you: '你' },
+  client: { sal: '尊敬的客户', you: '您' }, friend: { sal: '老朋友', you: '你' }, teacher: { sal: '敬爱的老师', you: '您' }, partner: { sal: '亲爱的', you: '你' },
+};
+// {Y} is 您 or 你, chosen by the recipient.
+const T = {
+  zhongqiu: {
+    formal: ['值此中秋佳节，恭祝{Y}阖家团圆、幸福安康，月圆人圆事事圆。', '中秋将至，感谢{Y}一直以来的关照。谨祝{Y}花好月圆，万事顺遂。'],
+    warm: ['月亮又圆了。不管在哪里，愿{Y}今晚身边有家人，桌上有月饼，心里有着落。中秋快乐！', '中秋快乐。今年辛苦了，愿{Y}在这个晚上好好歇一歇，看看月亮，想想开心的事。'],
+    playful: ['中秋快乐！月饼可以吃，体重别在意，烦恼像月亮一样，过了十五就缺一块。', '祝{Y}中秋：月饼有馅，假期有电，快乐像月亮一样圆！'],
+  },
+  teacher: {
+    formal: ['值此教师节，衷心感谢{Y}的悉心教导。祝{Y}身体健康、工作顺利、桃李满天下。', '师恩难忘。教师节之际，敬祝{Y}节日快乐，万事如意。'],
+    warm: ['教师节快乐！{Y}当年说过的那句话，我到现在还记得。谢谢{Y}，愿{Y}少些辛苦，多些属于自己的时间。', '谢谢{Y}在我最没信心的时候没有放弃我。教师节快乐，愿{Y}每天都被学生的进步惊喜到。'],
+    playful: ['教师节快乐！祝{Y}作业批得快、学生都争气、嗓子永远不哑！', '给最好的老师报到！祝{Y}节日快乐，粉丝（学生）越来越多，烦恼越来越少。'],
+  },
+  birthday: {
+    formal: ['值此生日之际，谨祝{Y}生日快乐、身体健康、事业顺遂。', '恭祝{Y}生辰快乐，新的一岁平安喜乐，万事如意。'],
+    warm: ['生日快乐！又长大一岁，愿{Y}新的一岁被温柔以待，想做的事都在路上。', '今天是属于{Y}的日子。谢谢{Y}一直在，愿{Y}的每个愿望都慢慢实现。'],
+    playful: ['生日快乐！祝{Y}年年十八，岁岁暴富，蛋糕吃到不想吃！', '生日快乐！今天{Y}最大，寿星说了算，许愿记得算我一份。'],
+  },
+  farewell: {
+    formal: ['感谢一起共事的这段时间，从{Y}身上学到了很多。祝{Y}前程似锦，在新的岗位上一切顺利。', '山水有相逢。祝{Y}新的旅程顺利，未来可期，我们常联系。'],
+    warm: ['舍不得{Y}走，但更替{Y}高兴。谢谢这段时间的照顾，新的地方一定会更好，有空回来坐坐。', '一起熬过的那些夜、赶过的那些线，我都记得。祝{Y}一路顺风，前程万里。'],
+    playful: ['恭喜毕业（离职）！祝{Y}新公司钱多事少离家近，年会抽到头等奖。', '江湖再见！以后我在{Y}的新公司也算有熟人了，请多关照。'],
+  },
+  thanks: {
+    formal: ['衷心感谢{Y}的帮助与支持，这份情谊我铭记在心。', '非常感谢{Y}在百忙之中给予的指导与帮助，期待今后有机会回报。'],
+    warm: ['谢谢{Y}在我最需要的时候搭了一把手。这件事对我很重要，一直记着。', '真的很感谢{Y}。没有{Y}的帮忙，这件事不会这么顺利。'],
+    playful: ['大恩不言谢，下次奶茶我包了！', '谢谢{Y}！已经把{Y}加进我的“靠谱名单”第一位。'],
+  },
+};
+const $ = (id) => document.getElementById(id);
+let variant = 0;
+function compose() {
+  const occasion = $('occasion').value;
+  if (occasion === 'teacher') $('who').value = 'teacher';
+  const who = $('who').value;
+  const tone = document.querySelector('input[name="tone"]:checked').value;
+  const W = WHO[who];
+  const list = T[occasion][tone];
+  const body = list[variant % list.length].replace(/\{Y\}/g, W.you);
+  const sal = $('name').value.trim() || W.sal;
+  const sign = $('sign').value.trim();
+  let text = `${sal}：\n${body}`;
+  if (sign) text += `\n${tone === 'formal' ? `${sign} 敬上` : sign}`;
+  $('out').textContent = text;
+  $('count').textContent = `${[...text.replace(/\n/g, '')].length} 字`;
+}
+$('form').addEventListener('input', () => { variant = 0; compose(); });
+$('form').addEventListener('change', () => { variant = 0; compose(); });
+$('nextBtn').addEventListener('click', () => { variant++; compose(); });
+$('copyBtn').addEventListener('click', async () => {
+  const text = $('out').textContent;
+  try { await navigator.clipboard.writeText(text); }
+  catch {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('aria-hidden', 'true'); ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch { /* nothing more to try */ }
+    ta.remove();
+  }
+  $('copyBtn').textContent = '已复制 ✓';
+  setTimeout(() => { $('copyBtn').textContent = '复制'; }, 1600);
+});
+// Default to the occasion nearest in the calendar: Mid-Autumn in September and October, Teachers' Day in early September.
+(function pickOccasion() {
+  const d = new Date(Date.now() + 8 * 3600e3), m = d.getUTCMonth() + 1, day = d.getUTCDate();
+  if (m === 9 && day <= 10) $('occasion').value = 'teacher';
+  else if (m === 9 || (m === 10 && day <= 7)) $('occasion').value = 'zhongqiu';
+  else $('occasion').value = 'birthday';
+})();
+compose();
+</script>
+<script src="nav.js"></script>
+</body>
+</html>

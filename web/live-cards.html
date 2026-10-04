@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Live cards: embed the daily PM Skills cards | PM Skills</title>
+<meta name="description" content="Pick a live card (skill of the day, stats, the seasonal banner, exam countdowns, China channel status, what's new), a language and a theme, and copy the snippet for your README, blog or site. The cards rebuild every day." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/live-cards.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .lc-wrap { max-width: 900px; margin: 0 auto; padding: 16px 22px 70px; }
+  .lc-wrap h1 { font-size: 26px; margin-bottom: 6px; }
+  .lead { color: var(--muted); line-height: 1.6; }
+  .panel { border: 1px solid var(--border); border-radius: 16px; background: var(--panel); padding: 20px 22px; margin: 20px 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px 16px; }
+  .field label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .field select { width: 100%; box-sizing: border-box; border: 1px solid var(--border); background: var(--bg); color: var(--text); border-radius: 10px; padding: 9px 12px; font-size: 15px; }
+  .preview { display: grid; gap: 12px; }
+  .preview figure { margin: 0; }
+  .preview figcaption { color: var(--muted); font-size: 12.5px; margin-bottom: 6px; }
+  .preview .frame { border-radius: 14px; padding: 12px; overflow-x: auto; }
+  .preview .light { background: #ffffff; border: 1px solid #e3ddd2; }
+  .preview .dark { background: #0d1117; border: 1px solid #30363d; }
+  .preview img { max-width: 100%; height: auto; display: block; }
+  pre { white-space: pre-wrap; word-break: break-all; background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; font-size: 13px; line-height: 1.55; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .btn { display: inline-block; border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 10px; padding: 10px 16px; cursor: pointer; font-size: 14.5px; text-decoration: none; }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .note { color: var(--muted); font-size: 13px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<main class="lc-wrap">
+  <h1>🪪 Live cards</h1>
+  <p class="lead">These images rebuild every day at 00:05 Beijing time, from the library itself. Pick one, copy the snippet, and it stays current wherever you paste it: a README, a blog, a team wiki. 这些图片每天北京时间零点后自动更新，复制代码即可嵌入。</p>
+
+  <form class="panel" id="form" onsubmit="return false">
+    <div class="grid">
+      <div class="field">
+        <label for="card">Card</label>
+        <select id="card"></select>
+      </div>
+      <div class="field">
+        <label for="lang">Language</label>
+        <select id="lang"></select>
+      </div>
+      <div class="field">
+        <label for="theme">Theme</label>
+        <select id="theme">
+          <option value="auto">Follow the reader (light and dark)</option>
+          <option value="light">Always light</option>
+          <option value="dark">Always dark</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="format">Format</label>
+        <select id="format">
+          <option value="picture">HTML &lt;picture&gt; (GitHub READMEs)</option>
+          <option value="md">Markdown image</option>
+          <option value="img">HTML &lt;img&gt;</option>
+          <option value="png">PNG link (WeChat, Weibo, Xiaohongshu)</option>
+        </select>
+      </div>
+    </div>
+  </form>
+
+  <section class="panel" aria-labelledby="pvTitle">
+    <h2 id="pvTitle" style="font-size:15px;color:var(--muted);margin:0 0 10px;font-weight:600">Preview</h2>
+    <div class="preview" id="preview"></div>
+  </section>
+
+  <section class="panel" aria-labelledby="snTitle">
+    <h2 id="snTitle" style="font-size:15px;color:var(--muted);margin:0 0 10px;font-weight:600">Snippet</h2>
+    <pre id="snippet"></pre>
+    <div class="actions"><button type="button" class="btn primary" id="copyBtn">Copy snippet</button><span class="note" id="hint"></span></div>
+  </section>
+
+  <p class="note">Also live: a subscribable calendar of solar terms, festivals, exam dates and shopping-festival milestones at <a href="live/cn-calendar.ics">live/cn-calendar.ics</a>, a badge for every skill at <code>live/badge/&lt;skill&gt;.svg</code>, and the day's data as JSON at <a href="live/index.json">live/index.json</a>. From a terminal: <code>npx pm-claude-skills today</code>.</p>
+</main>
+<script>
+const BASE = 'https://mohitagw15856.github.io/pm-claude-skills/live/';
+// themed: has <name>.svg (dark) and <name>-light.svg; single: one image for both themes.
+const CARDS = [
+  { id: 'sotd', label: 'Skill of the day', langs: { en: 'skill-of-the-day', zh: 'skill-of-the-day-zh' }, themed: true, link: { en: 'skill-of-the-day.html', zh: 'skill-of-the-day-zh.html' }, alt: 'Skill of the day from PM Skills', png: true },
+  { id: 'stats', label: 'Stats', langs: { en: 'stats', zh: 'stats-zh' }, themed: true, alt: 'PM Skills live numbers', png: true },
+  { id: 'whatsnew', label: "What's new", langs: { en: 'whats-new' }, themed: true, link: { en: 'whats-new.html' }, alt: "What's new in PM Skills", png: true },
+  { id: 'season', label: 'Seasonal banner (solar terms, festivals)', langs: { zh: 'season', 'zh-TW': 'season-tw' }, themed: false, link: { zh: 'season.html', 'zh-TW': 'season-tw.html' }, alt: '今日节气与节日', png: true },
+  { id: 'bench', label: 'Chinese model leaderboard', langs: { en: 'modelbench-zh-en', zh: 'modelbench-zh' }, themed: true, alt: 'Skill lift on Chinese models', png: true },
+  { id: 'history', label: 'China channels, 30-day record', langs: { zh: 'cn-status-history' }, themed: true, alt: '国内渠道近 30 天在线记录', png: true },
+  ...['gaokao', 'kaoyan', 'guokao', 'cet', 'ntce', 'fakao'].map((x) => ({ id: `exam-${x}`, label: `Exam countdown: ${{ gaokao: '高考', kaoyan: '考研', guokao: '国考', cet: '四六级', ntce: '教资', fakao: '法考' }[x]}`, langs: { zh: `exam-${x}` }, themed: false, link: { zh: `exam-${x}.html` }, alt: '考试倒计时' })),
+  ...['gitee', 'npmmirror', 'modelscope-studio', 'modelscope-dataset'].map((x) => ({ id: `st-${x}`, label: `China channel status: ${x}`, langs: { zh: `cn-status-${x}` }, themed: false, alt: `${x} 状态` })),
+];
+const LANGS = { en: 'English', zh: '简体中文', 'zh-TW': '繁體中文' };
+const $ = (id) => document.getElementById(id);
+const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+for (const c of CARDS) { const o = document.createElement('option'); o.value = c.id; o.textContent = c.label; $('card').appendChild(o); }
+
+function syncLangs() {
+  const c = CARDS.find((x) => x.id === $('card').value);
+  const prev = $('lang').value;
+  $('lang').innerHTML = '';
+  for (const l of Object.keys(c.langs)) { const o = document.createElement('option'); o.value = l; o.textContent = LANGS[l]; $('lang').appendChild(o); }
+  if (c.langs[prev]) $('lang').value = prev;
+  $('theme').disabled = !c.themed;
+  $('format').querySelector('option[value="png"]').disabled = !c.png;
+  if (!c.png && $('format').value === 'png') $('format').value = 'picture';
+}
+
+function render() {
+  const c = CARDS.find((x) => x.id === $('card').value);
+  const lang = $('lang').value, theme = c.themed ? $('theme').value : 'single', format = $('format').value;
+  const name = c.langs[lang];
+  const dark = `${BASE}${name}.svg`, light = c.themed ? `${BASE}${name}-light.svg` : dark;
+  const link = c.link && c.link[lang] ? `${BASE}${c.link[lang]}` : null;
+  const one = theme === 'dark' ? dark : light;
+  let code;
+  if (format === 'png') code = `${BASE}png/${c.themed ? `${name}-light` : name}.png`;
+  else if (format === 'md') code = link ? `[![${c.alt}](${one})](${link})` : `![${c.alt}](${one})`;
+  else if (format === 'img' || theme !== 'auto') code = `<img src="${one}" alt="${esc(c.alt)}" width="100%">`;
+  else code = `<picture>\n  <source media="(prefers-color-scheme: dark)" srcset="${dark}">\n  <source media="(prefers-color-scheme: light)" srcset="${light}">\n  <img src="${light}" alt="${esc(c.alt)}" width="100%">\n</picture>`;
+  if (link && format !== 'md' && format !== 'png') code = `<a href="${link}">\n${code}\n</a>`;
+  $('snippet').textContent = code;
+  $('hint').textContent = format === 'png' ? 'A still PNG, rebuilt daily, for apps that do not show SVG.' : link ? 'The link follows the card, so it always opens today’s pick.' : '';
+  const shots = c.themed && theme === 'auto' ? [['light', light], ['dark', dark]] : [[theme === 'dark' ? 'dark' : 'light', one]];
+  $('preview').innerHTML = shots.map(([t, src]) => `<figure><figcaption>${t === 'dark' ? 'Dark' : 'Light'} page</figcaption><div class="frame ${t}"><img src="${src}" alt="${esc(c.alt)}" loading="lazy"></div></figure>`).join('');
+}
+
+$('card').addEventListener('change', () => { syncLangs(); render(); });
+['lang', 'theme', 'format'].forEach((id) => $(id).addEventListener('change', render));
+$('copyBtn').addEventListener('click', async () => {
+  const text = $('snippet').textContent;
+  try { await navigator.clipboard.writeText(text); }
+  catch {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('aria-hidden', 'true'); ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch { /* nothing more to try */ }
+    ta.remove();
+  }
+  $('copyBtn').textContent = 'Copied ✓';
+  setTimeout(() => { $('copyBtn').textContent = 'Copy snippet'; }, 1600);
+});
+syncLangs(); render();
+</script>
+<script src="nav.js"></script>
+</body>
+</html>

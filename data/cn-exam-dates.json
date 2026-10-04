@@ -1,6 +1,6 @@
 {
-  "_comment": "Exam dates for the README countdown badges (scripts/build-readme-live.mjs). Add a year once the official notice is out and set confirmed to true. When a year is missing the script falls back to the rule below, so a stale file never breaks the badge.",
-  "_confirm": "高考: 教育部 announces each spring (the national papers start on 7 June). 考研: 研招网 (yz.chsi.com.cn) publishes the 初试 dates with the registration notice, usually in September or October. 国考: 国家公务员局 (scs.gov.cn) publishes the 笔试 date with the recruitment notice, usually in October.",
+  "_comment": "Exam dates for the README countdown badges, the sprint pages and the calendar feed (scripts/build-readme-live.mjs). Add a sitting once the official notice is out and set confirmed to true. When a sitting is missing the script falls back to the rule, so a stale file never breaks a badge; scripts/check-date-data.mjs flags a file that has run out.",
+  "_confirm": "高考: 教育部 announces each spring (the national papers start on 7 June). 考研: 研招网 (yz.chsi.com.cn) publishes the 初试 dates with the registration notice, usually in September or October. 国考: 国家公务员局 (scs.gov.cn) publishes the 笔试 date with the recruitment notice, usually in October. 四六级: 教育部教育考试院 (cet.neea.edu.cn) publishes each sitting. 教资: 中小学教师资格考试网 (ntce.neea.edu.cn). 法考: 司法部 (moj.gov.cn) publishes the 客观题 dates each spring.",
   "exams": {
     "gaokao": {
       "label": "高考",
@@ -8,9 +8,26 @@
       "skill": "cn-gaokao-planner",
       "rule": "7 June every year",
       "dates": {
-        "2027": { "date": "2027-06-07", "confirmed": true, "note": "The national papers have started on 7 June every year since 2003" },
-        "2028": { "date": "2028-06-07", "confirmed": true }
-      }
+        "2027": {
+          "date": "2027-06-07",
+          "confirmed": true,
+          "note": "The national papers have started on 7 June every year since 2003"
+        },
+        "2028": {
+          "date": "2028-06-07",
+          "confirmed": true
+        }
+      },
+      "span": 3,
+      "sprint": [
+        "语文：作文审题与素材整理",
+        "数学：错题本二刷，回到基础题型",
+        "英语：完形与阅读限时训练",
+        "理综或文综：主干知识框架默写",
+        "整套模拟：严格按考试时间做一套",
+        "查漏补缺：只看错题和易错点",
+        "作息调整：按考试时间作息，早睡早起"
+      ]
     },
     "kaoyan": {
       "label": "考研初试",
@@ -18,9 +35,27 @@
       "skill": "cn-kaoyan-planner",
       "rule": "the Saturday between 19 and 25 December (2022: 24 Dec, 2023: 23 Dec, 2024: 21 Dec, 2025: 20 Dec)",
       "dates": {
-        "2026": { "date": "2026-12-19", "confirmed": true, "source": "教育部《2027年全国硕士研究生招生工作管理规定》, published September 2026: 初试 19 and 20 December 2026" },
-        "2027": { "date": "2027-12-25", "confirmed": false }
-      }
+        "2026": {
+          "date": "2026-12-19",
+          "confirmed": true,
+          "source": "教育部《2027年全国硕士研究生招生工作管理规定》, published September 2026: 初试 19 and 20 December 2026"
+        },
+        "2027": {
+          "date": "2027-12-25",
+          "confirmed": false
+        }
+      },
+      "span": 1,
+      "sprint": [
+        "政治：大题背诵与时政回顾",
+        "英语：作文框架默写与仿写",
+        "专业课：框架回顾，默写核心概念",
+        "专业课：真题限时一套",
+        "数学或专业基础：错题重做",
+        "政治选择题：错题回顾",
+        "全真模拟：按初试时间做一整天",
+        "考场准备：准考证、身份证、文具清单"
+      ]
     },
     "guokao": {
       "label": "国考笔试",
@@ -28,8 +63,96 @@
       "skill": "cn-civil-exam-essay",
       "rule": "the last Saturday of November, a day either side in some years (2023: 26 Nov, 2024: 30 Nov, 2025: 30 Nov)",
       "dates": {
-        "2026": { "date": "2026-11-29", "confirmed": false, "note": "Forecast for the 2027 national exam; the notice is due mid-October 2026 at bm.scs.gov.cn" }
-      }
+        "2026": {
+          "date": "2026-11-29",
+          "confirmed": false,
+          "note": "Forecast for the 2027 national exam; the notice is due mid-October 2026 at bm.scs.gov.cn"
+        }
+      },
+      "span": 1,
+      "sprint": [
+        "行测：言语理解限时练",
+        "行测：数量关系先做会做的题",
+        "行测：判断推理图形与逻辑",
+        "行测：资料分析速算",
+        "申论：归纳概括题审题",
+        "申论：大作文提纲与开头结尾",
+        "全真模拟：行测 120 分钟加申论 180 分钟",
+        "考场准备：时间分配与涂卡顺序"
+      ]
+    },
+    "cet": {
+      "label": "英语四六级",
+      "labelEn": "CET-4/6",
+      "skill": "exam-study-plan",
+      "span": 0,
+      "rule": "the Saturday between 12 and 18 June and between 12 and 18 December (every sitting from 2023 to 2025 fits)",
+      "dates": {
+        "2026-12": {
+          "date": "2026-12-12",
+          "confirmed": false
+        },
+        "2027-06": {
+          "date": "2027-06-12",
+          "confirmed": false
+        }
+      },
+      "sprint": [
+        "听力：新闻与长对话精听",
+        "阅读：仔细阅读限时加选词填空",
+        "写作：常用句型与段落框架",
+        "翻译：中国文化类词汇",
+        "整套真题：按考试时间完成",
+        "听力：每天一套保持耳感"
+      ]
+    },
+    "ntce": {
+      "label": "教资笔试",
+      "labelEn": "Teacher qualification (written)",
+      "skill": "exam-prep-planner",
+      "span": 0,
+      "rule": "the second Saturday of March and the first Saturday of November (2024 to 2025 sittings fit)",
+      "dates": {
+        "2026-11": {
+          "date": "2026-11-07",
+          "confirmed": false
+        },
+        "2027-03": {
+          "date": "2027-03-13",
+          "confirmed": false
+        }
+      },
+      "sprint": [
+        "综合素质：法律法规与职业道德",
+        "综合素质：作文素材与框架",
+        "教育知识与能力：教育学原理",
+        "教育心理学：核心理论",
+        "学科知识：真题与教学设计",
+        "全真模拟：按考试时间做一套"
+      ]
+    },
+    "fakao": {
+      "label": "法考客观题",
+      "labelEn": "National judicial exam (objective)",
+      "skill": "exam-prep-planner",
+      "span": 1,
+      "rule": "the second weekend of September, from the Saturday (2024: 14 Sep, 2025: 13 Sep)",
+      "dates": {
+        "2027": {
+          "date": "2027-09-11",
+          "confirmed": false
+        }
+      },
+      "sprint": [
+        "民法：总则与物权重点",
+        "刑法：总则与常考罪名",
+        "行政法与行政诉讼法",
+        "民诉与刑诉：程序与期限",
+        "商经知：公司法与合同",
+        "理论法与三国法：快速过一遍",
+        "主观题：案例分析答题结构",
+        "全真模拟：客观题两卷"
+      ]
     }
   }
 }

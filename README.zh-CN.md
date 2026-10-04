@@ -253,6 +253,14 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
 </p>
 <sub>状态每天从 GitHub 服务器检测一次，✅ 表示在线，⚠️ 表示当天没有响应；不代表国内访问速度。</sub>
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/cn-status-history.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/cn-status-history-light.svg">
+    <img alt="国内渠道近 30 天在线记录，每天从 GitHub 服务器检测" src="https://mohitagw15856.github.io/pm-claude-skills/live/cn-status-history-light.svg" width="100%">
+  </picture>
+</p>
+
 ## 🏆 任务清单
 
 <table><tr><td width="72">
@@ -378,13 +386,18 @@ npx pm-claude-skills skillcheck --dir ./my-skills
 
 另外还有一千多个通用技能，覆盖产品、工程、数据、设计、市场、销售、人力、法律、财务等 35 个职业，见 [SKILLS.md](SKILLS.md)。[`skills-i18n/zh/`](skills-i18n/zh/) 有 73 个技能的简体中文版，[`skills-i18n/zh-TW/`](skills-i18n/zh-TW/) 有 27 个繁体中文版。
 
-考试倒计时：
+考试倒计时（最后 30 天点进去是每日冲刺计划）：
 
 <p>
-  <a href="https://mohitagw15856.github.io/pm-claude-skills/skill/cn-gaokao-planner.html"><img alt="高考倒计时" src="https://mohitagw15856.github.io/pm-claude-skills/live/exam-gaokao.svg"></a>
-  <a href="https://mohitagw15856.github.io/pm-claude-skills/skill/cn-kaoyan-planner.html"><img alt="考研初试倒计时" src="https://mohitagw15856.github.io/pm-claude-skills/live/exam-kaoyan.svg"></a>
-  <a href="https://mohitagw15856.github.io/pm-claude-skills/skill/cn-civil-exam-essay.html"><img alt="国考笔试倒计时" src="https://mohitagw15856.github.io/pm-claude-skills/live/exam-guokao.svg"></a>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/live/exam-gaokao.html"><img alt="高考倒计时" src="https://mohitagw15856.github.io/pm-claude-skills/live/exam-gaokao.svg"></a>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/live/exam-kaoyan.html"><img alt="考研初试倒计时" src="https://mohitagw15856.github.io/pm-claude-skills/live/exam-kaoyan.svg"></a>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/live/exam-guokao.html"><img alt="国考笔试倒计时" src="https://mohitagw15856.github.io/pm-claude-skills/live/exam-guokao.svg"></a>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/live/exam-cet.html"><img alt="英语四六级倒计时" src="https://mohitagw15856.github.io/pm-claude-skills/live/exam-cet.svg"></a>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/live/exam-ntce.html"><img alt="教资笔试倒计时" src="https://mohitagw15856.github.io/pm-claude-skills/live/exam-ntce.svg"></a>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/live/exam-fakao.html"><img alt="法考客观题倒计时" src="https://mohitagw15856.github.io/pm-claude-skills/live/exam-fakao.svg"></a>
 </p>
+
+📅 订阅 [中国工作日历](https://mohitagw15856.github.io/pm-claude-skills/live/cn-calendar.ics)：二十四节气、节日、考试和 618、双 11 备战节点，每个事件都附上对应的技能，每天自动更新。
 
 ## 💬 复制一句，马上就用
 
@@ -584,6 +597,10 @@ Temu 全托管、TikTok Shop 还是亚马逊 FBA？帮我对比一下。
 </table>
 
 [🧧 拜年语生成器](https://mohitagw15856.github.io/pm-claude-skills/bainian.html)：选对象、选语气、选生肖年份，一键复制新春祝福。
+
+[💌 祝福语生成器](https://mohitagw15856.github.io/pm-claude-skills/zhufu.html)（中秋、教师节、生日、送别、感谢） · [📋 年终总结与述职提纲](https://mohitagw15856.github.io/pm-claude-skills/nianzhong.html) · [🗓 调休规划器](https://mohitagw15856.github.io/pm-claude-skills/tiaoxiu.html) · [🪪 实时卡片嵌入](https://mohitagw15856.github.io/pm-claude-skills/live-cards.html)（每张卡片都有 PNG 版，可以直接发微信、微博和小红书）
+
+终端里看今日技能：`npx pm-claude-skills today --lang zh`
 
 
 <table><tr>
