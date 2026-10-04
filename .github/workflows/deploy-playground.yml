@@ -26,6 +26,8 @@ on:
       - 'examples/samples/**'
       - 'site/tech-tree/**'
       - 'scripts/build-tech-tree.mjs'
+      - 'integrations/dify-plugin/**'
+      - 'scripts/build-dify-plugin.mjs'
       - '.github/workflows/deploy-playground.yml'
   workflow_dispatch:
 
@@ -88,6 +90,23 @@ jobs:
           node scripts/build-tech-tree.mjs
           mkdir -p web/tech-tree
           cp site/tech-tree/index.html site/tech-tree/data.json web/tech-tree/
+
+      # Releases are immutable, so the Dify plugin is served from Pages at
+      # /dify/pm_skills.difypkg instead of attached to a release.
+      - name: Package the Dify plugin (published at /dify/pm_skills.difypkg)
+        env:
+          CLI_URL: https://github.com/langgenius/dify-plugin-daemon/releases/download/0.6.10/dify-plugin-linux-amd64
+          CLI_SHA256: 0cef74bcae375a4337c2ff7d42e4787717981a795e1c23cf56bb27ec07ec8304
+        run: |
+          set -euo pipefail
+          node scripts/build-dataset.mjs
+          node scripts/build-dify-plugin.mjs
+          (cd integrations/dify-plugin && python3 test_core.py)
+          curl -fsSL -o "$RUNNER_TEMP/dify" "$CLI_URL"
+          echo "${CLI_SHA256}  $RUNNER_TEMP/dify" | sha256sum -c -
+          chmod +x "$RUNNER_TEMP/dify"
+          mkdir -p web/dify
+          "$RUNNER_TEMP/dify" plugin package integrations/dify-plugin -o web/dify/pm_skills.difypkg
 
       - name: Configure Pages
         uses: actions/configure-pages@v6

@@ -9,7 +9,7 @@ Find the right professional skill for a request and load its full instructions i
 
 ## Install 安装
 
-1. Download `pm_skills.difypkg` from the latest [GitHub release](https://github.com/mohitagw15856/pm-claude-skills/releases/latest). 从 GitHub Release 下载 `pm_skills.difypkg`。
+1. Download [`pm_skills.difypkg`](https://mohitagw15856.github.io/pm-claude-skills/dify/pm_skills.difypkg), rebuilt whenever the library changes. 下载 [`pm_skills.difypkg`](https://mohitagw15856.github.io/pm-claude-skills/dify/pm_skills.difypkg)，技能库更新时自动重新打包。
 2. In Dify: **Plugins → Install plugin → Local package file**, and choose the file. 在 Dify 中：插件 → 安装插件 → 本地插件包。
 3. Self-hosted Dify only accepts unsigned community packages when `FORCE_VERIFYING_SIGNATURE=false` is set in its `.env` (then restart). 自部署的 Dify 需要在 `.env` 中设置 `FORCE_VERIFYING_SIGNATURE=false` 才能安装社区插件包。
 
