@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-3d-explorer",
+      "description": "Topic in, interactive 3D explorer out: the interface brief and mock prompt, image-to-3D prompts with a sourced parts list, a single-file Three.js viewer with clickable labelled parts, exploded view and quiz mode, and a pipeline that runs them in order",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-3d-explorer",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-oss-launch",
       "description": "Take a side project from works-on-my-machine to a repo strangers install, trust and contribute to: a benefit-led README, a no-signup demo, an importer from competitors, good first issues, a licence audit and NOTICE file, fortnightly releases, one-command self-hosting, a read-only MCP server and the 20-second demo clip",
       "version": "1.0.0",

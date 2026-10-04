@@ -1344,6 +1344,22 @@
   {
    "skill": "demo-clip-storyboard",
    "input": "Storyboard a 20-second demo clip for my CLI csvsnap that turns a messy CSV into a chart in the terminal. Audience is data people on X. CTA: pipx install csvsnap."
+  },
+  {
+   "skill": "explorer-interface-brief",
+   "input": "Design the interface for a 3D explorer of the human heart for GCSE biology students, used on school Chromebooks and phones."
+  },
+  {
+   "skill": "model-prompt-pack",
+   "input": "Write image-to-3D prompts for the parts of the heart students need for GCSE, with a sourced parts list. We use OpenStax Anatomy and Physiology 2e."
+  },
+  {
+   "skill": "explorer-viewer-builder",
+   "input": "Build a single-file viewer for heart.glb with clickable labelled parts, an exploded view and a quiz. Parts: LeftVentricle, RightVentricle, Aorta, PulmonaryArtery, each sourced to OpenStax A&P 2e section 19.1."
+  },
+  {
+   "skill": "explorer-pipeline",
+   "input": "Make a 3D explorer of a turbofan jet engine for an aviation museum touch screen, start to finish. Visitors are families; sources are the museum's exhibit text and the manufacturer's public cutaway diagram."
   }
  ]
 }
