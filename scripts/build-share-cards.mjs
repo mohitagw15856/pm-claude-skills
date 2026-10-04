@@ -58,7 +58,7 @@ export function cardEntry(raw) {
   for (const line of body.split('\n')) {
     const m = line.match(/^[-*]\s+(.+)/);
     if (!m) continue;
-    const p = plain(m[1]).split(/[——：:]/)[0].trim();
+    const p = plain(m[1]).split(/[\u2014：:]/)[0].trim();
     if (p.length >= 4 && p.length <= 40) points.push(p);
     if (points.length === 4) break;
   }

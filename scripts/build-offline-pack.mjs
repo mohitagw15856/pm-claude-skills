@@ -47,8 +47,8 @@ const copy = (from, to = from) => {
   return true;
 };
 // The pack root is also the CLI's package root, so `node bin/cli.mjs add …` works in place.
-const members = ['bin', 'skills', 'skills-i18n', 'plugins', 'agents', 'commands', 'output-styles', 'templates',
-  'workflows.json', 'skill-tiers.json', 'skill-sources.json', 'LICENSE', 'PACKS.md', 'icon.svg'].filter((m) => copy(m));
+const members = ['bin', 'mcp', 'skills', 'skills-i18n', 'plugins', 'agents', 'commands', 'output-styles', 'templates',
+  'workflows.json', 'skill-tiers.json', 'skill-sources.json', 'skill-dupes-allow.json', 'LICENSE', 'PACKS.md', 'icon.svg'].filter((m) => copy(m));
 // Rule-file agents (Cursor, Windsurf, Aider, Kilo Code) install from exports/<agent>; the
 // other exports are for tools with their own importers and stay out to keep the zip small.
 const RULEFILE_EXPORTS = ['cursor', 'windsurf', 'aider', 'kilocode'].filter((a) => copy(join('exports', a)));
@@ -190,6 +190,7 @@ const install = `# PM Skills 内网离线包 v${version}
 - \`skills/\`：全部技能（英文原版，每个文件夹一个 \`SKILL.md\`）
 - \`skills-i18n/\`：译文，\`zh\` 是简体中文，\`zh-TW\` 是繁体中文
 - \`plugins/\`：技能包清单（用于 \`--bundle\` 只装部分技能）
+- \`mcp/\`：本地 MCP 服务器，\`node mcp/server.mjs\`（stdio），Cherry Studio 等支持 MCP 的客户端可以接入
 - \`exports/\`：Cursor、Windsurf、Aider、Kilo Code 格式的规则文件
 - \`bin/\`：命令行工具，只依赖 Node.js 18 或更新版本，不需要 \`npm install\`
 - \`agents/\`、\`commands/\`、\`output-styles/\`：Claude Code 用的子智能体、斜杠命令和输出样式
