@@ -1,0 +1,50 @@
+name: Publish Chinese skills to ModelScope Skills Central
+
+# Creates every skill that has a Simplified or Traditional Chinese translation on
+# ModelScope Skills Central (@owner/name), through the ModelScope OpenAPI. Skills that
+# already exist are left alone, so re-running only adds new translations. Runs on each
+# release and on demand. Reuses MODELSCOPE_TOKEN and MODELSCOPE_HOST; the owner is the
+# account in MODELSCOPE_DATASET (owner/name).
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Publish at most this many new skills (0 = all)'
+        required: false
+        default: '0'
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check ModelScope is set up
+        id: gate
+        env:
+          MODELSCOPE_TOKEN: ${{ secrets.MODELSCOPE_TOKEN }}
+          MODELSCOPE_DATASET: ${{ vars.MODELSCOPE_DATASET }}
+        run: |
+          if [ -z "$MODELSCOPE_TOKEN" ] || [ -z "$MODELSCOPE_DATASET" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::MODELSCOPE_TOKEN or MODELSCOPE_DATASET is not set; skipping."
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+            echo "owner=${MODELSCOPE_DATASET%%/*}" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v7
+        if: steps.gate.outputs.enabled == 'true'
+      - name: Publish
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          MODELSCOPE_TOKEN: ${{ secrets.MODELSCOPE_TOKEN }}
+          MODELSCOPE_HOST: ${{ vars.MODELSCOPE_HOST || 'www.modelscope.cn' }}
+          MODELSCOPE_OWNER: ${{ steps.gate.outputs.owner }}
+          LIMIT: ${{ inputs.limit || '0' }}
+        run: |
+          printf '%s' "$LIMIT" | grep -Eq '^[0-9]+$' || { echo "::error::limit must be a number"; exit 1; }
+          python3 scripts/publish-modelscope-skills.py --limit "$LIMIT"
