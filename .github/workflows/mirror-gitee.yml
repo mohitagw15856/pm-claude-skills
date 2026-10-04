@@ -62,6 +62,20 @@ jobs:
           ssh-keyscan -t ed25519,rsa gitee.com >> ~/.ssh/known_hosts 2>/dev/null
           export GIT_SSH_COMMAND="ssh -i ~/.ssh/gitee -o IdentitiesOnly=yes"
           git remote add gitee "git@gitee.com:${GITEE_REPO}.git"
-          git push --force gitee HEAD:refs/heads/main
-          git push --force gitee 'refs/tags/v*:refs/tags/v*' || echo "::warning::tag push failed; main was mirrored"
+          # Gitee readers see the Chinese README first: README.zh-CN.md becomes README.md and
+          # the English one becomes README.en.md, which Gitee offers as a language switch.
+          # This one extra commit exists only on Gitee and is rebuilt on every sync.
+          git config user.name "pm-skills-bot"
+          git config user.email "actions@github.com"
+          if [ -f README.zh-CN.md ]; then
+            git mv -f README.md README.en.md
+            cp README.zh-CN.md README.md
+            sed -i 's#](README.md)#](README.en.md)#g; s#href="README.md"#href="README.en.md"#g' README.md
+            git add README.md README.en.md
+            git commit -q -m "Gitee: 中文 README 优先 (README.en.md is the English version)"
+          fi
+          # Gitee occasionally refuses a connection; retry with back-off before failing.
+          push() { for i in 1 2 3; do "$@" && return 0; echo "::warning::push attempt $i failed; retrying"; sleep $((i * 20)); done; return 1; }
+          push git push --force gitee HEAD:refs/heads/main
+          push git push --force gitee 'refs/tags/v*:refs/tags/v*' || echo "::warning::tag push failed; main was mirrored"
           rm -f ~/.ssh/gitee
