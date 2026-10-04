@@ -241,6 +241,9 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
 | 找到合适的技能 | [魔搭路由模型](https://www.modelscope.ai/models/mohitagw15856/pm-skills-router)，或 `npx pm-claude-skills find "写周报"` |
 | 训练数据 | [魔搭数据集](https://www.modelscope.ai/datasets/mohitagw15856/pm-skills-instruct) |
 | 在 Cherry Studio、Dify、FastGPT、MaxKB 里用 | 见 [在中国使用](docs/CHINA.md) |
+| 在不能上网的电脑上用（内网） | [内网离线包](https://mohitagw15856.github.io/pm-claude-skills/offline/pm-skills-offline.zip)（约 21 MB，也在 [Gitee 发行版](https://gitee.com/mohitagw/pm-claude-skills/releases)附件里），统信 UOS、银河麒麟安装见 [离线包说明](docs/zh/offline.md) |
+| 数据不出域，用本地模型 | Ollama / vLLM 跑通义千问、DeepSeek，模型从魔搭下载，见 [本地模型部署指南](docs/zh/local-models.md) |
+| 做一张小红书分享卡 | [分享卡生成器](https://mohitagw15856.github.io/pm-claude-skills/card.html)：3:4 封面图，三种模板，带二维码 |
 
 <p>
   <a href="https://gitee.com/mohitagw/pm-claude-skills"><img alt="Gitee 镜像状态" src="https://mohitagw15856.github.io/pm-claude-skills/live/cn-status-gitee.svg"></a>

@@ -39,6 +39,10 @@ git clone https://gitee.com/mohitagw/pm-claude-skills.git
 
 Gitee 镜像每次 GitHub 更新后自动同步：<https://gitee.com/mohitagw/pm-claude-skills>。之后用 `git pull` 更新即可。
 
+### 内网离线包（不能上网的电脑）
+
+一个约 21 MB 的 zip，包含全部技能、中文译文、免安装的命令行工具和本地 MCP 服务器，以及能直接双击打开的离线目录。在 [Gitee 发行版](https://gitee.com/mohitagw/pm-claude-skills/releases)或 [GitHub Pages](https://mohitagw15856.github.io/pm-claude-skills/offline/pm-skills-offline.zip) 下载。校验、Windows / macOS / Linux / 统信 UOS / 银河麒麟上的安装、只装部分技能包，见 [内网离线包说明](zh/offline.md)。
+
 ## 二、在国内常用的 AI 编程工具里使用
 
 | 工具 | 命令 | 规则写入位置 |
@@ -139,7 +143,12 @@ Router.load(f"{path}/router.json").route("帮我写周报", k=3)
 
 **在线试用**：Playground 的魔搭镜像 [PM Skills 技能试用](https://www.modelscope.ai/studios/mohitagw15856/pm-skills-playground)，用你自己的 DeepSeek、通义千问、Kimi、智谱或豆包 API Key 运行技能。
 
-## 七、反馈
+## 七、数据不出域和分享
+
+- **本地模型**：用 Ollama、vLLM 或 LM Studio 在自己的机器上运行通义千问和 DeepSeek，从魔搭下载模型，完全离线使用技能，见 [本地模型部署指南](zh/local-models.md)。
+- **小红书分享卡**：选一个技能，生成 3:4 的封面图（1080×1440），有大字标题、清单、便利贴三种模板，带二维码，见 [分享卡生成器](https://mohitagw15856.github.io/pm-claude-skills/card.html)。
+
+## 八、反馈
 
 欢迎用中文提 Issue，GitHub 和 [Gitee](https://gitee.com/mohitagw/pm-claude-skills/issues) 都可以。想学习怎么写自己的技能并贡献回来，见[开源小课](learn-zh/README.md)。如果某个技能在中国的场景下不准确，或者你希望增加哪些技能，请告诉我们。
 
@@ -164,4 +173,6 @@ What is in place, and what still needs an account or a decision.
 | Dify plugin | `.github/workflows/deploy-playground.yml` publishes [`pm_skills.difypkg`](https://mohitagw15856.github.io/pm-claude-skills/dify/pm_skills.difypkg) with the site | Nothing. Marketplace listing would need Dify's review and signing |
 | Chinese routing quality | `docs/ZH-ROUTING.md`, 200 requests, `npm run eval:zh-routing` | Nothing |
 | Router model on ModelScope | `.github/workflows/publish-modelscope-model.yml` trains `integrations/router-model/pm_router.py` and publishes mohitagw15856/pm-skills-router (variable `MODELSCOPE_MODEL`) on every release | Nothing |
+| Intranet offline pack | `scripts/build-offline-pack.mjs`; `deploy-playground.yml` serves it at [/offline/pm-skills-offline.zip](https://mohitagw15856.github.io/pm-claude-skills/offline/pm-skills-offline.zip) and the `offline-pack` job in `publish-gitee-release.yml` attaches it to each Gitee release | Nothing beyond `GITEE_TOKEN`. Guides: `docs/zh/offline.md`, `docs/zh/local-models.md` |
+| Xiaohongshu share cards | `web/card.html`; Chinese text from `scripts/build-share-cards.mjs` (`web/card-zh.json`, built on deploy) | Nothing |
 | Measuring Chinese usage | Partly | npmmirror publishes download counts per package; the Gitee mirror shows stars and forks. The country counter only sees visitors who can reach `workers.dev` |
