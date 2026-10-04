@@ -1,0 +1,54 @@
+{
+  "_comment": "Open skill requests and their votes, read by scripts/build-tech-tree.mjs. Refresh with --refresh-votes (counts 👍 on open skill-request issues) or --seed-votes (adds open rows from SKILL_REQUEST.md). Shipped names are removed automatically.",
+  "updated": "2026-10-04",
+  "requests": [
+    {
+      "name": "customer-health-scorecard",
+      "profession": "Customer Success",
+      "votes": 0,
+      "issue": null
+    },
+    {
+      "name": "qbr-deck-writer",
+      "profession": "Customer Success",
+      "votes": 0,
+      "issue": null
+    },
+    {
+      "name": "escalation-brief",
+      "profession": "Customer Success",
+      "votes": 0,
+      "issue": null
+    },
+    {
+      "name": "fundraising-memo",
+      "profession": "Startup / Founder",
+      "votes": 0,
+      "issue": null
+    },
+    {
+      "name": "newsletter-issue-writer",
+      "profession": "Content Creator",
+      "votes": 0,
+      "issue": null
+    },
+    {
+      "name": "analytics-event-taxonomy",
+      "profession": "Data / Analytics",
+      "votes": 0,
+      "issue": null
+    },
+    {
+      "name": "kpi-tree-builder",
+      "profession": "Data / Analytics",
+      "votes": 0,
+      "issue": null
+    },
+    {
+      "name": "dissertation-chapter-planner",
+      "profession": "Academic",
+      "votes": 0,
+      "issue": null
+    }
+  ]
+}

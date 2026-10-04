@@ -58,3 +58,4 @@ agensi-zips/
 
 # Offline bundle output (regenerate with scripts/build-offline-bundle.mjs)
 dist/
+web/tech-tree/

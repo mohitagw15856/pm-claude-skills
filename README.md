@@ -265,7 +265,7 @@ Every skill follows the same discipline: what it produces, the inputs it needs, 
 | <img src="web/docs-assets/logos/pm-design.svg" width="20" alt=""/> [Design & UX](plugins/pm-design/) | <img src="web/docs-assets/logos/pm-legal.svg" width="20" alt=""/> [Legal](plugins/pm-legal/) | <img src="web/docs-assets/logos/pm-finance.svg" width="20" alt=""/> [Finance](plugins/pm-finance/) |
 | <img src="web/docs-assets/logos/pm-founders.svg" width="20" alt=""/> [Founders](plugins/pm-founders/) | <img src="web/docs-assets/logos/pm-security.svg" width="20" alt=""/> [Security](plugins/pm-security/) | <img src="web/docs-assets/logos/pm-gov.svg" width="20" alt=""/> [Government](plugins/pm-gov/) |
 
-…plus HR, sales, operations, research, healthcare, educators, writers, social media, and more — **[the full profession index](SKILLS.md)**, or by bundle in [`plugins/`](plugins/) (140 bundles). Install any bundle: `/plugin install pm-decoders@pm-skills`.
+…plus HR, sales, operations, research, healthcare, educators, writers, social media, and more — **[the full profession index](SKILLS.md)**, or by bundle in [`plugins/`](plugins/) (140 bundles). Install any bundle: `/plugin install pm-decoders@pm-claude-skills`.
 
 ### Meta
 
@@ -381,6 +381,15 @@ No. Skills are inert text files in a folder; your assistant reads them when rele
 <details><summary><b>How do I know these are any good?</b></summary>
 Every skill passes a structural gate (SkillSpec L3) and a security scan in CI; 208 outputs are <a href="https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html">eval-scored in the open</a> (avg 4.8/5), and the <a href="skillbench/REPORT.md">benchmark report</a> publishes the negative findings too. When something is machine-translated or unscored, it's labelled.
 </details>
+
+## 🌳 The tech tree
+
+**[Open the tech tree →](https://mohitagw15856.github.io/pm-claude-skills/tech-tree/)** The whole library drawn as a strategy-game research tree: every bundle is a branch, every skill a node. Shipped skills are *researched*, the three most-voted requests are *in research*, and the rest are *proposed*. Search any skill, click it for its description, and copy its install command.
+
+- **Rebuild the data:** `node scripts/build-tech-tree.mjs` reads `.claude-plugin/marketplace.json` and `plugins/`, and writes `site/tech-tree/data.json`.
+- **Refresh the votes:** `node scripts/build-tech-tree.mjs --refresh-votes` counts 👍 reactions on open [`skill-request`](https://github.com/mohitagw15856/pm-claude-skills/issues?q=is%3Aissue+is%3Aopen+label%3Askill-request) issues and updates `site/tech-tree/votes.json`. To vote, react to a request or [open one](https://github.com/mohitagw15856/pm-claude-skills/issues/new?labels=skill-request&title=Skill:%20).
+- **Preview locally:** `npx serve site/tech-tree` (or `python3 -m http.server -d site/tech-tree`), then open the address it prints. Opening the file directly will not load `data.json`.
+- **GitHub Pages:** the *Deploy Skill Playground* workflow rebuilds the tree and publishes it at `/tech-tree/` on every push to `main`. In a fork, turn on Pages under **Settings → Pages → Source: GitHub Actions**, and the same workflow publishes it. The page is a single HTML file plus `data.json`, so any static host works too.
 
 ## 🗺️ Roadmap
 
