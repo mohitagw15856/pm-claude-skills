@@ -1,0 +1,67 @@
+name: Mirror to Gitee
+
+# Keeps a read-only mirror on Gitee, which is faster and more reliable than GitHub
+# from mainland China. Pushes main and the release tags after every push to main,
+# and once a day as a catch-up.
+#
+# Does nothing until it is set up, so forks and the main repo stay green:
+#   1. Create an empty repository on Gitee (for example mohitagw15856/pm-claude-skills).
+#   2. Create an SSH key pair. Add the public key to that Gitee repository as a
+#      deploy key with push access (or to your Gitee account).
+#   3. In this repository's settings, add the secret GITEE_SSH_KEY (the private key)
+#      and the variable GITEE_REPO (for example mohitagw15856/pm-claude-skills).
+# See docs/CHINA.md.
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  schedule:
+    - cron: '20 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mirror-gitee
+  cancel-in-progress: true
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the mirror is set up
+        id: gate
+        env:
+          GITEE_SSH_KEY: ${{ secrets.GITEE_SSH_KEY }}
+          GITEE_REPO: ${{ vars.GITEE_REPO }}
+        run: |
+          if [ -z "$GITEE_SSH_KEY" ] || [ -z "$GITEE_REPO" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::GITEE_SSH_KEY or GITEE_REPO is not set; skipping the Gitee mirror (see docs/CHINA.md)."
+          elif ! printf '%s' "$GITEE_REPO" | grep -Eq '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$'; then
+            echo "::error::GITEE_REPO must look like owner/name"
+            exit 1
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v7
+        if: steps.gate.outputs.enabled == 'true'
+        with:
+          fetch-depth: 0
+      - name: Push main and tags to Gitee
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          GITEE_SSH_KEY: ${{ secrets.GITEE_SSH_KEY }}
+          GITEE_REPO: ${{ vars.GITEE_REPO }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "$GITEE_SSH_KEY" > ~/.ssh/gitee && chmod 600 ~/.ssh/gitee
+          ssh-keyscan -t ed25519,rsa gitee.com >> ~/.ssh/known_hosts 2>/dev/null
+          export GIT_SSH_COMMAND="ssh -i ~/.ssh/gitee -o IdentitiesOnly=yes"
+          git remote add gitee "git@gitee.com:${GITEE_REPO}.git"
+          git push --force gitee HEAD:refs/heads/main
+          git push --force gitee 'refs/tags/v*:refs/tags/v*' || echo "::warning::tag push failed; main was mirrored"
+          rm -f ~/.ssh/gitee

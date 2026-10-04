@@ -198,10 +198,14 @@ for (const name of readdirSync(skillsDir)) {
   const text = readFileSync(file, 'utf8');
   const { meta, body } = parseFrontmatter(text);
   const titleHeading = body.match(/^#\s+(.+)$/m);
+  // A Chinese description, when a translation exists, so Chinese requests can be routed.
+  const zhFile = join(__dirname, '..', 'skills-i18n', 'zh', name, 'SKILL.md');
+  const descriptionZh = existsSync(zhFile) ? (parseFrontmatter(readFileSync(zhFile, 'utf8')).meta.description || '') : '';
   skills.push({
     name: meta.name || name,
     title: (titleHeading ? titleHeading[1] : titleFromName(meta.name || name)).replace(/\s+Skill$/i, ''),
     description: meta.description || '',
+    ...(descriptionZh ? { descriptionZh } : {}),
     summary: summarize(meta.description || ''),
     plugin: skillToPlugin[name] || 'other',
     tier: tierFor(name),

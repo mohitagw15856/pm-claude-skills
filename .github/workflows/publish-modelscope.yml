@@ -1,0 +1,69 @@
+name: Publish dataset to ModelScope
+
+# Mirrors dataset/ to ModelScope (魔搭), which is reachable from mainland China
+# where Hugging Face often is not. Runs on each release and on demand.
+#
+# Does nothing until it is set up:
+#   1. Create a dataset on ModelScope (for example mohitagw15856/pm-skills-instruct).
+#   2. Create an access token with write permission in your ModelScope account.
+#   3. Add the secret MODELSCOPE_TOKEN and the variable MODELSCOPE_DATASET
+#      (owner/name) to this repository.
+# ModelScope serves dataset repositories over git, with the token as the password
+# for the user "oauth2". See docs/CHINA.md.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check ModelScope is set up
+        id: gate
+        env:
+          MODELSCOPE_TOKEN: ${{ secrets.MODELSCOPE_TOKEN }}
+          MODELSCOPE_DATASET: ${{ vars.MODELSCOPE_DATASET }}
+        run: |
+          if [ -z "$MODELSCOPE_TOKEN" ] || [ -z "$MODELSCOPE_DATASET" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::MODELSCOPE_TOKEN or MODELSCOPE_DATASET is not set; skipping the ModelScope publish (see docs/CHINA.md)."
+          elif ! printf '%s' "$MODELSCOPE_DATASET" | grep -Eq '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$'; then
+            echo "::error::MODELSCOPE_DATASET must look like owner/name"
+            exit 1
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v7
+        if: steps.gate.outputs.enabled == 'true'
+      - uses: actions/setup-node@v7
+        if: steps.gate.outputs.enabled == 'true'
+        with:
+          node-version: '24'
+      - name: Rebuild the dataset from canonical sources
+        if: steps.gate.outputs.enabled == 'true'
+        run: node scripts/build-dataset.mjs
+      - name: Push to ModelScope
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          MODELSCOPE_TOKEN: ${{ secrets.MODELSCOPE_TOKEN }}
+          MODELSCOPE_DATASET: ${{ vars.MODELSCOPE_DATASET }}
+          TAG: ${{ github.event.release.tag_name || 'manual' }}
+        run: |
+          set -euo pipefail
+          git config --global user.name "pm-skills-bot"
+          git config --global user.email "actions@github.com"
+          # The token goes through a credential helper so it never appears in a URL or a log.
+          git config --global credential.helper '!f() { echo "username=oauth2"; echo "password=${MODELSCOPE_TOKEN}"; }; f'
+          git clone --depth 1 "https://www.modelscope.cn/datasets/${MODELSCOPE_DATASET}.git" ms
+          find ms -mindepth 1 -maxdepth 1 ! -name .git ! -name .gitattributes -exec rm -rf {} +
+          cp -R dataset/. ms/
+          cd ms
+          git add -A
+          if git diff --cached --quiet; then echo "No dataset changes."; exit 0; fi
+          git commit -q -m "Sync dataset from pm-claude-skills ${TAG}"
+          git push origin HEAD

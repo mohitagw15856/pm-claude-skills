@@ -23,7 +23,9 @@
     const text = (doc.body && doc.body.innerText ? doc.body.innerText : '').replace(/\s+/g, ' ').trim();
     return text.split(' ').slice(0, max).join(' ');
   }
-  function onNeverHost(host, never) { return (never || []).some((n) => host === n || host.endsWith('.' + n) || host.includes(n)); }
+  // `never` is either a list of hosts or { hosts: [...], reason } (the shape in context-rules.json).
+  function neverHosts(never) { return Array.isArray(never) ? never : (never && Array.isArray(never.hosts) ? never.hosts : []); }
+  function onNeverHost(host, never) { return neverHosts(never).some((n) => host === n || host.endsWith('.' + n) || host.includes(n)); }
 
   // Returns { rule, skills, label, method, p, confidence } or null.
   async function pickSkillForPage({ rules, never, doc, host, apiKey, fetchFn, threshold = 0.6 }) {
@@ -61,6 +63,7 @@ if (typeof process !== 'undefined' && process.argv && process.argv.includes('--s
     const { readFileSync } = await import('node:fs');
     const { resolve, dirname } = await import('node:path');
     const m = globalThis.pmJevSuggest;
+    const neverHostsForTest = (n) => (Array.isArray(n) ? n : (n && Array.isArray(n.hosts) ? n.hosts : []));
     const cfg = JSON.parse(readFileSync(resolve(dirname(process.argv[1]), 'context-rules.json'), 'utf8'));
     let pass = 0, fail = 0; const ok = (c, msg) => (c ? pass++ : (fail++, console.error('  ✗', msg)));
     const doc = { title: 'Residential Lease Agreement', body: { innerText: 'THIS LEASE is made between Landlord and Tenant. Security deposit of $2,000 is due at signing. Term: 12 months. Early termination fee…' } };
@@ -68,7 +71,7 @@ if (typeof process !== 'undefined' && process.argv && process.argv.includes('--s
     const r = await m.pickSkillForPage({ rules: cfg.rules, never: cfg.never, doc, host: 'docs.example.com', apiKey: 'k', fetchFn });
     ok(r && r.rule === 'lease' && r.skills.includes('lease-decoder'), 'lease page → lease rule');
     ok((await m.pickSkillForPage({ rules: cfg.rules, never: cfg.never, doc, host: 'docs.example.com', apiKey: '', fetchFn })) === null, 'no key → null (sends nothing)');
-    const bank = (cfg.never || [])[0] || 'bank.example';
+    const bank = neverHostsForTest(cfg.never)[0] || 'bank.example';
     ok((await m.pickSkillForPage({ rules: cfg.rules, never: cfg.never, doc, host: bank, apiKey: 'k', fetchFn })) === null, `never host (${bank}) → null`);
     const low = async () => ({ ok: true, json: async () => ({ answers: { situation: { choice: 'lease', probabilities: { lease: 0.4 }, confidence: 0.2 } } }) });
     ok((await m.pickSkillForPage({ rules: cfg.rules, never: cfg.never, doc, host: 'x.com', apiKey: 'k', fetchFn: low })) === null, 'weak pick → null');
