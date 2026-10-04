@@ -81,6 +81,64 @@
     errOf: function (e) { return e.error ? (e.error.message || 'Ollama error') : ''; },
   };
 
+  // Chinese model providers. All five speak the OpenAI chat completions format with
+  // SSE streaming, and all allow direct calls from a web page (checked with a CORS
+  // preflight on 2026-10-04). Model names change often, so each list ends with
+  // "Other model ID…", which lets the user type the current name.
+  // Model names checked against each provider's own documentation on 2026-10-04.
+  var CUSTOM_MODEL = '__custom__';
+  function openAICompatible(cfg) {
+    return Object.assign({
+      buildReq: function (o) {
+        var messages = [];
+        if (o.system) messages.push({ role: 'system', content: o.system });
+        messages.push({ role: 'user', content: o.userMessage });
+        return {
+          url: cfg.url,
+          headers: { 'content-type': 'application/json', authorization: 'Bearer ' + o.key },
+          body: { model: o.model, stream: true, messages: messages },
+        };
+      },
+      // Thinking models stream reasoning_content first; only the answer is shown.
+      delta: function (e) { return (e.choices && e.choices[0] && e.choices[0].delta && e.choices[0].delta.content) || ''; },
+      errOf: function (e) { return e.error ? (e.error.message || cfg.name + ' error') : ''; },
+    }, cfg, { models: cfg.models.concat([[CUSTOM_MODEL, 'Other model ID… / 其他模型']]) });
+  }
+  PROVIDERS.deepseek = openAICompatible({
+    name: 'DeepSeek', label: 'DeepSeek 深度求索', keyStore: 'deepseek_api_key',
+    placeholder: 'sk-… (DeepSeek API key)', keyUrl: 'https://platform.deepseek.com/api_keys',
+    url: 'https://api.deepseek.com/chat/completions',
+    models: [['deepseek-flash', 'DeepSeek Flash (V4.1)'], ['deepseek-v4-pro', 'DeepSeek V4 Pro']],
+  });
+  PROVIDERS.qwen = openAICompatible({
+    name: 'Qwen', label: 'Qwen 通义千问', keyStore: 'qwen_api_key',
+    placeholder: 'sk-… (Alibaba Cloud Model Studio / 百炼 API key)', keyUrl: 'https://bailian.console.aliyun.com/?apiKey=1',
+    url: 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions',
+    models: [['qwen3.8-flash', 'Qwen3.8 Flash'], ['qwen3.7-plus', 'Qwen3.7 Plus'], ['qwen3.8-max', 'Qwen3.8 Max']],
+  });
+  PROVIDERS.kimi = openAICompatible({
+    name: 'Kimi', label: 'Kimi 月之暗面', keyStore: 'kimi_api_key',
+    placeholder: 'sk-… (Moonshot / Kimi API key)', keyUrl: 'https://platform.moonshot.cn/console/api-keys',
+    url: 'https://api.moonshot.cn/v1/chat/completions',
+    models: [['kimi-k2.6', 'Kimi K2.6'], ['kimi-k3', 'Kimi K3']],
+  });
+  PROVIDERS.glm = openAICompatible({
+    name: 'GLM', label: 'GLM 智谱（免费模型）', keyStore: 'glm_api_key', free: true,
+    placeholder: '… (Zhipu BigModel API key / 智谱 API key)', keyUrl: 'https://bigmodel.cn/usercenter/proj-mgmt/apikeys',
+    url: 'https://open.bigmodel.cn/api/paas/v4/chat/completions',
+    models: [['glm-4.7-flash', 'GLM-4.7 Flash (free / 免费)'], ['glm-4.5-flash', 'GLM-4.5 Flash (free / 免费)']],
+  });
+  PROVIDERS.doubao = openAICompatible({
+    // Doubao: preflight passes, but error responses carry no CORS headers, so only a
+    // valid key and an activated model ID will work. Not yet verified with a real key.
+    name: 'Doubao', label: 'Doubao 豆包', keyStore: 'doubao_api_key',
+    placeholder: '… (Volcengine Ark API key / 火山方舟 API key)', keyUrl: 'https://console.volcengine.com/ark/region:ark+cn-beijing/apiKey',
+    url: 'https://ark.cn-beijing.volces.com/api/v3/chat/completions',
+    models: [['doubao-seed-2-1-lite-260915', 'Doubao Seed 2.1 Lite'], ['doubao-seed-2-1-pro-260915', 'Doubao Seed 2.1 Pro']],
+  });
+  var CN_PROVIDERS = ['deepseek', 'qwen', 'kimi', 'glm', 'doubao'];
+  function customModelKey(p) { return 'pm_custom_model_' + p; }
+
   // In-browser model — zero key, zero cost, fully private. Runs via WebLLM on WebGPU.
   // The model weights download once (cached by the browser); generation never leaves the device.
   PROVIDERS.webllm = {
@@ -154,7 +212,17 @@
 
   // New visitors default to the free, no-credit-card path (Gemini). Anyone who has already
   // chosen a provider keeps their choice.
-  function providerId() { var p = localStorage.getItem(PROVIDER_STORE); return PROVIDERS[p] ? p : 'gemini'; }
+  // Mainland Chinese browsers default to GLM's free model: Gemini and the hosted
+  // Claude trial are not reachable from mainland China.
+  function prefersChineseModels() {
+    try { return /^zh(-(cn|hans|sg))?$/i.test(navigator.language || '') || /^zh-hans/i.test(navigator.language || ''); } catch (_) { return false; }
+  }
+  function providerId() {
+    var p = null;
+    try { p = localStorage.getItem(PROVIDER_STORE); } catch (_) {}
+    if (PROVIDERS[p]) return p;
+    return prefersChineseModels() ? 'glm' : 'gemini';
+  }
   function current() { return PROVIDERS[providerId()]; }
   function modelStoreKey(p) { return 'pm_model_' + p; }
 
@@ -175,6 +243,7 @@
       msel.innerHTML = cfg.models.map(function (m) { return '<option value="' + m[0] + '">' + m[1] + '</option>'; }).join('');
       var saved = localStorage.getItem(modelStoreKey(p));
       if (saved && cfg.models.some(function (m) { return m[0] === saved; })) msel.value = saved;
+      syncCustomModel(msel);
     }
     var kf = d.getElementById('apiKey');
     if (kf) {
@@ -193,10 +262,50 @@
     }
   }
 
+  // "Other model ID…": a small text field after the model menu, shown only when chosen.
+  // The value is stored per provider and used in place of the menu value when streaming.
+  function syncCustomModel(msel) {
+    var d = document, p = providerId(), input = d.getElementById('customModel');
+    var wanted = msel.value === CUSTOM_MODEL;
+    if (!wanted) { if (input) input.hidden = true; return; }
+    if (!input) {
+      input = d.createElement('input');
+      input.id = 'customModel';
+      input.type = 'text';
+      input.autocomplete = 'off';
+      input.spellcheck = false;
+      input.setAttribute('aria-label', 'Model ID / 模型名称');
+      input.placeholder = 'model ID / 模型名称';
+      input.className = msel.className;
+      input.style.cssText = 'min-width:0;max-width:220px';
+      input.addEventListener('input', function (e) { localStorage.setItem(customModelKey(providerId()), e.target.value.trim()); });
+      msel.insertAdjacentElement('afterend', input);
+    }
+    input.hidden = false;
+    input.value = localStorage.getItem(customModelKey(p)) || '';
+  }
+
+  // Add any provider the page's menu does not list yet (the Chinese providers, for
+  // pages written before they existed), under a labelled group.
+  function addMissingProviders(ps) {
+    var d = document, missing = CN_PROVIDERS.filter(function (id) { return !ps.querySelector('option[value="' + id + '"]'); });
+    if (!missing.length) return;
+    var group = d.createElement('optgroup');
+    group.label = '中国模型 · Chinese models';
+    missing.forEach(function (id) {
+      var opt = d.createElement('option');
+      opt.value = id;
+      opt.textContent = PROVIDERS[id].label || PROVIDERS[id].name;
+      group.appendChild(opt);
+    });
+    ps.appendChild(group);
+  }
+
   // Wire #provider + #apiKey + #model listeners + initial fill. Call once on load.
   function initProviderUI() {
     var d = document, ps = d.getElementById('provider');
     if (ps) {
+      addMissingProviders(ps);
       ps.value = providerId();
       ps.addEventListener('change', function (e) { localStorage.setItem(PROVIDER_STORE, e.target.value); applyProvider(); });
     }
@@ -204,7 +313,7 @@
     var kf = d.getElementById('apiKey');
     if (kf) kf.addEventListener('input', function (e) { localStorage.setItem(current().keyStore, e.target.value.trim()); });
     var ms = d.getElementById('model');
-    if (ms) ms.addEventListener('change', function (e) { localStorage.setItem(modelStoreKey(providerId()), e.target.value); });
+    if (ms) ms.addEventListener('change', function (e) { localStorage.setItem(modelStoreKey(providerId()), e.target.value); syncCustomModel(ms); });
     // The free-Claude-trial: injected on EVERY page when the deployment has it
     // enabled (no per-page markup needed), removed when it doesn't. First-time
     // visitors with no saved provider and no saved key default straight into it —
@@ -219,12 +328,13 @@
         }
         if (!on) {
           if (opt) opt.remove();
-          if (providerId() === 'tryclaude') { localStorage.setItem(PROVIDER_STORE, 'gemini'); ps.value = 'gemini'; applyProvider(); }
+          if (providerId() === 'tryclaude') { var fallback = prefersChineseModels() ? 'glm' : 'gemini'; localStorage.setItem(PROVIDER_STORE, fallback); ps.value = fallback; applyProvider(); }
           return;
         }
         var chosen = localStorage.getItem(PROVIDER_STORE);
-        var hasAnyKey = !!(localStorage.getItem('gemini_api_key') || localStorage.getItem('anthropic_api_key') || localStorage.getItem('openai_api_key'));
-        if (!chosen && !hasAnyKey) {
+        var keyStores = ['gemini_api_key', 'anthropic_api_key', 'openai_api_key'].concat(CN_PROVIDERS.map(function (id) { return PROVIDERS[id].keyStore; }));
+        var hasAnyKey = keyStores.some(function (k) { return !!localStorage.getItem(k); });
+        if (!chosen && !hasAnyKey && !prefersChineseModels()) {
           localStorage.setItem(PROVIDER_STORE, 'tryclaude');
           ps.value = 'tryclaude'; applyProvider();
         } else if (providerId() === 'tryclaude') {
@@ -240,8 +350,21 @@
     var prov = current();
     if (prov.proxy) return streamTry(opts);
     if (prov.local) return streamLocal(opts);
+    if (opts.model === CUSTOM_MODEL) {
+      var typed = (localStorage.getItem(customModelKey(providerId())) || '').trim();
+      if (!typed) throw new Error('Type a model ID in the box next to the model menu. / 请在模型菜单旁输入模型名称。');
+      opts = Object.assign({}, opts, { model: typed });
+    }
     var req = prov.buildReq(opts);
-    var res = await fetch(req.url, { method: 'POST', headers: req.headers, body: JSON.stringify(req.body), signal: opts.signal });
+    var res;
+    try {
+      res = await fetch(req.url, { method: 'POST', headers: req.headers, body: JSON.stringify(req.body), signal: opts.signal });
+    } catch (err) {
+      if (err && err.name === 'AbortError') throw err;
+      // Some APIs (Doubao among them) send error responses without browser permission
+      // headers, so a wrong key or model surfaces here as a network failure.
+      throw new Error('Could not reach ' + prov.name + '. Check your network, the API key and the model ID. / 无法连接 ' + prov.name + '，请检查网络、API Key 和模型名称。');
+    }
     if (!res.ok) throw new Error(parseApiError(await res.text(), res.status));
     var reader = res.body.getReader(), dec = new TextDecoder(), buf = '', acc = '';
     while (true) {

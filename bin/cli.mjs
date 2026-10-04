@@ -8,11 +8,12 @@
 //   npx pm-claude-skills list
 //
 // Flags for `add`:
-//   --agent <name>   claude | hermes | codex | openclaw | cursor   (required)
+//   --agent <name>   see `list` (required)
+//   --bundle <a,b>   only the skills in these bundles (e.g. pm-china-work,pm-cv)
 //   --target <path>  override the default install directory
 //   --link           symlink instead of copy (native agents; falls back to copy)
 //   --dry-run        print what would happen without writing
-import { readdirSync, existsSync, mkdirSync, rmSync, cpSync, symlinkSync, copyFileSync, statSync, readFileSync } from 'node:fs';
+import { readdirSync, existsSync, mkdirSync, rmSync, cpSync, symlinkSync, copyFileSync, statSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname, basename, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
@@ -28,6 +29,34 @@ const VERSION = (() => {
 const NATIVE = new Set(['claude', 'hermes', 'codex', 'openclaw']);
 // Rule-file agents install generated files from exports/<agent> (ext per agent).
 const RULEFILE = { cursor: '.mdc', windsurf: '.md', aider: '.md', kilocode: '.md' };
+// Generated rule-file agents: rule files are written at install time from skills/,
+// so the package does not carry thousands of near-identical files per tool.
+// Formats follow each tool's documented rule frontmatter (checked 2026-10-04).
+const yamlString = (s) => JSON.stringify(String(s));
+const GENERATED = {
+  trae: {
+    dir: ['.trae', 'rules'],
+    note: 'Trae applies each rule when its description matches the task (apply intelligently).',
+    render: (d, body) => `---\ndescription: ${yamlString(d)}\nalwaysApply: false\n---\n\n${body}\n`,
+  },
+  qoder: {
+    dir: ['.qoder', 'rules'],
+    note: 'Qoder applies each rule by model decision, from its description.',
+    render: (d, body) => `---\ntrigger: model_decision\ndescription: ${yamlString(d)}\n---\n\n${body}\n`,
+  },
+  lingma: {
+    dir: ['.lingma', 'rules'],
+    maxChars: 10000,
+    note: 'Lingma applies each rule by model decision. It truncates any rule file over 10,000 characters.',
+    render: (d, body) => `---\ntrigger: model_decision\ndescription: ${yamlString(d)}\n---\n\n${body}\n`,
+  },
+  codebuddy: {
+    dir: ['.codebuddy', 'rules'],
+    note: 'CodeBuddy loads each rule on demand when its description is relevant.',
+    render: (d, body) => `---\ndescription: ${yamlString(d)}\nalwaysApply: false\nenabled: true\n---\n\n${body}\n`,
+  },
+};
+const AGENTS = [...NATIVE, ...Object.keys(RULEFILE), ...Object.keys(GENERATED)];
 const defaultTarget = (agent) => ({
   claude: join(homedir(), '.claude', 'skills'),
   hermes: join(homedir(), '.hermes', 'skills'),
@@ -37,7 +66,32 @@ const defaultTarget = (agent) => ({
   windsurf: join(process.cwd(), '.windsurf', 'rules'),
   aider: join(process.cwd(), '.aider', 'skills'),
   kilocode: join(process.cwd(), '.kilocode', 'rules'),
+  ...Object.fromEntries(Object.entries(GENERATED).map(([k, g]) => [k, join(process.cwd(), ...g.dir)])),
 }[agent]);
+
+// Split a SKILL.md into its description and body (CRLF-safe).
+function splitSkill(text) {
+  const m = text.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?/);
+  if (!m) return { description: '', body: text.trim() };
+  const d = m[1].split(/\r?\n/).map((l) => l.match(/^description:\s*(.*)$/)).find(Boolean);
+  const description = d ? d[1].trim().replace(/^"([\s\S]*)"$/, '$1').replace(/^'([\s\S]*)'$/, '$1') : '';
+  return { description, body: text.slice(m[0].length).trim() };
+}
+
+// --bundle a,b → the set of skill names in those bundles, or null for no filter.
+function bundleFilter(value) {
+  if (value === undefined || value === null) return null;
+  const names = String(value).split(',').map((s) => s.trim()).filter(Boolean);
+  if (!names.length) { console.error('Error: --bundle needs at least one bundle name, e.g. --bundle pm-china-work'); process.exit(2); }
+  const allowed = new Set();
+  for (const b of names) {
+    if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(b)) { console.error(`Error: "${b}" is not a bundle name.`); process.exit(2); }
+    const dir = join(PKG_ROOT, 'plugins', b, 'skills');
+    if (!existsSync(dir)) { console.error(`Error: no bundle called "${b}". See the bundles in plugins/.`); process.exit(2); }
+    for (const s of readdirSync(dir)) if (existsSync(join(dir, s, 'SKILL.md'))) allowed.add(s);
+  }
+  return allowed;
+}
 
 function parse(argv) {
   const out = { _: [] };
@@ -166,10 +220,11 @@ function placeDir(src, dest, { link, dryRun }) {
 
 function add(opts) {
   const agent = opts.agent;
-  if (!agent || !(NATIVE.has(agent) || agent in RULEFILE)) {
-    console.error(`Error: --agent must be one of: claude, hermes, codex, openclaw, cursor, windsurf, aider, kilocode.`);
+  if (!agent || !AGENTS.includes(agent)) {
+    console.error(`Error: --agent must be one of: ${AGENTS.join(', ')}.`);
     process.exit(2);
   }
+  const only = bundleFilter(opts.bundle);
   const skillsDir = join(PKG_ROOT, 'skills');
   if (!existsSync(skillsDir)) { console.error(`Error: bundled skills/ not found at ${skillsDir}.`); process.exit(1); }
   const target = resolve(opts.target || defaultTarget(agent));
@@ -186,12 +241,31 @@ function add(opts) {
   console.log(`${opts.dryRun ? '[dry-run] ' : ''}Installing for '${agent}' into ${target}`);
   if (!opts.dryRun) mkdirSync(target, { recursive: true });
 
-  if (agent in RULEFILE) {
+  if (agent in GENERATED) {
+    const gen = GENERATED[agent];
+    const tooLong = [];
+    for (const name of readdirSync(skillsDir).sort()) {
+      const src = join(skillsDir, name, 'SKILL.md');
+      if (!existsSync(src)) continue;
+      if (only && !only.has(name)) continue;
+      const raw = readFileSync(src, 'utf8');
+      if (/^deprecated:/m.test((raw.match(/^---\r?\n([\s\S]*?)\r?\n---/) || [, ''])[1])) continue;
+      const { description, body } = splitSkill(raw);
+      const out = gen.render(description, body);
+      if (gen.maxChars && out.length > gen.maxChars) tooLong.push(name);
+      const dest = join(target, `${name}.md`);
+      if (opts.dryRun) console.log(`  would write ${name}.md -> ${dest}`);
+      else writeFileSync(dest, out);
+      count++;
+    }
+    if (tooLong.length) console.log(`  note: ${tooLong.length} rule file(s) exceed ${gen.maxChars.toLocaleString('en')} characters and will be truncated by ${agent}: ${tooLong.slice(0, 5).join(', ')}${tooLong.length > 5 ? ', …' : ''}`);
+  } else if (agent in RULEFILE) {
     const ext = RULEFILE[agent];
     const exportDir = join(PKG_ROOT, 'exports', agent);
     if (!existsSync(exportDir)) { console.error(`Error: ${exportDir} missing.`); process.exit(1); }
     for (const f of listFiles(exportDir, ext).sort()) {
       if (basename(f) === 'README.md') continue;   // skip the generated index
+      if (only && !only.has(basename(f, ext))) continue;
       const dest = join(target, basename(f));
       if (opts.dryRun) console.log(`  would install ${basename(f)} -> ${dest}`);
       else copyFileSync(f, dest);
@@ -202,6 +276,7 @@ function add(opts) {
     for (const name of readdirSync(skillsDir)) {
       const src = join(skillsDir, name);
       if (!existsSync(join(src, 'SKILL.md'))) continue;
+      if (only && !only.has(name)) continue;
       placeDir(src, join(target, name), opts);
       count++;
     }
@@ -251,6 +326,7 @@ function add(opts) {
       windsurf: `Windsurf will pick up the rules in ${target} on its next session.`,
       aider: `Load any of them with:  aider --read ${join(target, '<skill>.md')}`,
       kilocode: `Kilo Code will pick up the rules in ${target} on its next session.`,
+      ...Object.fromEntries(Object.entries(GENERATED).map(([k, g]) => [k, `${g.note} Rules written to ${target}.`])),
     }[agent] || `Restart ${agent} — it auto-discovers SKILL.md skills in ${target} by their description.`;
     console.log(note);
     console.log(`\n${STAR}`);
@@ -260,12 +336,14 @@ function add(opts) {
 function list() {
   console.log('Supported agents and default targets:\n');
   // Derive from the registries above so this can't drift from what `add` accepts.
-  for (const a of [...NATIVE, ...Object.keys(RULEFILE)]) {
+  for (const a of AGENTS) {
     console.log(`  ${a.padEnd(9)} ${defaultTarget(a)}`);
   }
   console.log('\nNative SKILL.md agents: claude, hermes, codex, openclaw (install skill folders).');
   console.log('Claude also gets subagents + slash commands. Cursor / Windsurf / Kilo Code install');
   console.log('rule files; Aider installs conventions you load with "aider --read".');
+  console.log('Trae, Qoder, Lingma (通义灵码) and CodeBuddy get rule files generated at install time.');
+  console.log('Add --bundle pm-china-work,pm-cv to install only some bundles.');
   console.log(`\n${STAR}`);
 }
 
@@ -274,7 +352,14 @@ function list() {
 // `find` tokenizes a task, drops stopwords, and RANKS every skill by term overlap
 // against title+description, nudged by tier and (existing) eval score. No API/network.
 const FIND_STOP = new Set(('a an the of to in on or and for with your you i we my our need want help me please how do can could make write create build draft produce prepare prep get set run use using when asked into that this from each will able about more also not no is are be as at any one it its their them they then over same first start new mine give me').split(/\s+/));
-const findTokens = (s) => (String(s).toLowerCase().match(/[a-z0-9]+/g) || []).filter((w) => w.length > 2 && !FIND_STOP.has(w));
+const FIND_ZH_STOP = new Set(['帮我', '我写', '写一', '一份', '一个', '一下', '我的', '怎么', '什么', '可以', '需要', '如何', '请帮', '给我', '这个', '我们']);
+const findTokens = (s) => {
+  const latin = (String(s).toLowerCase().match(/[a-z0-9]+/g) || []).filter((w) => w.length > 2 && !FIND_STOP.has(w));
+  // Chinese has no spaces: match it as two-character pieces.
+  const zh = [];
+  for (const run of String(s).match(/[\u4e00-\u9fff]{2,}/g) || []) for (let i = 0; i < run.length - 1; i++) { const bi = run.slice(i, i + 2); if (!FIND_ZH_STOP.has(bi)) zh.push(bi); }
+  return [...latin, ...zh];
+};
 // Present the eval field honestly — a real measured score or an explicit "no claim",
 // never an invented number. Mirrors the badge shown on the web catalog.
 function evalBadge(ev) {
@@ -302,7 +387,7 @@ function find(opts) {
   const ql = query.toLowerCase();
   const scored = catalogForFind().map((s) => {
     const titleSet = new Set(findTokens(`${s.title || s.name} ${s.name}`));
-    const hset = new Set([...titleSet, ...findTokens(s.description || '')]);
+    const hset = new Set([...titleSet, ...findTokens(`${s.description || ''} ${s.descriptionZh || ''}`)]);
     let overlap = 0, titleHits = 0;
     for (const t of qset) { if (hset.has(t)) overlap++; if (titleSet.has(t)) titleHits++; }
     const phrase = (s.description || '').toLowerCase().includes(ql) ? 2 : 0;
@@ -371,7 +456,7 @@ const HELP = `pm-claude-skills — install professional Agent Skills into any AI
 (This is a CLI, not a library — you don't need \`npm install\`; \`npx …\` always runs the latest.)
 
 Usage:
-  npx pm-claude-skills add --agent <claude|hermes|codex|openclaw|cursor|windsurf|aider> [--target <path>] [--link] [--dry-run]
+  npx pm-claude-skills add --agent <${AGENTS.join('|')}> [--bundle <a,b>] [--target <path>] [--link] [--dry-run]
   npx pm-claude-skills run <skill> [--text "…" | --input <file>] [--model <m>] [--out <file>]
   npx pm-claude-skills find "<describe your task>" [--json] [--limit <n>]   # ranked task→skill router (start here)
   npx pm-claude-skills search [query…] [--json] [--limit <n>]
@@ -397,6 +482,8 @@ Examples:
   npx pm-claude-skills add --agent cursor     # .mdc rules into ./.cursor/rules
   npx pm-claude-skills add --agent windsurf   # .md rules into ./.windsurf/rules
   npx pm-claude-skills add --agent codex --link
+  npx pm-claude-skills add --agent trae --bundle pm-china-work,pm-cv   # Trae rules for two bundles
+  npx pm-claude-skills add --agent qoder      # Qoder / Lingma: --agent lingma
 
   npx pm-claude-skills find "prep a QBR for an at-risk account"   # describe the task, get ranked skills + a measured/unmeasured badge
   npx pm-claude-skills search board            # exact keyword filter by name/description
