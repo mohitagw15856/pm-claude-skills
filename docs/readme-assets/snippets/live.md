@@ -54,7 +54,7 @@
 
 <!-- 6. CHINESE MODEL LEADERBOARD. Goes in the benchmarks / SkillBench section, after the existing model leaderboard. Shows a "first run in progress" placeholder until web/modelbench-zh.json has results. -->
 <p align="center">
-  <a href="https://mohitagw15856.github.io/pm-claude-skills/modelbench.html">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/modelbench.html?set=zh">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/modelbench-zh-en.svg">
       <source media="(prefers-color-scheme: light)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/modelbench-zh-en-light.svg">

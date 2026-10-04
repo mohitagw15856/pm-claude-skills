@@ -333,7 +333,7 @@ npx pm-claude-skills skillcheck --dir ./my-skills
 ## 质量
 
 <p align="center">
-  <a href="https://mohitagw15856.github.io/pm-claude-skills/modelbench.html">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/modelbench.html?set=zh">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/modelbench-zh.svg">
       <source media="(prefers-color-scheme: light)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/modelbench-zh-light.svg">

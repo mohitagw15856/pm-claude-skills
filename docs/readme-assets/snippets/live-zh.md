@@ -69,7 +69,7 @@
 
 <!-- 8. 中文模型技能增益榜。放在评测 / SkillBench 章节。第一轮结果出来前显示“首次评测进行中”。 -->
 <p align="center">
-  <a href="https://mohitagw15856.github.io/pm-claude-skills/modelbench.html">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/modelbench.html?set=zh">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/modelbench-zh.svg">
       <source media="(prefers-color-scheme: light)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/modelbench-zh-light.svg">
