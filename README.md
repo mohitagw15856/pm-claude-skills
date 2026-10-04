@@ -178,7 +178,8 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
 
 | Release | What it adds | Try saying |
 |---|---|---|
-| **[v81.1.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)** launch kit and 3D explorer | Nine skills to ship a side project strangers trust, a topic-to-3D-explorer pipeline, the [tech tree](https://mohitagw15856.github.io/pm-claude-skills/tech-tree/), and Chinese exam and office-tool skills | *"Make my app self-hostable."* · *"Build a 3D explorer of the heart."* |
+| **[v81.2.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)** China compliance, Hong Kong and Taiwan | Data compliance for China (等保, 数据出境, PIPL, 大模型备案), Hong Kong and Taiwan in Traditional Chinese, a Dify plugin and 12 Dify apps, and every Chinese skill on ModelScope | *"帮我写个人信息保护影响评估"* · *"被資遣可以拿多少？"* |
+| **[v81.1.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v81.1.0)** launch kit and 3D explorer | Nine skills to ship a side project strangers trust, a topic-to-3D-explorer pipeline, the [tech tree](https://mohitagw15856.github.io/pm-claude-skills/tech-tree/), and Chinese exam and office-tool skills | *"Make my app self-hostable."* · *"Build a 3D explorer of the heart."* |
 | **[v81.0.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v81.0.0)** Chinese support and the CV studio | Five packs for Chinese users, Chinese models and coding tools, 75 translations, and a CV shaped for one company | *"帮我写周报"* · *"Write my CV for this Monzo job."* |
 | **[v80.2.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v80.2.0)** trust in a release | A check that every release installs and runs, announcements in `doctor`, and frozen versions of the flagship skills | *"Run the doctor."* |
 

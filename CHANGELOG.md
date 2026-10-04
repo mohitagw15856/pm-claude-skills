@@ -9,6 +9,8 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [81.2.0] - China compliance, Hong Kong and Taiwan, Dify and Chinese routing - 2026-10-04
+
 **1250 skills · 144 bundles** (from 1235 · 142 at v81.1.0).
 
 ### Added
@@ -20,6 +22,7 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 - **Tech tree**: a Chinese interface and share posters with a QR code. **Playground**: voice input.
 - **Gitee**: the mirror shows the Chinese README first and retries pushes; Chinese release notes publish to Gitee once a token is set. A GitCode mirror workflow, ready for keys.
 - Animated READMEs in English and Chinese; an OSPP project proposal and a filled Datawhale proposal.
+- **ModelScope Skills Central**: all 75 Chinese translations listed under @mohitagw15856, published by `scripts/publish-modelscope-skills.py` (skips skills already there, backs off when rate-limited).
 
 ## [81.1.0] - Launch kit, 3D explorer, tech tree and more for China - 2026-10-04
 
