@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="384" viewBox="0 0 900 384" role="img" aria-label="对比：同样三个请求，普通 AI 的回答与加载技能后的回答。补偿金、申论、周报。">
+  <style>
+    text{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', Helvetica, Arial, sans-serif}
+    .lbl{font-size:12px;fill:#9aa4b1;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+    .ask{font-size:15px;fill:#e6f0fa}
+    .chip{font-size:12.5px;fill:#e9dcff;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+    .gen{font-size:14px;fill:#6f7884;font-style:italic}
+    .out{font-size:14px;fill:#eef1f4}
+    .vb{font-size:13px;fill:#e58a8a;font-weight:600}
+    .vg{font-size:13px;fill:#7cc4ae;font-weight:600}
+    .title{font-size:13px;fill:#9aa4b1}
+    @keyframes b0{0%,0.27%{opacity:0;transform:translateY(5px)}2.00%,31.33%{opacity:1;transform:none}32.67%,100%{opacity:0}}.b0{animation:b0 15s infinite;opacity:0}@keyframes ty0{0%,0.67%{width:0}6.33%,100%{width:428.1999999999999px}}.ty0{animation:ty0 15s infinite steps(22,end)}@keyframes g0_0{0%,6.93%{opacity:0;transform:translateY(5px)}8.67%,31.33%{opacity:1;transform:none}32.67%,100%{opacity:0}}.g0_0{animation:g0_0 15s infinite;opacity:0}@keyframes g0_1{0%,7.73%{opacity:0;transform:translateY(5px)}9.47%,31.33%{opacity:1;transform:none}32.67%,100%{opacity:0}}.g0_1{animation:g0_1 15s infinite;opacity:0}@keyframes g0_2{0%,8.53%{opacity:0;transform:translateY(5px)}10.27%,31.33%{opacity:1;transform:none}32.67%,100%{opacity:0}}.g0_2{animation:g0_2 15s infinite;opacity:0}@keyframes k0{0%,9.60%{opacity:0;transform:translateY(5px)}11.33%,31.33%{opacity:1;transform:none}32.67%,100%{opacity:0}}.k0{animation:k0 15s infinite;opacity:0}@keyframes s0_0{0%,11.93%{opacity:0;transform:translateY(5px)}13.67%,31.33%{opacity:1;transform:none}32.67%,100%{opacity:0}}.s0_0{animation:s0_0 15s infinite;opacity:0}@keyframes s0_1{0%,14.47%{opacity:0;transform:translateY(5px)}16.20%,31.33%{opacity:1;transform:none}32.67%,100%{opacity:0}}.s0_1{animation:s0_1 15s infinite;opacity:0}@keyframes s0_2{0%,17.00%{opacity:0;transform:translateY(5px)}18.73%,31.33%{opacity:1;transform:none}32.67%,100%{opacity:0}}.s0_2{animation:s0_2 15s infinite;opacity:0}@keyframes s0_3{0%,19.53%{opacity:0;transform:translateY(5px)}21.27%,31.33%{opacity:1;transform:none}32.67%,100%{opacity:0}}.s0_3{animation:s0_3 15s infinite;opacity:0}@keyframes v0{0%,22.60%{opacity:0;transform:translateY(5px)}24.33%,31.33%{opacity:1;transform:none}32.67%,100%{opacity:0}}.v0{animation:v0 15s infinite;opacity:0}@keyframes b1{0%,33.60%{opacity:0;transform:translateY(5px)}35.33%,64.67%{opacity:1;transform:none}66.00%,100%{opacity:0}}.b1{animation:b1 15s infinite;opacity:0}@keyframes ty1{0%,34.00%{width:0}39.67%,100%{width:339.79999999999995px}}.ty1{animation:ty1 15s infinite steps(22,end)}@keyframes g1_0{0%,40.27%{opacity:0;transform:translateY(5px)}42.00%,64.67%{opacity:1;transform:none}66.00%,100%{opacity:0}}.g1_0{animation:g1_0 15s infinite;opacity:0}@keyframes g1_1{0%,41.07%{opacity:0;transform:translateY(5px)}42.80%,64.67%{opacity:1;transform:none}66.00%,100%{opacity:0}}.g1_1{animation:g1_1 15s infinite;opacity:0}@keyframes g1_2{0%,41.87%{opacity:0;transform:translateY(5px)}43.60%,64.67%{opacity:1;transform:none}66.00%,100%{opacity:0}}.g1_2{animation:g1_2 15s infinite;opacity:0}@keyframes k1{0%,42.93%{opacity:0;transform:translateY(5px)}44.67%,64.67%{opacity:1;transform:none}66.00%,100%{opacity:0}}.k1{animation:k1 15s infinite;opacity:0}@keyframes s1_0{0%,45.27%{opacity:0;transform:translateY(5px)}47.00%,64.67%{opacity:1;transform:none}66.00%,100%{opacity:0}}.s1_0{animation:s1_0 15s infinite;opacity:0}@keyframes s1_1{0%,47.80%{opacity:0;transform:translateY(5px)}49.53%,64.67%{opacity:1;transform:none}66.00%,100%{opacity:0}}.s1_1{animation:s1_1 15s infinite;opacity:0}@keyframes s1_2{0%,50.33%{opacity:0;transform:translateY(5px)}52.07%,64.67%{opacity:1;transform:none}66.00%,100%{opacity:0}}.s1_2{animation:s1_2 15s infinite;opacity:0}@keyframes s1_3{0%,52.87%{opacity:0;transform:translateY(5px)}54.60%,64.67%{opacity:1;transform:none}66.00%,100%{opacity:0}}.s1_3{animation:s1_3 15s infinite;opacity:0}@keyframes v1{0%,55.93%{opacity:0;transform:translateY(5px)}57.67%,64.67%{opacity:1;transform:none}66.00%,100%{opacity:0}}.v1{animation:v1 15s infinite;opacity:0}@keyframes b2{0%,66.93%{opacity:0;transform:translateY(5px)}68.67%,98.00%{opacity:1;transform:none}99.33%,100%{opacity:0}}.b2{animation:b2 15s infinite;opacity:0}@keyframes ty2{0%,67.33%{width:0}73.00%,100%{width:229.5px}}.ty2{animation:ty2 15s infinite steps(22,end)}@keyframes g2_0{0%,73.60%{opacity:0;transform:translateY(5px)}75.33%,98.00%{opacity:1;transform:none}99.33%,100%{opacity:0}}.g2_0{animation:g2_0 15s infinite;opacity:0}@keyframes g2_1{0%,74.40%{opacity:0;transform:translateY(5px)}76.13%,98.00%{opacity:1;transform:none}99.33%,100%{opacity:0}}.g2_1{animation:g2_1 15s infinite;opacity:0}@keyframes g2_2{0%,75.20%{opacity:0;transform:translateY(5px)}76.93%,98.00%{opacity:1;transform:none}99.33%,100%{opacity:0}}.g2_2{animation:g2_2 15s infinite;opacity:0}@keyframes k2{0%,76.27%{opacity:0;transform:translateY(5px)}78.00%,98.00%{opacity:1;transform:none}99.33%,100%{opacity:0}}.k2{animation:k2 15s infinite;opacity:0}@keyframes s2_0{0%,78.60%{opacity:0;transform:translateY(5px)}80.33%,98.00%{opacity:1;transform:none}99.33%,100%{opacity:0}}.s2_0{animation:s2_0 15s infinite;opacity:0}@keyframes s2_1{0%,81.13%{opacity:0;transform:translateY(5px)}82.87%,98.00%{opacity:1;transform:none}99.33%,100%{opacity:0}}.s2_1{animation:s2_1 15s infinite;opacity:0}@keyframes s2_2{0%,83.67%{opacity:0;transform:translateY(5px)}85.40%,98.00%{opacity:1;transform:none}99.33%,100%{opacity:0}}.s2_2{animation:s2_2 15s infinite;opacity:0}@keyframes s2_3{0%,86.20%{opacity:0;transform:translateY(5px)}87.93%,98.00%{opacity:1;transform:none}99.33%,100%{opacity:0}}.s2_3{animation:s2_3 15s infinite;opacity:0}@keyframes v2{0%,89.27%{opacity:0;transform:translateY(5px)}91.00%,98.00%{opacity:1;transform:none}99.33%,100%{opacity:0}}.v2{animation:v2 15s infinite;opacity:0}
+    @media (prefers-reduced-motion: reduce){[class]{animation:none!important}.b0,.g0_0,.g0_1,.g0_2,.k0,.s0_0,.s0_1,.s0_2,.s0_3,.v0{opacity:1!important}.ty0{width:788px!important}}
+  </style>
+  <rect width="900" height="384" rx="18" fill="#15181d"/>
+  <rect x="16" y="16" width="868" height="352" rx="14" fill="#1f242b" stroke="#2f3640"/>
+  <circle cx="40" cy="40" r="5" fill="#ff5f57"/><circle cx="58" cy="40" r="5" fill="#febc2e"/><circle cx="76" cy="40" r="5" fill="#28c840"/>
+  <text x="96" y="44" class="title">同一个请求，两种回答</text>
+  <rect x="36" y="128" width="404" height="214" rx="12" fill="#191d22" stroke="#2f3640"/>
+  <rect x="460" y="128" width="404" height="214" rx="12" fill="#232a33" stroke="#f2a65a" stroke-opacity=".55"/>
+  <circle cx="62" cy="152" r="5" fill="#6f7884"/><text x="76" y="156" class="lbl">普通 AI</text>
+  <circle cx="486" cy="152" r="5" fill="#f2a65a"/><text x="500" y="156" class="lbl">加载技能后</text>
+  <text x="860" y="362" text-anchor="end" class="title">1,250 个技能 · 每个都是一份 Markdown 文件</text>
+  <g class="b0">
+    <rect x="40" y="72" width="448.1999999999999" height="40" rx="13" fill="#2c3a4a"/>
+    <clipPath id="c0"><rect class="ty0" x="50" y="76" width="0" height="32"/></clipPath>
+    <text x="56" y="97" class="ask" clip-path="url(#c0)">公司要和我协商解除，工作 6 年 7 个月，月薪 2.5 万。</text>
+  </g>
+  <text x="58" y="196" class="g0_0 gen">补偿金额取决于多种因素。</text>
+  <text x="58" y="226" class="g0_1 gen">建议咨询专业律师。</text>
+  <text x="58" y="256" class="g0_2 gen">请参考当地相关规定。</text>
+  <g class="k0"><rect x="636.3" y="139" width="211.70000000000002" height="26" rx="13" fill="#3b2f4f"/><text x="649.3" y="157" class="chip">⚡ cn-severance-calculator</text></g>
+  <text x="482" y="196" class="s0_0 out">适用情形：协商解除，按 N 计算（第 36、46 条）</text>
+  <text x="482" y="226" class="s0_1 out">年限：6 年 7 个月，满半年按 1 年，计 7 个月</text>
+  <text x="482" y="256" class="s0_2 out">估算：2.5 万 × 7 = 17.5 万元（核对三倍封顶）</text>
+  <text x="482" y="286" class="s0_3 out">✅ 另算：未休年假工资、已挣年终奖</text>
+  <g class="v0"><text x="58" y="324" class="vb">✗ 看完还是不知道怎么做</text><text x="482" y="324" class="vg">✓ 拿来就能用</text></g>
+  <g class="b1">
+    <rect x="40" y="72" width="359.79999999999995" height="40" rx="13" fill="#2c3a4a"/>
+    <clipPath id="c1"><rect class="ty1" x="50" y="76" width="0" height="32"/></clipPath>
+    <text x="56" y="97" class="ask" clip-path="url(#c1)">这道申论题怎么答？归纳概括，200 字以内。</text>
+  </g>
+  <text x="58" y="196" class="g1_0 gen">申论需要多读多练。</text>
+  <text x="58" y="226" class="g1_1 gen">答题要条理清晰。</text>
+  <text x="58" y="256" class="g1_2 gen">注意字数要求。</text>
+  <g class="k1"><rect x="667.9" y="139" width="180.1" height="26" rx="13" fill="#3b2f4f"/><text x="680.9" y="157" class="chip">⚡ cn-civil-exam-essay</text></g>
+  <text x="482" y="196" class="s1_0 out">题型：归纳概括，考查要点提取与归纳</text>
+  <text x="482" y="226" class="s1_1 out">要点 1–5：逐段提取，标注来源段落</text>
+  <text x="482" y="256" class="s1_2 out">参考答案：196 字 / 限 200 字</text>
+  <text x="482" y="286" class="s1_3 out">✅ 批改：漏 1 个要点，大致二类文</text>
+  <g class="v1"><text x="58" y="324" class="vb">✗ 看完还是不知道怎么做</text><text x="482" y="324" class="vg">✓ 拿来就能用</text></g>
+  <g class="b2">
+    <rect x="40" y="72" width="249.5" height="40" rx="13" fill="#2c3a4a"/>
+    <clipPath id="c2"><rect class="ty2" x="50" y="76" width="0" height="32"/></clipPath>
+    <text x="56" y="97" class="ask" clip-path="url(#c2)">帮我把这些笔记整理成周报。</text>
+  </g>
+  <text x="58" y="196" class="g2_0 gen">本周各项工作顺利推进中。</text>
+  <text x="58" y="226" class="g2_1 gen">相关任务持续跟进。</text>
+  <text x="58" y="256" class="g2_2 gen">下周继续努力。</text>
+  <g class="k2"><rect x="691.6" y="139" width="156.4" height="26" rx="13" fill="#3b2f4f"/><text x="704.6" y="157" class="chip">⚡ cn-weekly-report</text></g>
+  <text x="482" y="196" class="s2_0 out">一、本周完成：支付页改版上线，转化率 3.1% → 3.6%</text>
+  <text x="482" y="226" class="s2_1 out">三、风险：埋点未就绪，A/B 测试可能延期</text>
+  <text x="482" y="256" class="s2_2 out">四、下周计划：埋点上线｜李明｜10 月 9 日</text>
+  <text x="482" y="286" class="s2_3 out">✅ 一句话版本已生成，可以直接发群</text>
+  <g class="v2"><text x="58" y="324" class="vb">✗ 看完还是不知道怎么做</text><text x="482" y="324" class="vg">✓ 拿来就能用</text></g>
+</svg>

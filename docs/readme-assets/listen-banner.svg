@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="96" viewBox="0 0 560 96" role="img" aria-label="听一听：在浏览器里朗读四段中文示例对话 (Listen to four Mandarin demo exchanges in your browser)">
+  <style>text{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', Helvetica, Arial, sans-serif}.h{font-size:24px;font-weight:700;fill:#eef1f4}.s{font-size:13.5px;fill:#9aa4b1}.t{font-size:12px;fill:#e9dcff}</style>
+  <rect width="560" height="96" rx="18" fill="#15181d"/>
+  <rect x="6" y="6" width="548" height="84" rx="14" fill="#1f242b" stroke="#2f3640"/>
+  <circle cx="54" cy="48" r="26" fill="#f2a65a"/>
+  <path d="M46 35v26l21-13z" fill="#15181d"/>
+  <text x="98" y="44" class="h">听一听</text>
+  <text x="196" y="44" class="s">Listen in Mandarin</text>
+  <text x="98" y="70" class="s">周报 · 补偿金 · 申论 · 小红书，浏览器朗读，无需下载</text>
+  <rect x="470" y="35" width="5" height="26" rx="2.5" fill="#f2a65a" opacity="0.45"/><rect x="480" y="33" width="5" height="30" rx="2.5" fill="#f2a65a" opacity="0.65"/><rect x="490" y="37" width="5" height="22" rx="2.5" fill="#f2a65a" opacity="0.8500000000000001"/><rect x="500" y="31.5" width="5" height="33" rx="2.5" fill="#f2a65a" opacity="0.45"/><rect x="510" y="38.5" width="5" height="19" rx="2.5" fill="#f2a65a" opacity="0.65"/><rect x="520" y="33.5" width="5" height="29" rx="2.5" fill="#f2a65a" opacity="0.8500000000000001"/><rect x="530" y="36" width="5" height="24" rx="2.5" fill="#f2a65a" opacity="0.45"/>
+</svg>

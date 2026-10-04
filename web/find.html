@@ -60,9 +60,13 @@
 <script src="nav.js"></script>
 <script>
 const STOP = new Set(('a an the of to in on or and for with your you i we my our need want help me please how do can could make write create build draft produce prepare prep get set run use using when asked into that this from each will able about more also not no is are be as at any one it its their them they then over same first start new mine give').split(/\s+/));
-const tok = (s) => (String(s || '').toLowerCase().match(/[a-z0-9]+/g) || []).filter((w) => w.length > 2 && !STOP.has(w));
+// Chinese has no spaces, so Han runs are matched as overlapping two-character pairs (周报, 补偿),
+// minus the request filler (帮我, 一下) that would otherwise match every Chinese skill.
+const CJK_STOP = new Set(['帮我', '我写', '我把', '请帮', '一下', '一份', '一个', '怎么', '如何', '我的', '我们', '这个', '这些', '给我', '我想', '需要', '可以', '写一', '我做', '做一']);
+const cjk = (s) => (String(s || '').match(/[\u3400-\u9fff]+/g) || []).flatMap((run) => [...run].slice(0, -1).map((ch, i) => ch + run[i + 1])).filter((b) => !CJK_STOP.has(b));
+const tok = (s) => [...(String(s || '').toLowerCase().match(/[a-z0-9]+/g) || []).filter((w) => w.length > 2 && !STOP.has(w)), ...cjk(s)];
 const TIER_BOOST = { production: 1.15, stable: 1, experimental: 0.9 };
-const EXAMPLES = ['prep a QBR for an at-risk account', 'write a product launch announcement', 'plan an A/B test', 'turn messy notes into a PRD', 'draft a difficult performance review', 'decode a SAFE note'];
+const EXAMPLES = ['prep a QBR for an at-risk account', 'write a product launch announcement', 'plan an A/B test', 'turn messy notes into a PRD', 'draft a difficult performance review', 'decode a SAFE note', '帮我写周报'];
 let SKILLS = [];
 
 function badge(ev) {
