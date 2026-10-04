@@ -103,6 +103,15 @@ claude mcp add pm-skills -- npx -y --registry=https://registry.npmmirror.com -p 
 
 托管的远程 MCP 地址（`workers.dev`）在国内大陆无法访问，请使用上面的本地方式。
 
+**在其他国内常用的 AI 应用里使用：**
+
+| 应用 | 方式 | 配置 |
+|---|---|---|
+| Cherry Studio | 本地 stdio | 设置 → MCP 服务器 → 添加，类型选 stdio，命令 `npx`，参数 `-y --registry=https://registry.npmmirror.com -p pm-claude-skills pm-claude-skills-mcp` |
+| Dify、FastGPT、MaxKB | 远程 HTTP | 添加 MCP 工具，地址 `https://pm-skills-mcp.pm-claude-skills.workers.dev/mcp`（Streamable HTTP）。只适用于部署在海外、能访问 `workers.dev` 的实例；部署在国内的实例请等我们接入自定义域名 |
+
+接入后，在对话或工作流里调用 `search_skills` 找到技能，再用 `get_skill` 取回完整说明交给模型执行。
+
 ## 六、魔搭 ModelScope：数据集、路由模型和在线试用
 
 **数据集**：技能库的训练数据集同步发布在魔搭社区，每次发版自动更新：
