@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="340" viewBox="0 0 860 340" role="img" aria-label="漏斗图：库里有 1,250 个技能、144 个技能包，选出适合你的一条路径，最后是你真正会用的 5 个技能。">
+  <style>
+    text{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', Helvetica, Arial, sans-serif}
+    .ttl{font-size:20px;font-weight:700;fill:#1f2328}
+    .big{font-size:16px;font-weight:700}
+    .small{font-size:14.5px;fill:#1f2328}
+    @keyframes rin{0%{opacity:0;transform:translateY(8px)}6%,100%{opacity:1;transform:none}}
+    .r0{animation:rin 8s 0.00s infinite both}.r1{animation:rin 8s 0.50s infinite both}.r2{animation:rin 8s 1.00s infinite both}.r3{animation:rin 8s 1.50s infinite both}@keyframes drop0{0%{transform:translate(0,0);opacity:0}8%{opacity:1}70%{transform:translate(108px,208px);opacity:1}82%,100%{transform:translate(108px,208px);opacity:0}}.d0{animation:drop0 3.6s 0.00s ease-in infinite}@keyframes drop1{0%{transform:translate(0,0);opacity:0}8%{opacity:1}70%{transform:translate(54px,208px);opacity:1}82%,100%{transform:translate(54px,208px);opacity:0}}.d1{animation:drop1 3.6s 0.45s ease-in infinite}@keyframes drop2{0%{transform:translate(0,0);opacity:0}8%{opacity:1}70%{transform:translate(0px,208px);opacity:1}82%,100%{transform:translate(0px,208px);opacity:0}}.d2{animation:drop2 3.6s 0.90s ease-in infinite}@keyframes drop3{0%{transform:translate(0,0);opacity:0}8%{opacity:1}70%{transform:translate(-54px,208px);opacity:1}82%,100%{transform:translate(-54px,208px);opacity:0}}.d3{animation:drop3 3.6s 1.35s ease-in infinite}@keyframes drop4{0%{transform:translate(0,0);opacity:0}8%{opacity:1}70%{transform:translate(-108px,208px);opacity:1}82%,100%{transform:translate(-108px,208px);opacity:0}}.d4{animation:drop4 3.6s 1.80s ease-in infinite}@keyframes drop5{0%{transform:translate(0,0);opacity:0}8%{opacity:1}70%{transform:translate(81px,208px);opacity:1}82%,100%{transform:translate(81px,208px);opacity:0}}.d5{animation:drop5 3.6s 2.25s ease-in infinite}@keyframes drop6{0%{transform:translate(0,0);opacity:0}8%{opacity:1}70%{transform:translate(-27px,208px);opacity:1}82%,100%{transform:translate(-27px,208px);opacity:0}}.d6{animation:drop6 3.6s 2.70s ease-in infinite}@keyframes drop7{0%{transform:translate(0,0);opacity:0}8%{opacity:1}70%{transform:translate(-81px,208px);opacity:1}82%,100%{transform:translate(-81px,208px);opacity:0}}.d7{animation:drop7 3.6s 3.15s ease-in infinite}
+    .dot{opacity:0}
+    @keyframes pop{0%,40%{opacity:0;transform:translateY(-6px)}55%,100%{opacity:1;transform:none}}
+    .f{animation:pop 8s infinite both}
+    @media (prefers-reduced-motion: reduce){.r0,.r1,.r2,.r3,.f{animation:none!important;opacity:1!important}.dot{animation:none!important;opacity:0!important}}
+  </style>
+  <rect width="860" height="340" rx="18" fill="#f7f4ee"/>
+  <text x="40" y="44" class="ttl">1,250 个技能，你只需要 5 个。</text>
+  <g class="r0">
+    <path d="M40 74H420L381 116H79Z" fill="#e3ddd2"/>
+    <text x="230" y="101" text-anchor="middle" class="big" fill="#1f2328">1,250 个技能</text>
+    <path d="M440 95H498" stroke="#e3ddd2" stroke-width="1.5" stroke-dasharray="3 4"/>
+    <circle cx="506" cy="95" r="4" fill="#5d6670"/>
+    <text x="522" y="100" class="small">整个技能库，每个技能一份 Markdown</text>
+  </g>
+  <g class="r1">
+    <path d="M85 128H375L336 170H124Z" fill="#efe6fb"/>
+    <text x="230" y="155" text-anchor="middle" class="big" fill="#4b2a7a">144 个技能包</text>
+    <path d="M395 149H498" stroke="#e3ddd2" stroke-width="1.5" stroke-dasharray="3 4"/>
+    <circle cx="506" cy="149" r="4" fill="#4b2a7a"/>
+    <text x="522" y="154" class="small">按职业和人生阶段分组</text>
+  </g>
+  <g class="r2">
+    <path d="M130 182H330L296 224H164Z" fill="#2d5f8f"/>
+    <text x="230" y="209" text-anchor="middle" class="big" fill="#f7f4ee">1 条路径</text>
+    <path d="M350 203H498" stroke="#e3ddd2" stroke-width="1.5" stroke-dasharray="3 4"/>
+    <circle cx="506" cy="203" r="4" fill="#2d5f8f"/>
+    <text x="522" y="208" class="small">按你的身份挑选</text>
+  </g>
+  <g class="r3">
+    <path d="M170 236H290L276 278H184Z" fill="#2f6f5e"/>
+    <text x="230" y="263" text-anchor="middle" class="big" fill="#f7f4ee">5 个技能</text>
+    <path d="M310 257H498" stroke="#e3ddd2" stroke-width="1.5" stroke-dasharray="3 4"/>
+    <circle cx="506" cy="257" r="4" fill="#2f6f5e"/>
+    <text x="522" y="262" class="small">你真正会用到的那几个</text>
+  </g>
+  <circle cx="110" cy="60" r="4" fill="#c46f1f" class="dot d0"/>
+  <circle cx="170" cy="60" r="4" fill="#c46f1f" class="dot d1"/>
+  <circle cx="230" cy="60" r="4" fill="#c46f1f" class="dot d2"/>
+  <circle cx="290" cy="60" r="4" fill="#c46f1f" class="dot d3"/>
+  <circle cx="350" cy="60" r="4" fill="#c46f1f" class="dot d4"/>
+  <circle cx="140" cy="60" r="4" fill="#c46f1f" class="dot d5"/>
+  <circle cx="260" cy="60" r="4" fill="#c46f1f" class="dot d6"/>
+  <circle cx="320" cy="60" r="4" fill="#c46f1f" class="dot d7"/>
+  <rect x="168" y="290" width="20" height="24" rx="4" fill="#ffffff" stroke="#2f6f5e" stroke-width="2" class="f" style="animation-delay:2.00s"/><path d="M173 299h10M173 305h7" stroke="#2f6f5e" stroke-width="1.6" stroke-linecap="round" class="f" style="animation-delay:2.00s"/><rect x="194" y="290" width="20" height="24" rx="4" fill="#ffffff" stroke="#2f6f5e" stroke-width="2" class="f" style="animation-delay:2.15s"/><path d="M199 299h10M199 305h7" stroke="#2f6f5e" stroke-width="1.6" stroke-linecap="round" class="f" style="animation-delay:2.15s"/><rect x="220" y="290" width="20" height="24" rx="4" fill="#ffffff" stroke="#2f6f5e" stroke-width="2" class="f" style="animation-delay:2.30s"/><path d="M225 299h10M225 305h7" stroke="#2f6f5e" stroke-width="1.6" stroke-linecap="round" class="f" style="animation-delay:2.30s"/><rect x="246" y="290" width="20" height="24" rx="4" fill="#ffffff" stroke="#2f6f5e" stroke-width="2" class="f" style="animation-delay:2.45s"/><path d="M251 299h10M251 305h7" stroke="#2f6f5e" stroke-width="1.6" stroke-linecap="round" class="f" style="animation-delay:2.45s"/><rect x="272" y="290" width="20" height="24" rx="4" fill="#ffffff" stroke="#2f6f5e" stroke-width="2" class="f" style="animation-delay:2.60s"/><path d="M277 299h10M277 305h7" stroke="#2f6f5e" stroke-width="1.6" stroke-linecap="round" class="f" style="animation-delay:2.60s"/>
+</svg>

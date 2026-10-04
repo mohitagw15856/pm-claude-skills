@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="132" viewBox="0 0 280 132" role="img" aria-label="学生: 备考、笔记、申请文书. 3 个入门技能 →">
+  <style>
+    text{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', Helvetica, Arial, sans-serif}
+    .t{font-size:18px;font-weight:600;fill:#1f2328}
+    .s{font-size:13px;fill:#5d6670}
+    .cta{font-size:13px;font-weight:600;fill:#4b2a7a}
+    .icon{font-size:24px}
+    .zhicon{font-size:22px;font-weight:700;fill:#f7f4ee}
+    @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+    .ic{animation:bob 3.2s ease-in-out infinite;transform-box:fill-box}
+    @keyframes nudge{0%,70%,100%{transform:translateX(0)}82%{transform:translateX(4px)}}
+    .go{animation:nudge 3.2s ease-in-out infinite}
+    @media (prefers-reduced-motion: reduce){.ic,.go{animation:none!important}}
+  </style>
+  <rect x="1" y="1" width="278" height="130" rx="16" fill="#ffffff" stroke="#e3ddd2" stroke-width="1.5"/>
+  <rect x="1" y="1" width="6" height="130" rx="3" fill="#4b2a7a"/>
+  <g class="ic"><circle cx="52" cy="52" r="24" fill="#f7f4ee" stroke="#4b2a7a" stroke-width="2"/><text x="52" y="61" text-anchor="middle" class="icon">🎓</text></g>
+  <text x="90" y="47" class="t">学生</text>
+  <text x="90" y="68" class="s">备考、笔记、申请文书</text>
+  <g class="go"><text x="24" y="110" class="cta">3 个入门技能 →</text></g>
+</svg>
