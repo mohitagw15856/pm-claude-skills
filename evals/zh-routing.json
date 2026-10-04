@@ -1,0 +1,805 @@
+{
+ "_comment": "200 Chinese requests, phrased the way people ask (not copied from skill trigger lines), each with the one skill a reviewer would expect. Scored by scripts/zh-routing-eval.mjs.",
+ "cases": [
+  {
+   "prompt": "这周干了不少事但很零碎，帮我理成一份给老板看的周报",
+   "expected": "cn-weekly-report"
+  },
+  {
+   "prompt": "月底了要交月报，数据和问题都在这，帮我组织一下",
+   "expected": "cn-weekly-report"
+  },
+  {
+   "prompt": "每周五都要写工作汇报，怎么写才不像流水账",
+   "expected": "cn-weekly-report"
+  },
+  {
+   "prompt": "钉钉上的日报每天都要填，今天的内容帮我写一下",
+   "expected": "dingtalk-work-log"
+  },
+  {
+   "prompt": "钉钉日志的未完成工作那一栏该怎么写比较合适",
+   "expected": "dingtalk-work-log"
+  },
+  {
+   "prompt": "会议纪要要发到飞书上，帮我排成飞书文档",
+   "expected": "feishu-doc-writer"
+  },
+  {
+   "prompt": "用飞书写一份方案对比，最后要领导拍板",
+   "expected": "feishu-doc-writer"
+  },
+  {
+   "prompt": "国庆放假安排要发企业微信公告，有调休",
+   "expected": "wecom-announcement"
+  },
+  {
+   "prompt": "下周六机房停电，要在企微群里通知全员",
+   "expected": "wecom-announcement"
+  },
+  {
+   "prompt": "下午要开需求评审会，研发肯定会挑刺，帮我提前准备",
+   "expected": "cn-prd-review"
+  },
+  {
+   "prompt": "评审会开完了，帮我写评审纪要，结论是有条件通过",
+   "expected": "cn-prd-review"
+  },
+  {
+   "prompt": "腾讯的 12 级大概相当于阿里的 P 几",
+   "expected": "cn-level-mapper"
+  },
+  {
+   "prompt": "拿到美团 L7 的 offer，我现在是字节 2-1，这算平跳吗",
+   "expected": "cn-level-mapper"
+  },
+  {
+   "prompt": "要准备晋升答辩的 PPT 和讲稿，二十分钟",
+   "expected": "cn-promotion-defence"
+  },
+  {
+   "prompt": "晋升委员会一般会追问什么，我怕答不上来",
+   "expected": "cn-promotion-defence"
+  },
+  {
+   "prompt": "年底要写述职报告，今年做了三个项目",
+   "expected": "cn-year-end-review"
+  },
+  {
+   "prompt": "年终总结怎么写才能体现业绩又不显得自吹",
+   "expected": "cn-year-end-review"
+  },
+  {
+   "prompt": "项目延期了一个月，组织一场复盘，不想变成甩锅大会",
+   "expected": "cn-fupan"
+  },
+  {
+   "prompt": "帮我把这次双十一活动的复盘写出来",
+   "expected": "cn-fupan"
+  },
+  {
+   "prompt": "单位要我起草一份请示，申请专项经费",
+   "expected": "cn-official-document"
+  },
+  {
+   "prompt": "给兄弟单位发个函，商请借调两名同事",
+   "expected": "cn-official-document"
+  },
+  {
+   "prompt": "这份红头文件格式对不对，标题和发文字号怎么排",
+   "expected": "cn-official-document"
+  },
+  {
+   "prompt": "申论大作文总是拿不到高分，帮我批改一篇",
+   "expected": "cn-civil-exam-essay"
+  },
+  {
+   "prompt": "国考申论的归纳概括题要点老是找不全",
+   "expected": "cn-civil-exam-essay"
+  },
+  {
+   "prompt": "事业单位面试三道题十五分钟，陪我练一下",
+   "expected": "cn-civil-exam-interview"
+  },
+  {
+   "prompt": "公务员面试遇到人际关系题怎么答不像背模板",
+   "expected": "cn-civil-exam-interview"
+  },
+  {
+   "prompt": "在职准备考研，每天只有晚上三小时，怎么安排",
+   "expected": "cn-kaoyan-planner"
+  },
+  {
+   "prompt": "考研择校纠结，三个学校的复试线和招生人数怎么比",
+   "expected": "cn-kaoyan-planner"
+  },
+  {
+   "prompt": "考研初试过线了，复试要准备些什么",
+   "expected": "cn-kaoyan-planner"
+  },
+  {
+   "prompt": "马上秋招了，我研二计算机，该先投哪些公司",
+   "expected": "cn-campus-recruitment"
+  },
+  {
+   "prompt": "三方协议签了还能毁约吗，违约金怎么算",
+   "expected": "cn-campus-recruitment"
+  },
+  {
+   "prompt": "春招还有机会进大厂吗，简历怎么改",
+   "expected": "cn-campus-recruitment"
+  },
+  {
+   "prompt": "国企笔试考行测吗，央企面试和互联网面试有什么不同",
+   "expected": "cn-soe-interview"
+  },
+  {
+   "prompt": "拿到国网和一家互联网公司的 offer 不知道选哪个",
+   "expected": "cn-soe-interview"
+  },
+  {
+   "prompt": "下个月开题，题目还太大，帮我收窄一下写开题报告",
+   "expected": "cn-thesis-proposal"
+  },
+  {
+   "prompt": "开题报告的国内外研究现状部分怎么写",
+   "expected": "cn-thesis-proposal"
+  },
+  {
+   "prompt": "毕业论文参考文献要按国标格式，帮我改一下",
+   "expected": "cn-citation-gbt7714"
+  },
+  {
+   "prompt": "文献类型标识 J 和 M 是什么意思，学位论文用什么",
+   "expected": "cn-citation-gbt7714"
+  },
+  {
+   "prompt": "下周阿里 Java 后端二面，帮我过一遍八股和项目",
+   "expected": "cn-tech-interview-drill"
+  },
+  {
+   "prompt": "前端面试手撕代码和浏览器原理，帮我模拟一面",
+   "expected": "cn-tech-interview-drill"
+  },
+  {
+   "prompt": "系统设计面试题秒杀系统怎么答",
+   "expected": "cn-tech-interview-drill"
+  },
+  {
+   "prompt": "在北京交了七年社保，积分落户还差多少分",
+   "expected": "cn-hukou-points"
+  },
+  {
+   "prompt": "硕士应届生想落户上海，有哪些路径",
+   "expected": "cn-hukou-points"
+  },
+  {
+   "prompt": "租房能不能把公积金取出来，一个月能取多少",
+   "expected": "cn-housing-fund-withdrawal"
+  },
+  {
+   "prompt": "离开深圳回老家了，公积金怎么转或者怎么提",
+   "expected": "cn-housing-fund-withdrawal"
+  },
+  {
+   "prompt": "住院花了八万，职工医保能报多少",
+   "expected": "cn-medical-insurance-claim"
+  },
+  {
+   "prompt": "去外地看病没备案，还能报销吗",
+   "expected": "cn-medical-insurance-claim"
+  },
+  {
+   "prompt": "门诊费用医保怎么报，惠民保值得买吗",
+   "expected": "cn-medical-insurance-claim"
+  },
+  {
+   "prompt": "开了个个体工作室，增值税和个税要怎么报",
+   "expected": "cn-small-business-tax"
+  },
+  {
+   "prompt": "小规模纳税人一个季度开了四十万发票，要交多少税",
+   "expected": "cn-small-business-tax"
+  },
+  {
+   "prompt": "公司裁员说给 N+1，我干了五年八个月，算算对不对",
+   "expected": "cn-severance-calculator"
+  },
+  {
+   "prompt": "被违法辞退能拿二倍赔偿吗，怎么算",
+   "expected": "cn-severance-calculator"
+  },
+  {
+   "prompt": "新公司劳动合同里竞业限制没写补偿，能签吗",
+   "expected": "cn-labour-contract-decoder"
+  },
+  {
+   "prompt": "试用期六个月、合同两年，这合法吗",
+   "expected": "cn-labour-contract-decoder"
+  },
+  {
+   "prompt": "五险一金到底是怎么扣的，工资条看不懂",
+   "expected": "cn-social-insurance-explainer"
+  },
+  {
+   "prompt": "灵活就业怎么交社保，断缴有什么影响",
+   "expected": "cn-social-insurance-explainer"
+  },
+  {
+   "prompt": "个税年度汇算是要退税还是补税，怎么操作",
+   "expected": "cn-iit-reconciliation"
+  },
+  {
+   "prompt": "专项附加扣除房贷和子女教育怎么填最划算",
+   "expected": "cn-iit-reconciliation"
+  },
+  {
+   "prompt": "孩子高考 610 分，志愿怎么填冲稳保",
+   "expected": "cn-gaokao-planner"
+  },
+  {
+   "prompt": "新高考选科和专业怎么对应，帮我看看",
+   "expected": "cn-gaokao-planner"
+  },
+  {
+   "prompt": "系统要做等保三级测评，先帮我看看差在哪",
+   "expected": "cn-mlps-checklist"
+  },
+  {
+   "prompt": "等保定级二级还是三级，定级报告怎么写",
+   "expected": "cn-mlps-checklist"
+  },
+  {
+   "prompt": "海外总部要看国内用户数据，需要做出境申报吗",
+   "expected": "cn-data-export-assessment"
+  },
+  {
+   "prompt": "个人信息出境标准合同怎么备案",
+   "expected": "cn-data-export-assessment"
+  },
+  {
+   "prompt": "公司要上人脸考勤，法务说要先做个人信息影响评估",
+   "expected": "cn-pipl-pia"
+  },
+  {
+   "prompt": "用户画像做个性化推荐，影响评估报告怎么写",
+   "expected": "cn-pipl-pia"
+  },
+  {
+   "prompt": "我们做的 AI 绘画 App 上线前要做什么备案",
+   "expected": "cn-genai-filing"
+  },
+  {
+   "prompt": "AI 生成的内容要加标识吗，隐式标识怎么做",
+   "expected": "cn-genai-filing"
+  },
+  {
+   "prompt": "想做跨境电商，Temu 全托管和 TikTok Shop 选哪个",
+   "expected": "crossborder-platform-playbook"
+  },
+  {
+   "prompt": "儿童玩具卖到欧洲要哪些认证和合规",
+   "expected": "crossborder-platform-playbook"
+  },
+  {
+   "prompt": "亚马逊 listing 标题和五点描述帮我写一下",
+   "expected": "cross-border-listing"
+  },
+  {
+   "prompt": "跨境店铺的商品详情页文案要地道一点",
+   "expected": "cross-border-listing"
+  },
+  {
+   "prompt": "公司想出海，东南亚和中东先去哪",
+   "expected": "chuhai-market-entry"
+  },
+  {
+   "prompt": "出海进入新市场的计划怎么做",
+   "expected": "chuhai-market-entry"
+  },
+  {
+   "prompt": "国内数据传到欧洲要同时满足个保法和 GDPR 吗",
+   "expected": "pipl-gdpr-crosswalk"
+  },
+  {
+   "prompt": "帮我写一篇小红书种草笔记，推荐一款空气炸锅",
+   "expected": "xiaohongshu-note"
+  },
+  {
+   "prompt": "小红书标题怎么写才有人点",
+   "expected": "xiaohongshu-note"
+  },
+  {
+   "prompt": "公众号要发一篇行业观察，帮我写",
+   "expected": "wechat-article"
+  },
+  {
+   "prompt": "微信公众号文章开头怎么写才能留住人",
+   "expected": "wechat-article"
+  },
+  {
+   "prompt": "抖音短视频脚本，三十秒介绍我们的产品",
+   "expected": "douyin-script"
+  },
+  {
+   "prompt": "拍一条抖音口播视频，文案帮我写",
+   "expected": "douyin-script"
+  },
+  {
+   "prompt": "今晚直播带货两小时，帮我排一下脚本和话术",
+   "expected": "livestream-sales-script"
+  },
+  {
+   "prompt": "直播间卖货的逼单话术怎么说才不违规",
+   "expected": "livestream-sales-script"
+  },
+  {
+   "prompt": "帮我做一份中英文双语简历，要投外企",
+   "expected": "bilingual-cv-zh-en"
+  },
+  {
+   "prompt": "针对字节这个岗位，把我的简历改一下",
+   "expected": "company-tailored-cv"
+  },
+  {
+   "prompt": "简历怎么写才能过机器筛选",
+   "expected": "resume"
+  },
+  {
+   "prompt": "先帮我把这几年的工作经历梳理清楚，再写简历",
+   "expected": "career-inventory"
+  },
+  {
+   "prompt": "求职信怎么写",
+   "expected": "cover-letter"
+  },
+  {
+   "prompt": "面试前怎么准备常见问题",
+   "expected": "interview-prep"
+  },
+  {
+   "prompt": "两个 offer 的薪资福利怎么比较",
+   "expected": "offer-comparison"
+  },
+  {
+   "prompt": "谈薪的时候 HR 压价怎么办，陪我练一下",
+   "expected": "salary-negotiation"
+  },
+  {
+   "prompt": "员工福利手册看不懂，补充医疗和年金是什么",
+   "expected": "benefits-decoder"
+  },
+  {
+   "prompt": "帮我写一份 PRD，功能是邀请好友得优惠券",
+   "expected": "prd-template"
+  },
+  {
+   "prompt": "需求文档模板怎么写才完整",
+   "expected": "prd-template"
+  },
+  {
+   "prompt": "把这个需求拆成用户故事，带验收标准",
+   "expected": "user-story-writer"
+  },
+  {
+   "prompt": "技术方案文档要写哪些部分",
+   "expected": "technical-spec-template"
+  },
+  {
+   "prompt": "几十个需求怎么排优先级，用 RICE 算一下",
+   "expected": "rice-prioritisation"
+  },
+  {
+   "prompt": "下季度的 OKR 帮我定一下",
+   "expected": "okr-builder"
+  },
+  {
+   "prompt": "北极星指标和指标体系怎么搭",
+   "expected": "metrics-framework"
+  },
+  {
+   "prompt": "竞品分析报告怎么写，对比三家",
+   "expected": "competitive-analysis"
+  },
+  {
+   "prompt": "访谈了十个用户，帮我总结发现",
+   "expected": "user-research-synthesis"
+  },
+  {
+   "prompt": "产品上线前的检查清单",
+   "expected": "product-launch-checklist"
+  },
+  {
+   "prompt": "新产品上市的推广策略怎么做",
+   "expected": "go-to-market"
+  },
+  {
+   "prompt": "给老板写一页纸的汇报摘要",
+   "expected": "executive-summary"
+  },
+  {
+   "prompt": "给各部门同步项目进展的邮件",
+   "expected": "stakeholder-update"
+  },
+  {
+   "prompt": "会议记录整理成纪要和待办",
+   "expected": "meeting-notes"
+  },
+  {
+   "prompt": "线上事故复盘报告，不追责",
+   "expected": "incident-postmortem"
+  },
+  {
+   "prompt": "迭代回顾会的结论帮我分析一下",
+   "expected": "retro-analysis"
+  },
+  {
+   "prompt": "给自己写一份绩效自评",
+   "expected": "self-review"
+  },
+  {
+   "prompt": "房东不退押金，扣了一半说是清洁费",
+   "expected": "security-deposit-recovery"
+  },
+  {
+   "prompt": "租房合同里有些条款看不懂，帮我看看有没有坑",
+   "expected": "lease-decoder"
+  },
+  {
+   "prompt": "医院账单金额不对，怎么核对",
+   "expected": "medical-bill-decoder"
+  },
+  {
+   "prompt": "保险公司拒赔了，理赔被拒怎么申诉",
+   "expected": "claim-denial-decoder"
+  },
+  {
+   "prompt": "保险条款里的免责部分帮我解释一下",
+   "expected": "insurance-policy-decoder"
+  },
+  {
+   "prompt": "贷款合同里的提前还款违约金合理吗",
+   "expected": "loan-decoder"
+  },
+  {
+   "prompt": "离职补偿协议签之前要注意什么",
+   "expected": "severance-agreement-decoder"
+  },
+  {
+   "prompt": "App 的用户协议里有没有霸王条款",
+   "expected": "tos-decoder"
+  },
+  {
+   "prompt": "我喺香港打工，強積金每月供幾多",
+   "expected": "hk-mpf-explainer"
+  },
+  {
+   "prompt": "移民離開香港，強積金可唔可以一次過攞返",
+   "expected": "hk-mpf-explainer"
+  },
+  {
+   "prompt": "在台灣被資遣，資遣費怎麼算",
+   "expected": "tw-labour-standards"
+  },
+  {
+   "prompt": "台灣特休沒休完，公司要給錢嗎",
+   "expected": "tw-labour-standards"
+  },
+  {
+   "prompt": "老板让我每周交周报，这周的事情帮我写成周报格式",
+   "expected": "cn-weekly-report"
+  },
+  {
+   "prompt": "钉钉周报的本周工作总结怎么写",
+   "expected": "dingtalk-work-log"
+  },
+  {
+   "prompt": "飞书文档里的待办怎么写才能直接转成任务",
+   "expected": "feishu-doc-writer"
+  },
+  {
+   "prompt": "系统维护的内部通知怎么写",
+   "expected": "wecom-announcement"
+  },
+  {
+   "prompt": "PRD 评审前自查一下还缺什么",
+   "expected": "cn-prd-review"
+  },
+  {
+   "prompt": "跳槽职级怎么对标，P7 去京东是什么级别",
+   "expected": "cn-level-mapper"
+  },
+  {
+   "prompt": "晋升述职材料要对标下一级标准",
+   "expected": "cn-promotion-defence"
+  },
+  {
+   "prompt": "年度述职 PPT 的结构",
+   "expected": "cn-year-end-review"
+  },
+  {
+   "prompt": "活动结束了怎么做复盘会",
+   "expected": "cn-fupan"
+  },
+  {
+   "prompt": "帮我写个会议纪要，按公文格式",
+   "expected": "cn-official-document"
+  },
+  {
+   "prompt": "申论的对策题怎么答",
+   "expected": "cn-civil-exam-essay"
+  },
+  {
+   "prompt": "结构化面试的综合分析题怎么破题",
+   "expected": "cn-civil-exam-interview"
+  },
+  {
+   "prompt": "二战考研，怎么制定复习计划",
+   "expected": "cn-kaoyan-planner"
+  },
+  {
+   "prompt": "校招网申的开放题怎么写",
+   "expected": "cn-campus-recruitment"
+  },
+  {
+   "prompt": "央企面试会问能不能接受外派",
+   "expected": "cn-soe-interview"
+  },
+  {
+   "prompt": "本科毕业设计的开题报告",
+   "expected": "cn-thesis-proposal"
+  },
+  {
+   "prompt": "参考文献顺序编码制和著者出版年制选哪个",
+   "expected": "cn-citation-gbt7714"
+  },
+  {
+   "prompt": "字节一面会考哪些八股",
+   "expected": "cn-tech-interview-drill"
+  },
+  {
+   "prompt": "深圳落户条件现在是什么",
+   "expected": "cn-hukou-points"
+  },
+  {
+   "prompt": "准备买房，公积金要不要先提出来",
+   "expected": "cn-housing-fund-withdrawal"
+  },
+  {
+   "prompt": "异地就医备案怎么办",
+   "expected": "cn-medical-insurance-claim"
+  },
+  {
+   "prompt": "小微企业所得税有什么优惠",
+   "expected": "cn-small-business-tax"
+  },
+  {
+   "prompt": "协商离职给的补偿太少，怎么算才对",
+   "expected": "cn-severance-calculator"
+  },
+  {
+   "prompt": "劳动合同里的违约金条款合法吗",
+   "expected": "cn-labour-contract-decoder"
+  },
+  {
+   "prompt": "社保缴费基数是怎么定的",
+   "expected": "cn-social-insurance-explainer"
+  },
+  {
+   "prompt": "个税 App 汇算显示要补税，为什么",
+   "expected": "cn-iit-reconciliation"
+  },
+  {
+   "prompt": "高考志愿平行志愿怎么排",
+   "expected": "cn-gaokao-planner"
+  },
+  {
+   "prompt": "等保测评前要准备哪些制度",
+   "expected": "cn-mlps-checklist"
+  },
+  {
+   "prompt": "数据出境安全评估门槛是多少",
+   "expected": "cn-data-export-assessment"
+  },
+  {
+   "prompt": "个人信息保护影响评估需要保存多久",
+   "expected": "cn-pipl-pia"
+  },
+  {
+   "prompt": "调用大模型 API 的应用要登记吗",
+   "expected": "cn-genai-filing"
+  },
+  {
+   "prompt": "SHEIN 和 Temu 的模式有什么区别",
+   "expected": "crossborder-platform-playbook"
+  },
+  {
+   "prompt": "小红书笔记怎么写不违反广告法",
+   "expected": "xiaohongshu-note"
+  },
+  {
+   "prompt": "抖音带货视频的前三秒怎么抓人",
+   "expected": "douyin-script"
+  },
+  {
+   "prompt": "外企中英文简历的格式",
+   "expected": "bilingual-cv-zh-en"
+  },
+  {
+   "prompt": "写一份产品需求文档",
+   "expected": "prd-template"
+  },
+  {
+   "prompt": "团队 OKR 怎么拆到个人",
+   "expected": "okr-builder"
+  },
+  {
+   "prompt": "用户访谈记录怎么做综合分析",
+   "expected": "user-research-synthesis"
+  },
+  {
+   "prompt": "台灣加班費怎麼計算",
+   "expected": "tw-labour-standards"
+  },
+  {
+   "prompt": "香港強積金點樣轉計劃",
+   "expected": "hk-mpf-explainer"
+  },
+  {
+   "prompt": "出海做品牌先选哪个国家",
+   "expected": "chuhai-market-entry"
+  },
+  {
+   "prompt": "押金被扣了怎么写催款信",
+   "expected": "security-deposit-recovery"
+  },
+  {
+   "prompt": "给投资人写的工作汇报摘要",
+   "expected": "executive-summary"
+  },
+  {
+   "prompt": "把这段需求写成 Given When Then 的验收标准",
+   "expected": "user-story-writer"
+  },
+  {
+   "prompt": "A/B 测试怎么设计",
+   "expected": "ab-test-planner"
+  },
+  {
+   "prompt": "流失率上升了，帮我分析原因",
+   "expected": "churn-analysis"
+  },
+  {
+   "prompt": "定价策略怎么定，要不要涨价",
+   "expected": "pricing-strategy"
+  },
+  {
+   "prompt": "写一份新闻稿发布新品",
+   "expected": "press-release"
+  },
+  {
+   "prompt": "给投资人的季度更新邮件",
+   "expected": "investor-update"
+  },
+  {
+   "prompt": "辞职信怎么写得体",
+   "expected": "resignation-letter"
+  },
+  {
+   "prompt": "年度绩效考核的自评和他评",
+   "expected": "performance-review"
+  },
+  {
+   "prompt": "周会前要交上周工作和下周计划",
+   "expected": "cn-weekly-report"
+  },
+  {
+   "prompt": "钉钉日报里需协调的事项怎么写",
+   "expected": "dingtalk-work-log"
+  },
+  {
+   "prompt": "飞书方案文档开头要写结论吗",
+   "expected": "feishu-doc-writer"
+  },
+  {
+   "prompt": "员工搬迁通知发企微",
+   "expected": "wecom-announcement"
+  },
+  {
+   "prompt": "测试同学在评审会上会问哪些异常流程",
+   "expected": "cn-prd-review"
+  },
+  {
+   "prompt": "这个 offer 给的职级偏低吗，我现在是 T3",
+   "expected": "cn-level-mapper"
+  },
+  {
+   "prompt": "升 P8 的答辩问题清单",
+   "expected": "cn-promotion-defence"
+  },
+  {
+   "prompt": "事业单位年终述职稿",
+   "expected": "cn-year-end-review"
+  },
+  {
+   "prompt": "项目复盘的根因分析怎么做",
+   "expected": "cn-fupan"
+  },
+  {
+   "prompt": "通知和通告有什么区别，我该用哪个",
+   "expected": "cn-official-document"
+  },
+  {
+   "prompt": "申论贯彻执行题写倡议书的格式",
+   "expected": "cn-civil-exam-essay"
+  },
+  {
+   "prompt": "面试应急应变题，群众堵在门口怎么办",
+   "expected": "cn-civil-exam-interview"
+  },
+  {
+   "prompt": "跨专业考研心理学，怎么规划",
+   "expected": "cn-kaoyan-planner"
+  },
+  {
+   "prompt": "实习转正答辩怎么准备，秋招还要投吗",
+   "expected": "cn-campus-recruitment"
+  },
+  {
+   "prompt": "国企招聘公告里的报名条件我符合吗",
+   "expected": "cn-soe-interview"
+  },
+  {
+   "prompt": "开题答辩老师会问创新点在哪",
+   "expected": "cn-thesis-proposal"
+  },
+  {
+   "prompt": "英文文献作者名在参考文献里怎么写",
+   "expected": "cn-citation-gbt7714"
+  },
+  {
+   "prompt": "Go 后端面试 GMP 调度怎么讲",
+   "expected": "cn-tech-interview-drill"
+  },
+  {
+   "prompt": "上海居转户要几年",
+   "expected": "cn-hukou-points"
+  },
+  {
+   "prompt": "退休了公积金怎么全部取出",
+   "expected": "cn-housing-fund-withdrawal"
+  },
+  {
+   "prompt": "医保报销的起付线和封顶线是什么意思",
+   "expected": "cn-medical-insurance-claim"
+  },
+  {
+   "prompt": "个体户经营所得年度汇算怎么报",
+   "expected": "cn-small-business-tax"
+  },
+  {
+   "prompt": "公司搬迁不去了能拿补偿金吗",
+   "expected": "cn-severance-calculator"
+  },
+  {
+   "prompt": "劳动合同到期不续签有补偿吗",
+   "expected": "cn-labour-contract-decoder"
+  },
+  {
+   "prompt": "等保和数据出境都要做吗，先做哪个",
+   "expected": "cn-mlps-checklist"
+  },
+  {
+   "prompt": "AI 写作 App 用户生成的内容要审核吗，备案要求",
+   "expected": "cn-genai-filing"
+  },
+  {
+   "prompt": "TikTok Shop 美区入驻要准备什么",
+   "expected": "crossborder-platform-playbook"
+  },
+  {
+   "prompt": "直播间价格话术怎么说才合规",
+   "expected": "livestream-sales-script"
+  }
+ ]
+}
