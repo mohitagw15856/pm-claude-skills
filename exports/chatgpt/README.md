@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1234 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1247 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -331,6 +331,8 @@
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/SYSTEM_PROMPT.md` |
 | Demand Forecast Review | `pm-supplychain` | `pm-supplychain/demand-forecast-review/SYSTEM_PROMPT.md` |
 | Demand Letter | `pm-legal` | `pm-legal/demand-letter/SYSTEM_PROMPT.md` |
+| Demo Clip Storyboard | `pm-oss-launch` | `pm-oss-launch/demo-clip-storyboard/SYSTEM_PROMPT.md` |
+| Demo Data Generator | `pm-oss-launch` | `pm-oss-launch/demo-data-generator/SYSTEM_PROMPT.md` |
 | Demo Script | `pm-cowork` | `pm-cowork/demo-script/SYSTEM_PROMPT.md` |
 | Dental Clinical Note | `pm-dentistry` | `pm-dentistry/dental-clinical-note/SYSTEM_PROMPT.md` |
 | Dental Emergency Triage | `pm-dentistry` | `pm-dentistry/dental-emergency-triage/SYSTEM_PROMPT.md` |
@@ -447,6 +449,9 @@
 | Explain My Decision To Me | `pm-thinking` | `pm-thinking/explain-my-decision-to-me/SYSTEM_PROMPT.md` |
 | Explain Simply | `pm-comms` | `pm-comms/explain-simply/SYSTEM_PROMPT.md` |
 | Exploratory Test Charter | `pm-qa` | `pm-qa/exploratory-test-charter/SYSTEM_PROMPT.md` |
+| Explorer Interface Brief | `pm-3d-explorer` | `pm-3d-explorer/explorer-interface-brief/SYSTEM_PROMPT.md` |
+| Explorer Pipeline | `pm-3d-explorer` | `pm-3d-explorer/explorer-pipeline/SYSTEM_PROMPT.md` |
+| Explorer Viewer Builder | `pm-3d-explorer` | `pm-3d-explorer/explorer-viewer-builder/SYSTEM_PROMPT.md` |
 | Expungement Navigator | `pm-reentry` | `pm-reentry/expungement-navigator/SYSTEM_PROMPT.md` |
 | Fact-Check Pass | `pm-journalism` | `pm-journalism/fact-check-pass/SYSTEM_PROMPT.md` |
 | Factory Acceptance Test | `pm-hardware` | `pm-hardware/factory-acceptance-test/SYSTEM_PROMPT.md` |
@@ -486,6 +491,7 @@
 | First 90 Days Out | `pm-reentry` | `pm-reentry/first-90-days-out/SYSTEM_PROMPT.md` |
 | First Client Contract | `pm-sidehustle` | `pm-sidehustle/first-client-contract/SYSTEM_PROMPT.md` |
 | First-Hire Plan | `pm-career` | `pm-career/first-hire-plan/SYSTEM_PROMPT.md` |
+| First Issue Designer | `pm-oss-launch` | `pm-oss-launch/first-issue-designer/SYSTEM_PROMPT.md` |
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/SYSTEM_PROMPT.md` |
 | Five Minds | `pm-thinking` | `pm-thinking/five-minds/SYSTEM_PROMPT.md` |
 | Flare Day Planner | `pm-invisible-illness` | `pm-invisible-illness/flare-day-planner/SYSTEM_PROMPT.md` |
@@ -502,6 +508,7 @@
 | Follow-up Sweep (Live) | `pm-cowork-live` | `pm-cowork-live/followup-sweep/SYSTEM_PROMPT.md` |
 | Form Filler Operator | `pm-operator` | `pm-operator/form-filler-operator/SYSTEM_PROMPT.md` |
 | Formula Detangler | `pm-cowork` | `pm-cowork/formula-detangler/SYSTEM_PROMPT.md` |
+| Fortnightly Release Planner | `pm-oss-launch` | `pm-oss-launch/fortnightly-release-planner/SYSTEM_PROMPT.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/SYSTEM_PROMPT.md` |
 | Franchise Decoder | `pm-decoders` | `pm-decoders/franchise-decoder/SYSTEM_PROMPT.md` |
 | Franklin Decision Ledger | `pm-dead-mentors` | `pm-dead-mentors/franklin-decision-ledger/SYSTEM_PROMPT.md` |
@@ -580,6 +587,7 @@
 | Immigration Document Checklist | `pm-personal` | `pm-personal/immigration-document-checklist/SYSTEM_PROMPT.md` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/SYSTEM_PROMPT.md` |
 | Impeccable (pointer) | `pm-design-taste` | `pm-design-taste/impeccable-pointer/SYSTEM_PROMPT.md` |
+| Importer Scaffolder | `pm-oss-launch` | `pm-oss-launch/importer-scaffolder/SYSTEM_PROMPT.md` |
 | In-Law Boundary Scripts | `pm-family` | `pm-family/in-law-boundary-scripts/SYSTEM_PROMPT.md` |
 | Inbox Triage (Live) | `pm-cowork-live` | `pm-cowork-live/inbox-triage-live/SYSTEM_PROMPT.md` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `pm-cowork/inbox-unsubscribe-purge/SYSTEM_PROMPT.md` |
@@ -654,6 +662,7 @@
 | Lending Risk Brief | `pm-banking` | `pm-banking/lending-risk-brief/SYSTEM_PROMPT.md` |
 | Lesson Plan | `pm-education` | `pm-education/lesson-plan/SYSTEM_PROMPT.md` |
 | Lesson Plan Builder | `pm-teaching` | `pm-teaching/lesson-plan-builder/SYSTEM_PROMPT.md` |
+| Licence and Notice Auditor | `pm-oss-launch` | `pm-oss-launch/licence-notice-auditor/SYSTEM_PROMPT.md` |
 | Life Premortem | `other` | `other/life-premortem/SYSTEM_PROMPT.md` |
 | Lifecycle / CRM Plan | `pm-growth` | `pm-growth/lifecycle-crm-plan/SYSTEM_PROMPT.md` |
 | LinkedIn Profile | `pm-personal` | `pm-personal/linkedin-profile/SYSTEM_PROMPT.md` |
@@ -714,6 +723,7 @@
 | Mind Map | `pm-visuals` | `pm-visuals/mind-map/SYSTEM_PROMPT.md` |
 | Model Card | `pm-ai` | `pm-ai/model-card/SYSTEM_PROMPT.md` |
 | Model Migration Plan | `pm-agentops` | `pm-agentops/model-migration-plan/SYSTEM_PROMPT.md` |
+| Model Prompt Pack | `pm-3d-explorer` | `pm-3d-explorer/model-prompt-pack/SYSTEM_PROMPT.md` |
 | Model Selection Advisor | `pm-ai` | `pm-ai/model-selection-advisor/SYSTEM_PROMPT.md` |
 | Momentum Map | `pm-focus` | `pm-focus/momentum-map/SYSTEM_PROMPT.md` |
 | Money Mindset Reset | `pm-wealth` | `pm-wealth/money-mindset-reset/SYSTEM_PROMPT.md` |
@@ -889,7 +899,9 @@
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/SYSTEM_PROMPT.md` |
 | Read the Room | `other` | `other/read-the-room/SYSTEM_PROMPT.md` |
 | Reading Retention System | `pm-learning` | `pm-learning/reading-retention-system/SYSTEM_PROMPT.md` |
+| README Benefit Writer | `pm-oss-launch` | `pm-oss-launch/readme-benefit-writer/SYSTEM_PROMPT.md` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/SYSTEM_PROMPT.md` |
+| Read-only MCP Wrapper | `pm-oss-launch` | `pm-oss-launch/readonly-mcp-wrapper/SYSTEM_PROMPT.md` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/SYSTEM_PROMPT.md` |
 | Reconnect After Time Away | `pm-reentry` | `pm-reentry/reconnect-after-time-away/SYSTEM_PROMPT.md` |
 | Reconnect With Someone | `other` | `other/reconnect-with-someone/SYSTEM_PROMPT.md` |
@@ -994,6 +1006,7 @@
 | Security Questionnaire Autofill | `pm-compliance` | `pm-compliance/security-questionnaire-autofill/SYSTEM_PROMPT.md` |
 | Security Review | `pm-security` | `pm-security/security-review/SYSTEM_PROMPT.md` |
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/SYSTEM_PROMPT.md` |
+| Self-Host Packager | `pm-oss-launch` | `pm-oss-launch/self-host-packager/SYSTEM_PROMPT.md` |
 | Self-Review | `pm-career` | `pm-career/self-review/SYSTEM_PROMPT.md` |
 | Sensory Audit | `pm-neurodivergent` | `pm-neurodivergent/sensory-audit/SYSTEM_PROMPT.md` |
 | SEO Content Brief | `pm-gtm` | `pm-gtm/seo-content-brief/SYSTEM_PROMPT.md` |

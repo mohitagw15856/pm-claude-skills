@@ -1,7 +1,7 @@
 # 🧭 Disambiguation — you want *this* one, not that one
 
 > **Generated — do not edit.** Run `node scripts/build-disambiguation.mjs`.
-> 1222 live skills across 140 bundles, plus 12 retired names that still resolve.
+> 1235 live skills across 142 bundles, plus 12 retired names that still resolve.
 
 At this size the hard part is not finding *a* skill — it is telling two similar ones apart, and
 knowing whether the thing you are about to write already exists under a different noun.
@@ -57,6 +57,7 @@ choosing between them.
 | PM Weekly Review / Weekly Review Ritual | `pm-weekly-review` | `weekly-review-ritual` | A PM's weekly product review vs a personal GTD-style weekly ritual. |
 | Policy Drafter / Privacy Policy Drafter | `policy-drafter` | `privacy-policy-drafter` | An internal policy people follow vs an external, legally-shaped privacy notice. |
 | PR Description (Live) / PR Description Writer | `pr-description-live` | `pr-description-writer` | Both are variants of pr-description; the -live twin reads the real diff via the GitHub connector. |
+| README Benefit Writer / README Writer | `readme-benefit-writer` | `readme-writer` | Rewriting an existing README so each feature reads as a user benefit, with a Your data section, vs writing a complete README from scratch with badges, usage and install sections. |
 | Red-Team My Plan / Red-Team Review | `red-team-my-plan` | `red-team-review` | Stress-testing your own plan vs running a structured red-team review of someone else's. |
 | Second Opinion Request / The Second Opinion | `second-opinion-request` | `the-second-opinion` | Name collision only: requesting a second medical opinion vs a thinking tool that argues against your own position. |
 | Security Review / Vendor Security Review | `security-review` | `vendor-security-review` | Reviewing your own design vs assessing a third party and assigning a risk tier. |
@@ -199,6 +200,15 @@ assuming the skill you want is missing.
 - `financial-model-narrative` · pm-finance — Turn financial model outputs into a clear written narrative.
 - `financial-statement-explainer` · pm-accounting — Explain a financial statement (P&L, balance sheet, or cash flow) in plain English.
 
+**`first-*`** (6)
+
+- `first-100k-plan` · pm-wealth — Build a realistic plan to reach your first major savings/investing milestone — the hardest one — by focusing on the levers that actually move it: income, savings rate, and time.
+- `first-90-days-out` · pm-reentry — Build a concrete plan for the first 90 days after release from incarceration — the ID, benefits, housing, check-ins, and money moves that have to happen in order, before they cascade into a crisis.
+- `first-client-contract` · pm-sidehustle — Put your first client agreement in writing — the eight clauses a simple service contract must have, in plain language a non-lawyer can use, with the blanks filled from your actual deal.
+- `first-hire-plan` · pm-career — Plan your first hire — whether to hire at all yet, contractor vs employee, what role to hire, and how to do it right when you've never hired before.
+- `first-issue-designer` · pm-oss-launch — Use when asked to create good first issues, prepare a repo for new contributors, turn a roadmap into starter tasks, or write issues that newcomers can actually finish.
+- `first-maintainer-month` · pm-maintainer — Set up a new open-source project's first month so it can grow without eating its maintainer — the README that routes people correctly, CONTRIBUTING boundaries written before there are contributors, issue templates that pre-triage, a release rhythm, and the sustainability defaults (what you owe no one).
+
 **`meeting-*`** (6)
 
 - `meeting-action-extractor` · pm-essentials — Pull the action items and decisions out of meeting notes or a transcript — each with an owner, a due date, and enough context to become a ticket — plus the open questions.
@@ -256,14 +266,6 @@ assuming the skill you want is missing.
 - `expense-filer` · pm-operator — Turn a pile of receipts into a filed expense report through a tool-using agent — extraction, policy checks, and categorization done for you; submission gated on your approval.
 - `expense-policy` · pm-accounting — Write a clear company expense & reimbursement policy.
 - `expense-sheet-design` · pm-cowork — Design an expense-tracking sheet that survives real receipts — the capture-at-spend habit, the category set that matches reimbursement or tax rules, the receipt-link discipline, and the month-end close that takes minutes because the work happened at spend-time.
-
-**`first-*`** (5)
-
-- `first-100k-plan` · pm-wealth — Build a realistic plan to reach your first major savings/investing milestone — the hardest one — by focusing on the levers that actually move it: income, savings rate, and time.
-- `first-90-days-out` · pm-reentry — Build a concrete plan for the first 90 days after release from incarceration — the ID, benefits, housing, check-ins, and money moves that have to happen in order, before they cascade into a crisis.
-- `first-client-contract` · pm-sidehustle — Put your first client agreement in writing — the eight clauses a simple service contract must have, in plain language a non-lawyer can use, with the blanks filled from your actual deal.
-- `first-hire-plan` · pm-career — Plan your first hire — whether to hire at all yet, contractor vs employee, what role to hire, and how to do it right when you've never hired before.
-- `first-maintainer-month` · pm-maintainer — Set up a new open-source project's first month so it can grow without eating its maintainer — the README that routes people correctly, CONTRIBUTING boundaries written before there are contributors, issue templates that pre-triage, a release rhythm, and the sustainability defaults (what you owe no one).
 
 **`home-*`** (5)
 
@@ -411,6 +413,13 @@ assuming the skill you want is missing.
 - `layoff-communication` · pm-crisis — Plan and write the communications for a layoff or restructure with clarity and dignity.
 - `layoff-financial-triage` · pm-layoff — The first-72-hours money plan after a layoff — runway computed, deadlines caught, bleeding stopped, in priority order.
 - `layoff-first-72-hours` · pm-career — Steady the first 72 hours after being laid off — the practical, financial, and emotional moves in the right order, before panic-applying to everything.
+
+**`model-*`** (4)
+
+- `model-card` · pm-ai — Document a deployed ML/AI model so others can use it responsibly.
+- `model-migration-plan` · pm-agentops — Plan the migration of an LLM feature from one model to another without breaking production.
+- `model-prompt-pack` · pm-3d-explorer — Use when asked to write prompts for image-to-3D or text-to-3D tools, generate 3D models of a topic's parts, plan the assets for a 3D explorer, or build a labelled parts list with sources.
+- `model-selection-advisor` · pm-ai — Choose the right LLM for a task by trading off quality, cost, latency, and constraints.
 
 **`promoter-*`** (4)
 

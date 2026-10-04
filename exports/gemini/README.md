@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1234 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1247 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -331,6 +331,8 @@
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/GEM_INSTRUCTIONS.md` |
 | Demand Forecast Review | `pm-supplychain` | `pm-supplychain/demand-forecast-review/GEM_INSTRUCTIONS.md` |
 | Demand Letter | `pm-legal` | `pm-legal/demand-letter/GEM_INSTRUCTIONS.md` |
+| Demo Clip Storyboard | `pm-oss-launch` | `pm-oss-launch/demo-clip-storyboard/GEM_INSTRUCTIONS.md` |
+| Demo Data Generator | `pm-oss-launch` | `pm-oss-launch/demo-data-generator/GEM_INSTRUCTIONS.md` |
 | Demo Script | `pm-cowork` | `pm-cowork/demo-script/GEM_INSTRUCTIONS.md` |
 | Dental Clinical Note | `pm-dentistry` | `pm-dentistry/dental-clinical-note/GEM_INSTRUCTIONS.md` |
 | Dental Emergency Triage | `pm-dentistry` | `pm-dentistry/dental-emergency-triage/GEM_INSTRUCTIONS.md` |
@@ -447,6 +449,9 @@
 | Explain My Decision To Me | `pm-thinking` | `pm-thinking/explain-my-decision-to-me/GEM_INSTRUCTIONS.md` |
 | Explain Simply | `pm-comms` | `pm-comms/explain-simply/GEM_INSTRUCTIONS.md` |
 | Exploratory Test Charter | `pm-qa` | `pm-qa/exploratory-test-charter/GEM_INSTRUCTIONS.md` |
+| Explorer Interface Brief | `pm-3d-explorer` | `pm-3d-explorer/explorer-interface-brief/GEM_INSTRUCTIONS.md` |
+| Explorer Pipeline | `pm-3d-explorer` | `pm-3d-explorer/explorer-pipeline/GEM_INSTRUCTIONS.md` |
+| Explorer Viewer Builder | `pm-3d-explorer` | `pm-3d-explorer/explorer-viewer-builder/GEM_INSTRUCTIONS.md` |
 | Expungement Navigator | `pm-reentry` | `pm-reentry/expungement-navigator/GEM_INSTRUCTIONS.md` |
 | Fact-Check Pass | `pm-journalism` | `pm-journalism/fact-check-pass/GEM_INSTRUCTIONS.md` |
 | Factory Acceptance Test | `pm-hardware` | `pm-hardware/factory-acceptance-test/GEM_INSTRUCTIONS.md` |
@@ -486,6 +491,7 @@
 | First 90 Days Out | `pm-reentry` | `pm-reentry/first-90-days-out/GEM_INSTRUCTIONS.md` |
 | First Client Contract | `pm-sidehustle` | `pm-sidehustle/first-client-contract/GEM_INSTRUCTIONS.md` |
 | First-Hire Plan | `pm-career` | `pm-career/first-hire-plan/GEM_INSTRUCTIONS.md` |
+| First Issue Designer | `pm-oss-launch` | `pm-oss-launch/first-issue-designer/GEM_INSTRUCTIONS.md` |
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/GEM_INSTRUCTIONS.md` |
 | Five Minds | `pm-thinking` | `pm-thinking/five-minds/GEM_INSTRUCTIONS.md` |
 | Flare Day Planner | `pm-invisible-illness` | `pm-invisible-illness/flare-day-planner/GEM_INSTRUCTIONS.md` |
@@ -502,6 +508,7 @@
 | Follow-up Sweep (Live) | `pm-cowork-live` | `pm-cowork-live/followup-sweep/GEM_INSTRUCTIONS.md` |
 | Form Filler Operator | `pm-operator` | `pm-operator/form-filler-operator/GEM_INSTRUCTIONS.md` |
 | Formula Detangler | `pm-cowork` | `pm-cowork/formula-detangler/GEM_INSTRUCTIONS.md` |
+| Fortnightly Release Planner | `pm-oss-launch` | `pm-oss-launch/fortnightly-release-planner/GEM_INSTRUCTIONS.md` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/GEM_INSTRUCTIONS.md` |
 | Franchise Decoder | `pm-decoders` | `pm-decoders/franchise-decoder/GEM_INSTRUCTIONS.md` |
 | Franklin Decision Ledger | `pm-dead-mentors` | `pm-dead-mentors/franklin-decision-ledger/GEM_INSTRUCTIONS.md` |
@@ -580,6 +587,7 @@
 | Immigration Document Checklist | `pm-personal` | `pm-personal/immigration-document-checklist/GEM_INSTRUCTIONS.md` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/GEM_INSTRUCTIONS.md` |
 | Impeccable (pointer) | `pm-design-taste` | `pm-design-taste/impeccable-pointer/GEM_INSTRUCTIONS.md` |
+| Importer Scaffolder | `pm-oss-launch` | `pm-oss-launch/importer-scaffolder/GEM_INSTRUCTIONS.md` |
 | In-Law Boundary Scripts | `pm-family` | `pm-family/in-law-boundary-scripts/GEM_INSTRUCTIONS.md` |
 | Inbox Triage (Live) | `pm-cowork-live` | `pm-cowork-live/inbox-triage-live/GEM_INSTRUCTIONS.md` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `pm-cowork/inbox-unsubscribe-purge/GEM_INSTRUCTIONS.md` |
@@ -654,6 +662,7 @@
 | Lending Risk Brief | `pm-banking` | `pm-banking/lending-risk-brief/GEM_INSTRUCTIONS.md` |
 | Lesson Plan | `pm-education` | `pm-education/lesson-plan/GEM_INSTRUCTIONS.md` |
 | Lesson Plan Builder | `pm-teaching` | `pm-teaching/lesson-plan-builder/GEM_INSTRUCTIONS.md` |
+| Licence and Notice Auditor | `pm-oss-launch` | `pm-oss-launch/licence-notice-auditor/GEM_INSTRUCTIONS.md` |
 | Life Premortem | `other` | `other/life-premortem/GEM_INSTRUCTIONS.md` |
 | Lifecycle / CRM Plan | `pm-growth` | `pm-growth/lifecycle-crm-plan/GEM_INSTRUCTIONS.md` |
 | LinkedIn Profile | `pm-personal` | `pm-personal/linkedin-profile/GEM_INSTRUCTIONS.md` |
@@ -714,6 +723,7 @@
 | Mind Map | `pm-visuals` | `pm-visuals/mind-map/GEM_INSTRUCTIONS.md` |
 | Model Card | `pm-ai` | `pm-ai/model-card/GEM_INSTRUCTIONS.md` |
 | Model Migration Plan | `pm-agentops` | `pm-agentops/model-migration-plan/GEM_INSTRUCTIONS.md` |
+| Model Prompt Pack | `pm-3d-explorer` | `pm-3d-explorer/model-prompt-pack/GEM_INSTRUCTIONS.md` |
 | Model Selection Advisor | `pm-ai` | `pm-ai/model-selection-advisor/GEM_INSTRUCTIONS.md` |
 | Momentum Map | `pm-focus` | `pm-focus/momentum-map/GEM_INSTRUCTIONS.md` |
 | Money Mindset Reset | `pm-wealth` | `pm-wealth/money-mindset-reset/GEM_INSTRUCTIONS.md` |
@@ -889,7 +899,9 @@
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/GEM_INSTRUCTIONS.md` |
 | Read the Room | `other` | `other/read-the-room/GEM_INSTRUCTIONS.md` |
 | Reading Retention System | `pm-learning` | `pm-learning/reading-retention-system/GEM_INSTRUCTIONS.md` |
+| README Benefit Writer | `pm-oss-launch` | `pm-oss-launch/readme-benefit-writer/GEM_INSTRUCTIONS.md` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/GEM_INSTRUCTIONS.md` |
+| Read-only MCP Wrapper | `pm-oss-launch` | `pm-oss-launch/readonly-mcp-wrapper/GEM_INSTRUCTIONS.md` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/GEM_INSTRUCTIONS.md` |
 | Reconnect After Time Away | `pm-reentry` | `pm-reentry/reconnect-after-time-away/GEM_INSTRUCTIONS.md` |
 | Reconnect With Someone | `other` | `other/reconnect-with-someone/GEM_INSTRUCTIONS.md` |
@@ -994,6 +1006,7 @@
 | Security Questionnaire Autofill | `pm-compliance` | `pm-compliance/security-questionnaire-autofill/GEM_INSTRUCTIONS.md` |
 | Security Review | `pm-security` | `pm-security/security-review/GEM_INSTRUCTIONS.md` |
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/GEM_INSTRUCTIONS.md` |
+| Self-Host Packager | `pm-oss-launch` | `pm-oss-launch/self-host-packager/GEM_INSTRUCTIONS.md` |
 | Self-Review | `pm-career` | `pm-career/self-review/GEM_INSTRUCTIONS.md` |
 | Sensory Audit | `pm-neurodivergent` | `pm-neurodivergent/sensory-audit/GEM_INSTRUCTIONS.md` |
 | SEO Content Brief | `pm-gtm` | `pm-gtm/seo-content-brief/GEM_INSTRUCTIONS.md` |

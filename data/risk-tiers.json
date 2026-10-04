@@ -1,9 +1,9 @@
 {
  "generated": "2026-10-04",
  "counts": {
-  "consequential": 221,
+  "consequential": 222,
   "high-stakes": 148,
-  "informational": 865
+  "informational": 877
  },
  "tiers": {
   "360-feedback-template": {
@@ -1302,6 +1302,14 @@
    "tier": "high-stakes",
    "via": "bundle:pm-legal"
   },
+  "demo-clip-storyboard": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "demo-data-generator": {
+   "tier": "informational",
+   "via": "default"
+  },
   "demo-script": {
    "tier": "informational",
    "via": "default"
@@ -1766,6 +1774,18 @@
    "tier": "informational",
    "via": "default"
   },
+  "explorer-interface-brief": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "explorer-pipeline": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "explorer-viewer-builder": {
+   "tier": "informational",
+   "via": "default"
+  },
   "expungement-navigator": {
    "tier": "high-stakes",
    "via": "bundle:pm-reentry"
@@ -1922,6 +1942,10 @@
    "tier": "consequential",
    "via": "bundle:pm-career"
   },
+  "first-issue-designer": {
+   "tier": "informational",
+   "via": "default"
+  },
   "first-maintainer-month": {
    "tier": "informational",
    "via": "default"
@@ -1983,6 +2007,10 @@
    "via": "default"
   },
   "formula-detangler": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "fortnightly-release-planner": {
    "tier": "informational",
    "via": "default"
   },
@@ -2298,6 +2326,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "importer-scaffolder": {
+   "tier": "informational",
+   "via": "default"
+  },
   "in-law-boundary-scripts": {
    "tier": "consequential",
    "via": "bundle:pm-family"
@@ -2594,6 +2626,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "licence-notice-auditor": {
+   "tier": "consequential",
+   "via": "skill"
+  },
   "life-premortem": {
    "tier": "informational",
    "via": "default"
@@ -2831,6 +2867,10 @@
    "via": "default"
   },
   "model-migration-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "model-prompt-pack": {
    "tier": "informational",
    "via": "default"
   },
@@ -3534,7 +3574,15 @@
    "tier": "informational",
    "via": "default"
   },
+  "readme-benefit-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
   "readme-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "readonly-mcp-wrapper": {
    "tier": "informational",
    "via": "default"
   },
@@ -3951,6 +3999,10 @@
    "via": "bundle:pm-security"
   },
   "security-threat-model": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "self-host-packager": {
    "tier": "informational",
    "via": "default"
   },

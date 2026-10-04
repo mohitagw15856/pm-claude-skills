@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1234 skills exported. Copy a `SKILL.md` into the tool to use it.
+1247 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -331,6 +331,8 @@
 | Delta Briefing | `pm-autopilot` | `delta-briefing/SKILL.md` |
 | Demand Forecast Review | `pm-supplychain` | `demand-forecast-review/SKILL.md` |
 | Demand Letter | `pm-legal` | `demand-letter/SKILL.md` |
+| Demo Clip Storyboard | `pm-oss-launch` | `demo-clip-storyboard/SKILL.md` |
+| Demo Data Generator | `pm-oss-launch` | `demo-data-generator/SKILL.md` |
 | Demo Script | `pm-cowork` | `demo-script/SKILL.md` |
 | Dental Clinical Note | `pm-dentistry` | `dental-clinical-note/SKILL.md` |
 | Dental Emergency Triage | `pm-dentistry` | `dental-emergency-triage/SKILL.md` |
@@ -447,6 +449,9 @@
 | Explain My Decision To Me | `pm-thinking` | `explain-my-decision-to-me/SKILL.md` |
 | Explain Simply | `pm-comms` | `explain-simply/SKILL.md` |
 | Exploratory Test Charter | `pm-qa` | `exploratory-test-charter/SKILL.md` |
+| Explorer Interface Brief | `pm-3d-explorer` | `explorer-interface-brief/SKILL.md` |
+| Explorer Pipeline | `pm-3d-explorer` | `explorer-pipeline/SKILL.md` |
+| Explorer Viewer Builder | `pm-3d-explorer` | `explorer-viewer-builder/SKILL.md` |
 | Expungement Navigator | `pm-reentry` | `expungement-navigator/SKILL.md` |
 | Fact-Check Pass | `pm-journalism` | `fact-check-pass/SKILL.md` |
 | Factory Acceptance Test | `pm-hardware` | `factory-acceptance-test/SKILL.md` |
@@ -486,6 +491,7 @@
 | First 90 Days Out | `pm-reentry` | `first-90-days-out/SKILL.md` |
 | First Client Contract | `pm-sidehustle` | `first-client-contract/SKILL.md` |
 | First-Hire Plan | `pm-career` | `first-hire-plan/SKILL.md` |
+| First Issue Designer | `pm-oss-launch` | `first-issue-designer/SKILL.md` |
 | First Maintainer Month | `pm-maintainer` | `first-maintainer-month/SKILL.md` |
 | Five Minds | `pm-thinking` | `five-minds/SKILL.md` |
 | Flare Day Planner | `pm-invisible-illness` | `flare-day-planner/SKILL.md` |
@@ -502,6 +508,7 @@
 | Follow-up Sweep (Live) | `pm-cowork-live` | `followup-sweep/SKILL.md` |
 | Form Filler Operator | `pm-operator` | `form-filler-operator/SKILL.md` |
 | Formula Detangler | `pm-cowork` | `formula-detangler/SKILL.md` |
+| Fortnightly Release Planner | `pm-oss-launch` | `fortnightly-release-planner/SKILL.md` |
 | Founder-Market Fit | `pm-founders` | `founder-market-fit/SKILL.md` |
 | Franchise Decoder | `pm-decoders` | `franchise-decoder/SKILL.md` |
 | Franklin Decision Ledger | `pm-dead-mentors` | `franklin-decision-ledger/SKILL.md` |
@@ -580,6 +587,7 @@
 | Immigration Document Checklist | `pm-personal` | `immigration-document-checklist/SKILL.md` |
 | Impact Report | `pm-nonprofit` | `impact-report/SKILL.md` |
 | Impeccable (pointer) | `pm-design-taste` | `impeccable-pointer/SKILL.md` |
+| Importer Scaffolder | `pm-oss-launch` | `importer-scaffolder/SKILL.md` |
 | In-Law Boundary Scripts | `pm-family` | `in-law-boundary-scripts/SKILL.md` |
 | Inbox Triage (Live) | `pm-cowork-live` | `inbox-triage-live/SKILL.md` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `inbox-unsubscribe-purge/SKILL.md` |
@@ -654,6 +662,7 @@
 | Lending Risk Brief | `pm-banking` | `lending-risk-brief/SKILL.md` |
 | Lesson Plan | `pm-education` | `lesson-plan/SKILL.md` |
 | Lesson Plan Builder | `pm-teaching` | `lesson-plan-builder/SKILL.md` |
+| Licence and Notice Auditor | `pm-oss-launch` | `licence-notice-auditor/SKILL.md` |
 | Life Premortem | `other` | `life-premortem/SKILL.md` |
 | Lifecycle / CRM Plan | `pm-growth` | `lifecycle-crm-plan/SKILL.md` |
 | LinkedIn Profile | `pm-personal` | `linkedin-profile/SKILL.md` |
@@ -714,6 +723,7 @@
 | Mind Map | `pm-visuals` | `mind-map/SKILL.md` |
 | Model Card | `pm-ai` | `model-card/SKILL.md` |
 | Model Migration Plan | `pm-agentops` | `model-migration-plan/SKILL.md` |
+| Model Prompt Pack | `pm-3d-explorer` | `model-prompt-pack/SKILL.md` |
 | Model Selection Advisor | `pm-ai` | `model-selection-advisor/SKILL.md` |
 | Momentum Map | `pm-focus` | `momentum-map/SKILL.md` |
 | Money Mindset Reset | `pm-wealth` | `money-mindset-reset/SKILL.md` |
@@ -889,7 +899,9 @@
 | Rate Card | `pm-consulting` | `rate-card/SKILL.md` |
 | Read the Room | `other` | `read-the-room/SKILL.md` |
 | Reading Retention System | `pm-learning` | `reading-retention-system/SKILL.md` |
+| README Benefit Writer | `pm-oss-launch` | `readme-benefit-writer/SKILL.md` |
 | README Writer | `pm-devrel` | `readme-writer/SKILL.md` |
+| Read-only MCP Wrapper | `pm-oss-launch` | `readonly-mcp-wrapper/SKILL.md` |
 | Receipts Audit | `pm-method` | `receipts-audit/SKILL.md` |
 | Reconnect After Time Away | `pm-reentry` | `reconnect-after-time-away/SKILL.md` |
 | Reconnect With Someone | `other` | `reconnect-with-someone/SKILL.md` |
@@ -994,6 +1006,7 @@
 | Security Questionnaire Autofill | `pm-compliance` | `security-questionnaire-autofill/SKILL.md` |
 | Security Review | `pm-security` | `security-review/SKILL.md` |
 | Security Threat Model | `pm-engineering` | `security-threat-model/SKILL.md` |
+| Self-Host Packager | `pm-oss-launch` | `self-host-packager/SKILL.md` |
 | Self-Review | `pm-career` | `self-review/SKILL.md` |
 | Sensory Audit | `pm-neurodivergent` | `sensory-audit/SKILL.md` |
 | SEO Content Brief | `pm-gtm` | `seo-content-brief/SKILL.md` |

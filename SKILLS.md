@@ -1,4 +1,4 @@
-# 🗂️ All 1222 Skills — full catalog
+# 🗂️ All 1235 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -723,7 +723,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (760 skills)
+## 🌍 Industries & Public Sector (773 skills)
 
 ### `other` — 22 skills
 
@@ -766,6 +766,15 @@
 | **The Org Simulator** (`the-org-simulator`) | Stress-test a proposed org change before announcing it — simulate who gains, who loses, who blocks, where friction erupts in the first 90 days… | — |
 | **The Time Capsule** (`the-time-capsule`) | Write a sealed memo to your future self or successor — the honest state of things, falsifiable predictions with confidence levels, and the advice… | — |
 | **The Understudy** (`the-understudy`) | Study 3-5 samples of the user's real writing and decisions, build an explicit 'how you think' profile, then draft new work as their understudy —… | — |
+
+### `pm-3d-explorer` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Explorer Interface Brief** (`explorer-interface-brief`) | Use when asked to design the interface for an interactive 3D explorer, plan a UI for exploring a 3D model of a topic, or write an image-model… | — |
+| **Explorer Pipeline** (`explorer-pipeline`) | Use when asked to make an interactive 3D explorer of a topic from start to finish, go from a topic to a clickable 3D learning page, or run the… | — |
+| **Explorer Viewer Builder** (`explorer-viewer-builder`) | Use when asked to build a 3D viewer for a GLB model, make an interactive explorer with clickable labelled parts, add an exploded view or quiz to a… | — |
+| **Model Prompt Pack** (`model-prompt-pack`) | Use when asked to write prompts for image-to-3D or text-to-3D tools, generate 3D models of a topic's parts, plan the assets for a 3D explorer, or… | — |
 
 ### `pm-accessibility` — 5 skills
 
@@ -1643,6 +1652,20 @@
 | **Inbox Zero Operator** (`inbox-zero-operator`) | Drive an email inbox to zero through a computer-use or tool-using agent — triage every message into act/delegate/defer/archive with drafts… | — |
 | **Subscription Auditor** (`subscription-auditor`) | Find the subscriptions you forgot you pay for — a tool-using agent audits statements and inboxes, prices the waste annually, and preps (never… | — |
 
+### `pm-oss-launch` — 9 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Demo Clip Storyboard** (`demo-clip-storyboard`) | Use when asked to plan a short demo video for a repo, script a 20-second clip, storyboard a GIF for a README or launch post, or make a project… | — |
+| **Demo Data Generator** (`demo-data-generator`) | Use when asked to create demo data, seed a no-signup demo, generate fake but realistic data for screenshots, or fill a sandbox without using real… | — |
+| **First Issue Designer** (`first-issue-designer`) | Use when asked to create good first issues, prepare a repo for new contributors, turn a roadmap into starter tasks, or write issues that newcomers… | — |
+| **Fortnightly Release Planner** (`fortnightly-release-planner`) | Use when asked to plan releases for a side project or small open-source repo, turn a backlog into a release schedule, ship smaller and more often… | — |
+| **Importer Scaffolder** (`importer-scaffolder`) | Use when asked to build an importer from a competitor's export, migrate users' data from another tool, map a CSV or JSON export onto my data… | — |
+| **Licence and Notice Auditor** (`licence-notice-auditor`) | Use when asked to check a project's licences, audit dependencies before open-sourcing or selling, write a NOTICE file, find licence conflicts, or… | — |
+| **README Benefit Writer** (`readme-benefit-writer`) | Use when asked to rewrite a README so strangers understand why they should care, turn a feature list into benefits, make a side project's README… | — |
+| **Read-only MCP Wrapper** (`readonly-mcp-wrapper`) | Use when asked to expose a folder of notes or docs to Claude or another AI client, build an MCP server over Markdown or JSON files, let an agent… | — |
+| **Self-Host Packager** (`self-host-packager`) | Use when asked to make a project self-hostable, package an app for Docker, write a docker-compose setup, document self-hosting, or let users run… | — |
+
 ### `pm-parents` — 3 skills
 
 | Skill | What it does | Eval |
@@ -1957,4 +1980,4 @@
 
 ---
 
-_1222 skills across 141 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1235 skills across 143 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
