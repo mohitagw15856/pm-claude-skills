@@ -22,6 +22,10 @@
 </p>
 
 <p align="center">
+  🇨🇳 <strong>中文用户</strong>：<a href="README.zh-CN.md">中文说明</a> · <a href="#-中文支持--chinese-support">中文技能包</a> · 支持 Trae、Qoder、通义灵码、CodeBuddy · 支持 DeepSeek、通义千问、Kimi、智谱 GLM、豆包 · <a href="docs/CHINA.md">国内安装指南</a>
+</p>
+
+<p align="center">
   <a href="https://github.com/mohitagw15856/pm-claude-skills/stargazers"><img src="https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social" alt="Stars"></a>
   <a href="SKILLS.md"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmohitagw15856.github.io%2Fpm-claude-skills%2Fskills.json&query=%24.count&label=skills&color=blue" alt="Skills"></a>
   <a href="https://github.com/mohitagw15856/pm-claude-skills/releases"><img src="https://img.shields.io/github/v/release/mohitagw15856/pm-claude-skills?label=version&color=brightgreen" alt="Version"></a>
@@ -58,6 +62,27 @@ PM Skills is an open-source library of 1212 Agent Skills — plain-markdown SKIL
 | **02** | Your assistant loads the one skill that matches | [`security-deposit-recovery`](skills/security-deposit-recovery/SKILL.md), a single markdown file, read only when it is relevant |
 | **03** | You get the finished document, not advice about it | The challenge to each deduction, the demand letter, and the point at which small claims is worth it |
 
+## 🇨🇳 中文支持 · Chinese support
+
+**用中文提问即可。** 五个面向中文用户的技能包，50 个技能有简体中文版、25 个有繁体中文版，技能路由能理解中文请求。
+*Ask in Chinese. Five packs built for Chinese users, 50 skills translated into Simplified Chinese and 25 into Traditional, and routing that understands Chinese requests.*
+
+| 技能包 Pack | 内容 What it covers | 试着说 Try saying |
+|---|---|---|
+| [**pm-china-work**](plugins/pm-china-work/) 职场 | 周报 / 月报、述职报告 / 年终总结、晋升答辩、复盘 | "帮我把这些笔记整理成周报。" |
+| [**pm-china-life**](plugins/pm-china-life/) 生活事务 | 劳动合同解读、经济补偿金 N / N+1 / 2N、个税年度汇算、五险一金、高考志愿 | "公司要裁我，能拿多少补偿？" |
+| [**pm-zh-content**](plugins/pm-zh-content/) 内容平台 | 小红书笔记、公众号文章、抖音脚本、直播带货脚本 | "帮我写一篇小红书笔记。" |
+| [**pm-chuhai**](plugins/pm-chuhai/) 出海 | 出海市场进入、跨境电商 listing、PIPL 与 GDPR 对照 | "我们想出海，东南亚还是中东？" |
+| [**pm-cv**](plugins/pm-cv/) 简历 | 按目标公司定制简历、中英文简历、导出 Word | "帮我做一份中英文简历，要投外企。" |
+
+**国内安装 Install from China** (npm mirror, plus the coding tools popular in China):
+
+```bash
+npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae   # 或 qoder / lingma / codebuddy / claude
+```
+
+**在线试用 Playground**：用你自己的 DeepSeek、通义千问、Kimi、智谱 GLM（有免费模型）或豆包 API Key。**More:** [中文说明 README.zh-CN.md](README.zh-CN.md) · [国内安装指南 docs/CHINA.md](docs/CHINA.md) · [中文翻译 skills-i18n/zh](skills-i18n/zh/)
+
 ## 🚪 Pick a door — 30 seconds each
 
 | | You… | Do this |
@@ -65,6 +90,7 @@ PM Skills is an open-source library of 1212 Agent Skills — plain-markdown SKIL
 | ▶ | **just want to see it** | open the **[Playground](https://mohitagw15856.github.io/pm-claude-skills/)** and run a skill in your browser. No install, no signup, no "enter your email to continue" |
 | 🧠 | **use Claude Code** | `/plugin` → search **pm-skills** → install. Ask *"decode this lease"* and watch |
 | 🛠 | **use anything else** | `npx pm-claude-skills add` and pick your tool (Cursor, Codex, Windsurf, ChatGPT, Gemini…) |
+| 🇨🇳 | **read Chinese** | **[中文说明](README.zh-CN.md)**：用中文提问，五个中文技能包，支持 Trae、Qoder、通义灵码和国内模型 |
 | 🔎 | **don't know what to ask for** | type it at **[find](https://mohitagw15856.github.io/pm-claude-skills/find.html)** — *"my landlord kept my deposit"* — and it names the skill |
 | 🎒 | **are in the middle of something** | start from your moment, not the catalogue → **[Skill Packs](PACKS.md)** · 🍼 new parent · 💼 laid off · 🌍 new country · 👵 caring for a parent · 🕊️ losing someone · 💸 money in crisis |
 
@@ -75,6 +101,7 @@ PM Skills is an open-source library of 1212 Agent Skills — plain-markdown SKIL
 | Works with | |
 |---|---|
 | **Assistants** | [Claude Code](docs/installation.md) · [ChatGPT](exports/chatgpt/) · [Gemini](exports/gemini/) · [Cursor, Codex, Windsurf](docs/installation.md) · [any MCP client](mcp-remote/) |
+| **Popular in China** | [Trae, Qoder, Lingma 通义灵码, CodeBuddy](docs/CHINA.md) · [DeepSeek, Qwen, Kimi, GLM, Doubao in the playground](docs/CHINA.md) |
 | **Where you already work** | [Telegram](integrations/telegram/) · [Slack](integrations/slack-app/) · [Raycast](integrations/raycast/) · [Obsidian](integrations/obsidian-plugin/) · [n8n](connectors/) |
 | **For builders** | [Python](https://pypi.org/project/pm-skills/) · [Hugging Face dataset](dataset/) · [Docker](Dockerfile) · [GitHub Actions](action/) · [decision layer](integrations/jev/) |
 
@@ -124,7 +151,8 @@ PM Skills is an open-source library of 1212 Agent Skills — plain-markdown SKIL
 
 | Release | What it adds | Try saying | Read more |
 |---|---|---|---|
-| **[v80.2.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)** trust in a release | The MCP install command fixed, a check that every release installs and runs, announcements in `doctor` and the playground, and frozen versions of the flagship skills that a team can pin | *"Run the doctor."* | [CHANGELOG.md](CHANGELOG.md) · [skill releases](docs/SKILL-RELEASES.md) |
+| **[v81.0.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)** Chinese support and the CV studio | Five packs for Chinese users, Chinese models and coding tools, 75 translations, and a CV shaped for one company from its tracking system, country, sector, values and job ad | *"帮我写周报"* · *"Write my CV for this Monzo job."* | [中文支持](#-中文支持--chinese-support) · [pm-cv](plugins/pm-cv/) |
+| **[v80.2.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v80.2.0)** trust in a release | The MCP install command fixed, a check that every release installs and runs, announcements in `doctor` and the playground, and frozen versions of the flagship skills that a team can pin | *"Run the doctor."* | [CHANGELOG.md](CHANGELOG.md) · [skill releases](docs/SKILL-RELEASES.md) |
 | **[v80.1.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v80.1.0)** design taste | A five-stage UI pipeline (direction, system, motion, critique, verification) that stops generic AI-looking interfaces, with pointers to five specialist design skills | *"Run the design pipeline on this landing page."* | [pm-design-taste](plugins/pm-design-taste/) · [credits](plugins/pm-design-taste/THIRD_PARTY.md) |
 | **v80.0.0** the promote loop | Scans your own transcripts for what you keep asking, drafts it as a skill, tests the triggers, publishes it | *"What do I keep asking you for?"* | [PROMOTE-LOOP.md](docs/PROMOTE-LOOP.md) |
 | **v79.0.0** the decision layer | Typed questions with a probability per option: which skill, is this input safe, ship or slip | *"Should we ship Friday?"* | [JEV-DECISION-LAYER.md](docs/JEV-DECISION-LAYER.md) |
