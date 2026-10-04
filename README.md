@@ -93,7 +93,7 @@ Say *"my landlord is keeping my deposit"* and your assistant loads [`security-de
 <br /><sub><b>▶ <a href="https://mohitagw15856.github.io/pm-claude-skills/">Playground</a></b>: run any skill in your browser. No install, no signup.</sub>
 </td>
 <td width="50%" align="center">
-<a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/"><img src="docs/readme-assets/tech-tree.jpg" width="100%" alt="The tech tree: every bundle a branch, every skill a node, with search and copyable install commands" /></a>
+<a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/"><img src="docs/readme-assets/tech-tree-tour.webp" width="100%" alt="A zoom and pan through the tech tree: the whole library as branches of skill nodes, then close up on the research queue and branch after branch of skills" /></a>
 <br /><sub><b>🌳 <a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/">Tech tree</a></b>: the whole library as a research tree. Vote on what gets researched next.</sub>
 </td>
 </tr>
@@ -105,6 +105,16 @@ Say *"my landlord is keeping my deposit"* and your assistant loads [`security-de
 <td width="50%" align="center">
 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="web/docs-assets/demo-galaxy.webp" width="100%" alt="Galaxy 3D: fly through all 1250 skills as a constellation" /></a>
 <br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html">Galaxy 3D</a></b>: all 1250 skills as stars. Zero productivity value, 100% recommended.</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" align="center">
+<a href="https://mohitagw15856.github.io/pm-claude-skills/find.html"><img src="docs/readme-assets/search-demo.webp" width="100%" alt="Typing weekly report into the skill finder: the ranked matches appear as you type, Chinese Weekly Report first" /></a>
+<br /><sub><b>🔎 <a href="https://mohitagw15856.github.io/pm-claude-skills/find.html">Find a skill</a></b>: describe the task in plain words, English or Chinese. Runs in your browser.</sub>
+</td>
+<td width="50%" align="center">
+<a href="https://mohitagw15856.github.io/pm-claude-skills/city.html"><img src="docs/readme-assets/city.webp" width="100%" alt="Skill City at dusk: every skill a building, grouped in districts, with windows lit in the skills you have used" /></a>
+<br /><sub><b>🏙 <a href="https://mohitagw15856.github.io/pm-claude-skills/city.html">Skill City</a></b>: every skill a building. The windows light up as you use them.</sub>
 </td>
 </tr>
 </table>
@@ -237,6 +247,17 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
 
 国内镜像：[Gitee](https://gitee.com/mohitagw/pm-claude-skills) · [魔搭在线试用](https://www.modelscope.ai/studios/mohitagw15856/pm-skills-playground) · [魔搭数据集](https://www.modelscope.ai/datasets/mohitagw15856/pm-skills-instruct) · [路由模型](https://www.modelscope.ai/models/mohitagw15856/pm-skills-router) · **[中文说明](README.zh-CN.md)** · **[国内安装指南](docs/CHINA.md)** · [开源小课](docs/learn-zh/README.md)
 
+<p align="center">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/listen.html">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/listen-banner.svg">
+      <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/listen-banner-light.svg">
+      <img src="docs/readme-assets/listen-banner.svg" width="460" alt="▶ 听一听: hear four Mandarin demo exchanges (weekly report, severance, civil service essay, Xiaohongshu) read aloud in your browser" />
+    </picture>
+  </a>
+  <br /><sub>GitHub cannot play audio in a README, so this opens a page that reads the demos aloud with your browser's own Mandarin voice.</sub>
+</p>
+
 <p>
   <a href="https://gitee.com/mohitagw/pm-claude-skills"><img alt="Gitee mirror status" src="https://mohitagw15856.github.io/pm-claude-skills/live/cn-status-gitee.svg"></a>
   <a href="https://npmmirror.com/package/pm-claude-skills"><img alt="npmmirror status" src="https://mohitagw15856.github.io/pm-claude-skills/live/cn-status-npmmirror.svg"></a>
@@ -255,6 +276,14 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
 </p>
 
 ## 🥊 Without a skill vs. with one
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/before-after.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/before-after-light.svg">
+    <img src="docs/readme-assets/before-after.svg" width="100%" alt="Animated before and after: the same request answered by a generic AI and by a skill. A lease gets vague advice on the left and ranked clauses with real money on the right; a PRD request gets platitudes versus a problem, metrics and user stories; a Chinese weekly report gets filler versus results, risks and a dated plan." />
+  </picture>
+</p>
 
 | You say | Generic AI | With the skill |
 |---|---|---|

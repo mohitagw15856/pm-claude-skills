@@ -152,6 +152,14 @@ flowchart TD
 
 例如问"公司要裁我，能拿多少补偿？"，AI 助手会加载 [`cn-severance-calculator`](skills/cn-severance-calculator/SKILL.md)：判断适用 N、N+1 还是 2N，一步步算清楚，并列出签字前要核对的事项。
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/before-after-zh.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/before-after-zh-light.svg">
+    <img src="docs/readme-assets/before-after-zh.svg" width="100%" alt="动画对比：同样的请求，普通 AI 只给泛泛而谈的建议，加载技能后给出可以直接用的成品。补偿金按 N 算清楚，申论题判断题型并批改，周报写出结果、风险和带日期的计划。" />
+  </picture>
+</p>
+
 MIT 开源协议，永久免费。没有运行时，没有遥测，不需要账号。
 
 <p align="center">
@@ -291,6 +299,17 @@ npx pm-claude-skills skillcheck --dir ./my-skills
 
 ## 中文技能包
 
+<p align="center">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/listen.html">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/listen-banner.svg">
+      <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/listen-banner-light.svg">
+      <img src="docs/readme-assets/listen-banner.svg" width="460" alt="▶ 听一听：周报、补偿金、申论、小红书四段示例，在浏览器里用中文朗读" />
+    </picture>
+  </a>
+  <br /><sub>GitHub 的说明页不能直接播放声音，点进去由浏览器自带的中文语音朗读，并逐句高亮。</sub>
+</p>
+
 | 技能包 | 内容 | 试着说 |
 |---|---|---|
 | [**pm-china-work**](plugins/pm-china-work/) 职场 | 周报 / 月报、述职、晋升答辩、复盘、需求评审、职级对标、公文、飞书、钉钉、企业微信 | "帮我把这些笔记整理成周报。" |
@@ -317,12 +336,22 @@ npx pm-claude-skills skillcheck --dir ./my-skills
 <table>
 <tr>
 <td width="50%" align="center">
-<a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/"><img src="docs/readme-assets/tech-tree.jpg" width="100%" alt="技能科技树" /></a>
+<a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/"><img src="docs/readme-assets/tech-tree-tour.webp" width="100%" alt="技能科技树：先看全貌，再放大到研究队列，然后一个分支一个分支往下看" /></a>
 <br /><sub><b>🌳 <a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/">技能科技树</a></b>：整个技能库画成一棵科技树，可以搜索、复制安装命令、为想要的技能投票。</sub>
 </td>
 <td width="50%" align="center">
 <a href="plugins/pm-3d-explorer/"><img src="docs/readme-assets/3d-explorer.jpg" width="100%" alt="3D 讲解页面" /></a>
 <br /><sub><b>🧊 <a href="plugins/pm-3d-explorer/">3D 讲解页</a></b>：给一个主题，生成可以拆开看、点击看标注、还能做小测验的 3D 页面。</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" align="center">
+<a href="https://mohitagw15856.github.io/pm-claude-skills/find.html?q=%E5%B8%AE%E6%88%91%E5%86%99%E5%91%A8%E6%8A%A5"><img src="docs/readme-assets/search-demo-zh.webp" width="100%" alt="在技能搜索里输入“帮我写周报”，中文周报技能排在第一" /></a>
+<br /><sub><b>🔎 <a href="https://mohitagw15856.github.io/pm-claude-skills/find.html">找技能</a></b>：用自己的话描述任务，中英文都可以，在浏览器里本地匹配。</sub>
+</td>
+<td width="50%" align="center">
+<a href="https://mohitagw15856.github.io/pm-claude-skills/city.html"><img src="docs/readme-assets/city.webp" width="100%" alt="技能城：每个技能是一栋楼，用过的技能会亮灯" /></a>
+<br /><sub><b>🏙 <a href="https://mohitagw15856.github.io/pm-claude-skills/city.html">技能城</a></b>：每个技能是一栋楼，用得越多，城市越亮。</sub>
 </td>
 </tr>
 </table>
