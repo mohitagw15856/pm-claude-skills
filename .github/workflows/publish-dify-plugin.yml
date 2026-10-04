@@ -1,18 +1,19 @@
-name: Publish Dify plugin
+name: Build Dify plugin
 
 # Packages integrations/dify-plugin (with the trained skill router and index) using
-# Dify's official CLI, pinned by checksum, and attaches pm_skills.difypkg to the release.
+# Dify's official CLI, pinned by checksum, so a change that breaks packaging fails
+# here. Releases are immutable, so the published copy is built by
+# deploy-playground.yml and served from Pages at /dify/pm_skills.difypkg.
 on:
-  release:
-    types: [published]
+  pull_request:
+    paths:
+      - 'integrations/dify-plugin/**'
+      - 'scripts/build-dify-plugin.mjs'
+      - '.github/workflows/publish-dify-plugin.yml'
   workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Release tag to attach the package to'
-        required: true
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   package:
@@ -39,10 +40,7 @@ jobs:
           echo "${CLI_SHA256}  dify" | sha256sum -c -
           chmod +x dify
           ./dify plugin package integrations/dify-plugin -o pm_skills.difypkg
-      - name: Attach to the release
-        env:
-          GH_TOKEN: ${{ github.token }}
-          TAG: ${{ github.event.release.tag_name || inputs.tag }}
-        run: |
-          printf '%s' "$TAG" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+$' || { echo "::error::bad tag"; exit 1; }
-          gh release upload "$TAG" pm_skills.difypkg --clobber
+      - uses: actions/upload-artifact@v7
+        with:
+          name: pm_skills.difypkg
+          path: pm_skills.difypkg

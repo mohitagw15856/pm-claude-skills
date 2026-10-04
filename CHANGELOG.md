@@ -9,6 +9,9 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+### Fixed
+- The Dify plugin package is served from the site at https://mohitagw15856.github.io/pm-claude-skills/dify/pm_skills.difypkg, since releases are immutable and cannot take assets after publishing.
+
 ## [81.2.0] - China compliance, Hong Kong and Taiwan, Dify and Chinese routing - 2026-10-04
 
 **1250 skills · 144 bundles** (from 1235 · 142 at v81.1.0).
