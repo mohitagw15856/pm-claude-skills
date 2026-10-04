@@ -83,8 +83,8 @@ Playground 支持用你自己的 API Key 调用国内模型，Key 只保存在�
 
 | 模型 | 获取 API Key |
 |---|---|
-| 魔搭 ModelScope（免费，每天有免费额度；DeepSeek、通义千问、GLM、文心、MiniMax） | <https://modelscope.cn/my/myaccesstoken> |
-| Hugging Face（免费额度；Kimi、DeepSeek、GLM、通义千问） | <https://huggingface.co/settings/tokens> |
+| 魔搭 ModelScope（免费，每天有免费额度，首次使用需绑定阿里云账号；DeepSeek、通义千问、GLM、文心、MiniMax） | <https://modelscope.cn/my/myaccesstoken> |
+| Hugging Face（每月少量免费额度，够试几次；Kimi、DeepSeek、GLM、通义千问） | <https://huggingface.co/settings/tokens> |
 | GLM 智谱（有免费模型） | <https://bigmodel.cn/usercenter/proj-mgmt/apikeys> |
 | DeepSeek 深度求索 | <https://platform.deepseek.com/api_keys> |
 | Qwen 通义千问 | <https://bailian.console.aliyun.com/?apiKey=1> |

@@ -137,7 +137,8 @@
     models: [['doubao-seed-2-1-lite-260915', 'Doubao Seed 2.1 Lite'], ['doubao-seed-2-1-pro-260915', 'Doubao Seed 2.1 Pro']],
   });
   // Free routes to the same models, no top-up: ModelScope API-Inference gives every
-  // account a daily free quota, Hugging Face Inference Providers a monthly free credit.
+  // account a daily free quota once it is linked to an Alibaba Cloud account (free);
+  // Hugging Face Inference Providers give a small monthly credit (a few runs).
   // Each visitor uses their own free token. Model lists checked on 2026-10-04.
   PROVIDERS.modelscope = openAICompatible({
     name: 'ModelScope', label: '魔搭 ModelScope（免费）', keyStore: 'modelscope_cn_token', free: true,
@@ -154,7 +155,7 @@
       ['zai-org/GLM-5.2', 'GLM-5.2'], ['PaddlePaddle/ERNIE-4.5-300B-A47B-PT', 'ERNIE 4.5'], ['MiniMax/MiniMax-M3', 'MiniMax M3']],
   });
   PROVIDERS.hf = openAICompatible({
-    name: 'Hugging Face', label: 'Hugging Face (Kimi, free credits)', keyStore: 'hf_token', free: true,
+    name: 'Hugging Face', label: 'Hugging Face (Kimi, a few free runs)', keyStore: 'hf_token', free: true,
     placeholder: 'hf_… (Hugging Face access token)', keyUrl: 'https://huggingface.co/settings/tokens',
     url: 'https://router.huggingface.co/v1/chat/completions',
     models: [['moonshotai/Kimi-K3', 'Kimi K3'], ['deepseek-ai/DeepSeek-V4.1-Flash', 'DeepSeek V4.1 Flash'],
