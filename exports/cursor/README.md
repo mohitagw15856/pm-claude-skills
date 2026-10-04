@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1224 skills exported. Copy a `.mdc rule` into the tool to use it.
+1234 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -186,13 +186,20 @@
 | Clip Factory | `pm-newgen` | `pm-newgen/clip-factory/clip-factory.mdc` |
 | Clone Brief | `pm-2027` | `pm-2027/clone-brief/clone-brief.mdc` |
 | Closing Disclosure Decoder | `pm-decoders` | `pm-decoders/closing-disclosure-decoder/closing-disclosure-decoder.mdc` |
+| Campus Recruitment (校招) | `pm-china-exams` | `pm-china-exams/cn-campus-recruitment/cn-campus-recruitment.mdc` |
+| Civil Service Essay (申论) | `pm-china-exams` | `pm-china-exams/cn-civil-exam-essay/cn-civil-exam-essay.mdc` |
+| Civil Service Interview (结构化面试) | `pm-china-exams` | `pm-china-exams/cn-civil-exam-interview/cn-civil-exam-interview.mdc` |
 | 复盘 (Fupan) | `pm-china-work` | `pm-china-work/cn-fupan/cn-fupan.mdc` |
 | Gaokao Application Planner (高考志愿) | `pm-china-life` | `pm-china-life/cn-gaokao-planner/cn-gaokao-planner.mdc` |
 | China Annual Tax Reconciliation (个税年度汇算) | `pm-china-life` | `pm-china-life/cn-iit-reconciliation/cn-iit-reconciliation.mdc` |
+| Kaoyan Planner (考研规划) | `pm-china-exams` | `pm-china-exams/cn-kaoyan-planner/cn-kaoyan-planner.mdc` |
 | China Labour Contract Decoder (劳动合同) | `pm-china-life` | `pm-china-life/cn-labour-contract-decoder/cn-labour-contract-decoder.mdc` |
+| Level Mapper (职级对标) | `pm-china-work` | `pm-china-work/cn-level-mapper/cn-level-mapper.mdc` |
+| PRD Review (需求评审) | `pm-china-work` | `pm-china-work/cn-prd-review/cn-prd-review.mdc` |
 | Promotion Defence (晋升答辩) | `pm-china-work` | `pm-china-work/cn-promotion-defence/cn-promotion-defence.mdc` |
 | China Severance Calculator (经济补偿金) | `pm-china-life` | `pm-china-life/cn-severance-calculator/cn-severance-calculator.mdc` |
 | China Social Insurance Explainer (五险一金) | `pm-china-life` | `pm-china-life/cn-social-insurance-explainer/cn-social-insurance-explainer.mdc` |
+| State-Owned Enterprise Interview (国企面试) | `pm-china-exams` | `pm-china-exams/cn-soe-interview/cn-soe-interview.mdc` |
 | Chinese Weekly Report (周报) | `pm-china-work` | `pm-china-work/cn-weekly-report/cn-weekly-report.mdc` |
 | Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-work` | `pm-china-work/cn-year-end-review/cn-year-end-review.mdc` |
 | Co-Marketing | `pm-growth` | `pm-growth/co-marketing/co-marketing.mdc` |
@@ -349,6 +356,7 @@
 | Difficult Conversation | `pm-comms` | `pm-comms/difficult-conversation/difficult-conversation.mdc` |
 | Digital Death Plan | `other` | `other/digital-death-plan/digital-death-plan.mdc` |
 | Digital Legacy Planner | `pm-estate` | `pm-estate/digital-legacy-planner/digital-legacy-planner.mdc` |
+| DingTalk Work Log (钉钉日志) | `pm-china-work` | `pm-china-work/dingtalk-work-log/dingtalk-work-log.mdc` |
 | Disability Benefit Appeal | `pm-accessibility` | `pm-accessibility/disability-benefit-appeal/disability-benefit-appeal.mdc` |
 | Disability Disclosure Decision | `pm-accessibility` | `pm-accessibility/disability-disclosure-decision/disability-disclosure-decision.mdc` |
 | Disability Insurance Decoder | `pm-decoders` | `pm-decoders/disability-insurance-decoder/disability-insurance-decoder.mdc` |
@@ -452,6 +460,7 @@
 | Feature Prioritisation | `pm-planning` | `pm-planning/feature-prioritisation/feature-prioritisation.mdc` |
 | Feature Sunset Plan | `pm-planning` | `pm-planning/feature-sunset-plan/feature-sunset-plan.mdc` |
 | Federal Resume | `pm-cv` | `pm-cv/federal-resume/federal-resume.mdc` |
+| Feishu Doc Writer (飞书文档) | `pm-china-work` | `pm-china-work/feishu-doc-writer/feishu-doc-writer.mdc` |
 | Feynman Explainer | `pm-learning` | `pm-learning/feynman-explainer/feynman-explainer.mdc` |
 | Figma Annotation Guide | `pm-figma` | `pm-figma/figma-annotation-guide/figma-annotation-guide.mdc` |
 | Figma Component Audit | `pm-figma` | `pm-figma/figma-component-audit/figma-component-audit.mdc` |
@@ -1199,6 +1208,7 @@
 | Warranty Claim | `pm-money` | `pm-money/warranty-claim/warranty-claim.mdc` |
 | Weather Now | `pm-live` | `pm-live/weather-now/weather-now.mdc` |
 | WeChat Official Account Article (公众号文章) | `pm-zh-content` | `pm-zh-content/wechat-article/wechat-article.mdc` |
+| WeCom Announcement (企业微信公告) | `pm-china-work` | `pm-china-work/wecom-announcement/wecom-announcement.mdc` |
 | Wedding Budget | `pm-wedding` | `pm-wedding/wedding-budget/wedding-budget.mdc` |
 | Wedding Logistics Planner | `pm-wedding` | `pm-wedding/wedding-logistics-planner/wedding-logistics-planner.mdc` |
 | Wedding Speech | `pm-lifeadmin` | `pm-lifeadmin/wedding-speech/wedding-speech.mdc` |
