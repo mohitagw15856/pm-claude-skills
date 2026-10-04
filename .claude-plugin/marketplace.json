@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-china-exams",
+      "description": "The Chinese exams and early-career pack: the civil service essay (申论) and structured interview (结构化面试), postgraduate entrance exam planning (考研), campus recruitment (校招 and 三方协议) and state-owned enterprise interviews (国企面试), in Chinese",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-china-exams",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-zh-content",
       "description": "Chinese content platforms: 小红书 notes, 公众号 articles, 抖音 short-video scripts and live-commerce (直播带货) scripts, each with a compliance check against restricted advertising claims and undisclosed sponsorship",
       "version": "1.0.0",
@@ -34,7 +42,7 @@
     },
     {
       "name": "pm-china-work",
-      "description": "The Chinese workplace pack: weekly and monthly reports (周报), the year-end review (述职 / 年终总结), the promotion defence (晋升答辩) and the 复盘 project review, written in Chinese to the conventions managers expect",
+      "description": "The Chinese workplace pack: weekly and monthly reports (周报), the year-end review (述职 / 年终总结), the promotion defence (晋升答辩), the 复盘 project review, PRD reviews (需求评审), job-level comparison (职级对标), and Feishu docs, DingTalk logs and WeCom announcements, written in Chinese to the conventions managers expect",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-china-work",
