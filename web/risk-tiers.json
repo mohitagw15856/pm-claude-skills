@@ -1,9 +1,9 @@
 {
  "generated": "2026-10-04",
  "counts": {
-  "consequential": 222,
-  "high-stakes": 148,
-  "informational": 877
+  "consequential": 228,
+  "high-stakes": 154,
+  "informational": 880
  },
  "tiers": {
   "360-feedback-template": {
@@ -726,6 +726,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "cn-citation-gbt7714": {
+   "tier": "informational",
+   "via": "default"
+  },
   "cn-civil-exam-essay": {
    "tier": "informational",
    "via": "default"
@@ -734,11 +738,27 @@
    "tier": "informational",
    "via": "default"
   },
+  "cn-data-export-assessment": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-compliance"
+  },
   "cn-fupan": {
    "tier": "consequential",
    "via": "bundle:pm-china-work"
   },
   "cn-gaokao-planner": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-china-life"
+  },
+  "cn-genai-filing": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-compliance"
+  },
+  "cn-housing-fund-withdrawal": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-china-life"
+  },
+  "cn-hukou-points": {
    "tier": "high-stakes",
    "via": "bundle:pm-china-life"
   },
@@ -758,6 +778,22 @@
    "tier": "consequential",
    "via": "bundle:pm-china-work"
   },
+  "cn-medical-insurance-claim": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-china-life"
+  },
+  "cn-mlps-checklist": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-compliance"
+  },
+  "cn-official-document": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-work"
+  },
+  "cn-pipl-pia": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-compliance"
+  },
   "cn-prd-review": {
    "tier": "consequential",
    "via": "bundle:pm-china-work"
@@ -770,11 +806,23 @@
    "tier": "high-stakes",
    "via": "bundle:pm-china-life"
   },
+  "cn-small-business-tax": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-china-life"
+  },
   "cn-social-insurance-explainer": {
    "tier": "high-stakes",
    "via": "bundle:pm-china-life"
   },
   "cn-soe-interview": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cn-tech-interview-drill": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cn-thesis-proposal": {
    "tier": "informational",
    "via": "default"
   },
@@ -1061,6 +1109,10 @@
   "cross-examine-me": {
    "tier": "informational",
    "via": "default"
+  },
+  "crossborder-platform-playbook": {
+   "tier": "consequential",
+   "via": "bundle:pm-chuhai"
   },
   "crypto-prices": {
    "tier": "informational",
@@ -2213,6 +2265,10 @@
   "hiring-rubric": {
    "tier": "consequential",
    "via": "bundle:pm-people"
+  },
+  "hk-mpf-explainer": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-hk-tw"
   },
   "hn-digest": {
    "tier": "informational",
@@ -4705,6 +4761,10 @@
   "ttrpg-session-forge": {
    "tier": "informational",
    "via": "default"
+  },
+  "tw-labour-standards": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-hk-tw"
   },
   "two-worlds-translator": {
    "tier": "high-stakes",

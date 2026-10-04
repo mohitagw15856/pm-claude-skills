@@ -5,11 +5,17 @@
 //   ...-zh variants of both, for README.zh-CN.md (and the Gitee front page)
 // Pure CSS keyframes inside the SVG, so GitHub animates them in an <img>. System fonts only.
 //   node scripts/build-readme-animations.mjs
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const out = join(dirname(fileURLToPath(import.meta.url)), '..', 'docs', 'readme-assets');
+const root = join(dirname(fileURLToPath(import.meta.url)), '..');
+// Live skill count (deprecated aliases excluded), so the footer never goes stale.
+const COUNT = readdirSync(join(root, 'skills')).filter((n) => {
+  const f = join(root, 'skills', n, 'SKILL.md');
+  return existsSync(f) && !/^deprecated:/m.test(readFileSync(f, 'utf8').split('\n---')[0]);
+}).length.toLocaleString('en-GB');
 mkdirSync(out, { recursive: true });
 
 const THEMES = {
@@ -21,7 +27,7 @@ const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, 
 
 const LOCALES = {
   en: {
-    you: 'You', loaded: 'Skill loaded', title: 'your assistant + PM Skills', foot: '1,235 skills · one markdown file each',
+    you: 'You', loaded: 'Skill loaded', title: 'your assistant + PM Skills', foot: `${COUNT} skills · one markdown file each`,
     aria: 'Three requests and the skill that answers each: a deposit dispute, a Chinese weekly report, and a ship-or-slip decision',
     steps: [['Say what you need', 'in your own words, any language'], ['One skill loads', 'a markdown file, read only when it fits'], ['Finished work', 'the document, not advice about it']],
     scenes: [
@@ -34,7 +40,7 @@ const LOCALES = {
     ],
   },
   zh: {
-    you: '你', loaded: '已加载技能', title: '你的 AI 助手 + PM Skills', foot: '1,235 个技能 · 每个都是一份 Markdown 文件',
+    you: '你', loaded: '已加载技能', title: '你的 AI 助手 + PM Skills', foot: `${COUNT} 个技能 · 每个都是一份 Markdown 文件`,
     aria: '三个请求以及回答它们的技能：裁员补偿、周报、公务员面试模拟',
     steps: [['说出你的需求', '用自己的话，中英文都可以'], ['加载一个技能', '一份 Markdown，只在需要时读取'], ['拿到成品', '是完成的文档，而不是建议']],
     scenes: [

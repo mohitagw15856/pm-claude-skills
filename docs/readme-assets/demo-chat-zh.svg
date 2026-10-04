@@ -14,7 +14,7 @@
   <circle cx="40" cy="40" r="5" fill="#ff5f57"/><circle cx="58" cy="40" r="5" fill="#febc2e"/><circle cx="76" cy="40" r="5" fill="#28c840"/>
   <text x="96" y="44" class="title">你的 AI 助手 + PM Skills</text>
   <text x="460" y="92" class="lbl">已加载技能</text>
-  <text x="820" y="266" text-anchor="end" class="title">1,235 个技能 · 每个都是一份 Markdown 文件</text>
+  <text x="820" y="266" text-anchor="end" class="title">1,250 个技能 · 每个都是一份 Markdown 文件</text>
   <g class="b0">
     <text x="40" y="92" class="lbl">你</text>
     <rect x="40" y="102" width="350.19999999999993" height="44" rx="14" fill="#2c3a4a"/>

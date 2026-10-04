@@ -21,7 +21,7 @@ copyFileSync(join(root, 'integrations', 'router-model', 'pm_router.py'), join(pl
 
 const desc = (file) => {
   const m = readFileSync(file, 'utf8').replace(/\r\n/g, '\n').match(/^---\n[\s\S]*?^description:\s*"?(.*?)"?\s*$/m);
-  return m ? m[1].replace(/\\"/g, '"').replace(/\s*—\s*/g, ', ') : '';
+  return m ? m[1].replace(/\\"/g, '"').replace(/\s*\u2014\s*/g, ', ') : '';
 };
 const index = {};
 for (const name of readdirSync(join(root, 'skills')).sort()) {
