@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>小红书分享卡 · Share cards</title>
+<meta name="description" content="选一个技能，生成 3:4 小红书封面图（1080×1440）：大字标题、清单、便利贴三种模板，附中文名称、试着说的提问和二维码。全部在浏览器里生成。Pick any skill and make a 3:4 Xiaohongshu cover in your browser." />
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js" integrity="sha384-mZT2gIty7ZDdOGkxfP6joZcYdMW1Jvj9dRlfpTmaJAKKXTqzygtB22k7FLe+KZC1" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+<style>
+  .cd-wrap { max-width: 1040px; margin: 0 auto; padding: 16px 22px 70px; }
+  .cd-lead { color: var(--muted); font-size: 15px; line-height: 1.6; margin: 4px 0 18px; }
+  .cd-lead .en { display: block; font-size: 13px; margin-top: 4px; }
+  .cd-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 400px); gap: 24px; align-items: start; }
+  .cd-panel { border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel); padding: 14px 16px; }
+  .cd-panel + .cd-panel { margin-top: 14px; }
+  .cd-panel h2 { margin: 0 0 10px; font-size: 16px; }
+  .cd-field { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .cd-input, .cd-select { width: 100%; box-sizing: border-box; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 9px 12px; font-size: 15px; }
+  .cd-input:focus-visible, .cd-select:focus-visible, .cd-pick:focus-visible, .cd-btn:focus-visible, .cd-tpl input:focus-visible + span { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+  .cd-results { list-style: none; margin: 10px 0 0; padding: 0; max-height: 340px; overflow-y: auto; }
+  .cd-results li + li { margin-top: 4px; }
+  .cd-pick { width: 100%; text-align: left; background: transparent; color: var(--text); border: 1px solid transparent; border-radius: 10px; padding: 8px 10px; cursor: pointer; font-size: 14px; line-height: 1.4; }
+  .cd-pick:hover { background: var(--panel-2); }
+  .cd-pick[aria-pressed="true"] { border-color: var(--accent); background: var(--panel-2); }
+  .cd-pick small { display: block; color: var(--muted); font-size: 12.5px; }
+  .cd-tpls { display: flex; gap: 8px; flex-wrap: wrap; border: 0; margin: 0; padding: 0; }
+  .cd-tpls legend { font-size: 13px; color: var(--muted); margin-bottom: 6px; padding: 0; }
+  .cd-tpl { position: relative; }
+  .cd-tpl input { position: absolute; opacity: 0; }
+  .cd-tpl span { display: inline-block; border: 1px solid var(--border); border-radius: 999px; padding: 7px 14px; font-size: 14px; cursor: pointer; }
+  .cd-tpl input:checked + span { background: var(--accent); color: var(--bg); border-color: var(--accent); font-weight: 600; }
+  .cd-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 12px; }
+  .cd-preview { position: sticky; top: 12px; }
+  .cd-canvas { width: 100%; height: auto; aspect-ratio: 3 / 4; border-radius: var(--radius); border: 1px solid var(--border); background: var(--panel-2); display: block; }
+  .cd-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; align-items: center; }
+  .cd-btn { background: var(--accent); color: var(--bg); border: 0; border-radius: 999px; padding: 9px 18px; font-size: 15px; font-weight: 600; cursor: pointer; }
+  .cd-btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); font-weight: 500; }
+  .cd-status { font-size: 13px; color: var(--muted); min-height: 1.4em; margin: 8px 0 0; }
+  .cd-note { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--border); margin-top: 26px; padding-top: 12px; line-height: 1.6; }
+  @media (max-width: 760px) {
+    .cd-grid { grid-template-columns: 1fr; }
+    .cd-preview { position: static; order: -1; }
+    .cd-wrap { padding: 12px 16px 60px; }
+  }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="PM Skills" class="brand-logo" />
+    <div class="brand-text"><h1>小红书分享卡</h1><p class="tagline">选一个技能，生成 3:4 封面图</p></div>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<main class="cd-wrap">
+  <p class="cd-lead">搜一个技能，选模板，下载 1080×1440 的 PNG，直接发小红书或朋友圈。图片在你的浏览器里画出来，不上传任何内容。
+    <span class="en" lang="en">Search for a skill, pick a template and download a 1080 × 1440 PNG, the 3:4 shape Xiaohongshu and WeChat Moments expect. The image is drawn in your browser; nothing is uploaded.</span></p>
+
+  <div class="cd-grid">
+    <div>
+      <section class="cd-panel" aria-labelledby="h-pick">
+        <h2 id="h-pick">1. 选技能 · Pick a skill</h2>
+        <label class="cd-field" for="q">搜索技能（中文或英文）· Search</label>
+        <input class="cd-input" id="q" type="search" placeholder="例如：周报、简历、小红书" autocomplete="off" />
+        <ul class="cd-results" id="results" aria-label="搜索结果 · Results"></ul>
+      </section>
+
+      <section class="cd-panel" aria-labelledby="h-style">
+        <h2 id="h-style">2. 选样式 · Style</h2>
+        <fieldset class="cd-tpls">
+          <legend>模板 · Template</legend>
+          <label class="cd-tpl"><input type="radio" name="tpl" value="bold" checked /><span>大字标题 · Bold</span></label>
+          <label class="cd-tpl"><input type="radio" name="tpl" value="checklist" /><span>清单 · Checklist</span></label>
+          <label class="cd-tpl"><input type="radio" name="tpl" value="sticky" /><span>便利贴 · Sticky note</span></label>
+        </fieldset>
+        <div class="cd-row">
+          <div>
+            <label class="cd-field" for="lang">卡片语言 · Card language</label>
+            <select class="cd-select" id="lang">
+              <option value="zh">简体中文</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+          <div>
+            <label class="cd-field" for="qrto">二维码链接 · QR opens</label>
+            <select class="cd-select" id="qrto">
+              <option value="gitee">Gitee（国内可直接打开）</option>
+              <option value="site">GitHub Pages 技能页</option>
+            </select>
+          </div>
+        </div>
+        <label class="cd-field" for="trigger" style="margin-top:12px">试着说（可以改）· Prompt on the card</label>
+        <input class="cd-input" id="trigger" type="text" maxlength="60" />
+      </section>
+    </div>
+
+    <section class="cd-preview" aria-labelledby="h-prev">
+      <h2 id="h-prev" class="cd-field">预览 · Preview</h2>
+      <canvas class="cd-canvas" id="card" width="1080" height="1440" role="img" aria-label="分享卡预览"></canvas>
+      <div class="cd-actions">
+        <button class="cd-btn" id="dl" type="button">下载 PNG · Download</button>
+        <button class="cd-btn ghost" id="copy" type="button">复制链接 · Copy link</button>
+      </div>
+      <p class="cd-status" id="status" role="status" aria-live="polite"></p>
+    </section>
+  </div>
+
+  <p class="cd-note">中文名称和描述来自 <code>skills-i18n/zh</code> 的译文；没有译文的技能用英文。二维码默认指向 Gitee 镜像，在中国大陆可以直接打开。
+    <span lang="en">Chinese names and descriptions come from the translations in skills-i18n/zh; skills without one use English. The QR code points to the Gitee mirror by default, which opens in mainland China.</span></p>
+</main>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const W = 1080, H = 1440;
+const SANS = '-apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Segoe UI", sans-serif';
+const HAND = '"Kaiti SC", "STKaiti", "KaiTi", "Noto Serif CJK SC", "Songti SC", serif';
+const MONO = 'ui-monospace, Menlo, Consolas, monospace';
+const GITEE = 'https://gitee.com/mohitagw/pm-claude-skills';
+const SITE = 'https://mohitagw15856.github.io/pm-claude-skills';
+const NAME_RE = /^[a-z0-9]+(-[a-z0-9]+)*$/;
+
+let SKILLS = [], ZH = {}, current = null, triggerEdited = false;
+const state = { tpl: 'bold', lang: 'zh', qrto: 'gitee' };
+
+const status = (m) => { $('status').textContent = m; };
+
+// ── Data ───────────────────────────────────────────────────────────────────
+async function load() {
+  const [idx, zh] = await Promise.all([
+    fetch('skills-index.json').then((r) => r.json()).catch(() => ({ skills: [] })),
+    fetch('card-zh.json').then((r) => (r.ok ? r.json() : { skills: {} })).catch(() => ({ skills: {} })),
+  ]);
+  SKILLS = (idx.skills || []).filter((s) => !s.deprecated && NAME_RE.test(s.name || ''));
+  ZH = zh.skills || {};
+}
+
+const view = (s) => {
+  const z = state.lang === 'zh' ? ZH[s.name] : null;
+  const title = z ? z.title : (s.title || s.name);
+  const full = z ? z.description : (s.description || '');
+  return { name: s.name, title, description: shortDesc(full), zh: !!z, points: z && z.points.length ? z.points : pointsOf(full), trigger: z && z.trigger ? z.trigger : triggerOf(s, z) };
+};
+
+// The card keeps what the skill does and drops the "use when…" routing text.
+function shortDesc(d) {
+  const i = d.search(/当被要求|当被问到|当被请求|当有人|当用户|Use when|Use this when|Use it when/);
+  const head = (i > 0 ? d.slice(0, i) : d).trim();
+  return head.length >= 10 ? head : d;
+}
+// English: "Produces a plan with A, B, and C" → [A, B, C]; otherwise the sentences.
+function pointsOf(desc) {
+  const m = desc.match(/Produces?\s+(?:an?\s+|the\s+)?([^.]+)/i);
+  let parts = m ? m[1].split(/,\s*(?:and\s+)?|\s+and\s+|\s+with\s+|、|，/) : desc.split(/(?<=[.。；;])\s*/);
+  parts = parts.map((p) => p.replace(/[.。]$/, '').trim()).filter((p) => p.length > 3);
+  return parts.slice(0, 4).map((p) => p[0].toUpperCase() + p.slice(1));
+}
+function triggerOf(s, z) {
+  if (z) return `帮我用「${z.title}」`;
+  const d = s.description || '';
+  const q = d.match(/[“"']([^“”"']{6,60})[”"']/);
+  if (q) return q[1];
+  const m = d.match(/Use when (?:asked to |the user asks to |someone asks to )?([^,.;]+)/i);
+  return m ? `Help me ${m[1].replace(/^(you|they) /i, '').trim()}` : `Use ${s.title || s.name}`;
+}
+
+// ── Search ─────────────────────────────────────────────────────────────────
+function search(q) {
+  q = q.trim().toLowerCase();
+  if (!q) {
+    const zhFirst = Object.keys(ZH).map((n) => SKILLS.find((s) => s.name === n)).filter(Boolean);
+    return (zhFirst.length ? zhFirst : SKILLS).slice(0, 30);
+  }
+  const scored = [];
+  for (const s of SKILLS) {
+    const z = ZH[s.name];
+    let n = 0;
+    if (s.name === q) n = 6;
+    else if (z && z.title.includes(q)) n = 5;
+    else if (s.name.includes(q) || (s.title || '').toLowerCase().includes(q)) n = 4;
+    else if (z && z.description.includes(q)) n = 3;
+    else if ((s.description || '').toLowerCase().includes(q)) n = 1;
+    if (n) scored.push([n + (z ? 0.5 : 0), s]);
+  }
+  return scored.sort((a, b) => b[0] - a[0]).slice(0, 30).map((x) => x[1]);
+}
+function renderResults() {
+  const list = $('results'); list.textContent = '';
+  const hits = search($('q').value);
+  if (!hits.length) { const li = document.createElement('li'); li.className = 'cd-field'; li.textContent = '没有匹配的技能 · No match'; list.append(li); return; }
+  for (const s of hits) {
+    const z = ZH[s.name];
+    const li = document.createElement('li');
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'cd-pick'; b.setAttribute('aria-pressed', String(current && current.name === s.name));
+    b.textContent = z ? `${z.title} · ${s.name}` : (s.title || s.name);
+    const small = document.createElement('small'); small.textContent = z ? z.description.slice(0, 60) + '…' : (s.summary || s.description || '').slice(0, 90);
+    b.append(small);
+    b.addEventListener('click', () => { pick(s); renderResults(); });
+    li.append(b); list.append(li);
+  }
+}
+function pick(s) {
+  current = s; triggerEdited = false;
+  $('trigger').value = view(s).trigger;
+  draw();
+}
+
+// ── Canvas helpers ─────────────────────────────────────────────────────────
+const font = (w, px, fam = SANS) => `${w} ${px}px ${fam}`;
+function wrap(g, text, maxW, max = 99) {
+  const parts = String(text).match(/[　-鿿＀-￯]|[^\s　-鿿＀-￯]+|\s+/g) || [];
+  const lines = []; let line = '';
+  for (const part of parts) {
+    const next = line + part;
+    if (g.measureText(next).width > maxW && line.trim()) { lines.push(line.trim()); line = part.trimStart(); } else line = next;
+  }
+  if (line.trim()) lines.push(line.trim());
+  // Line-start rule: closing punctuation never begins a line; it hangs on the previous one.
+  for (let i = 1; i < lines.length; i++) {
+    const m = lines[i].match(/^[，、。：；！？）」』”’,.:;!?)]+/);
+    if (m) { lines[i - 1] += m[0]; lines[i] = lines[i].slice(m[0].length).trimStart(); }
+  }
+  for (let i = lines.length - 1; i >= 0; i--) if (!lines[i]) lines.splice(i, 1);
+  if (lines.length > max) {
+    const cut = lines.slice(0, max); let last = cut[max - 1];
+    while (last.length && g.measureText(last + '…').width > maxW) last = last.slice(0, -1);
+    cut[max - 1] = last.replace(/[，,、\s]+$/, '') + '…'; return cut;
+  }
+  return lines;
+}
+function para(g, text, x, y, maxW, lh, max) { for (const l of wrap(g, text, maxW, max)) { g.fillText(l, x, y); y += lh; } return y; }
+// Largest font size (step 4px) that fits the text into maxLines.
+function fitTitle(g, text, weight, start, min, maxW, maxLines, fam = SANS) {
+  for (let px = start; px >= min; px -= 4) { g.font = font(weight, px, fam); if (wrap(g, text, maxW).length <= maxLines) return px; }
+  g.font = font(weight, min, fam); return min;
+}
+function rrect(g, x, y, w, h, r) { g.beginPath(); g.roundRect(x, y, w, h, r); }
+function qrUrl(name, isZh) {
+  if (state.qrto === 'site') return `${SITE}/skill/${name}.html`;
+  return `${GITEE}/blob/main/${isZh ? 'skills-i18n/zh' : 'skills'}/${name}/SKILL.md`;
+}
+function drawQr(g, url, x, y, size, ink) {
+  g.fillStyle = '#ffffff'; rrect(g, x - 18, y - 18, size + 36, size + 36, 18); g.fill();
+  if (typeof window.qrcode !== 'function') {
+    g.fillStyle = ink; g.font = font(500, 22); g.textAlign = 'center';
+    g.fillText('二维码加载失败', x + size / 2, y + size / 2); g.textAlign = 'left'; return false;
+  }
+  const qr = window.qrcode(0, 'M'); qr.addData(url); qr.make();
+  const n = qr.getModuleCount(), c = size / n;
+  g.fillStyle = ink;
+  for (let r = 0; r < n; r++) for (let k = 0; k < n; k++) if (qr.isDark(r, k)) g.fillRect(x + k * c, y + r * c, Math.ceil(c), Math.ceil(c));
+  return true;
+}
+function footer(g, color, isZh) {
+  g.fillStyle = color; g.font = font(400, 26);
+  g.fillText(`${isZh ? 'gitee.com/mohitagw/pm-claude-skills' : 'github.com/mohitagw15856/pm-claude-skills'} · MIT`, 80, H - 56);
+}
+const L = (zh, en) => (state.lang === 'zh' ? zh : en);
+
+// ── Templates ──────────────────────────────────────────────────────────────
+const TEMPLATES = {
+  bold(g, v, trig) {
+    g.fillStyle = '#d9473f'; g.fillRect(0, 0, W, H);
+    g.fillStyle = '#fff4e6'; g.font = font(600, 34); g.fillText(L('PM Skills · 技能卡', 'PM Skills · skill card'), 80, 120);
+    g.fillStyle = '#fff4e6'; g.fillRect(80, 150, 120, 10);
+    const px = fitTitle(g, v.title, 900, 168, 84, W - 160, 3);
+    let y = 200 + px; for (const l of wrap(g, v.title, W - 160, 3)) { g.fillText(l, 80, y); y += px * 1.12; }
+    g.fillStyle = 'rgba(255,244,230,0.9)'; g.font = font(400, 42);
+    y = para(g, v.description, 80, y + 10, W - 160, 64, 5);
+    const py = Math.max(y + 30, H - 560), ph = H - 140 - py;
+    g.fillStyle = '#fff4e6'; rrect(g, 60, py, W - 120, ph, 36); g.fill();
+    const qs = 260, qx = W - 100 - qs, qy = py + (ph - qs) / 2;
+    g.fillStyle = '#9b2d27'; g.font = font(700, 30); g.fillText(L('试着说', 'Try saying'), 100, py + 70);
+    g.fillStyle = '#2b1a17'; g.font = font(800, 50);
+    para(g, `“${trig}”`, 100, py + 145, qx - 150, 66, 3);
+    g.fillStyle = '#6d4a44'; g.font = font(400, 26); g.fillText(L('扫码看完整技能 →', 'Scan for the full skill →'), 100, py + ph - 40);
+    drawQr(g, qrUrl(v.name, v.zh), qx, qy, qs, '#2b1a17');
+    footer(g, '#fff4e6', state.lang === 'zh');
+  },
+  checklist(g, v, trig) {
+    g.fillStyle = '#fbfaf6'; g.fillRect(0, 0, W, H);
+    g.fillStyle = '#2f5d50'; g.fillRect(0, 0, W, 420);
+    g.fillStyle = '#d7eadf'; g.font = font(600, 32); g.fillText(L('收藏这张清单', 'Save this checklist'), 80, 110);
+    g.fillStyle = '#ffffff';
+    const px = fitTitle(g, v.title, 800, 120, 64, W - 160, 2);
+    let y = 150 + px; for (const l of wrap(g, v.title, W - 160, 2)) { g.fillText(l, 80, y); y += px * 1.1; }
+    g.fillStyle = '#2f5d50'; g.font = font(700, 38); g.fillText(L('用它你能得到：', 'What you get:'), 80, 510);
+    y = 590;
+    for (const p of v.points.slice(0, 4)) {
+      g.strokeStyle = '#2f5d50'; g.lineWidth = 5; rrect(g, 80, y - 40, 50, 50, 10); g.stroke();
+      g.beginPath(); g.moveTo(92, y - 15); g.lineTo(103, y - 3); g.lineTo(122, y - 30); g.stroke();
+      g.fillStyle = '#1f2a26'; g.font = font(500, 42);
+      y = para(g, p, 160, y, W - 240, 58, 2) + 34;
+    }
+    const by = Math.max(y + 10, H - 470), qs = 240;
+    g.fillStyle = '#e6efe9'; rrect(g, 60, by, W - 120, H - 130 - by, 30); g.fill();
+    const qx = W - 100 - qs, qy = by + (H - 130 - by - qs) / 2;
+    g.fillStyle = '#2f5d50'; g.font = font(700, 30); g.fillText(L('复制这句给 AI：', 'Paste this to your AI:'), 100, by + 70);
+    g.fillStyle = '#1f2a26'; g.font = font(700, 44); para(g, `“${trig}”`, 100, by + 140, qx - 150, 60, 3);
+    drawQr(g, qrUrl(v.name, v.zh), qx, qy, qs, '#1f2a26');
+    footer(g, '#5d6b65', state.lang === 'zh');
+  },
+  sticky(g, v, trig) {
+    g.fillStyle = '#e8dfcf'; g.fillRect(0, 0, W, H);
+    g.fillStyle = 'rgba(120,100,70,0.12)';
+    for (let x = 30; x < W; x += 40) for (let y = 30; y < H; y += 40) { g.beginPath(); g.arc(x, y, 2.5, 0, Math.PI * 2); g.fill(); }
+    g.save(); g.translate(W / 2, 610); g.rotate(-0.025);
+    const nw = 880, nh = 920, nx = -nw / 2, ny = -nh / 2;
+    g.fillStyle = 'rgba(80,60,20,0.18)'; g.fillRect(nx + 14, ny + 18, nw, nh);
+    g.fillStyle = '#ffe27a'; g.fillRect(nx, ny, nw, nh);
+    g.fillStyle = 'rgba(255,255,255,0.55)'; g.fillRect(-110, ny - 30, 220, 64);
+    g.fillStyle = '#5b4a1e'; g.font = font(400, 34, HAND); g.fillText(L('今日份效率小抄 ✎', 'Note to self ✎'), nx + 60, ny + 100);
+    g.fillStyle = '#2b2414';
+    const px = fitTitle(g, v.title, 700, 112, 60, nw - 120, 2, HAND);
+    let y = ny + 130 + px; for (const l of wrap(g, v.title, nw - 120, 2)) { g.fillText(l, nx + 60, y); y += px * 1.15; }
+    g.strokeStyle = '#c94f3d'; g.lineWidth = 6; g.beginPath(); g.moveTo(nx + 60, y - px * 0.85); g.quadraticCurveTo(nx + 300, y - px * 0.7, nx + 520, y - px * 0.9); g.stroke();
+    g.fillStyle = '#3d331b'; g.font = font(400, 38, HAND); y = para(g, v.description, nx + 60, y + 30, nw - 120, 56, 4);
+    g.fillStyle = '#c94f3d'; g.font = font(700, 34, HAND); g.fillText(L('跟 AI 说：', 'Say to your AI:'), nx + 60, y + 40);
+    g.fillStyle = '#2b2414'; g.font = font(700, 44, HAND); para(g, `“${trig}”`, nx + 60, y + 106, nw - 120, 60, 2);
+    g.restore();
+    g.save(); g.translate(W - 230, H - 250); g.rotate(0.04);
+    drawQr(g, qrUrl(v.name, v.zh), -110, -110, 220, '#2b2414');
+    g.fillStyle = '#5b4a1e'; g.font = font(400, 26, HAND); g.textAlign = 'center'; g.fillText(L('扫码看全文', 'Scan to read'), 0, 160); g.textAlign = 'left';
+    g.restore();
+    g.fillStyle = '#2b2414'; g.font = font(700, 40, HAND); g.fillText('PM Skills', 80, H - 190);
+    g.fillStyle = '#5b4a1e'; g.font = font(400, 28); g.fillText(L('1,250 个免费开源技能', '1,250 free, open-source skills'), 80, H - 140);
+    footer(g, '#6f6247', state.lang === 'zh');
+  },
+};
+
+function draw() {
+  if (!current) return;
+  const c = $('card'), g = c.getContext('2d');
+  g.setTransform(1, 0, 0, 1, 0, 0); g.clearRect(0, 0, W, H); g.textBaseline = 'alphabetic'; g.textAlign = 'left';
+  const v = view(current);
+  const trig = ($('trigger').value || v.trigger).trim();
+  TEMPLATES[state.tpl](g, v, trig);
+  c.setAttribute('aria-label', `${v.title}：${trig}`);
+  status(state.lang === 'zh' && !v.zh ? '这个技能还没有中文译文，卡片用英文名称。 · No Chinese translation yet.' : '');
+  const p = new URLSearchParams({ skill: current.name, t: state.tpl, lang: state.lang });
+  history.replaceState(null, '', `?${p}`);
+}
+
+// ── Wiring ─────────────────────────────────────────────────────────────────
+$('q').addEventListener('input', renderResults);
+document.querySelectorAll('input[name="tpl"]').forEach((r) => r.addEventListener('change', () => { state.tpl = r.value; draw(); }));
+$('lang').addEventListener('change', (e) => {
+  state.lang = e.target.value; state.qrto = state.lang === 'zh' ? 'gitee' : 'site'; $('qrto').value = state.qrto;
+  if (current && !triggerEdited) $('trigger').value = view(current).trigger;
+  draw();
+});
+$('qrto').addEventListener('change', (e) => { state.qrto = e.target.value; draw(); });
+$('trigger').addEventListener('input', () => { triggerEdited = true; draw(); });
+$('dl').addEventListener('click', () => {
+  if (!current) return;
+  $('card').toBlob((blob) => {
+    if (!blob) { status('生成失败 · Could not create the image'); return; }
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `${current.name}-xhs-${state.tpl}.png`;
+    document.body.append(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
+    status('已下载 · Downloaded');
+  }, 'image/png');
+});
+$('copy').addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(location.href); status('链接已复制 · Link copied'); } catch { status(location.href); }
+});
+
+(async () => {
+  status('加载中… · Loading');
+  await load();
+  const p = new URLSearchParams(location.search);
+  const tpl = p.get('t'); if (tpl && TEMPLATES[tpl]) { state.tpl = tpl; document.querySelector(`input[name="tpl"][value="${tpl}"]`).checked = true; }
+  const lang = p.get('lang') || ((navigator.language || '').toLowerCase().startsWith('zh') || !navigator.language ? 'zh' : 'en');
+  state.lang = lang === 'en' ? 'en' : 'zh'; $('lang').value = state.lang;
+  state.qrto = state.lang === 'zh' ? 'gitee' : 'site'; $('qrto').value = state.qrto;
+  const want = p.get('skill');
+  const first = SKILLS.find((s) => s.name === want) || SKILLS.find((s) => s.name === 'cn-weekly-report') || SKILLS[0];
+  status(SKILLS.length ? '' : '无法加载技能列表 · Could not load the skill list');
+  renderResults();
+  if (first) pick(first);
+  // The QR library is deferred; redraw once it is ready so the code appears.
+  if (typeof window.qrcode !== 'function') addEventListener('load', draw, { once: true });
+  renderResults();
+})();
+</script>
+<script src="a11y.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>

@@ -151,6 +151,7 @@
     { group: '🗺 Explore', items: [
       ['semantic.html', '🧠 Semantic Search'],
       ['listen.html', '🔊 听一听 (Mandarin demos)'],
+      ['card.html', '📕 小红书分享卡 (share cards)'],
       ['bainian.html', '🧧 拜年语生成器'],
       ['museum.html', '🏛 Anti-Pattern Museum'],
       ['catalog.html', '📚 Catalog'],
