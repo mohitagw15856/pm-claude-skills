@@ -660,12 +660,27 @@ That's the whole trick. It's markdown: audit it, edit it, or [write your own](SK
 
 Add a skill by PR ([the standard](SKILL-AUTHORING-STANDARD.md), [CONTRIBUTING](CONTRIBUTING.md)), [request one](https://github.com/mohitagw15856/pm-claude-skills/issues/new?labels=skill-request&title=Skill:%20) and watch it appear on the tech tree, or claim a [good first translation](https://github.com/mohitagw15856/pm-claude-skills/labels/good%20first%20translation). 中文贡献者：[Gitee Issue](https://gitee.com/mohitagw/pm-claude-skills/issues) 也可以。
 
+### Contributors
+
 <p align="center">
-  <a href="https://star-history.com/#mohitagw15856/pm-claude-skills&Date">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=mohitagw15856/pm-claude-skills&type=Date&theme=dark">
-      <img src="https://api.star-history.com/svg?repos=mohitagw15856/pm-claude-skills&type=Date" width="70%" alt="Star history chart" />
-    </picture>
+  <a href="https://github.com/mohitagw15856/pm-claude-skills/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=mohitagw15856/pm-claude-skills&max=120&columns=12" alt="Avatars of the people who have contributed to PM Skills" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="docs/zh/translation-board.md">
+    <img src="docs/readme-assets/translators.svg" width="640" alt="Translators' leaderboard: who has translated skills into Chinese and other languages, and how many skills are still open to claim" />
+  </a>
+  <br>
+  <sub>Translate a skill: pick one from the <a href="docs/zh/translation-board.md">claim board</a> or a <a href="https://github.com/mohitagw15856/pm-claude-skills/labels/good%20first%20translation">good first translation</a> issue.</sub>
+</p>
+
+### Star history
+
+<p align="center">
+  <a href="https://github.com/mohitagw15856/pm-claude-skills/stargazers">
+    <img src="web/docs-assets/star-history.svg" width="70%" alt="Star history chart for PM Skills, with markers for star milestones and major releases" />
   </a>
 </p>
 
