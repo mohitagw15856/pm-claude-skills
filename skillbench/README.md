@@ -51,6 +51,20 @@ node skillbench/run-skillbench.mjs --models claude-sonnet-4-6 --dry-run
 
 Results append to [`results.json`](results.json) (per-model, per-task, bare + skilled + judge scores, with harness + judge versions). The **Run SkillBench** GitHub Action (manual dispatch) produces official runs.
 
+## The Chinese task set (zh-1)
+
+[`tasks-zh.json`](tasks-zh.json) holds ten tasks written in Chinese for Chinese workplaces and daily life: the weekly report, a PRD review, a promotion defence, a WeCom announcement, a severance estimate, a labour contract check, a shenlun question, campus recruitment, a Xiaohongshu note and a WeChat article. It is scored on the same rubric and published separately at [modelbench.html?set=zh](https://mohitagw15856.github.io/pm-claude-skills/modelbench.html?set=zh), so Chinese results never overwrite the English board.
+
+```bash
+DEEPSEEK_API_KEY=... DASHSCOPE_API_KEY=... ANTHROPIC_API_KEY=... \
+  node skillbench/run-skillbench.mjs --models deepseek-chat,qwen-plus \
+  --tasks skillbench/tasks-zh.json --out skillbench/results-zh.json
+node scripts/build-modelbench.mjs --results skillbench/results-zh.json \
+  --tasks skillbench/tasks-zh.json --out web/modelbench-zh.json
+```
+
+Model ids pick the provider by prefix: `deepseek-*` (DEEPSEEK_API_KEY), `qwen-*` (DASHSCOPE_API_KEY), `kimi-*` or `moonshot-*` (MOONSHOT_API_KEY), `glm-*` (ZHIPU_API_KEY) and `doubao-*` (ARK_API_KEY). In CI, add those keys as repository secrets and run the **Run SkillBench (Chinese task set)** workflow. Provider model names change often; use the current id from each provider's console.
+
 ## The State of Professional AI report
 
 Each quarter the maintainers re-run SkillBench on the current frontier models and publish a short report from the results — which model leads per domain, how skill lift is trending, and what changed since last quarter. Reports live in [`reports/`](reports/); the template is [`reports/TEMPLATE.md`](reports/TEMPLATE.md).
