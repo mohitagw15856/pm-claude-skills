@@ -7,7 +7,8 @@ name: Publish dataset to ModelScope
 #   1. Create a dataset on ModelScope (for example mohitagw15856/pm-skills-instruct).
 #   2. Create an access token with write permission in your ModelScope account.
 #   3. Add the secret MODELSCOPE_TOKEN and the variable MODELSCOPE_DATASET
-#      (owner/name) to this repository.
+#      (owner/name) to this repository. An account on the international site
+#      also needs the variable MODELSCOPE_HOST=www.modelscope.ai (default www.modelscope.cn).
 # ModelScope serves dataset repositories over git, with the token as the password
 # for the user "oauth2". See docs/CHINA.md.
 
@@ -52,14 +53,16 @@ jobs:
         env:
           MODELSCOPE_TOKEN: ${{ secrets.MODELSCOPE_TOKEN }}
           MODELSCOPE_DATASET: ${{ vars.MODELSCOPE_DATASET }}
+          MODELSCOPE_HOST: ${{ vars.MODELSCOPE_HOST || 'www.modelscope.cn' }}
           TAG: ${{ github.event.release.tag_name || 'manual' }}
         run: |
           set -euo pipefail
+          case "$MODELSCOPE_HOST" in www.modelscope.cn|www.modelscope.ai) ;; *) echo "::error::MODELSCOPE_HOST must be www.modelscope.cn or www.modelscope.ai"; exit 1;; esac
           git config --global user.name "pm-skills-bot"
           git config --global user.email "actions@github.com"
           # The token goes through a credential helper so it never appears in a URL or a log.
           git config --global credential.helper '!f() { echo "username=oauth2"; echo "password=${MODELSCOPE_TOKEN}"; }; f'
-          git clone --depth 1 "https://www.modelscope.cn/datasets/${MODELSCOPE_DATASET}.git" ms
+          git clone --depth 1 "https://${MODELSCOPE_HOST}/datasets/${MODELSCOPE_DATASET}.git" ms
           find ms -mindepth 1 -maxdepth 1 ! -name .git ! -name .gitattributes -exec rm -rf {} +
           cp -R dataset/. ms/
           cd ms
