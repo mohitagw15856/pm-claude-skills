@@ -9,6 +9,27 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [81.1.0] - Launch kit, 3D explorer, tech tree and more for China - 2026-10-04
+
+**1235 skills · 142 bundles** (from 1212 · 139 at v81.0.0).
+
+### Added
+- **pm-oss-launch** (9): take a side project to a repo strangers install, trust and contribute to. `readme-benefit-writer`, `demo-data-generator` (seeded generator template), `importer-scaffolder`, `first-issue-designer`, `licence-notice-auditor` (compatibility reference, not legal advice), `fortnightly-release-planner`, `self-host-packager`, `readonly-mcp-wrapper` (tested stdio server template) and `demo-clip-storyboard`.
+- **pm-3d-explorer** (4): topic in, interactive 3D explorer out. `explorer-interface-brief`, `model-prompt-pack` (every label names a trusted source; geometry is illustrative), `explorer-viewer-builder` (single-file Three.js viewer with exploded view and quiz mode) and `explorer-pipeline`.
+- **pm-china-exams** (5): `cn-civil-exam-essay` (申论), `cn-civil-exam-interview` (结构化面试), `cn-kaoyan-planner` (考研), `cn-campus-recruitment` (校招), `cn-soe-interview` (国企面试).
+- **pm-china-work** gains 5: `feishu-doc-writer`, `dingtalk-work-log`, `wecom-announcement`, `cn-prd-review` (需求评审), `cn-level-mapper` (职级对标).
+- **Tech tree** at `/tech-tree/`: the library as a research tree, with search, install commands and the voting queue (`scripts/build-tech-tree.mjs`, `site/tech-tree/`).
+- **ModelScope**: the playground as a Studio, a dependency-free skill router model with its evaluation, six skills on Skills Central and the MCP server listed; workflows publish the Studio and the model on every release.
+- **SkillBench Chinese task set** and DeepSeek, Qwen, Kimi, GLM and Doubao as SkillBench providers (`modelbench.html?set=zh`).
+- `docs/learn-zh/`: a six-lesson Chinese course; Chinese issue templates for GitHub and Gitee.
+
+### Changed
+- `docs/CHINA.md` leads with installs that never touch GitHub, and covers Cherry Studio, Dify, FastGPT and MaxKB.
+- Translations: 60 skills in Simplified Chinese.
+
+### Fixed
+- The playground hero showed a literal `&amp;`; the MCP README still said 174 skills; two README install commands named the marketplace `pm-skills` instead of `pm-claude-skills`.
+
 ## [81.0.0] - Chinese support and the CV studio - 2026-10-04
 
 **1212 skills · 139 bundles** (from 1176 · 134 at v80.2.0).

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1234 skills exported. Copy a `.mdc rule` into the tool to use it.
+1247 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -331,6 +331,8 @@
 | Delta Briefing | `pm-autopilot` | `pm-autopilot/delta-briefing/delta-briefing.mdc` |
 | Demand Forecast Review | `pm-supplychain` | `pm-supplychain/demand-forecast-review/demand-forecast-review.mdc` |
 | Demand Letter | `pm-legal` | `pm-legal/demand-letter/demand-letter.mdc` |
+| Demo Clip Storyboard | `pm-oss-launch` | `pm-oss-launch/demo-clip-storyboard/demo-clip-storyboard.mdc` |
+| Demo Data Generator | `pm-oss-launch` | `pm-oss-launch/demo-data-generator/demo-data-generator.mdc` |
 | Demo Script | `pm-cowork` | `pm-cowork/demo-script/demo-script.mdc` |
 | Dental Clinical Note | `pm-dentistry` | `pm-dentistry/dental-clinical-note/dental-clinical-note.mdc` |
 | Dental Emergency Triage | `pm-dentistry` | `pm-dentistry/dental-emergency-triage/dental-emergency-triage.mdc` |
@@ -447,6 +449,9 @@
 | Explain My Decision To Me | `pm-thinking` | `pm-thinking/explain-my-decision-to-me/explain-my-decision-to-me.mdc` |
 | Explain Simply | `pm-comms` | `pm-comms/explain-simply/explain-simply.mdc` |
 | Exploratory Test Charter | `pm-qa` | `pm-qa/exploratory-test-charter/exploratory-test-charter.mdc` |
+| Explorer Interface Brief | `pm-3d-explorer` | `pm-3d-explorer/explorer-interface-brief/explorer-interface-brief.mdc` |
+| Explorer Pipeline | `pm-3d-explorer` | `pm-3d-explorer/explorer-pipeline/explorer-pipeline.mdc` |
+| Explorer Viewer Builder | `pm-3d-explorer` | `pm-3d-explorer/explorer-viewer-builder/explorer-viewer-builder.mdc` |
 | Expungement Navigator | `pm-reentry` | `pm-reentry/expungement-navigator/expungement-navigator.mdc` |
 | Fact-Check Pass | `pm-journalism` | `pm-journalism/fact-check-pass/fact-check-pass.mdc` |
 | Factory Acceptance Test | `pm-hardware` | `pm-hardware/factory-acceptance-test/factory-acceptance-test.mdc` |
@@ -486,6 +491,7 @@
 | First 90 Days Out | `pm-reentry` | `pm-reentry/first-90-days-out/first-90-days-out.mdc` |
 | First Client Contract | `pm-sidehustle` | `pm-sidehustle/first-client-contract/first-client-contract.mdc` |
 | First-Hire Plan | `pm-career` | `pm-career/first-hire-plan/first-hire-plan.mdc` |
+| First Issue Designer | `pm-oss-launch` | `pm-oss-launch/first-issue-designer/first-issue-designer.mdc` |
 | First Maintainer Month | `pm-maintainer` | `pm-maintainer/first-maintainer-month/first-maintainer-month.mdc` |
 | Five Minds | `pm-thinking` | `pm-thinking/five-minds/five-minds.mdc` |
 | Flare Day Planner | `pm-invisible-illness` | `pm-invisible-illness/flare-day-planner/flare-day-planner.mdc` |
@@ -502,6 +508,7 @@
 | Follow-up Sweep (Live) | `pm-cowork-live` | `pm-cowork-live/followup-sweep/followup-sweep.mdc` |
 | Form Filler Operator | `pm-operator` | `pm-operator/form-filler-operator/form-filler-operator.mdc` |
 | Formula Detangler | `pm-cowork` | `pm-cowork/formula-detangler/formula-detangler.mdc` |
+| Fortnightly Release Planner | `pm-oss-launch` | `pm-oss-launch/fortnightly-release-planner/fortnightly-release-planner.mdc` |
 | Founder-Market Fit | `pm-founders` | `pm-founders/founder-market-fit/founder-market-fit.mdc` |
 | Franchise Decoder | `pm-decoders` | `pm-decoders/franchise-decoder/franchise-decoder.mdc` |
 | Franklin Decision Ledger | `pm-dead-mentors` | `pm-dead-mentors/franklin-decision-ledger/franklin-decision-ledger.mdc` |
@@ -580,6 +587,7 @@
 | Immigration Document Checklist | `pm-personal` | `pm-personal/immigration-document-checklist/immigration-document-checklist.mdc` |
 | Impact Report | `pm-nonprofit` | `pm-nonprofit/impact-report/impact-report.mdc` |
 | Impeccable (pointer) | `pm-design-taste` | `pm-design-taste/impeccable-pointer/impeccable-pointer.mdc` |
+| Importer Scaffolder | `pm-oss-launch` | `pm-oss-launch/importer-scaffolder/importer-scaffolder.mdc` |
 | In-Law Boundary Scripts | `pm-family` | `pm-family/in-law-boundary-scripts/in-law-boundary-scripts.mdc` |
 | Inbox Triage (Live) | `pm-cowork-live` | `pm-cowork-live/inbox-triage-live/inbox-triage-live.mdc` |
 | Inbox Unsubscribe Purge | `pm-cowork` | `pm-cowork/inbox-unsubscribe-purge/inbox-unsubscribe-purge.mdc` |
@@ -654,6 +662,7 @@
 | Lending Risk Brief | `pm-banking` | `pm-banking/lending-risk-brief/lending-risk-brief.mdc` |
 | Lesson Plan | `pm-education` | `pm-education/lesson-plan/lesson-plan.mdc` |
 | Lesson Plan Builder | `pm-teaching` | `pm-teaching/lesson-plan-builder/lesson-plan-builder.mdc` |
+| Licence and Notice Auditor | `pm-oss-launch` | `pm-oss-launch/licence-notice-auditor/licence-notice-auditor.mdc` |
 | Life Premortem | `other` | `other/life-premortem/life-premortem.mdc` |
 | Lifecycle / CRM Plan | `pm-growth` | `pm-growth/lifecycle-crm-plan/lifecycle-crm-plan.mdc` |
 | LinkedIn Profile | `pm-personal` | `pm-personal/linkedin-profile/linkedin-profile.mdc` |
@@ -714,6 +723,7 @@
 | Mind Map | `pm-visuals` | `pm-visuals/mind-map/mind-map.mdc` |
 | Model Card | `pm-ai` | `pm-ai/model-card/model-card.mdc` |
 | Model Migration Plan | `pm-agentops` | `pm-agentops/model-migration-plan/model-migration-plan.mdc` |
+| Model Prompt Pack | `pm-3d-explorer` | `pm-3d-explorer/model-prompt-pack/model-prompt-pack.mdc` |
 | Model Selection Advisor | `pm-ai` | `pm-ai/model-selection-advisor/model-selection-advisor.mdc` |
 | Momentum Map | `pm-focus` | `pm-focus/momentum-map/momentum-map.mdc` |
 | Money Mindset Reset | `pm-wealth` | `pm-wealth/money-mindset-reset/money-mindset-reset.mdc` |
@@ -889,7 +899,9 @@
 | Rate Card | `pm-consulting` | `pm-consulting/rate-card/rate-card.mdc` |
 | Read the Room | `other` | `other/read-the-room/read-the-room.mdc` |
 | Reading Retention System | `pm-learning` | `pm-learning/reading-retention-system/reading-retention-system.mdc` |
+| README Benefit Writer | `pm-oss-launch` | `pm-oss-launch/readme-benefit-writer/readme-benefit-writer.mdc` |
 | README Writer | `pm-devrel` | `pm-devrel/readme-writer/readme-writer.mdc` |
+| Read-only MCP Wrapper | `pm-oss-launch` | `pm-oss-launch/readonly-mcp-wrapper/readonly-mcp-wrapper.mdc` |
 | Receipts Audit | `pm-method` | `pm-method/receipts-audit/receipts-audit.mdc` |
 | Reconnect After Time Away | `pm-reentry` | `pm-reentry/reconnect-after-time-away/reconnect-after-time-away.mdc` |
 | Reconnect With Someone | `other` | `other/reconnect-with-someone/reconnect-with-someone.mdc` |
@@ -994,6 +1006,7 @@
 | Security Questionnaire Autofill | `pm-compliance` | `pm-compliance/security-questionnaire-autofill/security-questionnaire-autofill.mdc` |
 | Security Review | `pm-security` | `pm-security/security-review/security-review.mdc` |
 | Security Threat Model | `pm-engineering` | `pm-engineering/security-threat-model/security-threat-model.mdc` |
+| Self-Host Packager | `pm-oss-launch` | `pm-oss-launch/self-host-packager/self-host-packager.mdc` |
 | Self-Review | `pm-career` | `pm-career/self-review/self-review.mdc` |
 | Sensory Audit | `pm-neurodivergent` | `pm-neurodivergent/sensory-audit/sensory-audit.mdc` |
 | SEO Content Brief | `pm-gtm` | `pm-gtm/seo-content-brief/seo-content-brief.mdc` |

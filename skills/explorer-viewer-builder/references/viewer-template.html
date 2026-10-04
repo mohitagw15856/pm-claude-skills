@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>3D Explorer</title>
+<link rel="icon" href="data:,">
+<!--
+  Single-file Three.js explorer. No build step.
+  Load a model:  viewer.html?model=heart.glb   (or set CONFIG.model below)
+  Parts:         CONFIG.parts maps mesh names in the GLB to labels, descriptions and sources.
+  Without a model it shows a small demo assembly so the page always works.
+-->
+<style>
+  :root { --bg:#f7f4ee; --panel:#ffffff; --ink:#1f2328; --muted:#5d6670; --accent:#3d7a6a; --line:#e3ddd2; --hi:#f2b44b; --on-accent:#ffffff; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#16191d; --panel:#1f2328; --ink:#eef0f2; --muted:#a3abb5; --accent:#7cc4ae; --line:#30363d; --hi:#f2b44b; --on-accent:#16191d; } }
+  * { box-sizing: border-box; }
+  html, body { margin:0; height:100%; background:var(--bg); color:var(--ink); font:15px/1.5 system-ui, sans-serif; }
+  .app { display:grid; grid-template-columns: 1fr 320px; height:100%; }
+  #stage { position:relative; min-height:320px; }
+  canvas { display:block; width:100%; height:100%; touch-action:none; }
+  aside { border-left:1px solid var(--line); background:var(--panel); padding:16px; overflow:auto; }
+  h1 { font-size:18px; margin:0 0 4px; }
+  .muted { color:var(--muted); font-size:13px; }
+  .toolbar { display:flex; gap:8px; flex-wrap:wrap; margin:12px 0; }
+  button { font:inherit; padding:8px 12px; border-radius:8px; border:1px solid var(--line); background:var(--bg); color:var(--ink); cursor:pointer; }
+  button[aria-pressed="true"] { background:var(--accent); color:var(--on-accent); border-color:var(--accent); }
+  button:focus-visible { outline:3px solid var(--hi); outline-offset:2px; }
+  #info { border-top:1px solid var(--line); margin-top:12px; padding-top:12px; min-height:96px; }
+  #parts { list-style:none; padding:0; margin:12px 0 0; display:grid; gap:6px; }
+  #parts button { width:100%; text-align:left; }
+  #quiz { background:var(--bg); border-radius:8px; padding:10px; margin-top:12px; }
+  .note { font-size:12px; color:var(--muted); margin-top:16px; }
+  @media (max-width: 760px) { .app { grid-template-columns:1fr; grid-template-rows: 55vh auto; } aside { border-left:0; border-top:1px solid var(--line); } }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.169.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div class="app">
+  <div id="stage" aria-label="3D model viewer. Drag to rotate, scroll or pinch to zoom, click a part to learn about it."></div>
+  <aside>
+    <h1 id="title">3D Explorer</h1>
+    <p class="muted" id="subtitle">Drag to rotate. Click a part, or pick one from the list.</p>
+    <div class="toolbar">
+      <button id="explode" aria-pressed="false">Exploded view</button>
+      <button id="quizBtn" aria-pressed="false">Quiz mode</button>
+      <button id="reset">Reset view</button>
+    </div>
+    <div id="quiz" hidden aria-live="polite"></div>
+    <div id="info" aria-live="polite"><p class="muted">No part selected.</p></div>
+    <ul id="parts" aria-label="Parts"></ul>
+    <p class="note" id="disclaimer">Geometry is illustrative, not anatomically or technically authoritative. Every label cites its source.</p>
+  </aside>
+</div>
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+// ── CONFIG: replace with the output of model-prompt-pack ─────────────────────
+const CONFIG = {
+  title: 'Demo assembly',
+  model: new URLSearchParams(location.search).get('model') || '', // a .glb path or URL
+  parts: [
+    { mesh: 'Base',   label: 'Base',   description: 'Holds the assembly steady.', source: 'Demo data' },
+    { mesh: 'Column', label: 'Column', description: 'Carries load from the top to the base.', source: 'Demo data' },
+    { mesh: 'Ring',   label: 'Ring',   description: 'Locks the column in place.', source: 'Demo data' },
+    { mesh: 'Cap',    label: 'Cap',    description: 'Seals the top.', source: 'Demo data' },
+  ],
+};
+
+const el = (id) => document.getElementById(id);
+const stage = el('stage');
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+stage.appendChild(renderer.domElement);
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(45, 1, 0.01, 1000);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+scene.add(new THREE.HemisphereLight(0xffffff, 0x8a7f70, 1.2));
+const sun = new THREE.DirectionalLight(0xffffff, 1.6); sun.position.set(3, 5, 4); scene.add(sun);
+
+const root = new THREE.Group(); scene.add(root);
+const parts = []; // { mesh, label, description, source, home: Vector3, dir: Vector3 }
+let selected = null, exploded = false, explodeT = 0, quiz = null;
+
+function demoModel() {
+  const mat = (c) => new THREE.MeshStandardMaterial({ color: c, roughness: 0.6 });
+  const add = (name, geo, c, y) => { const m = new THREE.Mesh(geo, mat(c)); m.name = name; m.position.y = y; root.add(m); };
+  add('Base', new THREE.BoxGeometry(2, 0.3, 2), 0x9cb8a4, 0);
+  add('Column', new THREE.CylinderGeometry(0.3, 0.3, 1.6, 32), 0xe2b6b9, 0.95);
+  add('Ring', new THREE.TorusGeometry(0.45, 0.1, 16, 48).rotateX(Math.PI / 2), 0xa9c4e0, 1.2);
+  add('Cap', new THREE.SphereGeometry(0.42, 32, 16), 0xe8d9a8, 1.9);
+}
+
+function registerParts() {
+  const box = new THREE.Box3().setFromObject(root);
+  const centre = box.getCenter(new THREE.Vector3());
+  const size = box.getSize(new THREE.Vector3()).length();
+  root.traverse((o) => {
+    if (!o.isMesh) return;
+    const cfg = CONFIG.parts.find((p) => p.mesh === o.name || p.mesh === o.parent?.name);
+    if (!cfg) return; // unlabelled meshes stay visible but are not selectable
+    o.material = o.material.clone();
+    const c = new THREE.Box3().setFromObject(o).getCenter(new THREE.Vector3());
+    const worldDir = c.clone().sub(centre); if (worldDir.lengthSq() < 1e-6) worldDir.set(0, 1, 0);
+    worldDir.normalize().multiplyScalar(size * 0.25);
+    // Convert the world-space offset into the part's parent space, so nested, scaled or
+    // rotated GLB nodes move the right way.
+    const parent = o.parent; parent.updateWorldMatrix(true, false);
+    const dir = parent.worldToLocal(c.clone().add(worldDir)).sub(parent.worldToLocal(c.clone()));
+    parts.push({ ...cfg, meshName: cfg.mesh, mesh: o, home: o.position.clone(), dir });
+  });
+  frame(centre, size);
+  if (!parts.length) {
+    const names = []; root.traverse((o) => { if (o.isMesh) names.push(o.name || '(unnamed)'); });
+    el('info').textContent = 'No labelled parts yet. Mesh names in this model: ' + names.slice(0, 40).join(', ') + '. Add them to CONFIG.parts to make them clickable.';
+  }
+  el('parts').innerHTML = '';
+  for (const p of parts) {
+    const li = document.createElement('li'); const b = document.createElement('button');
+    b.textContent = p.label; b.addEventListener('click', () => choose(p)); li.appendChild(b); el('parts').appendChild(li);
+  }
+}
+
+function frame(centre, size) {
+  controls.target.copy(centre);
+  camera.position.copy(centre).add(new THREE.Vector3(size * 0.6, size * 0.45, size * 0.8));
+  camera.near = size / 100; camera.far = size * 20; camera.updateProjectionMatrix();
+  controls.saveState();
+}
+
+function highlight(p, on) { if (p?.mesh.material.emissive) p.mesh.material.emissive.setHex(on ? 0x5a3c00 : 0x000000); }
+
+function choose(p) {
+  if (quiz) return answer(p);
+  highlight(selected, false); selected = p; highlight(p, true);
+  el('info').innerHTML = '';
+  const h = document.createElement('h2'); h.style.fontSize = '16px'; h.textContent = p.label;
+  const d = document.createElement('p'); d.textContent = p.description;
+  const s = document.createElement('p'); s.className = 'muted'; s.textContent = 'Source: ' + p.source;
+  el('info').append(h, d, s);
+}
+
+function nextQuestion() {
+  const pool = parts.filter((p) => p !== quiz?.target);
+  quiz.target = pool[Math.floor(Math.random() * pool.length)];
+  el('quiz').textContent = `Question ${quiz.asked + 1}: click the ${quiz.target.label}. Score ${quiz.score} of ${quiz.asked}.`;
+}
+function answer(p) {
+  quiz.asked++;
+  const right = p === quiz.target; if (right) quiz.score++;
+  el('quiz').textContent = right ? `Correct: that is the ${p.label}.` : `Not quite: you chose the ${p.label}. The ${quiz.target.label} is highlighted.`;
+  if (!right) { highlight(quiz.target, true); setTimeout(() => highlight(quiz.target, false), 1200); }
+  setTimeout(nextQuestion, 1400);
+}
+
+el('explode').addEventListener('click', (e) => { exploded = !exploded; e.currentTarget.setAttribute('aria-pressed', exploded); });
+el('quizBtn').addEventListener('click', (e) => {
+  const on = !quiz; e.currentTarget.setAttribute('aria-pressed', on); el('quiz').hidden = !on;
+  highlight(selected, false); selected = null;
+  if (on && parts.length > 1) { quiz = { score: 0, asked: 0, target: null }; nextQuestion(); } else { quiz = null; }
+});
+el('reset').addEventListener('click', () => controls.reset());
+
+const ray = new THREE.Raycaster(); const ptr = new THREE.Vector2(); let down = null;
+renderer.domElement.addEventListener('pointerdown', (e) => { down = [e.clientX, e.clientY]; });
+renderer.domElement.addEventListener('pointerup', (e) => {
+  if (!down || Math.hypot(e.clientX - down[0], e.clientY - down[1]) > 5) return; // a drag, not a click
+  const r = renderer.domElement.getBoundingClientRect();
+  ptr.set(((e.clientX - r.left) / r.width) * 2 - 1, -((e.clientY - r.top) / r.height) * 2 + 1);
+  ray.setFromCamera(ptr, camera);
+  const hit = ray.intersectObjects(parts.map((p) => p.mesh), false)[0];
+  if (hit) choose(parts.find((p) => p.mesh === hit.object));
+});
+
+function resize() { const { clientWidth: w, clientHeight: h } = stage; renderer.setSize(w, h, false); camera.aspect = w / Math.max(h, 1); camera.updateProjectionMatrix(); }
+new ResizeObserver(resize).observe(stage);
+
+function tick() {
+  explodeT += ((exploded ? 1 : 0) - explodeT) * 0.12;
+  for (const p of parts) p.mesh.position.copy(p.home).addScaledVector(p.dir, explodeT);
+  controls.update(); renderer.render(scene, camera); requestAnimationFrame(tick);
+}
+
+el('title').textContent = CONFIG.title; document.title = CONFIG.title + ' | 3D Explorer';
+if (CONFIG.model) {
+  new GLTFLoader().load(CONFIG.model, (g) => { root.add(g.scene); registerParts(); },
+    undefined, (err) => { console.warn('Model failed to load, showing the demo assembly instead:', err?.message || err); demoModel(); registerParts(); });
+} else { demoModel(); registerParts(); }
+resize(); tick();
+</script>
+</body>
+</html>

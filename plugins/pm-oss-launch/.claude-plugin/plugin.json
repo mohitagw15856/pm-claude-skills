@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-oss-launch",
+  "version": "1.0.0",
+  "description": "Take a side project from works-on-my-machine to a repo strangers install, trust and contribute to: a benefit-led README, a no-signup demo, an importer from competitors, good first issues, a licence audit and NOTICE file, fortnightly releases, one-command self-hosting, a read-only MCP server and the 20-second demo clip",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "open-source",
+    "launch",
+    "readme",
+    "self-hosting",
+    "mcp",
+    "contributors"
+  ]
+}

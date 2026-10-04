@@ -26,7 +26,7 @@
       "salary-negotiation", "the-visa-interview", "medical-bill-decoder",
       "severance-agreement-decoder", "pip-responder", "support-a-friend-in-crisis"
     ],
-    "consequential": [],
+    "consequential": ["licence-notice-auditor"],
     "informational": []
   }
 }

@@ -259,7 +259,7 @@ Tell the user: "Add this to your CLAUDE.md and Context Mode will be active perma
 
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
-     variable for the highlighted text — replace it with your plugin's equivalent
+     variable for the highlighted text; replace it with your plugin's equivalent
      (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
 Apply the skill above to the following input:
 

@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skill Tech Tree</title>
+<meta name="description" content="The whole PM Skills library as a research tree: bundles as branches, skills as nodes, community requests in the research queue.">
+<link rel="icon" href="data:,">
+<style>
+  :root {
+    --bg:#f6f1e7; --panel:#fffdf8; --ink:#2e2a24; --muted:#6b6357; --line:#ded4c1;
+    --sage:#a8c3a0; --sage-ink:#22452c; --pink:#e9bcbe; --pink-ink:#7a3a3f; --blue:#bcd5e8; --blue-ink:#2c5470;
+    --branch:#efe6d4; --focus:#c9852c; --match:#c9852c;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:#1b1a17; --panel:#24221f; --ink:#efe9de; --muted:#b3aa9b; --line:#3d3830;
+      --sage:#4a6b50; --sage-ink:#f4f8f2; --pink:#87515a; --pink-ink:#fff6f6; --blue:#5c7f99; --blue-ink:#eaf2f9;
+      --branch:#2f2c27; --focus:#e5a54f; --match:#e5a54f;
+    }
+  }
+  * { box-sizing:border-box; }
+  html, body { margin:0; height:100%; } body { display:flex; flex-direction:column; } html, body { background:var(--bg); color:var(--ink); font:300 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { display:flex; flex-wrap:wrap; gap:12px 20px; align-items:center; padding:14px 20px; border-bottom:1px solid var(--line); }
+  h1 { font-weight:400; font-size:20px; margin:0; letter-spacing:.01em; }
+  .counts { color:var(--muted); font-size:13px; }
+  .search { flex:1 1 260px; display:flex; gap:8px; }
+  input[type=search] { flex:1; min-width:0; font:inherit; padding:9px 12px; border-radius:10px; border:1px solid var(--line); background:var(--panel); color:var(--ink); }
+  button, .btn { font:inherit; font-weight:400; padding:8px 12px; border-radius:10px; border:1px solid var(--line); background:var(--panel); color:var(--ink); cursor:pointer; text-decoration:none; display:inline-block; }
+  button:focus-visible, input:focus-visible, a:focus-visible, .node:focus-visible { outline:3px solid var(--focus); outline-offset:2px; }
+  .legend { display:flex; gap:14px; flex-wrap:wrap; font-size:13px; }
+  .legend label { display:flex; gap:6px; align-items:center; cursor:pointer; }
+  .sw { width:14px; height:14px; border-radius:4px; display:inline-block; }
+  main { position:relative; flex:1; min-height:0; }
+  #wrap { position:absolute; inset:0; overflow:hidden; touch-action:none; cursor:grab; }
+  #wrap.dragging { cursor:grabbing; }
+  svg { width:100%; height:100%; display:block; }
+  .edge { stroke:var(--line); stroke-width:1.5; fill:none; }
+  .branch rect { fill:var(--branch); stroke:var(--line); }
+  .branch text { fill:var(--ink); font-size:13px; font-weight:400; }
+  .node rect { stroke-width:1.5; }
+  .node text { font-size:12px; pointer-events:none; }
+  .node { cursor:pointer; }
+  .researched rect { fill:var(--sage); stroke:var(--sage); } .researched text { fill:var(--sage-ink); }
+  .in-research rect { fill:var(--pink); stroke:var(--pink); } .in-research text { fill:var(--pink-ink); }
+  .proposed rect { fill:transparent; stroke:var(--blue); stroke-dasharray:5 4; } .proposed text { fill:var(--blue-ink); }
+  @media (prefers-color-scheme: dark) { .proposed text { fill:var(--ink); } }
+  .dim { opacity:.18; }
+  .match rect { stroke:var(--match); stroke-width:3; }
+  .selected rect { stroke:var(--focus); stroke-width:3.5; }
+  .zoom { position:absolute; left:16px; bottom:16px; display:flex; flex-direction:column; gap:6px; }
+  .zoom button { width:42px; height:42px; padding:0; font-size:18px; }
+  #results { position:absolute; left:16px; top:12px; width:min(340px, calc(100% - 32px)); max-height:45%; overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:6px; margin:0; list-style:none; }
+  #results button { width:100%; text-align:left; border:0; background:transparent; padding:8px; border-radius:8px; }
+  #results button:hover { background:var(--branch); }
+  #results small { color:var(--muted); display:block; }
+  aside { position:absolute; right:16px; top:12px; width:min(380px, calc(100% - 32px)); max-height:calc(100% - 90px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:18px; box-shadow:0 8px 30px rgba(0,0,0,.08); }
+  aside h2 { margin:0 0 6px; font-weight:400; font-size:18px; word-break:break-word; }
+  .badge { font-size:12px; padding:2px 8px; border-radius:999px; display:inline-block; margin-bottom:8px; }
+  .badge.researched { background:var(--sage); color:var(--sage-ink); } .badge.in-research { background:var(--pink); color:var(--pink-ink); } .badge.proposed { border:1px dashed var(--blue); color:var(--ink); }
+  aside p { margin:8px 0; }
+  .muted { color:var(--muted); font-size:13px; }
+  pre { background:var(--bg); border:1px solid var(--line); border-radius:10px; padding:10px; white-space:pre-wrap; word-break:break-all; font-size:13px; margin:6px 0; }
+  .row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  .close { float:right; border:0; background:transparent; font-size:20px; padding:0 4px; }
+  .sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+  @media (max-width: 700px) {
+    header { padding:10px 16px; } h1 { font-size:17px; }
+    aside { left:0; right:0; top:auto; bottom:0; width:100%; max-height:55%; border-radius:16px 16px 0 0; }
+    .zoom { bottom:auto; left:auto; top:12px; right:12px; }
+    #results { width:calc(100% - 92px); }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Skill tech tree</h1>
+  <span class="counts" id="counts">Loading…</span>
+  <form class="search" role="search" onsubmit="return false">
+    <label class="sr" for="q">Search skills</label>
+    <input id="q" type="search" placeholder="Search skills, e.g. weekly report" autocomplete="off">
+  </form>
+  <div class="legend" role="group" aria-label="Show node states">
+    <label><input type="checkbox" data-state="researched" checked><span class="sw" style="background:var(--sage)"></span>Researched</label>
+    <label><input type="checkbox" data-state="in-research" checked><span class="sw" style="background:var(--pink)"></span>In research</label>
+    <label><input type="checkbox" data-state="proposed" checked><span class="sw" style="border:1.5px dashed var(--blue)"></span>Proposed</label>
+  </div>
+</header>
+<main>
+  <div id="wrap" tabindex="0" aria-label="Tech tree. Drag to pan, scroll or pinch to zoom, arrow keys to pan, plus and minus to zoom.">
+    <svg id="svg" xmlns="http://www.w3.org/2000/svg"><g id="world"></g></svg>
+  </div>
+  <ul id="results" hidden aria-label="Search results"></ul>
+  <div class="zoom"><button id="zin" aria-label="Zoom in">+</button><button id="zout" aria-label="Zoom out">−</button><button id="zfit" aria-label="Fit to width">⤢</button></div>
+  <aside id="panel" hidden aria-live="polite"></aside>
+</main>
+<script>
+const NS = 'http://www.w3.org/2000/svg';
+const COL = 176, NODE_W = 160, NODE_H = 40, ROW = 56, LANE_GAP = 22, LEFT = 236, PER_ROW = 8;
+const el = (id) => document.getElementById(id);
+const svgEl = (tag, attrs = {}) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
+const short = (s, n) => (s.length > n ? s.slice(0, n - 1) + '…' : s);
+const view = { x: 20, y: 20, k: 1 };
+let DATA, nodes = [], selected = null, worldW = 0, worldH = 0;
+const hidden = new Set();
+
+function apply() { el('world').setAttribute('transform', `translate(${view.x} ${view.y}) scale(${view.k})`); }
+function zoomAt(f, cx, cy) {
+  const k = Math.min(3, Math.max(0.12, view.k * f)); const r = k / view.k;
+  view.x = cx - (cx - view.x) * r; view.y = cy - (cy - view.y) * r; view.k = k; apply();
+}
+function fit() { const w = el('wrap').clientWidth; view.k = Math.min(1, Math.max(0.2, (w - 32) / worldW)); view.x = 16; view.y = 16; apply(); }
+
+function build() {
+  const world = el('world'); const edges = svgEl('g'); const layer = svgEl('g'); world.append(edges, layer);
+  let y = 0;
+  for (const b of DATA.branches) {
+    const rows = Math.max(1, Math.ceil(b.nodes.length / PER_ROW));
+    const g = svgEl('g', { class: 'branch' });
+    g.append(svgEl('rect', { x: 0, y, width: LEFT - 36, height: NODE_H, rx: 12 }));
+    const t = svgEl('text', { x: 14, y: y + 25 }); t.textContent = short(b.name, 24); g.append(t);
+    layer.append(g);
+    b.nodes.forEach((n, i) => {
+      const r = Math.floor(i / PER_ROW), c = i % PER_ROW;
+      const x = LEFT + c * COL, ny = y + r * ROW;
+      const px = c === 0 ? LEFT - 36 : x - (COL - NODE_W);
+      const py = ny + NODE_H / 2;
+      // Wrapped rows hang off a trunk from the branch label; nodes in a row chain left to right.
+      edges.append(c === 0 && r > 0
+        ? svgEl('path', { class: 'edge', d: `M${LEFT - 36} ${y + NODE_H / 2} H${LEFT - 18} V${ny + NODE_H / 2} H${x}` })
+        : svgEl('line', { class: 'edge', x1: px, y1: py, x2: x, y2: ny + NODE_H / 2 }));
+      const ng = svgEl('g', { class: `node ${n.state}`, 'data-id': n.id });
+      ng.append(svgEl('rect', { x, y: ny, width: NODE_W, height: NODE_H, rx: 10 }));
+      const tt = svgEl('text', { x: x + 12, y: ny + 25 }); tt.textContent = short(n.name, 22); ng.append(tt);
+      const title = svgEl('title'); title.textContent = n.name; ng.append(title);
+      ng.addEventListener('click', (e) => { if (!moved) select(n, b); e.stopPropagation(); });
+      layer.append(ng);
+      nodes.push({ n, b, g: ng, x, y: ny });
+    });
+    y += rows * ROW + LANE_GAP;
+  }
+  worldW = LEFT + PER_ROW * COL; worldH = y;
+}
+
+function select(n, b, centre) {
+  selected?.g.classList.remove('selected');
+  selected = nodes.find((x) => x.n === n && x.b === b); selected.g.classList.add('selected');
+  if (centre) {
+    const w = el('wrap'); view.k = Math.max(view.k, 0.8);
+    view.x = w.clientWidth / 2 - (selected.x + NODE_W / 2) * view.k; view.y = w.clientHeight / 3 - selected.y * view.k; apply();
+  }
+  const p = el('panel'); p.hidden = false; p.innerHTML = '';
+  const close = document.createElement('button'); close.className = 'close'; close.setAttribute('aria-label', 'Close'); close.textContent = '×';
+  close.onclick = () => { p.hidden = true; selected?.g.classList.remove('selected'); selected = null; el('wrap').focus(); };
+  const h = document.createElement('h2'); h.textContent = n.name;
+  const badge = document.createElement('span'); badge.className = 'badge ' + n.state; badge.textContent = { researched: 'Researched', 'in-research': 'In research', proposed: 'Proposed' }[n.state];
+  const branch = document.createElement('p'); branch.className = 'muted'; branch.textContent = 'Branch: ' + b.name;
+  const d = document.createElement('p'); d.textContent = n.description;
+  p.append(close, h, badge, branch, d);
+  if (b.queue) {
+    const a = document.createElement('a'); a.className = 'btn'; a.href = n.issue || (b.install + encodeURIComponent(n.name)); a.target = '_blank'; a.rel = 'noopener';
+    a.textContent = n.issue ? 'Vote on the request' : 'Open a request to vote'; p.append(a);
+  } else {
+    p.append(cmd('Install with the CLI', b.install));
+    if (b.plugin) p.append(cmd('Or in Claude Code', b.plugin));
+    const a = document.createElement('a'); a.className = 'btn'; a.href = `${DATA.repo}/blob/main/skills/${n.id}/SKILL.md`; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'Read the skill';
+    p.append(a);
+  }
+  close.focus();
+}
+function cmd(label, text) {
+  const wrap = document.createElement('div');
+  const l = document.createElement('p'); l.className = 'muted'; l.textContent = label;
+  const pre = document.createElement('pre'); pre.textContent = text;
+  const btn = document.createElement('button'); btn.textContent = 'Copy install command';
+  btn.onclick = async () => {
+    try { await navigator.clipboard.writeText(text); btn.textContent = 'Copied'; }
+    catch { const r = document.createRange(); r.selectNodeContents(pre); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selected: press Ctrl+C'; }
+    setTimeout(() => (btn.textContent = 'Copy install command'), 1800);
+  };
+  wrap.append(l, pre, btn); return wrap;
+}
+
+function search() {
+  const q = el('q').value.trim().toLowerCase(); const list = el('results');
+  for (const x of nodes) x.g.classList.remove('match', 'dim');
+  if (q.length < 2) { list.hidden = true; refreshStates(); return; }
+  const slug = q.replace(/\s+/g, '-');
+  const score = (x) => (x.n.name === slug ? 4 : x.n.name.includes(slug) ? 3 : x.b.name.includes(q) ? 2 : x.n.description.toLowerCase().includes(q) ? 1 : 0);
+  const hits = nodes.map((x) => [x, score(x)]).filter(([, s]) => s > 0).sort((a, b) => b[1] - a[1]).map(([x]) => x);
+  const hitSet = new Set(hits);
+  for (const x of nodes) x.g.classList.add(hitSet.has(x) ? 'match' : 'dim');
+  list.innerHTML = '';
+  for (const x of hits.slice(0, 40)) {
+    const li = document.createElement('li'); const btn = document.createElement('button');
+    btn.innerHTML = ''; btn.append(x.n.name); const s = document.createElement('small'); s.textContent = x.b.name; btn.append(s);
+    btn.onclick = () => { list.hidden = true; select(x.n, x.b, true); };
+    li.append(btn); list.append(li);
+  }
+  if (!hits.length) { const li = document.createElement('li'); li.className = 'muted'; li.style.padding = '8px'; li.textContent = 'No skills match.'; list.append(li); }
+  list.hidden = false; refreshStates();
+}
+function refreshStates() { for (const x of nodes) x.g.style.display = hidden.has(x.n.state) ? 'none' : ''; }
+
+// Pan and zoom: mouse, touch (with pinch), wheel and keyboard.
+const pts = new Map(); let moved = false, last = null, pinch = 0;
+const wrap = el('wrap');
+wrap.addEventListener('pointerdown', (e) => { pts.set(e.pointerId, [e.clientX, e.clientY]); moved = false; last = [e.clientX, e.clientY]; wrap.classList.add('dragging'); });
+wrap.addEventListener('pointermove', (e) => {
+  if (!pts.has(e.pointerId)) return; pts.set(e.pointerId, [e.clientX, e.clientY]);
+  if (pts.size === 2) {
+    const [a, b] = [...pts.values()]; const d = Math.hypot(a[0] - b[0], a[1] - b[1]);
+    const r = wrap.getBoundingClientRect();
+    if (pinch) zoomAt(d / pinch, (a[0] + b[0]) / 2 - r.left, (a[1] + b[1]) / 2 - r.top);
+    pinch = d; moved = true; return;
+  }
+  const dx = e.clientX - last[0], dy = e.clientY - last[1];
+  if (Math.abs(dx) + Math.abs(dy) > 3) { moved = true; wrap.setPointerCapture?.(e.pointerId); }
+  if (moved) { view.x += dx; view.y += dy; apply(); }
+  last = [e.clientX, e.clientY];
+});
+const up = (e) => { pts.delete(e.pointerId); if (pts.size < 2) pinch = 0; wrap.classList.remove('dragging'); setTimeout(() => { moved = false; }, 0); };
+wrap.addEventListener('pointerup', up); wrap.addEventListener('pointercancel', up);
+wrap.addEventListener('wheel', (e) => { e.preventDefault(); const r = wrap.getBoundingClientRect(); zoomAt(e.deltaY < 0 ? 1.12 : 1 / 1.12, e.clientX - r.left, e.clientY - r.top); }, { passive: false });
+wrap.addEventListener('keydown', (e) => {
+  const s = 60; const c = [wrap.clientWidth / 2, wrap.clientHeight / 2];
+  const k = { ArrowLeft: () => (view.x += s), ArrowRight: () => (view.x -= s), ArrowUp: () => (view.y += s), ArrowDown: () => (view.y -= s), '+': () => zoomAt(1.2, ...c), '=': () => zoomAt(1.2, ...c), '-': () => zoomAt(1 / 1.2, ...c) }[e.key];
+  if (k) { e.preventDefault(); k(); apply(); }
+});
+el('zin').onclick = () => zoomAt(1.25, wrap.clientWidth / 2, wrap.clientHeight / 2);
+el('zout').onclick = () => zoomAt(0.8, wrap.clientWidth / 2, wrap.clientHeight / 2);
+el('zfit').onclick = fit;
+el('q').addEventListener('input', search);
+el('q').addEventListener('keydown', (e) => { if (e.key === 'Escape') { el('q').value = ''; search(); } });
+document.querySelectorAll('.legend input').forEach((cb) => cb.addEventListener('change', () => { cb.checked ? hidden.delete(cb.dataset.state) : hidden.add(cb.dataset.state); refreshStates(); }));
+
+fetch('data.json').then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }).then((d) => {
+  DATA = d; build(); fit();
+  const c = d.counts;
+  el('counts').textContent = `${c.researched.toLocaleString('en-GB')} researched · ${c.inResearch} in research · ${c.proposed} proposed · ${c.branches} branches`;
+}).catch((e) => { el('counts').textContent = 'Could not load data.json. Serve this folder over http, not file://.'; console.warn(e); });
+</script>
+</body>
+</html>

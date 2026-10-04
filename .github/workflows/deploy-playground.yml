@@ -24,6 +24,8 @@ on:
       - 'scripts/build-community.mjs'
       - 'scripts/build-samples.mjs'
       - 'examples/samples/**'
+      - 'site/tech-tree/**'
+      - 'scripts/build-tech-tree.mjs'
       - '.github/workflows/deploy-playground.yml'
   workflow_dispatch:
 
@@ -80,6 +82,12 @@ jobs:
 
       - name: Build the model leaderboard data (web/modelbench.json)
         run: node scripts/build-modelbench.mjs
+
+      - name: Build the tech tree (site/tech-tree, published at /tech-tree/)
+        run: |
+          node scripts/build-tech-tree.mjs
+          mkdir -p web/tech-tree
+          cp site/tech-tree/index.html site/tech-tree/data.json web/tech-tree/
 
       - name: Configure Pages
         uses: actions/configure-pages@v6

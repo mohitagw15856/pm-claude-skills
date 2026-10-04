@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-3d-explorer",
+  "version": "1.0.0",
+  "description": "Topic in, interactive 3D explorer out: the interface brief and mock prompt, image-to-3D prompts with a sourced parts list, a single-file Three.js viewer with clickable labelled parts, exploded view and quiz mode, and a pipeline that runs them in order",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "3d",
+    "threejs",
+    "education",
+    "explorer",
+    "glb",
+    "learning"
+  ]
+}
