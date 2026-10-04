@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>听一听 · Listen to the skills in Mandarin</title>
+<meta name="description" content="四段中文示例对话：周报、补偿金、申论、小红书。点 ▶ 由浏览器朗读，逐句高亮。不下载任何音频。Four short Mandarin demo exchanges, read aloud by your browser with the line being spoken highlighted." />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .ls-wrap { max-width: 820px; margin: 0 auto; padding: 16px 22px 70px; }
+  .ls-lead { color: var(--muted); font-size: 15px; line-height: 1.6; }
+  .ls-lead .en { display: block; font-size: 13px; margin-top: 4px; }
+  .ls-bar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin: 14px 0 6px; }
+  .ls-btn { background: var(--accent); color: var(--bg); border: 0; border-radius: 999px; padding: 9px 18px; font-size: 15px; font-weight: 600; cursor: pointer; }
+  .ls-btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); font-weight: 500; }
+  .ls-btn:focus-visible { outline: 2px solid var(--accent-2); outline-offset: 2px; }
+  .ls-status { font-size: 13px; color: var(--muted); min-height: 1.4em; }
+  .ls-status.warn { color: var(--accent-2); }
+  .ex { border: 1px solid var(--border); border-radius: var(--radius); background: var(--panel); margin: 16px 0; padding: 14px 16px; }
+  .ex-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .ex-head h2 { margin: 0; font-size: 17px; }
+  .ex-head code { font-size: 12px; color: var(--muted); }
+  .ex-head .ls-btn { margin-left: auto; padding: 6px 14px; font-size: 14px; }
+  .line { display: grid; grid-template-columns: 52px 1fr; gap: 10px; padding: 8px 10px; border-radius: 10px; border-left: 3px solid transparent; line-height: 1.6; font-size: 15.5px; }
+  .line + .line { margin-top: 2px; }
+  .who { font-size: 12.5px; color: var(--muted); padding-top: 2px; }
+  .line.you { background: var(--panel-2); }
+  .line.speaking { border-left-color: var(--accent); background: var(--panel-2); box-shadow: var(--shadow-accent); }
+  .line.speaking .who { color: var(--accent); }
+  .ex-head h2, .ls-btn { white-space: nowrap; }
+  @media (max-width: 520px) {
+    .ex-head { flex-wrap: wrap; }
+    .ex-head code { order: 3; flex-basis: 100%; }
+    .line { grid-template-columns: 34px 1fr; gap: 8px; padding: 8px; }
+  }
+  .ls-note { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--border); margin-top: 26px; padding-top: 12px; line-height: 1.6; }
+  @media (prefers-reduced-motion: no-preference) { .line { transition: background-color .2s, border-color .2s; } }
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <img src="assets/product-notes.jpg" alt="PM Skills" class="brand-logo" />
+    <div class="brand-text"><h1>听一听</h1><p class="tagline">四段中文示例，浏览器朗读</p></div>
+  </div>
+</header>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+
+<main class="ls-wrap">
+  <p class="ls-lead">每段先是一个真实的请求，再是加载技能后的回答。点 ▶，浏览器会用中文语音读出来，并高亮正在读的那一句。
+    <span class="en" lang="en">Each exchange is a request, then the answer once the skill loads. Press ▶ and your browser reads it aloud in Mandarin, highlighting the line being spoken. No audio files are downloaded.</span></p>
+
+  <div class="ls-bar">
+    <button class="ls-btn" id="all" type="button">▶ 全部播放</button>
+    <button class="ls-btn ghost" id="stop" type="button">■ 停止</button>
+  </div>
+  <p class="ls-status" id="status" role="status" aria-live="polite"></p>
+
+  <div id="list"></div>
+
+  <p class="ls-note">示例内容摘自各技能的 SKILL.md，数字为演示用。朗读使用你设备自带的语音（Web Speech API），声音因系统而异。
+    <span lang="en">Excerpts come from each skill's SKILL.md; the figures are for illustration. Speech uses your device's own voices, so the sound varies by system.</span>
+    <a href="https://github.com/mohitagw15856/pm-claude-skills">GitHub</a></p>
+</main>
+
+<script>
+// Each line: [who, text shown, optional text spoken]. "you" is the request; "skill" is the answer.
+const EXCHANGES = [
+  { title: '周报', skill: 'cn-weekly-report', lines: [
+    ['you', '帮我把这些笔记整理成周报：支付页改版上线了，转化率从 3.1% 到 3.6%，埋点还没好。'],
+    ['skill', '一、本周完成：支付页改版上线，转化率从 3.1% 提升到 3.6%。'],
+    ['skill', '三、问题与风险：埋点未就绪，A/B 测试可能延期，需要产品负责人本周决定是否先上线。'],
+    ['skill', '一句话版本：支付页改版已上线，转化率提升 0.5 个百分点；埋点延期，需要决策。'],
+  ] },
+  { title: '补偿金', skill: 'cn-severance-calculator', lines: [
+    ['you', '公司要和我协商解除劳动合同。我工作了 6 年 7 个月，月薪 2.5 万，能拿多少？'],
+    ['skill', '适用情形：协商解除，按 N 计算，依据《劳动合同法》第 36 条和第 46 条。', '适用情形：协商解除，按 N 计算，依据劳动合同法第三十六条和第四十六条。'],
+    ['skill', '工作年限 6 年 7 个月，满六个月按一年算，所以 N = 7。', '工作年限六年七个月，满六个月按一年算，所以 N 等于七。'],
+    ['skill', '估算：2.5 万 × 7 ≈ 17.5 万元。月薪超过当地社平工资三倍的，要按封顶计算。', '估算：二点五万乘以七，大约十七点五万元。月薪超过当地社平工资三倍的，要按封顶计算。'],
+    ['skill', '签字前另外核对：未休年假工资，以及已经挣到的年终奖。'],
+  ] },
+  { title: '申论', skill: 'cn-civil-exam-essay', lines: [
+    ['you', '这道归纳概括题限 200 字，这是我的答案，帮我批改。'],
+    ['skill', '题型判断：归纳概括，主要考查从给定资料中提取和归纳要点。'],
+    ['skill', '要点提取：逐段找出回答问题的词句，合并重复，尽量保留资料原话，并标注来源段落。'],
+    ['skill', '批改：漏了第 4 段的一个要点，字数 196 / 200，大致二类文。', '批改：漏了第四段的一个要点，字数一百九十六，限两百字，大致二类文。'],
+  ] },
+  { title: '小红书', skill: 'xiaohongshu-note', lines: [
+    ['you', '帮我写一篇小红书，推荐我通勤穿了一个月的跑鞋，是品牌送的。'],
+    ['skill', '标题备选：通勤一个月，我终于找到不磨脚的鞋。'],
+    ['skill', '正文写真实细节：价格、尺码、每天走多少步，再写一个缺点：鞋面不太透气。'],
+    ['skill', '合规检查：“全网最舒服”是绝对化用语，建议改成“我穿过很舒服的一双”。'],
+    ['skill', '品牌赠送要用平台的合作工具声明，不能写成纯个人分享。'],
+  ] },
+];
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+const WHO = { you: '你', skill: '技能' };
+
+$('list').innerHTML = EXCHANGES.map((ex, i) => `<section class="ex" aria-labelledby="ex${i}">
+  <div class="ex-head"><h2 id="ex${i}">${esc(ex.title)}</h2><code>${esc(ex.skill)}</code>
+    <button class="ls-btn" type="button" data-play="${i}" aria-label="播放：${esc(ex.title)}">▶ 播放</button></div>
+  ${ex.lines.map(([who, text], k) => `<div class="line ${who}" id="l${i}_${k}"><span class="who">${WHO[who]}</span><span>${esc(text)}</span></div>`).join('')}
+</section>`).join('');
+
+const synth = 'speechSynthesis' in window ? window.speechSynthesis : null;
+let voices = [], run = 0, silent = false;
+
+function pickVoices() {
+  voices = synth ? synth.getVoices().filter((v) => /^zh(-|_|$)/i.test(v.lang) && !/HK|TW|yue/i.test(v.lang)) : [];
+  // Prefer mainland voices; any Chinese voice beats none.
+  if (!voices.length && synth) voices = synth.getVoices().filter((v) => /^(zh|cmn)/i.test(v.lang));
+  silent = !voices.length;
+  if (!synth) status('这个浏览器不支持语音朗读，将逐句高亮，供你默读。This browser has no speech synthesis, so lines are highlighted for reading instead.', true);
+  else if (silent) status('没有找到中文语音，将逐句高亮，供你默读。可在系统设置中添加“中文（普通话）”语音。No Chinese voice found: lines are highlighted for reading. Add a Mandarin voice in your system settings to hear them.', true);
+  else status('');
+}
+function status(msg, warn) { $('status').textContent = msg; $('status').classList.toggle('warn', !!warn); }
+if (synth) { pickVoices(); synth.addEventListener('voiceschanged', pickVoices); } else pickVoices();
+
+function clearHighlight() { document.querySelectorAll('.line.speaking').forEach((n) => { n.classList.remove('speaking'); n.removeAttribute('aria-current'); }); }
+
+function sayLine(text, who, token) {
+  return new Promise((resolve) => {
+    if (token !== run) return resolve();
+    if (silent || !synth) { setTimeout(resolve, 600 + [...text].length * 190); return; }
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = 'zh-CN';
+    // Two voices if the system has them, so the request and the answer sound like two people.
+    u.voice = voices[who === 'you' ? 0 : Math.min(1, voices.length - 1)] || null;
+    u.pitch = who === 'you' && voices.length < 2 ? 1.15 : 1;
+    u.rate = 1;
+    // Keep a reference (Chrome drops onend for collected utterances) and never wait forever.
+    window.__utterance = u;
+    const guard = setTimeout(resolve, 3000 + [...text].length * 400);
+    u.onend = u.onerror = () => { clearTimeout(guard); resolve(); };
+    synth.speak(u);
+  });
+}
+
+async function play(indices) {
+  stop();
+  const token = ++run;
+  for (const i of indices) {
+    const ex = EXCHANGES[i];
+    for (let k = 0; k < ex.lines.length; k++) {
+      if (token !== run) return;
+      clearHighlight();
+      const node = $(`l${i}_${k}`);
+      node.classList.add('speaking'); node.setAttribute('aria-current', 'true');
+      node.scrollIntoView({ block: 'nearest', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
+      const [who, text, spoken] = ex.lines[k];
+      await sayLine(spoken || text, who, token);
+      await new Promise((r) => setTimeout(r, 250));
+    }
+  }
+  if (token === run) clearHighlight();
+}
+function stop() { run++; if (synth) synth.cancel(); clearHighlight(); }
+
+document.querySelectorAll('[data-play]').forEach((b) => b.addEventListener('click', () => play([+b.dataset.play])));
+$('all').addEventListener('click', () => play(EXCHANGES.map((_, i) => i)));
+$('stop').addEventListener('click', stop);
+addEventListener('pagehide', stop);
+// Deep link: listen.html#2 opens on (but does not autoplay) the third exchange; browsers block speech without a click.
+const start = +location.hash.slice(1);
+if (start > 0 && start < EXCHANGES.length) $(`ex${start}`).scrollIntoView();
+</script>
+<script src="a11y.js"></script>
+<script src="nav.js"></script>
+</body>
+</html>
