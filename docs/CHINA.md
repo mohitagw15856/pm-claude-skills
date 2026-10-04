@@ -24,7 +24,7 @@ npx pm-claude-skills add --agent claude
 ### 用 Gitee 镜像克隆
 
 ```bash
-git clone https://gitee.com/mohitagw15856/pm-claude-skills.git
+git clone https://gitee.com/mohitagw/pm-claude-skills.git
 ```
 
 Gitee 镜像每次 GitHub 更新后自动同步。（镜像开通前，此地址可能尚不可用。）
