@@ -1204,6 +1204,70 @@
   {
    "skill": "application-tracker",
    "input": "Set up a tracker for my job search. I've applied to 6 companies with 3 different CV versions and I've lost track of who to follow up with."
+  },
+  {
+   "skill": "cn-weekly-report",
+   "input": "帮我把这些笔记整理成周报：完成支付页改版上线，转化率从3.1%到3.6%；和法务对齐了隐私条款；下周要做A/B测试，但数据埋点还没好，可能延期。"
+  },
+  {
+   "skill": "cn-year-end-review",
+   "input": "帮我写今年的年终总结。OKR：用户留存提升到40%（实际38%），上线会员体系（已完成，付费用户2万），带两个新人。"
+  },
+  {
+   "skill": "cn-promotion-defence",
+   "input": "帮我准备晋升答辩，从P6到P7，20分钟讲10分钟问答。我主导了推荐系统重构，点击率提升12%，还带了3个人。"
+  },
+  {
+   "skill": "cn-fupan",
+   "input": "帮我做双十一活动的复盘。目标GMV 500万，实际420万；流量达标但转化率低；有一个主推品缺货两天。"
+  },
+  {
+   "skill": "chuhai-market-entry",
+   "input": "我们是做智能家居的公司，国内年销2亿，想出海，在东南亚和中东之间选一个，帮我做第一年的出海计划。"
+  },
+  {
+   "skill": "cross-border-listing",
+   "input": "Write an Amazon US listing for a portable blender. 400ml, USB-C, 6 blades, BPA-free, FCC certified. Our Chinese listing says 全网最强 and 100% safe."
+  },
+  {
+   "skill": "pipl-gdpr-crosswalk",
+   "input": "Our app has users in China and the EU. We store Chinese user profiles in Shanghai and want our Dublin support team to access them. About 200,000 users. What do PIPL and GDPR require?"
+  },
+  {
+   "skill": "cn-labour-contract-decoder",
+   "input": "帮我看看这份劳动合同：合同三年，试用期六个月，试用期工资是正式工资的70%，竞业限制两年但没有写补偿，违约金是十万元。"
+  },
+  {
+   "skill": "cn-severance-calculator",
+   "input": "公司要裁我，2018年3月1日入职，最后工作日是2026年9月30日，过去12个月平均月薪25000元，公司没有提前30天通知，在上海。能拿多少补偿？"
+  },
+  {
+   "skill": "cn-iit-reconciliation",
+   "input": "个税汇算我能退多少？2025年工资30万，年终奖6万，个人社保公积金3.5万，有一个孩子上小学，在上海租房，已预扣个税2万。年终奖单独计税还是合并更划算？"
+  },
+  {
+   "skill": "cn-social-insurance-explainer",
+   "input": "五险一金到底是什么？我在深圳，月薪两万，下个月换工作中间会断一个月社保，有什么影响？"
+  },
+  {
+   "skill": "cn-gaokao-planner",
+   "input": "我在河南，今年高考610分，位次2万左右，选科物理化学生物，想学计算机，帮我填志愿。"
+  },
+  {
+   "skill": "xiaohongshu-note",
+   "input": "帮我写一篇小红书笔记，分享我在大理住了一周的民宿，价格一晚380，离古城步行10分钟，缺点是隔音一般。"
+  },
+  {
+   "skill": "wechat-article",
+   "input": "帮我写一篇公众号文章，主题是年轻人为什么不想换工作，读者是25到35岁的职场人，1500字左右。"
+  },
+  {
+   "skill": "douyin-script",
+   "input": "帮我写一个30秒的抖音脚本，教大家用收纳盒整理衣柜，口播出镜。"
+  },
+  {
+   "skill": "livestream-sales-script",
+   "input": "帮我写一场两小时的直播带货脚本，卖8款厨房小家电，主推空气炸锅，原价399，直播价299，有一个副播。"
   }
  ]
 }

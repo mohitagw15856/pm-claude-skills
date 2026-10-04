@@ -12,14 +12,14 @@
       "pm-legal", "pm-estate", "pm-insurance", "pm-banking", "pm-scam-defense",
       "pm-health", "pm-crisis", "pm-invisible-illness", "pm-accessibility",
       "pm-newcomer", "pm-decoders", "pm-emergency", "pm-identity",
-      "pm-digital-safety", "pm-renters", "pm-parents"
+      "pm-digital-safety", "pm-renters", "pm-parents", "pm-china-life"
     ],
     "consequential": [
       "pm-wealth", "pm-money", "pm-finance", "pm-investing-literacy", "pm-hr",
       "pm-people", "pm-layoff", "pm-resignation", "pm-jobsearch", "pm-career",
       "pm-compliance", "pm-security", "pm-gov", "pm-recruiting", "pm-neurodivergent",
       "pm-family", "pm-social", "pm-wellbeing", "pm-freelance", "pm-sidehustle",
-      "pm-wedding", "pm-realestate", "pm-simulators", "pm-decisions", "pm-cv"]
+      "pm-wedding", "pm-realestate", "pm-simulators", "pm-decisions", "pm-cv", "pm-china-work", "pm-chuhai"]
   },
   "skills": {
     "high-stakes": [

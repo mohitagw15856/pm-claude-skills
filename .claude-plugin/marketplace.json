@@ -2,12 +2,44 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
   "version": "80.2.0",
-  "description": "PM stands for Professional, not just Product Management. 1196 Claude Skills + 4 agent templates across 135 bundles covering 31 professions — engineering, security, AI/ML, customer success, legal, government & policy, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
+  "description": "PM stands for Professional, not just Product Management. 1212 Claude Skills + 4 agent templates across 139 bundles covering 31 professions — engineering, security, AI/ML, customer success, legal, government & policy, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "plugins": [
+    {
+      "name": "pm-zh-content",
+      "description": "Chinese content platforms: 小红书 notes, 公众号 articles, 抖音 short-video scripts and live-commerce (直播带货) scripts, each with a compliance check against restricted advertising claims and undisclosed sponsorship",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-zh-content",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-china-life",
+      "description": "Life admin in mainland China: decode a labour contract, estimate severance (N, N+1, 2N), prepare the annual income tax reconciliation, understand social insurance and the housing fund, and plan gaokao university applications",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-china-life",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-chuhai",
+      "description": "The 出海 pack for Chinese companies going global: market entry planning, cross-border marketplace listings written for the buyer, and a PIPL and GDPR crosswalk for data flowing in and out of China",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-chuhai",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-china-work",
+      "description": "The Chinese workplace pack: weekly and monthly reports (周报), the year-end review (述职 / 年终总结), the promotion defence (晋升答辩) and the 复盘 project review, written in Chinese to the conventions managers expect",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-china-work",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
     {
       "name": "pm-cv",
       "description": "The CV studio: interview your experience into a master inventory, then a CV shaped for one company (its tracking system, country, sector, values and job ad), with sector variants, a bilingual Chinese and English CV, an honesty check and an ATS-safe Word export",

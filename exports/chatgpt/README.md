@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1208 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1224 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -164,6 +164,7 @@
 | Chart Data Extractor | `pm-vision` | `pm-vision/chart-data-extractor/SYSTEM_PROMPT.md` |
 | Chess Opening Coach | `pm-hobbies` | `pm-hobbies/chess-opening-coach/SYSTEM_PROMPT.md` |
 | Childcare Comparison | `pm-family` | `pm-family/childcare-comparison/SYSTEM_PROMPT.md` |
+| 出海 Market Entry | `pm-chuhai` | `pm-chuhai/chuhai-market-entry/SYSTEM_PROMPT.md` |
 | Churn Analysis | `pm-cs` | `pm-cs/churn-analysis/SYSTEM_PROMPT.md` |
 | CI/CD Playbook | `pm-engineering` | `pm-engineering/cicd-playbook/SYSTEM_PROMPT.md` |
 | Citation Hygiene | `pm-cowork` | `pm-cowork/citation-hygiene/SYSTEM_PROMPT.md` |
@@ -185,6 +186,15 @@
 | Clip Factory | `pm-newgen` | `pm-newgen/clip-factory/SYSTEM_PROMPT.md` |
 | Clone Brief | `pm-2027` | `pm-2027/clone-brief/SYSTEM_PROMPT.md` |
 | Closing Disclosure Decoder | `pm-decoders` | `pm-decoders/closing-disclosure-decoder/SYSTEM_PROMPT.md` |
+| 复盘 (Fupan) | `pm-china-work` | `pm-china-work/cn-fupan/SYSTEM_PROMPT.md` |
+| Gaokao Application Planner (高考志愿) | `pm-china-life` | `pm-china-life/cn-gaokao-planner/SYSTEM_PROMPT.md` |
+| China Annual Tax Reconciliation (个税年度汇算) | `pm-china-life` | `pm-china-life/cn-iit-reconciliation/SYSTEM_PROMPT.md` |
+| China Labour Contract Decoder (劳动合同) | `pm-china-life` | `pm-china-life/cn-labour-contract-decoder/SYSTEM_PROMPT.md` |
+| Promotion Defence (晋升答辩) | `pm-china-work` | `pm-china-work/cn-promotion-defence/SYSTEM_PROMPT.md` |
+| China Severance Calculator (经济补偿金) | `pm-china-life` | `pm-china-life/cn-severance-calculator/SYSTEM_PROMPT.md` |
+| China Social Insurance Explainer (五险一金) | `pm-china-life` | `pm-china-life/cn-social-insurance-explainer/SYSTEM_PROMPT.md` |
+| Chinese Weekly Report (周报) | `pm-china-work` | `pm-china-work/cn-weekly-report/SYSTEM_PROMPT.md` |
+| Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-work` | `pm-china-work/cn-year-end-review/SYSTEM_PROMPT.md` |
 | Co-Marketing | `pm-growth` | `pm-growth/co-marketing/SYSTEM_PROMPT.md` |
 | Co-Parenting Messages | `pm-family` | `pm-family/co-parenting-messages/SYSTEM_PROMPT.md` |
 | Cocktail From What I Have | `pm-hobbies` | `pm-hobbies/cocktail-from-what-i-have/SYSTEM_PROMPT.md` |
@@ -252,6 +262,7 @@
 | Credential Recognition | `pm-newcomer` | `pm-newcomer/credential-recognition/SYSTEM_PROMPT.md` |
 | Credit From Scratch | `pm-newcomer` | `pm-newcomer/credit-from-scratch/SYSTEM_PROMPT.md` |
 | Credit Memo | `pm-banking` | `pm-banking/credit-memo/SYSTEM_PROMPT.md` |
+| Cross-Border Listing | `pm-chuhai` | `pm-chuhai/cross-border-listing/SYSTEM_PROMPT.md` |
 | Cross-Examine Me | `pm-thinking` | `pm-thinking/cross-examine-me/SYSTEM_PROMPT.md` |
 | Crypto Prices | `pm-live` | `pm-live/crypto-prices/SYSTEM_PROMPT.md` |
 | Customer Escalation Brief | `pm-cs` | `pm-cs/cs-escalation-brief/SYSTEM_PROMPT.md` |
@@ -358,6 +369,7 @@
 | Word Doc Tracked Changes | `pm-essentials` | `pm-essentials/docx-tracked-changes/SYSTEM_PROMPT.md` |
 | Donor Update | `pm-nonprofit` | `pm-nonprofit/donor-update/SYSTEM_PROMPT.md` |
 | Double Opt-In Intro | `pm-cowork` | `pm-cowork/double-opt-in-intro/SYSTEM_PROMPT.md` |
+| 抖音 Script | `pm-zh-content` | `pm-zh-content/douyin-script/SYSTEM_PROMPT.md` |
 | Downloads Triage | `pm-cowork` | `pm-cowork/downloads-triage/SYSTEM_PROMPT.md` |
 | Doxxing Response | `pm-digital-safety` | `pm-digital-safety/doxxing-response/SYSTEM_PROMPT.md` |
 | DPA Review | `pm-legal` | `pm-legal/dpa-review/SYSTEM_PROMPT.md` |
@@ -638,6 +650,7 @@
 | LinkedIn Profile | `pm-personal` | `pm-personal/linkedin-profile/SYSTEM_PROMPT.md` |
 | Literature Review | `pm-research` | `pm-research/literature-review/SYSTEM_PROMPT.md` |
 | Literature Review Builder | `pm-students` | `pm-students/literature-review-builder/SYSTEM_PROMPT.md` |
+| Livestream Sales Script (直播带货) | `pm-zh-content` | `pm-zh-content/livestream-sales-script/SYSTEM_PROMPT.md` |
 | LLM Cost & Latency Budget | `pm-ai` | `pm-ai/llm-cost-latency-budget/SYSTEM_PROMPT.md` |
 | LLM Guardrails Spec | `pm-ai` | `pm-ai/llm-guardrails-spec/SYSTEM_PROMPT.md` |
 | Load Testing Plan | `pm-engineering` | `pm-engineering/load-testing-plan/SYSTEM_PROMPT.md` |
@@ -778,6 +791,7 @@
 | Physiotherapy Progress Note | `pm-physio` | `pm-physio/physio-progress-note/SYSTEM_PROMPT.md` |
 | PIP Responder | `pm-career` | `pm-career/pip-responder/SYSTEM_PROMPT.md` |
 | PIP Writer | `pm-people` | `pm-people/pip-writer/SYSTEM_PROMPT.md` |
+| PIPL and GDPR Crosswalk | `pm-chuhai` | `pm-chuhai/pipl-gdpr-crosswalk/SYSTEM_PROMPT.md` |
 | Pitch Vs Teach | `pm-cowork` | `pm-cowork/pitch-vs-teach/SYSTEM_PROMPT.md` |
 | Pivot Analysis Planner | `pm-cowork` | `pm-cowork/pivot-analysis-planner/SYSTEM_PROMPT.md` |
 | Pixel GIF Maker | `other` | `other/pixel-gif-maker/SYSTEM_PROMPT.md` |
@@ -1184,6 +1198,7 @@
 | Wage-Garnishment Response | `pm-hardship` | `pm-hardship/wage-garnishment-response/SYSTEM_PROMPT.md` |
 | Warranty Claim | `pm-money` | `pm-money/warranty-claim/SYSTEM_PROMPT.md` |
 | Weather Now | `pm-live` | `pm-live/weather-now/SYSTEM_PROMPT.md` |
+| WeChat Official Account Article (公众号文章) | `pm-zh-content` | `pm-zh-content/wechat-article/SYSTEM_PROMPT.md` |
 | Wedding Budget | `pm-wedding` | `pm-wedding/wedding-budget/SYSTEM_PROMPT.md` |
 | Wedding Logistics Planner | `pm-wedding` | `pm-wedding/wedding-logistics-planner/SYSTEM_PROMPT.md` |
 | Wedding Speech | `pm-lifeadmin` | `pm-lifeadmin/wedding-speech/SYSTEM_PROMPT.md` |
@@ -1212,6 +1227,7 @@
 | World Clock | `pm-live` | `pm-live/world-clock/SYSTEM_PROMPT.md` |
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/SYSTEM_PROMPT.md` |
 | Writing Plans | `pm-method` | `pm-method/writing-plans/SYSTEM_PROMPT.md` |
+| 小红书 Note | `pm-zh-content` | `pm-zh-content/xiaohongshu-note/SYSTEM_PROMPT.md` |
 | Year in Review | `pm-career` | `pm-career/year-in-review/SYSTEM_PROMPT.md` |
 | YouTube Script | `pm-creator` | `pm-creator/youtube-script/SYSTEM_PROMPT.md` |
 | YouTube Script Writer | `pm-writers` | `pm-writers/youtube-script-writer/SYSTEM_PROMPT.md` |

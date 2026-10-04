@@ -1,4 +1,4 @@
-# 🗂️ All 1196 Skills — full catalog
+# 🗂️ All 1212 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -723,7 +723,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (734 skills)
+## 🌍 Industries & Public Sector (750 skills)
 
 ### `other` — 22 skills
 
@@ -875,6 +875,33 @@
 | **Medical-Appointment Advocate** (`medical-appointment-advocate`) | Prepare to get the most out of a medical appointment — for yourself or someone you care for — with the right questions, the information to bring… | — |
 | **Medication-Management System** (`medication-management-system`) | Set up a system to manage medications safely — for yourself or someone you care for — so doses aren't missed, doubled, or dangerously combined. | — |
 | **Respite-Care Plan** (`respite-care-plan`) | Plan a genuine break from caregiving — arrange the coverage, hand off the essentials, and actually rest — because respite is what lets you keep going. | — |
+
+### `pm-china-life` — 5 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Gaokao Application Planner (高考志愿)** (`cn-gaokao-planner`) | Help a student and family plan university applications after the 高考 (gaokao): use the student's provincial rank rather than raw score, build a 冲 /… | — |
+| **China Annual Tax Reconciliation (个税年度汇算)** (`cn-iit-reconciliation`) | Prepare for China's annual individual income tax reconciliation (个税年度汇算): check income, deductions and special additional deductions, compare the… | — |
+| **China Labour Contract Decoder (劳动合同)** (`cn-labour-contract-decoder`) | Decode a mainland China labour contract (劳动合同) before signing: probation, pay and its structure, working hours, social insurance, non-compete and… | — |
+| **China Severance Calculator (经济补偿金)** (`cn-severance-calculator`) | Estimate economic compensation (经济补偿金) when employment ends in mainland China: N, N+1 or 2N under the Labour Contract Law, with the high-earner… | — |
+| **China Social Insurance Explainer (五险一金)** (`cn-social-insurance-explainer`) | Explain China's social insurance and housing fund (五险一金) for a specific person and city: what each part covers, what they and their employer pay… | — |
+
+### `pm-china-work` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **复盘 (Fupan)** (`cn-fupan`) | Run a 复盘 (fupan), the structured project review widely used in Chinese companies: review the goal, assess the result, analyse why, and draw rules… | — |
+| **Promotion Defence (晋升答辩)** (`cn-promotion-defence`) | Prepare a promotion defence (晋升答辩) for a level-based promotion process common at Chinese technology companies: the materials, the presentation… | — |
+| **Chinese Weekly Report (周报)** (`cn-weekly-report`) | Write a Chinese workplace weekly or monthly report (周报 / 月报) for a manager: results with numbers, progress against goals, risks raised early, next… | — |
+| **Chinese Year-End Review (述职报告 / 年终总结)** (`cn-year-end-review`) | Write a Chinese annual self-review (述职报告 / 年终总结) for a performance cycle: results against OKR or KPI with evidence, the two or three things that… | — |
+
+### `pm-chuhai` — 3 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **出海 Market Entry** (`chuhai-market-entry`) | Plan a Chinese company's entry into an overseas market (出海): choose the market with evidence, then plan entity, payments, localisation… | — |
+| **Cross-Border Listing** (`cross-border-listing`) | Write a product listing for an overseas marketplace or store, localised for the buyer rather than translated from Chinese: title, bullet points… | — |
+| **PIPL and GDPR Crosswalk** (`pipl-gdpr-crosswalk`) | Compare China's Personal Information Protection Law (PIPL) with the EU GDPR for a specific data flow, and produce the gap list and cross-border… | — |
 
 ### `pm-civic` — 5 skills
 
@@ -1904,6 +1931,15 @@
 | **Sleep Reset Plan** (`sleep-reset-plan`) | Build a realistic plan to fix bad sleep — a wind-down routine, a consistent schedule, and the daytime and environment fixes that actually move the… | — |
 | **Stretching Routine** (`stretching-routine`) | Build a targeted stretching or mobility routine for the tightness you actually have — desk-stiff hips, a tight back, post-run legs — not a generic… | — |
 
+### `pm-zh-content` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **抖音 Script** (`douyin-script`) | Write a short-video script for 抖音 (Douyin) or similar vertical-video platforms: a hook in the first three seconds, a shot-by-shot plan with… | — |
+| **Livestream Sales Script (直播带货)** (`livestream-sales-script`) | Plan and script a live-commerce session (直播带货): the run of show, the script for each product segment, interaction prompts, offer timing, and a… | — |
+| **WeChat Official Account Article (公众号文章)** (`wechat-article`) | Write a WeChat Official Account (公众号) article: a headline that earns the open, a digest line, a structure built for reading on a phone, and an… | — |
+| **小红书 Note** (`xiaohongshu-note`) | Write a 小红书 (Xiaohongshu, RED) note that reads like a real person's experience: a scroll-stopping title, cover text, a body built on specific… | — |
+
 ---
 
-_1196 skills across 136 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1212 skills across 140 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
