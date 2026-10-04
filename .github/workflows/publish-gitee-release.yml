@@ -71,3 +71,71 @@ jobs:
             echo "::warning::Gitee returned HTTP $code"; python3 -c "import json;d=json.load(open('resp.json'));print(d.get('message', d))" || true
             grep -qi "already" resp.json && echo "release already exists" || exit 1
           fi
+
+  # Releases on GitHub are immutable, so the intranet offline pack is attached to
+  # the Gitee release instead (Gitee allows attachments after publishing). It is
+  # also served from Pages at /offline/pm-skills-offline.zip.
+  offline-pack:
+    needs: gitee-release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Gitee releases are set up
+        id: gate
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+          GITEE_REPO: ${{ vars.GITEE_REPO }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: |
+          printf '%s' "$TAG" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+$' || { echo "::error::bad tag"; exit 1; }
+          if [ -z "$GITEE_TOKEN" ] || [ -z "$GITEE_REPO" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::GITEE_TOKEN or GITEE_REPO is not set; skipping the offline pack upload."
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v7
+        if: steps.gate.outputs.enabled == 'true'
+        with:
+          ref: ${{ github.event.release.tag_name || inputs.tag }}
+      - uses: actions/setup-node@v7
+        if: steps.gate.outputs.enabled == 'true'
+        with:
+          node-version: '24'
+      - name: Build the offline pack
+        if: steps.gate.outputs.enabled == 'true'
+        run: |
+          set -euo pipefail
+          node scripts/build-offline-pack.mjs --out dist --max-mb 40
+          (cd dist && sha256sum -c pm-skills-offline.zip.sha256)
+      - name: Attach the offline pack to the Gitee release
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+          GITEE_REPO: ${{ vars.GITEE_REPO }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: |
+          set -euo pipefail
+          printf '%s' "$TAG" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+$' || { echo "::error::bad tag"; exit 1; }
+          printf '%s' "$GITEE_REPO" | grep -Eq '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$' || { echo "::error::bad GITEE_REPO"; exit 1; }
+          API="https://gitee.com/api/v5/repos/${GITEE_REPO}"
+          # The token goes in a curl config file read from stdin, never on the command line or in the log.
+          auth() { printf 'data-urlencode = "access_token=%s"\n' "$GITEE_TOKEN"; }
+          code=$(auth | curl -sS -G -K - -o release.json -w '%{http_code}' "$API/releases/tags/${TAG}")
+          [ "$code" = "200" ] || { echo "::error::no Gitee release for $TAG (HTTP $code)"; exit 1; }
+          RID=$(python3 -c "import json;d=json.load(open('release.json'));print(int(d['id']))")
+          # A re-run replaces earlier copies with the same name.
+          code=$(auth | curl -sS -G -K - -o files.json -w '%{http_code}' "$API/releases/${RID}/attach_files")
+          if [ "$code" = "200" ]; then
+            for FID in $(python3 -c "import json;print(' '.join(str(int(f['id'])) for f in json.load(open('files.json')) if f.get('name','').startswith('pm-skills-offline.zip')))"); do
+              auth | curl -sS -G -K - -o /dev/null -X DELETE "$API/releases/${RID}/attach_files/${FID}" || true
+            done
+          fi
+          for F in dist/pm-skills-offline.zip dist/pm-skills-offline.zip.sha256; do
+            code=$(printf 'form = "access_token=%s"\n' "$GITEE_TOKEN" | curl -sS -K - -o upload.json -w '%{http_code}' -X POST -F "file=@${F}" "$API/releases/${RID}/attach_files")
+            if [ "$code" = "201" ] || [ "$code" = "200" ]; then echo "attached $(basename "$F") to $TAG"; else
+              echo "::error::Gitee returned HTTP $code for $(basename "$F")"
+              python3 -c "import json;d=json.load(open('upload.json'));print(d.get('message', d))" || true
+              exit 1
+            fi
+          done
+          rm -f release.json files.json upload.json

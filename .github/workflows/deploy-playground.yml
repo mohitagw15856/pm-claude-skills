@@ -9,6 +9,9 @@ on:
     branches: [main]
     paths:
       - 'skills/**'
+      - 'skills-i18n/**'
+      - 'scripts/build-share-cards.mjs'
+      - 'scripts/build-offline-pack.mjs'
       - 'web/**'
       - 'skillbench/results.json'
       - 'evals/results.json'
@@ -124,6 +127,19 @@ jobs:
           chmod +x "$RUNNER_TEMP/dify"
           mkdir -p web/dify
           "$RUNNER_TEMP/dify" plugin package integrations/dify-plugin -o web/dify/pm_skills.difypkg
+
+      # Chinese names, descriptions and prompts for the share-card maker (web/card.html).
+      - name: Build the share-card data (web/card-zh.json)
+        run: node scripts/build-share-cards.mjs --check
+
+      # Intranet offline pack. Releases are immutable, so it is served from Pages
+      # at /offline/pm-skills-offline.zip with its .sha256 beside it. Pages files
+      # must stay under 100 MB; the script fails above 40 MB.
+      - name: Build the offline pack (published at /offline/pm-skills-offline.zip)
+        run: |
+          set -euo pipefail
+          node scripts/build-offline-pack.mjs --out web/offline --max-mb 40
+          (cd web/offline && sha256sum -c pm-skills-offline.zip.sha256)
 
       - name: Configure Pages
         uses: actions/configure-pages@v6

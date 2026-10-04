@@ -7,10 +7,12 @@
     "app.js": 0.15,
     "index.html": 0.06,
     "docs-assets/handbook.pdf": 5.0,
-    "docs-assets/PM-Skills-Guide.pdf": 4.5
+    "docs-assets/PM-Skills-Guide.pdf": 4.5,
+    "offline/pm-skills-offline.zip": 40
   },
   "directories": {
-    "docs-assets": 40
+    "docs-assets": 40,
+    "offline": 41
   },
   "maxSingleAssetMb": 3,
   "totalMb": 100
