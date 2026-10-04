@@ -1,0 +1,37 @@
+name: "🇨🇳 中文反馈 / 技能建议"
+description: 用中文反馈某个技能在中国场景下的问题，或建议新增技能。
+title: "[中文] "
+labels: ["zh-feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        欢迎用中文提问。也可以在 Gitee 镜像提 Issue：https://gitee.com/mohitagw/pm-claude-skills/issues
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型
+      options:
+        - 某个技能的内容不准确或不符合国内情况
+        - 建议新增技能
+        - 安装或使用问题
+        - 其他
+    validations:
+      required: true
+  - type: input
+    id: skill
+    attributes:
+      label: 相关技能（如有）
+      placeholder: 例如 cn-weekly-report
+  - type: textarea
+    id: detail
+    attributes:
+      label: 具体说明
+      description: 哪里不对、你期望的结果，或者你希望技能帮你完成什么工作。涉及法律、税务、社保的问题，请尽量注明地区和年份。
+    validations:
+      required: true
+  - type: input
+    id: tool
+    attributes:
+      label: 使用的工具
+      placeholder: 例如 Claude Code、Trae、通义灵码、Playground

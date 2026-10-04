@@ -64,12 +64,13 @@ PM Skills is an open-source library of 1212 Agent Skills — plain-markdown SKIL
 
 ## 🇨🇳 中文支持 · Chinese support
 
-**用中文提问即可。** 五个面向中文用户的技能包，50 个技能有简体中文版、25 个有繁体中文版，技能路由能理解中文请求。
-*Ask in Chinese. Five packs built for Chinese users, 50 skills translated into Simplified Chinese and 25 into Traditional, and routing that understands Chinese requests.*
+**用中文提问即可。** 六个面向中文用户的技能包，60 个技能有简体中文版、25 个有繁体中文版，技能路由能理解中文请求。
+*Ask in Chinese. Six packs built for Chinese users, 60 skills translated into Simplified Chinese and 25 into Traditional, and routing that understands Chinese requests.*
 
 | 技能包 Pack | 内容 What it covers | 试着说 Try saying |
 |---|---|---|
-| [**pm-china-work**](plugins/pm-china-work/) 职场 | 周报 / 月报、述职报告 / 年终总结、晋升答辩、复盘 | "帮我把这些笔记整理成周报。" |
+| [**pm-china-work**](plugins/pm-china-work/) 职场 | 周报 / 月报、述职报告 / 年终总结、晋升答辩、复盘、需求评审、职级对标、飞书文档、钉钉日志、企业微信公告 | "帮我把这些笔记整理成周报。" |
+| [**pm-china-exams**](plugins/pm-china-exams/) 考试与求职 | 申论、结构化面试、考研规划、校招与三方协议、国企面试 | "下个月公务员面试，帮我模拟一轮。" |
 | [**pm-china-life**](plugins/pm-china-life/) 生活事务 | 劳动合同解读、经济补偿金 N / N+1 / 2N、个税年度汇算、五险一金、高考志愿 | "公司要裁我，能拿多少补偿？" |
 | [**pm-zh-content**](plugins/pm-zh-content/) 内容平台 | 小红书笔记、公众号文章、抖音脚本、直播带货脚本 | "帮我写一篇小红书笔记。" |
 | [**pm-chuhai**](plugins/pm-chuhai/) 出海 | 出海市场进入、跨境电商 listing、PIPL 与 GDPR 对照 | "我们想出海，东南亚还是中东？" |
@@ -90,7 +91,7 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
 | ▶ | **just want to see it** | open the **[Playground](https://mohitagw15856.github.io/pm-claude-skills/)** and run a skill in your browser. No install, no signup, no "enter your email to continue" |
 | 🧠 | **use Claude Code** | `/plugin` → search **pm-skills** → install. Ask *"decode this lease"* and watch |
 | 🛠 | **use anything else** | `npx pm-claude-skills add` and pick your tool (Cursor, Codex, Windsurf, ChatGPT, Gemini…) |
-| 🇨🇳 | **read Chinese** | **[中文说明](README.zh-CN.md)**：用中文提问，五个中文技能包，支持 Trae、Qoder、通义灵码和国内模型 |
+| 🇨🇳 | **read Chinese** | **[中文说明](README.zh-CN.md)**：用中文提问，六个中文技能包，支持 Trae、Qoder、通义灵码和国内模型 |
 | 🔎 | **don't know what to ask for** | type it at **[find](https://mohitagw15856.github.io/pm-claude-skills/find.html)** — *"my landlord kept my deposit"* — and it names the skill |
 | 🎒 | **are in the middle of something** | start from your moment, not the catalogue → **[Skill Packs](PACKS.md)** · 🍼 new parent · 💼 laid off · 🌍 new country · 👵 caring for a parent · 🕊️ losing someone · 💸 money in crisis |
 
