@@ -52,7 +52,7 @@ It prints the fit (`a=0.619 b=0.371 R²=1.000 lifetime≈7.7 periods LTV≈308`)
 
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
-     variable for the highlighted text — replace it with your plugin's equivalent
+     variable for the highlighted text; replace it with your plugin's equivalent
      (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
 Apply the skill above to the following input:
 

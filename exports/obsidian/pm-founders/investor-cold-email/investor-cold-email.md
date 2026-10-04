@@ -55,7 +55,7 @@ A 2-line nudge to send if there's no reply in ~5 business days — adds a *new* 
 
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
-     variable for the highlighted text — replace it with your plugin's equivalent
+     variable for the highlighted text; replace it with your plugin's equivalent
      (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
 Apply the skill above to the following input:
 

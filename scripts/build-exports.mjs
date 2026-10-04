@@ -140,7 +140,7 @@ const PLATFORMS = {
       `${body.trim()}\n\n` +
       `---\n` +
       `<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater\n` +
-      `     variable for the highlighted text — replace it with your plugin's equivalent\n` +
+      `     variable for the highlighted text; replace it with your plugin's equivalent\n` +
       `     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->\n` +
       `Apply the skill above to the following input:\n\n{{selection}}\n`,
   },

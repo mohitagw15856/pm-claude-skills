@@ -52,7 +52,7 @@ It prints the percentiles (`naive=16.0mo P10=19 P50=>36 P90=>36 survive(36mo)=56
 
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
-     variable for the highlighted text — replace it with your plugin's equivalent
+     variable for the highlighted text; replace it with your plugin's equivalent
      (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
 Apply the skill above to the following input:
 

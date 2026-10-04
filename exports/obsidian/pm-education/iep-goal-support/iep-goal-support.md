@@ -57,7 +57,7 @@ What data is collected, how often, and what counts as on-track vs needs-revision
 
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
-     variable for the highlighted text — replace it with your plugin's equivalent
+     variable for the highlighted text; replace it with your plugin's equivalent
      (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
 Apply the skill above to the following input:
 

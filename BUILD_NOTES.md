@@ -38,7 +38,32 @@ Branch: `feat/launch-kit-explorer-techtree` (local only, not pushed).
 8. **Tech tree build script language.** Node (`scripts/build-tech-tree.mjs`), matching every other build script in `scripts/`.
 9. **Tech tree node states.** The voting board has no machine-readable votes, so the page reads `site/tech-tree/votes.json`. The build script seeds it from the open rows of `SKILL_REQUEST.md` (dropping names that have since shipped) and, with `--refresh-votes`, re-counts 👍 reactions on open `skill-request` issues through the public GitHub API. The three highest-voted requests show as "in research"; the rest as "proposed". With every count at zero today, ties keep the board's own order.
 10. **Bundle sizes.** pm-oss-launch has nine skills and pm-3d-explorer four, as specified.
+11. **README sections.** The new bundles use the README's featured-bundle format (heading, pitch, four skill bullets), with colons where existing sections use em dashes, because the brief bans em dashes in new content.
+12. **Neighbouring skills.** Each new description says when to use its nearest existing skill instead (readme-writer, contributor-guide, roadmap-narrative, database-migration-plan, mcp-server-spec, demo-script, clip-factory). readme-benefit-writer and readme-writer are declared as a reviewed pair in `skill-dupes-allow.json`.
+13. **Risk tier.** licence-notice-auditor is marked consequential in `config/risk-tiers.json`; the other twelve are informational.
+14. **Standalone skills on the tree.** 22 live skills are not in any bundle (a pre-existing gap). Building only from bundles would hide them, so the tree adds a "standalone skills" branch.
+15. **Em dashes in generated exports.** The Obsidian export template in `scripts/build-exports.mjs` had one em dash, which every generated Obsidian file carried, including the 13 new ones. Fixed at the source, which regenerates all 1,247 Obsidian exports; the diff there is mechanical.
+16. **Pre-existing fixes found on the way.** Two README install commands named the marketplace `pm-skills` (it is `pm-claude-skills`); fixed. Text descriptions copied into the tech tree have em dashes replaced with commas at build time; the source skills are unchanged.
+17. **China work in this release.** The ten China skills and ModelScope and Gitee work merged to main after v81.0.0 were never released, so RELEASE_NOTES.md and the CHANGELOG entry for 81.1.0 cover them as well.
 
-## Verification log
+## Verification log (Step 5)
 
-Filled in after Step 5.
+| Check | Result |
+|---|---|
+| Every tracked JSON file parses | 280 of 280 |
+| Both SKILL.md copies byte-identical (and references/) | 13 of 13 (`diff -rq`) |
+| SKILL.md under 300 lines | 13 of 13 (64 to 84 lines) |
+| Description starts with "Use when asked to" | 13 of 13 |
+| Three or more trigger phrases | 13 of 13 (four each) |
+| Example file per skill | 13 of 13 |
+| Skill count in README and marketplace.json equals live folders in `skills/` | 1,235 = 1,235 (1,247 folders, of which 12 are deprecated aliases kept so old names resolve) |
+| Bundle count | 142 in marketplace.json and README |
+| Tech tree builds | 143 branches, 1,235 researched, 3 in research, 5 proposed |
+| Tech tree in a headless browser (Chromium, desktop 1280 px and phone 390 px in dark mode) | Renders 1,256 nodes; search, side panel, copy button, state filters, zoom and drag-pan work; no horizontal scroll; no console errors |
+| Viewer template, headless | Demo model and a real GLB (Khronos Duck) load; select, exploded view and quiz work; no console errors |
+| MCP server template | Lists, searches and reads; refuses `..`, outward symlinks, other file types and unknown tools; no write or network code |
+| Demo data generator | Same seed gives byte-identical files; consistency checks pass |
+| Em dashes in files added on this branch | 0 |
+| Repo gates | skillcheck, skill-dupes, drift, exports, workflows, exports-lint, i18n parity, eval coverage (340), vendor neutrality, a11y, web weight, design tokens, skill releases, announcement, skill audit, check:jev: all pass |
+
+Problems found and fixed during verification: a spread bug that broke part selection in the viewer; a dark-mode button with 2:1 contrast; the side panel covering the zoom controls; search results in tree order rather than by relevance; three tech-tree colour pairs under 4.5:1; skill-count drift from multi-bundle skills; five descriptions without the word "Produces" that skillcheck expects.
