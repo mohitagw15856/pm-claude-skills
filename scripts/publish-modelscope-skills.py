@@ -67,11 +67,32 @@ def build(name, path):
             "description": desc[:500], "category": cat}
 
 
-def curl(args, token):
+def curl(args, token, tries=6):
+    """Calls the API, backing off on HTTP 429 (rate limit): 15s, 30s, 45s..."""
     cmd = ["curl", "-sS", "-w", "\n%{http_code}", "-H", f"Authorization: Bearer {token}"] + args
-    out = subprocess.run(cmd, capture_output=True, text=True, timeout=120).stdout
-    body, _, code = out.rpartition("\n")
-    return int(code or 0), body
+    for attempt in range(1, tries + 1):
+        out = subprocess.run(cmd, capture_output=True, text=True, timeout=120).stdout
+        body, _, code = out.rpartition("\n")
+        if code != "429":
+            return int(code or 0), body
+        time.sleep(15 * attempt)
+    return 429, body
+
+
+def existing(api, owner, token):
+    """Names the owner already has on Skills Central, from the search API."""
+    names, page = set(), 1
+    while page <= 20:
+        code, body = curl([f"{api}/skills?filter.owner={owner}&page_size=100&page_number={page}"], token)
+        try:
+            skills = json.loads(body)["data"]["skills"]
+        except (ValueError, KeyError, TypeError):
+            break
+        names |= {str(x.get("id", "")).split("/")[-1] for x in skills}
+        if len(skills) < 100:
+            break
+        page += 1
+    return names
 
 
 def main():
@@ -95,9 +116,10 @@ def main():
     if not token:
         sys.exit("MODELSCOPE_TOKEN is not set")
     created = skipped = failed = 0
+    have = existing(api, owner, token)
+    print(f"{len(have)} already on Skills Central")
     for name, path in items:
-        code, _ = curl([f"{api}/skills/@{owner}/{name}"], token)
-        if code == 200:
+        if name in have:
             skipped += 1
             continue
         if args.limit and created >= args.limit:
@@ -121,10 +143,13 @@ def main():
         if code in (200, 201):
             created += 1
             print(f"  ✓ @{owner}/{name}")
+        elif code == 409:
+            skipped += 1
+            print(f"  = {name}: already exists")
         else:
             failed += 1
             print(f"  ✗ {name}: create failed (HTTP {code}): {body[:200]}")
-        time.sleep(1)
+        time.sleep(6)  # stay under the API's rate limit
     print(f"created {created}, already there {skipped}, failed {failed}")
     return 1 if failed and not created else 0
 
