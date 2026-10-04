@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 170" width="640" height="170" role="img" aria-label="译者榜 Translators: @mohitagw15856 122" font-family="-apple-system,'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',Segoe UI,Roboto,sans-serif">
+  <rect width="640" height="170" rx="14" fill="#ffffff"/>
+  <rect x="0.5" y="0.5" width="639" height="169" rx="14" fill="none" stroke="#e6e8ec"/>
+  <text x="32" y="40" font-size="20" font-weight="800" fill="#1a1d23">译者榜 · Translators</text>
+  <text x="32" y="64" font-size="13" fill="#5b6672">简体 73 · 繁體 27 个技能已翻译，还有 1182 个等你认领</text>
+  <text x="608" y="40" text-anchor="end" font-size="13" font-weight="700" fill="#d97757">good first translation</text>
+  <text x="32" y="113" font-size="14" font-weight="700" fill="#8a909a">1</text><text x="60" y="113" font-size="14" fill="#1a1d23">@mohitagw15856</text><rect x="250" y="100" width="300" height="16" rx="4" fill="#d97757" opacity="1.00"/><text x="558" y="113" font-size="13" fill="#5b6672">122</text>
+  <text x="32" y="152" font-size="11" fill="#b0b5bd">github.com/mohitagw15856/pm-claude-skills · 认领：docs/zh/translation-board.md</text>
+</svg>

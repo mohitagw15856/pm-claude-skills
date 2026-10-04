@@ -1,0 +1,8 @@
+{
+  "_comment": "Dated events drawn as dashed lines on the self-hosted star-history chart (scripts/build-star-history.mjs). Keep labels short; dates are UTC days.",
+  "events": [
+    { "date": "2026-01-29", "label": "v1.0 first release" },
+    { "date": "2026-07-14", "label": "v50" },
+    { "date": "2026-10-04", "label": "v81 China launch" }
+  ]
+}

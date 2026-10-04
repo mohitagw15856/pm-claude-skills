@@ -1,0 +1,8 @@
+{
+  "_comment": "Maps git author names to a GitHub handle for the translators' leaderboard (scripts/translation-board.mjs). Authors who commit with a GitHub noreply address are matched automatically. Add yourself here if you committed under another name.",
+  "aliases": {
+    "Mohit": "mohitagw15856",
+    "Mohit Aggarwal": "mohitagw15856",
+    "mohitagw15856": "mohitagw15856"
+  }
+}

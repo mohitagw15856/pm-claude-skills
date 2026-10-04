@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>校园技术分享会</title>
+<meta name="description" content="45 分钟技术分享会幻灯片：用 Agent Skills 让 AI 像资深同事一样完成课程作业、毕业设计和求职准备。PM Skills 开源技能库校园大使资料。">
+<style>
+:root {
+  --bg: #f7f5f0;
+  --surface: #ffffff;
+  --ink: #1d1b18;
+  --muted: #5c5650;
+  --line: #e4ded4;
+  --brand: #b9532f;
+  --brand-soft: #f6e3da;
+  --ok: #2f7d4f;
+  --code-bg: #f0ece4;
+  --shadow: 0 1px 2px rgba(0,0,0,.05), 0 8px 24px rgba(0,0,0,.06);
+  --font: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC", "Segoe UI", sans-serif;
+  --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15130f; --surface: #1f1c17; --ink: #f2ede4; --muted: #b3aa9c; --line: #38322a;
+    --brand: #f0936b; --brand-soft: #3a2519; --ok: #6fcf97; --code-bg: #2a251e;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15130f; --surface: #1f1c17; --ink: #f2ede4; --muted: #b3aa9c; --line: #38322a;
+  --brand: #f0936b; --brand-soft: #3a2519; --ok: #6fcf97; --code-bg: #2a251e;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+.skip { position: absolute; left: -999px; top: 8px; background: var(--surface); color: var(--ink); padding: 8px 12px; border-radius: 8px; z-index: 10; }
+.skip:focus { left: 16px; }
+main { height: 100%; display: grid; place-items: center; padding: 16px 16px 72px; }
+.slide { width: min(1080px, 100%); aspect-ratio: 16 / 9; max-height: calc(100vh - 96px); background: var(--surface); border: 1px solid var(--line); border-radius: 20px; box-shadow: var(--shadow); padding: clamp(20px, 5vw, 64px); display: flex; flex-direction: column; justify-content: center; gap: clamp(8px, 1.6vw, 20px); overflow: auto; }
+.slide[hidden] { display: none; }
+.kicker { color: var(--brand); font-weight: 700; letter-spacing: .08em; font-size: clamp(12px, 1.3vw, 15px); margin: 0; }
+h1 { font-size: clamp(28px, 5vw, 60px); line-height: 1.15; margin: 0; letter-spacing: -.01em; }
+h2 { font-size: clamp(22px, 3.4vw, 42px); line-height: 1.2; margin: 0; }
+p, li { font-size: clamp(15px, 1.9vw, 24px); margin: 0; }
+.lead { color: var(--muted); font-size: clamp(16px, 2.1vw, 26px); }
+ul, ol { margin: 0; padding-left: 1.2em; display: grid; gap: .35em; }
+.big { font-size: clamp(40px, 8vw, 104px); font-weight: 800; color: var(--brand); line-height: 1; margin: 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: clamp(8px, 1.4vw, 16px); }
+.card { border: 1px solid var(--line); border-radius: 14px; padding: clamp(10px, 1.6vw, 18px); background: var(--bg); }
+.card b { display: block; font-size: clamp(14px, 1.7vw, 20px); }
+.card code { font-size: clamp(12px, 1.3vw, 15px); color: var(--brand); }
+.card span { display: block; color: var(--muted); font-size: clamp(12px, 1.4vw, 16px); }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(10px, 2vw, 24px); }
+@media (max-width: 640px) { .two { grid-template-columns: 1fr; } .slide { aspect-ratio: auto; max-height: none; min-height: calc(100vh - 96px); } }
+.bad { border-left: 4px solid var(--muted); }
+.good { border-left: 4px solid var(--ok); }
+pre { margin: 0; background: var(--code-bg); border-radius: 12px; padding: clamp(10px, 1.6vw, 18px); overflow-x: auto; font-family: var(--mono); font-size: clamp(12px, 1.45vw, 18px); line-height: 1.55; white-space: pre-wrap; word-break: break-word; }
+code { font-family: var(--mono); }
+.tag { display: inline-block; background: var(--brand-soft); color: var(--brand); border-radius: 999px; padding: 2px 12px; font-size: clamp(12px, 1.4vw, 16px); font-weight: 700; }
+.notes { display: none; }
+body.show-notes .notes { display: block; border-top: 1px dashed var(--line); padding-top: 10px; color: var(--muted); font-size: clamp(13px, 1.4vw, 16px); }
+nav.bar { position: fixed; left: 0; right: 0; bottom: 0; height: 56px; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 0 16px; background: var(--bg); border-top: 1px solid var(--line); }
+nav.bar button { font: inherit; font-size: 15px; min-width: 44px; min-height: 40px; border-radius: 10px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; padding: 0 12px; }
+nav.bar button:hover { border-color: var(--brand); }
+nav.bar button:focus-visible, a:focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
+#count { min-width: 64px; text-align: center; color: var(--muted); font-variant-numeric: tabular-nums; }
+.progress { position: fixed; left: 0; top: 0; height: 4px; background: var(--brand); transition: width .2s ease; }
+a { color: var(--brand); }
+@media (prefers-reduced-motion: reduce) { .progress { transition: none; } }
+@media print {
+  nav.bar, .progress, .skip { display: none; }
+  main { display: block; padding: 0; }
+  .slide, .slide[hidden] { display: flex; page-break-after: always; box-shadow: none; max-height: none; margin: 0 auto 12px; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#deck">跳到幻灯片</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<main id="deck" aria-roledescription="幻灯片" tabindex="-1">
+
+<section class="slide" aria-label="第 1 页">
+  <p class="kicker">技术分享会 · 45 分钟</p>
+  <h1>让 AI 像资深同事一样干活</h1>
+  <p class="lead">Agent Skills 与开源技能库 PM Skills：课程作业、毕业设计、实习求职都用得上</p>
+  <p><span class="tag">1,255 个技能</span> <span class="tag">MIT 协议</span> <span class="tag">国内网络可安装</span></p>
+  <aside class="notes">0:00 开场。自我介绍一句话，然后问全场：上周有多少人让 AI 帮忙写过东西？有多少人对结果满意？</aside>
+</section>
+
+<section class="slide" aria-label="第 2 页" hidden>
+  <h2>今天的 45 分钟</h2>
+  <ol>
+    <li>为什么同一个 AI，有人用得好，有人用不好（8 分钟）</li>
+    <li>Agent Skill 是什么，怎么工作（7 分钟）</li>
+    <li>现场演示：周报、开题报告、校招（12 分钟）</li>
+    <li>安装和学术诚信（6 分钟）</li>
+    <li>写你自己的技能，参与开源（7 分钟）</li>
+    <li>问答（5 分钟）</li>
+  </ol>
+  <aside class="notes">0:01 只念标题，不展开。告诉大家最后有问答和资料链接，不用拍照。</aside>
+</section>
+
+<section class="slide" aria-label="第 3 页" hidden>
+  <p class="kicker">问题</p>
+  <h2>直接说"帮我写周报"会怎样？</h2>
+  <div class="two">
+    <div class="card bad"><b>常见结果</b><span>一份流水账：周一开会，周二改需求，周三对接……没有数字，没有风险，没有下周计划。</span></div>
+    <div class="card good"><b>上级想看的</b><span>本周完成（带数据）· 关键数据 · 问题与风险 · 下周计划 · 需要的支持，外加一句能发群里的摘要。</span></div>
+  </div>
+  <p class="lead">差别不在模型，在于有没有告诉它"这件事应该怎么做"。</p>
+  <aside class="notes">0:03 让一位同学念左边，大家会笑。强调：模型知道很多，但不知道你们学院、你们公司对"好"的标准。</aside>
+</section>
+
+<section class="slide" aria-label="第 4 页" hidden>
+  <p class="kicker">定义</p>
+  <h2>Agent Skill = 把"怎么做"写成一份 Markdown</h2>
+  <ul>
+    <li><b>什么时候用</b>：触发语，比如"帮我写周报""写开题报告"</li>
+    <li><b>需要什么输入</b>：缺了就先问你，不瞎编</li>
+    <li><b>按什么方法做</b>：资深的人才知道的判断</li>
+    <li><b>产出什么格式</b>：交付物长什么样</li>
+    <li><b>交付前检查什么</b>：可以逐条判断的质量标准</li>
+  </ul>
+  <aside class="notes">0:08 类比：技能就像实验室里师兄写给新生的操作手册。手册不会让你变聪明，但会让你少犯新手错误。</aside>
+</section>
+
+<section class="slide" aria-label="第 5 页" hidden>
+  <p class="kicker">长这样</p>
+  <h2>一个技能文件</h2>
+<pre><code>---
+name: cn-weekly-report
+description: "Write a Chinese workplace weekly report (周报)...
+  Use when asked 帮我写周报, 写月报, 整理本周工作..."
+---
+# 中文周报
+## 所需输入      本周笔记、目标或 OKR、上周计划、读者
+## 框架          本周完成 / 关键数据 / 问题与风险 / 下周计划 / 需要的支持
+## 质量检查      每条成果有数字？风险有应对？计划有日期？</code></pre>
+  <aside class="notes">0:10 打开仓库里的 skills/cn-weekly-report/SKILL.md 给大家看真实文件，再打开 skills-i18n/zh 下的中文翻译。</aside>
+</section>
+
+<section class="slide" aria-label="第 6 页" hidden>
+  <p class="kicker">按需加载</p>
+  <p class="big">1,255</p>
+  <h2>个技能放在本地，为什么不拖慢对话？</h2>
+  <p class="lead">AI 平时只看每个技能的一句描述。只有你的请求和描述匹配时，才读取整份技能。装得多，不等于每次都读得多。</p>
+  <aside class="notes">0:13 这是听众最常问的问题，提前回答。可以顺带提：支持 Trae、通义灵码、CodeBuddy、Qoder、Cursor、Claude Code 等工具。</aside>
+</section>
+
+<section class="slide" aria-label="第 7 页" hidden>
+  <p class="kicker">演示 1 · 4 分钟</p>
+  <h2>周报：<code>cn-weekly-report</code></h2>
+  <div class="two">
+    <div class="card"><b>输入（随手记的笔记）</b><span>改了登录页文案；跟进 3 个用户访谈；数据看板还差留存那块；下周要答辩</span></div>
+    <div class="card good"><b>输出</b><span>五段式周报，风险"留存数据未就绪，可能影响答辩"放在最上面，下周计划带日期</span></div>
+  </div>
+  <p class="lead">同一个模型，加不加技能，对比给大家看。</p>
+  <aside class="notes">0:15 先不装技能问一次，再装技能问一次，并排展示。用你自己的真实笔记效果最好（去掉敏感信息）。</aside>
+</section>
+
+<section class="slide" aria-label="第 8 页" hidden>
+  <p class="kicker">演示 2 · 4 分钟</p>
+  <h2>开题报告：<code>cn-thesis-proposal</code></h2>
+  <ul>
+    <li>按国内高校常用的顺序：选题背景与意义、国内外研究现状、研究内容、技术路线、创新点、进度安排</li>
+    <li>参考文献格式交给 <code>cn-citation-gbt7714</code>（GB/T 7714）</li>
+    <li>答辩前用 <code>the-thesis-defense</code> 模拟评委追问</li>
+  </ul>
+  <aside class="notes">0:19 现场输入一个虚构题目，例如"基于用户评论的校园外卖满意度分析"。重点展示它会先问缺失的信息，而不是直接编。</aside>
+</section>
+
+<section class="slide" aria-label="第 9 页" hidden>
+  <p class="kicker">演示 3 · 4 分钟</p>
+  <h2>校招：<code>cn-campus-recruitment</code></h2>
+  <ul>
+    <li>秋招、春招时间线，目标公司清单，实习转正</li>
+    <li>没有工作经历的简历：<code>graduate-cv</code> 把课程项目、社团、兼职写成证据</li>
+    <li>投递前用 <code>cv-honesty-check</code> 检查经不起追问的说法</li>
+    <li>技术岗面试：<code>cn-tech-interview-drill</code> 模拟一面二面</li>
+  </ul>
+  <aside class="notes">0:23 这一页最受欢迎，可以多留一分钟。提醒：简历里的每一句都要能在面试中讲清楚。</aside>
+</section>
+
+<section class="slide" aria-label="第 10 页" hidden>
+  <h2>学生最常用的技能</h2>
+  <div class="grid">
+    <div class="card"><code>study-notes-synthesizer</code><span>笔记和课件整理成复习提纲</span></div>
+    <div class="card"><code>exam-study-plan</code><span>倒排复习计划</span></div>
+    <div class="card"><code>literature-review-builder</code><span>有观点的文献综述</span></div>
+    <div class="card"><code>thesis-outline</code><span>论文大纲，论证先行</span></div>
+    <div class="card"><code>code-explainer</code><span>看懂陌生代码</span></div>
+    <div class="card"><code>survey-design-basics</code><span>不带诱导的问卷</span></div>
+    <div class="card"><code>cn-kaoyan-planner</code><span>考研规划</span></div>
+    <div class="card"><code>bilingual-cv-zh-en</code><span>中英文简历</span></div>
+    <div class="card"><code>offer-comparison</code><span>多个 offer 怎么选</span></div>
+  </div>
+  <aside class="notes">0:27 不用逐个讲。告诉大家完整清单在校园资料包的"使用场景"文档里。</aside>
+</section>
+
+<section class="slide" aria-label="第 11 页" hidden>
+  <p class="kicker">安装 · 全部走国内网络</p>
+  <h2>一行命令</h2>
+<pre><code># 以 Trae 为例，也可以换成 lingma、codebuddy、qoder、cursor、claude
+npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae
+
+# 不知道用哪个技能？
+npx --registry=https://registry.npmmirror.com pm-claude-skills find "写开题报告"</code></pre>
+  <p class="lead">源码镜像：gitee.com/mohitagw/pm-claude-skills</p>
+  <aside class="notes">0:28 现场跑一次安装。如果会场网络不稳，提前录屏备用。</aside>
+</section>
+
+<section class="slide" aria-label="第 12 页" hidden>
+  <h2>没有编程工具也能试</h2>
+  <ul>
+    <li><b>在线试用</b>：魔搭创空间 PM Skills Playground，用你自己的模型 Key</li>
+    <li><b>免费模型</b>：魔搭 ModelScope API-Inference 有免费额度，DeepSeek、通义千问都能用</li>
+    <li><b>群聊机器人</b>：社团可以把它接进飞书或钉钉群，@ 一下就能用</li>
+  </ul>
+  <aside class="notes">0:31 提醒：在线工具会把你输入的内容发给模型服务商，个人信息和未发表的研究数据要谨慎。</aside>
+</section>
+
+<section class="slide" aria-label="第 13 页" hidden>
+  <p class="kicker">学术诚信</p>
+  <h2>AI 能帮你什么，不能替你做什么</h2>
+  <div class="two">
+    <div class="card good"><b>可以</b><span>理清结构、检查逻辑、整理笔记、找出你没想到的追问、检查引用格式、模拟面试</span></div>
+    <div class="card bad"><b>不可以</b><span>把 AI 写的内容当作自己的作业或论文提交；编造数据和参考文献；违反课程和学校关于 AI 使用的规定</span></div>
+  </div>
+  <p class="lead">先看清楚你的课程和学校怎么规定。不确定时，问老师，并在作业里说明你怎么用了 AI。</p>
+  <aside class="notes">0:34 这一页一定要讲，语气认真。技能里的质量检查也会要求"不出现用户没有提供的数字"，但最终责任在自己。</aside>
+</section>
+
+<section class="slide" aria-label="第 14 页" hidden>
+  <p class="kicker">动手</p>
+  <h2>写你自己的第一个技能：5 步</h2>
+  <ol>
+    <li>选一件你每周都做、好坏标准明确的事</li>
+    <li>写下老手的 3 到 6 个步骤，和新手最常犯的 3 个错误</li>
+    <li>新建 <code>skills/&lt;技能名&gt;/SKILL.md</code>，填好描述和触发语</li>
+    <li>交给同学：只看技能文件，不问你，看结果是否达标</li>
+    <li>跑结构检查：<code>node scripts/skillcheck.mjs</code></li>
+  </ol>
+  <aside class="notes">0:36 可以提到 make-me-a-skill 和 writing-great-skills 这两个技能，它们会帮你写技能。详细步骤在开源小课第四、五课。</aside>
+</section>
+
+<section class="slide" aria-label="第 15 页" hidden>
+  <h2>好技能的三个检验</h2>
+  <ul>
+    <li>质量检查能不能逐条判断通过与否？"写得清楚"不能，"每个行动项都有负责人和日期"能</li>
+    <li>方法里有没有只有老手才知道的判断？没有的话，它只是一个模板</li>
+    <li>会不会编造事实？加上"没有出现用户未提供的数字"</li>
+  </ul>
+  <aside class="notes">0:39 这三条来自开源小课第五课。</aside>
+</section>
+
+<section class="slide" aria-label="第 16 页" hidden>
+  <p class="kicker">参与开源</p>
+  <h2>三种方式，从最简单的开始</h2>
+  <div class="grid">
+    <div class="card"><b>翻译认领</b><span>翻译认领板上挑一个技能翻成中文，标有 good first translation</span></div>
+    <div class="card"><b>提交技能</b><span>GitHub 提 PR；用不了 GitHub 就贴在 Gitee Issue 里</span></div>
+    <div class="card"><b>反馈问题</b><span>某个技能不符合国内情况？用中文提 Issue</span></div>
+  </div>
+  <p class="lead">合并后名字会出现在译者榜和贡献者墙上，写进简历的开源经历是真的。</p>
+  <aside class="notes">0:40 打开 docs/zh/translation-board.md 给大家看 P0 列表。</aside>
+</section>
+
+<section class="slide" aria-label="第 17 页" hidden>
+  <p class="kicker">校园大使</p>
+  <h2>想在你的学校办一场？</h2>
+  <ul>
+    <li>办一场分享会或两小时工作坊，资料现成：幻灯片、工作坊流程、海报说明</li>
+    <li>带社团同学完成第一次开源贡献</li>
+    <li>把同学的反馈带回来，影响下一批技能</li>
+  </ul>
+  <p class="lead">申请：GitHub 或 Gitee 上开一个"校园大使申请"Issue</p>
+  <aside class="notes">0:42 说明大使是志愿性质，不涉及报酬，主要收获是组织经验和开源贡献记录。</aside>
+</section>
+
+<section class="slide" aria-label="第 18 页" hidden>
+  <h2>问答</h2>
+  <div class="grid">
+    <div class="card"><b>技能库</b><span>github.com/mohitagw15856/pm-claude-skills</span></div>
+    <div class="card"><b>国内镜像</b><span>gitee.com/mohitagw/pm-claude-skills</span></div>
+    <div class="card"><b>开源小课</b><span>docs/learn-zh</span></div>
+    <div class="card"><b>校园资料包</b><span>docs/campus</span></div>
+  </div>
+  <p class="lead">谢谢大家。</p>
+  <aside class="notes">0:43 预留问题：要不要付费？（技能库免费，模型调用看你用哪家）会不会泄露隐私？（看第 12 页）能不能用于毕业论文？（看第 13 页）</aside>
+</section>
+
+</main>
+<nav class="bar" aria-label="幻灯片导航">
+  <button type="button" id="prev" aria-label="上一页">←</button>
+  <span id="count" aria-live="polite">1 / 18</span>
+  <button type="button" id="next" aria-label="下一页">→</button>
+  <button type="button" id="notes" aria-pressed="false">讲者备注</button>
+  <button type="button" id="theme" aria-label="切换深色或浅色">◐</button>
+</nav>
+<script>
+(function () {
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var count = document.getElementById('count');
+  var bar = document.getElementById('progress');
+  var i = 0;
+  function show(n) {
+    i = Math.max(0, Math.min(slides.length - 1, n));
+    slides.forEach(function (s, k) { s.hidden = k !== i; });
+    count.textContent = (i + 1) + ' / ' + slides.length;
+    bar.style.width = ((i + 1) / slides.length * 100) + '%';
+    if (location.hash !== '#' + (i + 1)) history.replaceState(null, '', '#' + (i + 1));
+  }
+  function fromHash() { var n = parseInt(location.hash.slice(1), 10); return isNaN(n) ? 0 : n - 1; }
+  document.getElementById('prev').addEventListener('click', function () { show(i - 1); });
+  document.getElementById('next').addEventListener('click', function () { show(i + 1); });
+  var notesBtn = document.getElementById('notes');
+  notesBtn.addEventListener('click', function () {
+    var on = document.body.classList.toggle('show-notes');
+    notesBtn.setAttribute('aria-pressed', String(on));
+  });
+  document.getElementById('theme').addEventListener('click', function () {
+    var root = document.documentElement;
+    var dark = root.getAttribute('data-theme') ? root.getAttribute('data-theme') === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    root.setAttribute('data-theme', dark ? 'light' : 'dark');
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    var tag = (e.target && e.target.tagName) || '';
+    if (tag === 'BUTTON' && (e.key === ' ' || e.key === 'Enter')) return;
+    if (['ArrowRight', 'PageDown', ' ', 'ArrowDown'].indexOf(e.key) >= 0) { e.preventDefault(); show(i + 1); }
+    else if (['ArrowLeft', 'PageUp', 'ArrowUp'].indexOf(e.key) >= 0) { e.preventDefault(); show(i - 1); }
+    else if (e.key === 'Home') { e.preventDefault(); show(0); }
+    else if (e.key === 'End') { e.preventDefault(); show(slides.length - 1); }
+    else if (e.key === 'n' || e.key === 'N') { notesBtn.click(); }
+  });
+  var x0 = null;
+  document.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', function (e) {
+    if (x0 === null) return;
+    var dx = e.changedTouches[0].clientX - x0; x0 = null;
+    if (Math.abs(dx) > 50) show(i + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+  window.addEventListener('hashchange', function () { show(fromHash()); });
+  show(fromHash());
+})();
+</script>
+</body>
+</html>
