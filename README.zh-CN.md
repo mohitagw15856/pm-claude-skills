@@ -1,5 +1,19 @@
 # PM Skills：1250 个专业 Agent Skills，用中文提问就能用
 
+<p align="center">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/live/season.html">
+    <img alt="今日节气与节日横幅，每天更新" src="https://mohitagw15856.github.io/pm-claude-skills/live/season.svg" width="860">
+  </a>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/constellation-zh.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/constellation-zh-light.svg">
+    <img alt="PM Skills：技能名称像星星一样聚拢，连成 PM Skills 字样" src="docs/readme-assets/constellation-zh-light.svg" width="860">
+  </picture>
+</p>
+
 > **一句话上手** &nbsp; 安装：`npx --registry=https://registry.npmmirror.com pm-claude-skills add`（走国内镜像，任何工具都能用）· Claude Code 里输入 `/plugin` 搜索 **pm-skills**
 > 然后直接说你要什么：*"帮我把这些笔记整理成周报。"*
 
@@ -13,6 +27,14 @@
   <a href="https://www.modelscope.ai/studios/mohitagw15856/pm-skills-playground"><img src="https://img.shields.io/badge/魔搭-在线试用-624aff" alt="魔搭在线试用"></a>
   <a href="https://www.npmjs.com/package/pm-claude-skills"><img src="https://img.shields.io/npm/v/pm-claude-skills?logo=npm&color=cb3837" alt="npm"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/协议-MIT-lightgrey" alt="MIT"></a>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/stats-zh.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/stats-zh-light.svg">
+    <img alt="实时数据：技能数、技能包数、GitHub 星标、npm 周下载量和译文数，每天更新" src="https://mohitagw15856.github.io/pm-claude-skills/live/stats-zh-light.svg" width="860">
+  </picture>
 </p>
 
 > **公司要裁员，你不知道该拿多少补偿；明天要开需求评审，PRD 还缺一半；下个月公务员面试，没人陪你练。**
@@ -132,7 +154,25 @@ flowchart TD
 
 MIT 开源协议，永久免费。没有运行时，没有遥测，不需要账号。
 
+<p align="center">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/live/skill-of-the-day-zh.html">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/skill-of-the-day-zh.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/skill-of-the-day-zh-light.svg">
+      <img alt="今日技能：每天推荐一个有中文译文的技能，并附一句可以直接说的话" src="https://mohitagw15856.github.io/pm-claude-skills/live/skill-of-the-day-zh-light.svg" width="860">
+    </picture>
+  </a>
+</p>
+
 ## 安装（全部走国内网络）
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/terminal-zh.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/terminal-zh-light.svg">
+    <img alt="终端演示：用 npmmirror 安装技能，然后三个中文请求各自加载一个技能并给出成品" src="docs/readme-assets/terminal-zh-light.svg" width="860">
+  </picture>
+</p>
 
 ```bash
 # Trae（也可以换成 qoder、lingma 通义灵码、codebuddy、claude）
@@ -150,6 +190,14 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
 | 找到合适的技能 | [魔搭路由模型](https://www.modelscope.ai/models/mohitagw15856/pm-skills-router)，或 `npx pm-claude-skills find "写周报"` |
 | 训练数据 | [魔搭数据集](https://www.modelscope.ai/datasets/mohitagw15856/pm-skills-instruct) |
 | 在 Cherry Studio、Dify、FastGPT、MaxKB 里用 | 见 [在中国使用](docs/CHINA.md) |
+
+<p>
+  <a href="https://gitee.com/mohitagw/pm-claude-skills"><img alt="Gitee 镜像状态" src="https://mohitagw15856.github.io/pm-claude-skills/live/cn-status-gitee.svg"></a>
+  <a href="https://npmmirror.com/package/pm-claude-skills"><img alt="npmmirror 状态" src="https://mohitagw15856.github.io/pm-claude-skills/live/cn-status-npmmirror.svg"></a>
+  <a href="https://www.modelscope.ai/studios/mohitagw15856/pm-skills-playground"><img alt="魔搭创空间状态" src="https://mohitagw15856.github.io/pm-claude-skills/live/cn-status-modelscope-studio.svg"></a>
+  <a href="https://www.modelscope.ai/datasets/mohitagw15856/pm-skills-instruct"><img alt="魔搭数据集状态" src="https://mohitagw15856.github.io/pm-claude-skills/live/cn-status-modelscope-dataset.svg"></a>
+</p>
+<sub>状态每天从 GitHub 服务器检测一次，✅ 表示在线，⚠️ 表示当天没有响应；不代表国内访问速度。</sub>
 
 ## 🏆 任务清单
 
@@ -240,6 +288,7 @@ npx pm-claude-skills skillcheck --dir ./my-skills
 
 </details>
 
+
 ## 中文技能包
 
 | 技能包 | 内容 | 试着说 |
@@ -254,6 +303,14 @@ npx pm-claude-skills skillcheck --dir ./my-skills
 | [**pm-cv**](plugins/pm-cv/) 简历 | 按目标公司定制简历、中英文简历、导出 Word | "帮我做一份中英文简历，要投外企。" |
 
 另外还有一千多个通用技能，覆盖产品、工程、数据、设计、市场、销售、人力、法律、财务等 35 个职业，见 [SKILLS.md](SKILLS.md)。[`skills-i18n/zh/`](skills-i18n/zh/) 有 73 个技能的简体中文版，[`skills-i18n/zh-TW/`](skills-i18n/zh-TW/) 有 27 个繁体中文版。
+
+考试倒计时：
+
+<p>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/skill/cn-gaokao-planner.html"><img alt="高考倒计时" src="https://mohitagw15856.github.io/pm-claude-skills/live/exam-gaokao.svg"></a>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/skill/cn-kaoyan-planner.html"><img alt="考研初试倒计时" src="https://mohitagw15856.github.io/pm-claude-skills/live/exam-kaoyan.svg"></a>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/skill/cn-civil-exam-essay.html"><img alt="国考笔试倒计时" src="https://mohitagw15856.github.io/pm-claude-skills/live/exam-guokao.svg"></a>
+</p>
 
 ## 看一看
 
@@ -270,7 +327,20 @@ npx pm-claude-skills skillcheck --dir ./my-skills
 </tr>
 </table>
 
+[🧧 拜年语生成器](https://mohitagw15856.github.io/pm-claude-skills/bainian.html)：选对象、选语气、选生肖年份，一键复制新春祝福。
+
+
 ## 质量
+
+<p align="center">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/modelbench.html">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/modelbench-zh.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/modelbench-zh-light.svg">
+      <img alt="中文模型技能增益榜：加载技能前后的得分" src="https://mohitagw15856.github.io/pm-claude-skills/live/modelbench-zh-light.svg" width="860">
+    </picture>
+  </a>
+</p>
 
 每个技能都经过结构检查（SkillSpec L3）、安全扫描和重复检测，并在 CI 中强制执行。涉及法律、税务、劳动的技能会给出明确的免责声明，并指向应当咨询的机构。
 
