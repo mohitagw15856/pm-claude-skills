@@ -1,0 +1,63 @@
+name: Translation board
+
+# 翻译认领板: turn the top of docs/zh/translation-board.md into claimable
+# "good first translation" issues. Manual only, and a dry run unless you untick
+# dry_run, so nothing is created by accident. Gitee issues are created too when
+# the gitee box is ticked and the GITEE_TOKEN secret is set.
+
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'How many issues to create (1 to 50)'
+        required: true
+        default: '10'
+      lang:
+        description: 'zh (Simplified) or zh-TW (Traditional)'
+        required: true
+        default: 'zh'
+        type: choice
+        options: ['zh', 'zh-TW']
+      dry_run:
+        description: 'Dry run: only print the issues it would create'
+        required: true
+        default: true
+        type: boolean
+      gitee:
+        description: 'Also create Gitee issues (needs the GITEE_TOKEN secret)'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: translation-board
+  cancel-in-progress: false
+
+jobs:
+  issues:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # the translators' leaderboard reads git log
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+
+      - name: Create (or preview) translation issues
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+          LIMIT: ${{ inputs.limit }}
+          LANG_CODE: ${{ inputs.lang }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          GITEE: ${{ inputs.gitee }}
+        run: |
+          args=(--create-issues --limit "$LIMIT" --lang "$LANG_CODE")
+          if [ "$DRY_RUN" != "true" ]; then args+=(--yes); fi
+          if [ "$GITEE" = "true" ]; then args+=(--gitee); fi
+          node scripts/translation-board.mjs "${args[@]}" | tee -a "$GITHUB_STEP_SUMMARY"

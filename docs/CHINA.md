@@ -147,10 +147,14 @@ Router.load(f"{path}/router.json").route("帮我写周报", k=3)
 
 - **本地模型**：用 Ollama、vLLM 或 LM Studio 在自己的机器上运行通义千问和 DeepSeek，从魔搭下载模型，完全离线使用技能，见 [本地模型部署指南](zh/local-models.md)。
 - **小红书分享卡**：选一个技能，生成 3:4 的封面图（1080×1440），有大字标题、清单、便利贴三种模板，带二维码，见 [分享卡生成器](https://mohitagw15856.github.io/pm-claude-skills/card.html)。
+- **群聊机器人**：在飞书、钉钉群里 @ 机器人，或在企业微信里给应用发消息，它会挑一个技能，用你配置的模型（DeepSeek、通义千问、智谱、魔搭免费推理或本地 Ollama）回答。Python 标准库实现，签名校验和消息解密齐全，见 [群聊机器人](../integrations/chat-bots/README.md)。
 
 ## 八、反馈
 
 欢迎用中文提 Issue，GitHub 和 [Gitee](https://gitee.com/mohitagw/pm-claude-skills/issues) 都可以。想学习怎么写自己的技能并贡献回来，见[开源小课](learn-zh/README.md)。如果某个技能在中国的场景下不准确，或者你希望增加哪些技能，请告诉我们。
+
+- **翻译认领**：[翻译认领板](zh/translation-board.md) 按对中文用户的用处排好了待翻译的技能，附译者榜。
+- **在学校推广**：[校园资料包](campus/README.md) 有 45 分钟分享会幻灯片、两小时社团工作坊、学生使用场景和[校园大使计划](campus/ambassadors.md)。
 
 ---
 

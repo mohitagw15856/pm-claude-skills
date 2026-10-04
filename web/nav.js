@@ -153,6 +153,7 @@
       ['listen.html', '🔊 听一听 (Mandarin demos)'],
       ['card.html', '📕 小红书分享卡 (share cards)'],
       ['bainian.html', '🧧 拜年语生成器'],
+      ['campus/talk.html', '🎓 校园分享会 (campus talk)'],
       ['museum.html', '🏛 Anti-Pattern Museum'],
       ['catalog.html', '📚 Catalog'],
       ['atlas.html', '🗺 The Atlas'],

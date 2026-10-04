@@ -9,7 +9,15 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+**1255 skills · 145 bundles** (from 1250 · 144 at v81.2.0).
+
 ### Added
+- **Skills**: `cn-jargon-translator` (互联网黑话翻译器) in pm-china-work; a new **pm-china-yearend** bundle (述职季) with `cn-shuzhi-deck`, `cn-year-end-bonus` and `cn-next-year-plan` alongside `cn-year-end-review`; `hk-cantonese-copy` (粵語文案) in pm-hk-tw.
+- **A README that does not overwhelm**: a TL;DR box, a "1,255 skills, you need 5" funnel, six Pick your path cards with start pages (`docs/start/`), a "What do you want to do today?" chart, a four-question quiz (`docs/quiz/`), a quest log with badges, and Nib the mascot.
+- **Live README images**, rebuilt daily on the site (`scripts/build-readme-live.mjs`): skill of the day, live stats, China channel status, 高考 / 考研 / 国考 countdowns, a daily banner for the 二十四节气 and 春节, 中秋, 国庆, 618 and 双11, and the Chinese model leaderboard. Animated terminal and constellation hero. A 拜年 greetings page.
+- **Captures**: before-and-after animations, search demos, a Skill City still and a tech-tree tour. `listen.html` reads Mandarin demos aloud. The skill finder now matches Chinese queries.
+- **For Chinese readers**: a calligraphy title, 打工人的一天, a supported-tools grid, a prompt wall, chat animations, a QR poster, a FAQ, and a full Traditional Chinese **README.zh-TW.md**.
+- **Repo tools**: Xiaohongshu share cards (`card.html`); a 21 MB intranet offline pack on the site and on Gitee releases, with install guides for 统信 UOS and 银河麒麟; a local-model guide (数据不出域); Feishu, DingTalk and WeCom group-chat bots (`integrations/chat-bots/`); a translation claim board and translators' leaderboard; a campus ambassador kit with a talk deck; a contributors wall and a self-hosted star chart with milestones.
 - **Free Chinese models**: the playground offers ModelScope (daily free quota) and Hugging Face (free monthly credits) for DeepSeek, Qwen, GLM, ERNIE, MiniMax and Kimi, each visitor with their own free token. The Chinese SkillBench runs on the same free routes (`modelscope:*`, `hf:*`) with the tokens the repo already has.
 
 ### Fixed
