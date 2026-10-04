@@ -1124,6 +1124,86 @@
   {
    "skill": "playwright-cli-pointer",
    "input": "Set me up to verify my signup page in a real browser at mobile and desktop widths with screenshots at each step. What do I install, and is there an audit I can run afterwards?"
+  },
+  {
+   "skill": "career-inventory",
+   "input": "I have an old CV from 2019 and I've had two jobs since. Interview me one role at a time and build my master career inventory. Don't make up numbers."
+  },
+  {
+   "skill": "company-tailored-cv",
+   "input": "Write my CV for the Senior Product Manager role at Monzo in London. Job ad: must have 5+ years PM in fintech, experience with payments, data-driven. Apply link is https://boards.greenhouse.io/monzo/jobs/123. My experience: 6 years PM, 3 at a payments startup where I cut checkout drop-off 18%."
+  },
+  {
+   "skill": "ats-detector",
+   "input": "Which applicant tracking system is this job using and how should I format my CV? https://acme.wd3.myworkdayjobs.com/en-US/careers/job/London/Product-Manager_R123"
+  },
+  {
+   "skill": "country-cv-format",
+   "input": "Convert my one-page US resume into a German Lebenslauf for a job in Munich. Should I add a photo and my date of birth?"
+  },
+  {
+   "skill": "values-mapped-cv",
+   "input": "Map my achievements to Amazon's leadership principles for a programme manager role. Achievements: shipped a supplier portal 6 weeks early, cut support tickets 30%, ran a team of 4."
+  },
+  {
+   "skill": "jd-gap-score",
+   "input": "Score my CV against this job description requirement by requirement and tell me if I should apply. Requirements: - 5 years SQL - Python - stakeholder management - Kubernetes. My CV: data analyst 4 years, SQL daily, built Python dashboards, presented monthly to directors."
+  },
+  {
+   "skill": "cv-docx-export",
+   "input": "Give me my finished CV as an ATS-safe Word file. It's for a job in Boston. Name: Jane Smith. Sections: Summary, Experience, Education, Skills."
+  },
+  {
+   "skill": "consulting-banking-cv",
+   "input": "I'm finishing my MBA and applying to McKinsey and BCG. Turn my two-page CV into the one-page consulting format."
+  },
+  {
+   "skill": "academic-cv",
+   "input": "Update my academic CV for a lectureship in the UK. I have 6 journal papers, 2 under review, one small grant as PI and two years of teaching."
+  },
+  {
+   "skill": "federal-resume",
+   "input": "Turn my private-sector resume into a federal resume for a GS-12 USAJOBS announcement. The specialised experience says: managing IT projects with budgets over $1M."
+  },
+  {
+   "skill": "civil-service-application",
+   "input": "Write my Success Profiles behaviour statement for Delivering at Pace at SEO level, 250 words maximum. My example: I rescued a late benefits system rollout by replanning it with the supplier."
+  },
+  {
+   "skill": "career-changer-cv",
+   "input": "I'm a secondary school teacher of 8 years moving into product management. My job titles don't match. Write my CV."
+  },
+  {
+   "skill": "graduate-cv",
+   "input": "Write my first CV for graduate schemes. I'm finishing a maths degree, worked part-time in a cafe for two years, and was treasurer of the hiking society."
+  },
+  {
+   "skill": "returner-cv",
+   "input": "I took two years off to care for my father and now want to return to marketing. How do I show the gap on my CV and what do I say in interviews?"
+  },
+  {
+   "skill": "executive-cv",
+   "input": "Write my executive CV for headhunters and a 150-word board bio. I'm a CFO, P&L of £300m, 400 people, led a refinancing and a sale of a division."
+  },
+  {
+   "skill": "bilingual-cv-zh-en",
+   "input": "帮我做一份中英文简历。我在上海一家互联网公司做了5年产品经理，本科复旦大学，要投外企。"
+  },
+  {
+   "skill": "recruiter-scan-simulator",
+   "input": "Read my CV like a busy in-house recruiter for a senior data analyst role. Would I get shortlisted? Then tell me what to change."
+  },
+  {
+   "skill": "cv-honesty-check",
+   "input": "Check my CV holds up before I send it. I wrote that I led the migration project but I was second in command, and the 40% cost saving is my estimate."
+  },
+  {
+   "skill": "referral-request",
+   "input": "Help me ask a former colleague who now works at Stripe for a referral to a product role. We worked together at Acme for two years."
+  },
+  {
+   "skill": "application-tracker",
+   "input": "Set up a tracker for my job search. I've applied to 6 companies with 3 different CV versions and I've lost track of who to follow up with."
   }
  ]
 }

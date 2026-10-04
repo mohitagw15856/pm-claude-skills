@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1188 skills exported. Copy a `.md rule` into the tool to use it.
+1208 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -11,6 +11,7 @@
 | 401k Plan Decoder | `pm-decoders` | `pm-decoders/401k-plan-decoder/401k-plan-decoder.md` |
 | A/B Test Planner | `pm-delivery` | `pm-delivery/ab-test-planner/ab-test-planner.md` |
 | A/B Test Readout | `pm-data` | `pm-data/ab-test-readout/ab-test-readout.md` |
+| Academic CV | `pm-cv` | `pm-cv/academic-cv/academic-cv.md` |
 | Accessibility Audit | `pm-design` | `pm-design/accessibility-audit/accessibility-audit.md` |
 | Accessible Travel Planner | `pm-accessibility` | `pm-accessibility/accessible-travel-planner/accessible-travel-planner.md` |
 | Accommodation Request | `pm-accessibility` | `pm-accessibility/accommodation-request/accommodation-request.md` |
@@ -61,6 +62,7 @@
 | API Versioning Strategy | `pm-engineering` | `pm-engineering/api-versioning-strategy/api-versioning-strategy.md` |
 | Apology Letter | `pm-crisis` | `pm-crisis/apology-letter/apology-letter.md` |
 | Appliance Buying Guide | `pm-lifeadmin` | `pm-lifeadmin/appliance-buying-guide/appliance-buying-guide.md` |
+| Application Tracker | `pm-cv` | `pm-cv/application-tracker/application-tracker.md` |
 | Apprentice First Week | `pm-trades` | `pm-trades/apprentice-first-week/apprentice-first-week.md` |
 | Architectural Programme Brief | `pm-architecture` | `pm-architecture/architectural-programme-brief/architectural-programme-brief.md` |
 | Architectural Specification Section | `pm-architecture` | `pm-architecture/architectural-specification/architectural-specification.md` |
@@ -77,6 +79,7 @@
 | Async Instead | `pm-cowork` | `pm-cowork/async-instead/async-instead.md` |
 | Async Standup Compiler (Live) | `pm-cowork-live` | `pm-cowork-live/async-standup-compiler/async-standup-compiler.md` |
 | Async Update Format | `pm-cowork` | `pm-cowork/async-update-format/async-update-format.md` |
+| ATS Detector | `pm-cv` | `pm-cv/ats-detector/ats-detector.md` |
 | Attention Reset | `pm-newgen` | `pm-newgen/attention-reset/attention-reset.md` |
 | Audited Boundary Check | `pm-investing-literacy` | `pm-investing-literacy/audited-boundary-check/audited-boundary-check.md` |
 | Auto Repair Estimate Decoder | `pm-decoders` | `pm-decoders/auto-repair-estimate-decoder/auto-repair-estimate-decoder.md` |
@@ -93,6 +96,7 @@
 | Bennett Time Audit | `pm-dead-mentors` | `pm-dead-mentors/bennett-time-audit/bennett-time-audit.md` |
 | Bid / Tender Review | `pm-construction` | `pm-construction/bid-tender-review/bid-tender-review.md` |
 | Big-Purchase Timing | `pm-money` | `pm-money/big-purchase-timing/big-purchase-timing.md` |
+| Bilingual CV, Chinese and English | `pm-cv` | `pm-cv/bilingual-cv-zh-en/bilingual-cv-zh-en.md` |
 | Birdwatching Log | `pm-hobbies` | `pm-hobbies/birdwatching-log/birdwatching-log.md` |
 | Blast Radius Drill | `pm-seatbelt` | `pm-seatbelt/blast-radius-drill/blast-radius-drill.md` |
 | Blended-Family Plan | `pm-family` | `pm-family/blended-family-plan/blended-family-plan.md` |
@@ -136,6 +140,8 @@
 | Care-Decision Family Meeting | `pm-caregiving` | `pm-caregiving/care-decision-family-meeting/care-decision-family-meeting.md` |
 | Care-Home Contract Decoder | `pm-decoders` | `pm-decoders/care-home-contract-decoder/care-home-contract-decoder.md` |
 | Care-Team Coordinator | `pm-caregiving` | `pm-caregiving/care-team-coordinator/care-team-coordinator.md` |
+| Career-Changer CV | `pm-cv` | `pm-cv/career-changer-cv/career-changer-cv.md` |
+| Career Inventory | `pm-cv` | `pm-cv/career-inventory/career-inventory.md` |
 | Career Ladder Map | `pm-career` | `pm-career/career-ladder-map/career-ladder-map.md` |
 | Career Pivot Plan | `pm-career` | `pm-career/career-pivot-plan/career-pivot-plan.md` |
 | Caregiver-Burnout Check | `pm-caregiving` | `pm-caregiving/caregiver-burnout-check/caregiver-burnout-check.md` |
@@ -161,6 +167,7 @@
 | Churn Analysis | `pm-cs` | `pm-cs/churn-analysis/churn-analysis.md` |
 | CI/CD Playbook | `pm-engineering` | `pm-engineering/cicd-playbook/cicd-playbook.md` |
 | Citation Hygiene | `pm-cowork` | `pm-cowork/citation-hygiene/citation-hygiene.md` |
+| Civil Service and NHS Application | `pm-cv` | `pm-cv/civil-service-application/civil-service-application.md` |
 | Claim Denial Decoder | `pm-decoders` | `pm-decoders/claim-denial-decoder/claim-denial-decoder.md` |
 | Claims Triage | `pm-insurance` | `pm-insurance/claims-triage/claims-triage.md` |
 | Class-Action Claim Finder | `pm-money` | `pm-money/class-action-claim-finder/class-action-claim-finder.md` |
@@ -200,6 +207,7 @@
 | Company Brief | `pm-jobsearch` | `pm-jobsearch/company-brief/company-brief.md` |
 | Company Compare, Same Definitions | `pm-investing-literacy` | `pm-investing-literacy/company-compare-same-definitions/company-compare-same-definitions.md` |
 | Company Event Ops | `pm-cowork` | `pm-cowork/company-event-ops/company-event-ops.md` |
+| Company-Tailored CV | `pm-cv` | `pm-cv/company-tailored-cv/company-tailored-cv.md` |
 | Comparative Market Analysis | `pm-realestate` | `pm-realestate/comparative-market-analysis/comparative-market-analysis.md` |
 | Competitive Analysis | `pm-essentials` | `pm-essentials/competitive-analysis/competitive-analysis.md` |
 | Competitive Intelligence Monitor | `pm-strategy` | `pm-strategy/competitive-intelligence-monitor/competitive-intelligence-monitor.md` |
@@ -214,6 +222,7 @@
 | Conference Talk Proposal | `pm-devrel` | `pm-devrel/conference-talk-proposal/conference-talk-proposal.md` |
 | Conflict De-escalation | `other` | `other/conflict-deescalation/conflict-deescalation.md` |
 | Construction RFI Response | `pm-architecture` | `pm-architecture/construction-rfi-response/construction-rfi-response.md` |
+| Consulting and Banking CV | `pm-cv` | `pm-cv/consulting-banking-cv/consulting-banking-cv.md` |
 | Consulting Proposal | `pm-consulting` | `pm-consulting/consulting-proposal/consulting-proposal.md` |
 | Content Calendar | `pm-gtm` | `pm-gtm/content-calendar/content-calendar.md` |
 | Content Repurposer | `pm-creator` | `pm-creator/content-repurposer/content-repurposer.md` |
@@ -234,6 +243,7 @@
 | Conversion Rate Optimization | `pm-growth` | `pm-growth/conversion-rate-optimization/conversion-rate-optimization.md` |
 | Couch-to-Goal Runner | `pm-wellbeing` | `pm-wellbeing/couch-to-goal-runner/couch-to-goal-runner.md` |
 | Counteroffer Decoder | `pm-resignation` | `pm-resignation/counteroffer-decoder/counteroffer-decoder.md` |
+| Country CV Format | `pm-cv` | `pm-cv/country-cv-format/country-cv-format.md` |
 | Cover Letter | `pm-personal` | `pm-personal/cover-letter/cover-letter.md` |
 | Coverage Gap Analysis | `pm-insurance` | `pm-insurance/coverage-gap-analysis/coverage-gap-analysis.md` |
 | Creator Brand Kit | `pm-creator` | `pm-creator/creator-brand-kit/creator-brand-kit.md` |
@@ -253,6 +263,8 @@
 | Customer Journey Map | `pm-discovery` | `pm-discovery/customer-journey-map/customer-journey-map.md` |
 | Customer Outage Notice | `pm-crisis` | `pm-crisis/customer-outage-notice/customer-outage-notice.md` |
 | Customer Success Plan | `pm-cs` | `pm-cs/customer-success-plan/customer-success-plan.md` |
+| CV Word Export | `pm-cv` | `pm-cv/cv-docx-export/cv-docx-export.md` |
+| CV Honesty Check | `pm-cv` | `pm-cv/cv-honesty-check/cv-honesty-check.md` |
 | Dashboard Brief | `pm-data` | `pm-data/dashboard-brief/dashboard-brief.md` |
 | Data Analysis Standard | `pm-analytics` | `pm-analytics/data-analysis-standard/data-analysis-standard.md` |
 | Data Breach Response | `pm-scam-defense` | `pm-scam-defense/data-breach-response/data-breach-response.md` |
@@ -398,6 +410,7 @@
 | Excel Model | `pm-documents` | `pm-documents/excel-model/excel-model.md` |
 | Exec Vs Working Deck | `pm-cowork` | `pm-cowork/exec-vs-working-deck/exec-vs-working-deck.md` |
 | Executing Plans | `pm-method` | `pm-method/executing-plans/executing-plans.md` |
+| Executive CV | `pm-cv` | `pm-cv/executive-cv/executive-cv.md` |
 | Executive Presence | `pm-comms` | `pm-comms/executive-presence/executive-presence.md` |
 | Executive Summary | `pm-cross` | `pm-cross/executive-summary/executive-summary.md` |
 | Executive Update | `pm-strategy` | `pm-strategy/executive-update/executive-update.md` |
@@ -426,6 +439,7 @@
 | Feature Flag Guide | `pm-engineering` | `pm-engineering/feature-flag-guide/feature-flag-guide.md` |
 | Feature Prioritisation | `pm-planning` | `pm-planning/feature-prioritisation/feature-prioritisation.md` |
 | Feature Sunset Plan | `pm-planning` | `pm-planning/feature-sunset-plan/feature-sunset-plan.md` |
+| Federal Resume | `pm-cv` | `pm-cv/federal-resume/federal-resume.md` |
 | Feynman Explainer | `pm-learning` | `pm-learning/feynman-explainer/feynman-explainer.md` |
 | Figma Annotation Guide | `pm-figma` | `pm-figma/figma-annotation-guide/figma-annotation-guide.md` |
 | Figma Component Audit | `pm-figma` | `pm-figma/figma-component-audit/figma-component-audit.md` |
@@ -495,6 +509,7 @@
 | Go-To-Market | `pm-gtm` | `pm-gtm/go-to-market/go-to-market.md` |
 | Go-to-Market Planner | `pm-delivery` | `pm-delivery/go-to-market-planner/go-to-market-planner.md` |
 | Good-Enough Detector | `pm-focus` | `pm-focus/good-enough-detector/good-enough-detector.md` |
+| Graduate CV | `pm-cv` | `pm-cv/graduate-cv/graduate-cv.md` |
 | Grant Proposal | `pm-cross` | `pm-cross/grant-proposal/grant-proposal.md` |
 | Gratitude Practice | `pm-wellbeing` | `pm-wellbeing/gratitude-practice/gratitude-practice.md` |
 | Greenwashing Self-Audit | `pm-climate` | `pm-climate/greenwashing-self-audit/greenwashing-self-audit.md` |
@@ -581,6 +596,7 @@
 | ISS Tracker | `pm-live` | `pm-live/iss-tracker/iss-tracker.md` |
 | Issue Triage (Live) | `pm-cowork-live` | `pm-cowork-live/issue-triage-live/issue-triage-live.md` |
 | JD Decoder | `pm-jobsearch` | `pm-jobsearch/jd-decoder/jd-decoder.md` |
+| JD Gap Score | `pm-cv` | `pm-cv/jd-gap-score/jd-gap-score.md` |
 | Job Application | `pm-business` | `pm-business/job-application/job-application.md` |
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/job-description-writer.md` |
 | Job Search With a Record | `pm-reentry` | `pm-reentry/job-search-with-a-record/job-search-with-a-record.md` |
@@ -856,6 +872,7 @@
 | Reconnect With Someone | `other` | `other/reconnect-with-someone/reconnect-with-someone.md` |
 | Recovery Day Planner | `pm-wellbeing` | `pm-wellbeing/recovery-day-planner/recovery-day-planner.md` |
 | Recruiter Outreach | `pm-recruiting` | `pm-recruiting/recruiter-outreach/recruiter-outreach.md` |
+| Recruiter Scan Simulator | `pm-cv` | `pm-cv/recruiter-scan-simulator/recruiter-scan-simulator.md` |
 | Recurring Meeting Pruner | `pm-cowork` | `pm-cowork/recurring-meeting-pruner/recurring-meeting-pruner.md` |
 | Red-Team My Plan | `pm-thinking` | `pm-thinking/red-team-my-plan/red-team-my-plan.md` |
 | Red-Team Review | `pm-cross` | `pm-cross/red-team-review/red-team-review.md` |
@@ -866,6 +883,7 @@
 | Reference Request Kit | `pm-layoff` | `pm-layoff/reference-request-kit/reference-request-kit.md` |
 | Referral Program | `pm-growth` | `pm-growth/referral-program/referral-program.md` |
 | Referral Program Design | `pm-growth` | `pm-growth/referral-program-design/referral-program-design.md` |
+| Referral Request | `pm-cv` | `pm-cv/referral-request/referral-request.md` |
 | Refinance Breakeven | `pm-calculators` | `pm-calculators/refinance-breakeven/refinance-breakeven.md` |
 | Regex Builder & Explainer | `pm-engineering` | `pm-engineering/regex-builder/regex-builder.md` |
 | Regression Test Plan | `pm-qa` | `pm-qa/regression-test-plan/regression-test-plan.md` |
@@ -899,6 +917,7 @@
 | Retrospective Analysis | `pm-delivery` | `pm-delivery/retro-analysis/retro-analysis.md` |
 | Return & Refund Policy | `pm-ecommerce` | `pm-ecommerce/return-refund-policy/return-refund-policy.md` |
 | Return-to-Activity Criteria | `pm-physio` | `pm-physio/return-to-activity-criteria/return-to-activity-criteria.md` |
+| Returner CV | `pm-cv` | `pm-cv/returner-cv/returner-cv.md` |
 | Review Comments Resolver | `pm-cowork` | `pm-cowork/review-comments-resolver/review-comments-resolver.md` |
 | Review Response | `pm-ecommerce` | `pm-ecommerce/review-response/review-response.md` |
 | Rewards Optimizer | `pm-money` | `pm-money/rewards-optimizer/rewards-optimizer.md` |
@@ -1143,6 +1162,7 @@
 | Utility Switch Advisor | `pm-money` | `pm-money/utility-switch-advisor/utility-switch-advisor.md` |
 | UX Research Plan | `pm-design` | `pm-design/ux-research-plan/ux-research-plan.md` |
 | Value Proposition | `pm-copy` | `pm-copy/value-proposition/value-proposition.md` |
+| Values-Mapped CV | `pm-cv` | `pm-cv/values-mapped-cv/values-mapped-cv.md` |
 | VC Partner Meeting | `pm-simulators` | `pm-simulators/vc-partner-meeting/vc-partner-meeting.md` |
 | Vehicle-Maintenance Schedule | `pm-lifeadmin` | `pm-lifeadmin/vehicle-maintenance-schedule/vehicle-maintenance-schedule.md` |
 | Vendor Breakup Email | `pm-cowork` | `pm-cowork/vendor-breakup-email/vendor-breakup-email.md` |

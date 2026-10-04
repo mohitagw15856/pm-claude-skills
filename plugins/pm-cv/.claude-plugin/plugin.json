@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-cv",
+  "version": "1.0.0",
+  "description": "The CV studio: interview your experience into a master inventory, then a CV shaped for one company (its tracking system, country, sector, values and job ad), with sector variants, a bilingual Chinese and English CV, an honesty check and an ATS-safe Word export",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "cv",
+    "resume",
+    "ats",
+    "job-search",
+    "career",
+    "bilingual"
+  ]
+}
