@@ -1,0 +1,43 @@
+identity:
+  name: get_skill
+  author: mohitagw15856
+  label:
+    en_US: Load a skill
+    zh_Hans: 加载技能
+description:
+  human:
+    en_US: Load a skill's full instructions by name, from the Gitee mirror (reachable in mainland China) or GitHub.
+    zh_Hans: 按名称加载技能的完整说明，优先从 Gitee 镜像读取（国内可访问），否则从 GitHub 读取。
+  llm: Return the full SKILL.md instructions for one skill by its exact name (for example cn-weekly-report). Follow those instructions to complete the user's task.
+parameters:
+  - name: name
+    type: string
+    required: true
+    form: llm
+    label:
+      en_US: Skill name
+      zh_Hans: 技能名称
+    human_description:
+      en_US: The exact skill name, such as prd-template or cn-weekly-report
+      zh_Hans: 技能的准确名称，例如 prd-template 或 cn-weekly-report
+    llm_description: The exact kebab-case skill name returned by find_skill
+  - name: language
+    type: select
+    required: false
+    default: en
+    form: form
+    options:
+      - value: en
+        label:
+          en_US: English (canonical)
+          zh_Hans: 英文（规范版本）
+      - value: zh
+        label:
+          en_US: Simplified Chinese, falling back to English when there is no translation
+          zh_Hans: 简体中文（没有翻译时用英文）
+    label:
+      en_US: Language
+      zh_Hans: 语言
+    human_description:
+      en_US: Which version of the skill to load
+      zh_Hans: 加载哪个语言版本

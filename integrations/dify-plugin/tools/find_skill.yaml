@@ -1,0 +1,36 @@
+identity:
+  name: find_skill
+  author: mohitagw15856
+  label:
+    en_US: Find a skill
+    zh_Hans: 查找技能
+description:
+  human:
+    en_US: Rank the skills that best match a request, in English or Chinese. Works offline.
+    zh_Hans: 根据中文或英文请求，列出最匹配的技能。离线可用。
+  llm: Given a user's request, return the names and descriptions of the professional skills that best match it. Call get_skill with the best name to load its instructions.
+parameters:
+  - name: query
+    type: string
+    required: true
+    form: llm
+    label:
+      en_US: Request
+      zh_Hans: 请求
+    human_description:
+      en_US: What the user wants done, in their own words
+      zh_Hans: 用户想完成的事情，用自己的话描述
+    llm_description: The user's request, verbatim or summarised
+  - name: limit
+    type: number
+    required: false
+    default: 5
+    min: 1
+    max: 10
+    form: form
+    label:
+      en_US: Number of results
+      zh_Hans: 结果数量
+    human_description:
+      en_US: How many skills to return (1 to 10)
+      zh_Hans: 返回多少个技能（1 到 10）
