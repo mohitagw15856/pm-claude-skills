@@ -1,0 +1,35 @@
+{
+  "_comment": "Exam dates for the README countdown badges (scripts/build-readme-live.mjs). Add a year once the official notice is out and set confirmed to true. When a year is missing the script falls back to the rule below, so a stale file never breaks the badge.",
+  "_confirm": "高考: 教育部 announces each spring (the national papers start on 7 June). 考研: 研招网 (yz.chsi.com.cn) publishes the 初试 dates with the registration notice, usually in September or October. 国考: 国家公务员局 (scs.gov.cn) publishes the 笔试 date with the recruitment notice, usually in October.",
+  "exams": {
+    "gaokao": {
+      "label": "高考",
+      "labelEn": "Gaokao",
+      "skill": "cn-gaokao-planner",
+      "rule": "7 June every year",
+      "dates": {
+        "2027": { "date": "2027-06-07", "confirmed": false },
+        "2028": { "date": "2028-06-07", "confirmed": false }
+      }
+    },
+    "kaoyan": {
+      "label": "考研初试",
+      "labelEn": "Kaoyan (postgraduate entrance)",
+      "skill": "cn-kaoyan-planner",
+      "rule": "the Saturday between 19 and 25 December (2022: 24 Dec, 2023: 23 Dec, 2024: 21 Dec, 2025: 20 Dec)",
+      "dates": {
+        "2026": { "date": "2026-12-19", "confirmed": false },
+        "2027": { "date": "2027-12-25", "confirmed": false }
+      }
+    },
+    "guokao": {
+      "label": "国考笔试",
+      "labelEn": "National civil service written exam",
+      "skill": "cn-civil-exam-essay",
+      "rule": "the last Saturday of November, a day either side in some years (2023: 26 Nov, 2024: 30 Nov, 2025: 30 Nov)",
+      "dates": {
+        "2026": { "date": "2026-11-28", "confirmed": false }
+      }
+    }
+  }
+}
