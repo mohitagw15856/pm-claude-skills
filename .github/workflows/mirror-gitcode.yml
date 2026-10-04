@@ -70,8 +70,8 @@ jobs:
           if [ -f README.zh-CN.md ]; then
             git mv -f README.md README.en.md
             cp README.zh-CN.md README.md
-            sed -i 's#](README.md)#](README.en.md)#g; s#href="README.md"#href="README.en.md"#g' README.md
-            git add README.md README.en.md
+            sed -i 's#](README.md)#](README.en.md)#g; s#href="README.md"#href="README.en.md"#g' README.md README.zh-TW.md
+            git add README.md README.en.md README.zh-TW.md
             git commit -q -m "GitCode: 中文 README 优先 (README.en.md is the English version)"
           fi
           # The host occasionally refuses a connection; retry with back-off before failing.
