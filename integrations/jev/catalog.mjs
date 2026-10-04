@@ -29,7 +29,7 @@ export function installedOnly(catalog, dir) {
 }
 
 export function slim(s) {
-  return { name: s.name, title: s.title || s.name, summary: (s.summary || firstSentence(s.description) || '').slice(0, 200), description: s.description || '', plugin: s.plugin || 'misc', tier: s.tier || null };
+  return { name: s.name, title: s.title || s.name, summary: (s.summary || firstSentence(s.description) || '').slice(0, 200), description: s.description || '', ...(s.descriptionZh ? { descriptionZh: s.descriptionZh } : {}), plugin: s.plugin || 'misc', tier: s.tier || null };
 }
 export function firstSentence(d = '') { return d.split(/(?<=\.)\s+/)[0].trim(); }
 
@@ -69,7 +69,10 @@ export function zhTerms(text) {
   return [...out];
 }
 export function terms(text) {
-  const latin = String(text).toLowerCase().replace(/[^a-z0-9]+/g, ' ').split(' ').filter((w) => w.length > 3 && !STOP.has(w));
+  // In a Chinese request, short English tokens are usually acronyms (PRD, OKR, CV,
+  // HR), so they are kept; in English, words under four letters are mostly noise.
+  const minLen = /[\u4e00-\u9fff]/.test(String(text)) ? 2 : 4;
+  const latin = String(text).toLowerCase().replace(/[^a-z0-9]+/g, ' ').split(' ').filter((w) => w.length >= minLen && !STOP.has(w));
   return [...new Set([...latin, ...zhTerms(text)])];
 }
 export function keywordRank(prompt, skills, { topK = 5 } = {}) {
@@ -101,6 +104,13 @@ export function selftest() {
   ok(zr[0] && zr[0].skill === 'cn-weekly-report', `a Chinese request routes (${zr[0]?.skill})`);
   const zr2 = keywordRank('公司要裁我，N+1 补偿怎么算', cat.skills);
   ok(zr2.some((r) => r.skill === 'cn-severance-calculator'), `a Chinese severance request routes (${zr2.map((r) => r.skill).join(',')})`);
+  const zr3 = keywordRank('我的房东扣了我的押金', cat.skills);
+  ok(zr3[0] && zr3[0].skill === 'security-deposit-recovery', `a translated skill routes from Chinese (${zr3[0]?.skill})`);
+  const zr5 = keywordRank('帮我写一份PRD', cat.skills);
+  ok(zr5[0] && /prd/.test(zr5[0].skill), `an acronym inside a Chinese request routes (${zr5[0]?.skill})`);
+  ok(terms('help me with the OKR').indexOf('okr') === -1, 'short English words stay filtered in English requests');
+  const zr4 = keywordRank('帮我整理会议纪要', cat.skills);
+  ok(zr4[0] && zr4[0].skill === 'meeting-notes', `Chinese meeting notes request routes (${zr4[0]?.skill})`);
   console.log(`jev catalog self-test: ${pass} passed · ${fail} failed`);
   return fail ? 1 : 0;
 }

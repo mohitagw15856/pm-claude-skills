@@ -26,8 +26,8 @@ for (const lang of readdirSync(base).filter((d) => /^[a-z]{2}(-[A-Z]{2})?$/.test
     else pass++;
     if (!new RegExp(`^language: ${lang}$`, 'm').test(t)) bad(`${lang}/${name}: missing "language: ${lang}"`);
     else pass++;
-    // one canonicity marker per supported language: es, fr, en, zh (规范版本), ja (正本)
-    if (!['canónica', 'canonique', 'canonical', '规范版本', '正本'].some((m) => t.includes(m))) bad(`${lang}/${name}: missing the canonicity note`);
+    // one canonicity marker per supported language: es, fr, en, zh (规范版本), zh-TW (規範版本), ja (正本)
+    if (!['canónica', 'canonique', 'canonical', '规范版本', '規範版本', '正本'].some((m) => t.includes(m))) bad(`${lang}/${name}: missing the canonicity note`);
     else pass++;
   }
 }
