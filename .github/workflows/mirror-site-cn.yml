@@ -1,0 +1,81 @@
+name: Mirror site to China (Alibaba Cloud OSS)
+
+# Copies the published playground (the same Pages artifact deploy-playground.yml
+# just uploaded) to an Alibaba Cloud OSS bucket, so the site and the live README
+# cards load reliably inside mainland China. Setup, costs and the ICP filing
+# question are in docs/zh/site-mirror.md.
+#
+# Needs four repository secrets; without them every run skips cleanly:
+#   OSS_ACCESS_KEY_ID, OSS_ACCESS_KEY_SECRET   a RAM user limited to this bucket
+#   OSS_BUCKET                                 bucket name, e.g. pm-skills-site
+#   OSS_ENDPOINT                               e.g. oss-cn-hangzhou.aliyuncs.com
+
+on:
+  workflow_run:
+    workflows: ['Deploy Skill Playground']
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: mirror-site-cn
+  cancel-in-progress: true
+
+jobs:
+  mirror:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    env:
+      OSS_ACCESS_KEY_ID: ${{ secrets.OSS_ACCESS_KEY_ID }}
+      OSS_ACCESS_KEY_SECRET: ${{ secrets.OSS_ACCESS_KEY_SECRET }}
+      OSS_BUCKET: ${{ secrets.OSS_BUCKET }}
+      OSS_ENDPOINT: ${{ secrets.OSS_ENDPOINT }}
+      OSSUTIL_URL: https://gosspublic.alicdn.com/ossutil/1.7.19/ossutil-v1.7.19-linux-amd64.zip
+      OSSUTIL_SHA256: dcc512e4a893e16bbee63bc769339d8e56b21744fd83c8212a9d8baf28767343
+    steps:
+      - name: Check for OSS secrets
+        id: gate
+        run: |
+          if [ -z "$OSS_ACCESS_KEY_ID" ] || [ -z "$OSS_ACCESS_KEY_SECRET" ] || [ -z "$OSS_BUCKET" ] || [ -z "$OSS_ENDPOINT" ]; then
+            echo "::notice::OSS secrets are not set, so the China site mirror is skipped. See docs/zh/site-mirror.md."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Download the published site
+        if: steps.gate.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          set -euo pipefail
+          if [ -z "${RUN_ID:-}" ]; then
+            RUN_ID=$(gh run list -R "$GITHUB_REPOSITORY" --workflow deploy-playground.yml --status success --limit 1 --json databaseId --jq '.[0].databaseId')
+          fi
+          gh run download "$RUN_ID" -R "$GITHUB_REPOSITORY" -n github-pages -D "$RUNNER_TEMP/pages"
+          mkdir -p "$RUNNER_TEMP/site"
+          tar -xf "$RUNNER_TEMP/pages/artifact.tar" -C "$RUNNER_TEMP/site"
+          du -sh "$RUNNER_TEMP/site"
+
+      - name: Install ossutil (pinned, checksum-verified)
+        if: steps.gate.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+          curl -fsSL -o "$RUNNER_TEMP/ossutil.zip" "$OSSUTIL_URL"
+          echo "${OSSUTIL_SHA256}  $RUNNER_TEMP/ossutil.zip" | sha256sum -c -
+          unzip -q "$RUNNER_TEMP/ossutil.zip" -d "$RUNNER_TEMP"
+          install -m 0755 "$RUNNER_TEMP/ossutil-v1.7.19-linux-amd64/ossutil64" "$RUNNER_TEMP/ossutil"
+
+      - name: Sync to OSS
+        if: steps.gate.outputs.skip != 'true'
+        run: |
+          set -euo pipefail
+          CFG="$RUNNER_TEMP/.ossutilconfig"
+          "$RUNNER_TEMP/ossutil" config -e "$OSS_ENDPOINT" -i "$OSS_ACCESS_KEY_ID" -k "$OSS_ACCESS_KEY_SECRET" -L EN -c "$CFG" >/dev/null
+          # The live cards change daily: keep their cache short. Everything else can be cached for an hour.
+          "$RUNNER_TEMP/ossutil" -c "$CFG" cp -r -f -u --jobs 8 "$RUNNER_TEMP/site/" "oss://$OSS_BUCKET/" --meta "Cache-Control:max-age=3600"
+          "$RUNNER_TEMP/ossutil" -c "$CFG" cp -r -f --jobs 8 "$RUNNER_TEMP/site/live/" "oss://$OSS_BUCKET/live/" --meta "Cache-Control:max-age=600"
+          rm -f "$CFG"
+          echo "Mirrored to oss://$OSS_BUCKET/" >> "$GITHUB_STEP_SUMMARY"

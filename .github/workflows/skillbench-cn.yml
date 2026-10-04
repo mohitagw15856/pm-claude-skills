@@ -8,8 +8,13 @@ name: Run SkillBench (Chinese task set)
 # monthly free credits (HF_TOKEN), which cover only a handful of calls. Paid provider keys still work if set:
 # DEEPSEEK_API_KEY, DASHSCOPE_API_KEY (Qwen), MOONSHOT_API_KEY (Kimi),
 # ZHIPU_API_KEY (GLM), ARK_API_KEY (Doubao). The judge needs ANTHROPIC_API_KEY.
-# Results land on the skillbench-zh-results branch for review, like skillbench.yml.
+# Results land on the skillbench-zh-results branch and a pull request to main is
+# opened for review (main is PR-only). Also runs on the 1st of each month with the
+# models in the SKILLBENCH_ZH_MODELS repository variable, or the defaults below,
+# so the Chinese leaderboard card (web/live/modelbench-zh*.svg) stays current.
 on:
+  schedule:
+    - cron: '0 3 1 * *'
   workflow_dispatch:
     inputs:
       models:
@@ -23,6 +28,7 @@ on:
 
 permissions:
   contents: write
+  pull-requests: write
 
 jobs:
   bench:
@@ -34,8 +40,8 @@ jobs:
           node-version: '24'
       - name: Run the benchmark
         env:
-          MODELS: ${{ inputs.models }}
-          JUDGE: ${{ inputs.judge }}
+          MODELS: ${{ inputs.models || vars.SKILLBENCH_ZH_MODELS || 'modelscope:deepseek-ai/DeepSeek-V4.1-Flash,modelscope:Qwen/Qwen3.8-27B,modelscope:zai-org/GLM-5.2,modelscope:PaddlePaddle/ERNIE-4.5-300B-A47B-PT' }}
+          JUDGE: ${{ inputs.judge || 'claude-sonnet-4-6' }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
@@ -52,9 +58,10 @@ jobs:
             --tasks skillbench/tasks-zh.json --out skillbench/results-zh.json
           node scripts/build-modelbench.mjs --results skillbench/results-zh.json \
             --tasks skillbench/tasks-zh.json --out web/modelbench-zh.json
-      - name: Commit results
+      - name: Commit results and open a pull request
         env:
-          MODELS: ${{ inputs.models }}
+          MODELS: ${{ inputs.models || vars.SKILLBENCH_ZH_MODELS || 'default models' }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "skillbench-bot"
           git config user.email "actions@github.com"
@@ -62,3 +69,9 @@ jobs:
           git add skillbench/results-zh.json web/modelbench-zh.json
           git diff --cached --quiet || git commit -m "bench: SkillBench Chinese task set, $MODELS"
           git push -f origin skillbench-zh-results
+          if [ "$(gh pr list --head skillbench-zh-results --state open --json number --jq length)" = "0" ]; then
+            gh pr create --base main --head skillbench-zh-results \
+              --title "bench: SkillBench Chinese task set results" \
+              --body "Automated run of the Chinese task set (skillbench/tasks-zh.json). Models: $MODELS. Review the scores in web/modelbench-zh.json before merging; the live leaderboard card picks them up on the next deploy." \
+              || echo "::warning::Could not open the pull request; open one from skillbench-zh-results by hand."
+          fi

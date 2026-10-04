@@ -1,6 +1,12 @@
 # PM Skills：1,255 個專業 Agent Skills，用中文提問就能用
 
 <p align="center">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/live/season-tw.html">
+    <img alt="今日節氣與節日橫幅，每天更新" src="https://mohitagw15856.github.io/pm-claude-skills/live/season-tw.svg" width="100%">
+  </a>
+</p>
+
+<p align="center">
   <a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <b>繁體中文</b> · <a href="SKILLS.md">全部技能</a> · <a href="skills-i18n/zh-TW/">繁體中文譯本</a> · <a href="CHANGELOG.md">更新紀錄</a>
 </p>
 

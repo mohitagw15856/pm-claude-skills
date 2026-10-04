@@ -32,6 +32,9 @@ on:
       - 'integrations/dify-plugin/**'
       - 'scripts/build-dify-plugin.mjs'
       - 'scripts/build-readme-live.mjs'
+      - 'scripts/build-live-png.mjs'
+      - 'bin/today.mjs'
+      - 'CHANGELOG.md'
       - 'data/solar-terms.json'
       - 'data/cn-exam-dates.json'
       - '.github/workflows/deploy-playground.yml'
@@ -104,6 +107,19 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/build-readme-live.mjs
+
+      # PNG copies for WeChat, Weibo and Xiaohongshu, which do not show SVG.
+      # Best effort: a font or package hiccup must not block the deploy.
+      - name: Render PNG copies of the live cards (web/live/png/)
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq && sudo apt-get install -y -qq fonts-noto-cjk >/dev/null
+          npm install --prefix "$RUNNER_TEMP/resvg" --no-audit --no-fund @resvg/resvg-js@2.6.2 >/dev/null
+          RESVG_MODULE_DIR="$RUNNER_TEMP/resvg/node_modules" node scripts/build-live-png.mjs
+
+      - name: Report on the calendar data behind the live cards
+        run: node scripts/check-date-data.mjs
 
       - name: Build the tech tree (site/tech-tree, published at /tech-tree/)
         run: |
