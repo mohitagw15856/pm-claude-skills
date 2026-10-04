@@ -9,6 +9,14 @@
   },
   "plugins": [
     {
+      "name": "pm-oss-launch",
+      "description": "Take a side project from works-on-my-machine to a repo strangers install, trust and contribute to: a benefit-led README, a no-signup demo, an importer from competitors, good first issues, a licence audit and NOTICE file, fortnightly releases, one-command self-hosting, a read-only MCP server and the 20-second demo clip",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-oss-launch",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-china-exams",
       "description": "The Chinese exams and early-career pack: the civil service essay (申论) and structured interview (结构化面试), postgraduate entrance exam planning (考研), campus recruitment (校招 and 三方协议) and state-owned enterprise interviews (国企面试), in Chinese",
       "version": "1.0.0",

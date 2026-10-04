@@ -1308,6 +1308,42 @@
   {
    "skill": "cn-soe-interview",
    "input": "下周要面试一家央企电力公司的财务岗，结构化面试，我是会计硕士应届生。帮我准备常见问题，尤其是'能否接受到基层锻炼'这种。"
+  },
+  {
+   "skill": "readme-benefit-writer",
+   "input": "Rewrite my README so people get why they'd use it. It's a notes app: Tauri, SQLite, CRDT sync, full-text search, Markdown export. For writers who want linked notes without a cloud account. Contributions welcome via issues labelled good first issue."
+  },
+  {
+   "skill": "demo-data-generator",
+   "input": "Generate demo data for my invoicing app so visitors can click around without signing up. Tables: clients, invoices, invoice_lines, payments. UK, pounds, about 20 clients."
+  },
+  {
+   "skill": "importer-scaffolder",
+   "input": "Users want to move from Todoist. Sample CSV header: TYPE,CONTENT,DESCRIPTION,PRIORITY,INDENT,AUTHOR,RESPONSIBLE,DATE,DATE_LANG,TIMEZONE. My model is Task { title, notes, due, priority 1-3, project, tags[] }. TypeScript."
+  },
+  {
+   "skill": "first-issue-designer",
+   "input": "Write good first issues for my Python CLI tidyrss that cleans RSS feeds. Roadmap: JSON output, better errors, Windows support. I can review 5 PRs a week. Don't touch the parser, I'm rewriting it."
+  },
+  {
+   "skill": "licence-notice-auditor",
+   "input": "We're selling an Electron desktop app with an MIT core. Dependencies include a GPL-3.0 PDF library, Electron, and we bundle the Inter font, icons from an unknown site and a UK postcode dataset. What do we need to fix and what goes in NOTICE?"
+  },
+  {
+   "skill": "fortnightly-release-planner",
+   "input": "Plan releases for my habit tracker, I get about 8 hours every two weeks. Backlog: dark mode, CSV export, reminders, streak freeze, iOS widget, timezone bug, onboarding, translations. Currently v0.6.0."
+  },
+  {
+   "skill": "self-host-packager",
+   "input": "Make my bookmarks app self-hostable. Node 22 Express on port 3000, Postgres, uploaded favicons in ./uploads. Env vars: DATABASE_URL, SESSION_SECRET, SMTP_URL optional."
+  },
+  {
+   "skill": "readonly-mcp-wrapper",
+   "input": "Make a read-only MCP server so Claude Code can search my Obsidian vault at ~/Notes, Markdown only, and never serve the Journal folder."
+  },
+  {
+   "skill": "demo-clip-storyboard",
+   "input": "Storyboard a 20-second demo clip for my CLI csvsnap that turns a messy CSV into a chart in the terminal. Audience is data people on X. CTA: pipx install csvsnap."
   }
  ]
 }
