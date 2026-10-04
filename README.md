@@ -1,48 +1,47 @@
-# 🧠 PM Skills — 1235 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
+# 🧠 PM Skills: 1235 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
 
 <p align="center">
   <a href="https://mohitagw15856.github.io/pm-claude-skills/">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="web/docs-assets/hero.svg">
       <source media="(prefers-color-scheme: light)" srcset="web/docs-assets/hero-light.svg">
-      <img src="web/docs-assets/hero.svg" width="100%" alt="PM Skills — 1235 professional skills your AI assistant can read. Plain markdown, works with Claude, ChatGPT, Gemini, Cursor, and Codex. MIT licensed." />
+      <img src="web/docs-assets/hero.svg" width="100%" alt="PM Skills: 1235 professional skills your AI assistant can read. Plain markdown, works with Claude, ChatGPT, Gemini, Cursor, and Codex. MIT licensed." />
     </picture>
   </a>
 </p>
 
 <p align="center">
-  <a href="README.zh-CN.md"><strong>简体中文</strong></a> &middot;
-  <a href="#-quick-start"><strong>Quick start</strong></a> &middot;
-  <a href="https://mohitagw15856.github.io/pm-claude-skills/"><strong>Playground</strong></a> &middot;
-  <a href="SKILLS.md"><strong>All skills</strong></a> &middot;
-  <a href="PACKS.md"><strong>Packs</strong></a> &middot;
-  <a href="docs/installation.md"><strong>Install guide</strong></a> &middot;
-  <a href="CHANGELOG.md"><strong>Changelog</strong></a> &middot;
-  <a href="ROADMAP.md"><strong>Roadmap</strong></a>
-</p>
-
-<p align="center">
-  🇨🇳 <strong>中文用户</strong>：<a href="README.zh-CN.md">中文说明</a> · <a href="#-中文支持--chinese-support">中文技能包</a> · 支持 Trae、Qoder、通义灵码、CodeBuddy · 支持 DeepSeek、通义千问、Kimi、智谱 GLM、豆包 · <a href="docs/CHINA.md">国内安装指南</a>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/"><strong>▶ Playground</strong></a> ·
+  <a href="#-quick-start"><strong>⚡ Install</strong></a> ·
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/"><strong>🌳 Tech tree</strong></a> ·
+  <a href="SKILLS.md"><strong>📚 All skills</strong></a> ·
+  <a href="README.zh-CN.md"><strong>🇨🇳 简体中文</strong></a> ·
+  <a href="CHANGELOG.md"><strong>🆕 Changelog</strong></a>
 </p>
 
 <p align="center">
   <a href="https://github.com/mohitagw15856/pm-claude-skills/stargazers"><img src="https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social" alt="Stars"></a>
-  <a href="SKILLS.md"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmohitagw15856.github.io%2Fpm-claude-skills%2Fskills.json&query=%24.count&label=skills&color=blue" alt="Skills"></a>
   <a href="https://github.com/mohitagw15856/pm-claude-skills/releases"><img src="https://img.shields.io/github/v/release/mohitagw15856/pm-claude-skills?label=version&color=brightgreen" alt="Version"></a>
   <a href="https://www.npmjs.com/package/pm-claude-skills"><img src="https://img.shields.io/npm/v/pm-claude-skills?logo=npm&color=cb3837" alt="npm"></a>
   <a href="#-quick-start"><img src="https://img.shields.io/badge/Anthropic%20Plugin%20Directory-Published-D97757?logo=anthropic&logoColor=white" alt="In the official Anthropic plugin directory"></a>
   <a href=".github/workflows/skillcheck.yml"><img src="https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skillcheck.yml?branch=main&label=SkillCheck" alt="SkillCheck"></a>
-  <a href=".github/workflows/skill-audit.yml"><img src="https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skill-audit.yml?branch=main&label=security%20audit" alt="Security Audit"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-lightgrey" alt="License"></a>
 </p>
 
-> **Your landlord kept your deposit. Your mom got a medical bill that makes no sense. You got laid off on a Tuesday. Someone you love died, and no one handed you the checklist.**
->
-> Generic AI is a very confident intern. **PM Skills** is the senior colleague's notes — 1235 of them, one markdown file each, for the moments at work *and* in life where "it depends" is not an answer. *(PM stands for Professional, not just Product Management. Yes, we get asked.)*
+> **Your landlord kept your deposit. You got laid off on a Tuesday. Your boss wants the PRD by Friday.**
+> Generic AI is a very confident intern. **PM Skills** is the senior colleague's notes: 1235 of them, one markdown file each. *(PM stands for Professional. Yes, we get asked.)*
 
 <!-- AEO Answer Capsule — 68 words -->
 PM Skills is an open-source library of 1235 Agent Skills — plain-markdown SKILL.md files that teach an AI assistant to do one professional task to a senior professional's standard, from writing a PRD to decoding a lease or running a blameless postmortem. Each skill bundles the framework, an output template, quality checks, and anti-patterns. It is MIT-licensed and works with Claude, ChatGPT, Gemini, Cursor, and Codex.
 <!-- End AEO Capsule -->
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/demo-chat.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/demo-chat-light.svg">
+    <img src="docs/readme-assets/demo-chat.svg" width="100%" alt="Animated demo: three requests (a kept deposit, a Chinese weekly report, a Friday ship decision), the skill that loads for each, and the finished answer." />
+  </picture>
+</p>
 
 <table align="center"><tr>
 <td align="center"><b>1235</b><br><sub>skills</sub></td>
@@ -56,11 +55,52 @@ PM Skills is an open-source library of 1235 Agent Skills — plain-markdown SKIL
 
 ## 🧭 How it works
 
-| | Step | Example |
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/how-it-works.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/how-it-works-light.svg">
+    <img src="docs/readme-assets/how-it-works.svg" width="100%" alt="How it works: say what you need, one skill loads, you get finished work." />
+  </picture>
+</p>
+
+Say *"my landlord is keeping my deposit"* and your assistant loads [`security-deposit-recovery`](skills/security-deposit-recovery/SKILL.md): the challenge to each deduction, the demand letter, and the point where small claims is worth it.
+
+## ▶ See it
+
+<table>
+<tr>
+<td width="50%" align="center">
+<a href="https://mohitagw15856.github.io/pm-claude-skills/"><img src="web/docs-assets/playground-demo.webp" width="100%" alt="The Skill Playground: pick a skill, fill a short form, run it, and a structured result streams out in the browser" /></a>
+<br /><sub><b>▶ <a href="https://mohitagw15856.github.io/pm-claude-skills/">Playground</a></b>: run any skill in your browser. No install, no signup.</sub>
+</td>
+<td width="50%" align="center">
+<a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/"><img src="docs/readme-assets/tech-tree.jpg" width="100%" alt="The tech tree: every bundle a branch, every skill a node, with search and copyable install commands" /></a>
+<br /><sub><b>🌳 <a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/">Tech tree</a></b>: the whole library as a research tree. Vote on what gets researched next.</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" align="center">
+<a href="plugins/pm-3d-explorer/"><img src="docs/readme-assets/3d-explorer.jpg" width="100%" alt="A 3D explorer built by the pm-3d-explorer skills: exploded view, clickable parts, labels with sources" /></a>
+<br /><sub><b>🧊 <a href="plugins/pm-3d-explorer/">3D explorer</a></b>: topic in, a clickable 3D page out, with exploded view and a quiz.</sub>
+</td>
+<td width="50%" align="center">
+<a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="web/docs-assets/demo-galaxy.webp" width="100%" alt="Galaxy 3D: fly through all 1235 skills as a constellation" /></a>
+<br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html">Galaxy 3D</a></b>: all 1235 skills as stars. Zero productivity value, 100% recommended.</sub>
+</td>
+</tr>
+</table>
+
+## 🚪 Pick a door
+
+| | You… | Do this |
 |---|---|---|
-| **01** | Say what you need, in your own words | *"My landlord is keeping my deposit."* |
-| **02** | Your assistant loads the one skill that matches | [`security-deposit-recovery`](skills/security-deposit-recovery/SKILL.md), a single markdown file, read only when it is relevant |
-| **03** | You get the finished document, not advice about it | The challenge to each deduction, the demand letter, and the point at which small claims is worth it |
+| ▶ | **just want to see it** | open the **[Playground](https://mohitagw15856.github.io/pm-claude-skills/)** and run a skill |
+| 🧠 | **use Claude Code** | `/plugin` → search **pm-skills** → install, then ask *"decode this lease"* |
+| 🛠 | **use anything else** | `npx pm-claude-skills add` and pick Cursor, Codex, Windsurf, ChatGPT, Gemini… |
+| 🔎 | **don't know what to ask** | type it at **[find](https://mohitagw15856.github.io/pm-claude-skills/find.html)** and it names the skill |
+| 🎒 | **are in the middle of something** | start from your moment: **[Skill Packs](PACKS.md)** for a new baby, a layoff, a move, a loss |
+
+**Nothing here can break your setup.** A skill is a markdown file your AI reads. Installing copies text files; uninstalling deletes them. [Read one first](skills/lease-decoder/SKILL.md).
 
 ## 🇨🇳 中文支持 · Chinese support
 
@@ -69,127 +109,116 @@ PM Skills is an open-source library of 1235 Agent Skills — plain-markdown SKIL
 
 | 技能包 Pack | 内容 What it covers | 试着说 Try saying |
 |---|---|---|
-| [**pm-china-work**](plugins/pm-china-work/) 职场 | 周报 / 月报、述职报告 / 年终总结、晋升答辩、复盘、需求评审、职级对标、飞书文档、钉钉日志、企业微信公告 | "帮我把这些笔记整理成周报。" |
+| [**pm-china-work**](plugins/pm-china-work/) 职场 | 周报 / 月报、述职、晋升答辩、复盘、需求评审、职级对标、飞书、钉钉、企业微信 | "帮我把这些笔记整理成周报。" |
 | [**pm-china-exams**](plugins/pm-china-exams/) 考试与求职 | 申论、结构化面试、考研规划、校招与三方协议、国企面试 | "下个月公务员面试，帮我模拟一轮。" |
-| [**pm-china-life**](plugins/pm-china-life/) 生活事务 | 劳动合同解读、经济补偿金 N / N+1 / 2N、个税年度汇算、五险一金、高考志愿 | "公司要裁我，能拿多少补偿？" |
-| [**pm-zh-content**](plugins/pm-zh-content/) 内容平台 | 小红书笔记、公众号文章、抖音脚本、直播带货脚本 | "帮我写一篇小红书笔记。" |
+| [**pm-china-life**](plugins/pm-china-life/) 生活事务 | 劳动合同、经济补偿金 N / N+1 / 2N、个税汇算、五险一金、高考志愿 | "公司要裁我，能拿多少补偿？" |
+| [**pm-zh-content**](plugins/pm-zh-content/) 内容平台 | 小红书、公众号、抖音脚本、直播带货 | "帮我写一篇小红书笔记。" |
 | [**pm-chuhai**](plugins/pm-chuhai/) 出海 | 出海市场进入、跨境电商 listing、PIPL 与 GDPR 对照 | "我们想出海，东南亚还是中东？" |
 | [**pm-cv**](plugins/pm-cv/) 简历 | 按目标公司定制简历、中英文简历、导出 Word | "帮我做一份中英文简历，要投外企。" |
-
-**国内安装 Install from China** (npm mirror, plus the coding tools popular in China):
 
 ```bash
 npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae   # 或 qoder / lingma / codebuddy / claude
 ```
 
-**在线试用 Playground**：用你自己的 DeepSeek、通义千问、Kimi、智谱 GLM（有免费模型）或豆包 API Key。**More:** [中文说明 README.zh-CN.md](README.zh-CN.md) · [国内安装指南 docs/CHINA.md](docs/CHINA.md) · [中文翻译 skills-i18n/zh](skills-i18n/zh/)
-
-## 🚪 Pick a door — 30 seconds each
-
-| | You… | Do this |
-|---|---|---|
-| ▶ | **just want to see it** | open the **[Playground](https://mohitagw15856.github.io/pm-claude-skills/)** and run a skill in your browser. No install, no signup, no "enter your email to continue" |
-| 🧠 | **use Claude Code** | `/plugin` → search **pm-skills** → install. Ask *"decode this lease"* and watch |
-| 🛠 | **use anything else** | `npx pm-claude-skills add` and pick your tool (Cursor, Codex, Windsurf, ChatGPT, Gemini…) |
-| 🇨🇳 | **read Chinese** | **[中文说明](README.zh-CN.md)**：用中文提问，六个中文技能包，支持 Trae、Qoder、通义灵码和国内模型 |
-| 🔎 | **don't know what to ask for** | type it at **[find](https://mohitagw15856.github.io/pm-claude-skills/find.html)** — *"my landlord kept my deposit"* — and it names the skill |
-| 🎒 | **are in the middle of something** | start from your moment, not the catalogue → **[Skill Packs](PACKS.md)** · 🍼 new parent · 💼 laid off · 🌍 new country · 👵 caring for a parent · 🕊️ losing someone · 💸 money in crisis |
-
-**Nothing here can scare your setup.** A skill is a markdown file your AI reads. No runtime, no telemetry, no accounts. Installing copies text files; uninstalling is deleting them. Skeptical? Good instinct — [read one first](skills/lease-decoder/SKILL.md), it's written for humans too.
-
-<div align="center">
-
-| Works with | |
-|---|---|
-| **Assistants** | [Claude Code](docs/installation.md) · [ChatGPT](exports/chatgpt/) · [Gemini](exports/gemini/) · [Cursor, Codex, Windsurf](docs/installation.md) · [any MCP client](mcp-remote/) |
-| **Popular in China** | [Trae, Qoder, Lingma 通义灵码, CodeBuddy](docs/CHINA.md) · [DeepSeek, Qwen, Kimi, GLM, Doubao in the playground](docs/CHINA.md) |
-| **Where you already work** | [Telegram](integrations/telegram/) · [Slack](integrations/slack-app/) · [Raycast](integrations/raycast/) · [Obsidian](integrations/obsidian-plugin/) · [n8n](connectors/) |
-| **For builders** | [Python](https://pypi.org/project/pm-skills/) · [Hugging Face dataset](dataset/) · [Docker](Dockerfile) · [GitHub Actions](action/) · [decision layer](integrations/jev/) |
-
-<em>If it can read a markdown file, it can use a skill.</em>
-
-</div>
-
-## ✅ PM Skills is right for you if
-
-- ✅ You keep retyping the same long prompt and get a different answer each time
-- ✅ You want **the finished document** (a PRD, a demand letter, a postmortem), not an essay on how to write one
-- ✅ You use **more than one assistant** and want the same skills in all of them
-- ✅ You want to **read exactly what your assistant was told** before you trust the result
-- ✅ You are dealing with something outside your field: a lease, a medical bill, a layoff
-- ✅ You want nothing to host, no account, and no telemetry unless you switch it on
+国内镜像：[Gitee](https://gitee.com/mohitagw/pm-claude-skills) · [魔搭在线试用](https://www.modelscope.ai/studios/mohitagw15856/pm-skills-playground) · [魔搭数据集](https://www.modelscope.ai/datasets/mohitagw15856/pm-skills-instruct) · [路由模型](https://www.modelscope.ai/models/mohitagw15856/pm-skills-router) · **[中文说明](README.zh-CN.md)** · **[国内安装指南](docs/CHINA.md)** · [开源小课](docs/learn-zh/README.md)
 
 ## 🥊 Without a skill vs. with one
 
 | You say | Generic AI | With the skill |
 |---|---|---|
-| *"help me with my lease"* | 600 words on the importance of reading leases carefully | 🔴 **clause 14 auto-renews you into a full year** · 🟡 deposit terms written to fail · the two sentences to send back — [lease-decoder](skills/lease-decoder/SKILL.md) |
-| *"write the PRD"* | a template with `[insert goal here]` in it | problem, users, requirements, metrics, the open questions — scored 0–40 against its own rubric before you see it — [prd-template](skills/prd-template/SKILL.md) |
-| *"should we ship Friday?"* | "There are several factors to consider…" | `ship 0.18 · ship_reduced 0.71 · slip 0.11` — and the one fact that would flip it — [ship-or-slip](skills/ship-or-slip/SKILL.md) |
-| *"practice my salary negotiation"* | "Great question! Confidence is key." | a hiring manager who pushes back, then an out-of-character debrief on what you gave away — [salary-negotiation](skills/salary-negotiation/SKILL.md) |
+| *"help me with my lease"* | 600 words on reading leases carefully | 🔴 **clause 14 auto-renews you for a full year** · 🟡 deposit terms written to fail · the two sentences to send back: [lease-decoder](skills/lease-decoder/SKILL.md) |
+| *"write the PRD"* | a template with `[insert goal here]` | problem, users, requirements, metrics, open questions, scored 0 to 40 against its own rubric: [prd-template](skills/prd-template/SKILL.md) |
+| *"should we ship Friday?"* | "There are several factors to consider…" | `ship 0.18 · ship_reduced 0.71 · slip 0.11` and the one fact that would flip it: [ship-or-slip](skills/ship-or-slip/SKILL.md) |
+| *"帮我写周报"* | a diary of everything you did | 本周完成 with numbers, 问题与风险 raised early, a plan with owners and dates: [cn-weekly-report](skills/cn-weekly-report/SKILL.md) |
 
-## ✨ See it in action
-
-<p align="center">
-  <a href="https://mohitagw15856.github.io/pm-claude-skills/"><img src="web/docs-assets/playground-demo.webp" width="90%" alt="The Skill Playground: pick the Executive Update skill, fill in a few notes, hit run, and watch a structured executive briefing stream out — all in the browser" /></a>
-  <br /><sub><b>▶ Pick a skill → fill a short form → run it → a senior-grade artifact streams out.</b> Your key stays in your browser, or run free with no key.</sub>
-</p>
+## ⭐ Featured bundles
 
 <table>
 <tr>
-<td width="50%" align="center">
-<a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="web/docs-assets/demo-galaxy.webp" width="100%" alt="Galaxy 3D — fly through all 1235 skills as a glowing constellation you orbit and click into" /></a>
-<br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html">Galaxy 3D</a></b> — all 1235 skills as a constellation. The ones you've run burn brighter. Zero productivity value, 100% recommended.</sub>
+<td width="50%" valign="top">
+
+### 🚀 [pm-oss-launch](plugins/pm-oss-launch/)
+**Ship your side project.** A [benefit-led README](skills/readme-benefit-writer/SKILL.md), a [no-signup demo](skills/demo-data-generator/SKILL.md), [one-command self-hosting](skills/self-host-packager/SKILL.md), a [read-only MCP server](skills/readonly-mcp-wrapper/SKILL.md) and five more.
+
+`/plugin install pm-oss-launch@pm-claude-skills`
+
 </td>
-<td width="50%" align="center">
-<a href="https://mohitagw15856.github.io/pm-claude-skills/wrapped.html"><img src="web/docs-assets/demo-holo.webp" width="100%" alt="PM Skills Wrapped — your practice turned into a shareable, Spotify-Wrapped-style story" /></a>
-<br /><sub><b>🎁 <a href="https://mohitagw15856.github.io/pm-claude-skills/wrapped.html">Wrapped</a></b> — your practice as a shareable story. 100% local; nobody learns you ran <i>saying-no-kindly</i> eleven times.</sub>
+<td width="50%" valign="top">
+
+### 🧊 [pm-3d-explorer](plugins/pm-3d-explorer/)
+**Topic in, 3D explorer out.** The [interface brief](skills/explorer-interface-brief/SKILL.md), [sourced image-to-3D prompts](skills/model-prompt-pack/SKILL.md), a [single-file Three.js viewer](skills/explorer-viewer-builder/SKILL.md) and the [pipeline](skills/explorer-pipeline/SKILL.md) that runs them.
+
+`/plugin install pm-3d-explorer@pm-claude-skills`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 💭 [pm-thinking](plugins/pm-thinking/)
+**Think better.** For when the model gives you the average answer: [the-third-answer](skills/the-third-answer/SKILL.md), [five-minds](skills/five-minds/SKILL.md), [decision-panel](skills/decision-panel/SKILL.md), [red-team-my-plan](skills/red-team-my-plan/SKILL.md).
+
+`/plugin install pm-thinking@pm-claude-skills`
+
+</td>
+<td width="50%" valign="top">
+
+### 🎯 [pm-focus](plugins/pm-focus/)
+**Get unstuck.** ADHD-friendly, useful for every brain: [where-do-i-start](skills/where-do-i-start/SKILL.md), [task-to-first-step](skills/task-to-first-step/SKILL.md), [overwhelm-triage](skills/overwhelm-triage/SKILL.md), [should-i-send-this](skills/should-i-send-this/SKILL.md).
+
+`/plugin install pm-focus@pm-claude-skills`
+
 </td>
 </tr>
 </table>
 
 ## 🆕 What's new
 
-| Release | What it adds | Try saying | Read more |
-|---|---|---|---|
-| **[v81.1.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)** launch kit and 3D explorer | Nine skills to ship a side project strangers trust, a topic-to-3D-explorer pipeline, the library as a [tech tree](https://mohitagw15856.github.io/pm-claude-skills/tech-tree/), and Chinese exam and office-tool skills | *"Make my app self-hostable."* · *"Build a 3D explorer of the heart."* | [pm-oss-launch](plugins/pm-oss-launch/) · [pm-3d-explorer](plugins/pm-3d-explorer/) |
-| **[v81.0.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v81.0.0)** Chinese support and the CV studio | Five packs for Chinese users, Chinese models and coding tools, 75 translations, and a CV shaped for one company from its tracking system, country, sector, values and job ad | *"帮我写周报"* · *"Write my CV for this Monzo job."* | [中文支持](#-中文支持--chinese-support) · [pm-cv](plugins/pm-cv/) |
-| **[v80.2.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v80.2.0)** trust in a release | The MCP install command fixed, a check that every release installs and runs, announcements in `doctor` and the playground, and frozen versions of the flagship skills that a team can pin | *"Run the doctor."* | [CHANGELOG.md](CHANGELOG.md) · [skill releases](docs/SKILL-RELEASES.md) |
-| **[v80.1.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v80.1.0)** design taste | A five-stage UI pipeline (direction, system, motion, critique, verification) that stops generic AI-looking interfaces, with pointers to five specialist design skills | *"Run the design pipeline on this landing page."* | [pm-design-taste](plugins/pm-design-taste/) · [credits](plugins/pm-design-taste/THIRD_PARTY.md) |
-| **v80.0.0** the promote loop | Scans your own transcripts for what you keep asking, drafts it as a skill, tests the triggers, publishes it | *"What do I keep asking you for?"* | [PROMOTE-LOOP.md](docs/PROMOTE-LOOP.md) |
-| **v79.0.0** the decision layer | Typed questions with a probability per option: which skill, is this input safe, ship or slip | *"Should we ship Friday?"* | [JEV-DECISION-LAYER.md](docs/JEV-DECISION-LAYER.md) |
-
-The full write-up of the three feature releases, with examples: **[docs/WHATS-NEW.md](docs/WHATS-NEW.md)**. Everything older: **[CHANGELOG.md](CHANGELOG.md)**.
-
-## 💬 What can I ask it to do?
-
-Say it in your own words. The description does the routing:
-
-| | | |
+| Release | What it adds | Try saying |
 |---|---|---|
-| 🏠 *"decode this lease before I sign"* → [lease-decoder](skills/lease-decoder/SKILL.md) | 📋 *"write the PRD for our referral feature"* → [prd-template](skills/prd-template/SKILL.md) | 🚨 *"blameless postmortem for Friday's outage"* → [incident-postmortem](skills/incident-postmortem/SKILL.md) |
-| 💰 *"practice my salary negotiation"* → [salary-negotiation](skills/salary-negotiation/SKILL.md) | 📉 *"why is churn up this quarter?"* → [churn-analysis](skills/churn-analysis/SKILL.md) | ⚖️ *"rank the backlog with RICE"* → [rice-prioritisation](skills/rice-prioritisation/SKILL.md) |
-| 🛂 *"prep me for the visa interview"* → [the-visa-interview](skills/the-visa-interview/SKILL.md) | 🔨 *"is this contractor quote fair?"* → [home-contractor-quote-decoder](skills/home-contractor-quote-decoder/SKILL.md) | 🏡 *"should we rent or buy?"* → [rent-vs-buy](skills/rent-vs-buy/SKILL.md) |
-| 📝 *"draft my self-review honestly"* → [performance-review](skills/performance-review/SKILL.md) | 🚢 *"ship Friday or slip a week?"* → [ship-or-slip](skills/ship-or-slip/SKILL.md) | ♻️ *"what do I keep asking you for?"* → [promoter-scan](skills/promoter-scan/SKILL.md) |
+| **[v81.1.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)** launch kit and 3D explorer | Nine skills to ship a side project strangers trust, a topic-to-3D-explorer pipeline, the [tech tree](https://mohitagw15856.github.io/pm-claude-skills/tech-tree/), and Chinese exam and office-tool skills | *"Make my app self-hostable."* · *"Build a 3D explorer of the heart."* |
+| **[v81.0.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v81.0.0)** Chinese support and the CV studio | Five packs for Chinese users, Chinese models and coding tools, 75 translations, and a CV shaped for one company | *"帮我写周报"* · *"Write my CV for this Monzo job."* |
+| **[v80.2.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v80.2.0)** trust in a release | A check that every release installs and runs, announcements in `doctor`, and frozen versions of the flagship skills | *"Run the doctor."* |
 
-…all 1235 live in **[the catalog](SKILLS.md)**.
+<details>
+<summary><b>Older releases</b></summary>
+
+| Release | What it adds | Try saying |
+|---|---|---|
+| **[v80.1.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v80.1.0)** design taste | A five-stage UI pipeline that stops generic AI-looking interfaces ([pm-design-taste](plugins/pm-design-taste/)) | *"Run the design pipeline on this landing page."* |
+| **v80.0.0** the promote loop | Scans your transcripts for what you keep asking, drafts it as a skill, tests the triggers ([PROMOTE-LOOP.md](docs/PROMOTE-LOOP.md)) | *"What do I keep asking you for?"* |
+| **v79.0.0** the decision layer | Typed questions with a probability per option ([JEV-DECISION-LAYER.md](docs/JEV-DECISION-LAYER.md)) | *"Should we ship Friday?"* |
+
+Everything older: **[CHANGELOG.md](CHANGELOG.md)** · the write-ups: **[docs/WHATS-NEW.md](docs/WHATS-NEW.md)**.
+</details>
 
 ## ⚡ Quick start
 
 | You want to… | Do this |
 |---|---|
-| **Browse** | **[SKILLS.md](SKILLS.md)** · the [searchable web catalog](https://mohitagw15856.github.io/pm-claude-skills/catalog.html) |
-| **Install in Claude Code** | `/plugin` → search **pm-skills** *(official Anthropic directory)* — or `npx pm-claude-skills add --agent claude` |
-| **Install in Cursor / Codex / Windsurf / Cline…** | `npx pm-claude-skills add --agent cursor` *(or `codex`, `windsurf`, `aider`, `cline`, `zed`…)* |
-| **Use one skill in ChatGPT / Gemini** | copy from [`exports/chatgpt/`](exports/chatgpt/) or [`exports/gemini/`](exports/gemini/) and paste as instructions |
+| **Install in Claude Code** | `/plugin` → search **pm-skills** *(official Anthropic directory)*, or `npx pm-claude-skills add --agent claude` |
+| **Install in Cursor, Codex, Windsurf, Cline…** | `npx pm-claude-skills add --agent cursor` *(or `codex`, `windsurf`, `aider`, `cline`, `zed`…)* |
+| **Use one skill in ChatGPT or Gemini** | copy from [`exports/chatgpt/`](exports/chatgpt/) or [`exports/gemini/`](exports/gemini/) and paste it as instructions |
 | **Skills over MCP, in any session** | `claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp` |
-| **Route a prompt to a skill** | `npm run route -- "board meeting on Thursday"` |
+| **Find the right skill** | `npx pm-claude-skills find "board meeting on Thursday"` |
+| **Browse** | **[SKILLS.md](SKILLS.md)** · the [searchable catalog](https://mohitagw15856.github.io/pm-claude-skills/catalog.html) · the [tech tree](https://mohitagw15856.github.io/pm-claude-skills/tech-tree/) |
 
-No `npm install` needed — `npx pm-claude-skills …` always runs the latest. Per-tool instructions: **[docs/installation.md](docs/installation.md)**.
+No `npm install` needed; `npx` always runs the latest. Per-tool instructions: **[docs/installation.md](docs/installation.md)**.
+
+<div align="center">
+
+| Works with | |
+|---|---|
+| **Assistants** | [Claude Code](docs/installation.md) · [ChatGPT](exports/chatgpt/) · [Gemini](exports/gemini/) · [Cursor, Codex, Windsurf](docs/installation.md) · [any MCP client](mcp-remote/) |
+| **Popular in China** | [Trae, Qoder, Lingma 通义灵码, CodeBuddy](docs/CHINA.md) · [DeepSeek, Qwen, Kimi, GLM, Doubao](docs/CHINA.md) · [Cherry Studio, Dify](docs/CHINA.md) |
+| **Where you already work** | [Telegram](integrations/telegram/) · [Slack](integrations/slack-app/) · [Raycast](integrations/raycast/) · [Obsidian](integrations/obsidian-plugin/) · [n8n](connectors/) |
+| **For builders** | [Python](https://pypi.org/project/pm-skills/) · [Hugging Face dataset](dataset/) · [Docker](Dockerfile) · [GitHub Actions](action/) · [decision layer](integrations/jev/) |
+
+</div>
 
 ## 📚 The skills
 
-Every skill follows the same discipline: what it produces, the inputs it needs, a real framework (severity scales, decision rules, not vibes), a concrete output template, quality checks, and anti-patterns. All 1235 pass the [SkillSpec](SKILLSPEC.md) L3 gate and a security audit in CI.
+Every skill has the same shape: what it produces, the inputs it needs, a real framework, an output template, quality checks and anti-patterns. All 1235 pass the [SkillSpec](SKILLSPEC.md) L3 gate and a security audit in CI.
 
 <table align="center">
   <tr align="center">
@@ -216,7 +245,7 @@ Every skill follows the same discipline: what it produces, the inputs it needs, 
 
 <p align="center">
   <b><a href="SKILLS.md">Browse all 1235 →</a></b> ·
-  <b><a href="https://mohitagw15856.github.io/pm-claude-skills/">try one in your browser →</a></b> ·
+  <b><a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/">explore the tech tree →</a></b> ·
   <b><a href="plugins/">142 bundles →</a></b>
 </p>
 
@@ -225,39 +254,28 @@ Every skill follows the same discipline: what it produces, the inputs it needs, 
 
 <br>
 
-### For everyone — life's paperwork and decisions
+### For everyone: life's paperwork and decisions
 
 | Family | What it does | Examples (of many) |
 |---|---|---|
-| 🔍 **Decoders** (25+) | Read the document *before* you sign it — plain language, 🔴🟡🟢 severity, the money math | [lease](skills/lease-decoder/SKILL.md) · [medical bill](skills/medical-bill-decoder/SKILL.md) · [job offer](skills/benefits-decoder/SKILL.md) · [severance](skills/severance-agreement-decoder/SKILL.md) · [insurance policy](skills/insurance-policy-decoder/SKILL.md) · [contractor quote](skills/home-contractor-quote-decoder/SKILL.md) · [timeshare](skills/timeshare-contract-decoder/SKILL.md) |
-| 🎭 **Simulators** | Face the adversary early — the real meeting, then an out-of-character debrief | [salary negotiation](skills/salary-negotiation/SKILL.md) · [promotion committee](skills/the-promotion-committee/SKILL.md) · [thesis defense](skills/the-thesis-defense/SKILL.md) · [visa interview](skills/the-visa-interview/SKILL.md) · [due-diligence call](skills/the-due-diligence-call/SKILL.md) |
-| 🧮 **Calculators** | Deterministic Python scripts + honest models — assumptions labeled, no false precision | [rent vs buy](skills/rent-vs-buy/SKILL.md) · [FIRE number](skills/fire-number/SKILL.md) · [debt payoff](skills/debt-payoff/SKILL.md) · [raise vs jump](skills/raise-vs-jump/SKILL.md) · [daycare vs stay-home](skills/daycare-vs-stay-home/SKILL.md) |
-| 📡 **Live data** (17) | Real-time answers with **zero API keys** — weather, rates, flights, scores, all over plain curl | [weather](skills/weather-now/SKILL.md) · [currency](skills/currency-rates/SKILL.md) · [crypto](skills/crypto-prices/SKILL.md) · [flights](skills/flight-tracker/SKILL.md) · [earthquakes](skills/earthquake-watch/SKILL.md) · [is-it-down](skills/site-check/SKILL.md) |
-| 🏠 **Life admin** | The unglamorous logistics, done in order | [relocation](skills/relocation-planner/SKILL.md) · [new parent](skills/new-parent-logistics/SKILL.md) · [caregiving](skills/caregiver-coordination/SKILL.md) · [doctor visits](skills/doctor-visit-prep/SKILL.md) · [records requests](skills/medical-records-request/SKILL.md) |
-| 💼 **Career moments** | The weeks that decide years | [layoff kit](plugins/pm-layoff/) · [resignation kit](plugins/pm-resignation/) · [PIP response](skills/pip-responder/SKILL.md) · [first 90 days as manager](skills/manager-first-90-days/SKILL.md) · [interview gauntlet](plugins/pm-jobsearch/) |
-| 🏛 **Dead mentors** (5) 🆕 | History's sharpest operators, resurrected — the *real* methods from public-domain classics, applied to modern work | [Machiavelli on office politics](skills/machiavelli-counsel/SKILL.md) · [Sun Tzu on picking your fights](skills/sun-tzu-strategy-brief/SKILL.md) · [Franklin's decision algebra](skills/franklin-decision-ledger/SKILL.md) · [Marcus Aurelius on bad days](skills/stoic-setback-debrief/SKILL.md) · [Bennett's 1908 time audit](skills/bennett-time-audit/SKILL.md) |
-| 🏛 **Life systems** (20) 🆕 | Navigating the bureaucracies and emergencies people face alone — civic, disability, immigration, disaster | [voting-navigator](skills/voting-navigator/SKILL.md) · [disability-benefit-appeal](skills/disability-benefit-appeal/SKILL.md) · [arrival-setup](skills/arrival-setup/SKILL.md) · [credential-recognition](skills/credential-recognition/SKILL.md) · [go-bag-builder](skills/go-bag-builder/SKILL.md) · [after-the-disaster](skills/after-the-disaster/SKILL.md) |
-| 🧠 **Human edges** (20) 🆕 | The parts of life nobody built tools for — neurodivergence, invisible illness, grief, identity, the hard conversations | [masking-budget](skills/masking-budget/SKILL.md) · [spoon-planner](skills/spoon-planner/SKILL.md) · [diagnosis-limbo-kit](skills/diagnosis-limbo-kit/SKILL.md) · [coming-out-rehearsal](skills/coming-out-rehearsal/SKILL.md) · [grief-admin](skills/grief-admin/SKILL.md) · [rabbit-hole-rescue](skills/rabbit-hole-rescue/SKILL.md) |
-| ⚡ **New-gen** (10) 🆕 | How the next generation lives and earns — creator deals, clips, D&D, ranked, resale, the attention war | [creator-deal-decoder](skills/creator-deal-decoder/SKILL.md) · [clip-factory](skills/clip-factory/SKILL.md) · [ttrpg-session-forge](skills/ttrpg-session-forge/SKILL.md) · [the-vibe-check](skills/the-vibe-check/SKILL.md) · [ranked-climb-coach](skills/ranked-climb-coach/SKILL.md) · [attention-reset](skills/attention-reset/SKILL.md) |
-| 🔮 **2027** (10) 🆕 | Problems you don't have yet, but will — the agent era's operational skills | [agent-severance](skills/agent-severance/SKILL.md) · [deepfake-drill](skills/deepfake-drill/SKILL.md) · [agent-hiring-panel](skills/agent-hiring-panel/SKILL.md) · [context-bankruptcy](skills/context-bankruptcy/SKILL.md) · [clone-brief](skills/clone-brief/SKILL.md) · [api-for-yourself](skills/api-for-yourself/SKILL.md) · [the-org-simulator](skills/the-org-simulator/SKILL.md) |
-| 🎲 **Tabletop** (5) 🆕 | Game night, upgraded — teach, judge, plan, design, and practice the trades | [teach-the-game](skills/teach-the-game/SKILL.md) · [rules-lawyer](skills/rules-lawyer/SKILL.md) · [game-night-planner](skills/game-night-planner/SKILL.md) · [board-game-designer](skills/board-game-designer/SKILL.md) · [tabletop-negotiator](skills/tabletop-negotiator/SKILL.md) |
-| 🧾 **Freelance & renters & parents** | Small bundles for specific lives | [pricing your services](skills/pricing-your-services/SKILL.md) · [late invoices](skills/late-invoice-escalation/SKILL.md) · [deposit recovery](skills/security-deposit-recovery/SKILL.md) · [IEP meetings](skills/iep-504-meeting-kit/SKILL.md) · [students](plugins/pm-students/) |
-| 🎲 **Hobbies** (12) 🆕 | Life outside work — the genuinely fun stuff | [wine pairing](skills/wine-pairing/SKILL.md) · [houseplant care](skills/houseplant-care/SKILL.md) · [board-game night](skills/board-game-night-planner/SKILL.md) · [D&D campaign](skills/dnd-campaign-starter/SKILL.md) · [stargazing](skills/stargazing-tonight/SKILL.md) · [chess openings](skills/chess-opening-coach/SKILL.md) |
-| 💪 **Wellbeing** (12) 🆕 | Body and mind, sustainably — not another app streak | [home workout](skills/home-workout-builder/SKILL.md) · [sleep reset](skills/sleep-reset-plan/SKILL.md) · [habit builder](skills/habit-builder/SKILL.md) · [posture reset](skills/posture-reset-plan/SKILL.md) · [screen-time detox](skills/screen-time-detox/SKILL.md) |
-| 🔐 **Digital self-defense** (12) 🆕 | When your digital life is under attack | [identity-theft recovery](skills/identity-theft-recovery/SKILL.md) · [phishing triage](skills/phishing-triage/SKILL.md) · [account recovery](skills/account-recovery-plan/SKILL.md) · [data-broker removal](skills/data-broker-removal/SKILL.md) · [doxxing response](skills/doxxing-response/SKILL.md) |
-| 👪 **Family & relationships** (12) 🆕 | The people who matter | [new-baby logistics](skills/new-baby-logistics/SKILL.md) · [wedding vows](skills/wedding-vows-writer/SKILL.md) · [co-parenting messages](skills/co-parenting-messages/SKILL.md) · [condolences](skills/condolence-message-helper/SKILL.md) · [in-law boundaries](skills/in-law-boundary-scripts/SKILL.md) |
-| 💭 **Thinking modes** (24) 🆕 | Change *how* your AI reasons — escape the generic answer, stress-test decisions | [the-third-answer](skills/the-third-answer/SKILL.md) · [five-minds](skills/five-minds/SKILL.md) · [decision-panel](skills/decision-panel/SKILL.md) · [red-team-my-plan](skills/red-team-my-plan/SKILL.md) · [devils-advocate](skills/devils-advocate-on-demand/SKILL.md) · [poke-holes-in-this](skills/poke-holes-in-this/SKILL.md) |
-| 🎯 **Focus & executive function** (26) 🆕 | Get unstuck and run your own brain — ADHD-friendly, for everyone | [where-do-i-start](skills/where-do-i-start/SKILL.md) · [task-to-first-step](skills/task-to-first-step/SKILL.md) · [overwhelm-triage](skills/overwhelm-triage/SKILL.md) · [the-one-thing](skills/the-one-thing/SKILL.md) · [build-my-memory-file](skills/build-my-memory-file/SKILL.md) · [weekly-unstuck](skills/weekly-unstuck/SKILL.md) |
-| 📖 **Learning & mastery** (10) 🆕 | Learn anything faster and make it stick | [learn-anything-roadmap](skills/learn-anything-roadmap/SKILL.md) · [feynman-explainer](skills/feynman-explainer/SKILL.md) · [spaced-repetition-setup](skills/spaced-repetition-setup/SKILL.md) · [skill-plateau-breaker](skills/skill-plateau-breaker/SKILL.md) · [deliberate-practice-plan](skills/deliberate-practice-plan/SKILL.md) |
-| 💰 **Wealth-building** (10) 🆕 | Build wealth on purpose — educational, not financial advice | [investing-for-beginners](skills/investing-for-beginners/SKILL.md) · [index-fund-starter](skills/index-fund-starter/SKILL.md) · [ask-for-a-raise](skills/ask-for-a-raise/SKILL.md) · [first-100k-plan](skills/first-100k-plan/SKILL.md) · [financial-independence-roadmap](skills/financial-independence-roadmap/SKILL.md) |
-| 📑 **Investing literacy** (5) 🆕 | Read a company's accounts before you believe its highlights — every figure page-referenced; educational, not financial advice | [annual-report-tutor](skills/annual-report-tutor/SKILL.md) · [audited-boundary-check](skills/audited-boundary-check/SKILL.md) · [profit-to-cash-walk](skills/profit-to-cash-walk/SKILL.md) · [company-compare-same-definitions](skills/company-compare-same-definitions/SKILL.md) · [investing-vocabulary-explainer](skills/investing-vocabulary-explainer/SKILL.md) |
-| 🤝 **Social & relationships** (10) 🆕 | The hard conversations and the human ones | [make-friends-as-an-adult](skills/make-friends-as-an-adult/SKILL.md) · [networking-for-introverts](skills/networking-for-introverts/SKILL.md) · [boundary-setting-scripts](skills/boundary-setting-scripts/SKILL.md) · [give-hard-feedback-kindly](skills/give-hard-feedback-kindly/SKILL.md) · [repair-after-a-fight](skills/repair-after-a-fight/SKILL.md) |
-| 🩺 **Caregiving & aging** (10) 🆕 | Care for aging parents and navigate the system — not medical/legal advice | [medical-appointment-advocate](skills/medical-appointment-advocate/SKILL.md) · [care-team-coordinator](skills/care-team-coordinator/SKILL.md) · [caregiver-burnout-check](skills/caregiver-burnout-check/SKILL.md) · [long-term-care-options](skills/long-term-care-options/SKILL.md) · [end-of-life-wishes-conversation](skills/end-of-life-wishes-conversation/SKILL.md) |
-| 🤖 **AI-native life** (10) 🆕 | Use AI itself well — the meta-skills that make every tool better | [prompt-library-builder](skills/prompt-library-builder/SKILL.md) · [delegate-to-ai](skills/delegate-to-ai/SKILL.md) · [ai-context-primer](skills/ai-context-primer/SKILL.md) · [spot-ai-mistakes](skills/spot-ai-mistakes/SKILL.md) · [get-more-from-ai](skills/get-more-from-ai/SKILL.md) |
-| 🤝 **Cowork** (100) | The office knowledge work an AI coworker actually does — the *frameworks* — [the whole bundle](plugins/pm-cowork/) | [email triage](skills/email-triage-system/SKILL.md) · [spreadsheet audit](skills/spreadsheet-audit/SKILL.md) · [meeting cost meter](skills/meeting-cost-meter/SKILL.md) · [deck outline first](skills/deck-outline-first/SKILL.md) · [saying no kindly](skills/saying-no-kindly/SKILL.md) · [delegation brief](skills/delegation-brief/SKILL.md) |
-| ⚡ **Cowork · Live** (12) | The same jobs, *done* — Claude Cowork acts on your **real data** via connectors + sandbox and returns an artifact — [the whole bundle](plugins/pm-cowork-live/) | [inbox triage (live)](skills/inbox-triage-live/SKILL.md) · [meeting prep (live)](skills/meeting-prep-live/SKILL.md) · [spreadsheet audit (live)](skills/spreadsheet-audit-live/SKILL.md) · [deck from doc](skills/deck-from-doc/SKILL.md) · [thread → decision](skills/thread-to-decision-live/SKILL.md) · [PR description (live)](skills/pr-description-live/SKILL.md) |
+| 🔍 **Decoders** (25+) | Read the document *before* you sign it: plain language, 🔴🟡🟢 severity, the money maths | [lease](skills/lease-decoder/SKILL.md) · [medical bill](skills/medical-bill-decoder/SKILL.md) · [job offer](skills/benefits-decoder/SKILL.md) · [severance](skills/severance-agreement-decoder/SKILL.md) · [insurance policy](skills/insurance-policy-decoder/SKILL.md) · [contractor quote](skills/home-contractor-quote-decoder/SKILL.md) |
+| 🎭 **Simulators** | Face the adversary early: the real meeting, then an out-of-character debrief | [salary negotiation](skills/salary-negotiation/SKILL.md) · [promotion committee](skills/the-promotion-committee/SKILL.md) · [thesis defence](skills/the-thesis-defense/SKILL.md) · [visa interview](skills/the-visa-interview/SKILL.md) |
+| 🧮 **Calculators** | Deterministic Python scripts and honest models, assumptions labelled | [rent vs buy](skills/rent-vs-buy/SKILL.md) · [FIRE number](skills/fire-number/SKILL.md) · [debt payoff](skills/debt-payoff/SKILL.md) · [raise vs jump](skills/raise-vs-jump/SKILL.md) |
+| 📡 **Live data** (17) | Real-time answers with **zero API keys** | [weather](skills/weather-now/SKILL.md) · [currency](skills/currency-rates/SKILL.md) · [flights](skills/flight-tracker/SKILL.md) · [is-it-down](skills/site-check/SKILL.md) |
+| 🏠 **Life admin** | The unglamorous logistics, done in order | [relocation](skills/relocation-planner/SKILL.md) · [new parent](skills/new-parent-logistics/SKILL.md) · [caregiving](skills/caregiver-coordination/SKILL.md) · [doctor visits](skills/doctor-visit-prep/SKILL.md) |
+| 💼 **Career moments** | The weeks that decide years | [layoff kit](plugins/pm-layoff/) · [resignation kit](plugins/pm-resignation/) · [PIP response](skills/pip-responder/SKILL.md) · [first 90 days as manager](skills/manager-first-90-days/SKILL.md) |
+| 🏛 **Dead mentors** (5) | History's sharpest operators, from public-domain classics | [Machiavelli on office politics](skills/machiavelli-counsel/SKILL.md) · [Sun Tzu on picking your fights](skills/sun-tzu-strategy-brief/SKILL.md) · [Franklin's decision algebra](skills/franklin-decision-ledger/SKILL.md) |
+| 🏛 **Life systems** (20) | The bureaucracies and emergencies people face alone | [voting-navigator](skills/voting-navigator/SKILL.md) · [disability-benefit-appeal](skills/disability-benefit-appeal/SKILL.md) · [go-bag-builder](skills/go-bag-builder/SKILL.md) |
+| 🧠 **Human edges** (20) | Neurodivergence, invisible illness, grief, identity | [masking-budget](skills/masking-budget/SKILL.md) · [spoon-planner](skills/spoon-planner/SKILL.md) · [grief-admin](skills/grief-admin/SKILL.md) |
+| ⚡ **New-gen** (10) | Creator deals, clips, D&D, ranked, resale | [creator-deal-decoder](skills/creator-deal-decoder/SKILL.md) · [clip-factory](skills/clip-factory/SKILL.md) · [ranked-climb-coach](skills/ranked-climb-coach/SKILL.md) |
+| 🔮 **2027** (10) | The agent era's operational skills | [agent-severance](skills/agent-severance/SKILL.md) · [deepfake-drill](skills/deepfake-drill/SKILL.md) · [context-bankruptcy](skills/context-bankruptcy/SKILL.md) |
+| 💭 **Thinking modes** (24) | Change *how* your AI reasons | [the-third-answer](skills/the-third-answer/SKILL.md) · [five-minds](skills/five-minds/SKILL.md) · [poke-holes-in-this](skills/poke-holes-in-this/SKILL.md) |
+| 🎯 **Focus** (26) | Get unstuck and run your own brain | [where-do-i-start](skills/where-do-i-start/SKILL.md) · [overwhelm-triage](skills/overwhelm-triage/SKILL.md) · [weekly-unstuck](skills/weekly-unstuck/SKILL.md) |
+| 💰 **Money** (15) | Educational, not financial advice | [index-fund-starter](skills/index-fund-starter/SKILL.md) · [ask-for-a-raise](skills/ask-for-a-raise/SKILL.md) · [annual-report-tutor](skills/annual-report-tutor/SKILL.md) |
+| 🎲 **Hobbies and tabletop** (17) | The genuinely fun stuff | [wine pairing](skills/wine-pairing/SKILL.md) · [rules-lawyer](skills/rules-lawyer/SKILL.md) · [stargazing](skills/stargazing-tonight/SKILL.md) |
+| 🤝 **Cowork** (100) | Office knowledge work, the frameworks ([bundle](plugins/pm-cowork/)) | [email triage](skills/email-triage-system/SKILL.md) · [spreadsheet audit](skills/spreadsheet-audit/SKILL.md) · [saying no kindly](skills/saying-no-kindly/SKILL.md) |
 
-### For professionals — 35 fields
+### For professionals: 35 fields
 
 | | | |
 |---|---|---|
@@ -266,69 +284,12 @@ Every skill follows the same discipline: what it produces, the inputs it needs, 
 | <img src="web/docs-assets/logos/pm-design.svg" width="20" alt=""/> [Design & UX](plugins/pm-design/) | <img src="web/docs-assets/logos/pm-legal.svg" width="20" alt=""/> [Legal](plugins/pm-legal/) | <img src="web/docs-assets/logos/pm-finance.svg" width="20" alt=""/> [Finance](plugins/pm-finance/) |
 | <img src="web/docs-assets/logos/pm-founders.svg" width="20" alt=""/> [Founders](plugins/pm-founders/) | <img src="web/docs-assets/logos/pm-security.svg" width="20" alt=""/> [Security](plugins/pm-security/) | <img src="web/docs-assets/logos/pm-gov.svg" width="20" alt=""/> [Government](plugins/pm-gov/) |
 
-…plus HR, sales, operations, research, healthcare, educators, writers, social media, and more — **[the full profession index](SKILLS.md)**, or by bundle in [`plugins/`](plugins/) (142 bundles). Install any bundle: `/plugin install pm-decoders@pm-claude-skills`.
-
-### Meta
-
-Before installing *anyone's* skills (including these): [skill-vetting](skills/skill-vetting/SKILL.md) — a security read for SKILL.md files. The library's own standard lives in [SKILLSPEC.md](SKILLSPEC.md); every skill's level is enforced in CI.
+…plus HR, sales, operations, research, healthcare, educators, writers and more: **[the full profession index](SKILLS.md)**, or by bundle in [`plugins/`](plugins/) (142 bundles). Install any bundle: `/plugin install pm-decoders@pm-claude-skills`. Before installing *anyone's* skills, including these: [skill-vetting](skills/skill-vetting/SKILL.md).
 
 </details>
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 💭 [pm-thinking](plugins/pm-thinking/) — think better
-For when the model is *too* correct and gives you the average answer:
-- [the-third-answer](skills/the-third-answer/SKILL.md) — skip the obvious, find the idea worth having
-- [five-minds](skills/five-minds/SKILL.md) — one question, five clashing minds, then converge
-- [decision-panel](skills/decision-panel/SKILL.md) — your call, judged by five advisors
-- [red-team-my-plan](skills/red-team-my-plan/SKILL.md) — attack it before reality does
-
-</td>
-<td width="50%" valign="top">
-
-### 🎯 [pm-focus](plugins/pm-focus/) — get unstuck
-ADHD-friendly executive function, useful for every brain:
-- [where-do-i-start](skills/where-do-i-start/SKILL.md) — chaos → one next action
-- [task-to-first-step](skills/task-to-first-step/SKILL.md) — beat activation-energy paralysis
-- [overwhelm-triage](skills/overwhelm-triage/SKILL.md) — everything urgent → a calm short list
-- [should-i-send-this](skills/should-i-send-this/SKILL.md) — catch the message you'd regret
-
-</td>
-</tr>
-</table>
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-### 🚀 [pm-oss-launch](plugins/pm-oss-launch/): ship your side project
-From "works on my machine" to a repo strangers install, trust and contribute to:
-- [readme-benefit-writer](skills/readme-benefit-writer/SKILL.md): every feature as a benefit, plus a Your data section
-- [demo-data-generator](skills/demo-data-generator/SKILL.md): a seeded, no-signup demo with no real personal data
-- [self-host-packager](skills/self-host-packager/SKILL.md): one-command Docker self-hosting with backups and upgrades
-- [readonly-mcp-wrapper](skills/readonly-mcp-wrapper/SKILL.md): a read-only MCP server over your docs folder
-
-Plus importers, good first issues, a licence audit, fortnightly releases and the 20-second demo clip. Install: `/plugin install pm-oss-launch@pm-claude-skills`
-
-</td>
-<td width="50%" valign="top">
-
-### 🧊 [pm-3d-explorer](plugins/pm-3d-explorer/): topic in, 3D explorer out
-Turn any topic into an interactive 3D page learners can take apart:
-- [explorer-interface-brief](skills/explorer-interface-brief/SKILL.md): the UI brief and an image prompt for the mock
-- [model-prompt-pack](skills/model-prompt-pack/SKILL.md): image-to-3D prompts and a parts list where every label has a source
-- [explorer-viewer-builder](skills/explorer-viewer-builder/SKILL.md): a single-file Three.js viewer with exploded view and quiz mode
-- [explorer-pipeline](skills/explorer-pipeline/SKILL.md): runs all three in order with a build checklist
-
-Install: `/plugin install pm-3d-explorer@pm-claude-skills`
-
-</td>
-</tr>
-</table>
-
-## 🔍 What does a skill look like?
+<details>
+<summary><b>🔍 What does a skill look like?</b></summary>
 
 <!-- AEO Answer Capsule — 62 words -->
 A skill is a single markdown file with a name, a description that tells the assistant when to activate it, and a body containing the working framework: required inputs, decision rules or severity scales, a concrete output template, quality checks, and anti-patterns. The assistant reads it and gains the judgment; humans can read, audit, and edit the same file. No runtime, no lock-in.
@@ -341,130 +302,85 @@ description: "Decode a residential lease into plain English and rank the
   clauses that can hurt you. Use when someone asks 'what am I signing'…"
 ---
 ## Framework: Severity Scale
-- 🔴 Can cost you real money — auto-renewal into a full new term, break
+- 🔴 Can cost you real money: auto-renewal into a full new term, break
   penalties beyond re-rental costs, deposit conditions written to fail…
 ```
 
-That's the whole trick. It's markdown. Your agent reads it and gains the judgment; you can audit it, edit it, or [write your own](SKILL-AUTHORING-STANDARD.md).
-
-## ✅ Quality, not just quantity
-
-| | |
-|---|---|
-| **Structure** | every skill passes the [SkillSpec](SKILLSPEC.md) L3 gate — framework, quality checks, anti-patterns — on every commit |
-| **Evidence** | [eval-scored](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html): 208 outputs, avg 4.8/5, judged blind. The [benchmark report](skillbench/REPORT.md) publishes the negative findings too |
-| **Trust** | [risk tiers](docs/RISK-TIERS.md) on every skill · an [expert-review program](docs/EXPERT-REVIEW-PROGRAM.md) with a harm-ranked [queue](docs/HUMAN-REVIEW-QUEUE.md) · a [vendor-neutrality gate](docs/vendor-requests.md) · a security audit in CI |
-| **Honesty** | decoders end with a not-advice line, calculators name what they don't model, simulators debrief out of character, and skills that shouldn't ghostwrite (your kid's college essay) coach instead |
-
-## 🎁 Beyond the skills
-
-| | |
-|---|---|
-| **Explore** | [📄 one-page cheatsheet](https://mohitagw15856.github.io/pm-claude-skills/cheatsheet.html) · [📸 gallery](docs/GALLERY.md) · [🏛 anti-pattern museum](https://mohitagw15856.github.io/pm-claude-skills/museum.html) (2,900+ rules) · [📖 the handbook](https://mohitagw15856.github.io/pm-claude-skills/handbook.html) (also a [printed book](docs/print/)) · [🎯 skill router](https://mohitagw15856.github.io/pm-claude-skills/router.html) |
-| **Run** | [workflow recipes](WORKFLOWS.md) · [journeys](JOURNEYS.md) (a pack as one guided session) · [subagents & slash commands](agents/) · [MCP server + REST API](mcp-remote/) · [n8n / Slack / Obsidian](connectors/) · [the Boardroom](https://mohitagw15856.github.io/pm-claude-skills/boardroom.html) |
-| **Save** | [pm-tokens](plugins/pm-tokens) — 30–60% off a session's token flow, stdlib Python, nothing leaves your machine ([how-to](docs/SAVE-TOKENS.md), [🪙 dashboard](https://mohitagw15856.github.io/pm-claude-skills/tokens.html)) · `npx pm-claude-skills mcp-audit` — what your MCP servers charge you in rent |
-| **Prove** | `npx pm-claude-skills prove --skill ./my-skill --tasks tasks.txt` — paired A/B with real token counts and a sha-pinned receipt, because "65% better!" is not a measurement · [SkillBench](skillbench/) · [route-bench](skillbench/reports/route-bench.md) |
-| **Work** | [pm-cowork](plugins/pm-cowork) (100 skills for office knowledge work) · [pm-seatbelt](plugins/pm-seatbelt) (agent safety pre-flight) · [Org Edition](org/) · [🇪🇸 🇫🇷 🇨🇳 🇯🇵 translations](skills-i18n/) · [offline bundle](OFFLINE-README.md) |
+That's the whole trick. It's markdown: audit it, edit it, or [write your own](SKILL-AUTHORING-STANDARD.md).
+</details>
 
 <details>
-<summary><b>Lint your own skills in CI</b></summary>
-
-```yaml
-- uses: mohitagw15856/pm-claude-skills@v79
-  with:
-    path: .claude/skills   # optional — it finds them otherwise
-```
-
-Checks frontmatter, the `Use when …` trigger clause a model actually matches on, leftover template text, and structure — and annotates each finding inline on the PR diff. Also `npx pm-claude-skills skillcheck`. Zero dependencies, no model call.
-
-**Companion tools** for the bits a skill shouldn't guess — both MIT, zero-dependency, no model call: **[notugly](https://github.com/mohitagw15856/notugly)** (contrast and design-system checks the design skills call instead of estimating) and **[rulebook](https://github.com/mohitagw15856/rulebook)** (37 games, 203 rulings, for the board-game skills).
-</details>
-
-## 🚫 What PM Skills is not
+<summary><b>✅ Quality, honesty and what PM Skills is not</b></summary>
 
 | | |
 |---|---|
-| **Not an agent framework.** | Skills are instructions your existing assistant reads. There is no runtime to host. |
-| **Not a prompt pack.** | Every skill has required inputs, an output format, quality checks and anti-patterns, and is gated in CI. |
-| **Not only for product managers.** | PM stands for Professional. Most of the library is life admin and 35 professions. |
-| **Not a substitute for a professional.** | The legal, medical and financial skills prepare you for that conversation. They do not replace it. |
-| **Not tied to one vendor.** | The same skill exports to 12 platforms and is served over MCP. |
-| **Not a hosted service.** | The playground and the MCP endpoint are optional. Everything works from files on your machine. |
+| **Structure** | every skill passes the [SkillSpec](SKILLSPEC.md) L3 gate on every commit |
+| **Evidence** | [eval-scored](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html): 208 outputs, average 4.8/5, judged blind; the [benchmark report](skillbench/REPORT.md) publishes the negative findings too |
+| **Trust** | [risk tiers](docs/RISK-TIERS.md) on every skill · an [expert-review programme](docs/EXPERT-REVIEW-PROGRAM.md) · a [vendor-neutrality gate](docs/vendor-requests.md) · a security audit in CI |
+| **Honesty** | decoders end with a not-advice line, calculators name what they don't model, simulators debrief out of character |
 
-## ❓ Straight answers
-
-<details><summary><b>Is it actually free?</b></summary>
-Yes — MIT, all 1235 skills, forever. The skills are markdown; there is nothing to gate. Sponsors fund the playground's free model runs, not access.
-</details>
-<details><summary><b>Do I need an API key?</b></summary>
-Not to browse, read, install, or use skills inside a tool you already have. The playground serves a few sponsor-funded free runs a day. A key only matters for optional extras: running skills from CI, or the typed decision layer (which falls back to keyword routing without one).
-</details>
-<details><summary><b>The catalog says 1235 but the folder has more. Which is it?</b></summary>
-Both. There are <b>1188</b> directories under <code>skills/</code>; <b>12</b> of them are <a href="docs/DEPRECATION.md">deprecated</a> (marked in their frontmatter, each pointing at the skill that replaced it). They stay on disk so an old install command or a bookmarked name never breaks, and they are hidden from the catalog, the playground and the headline count. 1235 is what a person can browse; 1178 is what an installer can resolve.
-</details>
-<details><summary><b>I'm not a product manager. Is this for me?</b></summary>
-PM stands for <i>Professional</i> here. Most of the library is decoders for leases and medical bills, salary-negotiation practice, career-moment kits, life admin, and 35 professions from teaching to veterinary. The product-management corner is just where it started.
-</details>
-<details><summary><b>Will this mess with my existing setup?</b></summary>
-No. Skills are inert text files in a folder; your assistant reads them when relevant. Remove the folder and it's like they were never there.
-</details>
-<details><summary><b>How do I know these are any good?</b></summary>
-Every skill passes a structural gate (SkillSpec L3) and a security scan in CI; 208 outputs are <a href="https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html">eval-scored in the open</a> (avg 4.8/5), and the <a href="skillbench/REPORT.md">benchmark report</a> publishes the negative findings too. When something is machine-translated or unscored, it's labelled.
+**Not** an agent framework (there is no runtime), **not** a prompt pack (every skill is gated in CI), **not** only for product managers, **not** a substitute for a professional, **not** tied to one vendor, and **not** a hosted service.
 </details>
 
-## 🌳 The tech tree
+<details>
+<summary><b>🎁 Beyond the skills</b></summary>
 
-**[Open the tech tree →](https://mohitagw15856.github.io/pm-claude-skills/tech-tree/)** The whole library drawn as a strategy-game research tree: every bundle is a branch, every skill a node. Shipped skills are *researched*, the three most-voted requests are *in research*, and the rest are *proposed*. Search any skill, click it for its description, and copy its install command.
+| | |
+|---|---|
+| **Explore** | [cheatsheet](https://mohitagw15856.github.io/pm-claude-skills/cheatsheet.html) · [gallery](docs/GALLERY.md) · [anti-pattern museum](https://mohitagw15856.github.io/pm-claude-skills/museum.html) · [the handbook](https://mohitagw15856.github.io/pm-claude-skills/handbook.html) · [skill router](https://mohitagw15856.github.io/pm-claude-skills/router.html) · [Wrapped](https://mohitagw15856.github.io/pm-claude-skills/wrapped.html) |
+| **Run** | [workflow recipes](WORKFLOWS.md) · [journeys](JOURNEYS.md) · [subagents and slash commands](agents/) · [MCP server and REST API](mcp-remote/) · [n8n, Slack, Obsidian](connectors/) · [the Boardroom](https://mohitagw15856.github.io/pm-claude-skills/boardroom.html) |
+| **Save** | [pm-tokens](plugins/pm-tokens): 30 to 60% off a session's token flow · `npx pm-claude-skills mcp-audit`: what your MCP servers cost you |
+| **Prove** | `npx pm-claude-skills prove --skill ./my-skill --tasks tasks.txt` · [SkillBench](skillbench/) and its [Chinese task set](https://mohitagw15856.github.io/pm-claude-skills/modelbench.html?set=zh) |
+| **Lint your own skills** | `- uses: mohitagw15856/pm-claude-skills@v79` in a workflow, or `npx pm-claude-skills skillcheck` |
+</details>
 
-- **Rebuild the data:** `node scripts/build-tech-tree.mjs` reads `.claude-plugin/marketplace.json` and `plugins/`, and writes `site/tech-tree/data.json`.
-- **Refresh the votes:** `node scripts/build-tech-tree.mjs --refresh-votes` counts 👍 reactions on open [`skill-request`](https://github.com/mohitagw15856/pm-claude-skills/issues?q=is%3Aissue+is%3Aopen+label%3Askill-request) issues and updates `site/tech-tree/votes.json`. To vote, react to a request or [open one](https://github.com/mohitagw15856/pm-claude-skills/issues/new?labels=skill-request&title=Skill:%20).
-- **Preview locally:** `npx serve site/tech-tree` (or `python3 -m http.server -d site/tech-tree`), then open the address it prints. Opening the file directly will not load `data.json`.
-- **GitHub Pages:** the *Deploy Skill Playground* workflow rebuilds the tree and publishes it at `/tech-tree/` on every push to `main`. In a fork, turn on Pages under **Settings → Pages → Source: GitHub Actions**, and the same workflow publishes it. The page is a single HTML file plus `data.json`, so any static host works too.
+<details>
+<summary><b>❓ Straight answers</b></summary>
 
-## 🗺️ Roadmap
+**Is it actually free?** Yes: MIT, all 1235 skills, forever. Sponsors fund the playground's free model runs, not access.
 
-- ✅ Exports to 12 platforms and one install command
-- ✅ MCP server, subagents and slash commands
-- ✅ Quality gates in CI: structure, security, duplicates, drift
-- ✅ The decision layer and the promote loop
-- ✅ The design taste pipeline
-- ⚪ Published eval scores for more skills
-- ⚪ A promotion round for the Production-Ready tier
-- ⚪ Merging the near-duplicate skills still marked as pending
-- ⚪ Translated skill descriptions, done at scale or retired
+**Do I need an API key?** Not to browse, read, install or use skills inside a tool you already have. The playground serves a few free runs a day.
 
-Direction, not a contract. Details and good first issues: **[ROADMAP.md](ROADMAP.md)**.
+**The catalog says 1235 but the folder has more.** There are 1247 folders under `skills/`; 12 are [deprecated](docs/DEPRECATION.md) aliases that point at their replacements, kept so old install commands never break.
 
-## 🔒 Privacy and telemetry
+**Will this mess with my setup?** No. Skills are inert text files; remove the folder and they're gone.
 
-Off by default. A skill is a text file and sends nothing.
+**How do I know these are any good?** Every skill passes a structural gate and a security scan in CI, 208 outputs are [eval-scored in the open](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html), and anything machine-translated or unscored is labelled.
+</details>
 
-| What | Default | Detail |
-|---|---|---|
-| Skills, CLI, exports | Nothing is sent | Plain files on your machine |
-| Usage counter | Off | Opt in with `PM_SKILLS_TELEMETRY=1`. It sends the skill name and nothing else |
-| Playground and hosted MCP | Only if you use them | Your prompt goes to the model provider you choose |
+<details>
+<summary><b>🌳 The tech tree, the roadmap and privacy</b></summary>
 
-The full statement, including the handler you can read: **[docs/TELEMETRY.md](docs/TELEMETRY.md)** and **[SECURITY.md](SECURITY.md)**.
+**[The tech tree](https://mohitagw15856.github.io/pm-claude-skills/tech-tree/)** draws every bundle as a branch and every skill as a node. Shipped skills are *researched*, the three most-voted requests are *in research*, and the rest are *proposed*. Rebuild it with `node scripts/build-tech-tree.mjs`; refresh votes from [`skill-request`](https://github.com/mohitagw15856/pm-claude-skills/issues?q=is%3Aissue+is%3Aopen+label%3Askill-request) issues with `--refresh-votes`; preview with `npx serve site/tech-tree`. The *Deploy Skill Playground* workflow publishes it to GitHub Pages at `/tech-tree/`; in a fork, turn on **Settings → Pages → Source: GitHub Actions**.
+
+**Roadmap:** ✅ 12 platforms and one install command · ✅ MCP server, subagents and slash commands · ✅ CI gates for structure, security, duplicates and drift · ✅ the decision layer, the promote loop and design taste · ⚪ published eval scores for more skills · ⚪ merging the remaining near-duplicates. Details: **[ROADMAP.md](ROADMAP.md)**.
+
+**Privacy:** off by default. Skills, the CLI and exports send nothing. The usage counter is opt-in (`PM_SKILLS_TELEMETRY=1`, skill name only). The playground and hosted MCP send your prompt only to the model provider you choose. Full statement: **[docs/TELEMETRY.md](docs/TELEMETRY.md)** · **[SECURITY.md](SECURITY.md)**.
+</details>
 
 ## 🤝 Contributing
 
 <p align="center">
   <a href="CONTRIBUTING.md">
-    <img src="web/docs-assets/footer.svg" width="100%" alt="The library grows a skill at a time — plant one of your own. One markdown file, one PR." />
+    <img src="web/docs-assets/footer.svg" width="100%" alt="The library grows a skill at a time: plant one of your own. One markdown file, one PR." />
   </a>
 </p>
 
-Add a skill via PR ([the standard](SKILL-AUTHORING-STANDARD.md), [CONTRIBUTING](CONTRIBUTING.md)), request one via issue, or publish your own repo to the [community index](community/). Translations follow [`skills-i18n/`](skills-i18n/).
+Add a skill by PR ([the standard](SKILL-AUTHORING-STANDARD.md), [CONTRIBUTING](CONTRIBUTING.md)), [request one](https://github.com/mohitagw15856/pm-claude-skills/issues/new?labels=skill-request&title=Skill:%20) and watch it appear on the tech tree, or claim a [good first translation](https://github.com/mohitagw15856/pm-claude-skills/labels/good%20first%20translation). 中文贡献者：[Gitee Issue](https://gitee.com/mohitagw/pm-claude-skills/issues) 也可以。
 
-## ❤️ Support
+<p align="center">
+  <a href="https://star-history.com/#mohitagw15856/pm-claude-skills&Date">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=mohitagw15856/pm-claude-skills&type=Date&theme=dark">
+      <img src="https://api.star-history.com/svg?repos=mohitagw15856/pm-claude-skills&type=Date" width="70%" alt="Star history chart" />
+    </picture>
+  </a>
+</p>
 
-If a skill saved you real money or a real mistake, **[star the repo](https://github.com/mohitagw15856/pm-claude-skills/stargazers)** — it's how others find it. Sponsors fund the playground's free runs and get [naming rights, not influence](docs/SPONSORSHIP.md): **[become a sponsor](https://github.com/sponsors/mohitagw15856)**. Organisations: a clearly-disclosed logo and link only, never product integration — [email me](mailto:mohit15856@gmail.com).
+If a skill saved you real money or a real mistake, **[star the repo](https://github.com/mohitagw15856/pm-claude-skills/stargazers)**: it's how others find it. Sponsors fund the playground's free runs and get [naming rights, not influence](docs/SPONSORSHIP.md): **[become a sponsor](https://github.com/sponsors/mohitagw15856)**.
 
-## 📄 License
-
-MIT — use them, fork them, ship them at work. Skills are judgment, and judgment wants to be free.
+**MIT.** Use them, fork them, ship them at work. Skills are judgment, and judgment wants to be free.
 
 ---
 
-*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 1235 skills · 142 bundles · 35 professions · every commit gated. The long version — every feature, wave, and frontier bet — lives in the **[Showcase](docs/SHOWCASE.md)**.*
+*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 1235 skills · 142 bundles · 35 professions · every commit gated. The long version lives in the **[Showcase](docs/SHOWCASE.md)**.*

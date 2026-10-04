@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="170" viewBox="0 0 860 170" role="img" aria-label="How it works: say what you need, one skill loads, you get finished work">
+  <style>
+    text{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', Helvetica, Arial, sans-serif}
+    .n{font-size:20px;font-weight:600;fill:#f7f4ee}
+    .h{font-size:16px;font-weight:600;fill:#1f2328}
+    .s{font-size:13px;fill:#5d6670}
+    @keyframes travel{0%{transform:translateX(0);opacity:0}6%{opacity:1}44%{transform:translateX(290px)}50%{transform:translateX(290px)}94%{transform:translateX(580px);opacity:1}100%{transform:translateX(580px);opacity:0}}
+    .dot{animation:travel 4.5s ease-in-out infinite}
+    @keyframes pulse{0%,100%{r:24}50%{r:27}}
+    .ring{animation:pulse 2.2s ease-in-out infinite}
+    @media (prefers-reduced-motion: reduce){.dot,.ring{animation:none}}
+  </style>
+  <rect width="860" height="170" rx="18" fill="#f7f4ee"/>
+  <path d="M140 62H720" stroke="#e3ddd2" stroke-width="3" stroke-linecap="round"/>
+  <circle class="dot" cx="140" cy="62" r="7" fill="#c46f1f"/>
+  <circle class="ring" cx="140" cy="62" r="24" fill="#c46f1f" style="animation-delay:0s"/>
+  <text x="140" y="69" text-anchor="middle" class="n">1</text>
+  <text x="140" y="118" text-anchor="middle" class="h">Say what you need</text>
+  <text x="140" y="140" text-anchor="middle" class="s">in your own words, any language</text>
+  <circle class="ring" cx="430" cy="62" r="24" fill="#c46f1f" style="animation-delay:0.7s"/>
+  <text x="430" y="69" text-anchor="middle" class="n">2</text>
+  <text x="430" y="118" text-anchor="middle" class="h">One skill loads</text>
+  <text x="430" y="140" text-anchor="middle" class="s">a markdown file, read only when it fits</text>
+  <circle class="ring" cx="720" cy="62" r="24" fill="#2f6f5e" style="animation-delay:1.4s"/>
+  <text x="720" y="69" text-anchor="middle" class="n">3</text>
+  <text x="720" y="118" text-anchor="middle" class="h">Finished work</text>
+  <text x="720" y="140" text-anchor="middle" class="s">the document, not advice about it</text>
+</svg>

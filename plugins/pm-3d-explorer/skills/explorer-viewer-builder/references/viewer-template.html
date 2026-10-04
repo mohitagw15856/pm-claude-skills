@@ -131,12 +131,13 @@ function registerParts() {
 
 function frame(centre, size) {
   controls.target.copy(centre);
-  camera.position.copy(centre).add(new THREE.Vector3(size * 0.6, size * 0.45, size * 0.8));
+  // Leave room for the exploded view, which pushes parts out by a quarter of the model's size.
+  camera.position.copy(centre).add(new THREE.Vector3(size * 0.95, size * 0.7, size * 1.25));
   camera.near = size / 100; camera.far = size * 20; camera.updateProjectionMatrix();
   controls.saveState();
 }
 
-function highlight(p, on) { if (p?.mesh.material.emissive) p.mesh.material.emissive.setHex(on ? 0x5a3c00 : 0x000000); }
+function highlight(p, on) { if (p?.mesh.material.emissive) p.mesh.material.emissive.setHex(on ? 0x8a5200 : 0x000000); }
 
 function choose(p) {
   if (quiz) return answer(p);
