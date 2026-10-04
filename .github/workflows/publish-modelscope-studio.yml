@@ -7,8 +7,8 @@ name: Publish playground to ModelScope Studio
 #   1. Create a Studio on ModelScope (for example mohitagw15856/pm-skills-playground).
 #   2. Reuse the secret MODELSCOPE_TOKEN (write access) and MODELSCOPE_HOST.
 #   3. Add the variable MODELSCOPE_STUDIO (owner/name).
-#   4. After the first push, choose Static as the deployment type in the Studio's
-#      settings, with index.html as the entry file, and deploy.
+#   4. After the first push, choose Static as the deployment framework in the Studio's
+#      settings and deploy. That writes ms_deploy.json, which later syncs keep.
 # The social images (web/og), the docs assets and the full-text dump are left out
 # to keep the Studio small; links to them fall back to GitHub Pages.
 
@@ -66,7 +66,8 @@ jobs:
           git config --global credential.helper '!f() { echo "username=oauth2"; echo "password=${MODELSCOPE_TOKEN}"; }; f'
           git lfs install
           git clone --depth 1 "https://${MODELSCOPE_HOST}/studios/${MODELSCOPE_STUDIO}.git" studio
-          find studio -mindepth 1 -maxdepth 1 ! -name .git ! -name .gitattributes -exec rm -rf {} +
+          # Keep the Studio's own deployment config (ms_deploy.json: sdk_type static), set in its settings page.
+          find studio -mindepth 1 -maxdepth 1 ! -name .git ! -name .gitattributes ! -name ms_deploy.json -exec rm -rf {} +
           rsync -a --exclude 'og/' --exclude 'docs-assets/' --exclude 'llms-full.txt' web/ studio/
           cp integrations/modelscope-studio/README.md studio/README.md
           cd studio
