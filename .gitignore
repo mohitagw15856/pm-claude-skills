@@ -19,6 +19,8 @@ web/coverage.html
 web/skill/
 web/sitemap.xml
 web/robots.txt
+# Live README cards (rebuilt on every deploy and daily by deploy-playground.yml)
+web/live/
 
 # vercel-labs `skills` CLI install artifacts (if run inside the repo)
 .agents/

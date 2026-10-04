@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>拜年语生成器 · 选对象、选语气，一键复制 | PM Skills</title>
+<meta name="description" content="给长辈、领导、同事、客户、朋友、老师写拜年话：选对象、语气和生肖年份，生成一条得体的新春祝福，一键复制。全部在浏览器里完成，不调用 AI，不上传任何内容。" />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/bainian.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .bn-wrap { max-width: 680px; margin: 0 auto; padding: 16px 22px 70px; }
+  .bn-wrap h1 { font-size: 26px; margin-bottom: 6px; }
+  .lead { color: var(--muted); line-height: 1.6; }
+  .panel { border: 1px solid var(--border); border-radius: 16px; background: var(--panel); padding: 20px 22px; margin: 20px 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px 16px; }
+  .field label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .field select, .field input { width: 100%; box-sizing: border-box; border: 1px solid var(--border); background: var(--bg); color: var(--text); border-radius: 10px; padding: 10px 12px; font-size: 15px; }
+  fieldset { border: 0; margin: 16px 0 0; padding: 0; }
+  legend { font-size: 13px; color: var(--muted); margin-bottom: 8px; padding: 0; }
+  .tones { display: flex; flex-wrap: wrap; gap: 8px; }
+  .tones label { border: 1px solid var(--border); border-radius: 999px; padding: 8px 14px; cursor: pointer; font-size: 14px; }
+  .tones input { margin: 0 6px 0 0; accent-color: var(--accent); }
+  .out { white-space: pre-wrap; font-size: 16px; line-height: 1.8; min-height: 120px; }
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; align-items: center; }
+  .btn { display: inline-block; border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 10px; padding: 10px 16px; cursor: pointer; font-size: 14.5px; text-decoration: none; }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .count { color: var(--muted); font-size: 12.5px; margin-left: auto; }
+  .note { color: var(--muted); font-size: 13px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="工具"></nav>
+<main class="bn-wrap">
+  <h1>🧧 拜年语生成器</h1>
+  <p class="lead">选好发给谁、想要什么语气、哪一年，就能得到一条拜年话。不调用 AI，不上传任何内容，全部在你的浏览器里完成。发出去之前，记得改成你自己的话。</p>
+
+  <form class="panel" id="form" onsubmit="return false">
+    <div class="grid">
+      <div class="field">
+        <label for="who">发给谁</label>
+        <select id="who">
+          <option value="elder">长辈</option>
+          <option value="boss">领导</option>
+          <option value="colleague">同事</option>
+          <option value="client">客户</option>
+          <option value="friend" selected>朋友</option>
+          <option value="teacher">老师</option>
+          <option value="partner">爱人</option>
+          <option value="junior">晚辈、孩子</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="year">生肖年份</label>
+        <select id="year"></select>
+      </div>
+      <div class="field">
+        <label for="name">对方称呼（可选）</label>
+        <input id="name" type="text" maxlength="20" placeholder="例如：王总、李老师" autocomplete="off" />
+      </div>
+      <div class="field">
+        <label for="sign">你的署名（可选）</label>
+        <input id="sign" type="text" maxlength="20" placeholder="例如：小陈" autocomplete="off" />
+      </div>
+    </div>
+    <fieldset>
+      <legend>语气</legend>
+      <div class="tones">
+        <label><input type="radio" name="tone" value="formal" />正式得体</label>
+        <label><input type="radio" name="tone" value="warm" checked />温暖走心</label>
+        <label><input type="radio" name="tone" value="playful" />轻松俏皮</label>
+      </div>
+    </fieldset>
+  </form>
+
+  <section class="panel" aria-labelledby="outTitle">
+    <h2 id="outTitle" style="font-size:15px;color:var(--muted);margin:0 0 10px;font-weight:600">你的拜年话</h2>
+    <div class="out" id="out" aria-live="polite"></div>
+    <div class="actions">
+      <button type="button" class="btn primary" id="copyBtn">复制</button>
+      <button type="button" class="btn" id="nextBtn">换一条</button>
+      <span class="count" id="count"></span>
+    </div>
+  </section>
+
+  <p class="note">想要更贴合对方的版本？在你的 AI 助手里装上 <a href="https://github.com/mohitagw15856/pm-claude-skills">PM Skills</a>，告诉它对方是谁、你们今年一起经历了什么，它会帮你写一条只属于你们的拜年话。年终总结也可以试试 <a href="skill/cn-weekly-report.html">cn-weekly-report</a>。</p>
+</main>
+<script>
+// Lunar New Year dates match data/solar-terms.json.
+const YEARS = [
+  { y: 2026, z: '马', cj: '2026-02-17' },
+  { y: 2027, z: '羊', cj: '2027-02-06' },
+  { y: 2028, z: '猴', cj: '2028-01-26' },
+  { y: 2029, z: '鸡', cj: '2029-02-13' },
+  { y: 2030, z: '狗', cj: '2030-02-03' },
+];
+const ZODIAC = {
+  马: { formal: '马到成功、龙马精神', warm: '马年一路顺风顺水', playful: '马年好运马上到' },
+  羊: { formal: '三阳开泰、吉祥如意', warm: '羊年喜气洋洋、事事顺心', playful: '羊年喜气洋洋，好运咩咩来' },
+  猴: { formal: '灵猴献瑞、万事如意', warm: '猴年平安顺遂', playful: '猴年机灵过人，好运连连' },
+  鸡: { formal: '金鸡报晓、大吉大利', warm: '鸡年吉祥安康', playful: '鸡年大吉，一鸣惊人' },
+  狗: { formal: '金犬迎春、福寿安康', warm: '狗年平安旺旺', playful: '狗年旺旺旺，好运汪汪来' },
+};
+const WHO = {
+  elder: { sal: '敬爱的长辈', you: '您' },
+  boss: { sal: '尊敬的领导', you: '您' },
+  colleague: { sal: '亲爱的伙伴', you: '你' },
+  client: { sal: '尊敬的客户', you: '您' },
+  friend: { sal: '老朋友', you: '你' },
+  teacher: { sal: '敬爱的老师', you: '您' },
+  partner: { sal: '亲爱的', you: '你' },
+  junior: { sal: '小朋友', you: '你' },
+};
+const BODY = {
+  elder: {
+    formal: ['感谢您一直以来的关爱与操劳。新的一年，恭祝您身体康健、福寿安康。', '过去一年承蒙您的牵挂与教诲。新春佳节，敬祝您福如东海、寿比南山。'],
+    warm: ['这一年您又为我们操了不少心，过年一定要好好歇一歇。愿您身体硬朗，天天开心，我们会常回家看您。', '每次打电话您都先问我吃好没有。新年里也请您照顾好自己，少熬夜，多走走，健健康康就是全家最大的福气。'],
+    playful: ['新年任务只有一条：吃好、睡好、心情好！健康长寿这件事，您可得亲自负责。', '今年请继续担任全家的精神头担当！祝您越活越年轻，跳舞领头的位置稳稳的。'],
+  },
+  boss: {
+    formal: ['感谢您过去一年的信任与指导，让我在工作中收获良多。新的一年，恭祝您身体健康、阖家幸福，事业更上一层楼。', '一年来承蒙您悉心带领，团队的每一点进步都离不开您的支持。新春之际，敬祝您新年快乐、万事顺意。'],
+    warm: ['这一年跟着您学到的，不只是做事的方法，还有做事的态度。新年祝您少些加班，多些陪家人的时间，工作顺心，生活舒心。', '谢谢您在我卡住的时候给的那些点拨。新的一年我会继续努力，也祝您和家人平安喜乐。'],
+    playful: ['新年愿望：方案一次过，会议都准时，您的日程表多留点空白。祝领导新年快乐，带我们继续赢！', '过去一年辛苦您带队冲锋！新年祝您目标全达成、预算都充足、假期不被打扰。'],
+  },
+  colleague: {
+    formal: ['感谢过去一年的协作与支持，和你共事是一件很愉快的事。新的一年，祝工作顺利、阖家安康。', '一年来并肩作战，辛苦了。新春之际，祝你新年快乐、前程似锦。'],
+    warm: ['这一年多亏有你搭把手，好几次赶进度都是一起熬过来的。新年好好休息，回来我们一起做成更多事。', '谢谢你总在关键时刻接住我的球。新年快乐，愿你新的一年少点焦虑，多点成就感。'],
+    playful: ['新的一年，祝我们需求不改、系统不挂、周报一遍过！年后奶茶我请。', '新年快乐！愿你今年升职加薪一个不落，下班准点一天不少。'],
+  },
+  client: {
+    formal: ['感谢您过去一年的信任与支持，我们的合作因您而更加顺畅。新的一年，恭祝生意兴隆、事业蒸蒸日上。', '承蒙您一直以来的厚爱与支持。值此新春，谨祝您及家人新年快乐、万事如意，期待来年继续携手共赢。'],
+    warm: ['这一年的合作里，您的理解和耐心让我们少走了很多弯路。新年祝您和团队顺顺利利，我们会继续把每件事做好。', '谢谢您这一年的信任，每一次反馈我们都认真记着。新年快乐，愿您生意红火，家人安康。'],
+    playful: ['新年祝您订单多到接不过来，回款快到来不及数！来年继续一起把事情做漂亮。', '新年快乐！愿您今年财源滚滚、合作顺顺、需求都是好需求。'],
+  },
+  friend: {
+    formal: ['多年情谊，常记于心。新春佳节，祝你新年快乐、身体健康、万事顺遂。', '又是一年春来到。愿新的一年里你事业有成、家庭美满，我们常联系。'],
+    warm: ['今年见得少，但想起你总觉得踏实。新的一年，忙也别忘了照顾自己，有空一起吃顿饭。', '一年又一年，谢谢你还在。新年快乐，愿你想要的都在路上，烦恼都留在去年。'],
+    playful: ['新年快乐！祝你暴富、好睡、不长胖，三个愿望至少实现两个。', '新的一年，祝你钱包鼓鼓、头发浓密、快乐多到溢出来！年后约饭，不许放鸽子。'],
+  },
+  teacher: {
+    formal: ['感谢您的悉心教导，师恩难忘。新春佳节，恭祝老师身体健康、桃李满天下。', '一年来承蒙您耐心指点，受益匪浅。值此新春，敬祝您新年快乐、阖家幸福。'],
+    warm: ['您当年那句鼓励，我到现在还记得。新的一年，祝您身体健康，少些操劳，多些属于自己的时光。', '谢谢您一直以来的耐心和包容。新年快乐，愿您每天都有好心情。'],
+    playful: ['新年快乐！祝老师今年作业批得快、学生都争气、假期一天都不少。', '给最好的老师拜年啦！愿您新的一年学生越来越争气，烦恼越来越少。'],
+  },
+  partner: {
+    formal: ['谢谢你这一年的陪伴与包容。新的一年，愿我们携手同行，平安喜乐。', '又一年和你一起走过。新春快乐，愿我们的日子越过越好。'],
+    warm: ['这一年有你在，再难的时候也觉得有底气。新年想对你说：辛苦了，以后的每一年，我们都一起过。', '谢谢你记得我所有的小习惯。新的一年，换我多照顾你一点。'],
+    playful: ['新年快乐！今年的愿望清单第一条：和你一起吃遍想去的馆子，红包已经在路上。', '新的一年继续请多指教！吵架不过夜，零食分你一半。'],
+  },
+  junior: {
+    formal: ['新年到了，祝你学业进步、身体健康，新的一年更上一层楼。', '新春快乐！愿你在新的一年里勤学上进、平安成长。'],
+    warm: ['又长大一岁啦！新的一年，愿你保持好奇心，也照顾好自己，想做的事大胆去做。', '新年快乐！不管考得怎么样，你都是我们的骄傲，开开心心最重要。'],
+    playful: ['新年快乐！压岁钱收好，作业也要收好哦。祝你长高高、成绩高高！', '新的一年，祝你作业少错、长高一截、零花钱多多！'],
+  },
+};
+
+const $ = (id) => document.getElementById(id);
+let variant = 0;
+
+// Default to the Lunar New Year that is coming up (or just passed, within a month).
+(function fillYears() {
+  const today = new Date(Date.now() + 8 * 3600e3).toISOString().slice(0, 10);
+  const pick = YEARS.find((y) => today <= new Date(Date.parse(y.cj) + 30 * 864e5).toISOString().slice(0, 10)) || YEARS[YEARS.length - 1];
+  for (const y of YEARS) {
+    const o = document.createElement('option');
+    o.value = y.y; o.textContent = `${y.y} ${y.z}年`;
+    if (y === pick) o.selected = true;
+    $('year').appendChild(o);
+  }
+})();
+
+function compose() {
+  const who = $('who').value;
+  const tone = document.querySelector('input[name="tone"]:checked').value;
+  const y = YEARS.find((x) => String(x.y) === $('year').value) || YEARS[0];
+  const z = ZODIAC[y.z];
+  const W = WHO[who];
+  const list = BODY[who][tone];
+  const body = list[variant % list.length];
+  const sal = $('name').value.trim() || W.sal;
+  const sign = $('sign').value.trim();
+  let text;
+  if (tone === 'formal') text = `${sal}：\n值此${y.z}年新春佳节之际，${body}谨祝${z.formal}！`;
+  else if (tone === 'warm') text = `${sal}，新年好！\n${body}愿${W.you}${z.warm}。`;
+  else text = `${sal}，${y.z}年到！\n${body}${z.playful}！`;
+  if (sign) text += `\n${tone === 'formal' ? `${sign} 敬上` : sign}`;
+  $('out').textContent = text;
+  $('count').textContent = `${[...text.replace(/\n/g, '')].length} 字`;
+}
+
+$('form').addEventListener('input', () => { variant = 0; compose(); });
+$('form').addEventListener('change', () => { variant = 0; compose(); });
+$('nextBtn').addEventListener('click', () => { variant++; compose(); });
+$('copyBtn').addEventListener('click', async () => {
+  const text = $('out').textContent;
+  try { await navigator.clipboard.writeText(text); }
+  catch {
+    const ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('aria-hidden', 'true'); ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch { /* nothing more to try */ }
+    ta.remove();
+  }
+  $('copyBtn').textContent = '已复制 ✓';
+  setTimeout(() => { $('copyBtn').textContent = '复制'; }, 1600);
+});
+compose();
+</script>
+<script src="nav.js"></script>
+</body>
+</html>

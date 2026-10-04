@@ -4,13 +4,19 @@
 > Then just say what you need: *"Decode this job ad and tell me where I am weak."*
 
 <p align="center">
-  <a href="https://mohitagw15856.github.io/pm-claude-skills/">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="web/docs-assets/hero.svg">
-      <source media="(prefers-color-scheme: light)" srcset="web/docs-assets/hero-light.svg">
-      <img src="web/docs-assets/hero.svg" width="100%" alt="PM Skills: 1250 professional skills your AI assistant can read. Plain markdown, works with Claude, ChatGPT, Gemini, Cursor, and Codex. MIT licensed." />
-    </picture>
-  </a>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/constellation.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/constellation-light.svg">
+    <img alt="PM Skills: skill names drift in like stars and join into the PM Skills wordmark" src="docs/readme-assets/constellation-light.svg" width="860">
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/stats.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/stats-light.svg">
+    <img alt="Live numbers: skills, bundles, GitHub stars, weekly npm downloads and translated skills, refreshed daily" src="https://mohitagw15856.github.io/pm-claude-skills/live/stats-light.svg" width="860">
+  </picture>
 </p>
 
 <p align="center">
@@ -67,6 +73,16 @@ PM Skills is an open-source library of 1250 Agent Skills — plain-markdown SKIL
 </p>
 
 Say *"my landlord is keeping my deposit"* and your assistant loads [`security-deposit-recovery`](skills/security-deposit-recovery/SKILL.md): the challenge to each deduction, the demand letter, and the point where small claims is worth it.
+
+<p align="center">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/live/skill-of-the-day.html">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/skill-of-the-day.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/skill-of-the-day-light.svg">
+      <img alt="Skill of the day: a different skill every day, with a prompt to try" src="https://mohitagw15856.github.io/pm-claude-skills/live/skill-of-the-day-light.svg" width="860">
+    </picture>
+  </a>
+</p>
 
 ## ▶ See it
 
@@ -221,6 +237,23 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
 
 国内镜像：[Gitee](https://gitee.com/mohitagw/pm-claude-skills) · [魔搭在线试用](https://www.modelscope.ai/studios/mohitagw15856/pm-skills-playground) · [魔搭数据集](https://www.modelscope.ai/datasets/mohitagw15856/pm-skills-instruct) · [路由模型](https://www.modelscope.ai/models/mohitagw15856/pm-skills-router) · **[中文说明](README.zh-CN.md)** · **[国内安装指南](docs/CHINA.md)** · [开源小课](docs/learn-zh/README.md)
 
+<p>
+  <a href="https://gitee.com/mohitagw/pm-claude-skills"><img alt="Gitee mirror status" src="https://mohitagw15856.github.io/pm-claude-skills/live/cn-status-gitee.svg"></a>
+  <a href="https://npmmirror.com/package/pm-claude-skills"><img alt="npmmirror status" src="https://mohitagw15856.github.io/pm-claude-skills/live/cn-status-npmmirror.svg"></a>
+  <a href="https://www.modelscope.ai/studios/mohitagw15856/pm-skills-playground"><img alt="ModelScope studio status" src="https://mohitagw15856.github.io/pm-claude-skills/live/cn-status-modelscope-studio.svg"></a>
+  <a href="https://www.modelscope.ai/datasets/mohitagw15856/pm-skills-instruct"><img alt="ModelScope dataset status" src="https://mohitagw15856.github.io/pm-claude-skills/live/cn-status-modelscope-dataset.svg"></a>
+</p>
+
+<p align="center">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/modelbench.html">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/modelbench-zh-en.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/modelbench-zh-en-light.svg">
+      <img alt="Skill lift on Chinese models: SkillBench Chinese task set scores with and without skills" src="https://mohitagw15856.github.io/pm-claude-skills/live/modelbench-zh-en-light.svg" width="860">
+    </picture>
+  </a>
+</p>
+
 ## 🥊 Without a skill vs. with one
 
 | You say | Generic AI | With the skill |
@@ -293,6 +326,14 @@ Everything older: **[CHANGELOG.md](CHANGELOG.md)** · the write-ups: **[docs/WHA
 </details>
 
 ## ⚡ Quick start
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/terminal.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/terminal-light.svg">
+    <img alt="A terminal: npx pm-claude-skills add installs the skills, then three requests each load one skill and return finished work" src="docs/readme-assets/terminal-light.svg" width="860">
+  </picture>
+</p>
 
 | You want to… | Do this |
 |---|---|

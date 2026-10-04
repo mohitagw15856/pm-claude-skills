@@ -28,8 +28,17 @@ on:
       - 'scripts/build-tech-tree.mjs'
       - 'integrations/dify-plugin/**'
       - 'scripts/build-dify-plugin.mjs'
+      - 'scripts/build-readme-live.mjs'
+      - 'data/solar-terms.json'
+      - 'data/cn-exam-dates.json'
       - '.github/workflows/deploy-playground.yml'
   workflow_dispatch:
+  # Daily rebuild for the live README cards in web/live/ (skill of the day,
+  # stats, China status, exam countdowns, seasonal banner). 16:05 UTC is
+  # 00:05 Beijing time, so the cards roll over at midnight for Chinese readers.
+  # Nothing is committed: the images are built into the Pages artifact.
+  schedule:
+    - cron: '5 16 * * *'
 
 permissions:
   contents: read
@@ -84,6 +93,14 @@ jobs:
 
       - name: Build the model leaderboard data (web/modelbench.json)
         run: node scripts/build-modelbench.mjs
+
+      # Live README images, served at /live/<name>.svg and linked from both
+      # READMEs. Network checks (stars, npm, Gitee, npmmirror, ModelScope) are
+      # best effort: a source that does not answer renders as unknown.
+      - name: Build the live README cards (web/live/, published at /live/)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/build-readme-live.mjs
 
       - name: Build the tech tree (site/tech-tree, published at /tech-tree/)
         run: |
