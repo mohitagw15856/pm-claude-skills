@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1262 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1267 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -197,23 +197,27 @@
 | Housing Fund Withdrawal (公积金提取) | `pm-china-life` | `pm-china-life/cn-housing-fund-withdrawal/GEM_INSTRUCTIONS.md` |
 | Hukou Points (积分落户) | `pm-china-life` | `pm-china-life/cn-hukou-points/GEM_INSTRUCTIONS.md` |
 | China Annual Tax Reconciliation (个税年度汇算) | `pm-china-life` | `pm-china-life/cn-iit-reconciliation/GEM_INSTRUCTIONS.md` |
+| Chinese Internet Jargon Translator (互联网黑话翻译器) | `pm-china-work` | `pm-china-work/cn-jargon-translator/GEM_INSTRUCTIONS.md` |
 | Kaoyan Planner (考研规划) | `pm-china-exams` | `pm-china-exams/cn-kaoyan-planner/GEM_INSTRUCTIONS.md` |
 | China Labour Contract Decoder (劳动合同) | `pm-china-life` | `pm-china-life/cn-labour-contract-decoder/GEM_INSTRUCTIONS.md` |
 | Level Mapper (职级对标) | `pm-china-work` | `pm-china-work/cn-level-mapper/GEM_INSTRUCTIONS.md` |
 | Medical Insurance Claims (医保报销) | `pm-china-life` | `pm-china-life/cn-medical-insurance-claim/GEM_INSTRUCTIONS.md` |
 | MLPS 2.0 Checklist (等保 2.0) | `pm-china-compliance` | `pm-china-compliance/cn-mlps-checklist/GEM_INSTRUCTIONS.md` |
+| Next Year's OKR and Development Plan (明年个人 OKR 与个人发展计划) | `pm-china-yearend` | `pm-china-yearend/cn-next-year-plan/GEM_INSTRUCTIONS.md` |
 | Official Document (公文) | `pm-china-work` | `pm-china-work/cn-official-document/GEM_INSTRUCTIONS.md` |
 | PIPL Impact Assessment (个人信息保护影响评估) | `pm-china-compliance` | `pm-china-compliance/cn-pipl-pia/GEM_INSTRUCTIONS.md` |
 | PRD Review (需求评审) | `pm-china-work` | `pm-china-work/cn-prd-review/GEM_INSTRUCTIONS.md` |
 | Promotion Defence (晋升答辩) | `pm-china-work` | `pm-china-work/cn-promotion-defence/GEM_INSTRUCTIONS.md` |
 | China Severance Calculator (经济补偿金) | `pm-china-life` | `pm-china-life/cn-severance-calculator/GEM_INSTRUCTIONS.md` |
+| 述职 PPT Builder (述职 PPT 大纲与讲稿) | `pm-china-yearend` | `pm-china-yearend/cn-shuzhi-deck/GEM_INSTRUCTIONS.md` |
 | Small Business Tax (个体户与小微企业税务) | `pm-china-life` | `pm-china-life/cn-small-business-tax/GEM_INSTRUCTIONS.md` |
 | China Social Insurance Explainer (五险一金) | `pm-china-life` | `pm-china-life/cn-social-insurance-explainer/GEM_INSTRUCTIONS.md` |
 | State-Owned Enterprise Interview (国企面试) | `pm-china-exams` | `pm-china-exams/cn-soe-interview/GEM_INSTRUCTIONS.md` |
 | Tech Interview Drill (大厂技术面试) | `pm-china-exams` | `pm-china-exams/cn-tech-interview-drill/GEM_INSTRUCTIONS.md` |
 | Thesis Proposal (开题报告) | `pm-china-exams` | `pm-china-exams/cn-thesis-proposal/GEM_INSTRUCTIONS.md` |
 | Chinese Weekly Report (周报) | `pm-china-work` | `pm-china-work/cn-weekly-report/GEM_INSTRUCTIONS.md` |
-| Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-work` | `pm-china-work/cn-year-end-review/GEM_INSTRUCTIONS.md` |
+| Year-End Bonus Clarifier (年终奖、13薪与个税) | `pm-china-yearend` | `pm-china-yearend/cn-year-end-bonus/GEM_INSTRUCTIONS.md` |
+| Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-yearend` | `pm-china-yearend/cn-year-end-review/GEM_INSTRUCTIONS.md` |
 | Co-Marketing | `pm-growth` | `pm-growth/co-marketing/GEM_INSTRUCTIONS.md` |
 | Co-Parenting Messages | `pm-family` | `pm-family/co-parenting-messages/GEM_INSTRUCTIONS.md` |
 | Cocktail From What I Have | `pm-hobbies` | `pm-hobbies/cocktail-from-what-i-have/GEM_INSTRUCTIONS.md` |
@@ -572,6 +576,7 @@
 | HIPAA Safeguards | `pm-compliance` | `pm-compliance/hipaa-safeguards/GEM_INSTRUCTIONS.md` |
 | Hire or Pass | `pm-decisions` | `pm-decisions/hire-or-pass/GEM_INSTRUCTIONS.md` |
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/GEM_INSTRUCTIONS.md` |
+| Hong Kong Cantonese Copy (香港粵語文案) | `pm-hk-tw` | `pm-hk-tw/hk-cantonese-copy/GEM_INSTRUCTIONS.md` |
 | Hong Kong MPF Explainer (強積金) | `pm-hk-tw` | `pm-hk-tw/hk-mpf-explainer/GEM_INSTRUCTIONS.md` |
 | HN Digest | `pm-live` | `pm-live/hn-digest/GEM_INSTRUCTIONS.md` |
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/GEM_INSTRUCTIONS.md` |

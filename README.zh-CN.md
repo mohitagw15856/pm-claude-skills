@@ -1,4 +1,4 @@
-# PM Skills：1250 个专业 Agent Skills，用中文提问就能用
+# PM Skills：1255 个专业 Agent Skills，用中文提问就能用
 
 <p align="center">
   <a href="https://mohitagw15856.github.io/pm-claude-skills/live/season.html">
@@ -38,7 +38,7 @@
 </p>
 
 > **公司要裁员，你不知道该拿多少补偿；明天要开需求评审，PRD 还缺一半；下个月公务员面试，没人陪你练。**
-> 通用 AI 像一个很自信的实习生。**PM Skills** 是资深同事的笔记：1250 份，每份一个 Markdown 文件。（PM 指 Professional，专业人士，不只是产品经理。）
+> 通用 AI 像一个很自信的实习生。**PM Skills** 是资深同事的笔记：1255 份，每份一个 Markdown 文件。（PM 指 Professional，专业人士，不只是产品经理。）
 
 <p align="center">
   <picture>
@@ -48,7 +48,7 @@
   </picture>
 </p>
 
-## 🎯 1,250 个技能，你只需要 5 个
+## 🎯 1,255 个技能，你只需要 5 个
 
 <p align="center">
   <picture>
