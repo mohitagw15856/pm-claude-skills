@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "pm-china-exams",
   "version": "1.0.0",
-  "description": "The Chinese exams and early-career pack: the civil service essay (申论) and structured interview (结构化面试), postgraduate entrance exam planning (考研), campus recruitment (校招 and 三方协议) and state-owned enterprise interviews (国企面试), in Chinese",
+  "description": "The Chinese exams and early-career pack: the civil service essay (申论) and structured interview (结构化面试), postgraduate entrance exam planning (考研), the thesis proposal (开题报告) and GB/T 7714 references, tech company interview drills (大厂技术面试), campus recruitment (校招 and 三方协议) and state-owned enterprise interviews (国企面试), in Chinese",
   "author": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
@@ -15,6 +15,9 @@
     "civil-service",
     "kaoyan",
     "campus-recruitment",
-    "interview"
+    "interview",
+    "thesis",
+    "gbt7714",
+    "tech-interview"
   ]
 }

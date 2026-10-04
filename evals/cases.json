@@ -1360,6 +1360,66 @@
   {
    "skill": "explorer-pipeline",
    "input": "Make a 3D explorer of a turbofan jet engine for an aviation museum touch screen, start to finish. Visitors are families; sources are the museum's exhibit text and the manufacturer's public cutaway diagram."
+  },
+  {
+   "skill": "cn-official-document",
+   "input": "帮我写一份请示，向区财政局申请增加 2 个事业编制，理由是社区养老服务中心新开放，服务人数从 300 增加到 800。"
+  },
+  {
+   "skill": "cn-thesis-proposal",
+   "input": "帮我写硕士开题报告，题目是短视频平台对大学生冲动消费的影响，我是管理学硕士，可以发问卷，明年 6 月答辩。"
+  },
+  {
+   "skill": "cn-citation-gbt7714",
+   "input": "帮我把这些参考文献改成 GB/T 7714 顺序编码制：张三、李四 2024 年发表在《消费经济》第 40 卷第 2 期 45-53 页的《短视频对大学生消费行为的影响》；Smith J, Doe J, Roe R, Poe E 2021 年 Routledge 出版的 Consumer Behaviour。"
+  },
+  {
+   "skill": "cn-tech-interview-drill",
+   "input": "下周字节跳动后端一面，Java 技术栈，项目是一个日订单 50 万的订单系统，帮我准备并模拟一轮。"
+  },
+  {
+   "skill": "cn-hukou-points",
+   "input": "我在上海工作 5 年，985 硕士，社保一直按 1.5 倍基数交，租房住，35 岁，能落户上海吗？走哪条路？"
+  },
+  {
+   "skill": "cn-housing-fund-withdrawal",
+   "input": "我在杭州租房，公积金余额 6 万，打算两年后在杭州买房，现在要不要每月提取租房公积金？"
+  },
+  {
+   "skill": "cn-medical-insurance-claim",
+   "input": "我是北京职工医保，下个月去上海做手术，预计花费 5 万，需要备案吗？大概能报多少？"
+  },
+  {
+   "skill": "cn-small-business-tax",
+   "input": "我是个体户，开了一家设计工作室，小规模纳税人，一个季度开票 35 万，成本大概 10 万，增值税和个税怎么算？"
+  },
+  {
+   "skill": "cn-mlps-checklist",
+   "input": "我们的 SaaS 系统部署在阿里云，有 200 万注册用户的手机号和订单数据，客户要求过等保三级，帮我梳理差距。"
+  },
+  {
+   "skill": "cn-data-export-assessment",
+   "input": "我们要把中国员工的人事数据（约 3000 人，含身份证号和银行卡号）同步到新加坡总部的 HR 系统，需要申报吗？"
+  },
+  {
+   "skill": "cn-pipl-pia",
+   "input": "我们要在 50 家门店上线人脸识别考勤，约 2000 名员工，帮我写个人信息保护影响评估。"
+  },
+  {
+   "skill": "cn-genai-filing",
+   "input": "我们做了一个调用已备案大模型 API 的 AI 写作 App，面向公众，下个月上线，需要做哪些备案和标识？"
+  },
+  {
+   "skill": "crossborder-platform-playbook",
+   "input": "我们做厨房小家电，出厂价 80 元左右，团队 6 个人，不会做视频，想出海美国，Temu 全托管还是亚马逊 FBA？"
+  },
+  {
+   "skill": "hk-mpf-explainer",
+   "input": "我月入 25000 港元，打算明年移民離開香港，強積金點樣提早攞？舊公司嘅戶口要點處理？"
+  },
+  {
+   "skill": "tw-labour-standards",
+   "input": "我在公司做了三年半，月薪 45000，下個月被資遣，資遣費和預告期間怎麼算？特休沒休完怎麼辦？"
   }
  ]
 }

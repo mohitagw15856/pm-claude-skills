@@ -9,6 +9,22 @@
   },
   "plugins": [
     {
+      "name": "pm-hk-tw",
+      "description": "Hong Kong and Taiwan life admin in Traditional Chinese: the Mandatory Provident Fund (強積金) and Taiwan's Labor Standards Act (勞動基準法), with worked calculations and where to get help",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-hk-tw",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-china-compliance",
+      "description": "China compliance for product and engineering teams: MLPS 2.0 grading and gaps (等保), data export routes and filings (数据出境), PIPL impact assessments (个人信息保护影响评估) and generative AI filing and content labelling (大模型备案), all preparation for counsel and licensed assessors",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-china-compliance",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-3d-explorer",
       "description": "Topic in, interactive 3D explorer out: the interface brief and mock prompt, image-to-3D prompts with a sourced parts list, a single-file Three.js viewer with clickable labelled parts, exploded view and quiz mode, and a pipeline that runs them in order",
       "version": "1.0.0",
@@ -26,7 +42,7 @@
     },
     {
       "name": "pm-china-exams",
-      "description": "The Chinese exams and early-career pack: the civil service essay (申论) and structured interview (结构化面试), postgraduate entrance exam planning (考研), campus recruitment (校招 and 三方协议) and state-owned enterprise interviews (国企面试), in Chinese",
+      "description": "The Chinese exams and early-career pack: the civil service essay (申论) and structured interview (结构化面试), postgraduate entrance exam planning (考研), the thesis proposal (开题报告) and GB/T 7714 references, tech company interview drills (大厂技术面试), campus recruitment (校招 and 三方协议) and state-owned enterprise interviews (国企面试), in Chinese",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-china-exams",
@@ -42,7 +58,7 @@
     },
     {
       "name": "pm-china-life",
-      "description": "Life admin in mainland China: decode a labour contract, estimate severance (N, N+1, 2N), prepare the annual income tax reconciliation, understand social insurance and the housing fund, and plan gaokao university applications",
+      "description": "Life admin in mainland China: decode a labour contract, estimate severance (N, N+1, 2N), prepare the annual income tax reconciliation, understand social insurance and the housing fund, withdraw the housing fund, claim medical insurance, check city hukou routes and points, plan small-business taxes, and plan gaokao university applications",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-china-life",
@@ -50,7 +66,7 @@
     },
     {
       "name": "pm-chuhai",
-      "description": "The 出海 pack for Chinese companies going global: market entry planning, cross-border marketplace listings written for the buyer, and a PIPL and GDPR crosswalk for data flowing in and out of China",
+      "description": "The 出海 pack for Chinese companies going global: market entry planning, choosing and launching on Temu, TikTok Shop, Amazon and SHEIN, cross-border marketplace listings written for the buyer, and a PIPL and GDPR crosswalk for data flowing in and out of China",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-chuhai",
@@ -58,7 +74,7 @@
     },
     {
       "name": "pm-china-work",
-      "description": "The Chinese workplace pack: weekly and monthly reports (周报), the year-end review (述职 / 年终总结), the promotion defence (晋升答辩), the 复盘 project review, PRD reviews (需求评审), job-level comparison (职级对标), and Feishu docs, DingTalk logs and WeCom announcements, written in Chinese to the conventions managers expect",
+      "description": "The Chinese workplace pack: weekly and monthly reports (周报), the year-end review (述职 / 年终总结), the promotion defence (晋升答辩), the 复盘 project review, PRD reviews (需求评审), job-level comparison (职级对标), official documents to GB/T 9704 (公文), and Feishu docs, DingTalk logs and WeCom announcements, written in Chinese to the conventions managers expect",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-china-work",

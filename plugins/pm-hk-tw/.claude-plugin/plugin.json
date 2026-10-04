@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-hk-tw",
+  "version": "1.0.0",
+  "description": "Hong Kong and Taiwan life admin in Traditional Chinese: the Mandatory Provident Fund (強積金) and Taiwan's Labor Standards Act (勞動基準法), with worked calculations and where to get help",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "hong-kong",
+    "taiwan",
+    "mpf",
+    "labour-law",
+    "traditional-chinese"
+  ]
+}

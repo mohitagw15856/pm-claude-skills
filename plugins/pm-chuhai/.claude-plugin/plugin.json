@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "pm-chuhai",
   "version": "1.0.0",
-  "description": "The 出海 pack for Chinese companies going global: market entry planning, cross-border marketplace listings written for the buyer, and a PIPL and GDPR crosswalk for data flowing in and out of China",
+  "description": "The 出海 pack for Chinese companies going global: market entry planning, choosing and launching on Temu, TikTok Shop, Amazon and SHEIN, cross-border marketplace listings written for the buyer, and a PIPL and GDPR crosswalk for data flowing in and out of China",
   "author": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
@@ -15,6 +15,9 @@
     "cross-border",
     "pipl",
     "gdpr",
-    "ecommerce"
+    "ecommerce",
+    "temu",
+    "tiktok-shop",
+    "amazon"
   ]
 }
