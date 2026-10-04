@@ -6,8 +6,8 @@ name: Mirror to Gitee
 #
 # Does nothing until it is set up, so forks and the main repo stay green:
 #   1. Create an empty repository on Gitee (for example mohitagw15856/pm-claude-skills).
-#   2. Create an SSH key pair. Add the public key to that Gitee repository as a
-#      deploy key with push access (or to your Gitee account).
+#   2. Create an SSH key pair and add the public key to your Gitee account's SSH keys
+#      (Gitee deploy keys are read-only, so they cannot push).
 #   3. In this repository's settings, add the secret GITEE_SSH_KEY (the private key)
 #      and the variable GITEE_REPO (for example mohitagw15856/pm-claude-skills).
 # See docs/CHINA.md.

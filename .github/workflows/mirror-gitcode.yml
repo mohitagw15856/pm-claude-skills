@@ -1,0 +1,81 @@
+name: Mirror to GitCode
+
+# Keeps a read-only mirror on GitCode (gitcode.com, run by CSDN with the OpenAtom
+# Foundation), a second mainland mirror alongside Gitee. Pushes main and the release
+# tags after every push to main,
+# and once a day as a catch-up.
+#
+# Does nothing until it is set up, so forks and the main repo stay green:
+#   1. Create an empty repository on GitCode.
+#   2. Create an SSH key pair and add the public key to your GitCode account's SSH keys.
+#   3. In this repository's settings, add the secret GITCODE_SSH_KEY (the private key)
+#      and the variable GITCODE_REPO (owner/name on GitCode).
+# See docs/CHINA.md.
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  schedule:
+    - cron: '40 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mirror-gitcode
+  cancel-in-progress: true
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the mirror is set up
+        id: gate
+        env:
+          GITCODE_SSH_KEY: ${{ secrets.GITCODE_SSH_KEY }}
+          GITCODE_REPO: ${{ vars.GITCODE_REPO }}
+        run: |
+          if [ -z "$GITCODE_SSH_KEY" ] || [ -z "$GITCODE_REPO" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::GITCODE_SSH_KEY or GITCODE_REPO is not set; skipping the GitCode mirror (see docs/CHINA.md)."
+          elif ! printf '%s' "$GITCODE_REPO" | grep -Eq '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$'; then
+            echo "::error::GITCODE_REPO must look like owner/name"
+            exit 1
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v7
+        if: steps.gate.outputs.enabled == 'true'
+        with:
+          fetch-depth: 0
+      - name: Push main and tags to GitCode
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          GITCODE_SSH_KEY: ${{ secrets.GITCODE_SSH_KEY }}
+          GITCODE_REPO: ${{ vars.GITCODE_REPO }}
+        run: |
+          set -euo pipefail
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          printf '%s\n' "$GITCODE_SSH_KEY" > ~/.ssh/gitcode && chmod 600 ~/.ssh/gitcode
+          ssh-keyscan -t ed25519,rsa gitcode.com >> ~/.ssh/known_hosts 2>/dev/null
+          export GIT_SSH_COMMAND="ssh -i ~/.ssh/gitcode -o IdentitiesOnly=yes"
+          git remote add gitcode "git@gitcode.com:${GITCODE_REPO}.git"
+          # GitCode readers see the Chinese README first: README.zh-CN.md becomes README.md and
+          # the English one becomes README.en.md, offered as the English version.
+          # This one extra commit exists only on GitCode and is rebuilt on every sync.
+          git config user.name "pm-skills-bot"
+          git config user.email "actions@github.com"
+          if [ -f README.zh-CN.md ]; then
+            git mv -f README.md README.en.md
+            cp README.zh-CN.md README.md
+            sed -i 's#](README.md)#](README.en.md)#g; s#href="README.md"#href="README.en.md"#g' README.md
+            git add README.md README.en.md
+            git commit -q -m "GitCode: 中文 README 优先 (README.en.md is the English version)"
+          fi
+          # The host occasionally refuses a connection; retry with back-off before failing.
+          push() { for i in 1 2 3; do "$@" && return 0; echo "::warning::push attempt $i failed; retrying"; sleep $((i * 20)); done; return 1; }
+          push git push --force gitcode HEAD:refs/heads/main
+          push git push --force gitcode 'refs/tags/v*:refs/tags/v*' || echo "::warning::tag push failed; main was mirrored"
+          rm -f ~/.ssh/gitcode

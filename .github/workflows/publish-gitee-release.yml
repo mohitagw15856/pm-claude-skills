@@ -1,0 +1,73 @@
+name: Publish Chinese release notes to Gitee
+
+# Creates the matching release on the Gitee mirror with Chinese notes, so Gitee
+# visitors see what changed without visiting GitHub. Notes come from
+# docs/releases-zh/<tag>.md; without that file, a short Chinese note links to the
+# GitHub release. Waits for the mirror to carry the tag first.
+#
+# Does nothing until it is set up: create a Gitee personal access token with the
+# "projects" scope, then add it here as the secret GITEE_TOKEN (GITEE_REPO is
+# already set for the mirror).
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag, for example v81.1.0'
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  gitee-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Gitee releases are set up
+        id: gate
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+          GITEE_REPO: ${{ vars.GITEE_REPO }}
+        run: |
+          if [ -z "$GITEE_TOKEN" ] || [ -z "$GITEE_REPO" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::GITEE_TOKEN or GITEE_REPO is not set; skipping the Gitee release (see docs/CHINA.md)."
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v7
+        if: steps.gate.outputs.enabled == 'true'
+      - name: Create the Gitee release
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+          GITEE_REPO: ${{ vars.GITEE_REPO }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+          NAME: ${{ github.event.release.name || inputs.tag }}
+        run: |
+          set -euo pipefail
+          printf '%s' "$TAG" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+$' || { echo "::error::bad tag"; exit 1; }
+          printf '%s' "$GITEE_REPO" | grep -Eq '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$' || { echo "::error::bad GITEE_REPO"; exit 1; }
+          API="https://gitee.com/api/v5/repos/${GITEE_REPO}"
+          # Wait up to ten minutes for the mirror to push the tag.
+          for i in $(seq 1 20); do
+            git ls-remote --exit-code "https://gitee.com/${GITEE_REPO}.git" "refs/tags/${TAG}" >/dev/null 2>&1 && break
+            echo "tag $TAG not on Gitee yet ($i/20)"; sleep 30
+          done
+          if [ -f "docs/releases-zh/${TAG}.md" ]; then BODY_FILE="docs/releases-zh/${TAG}.md"; else
+            BODY_FILE=$(mktemp)
+            printf '本次版本 %s 的完整更新说明见 GitHub：https://github.com/%s/releases/tag/%s\n\n国内安装：npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae\n' "$TAG" "$GITHUB_REPOSITORY" "$TAG" > "$BODY_FILE"
+          fi
+          python3 - "$BODY_FILE" > payload.json <<'PY'
+          import json, os, sys
+          print(json.dumps({"access_token": os.environ["GITEE_TOKEN"], "tag_name": os.environ["TAG"], "name": os.environ["NAME"],
+                            "body": open(sys.argv[1], encoding="utf-8").read(), "target_commitish": "main", "prerelease": False}))
+          PY
+          code=$(curl -sS -o resp.json -w '%{http_code}' -X POST -H 'Content-Type: application/json' --data @payload.json "$API/releases")
+          rm -f payload.json
+          if [ "$code" = "201" ] || [ "$code" = "200" ]; then echo "Gitee release created for $TAG"; else
+            echo "::warning::Gitee returned HTTP $code"; python3 -c "import json;d=json.load(open('resp.json'));print(d.get('message', d))" || true
+            grep -qi "already" resp.json && echo "release already exists" || exit 1
+          fi
