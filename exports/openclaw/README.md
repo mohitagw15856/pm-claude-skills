@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1208 skills exported. Copy a `SKILL.md` into the tool to use it.
+1224 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -164,6 +164,7 @@
 | Chart Data Extractor | `pm-vision` | `chart-data-extractor/SKILL.md` |
 | Chess Opening Coach | `pm-hobbies` | `chess-opening-coach/SKILL.md` |
 | Childcare Comparison | `pm-family` | `childcare-comparison/SKILL.md` |
+| 出海 Market Entry | `pm-chuhai` | `chuhai-market-entry/SKILL.md` |
 | Churn Analysis | `pm-cs` | `churn-analysis/SKILL.md` |
 | CI/CD Playbook | `pm-engineering` | `cicd-playbook/SKILL.md` |
 | Citation Hygiene | `pm-cowork` | `citation-hygiene/SKILL.md` |
@@ -185,6 +186,15 @@
 | Clip Factory | `pm-newgen` | `clip-factory/SKILL.md` |
 | Clone Brief | `pm-2027` | `clone-brief/SKILL.md` |
 | Closing Disclosure Decoder | `pm-decoders` | `closing-disclosure-decoder/SKILL.md` |
+| 复盘 (Fupan) | `pm-china-work` | `cn-fupan/SKILL.md` |
+| Gaokao Application Planner (高考志愿) | `pm-china-life` | `cn-gaokao-planner/SKILL.md` |
+| China Annual Tax Reconciliation (个税年度汇算) | `pm-china-life` | `cn-iit-reconciliation/SKILL.md` |
+| China Labour Contract Decoder (劳动合同) | `pm-china-life` | `cn-labour-contract-decoder/SKILL.md` |
+| Promotion Defence (晋升答辩) | `pm-china-work` | `cn-promotion-defence/SKILL.md` |
+| China Severance Calculator (经济补偿金) | `pm-china-life` | `cn-severance-calculator/SKILL.md` |
+| China Social Insurance Explainer (五险一金) | `pm-china-life` | `cn-social-insurance-explainer/SKILL.md` |
+| Chinese Weekly Report (周报) | `pm-china-work` | `cn-weekly-report/SKILL.md` |
+| Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-work` | `cn-year-end-review/SKILL.md` |
 | Co-Marketing | `pm-growth` | `co-marketing/SKILL.md` |
 | Co-Parenting Messages | `pm-family` | `co-parenting-messages/SKILL.md` |
 | Cocktail From What I Have | `pm-hobbies` | `cocktail-from-what-i-have/SKILL.md` |
@@ -252,6 +262,7 @@
 | Credential Recognition | `pm-newcomer` | `credential-recognition/SKILL.md` |
 | Credit From Scratch | `pm-newcomer` | `credit-from-scratch/SKILL.md` |
 | Credit Memo | `pm-banking` | `credit-memo/SKILL.md` |
+| Cross-Border Listing | `pm-chuhai` | `cross-border-listing/SKILL.md` |
 | Cross-Examine Me | `pm-thinking` | `cross-examine-me/SKILL.md` |
 | Crypto Prices | `pm-live` | `crypto-prices/SKILL.md` |
 | Customer Escalation Brief | `pm-cs` | `cs-escalation-brief/SKILL.md` |
@@ -358,6 +369,7 @@
 | Word Doc Tracked Changes | `pm-essentials` | `docx-tracked-changes/SKILL.md` |
 | Donor Update | `pm-nonprofit` | `donor-update/SKILL.md` |
 | Double Opt-In Intro | `pm-cowork` | `double-opt-in-intro/SKILL.md` |
+| 抖音 Script | `pm-zh-content` | `douyin-script/SKILL.md` |
 | Downloads Triage | `pm-cowork` | `downloads-triage/SKILL.md` |
 | Doxxing Response | `pm-digital-safety` | `doxxing-response/SKILL.md` |
 | DPA Review | `pm-legal` | `dpa-review/SKILL.md` |
@@ -638,6 +650,7 @@
 | LinkedIn Profile | `pm-personal` | `linkedin-profile/SKILL.md` |
 | Literature Review | `pm-research` | `literature-review/SKILL.md` |
 | Literature Review Builder | `pm-students` | `literature-review-builder/SKILL.md` |
+| Livestream Sales Script (直播带货) | `pm-zh-content` | `livestream-sales-script/SKILL.md` |
 | LLM Cost & Latency Budget | `pm-ai` | `llm-cost-latency-budget/SKILL.md` |
 | LLM Guardrails Spec | `pm-ai` | `llm-guardrails-spec/SKILL.md` |
 | Load Testing Plan | `pm-engineering` | `load-testing-plan/SKILL.md` |
@@ -778,6 +791,7 @@
 | Physiotherapy Progress Note | `pm-physio` | `physio-progress-note/SKILL.md` |
 | PIP Responder | `pm-career` | `pip-responder/SKILL.md` |
 | PIP Writer | `pm-people` | `pip-writer/SKILL.md` |
+| PIPL and GDPR Crosswalk | `pm-chuhai` | `pipl-gdpr-crosswalk/SKILL.md` |
 | Pitch Vs Teach | `pm-cowork` | `pitch-vs-teach/SKILL.md` |
 | Pivot Analysis Planner | `pm-cowork` | `pivot-analysis-planner/SKILL.md` |
 | Pixel GIF Maker | `other` | `pixel-gif-maker/SKILL.md` |
@@ -1184,6 +1198,7 @@
 | Wage-Garnishment Response | `pm-hardship` | `wage-garnishment-response/SKILL.md` |
 | Warranty Claim | `pm-money` | `warranty-claim/SKILL.md` |
 | Weather Now | `pm-live` | `weather-now/SKILL.md` |
+| WeChat Official Account Article (公众号文章) | `pm-zh-content` | `wechat-article/SKILL.md` |
 | Wedding Budget | `pm-wedding` | `wedding-budget/SKILL.md` |
 | Wedding Logistics Planner | `pm-wedding` | `wedding-logistics-planner/SKILL.md` |
 | Wedding Speech | `pm-lifeadmin` | `wedding-speech/SKILL.md` |
@@ -1212,6 +1227,7 @@
 | World Clock | `pm-live` | `world-clock/SKILL.md` |
 | Writing Great Skills | `pm-engineering` | `writing-great-skills/SKILL.md` |
 | Writing Plans | `pm-method` | `writing-plans/SKILL.md` |
+| 小红书 Note | `pm-zh-content` | `xiaohongshu-note/SKILL.md` |
 | Year in Review | `pm-career` | `year-in-review/SKILL.md` |
 | YouTube Script | `pm-creator` | `youtube-script/SKILL.md` |
 | YouTube Script Writer | `pm-writers` | `youtube-script-writer/SKILL.md` |

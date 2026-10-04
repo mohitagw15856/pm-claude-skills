@@ -205,6 +205,11 @@
       "a": "frontend-design",
       "b": "frontend-design-pointer",
       "reason": "This library's own UI-building skill vs a pointer to Anthropic's separate upstream skill of the same name: install command, fit and attribution only, no design guidance."
+    },
+    {
+      "a": "cn-year-end-review",
+      "b": "year-in-review",
+      "reason": "A Chinese employer's formal annual self-review (述职报告 / 年终总结) scored against OKR or KPI, vs a personal reflection on the year."
     }
   ]
 }

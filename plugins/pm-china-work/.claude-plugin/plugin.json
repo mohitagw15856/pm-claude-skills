@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-china-work",
+  "version": "1.0.0",
+  "description": "The Chinese workplace pack: weekly and monthly reports (周报), the year-end review (述职 / 年终总结), the promotion defence (晋升答辩) and the 复盘 project review, written in Chinese to the conventions managers expect",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "china",
+    "chinese",
+    "workplace",
+    "weekly-report",
+    "promotion",
+    "fupan"
+  ]
+}

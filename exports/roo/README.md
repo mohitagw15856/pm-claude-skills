@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1208 skills exported. Copy a `.md rule` into the tool to use it.
+1224 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -164,6 +164,7 @@
 | Chart Data Extractor | `pm-vision` | `pm-vision/chart-data-extractor/chart-data-extractor.md` |
 | Chess Opening Coach | `pm-hobbies` | `pm-hobbies/chess-opening-coach/chess-opening-coach.md` |
 | Childcare Comparison | `pm-family` | `pm-family/childcare-comparison/childcare-comparison.md` |
+| 出海 Market Entry | `pm-chuhai` | `pm-chuhai/chuhai-market-entry/chuhai-market-entry.md` |
 | Churn Analysis | `pm-cs` | `pm-cs/churn-analysis/churn-analysis.md` |
 | CI/CD Playbook | `pm-engineering` | `pm-engineering/cicd-playbook/cicd-playbook.md` |
 | Citation Hygiene | `pm-cowork` | `pm-cowork/citation-hygiene/citation-hygiene.md` |
@@ -185,6 +186,15 @@
 | Clip Factory | `pm-newgen` | `pm-newgen/clip-factory/clip-factory.md` |
 | Clone Brief | `pm-2027` | `pm-2027/clone-brief/clone-brief.md` |
 | Closing Disclosure Decoder | `pm-decoders` | `pm-decoders/closing-disclosure-decoder/closing-disclosure-decoder.md` |
+| 复盘 (Fupan) | `pm-china-work` | `pm-china-work/cn-fupan/cn-fupan.md` |
+| Gaokao Application Planner (高考志愿) | `pm-china-life` | `pm-china-life/cn-gaokao-planner/cn-gaokao-planner.md` |
+| China Annual Tax Reconciliation (个税年度汇算) | `pm-china-life` | `pm-china-life/cn-iit-reconciliation/cn-iit-reconciliation.md` |
+| China Labour Contract Decoder (劳动合同) | `pm-china-life` | `pm-china-life/cn-labour-contract-decoder/cn-labour-contract-decoder.md` |
+| Promotion Defence (晋升答辩) | `pm-china-work` | `pm-china-work/cn-promotion-defence/cn-promotion-defence.md` |
+| China Severance Calculator (经济补偿金) | `pm-china-life` | `pm-china-life/cn-severance-calculator/cn-severance-calculator.md` |
+| China Social Insurance Explainer (五险一金) | `pm-china-life` | `pm-china-life/cn-social-insurance-explainer/cn-social-insurance-explainer.md` |
+| Chinese Weekly Report (周报) | `pm-china-work` | `pm-china-work/cn-weekly-report/cn-weekly-report.md` |
+| Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-work` | `pm-china-work/cn-year-end-review/cn-year-end-review.md` |
 | Co-Marketing | `pm-growth` | `pm-growth/co-marketing/co-marketing.md` |
 | Co-Parenting Messages | `pm-family` | `pm-family/co-parenting-messages/co-parenting-messages.md` |
 | Cocktail From What I Have | `pm-hobbies` | `pm-hobbies/cocktail-from-what-i-have/cocktail-from-what-i-have.md` |
@@ -252,6 +262,7 @@
 | Credential Recognition | `pm-newcomer` | `pm-newcomer/credential-recognition/credential-recognition.md` |
 | Credit From Scratch | `pm-newcomer` | `pm-newcomer/credit-from-scratch/credit-from-scratch.md` |
 | Credit Memo | `pm-banking` | `pm-banking/credit-memo/credit-memo.md` |
+| Cross-Border Listing | `pm-chuhai` | `pm-chuhai/cross-border-listing/cross-border-listing.md` |
 | Cross-Examine Me | `pm-thinking` | `pm-thinking/cross-examine-me/cross-examine-me.md` |
 | Crypto Prices | `pm-live` | `pm-live/crypto-prices/crypto-prices.md` |
 | Customer Escalation Brief | `pm-cs` | `pm-cs/cs-escalation-brief/cs-escalation-brief.md` |
@@ -358,6 +369,7 @@
 | Word Doc Tracked Changes | `pm-essentials` | `pm-essentials/docx-tracked-changes/docx-tracked-changes.md` |
 | Donor Update | `pm-nonprofit` | `pm-nonprofit/donor-update/donor-update.md` |
 | Double Opt-In Intro | `pm-cowork` | `pm-cowork/double-opt-in-intro/double-opt-in-intro.md` |
+| 抖音 Script | `pm-zh-content` | `pm-zh-content/douyin-script/douyin-script.md` |
 | Downloads Triage | `pm-cowork` | `pm-cowork/downloads-triage/downloads-triage.md` |
 | Doxxing Response | `pm-digital-safety` | `pm-digital-safety/doxxing-response/doxxing-response.md` |
 | DPA Review | `pm-legal` | `pm-legal/dpa-review/dpa-review.md` |
@@ -638,6 +650,7 @@
 | LinkedIn Profile | `pm-personal` | `pm-personal/linkedin-profile/linkedin-profile.md` |
 | Literature Review | `pm-research` | `pm-research/literature-review/literature-review.md` |
 | Literature Review Builder | `pm-students` | `pm-students/literature-review-builder/literature-review-builder.md` |
+| Livestream Sales Script (直播带货) | `pm-zh-content` | `pm-zh-content/livestream-sales-script/livestream-sales-script.md` |
 | LLM Cost & Latency Budget | `pm-ai` | `pm-ai/llm-cost-latency-budget/llm-cost-latency-budget.md` |
 | LLM Guardrails Spec | `pm-ai` | `pm-ai/llm-guardrails-spec/llm-guardrails-spec.md` |
 | Load Testing Plan | `pm-engineering` | `pm-engineering/load-testing-plan/load-testing-plan.md` |
@@ -778,6 +791,7 @@
 | Physiotherapy Progress Note | `pm-physio` | `pm-physio/physio-progress-note/physio-progress-note.md` |
 | PIP Responder | `pm-career` | `pm-career/pip-responder/pip-responder.md` |
 | PIP Writer | `pm-people` | `pm-people/pip-writer/pip-writer.md` |
+| PIPL and GDPR Crosswalk | `pm-chuhai` | `pm-chuhai/pipl-gdpr-crosswalk/pipl-gdpr-crosswalk.md` |
 | Pitch Vs Teach | `pm-cowork` | `pm-cowork/pitch-vs-teach/pitch-vs-teach.md` |
 | Pivot Analysis Planner | `pm-cowork` | `pm-cowork/pivot-analysis-planner/pivot-analysis-planner.md` |
 | Pixel GIF Maker | `other` | `other/pixel-gif-maker/pixel-gif-maker.md` |
@@ -1184,6 +1198,7 @@
 | Wage-Garnishment Response | `pm-hardship` | `pm-hardship/wage-garnishment-response/wage-garnishment-response.md` |
 | Warranty Claim | `pm-money` | `pm-money/warranty-claim/warranty-claim.md` |
 | Weather Now | `pm-live` | `pm-live/weather-now/weather-now.md` |
+| WeChat Official Account Article (公众号文章) | `pm-zh-content` | `pm-zh-content/wechat-article/wechat-article.md` |
 | Wedding Budget | `pm-wedding` | `pm-wedding/wedding-budget/wedding-budget.md` |
 | Wedding Logistics Planner | `pm-wedding` | `pm-wedding/wedding-logistics-planner/wedding-logistics-planner.md` |
 | Wedding Speech | `pm-lifeadmin` | `pm-lifeadmin/wedding-speech/wedding-speech.md` |
@@ -1212,6 +1227,7 @@
 | World Clock | `pm-live` | `pm-live/world-clock/world-clock.md` |
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/writing-great-skills.md` |
 | Writing Plans | `pm-method` | `pm-method/writing-plans/writing-plans.md` |
+| 小红书 Note | `pm-zh-content` | `pm-zh-content/xiaohongshu-note/xiaohongshu-note.md` |
 | Year in Review | `pm-career` | `pm-career/year-in-review/year-in-review.md` |
 | YouTube Script | `pm-creator` | `pm-creator/youtube-script/youtube-script.md` |
 | YouTube Script Writer | `pm-writers` | `pm-writers/youtube-script-writer/youtube-script-writer.md` |

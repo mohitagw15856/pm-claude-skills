@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1208 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1224 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -164,6 +164,7 @@
 | Chart Data Extractor | `pm-vision` | `pm-vision/chart-data-extractor/GEM_INSTRUCTIONS.md` |
 | Chess Opening Coach | `pm-hobbies` | `pm-hobbies/chess-opening-coach/GEM_INSTRUCTIONS.md` |
 | Childcare Comparison | `pm-family` | `pm-family/childcare-comparison/GEM_INSTRUCTIONS.md` |
+| 出海 Market Entry | `pm-chuhai` | `pm-chuhai/chuhai-market-entry/GEM_INSTRUCTIONS.md` |
 | Churn Analysis | `pm-cs` | `pm-cs/churn-analysis/GEM_INSTRUCTIONS.md` |
 | CI/CD Playbook | `pm-engineering` | `pm-engineering/cicd-playbook/GEM_INSTRUCTIONS.md` |
 | Citation Hygiene | `pm-cowork` | `pm-cowork/citation-hygiene/GEM_INSTRUCTIONS.md` |
@@ -185,6 +186,15 @@
 | Clip Factory | `pm-newgen` | `pm-newgen/clip-factory/GEM_INSTRUCTIONS.md` |
 | Clone Brief | `pm-2027` | `pm-2027/clone-brief/GEM_INSTRUCTIONS.md` |
 | Closing Disclosure Decoder | `pm-decoders` | `pm-decoders/closing-disclosure-decoder/GEM_INSTRUCTIONS.md` |
+| 复盘 (Fupan) | `pm-china-work` | `pm-china-work/cn-fupan/GEM_INSTRUCTIONS.md` |
+| Gaokao Application Planner (高考志愿) | `pm-china-life` | `pm-china-life/cn-gaokao-planner/GEM_INSTRUCTIONS.md` |
+| China Annual Tax Reconciliation (个税年度汇算) | `pm-china-life` | `pm-china-life/cn-iit-reconciliation/GEM_INSTRUCTIONS.md` |
+| China Labour Contract Decoder (劳动合同) | `pm-china-life` | `pm-china-life/cn-labour-contract-decoder/GEM_INSTRUCTIONS.md` |
+| Promotion Defence (晋升答辩) | `pm-china-work` | `pm-china-work/cn-promotion-defence/GEM_INSTRUCTIONS.md` |
+| China Severance Calculator (经济补偿金) | `pm-china-life` | `pm-china-life/cn-severance-calculator/GEM_INSTRUCTIONS.md` |
+| China Social Insurance Explainer (五险一金) | `pm-china-life` | `pm-china-life/cn-social-insurance-explainer/GEM_INSTRUCTIONS.md` |
+| Chinese Weekly Report (周报) | `pm-china-work` | `pm-china-work/cn-weekly-report/GEM_INSTRUCTIONS.md` |
+| Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-work` | `pm-china-work/cn-year-end-review/GEM_INSTRUCTIONS.md` |
 | Co-Marketing | `pm-growth` | `pm-growth/co-marketing/GEM_INSTRUCTIONS.md` |
 | Co-Parenting Messages | `pm-family` | `pm-family/co-parenting-messages/GEM_INSTRUCTIONS.md` |
 | Cocktail From What I Have | `pm-hobbies` | `pm-hobbies/cocktail-from-what-i-have/GEM_INSTRUCTIONS.md` |
@@ -252,6 +262,7 @@
 | Credential Recognition | `pm-newcomer` | `pm-newcomer/credential-recognition/GEM_INSTRUCTIONS.md` |
 | Credit From Scratch | `pm-newcomer` | `pm-newcomer/credit-from-scratch/GEM_INSTRUCTIONS.md` |
 | Credit Memo | `pm-banking` | `pm-banking/credit-memo/GEM_INSTRUCTIONS.md` |
+| Cross-Border Listing | `pm-chuhai` | `pm-chuhai/cross-border-listing/GEM_INSTRUCTIONS.md` |
 | Cross-Examine Me | `pm-thinking` | `pm-thinking/cross-examine-me/GEM_INSTRUCTIONS.md` |
 | Crypto Prices | `pm-live` | `pm-live/crypto-prices/GEM_INSTRUCTIONS.md` |
 | Customer Escalation Brief | `pm-cs` | `pm-cs/cs-escalation-brief/GEM_INSTRUCTIONS.md` |
@@ -358,6 +369,7 @@
 | Word Doc Tracked Changes | `pm-essentials` | `pm-essentials/docx-tracked-changes/GEM_INSTRUCTIONS.md` |
 | Donor Update | `pm-nonprofit` | `pm-nonprofit/donor-update/GEM_INSTRUCTIONS.md` |
 | Double Opt-In Intro | `pm-cowork` | `pm-cowork/double-opt-in-intro/GEM_INSTRUCTIONS.md` |
+| 抖音 Script | `pm-zh-content` | `pm-zh-content/douyin-script/GEM_INSTRUCTIONS.md` |
 | Downloads Triage | `pm-cowork` | `pm-cowork/downloads-triage/GEM_INSTRUCTIONS.md` |
 | Doxxing Response | `pm-digital-safety` | `pm-digital-safety/doxxing-response/GEM_INSTRUCTIONS.md` |
 | DPA Review | `pm-legal` | `pm-legal/dpa-review/GEM_INSTRUCTIONS.md` |
@@ -638,6 +650,7 @@
 | LinkedIn Profile | `pm-personal` | `pm-personal/linkedin-profile/GEM_INSTRUCTIONS.md` |
 | Literature Review | `pm-research` | `pm-research/literature-review/GEM_INSTRUCTIONS.md` |
 | Literature Review Builder | `pm-students` | `pm-students/literature-review-builder/GEM_INSTRUCTIONS.md` |
+| Livestream Sales Script (直播带货) | `pm-zh-content` | `pm-zh-content/livestream-sales-script/GEM_INSTRUCTIONS.md` |
 | LLM Cost & Latency Budget | `pm-ai` | `pm-ai/llm-cost-latency-budget/GEM_INSTRUCTIONS.md` |
 | LLM Guardrails Spec | `pm-ai` | `pm-ai/llm-guardrails-spec/GEM_INSTRUCTIONS.md` |
 | Load Testing Plan | `pm-engineering` | `pm-engineering/load-testing-plan/GEM_INSTRUCTIONS.md` |
@@ -778,6 +791,7 @@
 | Physiotherapy Progress Note | `pm-physio` | `pm-physio/physio-progress-note/GEM_INSTRUCTIONS.md` |
 | PIP Responder | `pm-career` | `pm-career/pip-responder/GEM_INSTRUCTIONS.md` |
 | PIP Writer | `pm-people` | `pm-people/pip-writer/GEM_INSTRUCTIONS.md` |
+| PIPL and GDPR Crosswalk | `pm-chuhai` | `pm-chuhai/pipl-gdpr-crosswalk/GEM_INSTRUCTIONS.md` |
 | Pitch Vs Teach | `pm-cowork` | `pm-cowork/pitch-vs-teach/GEM_INSTRUCTIONS.md` |
 | Pivot Analysis Planner | `pm-cowork` | `pm-cowork/pivot-analysis-planner/GEM_INSTRUCTIONS.md` |
 | Pixel GIF Maker | `other` | `other/pixel-gif-maker/GEM_INSTRUCTIONS.md` |
@@ -1184,6 +1198,7 @@
 | Wage-Garnishment Response | `pm-hardship` | `pm-hardship/wage-garnishment-response/GEM_INSTRUCTIONS.md` |
 | Warranty Claim | `pm-money` | `pm-money/warranty-claim/GEM_INSTRUCTIONS.md` |
 | Weather Now | `pm-live` | `pm-live/weather-now/GEM_INSTRUCTIONS.md` |
+| WeChat Official Account Article (公众号文章) | `pm-zh-content` | `pm-zh-content/wechat-article/GEM_INSTRUCTIONS.md` |
 | Wedding Budget | `pm-wedding` | `pm-wedding/wedding-budget/GEM_INSTRUCTIONS.md` |
 | Wedding Logistics Planner | `pm-wedding` | `pm-wedding/wedding-logistics-planner/GEM_INSTRUCTIONS.md` |
 | Wedding Speech | `pm-lifeadmin` | `pm-lifeadmin/wedding-speech/GEM_INSTRUCTIONS.md` |
@@ -1212,6 +1227,7 @@
 | World Clock | `pm-live` | `pm-live/world-clock/GEM_INSTRUCTIONS.md` |
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/GEM_INSTRUCTIONS.md` |
 | Writing Plans | `pm-method` | `pm-method/writing-plans/GEM_INSTRUCTIONS.md` |
+| 小红书 Note | `pm-zh-content` | `pm-zh-content/xiaohongshu-note/GEM_INSTRUCTIONS.md` |
 | Year in Review | `pm-career` | `pm-career/year-in-review/GEM_INSTRUCTIONS.md` |
 | YouTube Script | `pm-creator` | `pm-creator/youtube-script/GEM_INSTRUCTIONS.md` |
 | YouTube Script Writer | `pm-writers` | `pm-writers/youtube-script-writer/GEM_INSTRUCTIONS.md` |

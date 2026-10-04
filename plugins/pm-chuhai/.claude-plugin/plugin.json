@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-chuhai",
+  "version": "1.0.0",
+  "description": "The 出海 pack for Chinese companies going global: market entry planning, cross-border marketplace listings written for the buyer, and a PIPL and GDPR crosswalk for data flowing in and out of China",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "chuhai",
+    "go-global",
+    "cross-border",
+    "pipl",
+    "gdpr",
+    "ecommerce"
+  ]
+}

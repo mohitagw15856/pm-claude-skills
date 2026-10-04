@@ -1,9 +1,9 @@
 {
  "generated": "2026-10-04",
  "counts": {
-  "consequential": 209,
-  "high-stakes": 143,
-  "informational": 856
+  "consequential": 216,
+  "high-stakes": 148,
+  "informational": 860
  },
  "tiers": {
   "360-feedback-template": {
@@ -634,6 +634,10 @@
    "tier": "consequential",
    "via": "bundle:pm-family"
   },
+  "chuhai-market-entry": {
+   "tier": "consequential",
+   "via": "bundle:pm-chuhai"
+  },
   "churn-analysis": {
    "tier": "informational",
    "via": "default"
@@ -717,6 +721,42 @@
   "closing-disclosure-decoder": {
    "tier": "high-stakes",
    "via": "bundle:pm-decoders"
+  },
+  "cn-fupan": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-work"
+  },
+  "cn-gaokao-planner": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-china-life"
+  },
+  "cn-iit-reconciliation": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-china-life"
+  },
+  "cn-labour-contract-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-china-life"
+  },
+  "cn-promotion-defence": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-work"
+  },
+  "cn-severance-calculator": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-china-life"
+  },
+  "cn-social-insurance-explainer": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-china-life"
+  },
+  "cn-weekly-report": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-work"
+  },
+  "cn-year-end-review": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-work"
   },
   "co-marketing": {
    "tier": "informational",
@@ -985,6 +1025,10 @@
   "credit-memo": {
    "tier": "high-stakes",
    "via": "bundle:pm-banking"
+  },
+  "cross-border-listing": {
+   "tier": "consequential",
+   "via": "bundle:pm-chuhai"
   },
   "cross-examine-me": {
    "tier": "informational",
@@ -1407,6 +1451,10 @@
    "via": "default"
   },
   "double-opt-in-intro": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "douyin-script": {
    "tier": "informational",
    "via": "default"
   },
@@ -2530,6 +2578,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "livestream-sales-script": {
+   "tier": "informational",
+   "via": "default"
+  },
   "llm-cost-latency-budget": {
    "tier": "informational",
    "via": "default"
@@ -3089,6 +3141,10 @@
   "pip-writer": {
    "tier": "consequential",
    "via": "bundle:pm-people"
+  },
+  "pipl-gdpr-crosswalk": {
+   "tier": "consequential",
+   "via": "bundle:pm-chuhai"
   },
   "pitch-vs-teach": {
    "tier": "informational",
@@ -4714,6 +4770,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "wechat-article": {
+   "tier": "informational",
+   "via": "default"
+  },
   "wedding-budget": {
    "tier": "consequential",
    "via": "bundle:pm-wedding"
@@ -4823,6 +4883,10 @@
    "via": "default"
   },
   "writing-plans": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "xiaohongshu-note": {
    "tier": "informational",
    "via": "default"
   },
