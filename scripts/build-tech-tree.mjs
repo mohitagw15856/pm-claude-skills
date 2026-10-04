@@ -37,6 +37,12 @@ const trim = (raw, n) => { const s = raw.replace(/\s*\u2014\s*/g, ', '); return 
 // ── Shipped skills, by bundle ────────────────────────────────────────────────
 // The canonical list of live skills is skills/ (deprecated aliases excluded).
 const live = new Map();
+const zhDesc = (name) => {
+  const f = join(root, 'skills-i18n', 'zh', name, 'SKILL.md');
+  if (!existsSync(f)) return '';
+  const d = (frontmatter(f).description || '').replace(/\s*\u2014\s*/g, '，');
+  return d.length > 200 ? d.slice(0, 199) + '…' : d; // Chinese has few spaces, so cut by character
+};
 for (const name of readdirSync(join(root, 'skills')).sort()) {
   const file = join(root, 'skills', name, 'SKILL.md');
   if (!existsSync(file)) continue;
@@ -54,7 +60,8 @@ for (const plugin of market.plugins) {
     const fm = live.get(name);
     if (!fm) continue; // a deprecated alias or a stray folder
     shipped.add(name);
-    nodes.push({ id: name, name, description: trim(fm.description || '', 320), state: 'researched' });
+    const zh = zhDesc(name);
+    nodes.push({ id: name, name, description: trim(fm.description || '', 320), ...(zh ? { zh } : {}), state: 'researched' });
   }
   if (!nodes.length) continue;
   branches.push({
@@ -76,7 +83,7 @@ if (loose.length) {
     description: 'Skills not yet in a bundle. Install them with the full library.',
     install: 'npx pm-claude-skills add --agent claude',
     plugin: '',
-    nodes: loose.map((name) => ({ id: name, name, description: trim(live.get(name).description || '', 320), state: 'researched' })),
+    nodes: loose.map((name) => ({ id: name, name, description: trim(live.get(name).description || '', 320), ...(zhDesc(name) ? { zh: zhDesc(name) } : {}), state: 'researched' })),
   });
 }
 

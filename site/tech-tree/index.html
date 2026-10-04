@@ -74,17 +74,18 @@
 </head>
 <body>
 <header>
-  <h1>Skill tech tree</h1>
+  <h1 data-t="title">Skill tech tree</h1>
   <span class="counts" id="counts">Loading…</span>
   <form class="search" role="search" onsubmit="return false">
-    <label class="sr" for="q">Search skills</label>
+    <label class="sr" for="q" data-t="search">Search skills</label>
     <input id="q" type="search" placeholder="Search skills, e.g. weekly report" autocomplete="off">
   </form>
   <div class="legend" role="group" aria-label="Show node states">
-    <label><input type="checkbox" data-state="researched" checked><span class="sw" style="background:var(--sage)"></span>Researched</label>
-    <label><input type="checkbox" data-state="in-research" checked><span class="sw" style="background:var(--pink)"></span>In research</label>
-    <label><input type="checkbox" data-state="proposed" checked><span class="sw" style="border:1.5px dashed var(--blue)"></span>Proposed</label>
+    <label><input type="checkbox" data-state="researched" checked><span class="sw" style="background:var(--sage)"></span><span data-t="researched">Researched</span></label>
+    <label><input type="checkbox" data-state="in-research" checked><span class="sw" style="background:var(--pink)"></span><span data-t="in-research">In research</span></label>
+    <label><input type="checkbox" data-state="proposed" checked><span class="sw" style="border:1.5px dashed var(--blue)"></span><span data-t="proposed">Proposed</span></label>
   </div>
+  <button id="lang" type="button" aria-label="Switch language / 切换语言">中文</button>
 </header>
 <main>
   <div id="wrap" tabindex="0" aria-label="Tech tree. Drag to pan, scroll or pinch to zoom, arrow keys to pan, plus and minus to zoom.">
@@ -103,6 +104,28 @@ const short = (s, n) => (s.length > n ? s.slice(0, n - 1) + '…' : s);
 const view = { x: 20, y: 20, k: 1 };
 let DATA, nodes = [], selected = null, worldW = 0, worldH = 0;
 const hidden = new Set();
+const STR = {
+  en: { title: 'Skill tech tree', search: 'Search skills', placeholder: 'Search skills, e.g. weekly report', researched: 'Researched', 'in-research': 'In research', proposed: 'Proposed',
+    counts: (c) => `${c.researched.toLocaleString('en-GB')} researched · ${c.inResearch} in research · ${c.proposed} proposed · ${c.branches} branches`,
+    branch: 'Branch', cli: 'Install with the CLI', cc: 'Or in Claude Code', copy: 'Copy install command', copied: 'Copied', selected: 'Selected: press Ctrl+C', read: 'Read the skill',
+    vote: 'Vote on the request', open: 'Open a request to vote', none: 'No skills match.', close: 'Close', poster: 'Make a share poster', saving: 'Drawing…', scan: 'Scan to read the skill', brand: 'PM Skills · skill tech tree', loadErr: 'Could not load data.json. Serve this folder over http, not file://.', lang: '中文' },
+  zh: { title: '技能科技树', search: '搜索技能', placeholder: '搜索技能，例如：周报', researched: '已研究', 'in-research': '研究中', proposed: '提议中',
+    counts: (c) => `已研究 ${c.researched.toLocaleString('zh-CN')} 个 · 研究中 ${c.inResearch} 个 · 提议中 ${c.proposed} 个 · ${c.branches} 个分支`,
+    branch: '分支', cli: '用命令行安装（国内可加 --registry=https://registry.npmmirror.com）', cc: '或在 Claude Code 中', copy: '复制安装命令', copied: '已复制', selected: '已选中：按 Ctrl+C 复制', read: '阅读技能',
+    vote: '为这个需求投票', open: '提一个需求来投票', none: '没有匹配的技能。', close: '关闭', poster: '生成分享海报', saving: '正在生成…', scan: '扫码阅读技能', brand: 'PM Skills · 技能科技树', loadErr: '无法加载 data.json。请用 http 方式打开，而不是 file://。', lang: 'English' },
+};
+let LANG = 'en';
+try { LANG = localStorage.getItem('tt-lang') || ((navigator.language || '').toLowerCase().startsWith('zh') ? 'zh' : 'en'); } catch { LANG = (navigator.language || '').toLowerCase().startsWith('zh') ? 'zh' : 'en'; }
+const t = (k) => STR[LANG][k];
+function applyLang() {
+  document.documentElement.lang = LANG === 'zh' ? 'zh-CN' : 'en';
+  document.querySelectorAll('[data-t]').forEach((e) => { e.textContent = t(e.dataset.t); });
+  el('q').placeholder = t('placeholder'); el('lang').textContent = t('lang');
+  document.title = LANG === 'zh' ? '技能科技树' : 'Skill Tech Tree';
+  if (DATA) el('counts').textContent = t('counts')(DATA.counts);
+  if (selected) select(selected.n, selected.b);
+}
+const descOf = (n) => (LANG === 'zh' && n.zh ? n.zh : n.description);
 
 function apply() { el('world').setAttribute('transform', `translate(${view.x} ${view.y}) scale(${view.k})`); }
 function zoomAt(f, cx, cy) {
@@ -150,33 +173,96 @@ function select(n, b, centre) {
     view.x = w.clientWidth / 2 - (selected.x + NODE_W / 2) * view.k; view.y = w.clientHeight / 3 - selected.y * view.k; apply();
   }
   const p = el('panel'); p.hidden = false; p.innerHTML = '';
-  const close = document.createElement('button'); close.className = 'close'; close.setAttribute('aria-label', 'Close'); close.textContent = '×';
+  const close = document.createElement('button'); close.className = 'close'; close.setAttribute('aria-label', t('close')); close.textContent = '×';
   close.onclick = () => { p.hidden = true; selected?.g.classList.remove('selected'); selected = null; el('wrap').focus(); };
   const h = document.createElement('h2'); h.textContent = n.name;
-  const badge = document.createElement('span'); badge.className = 'badge ' + n.state; badge.textContent = { researched: 'Researched', 'in-research': 'In research', proposed: 'Proposed' }[n.state];
-  const branch = document.createElement('p'); branch.className = 'muted'; branch.textContent = 'Branch: ' + b.name;
-  const d = document.createElement('p'); d.textContent = n.description;
+  const badge = document.createElement('span'); badge.className = 'badge ' + n.state; badge.textContent = t(n.state);
+  const branch = document.createElement('p'); branch.className = 'muted'; branch.textContent = `${t('branch')}: ${b.name}`;
+  const d = document.createElement('p'); d.textContent = descOf(n);
   p.append(close, h, badge, branch, d);
   if (b.queue) {
     const a = document.createElement('a'); a.className = 'btn'; a.href = n.issue || (b.install + encodeURIComponent(n.name)); a.target = '_blank'; a.rel = 'noopener';
-    a.textContent = n.issue ? 'Vote on the request' : 'Open a request to vote'; p.append(a);
+    a.textContent = n.issue ? t('vote') : t('open'); p.append(a);
   } else {
-    p.append(cmd('Install with the CLI', b.install));
-    if (b.plugin) p.append(cmd('Or in Claude Code', b.plugin));
-    const a = document.createElement('a'); a.className = 'btn'; a.href = `${DATA.repo}/blob/main/skills/${n.id}/SKILL.md`; a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'Read the skill';
-    p.append(a);
+    p.append(cmd(t('cli'), b.install));
+    if (b.plugin) p.append(cmd(t('cc'), b.plugin));
+    const a = document.createElement('a'); a.className = 'btn'; a.href = `${DATA.repo}/blob/main/skills/${n.id}/SKILL.md`; a.target = '_blank'; a.rel = 'noopener'; a.textContent = t('read');
+    const pb = document.createElement('button'); pb.textContent = t('poster'); pb.style.marginLeft = '8px';
+    pb.onclick = () => poster(n, b, pb);
+    p.append(a, pb);
   }
   close.focus();
+}
+// Share poster: a 1080x1350 PNG with the skill, its install command and a QR code
+// (Gitee in Chinese, which loads in mainland China; GitHub in English).
+let qrLib = null;
+function loadQr() {
+  if (!qrLib) qrLib = new Promise((res, rej) => {
+    const sc = document.createElement('script');
+    sc.src = 'https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js';
+    sc.onload = () => res(window.qrcode); sc.onerror = () => { qrLib = null; rej(new Error('QR library failed to load')); };
+    document.head.append(sc);
+  });
+  return qrLib;
+}
+function wrapText(g, text, maxW) {
+  const parts = text.match(/[　-鿿＀-￯]|[^\s　-鿿＀-￯]+|\s+/g) || [];
+  const lines = []; let line = '';
+  for (const part of parts) {
+    const next = line + part;
+    if (g.measureText(next).width > maxW && line.trim()) { lines.push(line.trim()); line = part.trimStart(); } else line = next;
+  }
+  if (line.trim()) lines.push(line.trim());
+  return lines;
+}
+async function poster(n, b, btn) {
+  const label = btn.textContent; btn.textContent = t('saving'); btn.disabled = true;
+  try {
+    const qrcode = await loadQr();
+    const url = LANG === 'zh'
+      ? `https://gitee.com/mohitagw/pm-claude-skills/blob/main/${n.zh ? 'skills-i18n/zh' : 'skills'}/${n.id}/SKILL.md`
+      : `${DATA.repo}/blob/main/skills/${n.id}/SKILL.md`;
+    const qr = qrcode(0, 'M'); qr.addData(url); qr.make();
+    const W = 1080, H = 1350, c = document.createElement('canvas'); c.width = W; c.height = H;
+    const g = c.getContext('2d'); const font = (w, px) => `${w} ${px}px -apple-system, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif`;
+    g.fillStyle = '#f6f1e7'; g.fillRect(0, 0, W, H);
+    g.fillStyle = '#a8c3a0'; g.fillRect(0, 0, W, 18);
+    g.fillStyle = '#6b6357'; g.font = font(400, 32); g.fillText(t('brand'), 80, 110);
+    g.fillStyle = '#2e2a24'; g.font = font(700, 68);
+    let y = 210; for (const l of wrapText(g, n.name, W - 160).slice(0, 2)) { g.fillText(l, 80, y); y += 82; }
+    const pill = { researched: '#a8c3a0', 'in-research': '#e9bcbe', proposed: '#bcd5e8' }[n.state];
+    g.font = font(500, 28); const st = t(n.state); const pw = g.measureText(st).width + 40;
+    g.fillStyle = pill; g.beginPath(); g.roundRect(80, y - 10, pw, 50, 25); g.fill();
+    g.fillStyle = '#22452c'; g.fillText(st, 100, y + 25);
+    g.fillStyle = '#6b6357'; g.font = font(400, 30); g.fillText(`${t('branch')}: ${b.name}`, 100 + pw, y + 25);
+    y += 90; g.strokeStyle = '#ded4c1'; g.lineWidth = 2; g.beginPath(); g.moveTo(80, y); g.lineTo(W - 80, y); g.stroke();
+    g.fillStyle = '#2e2a24'; g.font = font(400, 38); y += 70;
+    for (const l of wrapText(g, descOf(n), W - 160).slice(0, 10)) { g.fillText(l, 80, y); y += 56; }
+    const box = 300, qx = W - 80 - box, qy = H - 160 - box, cells = qr.getModuleCount(), cell = box / cells;
+    g.fillStyle = '#ffffff'; g.fillRect(qx - 20, qy - 20, box + 40, box + 40);
+    g.fillStyle = '#2e2a24';
+    for (let r = 0; r < cells; r++) for (let col = 0; col < cells; col++) if (qr.isDark(r, col)) g.fillRect(qx + col * cell, qy + r * cell, Math.ceil(cell), Math.ceil(cell));
+    g.fillStyle = '#6b6357'; g.font = font(400, 26); g.textAlign = 'center'; g.fillText(t('scan'), qx + box / 2, qy + box + 60); g.textAlign = 'left';
+    g.font = '24px ui-monospace, Menlo, monospace'; g.fillStyle = '#2e2a24';
+    const install = LANG === 'zh' ? (b.install || '').replace(/^npx /, 'npx --registry=https://registry.npmmirror.com ') : (b.install || '');
+    let iy = qy + 20; for (const l of wrapText(g, install, qx - 140).slice(0, 7)) { g.fillText(l, 80, iy); iy += 36; }
+    g.fillStyle = '#6b6357'; g.font = font(400, 24);
+    g.fillText(`${LANG === 'zh' ? 'gitee.com/mohitagw/pm-claude-skills' : 'github.com/mohitagw15856/pm-claude-skills'} · MIT`, 80, H - 60);
+    const blob = await new Promise((r) => c.toBlob(r, 'image/png'));
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `${n.id}-poster.png`;
+    document.body.append(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
+  } catch (e) { console.warn('Poster failed:', e); }
+  finally { btn.textContent = label; btn.disabled = false; }
 }
 function cmd(label, text) {
   const wrap = document.createElement('div');
   const l = document.createElement('p'); l.className = 'muted'; l.textContent = label;
   const pre = document.createElement('pre'); pre.textContent = text;
-  const btn = document.createElement('button'); btn.textContent = 'Copy install command';
+  const btn = document.createElement('button'); btn.textContent = t('copy');
   btn.onclick = async () => {
-    try { await navigator.clipboard.writeText(text); btn.textContent = 'Copied'; }
-    catch { const r = document.createRange(); r.selectNodeContents(pre); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'Selected: press Ctrl+C'; }
-    setTimeout(() => (btn.textContent = 'Copy install command'), 1800);
+    try { await navigator.clipboard.writeText(text); btn.textContent = t('copied'); }
+    catch { const r = document.createRange(); r.selectNodeContents(pre); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = t('selected'); }
+    setTimeout(() => (btn.textContent = t('copy')), 1800);
   };
   wrap.append(l, pre, btn); return wrap;
 }
@@ -186,7 +272,7 @@ function search() {
   for (const x of nodes) x.g.classList.remove('match', 'dim');
   if (q.length < 2) { list.hidden = true; refreshStates(); return; }
   const slug = q.replace(/\s+/g, '-');
-  const score = (x) => (x.n.name === slug ? 4 : x.n.name.includes(slug) ? 3 : x.b.name.includes(q) ? 2 : x.n.description.toLowerCase().includes(q) ? 1 : 0);
+  const score = (x) => (x.n.name === slug ? 4 : x.n.name.includes(slug) ? 3 : x.b.name.includes(q) ? 2 : (x.n.description.toLowerCase().includes(q) || (x.n.zh || '').includes(q)) ? 1 : 0);
   const hits = nodes.map((x) => [x, score(x)]).filter(([, s]) => s > 0).sort((a, b) => b[1] - a[1]).map(([x]) => x);
   const hitSet = new Set(hits);
   for (const x of nodes) x.g.classList.add(hitSet.has(x) ? 'match' : 'dim');
@@ -197,7 +283,7 @@ function search() {
     btn.onclick = () => { list.hidden = true; select(x.n, x.b, true); };
     li.append(btn); list.append(li);
   }
-  if (!hits.length) { const li = document.createElement('li'); li.className = 'muted'; li.style.padding = '8px'; li.textContent = 'No skills match.'; list.append(li); }
+  if (!hits.length) { const li = document.createElement('li'); li.className = 'muted'; li.style.padding = '8px'; li.textContent = t('none'); list.append(li); }
   list.hidden = false; refreshStates();
 }
 function refreshStates() { for (const x of nodes) x.g.style.display = hidden.has(x.n.state) ? 'none' : ''; }
@@ -231,14 +317,16 @@ el('zin').onclick = () => zoomAt(1.25, wrap.clientWidth / 2, wrap.clientHeight /
 el('zout').onclick = () => zoomAt(0.8, wrap.clientWidth / 2, wrap.clientHeight / 2);
 el('zfit').onclick = fit;
 el('q').addEventListener('input', search);
+el('lang').addEventListener('click', () => { LANG = LANG === 'zh' ? 'en' : 'zh'; try { localStorage.setItem('tt-lang', LANG); } catch {} applyLang(); });
+applyLang();
 el('q').addEventListener('keydown', (e) => { if (e.key === 'Escape') { el('q').value = ''; search(); } });
 document.querySelectorAll('.legend input').forEach((cb) => cb.addEventListener('change', () => { cb.checked ? hidden.delete(cb.dataset.state) : hidden.add(cb.dataset.state); refreshStates(); }));
 
 fetch('data.json').then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }).then((d) => {
   DATA = d; build(); fit();
   const c = d.counts;
-  el('counts').textContent = `${c.researched.toLocaleString('en-GB')} researched · ${c.inResearch} in research · ${c.proposed} proposed · ${c.branches} branches`;
-}).catch((e) => { el('counts').textContent = 'Could not load data.json. Serve this folder over http, not file://.'; console.warn(e); });
+  el('counts').textContent = t('counts')(c);
+}).catch((e) => { el('counts').textContent = t('loadErr'); console.warn(e); });
 </script>
 </body>
 </html>
