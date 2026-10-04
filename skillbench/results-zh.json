@@ -1,0 +1,253 @@
+{
+  "_comment": "SkillBench results. One entry per model per run. See skillbench/README.md.",
+  "runs": [
+    {
+      "model": "hf:deepseek-ai/DeepSeek-V4.1-Flash",
+      "date": "2026-10-04",
+      "taskSetVersion": "zh-1",
+      "harness": "1.1",
+      "judge": "claude-sonnet-4-6",
+      "score": null,
+      "bare": null,
+      "lift": null,
+      "tasks": [
+        {
+          "task": "cn-weekly-report",
+          "domain": "china-work",
+          "error": "hf:deepseek-ai/DeepSeek-V4.1-Flash: 402"
+        },
+        {
+          "task": "cn-prd-review",
+          "domain": "china-work",
+          "error": "hf:deepseek-ai/DeepSeek-V4.1-Flash: 402"
+        },
+        {
+          "task": "cn-promotion-defence",
+          "domain": "china-work",
+          "error": "hf:deepseek-ai/DeepSeek-V4.1-Flash: 402"
+        },
+        {
+          "task": "wecom-announcement",
+          "domain": "china-work",
+          "error": "hf:deepseek-ai/DeepSeek-V4.1-Flash: 402"
+        },
+        {
+          "task": "cn-severance-calculator",
+          "domain": "china-life",
+          "error": "hf:deepseek-ai/DeepSeek-V4.1-Flash: 402"
+        },
+        {
+          "task": "cn-labour-contract-decoder",
+          "domain": "china-life",
+          "error": "hf:deepseek-ai/DeepSeek-V4.1-Flash: 402"
+        },
+        {
+          "task": "cn-civil-exam-essay",
+          "domain": "china-exams",
+          "error": "hf:deepseek-ai/DeepSeek-V4.1-Flash: 402"
+        },
+        {
+          "task": "cn-campus-recruitment",
+          "domain": "china-exams",
+          "error": "hf:deepseek-ai/DeepSeek-V4.1-Flash: 402"
+        },
+        {
+          "task": "xiaohongshu-note",
+          "domain": "zh-content",
+          "error": "hf:deepseek-ai/DeepSeek-V4.1-Flash: 402"
+        },
+        {
+          "task": "wechat-article",
+          "domain": "zh-content",
+          "error": "hf:deepseek-ai/DeepSeek-V4.1-Flash: 402"
+        }
+      ]
+    },
+    {
+      "model": "hf:Qwen/Qwen3.8-27B",
+      "date": "2026-10-04",
+      "taskSetVersion": "zh-1",
+      "harness": "1.1",
+      "judge": "claude-sonnet-4-6",
+      "score": null,
+      "bare": null,
+      "lift": null,
+      "tasks": [
+        {
+          "task": "cn-weekly-report",
+          "domain": "china-work",
+          "error": "hf:Qwen/Qwen3.8-27B: 402"
+        },
+        {
+          "task": "cn-prd-review",
+          "domain": "china-work",
+          "error": "hf:Qwen/Qwen3.8-27B: 402"
+        },
+        {
+          "task": "cn-promotion-defence",
+          "domain": "china-work",
+          "error": "hf:Qwen/Qwen3.8-27B: 402"
+        },
+        {
+          "task": "wecom-announcement",
+          "domain": "china-work",
+          "error": "hf:Qwen/Qwen3.8-27B: 402"
+        },
+        {
+          "task": "cn-severance-calculator",
+          "domain": "china-life",
+          "error": "hf:Qwen/Qwen3.8-27B: 402"
+        },
+        {
+          "task": "cn-labour-contract-decoder",
+          "domain": "china-life",
+          "error": "hf:Qwen/Qwen3.8-27B: 402"
+        },
+        {
+          "task": "cn-civil-exam-essay",
+          "domain": "china-exams",
+          "error": "hf:Qwen/Qwen3.8-27B: 402"
+        },
+        {
+          "task": "cn-campus-recruitment",
+          "domain": "china-exams",
+          "error": "hf:Qwen/Qwen3.8-27B: 402"
+        },
+        {
+          "task": "xiaohongshu-note",
+          "domain": "zh-content",
+          "error": "hf:Qwen/Qwen3.8-27B: 402"
+        },
+        {
+          "task": "wechat-article",
+          "domain": "zh-content",
+          "error": "hf:Qwen/Qwen3.8-27B: 402"
+        }
+      ]
+    },
+    {
+      "model": "hf:zai-org/GLM-5.3-Flash",
+      "date": "2026-10-04",
+      "taskSetVersion": "zh-1",
+      "harness": "1.1",
+      "judge": "claude-sonnet-4-6",
+      "score": null,
+      "bare": null,
+      "lift": null,
+      "tasks": [
+        {
+          "task": "cn-weekly-report",
+          "domain": "china-work",
+          "error": "hf:zai-org/GLM-5.3-Flash: 402"
+        },
+        {
+          "task": "cn-prd-review",
+          "domain": "china-work",
+          "error": "hf:zai-org/GLM-5.3-Flash: 402"
+        },
+        {
+          "task": "cn-promotion-defence",
+          "domain": "china-work",
+          "error": "hf:zai-org/GLM-5.3-Flash: 402"
+        },
+        {
+          "task": "wecom-announcement",
+          "domain": "china-work",
+          "error": "hf:zai-org/GLM-5.3-Flash: 402"
+        },
+        {
+          "task": "cn-severance-calculator",
+          "domain": "china-life",
+          "error": "hf:zai-org/GLM-5.3-Flash: 402"
+        },
+        {
+          "task": "cn-labour-contract-decoder",
+          "domain": "china-life",
+          "error": "hf:zai-org/GLM-5.3-Flash: 402"
+        },
+        {
+          "task": "cn-civil-exam-essay",
+          "domain": "china-exams",
+          "error": "hf:zai-org/GLM-5.3-Flash: 402"
+        },
+        {
+          "task": "cn-campus-recruitment",
+          "domain": "china-exams",
+          "error": "hf:zai-org/GLM-5.3-Flash: 402"
+        },
+        {
+          "task": "xiaohongshu-note",
+          "domain": "zh-content",
+          "error": "hf:zai-org/GLM-5.3-Flash: 402"
+        },
+        {
+          "task": "wechat-article",
+          "domain": "zh-content",
+          "error": "hf:zai-org/GLM-5.3-Flash: 402"
+        }
+      ]
+    },
+    {
+      "model": "hf:moonshotai/Kimi-K2.6",
+      "date": "2026-10-04",
+      "taskSetVersion": "zh-1",
+      "harness": "1.1",
+      "judge": "claude-sonnet-4-6",
+      "score": null,
+      "bare": null,
+      "lift": null,
+      "tasks": [
+        {
+          "task": "cn-weekly-report",
+          "domain": "china-work",
+          "error": "hf:moonshotai/Kimi-K2.6: 402"
+        },
+        {
+          "task": "cn-prd-review",
+          "domain": "china-work",
+          "error": "hf:moonshotai/Kimi-K2.6: 402"
+        },
+        {
+          "task": "cn-promotion-defence",
+          "domain": "china-work",
+          "error": "hf:moonshotai/Kimi-K2.6: 402"
+        },
+        {
+          "task": "wecom-announcement",
+          "domain": "china-work",
+          "error": "hf:moonshotai/Kimi-K2.6: 402"
+        },
+        {
+          "task": "cn-severance-calculator",
+          "domain": "china-life",
+          "error": "hf:moonshotai/Kimi-K2.6: 402"
+        },
+        {
+          "task": "cn-labour-contract-decoder",
+          "domain": "china-life",
+          "error": "hf:moonshotai/Kimi-K2.6: 402"
+        },
+        {
+          "task": "cn-civil-exam-essay",
+          "domain": "china-exams",
+          "error": "hf:moonshotai/Kimi-K2.6: 402"
+        },
+        {
+          "task": "cn-campus-recruitment",
+          "domain": "china-exams",
+          "error": "hf:moonshotai/Kimi-K2.6: 402"
+        },
+        {
+          "task": "xiaohongshu-note",
+          "domain": "zh-content",
+          "error": "hf:moonshotai/Kimi-K2.6: 402"
+        },
+        {
+          "task": "wechat-article",
+          "domain": "zh-content",
+          "error": "hf:moonshotai/Kimi-K2.6: 402"
+        }
+      ]
+    }
+  ]
+}
