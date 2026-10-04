@@ -1,4 +1,4 @@
-# 🗂️ All 1176 Skills — full catalog
+# 🗂️ All 1196 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -723,7 +723,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (714 skills)
+## 🌍 Industries & Public Sector (734 skills)
 
 ### `other` — 22 skills
 
@@ -1062,6 +1062,31 @@
 | **Red-Team Review** (`red-team-review`) | Stress-test a plan, strategy, PRD, or launch by simulating hostile expert personas who attack it from every angle. | — |
 | **Sycophancy Challenger** (`sycophancy-challenger`) | Flip Claude’s default from validation to adversarial critique. | — |
 | **Teaching Lesson Plan** (`teaching-lesson-plan`) | Design a structured lesson plan for any subject, audience, or format. | — |
+
+### `pm-cv` — 20 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Academic CV** (`academic-cv`) | Build or tailor an academic CV for faculty, postdoc, research or fellowship applications: publications, grants, teaching, supervision and service… | — |
+| **Application Tracker** (`application-tracker`) | Set up and keep a job application tracker: one master CV, every tailored version, where each was sent, its status, next action and follow-up date… | — |
+| **ATS Detector** (`ats-detector`) | Work out which applicant tracking system a job uses from its application link, and give the formatting rules that system parses safely. | — |
+| **Bilingual CV, Chinese and English** (`bilingual-cv-zh-en`) | Produce a matched Chinese and English CV (中英文简历) from one set of facts: each version follows its own conventions rather than a literal… | — |
+| **Career-Changer CV** (`career-changer-cv`) | Write a CV for someone moving into a new field, leading with transferable evidence instead of job titles that do not match. | — |
+| **Career Inventory** (`career-inventory`) | Interview someone about their working life and turn the answers into a master CV inventory: every role, project and achievement with real numbers… | — |
+| **Civil Service and NHS Application** (`civil-service-application`) | Write a UK Civil Service or NHS application: behaviour statements in the Success Profiles format, a personal statement mapped to the essential… | — |
+| **Company-Tailored CV** (`company-tailored-cv`) | Produce a CV shaped for one target company and role: its applicant tracking system, the country's conventions, the sector's norms, its published… | — |
+| **Consulting and Banking CV** (`consulting-banking-cv`) | Write a one-page CV for management consulting, investment banking or private equity, in the dense format those screeners expect: education first… | — |
+| **Country CV Format** (`country-cv-format`) | Apply the CV conventions of the country where the job is: length, photo, personal details, date and name order, spelling, paper size and the… | — |
+| **CV Word Export** (`cv-docx-export`) | Turn a finished CV into a parsing-safe Word file ready to upload: one column, real heading styles, no tables, headers or images, the right paper… | — |
+| **CV Honesty Check** (`cv-honesty-check`) | Check a CV for claims that would not survive an interview, a reference or a background check: inflated titles, unprovable numbers, team results… | — |
+| **Executive CV** (`executive-cv`) | Write an executive or senior leadership CV and the matching board biography: scope, business results and governance up front, two to three pages… | — |
+| **Federal Resume** (`federal-resume`) | Write a US federal resume for a USAJOBS application: the long, detailed format with hours per week, grade-relevant duties and specialised… | — |
+| **Graduate CV** (`graduate-cv`) | Write a first CV for a student or recent graduate with little work experience, using coursework, projects, part-time jobs, societies and… | — |
+| **JD Gap Score** (`jd-gap-score`) | Score how well a CV covers a job ad, requirement by requirement, and say honestly what to do about each gap. | — |
+| **Recruiter Scan Simulator** (`recruiter-scan-simulator`) | Simulate a busy recruiter's first scan of a CV for a specific role: what they read in the first seconds, what they decide, and why, then step out… | — |
+| **Referral Request** (`referral-request`) | Write a short message asking someone at a target company for a referral or a conversation, sized to how well the person knows them, with an easy… | — |
+| **Returner CV** (`returner-cv`) | Write a CV for someone returning to work after a career break (caring, health, parenting, travel, redundancy or anything else), presenting the gap… | — |
+| **Values-Mapped CV** (`values-mapped-cv`) | Map a person's achievements to a target company's published values or leadership principles, so the CV leads with the evidence that company says… | — |
 
 ### `pm-dead-mentors` — 5 skills
 
@@ -1881,4 +1906,4 @@
 
 ---
 
-_1176 skills across 135 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1196 skills across 136 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

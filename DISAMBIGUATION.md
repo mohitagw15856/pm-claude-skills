@@ -1,7 +1,7 @@
 # 🧭 Disambiguation — you want *this* one, not that one
 
 > **Generated — do not edit.** Run `node scripts/build-disambiguation.mjs`.
-> 1176 live skills across 134 bundles, plus 12 retired names that still resolve.
+> 1196 live skills across 135 bundles, plus 12 retired names that still resolve.
 
 At this size the hard part is not finding *a* skill — it is telling two similar ones apart, and
 knowing whether the thing you are about to write already exists under a different noun.
@@ -341,6 +341,13 @@ assuming the skill you want is missing.
 - `board-minutes` · pm-business — Write formal board meeting minutes from an agenda, notes, transcript, or discussion summary.
 - `board-pre-read` · pm-business — Write a board pre-read that's sent before the meeting so the meeting is about decisions, not status.
 
+**`career-*`** (4)
+
+- `career-changer-cv` · pm-cv — Write a CV for someone moving into a new field, leading with transferable evidence instead of job titles that do not match.
+- `career-inventory` · pm-cv — Interview someone about their working life and turn the answers into a master CV inventory: every role, project and achievement with real numbers, before any CV is tailored.
+- `career-ladder-map` · pm-career — Map where you are against the next level and build a concrete plan to close the gap.
+- `career-pivot-plan` · pm-career — Build a realistic plan to change careers — mapping your transferable skills, the real gaps, and a bridge that doesn't require torching your income overnight.
+
 **`changelog-*`** (4)
 
 - `changelog-for-humans` · pm-cowork — Write changelogs and release notes readers actually benefit from — changes translated to so-whats, grouped by reader impact (breaking first, gifts second, plumbing last), with the upgrade path stated and the marketing kept honest.
@@ -355,6 +362,13 @@ assuming the skill you want is missing.
 - `code-review-guide` · pm-craft — Review a pull request or diff like a thoughtful senior engineer — prioritized, kind, and focused on what matters.
 - `code-simplification` · pm-method — Simplify code that works — remove speculative abstraction, dead flexibility, and needless indirection while keeping behaviour identical and verified.
 
+**`company-*`** (4)
+
+- `company-brief` · pm-jobsearch — Build a candidate's research brief on a company before an application or interview.
+- `company-compare-same-definitions` · pm-investing-literacy — Use when asked to compare two annual reports, put two companies from the same sector side by side, or check whether two companies' adjusted numbers mean the same thing.
+- `company-event-ops` · pm-cowork — Run a company event — the launch party, the customer day, the team celebration — as the operation it is: the goal that shapes every choice, the budget with its forgotten lines, the vendor and venue coordination, the run-of-show with owners, and the day-of roles that keep hosts hosting.
+- `company-tailored-cv` · pm-cv — Produce a CV shaped for one target company and role: its applicant tracking system, the country's conventions, the sector's norms, its published values and the job ad, with every choice explained.
+
 **`design-*`** (4)
 
 - `design-critique` · pm-design — Give structured, constructive feedback on any design using UX frameworks.
@@ -368,6 +382,13 @@ assuming the skill you want is missing.
 - `event-run-of-show` · pm-events — Build the minute-by-minute run of show that lets an event run without the planner being asked anything — every cue, who owns it, what happens if it slips, and the version each supplier actually needs.
 - `event-safety-plan` · pm-events — Produce the event safety documentation that satisfies a venue or licensing authority and actually works on the day — the risk assessment, crowd and capacity plan, emergency procedures, and the roles that must be filled.
 - `event-vendor-brief` · pm-events — Brief an event supplier so they quote accurately and deliver what you pictured — the outcome, the constraints, the deliverables, and the questions you need answered in the quote.
+
+**`executive-*`** (4)
+
+- `executive-cv` · pm-cv — Write an executive or senior leadership CV and the matching board biography: scope, business results and governance up front, two to three pages, written for search firms and boards.
+- `executive-presence` · pm-comms — Sharpen how you show up in high-stakes rooms — communicate with gravitas, concision, and confidence.
+- `executive-summary` · pm-cross — Write an executive summary for any document, report, or proposal.
+- `executive-update` · pm-strategy — Transform detailed product updates into concise executive briefings.
 
 **`interview-*`** (4)
 

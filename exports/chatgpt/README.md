@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1188 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1208 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -11,6 +11,7 @@
 | 401k Plan Decoder | `pm-decoders` | `pm-decoders/401k-plan-decoder/SYSTEM_PROMPT.md` |
 | A/B Test Planner | `pm-delivery` | `pm-delivery/ab-test-planner/SYSTEM_PROMPT.md` |
 | A/B Test Readout | `pm-data` | `pm-data/ab-test-readout/SYSTEM_PROMPT.md` |
+| Academic CV | `pm-cv` | `pm-cv/academic-cv/SYSTEM_PROMPT.md` |
 | Accessibility Audit | `pm-design` | `pm-design/accessibility-audit/SYSTEM_PROMPT.md` |
 | Accessible Travel Planner | `pm-accessibility` | `pm-accessibility/accessible-travel-planner/SYSTEM_PROMPT.md` |
 | Accommodation Request | `pm-accessibility` | `pm-accessibility/accommodation-request/SYSTEM_PROMPT.md` |
@@ -61,6 +62,7 @@
 | API Versioning Strategy | `pm-engineering` | `pm-engineering/api-versioning-strategy/SYSTEM_PROMPT.md` |
 | Apology Letter | `pm-crisis` | `pm-crisis/apology-letter/SYSTEM_PROMPT.md` |
 | Appliance Buying Guide | `pm-lifeadmin` | `pm-lifeadmin/appliance-buying-guide/SYSTEM_PROMPT.md` |
+| Application Tracker | `pm-cv` | `pm-cv/application-tracker/SYSTEM_PROMPT.md` |
 | Apprentice First Week | `pm-trades` | `pm-trades/apprentice-first-week/SYSTEM_PROMPT.md` |
 | Architectural Programme Brief | `pm-architecture` | `pm-architecture/architectural-programme-brief/SYSTEM_PROMPT.md` |
 | Architectural Specification Section | `pm-architecture` | `pm-architecture/architectural-specification/SYSTEM_PROMPT.md` |
@@ -77,6 +79,7 @@
 | Async Instead | `pm-cowork` | `pm-cowork/async-instead/SYSTEM_PROMPT.md` |
 | Async Standup Compiler (Live) | `pm-cowork-live` | `pm-cowork-live/async-standup-compiler/SYSTEM_PROMPT.md` |
 | Async Update Format | `pm-cowork` | `pm-cowork/async-update-format/SYSTEM_PROMPT.md` |
+| ATS Detector | `pm-cv` | `pm-cv/ats-detector/SYSTEM_PROMPT.md` |
 | Attention Reset | `pm-newgen` | `pm-newgen/attention-reset/SYSTEM_PROMPT.md` |
 | Audited Boundary Check | `pm-investing-literacy` | `pm-investing-literacy/audited-boundary-check/SYSTEM_PROMPT.md` |
 | Auto Repair Estimate Decoder | `pm-decoders` | `pm-decoders/auto-repair-estimate-decoder/SYSTEM_PROMPT.md` |
@@ -93,6 +96,7 @@
 | Bennett Time Audit | `pm-dead-mentors` | `pm-dead-mentors/bennett-time-audit/SYSTEM_PROMPT.md` |
 | Bid / Tender Review | `pm-construction` | `pm-construction/bid-tender-review/SYSTEM_PROMPT.md` |
 | Big-Purchase Timing | `pm-money` | `pm-money/big-purchase-timing/SYSTEM_PROMPT.md` |
+| Bilingual CV, Chinese and English | `pm-cv` | `pm-cv/bilingual-cv-zh-en/SYSTEM_PROMPT.md` |
 | Birdwatching Log | `pm-hobbies` | `pm-hobbies/birdwatching-log/SYSTEM_PROMPT.md` |
 | Blast Radius Drill | `pm-seatbelt` | `pm-seatbelt/blast-radius-drill/SYSTEM_PROMPT.md` |
 | Blended-Family Plan | `pm-family` | `pm-family/blended-family-plan/SYSTEM_PROMPT.md` |
@@ -136,6 +140,8 @@
 | Care-Decision Family Meeting | `pm-caregiving` | `pm-caregiving/care-decision-family-meeting/SYSTEM_PROMPT.md` |
 | Care-Home Contract Decoder | `pm-decoders` | `pm-decoders/care-home-contract-decoder/SYSTEM_PROMPT.md` |
 | Care-Team Coordinator | `pm-caregiving` | `pm-caregiving/care-team-coordinator/SYSTEM_PROMPT.md` |
+| Career-Changer CV | `pm-cv` | `pm-cv/career-changer-cv/SYSTEM_PROMPT.md` |
+| Career Inventory | `pm-cv` | `pm-cv/career-inventory/SYSTEM_PROMPT.md` |
 | Career Ladder Map | `pm-career` | `pm-career/career-ladder-map/SYSTEM_PROMPT.md` |
 | Career Pivot Plan | `pm-career` | `pm-career/career-pivot-plan/SYSTEM_PROMPT.md` |
 | Caregiver-Burnout Check | `pm-caregiving` | `pm-caregiving/caregiver-burnout-check/SYSTEM_PROMPT.md` |
@@ -161,6 +167,7 @@
 | Churn Analysis | `pm-cs` | `pm-cs/churn-analysis/SYSTEM_PROMPT.md` |
 | CI/CD Playbook | `pm-engineering` | `pm-engineering/cicd-playbook/SYSTEM_PROMPT.md` |
 | Citation Hygiene | `pm-cowork` | `pm-cowork/citation-hygiene/SYSTEM_PROMPT.md` |
+| Civil Service and NHS Application | `pm-cv` | `pm-cv/civil-service-application/SYSTEM_PROMPT.md` |
 | Claim Denial Decoder | `pm-decoders` | `pm-decoders/claim-denial-decoder/SYSTEM_PROMPT.md` |
 | Claims Triage | `pm-insurance` | `pm-insurance/claims-triage/SYSTEM_PROMPT.md` |
 | Class-Action Claim Finder | `pm-money` | `pm-money/class-action-claim-finder/SYSTEM_PROMPT.md` |
@@ -200,6 +207,7 @@
 | Company Brief | `pm-jobsearch` | `pm-jobsearch/company-brief/SYSTEM_PROMPT.md` |
 | Company Compare, Same Definitions | `pm-investing-literacy` | `pm-investing-literacy/company-compare-same-definitions/SYSTEM_PROMPT.md` |
 | Company Event Ops | `pm-cowork` | `pm-cowork/company-event-ops/SYSTEM_PROMPT.md` |
+| Company-Tailored CV | `pm-cv` | `pm-cv/company-tailored-cv/SYSTEM_PROMPT.md` |
 | Comparative Market Analysis | `pm-realestate` | `pm-realestate/comparative-market-analysis/SYSTEM_PROMPT.md` |
 | Competitive Analysis | `pm-essentials` | `pm-essentials/competitive-analysis/SYSTEM_PROMPT.md` |
 | Competitive Intelligence Monitor | `pm-strategy` | `pm-strategy/competitive-intelligence-monitor/SYSTEM_PROMPT.md` |
@@ -214,6 +222,7 @@
 | Conference Talk Proposal | `pm-devrel` | `pm-devrel/conference-talk-proposal/SYSTEM_PROMPT.md` |
 | Conflict De-escalation | `other` | `other/conflict-deescalation/SYSTEM_PROMPT.md` |
 | Construction RFI Response | `pm-architecture` | `pm-architecture/construction-rfi-response/SYSTEM_PROMPT.md` |
+| Consulting and Banking CV | `pm-cv` | `pm-cv/consulting-banking-cv/SYSTEM_PROMPT.md` |
 | Consulting Proposal | `pm-consulting` | `pm-consulting/consulting-proposal/SYSTEM_PROMPT.md` |
 | Content Calendar | `pm-gtm` | `pm-gtm/content-calendar/SYSTEM_PROMPT.md` |
 | Content Repurposer | `pm-creator` | `pm-creator/content-repurposer/SYSTEM_PROMPT.md` |
@@ -234,6 +243,7 @@
 | Conversion Rate Optimization | `pm-growth` | `pm-growth/conversion-rate-optimization/SYSTEM_PROMPT.md` |
 | Couch-to-Goal Runner | `pm-wellbeing` | `pm-wellbeing/couch-to-goal-runner/SYSTEM_PROMPT.md` |
 | Counteroffer Decoder | `pm-resignation` | `pm-resignation/counteroffer-decoder/SYSTEM_PROMPT.md` |
+| Country CV Format | `pm-cv` | `pm-cv/country-cv-format/SYSTEM_PROMPT.md` |
 | Cover Letter | `pm-personal` | `pm-personal/cover-letter/SYSTEM_PROMPT.md` |
 | Coverage Gap Analysis | `pm-insurance` | `pm-insurance/coverage-gap-analysis/SYSTEM_PROMPT.md` |
 | Creator Brand Kit | `pm-creator` | `pm-creator/creator-brand-kit/SYSTEM_PROMPT.md` |
@@ -253,6 +263,8 @@
 | Customer Journey Map | `pm-discovery` | `pm-discovery/customer-journey-map/SYSTEM_PROMPT.md` |
 | Customer Outage Notice | `pm-crisis` | `pm-crisis/customer-outage-notice/SYSTEM_PROMPT.md` |
 | Customer Success Plan | `pm-cs` | `pm-cs/customer-success-plan/SYSTEM_PROMPT.md` |
+| CV Word Export | `pm-cv` | `pm-cv/cv-docx-export/SYSTEM_PROMPT.md` |
+| CV Honesty Check | `pm-cv` | `pm-cv/cv-honesty-check/SYSTEM_PROMPT.md` |
 | Dashboard Brief | `pm-data` | `pm-data/dashboard-brief/SYSTEM_PROMPT.md` |
 | Data Analysis Standard | `pm-analytics` | `pm-analytics/data-analysis-standard/SYSTEM_PROMPT.md` |
 | Data Breach Response | `pm-scam-defense` | `pm-scam-defense/data-breach-response/SYSTEM_PROMPT.md` |
@@ -398,6 +410,7 @@
 | Excel Model | `pm-documents` | `pm-documents/excel-model/SYSTEM_PROMPT.md` |
 | Exec Vs Working Deck | `pm-cowork` | `pm-cowork/exec-vs-working-deck/SYSTEM_PROMPT.md` |
 | Executing Plans | `pm-method` | `pm-method/executing-plans/SYSTEM_PROMPT.md` |
+| Executive CV | `pm-cv` | `pm-cv/executive-cv/SYSTEM_PROMPT.md` |
 | Executive Presence | `pm-comms` | `pm-comms/executive-presence/SYSTEM_PROMPT.md` |
 | Executive Summary | `pm-cross` | `pm-cross/executive-summary/SYSTEM_PROMPT.md` |
 | Executive Update | `pm-strategy` | `pm-strategy/executive-update/SYSTEM_PROMPT.md` |
@@ -426,6 +439,7 @@
 | Feature Flag Guide | `pm-engineering` | `pm-engineering/feature-flag-guide/SYSTEM_PROMPT.md` |
 | Feature Prioritisation | `pm-planning` | `pm-planning/feature-prioritisation/SYSTEM_PROMPT.md` |
 | Feature Sunset Plan | `pm-planning` | `pm-planning/feature-sunset-plan/SYSTEM_PROMPT.md` |
+| Federal Resume | `pm-cv` | `pm-cv/federal-resume/SYSTEM_PROMPT.md` |
 | Feynman Explainer | `pm-learning` | `pm-learning/feynman-explainer/SYSTEM_PROMPT.md` |
 | Figma Annotation Guide | `pm-figma` | `pm-figma/figma-annotation-guide/SYSTEM_PROMPT.md` |
 | Figma Component Audit | `pm-figma` | `pm-figma/figma-component-audit/SYSTEM_PROMPT.md` |
@@ -495,6 +509,7 @@
 | Go-To-Market | `pm-gtm` | `pm-gtm/go-to-market/SYSTEM_PROMPT.md` |
 | Go-to-Market Planner | `pm-delivery` | `pm-delivery/go-to-market-planner/SYSTEM_PROMPT.md` |
 | Good-Enough Detector | `pm-focus` | `pm-focus/good-enough-detector/SYSTEM_PROMPT.md` |
+| Graduate CV | `pm-cv` | `pm-cv/graduate-cv/SYSTEM_PROMPT.md` |
 | Grant Proposal | `pm-cross` | `pm-cross/grant-proposal/SYSTEM_PROMPT.md` |
 | Gratitude Practice | `pm-wellbeing` | `pm-wellbeing/gratitude-practice/SYSTEM_PROMPT.md` |
 | Greenwashing Self-Audit | `pm-climate` | `pm-climate/greenwashing-self-audit/SYSTEM_PROMPT.md` |
@@ -581,6 +596,7 @@
 | ISS Tracker | `pm-live` | `pm-live/iss-tracker/SYSTEM_PROMPT.md` |
 | Issue Triage (Live) | `pm-cowork-live` | `pm-cowork-live/issue-triage-live/SYSTEM_PROMPT.md` |
 | JD Decoder | `pm-jobsearch` | `pm-jobsearch/jd-decoder/SYSTEM_PROMPT.md` |
+| JD Gap Score | `pm-cv` | `pm-cv/jd-gap-score/SYSTEM_PROMPT.md` |
 | Job Application | `pm-business` | `pm-business/job-application/SYSTEM_PROMPT.md` |
 | Job Description Writer | `pm-hr` | `pm-hr/job-description-writer/SYSTEM_PROMPT.md` |
 | Job Search With a Record | `pm-reentry` | `pm-reentry/job-search-with-a-record/SYSTEM_PROMPT.md` |
@@ -856,6 +872,7 @@
 | Reconnect With Someone | `other` | `other/reconnect-with-someone/SYSTEM_PROMPT.md` |
 | Recovery Day Planner | `pm-wellbeing` | `pm-wellbeing/recovery-day-planner/SYSTEM_PROMPT.md` |
 | Recruiter Outreach | `pm-recruiting` | `pm-recruiting/recruiter-outreach/SYSTEM_PROMPT.md` |
+| Recruiter Scan Simulator | `pm-cv` | `pm-cv/recruiter-scan-simulator/SYSTEM_PROMPT.md` |
 | Recurring Meeting Pruner | `pm-cowork` | `pm-cowork/recurring-meeting-pruner/SYSTEM_PROMPT.md` |
 | Red-Team My Plan | `pm-thinking` | `pm-thinking/red-team-my-plan/SYSTEM_PROMPT.md` |
 | Red-Team Review | `pm-cross` | `pm-cross/red-team-review/SYSTEM_PROMPT.md` |
@@ -866,6 +883,7 @@
 | Reference Request Kit | `pm-layoff` | `pm-layoff/reference-request-kit/SYSTEM_PROMPT.md` |
 | Referral Program | `pm-growth` | `pm-growth/referral-program/SYSTEM_PROMPT.md` |
 | Referral Program Design | `pm-growth` | `pm-growth/referral-program-design/SYSTEM_PROMPT.md` |
+| Referral Request | `pm-cv` | `pm-cv/referral-request/SYSTEM_PROMPT.md` |
 | Refinance Breakeven | `pm-calculators` | `pm-calculators/refinance-breakeven/SYSTEM_PROMPT.md` |
 | Regex Builder & Explainer | `pm-engineering` | `pm-engineering/regex-builder/SYSTEM_PROMPT.md` |
 | Regression Test Plan | `pm-qa` | `pm-qa/regression-test-plan/SYSTEM_PROMPT.md` |
@@ -899,6 +917,7 @@
 | Retrospective Analysis | `pm-delivery` | `pm-delivery/retro-analysis/SYSTEM_PROMPT.md` |
 | Return & Refund Policy | `pm-ecommerce` | `pm-ecommerce/return-refund-policy/SYSTEM_PROMPT.md` |
 | Return-to-Activity Criteria | `pm-physio` | `pm-physio/return-to-activity-criteria/SYSTEM_PROMPT.md` |
+| Returner CV | `pm-cv` | `pm-cv/returner-cv/SYSTEM_PROMPT.md` |
 | Review Comments Resolver | `pm-cowork` | `pm-cowork/review-comments-resolver/SYSTEM_PROMPT.md` |
 | Review Response | `pm-ecommerce` | `pm-ecommerce/review-response/SYSTEM_PROMPT.md` |
 | Rewards Optimizer | `pm-money` | `pm-money/rewards-optimizer/SYSTEM_PROMPT.md` |
@@ -1143,6 +1162,7 @@
 | Utility Switch Advisor | `pm-money` | `pm-money/utility-switch-advisor/SYSTEM_PROMPT.md` |
 | UX Research Plan | `pm-design` | `pm-design/ux-research-plan/SYSTEM_PROMPT.md` |
 | Value Proposition | `pm-copy` | `pm-copy/value-proposition/SYSTEM_PROMPT.md` |
+| Values-Mapped CV | `pm-cv` | `pm-cv/values-mapped-cv/SYSTEM_PROMPT.md` |
 | VC Partner Meeting | `pm-simulators` | `pm-simulators/vc-partner-meeting/SYSTEM_PROMPT.md` |
 | Vehicle-Maintenance Schedule | `pm-lifeadmin` | `pm-lifeadmin/vehicle-maintenance-schedule/SYSTEM_PROMPT.md` |
 | Vendor Breakup Email | `pm-cowork` | `pm-cowork/vendor-breakup-email/SYSTEM_PROMPT.md` |

@@ -1,7 +1,7 @@
 {
- "generated": "2026-09-28",
+ "generated": "2026-10-04",
  "counts": {
-  "consequential": 189,
+  "consequential": 209,
   "high-stakes": 143,
   "informational": 856
  },
@@ -21,6 +21,10 @@
   "ab-test-readout": {
    "tier": "informational",
    "via": "default"
+  },
+  "academic-cv": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
   },
   "accessibility-audit": {
    "tier": "informational",
@@ -222,6 +226,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "application-tracker": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
+  },
   "apprentice-first-week": {
    "tier": "informational",
    "via": "default"
@@ -286,6 +294,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "ats-detector": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
+  },
   "attention-reset": {
    "tier": "informational",
    "via": "default"
@@ -349,6 +361,10 @@
   "big-purchase-timing": {
    "tier": "consequential",
    "via": "bundle:pm-money"
+  },
+  "bilingual-cv-zh-en": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
   },
   "birdwatching-log": {
    "tier": "informational",
@@ -522,6 +538,14 @@
    "tier": "high-stakes",
    "via": "bundle:pm-caregiving"
   },
+  "career-changer-cv": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
+  },
+  "career-inventory": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
+  },
   "career-ladder-map": {
    "tier": "consequential",
    "via": "bundle:pm-career"
@@ -621,6 +645,10 @@
   "citation-hygiene": {
    "tier": "informational",
    "via": "default"
+  },
+  "civil-service-application": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
   },
   "claim-denial-decoder": {
    "tier": "high-stakes",
@@ -778,6 +806,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "company-tailored-cv": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
+  },
   "comparative-market-analysis": {
    "tier": "consequential",
    "via": "bundle:pm-realestate"
@@ -833,6 +865,10 @@
   "construction-rfi-response": {
    "tier": "informational",
    "via": "default"
+  },
+  "consulting-banking-cv": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
   },
   "consulting-proposal": {
    "tier": "informational",
@@ -914,6 +950,10 @@
    "tier": "consequential",
    "via": "bundle:pm-resignation"
   },
+  "country-cv-format": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
+  },
   "cover-letter": {
    "tier": "informational",
    "via": "default"
@@ -989,6 +1029,14 @@
   "customer-success-plan": {
    "tier": "informational",
    "via": "default"
+  },
+  "cv-docx-export": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
+  },
+  "cv-honesty-check": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
   },
   "dashboard-brief": {
    "tier": "informational",
@@ -1570,6 +1618,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "executive-cv": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
+  },
   "executive-presence": {
    "tier": "informational",
    "via": "default"
@@ -1681,6 +1733,10 @@
   "feature-sunset-plan": {
    "tier": "informational",
    "via": "default"
+  },
+  "federal-resume": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
   },
   "feynman-explainer": {
    "tier": "informational",
@@ -1957,6 +2013,10 @@
   "good-enough-detector": {
    "tier": "informational",
    "via": "default"
+  },
+  "graduate-cv": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
   },
   "grant-proposal": {
    "tier": "informational",
@@ -2301,6 +2361,10 @@
   "jd-decoder": {
    "tier": "consequential",
    "via": "bundle:pm-jobsearch"
+  },
+  "jd-gap-score": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
   },
   "job-application": {
    "tier": "informational",
@@ -3402,6 +3466,10 @@
    "tier": "consequential",
    "via": "bundle:pm-recruiting"
   },
+  "recruiter-scan-simulator": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
+  },
   "recurring-meeting-pruner": {
    "tier": "informational",
    "via": "default"
@@ -3441,6 +3509,10 @@
   "referral-program-design": {
    "tier": "informational",
    "via": "default"
+  },
+  "referral-request": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
   },
   "refinance-breakeven": {
    "tier": "informational",
@@ -3573,6 +3645,10 @@
   "return-to-activity-criteria": {
    "tier": "informational",
    "via": "default"
+  },
+  "returner-cv": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
   },
   "review-comments-resolver": {
    "tier": "informational",
@@ -4549,6 +4625,10 @@
   "value-proposition": {
    "tier": "informational",
    "via": "default"
+  },
+  "values-mapped-cv": {
+   "tier": "consequential",
+   "via": "bundle:pm-cv"
   },
   "vc-partner-meeting": {
    "tier": "consequential",
