@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" role="img" aria-label="Nib, a small page character, with a bright idea">
+  <style>
+    @keyframes hop{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+    .me{animation:hop 2.4s ease-in-out infinite}
+    @keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(.1)}}
+    .eye{animation:blink 4s infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes glow{0%,100%{opacity:.55}50%{opacity:1}}
+    .bulb{animation:glow 1.8s ease-in-out infinite}
+    @media (prefers-reduced-motion: reduce){.me,.eye,.arm,.bulb{animation:none!important;opacity:1!important}}
+  </style>
+  <g class="me">
+    <path d="M22 14h28l12 12v38a6 6 0 0 1-6 6H22a6 6 0 0 1-6-6V20a6 6 0 0 1 6-6Z" fill="#ffffff" stroke="#1f2328" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M50 14v8a4 4 0 0 0 4 4h8" fill="#efe6fb" stroke="#1f2328" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M24 56h18M24 61h12" stroke="#e3ddd2" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="31" cy="38" r="2.8" fill="#1f2328" class="eye"/><circle cx="45" cy="38" r="2.8" fill="#1f2328" class="eye"/>
+    <circle cx="27" cy="45" r="2.6" fill="#c46f1f" opacity=".45"/><circle cx="49" cy="45" r="2.6" fill="#c46f1f" opacity=".45"/>
+    <path d="M33 45q5 4 10 0" fill="none" stroke="#1f2328" stroke-width="2.2" stroke-linecap="round"/>
+    <path d="M17 50q-6 2-8 8" fill="none" stroke="#1f2328" stroke-width="2.6" stroke-linecap="round"/><path d="M61 50q6 2 8 8" fill="none" stroke="#1f2328" stroke-width="2.6" stroke-linecap="round"/>
+    <g class="bulb"><circle cx="68" cy="13" r="6.5" fill="#ffd25e" stroke="#1f2328" stroke-width="2"/><path d="M65 21h6" stroke="#1f2328" stroke-width="2" stroke-linecap="round"/>
+    <path d="M58 12h-3M78 12h3M61 6l-2-2M75 6l2-2" stroke="#e0a800" stroke-width="2" stroke-linecap="round"/></g>
+  </g>
+</svg>

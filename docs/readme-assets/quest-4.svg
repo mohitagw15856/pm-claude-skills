@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" role="img" aria-label="Quest level 4 badge">
+  <style>
+    text{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', Helvetica, Arial, sans-serif}
+    .n{font-size:26px;font-weight:800;fill:#ffffff}
+    .lv{font-size:9px;font-weight:700;fill:#ffffff;letter-spacing:.12em}
+    @keyframes shine{0%,60%{transform:translateX(-80px)}85%,100%{transform:translateX(80px)}}
+    .sh{animation:shine 4s ease-in-out infinite;animation-delay:1.2s}
+    @media (prefers-reduced-motion: reduce){.sh{animation:none!important}}
+  </style>
+  <defs><clipPath id="hx4"><path d="M36 3L65 19.5V52.5L36 69L7 52.5V19.5Z"/></clipPath></defs>
+  <path d="M36 3L65 19.5V52.5L36 69L7 52.5V19.5Z" fill="#b4561a" stroke="#ffffff" stroke-opacity=".55" stroke-width="2"/>
+  <g clip-path="url(#hx4)"><rect class="sh" x="10" y="-10" width="14" height="100" fill="#ffffff" opacity=".22" transform="rotate(20)"/></g>
+  <text x="36" y="24" text-anchor="middle" class="lv">LEVEL</text>
+  <text x="36" y="47" text-anchor="middle" class="n">4</text>
+  <circle cx="24" cy="56" r="2.6" fill="#ffffff"/><circle cx="32" cy="56" r="2.6" fill="#ffffff"/><circle cx="40" cy="56" r="2.6" fill="#ffffff"/><circle cx="48" cy="56" r="2.6" fill="#ffffff"/>
+</svg>
