@@ -38,7 +38,7 @@
     // ── Playground landing ──
     'page.dirPill': { en: '🎉 In the official Anthropic plugin directory', zh: '🎉 已收录于 Anthropic 官方插件目录' },
     'page.heroH2': { en: 'Make AI produce <span class="grad">real professional work</span>.', zh: '让 AI 产出 <span class="grad">真正专业的成果</span>。' },
-    'page.heroP': { en: '319 open-source skills that teach Claude, ChatGPT &amp; Gemini the structure a senior pro uses — PRDs, exec updates, launch plans, postmortems. Run any one free, right here.', zh: '319 个开源技能，教会 Claude、ChatGPT 和 Gemini 资深专家所用的结构 —— PRD、高管汇报、上线计划、复盘。每一个都能在此免费运行。' },
+    'page.heroP': { en: '319 open-source skills that teach Claude, ChatGPT & Gemini the structure a senior pro uses — PRDs, exec updates, launch plans, postmortems. Run any one free, right here.', zh: '319 个开源技能，教会 Claude、ChatGPT 和 Gemini 资深专家所用的结构 —— PRD、高管汇报、上线计划、复盘。每一个都能在此免费运行。' },
     'page.statSkills': { en: 'skills', zh: '技能' },
     'page.statEval': { en: 'eval-scored', zh: '已评测' },
     'page.statAvg': { en: 'avg score /5', zh: '平均分 /5' },
