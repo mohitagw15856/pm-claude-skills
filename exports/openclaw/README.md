@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1247 skills exported. Copy a `SKILL.md` into the tool to use it.
+1262 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -187,19 +187,31 @@
 | Clone Brief | `pm-2027` | `clone-brief/SKILL.md` |
 | Closing Disclosure Decoder | `pm-decoders` | `closing-disclosure-decoder/SKILL.md` |
 | Campus Recruitment (校招) | `pm-china-exams` | `cn-campus-recruitment/SKILL.md` |
+| GB/T 7714 References (参考文献著录) | `pm-china-exams` | `cn-citation-gbt7714/SKILL.md` |
 | Civil Service Essay (申论) | `pm-china-exams` | `cn-civil-exam-essay/SKILL.md` |
 | Civil Service Interview (结构化面试) | `pm-china-exams` | `cn-civil-exam-interview/SKILL.md` |
+| Data Export Assessment (数据出境) | `pm-china-compliance` | `cn-data-export-assessment/SKILL.md` |
 | 复盘 (Fupan) | `pm-china-work` | `cn-fupan/SKILL.md` |
 | Gaokao Application Planner (高考志愿) | `pm-china-life` | `cn-gaokao-planner/SKILL.md` |
+| Generative AI Filing (生成式人工智能备案) | `pm-china-compliance` | `cn-genai-filing/SKILL.md` |
+| Housing Fund Withdrawal (公积金提取) | `pm-china-life` | `cn-housing-fund-withdrawal/SKILL.md` |
+| Hukou Points (积分落户) | `pm-china-life` | `cn-hukou-points/SKILL.md` |
 | China Annual Tax Reconciliation (个税年度汇算) | `pm-china-life` | `cn-iit-reconciliation/SKILL.md` |
 | Kaoyan Planner (考研规划) | `pm-china-exams` | `cn-kaoyan-planner/SKILL.md` |
 | China Labour Contract Decoder (劳动合同) | `pm-china-life` | `cn-labour-contract-decoder/SKILL.md` |
 | Level Mapper (职级对标) | `pm-china-work` | `cn-level-mapper/SKILL.md` |
+| Medical Insurance Claims (医保报销) | `pm-china-life` | `cn-medical-insurance-claim/SKILL.md` |
+| MLPS 2.0 Checklist (等保 2.0) | `pm-china-compliance` | `cn-mlps-checklist/SKILL.md` |
+| Official Document (公文) | `pm-china-work` | `cn-official-document/SKILL.md` |
+| PIPL Impact Assessment (个人信息保护影响评估) | `pm-china-compliance` | `cn-pipl-pia/SKILL.md` |
 | PRD Review (需求评审) | `pm-china-work` | `cn-prd-review/SKILL.md` |
 | Promotion Defence (晋升答辩) | `pm-china-work` | `cn-promotion-defence/SKILL.md` |
 | China Severance Calculator (经济补偿金) | `pm-china-life` | `cn-severance-calculator/SKILL.md` |
+| Small Business Tax (个体户与小微企业税务) | `pm-china-life` | `cn-small-business-tax/SKILL.md` |
 | China Social Insurance Explainer (五险一金) | `pm-china-life` | `cn-social-insurance-explainer/SKILL.md` |
 | State-Owned Enterprise Interview (国企面试) | `pm-china-exams` | `cn-soe-interview/SKILL.md` |
+| Tech Interview Drill (大厂技术面试) | `pm-china-exams` | `cn-tech-interview-drill/SKILL.md` |
+| Thesis Proposal (开题报告) | `pm-china-exams` | `cn-thesis-proposal/SKILL.md` |
 | Chinese Weekly Report (周报) | `pm-china-work` | `cn-weekly-report/SKILL.md` |
 | Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-work` | `cn-year-end-review/SKILL.md` |
 | Co-Marketing | `pm-growth` | `co-marketing/SKILL.md` |
@@ -271,6 +283,7 @@
 | Credit Memo | `pm-banking` | `credit-memo/SKILL.md` |
 | Cross-Border Listing | `pm-chuhai` | `cross-border-listing/SKILL.md` |
 | Cross-Examine Me | `pm-thinking` | `cross-examine-me/SKILL.md` |
+| Cross-border Platform Playbook (跨境平台选择与入驻) | `pm-chuhai` | `crossborder-platform-playbook/SKILL.md` |
 | Crypto Prices | `pm-live` | `crypto-prices/SKILL.md` |
 | Customer Escalation Brief | `pm-cs` | `cs-escalation-brief/SKILL.md` |
 | Customer Health Scorecard | `pm-cs` | `cs-health-scorecard/SKILL.md` |
@@ -559,6 +572,7 @@
 | HIPAA Safeguards | `pm-compliance` | `hipaa-safeguards/SKILL.md` |
 | Hire or Pass | `pm-decisions` | `hire-or-pass/SKILL.md` |
 | Hiring Rubric | `pm-people` | `hiring-rubric/SKILL.md` |
+| Hong Kong MPF Explainer (強積金) | `pm-hk-tw` | `hk-mpf-explainer/SKILL.md` |
 | HN Digest | `pm-live` | `hn-digest/SKILL.md` |
 | HOA Decoder | `pm-decoders` | `hoa-decoder/SKILL.md` |
 | HOA Violation Response | `pm-legal` | `hoa-violation-response/SKILL.md` |
@@ -1182,6 +1196,7 @@
 | Dental Treatment Plan Presentation | `pm-dentistry` | `treatment-plan-presentation/SKILL.md` |
 | Trip Planner | `pm-personal` | `trip-planner/SKILL.md` |
 | TTRPG Session Forge | `pm-newgen` | `ttrpg-session-forge/SKILL.md` |
+| Taiwan Labour Standards (勞動基準法) | `pm-hk-tw` | `tw-labour-standards/SKILL.md` |
 | Two Worlds Translator | `pm-identity` | `two-worlds-translator/SKILL.md` |
 | UI Design Pipeline | `pm-design-taste` | `ui-design-pipeline/SKILL.md` |
 | UI UX Pro Max (pointer) | `pm-design-taste` | `ui-ux-pro-max-pointer/SKILL.md` |

@@ -1,0 +1,48 @@
+name: Publish Dify plugin
+
+# Packages integrations/dify-plugin (with the trained skill router and index) using
+# Dify's official CLI, pinned by checksum, and attaches pm_skills.difypkg to the release.
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag to attach the package to'
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Build plugin data
+        run: |
+          node scripts/build-dataset.mjs
+          node scripts/build-dify-plugin.mjs
+      - name: Test the plugin core
+        working-directory: integrations/dify-plugin
+        run: python3 test_core.py
+      - name: Package with the Dify CLI
+        env:
+          CLI_URL: https://github.com/langgenius/dify-plugin-daemon/releases/download/0.6.10/dify-plugin-linux-amd64
+          CLI_SHA256: 0cef74bcae375a4337c2ff7d42e4787717981a795e1c23cf56bb27ec07ec8304
+        run: |
+          set -euo pipefail
+          curl -fsSL -o dify "$CLI_URL"
+          echo "${CLI_SHA256}  dify" | sha256sum -c -
+          chmod +x dify
+          ./dify plugin package integrations/dify-plugin -o pm_skills.difypkg
+      - name: Attach to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: |
+          printf '%s' "$TAG" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+$' || { echo "::error::bad tag"; exit 1; }
+          gh release upload "$TAG" pm_skills.difypkg --clobber

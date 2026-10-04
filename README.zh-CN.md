@@ -1,74 +1,90 @@
-# PM Skills：一千多个专业 Agent Skills
+# PM Skills：1250 个专业 Agent Skills，用中文提问就能用
 
-[English](README.md) · **简体中文** · [在中国使用](docs/CHINA.md) · [全部技能](SKILLS.md) · [更新日志](CHANGELOG.md)
+<p align="center">
+  <a href="README.md">English</a> · <b>简体中文</b> · <a href="docs/CHINA.md">在中国使用</a> · <a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/">技能科技树</a> · <a href="SKILLS.md">全部技能</a> · <a href="docs/learn-zh/README.md">开源小课</a> · <a href="CHANGELOG.md">更新日志</a>
+</p>
 
-> 在国内？不需要访问 GitHub：通过 npmmirror、清华 PyPI 镜像、[Gitee 镜像](https://gitee.com/mohitagw/pm-claude-skills)和[魔搭数据集](https://www.modelscope.ai/datasets/mohitagw15856/pm-skills-instruct)安装，详见[在中国使用](docs/CHINA.md)。
+<p align="center">
+  <a href="https://github.com/mohitagw15856/pm-claude-skills/stargazers"><img src="https://img.shields.io/github/stars/mohitagw15856/pm-claude-skills?style=social" alt="GitHub Stars"></a>
+  <a href="https://gitee.com/mohitagw/pm-claude-skills"><img src="https://img.shields.io/badge/Gitee-镜像-c71d23?logo=gitee" alt="Gitee 镜像"></a>
+  <a href="https://www.modelscope.ai/studios/mohitagw15856/pm-skills-playground"><img src="https://img.shields.io/badge/魔搭-在线试用-624aff" alt="魔搭在线试用"></a>
+  <a href="https://www.npmjs.com/package/pm-claude-skills"><img src="https://img.shields.io/npm/v/pm-claude-skills?logo=npm&color=cb3837" alt="npm"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/协议-MIT-lightgrey" alt="MIT"></a>
+</p>
 
-> 想系统地学怎么用和写 Agent Skills？见六课的开源小课：[用 Agent Skills 做职场工作](docs/learn-zh/README.md)。
+> **公司要裁员，你不知道该拿多少补偿；明天要开需求评审，PRD 还缺一半；下个月公务员面试，没人陪你练。**
+> 通用 AI 像一个很自信的实习生。**PM Skills** 是资深同事的笔记：1250 份，每份一个 Markdown 文件。（PM 指 Professional，专业人士，不只是产品经理。）
 
-PM Skills 是一个开源的 Agent Skills 库。每个技能是一份 Markdown 文件（`SKILL.md`），教 AI 助手把一件专业工作做到资深水平：从写 PRD、周报，到解读劳动合同、准备晋升答辩。
-
-这里的 PM 指 Professional（专业人士），不只是产品经理。
-
-MIT 开源协议，永久免费。没有运行时、没有遥测、不需要账号。
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/demo-chat-zh.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/demo-chat-zh-light.svg">
+    <img src="docs/readme-assets/demo-chat-zh.svg" width="100%" alt="动画演示：裁员补偿、周报、公务员面试三个请求，以及回答每个请求的技能和成品" />
+  </picture>
+</p>
 
 ## 它是怎么工作的
 
-| | 步骤 | 例子 |
-|---|---|---|
-| **01** | 用你自己的话说出需要什么 | "公司要裁我，能拿多少补偿？" |
-| **02** | AI 助手加载与之匹配的那一个技能 | [`cn-severance-calculator`](skills/cn-severance-calculator/SKILL.md)，一份 Markdown 文件，只在相关时读取 |
-| **03** | 你得到的是完成的成果，而不是关于怎么做的建议 | 适用的情形（N、N+1 或 2N）、逐步计算、签字前要核对的事项 |
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/how-it-works-zh.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/how-it-works-zh-light.svg">
+    <img src="docs/readme-assets/how-it-works-zh.svg" width="100%" alt="说出你的需求，加载一个技能，拿到成品" />
+  </picture>
+</p>
 
-## 安装
+例如问"公司要裁我，能拿多少补偿？"，AI 助手会加载 [`cn-severance-calculator`](skills/cn-severance-calculator/SKILL.md)：判断适用 N、N+1 还是 2N，一步步算清楚，并列出签字前要核对的事项。
 
-**Claude Code：**
+MIT 开源协议，永久免费。没有运行时，没有遥测，不需要账号。
 
-```bash
-npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent claude
-```
-
-**国内常用的 AI 编程工具：**
+## 安装（全部走国内网络）
 
 ```bash
-npx pm-claude-skills add --agent trae        # Trae
-npx pm-claude-skills add --agent qoder       # Qoder
-npx pm-claude-skills add --agent lingma      # 通义灵码
-npx pm-claude-skills add --agent codebuddy   # CodeBuddy
+# Trae（也可以换成 qoder、lingma 通义灵码、codebuddy、claude）
+npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae
+
+# 只装中文技能包
+npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae --bundle pm-china-work,pm-china-exams,pm-china-life
 ```
 
-只装部分技能包：
+| 你想… | 国内地址 |
+|---|---|
+| 下载源码 | `git clone https://gitee.com/mohitagw/pm-claude-skills.git` |
+| 在 Python 智能体里用 | `pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pm-skills` |
+| 在线试用 | [魔搭创空间](https://www.modelscope.ai/studios/mohitagw15856/pm-skills-playground)，用你自己的 DeepSeek、通义千问、Kimi、智谱或豆包 Key |
+| 找到合适的技能 | [魔搭路由模型](https://www.modelscope.ai/models/mohitagw15856/pm-skills-router)，或 `npx pm-claude-skills find "写周报"` |
+| 训练数据 | [魔搭数据集](https://www.modelscope.ai/datasets/mohitagw15856/pm-skills-instruct) |
+| 在 Cherry Studio、Dify、FastGPT、MaxKB 里用 | 见 [在中国使用](docs/CHINA.md) |
 
-```bash
-npx pm-claude-skills add --agent trae --bundle pm-china-work,pm-cv
-```
-
-还支持 Cursor、Windsurf、Codex、Cline 等，详见 [docs/CHINA.md](docs/CHINA.md)。
-
-## 适合中国用户的技能包
+## 中文技能包
 
 | 技能包 | 内容 | 试着说 |
 |---|---|---|
-| [**pm-china-work**](plugins/pm-china-work/) 职场 | 周报 / 月报、述职报告 / 年终总结、晋升答辩、复盘、需求评审、职级对标、飞书文档、钉钉日志、企业微信公告 | "帮我把这些笔记整理成周报。" |
-| [**pm-china-exams**](plugins/pm-china-exams/) 考试与求职 | 申论、结构化面试、考研规划、校招与三方协议、国企面试 | "下个月公务员面试，帮我模拟一轮。" |
-| [**pm-china-life**](plugins/pm-china-life/) 生活事务 | 劳动合同解读、经济补偿金估算、个税年度汇算、五险一金、高考志愿 | "三年合同试用期六个月，合法吗？" |
-| [**pm-zh-content**](plugins/pm-zh-content/) 内容平台 | 小红书笔记、公众号文章、抖音脚本、直播带货脚本 | "帮我写一篇小红书笔记。" |
-| [**pm-chuhai**](plugins/pm-chuhai/) 出海 | 出海市场进入计划、跨境电商 listing、PIPL 与 GDPR 对照 | "我们想出海，东南亚还是中东？" |
-| [**pm-cv**](plugins/pm-cv/) 简历 | 按目标公司定制简历、中英文简历、ATS 检查、导出 Word | "帮我做一份中英文简历，要投外企。" |
+| [**pm-china-work**](plugins/pm-china-work/) 职场 | 周报 / 月报、述职、晋升答辩、复盘、需求评审、职级对标、公文、飞书、钉钉、企业微信 | "帮我把这些笔记整理成周报。" |
+| [**pm-china-exams**](plugins/pm-china-exams/) 考试与求职 | 申论、结构化面试、考研、开题报告与参考文献、大厂技术面试、校招与三方协议、国企面试 | "下个月公务员面试，帮我模拟一轮。" |
+| [**pm-china-life**](plugins/pm-china-life/) 生活事务 | 劳动合同、经济补偿金、个税汇算、五险一金、公积金提取、医保报销、积分落户、个体户报税、高考志愿 | "公司要裁我，能拿多少补偿？" |
+| [**pm-china-compliance**](plugins/pm-china-compliance/) 合规 | 等保 2.0、数据出境、个人信息保护影响评估、大模型备案与 AI 内容标识 | "我们的系统要过等保三级，差在哪？" |
+| [**pm-hk-tw**](plugins/pm-hk-tw/) 港台 | 香港強積金、台灣勞動基準法（繁體中文） | "被資遣可以拿多少資遣費？" |
+| [**pm-zh-content**](plugins/pm-zh-content/) 内容平台 | 小红书、公众号、抖音脚本、直播带货 | "帮我写一篇小红书笔记。" |
+| [**pm-chuhai**](plugins/pm-chuhai/) 出海 | 出海市场进入、Temu / TikTok Shop / 亚马逊选择与入驻、跨境 listing、PIPL 与 GDPR 对照 | "Temu 全托管还是亚马逊 FBA？" |
+| [**pm-cv**](plugins/pm-cv/) 简历 | 按目标公司定制简历、中英文简历、导出 Word | "帮我做一份中英文简历，要投外企。" |
 
-此外还有一千多个通用技能，覆盖产品、工程、数据、设计、市场、销售、人力、法律、财务等 35 个职业。完整列表见 [SKILLS.md](SKILLS.md)。
+另外还有一千多个通用技能，覆盖产品、工程、数据、设计、市场、销售、人力、法律、财务等 35 个职业，见 [SKILLS.md](SKILLS.md)。[`skills-i18n/zh/`](skills-i18n/zh/) 有 73 个技能的简体中文版，[`skills-i18n/zh-TW/`](skills-i18n/zh-TW/) 有 27 个繁体中文版。
 
-## 中文翻译
+## 看一看
 
-[`skills-i18n/zh/`](skills-i18n/zh/) 中有 60 个技能的简体中文翻译，[`skills-i18n/zh-TW/`](skills-i18n/zh-TW/) 中有 25 个技能的繁体中文翻译。英文版本为规范版本；翻译由 CI 检查结构是否一致。
-
-用中文提问时，技能路由也能理解：例如"我的房东扣了我的押金"会匹配到押金追回技能。
-
-## 在线试用
-
-[Playground](https://mohitagw15856.github.io/pm-claude-skills/) 支持用你自己的 API Key 调用 DeepSeek、通义千问、Kimi、智谱 GLM（有免费模型）和豆包。Key 只保存在你的浏览器里。
-
-Playground 托管在 GitHub Pages，在国内可能访问较慢；技能安装到本地后不依赖任何在线服务。
+<table>
+<tr>
+<td width="50%" align="center">
+<a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/"><img src="docs/readme-assets/tech-tree.jpg" width="100%" alt="技能科技树" /></a>
+<br /><sub><b>🌳 <a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/">技能科技树</a></b>：整个技能库画成一棵科技树，可以搜索、复制安装命令、为想要的技能投票。</sub>
+</td>
+<td width="50%" align="center">
+<a href="plugins/pm-3d-explorer/"><img src="docs/readme-assets/3d-explorer.jpg" width="100%" alt="3D 讲解页面" /></a>
+<br /><sub><b>🧊 <a href="plugins/pm-3d-explorer/">3D 讲解页</a></b>：给一个主题，生成可以拆开看、点击看标注、还能做小测验的 3D 页面。</sub>
+</td>
+</tr>
+</table>
 
 ## 质量
 
@@ -76,13 +92,13 @@ Playground 托管在 GitHub Pages，在国内可能访问较慢；技能安装�
 
 ## 参与贡献
 
-欢迎用中文提 Issue 和 PR：
-- 如果某个技能在中国的场景下不准确，请告诉我们
-- 希望增加哪些技能
-- 帮助翻译或审校翻译
+- 某个技能不符合国内实际情况？用中文提 Issue，[GitHub](https://github.com/mohitagw15856/pm-claude-skills/issues) 和 [Gitee](https://gitee.com/mohitagw/pm-claude-skills/issues) 都可以
+- 想要新技能？在 [科技树](https://mohitagw15856.github.io/pm-claude-skills/tech-tree/) 上投票，或者开一个 `skill-request` Issue
+- 想帮忙翻译？认领一个 [good first translation](https://github.com/mohitagw15856/pm-claude-skills/labels/good%20first%20translation)
+- 想学怎么写技能？看 [开源小课](docs/learn-zh/README.md)
 
 参见 [CONTRIBUTING.md](CONTRIBUTING.md)。项目地址：https://github.com/mohitagw15856/pm-claude-skills
 
 ## 协议
 
-MIT。
+MIT。用吧，改吧，拿去工作里用。

@@ -54,13 +54,20 @@ def load_corpus(repo):
     """{skill: [(text, weight), ...]} from routing phrases and descriptions."""
     corpus = defaultdict(list)
     skills_dir = os.path.join(repo, "skills")
+    try:
+        with open(os.path.join(repo, "data", "zh-aliases.json"), encoding="utf-8") as f:
+            aliases = json.load(f).get("aliases", {})
+    except (OSError, ValueError):
+        aliases = {}
     for name in sorted(os.listdir(skills_dir)):
         desc = _frontmatter_description(os.path.join(skills_dir, name, "SKILL.md"))
         if not desc:
             continue
         corpus[name].append((name.replace("-", " "), 1.0))
         corpus[name].append((desc, 1.0))
-        zh = _frontmatter_description(os.path.join(repo, "skills-i18n", "zh", name, "SKILL.md"))
+        zh = (_frontmatter_description(os.path.join(repo, "skills-i18n", "zh", name, "SKILL.md"))
+              or _frontmatter_description(os.path.join(repo, "skills-i18n", "zh-TW", name, "SKILL.md"))
+              or aliases.get(name, ""))
         if zh:
             corpus[name].append((zh, 1.0))
     routing = []

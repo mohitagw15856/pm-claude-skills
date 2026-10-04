@@ -6,6 +6,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const ZH_ALIASES = (() => { try { return JSON.parse(readFileSync(join(__dirname, '..', 'data', 'zh-aliases.json'), 'utf8')).aliases || {}; } catch { return {}; } })();
 const root = join(__dirname, '..');
 const skillsDir = join(root, 'skills');
 const pluginsDir = join(root, 'plugins');
@@ -199,8 +200,13 @@ for (const name of readdirSync(skillsDir)) {
   const { meta, body } = parseFrontmatter(text);
   const titleHeading = body.match(/^#\s+(.+)$/m);
   // A Chinese description, when a translation exists, so Chinese requests can be routed.
+  // Chinese description for routing: the Simplified translation, else the Traditional one,
+  // else a short alias from data/zh-aliases.json for common skills not yet translated.
   const zhFile = join(__dirname, '..', 'skills-i18n', 'zh', name, 'SKILL.md');
-  const descriptionZh = existsSync(zhFile) ? (parseFrontmatter(readFileSync(zhFile, 'utf8')).meta.description || '') : '';
+  const twFile = join(__dirname, '..', 'skills-i18n', 'zh-TW', name, 'SKILL.md');
+  const descriptionZh = existsSync(zhFile) ? (parseFrontmatter(readFileSync(zhFile, 'utf8')).meta.description || '')
+    : existsSync(twFile) ? (parseFrontmatter(readFileSync(twFile, 'utf8')).meta.description || '')
+    : (ZH_ALIASES[name] || '');
   skills.push({
     name: meta.name || name,
     title: (titleHeading ? titleHeading[1] : titleFromName(meta.name || name)).replace(/\s+Skill$/i, ''),

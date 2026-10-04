@@ -108,6 +108,8 @@ claude mcp add pm-skills -- npx -y --registry=https://registry.npmmirror.com -p 
 | 应用 | 方式 | 配置 |
 |---|---|---|
 | Cherry Studio | 本地 stdio | 设置 → MCP 服务器 → 添加，类型选 stdio，命令 `npx`，参数 `-y --registry=https://registry.npmmirror.com -p pm-claude-skills pm-claude-skills-mcp` |
+| Dify | 插件或应用模板 | [Dify 插件](../integrations/dify-plugin/)（离线找技能，从 Gitee 读取技能，国内可用）；或直接导入 [12 个应用模板](../integrations/dify-templates/) |
+| MaxKB、FastGPT | 函数 / 代码运行 | [只依赖 Gitee 的 Python 工具](../integrations/china-agent-tools/) |
 | Dify、FastGPT、MaxKB | 远程 HTTP | 添加 MCP 工具，地址 `https://pm-skills-mcp.pm-claude-skills.workers.dev/mcp`（Streamable HTTP）。只适用于部署在海外、能访问 `workers.dev` 的实例；部署在国内的实例请等我们接入自定义域名 |
 
 接入后，在对话或工作流里调用 `search_skills` 找到技能，再用 `get_skill` 取回完整说明交给模型执行。
@@ -155,5 +157,9 @@ What is in place, and what still needs an account or a decision.
 | Router understands Chinese | Done (`integrations/jev/catalog.mjs`, `find`) | Coverage grows with every translated description in `skills-i18n/zh/` |
 | Hosted MCP and usage counter reachable from China | **Needs a custom domain** | `workers.dev` is blocked in mainland China. Add a domain to Cloudflare, attach it to the `pm-skills-mcp` worker (Workers, Settings, Domains and Routes, Add custom domain), then point `web/providers.js`, `web/nav.js`, `web/app.js` and `web/live.js` at it. Even then, reachability from China is not guaranteed |
 | Playground reachable from China | Partly | GitHub Pages is slow or blocked at times. A copy is published to the ModelScope Studio mohitagw15856/pm-skills-playground by `.github/workflows/publish-modelscope-studio.yml` (variable `MODELSCOPE_STUDIO`); its deployment framework is Static, saved in the Studio's `ms_deploy.json`, which the sync keeps. A mainland host of our own would need an ICP filing |
+| GitCode mirror | Workflow ready: `.github/workflows/mirror-gitcode.yml` | Create the GitCode repository, add an SSH key to the GitCode account, set secret `GITCODE_SSH_KEY` and variable `GITCODE_REPO` |
+| Chinese release notes on Gitee | Workflow ready: `.github/workflows/publish-gitee-release.yml`, notes in `docs/releases-zh/<tag>.md` | Create a Gitee personal access token (projects scope) and set secret `GITEE_TOKEN` |
+| Dify plugin | `.github/workflows/publish-dify-plugin.yml` attaches `pm_skills.difypkg` to every release | Nothing. Marketplace listing would need Dify's review and signing |
+| Chinese routing quality | `docs/ZH-ROUTING.md`, 200 requests, `npm run eval:zh-routing` | Nothing |
 | Router model on ModelScope | `.github/workflows/publish-modelscope-model.yml` trains `integrations/router-model/pm_router.py` and publishes mohitagw15856/pm-skills-router (variable `MODELSCOPE_MODEL`) on every release | Nothing |
 | Measuring Chinese usage | Partly | npmmirror publishes download counts per package; the Gitee mirror shows stars and forks. The country counter only sees visitors who can reach `workers.dev` |

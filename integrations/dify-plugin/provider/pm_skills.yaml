@@ -1,0 +1,18 @@
+extra:
+  python:
+    source: provider/pm_skills.py
+identity:
+  author: mohitagw15856
+  description:
+    en_US: Find the right professional skill for a request and load its full instructions.
+    zh_Hans: 为请求找到合适的专业技能，并加载完整说明。
+  icon: icon.svg
+  label:
+    en_US: PM Skills
+    zh_Hans: PM Skills 专业技能库
+  name: pm_skills
+  tags:
+  - productivity
+tools:
+- tools/find_skill.yaml
+- tools/get_skill.yaml

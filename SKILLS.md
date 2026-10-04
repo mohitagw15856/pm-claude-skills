@@ -1,4 +1,4 @@
-# 🗂️ All 1235 Skills — full catalog
+# 🗂️ All 1250 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -723,7 +723,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (773 skills)
+## 🌍 Industries & Public Sector (788 skills)
 
 ### `other` — 22 skills
 
@@ -885,32 +885,49 @@
 | **Medication-Management System** (`medication-management-system`) | Set up a system to manage medications safely — for yourself or someone you care for — so doses aren't missed, doubled, or dangerously combined. | — |
 | **Respite-Care Plan** (`respite-care-plan`) | Plan a genuine break from caregiving — arrange the coverage, hand off the essentials, and actually rest — because respite is what lets you keep going. | — |
 
-### `pm-china-exams` — 5 skills
+### `pm-china-compliance` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Data Export Assessment (数据出境)** (`cn-data-export-assessment`) | Use when asked 数据出境要申报吗, 数据出境安全评估还是标准合同, 个人信息出境标准合同怎么备案, 我们把数据传到海外总部合规吗, or decide how to transfer data out of mainland China lawfully. Produces a… | — |
+| **Generative AI Filing (生成式人工智能备案)** (`cn-genai-filing`) | Use when asked 大模型备案怎么做, 生成式人工智能服务备案还是登记, 算法备案流程, AI 生成内容标识怎么加, 我们接了已备案的大模型还要备案吗, or prepare a generative AI product for launch in mainland China.… | — |
+| **MLPS 2.0 Checklist (等保 2.0)** (`cn-mlps-checklist`) | Use when asked 等保怎么做, 等保 2.0 定级, 等保备案和测评流程, 等保三级要求, 我们的系统需要过等保吗, or prepare an information system for China's Multi-Level Protection Scheme (MLPS… | — |
+| **PIPL Impact Assessment (个人信息保护影响评估)** (`cn-pipl-pia`) | Use when asked 个人信息保护影响评估怎么做, 写一份 PIA, 处理敏感个人信息要评估吗, 自动化决策评估, PIPL 第五十五条, or assess a processing activity under China's Personal Information… | — |
+
+### `pm-china-exams` — 8 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Campus Recruitment (校招)** (`cn-campus-recruitment`) | Plan a Chinese campus recruitment season (校招: 秋招 and 春招), including internships that convert to offers (实习转正): the timeline, a target company… | — |
+| **GB/T 7714 References (参考文献著录)** (`cn-citation-gbt7714`) | Use when asked 参考文献格式怎么写, 按 GB/T 7714 排参考文献, 帮我改参考文献格式, 顺序编码制还是著者-出版年制, 文献类型标识 J M D 是什么, or format references to the Chinese national standard.… | — |
 | **Civil Service Essay (申论)** (`cn-civil-exam-essay`) | Practise the essay paper (申论) of the Chinese civil service examination (国考 / 省考): work a question from the given materials (给定资料), find the… | — |
 | **Civil Service Interview (结构化面试)** (`cn-civil-exam-interview`) | Practise the structured interview (结构化面试) for Chinese civil service and public institution posts (公务员面试 / 事业单位面试): the common question types, a… | — |
 | **Kaoyan Planner (考研规划)** (`cn-kaoyan-planner`) | Plan preparation for the Chinese postgraduate entrance examination (考研): choosing target schools and programmes with realistic odds, a phased… | — |
 | **State-Owned Enterprise Interview (国企面试)** (`cn-soe-interview`) | Prepare for recruitment at a Chinese state-owned enterprise (国企 / 央企), including its written test and interview: what these employers assess, the… | — |
+| **Tech Interview Drill (大厂技术面试)** (`cn-tech-interview-drill`) | Use when asked 帮我准备大厂技术面试, 八股文怎么背, 模拟一面二面, 系统设计面试题, 项目深挖怎么答, 手撕算法, or run a mock technical interview for a Chinese internet company. Produces a… | — |
+| **Thesis Proposal (开题报告)** (`cn-thesis-proposal`) | Use when asked 帮我写开题报告, 开题答辩怎么准备, 文献综述怎么写, 技术路线图, 研究内容和创新点, or write a thesis proposal for a Chinese university. Produces a 开题报告 in the section… | — |
 
-### `pm-china-life` — 5 skills
+### `pm-china-life` — 9 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Gaokao Application Planner (高考志愿)** (`cn-gaokao-planner`) | Help a student and family plan university applications after the 高考 (gaokao): use the student's provincial rank rather than raw score, build a 冲 /… | — |
+| **Housing Fund Withdrawal (公积金提取)** (`cn-housing-fund-withdrawal`) | Use when asked 公积金怎么提取, 租房能提公积金吗, 离职后公积金怎么办, 公积金贷款能贷多少, 异地提取公积金, or plan how to use a Chinese housing provident fund (住房公积金). Produces the… | — |
+| **Hukou Points (积分落户)** (`cn-hukou-points`) | Use when asked 积分落户怎么算, 我能不能落户上海 / 北京 / 深圳, 居转户条件, 落户积分差多少, 人才引进落户, or check eligibility for a city household registration (户口) in China. Produces… | — |
 | **China Annual Tax Reconciliation (个税年度汇算)** (`cn-iit-reconciliation`) | Prepare for China's annual individual income tax reconciliation (个税年度汇算): check income, deductions and special additional deductions, compare the… | — |
 | **China Labour Contract Decoder (劳动合同)** (`cn-labour-contract-decoder`) | Decode a mainland China labour contract (劳动合同) before signing: probation, pay and its structure, working hours, social insurance, non-compete and… | — |
+| **Medical Insurance Claims (医保报销)** (`cn-medical-insurance-claim`) | Use when asked 医保怎么报销, 异地就医怎么备案, 住院能报多少, 门诊报销比例, 手工报销要什么材料, 惠民保值不值得买, or work out what China's basic medical insurance (医保) will pay for a… | — |
 | **China Severance Calculator (经济补偿金)** (`cn-severance-calculator`) | Estimate economic compensation (经济补偿金) when employment ends in mainland China: N, N+1 or 2N under the Labour Contract Law, with the high-earner… | — |
+| **Small Business Tax (个体户与小微企业税务)** (`cn-small-business-tax`) | Use when asked 个体户怎么报税, 小规模纳税人增值税怎么算, 小微企业所得税优惠, 经营所得汇算, 开票超过免税额怎么办, or plan taxes for a sole trader (个体工商户) or small company in China. Produces… | — |
 | **China Social Insurance Explainer (五险一金)** (`cn-social-insurance-explainer`) | Explain China's social insurance and housing fund (五险一金) for a specific person and city: what each part covers, what they and their employer pay… | — |
 
-### `pm-china-work` — 9 skills
+### `pm-china-work` — 10 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **复盘 (Fupan)** (`cn-fupan`) | Run a 复盘 (fupan), the structured project review widely used in Chinese companies: review the goal, assess the result, analyse why, and draw rules… | — |
 | **Level Mapper (职级对标)** (`cn-level-mapper`) | Compare job levels (职级) across Chinese technology companies and against international ladders, to judge an offer, a job move or a promotion… | — |
+| **Official Document (公文)** (`cn-official-document`) | Use when asked 帮我写公文, 写一份请示, 写通知 / 报告 / 函 / 纪要, 公文格式怎么排, check this document against GB/T 9704, or draft an official document for a Chinese… | — |
 | **PRD Review (需求评审)** (`cn-prd-review`) | Prepare for and run a product requirements review (需求评审 / PRD 评审会) the way Chinese internet teams do it: a pre-read the engineers, testers and… | — |
 | **Promotion Defence (晋升答辩)** (`cn-promotion-defence`) | Prepare a promotion defence (晋升答辩) for a level-based promotion process common at Chinese technology companies: the materials, the presentation… | — |
 | **Chinese Weekly Report (周报)** (`cn-weekly-report`) | Write a Chinese workplace weekly or monthly report (周报 / 月报) for a manager: results with numbers, progress against goals, risks raised early, next… | — |
@@ -919,12 +936,13 @@
 | **Feishu Doc Writer (飞书文档)** (`feishu-doc-writer`) | Write a document for Feishu / Lark Docs (飞书文档) in the shape Feishu readers expect: a summary callout at the top, headed sections that work with… | — |
 | **WeCom Announcement (企业微信公告)** (`wecom-announcement`) | Write an internal announcement for WeCom (企业微信) or a company group chat: policy changes, office notices, system outages, holiday arrangements and… | — |
 
-### `pm-chuhai` — 3 skills
+### `pm-chuhai` — 4 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **出海 Market Entry** (`chuhai-market-entry`) | Plan a Chinese company's entry into an overseas market (出海): choose the market with evidence, then plan entity, payments, localisation… | — |
 | **Cross-Border Listing** (`cross-border-listing`) | Write a product listing for an overseas marketplace or store, localised for the buyer rather than translated from Chinese: title, bullet points… | — |
+| **Cross-border Platform Playbook (跨境平台选择与入驻)** (`crossborder-platform-playbook`) | Use when asked Temu 全托管还是半托管, TikTok Shop 怎么入驻, 亚马逊和 Temu 选哪个, 跨境电商平台怎么选, 产品出海要哪些认证, or choose and launch on cross-border marketplaces (Temu… | — |
 | **PIPL and GDPR Crosswalk** (`pipl-gdpr-crosswalk`) | Compare China's Personal Information Protection Law (PIPL) with the EU GDPR for a specific data flow, and produce the gap list and cross-border… | — |
 
 ### `pm-civic` — 5 skills
@@ -1425,6 +1443,13 @@
 | **Discharge Summary** (`discharge-summary`) | Turn a hospital stay into a complete, well-structured discharge summary. | — |
 | **Prior Authorization Letter** (`prior-authorization-letter`) | Write a persuasive prior-authorization / medical-necessity letter to an insurer. | — |
 | **SOAP Note** (`soap-note`) | Structure a clinical encounter into a clean SOAP note. | — |
+
+### `pm-hk-tw` — 2 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Hong Kong MPF Explainer (強積金)** (`hk-mpf-explainer`) | Use when asked 強積金點計, 強積金幾時可以攞, 轉強積金計劃, 僱主有冇供強積金, 自願供款扣稅, eMPF 點用, or understand Hong Kong's Mandatory Provident Fund (MPF). Produces how… | — |
+| **Taiwan Labour Standards (勞動基準法)** (`tw-labour-standards`) | Use when asked 加班費怎麼算, 特休有幾天, 被資遣可以拿多少, 預告期間是多久, 勞退 6% 雇主有沒有提繳, 這樣合法嗎 勞基法, or check work terms against Taiwan's Labor Standards Act (勞動基準法).… | — |
 
 ### `pm-hobbies` — 11 skills
 
@@ -1980,4 +2005,4 @@
 
 ---
 
-_1235 skills across 143 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1250 skills across 145 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1247 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1262 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -187,19 +187,31 @@
 | Clone Brief | `pm-2027` | `pm-2027/clone-brief/SYSTEM_PROMPT.md` |
 | Closing Disclosure Decoder | `pm-decoders` | `pm-decoders/closing-disclosure-decoder/SYSTEM_PROMPT.md` |
 | Campus Recruitment (校招) | `pm-china-exams` | `pm-china-exams/cn-campus-recruitment/SYSTEM_PROMPT.md` |
+| GB/T 7714 References (参考文献著录) | `pm-china-exams` | `pm-china-exams/cn-citation-gbt7714/SYSTEM_PROMPT.md` |
 | Civil Service Essay (申论) | `pm-china-exams` | `pm-china-exams/cn-civil-exam-essay/SYSTEM_PROMPT.md` |
 | Civil Service Interview (结构化面试) | `pm-china-exams` | `pm-china-exams/cn-civil-exam-interview/SYSTEM_PROMPT.md` |
+| Data Export Assessment (数据出境) | `pm-china-compliance` | `pm-china-compliance/cn-data-export-assessment/SYSTEM_PROMPT.md` |
 | 复盘 (Fupan) | `pm-china-work` | `pm-china-work/cn-fupan/SYSTEM_PROMPT.md` |
 | Gaokao Application Planner (高考志愿) | `pm-china-life` | `pm-china-life/cn-gaokao-planner/SYSTEM_PROMPT.md` |
+| Generative AI Filing (生成式人工智能备案) | `pm-china-compliance` | `pm-china-compliance/cn-genai-filing/SYSTEM_PROMPT.md` |
+| Housing Fund Withdrawal (公积金提取) | `pm-china-life` | `pm-china-life/cn-housing-fund-withdrawal/SYSTEM_PROMPT.md` |
+| Hukou Points (积分落户) | `pm-china-life` | `pm-china-life/cn-hukou-points/SYSTEM_PROMPT.md` |
 | China Annual Tax Reconciliation (个税年度汇算) | `pm-china-life` | `pm-china-life/cn-iit-reconciliation/SYSTEM_PROMPT.md` |
 | Kaoyan Planner (考研规划) | `pm-china-exams` | `pm-china-exams/cn-kaoyan-planner/SYSTEM_PROMPT.md` |
 | China Labour Contract Decoder (劳动合同) | `pm-china-life` | `pm-china-life/cn-labour-contract-decoder/SYSTEM_PROMPT.md` |
 | Level Mapper (职级对标) | `pm-china-work` | `pm-china-work/cn-level-mapper/SYSTEM_PROMPT.md` |
+| Medical Insurance Claims (医保报销) | `pm-china-life` | `pm-china-life/cn-medical-insurance-claim/SYSTEM_PROMPT.md` |
+| MLPS 2.0 Checklist (等保 2.0) | `pm-china-compliance` | `pm-china-compliance/cn-mlps-checklist/SYSTEM_PROMPT.md` |
+| Official Document (公文) | `pm-china-work` | `pm-china-work/cn-official-document/SYSTEM_PROMPT.md` |
+| PIPL Impact Assessment (个人信息保护影响评估) | `pm-china-compliance` | `pm-china-compliance/cn-pipl-pia/SYSTEM_PROMPT.md` |
 | PRD Review (需求评审) | `pm-china-work` | `pm-china-work/cn-prd-review/SYSTEM_PROMPT.md` |
 | Promotion Defence (晋升答辩) | `pm-china-work` | `pm-china-work/cn-promotion-defence/SYSTEM_PROMPT.md` |
 | China Severance Calculator (经济补偿金) | `pm-china-life` | `pm-china-life/cn-severance-calculator/SYSTEM_PROMPT.md` |
+| Small Business Tax (个体户与小微企业税务) | `pm-china-life` | `pm-china-life/cn-small-business-tax/SYSTEM_PROMPT.md` |
 | China Social Insurance Explainer (五险一金) | `pm-china-life` | `pm-china-life/cn-social-insurance-explainer/SYSTEM_PROMPT.md` |
 | State-Owned Enterprise Interview (国企面试) | `pm-china-exams` | `pm-china-exams/cn-soe-interview/SYSTEM_PROMPT.md` |
+| Tech Interview Drill (大厂技术面试) | `pm-china-exams` | `pm-china-exams/cn-tech-interview-drill/SYSTEM_PROMPT.md` |
+| Thesis Proposal (开题报告) | `pm-china-exams` | `pm-china-exams/cn-thesis-proposal/SYSTEM_PROMPT.md` |
 | Chinese Weekly Report (周报) | `pm-china-work` | `pm-china-work/cn-weekly-report/SYSTEM_PROMPT.md` |
 | Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-work` | `pm-china-work/cn-year-end-review/SYSTEM_PROMPT.md` |
 | Co-Marketing | `pm-growth` | `pm-growth/co-marketing/SYSTEM_PROMPT.md` |
@@ -271,6 +283,7 @@
 | Credit Memo | `pm-banking` | `pm-banking/credit-memo/SYSTEM_PROMPT.md` |
 | Cross-Border Listing | `pm-chuhai` | `pm-chuhai/cross-border-listing/SYSTEM_PROMPT.md` |
 | Cross-Examine Me | `pm-thinking` | `pm-thinking/cross-examine-me/SYSTEM_PROMPT.md` |
+| Cross-border Platform Playbook (跨境平台选择与入驻) | `pm-chuhai` | `pm-chuhai/crossborder-platform-playbook/SYSTEM_PROMPT.md` |
 | Crypto Prices | `pm-live` | `pm-live/crypto-prices/SYSTEM_PROMPT.md` |
 | Customer Escalation Brief | `pm-cs` | `pm-cs/cs-escalation-brief/SYSTEM_PROMPT.md` |
 | Customer Health Scorecard | `pm-cs` | `pm-cs/cs-health-scorecard/SYSTEM_PROMPT.md` |
@@ -559,6 +572,7 @@
 | HIPAA Safeguards | `pm-compliance` | `pm-compliance/hipaa-safeguards/SYSTEM_PROMPT.md` |
 | Hire or Pass | `pm-decisions` | `pm-decisions/hire-or-pass/SYSTEM_PROMPT.md` |
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/SYSTEM_PROMPT.md` |
+| Hong Kong MPF Explainer (強積金) | `pm-hk-tw` | `pm-hk-tw/hk-mpf-explainer/SYSTEM_PROMPT.md` |
 | HN Digest | `pm-live` | `pm-live/hn-digest/SYSTEM_PROMPT.md` |
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/SYSTEM_PROMPT.md` |
 | HOA Violation Response | `pm-legal` | `pm-legal/hoa-violation-response/SYSTEM_PROMPT.md` |
@@ -1182,6 +1196,7 @@
 | Dental Treatment Plan Presentation | `pm-dentistry` | `pm-dentistry/treatment-plan-presentation/SYSTEM_PROMPT.md` |
 | Trip Planner | `pm-personal` | `pm-personal/trip-planner/SYSTEM_PROMPT.md` |
 | TTRPG Session Forge | `pm-newgen` | `pm-newgen/ttrpg-session-forge/SYSTEM_PROMPT.md` |
+| Taiwan Labour Standards (勞動基準法) | `pm-hk-tw` | `pm-hk-tw/tw-labour-standards/SYSTEM_PROMPT.md` |
 | Two Worlds Translator | `pm-identity` | `pm-identity/two-worlds-translator/SYSTEM_PROMPT.md` |
 | UI Design Pipeline | `pm-design-taste` | `pm-design-taste/ui-design-pipeline/SYSTEM_PROMPT.md` |
 | UI UX Pro Max (pointer) | `pm-design-taste` | `pm-design-taste/ui-ux-pro-max-pointer/SYSTEM_PROMPT.md` |

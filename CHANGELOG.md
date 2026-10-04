@@ -9,6 +9,18 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+**1250 skills · 144 bundles** (from 1235 · 142 at v81.1.0).
+
+### Added
+- **pm-china-compliance** (4): `cn-mlps-checklist` (等保 2.0), `cn-data-export-assessment` (数据出境), `cn-pipl-pia` (个人信息保护影响评估), `cn-genai-filing` (大模型备案与 AI 内容标识).
+- **pm-hk-tw** (2): `hk-mpf-explainer` (強積金) and `tw-labour-standards` (勞動基準法), in Traditional Chinese.
+- `cn-official-document` (公文, GB/T 9704) in pm-china-work; `cn-thesis-proposal`, `cn-citation-gbt7714` (with a tested GB/T 7714 formatter) and `cn-tech-interview-drill` in pm-china-exams; `cn-hukou-points`, `cn-housing-fund-withdrawal`, `cn-medical-insurance-claim` and `cn-small-business-tax` in pm-china-life; `crossborder-platform-playbook` in pm-chuhai.
+- **Dify**: a plugin that finds skills offline and loads them from Gitee (attached to every release as `pm_skills.difypkg`), and 12 import-ready Dify apps. A MaxKB and FastGPT tool that needs only Gitee. A Coze, Yuanqi and ERNIE agent guide.
+- **Chinese routing evaluation**: 200 real-world Chinese requests scored across three routers (`docs/ZH-ROUTING.md`); routing now also reads Traditional Chinese translations and short Chinese descriptions for common untranslated skills.
+- **Tech tree**: a Chinese interface and share posters with a QR code. **Playground**: voice input.
+- **Gitee**: the mirror shows the Chinese README first and retries pushes; Chinese release notes publish to Gitee once a token is set. A GitCode mirror workflow, ready for keys.
+- Animated READMEs in English and Chinese; an OSPP project proposal and a filled Datawhale proposal.
+
 ## [81.1.0] - Launch kit, 3D explorer, tech tree and more for China - 2026-10-04
 
 **1235 skills · 142 bundles** (from 1212 · 139 at v81.0.0).

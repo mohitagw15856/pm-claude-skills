@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-china-compliance",
+  "version": "1.0.0",
+  "description": "China compliance for product and engineering teams: MLPS 2.0 grading and gaps (等保), data export routes and filings (数据出境), PIPL impact assessments (个人信息保护影响评估) and generative AI filing and content labelling (大模型备案), all preparation for counsel and licensed assessors",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "china",
+    "compliance",
+    "pipl",
+    "mlps",
+    "data-export",
+    "generative-ai"
+  ]
+}

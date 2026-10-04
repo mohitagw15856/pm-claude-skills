@@ -1,0 +1,186 @@
+{
+ "generated": "2026-10-04",
+ "cases": 200,
+ "find": {
+  "top1": 0.86,
+  "top3": 0.945
+ },
+ "keyword": {
+  "top1": 0.85,
+  "top3": 0.94
+ },
+ "router": {
+  "top1": 0.86,
+  "top3": 0.92
+ },
+ "misses": [
+  {
+   "prompt": "每周五都要写工作汇报，怎么写才不像流水账",
+   "expected": "cn-weekly-report",
+   "find": "dingtalk-work-log",
+   "router": "dingtalk-work-log"
+  },
+  {
+   "prompt": "下周六机房停电，要在企微群里通知全员",
+   "expected": "wecom-announcement",
+   "find": "cn-hukou-points",
+   "router": "wecom-announcement"
+  },
+  {
+   "prompt": "拿到美团 L7 的 offer，我现在是字节 2-1，这算平跳吗",
+   "expected": "cn-level-mapper",
+   "find": "offer-comparison",
+   "router": "offer-letter"
+  },
+  {
+   "prompt": "帮我把这次双十一活动的复盘写出来",
+   "expected": "cn-fupan",
+   "find": "incident-postmortem",
+   "router": "cn-fupan"
+  },
+  {
+   "prompt": "给兄弟单位发个函，商请借调两名同事",
+   "expected": "cn-official-document",
+   "find": "cn-civil-exam-interview",
+   "router": "cn-civil-exam-interview"
+  },
+  {
+   "prompt": "春招还有机会进大厂吗，简历怎么改",
+   "expected": "cn-campus-recruitment",
+   "find": "cn-tech-interview-drill",
+   "router": "cn-campus-recruitment"
+  },
+  {
+   "prompt": "拿到国网和一家互联网公司的 offer 不知道选哪个",
+   "expected": "cn-soe-interview",
+   "find": "offer-comparison",
+   "router": "offer-letter"
+  },
+  {
+   "prompt": "公司裁员说给 N+1，我干了五年八个月，算算对不对",
+   "expected": "cn-severance-calculator",
+   "find": "chuhai-market-entry",
+   "router": "cn-severance-calculator"
+  },
+  {
+   "prompt": "跨境店铺的商品详情页文案要地道一点",
+   "expected": "cross-border-listing",
+   "find": "crossborder-platform-playbook",
+   "router": "cross-border-listing"
+  },
+  {
+   "prompt": "简历怎么写才能过机器筛选",
+   "expected": "resume",
+   "find": "cn-campus-recruitment",
+   "router": "cn-campus-recruitment"
+  },
+  {
+   "prompt": "面试前怎么准备常见问题",
+   "expected": "interview-prep",
+   "find": "cn-civil-exam-interview",
+   "router": "cn-soe-interview"
+  },
+  {
+   "prompt": "谈薪的时候 HR 压价怎么办，陪我练一下",
+   "expected": "salary-negotiation",
+   "find": "claim-denial-decoder",
+   "router": "cn-social-insurance-explainer"
+  },
+  {
+   "prompt": "员工福利手册看不懂，补充医疗和年金是什么",
+   "expected": "benefits-decoder",
+   "find": "cn-social-insurance-explainer",
+   "router": "cn-social-insurance-explainer"
+  },
+  {
+   "prompt": "技术方案文档要写哪些部分",
+   "expected": "technical-spec-template",
+   "find": "feishu-doc-writer",
+   "router": "feishu-doc-writer"
+  },
+  {
+   "prompt": "访谈了十个用户，帮我总结发现",
+   "expected": "user-research-synthesis",
+   "find": "user-interview-synthesis",
+   "router": "cn-year-end-review"
+  },
+  {
+   "prompt": "线上事故复盘报告，不追责",
+   "expected": "incident-postmortem",
+   "find": "cn-fupan",
+   "router": "cn-fupan"
+  },
+  {
+   "prompt": "给自己写一份绩效自评",
+   "expected": "self-review",
+   "find": "cn-year-end-review",
+   "router": "self-review"
+  },
+  {
+   "prompt": "租房合同里有些条款看不懂，帮我看看有没有坑",
+   "expected": "lease-decoder",
+   "find": "cn-labour-contract-decoder",
+   "router": "cn-labour-contract-decoder"
+  },
+  {
+   "prompt": "App 的用户协议里有没有霸王条款",
+   "expected": "tos-decoder",
+   "find": "college-app-parent-guide",
+   "router": "cn-campus-recruitment"
+  },
+  {
+   "prompt": "台灣特休沒休完，公司要給錢嗎",
+   "expected": "tw-labour-standards",
+   "find": "okr-builder",
+   "router": "tw-labour-standards"
+  },
+  {
+   "prompt": "钉钉周报的本周工作总结怎么写",
+   "expected": "dingtalk-work-log",
+   "find": "cn-weekly-report",
+   "router": "cn-weekly-report"
+  },
+  {
+   "prompt": "字节一面会考哪些八股",
+   "expected": "cn-tech-interview-drill",
+   "find": "cn-level-mapper",
+   "router": "cn-tech-interview-drill"
+  },
+  {
+   "prompt": "出海做品牌先选哪个国家",
+   "expected": "chuhai-market-entry",
+   "find": "crossborder-platform-playbook",
+   "router": "crossborder-platform-playbook"
+  },
+  {
+   "prompt": "给投资人写的工作汇报摘要",
+   "expected": "executive-summary",
+   "find": "investor-update",
+   "router": "investor-update"
+  },
+  {
+   "prompt": "年度绩效考核的自评和他评",
+   "expected": "performance-review",
+   "find": "cn-year-end-review",
+   "router": "cn-year-end-review"
+  },
+  {
+   "prompt": "通知和通告有什么区别，我该用哪个",
+   "expected": "cn-official-document",
+   "find": "claim-denial-decoder",
+   "router": "wecom-announcement"
+  },
+  {
+   "prompt": "Go 后端面试 GMP 调度怎么讲",
+   "expected": "cn-tech-interview-drill",
+   "find": "cn-civil-exam-interview",
+   "router": "cn-civil-exam-interview"
+  },
+  {
+   "prompt": "等保和数据出境都要做吗，先做哪个",
+   "expected": "cn-mlps-checklist",
+   "find": "cn-data-export-assessment",
+   "router": "cn-data-export-assessment"
+  }
+ ]
+}

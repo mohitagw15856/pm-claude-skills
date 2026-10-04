@@ -41,7 +41,18 @@ Good targets, each takes a one-line pull request under its tools or skills secti
 
 ### Datawhale
 
-Datawhale reviews new learning projects through its project proposal process. Propose `docs/learn-zh/` (six lessons on using and writing Agent Skills) as a short course, offering to co-maintain it with a Datawhale volunteer.
+Datawhale's proposal form (an issue at https://github.com/datawhalechina/DOPMC/issues/new/choose, type 立项) requires ticking that you have added their reviewer on WeChat (at-Sm1les), so it must come from you. Title: `agent-skills-at-work`. Paste these answers:
+
+- **项目简介**：用 Agent Skills 做职场工作：一门六课的开源中文小课，教大家把"一件专业工作该怎么做"写成 AI 助手能稳定执行的 Markdown 技能（SKILL.md），并在 Claude Code、Trae、通义灵码等工具里使用。已完成内容：https://github.com/mohitagw15856/pm-claude-skills/tree/main/docs/learn-zh
+- **立项理由**：大模型普及后，最大的差距不在模型，而在有没有把方法告诉模型。Agent Skills 是把方法固化下来的开放格式，但中文教程几乎空白。本项目基于一个已有 1,250 个技能、73 个中文翻译的开源库，教学全部可运行。
+- **项目受众**：产品经理、运营、工程师、学生，以及任何每周要写周报、方案和复盘的人；会用命令行和 Git 即可。
+- **项目亮点**：与 llm-cookbook（提示词与应用）、hello-agents（智能体构建）互补：本项目讲的是"把专业方法写成可复用的技能"这一层；全部步骤可在国内网络完成（npmmirror、Gitee、魔搭）；配有 CI 结构检查和 200 条中文路由评测。
+- **项目规划**：内容：在现有六课基础上增加"技能评测"和"在 Dify / MaxKB 中使用"两课，并配练习答案；时间：六周；人员：项目负责人一名，欢迎 Datawhale 志愿者共同维护。
+- **已完成内容**：https://github.com/mohitagw15856/pm-claude-skills/tree/main/docs/learn-zh
+
+### Gitee recommended projects and OSChina
+
+Gitee's recommended projects and GVP are chosen by Gitee's editors against activity and quality metrics; there is no application form (the old 推荐官 feature is offline). The Gitee mirror now shows a Chinese README first, which is what editors and visitors read. OSChina news is skipped: OSChina accounts need a mainland phone number.
 
 ### Juejin, Zhihu, V2EX, Bilibili
 

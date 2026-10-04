@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "pm-china-life",
   "version": "1.0.0",
-  "description": "Life admin in mainland China: decode a labour contract, estimate severance (N, N+1, 2N), prepare the annual income tax reconciliation, understand social insurance and the housing fund, and plan gaokao university applications",
+  "description": "Life admin in mainland China: decode a labour contract, estimate severance (N, N+1, 2N), prepare the annual income tax reconciliation, understand social insurance and the housing fund, withdraw the housing fund, claim medical insurance, check city hukou routes and points, plan small-business taxes, and plan gaokao university applications",
   "author": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
@@ -15,6 +15,10 @@
     "severance",
     "tax",
     "social-insurance",
-    "gaokao"
+    "gaokao",
+    "hukou",
+    "housing-fund",
+    "medical-insurance",
+    "small-business-tax"
   ]
 }

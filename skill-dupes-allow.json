@@ -215,6 +215,11 @@
       "a": "readme-benefit-writer",
       "b": "readme-writer",
       "reason": "Rewriting an existing README so each feature reads as a user benefit, with a Your data section, vs writing a complete README from scratch with badges, usage and install sections."
+    },
+    {
+      "a": "cn-medical-insurance-claim",
+      "b": "insurance-claim",
+      "reason": "China's public basic medical insurance (医保): scheme, local deductible and cap, cross-region registration and manual reimbursement, vs filing and escalating a claim with a private insurer."
     }
   ]
 }

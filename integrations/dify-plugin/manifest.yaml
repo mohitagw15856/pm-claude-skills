@@ -1,0 +1,33 @@
+author: mohitagw15856
+created_at: '2026-10-04T00:00:00Z'
+description:
+  en_US: Find and load professional Agent Skills (PRDs, weekly reports, contract checks, CVs and 1,200 more) as instructions for your Dify apps.
+  zh_Hans: 查找并加载专业 Agent Skills（PRD、周报、劳动合同、简历等一千两百多个），作为 Dify 应用的指令。
+icon: icon.svg
+label:
+  en_US: PM Skills
+  zh_Hans: PM Skills 专业技能库
+meta:
+  arch:
+  - amd64
+  - arm64
+  minimum_dify_version: 1.7.1
+  runner:
+    entrypoint: main
+    language: python
+    version: '3.12'
+  version: 0.0.1
+name: pm_skills
+plugins:
+  tools:
+  - provider/pm_skills.yaml
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+tags:
+- productivity
+- utilities
+type: plugin
+version: 0.1.0
