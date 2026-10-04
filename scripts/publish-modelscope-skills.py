@@ -26,8 +26,6 @@ import zipfile
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REPO = "https://github.com/mohitagw15856/pm-claude-skills"
 CATEGORY = {"pm-zh-content": "marketing-seo", "pm-chuhai": "marketing-seo"}
-DOC_SKILLS = {"feishu-doc-writer", "dingtalk-work-log", "wecom-announcement", "cn-official-document",
-              "cn-citation-gbt7714", "cn-thesis-proposal", "cn-weekly-report", "cn-year-end-review"}
 
 
 def translations():
@@ -62,7 +60,7 @@ def build(name, path):
     buf = io.BytesIO()
     with zipfile.ZipFile(buf, "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("SKILL.md", text)
-    cat = "doc-processing" if name in DOC_SKILLS else CATEGORY.get(bundle_of(name), "other")
+    cat = CATEGORY.get(bundle_of(name), "other")
     return {"zip": buf.getvalue(), "display_name": (h1.group(1).strip() if h1 else name)[:60],
             "description": desc[:500], "category": cat}
 
@@ -148,7 +146,7 @@ def main():
             print(f"  = {name}: already exists")
         else:
             failed += 1
-            print(f"  ✗ {name}: create failed (HTTP {code}): {body[:200]}")
+            print(f"  ✗ {name}: create failed (HTTP {code}): {body[:400]}")
         time.sleep(6)  # stay under the API's rate limit
     print(f"created {created}, already there {skipped}, failed {failed}")
     return 1 if failed and not created else 0
