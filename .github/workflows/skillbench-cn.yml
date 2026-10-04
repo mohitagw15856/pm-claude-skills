@@ -2,17 +2,20 @@ name: Run SkillBench (Chinese task set)
 
 # Scores Chinese models on the Chinese task set (skillbench/tasks-zh.json):
 # workplace, life admin, exams and content, bare and with the matching skill.
-# Manual only: it costs tokens. Each provider needs its own key as a repository
-# secret: DEEPSEEK_API_KEY, DASHSCOPE_API_KEY (Qwen), MOONSHOT_API_KEY (Kimi),
-# ZHIPU_API_KEY (GLM), ARK_API_KEY (Doubao); the judge needs ANTHROPIC_API_KEY.
+# Manual only. The default models are free: modelscope:* runs on ModelScope
+# API-Inference's daily free quota (MODELSCOPE_TOKEN; the ModelScope account must be
+# linked to an Alibaba Cloud account once, at no cost). hf:* uses Hugging Face's
+# monthly free credits (HF_TOKEN), which cover only a handful of calls. Paid provider keys still work if set:
+# DEEPSEEK_API_KEY, DASHSCOPE_API_KEY (Qwen), MOONSHOT_API_KEY (Kimi),
+# ZHIPU_API_KEY (GLM), ARK_API_KEY (Doubao). The judge needs ANTHROPIC_API_KEY.
 # Results land on the skillbench-zh-results branch for review, like skillbench.yml.
 on:
   workflow_dispatch:
     inputs:
       models:
-        description: 'Comma-separated model ids, e.g. deepseek-chat,qwen-plus,glm-4.6'
+        description: 'Comma-separated model ids; modelscope:* and hf:* are free'
         required: true
-        default: 'deepseek-chat,qwen-plus'
+        default: 'modelscope:deepseek-ai/DeepSeek-V4.1-Flash,modelscope:Qwen/Qwen3.8-27B,modelscope:zai-org/GLM-5.2,modelscope:PaddlePaddle/ERNIE-4.5-300B-A47B-PT'
       judge:
         description: 'Judge model (pinned; disclose changes in the report)'
         required: false
@@ -39,9 +42,11 @@ jobs:
           MOONSHOT_API_KEY: ${{ secrets.MOONSHOT_API_KEY }}
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
           ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
+          MODELSCOPE_TOKEN: ${{ secrets.MODELSCOPE_TOKEN }}
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
           set -euo pipefail
-          printf '%s' "$MODELS" | grep -Eq '^[A-Za-z0-9._:,-]+$' || { echo "::error::models must be comma-separated ids"; exit 1; }
+          printf '%s' "$MODELS" | grep -Eq '^[A-Za-z0-9._:,/-]+$' || { echo "::error::models must be comma-separated ids"; exit 1; }
           printf '%s' "$JUDGE" | grep -Eq '^[A-Za-z0-9._:,-]+$' || { echo "::error::judge must be a model id"; exit 1; }
           node skillbench/run-skillbench.mjs --models "$MODELS" --judge "$JUDGE" \
             --tasks skillbench/tasks-zh.json --out skillbench/results-zh.json
