@@ -1,0 +1,76 @@
+name: Publish playground to ModelScope Studio
+
+# Mirrors the static playground (web/) to a ModelScope Studio, so people who
+# cannot reach GitHub Pages can still use it. Runs on each release and on demand.
+#
+# Does nothing until it is set up:
+#   1. Create a Studio on ModelScope (for example mohitagw15856/pm-skills-playground).
+#   2. Reuse the secret MODELSCOPE_TOKEN (write access) and MODELSCOPE_HOST.
+#   3. Add the variable MODELSCOPE_STUDIO (owner/name).
+#   4. After the first push, choose Static as the deployment type in the Studio's
+#      settings, with index.html as the entry file, and deploy.
+# The social images (web/og), the docs assets and the full-text dump are left out
+# to keep the Studio small; links to them fall back to GitHub Pages.
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check ModelScope Studio is set up
+        id: gate
+        env:
+          MODELSCOPE_TOKEN: ${{ secrets.MODELSCOPE_TOKEN }}
+          MODELSCOPE_STUDIO: ${{ vars.MODELSCOPE_STUDIO }}
+        run: |
+          if [ -z "$MODELSCOPE_TOKEN" ] || [ -z "$MODELSCOPE_STUDIO" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::MODELSCOPE_TOKEN or MODELSCOPE_STUDIO is not set; skipping the Studio publish (see docs/CHINA.md)."
+          elif ! printf '%s' "$MODELSCOPE_STUDIO" | grep -Eq '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$'; then
+            echo "::error::MODELSCOPE_STUDIO must look like owner/name"
+            exit 1
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v7
+        if: steps.gate.outputs.enabled == 'true'
+      - uses: actions/setup-node@v7
+        if: steps.gate.outputs.enabled == 'true'
+        with:
+          node-version: '24'
+      - name: Build the playground data
+        if: steps.gate.outputs.enabled == 'true'
+        run: |
+          node web/build-skills.mjs
+          node scripts/build-samples.mjs
+      - name: Push to ModelScope Studio
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          MODELSCOPE_TOKEN: ${{ secrets.MODELSCOPE_TOKEN }}
+          MODELSCOPE_STUDIO: ${{ vars.MODELSCOPE_STUDIO }}
+          MODELSCOPE_HOST: ${{ vars.MODELSCOPE_HOST || 'www.modelscope.cn' }}
+          TAG: ${{ github.event.release.tag_name || 'manual' }}
+        run: |
+          set -euo pipefail
+          case "$MODELSCOPE_HOST" in www.modelscope.cn|www.modelscope.ai) ;; *) echo "::error::MODELSCOPE_HOST must be www.modelscope.cn or www.modelscope.ai"; exit 1;; esac
+          git config --global user.name "pm-skills-bot"
+          git config --global user.email "actions@github.com"
+          # The token goes through a credential helper so it never appears in a URL or a log.
+          git config --global credential.helper '!f() { echo "username=oauth2"; echo "password=${MODELSCOPE_TOKEN}"; }; f'
+          git lfs install
+          git clone --depth 1 "https://${MODELSCOPE_HOST}/studios/${MODELSCOPE_STUDIO}.git" studio
+          find studio -mindepth 1 -maxdepth 1 ! -name .git ! -name .gitattributes -exec rm -rf {} +
+          rsync -a --exclude 'og/' --exclude 'docs-assets/' --exclude 'llms-full.txt' web/ studio/
+          cp integrations/modelscope-studio/README.md studio/README.md
+          cd studio
+          git add -A
+          if git diff --cached --quiet; then echo "No playground changes."; exit 0; fi
+          git commit -q -m "Sync playground from pm-claude-skills ${TAG}"
+          git push origin HEAD

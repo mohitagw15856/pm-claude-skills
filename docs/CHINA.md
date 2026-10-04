@@ -103,9 +103,9 @@ claude mcp add pm-skills -- npx -y --registry=https://registry.npmmirror.com -p 
 
 托管的远程 MCP 地址（`workers.dev`）在国内大陆无法访问，请使用上面的本地方式。
 
-## 六、数据集（魔搭 ModelScope）
+## 六、魔搭 ModelScope：数据集、路由模型和在线试用
 
-技能库的训练数据集同步发布在魔搭社区，每次发版自动更新，国内可以直接下载：
+**数据集**：技能库的训练数据集同步发布在魔搭社区，每次发版自动更新：
 
 ```python
 from modelscope.msdatasets import MsDataset
@@ -113,6 +113,18 @@ ds = MsDataset.load('mohitagw15856/pm-skills-instruct')
 ```
 
 地址：<https://www.modelscope.ai/datasets/mohitagw15856/pm-skills-instruct>
+
+**路由模型**：[pm-skills-router](https://www.modelscope.ai/models/mohitagw15856/pm-skills-router) 输入中文或英文的请求，返回最匹配的技能。不需要 GPU，只用 Python 标准库，适合接入自己的智能体：
+
+```python
+from modelscope import snapshot_download
+import sys
+path = snapshot_download('mohitagw15856/pm-skills-router'); sys.path.insert(0, path)
+from pm_router import Router
+Router.load(f"{path}/router.json").route("帮我写周报", k=3)
+```
+
+**在线试用**：Playground 的魔搭镜像 [PM Skills 技能试用](https://www.modelscope.ai/studios/mohitagw15856/pm-skills-playground)，用你自己的 DeepSeek、通义千问、Kimi、智谱或豆包 API Key 运行技能。
 
 ## 七、反馈
 
@@ -133,5 +145,6 @@ What is in place, and what still needs an account or a decision.
 | Trae, Qoder, Lingma, CodeBuddy | Done in `bin/cli.mjs` (`--agent`) | Rule files are generated at install time, not committed |
 | Router understands Chinese | Done (`integrations/jev/catalog.mjs`, `find`) | Coverage grows with every translated description in `skills-i18n/zh/` |
 | Hosted MCP and usage counter reachable from China | **Needs a custom domain** | `workers.dev` is blocked in mainland China. Add a domain to Cloudflare, attach it to the `pm-skills-mcp` worker (Workers, Settings, Domains and Routes, Add custom domain), then point `web/providers.js`, `web/nav.js`, `web/app.js` and `web/live.js` at it. Even then, reachability from China is not guaranteed |
-| Playground reachable from China | Partly | GitHub Pages is slow or blocked at times. A mainland host needs an ICP filing; a Hong Kong or Singapore host is the usual compromise |
+| Playground reachable from China | Partly | GitHub Pages is slow or blocked at times. A copy is published to the ModelScope Studio mohitagw15856/pm-skills-playground by `.github/workflows/publish-modelscope-studio.yml` (variable `MODELSCOPE_STUDIO`); after its first push, set the Studio's deployment type to Static with entry file `index.html`. A mainland host of our own would need an ICP filing |
+| Router model on ModelScope | `.github/workflows/publish-modelscope-model.yml` trains `integrations/router-model/pm_router.py` and publishes mohitagw15856/pm-skills-router (variable `MODELSCOPE_MODEL`) on every release | Nothing |
 | Measuring Chinese usage | Partly | npmmirror publishes download counts per package; the Gitee mirror shows stars and forks. The country counter only sees visitors who can reach `workers.dev` |

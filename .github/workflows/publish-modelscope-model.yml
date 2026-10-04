@@ -1,0 +1,93 @@
+name: Publish router model to ModelScope
+
+# Trains the dependency-free skill router (integrations/router-model) and publishes
+# it as a ModelScope model, with its evaluation in the model card. Runs on each
+# release and on demand.
+#
+# Does nothing until it is set up:
+#   1. Create a model on ModelScope (for example mohitagw15856/pm-skills-router).
+#   2. Reuse the secret MODELSCOPE_TOKEN (write access) and MODELSCOPE_HOST.
+#   3. Add the variable MODELSCOPE_MODEL (owner/name).
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check ModelScope model is set up
+        id: gate
+        env:
+          MODELSCOPE_TOKEN: ${{ secrets.MODELSCOPE_TOKEN }}
+          MODELSCOPE_MODEL: ${{ vars.MODELSCOPE_MODEL }}
+        run: |
+          if [ -z "$MODELSCOPE_TOKEN" ] || [ -z "$MODELSCOPE_MODEL" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::MODELSCOPE_TOKEN or MODELSCOPE_MODEL is not set; skipping the model publish (see docs/CHINA.md)."
+          elif ! printf '%s' "$MODELSCOPE_MODEL" | grep -Eq '^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$'; then
+            echo "::error::MODELSCOPE_MODEL must look like owner/name"
+            exit 1
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v7
+        if: steps.gate.outputs.enabled == 'true'
+      - uses: actions/setup-node@v7
+        if: steps.gate.outputs.enabled == 'true'
+        with:
+          node-version: '24'
+      - name: Train and evaluate the router
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          MODELSCOPE_MODEL: ${{ vars.MODELSCOPE_MODEL }}
+          TAG: ${{ github.event.release.tag_name || 'manual' }}
+        run: |
+          set -euo pipefail
+          node scripts/build-dataset.mjs
+          mkdir -p out
+          python3 integrations/router-model/pm_router.py train --repo . --out out/router.json
+          cp integrations/router-model/pm_router.py out/
+          printf '{"framework": "other", "task": "text-classification"}\n' > out/configuration.json
+          python3 - <<'PY'
+          import json, os
+          m = json.load(open("out/router.json"))
+          e = m["evaluation"]
+          h, z = e["held_out_phrases"], e.get("chinese_eval_inputs", {"top1": "n/a", "top3": "n/a", "n": 0})
+          pct = lambda v: f"{v:.0%}" if isinstance(v, float) else str(v)
+          card = open("integrations/router-model/MODEL_CARD.md", encoding="utf-8").read()
+          for k, v in {"{{SKILLS}}": f"{m['skills']:,} skills", "{{OWNER_NAME}}": os.environ["MODELSCOPE_MODEL"],
+                       "{{H1}}": pct(h["top1"]), "{{H3}}": pct(h["top3"]), "{{HN}}": str(h["n"]),
+                       "{{Z1}}": pct(z["top1"]), "{{Z3}}": pct(z["top3"]), "{{ZN}}": str(z["n"]),
+                       "{{TAG}}": os.environ["TAG"]}.items():
+              card = card.replace(k, v)
+          open("out/README.md", "w", encoding="utf-8").write(card)
+          PY
+      - name: Push to ModelScope
+        if: steps.gate.outputs.enabled == 'true'
+        env:
+          MODELSCOPE_TOKEN: ${{ secrets.MODELSCOPE_TOKEN }}
+          MODELSCOPE_MODEL: ${{ vars.MODELSCOPE_MODEL }}
+          MODELSCOPE_HOST: ${{ vars.MODELSCOPE_HOST || 'www.modelscope.cn' }}
+          TAG: ${{ github.event.release.tag_name || 'manual' }}
+        run: |
+          set -euo pipefail
+          case "$MODELSCOPE_HOST" in www.modelscope.cn|www.modelscope.ai) ;; *) echo "::error::MODELSCOPE_HOST must be www.modelscope.cn or www.modelscope.ai"; exit 1;; esac
+          git config --global user.name "pm-skills-bot"
+          git config --global user.email "actions@github.com"
+          # The token goes through a credential helper so it never appears in a URL or a log.
+          git config --global credential.helper '!f() { echo "username=oauth2"; echo "password=${MODELSCOPE_TOKEN}"; }; f'
+          git lfs install
+          git clone --depth 1 "https://${MODELSCOPE_HOST}/${MODELSCOPE_MODEL}.git" model
+          find model -mindepth 1 -maxdepth 1 ! -name .git ! -name .gitattributes -exec rm -rf {} +
+          cp -R out/. model/
+          cd model
+          git add -A
+          if git diff --cached --quiet; then echo "No model changes."; exit 0; fi
+          git commit -q -m "Router from pm-claude-skills ${TAG}"
+          git push origin HEAD
