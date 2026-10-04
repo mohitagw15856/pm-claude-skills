@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1224 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1234 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -186,13 +186,20 @@
 | Clip Factory | `pm-newgen` | `pm-newgen/clip-factory/SYSTEM_PROMPT.md` |
 | Clone Brief | `pm-2027` | `pm-2027/clone-brief/SYSTEM_PROMPT.md` |
 | Closing Disclosure Decoder | `pm-decoders` | `pm-decoders/closing-disclosure-decoder/SYSTEM_PROMPT.md` |
+| Campus Recruitment (校招) | `pm-china-exams` | `pm-china-exams/cn-campus-recruitment/SYSTEM_PROMPT.md` |
+| Civil Service Essay (申论) | `pm-china-exams` | `pm-china-exams/cn-civil-exam-essay/SYSTEM_PROMPT.md` |
+| Civil Service Interview (结构化面试) | `pm-china-exams` | `pm-china-exams/cn-civil-exam-interview/SYSTEM_PROMPT.md` |
 | 复盘 (Fupan) | `pm-china-work` | `pm-china-work/cn-fupan/SYSTEM_PROMPT.md` |
 | Gaokao Application Planner (高考志愿) | `pm-china-life` | `pm-china-life/cn-gaokao-planner/SYSTEM_PROMPT.md` |
 | China Annual Tax Reconciliation (个税年度汇算) | `pm-china-life` | `pm-china-life/cn-iit-reconciliation/SYSTEM_PROMPT.md` |
+| Kaoyan Planner (考研规划) | `pm-china-exams` | `pm-china-exams/cn-kaoyan-planner/SYSTEM_PROMPT.md` |
 | China Labour Contract Decoder (劳动合同) | `pm-china-life` | `pm-china-life/cn-labour-contract-decoder/SYSTEM_PROMPT.md` |
+| Level Mapper (职级对标) | `pm-china-work` | `pm-china-work/cn-level-mapper/SYSTEM_PROMPT.md` |
+| PRD Review (需求评审) | `pm-china-work` | `pm-china-work/cn-prd-review/SYSTEM_PROMPT.md` |
 | Promotion Defence (晋升答辩) | `pm-china-work` | `pm-china-work/cn-promotion-defence/SYSTEM_PROMPT.md` |
 | China Severance Calculator (经济补偿金) | `pm-china-life` | `pm-china-life/cn-severance-calculator/SYSTEM_PROMPT.md` |
 | China Social Insurance Explainer (五险一金) | `pm-china-life` | `pm-china-life/cn-social-insurance-explainer/SYSTEM_PROMPT.md` |
+| State-Owned Enterprise Interview (国企面试) | `pm-china-exams` | `pm-china-exams/cn-soe-interview/SYSTEM_PROMPT.md` |
 | Chinese Weekly Report (周报) | `pm-china-work` | `pm-china-work/cn-weekly-report/SYSTEM_PROMPT.md` |
 | Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-work` | `pm-china-work/cn-year-end-review/SYSTEM_PROMPT.md` |
 | Co-Marketing | `pm-growth` | `pm-growth/co-marketing/SYSTEM_PROMPT.md` |
@@ -349,6 +356,7 @@
 | Difficult Conversation | `pm-comms` | `pm-comms/difficult-conversation/SYSTEM_PROMPT.md` |
 | Digital Death Plan | `other` | `other/digital-death-plan/SYSTEM_PROMPT.md` |
 | Digital Legacy Planner | `pm-estate` | `pm-estate/digital-legacy-planner/SYSTEM_PROMPT.md` |
+| DingTalk Work Log (钉钉日志) | `pm-china-work` | `pm-china-work/dingtalk-work-log/SYSTEM_PROMPT.md` |
 | Disability Benefit Appeal | `pm-accessibility` | `pm-accessibility/disability-benefit-appeal/SYSTEM_PROMPT.md` |
 | Disability Disclosure Decision | `pm-accessibility` | `pm-accessibility/disability-disclosure-decision/SYSTEM_PROMPT.md` |
 | Disability Insurance Decoder | `pm-decoders` | `pm-decoders/disability-insurance-decoder/SYSTEM_PROMPT.md` |
@@ -452,6 +460,7 @@
 | Feature Prioritisation | `pm-planning` | `pm-planning/feature-prioritisation/SYSTEM_PROMPT.md` |
 | Feature Sunset Plan | `pm-planning` | `pm-planning/feature-sunset-plan/SYSTEM_PROMPT.md` |
 | Federal Resume | `pm-cv` | `pm-cv/federal-resume/SYSTEM_PROMPT.md` |
+| Feishu Doc Writer (飞书文档) | `pm-china-work` | `pm-china-work/feishu-doc-writer/SYSTEM_PROMPT.md` |
 | Feynman Explainer | `pm-learning` | `pm-learning/feynman-explainer/SYSTEM_PROMPT.md` |
 | Figma Annotation Guide | `pm-figma` | `pm-figma/figma-annotation-guide/SYSTEM_PROMPT.md` |
 | Figma Component Audit | `pm-figma` | `pm-figma/figma-component-audit/SYSTEM_PROMPT.md` |
@@ -1199,6 +1208,7 @@
 | Warranty Claim | `pm-money` | `pm-money/warranty-claim/SYSTEM_PROMPT.md` |
 | Weather Now | `pm-live` | `pm-live/weather-now/SYSTEM_PROMPT.md` |
 | WeChat Official Account Article (公众号文章) | `pm-zh-content` | `pm-zh-content/wechat-article/SYSTEM_PROMPT.md` |
+| WeCom Announcement (企业微信公告) | `pm-china-work` | `pm-china-work/wecom-announcement/SYSTEM_PROMPT.md` |
 | Wedding Budget | `pm-wedding` | `pm-wedding/wedding-budget/SYSTEM_PROMPT.md` |
 | Wedding Logistics Planner | `pm-wedding` | `pm-wedding/wedding-logistics-planner/SYSTEM_PROMPT.md` |
 | Wedding Speech | `pm-lifeadmin` | `pm-lifeadmin/wedding-speech/SYSTEM_PROMPT.md` |

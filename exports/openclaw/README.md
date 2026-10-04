@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1224 skills exported. Copy a `SKILL.md` into the tool to use it.
+1234 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -186,13 +186,20 @@
 | Clip Factory | `pm-newgen` | `clip-factory/SKILL.md` |
 | Clone Brief | `pm-2027` | `clone-brief/SKILL.md` |
 | Closing Disclosure Decoder | `pm-decoders` | `closing-disclosure-decoder/SKILL.md` |
+| Campus Recruitment (校招) | `pm-china-exams` | `cn-campus-recruitment/SKILL.md` |
+| Civil Service Essay (申论) | `pm-china-exams` | `cn-civil-exam-essay/SKILL.md` |
+| Civil Service Interview (结构化面试) | `pm-china-exams` | `cn-civil-exam-interview/SKILL.md` |
 | 复盘 (Fupan) | `pm-china-work` | `cn-fupan/SKILL.md` |
 | Gaokao Application Planner (高考志愿) | `pm-china-life` | `cn-gaokao-planner/SKILL.md` |
 | China Annual Tax Reconciliation (个税年度汇算) | `pm-china-life` | `cn-iit-reconciliation/SKILL.md` |
+| Kaoyan Planner (考研规划) | `pm-china-exams` | `cn-kaoyan-planner/SKILL.md` |
 | China Labour Contract Decoder (劳动合同) | `pm-china-life` | `cn-labour-contract-decoder/SKILL.md` |
+| Level Mapper (职级对标) | `pm-china-work` | `cn-level-mapper/SKILL.md` |
+| PRD Review (需求评审) | `pm-china-work` | `cn-prd-review/SKILL.md` |
 | Promotion Defence (晋升答辩) | `pm-china-work` | `cn-promotion-defence/SKILL.md` |
 | China Severance Calculator (经济补偿金) | `pm-china-life` | `cn-severance-calculator/SKILL.md` |
 | China Social Insurance Explainer (五险一金) | `pm-china-life` | `cn-social-insurance-explainer/SKILL.md` |
+| State-Owned Enterprise Interview (国企面试) | `pm-china-exams` | `cn-soe-interview/SKILL.md` |
 | Chinese Weekly Report (周报) | `pm-china-work` | `cn-weekly-report/SKILL.md` |
 | Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-work` | `cn-year-end-review/SKILL.md` |
 | Co-Marketing | `pm-growth` | `co-marketing/SKILL.md` |
@@ -349,6 +356,7 @@
 | Difficult Conversation | `pm-comms` | `difficult-conversation/SKILL.md` |
 | Digital Death Plan | `other` | `digital-death-plan/SKILL.md` |
 | Digital Legacy Planner | `pm-estate` | `digital-legacy-planner/SKILL.md` |
+| DingTalk Work Log (钉钉日志) | `pm-china-work` | `dingtalk-work-log/SKILL.md` |
 | Disability Benefit Appeal | `pm-accessibility` | `disability-benefit-appeal/SKILL.md` |
 | Disability Disclosure Decision | `pm-accessibility` | `disability-disclosure-decision/SKILL.md` |
 | Disability Insurance Decoder | `pm-decoders` | `disability-insurance-decoder/SKILL.md` |
@@ -452,6 +460,7 @@
 | Feature Prioritisation | `pm-planning` | `feature-prioritisation/SKILL.md` |
 | Feature Sunset Plan | `pm-planning` | `feature-sunset-plan/SKILL.md` |
 | Federal Resume | `pm-cv` | `federal-resume/SKILL.md` |
+| Feishu Doc Writer (飞书文档) | `pm-china-work` | `feishu-doc-writer/SKILL.md` |
 | Feynman Explainer | `pm-learning` | `feynman-explainer/SKILL.md` |
 | Figma Annotation Guide | `pm-figma` | `figma-annotation-guide/SKILL.md` |
 | Figma Component Audit | `pm-figma` | `figma-component-audit/SKILL.md` |
@@ -1199,6 +1208,7 @@
 | Warranty Claim | `pm-money` | `warranty-claim/SKILL.md` |
 | Weather Now | `pm-live` | `weather-now/SKILL.md` |
 | WeChat Official Account Article (公众号文章) | `pm-zh-content` | `wechat-article/SKILL.md` |
+| WeCom Announcement (企业微信公告) | `pm-china-work` | `wecom-announcement/SKILL.md` |
 | Wedding Budget | `pm-wedding` | `wedding-budget/SKILL.md` |
 | Wedding Logistics Planner | `pm-wedding` | `wedding-logistics-planner/SKILL.md` |
 | Wedding Speech | `pm-lifeadmin` | `wedding-speech/SKILL.md` |

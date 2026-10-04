@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1224 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1234 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -186,13 +186,20 @@
 | Clip Factory | `pm-newgen` | `pm-newgen/clip-factory/GEM_INSTRUCTIONS.md` |
 | Clone Brief | `pm-2027` | `pm-2027/clone-brief/GEM_INSTRUCTIONS.md` |
 | Closing Disclosure Decoder | `pm-decoders` | `pm-decoders/closing-disclosure-decoder/GEM_INSTRUCTIONS.md` |
+| Campus Recruitment (校招) | `pm-china-exams` | `pm-china-exams/cn-campus-recruitment/GEM_INSTRUCTIONS.md` |
+| Civil Service Essay (申论) | `pm-china-exams` | `pm-china-exams/cn-civil-exam-essay/GEM_INSTRUCTIONS.md` |
+| Civil Service Interview (结构化面试) | `pm-china-exams` | `pm-china-exams/cn-civil-exam-interview/GEM_INSTRUCTIONS.md` |
 | 复盘 (Fupan) | `pm-china-work` | `pm-china-work/cn-fupan/GEM_INSTRUCTIONS.md` |
 | Gaokao Application Planner (高考志愿) | `pm-china-life` | `pm-china-life/cn-gaokao-planner/GEM_INSTRUCTIONS.md` |
 | China Annual Tax Reconciliation (个税年度汇算) | `pm-china-life` | `pm-china-life/cn-iit-reconciliation/GEM_INSTRUCTIONS.md` |
+| Kaoyan Planner (考研规划) | `pm-china-exams` | `pm-china-exams/cn-kaoyan-planner/GEM_INSTRUCTIONS.md` |
 | China Labour Contract Decoder (劳动合同) | `pm-china-life` | `pm-china-life/cn-labour-contract-decoder/GEM_INSTRUCTIONS.md` |
+| Level Mapper (职级对标) | `pm-china-work` | `pm-china-work/cn-level-mapper/GEM_INSTRUCTIONS.md` |
+| PRD Review (需求评审) | `pm-china-work` | `pm-china-work/cn-prd-review/GEM_INSTRUCTIONS.md` |
 | Promotion Defence (晋升答辩) | `pm-china-work` | `pm-china-work/cn-promotion-defence/GEM_INSTRUCTIONS.md` |
 | China Severance Calculator (经济补偿金) | `pm-china-life` | `pm-china-life/cn-severance-calculator/GEM_INSTRUCTIONS.md` |
 | China Social Insurance Explainer (五险一金) | `pm-china-life` | `pm-china-life/cn-social-insurance-explainer/GEM_INSTRUCTIONS.md` |
+| State-Owned Enterprise Interview (国企面试) | `pm-china-exams` | `pm-china-exams/cn-soe-interview/GEM_INSTRUCTIONS.md` |
 | Chinese Weekly Report (周报) | `pm-china-work` | `pm-china-work/cn-weekly-report/GEM_INSTRUCTIONS.md` |
 | Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-work` | `pm-china-work/cn-year-end-review/GEM_INSTRUCTIONS.md` |
 | Co-Marketing | `pm-growth` | `pm-growth/co-marketing/GEM_INSTRUCTIONS.md` |
@@ -349,6 +356,7 @@
 | Difficult Conversation | `pm-comms` | `pm-comms/difficult-conversation/GEM_INSTRUCTIONS.md` |
 | Digital Death Plan | `other` | `other/digital-death-plan/GEM_INSTRUCTIONS.md` |
 | Digital Legacy Planner | `pm-estate` | `pm-estate/digital-legacy-planner/GEM_INSTRUCTIONS.md` |
+| DingTalk Work Log (钉钉日志) | `pm-china-work` | `pm-china-work/dingtalk-work-log/GEM_INSTRUCTIONS.md` |
 | Disability Benefit Appeal | `pm-accessibility` | `pm-accessibility/disability-benefit-appeal/GEM_INSTRUCTIONS.md` |
 | Disability Disclosure Decision | `pm-accessibility` | `pm-accessibility/disability-disclosure-decision/GEM_INSTRUCTIONS.md` |
 | Disability Insurance Decoder | `pm-decoders` | `pm-decoders/disability-insurance-decoder/GEM_INSTRUCTIONS.md` |
@@ -452,6 +460,7 @@
 | Feature Prioritisation | `pm-planning` | `pm-planning/feature-prioritisation/GEM_INSTRUCTIONS.md` |
 | Feature Sunset Plan | `pm-planning` | `pm-planning/feature-sunset-plan/GEM_INSTRUCTIONS.md` |
 | Federal Resume | `pm-cv` | `pm-cv/federal-resume/GEM_INSTRUCTIONS.md` |
+| Feishu Doc Writer (飞书文档) | `pm-china-work` | `pm-china-work/feishu-doc-writer/GEM_INSTRUCTIONS.md` |
 | Feynman Explainer | `pm-learning` | `pm-learning/feynman-explainer/GEM_INSTRUCTIONS.md` |
 | Figma Annotation Guide | `pm-figma` | `pm-figma/figma-annotation-guide/GEM_INSTRUCTIONS.md` |
 | Figma Component Audit | `pm-figma` | `pm-figma/figma-component-audit/GEM_INSTRUCTIONS.md` |
@@ -1199,6 +1208,7 @@
 | Warranty Claim | `pm-money` | `pm-money/warranty-claim/GEM_INSTRUCTIONS.md` |
 | Weather Now | `pm-live` | `pm-live/weather-now/GEM_INSTRUCTIONS.md` |
 | WeChat Official Account Article (公众号文章) | `pm-zh-content` | `pm-zh-content/wechat-article/GEM_INSTRUCTIONS.md` |
+| WeCom Announcement (企业微信公告) | `pm-china-work` | `pm-china-work/wecom-announcement/GEM_INSTRUCTIONS.md` |
 | Wedding Budget | `pm-wedding` | `pm-wedding/wedding-budget/GEM_INSTRUCTIONS.md` |
 | Wedding Logistics Planner | `pm-wedding` | `pm-wedding/wedding-logistics-planner/GEM_INSTRUCTIONS.md` |
 | Wedding Speech | `pm-lifeadmin` | `pm-lifeadmin/wedding-speech/GEM_INSTRUCTIONS.md` |

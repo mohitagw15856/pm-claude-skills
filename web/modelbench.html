@@ -49,6 +49,7 @@
   <p class="mb-meta" id="meta">Loading results…</p>
 
   <h2 class="section">🏆 Model rankings</h2>
+  <p class="mb-meta" id="setswitch"><a href="modelbench.html">English task set</a> · <a href="modelbench.html?set=zh" lang="zh-CN">中文任务集</a> (Chinese task set: DeepSeek, Qwen, Kimi, GLM and Doubao on Chinese workplace, life-admin, exam and content tasks)</p>
   <div id="board"><p class="empty">Loading…</p></div>
 
   <div class="callout" id="liftCallout" hidden>
@@ -77,7 +78,8 @@ ANTHROPIC_API_KEY=… OPENAI_API_KEY=… GEMINI_API_KEY=… \
 
 <script>
 const el=(id)=>document.getElementById(id);
-const DOMAIN_LABEL={product:'Product',communication:'Comms','engineering-ops':'Eng ops',analysis:'Analysis',people:'People',strategy:'Strategy'};
+const SET=new URLSearchParams(location.search).get('set')==='zh'?'zh':'en';
+const DOMAIN_LABEL={'china-work':'职场 Work','china-life':'生活 Life','china-exams':'考试 Exams','zh-content':'内容 Content',product:'Product',communication:'Comms','engineering-ops':'Eng ops',analysis:'Analysis',people:'People',strategy:'Strategy'};
 const prettyModel=(m)=>m.replace(/-\d{6,}$/,'').replace(/claude-/,'Claude ').replace(/gpt-/,'GPT-').replace(/gemini-/,'Gemini ');
 function heat(v){ // 1–5 → red→green
   const t=Math.max(0,Math.min(1,(v-1)/4)); const h=Math.round(8+t*(130-8));
@@ -85,7 +87,8 @@ function heat(v){ // 1–5 → red→green
 }
 init();
 async function init(){
-  let data; try{ data=await (await fetch('modelbench.json')).json(); }catch(e){ el('board').innerHTML='<p class="empty">Could not load results.</p>'; return; }
+  document.querySelectorAll('#setswitch a').forEach((a,i)=>{ if((i===1)===(SET==='zh')) a.setAttribute('aria-current','page'); });
+  let data; try{ data=await (await fetch(SET==='zh'?'modelbench-zh.json':'modelbench.json')).json(); }catch(e){ el('board').innerHTML='<p class="empty">Could not load results.</p>'; return; }
   const models=data.models||[];
   el('meta').textContent=`${models.length} model(s) · ${data.taskCount} tasks across ${(data.domains||[]).length} domains · task set v${data.taskSetVersion} · judge pinned per run · updated ${new Date(data.generated).toISOString().slice(0,10)}`;
   if(!models.length){ el('board').innerHTML='<p class="empty">No model runs yet — run the harness below to seed the board.</p>'; return; }

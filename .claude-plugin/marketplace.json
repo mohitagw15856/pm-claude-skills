@@ -2,12 +2,20 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "pm-claude-skills",
   "version": "81.0.0",
-  "description": "PM stands for Professional, not just Product Management. 1212 Claude Skills + 4 agent templates across 139 bundles covering 31 professions — engineering, security, AI/ML, customer success, legal, government & policy, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
+  "description": "PM stands for Professional, not just Product Management. 1222 Claude Skills + 4 agent templates across 140 bundles covering 31 professions — engineering, security, AI/ML, customer success, legal, government & policy, finance, personal finance, HR, sales, design, Figma, marketing, social media, writers, developer relations, founders/startups, healthcare, nonprofit, crisis comms, educators, content creators, and more. Built by a PM, used by everyone. Building blocks for the Anthropic agent template architecture.",
   "owner": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
   },
   "plugins": [
+    {
+      "name": "pm-china-exams",
+      "description": "The Chinese exams and early-career pack: the civil service essay (申论) and structured interview (结构化面试), postgraduate entrance exam planning (考研), campus recruitment (校招 and 三方协议) and state-owned enterprise interviews (国企面试), in Chinese",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-china-exams",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
     {
       "name": "pm-zh-content",
       "description": "Chinese content platforms: 小红书 notes, 公众号 articles, 抖音 short-video scripts and live-commerce (直播带货) scripts, each with a compliance check against restricted advertising claims and undisclosed sponsorship",
@@ -34,7 +42,7 @@
     },
     {
       "name": "pm-china-work",
-      "description": "The Chinese workplace pack: weekly and monthly reports (周报), the year-end review (述职 / 年终总结), the promotion defence (晋升答辩) and the 复盘 project review, written in Chinese to the conventions managers expect",
+      "description": "The Chinese workplace pack: weekly and monthly reports (周报), the year-end review (述职 / 年终总结), the promotion defence (晋升答辩), the 复盘 project review, PRD reviews (需求评审), job-level comparison (职级对标), and Feishu docs, DingTalk logs and WeCom announcements, written in Chinese to the conventions managers expect",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-china-work",

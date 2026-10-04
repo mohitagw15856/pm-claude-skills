@@ -1,4 +1,4 @@
-# 🗂️ All 1212 Skills — full catalog
+# 🗂️ All 1222 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -723,7 +723,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (750 skills)
+## 🌍 Industries & Public Sector (760 skills)
 
 ### `other` — 22 skills
 
@@ -876,6 +876,16 @@
 | **Medication-Management System** (`medication-management-system`) | Set up a system to manage medications safely — for yourself or someone you care for — so doses aren't missed, doubled, or dangerously combined. | — |
 | **Respite-Care Plan** (`respite-care-plan`) | Plan a genuine break from caregiving — arrange the coverage, hand off the essentials, and actually rest — because respite is what lets you keep going. | — |
 
+### `pm-china-exams` — 5 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Campus Recruitment (校招)** (`cn-campus-recruitment`) | Plan a Chinese campus recruitment season (校招: 秋招 and 春招), including internships that convert to offers (实习转正): the timeline, a target company… | — |
+| **Civil Service Essay (申论)** (`cn-civil-exam-essay`) | Practise the essay paper (申论) of the Chinese civil service examination (国考 / 省考): work a question from the given materials (给定资料), find the… | — |
+| **Civil Service Interview (结构化面试)** (`cn-civil-exam-interview`) | Practise the structured interview (结构化面试) for Chinese civil service and public institution posts (公务员面试 / 事业单位面试): the common question types, a… | — |
+| **Kaoyan Planner (考研规划)** (`cn-kaoyan-planner`) | Plan preparation for the Chinese postgraduate entrance examination (考研): choosing target schools and programmes with realistic odds, a phased… | — |
+| **State-Owned Enterprise Interview (国企面试)** (`cn-soe-interview`) | Prepare for recruitment at a Chinese state-owned enterprise (国企 / 央企), including its written test and interview: what these employers assess, the… | — |
+
 ### `pm-china-life` — 5 skills
 
 | Skill | What it does | Eval |
@@ -886,14 +896,19 @@
 | **China Severance Calculator (经济补偿金)** (`cn-severance-calculator`) | Estimate economic compensation (经济补偿金) when employment ends in mainland China: N, N+1 or 2N under the Labour Contract Law, with the high-earner… | — |
 | **China Social Insurance Explainer (五险一金)** (`cn-social-insurance-explainer`) | Explain China's social insurance and housing fund (五险一金) for a specific person and city: what each part covers, what they and their employer pay… | — |
 
-### `pm-china-work` — 4 skills
+### `pm-china-work` — 9 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **复盘 (Fupan)** (`cn-fupan`) | Run a 复盘 (fupan), the structured project review widely used in Chinese companies: review the goal, assess the result, analyse why, and draw rules… | — |
+| **Level Mapper (职级对标)** (`cn-level-mapper`) | Compare job levels (职级) across Chinese technology companies and against international ladders, to judge an offer, a job move or a promotion… | — |
+| **PRD Review (需求评审)** (`cn-prd-review`) | Prepare for and run a product requirements review (需求评审 / PRD 评审会) the way Chinese internet teams do it: a pre-read the engineers, testers and… | — |
 | **Promotion Defence (晋升答辩)** (`cn-promotion-defence`) | Prepare a promotion defence (晋升答辩) for a level-based promotion process common at Chinese technology companies: the materials, the presentation… | — |
 | **Chinese Weekly Report (周报)** (`cn-weekly-report`) | Write a Chinese workplace weekly or monthly report (周报 / 月报) for a manager: results with numbers, progress against goals, risks raised early, next… | — |
 | **Chinese Year-End Review (述职报告 / 年终总结)** (`cn-year-end-review`) | Write a Chinese annual self-review (述职报告 / 年终总结) for a performance cycle: results against OKR or KPI with evidence, the two or three things that… | — |
+| **DingTalk Work Log (钉钉日志)** (`dingtalk-work-log`) | Write a DingTalk work log (钉钉日志): the daily report (日报), weekly report (周报) or monthly report (月报) in the fields DingTalk's built-in log templates… | — |
+| **Feishu Doc Writer (飞书文档)** (`feishu-doc-writer`) | Write a document for Feishu / Lark Docs (飞书文档) in the shape Feishu readers expect: a summary callout at the top, headed sections that work with… | — |
+| **WeCom Announcement (企业微信公告)** (`wecom-announcement`) | Write an internal announcement for WeCom (企业微信) or a company group chat: policy changes, office notices, system outages, holiday arrangements and… | — |
 
 ### `pm-chuhai` — 3 skills
 
@@ -1942,4 +1957,4 @@
 
 ---
 
-_1212 skills across 140 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1222 skills across 141 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

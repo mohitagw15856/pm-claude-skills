@@ -2,6 +2,10 @@
 
 [English](README.md) · **简体中文** · [在中国使用](docs/CHINA.md) · [全部技能](SKILLS.md) · [更新日志](CHANGELOG.md)
 
+> 在国内？不需要访问 GitHub：通过 npmmirror、清华 PyPI 镜像、[Gitee 镜像](https://gitee.com/mohitagw/pm-claude-skills)和[魔搭数据集](https://www.modelscope.ai/datasets/mohitagw15856/pm-skills-instruct)安装，详见[在中国使用](docs/CHINA.md)。
+
+> 想系统地学怎么用和写 Agent Skills？见六课的开源小课：[用 Agent Skills 做职场工作](docs/learn-zh/README.md)。
+
 PM Skills 是一个开源的 Agent Skills 库。每个技能是一份 Markdown 文件（`SKILL.md`），教 AI 助手把一件专业工作做到资深水平：从写 PRD、周报，到解读劳动合同、准备晋升答辩。
 
 这里的 PM 指 Professional（专业人士），不只是产品经理。
@@ -45,7 +49,8 @@ npx pm-claude-skills add --agent trae --bundle pm-china-work,pm-cv
 
 | 技能包 | 内容 | 试着说 |
 |---|---|---|
-| [**pm-china-work**](plugins/pm-china-work/) 职场 | 周报 / 月报、述职报告 / 年终总结、晋升答辩、复盘 | "帮我把这些笔记整理成周报。" |
+| [**pm-china-work**](plugins/pm-china-work/) 职场 | 周报 / 月报、述职报告 / 年终总结、晋升答辩、复盘、需求评审、职级对标、飞书文档、钉钉日志、企业微信公告 | "帮我把这些笔记整理成周报。" |
+| [**pm-china-exams**](plugins/pm-china-exams/) 考试与求职 | 申论、结构化面试、考研规划、校招与三方协议、国企面试 | "下个月公务员面试，帮我模拟一轮。" |
 | [**pm-china-life**](plugins/pm-china-life/) 生活事务 | 劳动合同解读、经济补偿金估算、个税年度汇算、五险一金、高考志愿 | "三年合同试用期六个月，合法吗？" |
 | [**pm-zh-content**](plugins/pm-zh-content/) 内容平台 | 小红书笔记、公众号文章、抖音脚本、直播带货脚本 | "帮我写一篇小红书笔记。" |
 | [**pm-chuhai**](plugins/pm-chuhai/) 出海 | 出海市场进入计划、跨境电商 listing、PIPL 与 GDPR 对照 | "我们想出海，东南亚还是中东？" |
@@ -55,7 +60,7 @@ npx pm-claude-skills add --agent trae --bundle pm-china-work,pm-cv
 
 ## 中文翻译
 
-[`skills-i18n/zh/`](skills-i18n/zh/) 中有 50 个技能的简体中文翻译，[`skills-i18n/zh-TW/`](skills-i18n/zh-TW/) 中有 25 个技能的繁体中文翻译。英文版本为规范版本；翻译由 CI 检查结构是否一致。
+[`skills-i18n/zh/`](skills-i18n/zh/) 中有 60 个技能的简体中文翻译，[`skills-i18n/zh-TW/`](skills-i18n/zh-TW/) 中有 25 个技能的繁体中文翻译。英文版本为规范版本；翻译由 CI 检查结构是否一致。
 
 用中文提问时，技能路由也能理解：例如"我的房东扣了我的押金"会匹配到押金追回技能。
 

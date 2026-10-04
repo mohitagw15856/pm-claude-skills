@@ -1,11 +1,11 @@
-# 🧠 PM Skills — 1212 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
+# 🧠 PM Skills — 1222 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
 
 <p align="center">
   <a href="https://mohitagw15856.github.io/pm-claude-skills/">
     <picture>
       <source media="(prefers-color-scheme: dark)" srcset="web/docs-assets/hero.svg">
       <source media="(prefers-color-scheme: light)" srcset="web/docs-assets/hero-light.svg">
-      <img src="web/docs-assets/hero.svg" width="100%" alt="PM Skills — 1212 professional skills your AI assistant can read. Plain markdown, works with Claude, ChatGPT, Gemini, Cursor, and Codex. MIT licensed." />
+      <img src="web/docs-assets/hero.svg" width="100%" alt="PM Skills — 1222 professional skills your AI assistant can read. Plain markdown, works with Claude, ChatGPT, Gemini, Cursor, and Codex. MIT licensed." />
     </picture>
   </a>
 </p>
@@ -38,15 +38,15 @@
 
 > **Your landlord kept your deposit. Your mom got a medical bill that makes no sense. You got laid off on a Tuesday. Someone you love died, and no one handed you the checklist.**
 >
-> Generic AI is a very confident intern. **PM Skills** is the senior colleague's notes — 1212 of them, one markdown file each, for the moments at work *and* in life where "it depends" is not an answer. *(PM stands for Professional, not just Product Management. Yes, we get asked.)*
+> Generic AI is a very confident intern. **PM Skills** is the senior colleague's notes — 1222 of them, one markdown file each, for the moments at work *and* in life where "it depends" is not an answer. *(PM stands for Professional, not just Product Management. Yes, we get asked.)*
 
 <!-- AEO Answer Capsule — 68 words -->
-PM Skills is an open-source library of 1212 Agent Skills — plain-markdown SKILL.md files that teach an AI assistant to do one professional task to a senior professional's standard, from writing a PRD to decoding a lease or running a blameless postmortem. Each skill bundles the framework, an output template, quality checks, and anti-patterns. It is MIT-licensed and works with Claude, ChatGPT, Gemini, Cursor, and Codex.
+PM Skills is an open-source library of 1222 Agent Skills — plain-markdown SKILL.md files that teach an AI assistant to do one professional task to a senior professional's standard, from writing a PRD to decoding a lease or running a blameless postmortem. Each skill bundles the framework, an output template, quality checks, and anti-patterns. It is MIT-licensed and works with Claude, ChatGPT, Gemini, Cursor, and Codex.
 <!-- End AEO Capsule -->
 
 <table align="center"><tr>
-<td align="center"><b>1212</b><br><sub>skills</sub></td>
-<td align="center"><b>139</b><br><sub>bundles</sub></td>
+<td align="center"><b>1222</b><br><sub>skills</sub></td>
+<td align="center"><b>140</b><br><sub>bundles</sub></td>
 <td align="center"><b>35</b><br><sub>professions</sub></td>
 <td align="center"><b>12</b><br><sub>platforms</sub></td>
 <td align="center"><b>4.8 / 5</b><br><sub><a href="https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html">eval-scored</a></sub></td>
@@ -64,12 +64,13 @@ PM Skills is an open-source library of 1212 Agent Skills — plain-markdown SKIL
 
 ## 🇨🇳 中文支持 · Chinese support
 
-**用中文提问即可。** 五个面向中文用户的技能包，50 个技能有简体中文版、25 个有繁体中文版，技能路由能理解中文请求。
-*Ask in Chinese. Five packs built for Chinese users, 50 skills translated into Simplified Chinese and 25 into Traditional, and routing that understands Chinese requests.*
+**用中文提问即可。** 六个面向中文用户的技能包，60 个技能有简体中文版、25 个有繁体中文版，技能路由能理解中文请求。
+*Ask in Chinese. Six packs built for Chinese users, 60 skills translated into Simplified Chinese and 25 into Traditional, and routing that understands Chinese requests.*
 
 | 技能包 Pack | 内容 What it covers | 试着说 Try saying |
 |---|---|---|
-| [**pm-china-work**](plugins/pm-china-work/) 职场 | 周报 / 月报、述职报告 / 年终总结、晋升答辩、复盘 | "帮我把这些笔记整理成周报。" |
+| [**pm-china-work**](plugins/pm-china-work/) 职场 | 周报 / 月报、述职报告 / 年终总结、晋升答辩、复盘、需求评审、职级对标、飞书文档、钉钉日志、企业微信公告 | "帮我把这些笔记整理成周报。" |
+| [**pm-china-exams**](plugins/pm-china-exams/) 考试与求职 | 申论、结构化面试、考研规划、校招与三方协议、国企面试 | "下个月公务员面试，帮我模拟一轮。" |
 | [**pm-china-life**](plugins/pm-china-life/) 生活事务 | 劳动合同解读、经济补偿金 N / N+1 / 2N、个税年度汇算、五险一金、高考志愿 | "公司要裁我，能拿多少补偿？" |
 | [**pm-zh-content**](plugins/pm-zh-content/) 内容平台 | 小红书笔记、公众号文章、抖音脚本、直播带货脚本 | "帮我写一篇小红书笔记。" |
 | [**pm-chuhai**](plugins/pm-chuhai/) 出海 | 出海市场进入、跨境电商 listing、PIPL 与 GDPR 对照 | "我们想出海，东南亚还是中东？" |
@@ -90,7 +91,7 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
 | ▶ | **just want to see it** | open the **[Playground](https://mohitagw15856.github.io/pm-claude-skills/)** and run a skill in your browser. No install, no signup, no "enter your email to continue" |
 | 🧠 | **use Claude Code** | `/plugin` → search **pm-skills** → install. Ask *"decode this lease"* and watch |
 | 🛠 | **use anything else** | `npx pm-claude-skills add` and pick your tool (Cursor, Codex, Windsurf, ChatGPT, Gemini…) |
-| 🇨🇳 | **read Chinese** | **[中文说明](README.zh-CN.md)**：用中文提问，五个中文技能包，支持 Trae、Qoder、通义灵码和国内模型 |
+| 🇨🇳 | **read Chinese** | **[中文说明](README.zh-CN.md)**：用中文提问，六个中文技能包，支持 Trae、Qoder、通义灵码和国内模型 |
 | 🔎 | **don't know what to ask for** | type it at **[find](https://mohitagw15856.github.io/pm-claude-skills/find.html)** — *"my landlord kept my deposit"* — and it names the skill |
 | 🎒 | **are in the middle of something** | start from your moment, not the catalogue → **[Skill Packs](PACKS.md)** · 🍼 new parent · 💼 laid off · 🌍 new country · 👵 caring for a parent · 🕊️ losing someone · 💸 money in crisis |
 
@@ -137,8 +138,8 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
 <table>
 <tr>
 <td width="50%" align="center">
-<a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="web/docs-assets/demo-galaxy.webp" width="100%" alt="Galaxy 3D — fly through all 1212 skills as a glowing constellation you orbit and click into" /></a>
-<br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html">Galaxy 3D</a></b> — all 1212 skills as a constellation. The ones you've run burn brighter. Zero productivity value, 100% recommended.</sub>
+<a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="web/docs-assets/demo-galaxy.webp" width="100%" alt="Galaxy 3D — fly through all 1222 skills as a glowing constellation you orbit and click into" /></a>
+<br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html">Galaxy 3D</a></b> — all 1222 skills as a constellation. The ones you've run burn brighter. Zero productivity value, 100% recommended.</sub>
 </td>
 <td width="50%" align="center">
 <a href="https://mohitagw15856.github.io/pm-claude-skills/wrapped.html"><img src="web/docs-assets/demo-holo.webp" width="100%" alt="PM Skills Wrapped — your practice turned into a shareable, Spotify-Wrapped-style story" /></a>
@@ -170,7 +171,7 @@ Say it in your own words. The description does the routing:
 | 🛂 *"prep me for the visa interview"* → [the-visa-interview](skills/the-visa-interview/SKILL.md) | 🔨 *"is this contractor quote fair?"* → [home-contractor-quote-decoder](skills/home-contractor-quote-decoder/SKILL.md) | 🏡 *"should we rent or buy?"* → [rent-vs-buy](skills/rent-vs-buy/SKILL.md) |
 | 📝 *"draft my self-review honestly"* → [performance-review](skills/performance-review/SKILL.md) | 🚢 *"ship Friday or slip a week?"* → [ship-or-slip](skills/ship-or-slip/SKILL.md) | ♻️ *"what do I keep asking you for?"* → [promoter-scan](skills/promoter-scan/SKILL.md) |
 
-…all 1212 live in **[the catalog](SKILLS.md)**.
+…all 1222 live in **[the catalog](SKILLS.md)**.
 
 ## ⚡ Quick start
 
@@ -187,7 +188,7 @@ No `npm install` needed — `npx pm-claude-skills …` always runs the latest. P
 
 ## 📚 The skills
 
-Every skill follows the same discipline: what it produces, the inputs it needs, a real framework (severity scales, decision rules, not vibes), a concrete output template, quality checks, and anti-patterns. All 1212 pass the [SkillSpec](SKILLSPEC.md) L3 gate and a security audit in CI.
+Every skill follows the same discipline: what it produces, the inputs it needs, a real framework (severity scales, decision rules, not vibes), a concrete output template, quality checks, and anti-patterns. All 1222 pass the [SkillSpec](SKILLSPEC.md) L3 gate and a security audit in CI.
 
 <table align="center">
   <tr align="center">
@@ -213,9 +214,9 @@ Every skill follows the same discipline: what it produces, the inputs it needs, 
 </table>
 
 <p align="center">
-  <b><a href="SKILLS.md">Browse all 1212 →</a></b> ·
+  <b><a href="SKILLS.md">Browse all 1222 →</a></b> ·
   <b><a href="https://mohitagw15856.github.io/pm-claude-skills/">try one in your browser →</a></b> ·
-  <b><a href="plugins/">139 bundles →</a></b>
+  <b><a href="plugins/">140 bundles →</a></b>
 </p>
 
 <details>
@@ -264,7 +265,7 @@ Every skill follows the same discipline: what it produces, the inputs it needs, 
 | <img src="web/docs-assets/logos/pm-design.svg" width="20" alt=""/> [Design & UX](plugins/pm-design/) | <img src="web/docs-assets/logos/pm-legal.svg" width="20" alt=""/> [Legal](plugins/pm-legal/) | <img src="web/docs-assets/logos/pm-finance.svg" width="20" alt=""/> [Finance](plugins/pm-finance/) |
 | <img src="web/docs-assets/logos/pm-founders.svg" width="20" alt=""/> [Founders](plugins/pm-founders/) | <img src="web/docs-assets/logos/pm-security.svg" width="20" alt=""/> [Security](plugins/pm-security/) | <img src="web/docs-assets/logos/pm-gov.svg" width="20" alt=""/> [Government](plugins/pm-gov/) |
 
-…plus HR, sales, operations, research, healthcare, educators, writers, social media, and more — **[the full profession index](SKILLS.md)**, or by bundle in [`plugins/`](plugins/) (139 bundles). Install any bundle: `/plugin install pm-decoders@pm-skills`.
+…plus HR, sales, operations, research, healthcare, educators, writers, social media, and more — **[the full profession index](SKILLS.md)**, or by bundle in [`plugins/`](plugins/) (140 bundles). Install any bundle: `/plugin install pm-decoders@pm-skills`.
 
 ### Meta
 
@@ -363,13 +364,13 @@ Checks frontmatter, the `Use when …` trigger clause a model actually matches o
 ## ❓ Straight answers
 
 <details><summary><b>Is it actually free?</b></summary>
-Yes — MIT, all 1212 skills, forever. The skills are markdown; there is nothing to gate. Sponsors fund the playground's free model runs, not access.
+Yes — MIT, all 1222 skills, forever. The skills are markdown; there is nothing to gate. Sponsors fund the playground's free model runs, not access.
 </details>
 <details><summary><b>Do I need an API key?</b></summary>
 Not to browse, read, install, or use skills inside a tool you already have. The playground serves a few sponsor-funded free runs a day. A key only matters for optional extras: running skills from CI, or the typed decision layer (which falls back to keyword routing without one).
 </details>
-<details><summary><b>The catalog says 1212 but the folder has more. Which is it?</b></summary>
-Both. There are <b>1188</b> directories under <code>skills/</code>; <b>12</b> of them are <a href="docs/DEPRECATION.md">deprecated</a> (marked in their frontmatter, each pointing at the skill that replaced it). They stay on disk so an old install command or a bookmarked name never breaks, and they are hidden from the catalog, the playground and the headline count. 1212 is what a person can browse; 1178 is what an installer can resolve.
+<details><summary><b>The catalog says 1222 but the folder has more. Which is it?</b></summary>
+Both. There are <b>1188</b> directories under <code>skills/</code>; <b>12</b> of them are <a href="docs/DEPRECATION.md">deprecated</a> (marked in their frontmatter, each pointing at the skill that replaced it). They stay on disk so an old install command or a bookmarked name never breaks, and they are hidden from the catalog, the playground and the headline count. 1222 is what a person can browse; 1178 is what an installer can resolve.
 </details>
 <details><summary><b>I'm not a product manager. Is this for me?</b></summary>
 PM stands for <i>Professional</i> here. Most of the library is decoders for leases and medical bills, salary-negotiation practice, career-moment kits, life admin, and 35 professions from teaching to veterinary. The product-management corner is just where it started.
@@ -427,4 +428,4 @@ MIT — use them, fork them, ship them at work. Skills are judgment, and judgmen
 
 ---
 
-*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 1212 skills · 139 bundles · 35 professions · every commit gated. The long version — every feature, wave, and frontier bet — lives in the **[Showcase](docs/SHOWCASE.md)**.*
+*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 1222 skills · 140 bundles · 35 professions · every commit gated. The long version — every feature, wave, and frontier bet — lives in the **[Showcase](docs/SHOWCASE.md)**.*

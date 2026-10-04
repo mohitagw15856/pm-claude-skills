@@ -1,0 +1,31 @@
+name: "🈶 认领翻译 / Claim a translation"
+description: 认领一个技能的简体或繁体中文翻译。Claim a Simplified or Traditional Chinese translation.
+title: "[翻译] <技能名> → zh / zh-TW"
+labels: ["translation", "good first translation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        翻译放在 `skills-i18n/zh/<技能名>/SKILL.md`（简体）或 `skills-i18n/zh-TW/<技能名>/SKILL.md`（繁体）。
+        CI 只检查结构：二级标题数量与英文版一致、`name` 不变、有 `language:` 字段和"规范版本"说明。可以参考已有的翻译，例如 `skills-i18n/zh/cn-weekly-report/SKILL.md`。
+  - type: input
+    id: skill
+    attributes:
+      label: 技能名 Skill name
+      placeholder: e.g. prd-template
+    validations:
+      required: true
+  - type: dropdown
+    id: lang
+    attributes:
+      label: 语言 Language
+      options:
+        - 简体中文 zh
+        - 繁體中文 zh-TW
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: 备注 Notes
+      description: 术语上的疑问，或者原文不符合中文语境、需要改写的地方。

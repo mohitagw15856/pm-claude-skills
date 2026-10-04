@@ -1,9 +1,9 @@
 {
  "generated": "2026-10-04",
  "counts": {
-  "consequential": 216,
+  "consequential": 221,
   "high-stakes": 148,
-  "informational": 860
+  "informational": 865
  },
  "tiers": {
   "360-feedback-template": {
@@ -722,6 +722,18 @@
    "tier": "high-stakes",
    "via": "bundle:pm-decoders"
   },
+  "cn-campus-recruitment": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cn-civil-exam-essay": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cn-civil-exam-interview": {
+   "tier": "informational",
+   "via": "default"
+  },
   "cn-fupan": {
    "tier": "consequential",
    "via": "bundle:pm-china-work"
@@ -734,9 +746,21 @@
    "tier": "high-stakes",
    "via": "bundle:pm-china-life"
   },
+  "cn-kaoyan-planner": {
+   "tier": "informational",
+   "via": "default"
+  },
   "cn-labour-contract-decoder": {
    "tier": "high-stakes",
    "via": "bundle:pm-china-life"
+  },
+  "cn-level-mapper": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-work"
+  },
+  "cn-prd-review": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-work"
   },
   "cn-promotion-defence": {
    "tier": "consequential",
@@ -749,6 +773,10 @@
   "cn-social-insurance-explainer": {
    "tier": "high-stakes",
    "via": "bundle:pm-china-life"
+  },
+  "cn-soe-interview": {
+   "tier": "informational",
+   "via": "default"
   },
   "cn-weekly-report": {
    "tier": "consequential",
@@ -1374,6 +1402,10 @@
    "tier": "high-stakes",
    "via": "bundle:pm-estate"
   },
+  "dingtalk-work-log": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-work"
+  },
   "disability-benefit-appeal": {
    "tier": "high-stakes",
    "via": "bundle:pm-accessibility"
@@ -1785,6 +1817,10 @@
   "federal-resume": {
    "tier": "consequential",
    "via": "bundle:pm-cv"
+  },
+  "feishu-doc-writer": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-work"
   },
   "feynman-explainer": {
    "tier": "informational",
@@ -4773,6 +4809,10 @@
   "wechat-article": {
    "tier": "informational",
    "via": "default"
+  },
+  "wecom-announcement": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-work"
   },
   "wedding-budget": {
    "tier": "consequential",

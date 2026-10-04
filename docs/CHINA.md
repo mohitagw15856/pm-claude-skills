@@ -4,6 +4,16 @@
 
 PM Skills 是一个开源的 Agent Skills 库：每个技能是一份 Markdown 文件，教 AI 助手把一件专业工作做到资深水平。本页说明在中国大陆如何安装、使用和更新。
 
+**全部走国内网络的安装方式（不需要访问 GitHub）：**
+
+| 你要做什么 | 国内地址 | 命令 |
+|---|---|---|
+| 安装技能（Claude Code、Trae、Qoder 等） | npmmirror | `npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae` |
+| 在 Python 智能体里使用 | 清华 PyPI 镜像 | `pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pm-skills` |
+| 下载完整源码 | Gitee | `git clone https://gitee.com/mohitagw/pm-claude-skills.git` |
+| 训练数据 | 魔搭 ModelScope | [mohitagw15856/pm-skills-instruct](https://www.modelscope.ai/datasets/mohitagw15856/pm-skills-instruct) |
+| MCP 服务 | npmmirror | 见下文第五节 |
+
 ## 一、安装
 
 ### 用 npm 国内镜像
@@ -27,7 +37,7 @@ npx pm-claude-skills add --agent claude
 git clone https://gitee.com/mohitagw/pm-claude-skills.git
 ```
 
-Gitee 镜像每次 GitHub 更新后自动同步。（镜像开通前，此地址可能尚不可用。）
+Gitee 镜像每次 GitHub 更新后自动同步：<https://gitee.com/mohitagw/pm-claude-skills>。之后用 `git pull` 更新即可。
 
 ## 二、在国内常用的 AI 编程工具里使用
 
@@ -54,7 +64,8 @@ npx pm-claude-skills add --agent trae --bundle pm-china-work,pm-cv
 
 | 技能包 | 内容 |
 |---|---|
-| **pm-china-work** 职场 | 周报 / 月报、述职报告 / 年终总结、晋升答辩、复盘 |
+| **pm-china-work** 职场 | 周报 / 月报、述职报告 / 年终总结、晋升答辩、复盘、需求评审、职级对标、飞书文档、钉钉日志、企业微信公告 |
+| **pm-china-exams** 考试与求职 | 申论、公务员结构化面试、考研规划、校招（秋招、春招、三方协议）、国企面试 |
 | **pm-china-life** 生活事务 | 劳动合同解读、经济补偿金（N、N+1、2N）估算、个税年度汇算、五险一金、高考志愿 |
 | **pm-zh-content** 内容平台 | 小红书笔记、公众号文章、抖音脚本、直播带货脚本 |
 | **pm-chuhai** 出海 | 出海市场进入计划、跨境电商 listing、PIPL 与 GDPR 对照 |
@@ -92,9 +103,32 @@ claude mcp add pm-skills -- npx -y --registry=https://registry.npmmirror.com -p 
 
 托管的远程 MCP 地址（`workers.dev`）在国内大陆无法访问，请使用上面的本地方式。
 
-## 六、反馈
+## 六、魔搭 ModelScope：数据集、路由模型和在线试用
 
-欢迎用中文提 Issue。如果某个技能在中国的场景下不准确，或者你希望增加哪些技能，请告诉我们。
+**数据集**：技能库的训练数据集同步发布在魔搭社区，每次发版自动更新：
+
+```python
+from modelscope.msdatasets import MsDataset
+ds = MsDataset.load('mohitagw15856/pm-skills-instruct')
+```
+
+地址：<https://www.modelscope.ai/datasets/mohitagw15856/pm-skills-instruct>
+
+**路由模型**：[pm-skills-router](https://www.modelscope.ai/models/mohitagw15856/pm-skills-router) 输入中文或英文的请求，返回最匹配的技能。不需要 GPU，只用 Python 标准库，适合接入自己的智能体：
+
+```python
+from modelscope import snapshot_download
+import sys
+path = snapshot_download('mohitagw15856/pm-skills-router'); sys.path.insert(0, path)
+from pm_router import Router
+Router.load(f"{path}/router.json").route("帮我写周报", k=3)
+```
+
+**在线试用**：Playground 的魔搭镜像 [PM Skills 技能试用](https://www.modelscope.ai/studios/mohitagw15856/pm-skills-playground)，用你自己的 DeepSeek、通义千问、Kimi、智谱或豆包 API Key 运行技能。
+
+## 七、反馈
+
+欢迎用中文提 Issue，GitHub 和 [Gitee](https://gitee.com/mohitagw/pm-claude-skills/issues) 都可以。想学习怎么写自己的技能并贡献回来，见[开源小课](learn-zh/README.md)。如果某个技能在中国的场景下不准确，或者你希望增加哪些技能，请告诉我们。
 
 ---
 
@@ -105,11 +139,12 @@ What is in place, and what still needs an account or a decision.
 | Item | Status | To finish |
 |---|---|---|
 | npm mirror install line | Done | Nothing. npmmirror syncs from npmjs automatically |
-| Gitee mirror | Workflow ready: `.github/workflows/mirror-gitee.yml` | Create the Gitee repository, add an SSH deploy key with push access, then set secret `GITEE_SSH_KEY` and variable `GITEE_REPO` |
-| ModelScope dataset mirror | Workflow ready: `.github/workflows/publish-modelscope.yml` | Create the dataset on ModelScope, add secret `MODELSCOPE_TOKEN` and variable `MODELSCOPE_DATASET`; for an account on modelscope.ai also set `MODELSCOPE_HOST=www.modelscope.ai` |
+| Gitee mirror | Live: gitee.com/mohitagw/pm-claude-skills, synced on every push to main by `.github/workflows/mirror-gitee.yml` | Nothing. The push key is an account SSH key (Gitee deploy keys are read-only) |
+| ModelScope dataset mirror | Live: modelscope.ai mohitagw15856/pm-skills-instruct, published on every release by `.github/workflows/publish-modelscope.yml` | Nothing. Uses secret `MODELSCOPE_TOKEN` and variables `MODELSCOPE_DATASET` and `MODELSCOPE_HOST` |
 | Chinese model providers in the playground | Done in `web/providers.js` | Doubao is untested with a real key: its error responses carry no CORS headers, so only a valid key and activated model will work |
 | Trae, Qoder, Lingma, CodeBuddy | Done in `bin/cli.mjs` (`--agent`) | Rule files are generated at install time, not committed |
 | Router understands Chinese | Done (`integrations/jev/catalog.mjs`, `find`) | Coverage grows with every translated description in `skills-i18n/zh/` |
 | Hosted MCP and usage counter reachable from China | **Needs a custom domain** | `workers.dev` is blocked in mainland China. Add a domain to Cloudflare, attach it to the `pm-skills-mcp` worker (Workers, Settings, Domains and Routes, Add custom domain), then point `web/providers.js`, `web/nav.js`, `web/app.js` and `web/live.js` at it. Even then, reachability from China is not guaranteed |
-| Playground reachable from China | Partly | GitHub Pages is slow or blocked at times. A mainland host needs an ICP filing; a Hong Kong or Singapore host is the usual compromise |
+| Playground reachable from China | Partly | GitHub Pages is slow or blocked at times. A copy is published to the ModelScope Studio mohitagw15856/pm-skills-playground by `.github/workflows/publish-modelscope-studio.yml` (variable `MODELSCOPE_STUDIO`); after its first push, set the Studio's deployment type to Static with entry file `index.html`. A mainland host of our own would need an ICP filing |
+| Router model on ModelScope | `.github/workflows/publish-modelscope-model.yml` trains `integrations/router-model/pm_router.py` and publishes mohitagw15856/pm-skills-router (variable `MODELSCOPE_MODEL`) on every release | Nothing |
 | Measuring Chinese usage | Partly | npmmirror publishes download counts per package; the Gitee mirror shows stars and forks. The country counter only sees visitors who can reach `workers.dev` |

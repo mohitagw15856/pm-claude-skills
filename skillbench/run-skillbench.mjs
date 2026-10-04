@@ -9,10 +9,14 @@
 //   --dry-run            plan + cost estimate, no API calls
 //   --judge <model>      override the pinned judge (discloses in results)
 //   --tasks <path>       alternate task set (default: skillbench/tasks.json)
+//   --out <path>         results file (default: skillbench/results.json; the Chinese
+//                        task set writes skillbench/results-zh.json)
 //
 // Appends per-model entries to skillbench/results.json (existing models are replaced).
 // Providers are inferred from the model id: claude-* → Anthropic, gpt-*/o*-* → OpenAI,
-// gemini-* → Google. No dependencies.
+// gemini-* → Google, and the Chinese providers through their OpenAI-compatible APIs:
+// deepseek-* (DEEPSEEK_API_KEY), qwen-* (DASHSCOPE_API_KEY), kimi-*/moonshot-*
+// (MOONSHOT_API_KEY), glm-* (ZHIPU_API_KEY), doubao-* (ARK_API_KEY). No dependencies.
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -33,14 +37,24 @@ const dryRun = has('dry-run');
 if (!models.length) { console.error('Usage: --models model-a,model-b [--dry-run]'); process.exit(1); }
 
 const { version: taskSetVersion, tasks } = JSON.parse(readFileSync(arg('tasks', join(__dirname, 'tasks.json')), 'utf8'));
-const outPath = join(__dirname, 'results.json');
+const outPath = arg('out', join(__dirname, 'results.json'));
 
 // ── Provider adapters (single-shot completion; no streaming needed) ──────────
+// OpenAI-compatible endpoints, matched by model-id prefix: [pattern, base URL, key env var].
+// Same hosts as the playground's providers (web/providers.js).
+const COMPAT = [
+  [/^(gpt|o\d|chatgpt)/, process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1', 'OPENAI_API_KEY'],
+  [/^deepseek/, 'https://api.deepseek.com', 'DEEPSEEK_API_KEY'],
+  [/^qwen/, 'https://dashscope.aliyuncs.com/compatible-mode/v1', 'DASHSCOPE_API_KEY'],
+  [/^(kimi|moonshot)/, 'https://api.moonshot.cn/v1', 'MOONSHOT_API_KEY'],
+  [/^glm/, 'https://open.bigmodel.cn/api/paas/v4', 'ZHIPU_API_KEY'],
+  [/^doubao/, 'https://ark.cn-beijing.volces.com/api/v3', 'ARK_API_KEY'],
+];
 function providerOf(model) {
   if (/^claude/.test(model)) return 'anthropic';
-  if (/^(gpt|o\d|chatgpt)/.test(model)) return 'openai';
+  if (COMPAT.some(([re]) => re.test(model))) return 'openai';
   if (/^gemini/.test(model)) return 'google';
-  throw new Error(`Cannot infer provider for "${model}" (expected claude-*/gpt-*/gemini-*).`);
+  throw new Error(`Cannot infer provider for "${model}" (expected claude-*, gpt-*, gemini-*, deepseek-*, qwen-*, kimi-*, glm-* or doubao-*).`);
 }
 async function complete({ model, system, user, maxTokens = 4096 }) {
   const prov = providerOf(model);
@@ -57,12 +71,12 @@ async function complete({ model, system, user, maxTokens = 4096 }) {
     return j.content?.[0]?.text || '';
   }
   if (prov === 'openai') {
-    const key = process.env.OPENAI_API_KEY;
-    if (!key) throw new Error('OPENAI_API_KEY not set (needed for ' + model + ')');
+    const [, base, keyVar] = COMPAT.find(([re]) => re.test(model));
+    const key = process.env[keyVar];
+    if (!key) throw new Error(keyVar + ' not set (needed for ' + model + ')');
     const msgs = [];
     if (system) msgs.push({ role: 'system', content: system });
     msgs.push({ role: 'user', content: user });
-    const base = process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1';
     const res = await fetch(base.replace(/\/$/, '') + '/chat/completions', {
       method: 'POST',
       headers: { 'content-type': 'application/json', authorization: 'Bearer ' + key },
