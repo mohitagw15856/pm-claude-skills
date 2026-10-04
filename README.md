@@ -11,6 +11,7 @@
 </p>
 
 <p align="center">
+  <a href="README.zh-CN.md"><strong>简体中文</strong></a> &middot;
   <a href="#-quick-start"><strong>Quick start</strong></a> &middot;
   <a href="https://mohitagw15856.github.io/pm-claude-skills/"><strong>Playground</strong></a> &middot;
   <a href="SKILLS.md"><strong>All skills</strong></a> &middot;
