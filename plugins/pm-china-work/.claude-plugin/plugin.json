@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "pm-china-work",
   "version": "1.0.0",
-  "description": "The Chinese workplace pack: weekly and monthly reports (周报), the year-end review (述职 / 年终总结), the promotion defence (晋升答辩), the 复盘 project review, PRD reviews (需求评审), job-level comparison (职级对标), official documents to GB/T 9704 (公文), and Feishu docs, DingTalk logs and WeCom announcements, written in Chinese to the conventions managers expect",
+  "description": "The Chinese workplace pack: weekly and monthly reports (周报), the year-end review (述职 / 年终总结), the promotion defence (晋升答辩), the 复盘 project review, PRD reviews (需求评审), job-level comparison (职级对标), official documents to GB/T 9704 (公文), a jargon translator that turns 互联网黑话 into plain words (and back, for fun), and Feishu docs, DingTalk logs and WeCom announcements, written in Chinese to the conventions managers expect",
   "author": {
     "name": "Mohit Aggarwal",
     "email": "mohit15856@gmail.com"
@@ -20,6 +20,7 @@
     "dingtalk",
     "wecom",
     "prd-review",
-    "official-document"
+    "official-document",
+    "jargon"
   ]
 }

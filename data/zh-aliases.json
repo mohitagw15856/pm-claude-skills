@@ -38,6 +38,11 @@
   "insurance-policy-decoder": "解读保险条款：保障范围、免责条款和等待期",
   "loan-decoder": "解读贷款合同：利率、提前还款违约金和隐藏费用",
   "severance-agreement-decoder": "解读离职补偿协议或解除协议：签字前要注意什么",
-  "tos-decoder": "解读用户协议和隐私条款：有没有霸王条款"
+  "tos-decoder": "解读用户协议和隐私条款：有没有霸王条款",
+  "cn-jargon-translator": "互联网黑话翻译器：把对齐、抓手、闭环、赋能等黑话翻译成人话，周报去黑话，也能反向生成大厂味文案",
+  "cn-shuzhi-deck": "述职 PPT 大纲与讲稿：每页结论先行、图表建议、按时长控制的讲稿和问答准备",
+  "cn-year-end-bonus": "年终奖怎么算、13薪和年终奖的区别、年终奖个税单独计税还是并入综合所得、离职后年终奖被扣怎么办",
+  "cn-next-year-plan": "明年个人 OKR 或 KPI 与个人发展计划（IDP）：对齐上级目标、季度里程碑和目标沟通话术",
+  "hk-cantonese-copy": "香港粤语文案：繁体港式用语的 Instagram、Facebook、Threads 帖文和广告文案，中英夹杂自然"
  }
 }

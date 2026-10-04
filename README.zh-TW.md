@@ -1,4 +1,4 @@
-# PM Skills：1,250 個專業 Agent Skills，用中文提問就能用
+# PM Skills：1,255 個專業 Agent Skills，用中文提問就能用
 
 <p align="center">
   <a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <b>繁體中文</b> · <a href="SKILLS.md">全部技能</a> · <a href="skills-i18n/zh-TW/">繁體中文譯本</a> · <a href="CHANGELOG.md">更新紀錄</a>
@@ -19,18 +19,19 @@
 </p>
 
 > **公司說要資遣你，你不確定資遣費該拿多少；轉工之後，舊公司的強積金不知道該怎麼處理；每個月加班，卻從沒算清楚加班費。**
-> 通用 AI 像一個很有自信的實習生。**PM Skills** 是資深同事的筆記：1,250 份，每份一個 Markdown 檔案。（PM 指 Professional，各行各業的專業人士，不只是產品經理。）
+> 通用 AI 像一個很有自信的實習生。**PM Skills** 是資深同事的筆記：1,255 份，每份一個 Markdown 檔案。（PM 指 Professional，各行各業的專業人士，不只是產品經理。）
 
 MIT 開源授權，永久免費。沒有執行環境，沒有遙測，不需要帳號。
 
 ## 香港與台灣專用技能包：pm-hk-tw
 
-[**pm-hk-tw**](plugins/pm-hk-tw/) 用繁體中文寫成，處理香港和台灣上班族最常碰到的兩件事：
+[**pm-hk-tw**](plugins/pm-hk-tw/) 用繁體中文寫成，處理香港和台灣上班族最常碰到的事，另附一個粵語文案技能：
 
 | 技能 | 處理什麼 | 可以這樣問 |
 |---|---|---|
 | [`hk-mpf-explainer`](skills-i18n/zh-TW/hk-mpf-explainer/SKILL.md) 香港強積金 | 按你的收入計算供款、核對僱主有沒有供足、提取途徑和條件、轉移和整合帳戶、可扣稅自願性供款、揀基金的框架（不推薦個別基金） | 「強積金點計？轉工之後舊戶口要唔要轉？」 |
 | [`tw-labour-standards`](skills-i18n/zh-TW/tw-labour-standards/SKILL.md) 台灣勞動基準法 | 依勞基法檢查你的情況：工資、工時與加班費、特別休假、預告期間、勞退新制資遣費、勞退提繳，附計算過程與申訴管道 | 「被資遣可以拿多少資遣費？」 |
+| [`hk-cantonese-copy`](skills/hk-cantonese-copy/SKILL.md) 粵語文案 | 為香港讀者寫 Instagram、Facebook、Threads 文案：書面語、口語化書面語或全粵語三種語氣，自然中英夾雜，檢查簡體字和台灣用語有沒有混進去 | 「幫我寫一則新店開張嘅 IG post，要地道啲。」 |
 
 ### 例子一：香港，強積金
 

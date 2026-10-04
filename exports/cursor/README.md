@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1262 skills exported. Copy a `.mdc rule` into the tool to use it.
+1267 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -197,23 +197,27 @@
 | Housing Fund Withdrawal (公积金提取) | `pm-china-life` | `pm-china-life/cn-housing-fund-withdrawal/cn-housing-fund-withdrawal.mdc` |
 | Hukou Points (积分落户) | `pm-china-life` | `pm-china-life/cn-hukou-points/cn-hukou-points.mdc` |
 | China Annual Tax Reconciliation (个税年度汇算) | `pm-china-life` | `pm-china-life/cn-iit-reconciliation/cn-iit-reconciliation.mdc` |
+| Chinese Internet Jargon Translator (互联网黑话翻译器) | `pm-china-work` | `pm-china-work/cn-jargon-translator/cn-jargon-translator.mdc` |
 | Kaoyan Planner (考研规划) | `pm-china-exams` | `pm-china-exams/cn-kaoyan-planner/cn-kaoyan-planner.mdc` |
 | China Labour Contract Decoder (劳动合同) | `pm-china-life` | `pm-china-life/cn-labour-contract-decoder/cn-labour-contract-decoder.mdc` |
 | Level Mapper (职级对标) | `pm-china-work` | `pm-china-work/cn-level-mapper/cn-level-mapper.mdc` |
 | Medical Insurance Claims (医保报销) | `pm-china-life` | `pm-china-life/cn-medical-insurance-claim/cn-medical-insurance-claim.mdc` |
 | MLPS 2.0 Checklist (等保 2.0) | `pm-china-compliance` | `pm-china-compliance/cn-mlps-checklist/cn-mlps-checklist.mdc` |
+| Next Year's OKR and Development Plan (明年个人 OKR 与个人发展计划) | `pm-china-yearend` | `pm-china-yearend/cn-next-year-plan/cn-next-year-plan.mdc` |
 | Official Document (公文) | `pm-china-work` | `pm-china-work/cn-official-document/cn-official-document.mdc` |
 | PIPL Impact Assessment (个人信息保护影响评估) | `pm-china-compliance` | `pm-china-compliance/cn-pipl-pia/cn-pipl-pia.mdc` |
 | PRD Review (需求评审) | `pm-china-work` | `pm-china-work/cn-prd-review/cn-prd-review.mdc` |
 | Promotion Defence (晋升答辩) | `pm-china-work` | `pm-china-work/cn-promotion-defence/cn-promotion-defence.mdc` |
 | China Severance Calculator (经济补偿金) | `pm-china-life` | `pm-china-life/cn-severance-calculator/cn-severance-calculator.mdc` |
+| 述职 PPT Builder (述职 PPT 大纲与讲稿) | `pm-china-yearend` | `pm-china-yearend/cn-shuzhi-deck/cn-shuzhi-deck.mdc` |
 | Small Business Tax (个体户与小微企业税务) | `pm-china-life` | `pm-china-life/cn-small-business-tax/cn-small-business-tax.mdc` |
 | China Social Insurance Explainer (五险一金) | `pm-china-life` | `pm-china-life/cn-social-insurance-explainer/cn-social-insurance-explainer.mdc` |
 | State-Owned Enterprise Interview (国企面试) | `pm-china-exams` | `pm-china-exams/cn-soe-interview/cn-soe-interview.mdc` |
 | Tech Interview Drill (大厂技术面试) | `pm-china-exams` | `pm-china-exams/cn-tech-interview-drill/cn-tech-interview-drill.mdc` |
 | Thesis Proposal (开题报告) | `pm-china-exams` | `pm-china-exams/cn-thesis-proposal/cn-thesis-proposal.mdc` |
 | Chinese Weekly Report (周报) | `pm-china-work` | `pm-china-work/cn-weekly-report/cn-weekly-report.mdc` |
-| Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-work` | `pm-china-work/cn-year-end-review/cn-year-end-review.mdc` |
+| Year-End Bonus Clarifier (年终奖、13薪与个税) | `pm-china-yearend` | `pm-china-yearend/cn-year-end-bonus/cn-year-end-bonus.mdc` |
+| Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-yearend` | `pm-china-yearend/cn-year-end-review/cn-year-end-review.mdc` |
 | Co-Marketing | `pm-growth` | `pm-growth/co-marketing/co-marketing.mdc` |
 | Co-Parenting Messages | `pm-family` | `pm-family/co-parenting-messages/co-parenting-messages.mdc` |
 | Cocktail From What I Have | `pm-hobbies` | `pm-hobbies/cocktail-from-what-i-have/cocktail-from-what-i-have.mdc` |
@@ -572,6 +576,7 @@
 | HIPAA Safeguards | `pm-compliance` | `pm-compliance/hipaa-safeguards/hipaa-safeguards.mdc` |
 | Hire or Pass | `pm-decisions` | `pm-decisions/hire-or-pass/hire-or-pass.mdc` |
 | Hiring Rubric | `pm-people` | `pm-people/hiring-rubric/hiring-rubric.mdc` |
+| Hong Kong Cantonese Copy (香港粵語文案) | `pm-hk-tw` | `pm-hk-tw/hk-cantonese-copy/hk-cantonese-copy.mdc` |
 | Hong Kong MPF Explainer (強積金) | `pm-hk-tw` | `pm-hk-tw/hk-mpf-explainer/hk-mpf-explainer.mdc` |
 | HN Digest | `pm-live` | `pm-live/hn-digest/hn-digest.mdc` |
 | HOA Decoder | `pm-decoders` | `pm-decoders/hoa-decoder/hoa-decoder.mdc` |

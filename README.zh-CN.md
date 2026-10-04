@@ -1,4 +1,4 @@
-# PM Skills：1250 个专业 Agent Skills，用中文提问就能用
+# PM Skills：1255 个专业 Agent Skills，用中文提问就能用
 
 <p align="center">
   <a href="https://mohitagw15856.github.io/pm-claude-skills/live/season.html">
@@ -38,7 +38,7 @@
 </p>
 
 > **公司要裁员，你不知道该拿多少补偿；明天要开需求评审，PRD 还缺一半；下个月公务员面试，没人陪你练。**
-> 通用 AI 像一个很自信的实习生。**PM Skills** 是资深同事的笔记：1250 份，每份一个 Markdown 文件。（PM 指 Professional，专业人士，不只是产品经理。）
+> 通用 AI 像一个很自信的实习生。**PM Skills** 是资深同事的笔记：1255 份，每份一个 Markdown 文件。（PM 指 Professional，专业人士，不只是产品经理。）
 
 <p align="center">
   <picture>
@@ -48,7 +48,7 @@
   </picture>
 </p>
 
-## 🎯 1,250 个技能，你只需要 5 个
+## 🎯 1,255 个技能，你只需要 5 个
 
 <p align="center">
   <picture>
@@ -363,11 +363,12 @@ npx pm-claude-skills skillcheck --dir ./my-skills
 
 | 技能包 | 内容 | 试着说 |
 |---|---|---|
-| [**pm-china-work**](plugins/pm-china-work/) 职场 | 周报 / 月报、述职、晋升答辩、复盘、需求评审、职级对标、公文、飞书、钉钉、企业微信 | "帮我把这些笔记整理成周报。" |
+| [**pm-china-work**](plugins/pm-china-work/) 职场 | 周报 / 月报、述职、晋升答辩、复盘、需求评审、职级对标、公文、飞书、钉钉、企业微信、互联网黑话翻译 | "帮我把这些笔记整理成周报。" |
 | [**pm-china-exams**](plugins/pm-china-exams/) 考试与求职 | 申论、结构化面试、考研、开题报告与参考文献、大厂技术面试、校招与三方协议、国企面试 | "下个月公务员面试，帮我模拟一轮。" |
 | [**pm-china-life**](plugins/pm-china-life/) 生活事务 | 劳动合同、经济补偿金、个税汇算、五险一金、公积金提取、医保报销、积分落户、个体户报税、高考志愿 | "公司要裁我，能拿多少补偿？" |
+| [**pm-china-yearend**](plugins/pm-china-yearend/) 述职季 | 述职 PPT、年终总结、年终奖与个税、明年 OKR 与个人发展计划 | "帮我把今年的工作整理成述职 PPT 大纲。" |
 | [**pm-china-compliance**](plugins/pm-china-compliance/) 合规 | 等保 2.0、数据出境、个人信息保护影响评估、大模型备案与 AI 内容标识 | "我们的系统要过等保三级，差在哪？" |
-| [**pm-hk-tw**](plugins/pm-hk-tw/) 港台 | 香港強積金、台灣勞動基準法（繁體中文） | "被資遣可以拿多少資遣費？" |
+| [**pm-hk-tw**](plugins/pm-hk-tw/) 港台 | 香港強積金、台灣勞動基準法、粵語文案（繁體中文） | "被資遣可以拿多少資遣費？" |
 | [**pm-zh-content**](plugins/pm-zh-content/) 内容平台 | 小红书、公众号、抖音脚本、直播带货 | "帮我写一篇小红书笔记。" |
 | [**pm-chuhai**](plugins/pm-chuhai/) 出海 | 出海市场进入、Temu / TikTok Shop / 亚马逊选择与入驻、跨境 listing、PIPL 与 GDPR 对照 | "Temu 全托管还是亚马逊 FBA？" |
 | [**pm-cv**](plugins/pm-cv/) 简历 | 按目标公司定制简历、中英文简历、导出 Word | "帮我做一份中英文简历，要投外企。" |

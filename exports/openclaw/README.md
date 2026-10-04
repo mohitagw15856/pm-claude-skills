@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1262 skills exported. Copy a `SKILL.md` into the tool to use it.
+1267 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -197,23 +197,27 @@
 | Housing Fund Withdrawal (公积金提取) | `pm-china-life` | `cn-housing-fund-withdrawal/SKILL.md` |
 | Hukou Points (积分落户) | `pm-china-life` | `cn-hukou-points/SKILL.md` |
 | China Annual Tax Reconciliation (个税年度汇算) | `pm-china-life` | `cn-iit-reconciliation/SKILL.md` |
+| Chinese Internet Jargon Translator (互联网黑话翻译器) | `pm-china-work` | `cn-jargon-translator/SKILL.md` |
 | Kaoyan Planner (考研规划) | `pm-china-exams` | `cn-kaoyan-planner/SKILL.md` |
 | China Labour Contract Decoder (劳动合同) | `pm-china-life` | `cn-labour-contract-decoder/SKILL.md` |
 | Level Mapper (职级对标) | `pm-china-work` | `cn-level-mapper/SKILL.md` |
 | Medical Insurance Claims (医保报销) | `pm-china-life` | `cn-medical-insurance-claim/SKILL.md` |
 | MLPS 2.0 Checklist (等保 2.0) | `pm-china-compliance` | `cn-mlps-checklist/SKILL.md` |
+| Next Year's OKR and Development Plan (明年个人 OKR 与个人发展计划) | `pm-china-yearend` | `cn-next-year-plan/SKILL.md` |
 | Official Document (公文) | `pm-china-work` | `cn-official-document/SKILL.md` |
 | PIPL Impact Assessment (个人信息保护影响评估) | `pm-china-compliance` | `cn-pipl-pia/SKILL.md` |
 | PRD Review (需求评审) | `pm-china-work` | `cn-prd-review/SKILL.md` |
 | Promotion Defence (晋升答辩) | `pm-china-work` | `cn-promotion-defence/SKILL.md` |
 | China Severance Calculator (经济补偿金) | `pm-china-life` | `cn-severance-calculator/SKILL.md` |
+| 述职 PPT Builder (述职 PPT 大纲与讲稿) | `pm-china-yearend` | `cn-shuzhi-deck/SKILL.md` |
 | Small Business Tax (个体户与小微企业税务) | `pm-china-life` | `cn-small-business-tax/SKILL.md` |
 | China Social Insurance Explainer (五险一金) | `pm-china-life` | `cn-social-insurance-explainer/SKILL.md` |
 | State-Owned Enterprise Interview (国企面试) | `pm-china-exams` | `cn-soe-interview/SKILL.md` |
 | Tech Interview Drill (大厂技术面试) | `pm-china-exams` | `cn-tech-interview-drill/SKILL.md` |
 | Thesis Proposal (开题报告) | `pm-china-exams` | `cn-thesis-proposal/SKILL.md` |
 | Chinese Weekly Report (周报) | `pm-china-work` | `cn-weekly-report/SKILL.md` |
-| Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-work` | `cn-year-end-review/SKILL.md` |
+| Year-End Bonus Clarifier (年终奖、13薪与个税) | `pm-china-yearend` | `cn-year-end-bonus/SKILL.md` |
+| Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-yearend` | `cn-year-end-review/SKILL.md` |
 | Co-Marketing | `pm-growth` | `co-marketing/SKILL.md` |
 | Co-Parenting Messages | `pm-family` | `co-parenting-messages/SKILL.md` |
 | Cocktail From What I Have | `pm-hobbies` | `cocktail-from-what-i-have/SKILL.md` |
@@ -572,6 +576,7 @@
 | HIPAA Safeguards | `pm-compliance` | `hipaa-safeguards/SKILL.md` |
 | Hire or Pass | `pm-decisions` | `hire-or-pass/SKILL.md` |
 | Hiring Rubric | `pm-people` | `hiring-rubric/SKILL.md` |
+| Hong Kong Cantonese Copy (香港粵語文案) | `pm-hk-tw` | `hk-cantonese-copy/SKILL.md` |
 | Hong Kong MPF Explainer (強積金) | `pm-hk-tw` | `hk-mpf-explainer/SKILL.md` |
 | HN Digest | `pm-live` | `hn-digest/SKILL.md` |
 | HOA Decoder | `pm-decoders` | `hoa-decoder/SKILL.md` |
