@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>城市数据：社保缴费基数与社平工资（附官方来源） | PM Skills</title>
+<meta name="description" content="北京、上海等城市的社保缴费基数上下限和上年度平均工资，每个数字都附官方通知链接和生效时间；顺带估算经济补偿金的三倍封顶。" />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/city-data.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .cd-wrap { max-width: 820px; margin: 0 auto; padding: 16px 22px 70px; }
+  .cd-wrap h1 { font-size: 26px; margin-bottom: 6px; }
+  .lead { color: var(--muted); line-height: 1.6; }
+  .panel { border: 1px solid var(--border); border-radius: 16px; background: var(--panel); padding: 18px 22px; margin: 20px 0; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 13px; }
+  .num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px 16px; }
+  .field label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .field select, .field input { width: 100%; box-sizing: border-box; border: 1px solid var(--border); background: var(--bg); color: var(--text); border-radius: 10px; padding: 9px 12px; font-size: 15px; }
+  .result { font-size: 16px; line-height: 1.8; margin-top: 14px; }
+  .note { color: var(--muted); font-size: 13px; line-height: 1.6; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="工具"></nav>
+<main class="cd-wrap">
+  <h1>🏙 城市数据</h1>
+  <p class="lead">劳动、社保类技能会用到的城市数字。每个数字都来自当地官方通知，附链接和生效时间；没有官方来源的城市先不收录。数据每年夏天随各地通知更新。</p>
+
+  <section class="panel" aria-labelledby="t1">
+    <h2 id="t1" style="font-size:16px;margin:0 0 10px">社保缴费基数与上年度平均工资</h2>
+    <div id="table">加载中…</div>
+  </section>
+
+  <section class="panel" aria-labelledby="t2">
+    <h2 id="t2" style="font-size:16px;margin:0 0 10px">经济补偿金封顶估算</h2>
+    <form class="grid" id="form" onsubmit="return false">
+      <div class="field"><label for="city">城市</label><select id="city"></select></div>
+      <div class="field"><label for="salary">离职前 12 个月平均月工资（元）</label><input id="salary" type="number" min="0" step="100" value="45000" /></div>
+      <div class="field"><label for="years">工作年限（年）</label><input id="years" type="number" min="0" max="40" step="0.5" value="6.5" /></div>
+    </form>
+    <p class="result" id="result" aria-live="polite"></p>
+    <p class="note">按《劳动合同法》第四十七条：每满一年支付一个月工资，六个月以上不满一年按一年，不满六个月支付半个月；月工资高于当地上年度职工月平均工资三倍的，按三倍计算，且年限最多 12 年。这是估算，不是法律意见；完整分析请用 <a href="skill/cn-severance-calculator.html">cn-severance-calculator</a> 技能。</p>
+  </section>
+
+  <p class="note">数据文件：<a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/data/cn-city-data.json">data/cn-city-data.json</a>。发现新的官方通知？欢迎提 PR，附上官方链接即可。</p>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const fmt = (n) => Number(n).toLocaleString('zh-CN');
+let DATA = null;
+fetch('live/city-data.json').then((r) => r.json()).then((d) => {
+  DATA = d;
+  const rows = Object.entries(d.cities).map(([id, c]) => {
+    const b = c.socialInsuranceBase || {}, w = c.avgMonthlyWage || {};
+    const avg = w.value ? `${fmt(w.value)}（${w.year} 年度）` : w.derived ? `约 ${fmt(w.derived)}（按上限推算）` : '暂无';
+    return `<tr><td>${c.name}</td><td class="num">${fmt(b.upper)} / ${fmt(b.lower)}</td><td class="num">${b.effectiveFrom || ''} 起</td><td class="num">${avg}</td><td><a href="${b.source}">官方通知</a></td></tr>`;
+  }).join('');
+  $('table').innerHTML = `<table><thead><tr><th scope="col">城市</th><th scope="col">缴费基数上限 / 下限（元/月）</th><th scope="col">执行</th><th scope="col">上年度月平均工资（元）</th><th scope="col">来源</th></tr></thead><tbody>${rows}</tbody></table><p class="note">更新于 ${d.updated}。待补充：${(d.todo || []).map((t) => t.city).join('、')}。</p>`;
+  for (const [id, c] of Object.entries(d.cities)) { const o = document.createElement('option'); o.value = id; o.textContent = c.name; $('city').appendChild(o); }
+  calc();
+}).catch(() => { $('table').textContent = '数据暂时无法加载。'; });
+
+function calc() {
+  if (!DATA) return;
+  const c = DATA.cities[$('city').value]; if (!c) return;
+  const avg = (c.avgMonthlyWage && (c.avgMonthlyWage.value || c.avgMonthlyWage.derived)) || 0;
+  const salary = Math.max(0, Number($('salary').value) || 0), years = Math.max(0, Number($('years').value) || 0);
+  const whole = Math.floor(years), frac = years - whole;
+  let n = whole + (frac >= 0.5 ? 1 : frac > 0 ? 0.5 : 0);
+  const capped = avg && salary > avg * 3;
+  const base = capped ? avg * 3 : salary;
+  if (capped) n = Math.min(n, 12);
+  $('result').innerHTML = `N = ${n} 个月；计算基数 ${fmt(Math.round(base))} 元/月${capped ? `（超过${c.name}上年度月平均工资三倍 ${fmt(Math.round(avg * 3))} 元，按三倍封顶，年限最多 12 年）` : ''}。<br><b>估算经济补偿金：${fmt(Math.round(base * n))} 元</b>`;
+}
+$('form').addEventListener('input', calc);
+$('form').addEventListener('change', calc);
+</script>
+<script src="nav.js"></script>
+</body>
+</html>

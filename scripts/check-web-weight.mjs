@@ -51,11 +51,20 @@ const byPath = new Map(files.map((f) => [f.path, f]));
 const problems = [];
 
 // ── Rule 1: named files with their own ceiling ───────────────────────────────
-for (const [path, limitMb] of Object.entries(budget.files || {})) {
-  const f = byPath.get(path);
-  if (!f) continue; // not built in this checkout
+// A key with * matches any file name in that place (versioned names such as
+// releases/pm-skills-*.tar.gz), so a release does not need a new budget line.
+const globRe = (p) => new RegExp(`^${p.split('*').map((x) => x.replace(/[.+?^${}()|[\]\\]/g, '\\$&')).join('[^/]*')}$`);
+const ownLimit = (path) => {
+  const files = budget.files || {};
+  if (files[path] !== undefined) return files[path];
+  for (const [k, v] of Object.entries(files)) if (k.includes('*') && globRe(k).test(path)) return v;
+  return undefined;
+};
+for (const f of files) {
+  const limitMb = ownLimit(f.path);
+  if (limitMb === undefined) continue;
   if (f.wire > limitMb * MB) {
-    problems.push(`${path}: ${(f.wire / MB).toFixed(2)} MB ${f.isText ? 'gzipped' : ''} exceeds ${limitMb} MB`);
+    problems.push(`${f.path}: ${(f.wire / MB).toFixed(2)} MB ${f.isText ? 'gzipped' : ''} exceeds ${limitMb} MB`);
   }
 }
 
@@ -72,7 +81,7 @@ for (const [dir, limitMb] of Object.entries(budget.directories || {})) {
 const cap = budget.maxSingleAssetMb;
 if (cap) {
   for (const f of files) {
-    if (budget.files && budget.files[f.path] !== undefined) continue; // has its own ceiling
+    if (ownLimit(f.path) !== undefined) continue; // has its own ceiling
     if (f.wire > cap * MB) {
       problems.push(`${f.path}: ${(f.wire / MB).toFixed(2)} MB exceeds the ${cap} MB per-asset cap`);
     }

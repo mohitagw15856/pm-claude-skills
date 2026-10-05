@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1267 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1275 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -594,6 +594,7 @@
 | Household Constitution | `pm-family` | `pm-family/household-constitution/GEM_INSTRUCTIONS.md` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/GEM_INSTRUCTIONS.md` |
 | Housing With a Record | `pm-reentry` | `pm-reentry/housing-with-a-record/GEM_INSTRUCTIONS.md` |
+| 新马华文商务写作 (Singapore and Malaysia Chinese business writing) | `pm-sea` | `pm-sea/huawen-business-writing/GEM_INSTRUCTIONS.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/GEM_INSTRUCTIONS.md` |
 | Hydration & Energy Plan | `pm-wellbeing` | `pm-wellbeing/hydration-and-energy-plan/GEM_INSTRUCTIONS.md` |
 | Hyperfocus Exit | `pm-focus` | `pm-focus/hyperfocus-exit/GEM_INSTRUCTIONS.md` |
@@ -650,6 +651,10 @@
 | Job Search With a Record | `pm-reentry` | `pm-reentry/job-search-with-a-record/GEM_INSTRUCTIONS.md` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/GEM_INSTRUCTIONS.md` |
 | Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/GEM_INSTRUCTIONS.md` |
+| Japan Resignation Procedures (退職の手続き) | `pm-japan` | `pm-japan/jp-resignation-procedures/GEM_INSTRUCTIONS.md` |
+| Japanese Approval Request (稟議書) | `pm-japan` | `pm-japan/jp-ringisho/GEM_INSTRUCTIONS.md` |
+| Japan Tax Return (確定申告) | `pm-japan` | `pm-japan/jp-tax-return/GEM_INSTRUCTIONS.md` |
+| Japan Year-End Tax Adjustment (年末調整) | `pm-japan` | `pm-japan/jp-year-end-adjustment/GEM_INSTRUCTIONS.md` |
 | Jury Duty Guide | `pm-legal` | `pm-legal/jury-duty-guide/GEM_INSTRUCTIONS.md` |
 | Jury Duty Navigator | `pm-civic` | `pm-civic/jury-duty-navigator/GEM_INSTRUCTIONS.md` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/GEM_INSTRUCTIONS.md` |
@@ -704,6 +709,7 @@
 | Maintainer Triage | `pm-maintainer` | `pm-maintainer/maintainer-triage/GEM_INSTRUCTIONS.md` |
 | Make Friends as an Adult | `other` | `other/make-friends-as-an-adult/GEM_INSTRUCTIONS.md` |
 | Make Me a | `pm-focus` | `pm-focus/make-me-a-skill/GEM_INSTRUCTIONS.md` |
+| Malaysia EPF Explainer (KWSP) | `pm-sea` | `pm-sea/malaysia-epf-explainer/GEM_INSTRUCTIONS.md` |
 | Manager First 90 Days | `pm-people` | `pm-people/manager-first-90-days/GEM_INSTRUCTIONS.md` |
 | Managing Up | `pm-comms` | `pm-comms/managing-up/GEM_INSTRUCTIONS.md` |
 | Marketing Funnel Plan | `pm-growth` | `pm-growth/marketing-funnel-plan/GEM_INSTRUCTIONS.md` |
@@ -1043,6 +1049,8 @@
 | Shutdown Ritual | `pm-cowork` | `pm-cowork/shutdown-ritual/GEM_INSTRUCTIONS.md` |
 | Sibling Care Summit | `pm-aging-parents` | `pm-aging-parents/sibling-care-summit/GEM_INSTRUCTIONS.md` |
 | Side Business Setup | `pm-sidehustle` | `pm-sidehustle/side-business-setup/GEM_INSTRUCTIONS.md` |
+| Singapore CPF Explainer | `pm-sea` | `pm-sea/singapore-cpf-explainer/GEM_INSTRUCTIONS.md` |
+| Singapore Employment Act Guide | `pm-sea` | `pm-sea/singapore-employment-act/GEM_INSTRUCTIONS.md` |
 | Site Analysis Report | `pm-architecture` | `pm-architecture/site-analysis-report/GEM_INSTRUCTIONS.md` |
 | Site Check | `pm-live` | `pm-live/site-check/GEM_INSTRUCTIONS.md` |
 | Site Safety Briefing | `pm-construction` | `pm-construction/site-safety-briefing/GEM_INSTRUCTIONS.md` |

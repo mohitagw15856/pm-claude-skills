@@ -66,8 +66,23 @@ const CJK_STOP = new Set(['帮我', '我写', '我把', '请帮', '一下', '一
 const cjk = (s) => (String(s || '').match(/[\u3400-\u9fff]+/g) || []).flatMap((run) => [...run].slice(0, -1).map((ch, i) => ch + run[i + 1])).filter((b) => !CJK_STOP.has(b));
 const tok = (s) => [...(String(s || '').toLowerCase().match(/[a-z0-9]+/g) || []).filter((w) => w.length > 2 && !STOP.has(w)), ...cjk(s)];
 const TIER_BOOST = { production: 1.15, stable: 1, experimental: 0.9 };
-const EXAMPLES = ['prep a QBR for an at-risk account', 'write a product launch announcement', 'plan an A/B test', 'turn messy notes into a PRD', 'draft a difficult performance review', 'decode a SAFE note', '帮我写周报'];
+const EXAMPLES = ['prep a QBR for an at-risk account', 'write a product launch announcement', 'plan an A/B test', 'turn messy notes into a PRD', 'draft a difficult performance review', 'decode a SAFE note', '帮我写周报', 'zhoubao'];
 let SKILLS = [];
+// Pinyin search: "zb" or "zhoubao" finds 中文周报 (index: zh-pinyin.json, built by scripts/build-zh-pinyin.mjs).
+let PINYIN = {};
+fetch('zh-pinyin.json').then((r) => r.json()).then((j) => { PINYIN = j.skills || {}; }).catch(() => {});
+function pinyinScore(name, query) {
+  const e = PINYIN[name]; const q = String(query).toLowerCase().replace(/[\s']+/g, '');
+  if (!e || q.length < 2 || !/^[a-z]+$/.test(q)) return 0;
+  let best = 0;
+  e.full.forEach((full, i) => {
+    const ini = e.initials[i] || '';
+    if (full === q || ini === q) best = Math.max(best, 6);
+    else if (full.startsWith(q) || ini.startsWith(q)) best = Math.max(best, 4);
+    else if ((q.length >= 4 && full.includes(q)) || (q.length <= 4 && ini.includes(q))) best = Math.max(best, 2.5);
+  });
+  return best;
+}
 
 function badge(ev) {
   if (ev && typeof ev.score === 'number') return `<span class="badge-measured">✅ measured ${ev.score}/5${ev.runs ? ` · ${ev.runs} run${ev.runs > 1 ? 's' : ''}` : ''}</span>`;
@@ -76,15 +91,18 @@ function badge(ev) {
 
 function rank(query) {
   const qset = new Set(tok(query));
-  if (!qset.size) return [];
+  const pyQuery = !/[\u3400-\u9fff]/.test(query) && /^[a-z\s']{2,}$/i.test(query.trim());
+  if (!qset.size && !pyQuery) return [];
   const ql = query.toLowerCase();
   return SKILLS.map((s) => {
     const titleSet = new Set(tok(`${s.title || s.name} ${s.name}`));
-    const hset = new Set([...titleSet, ...tok(s.description)]);
+    const hset = new Set([...titleSet, ...tok(`${s.description || ''} ${s.descriptionZh || ''}`)]);
     let overlap = 0, titleHits = 0;
     for (const t of qset) { if (hset.has(t)) overlap++; if (titleSet.has(t)) titleHits++; }
     const phrase = (s.description || '').toLowerCase().includes(ql) ? 2 : 0;
-    let score = (overlap + titleHits * 1.5 + phrase) * (TIER_BOOST[s.tier] || 1);
+    const py = pyQuery ? pinyinScore(s.name, query) : 0;
+    if (py) overlap++;
+    let score = (overlap + titleHits * 1.5 + phrase + py) * (TIER_BOOST[s.tier] || 1);
     if (s.eval && typeof s.eval.score === 'number') score += (s.eval.score - 4) * 0.15;
     return { s, score, overlap };
   }).filter((r) => r.overlap > 0).sort((a, b) => b.score - a.score || a.s.name.localeCompare(b.s.name)).slice(0, 12);

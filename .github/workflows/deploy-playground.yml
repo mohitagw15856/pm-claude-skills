@@ -34,6 +34,13 @@ on:
       - 'scripts/build-readme-live.mjs'
       - 'scripts/build-live-png.mjs'
       - 'bin/today.mjs'
+      - 'scripts/build-zhoukan.mjs'
+      - 'scripts/build-lobehub-agents.mjs'
+      - 'scripts/build-used-by.mjs'
+      - 'scripts/build-zh-landing.mjs'
+      - 'scripts/build-release-bundle.mjs'
+      - 'scripts/push-search-engines.mjs'
+      - 'data/cn-city-data.json'
       - 'CHANGELOG.md'
       - 'data/solar-terms.json'
       - 'data/cn-exam-dates.json'
@@ -50,6 +57,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  attestations: write   # Sigstore build provenance for the release bundle
 
 # Allow one concurrent deployment; cancel in-progress runs for the same ref.
 concurrency:
@@ -82,6 +90,11 @@ jobs:
 
       - name: Build per-skill SEO pages + sitemap (web/skill/*.html)
         run: node scripts/build-skill-pages.mjs
+
+      # Chinese pages for Baidu, Bing China and 360: /zh/<skill>.html and a hub,
+      # appended to the sitemap built above.
+      - name: Build the Chinese landing pages (web/zh/)
+        run: node scripts/build-zh-landing.mjs
 
       - name: Build per-skill change history (web/skill-changelog.json)
         run: node scripts/build-skill-changelog.mjs
@@ -120,6 +133,49 @@ jobs:
 
       - name: Report on the calendar data behind the live cards
         run: node scripts/check-date-data.mjs
+
+      - name: Draft the Chinese weekly digest (web/live/zhoukan.md)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/build-zhoukan.mjs
+
+      - name: Export the Chinese skills as LobeHub agents (web/lobehub/)
+        run: node scripts/build-lobehub-agents.mjs
+
+      # Code search may need a personal token (USED_BY_TOKEN, read-only public scope);
+      # without one the page falls back to repository search and says so.
+      - name: Build the Used by page (web/used-by.html)
+        continue-on-error: true
+        env:
+          USED_BY_TOKEN: ${{ secrets.USED_BY_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/build-used-by.mjs
+
+      # A reproducible bundle of every skill plus a CycloneDX SBOM, signed with
+      # GitHub's Sigstore-backed build provenance. Verify a download with:
+      #   gh attestation verify pm-skills-<version>.tar.gz -R mohitagw15856/pm-claude-skills
+      - name: Build the release bundle and SBOM (web/releases/)
+        run: node scripts/build-release-bundle.mjs
+      - name: Sign the release bundle (build provenance)
+        uses: actions/attest-build-provenance@v2
+        with:
+          subject-path: 'web/releases/*.tar.gz, web/releases/*.sbom.cdx.json'
+
+      # Search-engine ownership checks: Baidu reads a meta tag, IndexNow a key file.
+      - name: Add search-engine verification
+        env:
+          BAIDU_SITE_VERIFICATION: ${{ vars.BAIDU_SITE_VERIFICATION }}
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          set -euo pipefail
+          if [ -n "${BAIDU_SITE_VERIFICATION:-}" ]; then
+            printf '%s' "$BAIDU_SITE_VERIFICATION" | grep -Eq '^[A-Za-z0-9_-]+$' || { echo "::error::BAIDU_SITE_VERIFICATION must be the code only"; exit 1; }
+            sed -i "s#<head>#<head>\n<meta name=\"baidu-site-verification\" content=\"${BAIDU_SITE_VERIFICATION}\" />#" web/index.html web/zh/index.html
+          fi
+          if [ -n "${INDEXNOW_KEY:-}" ]; then
+            printf '%s' "$INDEXNOW_KEY" | grep -Eq '^[A-Za-z0-9-]{8,128}$' || { echo "::error::INDEXNOW_KEY must be 8-128 letters, digits or dashes"; exit 1; }
+            printf '%s' "$INDEXNOW_KEY" > "web/${INDEXNOW_KEY}.txt"
+          fi
 
       - name: Build the tech tree (site/tech-tree, published at /tech-tree/)
         run: |
@@ -175,3 +231,22 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
+
+  # Tell Baidu and IndexNow (Bing, Yandex and others) about new pages once they are
+  # live. Each engine is skipped without its secret; a failed ping only warns.
+  ping-search:
+    needs: deploy
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Push the sitemap to search engines
+        env:
+          BAIDU_PUSH_TOKEN: ${{ secrets.BAIDU_PUSH_TOKEN }}
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: node scripts/push-search-engines.mjs

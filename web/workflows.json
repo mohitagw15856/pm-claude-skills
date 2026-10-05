@@ -157,6 +157,46 @@
         "design-system-audit",
         "design-handoff-brief"
       ]
+    },
+    {
+      "id": "cn-career-ladder",
+      "name": "职场晋升线 (Chinese workplace: report to promotion)",
+      "command": "/cn-career-ladder",
+      "lifecycle": "周报 → 复盘 → 年终总结 → 述职 → 晋升答辩",
+      "summary": "Turn a year of Chinese workplace notes into a promotion case: weekly reports, a 复盘, the year-end review, the 述职 deck and the defence.",
+      "skills": [
+        "cn-weekly-report",
+        "cn-fupan",
+        "cn-year-end-review",
+        "cn-shuzhi-deck",
+        "cn-promotion-defence"
+      ]
+    },
+    {
+      "id": "cn-crossborder-launch",
+      "name": "出海上新 (cross-border launch)",
+      "command": "/cn-crossborder-launch",
+      "lifecycle": "选市场 → 选平台 → listing → 种草 → 直播",
+      "summary": "Take a Chinese product to an overseas marketplace: market choice, platform playbook, the listing, then the content that sells it.",
+      "skills": [
+        "chuhai-market-entry",
+        "crossborder-platform-playbook",
+        "cross-border-listing",
+        "xiaohongshu-note",
+        "livestream-sales-script"
+      ]
+    },
+    {
+      "id": "cn-campus-offer",
+      "name": "校招拿 offer (campus recruitment)",
+      "command": "/cn-campus-offer",
+      "lifecycle": "规划 → 简历 → 技术面",
+      "summary": "Plan the 秋招 or 春招 season, build a bilingual CV for the target companies, and drill the technical interviews.",
+      "skills": [
+        "cn-campus-recruitment",
+        "bilingual-cv-zh-en",
+        "cn-tech-interview-drill"
+      ]
     }
   ]
 }

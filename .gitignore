@@ -70,3 +70,9 @@ web/card-zh.json
 web/offline/
 pm-skills-offline.zip
 pm-skills-offline.zip.sha256
+web/skills-body/
+web/zh/
+web/lobehub/
+web/used-by.html
+web/used-by.json
+web/releases/

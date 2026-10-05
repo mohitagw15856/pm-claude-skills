@@ -1,0 +1,26 @@
+name: Chinese typography
+
+# Spacing between Chinese and Latin text, full-width punctuation, curly quotes,
+# and no Simplified characters in Traditional files. Existing files are held to a
+# ratchet (data/zh-typography-baseline.json): they may only get better.
+on:
+  pull_request:
+    paths:
+      - 'skills-i18n/zh/**'
+      - 'skills-i18n/zh-TW/**'
+      - 'scripts/check-zh-typography.mjs'
+      - 'data/zh-typography-baseline.json'
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Typography is no worse than the baseline
+        run: node scripts/check-zh-typography.mjs --check

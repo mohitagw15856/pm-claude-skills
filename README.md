@@ -1,4 +1,4 @@
-# 🧠 PM Skills: 1255 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
+# 🧠 PM Skills: 1263 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
 
 > **TL;DR** &nbsp; Install: `npx pm-claude-skills add` (any tool) · In Claude Code: `/plugin` → search **pm-skills**
 > Then just say what you need: *"Decode this job ad and tell me where I am weak."*
@@ -42,7 +42,7 @@
 > Generic AI is a very confident intern. **PM Skills** is the senior colleague's notes: 1255 of them, one markdown file each. *(PM stands for Professional. Yes, we get asked.)*
 
 <!-- AEO Answer Capsule — 68 words -->
-PM Skills is an open-source library of 1255 Agent Skills — plain-markdown SKILL.md files that teach an AI assistant to do one professional task to a senior professional's standard, from writing a PRD to decoding a lease or running a blameless postmortem. Each skill bundles the framework, an output template, quality checks, and anti-patterns. It is MIT-licensed and works with Claude, ChatGPT, Gemini, Cursor, and Codex.
+PM Skills is an open-source library of 1263 Agent Skills — plain-markdown SKILL.md files that teach an AI assistant to do one professional task to a senior professional's standard, from writing a PRD to decoding a lease or running a blameless postmortem. Each skill bundles the framework, an output template, quality checks, and anti-patterns. It is MIT-licensed and works with Claude, ChatGPT, Gemini, Cursor, and Codex.
 <!-- End AEO Capsule -->
 
 <p align="center">
@@ -104,8 +104,8 @@ Say *"my landlord is keeping my deposit"* and your assistant loads [`security-de
 <br /><sub><b>🧊 <a href="plugins/pm-3d-explorer/">3D explorer</a></b>: topic in, a clickable 3D page out, with exploded view and a quiz.</sub>
 </td>
 <td width="50%" align="center">
-<a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="web/docs-assets/demo-galaxy.webp" width="100%" alt="Galaxy 3D: fly through all 1255 skills as a constellation" /></a>
-<br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html">Galaxy 3D</a></b>: all 1255 skills as stars. Zero productivity value, 100% recommended.</sub>
+<a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="web/docs-assets/demo-galaxy.webp" width="100%" alt="Galaxy 3D: fly through all 1263 skills as a constellation" /></a>
+<br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html">Galaxy 3D</a></b>: all 1263 skills as stars. Zero productivity value, 100% recommended.</sub>
 </td>
 </tr>
 <tr>
@@ -120,7 +120,7 @@ Say *"my landlord is keeping my deposit"* and your assistant loads [`security-de
 </tr>
 </table>
 
-## 🎯 1,255 skills, you need 5
+## 🎯 1,263 skills, you need 5
 
 <p align="center">
   <picture>
@@ -298,6 +298,8 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
 
 📅 [China work calendar](https://mohitagw15856.github.io/pm-claude-skills/live/cn-calendar.ics) (.ics): solar terms, festivals, exam dates and 618 and Double 11 milestones, each linked to a skill. [Live cards](https://mohitagw15856.github.io/pm-claude-skills/live-cards.html): embed any of these images, or grab a PNG for WeChat.
 
+🀄 [Chinese skill directory](https://mohitagw15856.github.io/pm-claude-skills/zh/) for Chinese search engines · [City figures](https://mohitagw15856.github.io/pm-claude-skills/city-data.html) (official 社保 bases and the severance cap) · [LobeHub agents](https://mohitagw15856.github.io/pm-claude-skills/lobehub/index.json) ready to upload at app.lobehub.com · [周刊 draft](https://mohitagw15856.github.io/pm-claude-skills/live/zhoukan.html) · Search in pinyin: `npx pm-claude-skills find zhoubao`
+
 <p align="center">
   <a href="https://mohitagw15856.github.io/pm-claude-skills/modelbench.html?set=zh">
     <picture>
@@ -378,6 +380,16 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
   </a>
 </p>
 
+<p align="center">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/live/roadmap.html">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/roadmap.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/roadmap-light.svg">
+      <img alt="Most wanted skills: open skill requests ranked by thumbs-up votes" src="https://mohitagw15856.github.io/pm-claude-skills/live/roadmap-light.svg" width="100%">
+    </picture>
+  </a>
+</p>
+
 | Release | What it adds | Try saying |
 |---|---|---|
 | **[v81.2.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)** China compliance, Hong Kong and Taiwan | Data compliance for China (等保, 数据出境, PIPL, 大模型备案), Hong Kong and Taiwan in Traditional Chinese, a Dify plugin and 12 Dify apps, and every Chinese skill on ModelScope | *"帮我写个人信息保护影响评估"* · *"被資遣可以拿多少？"* |
@@ -397,6 +409,17 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
 Everything older: **[CHANGELOG.md](CHANGELOG.md)** · the write-ups: **[docs/WHATS-NEW.md](docs/WHATS-NEW.md)**.
 </details>
 
+
+<p align="center">
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/used-by.html">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/channels.svg">
+      <source media="(prefers-color-scheme: light)" srcset="https://mohitagw15856.github.io/pm-claude-skills/live/channels-light.svg">
+      <img alt="Release channels: whether npm, npmmirror, PyPI, the MCP registry and Gitee are on the latest release" src="https://mohitagw15856.github.io/pm-claude-skills/live/channels-light.svg" width="100%">
+    </picture>
+  </a>
+</p>
+
 ## ⚡ Quick start
 
 <p align="center">
@@ -409,7 +432,8 @@ Everything older: **[CHANGELOG.md](CHANGELOG.md)** · the write-ups: **[docs/WHA
 
 | You want to… | Do this |
 |---|---|
-| **See today's skill** | `npx pm-claude-skills today` *(or `--lang zh`)*: the same pick as the card above |
+| **See today's skill** | `npx pm-claude-skills today` *(or `--lang zh`)*: the same pick as the card above, also as [RSS](https://mohitagw15856.github.io/pm-claude-skills/live/skill-of-the-day.rss) |
+| **Check a release is genuine** | `npx pm-claude-skills verify --release`: your installed skills against the signed SBOM; [release files](https://mohitagw15856.github.io/pm-claude-skills/releases/latest.json) carry Sigstore provenance |
 | **Install in Claude Code** | `/plugin` → search **pm-skills** *(official Anthropic directory)*, or `npx pm-claude-skills add --agent claude` |
 | **Install in Cursor, Codex, Windsurf, Cline…** | `npx pm-claude-skills add --agent cursor` *(or `codex`, `windsurf`, `aider`, `cline`, `zed`…)* |
 | **Use one skill in ChatGPT or Gemini** | copy from [`exports/chatgpt/`](exports/chatgpt/) or [`exports/gemini/`](exports/gemini/) and paste it as instructions |
@@ -551,7 +575,7 @@ Every skill has the same shape: what it produces, the inputs it needs, a real fr
 <p align="center">
   <b><a href="SKILLS.md">Browse all 1255 →</a></b> ·
   <b><a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/">explore the tech tree →</a></b> ·
-  <b><a href="plugins/">145 bundles →</a></b>
+  <b><a href="plugins/">147 bundles →</a></b>
 </p>
 
 <details>
@@ -589,7 +613,7 @@ Every skill has the same shape: what it produces, the inputs it needs, a real fr
 | <img src="web/docs-assets/logos/pm-design.svg" width="20" alt=""/> [Design & UX](plugins/pm-design/) | <img src="web/docs-assets/logos/pm-legal.svg" width="20" alt=""/> [Legal](plugins/pm-legal/) | <img src="web/docs-assets/logos/pm-finance.svg" width="20" alt=""/> [Finance](plugins/pm-finance/) |
 | <img src="web/docs-assets/logos/pm-founders.svg" width="20" alt=""/> [Founders](plugins/pm-founders/) | <img src="web/docs-assets/logos/pm-security.svg" width="20" alt=""/> [Security](plugins/pm-security/) | <img src="web/docs-assets/logos/pm-gov.svg" width="20" alt=""/> [Government](plugins/pm-gov/) |
 
-…plus HR, sales, operations, research, healthcare, educators, writers and more: **[the full profession index](SKILLS.md)**, or by bundle in [`plugins/`](plugins/) (145 bundles). Install any bundle: `/plugin install pm-decoders@pm-claude-skills`. Before installing *anyone's* skills, including these: [skill-vetting](skills/skill-vetting/SKILL.md).
+…plus HR, sales, operations, research, healthcare, educators, writers and more: **[the full profession index](SKILLS.md)**, or by bundle in [`plugins/`](plugins/) (147 bundles). Install any bundle: `/plugin install pm-decoders@pm-claude-skills`. Before installing *anyone's* skills, including these: [skill-vetting](skills/skill-vetting/SKILL.md).
 
 </details>
 
@@ -642,7 +666,7 @@ That's the whole trick. It's markdown: audit it, edit it, or [write your own](SK
 <details>
 <summary><b>❓ Straight answers</b></summary>
 
-**Is it actually free?** Yes: MIT, all 1255 skills, forever. Sponsors fund the playground's free model runs, not access.
+**Is it actually free?** Yes: MIT, all 1263 skills, forever. Sponsors fund the playground's free model runs, not access.
 
 **Do I need an API key?** Not to browse, read, install or use skills inside a tool you already have. The playground serves a few free runs a day.
 
@@ -703,4 +727,4 @@ If a skill saved you real money or a real mistake, **[star the repo](https://git
 
 ---
 
-*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 1255 skills · 145 bundles · 35 professions · every commit gated. The long version lives in the **[Showcase](docs/SHOWCASE.md)**.*
+*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 1263 skills · 147 bundles · 35 professions · every commit gated. The long version lives in the **[Showcase](docs/SHOWCASE.md)**.*

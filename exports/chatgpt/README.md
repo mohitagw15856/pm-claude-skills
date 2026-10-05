@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1267 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1275 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -594,6 +594,7 @@
 | Household Constitution | `pm-family` | `pm-family/household-constitution/SYSTEM_PROMPT.md` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/SYSTEM_PROMPT.md` |
 | Housing With a Record | `pm-reentry` | `pm-reentry/housing-with-a-record/SYSTEM_PROMPT.md` |
+| 新马华文商务写作 (Singapore and Malaysia Chinese business writing) | `pm-sea` | `pm-sea/huawen-business-writing/SYSTEM_PROMPT.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/SYSTEM_PROMPT.md` |
 | Hydration & Energy Plan | `pm-wellbeing` | `pm-wellbeing/hydration-and-energy-plan/SYSTEM_PROMPT.md` |
 | Hyperfocus Exit | `pm-focus` | `pm-focus/hyperfocus-exit/SYSTEM_PROMPT.md` |
@@ -650,6 +651,10 @@
 | Job Search With a Record | `pm-reentry` | `pm-reentry/job-search-with-a-record/SYSTEM_PROMPT.md` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/SYSTEM_PROMPT.md` |
 | Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/SYSTEM_PROMPT.md` |
+| Japan Resignation Procedures (退職の手続き) | `pm-japan` | `pm-japan/jp-resignation-procedures/SYSTEM_PROMPT.md` |
+| Japanese Approval Request (稟議書) | `pm-japan` | `pm-japan/jp-ringisho/SYSTEM_PROMPT.md` |
+| Japan Tax Return (確定申告) | `pm-japan` | `pm-japan/jp-tax-return/SYSTEM_PROMPT.md` |
+| Japan Year-End Tax Adjustment (年末調整) | `pm-japan` | `pm-japan/jp-year-end-adjustment/SYSTEM_PROMPT.md` |
 | Jury Duty Guide | `pm-legal` | `pm-legal/jury-duty-guide/SYSTEM_PROMPT.md` |
 | Jury Duty Navigator | `pm-civic` | `pm-civic/jury-duty-navigator/SYSTEM_PROMPT.md` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/SYSTEM_PROMPT.md` |
@@ -704,6 +709,7 @@
 | Maintainer Triage | `pm-maintainer` | `pm-maintainer/maintainer-triage/SYSTEM_PROMPT.md` |
 | Make Friends as an Adult | `other` | `other/make-friends-as-an-adult/SYSTEM_PROMPT.md` |
 | Make Me a | `pm-focus` | `pm-focus/make-me-a-skill/SYSTEM_PROMPT.md` |
+| Malaysia EPF Explainer (KWSP) | `pm-sea` | `pm-sea/malaysia-epf-explainer/SYSTEM_PROMPT.md` |
 | Manager First 90 Days | `pm-people` | `pm-people/manager-first-90-days/SYSTEM_PROMPT.md` |
 | Managing Up | `pm-comms` | `pm-comms/managing-up/SYSTEM_PROMPT.md` |
 | Marketing Funnel Plan | `pm-growth` | `pm-growth/marketing-funnel-plan/SYSTEM_PROMPT.md` |
@@ -1043,6 +1049,8 @@
 | Shutdown Ritual | `pm-cowork` | `pm-cowork/shutdown-ritual/SYSTEM_PROMPT.md` |
 | Sibling Care Summit | `pm-aging-parents` | `pm-aging-parents/sibling-care-summit/SYSTEM_PROMPT.md` |
 | Side Business Setup | `pm-sidehustle` | `pm-sidehustle/side-business-setup/SYSTEM_PROMPT.md` |
+| Singapore CPF Explainer | `pm-sea` | `pm-sea/singapore-cpf-explainer/SYSTEM_PROMPT.md` |
+| Singapore Employment Act Guide | `pm-sea` | `pm-sea/singapore-employment-act/SYSTEM_PROMPT.md` |
 | Site Analysis Report | `pm-architecture` | `pm-architecture/site-analysis-report/SYSTEM_PROMPT.md` |
 | Site Check | `pm-live` | `pm-live/site-check/SYSTEM_PROMPT.md` |
 | Site Safety Briefing | `pm-construction` | `pm-construction/site-safety-briefing/SYSTEM_PROMPT.md` |

@@ -1,0 +1,35 @@
+name: China policy reminders
+
+# Opens a "policy-review" issue for each yearly rule change the China skills
+# depend on (社保 and 公积金 bases, 个税汇算, 社平工资, holidays, exam rules),
+# on the 1st of the month the change usually lands. Entries live in
+# data/cn-policy-calendar.json; scripts/policy-reminders.mjs does the work.
+
+on:
+  schedule:
+    - cron: '0 2 1 * *'
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'data/cn-policy-calendar.json'
+      - 'scripts/policy-reminders.mjs'
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  remind:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Validate the calendar
+        run: node scripts/policy-reminders.mjs --check
+      - name: Open review issues for this month
+        if: github.event_name != 'pull_request'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: node scripts/policy-reminders.mjs --open-issues

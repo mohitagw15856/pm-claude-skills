@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1267 skills exported. Copy a `SKILL.md` into the tool to use it.
+1275 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -594,6 +594,7 @@
 | Household Constitution | `pm-family` | `household-constitution/SKILL.md` |
 | Houseplant Care | `pm-hobbies` | `houseplant-care/SKILL.md` |
 | Housing With a Record | `pm-reentry` | `housing-with-a-record/SKILL.md` |
+| 新马华文商务写作 (Singapore and Malaysia Chinese business writing) | `pm-sea` | `huawen-business-writing/SKILL.md` |
 | Human-in-the-Loop Design | `pm-agentnative` | `human-in-the-loop-design/SKILL.md` |
 | Hydration & Energy Plan | `pm-wellbeing` | `hydration-and-energy-plan/SKILL.md` |
 | Hyperfocus Exit | `pm-focus` | `hyperfocus-exit/SKILL.md` |
@@ -650,6 +651,10 @@
 | Job Search With a Record | `pm-reentry` | `job-search-with-a-record/SKILL.md` |
 | Job Story Mapper | `pm-discovery` | `job-story-mapper/SKILL.md` |
 | Journaling Prompts | `pm-wellbeing` | `journaling-prompts/SKILL.md` |
+| Japan Resignation Procedures (退職の手続き) | `pm-japan` | `jp-resignation-procedures/SKILL.md` |
+| Japanese Approval Request (稟議書) | `pm-japan` | `jp-ringisho/SKILL.md` |
+| Japan Tax Return (確定申告) | `pm-japan` | `jp-tax-return/SKILL.md` |
+| Japan Year-End Tax Adjustment (年末調整) | `pm-japan` | `jp-year-end-adjustment/SKILL.md` |
 | Jury Duty Guide | `pm-legal` | `jury-duty-guide/SKILL.md` |
 | Jury Duty Navigator | `pm-civic` | `jury-duty-navigator/SKILL.md` |
 | Karaoke Song Picker | `pm-hobbies` | `karaoke-song-picker/SKILL.md` |
@@ -704,6 +709,7 @@
 | Maintainer Triage | `pm-maintainer` | `maintainer-triage/SKILL.md` |
 | Make Friends as an Adult | `other` | `make-friends-as-an-adult/SKILL.md` |
 | Make Me a | `pm-focus` | `make-me-a-skill/SKILL.md` |
+| Malaysia EPF Explainer (KWSP) | `pm-sea` | `malaysia-epf-explainer/SKILL.md` |
 | Manager First 90 Days | `pm-people` | `manager-first-90-days/SKILL.md` |
 | Managing Up | `pm-comms` | `managing-up/SKILL.md` |
 | Marketing Funnel Plan | `pm-growth` | `marketing-funnel-plan/SKILL.md` |
@@ -1043,6 +1049,8 @@
 | Shutdown Ritual | `pm-cowork` | `shutdown-ritual/SKILL.md` |
 | Sibling Care Summit | `pm-aging-parents` | `sibling-care-summit/SKILL.md` |
 | Side Business Setup | `pm-sidehustle` | `side-business-setup/SKILL.md` |
+| Singapore CPF Explainer | `pm-sea` | `singapore-cpf-explainer/SKILL.md` |
+| Singapore Employment Act Guide | `pm-sea` | `singapore-employment-act/SKILL.md` |
 | Site Analysis Report | `pm-architecture` | `site-analysis-report/SKILL.md` |
 | Site Check | `pm-live` | `site-check/SKILL.md` |
 | Site Safety Briefing | `pm-construction` | `site-safety-briefing/SKILL.md` |

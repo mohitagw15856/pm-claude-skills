@@ -11,6 +11,8 @@
 //   exam-<gaokao|kaoyan|guokao>.svg       countdown badges (data/cn-exam-dates.json)
 //   season.svg + season.html              seasonal banner (data/solar-terms.json) and the page it links to
 //   skill-of-the-day{,-zh}.html           redirect to today's pick, so the README link follows the card
+//   whats-new, cn-status-history, channels, roadmap (each {,-light}.svg); exam sprint pages;
+//   season-tw.svg; badge/<skill>.svg; cn-calendar.ics; term-post.md; skill-of-the-day{,-zh}.{rss,atom}
 //   modelbench-zh{,-en}{,-light}.svg      skill lift per Chinese model (web/modelbench-zh.json)
 //   index.json                            everything above as data
 //
@@ -800,6 +802,138 @@ ${t.name}到了，${note}。
 `;
 }
 
+// ── 13. Channel version drift ───────────────────────────────────────────────
+// Is every place people install from on the latest release? An expired token once
+// left npm two releases behind without anyone noticing; this makes it visible.
+const semverCmp = (a, b) => { const pa = String(a).replace(/^v/i, '').split(/[.-]/).map(Number), pb = String(b).replace(/^v/i, '').split(/[.-]/).map(Number); for (let i = 0; i < 3; i++) { if ((pa[i] || 0) !== (pb[i] || 0)) return (pa[i] || 0) - (pb[i] || 0); } return 0; };
+async function channelVersions() {
+  const pkg = readJSON(join(root, 'package.json'), {}).version;
+  const pyproject = existsSync(join(root, 'python', 'pyproject.toml')) ? (readFileSync(join(root, 'python', 'pyproject.toml'), 'utf8').match(/^version\s*=\s*"([^"]+)"/m) || [])[1] : null;
+  const gh = process.env.GITHUB_TOKEN ? { authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {};
+  const mcpName = 'io.github.mohitagw15856/pm-claude-skills';
+  const checks = [
+    { id: 'github', label: 'GitHub release', expected: pkg, url: `${REPO}/releases/latest`, api: 'https://api.github.com/repos/mohitagw15856/pm-claude-skills/releases/latest', headers: gh, pick: (b) => b.tag_name },
+    { id: 'npm', label: 'npm', expected: pkg, url: 'https://www.npmjs.com/package/pm-claude-skills', api: 'https://registry.npmjs.org/pm-claude-skills/latest', pick: (b) => b.version },
+    { id: 'npmmirror', label: 'npmmirror', expected: pkg, url: 'https://npmmirror.com/package/pm-claude-skills', api: 'https://registry.npmmirror.com/pm-claude-skills/latest', pick: (b) => b.version },
+    { id: 'pypi', label: 'PyPI', expected: pyproject, url: 'https://pypi.org/project/pm-skills/', api: 'https://pypi.org/pypi/pm-skills/json', pick: (b) => b.info && b.info.version },
+    { id: 'mcp', label: 'MCP registry', expected: pkg, url: 'https://registry.modelcontextprotocol.io/', api: `https://registry.modelcontextprotocol.io/v0/servers?search=${encodeURIComponent(mcpName)}&version=latest`,
+      pick: (b) => (b.servers || []).map((s) => s.server || s).filter((s) => s.name === mcpName).map((s) => s.version).filter(Boolean).sort(semverCmp).pop() },
+    { id: 'gitee', label: 'Gitee', expected: pkg, url: 'https://gitee.com/mohitagw/pm-claude-skills/tags', api: 'https://gitee.com/api/v5/repos/mohitagw/pm-claude-skills/tags?sort=updated&direction=desc&per_page=5',
+      pick: (b) => (Array.isArray(b) ? b.map((t) => t.name) : []).filter((n) => /^v?\d+\.\d+\.\d+$/.test(n)).sort(semverCmp).pop() },
+  ];
+  return Promise.all(checks.map(async (c) => {
+    const r = await get(c.api, { headers: c.headers || {} });
+    let seen = null;
+    try { seen = r.ok ? c.pick(r.body) : null; } catch { seen = null; }
+    seen = seen ? String(seen).replace(/^v/i, '') : null;
+    const state = r.offline || !seen ? 'unknown' : !c.expected ? 'unknown' : semverCmp(seen, c.expected) >= 0 ? 'current' : 'behind';
+    return { id: c.id, label: c.label, url: c.url, expected: c.expected, seen, state };
+  }));
+}
+function channelsCard(theme, rows) {
+  const c = THEMES[theme];
+  const W = 860, H = 92 + rows.length * 30;
+  const col = { current: c.good, behind: '#d0453a', unknown: c.muted };
+  const word = { current: 'up to date', behind: 'behind', unknown: 'no answer' };
+  const behind = rows.filter((r) => r.state === 'behind').length;
+  const aria = `Release channels: ${rows.map((r) => `${r.label} ${r.seen || 'unknown'} (${word[r.state]})`).join(', ')}`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(aria)}">
+  <style>text{font-family:${FONT}}.t{font-size:16px;font-weight:700;fill:${c.ink}}.l{font-size:14px;fill:${c.ink}}.k{font-size:12.5px;fill:${c.muted}}.v{font-size:13.5px;font-family:${MONO};fill:${c.ink}}</style>
+  <rect width="${W}" height="${H}" rx="18" fill="${c.bg}"/>
+  <text x="40" y="44" class="t">Release channels</text>
+  <text x="${W - 40}" y="44" text-anchor="end" class="k">${esc(behind ? `${behind} behind the latest release · checked ${enDate(DATE)}` : `all answering channels current · checked ${enDate(DATE)}`)}</text>
+  ${rows.map((r, i) => { const y = 82 + i * 30; return `<circle cx="46" cy="${y - 5}" r="5" fill="${col[r.state]}"/><text x="60" y="${y}" class="l">${esc(r.label)}</text><text x="300" y="${y}" class="v">${esc(r.seen ? `v${r.seen}` : '-')}</text><text x="440" y="${y}" class="k">${esc(r.expected ? `expected v${r.expected}` : '')}</text><text x="${W - 40}" y="${y}" text-anchor="end" class="k" style="fill:${col[r.state]}">${word[r.state]}</text>`; }).join('\n  ')}
+</svg>
+`;
+}
+
+// ── 14. Skill-of-the-day feeds (RSS 2.0 and Atom, English and Chinese) ───────
+// One item per day for the last 14 days, recomputed deterministically, so the
+// feed needs no stored history.
+function feeds(exams) {
+  const xml = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const out = {};
+  for (const lang of ['en', 'zh']) {
+    const items = [];
+    for (let i = 0; i < 14; i++) {
+      const d = addDays(DATE, -i);
+      const p = pickSkillOfTheDay({ root, date: d, catalogue, exams: i === 0 ? exams : [] })[lang];
+      if (p) items.push({ date: d, ...p, link: `${SITE}/skill/${p.name}.html` });
+    }
+    const zh = lang === 'zh';
+    const title = zh ? 'PM Skills 今日技能' : 'PM Skills: skill of the day';
+    const self = `${SITE}/live/skill-of-the-day${zh ? '-zh' : ''}`;
+    const pub = (d) => new Date(`${d}T00:05:00+08:00`);
+    out[`${lang}.rss`] = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>${xml(title)}</title>
+<link>${SITE}/</link>
+<atom:link href="${self}.rss" rel="self" type="application/rss+xml"/>
+<description>${xml(zh ? '每天一个专业技能，附一句可以直接说的话。北京时间零点后更新。' : 'One professional skill a day, with a prompt to try. Updated just after midnight Beijing time.')}</description>
+<language>${zh ? 'zh-CN' : 'en-GB'}</language>
+<lastBuildDate>${pub(DATE).toUTCString()}</lastBuildDate>
+${items.map((it) => `<item>
+<title>${xml(`${it.date} · ${it.title}`)}</title>
+<link>${it.link}</link>
+<guid isPermaLink="false">pm-skills-sotd-${lang}-${it.date}</guid>
+<pubDate>${pub(it.date).toUTCString()}</pubDate>
+<description>${xml(`${it.summary} ${zh ? '试着说' : 'Try saying'}: “${it.prompt}”`)}</description>
+</item>`).join('\n')}
+</channel>
+</rss>
+`;
+    out[`${lang}.atom`] = `<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="${zh ? 'zh-CN' : 'en-GB'}">
+<title>${xml(title)}</title>
+<id>${self}.atom</id>
+<link href="${self}.atom" rel="self"/>
+<link href="${SITE}/"/>
+<updated>${pub(DATE).toISOString()}</updated>
+<author><name>PM Skills</name></author>
+${items.map((it) => `<entry>
+<title>${xml(`${it.date} · ${it.title}`)}</title>
+<id>urn:pm-skills:sotd:${lang}:${it.date}</id>
+<link href="${it.link}"/>
+<updated>${pub(it.date).toISOString()}</updated>
+<summary>${xml(`${it.summary} ${zh ? '试着说' : 'Try saying'}: “${it.prompt}”`)}</summary>
+</entry>`).join('\n')}
+</feed>
+`;
+  }
+  return out;
+}
+
+// ── 15. Roadmap voting card (open skill requests ranked by 👍) ───────────────
+async function skillRequests() {
+  if (OFFLINE) return null;
+  const gh = process.env.GITHUB_TOKEN ? { authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {};
+  const r = await get('https://api.github.com/repos/mohitagw15856/pm-claude-skills/issues?state=open&labels=skill-request&per_page=50', { headers: gh });
+  if (!r.ok || !Array.isArray(r.body)) return null;
+  return r.body.filter((i) => !i.pull_request).map((i) => ({
+    number: i.number, title: String(i.title).replace(/^\[SKILL REQUEST\]\s*/i, '').replace(/^skill request:\s*/i, '').trim(),
+    votes: (i.reactions && (i.reactions['+1'] || 0)) || 0, comments: i.comments || 0, url: i.html_url,
+  })).sort((a, b) => b.votes - a.votes || b.comments - a.comments || a.number - b.number).slice(0, 6);
+}
+function roadmapCard(theme, reqs) {
+  const c = THEMES[theme];
+  const W = 860, rows = reqs || [], H = rows.length ? 110 + rows.length * 32 : 170;
+  const max = Math.max(1, ...rows.map((r) => r.votes));
+  const body = rows.length ? rows.map((r, i) => {
+    const y = 88 + i * 32; const bw = Math.round((r.votes / max) * 160);
+    return `<text x="40" y="${y}" class="n">#${r.number}</text><text x="100" y="${y}" class="l">${esc(clip(r.title, 520, 14))}</text><rect x="${W - 240}" y="${y - 13}" width="${Math.max(bw, 3)}" height="16" rx="8" fill="${c.accent}" opacity=".85"/><text x="${W - 40}" y="${y}" text-anchor="end" class="v">👍 ${r.votes}</text>`;
+  }).join('\n  ') : `<text x="40" y="100" class="l">${esc(reqs ? 'No open requests right now. Ask for the skill you wish existed.' : 'Requests could not be loaded today.')}</text>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(`Most wanted skills: ${rows.map((r) => `${r.title}, ${r.votes} votes`).join('; ') || 'none open'}`)}">
+  <style>text{font-family:${FONT}}.t{font-size:16px;font-weight:700;fill:${c.ink}}.l{font-size:14px;fill:${c.ink}}.n{font-size:13px;fill:${c.muted};font-family:${MONO}}.v{font-size:13px;fill:${c.ink};font-variant-numeric:tabular-nums}.k{font-size:12.5px;fill:${c.muted}}</style>
+  <rect width="${W}" height="${H}" rx="18" fill="${c.bg}"/>
+  <text x="40" y="46" class="t">Most wanted skills · 想要的技能</text>
+  <text x="${W - 40}" y="46" text-anchor="end" class="k">vote with 👍 on the issue, or open a request</text>
+  ${body}
+  <text x="40" y="${H - 22}" class="k">Ranked by 👍 reactions on open issues labelled skill-request · ${esc(enDate(DATE))}</text>
+</svg>
+`;
+}
+
 // ── Static: terminal ────────────────────────────────────────────────────────
 const TERM_SCRIPT = {
   en: {
@@ -991,7 +1125,7 @@ if (STATIC) {
 } else {
   const exams = examCountdowns();
   const sotd = pickSkillOfTheDay({ root, date: DATE, catalogue, exams });
-  const [stats, status] = await Promise.all([liveStats(), chinaStatus()]);
+  const [stats, status, channels, reqs] = await Promise.all([liveStats(), chinaStatus(), channelVersions(), skillRequests()]);
   const hist = await statusHistory(status);
   const s = season(DATE);
   const banner = seasonBanner(s, sotd.zh);
@@ -1010,6 +1144,8 @@ if (STATIC) {
     written.push(write(`modelbench-zh-en${t}.svg`, benchCard(theme, 'en', mb)));
     written.push(write(`cn-status-history${t}.svg`, historyCard(theme, hist)));
     if (wn) written.push(write(`whats-new${t}.svg`, whatsNewCard(theme, wn)));
+    written.push(write(`channels${t}.svg`, channelsCard(theme, channels)));
+    written.push(write(`roadmap${t}.svg`, roadmapCard(theme, reqs)));
   }
   for (const ch of status) written.push(write(`cn-status-${ch.id}.svg`, statusBadge(ch)));
   written.push(write('cn-status-history.json', JSON.stringify(hist, null, 2) + '\n'));
@@ -1029,6 +1165,14 @@ if (STATIC) {
   mkdirSync(join(OUT, 'badge'), { recursive: true });
   let badges = 0;
   for (const sk of catalogue) if (/^[a-z0-9][a-z0-9-]*$/.test(sk.name)) { writeFileSync(join(OUT, 'badge', `${sk.name}.svg`), skillBadge(sk)); badges++; }
+  for (const [k, body] of Object.entries(feeds(exams))) {
+    const [lang, ext] = k.split('.');
+    written.push(write(`skill-of-the-day${lang === 'zh' ? '-zh' : ''}.${ext}`, body));
+  }
+  written.push(write('roadmap.html', redirectPage(reqs && reqs.length ? `${REPO}/issues?q=is%3Aissue+is%3Aopen+label%3Askill-request+sort%3Areactions-%2B1-desc` : `${REPO}/issues/new?template=skill-request.md`, 'Most wanted skills', 'en')));
+  // Official city figures for web/city-data.html (data/ is not published, web/live/ is).
+  const city = readJSON(join(root, 'data', 'cn-city-data.json'), null);
+  if (city) written.push(write('city-data.json', JSON.stringify(city, null, 2) + '\n'));
   const cal = calendarICS(exams);
   written.push(write('cn-calendar.ics', cal.ics));
   const termPick = s.term ? pickSkillOfTheDay({ root, date: s.term.date, catalogue }).zh : null;
@@ -1040,7 +1184,7 @@ if (STATIC) {
     skillOfTheDay: sotd, stats, chinaStatus: status, exams,
     season: { kind: s.kind, title: banner.title, link: banner.link, term: s.term && { name: s.term.name, date: s.term.date, today: s.term.today } },
     seasonTW: { kind: sTW.kind, title: bannerTW.title, link: bannerTW.link },
-    whatsNew: wn, badges, calendarEvents: cal.count, termPost: post ? { term: s.term.name, skill: termPick.name } : null,
+    whatsNew: wn, channels, skillRequests: reqs, badges, calendarEvents: cal.count, termPost: post ? { term: s.term.name, skill: termPick.name } : null,
     modelbench: { models: (mb && mb.models ? mb.models.length : 0) },
   }, null, 2) + '\n'));
   console.log(`Also wrote ${badges} per-skill badges to badge/.`);

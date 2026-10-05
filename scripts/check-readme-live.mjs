@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // README image gate: every live image or page a README links under
 // https://mohitagw15856.github.io/pm-claude-skills/live/ must be one that
-// scripts/build-readme-live.mjs (or build-live-png.mjs) actually produces, so a
+// scripts/build-readme-live.mjs (or build-live-png.mjs, build-zhoukan.mjs) actually produces, so a
 // renamed card can never leave a README pointing at a 404.
 //
 // Builds the live cards offline into a temporary folder and compares.
@@ -26,6 +26,7 @@ let tmp = null;
 if (!dir) {
   tmp = mkdtempSync(join(tmpdir(), 'readme-live-'));
   execFileSync(process.execPath, [join(root, 'scripts', 'build-readme-live.mjs'), '--offline', '--out', tmp], { stdio: 'ignore' });
+  execFileSync(process.execPath, [join(root, 'scripts', 'build-zhoukan.mjs'), '--offline', '--out', tmp], { stdio: 'ignore' });
   dir = tmp;
 }
 

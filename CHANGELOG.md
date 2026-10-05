@@ -9,9 +9,19 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
-**1255 skills · 145 bundles** (from 1250 · 144 at v81.2.0).
+**1263 skills · 147 bundles** (from 1250 · 144 at v81.2.0).
 
 ### Added
+- **pm-sea** (4): `singapore-cpf-explainer`, `malaysia-epf-explainer` (KWSP), `singapore-employment-act` and `huawen-business-writing` (新马华文商务写作). **pm-japan** (4): `jp-year-end-adjustment` (年末調整), `jp-tax-return` (確定申告), `jp-resignation-procedures` (退職の手続き) and `jp-ringisho` (稟議書), in Japanese.
+- **Chinese workflow chains**: `/cn-career-ladder` (周报 → 复盘 → 年终总结 → 述职 → 晋升答辩), `/cn-crossborder-launch` (market → platform → listing → 小红书 → livestream) and `/cn-campus-offer` (校招 plan → bilingual CV → technical interviews).
+- **Pinyin search**: `zb`, `zhoubao` or `xhs` find 中文周报 and 小红书笔记 in the playground, `find.html` and `npx pm-claude-skills find` (`web/zh-pinyin.json`, built by `scripts/build-zh-pinyin.mjs`).
+- **Chinese search reach**: a page per Chinese skill at `/zh/` with hreflang links both ways, added to the sitemap, plus Baidu and IndexNow submission after each deploy once `BAIDU_PUSH_TOKEN` and `INDEXNOW_KEY` are set.
+- **China data**: `data/cn-policy-calendar.json` opens a `policy-review` issue when a rule the China skills rely on changes (社保 and 公积金 bases, 个税汇算, 社平工资, holidays, exam rules); `data/cn-city-data.json` holds official 2026 社保 bases for Beijing and Shanghai with sources, shown with a severance-cap estimate at `city-data.html`.
+- **Live cards**: release-channel drift (GitHub, npm, npmmirror, PyPI, MCP registry, Gitee), most-wanted skills ranked by 👍 on `skill-request` issues, and skill-of-the-day RSS and Atom feeds in English and Chinese.
+- **Reach**: a Chinese weekly digest draft (`live/zhoukan.md`), the Chinese skills exported as LobeHub agents (`/lobehub/`, since lobe-chat-agents no longer takes pull requests), a Used by page from GitHub search, and vertical MP4s of the terminal and constellation animations for 抖音, 视频号 and Shorts.
+- **Trust**: a reproducible release bundle with a CycloneDX SBOM, signed with Sigstore build provenance at deploy (`/releases/`), and `npx pm-claude-skills verify --release` to check installed skills against it.
+- **Faster playground**: skill bodies load per bundle when a skill opens (`skills-body/<bundle>.json`) instead of all 2.6 MB of `skills.json` after first paint.
+- **Release safety**: npm publishing uses trusted publishing (OIDC) with the token only as a fallback; the PyPI workflow fails a release whose `pyproject.toml` version was already published; SkillBench gains free `sf:` (SiliconFlow) models; a ratcheted Chinese typography check runs on translation pull requests.
 - **Live README cards, round two**: what's new (from this changelog), a 30-day China channel record, countdowns for 四六级, 教资 and 法考 alongside 高考, 考研 and 国考 with a daily sprint page in the last 30 days, a Traditional Chinese seasonal banner, a badge for every skill, PNG copies for WeChat and Weibo, and a subscribable China work calendar (`live/cn-calendar.ics`). The skill of the day now leans towards the season (exam sprints, 618 and Double 11, year-end, recruiting), and `npx pm-claude-skills today` shows the same pick in the terminal.
 - **Seasonal tools**: a greetings generator (`zhufu.html`), a year-end review and 述职 outline builder (`nianzhong.html`), a 调休 planner (`tiaoxiu.html`) and an embed page for the live cards (`live-cards.html`).
 - **China distribution**: an Alibaba Cloud OSS mirror of the site, ready for keys (`docs/zh/site-mirror.md`), and a listing kit for Coze, Bailian, ERNIE and Kimi with a generated system prompt (`docs/listings/`). The Chinese SkillBench now runs monthly and opens a pull request with its results.

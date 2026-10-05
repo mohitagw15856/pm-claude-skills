@@ -1,0 +1,109 @@
+{
+  "_comment": "The yearly rule changes the China skills depend on. scripts/policy-reminders.mjs opens a review issue for each affected skill when an entry's review month comes round (run monthly by .github/workflows/policy-reminders.yml). review is the month (1-12) to look; 'months' lists several. Dates describe the usual pattern, not a promise: always confirm against the official source before editing a skill.",
+  "entries": [
+    {
+      "id": "iit-annual-reconciliation",
+      "name": "个税年度汇算",
+      "what": "个人所得税综合所得年度汇算通常在每年 3 月 1 日至 6 月 30 日办理；当年的税率表、专项附加扣除标准和预约规则以国家税务总局公告为准。",
+      "review": [2],
+      "skills": ["cn-iit-reconciliation", "cn-year-end-bonus"],
+      "source": "https://www.chinatax.gov.cn/"
+    },
+    {
+      "id": "iit-deduction-confirmation",
+      "name": "专项附加扣除年度确认",
+      "what": "每年 12 月需要在个人所得税 App 里确认下一年度的专项附加扣除；标准有调整时（例如子女教育、赡养老人）要同步更新技能里的金额。",
+      "review": [11],
+      "skills": ["cn-iit-reconciliation"],
+      "source": "https://www.chinatax.gov.cn/"
+    },
+    {
+      "id": "average-wage",
+      "name": "上年度社平工资发布",
+      "what": "各省市通常在年中公布上一年度城镇单位就业人员平均工资，它决定经济补偿金的三倍封顶和社保缴费基数的上下限。",
+      "review": [5, 7],
+      "skills": ["cn-severance-calculator", "cn-social-insurance-explainer"],
+      "source": "各省市统计局、人力资源和社会保障局官网"
+    },
+    {
+      "id": "social-insurance-base",
+      "name": "社保缴费基数年度调整",
+      "what": "多数城市每年调整一次社保缴费基数上下限，常见在 7 月前后执行（各地时间不同）。",
+      "review": [6],
+      "skills": ["cn-social-insurance-explainer", "cn-labour-contract-decoder"],
+      "source": "当地人力资源和社会保障局、医疗保障局官网"
+    },
+    {
+      "id": "housing-fund-base",
+      "name": "住房公积金缴存基数年度调整",
+      "what": "住房公积金缴存基数通常每年调整一次，多地在 7 月 1 日起执行；提取和贷款政策也可能随之更新。",
+      "review": [6],
+      "skills": ["cn-housing-fund-withdrawal", "cn-social-insurance-explainer"],
+      "source": "当地住房公积金管理中心官网"
+    },
+    {
+      "id": "resident-medical-insurance",
+      "name": "城乡居民医保集中缴费期",
+      "what": "城乡居民医保通常在下半年集中缴纳下一年度的保费，个人缴费标准每年公布；报销比例和异地就医备案规则也要复核。",
+      "review": [9],
+      "skills": ["cn-medical-insurance-claim"],
+      "source": "国家医疗保障局及当地医保局官网"
+    },
+    {
+      "id": "minimum-wage",
+      "name": "最低工资标准调整",
+      "what": "各省最低工资标准大约每两到三年调整一次，时间不固定；每半年检查一次是否有省份公布了新标准。",
+      "review": [1, 7],
+      "skills": ["cn-labour-contract-decoder", "cn-severance-calculator"],
+      "source": "人力资源和社会保障部及各省人社厅官网"
+    },
+    {
+      "id": "public-holidays",
+      "name": "下一年度节假日安排",
+      "what": "国务院办公厅通常在每年 11 月前后公布下一年度的部分节假日安排（含调休），需要更新调休相关的说明。",
+      "review": [11],
+      "skills": ["public-holidays", "wecom-announcement"],
+      "source": "https://www.gov.cn/"
+    },
+    {
+      "id": "gaokao-application",
+      "name": "高考志愿填报规则",
+      "what": "各省考试院在 5 至 6 月公布当年的志愿填报办法、批次设置和选科要求，新高考省份变化较多。",
+      "review": [5],
+      "skills": ["cn-gaokao-planner"],
+      "source": "各省教育考试院官网"
+    },
+    {
+      "id": "civil-service-exam",
+      "name": "国考公告与考试大纲",
+      "what": "国家公务员局通常在 10 月发布下一年度的招考公告和考试大纲，题型或分值变化要同步到申论和面试技能。",
+      "review": [10],
+      "skills": ["cn-civil-exam-essay", "cn-civil-exam-interview"],
+      "source": "http://www.scs.gov.cn/"
+    },
+    {
+      "id": "kaoyan-rules",
+      "name": "研究生招生工作管理规定",
+      "what": "教育部通常在 9 月前后印发当年的硕士研究生招生工作管理规定，报名和初试时间、加分政策可能调整。",
+      "review": [9],
+      "skills": ["cn-kaoyan-planner"],
+      "source": "https://yz.chsi.com.cn/"
+    },
+    {
+      "id": "hukou-points",
+      "name": "积分落户申报",
+      "what": "北京、上海、深圳等城市的积分落户细则和申报时间各不相同，通常每年公布一次；分值表有变化时要更新。",
+      "review": [3],
+      "skills": ["cn-hukou-points"],
+      "source": "各市人力资源和社会保障局官网"
+    },
+    {
+      "id": "small-business-tax",
+      "name": "小规模纳税人与小微企业税收优惠",
+      "what": "增值税和所得税的阶段性优惠都有执行期限，到期前后财政部、税务总局会发布延续或调整的公告。",
+      "review": [12],
+      "skills": ["cn-small-business-tax"],
+      "source": "https://www.chinatax.gov.cn/"
+    }
+  ]
+}

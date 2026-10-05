@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-04",
+ "generated": "2026-10-05",
  "counts": {
   "consequential": 231,
   "high-stakes": 154,
-  "informational": 882
+  "informational": 890
  },
  "tiers": {
   "360-feedback-template": {
@@ -2354,6 +2354,10 @@
    "tier": "high-stakes",
    "via": "bundle:pm-reentry"
   },
+  "huawen-business-writing": {
+   "tier": "informational",
+   "via": "default"
+  },
   "human-in-the-loop-design": {
    "tier": "informational",
    "via": "default"
@@ -2578,6 +2582,22 @@
    "tier": "consequential",
    "via": "bundle:pm-wellbeing"
   },
+  "jp-resignation-procedures": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "jp-ringisho": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "jp-tax-return": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "jp-year-end-adjustment": {
+   "tier": "informational",
+   "via": "default"
+  },
   "jury-duty-guide": {
    "tier": "high-stakes",
    "via": "bundle:pm-legal"
@@ -2791,6 +2811,10 @@
    "via": "default"
   },
   "make-me-a-skill": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "malaysia-epf-explainer": {
    "tier": "informational",
    "via": "default"
   },
@@ -4149,6 +4173,14 @@
   "side-business-setup": {
    "tier": "consequential",
    "via": "bundle:pm-sidehustle"
+  },
+  "singapore-cpf-explainer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "singapore-employment-act": {
+   "tier": "informational",
+   "via": "default"
   },
   "site-analysis-report": {
    "tier": "informational",

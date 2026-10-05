@@ -1,4 +1,4 @@
-# 🗂️ All 1255 Skills — full catalog
+# 🗂️ All 1263 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -723,7 +723,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (793 skills)
+## 🌍 Industries & Public Sector (801 skills)
 
 ### `other` — 22 skills
 
@@ -1525,6 +1525,15 @@
 | **Perimenopause Navigator** (`perimenopause-navigator`) | Make sense of perimenopause symptoms nobody warned you about and prepare the GP conversation that actually helps — a symptom tracker mapped to… | — |
 | **Spoon Planner** (`spoon-planner`) | Budget limited energy the way spoon theory describes it — count your realistic daily 'spoons', price what each task actually costs (including the… | — |
 
+### `pm-japan` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Japan Resignation Procedures (退職の手続き)** (`jp-resignation-procedures`) | Use when asked 退職の手続き, how do I quit my job in Japan, 退職届の書き方, what happens to my health insurance and pension when I leave, 失業保険のもらい方, 有給消化, or… | — |
+| **Japanese Approval Request (稟議書)** (`jp-ringisho`) | Use when asked 稟議書の書き方, write a ringi approval request in Japanese, 稟議書を作って, how to get a purchase or project approved in a Japanese company, or… | — |
+| **Japan Tax Return (確定申告)** (`jp-tax-return`) | Use when asked 確定申告のやり方, do I need to file a tax return in Japan, how do I claim medical expense deduction, ふるさと納税の確定申告, 副業の確定申告, how to file with… | — |
+| **Japan Year-End Tax Adjustment (年末調整)** (`jp-year-end-adjustment`) | Use when asked 年末調整の書き方, how do I fill in my nenmatsu chōsei forms, which deductions can I claim at year-end in Japan, 扶養控除等申告書の書き方, 保険料控除申告書, or… | — |
+
 ### `pm-journalism` — 4 skills
 
 | Skill | What it does | Eval |
@@ -1788,6 +1797,15 @@
 | **Elder Scam Briefing** (`elder-scam-briefing`) | Protect aging parents from the scams that target them — the conversation that doesn't condescend, the family code word, the top patterns aimed at… | — |
 | **Scam Message Decoder** (`scam-message-decoder`) | Decode a suspicious message — text, email, call transcript, or DM — against the anatomy of known scam families, with a 🔴🟡🟢 read and the safe… | — |
 
+### `pm-sea` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **新马华文商务写作 (Singapore and Malaysia Chinese business writing)** (`huawen-business-writing`) | Use when asked to write a business email, notice, proposal or WhatsApp message in Chinese for Singapore or Malaysia, 帮我写一封新加坡的中文商务邮件, 马来西亚华文公司通知… | — |
+| **Malaysia EPF Explainer (KWSP)** (`malaysia-epf-explainer`) | Use when asked how EPF works, how much KWSP my employer should pay, what are Akaun Persaraan, Sejahtera and Fleksibel, when can I withdraw EPF… | — |
+| **Singapore CPF Explainer** (`singapore-cpf-explainer`) | Use when asked how CPF works, how much CPF my employer should pay, what happens to my CPF at 55, can I use CPF for my HDB flat, should I top up my… | — |
+| **Singapore Employment Act Guide** (`singapore-employment-act`) | Use when asked am I covered by the Employment Act, how much annual leave or sick leave am I entitled to, can my employer cut my pay, how much… | — |
+
 ### `pm-seatbelt` — 6 skills
 
 | Skill | What it does | Eval |
@@ -2015,4 +2033,4 @@
 
 ---
 
-_1255 skills across 146 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1263 skills across 148 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

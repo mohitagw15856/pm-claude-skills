@@ -1,4 +1,4 @@
-# PM Skills：1255 个专业 Agent Skills，用中文提问就能用
+# PM Skills：1263 个专业 Agent Skills，用中文提问就能用
 
 <p align="center">
   <a href="https://mohitagw15856.github.io/pm-claude-skills/live/season.html">
@@ -38,7 +38,7 @@
 </p>
 
 > **公司要裁员，你不知道该拿多少补偿；明天要开需求评审，PRD 还缺一半；下个月公务员面试，没人陪你练。**
-> 通用 AI 像一个很自信的实习生。**PM Skills** 是资深同事的笔记：1255 份，每份一个 Markdown 文件。（PM 指 Professional，专业人士，不只是产品经理。）
+> 通用 AI 像一个很自信的实习生。**PM Skills** 是资深同事的笔记：1263 份，每份一个 Markdown 文件。（PM 指 Professional，专业人士，不只是产品经理。）
 
 <p align="center">
   <picture>
@@ -48,7 +48,7 @@
   </picture>
 </p>
 
-## 🎯 1,255 个技能，你只需要 5 个
+## 🎯 1,263 个技能，你只需要 5 个
 
 <p align="center">
   <picture>
@@ -601,6 +601,8 @@ Temu 全托管、TikTok Shop 还是亚马逊 FBA？帮我对比一下。
 [💌 祝福语生成器](https://mohitagw15856.github.io/pm-claude-skills/zhufu.html)（中秋、教师节、生日、送别、感谢） · [📋 年终总结与述职提纲](https://mohitagw15856.github.io/pm-claude-skills/nianzhong.html) · [🗓 调休规划器](https://mohitagw15856.github.io/pm-claude-skills/tiaoxiu.html) · [🪪 实时卡片嵌入](https://mohitagw15856.github.io/pm-claude-skills/live-cards.html)（每张卡片都有 PNG 版，可以直接发微信、微博和小红书）
 
 终端里看今日技能：`npx pm-claude-skills today --lang zh`
+
+🀄 [中文技能目录](https://mohitagw15856.github.io/pm-claude-skills/zh/)（每个中文技能一页，方便百度搜到） · [🏙 城市数据](https://mohitagw15856.github.io/pm-claude-skills/city-data.html)（各地社保基数和经济补偿金封顶，附官方来源） · [📰 本周周刊草稿](https://mohitagw15856.github.io/pm-claude-skills/live/zhoukan.html) · [LobeHub 助手导出](https://mohitagw15856.github.io/pm-claude-skills/lobehub/index.json) · 今日技能 [RSS 订阅](https://mohitagw15856.github.io/pm-claude-skills/live/skill-of-the-day-zh.rss) · 拼音也能搜：`npx pm-claude-skills find zhoubao`
 
 
 <table><tr>

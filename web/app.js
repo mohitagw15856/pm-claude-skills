@@ -229,7 +229,7 @@ async function init() {
     const data = await res.json();
     ALL_SKILLS = data.skills;
     SKILLS = ALL_SKILLS.filter((x) => !x.deprecated);
-    hydrateBodies();
+    // Bodies now load per bundle when a skill opens (ensureBody), not all 2.6 MB up front.
   } catch (e) {
     el('gallery').innerHTML = '<p class="empty-msg">Could not load skills.json. Run <code>node web/build-skills.mjs</code> and serve this folder over HTTP.</p>';
     return;
@@ -430,6 +430,7 @@ function renderRecommendations() {
   const q = el('recommendInput').value.toLowerCase().trim();
   if (q.length < 3) { box.hidden = true; box.innerHTML = ''; return; }
   const terms = [...new Set(q.split(/\s+/).filter((t) => t.length > 2))];
+  hydrateBodies(); // full-text ranking improves once the bodies arrive; names and descriptions work now
   const ranked = SKILLS.map((s) => ({ s, score: scoreSkill(s, terms) }))
     .filter((x) => x.score > 0)
     .sort((a, b) => b.score - a.score || (b.s.eval?.score || 0) - (a.s.eval?.score || 0))
@@ -944,7 +945,7 @@ function renderGallery(featuredNames, roleLabel) {
     if (tier && (s.tier || 'stable') !== tier) return false;
     if (evalOnly && !s.eval) return false;
     if (!q) return true;
-    return norm(s.title + ' ' + s.description + ' ' + s.name).includes(nq);
+    return norm(s.title + ' ' + s.description + ' ' + (s.descriptionZh || '') + ' ' + s.name).includes(nq) || pinyinScore(s.name, q) > 0;
   }).sort((a, b) => evalOnly ? (b.eval?.score || 0) - (a.eval?.score || 0) : 0);
 
   const frag = document.createDocumentFragment();
@@ -1099,6 +1100,39 @@ function renderVisionAttach(s) {
 // Pull the skill bodies in after first paint and merge them into the records
 // the gallery is already holding. Anything that needs `instructions` awaits
 // this; it resolves immediately once done, so the cost is paid at most once.
+// Pinyin search: "zb" or "zhoubao" finds 中文周报 (index: zh-pinyin.json, built by scripts/build-zh-pinyin.mjs).
+let PINYIN = {};
+fetch('zh-pinyin.json').then((r) => r.json()).then((j) => { PINYIN = j.skills || {}; }).catch(() => {});
+function pinyinScore(name, query) {
+  const e = PINYIN[name]; const q = String(query).toLowerCase().replace(/[\s']+/g, '');
+  if (!e || q.length < 2 || !/^[a-z]+$/.test(q)) return 0;
+  let best = 0;
+  e.full.forEach((full, i) => {
+    const ini = e.initials[i] || '';
+    if (full === q || ini === q) best = Math.max(best, 6);
+    else if (full.startsWith(q) || ini.startsWith(q)) best = Math.max(best, 4);
+    else if ((q.length >= 4 && full.includes(q)) || (q.length <= 4 && ini.includes(q))) best = Math.max(best, 2.5);
+  });
+  return best;
+}
+// One bundle's skill bodies, fetched when one of its skills is opened or run.
+// skills-body/<bundle>.json is built at deploy by web/build-skills.mjs; when it is
+// missing (a local checkout), fall back to the whole skills.json.
+const BUNDLE_BODIES = new Map();
+function ensureBody(s) {
+  if (!s || s.instructions) return Promise.resolve(true);
+  const plugin = s.plugin || 'other';
+  if (!BUNDLE_BODIES.has(plugin)) {
+    BUNDLE_BODIES.set(plugin, fetch(`skills-body/${encodeURIComponent(plugin)}.json`)
+      .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then((bodies) => {
+        for (const x of ALL_SKILLS) if (x.plugin === plugin && bodies[x.name]) x.instructions = bodies[x.name];
+        return true;
+      })
+      .catch(() => hydrateBodies()));
+  }
+  return BUNDLE_BODIES.get(plugin).then(() => (s.instructions ? true : hydrateBodies()));
+}
 let BODIES = null;
 function hydrateBodies() {
   if (BODIES) return BODIES;
@@ -1143,7 +1177,7 @@ function selectSkill(s) {
     COACH.on = !!(el('coachToggle') && el('coachToggle').checked);
     // The coach parses Quality Checks out of the body; re-run once it arrives.
     if (s.instructions) coachInit(s);
-    else hydrateBodies().then(() => { if (current === s) { try { coachInit(s); } catch (_) {} } });
+    else ensureBody(s).then(() => { if (current === s) { try { coachInit(s); } catch (_) {} } });
   } catch (_) {}
   renderVisionAttach(s);
   recordRecent(s.name);
@@ -1353,7 +1387,7 @@ const SKILL_SUFFIX =
 
 // ---------- Run ----------
 async function run() {
-  await hydrateBodies(); // the skill body is the system prompt
+  await ensureBody(current); // the skill body is the system prompt
   const key = el('apiKey').value.trim();
   const localModel = !!P().local; // in-browser model needs no key
   if (!key && !localModel) { flagMissingKey(); return setStatus(`👆 Paste your ${P().name} API key (top-right) to run — or pick "In-browser (no key)".`, true); }
