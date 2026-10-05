@@ -7,6 +7,8 @@ description: "Run meetings that actually decide — the pre-read-then-decide for
 
 Meetings fail to decide for structural reasons, not character ones: the options were never written down (so debate invents them live), the decider was never named (so consensus is assumed and never arrives), and the decision was never recorded (so it gets relitigated by everyone who remembers it differently). The format fixes all three before the room opens: a pre-read with the options steelmanned, the decider and decision rule announced in the invite, a timeboxed sequence that separates clarifying from advocating, and a close where the decision — with its why and its dissent — lands in the log before anyone leaves.
 
+> **Not quite this?** Use `care-decision-family-meeting` when the decision is a family's choice about care for a relative.
+
 ## What This Skill Produces
 
 - **The pre-read spec** — the options doc (each steelmanned, with the recommendation) shipped 24h+ ahead

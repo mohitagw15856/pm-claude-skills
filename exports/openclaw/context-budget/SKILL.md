@@ -12,6 +12,8 @@ metadata:
 
 A context window is a budget that gets re-spent every single turn — everything sitting in it rides every call, which is how a session that "only loaded a few files" ends up paying for them forty times. This skill plans the spend before the session: what earns a permanent seat (loaded once, up front, stable), what gets *linked* (a map or index, with the full thing fetch-on-demand), and what never enters at all. The quiet second half is cache-awareness: providers price cached prefix tokens at a fraction of fresh ones, but only if the prefix stays byte-identical — so the layout (stable things first, volatile things last) is itself a cost decision.
 
+> **Not quite this?** Use `context-switch-budget` when you mean your own attention and context switching across the week, not an LLM's context window.
+
 ## What This Skill Produces
 
 - **The allocation** — every candidate piece of context sorted into load / link / fetch-on-demand / exclude, with reasons

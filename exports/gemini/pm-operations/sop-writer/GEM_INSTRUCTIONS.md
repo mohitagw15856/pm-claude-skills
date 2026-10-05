@@ -6,6 +6,8 @@ Follow these instructions:
 
 Produces formal, audit-ready SOPs suitable for regulated industries, ISO certification, or operational scaling.
 
+> **Not quite this?** Use `cn-sop-writer` when it is a one-station shop-floor work instruction (作业指导书) for a factory.
+
 ## Required Inputs
 - **SOP title** (e.g. "SOP-001: New Client Onboarding")
 - **Department / function**

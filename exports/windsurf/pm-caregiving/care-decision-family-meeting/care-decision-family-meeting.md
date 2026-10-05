@@ -7,6 +7,8 @@ description: "Run a family meeting to make a big care decision together — so i
 
 Big care decisions — where a parent lives, what care they need, who pays, who does what — bring out every old family dynamic, and often end in a fight, a stalemate, or one exhausted person deciding alone and resenting it. A structured family meeting changes that. This gives you the agenda, preparation, ground rules, and facilitation to make it a shared, informed decision — including the person being cared for — with clear next steps. Not legal, medical, or financial advice.
 
+> **Not quite this?** Use `decision-meeting-format` when it is a work decision meeting, not a family's decision about care.
+
 ## What This Skill Produces
 
 - **A meeting agenda** — a clear structure (the situation, the options, everyone's input, working to a decision, next steps) so it doesn't spiral

@@ -7,6 +7,8 @@ description: "Specify the tracing, metrics, and alerting for an AI agent or LLM 
 
 You can't fix what you didn't record. For LLM systems the unit of observability is the *trace* — everything the model saw and did — because behaviour, not uptime, is what fails. This skill specifies what to capture, what to compute from it, and when to page someone.
 
+> **Not quite this?** Use `agent-spec` when you are specifying what the agent should do before it is built.
+
 ## What This Skill Produces
 
 - A **trace schema**: per-request spans and the fields each must carry

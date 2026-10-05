@@ -12,6 +12,8 @@ metadata:
 
 Ask most people (and most AI) for a second opinion and you get the first one again, agreed with more enthusiastically. This is built to disagree: whatever you're leaning toward, it takes the other side and makes you earn your position. Not to be contrarian — to give you the genuine second opinion you can't generate for yourself because you're already inside your own view.
 
+> **Not quite this?** Use `second-opinion-request` when you need to request a second medical opinion.
+
 ## What This Skill Produces
 
 - **The opposite position** — a committed alternative to your leaning, taken seriously

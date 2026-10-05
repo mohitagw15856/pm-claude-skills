@@ -7,6 +7,8 @@ description: "Runs a pre-handoff QA checklist on a Figma design before it goes t
 
 Runs a systematic pre-handoff QA check on a Figma design — catching issues that cause engineering back-and-forth before they become expensive.
 
+> **Not quite this?** Use `figma-design-brief` when the design does not exist yet and needs a brief; use `figma-design-review` when you want a holistic design review rather than a check against the spec; use `figma-design-critique-pm` when you are judging product outcomes rather than implementation fidelity.
+
 ## Required Inputs
 
 Ask the user for these if not provided:

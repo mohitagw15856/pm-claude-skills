@@ -9,6 +9,8 @@ Claims get paid faster when they're complete and well-documented: the right poli
 itemised loss, and the evidence attached. This skill writes that letter — or, for a denial, an appeal that
 addresses the insurer's stated reason directly — so the adjuster has everything they need to say yes.
 
+> **Not quite this?** Use `insurance-claim-appeal` when the claim has already been denied and you are appealing; use `cn-medical-insurance-claim` when it is China's public basic medical insurance (医保) rather than a private insurer.
+
 > **Note:** this is a drafting aid, **not legal, financial, or insurance advice**, and it does not guarantee a
 > payout. Coverage, deadlines, and procedures depend on your policy and jurisdiction — read your policy, meet
 > the insurer's deadlines, and consult a qualified advisor for complex or high-value claims. Never misrepresent

@@ -12,6 +12,8 @@ metadata:
 
 Turn the chaotic end-of-week brain dump into a structured 20-minute ritual that keeps you, your team, and your stakeholders aligned — without a meeting.
 
+> **Not quite this?** Use `weekly-review-ritual` when you want a personal GTD-style weekly review rather than a product review.
+
 ## The Weekly Review Structure (20 minutes)
 
 **5 min — Metrics check:** What moved? What didn't? What's surprising?

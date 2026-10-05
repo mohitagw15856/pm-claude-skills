@@ -2,6 +2,8 @@
 
 This skill provides structured, actionable design feedback using established UX frameworks. It balances positive observations with clear, prioritised improvement suggestions.
 
+> **Not quite this?** Use `figma-design-critique-pm` when you want a product manager's critique run against a Figma file.
+
 ## Required Inputs
 
 Ask the user for these if not provided:

@@ -7,6 +7,8 @@ description: "Write a PR description grounded in the REAL diff — read the bran
 
 A good PR description is written *from the diff*, not from memory — memory forgets the file you touched at 2am. In Claude Cowork this skill reads the *actual* changes on the branch and writes the description grounded in them, so the reviewer gets an accurate map of what moved and why.
 
+> **Not quite this?** Use `pr-description-writer` when you will paste the diff yourself instead of connecting GitHub.
+
 ## What This Skill Produces
 
 - **The PR description** — summary, the changes grouped by area, how it was tested, and the risk/rollout — all derived from the real diff

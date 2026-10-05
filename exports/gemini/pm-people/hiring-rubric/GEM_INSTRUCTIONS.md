@@ -6,6 +6,8 @@ Follow these instructions:
 
 This skill generates a complete structured interview scorecard and guide for any role. It reduces hiring bias, enables consistent evaluation across interviewers, and produces better hiring decisions.
 
+> **Not quite this?** Use `engineering-hiring-rubric` when the role is technical and needs scorecards for engineering interviews.
+
 ## Required Inputs
 
 Ask the user for these if not provided:

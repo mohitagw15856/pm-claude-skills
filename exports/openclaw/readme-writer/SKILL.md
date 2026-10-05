@@ -14,6 +14,8 @@ The README is a project's front door — most people decide in seconds whether t
 writes a clear, scannable README that answers *what is this, why should I care, how do I run it* immediately,
 then layers in the detail. Structured so a newcomer gets to a working result fast.
 
+> **Not quite this?** Use `readme-benefit-writer` when you already have a README and want each feature rewritten as a user benefit.
+
 ## Required Inputs
 
 Ask for these only if they aren't already provided:

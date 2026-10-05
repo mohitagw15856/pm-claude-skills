@@ -7,6 +7,8 @@ description: "Generate a tailored code review checklist for any pull request bas
 
 Produces a tailored code review checklist for a specific pull request — scaled to the language, type of change, and risk level. Not a generic template.
 
+> **Not quite this?** Use `code-review-guide` when you want to carry out the review itself with senior judgement, not just a checklist.
+
 ## Required Inputs
 
 Ask the user for these if not provided:

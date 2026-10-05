@@ -9,6 +9,8 @@ The offer is the moment a "yes" is won or lost — it should be **clear, warm, a
 feels wanted and knows exactly what's on the table. This skill drafts the written offer and the verbal-offer
 script that precedes it, covering the terms that matter without drowning the candidate in fine print.
 
+> **Not quite this?** Use `property-offer-letter` when you are a buyer writing to a property seller, not making a job offer.
+
 > **Note:** this is a drafting aid, **not legal advice**. Employment offers carry jurisdiction-specific legal
 > requirements (at-will vs. contract, statutory entitlements, required disclosures, equity/benefits terms) — HR
 > and legal counsel must review and approve before sending. Every legal/financial term below is flagged to confirm.

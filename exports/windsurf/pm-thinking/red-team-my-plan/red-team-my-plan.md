@@ -7,6 +7,8 @@ description: "Attack your own plan the way a smart adversary would — find the 
 
 You're the worst judge of your own plan because you want it to work. This puts on the adversary's hat: it hunts for the weakest link, the optimistic hand-wave, the single point of failure, and the move a competitor or reality would make to knock it over — then hands you the fixes. Better a friendly attack now than a real one later.
 
+> **Not quite this?** Use `red-team-review` when you are running a structured red-team review of someone else's plan; use `acquirer-red-team` when you are preparing for an acquirer's due diligence on your numbers.
+
 ## What This Skill Produces
 
 - **The weak points** — where the plan is most vulnerable, ranked

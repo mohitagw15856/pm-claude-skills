@@ -14,6 +14,8 @@ A good open house is a marketing event, not an unlocked door: promoted to the ri
 and run to **capture leads** you follow up. This skill plans the whole thing — before, during, and after — so
 the agent maximises qualified traffic and walks away with a pipeline, not just a sign-in sheet.
 
+> **Not quite this?** Use `the-open-house` when you are the buyer and want to rehearse an open house from the other side.
+
 ## Working from a brief
 
 Given "plan an open house for my listing this Saturday", **produce the full plan anyway** — infer sensible

@@ -7,6 +7,8 @@ description: "Simulate the open house and the listing agent's read of you — th
 
 The open house runs in both directions: you're evaluating the house, and the listing agent — who works for the *seller* — is evaluating you. Every friendly question ("been looking long?", "would you need to sell first?", "what's your range?") feeds a profile: budget ceiling, urgency, attachment, negotiating sophistication. Meanwhile the house itself is presenting its best self, staged to move eyes away from exactly what inspections find. This skill runs the visit: the agent's profile of you building line by line, the house's misdirections cataloged, and a debrief on the only discipline that matters — *gather everything, volunteer nothing.*
 
+> **Not quite this?** Use `open-house-plan` when you are the seller's agent planning the event itself.
+
 ## What This Skill Produces
 
 - **The walkthrough transcript** — the friendly interrogation, with the agent's private profile note after each of your answers

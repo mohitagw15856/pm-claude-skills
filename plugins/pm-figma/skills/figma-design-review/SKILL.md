@@ -7,6 +7,8 @@ description: "Runs a structured PM design review against product requirements. U
 
 Runs a structured PM design review — checking that a design meets product requirements, covers all user flows, and is ready for engineering. This is a requirements-and-outcomes review, not an aesthetic critique.
 
+> **Not quite this?** Use `figma-design-qa` when you need a strict check against the spec.
+
 ## Required Inputs
 
 - **Design description or screen summary**

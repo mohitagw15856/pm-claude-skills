@@ -15,6 +15,8 @@ for *this* company's *this* round. This skill builds a tailored prep pack: the q
 likely to get, STAR-structured answers drawn from your real experience, your best stories mapped to the
 role's competencies, and the gaps to address before you walk in.
 
+> **Not quite this?** Use `informational-interview-prep` when it is a career-advice conversation you asked for, not an assessment; use `expert-interview-prep` when you are interviewing an expert to learn from them; use `source-interview-prep` when you are a journalist interviewing a source.
+
 ## Required Inputs
 
 Ask for these only if they aren't already provided:

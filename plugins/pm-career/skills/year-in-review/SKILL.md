@@ -7,6 +7,8 @@ description: "Run an honest personal year-in-review and set next year's directio
 
 The problem with New Year's resolutions is they're a wish-list with no diagnosis — so they fail. This runs the review a good operator runs on a project, pointed at your year: what actually happened (not the highlight reel), where your energy went, what you'd repeat and stop, and a single organising theme that makes next year's dozens of small choices easier. One theme beats twelve resolutions.
 
+> **Not quite this?** Use `cn-year-end-review` when you need a formal Chinese 年终总结 or 述职报告 for an employer.
+
 ## What This Skill Produces
 
 - **The retrospective** — the year in the domains that matter to you (work, health, relationships, money, growth), honestly

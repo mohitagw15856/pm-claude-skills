@@ -7,6 +7,8 @@ description: "Prepare an S&OP cycle readout that surfaces the demand-supply gaps
 
 An S&OP meeting that reviews numbers but decides nothing just delayed the miss by a month. This skill prepares the readout so the meeting spends its time on the three decisions only that room can make — not on re-litigating the forecast. Everything else goes in the pre-read, gaps are quantified in units *and* money, and every open gap arrives with priced scenario levers.
 
+> **Not quite this?** Use `meeting-prep-live` when you need general meeting preparation, not supply-chain S&OP.
+
 ## What This Skill Produces
 
 - A demand vs. supply gap table by product family and month

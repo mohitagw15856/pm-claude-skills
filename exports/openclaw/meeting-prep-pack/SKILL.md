@@ -12,6 +12,8 @@ metadata:
 
 Most meetings are won before they start — by the one attendee who knows what the meeting actually decides, holds a position with reasons, and has guessed the room's stances. Everyone else is winging it, which is why the prepared voice steers. The prep pack is fifteen minutes of structure: the real decision at stake (often not the stated agenda), your position and its evidence, the per-attendee read (who wants what, who blocks, who decides), the two questions worth asking, and the concrete walk-away-with list that defines success before the room defines it for you.
 
+> **Not quite this?** Use `meeting-prep-live` when you want it to read the real calendar event and linked documents through a connector.
+
 ## What This Skill Produces
 
 - **The stakes read** — what this meeting actually decides, and what the stated agenda hides

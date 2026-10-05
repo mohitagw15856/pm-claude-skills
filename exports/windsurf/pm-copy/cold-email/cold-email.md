@@ -10,6 +10,8 @@ fails because it's a feature dump that's all about the sender. This skill writes
 email built on a real trigger or relevance hook, with a single low-friction ask — plus the follow-ups
 that actually drive most replies. (For job-search / networking outreach, use [`outreach-message`](../outreach-message/SKILL.md); this is B2B sales prospecting.)
 
+> **Not quite this?** Use `investor-cold-email` when you are writing to investors rather than to prospective customers.
+
 ## Required Inputs
 
 Ask for these only if they aren't already provided:
