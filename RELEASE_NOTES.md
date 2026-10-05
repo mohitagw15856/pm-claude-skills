@@ -1,53 +1,66 @@
-# v81.2.0: China compliance, Hong Kong and Taiwan, Dify and Chinese routing
+# v82.0.0: China for everyone, Korea and Southeast Asia, lite skills, teams
 
-**1,250 skills across 144 bundles** (from 1,235 across 142 in v81.1.0).
+**1,285 skills across 152 bundles** (from 1,250 across 144 in v81.2.0).
 
-This release is the second wave of work for Chinese users. **pm-china-compliance** covers the four assessments Chinese teams are asked for most: the graded protection scheme (等保 2.0), cross-border data transfer (数据出境), the PIPL impact assessment and generative AI filing and labelling. **pm-hk-tw** brings Hong Kong's MPF and Taiwan's Labor Standards Act in Traditional Chinese. Nine more skills cover official documents, theses and citations, tech interviews, household registration points, the housing fund, medical insurance, small business tax and cross-border platforms. A Dify plugin and 12 import-ready Dify apps bring the library to China's most used agent platform, and all 75 Chinese translations are now on ModelScope Skills Central.
+This release takes the library well beyond office workers. In China it now serves teachers, parents, foreign-trade staff, factory engineers and people looking after ageing parents. New packs cover Korea, Japan, Singapore and Malaysia, with 28 skills each in Vietnamese and Indonesian. The README was rebuilt so a library this size does not overwhelm: pick a path, take a four-question quiz, or follow a chart to the five skills you will use. Under the hood come lite skills for small local models, calculators with tests, a prompt-injection suite, offline use, Word and WPS add-ins, and a way for a team to keep every laptop on the same skills.
 
 ## New skills
 
-| Skill | Bundle | What it does |
-|---|---|---|
-| cn-mlps-checklist | pm-china-compliance | Graded protection (等保 2.0): level, gap checklist and the filing and testing path |
-| cn-data-export-assessment | pm-china-compliance | Cross-border data transfer (数据出境): which route applies and the self-assessment |
-| cn-pipl-pia | pm-china-compliance | A PIPL personal information protection impact assessment with a risk register |
-| cn-genai-filing | pm-china-compliance | Generative AI filing (大模型备案) and AI content labelling |
-| hk-mpf-explainer | pm-hk-tw | Hong Kong's Mandatory Provident Fund (強積金), with worked calculations |
-| tw-labour-standards | pm-hk-tw | Taiwan's Labor Standards Act (勞動基準法): overtime, leave, notice and severance |
-| cn-official-document | pm-china-work | Official documents (公文) in the GB/T 9704 format |
-| cn-thesis-proposal | pm-china-exams | A thesis proposal (开题报告) |
-| cn-citation-gbt7714 | pm-china-exams | GB/T 7714 references, with a tested formatter |
-| cn-tech-interview-drill | pm-china-exams | Tech interview practice for Chinese internet companies (八股, 手撕, 系统设计, 追问) |
-| cn-hukou-points | pm-china-life | Household registration points (积分落户) |
-| cn-housing-fund-withdrawal | pm-china-life | Housing fund withdrawal (公积金提取) |
-| cn-medical-insurance-claim | pm-china-life | Medical insurance claims (医保报销) |
-| cn-small-business-tax | pm-china-life | Tax for sole traders and small companies (个体户与小微企业) |
-| crossborder-platform-playbook | pm-chuhai | Choosing and launching on cross-border e-commerce platforms |
+| Bundle | Skills |
+|---|---|
+| **pm-china-teachers** (教师) | cn-lesson-plan (新课标教案), cn-class-meeting (主题班会), cn-parent-meeting (家长会), cn-term-comments (期末评语), cn-open-class (公开课与说课稿) |
+| **pm-china-parents** (家长) | cn-school-entry (幼升小 / 小升初), cn-home-school-comms (家校沟通), cn-extracurricular-plan (课外安排), cn-homework-helper-parent (辅导作业) |
+| **pm-china-trade** (外贸) | cn-inquiry-reply (询盘回复), cn-letter-of-credit-check (信用证审单), cn-trade-quotation (报价单), cn-customs-docs (报关单证) |
+| **pm-china-manufacturing** (制造业) | cn-8d-report (8D 报告), cn-5s-audit (5S 检查), cn-quality-traceability (质量追溯), cn-sop-writer (作业指导书) |
+| **pm-china-yearend** (述职季) | cn-shuzhi-deck (述职 PPT), cn-year-end-bonus (年终奖与个税), cn-next-year-plan (OKR 与个人发展计划), with cn-year-end-review |
+| pm-china-work | cn-jargon-translator (互联网黑话翻译器) |
+| pm-china-life | cn-help-parents-admin (帮爸妈办事), plus a 长辈版 output in the medical and social insurance skills |
+| pm-hk-tw | hk-cantonese-copy (粵語文案) |
+| **pm-korea** | kr-year-end-tax-settlement (연말정산), kr-severance-pay (퇴직금), kr-cover-letter (자기소개서), kr-work-report (보고서, 주간보고) |
+| **pm-japan** | jp-year-end-adjustment (年末調整), jp-tax-return (確定申告), jp-resignation-procedures (退職の手続き), jp-ringisho (稟議書) |
+| **pm-sea** | singapore-cpf-explainer, malaysia-epf-explainer (KWSP), singapore-employment-act, huawen-business-writing (新马华文商务写作) |
 
-## Also in this release
+Tax, labour and legal skills mark every rule to confirm and say they are not advice.
 
-- **Dify**: a plugin that finds skills offline and loads them from Gitee, attached to this release as `pm_skills.difypkg`, and 12 import-ready Dify apps in `integrations/dify-templates/`.
-- **MaxKB and FastGPT**: a skill tool that only needs Gitee. A guide for Coze, Yuanqi and ERNIE agents.
-- **Chinese routing evaluation**: 200 real Chinese requests scored across three routers (`docs/ZH-ROUTING.md`).
-- **ModelScope Skills Central**: all 75 Chinese translations, under @mohitagw15856.
-- **Tech tree**: a Chinese interface and share posters with a QR code. **Playground**: voice input.
-- **Gitee**: the mirror shows the Chinese README first and retries failed pushes.
+## A README that does not overwhelm
+
+A TL;DR box, "1,285 skills, you need 5", six Pick your path cards, a "What do you want to do today?" chart, a four-question quiz, a quest log, and images that refresh daily: skill of the day, live stats, exam countdowns and a 二十四节气 and festival banner. Before-and-after animations, search demos and a tech-tree tour. READMEs in 简体中文, 繁體中文 and 한국어.
+
+## For Chinese users
+
+- Pinyin search (`zb` finds 周报), Chinese landing pages, and the skill finder now understands Chinese.
+- Free models in the playground through ModelScope and Hugging Face.
+- An intranet offline pack with guides for 统信 UOS and 银河麒麟, a local-model guide (数据不出域), and Feishu, DingTalk, WeCom and Discord bots.
+- Word and WPS add-ins, trackers for 飞书多维表格, Notion and Obsidian, Xiaohongshu share cards, 拜年, 调休 and 述职 tools, and Chinese workflow chains.
+
+## Quality and trust
+
+- **Lite skills:** `npx pm-claude-skills add --lite` installs condensed skills for small local models, about 20% smaller, keeping every input, check and disclaimer.
+- **Tested calculators:** the year-end bonus tax, Chinese, Korean and Taiwan severance, and Hong Kong MPF are pinned by worked-value tests.
+- **Injection defences:** a prompt-injection suite of 15 hostile documents, and the skills that read pasted documents now treat them as data.
+- **Rules checked:** dates on 181 rule-based skills, which turn amber after a year.
+- **Release integrity:** a reproducible release bundle with a signed SBOM, checked by `verify --release`.
+
+## For teams
+
+- `npx pm-claude-skills profile` saves your role, city and language once, on your computer only, and skills personalise from it.
+- A committed `.pm-skills.json` plus `npx pm-claude-skills sync` keeps every laptop on the same skills; `sync --check` fails when one drifts.
+- Jupyter cookbooks, a jsDelivr route (`install --cdn`), an offline playground, and contributor credits.
 
 ## Install
 
 ```bash
 # Claude Code plugin marketplace
 /plugin marketplace add mohitagw15856/pm-claude-skills
-/plugin install pm-china-compliance@pm-claude-skills
-/plugin install pm-hk-tw@pm-claude-skills
+/plugin install pm-china-teachers@pm-claude-skills
 
 # Any supported tool, through the CLI
-npx pm-claude-skills add --agent claude --bundle pm-china-compliance,pm-hk-tw
+npx pm-claude-skills add --agent claude --bundle pm-korea,pm-sea
 
 # From mainland China, through the npm mirror
-npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae --bundle pm-china-compliance,pm-china-life
+npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae --bundle pm-china-teachers,pm-china-parents
 ```
 
 Library: <https://github.com/mohitagw15856/pm-claude-skills>
 
-**Full changelog:** v81.1.0 to v81.2.0
+**Full changelog:** v81.2.0 to v82.0.0 (#313 to #330)
