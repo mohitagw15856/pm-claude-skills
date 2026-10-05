@@ -1,4 +1,4 @@
-# 🗂️ All 1281 Skills — full catalog
+# 🗂️ All 1285 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -723,7 +723,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (819 skills)
+## 🌍 Industries & Public Sector (823 skills)
 
 ### `other` — 22 skills
 
@@ -1589,6 +1589,15 @@
 | **Meal Prep OS** (`meal-prep-os`) | Turn what's actually in the fridge and 90 minutes on Sunday into a week that mostly feeds itself — a cook-once-eat-thrice batch plan, the… | — |
 | **What's for Dinner** (`whats-for-dinner`) | Decide what to cook tonight from what you already have and how much time/energy you've got — no shopping trip, no recipe rabbit hole. | — |
 
+### `pm-korea` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Korean Job Application Essay (자기소개서)** (`kr-cover-letter`) | Use when asked 자기소개서 써 줘, 자소서 첨삭해 줘, 지원동기 어떻게 써, 입사 후 포부 항목, 대기업 공채 자소서, 공기업 NCS 자기소개서, or write a Korean self-introduction essay for a job… | — |
+| **Korea Severance Pay (퇴직금)** (`kr-severance-pay`) | Use when asked 퇴직금 계산해 줘, 퇴직금 얼마 받을 수 있어, 평균임금 어떻게 계산해, 퇴직연금 DB형 DC형 차이, IRP로 퇴직금 받아야 해, 퇴직금을 안 줘요, or how is severance pay calculated in Korea.… | — |
+| **Korean Business Report (보고서 and 주간보고)** (`kr-work-report`) | Use when asked 보고서 써 줘, 주간보고 작성해 줘, 개조식으로 정리해 줘, 팀장님께 보고할 내용 정리, 1페이지 보고서, 업무 보고서 양식, or write a Korean business report or weekly report. Produces… | — |
+| **Korea Year-End Tax Settlement (연말정산)** (`kr-year-end-tax-settlement`) | Use when asked 연말정산 어떻게 해요, 연말정산 간소화 자료 어떻게 제출해, which deductions can I claim in my Korean year-end tax settlement, 부양가족 공제 누구 올려야 해, 맞벌이 연말정산 누가… | — |
+
 ### `pm-layoff` — 4 skills
 
 | Skill | What it does | Eval |
@@ -2071,4 +2080,4 @@
 
 ---
 
-_1281 skills across 152 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1285 skills across 153 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

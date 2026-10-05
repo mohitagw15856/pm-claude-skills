@@ -1,4 +1,4 @@
-# 🧠 PM Skills: 1281 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
+# 🧠 PM Skills: 1285 Professional Agent Skills for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes
 
 > **TL;DR** &nbsp; Install: `npx pm-claude-skills add` (any tool) · In Claude Code: `/plugin` → search **pm-skills**
 > Then just say what you need: *"Decode this job ad and tell me where I am weak."*
@@ -26,6 +26,7 @@
   <a href="SKILLS.md"><strong>📚 All skills</strong></a> ·
   <a href="README.zh-CN.md"><strong>🇨🇳 简体中文</strong></a> ·
   <a href="README.zh-TW.md"><strong>繁體中文</strong></a> ·
+  <a href="README.ko.md"><strong>한국어</strong></a> ·
   <a href="CHANGELOG.md"><strong>🆕 Changelog</strong></a>
 </p>
 
@@ -42,7 +43,7 @@
 > Generic AI is a very confident intern. **PM Skills** is the senior colleague's notes: 1255 of them, one markdown file each. *(PM stands for Professional. Yes, we get asked.)*
 
 <!-- AEO Answer Capsule — 68 words -->
-PM Skills is an open-source library of 1281 Agent Skills — plain-markdown SKILL.md files that teach an AI assistant to do one professional task to a senior professional's standard, from writing a PRD to decoding a lease or running a blameless postmortem. Each skill bundles the framework, an output template, quality checks, and anti-patterns. It is MIT-licensed and works with Claude, ChatGPT, Gemini, Cursor, and Codex.
+PM Skills is an open-source library of 1285 Agent Skills — plain-markdown SKILL.md files that teach an AI assistant to do one professional task to a senior professional's standard, from writing a PRD to decoding a lease or running a blameless postmortem. Each skill bundles the framework, an output template, quality checks, and anti-patterns. It is MIT-licensed and works with Claude, ChatGPT, Gemini, Cursor, and Codex.
 <!-- End AEO Capsule -->
 
 <p align="center">
@@ -104,8 +105,8 @@ Say *"my landlord is keeping my deposit"* and your assistant loads [`security-de
 <br /><sub><b>🧊 <a href="plugins/pm-3d-explorer/">3D explorer</a></b>: topic in, a clickable 3D page out, with exploded view and a quiz.</sub>
 </td>
 <td width="50%" align="center">
-<a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="web/docs-assets/demo-galaxy.webp" width="100%" alt="Galaxy 3D: fly through all 1281 skills as a constellation" /></a>
-<br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html">Galaxy 3D</a></b>: all 1281 skills as stars. Zero productivity value, 100% recommended.</sub>
+<a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="web/docs-assets/demo-galaxy.webp" width="100%" alt="Galaxy 3D: fly through all 1285 skills as a constellation" /></a>
+<br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html">Galaxy 3D</a></b>: all 1285 skills as stars. Zero productivity value, 100% recommended.</sub>
 </td>
 </tr>
 <tr>
@@ -120,7 +121,7 @@ Say *"my landlord is keeping my deposit"* and your assistant loads [`security-de
 </tr>
 </table>
 
-## 🎯 1,281 skills, you need 5
+## 🎯 1,285 skills, you need 5
 
 <p align="center">
   <picture>
@@ -579,7 +580,7 @@ Every skill has the same shape: what it produces, the inputs it needs, a real fr
 <p align="center">
   <b><a href="SKILLS.md">Browse all 1255 →</a></b> ·
   <b><a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/">explore the tech tree →</a></b> ·
-  <b><a href="plugins/">151 bundles →</a></b>
+  <b><a href="plugins/">152 bundles →</a></b>
 </p>
 
 <details>
@@ -617,7 +618,7 @@ Every skill has the same shape: what it produces, the inputs it needs, a real fr
 | <img src="web/docs-assets/logos/pm-design.svg" width="20" alt=""/> [Design & UX](plugins/pm-design/) | <img src="web/docs-assets/logos/pm-legal.svg" width="20" alt=""/> [Legal](plugins/pm-legal/) | <img src="web/docs-assets/logos/pm-finance.svg" width="20" alt=""/> [Finance](plugins/pm-finance/) |
 | <img src="web/docs-assets/logos/pm-founders.svg" width="20" alt=""/> [Founders](plugins/pm-founders/) | <img src="web/docs-assets/logos/pm-security.svg" width="20" alt=""/> [Security](plugins/pm-security/) | <img src="web/docs-assets/logos/pm-gov.svg" width="20" alt=""/> [Government](plugins/pm-gov/) |
 
-…plus HR, sales, operations, research, healthcare, educators, writers and more: **[the full profession index](SKILLS.md)**, or by bundle in [`plugins/`](plugins/) (151 bundles). Install any bundle: `/plugin install pm-decoders@pm-claude-skills`. Before installing *anyone's* skills, including these: [skill-vetting](skills/skill-vetting/SKILL.md).
+…plus HR, sales, operations, research, healthcare, educators, writers and more: **[the full profession index](SKILLS.md)**, or by bundle in [`plugins/`](plugins/) (152 bundles). Install any bundle: `/plugin install pm-decoders@pm-claude-skills`. Before installing *anyone's* skills, including these: [skill-vetting](skills/skill-vetting/SKILL.md).
 
 </details>
 
@@ -670,7 +671,7 @@ That's the whole trick. It's markdown: audit it, edit it, or [write your own](SK
 <details>
 <summary><b>❓ Straight answers</b></summary>
 
-**Is it actually free?** Yes: MIT, all 1281 skills, forever. Sponsors fund the playground's free model runs, not access.
+**Is it actually free?** Yes: MIT, all 1285 skills, forever. Sponsors fund the playground's free model runs, not access.
 
 **Do I need an API key?** Not to browse, read, install or use skills inside a tool you already have. The playground serves a few free runs a day.
 
@@ -731,4 +732,4 @@ If a skill saved you real money or a real mistake, **[star the repo](https://git
 
 ---
 
-*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 1281 skills · 151 bundles · 35 professions · every commit gated. The long version lives in the **[Showcase](docs/SHOWCASE.md)**.*
+*Built by [Mohit](https://github.com/mohitagw15856) with Claude. 1285 skills · 152 bundles · 35 professions · every commit gated. The long version lives in the **[Showcase](docs/SHOWCASE.md)**.*

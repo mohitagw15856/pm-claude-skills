@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1293 skills exported. Copy a `.mdc rule` into the tool to use it.
+1297 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -681,6 +681,10 @@
 | Knowledge-Gap Map | `pm-learning` | `pm-learning/knowledge-gap-map/knowledge-gap-map.mdc` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/knowledge-gardening.mdc` |
 | KPI Tracker Design | `pm-cowork` | `pm-cowork/kpi-tracker-design/kpi-tracker-design.mdc` |
+| Korean Job Application Essay (자기소개서) | `pm-korea` | `pm-korea/kr-cover-letter/kr-cover-letter.mdc` |
+| Korea Severance Pay (퇴직금) | `pm-korea` | `pm-korea/kr-severance-pay/kr-severance-pay.mdc` |
+| Korean Business Report (보고서 and 주간보고) | `pm-korea` | `pm-korea/kr-work-report/kr-work-report.mdc` |
+| Korea Year-End Tax Settlement (연말정산) | `pm-korea` | `pm-korea/kr-year-end-tax-settlement/kr-year-end-tax-settlement.mdc` |
 | KYC Escalation | `pm-banking` | `pm-banking/kyc-escalation/kyc-escalation.mdc` |
 | Landing Page Copy | `pm-copy` | `pm-copy/landing-page-copy/landing-page-copy.mdc` |
 | Language-Learning Plan | `pm-students` | `pm-students/language-learning-plan/language-learning-plan.mdc` |

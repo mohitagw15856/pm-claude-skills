@@ -1,7 +1,7 @@
 {
  "generated": "2026-10-05",
  "counts": {
-  "consequential": 239,
+  "consequential": 243,
   "high-stakes": 155,
   "informational": 899
  },
@@ -2701,6 +2701,22 @@
   "kpi-tracker-design": {
    "tier": "informational",
    "via": "default"
+  },
+  "kr-cover-letter": {
+   "tier": "consequential",
+   "via": "bundle:pm-korea"
+  },
+  "kr-severance-pay": {
+   "tier": "consequential",
+   "via": "bundle:pm-korea"
+  },
+  "kr-work-report": {
+   "tier": "consequential",
+   "via": "bundle:pm-korea"
+  },
+  "kr-year-end-tax-settlement": {
+   "tier": "consequential",
+   "via": "bundle:pm-korea"
   },
   "kyc-escalation": {
    "tier": "high-stakes",

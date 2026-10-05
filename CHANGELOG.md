@@ -9,9 +9,11 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
-**1281 skills · 151 bundles** (from 1250 · 144 at v81.2.0).
+**1285 skills · 152 bundles** (from 1250 · 144 at v81.2.0).
 
 ### Added
+- **pm-korea** (4): `kr-year-end-tax-settlement` (연말정산), `kr-severance-pay` (퇴직금 and 퇴직연금), `kr-cover-letter` (항목별 자기소개서) and `kr-work-report` (개조식 보고서 and 주간보고), with a Korean **README.ko.md**.
+- **Vietnamese and Indonesian**: 28 widely useful skills translated into each (`skills-i18n/vi/`, `skills-i18n/id/`): job search, workplace writing and the document decoders.
 - **Chinese audience packs.** **pm-china-teachers** (5, 教师): `cn-lesson-plan` (新课标教案), `cn-class-meeting` (主题班会), `cn-parent-meeting` (家长会), `cn-term-comments` (期末评语) and `cn-open-class` (公开课与说课稿). **pm-china-parents** (4, 家长): `cn-school-entry` (幼升小 / 小升初, marked to confirm locally), `cn-home-school-comms` (家校沟通), `cn-extracurricular-plan` (兴趣班 against the 双减 rules) and `cn-homework-helper-parent` (guiding, not doing, homework). **pm-china-trade** (4, 外贸): `cn-inquiry-reply`, `cn-letter-of-credit-check` (UCP 600, marked to confirm), `cn-trade-quotation` (Incoterms 2020 cost build-up) and `cn-customs-docs`. **pm-china-manufacturing** (4, 制造业): `cn-8d-report`, `cn-5s-audit`, `cn-quality-traceability` and `cn-sop-writer` (作业指导书).
 - **适老化**: `cn-help-parents-admin` (帮爸妈办事: 医保, 社保, 养老金, banking and scam protection for ageing parents) in pm-china-life, and an optional 长辈版 output (one action per step, plain words, a call-for-help line) in `cn-medical-insurance-claim` and `cn-social-insurance-explainer`.
 - **pm-sea** (4): `singapore-cpf-explainer`, `malaysia-epf-explainer` (KWSP), `singapore-employment-act` and `huawen-business-writing` (新马华文商务写作). **pm-japan** (4): `jp-year-end-adjustment` (年末調整), `jp-tax-return` (確定申告), `jp-resignation-procedures` (退職の手続き) and `jp-ringisho` (稟議書), in Japanese.

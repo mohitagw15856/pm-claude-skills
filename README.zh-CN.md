@@ -1,4 +1,4 @@
-# PM Skills：1281 个专业 Agent Skills，用中文提问就能用
+# PM Skills：1285 个专业 Agent Skills，用中文提问就能用
 
 <p align="center">
   <a href="https://mohitagw15856.github.io/pm-claude-skills/live/season.html">
@@ -18,7 +18,7 @@
 > 然后直接说你要什么：*"帮我把这些笔记整理成周报。"*
 
 <p align="center">
-  <a href="README.md">English</a> · <b>简体中文</b> · <a href="README.zh-TW.md">繁體中文</a> · <a href="docs/CHINA.md">在中国使用</a> · <a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/">技能科技树</a> · <a href="SKILLS.md">全部技能</a> · <a href="docs/learn-zh/README.md">开源小课</a> · <a href="CHANGELOG.md">更新日志</a>
+  <a href="README.md">English</a> · <b>简体中文</b> · <a href="README.zh-TW.md">繁體中文</a> · <a href="README.ko.md">한국어</a> · <a href="docs/CHINA.md">在中国使用</a> · <a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/">技能科技树</a> · <a href="SKILLS.md">全部技能</a> · <a href="docs/learn-zh/README.md">开源小课</a> · <a href="CHANGELOG.md">更新日志</a>
 </p>
 
 <p align="center">
@@ -38,7 +38,7 @@
 </p>
 
 > **公司要裁员，你不知道该拿多少补偿；明天要开需求评审，PRD 还缺一半；下个月公务员面试，没人陪你练。**
-> 通用 AI 像一个很自信的实习生。**PM Skills** 是资深同事的笔记：1281 份，每份一个 Markdown 文件。（PM 指 Professional，专业人士，不只是产品经理。）
+> 通用 AI 像一个很自信的实习生。**PM Skills** 是资深同事的笔记：1285 份，每份一个 Markdown 文件。（PM 指 Professional，专业人士，不只是产品经理。）
 
 <p align="center">
   <picture>
@@ -48,7 +48,7 @@
   </picture>
 </p>
 
-## 🎯 1,281 个技能，你只需要 5 个
+## 🎯 1,285 个技能，你只需要 5 个
 
 <p align="center">
   <picture>

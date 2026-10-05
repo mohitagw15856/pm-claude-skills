@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="340" viewBox="0 0 860 340" role="img" aria-label="A funnel: 1,281 skills in the library, 151 bundles, one path picked for you, and the 5 skills you will actually use.">
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="340" viewBox="0 0 860 340" role="img" aria-label="A funnel: 1,285 skills in the library, 152 bundles, one path picked for you, and the 5 skills you will actually use.">
   <style>
     text{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', Helvetica, Arial, sans-serif}
     .ttl{font-size:20px;font-weight:700;fill:#1f2328}
@@ -12,17 +12,17 @@
     @media (prefers-reduced-motion: reduce){.r0,.r1,.r2,.r3,.f{animation:none!important;opacity:1!important}.dot{animation:none!important;opacity:0!important}}
   </style>
   <rect width="860" height="340" rx="18" fill="#f7f4ee"/>
-  <text x="40" y="44" class="ttl">1,281 skills. You need 5.</text>
+  <text x="40" y="44" class="ttl">1,285 skills. You need 5.</text>
   <g class="r0">
     <path d="M40 74H420L381 116H79Z" fill="#e3ddd2"/>
-    <text x="230" y="101" text-anchor="middle" class="big" fill="#1f2328">1,281 skills</text>
+    <text x="230" y="101" text-anchor="middle" class="big" fill="#1f2328">1,285 skills</text>
     <path d="M440 95H498" stroke="#e3ddd2" stroke-width="1.5" stroke-dasharray="3 4"/>
     <circle cx="506" cy="95" r="4" fill="#5d6670"/>
     <text x="522" y="100" class="small">the whole library, one markdown file each</text>
   </g>
   <g class="r1">
     <path d="M85 128H375L336 170H124Z" fill="#efe6fb"/>
-    <text x="230" y="155" text-anchor="middle" class="big" fill="#4b2a7a">151 bundles</text>
+    <text x="230" y="155" text-anchor="middle" class="big" fill="#4b2a7a">152 bundles</text>
     <path d="M395 149H498" stroke="#e3ddd2" stroke-width="1.5" stroke-dasharray="3 4"/>
     <circle cx="506" cy="149" r="4" fill="#4b2a7a"/>
     <text x="522" y="154" class="small">grouped by profession and life moment</text>

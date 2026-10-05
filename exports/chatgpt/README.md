@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1293 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
+1297 skills exported. Copy a `SYSTEM_PROMPT.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -681,6 +681,10 @@
 | Knowledge-Gap Map | `pm-learning` | `pm-learning/knowledge-gap-map/SYSTEM_PROMPT.md` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/SYSTEM_PROMPT.md` |
 | KPI Tracker Design | `pm-cowork` | `pm-cowork/kpi-tracker-design/SYSTEM_PROMPT.md` |
+| Korean Job Application Essay (자기소개서) | `pm-korea` | `pm-korea/kr-cover-letter/SYSTEM_PROMPT.md` |
+| Korea Severance Pay (퇴직금) | `pm-korea` | `pm-korea/kr-severance-pay/SYSTEM_PROMPT.md` |
+| Korean Business Report (보고서 and 주간보고) | `pm-korea` | `pm-korea/kr-work-report/SYSTEM_PROMPT.md` |
+| Korea Year-End Tax Settlement (연말정산) | `pm-korea` | `pm-korea/kr-year-end-tax-settlement/SYSTEM_PROMPT.md` |
 | KYC Escalation | `pm-banking` | `pm-banking/kyc-escalation/SYSTEM_PROMPT.md` |
 | Landing Page Copy | `pm-copy` | `pm-copy/landing-page-copy/SYSTEM_PROMPT.md` |
 | Language-Learning Plan | `pm-students` | `pm-students/language-learning-plan/SYSTEM_PROMPT.md` |

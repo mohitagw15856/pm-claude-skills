@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1293 skills exported. Copy a `SKILL.md` into the tool to use it.
+1297 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -681,6 +681,10 @@
 | Knowledge-Gap Map | `pm-learning` | `knowledge-gap-map/SKILL.md` |
 | Knowledge Gardening | `pm-cowork` | `knowledge-gardening/SKILL.md` |
 | KPI Tracker Design | `pm-cowork` | `kpi-tracker-design/SKILL.md` |
+| Korean Job Application Essay (자기소개서) | `pm-korea` | `kr-cover-letter/SKILL.md` |
+| Korea Severance Pay (퇴직금) | `pm-korea` | `kr-severance-pay/SKILL.md` |
+| Korean Business Report (보고서 and 주간보고) | `pm-korea` | `kr-work-report/SKILL.md` |
+| Korea Year-End Tax Settlement (연말정산) | `pm-korea` | `kr-year-end-tax-settlement/SKILL.md` |
 | KYC Escalation | `pm-banking` | `kyc-escalation/SKILL.md` |
 | Landing Page Copy | `pm-copy` | `landing-page-copy/SKILL.md` |
 | Language-Learning Plan | `pm-students` | `language-learning-plan/SKILL.md` |

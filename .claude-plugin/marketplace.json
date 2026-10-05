@@ -49,6 +49,14 @@
       "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
     },
     {
+      "name": "pm-korea",
+      "description": "Working in Korea: year-end tax settlement (연말정산), severance pay and retirement pensions (퇴직금, 퇴직연금), the 항목별 자기소개서 for Korean employers, and 개조식 보고서 and 주간보고, in Korean",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-korea",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-sea",
       "description": "Singapore and Malaysia: CPF and EPF (KWSP) explained and checked against payslips, Singapore Employment Act entitlements and claims, and 新马华文 business writing with local terms and bilingual versions",
       "version": "1.0.0",
