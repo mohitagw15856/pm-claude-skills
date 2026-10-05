@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PM Skills for Word and WPS</title>
+<meta name="robots" content="noindex" />
+<link rel="stylesheet" href="../styles.css" />
+<style>
+  body { padding: 0; }
+  .tp { padding: 12px 14px 40px; font-size: 14px; }
+  .tp h1 { font-size: 17px; margin: 0 0 4px; }
+  .muted { color: var(--muted); font-size: 12.5px; line-height: 1.5; }
+  .tp label { display: block; font-size: 12.5px; color: var(--muted); margin: 12px 0 4px; }
+  .tp input, .tp select, .tp textarea { width: 100%; box-sizing: border-box; border: 1px solid var(--border); background: var(--bg); color: var(--text); border-radius: 8px; padding: 8px 10px; font-size: 14px; }
+  .tp textarea { min-height: 90px; resize: vertical; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .btn { border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 8px; padding: 8px 12px; cursor: pointer; font-size: 14px; }
+  .btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  details { margin-top: 14px; }
+  #out { white-space: pre-wrap; border: 1px solid var(--border); border-radius: 8px; padding: 10px; margin-top: 12px; max-height: 320px; overflow: auto; font-size: 13px; }
+  #status { margin-top: 8px; }
+</style>
+</head>
+<body>
+<main class="tp">
+  <h1>PM Skills</h1>
+  <p class="muted" id="host">Pick a skill, then insert its template or run it on the selected text. 选择技能，插入模板或对选中文字运行。</p>
+
+  <label for="q">Find a skill · 找技能</label>
+  <input id="q" type="search" placeholder="weekly report · 周报 · lease" autocomplete="off" />
+  <label for="skill">Skill · 技能</label>
+  <select id="skill"></select>
+
+  <div class="row">
+    <button class="btn" type="button" id="insertTemplate">Insert template · 插入模板</button>
+    <button class="btn" type="button" id="insertSkill">Insert full skill · 插入全文</button>
+  </div>
+
+  <details>
+    <summary>Run on the selected text · 对选中文字运行</summary>
+    <p class="muted">Uses your own OpenAI-compatible endpoint. The key is stored only in this add-in's local storage and is sent only to the endpoint you enter. 使用你自己的模型接口，Key 只保存在本机。</p>
+    <label for="base">Endpoint · 接口地址</label>
+    <select id="preset">
+      <option value="">Choose a preset · 选择预设</option>
+      <option value="https://api.deepseek.com|deepseek-chat">DeepSeek</option>
+      <option value="https://api-inference.modelscope.cn/v1|Qwen/Qwen3.8-27B">魔搭 ModelScope (free quota)</option>
+      <option value="https://dashscope.aliyuncs.com/compatible-mode/v1|qwen-plus">通义千问 DashScope</option>
+      <option value="http://localhost:11434/v1|qwen2.5">Ollama (local)</option>
+      <option value="https://api.openai.com/v1|gpt-4o-mini">OpenAI</option>
+    </select>
+    <input id="base" type="url" placeholder="https://api.deepseek.com" />
+    <label for="model">Model · 模型</label>
+    <input id="model" type="text" placeholder="deepseek-chat" />
+    <label for="key">API key</label>
+    <input id="key" type="password" autocomplete="off" placeholder="sk-…" />
+    <label for="extra">Anything to add · 补充说明</label>
+    <textarea id="extra" placeholder="Optional. The selected text is sent as the input. 可选，选中的文字会作为输入。"></textarea>
+    <div class="row">
+      <button class="btn primary" type="button" id="run">Run · 运行</button>
+      <button class="btn" type="button" id="insertOut" disabled>Insert result · 插入结果</button>
+    </div>
+  </details>
+
+  <p class="muted" id="status" role="status" aria-live="polite"></p>
+  <div id="out" hidden></div>
+</main>
+<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+<script src="taskpane.js"></script>
+</body>
+</html>

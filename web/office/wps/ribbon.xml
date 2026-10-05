@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- WPS 文字 ribbon for the PM Skills add-in: one tab with one button that opens the task pane. -->
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui" onLoad="OnAddinLoad">
+  <ribbon startFromScratch="false">
+    <tabs>
+      <tab id="pmSkillsTab" label="PM Skills">
+        <group id="pmSkillsGroup" label="技能 Skills">
+          <button id="pmSkillsOpen" label="打开技能面板" size="large" onAction="OnAction" getImage="GetImage" />
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

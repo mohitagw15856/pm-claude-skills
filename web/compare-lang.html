@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Side by side · 双语对照 | PM Skills</title>
+<meta name="description" content="Read any translated PM Skill next to its English original, section by section: Simplified and Traditional Chinese, Japanese, Vietnamese, Indonesian and more. For translators and for learning either language." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/compare-lang.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .cl-wrap { max-width: 1180px; margin: 0 auto; padding: 16px 22px 70px; }
+  .cl-wrap h1 { font-size: 26px; margin-bottom: 6px; }
+  .lead { color: var(--muted); line-height: 1.6; max-width: 760px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin: 18px 0; }
+  .field { flex: 1 1 220px; min-width: 0; }
+  .field label { display: block; font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+  .field input, .field select { border: 1px solid var(--border); background: var(--bg); color: var(--text); border-radius: 10px; padding: 9px 12px; font-size: 15px; width: 100%; min-width: 0; box-sizing: border-box; }
+  .count { color: var(--muted); font-size: 13px; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; border-top: 1px solid var(--border); padding: 14px 0; }
+  .pair > div { min-width: 0; overflow-wrap: anywhere; line-height: 1.65; }
+  .pair h2 { font-size: 17px; margin: 0 0 8px; }
+  .pair h3 { font-size: 15px; }
+  .pair table { border-collapse: collapse; font-size: 13px; display: block; overflow-x: auto; }
+  .pair td, .pair th { border: 1px solid var(--border); padding: 4px 8px; }
+  .pair pre { white-space: pre-wrap; font-size: 13px; overflow-x: auto; }
+  .pair img { max-width: 100%; }
+  .colhead { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22px; position: sticky; top: 0; background: var(--bg); padding: 8px 0; font-weight: 700; z-index: 2; }
+  .empty { color: var(--muted); padding: 30px 0; }
+  @media (max-width: 760px) { .pair, .colhead { grid-template-columns: 1fr; } .pair > div + div { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); } .colhead { display: none; } }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<main class="cl-wrap">
+  <h1>🔀 Side by side · 双语对照</h1>
+  <p class="lead">Read a translated skill next to its English original, one section per row. Useful for checking a translation, or for learning the professional vocabulary in either language. 英文原版与译文逐节对照，方便校对译文，也方便学习两种语言的职场用语。</p>
+  <div class="controls">
+    <div class="field">
+      <label for="lang">Language · 语言</label>
+      <select id="lang"></select>
+    </div>
+    <div class="field">
+      <label for="skill">Skill · 技能</label>
+      <select id="skill"></select>
+    </div>
+    <span class="count" id="count" aria-live="polite"></span>
+  </div>
+  <div id="view"><p class="empty">Loading… 加载中…</p></div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
+<script src="nav.js" defer></script>
+<script>
+(function () {
+  var NAME = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+  var LANG = /^[a-z]{2}(-[A-Z]{2})?$/;
+  var langSel = document.getElementById('lang'), skillSel = document.getElementById('skill');
+  var view = document.getElementById('view'), count = document.getElementById('count');
+  var index = null;
+
+  function render(md) {
+    var html = window.marked ? marked.parse(md) : '<pre>' + md.replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; }) + '</pre>';
+    return window.DOMPurify ? DOMPurify.sanitize(html) : html;
+  }
+  // Split on top-level "## " headings outside code fences. Translations keep the
+  // same headings as the original (tests/i18n-parity.mjs), so sections line up.
+  function sections(md) {
+    var out = [''], fence = false;
+    md.split('\n').forEach(function (l) {
+      if (/^```/.test(l)) fence = !fence;
+      if (!fence && /^## /.test(l)) out.push('');
+      out[out.length - 1] += l + '\n';
+    });
+    return out.filter(function (s) { return s.trim(); });
+  }
+  function fetchText(url) { return fetch(url).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }); }
+
+  function fillSkills(lang, wanted) {
+    var names = index.langs[lang].skills;
+    skillSel.innerHTML = names.map(function (n) {
+      return '<option value="' + n + '">' + (index.skills[n].title || n).replace(/[<>&"]/g, '') + ' (' + n + ')</option>';
+    }).join('');
+    if (wanted && names.indexOf(wanted) !== -1) skillSel.value = wanted;
+    count.textContent = names.length + ' translated skills';
+  }
+
+  function show() {
+    var lang = langSel.value, skill = skillSel.value;
+    if (!LANG.test(lang) || !NAME.test(skill)) return;
+    var q = new URLSearchParams({ skill: skill, lang: lang });
+    history.replaceState(null, '', '?' + q.toString());
+    view.innerHTML = '<p class="empty">Loading… 加载中…</p>';
+    Promise.all([fetchText('i18n/en/' + skill + '.md'), fetchText('i18n/' + lang + '/' + skill + '.md')]).then(function (pair) {
+      var a = sections(pair[0]), b = sections(pair[1]);
+      var rows = Math.max(a.length, b.length), html = '';
+      html += '<div class="colhead"><div>English</div><div lang="' + lang + '">' + index.langs[lang].label + '</div></div>';
+      for (var i = 0; i < rows; i++) {
+        html += '<section class="pair"><div lang="en">' + render(a[i] || '') + '</div><div lang="' + lang + '">' + render(b[i] || '') + '</div></section>';
+      }
+      view.innerHTML = html;
+    }).catch(function () {
+      view.innerHTML = '<p class="empty">Could not load this skill. It may not be published yet. 无法加载这个技能。</p>';
+    });
+  }
+
+  fetch('i18n/index.json').then(function (r) { return r.json(); }).then(function (data) {
+    index = data;
+    var params = new URLSearchParams(location.search);
+    var langs = Object.keys(index.langs);
+    var lang = LANG.test(params.get('lang') || '') && index.langs[params.get('lang')] ? params.get('lang') : (index.langs.zh ? 'zh' : langs[0]);
+    langSel.innerHTML = langs.map(function (l) { return '<option value="' + l + '">' + index.langs[l].label + ' · ' + index.langs[l].skills.length + '</option>'; }).join('');
+    langSel.value = lang;
+    fillSkills(lang, params.get('skill'));
+    show();
+  }).catch(function () {
+    view.innerHTML = '<p class="empty">The translations index is built when the site deploys. 译文索引在网站部署时生成。</p>';
+  });
+  langSel.addEventListener('change', function () { fillSkills(langSel.value, skillSel.value); show(); });
+  skillSel.addEventListener('change', show);
+})();
+</script>
+</body>
+</html>

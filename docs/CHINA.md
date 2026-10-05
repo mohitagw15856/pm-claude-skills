@@ -43,6 +43,18 @@ Gitee 镜像每次 GitHub 更新后自动同步：<https://gitee.com/mohitagw/pm
 
 一个约 21 MB 的 zip，包含全部技能、中文译文、免安装的命令行工具和本地 MCP 服务器，以及能直接双击打开的离线目录。在 [Gitee 发行版](https://gitee.com/mohitagw/pm-claude-skills/releases)或 [GitHub Pages](https://mohitagw15856.github.io/pm-claude-skills/offline/pm-skills-offline.zip) 下载。校验、Windows / macOS / Linux / 统信 UOS / 银河麒麟上的安装、只装部分技能包，见 [内网离线包说明](zh/offline.md)。
 
+### 用 jsDelivr 下载单个技能
+
+GitHub 打不开时，单个技能可以从 jsDelivr 的 npm 镜像下载：`https://cdn.jsdelivr.net/npm/pm-claude-skills@<版本>/skills/<技能名>/SKILL.md`。从别人的仓库安装技能时加 `--cdn`，就不访问 GitHub。详见 [CDN 说明](CDN.md)。
+
+### 在 WPS 文字和 Word 里用
+
+[WPS 与 Word 加载项](../integrations/office-addin/README.md)：在文档里插入技能的输出模板，或者用你自己的模型接口对选中的文字运行技能。统信 UOS、银河麒麟上的 WPS 也可以装。
+
+### 导入飞书多维表格
+
+周报、OKR、求职进度三张表可以直接导入飞书多维表格、Notion 和 Obsidian，见 [可导入的表格](../templates/import/README.md)。
+
 ## 二、在国内常用的 AI 编程工具里使用
 
 | 工具 | 命令 | 规则写入位置 |

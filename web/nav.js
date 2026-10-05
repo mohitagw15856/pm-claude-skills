@@ -151,6 +151,7 @@
     { group: '🗺 Explore', items: [
       ['semantic.html', '🧠 Semantic Search'],
       ['listen.html', '🔊 听一听 (Mandarin demos)'],
+      ['compare-lang.html', '🔀 Side by side · 双语对照'],
       ['card.html', '📕 小红书分享卡 (share cards)'],
       ['bainian.html', '🧧 拜年语生成器'],
       ['zhufu.html', '💌 祝福语生成器 (greetings)'],
@@ -330,14 +331,45 @@
 
 // ── PWA: manifest + offline service worker (registered from every page) ──────
 (function () {
+  var ns = document.querySelector('script[src*="nav.js"]');
+  var root2 = ns ? (ns.getAttribute('src').match(/^(.*?)nav\.js/) || ['', ''])[1] : '';
   if (!document.querySelector('link[rel="manifest"]')) {
     var l = document.createElement('link'); l.rel = 'manifest';
-    var ns = document.querySelector('script[src*="nav.js"]');
-    var root2 = ns ? (ns.getAttribute('src').match(/^(.*?)nav\.js/) || ['', ''])[1] : '';
     l.href = root2 + 'manifest.json';
     document.head.appendChild(l);
   }
-  if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
-    navigator.serviceWorker.register((typeof root2 === 'string' ? root2 : '') + 'sw.js').catch(function () {});
+  if (!('serviceWorker' in navigator) || !(location.protocol === 'https:' || location.hostname === 'localhost')) return;
+  // A new deploy installs a new worker that waits; offer a reload instead of
+  // swapping code under an open page.
+  function offerUpdate(worker) {
+    if (document.getElementById('pm-update')) return;
+    var bar = document.createElement('div');
+    bar.id = 'pm-update';
+    bar.setAttribute('role', 'status');
+    bar.style.cssText = 'position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:9999;background:#1f2328;color:#fff;padding:10px 14px;border-radius:10px;font:14px system-ui,sans-serif;display:flex;gap:10px;align-items:center;box-shadow:0 6px 24px rgba(0,0,0,.3);max-width:calc(100vw - 32px)';
+    bar.innerHTML = '<span>A new version of the playground is ready. 新版本已就绪。</span>';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = 'Reload';
+    btn.style.cssText = 'background:#f2a65a;color:#1f2328;border:0;border-radius:6px;padding:6px 10px;font-weight:700;cursor:pointer';
+    btn.addEventListener('click', function () { worker.postMessage('SKIP_WAITING'); });
+    bar.appendChild(btn);
+    document.body.appendChild(bar);
   }
+  var reloading = false;
+  navigator.serviceWorker.addEventListener('controllerchange', function () {
+    if (reloading) return;
+    reloading = true;
+    location.reload();
+  });
+  navigator.serviceWorker.register(root2 + 'sw.js').then(function (reg) {
+    if (reg.waiting && navigator.serviceWorker.controller) offerUpdate(reg.waiting);
+    reg.addEventListener('updatefound', function () {
+      var w = reg.installing;
+      if (!w) return;
+      w.addEventListener('statechange', function () {
+        if (w.state === 'installed' && navigator.serviceWorker.controller) offerUpdate(w);
+      });
+    });
+  }).catch(function () {});
 })();

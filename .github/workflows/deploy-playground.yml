@@ -213,6 +213,18 @@ jobs:
           node scripts/build-offline-pack.mjs --out web/offline --max-mb 40
           (cd web/offline && sha256sum -c pm-skills-offline.zip.sha256)
 
+      - name: Build the side-by-side translations (web/i18n/, for compare-lang.html)
+        run: node scripts/build-i18n-web.mjs
+
+      - name: Stamp the service worker with this build
+        env:
+          SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          printf '%s' "$SHA" | grep -Eq '^[0-9a-f]{7,40}$'
+          sed -i "s/__PM_BUILD__/${SHA:0:12}/" web/sw.js
+          grep -q "${SHA:0:12}" web/sw.js
+
       - name: Configure Pages
         uses: actions/configure-pages@v6
 
