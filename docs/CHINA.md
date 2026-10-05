@@ -43,6 +43,18 @@ Gitee 镜像每次 GitHub 更新后自动同步：<https://gitee.com/mohitagw/pm
 
 一个约 21 MB 的 zip，包含全部技能、中文译文、免安装的命令行工具和本地 MCP 服务器，以及能直接双击打开的离线目录。在 [Gitee 发行版](https://gitee.com/mohitagw/pm-claude-skills/releases)或 [GitHub Pages](https://mohitagw15856.github.io/pm-claude-skills/offline/pm-skills-offline.zip) 下载。校验、Windows / macOS / Linux / 统信 UOS / 银河麒麟上的安装、只装部分技能包，见 [内网离线包说明](zh/offline.md)。
 
+### 用 jsDelivr 下载单个技能
+
+GitHub 打不开时，单个技能可以从 jsDelivr 的 npm 镜像下载：`https://cdn.jsdelivr.net/npm/pm-claude-skills@<版本>/skills/<技能名>/SKILL.md`。从别人的仓库安装技能时加 `--cdn`，就不访问 GitHub。详见 [CDN 说明](CDN.md)。
+
+### 在 WPS 文字和 Word 里用
+
+[WPS 与 Word 加载项](../integrations/office-addin/README.md)：在文档里插入技能的输出模板，或者用你自己的模型接口对选中的文字运行技能。统信 UOS、银河麒麟上的 WPS 也可以装。
+
+### 导入飞书多维表格
+
+周报、OKR、求职进度三张表可以直接导入飞书多维表格、Notion 和 Obsidian，见 [可导入的表格](../templates/import/README.md)。
+
 ## 二、在国内常用的 AI 编程工具里使用
 
 | 工具 | 命令 | 规则写入位置 |
@@ -70,7 +82,11 @@ npx pm-claude-skills add --agent trae --bundle pm-china-work,pm-cv
 |---|---|
 | **pm-china-work** 职场 | 周报 / 月报、述职报告 / 年终总结、晋升答辩、复盘、需求评审、职级对标、飞书文档、钉钉日志、企业微信公告 |
 | **pm-china-exams** 考试与求职 | 申论、公务员结构化面试、考研规划、校招（秋招、春招、三方协议）、国企面试 |
-| **pm-china-life** 生活事务 | 劳动合同解读、经济补偿金（N、N+1、2N）估算、个税年度汇算、五险一金、高考志愿 |
+| **pm-china-life** 生活事务 | 劳动合同解读、经济补偿金（N、N+1、2N）估算、个税年度汇算、五险一金、高考志愿、帮爸妈办事（医保、社保、养老金、防诈骗，附长辈版） |
+| **pm-china-teachers** 教师 | 新课标教案、主题班会、家长会发言稿与材料、期末评语、公开课与说课稿 |
+| **pm-china-parents** 家长 | 幼升小与小升初规划、家校沟通、兴趣班与双减、辅导作业不代写 |
+| **pm-china-trade** 外贸 | 询盘回复（中英文）、信用证审单（UCP 600）、报价单与 Incoterms 2020、报关单证 |
+| **pm-china-manufacturing** 制造业 | 8D 报告、5S / 6S 检查表、质量追溯、作业指导书（SOP） |
 | **pm-zh-content** 内容平台 | 小红书笔记、公众号文章、抖音脚本、直播带货脚本 |
 | **pm-chuhai** 出海 | 出海市场进入计划、跨境电商 listing、PIPL 与 GDPR 对照 |
 | **pm-cv** 简历 | 按目标公司定制简历、中英文简历、ATS 检查、导出 Word |

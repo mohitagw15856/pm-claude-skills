@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PM Skills for Word: a task pane add-in. Sideload it (see ../README.md); the pane
+     itself is served from the project site, so there is nothing to host. -->
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xsi:type="TaskPaneApp">
+  <Id>27a162ff-fab3-55b6-a681-beb19bb2bb14</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>PM Skills (open source)</ProviderName>
+  <DefaultLocale>en-GB</DefaultLocale>
+  <DisplayName DefaultValue="PM Skills" />
+  <Description DefaultValue="1,285 professional skills inside Word: insert a skill's output template, or run a skill on the selected text with your own model endpoint." />
+  <IconUrl DefaultValue="https://mohitagw15856.github.io/pm-claude-skills/assets/icon-192.png" />
+  <HighResolutionIconUrl DefaultValue="https://mohitagw15856.github.io/pm-claude-skills/assets/icon-512.png" />
+  <SupportUrl DefaultValue="https://github.com/mohitagw15856/pm-claude-skills/tree/main/integrations/office-addin" />
+  <AppDomains>
+    <AppDomain>https://mohitagw15856.github.io</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Document" />
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://mohitagw15856.github.io/pm-claude-skills/office/taskpane.html" />
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+</OfficeApp>

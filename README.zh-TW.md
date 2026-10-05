@@ -1,4 +1,4 @@
-# PM Skills：1,263 個專業 Agent Skills，用中文提問就能用
+# PM Skills：1,285 個專業 Agent Skills，用中文提問就能用
 
 <p align="center">
   <a href="https://mohitagw15856.github.io/pm-claude-skills/live/season-tw.html">
@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <b>繁體中文</b> · <a href="SKILLS.md">全部技能</a> · <a href="skills-i18n/zh-TW/">繁體中文譯本</a> · <a href="CHANGELOG.md">更新紀錄</a>
+  <a href="README.md">English</a> · <a href="README.zh-CN.md">简体中文</a> · <b>繁體中文</b> · <a href="README.ko.md">한국어</a> · <a href="SKILLS.md">全部技能</a> · <a href="skills-i18n/zh-TW/">繁體中文譯本</a> · <a href="CHANGELOG.md">更新紀錄</a>
 </p>
 
 <p align="center">
@@ -25,7 +25,7 @@
 </p>
 
 > **公司說要資遣你，你不確定資遣費該拿多少；轉工之後，舊公司的強積金不知道該怎麼處理；每個月加班，卻從沒算清楚加班費。**
-> 通用 AI 像一個很有自信的實習生。**PM Skills** 是資深同事的筆記：1,263 份，每份一個 Markdown 檔案。（PM 指 Professional，各行各業的專業人士，不只是產品經理。）
+> 通用 AI 像一個很有自信的實習生。**PM Skills** 是資深同事的筆記：1,285 份，每份一個 Markdown 檔案。（PM 指 Professional，各行各業的專業人士，不只是產品經理。）
 
 MIT 開源授權，永久免費。沒有執行環境，沒有遙測，不需要帳號。
 

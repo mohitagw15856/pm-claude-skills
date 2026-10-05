@@ -220,6 +220,11 @@
       "a": "cn-medical-insurance-claim",
       "b": "insurance-claim",
       "reason": "China's public basic medical insurance (医保): scheme, local deductible and cap, cross-region registration and manual reimbursement, vs filing and escalating a claim with a private insurer."
+    },
+    {
+      "a": "cn-sop-writer",
+      "b": "sop-writer",
+      "reason": "A one-station shop-floor work instruction (作业指导书) for a Chinese factory, with key points and reasons, control-plan checks and photo placeholders, vs a formal business or office SOP."
     }
   ]
 }

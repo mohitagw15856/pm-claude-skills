@@ -41,6 +41,15 @@ How TVC and qualifying deferred annuity premiums share an annual deduction cap (
 ### 6. Fund-choice framework
 Fees (fund expense ratio), risk level against the person's horizon, the default investment strategy (DIS) as a low-fee option, without naming a fund to buy.
 
+## Programmatic Helper
+
+```bash
+python3 skills/hk-mpf-explainer/scripts/mpf.py --income 40000
+python3 skills/hk-mpf-explainer/scripts/mpf.py --income 25000 --months 12
+```
+
+Mandatory contributions for both sides and the yearly tax-deductible amount. Standard library only.
+
 ## Quality Checks
 
 - [ ] Every limit, cap and date is marked to confirm with the MPFA

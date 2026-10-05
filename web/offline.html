@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>You are offline · 离线 | PM Skills</title>
+<meta name="description" content="The PM Skills playground is offline. Pages and skill bundles you have opened before still work." />
+<meta name="robots" content="noindex" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .off-wrap { max-width: 620px; margin: 0 auto; padding: 32px 22px 70px; }
+  .off-wrap h1 { font-size: 26px; margin-bottom: 6px; }
+  .lead { color: var(--muted); line-height: 1.6; }
+  .panel { border: 1px solid var(--border); border-radius: 16px; background: var(--panel); padding: 18px 22px; margin: 20px 0; }
+  .panel ul { margin: 8px 0 0; padding-left: 20px; line-height: 1.8; }
+  .btn { display: inline-block; border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 10px; padding: 10px 16px; cursor: pointer; font-size: 15px; }
+</style>
+</head>
+<body>
+<main class="off-wrap">
+  <h1>📴 You are offline · 你现在离线</h1>
+  <p class="lead">This page has not been saved on this device yet. Everything you have opened before still works without a connection, including the skill bundles you have used.</p>
+  <p class="lead" lang="zh-CN">这个页面还没有保存到本机。之前打开过的页面和用过的技能包，断网后仍然可以使用。</p>
+  <div class="panel">
+    <strong>Works offline · 离线可用</strong>
+    <ul>
+      <li><a href="index.html">Playground</a>: the skill list, and the bodies of the bundles you have opened</li>
+      <li><a href="find.html">Find a skill · 找技能</a></li>
+      <li><a href="listen.html">听一听</a> (needs a voice installed on this device)</li>
+      <li><a href="handbook.html">Handbook</a> · <a href="daily.html">Daily</a></li>
+    </ul>
+  </div>
+  <p><button class="btn" type="button" id="retry">Try again · 重试</button></p>
+  <p class="lead">Running a skill against a model still needs a connection to that model, unless it runs locally (Ollama, or the in-browser model).</p>
+</main>
+<script>
+  document.getElementById('retry').addEventListener('click', function () { location.reload(); });
+  window.addEventListener('online', function () { location.reload(); });
+</script>
+</body>
+</html>

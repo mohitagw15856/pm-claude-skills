@@ -22,6 +22,19 @@ const samplesFile = join(root, 'web', 'samples.json');
 const samples = existsSync(samplesFile) ? JSON.parse(readFileSync(samplesFile, 'utf8')).samples : [];
 const sampleBySkill = Object.fromEntries(samples.map((s) => [s.skill, s]));
 
+// "Last checked" stamps for rule-based skills (scripts/rules-reviewed.mjs).
+const reviewedFile = join(root, 'data', 'rules-reviewed.json');
+const reviewed = existsSync(reviewedFile) ? JSON.parse(readFileSync(reviewedFile, 'utf8')).skills : {};
+function reviewedBadge(name) {
+  const r = reviewed[name];
+  if (!r || !/^\d{4}-\d{2}-\d{2}$/.test(r.reviewed)) return '';
+  const days = Math.floor((Date.now() - Date.parse(`${r.reviewed}T00:00:00Z`)) / 86400000);
+  const state = days > 730 ? 'red' : days > 365 ? 'amber' : 'fresh';
+  const who = r.by && r.by !== 'seed' ? ` by ${r.by}` : '';
+  const title = state === 'fresh' ? `Rules last checked ${r.reviewed}${who}` : `Rules last checked ${r.reviewed}${who}: over ${state === 'red' ? 'two years' : 'a year'} ago, so check them yourself`;
+  return `<span class="tier rules-${state}" title="${esc(title)}">⚖️ rules checked ${r.reviewed}</span>`;
+}
+
 const giscus = existsSync(join(root, 'giscus.json')) ? JSON.parse(readFileSync(join(root, 'giscus.json'), 'utf8')) : {};
 const giscusReady = giscus.repoId && giscus.categoryId && giscus.repo;
 function discussionBlock(s) {
@@ -135,6 +148,7 @@ main{max-width:780px;margin:0 auto;padding:0 22px 70px}
 .tier-production{color:#6ee7b7;border-color:rgba(16,185,129,.5)}
 .tier-stable{color:#93c5fd;border-color:rgba(59,130,246,.5)}
 .tier-experimental{color:#fcd34d;border-color:rgba(245,158,11,.5)}
+.rules-fresh{color:#c4b5fd;border-color:rgba(139,92,246,.45)}.rules-amber{color:#fcd34d;border-color:rgba(245,158,11,.7)}.rules-red{color:#fca5a5;border-color:rgba(239,68,68,.7)}
 .badge-eval{color:#6ee7b7;border-color:rgba(16,185,129,.5)}
 .badge-l3{color:#c9a4ff;border-color:rgba(160,120,255,.5)}
 .badge-script{color:#7fd6c2;border-color:rgba(90,200,170,.5)}
@@ -275,7 +289,7 @@ ${existsSync(join(root, 'skills-i18n', 'zh', s.name, 'SKILL.md')) ? `<link rel="
     <div class="inner">
       <h1>${esc(s.title)}</h1>
       <div class="row">
-        <span class="tier tier-${s.tier}">${dot} ${label}</span>${s.updated ? `<span class="tier" title="last change to this skill">🕐 updated ${s.updated}</span>` : ''}
+        <span class="tier tier-${s.tier}">${dot} ${label}</span>${s.updated ? `<span class="tier" title="last change to this skill">🕐 updated ${s.updated}</span>` : ''}${reviewedBadge(s.name)}
         ${evalBadge}
         <span class="badge badge-l3">🔷 SkillSpec L3</span>
         ${cf.hasScript ? '<span class="badge badge-script">⚙ ships an executable helper</span>' : ''}

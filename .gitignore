@@ -71,6 +71,7 @@ web/offline/
 pm-skills-offline.zip
 pm-skills-offline.zip.sha256
 web/skills-body/
+web/i18n/
 web/zh/
 web/lobehub/
 web/used-by.html

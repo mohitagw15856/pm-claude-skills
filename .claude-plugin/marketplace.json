@@ -9,11 +9,51 @@
   },
   "plugins": [
     {
+      "name": "pm-china-manufacturing",
+      "description": "The Chinese manufacturing pack (制造业): bilingual 8D reports for customer complaints, 5S and 6S audit checklists with scoring and corrective-action tracking, product and batch traceability plans with a mock recall drill (质量追溯), and shop-floor work instructions (作业指导书 SOP), written in Chinese",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-china-manufacturing",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-china-trade",
+      "description": "The Chinese foreign-trade pack (外贸): inquiry replies in English with a Chinese version (询盘回复), letter of credit review and document discrepancy checks with UCP 600 references (信用证审单, marked to confirm), export quotations with an Incoterms 2020 cost build-up (报价单), and customs document checklists (报关单证, marked to confirm)",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-china-trade",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-china-parents",
+      "description": "The Chinese parents pack (家长): school entry planning for 幼升小 and 小升初 (timeline, documents, 学区 and 多校划片 questions, marked to confirm locally), polite home-school messages to teachers (家校沟通), an extracurricular plan checked against the 双减 rules, time and budget, and guiding rather than doing a child's homework, written in Chinese",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-china-parents",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-china-teachers",
+      "description": "The Chinese teachers pack (教师): lesson plans in the 教案 format aligned to the subject's core competencies (marked to confirm against the current curriculum standard), 主题班会 plans, parent-meeting speeches and materials (家长会), warm and specific end-of-term comments (期末评语), and open-class preparation with the 说课稿, written in Chinese",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-china-teachers",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-japan",
       "description": "Working in Japan: year-end tax adjustment (年末調整), the tax return (確定申告) with e-Tax, resignation procedures from notice to unemployment benefit, and the 稟議書 approval request, in Japanese",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-japan",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-korea",
+      "description": "Working in Korea: year-end tax settlement (연말정산), severance pay and retirement pensions (퇴직금, 퇴직연금), the 항목별 자기소개서 for Korean employers, and 개조식 보고서 and 주간보고, in Korean",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-korea",
       "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
     },
     {
@@ -82,7 +122,7 @@
     },
     {
       "name": "pm-china-life",
-      "description": "Life admin in mainland China: decode a labour contract, estimate severance (N, N+1, 2N), prepare the annual income tax reconciliation, understand social insurance and the housing fund, withdraw the housing fund, claim medical insurance, check city hukou routes and points, plan small-business taxes, and plan gaokao university applications",
+      "description": "Life admin in mainland China: decode a labour contract, estimate severance (N, N+1, 2N), prepare the annual income tax reconciliation, understand social insurance and the housing fund, withdraw the housing fund, claim medical insurance, check city hukou routes and points, plan small-business taxes, plan gaokao university applications, and help ageing parents with 医保, 社保, 养老金, banking and scam protection (帮爸妈办事, with a plain-language 长辈版)",
       "version": "1.0.0",
       "category": "productivity",
       "source": "./plugins/pm-china-life",

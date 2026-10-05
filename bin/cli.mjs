@@ -19,6 +19,9 @@ import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { homedir } from 'node:os';
 import { createRequire } from 'node:module';
+import { liteify } from './lib/lite.mjs';
+import { loadProfile, profileMarkdown, PROFILE_DESCRIPTION } from './lib/profile.mjs';
+import { loadConfig, satisfies } from './lib/teamconfig.mjs';
 
 const PKG_ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const STAR = '⭐ Find this useful? Star the repo: https://github.com/mohitagw15856/pm-claude-skills\n💛 The free playground runs are sponsor-funded — fund more: https://github.com/sponsors/mohitagw15856';
@@ -99,6 +102,9 @@ function parse(argv) {
     const a = argv[i];
     if (a === '--link') out.link = true;
     else if (a === '--dry-run') out.dryRun = true;
+    else if (a === '--lite') out.lite = true;
+    else if (a === '--no-profile') out.noProfile = true;
+    else if (a === '--check') out.check = true;
     else if (a === '--json') out.json = true;
     else if (a === '--help' || a === '-h') out.help = true;
     else if (a === '--version' || a === '-v') out.version = true;
@@ -218,13 +224,94 @@ function placeDir(src, dest, { link, dryRun }) {
   cpSync(src, dest, { recursive: true });
 }
 
+// The personal profile (bin/profile.mjs) goes next to the skills as one more
+// file the agent reads: a skill for native agents, an always-on rule elsewhere.
+function installProfile(agent, target, opts) {
+  if (opts.noProfile) return;
+  let profile = null;
+  try { profile = loadProfile(); } catch (e) { console.warn(`  note: ${e.message}`); return; }
+  if (!profile || !Object.keys(profile).length) return;
+  if (opts.dryRun) { console.log('  would install your profile as pm-profile'); return; }
+  const md = profileMarkdown(profile);
+  if (NATIVE.has(agent)) {
+    mkdirSync(join(target, 'pm-profile'), { recursive: true });
+    writeFileSync(join(target, 'pm-profile', 'SKILL.md'), `---\nname: pm-profile\ndescription: ${yamlString(PROFILE_DESCRIPTION)}\n---\n\n${md}`);
+  } else if (agent in RULEFILE) {
+    const head = agent === 'cursor' ? `---\ndescription: ${yamlString(PROFILE_DESCRIPTION)}\nalwaysApply: true\n---\n\n` : '';
+    writeFileSync(join(target, `pm-profile${RULEFILE[agent]}`), head + md);
+  } else if (agent in GENERATED) {
+    const out = GENERATED[agent].render(PROFILE_DESCRIPTION, md).replace('alwaysApply: false', 'alwaysApply: true').replace('trigger: model_decision', 'trigger: always_on');
+    writeFileSync(join(target, 'pm-profile.md'), out);
+  }
+  console.log('  installed your profile as pm-profile (change it with "profile", skip it with --no-profile)');
+}
+
+// What `add` would write for one skill, so `sync --check` can compare.
+function expectedFile(agent, name, target, lite) {
+  const src = join(PKG_ROOT, 'skills', name, 'SKILL.md');
+  if (!existsSync(src)) return null;
+  const raw0 = readFileSync(src, 'utf8');
+  if (NATIVE.has(agent)) return { path: join(target, name, 'SKILL.md'), content: lite ? liteify(raw0) : raw0 };
+  if (agent in RULEFILE) {
+    const f = join(PKG_ROOT, 'exports', agent, name + RULEFILE[agent]);
+    return existsSync(f) ? { path: join(target, name + RULEFILE[agent]), content: readFileSync(f, 'utf8') } : null;
+  }
+  const raw = lite ? liteify(raw0) : raw0;
+  if (/^deprecated:/m.test((raw.match(/^---\r?\n([\s\S]*?)\r?\n---/) || [, ''])[1])) return null;
+  const { description, body } = splitSkill(raw);
+  return { path: join(target, `${name}.md`), content: GENERATED[agent].render(description, body) };
+}
+
+// `sync`: install exactly the set in .pm-skills.json; `sync --check` exits 1 when
+// this machine does not match it (for CI and onboarding scripts).
+function sync(opts) {
+  const path = resolve(opts.config || '.pm-skills.json');
+  let cfg;
+  try { cfg = loadConfig(path, AGENTS); } catch (e) { console.error(`Error: ${e.message}`); process.exit(2); }
+  if (cfg.version && !satisfies(VERSION, cfg.version)) {
+    const msg = `this library is ${VERSION}, but ${basename(path)} asks for ${cfg.version}; run the matching version, e.g. npx pm-claude-skills@${String(cfg.version).replace(/^>=\s*/, '').replace(/\.x$|\.\*$/, '')} sync`;
+    if (opts.check) { console.error(`✗ ${msg}`); process.exit(1); }
+    console.warn(`warning: ${msg}`);
+  }
+  const set = new Set(cfg.bundles.length ? bundleFilter(cfg.bundles.join(',')) : []);
+  for (const s of cfg.skills) {
+    if (!existsSync(join(PKG_ROOT, 'skills', s, 'SKILL.md'))) { console.error(`Error: no skill called "${s}".`); process.exit(2); }
+    set.add(s);
+  }
+  const lite = cfg.lite || !!opts.lite;
+  const targetFor = (agent) => resolve(cfg.targets[agent] ? resolve(dirname(path), cfg.targets[agent]) : defaultTarget(agent));
+  if (opts.check) {
+    const problems = [];
+    for (const agent of cfg.agents) {
+      const target = targetFor(agent);
+      for (const name of [...set].sort()) {
+        const exp = expectedFile(agent, name, target, lite);
+        if (!exp) continue;
+        if (!existsSync(exp.path)) problems.push(`${agent}: ${name} is missing`);
+        else if (readFileSync(exp.path, 'utf8') !== exp.content) problems.push(`${agent}: ${name} differs from version ${VERSION}`);
+      }
+    }
+    if (problems.length) {
+      console.error(`✗ Out of sync with ${basename(path)}: ${problems.length} problem(s). Run: npx pm-claude-skills sync`);
+      for (const p of problems.slice(0, 20)) console.error(`  ${p}`);
+      if (problems.length > 20) console.error(`  … and ${problems.length - 20} more`);
+      process.exit(1);
+    }
+    console.log(`✓ In sync with ${basename(path)}: ${set.size} skill(s) for ${cfg.agents.join(', ')}.`);
+    return;
+  }
+  for (const agent of cfg.agents) add({ ...opts, agent, _only: set, lite, target: targetFor(agent) });
+}
+
 function add(opts) {
   const agent = opts.agent;
   if (!agent || !AGENTS.includes(agent)) {
     console.error(`Error: --agent must be one of: ${AGENTS.join(', ')}.`);
     process.exit(2);
   }
-  const only = bundleFilter(opts.bundle);
+  const only = opts._only || bundleFilter(opts.bundle);
+  if (opts.lite && opts.link) { console.error('Error: --lite writes condensed copies, so it cannot be combined with --link.'); process.exit(2); }
+  if (opts.lite && agent in RULEFILE) console.log(`  note: --lite applies to native and generated agents; '${agent}' uses the pre-built rule files in exports/, which are installed in full.`);
   const skillsDir = join(PKG_ROOT, 'skills');
   if (!existsSync(skillsDir)) { console.error(`Error: bundled skills/ not found at ${skillsDir}.`); process.exit(1); }
   const target = resolve(opts.target || defaultTarget(agent));
@@ -248,7 +335,8 @@ function add(opts) {
       const src = join(skillsDir, name, 'SKILL.md');
       if (!existsSync(src)) continue;
       if (only && !only.has(name)) continue;
-      const raw = readFileSync(src, 'utf8');
+      const raw0 = readFileSync(src, 'utf8');
+      const raw = opts.lite ? liteify(raw0) : raw0;
       if (/^deprecated:/m.test((raw.match(/^---\r?\n([\s\S]*?)\r?\n---/) || [, ''])[1])) continue;
       const { description, body } = splitSkill(raw);
       const out = gen.render(description, body);
@@ -278,6 +366,7 @@ function add(opts) {
       if (!existsSync(join(src, 'SKILL.md'))) continue;
       if (only && !only.has(name)) continue;
       placeDir(src, join(target, name), opts);
+      if (opts.lite && !opts.dryRun) writeFileSync(join(target, name, 'SKILL.md'), liteify(readFileSync(join(src, 'SKILL.md'), 'utf8')));
       count++;
     }
     // Private overlay: a company's own skills merged on top of the public library
@@ -319,6 +408,7 @@ function add(opts) {
     }
   }
 
+  installProfile(agent, target, opts);
   console.log(`\n${opts.dryRun ? 'Would install' : 'Installed'} ${count} item(s) for '${agent}'.`);
   if (!opts.dryRun) {
     const note = {
@@ -476,7 +566,7 @@ const HELP = `pm-claude-skills — install professional Agent Skills into any AI
 (This is a CLI, not a library — you don't need \`npm install\`; \`npx …\` always runs the latest.)
 
 Usage:
-  npx pm-claude-skills add --agent <${AGENTS.join('|')}> [--bundle <a,b>] [--target <path>] [--link] [--dry-run]
+  npx pm-claude-skills add --agent <${AGENTS.join('|')}> [--bundle <a,b>] [--target <path>] [--link] [--lite] [--dry-run]
   npx pm-claude-skills run <skill> [--text "…" | --input <file>] [--model <m>] [--out <file>]
   npx pm-claude-skills find "<describe your task>" [--json] [--limit <n>]   # ranked task→skill router (start here)
   npx pm-claude-skills search [query…] [--json] [--limit <n>]
@@ -504,6 +594,9 @@ Examples:
   npx pm-claude-skills add --agent windsurf   # .md rules into ./.windsurf/rules
   npx pm-claude-skills add --agent codex --link
   npx pm-claude-skills add --agent trae --bundle pm-china-work,pm-cv   # Trae rules for two bundles
+  npx pm-claude-skills add --agent claude --lite                       # condensed skills for small local models (Qwen 7B, DeepSeek distills)
+  npx pm-claude-skills profile init                                   # your role, city, language: skills personalise from it
+  npx pm-claude-skills sync [--check]                                  # install the team set in .pm-skills.json (--check for CI)
   npx pm-claude-skills add --agent qoder      # Qoder / Lingma: --agent lingma
 
   npx pm-claude-skills find "prep a QBR for an at-risk account"   # describe the task, get ranked skills + a measured/unmeasured badge
@@ -523,12 +616,18 @@ ${STAR}
 const opts = parse(process.argv.slice(2));
 const cmd = opts._[0];
 if (opts.version) console.log(VERSION);
-else if (!cmd || cmd === 'help' || (opts.help && !['run', 'generate', 'install', 'chain', 'init', 'reckoning', 'council', 'migrate'].includes(cmd))) console.log(HELP);
+else if (!cmd || cmd === 'help' || (opts.help && !['run', 'generate', 'install', 'chain', 'init', 'reckoning', 'council', 'migrate', 'profile'].includes(cmd))) console.log(HELP);
 else if (cmd === 'list') list();
 else if (cmd === 'search') search(opts);
 else if (cmd === 'find') find(opts);
 else if (cmd === 'changelog') changelog(opts);
 else if (cmd === 'add') add(opts);
+else if (cmd === 'sync') sync(opts);
+else if (cmd === 'profile') {
+  const { run } = await import('./profile.mjs');
+  try { process.exit(await run(process.argv.slice(3))); }
+  catch (e) { console.error(`Error: ${e.message}`); process.exit(1); }
+}
 else if (cmd === 'test') {
   const { run } = await import('./test.mjs');
   try { process.exit(await run(process.argv.slice(3))); }

@@ -157,6 +157,8 @@ const CASES = [
     expect: /~129 tokens {2}\(chars\/4: 125 · words\*4\/3: 133 — heuristics, ±15%\)[\s\S]*\$0\.000387\/call · \$0\.0039 across 10 calls at \$3\/M/ },
   { name: 'chat bot (Feishu, DingTalk, WeCom signature and AES vectors)', script: 'integrations/chat-bots/pm_chat_bot.py',
     args: ['--selftest'], expect: /selftest: \d+ passed, 0 failed/ },
+  { name: 'Discord bot (Ed25519 RFC 8032 vectors, interactions, rate limit)', script: 'integrations/discord-bot/pm_discord_bot.py',
+    args: ['--selftest'], expect: /selftest: \d+ passed, 0 failed/ },
 ];
 for (const c of CASES) {
   const r = spawnSync('python3', [join(root, c.script), ...c.args], { encoding: 'utf8', timeout: 30000 });

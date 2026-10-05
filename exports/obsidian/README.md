@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1275 skills exported. Copy a `.md rule` into the tool to use it.
+1297 skills exported. Copy a `.md rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -186,35 +186,53 @@
 | Clip Factory | `pm-newgen` | `pm-newgen/clip-factory/clip-factory.md` |
 | Clone Brief | `pm-2027` | `pm-2027/clone-brief/clone-brief.md` |
 | Closing Disclosure Decoder | `pm-decoders` | `pm-decoders/closing-disclosure-decoder/closing-disclosure-decoder.md` |
+| 5S / 6S Audit (5S / 6S 检查表) | `pm-china-manufacturing` | `pm-china-manufacturing/cn-5s-audit/cn-5s-audit.md` |
+| 8D Report (8D 报告) | `pm-china-manufacturing` | `pm-china-manufacturing/cn-8d-report/cn-8d-report.md` |
 | Campus Recruitment (校招) | `pm-china-exams` | `pm-china-exams/cn-campus-recruitment/cn-campus-recruitment.md` |
 | GB/T 7714 References (参考文献著录) | `pm-china-exams` | `pm-china-exams/cn-citation-gbt7714/cn-citation-gbt7714.md` |
 | Civil Service Essay (申论) | `pm-china-exams` | `pm-china-exams/cn-civil-exam-essay/cn-civil-exam-essay.md` |
 | Civil Service Interview (结构化面试) | `pm-china-exams` | `pm-china-exams/cn-civil-exam-interview/cn-civil-exam-interview.md` |
+| Class Meeting Plan (主题班会方案) | `pm-china-teachers` | `pm-china-teachers/cn-class-meeting/cn-class-meeting.md` |
+| Customs Documents (报关单证清单) | `pm-china-trade` | `pm-china-trade/cn-customs-docs/cn-customs-docs.md` |
 | Data Export Assessment (数据出境) | `pm-china-compliance` | `pm-china-compliance/cn-data-export-assessment/cn-data-export-assessment.md` |
+| Extracurricular Planner (兴趣班与课外安排) | `pm-china-parents` | `pm-china-parents/cn-extracurricular-plan/cn-extracurricular-plan.md` |
 | 复盘 (Fupan) | `pm-china-work` | `pm-china-work/cn-fupan/cn-fupan.md` |
 | Gaokao Application Planner (高考志愿) | `pm-china-life` | `pm-china-life/cn-gaokao-planner/cn-gaokao-planner.md` |
 | Generative AI Filing (生成式人工智能备案) | `pm-china-compliance` | `pm-china-compliance/cn-genai-filing/cn-genai-filing.md` |
+| Helping Parents With Admin (帮爸妈办事) | `pm-china-life` | `pm-china-life/cn-help-parents-admin/cn-help-parents-admin.md` |
+| Home-School Messages (家校沟通) | `pm-china-parents` | `pm-china-parents/cn-home-school-comms/cn-home-school-comms.md` |
+| Homework Guide for Parents (家长辅导作业) | `pm-china-parents` | `pm-china-parents/cn-homework-helper-parent/cn-homework-helper-parent.md` |
 | Housing Fund Withdrawal (公积金提取) | `pm-china-life` | `pm-china-life/cn-housing-fund-withdrawal/cn-housing-fund-withdrawal.md` |
 | Hukou Points (积分落户) | `pm-china-life` | `pm-china-life/cn-hukou-points/cn-hukou-points.md` |
 | China Annual Tax Reconciliation (个税年度汇算) | `pm-china-life` | `pm-china-life/cn-iit-reconciliation/cn-iit-reconciliation.md` |
+| Inquiry Reply (外贸询盘回复) | `pm-china-trade` | `pm-china-trade/cn-inquiry-reply/cn-inquiry-reply.md` |
 | Chinese Internet Jargon Translator (互联网黑话翻译器) | `pm-china-work` | `pm-china-work/cn-jargon-translator/cn-jargon-translator.md` |
 | Kaoyan Planner (考研规划) | `pm-china-exams` | `pm-china-exams/cn-kaoyan-planner/cn-kaoyan-planner.md` |
 | China Labour Contract Decoder (劳动合同) | `pm-china-life` | `pm-china-life/cn-labour-contract-decoder/cn-labour-contract-decoder.md` |
+| Chinese Lesson Plan (教案 / 教学设计) | `pm-china-teachers` | `pm-china-teachers/cn-lesson-plan/cn-lesson-plan.md` |
+| Letter of Credit Check (信用证审证与审单) | `pm-china-trade` | `pm-china-trade/cn-letter-of-credit-check/cn-letter-of-credit-check.md` |
 | Level Mapper (职级对标) | `pm-china-work` | `pm-china-work/cn-level-mapper/cn-level-mapper.md` |
 | Medical Insurance Claims (医保报销) | `pm-china-life` | `pm-china-life/cn-medical-insurance-claim/cn-medical-insurance-claim.md` |
 | MLPS 2.0 Checklist (等保 2.0) | `pm-china-compliance` | `pm-china-compliance/cn-mlps-checklist/cn-mlps-checklist.md` |
 | Next Year's OKR and Development Plan (明年个人 OKR 与个人发展计划) | `pm-china-yearend` | `pm-china-yearend/cn-next-year-plan/cn-next-year-plan.md` |
 | Official Document (公文) | `pm-china-work` | `pm-china-work/cn-official-document/cn-official-document.md` |
+| Open Class and Lesson Talk (公开课准备与说课稿) | `pm-china-teachers` | `pm-china-teachers/cn-open-class/cn-open-class.md` |
+| Parent Meeting Pack (家长会发言稿与材料) | `pm-china-teachers` | `pm-china-teachers/cn-parent-meeting/cn-parent-meeting.md` |
 | PIPL Impact Assessment (个人信息保护影响评估) | `pm-china-compliance` | `pm-china-compliance/cn-pipl-pia/cn-pipl-pia.md` |
 | PRD Review (需求评审) | `pm-china-work` | `pm-china-work/cn-prd-review/cn-prd-review.md` |
 | Promotion Defence (晋升答辩) | `pm-china-work` | `pm-china-work/cn-promotion-defence/cn-promotion-defence.md` |
+| Quality Traceability Plan (质量追溯方案) | `pm-china-manufacturing` | `pm-china-manufacturing/cn-quality-traceability/cn-quality-traceability.md` |
+| School Entry Planner (幼升小 / 小升初) | `pm-china-parents` | `pm-china-parents/cn-school-entry/cn-school-entry.md` |
 | China Severance Calculator (经济补偿金) | `pm-china-life` | `pm-china-life/cn-severance-calculator/cn-severance-calculator.md` |
 | 述职 PPT Builder (述职 PPT 大纲与讲稿) | `pm-china-yearend` | `pm-china-yearend/cn-shuzhi-deck/cn-shuzhi-deck.md` |
 | Small Business Tax (个体户与小微企业税务) | `pm-china-life` | `pm-china-life/cn-small-business-tax/cn-small-business-tax.md` |
 | China Social Insurance Explainer (五险一金) | `pm-china-life` | `pm-china-life/cn-social-insurance-explainer/cn-social-insurance-explainer.md` |
 | State-Owned Enterprise Interview (国企面试) | `pm-china-exams` | `pm-china-exams/cn-soe-interview/cn-soe-interview.md` |
+| Work Instruction (作业指导书 / SOP) | `pm-china-manufacturing` | `pm-china-manufacturing/cn-sop-writer/cn-sop-writer.md` |
 | Tech Interview Drill (大厂技术面试) | `pm-china-exams` | `pm-china-exams/cn-tech-interview-drill/cn-tech-interview-drill.md` |
+| End-of-Term Comments (期末评语) | `pm-china-teachers` | `pm-china-teachers/cn-term-comments/cn-term-comments.md` |
 | Thesis Proposal (开题报告) | `pm-china-exams` | `pm-china-exams/cn-thesis-proposal/cn-thesis-proposal.md` |
+| Export Quotation (外贸报价单与成本核算) | `pm-china-trade` | `pm-china-trade/cn-trade-quotation/cn-trade-quotation.md` |
 | Chinese Weekly Report (周报) | `pm-china-work` | `pm-china-work/cn-weekly-report/cn-weekly-report.md` |
 | Year-End Bonus Clarifier (年终奖、13薪与个税) | `pm-china-yearend` | `pm-china-yearend/cn-year-end-bonus/cn-year-end-bonus.md` |
 | Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-yearend` | `pm-china-yearend/cn-year-end-review/cn-year-end-review.md` |
@@ -663,6 +681,10 @@
 | Knowledge-Gap Map | `pm-learning` | `pm-learning/knowledge-gap-map/knowledge-gap-map.md` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/knowledge-gardening.md` |
 | KPI Tracker Design | `pm-cowork` | `pm-cowork/kpi-tracker-design/kpi-tracker-design.md` |
+| Korean Job Application Essay (자기소개서) | `pm-korea` | `pm-korea/kr-cover-letter/kr-cover-letter.md` |
+| Korea Severance Pay (퇴직금) | `pm-korea` | `pm-korea/kr-severance-pay/kr-severance-pay.md` |
+| Korean Business Report (보고서 and 주간보고) | `pm-korea` | `pm-korea/kr-work-report/kr-work-report.md` |
+| Korea Year-End Tax Settlement (연말정산) | `pm-korea` | `pm-korea/kr-year-end-tax-settlement/kr-year-end-tax-settlement.md` |
 | KYC Escalation | `pm-banking` | `pm-banking/kyc-escalation/kyc-escalation.md` |
 | Landing Page Copy | `pm-copy` | `pm-copy/landing-page-copy/landing-page-copy.md` |
 | Language-Learning Plan | `pm-students` | `pm-students/language-learning-plan/language-learning-plan.md` |

@@ -44,8 +44,21 @@ async function gh(path) {
   if (!res.ok) throw new Error(`GitHub API ${res.status} for ${path}`);
   return res.json();
 }
+// --cdn (or PM_SKILLS_CDN=jsdelivr) fetches through jsDelivr instead of GitHub,
+// for networks where GitHub's API and raw files are blocked or slow (mainland
+// China). jsDelivr caches branches for up to 12 hours; pin a tag for freshness.
+let CDN = false;
+async function jd(path) {
+  const res = await fetch('https://data.jsdelivr.com' + path, { headers: { 'User-Agent': 'pm-claude-skills-install' } });
+  if (!res.ok) {
+    const msg = await res.json().then((j) => j.message).catch(() => '');
+    throw new Error(`jsDelivr ${res.status} for ${path}${msg ? `: ${msg}` : ''}`);
+  }
+  return res.json();
+}
 async function raw(owner, repo, ref, path) {
-  const res = await fetch(`https://raw.githubusercontent.com/${owner}/${repo}/${ref}/${path}`, { headers: { 'User-Agent': 'pm-claude-skills-install' } });
+  const url = CDN ? `https://cdn.jsdelivr.net/gh/${owner}/${repo}@${ref}/${path}` : `https://raw.githubusercontent.com/${owner}/${repo}/${ref}/${path}`;
+  const res = await fetch(url, { headers: { 'User-Agent': 'pm-claude-skills-install' } });
   if (!res.ok) throw new Error(`fetch failed (${res.status}) for ${path}`);
   return res.text();
 }
@@ -71,7 +84,7 @@ export async function run(argv) {
     console.log(`Install skills from ANY public GitHub repo — security-scanned and SkillSpec-graded on the way in.
 
 Usage:
-  pm-claude-skills install <owner/repo>[@ref] [--agent claude|hermes|codex|openclaw] [--only a,b] [--dry-run] [--force]
+  pm-claude-skills install <owner/repo>[@ref] [--agent claude|hermes|codex|openclaw] [--only a,b] [--dry-run] [--force] [--cdn]
 
 What happens:
   1. The repo is scanned for SKILL.md folders (any layout).
@@ -81,7 +94,9 @@ What happens:
   4. Clean skills are installed; flagged skills are NEVER installed. Existing skills are never
      overwritten without --force; names that shadow the curated library are warned about.
 
---dry-run audits and reports without writing anything.`);
+--dry-run audits and reports without writing anything.
+--cdn fetches through jsDelivr instead of GitHub (also PM_SKILLS_CDN=jsdelivr), for networks
+  where GitHub is blocked or slow. Branches are cached up to 12 hours there; pin a tag.`);
     return spec ? 0 : 1;
   }
 
@@ -94,10 +109,24 @@ What happens:
   const only = (getArg(argv, 'only', '') || '').split(',').map((s) => s.trim()).filter(Boolean);
   const dryRun = argv.includes('--dry-run');
   const force = argv.includes('--force');
+  CDN = argv.includes('--cdn') || process.env.PM_SKILLS_CDN === 'jsdelivr';
 
-  console.error(`🔎 Scanning github.com/${owner}/${repo}${refArg ? '@' + refArg : ''} …`);
-  const ref = refArg || (await gh(`/repos/${owner}/${repo}`)).default_branch;
-  const tree = await gh(`/repos/${owner}/${repo}/git/trees/${encodeURIComponent(ref)}?recursive=1`);
+  console.error(`🔎 Scanning github.com/${owner}/${repo}${refArg ? '@' + refArg : ''}${CDN ? ' through jsDelivr' : ''} …`);
+  let ref, tree;
+  if (CDN) {
+    // The latest tag if there is one, otherwise the usual default branch names.
+    const tries = refArg ? [refArg] : [(await jd(`/v1/packages/gh/${owner}/${repo}/resolved`).catch(() => ({}))).version, 'main', 'master'].filter(Boolean);
+    let pkg = null;
+    let lastErr = null;
+    for (const r of tries) {
+      try { pkg = await jd(`/v1/packages/gh/${owner}/${repo}@${encodeURIComponent(r)}?structure=flat`); ref = r; break; } catch (e) { lastErr = e; }
+    }
+    if (!pkg) throw new Error(`jsDelivr could not serve that repo or ref (${lastErr ? lastErr.message : 'not found'}). Repos over 50 MB are not served from GitHub there; for this library use npm instead (see docs/CDN.md).`);
+    tree = { tree: (pkg.files || []).map((f) => ({ type: 'blob', path: f.name.replace(/^\//, '') })) };
+  } else {
+    ref = refArg || (await gh(`/repos/${owner}/${repo}`)).default_branch;
+    tree = await gh(`/repos/${owner}/${repo}/git/trees/${encodeURIComponent(ref)}?recursive=1`);
+  }
   if (tree.truncated) console.error('  (repo tree truncated by GitHub — very large repo; some skills may be missed)');
 
   // Group the tree by skill folder: any directory that directly contains a SKILL.md.

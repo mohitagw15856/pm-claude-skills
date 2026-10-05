@@ -1,4 +1,4 @@
-# 🗂️ All 1263 Skills — full catalog
+# 🗂️ All 1285 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -723,7 +723,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (801 skills)
+## 🌍 Industries & Public Sector (823 skills)
 
 ### `other` — 22 skills
 
@@ -907,11 +907,12 @@
 | **Tech Interview Drill (大厂技术面试)** (`cn-tech-interview-drill`) | Use when asked 帮我准备大厂技术面试, 八股文怎么背, 模拟一面二面, 系统设计面试题, 项目深挖怎么答, 手撕算法, or run a mock technical interview for a Chinese internet company. Produces a… | — |
 | **Thesis Proposal (开题报告)** (`cn-thesis-proposal`) | Use when asked 帮我写开题报告, 开题答辩怎么准备, 文献综述怎么写, 技术路线图, 研究内容和创新点, or write a thesis proposal for a Chinese university. Produces a 开题报告 in the section… | — |
 
-### `pm-china-life` — 9 skills
+### `pm-china-life` — 10 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Gaokao Application Planner (高考志愿)** (`cn-gaokao-planner`) | Help a student and family plan university applications after the 高考 (gaokao): use the student's provincial rank rather than raw score, build a 冲 /… | — |
+| **Helping Parents With Admin (帮爸妈办事)** (`cn-help-parents-admin`) | Use when asked 帮爸妈办医保, 帮父母办养老金认证, 爸妈异地就医备案, 帮老人办银行业务, 父母被诈骗了怎么办, 教爸妈用手机办事, 代办委托书, or help an adult child handle 医保, 社保, 养老金, banking or scam… | — |
 | **Housing Fund Withdrawal (公积金提取)** (`cn-housing-fund-withdrawal`) | Use when asked 公积金怎么提取, 租房能提公积金吗, 离职后公积金怎么办, 公积金贷款能贷多少, 异地提取公积金, or plan how to use a Chinese housing provident fund (住房公积金). Produces the… | — |
 | **Hukou Points (积分落户)** (`cn-hukou-points`) | Use when asked 积分落户怎么算, 我能不能落户上海 / 北京 / 深圳, 居转户条件, 落户积分差多少, 人才引进落户, or check eligibility for a city household registration (户口) in China. Produces… | — |
 | **China Annual Tax Reconciliation (个税年度汇算)** (`cn-iit-reconciliation`) | Prepare for China's annual individual income tax reconciliation (个税年度汇算): check income, deductions and special additional deductions, compare the… | — |
@@ -920,6 +921,43 @@
 | **China Severance Calculator (经济补偿金)** (`cn-severance-calculator`) | Estimate economic compensation (经济补偿金) when employment ends in mainland China: N, N+1 or 2N under the Labour Contract Law, with the high-earner… | — |
 | **Small Business Tax (个体户与小微企业税务)** (`cn-small-business-tax`) | Use when asked 个体户怎么报税, 小规模纳税人增值税怎么算, 小微企业所得税优惠, 经营所得汇算, 开票超过免税额怎么办, or plan taxes for a sole trader (个体工商户) or small company in China. Produces… | — |
 | **China Social Insurance Explainer (五险一金)** (`cn-social-insurance-explainer`) | Explain China's social insurance and housing fund (五险一金) for a specific person and city: what each part covers, what they and their employer pay… | — |
+
+### `pm-china-manufacturing` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **5S / 6S Audit (5S / 6S 检查表)** (`cn-5s-audit`) | Use when asked 5S 检查表, 6S 管理, 现场管理检查, 5S 评分标准, 车间 6S 稽核, 做一份 5S 推行计划, or design a 5S or 6S audit for a workshop, warehouse or office in a Chinese… | — |
+| **8D Report (8D 报告)** (`cn-8d-report`) | Use when asked 写8D报告, 客户投诉8D, 质量问题8D, 客诉回复报告, 8D 怎么写, 根本原因分析报告, or write an 8D problem-solving report for a customer complaint or internal quality… | — |
+| **Quality Traceability Plan (质量追溯方案)** (`cn-quality-traceability`) | Use when asked 质量追溯体系怎么建, 产品追溯方案, 批次追溯, 一物一码, 客户要求可追溯性, 召回演练, 正向追溯和反向追溯, or plan product and batch traceability in a Chinese factory. Produces a… | — |
+| **Work Instruction (作业指导书 / SOP)** (`cn-sop-writer`) | Use when asked 写作业指导书, SOP 作业指导书, 工序作业标准, 标准作业书, 新员工看得懂的操作说明, WI 怎么写, or write a shop-floor work instruction for a production or inspection step… | — |
+
+### `pm-china-parents` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Extracurricular Planner (兴趣班与课外安排)** (`cn-extracurricular-plan`) | Use when asked 兴趣班怎么选, 孩子报几个兴趣班合适, 课外班规划, 双减后还能报什么班, 寒暑假怎么安排, 预付费培训退费, or plan a child's out-of-school activities in mainland China. Produces a… | — |
+| **Home-School Messages (家校沟通)** (`cn-home-school-comms`) | Use when asked 怎么给老师发消息, 跟班主任沟通, 孩子在学校被欺负怎么跟老师说, 对老师的做法有意见, 请假怎么写, 家长群里怎么说话, or write a message from a parent to a teacher in China. Produces a… | — |
+| **Homework Guide for Parents (家长辅导作业)** (`cn-homework-helper-parent`) | Use when asked 孩子这道题不会怎么教, 辅导作业总发火, 怎么给孩子讲应用题, 陪写作业, 作业太多写到很晚, or help a parent guide (not do) a child's homework in China. Produces, for the… | — |
+| **School Entry Planner (幼升小 / 小升初)** (`cn-school-entry`) | Use when asked 幼升小怎么准备, 小升初流程, 入学信息采集, 学区房和多校划片, 公民同招, 民办摇号, 随迁子女入学, 居住证入学材料, or plan a child's entry to primary or junior high school in mainland… | — |
+
+### `pm-china-teachers` — 5 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Class Meeting Plan (主题班会方案)** (`cn-class-meeting`) | Use when asked 帮我设计一节班会, 主题班会方案, 班会课教案, 开学第一课, 安全教育班会, 心理健康班会, or plan a class meeting as a 班主任. Produces a 主题班会 plan in Chinese with the… | — |
+| **Chinese Lesson Plan (教案 / 教学设计)** (`cn-lesson-plan`) | Use when asked 帮我写教案, 写一份新课标教案, 教学设计, 单元教学设计, 大单元教案, or a lesson plan in the format Chinese schools expect. Produces a complete 教案 in Chinese with… | — |
+| **Open Class and Lesson Talk (公开课准备与说课稿)** (`cn-open-class`) | Use when asked 公开课怎么准备, 帮我写说课稿, 优质课比赛, 评优课, 教研课, 汇报课, 青年教师赛课, 试讲, or prepare an observed lesson in a Chinese school. Produces a 公开课 preparation… | — |
+| **Parent Meeting Pack (家长会发言稿与材料)** (`cn-parent-meeting`) | Use when asked 帮我写家长会发言稿, 家长会PPT大纲, 班主任家长会讲话, 期中家长会, 新生家长会, 毕业班家长会, or prepare a parent meeting as a Chinese teacher. Produces a parent-meeting… | — |
+| **End-of-Term Comments (期末评语)** (`cn-term-comments`) | Use when asked 帮我写期末评语, 学生评语, 班主任评语, 综合素质评价评语, 素质报告单评语, or write end-of-term comments for a class in China. Produces individual comments in… | — |
+
+### `pm-china-trade` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Customs Documents (报关单证清单)** (`cn-customs-docs`) | Use when asked 出口报关需要什么单证, 报关资料清单, 申报要素怎么填, 报关单和发票对不上, 出口退税需要的单证, 进口清关资料, or prepare customs documents for an export or import shipment in… | — |
+| **Inquiry Reply (外贸询盘回复)** (`cn-inquiry-reply`) | Use when asked 回复询盘, 外贸询盘怎么回, 帮我回客户邮件, 阿里国际站询盘回复, 客户只问价格怎么回, 跟进没回复的客户, or reply to a foreign-trade inquiry from a Chinese exporter. Produces a… | — |
+| **Letter of Credit Check (信用证审证与审单)** (`cn-letter-of-credit-check`) | Use when asked 信用证审证, 信用证审单, 审核信用证条款, 单证不符点, L/C 软条款, 交单前检查, or check a letter of credit or a set of export documents against it for a Chinese… | — |
+| **Export Quotation (外贸报价单与成本核算)** (`cn-trade-quotation`) | Use when asked 做一份外贸报价单, FOB 和 CIF 怎么报价, 出口报价核算, 报价怎么算利润, 退税怎么算进报价, quotation sheet for an export order, or price an export quotation from China.… | — |
 
 ### `pm-china-work` — 10 skills
 
@@ -1551,6 +1589,15 @@
 | **Meal Prep OS** (`meal-prep-os`) | Turn what's actually in the fridge and 90 minutes on Sunday into a week that mostly feeds itself — a cook-once-eat-thrice batch plan, the… | — |
 | **What's for Dinner** (`whats-for-dinner`) | Decide what to cook tonight from what you already have and how much time/energy you've got — no shopping trip, no recipe rabbit hole. | — |
 
+### `pm-korea` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Korean Job Application Essay (자기소개서)** (`kr-cover-letter`) | Use when asked 자기소개서 써 줘, 자소서 첨삭해 줘, 지원동기 어떻게 써, 입사 후 포부 항목, 대기업 공채 자소서, 공기업 NCS 자기소개서, or write a Korean self-introduction essay for a job… | — |
+| **Korea Severance Pay (퇴직금)** (`kr-severance-pay`) | Use when asked 퇴직금 계산해 줘, 퇴직금 얼마 받을 수 있어, 평균임금 어떻게 계산해, 퇴직연금 DB형 DC형 차이, IRP로 퇴직금 받아야 해, 퇴직금을 안 줘요, or how is severance pay calculated in Korea.… | — |
+| **Korean Business Report (보고서 and 주간보고)** (`kr-work-report`) | Use when asked 보고서 써 줘, 주간보고 작성해 줘, 개조식으로 정리해 줘, 팀장님께 보고할 내용 정리, 1페이지 보고서, 업무 보고서 양식, or write a Korean business report or weekly report. Produces… | — |
+| **Korea Year-End Tax Settlement (연말정산)** (`kr-year-end-tax-settlement`) | Use when asked 연말정산 어떻게 해요, 연말정산 간소화 자료 어떻게 제출해, which deductions can I claim in my Korean year-end tax settlement, 부양가족 공제 누구 올려야 해, 맞벌이 연말정산 누가… | — |
+
 ### `pm-layoff` — 4 skills
 
 | Skill | What it does | Eval |
@@ -2033,4 +2080,4 @@
 
 ---
 
-_1263 skills across 148 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1285 skills across 153 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

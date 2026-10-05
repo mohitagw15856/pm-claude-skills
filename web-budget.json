@@ -2,7 +2,7 @@
   "_comment": "Page-weight budget for web/. Text limits are gzipped — what a visitor actually downloads. Binaries are measured raw. Enforced by scripts/check-web-weight.mjs; raise a limit deliberately, with a reason in the commit.",
   "files": {
     "skills-index.json": 0.75,
-    "skills.json": 2.5,
+    "skills.json": 2.8,
     "llms-full.txt": 2.0,
     "app.js": 0.15,
     "index.html": 0.06,

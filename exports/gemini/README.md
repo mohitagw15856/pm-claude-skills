@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1275 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
+1297 skills exported. Copy a `GEM_INSTRUCTIONS.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -186,35 +186,53 @@
 | Clip Factory | `pm-newgen` | `pm-newgen/clip-factory/GEM_INSTRUCTIONS.md` |
 | Clone Brief | `pm-2027` | `pm-2027/clone-brief/GEM_INSTRUCTIONS.md` |
 | Closing Disclosure Decoder | `pm-decoders` | `pm-decoders/closing-disclosure-decoder/GEM_INSTRUCTIONS.md` |
+| 5S / 6S Audit (5S / 6S 检查表) | `pm-china-manufacturing` | `pm-china-manufacturing/cn-5s-audit/GEM_INSTRUCTIONS.md` |
+| 8D Report (8D 报告) | `pm-china-manufacturing` | `pm-china-manufacturing/cn-8d-report/GEM_INSTRUCTIONS.md` |
 | Campus Recruitment (校招) | `pm-china-exams` | `pm-china-exams/cn-campus-recruitment/GEM_INSTRUCTIONS.md` |
 | GB/T 7714 References (参考文献著录) | `pm-china-exams` | `pm-china-exams/cn-citation-gbt7714/GEM_INSTRUCTIONS.md` |
 | Civil Service Essay (申论) | `pm-china-exams` | `pm-china-exams/cn-civil-exam-essay/GEM_INSTRUCTIONS.md` |
 | Civil Service Interview (结构化面试) | `pm-china-exams` | `pm-china-exams/cn-civil-exam-interview/GEM_INSTRUCTIONS.md` |
+| Class Meeting Plan (主题班会方案) | `pm-china-teachers` | `pm-china-teachers/cn-class-meeting/GEM_INSTRUCTIONS.md` |
+| Customs Documents (报关单证清单) | `pm-china-trade` | `pm-china-trade/cn-customs-docs/GEM_INSTRUCTIONS.md` |
 | Data Export Assessment (数据出境) | `pm-china-compliance` | `pm-china-compliance/cn-data-export-assessment/GEM_INSTRUCTIONS.md` |
+| Extracurricular Planner (兴趣班与课外安排) | `pm-china-parents` | `pm-china-parents/cn-extracurricular-plan/GEM_INSTRUCTIONS.md` |
 | 复盘 (Fupan) | `pm-china-work` | `pm-china-work/cn-fupan/GEM_INSTRUCTIONS.md` |
 | Gaokao Application Planner (高考志愿) | `pm-china-life` | `pm-china-life/cn-gaokao-planner/GEM_INSTRUCTIONS.md` |
 | Generative AI Filing (生成式人工智能备案) | `pm-china-compliance` | `pm-china-compliance/cn-genai-filing/GEM_INSTRUCTIONS.md` |
+| Helping Parents With Admin (帮爸妈办事) | `pm-china-life` | `pm-china-life/cn-help-parents-admin/GEM_INSTRUCTIONS.md` |
+| Home-School Messages (家校沟通) | `pm-china-parents` | `pm-china-parents/cn-home-school-comms/GEM_INSTRUCTIONS.md` |
+| Homework Guide for Parents (家长辅导作业) | `pm-china-parents` | `pm-china-parents/cn-homework-helper-parent/GEM_INSTRUCTIONS.md` |
 | Housing Fund Withdrawal (公积金提取) | `pm-china-life` | `pm-china-life/cn-housing-fund-withdrawal/GEM_INSTRUCTIONS.md` |
 | Hukou Points (积分落户) | `pm-china-life` | `pm-china-life/cn-hukou-points/GEM_INSTRUCTIONS.md` |
 | China Annual Tax Reconciliation (个税年度汇算) | `pm-china-life` | `pm-china-life/cn-iit-reconciliation/GEM_INSTRUCTIONS.md` |
+| Inquiry Reply (外贸询盘回复) | `pm-china-trade` | `pm-china-trade/cn-inquiry-reply/GEM_INSTRUCTIONS.md` |
 | Chinese Internet Jargon Translator (互联网黑话翻译器) | `pm-china-work` | `pm-china-work/cn-jargon-translator/GEM_INSTRUCTIONS.md` |
 | Kaoyan Planner (考研规划) | `pm-china-exams` | `pm-china-exams/cn-kaoyan-planner/GEM_INSTRUCTIONS.md` |
 | China Labour Contract Decoder (劳动合同) | `pm-china-life` | `pm-china-life/cn-labour-contract-decoder/GEM_INSTRUCTIONS.md` |
+| Chinese Lesson Plan (教案 / 教学设计) | `pm-china-teachers` | `pm-china-teachers/cn-lesson-plan/GEM_INSTRUCTIONS.md` |
+| Letter of Credit Check (信用证审证与审单) | `pm-china-trade` | `pm-china-trade/cn-letter-of-credit-check/GEM_INSTRUCTIONS.md` |
 | Level Mapper (职级对标) | `pm-china-work` | `pm-china-work/cn-level-mapper/GEM_INSTRUCTIONS.md` |
 | Medical Insurance Claims (医保报销) | `pm-china-life` | `pm-china-life/cn-medical-insurance-claim/GEM_INSTRUCTIONS.md` |
 | MLPS 2.0 Checklist (等保 2.0) | `pm-china-compliance` | `pm-china-compliance/cn-mlps-checklist/GEM_INSTRUCTIONS.md` |
 | Next Year's OKR and Development Plan (明年个人 OKR 与个人发展计划) | `pm-china-yearend` | `pm-china-yearend/cn-next-year-plan/GEM_INSTRUCTIONS.md` |
 | Official Document (公文) | `pm-china-work` | `pm-china-work/cn-official-document/GEM_INSTRUCTIONS.md` |
+| Open Class and Lesson Talk (公开课准备与说课稿) | `pm-china-teachers` | `pm-china-teachers/cn-open-class/GEM_INSTRUCTIONS.md` |
+| Parent Meeting Pack (家长会发言稿与材料) | `pm-china-teachers` | `pm-china-teachers/cn-parent-meeting/GEM_INSTRUCTIONS.md` |
 | PIPL Impact Assessment (个人信息保护影响评估) | `pm-china-compliance` | `pm-china-compliance/cn-pipl-pia/GEM_INSTRUCTIONS.md` |
 | PRD Review (需求评审) | `pm-china-work` | `pm-china-work/cn-prd-review/GEM_INSTRUCTIONS.md` |
 | Promotion Defence (晋升答辩) | `pm-china-work` | `pm-china-work/cn-promotion-defence/GEM_INSTRUCTIONS.md` |
+| Quality Traceability Plan (质量追溯方案) | `pm-china-manufacturing` | `pm-china-manufacturing/cn-quality-traceability/GEM_INSTRUCTIONS.md` |
+| School Entry Planner (幼升小 / 小升初) | `pm-china-parents` | `pm-china-parents/cn-school-entry/GEM_INSTRUCTIONS.md` |
 | China Severance Calculator (经济补偿金) | `pm-china-life` | `pm-china-life/cn-severance-calculator/GEM_INSTRUCTIONS.md` |
 | 述职 PPT Builder (述职 PPT 大纲与讲稿) | `pm-china-yearend` | `pm-china-yearend/cn-shuzhi-deck/GEM_INSTRUCTIONS.md` |
 | Small Business Tax (个体户与小微企业税务) | `pm-china-life` | `pm-china-life/cn-small-business-tax/GEM_INSTRUCTIONS.md` |
 | China Social Insurance Explainer (五险一金) | `pm-china-life` | `pm-china-life/cn-social-insurance-explainer/GEM_INSTRUCTIONS.md` |
 | State-Owned Enterprise Interview (国企面试) | `pm-china-exams` | `pm-china-exams/cn-soe-interview/GEM_INSTRUCTIONS.md` |
+| Work Instruction (作业指导书 / SOP) | `pm-china-manufacturing` | `pm-china-manufacturing/cn-sop-writer/GEM_INSTRUCTIONS.md` |
 | Tech Interview Drill (大厂技术面试) | `pm-china-exams` | `pm-china-exams/cn-tech-interview-drill/GEM_INSTRUCTIONS.md` |
+| End-of-Term Comments (期末评语) | `pm-china-teachers` | `pm-china-teachers/cn-term-comments/GEM_INSTRUCTIONS.md` |
 | Thesis Proposal (开题报告) | `pm-china-exams` | `pm-china-exams/cn-thesis-proposal/GEM_INSTRUCTIONS.md` |
+| Export Quotation (外贸报价单与成本核算) | `pm-china-trade` | `pm-china-trade/cn-trade-quotation/GEM_INSTRUCTIONS.md` |
 | Chinese Weekly Report (周报) | `pm-china-work` | `pm-china-work/cn-weekly-report/GEM_INSTRUCTIONS.md` |
 | Year-End Bonus Clarifier (年终奖、13薪与个税) | `pm-china-yearend` | `pm-china-yearend/cn-year-end-bonus/GEM_INSTRUCTIONS.md` |
 | Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-yearend` | `pm-china-yearend/cn-year-end-review/GEM_INSTRUCTIONS.md` |
@@ -663,6 +681,10 @@
 | Knowledge-Gap Map | `pm-learning` | `pm-learning/knowledge-gap-map/GEM_INSTRUCTIONS.md` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/GEM_INSTRUCTIONS.md` |
 | KPI Tracker Design | `pm-cowork` | `pm-cowork/kpi-tracker-design/GEM_INSTRUCTIONS.md` |
+| Korean Job Application Essay (자기소개서) | `pm-korea` | `pm-korea/kr-cover-letter/GEM_INSTRUCTIONS.md` |
+| Korea Severance Pay (퇴직금) | `pm-korea` | `pm-korea/kr-severance-pay/GEM_INSTRUCTIONS.md` |
+| Korean Business Report (보고서 and 주간보고) | `pm-korea` | `pm-korea/kr-work-report/GEM_INSTRUCTIONS.md` |
+| Korea Year-End Tax Settlement (연말정산) | `pm-korea` | `pm-korea/kr-year-end-tax-settlement/GEM_INSTRUCTIONS.md` |
 | KYC Escalation | `pm-banking` | `pm-banking/kyc-escalation/GEM_INSTRUCTIONS.md` |
 | Landing Page Copy | `pm-copy` | `pm-copy/landing-page-copy/GEM_INSTRUCTIONS.md` |
 | Language-Learning Plan | `pm-students` | `pm-students/language-learning-plan/GEM_INSTRUCTIONS.md` |

@@ -1,0 +1,77 @@
+{
+  "projectName": "pm-claude-skills",
+  "projectOwner": "mohitagw15856",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 72,
+  "commit": false,
+  "commitConvention": "none",
+  "contributorsPerLine": 6,
+  "linkToUsage": false,
+  "contributors": [
+    {
+      "login": "mohitagw15856",
+      "name": "Mohit Aggarwal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/119053560?v=4",
+      "profile": "https://github.com/mohitagw15856",
+      "contributions": [
+        "maintenance",
+        "code",
+        "content",
+        "translation",
+        "doc",
+        "infra"
+      ]
+    },
+    {
+      "login": "thejesh23",
+      "name": "Thejesh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35212698?v=4",
+      "profile": "https://github.com/thejesh23",
+      "contributions": [
+        "code",
+        "bug",
+        "content"
+      ]
+    },
+    {
+      "login": "roian6",
+      "name": "Chanhyo Jung",
+      "avatar_url": "https://avatars.githubusercontent.com/u/23256775?v=4",
+      "profile": "https://github.com/roian6",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "mblode",
+      "name": "Matthew Blode",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7183998?v=4",
+      "profile": "https://github.com/mblode",
+      "contributions": [
+        "plugin"
+      ]
+    },
+    {
+      "login": "InsightFactoryAPP",
+      "name": "InsightFactoryAPP",
+      "avatar_url": "https://avatars.githubusercontent.com/u/168487014?v=4",
+      "profile": "https://github.com/InsightFactoryAPP",
+      "contributions": [
+        "plugin"
+      ]
+    },
+    {
+      "login": "LucideLarp",
+      "name": "Martinius",
+      "avatar_url": "https://avatars.githubusercontent.com/u/279298543?v=4",
+      "profile": "https://github.com/LucideLarp",
+      "contributions": [
+        "plugin"
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 # 🧭 Disambiguation — you want *this* one, not that one
 
 > **Generated — do not edit.** Run `node scripts/build-disambiguation.mjs`.
-> 1263 live skills across 147 bundles, plus 12 retired names that still resolve.
+> 1285 live skills across 152 bundles, plus 12 retired names that still resolve.
 
 At this size the hard part is not finding *a* skill — it is telling two similar ones apart, and
 knowing whether the thing you are about to write already exists under a different noun.
@@ -29,6 +29,7 @@ choosing between them.
 | Car Lease Decoder / Used Car Decoder | `car-lease-decoder` | `used-car-decoder` | Leasing terms vs reading a used-car listing before viewing it. |
 | Care-Decision Family Meeting / Decision Meeting Format | `care-decision-family-meeting` | `decision-meeting-format` | A family care decision with its own emotional dynamics vs a general decision-meeting format. |
 | Medical Insurance Claims (医保报销) / Insurance Claim | `cn-medical-insurance-claim` | `insurance-claim` | China's public basic medical insurance (医保): scheme, local deductible and cap, cross-region registration and manual reimbursement, vs filing and escalating a claim with a private insurer. |
+| Work Instruction (作业指导书 / SOP) / SOP Writer | `cn-sop-writer` | `sop-writer` | A one-station shop-floor work instruction (作业指导书) for a Chinese factory, with key points and reasons, control-plan checks and photo placeholders, vs a formal business or office SOP. |
 | Chinese Year-End Review (述职报告 / 年终总结) / Year in Review | `cn-year-end-review` | `year-in-review` | A Chinese employer's formal annual self-review (述职报告 / 年终总结) scored against OKR or KPI, vs a personal reflection on the year. |
 | Code Review Checklist / Code Review Guide | `code-review-checklist` | `code-review-guide` | Generating a checklist tailored to a change vs conducting the review with senior judgment. |
 | Code Review Guide / Infrastructure-as-Code Review | `code-review-guide` | `infra-as-code-review` | Terraform/CloudFormation review is a different risk surface from application-code review. |

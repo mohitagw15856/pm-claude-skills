@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copy into the WPS jsaddons folder (see ../README.md). Online mode: WPS loads the
+     add-in from the project site, so updates arrive without reinstalling. -->
+<jsplugins>
+  <jspluginonline name="pm-skills" type="wps" url="https://mohitagw15856.github.io/pm-claude-skills/office/wps/" />
+</jsplugins>
