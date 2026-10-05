@@ -9,6 +9,8 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [82.0.0] - China for everyone, Korea and Southeast Asia, lite skills, teams - 2026-10-06
+
 **1285 skills · 152 bundles** (from 1250 · 144 at v81.2.0).
 
 ### Added
