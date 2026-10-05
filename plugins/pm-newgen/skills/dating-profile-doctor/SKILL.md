@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Fix my dating profile."
+- "Why am I getting no matches?"
+- "What do I say first?"
+- "Roast my Hinge prompts."

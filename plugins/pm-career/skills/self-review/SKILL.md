@@ -55,3 +55,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Competency-based performance-review practice — evidence-mapped accomplishments and calibrated self-assessment.
+
+## Example Trigger Phrases
+
+- "Write my self-review."
+- "Write my self-assessment for this cycle."
+- "Help me write my self-evaluation."
+- "Turn my year into a performance self-review."

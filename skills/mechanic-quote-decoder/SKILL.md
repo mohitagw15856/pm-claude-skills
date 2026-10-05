@@ -130,3 +130,10 @@ decisions.
 [[used-car-decoder]] before this car was yours;
 [[home-contractor-quote-decoder]] — the same grammar in a different
 trade; [[car-tco]] for whether this car is worth fixing at all.
+
+## Example Trigger Phrases
+
+- "Is this mechanic quote fair?"
+- "Do I really need all this?"
+- "Which of these repairs are padding?"
+- "Should I get a second opinion on this garage quote?"

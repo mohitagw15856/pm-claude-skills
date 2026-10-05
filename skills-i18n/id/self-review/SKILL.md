@@ -58,3 +58,10 @@ Tanyakan hanya jika belum diberikan:
 ## Dasar Rujukan
 
 Praktik penilaian kinerja berbasis kompetensi: pencapaian yang dipetakan ke bukti dan penilaian diri yang terkalibrasi.
+
+## Contoh Frasa Pemicu
+
+- "Tuliskan self-review saya."
+- "Tuliskan penilaian diri untuk periode ini."
+- "Bantu saya menulis evaluasi diri."
+- "Ubah setahun saya menjadi self-review kinerja."

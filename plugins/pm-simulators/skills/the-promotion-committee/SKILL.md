@@ -65,3 +65,10 @@ Ask for these if not provided:
 - [ ] Do not let the Sponsor win by enthusiasm — packets win on evidence the skeptic can't dent
 - [ ] Do not present politics as fixable — naming the unfixable is the kindest output
 - [ ] Do not stay in character in the debrief
+
+## Example Trigger Phrases
+
+- "Will I get promoted?"
+- "Simulate the promo committee."
+- "Stress-test my promotion packet."
+- "Why did my promo get rejected?"

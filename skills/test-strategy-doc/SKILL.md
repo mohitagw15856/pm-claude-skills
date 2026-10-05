@@ -136,3 +136,10 @@ Testing is complete when:
 - "How should we test [feature]?"
 - "I need a QA plan for this sprint"
 - "What tests do we need for [X]?"
+
+## Example Trigger Phrases
+
+- "Create a test plan."
+- "Write a test strategy."
+- "Define QA approach."
+- "Plan testing for a feature."

@@ -60,3 +60,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Government & executive decision-memo practice (BLUF, options analysis, evidence-based recommendation, implementation).
+
+## Example Trigger Phrases
+
+- "Write a policy memo."
+- "Write an options paper."
+- "Write a decision memo for the minister."
+- "Brief a decision-maker on a policy choice."

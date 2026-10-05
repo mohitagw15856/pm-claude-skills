@@ -121,3 +121,10 @@ Nilai setiap output skill ini sebelum diserahkan; 32+ berarti layak dikirim.
 - [ ] Jangan menulis lebih dari 4 KR per objective: terlalu banyak KR mengencerkan fokus dan membuat penilaian akhir kuartal ambigu
 - [ ] Jangan memakai KR biner (rilis/tidak rilis): setiap KR harus bisa dinilai pada skala 0,0-1,0 berdasarkan tingkat pencapaian
 - [ ] Jangan melewatkan bagian health check untuk baseline: OKR tanpa baseline saat ini tidak bisa dinilai secara objektif di akhir kuartal
+
+## Contoh Frasa Pemicu
+
+- "Tuliskan OKR."
+- "Tetapkan target kuartalan."
+- "Tentukan key result."
+- "Tinjau OKR yang ada."

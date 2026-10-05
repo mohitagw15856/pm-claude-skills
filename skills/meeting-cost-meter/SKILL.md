@@ -62,3 +62,10 @@ Ask for these if not provided:
 - [ ] Do not zero the unpriceable outcomes — cohesion is real; the meter flags, judgment weighs
 - [ ] Do not lead with the biggest number as an accusation — converted owners cut meetings; shamed owners defend them
 - [ ] Do not stop at the price — the meter's product is the cheaper-supplier proposal, priced
+
+## Example Trigger Phrases
+
+- "What does this meeting cost?"
+- "Price our meeting culture."
+- "Is this recurring meeting worth it?"
+- "Make the case for fewer attendees."

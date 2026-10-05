@@ -82,3 +82,11 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] All Impact 4+ / Confidence 2− assumptions flagged as CRITICAL
 - [ ] Each validation method is specific (not just "do research" — name the method and sample size)
 - [ ] Priority scores are consistent (Impact − Confidence, higher = more urgent)
+
+## Example Trigger Phrases
+
+- "Review a product brief for assumptions."
+- "Audit a PRD for risks."
+- "Find hidden assumptions."
+- "Validate product plans."
+- "Run an assumption analysis."

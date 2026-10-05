@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "I need a workplace accommodation."
+- "Request reasonable adjustments."
+- "How do I ask for accommodations for my disability/condition?"

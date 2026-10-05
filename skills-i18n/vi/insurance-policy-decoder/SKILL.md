@@ -72,3 +72,9 @@ Kết thúc sản phẩm bằng câu sau, giữ nguyên văn: *"Đây là phần
 ## Dựa trên
 
 Thực hành rà soát quyền lợi bảo hiểm từ phía người được bảo hiểm: đối chiếu trang tóm tắt với phần loại trừ, kiểm thử kịch bản chi trả, kiểm tra hạn mức phụ.
+
+## Ví dụ câu kích hoạt
+
+- "Bảo hiểm của tôi thực sự chi trả những gì?"
+- "Giải thích hợp đồng bảo hiểm của tôi."
+- "Mức khấu trừ này có bình thường không?"

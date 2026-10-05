@@ -67,3 +67,10 @@ Ask for these if not provided:
 - [ ] Do not treat room reads as facts — they're hypotheses the meeting tests
 - [ ] Do not prepare speeches over questions — rooms resist being told and enjoy answering
 - [ ] Do not leave success undefined — undefined success becomes "it went fine," which means nothing happened
+
+## Example Trigger Phrases
+
+- "Prep me for this meeting."
+- "What should I know before this call?"
+- "I have 15 minutes before a big meeting."
+- "Help me not wing it."

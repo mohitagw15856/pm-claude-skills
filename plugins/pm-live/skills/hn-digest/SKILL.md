@@ -59,3 +59,9 @@ Source: [HN Firebase API / Algolia HN search] · rerun: `[exact curls]`
 - [ ] Do not present commenter claims as verified facts — attribute or drop
 - [ ] Do not answer "what's on HN" from memory — the front page turns over in hours
 - [ ] Do not editorialize the community's votes into objective importance — it's HN's taste, labeled as such
+
+## Example Trigger Phrases
+
+- "What's on Hacker News?"
+- "Summarize HN today."
+- "What's the discussion on this story?"

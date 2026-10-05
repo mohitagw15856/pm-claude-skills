@@ -121,3 +121,10 @@ Chấm điểm mọi đầu ra của kỹ năng này trước khi bàn giao; t�
 - [ ] Không viết quá 4 KR mỗi objective: quá nhiều KR làm loãng trọng tâm và khiến việc chấm điểm cuối quý mơ hồ
 - [ ] Không dùng KR nhị phân (phát hành/không phát hành): mọi KR phải chấm được trên thang 0.0-1.0 theo mức độ đạt
 - [ ] Không bỏ qua phần kiểm tra sức khỏe về baseline: OKR thiếu baseline hiện tại không thể chấm điểm khách quan vào cuối quý
+
+## Ví dụ câu kích hoạt
+
+- "Viết OKR cho tôi."
+- "Đặt mục tiêu quý."
+- "Xác định kết quả then chốt."
+- "Rà soát OKR hiện có."

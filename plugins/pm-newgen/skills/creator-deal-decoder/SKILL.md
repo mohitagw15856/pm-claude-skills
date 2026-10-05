@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Is this brand deal fair?"
+- "What does perpetual usage mean?"
+- "Should I sign this collab agreement?"

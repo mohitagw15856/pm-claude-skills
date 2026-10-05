@@ -73,3 +73,10 @@ Ask for these if not provided; if the brief is thin, infer sensible values and l
 - [ ] Do not omit serviceability — an unrepairable design is a warranty-cost decision, so make it consciously
 - [ ] Do not hide forecast uncertainty — tooling cavitation and MOQs are bought against this number
 - [ ] Do not refuse a thin brief — draft with labelled assumptions and list what must be confirmed before EVT
+
+## Example Trigger Phrases
+
+- "Write a hardware PRD."
+- "Spec a new device."
+- "Define requirements for a physical product."
+- "Kick off an NPI program."

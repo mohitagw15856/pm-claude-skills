@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "My partner doesn't understand my family."
+- "I'm caught between two cultures."
+- "Help me explain this to my parents."
+- "Is a first/second-gen immigrant?"

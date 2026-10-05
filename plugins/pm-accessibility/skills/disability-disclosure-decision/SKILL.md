@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Should I tell work about my disability/condition?"
+- "Disclose my ADHD/chronic illness at work."
+- "Do I tell my employer?"
+- "How much do I share?"

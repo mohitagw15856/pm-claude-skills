@@ -291,3 +291,10 @@ Untuk agen yang menggunakan tool dan bisa menjangkau channel komunikasi tim (Sla
 ### Rollback
 - Jika platform memungkinkan, penghapusan pesan yang baru dikirim diizinkan **hanya** atas instruksi eksplisit dari manusia; jika tidak, kirim balasan koreksi.
 - Berhenti dan tanya manusia jika: channel tidak ditemukan, pengiriman gagal sebagian, atau teks yang disetujui tidak lagi sama dengan yang akan dikirim.
+
+## Contoh Frasa Pemicu
+
+- "Tuliskan update status."
+- "Tuliskan laporan progres untuk pimpinan."
+- "Tuliskan update proyek untuk pemangku kepentingan."
+- "Tuliskan ringkasan untuk eksekutif."

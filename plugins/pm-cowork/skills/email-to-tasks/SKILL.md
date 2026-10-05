@@ -64,3 +64,10 @@ Ask for these if not provided:
 - [ ] Do not skip the confirming reply — unconfirmed extraction is a private theory about shared work
 - [ ] Do not action vague asks by interpretation — the clarifying question costs one line; the wrong guess costs the work
 - [ ] Do not leave the thread as backup storage — once tasks are filed and confirmed, the thread archives
+
+## Example Trigger Phrases
+
+- "What am I actually being asked to do here?"
+- "Turn this thread into a task list."
+- "Extract the action items from this email."
+- "I keep re-reading this thread."

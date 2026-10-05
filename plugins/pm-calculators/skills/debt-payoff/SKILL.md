@@ -76,3 +76,10 @@ Bad month: [minimums-only protocol, restart trigger] · Windfalls: [target-debt 
 - [ ] Do not build a plan that requires a perfect year — perfect-year plans have a 100% failure rate
 - [ ] Do not ignore the income side — past a point, the plan's bottleneck is earnings, and saying so is the honest output
 - [ ] Do not touch consolidation/refinancing recommendations beyond naming them as options to research — product choice is advice territory
+
+## Example Trigger Phrases
+
+- "How do I pay off my debts?"
+- "Make me a debt payoff plan."
+- "Tackle my credit cards."
+- "Will I be debt-free?"

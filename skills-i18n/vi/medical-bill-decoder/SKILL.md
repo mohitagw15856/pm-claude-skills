@@ -76,3 +76,10 @@ Kết thúc sản phẩm bằng câu sau, giữ nguyên văn: *"Đây là phần
 ## Dựa trên
 
 Thực hành hỗ trợ bệnh nhân về hóa đơn: kiểm tra hóa đơn chi tiết, đối chiếu EOB, soạn kịch bản thương lượng.
+
+## Ví dụ câu kích hoạt
+
+- "Sao hóa đơn y tế của tôi cao vậy?"
+- "Giải thích hóa đơn bệnh viện của tôi."
+- "Bản giải trình quyền lợi này nói gì?"
+- "Tôi có thể thương lượng hóa đơn này không?"

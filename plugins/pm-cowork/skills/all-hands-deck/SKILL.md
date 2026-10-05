@@ -60,3 +60,10 @@ Ask for these if not provided:
 - [ ] Do not thank "the whole team" generically — names or it's wallpaper
 - [ ] Do not soften Q&A by selection — cherry-picked softballs teach people to stop submitting
 - [ ] Do not leave commits unhonored — one forgotten "we'll get back to you" discounts every future one
+
+## Example Trigger Phrases
+
+- "Build the all-hands deck."
+- "Make the monthly town hall not boring."
+- "How do we share the numbers with everyone?"
+- "Announce this change at all-hands."

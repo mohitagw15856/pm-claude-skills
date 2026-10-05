@@ -338,3 +338,10 @@ Para agentes con uso de herramientas y servidores MCP conectados (Notion, Linear
 ### Reversión
 - Deshacer = archivar/eliminar la página y los tickets recién creados, solo bajo instrucción humana explícita.
 - Detente y pregunta a una persona si: no se encuentra la base de datos/proyecto de destino, la creación de algún ticket falla a medio camino (reporta lo que SÍ se creó), o el responsable de una acción no existe en el gestor de tareas.
+
+## Frases disparadoras de ejemplo
+
+- "Crea las notas de la reunión."
+- "Da formato a estas notas de la conversación."
+- "Recoge las tareas pendientes."
+- "Documenta las decisiones de la reunión."

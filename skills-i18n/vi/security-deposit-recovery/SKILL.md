@@ -67,3 +67,10 @@ Hãy hỏi những thông tin này nếu người dùng chưa cung cấp:
 - [ ] Không nêu điều luật hoặc số ngày cụ thể như một sự thật, mà nêu loại quy định kèm lưu ý cần kiểm tra tại địa phương
 - [ ] Không bỏ qua bậc đề nghị liệt kê chi tiết, vì nhiều khoản giữ cọc tự sụp đổ ngay khi được yêu cầu xuất trình biên lai
 - [ ] Không để cơn giận đã bỏ ra quyết định việc kiện ra tòa dân sự nhỏ; dòng đầu tiên của bảng chuẩn bị là bài toán chi phí
+
+## Ví dụ câu kích hoạt
+
+- "Làm sao để lấy lại tiền cọc?"
+- "Chủ nhà đang giữ tiền cọc của tôi."
+- "Phản đối các khoản trừ tiền cọc này."
+- "Viết thư đòi tiền cọc."

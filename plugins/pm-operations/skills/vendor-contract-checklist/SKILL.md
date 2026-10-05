@@ -70,3 +70,9 @@ Ask for these only if they aren't already provided (else mark as "not found — 
 ## Based On
 
 Procurement and vendor-risk practice — key-term extraction, risk-flagged review across commercial/legal/security/exit, and prioritised negotiation.
+
+## Example Trigger Phrases
+
+- "Review a vendor contract."
+- "Check a SaaS/MSA/subscription agreement."
+- "Prepare negotiation points before signing."

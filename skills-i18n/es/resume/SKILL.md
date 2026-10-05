@@ -65,3 +65,9 @@ Un currículum de una sola columna, compatible con ATS, en este orden:
 ## Basado en
 
 Práctica de currículums centrados en logros y conscientes del ATS (cronológico inverso, viñetas de impacto cuantificado, alineación de palabras clave).
+
+## Frases disparadoras de ejemplo
+
+- "Reescribe mi currículum."
+- "Convierte mi experiencia en un CV."
+- "Adapta mi currículum a esta oferta."

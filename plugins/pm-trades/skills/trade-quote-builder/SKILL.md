@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Help me quote this job."
+- "I keep losing money on jobs."
+- "How do I quote a day rate vs fixed?"

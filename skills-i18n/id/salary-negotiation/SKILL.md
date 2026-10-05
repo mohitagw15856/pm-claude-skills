@@ -67,3 +67,10 @@ python3 scripts/comp_compare.py offers.json --signing-years 1 --json
 ## Dasar Rujukan
 
 Praktik negosiasi berprinsip (*Getting to Yes*, Fisher & Ury: BATNA, kepentingan di atas posisi) yang diterapkan pada kompensasi.
+
+## Contoh Frasa Pemicu
+
+- "Bantu saya negosiasi gaji."
+- "Ajukan penawaran balik untuk tawaran ini."
+- "Persiapan untuk pembicaraan kompensasi."
+- "Bandingkan tawaran kerja ini."

@@ -68,3 +68,10 @@ expected output for each, so the user can confirm the rewrite behaves before shi
 ## Based On
 
 Prompt-engineering practice — explicit output contracts, grounding/uncertainty handling, structured instructions, and example-driven demonstration.
+
+## Example Trigger Phrases
+
+- "Improve a prompt."
+- "Fix a prompt that gives inconsistent."
+- "Reduce hallucination/refusals."
+- "Make output follow a format."

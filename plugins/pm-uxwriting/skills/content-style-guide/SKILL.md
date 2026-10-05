@@ -63,3 +63,10 @@ Mark inferred voice/terminology choices *(confirm with the team)*.
 ## Based On
 
 Content design practice — example-driven voice principles, context-based tone, editorial mechanics, terminology management, and inclusive/accessible language.
+
+## Example Trigger Phrases
+
+- "Write a content style guide."
+- "Write a voice and tone guide."
+- "Set editorial guidelines for the team."
+- "Write our UX-writing standards."

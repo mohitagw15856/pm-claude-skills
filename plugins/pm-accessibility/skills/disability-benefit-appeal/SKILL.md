@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "My disability benefit was denied."
+- "Appeal my PIP/SSDI decision."
+- "How do I challenge a benefits decision?"

@@ -78,3 +78,11 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - Pillars that are topics-of-the-week, not durable themes
 - Voice = a list of adjectives with no examples
 - A clever bio that doesn't say who it helps or what they get
+
+## Example Trigger Phrases
+
+- "Define a creator brand."
+- "Find a niche."
+- "Set content pillars."
+- "Write a voice guide."
+- "Craft a bio."

@@ -55,3 +55,10 @@ Chỉ hỏi những thông tin này nếu chưa được cung cấp:
 ## Cơ sở
 
 Thực hành tối ưu hồ sơ LinkedIn: headline/About có tính đến từ khóa, thu hút trước nút "xem thêm", xếp hạng tìm kiếm của nhà tuyển dụng.
+
+## Ví dụ câu kích hoạt
+
+- "Cải thiện tiêu đề LinkedIn của tôi."
+- "Viết lại phần Giới thiệu trên LinkedIn."
+- "Làm hồ sơ của tôi hấp dẫn với nhà tuyển dụng."
+- "Tối ưu hồ sơ LinkedIn của tôi."

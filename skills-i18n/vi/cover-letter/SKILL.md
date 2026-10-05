@@ -62,3 +62,10 @@ Một lá thư 3-4 đoạn (khoảng 250-350 từ):
 ## Cơ sở
 
 Thực hành viết thư xin việc hiện đại: câu mở đầu cụ thể, gắn bằng chứng với nhu cầu, giọng văn con người.
+
+## Ví dụ câu kích hoạt
+
+- "Viết thư xin việc cho tôi."
+- "Viết thư ứng tuyển cho vị trí này."
+- "Viết một đoạn đính kèm CV của tôi."
+- "Làm thư xin việc của tôi bớt chung chung."

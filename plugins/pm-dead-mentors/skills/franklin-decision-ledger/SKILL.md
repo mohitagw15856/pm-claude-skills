@@ -31,3 +31,10 @@ Ask for (if not already provided):
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Help me decide between these two options."
+- "Weigh the pros and cons properly."
+- "Run Franklin's pro and con method on this choice."
+- "I can't decide whether to take the job."

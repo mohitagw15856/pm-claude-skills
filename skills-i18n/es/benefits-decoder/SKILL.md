@@ -78,3 +78,10 @@ Termina el artefacto con, textualmente: *"Esta es una lectura en lenguaje claro,
 ## Basado en
 
 Práctica de revisión de ofertas — reconstrucción de la compensación total, decodificación del lenguaje del plan, listas de preguntas previas a la firma.
+
+## Frases disparadoras de ejemplo
+
+- "¿Es buena esta oferta?"
+- "Explícame mi paquete de beneficios."
+- "¿Qué significan realmente mis acciones?"
+- "¿Qué debo preguntar a RR. HH. antes de firmar?"

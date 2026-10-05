@@ -61,3 +61,10 @@ Ask for these if not provided:
 - [ ] Do not balance a pitch into neutrality — the risks slide is where balance lives; the thesis is not
 - [ ] Do not blend mixed mandates — split, sequence, announce the seam
 - [ ] Do not let the room diagnose the mode in Q&A — "what do you want from us?" is the autopsy question
+
+## Example Trigger Phrases
+
+- "Is this a pitch?"
+- "My informative deck didn't land the ask."
+- "My pitch felt like a lecture."
+- "Structure this talk for the right job."

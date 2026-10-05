@@ -307,3 +307,11 @@ Ask for these if not already provided:
 - [ ] Secrets management section names the actual tool used (not "use secrets management")
 - [ ] Deployment window is specific — not "during business hours"
 - [ ] Post-deploy check thresholds are calibrated to actual baseline metrics
+
+## Example Trigger Phrases
+
+- "Document a CI/CD pipeline."
+- "Write a deployment process."
+- "Define release gates."
+- "Document build and test stages."
+- "Create a deployment guide."

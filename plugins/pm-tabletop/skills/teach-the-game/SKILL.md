@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "How do I explain Catan/Wingspan/this game?"
+- "Teach my family a game tonight."
+- "My rules explanations kill the mood."
+- "Make a teach script."

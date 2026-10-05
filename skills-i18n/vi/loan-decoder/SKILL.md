@@ -80,3 +80,10 @@ Kết thúc sản phẩm bằng câu sau, giữ nguyên văn: *"Đây là phần
 ## Dựa trên
 
 Thực hành rà soát khoản vay từ phía người đi vay: tính tổng chi phí, đối chiếu APR, kiểm tra phí, trình bày kịch bản điều chỉnh lãi suất.
+
+## Ví dụ câu kích hoạt
+
+- "Khoản vay này có lợi không?"
+- "Giải thích đề nghị cho vay này."
+- "Tôi sắp ký cái gì vậy?"
+- "Khoản vay mua nhà này thực sự tốn của tôi bao nhiêu?"

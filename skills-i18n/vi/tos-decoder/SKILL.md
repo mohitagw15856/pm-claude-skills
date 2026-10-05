@@ -74,3 +74,9 @@ Kết thúc sản phẩm bằng câu sau, giữ nguyên văn: *"Đây là phần
 ## Dựa trên
 
 Thực hành rà soát hợp đồng tiêu dùng: phân loại điều khoản theo tác động, đọc phạm vi giấy phép, phân tích điều khoản giải quyết tranh chấp.
+
+## Ví dụ câu kích hoạt
+
+- "Giải thích chính sách quyền riêng tư này."
+- "Điều khoản dịch vụ này có tệ không?"
+- "Tôi có nên bấm đồng ý không?"

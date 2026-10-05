@@ -67,3 +67,10 @@ python3 scripts/comp_compare.py offers.json --signing-years 1 --json
 ## Cơ sở
 
 Thực hành đàm phán theo nguyên tắc (*Getting to Yes* của Fisher và Ury: BATNA, lợi ích thay vì lập trường) áp dụng vào đãi ngộ.
+
+## Ví dụ câu kích hoạt
+
+- "Đàm phán lương giúp tôi."
+- "Trả giá lời mời làm việc này."
+- "Chuẩn bị cho cuộc nói chuyện về lương."
+- "So sánh các lời mời làm việc."

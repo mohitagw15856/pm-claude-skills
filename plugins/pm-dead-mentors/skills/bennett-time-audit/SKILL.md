@@ -31,3 +31,9 @@ Ask for (if not already provided):
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "I have no time."
+- "Work eats everything."
+- "I want to learn X but can't fit it."

@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "What disasters should I prepare for?"
+- "Am I in a flood/wildfire/quake zone?"
+- "What emergencies are likely where I live?"
+- "Where do I start with preparedness?"

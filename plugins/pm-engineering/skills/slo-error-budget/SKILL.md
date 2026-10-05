@@ -237,3 +237,11 @@ This policy defines what to do with the error budget — both when it's healthy 
 - [ ] Do not write an error budget policy with vague triggers — "discuss as a team" is not an actionable policy; triggers must be specific percentages
 - [ ] Do not base targets on aspirational round numbers — always derive from historical baseline data
 - [ ] Do not configure only one burn-rate alert window — a single window misses both fast burns and slow burns that exhaust the budget quietly
+
+## Example Trigger Phrases
+
+- "Write SLOs."
+- "Define SLIs."
+- "Calculate an error budget."
+- "Set reliability targets."
+- "Create an error budget policy."

@@ -111,3 +111,10 @@ curveball notes · hard stop conditions]
 [[scam-message-decoder]] for the text/email versions; [[oncall-runbook]]
 patterns for the verification procedure; [[incident-postmortem]] if drilling
 because a real attempt already happened.
+
+## Example Trigger Phrases
+
+- "Train the team on deepfake fraud."
+- "Test wire-transfer controls."
+- "Run a social-engineering tabletop."
+- "Could we get CEO-frauded?"

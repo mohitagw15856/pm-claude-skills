@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "How does healthcare work in [country]?"
+- "Do I need health insurance in [country]?"
+- "I just moved and need to see a doctor."

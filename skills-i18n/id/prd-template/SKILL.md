@@ -239,3 +239,10 @@ Acceptance Criteria:
 
 [Lanjutkan hingga total 5-7 user story...]
 ```
+
+## Contoh Frasa Pemicu
+
+- "Tuliskan PRD."
+- "Tuliskan spesifikasi produk untuk fitur ini."
+- "Tuliskan spesifikasi fitur."
+- "Tuliskan dokumen kebutuhan untuk fitur baru."

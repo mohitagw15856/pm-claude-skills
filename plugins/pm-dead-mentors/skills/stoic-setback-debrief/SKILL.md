@@ -31,3 +31,10 @@ Ask for (if not already provided):
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "I blew it."
+- "I got torn apart in that meeting."
+- "Our launch failed and I can't stop thinking about it."
+- "Help me recover from this public mistake."

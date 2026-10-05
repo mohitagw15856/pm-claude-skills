@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Plan an accessible trip."
+- "Travel with a wheelchair/disability."
+- "Book assistance for my flight."
+- "Will this hotel actually work for me?"

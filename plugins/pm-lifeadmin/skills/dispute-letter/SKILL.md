@@ -63,3 +63,9 @@ Provide a **short version** for an online dispute form, and **notes** on documen
 ## Based On
 
 Consumer dispute practice — precise identification, evidence-backed reasoning, a specific requested correction, and a documented paper trail.
+
+## Example Trigger Phrases
+
+- "Dispute a credit-card charge."
+- "Contest a bill."
+- "Challenge a credit-report error."

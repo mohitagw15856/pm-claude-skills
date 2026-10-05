@@ -93,3 +93,10 @@ One or two concrete things that would prevent this class of error recurring:
 - "I'm getting this error, what does it mean?"
 - "Debug this log for me"
 - "What's causing this exception?"
+
+## Example Trigger Phrases
+
+- "Why is this crashing?"
+- "Read this stack trace and tell me what's wrong."
+- "Diagnose these error logs."
+- "What's causing these exceptions?"

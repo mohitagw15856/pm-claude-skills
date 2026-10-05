@@ -114,3 +114,9 @@ Ask for (if not already provided):
 [[committee-handover-pack]] for after the elections; [[volunteer-treasurer-basics]]
 for the finance report's author; [[meeting-notes]] for ordinary meetings that
 don't need the box.
+
+## Example Trigger Phrases
+
+- "I have to run the AGM."
+- "What goes in the agenda?"
+- "Our elections are a mess."

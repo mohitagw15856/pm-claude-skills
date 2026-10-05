@@ -118,3 +118,10 @@ that some disappointment ≠ rupture]
 for the caregiving version of the two-worlds pull; [[nt-translator]] shares the
 two-way-translation engine; [[faith-transition-companion]] when religion is the
 third party.
+
+## Example Trigger Phrases
+
+- "My partner doesn't understand my family."
+- "I'm caught between two cultures."
+- "Help me explain this to my parents."
+- "Is a first/second-gen immigrant?"

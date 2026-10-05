@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "My flares blindside me."
+- "I fall apart when a bad day hits."
+- "Help me prepare for flare-ups."
+- "Has a relapsing condition."

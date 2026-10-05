@@ -169,3 +169,10 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - Never launch on a Friday unless you have weekend engineering coverage
 - Recommend starting all launches at <10% traffic — even for simple features
 - Document rollback time: "We can revert this in X minutes" should be known before launch
+
+## Example Trigger Phrases
+
+- "Prepare for a product launch."
+- "Give me a launch-day checklist."
+- "Plan the feature release."
+- "What do we need before this major update ships?"

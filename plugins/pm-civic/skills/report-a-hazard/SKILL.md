@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "How do I report a pothole?"
+- "Who do I call about a broken streetlight?"
+- "Report illegal dumping on our street."
+- "The council won't fix this: what now?"

@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "We're arguing about a rule."
+- "Can you do X in Catan/Uno/Monopoly?"
+- "Who's right here?"

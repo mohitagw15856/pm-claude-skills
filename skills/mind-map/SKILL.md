@@ -65,3 +65,9 @@ mindmap
 ## Based On
 
 Mind-mapping practice (radial hierarchy, balanced branches, MECE-ish themes), expressed as renderable Mermaid.
+
+## Example Trigger Phrases
+
+- "Organize ideas."
+- "Break a topic into branches."
+- "Summarize something as a mind map."

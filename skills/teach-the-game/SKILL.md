@@ -86,3 +86,10 @@ Ask for (if not already provided):
 - [ ] Do not write a lecture — it's a script with the table participating by
       sentence three
 - [ ] Do not exceed the table: an 8-year-old at the table changes every sentence
+
+## Example Trigger Phrases
+
+- "How do I explain Catan/Wingspan/this game?"
+- "Teach my family a game tonight."
+- "My rules explanations kill the mood."
+- "Make a teach script."

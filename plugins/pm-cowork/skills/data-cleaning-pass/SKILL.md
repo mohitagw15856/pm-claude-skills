@@ -61,3 +61,9 @@ Ask for these if not provided:
 - [ ] Do not invent values for should-have-value blanks — flag them; fabrication compounds downstream
 - [ ] Do not global find-replace without column scoping — the classic self-inflicted corruption
 - [ ] Do not deliver cleaned data without the log — numbers whose provenance can't be stated get re-cleaned by the next skeptic
+
+## Example Trigger Phrases
+
+- "Clean this export."
+- "Why is my pivot double-counting?"
+- "Prep this data for analysis."

@@ -68,3 +68,10 @@ A one-line read — the takeaway the chart makes obvious.
 ## Based On
 
 Data-visualization practice (chart-type-to-intent: trend/comparison/composition), emitted as a renderable chart spec.
+
+## Example Trigger Phrases
+
+- "Chart this data."
+- "Graph our monthly revenue."
+- "Visualise these metrics."
+- "Show these numbers as a picture instead of a table."

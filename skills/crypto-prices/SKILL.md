@@ -55,3 +55,9 @@ Source: [CoinGecko / Coinbase] at [timestamp, UTC] · rerun: `[exact curl]`
 - [ ] Do not loop per-coin requests against a rate-limited public API — batch
 - [ ] Do not predict, recommend, or imply timing — the refusal is part of the skill
 - [ ] Do not quote without the timestamp — undated crypto prices are misinformation with confidence
+
+## Example Trigger Phrases
+
+- "What's bitcoin at?"
+- "How's the crypto market today?"
+- "Price of some altcoin."

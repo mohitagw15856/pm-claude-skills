@@ -80,3 +80,10 @@ Nilai setiap output skill ini sebelum diserahkan; 32+ berarti layak dikirim.
 - [ ] Jangan merekomendasikan eksperimen yang tidak bisa diselesaikan dalam satu sprint: hanya eksperimen kecil yang bisa diuji
 - [ ] Jangan memperlakukan tiket carry-over sebagai masalah velocity sebelum mengidentifikasi kategori akar masalahnya
 - [ ] Jangan menjalankan format retrospektif yang sama setiap sprint: variasikan formatnya untuk mencegah kejenuhan
+
+## Contoh Frasa Pemicu
+
+- "Jalankan retrospektif."
+- "Analisis data sprint."
+- "Siapkan bahan retro."
+- "Ubah metrik sprint menjadi bahan diskusi."

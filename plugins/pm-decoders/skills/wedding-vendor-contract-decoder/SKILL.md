@@ -67,3 +67,10 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 ## Based On
 
 Client-side event-contract review — cancellation-schedule math, postponement-clause triage, silence auditing.
+
+## Example Trigger Phrases
+
+- "Review this venue contract."
+- "Is this photographer contract normal?"
+- "What if we have to postpone?"
+- "Decode this caterer agreement."

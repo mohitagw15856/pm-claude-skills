@@ -68,3 +68,9 @@ A warm one-liner: contributions are welcome, here's how to make it smooth.
 ## Based On
 
 Open-source contribution best practices (clear setup, defined workflow, good-first-issues, welcoming tone, CoC).
+
+## Example Trigger Phrases
+
+- "Write a CONTRIBUTING.md."
+- "Set up contribution guidelines."
+- "Make a repo welcoming to contributors."

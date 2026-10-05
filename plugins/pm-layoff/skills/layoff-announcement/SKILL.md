@@ -67,3 +67,10 @@ Ask for these if not provided:
 - [ ] Do not celebrate strategy in the same breath ("this positions us for growth") — there's a room full of people it didn't position
 - [ ] Do not promise "no more layoffs" unless it's true — the second breach costs all remaining trust
 - [ ] Do not outsource the hard questions to HR in the all-hands — the decider answers, or the script failed
+
+## Example Trigger Phrases
+
+- "Write a layoff announcement."
+- "Communicate a RIF."
+- "Tell the team about job cuts."
+- "Draft the difficult all-hands."

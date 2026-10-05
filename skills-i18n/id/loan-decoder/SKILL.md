@@ -80,3 +80,10 @@ Akhiri artefak dengan kalimat ini, kata per kata: *"Ini adalah pembacaan dalam b
 ## Dasar
 
 Praktik peninjauan pinjaman dari sisi peminjam: hitungan total biaya, rekonsiliasi APR, audit biaya, pembingkaian skenario penyesuaian suku bunga.
+
+## Contoh Frasa Pemicu
+
+- "Apakah pinjaman ini menguntungkan?"
+- "Jelaskan penawaran pinjaman saya."
+- "Apa yang akan saya tanda tangani?"
+- "Berapa sebenarnya biaya KPR ini?"

@@ -77,3 +77,10 @@ Cierra el artefacto con esta línea, textual: *"Esta es una lectura en lenguaje 
 ## Basado en
 
 Práctica de revisión de contratos del lado del inquilino — triaje de cláusulas, cálculo del costo de salida, auditoría de condiciones del depósito.
+
+## Frases disparadoras de ejemplo
+
+- "¿Qué estoy firmando?"
+- "Explícame mi contrato de alquiler."
+- "¿Es normal este contrato de arrendamiento?"
+- "¿De verdad puede hacer esto mi casero?"

@@ -67,3 +67,10 @@ Tanyakan hal berikut jika belum diberikan:
 - [ ] Jangan mengutip pasal atau jumlah hari tertentu sebagai fakta; gunakan kategori dengan tanda verifikasi secara lokal
 - [ ] Jangan lewatkan anak tangga permintaan rincian; banyak penahanan deposit runtuh begitu kuitansi diminta pertama kali
 - [ ] Jangan biarkan amarah yang sudah terlanjur menentukan keputusan gugatan sederhana; baris pertama lembar persiapan adalah hitungannya
+
+## Contoh Frasa Pemicu
+
+- "Bagaimana cara mendapatkan kembali uang deposit saya?"
+- "Pemilik rumah menahan deposit saya."
+- "Bantah potongan deposit ini."
+- "Tuliskan surat tuntutan pengembalian deposit."

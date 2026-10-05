@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "My agent keeps acting on outdated beliefs."
+- "Purge my assistant's stale memory."
+- "Audit what my agent currently believes."
+- "Reset the agent's memory after our pivot."

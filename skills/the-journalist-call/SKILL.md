@@ -63,3 +63,10 @@ Ask for these if not provided:
 - [ ] Do not write the article kind — write it fair; fair is what stings usefully
 - [ ] Do not teach message-track robotics — bridges that sound trained become the story too
 - [ ] Do not stay in character in the debrief
+
+## Example Trigger Phrases
+
+- "Media-train me."
+- "Simulate a press interview."
+- "Prep me for a journalist call."
+- "How will this announcement be covered?"

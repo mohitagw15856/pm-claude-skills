@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Do we have to label AI content?"
+- "Write our AI disclosure policy."
+- "Are we covered for the AI Act?"

@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Write to my MP/congressperson/councillor."
+- "Contact my representative about X."
+- "How do I get my rep to act?"
+- "My letter to the council got ignored."

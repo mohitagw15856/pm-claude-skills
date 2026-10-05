@@ -80,3 +80,10 @@ Chấm điểm mọi đầu ra của kỹ năng này trước khi bàn giao; t�
 - [ ] Không đề xuất thử nghiệm không thể hoàn thành trong một sprint: chỉ những thử nghiệm nhỏ, kiểm chứng được
 - [ ] Không coi ticket carry-over là vấn đề velocity khi chưa xác định nhóm nguyên nhân gốc rễ
 - [ ] Không dùng cùng một hình thức retrospective cho mọi sprint: thay đổi hình thức để tránh nhóm bị nhàm chán
+
+## Ví dụ câu kích hoạt
+
+- "Tổ chức buổi retrospective."
+- "Phân tích dữ liệu sprint."
+- "Chuẩn bị tài liệu cho buổi retro."
+- "Biến chỉ số sprint thành câu hỏi thảo luận."

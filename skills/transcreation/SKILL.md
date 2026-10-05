@@ -56,3 +56,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Transcreation / creative-localization practice — intent-led recreation, multiple routes, back-translation, in-market validation.
+
+## Example Trigger Phrases
+
+- "Adapt this tagline for Japan."
+- "Transcreate our campaign for the German market."
+- "This translation is correct but flat."
+- "Localise this slogan, not just translate it."

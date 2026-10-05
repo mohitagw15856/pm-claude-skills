@@ -197,3 +197,10 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Help me write a P1 incident report"
 - "Generate an RCA document for [service] going down on [date]"
 - "Draft a blameless postmortem from these notes: [paste notes]"
+
+## Example Trigger Phrases
+
+- "Write a postmortem."
+- "Write the incident report."
+- "Write the P1 review."
+- "Do a root cause analysis of the outage."

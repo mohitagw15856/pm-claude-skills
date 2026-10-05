@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Do I need a permit for this?"
+- "What permits for my renovation/business/event?"
+- "Help me apply for a permit."

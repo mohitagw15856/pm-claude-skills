@@ -61,3 +61,10 @@ Ask for these if not provided:
 - [ ] Do not fix what no rule covers — that's rewriting, wearing enforcement's badge
 - [ ] Do not flatten voice — compliant and distinctive must remain compatible or authors will route around the card
 - [ ] Do not relitigate settled fights in comments — amend the card or accept it; documents are not the venue
+
+## Example Trigger Phrases
+
+- "Make this match our style."
+- "Why do our docs all sound different?"
+- "Build a style guide from our best docs."
+- "Check this draft against house style."

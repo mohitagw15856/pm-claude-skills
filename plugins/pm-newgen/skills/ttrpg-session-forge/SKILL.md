@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Prep my D&D session."
+- "My players derailed everything."
+- "I need an NPC on the fly."
+- "Help me start a campaign."

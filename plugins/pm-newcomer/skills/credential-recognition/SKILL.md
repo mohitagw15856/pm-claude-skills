@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Get my degree recognised abroad."
+- "Is my foreign license valid here?"
+- "Can I work as a [nurse/engineer/teacher] in [country] with my qualifications?"

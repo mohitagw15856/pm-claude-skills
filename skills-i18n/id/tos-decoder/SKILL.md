@@ -74,3 +74,9 @@ Akhiri artefak dengan kalimat ini, kata per kata: *"Ini adalah pembacaan dalam b
 ## Dasar
 
 Praktik peninjauan kontrak konsumen: triase klausul berdasarkan dampak, pembacaan cakupan lisensi, analisis klausul sengketa.
+
+## Contoh Frasa Pemicu
+
+- "Jelaskan kebijakan privasi ini."
+- "Apakah ketentuan layanan ini buruk?"
+- "Haruskah saya klik setuju?"

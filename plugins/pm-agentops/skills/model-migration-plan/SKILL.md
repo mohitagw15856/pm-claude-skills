@@ -78,3 +78,9 @@ Between model generations, re-check: instruction-following strictness (newer mod
 - [ ] Do not compare models with an unpinned judge, or a judge that is the target model grading itself
 - [ ] Do not leave the old model path in code indefinitely "just in case" — set the removal date in the plan
 - [ ] Do not treat a cheaper model as free savings without re-checking quality at the tails, not just the mean
+
+## Example Trigger Phrases
+
+- "How to upgrade models safely?"
+- "Run shadow traffic."
+- "Set rollback criteria for a model change."

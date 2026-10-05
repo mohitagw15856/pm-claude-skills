@@ -75,3 +75,10 @@ Bentuk input ada di docstring skrip. Skrip menghitung vesting bulan demi bulan (
 - [ ] Jangan memodelkan refresher yang tidak tertulis sebagai pendapatan
 - [ ] Jangan menyatakan pemenang tanpa menyebut asumsi apa yang menjadi sandaran kemenangan itu
 - [ ] Jangan menyajikan hasil model tanpa melampirkan asumsinya
+
+## Contoh Frasa Pemicu
+
+- "Bandingkan tawaran kerja ini."
+- "Tawaran mana yang lebih besar dalam jangka panjang?"
+- "Hitung vesting saham saya."
+- "Apakah tawaran dari startup ini benar-benar sepadan?"

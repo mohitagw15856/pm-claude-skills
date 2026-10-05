@@ -60,3 +60,10 @@ Ask for these if not provided:
 - [ ] Do not permit "final" even once — it's the gateway drug to FINAL-final2
 - [ ] Do not design slots for files the team doesn't produce — grammar bloat kills adoption
 - [ ] Do not mass-rename history — links break; the drain rule gets there without the breakage
+
+## Example Trigger Phrases
+
+- "Set up file naming rules."
+- "Our filenames are chaos."
+- "What should we call our files?"
+- "Fix the v2-final-FINAL problem."

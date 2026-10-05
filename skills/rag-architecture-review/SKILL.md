@@ -68,3 +68,9 @@ the real cause (a confident-but-wrong answer is usually retrieval, not the LLM).
 ## Based On
 
 Retrieval-Augmented Generation practice — staged diagnosis, separated retrieval/answer evaluation, hybrid retrieval, and grounded generation.
+
+## Example Trigger Phrases
+
+- "Audit a RAG pipeline."
+- "Diagnose wrong/ungrounded answers from a 'chat with your docs' feature."
+- "Improve an already-built knowledge assistant."

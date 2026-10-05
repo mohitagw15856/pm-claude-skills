@@ -59,3 +59,10 @@ Mark any invented specifics as *(example — replace with a real instance)*. Pro
 ## Based On
 
 Recommendation-writing practice — establishing credibility, evidence over adjectives, comparative endorsement, and tailoring to the reader's decision.
+
+## Example Trigger Phrases
+
+- "Write a reference letter."
+- "Write a letter of recommendation."
+- "Write a character reference."
+- "Recommend someone for a job."

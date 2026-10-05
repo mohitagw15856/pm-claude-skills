@@ -58,3 +58,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 The Hook Model (Nir Eyal) and cohort-retention analysis practice (flattening curve = PMF signal).
+
+## Example Trigger Phrases
+
+- "Improve retention."
+- "Design an engagement/habit loop."
+- "Fix a leaky retention curve."
+- "Build a re-engagement system."

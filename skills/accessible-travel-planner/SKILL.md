@@ -114,3 +114,10 @@ this plans and prompts, it can't certify a venue's access.
 [[spoon-planner]] and [[flare-day-planner]] for the energy/health layer;
 [[venue-access-check]] for checking a single place; [[relocation-planner]] for moving
 rather than visiting; [[travel-itinerary|group-trip-negotiator]] for the group version.
+
+## Example Trigger Phrases
+
+- "Plan an accessible trip."
+- "Travel with a wheelchair/disability."
+- "Book assistance for my flight."
+- "Will this hotel actually work for me?"

@@ -108,3 +108,10 @@ Unsupervised: … · Watched: … · Not yet (and why): …
 [[onboarding-plan]] — the office cousin; [[teach-the-game]] shares the
 demonstrate-then-play bones; [[sop-writer]] when a routine deserves writing
 down for every future hire.
+
+## Example Trigger Phrases
+
+- "My apprentice starts Monday."
+- "How do I train the new guy?"
+- "Plan a new labourer's first week on site."
+- "What should a new apprentice be allowed to touch?"

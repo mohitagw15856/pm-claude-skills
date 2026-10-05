@@ -61,3 +61,10 @@ Ask for these if not provided:
 - [ ] Do not free-form the tags — synonym sprawl is findability death by kindness
 - [ ] Do not plan retroactive mass back-fill — the funnel forward, greatest hits backward
 - [ ] Do not build it without the check-first norm — deposits without withdrawals is a savings account for a library fire
+
+## Example Trigger Phrases
+
+- "Set up a research repository."
+- "We keep re-learning the same things."
+- "Where do our user insights live?"
+- "Make past research findable."

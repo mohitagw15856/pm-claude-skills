@@ -167,3 +167,10 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not let stakeholder politics override framework scores without documenting the override and reason
 - [ ] Do not mix RICE, ICE, or MoSCoW scores across frameworks in a single session — pick one framework per prioritisation exercise
 - [ ] Do not treat the output as final without documenting the assumptions used in scoring — assumptions change, and the list must be revisitable
+
+## Example Trigger Phrases
+
+- "Prioritise features."
+- "Rank a backlog."
+- "Decide what to build next."
+- "Evaluate tradeoffs between competing ideas."

@@ -107,3 +107,9 @@ type body) — hazards and advice are local.
 [[hazard-risk-map]] to find your real hazards first; [[emergency-doc-kit]] is the
 documents core; [[power-outage-plan]] and [[after-the-disaster]] for during and after;
 [[family-emergency-plan]] for the household plan around it.
+
+## Example Trigger Phrases
+
+- "Build an emergency kit."
+- "What goes in a go-bag?"
+- "Prepare for evacuation."

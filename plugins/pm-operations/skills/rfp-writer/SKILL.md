@@ -68,3 +68,10 @@ Ask for these only if they aren't already provided (else infer and label):
 ## Based On
 
 Procurement practice — requirement-driven scoping, weighted evaluation criteria set in advance, and structured questions for comparable bids.
+
+## Example Trigger Phrases
+
+- "Write an RFP."
+- "Write a request for quotes."
+- "Write a tender for this project."
+- "Solicit and compare vendor proposals."

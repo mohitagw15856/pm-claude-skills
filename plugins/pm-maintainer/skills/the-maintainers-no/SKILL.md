@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "How do I reject this PR nicely?"
+- "Say no to this feature request."
+- "A company wants free support from my project."
+- "Suggest a fork without burning the contributor."

@@ -72,3 +72,9 @@ Akhiri artefak dengan kalimat ini, kata per kata: *"Ini adalah pembacaan dalam b
 ## Dasar
 
 Praktik peninjauan pertanggungan dari sisi pemegang polis: rekonsiliasi ikhtisar polis/pengecualian, pengujian skenario pembayaran, audit sublimit.
+
+## Contoh Frasa Pemicu
+
+- "Apa yang sebenarnya ditanggung asuransi saya?"
+- "Jelaskan polis saya."
+- "Apakah deductible ini wajar?"

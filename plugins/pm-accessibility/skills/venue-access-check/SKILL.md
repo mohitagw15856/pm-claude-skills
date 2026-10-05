@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Will this place work for my wheelchair?"
+- "Check if this venue is accessible."
+- "Is this restaurant/office actually accessible?"

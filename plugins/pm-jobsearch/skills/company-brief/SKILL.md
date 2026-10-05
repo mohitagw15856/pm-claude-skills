@@ -57,3 +57,9 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Interview research / company due-diligence practice for candidates (business model · trajectory · role-relevant challenges).
+
+## Example Trigger Phrases
+
+- "Research a company for a job."
+- "Prep a company brief before an interview."
+- "Understand a prospective employer fast."

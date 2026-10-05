@@ -83,3 +83,10 @@ erDiagram
 ## Based On
 
 Data modeling (entity-relationship modeling, crow's-foot notation, normalization), expressed as renderable Mermaid.
+
+## Example Trigger Phrases
+
+- "Design a schema."
+- "Model data."
+- "Show how tables/entities relate."
+- "Diagram a database."

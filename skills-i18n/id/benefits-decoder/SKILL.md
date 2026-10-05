@@ -80,3 +80,10 @@ Akhiri artefak dengan kalimat ini, kata per kata: *"Ini adalah pembacaan dalam b
 ## Dasar
 
 Praktik peninjauan tawaran kerja: rekonstruksi total kompensasi, penguraian bahasa ketentuan program, daftar pertanyaan sebelum tanda tangan.
+
+## Contoh Frasa Pemicu
+
+- "Apakah tawaran ini bagus?"
+- "Jelaskan paket tunjangan saya."
+- "Apa arti saham saya sebenarnya?"
+- "Apa yang harus saya tanyakan ke HR sebelum tanda tangan?"

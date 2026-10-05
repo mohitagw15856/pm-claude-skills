@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Write it like I would."
+- "Learn my style."
+- "Draft this as me."
+- "Wants an AI that apprentices to their judgment rather than imitating their tone."
