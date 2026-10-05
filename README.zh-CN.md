@@ -7,11 +7,13 @@
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/constellation-zh.svg">
-    <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/constellation-zh-light.svg">
-    <img alt="PM Skills：技能名称像星星一样聚拢，连成 PM Skills 字样" src="docs/readme-assets/constellation-zh-light.svg" width="860">
-  </picture>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/banner-zh.svg">
+      <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/banner-zh-light.svg">
+      <img src="docs/readme-assets/banner-zh.svg" width="100%" alt="PM Skills：资深同事的工作笔记，任何 AI 助手都能用。说一句话，就加载对应的技能：周报、补偿金、家长会、询盘、劳动合同。" />
+    </picture>
+  </a>
 </p>
 
 > **一句话上手** &nbsp; 安装：`npx --registry=https://registry.npmmirror.com pm-claude-skills add`（走国内镜像，任何工具都能用）· Claude Code 里输入 `/plugin` 搜索 **pm-skills**

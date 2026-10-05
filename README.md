@@ -4,11 +4,13 @@
 > Then just say what you need: *"Decode this job ad and tell me where I am weak."*
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/constellation.svg">
-    <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/constellation-light.svg">
-    <img alt="PM Skills: skill names drift in like stars and join into the PM Skills wordmark" src="docs/readme-assets/constellation-light.svg" width="860">
-  </picture>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/banner.svg">
+      <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/banner-light.svg">
+      <img src="docs/readme-assets/banner.svg" width="100%" alt="PM Skills: the senior colleague's notes for any AI assistant. A request in plain words loads the right skill: a deposit dispute, a PRD, a Chinese weekly report, a Korean tax settlement." />
+    </picture>
+  </a>
 </p>
 
 <p align="center">
