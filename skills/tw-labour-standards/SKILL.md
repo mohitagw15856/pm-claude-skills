@@ -40,6 +40,15 @@ Specific, polite requests in Traditional Chinese, citing the article.
 ### 4. If it is not resolved
 The local labour bureau (地方勞工局) for a complaint or mediation (勞資爭議調解), the 1955 hotline, and keeping evidence (pay slips, clock records, messages).
 
+## Programmatic Helper
+
+```bash
+python3 skills/tw-labour-standards/scripts/tw_severance.py --start 2022-05-01 --end 2026-07-31 --avg-monthly 50000
+python3 skills/tw-labour-standards/scripts/tw_severance.py --start 2022-05-01 --end 2026-07-31 --avg-monthly 50000 --no-notice --json
+```
+
+Severance under the new pension system, old-system years and pay in lieu of notice. The end date counts as a day worked. Standard library only.
+
 ## Quality Checks
 
 - [ ] Every rule and figure is marked to confirm against the current Act and minimum wage

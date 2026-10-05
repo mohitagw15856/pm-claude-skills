@@ -53,6 +53,15 @@ A short polite message the person can send, plus a script for the conversation w
 - Steps: collect the evidence (contract, policy, payslips, past bonus records, performance result, messages); ask HR in writing; consider 劳动仲裁, noting the one-year limitation period (仲裁时效) from when the person knew or should have known (confirm)
 - Where severance is also in question, see `cn-severance-calculator`.
 
+## Programmatic Helper
+
+```bash
+python3 skills/cn-year-end-bonus/scripts/bonus_tax.py --bonus 100000 --other-taxable 150000
+python3 skills/cn-year-end-bonus/scripts/bonus_tax.py --traps
+```
+
+Compares separate taxation with combining, using only the person's figures, and lists the threshold-trap ranges. Standard library only.
+
 ## Quality Checks
 
 - [ ] The bonus type is tied to a quoted clause, or marked as unclear

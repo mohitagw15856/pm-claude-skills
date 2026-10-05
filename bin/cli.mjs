@@ -19,6 +19,7 @@ import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { homedir } from 'node:os';
 import { createRequire } from 'node:module';
+import { liteify } from './lib/lite.mjs';
 
 const PKG_ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const STAR = '⭐ Find this useful? Star the repo: https://github.com/mohitagw15856/pm-claude-skills\n💛 The free playground runs are sponsor-funded — fund more: https://github.com/sponsors/mohitagw15856';
@@ -99,6 +100,7 @@ function parse(argv) {
     const a = argv[i];
     if (a === '--link') out.link = true;
     else if (a === '--dry-run') out.dryRun = true;
+    else if (a === '--lite') out.lite = true;
     else if (a === '--json') out.json = true;
     else if (a === '--help' || a === '-h') out.help = true;
     else if (a === '--version' || a === '-v') out.version = true;
@@ -225,6 +227,8 @@ function add(opts) {
     process.exit(2);
   }
   const only = bundleFilter(opts.bundle);
+  if (opts.lite && opts.link) { console.error('Error: --lite writes condensed copies, so it cannot be combined with --link.'); process.exit(2); }
+  if (opts.lite && agent in RULEFILE) console.log(`  note: --lite applies to native and generated agents; '${agent}' uses the pre-built rule files in exports/, which are installed in full.`);
   const skillsDir = join(PKG_ROOT, 'skills');
   if (!existsSync(skillsDir)) { console.error(`Error: bundled skills/ not found at ${skillsDir}.`); process.exit(1); }
   const target = resolve(opts.target || defaultTarget(agent));
@@ -248,7 +252,8 @@ function add(opts) {
       const src = join(skillsDir, name, 'SKILL.md');
       if (!existsSync(src)) continue;
       if (only && !only.has(name)) continue;
-      const raw = readFileSync(src, 'utf8');
+      const raw0 = readFileSync(src, 'utf8');
+      const raw = opts.lite ? liteify(raw0) : raw0;
       if (/^deprecated:/m.test((raw.match(/^---\r?\n([\s\S]*?)\r?\n---/) || [, ''])[1])) continue;
       const { description, body } = splitSkill(raw);
       const out = gen.render(description, body);
@@ -278,6 +283,7 @@ function add(opts) {
       if (!existsSync(join(src, 'SKILL.md'))) continue;
       if (only && !only.has(name)) continue;
       placeDir(src, join(target, name), opts);
+      if (opts.lite && !opts.dryRun) writeFileSync(join(target, name, 'SKILL.md'), liteify(readFileSync(join(src, 'SKILL.md'), 'utf8')));
       count++;
     }
     // Private overlay: a company's own skills merged on top of the public library
@@ -476,7 +482,7 @@ const HELP = `pm-claude-skills — install professional Agent Skills into any AI
 (This is a CLI, not a library — you don't need \`npm install\`; \`npx …\` always runs the latest.)
 
 Usage:
-  npx pm-claude-skills add --agent <${AGENTS.join('|')}> [--bundle <a,b>] [--target <path>] [--link] [--dry-run]
+  npx pm-claude-skills add --agent <${AGENTS.join('|')}> [--bundle <a,b>] [--target <path>] [--link] [--lite] [--dry-run]
   npx pm-claude-skills run <skill> [--text "…" | --input <file>] [--model <m>] [--out <file>]
   npx pm-claude-skills find "<describe your task>" [--json] [--limit <n>]   # ranked task→skill router (start here)
   npx pm-claude-skills search [query…] [--json] [--limit <n>]
@@ -504,6 +510,7 @@ Examples:
   npx pm-claude-skills add --agent windsurf   # .md rules into ./.windsurf/rules
   npx pm-claude-skills add --agent codex --link
   npx pm-claude-skills add --agent trae --bundle pm-china-work,pm-cv   # Trae rules for two bundles
+  npx pm-claude-skills add --agent claude --lite                       # condensed skills for small local models (Qwen 7B, DeepSeek distills)
   npx pm-claude-skills add --agent qoder      # Qoder / Lingma: --agent lingma
 
   npx pm-claude-skills find "prep a QBR for an at-risk account"   # describe the task, get ranked skills + a measured/unmeasured badge

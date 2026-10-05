@@ -43,6 +43,15 @@ TVC 與合資格延期年金保費共用的每年扣稅上限（請核實最新�
 ### 6. 基金選擇框架
 收費（基金開支比率）、風險水平與本人投資年期的配合、預設投資策略（DIS）作為低收費選項，但不點名推薦任何基金。
 
+## 程式輔助工具
+
+```bash
+python3 skills/hk-mpf-explainer/scripts/mpf.py --income 40000
+python3 skills/hk-mpf-explainer/scripts/mpf.py --income 25000 --months 12
+```
+
+計算僱主和僱員的強制性供款，以及每年可扣稅的金額。只用標準函式庫。
+
 ## 品質檢查
 
 - [ ] 每個上下限、上限和日期都註明需向積金局核實

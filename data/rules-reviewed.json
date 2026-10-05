@@ -1,0 +1,729 @@
+{
+  "$comment": "When each rule-based skill was last checked against current rules. Seeded entries (by: \"seed\") are dated from the last commit that changed the skill; replace them with node scripts/rules-reviewed.mjs --review <skill> --by <handle> after a real check.",
+  "skills": {
+    "401k-plan-decoder": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "accessible-travel-planner": {
+      "reviewed": "2026-08-10",
+      "by": "seed"
+    },
+    "accommodation-request": {
+      "reviewed": "2026-08-10",
+      "by": "seed"
+    },
+    "account-recovery-plan": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "after-the-disaster": {
+      "reviewed": "2026-08-10",
+      "by": "seed"
+    },
+    "aging-in-place-assessment": {
+      "reviewed": "2026-08-06",
+      "by": "seed"
+    },
+    "aging-parent-talks": {
+      "reviewed": "2026-07-26",
+      "by": "seed"
+    },
+    "apology-letter": {
+      "reviewed": "2026-06-29",
+      "by": "seed"
+    },
+    "arrival-setup": {
+      "reviewed": "2026-08-10",
+      "by": "seed"
+    },
+    "auto-repair-estimate-decoder": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "backup-strategy": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "bankruptcy-decision": {
+      "reviewed": "2026-08-18",
+      "by": "seed"
+    },
+    "beneficiary-audit": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "benefits-cliff-check": {
+      "reviewed": "2026-08-18",
+      "by": "seed"
+    },
+    "benefits-decoder": {
+      "reviewed": "2026-07-14",
+      "by": "seed"
+    },
+    "brand-impersonation-response": {
+      "reviewed": "2026-07-02",
+      "by": "seed"
+    },
+    "car-lease-decoder": {
+      "reviewed": "2026-07-17",
+      "by": "seed"
+    },
+    "care-decision-family-meeting": {
+      "reviewed": "2026-08-06",
+      "by": "seed"
+    },
+    "care-home-contract-decoder": {
+      "reviewed": "2026-09-04",
+      "by": "seed"
+    },
+    "care-team-coordinator": {
+      "reviewed": "2026-08-06",
+      "by": "seed"
+    },
+    "caregiver-burnout-check": {
+      "reviewed": "2026-08-06",
+      "by": "seed"
+    },
+    "cease-and-desist-letter": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "claim-denial-decoder": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "claims-triage": {
+      "reviewed": "2026-07-14",
+      "by": "seed"
+    },
+    "clause-explainer": {
+      "reviewed": "2026-06-21",
+      "by": "seed"
+    },
+    "clinical-trial-protocol": {
+      "reviewed": "2026-06-29",
+      "by": "seed"
+    },
+    "closing-disclosure-decoder": {
+      "reviewed": "2026-07-17",
+      "by": "seed"
+    },
+    "cn-customs-docs": {
+      "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "cn-data-export-assessment": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-extracurricular-plan": {
+      "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "cn-fupan": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-gaokao-planner": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-genai-filing": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-help-parents-admin": {
+      "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "cn-home-school-comms": {
+      "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "cn-homework-helper-parent": {
+      "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "cn-housing-fund-withdrawal": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-hukou-points": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-iit-reconciliation": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-inquiry-reply": {
+      "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "cn-labour-contract-decoder": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-letter-of-credit-check": {
+      "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "cn-level-mapper": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-medical-insurance-claim": {
+      "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "cn-mlps-checklist": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-next-year-plan": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-official-document": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-pipl-pia": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-prd-review": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-promotion-defence": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-school-entry": {
+      "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "cn-severance-calculator": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-shuzhi-deck": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-small-business-tax": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-social-insurance-explainer": {
+      "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "cn-trade-quotation": {
+      "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "cn-weekly-report": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-year-end-bonus": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "cn-year-end-review": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "college-app-parent-guide": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "coming-out-rehearsal": {
+      "reviewed": "2026-08-07",
+      "by": "seed"
+    },
+    "compliance-checklist": {
+      "reviewed": "2026-06-08",
+      "by": "seed"
+    },
+    "contract-red-flags": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "contract-review": {
+      "reviewed": "2026-06-08",
+      "by": "seed"
+    },
+    "coverage-gap-analysis": {
+      "reviewed": "2026-07-14",
+      "by": "seed"
+    },
+    "credential-recognition": {
+      "reviewed": "2026-08-10",
+      "by": "seed"
+    },
+    "credit-from-scratch": {
+      "reviewed": "2026-08-10",
+      "by": "seed"
+    },
+    "credit-memo": {
+      "reviewed": "2026-07-14",
+      "by": "seed"
+    },
+    "customer-incident-update": {
+      "reviewed": "2026-08-03",
+      "by": "seed"
+    },
+    "customer-outage-notice": {
+      "reviewed": "2026-06-29",
+      "by": "seed"
+    },
+    "data-breach-response": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "data-broker-removal": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "debt-collector-scripts": {
+      "reviewed": "2026-08-18",
+      "by": "seed"
+    },
+    "defamation-response": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "demand-letter": {
+      "reviewed": "2026-06-21",
+      "by": "seed"
+    },
+    "diagnosis-limbo-kit": {
+      "reviewed": "2026-08-07",
+      "by": "seed"
+    },
+    "digital-legacy-planner": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "disability-benefit-appeal": {
+      "reviewed": "2026-08-10",
+      "by": "seed"
+    },
+    "disability-disclosure-decision": {
+      "reviewed": "2026-08-10",
+      "by": "seed"
+    },
+    "disability-insurance-decoder": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "discharge-summary": {
+      "reviewed": "2026-06-29",
+      "by": "seed"
+    },
+    "doxxing-response": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "dpa-review": {
+      "reviewed": "2026-08-03",
+      "by": "seed"
+    },
+    "elder-scam-briefing": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "emergency-doc-kit": {
+      "reviewed": "2026-08-10",
+      "by": "seed"
+    },
+    "end-of-life-wishes-conversation": {
+      "reviewed": "2026-08-06",
+      "by": "seed"
+    },
+    "estate-settlement-organizer": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "eulogy-and-obituary-writer": {
+      "reviewed": "2026-08-25",
+      "by": "seed"
+    },
+    "expungement-navigator": {
+      "reviewed": "2026-08-18",
+      "by": "seed"
+    },
+    "faith-transition-companion": {
+      "reviewed": "2026-08-07",
+      "by": "seed"
+    },
+    "first-90-days-out": {
+      "reviewed": "2026-08-18",
+      "by": "seed"
+    },
+    "flare-day-planner": {
+      "reviewed": "2026-08-07",
+      "by": "seed"
+    },
+    "franchise-decoder": {
+      "reviewed": "2026-09-04",
+      "by": "seed"
+    },
+    "funeral-pricing-decoder": {
+      "reviewed": "2026-09-04",
+      "by": "seed"
+    },
+    "go-bag-builder": {
+      "reviewed": "2026-08-10",
+      "by": "seed"
+    },
+    "grieving-at-work": {
+      "reviewed": "2026-08-18",
+      "by": "seed"
+    },
+    "hazard-risk-map": {
+      "reviewed": "2026-08-10",
+      "by": "seed"
+    },
+    "healthcare-system-primer": {
+      "reviewed": "2026-08-10",
+      "by": "seed"
+    },
+    "hk-mpf-explainer": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "hoa-decoder": {
+      "reviewed": "2026-07-14",
+      "by": "seed"
+    },
+    "hoa-violation-response": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "home-contractor-quote-decoder": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "hospital-stay-plan": {
+      "reviewed": "2026-08-06",
+      "by": "seed"
+    },
+    "housing-with-a-record": {
+      "reviewed": "2026-08-18",
+      "by": "seed"
+    },
+    "identity-theft-recovery": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "iep-504-meeting-kit": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "incident-public-statement": {
+      "reviewed": "2026-06-29",
+      "by": "seed"
+    },
+    "inspection-report-decoder": {
+      "reviewed": "2026-07-17",
+      "by": "seed"
+    },
+    "insurance-claim-appeal": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "insurance-policy-decoder": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "job-search-with-a-record": {
+      "reviewed": "2026-08-18",
+      "by": "seed"
+    },
+    "jury-duty-guide": {
+      "reviewed": "2026-08-21",
+      "by": "seed"
+    },
+    "kids-online-safety-plan": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "kr-cover-letter": {
+      "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "kr-severance-pay": {
+      "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "kr-work-report": {
+      "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "kr-year-end-tax-settlement": {
+      "reviewed": "2026-10-05",
+      "by": "seed"
+    },
+    "kyc-escalation": {
+      "reviewed": "2026-07-14",
+      "by": "seed"
+    },
+    "layoff-communication": {
+      "reviewed": "2026-06-29",
+      "by": "seed"
+    },
+    "lease-decoder": {
+      "reviewed": "2026-07-14",
+      "by": "seed"
+    },
+    "legal-brief": {
+      "reviewed": "2026-06-08",
+      "by": "seed"
+    },
+    "lemon-law-check": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "lending-risk-brief": {
+      "reviewed": "2026-07-14",
+      "by": "seed"
+    },
+    "loan-covenant-review": {
+      "reviewed": "2026-07-14",
+      "by": "seed"
+    },
+    "loan-decoder": {
+      "reviewed": "2026-07-14",
+      "by": "seed"
+    },
+    "long-term-care-options": {
+      "reviewed": "2026-08-06",
+      "by": "seed"
+    },
+    "medical-appointment-advocate": {
+      "reviewed": "2026-08-06",
+      "by": "seed"
+    },
+    "medical-bill-decoder": {
+      "reviewed": "2026-07-14",
+      "by": "seed"
+    },
+    "medication-management-system": {
+      "reviewed": "2026-08-06",
+      "by": "seed"
+    },
+    "moving-company-estimate-decoder": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "name-change-navigator": {
+      "reviewed": "2026-08-07",
+      "by": "seed"
+    },
+    "nda-analyser": {
+      "reviewed": "2026-06-08",
+      "by": "seed"
+    },
+    "notify-everyone-of-a-death": {
+      "reviewed": "2026-08-18",
+      "by": "seed"
+    },
+    "oversharing-audit": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "parent-teacher-conference-prep": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "password-and-2fa-setup": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "pay-stub-decoder": {
+      "reviewed": "2026-07-17",
+      "by": "seed"
+    },
+    "perimenopause-navigator": {
+      "reviewed": "2026-08-07",
+      "by": "seed"
+    },
+    "phishing-triage": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "pip-responder": {
+      "reviewed": "2026-07-17",
+      "by": "seed"
+    },
+    "policy-renewal-review": {
+      "reviewed": "2026-07-14",
+      "by": "seed"
+    },
+    "power-of-attorney-explainer": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "power-outage-plan": {
+      "reviewed": "2026-08-10",
+      "by": "seed"
+    },
+    "pr-crisis-response": {
+      "reviewed": "2026-06-29",
+      "by": "seed"
+    },
+    "prior-authorization-letter": {
+      "reviewed": "2026-06-29",
+      "by": "seed"
+    },
+    "privacy-policy-drafter": {
+      "reviewed": "2026-06-21",
+      "by": "seed"
+    },
+    "property-tax-appeal": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "ransomware-first-response": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "reconnect-after-time-away": {
+      "reviewed": "2026-08-18",
+      "by": "seed"
+    },
+    "rent-increase-response": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "repair-request-escalation": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "respite-care-plan": {
+      "reviewed": "2026-08-06",
+      "by": "seed"
+    },
+    "safe-online-shopping": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "salary-negotiation": {
+      "reviewed": "2026-06-24",
+      "by": "seed"
+    },
+    "scam-message-decoder": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "secure-a-lost-phone": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "security-deposit-recovery": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "severance-agreement-decoder": {
+      "reviewed": "2026-07-17",
+      "by": "seed"
+    },
+    "sibling-care-summit": {
+      "reviewed": "2026-07-26",
+      "by": "seed"
+    },
+    "small-claims-prep": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "soap-note": {
+      "reviewed": "2026-06-29",
+      "by": "seed"
+    },
+    "spoon-planner": {
+      "reviewed": "2026-08-07",
+      "by": "seed"
+    },
+    "stop-the-bleed-triage": {
+      "reviewed": "2026-08-18",
+      "by": "seed"
+    },
+    "support-a-friend-in-crisis": {
+      "reviewed": "2026-08-06",
+      "by": "seed"
+    },
+    "support-the-bereaved": {
+      "reviewed": "2026-08-18",
+      "by": "seed"
+    },
+    "tax-residency-primer": {
+      "reviewed": "2026-08-10",
+      "by": "seed"
+    },
+    "tenant-rights-explainer": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    },
+    "the-visa-interview": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "the-year-of-firsts": {
+      "reviewed": "2026-08-18",
+      "by": "seed"
+    },
+    "timeshare-contract-decoder": {
+      "reviewed": "2026-07-17",
+      "by": "seed"
+    },
+    "tos-decoder": {
+      "reviewed": "2026-07-14",
+      "by": "seed"
+    },
+    "tw-labour-standards": {
+      "reviewed": "2026-10-04",
+      "by": "seed"
+    },
+    "two-worlds-translator": {
+      "reviewed": "2026-08-07",
+      "by": "seed"
+    },
+    "underwriting-narrative": {
+      "reviewed": "2026-07-14",
+      "by": "seed"
+    },
+    "venue-access-check": {
+      "reviewed": "2026-08-10",
+      "by": "seed"
+    },
+    "vet-estimate-decoder": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "wage-garnishment-response": {
+      "reviewed": "2026-08-18",
+      "by": "seed"
+    },
+    "wedding-vendor-contract-decoder": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "what-to-ask": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "when-someone-dies": {
+      "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "witness-statement-writer": {
+      "reviewed": "2026-08-05",
+      "by": "seed"
+    }
+  }
+}

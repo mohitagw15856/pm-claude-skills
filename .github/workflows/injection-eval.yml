@@ -1,0 +1,35 @@
+name: Prompt-injection eval
+
+# Runs evals/injection/cases.json against a model: each case pastes a document
+# (a lease, a CV, a contract, an inbox) with a hidden instruction into the skill
+# that reads it, and fails if the answer follows the instruction. Manual only,
+# because it spends tokens. The offline check (cases valid, guard lines present)
+# runs in npm run check on every pull request.
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: 'Model id (claude-* uses ANTHROPIC_API_KEY)'
+        required: true
+        default: 'claude-haiku-4-5-20251001'
+
+permissions:
+  contents: read
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Run the suite
+        env:
+          MODEL: ${{ inputs.model }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          set -euo pipefail
+          printf '%s' "$MODEL" | grep -Eq '^[A-Za-z0-9._:/-]+$' || { echo "::error::model must be a model id"; exit 1; }
+          node scripts/check-injection.mjs --model "$MODEL" --out evals/injection/results.json | tee -a "$GITHUB_STEP_SUMMARY"

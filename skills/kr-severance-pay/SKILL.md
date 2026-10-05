@@ -38,6 +38,15 @@ The payment deadline after leaving and whether it can be extended by agreement (
 ### 5. If it is not paid
 A polite written request first, then a 진정 to the local 고용노동부 office or online, the delay interest that applies (confirm), the time limit for wage claims (confirm), and the free help available (노동부 상담, 대한법률구조공단).
 
+## Programmatic Helper
+
+```bash
+python3 skills/kr-severance-pay/scripts/kr_severance.py --start 2023-03-02 --leave 2026-05-02 --wages-3m 9600000 --annual-bonus 12800000
+python3 skills/kr-severance-pay/scripts/kr_severance.py --start 2023-03-02 --leave 2026-05-02 --wages-3m 9600000 --ordinary-daily 120000 --json
+```
+
+The leaving date (퇴직일) is the day after the last day worked. Standard library only.
+
 ## Quality Checks
 
 - [ ] Every legal threshold, deadline, rate and exception is marked to confirm with 고용노동부 or a 노무사

@@ -42,6 +42,15 @@ description: "當被問到加班費怎麼算、特休有幾天、被資遣可以
 ### 4. 若無法解決
 向地方勞工局申訴或申請勞資爭議調解、撥打 1955 專線，並保留證據（薪資單、打卡紀錄、訊息）。
 
+## 程式輔助工具
+
+```bash
+python3 skills/tw-labour-standards/scripts/tw_severance.py --start 2022-05-01 --end 2026-07-31 --avg-monthly 50000
+python3 skills/tw-labour-standards/scripts/tw_severance.py --start 2022-05-01 --end 2026-07-31 --avg-monthly 50000 --no-notice --json
+```
+
+依新制計算資遣費、舊制年資與預告工資，最後一天算作有上班。只用標準函式庫。
+
 ## 品質檢查
 
 - [ ] 每項規定和數字都註明需對照現行法規與基本工資核實
