@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" role="img" aria-label="PM Skills：1,285 个专业技能，任何 AI 助手都能用">
+<title>PM Skills：1,285 个专业技能，任何 AI 助手都能用</title>
+<defs>
+  <radialGradient id="glow" cx="78%" cy="40%" r="55%"><stop offset="0" stop-color="#f2a65a" stop-opacity=".20"/><stop offset="1" stop-color="#f2a65a" stop-opacity="0"/></radialGradient>
+  <linearGradient id="bgg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#15181d"/><stop offset="1" stop-color="#1b1f26"/></linearGradient>
+</defs>
+<style>
+text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans","Apple SD Gothic Neo","Noto Sans CJK SC","Malgun Gothic","Microsoft YaHei",sans-serif}
+@keyframes s0{0%{opacity:0}2.67%{opacity:1}17.33%{opacity:1}20%{opacity:0}100%{opacity:0}}.s0{opacity:1;animation:s0 15s infinite}@keyframes s1{0%{opacity:0}20%{opacity:0}22.67%{opacity:1}37.33%{opacity:1}40%{opacity:0}100%{opacity:0}}.s1{opacity:0;animation:s1 15s infinite}@keyframes s2{0%{opacity:0}40%{opacity:0}42.67%{opacity:1}57.33%{opacity:1}60%{opacity:0}100%{opacity:0}}.s2{opacity:0;animation:s2 15s infinite}@keyframes s3{0%{opacity:0}60%{opacity:0}62.67%{opacity:1}77.33%{opacity:1}80%{opacity:0}100%{opacity:0}}.s3{opacity:0;animation:s3 15s infinite}@keyframes s4{0%{opacity:0}80%{opacity:0}82.67%{opacity:1}97.33%{opacity:1}100%{opacity:0}100%{opacity:0}}.s4{opacity:0;animation:s4 15s infinite}
+@keyframes pulse{0%,100%{opacity:.55}50%{opacity:1}}.pulse{animation:pulse 3s ease-in-out infinite}
+@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}.rise{animation:rise .9s ease-out both}
+@media (prefers-reduced-motion: reduce){.s0{animation:none;opacity:1}.s1{animation:none;opacity:0}.s2{animation:none;opacity:0}.s3{animation:none;opacity:0}.s4{animation:none;opacity:0}.pulse,.rise{animation:none;opacity:1}}
+</style>
+<rect width="1280" height="400" rx="18" fill="url(#bgg)"/>
+<rect width="1280" height="400" rx="18" fill="url(#glow)"/>
+<circle cx="0" cy="0" r="1" fill="#9aa4b1" opacity=".18"/><circle cx="157" cy="83" r="1.6" fill="#9aa4b1" opacity=".18"/><circle cx="314" cy="166" r="2.2" fill="#9aa4b1" opacity=".18"/><circle cx="471" cy="249" r="1" fill="#9aa4b1" opacity=".18"/><circle cx="628" cy="332" r="1.6" fill="#9aa4b1" opacity=".18"/><circle cx="785" cy="15" r="2.2" fill="#9aa4b1" opacity=".18"/><circle cx="942" cy="98" r="1" fill="#9aa4b1" opacity=".18"/><circle cx="1099" cy="181" r="1.6" fill="#9aa4b1" opacity=".18"/><circle cx="1256" cy="264" r="2.2" fill="#9aa4b1" opacity=".18"/><circle cx="133" cy="347" r="1" fill="#9aa4b1" opacity=".18"/><circle cx="290" cy="30" r="1.6" fill="#9aa4b1" opacity=".18"/><circle cx="447" cy="113" r="2.2" fill="#9aa4b1" opacity=".18"/><circle cx="604" cy="196" r="1" fill="#9aa4b1" opacity=".18"/><circle cx="761" cy="279" r="1.6" fill="#9aa4b1" opacity=".18"/><circle cx="918" cy="362" r="2.2" fill="#9aa4b1" opacity=".18"/><circle cx="1075" cy="45" r="1" fill="#9aa4b1" opacity=".18"/><circle cx="1232" cy="128" r="1.6" fill="#9aa4b1" opacity=".18"/><circle cx="109" cy="211" r="2.2" fill="#9aa4b1" opacity=".18"/><circle cx="266" cy="294" r="1" fill="#9aa4b1" opacity=".18"/><circle cx="423" cy="377" r="1.6" fill="#9aa4b1" opacity=".18"/><circle cx="580" cy="60" r="2.2" fill="#9aa4b1" opacity=".18"/><circle cx="737" cy="143" r="1" fill="#9aa4b1" opacity=".18"/><circle cx="894" cy="226" r="1.6" fill="#9aa4b1" opacity=".18"/><circle cx="1051" cy="309" r="2.2" fill="#9aa4b1" opacity=".18"/><circle cx="1208" cy="392" r="1" fill="#9aa4b1" opacity=".18"/><circle cx="85" cy="75" r="1.6" fill="#9aa4b1" opacity=".18"/><circle cx="242" cy="158" r="2.2" fill="#9aa4b1" opacity=".18"/><circle cx="399" cy="241" r="1" fill="#9aa4b1" opacity=".18"/><circle cx="556" cy="324" r="1.6" fill="#9aa4b1" opacity=".18"/><circle cx="713" cy="7" r="2.2" fill="#9aa4b1" opacity=".18"/><circle cx="870" cy="90" r="1" fill="#9aa4b1" opacity=".18"/><circle cx="1027" cy="173" r="1.6" fill="#9aa4b1" opacity=".18"/><circle cx="1184" cy="256" r="2.2" fill="#9aa4b1" opacity=".18"/><circle cx="61" cy="339" r="1" fill="#9aa4b1" opacity=".18"/>
+<g class="rise">
+  <text x="64" y="64" font-size="14" font-weight="700" fill="#f2a65a" letter-spacing=".08em">专业技能库 · 不只是产品经理</text>
+  <text x="62" y="130" font-size="72" font-weight="800" fill="#eef1f4" letter-spacing="-.02em">PM Skills</text>
+  <text x="64" y="182" font-size="26" fill="#eef1f4">资深同事的工作笔记，</text>
+  <text x="64" y="218" font-size="26" fill="#eef1f4">任何 AI 助手都能用。</text>
+  <text x="64" y="260" font-size="16" font-weight="600" fill="#f2a65a">1,285 个技能 · 152 个技能包 · 12 种工具 · MIT</text>
+</g>
+<rect x="64" y="330" rx="12" height="26" width="51" fill="none" stroke="#2f3640"/><text x="73" y="348" font-size="13" fill="#9aa4b1">Trae</text><rect x="122.8" y="330" rx="12" height="26" width="78" fill="none" stroke="#2f3640"/><text x="131.8" y="348" font-size="13" fill="#9aa4b1">通义灵码</text><rect x="208.8" y="330" rx="12" height="26" width="92" fill="none" stroke="#2f3640"/><text x="217.8" y="348" font-size="13" fill="#9aa4b1">CodeBuddy</text><rect x="308.6" y="330" rx="12" height="26" width="59" fill="none" stroke="#2f3640"/><text x="317.6" y="348" font-size="13" fill="#9aa4b1">Qoder</text><rect x="375.6" y="330" rx="12" height="26" width="84" fill="none" stroke="#2f3640"/><text x="384.6" y="348" font-size="13" fill="#9aa4b1">DeepSeek</text><rect x="467.20000000000005" y="330" rx="12" height="26" width="51" fill="none" stroke="#2f3640"/><text x="476.20000000000005" y="348" font-size="13" fill="#9aa4b1">Qwen</text><rect x="526" y="330" rx="12" height="26" width="67" fill="none" stroke="#2f3640"/><text x="535" y="348" font-size="13" fill="#9aa4b1">Claude</text><rect x="601.2" y="330" rx="12" height="26" width="67" fill="none" stroke="#2f3640"/><text x="610.2" y="348" font-size="13" fill="#9aa4b1">Cursor</text>
+<g>
+  <rect x="690" y="92" width="520" height="190" rx="16" fill="#1f242b" stroke="#2f3640"/>
+  <circle cx="712" cy="114" r="5" fill="#ff5f57"/><circle cx="728" cy="114" r="5" fill="#febc2e"/><circle class="pulse" cx="744" cy="114" r="5" fill="#7cc4ae"/>
+  
+    <g class="s0">
+      <text x="718" y="150" font-size="13" fill="#9aa4b1" letter-spacing=".04em">你说</text>
+      <text x="718" y="182" font-size="22" font-weight="600" fill="#eef1f4">“帮我把这些笔记整理成周报”</text>
+      <text x="718" y="226" font-size="13" fill="#9aa4b1" letter-spacing=".04em">加载</text>
+      <rect x="718" y="238" rx="13" height="28" width="175.6" fill="#3b2f4f"/>
+      <text x="731" y="257" font-size="15" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" fill="#e9dcff">cn-weekly-report</text>
+      <circle cx="1176" cy="252" r="7" fill="#7cc4ae"/>
+    </g>
+    <g class="s1">
+      <text x="718" y="150" font-size="13" fill="#9aa4b1" letter-spacing=".04em">你说</text>
+      <text x="718" y="182" font-size="22" font-weight="600" fill="#eef1f4">“公司要裁我，能拿多少补偿？”</text>
+      <text x="718" y="226" font-size="13" fill="#9aa4b1" letter-spacing=".04em">加载</text>
+      <rect x="718" y="238" rx="13" height="28" width="242.79999999999998" fill="#3b2f4f"/>
+      <text x="731" y="257" font-size="15" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" fill="#e9dcff">cn-severance-calculator</text>
+      <circle cx="1176" cy="252" r="7" fill="#7cc4ae"/>
+    </g>
+    <g class="s2">
+      <text x="718" y="150" font-size="13" fill="#9aa4b1" letter-spacing=".04em">你说</text>
+      <text x="718" y="182" font-size="22" font-weight="600" fill="#eef1f4">“下周三要开家长会”</text>
+      <text x="718" y="226" font-size="13" fill="#9aa4b1" letter-spacing=".04em">加载</text>
+      <rect x="718" y="238" rx="13" height="28" width="185.2" fill="#3b2f4f"/>
+      <text x="731" y="257" font-size="15" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" fill="#e9dcff">cn-parent-meeting</text>
+      <circle cx="1176" cy="252" r="7" fill="#7cc4ae"/>
+    </g>
+    <g class="s3">
+      <text x="718" y="150" font-size="13" fill="#9aa4b1" letter-spacing=".04em">你说</text>
+      <text x="718" y="182" font-size="22" font-weight="600" fill="#eef1f4">“帮我回一封询盘”</text>
+      <text x="718" y="226" font-size="13" fill="#9aa4b1" letter-spacing=".04em">加载</text>
+      <rect x="718" y="238" rx="13" height="28" width="175.6" fill="#3b2f4f"/>
+      <text x="731" y="257" font-size="15" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" fill="#e9dcff">cn-inquiry-reply</text>
+      <circle cx="1176" cy="252" r="7" fill="#7cc4ae"/>
+    </g>
+    <g class="s4">
+      <text x="718" y="150" font-size="13" fill="#9aa4b1" letter-spacing=".04em">你说</text>
+      <text x="718" y="182" font-size="22" font-weight="600" fill="#eef1f4">“这份合同有没有坑？”</text>
+      <text x="718" y="226" font-size="13" fill="#9aa4b1" letter-spacing=".04em">加载</text>
+      <rect x="718" y="238" rx="13" height="28" width="271.6" fill="#3b2f4f"/>
+      <text x="731" y="257" font-size="15" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" fill="#e9dcff">cn-labour-contract-decoder</text>
+      <circle cx="1176" cy="252" r="7" fill="#7cc4ae"/>
+    </g>
+</g>
+</svg>
