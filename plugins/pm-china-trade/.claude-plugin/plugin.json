@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-china-trade",
+  "version": "1.0.0",
+  "description": "The Chinese foreign-trade pack (外贸): inquiry replies in English with a Chinese version (询盘回复), letter of credit review and document discrepancy checks with UCP 600 references (信用证审单, marked to confirm), export quotations with an Incoterms 2020 cost build-up (报价单), and customs document checklists (报关单证, marked to confirm)",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "china",
+    "chinese",
+    "export",
+    "foreign-trade",
+    "letter-of-credit",
+    "incoterms",
+    "customs",
+    "quotation"
+  ]
+}

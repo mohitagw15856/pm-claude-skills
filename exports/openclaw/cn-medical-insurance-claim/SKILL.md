@@ -42,6 +42,9 @@ For manual claims: invoices (发票), itemised bills (费用清单), discharge s
 ### 5. Supplementary cover check
 Whether 惠民保 or other cover adds anything for this case, judged on its own terms (deductible, covered drugs, exclusions), without recommending a product.
 
+### 6. 长辈版 (optional, when the claim is for or by an older person)
+When the person asks for it, or is helping a parent, add a version the older person can follow alone: one action per step numbered 第一步, 第二步 (no more than eight), short sentences, no jargon (say what to bring and which window or app button, not 直接结算 or 备案 without a plain explanation), and a last line: 有不明白的，先别签字、别付钱，打电话给 [家人] 或 12393 医保服务热线 (需核实). For the wider errand, see `cn-help-parents-admin`.
+
 ## Quality Checks
 
 - [ ] The scheme and settlement method are identified for this case
@@ -50,6 +53,7 @@ Whether 惠民保 or other cover adds anything for this case, judged on its own 
 - [ ] Uncovered and partly covered items are separated before applying the rate
 - [ ] Every local figure and deadline is marked to confirm with the 医保局
 - [ ] No insurance product is recommended
+- [ ] If a 长辈版 is included, it uses one action per step, plain words and a call-for-help line
 
 ## Anti-Patterns
 

@@ -9,9 +9,11 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
-**1263 skills · 147 bundles** (from 1250 · 144 at v81.2.0).
+**1281 skills · 151 bundles** (from 1250 · 144 at v81.2.0).
 
 ### Added
+- **Chinese audience packs.** **pm-china-teachers** (5, 教师): `cn-lesson-plan` (新课标教案), `cn-class-meeting` (主题班会), `cn-parent-meeting` (家长会), `cn-term-comments` (期末评语) and `cn-open-class` (公开课与说课稿). **pm-china-parents** (4, 家长): `cn-school-entry` (幼升小 / 小升初, marked to confirm locally), `cn-home-school-comms` (家校沟通), `cn-extracurricular-plan` (兴趣班 against the 双减 rules) and `cn-homework-helper-parent` (guiding, not doing, homework). **pm-china-trade** (4, 外贸): `cn-inquiry-reply`, `cn-letter-of-credit-check` (UCP 600, marked to confirm), `cn-trade-quotation` (Incoterms 2020 cost build-up) and `cn-customs-docs`. **pm-china-manufacturing** (4, 制造业): `cn-8d-report`, `cn-5s-audit`, `cn-quality-traceability` and `cn-sop-writer` (作业指导书).
+- **适老化**: `cn-help-parents-admin` (帮爸妈办事: 医保, 社保, 养老金, banking and scam protection for ageing parents) in pm-china-life, and an optional 长辈版 output (one action per step, plain words, a call-for-help line) in `cn-medical-insurance-claim` and `cn-social-insurance-explainer`.
 - **pm-sea** (4): `singapore-cpf-explainer`, `malaysia-epf-explainer` (KWSP), `singapore-employment-act` and `huawen-business-writing` (新马华文商务写作). **pm-japan** (4): `jp-year-end-adjustment` (年末調整), `jp-tax-return` (確定申告), `jp-resignation-procedures` (退職の手続き) and `jp-ringisho` (稟議書), in Japanese.
 - **Chinese workflow chains**: `/cn-career-ladder` (周报 → 复盘 → 年终总结 → 述职 → 晋升答辩), `/cn-crossborder-launch` (market → platform → listing → 小红书 → livestream) and `/cn-campus-offer` (校招 plan → bilingual CV → technical interviews).
 - **Pinyin search**: `zb`, `zhoubao` or `xhs` find 中文周报 and 小红书笔记 in the playground, `find.html` and `npx pm-claude-skills find` (`web/zh-pinyin.json`, built by `scripts/build-zh-pinyin.mjs`).

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1275 skills exported. Copy a `SKILL.md` into the tool to use it.
+1293 skills exported. Copy a `SKILL.md` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -186,35 +186,53 @@
 | Clip Factory | `pm-newgen` | `clip-factory/SKILL.md` |
 | Clone Brief | `pm-2027` | `clone-brief/SKILL.md` |
 | Closing Disclosure Decoder | `pm-decoders` | `closing-disclosure-decoder/SKILL.md` |
+| 5S / 6S Audit (5S / 6S 检查表) | `pm-china-manufacturing` | `cn-5s-audit/SKILL.md` |
+| 8D Report (8D 报告) | `pm-china-manufacturing` | `cn-8d-report/SKILL.md` |
 | Campus Recruitment (校招) | `pm-china-exams` | `cn-campus-recruitment/SKILL.md` |
 | GB/T 7714 References (参考文献著录) | `pm-china-exams` | `cn-citation-gbt7714/SKILL.md` |
 | Civil Service Essay (申论) | `pm-china-exams` | `cn-civil-exam-essay/SKILL.md` |
 | Civil Service Interview (结构化面试) | `pm-china-exams` | `cn-civil-exam-interview/SKILL.md` |
+| Class Meeting Plan (主题班会方案) | `pm-china-teachers` | `cn-class-meeting/SKILL.md` |
+| Customs Documents (报关单证清单) | `pm-china-trade` | `cn-customs-docs/SKILL.md` |
 | Data Export Assessment (数据出境) | `pm-china-compliance` | `cn-data-export-assessment/SKILL.md` |
+| Extracurricular Planner (兴趣班与课外安排) | `pm-china-parents` | `cn-extracurricular-plan/SKILL.md` |
 | 复盘 (Fupan) | `pm-china-work` | `cn-fupan/SKILL.md` |
 | Gaokao Application Planner (高考志愿) | `pm-china-life` | `cn-gaokao-planner/SKILL.md` |
 | Generative AI Filing (生成式人工智能备案) | `pm-china-compliance` | `cn-genai-filing/SKILL.md` |
+| Helping Parents With Admin (帮爸妈办事) | `pm-china-life` | `cn-help-parents-admin/SKILL.md` |
+| Home-School Messages (家校沟通) | `pm-china-parents` | `cn-home-school-comms/SKILL.md` |
+| Homework Guide for Parents (家长辅导作业) | `pm-china-parents` | `cn-homework-helper-parent/SKILL.md` |
 | Housing Fund Withdrawal (公积金提取) | `pm-china-life` | `cn-housing-fund-withdrawal/SKILL.md` |
 | Hukou Points (积分落户) | `pm-china-life` | `cn-hukou-points/SKILL.md` |
 | China Annual Tax Reconciliation (个税年度汇算) | `pm-china-life` | `cn-iit-reconciliation/SKILL.md` |
+| Inquiry Reply (外贸询盘回复) | `pm-china-trade` | `cn-inquiry-reply/SKILL.md` |
 | Chinese Internet Jargon Translator (互联网黑话翻译器) | `pm-china-work` | `cn-jargon-translator/SKILL.md` |
 | Kaoyan Planner (考研规划) | `pm-china-exams` | `cn-kaoyan-planner/SKILL.md` |
 | China Labour Contract Decoder (劳动合同) | `pm-china-life` | `cn-labour-contract-decoder/SKILL.md` |
+| Chinese Lesson Plan (教案 / 教学设计) | `pm-china-teachers` | `cn-lesson-plan/SKILL.md` |
+| Letter of Credit Check (信用证审证与审单) | `pm-china-trade` | `cn-letter-of-credit-check/SKILL.md` |
 | Level Mapper (职级对标) | `pm-china-work` | `cn-level-mapper/SKILL.md` |
 | Medical Insurance Claims (医保报销) | `pm-china-life` | `cn-medical-insurance-claim/SKILL.md` |
 | MLPS 2.0 Checklist (等保 2.0) | `pm-china-compliance` | `cn-mlps-checklist/SKILL.md` |
 | Next Year's OKR and Development Plan (明年个人 OKR 与个人发展计划) | `pm-china-yearend` | `cn-next-year-plan/SKILL.md` |
 | Official Document (公文) | `pm-china-work` | `cn-official-document/SKILL.md` |
+| Open Class and Lesson Talk (公开课准备与说课稿) | `pm-china-teachers` | `cn-open-class/SKILL.md` |
+| Parent Meeting Pack (家长会发言稿与材料) | `pm-china-teachers` | `cn-parent-meeting/SKILL.md` |
 | PIPL Impact Assessment (个人信息保护影响评估) | `pm-china-compliance` | `cn-pipl-pia/SKILL.md` |
 | PRD Review (需求评审) | `pm-china-work` | `cn-prd-review/SKILL.md` |
 | Promotion Defence (晋升答辩) | `pm-china-work` | `cn-promotion-defence/SKILL.md` |
+| Quality Traceability Plan (质量追溯方案) | `pm-china-manufacturing` | `cn-quality-traceability/SKILL.md` |
+| School Entry Planner (幼升小 / 小升初) | `pm-china-parents` | `cn-school-entry/SKILL.md` |
 | China Severance Calculator (经济补偿金) | `pm-china-life` | `cn-severance-calculator/SKILL.md` |
 | 述职 PPT Builder (述职 PPT 大纲与讲稿) | `pm-china-yearend` | `cn-shuzhi-deck/SKILL.md` |
 | Small Business Tax (个体户与小微企业税务) | `pm-china-life` | `cn-small-business-tax/SKILL.md` |
 | China Social Insurance Explainer (五险一金) | `pm-china-life` | `cn-social-insurance-explainer/SKILL.md` |
 | State-Owned Enterprise Interview (国企面试) | `pm-china-exams` | `cn-soe-interview/SKILL.md` |
+| Work Instruction (作业指导书 / SOP) | `pm-china-manufacturing` | `cn-sop-writer/SKILL.md` |
 | Tech Interview Drill (大厂技术面试) | `pm-china-exams` | `cn-tech-interview-drill/SKILL.md` |
+| End-of-Term Comments (期末评语) | `pm-china-teachers` | `cn-term-comments/SKILL.md` |
 | Thesis Proposal (开题报告) | `pm-china-exams` | `cn-thesis-proposal/SKILL.md` |
+| Export Quotation (外贸报价单与成本核算) | `pm-china-trade` | `cn-trade-quotation/SKILL.md` |
 | Chinese Weekly Report (周报) | `pm-china-work` | `cn-weekly-report/SKILL.md` |
 | Year-End Bonus Clarifier (年终奖、13薪与个税) | `pm-china-yearend` | `cn-year-end-bonus/SKILL.md` |
 | Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-yearend` | `cn-year-end-review/SKILL.md` |

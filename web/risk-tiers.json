@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-04",
+ "generated": "2026-10-05",
  "counts": {
-  "consequential": 231,
-  "high-stakes": 154,
-  "informational": 882
+  "consequential": 239,
+  "high-stakes": 155,
+  "informational": 899
  },
  "tiers": {
   "360-feedback-template": {
@@ -722,6 +722,14 @@
    "tier": "high-stakes",
    "via": "bundle:pm-decoders"
   },
+  "cn-5s-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cn-8d-report": {
+   "tier": "informational",
+   "via": "default"
+  },
   "cn-campus-recruitment": {
    "tier": "informational",
    "via": "default"
@@ -738,9 +746,21 @@
    "tier": "informational",
    "via": "default"
   },
+  "cn-class-meeting": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cn-customs-docs": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-trade"
+  },
   "cn-data-export-assessment": {
    "tier": "consequential",
    "via": "bundle:pm-china-compliance"
+  },
+  "cn-extracurricular-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-parents"
   },
   "cn-fupan": {
    "tier": "consequential",
@@ -754,6 +774,18 @@
    "tier": "consequential",
    "via": "bundle:pm-china-compliance"
   },
+  "cn-help-parents-admin": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-china-life"
+  },
+  "cn-home-school-comms": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-parents"
+  },
+  "cn-homework-helper-parent": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-parents"
+  },
   "cn-housing-fund-withdrawal": {
    "tier": "high-stakes",
    "via": "bundle:pm-china-life"
@@ -766,6 +798,10 @@
    "tier": "high-stakes",
    "via": "bundle:pm-china-life"
   },
+  "cn-inquiry-reply": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-trade"
+  },
   "cn-jargon-translator": {
    "tier": "informational",
    "via": "skill"
@@ -777,6 +813,14 @@
   "cn-labour-contract-decoder": {
    "tier": "high-stakes",
    "via": "bundle:pm-china-life"
+  },
+  "cn-lesson-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cn-letter-of-credit-check": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-trade"
   },
   "cn-level-mapper": {
    "tier": "consequential",
@@ -798,6 +842,14 @@
    "tier": "consequential",
    "via": "bundle:pm-china-work"
   },
+  "cn-open-class": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cn-parent-meeting": {
+   "tier": "informational",
+   "via": "default"
+  },
   "cn-pipl-pia": {
    "tier": "consequential",
    "via": "bundle:pm-china-compliance"
@@ -809,6 +861,14 @@
   "cn-promotion-defence": {
    "tier": "consequential",
    "via": "bundle:pm-china-work"
+  },
+  "cn-quality-traceability": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cn-school-entry": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-parents"
   },
   "cn-severance-calculator": {
    "tier": "high-stakes",
@@ -830,13 +890,25 @@
    "tier": "informational",
    "via": "default"
   },
+  "cn-sop-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
   "cn-tech-interview-drill": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cn-term-comments": {
    "tier": "informational",
    "via": "default"
   },
   "cn-thesis-proposal": {
    "tier": "informational",
    "via": "default"
+  },
+  "cn-trade-quotation": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-trade"
   },
   "cn-weekly-report": {
    "tier": "consequential",
@@ -2354,6 +2426,10 @@
    "tier": "high-stakes",
    "via": "bundle:pm-reentry"
   },
+  "huawen-business-writing": {
+   "tier": "informational",
+   "via": "default"
+  },
   "human-in-the-loop-design": {
    "tier": "informational",
    "via": "default"
@@ -2578,6 +2654,22 @@
    "tier": "consequential",
    "via": "bundle:pm-wellbeing"
   },
+  "jp-resignation-procedures": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "jp-ringisho": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "jp-tax-return": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "jp-year-end-adjustment": {
+   "tier": "informational",
+   "via": "default"
+  },
   "jury-duty-guide": {
    "tier": "high-stakes",
    "via": "bundle:pm-legal"
@@ -2791,6 +2883,10 @@
    "via": "default"
   },
   "make-me-a-skill": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "malaysia-epf-explainer": {
    "tier": "informational",
    "via": "default"
   },
@@ -4149,6 +4245,14 @@
   "side-business-setup": {
    "tier": "consequential",
    "via": "bundle:pm-sidehustle"
+  },
+  "singapore-cpf-explainer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "singapore-employment-act": {
+   "tier": "informational",
+   "via": "default"
   },
   "site-analysis-report": {
    "tier": "informational",

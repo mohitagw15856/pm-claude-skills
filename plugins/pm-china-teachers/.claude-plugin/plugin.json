@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-china-teachers",
+  "version": "1.0.0",
+  "description": "The Chinese teachers pack (教师): lesson plans in the 教案 format aligned to the subject's core competencies (marked to confirm against the current curriculum standard), 主题班会 plans, parent-meeting speeches and materials (家长会), warm and specific end-of-term comments (期末评语), and open-class preparation with the 说课稿, written in Chinese",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "china",
+    "chinese",
+    "teachers",
+    "education",
+    "lesson-plan",
+    "class-meeting",
+    "parent-meeting"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-china-manufacturing",
+  "version": "1.0.0",
+  "description": "The Chinese manufacturing pack (制造业): bilingual 8D reports for customer complaints, 5S and 6S audit checklists with scoring and corrective-action tracking, product and batch traceability plans with a mock recall drill (质量追溯), and shop-floor work instructions (作业指导书 SOP), written in Chinese",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "china",
+    "chinese",
+    "manufacturing",
+    "quality",
+    "8d",
+    "5s",
+    "traceability",
+    "sop"
+  ]
+}

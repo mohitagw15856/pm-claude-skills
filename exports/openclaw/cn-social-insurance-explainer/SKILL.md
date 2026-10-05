@@ -60,6 +60,9 @@ Checks:
 
 **四、我的情况下要做什么**（换工作 / 换城市 / 失业 / 灵活就业 / 出国）清单
 
+**五、长辈版**（可选：当问题是为父母或临近退休的人问的，例如养老金领取、领取资格认证、补缴）
+One action per step, numbered 第一步, 第二步 (no more than eight); short sentences; no jargon (explain 缴费年限, 认证 and 待遇 in everyday words); what to bring and where to go or what to press; and a last line: 有不明白的，先别转账、别签字，打电话给 [家人] 或 12333 社保服务热线 (需核实). For handling a parent's errands end to end, see `cn-help-parents-admin`.
+
 End verbatim: *"以上为一般性说明，不构成财务或法律意见。费率、基数和政策以当地社保和公积金管理部门最新公布为准。"*
 
 ## Quality Checks
@@ -68,6 +71,7 @@ End verbatim: *"以上为一般性说明，不构成财务或法律意见。费�
 - [ ] The base is compared with the actual wage
 - [ ] The checklist matches the person's situation
 - [ ] The disclaimer appears verbatim
+- [ ] If a 长辈版 is included, it uses one action per step, plain words and a call-for-help line
 
 ## Anti-Patterns
 - **Using one city's rates for another.** Rates and bases are local.

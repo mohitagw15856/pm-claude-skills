@@ -25,7 +25,7 @@ Want a skill that does not exist? [Request it](SKILL_REQUEST.md).
 
 ## 🔭 Now
 
-- **Proving what is here.** The library has 1263 skills. Of those, 281 have a curated eval case and 28 have published scores. Coverage, not more content, is the constraint. See [evals/README.md](evals/README.md).
+- **Proving what is here.** The library has 1281 skills. Of those, 281 have a curated eval case and 28 have published scores. Coverage, not more content, is the constraint. See [evals/README.md](evals/README.md).
 - **Trust in a release.** Checking that every release installs and runs, a way to tell users when a command changes, and frozen versions of the flagship skills that a team can pin.
 - **Per-skill depth.** `references/` exist for 114 of them, `templates/` for 51 and helper scripts for 57. The most-used skills come first.
 
