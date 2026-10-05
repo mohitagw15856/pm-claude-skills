@@ -7,6 +7,8 @@ description: "Draft an internal policy people can actually follow — the rule s
 
 Internal policies fail readers two ways: legalese nobody parses (so folklore governs instead), or vague aspiration ("use good judgment with expenses") that answers no actual question. A followable policy states each rule plainly *with its reason* (reasons recruit compliance and guide the unlisted cases), separates bright lines (never/always, no judgment) from judgment zones (factors + who decides), and works three real edge cases in the text — because the edge cases are what people actually come to a policy to resolve. Honesty requirement: the enforcement section describes what actually happens, not theater.
 
+> **Not quite this?** Use `privacy-policy-drafter` when you need an external privacy notice for users rather than an internal policy.
+
 ## What This Skill Produces
 
 - **The policy** — scope, the rules with reasons, bright lines vs. judgment zones marked

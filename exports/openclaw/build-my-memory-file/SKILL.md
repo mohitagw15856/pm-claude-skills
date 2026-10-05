@@ -12,6 +12,8 @@ metadata:
 
 The single biggest upgrade to working with AI isn't a better prompt — it's a `MEMORY.md` that captures how *you* work, so you stop re-explaining yourself every session. This interviews you into one: your decision criteria, recurring patterns, past mistakes worth not repeating, and preferences — organized so any AI can read it and help you better. And it has a hard privacy line: no credentials, no financial, health, or other people's personal data.
 
+> **Not quite this?** Use `memory-file-maintenance` when you already have a memory file that has drifted and needs pruning.
+
 ## What This Skill Produces
 
 - **A structured MEMORY.md** — your durable personal context, in sections an AI can use

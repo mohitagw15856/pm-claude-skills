@@ -7,6 +7,8 @@ description: "Review AI-authored code for its characteristic failure modes — p
 
 Human code fails where the human got tired or didn't know; AI code fails where *plausibility diverged from correctness* — and it fails fluently, with confident naming, clean formatting, and tests that pass without testing anything. Reviewing it with human-code instincts ("looks careful, probably is careful") is how the new bug class ships. This skill reviews for the failure modes that are characteristically AI.
 
+> **Not quite this?** Use `code-review-guide` when the code was written by people and needs a general review.
+
 ## What This Skill Produces
 
 - A **review of the change** organised by AI-characteristic risk, each finding with file/line and severity

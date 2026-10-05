@@ -12,6 +12,8 @@ metadata:
 
 "How's she doing?" earns the answer it deserves: "She's doing fine." Fifteen minutes with the person who watches your child think for a thousand hours a year is an interview worth preparing — specific questions that force specific answers, home observations the teacher can't see, and concerns raised as shared problems rather than filed complaints. This skill preps that quarter hour like the high-density meeting it is, and builds the follow-up that separates a conversation from a formality.
 
+> **Not quite this?** Use `parent-conference-prep` when you are the teacher running the conference.
+
 ## What This Skill Produces
 
 - **The ranked question list** — top 3 first, each engineered to be unanswerable with "fine"

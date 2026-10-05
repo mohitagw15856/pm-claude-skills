@@ -7,6 +7,8 @@ description: "Simulate the acquirer's diligence team hunting for reasons to cut 
 
 Every acquisition has two diligence processes: the polite one in the data room, and the internal one where the deal team lists reasons to retrade the price. This skill runs the second one early. (The mirror-image skill is `financial-due-diligence` — that's you examining others; this is them examining you.)
 
+> **Not quite this?** Use `red-team-my-plan` when you want a general stress test of a plan rather than diligence preparation.
+
 ## What This Skill Produces
 
 - **The internal red-flags memo** — what the acquirer's team flags, category by category, with a price-chip estimate per finding

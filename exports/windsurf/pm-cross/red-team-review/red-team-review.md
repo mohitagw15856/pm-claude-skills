@@ -7,6 +7,8 @@ description: "Stress-test a plan, strategy, PRD, or launch by simulating hostile
 
 Pressure-test the user's plan the way a hostile, expert room would — *before* reality does. The goal is not to be negative; it's to surface the failure modes the author is too close to see, then convert them into concrete fixes.
 
+> **Not quite this?** Use `red-team-my-plan` when it is your own plan you want stress-tested.
+
 ## Working from a brief
 
 Always deliver the full review even if the plan is thin. Where detail is missing, infer the most likely version from context and the domain, and mark inferred assumptions as *(assumed — confirm)*. Never refuse for lack of detail and never leave bracketed placeholders.

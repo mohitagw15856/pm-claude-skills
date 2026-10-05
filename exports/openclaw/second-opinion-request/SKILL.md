@@ -12,6 +12,8 @@ metadata:
 
 Second opinions change diagnoses or treatment plans often enough that for major decisions they're due diligence, not disloyalty — and good doctors know it, welcome it, and get them for their own families. The friction is social and logistical, not medical: how to say it to the current doctor, what to actually send, and what to do when the opinions differ. This skill handles exactly those three, and stays out of the medicine itself.
 
+> **Not quite this?** Use `the-second-opinion` when you want a thinking tool to argue against your own position, not a medical second opinion.
+
 ## What This Skill Produces
 
 - **The warranted check** — the situations where second opinions earn their cost, honestly framed (and the ones where they mostly add delay)

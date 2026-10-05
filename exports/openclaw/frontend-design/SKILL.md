@@ -12,6 +12,8 @@ metadata:
 
 AI-generated UI has a recognisable smell: default blues, five different paddings, everything the same visual weight, no states. This skill produces interfaces that look *decided* — by making the decisions explicit as a token system, then spending contrast deliberately instead of everywhere.
 
+> **Not quite this?** Use `frontend-design-pointer` when you want Anthropic's upstream frontend-design skill instead of this library's.
+
 ## What This Skill Produces
 
 - **Working UI code** (single-file HTML/CSS or framework components) built on an explicit token block

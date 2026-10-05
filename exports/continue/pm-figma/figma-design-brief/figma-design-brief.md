@@ -7,6 +7,8 @@ description: "Write a structured design brief for a Figma design task from a pro
 
 Converts a product requirement or feature request into a structured design brief — everything a designer needs to open Figma and start building confidently.
 
+> **Not quite this?** Use `figma-design-qa` when the design already exists and you are checking it against the spec.
+
 ## Required Inputs
 
 - **Feature or requirement** (paste PRD snippet, ticket, or describe the feature)

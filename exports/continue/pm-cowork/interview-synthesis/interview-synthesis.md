@@ -7,6 +7,8 @@ description: "Turn a pile of interview notes into findings that survive scrutiny
 
 Interview piles get "synthesized" two bad ways: the highlight reel (the quotes that confirmed what the team hoped) and the mush ("users want simplicity" — twelve hours of conversation flattened into a poster). Honest synthesis is mechanical before it's interpretive: code the notes (what did each person actually say, tagged), count the themes (a theme is something *multiple* people said — with the number attached), preserve the divergences (the two dissenters are data, not noise), and size every claim to the sample — twelve interviews support "we repeatedly heard," never "users want."
 
+> **Not quite this?** Use `user-interview-synthesis` when the interviews are product-discovery research with users.
+
 ## What This Skill Produces
 
 - **The coded pass** — each interview's statements tagged to emerging codes, traceable back to the speaker

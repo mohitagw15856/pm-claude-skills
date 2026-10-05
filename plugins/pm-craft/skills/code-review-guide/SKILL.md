@@ -9,6 +9,8 @@ Bad code review nitpicks style while missing the design flaw, or dumps 40 ungrad
 *prioritized* and *kind*: it catches what actually matters (correctness, security, design), separates blocking
 issues from nits, explains the *why*, and leaves the author better. This skill runs that review.
 
+> **Not quite this?** Use `code-review-checklist` when you only need a checklist tailored to one change; use `ai-code-review` when most of the change was written by an AI assistant; use `infra-as-code-review` when the change is Terraform, CloudFormation or other infrastructure code.
+
 ## Required Inputs
 
 Ask for these only if they aren't already provided:

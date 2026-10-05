@@ -7,6 +7,8 @@ description: "Structure and write a literature review for any research topic. Us
 
 Structures and writes literature reviews — from background sections of a dissertation through to standalone narrative reviews for publication.
 
+> **Not quite this?** Use `literature-review-builder` when you are a student building an argued review from a reading list.
+
 ## Required Inputs
 - **Topic or research question**
 - **Type of review** (narrative / systematic / scoping / integrative / background section)

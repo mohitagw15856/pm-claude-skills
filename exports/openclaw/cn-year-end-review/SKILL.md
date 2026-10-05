@@ -12,6 +12,8 @@ metadata:
 
 The year-end review often decides rating, bonus and promotion. Reviewers want to see results against the goals that were set, the evidence behind them, and judgement about what comes next. The common failures are a year-long activity list, results with no numbers, and lessons that are really excuses. This skill builds a review around outcomes and evidence.
 
+> **Not quite this?** Use `year-in-review` when you want a personal reflection on the year, not a formal 述职 for an employer.
+
 Write the output in Simplified Chinese unless asked otherwise. For a self-review in English, see `self-review`.
 
 ## What This Skill Produces

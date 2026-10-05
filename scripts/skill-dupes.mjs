@@ -184,4 +184,18 @@ if (has('--json')) {
   }
 }
 
-if (has('--check') && undeclared.length) process.exit(1);
+// Every declared near-duplicate must point at its partner from both sides ("use X
+// when …"), so a person or agent who lands on the wrong one can find the right one.
+const unlinked = [];
+for (const { a, b } of JSON.parse(readFileSync(join(root, 'skill-dupes-allow.json'), 'utf8')).pairs || []) {
+  for (const [s, o] of [[a, b], [b, a]]) {
+    const p = join(root, 'skills', s, 'SKILL.md');
+    if (existsSync(p) && !readFileSync(p, 'utf8').includes(o)) unlinked.push(`${s} does not mention ${o}`);
+  }
+}
+if (unlinked.length && !has('--json')) {
+  console.log(`\n${unlinked.length} declared pair(s) without a cross-reference. Add a "Not quite this? Use \`other\` when …" line:`);
+  for (const u of unlinked) console.log(`  ✗ ${u}`);
+}
+
+if (has('--check') && (undeclared.length || unlinked.length)) process.exit(1);

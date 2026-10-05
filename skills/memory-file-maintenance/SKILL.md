@@ -7,6 +7,8 @@ description: "Keep your AI memory/context file (MEMORY.md, CLAUDE.md, custom ins
 
 A personal AI memory file (MEMORY.md, CLAUDE.md, custom instructions) is only as good as it is current — over time it bloats with stale rules, contradicts itself, and drifts from who you actually are now. This tends it: reviews what's there, prunes the dead weight, sharpens the vague, adds the new patterns worth keeping, and sets a light maintenance habit — so your AI keeps understanding the real you. It also re-checks the privacy line on what should never be in there.
 
+> **Not quite this?** Use `build-my-memory-file` when you are starting a memory file from scratch.
+
 ## What This Skill Produces
 
 - **A health review** — what in the current file is stale, contradictory, bloated, redundant, or vague — and what important context is *missing*

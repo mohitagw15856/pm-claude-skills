@@ -10,6 +10,8 @@ mode is a memo that reads like a discussion: lots of context, no recommendation,
 front-loads the recommendation and the decision being requested, then *supports* it — so the reader can
 say yes, no, or "here's my concern" in five minutes.
 
+> **Not quite this?** Use `async-decision-memo` when the decision will be made asynchronously, with a read window, comments and a deadline.
+
 ## Required Inputs
 
 Ask for these only if they aren't already provided:

@@ -12,6 +12,8 @@ metadata:
 
 Produce a structured infrastructure-as-code review that applies security, reliability, and operational quality standards to a specific body of IaC code. The output serves two purposes: an actionable review report for the code at hand (with findings by severity and specific remediation steps), and a reusable checklist the team can apply to every future IaC change. If the user provides actual code, analyze it and populate the findings table with real issues. If no code is provided, produce the checklist and a template findings report.
 
+> **Not quite this?** Use `code-review-guide` when the change is application code rather than infrastructure.
+
 ## Required Inputs
 
 Ask for these if not already provided:

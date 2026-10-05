@@ -7,6 +7,8 @@ description: "Install the weekly review that keeps work from managing you — th
 
 Without a weekly review, weeks are driven by whatever arrived loudest — the calendar fills by others' invitations, threads drop at the boundaries, and Monday starts in reactive mode by default. The review is 30 minutes, same slot weekly (Friday afternoon: close the week while it's warm, aim the next before it arrives), with a fixed agenda that never varies: *close* (the week's loops: done, stalled, dropped-on-purpose), *sweep* (every capture point emptied into the system), *choose* (next week's big three, calendar-checked), and the two compounding questions — what worked, what got dodged. The ritual's power is its boringness: same slot, same steps, every week including the bad ones.
 
+> **Not quite this?** Use `pm-weekly-review` when you run a product and want a weekly product review.
+
 ## What This Skill Produces
 
 - **The fixed agenda** — the four phases with time boxes, tuned to the user's actual systems

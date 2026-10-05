@@ -9,6 +9,8 @@ supersededBy: pr-description
 
 Writes structured, reviewer-friendly pull request descriptions from a diff, commit list, or informal notes. Covers the what, why, and how-to-review so reviewers can start immediately.
 
+> **Not quite this?** Use `pr-description-live` when you want it to read the real diff through the GitHub connector.
+
 ## Required Inputs
 
 Ask for these if not provided:

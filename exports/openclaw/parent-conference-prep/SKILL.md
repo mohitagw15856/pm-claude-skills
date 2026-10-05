@@ -12,6 +12,8 @@ metadata:
 
 Parents remember how a conference *felt* more than the data in it. The teachers who land hard messages lead with genuine strengths, bring specifics instead of labels, and leave the parent with a partnership, not a verdict. This skill preps the whole conversation — including the reaction you're bracing for.
 
+> **Not quite this?** Use `parent-teacher-conference-prep` when you are the parent getting ready for the meeting.
+
 ## Working from a brief
 
 Given the student and the reason for the conference, **write the full prep** — infer likely parent concerns from the situation. Keep it partnership-framed: the teacher and parent on the same side of the table, the challenge on the other.

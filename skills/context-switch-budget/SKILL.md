@@ -7,6 +7,8 @@ description: "Treat context switches as the budget line they are — the switch 
 
 The calendar shows eight meetings totaling four hours and calls the other four "free" — but fifteen-minute gaps between meetings are free the way confetti is paper: technically yes, usable no. Each switch costs re-entry time (the mind reloads the last context for 10–20 minutes), and a day of eight switches can contain zero real work while looking half-empty. The budget discipline: *census* the week's actual switches (the number shocks reliably), *batch* the same-kind work (meetings to meeting-blocks, reviews to review-hours, chat to [email-triage-system](../email-triage-system/SKILL.md)-style windows), *defrag* the calendar (consolidate the gaps into slabs worth having), and price new fragmentation at the door.
 
+> **Not quite this?** Use `context-budget` when you mean an LLM's context window and token budget.
+
 ## What This Skill Produces
 
 - **The switch census** — the week's transitions counted and typed (meeting↔work, task↔task, interrupt-driven), with the fragmentation map

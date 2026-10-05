@@ -14,6 +14,8 @@ The discharge summary is the handoff that the next clinician (and the patient) a
 admitted, what happened, what changed, and what to do next. This skill structures the stay into a complete,
 scannable summary so nothing critical — a new medication, a pending result, a follow-up — falls through the gap.
 
+> **Not quite this?** Use `physio-discharge-summary` when you are closing an outpatient physiotherapy episode.
+
 > **Clinical-safety note:** this is a documentation-formatting aid, **not medical advice**. It organises
 > information a qualified clinician provides; the treating clinician must review and verify every detail
 > (especially the medication list and follow-up) before it is finalised. Do not invent diagnoses, medications,

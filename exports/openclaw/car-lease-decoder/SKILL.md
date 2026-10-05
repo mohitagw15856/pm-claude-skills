@@ -12,6 +12,8 @@ metadata:
 
 Leases are quoted in a dialect designed to prevent comparison: money factors instead of interest rates, cap costs instead of prices, payments instead of totals. This skill translates everything into the two numbers that matter — the *effective APR* and the *total cost of the lease* — then walks the traps that live in the back pages.
 
+> **Not quite this?** Use `used-car-decoder` when you are buying a used car from a listing rather than leasing.
+
 ## What This Skill Produces
 
 - **The translation** — money factor × 2400 = the APR they didn't say; cap cost vs MSRP vs negotiated price

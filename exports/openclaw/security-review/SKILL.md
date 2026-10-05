@@ -15,6 +15,8 @@ This skill reviews a design, PR, or feature against the recurring risk areas, ra
 gives a clear verdict with concrete fixes. It's for code/systems you own or are authorized to review, and it
 complements (not replaces) automated scanners and a formal pentest.
 
+> **Not quite this?** Use `vendor-security-review` when you are assessing a third-party vendor rather than your own design.
+
 ## Required Inputs
 
 Ask for these only if they aren't already provided:

@@ -12,6 +12,8 @@ metadata:
 
 This skill is specifically for product managers critiquing designs — focused on whether the design achieves the user goal and business outcome, not whether it looks good. Different from the general design-critique skill which covers UX aesthetics; this one centres product thinking.
 
+> **Not quite this?** Use `figma-design-qa` when you need to check implementation fidelity against the spec rather than product outcomes.
+
 ## Required Inputs
 
 - **Design description or screen summary**

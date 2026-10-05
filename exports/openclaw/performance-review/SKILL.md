@@ -12,6 +12,8 @@ metadata:
 
 This skill turns rough notes, bullet points, or bullet-point memories into a complete, professionally written performance review. Output is ready to submit or use as a strong first draft.
 
+> **Not quite this?** Use `ai-assisted-performance-review` when much of the person's output was produced with AI tools and attribution matters.
+
 ## Required Inputs
 
 Ask the user for these if not provided:

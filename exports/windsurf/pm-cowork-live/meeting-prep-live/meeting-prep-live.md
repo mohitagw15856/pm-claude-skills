@@ -7,6 +7,8 @@ description: "Prepare the user for a REAL upcoming meeting by pulling the actual
 
 Walking into a meeting cold costs the first ten minutes. In Claude Cowork this skill assembles the brief from the user's *real* calendar and files — the event, who's in the room, what's attached, and where the last conversation left off — so they arrive with the context already in hand.
 
+> **Not quite this?** Use `meeting-prep-pack` when you will paste the agenda and documents yourself instead of connecting a calendar; use `sop-meeting-prep` when you mean S&OP, the supply-chain sales and operations planning meeting.
+
 ## What This Skill Produces
 
 - **The meeting-brief artifact** — objective, attendees with why-they-matter, the relevant context pulled from real docs/threads, open decisions, and a short list of questions to drive

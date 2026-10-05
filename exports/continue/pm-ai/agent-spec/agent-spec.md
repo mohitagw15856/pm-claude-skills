@@ -9,6 +9,8 @@ An agent is a model plus tools plus a loop — and the danger lives in the tools
 model. This skill specifies an agent so its *authority is explicit*: what it can do, what needs a human
 yes, and what happens when it's wrong. Scope and guardrails first; cleverness second.
 
+> **Not quite this?** Use `agent-observability-spec` when the agent is in production and needs tracing and alerting.
+
 ## Required Inputs
 
 Ask for these only if they aren't already provided:
