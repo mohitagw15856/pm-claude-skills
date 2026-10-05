@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Generates web/skills.json from the canonical skills/ directory.
 // No dependencies — run with: node web/build-skills.mjs
-import { readFileSync, readdirSync, writeFileSync, existsSync, statSync } from 'node:fs';
+import { readFileSync, readdirSync, writeFileSync, existsSync, statSync, mkdirSync, rmSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -299,6 +299,14 @@ writeFileSync(join(__dirname, 'skills.json'), JSON.stringify(out));
 // the background. skills.json itself is unchanged: it is the public, CORS-
 // exposed API and every other page still reads it.
 const slim = skills.map(({ instructions, ...rest }) => rest);
+// Skill bodies split by bundle, so the playground fetches only the bundle a
+// visitor opens instead of all of skills.json. Generated, not committed.
+const bodiesDir = join(__dirname, 'skills-body');
+rmSync(bodiesDir, { recursive: true, force: true });
+mkdirSync(bodiesDir, { recursive: true });
+const byBundle = {};
+for (const s of skills) (byBundle[s.plugin || 'other'] ||= {})[s.name] = s.instructions || '';
+for (const [plugin, bodies] of Object.entries(byBundle)) writeFileSync(join(bodiesDir, `${plugin}.json`), JSON.stringify(bodies));
 writeFileSync(join(__dirname, 'skills-index.json'), JSON.stringify({ count: live, total: slim.length, skills: slim }));
 const tierCounts = skills.reduce((a, s) => ((a[s.tier] = (a[s.tier] || 0) + 1), a), {});
 console.log(

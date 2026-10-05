@@ -157,6 +157,7 @@
       ['nianzhong.html', '📋 年终总结提纲 (year-end outline)'],
       ['tiaoxiu.html', '🗓 调休规划器 (holiday planner)'],
       ['live-cards.html', '🪪 Live cards (embed)'],
+      ['city-data.html', '🏙 城市数据 (city figures)'],
       ['campus/talk.html', '🎓 校园分享会 (campus talk)'],
       ['museum.html', '🏛 Anti-Pattern Museum'],
       ['catalog.html', '📚 Catalog'],

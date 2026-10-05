@@ -1440,6 +1440,38 @@
   {
    "skill": "hk-cantonese-copy",
    "input": "幫我哋喺銅鑼灣新開嘅 café 寫 IG 同 Threads post，推開幕週末買一送一咖啡（10月18至19日，每日限量 100 杯），要港式口語，啱 20 幾歲嘅上班族。"
+  },
+  {
+   "skill": "singapore-cpf-explainer",
+   "input": "I'm 34, a Singapore citizen earning S$6,800 a month. My payslip shows S$1,360 employee CPF and S$1,156 employer CPF. Is that right, and should I use CPF or cash for my HDB down payment?"
+  },
+  {
+   "skill": "malaysia-epf-explainer",
+   "input": "My salary is RM6,500 and my payslip shows employee EPF RM715 and employer RM780. Is that correct, and what can I use Akaun Sejahtera for?"
+  },
+  {
+   "skill": "singapore-employment-act",
+   "input": "I'm an executive in Singapore earning S$3,800 a month. My company hasn't paid my salary for six weeks and now says I'm being retrenched after four years. What am I entitled to and how do I claim?"
+  },
+  {
+   "skill": "huawen-business-writing",
+   "input": "帮我写一封给新加坡老客户的中文邮件，通知从下个月起服务费上涨 5%（每月从 S$800 调到 S$840），语气要客气但直接，最后附一个英文版本。"
+  },
+  {
+   "skill": "jp-year-end-adjustment",
+   "input": "年末調整の書類の書き方を教えてください。妻はパートで年収110万円、子どもは17歳と12歳です。iDeCoを月2万円、生命保険は年8万円払っています。"
+  },
+  {
+   "skill": "jp-tax-return",
+   "input": "会社員ですが副業のデザインで今年45万円の収入があり、経費は8万円くらいです。ふるさと納税もワンストップで3自治体にしました。確定申告は必要ですか？手順も教えてください。"
+  },
+  {
+   "skill": "jp-resignation-procedures",
+   "input": "正社員で年収480万円、来月末で退職します。次の仕事は2か月後から。有給が12日残っています。健康保険と年金、失業保険はどうすればいい？日付順に教えて。"
+  },
+  {
+   "skill": "jp-ringisho",
+   "input": "営業部で新しいCRMを導入したいです。月額1ユーザー3,000円で20ユーザー、初期費用30万円。今はExcel管理で案件の取りこぼしが月数件あります。稟議書を書いてください。"
   }
  ]
 }

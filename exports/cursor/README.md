@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1267 skills exported. Copy a `.mdc rule` into the tool to use it.
+1275 skills exported. Copy a `.mdc rule` into the tool to use it.
 
 | Skill | Bundle | Path |
 |---|---|---|
@@ -594,6 +594,7 @@
 | Household Constitution | `pm-family` | `pm-family/household-constitution/household-constitution.mdc` |
 | Houseplant Care | `pm-hobbies` | `pm-hobbies/houseplant-care/houseplant-care.mdc` |
 | Housing With a Record | `pm-reentry` | `pm-reentry/housing-with-a-record/housing-with-a-record.mdc` |
+| 新马华文商务写作 (Singapore and Malaysia Chinese business writing) | `pm-sea` | `pm-sea/huawen-business-writing/huawen-business-writing.mdc` |
 | Human-in-the-Loop Design | `pm-agentnative` | `pm-agentnative/human-in-the-loop-design/human-in-the-loop-design.mdc` |
 | Hydration & Energy Plan | `pm-wellbeing` | `pm-wellbeing/hydration-and-energy-plan/hydration-and-energy-plan.mdc` |
 | Hyperfocus Exit | `pm-focus` | `pm-focus/hyperfocus-exit/hyperfocus-exit.mdc` |
@@ -650,6 +651,10 @@
 | Job Search With a Record | `pm-reentry` | `pm-reentry/job-search-with-a-record/job-search-with-a-record.mdc` |
 | Job Story Mapper | `pm-discovery` | `pm-discovery/job-story-mapper/job-story-mapper.mdc` |
 | Journaling Prompts | `pm-wellbeing` | `pm-wellbeing/journaling-prompts/journaling-prompts.mdc` |
+| Japan Resignation Procedures (退職の手続き) | `pm-japan` | `pm-japan/jp-resignation-procedures/jp-resignation-procedures.mdc` |
+| Japanese Approval Request (稟議書) | `pm-japan` | `pm-japan/jp-ringisho/jp-ringisho.mdc` |
+| Japan Tax Return (確定申告) | `pm-japan` | `pm-japan/jp-tax-return/jp-tax-return.mdc` |
+| Japan Year-End Tax Adjustment (年末調整) | `pm-japan` | `pm-japan/jp-year-end-adjustment/jp-year-end-adjustment.mdc` |
 | Jury Duty Guide | `pm-legal` | `pm-legal/jury-duty-guide/jury-duty-guide.mdc` |
 | Jury Duty Navigator | `pm-civic` | `pm-civic/jury-duty-navigator/jury-duty-navigator.mdc` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/karaoke-song-picker.mdc` |
@@ -704,6 +709,7 @@
 | Maintainer Triage | `pm-maintainer` | `pm-maintainer/maintainer-triage/maintainer-triage.mdc` |
 | Make Friends as an Adult | `other` | `other/make-friends-as-an-adult/make-friends-as-an-adult.mdc` |
 | Make Me a | `pm-focus` | `pm-focus/make-me-a-skill/make-me-a-skill.mdc` |
+| Malaysia EPF Explainer (KWSP) | `pm-sea` | `pm-sea/malaysia-epf-explainer/malaysia-epf-explainer.mdc` |
 | Manager First 90 Days | `pm-people` | `pm-people/manager-first-90-days/manager-first-90-days.mdc` |
 | Managing Up | `pm-comms` | `pm-comms/managing-up/managing-up.mdc` |
 | Marketing Funnel Plan | `pm-growth` | `pm-growth/marketing-funnel-plan/marketing-funnel-plan.mdc` |
@@ -1043,6 +1049,8 @@
 | Shutdown Ritual | `pm-cowork` | `pm-cowork/shutdown-ritual/shutdown-ritual.mdc` |
 | Sibling Care Summit | `pm-aging-parents` | `pm-aging-parents/sibling-care-summit/sibling-care-summit.mdc` |
 | Side Business Setup | `pm-sidehustle` | `pm-sidehustle/side-business-setup/side-business-setup.mdc` |
+| Singapore CPF Explainer | `pm-sea` | `pm-sea/singapore-cpf-explainer/singapore-cpf-explainer.mdc` |
+| Singapore Employment Act Guide | `pm-sea` | `pm-sea/singapore-employment-act/singapore-employment-act.mdc` |
 | Site Analysis Report | `pm-architecture` | `pm-architecture/site-analysis-report/site-analysis-report.mdc` |
 | Site Check | `pm-live` | `pm-live/site-check/site-check.mdc` |
 | Site Safety Briefing | `pm-construction` | `pm-construction/site-safety-briefing/site-safety-briefing.mdc` |

@@ -37,7 +37,7 @@ Plus: **🌌 [the Skill Galaxy](https://mohitagw15856.github.io/pm-claude-skills
 
 ## 🗂 What's inside
 
-**1255 skills · 145 profession bundles · 35 fields** — product, engineering, customer success, marketing/GTM, data, design, sales, HR, legal, finance, founders, security, government, healthcare, education, real estate, and more. Highlights by job-to-do:
+**1263 skills · 147 profession bundles · 35 fields** — product, engineering, customer success, marketing/GTM, data, design, sales, HR, legal, finance, founders, security, government, healthcare, education, real estate, and more. Highlights by job-to-do:
 
 | You need… | Reach for |
 |---|---|
@@ -49,7 +49,7 @@ Plus: **🌌 [the Skill Galaxy](https://mohitagw15856.github.io/pm-claude-skills
 | **AI at work** 🆕 | `ai-usage-policy` · `ai-roi-audit` · `role-redesign-for-ai` · `ai-assisted-performance-review` |
 | Your career | the `pm-personal` bundle (résumé → LinkedIn → portfolio) + the Gauntlet |
 
-Every **Production-Ready** skill ships `references/` (the judgment calls) + `templates/` (fill-in worksheets). **11 chained recipes** turn fuzzy asks into finished artifact sets: `/ship-a-feature`, `/land-a-job`, `/ship-an-mcp-server`, `/adopt-ai-properly`… **En español también** — machine-translated editions with community review via [Crowdin](i18n/TRANSLATING.md), curated translations in 🇪🇸 🇫🇷 🇨🇳 🇯🇵 ([`skills-i18n/`](skills-i18n/)), and any skill runs in 10 output languages from the playground.
+Every **Production-Ready** skill ships `references/` (the judgment calls) + `templates/` (fill-in worksheets). **15 chained recipes** turn fuzzy asks into finished artifact sets: `/ship-a-feature`, `/land-a-job`, `/ship-an-mcp-server`, `/adopt-ai-properly`… **En español también** — machine-translated editions with community review via [Crowdin](i18n/TRANSLATING.md), curated translations in 🇪🇸 🇫🇷 🇨🇳 🇯🇵 ([`skills-i18n/`](skills-i18n/)), and any skill runs in 10 output languages from the playground.
 
 ---
 
@@ -85,6 +85,6 @@ The **[Professional Brain](BRAIN.md)**: a local, plain-markdown memory the skill
 
 ---
 
-**The numbers:** 1255 skills · 145 bundles · 35 professions · 206 curated eval cases · 28 skills with published judge scores ([leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)) · 11 recipes · MIT · everything runs client-side with **your** key.
+**The numbers:** 1263 skills · 147 bundles · 35 professions · 206 curated eval cases · 28 skills with published judge scores ([leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)) · 11 recipes · MIT · everything runs client-side with **your** key.
 
 <sub>⭐ **Star & share:** https://github.com/mohitagw15856/pm-claude-skills · 🚀 **Start:** https://mohitagw15856.github.io/pm-claude-skills/ · Built by [Mohit Aggarwal](https://medium.com/@mohit15856) · *PM stands for Professional.*</sub>

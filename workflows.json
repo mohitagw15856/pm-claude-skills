@@ -358,6 +358,98 @@
           "passes": "the handoff"
         }
       ]
+    },
+    {
+      "id": "cn-career-ladder",
+      "command": "/cn-career-ladder",
+      "name": "职场晋升线 (Chinese workplace: report to promotion)",
+      "lifecycle": "周报 → 复盘 → 年终总结 → 述职 → 晋升答辩",
+      "summary": "Turn a year of Chinese workplace notes into a promotion case: weekly reports, a 复盘, the year-end review, the 述职 deck and the defence.",
+      "steps": [
+        {
+          "skill": "cn-weekly-report",
+          "produces": "周报 that show results with numbers, risks and next steps",
+          "passes": "the results and numbers"
+        },
+        {
+          "skill": "cn-fupan",
+          "produces": "a 复盘 of the biggest project: goals, results, causes, lessons",
+          "passes": "the lessons and evidence"
+        },
+        {
+          "skill": "cn-year-end-review",
+          "produces": "the 年终总结: achievements ranked by impact, problems and next year's plan",
+          "passes": "the year's case"
+        },
+        {
+          "skill": "cn-shuzhi-deck",
+          "produces": "a 述职 deck outline, page by page, with a timed script",
+          "passes": "the deck and its claims"
+        },
+        {
+          "skill": "cn-promotion-defence",
+          "produces": "a level-gap analysis and a rehearsal of the committee's questions",
+          "passes": null
+        }
+      ]
+    },
+    {
+      "id": "cn-crossborder-launch",
+      "command": "/cn-crossborder-launch",
+      "name": "出海上新 (cross-border launch)",
+      "lifecycle": "选市场 → 选平台 → listing → 种草 → 直播",
+      "summary": "Take a Chinese product to an overseas marketplace: market choice, platform playbook, the listing, then the content that sells it.",
+      "steps": [
+        {
+          "skill": "chuhai-market-entry",
+          "produces": "a market-entry brief: which market first, why, and the risks",
+          "passes": "the target market and positioning"
+        },
+        {
+          "skill": "crossborder-platform-playbook",
+          "produces": "the platform choice (Temu, TikTok Shop, Amazon) and how to enter it",
+          "passes": "the platform and its rules"
+        },
+        {
+          "skill": "cross-border-listing",
+          "produces": "a localised listing: title, bullets, description and keywords",
+          "passes": "the selling points"
+        },
+        {
+          "skill": "xiaohongshu-note",
+          "produces": "a 小红书 note built on a real usage story, checked for restricted ad terms",
+          "passes": "the hook and proof points"
+        },
+        {
+          "skill": "livestream-sales-script",
+          "produces": "a livestream script with the pitch, objections and a compliance check",
+          "passes": null
+        }
+      ]
+    },
+    {
+      "id": "cn-campus-offer",
+      "command": "/cn-campus-offer",
+      "name": "校招拿 offer (campus recruitment)",
+      "lifecycle": "规划 → 简历 → 技术面",
+      "summary": "Plan the 秋招 or 春招 season, build a bilingual CV for the target companies, and drill the technical interviews.",
+      "steps": [
+        {
+          "skill": "cn-campus-recruitment",
+          "produces": "a season plan: timeline, target list, 网申 answers and how to compare offers",
+          "passes": "the target companies and roles"
+        },
+        {
+          "skill": "bilingual-cv-zh-en",
+          "produces": "a Chinese and English CV tailored to those roles",
+          "passes": "the CV's claims to defend"
+        },
+        {
+          "skill": "cn-tech-interview-drill",
+          "produces": "a technical interview drill: questions by round, model answers and feedback",
+          "passes": null
+        }
+      ]
     }
   ]
 }

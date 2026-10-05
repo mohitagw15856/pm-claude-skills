@@ -34,6 +34,36 @@ jobs:
         run: |
           node web/build-skills.mjs
           cp web/skills.json python/pm_skills/skills.json
+      # skip-existing below keeps re-runs green, but it also hid a real bug: a
+      # pyproject.toml version that silently stopped being bumped, so two releases
+      # published nothing. On a release, an already-published version is an error.
+      # skip-existing below keeps re-runs green, but it also hid a real bug: a
+      # pyproject.toml version that silently stopped being bumped, so two releases
+      # published nothing. If this version reached PyPI before this release was
+      # created, the bump was missed: fail loudly. A re-run of the same release
+      # (version uploaded after the release was created) still passes.
+      - name: The Python version must be new for this release
+        if: github.event_name == 'release'
+        env:
+          RELEASED_AT: ${{ github.event.release.created_at }}
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, os, sys, tomllib, urllib.request, urllib.error
+          from datetime import datetime
+          v = tomllib.load(open('python/pyproject.toml', 'rb'))['project']['version']
+          try:
+              data = json.load(urllib.request.urlopen(f'https://pypi.org/pypi/pm-skills/{v}/json', timeout=20))
+          except urllib.error.HTTPError as e:
+              print(f'pm-skills {v} is not on PyPI yet: it will be published.'); sys.exit(0)
+          uploads = [u['upload_time_iso_8601'] for u in data.get('urls', [])]
+          first = min(datetime.fromisoformat(t.replace('Z', '+00:00')) for t in uploads) if uploads else None
+          released = datetime.fromisoformat(os.environ['RELEASED_AT'].replace('Z', '+00:00'))
+          if first and first < released:
+              print(f'::error::pm-skills {v} was already on PyPI ({first:%Y-%m-%d}) before this release. Bump python/pyproject.toml; the release bump may have silently failed.')
+              sys.exit(1)
+          print(f'pm-skills {v} was uploaded for this release; nothing new to publish.')
+          PY
       - name: Build
         run: |
           python -m pip install --upgrade build

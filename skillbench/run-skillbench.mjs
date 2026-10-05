@@ -19,7 +19,9 @@
 // (MOONSHOT_API_KEY), glm-* (ZHIPU_API_KEY), doubao-* (ARK_API_KEY). No dependencies.
 // Free routes, no top-up needed: modelscope:<org>/<model> uses ModelScope API-Inference's
 // daily free quota (MODELSCOPE_TOKEN), hf:<org>/<model> uses Hugging Face Inference
-// Providers' monthly free credits (HF_TOKEN). The prefix is stripped before the call.
+// Providers' monthly free credits (HF_TOKEN), sf:<org>/<model> uses SiliconFlow
+// (SILICONFLOW_API_KEY; several open models are free there, the rest pay-as-you-go,
+// sign-up with a mainland phone number). The prefix is stripped before the call.
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -48,6 +50,7 @@ const outPath = arg('out', join(__dirname, 'results.json'));
 const COMPAT = [
   [/^modelscope:/, process.env.MODELSCOPE_INFERENCE_URL || 'https://api-inference.modelscope.ai/v1', 'MODELSCOPE_TOKEN', 'modelscope:'],
   [/^hf:/, 'https://router.huggingface.co/v1', 'HF_TOKEN', 'hf:'],
+  [/^sf:/, process.env.SILICONFLOW_BASE_URL || 'https://api.siliconflow.cn/v1', 'SILICONFLOW_API_KEY', 'sf:'],
   [/^(gpt|o\d|chatgpt)/, process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1', 'OPENAI_API_KEY'],
   [/^deepseek/, 'https://api.deepseek.com', 'DEEPSEEK_API_KEY'],
   [/^qwen/, 'https://dashscope.aliyuncs.com/compatible-mode/v1', 'DASHSCOPE_API_KEY'],
@@ -59,7 +62,7 @@ function providerOf(model) {
   if (/^claude/.test(model)) return 'anthropic';
   if (COMPAT.some(([re]) => re.test(model))) return 'openai';
   if (/^gemini/.test(model)) return 'google';
-  throw new Error(`Cannot infer provider for "${model}" (expected claude-*, gpt-*, gemini-*, deepseek-*, qwen-*, kimi-*, glm-*, doubao-*, modelscope:* or hf:*).`);
+  throw new Error(`Cannot infer provider for "${model}" (expected claude-*, gpt-*, gemini-*, deepseek-*, qwen-*, kimi-*, glm-*, doubao-*, modelscope:*, hf:* or sf:*).`);
 }
 async function complete({ model, system, user, maxTokens = 4096 }) {
   const prov = providerOf(model);

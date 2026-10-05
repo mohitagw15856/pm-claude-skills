@@ -1,0 +1,47 @@
+{
+  "_comment": "Official, dated figures per city that the China skills quote (the severance cap, social insurance bases). Every number carries its source URL and the date it takes effect. Add a city only from an official notice (人社局, 医保局, 税务局, 统计局); a figure from a news or law-firm summary is not enough. Rendered at web/city-data.html; reviewed each summer through data/cn-policy-calendar.json (social-insurance-base, average-wage).",
+  "updated": "2026-10-05",
+  "cities": {
+    "beijing": {
+      "name": "北京",
+      "socialInsuranceBase": {
+        "upper": 36348,
+        "lower": 7270,
+        "effectiveFrom": "2026-07",
+        "covers": "职工基本养老保险、失业保险、工伤保险、职工基本医疗保险（含生育）",
+        "source": "https://www.beijing.gov.cn/zhengce/zhengcefagui/202608/t20260821_4831679.html",
+        "published": "2026-08-21"
+      },
+      "avgMonthlyWage": {
+        "value": null,
+        "derived": 12116,
+        "note": "The notice does not print the average; the upper limit is 300% of it, so it is about 36348 / 3 = 12116 yuan. Use the official figure when the 统计局 or 人社局 publishes it.",
+        "year": 2025
+      }
+    },
+    "shanghai": {
+      "name": "上海",
+      "socialInsuranceBase": {
+        "upper": 37731,
+        "lower": 7546,
+        "effectiveFrom": "2026-07",
+        "covers": "社保缴费基数（养老、医疗、失业、工伤、生育）",
+        "source": "https://rsj.sh.gov.cn/tgsgg_17341/20260818/t0035_1443203.html",
+        "published": "2026-08-18"
+      },
+      "avgMonthlyWage": {
+        "value": 12577,
+        "year": 2025,
+        "note": "本市 2025 年度全口径城镇单位就业人员平均工资",
+        "source": "https://rsj.sh.gov.cn/tgsgg_17341/20260818/t0035_1443203.html"
+      }
+    }
+  },
+  "todo": [
+    { "city": "深圳", "where": "深圳市人力资源和社会保障局 hrss.sz.gov.cn 与 深圳市医疗保障局 hsa.sz.gov.cn" },
+    { "city": "广州", "where": "广州市人力资源和社会保障局 rsj.gz.gov.cn 与 广东省人力资源和社会保障厅 hrss.gd.gov.cn（养老保险全省统一上下限）" },
+    { "city": "杭州", "where": "浙江省人力资源和社会保障厅 rlsbt.zj.gov.cn 与 杭州市人力资源和社会保障局" },
+    { "city": "成都", "where": "四川省人力资源和社会保障厅 rst.sc.gov.cn" },
+    { "city": "南京", "where": "江苏省人力资源和社会保障厅 jshrss.jiangsu.gov.cn" }
+  ]
+}

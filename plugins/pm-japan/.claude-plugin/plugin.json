@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-japan",
+  "version": "1.0.0",
+  "description": "Working in Japan: year-end tax adjustment (年末調整), the tax return (確定申告) with e-Tax, resignation procedures from notice to unemployment benefit, and the 稟議書 approval request, in Japanese",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "japan",
+    "nenmatsu-chosei",
+    "kakutei-shinkoku",
+    "taishoku",
+    "ringisho",
+    "japanese"
+  ]
+}

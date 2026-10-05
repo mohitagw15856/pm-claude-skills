@@ -251,7 +251,7 @@ function page(s) {
 <title>${esc(s.title)} — AI Agent Skill for Claude, ChatGPT &amp; Gemini</title>
 <meta name="description" content="${metaDesc}" />
 <link rel="canonical" href="${url}" />
-<meta property="og:type" content="article" />
+${existsSync(join(root, 'skills-i18n', 'zh', s.name, 'SKILL.md')) ? `<link rel="alternate" hreflang="en" href="${url}" />\n<link rel="alternate" hreflang="zh-CN" href="${BASE}/zh/${s.name}.html" />\n` : ''}<meta property="og:type" content="article" />
 <meta property="og:title" content="${esc(s.title)} — AI Agent Skill" />
 <meta property="og:description" content="${metaDesc}" />
 <meta property="og:url" content="${url}" />

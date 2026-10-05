@@ -5,7 +5,9 @@ name: Run SkillBench (Chinese task set)
 # Manual only. The default models are free: modelscope:* runs on ModelScope
 # API-Inference's daily free quota (MODELSCOPE_TOKEN; the ModelScope account must be
 # linked to an Alibaba Cloud account once, at no cost). hf:* uses Hugging Face's
-# monthly free credits (HF_TOKEN), which cover only a handful of calls. Paid provider keys still work if set:
+# monthly free credits (HF_TOKEN), which cover only a handful of calls. sf:* runs on
+# SiliconFlow (SILICONFLOW_API_KEY), where models such as sf:Qwen/Qwen2.5-7B-Instruct
+# and sf:THUDM/glm-4-9b-chat are free; larger ones cost a little per call. Paid provider keys still work if set:
 # DEEPSEEK_API_KEY, DASHSCOPE_API_KEY (Qwen), MOONSHOT_API_KEY (Kimi),
 # ZHIPU_API_KEY (GLM), ARK_API_KEY (Doubao). The judge needs ANTHROPIC_API_KEY.
 # Results land on the skillbench-zh-results branch and a pull request to main is
@@ -50,6 +52,7 @@ jobs:
           ARK_API_KEY: ${{ secrets.ARK_API_KEY }}
           MODELSCOPE_TOKEN: ${{ secrets.MODELSCOPE_TOKEN }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
         run: |
           set -euo pipefail
           printf '%s' "$MODELS" | grep -Eq '^[A-Za-z0-9._:,/-]+$' || { echo "::error::models must be comma-separated ids"; exit 1; }

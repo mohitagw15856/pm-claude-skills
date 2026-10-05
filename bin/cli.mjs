@@ -378,20 +378,40 @@ function catalogForFind() {
   }
   return readSkillIndex().map((s) => ({ ...s, title: s.name, tier: 'stable', eval: null, plugin: null }));
 }
+// Pinyin search: "zb" or "zhoubao" finds 中文周报. Index from web/zh-pinyin.json
+// (scripts/build-zh-pinyin.mjs). Only for queries written in Latin letters.
+function pinyinIndex() {
+  try { return JSON.parse(readFileSync(join(PKG_ROOT, 'web', 'zh-pinyin.json'), 'utf8')).skills || {}; } catch { return {}; }
+}
+export function pinyinScore(entry, query) {
+  const q = String(query).toLowerCase().replace(/[\s']+/g, '');
+  if (!entry || q.length < 2 || !/^[a-z]+$/.test(q)) return 0;
+  let best = 0;
+  for (const [i, full] of entry.full.entries()) {
+    const ini = entry.initials[i] || '';
+    if (full === q || ini === q) best = Math.max(best, 6);
+    else if (full.startsWith(q) || (q.length >= 2 && ini.startsWith(q))) best = Math.max(best, 4);
+    else if ((q.length >= 4 && full.includes(q)) || (q.length >= 2 && q.length <= 4 && ini.includes(q))) best = Math.max(best, 2.5);
+  }
+  return best;
+}
 function find(opts) {
   const query = opts._.slice(1).join(' ').trim();
   if (!query) { console.error('Usage: pm-claude-skills find "<describe your task>" [--limit N] [--json]'); process.exit(2); }
   const qset = new Set(findTokens(query));
-  if (!qset.size) { console.error('Nothing to search on — add a few descriptive words.'); process.exit(2); }
+  if (!qset.size && !/^[a-z\s']{2,}$/i.test(query)) { console.error('Nothing to search on — add a few descriptive words.'); process.exit(2); }
   const TIER_BOOST = { production: 1.15, stable: 1, experimental: 0.9 };
   const ql = query.toLowerCase();
+  const PY = /[\u4e00-\u9fff]/.test(query) ? {} : pinyinIndex();
   const scored = catalogForFind().map((s) => {
     const titleSet = new Set(findTokens(`${s.title || s.name} ${s.name}`));
     const hset = new Set([...titleSet, ...findTokens(`${s.description || ''} ${s.descriptionZh || ''}`)]);
     let overlap = 0, titleHits = 0;
     for (const t of qset) { if (hset.has(t)) overlap++; if (titleSet.has(t)) titleHits++; }
     const phrase = (s.description || '').toLowerCase().includes(ql) ? 2 : 0;
-    let score = (overlap + titleHits * 1.5 + phrase) * (TIER_BOOST[s.tier] || 1);
+    const py = pinyinScore(PY[s.name], query);
+    if (py) overlap++;
+    let score = (overlap + titleHits * 1.5 + phrase + py) * (TIER_BOOST[s.tier] || 1);
     if (s.eval && typeof s.eval.score === 'number') score += (s.eval.score - 4) * 0.15; // gentle nudge for measured-good
     return { s, score, overlap };
   }).filter((r) => r.overlap > 0).sort((a, b) => b.score - a.score || a.s.name.localeCompare(b.s.name));

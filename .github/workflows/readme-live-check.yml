@@ -13,6 +13,7 @@ on:
       - 'scripts/build-readme-live.mjs'
       - 'scripts/build-live-png.mjs'
       - 'scripts/check-readme-live.mjs'
+      - 'scripts/build-zhoukan.mjs'
       - 'scripts/check-date-data.mjs'
       - 'bin/today.mjs'
       - 'data/cn-exam-dates.json'

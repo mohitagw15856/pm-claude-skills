@@ -9,6 +9,22 @@
   },
   "plugins": [
     {
+      "name": "pm-japan",
+      "description": "Working in Japan: year-end tax adjustment (年末調整), the tax return (確定申告) with e-Tax, resignation procedures from notice to unemployment benefit, and the 稟議書 approval request, in Japanese",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-japan",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
+      "name": "pm-sea",
+      "description": "Singapore and Malaysia: CPF and EPF (KWSP) explained and checked against payslips, Singapore Employment Act entitlements and claims, and 新马华文 business writing with local terms and bilingual versions",
+      "version": "1.0.0",
+      "category": "productivity",
+      "source": "./plugins/pm-sea",
+      "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+    },
+    {
       "name": "pm-china-yearend",
       "description": "The Chinese year-end season pack (述职季): the year-end review (年终总结 / 述职报告), the 述职 PPT outline and timed speaking script, the year-end bonus explained (年终奖, 13薪 and how the bonus is taxed, marked to confirm), and next year's personal OKR and development plan (个人发展计划), written in Chinese",
       "version": "1.0.0",

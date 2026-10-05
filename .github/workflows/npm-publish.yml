@@ -1,14 +1,17 @@
 name: Publish to npm
 
 # Publishes the package to npm when you publish a GitHub Release (or run this
-# workflow manually). No local npm needed — set one repo secret, NPM_TOKEN, and
-# every release ships `npx pm-claude-skills` to the world.
+# workflow manually), using npm trusted publishing (OIDC): GitHub proves to npm
+# that this workflow in this repo is publishing, so no long-lived token is needed
+# and none can expire. NPM_TOKEN stays as a fallback while the switch is made.
 #
-# One-time setup:
-#   1. Create a free npm account at https://www.npmjs.com/signup
-#   2. Profile -> Access Tokens -> Generate New Token -> "Automation"
-#   3. In this repo: Settings -> Secrets and variables -> Actions -> New repository
-#      secret named NPM_TOKEN with that token.
+# One-time setup on npmjs.com (the package owner):
+#   pm-claude-skills -> Settings -> Trusted publishing -> GitHub Actions:
+#     Organization or user: mohitagw15856
+#     Repository:           pm-claude-skills
+#     Workflow filename:    npm-publish.yml
+#     Environment:          (leave empty)
+#   Once a release has published through OIDC, delete the NPM_TOKEN secret.
 # Then: publish a GitHub Release tagged vX.Y.Z (matching package.json version).
 
 on:
@@ -61,8 +64,28 @@ jobs:
             echo "already=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Publish to npm (public, with provenance)
+      # Trusted publishing needs npm 11.5.1 or newer.
+      - name: Update npm
         if: steps.published.outputs.already == 'false'
-        run: npm publish --provenance --access public
+        run: npm install -g npm@^11.6.0 && npm --version
+
+      # OIDC first: with trusted publishing configured, npm exchanges the GitHub
+      # identity token for a short-lived publish credential. If that is not set up
+      # yet, fall back to the NPM_TOKEN secret, and say clearly which one was used.
+      - name: Publish to npm (trusted publishing, provenance)
+        if: steps.published.outputs.already == 'false'
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          FALLBACK_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          set -uo pipefail
+          # setup-node writes an .npmrc that expects NODE_AUTH_TOKEN; leave it empty for OIDC.
+          if NODE_AUTH_TOKEN="" npm publish --provenance --access public; then
+            echo "::notice::Published with npm trusted publishing (OIDC)."
+            exit 0
+          fi
+          if [ -z "$FALLBACK_TOKEN" ]; then
+            echo "::error::Trusted publishing failed and there is no NPM_TOKEN fallback. Configure trusted publishing on npmjs.com (see the header of this workflow)."
+            exit 1
+          fi
+          echo "::warning::Trusted publishing is not configured yet; publishing with NPM_TOKEN instead."
+          NODE_AUTH_TOKEN="$FALLBACK_TOKEN" npm publish --provenance --access public

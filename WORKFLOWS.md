@@ -6,7 +6,7 @@ Run one as a slash command in Claude Code (e.g. `/ship-a-feature a referral prog
 
 <!-- Generated from workflows.json by scripts/build-workflows.mjs — do not edit by hand. -->
 
-There are **12 recipes** today:
+There are **15 recipes** today:
 
 | Recipe | Command | Lifecycle | Chains |
 |--------|---------|-----------|--------|
@@ -22,6 +22,9 @@ There are **12 recipes** today:
 | **Ship an MCP Server** | `/ship-an-mcp-server` | Spec → Audit → Price | 4 skills |
 | **Adopt AI Properly** | `/adopt-ai-properly` | Policy → Roles → Proof | 4 skills |
 | **Design Review** | `/design-review` | React → Measure → Diagnose → Hand over | 4 skills |
+| **职场晋升线 (Chinese workplace: report to promotion)** | `/cn-career-ladder` | 周报 → 复盘 → 年终总结 → 述职 → 晋升答辩 | 5 skills |
+| **出海上新 (cross-border launch)** | `/cn-crossborder-launch` | 选市场 → 选平台 → listing → 种草 → 直播 | 5 skills |
+| **校招拿 offer (campus recruitment)** | `/cn-campus-offer` | 规划 → 简历 → 技术面 | 3 skills |
 
 ## Ship a Feature — `/ship-a-feature`
 
@@ -156,6 +159,40 @@ There are **12 recipes** today:
 2. **accessibility-audit** → produces a WCAG audit with every contrast row computed rather than assessed.
 3. **design-system-audit** → produces whether this is a one-off or a token problem underneath.
 4. **design-handoff-brief** → produces the decisions, the measured values, and the open questions in buildable form.
+
+## 职场晋升线 (Chinese workplace: report to promotion) — `/cn-career-ladder`
+
+*周报 → 复盘 → 年终总结 → 述职 → 晋升答辩* · Turn a year of Chinese workplace notes into a promotion case: weekly reports, a 复盘, the year-end review, the 述职 deck and the defence.
+
+`cn-weekly-report` → `cn-fupan` → `cn-year-end-review` → `cn-shuzhi-deck` → `cn-promotion-defence`
+
+1. **cn-weekly-report** → produces 周报 that show results with numbers, risks and next steps.
+2. **cn-fupan** → produces a 复盘 of the biggest project: goals, results, causes, lessons.
+3. **cn-year-end-review** → produces the 年终总结: achievements ranked by impact, problems and next year's plan.
+4. **cn-shuzhi-deck** → produces a 述职 deck outline, page by page, with a timed script.
+5. **cn-promotion-defence** → produces a level-gap analysis and a rehearsal of the committee's questions.
+
+## 出海上新 (cross-border launch) — `/cn-crossborder-launch`
+
+*选市场 → 选平台 → listing → 种草 → 直播* · Take a Chinese product to an overseas marketplace: market choice, platform playbook, the listing, then the content that sells it.
+
+`chuhai-market-entry` → `crossborder-platform-playbook` → `cross-border-listing` → `xiaohongshu-note` → `livestream-sales-script`
+
+1. **chuhai-market-entry** → produces a market-entry brief: which market first, why, and the risks.
+2. **crossborder-platform-playbook** → produces the platform choice (Temu, TikTok Shop, Amazon) and how to enter it.
+3. **cross-border-listing** → produces a localised listing: title, bullets, description and keywords.
+4. **xiaohongshu-note** → produces a 小红书 note built on a real usage story, checked for restricted ad terms.
+5. **livestream-sales-script** → produces a livestream script with the pitch, objections and a compliance check.
+
+## 校招拿 offer (campus recruitment) — `/cn-campus-offer`
+
+*规划 → 简历 → 技术面* · Plan the 秋招 or 春招 season, build a bilingual CV for the target companies, and drill the technical interviews.
+
+`cn-campus-recruitment` → `bilingual-cv-zh-en` → `cn-tech-interview-drill`
+
+1. **cn-campus-recruitment** → produces a season plan: timeline, target list, 网申 answers and how to compare offers.
+2. **bilingual-cv-zh-en** → produces a Chinese and English CV tailored to those roles.
+3. **cn-tech-interview-drill** → produces a technical interview drill: questions by round, model answers and feedback.
 
 ---
 
