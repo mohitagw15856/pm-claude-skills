@@ -12,6 +12,11 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 **1285 skills · 152 bundles** (from 1250 · 144 at v81.2.0).
 
 ### Added
+- **Profile**: `npx pm-claude-skills profile` stores your role, seniority, industry, company, country, city, language and tone on your computer only; `add` and `sync` install it next to the skills (a `pm-profile` skill, or an always-on rule), so skills stop re-asking and apply local rules for your city.
+- **Team sync**: a committed `.pm-skills.json` (with a JSON Schema) lists a team's agents, bundles, skills and agreed version; `npx pm-claude-skills sync` installs exactly that set and `sync --check` fails on a missing, edited or wrong-version install. See `docs/TEAMS.md`.
+- **Cookbooks**: Jupyter notebooks using the Python package with DeepSeek, Qwen on ModelScope's free quota and a local Ollama (`cookbooks/`).
+- **Discord bot** (`integrations/discord-bot/`): `/skill` and `/find` over HTTP interactions, Ed25519-verified (with a pure-Python RFC 8032 fallback), sharing routing and models with the Feishu, DingTalk and WeCom bot.
+- **Contributor credits**: an all-contributors table and a levels-of-contribution card in the README, built from `.all-contributorsrc` by `scripts/build-contributors.mjs` (with `--add` and `--check`).
 - **Offline playground**: the installable playground now gets a fresh cache on every deploy (the service worker is stamped with the commit), an offline page, a "new version is ready" reload prompt, and caches the finder, the listen page and each skill bundle as it is opened.
 - **jsDelivr route**: `docs/CDN.md` (with Chinese) shows how to fetch any skill or the skill index from jsDelivr's npm mirror, and `install --cdn` (or `PM_SKILLS_CDN=jsdelivr`) installs skills from other repos through jsDelivr instead of GitHub.
 - **Word and WPS add-ins** (`integrations/office-addin/`): a task pane that inserts a skill's output template into the document or runs a skill on the selected text with your own model endpoint; sideload steps for Word on the web, Windows and Mac, and for WPS 文字 including 统信 UOS and 银河麒麟.

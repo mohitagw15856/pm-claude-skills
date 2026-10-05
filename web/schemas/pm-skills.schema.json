@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mohitagw15856.github.io/pm-claude-skills/schemas/pm-skills.schema.json",
+  "title": "PM Skills team configuration (.pm-skills.json)",
+  "description": "The skills a team installs with `npx pm-claude-skills sync`. See https://github.com/mohitagw15856/pm-claude-skills/blob/main/docs/TEAMS.md",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["agents"],
+  "anyOf": [{ "required": ["bundles"] }, { "required": ["skills"] }],
+  "properties": {
+    "$schema": { "type": "string" },
+    "version": {
+      "type": "string",
+      "description": "Library versions the team has agreed on: 81.2.0, 81.x, 81.2.x or >=81.2.0.",
+      "pattern": "^(\\*|>=\\s*\\d+\\.\\d+\\.\\d+|\\d+(\\.(\\d+|x|\\*)){0,2})$"
+    },
+    "agents": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": { "enum": ["claude", "hermes", "codex", "openclaw", "cursor", "windsurf", "aider", "kilocode", "trae", "qoder", "lingma", "codebuddy"] }
+    },
+    "bundles": { "type": "array", "uniqueItems": true, "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" } },
+    "skills": { "type": "array", "uniqueItems": true, "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" } },
+    "lite": { "type": "boolean", "description": "Install condensed skills for small local models." },
+    "targets": {
+      "type": "object",
+      "description": "Install folder per agent, relative to this file.",
+      "additionalProperties": { "type": "string", "minLength": 1 }
+    },
+    "locale": { "type": "string", "description": "Reserved: the team's preferred language for outputs." }
+  }
+}

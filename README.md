@@ -711,6 +711,37 @@ Add a skill by PR ([the standard](SKILL-AUTHORING-STANDARD.md), [CONTRIBUTING](C
 </p>
 
 <p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/contributor-levels.svg">
+    <source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/contributor-levels-light.svg">
+    <img src="docs/readme-assets/contributor-levels.svg" width="640" alt="Levels of contribution: report or fix a bug, translate a skill, write a skill, review, maintain, with how many people have done each" />
+  </picture>
+</p>
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="16%"><a href="https://github.com/mohitagw15856"><img src="https://avatars.githubusercontent.com/u/119053560?v=4&s=72" width="72px;" alt="Mohit Aggarwal"/><br /><sub><b>Mohit Aggarwal</b></sub></a><br /><span title="Maintenance">🚧</span> <span title="Code">💻</span> <span title="Skills and content">🖋</span> <span title="Translation">🌍</span> <span title="Documentation">📖</span> <span title="Infrastructure">🚇</span></td>
+      <td align="center" valign="top" width="16%"><a href="https://github.com/thejesh23"><img src="https://avatars.githubusercontent.com/u/35212698?v=4&s=72" width="72px;" alt="Thejesh"/><br /><sub><b>Thejesh</b></sub></a><br /><span title="Code">💻</span> <span title="Bug reports and fixes">🐛</span> <span title="Skills and content">🖋</span></td>
+      <td align="center" valign="top" width="16%"><a href="https://github.com/roian6"><img src="https://avatars.githubusercontent.com/u/23256775?v=4&s=72" width="72px;" alt="Chanhyo Jung"/><br /><sub><b>Chanhyo Jung</b></sub></a><br /><span title="Skills and content">🖋</span></td>
+      <td align="center" valign="top" width="16%"><a href="https://github.com/mblode"><img src="https://avatars.githubusercontent.com/u/7183998?v=4&s=72" width="72px;" alt="Matthew Blode"/><br /><sub><b>Matthew Blode</b></sub></a><br /><span title="Skill libraries">🔌</span></td>
+      <td align="center" valign="top" width="16%"><a href="https://github.com/InsightFactoryAPP"><img src="https://avatars.githubusercontent.com/u/168487014?v=4&s=72" width="72px;" alt="InsightFactoryAPP"/><br /><sub><b>InsightFactoryAPP</b></sub></a><br /><span title="Skill libraries">🔌</span></td>
+      <td align="center" valign="top" width="16%"><a href="https://github.com/LucideLarp"><img src="https://avatars.githubusercontent.com/u/279298543?v=4&s=72" width="72px;" alt="Martinius"/><br /><sub><b>Martinius</b></sub></a><br /><span title="Skill libraries">🔌</span></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+<sub>Credits follow the <a href="https://allcontributors.org">all-contributors</a> spec (<a href=".all-contributorsrc">.all-contributorsrc</a>). Contributed and not listed? Open a pull request running <code>node scripts/build-contributors.mjs --add &lt;your-login&gt; &lt;type&gt;</code>, or ask in an issue.</sub>
+
+<p align="center">
   <a href="docs/zh/translation-board.md">
     <img src="docs/readme-assets/translators.svg" width="640" alt="Translators' leaderboard: who has translated skills into Chinese and other languages, and how many skills are still open to claim" />
   </a>
