@@ -14,7 +14,7 @@
   <circle cx="40" cy="40" r="5" fill="#ff5f57"/><circle cx="58" cy="40" r="5" fill="#febc2e"/><circle cx="76" cy="40" r="5" fill="#28c840"/>
   <text x="96" y="44" class="title">your assistant + PM Skills</text>
   <text x="460" y="92" class="lbl">Skill loaded</text>
-  <text x="820" y="266" text-anchor="end" class="title">1,263 skills · one markdown file each</text>
+  <text x="820" y="266" text-anchor="end" class="title">1,285 skills · one markdown file each</text>
   <g class="b0">
     <text x="40" y="92" class="lbl">You</text>
     <rect x="40" y="102" width="316.59999999999985" height="44" rx="14" fill="#2c3a4a"/>

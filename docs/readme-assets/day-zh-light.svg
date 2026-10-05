@@ -39,5 +39,5 @@ text{font-family:"PingFang SC","Noto Sans CJK SC","Microsoft YaHei",sans-serif}
 <g class="c6"><path d="M760 142V166" stroke="#e3ddd2" stroke-width="1.5" stroke-dasharray="3 3"/><rect x="672" y="68" width="176" height="74" rx="12" fill="#ffffff" stroke="#e3ddd2"/><text x="684" y="91" font-size="15"><tspan fill="#c46f1f" font-weight="700">21:30</tspan><tspan fill="#1f2328" font-weight="600" dx="7">下班后考研</tspan></text><rect x="682" y="100" width="133.30000000000004" height="20" rx="10" fill="#efe6fb"/><text x="690" y="114" font-size="11.5" fill="#4b2a7a" font-family='ui-monospace,SFMono-Regular,Menlo,monospace'>cn-kaoyan-planner</text><text x="684" y="135" font-size="12.5" fill="#5d6670">倒排每天复习计划</text></g>
 <g class="p6"><circle cx="760" cy="186" r="18" fill="#ffffff" stroke="#c46f1f" stroke-width="2"/><g transform="translate(760 186)" fill="none" stroke="#1f2328" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M0-5v13M0-5c-3-2.2-6-2.2-8.5-1v12.5c2.5-1.2 5.5-1.2 8.5 1M0-5c3-2.2 6-2.2 8.5-1v12.5c-2.5-1.2-5.5-1.2-8.5 1"/></g></g>
 <g class="dot"><circle cx="100" cy="186" r="5" fill="#c46f1f"/></g>
-<text x="828" y="324" text-anchor="end" font-size="12" fill="#5d6670">1,250 个技能 · 每个都是一份 Markdown 文件</text>
+<text x="828" y="324" text-anchor="end" font-size="12" fill="#5d6670">1,285 个技能 · 每个都是一份 Markdown 文件</text>
 </svg>

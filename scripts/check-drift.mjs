@@ -31,6 +31,8 @@ const skillCount = readdirSync(join(root, 'skills')).filter((n) => {
   catch { return false; }
 }).length;
 const bundleCount = JSON.parse(read('.claude-plugin/marketplace.json')).plugins.length;
+// Every skill folder, deprecated aliases included (the README explains the difference).
+const folderCount = readdirSync(join(root, 'skills')).filter((n) => existsSync(join(root, 'skills', n, 'SKILL.md'))).length;
 
 const problems = [];
 
@@ -49,7 +51,10 @@ const LIVING = [
   'README.md', 'CHEATSHEET.md', 'PERSONAS.md', 'CONTRIBUTING.md', 'docs/SHOWCASE.md',
   'REPO-MAP.md', 'QUICKSTART.md', 'AGENTS.md', 'TIERS.md', 'PACKS.md', 'ROADMAP.md',
   'docs/FOUNDATION.md', 'docs/print/README.md', 'training/README.md', 'training/MODEL_CARD.md',
+  'README.zh-CN.md', 'README.zh-TW.md', 'README.ko.md', 'docs/CHINA.md',
   ...readdirSync(join(root, 'web')).filter((n) => n.endsWith('.html')).map((n) => `web/${n}`),
+  // The animated README images carry the count in their text, so they drift too.
+  ...readdirSync(join(root, 'docs', 'readme-assets')).filter((n) => n.endsWith('.svg')).map((n) => `docs/readme-assets/${n}`),
 ];
 // Legitimate non-total numbers that may precede the word "skills":
 // 59 = production tier · 45 = pm-engineering · 28 = eval-scored (update when a
@@ -65,6 +70,13 @@ const CLAIMS = [
   /\ball (\d{2,4}) interactively\b/gi,           // "pick from all 466 interactively"
   /\bskills-(\d{2,4})-[a-z]+\b/gi,               // static shields badge "skills-466-blue"
   /skills[^\n]{0,30}?\b(\d{2,4})\s+folders?\b/gi, // REPO-MAP: "skills/ — 466 folders"
+  /\b(\d{4}) of them\b/gi,                       // "the senior colleague's notes: 1285 of them"
+  /<b>(\d{3,4})<\/b><br><sub>skills/gi,            // the README stats table
+  /\b(?:All|Browse all) (\d{3,4})\b/g,             // "All 1285 pass …", "Browse all 1285 →"
+  /\bcatalog says (\d{3,4})\b/gi,
+  /(\d{3,4})\s*(?:个|個)(?:专业|專業)?\s*(?:Agent Skills|技能)/g, // 中文: "1285 个专业 Agent Skills", "1,285 个技能"
+  /(\d{3,4})\s*份/g,                               // "资深同事的笔记：1285 份"
+  /(\d{3,4})\s*개(?:의)?\s*(?:전문|스킬)/g,          // 한국어: "1,285개의 전문 Agent Skills"
 ];
 
 for (const f of LIVING) {
@@ -84,6 +96,17 @@ for (const f of LIVING) {
     if (/Earlier — v\d|\*v4\d, |medium\.com/.test(wide)) continue;
     const line = text.slice(0, m.index).split('\n').length;
     problems.push(`${f}:${line}: "${m[0].trim()}" — current count is ${skillCount}`);
+  }
+}
+
+// ── Rule 2b: folder-count claims ("There are 1297 folders under skills/") ─────
+for (const f of LIVING) {
+  if (!existsSync(join(root, f))) continue;
+  const text = read(f).replace(/(\d),(\d{3})\b/g, '$1$2');
+  for (const m of text.matchAll(/\b(\d{3,4}) folders under\b/g)) {
+    if (+m[1] === folderCount) continue;
+    const line = text.slice(0, m.index).split('\n').length;
+    problems.push(`${f}:${line}: "${m[0]}" — there are ${folderCount} skill folders`);
   }
 }
 
