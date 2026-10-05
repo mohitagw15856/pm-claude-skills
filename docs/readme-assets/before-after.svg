@@ -20,7 +20,7 @@
   <rect x="460" y="128" width="404" height="214" rx="12" fill="#232a33" stroke="#f2a65a" stroke-opacity=".55"/>
   <circle cx="62" cy="152" r="5" fill="#6f7884"/><text x="76" y="156" class="lbl">Generic AI</text>
   <circle cx="486" cy="152" r="5" fill="#f2a65a"/><text x="500" y="156" class="lbl">With the skill</text>
-  <text x="860" y="362" text-anchor="end" class="title">1,250 skills · one markdown file each</text>
+  <text x="860" y="362" text-anchor="end" class="title">1,285 skills · one markdown file each</text>
   <g class="b0">
     <rect x="40" y="72" width="474.39999999999964" height="40" rx="13" fill="#2c3a4a"/>
     <clipPath id="c0"><rect class="ty0" x="50" y="76" width="0" height="32"/></clipPath>

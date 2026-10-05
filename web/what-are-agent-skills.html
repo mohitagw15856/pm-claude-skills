@@ -42,7 +42,7 @@
 
 <h2>What are agent skills?</h2>
 <div class="capsule">Agent skills are plain-markdown instruction files — conventionally named <code>SKILL.md</code> — that teach an AI assistant to perform one task to a professional standard. A skill contains a name, a description that tells the assistant when to activate, and a body with the working method: required inputs, decision rules, an output template, quality checks, and anti-patterns. The assistant loads it on demand and applies the judgment it encodes.</div>
-<p>The idea shipped with Anthropic's Claude (Claude Code and Claude.ai read skills natively), but the format is just markdown — any assistant that accepts system instructions can use one. Our library maintains 1255 of them under MIT, which is where the numbers and examples on this page come from.</p>
+<p>The idea shipped with Anthropic's Claude (Claude Code and Claude.ai read skills natively), but the format is just markdown — any assistant that accepts system instructions can use one. Our library maintains 1285 of them under MIT, which is where the numbers and examples on this page come from.</p>
 
 <h2>What does a SKILL.md file contain?</h2>
 <div class="capsule">A SKILL.md file has two parts: YAML frontmatter holding the skill's name and an activation description, and a markdown body holding the working framework — required inputs, the method or scoring rules, a concrete output template, quality checks, and anti-patterns. Well-formed skills are self-contained: one file, no runtime, readable by the model and by humans.</div>

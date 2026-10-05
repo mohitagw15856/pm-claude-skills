@@ -40,7 +40,7 @@
 </p>
 
 > **Your landlord kept your deposit. You got laid off on a Tuesday. Your boss wants the PRD by Friday.**
-> Generic AI is a very confident intern. **PM Skills** is the senior colleague's notes: 1255 of them, one markdown file each. *(PM stands for Professional. Yes, we get asked.)*
+> Generic AI is a very confident intern. **PM Skills** is the senior colleague's notes: 1285 of them, one markdown file each. *(PM stands for Professional. Yes, we get asked.)*
 
 <!-- AEO Answer Capsule — 68 words -->
 PM Skills is an open-source library of 1285 Agent Skills — plain-markdown SKILL.md files that teach an AI assistant to do one professional task to a senior professional's standard, from writing a PRD to decoding a lease or running a blameless postmortem. Each skill bundles the framework, an output template, quality checks, and anti-patterns. It is MIT-licensed and works with Claude, ChatGPT, Gemini, Cursor, and Codex.
@@ -55,7 +55,7 @@ PM Skills is an open-source library of 1285 Agent Skills — plain-markdown SKIL
 </p>
 
 <table align="center"><tr>
-<td align="center"><b>1255</b><br><sub>skills</sub></td>
+<td align="center"><b>1285</b><br><sub>skills</sub></td>
 <td align="center"><b>145</b><br><sub>bundles</sub></td>
 <td align="center"><b>35</b><br><sub>professions</sub></td>
 <td align="center"><b>12</b><br><sub>platforms</sub></td>
@@ -553,7 +553,7 @@ npx pm-claude-skills skillcheck --dir ./my-skills
 
 ## 📚 The skills
 
-Every skill has the same shape: what it produces, the inputs it needs, a real framework, an output template, quality checks and anti-patterns. All 1255 pass the [SkillSpec](SKILLSPEC.md) L3 gate and a security audit in CI.
+Every skill has the same shape: what it produces, the inputs it needs, a real framework, an output template, quality checks and anti-patterns. All 1285 pass the [SkillSpec](SKILLSPEC.md) L3 gate and a security audit in CI.
 
 <table align="center">
   <tr align="center">
@@ -579,7 +579,7 @@ Every skill has the same shape: what it produces, the inputs it needs, a real fr
 </table>
 
 <p align="center">
-  <b><a href="SKILLS.md">Browse all 1255 →</a></b> ·
+  <b><a href="SKILLS.md">Browse all 1285 →</a></b> ·
   <b><a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/">explore the tech tree →</a></b> ·
   <b><a href="plugins/">152 bundles →</a></b>
 </p>
@@ -676,7 +676,7 @@ That's the whole trick. It's markdown: audit it, edit it, or [write your own](SK
 
 **Do I need an API key?** Not to browse, read, install or use skills inside a tool you already have. The playground serves a few free runs a day.
 
-**The catalog says 1255 but the folder has more.** There are 1267 folders under `skills/`; 12 are [deprecated](docs/DEPRECATION.md) aliases that point at their replacements, kept so old install commands never break.
+**The catalog says 1285 but the folder has more.** There are 1297 folders under `skills/`; 12 are [deprecated](docs/DEPRECATION.md) aliases that point at their replacements, kept so old install commands never break.
 
 **Will this mess with my setup?** No. Skills are inert text files; remove the folder and they're gone.
 

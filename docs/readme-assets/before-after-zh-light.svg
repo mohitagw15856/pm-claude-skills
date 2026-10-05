@@ -20,7 +20,7 @@
   <rect x="460" y="128" width="404" height="214" rx="12" fill="#fbf8f2" stroke="#c46f1f" stroke-opacity=".55"/>
   <circle cx="62" cy="152" r="5" fill="#7d858f"/><text x="76" y="156" class="lbl">普通 AI</text>
   <circle cx="486" cy="152" r="5" fill="#c46f1f"/><text x="500" y="156" class="lbl">加载技能后</text>
-  <text x="860" y="362" text-anchor="end" class="title">1,250 个技能 · 每个都是一份 Markdown 文件</text>
+  <text x="860" y="362" text-anchor="end" class="title">1,285 个技能 · 每个都是一份 Markdown 文件</text>
   <g class="b0">
     <rect x="40" y="72" width="448.1999999999999" height="40" rx="13" fill="#e3eef8"/>
     <clipPath id="c0"><rect class="ty0" x="50" y="76" width="0" height="32"/></clipPath>
