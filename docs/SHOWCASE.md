@@ -58,6 +58,41 @@
 
 ### ⭐ If this saves you time, [star the repo](https://github.com/mohitagw15856/pm-claude-skills) — it's the #1 way to help others find it.
 
+## ▶ See it: the gallery
+
+<table>
+<tr>
+<td width="50%" align="center">
+<a href="https://mohitagw15856.github.io/pm-claude-skills/"><img src="../web/docs-assets/playground-demo.webp" width="100%" alt="The Skill Playground: pick a skill, fill a short form, run it, and a structured result streams out in the browser" /></a>
+<br /><sub><b>▶ <a href="https://mohitagw15856.github.io/pm-claude-skills/">Playground</a></b>: run any skill in your browser. No install, no signup.</sub>
+</td>
+<td width="50%" align="center">
+<a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/"><img src="readme-assets/tech-tree-tour.webp" width="100%" alt="A zoom and pan through the tech tree: the whole library as branches of skill nodes, then close up on the research queue and branch after branch of skills" /></a>
+<br /><sub><b>🌳 <a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/">Tech tree</a></b>: the whole library as a research tree. Vote on what gets researched next.</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" align="center">
+<a href="../plugins/pm-3d-explorer/"><img src="readme-assets/3d-explorer.jpg" width="100%" alt="A 3D explorer built by the pm-3d-explorer skills: exploded view, clickable parts, labels with sources" /></a>
+<br /><sub><b>🧊 <a href="../plugins/pm-3d-explorer/">3D explorer</a></b>: topic in, a clickable 3D page out, with exploded view and a quiz.</sub>
+</td>
+<td width="50%" align="center">
+<a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="../web/docs-assets/demo-galaxy.webp" width="100%" alt="Galaxy 3D: fly through all the skills as a constellation" /></a>
+<br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html">Galaxy 3D</a></b>: every skill a star. Zero productivity value, 100% recommended.</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" align="center">
+<a href="https://mohitagw15856.github.io/pm-claude-skills/find.html"><img src="readme-assets/search-demo.webp" width="100%" alt="Typing weekly report into the skill finder: the ranked matches appear as you type, Chinese Weekly Report first" /></a>
+<br /><sub><b>🔎 <a href="https://mohitagw15856.github.io/pm-claude-skills/find.html">Find a skill</a></b>: describe the task in plain words, English or Chinese. Runs in your browser.</sub>
+</td>
+<td width="50%" align="center">
+<a href="https://mohitagw15856.github.io/pm-claude-skills/city.html"><img src="readme-assets/city.webp" width="100%" alt="Skill City at dusk: every skill a building, grouped in districts, with windows lit in the skills you have used" /></a>
+<br /><sub><b>🏙 <a href="https://mohitagw15856.github.io/pm-claude-skills/city.html">Skill City</a></b>: every skill a building. The windows light up as you use them.</sub>
+</td>
+</tr>
+</table>
+
 ## ⚡ Use it in 30 seconds — pick one
 
 | You want to… | Do this |
@@ -1375,3 +1410,105 @@ Want a specific skill built? [Vote or request in SKILL_REQUEST.md](../SKILL_REQU
 </details>
 
 ---
+
+## 📖 From the front page: the sections the README used to carry
+
+The README was cut to a front page in v82; these sections moved here unchanged (paths adjusted).
+
+### 🧭 How it works
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="readme-assets/how-it-works.svg">
+    <source media="(prefers-color-scheme: light)" srcset="readme-assets/how-it-works-light.svg">
+    <img src="readme-assets/how-it-works.svg" width="100%" alt="How it works: say what you need, one skill loads, you get finished work." />
+  </picture>
+</p>
+
+Say *"my landlord is keeping my deposit"* and your assistant loads [`security-deposit-recovery`](../skills/security-deposit-recovery/SKILL.md): the challenge to each deduction, the demand letter, and the point where small claims is worth it.
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="readme-assets/demo-chat.svg">
+    <source media="(prefers-color-scheme: light)" srcset="readme-assets/demo-chat-light.svg">
+    <img src="readme-assets/demo-chat.svg" width="100%" alt="Animated demo: three requests (a kept deposit, a Chinese weekly report, a Friday ship decision), the skill that loads for each, and the finished answer." />
+  </picture>
+</p>
+
+### 🥊 Without a skill vs. with one
+
+| You say | Generic AI | With the skill |
+|---|---|---|
+| *"help me with my lease"* | 600 words on reading leases carefully | 🔴 **clause 14 auto-renews you for a full year** · 🟡 deposit terms written to fail · the two sentences to send back: [lease-decoder](../skills/lease-decoder/SKILL.md) |
+| *"write the PRD"* | a template with `[insert goal here]` | problem, users, requirements, metrics, open questions, scored 0 to 40 against its own rubric: [prd-template](../skills/prd-template/SKILL.md) |
+| *"should we ship Friday?"* | "There are several factors to consider…" | `ship 0.18 · ship_reduced 0.71 · slip 0.11` and the one fact that would flip it: [ship-or-slip](../skills/ship-or-slip/SKILL.md) |
+| *"帮我写周报"* | a diary of everything you did | 本周完成 with numbers, 问题与风险 raised early, a plan with owners and dates: [cn-weekly-report](../skills/cn-weekly-report/SKILL.md) |
+
+### ⚡ Quick start, the full table
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="readme-assets/terminal.svg">
+    <source media="(prefers-color-scheme: light)" srcset="readme-assets/terminal-light.svg">
+    <img alt="A terminal: npx pm-claude-skills add installs the skills, then three requests each load one skill and return finished work" src="readme-assets/terminal-light.svg" width="860">
+  </picture>
+</p>
+
+| You want to… | Do this |
+|---|---|
+| **See today's skill** | `npx pm-claude-skills today` *(or `--lang zh`)*, also as [RSS](https://mohitagw15856.github.io/pm-claude-skills/live/skill-of-the-day.rss) |
+| **Check a release is genuine** | `npx pm-claude-skills verify --release`: your installed skills against the signed SBOM; [release files](https://mohitagw15856.github.io/pm-claude-skills/releases/latest.json) carry Sigstore provenance |
+| **Install in Claude Code** | `/plugin` → search **pm-skills** *(official Anthropic directory)*, or `npx pm-claude-skills add --agent claude` |
+| **Install in Cursor, Codex, Windsurf, Cline…** | `npx pm-claude-skills add --agent cursor` *(or `codex`, `windsurf`, `aider`, `cline`, `zed`…)* |
+| **Use one skill in ChatGPT or Gemini** | copy from [`exports/chatgpt/`](../exports/chatgpt/) or [`exports/gemini/`](../exports/gemini/) and paste it as instructions |
+| **Skills over MCP, in any session** | `claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp` |
+| **Find the right skill** | `npx pm-claude-skills find "board meeting on Thursday"` |
+| **Browse** | **[SKILLS.md](../SKILLS.md)** · the [searchable catalog](https://mohitagw15856.github.io/pm-claude-skills/catalog.html) · the [tech tree](https://mohitagw15856.github.io/pm-claude-skills/tech-tree/) |
+
+No `npm install` needed; `npx` always runs the latest. Per-tool instructions: **[docs/installation.md](installation.md)**.
+
+| Works with | |
+|---|---|
+| **Assistants** | [Claude Code](installation.md) · [ChatGPT](../exports/chatgpt/) · [Gemini](../exports/gemini/) · [Cursor, Codex, Windsurf](installation.md) · [any MCP client](../mcp-remote/) |
+| **Popular in China** | [Trae, Qoder, Lingma 通义灵码, CodeBuddy](CHINA.md) · [DeepSeek, Qwen, Kimi, GLM, Doubao](CHINA.md) · [Cherry Studio, Dify](CHINA.md) |
+| **Where you already work** | [Telegram](../integrations/telegram/) · [Slack](../integrations/slack-app/) · [Raycast](../integrations/raycast/) · [Obsidian](../integrations/obsidian-plugin/) · [n8n](../connectors/) |
+| **For builders** | [Python](https://pypi.org/project/pm-skills/) · [Hugging Face dataset](../dataset/) · [Docker](../Dockerfile) · [GitHub Actions](../action/) · [decision layer](../integrations/jev/) |
+
+### 🔍 What does a skill look like?
+
+A skill is a single markdown file with a name, a description that tells the assistant when to activate it, and a body containing the working framework: required inputs, decision rules or severity scales, a concrete output template, quality checks, and anti-patterns. The assistant reads it and gains the judgment; humans can read, audit, and edit the same file. No runtime, no lock-in.
+
+```markdown
+---
+name: lease-decoder
+description: "Decode a residential lease into plain English and rank the
+  clauses that can hurt you. Use when someone asks 'what am I signing'…"
+---
+## Framework: Severity Scale
+- 🔴 Can cost you real money: auto-renewal into a full new term, break
+  penalties beyond re-rental costs, deposit conditions written to fail…
+```
+
+That's the whole trick. It's markdown: audit it, edit it, or [write your own](../SKILL-AUTHORING-STANDARD.md). The full scale: [severity-scale.md](severity-scale.md).
+
+**Not** an agent framework (there is no runtime), **not** a prompt pack (every skill is gated in CI), **not** only for product managers, **not** a substitute for a professional, **not** tied to one vendor, and **not** a hosted service.
+
+### ❓ Straight answers
+
+**Is it actually free?** Yes: MIT, every skill, forever. Sponsors fund the playground's free model runs, not access.
+
+**Do I need an API key?** Not to browse, read, install or use skills inside a tool you already have. The playground serves a few free runs a day.
+
+**The catalog count and the folder count differ.** A handful of folders under `skills/` are [deprecated](DEPRECATION.md) aliases that point at their replacements, kept so old install commands never break; the headline count is live skills only.
+
+**Will this mess with my setup?** No. Skills are inert text files; remove the folder and they're gone.
+
+**How do I know these are any good?** Every skill passes a structural gate and a security scan in CI, outputs are [eval-scored in the open](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html), and anything machine-translated or unscored is labelled. The README's Trust and quality section carries the current numbers.
+
+### 🌳 The tech tree, the roadmap and privacy
+
+**[The tech tree](https://mohitagw15856.github.io/pm-claude-skills/tech-tree/)** draws every bundle as a branch and every skill as a node. Shipped skills are *researched*, the three most-voted requests are *in research*, and the rest are *proposed*. Rebuild it with `node scripts/build-tech-tree.mjs`; refresh votes from [`skill-request`](https://github.com/mohitagw15856/pm-claude-skills/issues?q=is%3Aissue+is%3Aopen+label%3Askill-request) issues with `--refresh-votes`; preview with `npx serve site/tech-tree`. The *Deploy Skill Playground* workflow publishes it to GitHub Pages at `/tech-tree/`; in a fork, turn on **Settings → Pages → Source: GitHub Actions**.
+
+**Roadmap:** ✅ 12 platforms and one install command · ✅ MCP server, subagents and slash commands · ✅ CI gates for structure, security, duplicates and drift · ✅ the decision layer, the promote loop and design taste · ⚪ published eval scores for more skills · ⚪ merging the remaining near-duplicates. Details: **[ROADMAP.md](../ROADMAP.md)**.
+
+**Privacy:** off by default. Skills, the CLI and exports send nothing. The usage counter is opt-in (`PM_SKILLS_TELEMETRY=1`, skill name only). The playground and hosted MCP send your prompt only to the model provider you choose. Full statement: **[TELEMETRY.md](TELEMETRY.md)** · **[SECURITY.md](../SECURITY.md)**.
