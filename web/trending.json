@@ -1,21 +1,29 @@
 {
-  "generatedAt": "2026-09-28T15:37:55.532Z",
+  "generatedAt": "2026-10-05T16:10:52.531Z",
   "window": "7d",
   "skills": [
     {
-      "name": "meeting-notes",
-      "count": 3
+      "name": "test-strategy-doc",
+      "count": 1
+    },
+    {
+      "name": "word-document",
+      "count": 1
+    },
+    {
+      "name": "salary-negotiation",
+      "count": 1
     },
     {
       "name": "brief-builder",
       "count": 1
     },
     {
-      "name": "disaster-recovery-plan",
+      "name": "meeting-notes",
       "count": 1
     },
     {
-      "name": "content-repurposer",
+      "name": "prd-template",
       "count": 1
     }
   ]
