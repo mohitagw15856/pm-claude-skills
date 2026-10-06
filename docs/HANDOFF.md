@@ -70,6 +70,8 @@ Record the final list in the pull request body.
 
 ## Task 3: README restructure
 
+**Done 2026-10-06, merged in #338 (squash, 6438b69b1).** README.md went from 769 to 198 lines following the target structure exactly (no count in the H1; install in 30 seconds; the before-and-after demo; the six path cards; eight featured bundles with try-saying lines; five lines for Chinese users; the latest two releases; a Trust and quality section with recomputed numbers: 389 of 1,285 skills with eval cases, 28 measured, 0 of 155 high-stakes human-reviewed; contributors). Nothing deleted: the gallery and the other removed sections moved to docs/SHOWCASE.md, the funnel/map/quiz/quest log to docs/start/README.md, the severity scale to the new docs/severity-scale.md, and README.zh-CN.md (735 to 235 lines) keeps its moved sections in the new docs/zh/start.md. All five named checks pass (the ALL-CONTRIBUTORS-LIST markers stayed), check-drift gained 389 and 155 as documented subset numbers, relative links were kept for the Gitee/GitCode mirrors, and both READMEs were screenshotted with Playwright in dark and light and reviewed before merging (rendered locally GitHub-style, since this sandbox's Chromium cannot reach github.com through the proxy).
+
 **Goal:** the README is 767 lines, 16 sections and 88 images. Cut it to **about 250 lines**. Move everything removed into docs; delete nothing. Trim `README.zh-CN.md` the same way.
 
 **Target structure for `README.md`:**
