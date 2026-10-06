@@ -16,7 +16,9 @@ Written 2026-10-06. Library at that point: **1,285 skills across 152 bundles, v8
 
 #335 changed 10,719 files. Above a few thousand files, GitHub stops matching path filters, so **SkillCheck, Skill Security Audit, the smoke tests, web weight and conformance did not run on the pull request**. They passed locally and run on push to main.
 
-- [ ] Check them on main:
+- [x] Check them on main:
+
+  **Done 2026-10-06, at b9ea3211c.** The five path-filtered workflows did not run on the push either (the merge was over the path-filter file limit; the commit got only the mirrors and the generated-artifacts check), and none of them has workflow_dispatch, so they were run locally at that commit instead. Results: skillcheck-test pass, SkillCheck all 1,285 valid, skill-dupes clean, Skill Security Audit 0 high (22 known medium), conformance badge current, web weight within budget. The web smoke suite cannot run in this sandbox (its proxy's TLS certificate makes Chromium fail every CDN load); it passed on CI at the parent commit a07d46e3e, and #335 changed no page code. Two notes: Deploy Skill Playground also skipped #335, so the live playground is one commit behind until the next merge that touches its paths (Task 2 will); dispatching workflows needs more than this session's credential (403).
 
   ```bash
   gh run list --branch main --limit 25 --json name,conclusion,headSha
