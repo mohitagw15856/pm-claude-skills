@@ -28,6 +28,8 @@ Written 2026-10-06. Library at that point: **1,285 skills across 152 bundles, v8
 
 ## Task 2: quality item 4, examples for the 100 most-used skills
 
+**Done 2026-10-06, merged in #337 (squash, 7bdc24d5b).** 100 examples written and merged in five committed batches of 20, selected by the four signals below (58 production-tier, 23 README/start, 4 trending, 15 flagship-bundle) with the full list recorded in the pull request body. Chinese-language skills (cn-weekly-report, cn-civil-exam-interview, cn-severance-calculator) are in Simplified Chinese; the decoder examples keep their verbatim disclaimers with the em dash normalised to a semicolon to satisfy the no-em-dash rule. Gates per batch and at the end: em-dash grep 0 on new files, npm run check exit 0, skill audit 0 high (22 known medium). The PR touched only examples/, so the path-filtered checks did not run on it; Deploy Skill Playground also did not trigger (its paths exclude examples/), so the playground remains one commit behind until Task 3's merge.
+
 **Goal:** people judge a skill by its output, but only 45 skills have `examples/<skill>-example.md`. Bring that to the 100 most-used skills.
 
 **Choosing the 100:** usage analytics are empty (`web/skill-stats.json` is a placeholder until `GOATCOUNTER_TOKEN` is set). Use these signals, in this order, and stop at 100 skills **without** an existing example:
