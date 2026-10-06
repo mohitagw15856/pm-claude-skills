@@ -69,6 +69,12 @@ Ask for these if not provided:
 - [ ] Do not skip the precedent line — this negotiation prices the next three
 - [ ] Do not stay in character in the debrief
 
+## Example Trigger Phrases
+
+- "Simulate a client negotiating my rate."
+- "Practice price pushback."
+- "Stress-test my pricing conversation."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

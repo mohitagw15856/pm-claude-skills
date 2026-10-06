@@ -62,6 +62,13 @@ Source: [sunrise-sunset.org / Open-Meteo] · times local to [zone] · rerun: `[e
 - [ ] Do not overstate moon precision — phase and rough illumination, not fake decimals
 - [ ] Do not ignore polar edge cases — high latitudes in summer/winter return no-sunset/no-sunrise; report that as the (correct) answer, not an error
 
+## Example Trigger Phrases
+
+- "When is sunset today?"
+- "When's golden hour for my shoot?"
+- "How long is the day?"
+- "What's the moon phase tonight?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

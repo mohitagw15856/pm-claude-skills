@@ -201,3 +201,9 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Segment analysis identifies which segments over-index — not just averages
 - [ ] Early warning signals are specific and detectable, not generic ("low engagement")
 - [ ] Interventions link directly to the top churn reasons — no recommendations without a root cause match
+
+## Example Trigger Phrases
+
+- "Investigate why customers are leaving."
+- "Calculate net revenue retention."
+- "Build a retention intervention plan."

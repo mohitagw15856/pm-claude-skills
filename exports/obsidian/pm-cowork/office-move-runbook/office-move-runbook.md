@@ -65,6 +65,13 @@ Ask for these if not provided:
 - [ ] Do not go quiet with the team — silence gets filled by the parking-rumor economy
 - [ ] Do not hope day one works — gate it, and let the fallback be a plan instead of an apology
 
+## Example Trigger Phrases
+
+- "Plan our office move."
+- "We're moving floors/buildings in six weeks."
+- "Who owns what in the move?"
+- "Make day one at the new office not a disaster."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

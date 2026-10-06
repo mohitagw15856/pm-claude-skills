@@ -72,6 +72,13 @@ Close with **assumptions to confirm** and a reminder that a qualified investigat
 
 Clinical research practice — objective-endpoint-analysis alignment, explicit eligibility, sample-size justification, and ICH-GCP safety/ethics structure.
 
+## Example Trigger Phrases
+
+- "Write a clinical trial protocol."
+- "Draft a study protocol synopsis."
+- "Design the trial."
+- "Structure endpoints, eligibility and statistics for an interventional study."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

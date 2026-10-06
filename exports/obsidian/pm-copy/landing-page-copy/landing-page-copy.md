@@ -65,6 +65,13 @@ Write copy (not just guidance) for each section:
 
 Conversion-copywriting practice — single conversion goal, problem-led structure, benefit-framing, objection handling, LIFT-style clarity.
 
+## Example Trigger Phrases
+
+- "Write a landing page."
+- "Write our homepage copy."
+- "Write a product page."
+- "Write copy for our marketing site."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

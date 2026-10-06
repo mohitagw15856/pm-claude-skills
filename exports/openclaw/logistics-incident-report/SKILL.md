@@ -91,3 +91,11 @@ If details are thin, build the report with figures marked `[to confirm]` and lis
 - [ ] Do not let expedite costs go untracked — containment spend belongs in the report, or the same lane stays fragile at premium prices
 - [ ] Do not merge containment and prevention lists — one has hour deadlines, the other needs owners after the fire is out
 - [ ] Do not close the incident when the freight arrives — it closes when prevention actions have owners and dates
+
+## Example Trigger Phrases
+
+- "Document a shipment delay."
+- "Write up a logistics failure."
+- "Report a customs hold."
+- "Quantify a supply disruption."
+- "Draft the customer notice for a late delivery."

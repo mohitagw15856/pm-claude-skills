@@ -64,3 +64,10 @@ End verbatim: *"This is a plain-language reading, not legal or lending advice �
 - [ ] Do not accept "that's standard" on stacked processing fees — standard is not a tolerance category
 - [ ] Do not let the clock expire politely — the review period is for reviewing; day one, not day three
 - [ ] Do not present tolerance rules as universal law — flag jurisdiction/loan-type variation and refer to the settlement agent
+
+## Example Trigger Phrases
+
+- "Decode my closing disclosure."
+- "Review my closing costs."
+- "Why did my costs go up?"
+- "Which fees can I negotiate?"

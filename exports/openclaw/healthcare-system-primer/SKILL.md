@@ -118,3 +118,9 @@ official health-system source. Not medical or insurance-purchase advice.
 [[arrival-setup]] provides the prerequisites (address, tax number); [[tax-residency-primer]]
 and [[credit-from-scratch]] for the other systems; [[doctor-visit-prep]] once you're
 enrolled; [[perimenopause-navigator]]/[[diagnosis-limbo-kit]] for specific health navigation.
+
+## Example Trigger Phrases
+
+- "How does healthcare work in [country]?"
+- "Do I need health insurance in [country]?"
+- "I just moved and need to see a doctor."

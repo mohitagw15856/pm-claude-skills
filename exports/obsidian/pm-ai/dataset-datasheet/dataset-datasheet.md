@@ -67,6 +67,12 @@ Ask for these only if they aren't already provided:
 
 Datasheets for Datasets (Gebru et al., 2018) and data-documentation practice in responsible-AI reviews.
 
+## Example Trigger Phrases
+
+- "Write a datasheet for a dataset."
+- "Document training/eval data."
+- "Assess whether a dataset is fit for a use."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

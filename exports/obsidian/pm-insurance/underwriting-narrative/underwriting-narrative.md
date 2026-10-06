@@ -76,6 +76,13 @@ End with: *"This narrative is analytical support, not a binding decision. Author
 - [ ] Do not bury an outside-appetite feature in the middle of the file — surface it in the recommendation
 - [ ] Do not invent loss figures or survey findings — mark unknowns `[to confirm]`
 
+## Example Trigger Phrases
+
+- "Write up an underwriting file."
+- "Document why we're writing a risk."
+- "Prepare a referral to a senior underwriter."
+- "Justify terms and exclusions on a submission."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

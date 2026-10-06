@@ -447,3 +447,11 @@ Honest assessment of what is missing today and what the priority to add it is:
 - [ ] Do not log PII, tokens, or secrets — a logging standard is incomplete without an explicit list of what must never be logged
 - [ ] Do not measure only the four golden signals without adding at least one business metric alert — infrastructure health can be green while the business-critical path is silently failing
 - [ ] Do not deploy distributed tracing without verifying that trace IDs propagate across all service boundaries — partial tracing is worse than no tracing because it produces misleading incomplete traces
+
+## Example Trigger Phrases
+
+- "Set up monitoring for a service."
+- "Define alerting strategy."
+- "Write an observability plan."
+- "Create a dashboard specification."
+- "Document logging standards for a team."

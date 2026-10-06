@@ -61,3 +61,11 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Crucial Conversations (Patterson et al.) and Difficult Conversations (Stone, Patton, Heen) — facts vs. story, the third story, safety.
+
+## Example Trigger Phrases
+
+- "Prepare for a difficult conversation."
+- "Address a conflict."
+- "Deliver bad news."
+- "Confront a colleague."
+- "Have a hard talk with a manager/report/peer."

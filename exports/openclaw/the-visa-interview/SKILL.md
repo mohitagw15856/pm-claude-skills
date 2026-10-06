@@ -69,3 +69,10 @@ Ask for these if not provided:
 - [ ] Do not assert country-specific law — simulate the assessment generically and flag verification
 - [ ] Do not simulate hostility — officers are fast and neutral, not cruel; realism is the tempo, not menace
 - [ ] Do not stay in character in the debrief
+
+## Example Trigger Phrases
+
+- "Prep me for my visa interview."
+- "Simulate the consular interview."
+- "Why might my visa be denied?"
+- "Practice my student visa questions."

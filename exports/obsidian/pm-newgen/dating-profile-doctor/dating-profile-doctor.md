@@ -120,6 +120,13 @@ good day?" Adjust until yes.]
 voice-mining method at full depth; [[notes-humanizer]] when the draft sounds
 AI-written — the enemy here too.
 
+## Example Trigger Phrases
+
+- "Fix my dating profile."
+- "Why am I getting no matches?"
+- "What do I say first?"
+- "Roast my Hinge prompts."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

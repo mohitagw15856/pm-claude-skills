@@ -77,3 +77,10 @@ One paragraph: the single change to onboarding that moves moment 2 from "extra w
 - [ ] Do not invent product facts not in the input; where onboarding details are missing, ask or label the assumption
 - [ ] Do not end without interventions — the monologue is diagnosis, the debrief is the treatment
 - [ ] Do not stay in character in the debrief
+
+## Example Trigger Phrases
+
+- "Why do customers really churn?"
+- "Simulate a churning customer."
+- "Roleplay the customer who cancels."
+- "What does silent churn look like for my product?"

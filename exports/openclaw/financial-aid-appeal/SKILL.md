@@ -68,3 +68,10 @@ Ask for these if not provided:
 - [ ] Do not exaggerate or shade the numbers — offices verify, and a caught embellishment ends the appeal and taints the file
 - [ ] Do not ultimatum with a competing offer — preference plus facts, never threats
 - [ ] Do not miss the window while polishing — a good letter today beats a perfect one after the deadline
+
+## Example Trigger Phrases
+
+- "Appeal my financial aid."
+- "Write a scholarship letter."
+- "Ask for more aid after circumstances changed."
+- "Respond to an aid decision."

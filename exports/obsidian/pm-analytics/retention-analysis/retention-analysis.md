@@ -161,6 +161,12 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - If DAU/MAU is below 5%, that's a PMF conversation, not a retention tactics conversation
 - Always recommend talking to churned users — no amount of data replaces understanding the *reason*
 
+## Example Trigger Phrases
+
+- "Analyse user retention."
+- "Investigate churn."
+- "Build a retention improvement plan."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -74,6 +74,14 @@ Never assert entitlement without naming the clause and the triggering document b
 - [ ] Do not bundle unrelated changes into one CO — each event stands on its own entitlement
 - [ ] Do not soften entitlement language ("we feel", "we believe we may be due") — state the clause and the facts
 
+## Example Trigger Phrases
+
+- "Write a change order."
+- "Price extra work."
+- "Draft a CO or COR/PCO."
+- "Respond to a directive for changed work."
+- "Paper a field change."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

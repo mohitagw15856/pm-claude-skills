@@ -70,6 +70,13 @@ The specific, prioritised changes that would most reduce risk — what to add, c
 - [ ] Do not soften the most dangerous risk to be polite — surface it first and plainly
 - [ ] Do not invent facts about the plan — infer plausibly and label assumptions as *(assumed)*
 
+## Example Trigger Phrases
+
+- "Red-team this plan."
+- "Stress-test our strategy."
+- "Pressure-test this PRD."
+- "Find the blind spots in this plan before we commit."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -62,3 +62,10 @@ Also output a **one-line renter summary** (the elevator version) and a **documen
 ## Based On
 
 Tenant-application practice — signalling reliability (stable income, good history, references), pre-empting concerns, and a clear, document-ready ask.
+
+## Example Trigger Phrases
+
+- "Write a rental application."
+- "Write a letter to the landlord."
+- "Write a renter cover letter."
+- "Strengthen my application for a competitive rental."

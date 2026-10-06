@@ -23,9 +23,7 @@ workflow:
     speech_to_text:
       enabled: false
     suggested_questions:
-    - '我大三，想考计算机专硕，帮我做一年的考研计划'
-    - '这三个学校怎么选？帮我列个择校对比'
-    - '在职考研，每天只有三个小时，计划怎么排？'
+    []
     suggested_questions_after_answer:
       enabled: false
     text_to_speech:
@@ -162,10 +160,10 @@ workflow:
 
             ## 示例触发语
 
-            - "我大三，想考计算机专硕，帮我做一年的考研计划。"
-            - "这三个学校怎么选？帮我列个择校对比。"
-            - "在职考研，每天只有三个小时，计划怎么排？"
-            - "帮我规划经济学硕士的考研复习。"
+            - “我大三，想考计算机专硕，帮我做一年的考研计划。”
+            - “这三个学校怎么选？帮我列个择校对比。”
+            - “在职考研，每天只有三个小时，计划怎么排？”
+            - “帮我规划经济学硕士的考研复习。”
 
             （本应用基于开源技能库 PM Skills 的 cn-kaoyan-planner 技能：https://github.com/mohitagw15856/pm-claude-skills ，MIT 协议。）
         selected: false

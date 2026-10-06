@@ -64,6 +64,13 @@ Ask for these if not provided:
 - [ ] Do not negotiate live on the retention call unprepared — the pre-decided number is the armor
 - [ ] Do not burn the door — spare exits are free options on the future
 
+## Example Trigger Phrases
+
+- "Write a cancellation email to our vendor."
+- "We're not renewing how do I tell them."
+- "End this contractor relationship professionally."
+- "Switch providers without drama."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -23,9 +23,7 @@ workflow:
     speech_to_text:
       enabled: false
     suggested_questions:
-    - '帮我把这些笔记整理成周报'
-    - '写一份给老板的月报，突出数据'
-    - '本周工作有点乱，帮我写周报，下周有个风险要提'
+    []
     suggested_questions_after_answer:
       enabled: false
     text_to_speech:
@@ -161,10 +159,10 @@ workflow:
             - **为了显得忙而夸大数字。** 每周的数字很容易核对。
 
             ## 示例触发语
-            - "帮我把这些笔记整理成周报。"
-            - "写一份给老板的月报，突出数据。"
-            - "本周工作有点乱，帮我写周报，下周有个风险要提。"
-            - "Write my weekly report in Chinese for my manager."
+            - “帮我把这些笔记整理成周报。”
+            - “写一份给老板的月报，突出数据。”
+            - “本周工作有点乱，帮我写周报，下周有个风险要提。”
+            - “Write my weekly report in Chinese for my manager.”
 
             （本应用基于开源技能库 PM Skills 的 cn-weekly-report 技能：https://github.com/mohitagw15856/pm-claude-skills ，MIT 协议。）
         selected: false

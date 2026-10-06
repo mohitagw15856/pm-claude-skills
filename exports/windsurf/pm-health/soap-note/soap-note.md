@@ -66,3 +66,10 @@ End with a note of any **fields not documented** and a reminder that the treatin
 ## Based On
 
 Clinical documentation practice — the SOAP (Subjective, Objective, Assessment, Plan) format for structured, reviewable encounter notes.
+
+## Example Trigger Phrases
+
+- "Write a SOAP note."
+- "Document a patient encounter."
+- "Turn visit notes into clinical documentation."
+- "Structure subjective/objective/assessment/plan."

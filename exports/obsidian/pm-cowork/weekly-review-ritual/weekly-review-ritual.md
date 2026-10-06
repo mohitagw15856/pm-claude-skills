@@ -66,6 +66,12 @@ Ask for these if not provided:
 - [ ] Do not skip twice — the second skip is the system's funeral, quietly
 - [ ] Do not expand the ritual — 30 minutes is the ceiling; a 90-minute review gets skipped by week three
 
+## Example Trigger Phrases
+
+- "Set up a weekly review."
+- "My weeks just happen to me."
+- "I keep dropping threads between weeks."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

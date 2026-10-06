@@ -65,6 +65,13 @@ Keep it truthful; mark figures to confirm.
 
 Real-estate marketing practice — lifestyle-led, feature-accurate listings that are scannable and Fair-Housing-compliant.
 
+## Example Trigger Phrases
+
+- "Write a property listing."
+- "Write the Zillow description."
+- "Write a real-estate listing."
+- "Make this property description more appealing."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

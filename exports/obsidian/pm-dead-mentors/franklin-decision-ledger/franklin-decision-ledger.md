@@ -103,6 +103,13 @@ X yet" · a revisit date within the deadline]
 Log the final call in [[decision-journal]] with its falsifiable predictions — the
 ledger decides, the journal keeps you honest later.
 
+## Example Trigger Phrases
+
+- "Help me decide between these two options."
+- "Weigh the pros and cons properly."
+- "Run Franklin's pro and con method on this choice."
+- "I can't decide whether to take the job."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

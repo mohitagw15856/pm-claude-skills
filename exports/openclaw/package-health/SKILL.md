@@ -65,3 +65,10 @@ Source: [registry] APIs · as of [date] · rerun: `[the curls]`
 - [ ] Do not auto-correct package names — typosquats are the attack this check can catch
 - [ ] Do not extrapolate download counts into quality — popularity is a signal about forks and eyes, not correctness
 - [ ] Do not answer from memory — versions and deprecations are live facts; fetch or hand over the commands
+
+## Example Trigger Phrases
+
+- "Is this npm package maintained?"
+- "Check this PyPI library before we adopt it."
+- "Compare these two packages."
+- "Is this dependency abandoned?"

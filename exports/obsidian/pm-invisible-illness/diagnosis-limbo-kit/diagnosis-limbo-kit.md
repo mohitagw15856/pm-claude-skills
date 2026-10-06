@@ -123,6 +123,13 @@ respectful, specific]
 door closes; [[spoon-planner]] for surviving the limbo itself; [[symptom]] tracking
 feeds this dossier.
 
+## Example Trigger Phrases
+
+- "Nobody can tell me what's wrong with me."
+- "Doctors keep saying it's just anxiety."
+- "Help me track my symptoms across specialists."
+- "Prepare my case for the next specialist."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -281,6 +281,12 @@ This skill activates on phrases including:
 - "What's the LTV of users from [channel] vs [channel]?"
 - "Build a cohort retention model from
 
+## Example Trigger Phrases
+
+- "Run a cohort analysis."
+- "Analyse retention by cohort."
+- "Calculate lifetime value by acquisition period."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

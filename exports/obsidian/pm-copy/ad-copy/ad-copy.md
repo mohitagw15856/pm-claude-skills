@@ -60,6 +60,13 @@ Each variant labelled with its **angle** and what it tests:
 
 Performance-creative practice — angle testing, platform-native formats, message match, hook-first structure.
 
+## Example Trigger Phrases
+
+- "Write ad copy for our launch."
+- "Give me five Google ad headlines to test."
+- "Write LinkedIn and Instagram ads for this offer."
+- "Draft paid social copy with different angles."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

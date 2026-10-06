@@ -67,6 +67,13 @@ Ask for these if not provided:
 - [ ] Do not skip the remote contingent — the excluded remember longer than the attendees
 - [ ] Do not end once — the un-followed-through event evaporates by Monday; the second ending is where the goal gets banked
 
+## Example Trigger Phrases
+
+- "Plan the company event."
+- "Organize our customer day/holiday party/launch event."
+- "What am I forgetting for this event?"
+- "Be the run-of-show for Thursday."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

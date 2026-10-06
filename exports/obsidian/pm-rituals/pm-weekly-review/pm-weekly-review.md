@@ -135,6 +135,13 @@ Ask the user for these if not provided:
 - Recommend sending this by end of Friday — Monday morning is too late to course-correct
 - If three weeks of weekly reviews show the same blocked item, escalate immediately
 
+## Example Trigger Phrases
+
+- "Doing a weekly PM review."
+- "Write a weekly update."
+- "Prepare for Monday planning."
+- "Review sprint health."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

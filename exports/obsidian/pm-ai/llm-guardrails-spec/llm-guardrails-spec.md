@@ -74,6 +74,12 @@ Ask for these only if they aren't already provided (else infer and label):
 
 LLM application security practice — layered controls, prompt-injection defence (untrusted content as data), least-privilege tool use, and red-team verification.
 
+## Example Trigger Phrases
+
+- "Define LLM guardrails."
+- "Prevent prompt injection."
+- "Harden a chatbot/agent against misuse."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

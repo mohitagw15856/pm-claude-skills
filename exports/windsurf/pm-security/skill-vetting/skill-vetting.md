@@ -63,3 +63,10 @@ Reads: […] · Writes: […] · Network: [every host, named] · Executes: […]
 - [ ] Do not auto-clear skills with zero scripts — the prose layer is an attack surface too
 - [ ] Do not condemn explained power — a deploy skill runs deploys; scope-mismatch is the flag, not capability
 - [ ] Do not make the install decision for high-risk cases — evidence and a recommendation, human decides
+
+## Example Trigger Phrases
+
+- "Is this skill safe to install?"
+- "Vet this SKILL.md."
+- "Review this skill from a marketplace."
+- "Check what this skill can do to my machine."

@@ -57,3 +57,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Government/enterprise procurement practice (compliance matrix, evaluation-criteria-driven writing, best-value framing).
+
+## Example Trigger Phrases
+
+- "Respond to this RFP."
+- "Bid on this tender."
+- "Answer this procurement questionnaire."
+- "Build the compliance matrix for this bid."

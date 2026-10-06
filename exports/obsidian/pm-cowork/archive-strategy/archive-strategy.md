@@ -65,6 +65,12 @@ Ask for these if not provided:
 - [ ] Do not build archive taxonomy — search plus ten index lines outperforms it at 5% of the cost
 - [ ] Do not let archives exempt themselves from retention rules — destruction dates ride along with the files
 
+## Example Trigger Phrases
+
+- "Set up an archiving system."
+- "Our workspace is drowning in old projects."
+- "Make history findable without cluttering today."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

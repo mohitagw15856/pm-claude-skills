@@ -87,6 +87,13 @@ Include this line in the artifact: *"This is a working draft. Verify required da
 
 CSRD/ESRS disclosure architecture (double materiality, policies–actions–metrics–targets structure, phase-in and gap disclosure practice), adaptable to ISSB/GRI-style reports.
 
+## Example Trigger Phrases
+
+- "Write a sustainability report section."
+- "Draft an ESRS or CSRD disclosure."
+- "Prepare an ESG section for an annual report."
+- "Turn raw sustainability data into disclosure text."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

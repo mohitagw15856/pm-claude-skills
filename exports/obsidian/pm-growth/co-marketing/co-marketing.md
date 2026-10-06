@@ -62,6 +62,13 @@ Ask for these only if they aren't already provided:
 
 Partnership / co-marketing practice (audience-overlap fit, balanced value exchange, joint campaign + lead-sharing, partner-first pitch).
 
+## Example Trigger Phrases
+
+- "Plan a partnership with this brand."
+- "Plan a joint campaign."
+- "Plan a co-branded webinar."
+- "Write partner outreach for an integration launch."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

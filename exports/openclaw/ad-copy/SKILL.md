@@ -62,3 +62,10 @@ Each variant labelled with its **angle** and what it tests:
 ## Based On
 
 Performance-creative practice — angle testing, platform-native formats, message match, hook-first structure.
+
+## Example Trigger Phrases
+
+- "Write ad copy for our launch."
+- "Give me five Google ad headlines to test."
+- "Write LinkedIn and Instagram ads for this offer."
+- "Draft paid social copy with different angles."

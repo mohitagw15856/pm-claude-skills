@@ -63,6 +63,13 @@ Ask for these only if they aren't already provided:
 
 Spending-audit / subscription-audit practice (categorize, annualize, rank cuts by impact).
 
+## Example Trigger Phrases
+
+- "Cut expenses."
+- "Review subscriptions."
+- "Find where money is going."
+- "Free up cash."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

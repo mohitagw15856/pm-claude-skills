@@ -116,3 +116,10 @@ Ask for (if not already provided):
 [[agm-in-a-box]] — handover usually starts at one; [[volunteer-treasurer-basics]]
 for the books being handed; [[session-handoff]] and [[the-time-capsule]] — the
 same move at other scales.
+
+## Example Trigger Phrases
+
+- "I'm stepping down as club secretary."
+- "Write a handover for the next chair."
+- "What does my successor need to know?"
+- "Capture everything I do for the committee before I leave."

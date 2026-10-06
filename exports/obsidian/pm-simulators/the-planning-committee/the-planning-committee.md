@@ -72,6 +72,13 @@ Ask for these if not provided:
 - [ ] Do not let the pet-issue councillor be defeated — redirected, never humiliated
 - [ ] Do not stay in character in the debrief
 
+## Example Trigger Phrases
+
+- "Prepare for a planning committee."
+- "My application goes to committee."
+- "Rehearse my three minutes."
+- "How do I answer the objectors?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

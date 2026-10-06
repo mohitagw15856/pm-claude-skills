@@ -73,3 +73,10 @@ python3 scripts/saas_metrics.py in.json --json
 ## Based On
 
 Standard SaaS metrics definitions (Bessemer / a16z / KeyBanc) — NRR/GRR, quick ratio, magic number.
+
+## Example Trigger Phrases
+
+- "Calculate our SaaS metrics."
+- "Work out MRR and ARR."
+- "What's our net revenue retention?"
+- "Build a SaaS metrics snapshot for the board."

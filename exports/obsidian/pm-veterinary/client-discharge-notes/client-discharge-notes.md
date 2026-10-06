@@ -61,6 +61,13 @@ When to come back (suture removal, recheck), the clinic number and hours, and th
 - Chart-speak an ordinary owner can't parse
 - Activity instructions too vague to follow ("take it easy")
 
+## Example Trigger Phrases
+
+- "Write discharge instructions for this dog."
+- "Write go-home notes after the spay."
+- "Explain post-op care to the owner."
+- "Write the medication instructions for the cat's owner."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

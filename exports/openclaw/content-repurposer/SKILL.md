@@ -71,3 +71,9 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - A LinkedIn wall of text, or a thread that's one idea split mid-sentence
 - Generic hooks ("Here are some thoughts on…")
 - Hashtag stuffing; CTAs that don't fit the platform
+
+## Example Trigger Phrases
+
+- "Atomize a blog post."
+- "Turn one idea into many posts."
+- "Get more mileage from a piece."

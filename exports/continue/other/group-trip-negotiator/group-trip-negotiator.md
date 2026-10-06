@@ -124,3 +124,10 @@ deadline]
 [[roommate-agreement]] — the same peace-treaty machinery, domestic
 edition; [[clone-brief]] for the friend who can't make the planning call;
 [[franklin-decision-ledger]] when YOU can't decide whether to even go.
+
+## Example Trigger Phrases
+
+- "We're planning a trip with friends and it's chaos."
+- "How do we split costs fairly?"
+- "Agree a budget for the group trip."
+- "Get the group chat to actually book something."

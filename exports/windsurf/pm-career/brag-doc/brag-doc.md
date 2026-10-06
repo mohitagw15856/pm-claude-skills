@@ -62,3 +62,10 @@ End with a **"Themes this period"** summary — the 3–4 narrative threads your
 ## Based On
 
 Brag-document practice (Julia Evans) and impact-first accomplishment tracking.
+
+## Example Trigger Phrases
+
+- "Update a brag doc."
+- "Log a win."
+- "Track accomplishments."
+- "Prep evidence for a review/promotion."

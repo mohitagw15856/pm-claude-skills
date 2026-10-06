@@ -68,7 +68,7 @@ pm-cv 技能包的一部分。两边的惯例使用 `country-cv-format`。
 - **把自我评价的形容词搬进英文版。** "Hard-working, strong sense of responsibility" 对英文读者什么也没说。
 
 ## 示例触发语
-- "帮我做一份中英文简历。"
-- "Translate my Chinese CV into English for a job in London."
-- "I need my English resume in Chinese for a role in Shanghai."
-- "英文简历怎么写？我要投外企。"
+- “帮我做一份中英文简历。”
+- “Translate my Chinese CV into English for a job in London.”
+- “I need my English resume in Chinese for a role in Shanghai.”
+- “英文简历怎么写？我要投外企。”

@@ -56,3 +56,10 @@ Source: [canonical article URL] · fetched [date] · rerun: `[exact curl]`
 - [ ] Do not treat Wikipedia as final authority for high-stakes facts — one good source, framed as such
 - [ ] Do not answer "what does Wikipedia say" from memory — that question is a fetch instruction by definition
 - [ ] Do not skip the URL — the link is the receipt
+
+## Example Trigger Phrases
+
+- "What does Wikipedia say about X?"
+- "Get me the current summary of a topic."
+- "Check a fact against Wikipedia."
+- "Has this article changed."

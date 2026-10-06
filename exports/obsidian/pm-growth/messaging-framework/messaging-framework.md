@@ -63,6 +63,13 @@ Ask for these only if they aren't already provided:
 
 Message-house / value-proposition practice (incl. April Dunford-style positioning as the upstream input).
 
+## Example Trigger Phrases
+
+- "Create our messaging."
+- "Write our value proposition."
+- "Build a message house."
+- "Make marketing, sales and product say the same thing."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

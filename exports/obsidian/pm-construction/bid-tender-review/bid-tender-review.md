@@ -72,6 +72,13 @@ Work through four passes, in order:
 - [ ] Do not wave through mobilisation and general-conditions front-loading as "normal" without checking it against cost
 - [ ] Do not resolve ambiguity in the bidder's favour by assumption — put it on the pre-award clarification list in writing
 
+## Example Trigger Phrases
+
+- "Review a bid."
+- "Check a tender for gaps."
+- "Compare sub quotes."
+- "Vet a schedule of values before award."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

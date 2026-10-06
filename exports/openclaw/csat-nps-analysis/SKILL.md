@@ -70,3 +70,10 @@ python3 scripts/nps.py nps "...counts..." --json
 ## Based On
 
 Voice-of-customer practice — correct NPS/CSAT/CES computation, verbatim theming, and action prioritisation.
+
+## Example Trigger Phrases
+
+- "Analyse NPS."
+- "Compute an NPS score."
+- "Interpret survey verbatims."
+- "Build a voice-of-customer readout."

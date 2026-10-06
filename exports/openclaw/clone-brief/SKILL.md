@@ -111,3 +111,10 @@ Ask for (if not already provided):
 [[delegation-brief]] hands off ongoing WORK; this hands off a POSITION for a
 single room. [[stakeholder-influence-mapper]] for reading the room you're
 sending it into; [[the-understudy]] for the deeper version of "represent me."
+
+## Example Trigger Phrases
+
+- "I can't make the meeting: brief someone to decide for me."
+- "Brief someone to negotiate for me."
+- "What would you need from me to represent me?"
+- "Write my red lines and fallbacks for the meeting."

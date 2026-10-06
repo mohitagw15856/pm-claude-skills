@@ -56,3 +56,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Knowledge-base / technical-writing practice — task-based titles, answer-first, scannable steps, search-optimised, ticket-deflection focus.
+
+## Example Trigger Phrases
+
+- "Write a help doc."
+- "Write a knowledge-base article for this issue."
+- "Write a FAQ entry."
+- "Write support documentation that cuts tickets."

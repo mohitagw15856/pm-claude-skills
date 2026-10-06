@@ -81,6 +81,14 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - Voice = a list of adjectives with no examples
 - A clever bio that doesn't say who it helps or what they get
 
+## Example Trigger Phrases
+
+- "Define a creator brand."
+- "Find a niche."
+- "Set content pillars."
+- "Write a voice guide."
+- "Craft a bio."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

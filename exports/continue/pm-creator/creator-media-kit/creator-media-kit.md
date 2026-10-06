@@ -51,3 +51,11 @@ End with: **negotiation notes** — the 2–3 levers (usage rights, exclusivity,
 - A generic "I'd love to collab!" email with no brand-specific reason
 - Inventing follower/engagement numbers
 - A single flat rate with no rationale or room to negotiate usage/exclusivity
+
+## Example Trigger Phrases
+
+- "Make a media kit."
+- "Pitch a brand."
+- "Land a sponsorship."
+- "Write a brand-deal email."
+- "Set creator rates."

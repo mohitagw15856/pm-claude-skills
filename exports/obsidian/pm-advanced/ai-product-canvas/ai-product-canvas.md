@@ -170,6 +170,13 @@ Ask the user for these if not provided:
 - [ ] Responsible AI checklist is completed (not deferred to post-launch)
 - [ ] Monitoring plan includes both model performance and user engagement metrics
 
+## Example Trigger Phrases
+
+- "Build AI-powered features."
+- "Evaluate LLM integrations."
+- "Design AI products."
+- "Assess AI readiness."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

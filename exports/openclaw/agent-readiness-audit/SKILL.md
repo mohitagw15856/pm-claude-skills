@@ -82,3 +82,9 @@ Score each surface 0-4: 0 = actively hostile · 2 = humans-only assumptions thro
 - [ ] Do not recommend blocking agents as a fix unless the business genuinely wants that — then say it in terms *and* technically, consistently
 - [ ] Do not conflate this with SEO/AEO — being quotable is surface 1; being *usable* is the other five
 - [ ] Do not skip the guardrails surface — unmeasured agent traffic is how products discover this problem in an outage
+
+## Example Trigger Phrases
+
+- "If a product is agent-ready."
+- "Audit a site or API for AI usability."
+- "Prepare for agentic traffic."

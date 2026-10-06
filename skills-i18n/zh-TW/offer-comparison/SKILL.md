@@ -78,7 +78,7 @@ cat offers.json | python3 scripts/offer_comparison.py - --json
 
 ## 示例觸發語
 
-- "比較這幾個 offer。"
-- "哪個 offer 長期收入比較高？"
-- "幫我算算股權歸屬。"
-- "新創公司的 offer 真的值得嗎？"
+- “比較這幾個 offer。”
+- “哪個 offer 長期收入比較高？”
+- “幫我算算股權歸屬。”
+- “新創公司的 offer 真的值得嗎？”

@@ -60,6 +60,12 @@ End with:
 - Over-long answers that sound rehearsed and evasive
 - Pretending a real risk doesn't exist instead of framing how you'll manage it
 
+## Example Trigger Phrases
+
+- "Prep for investor Q&A."
+- "Handle pushback on a raise."
+- "Build a fundraising FAQ."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

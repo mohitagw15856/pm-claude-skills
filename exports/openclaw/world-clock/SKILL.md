@@ -61,3 +61,10 @@ Source: [timeapi.io / worldtimeapi] · rerun: `[exact curl]`
 - [ ] Do not translate a future meeting with today's offset across a DST boundary without flagging it
 - [ ] Do not pick who suffers the 6am call — present the window; the humans choose
 - [ ] Do not present a timeout as an answer — fall back, or hand over the command
+
+## Example Trigger Phrases
+
+- "What time is it in a city?"
+- "Convert 3pm my time to Tokyo."
+- "Find a meeting slot across time zones."
+- "What's the UTC offset somewhere?"

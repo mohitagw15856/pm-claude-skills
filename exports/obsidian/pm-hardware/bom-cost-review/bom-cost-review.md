@@ -77,6 +77,13 @@ Ask for these if not provided; work with a partial BOM if that's all there is, l
 - [ ] Do not ignore custom/tooled parts in risk review — they are the hardest to move
 - [ ] Do not fabricate costs for missing lines — label them and carry the uncertainty into the total
 
+## Example Trigger Phrases
+
+- "Review a BOM."
+- "Find cost-down opportunities."
+- "Check component sourcing risk."
+- "Sanity-check BOM cost against target."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

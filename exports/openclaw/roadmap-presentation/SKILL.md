@@ -141,3 +141,9 @@ Every roadmap needs a narrative, not just a timeline. Structure it as:
 - [ ] Do not omit the "What We're NOT Building" section — a roadmap without explicit deprioritisation becomes a wish list
 - [ ] Do not present LATER items as commitments — frame everything outside NOW as directional, not promised
 - [ ] Do not skip the success metrics section — without it, stakeholders cannot evaluate whether the roadmap is working
+
+## Example Trigger Phrases
+
+- "Build a product roadmap."
+- "Create a roadmap slide."
+- "Communicate quarterly plans to execs."

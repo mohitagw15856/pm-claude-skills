@@ -63,3 +63,11 @@ The single highest-impact move (a cut, a price change, a growth push) and what i
 - Ignoring that raising takes months (planning to start at 2 months left)
 - Vague advice ("extend runway") instead of a quantified lever and date
 - Treating gross burn as net (ignoring revenue)
+
+## Example Trigger Phrases
+
+- "Calculate runway."
+- "Model burn rate."
+- "Decide when to raise."
+- "Figure out if the company is default-alive."
+- "Plan a scenario with hiring/cuts."

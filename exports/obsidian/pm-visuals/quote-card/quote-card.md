@@ -57,6 +57,13 @@ Ask for these only if they aren't already provided:
 
 Testimonial/pull-quote editing for marketing (find the strongest line, faithful tightening, clear attribution).
 
+## Example Trigger Phrases
+
+- "Make a pull-quote."
+- "Turn this review into a testimonial graphic."
+- "Make a quote card for social."
+- "Pull the best quote from this interview."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

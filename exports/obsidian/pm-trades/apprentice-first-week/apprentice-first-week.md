@@ -111,6 +111,13 @@ Unsupervised: … · Watched: … · Not yet (and why): …
 demonstrate-then-play bones; [[sop-writer]] when a routine deserves writing
 down for every future hire.
 
+## Example Trigger Phrases
+
+- "My apprentice starts Monday."
+- "How do I train the new guy?"
+- "Plan a new labourer's first week on site."
+- "What should a new apprentice be allowed to touch?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

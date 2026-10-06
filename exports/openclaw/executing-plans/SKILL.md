@@ -58,3 +58,10 @@ A plan's value is realised or destroyed at execution time. The two failure modes
 - [ ] Do not push through a stop condition on momentum — it was written calm precisely because you wouldn't be
 - [ ] Do not declare done without running the done-test — feeling-finished and being-finished diverge exactly when it matters
 - [ ] Do not end a session without the state note — re-derivation is the tax on every resumed task
+
+## Example Trigger Phrases
+
+- "Work through this plan step by step."
+- "Resume the plan from where we left off."
+- "Execute this plan and log each step."
+- "Follow the plan and tell me when it deviates."

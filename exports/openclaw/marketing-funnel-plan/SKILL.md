@@ -65,3 +65,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Pirate Metrics (AARRR — Dave McClure) and full-funnel demand-generation practice.
+
+## Example Trigger Phrases
+
+- "Build a marketing funnel."
+- "Map the customer journey to tactics."
+- "Plan demand generation."
+- "Diagnose where a funnel leaks."

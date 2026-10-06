@@ -109,3 +109,10 @@ Hard-but-healing lines included only where the writer wanted them.]
 [[digital-death-plan]] and [[estate-planning-kit]] for the practical legacy;
 [[grief-admin]] for the people who receive it; [[the-time-capsule]] is the
 professional-decisions cousin; [[personal-bio]] shares the voice-mining craft.
+
+## Example Trigger Phrases
+
+- "Help me write a letter to my kids."
+- "Write a legacy letter."
+- "Help me write an ethical will."
+- "Write a letter for my partner to read later."

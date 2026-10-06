@@ -64,6 +64,12 @@ Ask for these if not provided:
 - [ ] Do not defend by itemizing — "I have a commitment" is complete; justification invites negotiation
 - [ ] Do not fight the culture solo forever — the negotiated norm is the sustainable version of the fight
 
+## Example Trigger Phrases
+
+- "Should I schedule deep work?"
+- "My calendar has no room to think."
+- "I block time and then waste it."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

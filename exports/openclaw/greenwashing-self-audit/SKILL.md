@@ -88,3 +88,9 @@ Include this line in the artifact: *"Verify final claims against the applicable 
 ## Based On
 
 Green-claims substantiation practice (claim–evidence matching, scope discipline, omission and lifecycle review) as used in advertising-standards and consumer-protection contexts.
+
+## Example Trigger Phrases
+
+- "Review sustainability claims."
+- "Check marketing copy for greenwash."
+- "Audit environmental claims on a website."

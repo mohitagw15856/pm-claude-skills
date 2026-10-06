@@ -68,3 +68,9 @@ Ask for (if not already provided):
 - [ ] Do not treat verification as slack time — reviewing machine output at quality is skilled work with hours
 - [ ] Do not write "focus on higher-value work" without naming the work — that phrase is where redesigns go to die
 - [ ] Do not skip the intent question — a redesign that won't say whether headcount changes will be read as concealing it, correctly
+
+## Example Trigger Phrases
+
+- "Write a revised role charter."
+- "What is my job now?"
+- "Plan capacity after AI adoption."

@@ -57,6 +57,12 @@ Keep it to **one page**. Detail belongs in an annex, referenced not included.
 
 Government/executive briefing-note practice (purpose-led, one page, key considerations, decision-or-line-to-take).
 
+## Example Trigger Phrases
+
+- "Brief a minister/executive/official."
+- "Prepare a briefing note."
+- "Summarize an issue for a decision."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

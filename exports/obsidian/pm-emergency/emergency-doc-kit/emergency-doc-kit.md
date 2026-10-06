@@ -119,6 +119,13 @@ password). Pairs with the go-bag; follow official guidance in a real event.
 for the secure-access thinking; [[after-the-disaster]] uses this kit to start claims;
 [[insurance-claim]] for the claim the home inventory supports.
 
+## Example Trigger Phrases
+
+- "What documents do I need for an emergency?"
+- "What would I need if my house burned down?"
+- "Build a grab-and-go document kit."
+- "Back up our important papers before a disaster."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

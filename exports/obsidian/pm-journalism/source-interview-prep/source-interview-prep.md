@@ -56,6 +56,12 @@ Recording (and consent/legal note — recording-consent laws vary by jurisdictio
 - No plan for the dodge — accepting the first evasion
 - Recording without regard for consent law
 
+## Example Trigger Phrases
+
+- "Plan questions for a subject."
+- "Handle an on-the-record accountability interview."
+- "Get a reluctant person to talk."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

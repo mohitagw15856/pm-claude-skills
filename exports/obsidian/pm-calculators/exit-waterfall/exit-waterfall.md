@@ -75,6 +75,13 @@ Input shape and worked example are in the script docstring. It brute-forces the 
 - [ ] Do not average across exit prices — the cliff structure IS the information
 - [ ] Do not run the numbers without the plain-English sentence — founders remember sentences, not tables
 
+## Example Trigger Phrases
+
+- "Model an exit waterfall."
+- "What do I get if we sell for X?"
+- "Explain liquidation preferences on my cap table."
+- "Compare payouts across exit prices."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

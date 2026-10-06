@@ -67,3 +67,10 @@ Ask for these if not provided:
 - [ ] Do not keep researching past the bar — good-enough was defined for exactly this moment
 - [ ] Do not present echoed sources as confirmation — the triangulation rules ride along
 - [ ] Do not end without the synthesis — captured-but-unsynthesized research is tabs with better formatting
+
+## Example Trigger Phrases
+
+- "Research this market/tool/topic by Friday."
+- "I have two hours to get smart on X."
+- "Structure my desk research."
+- "I keep researching and never concluding."

@@ -71,3 +71,10 @@ Ask for these if not provided:
 - [ ] Do not skip the employer check because it's awkward — the IP clause doesn't care about awkward
 - [ ] Do not assert entity/tax specifics for any jurisdiction — frame, flag, route
 - [ ] Do not shame the logo enthusiasm — sequence it; joy is allowed, it's just not step one
+
+## Example Trigger Phrases
+
+- "I'm starting a side business what do I need."
+- "Do I need an LLC?"
+- "Set up my side hustle properly."
+- "What comes first legally and financially?"

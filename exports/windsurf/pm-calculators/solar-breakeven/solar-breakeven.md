@@ -76,3 +76,10 @@ Deterministic. Defaults: 85% offset, 3% electricity inflation, 0.5%/yr degradati
 - [ ] Do not ignore the inverter — a known cost at a known-ish year is not a surprise
 - [ ] Do not run only the sunny case — the zero-incentive and low-inflation runs are the honesty
 - [ ] Do not moralize either way — solar pencils brilliantly on some roofs and poorly on others; the table decides, not the vibe
+
+## Example Trigger Phrases
+
+- "Are solar panels worth it for my house?"
+- "Check this solar quote's payback claim."
+- "Model solar for my bill."
+- "When would solar break even?"

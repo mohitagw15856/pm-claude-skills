@@ -67,3 +67,10 @@ Ask for these if not provided:
 - [ ] Do not mark everything 🔴 — false alarms train people to stop asking
 - [ ] Do not promise recovery of sent money — route to the fraud line fast and honestly
 - [ ] Do not reproduce or improve scam text — this skill decodes attacks, never drafts them
+
+## Example Trigger Phrases
+
+- "Is this a scam?"
+- "Decode this suspicious text."
+- "My 'bank' just called me."
+- "My parent got a weird message."

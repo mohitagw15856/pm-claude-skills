@@ -75,6 +75,13 @@ For agents with file/OCR access and expense-system access (API or UI). Without t
 - Draft reports: delete the draft. Submitted reports: recall/withdraw if the system allows; otherwise notify the user immediately with the exact state.
 - Stop and ask a human if: the system rejects an entry, an attachment fails, or any created total drifts from the approved one.
 
+## Example Trigger Phrases
+
+- "File my expenses."
+- "Process these receipts."
+- "Build my expense report."
+- "Expense this trip."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

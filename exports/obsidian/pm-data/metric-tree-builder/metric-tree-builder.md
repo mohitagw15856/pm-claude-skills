@@ -72,6 +72,13 @@ flowchart TD
 - Ignoring how drivers combine (treating everything as additive)
 - No view on which lever actually matters most
 
+## Example Trigger Phrases
+
+- "Build a metric tree."
+- "Break down a north-star metric."
+- "Map metric drivers."
+- "Find the inputs behind an output metric."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

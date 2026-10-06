@@ -64,6 +64,13 @@ Ask for these if not provided:
 - [ ] Do not flatten voice — compliant and distinctive must remain compatible or authors will route around the card
 - [ ] Do not relitigate settled fights in comments — amend the card or accept it; documents are not the venue
 
+## Example Trigger Phrases
+
+- "Make this match our style."
+- "Why do our docs all sound different?"
+- "Build a style guide from our best docs."
+- "Check this draft against house style."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

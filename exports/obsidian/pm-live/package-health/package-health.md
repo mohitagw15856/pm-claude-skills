@@ -63,6 +63,13 @@ Source: [registry] APIs · as of [date] · rerun: `[the curls]`
 - [ ] Do not extrapolate download counts into quality — popularity is a signal about forks and eyes, not correctness
 - [ ] Do not answer from memory — versions and deprecations are live facts; fetch or hand over the commands
 
+## Example Trigger Phrases
+
+- "Is this npm package maintained?"
+- "Check this PyPI library before we adopt it."
+- "Compare these two packages."
+- "Is this dependency abandoned?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -118,3 +118,9 @@ scheduled easy night]
 [[grocery-budget-audit]] finds the money this system saves;
 [[weekly-review-ritual]] is where the 10-minute plan-next-week step lives;
 [[bennett-time-audit]] for what the reclaimed weeknights become.
+
+## Example Trigger Phrases
+
+- "What do I cook with what I have?"
+- "We spend too much on takeaway."
+- "I'm sick of eating the same thing four days."

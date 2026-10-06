@@ -62,6 +62,13 @@ End verbatim: *"This is a plain-language reading, not a professional inspection,
 - [ ] Do not let 🟢 items pad the ask-list — nickel lists cost credibility on the dollar items
 - [ ] Do not say walk/don't-walk for them — surface the walk-risks, price the rest, hand the decision back
 
+## Example Trigger Phrases
+
+- "Decode my inspection report."
+- "Is this inspection bad?"
+- "What should I ask the seller to fix?"
+- "Should I walk after inspection?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

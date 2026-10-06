@@ -67,3 +67,9 @@ Ask for these if not provided:
 - [ ] Do not schedule the internet install after arrival — it has the longest consumer lead time of anything in the move
 - [ ] Do not treat an unsecured destination home as one item on the list — it IS the list until resolved
 - [ ] Do not give visa or tax-residency advice — sequence around it and route it to professionals
+
+## Example Trigger Phrases
+
+- "Help me plan my move."
+- "I'm moving in six weeks what do I do."
+- "Move to another country logistics."

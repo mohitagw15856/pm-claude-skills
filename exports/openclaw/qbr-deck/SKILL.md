@@ -240,3 +240,10 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not run a QBR as a one-sided presentation — it must include structured time for the customer to speak
 - [ ] Do not close a QBR without documented mutual commitments with named owners on both sides
 - [ ] Do not skip the "what's not working" slide — suppressing problems erodes trust and misses renewal risks
+
+## Example Trigger Phrases
+
+- "Prepare a QBR."
+- "Build the business review deck for this customer."
+- "Prepare the executive review."
+- "Plan the quarterly check-in with this account."

@@ -108,6 +108,13 @@ Lower (partial unmask — the middle gear): …
 of the ambient cost; [[nt-translator]] for the workplace-decode half; [[spoon-planner]]
 is the same budgeting logic for chronic illness.
 
+## Example Trigger Phrases
+
+- "I'm exhausted from masking."
+- "How do I unmask safely?"
+- "Plan a heavy-masking day without crashing."
+- "Where is masking worth the cost for me?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -110,6 +110,12 @@ pre-committed · offboarding pointer]
 for whether the *task* is agent-ready at all; [[agent-severance]] for the exit
 this plan pre-commits to.
 
+## Example Trigger Phrases
+
+- "Choose between AI agents/tools/copilots for a job."
+- "Formalizing an AI pilot."
+- "Which agent should we use for X?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

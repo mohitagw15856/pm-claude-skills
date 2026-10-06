@@ -121,3 +121,10 @@ access: … · Platform legacy tools to set up now: … · Executor's legal acce
 [[legacy-letter]] for the emotional message that rides alongside; [[grief-admin]] is
 what your people will be doing — this makes it survivable; [[estate-planning-kit]]
 for the will this plugs into; [[password]] hygiene now makes all of this easier.
+
+## Example Trigger Phrases
+
+- "What happens to my accounts when I die?"
+- "Help my family access my stuff if something happens."
+- "Plan my digital legacy."
+- "Who gets my photos and passwords?"

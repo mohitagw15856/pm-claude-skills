@@ -75,3 +75,10 @@ Ask the user for these if not provided:
 - [ ] Roadmap connections are specific (not "generally relevant")
 - [ ] Diff mode output is under 300 words
 - [ ] Strategic summary describes the landscape trend, not just repeats individual signals
+
+## Example Trigger Phrases
+
+- "Monitor competitors."
+- "Track the competitive landscape."
+- "Produce a competitive briefing."
+- "Understand what has changed in the market this week."

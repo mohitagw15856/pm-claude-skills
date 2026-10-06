@@ -58,3 +58,11 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Knowledge-base / support-content practice — ticket-driver-led gap analysis, content health scoring, deflection-impact prioritisation.
+
+## Example Trigger Phrases
+
+- "Audit a help center."
+- "Review KB health."
+- "Find documentation gaps."
+- "Reduce ticket volume with better docs."
+- "Prioritise what to write/fix."

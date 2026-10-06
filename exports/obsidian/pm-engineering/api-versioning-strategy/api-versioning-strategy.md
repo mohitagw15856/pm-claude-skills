@@ -321,6 +321,12 @@ builders and response parsers.
 - [ ] SDK versioning alignment table is present and ties SDK major versions explicitly to API major versions
 - [ ] Maximum simultaneous supported versions is stated with a concrete number
 
+## Example Trigger Phrases
+
+- "Define versioning policy."
+- "Plan API deprecation."
+- "Document version lifecycle."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

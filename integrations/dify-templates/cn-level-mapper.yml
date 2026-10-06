@@ -23,9 +23,7 @@ workflow:
     speech_to_text:
       enabled: false
     suggested_questions:
-    - '阿里 P7 跳槽到字节，大概对应什么职级？'
-    - '这个 offer 给了 2-1，我现在是 P6，合理吗？'
-    - '我要去新加坡，帮我把腾讯的职级和谷歌的职级对比一下'
+    []
     suggested_questions_after_answer:
       enabled: false
     text_to_speech:
@@ -156,10 +154,10 @@ workflow:
 
             ## 示例触发语
 
-            - "阿里 P7 跳槽到字节，大概对应什么职级？"
-            - "这个 offer 给了 2-1，我现在是 P6，合理吗？"
-            - "我要去新加坡，帮我把腾讯的职级和谷歌的职级对比一下。"
-            - "帮我对标一下职级，下周要谈 offer。"
+            - “阿里 P7 跳槽到字节，大概对应什么职级？”
+            - “这个 offer 给了 2-1，我现在是 P6，合理吗？”
+            - “我要去新加坡，帮我把腾讯的职级和谷歌的职级对比一下。”
+            - “帮我对标一下职级，下周要谈 offer。”
 
             （本应用基于开源技能库 PM Skills 的 cn-level-mapper 技能：https://github.com/mohitagw15856/pm-claude-skills ，MIT 协议。）
         selected: false

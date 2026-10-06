@@ -150,6 +150,13 @@ Ask the user for these if not provided:
 - Recommend annual pricing with 15–20% discount — improves cash flow and reduces churn
 - If enterprise pricing is "contact us", recommend adding a price floor to qualify inbound
 
+## Example Trigger Phrases
+
+- "Set pricing."
+- "Design pricing tiers."
+- "Evaluate freemium vs paid."
+- "Prepare a pricing change."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

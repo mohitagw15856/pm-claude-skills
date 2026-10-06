@@ -63,3 +63,9 @@ Ask for these if not provided:
 - [ ] Do not run buddyship on vibes — the arc and curriculum are what separate it from "lunch once"
 - [ ] Do not let the buddy report confidences — one leak ends the contract for the whole program
 - [ ] Do not stop at day 5 — week three is when the real questions arrive, to whoever's still showing up
+
+## Example Trigger Phrases
+
+- "Set up an onboarding buddy program."
+- "I'm buddying the new hire what do I do."
+- "Our onboarding is docs with no humans."

@@ -79,6 +79,12 @@ Ask for (if not already provided):
 - [ ] Do not declare victory at shutoff — the sunset is done when the code is gone and the retro is filed
 - [ ] Do not let "deprecated" become a permanent state — a deprecation without a removal date is a mood, not a plan
 
+## Example Trigger Phrases
+
+- "Sunsetting a feature."
+- "Killing an underused capability."
+- "Retire an AI feature that didn't land."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

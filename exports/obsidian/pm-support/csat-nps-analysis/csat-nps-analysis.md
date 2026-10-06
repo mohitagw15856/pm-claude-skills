@@ -68,6 +68,13 @@ python3 scripts/nps.py nps "...counts..." --json
 
 Voice-of-customer practice — correct NPS/CSAT/CES computation, verbatim theming, and action prioritisation.
 
+## Example Trigger Phrases
+
+- "Analyse NPS."
+- "Compute an NPS score."
+- "Interpret survey verbatims."
+- "Build a voice-of-customer readout."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

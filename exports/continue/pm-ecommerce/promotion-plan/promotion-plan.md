@@ -74,3 +74,10 @@ more units you must sell to come out ahead). Show the formula + a worked example
 ## Based On
 
 Retail promotion & pricing practice — objective-led offer design, margin/break-even analysis, segmentation, and measurement.
+
+## Example Trigger Phrases
+
+- "Plan a promotion."
+- "Plan our Black Friday sale."
+- "Run a discount without wrecking margin."
+- "Plan a launch offer."

@@ -167,3 +167,9 @@ For **recall**, answer then show your grounding:
 - [ ] Do not answer a recall from general knowledge and present it as something the brain "knows" — say when memory is empty
 - [ ] Do not overwrite a decision when it changes — append a new dated entry so the history survives
 - [ ] Do not build a vector database or hide memory behind embeddings — the brain stays plain, grep-able markdown a human can read and correct
+
+## Example Trigger Phrases
+
+- "Set up a brain."
+- "Log a decision with provenance."
+- "Run a weekly brain review."

@@ -71,6 +71,12 @@ Ask for (if not already provided):
 - [ ] Do not force-migrate loyal customers without a year-one cap — churn from pricing anger costs more than the uplift
 - [ ] Do not skip tripwires — a static price in a shifting usage regime is a slow leak in one direction or the other
 
+## Example Trigger Phrases
+
+- "Migrate to usage-."
+- "Price an agent/API tier."
+- "Defend revenue as customers automate their own usage."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

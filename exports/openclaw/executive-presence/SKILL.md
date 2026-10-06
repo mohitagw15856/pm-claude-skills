@@ -60,3 +60,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Executive-communication practice — BLUF / Minto Pyramid (answer-first), composure under pressure, and decisive, hedge-free language.
+
+## Example Trigger Phrases
+
+- "Improve executive presence."
+- "Prepare to present to leadership."
+- "Command a room."
+- "Get coaching before a big meeting."

@@ -67,6 +67,13 @@ Ask for these if not provided:
 - [ ] Do not remove flexibility that's actually on the roadmap — YAGNI applies to imagined futures, not planned ones
 - [ ] Do not skip the ledger — invisible simplification is indistinguishable from unexplained deletion in review
 
+## Example Trigger Phrases
+
+- "Now simplify it."
+- "This AI-generated code is over-engineered: simplify it."
+- "Remove the dead abstraction in this file."
+- "Make this simpler without changing behaviour."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -62,3 +62,10 @@ Then provide:
 ## Based On
 
 Incident communication practice — prompt acknowledgement, factual transparency, accountability, and clear guidance for affected people.
+
+## Example Trigger Phrases
+
+- "Draft a public statement."
+- "Write a press statement about the breach."
+- "Write our official response to the outage."
+- "Respond publicly to this controversy."

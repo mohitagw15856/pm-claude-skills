@@ -61,6 +61,14 @@ The single highest-impact move (a cut, a price change, a growth push) and what i
 - Vague advice ("extend runway") instead of a quantified lever and date
 - Treating gross burn as net (ignoring revenue)
 
+## Example Trigger Phrases
+
+- "Calculate runway."
+- "Model burn rate."
+- "Decide when to raise."
+- "Figure out if the company is default-alive."
+- "Plan a scenario with hiring/cuts."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

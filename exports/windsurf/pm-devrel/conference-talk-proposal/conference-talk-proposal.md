@@ -56,3 +56,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Conference CFP practice (clear promise, concrete takeaways, paced outline, the committee's selection lens).
+
+## Example Trigger Phrases
+
+- "Submit a talk to this CFP."
+- "Propose a talk."
+- "Write a session abstract."
+- "Help me get accepted at this conference."

@@ -64,6 +64,13 @@ Ask for these if not provided:
 - [ ] Do not deputize peers as police — structure enforces; humans just follow defaults
 - [ ] Do not write ten kitchen rules — three that matter, or the card becomes the noticeboard it replaced
 
+## Example Trigger Phrases
+
+- "Set office space norms."
+- "Write the office etiquette guide."
+- "Stop people ghost-booking meeting rooms."
+- "Write rules for the shared kitchen."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

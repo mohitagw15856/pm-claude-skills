@@ -56,6 +56,13 @@ Ask for these only if they aren't already provided:
 
 Professional translation practice — meaning-based (not literal) translation, register matching, and the translation-vs-localization distinction.
 
+## Example Trigger Phrases
+
+- "Translate this document."
+- "Translate this email into Spanish."
+- "Improve this machine translation."
+- "Translate this keeping the tone."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

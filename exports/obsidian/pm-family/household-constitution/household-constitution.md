@@ -73,6 +73,13 @@ Ask for these if not provided:
 - **Keeping dead letters.** Every ignored article teaches that the document is optional; delete or amend, never quietly abandon.
 - **Solemnity overdose.** It should be a little fun. Households that laugh at their own Article 7 keep the constitution; households embarrassed by the whole exercise frame it and forget it.
 
+## Example Trigger Phrases
+
+- "Make family rules that stick."
+- "Stop having the same argument about chores."
+- "Write house rules everyone agrees to."
+- "Agree screen-time rules as a family."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

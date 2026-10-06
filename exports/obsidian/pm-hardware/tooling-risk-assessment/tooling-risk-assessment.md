@@ -76,6 +76,13 @@ Ask for these if not provided; if forecast confidence is unstated, assume it is 
 - [ ] Do not present a tooling recommendation without kill criteria — the moment to define "stop" is before the spend
 - [ ] Do not hide the second-tool moment — if tool life runs out mid-ramp, say when and price it now
 
+## Example Trigger Phrases
+
+- "Choose soft vs hard tools."
+- "Size cavities."
+- "Review a tooling quote."
+- "Assess the risk of tooling before the design is frozen."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -113,6 +113,13 @@ your local emergency authority's guidance and orders.
 and [[after-the-disaster]] for specific scenarios; [[home-insurance|insurance-claim]]
 neighbors for protecting against the risks found.
 
+## Example Trigger Phrases
+
+- "What disasters should I prepare for?"
+- "Am I in a flood/wildfire/quake zone?"
+- "What emergencies are likely where I live?"
+- "Where do I start with preparedness?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -57,3 +57,10 @@ Test them in order; record what each rules in or out.
 ## Based On
 
 Systematic debugging method (reproduce → isolate → hypothesize → verify) — Zeller's *Why Programs Fail* / scientific-method debugging.
+
+## Example Trigger Phrases
+
+- "Help me debug this."
+- "Why is this happening?"
+- "This test fails intermittently."
+- "Find the root cause of this defect."

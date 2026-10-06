@@ -67,3 +67,10 @@ Ask for these if not provided:
 - [ ] Do not let decisions float undated — deferred choices are the invisible critical path
 - [ ] Do not go quiet with the team — silence gets filled by the parking-rumor economy
 - [ ] Do not hope day one works — gate it, and let the fallback be a plan instead of an apology
+
+## Example Trigger Phrases
+
+- "Plan our office move."
+- "We're moving floors/buildings in six weeks."
+- "Who owns what in the move?"
+- "Make day one at the new office not a disaster."

@@ -53,6 +53,13 @@ A 2-line nudge to send if there's no reply in ~5 business days — adds a *new* 
 - Multiple asks or a vague one
 - A follow-up that just says "bumping this" with no new information
 
+## Example Trigger Phrases
+
+- "Email an investor."
+- "Write a fundraising outreach."
+- "Request a warm intro."
+- "Craft a forwardable blurb."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -71,6 +71,12 @@ Then verify: rewrite one neutral paragraph in the extracted voice and check it a
 - [ ] Do not include the user's confidential content in the card — rules and short quoted phrases only
 - [ ] Do not overwrite an existing style card silently — diff against it and show what changed
 
+## Example Trigger Phrases
+
+- "Learn my writing style."
+- "Make outputs sound like me."
+- "Build a voice profile."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -64,6 +64,12 @@ Ask for these if not provided:
 - [ ] Do not pick a side in contested claims — the range is the honest fact
 - [ ] Do not repeat unverifiable claims bare — folklore travels on exactly that concession
 
+## Example Trigger Phrases
+
+- "Is this claim actually true?"
+- "Verify this stat before the deck."
+- "How solid is this source?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

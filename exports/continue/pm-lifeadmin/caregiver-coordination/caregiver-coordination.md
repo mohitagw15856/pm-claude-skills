@@ -66,3 +66,10 @@ Swap protocol: [how] · Escalation: [symptom → who → then who; 911-first lis
 - [ ] Do not build a rotation with no backups — it's a single point of failure wearing a schedule
 - [ ] Do not plan around the care recipient — their preferences and remaining autonomy are inputs, not obstacles
 - [ ] Do not give legal or medical advice — organize around professionals, and route those questions to them
+
+## Example Trigger Phrases
+
+- "Help me coordinate care for my mom."
+- "My siblings and I need to split caregiving."
+- "Organize care for a sick family member."
+- "Set up a care schedule."

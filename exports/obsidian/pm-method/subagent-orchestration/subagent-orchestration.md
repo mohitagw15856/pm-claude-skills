@@ -54,6 +54,12 @@ Parallel agents multiply speed exactly when the decomposition is right — and m
 - [ ] Do not merge everything then verify once — verify at each join while causes are still traceable
 - [ ] Do not delegate the judgment-bearing core (the decision, the synthesis, the taste) — delegate the legwork around it
 
+## Example Trigger Phrases
+
+- "Work can genuinely parallelise."
+- "Decide whether to delegate."
+- "Do it yourself?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

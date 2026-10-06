@@ -64,6 +64,13 @@ Ask for these if not provided:
 - [ ] Do not pipe customer data into "just a trial" — the gate runs first at exactly that moment
 - [ ] Do not decline silently — the unlogged rejection is next year's rematch, at full cost
 
+## Example Trigger Phrases
+
+- "Should we buy this tool?"
+- "Evaluate this software for the team."
+- "We have three tools that do this already."
+- "Run a proper trial before committing."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

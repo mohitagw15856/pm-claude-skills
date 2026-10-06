@@ -134,3 +134,10 @@ Ask for (if not already provided):
 [[aging-parent-talks]] for the conversations with the parents themselves;
 [[caregiver-coordination]] runs the logistics the memo agrees;
 [[roommate-agreement]] — the same fairness machinery in a lighter room.
+
+## Example Trigger Phrases
+
+- "My siblings and I need to talk about mum."
+- "My brother does nothing."
+- "We keep fighting about dad's care."
+- "Before a parent's health forces it."

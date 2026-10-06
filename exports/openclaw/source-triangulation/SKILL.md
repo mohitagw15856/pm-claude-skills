@@ -66,3 +66,9 @@ Ask for these if not provided:
 - [ ] Do not launder the grade in the phrasing — "studies show" for a single vendor survey is the exact sin
 - [ ] Do not pick a side in contested claims — the range is the honest fact
 - [ ] Do not repeat unverifiable claims bare — folklore travels on exactly that concession
+
+## Example Trigger Phrases
+
+- "Is this claim actually true?"
+- "Verify this stat before the deck."
+- "How solid is this source?"

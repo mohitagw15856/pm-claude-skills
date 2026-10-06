@@ -117,6 +117,12 @@ Ask for (if not already provided):
 for the finance report's author; [[meeting-notes]] for ordinary meetings that
 don't need the box.
 
+## Example Trigger Phrases
+
+- "I have to run the AGM."
+- "What goes in the agenda?"
+- "Our elections are a mess."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

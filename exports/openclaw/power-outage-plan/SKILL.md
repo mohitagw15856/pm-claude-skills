@@ -122,3 +122,9 @@ utility. Follow official guidance in a real outage.
 [[hazard-risk-map]] to know your outage likelihood; [[go-bag-builder]] and
 [[emergency-doc-kit]] for the kit; [[family-emergency-plan]] for reconnecting when
 networks fail; [[after-the-disaster]] for the aftermath.
+
+## Example Trigger Phrases
+
+- "Prepare for a power outage."
+- "What if the power goes out for days?"
+- "I rely on a medical device that needs electricity."

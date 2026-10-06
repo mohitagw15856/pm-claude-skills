@@ -290,6 +290,13 @@ For tool-using agents that can reach the team's communication channels (Slack, e
 - If the platform allows it, deletion of a just-posted message is permitted **only** on explicit human instruction — otherwise post a correction reply.
 - Stop and ask a human if: the channel is not found, posting partially fails, or the approved text no longer matches what is about to be sent.
 
+## Example Trigger Phrases
+
+- "Write a status update."
+- "Write a progress report for leadership."
+- "Write the project update for stakeholders."
+- "Write an executive briefing."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

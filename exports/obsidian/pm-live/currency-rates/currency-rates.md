@@ -59,6 +59,12 @@ Source: [Frankfurter (ECB) / open.er-api.com] · rerun: `[exact curl]`
 - [ ] Do not echo full API precision — eight decimals on a lunch bill is theater
 - [ ] Do not give currency-trading advice — conversion is arithmetic; timing the market is not this skill
 
+## Example Trigger Phrases
+
+- "Convert 500 dollars to euros."
+- "What's the USD-INR rate?"
+- "How much is this in my currency?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -61,6 +61,12 @@ Checks organised by dimension — each with the **rule**, **severity** (🔴 blo
 
 Data-quality practice — the six DQ dimensions, dbt tests / Great Expectations / source-freshness, severity-tiered enforcement.
 
+## Example Trigger Phrases
+
+- "Define DQ checks."
+- "Catch bad data before it hits dashboards."
+- "Set up monitoring for a dataset."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -64,6 +64,13 @@ Ask for these if not provided:
 - [ ] Do not let one loud newsletter dominate — items compete on interest-match, not sender volume
 - [ ] Do not run daily by default — cadence inflation recreates the interruption problem the digest exists to solve
 
+## Example Trigger Phrases
+
+- "Digest my newsletters."
+- "Summarize what my subscriptions said this week."
+- "What did I miss that I actually care about?"
+- "Make my reading pile useful."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

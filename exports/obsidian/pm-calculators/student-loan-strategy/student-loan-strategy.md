@@ -76,6 +76,13 @@ Match captured first: [yes/no — fix first if no] · Temperament: [their words,
 - [ ] Do not push refinancing federal loans from inside a calculator — one-way doors get named and routed
 - [ ] Do not moralize debt urgency — a 3.5% loan is cheap money and saying so is honesty, not heresy
 
+## Example Trigger Phrases
+
+- "Should I pay off my student loans faster?"
+- "Pay loans."
+- "Is my forgiveness track worth it?"
+- "Model my student debt."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

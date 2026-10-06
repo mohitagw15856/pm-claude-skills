@@ -64,6 +64,13 @@ Ask for these only if they aren't already provided (else mark as not assessed):
 
 Structured-hiring practice — competency ratings anchored to evidence, calibrated recommendations with confidence, and bias-aware, decision-ready debriefs.
 
+## Example Trigger Phrases
+
+- "Write an interview scorecard."
+- "Turn my interview notes into a candidate evaluation."
+- "Run the interview debrief."
+- "Summarise the feedback into a hire or no-hire call."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -134,6 +134,13 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not write screener questions that are too easy to pass — if participants can guess the "right" answer, you will recruit the wrong people
 - [ ] Do not treat participant opinions as evidence of future behaviour — what people say they will do consistently diverges from what they actually do
 
+## Example Trigger Phrases
+
+- "Plan user interviews."
+- "Write a customer discovery interview guide."
+- "Plan Jobs-to-be-Done interviews."
+- "Help me validate this problem with customers."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

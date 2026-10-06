@@ -59,6 +59,13 @@ Ask for these only if they aren't already provided:
 
 Freemium / subscription conversion practice (value-based gating, trigger-at-intent, plan anchoring, conversion vs. retention guardrails).
 
+## Example Trigger Phrases
+
+- "Improve our paywall."
+- "Write a better upgrade prompt."
+- "Improve free-to-paid conversion."
+- "Decide what to gate."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

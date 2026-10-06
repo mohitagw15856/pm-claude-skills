@@ -76,3 +76,10 @@ Ask for these if not provided:
 - [ ] Do not invent sources — if you recall external evidence, it does not exist for this audit
 - [ ] Do not average away a Contradicted claim — one contradiction outweighs ten evidenced footnotes
 - [ ] Do not fix a claim by vaguening it — fixes bind wording to a real source line, or the claim drops
+
+## Example Trigger Phrases
+
+- "Fact-check a document against its sources."
+- "Check whether a report's claims are backed up."
+- "Verify a deck against the data."
+- "Does this doc have receipts?"

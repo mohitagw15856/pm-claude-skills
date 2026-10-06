@@ -54,6 +54,13 @@ A 3-bullet "what a 5-second skimmer takes away" — if those bullets don't carry
 - Three competing CTAs, or none
 - A wall of text with no sub-heads or callout — unskimmable
 
+## Example Trigger Phrases
+
+- "Write a newsletter."
+- "Write this week's Substack issue."
+- "Turn these notes into a sendable newsletter."
+- "Write a subject line and hook for my email issue."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

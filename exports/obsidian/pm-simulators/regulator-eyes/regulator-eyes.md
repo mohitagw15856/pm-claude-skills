@@ -76,6 +76,13 @@ Judge claims by the *net impression on a reasonable consumer*, not the writer's 
 - [ ] Do not treat testimonials as safe because they're "just customers talking" — typicality is the user's problem
 - [ ] Do not stay in character in the debrief
 
+## Example Trigger Phrases
+
+- "Check my marketing claims."
+- "Read this like a regulator."
+- "Audit my landing page for claim risk."
+- "Is this ad compliant?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -66,3 +66,9 @@ Ask for these if not provided:
 - [ ] Do not omit the inconvenient items — an advocacy inventory grades the author, not the claim
 - [ ] Do not demand experimental grade for reversible bets — over-evidencing cheap decisions is its own waste
 - [ ] Do not end at "insufficient" — the upgrade path is the difference between rigor and obstruction
+
+## Example Trigger Phrases
+
+- "How strong is our evidence for this?"
+- "Grade what we know before the decision."
+- "Is this enough to bet on?"

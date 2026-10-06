@@ -71,6 +71,13 @@ Provide a **document checklist** and **notes** on policy deadlines to confirm.
 
 Insurance-claim practice — complete incident documentation, itemised evidenced loss, and denial-specific appeals grounded in policy wording.
 
+## Example Trigger Phrases
+
+- "Write an insurance claim."
+- "File a claim letter."
+- "Document a loss for insurance."
+- "Appeal a denied claim."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

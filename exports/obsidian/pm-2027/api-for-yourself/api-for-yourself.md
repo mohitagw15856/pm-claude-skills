@@ -122,6 +122,12 @@ Request: … · Response (SLA): … · Errors: [codes]
 your outside. [[working-agreements]] for the team-level contract;
 [[onboarding-plan]] to slot this into a new joiner's week one.
 
+## Example Trigger Phrases
+
+- "Onboard to a new team."
+- "Report arrives."
+- "Write my README/user manual."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

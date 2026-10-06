@@ -60,6 +60,13 @@ Ask for these only if they aren't already provided:
 
 Vulnerability management practice (CVSS base/temporal/environmental, exploitability & KEV context, risk-based SLAs).
 
+## Example Trigger Phrases
+
+- "Triage a CVE."
+- "Prioritize scanner/pentest findings."
+- "Assess a vuln's risk."
+- "Decide what to patch first."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -286,6 +286,13 @@ When a breach is detected, work through this checklist in order:
 - [ ] Do not leave the breach response process without named owners and escalation channels
 - [ ] Do not set budgets that apply only to one environment — production and staging targets should be documented separately if they differ
 
+## Example Trigger Phrases
+
+- "Set performance targets."
+- "Define SLOs for latency."
+- "Create a performance baseline."
+- "Document performance regression policy."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

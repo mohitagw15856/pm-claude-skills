@@ -64,6 +64,13 @@ Ask for these if not provided:
 - [ ] Do not cite nothing — an uncited brief is one skeptic away from being re-done
 - [ ] Do not hide what wasn't read — the ledger converts a limitation into a map for the reader
 
+## Example Trigger Phrases
+
+- "Read all this and tell me what matters."
+- "Synthesize this folder for the new lead."
+- "Turn these 20 docs into a brief."
+- "What does all this material actually say?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -119,6 +119,12 @@ process and to an advocate/lawyer if you meet resistance.
 [[accessible-travel-planner]] for physical access; [[nt-translator]] for the workplace-
 communication layer.
 
+## Example Trigger Phrases
+
+- "I need a workplace accommodation."
+- "Request reasonable adjustments."
+- "How do I ask for accommodations for my disability/condition?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

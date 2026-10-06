@@ -76,3 +76,9 @@ Ask for (if not already provided):
 - [ ] Do not grant open-ended exceptions — one immortal customer instance is the whole maintenance cost with none of the revenue
 - [ ] Do not declare victory at shutoff — the sunset is done when the code is gone and the retro is filed
 - [ ] Do not let "deprecated" become a permanent state — a deprecation without a removal date is a mood, not a plan
+
+## Example Trigger Phrases
+
+- "Sunsetting a feature."
+- "Killing an underused capability."
+- "Retire an AI feature that didn't land."

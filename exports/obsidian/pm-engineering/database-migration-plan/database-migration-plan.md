@@ -463,6 +463,14 @@ Follow this checklist on the day of migration. Mark each step as done before pro
 - [ ] Do not define a rollback as "restore from backup" — each phase must have an explicit, fast rollback procedure
 - [ ] Do not omit dual-write logic during the transition period — removing the old column before all writers are updated causes data loss
 
+## Example Trigger Phrases
+
+- "Plan a database migration."
+- "Design a zero-downtime schema change."
+- "Document an expand/contract migration."
+- "Produce a rollback procedure for a database change."
+- "Coordinate a database schema update with a deployment."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

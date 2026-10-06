@@ -76,6 +76,13 @@ Ask for these if not provided; if the brief is thin, infer sensible values and l
 - [ ] Do not hide forecast uncertainty — tooling cavitation and MOQs are bought against this number
 - [ ] Do not refuse a thin brief — draft with labelled assumptions and list what must be confirmed before EVT
 
+## Example Trigger Phrases
+
+- "Write a hardware PRD."
+- "Spec a new device."
+- "Define requirements for a physical product."
+- "Kick off an NPI program."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

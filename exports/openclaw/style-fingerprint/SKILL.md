@@ -73,3 +73,9 @@ Then verify: rewrite one neutral paragraph in the extracted voice and check it a
 - [ ] Do not merge conflicting registers into one mushy card — name variants ("exec", "team") instead
 - [ ] Do not include the user's confidential content in the card — rules and short quoted phrases only
 - [ ] Do not overwrite an existing style card silently — diff against it and show what changed
+
+## Example Trigger Phrases
+
+- "Learn my writing style."
+- "Make outputs sound like me."
+- "Build a voice profile."

@@ -60,6 +60,13 @@ Ask for these only if they aren't already provided:
 
 Freelance/consulting pricing practice — minimum-viable-rate math, value-based & productised pricing, rate-anchoring.
 
+## Example Trigger Phrases
+
+- "Set freelance/consulting rates."
+- "Build a rate card."
+- "Decide what to charge."
+- "Move off hourly billing."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -66,3 +66,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Statement-of-work / contracting practice — explicit scope + exclusions, acceptance criteria, milestone payments, change control.
+
+## Example Trigger Phrases
+
+- "Write a SOW."
+- "Write the scope of work for this project."
+- "Turn what we agreed into a project agreement."
+- "Stop this project creeping in scope."

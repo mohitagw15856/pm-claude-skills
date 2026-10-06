@@ -73,3 +73,10 @@ Ask for (if not already provided):
 - [ ] Do not average across tools into one triumphant number — the verdict is per-tool or it decides nothing
 - [ ] Do not claim headcount avoidance without the counterfactual hiring plan that was actually cancelled
 - [ ] Do not punish honest "unknowns" by cutting them reflexively — cut requires a *failed* measurement attempt, not a missing one
+
+## Example Trigger Phrases
+
+- "What did our AI tools actually return?"
+- "Should we renew these AI contracts?"
+- "We pay for three overlapping AI subscriptions: which do we keep?"
+- "Build the measurement plan before the next AI spend."

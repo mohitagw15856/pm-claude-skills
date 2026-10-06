@@ -75,3 +75,9 @@ Ask for these if not provided:
 - **Saving only the festival dishes.** The Tuesday food is the taste of the family; it is also the first thing lost.
 - **Perfecting the book past the cook.** The correction pass with them *is* the point; a posthumous masterpiece is the failure mode.
 - **Treating shifted versions as errors.** The recipe changed over forty years; keep the variants and say when each was true.
+
+## Example Trigger Phrases
+
+- "Write down grandma's recipes."
+- "How much is some flour?"
+- "Make a family cookbook."

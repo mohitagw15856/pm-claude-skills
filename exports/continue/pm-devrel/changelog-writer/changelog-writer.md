@@ -57,3 +57,10 @@ Follow [Keep a Changelog](https://keepachangelog.com) conventions:
 ## Based On
 
 The Keep a Changelog standard and Semantic Versioning, written for the reader rather than the committer.
+
+## Example Trigger Phrases
+
+- "Write release notes."
+- "Turn these commits into a changelog entry."
+- "Write the version announcement from these PRs."
+- "Group these changes into Added, Changed and Fixed."

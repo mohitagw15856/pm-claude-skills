@@ -62,6 +62,13 @@ Ask for these only if they aren't already provided:
 
 Value-proposition design (Osterwalder) + April Dunford positioning as the upstream frame.
 
+## Example Trigger Phrases
+
+- "Write a value prop."
+- "Write our value proposition."
+- "Write a one-liner for the product."
+- "What do we even say we do?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

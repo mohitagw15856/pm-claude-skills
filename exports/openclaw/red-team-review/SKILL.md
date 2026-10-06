@@ -72,3 +72,10 @@ The specific, prioritised changes that would most reduce risk — what to add, c
 - [ ] Do not give all personas the same critique reworded — each lens must find something the others miss
 - [ ] Do not soften the most dangerous risk to be polite — surface it first and plainly
 - [ ] Do not invent facts about the plan — infer plausibly and label assumptions as *(assumed)*
+
+## Example Trigger Phrases
+
+- "Red-team this plan."
+- "Stress-test our strategy."
+- "Pressure-test this PRD."
+- "Find the blind spots in this plan before we commit."

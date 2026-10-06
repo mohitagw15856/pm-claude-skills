@@ -107,3 +107,10 @@ Ask for (if not already provided):
 [[session-handoff]] compresses a session; this resets a *worldview*.
 [[context-budget]] for the token-layout side; [[agent-severance]] when the
 answer is offboarding, not bankruptcy.
+
+## Example Trigger Phrases
+
+- "My agent keeps acting on outdated beliefs."
+- "Purge my assistant's stale memory."
+- "Audit what my agent currently believes."
+- "Reset the agent's memory after our pivot."

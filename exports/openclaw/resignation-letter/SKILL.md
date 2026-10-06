@@ -67,3 +67,10 @@ Ask for these if not provided:
 - [ ] Do not vent — the toxic-job letter and the dream-job letter are the same letter
 - [ ] Do not promise transition help you won't deliver — "available for questions through [date]" only if true
 - [ ] Do not pick the last day before checking vesting and bonus dates — politeness is not worth a cliff
+
+## Example Trigger Phrases
+
+- "Write my resignation letter."
+- "How do I resign professionally?"
+- "What do I say when I quit?"
+- "Review my resignation email."

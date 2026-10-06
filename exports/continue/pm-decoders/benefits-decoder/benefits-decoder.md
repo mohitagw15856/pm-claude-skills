@@ -79,3 +79,10 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 ## Based On
 
 Offer-review practice — total-comp reconstruction, plan-language decoding, pre-signing question lists.
+
+## Example Trigger Phrases
+
+- "Is this offer good?"
+- "Decode my benefits package."
+- "What does my equity actually mean?"
+- "What should I ask HR before signing?"

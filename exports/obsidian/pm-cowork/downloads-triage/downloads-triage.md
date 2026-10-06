@@ -62,6 +62,12 @@ Ask for these if not provided:
 - [ ] Do not let quarantine become the new junk drawer — no expiry, no quarantine
 - [ ] Do not skip asking about treasures — tax PDFs in Downloads is the classic finding
 
+## Example Trigger Phrases
+
+- "Clean up my downloads folder."
+- "What's safe to delete here?"
+- "Stop my downloads from piling up."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

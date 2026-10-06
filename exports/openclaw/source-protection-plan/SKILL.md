@@ -57,3 +57,10 @@ The risks that remain after all mitigations, stated plainly, and the recommendat
 - Communicating over channels the adversary can subpoena or monitor
 - Keeping records that become a liability if compelled
 - Treating this as legal advice instead of routing legal exposure to a lawyer
+
+## Example Trigger Phrases
+
+- "I'm working with a confidential source."
+- "How do I protect a whistleblower's identity?"
+- "Assess the risk of exposing my source."
+- "We have leaked documents: how do we protect who sent them?"

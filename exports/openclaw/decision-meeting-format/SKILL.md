@@ -65,3 +65,10 @@ Ask for these if not provided:
 - [ ] Do not let advocacy start during clarification — positions taken early calcify early
 - [ ] Do not convert dissent by attrition — recorded disagreement beats exhausted agreement
 - [ ] Do not write the record tomorrow — tomorrow's record is a different meeting's minutes
+
+## Example Trigger Phrases
+
+- "Run this decision meeting."
+- "We discuss forever and never decide."
+- "Structure the meeting where we pick the vendor/plan/design."
+- "Why do our decisions get relitigated?"

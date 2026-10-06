@@ -59,3 +59,11 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Managing-up practice — Drucker on managing the boss, Gabarro & Kotter's "Managing Your Boss," no-surprises and solution-oriented escalation.
+
+## Example Trigger Phrases
+
+- "How to manage up?"
+- "Work better with a boss."
+- "Get buy-in from your manager."
+- "Escalate without overstepping."
+- "Prepare to raise something with leadership."

@@ -68,3 +68,10 @@ Ask for these if not provided:
 - [ ] Do not let the simulation recommend overclaiming — review teams verify, and discovered overclaims are 🔴
 - [ ] Do not omit the mortality questions — vendor-viability stalls surprise founders most
 - [ ] Do not stay in character in the debrief
+
+## Example Trigger Phrases
+
+- "Prep for enterprise procurement."
+- "Simulate a security review."
+- "Why do enterprise deals stall?"
+- "Get ready for vendor assessment."

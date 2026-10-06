@@ -56,3 +56,9 @@ Crisp answers to the classic prompts:
 - Vague passion claims with no evidence
 - Borrowed secrets (industry truisms anyone could state)
 - Overclaiming — investors discount stories that don't ring true
+
+## Example Trigger Phrases
+
+- "Write the founder story."
+- "Draft YC / accelerator application answers."
+- "Explain founder-market fit."

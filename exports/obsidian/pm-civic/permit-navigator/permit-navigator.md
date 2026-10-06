@@ -109,6 +109,12 @@ substitute for the permit office or, for complex projects, an architect/expedite
 work; [[speak-at-the-council]] if the project needs a hearing; [[report-a-hazard]] for
 the other side of local government.
 
+## Example Trigger Phrases
+
+- "Do I need a permit for this?"
+- "What permits for my renovation/business/event?"
+- "Help me apply for a permit."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -78,3 +78,11 @@ Ask for these if not provided; analyse whatever slice exists, but state the deno
 - [ ] Do not treat NTF as noise to discard — a high NTF rate is a product or support failure of its own
 - [ ] Do not root-cause by vote — teardown evidence and batch correlation, or label it a hypothesis
 - [ ] Do not compare return rates across cohorts with different time-in-field — young cohorts always look better
+
+## Example Trigger Phrases
+
+- "Analyse RMA data."
+- "Investigate field returns."
+- "Run failure analysis on returned units."
+- "Write an 8D report."
+- "Figure out why return rates are climbing."

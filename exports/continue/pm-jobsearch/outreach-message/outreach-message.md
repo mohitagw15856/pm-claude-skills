@@ -56,3 +56,10 @@ Offer 2 variants when tone is unclear (warmer vs. more direct), and a **note** o
 ## Based On
 
 Cold-outreach / networking practice — specificity, brevity, a single low-friction ask, and graceful follow-up.
+
+## Example Trigger Phrases
+
+- "Write a cold message to a recruiter."
+- "Write a LinkedIn connection note."
+- "Ask for a referral."
+- "Ask for a coffee chat during my job search."

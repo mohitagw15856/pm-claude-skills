@@ -77,3 +77,11 @@ Include the line: *"This draft is not legal advice — route through your contra
 - [ ] Do not narrate delay against the calendar — tie it to critical-path activities or expect denial
 - [ ] Do not put a hard number in a notice letter — you'll be held to your worst early guess
 - [ ] Do not editorialise about the owner's competence — facts, clause, impact, relief, reservation; nothing else
+
+## Example Trigger Phrases
+
+- "Write a delay notice."
+- "Put the owner or GC on notice of delay."
+- "Draft a time extension request."
+- "Respond to weather."
+- "Paper a delay for a claim."

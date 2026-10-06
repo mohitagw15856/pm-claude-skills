@@ -64,6 +64,13 @@ Ask for these if not provided:
 - [ ] Do not present a filtered pivot without its scope note — that's how meetings get two truths
 - [ ] Do not stop at the summary — the first pivot locates the question; the drill answers it
 
+## Example Trigger Phrases
+
+- "Analyze this data with a pivot."
+- "What's driving the total?"
+- "Break this down by category and month."
+- "My pivot shows nonsense."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

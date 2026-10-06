@@ -73,6 +73,13 @@ python3 scripts/ab_significance.py 10000 800 10000 880 --json
 
 Frequentist A/B analysis — two-proportion z-test, confidence intervals, guardrails, and the peeking/practical-significance pitfalls.
 
+## Example Trigger Phrases
+
+- "Read out an A/B test."
+- "Analyse experiment results."
+- "Check if a result is statistically significant."
+- "Decide ship/no-ship from test data."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

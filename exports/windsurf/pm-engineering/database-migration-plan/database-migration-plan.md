@@ -460,3 +460,11 @@ Follow this checklist on the day of migration. Mark each step as done before pro
 - [ ] Do not skip the NOT VALID + VALIDATE pattern for constraint additions on large tables — it causes full table locks
 - [ ] Do not define a rollback as "restore from backup" — each phase must have an explicit, fast rollback procedure
 - [ ] Do not omit dual-write logic during the transition period — removing the old column before all writers are updated causes data loss
+
+## Example Trigger Phrases
+
+- "Plan a database migration."
+- "Design a zero-downtime schema change."
+- "Document an expand/contract migration."
+- "Produce a rollback procedure for a database change."
+- "Coordinate a database schema update with a deployment."

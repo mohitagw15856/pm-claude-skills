@@ -116,3 +116,10 @@ Ask for (if not already provided):
 [[agm-in-a-box]] — where the annual report lands; [[committee-handover-pack]]
 for passing the books on; [[budget-variance-analysis]] when the org grows a
 real budget.
+
+## Example Trigger Phrases
+
+- "I just became treasurer."
+- "How do I do the accounts for our club?"
+- "What goes in the treasurer's report?"
+- "Inherits a shoebox of receipts."

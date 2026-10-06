@@ -110,6 +110,12 @@ type body) — hazards and advice are local.
 documents core; [[power-outage-plan]] and [[after-the-disaster]] for during and after;
 [[family-emergency-plan]] for the household plan around it.
 
+## Example Trigger Phrases
+
+- "Build an emergency kit."
+- "What goes in a go-bag?"
+- "Prepare for evacuation."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

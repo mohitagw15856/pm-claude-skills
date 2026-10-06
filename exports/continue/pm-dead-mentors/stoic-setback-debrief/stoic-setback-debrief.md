@@ -104,3 +104,10 @@ decision-journal line to log]
 - [ ] Do not let the user hit send on anything written while the story version was
       driving — the reply drafted tonight gets reread through the camera version
       tomorrow
+
+## Example Trigger Phrases
+
+- "I blew it."
+- "I got torn apart in that meeting."
+- "Our launch failed and I can't stop thinking about it."
+- "Help me recover from this public mistake."

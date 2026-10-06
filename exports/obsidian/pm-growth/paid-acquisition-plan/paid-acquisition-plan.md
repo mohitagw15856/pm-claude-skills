@@ -59,6 +59,13 @@ Ask for these only if they aren't already provided:
 
 Performance-marketing practice — LTV/CAC and payback economics, incrementality testing, and creative-led experimentation.
 
+## Example Trigger Phrases
+
+- "Plan paid media."
+- "Allocate an ad budget across channels."
+- "Set CAC/LTV targets."
+- "Structure a creative-testing program."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -75,3 +75,10 @@ Ask for (if not already provided):
 - [ ] Do not leave contradictions in place because each section "is fine alone" — the window is read as one document
 - [ ] Do not treat more retrieval as more grounding — irrelevant chunks actively mislead
 - [ ] Do not propose structure the assembly code can't enforce — a budget without an enforcement point is a wish
+
+## Example Trigger Phrases
+
+- "Review a system prompt and context assembly."
+- "Cut token usage without losing quality."
+- "Debug an agent that ignores instructions."
+- "Audit how retrieval results."

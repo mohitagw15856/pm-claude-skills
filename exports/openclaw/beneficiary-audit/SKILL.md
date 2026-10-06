@@ -71,3 +71,10 @@ Ask for these if not provided:
 - [ ] Do not declare which document wins a conflict — flag loudly, route to the professional
 - [ ] Do not name minors directly as the fix for anything — that pattern is itself a flag
 - [ ] Do not close the audit at "submitted" — unconfirmed updates are how this audit gets needed twice
+
+## Example Trigger Phrases
+
+- "Check my beneficiaries."
+- "Does my 401k go to my ex?"
+- "Do beneficiary forms beat a will."
+- "What should I update after marriage/divorce/a birth?"

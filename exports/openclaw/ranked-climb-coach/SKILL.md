@@ -121,3 +121,10 @@ Ask for (if not already provided):
 [[stoic-setback-debrief]] is the tilt protocol's parent; [[deep-work-blocking]]
 for making practice time real; [[the-gym]]-style arenas for the negotiation
 kind of ranked.
+
+## Example Trigger Phrases
+
+- "I'm hardstuck."
+- "Review my gameplay approach."
+- "I keep tilting."
+- "How do I actually improve at ranked?"

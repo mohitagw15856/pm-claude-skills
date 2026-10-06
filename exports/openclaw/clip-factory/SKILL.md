@@ -105,3 +105,9 @@ Platform: [fit + recut note]
 [[youtube-script]] writes the long-form these clips come from;
 [[thumbnail-creator]] for the packaging; [[viral-content-framework]] for why
 the hooks work.
+
+## Example Trigger Phrases
+
+- "Clip this podcast."
+- "Make shorts from my video."
+- "What's clippable here?"

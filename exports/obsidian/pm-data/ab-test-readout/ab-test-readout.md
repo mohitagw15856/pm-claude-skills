@@ -63,6 +63,13 @@ Ship / iterate / re-run, plus what to monitor post-launch or what the follow-up 
 - Ignoring a guardrail regression because the primary went up
 - A statistically significant but practically meaningless lift treated as a win
 
+## Example Trigger Phrases
+
+- "Analyse experiment results."
+- "Write an A/B test readout."
+- "Interpret test data."
+- "Decide whether to ship a variant."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

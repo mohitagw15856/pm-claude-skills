@@ -59,6 +59,13 @@ Ask for these only if they aren't already provided:
 
 SBI feedback model (Center for Creative Leadership) and Radical Candor (Kim Scott) — care personally, challenge directly.
 
+## Example Trigger Phrases
+
+- "Give feedback."
+- "Write a feedback note."
+- "Prepare to tell someone something hard about their work."
+- "Coach a report/peer."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

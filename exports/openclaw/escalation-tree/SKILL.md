@@ -70,3 +70,9 @@ Show the branch logic clearly (who, after how long, to whom).
 ## Based On
 
 Support & incident-management practice — severity matrices, tiered ownership, time-based escalation, on-call routing.
+
+## Example Trigger Phrases
+
+- "Design an escalation path."
+- "Support tiers."
+- "Fix tickets bounce around / nothing gets escalated in time."

@@ -115,3 +115,9 @@ Ask for (if not already provided):
 [[premortem-assassin]] is the project/plan version; [[future-self-interview]] is the
 hopeful mirror; [[the-time-capsule]] to log the predictions; [[franklin-decision-ledger]]
 and [[regret-minimizer]] for the decide-or-not layer.
+
+## Example Trigger Phrases
+
+- "I'm about to make a big life change."
+- "What could go wrong with this?"
+- "De-risk my year."

@@ -136,6 +136,12 @@ engine/transmission health — budget for one on any car you're serious about.
 for the leasing route; [[car-tco]] for what this car really costs per
 year; [[franklin-decision-ledger]] when it's down to two cars.
 
+## Example Trigger Phrases
+
+- "Is this car listing legit?"
+- "What should I check on a used car?"
+- "Decode this ad."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

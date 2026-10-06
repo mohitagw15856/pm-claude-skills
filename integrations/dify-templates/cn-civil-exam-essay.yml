@@ -23,9 +23,7 @@ workflow:
     speech_to_text:
       enabled: false
     suggested_questions:
-    - '帮我批改这道申论归纳概括题，资料和我的答案都在这里'
-    - '申论大作文怎么搭框架？用这份资料练一篇'
-    - '这道贯彻执行题要写倡议书，格式是什么？'
+    []
     suggested_questions_after_answer:
       enabled: false
     text_to_speech:
@@ -159,10 +157,10 @@ workflow:
 
             ## 示例触发语
 
-            - "帮我批改这道申论归纳概括题，资料和我的答案都在这里。"
-            - "申论大作文怎么搭框架？用这份资料练一篇。"
-            - "这道贯彻执行题要写倡议书，格式是什么？"
-            - "帮我练习国考申论。"
+            - “帮我批改这道申论归纳概括题，资料和我的答案都在这里。”
+            - “申论大作文怎么搭框架？用这份资料练一篇。”
+            - “这道贯彻执行题要写倡议书，格式是什么？”
+            - “帮我练习国考申论。”
 
             （本应用基于开源技能库 PM Skills 的 cn-civil-exam-essay 技能：https://github.com/mohitagw15856/pm-claude-skills ，MIT 协议。）
         selected: false

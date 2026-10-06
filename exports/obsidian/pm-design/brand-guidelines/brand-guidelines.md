@@ -88,6 +88,13 @@ JavaScript adds later — a partial sample, honestly labelled.
 - [ ] Do not brand at the cost of legibility — a low-contrast on-brand slide fails both jobs
 - [ ] Do not ship a kit without usage rules — a palette and a font list is where inconsistency comes FROM
 
+## Example Trigger Phrases
+
+- "Apply brand guidelines to a document/deck/page."
+- "Extract a brand kit from existing materials."
+- "Keep AI-produced artifacts on-brand."
+- "Write lightweight brand guidelines for a startup."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

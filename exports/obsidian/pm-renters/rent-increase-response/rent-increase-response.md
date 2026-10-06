@@ -68,6 +68,13 @@ Ask for these if not provided:
 - [ ] Do not assert caps or notice periods as numbers — categories with verify-locally flags
 - [ ] Do not let the effective date arrive mid-negotiation — the timeline exists because leverage has an expiry
 
+## Example Trigger Phrases
+
+- "My rent is going up what can I do."
+- "Negotiate my rent increase."
+- "Is this increase even legal?"
+- "Should I stay?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

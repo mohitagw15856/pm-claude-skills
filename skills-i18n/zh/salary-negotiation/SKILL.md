@@ -67,7 +67,7 @@ python3 scripts/comp_compare.py offers.json --signing-years 1 --json
 
 ## 示例触发语
 
-- "帮我谈薪。"
-- "怎么还价这个 offer？"
-- "准备薪酬谈话。"
-- "比较这几个 offer。"
+- “帮我谈薪。”
+- “怎么还价这个 offer？”
+- “准备薪酬谈话。”
+- “比较这几个 offer。”

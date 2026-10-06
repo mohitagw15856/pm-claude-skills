@@ -65,6 +65,13 @@ Ask for these if not provided:
 - [ ] Do not alert on trivial variance — red must mean something or it means nothing
 - [ ] Do not skip the sentence — an updated tracker nobody reads is maintenance cosplay
 
+## Example Trigger Phrases
+
+- "Build me a budget spreadsheet."
+- "Track team spend against budget."
+- "Why do we always blow the budget invisibly?"
+- "Design a household/project budget tracker."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

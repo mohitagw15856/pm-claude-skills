@@ -79,6 +79,13 @@ Bad month: [minimums-only protocol, restart trigger] · Windfalls: [target-debt 
 - [ ] Do not ignore the income side — past a point, the plan's bottleneck is earnings, and saying so is the honest output
 - [ ] Do not touch consolidation/refinancing recommendations beyond naming them as options to research — product choice is advice territory
 
+## Example Trigger Phrases
+
+- "How do I pay off my debts?"
+- "Make me a debt payoff plan."
+- "Tackle my credit cards."
+- "Will I be debt-free?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -75,3 +75,10 @@ A short, purposeful task that reinforces the objective.
 - A flow that's all teacher talk with no student practice
 - No formative checks until a final test
 - One-size-fits-all with no differentiation
+
+## Example Trigger Phrases
+
+- "Write a lesson plan."
+- "Plan a class."
+- "Design a teaching session."
+- "Structure instruction for a topic."

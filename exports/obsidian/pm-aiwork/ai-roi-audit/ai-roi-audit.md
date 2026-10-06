@@ -71,6 +71,13 @@ Ask for (if not already provided):
 - [ ] Do not claim headcount avoidance without the counterfactual hiring plan that was actually cancelled
 - [ ] Do not punish honest "unknowns" by cutting them reflexively — cut requires a *failed* measurement attempt, not a missing one
 
+## Example Trigger Phrases
+
+- "What did our AI tools actually return?"
+- "Should we renew these AI contracts?"
+- "We pay for three overlapping AI subscriptions: which do we keep?"
+- "Build the measurement plan before the next AI spend."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

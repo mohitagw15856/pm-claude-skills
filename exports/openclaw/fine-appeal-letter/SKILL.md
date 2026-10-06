@@ -47,3 +47,10 @@ Appeals officers read thousands of letters. Anger loses; length loses; the word 
 - [ ] Do not bury the ground under narrative — officers triage in the first sentence
 - [ ] Do not promise outcomes — likelihood language stays calibrated ("this ground succeeds regularly when photographed clearly")
 - [ ] Do not encourage appealing a fair fine on volume tactics — the honesty gate exists precisely for this
+
+## Example Trigger Phrases
+
+- "Appeal this parking ticket."
+- "I got a penalty charge notice: can I challenge it?"
+- "Write an appeal for this fine."
+- "Is it worth appealing this ticket?"

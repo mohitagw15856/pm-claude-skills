@@ -66,6 +66,12 @@ Ask for these if not provided:
 - [ ] Do not compare license prices as costs — TCO or the cheap option costs the most
 - [ ] Do not skip the incumbent row — every selection is versus something, and do-nothing has a score
 
+## Example Trigger Phrases
+
+- "Compare these vendors/tools."
+- "Build the selection matrix."
+- "Make this procurement decision defensible."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

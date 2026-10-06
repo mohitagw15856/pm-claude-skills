@@ -67,3 +67,10 @@ Deterministic, stdlib-only, no API. JSON arrays → `{count, schema, head sample
 ## Based On
 
 The context-compression layer pattern — structural compression of tool outputs before the LLM (as in [Headroom](https://github.com/headroomlabs-ai/headroom)) — rebuilt here as a keyless, deterministic, stdlib skill.
+
+## Example Trigger Phrases
+
+- "Shrink this tool output."
+- "My context is full of JSON."
+- "Compress these logs before analysis."
+- "Stop wasting tokens on raw data."

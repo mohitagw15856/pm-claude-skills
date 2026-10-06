@@ -56,3 +56,10 @@ End with a **stop rule** — when to let it go (and how to leave the door open).
 ## Based On
 
 Post-interview and job-search follow-up practice — timed, value-adding touches with a stop rule.
+
+## Example Trigger Phrases
+
+- "Write a post-interview thank-you."
+- "They haven't replied since the interview: write a follow-up."
+- "Nudge a stalled application."
+- "Plan check-ins during my job search."

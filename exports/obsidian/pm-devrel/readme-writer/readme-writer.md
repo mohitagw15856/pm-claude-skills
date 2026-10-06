@@ -73,6 +73,12 @@ A complete `README.md`:
 
 Open-source README best practices (one-line pitch, time-to-first-success quickstart, scannable structure, standard sections).
 
+## Example Trigger Phrases
+
+- "Improve a README."
+- "Document a project."
+- "Make a repo approachable."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

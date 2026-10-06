@@ -107,6 +107,13 @@ decision-journal line to log]
       driving — the reply drafted tonight gets reread through the camera version
       tomorrow
 
+## Example Trigger Phrases
+
+- "I blew it."
+- "I got torn apart in that meeting."
+- "Our launch failed and I can't stop thinking about it."
+- "Help me recover from this public mistake."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

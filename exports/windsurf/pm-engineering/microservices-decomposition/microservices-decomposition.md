@@ -296,3 +296,10 @@ Conway's Law: the architecture of a system mirrors the communication structure o
 - [ ] Do not default to synchronous REST calls for all inter-service communication — using sync calls where async events would decouple services creates cascading failure modes
 - [ ] Do not propose more than one service per bounded context without a clear justification — over-decomposition (nanoservices) creates operational overhead that exceeds the decomposition benefit
 - [ ] Do not begin migration without deploying distributed tracing first — migrating without observability means flying blind when the first extraction causes a production incident
+
+## Example Trigger Phrases
+
+- "Decompose a monolith."
+- "Define service boundaries."
+- "Design a microservices architecture."
+- "Plan a strangler-fig migration."

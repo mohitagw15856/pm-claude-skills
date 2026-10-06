@@ -68,3 +68,9 @@ Ask for these if not provided:
 - [ ] Do not scan the convenient weaknesses — the steelman is what preps the team for real deals
 - [ ] Do not fill unknowable cells by vibe — "not public" is an honest, useful entry
 - [ ] Do not reuse a stale scan silently — pricing cells lie within a quarter; the stamp is load-bearing
+
+## Example Trigger Phrases
+
+- "What are competitors doing?"
+- "How does our pricing/feature set compare?"
+- "Prep the competitive slide honestly."

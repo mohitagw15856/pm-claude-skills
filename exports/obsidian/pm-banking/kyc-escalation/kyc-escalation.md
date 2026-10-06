@@ -72,6 +72,13 @@ End with: *"This memo is analytical support for internal escalation, not a compl
 - [ ] Do not recommend customer outreach without flagging the tipping-off sensitivity for the decision-maker
 - [ ] Do not fabricate transaction data to complete a pattern — mark it `[not in file]`
 
+## Example Trigger Phrases
+
+- "Escalate a KYC alert."
+- "Document an AML concern."
+- "Write up unusual-activity findings for compliance review."
+- "Prepare an enhanced due diligence referral."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

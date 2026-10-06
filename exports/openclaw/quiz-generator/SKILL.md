@@ -59,3 +59,10 @@ For every question: the correct answer **and a one-line explanation** (for MCQs,
 - Obvious throwaway distractors
 - Trick questions that test reading, not the subject
 - Answer key with answers but no explanations
+
+## Example Trigger Phrases
+
+- "Create a quiz."
+- "Write a test."
+- "Make practice questions."
+- "Build an assessment."

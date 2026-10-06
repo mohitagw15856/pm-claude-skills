@@ -119,6 +119,13 @@ access: … · Platform legacy tools to set up now: … · Executor's legal acce
 what your people will be doing — this makes it survivable; [[estate-planning-kit]]
 for the will this plugs into; [[password]] hygiene now makes all of this easier.
 
+## Example Trigger Phrases
+
+- "What happens to my accounts when I die?"
+- "Help my family access my stuff if something happens."
+- "Plan my digital legacy."
+- "Who gets my photos and passwords?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

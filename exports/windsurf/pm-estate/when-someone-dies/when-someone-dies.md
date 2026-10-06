@@ -63,3 +63,10 @@ Ask for these if not provided:
 - [ ] Do not advise paying estate debts or distributing anything — that's the estate process, with its own skill and its own professionals
 - [ ] Do not state legal deadlines as universal — flag and route locally
 - [ ] Do not write in checklist-cheerful tone — plain, warm, and short; the reader is grieving
+
+## Example Trigger Phrases
+
+- "Someone just died: what do I do?"
+- "Give me a checklist after a death."
+- "Help me handle my parent's affairs."
+- "What needs to happen this week?"

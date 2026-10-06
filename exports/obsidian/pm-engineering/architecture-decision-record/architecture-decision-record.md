@@ -146,6 +146,13 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Create an architecture decision record for [topic]"
 - "Help me write up why we chose [option] over [alternative]"
 
+## Example Trigger Phrases
+
+- "Document a technical decision."
+- "Write an ADR."
+- "Record an architecture choice."
+- "Capture why a technology."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

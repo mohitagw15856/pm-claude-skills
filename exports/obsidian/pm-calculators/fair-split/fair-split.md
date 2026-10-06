@@ -74,6 +74,12 @@ Ask for these if not provided:
 - **Presenting the output as a verdict.** It is a proposal with unusually good properties; adults still get to say no.
 - **Using it to steamroll a grieving refuser.** Consent to the mechanism is part of the mechanism.
 
+## Example Trigger Phrases
+
+- "Split an estate fairly."
+- "Who gets the house and what do they owe the others?"
+- "Handle unequal shares."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -61,3 +61,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Lifecycle marketing / behavioural CRM practice — trigger-based journeys, segmentation, and incrementality testing with holdouts.
+
+## Example Trigger Phrases
+
+- "Plan onboarding emails."
+- "Plan our lifecycle campaigns."
+- "Design drip and winback flows."
+- "Build a CRM messaging calendar."

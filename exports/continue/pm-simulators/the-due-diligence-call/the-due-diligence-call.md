@@ -65,3 +65,10 @@ Ask for these if not provided:
 - [ ] Do not let charisma answers pass — the analyst follows up on vibes with arithmetic
 - [ ] Do not conflate the two contexts — acquirer paranoia and investor paranoia probe different organs
 - [ ] Do not stay in character in the debrief
+
+## Example Trigger Phrases
+
+- "Simulate due diligence on my startup."
+- "Stress-test my metrics before the raise."
+- "What will the acquirer's analyst ask?"
+- "Prep me for the DD call."

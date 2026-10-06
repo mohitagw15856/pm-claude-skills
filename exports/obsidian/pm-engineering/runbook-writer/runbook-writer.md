@@ -174,6 +174,13 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not write escalation contacts as "[Team name]" — every escalation row must have a real contact or an explicit flag to fill in
 - [ ] Do not assume the reader knows the system — write for someone who has never touched it before
 
+## Example Trigger Phrases
+
+- "Write a runbook."
+- "Create an ops guide."
+- "Document an operational procedure."
+- "Prepare an incident response playbook."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

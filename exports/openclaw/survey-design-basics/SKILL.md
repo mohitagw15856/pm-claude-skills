@@ -68,3 +68,10 @@ Ask for these if not provided:
 - [ ] Do not ask everything interesting — length is paid in completion bias
 - [ ] Do not launch without the analysis plan — unanalyzable questions are respondent-time theft
 - [ ] Do not report percentages without the selection caveat — who answered is half the result
+
+## Example Trigger Phrases
+
+- "Write our customer/employee survey."
+- "Check these questions for bias."
+- "Why are our survey results useless?"
+- "Design the questionnaire for this decision."

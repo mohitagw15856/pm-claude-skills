@@ -72,6 +72,14 @@ python3 scripts/roi.py in.json --json
 
 Business-case / capital-budgeting practice — ROI, payback period, NPV, and assumption sensitivity.
 
+## Example Trigger Phrases
+
+- "Calculate ROI."
+- "Build a business case."
+- "Justify a purchase/initiative."
+- "Work out payback period."
+- "Compare options by return."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

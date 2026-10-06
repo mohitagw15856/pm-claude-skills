@@ -68,6 +68,13 @@ Ask for these if not provided:
 - [ ] Do not assert repair windows or statutes as numbers — categories, flagged verify-locally
 - [ ] Do not ladder a gas leak — emergencies have their own first rung and it's today
 
+## Example Trigger Phrases
+
+- "My landlord won't fix anything."
+- "Write a repair request."
+- "How long can they ignore a broken heater?"
+- "What are my options if repairs never happen?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

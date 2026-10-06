@@ -63,6 +63,13 @@ Ask for these if not provided:
 - [ ] Do not convert dissent by attrition — recorded disagreement beats exhausted agreement
 - [ ] Do not write the record tomorrow — tomorrow's record is a different meeting's minutes
 
+## Example Trigger Phrases
+
+- "Run this decision meeting."
+- "We discuss forever and never decide."
+- "Structure the meeting where we pick the vendor/plan/design."
+- "Why do our decisions get relitigated?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

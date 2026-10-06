@@ -67,6 +67,13 @@ python3 scripts/comp_compare.py offers.json --signing-years 1 --json
 
 Principled-negotiation practice (*Getting to Yes* — Fisher & Ury: BATNA, interests over positions) applied to compensation.
 
+## Example Trigger Phrases
+
+- "Negotiate salary."
+- "Counter a job offer."
+- "Prepare for a comp conversation."
+- "Compare offers."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

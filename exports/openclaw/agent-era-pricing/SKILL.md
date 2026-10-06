@@ -73,3 +73,9 @@ Ask for (if not already provided):
 - [ ] Do not present only the happy cohort — the bridge shows the losers or it isn't math
 - [ ] Do not force-migrate loyal customers without a year-one cap — churn from pricing anger costs more than the uplift
 - [ ] Do not skip tripwires — a static price in a shifting usage regime is a slow leak in one direction or the other
+
+## Example Trigger Phrases
+
+- "Migrate to usage-."
+- "Price an agent/API tier."
+- "Defend revenue as customers automate their own usage."

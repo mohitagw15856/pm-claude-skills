@@ -203,6 +203,13 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not write the brief without a clear ask from the escalation owner
 - [ ] Do not omit the customer's own stated position — their perspective must be represented fairly
 
+## Example Trigger Phrases
+
+- "This account is threatening to churn."
+- "Write an escalation brief for this customer."
+- "A P1 issue needs executive attention."
+- "Prepare an internal save play."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

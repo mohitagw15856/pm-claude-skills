@@ -109,6 +109,13 @@ Ask for (if not already provided):
 single room. [[stakeholder-influence-mapper]] for reading the room you're
 sending it into; [[the-understudy]] for the deeper version of "represent me."
 
+## Example Trigger Phrases
+
+- "I can't make the meeting: brief someone to decide for me."
+- "Brief someone to negotiate for me."
+- "What would you need from me to represent me?"
+- "Write my red lines and fallbacks for the meeting."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

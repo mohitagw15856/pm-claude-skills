@@ -73,3 +73,10 @@ Ask for these if not provided; if forecast confidence is unstated, assume it is 
 - [ ] Do not treat "the factory says it's fine" as a change-risk analysis — classify each open question yourself
 - [ ] Do not present a tooling recommendation without kill criteria — the moment to define "stop" is before the spend
 - [ ] Do not hide the second-tool moment — if tool life runs out mid-ramp, say when and price it now
+
+## Example Trigger Phrases
+
+- "Choose soft vs hard tools."
+- "Size cavities."
+- "Review a tooling quote."
+- "Assess the risk of tooling before the design is frozen."

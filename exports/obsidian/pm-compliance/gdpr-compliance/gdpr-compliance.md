@@ -72,6 +72,14 @@ It flags activities missing a lawful basis, purpose, or retention, and marks tho
 
 EU GDPR — Art. 6 (lawful basis), Art. 9 (special category), Art. 30 (ROPA), Art. 35 (DPIA), data-subject rights.
 
+## Example Trigger Phrases
+
+- "Get GDPR-compliant."
+- "Build a Record of Processing Activities."
+- "Decide a lawful basis."
+- "Handle data-subject requests."
+- "Check whether a DPIA is needed."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

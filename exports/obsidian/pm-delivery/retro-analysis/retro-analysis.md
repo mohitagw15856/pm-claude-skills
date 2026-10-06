@@ -80,6 +80,13 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not treat carry-over tickets as a velocity problem without first identifying the root cause category
 - [ ] Do not run the same retrospective format every sprint — vary the format to prevent engagement fatigue
 
+## Example Trigger Phrases
+
+- "Run a retrospective."
+- "Analyse sprint data."
+- "Prepare a retro brief."
+- "Turn sprint metrics into discussion prompts."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

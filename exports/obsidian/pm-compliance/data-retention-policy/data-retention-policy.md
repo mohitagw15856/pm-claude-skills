@@ -69,6 +69,12 @@ python3 scripts/retention_schedule.py data.json --json
 
 Data-minimisation practice — GDPR Art. 5(1)(e) storage limitation, sector retention statutes, and defensible-deletion principles.
 
+## Example Trigger Phrases
+
+- "Create a data retention policy."
+- "Set retention periods."
+- "Plan data deletion/minimisation."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

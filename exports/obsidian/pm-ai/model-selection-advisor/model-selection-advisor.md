@@ -73,6 +73,12 @@ and a cost/latency estimate at real volume (pair with [`llm-cost-latency-budget`
 
 Model-selection practice — quality/cost/latency trade-offs, tiered routing with escalation, and eval-driven validation.
 
+## Example Trigger Phrases
+
+- "Which model to use?"
+- "How to cut LLM costs without hurting quality?"
+- "Justify a model choice."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

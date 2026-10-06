@@ -59,6 +59,12 @@ Source: [ip-api.com / ipify] · rerun: `[exact curl]`
 - [ ] Do not answer "what's my IP" from memory or the environment — fetch it; NAT and VPNs make assumptions wrong
 - [ ] Do not conflate ISP and org — the `as`/`org` fields differ exactly when it's interesting (resellers, VPNs, corporate egress)
 
+## Example Trigger Phrases
+
+- "What's my public IP?"
+- "Where is this IP from?"
+- "Is this IP a VPN/datacenter?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

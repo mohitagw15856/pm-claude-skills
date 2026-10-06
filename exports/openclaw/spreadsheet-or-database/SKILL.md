@@ -64,3 +64,10 @@ Ask for these if not provided:
 - [ ] Do not big-bang the migration — one workflow proves the tool; the rest follows evidence
 - [ ] Do not move without a named maintainer — an orphaned database is strictly worse than the sheet
 - [ ] Do not treat scale alone as the verdict — modern sheets scale further than the folklore; the other four signals carry more
+
+## Example Trigger Phrases
+
+- "Should this be a database?"
+- "Our spreadsheet is breaking."
+- "Is it time to move off sheets?"
+- "What should replace this monster workbook?"

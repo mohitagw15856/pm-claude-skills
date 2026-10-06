@@ -63,3 +63,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Data-contract practice — schema + semantics + measurable quality SLAs, semantic versioning, and producer/consumer change governance.
+
+## Example Trigger Phrases
+
+- "Write a data contract."
+- "Define a schema agreement."
+- "Set data SLAs."
+- "Stop a producer from silently breaking downstream consumers."

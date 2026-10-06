@@ -64,6 +64,13 @@ Ask for these only if they aren't already provided:
 
 FOIA / public-records practice (specificity, statutory citation, fee-waiver & expedited-processing provisions).
 
+## Example Trigger Phrases
+
+- "Write a FOIA request."
+- "Write a freedom of information request to the council."
+- "Request these public records."
+- "Make this records request hard to deny."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

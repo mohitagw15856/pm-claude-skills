@@ -63,3 +63,10 @@ End verbatim: *"This is a plain-language reading, not legal advice — release l
 - [ ] Do not present jurisdiction-dependent release rules as universal
 - [ ] Do not let "standard agreement" pass unexamined — standard is what companies call their preferred terms
 - [ ] Do not advise signing or refusing — decode, price, and hand the decision back with dates
+
+## Example Trigger Phrases
+
+- "Decode my severance."
+- "Is this severance offer normal?"
+- "Review my separation agreement."
+- "Should I sign this release?"

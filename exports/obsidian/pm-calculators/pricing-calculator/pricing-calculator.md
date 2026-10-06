@@ -71,6 +71,14 @@ python3 scripts/pricing.py in.json --json
 
 Pricing & break-even analysis — contribution margin, break-even volume, price-elasticity sensitivity.
 
+## Example Trigger Phrases
+
+- "Calculate pricing."
+- "Model a price increase."
+- "Find break-even volume."
+- "Set tier prices to a margin target."
+- "Estimate the revenue effect of a pricing change."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

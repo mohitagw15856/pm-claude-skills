@@ -143,6 +143,13 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Give me a code review checklist for a [language] [change type]"
 - "Review checklist for a high-risk PR in [language]"
 
+## Example Trigger Phrases
+
+- "Review code."
+- "Check a PR."
+- "Review a pull request."
+- "Generate a code review checklist."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

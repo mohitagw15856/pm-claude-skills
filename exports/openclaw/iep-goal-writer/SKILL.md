@@ -56,3 +56,10 @@ How and how often the goal is measured, so a progress report can be written from
 - Criteria that can't be measured ("to the best of their ability")
 - Fabricating test scores or a disability category
 - Goals a general-ed teacher couldn't collect data on
+
+## Example Trigger Phrases
+
+- "Write an IEP goal."
+- "Draft annual goals."
+- "Make a goal measurable."
+- "List accommodations."

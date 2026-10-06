@@ -410,3 +410,11 @@ Accept the current state and revisit the problem in [timeframe].
 - [ ] Do not leave the security implications section blank or write "N/A" without a reasoned explanation
 - [ ] Do not write open questions without assigning a named owner and a resolution deadline
 - [ ] Do not skip the "impact of not solving this" section — without it, reviewers cannot assess urgency
+
+## Example Trigger Phrases
+
+- "Write an RFC."
+- "Document a technical proposal."
+- "Create a design doc."
+- "Write an architecture decision for review."
+- "Produce a technical specification for team feedback."

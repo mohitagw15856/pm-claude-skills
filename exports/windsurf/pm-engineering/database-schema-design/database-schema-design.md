@@ -362,3 +362,11 @@ If this schema is being introduced to an existing system, note the migration app
 - [ ] Do not omit timezone-awareness — use TIMESTAMPTZ, never plain TIMESTAMP
 - [ ] Do not design without documenting normalization decisions — future maintainers need the reasoning, not just the structure
 - [ ] Do not skip the access patterns section — schema without query patterns cannot be evaluated for correctness
+
+## Example Trigger Phrases
+
+- "Design a database."
+- "Document an existing schema."
+- "Model entities and relationships."
+- "Define table structures."
+- "Plan an index strategy."

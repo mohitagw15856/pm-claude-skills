@@ -72,3 +72,10 @@ Ask for these only if they aren't already provided (else infer and label):
 ## Based On
 
 Marketplace SEO & CRO practice — relevance-and-performance ranking, field-appropriate keyword placement, and conversion optimization (title, images, reviews, price).
+
+## Example Trigger Phrases
+
+- "Optimize an Amazon/Etsy listing."
+- "Improve marketplace SEO."
+- "Fix a product listing that isn't selling."
+- "Write keyword-rich titles and bullets."

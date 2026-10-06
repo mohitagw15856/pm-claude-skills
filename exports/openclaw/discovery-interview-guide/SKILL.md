@@ -129,3 +129,10 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not synthesise across fewer than 5 interviews — themes from 2–3 interviews reflect anecdote, not pattern; wait for saturation
 - [ ] Do not write screener questions that are too easy to pass — if participants can guess the "right" answer, you will recruit the wrong people
 - [ ] Do not treat participant opinions as evidence of future behaviour — what people say they will do consistently diverges from what they actually do
+
+## Example Trigger Phrases
+
+- "Plan user interviews."
+- "Write a customer discovery interview guide."
+- "Plan Jobs-to-be-Done interviews."
+- "Help me validate this problem with customers."

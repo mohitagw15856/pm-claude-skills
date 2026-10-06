@@ -68,6 +68,13 @@ Ask for these if not provided:
 - [ ] Do not skip the walk-out branch — buyers who've rehearsed leaving negotiate differently
 - [ ] Do not stay in character in the debrief
 
+## Example Trigger Phrases
+
+- "Practice negotiating at a dealership."
+- "Simulate the finance office."
+- "What tricks will the dealer use?"
+- "Prep me before I buy a car."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

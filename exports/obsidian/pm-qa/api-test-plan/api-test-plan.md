@@ -70,6 +70,13 @@ Cover deliberately: **happy path** (correct status + schema), **validation** (mi
 
 API testing practice — contract/schema validation, status-code correctness, auth/authz coverage, and negative/boundary testing beyond the happy path.
 
+## Example Trigger Phrases
+
+- "Test an API."
+- "Write API test cases."
+- "Plan REST/GraphQL endpoint testing."
+- "Validate an API contract."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

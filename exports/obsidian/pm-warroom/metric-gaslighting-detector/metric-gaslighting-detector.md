@@ -51,6 +51,13 @@ Dashboards rarely contain false numbers. They contain true numbers arranged to c
 - [ ] Do not rewrite the numbers — the honest retelling reframes; it never adjusts figures
 - [ ] Do not skip auditing metrics that support conclusions you like — run the eleven on the favourable ones first
 
+## Example Trigger Phrases
+
+- "These numbers feel too tidy."
+- "Is this dashboard lying to me?"
+- "Audit this KPI report before I present it."
+- "I inherited these metrics: can I trust them?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

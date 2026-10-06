@@ -119,6 +119,12 @@ not prescribe · pointer to current authoritative menopause guidance]
 symptoms sprawl beyond one system; [[symptom]] tracking feeds the case;
 [[hrt-decision|the-second-opinion]] if the first GP won't engage.
 
+## Example Trigger Phrases
+
+- "Is this perimenopause?"
+- "My doctor won't take my symptoms seriously."
+- "Help me prepare for a menopause appointment."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

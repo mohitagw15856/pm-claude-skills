@@ -50,3 +50,9 @@ Prints the base case (`base 15 on-queue / 22 rostered · SL 81% · ASA 38s · oc
 - [ ] Do not chase 99% SLAs without showing the cost curve — the last few points of service level are where budgets go to die
 - [ ] Do not ignore occupancy because the SLA passes — attrition is a lagging indicator of this exact number
 - [ ] Do not use this for email/async queues with day-long SLAs without saying the model degrades — Erlang C is built for live channels
+
+## Example Trigger Phrases
+
+- "Staffing a support/CS team."
+- "Defend headcount."
+- "Check whether an SLA is mathematically possible with the current roster."

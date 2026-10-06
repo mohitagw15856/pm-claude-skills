@@ -92,3 +92,9 @@ Total honest time: [X]h[Y]m of your [window]
       state prices as fact
 - [ ] Do not plan zero slack — the gap between games is where game night
       actually happens
+
+## Example Trigger Phrases
+
+- "What board game should we play?"
+- "My partner hates long games."
+- "We always end up arguing over what to play."

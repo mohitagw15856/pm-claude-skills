@@ -63,3 +63,9 @@ Every competency needs **at least one strong, recent, evidenced example** — ga
 ## Based On
 
 Engineering/IC ladder promotion practice — operate-at-level evidence mapped to a competency rubric.
+
+## Example Trigger Phrases
+
+- "Write a promo packet/case."
+- "Prepare for a promotion committee."
+- "Make the case for a level-up."

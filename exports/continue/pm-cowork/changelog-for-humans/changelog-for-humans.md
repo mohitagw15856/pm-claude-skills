@@ -63,3 +63,10 @@ Ask for these if not provided:
 - [ ] Do not overclaim improvements — the number or a modest verb
 - [ ] Do not hide fixed bugs in vague language — the people who hit them are searching for exactly those words
 - [ ] Do not write one changelog for two audiences with different stakes — split it or lose both
+
+## Example Trigger Phrases
+
+- "Write the release notes."
+- "Turn this commit list into a changelog."
+- "Announce this update to users."
+- "Why does nobody read our changelogs?"

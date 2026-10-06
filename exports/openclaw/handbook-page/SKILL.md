@@ -68,3 +68,10 @@ Ask for these if not provided:
 - [ ] Do not skip the example to save time — it's the half of the page that actually teaches
 - [ ] Do not publish ownerless — orphan pages rot into the stale wiki that taught readers to re-ask humans
 - [ ] Do not keep explaining orally — every post-page explanation is a vote against your own infrastructure
+
+## Example Trigger Phrases
+
+- "Document how we do X."
+- "Write the wiki page for this process."
+- "I explain this every month."
+- "Make this knowledge survive me."

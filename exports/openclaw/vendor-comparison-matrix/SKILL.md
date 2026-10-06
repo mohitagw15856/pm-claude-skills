@@ -68,3 +68,9 @@ Ask for these if not provided:
 - [ ] Do not score marketing claims as facts — the flags exist because 📢 and ✅ are different knowledge
 - [ ] Do not compare license prices as costs — TCO or the cheap option costs the most
 - [ ] Do not skip the incumbent row — every selection is versus something, and do-nothing has a score
+
+## Example Trigger Phrases
+
+- "Compare these vendors/tools."
+- "Build the selection matrix."
+- "Make this procurement decision defensible."

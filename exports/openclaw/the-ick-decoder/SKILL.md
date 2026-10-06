@@ -121,3 +121,9 @@ notice and let it pass — the real one, not the flattering one]
 [[dating-profile-doctor]] for the front of the funnel; [[franklin-decision-ledger]]
 when it's a genuine should-I-stay call; [[future-self-interview]] for the longer view
 on a relationship fork.
+
+## Example Trigger Phrases
+
+- "Is this a red flag?"
+- "Am I just scared?"
+- "I always find a reason to end things."

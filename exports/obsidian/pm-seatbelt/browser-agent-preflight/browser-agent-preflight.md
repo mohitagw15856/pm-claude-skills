@@ -69,6 +69,12 @@ Ask for these if not provided:
 - [ ] Do not stock the agent's profile with unrelated logins — need-to-reach, or it's blast radius
 - [ ] Do not run headless with supervised-grade gates — no human is watching, so the machine must be stricter
 
+## Example Trigger Phrases
+
+- "Let my agent browse safely."
+- "Is it safe to give the agent computer/browser use?"
+- "Review my browser agent's setup."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

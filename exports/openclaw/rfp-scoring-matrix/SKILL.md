@@ -81,3 +81,11 @@ If the brief is thin, propose a default weighting and label it `[assumed — con
 - [ ] Do not average away a 2-point evaluator disagreement — reconcile it with evidence
 - [ ] Do not score vendor claims without evidence — an unsubstantiated "yes we can" anchors at 1–2, not 3
 - [ ] Do not present an award without the sensitivity check — a winner by 0.1 points at chosen weights is a coin flip, and the readout must say so
+
+## Example Trigger Phrases
+
+- "Score RFP responses."
+- "Compare vendor bids."
+- "Build a supplier evaluation matrix."
+- "Run a sourcing event scorecard."
+- "Decide which bidder to award."

@@ -59,6 +59,13 @@ Source: [canonical article URL] · fetched [date] · rerun: `[exact curl]`
 - [ ] Do not answer "what does Wikipedia say" from memory — that question is a fetch instruction by definition
 - [ ] Do not skip the URL — the link is the receipt
 
+## Example Trigger Phrases
+
+- "What does Wikipedia say about X?"
+- "Get me the current summary of a topic."
+- "Check a fact against Wikipedia."
+- "Has this article changed."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

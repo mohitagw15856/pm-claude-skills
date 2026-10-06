@@ -109,3 +109,9 @@ Your point, preserved: [confirm the actual message survived]
 [[masking-budget]] for the energy side of NT-passing; [[saying-no-kindly]] for the
 hardest translation; [[stakeholder-influence-mapper]] when the gap is political,
 not neurological.
+
+## Example Trigger Phrases
+
+- "What did my manager actually mean?"
+- "My message came across wrong again."
+- "Why do people think I'm blunt?"

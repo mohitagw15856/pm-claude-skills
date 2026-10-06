@@ -62,3 +62,10 @@ A simple timeline of the next 12 months' visits/actions so it reads as a plan, w
 - Skipping dental, weight, and behavior (the commonly-neglected pillars)
 - No rationale, so the owner sees cost without understanding value
 - Positioning it as a replacement for a veterinary exam
+
+## Example Trigger Phrases
+
+- "Create a wellness plan."
+- "Plan preventive care."
+- "Set up a vaccination/parasite schedule."
+- "Advise an owner on routine care for a puppy/kitten/adult/senior pet."

@@ -62,6 +62,13 @@ Everything needed, ready to gather.
 - Differentiation that's only "more/less time"
 - Activities that don't produce evidence of the stated objective
 
+## Example Trigger Phrases
+
+- "Plan a lesson."
+- "Write a lesson plan."
+- "Align a lesson to a standard."
+- "Turn a topic into a class period."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

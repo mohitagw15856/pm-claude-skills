@@ -59,3 +59,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Consulting close-out / retrospective practice — outcome review, profitability reality, lessons-to-process, and the renewal/referral motion.
+
+## Example Trigger Phrases
+
+- "Wrap up a client project."
+- "Run an engagement retro."
+- "Write a project close-out."
+- "Plan the follow-on."

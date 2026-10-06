@@ -60,6 +60,13 @@ Write the copy for each block:
 
 Direct-response copywriting (PAS / problem-agitate-solve, unique-mechanism, offer-stack, risk reversal) — applied ethically.
 
+## Example Trigger Phrases
+
+- "Write a sales page."
+- "Write a long-form sales letter."
+- "Write the page for my course."
+- "Write direct-response copy that closes."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

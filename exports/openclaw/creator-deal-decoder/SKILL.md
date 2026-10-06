@@ -117,3 +117,9 @@ exclusivity, a contract lawyer's hour is cheap insurance.
 [[first-client-contract]] for freelance service contracts; [[influencer-brief]]
 is the brand's side of this table; [[late-invoice-escalation]] when net-30
 becomes net-never.
+
+## Example Trigger Phrases
+
+- "Is this brand deal fair?"
+- "What does perpetual usage mean?"
+- "Should I sign this collab agreement?"

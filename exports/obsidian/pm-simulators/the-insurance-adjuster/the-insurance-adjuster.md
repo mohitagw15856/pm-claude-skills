@@ -67,6 +67,12 @@ Ask for these if not provided:
 - [ ] Do not simulate legal strategy — technique for the call, triggers for the lawyer, line held
 - [ ] Do not stay in character in the debrief
 
+## Example Trigger Phrases
+
+- "Practice the settlement call."
+- "Is this settlement offer low?"
+- "What will the insurance company try?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

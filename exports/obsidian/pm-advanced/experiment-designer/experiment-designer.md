@@ -78,6 +78,14 @@ Ask the user for these if not provided:
 - [ ] Do not run the same experiment on the same population multiple times without correction — multiple testing inflates the chance of a false positive proportionally
 - [ ] Do not use more than one primary metric — multiple primary metrics require multiple hypothesis corrections and make the ship/kill decision ambiguous
 
+## Example Trigger Phrases
+
+- "Design an experiment."
+- "Run an A/B test."
+- "Calculate sample size."
+- "Interpret test results."
+- "Assess whether an experiment was successful."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

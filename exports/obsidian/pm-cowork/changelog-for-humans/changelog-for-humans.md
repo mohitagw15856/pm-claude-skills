@@ -66,6 +66,13 @@ Ask for these if not provided:
 - [ ] Do not hide fixed bugs in vague language — the people who hit them are searching for exactly those words
 - [ ] Do not write one changelog for two audiences with different stakes — split it or lose both
 
+## Example Trigger Phrases
+
+- "Write the release notes."
+- "Turn this commit list into a changelog."
+- "Announce this update to users."
+- "Why does nobody read our changelogs?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

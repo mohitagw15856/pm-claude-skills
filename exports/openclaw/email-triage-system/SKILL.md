@@ -62,3 +62,10 @@ Ask for these if not provided:
 - [ ] Do not check between windows — ambient email is the tax that never stops
 - [ ] Do not process newest-first during backlog clearing — oldest-first or the backlog is immortal
 - [ ] Do not moralize the overflow — inboxes overflow structurally; the system is the fix, not discipline
+
+## Example Trigger Phrases
+
+- "Help me get to inbox zero."
+- "My email is out of control."
+- "Build me an email triage system."
+- "Process this backlog."

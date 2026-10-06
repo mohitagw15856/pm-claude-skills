@@ -122,3 +122,9 @@ Ask for (if not already provided):
 [[maintainer-triage]] when the backlog arrives; [[the-maintainers-no]] for
 the moments docs can't pre-answer; [[changelog-generator]] and
 [[pr-description-writer]] for the release rhythm's moving parts.
+
+## Example Trigger Phrases
+
+- "My repo is getting attention."
+- "I just open-sourced something."
+- "Set up my project properly."

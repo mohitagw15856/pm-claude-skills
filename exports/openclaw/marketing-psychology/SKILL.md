@@ -67,3 +67,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Behavioral economics & persuasion research (Cialdini's principles, Kahneman framing/loss aversion, Fogg behavior model) — applied ethically.
+
+## Example Trigger Phrases
+
+- "Make copy/a page/an offer more persuasive."
+- "Apply psychological triggers."
+- "Reduce friction."
+- "Understand why something does/doesn't convert."

@@ -66,6 +66,13 @@ Ask for these if not provided:
 - [ ] Do not ultimatum with a competing offer — preference plus facts, never threats
 - [ ] Do not miss the window while polishing — a good letter today beats a perfect one after the deadline
 
+## Example Trigger Phrases
+
+- "Appeal my financial aid."
+- "Write a scholarship letter."
+- "Ask for more aid after circumstances changed."
+- "Respond to an aid decision."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

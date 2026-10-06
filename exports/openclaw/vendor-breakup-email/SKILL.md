@@ -66,3 +66,10 @@ Ask for these if not provided:
 - [ ] Do not revoke your own access before the export is verified — sequence is data, then keys
 - [ ] Do not negotiate live on the retention call unprepared — the pre-decided number is the armor
 - [ ] Do not burn the door — spare exits are free options on the future
+
+## Example Trigger Phrases
+
+- "Write a cancellation email to our vendor."
+- "We're not renewing how do I tell them."
+- "End this contractor relationship professionally."
+- "Switch providers without drama."

@@ -61,3 +61,10 @@ Ask for these only if they aren't already provided (else explain generally / mar
 ## Based On
 
 Financial-literacy practice — plain-language statement walkthroughs (P&L, balance sheet, cash flow), the ratios that matter, and the profit-vs-cash distinction.
+
+## Example Trigger Phrases
+
+- "Explain this P&L."
+- "Explain our balance sheet in plain English."
+- "What does this cash flow statement tell me?"
+- "Make these financials understandable to a non-finance reader."

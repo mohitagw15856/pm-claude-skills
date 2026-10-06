@@ -62,3 +62,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 B2B cold-email practice — relevance/trigger-led openers, one-outcome value, single low-friction ask, value-adding follow-up cadence.
+
+## Example Trigger Phrases
+
+- "Write a cold email."
+- "Write a sales outreach email to this prospect."
+- "Write a prospecting email."
+- "Draft a cold email sequence for a business prospect."

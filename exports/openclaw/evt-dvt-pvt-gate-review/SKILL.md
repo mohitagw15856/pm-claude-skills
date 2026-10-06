@@ -75,3 +75,11 @@ Ask for these if not provided; run the review on partial data but mark unverifia
 - [ ] Do not average yield across builds with different configurations
 - [ ] Do not let "conditional go" be a euphemism for go — unconditioned conditionals are the oldest gate trick
 - [ ] Do not score a criterion pass because no data contradicts it — no data is a fail-to-verify
+
+## Example Trigger Phrases
+
+- "Run a gate review."
+- "Decide EVT exit or DVT entry."
+- "Review build results."
+- "Assess whether to proceed to the next build."
+- "Triage open issues before a phase gate."

@@ -61,6 +61,12 @@ Every competency needs **at least one strong, recent, evidenced example** — ga
 
 Engineering/IC ladder promotion practice — operate-at-level evidence mapped to a competency rubric.
 
+## Example Trigger Phrases
+
+- "Write a promo packet/case."
+- "Prepare for a promotion committee."
+- "Make the case for a level-up."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

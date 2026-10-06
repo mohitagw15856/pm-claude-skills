@@ -113,3 +113,9 @@ rule · re-audit date]
 [[meal-prep-os]] is the fix for half the leaks; [[attention-reset]] — the
 same chosen/captured method, different currency; [[debt-payoff]] when the
 found money needs a destination.
+
+## Example Trigger Phrases
+
+- "We spend how much on food?!"
+- "Audit my grocery spending."
+- "Cut our food bill."

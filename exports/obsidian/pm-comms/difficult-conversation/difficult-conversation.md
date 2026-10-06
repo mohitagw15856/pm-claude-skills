@@ -64,6 +64,14 @@ Ask for these only if they aren't already provided:
 
 Crucial Conversations (Patterson et al.) and Difficult Conversations (Stone, Patton, Heen) — facts vs. story, the third story, safety.
 
+## Example Trigger Phrases
+
+- "Prepare for a difficult conversation."
+- "Address a conflict."
+- "Deliver bad news."
+- "Confront a colleague."
+- "Have a hard talk with a manager/report/peer."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

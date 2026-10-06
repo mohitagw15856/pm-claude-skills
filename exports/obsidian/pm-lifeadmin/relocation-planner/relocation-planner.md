@@ -70,6 +70,12 @@ Ask for these if not provided:
 - [ ] Do not treat an unsecured destination home as one item on the list — it IS the list until resolved
 - [ ] Do not give visa or tax-residency advice — sequence around it and route it to professionals
 
+## Example Trigger Phrases
+
+- "Help me plan my move."
+- "I'm moving in six weeks what do I do."
+- "Move to another country logistics."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

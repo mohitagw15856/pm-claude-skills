@@ -52,6 +52,13 @@ If a rubric was given, map the feedback to its criteria.
 - Criticism with no model of the better version
 - A tone that discourages instead of pointing forward
 
+## Example Trigger Phrases
+
+- "Give feedback on a student's work."
+- "Write grading comments."
+- "Respond to an essay."
+- "Coach a learner."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

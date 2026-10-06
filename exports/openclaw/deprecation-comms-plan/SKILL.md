@@ -73,3 +73,9 @@ The at-risk account list, who owns each, the CSM talking points, the "customer c
 - One-size messaging that treats a whale like a dormant free user
 - No plan for the accounts that physically can't migrate in time
 - "Why" that blames the customer or the old system instead of owning the change
+
+## Example Trigger Phrases
+
+- "Winding down."
+- "Plan a breaking change."
+- "Migrate customers off a legacy path."

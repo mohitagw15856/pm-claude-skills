@@ -72,3 +72,10 @@ Ask for these if not provided:
 - **Comparing homes on the package price** instead of the like-for-like itemised build.
 - **Rushing the reader.** Nothing here expires in an afternoon; a family that takes a day to compare loses nothing.
 - **Ever equating cost with love.** The skill exists to break that equation, not reinforce it.
+
+## Example Trigger Phrases
+
+- "Compare funeral quotes."
+- "Is this funeral price fair?"
+- "What can we decline?"
+- "Help me read this price list."

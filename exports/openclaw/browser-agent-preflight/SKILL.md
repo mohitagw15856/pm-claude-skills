@@ -71,3 +71,9 @@ Ask for these if not provided:
 - [ ] Do not let buy/post/transfer flow without a gate — the gate is where a hijack gets caught
 - [ ] Do not stock the agent's profile with unrelated logins — need-to-reach, or it's blast radius
 - [ ] Do not run headless with supervised-grade gates — no human is watching, so the machine must be stricter
+
+## Example Trigger Phrases
+
+- "Let my agent browse safely."
+- "Is it safe to give the agent computer/browser use?"
+- "Review my browser agent's setup."

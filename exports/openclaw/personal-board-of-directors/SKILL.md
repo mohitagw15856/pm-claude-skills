@@ -73,3 +73,10 @@ Decision rule: [stated + why] · Count: [n–n] · **Board recommendation:** …
 - [ ] Do not vote without naming what would flip each vote — an unflippable vote is a prejudice
 - [ ] Do not let the board answer a vague question — sharpen it to decidable first
 - [ ] Do not hide the recommendation in balance — the board exists to conclude, and the user can overrule it
+
+## Example Trigger Phrases
+
+- "Help me decide."
+- "Pressure-test this decision."
+- "What would smart advisors say?"
+- "Convene my board."

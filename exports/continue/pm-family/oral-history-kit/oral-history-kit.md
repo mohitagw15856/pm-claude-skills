@@ -64,3 +64,9 @@ Ask for these if not provided:
 - **Recording without the boundaries talk.** One story they regret telling can end the whole project, and deserves to.
 - **Editing them into fluency.** The detours, repetitions, and dialect are not noise; they are the person.
 - **Waiting for the right moment.** The kit's whole premise is that the right moment is the one you schedule.
+
+## Example Trigger Phrases
+
+- "Interview my grandmother about her life."
+- "Record dad's stories before it is too late."
+- "Make a family history book."

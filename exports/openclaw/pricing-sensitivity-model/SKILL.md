@@ -52,3 +52,10 @@ It prints the points (`n=40 OPP=12.05 IPP=12.75 range=9.66–15.05 dropped=1`) a
 - [ ] Do not hide the dropped respondents — non-monotone answers are evidence about the survey, not noise to delete
 - [ ] Do not report a single point without the range — the range is the finding; the point is a summary of it
 - [ ] Do not pool segments that obviously differ (SMB with enterprise) — the pooled curves cross somewhere nobody actually is
+
+## Example Trigger Phrases
+
+- "Run Van Westendorp on these survey answers."
+- "Find our acceptable price range."
+- "Analyse this pricing survey."
+- "Plan a four-question pricing survey."

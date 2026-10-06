@@ -59,6 +59,13 @@ Ask for these only if they aren't already provided:
 
 Transcreation / creative-localization practice — intent-led recreation, multiple routes, back-translation, in-market validation.
 
+## Example Trigger Phrases
+
+- "Adapt this tagline for Japan."
+- "Transcreate our campaign for the German market."
+- "This translation is correct but flat."
+- "Localise this slogan, not just translate it."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

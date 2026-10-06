@@ -67,6 +67,13 @@ Ask for these if not provided:
 - [ ] Do not fight the twelfth small ask individually — name the pattern and sell the structural fix
 - [ ] Do not say "no" where "yes, via change order" or "yes, in phase 2" is true — those keep the relationship AND the boundary
 
+## Example Trigger Phrases
+
+- "My client keeps adding requests."
+- "Is this scope creep?"
+- "How do I say that's out of scope nicely?"
+- "Write a change order email."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

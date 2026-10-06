@@ -58,6 +58,12 @@ Source: Yahoo Finance public endpoint (unofficial; may be delayed) · rerun: `[e
 - [ ] Do not present this endpoint as trading-grade — the fence is part of the answer
 - [ ] Do not give investment advice under any phrasing — the refusal is the skill working
 
+## Example Trigger Phrases
+
+- "What's this stock at?"
+- "How did the market do today?"
+- "Get me a ticker's recent range."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -60,6 +60,13 @@ Follow [Keep a Changelog](https://keepachangelog.com) conventions:
 
 The Keep a Changelog standard and Semantic Versioning, written for the reader rather than the committer.
 
+## Example Trigger Phrases
+
+- "Write release notes."
+- "Turn these commits into a changelog entry."
+- "Write the version announcement from these PRs."
+- "Group these changes into Added, Changed and Fixed."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

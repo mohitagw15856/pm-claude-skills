@@ -67,6 +67,12 @@ Night shifts: [split] · Meals: [plan] · Visitors: [policy, verbatim] · Escala
 - [ ] Do not write "both parents" as an owner — that's zero owners
 - [ ] Do not state insurance or leave rules as fact — windows vary; flag every one for verification
 
+## Example Trigger Phrases
+
+- "Help me prepare for a baby."
+- "What do I need to do before my due date?"
+- "Set up our parental leave plan."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

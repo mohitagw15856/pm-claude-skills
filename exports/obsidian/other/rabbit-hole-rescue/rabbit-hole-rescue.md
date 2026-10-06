@@ -123,6 +123,12 @@ engine; [[two-worlds-translator]] for other belief divides; [[scam-message-decod
 and the [pm-digital-safety](../../plugins/pm-digital-safety/) bundle for the
 misinformation supply side.
 
+## Example Trigger Phrases
+
+- "My dad believes X now."
+- "My friend's gone down a conspiracy hole."
+- "How do I talk to them without a fight?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

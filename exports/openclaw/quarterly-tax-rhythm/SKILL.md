@@ -68,3 +68,10 @@ Ask for these if not provided:
 - [ ] Do not design a records system that takes an evening — it will be abandoned by week three
 - [ ] Do not treat the tax account as accessible — the first raid ends the system
 - [ ] Do not shame the mid-year starter — catch-up framing, calmly; the second-best time is now
+
+## Example Trigger Phrases
+
+- "How do taxes work for my side income?"
+- "How much should I set aside?"
+- "What are estimated quarterly payments?"
+- "Set up my freelance tax system."

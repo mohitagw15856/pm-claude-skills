@@ -59,6 +59,13 @@ Source: open-notify.org (position fetched live; orbital constants are stable fac
 - [ ] Do not confuse overhead with visible — the sunlight condition is the teach
 - [ ] Do not flatten the fun — this skill is allowed to be delighted; precision and joy aren't rivals
 
+## Example Trigger Phrases
+
+- "Where is the ISS right now?"
+- "Is the space station overhead?"
+- "Can I see the ISS tonight?"
+- "Track the station for the kids."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

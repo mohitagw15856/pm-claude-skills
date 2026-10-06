@@ -109,6 +109,13 @@ with the value.
 - [ ] Do not hand off the brief without confirming engineering constraints are accurate — a constraint that is wrong is worse than no constraint
 - [ ] Do not omit the emotional context of the user — designs without emotional grounding produce technically correct but experientially flat results
 
+## Example Trigger Phrases
+
+- "Write a design brief."
+- "Create a design handoff."
+- "Brief a designer on a new feature."
+- "Translate a PRD into design requirements."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

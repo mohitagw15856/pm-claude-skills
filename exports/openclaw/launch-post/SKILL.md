@@ -61,3 +61,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Developer-launch craft (Show HN / Product Hunt norms): substance over hype, honest trade-offs, seed the discussion.
+
+## Example Trigger Phrases
+
+- "Write a Show HN post."
+- "Write our Product Hunt blurb."
+- "Write a launch tweet thread for this library."
+- "Announce our open-source project to developers."

@@ -70,3 +70,10 @@ Ask for these if not provided:
 - [ ] Do not threaten to move while unwilling to — landlords price bluffs quickly and permanently
 - [ ] Do not assert caps or notice periods as numbers — categories with verify-locally flags
 - [ ] Do not let the effective date arrive mid-negotiation — the timeline exists because leverage has an expiry
+
+## Example Trigger Phrases
+
+- "My rent is going up what can I do."
+- "Negotiate my rent increase."
+- "Is this increase even legal?"
+- "Should I stay?"

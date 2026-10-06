@@ -81,3 +81,9 @@ A single-column, ATS-friendly resume in this order:
 ## Based On
 
 Achievement-led, ATS-aware resume practice (reverse-chronological, quantified-impact bullets, keyword alignment).
+
+## Example Trigger Phrases
+
+- "Rewrite a resume or CV."
+- "Turn experience into a resume."
+- "Tailor a resume to a job."

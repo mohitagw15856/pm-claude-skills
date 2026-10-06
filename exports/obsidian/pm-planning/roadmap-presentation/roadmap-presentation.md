@@ -139,6 +139,12 @@ Every roadmap needs a narrative, not just a timeline. Structure it as:
 - [ ] Do not present LATER items as commitments — frame everything outside NOW as directional, not promised
 - [ ] Do not skip the success metrics section — without it, stakeholders cannot evaluate whether the roadmap is working
 
+## Example Trigger Phrases
+
+- "Build a product roadmap."
+- "Create a roadmap slide."
+- "Communicate quarterly plans to execs."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

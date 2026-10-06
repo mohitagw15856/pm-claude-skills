@@ -80,6 +80,13 @@ Ask for (if not already provided):
 - [ ] Do not let the state record and the brief disagree — the record is written from the brief's facts
 - [ ] Do not track everything forever — items resolved two editions ago leave the state record
 
+## Example Trigger Phrases
+
+- "Our weekly report keeps repeating itself."
+- "Only tell me what changed since last week."
+- "Set up a scheduled monitor."
+- "Make this recurring update delta-aware."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

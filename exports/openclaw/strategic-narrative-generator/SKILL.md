@@ -80,3 +80,10 @@ Ask the user for these if not provided:
 - [ ] Do not omit the "what's not on the roadmap" section — what you are choosing not to do is as important as what you are doing
 - [ ] Do not set themes without measurable metrics — a theme without a metric cannot be tracked or held to account
 - [ ] Do not skip the hard questions section — preparing for objections in advance is the purpose of the narrative exercise
+
+## Example Trigger Phrases
+
+- "Explain the roadmap."
+- "Write the why behind the roadmap."
+- "Create a narrative for all-hands."
+- "Make the roadmap tell a story."

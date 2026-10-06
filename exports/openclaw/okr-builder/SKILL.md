@@ -111,3 +111,10 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not write more than 4 KRs per objective — too many KRs dilute focus and make scoring ambiguous at quarter end
 - [ ] Do not use binary KRs (ship/don't ship) — every KR must be scorable on a 0.0–1.0 scale based on degree of achievement
 - [ ] Do not skip the health check section on baselines — OKRs without current baselines cannot be scored objectively at quarter end
+
+## Example Trigger Phrases
+
+- "Write OKRs."
+- "Set quarterly goals."
+- "Define key results."
+- "Review existing OKRs."

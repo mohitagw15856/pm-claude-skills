@@ -58,3 +58,10 @@ Ordered by impact-on-the-decision: what to fix first, how (drop / impute / dedup
 - "Clean your data" with no specific issues or checks
 - Treating all issues as equally severe regardless of the decision
 - Fixing data silently with no record of what was changed
+
+## Example Trigger Phrases
+
+- "Assess data quality."
+- "Audit a dataset."
+- "Check data before analysis."
+- "Explain why numbers look off."

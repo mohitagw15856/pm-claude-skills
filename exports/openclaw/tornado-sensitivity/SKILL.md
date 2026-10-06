@@ -48,3 +48,10 @@ Prints `base=1.371 · top driver: lifetime (swing 1.097, 33% of total)` and writ
 - [ ] Do not run tornado on a model whose formula the owner hasn't confirmed — sensitivity on the wrong model is confidently useless
 - [ ] Do not let a huge-swing driver with made-up bounds stand — the recommendation there is "go find the real range", not "panic"
 - [ ] Do not present this as risk analysis — it's attention allocation; downstream probability work still exists
+
+## Example Trigger Phrases
+
+- "Which assumption actually moves the answer?"
+- "Build a tornado chart for this model."
+- "Run a sensitivity analysis on our LTV."
+- "We keep arguing about drivers: which ones matter?"

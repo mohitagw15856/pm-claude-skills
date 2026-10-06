@@ -56,3 +56,9 @@ Parallel agents multiply speed exactly when the decomposition is right — and m
 - [ ] Do not average contradictory results — a contradiction is a defect to resolve, with a cause
 - [ ] Do not merge everything then verify once — verify at each join while causes are still traceable
 - [ ] Do not delegate the judgment-bearing core (the decision, the synthesis, the taste) — delegate the legwork around it
+
+## Example Trigger Phrases
+
+- "Work can genuinely parallelise."
+- "Decide whether to delegate."
+- "Do it yourself?"

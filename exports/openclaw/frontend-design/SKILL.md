@@ -64,3 +64,10 @@ Ask for (if not already provided):
 - [ ] Do not ship default focus rings removed with nothing in their place — that's not minimal, it's broken
 - [ ] Do not design only the happy state — empty/loading/error are where users actually judge the product
 - [ ] Do not mix density registers — a marketing hero above a data grid needs a deliberate seam, not a collision
+
+## Example Trigger Phrases
+
+- "Build a landing page that looks designed."
+- "Restyle this UI."
+- "Make this dashboard look less generic."
+- "Establish the visual system for a new app."

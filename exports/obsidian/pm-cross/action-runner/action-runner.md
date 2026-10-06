@@ -105,6 +105,13 @@ which previews, gates, executes, and records. The skill never executes directly.
 - "Helpfully" doing more than was approved
 - Forgetting to record what was done — the brain must reflect reality
 
+## Example Trigger Phrases
+
+- "File tickets from a checklist."
+- "Create issues from a PRD."
+- "Execute the recommended next steps."
+- "Wire a skill's output into GitHub/Linear/Slack."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

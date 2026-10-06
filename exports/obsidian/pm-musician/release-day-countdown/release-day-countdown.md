@@ -127,6 +127,12 @@ press/local via EPK · the no-pay-for-play warning]
 the money arrives; [[clip-factory]] turns the one song into the fifteen
 pieces; [[content-calendar]] for the ongoing rhythm after.
 
+## Example Trigger Phrases
+
+- "I'm releasing a single/EP."
+- "Should I submit to playlists?"
+- "Plan my release."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

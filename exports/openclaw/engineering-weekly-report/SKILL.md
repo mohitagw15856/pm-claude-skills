@@ -175,3 +175,10 @@ If no decisions are pending: *No decisions pending.*
 - [ ] Do not bury escalations inside a risk table row — anything needing leadership attention must be called out explicitly in the Escalations section
 - [ ] Do not list blocked items without naming a specific owner and a concrete unblocking action — "waiting on X" is not a blocker entry, it is a placeholder
 - [ ] Do not write a report that exceeds two printed pages — length signals the author has not done the editorial work of deciding what matters to stakeholders
+
+## Example Trigger Phrases
+
+- "Write a team update."
+- "Write the weekly engineering report."
+- "Write our sprint status email."
+- "Update stakeholders on the team's week."

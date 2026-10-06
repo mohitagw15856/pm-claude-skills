@@ -66,3 +66,10 @@ Ask for these if not provided:
 - [ ] Do not use the rule as a weapon — the verdict includes "happen"; meeting-zero is not the goal, meeting-earned is
 - [ ] Do not ship the agenda at meeting-start — unprepped deciders are attendees
 - [ ] Do not install the norm by decree — the leader's own cancelled meeting is the announcement
+
+## Example Trigger Phrases
+
+- "Write an agenda for this meeting."
+- "Should this meeting happen?"
+- "Our meetings have no agendas."
+- "Cancel this meeting politely."

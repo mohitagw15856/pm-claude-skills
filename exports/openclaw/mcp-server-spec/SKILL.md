@@ -73,3 +73,10 @@ Ask for (if not already provided):
 - [ ] Do not expose destructive actions ungated because "the client will be careful"
 - [ ] Do not skip the never-exposed list — an MCP server without one hasn't been threat-modelled
 - [ ] Do not ship without running the agent test plan — schema-valid and agent-usable are different properties
+
+## Example Trigger Phrases
+
+- "Spec an MCP server."
+- "Expose a product to agents."
+- "Design tools for Claude."
+- "Review why an existing MCP server performs badly."

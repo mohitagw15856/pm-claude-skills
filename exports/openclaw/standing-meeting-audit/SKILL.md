@@ -67,3 +67,10 @@ Ask for these if not provided:
 - [ ] Do not shrink everything politely instead of killing anything — ten 25-minute zombies still eat the calendar
 - [ ] Do not ignore the chains — killing the prep meeting while keeping the review it feeds breaks both
 - [ ] Do not audit once — without the expiry guard, the calendar regrows to baseline in two quarters
+
+## Example Trigger Phrases
+
+- "Audit our recurring meetings."
+- "Our calendar is all standing syncs."
+- "Which meetings should die?"
+- "Reset the team's meeting load."

@@ -67,6 +67,13 @@ Ask for these if not provided:
 - [ ] Do not quote the spiciest take as the finding — representative or labeled as an outlier
 - [ ] Do not let confirmation win silently — the contradicted hypotheses are the synthesis's most valuable line
 
+## Example Trigger Phrases
+
+- "Synthesize these user/customer/exit interviews."
+- "What did we actually learn from the calls?"
+- "Turn 12 transcripts into insights."
+- "Are these themes real?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

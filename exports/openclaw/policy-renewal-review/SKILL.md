@@ -70,3 +70,10 @@ End with: *"This review is analytical support, not a coverage or placement deter
 - [ ] Do not present the claims record without remediation narratives — unexplained losses price worst
 - [ ] Do not recommend deductible increases without stating the retained-volatility trade-off in money terms
 - [ ] Do not invent market rate movements — label market context `[to confirm with broker]`
+
+## Example Trigger Phrases
+
+- "Prepare for a policy renewal."
+- "Review cover before renewal."
+- "Check if limits are still adequate."
+- "Build renewal negotiation points."

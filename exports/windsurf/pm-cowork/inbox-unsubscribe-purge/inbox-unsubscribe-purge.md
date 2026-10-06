@@ -58,3 +58,9 @@ Ask for these if not provided:
 - [ ] Do not build filters for email that shouldn't exist — source settings first
 - [ ] Do not purge alphabetically — impact order; the top ten senders are half the volume
 - [ ] Do not skip the first-touch habit — without it, the purge is an annual chore instead of a one-time fix
+
+## Example Trigger Phrases
+
+- "My inbox is all newsletters."
+- "Cut my email volume."
+- "Set up filters for the noise."

@@ -71,3 +71,10 @@ Drag it into Slack. Want it calmer (sparkle) or bigger (--scale 4)?
       scroll mode and say why
 - [ ] Do not promise Slack emoji-size rendering — this makes message GIFs;
       custom emoji have their own size rules the user handles in Slack settings
+
+## Example Trigger Phrases
+
+- "Make a GIF to celebrate the launch in Slack."
+- "Make a pixel-art banner for this PR comment."
+- "Make a team win feel like one."
+- "Make a scrolling marquee GIF."

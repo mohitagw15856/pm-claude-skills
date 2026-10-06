@@ -116,3 +116,9 @@ not prescribe · pointer to current authoritative menopause guidance]
 [[doctor-visit-prep]] for the appointment mechanics; [[diagnosis-limbo-kit]] if the
 symptoms sprawl beyond one system; [[symptom]] tracking feeds the case;
 [[hrt-decision|the-second-opinion]] if the first GP won't engage.
+
+## Example Trigger Phrases
+
+- "Is this perimenopause?"
+- "My doctor won't take my symptoms seriously."
+- "Help me prepare for a menopause appointment."

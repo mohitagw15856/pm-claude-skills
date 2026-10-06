@@ -70,3 +70,9 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Secure code/design review practice (OWASP Top 10 & ASVS risk areas, severity-ranked findings, actionable remediation).
+
+## Example Trigger Phrases
+
+- "Do a security review?"
+- "Security-review a change/PR."
+- "Check a feature for vulnerabilities."

@@ -95,6 +95,12 @@ Total honest time: [X]h[Y]m of your [window]
 - [ ] Do not plan zero slack — the gap between games is where game night
       actually happens
 
+## Example Trigger Phrases
+
+- "What board game should we play?"
+- "My partner hates long games."
+- "We always end up arguing over what to play."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

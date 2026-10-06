@@ -67,6 +67,12 @@ Ask for these if not provided:
 - **Editing them into fluency.** The detours, repetitions, and dialect are not noise; they are the person.
 - **Waiting for the right moment.** The kit's whole premise is that the right moment is the one you schedule.
 
+## Example Trigger Phrases
+
+- "Interview my grandmother about her life."
+- "Record dad's stories before it is too late."
+- "Make a family history book."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

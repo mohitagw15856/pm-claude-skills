@@ -59,3 +59,10 @@ A simple, teacher-doable method (tally, rating, frequency) and a review point to
 - Escape-motivated behavior met with removal (which rewards it)
 - No replacement behavior taught — only "stop that"
 - A data system so heavy the teacher can't sustain it
+
+## Example Trigger Phrases
+
+- "Plan a behavior intervention."
+- "Address a disruptive."
+- "Write a BIP."
+- "Set up positive behavior supports."

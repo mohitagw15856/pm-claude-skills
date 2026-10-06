@@ -56,6 +56,13 @@ The short bio rewritten in first person, for an about page or LinkedIn summary w
 
 Professional bio practice — the one-liner / short / long convention, specificity over adjectives.
 
+## Example Trigger Phrases
+
+- "Write a bio."
+- "Write my about me."
+- "Write a speaker bio."
+- "Write a short profile blurb."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

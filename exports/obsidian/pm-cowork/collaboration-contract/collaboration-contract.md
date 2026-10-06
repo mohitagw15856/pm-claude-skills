@@ -66,6 +66,13 @@ Ask for these if not provided:
 - [ ] Do not escalate surprises — the 48h clause is the partnership's real load-bearing wall
 - [ ] Do not write three pages — one page gets signed and remembered; three get filed and violated
 
+## Example Trigger Phrases
+
+- "Kick off this cross-team project right."
+- "Our two teams keep colliding."
+- "Define how we'll work with the other team."
+- "Set up the partnership before we start."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -66,3 +66,10 @@ Ask for these if not provided:
 - [ ] Do not invent material to fill gaps — flag them; wrong confidence is worse than known ignorance
 - [ ] Do not write questions the notes can't answer — self-tests must be checkable against the guide
 - [ ] Do not pad the cram sheet — 20 items maximum; a cram sheet with everything is a guide with nothing
+
+## Example Trigger Phrases
+
+- "Make a study guide."
+- "Combine my notes."
+- "Prep me for the exam."
+- "Organize this course material."

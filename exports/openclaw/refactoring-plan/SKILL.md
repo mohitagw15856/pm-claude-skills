@@ -63,3 +63,10 @@ Order them so risk drops early and each step is reversible.
 ## Based On
 
 Refactoring discipline (Martin Fowler): behavior-preserving transformations, characterization tests, small steps.
+
+## Example Trigger Phrases
+
+- "Plan a refactor of this module."
+- "This code is tangled: how do we clean it up safely?"
+- "Restructure this before we add the feature."
+- "Plan small behaviour-preserving steps."

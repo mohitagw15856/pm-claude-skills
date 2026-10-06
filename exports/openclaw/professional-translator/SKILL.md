@@ -58,3 +58,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Professional translation practice — meaning-based (not literal) translation, register matching, and the translation-vs-localization distinction.
+
+## Example Trigger Phrases
+
+- "Translate this document."
+- "Translate this email into Spanish."
+- "Improve this machine translation."
+- "Translate this keeping the tone."

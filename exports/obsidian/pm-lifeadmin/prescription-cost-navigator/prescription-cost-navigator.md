@@ -69,6 +69,13 @@ Ask for these if not provided:
 - [ ] Do not shame the constraint — affordability is a logistics problem, and treating it as noncompliance is how doses get skipped in secret
 - [ ] Do not recommend unverified import/online sources — the never-do list is load-bearing
 
+## Example Trigger Phrases
+
+- "My prescription is too expensive."
+- "How do I save on my meds?"
+- "Is there a cheaper version of this drug?"
+- "I can't afford my medication."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

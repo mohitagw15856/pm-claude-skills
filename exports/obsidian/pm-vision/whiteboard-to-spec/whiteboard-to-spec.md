@@ -69,6 +69,13 @@ The whiteboard is where teams decide; the photo of it is where decisions go to d
 - [ ] Do not ignore spatial grouping — merging two separate clusters into one list destroys the meaning
 - [ ] Do not drop the marginalia — initials, dates, and edge notes are often owners and deadlines
 
+## Example Trigger Phrases
+
+- "Write up what we drew."
+- "Turn these whiteboard photos into a spec."
+- "Here's a photo of our sticky-note wall: make it a plan."
+- "Turn this napkin sketch into a spec."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

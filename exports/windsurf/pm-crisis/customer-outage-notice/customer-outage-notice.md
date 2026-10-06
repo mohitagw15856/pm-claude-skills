@@ -69,3 +69,10 @@ non-technical; link a full post-mortem if one exists.
 ## Based On
 
 Incident-communication practice — phased status updates (investigating/identified/monitoring/resolved), committed update cadence, and blameless plain-language summaries.
+
+## Example Trigger Phrases
+
+- "Write an outage notice."
+- "Write a status-page update for this incident."
+- "Email customers about the service disruption."
+- "Write a maintenance notice."

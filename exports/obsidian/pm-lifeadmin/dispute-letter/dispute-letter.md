@@ -66,6 +66,12 @@ Provide a **short version** for an online dispute form, and **notes** on documen
 
 Consumer dispute practice — precise identification, evidence-backed reasoning, a specific requested correction, and a documented paper trail.
 
+## Example Trigger Phrases
+
+- "Dispute a credit-card charge."
+- "Contest a bill."
+- "Challenge a credit-report error."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

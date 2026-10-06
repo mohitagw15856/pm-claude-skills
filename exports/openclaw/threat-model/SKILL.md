@@ -69,3 +69,9 @@ Cover **S**poofing, **T**ampering, **R**epudiation, **I**nformation disclosure, 
 ## Based On
 
 Threat-modeling practice (STRIDE, trust boundaries, data-flow diagrams, risk-ranked mitigations).
+
+## Example Trigger Phrases
+
+- "Do a security design review?"
+- "Document security risks."
+- "Apply STRIDE to a design."

@@ -65,3 +65,10 @@ Mark inferred keywords/inventory *(confirm)*.
 ## Based On
 
 E-commerce SEO & merchandising practice — intent-driven category pages, faceted-navigation crawl control, default-sort strategy, and on-page/technical SEO.
+
+## Example Trigger Phrases
+
+- "Design a category page."
+- "Write a brief for our collection page."
+- "Improve category SEO and merchandising."
+- "Plan a product listing page that ranks."

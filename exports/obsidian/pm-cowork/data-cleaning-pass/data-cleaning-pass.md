@@ -64,6 +64,12 @@ Ask for these if not provided:
 - [ ] Do not global find-replace without column scoping — the classic self-inflicted corruption
 - [ ] Do not deliver cleaned data without the log — numbers whose provenance can't be stated get re-cleaned by the next skeptic
 
+## Example Trigger Phrases
+
+- "Clean this export."
+- "Why is my pivot double-counting?"
+- "Prep this data for analysis."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

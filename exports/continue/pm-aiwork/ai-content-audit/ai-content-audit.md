@@ -73,3 +73,10 @@ The gate is a checklist with an owner, not a sentiment.
 - [ ] Do not enrich everything — a piece with no reason to exist gets deleted, not decorated
 - [ ] Do not install the gate without an owner — a checklist nobody signs is the slop pipeline with extra steps
 - [ ] Do not frame the report as anti-AI — the finding is a *quality* failure that AI made cheap to commit at scale
+
+## Example Trigger Phrases
+
+- "Find slop in a content library."
+- "Audit AI-written content quality."
+- "Explain why content engagement."
+- "Set a quality bar for AI-assisted publishing."

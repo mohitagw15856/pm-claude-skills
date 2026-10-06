@@ -56,6 +56,13 @@ How to receive the inspector: cooperate, don't argue, know where the logs and pe
 - Blocking or arguing with the inspector on the day
 - Prepping once instead of building the habits that pass every time
 
+## Example Trigger Phrases
+
+- "Prep for a health inspection."
+- "Do a food-safety self-audit?"
+- "Avoid critical violations."
+- "Get ready for the health department."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -177,3 +177,10 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not list risks vaguely — "low engagement" without specifics is not actionable
 - [ ] Do not leave recommended actions without named owners and deadlines
 - [ ] Do not conflate product usage frequency with product value delivery
+
+## Example Trigger Phrases
+
+- "Score account health."
+- "Assess renewal risk."
+- "Build a health dashboard."
+- "Evaluate an account's likelihood to renew."

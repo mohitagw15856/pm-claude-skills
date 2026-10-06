@@ -61,3 +61,10 @@ Ask for these if not provided:
 - [ ] Do not ascend the green wall — leadership reads exceptions; routine is one line
 - [ ] Do not summarize activity into the rollup — deltas and risks; the diary stays below
 - [ ] Do not automate away the synthesis — the paragraph is the report; the pipeline just clears its runway
+
+## Example Trigger Phrases
+
+- "I compile status from five teams every week."
+- "Streamline our reporting chain."
+- "My Friday is spent chasing updates."
+- "Make the rollup write itself."

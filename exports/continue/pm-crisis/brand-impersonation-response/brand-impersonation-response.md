@@ -77,3 +77,10 @@ Verification anchors customers can check (verified handles list on your domain, 
 - [ ] Do not let takedowns destroy the evidence — preserve first, always
 - [ ] Do not leave the deepfaked human out of the response — an executive learning the plan from the press release is a second incident
 - [ ] Do not treat it as a one-off — impersonation that worked once is a campaign; monitoring is part of the response, not the postscript
+
+## Example Trigger Phrases
+
+- "A deepfake of our CEO is going around."
+- "Customers are reporting a fake version of our app."
+- "Someone cloned our support line."
+- "Prepare an impersonation playbook before it happens."

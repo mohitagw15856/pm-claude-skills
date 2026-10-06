@@ -62,6 +62,13 @@ Use the real provided values; mark any placeholders clearly.
 
 Schema.org structured data + Google's structured-data guidelines for rich results (JSON-LD, required fields, content-match rules).
 
+## Example Trigger Phrases
+
+- "Add schema markup to this page."
+- "Write JSON-LD for our product pages."
+- "Get rich snippets for our FAQ."
+- "Make this page eligible for star ratings in search."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

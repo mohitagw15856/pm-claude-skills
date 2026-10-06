@@ -61,6 +61,13 @@ Source: USGS real-time feeds · rerun: `[exact curl]`
 - [ ] Do not present the global significant feed as "nothing near you" — filter by place before saying no
 - [ ] Do not dramatize small events or shrug at large ones — the bands calibrate the tone
 
+## Example Trigger Phrases
+
+- "Was there an earthquake just now?"
+- "Any recent quakes near Tokyo?"
+- "Were there any big earthquakes today?"
+- "Monitor seismic activity near me."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

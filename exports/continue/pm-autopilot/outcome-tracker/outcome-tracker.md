@@ -86,3 +86,10 @@ If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, r
 - [ ] Do not let a framework take credit for hits and blame "execution" for misses — score the prediction as made
 - [ ] Do not compute calibration on fewer than ~10 resolved predictions per framework — report "insufficient history" instead
 - [ ] Do not skip recording because the decision feels obvious — obvious bets that miss are the most valuable calibration data
+
+## Example Trigger Phrases
+
+- "Log what this plan predicts."
+- "Review what actually happened."
+- "Score last quarter's forecast against reality."
+- "Did our prioritisation framework work?"

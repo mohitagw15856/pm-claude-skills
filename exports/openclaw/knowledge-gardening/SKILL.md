@@ -67,3 +67,9 @@ Ask for these if not provided:
 - [ ] Do not let contradicting pages coexist overnight — canonical-plus-pointer, same day found
 - [ ] Do not maintain without funnels — a weeded garden with no planting is a shrinking one
 - [ ] Do not solve findability rot with user training — the garden adapts to the askers, not the reverse
+
+## Example Trigger Phrases
+
+- "Our wiki is a graveyard."
+- "Who maintains the knowledge base?"
+- "Set up knowledge management that lasts."

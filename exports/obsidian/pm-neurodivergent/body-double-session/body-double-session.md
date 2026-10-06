@@ -110,6 +110,13 @@ Format (and why it fits): … · Length: … · Start ritual: … · Break rule:
 [[deep-work-blocking]] for the solo-structure layer; [[task-triage-matrix]] to pick
 which atom first; [[masking-budget]] and [[meltdown-map]] for the ND context around it.
 
+## Example Trigger Phrases
+
+- "I can't start this task."
+- "Body double with me."
+- "I only work when someone's around."
+- "Sit with me while I do my taxes."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

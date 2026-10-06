@@ -121,3 +121,10 @@ password). Pairs with the go-bag; follow official guidance in a real event.
 [[go-bag-builder]] (this is its documents core); [[password]] and [[digital-death-plan]]
 for the secure-access thinking; [[after-the-disaster]] uses this kit to start claims;
 [[insurance-claim]] for the claim the home inventory supports.
+
+## Example Trigger Phrases
+
+- "What documents do I need for an emergency?"
+- "What would I need if my house burned down?"
+- "Build a grab-and-go document kit."
+- "Back up our important papers before a disaster."

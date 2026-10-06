@@ -107,6 +107,12 @@ Ask for (if not already provided):
 - [ ] Do not duplicate [[ai-usage-policy]] — internal use rules live there;
       this is outward-facing disclosure
 
+## Example Trigger Phrases
+
+- "Do we have to label AI content?"
+- "Write our AI disclosure policy."
+- "Are we covered for the AI Act?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

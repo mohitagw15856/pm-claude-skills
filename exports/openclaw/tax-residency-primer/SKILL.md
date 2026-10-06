@@ -118,3 +118,9 @@ handled by a qualified professional for your specific countries and situation.
 [[healthcare-system-primer]] for the other newcomer systems; [[micro-retirement-planner]]
 if the move is a career break; [[financial-model-narrative|budget-variance-analysis]]
 neighbors for business finances — but a professional owns the tax itself.
+
+## Example Trigger Phrases
+
+- "Am I tax resident in [country]?"
+- "Do I pay tax in two countries?"
+- "What about tax?"

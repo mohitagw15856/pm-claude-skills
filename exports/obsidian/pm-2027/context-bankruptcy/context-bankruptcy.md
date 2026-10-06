@@ -110,6 +110,13 @@ Ask for (if not already provided):
 [[context-budget]] for the token-layout side; [[agent-severance]] when the
 answer is offboarding, not bankruptcy.
 
+## Example Trigger Phrases
+
+- "My agent keeps acting on outdated beliefs."
+- "Purge my assistant's stale memory."
+- "Audit what my agent currently believes."
+- "Reset the agent's memory after our pivot."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

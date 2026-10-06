@@ -62,6 +62,12 @@ Source: [HN Firebase API / Algolia HN search] · rerun: `[exact curls]`
 - [ ] Do not answer "what's on HN" from memory — the front page turns over in hours
 - [ ] Do not editorialize the community's votes into objective importance — it's HN's taste, labeled as such
 
+## Example Trigger Phrases
+
+- "What's on Hacker News?"
+- "Summarize HN today."
+- "What's the discussion on this story?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

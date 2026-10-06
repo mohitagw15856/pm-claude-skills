@@ -48,3 +48,11 @@ How to undo if the fix doesn't do what they expected (usually `git reflog` + res
 - [ ] Do not give commands without saying what each one does
 - [ ] Do not assume the remote state — ask or label it if it changes the safe path
 - [ ] Do not skip `git reflog` when work might be recoverable — it usually is
+
+## Example Trigger Phrases
+
+- "Undo a commit."
+- "Recover lost work."
+- "Fix a bad merge."
+- "Resolve a detached HEAD."
+- "Get out of a git mess."

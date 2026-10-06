@@ -65,3 +65,10 @@ The single cheapest, fastest test that would most change your confidence — wha
 - Generic critique that applies to any startup
 - Recommending a 6-month build as the "test"
 - A verdict with no path forward
+
+## Example Trigger Phrases
+
+- "Validate a startup idea."
+- "Evaluate a business idea."
+- "Stress-test a concept."
+- "Decide whether something is worth building."

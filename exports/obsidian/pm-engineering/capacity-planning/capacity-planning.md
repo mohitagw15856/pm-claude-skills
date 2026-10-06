@@ -367,6 +367,14 @@ Define the thresholds that require explicit action — not retrospective fixes a
 - [ ] Auto-scaling configuration includes both scale-out AND scale-in triggers, and a min/max range
 - [ ] Actions are ordered by urgency — immediate items are genuinely immediate, not backlog filler
 
+## Example Trigger Phrases
+
+- "Plan infrastructure capacity."
+- "Forecast resource needs."
+- "Model traffic growth."
+- "Define scaling strategy."
+- "Produce a capacity review for a service."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

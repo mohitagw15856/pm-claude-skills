@@ -121,6 +121,13 @@ specific — verify with the official bureaus and providers.
 [[healthcare-system-primer]] for the other systems; [[first-100k-plan|investing-for-beginners]]
 neighbors once established; [[debt-payoff]] if there's existing debt to manage.
 
+## Example Trigger Phrases
+
+- "I have no credit history in [country]."
+- "Build credit as a newcomer/immigrant."
+- "Why was I rejected with a great score back home?"
+- "How do I get a credit card/loan as a new arrival?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

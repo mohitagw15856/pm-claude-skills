@@ -65,6 +65,12 @@ Ask for these if not provided:
 - [ ] Do not let new-people-energy reopen settled calls — the rule distinguishes information from mood
 - [ ] Do not write and never link — retrieval is where the log earns; capture alone is journaling
 
+## Example Trigger Phrases
+
+- "Set up a decision log."
+- "We keep re-deciding the same things."
+- "Where do decisions get recorded?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

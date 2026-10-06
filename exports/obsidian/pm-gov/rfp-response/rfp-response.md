@@ -60,6 +60,13 @@ Ask for these only if they aren't already provided:
 
 Government/enterprise procurement practice (compliance matrix, evaluation-criteria-driven writing, best-value framing).
 
+## Example Trigger Phrases
+
+- "Respond to this RFP."
+- "Bid on this tender."
+- "Answer this procurement questionnaire."
+- "Build the compliance matrix for this bid."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

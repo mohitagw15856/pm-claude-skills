@@ -64,3 +64,9 @@ Day-of decision-maker: **[name]** (authority: under $[X] / under 30 min — deci
 - [ ] Do not draft a coordinator-friend without relieving them of guest duties — both jobs is neither
 - [ ] Do not leave rain as a vibe — it's a decision with a time and an owner
 - [ ] Do not build a zero-slack masterpiece — the buffer blocks are the plan working, not waste
+
+## Example Trigger Phrases
+
+- "Make our wedding day timeline."
+- "Who tells the vendors where to go?"
+- "How do we not deal with problems at our own wedding?"

@@ -58,3 +58,10 @@ Ask the user for these if not provided:
 - [ ] High-threat signals have specific recommended responses (not "monitor")
 - [ ] Implications connect to specific roadmap items or strategic bets
 - [ ] Strategic summary gives a landscape-level view, not just a list of individual signals
+
+## Example Trigger Phrases
+
+- "A competitor just launched this feature: what does it mean for us?"
+- "Analyse this competitor's price change."
+- "What does their new partnership signal?"
+- "Write this month's competitive intelligence report."

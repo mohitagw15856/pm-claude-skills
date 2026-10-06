@@ -62,6 +62,13 @@ Ask for these if not provided:
 - [ ] Do not respect the 10-slide superstition over the one-point rule — more glanceable slides beat fewer walls
 - [ ] Do not shrink fonts to fit more — the font floor is the room's physics voting
 
+## Example Trigger Phrases
+
+- "My slides are too busy."
+- "How much text per slide?"
+- "Fix this wall-of-bullets deck."
+- "Make this readable from the back of the room."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -65,6 +65,13 @@ Ask for these if not provided:
 - [ ] Do not promise transition help you won't deliver — "available for questions through [date]" only if true
 - [ ] Do not pick the last day before checking vesting and bonus dates — politeness is not worth a cliff
 
+## Example Trigger Phrases
+
+- "Write my resignation letter."
+- "How do I resign professionally?"
+- "What do I say when I quit?"
+- "Review my resignation email."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -62,3 +62,10 @@ For each: **Headline · Supporting line · Action(s)**, plus a one-line note on 
 ## Based On
 
 UX writing & onboarding practice — empty states as activation moments, differentiated by type, with value framing and a single clear action.
+
+## Example Trigger Phrases
+
+- "Write an empty state."
+- "What should this screen say before there's any data?"
+- "Write the no-results state."
+- "Write first-run placeholder content."

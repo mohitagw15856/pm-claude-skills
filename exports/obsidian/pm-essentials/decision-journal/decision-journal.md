@@ -68,6 +68,13 @@ Ask for these if not provided:
 - [ ] Do not skip small decisions categorically — the journal's patterns come fastest from frequent entries
 - [ ] Do not let the review become self-flagellation or victory laps — one quadrant, one lesson, close the entry
 
+## Example Trigger Phrases
+
+- "Help me think through this decision."
+- "Start a decision journal."
+- "Review my past decision."
+- "Why do I keep making the same mistake?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

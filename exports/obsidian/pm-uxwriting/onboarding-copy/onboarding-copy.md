@@ -60,6 +60,13 @@ Keep every piece concise, encouraging, and outcome-focused; note where copy must
 
 Product onboarding & activation practice — outcome-led welcome, guided path to the first win, progress nudges, and a celebrated activation moment.
 
+## Example Trigger Phrases
+
+- "Write onboarding copy."
+- "Write our welcome flow."
+- "Write the product tour tooltips."
+- "Write activation messages for new users."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

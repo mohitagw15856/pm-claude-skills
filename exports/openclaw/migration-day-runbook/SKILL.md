@@ -71,3 +71,10 @@ Ask for these if not provided:
 - [ ] Do not bulk-recreate external shares — each one re-issued is each one re-decided
 - [ ] Do not leave the old platform writable "during transition" — that's two sources of truth, i.e., zero
 - [ ] Do not skip the rollback line — a migration that can't abort will be pushed through broken
+
+## Example Trigger Phrases
+
+- "We're moving from Dropbox to Drive."
+- "Migrate our files to SharePoint."
+- "Plan the file migration day."
+- "How do we switch platforms safely?"

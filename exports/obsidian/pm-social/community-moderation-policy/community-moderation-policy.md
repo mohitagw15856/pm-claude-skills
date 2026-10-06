@@ -65,6 +65,13 @@ How a member contests an action: where to appeal, who reviews (not the acting mo
 - Unwritten rules enforced as if everyone knew them
 - Warning-laddering genuine threats or doxxing instead of acting immediately
 
+## Example Trigger Phrases
+
+- "Write moderation rules for our Discord."
+- "Write a code of conduct for our forum."
+- "Overhaul moderation for our subreddit."
+- "Set up an enforcement ladder for our community."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

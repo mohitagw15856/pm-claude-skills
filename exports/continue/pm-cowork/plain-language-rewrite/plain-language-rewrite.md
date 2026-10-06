@@ -64,3 +64,10 @@ Ask for these if not provided:
 - [ ] Do not write down at the audience — plain and respectful are the same register
 - [ ] Do not serve two audiences with one text — name the split when asked to
 - [ ] Do not skip the expert pass on high-stakes text — readable-but-wrong is the worst outcome on the board
+
+## Example Trigger Phrases
+
+- "Make this readable."
+- "Translate this for non-experts."
+- "De-jargon this announcement."
+- "Rewrite this so my parents/customers/new hires understand it."

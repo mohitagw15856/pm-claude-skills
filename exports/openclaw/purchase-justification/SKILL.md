@@ -68,3 +68,10 @@ Ask for these if not provided:
 - [ ] Do not leave "use what we have" for the meeting — dispatch it in the memo or lose to it live
 - [ ] Do not split invoices to dodge thresholds — scope real pilots instead
 - [ ] Do not end with "thoughts?" — the ask is specific or the answer is deferral
+
+## Example Trigger Phrases
+
+- "Justify this tool/hire/equipment purchase."
+- "Write the budget request."
+- "My requests keep getting deferred."
+- "Make the business case for this spend."

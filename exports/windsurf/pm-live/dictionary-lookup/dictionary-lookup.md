@@ -57,3 +57,9 @@ Source: Free Dictionary API · rerun: `[exact curl]`
 - [ ] Do not fake non-English lookups on an English-only API — redirect honestly
 - [ ] Do not treat a 404 as "not a word" — it's "not in this dictionary," a much smaller claim
 - [ ] Do not skip pronunciation when the question was spoken-word-shaped (names, presentations, ESL contexts)
+
+## Example Trigger Phrases
+
+- "Define a word."
+- "How do you pronounce this?"
+- "What's the origin of a word?"

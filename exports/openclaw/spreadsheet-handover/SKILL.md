@@ -66,3 +66,10 @@ Ask for these if not provided:
 - [ ] Do not write the runbook at concept grain — "update the data" is where handovers die
 - [ ] Do not leave the judgment checks tacit — "what do you check before trusting it" is the best question in the room
 - [ ] Do not hand to a committee — no name in the owner line, no handover happened
+
+## Example Trigger Phrases
+
+- "Document this spreadsheet before I leave."
+- "Hand over the model to the team."
+- "Make this sheet survivable without me."
+- "We inherited a workbook nobody understands."

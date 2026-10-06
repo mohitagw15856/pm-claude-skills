@@ -66,3 +66,9 @@ Drop the persona entirely. For each ☠️ and ⚠️ finding: the specific clau
 - [ ] Do not stay in character in the debrief — the letter frightens, the debrief fixes
 - [ ] Do not present this as legal advice — it is a stress test to bring to a qualified lawyer
 - [ ] Do not attack both sides — opposing counsel has one client and it is not the user
+
+## Example Trigger Phrases
+
+- "Read this like opposing counsel."
+- "How would the other side attack this agreement?"
+- "Find the weaknesses before they do."

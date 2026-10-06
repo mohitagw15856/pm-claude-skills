@@ -71,6 +71,13 @@ Ask for these only if they aren't already provided (else infer and label):
 
 Procurement practice — requirement-driven scoping, weighted evaluation criteria set in advance, and structured questions for comparable bids.
 
+## Example Trigger Phrases
+
+- "Write an RFP."
+- "Write a request for quotes."
+- "Write a tender for this project."
+- "Solicit and compare vendor proposals."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

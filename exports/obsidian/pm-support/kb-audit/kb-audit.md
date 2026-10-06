@@ -61,6 +61,14 @@ Ask for these only if they aren't already provided:
 
 Knowledge-base / support-content practice — ticket-driver-led gap analysis, content health scoring, deflection-impact prioritisation.
 
+## Example Trigger Phrases
+
+- "Audit a help center."
+- "Review KB health."
+- "Find documentation gaps."
+- "Reduce ticket volume with better docs."
+- "Prioritise what to write/fix."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

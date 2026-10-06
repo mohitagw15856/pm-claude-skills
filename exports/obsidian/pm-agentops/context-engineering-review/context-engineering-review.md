@@ -78,6 +78,13 @@ Ask for (if not already provided):
 - [ ] Do not treat more retrieval as more grounding — irrelevant chunks actively mislead
 - [ ] Do not propose structure the assembly code can't enforce — a budget without an enforcement point is a wish
 
+## Example Trigger Phrases
+
+- "Review a system prompt and context assembly."
+- "Cut token usage without losing quality."
+- "Debug an agent that ignores instructions."
+- "Audit how retrieval results."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

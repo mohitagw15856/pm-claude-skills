@@ -137,3 +137,10 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Test duration accounts for weekly seasonality (minimum 2 weeks)
 - [ ] Guardrail metrics are defined (at least one to protect revenue or core engagement)
 - [ ] Rollback trigger is specified with a concrete threshold
+
+## Example Trigger Phrases
+
+- "Set up an experiment."
+- "Design an A/B test."
+- "Calculate sample size."
+- "Interpret test results."

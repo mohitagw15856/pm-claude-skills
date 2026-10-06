@@ -68,6 +68,13 @@ Mon: … Tue: … (file unemployment day 1–2, always)
 - [ ] Do not build the plan on a hoped-for job date — runway assumes zero income until real income exists
 - [ ] Do not moralize about past spending — triage looks forward only
 
+## Example Trigger Phrases
+
+- "I just got laid off what do I do about money."
+- "Build my layoff budget."
+- "How long can I last?"
+- "What needs to happen this week?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

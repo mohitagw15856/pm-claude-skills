@@ -83,3 +83,10 @@ Ask for (if not already provided):
 - [ ] Do not ask personas how they *feel* or what they'd *pay* — the fluent answer is the false one
 - [ ] Do not report synthetic findings in the same register as real research — a stakeholder who can't tell the difference wasn't told loudly enough
 - [ ] Do not let a synthetic pass replace the discovery interview it was supposed to prepare — the lane is *before* human research, never instead of it
+
+## Example Trigger Phrases
+
+- "Run synthetic user testing."
+- "Simulate user reactions with AI personas."
+- "Pretest a survey."
+- "Decide whether synthetic research is appropriate at all."

@@ -73,6 +73,13 @@ A short, purposeful task that reinforces the objective.
 - No formative checks until a final test
 - One-size-fits-all with no differentiation
 
+## Example Trigger Phrases
+
+- "Write a lesson plan."
+- "Plan a class."
+- "Design a teaching session."
+- "Structure instruction for a topic."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

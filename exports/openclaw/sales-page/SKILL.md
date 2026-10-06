@@ -62,3 +62,10 @@ Write the copy for each block:
 ## Based On
 
 Direct-response copywriting (PAS / problem-agitate-solve, unique-mechanism, offer-stack, risk reversal) — applied ethically.
+
+## Example Trigger Phrases
+
+- "Write a sales page."
+- "Write a long-form sales letter."
+- "Write the page for my course."
+- "Write direct-response copy that closes."

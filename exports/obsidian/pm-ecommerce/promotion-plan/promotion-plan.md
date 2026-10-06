@@ -77,6 +77,13 @@ more units you must sell to come out ahead). Show the formula + a worked example
 
 Retail promotion & pricing practice — objective-led offer design, margin/break-even analysis, segmentation, and measurement.
 
+## Example Trigger Phrases
+
+- "Plan a promotion."
+- "Plan our Black Friday sale."
+- "Run a discount without wrecking margin."
+- "Plan a launch offer."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

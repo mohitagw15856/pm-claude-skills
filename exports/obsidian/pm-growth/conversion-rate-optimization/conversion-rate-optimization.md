@@ -64,6 +64,13 @@ Ask for these only if they aren't already provided:
 
 Conversion-optimization heuristics (clarity / relevance / motivation / friction / anxiety / distraction — LIFT-style) and properly-powered A/B testing.
 
+## Example Trigger Phrases
+
+- "Improve conversion rate."
+- "Audit a landing/signup/checkout page."
+- "Reduce funnel drop-off."
+- "Plan A/B tests for a page."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

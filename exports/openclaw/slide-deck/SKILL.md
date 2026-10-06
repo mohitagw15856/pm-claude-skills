@@ -72,3 +72,10 @@ python3 scripts/pptx_tool.py build deck.pptx --outline-file deck.md
 ```
 
 Outline: `# Title` (+ next line = subtitle) · `## Slide title` · `- bullet` (two-space indent = sub-bullet) · `> speaker note`. Ships a clean 16:9 dark-title theme that opens in PowerPoint/Keynote/Slides. Design the narrative first (per this skill), then emit the outline and build. Honest limits: one theme, no images/charts — it's the restylable skeleton; for designed decks use the playground's slide export.
+
+## Example Trigger Phrases
+
+- "Make a slide deck."
+- "Make a PowerPoint for the board."
+- "Turn these notes into slides."
+- "Build an actual .pptx pitch deck."

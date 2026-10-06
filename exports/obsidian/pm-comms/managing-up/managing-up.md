@@ -57,6 +57,14 @@ Ask for these only if they aren't already provided:
 
 Managing-up practice — Drucker on managing the boss, Gabarro & Kotter's "Managing Your Boss," no-surprises and solution-oriented escalation.
 
+## Example Trigger Phrases
+
+- "How to manage up?"
+- "Work better with a boss."
+- "Get buy-in from your manager."
+- "Escalate without overstepping."
+- "Prepare to raise something with leadership."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

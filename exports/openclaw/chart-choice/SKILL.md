@@ -65,3 +65,10 @@ Ask for these if not provided:
 - [ ] Do not engineer dual-axis correlations — panels or indexing tell it straight
 - [ ] Do not pie past five slices — comparison by angle fails exactly when slices multiply
 - [ ] Do not decorate — every ink drop that isn't data competes with the three seconds the chart gets
+
+## Example Trigger Phrases
+
+- "What chart should I use?"
+- "Make this data visual."
+- "Why does this chart feel misleading?"
+- "Fix this graph for the deck."

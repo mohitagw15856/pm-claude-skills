@@ -72,3 +72,10 @@ Add a prominent note to have the framework reviewed by a local attorney/property
 ## Based On
 
 Fair-housing & tenant-screening practice — written objective criteria applied consistently, FCRA-compliant checks and notices, and protected-class safeguards (jurisdiction review required).
+
+## Example Trigger Phrases
+
+- "How to screen tenants?"
+- "Set rental criteria."
+- "Evaluate rental applicants."
+- "Build a tenant screening process."

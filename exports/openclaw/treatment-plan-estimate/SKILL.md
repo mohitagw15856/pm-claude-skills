@@ -61,3 +61,9 @@ What the owner is agreeing to, the deposit/authorization, and the decision point
 - Guilt or pressure ("if you loved your pet…")
 - Stating estimates as fixed prices
 - No plan for when intra-op findings change the scope and cost
+
+## Example Trigger Phrases
+
+- "Prepare a treatment plan."
+- "Create an estimate for an owner."
+- "Have the cost conversation in a vet practice."

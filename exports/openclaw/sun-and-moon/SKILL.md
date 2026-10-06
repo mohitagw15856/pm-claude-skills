@@ -64,3 +64,10 @@ Source: [sunrise-sunset.org / Open-Meteo] · times local to [zone] · rerun: `[e
 - [ ] Do not give bare sunset when the question was a photography or safety window
 - [ ] Do not overstate moon precision — phase and rough illumination, not fake decimals
 - [ ] Do not ignore polar edge cases — high latitudes in summer/winter return no-sunset/no-sunrise; report that as the (correct) answer, not an error
+
+## Example Trigger Phrases
+
+- "When is sunset today?"
+- "When's golden hour for my shoot?"
+- "How long is the day?"
+- "What's the moon phase tonight?"

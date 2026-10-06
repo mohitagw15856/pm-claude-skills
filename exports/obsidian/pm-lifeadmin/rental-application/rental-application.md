@@ -60,6 +60,13 @@ Also output a **one-line renter summary** (the elevator version) and a **documen
 
 Tenant-application practice — signalling reliability (stable income, good history, references), pre-empting concerns, and a clear, document-ready ask.
 
+## Example Trigger Phrases
+
+- "Write a rental application."
+- "Write a letter to the landlord."
+- "Write a renter cover letter."
+- "Strengthen my application for a competitive rental."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

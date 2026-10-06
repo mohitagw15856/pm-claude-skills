@@ -64,3 +64,10 @@ Everything needed, ready to gather.
 - No check for understanding until the summative test
 - Differentiation that's only "more/less time"
 - Activities that don't produce evidence of the stated objective
+
+## Example Trigger Phrases
+
+- "Plan a lesson."
+- "Write a lesson plan."
+- "Align a lesson to a standard."
+- "Turn a topic into a class period."

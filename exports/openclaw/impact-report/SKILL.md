@@ -64,3 +64,10 @@ Mark invented numbers/stories as *(example — replace with real data)*.
 ## Based On
 
 Nonprofit reporting and donor-stewardship practice — outcomes over activities, evidence plus story, transparent financials, and a stewardship ask.
+
+## Example Trigger Phrases
+
+- "Write an impact report."
+- "Write our annual report for donors."
+- "Write the grant outcomes report."
+- "Report results to our funders."

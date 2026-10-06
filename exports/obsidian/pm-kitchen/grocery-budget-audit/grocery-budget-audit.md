@@ -111,6 +111,12 @@ rule · re-audit date]
 same chosen/captured method, different currency; [[debt-payoff]] when the
 found money needs a destination.
 
+## Example Trigger Phrases
+
+- "We spend how much on food?!"
+- "Audit my grocery spending."
+- "Cut our food bill."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

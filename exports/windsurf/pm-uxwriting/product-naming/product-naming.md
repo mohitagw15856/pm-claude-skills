@@ -66,3 +66,10 @@ Ask for these only if they aren't already provided (else infer and label):
 ## Based On
 
 Brand & product naming practice — strategy-driven generation, criteria-based evaluation, and pre-adoption availability/meaning checks.
+
+## Example Trigger Phrases
+
+- "Name this product."
+- "Brainstorm names for our feature."
+- "Choose between these name candidates."
+- "Name our company."

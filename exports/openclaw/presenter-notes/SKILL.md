@@ -67,3 +67,10 @@ Ask for these if not provided:
 - [ ] Do not improvise cuts when behind — the pre-decided skips exist because live cutting amputates the argument
 - [ ] Do not walk in without the crib — Q&A is the half of the talk you don't control; the crib is its notes
 - [ ] Do not treat notes as private scaffolding exempt from rehearsal — unrehearsed notes fail exactly when needed, which is their only job
+
+## Example Trigger Phrases
+
+- "Write my speaker notes."
+- "I either script everything."
+- "What goes in the notes pane?"
+- "I keep running over time."

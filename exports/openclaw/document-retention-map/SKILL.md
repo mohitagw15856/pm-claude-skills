@@ -69,3 +69,10 @@ Ask for these if not provided:
 - [ ] Do not bin what should shred — retention discipline includes the exit
 - [ ] Do not let the scanner backlog block the system — forward-filing starts today; the backlog drains opportunistically
 - [ ] Do not skip the ongoing-dispute check — active disputes freeze every related clock, and the map must say so
+
+## Example Trigger Phrases
+
+- "How long do I keep tax documents?"
+- "Can I shred this?"
+- "Set up a document retention system."
+- "What papers does my small business need to keep?"

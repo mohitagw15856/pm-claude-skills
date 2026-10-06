@@ -119,6 +119,13 @@ Ask for (if not already provided):
 for making practice time real; [[the-gym]]-style arenas for the negotiation
 kind of ranked.
 
+## Example Trigger Phrases
+
+- "I'm hardstuck."
+- "Review my gameplay approach."
+- "I keep tilting."
+- "How do I actually improve at ranked?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

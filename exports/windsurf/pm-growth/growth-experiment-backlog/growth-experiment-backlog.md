@@ -54,3 +54,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Growth-process practice — ICE/PXL prioritisation, hypothesis-driven experiments, and the build–measure–learn cadence.
+
+## Example Trigger Phrases
+
+- "Plan growth experiments."
+- "Prioritise growth ideas."
+- "Set up a test backlog."
+- "Run a growth process/sprint."

@@ -66,6 +66,12 @@ Ask for these if not provided:
 - [ ] Do not deliver the recommendation unanchored — the same words, tied to the tension, double their force
 - [ ] Do not fix structural sag with delivery energy — enthusiasm over a missing complication is mime work
 
+## Example Trigger Phrases
+
+- "Make this deck flow."
+- "My presentation feels like disconnected slides."
+- "Structure the story of this pitch/readout."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

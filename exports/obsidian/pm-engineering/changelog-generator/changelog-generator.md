@@ -116,6 +116,12 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Write the CHANGELOG.md update for this release"
 - "What changed in this release?" + [paste commit list]
 
+## Example Trigger Phrases
+
+- "Write release notes."
+- "Generate a CHANGELOG.md entry."
+- "Document what changed in a version."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

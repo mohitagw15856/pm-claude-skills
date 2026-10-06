@@ -61,3 +61,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Freemium / subscription conversion practice (value-based gating, trigger-at-intent, plan anchoring, conversion vs. retention guardrails).
+
+## Example Trigger Phrases
+
+- "Improve our paywall."
+- "Write a better upgrade prompt."
+- "Improve free-to-paid conversion."
+- "Decide what to gate."

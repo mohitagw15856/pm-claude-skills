@@ -68,6 +68,12 @@ If numbers are rough, work with ranges and say so.
 
 Personal budgeting practice (zero-based budgeting + the 50/30/20 needs/wants/savings guideline).
 
+## Example Trigger Phrases
+
+- "Make a budget."
+- "Plan monthly spending."
+- "Get finances under control."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

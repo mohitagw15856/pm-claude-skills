@@ -56,3 +56,10 @@ Interview when: the request is one sentence for a multi-hour deliverable · the 
 - [ ] Do not ask questions whose answers wouldn't change the deliverable — every question spends the requester's patience
 - [ ] Do not start building mid-interview "to save time" — half-brief work anchors the requester to the wrong draft
 - [ ] Do not skip the playback — the interview's value is captured only when the requester says "yes, that"
+
+## Example Trigger Phrases
+
+- "Interview me before you build anything."
+- "Ask me questions first."
+- "Make me a dashboard."
+- "Work out what I actually need."

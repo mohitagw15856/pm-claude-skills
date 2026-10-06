@@ -65,3 +65,10 @@ Ask for these if not provided:
 - [ ] Do not treat all add-ons as scams — mark the price-it-elsewhere ones honestly; credibility is what makes the rest land
 - [ ] Do not skip the walk-out branch — buyers who've rehearsed leaving negotiate differently
 - [ ] Do not stay in character in the debrief
+
+## Example Trigger Phrases
+
+- "Practice negotiating at a dealership."
+- "Simulate the finance office."
+- "What tricks will the dealer use?"
+- "Prep me before I buy a car."

@@ -44,3 +44,10 @@ Real tasks ignore taxonomy: the investor update that's half postmortem, the laun
 - [ ] Do not average conflicting rules — precedence means one wins per conflict, visibly
 - [ ] Do not inherit boilerplate from both parents (two intros, two summaries) — the classic staple smell
 - [ ] Do not let the fusion drop both parents' verification sections in the compression — the quality bar merges; it never thins
+
+## Example Trigger Phrases
+
+- "This PRD also needs to be a pitch."
+- "Combine two skills for this task."
+- "My postmortem has to double as a board update."
+- "Fuse these two skills into one brief."

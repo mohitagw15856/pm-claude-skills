@@ -62,3 +62,10 @@ Ask for these if not provided:
 - [ ] Do not require polished questions — the half-formed thing is exactly what office hours are for
 - [ ] Do not answer everything privately — private answers scale linearly; public ones compound
 - [ ] Do not perform empty availability — genuinely low demand means a smaller slot, honestly held
+
+## Example Trigger Phrases
+
+- "Set up office hours."
+- "I'm interrupted constantly but want to stay accessible."
+- "My office hours sit empty."
+- "Design expert time for the team."

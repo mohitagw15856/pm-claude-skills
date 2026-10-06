@@ -67,3 +67,10 @@ Include **behavioral** (past behaviour, STAR-friendly), **role/technical** (a re
 ## Based On
 
 Structured-interview practice — competency-based, behaviorally-anchored questions with scoring rubrics and fairness/consistency safeguards.
+
+## Example Trigger Phrases
+
+- "Create interview questions for this role."
+- "Write an interview guide."
+- "Build a structured interview kit."
+- "Write competency-based questions for a product manager."

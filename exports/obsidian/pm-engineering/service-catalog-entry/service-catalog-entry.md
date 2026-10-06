@@ -301,6 +301,13 @@ Document limitations honestly — this section prevents other teams from buildin
 - [ ] Do not list API error codes without testing them — aspirational error documentation misleads consumers
 - [ ] Do not write the "What It Does" section with jargon — a new engineer from another team must understand it in under 2 minutes
 
+## Example Trigger Phrases
+
+- "Document a service for an internal developer portal."
+- "Write a service README for a platform catalog."
+- "Create a service overview page."
+- "Onboard a new service to a service registry."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

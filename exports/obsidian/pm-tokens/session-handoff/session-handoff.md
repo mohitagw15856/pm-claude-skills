@@ -60,6 +60,13 @@ Keep it skimmable — the next reader should grasp the state in under a minute.
 
 Engineering handoff / pairing-rotation practice and incident-handoff (SBAR-style) structure adapted for agent and human work.
 
+## Example Trigger Phrases
+
+- "Ending a work session."
+- "Hitting a context limit."
+- "Switch agents."
+- "Pausing a task mid-flight."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

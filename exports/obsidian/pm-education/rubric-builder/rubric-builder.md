@@ -60,6 +60,13 @@ A short "before you submit, check you've…" version students can self-assess ag
 - Criteria that measure effort/length instead of the learning goal
 - A rubric only the teacher can read
 
+## Example Trigger Phrases
+
+- "Build a rubric."
+- "Create grading criteria."
+- "Design an assessment scoring guide."
+- "Make grading more objective."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

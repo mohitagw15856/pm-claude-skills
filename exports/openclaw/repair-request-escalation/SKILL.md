@@ -70,3 +70,10 @@ Ask for these if not provided:
 - [ ] Do not write heat into the letters — the broken heater carries the argument fine
 - [ ] Do not assert repair windows or statutes as numbers — categories, flagged verify-locally
 - [ ] Do not ladder a gas leak — emergencies have their own first rung and it's today
+
+## Example Trigger Phrases
+
+- "My landlord won't fix anything."
+- "Write a repair request."
+- "How long can they ignore a broken heater?"
+- "What are my options if repairs never happen?"

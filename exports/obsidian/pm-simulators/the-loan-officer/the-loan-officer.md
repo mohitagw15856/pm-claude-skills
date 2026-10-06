@@ -69,6 +69,13 @@ Ask for these if not provided:
 - [ ] Do not quote lender criteria as fact — thresholds vary and change; the simulation trains the conversation, not the rulebook
 - [ ] Do not stay in character in the debrief
 
+## Example Trigger Phrases
+
+- "Practice a mortgage interview."
+- "Prep for a loan application meeting."
+- "Why might the bank decline us?"
+- "What will the underwriter ask?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

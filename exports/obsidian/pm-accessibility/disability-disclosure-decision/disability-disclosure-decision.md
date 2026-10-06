@@ -118,6 +118,13 @@ functional disclosure); [[coming-out-rehearsal]] shares the whether/how-to-tell
 engine; [[nt-translator]] and [[masking-budget]] for the neurodivergent version;
 [[disability-benefit-appeal]] for the benefits side.
 
+## Example Trigger Phrases
+
+- "Should I tell work about my disability/condition?"
+- "Disclose my ADHD/chronic illness at work."
+- "Do I tell my employer?"
+- "How much do I share?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

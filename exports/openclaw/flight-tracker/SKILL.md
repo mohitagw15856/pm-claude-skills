@@ -64,3 +64,10 @@ Source: [adsb.lol / OpenSky] community ADS-B · as of [time] · rerun: `[exact c
 - [ ] Do not present patchy coverage as "flight doesn't exist"
 - [ ] Do not track people — flights and public transponder data, not persistent monitoring of individuals' movements
 - [ ] Do not answer from memory — a remembered aircraft position is nonsense by construction
+
+## Example Trigger Phrases
+
+- "Where is this flight right now?"
+- "What planes are overhead?"
+- "Track a tail number."
+- "Is that flight in the air?"

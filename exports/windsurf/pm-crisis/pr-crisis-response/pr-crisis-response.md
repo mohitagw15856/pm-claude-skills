@@ -76,3 +76,10 @@ statement, internal brief), each on-message.
 ## Based On
 
 Crisis communications practice — single-source-of-truth messaging, stakeholder prioritisation, holding statements, and accountable, people-first response.
+
+## Example Trigger Phrases
+
+- "Handle a PR crisis."
+- "Draft a crisis comms plan."
+- "Respond to a public backlash/scandal/incident."
+- "Prepare holding statements."

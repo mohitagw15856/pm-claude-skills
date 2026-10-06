@@ -176,6 +176,13 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not skip security and privacy sections for any feature that touches user data
 - [ ] Do not write a non-goals section that is empty — always list at least two things that might be assumed in scope
 
+## Example Trigger Phrases
+
+- "Write a tech spec."
+- "Write the engineering spec for this feature."
+- "Write a system design doc."
+- "Write an API specification."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

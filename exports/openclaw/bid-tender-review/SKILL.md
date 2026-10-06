@@ -74,3 +74,10 @@ Work through four passes, in order:
 - [ ] Do not accept allowances as pricing — an allowance is the bidder's guess spent with your money
 - [ ] Do not wave through mobilisation and general-conditions front-loading as "normal" without checking it against cost
 - [ ] Do not resolve ambiguity in the bidder's favour by assumption — put it on the pre-award clarification list in writing
+
+## Example Trigger Phrases
+
+- "Review a bid."
+- "Check a tender for gaps."
+- "Compare sub quotes."
+- "Vet a schedule of values before award."

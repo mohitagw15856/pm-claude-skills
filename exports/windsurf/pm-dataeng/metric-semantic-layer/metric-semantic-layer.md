@@ -58,3 +58,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Semantic-layer / metrics-layer practice (dbt MetricFlow, Cube, LookML) — single-source metric definitions with explicit grain, filters, and additivity.
+
+## Example Trigger Phrases
+
+- "Define a metric."
+- "Build a semantic layer / metrics layer entry."
+- "Stop 'revenue means three things' problems."
+- "Write a metric definition for dbt MetricFlow / Cube / LookML."

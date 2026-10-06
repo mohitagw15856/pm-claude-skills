@@ -72,6 +72,12 @@ Ask for (if not already provided):
 - [ ] Do not delete the rejects — the ledger is half the artifact
 - [ ] Do not ship the shortlist without the wildcard — a fully-safe shortlist means the exercise removed everything it was for
 
+## Example Trigger Phrases
+
+- "Generate ideas."
+- "Explore a solution space."
+- "Name something."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

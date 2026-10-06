@@ -71,6 +71,12 @@ Ask for these only if they aren't already provided:
 
 Personal-finance net-worth accounting (assets − liabilities, liquidity & debt ratios, trend tracking).
 
+## Example Trigger Phrases
+
+- "Calculate net worth."
+- "Summarize finances."
+- "Set up net-worth tracking."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

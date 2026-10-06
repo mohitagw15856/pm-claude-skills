@@ -63,3 +63,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Localization / internationalization practice — the translate/adapt/rebuild model, locale formats, market-specific payments & legal, in-country QA.
+
+## Example Trigger Phrases
+
+- "Localize a product."
+- "Plan market entry localization."
+- "Prepare a localization brief."
+- "Figure out what to adapt for a new region."

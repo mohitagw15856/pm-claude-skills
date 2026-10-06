@@ -56,3 +56,9 @@ Source: [ip-api.com / ipify] · rerun: `[exact curl]`
 - [ ] Do not bulk-loop a rate-limited free endpoint — for log volumes, dedupe first and note the limit
 - [ ] Do not answer "what's my IP" from memory or the environment — fetch it; NAT and VPNs make assumptions wrong
 - [ ] Do not conflate ISP and org — the `as`/`org` fields differ exactly when it's interesting (resellers, VPNs, corporate egress)
+
+## Example Trigger Phrases
+
+- "What's my public IP?"
+- "Where is this IP from?"
+- "Is this IP a VPN/datacenter?"

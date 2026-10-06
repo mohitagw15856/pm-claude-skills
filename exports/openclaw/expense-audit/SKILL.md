@@ -65,3 +65,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Spending-audit / subscription-audit practice (categorize, annualize, rank cuts by impact).
+
+## Example Trigger Phrases
+
+- "Cut expenses."
+- "Review subscriptions."
+- "Find where money is going."
+- "Free up cash."

@@ -75,3 +75,9 @@ Ask for these only if they aren't already provided (else infer and label):
 ## Based On
 
 Real-estate marketing practice — multi-channel open-house promotion, staging, structured lead capture, and disciplined follow-up.
+
+## Example Trigger Phrases
+
+- "Plan an open house."
+- "Market an open house."
+- "Create an open-house checklist."

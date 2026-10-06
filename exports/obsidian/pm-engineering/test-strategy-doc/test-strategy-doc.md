@@ -139,6 +139,13 @@ Testing is complete when:
 - "I need a QA plan for this sprint"
 - "What tests do we need for [X]?"
 
+## Example Trigger Phrases
+
+- "Create a test plan."
+- "Write a test strategy."
+- "Define QA approach."
+- "Plan testing for a feature."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

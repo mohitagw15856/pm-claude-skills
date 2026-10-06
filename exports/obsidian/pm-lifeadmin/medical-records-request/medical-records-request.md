@@ -67,6 +67,13 @@ Day 0: send via official intake, keep proof · Day ~10: polite status call, note
 - [ ] Do not escalate before the clock has actually run — the ladder's power is its reasonableness
 - [ ] Do not interpret the records' medical content — organize the paper; the medicine belongs to clinicians
 
+## Example Trigger Phrases
+
+- "How do I get my medical records?"
+- "Write a records request."
+- "My doctor's office won't send my records."
+- "What records should I collect?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

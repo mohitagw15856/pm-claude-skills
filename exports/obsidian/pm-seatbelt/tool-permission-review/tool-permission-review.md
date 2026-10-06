@@ -69,6 +69,13 @@ Ask for these if not provided:
 - [ ] Do not grant shell or computer-use casually — they subsume most other tools and deserve the hardest deny-by-default
 - [ ] Do not give an autonomous agent supervised-grade permissions — no human is checking, so the grants must
 
+## Example Trigger Phrases
+
+- "Review my agent's permissions."
+- "What can this agent actually do?"
+- "Lock down my agent's tools."
+- "Is this MCP/tool set safe to grant?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

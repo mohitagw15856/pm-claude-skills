@@ -50,6 +50,13 @@ How to confirm the fix (`npm ls <pkg>`, a clean reinstall, the build), and one h
 - [ ] Do not give a single fix when several are viable — rank them with trade-offs
 - [ ] Do not skip verifying the resolution actually installs/builds
 
+## Example Trigger Phrases
+
+- "npm install fails with a peer-dependency error."
+- "pip can't resolve these versions."
+- "These two packages won't co-exist."
+- "My lockfile keeps fighting me."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

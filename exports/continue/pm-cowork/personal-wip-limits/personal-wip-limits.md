@@ -62,3 +62,10 @@ Ask for these if not provided:
 - [ ] Do not let blocked work squat in active slots — waiting is a lane, not a job
 - [ ] Do not negotiate the cap upward mid-crunch — the crunch is the argument *for* the cap
 - [ ] Do not skip the experiment — the limit survives on its own throughput evidence or not at all
+
+## Example Trigger Phrases
+
+- "I have twelve things half-done."
+- "Why does nothing ever finish?"
+- "Set a WIP limit for my work."
+- "I start everything and complete nothing."

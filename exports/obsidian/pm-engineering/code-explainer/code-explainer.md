@@ -49,6 +49,13 @@ Bugs, edge cases, or smells you noticed while reading — with the fix. (If it's
 - [ ] Do not assume expert level if the question reads like a beginner's (or vice-versa)
 - [ ] Do not ignore a bug you can see just because you weren't asked to review it
 
+## Example Trigger Phrases
+
+- "Explain code."
+- "Walk through a function."
+- "Understand an unfamiliar snippet."
+- "Onboard to a file."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

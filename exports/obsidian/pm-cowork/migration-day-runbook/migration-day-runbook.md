@@ -69,6 +69,13 @@ Ask for these if not provided:
 - [ ] Do not leave the old platform writable "during transition" — that's two sources of truth, i.e., zero
 - [ ] Do not skip the rollback line — a migration that can't abort will be pushed through broken
 
+## Example Trigger Phrases
+
+- "We're moving from Dropbox to Drive."
+- "Migrate our files to SharePoint."
+- "Plan the file migration day."
+- "How do we switch platforms safely?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

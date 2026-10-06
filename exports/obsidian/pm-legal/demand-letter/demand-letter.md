@@ -52,6 +52,12 @@ End with: **⚠️ Before sending** — items to verify (exact figures, the gove
 - Threats of consequences the sender can't or wouldn't lawfully pursue
 - Burying the actual demand in a wall of grievance
 
+## Example Trigger Phrases
+
+- "Write a demand letter."
+- "Send a formal demand for payment."
+- "Draft a cease-and-desist."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

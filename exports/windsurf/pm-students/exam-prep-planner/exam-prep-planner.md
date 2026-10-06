@@ -60,3 +60,10 @@ Missed 1 day → [absorb via buffer] · Missed 3+ → [the triage list, in drop 
 - [ ] Do not block whole days per subject — interleaving tests better than it feels
 - [ ] Do not spend prime hours on green topics because they're pleasant — comfort studying is procrastination with flashcards
 - [ ] Do not build guilt into the plan — a missed day triggers the buffer protocol, not a spiral; the plan's job is to survive
+
+## Example Trigger Phrases
+
+- "Plan my exam prep."
+- "Make a study schedule."
+- "I have N weeks until finals."
+- "How do I study for multiple exams?"

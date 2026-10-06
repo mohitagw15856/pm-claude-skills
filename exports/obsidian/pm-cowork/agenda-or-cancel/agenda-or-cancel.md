@@ -64,6 +64,13 @@ Ask for these if not provided:
 - [ ] Do not ship the agenda at meeting-start — unprepped deciders are attendees
 - [ ] Do not install the norm by decree — the leader's own cancelled meeting is the announcement
 
+## Example Trigger Phrases
+
+- "Write an agenda for this meeting."
+- "Should this meeting happen?"
+- "Our meetings have no agendas."
+- "Cancel this meeting politely."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

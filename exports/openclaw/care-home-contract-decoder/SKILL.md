@@ -78,3 +78,10 @@ Ask for these if not provided:
 - **Accepting verbal reassurances** — "we'd never do that" belongs in writing or belongs nowhere.
 - **Decoding with hostility.** Most homes are decent; the contract still deserves adult scrutiny, and good homes answer these questions readily.
 - **Treating this as legal advice** — it arms the questions; enforceability is local and professional.
+
+## Example Trigger Phrases
+
+- "Review a care-home."
+- "What does this admission agreement mean?"
+- "Can they raise the fees?"
+- "Can they make my parent leave?"

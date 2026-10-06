@@ -79,3 +79,10 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 ## Based On
 
 Borrower-side loan review practice — total-cost math, APR reconciliation, fee auditing, reset-scenario framing.
+
+## Example Trigger Phrases
+
+- "Is this loan a good deal?"
+- "Decode my loan offer."
+- "What am I signing?"
+- "What will this mortgage actually cost me?"

@@ -69,3 +69,10 @@ End with: *"This memo is analytical support for internal escalation, not a compl
 - [ ] Do not include customer-facing language or anything creating tipping-off risk
 - [ ] Do not recommend customer outreach without flagging the tipping-off sensitivity for the decision-maker
 - [ ] Do not fabricate transaction data to complete a pattern — mark it `[not in file]`
+
+## Example Trigger Phrases
+
+- "Escalate a KYC alert."
+- "Document an AML concern."
+- "Write up unusual-activity findings for compliance review."
+- "Prepare an enhanced due diligence referral."

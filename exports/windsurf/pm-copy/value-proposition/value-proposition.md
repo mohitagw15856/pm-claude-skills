@@ -59,3 +59,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Value-proposition design (Osterwalder) + April Dunford positioning as the upstream frame.
+
+## Example Trigger Phrases
+
+- "Write a value prop."
+- "Write our value proposition."
+- "Write a one-liner for the product."
+- "What do we even say we do?"

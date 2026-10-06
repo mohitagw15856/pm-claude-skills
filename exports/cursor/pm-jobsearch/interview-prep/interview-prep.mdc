@@ -61,3 +61,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Structured interview preparation — STAR/behavioural method, competency-mapped story banks, role-and-round tailoring.
+
+## Example Trigger Phrases
+
+- "Prep for an interview."
+- "Prepare answers for a role."
+- "Practice for a specific company's interview."
+- "Get ready for a behavioural/case/PM round."

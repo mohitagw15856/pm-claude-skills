@@ -221,3 +221,10 @@ Acceptance Criteria:
 
 [Continue with 5-7 total user stories...]
 ```
+
+## Example Trigger Phrases
+
+- "Write a PRD."
+- "Write a product spec for this feature."
+- "Write the feature specification."
+- "Write a requirements document for a new feature."

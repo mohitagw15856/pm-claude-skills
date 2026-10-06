@@ -62,3 +62,10 @@ Ask for these if not provided:
 - [ ] Do not let annual bills be "surprises" — they have dates; accrue them
 - [ ] Do not alert on trivial variance — red must mean something or it means nothing
 - [ ] Do not skip the sentence — an updated tracker nobody reads is maintenance cosplay
+
+## Example Trigger Phrases
+
+- "Build me a budget spreadsheet."
+- "Track team spend against budget."
+- "Why do we always blow the budget invisibly?"
+- "Design a household/project budget tracker."

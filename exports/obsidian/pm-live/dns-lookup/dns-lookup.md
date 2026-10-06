@@ -60,6 +60,12 @@ Source: [dns.google / Cloudflare DoH / RDAP] · rerun: `[exact curls]`
 - [ ] Do not treat redacted WHOIS/RDAP contacts as suspicious — it's the post-privacy default
 - [ ] Do not slide into recon — decoding your domain's mail setup and enumerating someone else's infrastructure are different activities, and this skill does the first
 
+## Example Trigger Phrases
+
+- "Check the MX or TXT records."
+- "Who registered this domain?"
+- "Does it expire?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

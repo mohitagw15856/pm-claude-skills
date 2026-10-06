@@ -67,6 +67,12 @@ Cover **S**poofing, **T**ampering, **R**epudiation, **I**nformation disclosure, 
 
 Threat-modeling practice (STRIDE, trust boundaries, data-flow diagrams, risk-ranked mitigations).
 
+## Example Trigger Phrases
+
+- "Do a security design review?"
+- "Document security risks."
+- "Apply STRIDE to a design."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

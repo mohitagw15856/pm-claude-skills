@@ -75,6 +75,13 @@ Ask for these if not provided:
 - **Rushing the reader.** Nothing here expires in an afternoon; a family that takes a day to compare loses nothing.
 - **Ever equating cost with love.** The skill exists to break that equation, not reinforce it.
 
+## Example Trigger Phrases
+
+- "Compare funeral quotes."
+- "Is this funeral price fair?"
+- "What can we decline?"
+- "Help me read this price list."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

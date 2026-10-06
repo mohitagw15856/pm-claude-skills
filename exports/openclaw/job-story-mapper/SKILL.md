@@ -152,3 +152,10 @@ Ask the user for these if not provided:
 - If you can't identify the situation, you don't understand the job yet — go back to user research
 - Social and emotional jobs are harder to surface but often the most defensible differentiators
 - Recommend sharing job stories with engineering — they make better technical decisions when they understand the "why"
+
+## Example Trigger Phrases
+
+- "Define user needs."
+- "Write job stories."
+- "Map the customer jobs for this feature."
+- "Reframe these features around customer outcomes."

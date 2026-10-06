@@ -53,6 +53,13 @@ The big-bang failure is always the same story: three hours of changes, then "it 
 - [ ] Do not delete the old path in the same increment as the last migration — cutover and removal are separate, reversible steps
 - [ ] Do not let increments shrink into commit-theatre (40 one-line steps) — an increment is sized by verifiable meaning, not by smallness itself
 
+## Example Trigger Phrases
+
+- "Build this feature in small verified steps."
+- "Refactor anything load-bearing safely."
+- "Make this large mechanical change incrementally."
+- "Implement this multi-part feature without breaking things."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

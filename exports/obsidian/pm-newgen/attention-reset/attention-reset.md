@@ -132,6 +132,13 @@ week-4 deliberate re-add]
 [[deep-work-blocking]] for the work-hours version; [[weekly-review-ritual]]
 as the protocol's maintenance home after day 30.
 
+## Example Trigger Phrases
+
+- "My screen time is 7 hours."
+- "I want a dumbphone."
+- "I can't read books anymore."
+- "My attention span is gone."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -122,3 +122,10 @@ good day?" Adjust until yes.]
 [[personal-bio]] for the professional cousin; [[the-understudy]] for the
 voice-mining method at full depth; [[notes-humanizer]] when the draft sounds
 AI-written — the enemy here too.
+
+## Example Trigger Phrases
+
+- "Fix my dating profile."
+- "Why am I getting no matches?"
+- "What do I say first?"
+- "Roast my Hinge prompts."

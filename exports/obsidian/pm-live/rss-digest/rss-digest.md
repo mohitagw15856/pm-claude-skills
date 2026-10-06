@@ -61,6 +61,13 @@ Feeds: `[curl per feed]` · window: [the since-filter applied]
 - [ ] Do not present an old cached item as new — the window does the filtering, visibly
 - [ ] Do not invent a feed's contents when the fetch fails — report the failure and move to the sources that answered
 
+## Example Trigger Phrases
+
+- "Summarize this feed."
+- "What's new on this blog?"
+- "Digest these RSS feeds."
+- "Build me a morning briefing from these sources."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

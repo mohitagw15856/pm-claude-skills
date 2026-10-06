@@ -67,3 +67,9 @@ Ask for these if not provided:
 - [ ] Do not leave "urgent" undefined — undefined urgency defaults to everything
 - [ ] Do not return to a full calendar — the buffer day is part of the vacation's ROI
 - [ ] Do not check email "just a little" on a genuinely-offline plan — one reply resets everyone's expectations of your absence
+
+## Example Trigger Phrases
+
+- "Write my out of office message."
+- "Cover my work while I'm out."
+- "I always come back to chaos."

@@ -108,3 +108,10 @@ Exact location: … · What/when/severity: … · Who's at risk: … · Photos: 
 [[elected-rep-letter]] and [[speak-at-the-council]] for escalation; [[permit-navigator]]
 for the other side of local government; [[scam-message-decoder]] if a "pay to fix your
 report" message appears.
+
+## Example Trigger Phrases
+
+- "How do I report a pothole?"
+- "Who do I call about a broken streetlight?"
+- "Report illegal dumping on our street."
+- "The council won't fix this: what now?"

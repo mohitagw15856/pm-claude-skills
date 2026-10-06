@@ -84,3 +84,10 @@ Ask for (if not already provided):
 - [ ] Do not ask a chain of clarifying questions — one at most, and only if it changes the pick
 - [ ] Do not invent skill names — if nothing in the catalog fits, say so and suggest `SKILL_REQUEST.md`
 - [ ] Do not recommend a general skill when a specific one exists for the exact artifact
+
+## Example Trigger Phrases
+
+- "Which skill should I use for this?"
+- "I don't know which skill fits."
+- "Find the right skill for my task."
+- "Which of these skills is the better match?"

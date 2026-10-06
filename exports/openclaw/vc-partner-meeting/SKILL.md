@@ -81,3 +81,10 @@ One paragraph: the single strongest move before pitching for real.
 - [ ] Do not invent traction numbers the pitch didn't claim — partners noticing missing numbers IS the feedback
 - [ ] Do not stay in character in the debrief
 - [ ] Do not produce a generic "VCs care about TAM" lecture — every line must be about THIS company
+
+## Example Trigger Phrases
+
+- "How will VCs discuss my pitch?"
+- "Simulate the partner meeting."
+- "Stress-test my fundraise."
+- "What happens after the pitch?"

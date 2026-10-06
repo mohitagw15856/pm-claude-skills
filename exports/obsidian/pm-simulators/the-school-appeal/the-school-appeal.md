@@ -72,6 +72,13 @@ Ask for these if not provided:
 - [ ] Do not let a missing document be papered over with a better sentence — the debrief's job is the evidence list
 - [ ] Do not stay in character in the debrief
 
+## Example Trigger Phrases
+
+- "Prepare a school appeal."
+- "We did not get our school place."
+- "Rehearse the appeal hearing."
+- "What does the panel ask?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

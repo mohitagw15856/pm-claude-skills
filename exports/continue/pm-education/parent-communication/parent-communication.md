@@ -46,3 +46,10 @@ For a sensitive issue, also give:
 - Jargon or edu-speak parents won't parse
 - A concern with no path forward or offer of support
 - Over-long; burying the point under throat-clearing
+
+## Example Trigger Phrases
+
+- "Email a parent."
+- "Write home about a student."
+- "Raise a concern with a guardian."
+- "Share an update."

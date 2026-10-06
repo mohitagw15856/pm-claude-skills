@@ -64,3 +64,9 @@ Ask for these if not provided:
 - [ ] Do not delete created-here documents by class — they're the one irreplaceable category
 - [ ] Do not let quarantine become the new junk drawer — no expiry, no quarantine
 - [ ] Do not skip asking about treasures — tax PDFs in Downloads is the classic finding
+
+## Example Trigger Phrases
+
+- "Clean up my downloads folder."
+- "What's safe to delete here?"
+- "Stop my downloads from piling up."

@@ -123,3 +123,9 @@ verify-local]
 the online accounts (and to make your own easier for others); [[legacy-letter]] for
 the human, non-admin part; [[caregiver-burnout-check]] if the death followed a long
 illness.
+
+## Example Trigger Phrases
+
+- "My [person] died and I don't know where to start."
+- "What do I need to do after a death?"
+- "Help me handle the admin."

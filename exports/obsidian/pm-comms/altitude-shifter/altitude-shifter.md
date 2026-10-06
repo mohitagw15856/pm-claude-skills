@@ -70,6 +70,13 @@ Ask for these if not provided:
 - [ ] Do not write the new-hire version as a summary — it's the version with MORE context, not less
 - [ ] Do not produce four versions without the delta table — the table is what makes the shift inspectable
 
+## Example Trigger Phrases
+
+- "Rewrite this for execs."
+- "Explain this to the team."
+- "Make this customer-facing."
+- "Say this four ways."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

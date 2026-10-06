@@ -81,3 +81,9 @@ Battery replacement risk (and its warranty) · resale-value differences in an ev
 - [ ] Do not present the crossover as a verdict for short-horizon owners — before the crossover, the gas car is winning, and some owners live entirely there
 - [ ] Do not let advocacy (either direction) into the arithmetic — the model is agnostic; the not-modeled list keeps it honest
 - [ ] Do not model fuel/electricity price predictions — drift is named, not forecast
+
+## Example Trigger Phrases
+
+- "Is an EV worth it?"
+- "Does an EV pay for itself?"
+- "Should my next car be electric?"

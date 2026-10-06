@@ -120,6 +120,12 @@ utility. Follow official guidance in a real outage.
 [[emergency-doc-kit]] for the kit; [[family-emergency-plan]] for reconnecting when
 networks fail; [[after-the-disaster]] for the aftermath.
 
+## Example Trigger Phrases
+
+- "Prepare for a power outage."
+- "What if the power goes out for days?"
+- "I rely on a medical device that needs electricity."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

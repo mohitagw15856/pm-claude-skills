@@ -76,3 +76,9 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not include themes that only support the project hypothesis — contradictory findings must be surfaced, not omitted
 - [ ] Do not present findings without quotes — every theme requires verbatim evidence from at least 3 participants
 - [ ] Do not leave research questions unanswered — each question from the study brief must be explicitly addressed, even if the answer is inconclusive
+
+## Example Trigger Phrases
+
+- "Analyse interview notes."
+- "Synthesise qualitative research."
+- "Turn raw interview data into actionable product insights."

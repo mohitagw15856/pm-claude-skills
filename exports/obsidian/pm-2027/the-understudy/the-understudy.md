@@ -101,6 +101,13 @@ Ask for (if not already provided):
 this is inward (how you think). Store the profile per the [[clone-brief]] and
 Brain conventions.
 
+## Example Trigger Phrases
+
+- "Write it like I would."
+- "Learn my style."
+- "Draft this as me."
+- "Wants an AI that apprentices to their judgment rather than imitating their tone."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

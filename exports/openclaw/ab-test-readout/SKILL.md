@@ -65,3 +65,10 @@ Ship / iterate / re-run, plus what to monitor post-launch or what the follow-up 
 - Calling a result early (peeking) and shipping
 - Ignoring a guardrail regression because the primary went up
 - A statistically significant but practically meaningless lift treated as a win
+
+## Example Trigger Phrases
+
+- "Analyse experiment results."
+- "Write an A/B test readout."
+- "Interpret test data."
+- "Decide whether to ship a variant."

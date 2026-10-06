@@ -66,6 +66,13 @@ Ask for these if not provided:
 - [ ] Do not skip the email-anchor check — the account that resets all others is the one that matters most
 - [ ] Do not let "no evidence of misuse" close the case — the ladder runs on what leaked, not on the letter's comfort
 
+## Example Trigger Phrases
+
+- "My data was in a breach what do I do."
+- "I got a breach notification letter."
+- "My SSN/ID number leaked."
+- "Should I freeze my credit?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

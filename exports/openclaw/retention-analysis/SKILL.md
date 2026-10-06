@@ -156,3 +156,9 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - Benchmark against industry — consumer apps, SaaS, and marketplaces have very different retention norms
 - If DAU/MAU is below 5%, that's a PMF conversation, not a retention tactics conversation
 - Always recommend talking to churned users — no amount of data replaces understanding the *reason*
+
+## Example Trigger Phrases
+
+- "Analyse user retention."
+- "Investigate churn."
+- "Build a retention improvement plan."

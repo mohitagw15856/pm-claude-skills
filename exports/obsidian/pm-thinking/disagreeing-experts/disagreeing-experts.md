@@ -78,6 +78,12 @@ Ask for these if not provided:
 - **Panel sprawl.** Four-plus experts turns readings into a survey; three frames in real tension is the format.
 - **Forgetting the real-world handoff.** High-stakes cases end each reading with what to bring to the genuine professional — the simulation sharpens that meeting, never replaces it.
 
+## Example Trigger Phrases
+
+- "What would a lawyer versus an accountant say?"
+- "I keep getting one-sided advice."
+- "Pressure-test this from multiple angles."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

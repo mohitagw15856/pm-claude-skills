@@ -72,3 +72,9 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 ## Based On
 
 Consumer-side moving-contract review — estimate-type triage, scam-pattern matching, valuation math, verification sequencing.
+
+## Example Trigger Phrases
+
+- "Is this moving quote legit?"
+- "Decode my moving estimate."
+- "How do I avoid moving scams?"

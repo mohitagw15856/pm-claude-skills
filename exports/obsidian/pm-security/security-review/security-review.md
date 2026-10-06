@@ -68,6 +68,12 @@ Ask for these only if they aren't already provided:
 
 Secure code/design review practice (OWASP Top 10 & ASVS risk areas, severity-ranked findings, actionable remediation).
 
+## Example Trigger Phrases
+
+- "Do a security review?"
+- "Security-review a change/PR."
+- "Check a feature for vulnerabilities."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

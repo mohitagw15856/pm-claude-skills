@@ -70,3 +70,9 @@ If numbers are rough, work with ranges and say so.
 ## Based On
 
 Personal budgeting practice (zero-based budgeting + the 50/30/20 needs/wants/savings guideline).
+
+## Example Trigger Phrases
+
+- "Make a budget."
+- "Plan monthly spending."
+- "Get finances under control."

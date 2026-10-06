@@ -59,6 +59,13 @@ One line on who you are and the value you create; who the page is for; contact/l
 
 Case-study portfolio practice (context · role · action · outcome) used across product, design, and engineering.
 
+## Example Trigger Phrases
+
+- "Write a portfolio page."
+- "Write a project case study for my portfolio."
+- "Build a work showcase."
+- "Prove I'm good at this with one page."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

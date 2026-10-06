@@ -74,3 +74,11 @@ It flags activities missing a lawful basis, purpose, or retention, and marks tho
 ## Based On
 
 EU GDPR — Art. 6 (lawful basis), Art. 9 (special category), Art. 30 (ROPA), Art. 35 (DPIA), data-subject rights.
+
+## Example Trigger Phrases
+
+- "Get GDPR-compliant."
+- "Build a Record of Processing Activities."
+- "Decide a lawful basis."
+- "Handle data-subject requests."
+- "Check whether a DPIA is needed."

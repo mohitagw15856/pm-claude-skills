@@ -104,3 +104,11 @@ To: [opener] · From: [writer, role, occasion]
       information; "X is impossible" is a grenade with a delay fuse
 - [ ] Do not skip the ritual section; an unopened capsule is a diary, and an
       unscored ledger is astrology
+
+## Example Trigger Phrases
+
+- "Leave a role."
+- "Finishing a big project."
+- "Plan season."
+- "Before a leave."
+- "Write a letter to my successor."

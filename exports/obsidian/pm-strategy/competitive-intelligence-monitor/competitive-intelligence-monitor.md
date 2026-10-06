@@ -73,6 +73,13 @@ Ask the user for these if not provided:
 - [ ] Diff mode output is under 300 words
 - [ ] Strategic summary describes the landscape trend, not just repeats individual signals
 
+## Example Trigger Phrases
+
+- "Monitor competitors."
+- "Track the competitive landscape."
+- "Produce a competitive briefing."
+- "Understand what has changed in the market this week."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

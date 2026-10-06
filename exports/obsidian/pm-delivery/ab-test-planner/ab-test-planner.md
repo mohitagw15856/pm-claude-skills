@@ -140,6 +140,13 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Guardrail metrics are defined (at least one to protect revenue or core engagement)
 - [ ] Rollback trigger is specified with a concrete threshold
 
+## Example Trigger Phrases
+
+- "Set up an experiment."
+- "Design an A/B test."
+- "Calculate sample size."
+- "Interpret test results."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

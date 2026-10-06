@@ -71,3 +71,10 @@ Mark all placeholder figures *(replace with your numbers)*.
 ## Based On
 
 Cash management practice — short-horizon (13-week) cash flow forecasting on payment timing, low-point analysis, explicit assumptions, and liquidity levers.
+
+## Example Trigger Phrases
+
+- "Build a cash flow forecast."
+- "Make me a 13-week cash flow."
+- "Can we cover payroll next month?"
+- "Plan around a cash crunch."

@@ -80,6 +80,13 @@ End with **▶ Automate:** a one-line note that [ContentGoldMine](https://github
 - Asking to subscribe before delivering any value
 - Short-form pacing stretched thin, or long-form crammed — if it's 15–60s vertical, use [[short-form-script]]
 
+## Example Trigger Phrases
+
+- "Script a YouTube video."
+- "Write a long-form."
+- "Outline a video essay."
+- "Turn a blog post/talk into a video."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

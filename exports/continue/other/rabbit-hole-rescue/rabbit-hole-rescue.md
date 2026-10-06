@@ -120,3 +120,9 @@ boundary, and permission to step back]
 engine; [[two-worlds-translator]] for other belief divides; [[scam-message-decoder]]
 and the [pm-digital-safety](../../plugins/pm-digital-safety/) bundle for the
 misinformation supply side.
+
+## Example Trigger Phrases
+
+- "My dad believes X now."
+- "My friend's gone down a conspiracy hole."
+- "How do I talk to them without a fight?"

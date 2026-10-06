@@ -72,6 +72,13 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 
 Consumer-side repair-order review practice — symptom-to-line reconciliation, urgency triage, labor-overlap questioning.
 
+## Example Trigger Phrases
+
+- "Is this repair quote fair?"
+- "Decode my mechanic's estimate."
+- "Do I really need all this?"
+- "Is the shop ripping me off?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

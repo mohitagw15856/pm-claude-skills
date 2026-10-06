@@ -57,3 +57,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 LinkedIn profile-optimisation practice — keyword-aware headline/About, hook-before-fold, recruiter search ranking.
+
+## Example Trigger Phrases
+
+- "Improve my LinkedIn headline."
+- "Rewrite my LinkedIn About section."
+- "Make my profile recruiter-friendly."
+- "Optimise my LinkedIn profile."

@@ -62,3 +62,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 LLM production cost/latency practice — token accounting, model cascades/tiering, prompt & response caching, and tail-latency budgeting.
+
+## Example Trigger Phrases
+
+- "Estimate LLM API costs."
+- "Set a latency/token budget."
+- "Decide which model tier to use."
+- "Bring down the cost of an AI feature."

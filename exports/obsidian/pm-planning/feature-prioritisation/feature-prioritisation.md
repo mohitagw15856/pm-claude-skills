@@ -170,6 +170,13 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not mix RICE, ICE, or MoSCoW scores across frameworks in a single session — pick one framework per prioritisation exercise
 - [ ] Do not treat the output as final without documenting the assumptions used in scoring — assumptions change, and the list must be revisitable
 
+## Example Trigger Phrases
+
+- "Prioritise features."
+- "Rank a backlog."
+- "Decide what to build next."
+- "Evaluate tradeoffs between competing ideas."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -117,6 +117,13 @@ this plans and prompts, it can't certify a venue's access.
 [[venue-access-check]] for checking a single place; [[relocation-planner]] for moving
 rather than visiting; [[travel-itinerary|group-trip-negotiator]] for the group version.
 
+## Example Trigger Phrases
+
+- "Plan an accessible trip."
+- "Travel with a wheelchair/disability."
+- "Book assistance for my flight."
+- "Will this hotel actually work for me?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

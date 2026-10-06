@@ -77,3 +77,10 @@ flowchart TD
 ## Based On
 
 Organizational charting (reporting lines, spans of control, matrix relationships), as renderable Mermaid.
+
+## Example Trigger Phrases
+
+- "Draw an org chart."
+- "Show reporting lines."
+- "Visualize team structure."
+- "Map who reports to whom."

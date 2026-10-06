@@ -65,3 +65,10 @@ Ask for these if not provided:
 - [ ] Do not open answers with background — answer, then explain
 - [ ] Do not inline the library — cache the answer, link the depth
 - [ ] Do not launch without the loop — a static FAQ is a snapshot aging into misinformation
+
+## Example Trigger Phrases
+
+- "Create an FAQ for this product/process/team."
+- "I answer the same questions weekly."
+- "Turn our support threads into docs."
+- "Why does nobody find our answers?"

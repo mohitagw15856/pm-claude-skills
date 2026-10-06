@@ -51,3 +51,10 @@ Bugs, edge cases, or smells you noticed while reading — with the fix. (If it's
 - [ ] Do not skip the gotchas — the value is in the non-obvious parts
 - [ ] Do not assume expert level if the question reads like a beginner's (or vice-versa)
 - [ ] Do not ignore a bug you can see just because you weren't asked to review it
+
+## Example Trigger Phrases
+
+- "Explain code."
+- "Walk through a function."
+- "Understand an unfamiliar snippet."
+- "Onboard to a file."

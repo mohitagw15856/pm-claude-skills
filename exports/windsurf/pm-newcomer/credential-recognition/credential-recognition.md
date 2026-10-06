@@ -114,3 +114,9 @@ the official assessing body and immigration authority.
 [[arrival-setup]] for the first-weeks logistics; [[the-visa-interview]] and
 [[immigration-document-checklist]] for status; [[resume]] and [[linkedin-profile]] to
 present recognised credentials; [[two-worlds-translator]] for the cultural transition.
+
+## Example Trigger Phrases
+
+- "Get my degree recognised abroad."
+- "Is my foreign license valid here?"
+- "Can I work as a [nurse/engineer/teacher] in [country] with my qualifications?"

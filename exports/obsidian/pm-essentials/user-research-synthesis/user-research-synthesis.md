@@ -263,6 +263,13 @@ When synthesizing research, use this structure:
 - Raw notes/transcripts (link)
 ```
 
+## Example Trigger Phrases
+
+- "Synthesise these interview transcripts."
+- "Analyse our survey results."
+- "Find themes in this user feedback."
+- "Summarise this user research."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

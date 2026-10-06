@@ -72,6 +72,12 @@ python3 scripts/hipaa_checklist.py safeguards.json --json
 
 HIPAA Security Rule (45 CFR §164.308–312) — administrative, physical, and technical safeguards + required risk analysis.
 
+## Example Trigger Phrases
+
+- "Assess HIPAA safeguards."
+- "Prepare for handling PHI/ePHI."
+- "Scope a BAA."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

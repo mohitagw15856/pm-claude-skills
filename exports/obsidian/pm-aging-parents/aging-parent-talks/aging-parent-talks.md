@@ -136,6 +136,12 @@ the crisis signs that end gradualism, with verify-local routes]
 for the logistics after yes; [[the-visa-interview]] shares the rehearsal
 bones; [[patient-communication]] for the clinical-side cousin.
 
+## Example Trigger Phrases
+
+- "I need to talk to my dad about driving."
+- "My mum won't discuss her finances."
+- "We need to talk about care."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

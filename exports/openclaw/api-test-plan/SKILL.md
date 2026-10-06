@@ -72,3 +72,10 @@ Cover deliberately: **happy path** (correct status + schema), **validation** (mi
 ## Based On
 
 API testing practice — contract/schema validation, status-code correctness, auth/authz coverage, and negative/boundary testing beyond the happy path.
+
+## Example Trigger Phrases
+
+- "Test an API."
+- "Write API test cases."
+- "Plan REST/GraphQL endpoint testing."
+- "Validate an API contract."

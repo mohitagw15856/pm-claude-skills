@@ -65,3 +65,9 @@ Ask for these if not provided:
 - [ ] Do not cc the requester on the opt-in ask — it converts a free no into a public one
 - [ ] Do not oversell the requester — the introducer's credibility is the currency, and inflation debases it
 - [ ] Do not skip the loop-close — introducers who never hear outcomes stop introducing
+
+## Example Trigger Phrases
+
+- "Introduce me to someone."
+- "Can you connect us?"
+- "Write an intro email."

@@ -57,6 +57,13 @@ Ask for these only if they aren't already provided:
 
 Programmatic SEO practice (templated data-driven pages, intent + unique value, Google's thin-content/helpful-content guidance).
 
+## Example Trigger Phrases
+
+- "Plan a pSEO strategy."
+- "Build pages for each city and service."
+- "Scale content with templates and data."
+- "Capture long-tail search at scale."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

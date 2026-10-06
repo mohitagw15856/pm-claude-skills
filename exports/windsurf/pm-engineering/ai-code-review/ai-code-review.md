@@ -67,3 +67,10 @@ Review in this order — most damaging first:
 - [ ] Do not reject code *for being* AI-written — review the code; provenance calibrates scrutiny, not verdicts
 - [ ] Do not skip security linting because the change is small — the shortcut hides in the periphery
 - [ ] Do not accept "the agent tested it" as verification — demand the evidence in the PR
+
+## Example Trigger Phrases
+
+- "Review this AI-generated pull request."
+- "Claude wrote this code: what did it get wrong?"
+- "Check this PR for hallucinated APIs."
+- "Set review standards for a team using coding agents."

@@ -109,6 +109,14 @@ Ask for (if not already provided):
 [[arrival-setup]] for newcomers registering for the first time; [[speak-at-the-council]]
 to be heard between elections.
 
+## Example Trigger Phrases
+
+- "How do I vote?"
+- "Am I registered?"
+- "What's the deadline to register?"
+- "Help me vote by mail."
+- "What's on my ballot?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

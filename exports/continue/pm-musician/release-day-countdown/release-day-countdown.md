@@ -124,3 +124,9 @@ press/local via EPK · the no-pay-for-play warning]
 [[press-kit-epk]] for the outreach attachment; [[band-agreement]] before
 the money arrives; [[clip-factory]] turns the one song into the fifteen
 pieces; [[content-calendar]] for the ongoing rhythm after.
+
+## Example Trigger Phrases
+
+- "I'm releasing a single/EP."
+- "Should I submit to playlists?"
+- "Plan my release."

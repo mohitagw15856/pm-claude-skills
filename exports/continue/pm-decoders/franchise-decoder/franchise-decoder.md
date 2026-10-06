@@ -69,3 +69,10 @@ Ask for these if not provided:
 - **Validation calls only to franchisor-provided names.** The list they give you is the list they chose.
 - **Reading *protected territory* as exclusive** without decoding the carve-outs.
 - **Skipping the formers.** The people who left know the one thing the brochure cannot say.
+
+## Example Trigger Phrases
+
+- "Evaluate a franchise."
+- "Review an FDD."
+- "Is this franchise a good deal?"
+- "What to ask existing franchisees?"

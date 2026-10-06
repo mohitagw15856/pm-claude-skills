@@ -68,6 +68,13 @@ Ask for these if not provided:
 - [ ] Do not outline the ideal thesis — outline the one finishable with the data and months that exist
 - [ ] Do not hide the weakest link — it's the first thing the committee finds; better it's the best-defended
 
+## Example Trigger Phrases
+
+- "Outline my thesis."
+- "Structure my dissertation."
+- "Plan my capstone."
+- "Organize my research into chapters."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

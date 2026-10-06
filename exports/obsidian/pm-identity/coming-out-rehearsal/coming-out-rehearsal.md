@@ -119,6 +119,12 @@ exit & immediate-after · permission to delay]
 for other high-stakes family conversations; [[name-change-navigator]] for the logistics
 that may follow.
 
+## Example Trigger Phrases
+
+- "I want to come out to my parents/boss/friend."
+- "Help me tell them I'm [gay/trans/bi/etc.]."
+- "Rehearse this conversation with me."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

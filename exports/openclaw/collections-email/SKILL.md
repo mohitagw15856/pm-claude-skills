@@ -69,3 +69,10 @@ Add **notes**: insert real invoice details; confirm any interest/late fee and es
 ## Based On
 
 Accounts-receivable practice — staged dunning sequences that escalate professionally, remove payment friction, and preserve the client relationship.
+
+## Example Trigger Phrases
+
+- "Write a collections email."
+- "Chase an overdue invoice."
+- "Write a payment reminder."
+- "Set up a dunning sequence."

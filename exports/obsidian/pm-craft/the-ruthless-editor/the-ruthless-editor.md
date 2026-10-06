@@ -73,6 +73,14 @@ Ask for these if not provided:
 - **Diagnosis as insult.** "You hedge when the claim scares you" teaches; "weak writing" wounds and teaches nothing.
 - **Skipping the missing-thing pass.** Pure subtraction feels rigorous and ships pieces with holes; the earned addition is part of the ruthlessness.
 
+## Example Trigger Phrases
+
+- "Edit this ruthlessly."
+- "Cut my draft down."
+- "Why is this piece flabby?"
+- "Tighten this up."
+- "As the second half of a drafting duet: run any writing skill."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

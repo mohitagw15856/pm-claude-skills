@@ -58,3 +58,10 @@ Acknowledging the loss, grief-support resources, and any follow-up (a condolence
 - Clinical euphemism that leaves the owner unclear what will happen
 - Handling payment or aftercare coldly in the moment
 - Ignoring children, cultural, or presence preferences
+
+## Example Trigger Phrases
+
+- "Help discuss euthanasia."
+- "Assess quality of life."
+- "Prepare for a difficult end-of-life conversation."
+- "Support an owner facing the decision."

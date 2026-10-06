@@ -72,6 +72,13 @@ Close with a list of **facts to confirm** before sending and a clinician-sign-of
 
 Utilization-management correspondence practice — medical-necessity argumentation tied to coverage criteria, step-therapy documentation, and targeted appeals.
 
+## Example Trigger Phrases
+
+- "Write a prior authorization letter."
+- "Write a letter of medical necessity."
+- "Appeal a denied medication."
+- "Get this procedure approved by the insurer."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

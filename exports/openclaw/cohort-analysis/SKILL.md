@@ -283,3 +283,9 @@ This skill activates on phrases including:
 - "Analyse retention by acquisition month"
 - "What's the LTV of users from [channel] vs [channel]?"
 - "Build a cohort retention model from
+
+## Example Trigger Phrases
+
+- "Run a cohort analysis."
+- "Analyse retention by cohort."
+- "Calculate lifetime value by acquisition period."

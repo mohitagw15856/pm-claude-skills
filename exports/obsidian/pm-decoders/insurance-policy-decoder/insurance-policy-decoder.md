@@ -74,6 +74,12 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 
 Policyholder-side coverage review practice — declarations/exclusions reconciliation, payout-scenario testing, sublimit auditing.
 
+## Example Trigger Phrases
+
+- "What does my insurance actually cover?"
+- "Decode my policy."
+- "Is this deductible normal?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

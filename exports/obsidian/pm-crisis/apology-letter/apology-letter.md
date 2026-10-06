@@ -63,6 +63,13 @@ Then provide a **short version** (2–4 sentences) for chat/social, and **notes*
 
 Effective-apology practice — specific acknowledgement, unconditional responsibility, empathy, concrete remedy, and credible prevention.
 
+## Example Trigger Phrases
+
+- "Write an apology."
+- "Say sorry to a customer."
+- "Make amends after a mistake."
+- "Respond to a complaint with an apology."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

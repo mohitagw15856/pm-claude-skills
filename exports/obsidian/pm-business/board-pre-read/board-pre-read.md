@@ -63,6 +63,13 @@ Ask for these only if they aren't already provided:
 
 Board-management practice — pre-circulated reading, metrics-vs-plan transparency, and decision-focused agendas.
 
+## Example Trigger Phrases
+
+- "Prepare a board pre-read."
+- "Write our board pack for next week."
+- "Send the board materials before the meeting."
+- "Make the board meeting about decisions, not status."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

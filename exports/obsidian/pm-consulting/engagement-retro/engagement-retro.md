@@ -57,6 +57,13 @@ Ask for these only if they aren't already provided:
 
 Consulting close-out / retrospective practice — outcome review, profitability reality, lessons-to-process, and the renewal/referral motion.
 
+## Example Trigger Phrases
+
+- "Wrap up a client project."
+- "Run an engagement retro."
+- "Write a project close-out."
+- "Plan the follow-on."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

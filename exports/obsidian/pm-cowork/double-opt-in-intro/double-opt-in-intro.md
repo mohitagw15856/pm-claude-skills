@@ -63,6 +63,12 @@ Ask for these if not provided:
 - [ ] Do not oversell the requester — the introducer's credibility is the currency, and inflation debases it
 - [ ] Do not skip the loop-close — introducers who never hear outcomes stop introducing
 
+## Example Trigger Phrases
+
+- "Introduce me to someone."
+- "Can you connect us?"
+- "Write an intro email."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

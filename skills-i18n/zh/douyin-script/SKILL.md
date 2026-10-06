@@ -72,7 +72,7 @@ description: "为抖音或类似竖屏短视频平台撰写脚本：前三秒的
 - **未经核实的产品声明。**
 
 ## 示例触发语
-- "帮我写一个 30 秒的抖音脚本，教大家整理衣柜。"
-- "这个视频开头怎么写才抓人？"
-- "写一个产品测评短视频的分镜脚本。"
-- "Write a 60-second Douyin script for our coffee brand."
+- “帮我写一个 30 秒的抖音脚本，教大家整理衣柜。”
+- “这个视频开头怎么写才抓人？”
+- “写一个产品测评短视频的分镜脚本。”
+- “Write a 60-second Douyin script for our coffee brand.”

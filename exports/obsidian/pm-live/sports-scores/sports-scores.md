@@ -59,6 +59,13 @@ Source: ESPN public feed (unofficial) · as of [fetch time] · rerun: `[exact cu
 - [ ] Do not improvise when the endpoint reshapes — report and hand over the command
 - [ ] Do not editorialize outcomes ("embarrassing loss") — the user's team just lost; read the room, give the facts
 
+## Example Trigger Phrases
+
+- "What's the score?"
+- "Did my team win?"
+- "What games are on today?"
+- "Show me the league standings right now."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

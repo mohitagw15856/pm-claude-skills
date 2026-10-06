@@ -65,3 +65,10 @@ Mark any inferred spec/claim *(assumed — confirm)*.
 ## Based On
 
 E-commerce copywriting practice — benefit-led, scannable listings with feature-to-benefit translation, on-page SEO, and objection handling.
+
+## Example Trigger Phrases
+
+- "Write a product description."
+- "Write e-commerce listing copy."
+- "Write a product page."
+- "Rewrite this flat product blurb."

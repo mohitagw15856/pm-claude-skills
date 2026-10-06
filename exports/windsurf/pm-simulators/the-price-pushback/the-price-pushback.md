@@ -66,3 +66,9 @@ Ask for these if not provided:
 - [ ] Do not coach deception — holds are about scope, value, and arithmetic, never fake competing offers or invented costs
 - [ ] Do not skip the precedent line — this negotiation prices the next three
 - [ ] Do not stay in character in the debrief
+
+## Example Trigger Phrases
+
+- "Simulate a client negotiating my rate."
+- "Practice price pushback."
+- "Stress-test my pricing conversation."

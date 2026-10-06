@@ -62,6 +62,13 @@ Ask for (if not already provided):
 - [ ] Do not design only the happy state — empty/loading/error are where users actually judge the product
 - [ ] Do not mix density registers — a marketing hero above a data grid needs a deliberate seam, not a collision
 
+## Example Trigger Phrases
+
+- "Build a landing page that looks designed."
+- "Restyle this UI."
+- "Make this dashboard look less generic."
+- "Establish the visual system for a new app."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

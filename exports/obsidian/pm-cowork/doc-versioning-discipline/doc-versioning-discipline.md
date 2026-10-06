@@ -64,6 +64,12 @@ Ask for these if not provided:
 - [ ] Do not let drafts share shelf space with actives — escaped drafts are the stealthiest wrong docs
 - [ ] Do not install the discipline without the sweep — headers without heartbeats are just prettier rot
 
+## Example Trigger Phrases
+
+- "Which version of this doc is current?"
+- "Our wiki is full of stale pages."
+- "Set up doc lifecycle rules."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent
