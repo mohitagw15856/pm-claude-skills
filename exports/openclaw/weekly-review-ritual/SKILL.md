@@ -68,3 +68,9 @@ Ask for these if not provided:
 - [ ] Do not let drops happen silently — dropped-on-purpose is healthy; dropped-by-leak is the thing this ritual exists to end
 - [ ] Do not skip twice — the second skip is the system's funeral, quietly
 - [ ] Do not expand the ritual — 30 minutes is the ceiling; a 90-minute review gets skipped by week three
+
+## Example Trigger Phrases
+
+- "Set up a weekly review."
+- "My weeks just happen to me."
+- "I keep dropping threads between weeks."

@@ -58,3 +58,10 @@ Ask for these if not provided:
 - [ ] Do not leave the emergency channel undefined — undefined defaults to everything, nightly
 - [ ] Do not run the ritual sometimes — inconsistent rituals don't change state; the streak is the mechanism
 - [ ] Do not do one more check after the phrase — it's not a check, it's a reopening, and the brain knows
+
+## Example Trigger Phrases
+
+- "I can't stop thinking about work at night."
+- "Build an end-of-day routine."
+- "My evenings are ruined by open loops."
+- "How do I stop checking one more time?"

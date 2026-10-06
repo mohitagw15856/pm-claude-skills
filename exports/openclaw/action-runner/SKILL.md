@@ -107,3 +107,10 @@ which previews, gates, executes, and records. The skill never executes directly.
 - Acting outside the scope the user named, or fanning out to many targets
 - "Helpfully" doing more than was approved
 - Forgetting to record what was done — the brain must reflect reality
+
+## Example Trigger Phrases
+
+- "File tickets from a checklist."
+- "Create issues from a PRD."
+- "Execute the recommended next steps."
+- "Wire a skill's output into GitHub/Linear/Slack."

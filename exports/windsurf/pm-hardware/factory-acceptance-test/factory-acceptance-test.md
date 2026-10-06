@@ -71,3 +71,11 @@ From lot size + Level II, derive the sample-size code letter and accept/reject n
 - [ ] Do not allow rework-and-reinspect of a rejected lot without 100% rescreen of the reworked defect mode
 - [ ] Do not accept a lot with an unsigned deviation in the log
 - [ ] Do not let golden samples go stale across an ECO — refresh or they certify the wrong product
+
+## Example Trigger Phrases
+
+- "Write a FAT plan."
+- "Define outgoing quality inspection."
+- "Set AQL levels."
+- "Prepare for a factory acceptance."
+- "Document FAT results."

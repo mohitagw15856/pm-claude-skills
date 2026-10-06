@@ -64,3 +64,10 @@ python3 scripts/comp_compare.py offers.json --signing-years 1 --json
 ## 依据
 
 原则谈判法（*Getting to Yes*，Fisher 与 Ury：BATNA、关注利益而非立场）在薪酬谈判中的应用。
+
+## 示例触发语
+
+- “帮我谈薪。”
+- “怎么还价这个 offer？”
+- “准备薪酬谈话。”
+- “比较这几个 offer。”

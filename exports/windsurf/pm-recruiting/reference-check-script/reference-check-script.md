@@ -65,3 +65,10 @@ Ask about job performance only. Do **not** ask about age, health/disability, fam
 - Treating the call as confirmation, not investigation
 - Asking anything about protected characteristics
 - No rubric — a vibe instead of a comparable, documented signal
+
+## Example Trigger Phrases
+
+- "Prepare reference calls for this candidate."
+- "Design reference questions."
+- "Build a reference-check rubric."
+- "What should I ask this candidate's references?"

@@ -67,3 +67,10 @@ Ask for these if not provided:
 - [ ] Do not treat every finding as a crisis — the $2 artifact and the double-count get different fonts
 - [ ] Do not imply coverage you didn't do — the suspect ledger is the audit's integrity
 - [ ] Do not leave growth-fragile ranges unflagged in a sheet that grows — today's clean audit is next month's row-41 error
+
+## Example Trigger Phrases
+
+- "Check this spreadsheet before we present it."
+- "Why don't these numbers add up?"
+- "Audit this model someone left behind."
+- "Is this sheet safe to build on?"

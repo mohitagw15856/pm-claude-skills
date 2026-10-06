@@ -76,3 +76,10 @@ Mark all amounts *(set your amount)* and add a note to confirm tax treatment wit
 ## Based On
 
 Finance-operations practice — clear, category-based expense policies with limits, approval workflow, and a simple submission/reimbursement process.
+
+## Example Trigger Phrases
+
+- "Write an expense policy."
+- "Write a reimbursement policy."
+- "Write our travel and expense policy."
+- "Set spending guidelines for the team."

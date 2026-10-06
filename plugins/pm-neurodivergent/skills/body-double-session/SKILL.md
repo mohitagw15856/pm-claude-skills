@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "I can't start this task."
+- "Body double with me."
+- "I only work when someone's around."
+- "Sit with me while I do my taxes."

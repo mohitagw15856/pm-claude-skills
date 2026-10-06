@@ -58,6 +58,13 @@ The observable competencies a trainer checks before solo — greeting, order acc
 - No defined bar for readiness — trainers guessing
 - A binder no one uses instead of hands-on, checked practice
 
+## Example Trigger Phrases
+
+- "Train a new server."
+- "Create FOH onboarding."
+- "Write service standards."
+- "Build a restaurant training program."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

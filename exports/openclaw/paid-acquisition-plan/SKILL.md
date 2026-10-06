@@ -61,3 +61,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Performance-marketing practice — LTV/CAC and payback economics, incrementality testing, and creative-led experimentation.
+
+## Example Trigger Phrases
+
+- "Plan paid media."
+- "Allocate an ad budget across channels."
+- "Set CAC/LTV targets."
+- "Structure a creative-testing program."

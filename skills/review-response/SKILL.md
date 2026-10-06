@@ -60,3 +60,10 @@ Keep negative replies calm and brief — the audience is the *next* shopper.
 ## Based On
 
 Online reputation & customer-service practice — specific, ownership-led public responses, private-channel resolution, and audience-aware (next-shopper) tone.
+
+## Example Trigger Phrases
+
+- "Respond to a review."
+- "Reply to a bad/1-star review."
+- "Handle online reviews."
+- "Write review-response templates."

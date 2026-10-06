@@ -69,6 +69,13 @@ Ask for these only if they aren't already provided (else infer and label):
 
 Bookkeeping practice — fit-for-purpose charts of accounts, consistent categorization rules with edge cases, and a monthly reconciliation routine.
 
+## Example Trigger Phrases
+
+- "How to categorize expenses/transactions?"
+- "Set up a chart of accounts."
+- "Organize bookkeeping."
+- "Sort bank transactions into the right buckets."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

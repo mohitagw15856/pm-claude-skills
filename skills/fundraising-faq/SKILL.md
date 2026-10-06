@@ -57,3 +57,9 @@ End with:
 - "No competitors" and "we only need 1% of the market"
 - Over-long answers that sound rehearsed and evasive
 - Pretending a real risk doesn't exist instead of framing how you'll manage it
+
+## Example Trigger Phrases
+
+- "Prep for investor Q&A."
+- "Handle pushback on a raise."
+- "Build a fundraising FAQ."

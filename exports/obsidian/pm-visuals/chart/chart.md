@@ -71,6 +71,13 @@ A one-line read — the takeaway the chart makes obvious.
 
 Data-visualization practice (chart-type-to-intent: trend/comparison/composition), emitted as a renderable chart spec.
 
+## Example Trigger Phrases
+
+- "Chart this data."
+- "Graph our monthly revenue."
+- "Visualise these metrics."
+- "Show these numbers as a picture instead of a table."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

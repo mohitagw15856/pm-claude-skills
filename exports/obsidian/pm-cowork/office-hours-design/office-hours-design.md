@@ -65,6 +65,13 @@ Ask for these if not provided:
 - [ ] Do not answer everything privately — private answers scale linearly; public ones compound
 - [ ] Do not perform empty availability — genuinely low demand means a smaller slot, honestly held
 
+## Example Trigger Phrases
+
+- "Set up office hours."
+- "I'm interrupted constantly but want to stay accessible."
+- "My office hours sit empty."
+- "Design expert time for the team."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

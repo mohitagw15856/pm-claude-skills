@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Prepare for a power outage."
+- "What if the power goes out for days?"
+- "I rely on a medical device that needs electricity."

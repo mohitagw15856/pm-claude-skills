@@ -78,6 +78,13 @@ Deterministic. Default shares are planning conventions (venue+catering ~42%, pho
 - [ ] Do not average competing quotes into the budget — pick the likely vendor's number and track it
 - [ ] Do not moralize the spending level — the skill's job is that the chosen number survives, whatever it is
 
+## Example Trigger Phrases
+
+- "Make a wedding budget."
+- "How do people split X across a wedding?"
+- "We have N dollars and M guests."
+- "Why is our wedding over budget?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

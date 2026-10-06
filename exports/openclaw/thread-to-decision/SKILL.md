@@ -63,3 +63,9 @@ Ask for these if not provided:
 - [ ] Do not let three questions share the landing — braided threads orbit forever
 - [ ] Do not close without the dissent line — smooth closes breed rough reopenings
 - [ ] Do not leave the decision at message 47 — un-recorded decisions have a half-life of six weeks
+
+## Example Trigger Phrases
+
+- "Get a decision out of this discussion."
+- "Summarize where we landed."
+- "Why do our threads never conclude?"

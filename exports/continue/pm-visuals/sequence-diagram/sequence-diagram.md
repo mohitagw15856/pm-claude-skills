@@ -68,3 +68,10 @@ sequenceDiagram
 ## Based On
 
 UML sequence diagramming (lifelines, sync/async messages, alt fragments), expressed as renderable Mermaid.
+
+## Example Trigger Phrases
+
+- "Show this API flow as a diagram."
+- "Draw the auth handshake."
+- "What calls what in what order?"
+- "Diagram this integration."

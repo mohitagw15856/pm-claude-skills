@@ -54,6 +54,13 @@ Ask for these only if they aren't already provided:
 
 Subtitling standards — reading-speed (CPS) limits, ~42-char lines, 2-line max, phrase-boundary segmentation, SDH conventions.
 
+## Example Trigger Phrases
+
+- "Write subtitles for this video."
+- "Make captions as an SRT file."
+- "Translate these subtitles."
+- "Fix the reading speed of these captions."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

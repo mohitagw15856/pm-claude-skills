@@ -71,3 +71,9 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 The Investment Policy Statement framework (goals, risk, allocation, rules) used by advisors and DIY investors.
+
+## Example Trigger Phrases
+
+- "Define an investment strategy."
+- "Set a target asset allocation."
+- "Write rules to avoid panic-driven decisions."

@@ -64,6 +64,13 @@ Ask for these if not provided:
 - [ ] Do not blend mixed mandates — split, sequence, announce the seam
 - [ ] Do not let the room diagnose the mode in Q&A — "what do you want from us?" is the autopsy question
 
+## Example Trigger Phrases
+
+- "Is this a pitch?"
+- "My informative deck didn't land the ask."
+- "My pitch felt like a lecture."
+- "Structure this talk for the right job."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

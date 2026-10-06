@@ -65,6 +65,13 @@ End with a **coverage note**: which acceptance criteria/requirements each case m
 
 Test-design practice — requirement-derived cases with boundary-value and negative testing, atomic executable steps, and traceability to acceptance criteria.
 
+## Example Trigger Phrases
+
+- "Write test cases for this story."
+- "Write test scenarios for checkout."
+- "Build a test suite for this feature."
+- "Derive tests from these acceptance criteria."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

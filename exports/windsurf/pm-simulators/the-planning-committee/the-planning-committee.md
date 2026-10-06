@@ -69,3 +69,10 @@ Ask for these if not provided:
 - [ ] Do not invent policy citations — anchor to the officer report the members are holding
 - [ ] Do not let the pet-issue councillor be defeated — redirected, never humiliated
 - [ ] Do not stay in character in the debrief
+
+## Example Trigger Phrases
+
+- "Prepare for a planning committee."
+- "My application goes to committee."
+- "Rehearse my three minutes."
+- "How do I answer the objectors?"

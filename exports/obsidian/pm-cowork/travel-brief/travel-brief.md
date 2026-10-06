@@ -65,6 +65,13 @@ Ask for these if not provided:
 - [ ] Do not pile receipts for later — the 15-second photo beats the March shoebox by arithmetic
 - [ ] Do not schedule the flight hours as working hours — transit is transit; double-booked days collapse twice
 
+## Example Trigger Phrases
+
+- "Prep my business trip."
+- "Build the travel brief."
+- "I always forget something when traveling."
+- "Organize this three-city week."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

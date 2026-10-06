@@ -105,6 +105,12 @@ sensory · parking/drop-off — tailored to your needs]
 digital/UI standards audit; [[accommodation-request]] when the venue is your workplace;
 [[report-a-hazard]] if a public venue's access is unlawfully absent.
 
+## Example Trigger Phrases
+
+- "Will this place work for my wheelchair?"
+- "Check if this venue is accessible."
+- "Is this restaurant/office actually accessible?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

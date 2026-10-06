@@ -82,7 +82,7 @@ description: "为中国企业规划进入海外市场（出海）：用证据选
 - **把监管说明当作最终结论。** 规则会变；要在当地核实。
 
 ## 示例触发语
-- "我们是做智能家居的，想出海，东南亚还是中东？"
-- "帮我做一个进入美国市场的出海计划。"
-- "Plan our expansion from China into Europe for the first year."
-- "出海需要注意哪些合规问题？"
+- “我们是做智能家居的，想出海，东南亚还是中东？”
+- “帮我做一个进入美国市场的出海计划。”
+- “Plan our expansion from China into Europe for the first year.”
+- “出海需要注意哪些合规问题？”

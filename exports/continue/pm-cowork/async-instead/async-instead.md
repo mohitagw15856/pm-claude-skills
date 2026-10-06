@@ -62,3 +62,9 @@ Ask for these if not provided:
 - [ ] Do not skip the closure step — async that can't decide trains everyone to book rooms again
 - [ ] Do not leave silence undefined — "nobody objected" and "nobody read it" look identical without the rule
 - [ ] Do not async the genuinely synchronous — one failed forced conversion discredits ten good ones
+
+## Example Trigger Phrases
+
+- "Can this meeting be async?"
+- "Replace our status meeting with a doc."
+- "Run this decision without a call."

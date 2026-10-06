@@ -72,6 +72,13 @@ It returns per-criterion and overall readiness (met=1.0, partial=0.5, gap=0) and
 
 AICPA SOC 2 Trust Services Criteria (Security, Availability, Confidentiality, Processing Integrity, Privacy).
 
+## Example Trigger Phrases
+
+- "Prepare for a SOC 2 audit."
+- "Run a SOC 2 readiness/gap assessment."
+- "Scope controls."
+- "Get audit-ready."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

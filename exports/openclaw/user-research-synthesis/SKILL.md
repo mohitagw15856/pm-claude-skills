@@ -251,3 +251,10 @@ When synthesizing research, use this structure:
 - Full participant demographics
 - Raw notes/transcripts (link)
 ```
+
+## Example Trigger Phrases
+
+- "Synthesise these interview transcripts."
+- "Analyse our survey results."
+- "Find themes in this user feedback."
+- "Summarise this user research."

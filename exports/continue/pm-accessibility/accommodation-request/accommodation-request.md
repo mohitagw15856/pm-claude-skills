@@ -116,3 +116,9 @@ process and to an advocate/lawyer if you meet resistance.
 [[disability-benefit-appeal]] for the benefits side; [[venue-access-check]] and
 [[accessible-travel-planner]] for physical access; [[nt-translator]] for the workplace-
 communication layer.
+
+## Example Trigger Phrases
+
+- "I need a workplace accommodation."
+- "Request reasonable adjustments."
+- "How do I ask for accommodations for my disability/condition?"

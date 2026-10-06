@@ -60,3 +60,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Goal-based saving (sinking funds): target ÷ timeline, milestone tracking, and automated contributions.
+
+## Example Trigger Phrases
+
+- "Help me save for a house deposit."
+- "How much should I set aside each month?"
+- "Build an emergency fund plan."
+- "Save £3,000 for a trip by summer."

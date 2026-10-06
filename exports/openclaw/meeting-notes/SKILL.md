@@ -323,3 +323,10 @@ For tool-using agents with connected MCP servers (Notion, Linear/Jira, Slack). R
 ### Rollback
 - Undo = archive/delete the just-created page and issues, only on explicit human instruction.
 - Stop and ask a human if: the destination database/project is not found, any issue creation fails partway (report what WAS created), or an action-item owner does not exist in the tracker.
+
+## Example Trigger Phrases
+
+- "Create meeting notes."
+- "Format discussion notes."
+- "Capture action items."
+- "Document decisions from any meeting type."

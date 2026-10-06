@@ -117,6 +117,12 @@ the official assessing body and immigration authority.
 [[immigration-document-checklist]] for status; [[resume]] and [[linkedin-profile]] to
 present recognised credentials; [[two-worlds-translator]] for the cultural transition.
 
+## Example Trigger Phrases
+
+- "Get my degree recognised abroad."
+- "Is my foreign license valid here?"
+- "Can I work as a [nurse/engineer/teacher] in [country] with my qualifications?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

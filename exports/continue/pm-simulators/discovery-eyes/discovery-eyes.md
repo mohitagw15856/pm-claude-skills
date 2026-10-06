@@ -61,3 +61,10 @@ Ask for these if not provided:
 - [ ] Do not sanitize into meaninglessness — a team afraid to write anything ships nothing
 - [ ] Do not perform legal analysis — this is communication training; law belongs to lawyers
 - [ ] Do not read real named individuals' messages punitively — samples train teams; this is not a surveillance tool
+
+## Example Trigger Phrases
+
+- "How would our Slack look in discovery?"
+- "Train my team on communication hygiene."
+- "Review this thread like a plaintiff's lawyer."
+- "What shouldn't we put in writing?"

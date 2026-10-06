@@ -69,3 +69,10 @@ Ask for these if not provided:
 - [ ] Do not delete the dissenters — they're the theme's boundary survey team
 - [ ] Do not quote the spiciest take as the finding — representative or labeled as an outlier
 - [ ] Do not let confirmation win silently — the contradicted hypotheses are the synthesis's most valuable line
+
+## Example Trigger Phrases
+
+- "Synthesize these user/customer/exit interviews."
+- "What did we actually learn from the calls?"
+- "Turn 12 transcripts into insights."
+- "Are these themes real?"

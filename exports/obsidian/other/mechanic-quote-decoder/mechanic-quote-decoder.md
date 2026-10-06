@@ -133,6 +133,13 @@ decisions.
 [[home-contractor-quote-decoder]] — the same grammar in a different
 trade; [[car-tco]] for whether this car is worth fixing at all.
 
+## Example Trigger Phrases
+
+- "Is this mechanic quote fair?"
+- "Do I really need all this?"
+- "Which of these repairs are padding?"
+- "Should I get a second opinion on this garage quote?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

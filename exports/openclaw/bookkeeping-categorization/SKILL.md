@@ -71,3 +71,10 @@ Ask for these only if they aren't already provided (else infer and label):
 ## Based On
 
 Bookkeeping practice — fit-for-purpose charts of accounts, consistent categorization rules with edge cases, and a monthly reconciliation routine.
+
+## Example Trigger Phrases
+
+- "How to categorize expenses/transactions?"
+- "Set up a chart of accounts."
+- "Organize bookkeeping."
+- "Sort bank transactions into the right buckets."

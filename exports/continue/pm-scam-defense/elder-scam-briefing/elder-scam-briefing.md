@@ -62,3 +62,10 @@ Ask for these if not provided:
 - [ ] Do not skip the voice-cloning sentence — the family that trusts voices is running last decade's defense
 - [ ] Do not respond to a loss with anger or I-told-you-so — shame is why the second loss goes unreported
 - [ ] Do not build surveillance and call it protection — alerts configured *with* them, or the whole system gets opted out of
+
+## Example Trigger Phrases
+
+- "How do I talk to my parents about scams?"
+- "My mom almost sent money to someone."
+- "Set up scam protection for my dad."
+- "What scams target the elderly?"

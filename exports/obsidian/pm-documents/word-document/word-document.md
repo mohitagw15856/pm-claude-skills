@@ -78,6 +78,13 @@ python3 scripts/docx_tool.py extract out.docx
 
 Write the document first (per this skill), then `create` it as a real file. Honest limits: the markdown subset above with default styling; complex templates keep their formatting except in paragraphs where a placeholder spanned runs.
 
+## Example Trigger Phrases
+
+- "Produce a Word doc."
+- "Make this report a .docx."
+- "Build a formatted contract in Word."
+- "Turn this into a proper Word document."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

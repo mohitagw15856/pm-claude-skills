@@ -71,7 +71,7 @@ description: "签署前解读中国大陆劳动合同：试用期、工资及其
 - **以为全国性规定能覆盖一切。** 部分细节是地方性的；要说明。
 
 ## 示例触发语
-- "帮我看看这份劳动合同有没有坑。"
-- "三年合同试用期六个月，合法吗？"
-- "合同里有竞业限制但没写补偿，怎么办？"
-- "Review my Chinese employment contract before I sign."
+- “帮我看看这份劳动合同有没有坑。”
+- “三年合同试用期六个月，合法吗？”
+- “合同里有竞业限制但没写补偿，怎么办？”
+- “Review my Chinese employment contract before I sign.”

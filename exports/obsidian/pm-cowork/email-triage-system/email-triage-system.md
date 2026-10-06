@@ -60,6 +60,13 @@ Ask for these if not provided:
 - [ ] Do not process newest-first during backlog clearing — oldest-first or the backlog is immortal
 - [ ] Do not moralize the overflow — inboxes overflow structurally; the system is the fix, not discipline
 
+## Example Trigger Phrases
+
+- "Help me get to inbox zero."
+- "My email is out of control."
+- "Build me an email triage system."
+- "Process this backlog."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

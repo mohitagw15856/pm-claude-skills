@@ -83,3 +83,11 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not list metric movements without root cause hypotheses — observations without explanations are not analysis
 - [ ] Do not mix product health metrics with business KPIs without explaining the relationship between them
 - [ ] Do not omit recommended actions — a health report that only describes problems without prioritised next steps is incomplete
+
+## Example Trigger Phrases
+
+- "Analyse product health."
+- "Review key metrics."
+- "Investigate a performance issue."
+- "Produce a health report."
+- "Assess product-market fit signals."

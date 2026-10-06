@@ -62,3 +62,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Vulnerability management practice (CVSS base/temporal/environmental, exploitability & KEV context, risk-based SLAs).
+
+## Example Trigger Phrases
+
+- "Triage a CVE."
+- "Prioritize scanner/pentest findings."
+- "Assess a vuln's risk."
+- "Decide what to patch first."

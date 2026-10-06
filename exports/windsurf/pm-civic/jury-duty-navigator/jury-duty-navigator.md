@@ -106,3 +106,9 @@ to the court's process · documentation needed]
 [[scam-message-decoder]] for the jury-fine scam; [[voting-navigator]] and
 [[elected-rep-letter]] for the rest of civic life; [[saying-no-kindly]] for the work
 conversation.
+
+## Example Trigger Phrases
+
+- "Can I get out of jury duty?"
+- "How do I defer jury service?"
+- "What happens at jury duty?"

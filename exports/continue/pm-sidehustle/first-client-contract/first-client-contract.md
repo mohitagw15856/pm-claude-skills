@@ -67,3 +67,10 @@ Ask for these if not provided:
 - [ ] Do not leave revisions uncounted — "reasonable revisions" is a fight with a fuse lit
 - [ ] Do not transfer IP before payment completes without flagging the choice being made
 - [ ] Do not pretend this scales to every deal — the triggers list is load-bearing honesty
+
+## Example Trigger Phrases
+
+- "Write my first client contract."
+- "What should a freelance agreement include?"
+- "My client wants to start without a contract."
+- "Review this simple services agreement."

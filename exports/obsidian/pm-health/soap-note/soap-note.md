@@ -69,6 +69,13 @@ End with a note of any **fields not documented** and a reminder that the treatin
 
 Clinical documentation practice — the SOAP (Subjective, Objective, Assessment, Plan) format for structured, reviewable encounter notes.
 
+## Example Trigger Phrases
+
+- "Write a SOAP note."
+- "Document a patient encounter."
+- "Turn visit notes into clinical documentation."
+- "Structure subjective/objective/assessment/plan."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

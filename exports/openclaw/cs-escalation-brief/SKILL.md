@@ -198,3 +198,10 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not leave resolution plan ownership as "TBD" or unassigned
 - [ ] Do not write the brief without a clear ask from the escalation owner
 - [ ] Do not omit the customer's own stated position — their perspective must be represented fairly
+
+## Example Trigger Phrases
+
+- "This account is threatening to churn."
+- "Write an escalation brief for this customer."
+- "A P1 issue needs executive attention."
+- "Prepare an internal save play."

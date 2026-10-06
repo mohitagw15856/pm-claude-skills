@@ -61,6 +61,12 @@ Ask for these if not provided:
 - [ ] Do not purge alphabetically — impact order; the top ten senders are half the volume
 - [ ] Do not skip the first-touch habit — without it, the purge is an annual chore instead of a one-time fix
 
+## Example Trigger Phrases
+
+- "My inbox is all newsletters."
+- "Cut my email volume."
+- "Set up filters for the noise."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

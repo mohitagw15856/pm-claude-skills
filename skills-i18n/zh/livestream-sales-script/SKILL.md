@@ -83,7 +83,7 @@ description: "规划并撰写一场直播带货：直播流程、每个产品的
 - **不为晚进来的观众做准备。** 大多数观众是中途进来的。
 
 ## 示例触发语
-- "帮我写一场两小时的直播带货脚本，卖厨房小家电。"
-- "直播间话术怎么写才能留住人？"
-- "帮我排品，有 8 个产品。"
-- "Write a livestream sales script for our skincare launch."
+- “帮我写一场两小时的直播带货脚本，卖厨房小家电。”
+- “直播间话术怎么写才能留住人？”
+- “帮我排品，有 8 个产品。”
+- “Write a livestream sales script for our skincare launch.”

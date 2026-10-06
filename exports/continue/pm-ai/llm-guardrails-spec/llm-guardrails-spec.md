@@ -71,3 +71,9 @@ Ask for these only if they aren't already provided (else infer and label):
 ## Based On
 
 LLM application security practice — layered controls, prompt-injection defence (untrusted content as data), least-privilege tool use, and red-team verification.
+
+## Example Trigger Phrases
+
+- "Define LLM guardrails."
+- "Prevent prompt injection."
+- "Harden a chatbot/agent against misuse."

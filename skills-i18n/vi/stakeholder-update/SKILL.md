@@ -291,3 +291,10 @@ Dành cho các agent có dùng công cụ và truy cập được các kênh gia
 ### Hoàn tác
 - Nếu nền tảng cho phép, chỉ được xóa tin nhắn vừa đăng **khi** người dùng yêu cầu rõ ràng; nếu không, hãy đăng một phản hồi đính chính.
 - Dừng lại và hỏi người dùng nếu: không tìm thấy kênh, việc đăng bị lỗi một phần, hoặc nội dung đã duyệt không còn khớp với nội dung sắp gửi.
+
+## Ví dụ câu kích hoạt
+
+- "Viết bản cập nhật tình hình."
+- "Viết báo cáo tiến độ cho lãnh đạo."
+- "Viết bản cập nhật dự án cho các bên liên quan."
+- "Viết bản tóm tắt cho ban điều hành."

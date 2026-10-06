@@ -80,6 +80,13 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not ignore carry-over items' impact on this sprint's capacity and goal
 - [ ] Do not write a Definition of Done that mixes task completion with outcome criteria — they must be observable and agreed before the sprint starts
 
+## Example Trigger Phrases
+
+- "Write a sprint brief."
+- "Create a sprint summary."
+- "Document sprint goals and scope."
+- "Produce a team-facing sprint overview."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

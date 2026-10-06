@@ -62,3 +62,10 @@ How a member contests an action: where to appeal, who reviews (not the acting mo
 - No appeals process (every action feels final and unjust)
 - Unwritten rules enforced as if everyone knew them
 - Warning-laddering genuine threats or doxxing instead of acting immediately
+
+## Example Trigger Phrases
+
+- "Write moderation rules for our Discord."
+- "Write a code of conduct for our forum."
+- "Overhaul moderation for our subreddit."
+- "Set up an enforcement ladder for our community."

@@ -76,3 +76,10 @@ Ask for (if not already provided):
 - [ ] Do not require human review of *everything* — undifferentiated duty guarantees zero real review
 - [ ] Do not copy another company's policy without the data-class mapping — the table is the policy
 - [ ] Do not present this as legal advice — it's the draft counsel refines, and the page says so
+
+## Example Trigger Phrases
+
+- "Write a company AI policy."
+- "What are our rules for using ChatGPT and Claude at work?"
+- "Write acceptable-use rules for Copilot."
+- "Fix an AI policy nobody reads."

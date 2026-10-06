@@ -66,6 +66,13 @@ Ask for these if not provided:
 - [ ] Do not publish ownerless — orphan pages rot into the stale wiki that taught readers to re-ask humans
 - [ ] Do not keep explaining orally — every post-page explanation is a vote against your own infrastructure
 
+## Example Trigger Phrases
+
+- "Document how we do X."
+- "Write the wiki page for this process."
+- "I explain this every month."
+- "Make this knowledge survive me."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

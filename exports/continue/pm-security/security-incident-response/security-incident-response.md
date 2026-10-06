@@ -60,3 +60,9 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Incident-response practice (NIST SP 800-61 / SANS PICERL: prepare, identify, contain, eradicate, recover, lessons-learned).
+
+## Example Trigger Phrases
+
+- "Respond to a breach/compromise/security incident."
+- "Write an IR plan."
+- "Produce a post-incident report."

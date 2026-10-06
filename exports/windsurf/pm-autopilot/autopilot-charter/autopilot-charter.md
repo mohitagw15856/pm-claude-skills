@@ -76,3 +76,10 @@ For each automated ritual, define:
 - [ ] Do not skip failure behaviour — a monitor that silently stops running is worse than no monitor
 - [ ] Do not automate judgement-bearing artifacts (performance feedback, strategy calls) no matter how reachable the inputs
 - [ ] Do not set a schedule tighter than the inputs actually change — a daily brief on weekly data is noise
+
+## Example Trigger Phrases
+
+- "What to automate?"
+- "How to set up recurring AI runs?"
+- "Which reports?"
+- "Design an automation charter for a team."

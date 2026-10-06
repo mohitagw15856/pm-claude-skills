@@ -73,3 +73,10 @@ Taxes and deductions (jurisdiction-specific) · renovation and repair surprises 
 - [ ] Do not compare non-comparable homes (rent a 1BR vs buy a 3BR)
 - [ ] Do not model jurisdiction-specific tax benefits — name them as unmodeled instead
 - [ ] Do not let the math silently overrule stated non-financial priorities — surface the tension
+
+## Example Trigger Phrases
+
+- "Should I rent or buy?"
+- "Does buying beat renting where I live?"
+- "Run the rent-vs-buy numbers."
+- "How long until buying breaks even?"

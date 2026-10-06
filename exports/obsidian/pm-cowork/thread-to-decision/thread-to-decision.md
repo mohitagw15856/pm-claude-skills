@@ -61,6 +61,12 @@ Ask for these if not provided:
 - [ ] Do not close without the dissent line — smooth closes breed rough reopenings
 - [ ] Do not leave the decision at message 47 — un-recorded decisions have a half-life of six weeks
 
+## Example Trigger Phrases
+
+- "Get a decision out of this discussion."
+- "Summarize where we landed."
+- "Why do our threads never conclude?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

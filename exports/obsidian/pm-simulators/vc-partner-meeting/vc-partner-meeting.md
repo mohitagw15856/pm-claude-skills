@@ -79,6 +79,13 @@ One paragraph: the single strongest move before pitching for real.
 - [ ] Do not stay in character in the debrief
 - [ ] Do not produce a generic "VCs care about TAM" lecture — every line must be about THIS company
 
+## Example Trigger Phrases
+
+- "How will VCs discuss my pitch?"
+- "Simulate the partner meeting."
+- "Stress-test my fundraise."
+- "What happens after the pitch?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

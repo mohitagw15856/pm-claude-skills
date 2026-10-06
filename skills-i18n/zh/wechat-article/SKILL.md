@@ -76,7 +76,7 @@ description: "撰写一篇微信公众号文章：赢得打开的标题、摘要
 - **结尾有多个行动号召**互相竞争。
 
 ## 示例触发语
-- "帮我写一篇公众号文章，主题是年轻人为什么不想换工作。"
-- "给这篇推文起几个标题，再写个摘要。"
-- "把这些笔记改成一篇 3000 字的公众号长文。"
-- "Write a WeChat Official Account article about our product launch."
+- “帮我写一篇公众号文章，主题是年轻人为什么不想换工作。”
+- “给这篇推文起几个标题，再写个摘要。”
+- “把这些笔记改成一篇 3000 字的公众号长文。”
+- “Write a WeChat Official Account article about our product launch.”

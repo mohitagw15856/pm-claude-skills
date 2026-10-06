@@ -73,6 +73,13 @@ flowchart TD
 
 Process mapping / flowcharting practice (ANSI flowchart conventions), expressed as renderable Mermaid.
 
+## Example Trigger Phrases
+
+- "Diagram a process."
+- "Map a workflow."
+- "Visualize steps/branches."
+- "Show 'how this works' as a chart."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

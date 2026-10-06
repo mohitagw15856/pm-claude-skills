@@ -60,6 +60,13 @@ Ask for these only if they aren't already provided (else infer and label):
 
 Defect-reporting practice — reproducibility-first reports with precise titles, expected/actual separation, environment capture, and impact/urgency distinction.
 
+## Example Trigger Phrases
+
+- "Write a bug report."
+- "File a defect."
+- "Report an issue."
+- "Turn it's broken into an actionable ticket."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

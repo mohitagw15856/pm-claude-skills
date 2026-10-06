@@ -76,3 +76,10 @@ For computer-use or tool-using agents with mailbox access (Gmail/Outlook APIs or
 ### Rollback
 - Archives are reversible: move the labeled threads back to inbox on request.
 - Stop and ask a human if: a thread changed (new message arrived) after approval, any operation fails, or the mailbox state disagrees with the ledger mid-run.
+
+## Example Trigger Phrases
+
+- "Get my inbox to zero."
+- "Triage my email hands-on."
+- "Process my inbox for me."
+- "Run inbox zero."

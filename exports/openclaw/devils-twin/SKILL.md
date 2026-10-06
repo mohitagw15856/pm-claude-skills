@@ -46,3 +46,10 @@ Critique finds weaknesses in your argument. The twin does something scarier: it 
 - [ ] Do not have the twin invent facts — it may reinterpret your evidence and add commonly-known context, never fabricate data
 - [ ] Do not skip the verdict to stay diplomatic — "repair first" beats a polite shrug
 - [ ] Do not use the twin on documents whose audience is hostile already — it's for consensus rooms, where nobody else will say this
+
+## Example Trigger Phrases
+
+- "Argue against this as hard as you can."
+- "Write the opposition's best memo."
+- "Everyone agrees with this doc: what's the strongest case against it?"
+- "Make the case that we should not do this."

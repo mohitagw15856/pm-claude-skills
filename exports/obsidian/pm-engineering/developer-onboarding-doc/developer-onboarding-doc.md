@@ -341,6 +341,13 @@ curl http://localhost:[PORT]/health
 - [ ] Do not include every piece of architectural detail — an onboarding doc that covers everything teaches nothing; link to deeper docs instead
 - [ ] Do not skip the "things that might surprise you" section — undocumented non-obvious patterns are the number one cause of wasted engineering time in the first week
 
+## Example Trigger Phrases
+
+- "Write a developer guide for this service."
+- "Write the README for this service."
+- "Write an onboarding doc for a new engineer."
+- "Give new developers a codebase orientation."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

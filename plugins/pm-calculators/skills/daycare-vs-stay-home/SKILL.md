@@ -77,3 +77,10 @@ Money says: [one honest sentence, both timescales] · Not modeled and often deci
 - [ ] Do not gender the framing — "the second earner" is whoever the household says it is
 - [ ] Do not let the model moralize either choice — working and staying home both survive honest math
 - [ ] Do not present the re-entry penalty as settled science — it's a field-dependent range wearing a default
+
+## Example Trigger Phrases
+
+- "Does it make sense for me to keep working?"
+- "Daycare costs my whole salary."
+- "Should one of us stay home with the kids?"
+- "What does leaving work for five years really cost?"

@@ -71,6 +71,13 @@ sequenceDiagram
 
 UML sequence diagramming (lifelines, sync/async messages, alt fragments), expressed as renderable Mermaid.
 
+## Example Trigger Phrases
+
+- "Show this API flow as a diagram."
+- "Draw the auth handshake."
+- "What calls what in what order?"
+- "Diagram this integration."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

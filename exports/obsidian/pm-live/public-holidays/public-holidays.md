@@ -62,6 +62,12 @@ Source: Nager.Date · rerun: `[exact curl]`
 - [ ] Do not dump 15 holidays when the question was one date
 - [ ] Do not promise a workplace is closed — public holidays and company calendars are cousins, not twins
 
+## Example Trigger Phrases
+
+- "What are the holidays in a country?"
+- "Find long weekends this year."
+- "Which days is the team in Japan and Germany both off?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

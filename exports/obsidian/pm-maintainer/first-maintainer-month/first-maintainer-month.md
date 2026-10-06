@@ -120,6 +120,12 @@ Ask for (if not already provided):
 the moments docs can't pre-answer; [[changelog-generator]] and
 [[pr-description-writer]] for the release rhythm's moving parts.
 
+## Example Trigger Phrases
+
+- "My repo is getting attention."
+- "I just open-sourced something."
+- "Set up my project properly."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

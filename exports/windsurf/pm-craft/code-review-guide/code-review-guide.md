@@ -64,3 +64,9 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Senior code-review practice (Google's engineering review guidelines): prioritize correctness/design, severity-tag feedback, be kind.
+
+## Example Trigger Phrases
+
+- "Review code."
+- "Give PR feedback."
+- "Review this change."

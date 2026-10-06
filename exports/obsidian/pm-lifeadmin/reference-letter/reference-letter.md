@@ -62,6 +62,13 @@ Mark any invented specifics as *(example — replace with a real instance)*. Pro
 
 Recommendation-writing practice — establishing credibility, evidence over adjectives, comparative endorsement, and tailoring to the reader's decision.
 
+## Example Trigger Phrases
+
+- "Write a reference letter."
+- "Write a letter of recommendation."
+- "Write a character reference."
+- "Recommend someone for a job."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

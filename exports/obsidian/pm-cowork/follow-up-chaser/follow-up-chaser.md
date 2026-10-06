@@ -61,6 +61,12 @@ Ask for these if not provided:
 - [ ] Do not fake urgency — the first discovered fake deadline devalues every future real one
 - [ ] Do not let threads die unclosed — an explicit close beats an awkward silence in every relationship that matters
 
+## Example Trigger Phrases
+
+- "Write a follow-up that isn't pushy."
+- "How long do I wait before chasing?"
+- "Manage my waiting-on list."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -305,3 +305,10 @@ Medium and Low findings should be tracked as follow-up issues with a committed r
 - [ ] Do not produce narrative findings without the specific resource name, file, and line number
 - [ ] Do not skip the "Required Actions Before Merge" summary — reviewers need a clear blocking list, not just a full report
 - [ ] Do not approve code where encryption at rest or in transit is missing on data stores, even if not explicitly flagged by the requester
+
+## Example Trigger Phrases
+
+- "Review IaC code."
+- "Audit infrastructure configurations."
+- "Check cloud security posture."
+- "Produce a reusable IaC review checklist."

@@ -66,6 +66,13 @@ Ask for these if not provided:
 - [ ] Do not skip the landmines to seem tidy — the non-obvious gotchas are the doc's highest-value lines
 - [ ] Do not take anything that isn't yours — code, docs, contact lists per policy; the clean exit includes the laptop
 
+## Example Trigger Phrases
+
+- "I just resigned how do I hand off my work."
+- "Write my transition document."
+- "Plan my last two weeks."
+- "What do I do before I leave my job?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

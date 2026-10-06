@@ -144,3 +144,9 @@ Ask the user for these if not provided:
 - [ ] Do not skip the rollback procedure for Tier 1 and 2 launches — every significant launch must have an abort plan
 - [ ] Do not treat marketing and engineering as separate tracks — cross-functional coordination is the whole point of a GTM plan
 - [ ] Do not set success metrics without a defined measurement window — "increase signups" is not a measurable target
+
+## Example Trigger Phrases
+
+- "Plan a product launch."
+- "Write a GTM strategy."
+- "Define launch tiers."

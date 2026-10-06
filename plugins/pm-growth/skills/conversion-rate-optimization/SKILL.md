@@ -61,3 +61,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Conversion-optimization heuristics (clarity / relevance / motivation / friction / anxiety / distraction — LIFT-style) and properly-powered A/B testing.
+
+## Example Trigger Phrases
+
+- "Improve conversion rate."
+- "Audit a landing/signup/checkout page."
+- "Reduce funnel drop-off."
+- "Plan A/B tests for a page."

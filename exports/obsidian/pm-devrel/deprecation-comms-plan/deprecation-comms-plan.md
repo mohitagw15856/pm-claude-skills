@@ -71,6 +71,12 @@ The at-risk account list, who owns each, the CSM talking points, the "customer c
 - No plan for the accounts that physically can't migrate in time
 - "Why" that blames the customer or the old system instead of owning the change
 
+## Example Trigger Phrases
+
+- "Winding down."
+- "Plan a breaking change."
+- "Migrate customers off a legacy path."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

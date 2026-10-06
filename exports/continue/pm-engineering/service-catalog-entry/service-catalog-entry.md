@@ -298,3 +298,10 @@ Document limitations honestly — this section prevents other teams from buildin
 - [ ] Do not omit the "Known Limitations" section to make the service look better — undisclosed limitations cause incorrect integrations and downstream incidents
 - [ ] Do not list API error codes without testing them — aspirational error documentation misleads consumers
 - [ ] Do not write the "What It Does" section with jargon — a new engineer from another team must understand it in under 2 minutes
+
+## Example Trigger Phrases
+
+- "Document a service for an internal developer portal."
+- "Write a service README for a platform catalog."
+- "Create a service overview page."
+- "Onboard a new service to a service registry."

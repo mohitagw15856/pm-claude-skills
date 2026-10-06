@@ -81,3 +81,10 @@ Persistent over-forecast bias means excess inventory is being manufactured upstr
 - [ ] Do not accept "the ramp moved right but the year is intact" without flagging it — sliding ramps rarely land
 - [ ] Do not judge accuracy at aggregate level for item-level buys — mix error is where the money is lost
 - [ ] Do not soften the verdict to keep the S&OP meeting comfortable — supply commits real cash to this number
+
+## Example Trigger Phrases
+
+- "Review a demand plan."
+- "Challenge a forecast."
+- "Check forecast accuracy."
+- "Find hockey sticks in the numbers."

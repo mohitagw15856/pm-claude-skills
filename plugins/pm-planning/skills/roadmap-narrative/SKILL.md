@@ -104,3 +104,9 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not write progression as a chronological list — show causal links between quarters (Q1 enables Q2 because…)
 - [ ] Do not write the executive summary last and treat it as a summary — write it as the version stakeholders will repeat
 - [ ] Do not let orphaned initiatives appear without a theme — either create a theme or flag the gap explicitly
+
+## Example Trigger Phrases
+
+- "Write a roadmap narrative."
+- "Explain the product roadmap to non-technical stakeholders."
+- "Produce an exec-shareable roadmap story."

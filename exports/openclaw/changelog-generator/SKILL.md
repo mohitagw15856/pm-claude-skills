@@ -111,3 +111,9 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Turn this git log into a CHANGELOG entry"
 - "Write the CHANGELOG.md update for this release"
 - "What changed in this release?" + [paste commit list]
+
+## Example Trigger Phrases
+
+- "Write release notes."
+- "Generate a CHANGELOG.md entry."
+- "Document what changed in a version."

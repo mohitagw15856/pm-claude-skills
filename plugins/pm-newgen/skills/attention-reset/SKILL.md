@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "My screen time is 7 hours."
+- "I want a dumbphone."
+- "I can't read books anymore."
+- "My attention span is gone."

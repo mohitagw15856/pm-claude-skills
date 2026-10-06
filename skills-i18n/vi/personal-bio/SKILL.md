@@ -56,3 +56,10 @@ Tiểu sử ngắn được viết lại ở ngôi thứ nhất, cho trang giớ
 ## Cơ sở
 
 Thực hành viết tiểu sử chuyên nghiệp: quy ước một câu / ngắn / dài, sự cụ thể thay vì tính từ.
+
+## Ví dụ câu kích hoạt
+
+- "Viết tiểu sử cho tôi."
+- "Viết phần giới thiệu bản thân."
+- "Viết tiểu sử diễn giả."
+- "Viết một đoạn giới thiệu ngắn."

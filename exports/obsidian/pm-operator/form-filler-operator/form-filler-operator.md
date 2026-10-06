@@ -75,6 +75,12 @@ For computer-use agents with browser control. Without tools, the fact sheet + ma
 - Unsubmitted forms roll back by closing the session (nothing was committed).
 - Stop and ask a human if: a field rejects a mapped fact, the form's structure changes mid-run, an unexpected identity/payment step appears, or anything requires agreement acceptance.
 
+## Example Trigger Phrases
+
+- "Fill this application for me."
+- "Complete this government/vendor/insurance form."
+- "Do this registration?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

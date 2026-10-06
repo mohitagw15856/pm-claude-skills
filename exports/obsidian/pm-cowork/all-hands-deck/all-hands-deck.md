@@ -63,6 +63,13 @@ Ask for these if not provided:
 - [ ] Do not soften Q&A by selection — cherry-picked softballs teach people to stop submitting
 - [ ] Do not leave commits unhonored — one forgotten "we'll get back to you" discounts every future one
 
+## Example Trigger Phrases
+
+- "Build the all-hands deck."
+- "Make the monthly town hall not boring."
+- "How do we share the numbers with everyone?"
+- "Announce this change at all-hands."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

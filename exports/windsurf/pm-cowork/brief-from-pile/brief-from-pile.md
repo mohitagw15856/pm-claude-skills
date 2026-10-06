@@ -61,3 +61,10 @@ Ask for these if not provided:
 - [ ] Do not average conflicting sources — reconcile or report; blend is betrayal
 - [ ] Do not cite nothing — an uncited brief is one skeptic away from being re-done
 - [ ] Do not hide what wasn't read — the ledger converts a limitation into a map for the reader
+
+## Example Trigger Phrases
+
+- "Read all this and tell me what matters."
+- "Synthesize this folder for the new lead."
+- "Turn these 20 docs into a brief."
+- "What does all this material actually say?"

@@ -61,3 +61,10 @@ Ask for these if not provided:
 - [ ] Do not exceed the ceremony being replaced — heavier-than-freeform templates are adopted at gunpoint only
 - [ ] Do not omit the escape hatch — the first non-fitting reality kills rigid templates
 - [ ] Do not decree v1 — pilot friction is cheap; organizational resentment is not
+
+## Example Trigger Phrases
+
+- "Make a template from this doc."
+- "We write this same thing every week."
+- "Standardize our status updates."
+- "Why does nobody use our templates?"

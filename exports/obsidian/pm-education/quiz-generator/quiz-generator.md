@@ -57,6 +57,13 @@ For every question: the correct answer **and a one-line explanation** (for MCQs,
 - Trick questions that test reading, not the subject
 - Answer key with answers but no explanations
 
+## Example Trigger Phrases
+
+- "Create a quiz."
+- "Write a test."
+- "Make practice questions."
+- "Build an assessment."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

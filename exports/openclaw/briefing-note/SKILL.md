@@ -59,3 +59,9 @@ Keep it to **one page**. Detail belongs in an annex, referenced not included.
 ## Based On
 
 Government/executive briefing-note practice (purpose-led, one page, key considerations, decision-or-line-to-take).
+
+## Example Trigger Phrases
+
+- "Brief a minister/executive/official."
+- "Prepare a briefing note."
+- "Summarize an issue for a decision."

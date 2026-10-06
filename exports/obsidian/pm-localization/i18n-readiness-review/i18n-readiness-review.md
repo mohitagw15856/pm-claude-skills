@@ -62,6 +62,13 @@ A readiness audit across the dimensions that break localization, each with statu
 
 Internationalization engineering practice — string externalization, ICU/Intl formatting & plurals, text expansion, RTL, UTF-8.
 
+## Example Trigger Phrases
+
+- "If a product is ready to localize."
+- "Review i18n readiness."
+- "Find hard-coded strings/locale bugs."
+- "Prep for going multilingual."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

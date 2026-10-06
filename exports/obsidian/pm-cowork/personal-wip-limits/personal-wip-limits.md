@@ -65,6 +65,13 @@ Ask for these if not provided:
 - [ ] Do not negotiate the cap upward mid-crunch — the crunch is the argument *for* the cap
 - [ ] Do not skip the experiment — the limit survives on its own throughput evidence or not at all
 
+## Example Trigger Phrases
+
+- "I have twelve things half-done."
+- "Why does nothing ever finish?"
+- "Set a WIP limit for my work."
+- "I start everything and complete nothing."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

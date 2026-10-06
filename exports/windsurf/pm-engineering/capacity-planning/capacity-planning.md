@@ -364,3 +364,11 @@ Define the thresholds that require explicit action — not retrospective fixes a
 - [ ] The infrastructure roadmap has named owners and effort estimates — not just a wish list
 - [ ] Auto-scaling configuration includes both scale-out AND scale-in triggers, and a min/max range
 - [ ] Actions are ordered by urgency — immediate items are genuinely immediate, not backlog filler
+
+## Example Trigger Phrases
+
+- "Plan infrastructure capacity."
+- "Forecast resource needs."
+- "Model traffic growth."
+- "Define scaling strategy."
+- "Produce a capacity review for a service."

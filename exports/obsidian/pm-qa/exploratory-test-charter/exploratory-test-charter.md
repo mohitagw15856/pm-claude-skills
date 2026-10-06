@@ -66,6 +66,13 @@ Provide 3–6 charters, **prioritised by risk**.
 
 Session-Based Test Management (exploratory testing) — chartered, risk-prioritised, timeboxed sessions with explicit tactics and oracles.
 
+## Example Trigger Phrases
+
+- "Plan exploratory testing."
+- "Write a test charter."
+- "Design a testing session."
+- "Do risk-based exploration of a feature."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

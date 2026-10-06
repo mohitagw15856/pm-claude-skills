@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "My apprentice starts Monday."
+- "How do I train the new guy?"
+- "Plan a new labourer's first week on site."
+- "What should a new apprentice be allowed to touch?"

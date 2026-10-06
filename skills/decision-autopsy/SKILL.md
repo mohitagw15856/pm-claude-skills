@@ -43,3 +43,10 @@ Outcome bias is the strongest bias in organisational memory: the bet that failed
 - [ ] Do not conclude "we were unlucky" without the ledger to earn it — luck is the residual after process is examined, never the headline
 - [ ] Do not extract more than one lesson — the second-best lesson dilutes the best one
 - [ ] Do not autopsy decisions younger than their outcome — if the result isn't actually in yet, this is a premortem's job
+
+## Example Trigger Phrases
+
+- "Was this a bad decision or just bad luck?"
+- "Review the call we made last year."
+- "Judge this decision by its process, not the outcome."
+- "What should we learn from this failed bet?"

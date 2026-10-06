@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Is it safe to launch?"
+- "Claude built my app: is it secure?"
+- "Harden my prototype before strangers use it."
+- "Vibe check my project."

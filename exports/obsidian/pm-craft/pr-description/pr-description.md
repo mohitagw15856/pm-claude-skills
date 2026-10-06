@@ -60,6 +60,13 @@ Keep it proportional — a one-line fix gets a short description; a big change e
 
 Code-review and PR best practices (explain intent, make review easy, surface risk) — modern engineering norms.
 
+## Example Trigger Phrases
+
+- "Open a PR."
+- "Summarize a change for review."
+- "Document code changes."
+- "Write a PR/merge-request description."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

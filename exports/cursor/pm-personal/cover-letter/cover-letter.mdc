@@ -60,3 +60,10 @@ A 3–4 paragraph letter (≈250–350 words):
 ## Based On
 
 Modern cover-letter practice — specific hook, evidence-to-need mapping, human voice.
+
+## Example Trigger Phrases
+
+- "Write a cover letter."
+- "Write an application letter for this job."
+- "Write a note to go with my CV."
+- "Make my cover letter less generic."

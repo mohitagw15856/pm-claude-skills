@@ -73,3 +73,10 @@ Ask the user for these if not provided:
 - [ ] Do not soften or spin risks — executives rely on these updates to make resource and escalation decisions; sanitised risk sections destroy the update's utility
 - [ ] Do not present a "Decisions Needed" item without a recommendation — asking an executive to decide without your view forces them to do the analytical work the PM should have done
 - [ ] Do not exceed 250 words in the main body — length signals the author has not done the compression work; every word over 250 reduces the chance the update is read
+
+## Example Trigger Phrases
+
+- "Write an executive update."
+- "Write a leadership update."
+- "Write a product update for the exec team."
+- "Brief the C-suite on the product."

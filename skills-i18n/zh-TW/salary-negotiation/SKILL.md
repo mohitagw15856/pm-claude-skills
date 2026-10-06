@@ -64,3 +64,10 @@ python3 scripts/comp_compare.py offers.json --signing-years 1 --json
 ## 依據
 
 原則談判法（*Getting to Yes*，Fisher 與 Ury：BATNA、關注利益而非立場）在薪酬談判中的應用。
+
+## 示例觸發語
+
+- “幫我談薪水。”
+- “怎麼還價這個 offer？”
+- “準備薪酬談話。”
+- “比較這幾個 offer。”

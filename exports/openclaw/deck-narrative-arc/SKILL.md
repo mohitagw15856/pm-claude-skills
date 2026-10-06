@@ -68,3 +68,9 @@ Ask for these if not provided:
 - [ ] Do not resolve the tension in the middle and keep presenting — post-resolution slides are encores nobody requested
 - [ ] Do not deliver the recommendation unanchored — the same words, tied to the tension, double their force
 - [ ] Do not fix structural sag with delivery energy — enthusiasm over a missing complication is mime work
+
+## Example Trigger Phrases
+
+- "Make this deck flow."
+- "My presentation feels like disconnected slides."
+- "Structure the story of this pitch/readout."

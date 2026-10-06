@@ -114,6 +114,13 @@ curveball notes · hard stop conditions]
 patterns for the verification procedure; [[incident-postmortem]] if drilling
 because a real attempt already happened.
 
+## Example Trigger Phrases
+
+- "Train the team on deepfake fraud."
+- "Test wire-transfer controls."
+- "Run a social-engineering tabletop."
+- "Could we get CEO-frauded?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

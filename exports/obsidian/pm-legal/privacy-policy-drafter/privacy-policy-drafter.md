@@ -53,6 +53,12 @@ End with: **⚠️ Review checklist** — the specific items counsel must confir
 - Vague "we may share with third parties" with no categories or purpose
 - Overpromising security ("your data is 100% safe")
 
+## Example Trigger Phrases
+
+- "Write a privacy policy."
+- "Draft a data-protection notice."
+- "Create a GDPR/CCPA-aware privacy statement."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

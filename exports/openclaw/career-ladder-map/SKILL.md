@@ -65,3 +65,10 @@ Status: 🟢 already demonstrating · 🟡 partial / inconsistent · 🔴 not ye
 ## Based On
 
 Career-ladder / competency-framework practice — gap analysis against the target level and evidence-led development planning.
+
+## Example Trigger Phrases
+
+- "Map a career ladder."
+- "Find the gap to the next level."
+- "Build a development/growth plan."
+- "Figure out what to work on to get promoted."

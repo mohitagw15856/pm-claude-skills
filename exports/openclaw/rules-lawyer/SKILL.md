@@ -97,3 +97,9 @@ knowledge — verify for stakes / ambiguous]
       distinguish them
 - [ ] Do not import tournament strictness into a family kitchen — stakes set
       the standard, and the skill should ask about stakes if unclear
+
+## Example Trigger Phrases
+
+- "We're arguing about a rule."
+- "Can you do X in Catan/Uno/Monopoly?"
+- "Who's right here?"

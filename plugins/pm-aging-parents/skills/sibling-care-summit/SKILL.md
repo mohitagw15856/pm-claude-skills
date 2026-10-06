@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "My siblings and I need to talk about mum."
+- "My brother does nothing."
+- "We keep fighting about dad's care."
+- "Before a parent's health forces it."

@@ -75,3 +75,10 @@ Kết thúc sản phẩm bằng câu sau, giữ nguyên văn: *"Đây là phần
 ## Dựa trên
 
 Thực hành khiếu nại từ phía người được bảo hiểm: phân loại lý do từ chối, ghép bằng chứng, soạn thư khiếu nại từng điểm, sắp xếp trình tự leo thang.
+
+## Ví dụ câu kích hoạt
+
+- "Yêu cầu bảo hiểm của tôi bị từ chối, tôi phải làm gì?"
+- "Giải thích thư từ chối này."
+- "Tôi có thể khiếu nại quyết định từ chối không?"
+- "Viết thư khiếu nại bảo hiểm cho tôi."

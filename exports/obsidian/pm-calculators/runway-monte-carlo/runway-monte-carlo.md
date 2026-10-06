@@ -50,6 +50,13 @@ It prints the percentiles (`naive=16.0mo P10=19 P50=>36 P90=>36 survive(36mo)=56
 - [ ] Do not extend the horizon to make survival look better — report the horizon with the number
 - [ ] Do not present 56.8% survival as "about half" in one place and "likely fine" in another — one number, one interpretation, used consistently
 
+## Example Trigger Phrases
+
+- "How long does our cash really last?"
+- "When should we start fundraising?"
+- "Simulate our runway with volatile revenue."
+- "Give me runway as a range, not one number."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

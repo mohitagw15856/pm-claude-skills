@@ -242,3 +242,10 @@ Criterios de aceptación:
 
 [Continuar hasta 5-7 historias de usuario en total...]
 ```
+
+## Frases disparadoras de ejemplo
+
+- "Escribe un PRD."
+- "Escribe la especificación de producto de esta función."
+- "Redacta la especificación funcional."
+- "Escribe el documento de requisitos de una nueva función."

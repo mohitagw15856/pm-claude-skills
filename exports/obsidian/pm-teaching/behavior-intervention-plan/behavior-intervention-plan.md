@@ -57,6 +57,13 @@ A simple, teacher-doable method (tally, rating, frequency) and a review point to
 - No replacement behavior taught — only "stop that"
 - A data system so heavy the teacher can't sustain it
 
+## Example Trigger Phrases
+
+- "Plan a behavior intervention."
+- "Address a disruptive."
+- "Write a BIP."
+- "Set up positive behavior supports."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

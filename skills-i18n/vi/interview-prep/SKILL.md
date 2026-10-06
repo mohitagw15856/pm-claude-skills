@@ -61,3 +61,10 @@ Chỉ hỏi những thông tin này nếu chưa được cung cấp:
 ## Cơ sở
 
 Chuẩn bị phỏng vấn có cấu trúc: phương pháp STAR/behavioural, kho câu chuyện gắn với năng lực, điều chỉnh theo vị trí và vòng phỏng vấn.
+
+## Ví dụ câu kích hoạt
+
+- "Giúp tôi chuẩn bị phỏng vấn."
+- "Chuẩn bị câu trả lời cho vị trí này."
+- "Luyện phỏng vấn cho công ty này."
+- "Chuẩn bị cho vòng phỏng vấn hành vi và tình huống."

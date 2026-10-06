@@ -51,3 +51,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Subtitling standards — reading-speed (CPS) limits, ~42-char lines, 2-line max, phrase-boundary segmentation, SDH conventions.
+
+## Example Trigger Phrases
+
+- "Write subtitles for this video."
+- "Make captions as an SRT file."
+- "Translate these subtitles."
+- "Fix the reading speed of these captions."

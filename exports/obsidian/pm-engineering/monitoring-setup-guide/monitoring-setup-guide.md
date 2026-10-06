@@ -445,6 +445,14 @@ Honest assessment of what is missing today and what the priority to add it is:
 - [ ] Do not measure only the four golden signals without adding at least one business metric alert — infrastructure health can be green while the business-critical path is silently failing
 - [ ] Do not deploy distributed tracing without verifying that trace IDs propagate across all service boundaries — partial tracing is worse than no tracing because it produces misleading incomplete traces
 
+## Example Trigger Phrases
+
+- "Set up monitoring for a service."
+- "Define alerting strategy."
+- "Write an observability plan."
+- "Create a dashboard specification."
+- "Document logging standards for a team."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

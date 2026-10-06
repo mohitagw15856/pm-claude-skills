@@ -69,3 +69,10 @@ Pass 1: … Pass 2: … Pass 3 (cut to limit): …
 - [ ] Do not praise-pad — a diagnostic that's 80% encouragement leaves the essay 100% unchanged
 - [ ] Do not accept claimed qualities — push every adjective toward a scene
 - [ ] Do not ignore the word limit — a revision plan that doesn't end in cuts isn't a plan
+
+## Example Trigger Phrases
+
+- "Review my personal statement."
+- "Improve my SOP."
+- "Give feedback on my application essay."
+- "Why is my essay generic?"

@@ -71,6 +71,13 @@ expected output for each, so the user can confirm the rewrite behaves before shi
 
 Prompt-engineering practice — explicit output contracts, grounding/uncertainty handling, structured instructions, and example-driven demonstration.
 
+## Example Trigger Phrases
+
+- "Improve a prompt."
+- "Fix a prompt that gives inconsistent."
+- "Reduce hallucination/refusals."
+- "Make output follow a format."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

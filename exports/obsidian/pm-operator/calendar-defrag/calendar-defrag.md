@@ -75,6 +75,13 @@ For agents with calendar access (Google/Microsoft APIs or UI). Without tools, th
 - Every move is recorded (event, old time, new time) — undo restores old times and removes created blocks.
 - Stop and ask a human if: an event was modified by someone else after approval, a move conflicts with a new event, or any API action fails.
 
+## Example Trigger Phrases
+
+- "Defrag my calendar."
+- "Get me focus time."
+- "Audit my meetings."
+- "Fix my week."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

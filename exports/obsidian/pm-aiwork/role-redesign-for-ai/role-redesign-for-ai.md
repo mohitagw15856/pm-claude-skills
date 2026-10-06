@@ -71,6 +71,12 @@ Ask for (if not already provided):
 - [ ] Do not write "focus on higher-value work" without naming the work — that phrase is where redesigns go to die
 - [ ] Do not skip the intent question — a redesign that won't say whether headcount changes will be read as concealing it, correctly
 
+## Example Trigger Phrases
+
+- "Write a revised role charter."
+- "What is my job now?"
+- "Plan capacity after AI adoption."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -132,6 +132,13 @@ One or two concrete things that would prevent this class of error recurring:
 - "Debug this log for me"
 - "What's causing this exception?"
 
+## Example Trigger Phrases
+
+- "Why is this crashing?"
+- "Read this stack trace and tell me what's wrong."
+- "Diagnose these error logs."
+- "What's causing these exceptions?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

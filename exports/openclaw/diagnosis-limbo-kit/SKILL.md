@@ -125,3 +125,10 @@ respectful, specific]
 [[medical-records-request]] to gather the paper trail; [[the-second-opinion]] when a
 door closes; [[spoon-planner]] for surviving the limbo itself; [[symptom]] tracking
 feeds this dossier.
+
+## Example Trigger Phrases
+
+- "Nobody can tell me what's wrong with me."
+- "Doctors keep saying it's just anxiety."
+- "Help me track my symptoms across specialists."
+- "Prepare my case for the next specialist."

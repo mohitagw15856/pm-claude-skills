@@ -63,6 +63,13 @@ Ask for these only if they aren't already provided:
 
 1:1 management practice (Andy Grove, *High Output Management*; manager-tools 1:1 cadence) — outcome-led agendas, managing up and down.
 
+## Example Trigger Phrases
+
+- "Prep for a one-on-one."
+- "Build a 1:1 agenda."
+- "Prepare to talk to your manager."
+- "Raise something hard in a 1:1."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -66,6 +66,13 @@ Ask for these if not provided:
 - [ ] Do not treat the tax account as accessible — the first raid ends the system
 - [ ] Do not shame the mid-year starter — catch-up framing, calmly; the second-best time is now
 
+## Example Trigger Phrases
+
+- "How do taxes work for my side income?"
+- "How much should I set aside?"
+- "What are estimated quarterly payments?"
+- "Set up my freelance tax system."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

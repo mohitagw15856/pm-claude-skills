@@ -73,3 +73,9 @@ Ask for these if not provided:
 - [ ] Do not recommend specific physicians or centers — types and criteria only
 - [ ] Do not treat disagreement as a crisis — it's the process working; the framework exists for exactly this
 - [ ] Do not let diligence become avoidance — serial opinion-shopping past two (occasionally three) is a decision not being made, and the artifact should say so
+
+## Example Trigger Phrases
+
+- "Should I get a second opinion?"
+- "How do I ask for a second opinion without offending my doctor?"
+- "What records do I send?"

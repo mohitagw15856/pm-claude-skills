@@ -71,3 +71,10 @@ Ask for these if not provided:
 - [ ] Do not let the forgotten car finance pass unnoted — the already-pulled-credit-file beat is the skill's signature
 - [ ] Do not quote lender criteria as fact — thresholds vary and change; the simulation trains the conversation, not the rulebook
 - [ ] Do not stay in character in the debrief
+
+## Example Trigger Phrases
+
+- "Practice a mortgage interview."
+- "Prep for a loan application meeting."
+- "Why might the bank decline us?"
+- "What will the underwriter ask?"

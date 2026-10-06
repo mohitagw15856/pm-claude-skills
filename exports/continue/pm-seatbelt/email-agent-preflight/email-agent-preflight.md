@@ -64,3 +64,10 @@ Ask for these if not provided:
 - [ ] Do not allow an automated bypass of the send-gate — "it seemed routine" is how reply-all-to-5000 happens
 - [ ] Do not auto-send to arbitrary recipients — the allowlist is the wall between confused and catastrophic
 - [ ] Do not defer the kill-switch to incident time — the 2am revoke must be a known step, not a search
+
+## Example Trigger Phrases
+
+- "Let my agent read/send email safely."
+- "Set up guardrails before the agent touches my inbox."
+- "Is it safe to give the agent email access?"
+- "Review my email agent's permissions."

@@ -71,6 +71,13 @@ Ask for (if not already provided):
 - [ ] Do not skip the never-exposed list — an MCP server without one hasn't been threat-modelled
 - [ ] Do not ship without running the agent test plan — schema-valid and agent-usable are different properties
 
+## Example Trigger Phrases
+
+- "Spec an MCP server."
+- "Expose a product to agents."
+- "Design tools for Claude."
+- "Review why an existing MCP server performs badly."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -75,6 +75,13 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 
 Owner-side bid review practice — finished-job reconciliation, allowance auditing, payment-risk sequencing, bid leveling.
 
+## Example Trigger Phrases
+
+- "Is this contractor quote fair?"
+- "Decode this renovation bid."
+- "What should be in a contractor contract?"
+- "Why do these three bids differ so much?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "I'm stepping down as club secretary."
+- "Write a handover for the next chair."
+- "What does my successor need to know?"
+- "Capture everything I do for the committee before I leave."

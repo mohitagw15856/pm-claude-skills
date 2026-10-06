@@ -85,3 +85,10 @@ From a thin brief, build the structure with the numbers marked `[to confirm]` �
 - [ ] Do not show inventory only in units — value and days-of-supply are what the CFO and planner each need
 - [ ] Do not let "allocate" stay abstract — someone specific gets shorted, and the meeting must own that choice
 - [ ] Do not issue the pre-read at midnight before the meeting — 48 hours or the meeting becomes the read-through
+
+## Example Trigger Phrases
+
+- "Prep an S&OP meeting."
+- "Build the executive S&OP deck."
+- "Summarize demand vs supply for the monthly cycle."
+- "Prepare a supply review readout."

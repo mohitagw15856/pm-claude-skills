@@ -64,6 +64,13 @@ Ask for these if not provided:
 - [ ] Do not spend-then-ask on trigger items — forgiveness is priced in favors and sometimes denials
 - [ ] Do not nickel-audit as an approver — the $9 interrogation costs trust the policy needs for the $900 questions
 
+## Example Trigger Phrases
+
+- "My expense reports are always late."
+- "Set up my expense workflow."
+- "What does the policy actually require?"
+- "Review expenses as a manager without being a receipt cop."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

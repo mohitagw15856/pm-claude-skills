@@ -68,6 +68,13 @@ Deposit [%] before work starts · milestone billing over monthly-in-arrears · l
 - [ ] Do not keep delivering new work into an unpaid account past the stop trigger
 - [ ] Do not skip the read — an enterprise AP maze, a cash crisis, and a ghost need different ladders, not one angrier email
 
+## Example Trigger Phrases
+
+- "My client hasn't paid me."
+- "Write a payment reminder email."
+- "Send a final demand for this invoice."
+- "Should I stop work until they pay?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

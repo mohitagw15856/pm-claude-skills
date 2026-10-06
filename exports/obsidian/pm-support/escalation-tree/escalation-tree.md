@@ -68,6 +68,12 @@ Show the branch logic clearly (who, after how long, to whom).
 
 Support & incident-management practice — severity matrices, tiered ownership, time-based escalation, on-call routing.
 
+## Example Trigger Phrases
+
+- "Design an escalation path."
+- "Support tiers."
+- "Fix tickets bounce around / nothing gets escalated in time."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

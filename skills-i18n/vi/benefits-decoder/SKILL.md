@@ -80,3 +80,10 @@ Kết thúc sản phẩm bằng câu sau, giữ nguyên văn: *"Đây là phần
 ## Dựa trên
 
 Thực hành rà soát offer: dựng lại tổng thu nhập, giải mã văn bản chính sách, lập danh sách câu hỏi trước khi ký.
+
+## Ví dụ câu kích hoạt
+
+- "Lời mời này có tốt không?"
+- "Giải thích gói phúc lợi của tôi."
+- "Cổ phần của tôi thực sự có nghĩa là gì?"
+- "Tôi nên hỏi phòng nhân sự gì trước khi ký?"

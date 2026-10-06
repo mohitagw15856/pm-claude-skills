@@ -62,3 +62,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Lifecycle email practice — one-goal-per-email sequences, value-before-ask, behaviour-triggered cadence with exits.
+
+## Example Trigger Phrases
+
+- "Write an email sequence."
+- "Write a welcome series for new users."
+- "Write a nurture drip."
+- "Write a re-engagement series."

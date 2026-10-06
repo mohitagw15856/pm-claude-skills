@@ -318,3 +318,9 @@ builders and response parsers.
 - [ ] Sunset response headers (`Deprecation`, `Sunset`, `Link`) use correct RFC date format and real URL structure
 - [ ] SDK versioning alignment table is present and ties SDK major versions explicitly to API major versions
 - [ ] Maximum simultaneous supported versions is stated with a concrete number
+
+## Example Trigger Phrases
+
+- "Define versioning policy."
+- "Plan API deprecation."
+- "Document version lifecycle."

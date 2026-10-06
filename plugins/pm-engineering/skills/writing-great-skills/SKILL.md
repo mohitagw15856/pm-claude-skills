@@ -101,3 +101,10 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - Quality Checks that aren't observable ("output should be good")
 - Leaving `<!-- TODO -->` or `[bracketed]` placeholders in the final file
 - Overlapping so heavily with an existing skill that the model can't choose between them
+
+## Example Trigger Phrases
+
+- "Write a skill."
+- "Create a SKILL.md."
+- "Improve a skill."
+- "Review a skill for quality."

@@ -63,6 +63,13 @@ Score each on **Clarity** and **Specificity** (1–5), since vague + clever lose
 
 Headline-writing practice (Ogilvy, Advertising's clarity-over-cleverness, the 4 U's) + formula-driven ideation and A/B discipline.
 
+## Example Trigger Phrases
+
+- "Write headline options for this page."
+- "Give me subject lines for this email."
+- "Improve this weak headline."
+- "Write a hook for this ad."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

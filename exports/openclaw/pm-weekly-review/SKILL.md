@@ -137,3 +137,10 @@ Ask the user for these if not provided:
 - Always name a clear owner for every blocked item — "the team will figure it out" is a blocker in disguise
 - Recommend sending this by end of Friday — Monday morning is too late to course-correct
 - If three weeks of weekly reviews show the same blocked item, escalate immediately
+
+## Example Trigger Phrases
+
+- "Doing a weekly PM review."
+- "Write a weekly update."
+- "Prepare for Monday planning."
+- "Review sprint health."

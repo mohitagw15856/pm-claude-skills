@@ -71,3 +71,9 @@ Ask for these if not provided:
 - **Pricing what should be gifted.** The mechanism is for contested value, not for making a sister buy her own childhood letters.
 - **Presenting the output as a verdict.** It is a proposal with unusually good properties; adults still get to say no.
 - **Using it to steamroll a grieving refuser.** Consent to the mechanism is part of the mechanism.
+
+## Example Trigger Phrases
+
+- "Split an estate fairly."
+- "Who gets the house and what do they owe the others?"
+- "Handle unequal shares."

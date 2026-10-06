@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "I just became treasurer."
+- "How do I do the accounts for our club?"
+- "What goes in the treasurer's report?"
+- "Inherits a shoebox of receipts."

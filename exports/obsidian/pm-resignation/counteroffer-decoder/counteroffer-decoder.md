@@ -70,6 +70,12 @@ Decode against the resignation reason: **money-only resignations are the only ki
 - [ ] Do not weigh verbal promises as offer components — until written, they're 🔴 and weigh nothing
 - [ ] Do not decide on comp alone when the resignation wasn't about comp — say so plainly
 
+## Example Trigger Phrases
+
+- "My company countered my resignation."
+- "Should I accept a counteroffer?"
+- "Decode this retention offer."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

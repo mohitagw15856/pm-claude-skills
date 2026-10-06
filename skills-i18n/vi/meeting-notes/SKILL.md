@@ -338,3 +338,10 @@ Dành cho các agent có dùng công cụ và đã kết nối MCP server (Notio
 ### Hoàn tác
 - Hoàn tác = lưu trữ/xóa trang và các issue vừa tạo, chỉ khi người dùng yêu cầu rõ ràng.
 - Dừng lại và hỏi người dùng nếu: không tìm thấy database/dự án đích, việc tạo issue thất bại giữa chừng (báo lại những gì ĐÃ được tạo), hoặc người phụ trách đầu việc không tồn tại trong tracker.
+
+## Ví dụ câu kích hoạt
+
+- "Tạo biên bản cuộc họp."
+- "Định dạng ghi chú thảo luận."
+- "Ghi lại các việc cần làm."
+- "Ghi lại các quyết định của cuộc họp."

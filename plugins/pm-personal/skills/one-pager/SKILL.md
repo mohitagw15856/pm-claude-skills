@@ -62,3 +62,10 @@ A single page, skimmable, in this order:
 ## Based On
 
 One-pager / one-sheet practice (problem · solution · why-now · ask) used for startups, products, and project briefs.
+
+## Example Trigger Phrases
+
+- "Make a one-pager."
+- "Write a one-page summary of the startup."
+- "Write a leave-behind for the meeting."
+- "Give me a tl;dr brief of this product."

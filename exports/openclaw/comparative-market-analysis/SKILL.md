@@ -74,3 +74,9 @@ Ask for these only if they aren't already provided (else mark to source):
 ## Based On
 
 Real-estate valuation practice — comparable-sales analysis with feature adjustments, market-context weighting, and goal-aligned pricing (CMA, not a formal appraisal).
+
+## Example Trigger Phrases
+
+- "Do a CMA?"
+- "Price a home."
+- "Estimate a property's value from comparables."

@@ -172,3 +172,10 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Turn this Postman collection into developer docs"
 - "Write API reference docs for [endpoint]"
 - "Write a developer guide for our [product] API"
+
+## Example Trigger Phrases
+
+- "Document an API endpoint."
+- "Write API reference docs."
+- "Create a developer guide."
+- "Turn a raw spec/Postman collection into documentation."

@@ -103,3 +103,10 @@ Add (input-seeking): [fidgets, pressure, movement — if relevant]
 [[masking-budget]] — ambient sensory cost is a huge hidden line in the mask budget;
 [[meltdown-map]] when overload tips into shutdown; [[attention-reset]] for the
 digital-sensory layer.
+
+## Example Trigger Phrases
+
+- "My office wrecks me and I don't know why."
+- "I'm overstimulated all the time."
+- "Make my home autism and ADHD friendly."
+- "Audit my commute for sensory overload."

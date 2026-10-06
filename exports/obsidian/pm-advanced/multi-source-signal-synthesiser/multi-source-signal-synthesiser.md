@@ -71,6 +71,13 @@ Ask the user for these if not provided:
 - [ ] Do not collapse divergent signals into a single finding — where user segments have genuinely different needs, name the segments explicitly rather than averaging them away
 - [ ] Do not omit the research gap section when key decisions rest on thin data — acting on low-confidence findings without flagging the gaps misleads product teams
 
+## Example Trigger Phrases
+
+- "Combine our interviews, tickets and NPS into one view."
+- "Reconcile what users say across these sources."
+- "Synthesise these app reviews and sales calls."
+- "Surface the underlying need behind these requests."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

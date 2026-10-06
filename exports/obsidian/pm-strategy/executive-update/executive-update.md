@@ -76,6 +76,13 @@ Ask the user for these if not provided:
 - [ ] Do not present a "Decisions Needed" item without a recommendation — asking an executive to decide without your view forces them to do the analytical work the PM should have done
 - [ ] Do not exceed 250 words in the main body — length signals the author has not done the compression work; every word over 250 reduces the chance the update is read
 
+## Example Trigger Phrases
+
+- "Write an executive update."
+- "Write a leadership update."
+- "Write a product update for the exec team."
+- "Brief the C-suite on the product."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

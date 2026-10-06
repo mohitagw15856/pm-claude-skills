@@ -102,3 +102,10 @@ At end of [period]:
 - [ ] Growth opportunities include estimated value (even roughly)
 - [ ] 90-day actions are specific (not "have a call" — what call, with whom, to achieve what)
 - [ ] Success criteria are measurable at the end of the planning period
+
+## Example Trigger Phrases
+
+- "Create an account plan for our biggest customer."
+- "Build a key account strategy for Acme."
+- "Run a strategic account review before renewal."
+- "Plan my territory for next year."

@@ -63,3 +63,9 @@ Ask for these if not provided:
 - [ ] Do not chase without a waiting-list entry — untracked chases become the zombie threads
 - [ ] Do not fake urgency — the first discovered fake deadline devalues every future real one
 - [ ] Do not let threads die unclosed — an explicit close beats an awkward silence in every relationship that matters
+
+## Example Trigger Phrases
+
+- "Write a follow-up that isn't pushy."
+- "How long do I wait before chasing?"
+- "Manage my waiting-on list."

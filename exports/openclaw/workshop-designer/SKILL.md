@@ -68,3 +68,10 @@ Ask for these if not provided:
 - [ ] Do not converge by discussion — mechanisms converge; discussion enriches the converged
 - [ ] Do not schedule deciding last — tired rooms defer or decide badly
 - [ ] Do not let the boards die in the room — un-captured workshops happened only emotionally
+
+## Example Trigger Phrases
+
+- "Design a workshop for X."
+- "Plan our planning session."
+- "Facilitate a half-day working session."
+- "Our workshops are fun but nothing comes out."

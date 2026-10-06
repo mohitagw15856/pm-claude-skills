@@ -75,3 +75,10 @@ Cấu trúc đầu vào nằm trong docstring của script. Script tính vesting
 - [ ] Đừng mô hình hóa refresher chưa có văn bản như thu nhập
 - [ ] Đừng tuyên bố offer thắng cuộc mà không nêu chiến thắng đó phụ thuộc vào giả định nào
 - [ ] Đừng trình bày kết quả của mô hình mà không kèm các giả định
+
+## Ví dụ câu kích hoạt
+
+- "So sánh các lời mời làm việc."
+- "Lời mời nào trả nhiều hơn về lâu dài?"
+- "Tính lịch trao cổ phần của tôi."
+- "Lời mời từ startup có thật sự đáng không?"

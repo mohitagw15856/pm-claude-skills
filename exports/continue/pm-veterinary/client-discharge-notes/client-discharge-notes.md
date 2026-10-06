@@ -58,3 +58,10 @@ When to come back (suture removal, recheck), the clinic number and hours, and th
 - Missing the after-hours/emergency contact
 - Chart-speak an ordinary owner can't parse
 - Activity instructions too vague to follow ("take it easy")
+
+## Example Trigger Phrases
+
+- "Write discharge instructions for this dog."
+- "Write go-home notes after the spay."
+- "Explain post-op care to the owner."
+- "Write the medication instructions for the cat's owner."

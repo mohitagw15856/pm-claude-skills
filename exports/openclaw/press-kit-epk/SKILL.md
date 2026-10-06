@@ -129,3 +129,9 @@ live video link → releases → quotes if real → contact]
 [[release-day-countdown]] — the EPK's busiest fortnight;
 [[band-agreement]] before the bookings bring money; [[media-pitch]] for
 the general-press cousin; [[personal-bio]] for the human behind the act.
+
+## Example Trigger Phrases
+
+- "I need an EPK."
+- "Write my band bio."
+- "What do I send festivals?"

@@ -62,3 +62,10 @@ Surat 3-4 paragraf (≈250-350 kata):
 ## Dasar Rujukan
 
 Praktik surat lamaran modern: pembuka spesifik, pemetaan bukti ke kebutuhan, gaya bahasa manusiawi.
+
+## Contoh Frasa Pemicu
+
+- "Tuliskan surat lamaran."
+- "Tuliskan surat lamaran untuk posisi ini."
+- "Tuliskan catatan pengantar untuk CV saya."
+- "Buat surat lamaran saya tidak terlalu umum."

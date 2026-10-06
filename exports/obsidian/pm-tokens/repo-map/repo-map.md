@@ -71,6 +71,13 @@ Deterministic (sorted walk), stdlib-only, local. Skips `.git`, `node_modules`, b
 
 The codebase-as-index pattern — local knowledge graphs for agent navigation (as in [Graphify](https://github.com/Graphify-Labs/graphify), which does the full tree-sitter graph version) — distilled here into a zero-dependency, deterministic map with the read-the-map-first discipline.
 
+## Example Trigger Phrases
+
+- "Explore this repo efficiently."
+- "Stop re-reading the whole codebase."
+- "Make a map of this project."
+- "Which files should the agent actually open?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Can I get out of jury duty?"
+- "How do I defer jury service?"
+- "What happens at jury duty?"

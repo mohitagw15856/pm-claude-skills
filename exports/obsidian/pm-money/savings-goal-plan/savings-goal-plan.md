@@ -63,6 +63,13 @@ Ask for these only if they aren't already provided:
 
 Goal-based saving (sinking funds): target ÷ timeline, milestone tracking, and automated contributions.
 
+## Example Trigger Phrases
+
+- "Help me save for a house deposit."
+- "How much should I set aside each month?"
+- "Build an emergency fund plan."
+- "Save £3,000 for a trip by summer."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

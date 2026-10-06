@@ -60,3 +60,9 @@ Source: Yahoo Finance public endpoint (unofficial; may be delayed) · rerun: `[e
 - [ ] Do not describe chart history in predictive language — shapes are described, futures are not
 - [ ] Do not present this endpoint as trading-grade — the fence is part of the answer
 - [ ] Do not give investment advice under any phrasing — the refusal is the skill working
+
+## Example Trigger Phrases
+
+- "What's this stock at?"
+- "How did the market do today?"
+- "Get me a ticker's recent range."

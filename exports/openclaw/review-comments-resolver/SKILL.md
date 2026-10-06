@@ -71,3 +71,9 @@ Ask for these if not provided:
 - [ ] Do not decline silently — unaddressed comments respawn with allies
 - [ ] Do not split contradictory feedback down the middle — mush satisfies neither reviewer and weakens the doc
 - [ ] Do not leave "let's discuss" comments orbiting — the deadline converts them to decisions
+
+## Example Trigger Phrases
+
+- "Work through these review comments."
+- "Close out the feedback on this doc."
+- "Which comments do I actually have to take?"

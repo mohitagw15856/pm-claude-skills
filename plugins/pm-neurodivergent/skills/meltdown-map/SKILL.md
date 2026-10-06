@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "My meltdowns come out of nowhere."
+- "Help me not shut down."
+- "I need a plan for when I'm overwhelmed."
+- "Shuts down."

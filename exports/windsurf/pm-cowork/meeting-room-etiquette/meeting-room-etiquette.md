@@ -61,3 +61,10 @@ Ask for these if not provided:
 - [ ] Do not run hybrid meetings without the advocate — the remote half goes decorative in minutes
 - [ ] Do not deputize peers as police — structure enforces; humans just follow defaults
 - [ ] Do not write ten kitchen rules — three that matter, or the card becomes the noticeboard it replaced
+
+## Example Trigger Phrases
+
+- "Set office space norms."
+- "Write the office etiquette guide."
+- "Stop people ghost-booking meeting rooms."
+- "Write rules for the shared kitchen."

@@ -104,6 +104,13 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - Leaving `<!-- TODO -->` or `[bracketed]` placeholders in the final file
 - Overlapping so heavily with an existing skill that the model can't choose between them
 
+## Example Trigger Phrases
+
+- "Write a skill."
+- "Create a SKILL.md."
+- "Improve a skill."
+- "Review a skill for quality."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

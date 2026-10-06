@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Onboard to a new team."
+- "Report arrives."
+- "Write my README/user manual."

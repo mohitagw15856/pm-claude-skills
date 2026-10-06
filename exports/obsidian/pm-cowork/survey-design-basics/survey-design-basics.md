@@ -66,6 +66,13 @@ Ask for these if not provided:
 - [ ] Do not launch without the analysis plan — unanalyzable questions are respondent-time theft
 - [ ] Do not report percentages without the selection caveat — who answered is half the result
 
+## Example Trigger Phrases
+
+- "Write our customer/employee survey."
+- "Check these questions for bias."
+- "Why are our survey results useless?"
+- "Design the questionnaire for this decision."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

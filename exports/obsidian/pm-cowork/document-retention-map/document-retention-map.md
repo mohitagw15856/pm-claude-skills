@@ -67,6 +67,13 @@ Ask for these if not provided:
 - [ ] Do not let the scanner backlog block the system — forward-filing starts today; the backlog drains opportunistically
 - [ ] Do not skip the ongoing-dispute check — active disputes freeze every related clock, and the map must say so
 
+## Example Trigger Phrases
+
+- "How long do I keep tax documents?"
+- "Can I shred this?"
+- "Set up a document retention system."
+- "What papers does my small business need to keep?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -80,6 +80,13 @@ Verification anchors customers can check (verified handles list on your domain, 
 - [ ] Do not leave the deepfaked human out of the response — an executive learning the plan from the press release is a second incident
 - [ ] Do not treat it as a one-off — impersonation that worked once is a campaign; monitoring is part of the response, not the postscript
 
+## Example Trigger Phrases
+
+- "A deepfake of our CEO is going around."
+- "Customers are reporting a fake version of our app."
+- "Someone cloned our support line."
+- "Prepare an impersonation playbook before it happens."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

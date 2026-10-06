@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "I'm releasing a single/EP."
+- "Should I submit to playlists?"
+- "Plan my release."

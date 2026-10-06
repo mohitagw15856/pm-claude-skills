@@ -65,6 +65,13 @@ A single page, skimmable, in this order:
 
 One-pager / one-sheet practice (problem · solution · why-now · ask) used for startups, products, and project briefs.
 
+## Example Trigger Phrases
+
+- "Make a one-pager."
+- "Write a one-page summary of the startup."
+- "Write a leave-behind for the meeting."
+- "Give me a tl;dr brief of this product."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

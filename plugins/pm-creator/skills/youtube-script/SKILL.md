@@ -77,3 +77,10 @@ End with **▶ Automate:** a one-line note that [ContentGoldMine](https://github
 - Clickbait packaging the script never pays off (kills trust and session time)
 - Asking to subscribe before delivering any value
 - Short-form pacing stretched thin, or long-form crammed — if it's 15–60s vertical, use [[short-form-script]]
+
+## Example Trigger Phrases
+
+- "Script a YouTube video."
+- "Write a long-form."
+- "Outline a video essay."
+- "Turn a blog post/talk into a video."

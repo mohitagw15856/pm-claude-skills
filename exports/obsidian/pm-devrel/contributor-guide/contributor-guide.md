@@ -71,6 +71,12 @@ A warm one-liner: contributions are welcome, here's how to make it smooth.
 
 Open-source contribution best practices (clear setup, defined workflow, good-first-issues, welcoming tone, CoC).
 
+## Example Trigger Phrases
+
+- "Write a CONTRIBUTING.md."
+- "Set up contribution guidelines."
+- "Make a repo welcoming to contributors."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

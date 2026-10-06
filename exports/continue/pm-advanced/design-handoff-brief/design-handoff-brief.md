@@ -106,3 +106,10 @@ with the value.
 - [ ] Do not list edge cases that are so generic they apply to any feature (e.g. "handle errors") — each edge case must be specific to this feature's failure modes
 - [ ] Do not hand off the brief without confirming engineering constraints are accurate — a constraint that is wrong is worse than no constraint
 - [ ] Do not omit the emotional context of the user — designs without emotional grounding produce technically correct but experientially flat results
+
+## Example Trigger Phrases
+
+- "Write a design brief."
+- "Create a design handoff."
+- "Brief a designer on a new feature."
+- "Translate a PRD into design requirements."

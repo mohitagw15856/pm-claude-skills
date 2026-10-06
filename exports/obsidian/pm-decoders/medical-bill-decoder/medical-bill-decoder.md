@@ -78,6 +78,13 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 
 Patient billing-advocacy practice — itemized-bill auditing, EOB reconciliation, negotiation scripting.
 
+## Example Trigger Phrases
+
+- "Why is my medical bill so high?"
+- "Decode my hospital bill."
+- "What is this EOB saying?"
+- "Can I negotiate this bill?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

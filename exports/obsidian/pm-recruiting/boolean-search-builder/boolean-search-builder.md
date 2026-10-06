@@ -65,6 +65,12 @@ Ask for these only if they aren't already provided (else infer and label):
 
 Talent-sourcing practice — synonym-rich boolean construction, X-ray search, precision/recall tuning, and non-discriminatory, job-related criteria.
 
+## Example Trigger Phrases
+
+- "Build a boolean search."
+- "Write an X-ray search."
+- "Find people with specific skills."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

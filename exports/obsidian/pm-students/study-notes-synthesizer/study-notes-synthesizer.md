@@ -64,6 +64,13 @@ Ask for these if not provided:
 - [ ] Do not write questions the notes can't answer — self-tests must be checkable against the guide
 - [ ] Do not pad the cram sheet — 20 items maximum; a cram sheet with everything is a guide with nothing
 
+## Example Trigger Phrases
+
+- "Make a study guide."
+- "Combine my notes."
+- "Prep me for the exam."
+- "Organize this course material."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

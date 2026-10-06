@@ -64,3 +64,10 @@ End verbatim: *"This is a plain-language reading, not financial advice — lease
 - [ ] Do not use the leased mileage in the math — use the driven mileage
 - [ ] Do not ignore the end-of-lease pages — that's where the cheap payment gets paid back
 - [ ] Do not declare lease vs buy universally — it depends on miles, years, and taxes; point to the calculator
+
+## Example Trigger Phrases
+
+- "Decode my car lease."
+- "Is this lease deal good?"
+- "What's a money factor?"
+- "Review this lease before I sign."

@@ -65,6 +65,13 @@ End with a **"Themes this period"** summary — the 3–4 narrative threads your
 
 Brag-document practice (Julia Evans) and impact-first accomplishment tracking.
 
+## Example Trigger Phrases
+
+- "Update a brag doc."
+- "Log a win."
+- "Track accomplishments."
+- "Prep evidence for a review/promotion."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

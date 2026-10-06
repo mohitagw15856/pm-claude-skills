@@ -66,6 +66,13 @@ Ask for these only if they aren't already provided:
 
 Narrative decision-memo practice (Amazon-style one/six-pagers; one-way vs. two-way door decisions).
 
+## Example Trigger Phrases
+
+- "Write a decision memo."
+- "Write a recommendation memo."
+- "Write a one-pager for this decision."
+- "Get leadership to decide something."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -68,3 +68,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Retrieval-Augmented Generation practice — hybrid retrieval, reranking, grounded generation, and faithfulness evaluation.
+
+## Example Trigger Phrases
+
+- "Design a RAG pipeline."
+- "Build a chat-with-your-docs feature."
+- "Design a knowledge assistant."
+- "Why does our RAG system give wrong answers?"

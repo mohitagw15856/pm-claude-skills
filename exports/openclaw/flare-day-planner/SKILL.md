@@ -115,3 +115,10 @@ this week]
 [[spoon-planner]] for the everyday pacing between flares; [[meltdown-map]] for the
 neuro-crash cousin; [[diagnosis-limbo-kit]] if the flaring condition is unnamed;
 [[saying-no-kindly]] for the cancellation muscle.
+
+## Example Trigger Phrases
+
+- "My flares blindside me."
+- "I fall apart when a bad day hits."
+- "Help me prepare for flare-ups."
+- "Has a relapsing condition."

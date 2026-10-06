@@ -61,3 +61,11 @@ Ask for these if not provided:
 - [ ] Do not invent alternatives as anesthetic — fake redirects and unaffordable smaller-yeses are new debts
 - [ ] Do not say bare no upward — the tradeoff board is both more honest and more survivable
 - [ ] Do not decline the new while hoarding the old — the audit is where capacity actually returns
+
+## Example Trigger Phrases
+
+- "How do I say no to this?"
+- "Turn down a request."
+- "I say yes to everything and drown."
+- "Push back on my manager."
+- "Protect the roadmap from a pet feature."

@@ -64,6 +64,13 @@ Ask for these if not provided:
 - [ ] Do not review only the final artifact — drift caught at 90% is a rewrite with feelings
 - [ ] Do not take the work back at the first wobble — the brief gets patched, the delegate keeps the pen ([the growth is the point])
 
+## Example Trigger Phrases
+
+- "Hand this off properly."
+- "My delegations come back wrong."
+- "Write a brief for this task I'm giving away."
+- "How much detail do I give?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

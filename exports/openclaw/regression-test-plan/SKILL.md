@@ -70,3 +70,10 @@ Ask for these only if they aren't already provided (else infer and label):
 ## Based On
 
 Risk-based regression practice — change-impact analysis, tiered smoke/targeted/full suites, automation prioritisation, and release-fit run strategy.
+
+## Example Trigger Phrases
+
+- "Plan regression testing."
+- "Build a regression suite."
+- "Decide what to re-test after a change."
+- "Trim a bloated regression pack."

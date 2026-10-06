@@ -61,3 +61,10 @@ Tanyakan hanya jika belum diberikan:
 ## Dasar Rujukan
 
 Persiapan wawancara terstruktur: metode STAR/behavioural, bank cerita yang dipetakan ke kompetensi, penyesuaian per posisi dan babak.
+
+## Contoh Frasa Pemicu
+
+- "Bantu saya persiapan wawancara."
+- "Siapkan jawaban untuk posisi ini."
+- "Latihan wawancara untuk perusahaan ini."
+- "Persiapan untuk ronde wawancara perilaku dan studi kasus."

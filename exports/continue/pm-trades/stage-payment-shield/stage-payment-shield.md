@@ -106,3 +106,10 @@ Day 1: … · Day 7: … · Day 14: …
 [[trade-quote-builder]] — the quote these terms live in;
 [[late-invoice-escalation]] when the chase outgrows scripts;
 [[first-client-contract]] for service-business cousins.
+
+## Example Trigger Phrases
+
+- "How much deposit should I take?"
+- "Set up stage payments for this kitchen job."
+- "Write the payment terms for my quotes."
+- "The customer won't pay the next stage: what do I say?"

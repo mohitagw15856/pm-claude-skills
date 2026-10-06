@@ -67,3 +67,10 @@ python3 scripts/vendor_risk.py vendor.json --json
 ## Based On
 
 Third-party / vendor risk management practice — data-and-access-driven tiering, evidence-based diligence, and contractual risk transfer.
+
+## Example Trigger Phrases
+
+- "Assess a vendor's security."
+- "Run a third-party risk assessment."
+- "Complete a security questionnaire about a vendor."
+- "Decide what due diligence a new tool needs."

@@ -113,3 +113,9 @@ timing · verify-local for the legal step]
 [[coming-out-rehearsal]] often precedes a transition name change; [[contract-review]]
 neighbors for the marriage/divorce paperwork; [[digital-death-plan]] shares the
 build-the-list-from-real-life method.
+
+## Example Trigger Phrases
+
+- "I changed my name and don't know where to start."
+- "Update my name everywhere."
+- "Name change checklist."

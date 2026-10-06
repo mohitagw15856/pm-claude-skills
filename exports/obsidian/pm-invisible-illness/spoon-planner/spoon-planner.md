@@ -109,6 +109,12 @@ payback delay accounted for if relevant]
 if the condition is still unnamed; [[bennett-time-audit]] and [[deep-work-blocking]]
 are the infinite-spoon cousins — useful, but read them through this lens.
 
+## Example Trigger Phrases
+
+- "I only have so much energy."
+- "Help me pace with my chronic illness."
+- "I keep crashing."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

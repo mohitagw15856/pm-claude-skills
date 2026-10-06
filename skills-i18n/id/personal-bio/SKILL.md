@@ -56,3 +56,10 @@ Bio pendek yang ditulis ulang dengan sudut pandang orang pertama, untuk halaman 
 ## Dasar Rujukan
 
 Praktik bio profesional: konvensi satu kalimat / pendek / panjang, spesifik di atas kata sifat.
+
+## Contoh Frasa Pemicu
+
+- "Tuliskan bio saya."
+- "Tuliskan bagian tentang saya."
+- "Tuliskan bio pembicara."
+- "Tuliskan profil singkat."

@@ -63,3 +63,10 @@ Ask for these if not provided:
 - [ ] Do not build year/month albums — dates are already an index
 - [ ] Do not chase perfect curation — findable-good beats museum-complete, and only one of them ever finishes
 - [ ] Do not run bulk rules over the flagged hotspots — the kids' photos get eyes, not filters
+
+## Example Trigger Phrases
+
+- "Organise my photo library."
+- "I have 40,000 unsorted photos: help."
+- "Delete duplicate photos safely."
+- "Set up a photo system that lasts."

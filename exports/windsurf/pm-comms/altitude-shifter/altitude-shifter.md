@@ -67,3 +67,10 @@ Ask for these if not provided:
 - [ ] Do not soften bad news as it goes up — the board version carries the same risk the engineers see
 - [ ] Do not write the new-hire version as a summary — it's the version with MORE context, not less
 - [ ] Do not produce four versions without the delta table — the table is what makes the shift inspectable
+
+## Example Trigger Phrases
+
+- "Rewrite this for execs."
+- "Explain this to the team."
+- "Make this customer-facing."
+- "Say this four ways."

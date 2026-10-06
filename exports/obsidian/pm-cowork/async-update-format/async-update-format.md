@@ -59,6 +59,12 @@ Ask for these if not provided:
 - [ ] Do not write one essay for three audiences — flex the altitude or split the update
 - [ ] Do not skip the nothing-happened weeks — silence reads as chaos; "no movement, because X" reads as control
 
+## Example Trigger Phrases
+
+- "Write my weekly update."
+- "Format our team's status posts."
+- "What goes in a good async check-in?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

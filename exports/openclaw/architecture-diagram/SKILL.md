@@ -82,3 +82,10 @@ flowchart LR
 ## Based On
 
 Architecture diagramming (C4-style grouping, logical layers, sync/async edges), expressed as renderable Mermaid.
+
+## Example Trigger Phrases
+
+- "Draw an architecture."
+- "Show how components fit together."
+- "Map a system/data flow."
+- "Visualize services and dependencies."

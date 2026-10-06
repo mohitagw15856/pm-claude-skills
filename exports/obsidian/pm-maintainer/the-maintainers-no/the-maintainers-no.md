@@ -115,6 +115,13 @@ honest nothing → the thread's fate]
 [[saying-no-kindly]] — the general craft; [[first-maintainer-month]] for
 setting the boundaries early enough that nos stay rare.
 
+## Example Trigger Phrases
+
+- "How do I reject this PR nicely?"
+- "Say no to this feature request."
+- "A company wants free support from my project."
+- "Suggest a fork without burning the contributor."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

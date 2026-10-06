@@ -56,6 +56,12 @@ The 1–2 things a lawyer should confirm against the full contract.
 - Risk ratings with no scenario behind them
 - Suggesting changes with no example of the better wording
 
+## Example Trigger Phrases
+
+- "Decode legal language."
+- "Explain a term in a contract."
+- "Assess whether a provision is standard."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

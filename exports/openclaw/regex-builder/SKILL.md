@@ -60,3 +60,9 @@ Edge cases, catastrophic-backtracking risks, anchoring, Unicode, and a simpler a
 - [ ] Do not ignore the flavor — `\d`, lookbehind, and named groups differ across engines
 - [ ] Do not produce an unreadable one-liner when a commented/verbose version or a non-regex approach is clearer
 - [ ] Do not silently assume anchoring — state whether it matches the whole string or a substring
+
+## Example Trigger Phrases
+
+- "Write a regex."
+- "Match/validate/extract a pattern."
+- "Understand what a regex does."

@@ -63,3 +63,9 @@ Formality: [level, evidence] · Length: [theirs] · Directness: [direct/cushione
 - [ ] Do not cushion a direct sender's answer — they told you their preference in their own email
 - [ ] Do not let tone-matching dilute a "no" — register is the wrapper, never the content
 - [ ] Do not mimic idiosyncrasies (their typos, their catchphrases) — matching register isn't impersonation
+
+## Example Trigger Phrases
+
+- "Reply to this email."
+- "Draft a response that doesn't sound stiff."
+- "Answer this without sounding like a robot."

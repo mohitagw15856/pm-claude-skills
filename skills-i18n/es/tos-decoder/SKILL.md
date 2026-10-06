@@ -72,3 +72,9 @@ Termina el artefacto con, textualmente: *"Esta es una lectura en lenguaje claro,
 ## Basado en
 
 Práctica de revisión de contratos de consumo — triaje de cláusulas por impacto, lectura del alcance de licencias, análisis de cláusulas de disputa.
+
+## Frases disparadoras de ejemplo
+
+- "Explícame esta política de privacidad."
+- "¿Son malos estos términos de servicio?"
+- "¿Debo hacer clic en aceptar?"

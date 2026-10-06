@@ -67,3 +67,10 @@ Ask for these if not provided:
 - [ ] Do not create channels per mood — the naming scheme is the door, and the door has a test
 - [ ] Do not let announcements and discussion share a channel — the restricted `#ann-` lane exists so the signal survives
 - [ ] Do not decree thread culture — leads model it for two weeks and it installs itself
+
+## Example Trigger Phrases
+
+- "Clean up our Slack/Teams."
+- "We have 90 channels and nothing is findable."
+- "Set channel norms."
+- "Where should things get posted?"

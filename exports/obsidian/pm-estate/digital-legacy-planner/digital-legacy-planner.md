@@ -66,6 +66,13 @@ Ask for these if not provided:
 - [ ] Do not leave memorialize-vs-delete to the grieving — the wishes document exists to answer it
 - [ ] Do not treat this as morbid housekeeping — frame it as the last considerate thing on the to-do list, because it is
 
+## Example Trigger Phrases
+
+- "What happens to my accounts when I die?"
+- "Set up a digital legacy plan."
+- "Help an executor deal with online accounts."
+- "How does my family get into my stuff?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

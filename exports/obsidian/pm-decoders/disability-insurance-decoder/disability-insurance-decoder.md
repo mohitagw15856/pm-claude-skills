@@ -73,6 +73,13 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 
 Policyholder-side disability review practice — definition-first reading, offset math, claim-scenario testing.
 
+## Example Trigger Phrases
+
+- "Is my disability insurance any good?"
+- "Decode my LTD policy."
+- "What does own-occupation mean?"
+- "How much would I actually get?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

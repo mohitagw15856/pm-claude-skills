@@ -92,6 +92,12 @@ When a case fails, classify before "fixing":
 - [ ] Do not treat pass-rate-vs-baseline as the only gate — one dead canary matters more than 2% aggregate drift
 - [ ] Do not grow the set unboundedly — a suite too slow to run on every change protects nothing
 
+## Example Trigger Phrases
+
+- "Stop prompt changes breaking production."
+- "Set up golden tests or CI gates for an LLM feature."
+- "Test a model/prompt upgrade before shipping it."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

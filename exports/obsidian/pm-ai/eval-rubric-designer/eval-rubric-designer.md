@@ -72,6 +72,13 @@ against a few human labels before trusting the leaderboard.
 
 LLM-as-judge evaluation practice — orthogonal weighted dimensions, anchored scales, structured judge prompts, and judge-bias mitigation.
 
+## Example Trigger Phrases
+
+- "Create an eval rubric."
+- "Define quality dimensions."
+- "Build an LLM judge."
+- "Decide how to measure whether AI output is good."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

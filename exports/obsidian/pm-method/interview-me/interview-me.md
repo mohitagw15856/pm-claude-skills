@@ -59,6 +59,13 @@ Interview when: the request is one sentence for a multi-hour deliverable · the 
 - [ ] Do not start building mid-interview "to save time" — half-brief work anchors the requester to the wrong draft
 - [ ] Do not skip the playback — the interview's value is captured only when the requester says "yes, that"
 
+## Example Trigger Phrases
+
+- "Interview me before you build anything."
+- "Ask me questions first."
+- "Make me a dashboard."
+- "Work out what I actually need."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

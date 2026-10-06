@@ -173,6 +173,13 @@ If no decisions are pending: *No decisions pending.*
 - [ ] Do not list blocked items without naming a specific owner and a concrete unblocking action — "waiting on X" is not a blocker entry, it is a placeholder
 - [ ] Do not write a report that exceeds two printed pages — length signals the author has not done the editorial work of deciding what matters to stakeholders
 
+## Example Trigger Phrases
+
+- "Write a team update."
+- "Write the weekly engineering report."
+- "Write our sprint status email."
+- "Update stakeholders on the team's week."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

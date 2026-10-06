@@ -74,6 +74,12 @@ Ask for these if not provided:
 - [ ] Do not editorialize about who was right — forensics reconstructs; it doesn't adjudicate
 - [ ] Do not omit the confidence note — a reconstruction that hides its own uncertainty is fabrication with footnotes
 
+## Example Trigger Phrases
+
+- "What did we actually decide?"
+- "Turn this thread into a decision record."
+- "Reconstruct this discussion."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

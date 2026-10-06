@@ -69,3 +69,10 @@ Ask for these if not provided:
 ## Based On
 
 The output-compression register pattern — telegraphic prompting for output-token reduction (as in [Caveman](https://github.com/juliusbrussee/caveman) and the caveman-compression method) — systematized here into levels, economics, and exclusions.
+
+## Example Trigger Phrases
+
+- "Make the model respond tersely."
+- "Cut our output token costs."
+- "Switch to a compact output mode for this pipeline."
+- "Strip the filler from agent-to-agent messages."

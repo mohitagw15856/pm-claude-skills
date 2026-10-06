@@ -23,9 +23,7 @@ workflow:
     speech_to_text:
       enabled: false
     suggested_questions:
-    - '帮我把这份会议记录整理成飞书文档'
-    - '写一份飞书方案文档，比较这三个方案，领导要做决定'
-    - '把这些笔记整理成给跨团队评审用的 Lark 文档'
+    []
     suggested_questions_after_answer:
       enabled: false
     text_to_speech:
@@ -161,10 +159,10 @@ workflow:
 
             ## 示例触发语
 
-            - "帮我把这份会议记录整理成飞书文档。"
-            - "写一份飞书方案文档，比较这三个方案，领导要做决定。"
-            - "把这些笔记整理成给跨团队评审用的 Lark 文档。"
-            - "把复盘内容整理成飞书格式，行动项要能转成任务。"
+            - “帮我把这份会议记录整理成飞书文档。”
+            - “写一份飞书方案文档，比较这三个方案，领导要做决定。”
+            - “把这些笔记整理成给跨团队评审用的 Lark 文档。”
+            - “把复盘内容整理成飞书格式，行动项要能转成任务。”
 
             （本应用基于开源技能库 PM Skills 的 feishu-doc-writer 技能：https://github.com/mohitagw15856/pm-claude-skills ，MIT 协议。）
         selected: false

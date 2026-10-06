@@ -288,3 +288,10 @@ When a breach is detected, work through this checklist in order:
 - [ ] Do not omit CI enforcement — a performance budget that is not enforced in the build pipeline will not be respected
 - [ ] Do not leave the breach response process without named owners and escalation channels
 - [ ] Do not set budgets that apply only to one environment — production and staging targets should be documented separately if they differ
+
+## Example Trigger Phrases
+
+- "Set performance targets."
+- "Define SLOs for latency."
+- "Create a performance baseline."
+- "Document performance regression policy."

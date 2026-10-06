@@ -72,3 +72,10 @@ Name the skill (or skills) this brief should now feed (e.g. "→ run `prd-templa
 ## Based On
 
 Creative/agency briefing practice and structured-elicitation interviewing (decision-tree questioning, progressive disclosure, confirm-before-produce).
+
+## Example Trigger Phrases
+
+- "Help me think this through."
+- "Ask me questions until the brief is clear."
+- "Turn my vague idea into a proper brief."
+- "Interview me before you write anything."

@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Clip this podcast."
+- "Make shorts from my video."
+- "What's clippable here?"

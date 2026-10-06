@@ -57,3 +57,10 @@ Attack through every one; report survival honestly (a plan that "fails" all twel
 - [ ] Do not produce more than three kill-shots — twelve wounds ranked equally is a risk register, and risk registers are where warnings go to die
 - [ ] Do not skip the zombie vector — teams plan for explosion and never for the shamble
 - [ ] Do not attack the people — every mechanism must route through structure, incentive, or process, never through "X is bad at their job"
+
+## Example Trigger Phrases
+
+- "Kill this plan on paper."
+- "Run a premortem on our launch."
+- "How will this migration fail?"
+- "Attack this strategy before we commit."

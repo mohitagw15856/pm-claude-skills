@@ -78,3 +78,9 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 ## Based On
 
 Consumer-contract review practice — impact-ranked clause triage, license-scope reading, dispute-clause analysis.
+
+## Example Trigger Phrases
+
+- "Decode this privacy policy."
+- "Is this ToS bad?"
+- "Should I click accept?"

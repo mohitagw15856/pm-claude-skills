@@ -70,6 +70,13 @@ Ask for these if not provided:
 - [ ] Do not prepare speeches over questions — rooms resist being told and enjoy answering
 - [ ] Do not leave success undefined — undefined success becomes "it went fine," which means nothing happened
 
+## Example Trigger Phrases
+
+- "Prep me for this meeting."
+- "What should I know before this call?"
+- "I have 15 minutes before a big meeting."
+- "Help me not wing it."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -76,6 +76,13 @@ Ask for these if not provided:
 - **Hiding the arithmetic.** The script prints every node's EV because a recommendation nobody can check convinces nobody who matters.
 - **Letting the tree end the conversation.** It ends the *circular* part; the values conversation it surfaces is the productive one.
 
+## Example Trigger Phrases
+
+- "Should we settle?"
+- "Build a decision tree."
+- "What probability makes this worth it?"
+- "Compare options under uncertainty."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

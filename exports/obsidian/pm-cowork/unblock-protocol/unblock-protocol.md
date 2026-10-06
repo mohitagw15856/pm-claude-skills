@@ -64,6 +64,12 @@ Ask for these if not provided:
 - [ ] Do not let waiting wear the active badge — it's a lane, with chase dates
 - [ ] Do not treat chronic same-type stucks as bad luck — three entries is the system telling you the structural thing
 
+## Example Trigger Phrases
+
+- "I keep avoiding this task."
+- "How long should I struggle before asking?"
+- "Unblock my stalled project."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

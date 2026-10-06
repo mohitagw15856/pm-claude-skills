@@ -65,3 +65,10 @@ Deposit [%] before work starts · milestone billing over monthly-in-arrears · l
 - [ ] Do not vent in writing — every message should read fine attached to a small-claims filing, because it might be
 - [ ] Do not keep delivering new work into an unpaid account past the stop trigger
 - [ ] Do not skip the read — an enterprise AP maze, a cash crisis, and a ghost need different ladders, not one angrier email
+
+## Example Trigger Phrases
+
+- "My client hasn't paid me."
+- "Write a payment reminder email."
+- "Send a final demand for this invoice."
+- "Should I stop work until they pay?"

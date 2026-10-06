@@ -78,3 +78,10 @@ End with: *"This memo is analytical support, not a credit decision. Approval aut
 - [ ] Do not use appraisal value as liquidation value
 - [ ] Do not bury the recommendation at the end — committee reads it first
 - [ ] Do not fabricate financials from a thin brief — label every inferred number
+
+## Example Trigger Phrases
+
+- "Write a credit memo."
+- "Write up this loan for credit committee."
+- "Prepare a deal for credit committee."
+- "Spread these financials and check covenant headroom."

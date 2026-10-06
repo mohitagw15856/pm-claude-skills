@@ -64,3 +64,10 @@ A termbase table — one row per term:
 ## Based On
 
 Terminology-management practice — termbases, do-not-translate lists, context definitions, CAT-tool glossary structure.
+
+## Example Trigger Phrases
+
+- "Create a glossary for our product."
+- "Build a termbase for the translators."
+- "Make a do-not-translate list."
+- "Keep terminology consistent across languages."

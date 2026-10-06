@@ -74,3 +74,9 @@ Ask for (if not already provided):
 - [ ] Do not let the criteria appear after the list has been read — that's rationalising a favourite
 - [ ] Do not delete the rejects — the ledger is half the artifact
 - [ ] Do not ship the shortlist without the wildcard — a fully-safe shortlist means the exercise removed everything it was for
+
+## Example Trigger Phrases
+
+- "Generate ideas."
+- "Explore a solution space."
+- "Name something."

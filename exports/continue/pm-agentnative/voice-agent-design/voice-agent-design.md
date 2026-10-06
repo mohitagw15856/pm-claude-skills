@@ -76,3 +76,10 @@ Ask for (if not already provided):
 - [ ] Do not let the agent bluff on regulated topics (medical, legal, financial advice) — pass or read the approved statement
 - [ ] Do not re-ask a failed question unchanged — the caller heard you; the strategy failed, not their ears
 - [ ] Do not launch without the mid-flow hang-up metric — it's where voice agents quietly hemorrhage trust
+
+## Example Trigger Phrases
+
+- "Design a voice agent."
+- "Automate a phone line."
+- "Spec an IVR replacement."
+- "Review why callers hate an existing voice bot."

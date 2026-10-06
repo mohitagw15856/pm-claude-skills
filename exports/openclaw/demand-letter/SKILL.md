@@ -54,3 +54,9 @@ End with: **⚠️ Before sending** — items to verify (exact figures, the gove
 - Vague demands ("pay what you owe") with no figure or deadline
 - Threats of consequences the sender can't or wouldn't lawfully pursue
 - Burying the actual demand in a wall of grievance
+
+## Example Trigger Phrases
+
+- "Write a demand letter."
+- "Send a formal demand for payment."
+- "Draft a cease-and-desist."

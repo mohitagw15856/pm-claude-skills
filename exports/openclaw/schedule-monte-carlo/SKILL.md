@@ -50,3 +50,10 @@ Prints `deterministic=21.0 P10=22.3 P50=27.0 P90=32.3 · top critical: design, i
 - [ ] Do not hide the deterministic number — showing plan-math next to real-math is how the method earns adoption
 - [ ] Do not add hidden buffers on top of P90 — the whole point is replacing padding with arithmetic
 - [ ] Do not simulate a 200-task plan at task granularity — roll up to workstreams; precision theatre at that scale is its own lie
+
+## Example Trigger Phrases
+
+- "When will this project really finish?"
+- "Leadership needs a commit date."
+- "Simulate our schedule instead of summing estimates."
+- "Which tasks actually drive the end date?"

@@ -65,3 +65,10 @@ Ask for these if not provided:
 - [ ] Do not write unfalsifiable expectations ("this will probably work out") — they review into nothing
 - [ ] Do not skip small decisions categorically — the journal's patterns come fastest from frequent entries
 - [ ] Do not let the review become self-flagellation or victory laps — one quadrant, one lesson, close the entry
+
+## Example Trigger Phrases
+
+- "Help me think through this decision."
+- "Start a decision journal."
+- "Review my past decision."
+- "Why do I keep making the same mistake?"

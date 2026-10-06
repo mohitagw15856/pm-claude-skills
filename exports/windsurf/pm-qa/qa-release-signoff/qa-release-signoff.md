@@ -61,3 +61,10 @@ Ask for these only if they aren't already provided (else mark unknown / as a ris
 ## Based On
 
 Release-management & QA practice — evidence-based go/no-go sign-offs with coverage transparency, defect triage, residual-risk disclosure, and rollback planning.
+
+## Example Trigger Phrases
+
+- "Write the release sign-off."
+- "Give me a go or no-go QA report."
+- "Are we release ready?"
+- "Summarise testing before we ship."

@@ -98,7 +98,7 @@ python3 skills/cn-severance-calculator/scripts/cn_severance.py --start 2018-03-0
 - **建议用户签字。** 只做计算、列出核对事项、指明去哪里确认。
 
 ## 示例触发语
-- "公司要裁我，工作 6 年半，月薪 3 万，能拿多少补偿？"
-- "N+1 到底怎么算？"
-- "公司没提前通知就辞退我，是不是违法解除？"
-- "How much severance am I owed in Shanghai?"
+- “公司要裁我，工作 6 年半，月薪 3 万，能拿多少补偿？”
+- “N+1 到底怎么算？”
+- “公司没提前通知就辞退我，是不是违法解除？”
+- “How much severance am I owed in Shanghai?”

@@ -70,3 +70,10 @@ Ask for these if not provided:
 - [ ] Do not let irreversible actions flow unattended — undoable can flow; sent/spent/deleted-forever gates or denies
 - [ ] Do not skip isolation — the boundary is the difference between a bad sandbox and a production breach
 - [ ] Do not improvise recovery — the kill-switch composed mid-runaway is a panic; write it while calm
+
+## Example Trigger Phrases
+
+- "What's the worst my agent could do?"
+- "Run a blast-radius assessment."
+- "Prepare for an agent going rogue."
+- "Am I ready to let this run unattended?"

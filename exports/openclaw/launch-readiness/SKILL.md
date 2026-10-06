@@ -93,3 +93,10 @@ Ask the user for these if not provided:
 - [ ] Do not treat the rollback plan as complete unless it has been tested in staging, not just documented
 - [ ] Do not assign blockers to "the team" — every blocker must have a single named owner or it will not be resolved before launch
 - [ ] Do not skip the analytics verification step — unverified tracking events mean the launch will be invisible and cannot be evaluated
+
+## Example Trigger Phrases
+
+- "Are we ready to launch?"
+- "Run a pre-launch review."
+- "Give me a go or no-go for this release."
+- "Is this release safe to ship?"

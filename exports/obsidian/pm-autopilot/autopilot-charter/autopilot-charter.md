@@ -79,6 +79,13 @@ For each automated ritual, define:
 - [ ] Do not automate judgement-bearing artifacts (performance feedback, strategy calls) no matter how reachable the inputs
 - [ ] Do not set a schedule tighter than the inputs actually change — a daily brief on weekly data is noise
 
+## Example Trigger Phrases
+
+- "What to automate?"
+- "How to set up recurring AI runs?"
+- "Which reports?"
+- "Design an automation charter for a team."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

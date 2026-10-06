@@ -62,3 +62,9 @@ Ask for these if not provided:
 - [ ] Do not schedule to "later" — later is where tasks go to become archaeology
 - [ ] Do not hoard the unimportant-nonurgent quadrant — six weeks untouched is the list's own verdict
 - [ ] Do not skip the gate — triage without intake discipline is a diet with free dessert
+
+## Example Trigger Phrases
+
+- "My task list is overwhelming."
+- "Triage my todos."
+- "What should I actually work on?"

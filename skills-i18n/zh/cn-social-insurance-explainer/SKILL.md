@@ -78,7 +78,7 @@ description: "针对具体的人和城市解释中国的五险一金：每一项
 - **建议停缴**而不解释后果。
 
 ## 示例触发语
-- "五险一金到底是什么？我在深圳，月薪两万。"
-- "换工作中间断了一个月社保有影响吗？"
-- "公积金怎么提取出来付房租？"
-- "Explain Chinese social insurance for my situation."
+- “五险一金到底是什么？我在深圳，月薪两万。”
+- “换工作中间断了一个月社保有影响吗？”
+- “公积金怎么提取出来付房租？”
+- “Explain Chinese social insurance for my situation.”

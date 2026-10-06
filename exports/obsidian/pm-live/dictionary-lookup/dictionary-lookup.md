@@ -60,6 +60,12 @@ Source: Free Dictionary API · rerun: `[exact curl]`
 - [ ] Do not treat a 404 as "not a word" — it's "not in this dictionary," a much smaller claim
 - [ ] Do not skip pronunciation when the question was spoken-word-shaped (names, presentations, ESL contexts)
 
+## Example Trigger Phrases
+
+- "Define a word."
+- "How do you pronounce this?"
+- "What's the origin of a word?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

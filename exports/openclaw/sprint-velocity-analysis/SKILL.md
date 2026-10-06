@@ -274,3 +274,9 @@ If cycle time data was not provided: *Cycle time data was not included in this a
 - [ ] Do not list carry-over as a generic observation — identify root cause categories with counts for the analysis to be actionable
 - [ ] Do not produce recommendations without a named owner, a start date, and a measurable target
 - [ ] Do not score health dimensions without citing evidence in the Evidence column — unsupported Red/Yellow/Green scores are not credible
+
+## Example Trigger Phrases
+
+- "Analyze sprint velocity."
+- "Review team delivery health."
+- "Produce a retrospective data analysis."

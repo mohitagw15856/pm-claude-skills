@@ -70,3 +70,10 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 ## Based On
 
 Policyholder-side disability review practice — definition-first reading, offset math, claim-scenario testing.
+
+## Example Trigger Phrases
+
+- "Is my disability insurance any good?"
+- "Decode my LTD policy."
+- "What does own-occupation mean?"
+- "How much would I actually get?"

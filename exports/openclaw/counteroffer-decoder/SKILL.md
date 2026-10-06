@@ -72,3 +72,9 @@ Decode against the resignation reason: **money-only resignations are the only ki
 - [ ] Do not let the flattery of being countered into the analysis — the offer prices your replacement cost, and it's the *terms* that carry information
 - [ ] Do not weigh verbal promises as offer components — until written, they're 🔴 and weigh nothing
 - [ ] Do not decide on comp alone when the resignation wasn't about comp — say so plainly
+
+## Example Trigger Phrases
+
+- "My company countered my resignation."
+- "Should I accept a counteroffer?"
+- "Decode this retention offer."

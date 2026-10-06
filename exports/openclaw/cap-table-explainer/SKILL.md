@@ -66,3 +66,11 @@ The single dilution number that matters, and the one term quietly driving it.
 - Ignoring the option pool's dilution effect
 - Treating ownership % as the whole story while ignoring liquidation preferences
 - Presenting math without stating assumptions
+
+## Example Trigger Phrases
+
+- "Explain dilution."
+- "Model a SAFE."
+- "Size an option pool."
+- "Understand a term sheet's economics."
+- "Figure out who owns what after a raise."

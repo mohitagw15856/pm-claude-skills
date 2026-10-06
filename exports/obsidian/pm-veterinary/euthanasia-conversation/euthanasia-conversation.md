@@ -56,6 +56,13 @@ Acknowledging the loss, grief-support resources, and any follow-up (a condolence
 - Handling payment or aftercare coldly in the moment
 - Ignoring children, cultural, or presence preferences
 
+## Example Trigger Phrases
+
+- "Help discuss euthanasia."
+- "Assess quality of life."
+- "Prepare for a difficult end-of-life conversation."
+- "Support an owner facing the decision."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

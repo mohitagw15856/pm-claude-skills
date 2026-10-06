@@ -65,6 +65,13 @@ Ask for these if not provided:
 - [ ] Do not lead with the biggest number as an accusation — converted owners cut meetings; shamed owners defend them
 - [ ] Do not stop at the price — the meter's product is the cheaper-supplier proposal, priced
 
+## Example Trigger Phrases
+
+- "What does this meeting cost?"
+- "Price our meeting culture."
+- "Is this recurring meeting worth it?"
+- "Make the case for fewer attendees."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -79,6 +79,12 @@ Battery replacement risk (and its warranty) · resale-value differences in an ev
 - [ ] Do not let advocacy (either direction) into the arithmetic — the model is agnostic; the not-modeled list keeps it honest
 - [ ] Do not model fuel/electricity price predictions — drift is named, not forecast
 
+## Example Trigger Phrases
+
+- "Is an EV worth it?"
+- "Does an EV pay for itself?"
+- "Should my next car be electric?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

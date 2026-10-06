@@ -299,6 +299,12 @@ This log records every ring movement since the radar's first edition. Use it to 
 - [ ] Do not skip the maintenance process — a radar with no process for updates becomes stale within two quarters
 - [ ] Do not omit ring definitions — engineers need to know what they should do in response to each ring, not just what the ring means
 
+## Example Trigger Phrases
+
+- "Create a tech radar."
+- "Evaluate the team's technology landscape."
+- "Establish a technology strategy."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -83,3 +83,11 @@ Grade = Σ(score × weight) × 20 → 0–100. **Bands:** ≥85 Preferred · 70�
 - [ ] Do not recommend exit for a sole-source supplier without a qualified alternative and transition plan
 - [ ] Do not carry the same corrective action across two reviews without escalating — repeat findings are a follow-through failure, not a new item
 - [ ] Do not soften the band to avoid an awkward QBR — the scorecard is the conversation
+
+## Example Trigger Phrases
+
+- "Review supplier performance."
+- "Prepare a quarterly business review for a vendor."
+- "Score a supplier on OTIF and quality."
+- "Decide whether to escalate."
+- "Exit a supplier."

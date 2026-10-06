@@ -157,6 +157,13 @@ Ask the user for these if not provided:
 - Social and emotional jobs are harder to surface but often the most defensible differentiators
 - Recommend sharing job stories with engineering — they make better technical decisions when they understand the "why"
 
+## Example Trigger Phrases
+
+- "Define user needs."
+- "Write job stories."
+- "Map the customer jobs for this feature."
+- "Reframe these features around customer outcomes."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

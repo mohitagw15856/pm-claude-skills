@@ -115,3 +115,9 @@ Duties: [scheduled + reactive + undocumented] · Dependents: [who/what calls it]
 [[agent-hiring-panel]] is the front door this is the back door of;
 [[context-bankruptcy]] when the agent stays but its memory shouldn't;
 [[agent-incident-postmortem]] if an incident triggered this.
+
+## Example Trigger Phrases
+
+- "Decommissioning an agent."
+- "Switch agent vendors."
+- "Ending an AI pilot."

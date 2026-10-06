@@ -55,3 +55,9 @@ End with: **⚠️ Review checklist** — the specific items counsel must confir
 - Claiming GDPR/CCPA compliance as a fact rather than reflecting practices
 - Vague "we may share with third parties" with no categories or purpose
 - Overpromising security ("your data is 100% safe")
+
+## Example Trigger Phrases
+
+- "Write a privacy policy."
+- "Draft a data-protection notice."
+- "Create a GDPR/CCPA-aware privacy statement."

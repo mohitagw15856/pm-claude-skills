@@ -65,3 +65,10 @@ Ask for these if not provided:
 - [ ] Do not fight for zero while inflows still point at the desktop — redirect first, then clear
 - [ ] Do not moralize the mosaic — it was three reasonable needs in the wrong place; the fix is homes, not discipline
 - [ ] Do not skip the access-speed replacement — a clear desktop that slows the user down gets recluttered in self-defense
+
+## Example Trigger Phrases
+
+- "Clean up my desktop."
+- "My desktop has 200 files on it."
+- "Why does my desktop keep filling up?"
+- "Set up a clean-desktop habit."

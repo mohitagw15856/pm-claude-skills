@@ -73,3 +73,10 @@ Standard amortization, simple-savings breakeven (cumulative payment delta vs upf
 - [ ] Do not fold a cash-out into the breakeven — it's a separate borrowing decision
 - [ ] Do not report a breakeven month without the sell-before-month-N warning
 - [ ] Do not present the model's output without what it doesn't model
+
+## Example Trigger Phrases
+
+- "Should I refinance?"
+- "Does a refi break even?"
+- "Compare my loan to a refi offer."
+- "Is this refinance worth the closing costs?"

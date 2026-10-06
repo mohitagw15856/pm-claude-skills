@@ -111,3 +111,10 @@ Ask for (if not already provided):
 [[teach-the-game]] for teaching the system to new players;
 [[game-night-planner]] for the night around the session;
 [[workshop-facilitation-guide]] — GMing is facilitation wearing a cloak.
+
+## Example Trigger Phrases
+
+- "Prep my D&D session."
+- "My players derailed everything."
+- "I need an NPC on the fly."
+- "Help me start a campaign."

@@ -79,6 +79,13 @@ statement, internal brief), each on-message.
 
 Crisis communications practice — single-source-of-truth messaging, stakeholder prioritisation, holding statements, and accountable, people-first response.
 
+## Example Trigger Phrases
+
+- "Handle a PR crisis."
+- "Draft a crisis comms plan."
+- "Respond to a public backlash/scandal/incident."
+- "Prepare holding statements."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

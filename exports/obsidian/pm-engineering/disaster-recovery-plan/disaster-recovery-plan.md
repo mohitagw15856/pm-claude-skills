@@ -569,6 +569,14 @@ Run this checklist quarterly and before any major infrastructure change:
 - [ ] Do not list Slack handles as the only escalation contact — Slack may be unavailable during a region-wide failure; phone numbers are mandatory
 - [ ] Do not schedule DR game days without pre-committing to fix the gaps found — a game day that produces action items no one owns is theater, not preparedness
 
+## Example Trigger Phrases
+
+- "Write a DR plan."
+- "Document failover procedures."
+- "Create recovery runbooks."
+- "Define RTO/RPO targets."
+- "Prepare for a disaster recovery game day."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

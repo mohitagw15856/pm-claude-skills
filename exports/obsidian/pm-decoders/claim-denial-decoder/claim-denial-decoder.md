@@ -77,6 +77,13 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 
 Policyholder appeal practice — denial-reason triage, evidence matching, point-by-point appeal drafting, escalation sequencing.
 
+## Example Trigger Phrases
+
+- "My insurance claim was denied: what do I do?"
+- "Decode this denial letter."
+- "Can I appeal this denial?"
+- "Write my insurance appeal."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

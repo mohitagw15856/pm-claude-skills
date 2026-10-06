@@ -95,3 +95,9 @@ Define four families; every metric gets a threshold, a window, and an owner.
 - [ ] Do not run judge-based quality scoring on 100% of traffic — sample; spend the budget on better baselines
 - [ ] Do not treat observability as launch-week scaffolding — drift metrics only work with months of baseline
 - [ ] Do not ship an agent that can take actions without logging the guardrail verdicts alongside the actions
+
+## Example Trigger Phrases
+
+- "What to log for an LLM app?"
+- "Design agent tracing."
+- "Define quality and cost monitors."

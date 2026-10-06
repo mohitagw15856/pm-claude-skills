@@ -65,3 +65,10 @@ Ask for these if not provided:
 - [ ] Do not stack claims on one slide — one headline, one slide, or the skim test lies
 - [ ] Do not headline what evidence can't carry — the outline is where overclaims are cheap to fix
 - [ ] Do not let the build drift from the outline — every silent new slide re-breaks the tested argument
+
+## Example Trigger Phrases
+
+- "Start this presentation."
+- "Structure my deck."
+- "Why does my deck feel like a data tour?"
+- "Get sign-off before I build slides."

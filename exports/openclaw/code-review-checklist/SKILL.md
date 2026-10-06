@@ -138,3 +138,10 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "What should I check in this pull request?"
 - "Give me a code review checklist for a [language] [change type]"
 - "Review checklist for a high-risk PR in [language]"
+
+## Example Trigger Phrases
+
+- "Review code."
+- "Check a PR."
+- "Review a pull request."
+- "Generate a code review checklist."

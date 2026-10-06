@@ -68,6 +68,13 @@ Ask for these if not provided:
 - [ ] Do not skip isolation — the boundary is the difference between a bad sandbox and a production breach
 - [ ] Do not improvise recovery — the kill-switch composed mid-runaway is a panic; write it while calm
 
+## Example Trigger Phrases
+
+- "What's the worst my agent could do?"
+- "Run a blast-radius assessment."
+- "Prepare for an agent going rogue."
+- "Am I ready to let this run unattended?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

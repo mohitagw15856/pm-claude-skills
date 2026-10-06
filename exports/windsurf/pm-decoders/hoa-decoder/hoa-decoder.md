@@ -73,3 +73,10 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 ## Based On
 
 Buyer-side HOA due-diligence practice — CC&R triage, assessment-exposure analysis, records checklists.
+
+## Example Trigger Phrases
+
+- "What do these HOA rules actually mean?"
+- "Decode these CC&Rs."
+- "Is this HOA going to be a problem?"
+- "What should I check before buying in an HOA?"

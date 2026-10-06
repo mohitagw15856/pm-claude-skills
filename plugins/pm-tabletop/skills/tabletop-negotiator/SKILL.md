@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "I always lose the trading part."
+- "Practice Catan trades with me."
+- "How do I get better at Diplomacy?"
+- "Roleplay a trade with me."

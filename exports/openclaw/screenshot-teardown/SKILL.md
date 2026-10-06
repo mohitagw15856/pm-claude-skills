@@ -69,3 +69,10 @@ Marketing pages say what a competitor claims; screenshots show what they shipped
 - [ ] Do not present inferences as facts — "they're struggling with churn" is a reading, not a screenshot
 - [ ] Do not sneer — "cluttered" is not analysis; name what the clutter costs and whom it serves
 - [ ] Do not extrapolate a whole strategy from one screen — say when the evidence is thin
+
+## Example Trigger Phrases
+
+- "Tear down this competitor's onboarding from these screenshots."
+- "How does their flow work?"
+- "What should we learn, steal or avoid from their pricing page?"
+- "Here are screenshots of their app: what are they doing?"

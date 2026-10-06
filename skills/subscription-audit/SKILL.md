@@ -75,3 +75,10 @@ Deterministic. Cadences: weekly/monthly/quarterly/yearly; output ranks by annual
 - [ ] Do not let "might use it again" survive contact with the last-used date — the calendar votes, aspiration doesn't
 - [ ] Do not cancel the negotiables without walking the retention flow once — the discount is sitting right there
 - [ ] Do not shame the keeps — a used, valued subscription is fine; the audit hunts the forgotten, not the enjoyed
+
+## Example Trigger Phrases
+
+- "Audit my subscriptions."
+- "How much am I spending on subscriptions?"
+- "Help me cancel stuff."
+- "What recurring charges am I forgetting?"

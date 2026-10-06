@@ -55,6 +55,13 @@ The risks that remain after all mitigations, stated plainly, and the recommendat
 - Keeping records that become a liability if compelled
 - Treating this as legal advice instead of routing legal exposure to a lawyer
 
+## Example Trigger Phrases
+
+- "I'm working with a confidential source."
+- "How do I protect a whistleblower's identity?"
+- "Assess the risk of exposing my source."
+- "We have leaked documents: how do we protect who sent them?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

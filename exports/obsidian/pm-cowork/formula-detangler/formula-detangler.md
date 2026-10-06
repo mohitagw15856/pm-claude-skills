@@ -66,6 +66,13 @@ Ask for these if not provided:
 - [ ] Do not match the rebuild to the original's bugs — believed-vs-actual gaps get decided, not replicated
 - [ ] Do not switch over without the parallel diff — equivalence is demonstrated, never assumed
 
+## Example Trigger Phrases
+
+- "What does this formula do?"
+- "Untangle this nested IF formula."
+- "Make this formula maintainable."
+- "Rewrite this formula with helper columns."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

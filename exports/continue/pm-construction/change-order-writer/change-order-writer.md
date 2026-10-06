@@ -71,3 +71,11 @@ Never assert entitlement without naming the clause and the triggering document b
 - [ ] Do not proceed with changed work on a verbal directive without papering it the same day
 - [ ] Do not bundle unrelated changes into one CO — each event stands on its own entitlement
 - [ ] Do not soften entitlement language ("we feel", "we believe we may be due") — state the clause and the facts
+
+## Example Trigger Phrases
+
+- "Write a change order."
+- "Price extra work."
+- "Draft a CO or COR/PCO."
+- "Respond to a directive for changed work."
+- "Paper a field change."

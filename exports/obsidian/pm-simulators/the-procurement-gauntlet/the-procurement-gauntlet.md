@@ -66,6 +66,13 @@ Ask for these if not provided:
 - [ ] Do not omit the mortality questions — vendor-viability stalls surprise founders most
 - [ ] Do not stay in character in the debrief
 
+## Example Trigger Phrases
+
+- "Prep for enterprise procurement."
+- "Simulate a security review."
+- "Why do enterprise deals stall?"
+- "Get ready for vendor assessment."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

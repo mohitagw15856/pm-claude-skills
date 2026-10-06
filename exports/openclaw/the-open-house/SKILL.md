@@ -72,3 +72,10 @@ Ask for these if not provided:
 - [ ] Do not let enthusiasm pass unpriced — the simulation's job is showing what the gush costs later
 - [ ] Do not treat staging as fraud — it's presentation; the decode is diligence, not accusation
 - [ ] Do not stay in character in the debrief
+
+## Example Trigger Phrases
+
+- "What is the listing agent thinking?"
+- "Practice viewing a house."
+- "What should I not say at an open house?"
+- "Simulate the offer pressure."

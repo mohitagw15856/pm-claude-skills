@@ -68,3 +68,9 @@ python3 scripts/capital_allocate.py items.json --budget 1000 --json
 ## Based On
 
 Portfolio capital-allocation practice — expected-value × strategic-fit scoring per unit cost, against a hard constraint.
+
+## Example Trigger Phrases
+
+- "Decide where to invest."
+- "Build a funding/portfolio plan."
+- "Make trade-offs across initiatives under a cap."

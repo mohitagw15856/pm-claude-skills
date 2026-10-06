@@ -63,6 +63,13 @@ End with **consistency notes** — terms/patterns to reuse elsewhere so the prod
 
 UX writing practice — action-oriented, expectation-setting microcopy, voice consistency, and clarity at decision points.
 
+## Example Trigger Phrases
+
+- "Write microcopy for this form."
+- "Write button and CTA text."
+- "Write tooltips and helper text."
+- "Make this UI wording clearer."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

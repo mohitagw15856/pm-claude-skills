@@ -70,6 +70,13 @@ Ask for these if not provided:
 - [ ] Do not treat staging as fraud — it's presentation; the decode is diligence, not accusation
 - [ ] Do not stay in character in the debrief
 
+## Example Trigger Phrases
+
+- "What is the listing agent thinking?"
+- "Practice viewing a house."
+- "What should I not say at an open house?"
+- "Simulate the offer pressure."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

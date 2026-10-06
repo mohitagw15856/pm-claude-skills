@@ -58,6 +58,12 @@ What's still open before this can publish, and a note that quotes should be conf
 - Waving through a defamatory line without verification or legal input
 - Rewriting the prose instead of flagging and sourcing the facts
 
+## Example Trigger Phrases
+
+- "Fact-check a piece."
+- "Verify claims before publishing."
+- "Do editorial verification."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

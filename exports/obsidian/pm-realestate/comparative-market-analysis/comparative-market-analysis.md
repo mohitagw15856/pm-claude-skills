@@ -72,6 +72,12 @@ Ask for these only if they aren't already provided (else mark to source):
 
 Real-estate valuation practice — comparable-sales analysis with feature adjustments, market-context weighting, and goal-aligned pricing (CMA, not a formal appraisal).
 
+## Example Trigger Phrases
+
+- "Do a CMA?"
+- "Price a home."
+- "Estimate a property's value from comparables."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

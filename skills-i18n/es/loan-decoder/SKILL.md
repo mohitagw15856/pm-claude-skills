@@ -78,3 +78,10 @@ Termina el artefacto con, textualmente: *"Esta es una lectura en lenguaje claro,
 ## Basado en
 
 Práctica de revisión de préstamos del lado del prestatario — cálculo de costo total, conciliación de APR, auditoría de comisiones, encuadre de escenarios de reajuste.
+
+## Frases disparadoras de ejemplo
+
+- "¿Es buen negocio este préstamo?"
+- "Explícame esta oferta de préstamo."
+- "¿Qué estoy firmando?"
+- "¿Cuánto me costará realmente esta hipoteca?"

@@ -59,6 +59,13 @@ Ask for these only if they aren't already provided:
 
 Developer-launch craft (Show HN / Product Hunt norms): substance over hype, honest trade-offs, seed the discussion.
 
+## Example Trigger Phrases
+
+- "Write a Show HN post."
+- "Write our Product Hunt blurb."
+- "Write a launch tweet thread for this library."
+- "Announce our open-source project to developers."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

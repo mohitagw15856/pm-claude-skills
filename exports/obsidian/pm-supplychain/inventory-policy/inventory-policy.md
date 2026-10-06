@@ -76,6 +76,13 @@ From a thin brief, place the item in the grid using stated context, label placem
 - [ ] Do not let E&O wait for the annual count — aging inventory loses disposition options every month it sits
 - [ ] Do not recalculate parameters weekly for C-items or annually for A-items — review effort follows value
 
+## Example Trigger Phrases
+
+- "Set safety stock levels."
+- "Choose reorder points vs min-max."
+- "Define stocking policy."
+- "Review excess and obsolete inventory."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

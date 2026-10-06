@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "I have no credit history in [country]."
+- "Build credit as a newcomer/immigrant."
+- "Why was I rejected with a great score back home?"
+- "How do I get a credit card/loan as a new arrival?"

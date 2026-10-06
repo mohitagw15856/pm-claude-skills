@@ -69,3 +69,10 @@ flowchart TD
 - Stopping at output metrics no one can directly move
 - Ignoring how drivers combine (treating everything as additive)
 - No view on which lever actually matters most
+
+## Example Trigger Phrases
+
+- "Build a metric tree."
+- "Break down a north-star metric."
+- "Map metric drivers."
+- "Find the inputs behind an output metric."

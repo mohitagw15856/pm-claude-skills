@@ -119,3 +119,9 @@ Request: … · Response (SLA): … · Errors: [codes]
 [[the-understudy]] is how an AI learns your inside; this is how humans call
 your outside. [[working-agreements]] for the team-level contract;
 [[onboarding-plan]] to slot this into a new joiner's week one.
+
+## Example Trigger Phrases
+
+- "Onboard to a new team."
+- "Report arrives."
+- "Write my README/user manual."

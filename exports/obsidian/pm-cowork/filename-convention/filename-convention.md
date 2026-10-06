@@ -63,6 +63,13 @@ Ask for these if not provided:
 - [ ] Do not design slots for files the team doesn't produce — grammar bloat kills adoption
 - [ ] Do not mass-rename history — links break; the drain rule gets there without the breakage
 
+## Example Trigger Phrases
+
+- "Set up file naming rules."
+- "Our filenames are chaos."
+- "What should we call our files?"
+- "Fix the v2-final-FINAL problem."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -75,3 +75,9 @@ python3 scripts/soa_coverage.py soa.json --json
 ## Based On
 
 ISO/IEC 27001 (ISMS clauses 4–10) and Annex A control set + the Statement of Applicability requirement.
+
+## Example Trigger Phrases
+
+- "Scope an ISMS."
+- "Build a Statement of Applicability."
+- "Prepare for ISO 27001 certification."

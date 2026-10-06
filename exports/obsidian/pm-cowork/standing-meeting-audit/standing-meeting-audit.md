@@ -65,6 +65,13 @@ Ask for these if not provided:
 - [ ] Do not ignore the chains — killing the prep meeting while keeping the review it feeds breaks both
 - [ ] Do not audit once — without the expiry guard, the calendar regrows to baseline in two quarters
 
+## Example Trigger Phrases
+
+- "Audit our recurring meetings."
+- "Our calendar is all standing syncs."
+- "Which meetings should die?"
+- "Reset the team's meeting load."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

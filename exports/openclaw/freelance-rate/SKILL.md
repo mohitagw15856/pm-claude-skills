@@ -78,3 +78,10 @@ Deterministic. The tax premium default (8%) is a placeholder for the self-employ
 - [ ] Do not present the rate without the justification narrative — the number alone invites haggling
 - [ ] Do not give jurisdiction-specific tax advice — flag the premium as a parameter
 - [ ] Do not price to "win the client" — price to fund the practice, then decide about discounts consciously
+
+## Example Trigger Phrases
+
+- "What should I charge as a freelancer?"
+- "How do I set my consulting rate?"
+- "Why is my freelance rate so high?"
+- "Convert my salary to a contract rate."

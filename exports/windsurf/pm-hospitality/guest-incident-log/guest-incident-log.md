@@ -58,3 +58,10 @@ Guest follow-up (care, not admission), corrective action to prevent recurrence, 
 - Losing the evidence (throwing out the food, mopping before photos)
 - Forgetting mandatory reporting for a suspected foodborne illness
 - Filing it nowhere retrievable when insurance/legal needs it later
+
+## Example Trigger Phrases
+
+- "Write up a guest incident."
+- "Log an accident."
+- "Document a slip/fall."
+- "Record an incident for insurance/legal."

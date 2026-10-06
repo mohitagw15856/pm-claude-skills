@@ -109,6 +109,13 @@ Slow load (the base): … + Acute triggers (the top): … = over the edge
 [[masking-budget]] and [[sensory-audit]] remove the slow load that feeds meltdowns;
 [[stoic-setback-debrief]] for the after; [[spoon-planner]] shares the capacity model.
 
+## Example Trigger Phrases
+
+- "My meltdowns come out of nowhere."
+- "Help me not shut down."
+- "I need a plan for when I'm overwhelmed."
+- "Shuts down."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

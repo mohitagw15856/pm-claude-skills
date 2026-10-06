@@ -63,3 +63,10 @@ Number them so the agency can respond point by point.
 ## Based On
 
 Notice-and-comment rulemaking practice (substantive, provision-specific, evidence-based comments with proposed alternatives).
+
+## Example Trigger Phrases
+
+- "Comment on this proposed rule."
+- "Respond to this consultation."
+- "Submit feedback on a proposed regulation."
+- "Write a comment to the agency."

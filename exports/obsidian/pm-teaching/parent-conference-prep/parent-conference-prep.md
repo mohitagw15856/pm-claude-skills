@@ -55,6 +55,12 @@ The likely parent responses (defensiveness, blame, overwhelm, disengagement) and
 - No plan for the defensive or upset reaction
 - Education jargon (RTI, standards codes) left untranslated for the parent
 
+## Example Trigger Phrases
+
+- "Prep for a parent conference."
+- "Plan what to say to a parent."
+- "Handle a difficult conversation about a student's behavior."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -83,6 +83,12 @@ Deterministic. Models salary only — the script prints its own not-modeled list
 - [ ] Do not assume the jump cadence repeats forever without naming the résumé-pattern cost
 - [ ] Do not hide behind "it depends" — deliver the honest read with its reasoning
 
+## Example Trigger Phrases
+
+- "Should I switch jobs for more money?"
+- "Model my salary if I stay vs leave."
+- "Raise versus new offer."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

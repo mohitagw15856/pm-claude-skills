@@ -69,3 +69,9 @@ Ask for these if not provided:
 - [ ] Do not let "fine, thanks" pass unnoted — the small-talk-is-testimony beat is the skill's signature
 - [ ] Do not simulate legal strategy — technique for the call, triggers for the lawyer, line held
 - [ ] Do not stay in character in the debrief
+
+## Example Trigger Phrases
+
+- "Practice the settlement call."
+- "Is this settlement offer low?"
+- "What will the insurance company try?"

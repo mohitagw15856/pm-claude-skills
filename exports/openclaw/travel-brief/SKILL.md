@@ -67,3 +67,10 @@ Ask for these if not provided:
 - [ ] Do not improvise the cancellation response — gate-B7 decisions are the worst decisions in business travel
 - [ ] Do not pile receipts for later — the 15-second photo beats the March shoebox by arithmetic
 - [ ] Do not schedule the flight hours as working hours — transit is transit; double-booked days collapse twice
+
+## Example Trigger Phrases
+
+- "Prep my business trip."
+- "Build the travel brief."
+- "I always forget something when traveling."
+- "Organize this three-city week."

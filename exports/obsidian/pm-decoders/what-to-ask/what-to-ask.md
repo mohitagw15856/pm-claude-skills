@@ -63,6 +63,13 @@ Ask for these if not provided:
 - [ ] Do not skip the handoff to save face — five questions are the trailer, not the movie
 - [ ] Do not generate generic questions for a specific situation — "what are the terms?" is what this skill exists to replace
 
+## Example Trigger Phrases
+
+- "What should I ask before signing this?"
+- "I'm about to buy X what do I check."
+- "What questions for the landlord/dealer/contractor/HR?"
+- "What am I forgetting?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

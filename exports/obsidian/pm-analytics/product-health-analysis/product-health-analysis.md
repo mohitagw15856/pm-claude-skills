@@ -86,6 +86,14 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not mix product health metrics with business KPIs without explaining the relationship between them
 - [ ] Do not omit recommended actions — a health report that only describes problems without prioritised next steps is incomplete
 
+## Example Trigger Phrases
+
+- "Analyse product health."
+- "Review key metrics."
+- "Investigate a performance issue."
+- "Produce a health report."
+- "Assess product-market fit signals."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

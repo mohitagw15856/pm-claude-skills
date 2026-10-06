@@ -59,6 +59,13 @@ Ask for these only if they aren't already provided:
 
 Knowledge-base / technical-writing practice — task-based titles, answer-first, scannable steps, search-optimised, ticket-deflection focus.
 
+## Example Trigger Phrases
+
+- "Write a help doc."
+- "Write a knowledge-base article for this issue."
+- "Write a FAQ entry."
+- "Write support documentation that cuts tickets."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

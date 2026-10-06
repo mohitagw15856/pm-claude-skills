@@ -61,3 +61,10 @@ Ask for these if not provided:
 - [ ] Do not leave autonomy implicit — the guessing game produces hovering and overreach in equal measure
 - [ ] Do not review only the final artifact — drift caught at 90% is a rewrite with feelings
 - [ ] Do not take the work back at the first wobble — the brief gets patched, the delegate keeps the pen ([the growth is the point])
+
+## Example Trigger Phrases
+
+- "Hand this off properly."
+- "My delegations come back wrong."
+- "Write a brief for this task I'm giving away."
+- "How much detail do I give?"

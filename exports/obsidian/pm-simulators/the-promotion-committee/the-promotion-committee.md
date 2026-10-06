@@ -68,6 +68,13 @@ Ask for these if not provided:
 - [ ] Do not present politics as fixable — naming the unfixable is the kindest output
 - [ ] Do not stay in character in the debrief
 
+## Example Trigger Phrases
+
+- "Will I get promoted?"
+- "Simulate the promo committee."
+- "Stress-test my promotion packet."
+- "Why did my promo get rejected?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

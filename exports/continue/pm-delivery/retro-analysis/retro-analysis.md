@@ -77,3 +77,10 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not recommend an experiment that cannot be completed within one sprint — small, testable experiments only
 - [ ] Do not treat carry-over tickets as a velocity problem without first identifying the root cause category
 - [ ] Do not run the same retrospective format every sprint — vary the format to prevent engagement fatigue
+
+## Example Trigger Phrases
+
+- "Run a retrospective."
+- "Analyse sprint data."
+- "Prepare a retro brief."
+- "Turn sprint metrics into discussion prompts."

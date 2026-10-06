@@ -66,3 +66,9 @@ Ask for these if not provided:
 - [ ] Do not skip the edge cases — they're the questions the policy exists to answer
 - [ ] Do not keep unenforceable rules for tone — each one discounts the enforceable ones
 - [ ] Do not publish without an owner and review date — orphan policies drift into fiction within a year
+
+## Example Trigger Phrases
+
+- "Write our expense/remote-work/AI-use/security policy."
+- "Turn this incident into a policy."
+- "Our policy doc is unreadable."

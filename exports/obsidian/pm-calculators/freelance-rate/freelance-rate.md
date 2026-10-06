@@ -76,6 +76,13 @@ Deterministic. The tax premium default (8%) is a placeholder for the self-employ
 - [ ] Do not give jurisdiction-specific tax advice — flag the premium as a parameter
 - [ ] Do not price to "win the client" — price to fund the practice, then decide about discounts consciously
 
+## Example Trigger Phrases
+
+- "What should I charge as a freelancer?"
+- "How do I set my consulting rate?"
+- "Why is my freelance rate so high?"
+- "Convert my salary to a contract rate."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

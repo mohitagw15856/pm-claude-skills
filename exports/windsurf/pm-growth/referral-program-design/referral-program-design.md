@@ -53,3 +53,11 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Viral-loop / referral practice — k-factor and cycle-time math, activation-gated two-sided incentives, and abuse-resistant design.
+
+## Example Trigger Phrases
+
+- "Design a referral."
+- "Build a viral/invite loop."
+- "Set referral incentives."
+- "Turn happy users into a growth channel."
+- "Improve word-of-mouth growth."

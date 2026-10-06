@@ -78,6 +78,13 @@ Sequence-of-returns risk (largest near the target date) · taxes · spending dri
 - [ ] Do not count home equity or emergency funds in invested savings without flagging it
 - [ ] Do not present the model's output without its assumptions
 
+## Example Trigger Phrases
+
+- "What's my FIRE number?"
+- "Can I retire early?"
+- "How much do I need to be financially independent?"
+- "Model my savings trajectory."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

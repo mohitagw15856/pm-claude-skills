@@ -79,7 +79,7 @@ description: "进行复盘，这是中国企业广泛使用的结构化项目回
 - **指责。** 它会让下一次复盘不再有人说真话。
 
 ## 示例触发语
-- "帮我做一下双十一活动的复盘。"
-- "项目延期了，帮我写复盘报告。"
-- "复盘会怎么开？给我一个议程。"
-- "Run a fupan on our product launch, in Chinese."
+- “帮我做一下双十一活动的复盘。”
+- “项目延期了，帮我写复盘报告。”
+- “复盘会怎么开？给我一个议程。”
+- “Run a fupan on our product launch, in Chinese.”

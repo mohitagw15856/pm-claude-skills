@@ -61,6 +61,13 @@ Provide a **short version** (for SMS/social/quick email) and mark invented speci
 
 Donor-stewardship practice — gratitude-first, impact attribution, storytelling, and relationship-building ahead of the next ask.
 
+## Example Trigger Phrases
+
+- "Write a donor update."
+- "Write a thank-you email to our donors."
+- "Write a gift acknowledgement."
+- "Write our supporter newsletter."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -56,3 +56,9 @@ Ask for these if not provided:
 - [ ] Do not post nameless blockers — unaddressed asks are the sender's fault after the first update
 - [ ] Do not write one essay for three audiences — flex the altitude or split the update
 - [ ] Do not skip the nothing-happened weeks — silence reads as chaos; "no movement, because X" reads as control
+
+## Example Trigger Phrases
+
+- "Write my weekly update."
+- "Format our team's status posts."
+- "What goes in a good async check-in?"

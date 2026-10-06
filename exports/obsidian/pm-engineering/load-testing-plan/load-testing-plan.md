@@ -441,6 +441,13 @@ load-test:
 - [ ] Do not skip the soak test on first deployment — only a soak test reveals slow memory leaks and connection pool exhaustion that short tests miss
 - [ ] Do not treat a passing baseline test as evidence the service handles spikes — baseline, stress, spike, and soak scenarios test fundamentally different failure modes
 
+## Example Trigger Phrases
+
+- "Create a performance test plan."
+- "Write load testing documentation."
+- "Define stress."
+- "Set performance regression gates for CI."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

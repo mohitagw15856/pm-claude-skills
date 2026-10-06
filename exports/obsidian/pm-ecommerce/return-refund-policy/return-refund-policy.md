@@ -70,6 +70,13 @@ Mark each business-specific value *(set your value)* and add a note to confirm j
 
 E-commerce trust & CRO practice — transparent, plain-language returns policies that reduce purchase friction and support load.
 
+## Example Trigger Phrases
+
+- "Write a return policy."
+- "Write our refund and exchange policy."
+- "Write the store returns page."
+- "Set fair rules for returns."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

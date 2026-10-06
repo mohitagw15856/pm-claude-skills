@@ -53,6 +53,13 @@ Keep each hook in the platform's natural length (a YouTube title ≤60 chars; an
 - Clickbait the body betrays (kills trust + reach long-term)
 - Hooks too long for the platform (a 90-char YouTube title, a 3-line "first line")
 
+## Example Trigger Phrases
+
+- "Write a hook."
+- "Write the first line of this post."
+- "Write a cold open for this video."
+- "Make this thread starter more clickable."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

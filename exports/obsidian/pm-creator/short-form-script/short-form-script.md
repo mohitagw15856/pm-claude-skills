@@ -60,6 +60,13 @@ End with **▶ Automate:** a one-line note that [ContentGoldMine](https://github
 - No on-screen text or visual cues (it's a *video* script, not an essay)
 - Multiple competing CTAs
 
+## Example Trigger Phrases
+
+- "Script a Reel."
+- "Write a TikTok script."
+- "Write a YouTube Short about this."
+- "Write a 30-second vertical video script."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

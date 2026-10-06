@@ -408,6 +408,14 @@ Accept the current state and revisit the problem in [timeframe].
 - [ ] Do not write open questions without assigning a named owner and a resolution deadline
 - [ ] Do not skip the "impact of not solving this" section — without it, reviewers cannot assess urgency
 
+## Example Trigger Phrases
+
+- "Write an RFC."
+- "Document a technical proposal."
+- "Create a design doc."
+- "Write an architecture decision for review."
+- "Produce a technical specification for team feedback."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -48,6 +48,13 @@ description: "Verify work actually meets its brief BEFORE declaring it done — 
 - [ ] Do not produce a zero-findings record on complex work — that's theatre; look harder or say what you couldn't check
 - [ ] Do not hide residuals to seem finished — an honest "untested under X" builds more trust than the failure it predicts
 
+## Example Trigger Phrases
+
+- "Check this is really done."
+- "Verify this meets the brief before I send it."
+- "Review my deliverable against the requirements."
+- "What's missing before we call this finished?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

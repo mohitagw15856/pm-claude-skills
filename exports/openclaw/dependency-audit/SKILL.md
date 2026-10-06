@@ -343,3 +343,11 @@ go-licenses check ./... --allowed_licenses=MIT,Apache-2.0,BSD-2-Clause,BSD-3-Cla
 - [ ] Do not assign all Critical CVEs as "fix immediately" without checking whether an exploitable path exists in your usage context
 - [ ] Do not make license compliance decisions without legal input — flagging a GPL dependency without a recommendation is incomplete work
 - [ ] Do not complete the audit without including a CI/CD pipeline step — a one-time audit that leaves the door open for new vulnerabilities is not a remediation
+
+## Example Trigger Phrases
+
+- "Audit dependencies."
+- "Review package security."
+- "Check license compliance."
+- "Assess dependency health."
+- "Produce a vulnerability report."

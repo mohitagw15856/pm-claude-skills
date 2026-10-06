@@ -64,3 +64,10 @@ Deterministic, stdlib-only. Two heuristics (≈4 chars/token, ≈0.75 words/toke
 - [ ] Do not optimize unmeasured — "feels smaller" has shipped many complexity-positive savings
 - [ ] Do not ignore volume — the same 500 tokens is negligible once and structural at every-call
 - [ ] Do not end without the verdict — a measurement that doesn't decide anything measured nothing
+
+## Example Trigger Phrases
+
+- "How many tokens is this?"
+- "What does this context cost per call?"
+- "Is this optimization worth it?"
+- "Compare these two versions cost."

@@ -338,3 +338,10 @@ Untuk agen yang menggunakan tool dengan server MCP terhubung (Notion, Linear/Jir
 ### Rollback
 - Membatalkan = mengarsipkan/menghapus halaman dan issue yang baru dibuat, hanya atas instruksi eksplisit dari manusia.
 - Berhenti dan tanya manusia jika: database/proyek tujuan tidak ditemukan, pembuatan issue gagal di tengah jalan (laporkan apa yang SUDAH dibuat), atau penanggung jawab action item tidak ada di tracker.
+
+## Contoh Frasa Pemicu
+
+- "Buat notulen rapat."
+- "Rapikan catatan diskusi ini."
+- "Catat tindak lanjutnya."
+- "Dokumentasikan keputusan rapat."

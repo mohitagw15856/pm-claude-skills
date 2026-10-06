@@ -57,3 +57,11 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Influence & persuasion practice — Cialdini's principles, Aristotle's ethos/pathos/logos, and audience-first framing.
+
+## Example Trigger Phrases
+
+- "Persuade someone."
+- "Build a case for an idea."
+- "Get buy-in."
+- "Win over a skeptic."
+- "Prepare to pitch a proposal internally."

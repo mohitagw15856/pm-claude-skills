@@ -67,3 +67,9 @@ Ask for these if not provided:
 - [ ] Do not log everything — the six-month-why test keeps the log readable and the habit light
 - [ ] Do not let new-people-energy reopen settled calls — the rule distinguishes information from mood
 - [ ] Do not write and never link — retrieval is where the log earns; capture alone is journaling
+
+## Example Trigger Phrases
+
+- "Set up a decision log."
+- "We keep re-deciding the same things."
+- "Where do decisions get recorded?"

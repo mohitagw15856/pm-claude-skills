@@ -76,6 +76,13 @@ Taxes and deductions (jurisdiction-specific) · renovation and repair surprises 
 - [ ] Do not model jurisdiction-specific tax benefits — name them as unmodeled instead
 - [ ] Do not let the math silently overrule stated non-financial priorities — surface the tension
 
+## Example Trigger Phrases
+
+- "Should I rent or buy?"
+- "Does buying beat renting where I live?"
+- "Run the rent-vs-buy numbers."
+- "How long until buying breaks even?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -72,6 +72,13 @@ Ask for these if not provided:
 - [ ] Do not resolve the negotiation neatly — the rehearsal ends where sessions end: partial, adjourned, with homework
 - [ ] Do not stay in character in the debrief
 
+## Example Trigger Phrases
+
+- "Prepare for union negotiations."
+- "Rehearse a bargaining session."
+- "Practice negotiating with management."
+- "We are heading into pay talks."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

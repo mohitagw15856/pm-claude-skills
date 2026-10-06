@@ -80,3 +80,9 @@ Ask for these if not provided:
 - **Settling values rows with fake facts.** "It depends what you value more" is an honest table entry, and pretending data settles it is the consensus disease returning.
 - **Panel sprawl.** Four-plus experts turns readings into a survey; three frames in real tension is the format.
 - **Forgetting the real-world handoff.** High-stakes cases end each reading with what to bring to the genuine professional — the simulation sharpens that meeting, never replaces it.
+
+## Example Trigger Phrases
+
+- "What would a lawyer versus an accountant say?"
+- "I keep getting one-sided advice."
+- "Pressure-test this from multiple angles."

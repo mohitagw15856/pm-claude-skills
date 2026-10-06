@@ -68,6 +68,13 @@ Ask for these if not provided:
 - [ ] Do not evict the decisions log — history compresses, decisions don't; losing them re-litigates the session
 - [ ] Do not design for turn one — sessions are priced by their shape over time, and turn one is the cheapest turn there is
 
+## Example Trigger Phrases
+
+- "My agent keeps blowing its context."
+- "Plan what to load into the session."
+- "Why is every turn so expensive?"
+- "Design the context for this workflow."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

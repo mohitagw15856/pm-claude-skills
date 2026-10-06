@@ -77,3 +77,9 @@ Một CV một cột, thân thiện với ATS, theo thứ tự sau:
 ## Cơ sở
 
 Thực hành viết CV lấy thành tích làm trọng tâm, có tính đến ATS (theo thứ tự thời gian ngược, gạch đầu dòng tác động có số liệu, khớp từ khóa).
+
+## Ví dụ câu kích hoạt
+
+- "Viết lại CV của tôi."
+- "Biến kinh nghiệm của tôi thành CV."
+- "Điều chỉnh CV cho công việc này."

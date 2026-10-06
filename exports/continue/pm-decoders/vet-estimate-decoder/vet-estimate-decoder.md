@@ -70,3 +70,10 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 ## Based On
 
 Client-side veterinary cost-conversation practice — line triage, staged-diagnostics questioning, tiered-plan elicitation.
+
+## Example Trigger Phrases
+
+- "Is this vet estimate reasonable?"
+- "Decode my vet's treatment plan."
+- "Do we need all these tests?"
+- "I can't afford this vet bill what are my options."

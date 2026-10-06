@@ -72,6 +72,12 @@ Ask for (if not already provided):
 - [ ] Do not treat AI scepticism as a performance problem where use is optional — outcomes are the bar, not enthusiasm
 - [ ] Do not have the accountability conversation without the org's policy in hand — improvised rules in a review are how grievances are born
 
+## Example Trigger Phrases
+
+- "Review someone whose work is heavily AI-assisted."
+- "Calibrating a team with uneven AI adoption."
+- "Write review criteria for the AI era."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

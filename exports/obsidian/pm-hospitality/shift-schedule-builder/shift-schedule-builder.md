@@ -53,6 +53,12 @@ Overtime risk, insufficient rest between close/open ("clopening"), availability 
 - Ignoring stated availability (the fastest way to lose staff)
 - Cutting so lean that service and food quality collapse at peak
 
+## Example Trigger Phrases
+
+- "Build a shift schedule."
+- "Staff a rota."
+- "Plan coverage for a restaurant/retail/shift-based team."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

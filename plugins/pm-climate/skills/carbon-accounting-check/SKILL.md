@@ -92,3 +92,11 @@ Include this line in the artifact: *"Verify boundary, methodology, and disclosur
 ## Based On
 
 GHG Protocol Corporate Standard and Scope 2/Scope 3 guidance practice (boundaries, dual reporting, data-quality tiers, recalculation policy).
+
+## Example Trigger Phrases
+
+- "Review a carbon footprint."
+- "Check a GHG inventory."
+- "Validate scope 1/2/3 numbers."
+- "Explain a year-over-year emissions change."
+- "Prepare emissions data for assurance."

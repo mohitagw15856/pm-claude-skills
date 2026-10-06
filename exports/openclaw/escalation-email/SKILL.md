@@ -63,3 +63,9 @@ Ask for these if not provided:
 - [ ] Do not inflate the cost — the first discovered inflation discounts all your future cases
 - [ ] Do not escalate without attempts — that's queue-jumping wearing a process word
 - [ ] Do not cc the world — the recipient plus the minimum necessary; audience size reads as aggression
+
+## Example Trigger Phrases
+
+- "I need to escalate this."
+- "Write an email to my boss's boss."
+- "How do I go over someone's head professionally?"

@@ -68,6 +68,12 @@ mindmap
 
 Mind-mapping practice (radial hierarchy, balanced branches, MECE-ish themes), expressed as renderable Mermaid.
 
+## Example Trigger Phrases
+
+- "Organize ideas."
+- "Break a topic into branches."
+- "Summarize something as a mind map."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

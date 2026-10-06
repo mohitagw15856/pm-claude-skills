@@ -23,9 +23,7 @@ workflow:
     speech_to_text:
       enabled: false
     suggested_questions:
-    - '下个月公务员面试，帮我模拟一轮结构化面试'
-    - '综合分析题总是没话说，怎么组织？'
-    - '我报的是街道办岗位，应急应变题怎么答？'
+    []
     suggested_questions_after_answer:
       enabled: false
     text_to_speech:
@@ -165,10 +163,10 @@ workflow:
 
             ## 示例触发语
 
-            - "下个月公务员面试，帮我模拟一轮结构化面试。"
-            - "综合分析题总是没话说，怎么组织？"
-            - "我报的是街道办岗位，应急应变题怎么答？"
-            - "陪我练一场公务员结构化面试。"
+            - “下个月公务员面试，帮我模拟一轮结构化面试。”
+            - “综合分析题总是没话说，怎么组织？”
+            - “我报的是街道办岗位，应急应变题怎么答？”
+            - “陪我练一场公务员结构化面试。”
 
             （本应用基于开源技能库 PM Skills 的 cn-civil-exam-interview 技能：https://github.com/mohitagw15856/pm-claude-skills ，MIT 协议。）
         selected: false

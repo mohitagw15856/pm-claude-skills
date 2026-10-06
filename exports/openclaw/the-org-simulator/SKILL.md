@@ -123,3 +123,10 @@ verdict: survivable / fix before announcing]
 [[machiavelli-counsel]] for the power analysis under this; [[change-management-plan]]
 for the full formal program; [[stakeholder-influence-mapper]] for the influence
 graph the rollout sequence rides on.
+
+## Example Trigger Phrases
+
+- "Plan a reorg."
+- "Split teams."
+- "Move a function."
+- "How will this org change land?"

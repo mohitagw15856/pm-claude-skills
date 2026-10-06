@@ -67,3 +67,10 @@ Ask for these if not provided:
 - [ ] Do not skip the finance reconcile — two diverging truths get discovered in the worst meeting
 - [ ] Do not subtract planned spend from remaining — intentions aren't obligations; the lanes exist to keep them distinct
 - [ ] Do not sit on an over forecast — November's honesty is just an apology with a spreadsheet
+
+## Example Trigger Phrases
+
+- "Track my team's budget."
+- "Are we going to blow the budget?"
+- "Why did finance's number surprise us?"
+- "Set up budget visibility for the team."

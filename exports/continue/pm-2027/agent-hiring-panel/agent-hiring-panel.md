@@ -107,3 +107,9 @@ pre-committed · offboarding pointer]
 [[vendor-evaluation]] for the commercial wrapper; [[agent-readiness-audit]]
 for whether the *task* is agent-ready at all; [[agent-severance]] for the exit
 this plan pre-commits to.
+
+## Example Trigger Phrases
+
+- "Choose between AI agents/tools/copilots for a job."
+- "Formalizing an AI pilot."
+- "Which agent should we use for X?"

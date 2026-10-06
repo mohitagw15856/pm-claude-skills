@@ -59,3 +59,10 @@ Ask for these if not provided:
 - [ ] Do not delegate as dumping — the handoff includes the brief and the framing, or it's just displacement
 - [ ] Do not leave reclaimed slots visibly empty — nature and calendars abhor a vacuum
 - [ ] Do not prune once — the door question on new invites is the system; the audit is just the reset
+
+## Example Trigger Phrases
+
+- "Get me out of some of these meetings."
+- "My calendar is 80% recurring."
+- "Which meetings can I stop attending?"
+- "Leave a meeting politely."

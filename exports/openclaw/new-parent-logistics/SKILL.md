@@ -69,3 +69,9 @@ Night shifts: [split] · Meals: [plan] · Visitors: [policy, verbatim] · Escala
 - [ ] Do not schedule judgment-heavy tasks after the birth
 - [ ] Do not write "both parents" as an owner — that's zero owners
 - [ ] Do not state insurance or leave rules as fact — windows vary; flag every one for verification
+
+## Example Trigger Phrases
+
+- "Help me prepare for a baby."
+- "What do I need to do before my due date?"
+- "Set up our parental leave plan."

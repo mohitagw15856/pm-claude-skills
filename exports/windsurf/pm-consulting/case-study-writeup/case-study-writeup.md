@@ -60,3 +60,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Case-study / social-proof marketing practice — result-led headline, challenge–approach–outcome, quantified before→after.
+
+## Example Trigger Phrases
+
+- "Write a case study."
+- "Turn this project into a client success story."
+- "Write up this engagement for our portfolio."
+- "Show the results we got for this client."

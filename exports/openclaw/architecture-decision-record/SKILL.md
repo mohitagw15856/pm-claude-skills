@@ -141,3 +141,10 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Document our decision to [architectural choice]"
 - "Create an architecture decision record for [topic]"
 - "Help me write up why we chose [option] over [alternative]"
+
+## Example Trigger Phrases
+
+- "Document a technical decision."
+- "Write an ADR."
+- "Record an architecture choice."
+- "Capture why a technology."

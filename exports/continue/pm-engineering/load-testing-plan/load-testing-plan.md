@@ -438,3 +438,10 @@ load-test:
 - [ ] Do not use production user data in load test seeding — all test data must be synthetic, tagged, and cleaned up after each run
 - [ ] Do not skip the soak test on first deployment — only a soak test reveals slow memory leaks and connection pool exhaustion that short tests miss
 - [ ] Do not treat a passing baseline test as evidence the service handles spikes — baseline, stress, spike, and soak scenarios test fundamentally different failure modes
+
+## Example Trigger Phrases
+
+- "Create a performance test plan."
+- "Write load testing documentation."
+- "Define stress."
+- "Set performance regression gates for CI."

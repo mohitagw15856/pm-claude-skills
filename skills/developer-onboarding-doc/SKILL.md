@@ -338,3 +338,10 @@ curl http://localhost:[PORT]/health
 - [ ] Do not write the onboarding doc without reviewing it with a recent joiner — the author is blind to what they take for granted
 - [ ] Do not include every piece of architectural detail — an onboarding doc that covers everything teaches nothing; link to deeper docs instead
 - [ ] Do not skip the "things that might surprise you" section — undocumented non-obvious patterns are the number one cause of wasted engineering time in the first week
+
+## Example Trigger Phrases
+
+- "Write a developer guide for this service."
+- "Write the README for this service."
+- "Write an onboarding doc for a new engineer."
+- "Give new developers a codebase orientation."

@@ -75,3 +75,10 @@ Akhiri artefak dengan kalimat ini, kata per kata: *"Ini adalah pembacaan dalam b
 ## Dasar
 
 Praktik banding dari sisi pemegang polis: triase alasan penolakan, pencocokan bukti, penyusunan banding poin demi poin, urutan eskalasi.
+
+## Contoh Frasa Pemicu
+
+- "Klaim asuransi saya ditolak, apa yang harus saya lakukan?"
+- "Jelaskan surat penolakan ini."
+- "Bisakah saya mengajukan banding?"
+- "Tuliskan surat banding asuransi saya."

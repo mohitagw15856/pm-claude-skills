@@ -55,6 +55,13 @@ What data is collected, how often, and what counts as on-track vs needs-revision
 - Confusing accommodations with modifications
 - Presenting drafts as final/compliant without team review
 
+## Example Trigger Phrases
+
+- "Write an IEP goal."
+- "Draft special-education goals."
+- "List accommodations."
+- "Write a present-levels statement."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

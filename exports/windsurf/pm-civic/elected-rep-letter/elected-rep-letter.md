@@ -102,3 +102,10 @@ why it serves them → "please respond by [date]"]
 [[speak-at-the-council]] to show up in person; [[report-a-hazard]] for the service-
 request route; [[media-pitch]] and [[press-release]] when it needs public visibility;
 [[permit-navigator]] when your issue is a project the council controls.
+
+## Example Trigger Phrases
+
+- "Write to my MP/congressperson/councillor."
+- "Contact my representative about X."
+- "How do I get my rep to act?"
+- "My letter to the council got ignored."

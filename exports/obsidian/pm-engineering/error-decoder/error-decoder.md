@@ -49,6 +49,13 @@ One line on the underlying reason and a guardrail (a check, a type, a test, a co
 - [ ] Do not invent file names or code that wasn't given — infer and label, or ask for the one missing thing only if truly blocking
 - [ ] Do not stop at the fix — always add the one prevention step
 
+## Example Trigger Phrases
+
+- "Explain an error."
+- "Debug a stack trace."
+- "Figure out why code is throwing."
+- "Make sense of a cryptic exception."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -114,6 +114,12 @@ Floor £/€/$X · List Y · Anchor Z · Drop schedule: [dates]
 [[late-invoice-escalation]] energy for the buyer who "paid, promise";
 [[email-triage-system]] when the "is this available" flood needs a system.
 
+## Example Trigger Phrases
+
+- "Help me sell this."
+- "Price my old jacket."
+- "Write my Depop listing."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -67,6 +67,13 @@ Pass 1: … Pass 2: … Pass 3 (cut to limit): …
 - [ ] Do not accept claimed qualities — push every adjective toward a scene
 - [ ] Do not ignore the word limit — a revision plan that doesn't end in cuts isn't a plan
 
+## Example Trigger Phrases
+
+- "Review my personal statement."
+- "Improve my SOP."
+- "Give feedback on my application essay."
+- "Why is my essay generic?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

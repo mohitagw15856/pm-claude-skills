@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "What documents do I need for an emergency?"
+- "What would I need if my house burned down?"
+- "Build a grab-and-go document kit."
+- "Back up our important papers before a disaster."

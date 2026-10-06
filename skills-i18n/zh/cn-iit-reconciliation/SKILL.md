@@ -79,7 +79,7 @@ python3 skills/cn-iit-reconciliation/scripts/cn_iit.py --wages 300000 --bonus 60
 - **把估算当作最终结果。** 以 App 的计算为准。
 
 ## 示例触发语
-- "个税汇算我能退多少？年薪 36 万，有一个孩子，在上海租房。"
-- "年终奖单独计税还是并入综合所得更划算？"
-- "专项附加扣除我漏了哪些？"
-- "Explain China's annual tax reconciliation for me."
+- “个税汇算我能退多少？年薪 36 万，有一个孩子，在上海租房。”
+- “年终奖单独计税还是并入综合所得更划算？”
+- “专项附加扣除我漏了哪些？”
+- “Explain China's annual tax reconciliation for me.”

@@ -64,6 +64,13 @@ Ask for these if not provided:
 - [ ] Do not treat expert assertion as established fact — one source, graded accordingly, numbers triangulated
 - [ ] Do not synthesize next week — expert calls decay overnight into "it was really useful"
 
+## Example Trigger Phrases
+
+- "Prep me for the expert call."
+- "What should I ask this advisor/analyst/practitioner?"
+- "We get an hour with X."
+- "Our expert calls are pleasant but shallow."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

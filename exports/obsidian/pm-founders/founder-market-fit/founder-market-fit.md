@@ -54,6 +54,12 @@ Crisp answers to the classic prompts:
 - Borrowed secrets (industry truisms anyone could state)
 - Overclaiming — investors discount stories that don't ring true
 
+## Example Trigger Phrases
+
+- "Write the founder story."
+- "Draft YC / accelerator application answers."
+- "Explain founder-market fit."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

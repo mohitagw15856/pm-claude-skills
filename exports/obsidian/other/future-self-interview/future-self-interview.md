@@ -109,6 +109,12 @@ to tell]
 and [[decision-journal]] neighbors; [[the-time-capsule]] to actually write to your
 future self; [[franklin-decision-ledger]] for the analytical complement.
 
+## Example Trigger Phrases
+
+- "I don't know what to do."
+- "Help me think long-term about this."
+- "What would future me say?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

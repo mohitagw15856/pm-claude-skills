@@ -68,6 +68,13 @@ A deck is an argument wearing design. This skill reads slide images the way a sc
 - [ ] Do not list ten nitpicks and skip the structural weakness — one broken chain link outweighs every font choice
 - [ ] Do not soften findings on your own deck — the room won't
 
+## Example Trigger Phrases
+
+- "What is this deck really arguing?"
+- "Pick apart this competitor's pitch deck."
+- "Here are photos of their slides: what are they hiding?"
+- "Does my deck hold up before the big meeting?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

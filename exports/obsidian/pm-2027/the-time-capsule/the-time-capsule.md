@@ -107,6 +107,14 @@ To: [opener] · From: [writer, role, occasion]
 - [ ] Do not skip the ritual section; an unopened capsule is a diary, and an
       unscored ledger is astrology
 
+## Example Trigger Phrases
+
+- "Leave a role."
+- "Finishing a big project."
+- "Plan season."
+- "Before a leave."
+- "Write a letter to my successor."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

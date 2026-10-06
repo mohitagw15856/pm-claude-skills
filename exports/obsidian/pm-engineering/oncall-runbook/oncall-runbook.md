@@ -409,6 +409,13 @@ ANYTHING ELSE:
 - [ ] Do not list escalation contacts without phone numbers and Slack handles — email-only escalation paths are useless during a 3am incident
 - [ ] Do not write the runbook once and treat it as permanent — runbooks go stale after incidents; every incident must trigger a review of the relevant runbook entries
 
+## Example Trigger Phrases
+
+- "Write an on-call guide."
+- "Create alert runbooks."
+- "Document escalation procedures."
+- "Prepare an on-call handoff document."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

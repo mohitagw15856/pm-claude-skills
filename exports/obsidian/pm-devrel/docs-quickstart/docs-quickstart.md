@@ -67,6 +67,13 @@ Ask for these only if they aren't already provided:
 
 Developer documentation practice (the Diátaxis "tutorial" / time-to-first-success quickstart pattern).
 
+## Example Trigger Phrases
+
+- "Write a quickstart."
+- "Write a getting-started guide for our API."
+- "Get a developer to a working call in five minutes."
+- "Write onboarding docs for developers."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

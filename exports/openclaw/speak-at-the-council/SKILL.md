@@ -120,3 +120,9 @@ verify-at-your-council items with search terms]
 [[stakeholder-influence-mapper]] for reading the committee;
 [[press-release]] when the campaign needs the local paper; [[agm-in-a-box]]
 — the same machinery from the chair's side.
+
+## Example Trigger Phrases
+
+- "I want to speak at the council meeting."
+- "How do I fight this decision?"
+- "Write my public comment."

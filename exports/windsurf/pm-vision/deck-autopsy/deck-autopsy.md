@@ -65,3 +65,10 @@ A deck is an argument wearing design. This skill reads slide images the way a sc
 - [ ] Do not treat beautiful design as evidence of a strong argument — the correlation runs the other way often enough
 - [ ] Do not list ten nitpicks and skip the structural weakness — one broken chain link outweighs every font choice
 - [ ] Do not soften findings on your own deck — the room won't
+
+## Example Trigger Phrases
+
+- "What is this deck really arguing?"
+- "Pick apart this competitor's pitch deck."
+- "Here are photos of their slides: what are they hiding?"
+- "Does my deck hold up before the big meeting?"

@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "I can't make the meeting: brief someone to decide for me."
+- "Brief someone to negotiate for me."
+- "What would you need from me to represent me?"
+- "Write my red lines and fallbacks for the meeting."

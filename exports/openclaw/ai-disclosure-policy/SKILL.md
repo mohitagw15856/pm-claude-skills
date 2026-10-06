@@ -109,3 +109,9 @@ Ask for (if not already provided):
       macro and a synthetic voice are different obligations
 - [ ] Do not duplicate [[ai-usage-policy]] — internal use rules live there;
       this is outward-facing disclosure
+
+## Example Trigger Phrases
+
+- "Do we have to label AI content?"
+- "Write our AI disclosure policy."
+- "Are we covered for the AI Act?"

@@ -68,6 +68,13 @@ Ask for these if not provided:
 - [ ] Do not batch into your peak hours — corridors go on the energy map's shoulders; peaks are for slabs
 - [ ] Do not defrag once — calendars re-fragment on schedule; the re-census is the maintenance
 
+## Example Trigger Phrases
+
+- "My day is fragmented to death."
+- "Count my context switches."
+- "Batch my meetings and reviews."
+- "Defend against calendar Swiss cheese."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

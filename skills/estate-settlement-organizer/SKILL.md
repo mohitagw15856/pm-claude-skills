@@ -64,3 +64,10 @@ Ask for these if not provided:
 - [ ] Do not distribute early to keep the peace — receipts, after debts, or the peace gets expensive
 - [ ] Do not commingle funds even briefly — the separate account is the whole shield
 - [ ] Do not give legal advice or state deadlines as universal — organize the work; the law is local and the attorney's
+
+## Example Trigger Phrases
+
+- "I'm the executor what do I do."
+- "Organize settling an estate."
+- "What's the probate process roughly?"
+- "Track estate assets and debts."

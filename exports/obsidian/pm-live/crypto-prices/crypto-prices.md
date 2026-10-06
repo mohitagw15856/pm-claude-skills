@@ -58,6 +58,12 @@ Source: [CoinGecko / Coinbase] at [timestamp, UTC] · rerun: `[exact curl]`
 - [ ] Do not predict, recommend, or imply timing — the refusal is part of the skill
 - [ ] Do not quote without the timestamp — undated crypto prices are misinformation with confidence
 
+## Example Trigger Phrases
+
+- "What's bitcoin at?"
+- "How's the crypto market today?"
+- "Price of some altcoin."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

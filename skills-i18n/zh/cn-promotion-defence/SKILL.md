@@ -71,7 +71,7 @@ description: "为中国科技公司常见的职级晋升准备晋升答辩：材
 - **隐藏差距。** 主动说出一个差距并给出计划，本身就是下一职级的自我认知。
 
 ## 示例触发语
-- "帮我准备晋升答辩，从 P6 到 P7，20 分钟。"
-- "写晋升答辩 PPT 的大纲。"
-- "模拟一下晋升委员会会问我什么问题。"
-- "Help me prepare my promotion defence for a Chinese tech company."
+- “帮我准备晋升答辩，从 P6 到 P7，20 分钟。”
+- “写晋升答辩 PPT 的大纲。”
+- “模拟一下晋升委员会会问我什么问题。”
+- “Help me prepare my promotion defence for a Chinese tech company.”

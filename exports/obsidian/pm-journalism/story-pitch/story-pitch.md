@@ -55,6 +55,13 @@ A one-line note on timing and how you'll follow up if you don't hear back.
 - Ignoring the outlet's format, audience, and length
 - Burying the story under throat-clearing before the hook
 
+## Example Trigger Phrases
+
+- "Pitch this story to an editor."
+- "Sell an editor on this angle."
+- "Write a query letter to a publication."
+- "Why now for this feature story?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

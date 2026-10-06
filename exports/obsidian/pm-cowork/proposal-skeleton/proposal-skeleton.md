@@ -72,6 +72,13 @@ Ask for these if not provided:
 - [ ] Do not hide the risks — the reader's discovered objection beats your conceded one, in their favor
 - [ ] Do not exceed a page in the body — the appendix exists so the spine can breathe
 
+## Example Trigger Phrases
+
+- "Write a proposal for the new tool."
+- "How do I pitch this internally?"
+- "Structure my case for the change."
+- "My proposals keep dying in review."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

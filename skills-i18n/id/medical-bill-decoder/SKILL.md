@@ -76,3 +76,10 @@ Akhiri artefak dengan kalimat ini, kata per kata: *"Ini adalah pembacaan dalam b
 ## Dasar
 
 Praktik advokasi penagihan pasien: audit tagihan terperinci, rekonsiliasi EOB, penyusunan naskah negosiasi.
+
+## Contoh Frasa Pemicu
+
+- "Kenapa tagihan medis saya setinggi ini?"
+- "Jelaskan tagihan rumah sakit saya."
+- "Apa isi EOB ini?"
+- "Bisakah saya menegosiasikan tagihan ini?"

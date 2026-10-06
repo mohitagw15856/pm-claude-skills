@@ -66,6 +66,12 @@ Ask for these if not provided:
 - [ ] Do not fill unknowable cells by vibe — "not public" is an honest, useful entry
 - [ ] Do not reuse a stale scan silently — pricing cells lie within a quarter; the stamp is load-bearing
 
+## Example Trigger Phrases
+
+- "What are competitors doing?"
+- "How does our pricing/feature set compare?"
+- "Prep the competitive slide honestly."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

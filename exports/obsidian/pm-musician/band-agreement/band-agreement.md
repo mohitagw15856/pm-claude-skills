@@ -135,6 +135,13 @@ on registrations and societies]
 same move, different shared dream; [[first-client-contract]] energy for
 solo artists dealing with venues.
 
+## Example Trigger Phrases
+
+- "How should we split money?"
+- "Who owns our songs?"
+- "Our drummer quit."
+- "What happens?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

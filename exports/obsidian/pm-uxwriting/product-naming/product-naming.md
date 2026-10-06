@@ -69,6 +69,13 @@ Ask for these only if they aren't already provided (else infer and label):
 
 Brand & product naming practice — strategy-driven generation, criteria-based evaluation, and pre-adoption availability/meaning checks.
 
+## Example Trigger Phrases
+
+- "Name this product."
+- "Brainstorm names for our feature."
+- "Choose between these name candidates."
+- "Name our company."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

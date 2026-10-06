@@ -74,3 +74,9 @@ Ask for (if not already provided):
 - [ ] Do not run calibration comparing raw output across uneven adopters — that's a tooling lottery, not a review
 - [ ] Do not treat AI scepticism as a performance problem where use is optional — outcomes are the bar, not enthusiasm
 - [ ] Do not have the accountability conversation without the org's policy in hand — improvised rules in a review are how grievances are born
+
+## Example Trigger Phrases
+
+- "Review someone whose work is heavily AI-assisted."
+- "Calibrating a team with uneven AI adoption."
+- "Write review criteria for the AI era."

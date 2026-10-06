@@ -63,3 +63,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Narrative decision-memo practice (Amazon-style one/six-pagers; one-way vs. two-way door decisions).
+
+## Example Trigger Phrases
+
+- "Write a decision memo."
+- "Write a recommendation memo."
+- "Write a one-pager for this decision."
+- "Get leadership to decide something."

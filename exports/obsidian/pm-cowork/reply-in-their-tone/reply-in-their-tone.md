@@ -61,6 +61,12 @@ Formality: [level, evidence] · Length: [theirs] · Directness: [direct/cushione
 - [ ] Do not let tone-matching dilute a "no" — register is the wrapper, never the content
 - [ ] Do not mimic idiosyncrasies (their typos, their catchphrases) — matching register isn't impersonation
 
+## Example Trigger Phrases
+
+- "Reply to this email."
+- "Draft a response that doesn't sound stiff."
+- "Answer this without sounding like a robot."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

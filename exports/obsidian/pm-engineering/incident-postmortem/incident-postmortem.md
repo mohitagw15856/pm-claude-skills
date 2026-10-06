@@ -238,6 +238,13 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Generate an RCA document for [service] going down on [date]"
 - "Draft a blameless postmortem from these notes: [paste notes]"
 
+## Example Trigger Phrases
+
+- "Write a postmortem."
+- "Write the incident report."
+- "Write the P1 review."
+- "Do a root cause analysis of the outage."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

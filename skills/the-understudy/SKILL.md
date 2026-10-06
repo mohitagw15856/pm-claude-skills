@@ -98,3 +98,10 @@ Ask for (if not already provided):
 [[api-for-yourself]] is the outward-facing sibling (how others work with you);
 this is inward (how you think). Store the profile per the [[clone-brief]] and
 Brain conventions.
+
+## Example Trigger Phrases
+
+- "Write it like I would."
+- "Learn my style."
+- "Draft this as me."
+- "Wants an AI that apprentices to their judgment rather than imitating their tone."

@@ -94,3 +94,10 @@ Same habit off the table: [one sentence]
       reads, not deceit
 - [ ] Do not moralise about betrayal mechanics — in Diplomacy, the knife is
       the game; debrief the timing, not the ethics
+
+## Example Trigger Phrases
+
+- "I always lose the trading part."
+- "Practice Catan trades with me."
+- "How do I get better at Diplomacy?"
+- "Roleplay a trade with me."

@@ -61,6 +61,13 @@ Ordered by impact-on-the-decision: what to fix first, how (drop / impute / dedup
 - Treating all issues as equally severe regardless of the decision
 - Fixing data silently with no record of what was changed
 
+## Example Trigger Phrases
+
+- "Assess data quality."
+- "Audit a dataset."
+- "Check data before analysis."
+- "Explain why numbers look off."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

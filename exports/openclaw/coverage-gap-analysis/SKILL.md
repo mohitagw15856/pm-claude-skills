@@ -71,3 +71,10 @@ End with: *"This analysis is analytical support, not a coverage determination or
 - [ ] Do not rank by likelihood alone — a remote solvency-threatening gap outranks a frequent small one
 - [ ] Do not ignore overlaps because "more cover is fine" — overlap creates claims disputes; name who pays first
 - [ ] Do not invent policy terms or limits — mark unavailable wordings `[to confirm]` and say what the answer changes
+
+## Example Trigger Phrases
+
+- "Run a coverage gap analysis."
+- "Review an insurance programme against a risk register."
+- "Check what risks aren't insured."
+- "Audit a policy portfolio."

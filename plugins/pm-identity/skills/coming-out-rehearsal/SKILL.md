@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "I want to come out to my parents/boss/friend."
+- "Help me tell them I'm [gay/trans/bi/etc.]."
+- "Rehearse this conversation with me."

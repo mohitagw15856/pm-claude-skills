@@ -80,6 +80,13 @@ flowchart LR
 
 Architecture diagramming (C4-style grouping, logical layers, sync/async edges), expressed as renderable Mermaid.
 
+## Example Trigger Phrases
+
+- "Draw an architecture."
+- "Show how components fit together."
+- "Map a system/data flow."
+- "Visualize services and dependencies."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

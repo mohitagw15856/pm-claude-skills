@@ -54,3 +54,10 @@ Given popularity (if provided) and margin, classify: **Star** (high both — fea
 - Pricing on gut instead of the target margin
 - Repricing a plow-horse so hard it becomes a dog
 - Treating supplier prices as fixed when spec/portion are the real levers
+
+## Example Trigger Phrases
+
+- "Cost a dish."
+- "Calculate food cost percentage."
+- "Price a menu item."
+- "Engineer a menu for profitability."

@@ -128,3 +128,9 @@ Ask for (if not already provided):
 the break moves countries; [[the-time-capsule]] — seal one to open on
 re-entry day; [[resignation kit|pip-responder]] neighbors in [plugins/pm-resignation](../../plugins/pm-resignation/)
 for the leaving itself.
+
+## Example Trigger Phrases
+
+- "I want to take 6 months off."
+- "Quit and travel."
+- "Can I afford a break?"

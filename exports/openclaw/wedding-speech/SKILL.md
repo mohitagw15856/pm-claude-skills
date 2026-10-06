@@ -48,3 +48,10 @@ Every bad wedding speech fails the same three ways: too long, too inside, or sec
 - [ ] Do not let the speaker's own journey take the spotlight — two "I" sentences is the budget outside the story
 - [ ] Do not write toward tears — earn the quiet moment with specificity and let the room decide
 - [ ] Do not exceed four minutes for any reason offered — "but there are two good stories" is the beginning of every twelve-minute speech
+
+## Example Trigger Phrases
+
+- "Write my best man speech."
+- "Write a maid of honour toast."
+- "Write a father of the bride speech."
+- "Fix my wedding speech draft."

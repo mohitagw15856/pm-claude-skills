@@ -119,6 +119,12 @@ notice and let it pass — the real one, not the flattering one]
 when it's a genuine should-I-stay call; [[future-self-interview]] for the longer view
 on a relationship fork.
 
+## Example Trigger Phrases
+
+- "Is this a red flag?"
+- "Am I just scared?"
+- "I always find a reason to end things."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

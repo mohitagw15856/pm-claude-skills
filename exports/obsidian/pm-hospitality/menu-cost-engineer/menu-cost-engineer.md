@@ -57,6 +57,13 @@ Given popularity (if provided) and margin, classify: **Star** (high both — fea
 - Repricing a plow-horse so hard it becomes a dog
 - Treating supplier prices as fixed when spec/portion are the real levers
 
+## Example Trigger Phrases
+
+- "Cost a dish."
+- "Calculate food cost percentage."
+- "Price a menu item."
+- "Engineer a menu for profitability."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

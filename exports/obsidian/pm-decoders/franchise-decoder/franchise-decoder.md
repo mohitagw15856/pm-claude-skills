@@ -72,6 +72,13 @@ Ask for these if not provided:
 - **Reading *protected territory* as exclusive** without decoding the carve-outs.
 - **Skipping the formers.** The people who left know the one thing the brochure cannot say.
 
+## Example Trigger Phrases
+
+- "Evaluate a franchise."
+- "Review an FDD."
+- "Is this franchise a good deal?"
+- "What to ask existing franchisees?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

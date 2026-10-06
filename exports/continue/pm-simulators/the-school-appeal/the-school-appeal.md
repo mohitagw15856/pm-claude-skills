@@ -69,3 +69,10 @@ Ask for these if not provided:
 - [ ] Do not state appeal law as universal — the two-stage shape is a scaffold, and the skill must keep saying so
 - [ ] Do not let a missing document be papered over with a better sentence — the debrief's job is the evidence list
 - [ ] Do not stay in character in the debrief
+
+## Example Trigger Phrases
+
+- "Prepare a school appeal."
+- "We did not get our school place."
+- "Rehearse the appeal hearing."
+- "What does the panel ask?"

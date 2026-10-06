@@ -69,6 +69,13 @@ Mark invented figures/evidence as *(example — replace with real data)*.
 
 Fundraising practice — donor-centred case construction (need, solution, credibility, impact, urgency, ask) with gift-level impact framing.
 
+## Example Trigger Phrases
+
+- "Write a case for support."
+- "Write our fundraising case statement."
+- "Make the case for our capital campaign."
+- "Why should a donor give to us?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

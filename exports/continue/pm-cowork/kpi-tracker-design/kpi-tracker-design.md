@@ -62,3 +62,10 @@ Ask for these if not provided:
 - [ ] Do not set targets on unbaselined metrics — round-number targets on unknown behavior are theater
 - [ ] Do not show numbers without trends — a value with no history is a mood
 - [ ] Do not build the tracker without booking the ritual — undecorated walls beat decorated ones
+
+## Example Trigger Phrases
+
+- "Set up KPI tracking for the team."
+- "Build a metrics dashboard in sheets."
+- "Which numbers should we track?"
+- "Our dashboard exists but nobody acts on it."

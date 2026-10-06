@@ -75,6 +75,13 @@ flowchart TD
 
 Organizational charting (reporting lines, spans of control, matrix relationships), as renderable Mermaid.
 
+## Example Trigger Phrases
+
+- "Draw an org chart."
+- "Show reporting lines."
+- "Visualize team structure."
+- "Map who reports to whom."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -72,3 +72,9 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Model Cards for Model Reporting (Mitchell et al., 2019) and the model-documentation practice used in responsible-AI reviews.
+
+## Example Trigger Phrases
+
+- "Write a model card."
+- "Document a model's intended use and limitations."
+- "Prepare an AI model for review/launch."

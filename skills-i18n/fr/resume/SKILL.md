@@ -65,3 +65,9 @@ Un CV en une seule colonne, compatible ATS, dans cet ordre :
 ## D'après
 
 La pratique du CV orienté réalisations et conscient de l'ATS (antichronologique, puces d'impact chiffré, alignement des mots-clés).
+
+## Exemples de phrases déclencheuses
+
+- "Réécris mon CV."
+- "Transforme mon expérience en CV."
+- "Adapte mon CV à cette offre."

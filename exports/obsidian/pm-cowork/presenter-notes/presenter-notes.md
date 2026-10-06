@@ -65,6 +65,13 @@ Ask for these if not provided:
 - [ ] Do not walk in without the crib — Q&A is the half of the talk you don't control; the crib is its notes
 - [ ] Do not treat notes as private scaffolding exempt from rehearsal — unrehearsed notes fail exactly when needed, which is their only job
 
+## Example Trigger Phrases
+
+- "Write my speaker notes."
+- "I either script everything."
+- "What goes in the notes pane?"
+- "I keep running over time."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

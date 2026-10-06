@@ -65,3 +65,10 @@ Ask for these if not provided:
 - [ ] Do not skip the review because the outline "is obvious" — obvious outlines take five minutes to confirm and two days to rewrite
 - [ ] Do not defend outline structure at prose review — that conversation was available cheaper earlier; have it earlier
 - [ ] Do not outline without the material — a skeleton of unknowns is a research plan wearing a doc's clothes, and should be named as one
+
+## Example Trigger Phrases
+
+- "Help me start this document."
+- "Outline before I write."
+- "Why do my docs get rewritten from scratch in review?"
+- "Get sign-off before drafting."

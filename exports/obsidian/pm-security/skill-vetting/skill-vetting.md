@@ -66,6 +66,13 @@ Reads: […] · Writes: […] · Network: [every host, named] · Executes: […]
 - [ ] Do not condemn explained power — a deploy skill runs deploys; scope-mismatch is the flag, not capability
 - [ ] Do not make the install decision for high-risk cases — evidence and a recommendation, human decides
 
+## Example Trigger Phrases
+
+- "Is this skill safe to install?"
+- "Vet this SKILL.md."
+- "Review this skill from a marketplace."
+- "Check what this skill can do to my machine."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

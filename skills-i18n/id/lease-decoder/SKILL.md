@@ -79,3 +79,10 @@ Akhiri artefak dengan kalimat ini, kata per kata: *"Ini adalah pembacaan dalam b
 ## Dasar
 
 Praktik peninjauan perjanjian sewa dari sisi penyewa: triase klausul, hitungan biaya keluar, audit syarat uang jaminan.
+
+## Contoh Frasa Pemicu
+
+- "Apa yang akan saya tanda tangani?"
+- "Jelaskan perjanjian sewa saya."
+- "Apakah perjanjian sewa ini wajar?"
+- "Apakah pemilik rumah benar-benar boleh melakukan ini?"

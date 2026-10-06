@@ -27,3 +27,11 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Leave a role."
+- "Finishing a big project."
+- "Plan season."
+- "Before a leave."
+- "Write a letter to my successor."

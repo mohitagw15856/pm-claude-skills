@@ -103,6 +103,12 @@ Platform: [fit + recut note]
 [[thumbnail-creator]] for the packaging; [[viral-content-framework]] for why
 the hooks work.
 
+## Example Trigger Phrases
+
+- "Clip this podcast."
+- "Make shorts from my video."
+- "What's clippable here?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

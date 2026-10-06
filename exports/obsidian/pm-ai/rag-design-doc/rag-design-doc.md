@@ -71,6 +71,13 @@ Ask for these only if they aren't already provided:
 
 Retrieval-Augmented Generation practice — hybrid retrieval, reranking, grounded generation, and faithfulness evaluation.
 
+## Example Trigger Phrases
+
+- "Design a RAG pipeline."
+- "Build a chat-with-your-docs feature."
+- "Design a knowledge assistant."
+- "Why does our RAG system give wrong answers?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -142,6 +142,12 @@ Things to tackle in production but out of scope for this design session:
 - "I have a system design interview — the question is [X]"
 - "Design a [URL shortener / chat system / notification service / feed]"
 
+## Example Trigger Phrases
+
+- "Design a system."
+- "Answer a system design interview question."
+- "Architect a solution at scale."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -61,6 +61,12 @@ Ask for these if not provided:
 - [ ] Do not escalate without attempts — that's queue-jumping wearing a process word
 - [ ] Do not cc the world — the recipient plus the minimum necessary; audience size reads as aggression
 
+## Example Trigger Phrases
+
+- "I need to escalate this."
+- "Write an email to my boss's boss."
+- "How do I go over someone's head professionally?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

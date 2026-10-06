@@ -54,3 +54,10 @@ If a rubric was given, map the feedback to its criteria.
 - Marking every single error so the student can't see what matters
 - Criticism with no model of the better version
 - A tone that discourages instead of pointing forward
+
+## Example Trigger Phrases
+
+- "Give feedback on a student's work."
+- "Write grading comments."
+- "Respond to an essay."
+- "Coach a learner."

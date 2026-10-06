@@ -81,3 +81,11 @@ End every triage note with: *"This is analytical support for triage, not a cover
 - [ ] Do not default an uncertain trigger to "covered" or "denied" — flag it for coverage review with the wording question stated
 - [ ] Do not give a single-point reserve on day one — give a range with basis
 - [ ] Do not invent policy terms — if the wording isn't provided, ask, or label the clause `[to confirm against wording]`
+
+## Example Trigger Phrases
+
+- "Triage a claim."
+- "Review a first notice of loss."
+- "Assess a new claim."
+- "Decide fast-track vs adjuster routing."
+- "Screen a claim for SIU referral."

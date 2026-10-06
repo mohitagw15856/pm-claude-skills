@@ -64,6 +64,13 @@ Keep it short (a few short paragraphs). Mark `[insert]` personal details; keep e
 
 Real-estate buyer-representation practice — property- and offer-focused cover letters that build rapport while avoiding Fair-Housing risk.
 
+## Example Trigger Phrases
+
+- "Write a real-estate offer letter."
+- "Write a letter to the seller."
+- "Write an offer cover note."
+- "Make our home offer stand out."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

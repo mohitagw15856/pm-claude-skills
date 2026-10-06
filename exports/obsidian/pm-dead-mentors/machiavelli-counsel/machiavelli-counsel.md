@@ -99,6 +99,13 @@ and what to do instead. Be specific: "he'd say X; the durable version is Y."]
 - [ ] Do not flatter the user's read of their own situation — Machiavelli's entire
       value is that he didn't
 
+## Example Trigger Phrases
+
+- "I'm navigating a reorg."
+- "My project is caught in politics."
+- "Who holds the power here?"
+- "How would Machiavelli play this?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

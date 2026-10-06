@@ -64,3 +64,10 @@ Ask for these if not provided:
 - [ ] Do not confuse terse with simple — code golf raises the reading tax this skill exists to cut
 - [ ] Do not remove flexibility that's actually on the roadmap — YAGNI applies to imagined futures, not planned ones
 - [ ] Do not skip the ledger — invisible simplification is indistinguishable from unexplained deletion in review
+
+## Example Trigger Phrases
+
+- "Now simplify it."
+- "This AI-generated code is over-engineered: simplify it."
+- "Remove the dead abstraction in this file."
+- "Make this simpler without changing behaviour."

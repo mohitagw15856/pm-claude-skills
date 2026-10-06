@@ -101,6 +101,12 @@ or treating the margin as a second job — and the guard]
 - [ ] Do not promise transformed lives — Bennett's honest pitch was a fuller life at
       the margins, and that's this skill's pitch too
 
+## Example Trigger Phrases
+
+- "I have no time."
+- "Work eats everything."
+- "I want to learn X but can't fit it."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -76,6 +76,13 @@ Standard amortization, simple-savings breakeven (cumulative payment delta vs upf
 - [ ] Do not report a breakeven month without the sell-before-month-N warning
 - [ ] Do not present the model's output without what it doesn't model
 
+## Example Trigger Phrases
+
+- "Should I refinance?"
+- "Does a refi break even?"
+- "Compare my loan to a refi offer."
+- "Is this refinance worth the closing costs?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

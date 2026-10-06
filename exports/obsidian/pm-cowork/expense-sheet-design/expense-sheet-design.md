@@ -66,6 +66,13 @@ Ask for these if not provided:
 - [ ] Do not skip the monthly reconcile — capture without audit drifts, quietly
 - [ ] Do not decide deductibility in the sheet — categories transcribe; the professional decides
 
+## Example Trigger Phrases
+
+- "Track my business expenses."
+- "Build an expense sheet for the team."
+- "Get ready for reimbursement/tax season."
+- "My shoebox of receipts needs a system."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

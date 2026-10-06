@@ -83,3 +83,9 @@ Deterministic: base 3 months + 1 (single income) + 2 (variable income) + 1 (depe
 - [ ] Do not chase yield with the emergency money — the fund's job is existing, not earning
 - [ ] Do not let the fund become the goal — past target, saving more is a comfort habit with a real opportunity cost
 - [ ] Do not shame the starter-fund compromise — one month of buffer changes lives before the spreadsheet is happy
+
+## Example Trigger Phrases
+
+- "How big should my emergency fund be?"
+- "Do I have enough saved?"
+- "How many months of expenses do I need?"

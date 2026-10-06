@@ -347,6 +347,12 @@ Brief every interviewer on these before they conduct their first interview for t
 - [ ] Do not set the same must-hire competency list for all engineering roles — a senior backend engineer and a frontend engineer have different non-negotiable competencies
 - [ ] Do not skip the calibration bias notes section — interviewers who have never been briefed on halo effect, recency bias, and credential bias will reproduce them in every loop
 
+## Example Trigger Phrases
+
+- "Create an interview rubric."
+- "Design a hiring process."
+- "Build a technical scorecard."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -67,3 +67,10 @@ Write copy (not just guidance) for each section:
 ## Based On
 
 Conversion-copywriting practice — single conversion goal, problem-led structure, benefit-framing, objection handling, LIFT-style clarity.
+
+## Example Trigger Phrases
+
+- "Write a landing page."
+- "Write our homepage copy."
+- "Write a product page."
+- "Write copy for our marketing site."

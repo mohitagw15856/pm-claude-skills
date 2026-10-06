@@ -67,6 +67,13 @@ Ask for these if not provided:
 - [ ] Do not simulate humiliation — hard questions, professional tone; the goal is a prepared candidate, not a hazed one
 - [ ] Do not stay in character in the debrief
 
+## Example Trigger Phrases
+
+- "Simulate my thesis defense."
+- "Grill me on my dissertation."
+- "What will my committee ask?"
+- "Prep me for my viva."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

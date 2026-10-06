@@ -119,3 +119,9 @@ legal-aid solicitor for your benefit and country should review it.
 [[claim-denial-decoder]] and [[insurance-claim-appeal]] for private-insurance denials
 (different system); [[medical-records-request]] for the evidence; [[accommodation-request]]
 for the workplace side; [[spoon-planner]] for surviving the process.
+
+## Example Trigger Phrases
+
+- "My disability benefit was denied."
+- "Appeal my PIP/SSDI decision."
+- "How do I challenge a benefits decision?"

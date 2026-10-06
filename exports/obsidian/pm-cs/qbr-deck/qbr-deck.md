@@ -245,6 +245,13 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not close a QBR without documented mutual commitments with named owners on both sides
 - [ ] Do not skip the "what's not working" slide — suppressing problems erodes trust and misses renewal risks
 
+## Example Trigger Phrases
+
+- "Prepare a QBR."
+- "Build the business review deck for this customer."
+- "Prepare the executive review."
+- "Plan the quarterly check-in with this account."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -60,6 +60,13 @@ Test them in order; record what each rules in or out.
 
 Systematic debugging method (reproduce → isolate → hypothesize → verify) — Zeller's *Why Programs Fail* / scientific-method debugging.
 
+## Example Trigger Phrases
+
+- "Help me debug this."
+- "Why is this happening?"
+- "This test fails intermittently."
+- "Find the root cause of this defect."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

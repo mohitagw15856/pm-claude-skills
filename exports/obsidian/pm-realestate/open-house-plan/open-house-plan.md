@@ -73,6 +73,12 @@ Ask for these only if they aren't already provided (else infer and label):
 
 Real-estate marketing practice — multi-channel open-house promotion, staging, structured lead capture, and disciplined follow-up.
 
+## Example Trigger Phrases
+
+- "Plan an open house."
+- "Market an open house."
+- "Create an open-house checklist."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

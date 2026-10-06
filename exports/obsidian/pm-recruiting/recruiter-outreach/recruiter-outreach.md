@@ -65,6 +65,13 @@ Ask for these only if they aren't already provided (else infer and label):
 
 Candidate-sourcing practice — concise, candidate-centric personalization, benefit-led framing, low-friction asks, and respectful multi-touch follow-up.
 
+## Example Trigger Phrases
+
+- "Write a recruiter InMail."
+- "Write candidate outreach for this role."
+- "Write a sourcing message."
+- "Write a follow-up sequence for candidates."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

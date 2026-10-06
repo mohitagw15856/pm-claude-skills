@@ -69,6 +69,13 @@ Ask for these if not provided:
 - [ ] Do not advise signing away disagreement or rights — flag signature moments for legal review
 - [ ] Do not draft accusations of discrimination/retaliation — if the pattern smells like that, that's the lawyer's brief, not a check-in email
 
+## Example Trigger Phrases
+
+- "I was just put on a PIP what do I do."
+- "Help me respond to a performance improvement plan."
+- "Is my PIP survivable?"
+- "Write my PIP check-in updates."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

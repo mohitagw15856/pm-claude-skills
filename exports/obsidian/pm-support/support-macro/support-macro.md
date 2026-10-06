@@ -58,6 +58,13 @@ Ask for these only if they aren't already provided:
 
 Support-experience practice — empathetic, scannable, personalised canned responses (Zendesk/Intercom macro conventions).
 
+## Example Trigger Phrases
+
+- "Write a support macro."
+- "Write a canned response for refund requests."
+- "Write a saved reply that doesn't sound robotic."
+- "Template our answer to this common ticket."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

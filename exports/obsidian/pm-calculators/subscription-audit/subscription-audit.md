@@ -78,6 +78,13 @@ Deterministic. Cadences: weekly/monthly/quarterly/yearly; output ranks by annual
 - [ ] Do not cancel the negotiables without walking the retention flow once — the discount is sitting right there
 - [ ] Do not shame the keeps — a used, valued subscription is fine; the audit hunts the forgotten, not the enjoyed
 
+## Example Trigger Phrases
+
+- "Audit my subscriptions."
+- "How much am I spending on subscriptions?"
+- "Help me cancel stuff."
+- "What recurring charges am I forgetting?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -64,3 +64,10 @@ End verbatim: *"This is a plain-language reading, not tax or legal advice — pa
 - [ ] Do not skip YTD — the single stub hides what the year reveals
 - [ ] Do not draft an angry payroll email — line numbers and expected-vs-actual get fixes; tone gets ticket queues
 - [ ] Do not give tax advice — decode what IS withheld; what SHOULD be is a professional's call
+
+## Example Trigger Phrases
+
+- "Explain my pay stub."
+- "Why is my paycheck smaller than expected?"
+- "What are all these deductions?"
+- "Check my paycheck for mistakes."

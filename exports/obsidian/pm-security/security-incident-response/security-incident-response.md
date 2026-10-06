@@ -63,6 +63,12 @@ Ask for these only if they aren't already provided:
 
 Incident-response practice (NIST SP 800-61 / SANS PICERL: prepare, identify, contain, eradicate, recover, lessons-learned).
 
+## Example Trigger Phrases
+
+- "Respond to a breach/compromise/security incident."
+- "Write an IR plan."
+- "Produce a post-incident report."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

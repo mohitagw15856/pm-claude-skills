@@ -102,3 +102,10 @@ Kill criteria: [the honest thresholds]
       data
 - [ ] Do not promise market outcomes ("this would sell!") — the promise is a
       playtest by Friday
+
+## Example Trigger Phrases
+
+- "I have a board game idea."
+- "Design a game about X."
+- "My game drags in the midgame."
+- "How do I playtest this?"

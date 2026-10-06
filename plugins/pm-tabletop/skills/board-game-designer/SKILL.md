@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "I have a board game idea."
+- "Design a game about X."
+- "My game drags in the midgame."
+- "How do I playtest this?"

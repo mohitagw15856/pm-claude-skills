@@ -63,6 +63,13 @@ Mark any inferred spec/claim *(assumed — confirm)*.
 
 E-commerce copywriting practice — benefit-led, scannable listings with feature-to-benefit translation, on-page SEO, and objection handling.
 
+## Example Trigger Phrases
+
+- "Write a product description."
+- "Write e-commerce listing copy."
+- "Write a product page."
+- "Rewrite this flat product blurb."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

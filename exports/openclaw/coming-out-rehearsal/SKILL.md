@@ -121,3 +121,9 @@ exit & immediate-after · permission to delay]
 [[faith-transition-companion]] when family and faith are entangled; [[aging-parent-talks]]
 for other high-stakes family conversations; [[name-change-navigator]] for the logistics
 that may follow.
+
+## Example Trigger Phrases
+
+- "I want to come out to my parents/boss/friend."
+- "Help me tell them I'm [gay/trans/bi/etc.]."
+- "Rehearse this conversation with me."

@@ -68,6 +68,13 @@ Ask for these only if they aren't already provided (else mark to set):
 
 Billing & accounts-receivable practice — complete, itemised invoices with clear terms and payment instructions (tax treatment left to a qualified accountant).
 
+## Example Trigger Phrases
+
+- "Write an invoice."
+- "Create a bill."
+- "Draft a freelance/contractor invoice."
+- "Set up an invoice template."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

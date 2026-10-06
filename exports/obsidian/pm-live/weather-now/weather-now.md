@@ -58,6 +58,13 @@ Source: [wttr.in / Open-Meteo] at [response timestamp] · rerun: `[the exact cur
 - [ ] Do not present a rate-limited wttr.in error page as weather
 - [ ] Do not oversell precision — hour-level precipitation timing is a forecast, and the wording should sound like one
 
+## Example Trigger Phrases
+
+- "What's the weather?"
+- "Will it rain today?"
+- "Forecast for a city."
+- "Get me weather data for a location."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

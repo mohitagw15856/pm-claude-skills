@@ -51,3 +51,10 @@ A 3-bullet "what a 5-second skimmer takes away" — if those bullets don't carry
 - Burying the value under a long personal preamble
 - Three competing CTAs, or none
 - A wall of text with no sub-heads or callout — unskimmable
+
+## Example Trigger Phrases
+
+- "Write a newsletter."
+- "Write this week's Substack issue."
+- "Turn these notes into a sendable newsletter."
+- "Write a subject line and hook for my email issue."

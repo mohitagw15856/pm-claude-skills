@@ -63,6 +63,13 @@ Ask for these only if they aren't already provided:
 
 Job-description analysis practice — requirement triage, signal-reading, ATS keyword mirroring.
 
+## Example Trigger Phrases
+
+- "Analyse a job description."
+- "Decode a JD."
+- "Assess fit for a role."
+- "Figure out what a posting really means before applying."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

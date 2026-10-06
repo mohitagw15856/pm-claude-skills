@@ -82,6 +82,13 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 
 Borrower-side loan review practice — total-cost math, APR reconciliation, fee auditing, reset-scenario framing.
 
+## Example Trigger Phrases
+
+- "Is this loan a good deal?"
+- "Decode my loan offer."
+- "What am I signing?"
+- "What will this mortgage actually cost me?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

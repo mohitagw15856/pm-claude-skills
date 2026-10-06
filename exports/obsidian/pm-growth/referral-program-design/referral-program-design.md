@@ -56,6 +56,14 @@ Ask for these only if they aren't already provided:
 
 Viral-loop / referral practice — k-factor and cycle-time math, activation-gated two-sided incentives, and abuse-resistant design.
 
+## Example Trigger Phrases
+
+- "Design a referral."
+- "Build a viral/invite loop."
+- "Set referral incentives."
+- "Turn happy users into a growth channel."
+- "Improve word-of-mouth growth."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

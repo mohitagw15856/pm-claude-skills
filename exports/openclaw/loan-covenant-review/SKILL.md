@@ -77,3 +77,10 @@ End with: *"This review is analytical support, not a credit or enforcement decis
 - [ ] Do not project a breach without stating the assumption the projection rides on
 - [ ] Do not stay silent on a known breach — flag reservation of rights immediately
 - [ ] Do not recommend a waiver without naming what the bank gets for it (fee, margin, information, structure)
+
+## Example Trigger Phrases
+
+- "Review covenant compliance."
+- "Check covenant headroom."
+- "Assess a potential covenant breach."
+- "Prepare a quarterly borrower monitoring review."

@@ -55,3 +55,10 @@ The observable competencies a trainer checks before solo — greeting, order acc
 - Skipping the allergen/86 protocol (a safety and liability gap)
 - No defined bar for readiness — trainers guessing
 - A binder no one uses instead of hands-on, checked practice
+
+## Example Trigger Phrases
+
+- "Train a new server."
+- "Create FOH onboarding."
+- "Write service standards."
+- "Build a restaurant training program."

@@ -77,6 +77,12 @@ Ask for (if not already provided):
 - [ ] Do not loosen tiers on gut feel — the down-tier bar is written evidence, the up-tier trigger is any incident
 - [ ] Do not measure only agent mistakes — an approver who edits nothing for a month is the riskier signal
 
+## Example Trigger Phrases
+
+- "Design approval workflows for AI actions."
+- "Decide what an agent may do autonomously."
+- "Fix approval fatigue in an existing loop."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

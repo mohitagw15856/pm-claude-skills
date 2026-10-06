@@ -117,6 +117,12 @@ legal-aid solicitor for your benefit and country should review it.
 (different system); [[medical-records-request]] for the evidence; [[accommodation-request]]
 for the workplace side; [[spoon-planner]] for surviving the process.
 
+## Example Trigger Phrases
+
+- "My disability benefit was denied."
+- "Appeal my PIP/SSDI decision."
+- "How do I challenge a benefits decision?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

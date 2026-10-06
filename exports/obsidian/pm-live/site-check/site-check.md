@@ -64,6 +64,13 @@ Rerun: `[the curl(s)]`
 - [ ] Do not hammer a struggling site — one clean check per layer, not a retry loop against someone's outage
 - [ ] Do not extend into probing others' infrastructure — status and reachability, not scanning
 
+## Example Trigger Phrases
+
+- "Is this website down?"
+- "Why can't I reach this site?"
+- "Check if my site is up."
+- "Is the SSL certificate expired?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

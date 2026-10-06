@@ -148,3 +148,10 @@ Ask the user for these if not provided:
 - Always A/B test price changes where possible; use geographic holdouts if A/B isn't feasible
 - Recommend annual pricing with 15–20% discount — improves cash flow and reduces churn
 - If enterprise pricing is "contact us", recommend adding a price floor to qualify inbound
+
+## Example Trigger Phrases
+
+- "Set pricing."
+- "Design pricing tiers."
+- "Evaluate freemium vs paid."
+- "Prepare a pricing change."

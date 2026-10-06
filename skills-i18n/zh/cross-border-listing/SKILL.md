@@ -73,7 +73,7 @@ description: "为海外电商平台或独立站撰写商品 listing，为当地�
 - **在搜索词里用竞品品牌名。**
 
 ## 示例触发语
-- "帮我写一个亚马逊美国站的 listing，产品是便携榨汁机。"
-- "Localise my product listing for Amazon Germany."
-- "Write a TikTok Shop UK listing for this phone stand."
-- "检查一下我的 listing 有没有违规的词。"
+- “帮我写一个亚马逊美国站的 listing，产品是便携榨汁机。”
+- “Localise my product listing for Amazon Germany.”
+- “Write a TikTok Shop UK listing for this phone stand.”
+- “检查一下我的 listing 有没有违规的词。”

@@ -59,3 +59,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Support-operations practice — issue triage, decision-tree diagnosis, time-boxed escalation, and consistent agent procedures.
+
+## Example Trigger Phrases
+
+- "Write a support runbook."
+- "Write a troubleshooting playbook for agents."
+- "Write a handling guide for this common issue."
+- "Write the tier-1 response procedure."

@@ -62,6 +62,13 @@ End verbatim: *"This is a plain-language reading, not legal or financial advice 
 - [ ] Do not recommend exit companies — pattern-flag the industry and point to the legitimate routes
 - [ ] Do not shame the buyer — the presentation was engineered by professionals; the decode is for deciding, not regretting
 
+## Example Trigger Phrases
+
+- "Review this timeshare."
+- "Decode my timeshare contract."
+- "Can I get out of a timeshare?"
+- "Is this vacation ownership worth it?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

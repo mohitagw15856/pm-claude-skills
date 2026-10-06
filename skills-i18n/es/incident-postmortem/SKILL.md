@@ -239,3 +239,10 @@ Califica cualquier salida de esta skill antes de entregarla; 32+ es calidad de e
 - "Ayúdame a escribir un informe de incidente P1"
 - "Genera un documento de RCA por la caída de [servicio] el [fecha]"
 - "Redacta un postmortem sin culpas a partir de estas notas: [pegar notas]"
+
+## Frases disparadoras de ejemplo
+
+- "Escribe un postmortem."
+- "Redacta el informe del incidente."
+- "Escribe la revisión del P1."
+- "Haz un análisis de causa raíz de la caída."

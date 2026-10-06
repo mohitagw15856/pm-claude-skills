@@ -112,3 +112,10 @@ honest nothing → the thread's fate]
 [[maintainer-triage]] — the system that catches these before they fester;
 [[saying-no-kindly]] — the general craft; [[first-maintainer-month]] for
 setting the boundaries early enough that nos stay rare.
+
+## Example Trigger Phrases
+
+- "How do I reject this PR nicely?"
+- "Say no to this feature request."
+- "A company wants free support from my project."
+- "Suggest a fork without burning the contributor."

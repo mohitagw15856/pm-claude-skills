@@ -71,3 +71,9 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 ## Based On
 
 Policyholder-side coverage review practice — declarations/exclusions reconciliation, payout-scenario testing, sublimit auditing.
+
+## Example Trigger Phrases
+
+- "What does my insurance actually cover?"
+- "Decode my policy."
+- "Is this deductible normal?"

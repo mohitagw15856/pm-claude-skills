@@ -91,6 +91,12 @@ Walk the layers in order; the root cause is usually the *earliest* layer that co
 - [ ] Do not let "the model will be better next version" close an action item — upgrades are migrations (see model-migration-plan), not fixes
 - [ ] Do not write it as an outage report — the system was up; the failure was behavioural, and the doc must analyse behaviour
 
+## Example Trigger Phrases
+
+- "Write up an AI incident."
+- "Analyse why an agent did something wrong."
+- "Produce corrective actions after an LLM failure."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

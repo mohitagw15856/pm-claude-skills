@@ -67,6 +67,12 @@ Ask for these if not provided:
 - [ ] Do not pick quick wins the team didn't ask for — a win nobody wanted is a change nobody wanted
 - [ ] Do not defer the former-peers conversation — week 1, explicit, once
 
+## Example Trigger Phrases
+
+- "I just became a manager what do I do."
+- "Plan my first 90 days as a manager."
+- "Taking over an existing team."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

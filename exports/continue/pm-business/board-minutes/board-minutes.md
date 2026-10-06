@@ -143,3 +143,10 @@ These minutes were approved by the board on [date] as an accurate record of the 
 - [ ] Do not bury decisions inside long paragraphs; make approvals, deferrals, and actions easy to find
 - [ ] Do not omit conflicts of interest, dissent, abstentions, or recusals when they appear in the source notes
 - [ ] Do not provide legal advice; flag governance-sensitive items for qualified review
+
+## Example Trigger Phrases
+
+- "Draft board minutes from these notes."
+- "Write governance minutes for this meeting."
+- "Turn this transcript into formal board minutes."
+- "Record the board's decisions and actions."

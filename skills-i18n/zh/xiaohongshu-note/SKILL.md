@@ -84,7 +84,7 @@ description: "撰写一篇读起来像真人真实体验的小红书笔记：抓
 - **堆砌无关的热门标签。**
 
 ## 示例触发语
-- "帮我写一篇小红书笔记，分享我在大理住的民宿。"
-- "给这个护肤品写个种草文案，品牌送的。"
-- "小红书标题怎么起才有流量？"
-- "Write a Xiaohongshu note about my new standing desk."
+- “帮我写一篇小红书笔记，分享我在大理住的民宿。”
+- “给这个护肤品写个种草文案，品牌送的。”
+- “小红书标题怎么起才有流量？”
+- “Write a Xiaohongshu note about my new standing desk.”

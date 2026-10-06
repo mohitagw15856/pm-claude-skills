@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "My office wrecks me and I don't know why."
+- "I'm overstimulated all the time."
+- "Make my home autism and ADHD friendly."
+- "Audit my commute for sensory overload."

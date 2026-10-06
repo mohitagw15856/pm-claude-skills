@@ -72,6 +72,13 @@ Ask for these if not provided:
 - [ ] Do not generalise board requirements across fields and countries — flag, don't assert
 - [ ] Do not stay in character in the debrief
 
+## Example Trigger Phrases
+
+- "Prepare for an IRB."
+- "Rehearse an ethics-committee defence."
+- "Why might ethics reject my study?"
+- "Practice my protocol presentation."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

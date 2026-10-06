@@ -61,6 +61,13 @@ Guest follow-up (care, not admission), corrective action to prevent recurrence, 
 - Forgetting mandatory reporting for a suspected foodborne illness
 - Filing it nowhere retrievable when insurance/legal needs it later
 
+## Example Trigger Phrases
+
+- "Write up a guest incident."
+- "Log an accident."
+- "Document a slip/fall."
+- "Record an incident for insurance/legal."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

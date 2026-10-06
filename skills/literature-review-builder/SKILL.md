@@ -60,3 +60,10 @@ Ask for these if not provided:
 - [ ] Do not flatten disagreements into "scholars have various views" — name who disagrees with whom about what
 - [ ] Do not let the gap appear from nowhere — if the review didn't establish it, the review isn't done
 - [ ] Do not write the student's analysis for them at thesis level — the skeleton and the connections are scaffolding; the argument in their voice is theirs
+
+## Example Trigger Phrases
+
+- "Structure a literature review."
+- "Organize my sources."
+- "Synthesize these papers."
+- "Find the gap for my thesis."

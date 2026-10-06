@@ -127,6 +127,12 @@ live video link → releases → quotes if real → contact]
 [[band-agreement]] before the bookings bring money; [[media-pitch]] for
 the general-press cousin; [[personal-bio]] for the human behind the act.
 
+## Example Trigger Phrases
+
+- "I need an EPK."
+- "Write my band bio."
+- "What do I send festivals?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

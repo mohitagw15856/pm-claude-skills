@@ -57,3 +57,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Freelance/consulting pricing practice — minimum-viable-rate math, value-based & productised pricing, rate-anchoring.
+
+## Example Trigger Phrases
+
+- "Set freelance/consulting rates."
+- "Build a rate card."
+- "Decide what to charge."
+- "Move off hourly billing."

@@ -79,3 +79,10 @@ For tool-using agents with statement/inbox read access and (optionally) browser 
 ### Rollback
 - Preparation has nothing to roll back — that's the point of the gate.
 - Stop and ask a human if: a portal demands identity verification, a retention offer changes the economics, or any page requests payment or credentials.
+
+## Example Trigger Phrases
+
+- "Audit my subscriptions."
+- "Find recurring charges."
+- "What am I paying for?"
+- "Help me cancel unused services."

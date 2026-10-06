@@ -64,3 +64,10 @@ Ask for these if not provided:
 - [ ] Do not litigate the past on an unwritten scope — define forward instead
 - [ ] Do not fight the twelfth small ask individually — name the pattern and sell the structural fix
 - [ ] Do not say "no" where "yes, via change order" or "yes, in phase 2" is true — those keep the relationship AND the boundary
+
+## Example Trigger Phrases
+
+- "My client keeps adding requests."
+- "Is this scope creep?"
+- "How do I say that's out of scope nicely?"
+- "Write a change order email."

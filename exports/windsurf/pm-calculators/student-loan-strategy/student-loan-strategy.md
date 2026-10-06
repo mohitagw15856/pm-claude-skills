@@ -73,3 +73,10 @@ Match captured first: [yes/no — fix first if no] · Temperament: [their words,
 - [ ] Do not skip the match — allocating around free money is malpractice-by-spreadsheet
 - [ ] Do not push refinancing federal loans from inside a calculator — one-way doors get named and routed
 - [ ] Do not moralize debt urgency — a 3.5% loan is cheap money and saying so is honesty, not heresy
+
+## Example Trigger Phrases
+
+- "Should I pay off my student loans faster?"
+- "Pay loans."
+- "Is my forgiveness track worth it?"
+- "Model my student debt."

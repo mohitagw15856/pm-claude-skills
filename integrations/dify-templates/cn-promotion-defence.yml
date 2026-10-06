@@ -23,9 +23,7 @@ workflow:
     speech_to_text:
       enabled: false
     suggested_questions:
-    - '帮我准备晋升答辩，从 P6 到 P7，20 分钟'
-    - '写晋升答辩 PPT 的大纲'
-    - '模拟一下晋升委员会会问我什么问题'
+    []
     suggested_questions_after_answer:
       enabled: false
     text_to_speech:
@@ -155,10 +153,10 @@ workflow:
             - **隐藏差距。** 主动说出一个差距并给出计划，本身就是下一职级的自我认知。
 
             ## 示例触发语
-            - "帮我准备晋升答辩，从 P6 到 P7，20 分钟。"
-            - "写晋升答辩 PPT 的大纲。"
-            - "模拟一下晋升委员会会问我什么问题。"
-            - "Help me prepare my promotion defence for a Chinese tech company."
+            - “帮我准备晋升答辩，从 P6 到 P7，20 分钟。”
+            - “写晋升答辩 PPT 的大纲。”
+            - “模拟一下晋升委员会会问我什么问题。”
+            - “Help me prepare my promotion defence for a Chinese tech company.”
 
             （本应用基于开源技能库 PM Skills 的 cn-promotion-defence 技能：https://github.com/mohitagw15856/pm-claude-skills ，MIT 协议。）
         selected: false

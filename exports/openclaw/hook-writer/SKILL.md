@@ -55,3 +55,10 @@ Keep each hook in the platform's natural length (a YouTube title ≤60 chars; an
 - Ten rewrites of the same hook
 - Clickbait the body betrays (kills trust + reach long-term)
 - Hooks too long for the platform (a 90-char YouTube title, a 3-line "first line")
+
+## Example Trigger Phrases
+
+- "Write a hook."
+- "Write the first line of this post."
+- "Write a cold open for this video."
+- "Make this thread starter more clickable."

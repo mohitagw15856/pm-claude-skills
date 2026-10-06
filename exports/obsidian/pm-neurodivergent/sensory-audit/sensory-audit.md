@@ -106,6 +106,13 @@ Add (input-seeking): [fidgets, pressure, movement — if relevant]
 [[meltdown-map]] when overload tips into shutdown; [[attention-reset]] for the
 digital-sensory layer.
 
+## Example Trigger Phrases
+
+- "My office wrecks me and I don't know why."
+- "I'm overstimulated all the time."
+- "Make my home autism and ADHD friendly."
+- "Audit my commute for sensory overload."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -70,6 +70,13 @@ Ask for these only if they aren't already provided (else infer and label):
 
 Marketplace SEO & CRO practice — relevance-and-performance ranking, field-appropriate keyword placement, and conversion optimization (title, images, reviews, price).
 
+## Example Trigger Phrases
+
+- "Optimize an Amazon/Etsy listing."
+- "Improve marketplace SEO."
+- "Fix a product listing that isn't selling."
+- "Write keyword-rich titles and bullets."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

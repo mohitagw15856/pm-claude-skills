@@ -83,6 +83,13 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 
 Tenant-side lease review practice — clause triage, exit-cost math, deposit-condition auditing.
 
+## Example Trigger Phrases
+
+- "What am I signing?"
+- "Decode my lease."
+- "Is this rental agreement normal?"
+- "Can my landlord really do this?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -65,3 +65,10 @@ Ask for these only if they aren't already provided (else mark to set):
 ## Based On
 
 Billing & accounts-receivable practice — complete, itemised invoices with clear terms and payment instructions (tax treatment left to a qualified accountant).
+
+## Example Trigger Phrases
+
+- "Write an invoice."
+- "Create a bill."
+- "Draft a freelance/contractor invoice."
+- "Set up an invoice template."

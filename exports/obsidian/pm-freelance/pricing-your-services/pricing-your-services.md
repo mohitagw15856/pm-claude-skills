@@ -69,6 +69,13 @@ Earns a discount: [list with exchange rates] · Floor: $[N] ([why]) · Below flo
 - [ ] Do not justify the rate after saying it — justification signals negotiability
 - [ ] Do not discount without an exchange — reprice scope, terms, or timeline instead
 
+## Example Trigger Phrases
+
+- "How should I price my freelance services?"
+- "Build my pricing packages."
+- "Hourly, day rate or retainer?"
+- "Help me quote without flinching."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

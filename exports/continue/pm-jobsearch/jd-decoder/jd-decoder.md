@@ -60,3 +60,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Job-description analysis practice — requirement triage, signal-reading, ATS keyword mirroring.
+
+## Example Trigger Phrases
+
+- "Analyse a job description."
+- "Decode a JD."
+- "Assess fit for a role."
+- "Figure out what a posting really means before applying."

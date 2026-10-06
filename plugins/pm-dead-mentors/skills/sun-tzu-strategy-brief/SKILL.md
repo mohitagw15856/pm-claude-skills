@@ -31,3 +31,10 @@ Ask for (if not already provided):
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Facing a competitor head-to-head."
+- "Prepare a bake-off or RFP."
+- "Entering a rival's market."
+- "Pick which fight to have."

@@ -107,6 +107,13 @@ Hard-but-healing lines included only where the writer wanted them.]
 [[grief-admin]] for the people who receive it; [[the-time-capsule]] is the
 professional-decisions cousin; [[personal-bio]] shares the voice-mining craft.
 
+## Example Trigger Phrases
+
+- "Help me write a letter to my kids."
+- "Write a legacy letter."
+- "Help me write an ethical will."
+- "Write a letter for my partner to read later."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

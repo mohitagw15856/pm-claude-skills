@@ -493,6 +493,13 @@ Before opening your first pull request, verify:
 - [ ] Do not assume Docker Desktop is configured correctly — memory limits and platform (M1/M2) compatibility must be explicitly called out
 - [ ] Do not omit expected output for key commands — without "expected output", engineers cannot tell whether a step succeeded or silently failed
 
+## Example Trigger Phrases
+
+- "Write a dev setup guide."
+- "Create onboarding documentation for engineers."
+- "Document local environment setup."
+- "Write a getting-started guide for a codebase."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

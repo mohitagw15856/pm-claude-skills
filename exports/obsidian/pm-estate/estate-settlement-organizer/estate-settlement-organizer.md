@@ -67,6 +67,13 @@ Ask for these if not provided:
 - [ ] Do not commingle funds even briefly — the separate account is the whole shield
 - [ ] Do not give legal advice or state deadlines as universal — organize the work; the law is local and the attorney's
 
+## Example Trigger Phrases
+
+- "I'm the executor what do I do."
+- "Organize settling an estate."
+- "What's the probate process roughly?"
+- "Track estate assets and debts."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

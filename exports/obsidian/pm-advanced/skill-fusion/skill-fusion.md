@@ -47,6 +47,13 @@ Real tasks ignore taxonomy: the investor update that's half postmortem, the laun
 - [ ] Do not inherit boilerplate from both parents (two intros, two summaries) — the classic staple smell
 - [ ] Do not let the fusion drop both parents' verification sections in the compression — the quality bar merges; it never thins
 
+## Example Trigger Phrases
+
+- "This PRD also needs to be a pitch."
+- "Combine two skills for this task."
+- "My postmortem has to double as a board update."
+- "Fuse these two skills into one brief."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

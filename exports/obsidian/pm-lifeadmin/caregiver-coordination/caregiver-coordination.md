@@ -69,6 +69,13 @@ Swap protocol: [how] · Escalation: [symptom → who → then who; 911-first lis
 - [ ] Do not plan around the care recipient — their preferences and remaining autonomy are inputs, not obstacles
 - [ ] Do not give legal or medical advice — organize around professionals, and route those questions to them
 
+## Example Trigger Phrases
+
+- "Help me coordinate care for my mom."
+- "My siblings and I need to split caregiving."
+- "Organize care for a sick family member."
+- "Set up a care schedule."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

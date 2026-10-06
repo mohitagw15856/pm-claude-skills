@@ -27,3 +27,11 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "How do I vote?"
+- "Am I registered?"
+- "What's the deadline to register?"
+- "Help me vote by mail."
+- "What's on my ballot?"

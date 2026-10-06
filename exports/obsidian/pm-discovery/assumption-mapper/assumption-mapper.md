@@ -110,6 +110,14 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Each validation method is specific (not just "do research" — name the method and sample size)
 - [ ] Priority scores are consistent (Impact − Confidence, higher = more urgent)
 
+## Example Trigger Phrases
+
+- "Review a product brief for assumptions."
+- "Audit a PRD for risks."
+- "Find hidden assumptions."
+- "Validate product plans."
+- "Run an assumption analysis."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

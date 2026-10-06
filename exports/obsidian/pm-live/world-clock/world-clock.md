@@ -59,6 +59,13 @@ Source: [timeapi.io / worldtimeapi] · rerun: `[exact curl]`
 - [ ] Do not pick who suffers the 6am call — present the window; the humans choose
 - [ ] Do not present a timeout as an answer — fall back, or hand over the command
 
+## Example Trigger Phrases
+
+- "What time is it in a city?"
+- "Convert 3pm my time to Tokyo."
+- "Find a meeting slot across time zones."
+- "What's the UTC offset somewhere?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

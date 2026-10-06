@@ -66,3 +66,10 @@ Ask for these if not provided:
 - [ ] Do not name names attached to negative feedback, even when invited to
 - [ ] Do not litigate your performance reviews or comp history — closed chapters
 - [ ] Do not skip the prep because "it's just a formality" — unprepared honesty is how references quietly die
+
+## Example Trigger Phrases
+
+- "What do I say in my exit interview?"
+- "Should I be honest in my exit interview?"
+- "Prep me for my exit interview."
+- "Is the exit interview confidential?"

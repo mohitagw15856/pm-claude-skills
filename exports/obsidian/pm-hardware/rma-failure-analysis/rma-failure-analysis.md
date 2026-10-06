@@ -76,6 +76,14 @@ Ask for these if not provided; analyse whatever slice exists, but state the deno
 - [ ] Do not root-cause by vote — teardown evidence and batch correlation, or label it a hypothesis
 - [ ] Do not compare return rates across cohorts with different time-in-field — young cohorts always look better
 
+## Example Trigger Phrases
+
+- "Analyse RMA data."
+- "Investigate field returns."
+- "Run failure analysis on returned units."
+- "Write an 8D report."
+- "Figure out why return rates are climbing."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

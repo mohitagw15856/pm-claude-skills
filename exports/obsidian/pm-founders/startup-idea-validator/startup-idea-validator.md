@@ -63,6 +63,13 @@ The single cheapest, fastest test that would most change your confidence — wha
 - Recommending a 6-month build as the "test"
 - A verdict with no path forward
 
+## Example Trigger Phrases
+
+- "Validate a startup idea."
+- "Evaluate a business idea."
+- "Stress-test a concept."
+- "Decide whether something is worth building."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

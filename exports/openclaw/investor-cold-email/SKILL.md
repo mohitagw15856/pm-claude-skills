@@ -55,3 +55,10 @@ A 2-line nudge to send if there's no reply in ~5 business days — adds a *new* 
 - Generic flattery ("I love your work")
 - Multiple asks or a vague one
 - A follow-up that just says "bumping this" with no new information
+
+## Example Trigger Phrases
+
+- "Email an investor."
+- "Write a fundraising outreach."
+- "Request a warm intro."
+- "Craft a forwardable blurb."

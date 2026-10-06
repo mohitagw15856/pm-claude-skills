@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Write a roommate agreement."
+- "We're moving in together: set the house rules."
+- "The dishes cold war has started."
+- "Someone's moving out mid-lease."

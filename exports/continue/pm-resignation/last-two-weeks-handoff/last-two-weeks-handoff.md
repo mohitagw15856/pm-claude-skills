@@ -63,3 +63,10 @@ Ask for these if not provided:
 - [ ] Do not hand off to "the team" — every item gets a name or an honest "unowned, here's the risk"
 - [ ] Do not skip the landmines to seem tidy — the non-obvious gotchas are the doc's highest-value lines
 - [ ] Do not take anything that isn't yours — code, docs, contact lists per policy; the clean exit includes the laptop
+
+## Example Trigger Phrases
+
+- "I just resigned how do I hand off my work."
+- "Write my transition document."
+- "Plan my last two weeks."
+- "What do I do before I leave my job?"

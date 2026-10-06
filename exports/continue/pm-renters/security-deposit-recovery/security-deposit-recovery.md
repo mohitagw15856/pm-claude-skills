@@ -64,3 +64,10 @@ Ask for these if not provided:
 - [ ] Do not cite specific statutes or day-counts as fact — categories with verify-locally flags
 - [ ] Do not skip the itemization request rung — many withholdings collapse at the first ask for receipts
 - [ ] Do not let sunk anger drive the small-claims call — the prep sheet's first line is the arithmetic
+
+## Example Trigger Phrases
+
+- "How do I get my deposit back?"
+- "My landlord is keeping my deposit."
+- "Dispute these deposit deductions."
+- "Write a deposit demand letter."

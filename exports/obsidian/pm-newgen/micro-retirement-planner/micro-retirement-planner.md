@@ -131,6 +131,12 @@ the break moves countries; [[the-time-capsule]] — seal one to open on
 re-entry day; [[resignation kit|pip-responder]] neighbors in [plugins/pm-resignation](../../plugins/pm-resignation/)
 for the leaving itself.
 
+## Example Trigger Phrases
+
+- "I want to take 6 months off."
+- "Quit and travel."
+- "Can I afford a break?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

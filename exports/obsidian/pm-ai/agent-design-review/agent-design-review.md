@@ -76,6 +76,13 @@ confirmation gates on high-impact actions. Pair with [`llm-guardrails-spec`](../
 
 LLM agent design practice — bounded control flow, least-privilege tool use, context management, error recovery, and safety gating.
 
+## Example Trigger Phrases
+
+- "Review an agent architecture."
+- "Critique a multi-step/tool-using agent."
+- "Debug an agent that loops."
+- "Harden an agent before launch."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

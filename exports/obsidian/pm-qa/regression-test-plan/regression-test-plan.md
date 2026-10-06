@@ -68,6 +68,13 @@ Ask for these only if they aren't already provided (else infer and label):
 
 Risk-based regression practice — change-impact analysis, tiered smoke/targeted/full suites, automation prioritisation, and release-fit run strategy.
 
+## Example Trigger Phrases
+
+- "Plan regression testing."
+- "Build a regression suite."
+- "Decide what to re-test after a change."
+- "Trim a bloated regression pack."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

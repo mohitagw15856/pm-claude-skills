@@ -62,3 +62,10 @@ Ask for these if not provided:
 - [ ] Do not skip the briefing sheet — unprepared enthusiasm comes out as "great person to work with," which checkers hear as nothing
 - [ ] Do not put words in a referee's mouth they can't own — briefing is reminding, not scripting fiction
 - [ ] Do not burn a complicated-exit bridge by asking the wrong person — the risk notes exist to be read
+
+## Example Trigger Phrases
+
+- "Help me get references."
+- "Write a reference request."
+- "Prep my referee."
+- "Ask my old manager for a recommendation."

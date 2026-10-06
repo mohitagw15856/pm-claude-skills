@@ -61,3 +61,10 @@ Ask for these if not provided:
 - [ ] Do not submit quarterly — aged reports invite the scrutiny they can no longer answer
 - [ ] Do not spend-then-ask on trigger items — forgiveness is priced in favors and sometimes denials
 - [ ] Do not nickel-audit as an approver — the $9 interrogation costs trust the policy needs for the $900 questions
+
+## Example Trigger Phrases
+
+- "My expense reports are always late."
+- "Set up my expense workflow."
+- "What does the policy actually require?"
+- "Review expenses as a manager without being a receipt cop."

@@ -75,6 +75,12 @@ Mark all placeholder figures *(replace with your numbers)*.
 
 Real-estate investment analysis practice — NOI/cap-rate/cash-on-cash modelling, full operating-expense accounting, and downside sensitivity.
 
+## Example Trigger Phrases
+
+- "Analyze a rental property."
+- "Evaluate a real-estate investment."
+- "Run the numbers on an investment property."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

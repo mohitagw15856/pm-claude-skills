@@ -67,3 +67,10 @@ Ask for these if not provided:
 - [ ] Do not rubber-stamp proven tools — the usage audit and the ask cost minutes and fund budgets
 - [ ] Do not keep the tracker personal — the ambushes cluster after the owner leaves
 - [ ] Do not sign anything into the void — no inventory row, no signature; the intake rule is the whole system's moat
+
+## Example Trigger Phrases
+
+- "Track our contracts and renewals."
+- "We got auto-renewed again."
+- "Do we have to decide on this vendor?"
+- "Set up renewal management."

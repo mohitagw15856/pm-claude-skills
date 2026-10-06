@@ -54,6 +54,14 @@ End with: **negotiation notes** — the 2–3 levers (usage rights, exclusivity,
 - Inventing follower/engagement numbers
 - A single flat rate with no rationale or room to negotiate usage/exclusivity
 
+## Example Trigger Phrases
+
+- "Make a media kit."
+- "Pitch a brand."
+- "Land a sponsorship."
+- "Write a brand-deal email."
+- "Set creator rates."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -65,3 +65,9 @@ Ask for these if not provided:
 - [ ] Do not persuade with the axes — emphasis is styling; truncation is lying
 - [ ] Do not hide the caveat — small-print honesty beats Q&A ambush arithmetic
 - [ ] Do not stack a second chart "for context" — context lives in the appendix; the slide has one job
+
+## Example Trigger Phrases
+
+- "Make this data slide land."
+- "My chart slide confuses people."
+- "How do I present these numbers?"

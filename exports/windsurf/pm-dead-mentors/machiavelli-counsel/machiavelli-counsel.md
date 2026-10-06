@@ -96,3 +96,10 @@ and what to do instead. Be specific: "he'd say X; the durable version is Y."]
       appears nowhere in it)
 - [ ] Do not flatter the user's read of their own situation — Machiavelli's entire
       value is that he didn't
+
+## Example Trigger Phrases
+
+- "I'm navigating a reorg."
+- "My project is caught in politics."
+- "Who holds the power here?"
+- "How would Machiavelli play this?"

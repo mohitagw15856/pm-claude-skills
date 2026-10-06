@@ -59,6 +59,12 @@ What the owner is agreeing to, the deposit/authorization, and the decision point
 - Stating estimates as fixed prices
 - No plan for when intra-op findings change the scope and cost
 
+## Example Trigger Phrases
+
+- "Prepare a treatment plan."
+- "Create an estimate for an owner."
+- "Have the cost conversation in a vet practice."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

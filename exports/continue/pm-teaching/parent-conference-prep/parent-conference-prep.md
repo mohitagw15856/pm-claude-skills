@@ -52,3 +52,9 @@ The likely parent responses (defensiveness, blame, overwhelm, disengagement) and
 - Dumping data with no plan or partnership
 - No plan for the defensive or upset reaction
 - Education jargon (RTI, standards codes) left untranslated for the parent
+
+## Example Trigger Phrases
+
+- "Prep for a parent conference."
+- "Plan what to say to a parent."
+- "Handle a difficult conversation about a student's behavior."

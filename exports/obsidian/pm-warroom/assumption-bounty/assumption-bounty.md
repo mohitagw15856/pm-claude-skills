@@ -46,6 +46,13 @@ Every plan is a stack of beliefs wearing a costume of facts. Most die from an as
 - [ ] Do not treat acknowledged assumptions as finds — the bounty is for the hidden ones; padding with the known list is claiming someone else's kill
 - [ ] Do not moralise about assuming — plans require assumptions; the sin is anonymity, not existence
 
+## Example Trigger Phrases
+
+- "What are we assuming here?"
+- "Find the hidden assumptions in this plan."
+- "Price the assumptions in this spreadsheet."
+- "Which assumption should we test first?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

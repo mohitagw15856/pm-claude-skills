@@ -62,6 +62,13 @@ Source: Open-Meteo air-quality API (modeled/CAMS) · rerun: `[exact curl]`
 - [ ] Do not judge a whole day by one hour when the question is "when"
 - [ ] Do not dump all pollutants undigested — lead with the one the question is about
 
+## Example Trigger Phrases
+
+- "What's the air quality?"
+- "Is it safe to run outside?"
+- "What's the AQI in my city?"
+- "How bad is the pollution right now?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

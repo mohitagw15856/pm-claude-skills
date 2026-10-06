@@ -65,3 +65,10 @@ Ask for these if not provided:
 - [ ] Do not accept meeting times passively — the counter-offer wins by default because nobody else is playing
 - [ ] Do not batch into your peak hours — corridors go on the energy map's shoulders; peaks are for slabs
 - [ ] Do not defrag once — calendars re-fragment on schedule; the re-census is the maintenance
+
+## Example Trigger Phrases
+
+- "My day is fragmented to death."
+- "Count my context switches."
+- "Batch my meetings and reviews."
+- "Defend against calendar Swiss cheese."

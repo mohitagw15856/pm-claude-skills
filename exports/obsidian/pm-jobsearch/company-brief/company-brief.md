@@ -60,6 +60,12 @@ Ask for these only if they aren't already provided:
 
 Interview research / company due-diligence practice for candidates (business model · trajectory · role-relevant challenges).
 
+## Example Trigger Phrases
+
+- "Research a company for a job."
+- "Prep a company brief before an interview."
+- "Understand a prospective employer fast."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

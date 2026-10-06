@@ -116,6 +116,12 @@ official health-system source. Not medical or insurance-purchase advice.
 and [[credit-from-scratch]] for the other systems; [[doctor-visit-prep]] once you're
 enrolled; [[perimenopause-navigator]]/[[diagnosis-limbo-kit]] for specific health navigation.
 
+## Example Trigger Phrases
+
+- "How does healthcare work in [country]?"
+- "Do I need health insurance in [country]?"
+- "I just moved and need to see a doctor."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

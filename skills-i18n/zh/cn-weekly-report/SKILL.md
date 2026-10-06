@@ -77,7 +77,7 @@ description: "为上级撰写周报或月报：有数据的成果、目标进展
 - **为了显得忙而夸大数字。** 每周的数字很容易核对。
 
 ## 示例触发语
-- "帮我把这些笔记整理成周报。"
-- "写一份给老板的月报，突出数据。"
-- "本周工作有点乱，帮我写周报，下周有个风险要提。"
-- "Write my weekly report in Chinese for my manager."
+- “帮我把这些笔记整理成周报。”
+- “写一份给老板的月报，突出数据。”
+- “本周工作有点乱，帮我写周报，下周有个风险要提。”
+- “Write my weekly report in Chinese for my manager.”

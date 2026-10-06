@@ -63,6 +63,13 @@ Keep it short enough to read in five seconds. Use this structure:
 
 Social/launch announcement craft (lead with the news, proof over adjectives, one CTA, skimmable for an image card).
 
+## Example Trigger Phrases
+
+- "Announce our launch on LinkedIn."
+- "Write a post announcing our new hire."
+- "We just raised a round: write the announcement."
+- "Make a shareable card for this milestone."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

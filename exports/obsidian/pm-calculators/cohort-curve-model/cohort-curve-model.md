@@ -50,6 +50,13 @@ It prints the fit (`a=0.619 b=0.371 R²=1.000 lifetime≈7.7 periods LTV≈308`)
 - [ ] Do not average incomplete cohorts into the input (young cohorts drag the tail down mechanically — survivorship in reverse)
 - [ ] Do not present the fitted floor as a promise — it is an extrapolation, and the honest phrasing is "if the current shape holds"
 
+## Example Trigger Phrases
+
+- "Here's our cohort retention: what's the LTV?"
+- "Fit a retention curve to these cohorts."
+- "How long do customers stay, based on this data?"
+- "Is our retention improving across cohorts?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

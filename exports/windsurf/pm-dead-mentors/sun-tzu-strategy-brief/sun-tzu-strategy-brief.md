@@ -98,3 +98,10 @@ what can be won: which existing customers, allies, or territory must be defended
 - [ ] Do not treat colleagues as the "enemy" — this skill is for external contests;
       internal politics belongs to machiavelli-counsel, and the difference matters
 - [ ] Do not skip the defend-while-attacking section because the user is excited
+
+## Example Trigger Phrases
+
+- "Facing a competitor head-to-head."
+- "Prepare a bake-off or RFP."
+- "Entering a rival's market."
+- "Pick which fight to have."

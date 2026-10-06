@@ -73,6 +73,12 @@ Ask for these if not provided:
 - **Perfecting the book past the cook.** The correction pass with them *is* the point; a posthumous masterpiece is the failure mode.
 - **Treating shifted versions as errors.** The recipe changed over forty years; keep the variants and say when each was true.
 
+## Example Trigger Phrases
+
+- "Write down grandma's recipes."
+- "How much is some flour?"
+- "Make a family cookbook."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

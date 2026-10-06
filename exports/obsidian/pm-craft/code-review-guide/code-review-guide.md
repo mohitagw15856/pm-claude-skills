@@ -67,6 +67,12 @@ Ask for these only if they aren't already provided:
 
 Senior code-review practice (Google's engineering review guidelines): prioritize correctness/design, severity-tag feedback, be kind.
 
+## Example Trigger Phrases
+
+- "Review code."
+- "Give PR feedback."
+- "Review this change."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

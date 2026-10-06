@@ -60,3 +60,9 @@ What's still open before this can publish, and a note that quotes should be conf
 - Missing implied/causal claims because they're not stated as facts
 - Waving through a defamatory line without verification or legal input
 - Rewriting the prose instead of flagging and sourcing the facts
+
+## Example Trigger Phrases
+
+- "Fact-check a piece."
+- "Verify claims before publishing."
+- "Do editorial verification."

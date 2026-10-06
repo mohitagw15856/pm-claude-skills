@@ -74,3 +74,10 @@ Ask for these if not provided:
 - [ ] Do not coach bad-faith tactics — surface them when the other side uses them, and name the good-faith line
 - [ ] Do not resolve the negotiation neatly — the rehearsal ends where sessions end: partial, adjourned, with homework
 - [ ] Do not stay in character in the debrief
+
+## Example Trigger Phrases
+
+- "Prepare for union negotiations."
+- "Rehearse a bargaining session."
+- "Practice negotiating with management."
+- "We are heading into pay talks."

@@ -64,3 +64,10 @@ Day 0: send via official intake, keep proof · Day ~10: polite status call, note
 - [ ] Do not over-request — format follows purpose; the complete file is for archives, not handoffs
 - [ ] Do not escalate before the clock has actually run — the ladder's power is its reasonableness
 - [ ] Do not interpret the records' medical content — organize the paper; the medicine belongs to clinicians
+
+## Example Trigger Phrases
+
+- "How do I get my medical records?"
+- "Write a records request."
+- "My doctor's office won't send my records."
+- "What records should I collect?"

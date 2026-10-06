@@ -79,3 +79,10 @@ Kết thúc sản phẩm bằng câu sau, giữ nguyên văn: *"Đây là phần
 ## Dựa trên
 
 Thực hành rà soát hợp đồng thuê từ phía người thuê: phân loại điều khoản, tính chi phí rời đi, kiểm tra điều kiện hoàn cọc.
+
+## Ví dụ câu kích hoạt
+
+- "Tôi sắp ký cái gì vậy?"
+- "Giải mã hợp đồng thuê nhà giúp tôi."
+- "Hợp đồng thuê này có bình thường không?"
+- "Chủ nhà thật sự được làm thế này à?"

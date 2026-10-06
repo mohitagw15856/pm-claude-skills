@@ -77,3 +77,9 @@ Resume satu kolom yang ramah ATS dengan urutan berikut:
 ## Dasar Rujukan
 
 Praktik resume berbasis pencapaian yang sadar ATS (kronologis terbalik, poin dampak terukur, keselarasan kata kunci).
+
+## Contoh Frasa Pemicu
+
+- "Tulis ulang CV saya."
+- "Ubah pengalaman saya menjadi CV."
+- "Sesuaikan CV saya dengan lowongan ini."

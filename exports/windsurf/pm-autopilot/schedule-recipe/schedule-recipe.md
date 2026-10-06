@@ -78,3 +78,10 @@ Every recipe includes the prompt the scheduled run executes. It must contain:
 - [ ] Do not schedule without failure alerting — silence and success must not look identical
 - [ ] Do not default to hourly/daily to "be safe" — match the cadence to how often the inputs change
 - [ ] Do not put secrets inline in the setup block — reference the runner's secret store
+
+## Example Trigger Phrases
+
+- "Schedule a recurring AI task."
+- "Set up a routine."
+- "Automate a weekly report."
+- "Wire a skill into n8n or GitHub Actions."

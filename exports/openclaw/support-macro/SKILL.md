@@ -60,3 +60,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Support-experience practice — empathetic, scannable, personalised canned responses (Zendesk/Intercom macro conventions).
+
+## Example Trigger Phrases
+
+- "Write a support macro."
+- "Write a canned response for refund requests."
+- "Write a saved reply that doesn't sound robotic."
+- "Template our answer to this common ticket."

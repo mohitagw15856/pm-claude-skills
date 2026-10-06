@@ -134,3 +134,10 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not omit effort estimates from engineering — PM-only effort estimates are frequently optimistic and skew results
 - [ ] Do not forget to note dependencies that would change the sequencing even if RICE scores suggest otherwise
 - [ ] Do not score every initiative at the same impact level — if everything is "high impact," the framework produces no useful signal
+
+## Example Trigger Phrases
+
+- "Prioritise features."
+- "Rank a backlog using RICE."
+- "Score initiatives for quarterly planning."
+- "Apply an objective framework to a list of competing ideas."

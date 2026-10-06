@@ -93,6 +93,12 @@ Define four families; every metric gets a threshold, a window, and an owner.
 - [ ] Do not treat observability as launch-week scaffolding — drift metrics only work with months of baseline
 - [ ] Do not ship an agent that can take actions without logging the guardrail verdicts alongside the actions
 
+## Example Trigger Phrases
+
+- "What to log for an LLM app?"
+- "Design agent tracing."
+- "Define quality and cost monitors."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

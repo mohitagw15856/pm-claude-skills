@@ -65,3 +65,10 @@ Ask for these if not provided:
 - [ ] Do not rewrite the deck in your voice — rubric failures get fixes; style differences get silence
 - [ ] Do not deliver forty comments — the two-fixes compression is the review's actual deliverable
 - [ ] Do not soften 🔴s for kindness — the room will deliver them unsoftened tomorrow
+
+## Example Trigger Phrases
+
+- "Review my deck."
+- "Give feedback on this presentation."
+- "Is this ready for the board?"
+- "Our deck reviews are just font opinions."

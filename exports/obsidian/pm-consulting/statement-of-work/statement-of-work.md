@@ -64,6 +64,13 @@ Ask for these only if they aren't already provided:
 
 Statement-of-work / contracting practice — explicit scope + exclusions, acceptance criteria, milestone payments, change control.
 
+## Example Trigger Phrases
+
+- "Write a SOW."
+- "Write the scope of work for this project."
+- "Turn what we agreed into a project agreement."
+- "Stop this project creeping in scope."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

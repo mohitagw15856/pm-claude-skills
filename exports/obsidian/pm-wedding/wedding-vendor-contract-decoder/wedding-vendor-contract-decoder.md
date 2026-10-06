@@ -70,6 +70,13 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 
 Client-side event-contract review — cancellation-schedule math, postponement-clause triage, silence auditing.
 
+## Example Trigger Phrases
+
+- "Review this venue contract."
+- "Is this photographer contract normal?"
+- "What if we have to postpone?"
+- "Decode this caterer agreement."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

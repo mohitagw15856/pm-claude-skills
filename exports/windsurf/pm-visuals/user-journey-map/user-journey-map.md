@@ -73,3 +73,9 @@ journey
 ## Based On
 
 Customer/user journey mapping (phases, actions, emotion curve, friction-to-opportunity), as renderable Mermaid.
+
+## Example Trigger Phrases
+
+- "Map a user/customer journey."
+- "Show the experience end-to-end."
+- "Find friction and drop-off points."

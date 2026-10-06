@@ -100,6 +100,13 @@ Kill criteria: [the honest thresholds]
 - [ ] Do not promise market outcomes ("this would sell!") — the promise is a
       playtest by Friday
 
+## Example Trigger Phrases
+
+- "I have a board game idea."
+- "Design a game about X."
+- "My game drags in the midgame."
+- "How do I playtest this?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

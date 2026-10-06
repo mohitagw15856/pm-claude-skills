@@ -58,3 +58,10 @@ Chỉ hỏi những thông tin này nếu chưa được cung cấp:
 ## Cơ sở
 
 Thực hành đánh giá hiệu suất dựa trên năng lực: thành tích gắn với bằng chứng và tự đánh giá được hiệu chỉnh.
+
+## Ví dụ câu kích hoạt
+
+- "Viết bản tự đánh giá cho tôi."
+- "Viết bản tự đánh giá cho kỳ này."
+- "Giúp tôi viết bản tự nhận xét."
+- "Biến một năm của tôi thành bản tự đánh giá hiệu suất."

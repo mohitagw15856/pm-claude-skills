@@ -62,6 +62,13 @@ Source: GitHub REST (anonymous, rate-budgeted) · as of [date] · rerun: `[the c
 - [ ] Do not fabricate around a 403 — rate-limited is a reportable state
 - [ ] Do not condemn quiet-but-finished projects — the nature test applies before the verdict
 
+## Example Trigger Phrases
+
+- "Is this repo maintained?"
+- "Check this project before we build on it."
+- "How active is this library's development?"
+- "Compare these repos health."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

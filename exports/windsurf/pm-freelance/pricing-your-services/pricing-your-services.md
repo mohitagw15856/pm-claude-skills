@@ -66,3 +66,10 @@ Earns a discount: [list with exchange rates] · Floor: $[N] ([why]) · Below flo
 - [ ] Do not build a cheap bottom tier to "win volume" — it attracts the clients who cost the most per dollar
 - [ ] Do not justify the rate after saying it — justification signals negotiability
 - [ ] Do not discount without an exchange — reprice scope, terms, or timeline instead
+
+## Example Trigger Phrases
+
+- "How should I price my freelance services?"
+- "Build my pricing packages."
+- "Hourly, day rate or retainer?"
+- "Help me quote without flinching."

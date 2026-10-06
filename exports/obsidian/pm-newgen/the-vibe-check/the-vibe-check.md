@@ -119,6 +119,13 @@ tested once · the bus factor file (how to deploy, where the keys live).
 the prompt-injection deep-dive; [[local-dev-setup]] and [[monitoring-setup-guide]]
 for the operational half of "real app."
 
+## Example Trigger Phrases
+
+- "Is it safe to launch?"
+- "Claude built my app: is it secure?"
+- "Harden my prototype before strangers use it."
+- "Vibe check my project."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -64,6 +64,14 @@ Ask for these if not provided:
 - [ ] Do not say bare no upward — the tradeoff board is both more honest and more survivable
 - [ ] Do not decline the new while hoarding the old — the audit is where capacity actually returns
 
+## Example Trigger Phrases
+
+- "How do I say no to this?"
+- "Turn down a request."
+- "I say yes to everything and drown."
+- "Push back on my manager."
+- "Protect the roadmap from a pet feature."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

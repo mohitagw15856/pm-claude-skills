@@ -57,6 +57,13 @@ Ask for these only if they aren't already provided:
 
 Query-optimization practice — sargability, index/partition pruning, join-order and fan-out, plan reading, columnar bytes-scanned tuning.
 
+## Example Trigger Phrases
+
+- "Speed up a slow query."
+- "Reduce a query's cost/scan."
+- "Fix a timeout."
+- "Review a query plan."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

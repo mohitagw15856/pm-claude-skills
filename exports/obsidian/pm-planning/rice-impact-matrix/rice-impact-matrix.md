@@ -89,6 +89,12 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not ignore the conflict flag when RICE rank and strategic alignment sharply diverge
 - [ ] Do not accept 100% confidence on estimates that have not been validated with data
 
+## Example Trigger Phrases
+
+- "Prioritise features."
+- "Build a priority matrix."
+- "Decide what to build next with multiple competing initiatives."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

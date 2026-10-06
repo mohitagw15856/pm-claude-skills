@@ -102,3 +102,9 @@ sensory · parking/drop-off — tailored to your needs]
 [[accessible-travel-planner]] for the whole trip; [[accessibility-audit]] for a formal
 digital/UI standards audit; [[accommodation-request]] when the venue is your workplace;
 [[report-a-hazard]] if a public venue's access is unlawfully absent.
+
+## Example Trigger Phrases
+
+- "Will this place work for my wheelchair?"
+- "Check if this venue is accessible."
+- "Is this restaurant/office actually accessible?"

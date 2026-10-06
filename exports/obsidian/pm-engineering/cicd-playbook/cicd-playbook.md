@@ -310,6 +310,14 @@ Ask for these if not already provided:
 - [ ] Deployment window is specific — not "during business hours"
 - [ ] Post-deploy check thresholds are calibrated to actual baseline metrics
 
+## Example Trigger Phrases
+
+- "Document a CI/CD pipeline."
+- "Write a deployment process."
+- "Define release gates."
+- "Document build and test stages."
+- "Create a deployment guide."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

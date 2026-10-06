@@ -67,3 +67,9 @@ Ask for these if not provided:
 - [ ] Do not canonicalize silently — unannounced truth loses to bookmarked habit
 - [ ] Do not leave the winner on a desktop or in a thread — un-versioned homes restart the chaos
 - [ ] Do not send attachments of the untangled doc — every attachment is the sequel's opening scene
+
+## Example Trigger Phrases
+
+- "Which version is the real one?"
+- "Merge these document copies."
+- "Stop the version chaos on this doc."

@@ -69,6 +69,13 @@ Ask for these if not provided:
 - [ ] Do not name minors directly as the fix for anything — that pattern is itself a flag
 - [ ] Do not close the audit at "submitted" — unconfirmed updates are how this audit gets needed twice
 
+## Example Trigger Phrases
+
+- "Check my beneficiaries."
+- "Does my 401k go to my ex?"
+- "Do beneficiary forms beat a will."
+- "What should I update after marriage/divorce/a birth?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

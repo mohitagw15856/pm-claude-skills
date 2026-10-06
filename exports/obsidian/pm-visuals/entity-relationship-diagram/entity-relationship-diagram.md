@@ -86,6 +86,13 @@ erDiagram
 
 Data modeling (entity-relationship modeling, crow's-foot notation, normalization), expressed as renderable Mermaid.
 
+## Example Trigger Phrases
+
+- "Design a schema."
+- "Model data."
+- "Show how tables/entities relate."
+- "Diagram a database."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

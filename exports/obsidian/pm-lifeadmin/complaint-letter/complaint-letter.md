@@ -63,6 +63,12 @@ Provide a **short email version** too, and **notes** on anything to confirm.
 
 Consumer-advocacy correspondence practice — factual specificity, a concrete remedy, a reasonable deadline, and a stated escalation path.
 
+## Example Trigger Phrases
+
+- "Write a complaint letter."
+- "Escalate poor service."
+- "Demand a refund/replacement."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

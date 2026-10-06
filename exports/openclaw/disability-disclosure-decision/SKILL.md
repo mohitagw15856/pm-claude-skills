@@ -120,3 +120,10 @@ Reminder: not disclosing is valid, now or ever. This is yours to decide.
 functional disclosure); [[coming-out-rehearsal]] shares the whether/how-to-tell
 engine; [[nt-translator]] and [[masking-budget]] for the neurodivergent version;
 [[disability-benefit-appeal]] for the benefits side.
+
+## Example Trigger Phrases
+
+- "Should I tell work about my disability/condition?"
+- "Disclose my ADHD/chronic illness at work."
+- "Do I tell my employer?"
+- "How much do I share?"

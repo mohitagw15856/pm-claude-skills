@@ -118,6 +118,13 @@ handling "we're chill, we don't need this" · how to end with agreement]
 when the exit goes wrong; [[working-agreements]] — the office version of the
 same peace treaty.
 
+## Example Trigger Phrases
+
+- "Write a roommate agreement."
+- "We're moving in together: set the house rules."
+- "The dishes cold war has started."
+- "Someone's moving out mid-lease."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

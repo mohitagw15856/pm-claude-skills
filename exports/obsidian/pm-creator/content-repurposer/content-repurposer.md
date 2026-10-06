@@ -76,6 +76,12 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - Generic hooks ("Here are some thoughts on…")
 - Hashtag stuffing; CTAs that don't fit the platform
 
+## Example Trigger Phrases
+
+- "Atomize a blog post."
+- "Turn one idea into many posts."
+- "Get more mileage from a piece."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

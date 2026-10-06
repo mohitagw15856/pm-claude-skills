@@ -76,6 +76,13 @@ Ask for these if not provided:
 - **Decoding with hostility.** Most homes are decent; the contract still deserves adult scrutiny, and good homes answer these questions readily.
 - **Treating this as legal advice** — it arms the questions; enforceability is local and professional.
 
+## Example Trigger Phrases
+
+- "Review a care-home."
+- "What does this admission agreement mean?"
+- "Can they raise the fees?"
+- "Can they make my parent leave?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

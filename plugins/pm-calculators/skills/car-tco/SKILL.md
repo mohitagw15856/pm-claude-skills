@@ -72,3 +72,10 @@ Financing interest (run the loan separately) · taxes and fees by jurisdiction �
 - [ ] Do not treat maintenance fears as data — use the ramp, and compare repairs to replacement depreciation
 - [ ] Do not extrapolate one scenario's horizon onto another (a 3-year lease vs 8-year ownership is not a comparison)
 - [ ] Do not moralize the want — price the options honestly and let the user choose with open eyes
+
+## Example Trigger Phrases
+
+- "Should I lease?"
+- "Buy a car."
+- "Is it cheaper to keep my old car?"
+- "What does this car really cost per month?"

@@ -77,6 +77,13 @@ Input shape in the script docstring. The script computes vesting month-by-month 
 - [ ] Do not declare a winner without naming what assumption the win depends on
 - [ ] Do not present the model's output without its assumptions attached
 
+## Example Trigger Phrases
+
+- "Compare job offers."
+- "Which offer pays more over time?"
+- "Model my equity vesting."
+- "Is the startup offer actually worth it?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

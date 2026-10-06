@@ -59,6 +59,13 @@ Ask for these only if they aren't already provided:
 
 Lifecycle marketing / behavioural CRM practice — trigger-based journeys, segmentation, and incrementality testing with holdouts.
 
+## Example Trigger Phrases
+
+- "Plan onboarding emails."
+- "Plan our lifecycle campaigns."
+- "Design drip and winback flows."
+- "Build a CRM messaging calendar."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

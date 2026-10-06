@@ -53,3 +53,9 @@ The 1–2 things a lawyer should confirm against the full contract.
 - "It depends" with no actual read
 - Risk ratings with no scenario behind them
 - Suggesting changes with no example of the better wording
+
+## Example Trigger Phrases
+
+- "Decode legal language."
+- "Explain a term in a contract."
+- "Assess whether a provision is standard."

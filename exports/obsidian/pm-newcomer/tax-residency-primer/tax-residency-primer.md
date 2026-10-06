@@ -116,6 +116,12 @@ handled by a qualified professional for your specific countries and situation.
 if the move is a career break; [[financial-model-narrative|budget-variance-analysis]]
 neighbors for business finances — but a professional owns the tax itself.
 
+## Example Trigger Phrases
+
+- "Am I tax resident in [country]?"
+- "Do I pay tax in two countries?"
+- "What about tax?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

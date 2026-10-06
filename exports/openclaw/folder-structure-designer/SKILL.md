@@ -66,3 +66,10 @@ _inbox/        → anything, when unsure — drained weekly
 - [ ] Do not exceed three levels — depth is where compliance goes to die
 - [ ] Do not attempt the big-bang reorg — it stalls at 30% and leaves two messes
 - [ ] Do not create `misc/` — that's `_inbox` without the drain, i.e., the old problem with a new name
+
+## Example Trigger Phrases
+
+- "Organize our shared drive."
+- "Design a folder structure for the project."
+- "Where should things live?"
+- "Our files are chaos."

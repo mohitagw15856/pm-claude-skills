@@ -58,6 +58,13 @@ Ask for these only if they aren't already provided:
 
 Competency-based performance-review practice — evidence-mapped accomplishments and calibrated self-assessment.
 
+## Example Trigger Phrases
+
+- "Write my self-review."
+- "Write my self-assessment for this cycle."
+- "Help me write my self-evaluation."
+- "Turn my year into a performance self-review."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

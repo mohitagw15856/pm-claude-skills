@@ -68,6 +68,13 @@ Ask for these if not provided:
 - [ ] Do not conflate the two contexts — acquirer paranoia and investor paranoia probe different organs
 - [ ] Do not stay in character in the debrief
 
+## Example Trigger Phrases
+
+- "Simulate due diligence on my startup."
+- "Stress-test my metrics before the raise."
+- "What will the acquirer's analyst ask?"
+- "Prep me for the DD call."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

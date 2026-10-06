@@ -86,3 +86,9 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not place all initiatives in the "Now" quadrant — a matrix with no "Drop" recommendations is not credible
 - [ ] Do not ignore the conflict flag when RICE rank and strategic alignment sharply diverge
 - [ ] Do not accept 100% confidence on estimates that have not been validated with data
+
+## Example Trigger Phrases
+
+- "Prioritise features."
+- "Build a priority matrix."
+- "Decide what to build next with multiple competing initiatives."

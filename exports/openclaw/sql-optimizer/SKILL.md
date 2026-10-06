@@ -59,3 +59,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Query-optimization practice — sargability, index/partition pruning, join-order and fan-out, plan reading, columnar bytes-scanned tuning.
+
+## Example Trigger Phrases
+
+- "Speed up a slow query."
+- "Reduce a query's cost/scan."
+- "Fix a timeout."
+- "Review a query plan."

@@ -60,3 +60,9 @@ Provide a **short email version** too, and **notes** on anything to confirm.
 ## Based On
 
 Consumer-advocacy correspondence practice — factual specificity, a concrete remedy, a reasonable deadline, and a stated escalation path.
+
+## Example Trigger Phrases
+
+- "Write a complaint letter."
+- "Escalate poor service."
+- "Demand a refund/replacement."

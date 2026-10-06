@@ -68,6 +68,13 @@ Ask about job performance only. Do **not** ask about age, health/disability, fam
 - Asking anything about protected characteristics
 - No rubric — a vibe instead of a comparable, documented signal
 
+## Example Trigger Phrases
+
+- "Prepare reference calls for this candidate."
+- "Design reference questions."
+- "Build a reference-check rubric."
+- "What should I ask this candidate's references?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

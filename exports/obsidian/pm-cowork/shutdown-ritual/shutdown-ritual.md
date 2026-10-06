@@ -61,6 +61,13 @@ Ask for these if not provided:
 - [ ] Do not run the ritual sometimes — inconsistent rituals don't change state; the streak is the mechanism
 - [ ] Do not do one more check after the phrase — it's not a check, it's a reopening, and the brain knows
 
+## Example Trigger Phrases
+
+- "I can't stop thinking about work at night."
+- "Build an end-of-day routine."
+- "My evenings are ruined by open loops."
+- "How do I stop checking one more time?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

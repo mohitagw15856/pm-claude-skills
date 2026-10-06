@@ -113,6 +113,12 @@ Duties: [scheduled + reactive + undocumented] · Dependents: [who/what calls it]
 [[context-bankruptcy]] when the agent stays but its memory shouldn't;
 [[agent-incident-postmortem]] if an incident triggered this.
 
+## Example Trigger Phrases
+
+- "Decommissioning an agent."
+- "Switch agent vendors."
+- "Ending an AI pilot."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

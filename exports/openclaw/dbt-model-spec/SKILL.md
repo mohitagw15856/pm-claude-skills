@@ -65,3 +65,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 dbt / analytics-engineering best practice — explicit grain, ref/source lineage, layered modelling (staging→intermediate→mart), schema tests.
+
+## Example Trigger Phrases
+
+- "Design a dbt model."
+- "Plan a data transformation."
+- "Write a staging/intermediate/mart model spec."
+- "Define dbt tests for a table."

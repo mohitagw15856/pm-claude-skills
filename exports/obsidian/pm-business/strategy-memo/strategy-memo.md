@@ -62,6 +62,13 @@ Ask for these only if they aren't already provided:
 
 Good Strategy / Bad Strategy (Richard Rumelt) — diagnosis, guiding policy, coherent action; and the discipline of explicit non-goals.
 
+## Example Trigger Phrases
+
+- "Write a strategy memo."
+- "Articulate a strategy."
+- "Make the case for a strategic direction."
+- "Align the team on where to focus."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

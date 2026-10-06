@@ -70,3 +70,9 @@ A complete `README.md`:
 ## Based On
 
 Open-source README best practices (one-line pitch, time-to-first-success quickstart, scannable structure, standard sections).
+
+## Example Trigger Phrases
+
+- "Improve a README."
+- "Document a project."
+- "Make a repo approachable."

@@ -69,3 +69,10 @@ State assumptions, data sources, and **uncertainty** honestly (ranges, sensitivi
 ## Based On
 
 Regulatory impact analysis practice (OMB Circular A-4 / Better Regulation): problem-first, options vs. baseline, cost-benefit, proportionality.
+
+## Example Trigger Phrases
+
+- "Assess a regulation's impact."
+- "Do a cost-benefit analysis of a policy?"
+- "Justify a rulemaking."
+- "Compare regulatory options."

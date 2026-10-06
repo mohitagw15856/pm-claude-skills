@@ -65,3 +65,10 @@ Ask for these if not provided:
 - [ ] Do not phrase questions adversarially — the counterpart is a person; the tells do the detecting
 - [ ] Do not skip the handoff to save face — five questions are the trailer, not the movie
 - [ ] Do not generate generic questions for a specific situation — "what are the terms?" is what this skill exists to replace
+
+## Example Trigger Phrases
+
+- "What should I ask before signing this?"
+- "I'm about to buy X what do I check."
+- "What questions for the landlord/dealer/contractor/HR?"
+- "What am I forgetting?"

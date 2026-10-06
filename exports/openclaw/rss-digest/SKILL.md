@@ -63,3 +63,10 @@ Feeds: `[curl per feed]` · window: [the since-filter applied]
 - [ ] Do not fetch every full article by default — the feed's own content first, deep-dives on request
 - [ ] Do not present an old cached item as new — the window does the filtering, visibly
 - [ ] Do not invent a feed's contents when the fetch fails — report the failure and move to the sources that answered
+
+## Example Trigger Phrases
+
+- "Summarize this feed."
+- "What's new on this blog?"
+- "Digest these RSS feeds."
+- "Build me a morning briefing from these sources."

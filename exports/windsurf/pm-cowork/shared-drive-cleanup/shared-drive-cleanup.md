@@ -62,3 +62,9 @@ Ask for these if not provided:
 - [ ] Do not delete in round one — archive buys the same tidiness without the fear war
 - [ ] Do not leave ghost folders as memorials — the protocol extracts and archives them respectfully
 - [ ] Do not skip the announcement — silent cleanups read as data loss and generate the incident the fear predicted
+
+## Example Trigger Phrases
+
+- "Our shared drive is a disaster."
+- "Clean up the team drive."
+- "Who owns all these folders?"

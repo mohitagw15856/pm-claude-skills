@@ -62,3 +62,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Value-based consulting-proposal practice (Alan Weiss-style outcomes-over-hours, tiered options, anchor on value).
+
+## Example Trigger Phrases
+
+- "Write a consulting proposal."
+- "Write a project proposal for this client."
+- "Pitch this engagement."
+- "Respond to an RFP."

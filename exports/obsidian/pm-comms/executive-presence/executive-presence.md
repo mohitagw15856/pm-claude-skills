@@ -58,6 +58,13 @@ Ask for these only if they aren't already provided:
 
 Executive-communication practice — BLUF / Minto Pyramid (answer-first), composure under pressure, and decisive, hedge-free language.
 
+## Example Trigger Phrases
+
+- "Improve executive presence."
+- "Prepare to present to leadership."
+- "Command a room."
+- "Get coaching before a big meeting."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

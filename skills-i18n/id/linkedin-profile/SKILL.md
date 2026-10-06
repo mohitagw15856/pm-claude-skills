@@ -55,3 +55,10 @@ Tanyakan hanya jika belum diberikan:
 ## Dasar Rujukan
 
 Praktik optimasi profil LinkedIn: headline/About yang sadar kata kunci, pembuka sebelum batas lipatan, peringkat pencarian rekruter.
+
+## Contoh Frasa Pemicu
+
+- "Perbaiki headline LinkedIn saya."
+- "Tulis ulang bagian Tentang di LinkedIn saya."
+- "Buat profil saya menarik bagi perekrut."
+- "Optimalkan profil LinkedIn saya."

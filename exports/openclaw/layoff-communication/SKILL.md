@@ -78,3 +78,10 @@ answer the hard questions, and how to support both those leaving and those stayi
 ## Based On
 
 Workforce-change communication practice — dignity-first sequencing, honest rationale, concrete support, manager enablement, and survivor communication.
+
+## Example Trigger Phrases
+
+- "Communicate a layoff."
+- "Write a RIF/redundancy announcement."
+- "Prepare manager talking points for letting people go."
+- "Plan workforce-reduction comms."

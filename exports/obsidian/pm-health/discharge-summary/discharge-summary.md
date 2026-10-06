@@ -71,6 +71,13 @@ Close with **fields not documented** and a clinician-review reminder.
 
 Clinical handoff/documentation practice — structured discharge summaries with medication reconciliation, explicit follow-up, and return precautions.
 
+## Example Trigger Phrases
+
+- "Write a discharge summary."
+- "Write the hospital discharge note."
+- "Document this patient's admission-to-discharge course for handoff."
+- "Summarise this admission for the GP."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

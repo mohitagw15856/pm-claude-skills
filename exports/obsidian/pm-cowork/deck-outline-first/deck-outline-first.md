@@ -63,6 +63,13 @@ Ask for these if not provided:
 - [ ] Do not headline what evidence can't carry — the outline is where overclaims are cheap to fix
 - [ ] Do not let the build drift from the outline — every silent new slide re-breaks the tested argument
 
+## Example Trigger Phrases
+
+- "Start this presentation."
+- "Structure my deck."
+- "Why does my deck feel like a data tour?"
+- "Get sign-off before I build slides."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

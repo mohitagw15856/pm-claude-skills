@@ -107,6 +107,12 @@ Your point, preserved: [confirm the actual message survived]
 hardest translation; [[stakeholder-influence-mapper]] when the gap is political,
 not neurological.
 
+## Example Trigger Phrases
+
+- "What did my manager actually mean?"
+- "My message came across wrong again."
+- "Why do people think I'm blunt?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

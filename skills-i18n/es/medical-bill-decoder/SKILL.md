@@ -74,3 +74,10 @@ Termina el artefacto con, textualmente: *"Esta es una lectura en lenguaje claro,
 ## Basado en
 
 Práctica de defensoría del paciente en facturación — auditoría de facturas detalladas, conciliación de EOB, guiones de negociación.
+
+## Frases disparadoras de ejemplo
+
+- "¿Por qué es tan alta mi factura médica?"
+- "Explícame mi factura del hospital."
+- "¿Qué dice esta EOB?"
+- "¿Puedo negociar esta factura?"

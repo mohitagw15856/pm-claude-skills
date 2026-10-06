@@ -118,6 +118,12 @@ verify-at-your-council items with search terms]
 [[press-release]] when the campaign needs the local paper; [[agm-in-a-box]]
 — the same machinery from the chair's side.
 
+## Example Trigger Phrases
+
+- "I want to speak at the council meeting."
+- "How do I fight this decision?"
+- "Write my public comment."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

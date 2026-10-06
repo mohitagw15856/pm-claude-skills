@@ -275,6 +275,14 @@ This policy defines what to do with the error budget — both when it's healthy 
 - [ ] Do not base targets on aspirational round numbers — always derive from historical baseline data
 - [ ] Do not configure only one burn-rate alert window — a single window misses both fast burns and slow burns that exhaust the budget quietly
 
+## Example Trigger Phrases
+
+- "Write SLOs."
+- "Define SLIs."
+- "Calculate an error budget."
+- "Set reliability targets."
+- "Create an error budget policy."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

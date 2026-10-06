@@ -72,6 +72,13 @@ python3 scripts/unit_econ.py in.json --json
 
 SaaS unit-economics practice (David Skok / for Entrepreneurs) — margin-based LTV, LTV:CAC ≥ 3, payback < 12 months.
 
+## Example Trigger Phrases
+
+- "Calculate unit economics."
+- "Work out LTV:CAC."
+- "Find the payback period."
+- "Check whether a business model is viable per customer."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

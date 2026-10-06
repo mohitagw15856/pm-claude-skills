@@ -65,6 +65,12 @@ Ask for these if not provided:
 - [ ] Do not leave the winner on a desktop or in a thread — un-versioned homes restart the chaos
 - [ ] Do not send attachments of the untangled doc — every attachment is the sequel's opening scene
 
+## Example Trigger Phrases
+
+- "Which version is the real one?"
+- "Merge these document copies."
+- "Stop the version chaos on this doc."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

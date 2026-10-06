@@ -68,3 +68,10 @@ Ask for these only if they aren't already provided (else infer and label):
 ## Based On
 
 Talent-sourcing strategy practice — profile-first sourcing, channel prioritisation by talent concentration, funnel/pipeline math, and a measurable weekly cadence.
+
+## Example Trigger Phrases
+
+- "Create a sourcing strategy for this role."
+- "Where do we find candidates for this?"
+- "Build a candidate sourcing plan."
+- "Plan our hiring channels for a hard-to-fill role."

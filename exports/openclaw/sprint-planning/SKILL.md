@@ -163,3 +163,10 @@ For tool-using or computer-use agents that can reach the team's tracker (Jira, L
 ### Rollback
 - Undo = move the items back to the backlog and delete the empty sprint container.
 - Stop and ask a human if: any item in the plan no longer exists or changed since approval, the tracker rejects an action, or the board contains an active sprint with overlapping dates.
+
+## Example Trigger Phrases
+
+- "Plan a sprint."
+- "Organise backlog items."
+- "Create sprint goals."
+- "Prepare sprint planning agendas."

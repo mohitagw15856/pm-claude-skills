@@ -64,3 +64,9 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Datasheets for Datasets (Gebru et al., 2018) and data-documentation practice in responsible-AI reviews.
+
+## Example Trigger Phrases
+
+- "Write a datasheet for a dataset."
+- "Document training/eval data."
+- "Assess whether a dataset is fit for a use."

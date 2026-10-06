@@ -77,3 +77,10 @@ End with: *"This brief is analytical support, not a credit, provisioning, or cap
 - [ ] Do not write a scenario without its transmission channel into this specific book
 - [ ] Do not list an observation without an action or an explicit "monitor, because…"
 - [ ] Do not invent portfolio statistics — compute from provided data or mark the gap
+
+## Example Trigger Phrases
+
+- "Write a portfolio risk report."
+- "Write the loan book review."
+- "Write the quarterly portfolio quality update."
+- "Brief the credit risk committee."

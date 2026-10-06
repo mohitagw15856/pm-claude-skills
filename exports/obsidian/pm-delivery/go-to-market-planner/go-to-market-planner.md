@@ -142,6 +142,12 @@ Ask the user for these if not provided:
 - [ ] Do not treat marketing and engineering as separate tracks — cross-functional coordination is the whole point of a GTM plan
 - [ ] Do not set success metrics without a defined measurement window — "increase signups" is not a measurable target
 
+## Example Trigger Phrases
+
+- "Plan a product launch."
+- "Write a GTM strategy."
+- "Define launch tiers."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -74,6 +74,13 @@ If a briefing's controls are all level 4–5, flag it: the task plan itself may 
 - [ ] Do not omit adjacent-crew hazards — most struck-by events involve someone else's operation
 - [ ] Do not fabricate site-specific details (utility locations, wind limits) — mark them `[confirm on site]` for the supervisor to fill in
 
+## Example Trigger Phrases
+
+- "Write a toolbox talk."
+- "Prepare a pre-task plan or JHA/JSA briefing."
+- "Brief a crew on today's hazards."
+- "Plan safety for a specific task like a crane pick."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -110,6 +110,13 @@ official government source for your destination.
 itself; [[credit-from-scratch]], [[healthcare-system-primer]], [[tax-residency-primer]]
 for the deeper newcomer steps; [[two-worlds-translator]] for the cultural side.
 
+## Example Trigger Phrases
+
+- "I just moved to a new country."
+- "What do I do first after arriving?"
+- "Set up my life in [country]."
+- "I can't open a bank account without an address but can't rent without a bank."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

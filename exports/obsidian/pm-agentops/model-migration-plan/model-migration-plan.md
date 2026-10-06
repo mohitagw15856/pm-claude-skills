@@ -81,6 +81,12 @@ Between model generations, re-check: instruction-following strictness (newer mod
 - [ ] Do not leave the old model path in code indefinitely "just in case" — set the removal date in the plan
 - [ ] Do not treat a cheaper model as free savings without re-checking quality at the tails, not just the mean
 
+## Example Trigger Phrases
+
+- "How to upgrade models safely?"
+- "Run shadow traffic."
+- "Set rollback criteria for a model change."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

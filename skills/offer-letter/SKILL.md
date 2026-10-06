@@ -68,3 +68,10 @@ End with a **checklist of terms to confirm with HR/legal** before sending.
 ## Based On
 
 Recruiting & offer practice — candidate-warm, complete offers (verbal then written) with clear comp/terms/contingencies, gated on HR/legal review.
+
+## Example Trigger Phrases
+
+- "Write an offer letter."
+- "Write a job offer for this candidate."
+- "Write the employment offer."
+- "Prepare a script for the verbal offer."

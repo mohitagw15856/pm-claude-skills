@@ -62,3 +62,10 @@ Ask for these only if they aren't already provided (else infer and label):
 ## Based On
 
 Defect-reporting practice — reproducibility-first reports with precise titles, expected/actual separation, environment capture, and impact/urgency distinction.
+
+## Example Trigger Phrases
+
+- "Write a bug report."
+- "File a defect."
+- "Report an issue."
+- "Turn it's broken into an actionable ticket."

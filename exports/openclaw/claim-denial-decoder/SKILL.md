@@ -79,3 +79,10 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 ## Based On
 
 Policyholder appeal practice — denial-reason triage, evidence matching, point-by-point appeal drafting, escalation sequencing.
+
+## Example Trigger Phrases
+
+- "My insurance claim was denied: what do I do?"
+- "Decode this denial letter."
+- "Can I appeal this denial?"
+- "Write my insurance appeal."

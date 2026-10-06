@@ -74,3 +74,10 @@ Termina el artefacto con, textualmente: *"Esta es una lectura en lenguaje claro,
 ## Basado en
 
 Práctica de diligencia debida de HOA del lado del comprador — triaje de CC&Rs, análisis de exposición a derramas, listas de registros.
+
+## Frases disparadoras de ejemplo
+
+- "¿Qué significan realmente estas reglas de la HOA?"
+- "Explícame estas CC&R."
+- "¿Va a ser un problema esta HOA?"
+- "¿Qué debo revisar antes de comprar en una HOA?"

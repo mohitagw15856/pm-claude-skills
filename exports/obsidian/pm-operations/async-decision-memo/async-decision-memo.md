@@ -60,6 +60,12 @@ Ask for (if not already provided):
 - [ ] Do not extend the window twice — the second extension means the memo was premature; withdraw and rewrite it
 - [ ] Do not soften recorded dissent into "some concerns were raised" — the dissenter's actual words, or the record is fiction
 
+## Example Trigger Phrases
+
+- "Decide something async."
+- "Replace a decision meeting with a document."
+- "Run an Amazon-style written decision process."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

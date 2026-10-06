@@ -138,3 +138,9 @@ the crisis signs that end gradualism, with verify-local routes]
 [[sibling-care-summit]] to align the family first; [[caregiver-coordination]]
 for the logistics after yes; [[the-visa-interview]] shares the rehearsal
 bones; [[patient-communication]] for the clinical-side cousin.
+
+## Example Trigger Phrases
+
+- "I need to talk to my dad about driving."
+- "My mum won't discuss her finances."
+- "We need to talk about care."

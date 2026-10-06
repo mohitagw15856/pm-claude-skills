@@ -111,3 +111,11 @@ Ask for (if not already provided):
 [[jury-duty-navigator]] and [[elected-rep-letter]] for the rest of civic life;
 [[arrival-setup]] for newcomers registering for the first time; [[speak-at-the-council]]
 to be heard between elections.
+
+## Example Trigger Phrases
+
+- "How do I vote?"
+- "Am I registered?"
+- "What's the deadline to register?"
+- "Help me vote by mail."
+- "What's on my ballot?"

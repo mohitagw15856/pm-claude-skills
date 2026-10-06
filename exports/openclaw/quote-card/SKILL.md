@@ -59,3 +59,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Testimonial/pull-quote editing for marketing (find the strongest line, faithful tightening, clear attribution).
+
+## Example Trigger Phrases
+
+- "Make a pull-quote."
+- "Turn this review into a testimonial graphic."
+- "Make a quote card for social."
+- "Pull the best quote from this interview."

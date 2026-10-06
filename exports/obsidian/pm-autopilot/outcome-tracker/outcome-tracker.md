@@ -89,6 +89,13 @@ If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, r
 - [ ] Do not compute calibration on fewer than ~10 resolved predictions per framework — report "insufficient history" instead
 - [ ] Do not skip recording because the decision feels obvious — obvious bets that miss are the most valuable calibration data
 
+## Example Trigger Phrases
+
+- "Log what this plan predicts."
+- "Review what actually happened."
+- "Score last quarter's forecast against reality."
+- "Did our prioritisation framework work?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

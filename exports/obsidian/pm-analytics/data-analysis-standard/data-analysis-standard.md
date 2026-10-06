@@ -153,6 +153,13 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - Recommend the simplest chart for each finding: bar for comparison, line for trends, scatter for correlation, table for detailed breakdowns
 - Always specify the time window — "conversion dropped" is meaningless without "from X to Y over Z period"
 
+## Example Trigger Phrases
+
+- "Analyse product metrics."
+- "Investigate a drop in conversion."
+- "Explain a data change to stakeholders."
+- "Find the root cause of a metric movement."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

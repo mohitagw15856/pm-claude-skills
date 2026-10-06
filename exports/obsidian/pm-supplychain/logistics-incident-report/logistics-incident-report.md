@@ -89,6 +89,14 @@ If details are thin, build the report with figures marked `[to confirm]` and lis
 - [ ] Do not merge containment and prevention lists — one has hour deadlines, the other needs owners after the fire is out
 - [ ] Do not close the incident when the freight arrives — it closes when prevention actions have owners and dates
 
+## Example Trigger Phrases
+
+- "Document a shipment delay."
+- "Write up a logistics failure."
+- "Report a customs hold."
+- "Quantify a supply disruption."
+- "Draft the customer notice for a late delivery."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

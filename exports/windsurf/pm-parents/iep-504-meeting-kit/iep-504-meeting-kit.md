@@ -68,3 +68,10 @@ Clarify: "How will we measure that, and from what baseline?" · Implementation: 
 - [ ] Do not let strengths get skipped — they open the statement because the team plans better for a child than for a deficit list
 - [ ] Do not go adversarial by default — most teams want the plan to work; the kit's power is precision, not combat
 - [ ] Do not let the plan go unmonitored — an unread progress report is consent to drift
+
+## Example Trigger Phrases
+
+- "Prepare me for my child's IEP meeting."
+- "What's the difference between an IEP and a 504?"
+- "How do I disagree with the school's plan?"
+- "Make sure the accommodations actually happen."

@@ -90,3 +90,11 @@ Input: *"We need to figure out what to do about our enterprise customers."*
 - [ ] Scope boundaries name something concrete that is excluded
 - [ ] Research activities are achievable within the stated timeline
 - [ ] Decision owner is identified (not "leadership" — a specific person or role)
+
+## Example Trigger Phrases
+
+- "Clarify a vague brief."
+- "Frame an undefined problem."
+- "Make sense of an unclear opportunity."
+- "We need to figure out what to do about X."
+- "I've been asked to look into Y."

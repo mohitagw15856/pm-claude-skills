@@ -68,3 +68,10 @@ Ask for these if not provided:
 - [ ] Do not let IFERROR survive uninterrogated — silent blanks are how sheets lie politely
 - [ ] Do not match the rebuild to the original's bugs — believed-vs-actual gaps get decided, not replicated
 - [ ] Do not switch over without the parallel diff — equivalence is demonstrated, never assumed
+
+## Example Trigger Phrases
+
+- "What does this formula do?"
+- "Untangle this nested IF formula."
+- "Make this formula maintainable."
+- "Rewrite this formula with helper columns."

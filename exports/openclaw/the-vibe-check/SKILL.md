@@ -121,3 +121,10 @@ tested once · the bus factor file (how to deploy, where the keys live).
 [[security-threat-model]] for the grown-up version; [[injection-spotter]] for
 the prompt-injection deep-dive; [[local-dev-setup]] and [[monitoring-setup-guide]]
 for the operational half of "real app."
+
+## Example Trigger Phrases
+
+- "Is it safe to launch?"
+- "Claude built my app: is it secure?"
+- "Harden my prototype before strangers use it."
+- "Vibe check my project."

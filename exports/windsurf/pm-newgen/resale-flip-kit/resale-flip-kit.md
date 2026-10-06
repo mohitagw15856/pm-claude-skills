@@ -111,3 +111,9 @@ Floor £/€/$X · List Y · Anchor Z · Drop schedule: [dates]
 [[pricing-your-services]] for pricing labor instead of objects;
 [[late-invoice-escalation]] energy for the buyer who "paid, promise";
 [[email-triage-system]] when the "is this available" flood needs a system.
+
+## Example Trigger Phrases
+
+- "Help me sell this."
+- "Price my old jacket."
+- "Write my Depop listing."

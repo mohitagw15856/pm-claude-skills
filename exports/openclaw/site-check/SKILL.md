@@ -66,3 +66,10 @@ Rerun: `[the curl(s)]`
 - [ ] Do not confuse 403/401 with down — refusing you is a form of up
 - [ ] Do not hammer a struggling site — one clean check per layer, not a retry loop against someone's outage
 - [ ] Do not extend into probing others' infrastructure — status and reachability, not scanning
+
+## Example Trigger Phrases
+
+- "Is this website down?"
+- "Why can't I reach this site?"
+- "Check if my site is up."
+- "Is the SSL certificate expired?"

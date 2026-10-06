@@ -86,6 +86,13 @@ Include this line in the artifact: *"Verify scenario selection, disclosure use, 
 
 TCFD/ISSB and ESRS E1 climate-risk practice (physical/transition split, scenario analysis, hazard–exposure–vulnerability structure).
 
+## Example Trigger Phrases
+
+- "Run a climate risk assessment."
+- "Evaluate physical."
+- "Prepare TCFD/ESRS-style climate risk analysis."
+- "Assess how climate scenarios affect an asset."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

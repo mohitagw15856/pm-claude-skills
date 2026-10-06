@@ -84,6 +84,13 @@ Persistent over-forecast bias means excess inventory is being manufactured upstr
 - [ ] Do not judge accuracy at aggregate level for item-level buys — mix error is where the money is lost
 - [ ] Do not soften the verdict to keep the S&OP meeting comfortable — supply commits real cash to this number
 
+## Example Trigger Phrases
+
+- "Review a demand plan."
+- "Challenge a forecast."
+- "Check forecast accuracy."
+- "Find hockey sticks in the numbers."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -65,6 +65,13 @@ Ask for these only if they aren't already provided:
 
 LLM evaluation practice — task-grounded rubrics, LLM-as-judge with human calibration, and regression-gated CI evals.
 
+## Example Trigger Phrases
+
+- "How to evaluate a prompt/model/agent?"
+- "Set up an eval harness."
+- "Define quality metrics for an AI feature."
+- "Build a regression gate."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

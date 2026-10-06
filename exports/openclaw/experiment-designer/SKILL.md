@@ -80,3 +80,11 @@ Ask the user for these if not provided:
 - [ ] Do not treat statistical significance as the same as practical significance — a p < 0.05 result with a 0.1% lift is real but may not be worth shipping
 - [ ] Do not run the same experiment on the same population multiple times without correction — multiple testing inflates the chance of a false positive proportionally
 - [ ] Do not use more than one primary metric — multiple primary metrics require multiple hypothesis corrections and make the ship/kill decision ambiguous
+
+## Example Trigger Phrases
+
+- "Design an experiment."
+- "Run an A/B test."
+- "Calculate sample size."
+- "Interpret test results."
+- "Assess whether an experiment was successful."

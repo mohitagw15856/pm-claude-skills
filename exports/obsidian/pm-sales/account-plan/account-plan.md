@@ -105,6 +105,13 @@ At end of [period]:
 - [ ] 90-day actions are specific (not "have a call" — what call, with whom, to achieve what)
 - [ ] Success criteria are measurable at the end of the planning period
 
+## Example Trigger Phrases
+
+- "Create an account plan for our biggest customer."
+- "Build a key account strategy for Acme."
+- "Run a strategic account review before renewal."
+- "Plan my territory for next year."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -117,6 +117,12 @@ Ask for (if not already provided):
 [[first-maintainer-month]] for new maintainers; [[email-triage-system]] —
 the same discipline pointed at an inbox.
 
+## Example Trigger Phrases
+
+- "My issues are out of control."
+- "Triage my backlog."
+- "Set up labels for my repo."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

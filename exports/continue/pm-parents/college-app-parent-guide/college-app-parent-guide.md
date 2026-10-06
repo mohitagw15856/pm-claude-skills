@@ -61,3 +61,10 @@ Stalled: "[small scope + company]" · List fight: "[input once + money veto + th
 - [ ] Do not relitigate the list weekly — input once, veto on money, then it's theirs
 - [ ] Do not manage by ambush ("have you started?") — the calendar and the scheduled check-in are the system
 - [ ] Do not make an acceptance or rejection about the family's worth — the student is applying to college, not the household
+
+## Example Trigger Phrases
+
+- "How do I help my kid with college apps?"
+- "How involved should I be?"
+- "My teenager won't start their essays."
+- "We disagree about the college list."

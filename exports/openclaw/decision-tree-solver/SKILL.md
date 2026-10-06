@@ -78,3 +78,10 @@ Ask for these if not provided:
 - **EV-maximising a ruinous one-shot.** The tool's cleanest failure mode; the caveat is mandatory, not optional.
 - **Hiding the arithmetic.** The script prints every node's EV because a recommendation nobody can check convinces nobody who matters.
 - **Letting the tree end the conversation.** It ends the *circular* part; the values conversation it surfaces is the productive one.
+
+## Example Trigger Phrases
+
+- "Should we settle?"
+- "Build a decision tree."
+- "What probability makes this worth it?"
+- "Compare options under uncertainty."

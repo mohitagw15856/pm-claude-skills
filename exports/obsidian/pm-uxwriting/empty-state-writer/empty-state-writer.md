@@ -60,6 +60,13 @@ For each: **Headline · Supporting line · Action(s)**, plus a one-line note on 
 
 UX writing & onboarding practice — empty states as activation moments, differentiated by type, with value framing and a single clear action.
 
+## Example Trigger Phrases
+
+- "Write an empty state."
+- "What should this screen say before there's any data?"
+- "Write the no-results state."
+- "Write first-run placeholder content."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

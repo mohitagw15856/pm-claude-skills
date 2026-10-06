@@ -77,3 +77,11 @@ Safety scores of 1–2 cap the overall recommendation at **Conditional** regardl
 - [ ] Do not average away a safety failure inside the composite — apply the cap rule
 - [ ] Do not write "poor attitude" as evidence — describe the behaviour and its project impact
 - [ ] Do not score dimensions you have no data for — mark `[insufficient data]` and say what record-keeping would fix it
+
+## Example Trigger Phrases
+
+- "Evaluate a sub."
+- "Build a subcontractor scorecard."
+- "Decide whether to rebid."
+- "Rehire a trade."
+- "Review sub performance for prequalification."

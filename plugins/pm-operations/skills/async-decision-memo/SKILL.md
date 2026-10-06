@@ -57,3 +57,9 @@ Ask for (if not already provided):
 - [ ] Do not let threads run past 3 exchanges — two people arguing in a doc are holding everyone else hostage
 - [ ] Do not extend the window twice — the second extension means the memo was premature; withdraw and rewrite it
 - [ ] Do not soften recorded dissent into "some concerns were raised" — the dissenter's actual words, or the record is fiction
+
+## Example Trigger Phrases
+
+- "Decide something async."
+- "Replace a decision meeting with a document."
+- "Run an Amazon-style written decision process."

@@ -70,6 +70,12 @@ each provenance-tagged.
 
 Standard PRD practice (see [`prd-template`](../prd-template/SKILL.md)) extended for probabilistic systems — uncertainty UX, eval gates, guardrails, and graceful fallback.
 
+## Example Trigger Phrases
+
+- "Spec an AI/LLM feature."
+- "Write a PRD for a feature that uses a model."
+- "Plan an AI capability."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -80,6 +80,13 @@ Deterministic. Defaults: 4% cost inflation, 4 years, 50% loan share at 6.5% over
 - [ ] Do not compare letters as written — they're formatted to resist exactly that
 - [ ] Do not editorialize school choice — price it honestly; worth is the family's call
 
+## Example Trigger Phrases
+
+- "What will college really cost?"
+- "Compare these two offers real prices."
+- "How much loan payment after graduation?"
+- "Is this school affordable?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

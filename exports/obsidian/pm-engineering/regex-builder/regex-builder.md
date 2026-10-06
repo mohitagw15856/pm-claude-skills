@@ -58,6 +58,12 @@ Edge cases, catastrophic-backtracking risks, anchoring, Unicode, and a simpler a
 - [ ] Do not produce an unreadable one-liner when a commented/verbose version or a non-regex approach is clearer
 - [ ] Do not silently assume anchoring — state whether it matches the whole string or a substring
 
+## Example Trigger Phrases
+
+- "Write a regex."
+- "Match/validate/extract a pattern."
+- "Understand what a regex does."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

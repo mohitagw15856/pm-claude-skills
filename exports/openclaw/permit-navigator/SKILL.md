@@ -111,3 +111,9 @@ substitute for the permit office or, for complex projects, an architect/expedite
 [[trade-quote-builder]] and [[stage-payment-shield]] for the tradespeople doing the
 work; [[speak-at-the-council]] if the project needs a hearing; [[report-a-hazard]] for
 the other side of local government.
+
+## Example Trigger Phrases
+
+- "Do I need a permit for this?"
+- "What permits for my renovation/business/event?"
+- "Help me apply for a permit."

@@ -23,9 +23,7 @@ workflow:
     speech_to_text:
       enabled: false
     suggested_questions:
-    - '帮我写今天的钉钉日报，笔记在这里'
-    - '钉钉周报怎么写？帮我把这周的事整理一下'
-    - '根据这些笔记填一下我的钉钉日报'
+    []
     suggested_questions_after_answer:
       enabled: false
     text_to_speech:
@@ -161,10 +159,10 @@ workflow:
 
             ## 示例触发语
 
-            - "帮我写今天的钉钉日报，笔记在这里。"
-            - "钉钉周报怎么写？帮我把这周的事整理一下。"
-            - "根据这些笔记填一下我的钉钉日报。"
-            - "写月报，下个月的计划要具体一点。"
+            - “帮我写今天的钉钉日报，笔记在这里。”
+            - “钉钉周报怎么写？帮我把这周的事整理一下。”
+            - “根据这些笔记填一下我的钉钉日报。”
+            - “写月报，下个月的计划要具体一点。”
 
             （本应用基于开源技能库 PM Skills 的 dingtalk-work-log 技能：https://github.com/mohitagw15856/pm-claude-skills ，MIT 协议。）
         selected: false

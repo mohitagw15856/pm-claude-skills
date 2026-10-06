@@ -54,3 +54,10 @@ Complex work fails in a predictable way: start confidently, discover mid-flight,
 - [ ] Do not bury discoveries — when execution reveals the plan is wrong, revise the PLAN visibly (see executing-plans), don't improvise around it
 - [ ] Do not gold-plate a checklist task into a project plan — ceremony must earn its cost
 - [ ] Do not treat the plan as the deliverable — a beautiful plan for the wrong goal fails the interview-me test; brief first, plan second
+
+## Example Trigger Phrases
+
+- "Plan this before you start."
+- "Write a plan with checkpoints for this task."
+- "Break this into steps before doing anything."
+- "Write an execution plan with stop conditions."

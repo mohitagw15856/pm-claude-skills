@@ -57,6 +57,13 @@ Ask for these only if they aren't already provided:
 
 Growth-process practice — ICE/PXL prioritisation, hypothesis-driven experiments, and the build–measure–learn cadence.
 
+## Example Trigger Phrases
+
+- "Plan growth experiments."
+- "Prioritise growth ideas."
+- "Set up a test backlog."
+- "Run a growth process/sprint."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

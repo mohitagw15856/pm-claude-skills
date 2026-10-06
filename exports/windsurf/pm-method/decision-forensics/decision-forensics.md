@@ -71,3 +71,9 @@ Ask for these if not provided:
 - [ ] Do not clean a non-decision into a decision; "no decision was reached" is a valid, common, and useful finding
 - [ ] Do not editorialize about who was right — forensics reconstructs; it doesn't adjudicate
 - [ ] Do not omit the confidence note — a reconstruction that hides its own uncertainty is fabrication with footnotes
+
+## Example Trigger Phrases
+
+- "What did we actually decide?"
+- "Turn this thread into a decision record."
+- "Reconstruct this discussion."

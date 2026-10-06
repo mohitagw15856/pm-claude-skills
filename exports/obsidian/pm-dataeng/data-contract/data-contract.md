@@ -61,6 +61,13 @@ Ask for these only if they aren't already provided:
 
 Data-contract practice — schema + semantics + measurable quality SLAs, semantic versioning, and producer/consumer change governance.
 
+## Example Trigger Phrases
+
+- "Write a data contract."
+- "Define a schema agreement."
+- "Set data SLAs."
+- "Stop a producer from silently breaking downstream consumers."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

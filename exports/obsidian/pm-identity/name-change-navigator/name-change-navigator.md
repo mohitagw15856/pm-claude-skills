@@ -111,6 +111,12 @@ timing · verify-local for the legal step]
 neighbors for the marriage/divorce paperwork; [[digital-death-plan]] shares the
 build-the-list-from-real-life method.
 
+## Example Trigger Phrases
+
+- "I changed my name and don't know where to start."
+- "Update my name everywhere."
+- "Name change checklist."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

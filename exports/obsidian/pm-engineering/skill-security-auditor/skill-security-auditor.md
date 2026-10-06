@@ -97,6 +97,13 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not ignore zero-width or invisible characters; they are a classic way to hide instructions
 - [ ] Do not assume a high star count or popular author means a skill is safe — audit the content itself
 
+## Example Trigger Phrases
+
+- "Review a skill for security."
+- "Check a prompt for injection."
+- "Vet a community skill."
+- "Assess whether an instruction file is safe to run."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

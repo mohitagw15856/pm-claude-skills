@@ -69,6 +69,12 @@ Ask for these if not provided:
 - [ ] Do not accept the whole meeting in generalities — one polite push past "fine" is owed to the child
 - [ ] Do not leave without the follow-up date — it's the difference between a meeting and a ritual
 
+## Example Trigger Phrases
+
+- "Prepare me for the parent teacher conference."
+- "What should I ask my kid's teacher?"
+- "How do I raise a concern without making it adversarial?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

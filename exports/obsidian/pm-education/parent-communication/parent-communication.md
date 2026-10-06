@@ -49,6 +49,13 @@ For a sensitive issue, also give:
 - A concern with no path forward or offer of support
 - Over-long; burying the point under throat-clearing
 
+## Example Trigger Phrases
+
+- "Email a parent."
+- "Write home about a student."
+- "Raise a concern with a guardian."
+- "Share an update."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

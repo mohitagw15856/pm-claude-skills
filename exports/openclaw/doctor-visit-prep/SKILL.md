@@ -72,3 +72,10 @@ Dismissed: "[the chart-documentation line]" · Alternatives: "What else could th
 - [ ] Do not sanitize the medication reality — the skipped doses are clinical data
 - [ ] Do not script confrontation — advocacy lines are collegial, specific, and documentable
 - [ ] Do not build a three-page dossier — one page is the format clinicians can actually use mid-visit
+
+## Example Trigger Phrases
+
+- "Help me prepare for my doctor appointment."
+- "What should I tell my doctor?"
+- "Organize my symptoms."
+- "I always forget what to ask."

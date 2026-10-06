@@ -65,6 +65,12 @@ Ask for these if not provided:
 - [ ] Do not leave silence undefined — "nobody objected" and "nobody read it" look identical without the rule
 - [ ] Do not async the genuinely synchronous — one failed forced conversion discredits ten good ones
 
+## Example Trigger Phrases
+
+- "Can this meeting be async?"
+- "Replace our status meeting with a doc."
+- "Run this decision without a call."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

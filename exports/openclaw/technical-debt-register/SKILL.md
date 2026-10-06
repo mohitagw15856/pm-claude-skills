@@ -282,3 +282,11 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Do not underrate security and dependency items because they feel abstract — score based on actual business impact
 - [ ] Do not create "permanently deferred" items — every accepted item must have a review date and named owner
 - [ ] Do not include resolution plans that are vague descriptions — each plan must have specific, ticketable steps
+
+## Example Trigger Phrases
+
+- "Audit technical debt."
+- "Create a debt register."
+- "Prioritize tech debt for a quarter."
+- "Document architectural shortcuts."
+- "Build a debt reduction roadmap."

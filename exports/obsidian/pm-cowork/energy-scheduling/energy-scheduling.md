@@ -65,6 +65,13 @@ Ask for these if not provided:
 - [ ] Do not fake a chronotype — the 5am-club cosplay wastes a real evening peak
 - [ ] Do not treat the map as permanent — re-observe when life shifts (new role, new kid, new season); curves move
 
+## Example Trigger Phrases
+
+- "Should I do my hardest work?"
+- "I waste my best hours on email."
+- "Map my energy levels."
+- "Why is 3pm always useless?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

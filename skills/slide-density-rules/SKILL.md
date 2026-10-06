@@ -59,3 +59,10 @@ Ask for these if not provided:
 - [ ] Do not delete substance to look clean — demote it; Q&A will come asking
 - [ ] Do not respect the 10-slide superstition over the one-point rule — more glanceable slides beat fewer walls
 - [ ] Do not shrink fonts to fit more — the font floor is the room's physics voting
+
+## Example Trigger Phrases
+
+- "My slides are too busy."
+- "How much text per slide?"
+- "Fix this wall-of-bullets deck."
+- "Make this readable from the back of the room."

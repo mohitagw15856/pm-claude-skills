@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Train the team on deepfake fraud."
+- "Test wire-transfer controls."
+- "Run a social-engineering tabletop."
+- "Could we get CEO-frauded?"

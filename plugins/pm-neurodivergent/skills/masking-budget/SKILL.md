@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "I'm exhausted from masking."
+- "How do I unmask safely?"
+- "Plan a heavy-masking day without crashing."
+- "Where is masking worth the cost for me?"

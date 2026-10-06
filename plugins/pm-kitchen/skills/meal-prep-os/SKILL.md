@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "What do I cook with what I have?"
+- "We spend too much on takeaway."
+- "I'm sick of eating the same thing four days."

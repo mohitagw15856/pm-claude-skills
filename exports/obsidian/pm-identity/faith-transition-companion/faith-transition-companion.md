@@ -132,6 +132,12 @@ when religion is entangled with culture and family; [[aging-parent-talks]] for o
 hard family conversations; [[stoic-setback-debrief]] for the disorientation of losing
 a framework.
 
+## Example Trigger Phrases
+
+- "I'm losing my faith."
+- "I left my religion and my family is devastated."
+- "How do I tell my believing parents?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

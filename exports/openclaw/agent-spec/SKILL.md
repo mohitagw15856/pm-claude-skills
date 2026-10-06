@@ -71,3 +71,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Tool-using / agentic design practice — bounded control loops, least-privilege tools, human-in-the-loop approval, and safety evaluation.
+
+## Example Trigger Phrases
+
+- "Design an AI agent."
+- "Define an agent's tools and guardrails."
+- "Scope what an agent is allowed to do."
+- "Write an agent spec/PRD."

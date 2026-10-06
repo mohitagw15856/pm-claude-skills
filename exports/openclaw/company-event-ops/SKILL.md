@@ -69,3 +69,10 @@ Ask for these if not provided:
 - [ ] Do not budget the caterer's quote as the food cost — service and gratuity are the corporate surprise too
 - [ ] Do not skip the remote contingent — the excluded remember longer than the attendees
 - [ ] Do not end once — the un-followed-through event evaporates by Monday; the second ending is where the goal gets banked
+
+## Example Trigger Phrases
+
+- "Plan the company event."
+- "Organize our customer day/holiday party/launch event."
+- "What am I forgetting for this event?"
+- "Be the run-of-show for Thursday."

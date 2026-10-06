@@ -31,3 +31,10 @@ Ask for (if not already provided):
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "I'm navigating a reorg."
+- "My project is caught in politics."
+- "Who holds the power here?"
+- "How would Machiavelli play this?"

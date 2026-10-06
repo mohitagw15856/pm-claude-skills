@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "How much deposit should I take?"
+- "Set up stage payments for this kitchen job."
+- "Write the payment terms for my quotes."
+- "The customer won't pay the next stage: what do I say?"

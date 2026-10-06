@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "I just moved to a new country."
+- "What do I do first after arriving?"
+- "Set up my life in [country]."
+- "I can't open a bank account without an address but can't rent without a bank."

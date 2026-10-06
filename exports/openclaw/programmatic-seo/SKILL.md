@@ -59,3 +59,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Programmatic SEO practice (templated data-driven pages, intent + unique value, Google's thin-content/helpful-content guidance).
+
+## Example Trigger Phrases
+
+- "Plan a pSEO strategy."
+- "Build pages for each city and service."
+- "Scale content with templates and data."
+- "Capture long-tail search at scale."

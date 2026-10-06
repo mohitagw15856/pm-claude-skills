@@ -65,3 +65,10 @@ End with **consistency notes** — terms/patterns to reuse elsewhere so the prod
 ## Based On
 
 UX writing practice — action-oriented, expectation-setting microcopy, voice consistency, and clarity at decision points.
+
+## Example Trigger Phrases
+
+- "Write microcopy for this form."
+- "Write button and CTA text."
+- "Write tooltips and helper text."
+- "Make this UI wording clearer."

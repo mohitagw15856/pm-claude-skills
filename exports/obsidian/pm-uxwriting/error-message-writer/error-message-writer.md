@@ -59,6 +59,13 @@ Ask for these only if they aren't already provided (else infer and label):
 
 UX writing practice — plain-language, blame-free error messages with clear recovery, surface-appropriate variants, and log-vs-show separation.
 
+## Example Trigger Phrases
+
+- "Write an error message."
+- "Write validation text for this form."
+- "Rewrite this cryptic system error."
+- "Make our error messages less blaming."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

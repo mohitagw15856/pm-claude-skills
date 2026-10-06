@@ -27,3 +27,10 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "I'm hardstuck."
+- "Review my gameplay approach."
+- "I keep tilting."
+- "How do I actually improve at ranked?"

@@ -119,3 +119,9 @@ Ask for (if not already provided):
 [[the-maintainers-no]] for the requests that need a personal no;
 [[first-maintainer-month]] for new maintainers; [[email-triage-system]] —
 the same discipline pointed at an inbox.
+
+## Example Trigger Phrases
+
+- "My issues are out of control."
+- "Triage my backlog."
+- "Set up labels for my repo."

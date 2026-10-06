@@ -50,3 +50,9 @@ Overtime risk, insufficient rest between close/open ("clopening"), availability 
 - Scheduling "clopens" or overtime by accident
 - Ignoring stated availability (the fastest way to lose staff)
 - Cutting so lean that service and food quality collapse at peak
+
+## Example Trigger Phrases
+
+- "Build a shift schedule."
+- "Staff a rota."
+- "Plan coverage for a restaurant/retail/shift-based team."

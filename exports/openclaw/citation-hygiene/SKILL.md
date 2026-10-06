@@ -68,3 +68,10 @@ Ask for these if not provided:
 - [ ] Do not ship undated numbers — they're scheduled falsehoods
 - [ ] Do not let "studies show" survive without the studies — it's the tell the whole audit exists for
 - [ ] Do not defend unsourceable claims by intensity — soften, attribute, or cut; the room's skeptic is faster than you
+
+## Example Trigger Phrases
+
+- "Check the sourcing in this deck."
+- "Does every claim in this memo have a source?"
+- "Do these links actually say what we claim?"
+- "Set citation norms for the team."

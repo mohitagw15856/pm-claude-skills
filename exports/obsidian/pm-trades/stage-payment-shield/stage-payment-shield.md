@@ -109,6 +109,13 @@ Day 1: … · Day 7: … · Day 14: …
 [[late-invoice-escalation]] when the chase outgrows scripts;
 [[first-client-contract]] for service-business cousins.
 
+## Example Trigger Phrases
+
+- "How much deposit should I take?"
+- "Set up stage payments for this kitchen job."
+- "Write the payment terms for my quotes."
+- "The customer won't pay the next stage: what do I say?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

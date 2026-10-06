@@ -65,3 +65,10 @@ Ask for these if not provided:
 - [ ] Do not treat the window limit as the budget — the budget is per-turn cost × turns; the limit is just the wall
 - [ ] Do not evict the decisions log — history compresses, decisions don't; losing them re-litigates the session
 - [ ] Do not design for turn one — sessions are priced by their shape over time, and turn one is the cheapest turn there is
+
+## Example Trigger Phrases
+
+- "My agent keeps blowing its context."
+- "Plan what to load into the session."
+- "Why is every turn so expensive?"
+- "Design the context for this workflow."

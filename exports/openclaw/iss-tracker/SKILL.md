@@ -61,3 +61,10 @@ Source: open-notify.org (position fetched live; orbital constants are stable fac
 - [ ] Do not invent pass times — rules of thumb yes, timetables need real propagation, say so
 - [ ] Do not confuse overhead with visible — the sunlight condition is the teach
 - [ ] Do not flatten the fun — this skill is allowed to be delighted; precision and joy aren't rivals
+
+## Example Trigger Phrases
+
+- "Where is the ISS right now?"
+- "Is the space station overhead?"
+- "Can I see the ISS tonight?"
+- "Track the station for the kids."

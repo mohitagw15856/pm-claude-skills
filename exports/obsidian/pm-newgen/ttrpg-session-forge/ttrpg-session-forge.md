@@ -114,6 +114,13 @@ Ask for (if not already provided):
 [[game-night-planner]] for the night around the session;
 [[workshop-facilitation-guide]] — GMing is facilitation wearing a cloak.
 
+## Example Trigger Phrases
+
+- "Prep my D&D session."
+- "My players derailed everything."
+- "I need an NPC on the fly."
+- "Help me start a campaign."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

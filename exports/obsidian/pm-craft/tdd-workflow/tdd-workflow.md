@@ -59,6 +59,12 @@ End with: the next cycle's red test, and a note to commit at each green.
 
 Test-Driven Development (Kent Beck): red → green → refactor, triangulation, one behavior per cycle.
 
+## Example Trigger Phrases
+
+- "Implementing a feature."
+- "Fix a bug and you want tests to lead."
+- "'do this with TDD' / write the test first."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

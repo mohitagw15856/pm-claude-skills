@@ -167,3 +167,10 @@ Ask the user for these if not provided:
 - [ ] Fallback UX is specified for model failures or low-confidence outputs
 - [ ] Responsible AI checklist is completed (not deferred to post-launch)
 - [ ] Monitoring plan includes both model performance and user engagement metrics
+
+## Example Trigger Phrases
+
+- "Build AI-powered features."
+- "Evaluate LLM integrations."
+- "Design AI products."
+- "Assess AI readiness."

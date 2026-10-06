@@ -79,3 +79,10 @@ End the artifact with, verbatim: *"This is a plain-language reading, not legal/f
 ## Based On
 
 Participant-side plan review practice — fee-disclosure auditing, match-formula fine print, vesting math, lineup cost triage.
+
+## Example Trigger Phrases
+
+- "Is my 401k any good?"
+- "Decode my 401k plan."
+- "Which funds should I look at?"
+- "What fees am I paying?"

@@ -77,3 +77,10 @@ python3 scripts/xlsx_tool.py fill template.xlsx out.xlsx --values '{"month":"Jul
 ```
 
 Design the model first (per this skill), then emit the JSON and run `create`. Honest limits: default styling only, no charts — for formatted finals, open the generated file and style it, or use the playground's Excel export.
+
+## Example Trigger Phrases
+
+- "Build an Excel model."
+- "Build a financial model in Excel."
+- "Make a budget spreadsheet with live formulas."
+- "Make me an .xlsx forecast I can edit."

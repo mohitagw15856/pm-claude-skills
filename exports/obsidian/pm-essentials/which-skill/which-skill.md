@@ -87,6 +87,13 @@ Ask for (if not already provided):
 - [ ] Do not invent skill names — if nothing in the catalog fits, say so and suggest `SKILL_REQUEST.md`
 - [ ] Do not recommend a general skill when a specific one exists for the exact artifact
 
+## Example Trigger Phrases
+
+- "Which skill should I use for this?"
+- "I don't know which skill fits."
+- "Find the right skill for my task."
+- "Which of these skills is the better match?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

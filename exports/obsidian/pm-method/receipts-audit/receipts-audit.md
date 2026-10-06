@@ -74,6 +74,13 @@ Ask for these if not provided:
 - [ ] Do not average away a Contradicted claim — one contradiction outweighs ten evidenced footnotes
 - [ ] Do not fix a claim by vaguening it — fixes bind wording to a real source line, or the claim drops
 
+## Example Trigger Phrases
+
+- "Fact-check a document against its sources."
+- "Check whether a report's claims are backed up."
+- "Verify a deck against the data."
+- "Does this doc have receipts?"
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

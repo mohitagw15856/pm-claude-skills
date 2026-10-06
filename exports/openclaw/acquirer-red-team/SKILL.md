@@ -82,3 +82,9 @@ One paragraph: the order of operations for the next two quarters, and the one fi
 - [ ] Do not recommend hiding anything — the debrief may only fix or pre-disclose; concealment discovered in DD kills deals and worse
 - [ ] Do not treat PE and strategic buyers identically if the frame is known — they chip differently
 - [ ] Do not stay in character in the debrief
+
+## Example Trigger Phrases
+
+- "Red-team my company before a sale."
+- "How will an acquirer attack our valuation?"
+- "What will DD find?"

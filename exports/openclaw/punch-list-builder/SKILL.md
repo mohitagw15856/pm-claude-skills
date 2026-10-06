@@ -78,3 +78,11 @@ Never let a Tier A hide inside a room's list of C's — pull Tier A items to the
 - [ ] Do not assign items to "GC" as a default — the punch list is how work reaches the sub who owes it
 - [ ] Do not treat the punch list as append-forever — new-found items after the walk go on a dated supplement, not silently inserted
 - [ ] Do not flag a back-charge without naming the evidence — an unsupported back-charge poisons the sub relationship for nothing
+
+## Example Trigger Phrases
+
+- "Build a punch list."
+- "Clean up walkthrough notes."
+- "Organise a deficiency list."
+- "Prep for substantial completion."
+- "Track punch items to closeout."

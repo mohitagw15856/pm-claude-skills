@@ -63,3 +63,10 @@ Ask for these if not provided:
 - [ ] Do not accept vibe-based done — bounced handoffs are definition gaps wearing quality-complaint costumes
 - [ ] Do not escalate surprises — the 48h clause is the partnership's real load-bearing wall
 - [ ] Do not write three pages — one page gets signed and remembered; three get filed and violated
+
+## Example Trigger Phrases
+
+- "Kick off this cross-team project right."
+- "Our two teams keep colliding."
+- "Define how we'll work with the other team."
+- "Set up the partnership before we start."

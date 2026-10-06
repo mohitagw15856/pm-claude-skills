@@ -53,3 +53,9 @@ Recording (and consent/legal note — recording-consent laws vary by jurisdictio
 - Arguing with or editorializing at the subject instead of pressing on facts
 - No plan for the dodge — accepting the first evasion
 - Recording without regard for consent law
+
+## Example Trigger Phrases
+
+- "Plan questions for a subject."
+- "Handle an on-the-record accountability interview."
+- "Get a reluctant person to talk."

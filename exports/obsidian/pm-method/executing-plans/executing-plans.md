@@ -56,6 +56,13 @@ A plan's value is realised or destroyed at execution time. The two failure modes
 - [ ] Do not declare done without running the done-test — feeling-finished and being-finished diverge exactly when it matters
 - [ ] Do not end a session without the state note — re-derivation is the tax on every resumed task
 
+## Example Trigger Phrases
+
+- "Work through this plan step by step."
+- "Resume the plan from where we left off."
+- "Execute this plan and log each step."
+- "Follow the plan and tell me when it deviates."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -122,6 +122,12 @@ your insurer and aid to official relief programs, and follow the authorities.
 scams; [[grief-admin]] and [[stoic-setback-debrief]] for the human aftermath;
 [[family-emergency-plan]] for reconnecting.
 
+## Example Trigger Phrases
+
+- "My house flooded/burned."
+- "What do I do after the disaster?"
+- "We just evacuated."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

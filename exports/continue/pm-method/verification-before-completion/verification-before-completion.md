@@ -45,3 +45,10 @@ description: "Verify work actually meets its brief BEFORE declaring it done — 
 - [ ] Do not skip the pass under time pressure — the pass is minutes; the rework it prevents is hours
 - [ ] Do not produce a zero-findings record on complex work — that's theatre; look harder or say what you couldn't check
 - [ ] Do not hide residuals to seem finished — an honest "untested under X" builds more trust than the failure it predicts
+
+## Example Trigger Phrases
+
+- "Check this is really done."
+- "Verify this meets the brief before I send it."
+- "Review my deliverable against the requirements."
+- "What's missing before we call this finished?"

@@ -67,6 +67,13 @@ Ask for these if not provided:
 - [ ] Do not skip the itemization request rung — many withholdings collapse at the first ask for receipts
 - [ ] Do not let sunk anger drive the small-claims call — the prep sheet's first line is the arithmetic
 
+## Example Trigger Phrases
+
+- "How do I get my deposit back?"
+- "My landlord is keeping my deposit."
+- "Dispute these deposit deductions."
+- "Write a deposit demand letter."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

@@ -59,3 +59,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 Consulting discovery / sales-qualification practice — root-cause questioning, BANT-style qualification, outcome-defined scoping.
+
+## Example Trigger Phrases
+
+- "Prepare for a client discovery call."
+- "Qualify a consulting lead."
+- "Scope an engagement."
+- "Run a kickoff."

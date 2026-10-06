@@ -239,3 +239,10 @@ Tiêu chí chấp nhận:
 
 [Tiếp tục với tổng cộng 5-7 user story...]
 ```
+
+## Ví dụ câu kích hoạt
+
+- "Viết PRD."
+- "Viết đặc tả sản phẩm cho tính năng này."
+- "Viết đặc tả tính năng."
+- "Viết tài liệu yêu cầu cho tính năng mới."

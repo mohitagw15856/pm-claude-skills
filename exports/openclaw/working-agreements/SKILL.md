@@ -65,3 +65,10 @@ Ask for these if not provided:
 - [ ] Do not legislate everything — the small set governs; the constitution gathers dust
 - [ ] Do not skip the conflict agreement — it's the one that carries the team when the others crack
 - [ ] Do not let violations ride silently — amend it or recommit to it; a dead agreement infects the set
+
+## Example Trigger Phrases
+
+- "Create team working agreements."
+- "Set norms for our new team."
+- "We keep clashing over how we work."
+- "Onboard people into how this team operates."

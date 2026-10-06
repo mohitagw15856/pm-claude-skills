@@ -65,6 +65,13 @@ Then provide:
 
 Incident communication practice — prompt acknowledgement, factual transparency, accountability, and clear guidance for affected people.
 
+## Example Trigger Phrases
+
+- "Draft a public statement."
+- "Write a press statement about the breach."
+- "Write our official response to the outage."
+- "Respond publicly to this controversy."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

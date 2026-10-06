@@ -61,3 +61,10 @@ Ask for these if not provided:
 - [ ] Do not delete the depth — appendixed rigor answers Q&A; deleted rigor becomes "we'll get back to you"
 - [ ] Do not walk through methodology uninvited — assert, evidence on demand
 - [ ] Do not build the exec cut before committing to the answer — compression can't rescue an analysis that won't conclude
+
+## Example Trigger Phrases
+
+- "Turn this analysis into an exec version."
+- "My leadership readout went badly."
+- "How do I compress 40 slides to 10 minutes?"
+- "What do execs actually want in a deck?"

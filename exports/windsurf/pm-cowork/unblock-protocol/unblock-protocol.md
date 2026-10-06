@@ -61,3 +61,9 @@ Ask for these if not provided:
 - [ ] Do not effort at avoidance — shrink it, name it, or pair on it; grinding slides off emotional blocks
 - [ ] Do not let waiting wear the active badge — it's a lane, with chase dates
 - [ ] Do not treat chronic same-type stucks as bad luck — three entries is the system telling you the structural thing
+
+## Example Trigger Phrases
+
+- "I keep avoiding this task."
+- "How long should I struggle before asking?"
+- "Unblock my stalled project."

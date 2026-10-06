@@ -60,3 +60,10 @@ Ask for these only if they aren't already provided:
 ## Based On
 
 1:1 management practice (Andy Grove, *High Output Management*; manager-tools 1:1 cadence) — outcome-led agendas, managing up and down.
+
+## Example Trigger Phrases
+
+- "Prep for a one-on-one."
+- "Build a 1:1 agenda."
+- "Prepare to talk to your manager."
+- "Raise something hard in a 1:1."

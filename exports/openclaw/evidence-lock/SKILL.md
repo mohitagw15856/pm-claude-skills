@@ -68,3 +68,9 @@ Ask for (if not already provided):
 - [ ] Do not launder inference as citation — derived conclusions are labelled as derived
 - [ ] Do not quietly drop claims that can't be sourced in soft mode — the register exists so the author sees what's resting on air
 - [ ] Do not proceed without sources "just this once" — without sources this is a normal draft, and other skills do that better
+
+## Example Trigger Phrases
+
+- "Make a document fully sourced."
+- "Ground a draft in the attached material."
+- "Produce something for audiences that will check."

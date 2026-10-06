@@ -106,3 +106,9 @@ Subtotals · margin % · price floor: [the number below which this job loses]
 [[stage-payment-shield]] for deposits and payment stages;
 [[home-contractor-quote-decoder]] is the customer's side of this table —
 write quotes that survive it; [[late-invoice-escalation]] for afterwards.
+
+## Example Trigger Phrases
+
+- "Help me quote this job."
+- "I keep losing money on jobs."
+- "How do I quote a day rate vs fixed?"

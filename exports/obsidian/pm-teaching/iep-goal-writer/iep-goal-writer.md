@@ -54,6 +54,13 @@ How and how often the goal is measured, so a progress report can be written from
 - Fabricating test scores or a disability category
 - Goals a general-ed teacher couldn't collect data on
 
+## Example Trigger Phrases
+
+- "Write an IEP goal."
+- "Draft annual goals."
+- "Make a goal measurable."
+- "List accommodations."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

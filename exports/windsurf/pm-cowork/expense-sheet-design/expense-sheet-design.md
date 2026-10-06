@@ -63,3 +63,10 @@ Ask for these if not provided:
 - [ ] Do not require heavy rows — every mandatory field beyond five costs compliance
 - [ ] Do not skip the monthly reconcile — capture without audit drifts, quietly
 - [ ] Do not decide deductibility in the sheet — categories transcribe; the professional decides
+
+## Example Trigger Phrases
+
+- "Track my business expenses."
+- "Build an expense sheet for the team."
+- "Get ready for reimbursement/tax season."
+- "My shoebox of receipts needs a system."

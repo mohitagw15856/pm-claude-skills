@@ -27,3 +27,9 @@ Ask for (if not already provided), else infer and label:
 ## Anti-Patterns
 
 - [ ] Do not <!-- TODO: the mistake this skill prevents -->
+
+## Example Trigger Phrases
+
+- "Choose between AI agents/tools/copilots for a job."
+- "Formalizing an AI pilot."
+- "Which agent should we use for X?"

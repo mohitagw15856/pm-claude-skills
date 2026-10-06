@@ -114,6 +114,13 @@ Ask for (if not already provided):
 for passing the books on; [[budget-variance-analysis]] when the org grows a
 real budget.
 
+## Example Trigger Phrases
+
+- "I just became treasurer."
+- "How do I do the accounts for our club?"
+- "What goes in the treasurer's report?"
+- "Inherits a shoebox of receipts."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

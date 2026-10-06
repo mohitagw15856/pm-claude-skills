@@ -52,3 +52,10 @@ What data is collected, how often, and what counts as on-track vs needs-revision
 - Inventing a diagnosis or specific data not provided
 - Confusing accommodations with modifications
 - Presenting drafts as final/compliant without team review
+
+## Example Trigger Phrases
+
+- "Write an IEP goal."
+- "Draft special-education goals."
+- "List accommodations."
+- "Write a present-levels statement."

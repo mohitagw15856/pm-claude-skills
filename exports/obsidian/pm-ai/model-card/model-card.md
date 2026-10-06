@@ -70,6 +70,12 @@ Ask for these only if they aren't already provided:
 
 Model Cards for Model Reporting (Mitchell et al., 2019) and the model-documentation practice used in responsible-AI reviews.
 
+## Example Trigger Phrases
+
+- "Write a model card."
+- "Document a model's intended use and limitations."
+- "Prepare an AI model for review/launch."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

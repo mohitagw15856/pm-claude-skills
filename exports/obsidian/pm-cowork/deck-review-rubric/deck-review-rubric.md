@@ -68,6 +68,13 @@ Ask for these if not provided:
 - [ ] Do not deliver forty comments — the two-fixes compression is the review's actual deliverable
 - [ ] Do not soften 🔴s for kindness — the room will deliver them unsoftened tomorrow
 
+## Example Trigger Phrases
+
+- "Review my deck."
+- "Give feedback on this presentation."
+- "Is this ready for the board?"
+- "Our deck reviews are just font opinions."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

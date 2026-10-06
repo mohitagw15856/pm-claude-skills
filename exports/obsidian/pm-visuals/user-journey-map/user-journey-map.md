@@ -76,6 +76,12 @@ journey
 
 Customer/user journey mapping (phases, actions, emotion curve, friction-to-opportunity), as renderable Mermaid.
 
+## Example Trigger Phrases
+
+- "Map a user/customer journey."
+- "Show the experience end-to-end."
+- "Find friction and drop-off points."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent

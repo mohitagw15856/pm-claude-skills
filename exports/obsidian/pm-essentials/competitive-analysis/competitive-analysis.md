@@ -126,6 +126,14 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - [ ] Win/loss analysis reflects customer perspective, not internal assumptions
 - [ ] Different customer segments are considered (not all buyers value the same things)
 
+## Example Trigger Phrases
+
+- "Analyze competitors."
+- "Create competitive analysis."
+- "Compare features with competitors."
+- "Build a competitive landscape."
+- "Track competitive positioning."
+
 ---
 <!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
      variable for the highlighted text; replace it with your plugin's equivalent
