@@ -84,7 +84,9 @@ for (const f of LIVING) {
   if (!existsSync(join(root, f))) continue;
   // Strip thousands separators first: "1,117 skills" must read as 1117, not
   // as a stale claim of 117.
-  const text = read(f).replace(/(\d),(\d{3})\b/g, '$1$2');
+  // The TRUST-NUMBERS block is generated from the repo by build-trust-numbers.mjs
+  // (which has its own --check), and its numbers are subsets by design.
+  const text = read(f).replace(/<!-- TRUST-NUMBERS:START[\s\S]*?<!-- TRUST-NUMBERS:END -->/g, '').replace(/(\d),(\d{3})\b/g, '$1$2');
   for (const m of CLAIMS.flatMap((re) => [...text.matchAll(re)])) {
     const n = +m[1];
     if (ALLOWED.has(n)) continue;
