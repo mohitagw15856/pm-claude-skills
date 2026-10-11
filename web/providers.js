@@ -206,6 +206,19 @@
     return _tryEnabled;
   }
 
+  // PM-8B, the library's own model (training/), appears in the In-browser and
+  // Ollama lists once web/pm-8b.json says it is released. Until then, nothing.
+  var PM8B = null;
+  fetch('pm-8b.json').then(function (r) { return r.ok ? r.json() : null; }).then(function (c) {
+    if (!c || !c.released) return;
+    PM8B = c;
+    if (c.webllm && c.webllm.model && c.webllm.model_lib) PROVIDERS.webllm.models.unshift([c.webllm.model_id, 'PM-8B · trained on this library (' + (c.webllm.size || 'large') + ')']);
+    if (c.ollama) PROVIDERS.ollama.models.unshift([c.ollama, 'PM-8B (after: ollama pull or create ' + c.ollama + ')']);
+    // The picker may already be drawn; redraw it if one of these providers is showing.
+    var pid = providerId();
+    if ((pid === 'webllm' || pid === 'ollama') && document.getElementById('model')) applyProvider();
+  }).catch(function () {});
+
   // Lazy WebLLM engine (loaded only when someone actually picks the in-browser provider).
   var _engine = null, _engineModel = null;
   async function getEngine(model, onProgress) {
@@ -213,7 +226,12 @@
     if (_engine && _engineModel === model) return _engine;
     var webllm = await import('https://esm.run/@mlc-ai/web-llm');
     if (_engine) { try { await _engine.unload(); } catch (_) {} }
-    _engine = await webllm.CreateMLCEngine(model, { initProgressCallback: onProgress });
+    var opts = { initProgressCallback: onProgress };
+    // A custom model (PM-8B) is added to WebLLM's built-in list for this engine.
+    if (PM8B && PM8B.webllm && model === PM8B.webllm.model_id) {
+      opts.appConfig = { model_list: webllm.prebuiltAppConfig.model_list.concat([{ model: PM8B.webllm.model, model_id: PM8B.webllm.model_id, model_lib: PM8B.webllm.model_lib }]) };
+    }
+    _engine = await webllm.CreateMLCEngine(model, opts);
     _engineModel = model;
     return _engine;
   }

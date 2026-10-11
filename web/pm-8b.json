@@ -1,0 +1,11 @@
+{
+  "_comment": "Switch for PM-8B in the playground. While released is false nothing appears. After training (training/README.md) and export (training/export-pm-8b.sh), set released to true and fill in the WebLLM weights URL; the model then shows in the In-browser and Ollama provider lists.",
+  "released": false,
+  "ollama": "pm-8b",
+  "webllm": {
+    "model_id": "PM-8B-q4f16_1-MLC",
+    "model": "",
+    "model_lib": "",
+    "size": "about 5 GB"
+  }
+}

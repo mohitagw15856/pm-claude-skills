@@ -12,6 +12,7 @@ The pipeline to train **PM-8B**: a QLoRA fine-tune of Qwen3-8B that carries the 
 | 4. Train | `bash training/train-pm-8b.sh` (axolotl, `pm-8b.yml`) | 💳 one 24 GB+ GPU, 1-3 hours, about $2-10 rented |
 | 5. Evaluate | SkillBench with `local:` models (below) | ▶️ after step 4 |
 | 6. Publish | `HF_REPO=<you>/pm-8b-lora bash training/train-pm-8b.sh` uploads with `MODEL_CARD.md` | 🔑 your Hugging Face account |
+| 7. Run it locally | `bash training/export-pm-8b.sh` merges the adapter and makes an Ollama model (GGUF, Q4_K_M) and WebLLM weights; then set `released: true` in `web/pm-8b.json` and PM-8B appears in the playground's In-browser and Ollama lists | 🔑 after step 6 |
 
 The **PM-8B dataset** workflow (`.github/workflows/pm-8b-dataset.yml`, manual) runs steps 2 and 3 in CI with the repository's Anthropic key. It uploads the mix as a workflow artifact, so a GPU box can download it without the key.
 
