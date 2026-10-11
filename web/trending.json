@@ -1,29 +1,21 @@
 {
-  "generatedAt": "2026-10-05T16:10:52.531Z",
+  "generatedAt": "2026-10-11T19:50:22.952Z",
   "window": "7d",
   "skills": [
+    {
+      "name": "data-quality-checks",
+      "count": 1
+    },
+    {
+      "name": "briefing-note",
+      "count": 1
+    },
     {
       "name": "test-strategy-doc",
       "count": 1
     },
     {
-      "name": "word-document",
-      "count": 1
-    },
-    {
-      "name": "salary-negotiation",
-      "count": 1
-    },
-    {
-      "name": "brief-builder",
-      "count": 1
-    },
-    {
-      "name": "meeting-notes",
-      "count": 1
-    },
-    {
-      "name": "prd-template",
+      "name": "learn-anything-roadmap",
       "count": 1
     }
   ]
