@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>What changed: every edit to every skill | PM Skills</title>
+<meta name="description" content="The change history of the library's professional skills: what changed, when, in which pull request, and the before and after scores for machine rewrites." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/changes.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .ch-wrap { max-width: 900px; margin: 0 auto; padding: 16px 22px 70px; }
+  .ch-wrap h1 { font-size: 28px; margin-bottom: 6px; }
+  .lead, .muted { color: var(--muted); line-height: 1.6; }
+  .controls { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
+  .controls input { flex: 1 1 260px; min-width: 0; border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 10px; padding: 9px 12px; font: inherit; }
+  .item { border-top: 1px solid var(--border); padding: 12px 0; display: grid; grid-template-columns: 96px 1fr; gap: 12px; }
+  .item .date { color: var(--muted); font-size: 13px; }
+  .item .subj { font-weight: 600; overflow-wrap: anywhere; }
+  .item .meta { color: var(--muted); font-size: 13px; margin-top: 3px; overflow-wrap: anywhere; }
+  .tag { display: inline-block; border: 1px solid var(--border); border-radius: 999px; padding: 1px 8px; font-size: 12px; margin: 3px 4px 0 0; color: var(--text); text-decoration: none; }
+  .rw { color: #1a8f4c; font-size: 13px; }
+  @media (max-width: 560px) { .item { grid-template-columns: 1fr; gap: 2px; } }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<main class="ch-wrap">
+  <h1>What changed</h1>
+  <p class="lead">Every edit to a skill, newest first: what changed, when, the pull request with the full diff, and, for machine rewrites, the score before and after. Filter by skill to see one skill's history. For why the self-rewrites happen, see the <a href="evolution.html">evolution log</a>.</p>
+  <div class="controls"><input id="f" type="search" placeholder="Filter by skill name, for example lease-decoder" aria-label="Filter by skill name"></div>
+  <p class="muted" id="count"></p>
+  <div id="list"><p class="muted">Loading…</p></div>
+</main>
+<script src="nav.js" defer></script>
+<script>
+(function () {
+  var REPO = 'https://github.com/mohitagw15856/pm-claude-skills';
+  var el = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  var D = null;
+  function render() {
+    var q = el('f').value.trim().toLowerCase();
+    var rows = D.commits.filter(function (c) { return !q || c.skills.some(function (s) { return s.indexOf(q) !== -1; }); });
+    var exact = q && D.commits.some(function (c) { return c.skills.indexOf(q) !== -1; });
+    el('count').textContent = (q ? rows.length + ' change' + (rows.length === 1 ? '' : 's') + ' matching "' + q + '"' : rows.length + ' changes') + '.';
+    el('list').innerHTML = rows.slice(0, 200).map(function (c) {
+      var rw = D.rewrites.filter(function (r) { return c.skills.indexOf(r.skill) !== -1 && (r.pr ? r.pr === c.pr : r.date === c.date); });
+      var link = c.pr ? '<a href="' + REPO + '/pull/' + c.pr + '/files">#' + c.pr + ' (diff)</a>' : '<a href="' + REPO + '/commit/' + esc(c.sha) + '">' + esc(c.sha.slice(0, 7)) + ' (diff)</a>';
+      var who = c.bulk && !exact ? '<span class="muted">' + c.count + ' skills (library-wide)</span>'
+        : c.skills.slice(0, 12).map(function (s) { return '<a class="tag" href="?skill=' + encodeURIComponent(s) + '">' + esc(s) + '</a>'; }).join('') + (c.skills.length > 12 ? '<span class="muted"> +' + (c.skills.length - 12) + ' more</span>' : '');
+      return '<div class="item"><div class="date">' + esc(c.date) + '</div><div><div class="subj">' + esc(c.subject) + '</div><div class="meta">' + link + '</div><div>' + who + '</div>' +
+        rw.map(function (r) { return '<div class="rw">Machine rewrite of ' + esc(r.skill) + ': ' + (r.before != null ? r.before.toFixed(2) : 'n/a') + ' → ' + (r.after != null ? r.after.toFixed(2) : 'n/a') + ' on the eval rubric</div>'; }).join('') + '</div></div>';
+    }).join('') || '<p class="muted">No changes match.</p>';
+    try { history.replaceState(null, '', q ? '?skill=' + encodeURIComponent(q) : location.pathname); } catch (e) {}
+  }
+  fetch('skill-changes.json').then(function (r) { return r.json(); }).then(function (d) {
+    D = d;
+    var s0 = new URLSearchParams(location.search).get('skill');
+    if (s0) el('f').value = s0.toLowerCase().replace(/[^a-z0-9-]/g, '').slice(0, 80);
+    el('f').addEventListener('input', render);
+    el('list').addEventListener('click', function (e) { var a = e.target.closest('a.tag'); if (!a) return; e.preventDefault(); el('f').value = a.textContent; render(); });
+    render();
+  }).catch(function () { el('list').innerHTML = '<p class="muted">Could not load the change history.</p>'; });
+})();
+</script>
+</body>
+</html>

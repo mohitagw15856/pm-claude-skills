@@ -332,6 +332,7 @@ ${existsSync(join(root, 'skills-i18n', 'zh', s.name, 'SKILL.md')) ? `<link rel="
     <a class="btn btn-primary" href="${playUrl}">▶ Run it free — no key needed</a>
     <a class="btn btn-ghost" href="${BASE}/grade.html?skill=${s.name}">📝 Grade your existing draft</a>
     <a class="btn btn-ghost" href="${REPO}/blob/main/skills/${s.name}/SKILL.md">View SKILL.md ↗</a>
+    <a class="btn btn-ghost" href="../changes.html?skill=${s.name}">What changed</a>
   </div>
 
   ${triggers}

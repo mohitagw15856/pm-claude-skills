@@ -126,6 +126,7 @@
       ['worked-examples.html', '📘 Worked examples'],
       ['ai-at-work.html', '🏆 Best AI for your job'],
       ['evolution.html', '🧬 Evolution log'],
+      ['changes.html', '📝 What changed'],
       ['firm-live.html', '🏢 The live Firm'],
       ['career.html', '🧭 Career copilot'],
       ['compile.html', '🧑‍🏫 Expert-to-skill compiler'],

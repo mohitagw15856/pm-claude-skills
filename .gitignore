@@ -53,7 +53,6 @@ node_modules/
 .self-improve.json
 .self-improve-backups/
 pm-skills-course.zip
-web/skill-changelog.json
 org/sessions-data/
 org/white-label/branding.json
 agensi-zips/
@@ -85,6 +84,7 @@ web/registry/
 web/skill-cup.json
 web/i18n-desc/
 web/ab/
+web/skill-changes.json
 # Generated from skills/ by scripts/build-exports.mjs: built before npm publish (prepack)
 # and published to the 'exports' branch for browsing; never committed to main.
 exports/
