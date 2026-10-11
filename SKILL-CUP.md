@@ -8,6 +8,8 @@ A monthly contest for the best new skill on a theme. Write one skill on the mont
 
 Skills that help people read, check and act on medical letters, bills, test results and insurance forms.
 
+**Any language.** Write the skill in your own language and it competes in that language's track as well as overall, judged in that language. A Latin-script language needs `language: <code>` in the frontmatter (for example `language: es`); other scripts are detected.
+
 **To enter:** add `skills/<your-skill>/SKILL.md` and at least one eval case for it in `evals/cases.json`, in one pull request with `[Cup]` in the title. A maintainer runs the scoring; the result is posted on the PR. Check your skill first with `npx skillspec-check skills/<your-skill>`.
 
 No entries yet. The first one sets the bar.

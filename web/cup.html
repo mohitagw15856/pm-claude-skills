@@ -31,6 +31,7 @@
     <li>Write <code>skills/&lt;your-skill&gt;/SKILL.md</code> on this month's theme. The <a href="compile.html">expert-to-skill compiler</a> builds one from your answers.</li>
     <li>Add at least one eval case for it to <code>evals/cases.json</code>: a real request the skill should handle.</li>
     <li>Check it with <code>npx skillspec-check skills/&lt;your-skill&gt;</code>. It must reach L3.</li>
+    <li>Any language: a skill written in Hindi, Chinese or Polish also competes in its own language track, judged in that language. Latin-script languages add <code>language: es</code> (or their code) to the frontmatter.</li>
     <li>Open one pull request with <code>[Cup]</code> in the title. A maintainer runs the scoring and the result is posted on your PR.</li>
   </ol>
   <h2>Winners</h2>
@@ -41,16 +42,17 @@
 (function () {
   var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
   var REPO = 'https://github.com/mohitagw15856/pm-claude-skills';
+  var LANG = { en: 'English', zh: 'Chinese', ja: 'Japanese', ko: 'Korean', hi: 'Hindi', ar: 'Arabic', th: 'Thai', ru: 'Russian', es: 'Spanish', pt: 'Portuguese', fr: 'French', de: 'German', it: 'Italian', pl: 'Polish', uk: 'Ukrainian', tr: 'Turkish', bn: 'Bengali', ur: 'Urdu', id: 'Indonesian', vi: 'Vietnamese', 'zh-TW': 'Traditional Chinese' };
   var who = function (a) { return '<a href="https://github.com/' + encodeURIComponent(a) + '">@' + esc(a) + '</a>'; };
   fetch('skill-cup.json').then(function (r) { return r.json(); }).then(function (d) {
     var c = d.cups[d.cups.length - 1];
     var left = Math.max(0, Math.ceil((new Date(c.closes + 'T23:59:59Z') - Date.now()) / 86400000));
     document.getElementById('now').innerHTML = '<h2>' + esc(c.month) + ': ' + esc(c.theme) + '</h2><p>' + esc(c.brief) + '</p><p class="muted">' + left + ' day' + (left === 1 ? '' : 's') + ' left · closes ' + esc(c.closes) + '</p>' +
-      (c.entries.length ? '<table class="tbl"><thead><tr><th>#</th><th>Skill</th><th>By</th><th>Score</th></tr></thead><tbody>' + c.entries.map(function (e, i) { return '<tr><td>' + (i + 1) + '</td><td><a href="' + REPO + '/pull/' + encodeURIComponent(e.pr) + '">' + esc(e.skill) + '</a></td><td>' + who(e.author) + '</td><td>' + Number(e.score).toFixed(2) + '</td></tr>'; }).join('') + '</tbody></table>'
+      (c.entries.length ? '<table class="tbl"><thead><tr><th>#</th><th>Skill</th><th>Language</th><th>By</th><th>Score</th></tr></thead><tbody>' + c.entries.map(function (e, i) { return '<tr><td>' + (i + 1) + '</td><td><a href="' + REPO + '/pull/' + encodeURIComponent(e.pr) + '">' + esc(e.skill) + '</a></td><td>' + esc(LANG[e.lang] || 'English') + '</td><td>' + who(e.author) + '</td><td>' + Number(e.score).toFixed(2) + '</td></tr>'; }).join('') + '</tbody></table>'
         : '<p>No entries yet. The first one sets the bar.</p>') +
       '<a class="btn" href="' + REPO + '/compare">Open your entry</a>';
     var won = d.cups.filter(function (x) { return x.winner; }).reverse();
-    document.getElementById('hall').innerHTML = won.length ? '<table class="tbl"><thead><tr><th>Month</th><th>Theme</th><th>Winner</th><th>Score</th></tr></thead><tbody>' + won.map(function (x) {
+    document.getElementById('hall').innerHTML = won.length ? '<table class="tbl"><thead><tr><th>Month</th><th>Theme</th><th>Winner</th><th>Score</th></tr></thead><tbody>' + won.reduce(function (rows, x) { rows.push(x); Object.keys(x.trackWinners || {}).forEach(function (l) { rows.push({ month: x.month, theme: (LANG[l] || l) + ' track', winner: x.trackWinners[l] }); }); return rows; }, []).map(function (x) {
       return x.winner === 'none' ? '<tr><td>' + esc(x.month) + '</td><td>' + esc(x.theme) + '</td><td class="muted">no entries</td><td></td></tr>' : '<tr><td>' + esc(x.month) + '</td><td>' + esc(x.theme) + '</td><td>' + who(x.winner.author) + ' · <a href="' + REPO + '/pull/' + encodeURIComponent(x.winner.pr) + '">' + esc(x.winner.skill) + '</a></td><td>' + Number(x.winner.score).toFixed(2) + '</td></tr>';
     }).join('') + '</tbody></table>' : '<p class="muted">The first winner is crowned on ' + esc(c.closes) + '. Coming up: ' + d.themes.slice(0, 3).map(function (t) { return esc(t.theme); }).join(' · ') + '.</p>';
   }).catch(function () { document.getElementById('now').innerHTML = '<p class="muted">Could not load the Cup.</p>'; });

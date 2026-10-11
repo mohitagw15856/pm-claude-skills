@@ -10,6 +10,7 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { LANGUAGE_NAMES } from './lib/skill-language.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const FILE = join(root, 'data', 'skill-cup.json');
@@ -48,6 +49,12 @@ if (!check) {
   while (open && !open.winner && open.closes < today) {
     const top = [...open.entries].sort((a, b) => b.score - a.score || a.pr - b.pr)[0];
     open.winner = top ? { pr: top.pr, author: top.author, skill: top.skill, score: top.score } : 'none';
+    // Language tracks: entries written in another language also compete with each
+    // other, so a strong Hindi or Polish skill wins its track even if English
+    // entries outscore it overall.
+    const tracks = {};
+    for (const e of [...open.entries].sort((a, b) => b.score - a.score || a.pr - b.pr)) if (e.lang && e.lang !== 'en' && !tracks[e.lang]) tracks[e.lang] = { pr: e.pr, author: e.author, skill: e.skill, score: e.score };
+    if (Object.keys(tracks).length) open.trackWinners = tracks;
     const used = new Set(d.cups.map((c) => c.request).filter(Boolean));
     const ask = (d.requests || []).find((r) => r.votes >= REQUEST_THEME_VOTES && !used.has(r.number));
     const next = ask
@@ -76,9 +83,11 @@ const md = [
   '',
   cur.brief,
   '',
+  '**Any language.** Write the skill in your own language and it competes in that language\'s track as well as overall, judged in that language. A Latin-script language needs `language: <code>` in the frontmatter (for example `language: es`); other scripts are detected.',
+  '',
   '**To enter:** add `skills/<your-skill>/SKILL.md` and at least one eval case for it in `evals/cases.json`, in one pull request with `[Cup]` in the title. A maintainer runs the scoring; the result is posted on the PR. Check your skill first with `npx skillspec-check skills/<your-skill>`.',
   '',
-  cur.entries.length ? '| Rank | Skill | By | Score | PR |\n|---|---|---|---|---|\n' + cur.entries.map((e, i) => `| ${i + 1} | \`${e.skill}\` | ${user(e.author)} | ${e.score.toFixed(2)} | [#${e.pr}](${REPO}/pull/${e.pr}) |`).join('\n') : 'No entries yet. The first one sets the bar.',
+  cur.entries.length ? '| Rank | Skill | Language | By | Score | PR |\n|---|---|---|---|---|---|\n' + cur.entries.map((e, i) => `| ${i + 1} | \`${e.skill}\` | ${LANGUAGE_NAMES[e.lang] || 'English'} | ${user(e.author)} | ${e.score.toFixed(2)} | [#${e.pr}](${REPO}/pull/${e.pr}) |`).join('\n') : 'No entries yet. The first one sets the bar.',
   '',
   '## Requested skills (always on-theme)',
   '',
@@ -92,7 +101,8 @@ const md = [
   '',
   '| Month | Theme | Winner | Skill | Score |',
   '|---|---|---|---|---|',
-  ...d.cups.filter((c) => c.winner).map((c) => c.winner === 'none' ? `| ${c.month} | ${c.theme} | no entries | | |` : `| ${c.month} | ${c.theme} | ${user(c.winner.author)} | \`${c.winner.skill}\` ([#${c.winner.pr}](${REPO}/pull/${c.winner.pr})) | ${c.winner.score.toFixed(2)} |`),
+  ...d.cups.filter((c) => c.winner).flatMap((c) => [c.winner === 'none' ? `| ${c.month} | ${c.theme} | no entries | | |` : `| ${c.month} | ${c.theme} | ${user(c.winner.author)} | \`${c.winner.skill}\` ([#${c.winner.pr}](${REPO}/pull/${c.winner.pr})) | ${c.winner.score.toFixed(2)} |`,
+    ...Object.entries(c.trackWinners || {}).map(([l, w]) => `| ${c.month} | ${LANGUAGE_NAMES[l] || l} track | ${user(w.author)} | \`${w.skill}\` ([#${w.pr}](${REPO}/pull/${w.pr})) | ${w.score.toFixed(2)} |`)]),
   '',
   `**Coming up:** ${d.themes.slice(0, 3).map((t) => t.theme).join(' · ') || 'open themes'}.`,
   '',

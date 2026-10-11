@@ -16,6 +16,7 @@ import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { complete } from '../bin/lib/anthropic.mjs';
+import { skillLanguage } from './lib/skill-language.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const FILE = join(root, 'data', 'skill-cup.json');
@@ -73,6 +74,7 @@ const RUBRIC = `You are a strict evaluator of professional work artifacts. Score
 - completeness: are the load-bearing sections present and specific (not padded)?
 - usefulness: could the intended reader act on it without a rewrite?
 - grounding: does it use the task's facts, label assumptions, avoid fabricated specifics?
+The task and response may be in any language: judge them in that language, by the standard of a professional working in it.
 Return STRICT JSON only: {"structure":n,"completeness":n,"usefulness":n,"grounding":n}`;
 const body = skillMd.replace(/^---[\s\S]*?---\r?\n/, '');
 const scores = [];
@@ -89,7 +91,7 @@ if (!scores.length) fail('the judge returned nothing usable; try again.');
 const score = Math.round((scores.reduce((a, b) => a + b, 0) / scores.length) * 100) / 100;
 
 current.entries = current.entries.filter((e) => e.pr !== Number(pr));
-current.entries.push({ pr: Number(pr), author: p.user.login, skill: name, score, cases: scores.length, scoredAt: new Date().toISOString().slice(0, 10), generator: GEN, judge: JUDGE });
+current.entries.push({ pr: Number(pr), author: p.user.login, skill: name, lang: skillLanguage(skillMd), score, cases: scores.length, scoredAt: new Date().toISOString().slice(0, 10), generator: GEN, judge: JUDGE });
 current.entries.sort((a, b) => b.score - a.score || a.pr - b.pr);
 writeFileSync(FILE, JSON.stringify(cup, null, 2) + '\n');
 const rank = current.entries.findIndex((e) => e.pr === Number(pr)) + 1;
