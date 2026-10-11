@@ -18,6 +18,10 @@ They may request edits before signing off. The review is recorded in `config/hum
 
 `scripts/check-human-review.mjs` then counts it toward coverage; reviews expire after 12 months so the badge never goes stale.
 
+## Write a new skill from what you know
+
+If the skill you'd review doesn't exist yet, the [expert-to-skill compiler](https://mohitagw15856.github.io/pm-claude-skills/compile.html) interviews you: who it's for, what you need to know, your steps, rules of thumb, red flags, common mistakes, how you judge a good answer, when to send someone to a professional, and one anonymised real case. It compiles your answers, not a model's, into a SkillSpec L3 skill with an eval case and your credit line, ready for a pull request.
+
 ## How to take part
 
 1. Pick a skill from [the queue](HUMAN-REVIEW-QUEUE.md) that matches your credential.

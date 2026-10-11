@@ -129,6 +129,7 @@
       ['evolution.html', '🧬 Evolution log'],
       ['firm-live.html', '🏢 The live Firm'],
       ['career.html', '🧭 Career copilot'],
+      ['compile.html', '🧑‍🏫 Expert-to-skill compiler'],
       ['reckoning.html', '⚖️ Reckoning'],
       ['ledger.html', '📓 Outcome Ledger'],
       ['deck.html', '🃏 Operator\'s Deck'],
