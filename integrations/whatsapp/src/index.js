@@ -15,6 +15,7 @@
 // nobody else can make the bot spend your Anthropic key.
 
 import { documentBlock, readDocument, PRIVACY_NOTE } from '../../shared/forward-doc.js';
+import { validTwilioSignature } from '../../shared/twilio-signature.js';
 
 const API = 'https://pm-skills-mcp.pm-claude-skills.workers.dev';
 const REPO = 'https://github.com/mohitagw15856/pm-claude-skills';
@@ -49,20 +50,6 @@ skill <name> - full instructions
 run <name or task> - draft it here
 📄 Send a photo or PDF of a document (a lease, a bill, a contract) to have it read with the right skill. Add a caption to say what you want.
 Library: ${REPO}`;
-
-// Twilio's webhook signature: base64 HMAC-SHA1 over the URL plus every POST
-// parameter, sorted by name, as name+value. https://www.twilio.com/docs/usage/security
-async function validTwilioSignature(request, form, authToken) {
-  const sig = request.headers.get('x-twilio-signature') || '';
-  const data = request.url + [...form.keys()].sort().map((k) => k + form.getAll(k).join('')).join('');
-  const key = await crypto.subtle.importKey('raw', new TextEncoder().encode(authToken), { name: 'HMAC', hash: 'SHA-1' }, false, ['sign']);
-  const mac = new Uint8Array(await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(data)));
-  const expected = btoa(String.fromCharCode(...mac));
-  if (sig.length !== expected.length) return false;
-  let diff = 0;
-  for (let i = 0; i < sig.length; i++) diff |= sig.charCodeAt(i) ^ expected.charCodeAt(i);
-  return diff === 0;
-}
 
 // Outbound WhatsApp messages through Twilio's API (1,600 characters each).
 async function sendWhatsApp(env, from, to, text) {

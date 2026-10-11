@@ -1,0 +1,11 @@
+name = "pm-skills-phone"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# A phone number you can call to use the library by voice (Twilio Voice webhook).
+# Deploy:  cd integrations/phone-line && npx wrangler deploy
+# Secrets: npx wrangler secret put TWILIO_AUTH_TOKEN    # required; every webhook's signature is verified
+#          npx wrangler secret put ANTHROPIC_API_KEY    # required to answer
+#          npx wrangler secret put TWILIO_ACCOUNT_SID   # optional; enables "text me"
+# Vars (optional, in [vars]): VOICE (default Polly.Amy-Neural), VOICE_LANG (default en-GB),
+#          ALLOWED_CALLERS (comma-separated E.164 numbers, to keep the line private)
