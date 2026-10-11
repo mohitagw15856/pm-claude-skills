@@ -48,6 +48,7 @@ on:
       - 'data/firm-ledger.json'
       - 'data/skill-cup.json'
       - 'data/ab-tests.json'
+      - 'data/outcomes.json'
       - 'proposals/ab/**'
       - 'i18n/**'
       - 'CHANGELOG.md'
@@ -244,6 +245,9 @@ jobs:
 
       - name: Publish the translated descriptions for search (web/i18n-desc/)
         run: node scripts/build-i18n-desc.mjs
+
+      - name: Build what actually worked, per skill (web/proven.json)
+        run: node scripts/build-proven.mjs
 
       - name: Publish the live A/B test versions (web/ab/)
         run: |

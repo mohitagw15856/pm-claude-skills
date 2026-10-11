@@ -85,6 +85,7 @@ web/registry/
 web/skill-cup.json
 web/i18n-desc/
 web/ab/
+web/proven.json
 # Generated from skills/ by scripts/build-exports.mjs: built before npm publish (prepack)
 # and published to the 'exports' branch for browsing; never committed to main.
 exports/
