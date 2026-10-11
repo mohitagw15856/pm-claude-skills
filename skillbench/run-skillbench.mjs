@@ -53,6 +53,9 @@ const COMPAT = [
   [/^hf:/, 'https://router.huggingface.co/v1', 'HF_TOKEN', 'hf:'],
   // A model you serve yourself (Ollama, vLLM, llama.cpp): local:<model>. Ollama ignores
   // the key, but one must be set (LOCAL_API_KEY=x) so a missing key is never silent.
+  // Cloudflare Workers AI (Qwen, DeepSeek and others on a free daily allowance):
+  // cf:@cf/<org>/<model>, with CLOUDFLARE_ACCOUNT_ID and a token allowed to use Workers AI.
+  [/^cf:/, `https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID || 'missing-account-id'}/ai/v1`, 'CLOUDFLARE_API_TOKEN', 'cf:'],
   [/^local:/, process.env.LOCAL_BASE_URL || 'http://localhost:11434/v1', 'LOCAL_API_KEY', 'local:'],
   [/^sf:/, process.env.SILICONFLOW_BASE_URL || 'https://api.siliconflow.cn/v1', 'SILICONFLOW_API_KEY', 'sf:'],
   [/^(gpt|o\d|chatgpt)/, process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1', 'OPENAI_API_KEY'],
@@ -66,7 +69,7 @@ function providerOf(model) {
   if (/^claude/.test(model)) return 'anthropic';
   if (COMPAT.some(([re]) => re.test(model))) return 'openai';
   if (/^gemini/.test(model)) return 'google';
-  throw new Error(`Cannot infer provider for "${model}" (expected claude-*, gpt-*, gemini-*, deepseek-*, qwen-*, kimi-*, glm-*, doubao-*, modelscope:*, hf:*, sf:* or local:*).`);
+  throw new Error(`Cannot infer provider for "${model}" (expected claude-*, gpt-*, gemini-*, deepseek-*, qwen-*, kimi-*, glm-*, doubao-*, modelscope:*, hf:*, sf:*, cf:* or local:*).`);
 }
 // The env var a model's provider needs, for --skip-missing-keys.
 function keyVarOf(model) {
@@ -111,7 +114,8 @@ async function complete({ model, system, user, maxTokens = 4096 }) {
     });
     const j = await res.json();
     if (!res.ok) throw new Error(`${model}: ${j.error?.message || res.status}`);
-    return j.choices?.[0]?.message?.content || '';
+    // Reasoning models put their thinking in <think> blocks; the judge scores the answer.
+    return (j.choices?.[0]?.message?.content || '').replace(/<think>[\s\S]*?<\/think>\s*/g, '').trim();
   }
   // google
   const key = process.env.GEMINI_API_KEY;
@@ -181,6 +185,7 @@ if (dryRun) { console.log('~rough cost: generations dominate; expect the cost of
 
 // ── Run ───────────────────────────────────────────────────────────────────────
 const results = existsSync(outPath) ? JSON.parse(readFileSync(outPath, 'utf8')) : { _comment: 'SkillBench results. One entry per model per run. See skillbench/README.md.', runs: [] };
+const failedModels = [];
 for (const model of models) {
   console.log(`\n▶ ${model}`);
   const perTask = [];
@@ -213,11 +218,23 @@ for (const model of models) {
     tasks: perTask,
   };
   // A run where every task failed (quota, outage) must not overwrite a good earlier one.
-  const prev = results.runs.find((r) => r.model === model && r.taskSetVersion === taskSetVersion);
-  if (!ok.length && prev && prev.score != null) { console.log(`  ✗ every task failed; keeping the ${prev.date} run`); continue; }
+  // A run where every task failed (quota, outage, no credit) is never saved: it
+  // would replace good scores, or publish an empty row. Report why instead.
+  if (!ok.length) {
+    const why = (perTask.find((x) => x.error) || {}).error || 'no scores';
+    const hint = /\b402\b/.test(why) ? ' (402 Payment Required: the provider\'s free credits are used up)' : /\b(401|403)\b/.test(why) ? ' (the key is missing a permission or is wrong)' : /\b429\b/.test(why) ? ' (rate-limited)' : '';
+    console.log(`  ✗ every task failed, nothing saved: ${why}${hint}`);
+    failedModels.push(`${model}: ${why}${hint}`);
+    continue;
+  }
   results.runs = results.runs.filter((r) => !(r.model === model && r.taskSetVersion === taskSetVersion));
   results.runs.push(run);
   console.log(`  → SkillBench ${run.score ?? '–'} · bare ${run.bare ?? '–'} · skill lift ${run.lift > 0 ? '+' : ''}${run.lift ?? '–'}`);
 }
 writeFileSync(outPath, JSON.stringify(results, null, 2) + '\n');
 console.log(`\nWrote ${outPath}`);
+if (failedModels.length) {
+  console.error(`\n${failedModels.length} of ${models.length} model(s) produced no scores:\n  ${failedModels.join('\n  ')}`);
+  if (process.env.GITHUB_ACTIONS) for (const f of failedModels) console.log(`::warning::${f}`);
+  if (failedModels.length === models.length) process.exit(1);
+}

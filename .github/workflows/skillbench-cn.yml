@@ -2,17 +2,17 @@ name: Run SkillBench (Chinese task set)
 
 # Scores Chinese models on the Chinese task set (skillbench/tasks-zh.json):
 # workplace, life admin, exams and content, bare and with the matching skill.
-# Manual only. The default models are free: modelscope:* runs on ModelScope
-# API-Inference's daily free quota (MODELSCOPE_TOKEN; the ModelScope account must be
-# linked to an Alibaba Cloud account once, at no cost). hf:* uses Hugging Face's
-# monthly free credits (HF_TOKEN), which cover only a handful of calls. sf:* runs on
-# SiliconFlow (SILICONFLOW_API_KEY), where models such as sf:Qwen/Qwen2.5-7B-Instruct
-# and sf:THUDM/glm-4-9b-chat are free; larger ones cost a little per call. Paid provider keys still work if set:
-# DEEPSEEK_API_KEY, DASHSCOPE_API_KEY (Qwen), MOONSHOT_API_KEY (Kimi),
-# ZHIPU_API_KEY (GLM), ARK_API_KEY (Doubao). The judge needs ANTHROPIC_API_KEY.
-# Results land on the skillbench-zh-results branch and a pull request to main is
-# opened for review (main is PR-only). Also runs on the 1st of each month with the
-# models in the SKILLBENCH_ZH_MODELS repository variable, or the defaults below,
+# Manual, and on the 1st of each month. The default models run on Cloudflare
+# Workers AI's free daily allowance (cf:*, using the repository's CLOUDFLARE_ACCOUNT_ID
+# and CLOUDFLARE_API_TOKEN; the token needs the Workers AI permission). hf:* needs
+# Hugging Face credits (the October 2026 run failed with 402 when they ran out),
+# modelscope:* needs the ModelScope account linked to Alibaba Cloud, and sf:* a
+# mainland phone number. Paid keys still work if set: DEEPSEEK_API_KEY,
+# DASHSCOPE_API_KEY (Qwen), MOONSHOT_API_KEY (Kimi), ZHIPU_API_KEY (GLM), ARK_API_KEY
+# (Doubao). The judge needs ANTHROPIC_API_KEY. A model whose every call fails is
+# reported in the log and never saved. Results land on the skillbench-zh-results
+# branch and a pull request to main is opened. The monthly run uses the
+# SKILLBENCH_ZH_MODELS repository variable, or the defaults below,
 # so the Chinese leaderboard card (web/live/modelbench-zh*.svg) stays current.
 on:
   schedule:
@@ -20,9 +20,9 @@ on:
   workflow_dispatch:
     inputs:
       models:
-        description: 'Comma-separated model ids; modelscope:* and hf:* are free'
+        description: 'Comma-separated model ids; cf:* (Cloudflare Workers AI) runs on the free daily allowance'
         required: true
-        default: 'modelscope:deepseek-ai/DeepSeek-V4.1-Flash,modelscope:Qwen/Qwen3.8-27B,modelscope:zai-org/GLM-5.2,modelscope:PaddlePaddle/ERNIE-4.5-300B-A47B-PT'
+        default: 'cf:@cf/qwen/qwen3-30b-a3b-fp8,cf:@cf/deepseek-ai/deepseek-r1-distill-qwen-32b,cf:@cf/qwen/qwq-32b'
       judge:
         description: 'Judge model (pinned; disclose changes in the report)'
         required: false
@@ -40,9 +40,22 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: '24'
+      # Shows in the log whether the Cloudflare token may use Workers AI, and which
+      # Chinese models it offers today (ids change; pick from this list).
+      - name: Check Workers AI access and list Chinese models
+        continue-on-error: true
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          for q in qwen deepseek glm kimi; do
+            curl -s "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/ai/models/search?search=$q&task=Text%20Generation" \
+              -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+              | node -e 'let s="";process.stdin.on("data",d=>s+=d).on("end",()=>{const j=JSON.parse(s||"{}");if(!j.success){console.log("::warning::Workers AI not available to this token: "+JSON.stringify(j.errors||j).slice(0,200));return;}console.log((j.result||[]).map(m=>"cf:"+m.name).join("\n"))})'
+          done
       - name: Run the benchmark
         env:
-          MODELS: ${{ inputs.models || vars.SKILLBENCH_ZH_MODELS || 'modelscope:deepseek-ai/DeepSeek-V4.1-Flash,modelscope:Qwen/Qwen3.8-27B,modelscope:zai-org/GLM-5.2,modelscope:PaddlePaddle/ERNIE-4.5-300B-A47B-PT' }}
+          MODELS: ${{ inputs.models || vars.SKILLBENCH_ZH_MODELS || 'cf:@cf/qwen/qwen3-30b-a3b-fp8,cf:@cf/deepseek-ai/deepseek-r1-distill-qwen-32b,cf:@cf/qwen/qwq-32b' }}
           JUDGE: ${{ inputs.judge || 'claude-sonnet-4-6' }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
@@ -53,9 +66,11 @@ jobs:
           MODELSCOPE_TOKEN: ${{ secrets.MODELSCOPE_TOKEN }}
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           SILICONFLOW_API_KEY: ${{ secrets.SILICONFLOW_API_KEY }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: |
           set -euo pipefail
-          printf '%s' "$MODELS" | grep -Eq '^[A-Za-z0-9._:,/-]+$' || { echo "::error::models must be comma-separated ids"; exit 1; }
+          printf '%s' "$MODELS" | grep -Eq '^[A-Za-z0-9._:,/@-]+$' || { echo "::error::models must be comma-separated ids"; exit 1; }
           printf '%s' "$JUDGE" | grep -Eq '^[A-Za-z0-9._:,-]+$' || { echo "::error::judge must be a model id"; exit 1; }
           node skillbench/run-skillbench.mjs --models "$MODELS" --judge "$JUDGE" \
             --tasks skillbench/tasks-zh.json --out skillbench/results-zh.json
