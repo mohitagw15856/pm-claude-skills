@@ -9,7 +9,7 @@ const BUILD = '__PM_BUILD__';
 const V = 'pm-skills-' + (BUILD.startsWith('__') ? 'dev' : BUILD);
 const CORE = [
   './', './index.html', './styles.css', './nav.js', './i18n.js', './app.js', './providers.js',
-  './find.html', './listen.html', './offline.html',
+  './find.html', './listen.html', './offline.html', './capture.html',
   './handbook.html', './academy.html', './campaign.html', './wrapped.html',
   './reckoning.html', './charter.html', './daily.html', './export-doc.js',
   './workspace.js', './skills.json', './manifest.json',
@@ -24,6 +24,24 @@ self.addEventListener('message', (e) => {
 });
 self.addEventListener('activate', (e) => {
   e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== V).map((k) => caches.delete(k)))).then(() => self.clients.claim()));
+});
+// Share target (manifest.json): another app shares a photo or text into the
+// installed PWA as a POST. A photo is parked in a cache the capture page reads
+// once; text goes to the skill search. Nothing leaves the device here.
+self.addEventListener('fetch', (e) => {
+  const u = new URL(e.request.url);
+  if (e.request.method !== 'POST' || u.origin !== location.origin || !u.pathname.endsWith('/share-target')) return;
+  e.respondWith((async () => {
+    const form = await e.request.formData().catch(() => null);
+    const file = form && form.get('file');
+    if (file && typeof file === 'object' && /^image\//.test(file.type || '')) {
+      const inbox = await caches.open('pm-share-inbox');
+      await inbox.put('shared-file', new Response(file, { headers: { 'content-type': file.type } }));
+      return Response.redirect('./capture.html?mode=skill&shared=1', 303);
+    }
+    const text = form ? [form.get('title'), form.get('text'), form.get('url')].filter(Boolean).join(' ').slice(0, 500) : '';
+    return Response.redirect('./index.html' + (text ? '?q=' + encodeURIComponent(text) : ''), 303);
+  })());
 });
 self.addEventListener('fetch', (e) => {
   const url = new URL(e.request.url);
