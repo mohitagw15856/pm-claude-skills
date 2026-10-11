@@ -11,6 +11,7 @@
   .fn-lead { color: var(--muted); font-size: 15px; }
   .fn-box { position: sticky; top: 8px; z-index: 5; background: var(--bg, #0d1117); padding: 10px 0 6px; }
   .fn-box input { width: 100%; box-sizing: border-box; padding: 13px 15px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-size: 16px; }
+  .smart { display: block; font-size: 13px; color: var(--muted); margin-top: 10px; }
   .fn-ex { margin: 8px 0 2px; display: flex; gap: 6px; flex-wrap: wrap; }
   .fn-ex button { background: transparent; color: var(--muted); border: 1px solid var(--border); border-radius: 14px; padding: 4px 11px; font-size: 12px; cursor: pointer; }
   .fn-ex button:hover { color: var(--text); border-color: var(--accent, #d97757); }
@@ -47,6 +48,8 @@
   <div class="fn-box">
     <input id="q" type="search" placeholder="e.g. prep a QBR for an at-risk account" autofocus autocomplete="off" / aria-label="e.g. prep a QBR for an at-risk account">
     <div class="fn-ex" id="examples"></div>
+    <label class="smart"><input type="checkbox" id="smart"> 🧠 Smart search: match by meaning, in your language (downloads a <span id="smartSize">23 MB</span> model once, then works offline; nothing is sent anywhere)</label>
+    <span class="count" id="smartStatus"></span>
   </div>
 
   <div class="count" id="count"></div>
@@ -59,6 +62,7 @@
 
 <script src="nav.js"></script>
 <script src="i18n-desc.js"></script>
+<script src="semantic.js"></script>
 <script>
 const STOP = new Set(('a an the of to in on or and for with your you i we my our need want help me please how do can could make write create build draft produce prepare prep get set run use using when asked into that this from each will able about more also not no is are be as at any one it its their them they then over same first start new mine give').split(/\s+/));
 // Chinese has no spaces, so Han runs are matched as overlapping two-character pairs (周报, 补偿),
@@ -96,8 +100,10 @@ function badge(ev) {
   return `<span class="badge-none">· unmeasured (no claim)</span>`;
 }
 
+let SEM = null; // {skill: similarity} for the current query, when smart search is on
 function rank(query) {
   const qset = new Set(tok(query));
+  if (SEM && !qset.size) qset.add('\u0000'); // a question in a script with no shared words still ranks by meaning
   const pyQuery = !/[\u3400-\u9fff]/.test(query) && /^[a-z\s']{2,}$/i.test(query.trim());
   if (!qset.size && !pyQuery) return [];
   const ql = query.toLowerCase();
@@ -112,7 +118,10 @@ function rank(query) {
     let score = (overlap + titleHits * 1.5 + phrase + py) * (TIER_BOOST[s.tier] || 1);
     if (s.eval && typeof s.eval.score === 'number') score += (s.eval.score - 4) * 0.15;
     score *= provenBoost(s.name);
-    return { s, score, overlap };
+    // Smart search: meaning counts alongside shared words (cosine above a noise floor).
+    const sem = SEM ? Math.max(0, (SEM[s.name] || 0) - 0.25) : 0;
+    score += sem * 14;
+    return { s, score, overlap: overlap + (sem > 0.08 ? 1 : 0) };
   }).filter((r) => r.overlap > 0).sort((a, b) => b.score - a.score || a.s.name.localeCompare(b.s.name)).slice(0, 12);
 }
 
@@ -141,7 +150,27 @@ fetch('skills.json').then((r) => r.json()).then((j) => {
   const ex = document.getElementById('examples');
   ex.innerHTML = EXAMPLES.map((e) => `<button>${e}</button>`).join('');
   ex.querySelectorAll('button').forEach((b) => b.onclick = () => { inp.value = b.textContent; render(inp.value); inp.focus(); });
-  inp.addEventListener('input', () => render(inp.value));
+  // Smart search: embed the question (debounced), then rank by words and meaning.
+  let semTimer = null;
+  const update = () => {
+    if (!(PMSemantic.isOn() && PMSemantic.ready())) { SEM = null; return render(inp.value); }
+    render(inp.value);
+    clearTimeout(semTimer);
+    const q = inp.value;
+    semTimer = setTimeout(() => { if (!q.trim()) return; PMSemantic.scores(q).then((sc) => { if (inp.value === q) { SEM = sc; render(q); } }); }, 250);
+  };
+  const smart = document.getElementById('smart'), st = document.getElementById('smartStatus');
+  document.getElementById('smartSize').textContent = PMSemantic.sizeLabel();
+  const turnOn = () => {
+    st.textContent = 'Loading the model…';
+    PMSemantic.load((p) => { if (p && p.status === 'progress' && p.total) st.textContent = `Downloading the model… ${Math.round((p.loaded / p.total) * 100)}%`; })
+      .then(() => { st.textContent = 'Smart search on.'; update(); })
+      .catch(() => { st.textContent = 'Could not load the model; using word search.'; smart.checked = false; PMSemantic.setOn(false); });
+  };
+  smart.checked = PMSemantic.isOn();
+  smart.addEventListener('change', () => { PMSemantic.setOn(smart.checked); if (smart.checked) turnOn(); else { SEM = null; st.textContent = ''; render(inp.value); } });
+  if (smart.checked) turnOn();
+  inp.addEventListener('input', update);
   // Deep-link support: /find.html?q=...
   const q0 = new URLSearchParams(location.search).get('q');
   if (q0) { inp.value = q0; render(q0); }
