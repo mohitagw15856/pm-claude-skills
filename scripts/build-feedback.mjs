@@ -6,7 +6,7 @@
 // real counts — nothing is shown until people actually rate.
 //
 //   GOATCOUNTER_TOKEN=… GOATCOUNTER_SITE=mohitagw node scripts/build-feedback.mjs
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, readFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -20,10 +20,17 @@ if (!TOKEN) {
   process.exit(0);
 }
 
-// Wide-but-safe window: ratings accrue slowly, so we look back 90 days (a 1-year window 404s
-// because it predates GoatCounter free-plan data retention). Hour-rounded RFC3339, as the API wants.
+// Incremental: GoatCounter's API now 404s on windows reaching past its free-plan
+// retention (a 90-day window failed every week from July to October 2026 while
+// the 7-day trending window worked). So each run fetches only what is new since
+// the last run's window end (at most 7 days back) and adds it to the stored
+// totals. Hour-rounded RFC3339, as the API wants.
 const hour = (d) => d.toISOString().slice(0, 13) + ':00:00Z';
-const start = hour(new Date(Date.now() - 90 * 864e5));
+const prev = existsSync(out) ? JSON.parse(readFileSync(out, 'utf8')) : {};
+const weekAgo = new Date(Date.now() - 7 * 864e5);
+const since = prev.windowEnd && new Date(prev.windowEnd) > weekAgo ? new Date(prev.windowEnd) : weekAgo;
+if (prev.windowEnd && new Date(prev.windowEnd) < weekAgo) console.warn(`Gap: ratings between ${prev.windowEnd} and ${hour(weekAgo)} are no longer available from GoatCounter.`);
+const start = hour(since);
 const end = hour(new Date());
 const url = `https://${SITE}.goatcounter.com/api/v0/stats/hits?start=${encodeURIComponent(start)}&end=${encodeURIComponent(end)}&limit=200`;
 
@@ -64,6 +71,11 @@ allHits
     (skills[name] = skills[name] || { up: 0, down: 0 })[kind] += count(h);
   });
 
+// Add the stored totals: this window is only the new part.
+for (const [name, v] of Object.entries(prev.skills || {})) {
+  const t = (skills[name] = skills[name] || { up: 0, down: 0 });
+  t.up += v.up || 0; t.down += v.down || 0;
+}
 let kept = 0;
 for (const [name, v] of Object.entries(skills)) {
   v.total = v.up + v.down;
@@ -73,6 +85,6 @@ for (const [name, v] of Object.entries(skills)) {
 const feedbackEvents = allHits.filter((h) => /^\/?feedback\//.test(h.path || '')).length;
 console.error(`GoatCounter: ${allHits.length} paths, ${feedbackEvents} feedback events → ${kept} skills with ratings.`);
 
-writeFileSync(out, JSON.stringify({ generatedAt: new Date().toISOString(), skills }, null, 2) + '\n');
+writeFileSync(out, JSON.stringify({ generatedAt: new Date().toISOString(), windowEnd: end, skills }, null, 2) + '\n');
 const top = Object.entries(skills).sort((a, b) => b[1].total - a[1].total)[0];
 console.log(`Wrote web/feedback.json — ${kept} rated skill(s)${top ? ` (most-rated: ${top[0]}, ${top[1].pct}% of ${top[1].total})` : ''}.`);

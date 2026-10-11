@@ -39,9 +39,17 @@ const evalData = JSON.parse(readFileSync(resultsPath, 'utf8'));
 const scored = (evalData.results || []).filter((r) => typeof r.overall === 'number');
 if (!scored.length) { console.error('evals/results.json has no scored results.'); process.exit(1); }
 
+// Real users first: skills with at least 5 playground ratings and under 60%
+// thumbs-up (web/feedback.json, refreshed weekly) join the queue ahead of the
+// lowest eval scores. A skill people dislike is the clearest case for a rewrite.
+const feedbackPath = join(root, 'web', 'feedback.json');
+const feedback = existsSync(feedbackPath) ? JSON.parse(readFileSync(feedbackPath, 'utf8')).skills || {} : {};
+const disliked = Object.entries(feedback).filter(([, v]) => v.total >= 5 && v.pct < 60).sort((a, b) => a[1].pct - b[1].pct)
+  .map(([skill, v]) => ({ ...(scored.find((r) => r.skill === skill) || { skill, overall: null, scores: {} }), feedback: v }));
 let picks = only.length
   ? scored.filter((r) => only.includes(r.skill))
-  : [...scored].sort((a, b) => a.overall - b.overall).slice(0, count);
+  : [...disliked, ...[...scored].sort((a, b) => a.overall - b.overall)]
+      .filter((r, i, all) => all.findIndex((x) => x.skill === r.skill) === i).slice(0, count);
 picks = picks.filter((r) => existsSync(join(root, 'skills', r.skill, 'SKILL.md')));
 if (!picks.length) { console.error('No matching skills to evolve.'); process.exit(1); }
 
@@ -49,7 +57,7 @@ const dims = evalData.dimensions || ['structure', 'completeness', 'usefulness', 
 const weakDims = (r) => dims.filter((d) => (r.scores?.[d] ?? 5) <= Math.min(...dims.map((x) => r.scores?.[x] ?? 5)));
 
 console.log(`🧬 Evolution loop — ${picks.length} candidate(s) from eval run ${evalData.generatedAt || '?'}${dryRun ? '  [DRY RUN: no API calls, no writes]' : ''}\n`);
-for (const r of picks) console.log(`  ${r.skill}: overall ${r.overall}  (weakest: ${weakDims(r).join(', ')})`);
+for (const r of picks) console.log(`  ${r.skill}: overall ${r.overall ?? 'unscored'}${r.feedback ? `, users ${r.feedback.pct}% helpful of ${r.feedback.total}` : ''}  (weakest: ${weakDims(r).join(', ')})`);
 
 if (dryRun) {
   console.log(`\nPlan: for each skill → 1 challenger rewrite (${model}) + blind judging (${judgeModel}, champion & challenger scored separately) → replace only if challenger wins by ≥${MARGIN}.`);
@@ -77,7 +85,7 @@ for (const r of picks) {
   console.log(`\n⚔️  ${r.skill} — rewriting (weak: ${weakDims(r).join(', ')})…`);
 
   const challenger = (await complete({ apiKey, model, maxTokens: 8000,
-    system: `You improve SKILL.md files for a curated professional skill library. Rewrite the given skill to be materially better, focusing on its measured weak dimensions: ${weakDims(r).join(', ')} (last eval: ${JSON.stringify(r.scores)}).
+    system: `You improve SKILL.md files for a curated professional skill library. Rewrite the given skill to be materially better, focusing on its measured weak dimensions: ${weakDims(r).join(', ')} (last eval: ${JSON.stringify(r.scores)})${r.feedback ? `; real users rated it helpful only ${r.feedback.pct}% of ${r.feedback.total} times, so make it more directly useful` : ''}.
 HARD RULES: keep the exact frontmatter \`name\`; keep valid YAML frontmatter with a description that says what it does + "Use when" + what it produces; keep/strengthen all SkillSpec L3 sections (What This Skill Produces or Required Inputs, Output, Quality Checks, Anti-Patterns); no placeholders; no invented external facts; similar length (±30%). Output ONLY the complete new SKILL.md, no commentary.
 ${spec ? 'THE SPEC (excerpt):\n' + spec : ''}`,
     messages: [{ role: 'user', content: champion }] })).replace(/^```(markdown|md)?\n/, '').replace(/\n```\s*$/, '');
