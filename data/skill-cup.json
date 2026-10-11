@@ -1,0 +1,60 @@
+{
+  "_comment": "The monthly Skill Cup. Entries are scored by scripts/score-cup-entry.mjs (via the skill-cup workflow) and the month is closed by scripts/close-skill-cup.mjs. Themes are taken from the front of the queue each month. Never edit a closed cup.",
+  "themes": [
+    {
+      "theme": "Small business admin",
+      "brief": "Skills for sole traders and small shops: invoices, VAT and sales tax, late payers, suppliers, permits."
+    },
+    {
+      "theme": "Teachers",
+      "brief": "Skills for classroom teachers: lesson plans, parent emails, report comments, behaviour plans, marking rubrics."
+    },
+    {
+      "theme": "Caring for someone",
+      "brief": "Skills for unpaid carers: appointments, benefits forms, care plans, talking to doctors and care homes."
+    },
+    {
+      "theme": "Trades and site work",
+      "brief": "Skills for electricians, plumbers and builders: quotes, variations, snagging lists, safety paperwork."
+    },
+    {
+      "theme": "Students",
+      "brief": "Skills for students: essay plans, citations, scholarship applications, appeals, part-time work."
+    },
+    {
+      "theme": "Freelancers",
+      "brief": "Skills for freelancers: proposals, contracts, scope creep, chasing invoices, rate rises."
+    },
+    {
+      "theme": "Nonprofits",
+      "brief": "Skills for charities and community groups: grant applications, impact reports, volunteer rotas, trustee papers."
+    },
+    {
+      "theme": "Renters and homeowners",
+      "brief": "Skills for housing: repairs requests, disputes, mortgage letters, service charges, moving."
+    },
+    {
+      "theme": "Hospitality",
+      "brief": "Skills for cafés, restaurants and hotels: rotas, allergen information, reviews, supplier orders, licensing."
+    },
+    {
+      "theme": "Public services",
+      "brief": "Skills for dealing with councils and agencies: appeals, applications, complaints, deadlines."
+    },
+    {
+      "theme": "Farming and food",
+      "brief": "Skills for growers and producers: subsidy forms, buyer contracts, compliance records, market pitches."
+    }
+  ],
+  "cups": [
+    {
+      "month": "2026-10",
+      "theme": "Health paperwork",
+      "brief": "Skills that help people read, check and act on medical letters, bills, test results and insurance forms.",
+      "opens": "2026-10-11",
+      "closes": "2026-10-31",
+      "entries": [],
+      "winner": null
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Skill Cup: write the best skill of the month | PM Skills</title>
+<meta name="description" content="A monthly contest for the best new AI skill on a theme, scored the way the library scores itself: SkillSpec L3, then a blind judge on real cases. The winner's name stays on the page for good." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/cup.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .cup-wrap { max-width: 900px; margin: 0 auto; padding: 16px 22px 70px; }
+  .cup-wrap h1 { font-size: 28px; margin-bottom: 6px; }
+  .lead, .muted { color: var(--muted); line-height: 1.6; }
+  .now { border: 1px solid var(--accent); border-radius: 14px; background: var(--panel); padding: 16px 18px; margin: 16px 0; }
+  .now h2 { margin: 0 0 6px; font-size: 20px; }
+  .tbl { width: 100%; border-collapse: collapse; font-size: 14px; }
+  .tbl td, .tbl th { text-align: left; padding: 7px 6px; border-top: 1px solid var(--border); overflow-wrap: anywhere; }
+  .tbl th { color: var(--muted); font-weight: 500; font-size: 12px; }
+  .btn { display: inline-block; border-radius: 9px; padding: 8px 13px; background: var(--accent); color: #fff; text-decoration: none; margin-top: 8px; }
+  ol.how { line-height: 1.7; padding-left: 20px; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<main class="cup-wrap">
+  <h1>🏆 The Skill Cup</h1>
+  <p class="lead">Each month, one theme. Write the best new skill for it. Entries are scored the way the library scores itself, with no popularity vote. The winner gets a permanent line on this page and a badge on the skill. No prize money yet; sponsors welcome.</p>
+  <section class="now" id="now"><p class="muted">Loading…</p></section>
+  <h2>How to enter</h2>
+  <ol class="how">
+    <li>Write <code>skills/&lt;your-skill&gt;/SKILL.md</code> on this month's theme. The <a href="compile.html">expert-to-skill compiler</a> builds one from your answers.</li>
+    <li>Add at least one eval case for it to <code>evals/cases.json</code>: a real request the skill should handle.</li>
+    <li>Check it with <code>npx skillspec-check skills/&lt;your-skill&gt;</code>. It must reach L3.</li>
+    <li>Open one pull request with <code>[Cup]</code> in the title. A maintainer runs the scoring and the result is posted on your PR.</li>
+  </ol>
+  <h2>Winners</h2>
+  <div id="hall"></div>
+</main>
+<script src="nav.js" defer></script>
+<script>
+(function () {
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  var REPO = 'https://github.com/mohitagw15856/pm-claude-skills';
+  var who = function (a) { return '<a href="https://github.com/' + encodeURIComponent(a) + '">@' + esc(a) + '</a>'; };
+  fetch('skill-cup.json').then(function (r) { return r.json(); }).then(function (d) {
+    var c = d.cups[d.cups.length - 1];
+    var left = Math.max(0, Math.ceil((new Date(c.closes + 'T23:59:59Z') - Date.now()) / 86400000));
+    document.getElementById('now').innerHTML = '<h2>' + esc(c.month) + ': ' + esc(c.theme) + '</h2><p>' + esc(c.brief) + '</p><p class="muted">' + left + ' day' + (left === 1 ? '' : 's') + ' left · closes ' + esc(c.closes) + '</p>' +
+      (c.entries.length ? '<table class="tbl"><thead><tr><th>#</th><th>Skill</th><th>By</th><th>Score</th></tr></thead><tbody>' + c.entries.map(function (e, i) { return '<tr><td>' + (i + 1) + '</td><td><a href="' + REPO + '/pull/' + encodeURIComponent(e.pr) + '">' + esc(e.skill) + '</a></td><td>' + who(e.author) + '</td><td>' + Number(e.score).toFixed(2) + '</td></tr>'; }).join('') + '</tbody></table>'
+        : '<p>No entries yet. The first one sets the bar.</p>') +
+      '<a class="btn" href="' + REPO + '/compare">Open your entry</a>';
+    var won = d.cups.filter(function (x) { return x.winner; }).reverse();
+    document.getElementById('hall').innerHTML = won.length ? '<table class="tbl"><thead><tr><th>Month</th><th>Theme</th><th>Winner</th><th>Score</th></tr></thead><tbody>' + won.map(function (x) {
+      return x.winner === 'none' ? '<tr><td>' + esc(x.month) + '</td><td>' + esc(x.theme) + '</td><td class="muted">no entries</td><td></td></tr>' : '<tr><td>' + esc(x.month) + '</td><td>' + esc(x.theme) + '</td><td>' + who(x.winner.author) + ' · <a href="' + REPO + '/pull/' + encodeURIComponent(x.winner.pr) + '">' + esc(x.winner.skill) + '</a></td><td>' + Number(x.winner.score).toFixed(2) + '</td></tr>';
+    }).join('') + '</tbody></table>' : '<p class="muted">The first winner is crowned on ' + esc(c.closes) + '. Coming up: ' + d.themes.slice(0, 3).map(function (t) { return esc(t.theme); }).join(' · ') + '.</p>';
+  }).catch(function () { document.getElementById('now').innerHTML = '<p class="muted">Could not load the Cup.</p>'; });
+})();
+</script>
+</body>
+</html>

@@ -46,6 +46,7 @@ on:
       - 'data/evolution-log.json'
       - 'data/savings.json'
       - 'data/firm-ledger.json'
+      - 'data/skill-cup.json'
       - 'CHANGELOG.md'
       - 'data/solar-terms.json'
       - 'data/cn-exam-dates.json'
@@ -237,6 +238,9 @@ jobs:
 
       - name: Copy the live Firm ledger (web/firm-ledger.json)
         run: cp data/firm-ledger.json web/firm-ledger.json
+
+      - name: Copy the Skill Cup data (web/skill-cup.json)
+        run: cp data/skill-cup.json web/skill-cup.json
 
       - name: Build the side-by-side translations (web/i18n/, for compare-lang.html)
         run: node scripts/build-i18n-web.mjs

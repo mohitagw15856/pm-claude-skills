@@ -130,6 +130,7 @@
       ['firm-live.html', '🏢 The live Firm'],
       ['career.html', '🧭 Career copilot'],
       ['compile.html', '🧑‍🏫 Expert-to-skill compiler'],
+      ['cup.html', '🏆 Skill Cup'],
       ['reckoning.html', '⚖️ Reckoning'],
       ['ledger.html', '📓 Outcome Ledger'],
       ['deck.html', '🃏 Operator\'s Deck'],
