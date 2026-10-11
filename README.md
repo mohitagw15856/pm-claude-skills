@@ -27,6 +27,7 @@
   <a href="SKILLS.md"><strong>📚 All skills</strong></a> ·
   <a href="https://mohitagw15856.github.io/pm-claude-skills/worked-examples.html"><strong>📘 Worked examples</strong></a> ·
   <a href="https://mohitagw15856.github.io/pm-claude-skills/ai-at-work.html"><strong>🏆 Best AI for your job</strong></a> ·
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/how.html"><strong>❓ How do I…?</strong></a> ·
   <a href="docs/SHOWCASE.md"><strong>🖼 Showcase</strong></a> ·
   <a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/"><strong>🌳 Tech tree</strong></a> ·
   <a href="README.zh-CN.md"><strong>🇨🇳 简体中文</strong></a> ·

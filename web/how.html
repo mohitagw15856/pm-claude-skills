@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How do I…? Answers from 1,000+ professional skills | PM Skills</title>
+<meta name="description" content="Ask how to do something at work or in life and get a short answer grounded in the library's professional skills, with each claim cited to the skill it came from and a link to run the full version." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/how.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .hw-wrap { max-width: 820px; margin: 0 auto; padding: 22px 22px 70px; }
+  .hw-wrap h1 { font-size: 30px; margin-bottom: 6px; }
+  .lead, .muted { color: var(--muted); line-height: 1.6; }
+  .ask { display: flex; gap: 8px; margin: 16px 0 8px; }
+  .ask input { flex: 1; min-width: 0; border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 12px; padding: 12px 14px; font: inherit; font-size: 16px; }
+  .btn { border: 1px solid var(--accent); background: var(--accent); color: #fff; border-radius: 12px; padding: 10px 16px; cursor: pointer; font: inherit; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0 18px; }
+  .chips button { border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 999px; padding: 5px 11px; cursor: pointer; font-size: 13px; }
+  .answer { border: 1px solid var(--border); border-radius: 14px; background: var(--panel); padding: 16px 18px; line-height: 1.65; overflow-wrap: anywhere; }
+  .answer sup a { text-decoration: none; font-weight: 700; color: var(--accent); }
+  .sources { display: grid; gap: 8px; margin-top: 14px; }
+  .src { display: grid; grid-template-columns: auto 1fr auto; gap: 10px; align-items: center; border: 1px solid var(--border); border-radius: 10px; padding: 9px 12px; background: var(--bg); }
+  .src b { color: var(--accent); }
+  .src .t { overflow-wrap: anywhere; }
+  .src a.run { white-space: nowrap; font-size: 13px; }
+  .key { margin-top: 12px; }
+  .key input { width: 100%; box-sizing: border-box; border: 1px solid var(--border); background: var(--bg); color: var(--text); border-radius: 9px; padding: 8px 10px; }
+  @media (max-width: 560px) { .src { grid-template-columns: auto 1fr; } .src a.run { grid-column: 2; } }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<main class="hw-wrap">
+  <h1>How do I…?</h1>
+  <p class="lead">Ask about something at work or in life. The answer is short, built only from the professional skills that match your question, and every point is cited to its skill so you can check it or run the full version.</p>
+  <form class="ask" id="f" role="search">
+    <input id="q" type="search" placeholder="How do I ask for a pay rise?" aria-label="Your question" autocomplete="off" maxlength="400">
+    <button class="btn" type="submit">Ask</button>
+  </form>
+  <div class="chips" id="chips"></div>
+  <div id="out"></div>
+  <details class="key">
+    <summary class="muted">Use your own Claude key (after the free answers run out)</summary>
+    <input id="apiKey" type="password" placeholder="sk-ant-…" aria-label="Your Anthropic API key" autocomplete="off">
+    <p class="muted">Kept in this browser and sent only to Anthropic. Without a key, answers use the free, sponsor-funded allowance (a few a day).</p>
+  </details>
+</main>
+<script src="nav.js" defer></script>
+<script>
+(function () {
+  var WORKER = 'https://pm-skills-mcp.pm-claude-skills.workers.dev';
+  var EXAMPLES = ['How do I ask for a pay rise?', 'How do I get my deposit back?', 'How do I write a PRD?', 'How do I run a retro that is not a waste of time?', 'How do I check a medical bill?', 'How do I say no to my manager?'];
+  var STOP = new Set('a an the of to in on or and for with your you i we my our need want help me please how do does can could should make write create build draft get set use when what is are be as at it its their them they this that about from'.split(' '));
+  var el = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  var tok = function (s) { return (String(s || '').toLowerCase().match(/[a-z0-9]+/g) || []).filter(function (w) { return w.length > 2 && !STOP.has(w); }); };
+  var SKILLS = null;
+  try { el('apiKey').value = localStorage.getItem('anthropic_api_key') || ''; } catch (e) {}
+  el('apiKey').addEventListener('change', function () { try { localStorage.setItem('anthropic_api_key', el('apiKey').value.trim()); } catch (e) {} });
+
+  EXAMPLES.forEach(function (x) { var b = document.createElement('button'); b.type = 'button'; b.textContent = x; b.onclick = function () { el('q').value = x; ask(x); }; el('chips').appendChild(b); });
+
+  function load() { return SKILLS ? Promise.resolve(SKILLS) : fetch('skills.json').then(function (r) { return r.json(); }).then(function (j) { SKILLS = j.skills.filter(function (s) { return !s.deprecated && s.instructions; }); return SKILLS; }); }
+
+  // Retrieval: word overlap with the title (weighted) and the description.
+  // Rare words count for more than common ones (IDF over titles and descriptions).
+  var DF = null;
+  function idf(w) {
+    if (!DF) { DF = {}; SKILLS.forEach(function (s) { new Set(tok(s.title + ' ' + s.name + ' ' + s.description)).forEach(function (x) { DF[x] = (DF[x] || 0) + 1; }); }); }
+    return Math.log(1 + SKILLS.length / (1 + (DF[w] || 0)));
+  }
+  function rank(q) {
+    var qs = new Set(tok(q));
+    return SKILLS.map(function (s) {
+      var t = new Set(tok(s.title + ' ' + s.name)), d = new Set(tok(s.description));
+      var score = 0; qs.forEach(function (w) { var k = idf(w); if (t.has(w)) score += 2 * k; if (d.has(w)) score += k; });
+      return { s: s, score: score };
+    }).filter(function (r) { return r.score > 0; }).sort(function (a, b) { return b.score - a.score || a.s.title.length - b.s.title.length; })
+      // Keep only strong matches: under half the best score is usually one shared common word.
+      .filter(function (r, i, all) { return r.score >= all[0].score / 2; }).slice(0, 3).map(function (r) { return r.s; });
+  }
+
+  function system(src) {
+    return 'You answer "how do I" questions using ONLY the professional skills below. Write at most 180 words: a direct answer, then the few steps that matter most. ' +
+      'Cite every step with the number of the skill it comes from, like [1] or [2]. If the skills do not cover the question, say so in one sentence instead of guessing. ' +
+      'For legal, medical, tax or money questions add one short line that this is not professional advice. Plain text; no headings.\n\n' +
+      src.map(function (s, i) { return '[' + (i + 1) + '] ' + s.title + ' (' + s.name + ')\n' + s.description + '\n' + s.instructions.replace(/^---[\s\S]*?---/, '').slice(0, 3400); }).join('\n\n');
+  }
+
+  function answerHtml(text, src) {
+    return esc(text).replace(/\n{2,}/g, '<br><br>').replace(/\n/g, '<br>').replace(/\[(\d)\]/g, function (m, n) {
+      var s = src[n - 1]; return s ? '<sup><a href="#src' + n + '" title="' + esc(s.title) + '">[' + n + ']</a></sup>' : m;
+    });
+  }
+
+  function ask(q) {
+    q = String(q || '').trim(); if (!q) return;
+    try { history.replaceState(null, '', '?q=' + encodeURIComponent(q)); } catch (e) {}
+    var out = el('out');
+    out.innerHTML = '<p class="muted">Finding the skills that cover this…</p>';
+    load().then(function () {
+      var src = rank(q);
+      if (!src.length) { out.innerHTML = '<div class="answer"></div>'; out.firstChild.textContent = 'No skill covers that yet. Try different words, or ask for it as a new skill.'; return; }
+      var sources = '<div class="sources">' + src.map(function (s, i) {
+        return '<div class="src" id="src' + (i + 1) + '"><b>[' + (i + 1) + ']</b><span class="t"><a href="skill/' + encodeURIComponent(s.name) + '.html">' + esc(s.title) + '</a><br><span class="muted">' + esc(s.description.slice(0, 150)) + '…</span></span><a class="run" href="index.html?skill=' + encodeURIComponent(s.name) + '">Run the full skill →</a></div>';
+      }).join('') + '</div>';
+      out.innerHTML = '<div class="answer"><span class="muted">Writing the answer…</span></div>' + sources;
+      var key = el('apiKey').value.trim();
+      var call = key
+        ? fetch('https://api.anthropic.com/v1/messages', { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
+            body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 600, system: system(src), messages: [{ role: 'user', content: q }] }) })
+            .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error((j.error && j.error.message) || r.status); return (j.content || []).map(function (c) { return c.text || ''; }).join(''); }); })
+        : fetch(WORKER + '/try', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ prompt: q, system: system(src).slice(0, 12000) }) })
+            .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.message || j.error || r.status); return j.text; }); });
+      call.then(function (text) {
+        out.querySelector('.answer').innerHTML = answerHtml(text || '', src);
+        if (window.pmTrack) pmTrack('how/answer');
+      }).catch(function (e) {
+        var a = out.querySelector('.answer'); a.textContent = 'Could not write an answer: ' + e.message + ' The skills below still answer it in full.';
+      });
+    }).catch(function () { out.textContent = 'Could not load the skills. Check your connection.'; });
+  }
+
+  el('f').addEventListener('submit', function (e) { e.preventDefault(); ask(el('q').value); });
+  var q0 = new URLSearchParams(location.search).get('q');
+  if (q0) { el('q').value = q0.slice(0, 400); ask(q0.slice(0, 400)); }
+})();
+</script>
+</body>
+</html>
