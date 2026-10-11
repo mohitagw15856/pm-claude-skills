@@ -12,6 +12,10 @@ twin for everyone who doesn't live in Slack:
 Plain text works too: with a key configured it auto-matches a skill and drafts the
 artifact; without one it behaves like `/find`. Search and fetch need no key at all.
 
+## 📄 Forward it: photos and PDFs of documents
+
+Photograph a lease, a medical bill, an insurance letter or a contract and send it to the bot. It works out what the document is, picks the matching skill (`lease-decoder`, `medical-bill-decoder`, `insurance-policy-decoder` and so on), and replies with that skill's read of it: figures quoted as printed, unreadable parts named instead of guessed, and a not-advice line for legal, medical and money matters. Add a caption to say what you want ("is the deposit legal?"). It needs the Anthropic key, and takes JPEG, PNG, WebP and PDF up to 8 MB. The code is shared by both bots: [`../shared/forward-doc.js`](../shared/forward-doc.js).
+
 ## Set up (once, ~5 minutes)
 
 1. **Create the bot:** message [@BotFather](https://t.me/BotFather) → `/newbot` →
@@ -45,5 +49,6 @@ forwards to the webhook. `/find` and `/skill` touch only the public catalog API.
 `/run` sends the chat text to the Anthropic API on the **deployer's** key — deploy
 your own bot rather than sharing one across a team you don't want on your key, and
 note that Telegram chats are not a place for confidential inputs unless you trust
-the bot's deployer. Webhook calls are authenticated with a secret token, so third
+the bot's deployer. A forwarded document goes to Anthropic for two calls (identify,
+then read) and is not stored; the bot says so before it reads. Webhook calls are authenticated with a secret token, so third
 parties can't feed the worker fake updates.

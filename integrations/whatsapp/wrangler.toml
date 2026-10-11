@@ -2,7 +2,8 @@ name = "pm-skills-whatsapp"
 main = "src/index.js"
 compatibility_date = "2025-01-01"
 
-# WhatsApp bot via Twilio webhook. Replies are TwiML in the webhook response,
-# so no Twilio credentials live here.
+# WhatsApp bot via Twilio webhook. Text replies are TwiML in the webhook response.
 # Deploy:  cd integrations/whatsapp && npx wrangler deploy
-# Secret (optional, enables "run"): npx wrangler secret put ANTHROPIC_API_KEY
+# Secrets: npx wrangler secret put ANTHROPIC_API_KEY    # optional; enables "run" and document reading
+#          npx wrangler secret put TWILIO_AUTH_TOKEN    # recommended; verifies every webhook's signature
+#          npx wrangler secret put TWILIO_ACCOUNT_SID   # with the auth token, enables forwarded photos and PDFs

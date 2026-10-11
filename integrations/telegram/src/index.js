@@ -4,8 +4,14 @@
 // Anthropic key (optional — without the key the bot is search/fetch only).
 // Plain text is treated as /run when the key is set, /find otherwise.
 //
+// Forward it: send a photo or PDF of a document (a lease, a bill, a contract) and
+// the bot reads it with the matching skill (integrations/shared/forward-doc.js).
+// Needs the Anthropic key, like /run.
+//
 // Stateless: nothing is stored; the worker sees only the messages Telegram
 // forwards to the webhook and replies via sendMessage.
+
+import { documentBlock, readDocument, MAX_BYTES, PRIVACY_NOTE } from '../../shared/forward-doc.js';
 
 const API = 'https://pm-skills-mcp.pm-claude-skills.workers.dev';
 const REPO = 'https://github.com/mohitagw15856/pm-claude-skills';
@@ -42,7 +48,7 @@ async function runSkill(instructions, userText, key) {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
     body: JSON.stringify({
-      model: 'claude-sonnet-4-6', max_tokens: 2000,
+      model: 'claude-sonnet-5', max_tokens: 2000,
       system: instructions + '\n\nYou are replying in a Telegram chat. Produce the deliverable directly, no preamble, plain text (no markdown tables). If required inputs are missing, ask for them briefly.',
       messages: [{ role: 'user', content: userText.slice(0, 30000) }],
     }),
@@ -53,22 +59,46 @@ async function runSkill(instructions, userText, key) {
 }
 
 const HELP = [
-  'PM Skills bot — 771 professional skills on tap.',
+  'PM Skills bot: over a thousand professional skills on tap.',
   '',
   '/find <task>  — search the library (e.g. /find churn analysis)',
   '/skill <name> — full instructions for one skill',
   '/run <name or task> — draft the artifact here (when the deployer configured a key)',
+  '📄 Send a photo or PDF of a document (a lease, a bill, a contract, a letter) and get it read with the right skill. Add a caption to say what you want.',
   '',
   'Plain text works too. Library: ' + REPO,
 ].join('\n');
+
+async function handleDocument(token, chatId, file, caption, env, canRun) {
+  if (!canRun) return send(token, chatId, 'Reading documents is not enabled on this deployment (no Anthropic key configured).');
+  if (file.size && file.size > MAX_BYTES) return send(token, chatId, 'That file is over 8 MB. Send a photo of the page, or a smaller PDF.');
+  const info = await tg(token, 'getFile', { file_id: file.id });
+  const path = info?.result?.file_path;
+  if (!path) return send(token, chatId, 'Could not download that file from Telegram. Try sending it again.');
+  const res = await fetch(`https://api.telegram.org/file/bot${token}/${path}`);
+  const block = res.ok ? documentBlock(await res.arrayBuffer(), file.type || res.headers.get('content-type')) : null;
+  if (!block) return send(token, chatId, 'I can read photos (JPEG, PNG, WebP) and PDFs up to 8 MB.');
+  await send(token, chatId, `Reading it… ${PRIVACY_NOTE}`);
+  try {
+    const { skill, text } = await readDocument({ block, note: caption, key: env.ANTHROPIC_API_KEY, channel: 'a Telegram chat' });
+    return send(token, chatId, (skill ? `(${skill})\n\n` : '') + (text || 'The model returned nothing. Try a clearer photo.'));
+  } catch {
+    return send(token, chatId, 'The model call failed. Try again in a minute.');
+  }
+}
 
 async function handleUpdate(update, env) {
   const msg = update.message || update.edited_message;
   const chatId = msg?.chat?.id;
   const text = (msg?.text || '').trim();
-  if (!chatId || !text) return;
   const token = env.TELEGRAM_BOT_TOKEN;
   const canRun = !!env.ANTHROPIC_API_KEY;
+  // A photo arrives in several sizes (the last is the largest); a PDF or an
+  // uncompressed image arrives as a document.
+  const file = msg?.photo?.length ? { id: msg.photo[msg.photo.length - 1].file_id, type: 'image/jpeg', size: msg.photo[msg.photo.length - 1].file_size }
+    : msg?.document ? { id: msg.document.file_id, type: msg.document.mime_type, size: msg.document.file_size } : null;
+  if (chatId && file) return handleDocument(token, chatId, file, (msg.caption || '').trim(), env, canRun);
+  if (!chatId || !text) return;
 
   const [, cmd, rest = ''] = text.match(/^\/(\w+)(?:@\w+)?\s*([\s\S]*)$/) || [null, null, text];
 
