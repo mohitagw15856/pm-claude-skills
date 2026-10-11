@@ -9,7 +9,7 @@ Produce a clear, scannable sprint brief that every team member — engineer, des
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Sprint name and number**
 - **Sprint goal** (1-2 sentences — flag if too vague)
 - **Ticket list with owners** (or a description of the work)

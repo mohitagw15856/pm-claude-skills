@@ -110,7 +110,7 @@ Users who [specific action] in first [N] days retain at [X%] vs [Y%] for those w
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Product and business model** (SaaS / consumer app / marketplace / other)
 - **Current retention metrics** (D1, D7, D30 if available)
 - **Segment to analyse** (all users / paid / free / a specific cohort)

@@ -9,7 +9,7 @@ Turn scattered competitor information into structured strategic intelligence —
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Competitor name(s)** and the signals/updates to analyse
 - **Your product's current roadmap or strategic priorities** (to assess relevance)
 - **Time period** the signals cover (this week, this month, etc.)

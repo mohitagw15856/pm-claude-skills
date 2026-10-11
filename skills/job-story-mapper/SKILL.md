@@ -134,7 +134,7 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Product or feature area** to map (e.g. onboarding, checkout, dashboard)
 - **User type or persona** (who are we mapping jobs for?)
 - **Source material** (user interview notes, support tickets, discovery findings, or describe from memory)

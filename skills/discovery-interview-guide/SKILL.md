@@ -83,7 +83,7 @@ Understand the competitive landscape from their perspective.
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Research topic or question** (what decision will this inform?)
 - **Target participant profile** (role, behaviour, company type)
 - **Session length** (30 / 45 / 60 / 90 minutes)

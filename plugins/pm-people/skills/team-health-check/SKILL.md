@@ -9,7 +9,7 @@ This skill produces a structured team health assessment inspired by Spotify's he
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Team name and function** (engineering squad, product team, sales pod, etc.)
 - **Team size and composition** (how many people, what roles)
 - **Format** — facilitated live session or async survey + report?

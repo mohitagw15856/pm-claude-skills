@@ -16,7 +16,7 @@ If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, g
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **List of initiatives or features to score** (names and brief descriptions)
 - **Reach estimates** (users affected per quarter — from analytics if available)
 - **Impact estimates** (use the standard scale below)

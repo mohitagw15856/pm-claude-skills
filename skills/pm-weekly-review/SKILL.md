@@ -102,7 +102,7 @@ Turn the chaotic end-of-week brain dump into a structured 20-minute ritual that 
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Product area or team** you own
 - **Key metrics this week** (with values and prior week comparison)
 - **What shipped, slipped, or is blocked**

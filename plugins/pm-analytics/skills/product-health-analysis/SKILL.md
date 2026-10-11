@@ -9,7 +9,7 @@ Transform raw metrics data into a clear health narrative — what's working, wha
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Metrics data** (current values for key metrics — even rough numbers work)
 - **Targets or benchmarks** (OKR targets, historical baselines, or industry benchmarks)
 - **Period** (week / month / quarter being analysed)

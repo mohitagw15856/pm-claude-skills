@@ -9,7 +9,7 @@ This skill builds the complete narrative and slide structure for a board present
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Company stage and context** (Seed / Series A / Growth — and where you are in the year)
 - **Board meeting type** (Regular quarterly / Annual / Special / Fundraise-related)
 - **Key themes for this meeting** (e.g. strong growth quarter / pivoting strategy / hiring challenge / fundraise update)

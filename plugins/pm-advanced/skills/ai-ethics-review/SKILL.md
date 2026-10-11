@@ -11,7 +11,7 @@ This skill produces a structured ethical review of an AI or machine learning fea
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Feature or model name** and what it does
 - **Who it affects** — which users or people does the AI interact with, make decisions about, or collect data from?
 - **What decisions or outputs it produces** — recommendations, predictions, classifications, generation, automation?

@@ -46,7 +46,7 @@ wrong.
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Feature or product name**
 - **Problem being solved** (from the user's perspective)
 - **Target user** (role, context, what they're trying to accomplish)

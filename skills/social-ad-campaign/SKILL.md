@@ -9,7 +9,7 @@ This skill produces a complete paid social advertising campaign plan covering ca
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Brand / product name**
 - **Campaign objective** — what are you trying to achieve? (traffic / leads / conversions / brand awareness / app installs / video views / event promotion)
 - **Platform(s)** — Meta (Facebook/Instagram), LinkedIn, TikTok, X/Twitter, Pinterest, Snapchat

@@ -9,7 +9,7 @@ This skill tailors a CV and cover letter to a specific job description — optim
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Job description** (paste in full)
 - **Current CV / resume** (paste or describe key experience, roles, and skills)
 - **The specific thing that excites them about this role** (used in the cover letter — must be genuine)

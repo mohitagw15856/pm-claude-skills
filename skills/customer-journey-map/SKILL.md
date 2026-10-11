@@ -9,7 +9,7 @@ This skill produces a complete customer journey map covering every stage from aw
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Product or service** being mapped
 - **Customer persona** — which customer segment is this map for? (be specific — one persona per map)
 - **Journey scope** — full end-to-end (awareness → advocacy), or a specific phase (e.g. onboarding only)?

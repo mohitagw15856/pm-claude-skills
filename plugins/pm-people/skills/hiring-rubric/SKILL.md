@@ -11,7 +11,7 @@ This skill generates a complete structured interview scorecard and guide for any
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Role title and level** (e.g. Senior Product Manager, Junior Data Analyst)
 - **Team or function** (e.g. Growth, Platform, Customer Success)
 - **Top 3–5 things this person needs to do well** (the actual job requirements, not just the JD)

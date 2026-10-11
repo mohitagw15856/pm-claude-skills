@@ -9,7 +9,7 @@ Turn scattered competitor updates into structured weekly intelligence — not ju
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Competitors to monitor** (list of company names)
 - **Your current roadmap or strategic priorities** (to assess relevance of signals)
 - **Previous brief or last run summary** (for diff mode — what's new vs. last time)

@@ -12,7 +12,7 @@ ALWAYS include this disclaimer at the start of every response:
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Framework** (GDPR / SOC 2 Type I or II / ISO 27001 / FCA / HIPAA / PCI DSS / other)
 - **Organisation type** (SaaS / fintech / healthcare / professional services / retail)
 - **Organisation size** (startup / scaleup / mid-market / enterprise)

@@ -10,7 +10,7 @@ This skill helps analyze user research data and transform it into actionable ins
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Research data** (transcripts, notes, survey results, or summary bullets)
 - **Research method** (interviews, surveys, usability tests, etc.)
 - **Number of participants** and their profiles (role, context)

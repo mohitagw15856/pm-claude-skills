@@ -9,7 +9,7 @@ This skill produces a professional influencer campaign brief that a creator can 
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Brand / product name** — what is being promoted
 - **Campaign goal** — what you want the partnership to achieve (awareness / sales / sign-ups / content creation / event promotion)
 - **Influencer type / tier** — nano (1K–10K), micro (10K–100K), macro (100K–1M), mega/celebrity (1M+)

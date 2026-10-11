@@ -9,7 +9,7 @@ Design experiments that produce trustworthy results — not just directional sig
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **What is being tested** (feature, UI change, copy, pricing, onboarding step)
 - **Hypothesis** (or ask to help formulate one)
 - **Primary metric** (conversion rate, click-through, completion rate, etc.)

@@ -9,7 +9,7 @@ This skill produces a complete risk register for a project, programme, or produc
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Project or product name**
 - **Project stage** (discovery / delivery / launch / live / programme-level)
 - **Key objectives** — what is the project trying to achieve?

@@ -11,7 +11,7 @@ WARNING: Tax law changes frequently and varies by jurisdiction. This checklist p
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Entity type** (individual / sole trader / limited company / partnership / trust)
 - **Jurisdiction** (UK / US / EU / Other — defaults to UK if unspecified)
 - **Approximate income or revenue** (to identify relevant thresholds)

@@ -1,6 +1,6 @@
 ---
 name: team-offsite-planner
-description: "Plan a team offsite from goals to full agenda. Use when asked to plan a team offsite, away day, team retreat, quarterly offsite, or team-building event. Produces a full agenda, session designs, facilitation notes, and logistics checklist."
+description: "Plan a team offsite that earns its cost — the purpose split (connection vs decisions vs planning, weighted deliberately), an agenda that alternates work and air, the logistics runbook, and the follow-through that makes Monday different. Use when asked to plan a team offsite, away day, team retreat, quarterly offsite, design two days for the team, or make this offsite not a waste. Produces the purpose weighting, a full agenda with session designs, facilitation notes, a logistics checklist, and the follow-through plan."
 ---
 
 # Team Offsite Planner Skill
@@ -9,7 +9,7 @@ This skill designs a complete team offsite — from goals to minute-by-minute ag
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Team size** (number of people)
 - **Duration** (half day / full day / 1.5 days / 2 days)
 - **Primary goal** (e.g. Q3 planning / team bonding / strategy alignment / retrospective / all of the above)

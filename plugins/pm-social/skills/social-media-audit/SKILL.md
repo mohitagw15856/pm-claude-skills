@@ -9,7 +9,7 @@ This skill produces a comprehensive social media audit covering profile complete
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Brand / handle name** — which account(s) to audit
 - **Active platforms** — which social channels to include (LinkedIn, Instagram, X/Twitter, TikTok, YouTube, Facebook, etc.)
 - **Audit timeframe** — what period to review (e.g. last 90 days, last 6 months)

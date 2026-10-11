@@ -9,7 +9,7 @@ This skill designs a complete team offsite — from goals to minute-by-minute ag
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Team size** (number of people)
 - **Duration** (half day / full day / 1.5 days / 2 days)
 - **Primary goal** (e.g. Q3 planning / team bonding / strategy alignment / retrospective / all of the above)

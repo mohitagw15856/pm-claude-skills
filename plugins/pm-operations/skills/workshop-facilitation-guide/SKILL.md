@@ -9,7 +9,7 @@ Produces a complete facilitation guide for any workshop — from a 90-minute pro
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Workshop goal** (what decision or output should exist at the end?)
 - **Participants** (number, roles, mix of seniority)
 - **Duration** (90 min / half day / full day / multi-day)

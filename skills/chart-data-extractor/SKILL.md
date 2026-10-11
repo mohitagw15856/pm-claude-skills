@@ -9,7 +9,7 @@ Extracts data from images of charts and graphs — bar charts, line charts, pie 
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **The chart image** (upload a screenshot or image file)
 - **Chart type** (if ambiguous — bar / line / pie / scatter / other)
 - **What matters most** (approximate trends / precise values / specific data points / categorisation)

@@ -1,6 +1,6 @@
 ---
 name: youtube-script-writer
-description: "Write engaging, high-retention YouTube video scripts with visual and audio cues. Use when asked to write a YouTube script, design a video outline, draft a video hook, or structure a video narrative. Produces a polished script with multiple hook options, step-by-step video body, and clear visual/audio directions."
+description: "Write a high-retention YouTube script — explainer, tutorial, video essay, review, or talking head — on the packaging then cold-open then value-stack then retention structure that holds watch time past the drop-off cliffs. Use when asked to write a YouTube script, script a long-form or explainer video, draft a video hook, outline a video essay, or turn a blog post or talk into a video. Produces title and thumbnail concepts, multiple hook options, a beat-by-beat body with retention devices, and clear visual and audio cues."
 ---
 
 # YouTube Script Writer Skill
@@ -16,7 +16,7 @@ This skill helps creators write highly engaging, structured, and visually-dynami
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Topic/Concept** — What is the video about? (e.g., "How I built a SaaS in 30 days")
 - **Target Audience** — Who is watching? (e.g., beginner developers, student designers)
 - **Target Duration** — Approximate length in minutes (e.g., 5-7 minutes, 10-15 minutes)

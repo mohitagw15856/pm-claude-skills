@@ -9,7 +9,7 @@ This skill produces a complete B2B partnership proposal covering the partnership
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Your company** — name, what you do, and the audience you serve
 - **Prospective partner** — name, what they do, and their audience
 - **Partnership type** — technology integration / co-marketing / reseller / referral / strategic alliance / OEM

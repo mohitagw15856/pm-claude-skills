@@ -11,7 +11,7 @@ This skill turns rough notes, bullet points, or bullet-point memories into a com
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Review type** (Self-assessment / Manager review / Peer/360 / Upward feedback)
 - **Review period** (e.g. H1 2025, Q2 2025, Annual)
 - **Name of person being reviewed** (or "myself" for self-assessment)

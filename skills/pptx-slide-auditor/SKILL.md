@@ -9,7 +9,7 @@ Runs a systematic visual and structural audit of a PowerPoint presentation — i
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **The deck** (upload the .pptx file or individual slide screenshots)
 - **Audience** (internal team / executive / external client / conference / investor)
 - **Presentation mode** (presented live / sent to read / shared async on video)

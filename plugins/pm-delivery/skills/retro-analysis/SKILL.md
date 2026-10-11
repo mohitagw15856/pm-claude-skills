@@ -9,7 +9,7 @@ Generate a data-grounded retrospective brief that separates facts from feelings,
 
 ## Required Inputs
 
-Ask the user for these if not provided:
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
 - **Sprint tickets: planned vs. completed**
 - **Carry-over tickets and reasons** (if known)
 - **Tickets reopened after closing** (quality signal)
