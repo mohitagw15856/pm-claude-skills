@@ -6,6 +6,7 @@
 //   npx pm-claude-skills install someone/their-skills --only a,b      # a subset
 //   npx pm-claude-skills install someone/repo@v2 --agent codex        # a tag/branch, another agent
 //   npx pm-claude-skills install someone/repo --dry-run               # audit only, write nothing
+//   npx pm-claude-skills install @namespace/skill                     # by name, from the signed community registry
 //
 // Pure Node ≥18 (global fetch), no dependencies, GitHub API unauthenticated
 // (60 req/h is plenty: 2 API calls + 1 raw fetch per file).
@@ -13,7 +14,8 @@ import { readdirSync, existsSync, mkdirSync, writeFileSync, readFileSync } from 
 import { createHash } from 'node:crypto';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { homedir } from 'node:os';
+import { homedir, tmpdir } from 'node:os';
+import { execFileSync } from 'node:child_process';
 
 const PKG_ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const STAR = '⭐ Find this useful? Star the repo: https://github.com/mohitagw15856/pm-claude-skills\n💛 The free playground runs are sponsor-funded — fund more: https://github.com/sponsors/mohitagw15856';
@@ -78,13 +80,75 @@ function scan(text) {
   return BANNED.filter(([re]) => re.test(text)).map(([, why]) => why);
 }
 
+// ── Install by name from the signed community registry ─────────────────────────
+// The registry (web/registry/registry.json, built by scripts/build-registry-bundle.mjs)
+// lists skills that passed review in a pull request, each pinned to the sha256 of
+// the SKILL.md that was reviewed. A file whose hash no longer matches is refused:
+// the author changed it after review. --verify-signature also checks the registry's
+// Sigstore build provenance with the GitHub CLI (gh attestation verify).
+const REGISTRY_URL = process.env.PM_SKILLS_REGISTRY || 'https://mohitagw15856.github.io/pm-claude-skills/registry/registry.json';
+const SIGNER = 'mohitagw15856/pm-claude-skills';
+async function installFromRegistry(name, argv) {
+  const agent = getArg(argv, 'agent', 'claude');
+  const target = getArg(argv, 'target', AGENT_DIRS[agent]);
+  if (!target) { console.error(`--agent must be one of: ${Object.keys(AGENT_DIRS).join(', ')}.`); return 1; }
+  const dryRun = argv.includes('--dry-run');
+  const force = argv.includes('--force');
+  const res = await fetch(REGISTRY_URL, { headers: { 'User-Agent': 'pm-claude-skills-install' } });
+  if (!res.ok) { console.error(`Could not fetch the registry (${res.status}) from ${REGISTRY_URL}.`); return 1; }
+  const regText = await res.text();
+  if (argv.includes('--verify-signature')) {
+    const tmp = join(tmpdir(), `pm-skills-registry-${process.pid}.json`);
+    writeFileSync(tmp, regText);
+    try {
+      execFileSync('gh', ['attestation', 'verify', tmp, '-R', SIGNER], { stdio: 'pipe' });
+      console.error('🔏 Registry signature verified (Sigstore build provenance from ' + SIGNER + ').');
+    } catch (e) {
+      console.error(e.code === 'ENOENT' ? 'The GitHub CLI (gh) is needed for --verify-signature: https://cli.github.com' : `🚫 Registry signature did NOT verify:\n${String(e.stderr || e.message).slice(0, 400)}`);
+      return 1;
+    }
+  }
+  const entry = (JSON.parse(regText).skills || []).find((s) => s.name === name);
+  if (!entry) { console.error(`"${name}" is not in the community registry. Browse it: https://github.com/mohitagw15856/pm-claude-skills/blob/main/community/registry.json`); return 1; }
+  const gm = entry.repo.match(/^https:\/\/github\.com\/([\w.-]+)\/([\w.-]+?)(?:\.git)?\/?$/);
+  if (!gm || !/^[\w./-]+$/.test(entry.path) || entry.path.includes('..')) { console.error(`Registry entry for ${name} is malformed; not installing.`); return 1; }
+  CDN = argv.includes('--cdn') || process.env.PM_SKILLS_CDN === 'jsdelivr';
+  const text = await raw(gm[1], gm[2], entry.ref || 'main', entry.path);
+  const actual = 'sha256:' + createHash('sha256').update(text).digest('hex');
+  if (actual !== entry.sha256) {
+    console.error(`🚫 ${name}: the SKILL.md no longer matches the version that was reviewed\n      pinned ${entry.sha256}\n      found  ${actual}\n      → NOT installed. The author changed it after review; it needs a registry update first.`);
+    return 1;
+  }
+  const flags = scan(text);
+  const sp = specLevel(text);
+  if (flags.length || sp.level === 0) { console.error(`🚫 ${name}: ${flags.length ? flags.join('; ') : 'not loadable'} → NOT installed.`); return 1; }
+  const skillName = sp.name || name.split('/')[1];
+  const dest = join(target, skillName);
+  console.error(`✔ ${name}  [SkillSpec L${sp.level}] hash matches its reviewed pin.`);
+  if (existsSync(dest) && !force) { console.error(`  ↷ already installed at ${dest} (use --force to overwrite)`); return 0; }
+  if (dryRun) { console.error(`  would install to ${dest}`); return 0; }
+  mkdirSync(dest, { recursive: true });
+  writeFileSync(join(dest, 'SKILL.md'), text);
+  const lockPath = join(target, '.pm-skills-lock.json');
+  let lock = { spec: 'pm-skills-lock/1', skills: {} };
+  try { if (existsSync(lockPath)) lock = JSON.parse(readFileSync(lockPath, 'utf8')); } catch { /* rebuild */ }
+  lock.skills = lock.skills || {};
+  lock.skills[skillName] = { registry: name, repo: `${gm[1]}/${gm[2]}`, ref: entry.ref || 'main', installedAt: new Date().toISOString().slice(0, 10), files: { 'SKILL.md': actual } };
+  writeFileSync(lockPath, JSON.stringify(lock, null, 2) + '\n');
+  console.error(`  → ${dest}\nIntegrity hash recorded; check later with: pm-claude-skills verify\nRestart ${agent} to pick up the new skill.`);
+  return 0;
+}
+
 export async function run(argv) {
   const spec = argv[0] && !argv[0].startsWith('--') ? argv[0] : '';
+  const named = spec.match(/^@([a-z0-9-]+\/[a-z0-9]+(?:-[a-z0-9]+)*)$/);
+  if (named) return installFromRegistry(named[1], argv);
   if (!spec || argv.includes('--help') || argv.includes('-h')) {
     console.log(`Install skills from ANY public GitHub repo — security-scanned and SkillSpec-graded on the way in.
 
 Usage:
   pm-claude-skills install <owner/repo>[@ref] [--agent claude|hermes|codex|openclaw] [--only a,b] [--dry-run] [--force] [--cdn]
+  pm-claude-skills install @<namespace>/<skill> [--verify-signature] [--agent …] [--dry-run] [--force]
 
 What happens:
   1. The repo is scanned for SKILL.md folders (any layout).
@@ -93,6 +157,10 @@ What happens:
   3. Each skill's SkillSpec conformance level is reported (L1 Loadable → L3 Trustworthy).
   4. Clean skills are installed; flagged skills are NEVER installed. Existing skills are never
      overwritten without --force; names that shadow the curated library are warned about.
+
+By name (@namespace/skill): resolved from the signed community registry; the SKILL.md must
+  match the sha256 pinned when it was reviewed, or it is refused. --verify-signature checks the
+  registry's Sigstore provenance with the GitHub CLI first.
 
 --dry-run audits and reports without writing anything.
 --cdn fetches through jsDelivr instead of GitHub (also PM_SKILLS_CDN=jsdelivr), for networks

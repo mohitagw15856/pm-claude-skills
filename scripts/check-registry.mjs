@@ -64,7 +64,8 @@ for (const s of reg.skills || []) {
     if (!['free', 'paid'].includes(s.pricing.model)) errors.push(`${tag}: pricing.model must be free|paid`);
     if (s.pricing.model === 'paid' && !/^https:\/\/(.*\.)?(lemonsqueezy\.com|polar\.sh)\//.test(s.pricing.checkout || '')) errors.push(`${tag}: paid entries need a lemonsqueezy/polar checkout URL`);
   }
-  if (!s.sha256) warnings.push(`${tag}: no sha256 pin — consumers get whatever the ref serves; pin with: shasum -a 256 SKILL.md`);
+  // The pin is what the signed registry and `install @name` enforce: required.
+  if (!/^sha256:[0-9a-f]{64}$/.test(s.sha256 || '')) errors.push(`${tag}: needs a sha256 pin ("sha256:<64 hex>") — the signed registry installs only the exact file that was reviewed; pin with: shasum -a 256 SKILL.md`);
   if (!s.description || s.description.length < 30) warnings.push(`${tag}: description missing/short — copy the frontmatter description`);
 }
 

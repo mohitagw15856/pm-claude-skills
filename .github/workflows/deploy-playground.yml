@@ -25,6 +25,7 @@ on:
       - 'scripts/build-skill-pages.mjs'
       - 'scripts/build-skill-changelog.mjs'
       - 'scripts/build-community.mjs'
+      - 'community/registry.json'
       - 'scripts/build-samples.mjs'
       - 'examples/samples/**'
       - 'examples/**'
@@ -160,10 +161,12 @@ jobs:
       #   gh attestation verify pm-skills-<version>.tar.gz -R mohitagw15856/pm-claude-skills
       - name: Build the release bundle and SBOM (web/releases/)
         run: node scripts/build-release-bundle.mjs
-      - name: Sign the release bundle (build provenance)
+      - name: Build the signed community registry (web/registry/registry.json)
+        run: node scripts/build-registry-bundle.mjs
+      - name: Sign the release bundle and the registry (build provenance)
         uses: actions/attest-build-provenance@v2
         with:
-          subject-path: 'web/releases/*.tar.gz, web/releases/*.sbom.cdx.json'
+          subject-path: 'web/releases/*.tar.gz, web/releases/*.sbom.cdx.json, web/registry/registry.json'
 
       # Search-engine ownership checks: Baidu reads a meta tag, IndexNow a key file.
       - name: Add search-engine verification

@@ -27,6 +27,11 @@ npm for skills: your `SKILL.md` stays in **your repo**, an entry in [`registry.j
 ## Consume
 
 ```bash
+npx pm-claude-skills install @yourhandle/your-skill-name                      # by name: hash-checked against its reviewed pin
+npx pm-claude-skills install @yourhandle/your-skill-name --verify-signature   # and verify the registry's signature first (needs gh)
+```
+
+```bash
 curl https://pm-skills-mcp.pm-claude-skills.workers.dev/v1/community                 # list
 curl https://pm-skills-mcp.pm-claude-skills.workers.dev/v1/community/yourhandle/your-skill-name   # one skill, fetched live from the author's repo
 ```
@@ -42,12 +47,13 @@ Over MCP, `search_skills` results include community entries marked `community: t
 
 ## 🔏 Trust & integrity — the full chain
 
-Four layers, all verifiable, none requiring you to trust us:
+Five layers, all verifiable, none requiring you to trust us:
 
 1. **Security scan** — every registry entry (and everything `pm-claude-skills install` fetches from *any* repo) is checked against the banned patterns: prompt-injection phrasing, unvetted network calls, data-exfiltration instructions, embedded credentials. Flagged = never installed.
-2. **Content pinning** — add `"sha256": "sha256:<hash of your SKILL.md>"` to your registry entry (`shasum -a 256 SKILL.md`) and CI verifies the fetched file matches it exactly, forever. Pin + a tag `ref` = your consumers can't be served something you didn't publish. Unpinned entries get a warning.
+2. **Content pinning (required)** — every skill entry carries `"sha256": "sha256:<hash of your SKILL.md>"` (`shasum -a 256 SKILL.md`). CI verifies the fetched file matches it, and `install @you/skill` refuses any file that no longer matches the reviewed pin. To ship a change, update the pin in a PR so it is reviewed again. Pin plus a tag `ref` means consumers can't be served something nobody reviewed.
 3. **Install lockfile** — the installer records the hash of every installed file in `.pm-skills-lock.json`; `npx pm-claude-skills verify` detects any post-install drift or tampering before an agent runs it.
-4. **Package provenance** — the npm packages publish with [provenance](https://docs.npmjs.com/generating-provenance-statements) (sigstore-backed "built from this repo by this workflow" attestations, verifiable with `npm audit signatures`).
+4. **A signed registry** — on every deploy, the registry is published at [`registry/registry.json`](https://mohitagw15856.github.io/pm-claude-skills/registry/registry.json) and signed with GitHub's Sigstore-backed build provenance (`scripts/build-registry-bundle.mjs`). Prove a copy came from this repo's main branch with `gh attestation verify registry.json -R mohitagw15856/pm-claude-skills`, or pass `--verify-signature` to `install`.
+5. **Package provenance** — npm packages published from the CI workflow carry [provenance](https://docs.npmjs.com/generating-provenance-statements) (verify with `npm audit signatures`). Releases published by hand from a laptop do not; the release bundle and SBOM on the site are always signed (see `npx pm-claude-skills verify --release`).
 
 ## 🪑 Packs — benches & scenarios (the low-bar contribution)
 
