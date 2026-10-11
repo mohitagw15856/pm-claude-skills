@@ -1,15 +1,19 @@
 # 🧩 PM Skills — Browser Extension
 
-Insert any of the **198 professional Agent Skills** straight into the **ChatGPT**, **Claude.ai**, or **Gemini** chat box. No copy-paste, no switching tabs — pick a skill, it drops the framework into your message, you add your task and send.
+Insert any of the **1,200+ professional Agent Skills** straight into the **ChatGPT**, **Claude.ai**, or **Gemini** chat box. No copy-paste, no switching tabs — pick a skill, it drops the framework into your message, you add your task and send.
 
 ![works on ChatGPT, Claude.ai, Gemini](https://img.shields.io/badge/works%20on-ChatGPT%20·%20Claude.ai%20·%20Gemini-d97757)
 
 ## What it does
 
 - Adds a floating **🧠 Skills** button on chatgpt.com, claude.ai, and gemini.google.com.
-- Click it → search **198 skills** (PRD, launch plan, postmortem, rubric, contract review, runway planner…).
+- Click it → search **every skill** (PRD, launch plan, postmortem, rubric, contract review, runway planner…).
 - Pick one → its full framework is inserted into the chat input, prefixed above whatever you've already typed.
 - 100% local. Skills are **bundled with the extension** — nothing is sent to any server. No login, no API key.
+
+## A skill for the page you are on
+
+Click the toolbar button on a lease, a job ad, a medical bill, a severance letter or an incident channel and the popup suggests the matching skills. The page is matched against [`context-rules.json`](context-rules.json) **in your browser**; nothing about it is sent anywhere. Tick **Suggest skills as I browse** to get one small, dismissible suggestion on matching pages without clicking. That asks for permission to read pages, and unticking it gives the permission back. It never runs on sign-in or banking pages, the chat sites, or this library's own site. Design and rules: [CONTEXTUAL-DISCOVERY.md](CONTEXTUAL-DISCOVERY.md).
 
 ## Install (unpacked — while it's pre–Web Store)
 
