@@ -113,7 +113,7 @@ function render(query) {
   const cnt = document.getElementById('count');
   if (!query.trim()) { box.innerHTML = ''; cnt.textContent = ''; return; }
   const hits = rank(query);
-  if (!hits.length) { box.innerHTML = `<div class="empty">No skill matched “${query}”. Try fewer or different words.</div>`; cnt.textContent = ''; return; }
+  if (!hits.length) { box.innerHTML = '<div class="empty"></div>'; box.firstChild.textContent = `No skill matched “${query}”. Try fewer or different words.`; cnt.textContent = ''; return; }
   cnt.textContent = `${hits.length} match${hits.length > 1 ? 'es' : ''}, best first`;
   box.innerHTML = hits.map(({ s }) => {
     const tierPill = s.tier && s.tier !== 'stable' ? `<span class="pill ${s.tier}">${s.tier}</span>` : `<span class="pill">stable</span>`;
