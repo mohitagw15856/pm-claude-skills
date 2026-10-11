@@ -857,6 +857,9 @@ function renderLanding() {
   // curation. Appears only once there is genuine signal, so an empty counter
   // never renders an empty section. Loads after first paint; failure is silent.
   const mostRunSlot = document.createElement('div');
+  // The slot must not be a grid cell itself: as one, it held the whole strip and
+  // stretched the cards beside it to its height. Its heading and cards join the grid.
+  mostRunSlot.style.display = 'contents';
   frag.appendChild(mostRunSlot);
   fetch('https://pm-skills-mcp.pm-claude-skills.workers.dev/stats/skills')
     .then((r) => r.json())
