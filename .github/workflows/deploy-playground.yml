@@ -47,6 +47,8 @@ on:
       - 'data/savings.json'
       - 'data/firm-ledger.json'
       - 'data/skill-cup.json'
+      - 'data/ab-tests.json'
+      - 'proposals/ab/**'
       - 'i18n/**'
       - 'CHANGELOG.md'
       - 'data/solar-terms.json'
@@ -242,6 +244,12 @@ jobs:
 
       - name: Publish the translated descriptions for search (web/i18n-desc/)
         run: node scripts/build-i18n-desc.mjs
+
+      - name: Publish the live A/B test versions (web/ab/)
+        run: |
+          mkdir -p web/ab
+          cp data/ab-tests.json web/ab/tests.json
+          for f in proposals/ab/*.md; do [ -f "$f" ] && cp "$f" web/ab/; done; true
 
       - name: Copy the Skill Cup data (web/skill-cup.json)
         run: cp data/skill-cup.json web/skill-cup.json

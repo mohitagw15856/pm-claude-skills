@@ -1392,6 +1392,9 @@ async function run() {
   const localModel = !!P().local; // in-browser model needs no key
   if (!key && !localModel) { flagMissingKey(); return setStatus(`👆 Paste your ${P().name} API key (top-right) to run — or pick "In-browser (no key)".`, true); }
   if (!current) return;
+  const ab = await abInstructions(current);
+  const instr = ab.text;
+  CURRENT_ARM = ab.arm;
   if (window.pmTrack) pmTrack('run/' + current.name);
   if (window.pmUsage) pmUsage(current.name);
 
@@ -1417,13 +1420,13 @@ Return, in this order:
 3. **Redline** — concrete edits and additions to fix the biggest gaps (quote what to change).
 
 Use the following skill as the rubric for what "good" looks like:
-${current.instructions}${ctxBlock}`;
+${instr}${ctxBlock}`;
   } else {
     const fields = [...el('inputForm').querySelectorAll('input, textarea')];
     const missing = fields.filter((f) => !f.dataset.optional && !f.value.trim());
     if (missing.length) return setStatus(`Fill in: ${missing.map((f) => f.dataset.label).join(', ')}`, true);
     userMessage = buildUserMessage(fields);
-    system = current.instructions + SKILL_SUFFIX + ctxBlock;
+    system = instr + SKILL_SUFFIX + ctxBlock;
     if (window.PMArtifacts) system += PMArtifacts.promptFor(current.name); // living artifact block, where the skill has a renderer
     plainSystem = ctx ? ctxBlock.trim() : '';
     compareModels = el('modelsToggle').checked;
@@ -1521,6 +1524,33 @@ ${current.instructions}${ctxBlock}`;
   }
 }
 
+// ── Live A/B tests of skill versions (data/ab-tests.json, scripts/ab-decide.mjs) ──
+// A tested skill is served as version A (the current skill) or B (a challenger)
+// to each browser, at random and then sticky; its 👍/👎 is tagged @a or @b so
+// the two versions are compared on real ratings. No test → no change.
+let AB_TESTS = null;
+const AB_CACHE = {};
+function abTests() {
+  if (!AB_TESTS) AB_TESTS = fetch('ab/tests.json').then((r) => (r.ok ? r.json() : { tests: [] })).then((j) => new Set((j.tests || []).map((t) => t.skill))).catch(() => new Set());
+  return AB_TESTS;
+}
+function abArm(name) {
+  const k = 'pm-ab-' + name;
+  try { let a = localStorage.getItem(k); if (a !== 'a' && a !== 'b') { a = Math.random() < 0.5 ? 'a' : 'b'; localStorage.setItem(k, a); } return a; }
+  catch (e) { return 'a'; }
+}
+// The instructions this browser runs for the skill, and its arm when tested.
+async function abInstructions(skill) {
+  const tests = await abTests();
+  if (!tests.has(skill.name)) return { text: skill.instructions, arm: null };
+  const arm = abArm(skill.name);
+  if (arm === 'a') return { text: skill.instructions, arm };
+  if (!AB_CACHE[skill.name]) AB_CACHE[skill.name] = fetch('ab/' + encodeURIComponent(skill.name) + '.md').then((r) => (r.ok ? r.text() : null)).catch(() => null);
+  const md = await AB_CACHE[skill.name];
+  return md ? { text: md.replace(/^---[\s\S]*?---\r?\n/, ''), arm } : { text: skill.instructions, arm: null };
+}
+let CURRENT_ARM = null;
+
 // ── Opt-in feedback (anonymous) ─────────────────────────────────────────────
 // Reveal a 👍/👎 bar after a successful run. A click sends an anonymous
 // GoatCounter event (counts only — never the inputs/outputs/key) and opens a
@@ -1535,7 +1565,7 @@ function showFeedback() {
   el('fbDown').hidden = false;
 }
 function sendFeedback(kind) {
-  const name = (current && current.name) || 'unknown';
+  const name = ((current && current.name) || 'unknown') + (CURRENT_ARM ? '@' + CURRENT_ARM : '');
   try { if (window.pmTrack) pmTrack('feedback/' + name + '/' + kind); } catch (e) {}
   el('fbUp').hidden = true;
   el('fbDown').hidden = true;

@@ -1,0 +1,5 @@
+{
+  "_comment": "Live A/B tests of skill versions in the playground. Each test serves proposals/ab/<skill>.md (B) to half of browsers and the current skill (A) to the rest; ratings are tagged @a/@b. Start one with scripts/ab-start.mjs; scripts/ab-decide.mjs reports the result. Remove a test once decided.",
+  "minVotes": 30,
+  "tests": []
+}

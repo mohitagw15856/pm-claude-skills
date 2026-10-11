@@ -30,12 +30,16 @@ jobs:
         env:
           GOATCOUNTER_TOKEN: ${{ secrets.GOATCOUNTER_TOKEN }}
           GOATCOUNTER_SITE: mohitagw
-        run: node scripts/build-feedback.mjs
+        run: |
+          node scripts/build-feedback.mjs
+          node scripts/ab-decide.mjs
       - name: Open a PR with the refreshed feedback data
         id: cpr
         uses: peter-evans/create-pull-request@v8
         with:
-          add-paths: web/feedback.json
+          add-paths: |
+            web/feedback.json
+            web/ab-status.json
           branch: feedback-data
           delete-branch: true
           commit-message: "chore(feedback): refresh 👍/👎 ratings from usage"
@@ -55,7 +59,7 @@ jobs:
           set -euo pipefail
           files=$(gh pr diff "$PR" --name-only --repo "$GITHUB_REPOSITORY")
           echo "$files"
-          if [ -z "$files" ] || echo "$files" | grep -qvE '^web/feedback\.json$'; then
+          if [ -z "$files" ] || echo "$files" | grep -qvE '^web/(feedback|ab-status)\.json$'; then
             echo "::warning::PR #$PR changes files outside ^web/feedback\.json$; leaving it for review."
             exit 0
           fi
