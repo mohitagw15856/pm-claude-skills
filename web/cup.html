@@ -24,7 +24,7 @@
 <nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
 <main class="cup-wrap">
   <h1>🏆 The Skill Cup</h1>
-  <p class="lead">Each month, one theme. Write the best new skill for it. Entries are scored the way the library scores itself, with no popularity vote. The winner gets a permanent line on this page and a badge on the skill. No prize money yet; sponsors welcome.</p>
+  <p class="lead">Each month, one theme. Write the best new skill for it. Entries are scored the way the library scores itself, with no popularity vote. The winner gets a permanent line on this page and a badge on the skill. Prizes are funded month by month by sponsors.</p>
   <section class="now" id="now"><p class="muted">Loading…</p></section>
   <h2>How to enter</h2>
   <ol class="how">
@@ -44,10 +44,13 @@
   var REPO = 'https://github.com/mohitagw15856/pm-claude-skills';
   var LANG = { en: 'English', zh: 'Chinese', ja: 'Japanese', ko: 'Korean', hi: 'Hindi', ar: 'Arabic', th: 'Thai', ru: 'Russian', es: 'Spanish', pt: 'Portuguese', fr: 'French', de: 'German', it: 'Italian', pl: 'Polish', uk: 'Ukrainian', tr: 'Turkish', bn: 'Bengali', ur: 'Urdu', id: 'Indonesian', vi: 'Vietnamese', 'zh-TW': 'Traditional Chinese' };
   var who = function (a) { return '<a href="https://github.com/' + encodeURIComponent(a) + '">@' + esc(a) + '</a>'; };
-  fetch('skill-cup.json').then(function (r) { return r.json(); }).then(function (d) {
+  var PRIZES = [];
+  var prizesLoaded = fetch('cup-prizes.json').then(function (r) { return r.ok ? r.json() : { prizes: [] }; }).then(function (j) { PRIZES = j.prizes || []; }).catch(function () {});
+  var prizeText = function (month) { return PRIZES.filter(function (p) { return p.month === month; }).map(function (p) { return (p.currency === 'USD' ? '$' : '') + p.amount + (p.currency && p.currency !== 'USD' ? ' ' + p.currency : '') + ' for the ' + (p.track && p.track !== 'overall' ? (LANG[p.track] || p.track) + ' track' : 'winner') + (p.sponsor ? ', sponsored by ' + p.sponsor : ''); }).join('; '); };
+  Promise.all([fetch('skill-cup.json').then(function (r) { return r.json(); }), prizesLoaded]).then(function (res) { return res[0]; }).then(function (d) {
     var c = d.cups[d.cups.length - 1];
     var left = Math.max(0, Math.ceil((new Date(c.closes + 'T23:59:59Z') - Date.now()) / 86400000));
-    document.getElementById('now').innerHTML = '<h2>' + esc(c.month) + ': ' + esc(c.theme) + '</h2><p>' + esc(c.brief) + '</p><p class="muted">' + left + ' day' + (left === 1 ? '' : 's') + ' left · closes ' + esc(c.closes) + '</p>' +
+    document.getElementById('now').innerHTML = '<h2>' + esc(c.month) + ': ' + esc(c.theme) + '</h2><p>' + esc(c.brief) + '</p><p class="muted">' + left + ' day' + (left === 1 ? '' : 's') + ' left · closes ' + esc(c.closes) + '</p><p><strong>Prize:</strong> ' + (prizeText(c.month) ? esc(prizeText(c.month)) : 'none pledged yet. <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/docs/SPONSOR-THE-CUP.md">Sponsor this month</a>.') + '</p>' +
       (c.entries.length ? '<table class="tbl"><thead><tr><th>#</th><th>Skill</th><th>Language</th><th>By</th><th>Score</th></tr></thead><tbody>' + c.entries.map(function (e, i) { return '<tr><td>' + (i + 1) + '</td><td><a href="' + REPO + '/pull/' + encodeURIComponent(e.pr) + '">' + esc(e.skill) + '</a></td><td>' + esc(LANG[e.lang] || 'English') + '</td><td>' + who(e.author) + '</td><td>' + Number(e.score).toFixed(2) + '</td></tr>'; }).join('') + '</tbody></table>'
         : '<p>No entries yet. The first one sets the bar.</p>') +
       '<a class="btn" href="' + REPO + '/compare">Open your entry</a>';

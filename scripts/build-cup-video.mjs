@@ -32,6 +32,8 @@ else {
 }
 const skillPath = join(root, 'skills', cup.winner.skill, 'SKILL.md');
 const title = existsSync(skillPath) ? (readFileSync(skillPath, 'utf8').match(/^# (.+)$/m) || [, cup.winner.skill])[1].replace(/ Skill$/, '') : cup.winner.skill;
+const prizes = existsSync(join(root, 'config', 'cup-prizes.json')) ? JSON.parse(readFileSync(join(root, 'config', 'cup-prizes.json'), 'utf8')).prizes || [] : [];
+const prize = prizes.find((p) => p.month === cup.month && (!p.track || p.track === 'overall'));
 const label = new Date(`${cup.month}-01T00:00:00Z`).toLocaleString('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' });
 
 const html = `<!DOCTYPE html><html><head><meta charset="utf-8"><style>
@@ -57,6 +59,7 @@ html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:linear-
 <div class="b n">@${esc(cup.winner.author)}</div>
 <div class="b s">${esc(title)}</div>
 <div class="b sc">Scored ${Number(cup.winner.score).toFixed(2)} / 5 by a blind judge${cup.entries.length > 1 ? `, against ${cup.entries.length - 1} other entr${cup.entries.length === 2 ? 'y' : 'ies'}` : ''}</div>
+${prize ? `<div class="b sc" style="top:1440px;color:#f2a65a;animation-delay:6.4s">Prize: ${prize.currency === 'USD' ? '$' : ''}${esc(prize.amount)}${prize.currency && prize.currency !== 'USD' ? ' ' + esc(prize.currency) : ''}${prize.sponsor ? `, thanks to ${esc(prize.sponsor)}` : ''}</div>` : ''}
 <div class="b f">Enter next month: mohitagw15856.github.io/pm-claude-skills/cup.html</div>
 </body></html>`;
 

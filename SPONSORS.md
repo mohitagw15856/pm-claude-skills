@@ -16,6 +16,7 @@ This library is free and MIT-licensed, and it takes real, ongoing work: re-testi
 > Companies: sponsoring is also the cleanest way to get **your logo in front of the PMs, engineers, and operators** who use this daily — and to shape which skills get built next.
 
 ## Where the money goes
+- Prizes for the monthly [Skill Cup](SKILL-CUP.md): [sponsor a Cup](docs/SPONSOR-THE-CUP.md) and the winner is paid for the best new skill
 - New skills from [community requests](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=submit-skill.yml)
 - Re-running the [eval benchmark](https://mohitagw15856.github.io/pm-claude-skills/benchmark.html) as models change (this costs API credits)
 - Keeping the playground, Skills Hub, and tools running and free
