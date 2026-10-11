@@ -17,6 +17,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { complete } from '../bin/lib/anthropic.mjs';
+import { logEvolution } from './lib/evolution-log.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
@@ -92,7 +93,9 @@ ${spec ? 'THE SPEC (excerpt):\n' + spec : ''}`,
   const challScore = a === champion ? sb : sa;
   console.log(`   champion ${champScore.overall.toFixed(2)} vs challenger ${challScore.overall.toFixed(2)}`);
 
-  if (challScore.overall >= champScore.overall + MARGIN) {
+  const won = challScore.overall >= champScore.overall + MARGIN;
+  logEvolution({ skill: r.skill, loop: 'evolve', model, judge: judgeModel, before: champScore.overall, after: challScore.overall, kept: won });
+  if (won) {
     writeFileSync(path, challenger.endsWith('\n') ? challenger : challenger + '\n');
     evolved.push({ skill: r.skill, from: champScore.overall, to: challScore.overall });
     console.log('   ✅ challenger wins — written (lands on a branch; humans review the PR)');

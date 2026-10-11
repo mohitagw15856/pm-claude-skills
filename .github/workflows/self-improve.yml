@@ -45,11 +45,15 @@ jobs:
       - name: Keep only genuine improvements
         id: reconcile
         if: steps.pick.outputs.picked != '0'
+        env:
+          IMPROVE_JUDGE: ${{ github.event.inputs.judge }}
         run: node scripts/self-improve.mjs --reconcile
 
       - name: Regenerate the catalog
         if: steps.reconcile.outputs.improved != '0'
-        run: node web/build-skills.mjs
+        run: |
+          node web/build-skills.mjs
+          node scripts/build-evolution-log.mjs
 
       - name: Open a PR with the improvements
         if: steps.reconcile.outputs.improved != '0'

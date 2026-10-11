@@ -132,6 +132,7 @@ An honest summary of what is checked, measured and still unreviewed, computed fr
 - **Measured scores:** 28 skills have blind-judged scores on the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html) (average 4.4/5 across the models tested); the [benchmark report](skillbench/REPORT.md) publishes the negative findings too. Everything unscored is unscored, not assumed good.
 - **Human review:** of the 154 skills rated high-stakes in [risk tiers](docs/RISK-TIERS.md), **0 have a current review by a qualified professional**. The [expert-review programme](docs/EXPERT-REVIEW-PROGRAM.md) and its [ranked queue](docs/HUMAN-REVIEW-QUEUE.md) exist for exactly this; if you hold a relevant credential, reviewing one skill is the most valuable contribution available.
 <!-- TRUST-NUMBERS:END -->
+- **It rewrites itself, in public:** the weakest skills are periodically rewritten by a model and kept only if a judge scores the rewrite higher; every attempt, including the losses, is in the [evolution log](EVOLUTION.md).
 - **Honesty rules baked in:** decoders end with a not-advice line ([the severity scale](docs/severity-scale.md)), calculators name what they do not model, simulators debrief out of character. PM Skills is not a substitute for a professional.
 
 Privacy: off by default; skills, the CLI and exports send nothing ([docs/TELEMETRY.md](docs/TELEMETRY.md) · [SECURITY.md](SECURITY.md)). Verify a release: `npx pm-claude-skills verify --release` (signed SBOM, Sigstore provenance).

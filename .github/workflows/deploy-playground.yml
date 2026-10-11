@@ -42,6 +42,7 @@ on:
       - 'scripts/build-release-bundle.mjs'
       - 'scripts/push-search-engines.mjs'
       - 'data/cn-city-data.json'
+      - 'data/evolution-log.json'
       - 'CHANGELOG.md'
       - 'data/solar-terms.json'
       - 'data/cn-exam-dates.json'
@@ -220,6 +221,9 @@ jobs:
 
       - name: Build the "Which AI is best at your job?" data (web/ai-at-work.json)
         run: node scripts/build-ai-at-work-report.mjs
+
+      - name: Build the evolution log data (web/evolution-log.json)
+        run: node scripts/build-evolution-log.mjs
 
       - name: Build the side-by-side translations (web/i18n/, for compare-lang.html)
         run: node scripts/build-i18n-web.mjs

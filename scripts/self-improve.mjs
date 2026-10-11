@@ -19,6 +19,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync, rmSync, cpSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { logEvolution } from './lib/evolution-log.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const MANIFEST = join(root, '.self-improve.json');
@@ -107,6 +108,7 @@ function reconcile() {
   const kept = [], reverted = [];
   for (const { skill, oldScore, backup } of manifest) {
     const now = newScores.get(skill);
+    logEvolution({ skill, loop: 'self-improve', model: MODEL, judge: process.env.IMPROVE_JUDGE, before: oldScore, after: now, kept: now != null && now > oldScore });
     if (now != null && now > oldScore) {
       kept.push({ skill, oldScore, newScore: now });
     } else {

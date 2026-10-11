@@ -13,6 +13,7 @@ import { readFileSync, writeFileSync, existsSync, appendFileSync } from 'node:fs
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { complete, parseSkill } from '../bin/lib/anthropic.mjs';
+import { logEvolution } from './lib/evolution-log.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const apiKey = process.env.ANTHROPIC_API_KEY || '';
@@ -109,6 +110,7 @@ ${body.trim()}` }],
   const gain = Math.round((next.overall - base.overall) * 100) / 100;
   process.stderr.write(`  rewrite ${next.overall}/5  (gain ${gain >= 0 ? '+' : ''}${gain})\n`);
 
+  if (!DRY) logEvolution({ skill, loop: 'improve', model: RUN_MODEL, judge: JUDGE, before: base.overall, after: next.overall, kept: gain >= MIN_GAIN });
   if (gain >= MIN_GAIN) {
     if (!DRY) {
       writeFileSync(file, fm + newBody + '\n');
