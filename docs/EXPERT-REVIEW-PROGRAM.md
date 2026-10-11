@@ -18,9 +18,18 @@ They may request edits before signing off. The review is recorded in `config/hum
 
 `scripts/check-human-review.mjs` then counts it toward coverage; reviews expire after 12 months so the badge never goes stale.
 
+## How to take part
+
+1. Pick a skill from [the queue](HUMAN-REVIEW-QUEUE.md) that matches your credential.
+2. Read its `SKILL.md` end to end.
+3. Open an **[Expert review issue](https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=expert-review.yml)**: your role and credential (as it should read on the badge), your verdict, the edits needed, and any conflicts of interest. A public register link is optional and only used to verify.
+4. A maintainer makes the edits, then records the review with `node scripts/record-review.mjs --skill <name> --credential "<credential>" --issue <number>`.
+
+Every high-stakes skill page without a current review links straight to that form ("Not yet expert-reviewed · review it").
+
 ## The badge
 
-A reviewed skill can show **"✔ Reviewed by [credential], [month year]"** on its page and in the Playground, sourced from the registry — never hand-typed. Reviewers are credited by name/credential (or "a licensed X" if they prefer anonymity) on a Reviewers section of the README.
+A reviewed skill shows **"✔ Reviewed by [credential], [month year]"** on its page and in the Playground, sourced from the registry — never hand-typed. Reviewers are credited by name/credential (or "a licensed X" if they prefer anonymity) on a Reviewers section of the README.
 
 ## Where to start
 [HUMAN-REVIEW-QUEUE.md](HUMAN-REVIEW-QUEUE.md) ranks the unreviewed high-stakes skills by realistic harm if the output is wrong (regenerate with `node scripts/human-review-queue.mjs --write`). Reviewers take the top of the list first.

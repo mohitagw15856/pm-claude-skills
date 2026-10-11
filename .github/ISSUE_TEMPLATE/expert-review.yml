@@ -1,0 +1,77 @@
+name: "🩺 Expert review of a high-stakes skill"
+description: You hold a relevant professional credential and have read one skill end to end. Thank you; this is the most valuable contribution the library can get.
+title: "[Expert review] <skill name>"
+labels: ["expert-review"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read [the programme](https://github.com/mohitagw15856/pm-claude-skills/blob/main/docs/EXPERT-REVIEW-PROGRAM.md) first, and pick a skill from [the queue](https://github.com/mohitagw15856/pm-claude-skills/blob/main/docs/HUMAN-REVIEW-QUEUE.md) (most harmful-if-wrong first). A review is recorded in `config/human-review.json` and shows as **"✔ Reviewed by [your credential], [month year]"** on the skill's page for 12 months.
+
+        Please do not paste anything confidential. We never ask for licence numbers; a public register link is optional and only used to verify.
+  - type: input
+    id: skill
+    attributes:
+      label: Skill reviewed
+      description: The folder name under skills/, for example lease-decoder
+      placeholder: lease-decoder
+    validations:
+      required: true
+  - type: input
+    id: credential
+    attributes:
+      label: Your role and credential
+      description: As it should appear on the badge. Role, credential, and where it applies.
+      placeholder: "Licensed attorney (California) · Registered nurse (UK) · AFC financial counsellor (US)"
+    validations:
+      required: true
+  - type: input
+    id: verify
+    attributes:
+      label: Public verification (optional)
+      description: A link to a public register, firm page or professional profile, so a maintainer can confirm the credential. Leave blank if you prefer; the review is then credited as "unverified".
+  - type: dropdown
+    id: credit
+    attributes:
+      label: How should we credit you?
+      options:
+        - By name and credential
+        - By initials and credential
+        - Credential only (anonymous)
+    validations:
+      required: true
+  - type: dropdown
+    id: verdict
+    attributes:
+      label: Your verdict
+      options:
+        - Sound as written
+        - Sound once the edits below are made
+        - Not safe to publish as written
+    validations:
+      required: true
+  - type: textarea
+    id: edits
+    attributes:
+      label: Edits needed, and anything that could mislead someone
+      description: Quote the line and say what it should say. Missing caveats, wrong thresholds, places where someone should be sent to a professional sooner.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: What you checked
+      options:
+        - label: I read the whole SKILL.md, not just the description.
+          required: true
+        - label: The framework is sound for the people it is meant for.
+        - label: The "this is not professional advice" boundary is honest and visible.
+        - label: It routes people to the right kind of professional help, at the right point.
+        - label: Jurisdiction-specific facts are flagged to verify locally.
+  - type: textarea
+    id: conflicts
+    attributes:
+      label: Conflicts of interest
+      description: Anything a reader should know (for example, you work for a firm that sells a related service). "None" is fine.
+    validations:
+      required: true
