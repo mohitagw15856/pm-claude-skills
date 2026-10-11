@@ -26,17 +26,36 @@ const problems = d.cups.flatMap((c, i) => [
   ...(c.entries || []).map((e, j) => (!Number.isInteger(e.pr) || typeof e.score !== 'number' || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(e.skill || '')) && `cup ${i} entry ${j}: malformed`),
 ].filter(Boolean));
 
+// Community requests (open issues labelled skill-request, ranked by 👍) are
+// always on-theme, and a request with REQUEST_THEME_VOTES or more becomes the
+// next month's theme. Fetched only when writing, so --check stays offline.
+const REQUEST_THEME_VOTES = 3;
+async function fetchRequests() {
+  const headers = { 'user-agent': 'pm-skills-cup', accept: 'application/vnd.github+json', ...(process.env.GITHUB_TOKEN ? { authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {}) };
+  const r = await fetch('https://api.github.com/repos/mohitagw15856/pm-claude-skills/issues?labels=skill-request&state=open&per_page=50', { headers }).catch(() => null);
+  if (!r || !r.ok) return null;
+  return (await r.json()).filter((i) => !i.pull_request)
+    .map((i) => ({ number: i.number, title: String(i.title).replace(/^\[[^\]]*\]\s*/, '').slice(0, 100), votes: (i.reactions && i.reactions['+1']) || 0 }))
+    .sort((a, b) => b.votes - a.votes || a.number - b.number).slice(0, 10);
+}
+
 let changed = false;
 if (!check) {
+  const reqs = await fetchRequests();
+  if (reqs && JSON.stringify(reqs) !== JSON.stringify(d.requests || [])) { d.requests = reqs; changed = true; }
   const today = new Date().toISOString().slice(0, 10);
   let open = d.cups[d.cups.length - 1];
   while (open && !open.winner && open.closes < today) {
     const top = [...open.entries].sort((a, b) => b.score - a.score || a.pr - b.pr)[0];
     open.winner = top ? { pr: top.pr, author: top.author, skill: top.skill, score: top.score } : 'none';
-    const next = d.themes.shift() || { theme: 'Open theme', brief: 'Any skill the library does not have yet.' };
+    const used = new Set(d.cups.map((c) => c.request).filter(Boolean));
+    const ask = (d.requests || []).find((r) => r.votes >= REQUEST_THEME_VOTES && !used.has(r.number));
+    const next = ask
+      ? { theme: `Most requested: ${ask.title}`, brief: `The community's most-wanted skill (issue #${ask.number}, ${ask.votes} 👍). Write it well.`, request: ask.number }
+      : d.themes.shift() || { theme: 'Open theme', brief: 'Any skill the library does not have yet.' };
     const start = new Date(open.closes + 'T00:00:00Z'); start.setUTCDate(start.getUTCDate() + 1);
     const end = new Date(Date.UTC(start.getUTCFullYear(), start.getUTCMonth() + 1, 0));
-    open = { month: start.toISOString().slice(0, 7), theme: next.theme, brief: next.brief, opens: start.toISOString().slice(0, 10), closes: end.toISOString().slice(0, 10), entries: [], winner: null };
+    open = { month: start.toISOString().slice(0, 7), theme: next.theme, brief: next.brief, ...(next.request ? { request: next.request } : {}), opens: start.toISOString().slice(0, 10), closes: end.toISOString().slice(0, 10), entries: [], winner: null };
     d.cups.push(open);
     changed = true;
     console.log(`Closed the ${d.cups[d.cups.length - 2].month} Cup; opened ${open.month}: "${open.theme}".`);
@@ -60,6 +79,12 @@ const md = [
   '**To enter:** add `skills/<your-skill>/SKILL.md` and at least one eval case for it in `evals/cases.json`, in one pull request with `[Cup]` in the title. A maintainer runs the scoring; the result is posted on the PR. Check your skill first with `npx skillspec-check skills/<your-skill>`.',
   '',
   cur.entries.length ? '| Rank | Skill | By | Score | PR |\n|---|---|---|---|---|\n' + cur.entries.map((e, i) => `| ${i + 1} | \`${e.skill}\` | ${user(e.author)} | ${e.score.toFixed(2)} | [#${e.pr}](${REPO}/pull/${e.pr}) |`).join('\n') : 'No entries yet. The first one sets the bar.',
+  '',
+  '## Requested skills (always on-theme)',
+  '',
+  (d.requests || []).length
+    ? 'Any of these counts for the Cup in any month. The [expert-to-skill compiler](https://mohitagw15856.github.io/pm-claude-skills/compile.html) builds one from your answers.\n\n' + d.requests.map((r) => `- [#${r.number}](${REPO}/issues/${r.number}) ${r.title} (${r.votes} 👍) · [start it in the compiler](https://mohitagw15856.github.io/pm-claude-skills/compile.html?title=${encodeURIComponent(r.title)})`).join('\n')
+    : `None open. [Request a skill](${REPO}/issues/new?labels=skill-request&title=${encodeURIComponent('[Skill request] ')}); requests with ${REQUEST_THEME_VOTES}+ 👍 become a month's theme.`,
   '',
   '## Winners',
   '',

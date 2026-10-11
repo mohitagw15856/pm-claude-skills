@@ -12,6 +12,10 @@ Skills that help people read, check and act on medical letters, bills, test resu
 
 No entries yet. The first one sets the bar.
 
+## Requested skills (always on-theme)
+
+None open. [Request a skill](https://github.com/mohitagw15856/pm-claude-skills/issues/new?labels=skill-request&title=%5BSkill%20request%5D%20); requests with 3+ 👍 become a month's theme.
+
 ## Winners
 
 Each winner gets a short announcement video, published to the [media branch](https://github.com/mohitagw15856/pm-claude-skills/tree/media/video/cup) for sharing.

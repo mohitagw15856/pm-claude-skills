@@ -108,6 +108,9 @@
   var SKILL = '', CASE = '';
 
   try { var d = JSON.parse(localStorage.getItem(DRAFT) || '{}'); IDS.forEach(function (id) { if (d[id] != null) el(id).value = d[id]; }); } catch (e) {}
+  // Started from a skill request (SKILL-CUP.md links here with ?title=): name the skill after it.
+  var t0 = new URLSearchParams(location.search).get('title');
+  if (t0 && !v('title')) { el('title').value = t0.slice(0, 80); el('name').value = t0.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60); }
   el('f').addEventListener('input', function (e) {
     if (e.target.id === 'title' && !el('name').dataset.touched) el('name').value = v('title').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60);
     if (e.target.id === 'name') el('name').dataset.touched = '1';
