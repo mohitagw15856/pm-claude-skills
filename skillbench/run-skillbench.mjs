@@ -51,6 +51,9 @@ const outPath = arg('out', join(__dirname, 'results.json'));
 const COMPAT = [
   [/^modelscope:/, process.env.MODELSCOPE_INFERENCE_URL || 'https://api-inference.modelscope.ai/v1', 'MODELSCOPE_TOKEN', 'modelscope:'],
   [/^hf:/, 'https://router.huggingface.co/v1', 'HF_TOKEN', 'hf:'],
+  // A model you serve yourself (Ollama, vLLM, llama.cpp): local:<model>. Ollama ignores
+  // the key, but one must be set (LOCAL_API_KEY=x) so a missing key is never silent.
+  [/^local:/, process.env.LOCAL_BASE_URL || 'http://localhost:11434/v1', 'LOCAL_API_KEY', 'local:'],
   [/^sf:/, process.env.SILICONFLOW_BASE_URL || 'https://api.siliconflow.cn/v1', 'SILICONFLOW_API_KEY', 'sf:'],
   [/^(gpt|o\d|chatgpt)/, process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1', 'OPENAI_API_KEY'],
   [/^deepseek/, 'https://api.deepseek.com', 'DEEPSEEK_API_KEY'],
@@ -63,7 +66,7 @@ function providerOf(model) {
   if (/^claude/.test(model)) return 'anthropic';
   if (COMPAT.some(([re]) => re.test(model))) return 'openai';
   if (/^gemini/.test(model)) return 'google';
-  throw new Error(`Cannot infer provider for "${model}" (expected claude-*, gpt-*, gemini-*, deepseek-*, qwen-*, kimi-*, glm-*, doubao-*, modelscope:*, hf:* or sf:*).`);
+  throw new Error(`Cannot infer provider for "${model}" (expected claude-*, gpt-*, gemini-*, deepseek-*, qwen-*, kimi-*, glm-*, doubao-*, modelscope:*, hf:*, sf:* or local:*).`);
 }
 // The env var a model's provider needs, for --skip-missing-keys.
 function keyVarOf(model) {

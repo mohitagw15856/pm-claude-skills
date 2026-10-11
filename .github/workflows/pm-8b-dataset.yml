@@ -1,0 +1,53 @@
+name: PM-8B dataset
+
+# Builds the PM-8B training mix (training/README.md, steps 2 and 3): the teacher
+# pass on the repository's Anthropic key, then the mix and the held-out split.
+# Manual only, because it costs tokens. The result is uploaded as a workflow
+# artifact (pm-8b-dataset) for a GPU machine to train on; nothing is committed
+# or published. Teacher rows carry model outputs: check the provider's terms
+# before publishing them.
+on:
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: 'Teacher completions to run this time (0 = all, about 560)'
+        required: true
+        default: '50'
+      teacher:
+        description: 'Teacher model'
+        required: true
+        default: 'claude-sonnet-5'
+
+permissions:
+  contents: read
+
+jobs:
+  dataset:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Teacher pass, then the mix
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LIMIT: ${{ inputs.limit }}
+          TEACHER: ${{ inputs.teacher }}
+        run: |
+          set -euo pipefail
+          printf '%s' "$LIMIT" | grep -Eq '^[0-9]+$' || { echo "::error::limit must be a number"; exit 1; }
+          printf '%s' "$TEACHER" | grep -Eq '^claude-[A-Za-z0-9.-]+$' || { echo "::error::teacher must be a claude-* model id"; exit 1; }
+          node scripts/build-worked-examples.mjs
+          node training/teacher-pass.mjs --limit "$LIMIT" --teacher "$TEACHER"
+          node training/build-pm-8b-mix.mjs
+      - uses: actions/upload-artifact@v7
+        with:
+          name: pm-8b-dataset
+          path: |
+            training/pm-8b-train.jsonl
+            training/pm-8b-heldout-tasks.json
+            training/teacher.jsonl
+            training/teacher-rejected.jsonl
+          retention-days: 30

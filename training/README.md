@@ -1,27 +1,36 @@
-# pm-skills-7b — distilling the library into an open model
+# PM-8B: the library distilled into an open model
 
-The pipeline to train **the first open model distilled from a skills library**: a LoRA fine-tune that teaches a small model the library's *judgment shape* — which skill applies to a task, and what disciplined output structure + self-verification looks like.
+The pipeline to train **PM-8B**: a QLoRA fine-tune of Qwen3-8B that carries the library's judgment. It learns which skill a task needs, what shape the answer takes, and, from the teacher pass, how a skilled answer actually reads. It runs locally and offline, with zero inference cost.
 
-## Status: pipeline complete, training awaits GPU budget
+## Status: pipeline complete; teacher pass and training await the owner
 
-| Step | State |
-|---|---|
-| 1. Dataset | ✅ `node training/build-sft-dataset.mjs` → `sft.jsonl` (646 pairs: routing + structure, from all 1285 skills + the 153 eval inputs) |
-| 2. Teacher pass (optional, better) | 🔑 optional upgrade: generate full teacher completions for the 153 real inputs via `pm-claude-skills run` in a loop (~$3-5 on your key) and merge them in as richer targets — not yet scripted, straightforward when wanted |
-| 3. Train | ▶️ press-go recipes below (~$10-25 GPU) |
-| 4. Publish | `huggingface-cli upload` to your HF account, model card in `training/MODEL_CARD.md` |
+| Step | Command | State |
+|---|---|---|
+| 1. Routing and structure rows | `node training/build-sft-dataset.mjs` → `sft.jsonl` | ✅ committed (646 rows from all 1,285 skills) |
+| 2. Teacher pass | `node training/teacher-pass.mjs` → `teacher.jsonl` | 🔑 needs `ANTHROPIC_API_KEY`, about 560 completions plus 560 judge calls. Try `--dry-run`, then `--limit 50`. It resumes where it stopped. |
+| 3. Mix and held-out split | `node training/build-pm-8b-mix.mjs` → `pm-8b-train.jsonl`, `pm-8b-heldout-tasks.json` | ✅ runs now; adds the teacher rows once they exist |
+| 4. Train | `bash training/train-pm-8b.sh` (axolotl, `pm-8b.yml`) | 💳 one 24 GB+ GPU, 1-3 hours, about $2-10 rented |
+| 5. Evaluate | SkillBench with `local:` models (below) | ▶️ after step 4 |
+| 6. Publish | `HF_REPO=<you>/pm-8b-lora bash training/train-pm-8b.sh` uploads with `MODEL_CARD.md` | 🔑 your Hugging Face account |
 
-## Train — pick one route
+The **PM-8B dataset** workflow (`.github/workflows/pm-8b-dataset.yml`, manual) runs steps 2 and 3 in CI with the repository's Anthropic key. It uploads the mix as a workflow artifact, so a GPU box can download it without the key.
 
-**A. Axolotl on Modal/RunPod (recommended, ~$10-25):**
+## The held-out evaluation
+
+`training/pm-8b-split.mjs` holds about 10% of the skills out of every training row, deterministically by name. The held-out tasks come in SkillBench format, so the same judge and rubric score PM-8B against its own base model:
+
 ```bash
-pip install axolotl
-axolotl train training/axolotl-config.yml     # Qwen2.5-7B-Instruct + LoRA r=16, ~2 epochs
+# Serve both with Ollama (or vLLM / llama.cpp; set LOCAL_BASE_URL to its /v1 endpoint)
+LOCAL_API_KEY=x node skillbench/run-skillbench.mjs --models local:pm-8b,local:qwen3:8b \
+  --tasks training/pm-8b-heldout-tasks.json --out training/pm-8b-results.json
 ```
 
-**B. Free-tier Colab (T4, slower, smaller):** open a notebook, `pip install unsloth`, load `unsloth/Qwen2.5-7B-Instruct-bnb-4bit`, train on `sft.jsonl` with the same hyperparameters (config comments map 1:1).
+Read the **bare** column: it is the skill's judgment without the skill. If PM-8B's bare score does not beat the base model's, the fine-tune did not work, and that is the number to report.
 
-**Honest expectations:** a 7B LoRA on 646 pairs learns *routing* and *structural discipline* convincingly; it does not learn the full depth of 1285 skills. It's a demonstration artifact and a fast local router — the claim to publish is exactly that, no more.
+## Honest expectations
 
-## Hyperparameters (in axolotl-config.yml)
-LoRA r=16 α=32 dropout=0.05 · lr 2e-4 cosine · 2 epochs · bf16 · seq len 2048 · chatml template.
+Routing and structural discipline transfer well. Depth transfers in proportion to the teacher rows: a few hundred kept answers across 1,285 skills teach the house style, not every skill's specifics. Publish the held-out numbers, not impressions.
+
+## Older artefacts
+
+`axolotl-config.yml` (Qwen2.5-7B on `sft.jsonl` only) is the earlier, routing-only recipe, kept for comparison. `../dataset/` holds the broader dataset export (`scripts/build-dataset.mjs`).

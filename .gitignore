@@ -93,3 +93,11 @@ tools-pkg/openai-tools.json
 tools-pkg/tools.mjs
 tools-pkg/index.json
 tools-pkg/instructions/
+
+# PM-8B pipeline outputs (rebuilt by training/*.mjs; teacher rows carry model outputs)
+training/teacher.jsonl
+training/teacher-rejected.jsonl
+training/pm-8b-train.jsonl
+training/pm-8b-heldout-tasks.json
+training/pm-8b-results.json
+training/out/

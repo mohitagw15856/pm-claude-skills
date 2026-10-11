@@ -1,0 +1,30 @@
+# PM-8B LoRA, axolotl config. See training/README.md for the full pipeline and cost.
+#   node training/teacher-pass.mjs && node training/build-pm-8b-mix.mjs
+#   axolotl train training/pm-8b.yml
+# Qwen3-8B is Apache-2.0, so the adapter and any merged weights can be published
+# under the same terms. Swap base_model for another 7-9B instruct model if preferred.
+base_model: Qwen/Qwen3-8B
+load_in_4bit: true
+adapter: qlora
+lora_r: 32
+lora_alpha: 64
+lora_dropout: 0.05
+lora_target_linear: true
+datasets:
+  - path: training/pm-8b-train.jsonl
+    type: chat_template
+    field_messages: messages
+chat_template: tokenizer_default
+sequence_len: 4096
+sample_packing: true
+micro_batch_size: 2
+gradient_accumulation_steps: 8
+num_epochs: 3
+learning_rate: 1e-4
+lr_scheduler: cosine
+warmup_ratio: 0.05
+bf16: auto
+val_set_size: 0.02
+output_dir: training/out/pm-8b-lora
+save_strategy: epoch
+logging_steps: 10
