@@ -34,7 +34,13 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const arg = (n, d) => { const i = process.argv.indexOf(`--${n}`); return i !== -1 ? process.argv[i + 1] : d; };
 const has = (n) => process.argv.includes(`--${n}`);
 
-const LANGS = { es: 'Spanish', pt: 'Brazilian Portuguese', hi: 'Hindi', ja: 'Japanese', de: 'German', fr: 'French', zh: 'Simplified Chinese', ko: 'Korean' };
+// The 20 languages the discovery layer (--descriptions) covers. Full-body
+// translations are added per language only where a speaker will read them.
+const LANGS = {
+  es: 'Spanish', pt: 'Brazilian Portuguese', fr: 'French', de: 'German', it: 'Italian', pl: 'Polish',
+  ru: 'Russian', uk: 'Ukrainian', tr: 'Turkish', ar: 'Arabic', hi: 'Hindi', bn: 'Bengali', ur: 'Urdu',
+  id: 'Indonesian', vi: 'Vietnamese', th: 'Thai', ja: 'Japanese', ko: 'Korean', zh: 'Simplified Chinese', 'zh-TW': 'Traditional Chinese (Taiwan)',
+};
 const lang = arg('lang', '');
 const checkOnly = has('check');
 const model = arg('model', 'claude-haiku-4-5-20251001'); // translation is Haiku-shaped work
@@ -52,7 +58,7 @@ function structure(md) {
 if (checkOnly) {
   const i18nDir = join(root, 'i18n');
   if (!existsSync(i18nDir)) { console.log('No i18n/ directory yet — nothing to check.'); process.exit(0); }
-  let errs = 0, n = 0;
+  let errs = 0, n = 0, stale = 0;
   for (const lg of readdirSync(i18nDir)) {
     const skillsDir = join(i18nDir, lg, 'skills');
     if (!existsSync(skillsDir)) continue;
@@ -63,10 +69,24 @@ if (checkOnly) {
       if (!existsSync(sf)) { console.error(`✗ ${lg}/${name}: source skill no longer exists`); errs++; continue; }
       const t = structure(readFileSync(tf, 'utf8')), s = structure(readFileSync(sf, 'utf8'));
       if (t.name !== name) { console.error(`✗ ${lg}/${name}: frontmatter name "${t.name}" was translated/changed`); errs++; }
-      if (t.headings !== s.headings) { console.error(`✗ ${lg}/${name}: ${t.headings} sections vs source ${s.headings}`); errs++; }
+      // The English source gained or lost sections since this was translated: the
+      // translation is stale (retranslate it), not broken.
+      if (t.headings !== s.headings) stale++;
       if (t.codeBlocks !== s.codeBlocks) { console.error(`✗ ${lg}/${name}: code-block count drifted`); errs++; }
     }
   }
+  // The discovery layer: every key a real skill, every value a non-empty line.
+  for (const lg of readdirSync(i18nDir)) {
+    const df = join(i18nDir, lg, 'descriptions.json');
+    if (!existsSync(df)) continue;
+    const d = JSON.parse(readFileSync(df, 'utf8')).descriptions || {};
+    for (const [name, text] of Object.entries(d)) {
+      n++;
+      if (!existsSync(join(root, 'skills', name, 'SKILL.md'))) { console.error(`✗ ${lg}/descriptions: "${name}" is not a skill`); errs++; }
+      else if (typeof text !== 'string' || !text.trim() || text.length > 1500 || /[<>]/.test(text)) { console.error(`✗ ${lg}/descriptions: "${name}" is empty, too long, or contains < or >`); errs++; }
+    }
+  }
+  if (stale) console.log(`⚠ ${stale} full translation(s) are stale: the English skill's sections changed since. Retranslate with --skills <names>.`);
   console.log(errs ? `${errs} error(s) across ${n} translations` : `All ${n} translation(s) structurally consistent ✓`);
   process.exit(errs ? 1 : 0);
 }

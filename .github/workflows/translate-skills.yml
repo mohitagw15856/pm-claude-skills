@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       lang:
-        description: 'Language code (es, pt, hi, ja, de, fr, zh, ko)'
+        description: 'Language code (es pt fr de it pl ru uk tr ar hi bn ur id vi th ja ko zh zh-TW)'
         required: true
       skills:
         description: 'Comma-separated skill names (empty = Production-Ready tier)'

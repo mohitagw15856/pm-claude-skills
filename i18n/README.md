@@ -28,6 +28,18 @@ the thing that actually matters — at roughly 2% of the tokens of a full pass,
 and it completes rather than trailing off at 4%. Full bodies stay worthwhile for
 the Production-Ready tier, where somebody will genuinely sit and read the skill.
 
+**20 languages:** Spanish, Brazilian Portuguese, French, German, Italian, Polish,
+Russian, Ukrainian, Turkish, Arabic, Hindi, Bengali, Urdu, Indonesian,
+Vietnamese, Thai, Japanese, Korean, Simplified Chinese and Traditional Chinese.
+The **Translate descriptions** workflow fills all 20 in one dispatch, about 65
+Haiku calls per language, and is resumable. The deploy publishes them to
+`web/i18n-desc/` (`scripts/build-i18n-desc.mjs`). The site's search pages
+(`find.html`, `how.html`) then match a question in the visitor's browser language
+against them, tokenising any script: Devanagari, Bengali and Arabic keep their
+vowel signs, and Thai and Chinese are split into pairs. `how.html` answers in the
+question's language. Exact-word matching means heavily inflected languages
+(Polish, Russian, Turkish) match best on the dictionary form.
+
 ## Why bodies rot
 
 `node scripts/translate-skills.mjs --check` currently reports **50 of 50**

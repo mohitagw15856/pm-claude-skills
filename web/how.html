@@ -46,6 +46,7 @@
   </details>
 </main>
 <script src="nav.js" defer></script>
+<script src="i18n-desc.js"></script>
 <script>
 (function () {
   var WORKER = 'https://pm-skills-mcp.pm-claude-skills.workers.dev';
@@ -53,26 +54,34 @@
   var STOP = new Set('a an the of to in on or and for with your you i we my our need want help me please how do does can could should make write create build draft get set use when what is are be as at it its their them they this that about from'.split(' '));
   var el = function (id) { return document.getElementById(id); };
   var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
-  var tok = function (s) { return (String(s || '').toLowerCase().match(/[a-z0-9]+/g) || []).filter(function (w) { return w.length > 2 && !STOP.has(w); }); };
+  var tok = function (s) { return PMi18nDesc.tokens(s, STOP); };
   var SKILLS = null;
   try { el('apiKey').value = localStorage.getItem('anthropic_api_key') || ''; } catch (e) {}
   el('apiKey').addEventListener('change', function () { try { localStorage.setItem('anthropic_api_key', el('apiKey').value.trim()); } catch (e) {} });
 
   EXAMPLES.forEach(function (x) { var b = document.createElement('button'); b.type = 'button'; b.textContent = x; b.onclick = function () { el('q').value = x; ask(x); }; el('chips').appendChild(b); });
 
-  function load() { return SKILLS ? Promise.resolve(SKILLS) : fetch('skills.json').then(function (r) { return r.json(); }).then(function (j) { SKILLS = j.skills.filter(function (s) { return !s.deprecated && s.instructions; }); return SKILLS; }); }
+  // The skills, plus their descriptions in the visitor's language when published.
+  function load() {
+    if (SKILLS) return Promise.resolve(SKILLS);
+    return Promise.all([fetch('skills.json').then(function (r) { return r.json(); }), PMi18nDesc.load()]).then(function (res) {
+      SKILLS = res[0].skills.filter(function (s) { return !s.deprecated && s.instructions; });
+      SKILLS.forEach(function (s) { s.descL10n = res[1].descriptions[s.name] || ''; });
+      return SKILLS;
+    });
+  }
 
   // Retrieval: word overlap with the title (weighted) and the description.
   // Rare words count for more than common ones (IDF over titles and descriptions).
   var DF = null;
   function idf(w) {
-    if (!DF) { DF = {}; SKILLS.forEach(function (s) { new Set(tok(s.title + ' ' + s.name + ' ' + s.description)).forEach(function (x) { DF[x] = (DF[x] || 0) + 1; }); }); }
+    if (!DF) { DF = {}; SKILLS.forEach(function (s) { new Set(tok(s.title + ' ' + s.name + ' ' + s.description + ' ' + s.descL10n)).forEach(function (x) { DF[x] = (DF[x] || 0) + 1; }); }); }
     return Math.log(1 + SKILLS.length / (1 + (DF[w] || 0)));
   }
   function rank(q) {
     var qs = new Set(tok(q));
     return SKILLS.map(function (s) {
-      var t = new Set(tok(s.title + ' ' + s.name)), d = new Set(tok(s.description));
+      var t = new Set(tok(s.title + ' ' + s.name)), d = new Set(tok(s.description + ' ' + s.descL10n));
       var score = 0; qs.forEach(function (w) { var k = idf(w); if (t.has(w)) score += 2 * k; if (d.has(w)) score += k; });
       return { s: s, score: score };
     }).filter(function (r) { return r.score > 0; }).sort(function (a, b) { return b.score - a.score || a.s.title.length - b.s.title.length; })
@@ -83,7 +92,7 @@
   function system(src) {
     return 'You answer "how do I" questions using ONLY the professional skills below. Write at most 180 words: a direct answer, then the few steps that matter most. ' +
       'Cite every step with the number of the skill it comes from, like [1] or [2]. If the skills do not cover the question, say so in one sentence instead of guessing. ' +
-      'For legal, medical, tax or money questions add one short line that this is not professional advice. Plain text; no headings.\n\n' +
+      'For legal, medical, tax or money questions add one short line that this is not professional advice. Plain text; no headings. Answer in the language the question is written in.\n\n' +
       src.map(function (s, i) { return '[' + (i + 1) + '] ' + s.title + ' (' + s.name + ')\n' + s.description + '\n' + s.instructions.replace(/^---[\s\S]*?---/, '').slice(0, 3400); }).join('\n\n');
   }
 
