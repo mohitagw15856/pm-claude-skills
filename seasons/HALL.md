@@ -8,5 +8,3 @@ Permanent record of every Season's podium — the prize is being here, forever.
 | 2 | The Hollowline Account | 2026-08-11 → 2026-09-10 | — |  | — | — |
 
 Rules of the Hall: podiums are written at season close from the CI-verified leaderboard; entries are never edited after closing; champions get a permanent line in the README and first pick of the next season's scenario theme (from the maintainer's shortlist).
-
-**Archived, October 2026.** Seasons needed a new hand-written scenario each month and drew no entries; the monthly competition continues as the [Skill Cup](../SKILL-CUP.md).
