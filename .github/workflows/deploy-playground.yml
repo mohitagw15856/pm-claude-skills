@@ -27,6 +27,7 @@ on:
       - 'scripts/build-community.mjs'
       - 'scripts/build-samples.mjs'
       - 'examples/samples/**'
+      - 'examples/**'
       - 'site/tech-tree/**'
       - 'scripts/build-tech-tree.mjs'
       - 'integrations/dify-plugin/**'
@@ -212,6 +213,9 @@ jobs:
           set -euo pipefail
           node scripts/build-offline-pack.mjs --out web/offline --max-mb 40
           (cd web/offline && sha256sum -c pm-skills-offline.zip.sha256)
+
+      - name: Build the worked-examples gallery data (web/worked-examples.json)
+        run: node scripts/build-worked-examples.mjs
 
       - name: Build the side-by-side translations (web/i18n/, for compare-lang.html)
         run: node scripts/build-i18n-web.mjs

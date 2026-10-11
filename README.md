@@ -25,6 +25,7 @@
   <a href="https://mohitagw15856.github.io/pm-claude-skills/"><strong>▶ Playground</strong></a> ·
   <a href="#-install-in-30-seconds"><strong>⚡ Install</strong></a> ·
   <a href="SKILLS.md"><strong>📚 All skills</strong></a> ·
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/worked-examples.html"><strong>📘 Worked examples</strong></a> ·
   <a href="docs/SHOWCASE.md"><strong>🖼 Showcase</strong></a> ·
   <a href="https://mohitagw15856.github.io/pm-claude-skills/tech-tree/"><strong>🌳 Tech tree</strong></a> ·
   <a href="README.zh-CN.md"><strong>🇨🇳 简体中文</strong></a> ·

@@ -124,6 +124,7 @@
       ['guide.html', '📖 Guide'],
       ['handbook.html', '📖 Handbook'],
       ['examples.html', '📄 Sample outputs'],
+      ['worked-examples.html', '📘 Worked examples'],
       ['reckoning.html', '⚖️ Reckoning'],
       ['ledger.html', '📓 Outcome Ledger'],
       ['deck.html', '🃏 Operator\'s Deck'],
