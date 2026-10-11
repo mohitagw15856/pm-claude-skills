@@ -201,7 +201,7 @@ button { font-family: inherit; }
 .field textarea { min-height: 90px; }
 .field input:focus, .field textarea:focus { outline: none; border-color: var(--accent); }
 
-.actions { display: flex; align-items: center; gap: 12px; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
 button.primary {
   background: var(--accent-grad); color: #1a1207; border: none; padding: 11px 19px;
   border-radius: 9px; font-size: 14px; font-weight: 700; cursor: pointer;

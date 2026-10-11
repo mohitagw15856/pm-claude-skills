@@ -128,6 +128,7 @@
       ['ai-at-work.html', '🏆 Best AI for your job'],
       ['evolution.html', '🧬 Evolution log'],
       ['firm-live.html', '🏢 The live Firm'],
+      ['career.html', '🧭 Career copilot'],
       ['reckoning.html', '⚖️ Reckoning'],
       ['ledger.html', '📓 Outcome Ledger'],
       ['deck.html', '🃏 Operator\'s Deck'],
