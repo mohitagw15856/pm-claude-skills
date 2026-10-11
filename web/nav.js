@@ -97,8 +97,7 @@
     ] },
     { group: '⚔️ Compete', items: [
       ['gym.html', '🥊 The Gym'],
-      ['season.html', '🏆 The Season'],
-      ['casting.html', '🎬 Season Casting'],
+      ['cup.html', '🏆 Skill Cup'],
       ['gauntlet.html', '🏆 Gauntlet'],
       ['boardroom.html', '🏛️ Boardroom'],
       ['firm.html', '🏢 The Firm'],
@@ -130,7 +129,6 @@
       ['firm-live.html', '🏢 The live Firm'],
       ['career.html', '🧭 Career copilot'],
       ['compile.html', '🧑‍🏫 Expert-to-skill compiler'],
-      ['cup.html', '🏆 Skill Cup'],
       ['how.html', '❓ How do I…?'],
       ['reckoning.html', '⚖️ Reckoning'],
       ['ledger.html', '📓 Outcome Ledger'],
