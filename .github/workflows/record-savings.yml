@@ -1,0 +1,72 @@
+name: Record savings
+
+# The public savings counter. When a maintainer labels an ROI story issue
+# roi-accepted, this records the reporter's numbers (scripts/record-savings.mjs),
+# regenerates the counter in the READMEs' trust numbers and on the Wall of Wins,
+# and lands it through a data-only pull request that merges itself. The issue body
+# is untrusted input: it is parsed with strict number and skill-name checks, never
+# passed to a shell. If the numbers are implausible the run fails and comments.
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: record-savings
+  cancel-in-progress: false
+
+jobs:
+  record:
+    if: github.event.label.name == 'roi-accepted'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Record the story's numbers
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.number }}
+        run: |
+          set -euo pipefail
+          if ! node scripts/record-savings.mjs --issue "$ISSUE" 2> err.txt; then
+            gh issue comment "$ISSUE" --body "Could not add this story to the counter: $(cat err.txt | tr -d '\`') Edit the numbers in the issue, then remove and re-add the roi-accepted label."
+            exit 1
+          fi
+          node scripts/build-trust-numbers.mjs
+          node scripts/build-wins.mjs
+      - name: Open the pull request
+        id: cpr
+        uses: peter-evans/create-pull-request@v8
+        with:
+          add-paths: |
+            data/savings.json
+            README.md
+            README.zh-CN.md
+            web/wins.html
+          branch: record-savings-${{ github.event.issue.number }}
+          delete-branch: true
+          commit-message: "data: add ROI story #${{ github.event.issue.number }} to the savings counter"
+          title: "data: add ROI story #${{ github.event.issue.number }} to the savings counter"
+          body: |
+            Recorded by the **Record savings** workflow after a maintainer accepted #${{ github.event.issue.number }}.
+      - name: Merge the data-only PR
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          set -euo pipefail
+          files=$(gh pr diff "$PR" --name-only --repo "$GITHUB_REPOSITORY")
+          echo "$files"
+          if [ -z "$files" ] || echo "$files" | grep -qvE '^(data/savings\.json|README\.md|README\.zh-CN\.md|web/wins\.html)$'; then
+            echo "::warning::PR #$PR changes unexpected files; leaving it for review."
+            exit 0
+          fi
+          gh pr merge "$PR" --squash --delete-branch --repo "$GITHUB_REPOSITORY"

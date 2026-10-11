@@ -13,6 +13,11 @@
   .w-story { font-size: 15px; line-height: 1.55; }
   .w-saved { color: #3fb950; font-weight: 600; margin-top: 8px; font-size: 14px; }
   .w-meta { color: var(--muted); font-size: 12px; margin-top: 10px; }
+  .counter { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin: 16px 0 6px; }
+  .counter div { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 12px 14px; }
+  .counter b { display: block; font-size: 26px; color: #3fb950; overflow-wrap: anywhere; }
+  .counter span { color: var(--muted); font-size: 13px; }
+  .c-note { color: var(--muted); font-size: 13px; line-height: 1.5; }
   .cta { display: inline-block; background: var(--accent); color: #fff; border-radius: 10px; padding: 10px 16px; text-decoration: none; margin-top: 10px; }
 </style>
 </head>
@@ -21,6 +26,13 @@
 <div class="ww">
 <h1>📈 The Wall of Wins</h1>
 <p style="color:var(--muted)">Every card is a real user's filed story, linked to its source — 0 so far. Generated from <code>roi-story</code> issues; nothing here is invented.</p>
+
+<div class="counter">
+  <div><b>0</b><span>hours saved, as reported</span></div>
+  <div><b>0</b><span>money not spent, as reported</span></div>
+  <div><b>0</b><span>accepted stories</span></div>
+</div>
+<p class="c-note">The counter adds up only what users reported in accepted stories: hours per use times uses, and money they actually did not spend. Hours are never turned into money, and currencies are never converted. Data: <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/data/savings.json">data/savings.json</a>.</p>
 
   <div class="win" style="text-align:center">
     <div class="w-story">No stories on the wall yet — the form below takes two minutes, and the first stories set the tone for everyone after.</div>

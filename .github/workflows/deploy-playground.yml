@@ -43,6 +43,7 @@ on:
       - 'scripts/push-search-engines.mjs'
       - 'data/cn-city-data.json'
       - 'data/evolution-log.json'
+      - 'data/savings.json'
       - 'data/firm-ledger.json'
       - 'CHANGELOG.md'
       - 'data/solar-terms.json'
@@ -225,6 +226,11 @@ jobs:
 
       - name: Build the evolution log data (web/evolution-log.json)
         run: node scripts/build-evolution-log.mjs
+
+      - name: Refresh the Wall of Wins and its savings counter (web/wins.html)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/build-wins.mjs
 
       - name: Copy the live Firm ledger (web/firm-ledger.json)
         run: cp data/firm-ledger.json web/firm-ledger.json
