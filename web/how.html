@@ -56,6 +56,10 @@
   var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
   var tok = function (s) { return PMi18nDesc.tokens(s, STOP); };
   var SKILLS = null;
+  // Real-use evidence nudges ranking (see find.html): 3+ signals, at most ±15%.
+  var PROVEN = {};
+  fetch('proven.json').then(function (r) { return r.json(); }).then(function (j) { PROVEN = j.skills || {}; }).catch(function () {});
+  var provenBoost = function (name) { var p = PROVEN[name]; return p && p.n >= 3 ? 1 + 0.3 * (p.rate - 0.5) * Math.min(1, p.n / 20) : 1; };
   try { el('apiKey').value = localStorage.getItem('anthropic_api_key') || ''; } catch (e) {}
   el('apiKey').addEventListener('change', function () { try { localStorage.setItem('anthropic_api_key', el('apiKey').value.trim()); } catch (e) {} });
 
@@ -83,7 +87,7 @@
     return SKILLS.map(function (s) {
       var t = new Set(tok(s.title + ' ' + s.name)), d = new Set(tok(s.description + ' ' + s.descL10n));
       var score = 0; qs.forEach(function (w) { var k = idf(w); if (t.has(w)) score += 2 * k; if (d.has(w)) score += k; });
-      return { s: s, score: score };
+      return { s: s, score: score * provenBoost(s.name) };
     }).filter(function (r) { return r.score > 0; }).sort(function (a, b) { return b.score - a.score || a.s.title.length - b.s.title.length; })
       // Keep only strong matches: under half the best score is usually one shared common word.
       .filter(function (r, i, all) { return r.score >= all[0].score / 2; }).slice(0, 3).map(function (r) { return r.s; });

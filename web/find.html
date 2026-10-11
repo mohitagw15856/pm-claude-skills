@@ -70,6 +70,11 @@ const tok = (s) => [...PMi18nDesc.tokens(s, STOP).filter((t) => !/[\u3400-\u9fff
 const TIER_BOOST = { production: 1.15, stable: 1, experimental: 0.9 };
 const EXAMPLES = ['prep a QBR for an at-risk account', 'write a product launch announcement', 'plan an A/B test', 'turn messy notes into a PRD', 'draft a difficult performance review', 'decode a SAFE note', '帮我写周报', 'zhoubao'];
 let SKILLS = [];
+// Real-use evidence (web/proven.json): ratings, ledger outcomes, ROI stories.
+let PROVEN = {};
+fetch('proven.json').then((r) => r.json()).then((j) => { PROVEN = j.skills || {}; }).catch(() => {});
+// A nudge, not a takeover: needs 3+ signals, full strength at 20, at most ±15%.
+const provenBoost = (name) => { const p = PROVEN[name]; return p && p.n >= 3 ? 1 + 0.3 * (p.rate - 0.5) * Math.min(1, p.n / 20) : 1; };
 // Pinyin search: "zb" or "zhoubao" finds 中文周报 (index: zh-pinyin.json, built by scripts/build-zh-pinyin.mjs).
 let PINYIN = {};
 fetch('zh-pinyin.json').then((r) => r.json()).then((j) => { PINYIN = j.skills || {}; }).catch(() => {});
@@ -106,6 +111,7 @@ function rank(query) {
     if (py) overlap++;
     let score = (overlap + titleHits * 1.5 + phrase + py) * (TIER_BOOST[s.tier] || 1);
     if (s.eval && typeof s.eval.score === 'number') score += (s.eval.score - 4) * 0.15;
+    score *= provenBoost(s.name);
     return { s, score, overlap };
   }).filter((r) => r.overlap > 0).sort((a, b) => b.score - a.score || a.s.name.localeCompare(b.s.name)).slice(0, 12);
 }
@@ -121,7 +127,7 @@ function render(query) {
     const tierPill = s.tier && s.tier !== 'stable' ? `<span class="pill ${s.tier}">${s.tier}</span>` : `<span class="pill">stable</span>`;
     const plug = s.plugin && s.plugin !== 'other' ? `<span class="pill plugin">${s.plugin}</span>` : '';
     return `<div class="hit">
-      <h3><a href="index.html?skill=${encodeURIComponent(s.name)}">${s.title || s.name}</a></h3>
+      <h3><a href="index.html?skill=${encodeURIComponent(s.name)}">${s.title || s.name}</a>${PROVEN[s.name] && PROVEN[s.name].worked >= 3 ? ` <span class="badge-measured">✓ worked for ${PROVEN[s.name].worked} people</span>` : ''}</h3>
       <p>${(s.summary || s.description || '').slice(0, 180)}</p>
       <div class="meta">${tierPill}${plug}${badge(s.eval)}<span class="run">npx pm-claude-skills run ${s.name}</span></div>
     </div>`;

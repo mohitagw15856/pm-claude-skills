@@ -475,7 +475,12 @@ async function handleTry(request, env) {
     headers: { 'content-type': 'application/json', 'x-api-key': env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01' },
     body: JSON.stringify({ model: TRY.model, max_tokens: TRY.maxTokens, ...(system ? { system } : {}), messages: [{ role: 'user', content: prompt }] }),
   });
-  if (!res.ok) return jsonResponse({ error: 'upstream', message: 'Claude is busy — try again, or use your own key.' }, 502);
+  if (!res.ok) {
+    // Say what actually happened: an empty sponsor balance is not "busy".
+    const detail = await res.text().catch(() => '');
+    if (/credit balance|billing/i.test(detail)) return jsonResponse({ error: 'paused', message: 'The free answers are paused: the sponsor-funded credit has run out. Use your own key, or help restart them: https://github.com/sponsors/mohitagw15856' }, 503);
+    return jsonResponse({ error: 'upstream', message: 'Claude is busy. Try again in a minute, or use your own key.' }, 502);
+  }
   const data = await res.json();
   const text = (data.content || []).map((c) => c.text || '').join('');
   const remaining = Math.max(0, TRY.perIpPerDay - (+(ipN || 0) + 1));
