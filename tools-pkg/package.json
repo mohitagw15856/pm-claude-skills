@@ -1,15 +1,44 @@
 {
   "name": "pm-skills-tools",
-  "version": "1.0.0",
-  "description": "454 professional skills as agent tools — OpenAI function schemas, Vercel AI SDK tools, and a framework-agnostic runtime. pick()/search() what you need; executing a tool returns the skill's instructions for YOUR model to run (no second vendor, no extra key).",
+  "version": "82.0.0",
+  "description": "Every PM Skills skill as an agent tool — OpenAI function schemas, Vercel AI SDK tools, and a framework-agnostic runtime. pick()/search() what you need; executing a tool returns the skill's instructions for YOUR model to run (no second vendor, no extra key).",
   "type": "module",
   "main": "tools.mjs",
-  "exports": { ".": "./tools.mjs", "./openai-tools.json": "./openai-tools.json", "./index.json": "./index.json" },
-  "files": ["tools.mjs", "index.json", "openai-tools.json", "instructions/", "README.md"],
-  "engines": { "node": ">=18" },
-  "keywords": ["agent", "tools", "openai", "function-calling", "vercel-ai", "langchain", "skills", "claude", "product-management"],
+  "exports": {
+    ".": "./tools.mjs",
+    "./openai-tools.json": "./openai-tools.json",
+    "./index.json": "./index.json"
+  },
+  "files": [
+    "tools.mjs",
+    "index.json",
+    "openai-tools.json",
+    "instructions/",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "agent",
+    "tools",
+    "openai",
+    "function-calling",
+    "vercel-ai",
+    "langchain",
+    "skills",
+    "claude",
+    "product-management"
+  ],
   "author": "Mohit Aggarwal <mohit15856@gmail.com>",
   "license": "MIT",
-  "repository": { "type": "git", "url": "git+https://github.com/mohitagw15856/pm-claude-skills.git", "directory": "tools-pkg" },
-  "homepage": "https://github.com/mohitagw15856/pm-claude-skills"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohitagw15856/pm-claude-skills.git",
+    "directory": "tools-pkg"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "scripts": {
+    "prepack": "node ../scripts/build-tools-exports.mjs"
+  }
 }

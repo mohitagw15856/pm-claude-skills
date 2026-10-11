@@ -1,4 +1,4 @@
-# pm-skills-tools — 454 professional skills as agent tools
+# pm-skills-tools: every PM Skills skill as an agent tool
 
 The [pm-claude-skills](https://github.com/mohitagw15856/pm-claude-skills) library compiled for **agent builders**: OpenAI function schemas, Vercel AI SDK tools, and a framework-agnostic runtime. Your agent gets `prd_template`, `meeting_notes`, `runway_monte_carlo`… as callable tools.
 
@@ -7,7 +7,7 @@ The [pm-claude-skills](https://github.com/mohitagw15856/pm-claude-skills) librar
 ```js
 import { pick, search, toOpenAI, executeOpenAI, toVercelAI } from 'pm-skills-tools';
 
-// Never ship all 454 into one context — pick or search:
+// Never ship them all into one context — pick or search:
 const tools = pick(['prd_template', 'competitive_analysis']);   // by name
 const found = search('negotiate a renewal');                     // by task
 

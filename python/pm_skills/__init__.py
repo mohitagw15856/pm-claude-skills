@@ -1,4 +1,4 @@
-"""pm_skills — 205 professional Agent Skills as importable building blocks for Python
+"""pm_skills: the PM Skills library of professional Agent Skills as importable building blocks for Python
 AI agents (LangChain, CrewAI, LlamaIndex, or any framework).
 
 Core helpers have no dependencies:
@@ -21,7 +21,14 @@ __all__ = [
     "list_skills", "get_skill", "search_skills", "skill_prompt", "bundles",
     "as_langchain_tools", "as_crewai_tools", "__version__",
 ]
-__version__ = "0.1.0"
+try:
+    from importlib.metadata import version as _version, PackageNotFoundError
+    try:
+        __version__ = _version("pm-skills")
+    except PackageNotFoundError:  # running from a source checkout
+        __version__ = "0.0.0"
+except ImportError:  # Python < 3.8
+    __version__ = "0.0.0"
 
 
 @lru_cache(maxsize=1)

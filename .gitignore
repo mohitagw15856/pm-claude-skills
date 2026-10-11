@@ -87,3 +87,8 @@ web/docs-assets/handbook.pdf
 web/docs-assets/PM-Skills-Guide.pdf
 web/docs-assets/cheatsheet.pdf
 docs/readme-assets/video/*.mp4
+# tools-pkg generated output: built by scripts/build-tools-exports.mjs at prepack.
+tools-pkg/openai-tools.json
+tools-pkg/tools.mjs
+tools-pkg/index.json
+tools-pkg/instructions/

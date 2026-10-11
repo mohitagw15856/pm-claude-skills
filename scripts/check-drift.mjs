@@ -44,6 +44,12 @@ for (const f of ['package.json', 'server.json']) {
   }
 }
 
+// tools-pkg (npm: pm-skills-tools) is versioned with the library, so a release
+// cannot leave it behind.
+const toolsVer = JSON.parse(read('tools-pkg/package.json')).version;
+const rootVer = JSON.parse(read('package.json')).version;
+if (toolsVer !== rootVer) problems.push(`tools-pkg/package.json: version ${toolsVer} — expected ${rootVer} (bump it with the library)`);
+
 // ── Rule 2: no stale count claims in living docs ─────────────────────────────
 // Any "<number> skills"-ish claim in these files must use the current number
 // (small tolerance for subset claims like "50 production skills").
