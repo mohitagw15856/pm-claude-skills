@@ -7,3 +7,4 @@ compatibility_date = "2025-01-01"
 # Secrets: npx wrangler secret put ANTHROPIC_API_KEY    # optional; enables "run" and document reading
 #          npx wrangler secret put TWILIO_AUTH_TOKEN    # recommended; verifies every webhook's signature
 #          npx wrangler secret put TWILIO_ACCOUNT_SID   # with the auth token, enables forwarded photos and PDFs
+# Public instance? Bind CAPS_KV for daily per-user and global caps: ../shared/PUBLIC-INSTANCE.md

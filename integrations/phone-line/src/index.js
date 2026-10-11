@@ -10,6 +10,7 @@
 // question keeps the reply inside Twilio's 15-second webhook window.
 
 import { validTwilioSignature } from '../../shared/twilio-signature.js';
+import { allow } from '../../shared/caps.js';
 
 const API = 'https://pm-skills-mcp.pm-claude-skills.workers.dev';
 const PLAYGROUND = 'https://mohitagw15856.github.io/pm-claude-skills/index.html';
@@ -97,6 +98,8 @@ export default {
     if (turn >= MAX_TURNS) return twiml(env, [say(env, "That's the limit for one call. Call back any time. Goodbye."), '<Hangup/>']);
     if (!env.ANTHROPIC_API_KEY) return twiml(env, [say(env, 'This line is not set up to answer yet. Goodbye.'), '<Hangup/>']);
 
+    const cap = await allow(env, form.get('From') || 'unknown', 'phone');
+    if (!cap.ok) return twiml(env, [say(env, cap.message.replace(/ Deploy your own.*$/, '').replace(/https?:\S+/g, '')), '<Hangup/>']);
     try {
       const skill = await findSkill(heard);
       const answer = await spokenAnswer(skill, heard, env.ANTHROPIC_API_KEY);

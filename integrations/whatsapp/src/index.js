@@ -16,6 +16,7 @@
 
 import { documentBlock, readDocument, PRIVACY_NOTE } from '../../shared/forward-doc.js';
 import { validTwilioSignature } from '../../shared/twilio-signature.js';
+import { allow } from '../../shared/caps.js';
 
 const API = 'https://pm-skills-mcp.pm-claude-skills.workers.dev';
 const REPO = 'https://github.com/mohitagw15856/pm-claude-skills';
@@ -100,6 +101,8 @@ export default {
     const canRun = !!env.ANTHROPIC_API_KEY;
     if (form && Number(form.get('NumMedia') || 0) > 0) {
       if (!canRun || !env.TWILIO_ACCOUNT_SID || !env.TWILIO_AUTH_TOKEN) return reply('Reading documents is not enabled on this deployment.');
+      const capD = await allow(env, form.get('From'), 'whatsapp');
+      if (!capD.ok) return reply(capD.message);
       ctx.waitUntil(readAndReply(env, form));
       return reply(`Reading it… ${PRIVACY_NOTE}`);
     }
@@ -129,6 +132,8 @@ export default {
       s = await getSkill(hits[0].name);
     }
     if (!canRun) return reply(`Best match: ${s.name}. Running is not enabled on this deployment — get the instructions with: skill ${s.name}`);
+    const cap = await allow(env, form.get('From'), 'whatsapp');
+    if (!cap.ok) return reply(cap.message);
     try { return reply(await runSkill(s.instructions, userText, env.ANTHROPIC_API_KEY) || 'The model returned nothing — try rephrasing.'); }
     catch { return reply('The model call failed — try again in a minute.'); }
   },

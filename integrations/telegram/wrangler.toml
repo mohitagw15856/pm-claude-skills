@@ -7,3 +7,4 @@ compatibility_date = "2025-01-01"
 # Secrets: npx wrangler secret put TELEGRAM_BOT_TOKEN     # from @BotFather
 #          npx wrangler secret put TELEGRAM_WEBHOOK_SECRET # any random string; also passed to setWebhook
 #          npx wrangler secret put ANTHROPIC_API_KEY       # optional — enables /run
+# Public instance? Bind CAPS_KV for daily per-user and global caps: ../shared/PUBLIC-INSTANCE.md

@@ -9,3 +9,4 @@ compatibility_date = "2025-01-01"
 #          npx wrangler secret put TWILIO_ACCOUNT_SID   # optional; enables "text me"
 # Vars (optional, in [vars]): VOICE (default Polly.Amy-Neural), VOICE_LANG (default en-GB),
 #          ALLOWED_CALLERS (comma-separated E.164 numbers, to keep the line private)
+# Public instance? Bind CAPS_KV for daily per-user and global caps: ../shared/PUBLIC-INSTANCE.md

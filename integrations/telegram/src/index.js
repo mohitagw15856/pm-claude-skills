@@ -12,6 +12,7 @@
 // forwards to the webhook and replies via sendMessage.
 
 import { documentBlock, readDocument, MAX_BYTES, PRIVACY_NOTE } from '../../shared/forward-doc.js';
+import { allow } from '../../shared/caps.js';
 
 const API = 'https://pm-skills-mcp.pm-claude-skills.workers.dev';
 const REPO = 'https://github.com/mohitagw15856/pm-claude-skills';
@@ -78,6 +79,8 @@ async function handleDocument(token, chatId, file, caption, env, canRun) {
   const res = await fetch(`https://api.telegram.org/file/bot${token}/${path}`);
   const block = res.ok ? documentBlock(await res.arrayBuffer(), file.type || res.headers.get('content-type')) : null;
   if (!block) return send(token, chatId, 'I can read photos (JPEG, PNG, WebP) and PDFs up to 8 MB.');
+  const capD = await allow(env, chatId, 'telegram');
+  if (!capD.ok) return send(token, chatId, capD.message);
   await send(token, chatId, `Reading it… ${PRIVACY_NOTE}`);
   try {
     const { skill, text } = await readDocument({ block, note: caption, key: env.ANTHROPIC_API_KEY, channel: 'a Telegram chat' });
@@ -132,6 +135,8 @@ async function handleUpdate(update, env) {
       if (!hits.length) return send(token, chatId, `Couldn't match a skill to that. Browse with /find <keywords>.`);
       s = await getSkill(hits[0].name);
     }
+    const cap = await allow(env, chatId, 'telegram');
+    if (!cap.ok) return send(token, chatId, cap.message);
     await send(token, chatId, `Drafting with ${s.name}…`);
     try {
       const out = await runSkill(s.instructions, userText, env.ANTHROPIC_API_KEY);
