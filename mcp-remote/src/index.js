@@ -506,28 +506,44 @@ async function handleBadge(url, env) {
     { headers: { 'content-type': 'application/json', 'cache-control': ok ? 'public, s-maxage=21600, max-age=3600' : 'no-store', 'x-badge-ok': ok ? '1' : '0', ...CORS } });
   if (!m) return shield('bad repo param', 'lightgrey');
   const [, owner, name] = m;
+  const ref = url.searchParams.get('ref') || 'HEAD';
+  const dir = (url.searchParams.get('path') || '').replace(/^\/+|\/+$/g, '');
+  if (!/^[\w./-]{1,100}$/.test(ref) || (dir && (!/^[\w./-]{1,200}$/.test(dir) || dir.includes('..')))) return shield('bad ref or path param', 'lightgrey');
   try {
     // A GITHUB_TOKEN secret (wrangler secret put GITHUB_TOKEN) lifts the shared-IP
     // rate limit from 60/h to 5000/h; the badge degrades gracefully without it.
+    // One API call per grade: the tree at HEAD (no repo lookup); files come from
+    // raw.githubusercontent.com, which the API rate limit does not count.
     const gh = { headers: { 'User-Agent': 'pm-skills-badge', Accept: 'application/vnd.github+json',
       ...(env && env.GITHUB_TOKEN ? { authorization: `Bearer ${env.GITHUB_TOKEN}` } : {}) } };
-    const repoRes = await fetch(`https://api.github.com/repos/${owner}/${name}`, gh);
-    if (repoRes.status === 403 || repoRes.status === 429) return shield('rate limited — retry soon', 'lightgrey');
-    if (!repoRes.ok) return shield('repo not found', 'lightgrey');
-    const ref = url.searchParams.get('ref') || (await repoRes.json()).default_branch;
     const treeRes = await fetch(`https://api.github.com/repos/${owner}/${name}/git/trees/${encodeURIComponent(ref)}?recursive=1`, gh);
     if (treeRes.status === 403 || treeRes.status === 429) return shield('rate limited — retry soon', 'lightgrey');
+    if (!treeRes.ok) return shield('repo not found', 'lightgrey');
     const tree = await treeRes.json();
-    const paths = (tree.tree || []).filter((e) => e.type === 'blob' && (e.path.endsWith('/SKILL.md') || e.path === 'SKILL.md')).map((e) => e.path).slice(0, 20);
+    let paths = (tree.tree || []).filter((e) => e.type === 'blob' && (e.path.endsWith('/SKILL.md') || e.path === 'SKILL.md')).map((e) => e.path);
+    // Grade the skills a repo ships, not its translations, fixtures or vendored copies:
+    // ?path= wins; otherwise a skills/ (or .claude/skills/) tree if there is one;
+    // otherwise everything outside the usual non-canonical folders.
+    if (dir) paths = paths.filter((p) => p.startsWith(dir + '/'));
+    else {
+      const NON_CANONICAL = /(^|\/)(i18n|skills-i18n|translations|locales?|examples?|fixtures?|tests?|node_modules|vendor|dist|build|exports)\//;
+      const canon = paths.filter((p) => /^(\.claude\/)?skills\/[^/]+\/SKILL\.md$/.test(p));
+      paths = canon.length ? canon : paths.filter((p) => !NON_CANONICAL.test(p));
+    }
     if (!paths.length) return shield('no skills found', 'lightgrey', true);
-    const levels = await Promise.all(paths.map(async (p) => {
-      try { const r = await fetch(`https://raw.githubusercontent.com/${owner}/${name}/${ref}/${p}`); return r.ok ? gradeSkill(await r.text()) : 0; }
+    // Workers allow ~50 subrequests: grade up to 40, spread evenly across the set.
+    const SAMPLE = 40;
+    const step = Math.max(1, paths.length / SAMPLE);
+    const sample = paths.length <= SAMPLE ? paths : Array.from({ length: SAMPLE }, (_, i) => paths[Math.floor(i * step)]);
+    const levels = await Promise.all(sample.map(async (p) => {
+      try { const r = await fetch(`https://raw.githubusercontent.com/${owner}/${name}/${encodeURIComponent(ref)}/${p.split('/').map(encodeURIComponent).join('/')}`); return r.ok ? gradeSkill(await r.text()) : 0; }
       catch { return 0; }
     }));
     const min = Math.min(...levels);
     const label = ['not loadable', 'L1 Loadable', 'L2 Structured', 'L3 Trustworthy'][min];
     const color = ['red', 'yellow', 'green', 'brightgreen'][min];
-    const suffix = paths.length >= 20 ? '20+ skills' : `${paths.length} skill${paths.length === 1 ? '' : 's'}`;
+    const n = paths.length;
+    const suffix = `${n.toLocaleString('en-US')} skill${n === 1 ? '' : 's'}${n > SAMPLE || tree.truncated ? ' (sampled)' : ''}`;
     return shield(`${label} \u00b7 ${suffix}`, color, true);
   } catch (e) {
     return shield('unavailable', 'lightgrey');
