@@ -357,6 +357,14 @@ const AGENT_CARD = {
 const rpcError = (id, code, message) =>
   jsonResponse({ jsonrpc: '2.0', id: id === undefined ? null : id, error: { code, message } });
 
+const A2A_STOP = new Set('the and for with your you our how can could should make write create help need want get this that are its from about into have has please'.split(' '));
+let A2A_DF = null;
+function a2aDf(skills, toks) {
+  if (A2A_DF) return A2A_DF;
+  A2A_DF = {};
+  for (const s of skills) for (const w of new Set(toks(s.title + ' ' + s.name.replace(/-/g, ' ') + ' ' + s.description))) A2A_DF[w] = (A2A_DF[w] || 0) + 1;
+  return A2A_DF;
+}
 async function handleA2A(request) {
   let body;
   try { body = await request.json(); } catch { return rpcError(null, -32600, 'Invalid request: body is not JSON.'); }
@@ -372,16 +380,33 @@ async function handleA2A(request) {
   // Direct skill-name mention wins; otherwise rank by token overlap — A2A
   // queries are whole sentences, so whole-phrase substring search (fine for
   // the REST /v1/search keywords) would almost never match here.
-  const qTokens = new Set(query.toLowerCase().match(/[a-z]{4,}/g) || []);
+  // Three-letter words count (PRD, OKR, SLA, RFP: ignoring them sent "write a PRD"
+  // to a networking skill), and rare words outweigh common ones (IDF).
+  // Plurals fold to the singular (okrs → okr) and hyphenated words also count
+  // joined (post-mortem → postmortem), so phrasing differences still match.
+  const toks = (t) => {
+    const low = String(t).toLowerCase();
+    const words = [...(low.match(/[a-z0-9]{3,}/g) || []), ...(low.match(/[a-z0-9]+-[a-z0-9]+/g) || []).map((w) => w.replace('-', ''))];
+    // Chinese has no spaces: overlapping character pairs (周报, 补偿) stand in for words.
+    const han = (low.match(/[\u3400-\u9fff]+/g) || []).flatMap((r) => [...r].slice(0, -1).map((c, i) => c + r[i + 1])).filter((p) => !['帮我', '一下', '一份', '怎么', '我的', '我们'].includes(p));
+    return [...words.filter((w) => !A2A_STOP.has(w)).map((w) => (w.length > 3 && /[^s]s$/.test(w) ? w.slice(0, -1) : w)), ...han];
+  };
+  const df = a2aDf(skills, toks);
+  const idf = (w) => Math.log(1 + skills.length / (1 + (df[w] || 0)));
+  const qTokens = new Set(toks(query));
   const ranked = skills
     .map((s) => {
+      const title = new Set(toks(s.title + ' ' + s.name.replace(/-/g, ' '))), desc = new Set(toks(s.description));
       let score = 0;
-      for (const w of new Set((s.title + ' ' + s.description).toLowerCase().match(/[a-z]{4,}/g) || [])) if (qTokens.has(w)) score++;
-      for (const w of s.name.split('-')) if (w.length >= 4 && qTokens.has(w)) score += 2;
-      return { s, score };
+      for (const w of qTokens) score += ((title.has(w) ? 2 : 0) + (desc.has(w) ? 1 : 0)) * idf(w);
+      // Production-tier skills, the most reviewed, win close calls.
+      // China-specific skills (cn-*) fit Chinese questions; for others they come second.
+      const cnPenalty = s.name.startsWith('cn-') && !/[\u3400-\u9fff]/.test(query) ? 0.7 : 1;
+      return { s, score: score * (s.tier === 'production' ? 1.15 : 1) * cnPenalty };
     })
     .filter((x) => x.score > 0)
-    .sort((a, b) => b.score - a.score)
+    // Ties go to the shorter, more general skill (prd-template over hardware-prd).
+    .sort((a, b) => b.score - a.score || a.s.title.length - b.s.title.length)
     .map((x) => x.s);
   const named = skills.find((s) => query.toLowerCase().includes(s.name));
   const best = named || ranked[0];
