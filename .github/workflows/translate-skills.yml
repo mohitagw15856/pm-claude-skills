@@ -38,10 +38,17 @@ jobs:
       - name: Translate
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          LANG_CODE: ${{ inputs.lang }}
+          SKILLS: ${{ inputs.skills }}
         run: |
-          EXTRA=""
-          [ -n "${{ inputs.skills }}" ] && EXTRA="--skills ${{ inputs.skills }}"
-          node scripts/translate-skills.mjs --lang "${{ inputs.lang }}" $EXTRA
+          set -euo pipefail
+          printf '%s' "$LANG_CODE" | grep -Eq '^[a-z]{2}(-[A-Z]{2})?$' || { echo "::error::lang must be a language code"; exit 1; }
+          if [ -n "$SKILLS" ]; then
+            printf '%s' "$SKILLS" | grep -Eq '^[a-z0-9,-]+$' || { echo "::error::skills must be comma-separated skill names"; exit 1; }
+            node scripts/translate-skills.mjs --lang "$LANG_CODE" --skills "$SKILLS"
+          else
+            node scripts/translate-skills.mjs --lang "$LANG_CODE"
+          fi
       # Insurance: paid API output must survive even if the push is rejected.
       - name: Upload translations as artifact
         uses: actions/upload-artifact@v7
@@ -53,11 +60,13 @@ jobs:
       # (i18n-<lang>); merge it to main locally or via PR. The artifact above
       # is the belt to this suspender.
       - name: Validate + commit to branch
+        env:
+          LANG_CODE: ${{ inputs.lang }}
         run: |
           node scripts/translate-skills.mjs --check
           git config user.name "i18n-bot"
           git config user.email "actions@github.com"
-          git checkout -B "i18n-${{ inputs.lang }}"
+          git checkout -B "i18n-$LANG_CODE"
           git add i18n/
-          git diff --cached --quiet || git commit -m "i18n: translate skills to ${{ inputs.lang }}"
-          git push -f origin "i18n-${{ inputs.lang }}"
+          git diff --cached --quiet || git commit -m "i18n: translate skills to $LANG_CODE"
+          git push -f origin "i18n-$LANG_CODE"
