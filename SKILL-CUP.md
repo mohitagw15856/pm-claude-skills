@@ -14,6 +14,8 @@ No entries yet. The first one sets the bar.
 
 ## Winners
 
+Each winner gets a short announcement video, published to the [media branch](https://github.com/mohitagw15856/pm-claude-skills/tree/media/video/cup) for sharing.
+
 | Month | Theme | Winner | Skill | Score |
 |---|---|---|---|---|
 

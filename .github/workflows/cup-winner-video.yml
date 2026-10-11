@@ -1,0 +1,71 @@
+name: Skill Cup winner video
+
+# When a Skill Cup month closes with a winner (data/skill-cup.json), render a
+# 12-second vertical announcement video (scripts/build-cup-video.mjs) and publish
+# it to the media branch at video/cup/cup-YYYY-MM.mp4, where the raw URL can be
+# shared or attached to a post. Free: no model calls. Skips a month that already
+# has a video.
+on:
+  push:
+    branches: [main]
+    paths: ['data/skill-cup.json']
+  workflow_dispatch:
+    inputs:
+      month:
+        description: 'YYYY-MM (blank = the latest month with a winner)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: cup-winner-video
+  cancel-in-progress: false
+
+jobs:
+  video:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Which month
+        id: m
+        env:
+          MONTH: ${{ inputs.month }}
+        run: |
+          set -euo pipefail
+          if [ -n "$MONTH" ]; then
+            printf '%s' "$MONTH" | grep -Eq '^[0-9]{4}-[0-9]{2}$' || { echo "::error::month must be YYYY-MM"; exit 1; }
+          else
+            MONTH=$(node -e 'const c=require("./data/skill-cup.json").cups.filter((x)=>x.winner&&x.winner!=="none");console.log(c.length?c[c.length-1].month:"")')
+          fi
+          echo "month=$MONTH" >> "$GITHUB_OUTPUT"
+          if [ -z "$MONTH" ]; then echo "No month with a winner yet."; exit 0; fi
+          git fetch -q origin media
+          if git cat-file -e "origin/media:video/cup/cup-$MONTH.mp4" 2>/dev/null && [ -z "${{ inputs.month }}" ]; then echo "exists=1" >> "$GITHUB_OUTPUT"; echo "Video for $MONTH already published."; fi
+      - name: Render
+        if: steps.m.outputs.month != '' && steps.m.outputs.exists != '1'
+        env:
+          MONTH: ${{ steps.m.outputs.month }}
+        run: |
+          npm i --no-save playwright && npx playwright install --with-deps chromium
+          PLAYWRIGHT_MODULE_DIR=$PWD/node_modules node scripts/build-cup-video.mjs --month "$MONTH" --out dist/cup-video
+      - name: Publish to the media branch
+        if: steps.m.outputs.month != '' && steps.m.outputs.exists != '1'
+        env:
+          MONTH: ${{ steps.m.outputs.month }}
+        run: |
+          set -euo pipefail
+          [ -f "dist/cup-video/cup-$MONTH.mp4" ] || { echo "Nothing rendered."; exit 0; }
+          git config user.name "cup-bot"; git config user.email "actions@github.com"
+          git worktree add -q /tmp/media origin/media
+          mkdir -p /tmp/media/video/cup
+          cp "dist/cup-video/cup-$MONTH.mp4" /tmp/media/video/cup/
+          cd /tmp/media
+          git add video/cup
+          git commit -q -m "media: Skill Cup winner video, $MONTH"
+          git push -q origin HEAD:media
+          echo "Published: https://github.com/${GITHUB_REPOSITORY}/raw/media/video/cup/cup-$MONTH.mp4"

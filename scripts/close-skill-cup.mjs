@@ -63,6 +63,8 @@ const md = [
   '',
   '## Winners',
   '',
+  'Each winner gets a short announcement video, published to the [media branch](https://github.com/mohitagw15856/pm-claude-skills/tree/media/video/cup) for sharing.',
+  '',
   '| Month | Theme | Winner | Skill | Score |',
   '|---|---|---|---|---|',
   ...d.cups.filter((c) => c.winner).map((c) => c.winner === 'none' ? `| ${c.month} | ${c.theme} | no entries | | |` : `| ${c.month} | ${c.theme} | ${user(c.winner.author)} | \`${c.winner.skill}\` ([#${c.winner.pr}](${REPO}/pull/${c.winner.pr})) | ${c.winner.score.toFixed(2)} |`),
