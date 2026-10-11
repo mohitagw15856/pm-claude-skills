@@ -10,6 +10,8 @@
 //   --judge <model>      override the pinned judge (discloses in results)
 //   --tasks <path>       alternate task set (default: skillbench/tasks.json)
 //   --skip-missing-keys  run only the listed models whose provider key is set
+//   --only <ids>         run only these task ids (comma-separated); for diagnosis
+//   --save-outputs <dir> also write each bare and skilled output to <dir> as Markdown
 //   --out <path>         results file (default: skillbench/results.json; the Chinese
 //                        task set writes skillbench/results-zh.json)
 //
@@ -23,7 +25,7 @@
 // Providers' monthly free credits (HF_TOKEN), sf:<org>/<model> uses SiliconFlow
 // (SILICONFLOW_API_KEY; several open models are free there, the rest pay-as-you-go,
 // sign-up with a mainland phone number). The prefix is stripped before the call.
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -42,7 +44,12 @@ let models = (arg('models', '') || '').split(',').map((s) => s.trim()).filter(Bo
 const dryRun = has('dry-run');
 if (!models.length) { console.error('Usage: --models model-a,model-b [--dry-run]'); process.exit(1); }
 
-const { version: taskSetVersion, tasks } = JSON.parse(readFileSync(arg('tasks', join(__dirname, 'tasks.json')), 'utf8'));
+const taskFile = JSON.parse(readFileSync(arg('tasks', join(__dirname, 'tasks.json')), 'utf8'));
+const taskSetVersion = taskFile.version;
+const only = (arg('only', '') || '').split(',').map((x) => x.trim()).filter(Boolean);
+const tasks = only.length ? taskFile.tasks.filter((t) => only.includes(t.id)) : taskFile.tasks;
+if (only.length && !tasks.length) { console.error(`--only matched no task ids in the task set.`); process.exit(1); }
+const saveDir = arg('save-outputs', '');
 const outPath = arg('out', join(__dirname, 'results.json'));
 
 // ── Provider adapters (single-shot completion; no streaming needed) ──────────
@@ -201,6 +208,11 @@ for (const model of models) {
       const js = await judgeScore(t.input, skilled);
       entry.skilled = js.score; if (js.spread !== undefined) { entry.skilledSpread = js.spread; entry.skilledJudges = js.perJudge; }
       const gtS = groundTruth(t, skilled); if (gtS) entry.gtSkilled = gtS;
+      if (saveDir) {
+        mkdirSync(saveDir, { recursive: true });
+        const safe = model.replace(/[^a-zA-Z0-9.-]+/g, '_');
+        writeFileSync(join(saveDir, `${safe}--${t.id}.md`), `# ${t.id} · ${model}\n\n## Task\n\n${t.input}\n\n## Bare (score ${entry.bare})\n\n${bare}\n\n## With skill (score ${entry.skilled})\n\n${skilled}\n`);
+      }
       console.log(`bare ${entry.bare ?? '–'}${gtB ? ` (gt ${gtB.pass}/${gtB.total})` : ''} · skilled ${entry.skilled ?? '–'}${gtS ? ` (gt ${gtS.pass}/${gtS.total})` : ''}`);
     } catch (e) {
       entry.error = String(e.message || e).slice(0, 200);
@@ -231,8 +243,9 @@ for (const model of models) {
   results.runs.push(run);
   console.log(`  → SkillBench ${run.score ?? '–'} · bare ${run.bare ?? '–'} · skill lift ${run.lift > 0 ? '+' : ''}${run.lift ?? '–'}`);
 }
-writeFileSync(outPath, JSON.stringify(results, null, 2) + '\n');
-console.log(`\nWrote ${outPath}`);
+// A diagnostic --only run covers a few tasks; saving it would replace the model's full run.
+if (only.length && !process.argv.includes('--out')) console.log('\n--only: diagnostic run, results not saved (pass --out to save them).');
+else { writeFileSync(outPath, JSON.stringify(results, null, 2) + '\n'); console.log(`\nWrote ${outPath}`); }
 if (failedModels.length) {
   console.error(`\n${failedModels.length} of ${models.length} model(s) produced no scores:\n  ${failedModels.join('\n  ')}`);
   if (process.env.GITHUB_ACTIONS) for (const f of failedModels) console.log(`::warning::${f}`);

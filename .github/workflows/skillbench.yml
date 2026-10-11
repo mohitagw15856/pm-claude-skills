@@ -13,6 +13,10 @@ on:
         description: 'Judge model (pinned; disclose changes in the report)'
         required: false
         default: 'claude-sonnet-4-6'
+      only:
+        description: 'Diagnose: run only these task ids (comma-separated); results are not saved, outputs are uploaded'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -30,8 +34,29 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: node skillbench/run-skillbench.mjs --models "${{ inputs.models }}" --judge "${{ inputs.judge }}"
+          MODELS: ${{ inputs.models }}
+          JUDGE: ${{ inputs.judge }}
+          ONLY: ${{ inputs.only }}
+        run: |
+          set -euo pipefail
+          printf '%s' "$MODELS" | grep -Eq '^[A-Za-z0-9._:,/@-]+$' || { echo "::error::models must be comma-separated ids"; exit 1; }
+          printf '%s' "$JUDGE" | grep -Eq '^[A-Za-z0-9._:,-]+$' || { echo "::error::judge must be a model id"; exit 1; }
+          if [ -n "$ONLY" ]; then
+            printf '%s' "$ONLY" | grep -Eq '^[a-z0-9,-]+$' || { echo "::error::only must be task ids"; exit 1; }
+            node skillbench/run-skillbench.mjs --models "$MODELS" --judge "$JUDGE" --only "$ONLY" --save-outputs skillbench-outputs
+          else
+            node skillbench/run-skillbench.mjs --models "$MODELS" --judge "$JUDGE" --save-outputs skillbench-outputs
+          fi
+      - name: Upload the outputs (bare and with skill, per task)
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: skillbench-outputs
+          path: skillbench-outputs/
+          if-no-files-found: ignore
+          retention-days: 30
       - name: Commit results
+        if: inputs.only == ''
         run: |
           git config user.name "skillbench-bot"
           git config user.email "actions@github.com"
