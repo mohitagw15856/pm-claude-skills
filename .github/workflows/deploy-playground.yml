@@ -218,6 +218,9 @@ jobs:
       - name: Build the worked-examples gallery data (web/worked-examples.json)
         run: node scripts/build-worked-examples.mjs
 
+      - name: Build the "Which AI is best at your job?" data (web/ai-at-work.json)
+        run: node scripts/build-ai-at-work-report.mjs
+
       - name: Build the side-by-side translations (web/i18n/, for compare-lang.html)
         run: node scripts/build-i18n-web.mjs
 

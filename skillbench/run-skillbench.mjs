@@ -9,6 +9,7 @@
 //   --dry-run            plan + cost estimate, no API calls
 //   --judge <model>      override the pinned judge (discloses in results)
 //   --tasks <path>       alternate task set (default: skillbench/tasks.json)
+//   --skip-missing-keys  run only the listed models whose provider key is set
 //   --out <path>         results file (default: skillbench/results.json; the Chinese
 //                        task set writes skillbench/results-zh.json)
 //
@@ -37,7 +38,7 @@ const HARNESS_VERSION = '1.1';
 // exist so no single family grades its own outputs unchallenged.
 const JUDGES = (arg('judges', '') || arg('judge', 'claude-sonnet-4-6')).split(',').map((s) => s.trim()).filter(Boolean);
 const JUDGE = JUDGES.join('+');
-const models = (arg('models', '') || '').split(',').map((s) => s.trim()).filter(Boolean);
+let models = (arg('models', '') || '').split(',').map((s) => s.trim()).filter(Boolean);
 const dryRun = has('dry-run');
 if (!models.length) { console.error('Usage: --models model-a,model-b [--dry-run]'); process.exit(1); }
 
@@ -63,6 +64,21 @@ function providerOf(model) {
   if (COMPAT.some(([re]) => re.test(model))) return 'openai';
   if (/^gemini/.test(model)) return 'google';
   throw new Error(`Cannot infer provider for "${model}" (expected claude-*, gpt-*, gemini-*, deepseek-*, qwen-*, kimi-*, glm-*, doubao-*, modelscope:*, hf:* or sf:*).`);
+}
+// The env var a model's provider needs, for --skip-missing-keys.
+function keyVarOf(model) {
+  const prov = providerOf(model);
+  if (prov === 'anthropic') return 'ANTHROPIC_API_KEY';
+  if (prov === 'google') return 'GEMINI_API_KEY';
+  return COMPAT.find(([re]) => re.test(model))[2];
+}
+// --skip-missing-keys: a scheduled run lists every model it would like and runs
+// the ones whose provider key is set, instead of failing on the first missing key.
+if (has('skip-missing-keys')) {
+  const skipped = models.filter((m) => !process.env[keyVarOf(m)]);
+  if (skipped.length) console.log(`Skipping (no provider key set): ${skipped.join(', ')}`);
+  models = models.filter((m) => process.env[keyVarOf(m)]);
+  if (!models.length) { console.log('No model has a provider key set; nothing to run.'); process.exit(0); }
 }
 async function complete({ model, system, user, maxTokens = 4096 }) {
   const prov = providerOf(model);
@@ -193,6 +209,9 @@ for (const model of models) {
     lift: ok.length ? +(mean('skilled') - mean('bare')).toFixed(2) : null,
     tasks: perTask,
   };
+  // A run where every task failed (quota, outage) must not overwrite a good earlier one.
+  const prev = results.runs.find((r) => r.model === model && r.taskSetVersion === taskSetVersion);
+  if (!ok.length && prev && prev.score != null) { console.log(`  ✗ every task failed; keeping the ${prev.date} run`); continue; }
   results.runs = results.runs.filter((r) => !(r.model === model && r.taskSetVersion === taskSetVersion));
   results.runs.push(run);
   console.log(`  → SkillBench ${run.score ?? '–'} · bare ${run.bare ?? '–'} · skill lift ${run.lift > 0 ? '+' : ''}${run.lift ?? '–'}`);

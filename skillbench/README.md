@@ -69,6 +69,8 @@ Model ids pick the provider by prefix: `deepseek-*` (DEEPSEEK_API_KEY), `qwen-*`
 
 Each quarter the maintainers re-run SkillBench on the current frontier models and publish a short report from the results — which model leads per domain, how skill lift is trending, and what changed since last quarter. Reports live in [`reports/`](reports/); the template is [`reports/TEMPLATE.md`](reports/TEMPLATE.md).
 
+The same results also feed a monthly, job-by-job edition, **Which AI is best at your job?** ([live page](https://mohitagw15856.github.io/pm-claude-skills/ai-at-work.html), archive in [`reports/ai-at-work/`](reports/ai-at-work/)). The [AI at work report](../.github/workflows/ai-at-work-report.yml) workflow runs on the 2nd of each month: it benchmarks every model in the `AI_AT_WORK_MODELS` repository variable whose provider key is set (`--skip-missing-keys`), writes the edition with `scripts/build-ai-at-work-report.mjs --edition YYYY-MM`, and merges the data-only pull request. Today only Claude models have keys; adding `OPENAI_API_KEY`, `GEMINI_API_KEY` or `DEEPSEEK_API_KEY` as a secret puts those models in the next edition.
+
 ## Submitting a model / citing
 
 - **New model:** open an issue titled `skillbench: <model>` or a PR adding a results entry produced by the harness (include the exact command; official numbers are reproduced by CI before merging).
