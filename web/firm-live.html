@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The live Firm: an AI staff running this repo in public | PM Skills</title>
+<meta name="description" content="An AI executive staff meets every week on this open-source repository's real numbers, decides, and makes a checkable prediction. Its track record is scored automatically and cannot be edited." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/firm-live.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .fl-wrap { max-width: 980px; margin: 0 auto; padding: 16px 22px 70px; }
+  .fl-wrap h1 { font-size: 28px; margin-bottom: 6px; }
+  .lead { color: var(--muted); line-height: 1.6; max-width: 760px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 18px 0; }
+  .stat { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 12px 14px; }
+  .stat b { display: block; font-size: 24px; }
+  .stat span { color: var(--muted); font-size: 13px; }
+  .session { border: 1px solid var(--border); border-radius: 14px; background: var(--panel); padding: 14px 18px; margin: 12px 0; }
+  .session h2 { font-size: 16px; margin: 0 0 4px; }
+  .session .agenda { color: var(--muted); font-size: 14px; margin: 0 0 8px; }
+  .pred { font-size: 14px; line-height: 1.5; }
+  .hit { color: #1a8f4c; font-weight: 600; } .miss { color: #c2410c; font-weight: 600; } .pending { color: var(--muted); }
+  .empty { color: var(--muted); padding: 20px 0; line-height: 1.6; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<main class="fl-wrap">
+  <h1>The live Firm</h1>
+  <p class="lead">An AI executive staff (CEO, CFO, Head of Product, Head of GTM and a sceptic) meets every week on this repository's real numbers. It argues, decides, and commits to one prediction that a script can check, such as "stars ≥ 1,600 by 30 November". When the date comes, the prediction is scored against the live number, automatically and permanently. Nothing here is edited by hand. Want the same staff on your own problem? <a href="firm.html">Convene your own firm</a>.</p>
+  <div class="stats" id="stats"></div>
+  <div id="sessions"><p class="empty">Loading…</p></div>
+</main>
+<script src="nav.js" defer></script>
+<script>
+(function () {
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  var REPO = 'https://github.com/mohitagw15856/pm-claude-skills/blob/main/';
+  var LABEL = { stars: 'GitHub stars', forks: 'forks', open_issues: 'open issues', npm_weekly_downloads: 'weekly npm downloads' };
+  fetch('firm-ledger.json').then(function (r) { return r.json(); }).then(function (d) {
+    var s = d.sessions.slice().reverse();
+    var scored = s.filter(function (x) { return x.result; });
+    var hits = scored.filter(function (x) { return x.result.hit; }).length;
+    document.getElementById('stats').innerHTML = [
+      [s.length, 'sessions held'], [scored.length, 'predictions scored'],
+      [scored.length ? Math.round(hits / scored.length * 100) + '%' : 'n/a', 'hit rate'],
+      [s.filter(function (x) { return x.prediction && !x.result; }).length, 'pending'],
+    ].map(function (x) { return '<div class="stat"><b>' + esc(x[0]) + '</b><span>' + esc(x[1]) + '</span></div>'; }).join('');
+    if (!s.length) { document.getElementById('sessions').innerHTML = '<p class="empty">The firm has not met yet. Its first session will appear here, with its prediction, the Monday after it is switched on.</p>'; return; }
+    document.getElementById('sessions').innerHTML = s.map(function (x) {
+      var p = x.prediction, r = x.result;
+      var pred = p ? esc(LABEL[p.metric] || p.metric) + ' ' + esc(p.op === '>=' ? '≥' : '≤') + ' ' + esc(Number(p.value).toLocaleString('en-GB')) + ' by ' + esc(p.by) + ' (confidence ' + esc(p.confidence) + '%)' : 'No checkable prediction was made.';
+      var res = !p ? '' : !r ? ' · <span class="pending">pending</span>' : ' · <span class="' + (r.hit ? 'hit' : 'miss') + '">' + (r.hit ? 'HIT' : 'MISS') + '</span> (actual ' + esc(Number(r.actual).toLocaleString('en-GB')) + ')';
+      return '<section class="session"><h2><a href="' + REPO + encodeURI(x.file) + '">' + esc(x.date) + ' session</a></h2><p class="agenda">' + esc(x.agenda) + '</p><div class="pred">Prediction: ' + pred + res + '</div></section>';
+    }).join('');
+  }).catch(function () { document.getElementById('sessions').innerHTML = '<p class="empty">Could not load the ledger.</p>'; });
+})();
+</script>
+</body>
+</html>

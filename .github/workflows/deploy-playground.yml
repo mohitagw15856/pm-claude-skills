@@ -43,6 +43,7 @@ on:
       - 'scripts/push-search-engines.mjs'
       - 'data/cn-city-data.json'
       - 'data/evolution-log.json'
+      - 'data/firm-ledger.json'
       - 'CHANGELOG.md'
       - 'data/solar-terms.json'
       - 'data/cn-exam-dates.json'
@@ -224,6 +225,9 @@ jobs:
 
       - name: Build the evolution log data (web/evolution-log.json)
         run: node scripts/build-evolution-log.mjs
+
+      - name: Copy the live Firm ledger (web/firm-ledger.json)
+        run: cp data/firm-ledger.json web/firm-ledger.json
 
       - name: Build the side-by-side translations (web/i18n/, for compare-lang.html)
         run: node scripts/build-i18n-web.mjs
