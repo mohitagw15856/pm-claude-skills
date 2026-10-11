@@ -267,11 +267,11 @@ The whole repo on one poster — the 60-second start path, the six things no oth
   </a>
 </p>
 
-**[📥 Markdown](../CHEATSHEET.md)** · **[🖼️ Download PNG](https://mohitagw15856.github.io/pm-claude-skills/docs-assets/cheatsheet.png)** · **[📄 Download PDF](https://mohitagw15856.github.io/pm-claude-skills/docs-assets/cheatsheet.pdf)** · **[🌐 Live poster](https://mohitagw15856.github.io/pm-claude-skills/cheatsheet.html)** — regenerate with `PAGES=cheatsheet node web/docs-assets/shoot.mjs`.
+**[📥 Markdown](../CHEATSHEET.md)** · **[🖼️ Download PNG](https://mohitagw15856.github.io/pm-claude-skills/docs-assets/cheatsheet.png)** · **[📄 Download PDF](https://github.com/mohitagw15856/pm-claude-skills/raw/media/docs-assets/cheatsheet.pdf)** · **[🌐 Live poster](https://mohitagw15856.github.io/pm-claude-skills/cheatsheet.html)** — regenerate with `PAGES=cheatsheet node web/docs-assets/shoot.mjs`.
 
 > 📖 **Want the full walkthrough?** The **[Practical Guide](../web/guide.html)** is a 15-page,
 > example-driven manual — install → your first skill → worked examples (PRD, exec update, RICE,
-> postmortem) → chaining recipes → the Brain → running anywhere → tips. **[Download the PDF →](../web/docs-assets/PM-Skills-Guide.pdf)**
+> postmortem) → chaining recipes → the Brain → running anywhere → tips. **[Download the PDF →](https://github.com/mohitagw15856/pm-claude-skills/raw/media/docs-assets/PM-Skills-Guide.pdf)**
 
 </details>
 
@@ -431,7 +431,7 @@ Connect the Firm or the Boardroom to a **real folder on disk** (the 🗂 chip, C
 ### 🗺 The Campaign, the Book, and the Ledger
 
 - **[Your First 90 Days](https://mohitagw15856.github.io/pm-claude-skills/campaign.html)** — campaign mode: one story across every arena. You join a fictional Series A startup, and your *real* arena scores write the plot — lose the Gym negotiation and the account churns; get fooled in the Panel and the bad hire haunts Week 10. Replayable, saves locally, certificate at Day 90.
-- **[The Professional Work Handbook](https://mohitagw15856.github.io/pm-claude-skills/handbook.html)** — the library as a book: 11 chapters of craft (the Production-Ready tier in full) + **the Anti-Pattern Almanac: 2,237 rules of professional judgment** from all 1285 skills. Read it free online, grab the [PDF](../web/docs-assets/handbook.pdf), or **[📕 order the paperback on Lulu](https://www.lulu.com/shop/mohit-aggarwal/the-professional-work-handbook/paperback/product-65kwrpk.html)** — the digital editions stay free forever; print is a format, not a paywall.
+- **[The Professional Work Handbook](https://mohitagw15856.github.io/pm-claude-skills/handbook.html)** — the library as a book: 11 chapters of craft (the Production-Ready tier in full) + **the Anti-Pattern Almanac: 2,237 rules of professional judgment** from all 1285 skills. Read it free online, grab the [PDF](https://github.com/mohitagw15856/pm-claude-skills/raw/media/docs-assets/handbook.pdf), or **[📕 order the paperback on Lulu](https://www.lulu.com/shop/mohit-aggarwal/the-professional-work-handbook/paperback/product-65kwrpk.html)** — the digital editions stay free forever; print is a format, not a paywall.
 - **[The Reckoning](https://mohitagw15856.github.io/pm-claude-skills/reckoning.html)** — your prediction ledger: confidences, due dates, resurfacing, and a personal **calibration curve with a Brier score**. Also in the CLI: `npx pm-claude-skills reckoning`. When you say 80%, does it happen 80% of the time? Now you'll know.
 - **🔏 The chain of trust** — security scan → [sha256 content pinning](../community/README.md#-trust--integrity--the-full-chain) in the registry → install lockfile + `npx pm-claude-skills verify` drift detection → npm provenance. Verifiable end to end, no trust in us required.
 

@@ -81,3 +81,9 @@ web/worked-examples.json
 # Generated from skills/ by scripts/build-exports.mjs: built before npm publish (prepack)
 # and published to the 'exports' branch for browsing; never committed to main.
 exports/
+# Large binaries live on the 'media' branch (served by raw URL), not on main.
+docs/print/*.pdf
+web/docs-assets/handbook.pdf
+web/docs-assets/PM-Skills-Guide.pdf
+web/docs-assets/cheatsheet.pdf
+docs/readme-assets/video/*.mp4

@@ -70,3 +70,5 @@ To replace the static screenshot with a short looping demo:
    - From an mp4: `npx gifski --fps 12 --width 1100 -o playground-demo.webp demo.mp4`
 3. Drop it in this folder and update the README hero image from `playground.png` to
    `playground-demo.webp` (the `<!-- DEMO -->` comment in the README marks the spot).
+
+The PDFs (`cheatsheet.pdf`, `PM-Skills-Guide.pdf`, `handbook.pdf`) are built by `shoot.mjs` but not committed; the current copies are on the [`media` branch](https://github.com/mohitagw15856/pm-claude-skills/tree/media/docs-assets).

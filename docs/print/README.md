@@ -1,5 +1,7 @@
 # 📦 Print products — the Handbook and the Operator's Deck as real objects
 
+> The built PDFs are not committed: download the current ones from the [`media` branch](https://github.com/mohitagw15856/pm-claude-skills/tree/media/print), or rebuild them with the commands below.
+
 Both artifacts are print-ready today; this is the press-go runbook for putting them on shelves. Physical objects recruit people the internet can't reach, and both are margin-positive without sponsorship.
 
 ## The Handbook (paperback)
