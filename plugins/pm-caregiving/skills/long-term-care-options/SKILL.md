@@ -1,6 +1,6 @@
 ---
 name: long-term-care-options
-description: "Understand the long-term care options for an older or ill loved one — from in-home care to assisted living to nursing care — so you can compare them for your situation. Use when asked what are the care options for my parent, in-home care vs assisted living vs nursing home, help me choose a care option, or explain long-term care. Produces a plain-English explainer of the main care levels and what each is for, a match to the person's needs (care level, budget, preferences), the key questions and red flags when evaluating providers, cost and funding considerations to research, and how to involve the person in the decision — a map for one of the hardest, most emotional decisions a family makes. Not medical or financial advice."
+description: "Understand the long-term care options for an older or ill loved one — from in-home care to assisted living to nursing care. Use when asked what are the care options for my parent, in-home care vs assisted living vs nursing home, help me choose a care option, or explain long-term care. Produces a plain-English explainer of the main care levels and what each is for, a match to the person's needs (care level, budget, preferences), the key questions and red flags when evaluating providers, cost and funding considerations to research, and how to involve the person in the decision — a map for one of the hardest, most emotional decisions a family makes. Not medical or financial advice."
 ---
 
 # Long-Term Care Options

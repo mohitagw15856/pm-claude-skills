@@ -1,6 +1,6 @@
 ---
 name: first-90-days-out
-description: "Build a concrete plan for the first 90 days after release from incarceration — the ID, benefits, housing, check-ins, and money moves that have to happen in order, before they cascade into a crisis. Use when asked I'm getting out of prison what do I do first, reentry plan, just got released and I'm overwhelmed, or first steps after incarceration. Produces a sequenced week-by-week plan for the highest-priority setup (ID and documents, parole/probation compliance, benefits, housing, phone, bank, health/meds), the deadlines that carry real consequences, a triage of what's urgent vs. what can wait, and where to get reentry support — so the first months build stability instead of spiraling. Not legal advice; centers parole/probation compliance and points to reentry services."
+description: "Build a concrete plan for the first 90 days after release from incarceration — the ID, benefits, housing, check-ins, and money moves that have to happen in order, before they cascade into a crisis. Use when asked I'm getting out of prison what do I do first, reentry plan, just got released and I'm overwhelmed, or first steps after incarceration. Produces a sequenced week-by-week plan for the highest-priority setup (ID and documents, parole/probation compliance, benefits, housing, phone, bank, health/meds), the deadlines that carry real consequences, a triage of what's urgent vs. what can wait, and where to get reentry support. Not legal advice; points to reentry services."
 ---
 
 # First 90 Days Out

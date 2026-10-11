@@ -1,6 +1,6 @@
 ---
 name: code-simplification
-description: "Simplify code that works — remove speculative abstraction, dead flexibility, and needless indirection while keeping behaviour identical and verified. Use after a feature lands ('now simplify it'), when AI-generated code arrives over-engineered, when a file has grown hard to follow, or as the cleanup pass before review. Produces a smaller, flatter version with identical behaviour, plus a ledger of what was removed and why it was safe. For finding bugs use code-review-checklist / ai-code-review — this skill assumes it works and makes it simple."
+description: "Simplify code that works — remove speculative abstraction, dead flexibility, and needless indirection while keeping behaviour identical and verified. Use when a feature has just landed ('now simplify it'), when AI-generated code arrives over-engineered, when a file has grown hard to follow, or as the cleanup pass before review. Produces a smaller, flatter version with identical behaviour, plus a ledger of what was removed and why it was safe. For finding bugs use code-review-checklist / ai-code-review — this skill assumes it works and makes it simple."
 ---
 
 # Code Simplification Skill
@@ -12,6 +12,14 @@ Code accretes defensive complexity: abstractions for futures that never came, op
 - The simplified code — smaller, flatter, same behaviour
 - A **removal ledger**: each simplification, why it was safe, and what future it forecloses (honestly)
 - Verification evidence that behaviour held
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The code** — what works today and should keep working
+- **The pressure** — what made it feel complex: onboarding, a bug, a review comment
+- **What must not change** — the public API, behaviour, or performance envelope
+- **Test coverage** — whether there are tests to prove the simplification is safe
 
 ## What to Hunt (in order of payoff)
 

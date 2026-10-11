@@ -1,6 +1,6 @@
 ---
 name: benefits-cliff-check
-description: "Check whether a raise, more hours, or a new job could cost you more in lost benefits than you gain — the 'benefits cliff' — before you accept it. Use when asked will a raise hurt my benefits, benefits cliff, if I make more will I lose my food stamps or medicaid, or should I take more hours. Produces a plain map of which benefits phase out at what income (and which cut off suddenly vs. taper), a rough read on whether a specific income change helps or hurts net, the ones with hard cliffs to watch (childcare, Medicaid, housing), the moves that soften a cliff, and where to get a real benefits screening — so you make an income decision with eyes open, not a nasty surprise. Not financial/benefits advice; points to a benefits counselor."
+description: "Check whether a raise, more hours, or a new job could cost you more in lost benefits than you gain — the 'benefits cliff' — before you accept it. Use when asked will a raise hurt my benefits, benefits cliff, if I make more will I lose my food stamps or medicaid, or should I take more hours. Produces a plain map of which benefits phase out at what income (and which cut off suddenly vs. taper), a rough read on whether a specific income change helps or hurts net, the ones with hard cliffs to watch (childcare, Medicaid, housing), the moves that soften a cliff, and where to get a real benefits screening. Not financial/benefits advice; points to a benefits counselor."
 ---
 
 # Benefits-Cliff Check

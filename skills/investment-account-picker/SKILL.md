@@ -1,6 +1,6 @@
 ---
 name: investment-account-picker
-description: "Understand which type of investment/savings account to use for your goal — the tax-advantaged vs taxable question, and which wrapper fits which money — so you don't leave free tax benefits on the table. Use when asked which account should I invest in, what's the difference between these account types, where should I put my savings, or tax-advantaged accounts explained. Produces a plain-language explainer of the common account categories (retirement/tax-advantaged, general/taxable, education, short-term), a match of your goals to the right account type, the order to prioritize them, and what to verify locally — because using the wrong wrapper can cost you real money. Not financial advice; account types are jurisdiction-specific."
+description: "Understand which type of investment/savings account to use for your goal — the tax-advantaged vs taxable question, and which wrapper fits which money. Use when asked which account should I invest in, what's the difference between these account types, where should I put my savings, or tax-advantaged accounts explained. Produces a plain-language explainer of the common account categories (retirement/tax-advantaged, general/taxable, education, short-term), a match of your goals to the right account type, the order to prioritize them, and what to verify locally — because using the wrong wrapper can cost you real money. Not financial advice; account types are jurisdiction-specific."
 ---
 
 # Investment-Account Picker

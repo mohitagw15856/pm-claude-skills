@@ -875,12 +875,12 @@
 | Skill | What it does | Eval |
 |---|---|---|
 | **Aging-in-Place Assessment** (`aging-in-place-assessment`) | Assess whether and how someone can safely stay in their own home as they age — the home hazards, the support gaps, and the modifications and… | — |
-| **Care-Decision Family Meeting** (`care-decision-family-meeting`) | Run a family meeting to make a big care decision together — so it's a shared, informed decision instead of a fight or one person deciding alone. | — |
+| **Care-Decision Family Meeting** (`care-decision-family-meeting`) | Run a family meeting to make a big care decision together. | — |
 | **Care-Team Coordinator** (`care-team-coordinator`) | Organize the people and information involved in caring for someone — family, doctors, helpers — so care doesn't fall through the cracks or all… | — |
 | **Caregiver-Burnout Check** (`caregiver-burnout-check`) | Check whether you're burning out as a caregiver — and get a realistic plan to protect yourself before you can't keep going. | — |
 | **End-of-Life Wishes Conversation** (`end-of-life-wishes-conversation`) | Have the conversation about someone's end-of-life wishes — before a crisis forces it — gently, respectfully, and thoroughly enough to actually… | — |
 | **Hospital-Stay Plan** (`hospital-stay-plan`) | Navigate a hospital stay — for yourself or someone you care for — from admission through a safe discharge, so nothing critical falls through the… | — |
-| **Long-Term Care Options** (`long-term-care-options`) | Understand the long-term care options for an older or ill loved one — from in-home care to assisted living to nursing care — so you can compare… | — |
+| **Long-Term Care Options** (`long-term-care-options`) | Understand the long-term care options for an older or ill loved one — from in-home care to assisted living to nursing care. | — |
 | **Medical-Appointment Advocate** (`medical-appointment-advocate`) | Prepare to get the most out of a medical appointment — for yourself or someone you care for — with the right questions, the information to bring… | — |
 | **Medication-Management System** (`medication-management-system`) | Set up a system to manage medications safely — for yourself or someone you care for — so doses aren't missed, doubled, or dangerously combined. | — |
 | **Respite-Care Plan** (`respite-care-plan`) | Plan a genuine break from caregiving — arrange the coverage, hand off the essentials, and actually rest — because respite is what lets you keep going. | — |
@@ -1468,7 +1468,7 @@
 | **Bankruptcy Decision** (`bankruptcy-decision`) | Think clearly about whether bankruptcy is the right move, or whether another path fits better — without shame and without a sales pitch. | — |
 | **Benefits-Cliff Check** (`benefits-cliff-check`) | Check whether a raise, more hours, or a new job could cost you more in lost benefits than you gain — the 'benefits cliff' — before you accept it. | — |
 | **Debt-Collector Scripts** (`debt-collector-scripts`) | Handle debt collectors without getting bullied or tricked — what to say, what never to say, and the rights that protect you from harassment and… | — |
-| **Stop-the-Bleed Triage** (`stop-the-bleed-triage`) | When money is in free-fall, triage the crisis — what to pay first, what to let slide, and what to protect at all costs — so you cover the… | — |
+| **Stop-the-Bleed Triage** (`stop-the-bleed-triage`) | When money is in free-fall, triage the crisis — what to pay first, what to let slide, and what to protect at all costs. | — |
 | **Wage-Garnishment Response** (`wage-garnishment-response`) | Respond fast when your wages are being garnished or about to be — the deadlines, the exemptions that can reduce or stop it, and the steps that… | — |
 
 ### `pm-hardware` — 6 skills
@@ -2040,7 +2040,7 @@
 | **First 100k Plan** (`first-100k-plan`) | Build a realistic plan to reach your first major savings/investing milestone — the hardest one — by focusing on the levers that actually move it… | — |
 | **Index-Fund Starter** (`index-fund-starter`) | Understand index-fund investing and how to actually get started with the simplest evidence-backed approach — plus the details that quietly matter… | — |
 | **Investing for Beginners** (`investing-for-beginners`) | Understand the basics of investing enough to start sensibly — the core concepts, the simple default that works for most people, and the traps that… | — |
-| **Investment-Account Picker** (`investment-account-picker`) | Understand which type of investment/savings account to use for your goal — the tax-advantaged vs taxable question, and which wrapper fits which… | — |
+| **Investment-Account Picker** (`investment-account-picker`) | Understand which type of investment/savings account to use for your goal — the tax-advantaged vs taxable question, and which wrapper fits which money. | — |
 | **Money Mindset Reset** (`money-mindset-reset`) | Untangle the money beliefs and emotions that quietly sabotage your finances — the scripts from childhood, the avoidance, the guilt or fear — and… | — |
 | **Passive-Income Reality Check** (`passive-income-reality-check`) | Cut through passive-income hype to what's actually realistic for you — the real effort, capital, and risk behind each option, and which (if any)… | — |
 

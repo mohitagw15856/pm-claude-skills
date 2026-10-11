@@ -1,6 +1,6 @@
 ---
 name: reconnect-after-time-away
-description: "Rebuild relationships with family, kids, and friends after incarceration or a long absence — how to reach out, repair trust at the other person's pace, and handle the hard first conversations. Use when asked how do I reconnect with my kids after prison, rebuild trust with family after being away, or the first conversation after a long absence. Produces a paced reconnection plan (who to reach first and how), opening messages that don't demand forgiveness, a way to rebuild trust through consistency rather than words, scripts for the hard conversations, and realistic expectations about time and rejection — so reconnection is steady and genuine, not a pressured single grand gesture. Centers the other person's pace; points to family therapy and reentry family services."
+description: "Rebuild relationships with family, kids, and friends after incarceration or a long absence — how to reach out, repair trust at the other person's pace, and handle the hard first conversations. Use when asked how do I reconnect with my kids after prison, rebuild trust with family after being away, or the first conversation after a long absence. Produces a paced reconnection plan (who to reach first and how), opening messages that don't demand forgiveness, a way to rebuild trust through consistency rather than words, scripts for the hard conversations, and realistic expectations about time and rejection. Centers the other person's pace; points to family therapy and reentry family services."
 ---
 
 # Reconnect After Time Away
