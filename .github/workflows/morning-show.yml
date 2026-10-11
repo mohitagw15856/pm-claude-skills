@@ -33,6 +33,7 @@ jobs:
       # Direct pushes to main are blocked by branch protection, so open a PR
       # (matching trending/skill-of-the-week). No-op when newsletter/ is unchanged.
       - name: Open a PR with this week's issue
+        id: cpr
         uses: peter-evans/create-pull-request@v8
         with:
           add-paths: newsletter/
@@ -46,3 +47,20 @@ jobs:
 
       # Optional next steps (left as comments): pipe newsletter/*latest*.md into
       # Buttondown/Mailchimp for email, or a TTS action for the podcast audio.
+
+      # Data-only PR: merge it straight away if it touches nothing but the expected files.
+      # Anything else is left open for a person to review.
+      - name: Merge the data-only PR
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          set -euo pipefail
+          files=$(gh pr diff "$PR" --name-only --repo "$GITHUB_REPOSITORY")
+          echo "$files"
+          if [ -z "$files" ] || echo "$files" | grep -qvE '^newsletter/[A-Za-z0-9._-]+\.md$'; then
+            echo "::warning::PR #$PR changes files outside ^newsletter/[A-Za-z0-9._-]+\.md$; leaving it for review."
+            exit 0
+          fi
+          gh pr merge "$PR" --squash --delete-branch --repo "$GITHUB_REPOSITORY"

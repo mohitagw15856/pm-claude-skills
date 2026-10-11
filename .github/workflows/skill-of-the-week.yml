@@ -37,6 +37,7 @@ jobs:
       # main is protected (requires PRs), so open a PR instead of pushing directly.
       # create-pull-request is a no-op when web/skill-of-the-week.json is unchanged.
       - name: Open a PR if the featured skill changed
+        id: cpr
         uses: peter-evans/create-pull-request@v8
         with:
           add-paths: web/skill-of-the-week.json
@@ -49,3 +50,20 @@ jobs:
             featured skill (`web/skill-of-the-week.json`). Merging refreshes the
             site's featured pick. The composed X / LinkedIn posts are in the
             workflow run's job summary.
+
+      # Data-only PR: merge it straight away if it touches nothing but the expected files.
+      # Anything else is left open for a person to review.
+      - name: Merge the data-only PR
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          set -euo pipefail
+          files=$(gh pr diff "$PR" --name-only --repo "$GITHUB_REPOSITORY")
+          echo "$files"
+          if [ -z "$files" ] || echo "$files" | grep -qvE '^web/skill-of-the-week\.json$'; then
+            echo "::warning::PR #$PR changes files outside ^web/skill-of-the-week\.json$; leaving it for review."
+            exit 0
+          fi
+          gh pr merge "$PR" --squash --delete-branch --repo "$GITHUB_REPOSITORY"
