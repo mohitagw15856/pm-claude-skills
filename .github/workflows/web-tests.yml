@@ -23,6 +23,8 @@ jobs:
         run: npm i --no-save playwright && npx playwright install --with-deps chromium
       - name: Run the suite
         run: node tests/web-smoke.mjs
+      - name: XSS fuzz (script payloads in every URL parameter and hash)
+        run: node tests/xss-fuzz.mjs
 
   weight:
     # Page weight is a build-time fact — no browser needed, so it runs per push
