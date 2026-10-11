@@ -9,6 +9,7 @@ Drafts for introducing PM Skills to Chinese developers and professionals. They a
 | [v2ex.md](v2ex.md) | V2EX | Developers, sceptical of promotion | A short "分享创造" post |
 | [bilibili.md](bilibili.md) | 哔哩哔哩 Bilibili | People who learn by watching | A 3-minute demo script with shot list |
 | [issues.md](issues.md) | GitHub | Chinese users of the repository | A usage survey and a call for a Chinese reviewer |
+| [partnerships.md](partnerships.md) | Kimi, Doubao, Qwen, DeepSeek, Zhipu, Yuanbao, Wenxin | The apps' partnership and developer-relations teams | Per-app proposal, self-serve first steps, bilingual pitch |
 
 ## Before posting
 
