@@ -190,6 +190,17 @@ try {
     if (/^\d{4}-\d{2}-\d{2}$/.test(line)) cur = line;
     else if (line.startsWith('skills/')) { const n = line.split('/')[1]; if (n && !updatedMap[n]) updatedMap[n] = cur; }
   }
+  // Edited but not yet committed, or committed only on this branch: the date it
+  // will carry once merged is today. Without this, every PR that edits skills
+  // regenerated with the old dates and main drifted the moment it merged.
+  const today = new Date().toISOString().slice(0, 10);
+  const pending = execSync('git status --porcelain -- skills', { cwd: join(__dirname, '..'), encoding: 'utf8' });
+  let branchOnly = '';
+  try { branchOnly = execSync('git diff --name-only origin/main...HEAD -- skills', { cwd: join(__dirname, '..'), encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] }); } catch { /* no origin/main locally */ }
+  for (const line of (pending + '\n' + branchOnly).split('\n')) {
+    const m = line.match(/skills\/([^/]+)\/SKILL\.md$/);
+    if (m) updatedMap[m[1]] = today;
+  }
 } catch { /* shallow clone etc. — field just stays absent */ }
 
 const skills = [];
