@@ -211,6 +211,7 @@ jobs:
       - name: Build the offline pack (published at /offline/pm-skills-offline.zip)
         run: |
           set -euo pipefail
+          node scripts/build-exports.mjs >/dev/null
           node scripts/build-offline-pack.mjs --out web/offline --max-mb 40
           (cd web/offline && sha256sum -c pm-skills-offline.zip.sha256)
 

@@ -202,7 +202,7 @@ target is only complete when all four of these land together — use this as the
    `node bin/cli.mjs add --agent <tool> --dry-run`.
 
 Then update the target list/count in the README and `docs/`. See
-[Kilo Code](exports/kilocode/) as a complete worked example.
+[Kilo Code](https://github.com/mohitagw15856/pm-claude-skills/tree/exports/kilocode) as a complete worked example.
 
 ---
 

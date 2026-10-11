@@ -1,9 +1,9 @@
 name: Check generated artifacts
 
-# Skills are the single source of truth. The web index (web/skills.json) and the
-# multi-platform exports (exports/) are generated from skills/*/SKILL.md. This
-# job fails if either is out of date, so a skill edit can't ship without its
-# regenerated artifacts.
+# Skills are the single source of truth. The web index (web/skills.json) is
+# generated from skills/*/SKILL.md and committed; this job fails if it is stale.
+# The multi-platform exports (exports/) are no longer committed: they are built
+# here and linted, built before npm publish, and published to the 'exports' branch.
 
 on:
   pull_request:
@@ -12,7 +12,6 @@ on:
       - 'plugins/**'
       - 'web/build-skills.mjs'
       - 'scripts/build-exports.mjs'
-      - 'exports/**'
       - 'web/skills.json'
       - 'web/skills-index.json'
       - 'skill-dupes-allow.json'
@@ -22,7 +21,6 @@ on:
     paths:
       - 'skills/**'
       - 'scripts/build-exports.mjs'
-      - 'exports/**'
       - 'web/build-skills.mjs'
       - 'web/skills.json'
       - 'web/skills-index.json'
@@ -42,8 +40,10 @@ jobs:
         with:
           node-version: '24'
 
-      - name: Verify multi-platform exports are up to date
-        run: node scripts/build-exports.mjs --check
+      - name: Build and lint the multi-platform exports
+        run: |
+          node scripts/build-exports.mjs
+          node tests/exports-lint.mjs
 
       - name: Verify web/skills.json is up to date
         run: |

@@ -78,3 +78,6 @@ web/used-by.html
 web/used-by.json
 web/releases/
 web/worked-examples.json
+# Generated from skills/ by scripts/build-exports.mjs: built before npm publish (prepack)
+# and published to the 'exports' branch for browsing; never committed to main.
+exports/

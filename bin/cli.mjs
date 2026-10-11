@@ -350,7 +350,13 @@ function add(opts) {
   } else if (agent in RULEFILE) {
     const ext = RULEFILE[agent];
     const exportDir = join(PKG_ROOT, 'exports', agent);
-    if (!existsSync(exportDir)) { console.error(`Error: ${exportDir} missing.`); process.exit(1); }
+    // exports/ ships in the npm package (built by prepack) but is not committed to git,
+    // so a run from a clone builds it from skills/ on first use.
+    if (!existsSync(exportDir) && existsSync(join(PKG_ROOT, 'scripts', 'build-exports.mjs'))) {
+      console.log('  building exports/ from skills/ (first run from a clone)…');
+      try { execFileSync(process.execPath, [join(PKG_ROOT, 'scripts', 'build-exports.mjs')], { cwd: PKG_ROOT, stdio: 'ignore' }); } catch { /* reported below */ }
+    }
+    if (!existsSync(exportDir)) { console.error(`Error: ${exportDir} missing. Run: node scripts/build-exports.mjs`); process.exit(1); }
     for (const f of listFiles(exportDir, ext).sort()) {
       if (basename(f) === 'README.md') continue;   // skip the generated index
       if (only && !only.has(basename(f, ext))) continue;

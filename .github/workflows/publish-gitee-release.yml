@@ -105,6 +105,7 @@ jobs:
         if: steps.gate.outputs.enabled == 'true'
         run: |
           set -euo pipefail
+          node scripts/build-exports.mjs >/dev/null
           node scripts/build-offline-pack.mjs --out dist --max-mb 40
           (cd dist && sha256sum -c pm-skills-offline.zip.sha256)
       - name: Attach the offline pack to the Gitee release

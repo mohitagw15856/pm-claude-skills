@@ -50,6 +50,8 @@ Source, updates, and the browser playground (online): https://github.com/mohitag
 
 mkdirSync(dist, { recursive: true });
 writeFileSync(readmePath, readme);
+// exports/ is generated, not committed: build it if this checkout has none.
+if (!existsSync(join(ROOT, 'exports'))) spawnSync(process.execPath, [join(ROOT, 'scripts', 'build-exports.mjs')], { cwd: ROOT, stdio: 'ignore' });
 const members = ['skills', 'exports', 'PACKS.md', 'SKILLS.md', 'LICENSE', 'OFFLINE-README.md', 'JOURNEYS.md', 'journeys', 'variants'].filter(m => existsSync(join(ROOT, m)));
 const r = spawnSync('tar', ['-czf', out, '-C', ROOT, '--exclude=journeys/rendered', ...members], { stdio: 'inherit' });
 if (r.status !== 0) { console.error('✗ tar failed'); process.exit(r.status || 1); }

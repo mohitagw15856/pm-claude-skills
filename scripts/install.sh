@@ -89,6 +89,13 @@ if [ "$AGENT" = "cursor" ] || [ "$AGENT" = "windsurf" ] || [ "$AGENT" = "aider" 
   EXPORT_DIR="$REPO_DIR/exports/$AGENT"
   EXT='*.md'; [ "$AGENT" = "cursor" ] && EXT='*.mdc'
   if [ ! -d "$EXPORT_DIR" ]; then
+    # exports/ is generated, not committed: build it from skills/ (needs Node 18+).
+    if command -v node >/dev/null 2>&1 && [ -f "$REPO_DIR/scripts/build-exports.mjs" ]; then
+      echo "Building exports/ from skills/ (first install from a clone)..."
+      (cd "$REPO_DIR" && node scripts/build-exports.mjs >/dev/null)
+    fi
+  fi
+  if [ ! -d "$EXPORT_DIR" ]; then
     echo "Error: $EXPORT_DIR missing. Run: node scripts/build-exports.mjs" >&2; exit 1
   fi
   while IFS= read -r f; do

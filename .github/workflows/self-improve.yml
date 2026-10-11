@@ -47,9 +47,9 @@ jobs:
         if: steps.pick.outputs.picked != '0'
         run: node scripts/self-improve.mjs --reconcile
 
-      - name: Regenerate catalog + exports
+      - name: Regenerate the catalog
         if: steps.reconcile.outputs.improved != '0'
-        run: node web/build-skills.mjs && node scripts/build-exports.mjs
+        run: node web/build-skills.mjs
 
       - name: Open a PR with the improvements
         if: steps.reconcile.outputs.improved != '0'

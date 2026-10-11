@@ -653,7 +653,7 @@ The same 1285 skills reach you through every channel — pick whatever fits your
 | 💬 **Slack / Discord** | A `/pmskill` slash command in your team chat — one signature-verified Worker for both — [`integrations/chatops/`](../integrations/chatops/) |
 | 📱 **Text a skill (SMS/WhatsApp)** | Text a task to a Twilio number, get the drafted artifact back — no app, no browser — [`integrations/twilio/`](../integrations/twilio/) |
 | 📧 **Email operator** | Forward a thread to a routing address; the drafted artifact replies in-thread — [`integrations/email/`](../integrations/email/) |
-| 🖥️ **IDE rules** | Generated exports for **Cursor, Windsurf, Aider, Cline, Continue, Zed, Roo, Kilo Code** — [`exports/`](../exports/) |
+| 🖥️ **IDE rules** | Generated exports for **Cursor, Windsurf, Aider, Cline, Continue, Zed, Roo, Kilo Code** — [`exports/`](https://github.com/mohitagw15856/pm-claude-skills/tree/exports) |
 | 🤖 **Agents & answer engines** | [`llms.txt`](https://mohitagw15856.github.io/pm-claude-skills/llms.txt) makes the whole library discoverable & citable |
 
 > **153 curated eval cases ship with the library, and 28 skills carry published judge scores (avg 4.41/5)** — see the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html).
@@ -686,7 +686,7 @@ body as a system prompt — for those we ship ready-made [exports](#ready-to-use
 | **Hermes Agent** (Nous Research) | Native — same open `SKILL.md` standard. Run `python3 scripts/sync-hermes-skills.py` to install into `~/.hermes/skills/`; Hermes auto-discovers them. | ✅ Yes |
 | **OpenAI Codex · OpenClaw** | Native `SKILL.md`. One-line install (see [below](#one-line-install-for-coding-agents)) or `./scripts/install.sh --agent codex`. OpenClaw also gets a [dressed export + ClawHub guide](../connectors/openclaw.md). | ✅ Yes |
 | **Cursor · Windsurf · Aider** | Generated rules (`.cursor/rules/`, `.windsurf/rules/`, `aider --read`). `npx pm-claude-skills add --agent cursor` (or windsurf / aider). | ⚙️ By description |
-| **Cline · Continue · Zed · Roo** | Generated rule files under [`exports/`](../exports/) (`.clinerules/`, Continue rules, Zed `.rules`, `.roo/rules/`). | ⚙️ By description |
+| **Cline · Continue · Zed · Roo** | Generated rule files under [`exports/`](https://github.com/mohitagw15856/pm-claude-skills/tree/exports) (`.clinerules/`, Continue rules, Zed `.rules`, `.roo/rules/`). | ⚙️ By description |
 | **MCP clients** (Claude Desktop, Cline, …) | Run the [MCP server](../mcp/) — searches & pulls skills on demand via `npx -y -p pm-claude-skills pm-claude-skills-mcp`. Now also serves skills as MCP **prompts + resources**. | ✅ On demand |
 | **ChatGPT · Claude.ai · Cursor (remote MCP)** | Deploy the [remote connector](../mcp-remote/) and add **one URL** — no install. | ✅ On demand |
 | **Python agents** (LangChain, CrewAI, LlamaIndex) | [`pip install pm-skills`](../python/) → `search_skills` / `get_skill` / ready-made tool adapters. | ✅ On demand |
@@ -704,12 +704,12 @@ the body in manually and lose only the auto-triggering, not the substance.
 ### Ready-to-use exports
 
 You don't have to strip frontmatter by hand. Every skill is exported to platform-ready
-files under [`exports/`](../exports/), generated from the same source so nothing is
+files under [`exports/`](https://github.com/mohitagw15856/pm-claude-skills/tree/exports), generated from the same source so nothing is
 maintained twice:
 
-- **ChatGPT** — copy any [`exports/chatgpt/<bundle>/<skill>/SYSTEM_PROMPT.md`](../exports/chatgpt/) straight into a Custom GPT's instructions.
-- **Google Gemini** — copy any [`exports/gemini/<bundle>/<skill>/GEM_INSTRUCTIONS.md`](../exports/gemini/) into a Gem's instructions.
-- **Cursor** (`.mdc`) · **Windsurf** (`.md`) · **Aider** (`.md`) — generated rule/conventions files in [`exports/cursor/`](../exports/cursor/), [`exports/windsurf/`](../exports/windsurf/), [`exports/aider/`](../exports/aider/) (or use the installers below).
+- **ChatGPT** — copy any [`exports/chatgpt/<bundle>/<skill>/SYSTEM_PROMPT.md`](https://github.com/mohitagw15856/pm-claude-skills/tree/exports/chatgpt) straight into a Custom GPT's instructions.
+- **Google Gemini** — copy any [`exports/gemini/<bundle>/<skill>/GEM_INSTRUCTIONS.md`](https://github.com/mohitagw15856/pm-claude-skills/tree/exports/gemini) into a Gem's instructions.
+- **Cursor** (`.mdc`) · **Windsurf** (`.md`) · **Aider** (`.md`) — generated rule/conventions files in [`exports/cursor/`](https://github.com/mohitagw15856/pm-claude-skills/tree/exports/cursor), [`exports/windsurf/`](https://github.com/mohitagw15856/pm-claude-skills/tree/exports/windsurf), [`exports/aider/`](https://github.com/mohitagw15856/pm-claude-skills/tree/exports/aider) (or use the installers below).
 
 ### One-command install for coding agents
 
@@ -1460,7 +1460,7 @@ Say *"my landlord is keeping my deposit"* and your assistant loads [`security-de
 | **Check a release is genuine** | `npx pm-claude-skills verify --release`: your installed skills against the signed SBOM; [release files](https://mohitagw15856.github.io/pm-claude-skills/releases/latest.json) carry Sigstore provenance |
 | **Install in Claude Code** | `/plugin` → search **pm-skills** *(official Anthropic directory)*, or `npx pm-claude-skills add --agent claude` |
 | **Install in Cursor, Codex, Windsurf, Cline…** | `npx pm-claude-skills add --agent cursor` *(or `codex`, `windsurf`, `aider`, `cline`, `zed`…)* |
-| **Use one skill in ChatGPT or Gemini** | copy from [`exports/chatgpt/`](../exports/chatgpt/) or [`exports/gemini/`](../exports/gemini/) and paste it as instructions |
+| **Use one skill in ChatGPT or Gemini** | copy from [`exports/chatgpt/`](https://github.com/mohitagw15856/pm-claude-skills/tree/exports/chatgpt) or [`exports/gemini/`](https://github.com/mohitagw15856/pm-claude-skills/tree/exports/gemini) and paste it as instructions |
 | **Skills over MCP, in any session** | `claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp` |
 | **Find the right skill** | `npx pm-claude-skills find "board meeting on Thursday"` |
 | **Browse** | **[SKILLS.md](../SKILLS.md)** · the [searchable catalog](https://mohitagw15856.github.io/pm-claude-skills/catalog.html) · the [tech tree](https://mohitagw15856.github.io/pm-claude-skills/tech-tree/) |
@@ -1469,7 +1469,7 @@ No `npm install` needed; `npx` always runs the latest. Per-tool instructions: **
 
 | Works with | |
 |---|---|
-| **Assistants** | [Claude Code](installation.md) · [ChatGPT](../exports/chatgpt/) · [Gemini](../exports/gemini/) · [Cursor, Codex, Windsurf](installation.md) · [any MCP client](../mcp-remote/) |
+| **Assistants** | [Claude Code](installation.md) · [ChatGPT](https://github.com/mohitagw15856/pm-claude-skills/tree/exports/chatgpt) · [Gemini](https://github.com/mohitagw15856/pm-claude-skills/tree/exports/gemini) · [Cursor, Codex, Windsurf](installation.md) · [any MCP client](../mcp-remote/) |
 | **Popular in China** | [Trae, Qoder, Lingma 通义灵码, CodeBuddy](CHINA.md) · [DeepSeek, Qwen, Kimi, GLM, Doubao](CHINA.md) · [Cherry Studio, Dify](CHINA.md) |
 | **Where you already work** | [Telegram](../integrations/telegram/) · [Slack](../integrations/slack-app/) · [Raycast](../integrations/raycast/) · [Obsidian](../integrations/obsidian-plugin/) · [n8n](../connectors/) |
 | **For builders** | [Python](https://pypi.org/project/pm-skills/) · [Hugging Face dataset](../dataset/) · [Docker](../Dockerfile) · [GitHub Actions](../action/) · [decision layer](../integrations/jev/) |

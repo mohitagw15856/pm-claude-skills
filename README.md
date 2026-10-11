@@ -55,7 +55,7 @@ npx pm-claude-skills add                                            # any tool: 
 npx --registry=https://registry.npmmirror.com pm-claude-skills add  # 中国大陆镜像
 ```
 
-Then just say what you need: *"Decode this job ad and tell me where I am weak."* Nothing here can break your setup: a skill is a markdown file your AI reads; installing copies text files, uninstalling deletes them. [Read one first](skills/lease-decoder/SKILL.md). Per-tool instructions: [docs/installation.md](docs/installation.md) · ChatGPT and Gemini: copy from [`exports/`](exports/) · MCP: `claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp`
+Then just say what you need: *"Decode this job ad and tell me where I am weak."* Nothing here can break your setup: a skill is a markdown file your AI reads; installing copies text files, uninstalling deletes them. [Read one first](skills/lease-decoder/SKILL.md). Per-tool instructions: [docs/installation.md](docs/installation.md) · ChatGPT and Gemini: copy from [`exports/`](https://github.com/mohitagw15856/pm-claude-skills/tree/exports) · MCP: `claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp`
 
 ## 🥊 The demo
 
