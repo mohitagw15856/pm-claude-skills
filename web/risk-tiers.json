@@ -2,7 +2,7 @@
  "generated": "2026-10-16",
  "counts": {
   "consequential": 246,
-  "high-stakes": 161,
+  "high-stakes": 162,
   "informational": 899
  },
  "tiers": {
@@ -2153,6 +2153,10 @@
   "followup-sweep": {
    "tier": "informational",
    "via": "default"
+  },
+  "form-explainer": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-decoders"
   },
   "form-filler-operator": {
    "tier": "informational",

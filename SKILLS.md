@@ -1,4 +1,4 @@
-# 🗂️ All 1294 Skills — full catalog
+# 🗂️ All 1295 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -724,7 +724,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (831 skills)
+## 🌍 Industries & Public Sector (832 skills)
 
 ### `other` — 22 skills
 
@@ -1225,7 +1225,7 @@
 | **Renew or Churn Call** (`renew-or-churn-call`) | Score an account's renewal likelihood on a five-level scale with probabilities, and name the next move for the account owner. | — |
 | **Ship or Slip** (`ship-or-slip`) | Turn a release-readiness argument into one typed decision — ship, ship reduced, or slip — with a defined state, defined options, and a probability… | — |
 
-### `pm-decoders` — 23 skills
+### `pm-decoders` — 24 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -1237,6 +1237,7 @@
 | **Claim Denial Decoder** (`claim-denial-decoder`) | Decode an insurance claim denial letter — what the cited reason actually means, whether it's commonly overturnable, and the appeal letter that… | — |
 | **Closing Disclosure Decoder** (`closing-disclosure-decoder`) | Decode a mortgage Closing Disclosure line by line — which fees are real, which are shoppable or junk, and what changed since the Loan Estimate. | — |
 | **Disability Insurance Decoder** (`disability-insurance-decoder`) | Decode a disability insurance policy or employer LTD plan — own-occupation vs any-occupation, the benefit math after offsets and taxes, and the… | — |
+| **Form Explainer** (`form-explainer`) | Explain an official form field by field (tax, benefits, immigration, employment, school, health, vehicle or court forms) from a photo, PDF, pasted… | — |
 | **Franchise Decoder** (`franchise-decoder`) | Decode a franchise offering before you sign away a decade — the earnings claims and their absence, the territory that is not exclusive, the… | — |
 | **Funeral Pricing Decoder** (`funeral-pricing-decoder`) | Decode a funeral home price list while grieving — the package maths versus the itemised list, the non-declinable basic fee, the upsells that… | — |
 | **HOA Decoder** (`hoa-decoder`) | Decode HOA covenants (CC&Rs) and the fee structure before you buy into them. | — |
@@ -2089,4 +2090,4 @@
 
 ---
 
-_1294 skills across 153 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1295 skills across 153 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

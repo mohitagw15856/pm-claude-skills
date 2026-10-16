@@ -1596,6 +1596,10 @@
   {
    "skill": "renting-after-disaster-damage",
    "input": "A storm tore part of the roof off the house we rent. Two rooms are soaked and the landlord says he will fix it when the insurance pays, maybe in two months. We have renter's insurance. Do we keep paying full rent, and should we move out?"
+  },
+  {
+   "skill": "form-explainer",
+   "input": "I started a new job in the US and HR gave me a W-4. I am married, my wife also works, and we have one child. Explain what each step of the form is asking and what I need to decide."
   }
  ]
 }

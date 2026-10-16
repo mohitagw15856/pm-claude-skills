@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build-catalogue.mjs",
   "bundles": 152,
-  "skills": 1272,
+  "skills": 1273,
   "items": [
     {
       "bundle": "pm-2027",
@@ -2430,6 +2430,10 @@
         {
           "name": "disability-insurance-decoder",
           "description": "Decode a disability insurance policy or employer LTD plan — own-occupation vs any-occupation, the benefit math after offsets and taxes, and the definitions that decide whether it pays."
+        },
+        {
+          "name": "form-explainer",
+          "description": "Explain an official form field by field (tax, benefits, immigration, employment, school, health, vehicle or court forms) from a photo, PDF, pasted text or just its name and number: what it is for, what each field means and what to put, the documents needed, the deadline, and where to send it."
         },
         {
           "name": "franchise-decoder",
