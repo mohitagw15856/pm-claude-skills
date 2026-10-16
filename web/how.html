@@ -38,6 +38,7 @@
     <button class="btn" type="submit">Ask</button>
   </form>
   <div class="chips" id="chips"></div>
+  <label class="muted" style="display:block;margin:-8px 0 14px"><input type="checkbox" id="easyRead"> 📖 Easy Read: short sentences and everyday words</label>
   <div id="out"></div>
   <details class="key">
     <summary class="muted">Use your own Claude key (after the free answers run out)</summary>
@@ -47,6 +48,7 @@
 </main>
 <script src="nav.js" defer></script>
 <script src="i18n-desc.js"></script>
+<script src="easy-read.js"></script>
 <script>
 (function () {
   var WORKER = 'https://pm-skills-mcp.pm-claude-skills.workers.dev';
@@ -63,6 +65,7 @@
   try { el('apiKey').value = localStorage.getItem('anthropic_api_key') || ''; } catch (e) {}
   el('apiKey').addEventListener('change', function () { try { localStorage.setItem('anthropic_api_key', el('apiKey').value.trim()); } catch (e) {} });
 
+  if (window.PMEasyRead) PMEasyRead.bind(el('easyRead'));
   EXAMPLES.forEach(function (x) { var b = document.createElement('button'); b.type = 'button'; b.textContent = x; b.onclick = function () { el('q').value = x; ask(x); }; el('chips').appendChild(b); });
 
   // The skills, plus their descriptions in the visitor's language when published.
@@ -96,7 +99,7 @@
   function system(src) {
     return 'You answer "how do I" questions using ONLY the professional skills below. Write at most 180 words: a direct answer, then the few steps that matter most. ' +
       'Cite every step with the number of the skill it comes from, like [1] or [2]. If the skills do not cover the question, say so in one sentence instead of guessing. ' +
-      'For legal, medical, tax or money questions add one short line that this is not professional advice. Plain text; no headings. Answer in the language the question is written in.\n\n' +
+      'For legal, medical, tax or money questions add one short line that this is not professional advice. Plain text; no headings. Answer in the language the question is written in.' + (window.PMEasyRead ? PMEasyRead.instruction() : '') + '\n\n' +
       src.map(function (s, i) { return '[' + (i + 1) + '] ' + s.title + ' (' + s.name + ')\n' + s.description + '\n' + s.instructions.replace(/^---[\s\S]*?---/, '').slice(0, 3400); }).join('\n\n');
   }
 

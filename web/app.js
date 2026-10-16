@@ -156,6 +156,7 @@ async function init() {
   el('fbDown').addEventListener('click', () => sendFeedback('down'));
   // Output language — restore the saved choice, persist + track changes.
   try { const sl = localStorage.getItem('pm_outputLang'); if (sl && el('outputLang')) el('outputLang').value = sl; } catch (e) {}
+  if (window.PMEasyRead) PMEasyRead.bind(el('easyRead'));
   if (el('outputLang')) el('outputLang').addEventListener('change', function () {
     try { localStorage.setItem('pm_outputLang', this.value); } catch (e) {}
     if (window.pmTrack && this.value) pmTrack('lang/' + this.value);
@@ -1446,6 +1447,8 @@ ${instr}${ctxBlock}`;
     system += langInstr;
     plainSystem = plainSystem ? plainSystem + langInstr : langInstr.trim();
   }
+  // Easy Read: plain language, same facts (web/easy-read.js).
+  if (window.PMEasyRead && PMEasyRead.on()) { const er = PMEasyRead.instruction(); system += er; plainSystem = plainSystem ? plainSystem + er : er.trim(); }
   // Remix: layer the user's custom instructions on top of the skill (and the plain side).
   const remix = el('remixInput') ? el('remixInput').value.trim() : '';
   if (remix) {
