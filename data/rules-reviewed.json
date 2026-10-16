@@ -273,6 +273,10 @@
       "reviewed": "2026-07-14",
       "by": "seed"
     },
+    "crop-insurance-claim": {
+      "reviewed": "2026-10-16",
+      "by": "seed"
+    },
     "customer-incident-update": {
       "reviewed": "2026-08-03",
       "by": "seed"
@@ -527,6 +531,10 @@
     },
     "nda-analyser": {
       "reviewed": "2026-06-08",
+      "by": "seed"
+    },
+    "newcomer-school-enrolment": {
+      "reviewed": "2026-10-16",
       "by": "seed"
     },
     "notify-everyone-of-a-death": {

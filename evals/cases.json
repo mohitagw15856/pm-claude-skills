@@ -1560,6 +1560,26 @@
   {
    "skill": "kr-work-report",
    "input": "이번 주 주간보고 정리해 주세요. 메모: 결제 모듈 연동 80% 완료, 카드사 테스트 서버 장애로 이틀 지연, 다음 주 QA 시작 예정, 디자인팀에 영수증 화면 시안 요청 필요, 출시일 10월 20일 유지 가능할지 불확실."
+  },
+  {
+   "skill": "newcomer-school-enrolment",
+   "input": "We moved to Lisbon two weeks ago from Brazil. Our daughter is 10 and our son is 6. We have their passports but not their school reports, and the son is behind on one vaccination. How do we get them into school?"
+  },
+  {
+   "skill": "market-stall-pricing",
+   "input": "I sell boiled maize outside a bus station. Each cob costs me 8 including charcoal, my pitch costs 100 a day, I sell about 120 cobs and about 10 go unsold. People pay 15 at the stall next to me. What should I charge?"
+  },
+  {
+   "skill": "microloan-comparison",
+   "input": "Offer 1: 20,000 for 6 months at 3% flat per month with 2% processing fee. Offer 2: a group loan of 20,000 for 6 months at 36% per year reducing balance, with 10% compulsory savings held until the end. Which is cheaper and what are the risks?"
+  },
+  {
+   "skill": "crop-insurance-claim",
+   "input": "Floods damaged my rice paddy three days ago, about 2 of my 5 acres. I enrolled in crop insurance through my cooperative. What should I do now and what proof do I need?"
+  },
+  {
+   "skill": "daily-cash-book",
+   "input": "I sell second-hand clothes from home and on WhatsApp. I buy bales for 3,000 each, sell items for 50 to 300, and I never know if I am making money. Set up records I can keep on my phone."
   }
  ]
 }

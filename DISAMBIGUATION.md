@@ -1,7 +1,7 @@
 # 🧭 Disambiguation — you want *this* one, not that one
 
 > **Generated — do not edit.** Run `node scripts/build-disambiguation.mjs`.
-> 1285 live skills across 152 bundles, plus 12 retired names that still resolve.
+> 1290 live skills across 152 bundles, plus 12 retired names that still resolve.
 
 At this size the hard part is not finding *a* skill — it is telling two similar ones apart, and
 knowing whether the thing you are about to write already exists under a different noun.
@@ -36,6 +36,7 @@ choosing between them.
 | Cold Email / Investor Cold Email | `cold-email` | `investor-cold-email` | Investor outreach is traction-forward with a different ask structure from B2B sales outreach. |
 | Context Budget / Context Switch Budget | `context-budget` | `context-switch-budget` | Name collision only: an LLM context window vs human attention fragmentation across a week. |
 | Contract Review / Venue Contract Review | `contract-review` | `venue-contract-review` | General contract review vs the venue-specific commercial exposure — minimum spend, attrition, cancellation ladder — that a general review does not look for. |
+| Crop Insurance Claim / Insurance Claim | `crop-insurance-claim` | `insurance-claim` | Crop and livestock policies work differently from household and personal claims: index or area-based payouts on weather or yield triggers, field evidence before replanting, and enrolment through banks or cooperatives. |
 | Design Critique / Figma Design Critique — PM Perspective | `design-critique` | `figma-design-critique-pm` | General UX critique frameworks vs a PM-lens critique run against a Figma file. |
 | Discharge Summary / Physiotherapy Discharge Summary | `discharge-summary` | `physio-discharge-summary` | A hospital inpatient discharge summary vs closing an outpatient physiotherapy episode against the goals set at assessment. |
 | Email Triage / Email Triage System | `email-triage` | `email-triage-system` | Triaging a live Gmail inbox down to what needs you vs installing a durable four-verb habit. |

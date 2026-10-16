@@ -1,4 +1,4 @@
-# 🗂️ All 1285 Skills — full catalog
+# 🗂️ All 1290 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -431,7 +431,7 @@
 | **Support Macro** (`support-macro`) | Write reusable support macros / canned responses that sound human, not robotic. | — |
 | **Support Runbook** (`support-runbook`) | Write a support runbook for handling a recurring issue type consistently. | — |
 
-## 💰 Finance, Ops & Business (93 skills)
+## 💰 Finance, Ops & Business (94 skills)
 
 ### `pm-accounting` — 6 skills
 
@@ -523,7 +523,7 @@
 | **Runway Planner** (`runway-planner`) | Turn burn and cash into a clear runway picture and a raise decision — months left, default-alive vs default-dead, and what to cut or change. | — |
 | **Startup Idea Validator** (`startup-idea-validator`) | Pressure-test a startup idea the way a sharp investor or co-founder would — problem, market, wedge, moat, why-now, and the fastest cheap way to… | — |
 
-### `pm-money` — 21 skills
+### `pm-money` — 22 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -538,6 +538,7 @@
 | **Hidden-Fee Auditor** (`hidden-fee-auditor`) | Scan a bill, contract, or quote for junk and hidden fees — the padding buried in the fine print — and get them questioned or removed. | — |
 | **Investing Policy Statement** (`investing-policy-statement`) | Draft a personal investing policy statement (IPS) — the rules someone sets for their own investing. | — |
 | **Lower My Bill** (`lower-my-bill`) | Negotiate a recurring bill down — internet, phone, insurance, cable, gym — with a ready-to-read script, the competitor leverage that actually… | — |
+| **Microloan Comparison** (`microloan-comparison`) | Compare small loans from microfinance institutions, lending apps, savings groups and moneylenders by what they really cost, including flat versus… | — |
 | **Money Priorities Order** (`money-priorities-order`) | Decide where your next dollar should go — the order to tackle emergency fund, high-interest debt, retirement match, and saving/investing — so you… | — |
 | **Net Worth Statement** (`net-worth-statement`) | Produce a personal net-worth statement — assets minus liabilities — and a way to track it. | — |
 | **Price-Match Request** (`price-match-request`) | Get a retailer to match a lower price you found — or refund the difference when the price drops right after you bought — with the request written… | — |
@@ -723,7 +724,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (823 skills)
+## 🌍 Industries & Public Sector (827 skills)
 
 ### `other` — 22 skills
 
@@ -1534,12 +1535,13 @@
 | **Name Change Navigator** (`name-change-navigator`) | Get through the 40-institution slog of changing your name — after marriage, divorce, transition, or just because — in the right order, so one… | — |
 | **Two Worlds Translator** (`two-worlds-translator`) | Bridge the gap between your home culture and your adopted one — explain your immigrant parents to your partner (and vice versa), navigate the… | — |
 
-### `pm-insurance` — 5 skills
+### `pm-insurance` — 6 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Claims Triage** (`claims-triage`) | Triage an incoming insurance claim: check the coverage trigger against policy wording, band severity and complexity, screen for fraud indicators… | — |
 | **Coverage Gap Analysis** (`coverage-gap-analysis`) | Map an organisation's risks against its insurance policy portfolio to find what's uncovered, underinsured, or double-covered. | — |
+| **Crop Insurance Claim** (`crop-insurance-claim`) | Make a crop or livestock insurance claim after drought, flood, pests, disease or hail: report it in time, record the loss properly, and follow up… | — |
 | **Insurance Claim Appeal** (`insurance-claim-appeal`) | Appeal a denied insurance claim — read the real reason for the denial, find the strongest grounds, and draft the appeal with the evidence that… | — |
 | **Policy Renewal Review** (`policy-renewal-review`) | Run a pre-renewal review of an insurance programme: scan coverage gaps against current operations, test limit adequacy against inflation and… | — |
 | **Underwriting Narrative** (`underwriting-narrative`) | Write the underwriting file narrative for a risk: the risk story, exposure quantification, loss-history read, mitigating and aggravating factors… | — |
@@ -1700,7 +1702,7 @@
 | **NT Translator** (`nt-translator`) | Translate both directions across the neurodivergent↔neurotypical gap at work — decode what an indirect message actually meant ('let's circle back'… | — |
 | **Sensory Audit** (`sensory-audit`) | Walk a space — home, office, commute, classroom — and find the sensory landmines quietly draining or overloading you, with fixes ranked by cost… | — |
 
-### `pm-newcomer` — 5 skills
+### `pm-newcomer` — 6 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -1708,6 +1710,7 @@
 | **Credential Recognition** (`credential-recognition`) | Get foreign qualifications, degrees, or professional licenses recognised in a new country — figure out whether recognition is even needed, which… | — |
 | **Credit From Scratch** (`credit-from-scratch`) | Build a credit history from zero in a new country — understand that credit doesn't transfer across borders, get the first products that report… | — |
 | **Healthcare System Primer** (`healthcare-system-primer`) | Understand and enrol in a new country's healthcare system — how it works (public/private/insurance-based), what you're entitled to with your… | — |
+| **Newcomer School Enrolment** (`newcomer-school-enrolment`) | Get a child into school after moving to a new country: who to contact, the documents schools ask for, what to do when papers are missing, language… | — |
 | **Tax Residency Primer** (`tax-residency-primer`) | Orient yourself on your tax-residency situation after moving countries — the questions that determine where you owe tax, the double-taxation and… | — |
 
 ### `pm-newgen` — 10 skills
@@ -1864,11 +1867,13 @@
 | **Injection Spotter** (`injection-spotter`) | Spot prompt-injection in untrusted content before an agent acts on it — the anatomy of injected instructions across the channels attackers use… | — |
 | **Tool Permission Review** (`tool-permission-review`) | Review what an agent is actually allowed to do before you turn it loose — the tool-by-tool audit (each capability's blast radius), the… | — |
 
-### `pm-sidehustle` — 3 skills
+### `pm-sidehustle` — 5 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Daily Cash Book** (`daily-cash-book`) | Keep simple daily money records for a small trader, stall or home business with no accounting software: a cash book, stock count and weekly… | — |
 | **First Client Contract** (`first-client-contract`) | Put your first client agreement in writing — the eight clauses a simple service contract must have, in plain language a non-lawyer can use, with… | — |
+| **Market Stall Pricing** (`market-stall-pricing`) | Price goods for a market stall, street stall or small shop so every sale covers its costs, and hold your price when customers bargain. | — |
 | **Quarterly Tax Rhythm** (`quarterly-tax-rhythm`) | Build the tax habit self-employment requires — the setaside percentage from day one, the quarterly calendar, the records that make filing boring… | — |
 | **Side Business Setup** (`side-business-setup`) | Set up a side business in the right order — the do-first sequence (separate money, basic terms, simple records) vs. | — |
 
@@ -2080,4 +2085,4 @@
 
 ---
 
-_1285 skills across 153 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1290 skills across 153 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

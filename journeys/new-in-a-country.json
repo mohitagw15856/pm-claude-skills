@@ -1,0 +1,16 @@
+{
+  "id": "new-in-a-country",
+  "name": "New in a country",
+  "emoji": "🧳",
+  "triggers": ["I just moved to a new country", "we arrived last week, what do we do first", "I'm a newcomer and nothing works without something else"],
+  "boundary": "Not legal or immigration advice. Rules on residence, work and benefits differ by country and change often; confirm anything decisive with the official authority or a registered adviser.",
+  "ask_first": "Which country and city, and is anyone's right to stay time-limited? A deadline on a permit changes the order.",
+  "steps": [
+    { "skill": "arrival-setup", "why": "ID, registration, bank, phone and address unlock each other; doing them in the right order avoids the loops that trap newcomers.", "carry": ["registration done", "bank account status", "address proof available"] },
+    { "skill": "newcomer-school-enrolment", "why": "Children lose weeks to the wrong office or a missing paper; start the school place in week one.", "carry": ["school place applied for", "documents still missing"] },
+    { "skill": "healthcare-system-primer", "why": "Know how to see a doctor before anyone is ill.", "carry": ["registered with a doctor or clinic", "emergency number"] },
+    { "skill": "credit-from-scratch", "why": "Credit does not transfer across borders; start building it early.", "carry": ["first credit product chosen"] },
+    { "skill": "credential-recognition", "why": "Getting qualifications recognised takes months; start it before the job search needs it.", "carry": ["recognition body found", "documents to translate"] }
+  ],
+  "done_when": "Registered, banked, children in school or applied, a doctor arranged, credit started, and qualifications recognition under way."
+}

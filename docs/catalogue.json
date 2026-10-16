@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build-catalogue.mjs",
   "bundles": 152,
-  "skills": 1263,
+  "skills": 1268,
   "items": [
     {
       "bundle": "pm-2027",
@@ -4073,6 +4073,10 @@
           "description": "Map an organisation's risks against its insurance policy portfolio to find what's uncovered, underinsured, or double-covered."
         },
         {
+          "name": "crop-insurance-claim",
+          "description": "Make a crop or livestock insurance claim after drought, flood, pests, disease or hail: report it in time, record the loss properly, and follow up or appeal if the payout is too low or refused."
+        },
+        {
           "name": "insurance-claim-appeal",
           "description": "Appeal a denied insurance claim — read the real reason for the denial, find the strongest grounds, and draft the appeal with the evidence that answers it."
         },
@@ -4821,6 +4825,10 @@
           "description": "Negotiate a recurring bill down — internet, phone, insurance, cable, gym — with a ready-to-read script, the competitor leverage that actually moves the price, and exactly what to say when they say no."
         },
         {
+          "name": "microloan-comparison",
+          "description": "Compare small loans from microfinance institutions, lending apps, savings groups and moneylenders by what they really cost, including flat versus reducing-balance interest, fees, compulsory savings and group guarantees."
+        },
+        {
           "name": "money-priorities-order",
           "description": "Decide where your next dollar should go — the order to tackle emergency fund, high-interest debt, retirement match, and saving/investing — so you stop guessing and build momentum."
         },
@@ -4940,6 +4948,10 @@
         {
           "name": "healthcare-system-primer",
           "description": "Understand and enrol in a new country's healthcare system — how it works (public/private/insurance-based), what you're entitled to with your status, how to register with a doctor, get insurance if required, and what to do before you're covered."
+        },
+        {
+          "name": "newcomer-school-enrolment",
+          "description": "Get a child into school after moving to a new country: who to contact, the documents schools ask for, what to do when papers are missing, language support, and the right to a place."
         },
         {
           "name": "tax-residency-primer",
@@ -5852,8 +5864,16 @@
       },
       "skills": [
         {
+          "name": "daily-cash-book",
+          "description": "Keep simple daily money records for a small trader, stall or home business with no accounting software: a cash book, stock count and weekly summary that show whether the business makes money and keep business and household money apart."
+        },
+        {
           "name": "first-client-contract",
           "description": "Put your first client agreement in writing — the eight clauses a simple service contract must have, in plain language a non-lawyer can use, with the blanks filled from your actual deal."
+        },
+        {
+          "name": "market-stall-pricing",
+          "description": "Price goods for a market stall, street stall or small shop so every sale covers its costs, and hold your price when customers bargain."
         },
         {
           "name": "quarterly-tax-rhythm",

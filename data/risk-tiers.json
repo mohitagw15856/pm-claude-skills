@@ -1,8 +1,8 @@
 {
- "generated": "2026-10-05",
+ "generated": "2026-10-16",
  "counts": {
-  "consequential": 243,
-  "high-stakes": 155,
+  "consequential": 246,
+  "high-stakes": 157,
   "informational": 899
  },
  "tiers": {
@@ -1190,6 +1190,10 @@
    "tier": "high-stakes",
    "via": "bundle:pm-banking"
   },
+  "crop-insurance-claim": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-insurance"
+  },
   "cross-border-listing": {
    "tier": "consequential",
    "via": "bundle:pm-chuhai"
@@ -1249,6 +1253,10 @@
   "cv-honesty-check": {
    "tier": "consequential",
    "via": "bundle:pm-cv"
+  },
+  "daily-cash-book": {
+   "tier": "consequential",
+   "via": "bundle:pm-sidehustle"
   },
   "dashboard-brief": {
    "tier": "informational",
@@ -2914,6 +2922,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "market-stall-pricing": {
+   "tier": "consequential",
+   "via": "bundle:pm-sidehustle"
+  },
   "marketing-funnel-plan": {
    "tier": "informational",
    "via": "default"
@@ -3038,6 +3050,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "microloan-comparison": {
+   "tier": "consequential",
+   "via": "bundle:pm-money"
+  },
   "microservices-decomposition": {
    "tier": "informational",
    "via": "default"
@@ -3149,6 +3165,10 @@
   "new-parent-logistics": {
    "tier": "informational",
    "via": "default"
+  },
+  "newcomer-school-enrolment": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-newcomer"
   },
   "newsletter-digest-brief": {
    "tier": "informational",
