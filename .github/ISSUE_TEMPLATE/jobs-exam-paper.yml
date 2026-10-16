@@ -1,0 +1,65 @@
+name: "📝 Jobs exam paper (a task from your job, and how you'd mark it)"
+description: You do this job. Write one real task and the marking scheme you'd use on a junior colleague; people in your occupation will grade AI answers to it blind.
+title: "[Jobs exam paper] <occupation>"
+labels: ["jobs-exam-paper"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        How it works: [skillbench/jobs-exam](https://github.com/mohitagw15856/pm-claude-skills/tree/main/skillbench/jobs-exam). Remove anything confidential: names, clients, real figures you aren't allowed to share. Invented but realistic details are fine.
+  - type: input
+    id: occupation
+    attributes:
+      label: Occupation
+      placeholder: Payroll administrator
+    validations:
+      required: true
+  - type: input
+    id: credential
+    attributes:
+      label: Your experience
+      description: Role, years and where. No name needed.
+      placeholder: Payroll manager, 9 years, UK
+    validations:
+      required: true
+  - type: input
+    id: region
+    attributes:
+      label: Where the task applies
+      placeholder: United Kingdom
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: The task
+      description: Exactly what you'd hand a junior colleague, with the materials they'd need.
+    validations:
+      required: true
+  - type: input
+    id: time
+    attributes:
+      label: Minutes a qualified person would take
+      placeholder: "15"
+  - type: textarea
+    id: marking
+    attributes:
+      label: Marking scheme
+      description: One point per line, with its marks. At least three points.
+      placeholder: |
+        3 marks: works out the unpaid-leave deduction correctly
+        2 marks: says plainly what's wrong and when it will be fixed
+    validations:
+      required: true
+  - type: textarea
+    id: fatal
+    attributes:
+      label: Fatal errors (any one fails the answer)
+      placeholder: Tells the employee the payslip is correct
+  - type: input
+    id: pass
+    attributes:
+      label: Pass mark
+      placeholder: "7 out of 10"
+    validations:
+      required: true

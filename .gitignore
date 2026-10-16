@@ -110,3 +110,6 @@ training/pm-8b-train.jsonl
 training/pm-8b-heldout-tasks.json
 training/pm-8b-results.json
 training/out/
+
+# The jobs-exam key unblinds graders: published only after grading closes.
+skillbench/jobs-exam/.key.json

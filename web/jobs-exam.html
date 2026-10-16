@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The jobs exam: AI marked by people who do the job | PM Skills</title>
+<meta name="description" content="Real tasks from working professionals, with the marking scheme they'd use on a junior colleague. AI answers are graded blind by people in the same occupation, never by another AI." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/jobs-exam.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .je-wrap { max-width: 860px; margin: 0 auto; padding: 22px 22px 70px; }
+  .je-wrap h1 { font-size: 30px; margin-bottom: 6px; }
+  .lead, .muted { color: var(--muted); line-height: 1.6; }
+  .card { border: 1px solid var(--border); border-radius: 14px; background: var(--panel); padding: 16px 18px; margin: 14px 0; overflow-wrap: anywhere; }
+  .task, .ans { white-space: pre-wrap; line-height: 1.6; }
+  .ans { border: 1px dashed var(--border); border-radius: 10px; padding: 12px; background: var(--bg); max-height: 420px; overflow: auto; }
+  .mk { display: grid; grid-template-columns: 1fr auto; gap: 8px 12px; align-items: center; margin: 10px 0; }
+  .mk input[type=number] { width: 64px; }
+  select { width: 100%; min-width: 0; }
+  .mk label { min-width: 0; }
+  select, textarea, input[type=text], input[type=number] { border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 9px; padding: 8px 10px; font: inherit; box-sizing: border-box; }
+  textarea, input[type=text] { width: 100%; }
+  .btn { border: 1px solid var(--accent); background: var(--accent); color: #fff; border-radius: 10px; padding: 9px 15px; cursor: pointer; font: inherit; }
+  .btn.ghost { background: transparent; color: var(--accent); }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 12px 0; }
+  .ok { color: #10b981; } .bad { color: #ef4444; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<main class="je-wrap">
+  <h1>The jobs exam</h1>
+  <p class="lead">Benchmarks usually ask one AI to mark another. This one asks <strong>people who do the job</strong>. A working payroll officer, nurse, paralegal or site manager writes a real task and the marking scheme they'd use on a junior colleague. AI answers are then graded <strong>blind</strong> by others in the same occupation. A result counts only when two or more of them have marked it.</p>
+  <div class="card">
+    <b>Three ways to take part</b>
+    <ol class="muted">
+      <li><strong>Write a paper</strong> (20 minutes): a task from your work, and how you'd mark it. <a href="https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=jobs-exam-paper.yml">Submit a paper</a>.</li>
+      <li><strong>Grade answers</strong> in your occupation, below. You won't see which AI wrote what.</li>
+      <li><strong>Run models</strong> on the papers, free with local models: <a href="https://github.com/mohitagw15856/pm-claude-skills/tree/main/skillbench/jobs-exam">skillbench/jobs-exam</a>.</li>
+    </ol>
+  </div>
+  <label class="muted" for="paper">Paper</label>
+  <div class="row"><select id="paper" aria-label="Choose a paper"></select></div>
+  <div id="stage" aria-live="polite"><p class="muted">Loading the papers…</p></div>
+  <div class="card" id="results" hidden></div>
+</main>
+<script src="nav.js" defer></script>
+<script>
+(function () {
+  var RAW = 'https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/skillbench/jobs-exam/';
+  var el = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  var PAPERS = [], paper = null, answers = [], at = 0, grades = [];
+
+  fetch(RAW + 'papers.json').then(function (r) { return r.json(); }).then(function (cfg) {
+    PAPERS = (cfg.papers || []).slice();
+    if (cfg.example) PAPERS.push(cfg.example);
+    el('paper').innerHTML = PAPERS.map(function (p, i) { return '<option value="' + i + '">' + esc(p.occupation) + ' (' + esc(p.region) + ')' + (p.example_only ? ': practice paper, not scored' : '') + '</option>'; }).join('');
+    el('paper').addEventListener('change', function () { open(PAPERS[+el('paper').value]); });
+    if (PAPERS.length) open(PAPERS[0]);
+    if (!(cfg.papers || []).length) el('stage').insertAdjacentHTML('afterbegin', '<p class="muted">No practitioner papers yet, so the exam has no results to show. The practice paper below shows how marking works. Paste any answer into it to try it.</p>');
+  }).catch(function () { el('stage').innerHTML = '<p class="muted">Could not load the papers. Check your connection.</p>'; });
+
+  fetch(RAW + 'results.json').then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (res) {
+    if (!(res.models || []).length) return;
+    el('results').hidden = false;
+    el('results').innerHTML = '<b>Results (' + esc(res.scored) + ')</b><p class="muted">' + esc(res.method) + '</p><ul>' + res.models.map(function (m) { return '<li>' + esc(m.model) + ': passed ' + m.passed + ' of ' + m.answers + ' (' + Math.round(m.pass_rate * 100) + '%), ' + m.occupations + ' occupation(s)</li>'; }).join('') + '</ul>';
+  }).catch(function () {});
+
+  function open(p) {
+    paper = p; at = 0; grades = []; answers = [];
+    if (p.example_only) { answers = [{ id: 'practice', text: '' }]; return render(); }
+    el('stage').innerHTML = '<p class="muted">Loading answers…</p>';
+    fetch(RAW + 'answers/' + encodeURIComponent(p.id) + '.json').then(function (r) { if (!r.ok) throw 0; return r.json(); })
+      .then(function (list) { answers = list; render(); })
+      .catch(function () { answers = []; render(); });
+  }
+
+  function render() {
+    var p = paper, total = p.marking.reduce(function (n, m) { return n + m.marks; }, 0);
+    var head = '<div class="card"><b>The task</b> <span class="muted">(about ' + esc(p.time_minutes || '?') + ' minutes for a qualified ' + esc(p.occupation.toLowerCase()) + ')</span><div class="task">' + esc(p.task) + '</div><p class="muted">' + esc(p.author.credential || p.author.role || '') + '</p></div>';
+    if (!answers.length) { el('stage').innerHTML = head + '<p class="muted">No answers to grade on this paper yet.</p>'; return; }
+    if (at >= answers.length) return finish(head);
+    var a = answers[at];
+    el('stage').innerHTML = head + '<div class="card"><b>Answer ' + (at + 1) + ' of ' + answers.length + '</b> <span class="muted">(which AI wrote it is hidden)</span>' +
+      (p.example_only ? '<label class="muted" style="display:block;margin-top:8px" for="practiceText">Paste an answer to practise on</label><textarea id="practiceText" rows="8"></textarea>' : '<div class="ans">' + esc(a.text) + '</div>') +
+      '<div class="mk">' + p.marking.map(function (m, i) { return '<label for="m' + i + '">' + esc(m.point) + '</label><span><input type="number" id="m' + i + '" min="0" max="' + m.marks + '" value="0"> / ' + m.marks + '</span>'; }).join('') + '</div>' +
+      (p.fatal.length ? '<p><b>Fatal errors</b> <span class="muted">(any one fails the answer)</span></p>' + p.fatal.map(function (f, i) { return '<label style="display:block"><input type="checkbox" class="fatal" id="f' + i + '"> ' + esc(f) + '</label>'; }).join('') : '') +
+      '<div class="row"><button class="btn" type="button" id="next">Save and next</button><span class="muted" id="sum">0 / ' + total + ' (pass mark ' + p.pass_mark + ')</span></div></div>';
+    var sum = function () {
+      if (!el('m0')) return;
+      var s = p.marking.reduce(function (n, m, i) { return n + Math.max(0, Math.min(m.marks, +el('m' + i).value || 0)); }, 0);
+      var fatal = [].some.call(document.querySelectorAll('.fatal'), function (c) { return c.checked; });
+      el('sum').innerHTML = (fatal ? '<span class="bad">Fails: fatal error</span>' : s + ' / ' + total + ' <span class="' + (s >= p.pass_mark ? 'ok">pass' : 'bad">below the pass mark') + '</span>');
+    };
+    el('stage').oninput = sum; el('stage').onchange = sum;
+    el('next').addEventListener('click', function () {
+      grades.push({ answer: a.id, marks: p.marking.map(function (m, i) { return Math.max(0, Math.min(m.marks, Math.round(+el('m' + i).value || 0))); }), fatal: [].some.call(document.querySelectorAll('.fatal'), function (c) { return c.checked; }) });
+      at++; render(); scrollTo(0, 0);
+    });
+  }
+
+  function finish(head) {
+    el('stage').oninput = null; el('stage').onchange = null;
+    if (paper.example_only) { el('stage').innerHTML = head + '<div class="card"><b>That is how marking works.</b><p class="muted">Practice grades are not submitted. To grade real answers, pick a practitioner paper in your occupation, or <a href="https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=jobs-exam-paper.yml">write the first paper for it</a>.</p></div>'; return; }
+    el('stage').innerHTML = head + '<div class="card"><b>All ' + grades.length + ' answers graded.</b><label class="muted" style="display:block;margin:10px 0 4px" for="cred">Your role and experience, as it should be recorded (no names needed)</label>' +
+      '<input type="text" id="cred" maxlength="140" placeholder="Payroll officer, 6 years, UK"><div class="row"><button class="btn" type="button" id="send">Submit my grades</button></div><p class="muted">This opens a GitHub issue with your marks for a maintainer to add. Answers stay blind until grading closes.</p></div>';
+    el('send').addEventListener('click', function () {
+      var cred = el('cred').value.trim(); if (cred.length < 10) { el('cred').focus(); return; }
+      var body = 'Grades for jobs-exam paper `' + paper.id + '`.\n\n**Grader:** ' + cred + '\n\n```json\n' + JSON.stringify(grades.map(function (g) { return { answer: g.answer, grader: { credential: cred }, marks: g.marks, fatal: g.fatal }; })) + '\n```\n\nI do this job and graded without knowing which model wrote each answer.';
+      window.open('https://github.com/mohitagw15856/pm-claude-skills/issues/new?title=' + encodeURIComponent('[Jobs exam grade] ' + paper.id) + '&labels=jobs-exam-grade&body=' + encodeURIComponent(body), '_blank', 'noopener');
+    });
+  }
+})();
+</script>
+</body>
+</html>
