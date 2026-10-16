@@ -27,6 +27,7 @@ jobs:
         run: |
           node web/build-skills.mjs
           node scripts/build-overlays.mjs
+          node scripts/check-partners.mjs --write
           node scripts/build-proven.mjs
           node scripts/build-i18n-desc.mjs
       - name: Run the suite

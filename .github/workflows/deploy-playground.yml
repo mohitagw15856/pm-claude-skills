@@ -23,6 +23,7 @@ on:
       - 'scripts/build-leaderboard.mjs'
       - 'scripts/build-coverage.mjs'
       - 'scripts/build-skill-pages.mjs'
+      - 'config/partners.json'
       - 'scripts/build-skill-changes.mjs'
       - 'scripts/build-community.mjs'
       - 'community/registry.json'
@@ -252,6 +253,9 @@ jobs:
 
       - name: Publish the jurisdiction overlays (web/overlays.json)
         run: node scripts/build-overlays.mjs
+
+      - name: Publish current partner verifications (web/partners.json)
+        run: node scripts/check-partners.mjs --write
 
       - name: Build what actually worked, per skill (web/proven.json)
         run: node scripts/build-proven.mjs

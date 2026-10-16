@@ -1,0 +1,66 @@
+name: "🤝 Partner verification (an organisation checked skills)"
+description: Your organisation helps people with what some skills cover, and people there have checked them. Free; you get a page to send your users to.
+title: "[Partner] <organisation name>"
+labels: ["partner-verification"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Read [the partner programme](https://github.com/mohitagw15856/pm-claude-skills/blob/main/docs/PARTNER-PROGRAM.md) first. A maintainer will confirm this came from your organisation (an email from your organisation's domain, or a note on your own website) before anything is listed. Please don't paste anything confidential.
+  - type: input
+    id: name
+    attributes:
+      label: Organisation name
+      placeholder: Riverside Advice Centre
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Organisation website
+      placeholder: https://riverside.example.org
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of organisation?
+      options: [advice-service, legal-aid, charity, union, public-service, professional-body, health-service, school, employer, community-group]
+    validations:
+      required: true
+  - type: input
+    id: region
+    attributes:
+      label: Where your checks apply
+      placeholder: England and Wales
+    validations:
+      required: true
+  - type: textarea
+    id: skills
+    attributes:
+      label: Skills you checked, and who checked each
+      description: One per line, as skill name and the role of the person who read it end to end. Roles only; names are optional.
+      placeholder: |
+        security-deposit-recovery: a housing caseworker
+        benefits-decoder: a welfare-rights adviser
+    validations:
+      required: true
+  - type: textarea
+    id: changes
+    attributes:
+      label: Anything wrong or missing?
+      description: Edits you need before you'd vouch for a skill. We make them first, then list the check.
+  - type: input
+    id: contact
+    attributes:
+      label: How we confirm it's you
+      description: For example, "I'll email from @riverside.example.org", or the URL of a page on your site that mentions this.
+    validations:
+      required: true
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Understood
+      options:
+        - label: A check is not advice and not a guarantee. The skills keep their not-advice lines, and the check lasts 12 months unless we renew it.
+          required: true

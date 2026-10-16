@@ -2,6 +2,8 @@
 
 The most valuable thing the library can add now isn't skill #1,175 — it's a **real lawyer, nurse, financial counselor, or social worker having read the skills where being wrong hurts someone.** This program recruits them, records their reviews, and surfaces a badge users can trust.
 
+Organisations can check skills too (an advice service, a clinic, a union): see the [partner programme](PARTNER-PROGRAM.md).
+
 ## What a review is
 
 A domain expert reads a **high-stakes** skill (see [RISK-TIERS.md](RISK-TIERS.md)) end to end and confirms:

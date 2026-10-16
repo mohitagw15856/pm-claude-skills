@@ -1,0 +1,5 @@
+{
+  "_comment": "Partner organisations that have checked skills for the people they serve (docs/PARTNER-PROGRAM.md). Add a partner only from a partner-verification issue, after a maintainer has confirmed it came from the organisation (an email from its domain or a post on its own site). Never list an organisation that did not take part. Checked by scripts/check-partners.mjs.",
+  "validity_months": 12,
+  "partners": []
+}

@@ -49,6 +49,15 @@ function currentReview(name) {
     return { ...r, d, exp };
   }).filter((r) => r.exp >= now).sort((a, b) => b.d - a.d)[0] || null;
 }
+// Partner verifications (config/partners.json, docs/PARTNER-PROGRAM.md): an organisation
+// that checked this skill for the people it serves, within validity_months.
+const partnersCfg = existsSync(join(root, 'config', 'partners.json')) ? JSON.parse(readFileSync(join(root, 'config', 'partners.json'), 'utf8')) : { partners: [] };
+function partnerBadges(name) {
+  const months = partnersCfg.validity_months || 12, now = new Date();
+  return (partnersCfg.partners || []).flatMap((p) => (p.verified || []).filter((v) => v.skill === name && v.date).map((v) => ({ p, v, d: new Date(`${v.date}T00:00:00Z`) })))
+    .filter(({ d }) => new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + months, d.getUTCDate())) >= now)
+    .map(({ p, v, d }) => `<a class="tier expert-ok" href="${BASE}/partners.html?p=${encodeURIComponent(p.id)}" title="Checked by ${esc(v.checked_by)} at ${esc(p.name)} for ${esc(p.region)}">🤝 Checked by ${esc(p.name)}, ${MONTHS[d.getUTCMonth()]} ${d.getUTCFullYear()}</a>`).join('');
+}
 function expertBadge(name) {
   const r = currentReview(name);
   if (r) {
@@ -316,7 +325,7 @@ ${existsSync(join(root, 'skills-i18n', 'zh', s.name, 'SKILL.md')) ? `<link rel="
     <div class="inner">
       <h1>${esc(s.title)}</h1>
       <div class="row">
-        <span class="tier tier-${s.tier}">${dot} ${label}</span>${s.updated ? `<span class="tier" title="last change to this skill">🕐 updated ${s.updated}</span>` : ''}${reviewedBadge(s.name)}${expertBadge(s.name)}
+        <span class="tier tier-${s.tier}">${dot} ${label}</span>${s.updated ? `<span class="tier" title="last change to this skill">🕐 updated ${s.updated}</span>` : ''}${reviewedBadge(s.name)}${expertBadge(s.name)}${partnerBadges(s.name)}
         ${evalBadge}
         <span class="badge badge-l3">🔷 SkillSpec L3</span>
         ${cf.hasScript ? '<span class="badge badge-script">⚙ ships an executable helper</span>' : ''}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Partner-checked skills: organisations that vouch for them | PM Skills</title>
+<meta name="description" content="Advice services, legal-aid clinics, unions, charities and public services that have checked skills for the people they serve, and the skills each one checked." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/partners.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .pt-wrap { max-width: 860px; margin: 0 auto; padding: 22px 22px 70px; }
+  .pt-wrap h1 { font-size: 30px; margin-bottom: 6px; overflow-wrap: anywhere; }
+  .lead, .muted { color: var(--muted); line-height: 1.6; }
+  .grid { display: grid; gap: 12px; margin: 18px 0; }
+  .card { border: 1px solid var(--border); border-radius: 14px; background: var(--panel); padding: 16px 18px; overflow-wrap: anywhere; }
+  .card h2 { font-size: 18px; margin: 0 0 4px; }
+  .skills { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 8px; }
+  .skills li { border: 1px solid var(--border); border-radius: 10px; padding: 9px 12px; background: var(--bg); }
+  .skills a.run { margin-left: 8px; font-size: 13px; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<main class="pt-wrap">
+  <h1 id="title">Partner-checked skills</h1>
+  <p class="lead" id="lead">Some organisations help people with exactly what these skills cover: advice services, legal-aid clinics, unions, charities, public services. When one checks a skill for the people it serves, the skill shows "🤝 Checked by" with its name. Here are the partners and what each one checked.</p>
+  <div class="grid" id="list" aria-live="polite"><p class="muted">Loading…</p></div>
+  <p class="muted">A check by a partner means people there read the skill and found it sound for their area. It is not legal, medical or financial advice, and it lasts 12 months. Individual professionals review skills too: see <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/docs/EXPERT-REVIEW-PROGRAM.md">expert reviews</a>.</p>
+  <p class="muted">Does your organisation help people with any of this? <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/docs/PARTNER-PROGRAM.md">Become a partner</a>. It's free, and you get a page like this to send people to.</p>
+</main>
+<script src="nav.js" defer></script>
+<script>
+(function () {
+  var RAW = 'https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/config/partners.json';
+  var el = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  var safeUrl = function (u) { return /^https:\/\//.test(String(u || '')) ? String(u) : '#'; };
+  var want = String(new URLSearchParams(location.search).get('p') || '');
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var when = function (d) { var x = new Date(d + 'T00:00:00Z'); return MONTHS[x.getUTCMonth()] + ' ' + x.getUTCFullYear(); };
+  // web/partners.json holds only current checks (built at deploy); the raw config is the fallback.
+  fetch('partners.json').then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .catch(function () { return fetch(RAW).then(function (r) { return r.json(); }); })
+    .then(function (cfg) {
+      var months = cfg.validity_months || 12, now = new Date();
+      var partners = (cfg.partners || []).map(function (p) {
+        var v = (p.verified || []).filter(function (x) { var d = new Date(x.date + 'T00:00:00Z'); d.setUTCMonth(d.getUTCMonth() + months); return d >= now; });
+        return Object.assign({}, p, { verified: v });
+      }).filter(function (p) { return p.verified.length; });
+      if (want) {
+        partners = partners.filter(function (p) { return p.id === want; });
+        if (partners.length) {
+          var p = partners[0];
+          el('title').textContent = 'Skills checked by ' + p.name;
+          el('lead').textContent = p.name + ' checked these skills for people in ' + p.region + '. Each one runs free in your browser: pick yours and fill it in.';
+          document.title = 'Skills checked by ' + p.name + ' | PM Skills';
+        } else { el('lead').textContent = 'No current partner has that name. Here are all partners.'; want = ''; }
+      }
+      if (!partners.length) {
+        el('list').innerHTML = '<div class="card"><h2>The first partners are joining</h2><p class="muted">No organisation has checked a skill yet. The programme is open now: advice services, clinics, unions, charities and public services are welcome, free.</p></div>';
+        return;
+      }
+      el('list').innerHTML = partners.map(function (p) {
+        return '<div class="card"><h2><a href="' + esc(safeUrl(p.url)) + '" rel="noopener">' + esc(p.name) + '</a></h2><p class="muted">' + esc(p.kind.replace(/-/g, ' ')) + ' · ' + esc(p.region) + '</p><ul class="skills">' +
+          p.verified.map(function (v) {
+            return '<li><a href="skill/' + encodeURIComponent(v.skill) + '.html">' + esc(v.skill) + '</a><a class="run" href="index.html?skill=' + encodeURIComponent(v.skill) + '">Run it free →</a><br><span class="muted">Checked by ' + esc(v.checked_by) + ', ' + esc(when(v.date)) + '</span></li>';
+          }).join('') + '</ul>' + (want ? '' : '<p class="muted"><a href="?p=' + encodeURIComponent(p.id) + '">Page to share with your users →</a></p>') + '</div>';
+      }).join('');
+    })
+    .catch(function () { el('list').innerHTML = '<p class="muted">Could not load the partners. Check your connection.</p>'; });
+})();
+</script>
+</body>
+</html>
