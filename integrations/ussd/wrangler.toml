@@ -1,0 +1,11 @@
+name = "pm-skills-ussd"
+main = "src/index.js"
+compatibility_date = "2025-01-01"
+
+# PM Skills over USSD: a menu you dial on any phone (Africa's Talking-style callback).
+# No AI model is called, so there is no API bill.
+# Deploy:  cd integrations/ussd && npx wrangler deploy
+# Secrets: npx wrangler secret put USSD_SECRET   # required; the callback URL is https://<worker>/<USSD_SECRET>
+#          npx wrangler secret put AT_API_KEY    # optional; with AT_USERNAME, sends the link by SMS
+# Vars (optional, in [vars]): AT_USERNAME, AT_SENDER_ID, AT_SANDBOX ("true" for the sandbox)
+# Public instance? Bind CAPS_KV to cap SMS per number per day: ../shared/PUBLIC-INSTANCE.md

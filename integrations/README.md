@@ -9,6 +9,7 @@ Ways to reach the PM Skills library beyond the CLI, MCP server, and browser play
 | [`custom-gpt/`](custom-gpt/) | Publish the library as a **Custom GPT** in the GPT Store (live Actions API) | [SETUP](custom-gpt/SETUP.md) |
 | [`gemini-gem/`](gemini-gem/) | Publish the library as a **Gemini Gem** (llms.txt knowledge) | [SETUP](gemini-gem/SETUP.md) |
 | [`chatops/`](chatops/) | **Slack & Discord** `/pmskill` slash command — one Cloudflare Worker, signature-verified | [README](chatops/README.md) |
+| [`ussd/`](ussd/) | **USSD menu** for any phone, even with no data: dial a short code, pick your situation, get the first step on screen and the link by SMS (no AI model, no API bill) | [README](ussd/README.md) |
 | [`phone-line/`](phone-line/) | **Call a number, talk to the library** — Twilio Voice: say what you need, hear a short skill-shaped answer, say "text me" for the full skill | [README](phone-line/README.md) |
 | [`twilio/`](twilio/) | **Text a skill** over SMS / WhatsApp — run a skill from a text, get the result back | [README](twilio/README.md) |
 | [`email/`](email/) | **Email operator** — forward a thread, get the drafted artifact back in-thread | [README](email/README.md) |
