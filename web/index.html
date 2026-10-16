@@ -195,6 +195,7 @@
         <span class="proof-badge" id="skillFeedback" hidden title="Share of 👍 from people who rated this skill's output"></span>
         <h2 id="skillTitle"></h2>
         <p id="skillDesc" class="skill-desc"></p>
+        <p id="overlayNote" class="skill-desc" hidden></p>
         <p id="skillSource" class="skill-source" hidden></p>
         <div id="skillRelated" class="skill-related" hidden></div>
         <button id="sampleBtn" class="ghost sample-btn" type="button" hidden title="See a real, pre-generated example — no key needed">📄 See a sample output — no key needed</button>
@@ -241,6 +242,9 @@
         <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
         <label class="compare-toggle" title="Run the same inputs with and without the skill, side by side"><input type="checkbox" id="compareToggle" / aria-label="Compare two runs side by side"> ⚖️ Compare vs. plain prompt</label>
         <label class="compare-toggle" title="Run this skill across Opus, Sonnet & Haiku side by side"><input type="checkbox" id="modelsToggle" / aria-label="Compare across models"> 🤖 Compare models</label>
+        <label class="lang-select" title="Where you are: adds local rules (laws, deadlines, agencies) to skills that have them">📍
+          <select id="place" aria-label="Where you are"><option value="">Anywhere</option></select>
+        </label>
         <label class="lang-select" title="Get the output in another language — every skill works in any language">🌐
           <select id="outputLang" aria-label="Output language">
             <option value="">English</option>

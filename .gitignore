@@ -83,6 +83,7 @@ web/firm-ledger.json
 web/registry/
 web/skill-cup.json
 web/cup-prizes.json
+web/overlays.json
 web/i18n-desc/
 web/ab/
 web/skill-changes.json

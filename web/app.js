@@ -1210,6 +1210,7 @@ function selectSkill(s) {
     fbTag.hidden = !badge;
   }
   el('skillTitle').textContent = s.title;
+  showOverlayNote(s);
   el('skillDesc').textContent = s.description;
   renderDeprecation(s);
   const srcEl = el('skillSource');
@@ -1396,7 +1397,8 @@ async function run() {
   if (!key && !localModel) { flagMissingKey(); return setStatus(`👆 Paste your ${P().name} API key (top-right) to run — or pick "In-browser (no key)".`, true); }
   if (!current) return;
   const ab = await abInstructions(current);
-  const instr = ab.text;
+  const ov = overlayFor(current.name);
+  const instr = ab.text + (ov ? `\n\n## Local rules: ${ov.place}\nThe user is in ${ov.place}. Apply these local rules over general statements in the skill; they are a ${ov.status} summary last checked ${ov.checked}, so tell the user to confirm anything decisive with the sources: ${ov.sources.join(', ')}.\n\n${ov.body}` : '');
   CURRENT_ARM = ab.arm;
   if (window.pmTrack) pmTrack('run/' + current.name);
   if (window.pmUsage) pmUsage(current.name);
@@ -1526,6 +1528,31 @@ ${instr}${ctxBlock}`;
     controller = null;
   }
 }
+
+// ── Jurisdiction overlays (overlays/, web/overlays.json) ─────────────────────
+// "Where are you?": when the skill has an overlay for that place, its local rules
+// (laws, deadlines, agencies) are added to the skill when it runs, and the page
+// says so, including whether a local reviewer has checked it.
+let OVERLAYS = {};
+const PLACE_KEY = 'pm-place';
+const overlayFor = (name) => { let p = ''; try { p = localStorage.getItem(PLACE_KEY) || ''; } catch (e) {} return (p && OVERLAYS[name] && OVERLAYS[name][p]) || null; };
+function showOverlayNote(s) {
+  const note = el('overlayNote'); if (!note || !s) return;
+  const o = overlayFor(s.name), all = OVERLAYS[s.name] ? Object.values(OVERLAYS[s.name]).map((x) => x.place) : [];
+  note.hidden = !o && !all.length;
+  note.textContent = o ? `📍 Local rules for ${o.place} are included (${o.status === 'reviewed' ? 'checked by a local reviewer' : 'draft, not yet checked by a local reviewer'}; last checked ${o.checked}${o.stale ? ', may be out of date' : ''}).`
+    : all.length ? `📍 Local rules available for: ${all.join(', ')}. Pick your place with 📍 below.` : '';
+}
+fetch('overlays.json').then((r) => (r.ok ? r.json() : { overlays: {} })).then((j) => {
+  OVERLAYS = j.overlays || {};
+  const sel = el('place'); if (!sel) return;
+  const places = {};
+  for (const o of Object.values(OVERLAYS)) for (const [code, v] of Object.entries(o)) places[code] = v.place;
+  Object.entries(places).sort((a, b) => a[1].localeCompare(b[1])).forEach(([code, place]) => { const opt = document.createElement('option'); opt.value = code; opt.textContent = place; sel.appendChild(opt); });
+  try { sel.value = localStorage.getItem(PLACE_KEY) || ''; } catch (e) {}
+  sel.addEventListener('change', () => { try { localStorage.setItem(PLACE_KEY, sel.value); } catch (e) {} showOverlayNote(current); });
+  showOverlayNote(current);
+}).catch(() => {});
 
 // ── Live A/B tests of skill versions (data/ab-tests.json, scripts/ab-decide.mjs) ──
 // A tested skill is served as version A (the current skill) or B (a challenger)

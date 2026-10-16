@@ -49,6 +49,7 @@ on:
       - 'data/skill-cup.json'
       - 'config/cup-prizes.json'
       - 'data/ab-tests.json'
+      - 'overlays/**'
       - 'data/outcomes.json'
       - 'proposals/ab/**'
       - 'i18n/**'
@@ -248,6 +249,9 @@ jobs:
         run: |
           git fetch --unshallow --filter=blob:none --quiet origin || git fetch --unshallow --quiet origin || true
           node scripts/build-skill-changes.mjs
+
+      - name: Publish the jurisdiction overlays (web/overlays.json)
+        run: node scripts/build-overlays.mjs
 
       - name: Build what actually worked, per skill (web/proven.json)
         run: node scripts/build-proven.mjs
