@@ -49,6 +49,7 @@
 <script src="nav.js" defer></script>
 <script src="i18n-desc.js"></script>
 <script src="easy-read.js"></script>
+<script src="code-switch.js"></script>
 <script>
 (function () {
   var WORKER = 'https://pm-skills-mcp.pm-claude-skills.workers.dev';
@@ -71,7 +72,7 @@
   // The skills, plus their descriptions in the visitor's language when published.
   function load() {
     if (SKILLS) return Promise.resolve(SKILLS);
-    return Promise.all([fetch('skills.json').then(function (r) { return r.json(); }), PMi18nDesc.load()]).then(function (res) {
+    return Promise.all([fetch('skills.json').then(function (r) { return r.json(); }), PMi18nDesc.load(), PMCodeSwitch.ready]).then(function (res) {
       SKILLS = res[0].skills.filter(function (s) { return !s.deprecated && s.instructions; });
       SKILLS.forEach(function (s) { s.descL10n = res[1].descriptions[s.name] || ''; });
       return SKILLS;
@@ -96,10 +97,10 @@
       .filter(function (r, i, all) { return r.score >= all[0].score / 2; }).slice(0, 3).map(function (r) { return r.s; });
   }
 
-  function system(src) {
+  function system(src, q) {
     return 'You answer "how do I" questions using ONLY the professional skills below. Write at most 180 words: a direct answer, then the few steps that matter most. ' +
       'Cite every step with the number of the skill it comes from, like [1] or [2]. If the skills do not cover the question, say so in one sentence instead of guessing. ' +
-      'For legal, medical, tax or money questions add one short line that this is not professional advice. Plain text; no headings. Answer in the language the question is written in.' + (window.PMEasyRead ? PMEasyRead.instruction() : '') + '\n\n' +
+      'For legal, medical, tax or money questions add one short line that this is not professional advice. Plain text; no headings. Answer in the language the question is written in.' + (q && PMCodeSwitch.mixed(q) ? ' The question mixes languages (for example Hinglish, Taglish or Spanglish): answer in the same natural mix, in the same script.' : '') + (window.PMEasyRead ? PMEasyRead.instruction() : '') + '\n\n' +
       src.map(function (s, i) { return '[' + (i + 1) + '] ' + s.title + ' (' + s.name + ')\n' + s.description + '\n' + s.instructions.replace(/^---[\s\S]*?---/, '').slice(0, 3400); }).join('\n\n');
   }
 
@@ -115,7 +116,7 @@
     var out = el('out');
     out.innerHTML = '<p class="muted">Finding the skills that cover this…</p>';
     load().then(function () {
-      var src = rank(q);
+      var src = rank(PMCodeSwitch.expand(q));
       if (!src.length) { out.innerHTML = '<div class="answer"></div>'; out.firstChild.textContent = 'No skill covers that yet. Try different words, or ask for it as a new skill.'; return; }
       var sources = '<div class="sources">' + src.map(function (s, i) {
         return '<div class="src" id="src' + (i + 1) + '"><b>[' + (i + 1) + ']</b><span class="t"><a href="skill/' + encodeURIComponent(s.name) + '.html">' + esc(s.title) + '</a><br><span class="muted">' + esc(s.description.slice(0, 150)) + '…</span></span><a class="run" href="index.html?skill=' + encodeURIComponent(s.name) + '">Run the full skill →</a></div>';
@@ -124,9 +125,9 @@
       var key = el('apiKey').value.trim();
       var call = key
         ? fetch('https://api.anthropic.com/v1/messages', { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
-            body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 600, system: system(src), messages: [{ role: 'user', content: q }] }) })
+            body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 600, system: system(src, q), messages: [{ role: 'user', content: q }] }) })
             .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error((j.error && j.error.message) || r.status); return (j.content || []).map(function (c) { return c.text || ''; }).join(''); }); })
-        : fetch(WORKER + '/try', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ prompt: q, system: system(src).slice(0, 12000) }) })
+        : fetch(WORKER + '/try', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ prompt: q, system: system(src, q).slice(0, 12000) }) })
             .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.message || j.error || r.status); return j.text; }); });
       call.then(function (text) {
         out.querySelector('.answer').innerHTML = answerHtml(text || '', src);

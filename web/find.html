@@ -63,6 +63,7 @@
 <script src="nav.js"></script>
 <script src="i18n-desc.js"></script>
 <script src="semantic.js"></script>
+<script src="code-switch.js"></script>
 <script>
 const STOP = new Set(('a an the of to in on or and for with your you i we my our need want help me please how do can could make write create build draft produce prepare prep get set run use using when asked into that this from each will able about more also not no is are be as at any one it its their them they then over same first start new mine give').split(/\s+/));
 // Chinese has no spaces, so Han runs are matched as overlapping two-character pairs (周报, 补偿),
@@ -129,7 +130,8 @@ function render(query) {
   const box = document.getElementById('results');
   const cnt = document.getElementById('count');
   if (!query.trim()) { box.innerHTML = ''; cnt.textContent = ''; return; }
-  const hits = rank(query);
+  // Mixed-language questions also search the English equivalents (code-switch.js).
+  const hits = rank(window.PMCodeSwitch ? PMCodeSwitch.expand(query) : query);
   if (!hits.length) { box.innerHTML = '<div class="empty"></div>'; box.firstChild.textContent = `No skill matched “${query}”. Try fewer or different words.`; cnt.textContent = ''; return; }
   cnt.textContent = `${hits.length} match${hits.length > 1 ? 'es' : ''}, best first`;
   box.innerHTML = hits.map(({ s }) => {
@@ -175,6 +177,7 @@ fetch('skills.json').then((r) => r.json()).then((j) => {
   const q0 = new URLSearchParams(location.search).get('q');
   if (q0) { inp.value = q0; render(q0); }
   // Search in the visitor's language too, when its descriptions are published.
+  PMCodeSwitch.ready.then(() => { if (inp.value.trim()) render(inp.value); });
   PMi18nDesc.load().then((r) => {
     if (!r.lang) return;
     SKILLS.forEach((s) => { s.descriptionL10n = r.descriptions[s.name] || ''; });
