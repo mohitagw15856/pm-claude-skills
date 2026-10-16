@@ -158,6 +158,7 @@ async function init() {
   try { const sl = localStorage.getItem('pm_outputLang'); if (sl && el('outputLang')) el('outputLang').value = sl; } catch (e) {}
   if (window.PMEasyRead) PMEasyRead.bind(el('easyRead'));
   if (window.PMTeachMode) PMTeachMode.bind(el('teachMode'));
+  if (window.PMOutcomeMemory) PMOutcomeMemory.bind(el('learnOutcomes'));
   if (el('outputLang')) el('outputLang').addEventListener('change', function () {
     try { localStorage.setItem('pm_outputLang', this.value); } catch (e) {}
     if (window.pmTrack && this.value) pmTrack('lang/' + this.value);
@@ -1452,6 +1453,8 @@ ${instr}${ctxBlock}`;
   if (window.PMEasyRead && PMEasyRead.on()) { const er = PMEasyRead.instruction(); system += er; plainSystem = plainSystem ? plainSystem + er : er.trim(); }
   // Teach mode: coach the user through the method instead of writing it (web/teach-mode.js).
   if (window.PMTeachMode && PMTeachMode.on()) system += PMTeachMode.instruction();
+  // Learn from outcomes: this user's own ledger results for this skill (web/outcome-memory.js).
+  if (window.PMOutcomeMemory) system += PMOutcomeMemory.instruction(current.name);
   // Remix: layer the user's custom instructions on top of the skill (and the plain side).
   const remix = el('remixInput') ? el('remixInput').value.trim() : '';
   if (remix) {

@@ -21,6 +21,7 @@
   .entry { border: 1px solid var(--border); border-radius: 12px; padding: 11px 14px; margin: 8px 0; background: var(--panel); }
   .entry .top { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; align-items: baseline; }
   .entry .title { font-weight: 600; } .entry .meta { font-size: 12px; color: var(--muted); }
+  .lesson { width: 100%; box-sizing: border-box; margin-top: 8px; padding: 7px 10px; background: var(--panel-2); border: 1px solid var(--border); border-radius: 8px; color: var(--text); }
   .outcomes { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
   .oc { border: 1px solid var(--border); border-radius: 999px; padding: 4px 11px; font-size: 12.5px; cursor: pointer; background: var(--panel-2); color: var(--text); }
   .oc.sel { border-color: var(--accent); color: #fff; }
@@ -54,6 +55,7 @@
 
   <div class="stat-row" id="stats"></div>
 
+  <p class="mini">🧠 Add a line on <em>why</em> when you mark an outcome, and turn on "Learn from my outcomes" in the <a href="index.html">playground</a>: the next time you run that skill, it uses what worked for you and avoids what didn't. It all stays in this browser.</p>
   <div class="add">
     <div class="row">
       <span class="mini">I made a</span>
@@ -132,9 +134,11 @@ function render(){
       <span class="del" data-del="${e.id}">✕ remove</span>
       <div class="top"><span class="title">${esc(e.title)}</span><span class="meta">${esc(skillTitle(e.skill))} · logged ${agesince(e.made)}</span></div>
       <div class="outcomes">${OUTCOMES.map(([k,l])=>`<span class="oc ${k}${e.outcome===k?' sel':''}" data-oc="${e.id}:${k}">${l}</span>`).join('')}</div>
+      ${e.outcome!=='pending'?`<input class="lesson" data-lesson="${e.id}" type="text" maxlength="220" value="${esc(e.lesson||'')}" placeholder="What made the difference? (optional; the skill learns from it next time)" aria-label="What made the difference">`:''}
     </div>`).join('') : '<p class="mini">No entries yet — log your first artifact above. (Tip: after you run a skill in the playground, come here and log what you produced.)</p>';
   document.querySelectorAll('[data-oc]').forEach(b=>b.addEventListener('click',()=>{ const [id,oc]=b.dataset.oc.split(':'); setOutcome(id,oc); }));
   document.querySelectorAll('[data-del]').forEach(b=>b.addEventListener('click',()=>del(b.dataset.del)));
+  document.querySelectorAll('[data-lesson]').forEach(b=>b.addEventListener('change',()=>{ const e=LEDGER.find(x=>x.id===b.dataset.lesson); if(e){ e.lesson=b.value.trim().slice(0,220); save(); setStatus('Saved. Turn on "Learn from my outcomes" in the playground and this skill will use it.'); } }));
   // ranking
   const by={};
   for(const e of LEDGER){ if(e.outcome==='pending')continue; (by[e.skill]=by[e.skill]||{l:0,m:0,n:0})[e.outcome==='landed'?'l':e.outcome==='mixed'?'m':'n']++; }
