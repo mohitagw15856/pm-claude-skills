@@ -21,6 +21,14 @@ jobs:
           node-version: '24'
       - name: Install Playwright (chromium only)
         run: npm i --no-save playwright && npx playwright install --with-deps chromium
+      # Pages fetch files the deploy builds (overlays, embeddings index, proven…);
+      # build the cheap ones so a missing deploy artifact is not a false 404.
+      - name: Build deploy-time data the pages fetch
+        run: |
+          node web/build-skills.mjs
+          node scripts/build-overlays.mjs
+          node scripts/build-proven.mjs
+          node scripts/build-i18n-desc.mjs
       - name: Run the suite
         run: node tests/web-smoke.mjs
       - name: XSS fuzz (script payloads in every URL parameter and hash)
