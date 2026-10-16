@@ -44,18 +44,21 @@
 
 <div class="rx-wrap">
   <p class="rx-lead">Every skill is just editable text. Fork one, change the instructions to fit <strong>your</strong> team's standards, run your version against a real brief, and — if it's better — share it back as a fork with attribution.</p>
+  <p class="mini">Your forks are saved in this browser as you type, so they're here next time. If the original is updated, you'll see what changed. When yours is better, "Suggest back" sends just your changes and why, so it can improve the skill for everyone.</p>
   <div class="pick">
     <span class="mini">Fork</span>
     <select id="skill" aria-label="Choose a skill"></select>
     <button id="resetSkill" class="exp-btn" type="button">↺ reset to original</button>
     <span class="mini" id="based"></span>
   </div>
+  <div class="mini" id="mine" style="margin:-4px 0 10px"></div>
+  <div class="mini" id="upstream" hidden style="margin:0 0 10px;padding:8px 11px;border:1px solid var(--border);border-radius:10px">The original skill has changed since you forked it. <button id="upDiff" class="exp-btn" type="button">🔀 What changed upstream</button></div>
   <input id="brief" type="text" style="width:100%;box-sizing:border-box;padding:10px 13px;background:var(--panel-2);border:1px solid var(--border);border-radius:10px;color:var(--text)" placeholder="A brief to test your fork on…" / aria-label="A brief to test your fork on">
   <div class="actions">
     <button id="runBtn" class="primary" type="button">▶ Run my fork</button>
     <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
     <button id="diffBtn" class="exp-btn" type="button">🔀 Show diff vs original</button>
-    <button id="shareBtn" class="exp-btn" type="button">🔗 Share my fork (PR)</button>
+    <button id="shareBtn" class="exp-btn" type="button">📤 Suggest back</button>
     <span id="status" class="status"></span>
   </div>
   <div class="split">
@@ -67,12 +70,19 @@
 <script>
 const el=(id)=>document.getElementById(id);
 let SKILLS=[], controller=null, ORIG='';
+// Saved forks: { name: { text, baseText, saved } } in this browser only.
+const FORK_KEY='pm_skill_forks';
+function forks(){ try{ return JSON.parse(localStorage.getItem(FORK_KEY)||'{}')||{}; }catch(e){ return {}; } }
+function saveForks(f){ try{ localStorage.setItem(FORK_KEY,JSON.stringify(f)); }catch(e){ setStatus('Could not save in this browser (storage full or blocked).',true); } }
+let saveTimer=null;
 init();
 async function init(){
   PMProviders.initProviderUI();
   el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
   el('skill').addEventListener('change',loadSkill);
-  el('resetSkill').addEventListener('click',()=>{ el('editor').value=ORIG; setStatus('Reset to original.'); });
+  el('resetSkill').addEventListener('click',()=>{ el('editor').value=ORIG; const f=forks(); delete f[cur().name]; saveForks(f); el('upstream').hidden=true; listMine(); setStatus('Reset to original; your saved fork is removed.'); });
+  el('editor').addEventListener('input',()=>{ clearTimeout(saveTimer); saveTimer=setTimeout(saveFork,600); });
+  el('upDiff').addEventListener('click',()=>{ const f=forks()[cur().name]; if(f) renderDiff(f.baseText||'',ORIG); });
   el('runBtn').addEventListener('click',run);
   el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
   el('diffBtn').addEventListener('click',showDiff);
@@ -82,7 +92,23 @@ async function init(){
   loadSkill();
 }
 function cur(){ return SKILLS.find(s=>s.name===el('skill').value); }
-function loadSkill(){ const s=cur(); if(!s)return; ORIG=s.instructions||''; el('editor').value=ORIG; el('based').textContent=s.source?('· based on '+s.source.replace(/\*/g,'')):''; el('out').innerHTML='<span class="mini">Run your fork to see the output.</span>'; }
+function loadSkill(){
+  const s=cur(); if(!s)return; ORIG=s.instructions||''; const f=forks()[s.name];
+  el('editor').value=f?f.text:ORIG; el('based').textContent=s.source?('· based on '+s.source.replace(/\*/g,'')):'';
+  el('upstream').hidden=!(f&&f.baseText!==ORIG);
+  el('out').innerHTML='<span class="mini">Run your fork to see the output.</span>';
+  if(f) setStatus('Loaded your saved fork ('+new Date(f.saved).toLocaleDateString()+').'); listMine();
+}
+function saveFork(){
+  const s=cur(); if(!s)return; const f=forks(); const text=el('editor').value;
+  if(text===ORIG){ delete f[s.name]; } else { f[s.name]={ text, baseText:(f[s.name]&&f[s.name].baseText)||ORIG, saved:Date.now() }; }
+  saveForks(f); listMine(); setStatus(text===ORIG?'Same as the original.':'Saved in this browser.');
+}
+function listMine(){
+  const names=Object.keys(forks()); const box=el('mine'); box.textContent='';
+  if(!names.length) return; box.append('Your forks: ');
+  names.forEach((n,i)=>{ const s=SKILLS.find(x=>x.name===n); const a=document.createElement('a'); a.href='?skill='+encodeURIComponent(n); a.textContent=s?s.title:n; if(i) box.append(' · '); box.appendChild(a); });
+}
 async function run(){
   const key=el('apiKey').value.trim(); const brief=el('brief').value.trim();
   if(!brief) return setStatus('Add a brief to test on.',true);
@@ -96,8 +122,9 @@ async function run(){
   finally{ el('runBtn').disabled=false; el('stopBtn').hidden=true; controller=null; }
 }
 // word-level diff
-function showDiff(){
-  const a=ORIG.split(/(\s+)/), b=el('editor').value.split(/(\s+)/);
+function showDiff(){ renderDiff(ORIG,el('editor').value); }
+function renderDiff(from,to){
+  const a=from.split(/(\s+)/), b=to.split(/(\s+)/);
   // simple LCS-ish greedy diff
   const out=[]; let i=0,j=0;
   const bset=new Map(); b.forEach((w,k)=>{ if(!bset.has(w))bset.set(w,[]); bset.get(w).push(k); });
@@ -105,8 +132,15 @@ function showDiff(){
   while(j<b.length) out.push('<ins>'+esc(b[j++])+'</ins>');
   el('out').className='out'; el('out').innerHTML='<div class="diff">'+out.join('')+'</div>';
 }
+// Lines removed and added, so a reviewer sees the change, not 7,000 characters to compare by eye.
+function lineChanges(from,to){
+  const A=from.split('\n'), B=to.split('\n'), inB=new Set(B), inA=new Set(A);
+  return A.filter(l=>l.trim()&&!inB.has(l)).map(l=>'- '+l).concat(B.filter(l=>l.trim()&&!inA.has(l)).map(l=>'+ '+l)).join('\n');
+}
 function share(){
-  const s=cur(); const body='Proposing a **fork** of `'+s.name+'`. My version of the skill instructions:\n\n```markdown\n'+el('editor').value.slice(0,7000)+'\n```\n\n_Shared via Skill Remix. Attribution: '+(new URLSearchParams(location.search).get('by')||'a community remixer')+'._';
+  const s=cur(); const mine=el('editor').value; const changes=lineChanges(ORIG,mine);
+  if(!changes) return setStatus('Nothing to suggest yet: your fork is the same as the original.',true);
+  const body='Suggesting a change to `'+s.name+'` from my fork.\n\n**Why it is better (what happened when I used it):**\n\n<!-- one or two sentences -->\n\n**My changes:**\n\n```diff\n'+changes.slice(0,5000)+'\n```\n\n<details><summary>My full version</summary>\n\n```markdown\n'+mine.slice(0,4500)+'\n```\n</details>\n\n_Shared via Skill Remix. Attribution: '+(new URLSearchParams(location.search).get('by')||'a community remixer')+'._';
   window.open('https://github.com/mohitagw15856/pm-claude-skills/issues/new?title='+encodeURIComponent('remix: fork of '+s.name)+'&body='+encodeURIComponent(body)+'&labels=skill-remix','_blank','noopener');
 }
 function esc(s){ return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }

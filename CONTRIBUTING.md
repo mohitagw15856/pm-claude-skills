@@ -206,6 +206,10 @@ Then update the target list/count in the README and `docs/`. See
 
 ---
 
+## Improving a skill you already use (fork, then suggest back)
+
+You don't need git to improve a skill. Open it in [Skill Remix](https://mohitagw15856.github.io/pm-claude-skills/remix.html) and edit it for your own work; your fork is saved in your browser. When the original changes, Remix shows you what changed. If your version works better, press **📤 Suggest back**: it opens an issue (label `skill-remix`) with just your changed lines and a line on why. Maintainers fold good suggestions into the skill and credit you in the commit.
+
 ## Listing a community skill (keep it in your own repo)
 
 Not every skill needs to live in this repo. If you've built skills in **your own repo** and
