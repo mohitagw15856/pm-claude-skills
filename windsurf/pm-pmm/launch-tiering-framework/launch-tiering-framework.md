@@ -1,0 +1,106 @@
+---
+trigger: model_decision
+description: "Tier a product launch (T1/T2/T3) and scope the right go-to-market effort. Use when asked to decide a launch tier, right-size launch activities, build a launch tiering framework, or plan channels and effort proportional to a launch's impact. Produces a tiering recommendation with the scoring rationale, the activities and channels for that tier, owners, and a lightweight launch checklist."
+---
+
+# Launch Tiering Framework Skill
+
+Not every release deserves a full launch. This skill decides how big a launch should be, then scopes the go-to-market effort to match — so big bets get the push they deserve and minor updates don't burn the team or the audience's attention.
+
+## What This Skill Produces
+
+- A launch tier (T1 / T2 / T3) with the scoring rationale
+- The set of activities and channels appropriate to that tier
+- Owners and a timeline
+- A right-sized launch checklist and success metrics
+
+## Required Inputs
+
+Ask for these if not provided:
+
+- **What's launching** — the feature/product and who it's for
+- **Impact signals** — revenue potential, strategic importance, audience reach, competitive pressure, customer demand
+- **Novelty** — incremental improvement vs new capability vs new product
+- **Readiness** — GA vs beta, docs, enablement, support readiness
+- **Constraints** — team bandwidth, date pressure, dependencies
+- **Any house tiering definitions** already in use (use them if provided)
+
+## Tiering Rubric
+
+Score the launch on impact and novelty; the higher of the two typically sets the tier.
+
+- **T1 — Major:** new product or flagship capability; strategic; broad audience; competitive stakes. Full GTM.
+- **T2 — Notable:** meaningful new feature; matters to a segment; worth proactive comms. Moderate GTM.
+- **T3 — Minor:** incremental improvement, fix, or narrow feature. Low-effort, in-product + notes.
+
+If readiness lags the tier the impact warrants, flag the gap rather than downgrading silently.
+
+## Process
+
+1. **Score impact and novelty** using the signals provided; note the reasoning.
+2. **Assign the tier** (higher of impact/novelty), and state what would move it up or down.
+3. **Scope activities to the tier** — don't over- or under-invest.
+4. **Assign owners and a timeline** across product, PMM, content, sales, support.
+5. **Right-size the checklist** and define how you'll measure success at that tier.
+
+## Output Format
+
+---
+
+# Launch Tiering — [Launch name]
+
+**Recommended tier:** [T1 / T2 / T3]
+
+## Scoring
+| Dimension | Signal | Read |
+|---|---|---|
+| Impact | [revenue/strategic/reach/competitive/demand] | [high/med/low] |
+| Novelty | [incremental / new capability / new product] | [high/med/low] |
+| Readiness | [GA/beta · docs · enablement · support] | [ready / gap] |
+
+**Rationale:** [why this tier] · **Would change if:** [what flips it]
+
+## Activities for [Tier]
+| Workstream | Do | Skip |
+|---|---|---|
+| Positioning/messaging | [e.g. full narrative vs one-liner] | [—] |
+| Content | [blog, video, launch post vs release notes only] | [—] |
+| Channels | [press, email, social, in-app vs in-app only] | [—] |
+| Sales/CS enablement | [kit + training vs FYI] | [—] |
+| Events | [webinar/launch event vs none] | [—] |
+
+## Owners & Timeline
+| Workstream | Owner | Due |
+|---|---|---|
+| [Item] | [role] | [date] |
+
+## Launch Checklist ([tier-sized])
+- [ ] [Only what this tier needs]
+
+## Success Metrics
+- [Tier-appropriate: awareness/adoption/pipeline/activation]
+
+---
+
+## Quality Checks
+
+- [ ] The tier follows from explicit impact/novelty scoring
+- [ ] Activities match the tier — no full push for a T3, no silence for a T1
+- [ ] Readiness gaps are flagged, not hidden by downgrading
+- [ ] Every workstream has an owner and date
+- [ ] Success metrics fit the tier's ambition
+
+## Anti-Patterns
+
+- [ ] Do not launch everything at T1 — attention and effort are finite
+- [ ] Do not treat a strategic launch as T3 because the team is busy — flag the gap
+- [ ] Do not skip enablement on a tier that sales needs to sell
+- [ ] Do not measure a T3 with T1 metrics (or vice versa)
+- [ ] Do not ignore existing house tier definitions if provided
+
+## Example Trigger Phrases
+
+- "What launch tier should this feature be?"
+- "Right-size the go-to-market for our [feature] launch"
+- "Build a launch tiering framework for our team"
+- "Plan T2 launch activities and owners for [product]"

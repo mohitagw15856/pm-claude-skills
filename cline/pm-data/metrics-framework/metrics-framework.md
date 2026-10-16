@@ -1,0 +1,131 @@
+# Metrics Framework Skill
+
+This skill builds a complete metrics framework tailored to a product or business. It connects the North Star metric to actionable leading indicators, making it clear which metrics to track, which to optimise, and how they relate to each other.
+
+## Required Inputs
+
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
+- **Product or business description** (one paragraph is enough)
+- **Business model** (SaaS / Marketplace / E-commerce / Consumer app / B2B / Other)
+- **Stage** (Pre-PMF / Growth / Scale / Mature)
+- **Framework preference** (if they have one): North Star + Metric Tree / AARRR / HEART / OKRs / Custom
+- **Primary goal this quarter** (e.g. grow activation, reduce churn, increase revenue)
+
+If no framework preference is given, recommend the best fit based on stage and business model.
+
+## Reads from / Writes to the Brain
+
+If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, use it before asking:
+
+- **Read first:** `context.md` for the metric *definitions* the org already agreed on (reuse them — don't silently redefine a metric) and `knowledge/strategy.md` for what the business is optimising for.
+- **Write after:** save the metric tree and definitions to `knowledge/`, and any target-setting decision to `decisions/`, each provenance-tagged so a `[hunch]` target isn't treated as a committed goal.
+
+## Output Structure
+
+### 1. Framework Recommendation (if not specified)
+
+Explain in 2–3 sentences why you're recommending this framework for their context.
+
+---
+
+### 2. North Star Metric
+
+**[Metric Name]:** [Definition — exactly what is measured and how]
+
+**Why this is the right North Star for this business:**
+[2–3 sentences. It should reflect customer value delivered, not just revenue or activity. Explain what behaviour it captures and why maximising it correlates with long-term business health.]
+
+**How to measure it:** [Formula or data source]
+**Current baseline:** [Leave as [ADD BASELINE] for user to fill]
+**Target:** [Leave as [ADD TARGET] for user to fill]
+
+---
+
+### 3. Metric Tree
+
+Show how supporting metrics roll up to the North Star. Format as a hierarchy:
+
+```
+[North Star Metric]
+├── [Driver 1: e.g. Acquisition]
+│   ├── [L2 metric: e.g. Organic signups / week]
+│   └── [L2 metric: e.g. Paid CAC by channel]
+├── [Driver 2: e.g. Activation]
+│   ├── [L2 metric: e.g. % users completing onboarding within 7 days]
+│   └── [L2 metric: e.g. Time to first value action]
+└── [Driver 3: e.g. Retention]
+    ├── [L2 metric: e.g. Day 30 retention rate]
+    └── [L2 metric: e.g. Feature adoption depth]
+```
+
+For each L2 metric, provide:
+- **Definition:** [What exactly is measured]
+- **Why it matters:** [How it connects to the North Star]
+- **Leading or lagging?** [Leading = predictive / Lagging = outcome]
+- **How to measure:** [Data source or calculation]
+
+---
+
+### 4. Counter-Metrics
+
+[2–3 metrics to watch that prevent optimising the North Star in ways that damage the business. E.g. "If we optimise for signups, we need to watch spam account rate. If we optimise for engagement, we need to watch support ticket volume."]
+
+---
+
+### 5. Dashboard Recommendation
+
+Suggest a 3-tier dashboard structure:
+- **Exec view (weekly):** [3–5 metrics — outcomes only]
+- **Team view (daily):** [7–10 metrics — leading indicators + outputs]
+- **Diagnostic view (on demand):** [Metrics to drill into when something looks wrong]
+
+---
+
+### 6. Metric Health Check Questions
+
+[5 questions the team should ask in their weekly metrics review to turn numbers into insights. e.g. "Is our activation rate improving while retention stays flat? That suggests onboarding quality issue, not a product-market fit problem."]
+
+---
+
+## Deeper Materials
+
+This skill ships with support files — use them when they are available:
+
+- **`references/metric-tree-craft.md`** — Metric Trees That Drive Decisions (Not Dashboards). Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
+- **`templates/metric-tree.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
+
+## Scoring Rubric (0–40)
+
+Score any output of this skill before handing it over; 32+ is ship-quality.
+
+| Dimension | 0 | 5 | 10 |
+|---|---|---|---|
+| North Star validity | North Star is business activity (GMV, revenue, pageviews) or vanity volume | North Star gestures at customer value but its definition leaves edge cases (cancellations, disputes, refunds) uncounted | North Star counts value actually delivered to the customer, with edge cases resolved in the definition and rejected alternatives named with reasons |
+| Tree causal integrity | L2 metrics are a flat KPI list with no causal link to the North Star; drivers overlap or are all one category | Drivers distinct, but some L2 metrics correlate with rather than drive the North Star, or leading/lagging labels are guesses | 3–4 distinct drivers where moving any L2 metric plausibly moves the North Star, with honest leading/lagging labels — including admitting the goal metric is lagging when it is |
+| Definition precision | Metrics named without formula, data source, or time window | Most metrics have formulas, but at least one would be computed differently by two reasonable analysts | Every metric specifies formula, source table or event, and window precisely enough that two analysts get the same number |
+| Gaming resistance | No counter-metrics; every metric assumed to be optimised in good faith | Generic counter-metrics listed but not paired to the specific metric they guard | Each optimisable metric is paired with a counter-metric that names the exact perverse move it catches (accept-then-cancel, discount-bought retention, ghost supply) |
+
+## Quality Checks
+
+- [ ] North Star reflects customer value, not just business activity
+- [ ] Metric tree has 3–4 distinct drivers (not all one category)
+- [ ] Each L2 metric is classified as leading or lagging
+- [ ] Counter-metrics are included to prevent perverse incentives
+- [ ] Dashboard tiers are tailored to the product stage
+- [ ] All metric definitions are unambiguous (formula or clear description)
+
+## Anti-Patterns
+
+- [ ] Do not set a North Star metric that measures business activity (revenue, pageviews) rather than customer value delivered — this creates incentives misaligned with product quality
+- [ ] Do not define metrics without specifying the formula or data source — an ambiguous metric will be measured differently by different people
+- [ ] Do not skip counter-metrics — optimising any single metric without a guard rail will eventually produce perverse incentives
+- [ ] Do not include more than 4–5 metrics in a daily team view — a dashboard with 20 metrics is a dashboard nobody looks at
+- [ ] Do not classify all metrics as "leading" — be honest about which are lagging outcome metrics and which genuinely predict future outcomes
+
+## Example Trigger Phrases
+
+- "Build a metrics framework for [product]"
+- "What should our North Star metric be?"
+- "Create a KPI tree for [business]"
+- "Give me an AARRR breakdown for [product]"
+- "What metrics should our [team type] team track?"

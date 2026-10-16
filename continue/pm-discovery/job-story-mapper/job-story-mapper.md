@@ -1,0 +1,163 @@
+---
+name: "Write Jobs-to-be-Done (JTBD) job stories and map customer jo"
+description: "Write Jobs-to-be-Done (JTBD) job stories and map customer jobs across functional, social, and emotional dimensions. Use when defining user needs, writing job stories, conducting JTBD research, or reframing features around customer outcomes. Produces a job story map with opportunity scoring, pain intensity ratings, and product opportunity analysis."
+---
+
+# Job Story Mapper Skill
+
+Stop writing features. Start understanding jobs. This skill translates product requirements and user interviews into precise job stories that keep the team focused on outcomes — not outputs.
+
+## Jobs-to-be-Done Fundamentals
+
+A "job" is the progress a customer is trying to make in a given situation. People don't buy products — they hire them to get a job done.
+
+Three dimensions of every job:
+- **Functional job:** The practical task ("get from A to B")
+- **Emotional job:** How they want to feel ("feel confident I made the right choice")
+- **Social job:** How they want to be perceived ("look like a competent professional to my team")
+
+Great products address all three. Most roadmaps only address the functional one.
+
+---
+
+## Job Story Format
+
+**Template:**
+> When [situation/trigger], I want to [motivation/goal], so I can [expected outcome].
+
+**Not a user story:**
+User stories focus on roles and features: "As a [role] I want [feature] so that [benefit]."
+Job stories focus on situations and motivations: "When [I'm in this specific situation] I want [this capability] so I can [achieve this outcome]."
+
+**The situation is the most important part.** "When I'm in the middle of a sprint and my PM asks for an update" is a much richer trigger than "As a developer."
+
+---
+
+## Mapping Process
+
+### Step 1: Identify the main job
+One sentence: What is the core job your product is hired for?
+> "Help [user type] [accomplish outcome] when [context]."
+
+### Step 2: Break into job steps
+What are all the sub-tasks within the main job?
+(Use a job map: Define → Locate → Prepare → Confirm → Execute → Monitor → Modify → Conclude)
+
+### Step 3: Identify pain points per step
+Where does the job fall down today? Where do customers use workarounds?
+
+### Step 4: Write job stories for each pain point
+One job story per distinct situation-motivation pair.
+
+### Step 5: Map to product opportunities
+Which job stories are underserved? Which have existing solutions? Where is your differentiation?
+
+---
+
+## Output Format
+
+### Job Story Map — [Product/Feature Area] — [Date]
+
+**Core Job Statement:**
+> When [context], [user type] wants to [main job outcome], so they can [ultimate goal].
+
+---
+
+**Job Map:**
+
+| Step | Sub-Job | Current Solution | Pain Points | Underserved? |
+|---|---|---|---|---|
+| Define | [What user does] | [Tool/method used] | [Frustration] | H/M/L |
+| Locate | | | | |
+| Prepare | | | | |
+| Confirm | | | | |
+| Execute | | | | |
+| Monitor | | | | |
+| Modify | | | | |
+| Conclude | | | | |
+
+---
+
+**Job Stories (prioritised by underservice):**
+
+**Job Story 1 — [Situation label]**
+> When [specific situation], I want to [motivation], so I can [outcome].
+
+Functional dimension: [What they need to get done]
+Emotional dimension: [How they want to feel]
+Social dimension: [How they want to be perceived]
+
+Current workaround: [What they do today]
+Pain intensity: [High / Medium / Low]
+Frequency: [How often this situation occurs]
+Product opportunity: [What we could build to address this]
+
+---
+
+Repeat for each major job story.
+
+**Opportunity Scoring:**
+Rate each job story on:
+- Importance to customer (1–10)
+- Satisfaction with current solution (1–10)
+- Opportunity score = Importance + max(Importance – Satisfaction, 0)
+- Prioritise: Opportunity score > 10
+
+---
+
+## Deeper Materials
+
+This skill ships with support files — use them when they are available:
+
+- **`references/situation-mining.md`** — Situation Mining — the "When" Is the Whole Method. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
+- **`templates/job-story-canvas.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
+
+## Scoring Rubric (0–40)
+
+Score any output of this skill before handing it over; 32+ is ship-quality.
+
+| Dimension | 0 | 5 | 10 |
+|---|---|---|---|
+| Situation specificity | "When" clauses are roles or generic desires ("as a user who wants to manage work") | Situations name a task but not a moment — no trigger, time, or emotional context | Every situation is a concrete, recognisable moment ("a tenant texts me at 11pm") that makes the motivation self-evident |
+| Dimensional completeness | Only the functional job mapped; emotional and social fields empty or absent | All three fields filled, but emotional/social entries just restate the functional job in feeling-words | Functional, emotional, and social dimensions each carry distinct content, and at least one non-functional dimension shapes the opportunity analysis |
+| Workaround grounding | No current workarounds identified; jobs float free of what customers do today | Workarounds named but treated as trivia — nothing inferred from them | Every high-opportunity story names its workaround and reads it as evidence of what the job is worth (time spent, money paid, delay tolerated) |
+| Scoring & prioritisation discipline | No opportunity scores, or scores invented without the Importance/Satisfaction inputs | Scores computed correctly but treated as the build order — no feasibility or strategic-fit check | Arithmetic is shown and consistent, borderline scores are not rounded up, and high scores the roadmap can't serve are flagged as strategy questions rather than queued |
+
+## Quality Checks
+
+- [ ] Job stories use the "When / I want to / So I can" format (not user story format)
+- [ ] Situation is specific (not "as a user" — a real moment or trigger)
+- [ ] All three dimensions covered: functional, emotional, social
+- [ ] Opportunity score calculated for each job story
+- [ ] Current workaround identified for each high-opportunity story
+- [ ] Product opportunity is distinct from "build the feature" (it's an outcome)
+
+## Required Inputs
+
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
+- **Product or feature area** to map (e.g. onboarding, checkout, dashboard)
+- **User type or persona** (who are we mapping jobs for?)
+- **Source material** (user interview notes, support tickets, discovery findings, or describe from memory)
+- **Scope** (full product job map vs. a single feature area)
+
+## Anti-Patterns
+
+- [ ] Do not write job stories that describe a feature rather than a situation-motivation pair
+- [ ] Do not skip the social and emotional dimensions — mapping only functional jobs misses the most defensible differentiation opportunities
+- [ ] Do not define situations too broadly ("as a user who wants to manage their work") — the situation must be a specific moment or trigger
+- [ ] Do not conflate opportunity scoring with priority — a high opportunity score still requires feasibility and strategic fit assessment
+- [ ] Do not produce a job map without identifying current workarounds — the workaround reveals what the job is worth to the customer
+
+## Guidelines
+
+- Never write a job story for a feature — write it for the situation that makes the feature valuable
+- If you can't identify the situation, you don't understand the job yet — go back to user research
+- Social and emotional jobs are harder to surface but often the most defensible differentiators
+- Recommend sharing job stories with engineering — they make better technical decisions when they understand the "why"
+
+## Example Trigger Phrases
+
+- "Define user needs."
+- "Write job stories."
+- "Map the customer jobs for this feature."
+- "Reframe these features around customer outcomes."

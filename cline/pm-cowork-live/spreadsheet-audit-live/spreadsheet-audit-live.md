@@ -1,0 +1,71 @@
+# Spreadsheet Audit (Live)
+
+Spreadsheets fail silently — the SUM that stops at row 40, the hardcoded 1.1 typed over a formula, the column that's monthly in one section and annual in another. In Claude Cowork this skill opens the *actual file* in the sandbox and traces the real formulas, so the mistake is caught before the meeting corrects it.
+
+## What This Skill Produces
+
+- **Findings ranked by damage** — each with cell location, what's wrong, and what it's currently mis-stating
+- **The verified/suspect ledger** — which load-bearing outputs were traced clean and which remain unverified (unverified ≠ wrong; the label is the honesty)
+- **The fix list** — ordered, with make-it-robust upgrades where they matter
+- **A findings artifact** — the above as a shareable report, plus (on request) a corrected copy of the sheet
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The sheet** — a Drive file/link or an uploaded `.xlsx`; the audit needs the real formulas, not a screenshot
+- **The stakes** — what decision it feeds (budget approval? pricing? a board number?) — depth and ranking follow the damage potential
+- **Growth pattern** — does data get appended? The fragility check keys on it
+
+## Framework: The Hunt Rules
+
+1. **Hardcode hunt first** — constants typed over formulas: invisible, wrong-forever. Flag every constant where a column is otherwise formulaic.
+2. **Range-edge check on every aggregate** — SUM/AVERAGE/LOOKUP vs the data's real extent (the stops-at-row-40 error).
+3. **Unit & time-grain consistency** — monthly-vs-annual, currency, thousands-vs-units mixes at every junction (tell: a ratio ~12× or ~1000× off).
+4. **Trace the load-bearing outputs** — the 3–5 numbers the sheet exists to produce get full precedent traces.
+
+## Execution (Cowork)
+
+1. **Get the file** — via the Google Drive connector, download the sheet (or take the uploaded `.xlsx`). Never audit from values alone.
+2. **Open in the sandbox** — use the spreadsheet tooling (the `xlsx` skill / a Python pass with openpyxl) to read **formulas**, not just cached values. Enumerate sheets, named ranges, and the formula map.
+3. **Run the hunt rules** programmatically — scan for constants-in-formula-columns, aggregate ranges shorter than the data, and cross-section grain mismatches; trace precedents for the headline outputs.
+4. **Rank by damage** — location × what-it-mis-states × the decision it feeds.
+5. **Emit the artifact** — findings + verified/suspect ledger + fix list. On request, write a **corrected copy** (never overwrite the original) with the fixes applied and a change log.
+
+Guardrails: read-only on the source unless a corrected copy is explicitly requested, and then only as a new file; label unverified outputs honestly; if the connector/file is unavailable, say so — don't audit a sheet you couldn't open.
+
+## Output Format
+
+A **Spreadsheet Audit** artifact:
+
+### Verdict
+`Safe to present / Fix before presenting / Do not trust` — one line why
+
+### Findings (ranked by damage)
+| # | Cell/range | Class | What's wrong | Currently mis-stating |
+|---|---|---|---|---|
+
+### Verified / suspect ledger
+| Output | Traced | Status |
+|---|---|---|
+
+### Fix list
+1. [fix] — [robust upgrade if relevant]
+
+## Quality Checks
+- [ ] Formulas were read from the real file, not inferred from values
+- [ ] Every finding names an exact cell/range
+- [ ] Load-bearing outputs are each marked verified or suspect (none silently assumed)
+- [ ] The original file was not modified; any corrected copy is a new file with a change log
+- [ ] The verdict follows the findings, not optimism
+
+## Anti-Patterns
+- **Auditing the screenshot** — open the actual formulas.
+- **Overwriting the source** — corrections go to a copy.
+- **Claiming "looks fine"** without tracing the headline numbers.
+- **Cosmetic tidying** dressed up as an audit — protect the decision, not the formatting.
+
+## Example Trigger Phrases
+- "Audit the budget model in my Drive before the board call."
+- "Check this spreadsheet — why don't the totals add up?"
+- "Is this sheet safe to build on? Open it and trace it."
+- "Someone left me this model; hunt it for hardcodes in Cowork."

@@ -1,0 +1,98 @@
+---
+aliases: ["Creator Brand Kit"]
+tags: [pm-skills, skill]
+skill: creator-brand-kit
+description: "Define a creator's brand foundation — niche, audience, positioning, content pillars, voice/tone, and bio — so every post is consistent and on-brand. Use when asked to define a creator brand, find a niche, set content pillars, write a voice guide, craft a bio, or build a brand kit for a personal brand or channel. Produces a reusable one-page brand kit that other content skills can read so output sounds like you, every time."
+---
+
+# Creator Brand Kit Skill
+
+The difference between a creator who compounds and one who churns content is *consistency* — same niche, same voice, recognizable pillars. This skill builds the foundation other content skills read from: your niche, who you serve, how you sound, and what you talk about. It's the "reads-first" of the creator stack.
+
+## Working from a brief
+
+Given a rough description (handle, what they post, vibe), **build the full kit anyway** — propose a sharp niche and pillars, and label choices as *(draft — confirm)*. Push for specificity: "fitness" is not a niche; "strength training for desk workers over 40" is.
+
+## Required Inputs
+
+Ask for (if not already provided):
+- **What they create** and **where** (platforms/handles)
+- **Who it's for** (the specific audience) and what they want
+- **The creator's personality / how they want to sound**
+- **Goal** (grow, monetize, build authority, drive a product)
+
+## Output Format
+
+A one-page, reusable brand kit:
+
+### 1. Niche & positioning
+- **Niche (specific):** [audience] + [topic] + [angle]
+- **Positioning line:** "I help [who] [achieve what] through [how]."
+- **What makes you different:** the angle no one else in the niche owns.
+
+### 2. Audience
+Who they are, what they struggle with, what they aspire to, where they hang out.
+
+### 3. Content pillars
+**3–5 pillars** (the recurring themes you post about), each with: what it covers, why it serves the audience, and 2–3 example post ideas. Aim for a mix of *grow* (reach), *nurture* (trust), and *convert* (sell).
+
+### 4. Voice & tone
+- **3 voice attributes** (e.g. "direct, warm, a little contrarian") with a do/don't example each.
+- **Words you use / avoid.**
+- A **2-sentence sample** written in-voice as a reference.
+
+### 5. Bio & handles
+- A **profile bio** (≤150 chars) and a longer about-line.
+- Consistent handle/name guidance across platforms.
+
+### 6. Reuse note
+How to paste this into other skills (or the Playground "🧠 Your context" box / a `CONTEXT.md`) so [[content-repurposer]], [[hook-writer]], [[short-form-script]], and [[newsletter-writer]] all sound like you.
+
+## Deeper Materials
+
+This skill ships with support files — use them when they are available:
+
+- **`references/voice-consistency.md`** — Voice Consistency: the Creator's Compounding Asset. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
+- **`templates/brand-kit.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
+
+## Scoring Rubric (0–40)
+
+Score any output of this skill before handing it over; 32+ is ship-quality.
+
+| Dimension | 0 | 5 | 10 |
+|---|---|---|---|
+| **Niche sharpness** | A broad category ("fitness", "tech") that positions against everyone | Audience and topic named, but the angle is generic — ten other creators could claim the same line | Audience + topic + angle so specific the positioning line excludes most of the niche's competitors, with the differentiator stated |
+| **Pillar durability & funnel mix** | Pillars are topics-of-the-week or a flat content list with no purpose per pillar | 3–5 durable themes, but all serve reach — no deliberate grow/nurture/convert mix, thin example ideas | Each pillar states what it covers, why it serves the audience, 2–3 concrete post ideas, and the set visibly spans grow, nurture, and convert for the stated goal |
+| **Voice demonstrability** | Voice is a list of adjectives with no examples | Attributes have examples, but they're interchangeable — another writer still couldn't reproduce the voice | Every attribute has a do/don't pair, words-to-use/avoid are listed, and the in-voice sample would pass as the creator's own writing |
+| **Reusability as a foundation** | Bio is clever but says nothing about who it helps; no guidance on reusing the kit | Bio works and fits limits, but the kit ends there — no wiring to downstream content skills | Bio (≤150 chars) names who it's for and what they get, handles are consolidated, and the reuse note tells you exactly how other skills consume this kit |
+
+## Quality Checks
+
+- [ ] The niche is specific (audience + topic + angle), not a broad category
+- [ ] 3–5 pillars spanning grow / nurture / convert, each with example ideas
+- [ ] Voice is described with do/don't examples, not just adjectives
+- [ ] Bio is within platform limits and actually says who it's for
+- [ ] Includes how to reuse the kit across the other content skills
+
+## Anti-Patterns
+
+- A vague niche ("lifestyle", "tech") that positions against everyone
+- Pillars that are topics-of-the-week, not durable themes
+- Voice = a list of adjectives with no examples
+- A clever bio that doesn't say who it helps or what they get
+
+## Example Trigger Phrases
+
+- "Define a creator brand."
+- "Find a niche."
+- "Set content pillars."
+- "Write a voice guide."
+- "Craft a bio."
+
+---
+<!-- Run as an AI-plugin prompt. {{selection}} is the Text Generator / Templater
+     variable for the highlighted text; replace it with your plugin's equivalent
+     (e.g. {} in Copilot for Obsidian), or paste your input there manually. -->
+Apply the skill above to the following input:
+
+{{selection}}

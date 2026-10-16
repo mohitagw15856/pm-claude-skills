@@ -1,0 +1,61 @@
+---
+trigger: model_decision
+description: "Argue hard against whatever you just concluded — so your decision has to survive a real challenge instead of an echo chamber. Use when asked to play devil's advocate, argue against this, challenge my conclusion, or talk me out of it. Produces the strongest case against your position, the uncomfortable questions you're avoiding, the evidence that cuts the other way, and an honest read on whether your conclusion survives the challenge — deliberately countering the 'that's a great idea!' agreement bias."
+---
+
+# Devil's Advocate On Demand
+
+AI and friendly humans have a strong bias toward agreeing with you — which feels nice and teaches you nothing. This does the opposite on command: it argues hard against your conclusion, asks the questions you're dodging, and surfaces the evidence pointing the other way. If your decision survives, you can trust it more. If it doesn't, better to find out now.
+
+## What This Skill Produces
+
+- **The strongest counter-case** — the best argument against your position, made in earnest
+- **The uncomfortable questions** — the ones you're avoiding because you suspect the answers
+- **The evidence the other way** — facts and considerations that cut against your conclusion
+- **The survival verdict** — whether your position holds up under the challenge, honestly
+
+## Required Inputs
+
+Ask for these if not provided:
+- **Your conclusion** — what you've decided or believe
+- **Your reasoning** — how you got there
+- **Your confidence** — how sure you are (high confidence often needs the hardest challenge)
+- **What would change your mind** — if anything (a tell for how open the question really is)
+
+## Framework: Genuinely Argue The Other Side
+
+1. **Take the opposing position seriously.** Argue against the conclusion as if you believed the opposite — no token objections.
+2. **Ask what you're dodging.** Surface the questions the person is avoiding because they sense the answer undermines them.
+3. **Bring the counter-evidence.** Present the facts, base rates, and considerations that point the other way, fairly.
+4. **Attack the reasoning, not just the conclusion.** Find the weak link in *how* they got there.
+5. **Then judge honestly.** Say whether the position survives — sometimes the challenge confirms it (now stronger), sometimes it cracks. Don't manufacture doubt where the conclusion is sound.
+
+## Output Format
+
+### Challenging: [your conclusion]
+
+**The case against it:** [strongest honest counter-argument].
+**Questions you're avoiding:** [the uncomfortable ones].
+**Evidence the other way:** [what cuts against you].
+**Weak link in your reasoning:** [where it's shakiest].
+**Verdict:** [survives — stronger now / cracks — reconsider / genuinely 50/50 — here's the deciding factor].
+
+## Quality Checks
+- [ ] Genuinely argues the opposing side, not token objections
+- [ ] Surfaces the questions being avoided
+- [ ] Brings real counter-evidence, fairly
+- [ ] Attacks the reasoning, not only the conclusion
+- [ ] Gives an honest verdict, without manufacturing doubt on a sound call
+
+## Anti-Patterns
+- **Agreeing** with a few soft caveats.
+- **Token objections** that are easy to dismiss.
+- **Manufacturing doubt** on a genuinely sound conclusion.
+- **Attacking the person** instead of the position.
+
+## Example Trigger Phrases
+- "Play devil's advocate on my plan to quit and go freelance."
+- "Argue against my conclusion here."
+- "Challenge this — I want to know if it holds up."
+- "Try to talk me out of this decision."
+- "I think I'm right — prove me wrong if you can."

@@ -1,0 +1,63 @@
+---
+name: "Bring three versions of future-you into a decision — you in "
+description: "Bring three versions of future-you into a decision — you in a week, in a year, and in ten years — because they each want different things. Use when asked what would future me want, will I regret this, think long-term about this choice, or help me decide for the long run. Produces each future self's honest take on today's decision, where they conflict (short-term relief vs long-term payoff), whose vote should weigh most given what's at stake, and the choice that best serves the future-you that matters here."
+---
+
+# Future Selves Council
+
+Most bad decisions are a fight between present-you (who wants relief now) and future-you (who pays for it). This seats three future selves — one week out, one year out, ten years out — and lets each say what they'd want you to do today. Their conflict *is* the decision, and seeing it clearly usually makes the right move obvious.
+
+## What This Skill Produces
+
+- **Three future takes** — you-in-a-week, you-in-a-year, you-in-ten-years, each on today's decision
+- **The conflict** — where short-term relief and long-term payoff pull against each other (the heart of most tough choices)
+- **Whose vote weighs most** — which future self should dominate given what's actually at stake here
+- **The choice that serves them** — the decision that best honors the future-you that matters most, and how to make it bearable for present-you
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The decision** — what you're choosing, especially if it's now-vs-later
+- **The now-pull** — what present-you wants (comfort, avoidance, a treat, safety)
+- **The stakes** — reversible and small, or lasting and big
+- **Your values** — what future-you would actually care about
+
+## Framework: Let Each Future Self Vote
+
+1. **Convene the three.** One week, one year, ten years out — each has genuinely different priorities.
+2. **Let them speak honestly.** Week-you might want relief; year-you wants momentum; decade-you wants the compounding choice. Don't sanitize.
+3. **Name the conflict.** Most decisions are present-comfort vs future-payoff — make that trade explicit rather than pretending it away.
+4. **Weight the vote by stakes.** For big, hard-to-reverse choices, decade-you should dominate; for small reversible ones, don't over-torture present-you.
+5. **Make it doable.** Pick the choice that serves the deciding future self, and add the smallest concession that makes present-you able to actually do it.
+
+## Output Format
+
+### Decision: [what you're choosing]
+
+**🗓 You in a week:** [what they'd want].
+**📆 You in a year:** [what they'd want].
+**🔟 You in ten years:** [what they'd want].
+
+**The conflict:** [present relief vs long-term payoff — the real trade].
+**Whose vote weighs most here:** [which future self + why, given the stakes].
+**The call:** [choice that serves them] + [a small concession so present-you can do it].
+
+## Quality Checks
+- [ ] All three future selves give distinct, honest takes
+- [ ] The present-vs-future conflict is made explicit
+- [ ] The vote is weighted by the stakes (not always "think long-term")
+- [ ] The final call serves the right future self
+- [ ] It adds a concession to make the choice actually doable
+
+## Anti-Patterns
+- **All three futures agreeing** — no real tension.
+- **Always defaulting to "long-term wins"** even for trivial reversible choices.
+- **Ignoring present-you** entirely so the plan is unbearable.
+- **No actual decision** at the end.
+
+## Example Trigger Phrases
+- "Will I regret skipping this? What would future me want?"
+- "Help me think long-term about whether to take this contract."
+- "Present me wants to quit — what do my future selves say?"
+- "Should I spend this or save it? Ask future me."
+- "Decide this for the long run, but keep it doable now."

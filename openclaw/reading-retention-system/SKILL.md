@@ -1,0 +1,69 @@
+---
+name: reading-retention-system
+description: "Actually remember and use what you read — an active-reading system that beats the highlight-and-forget cycle. Use when asked how do I remember what I read, I forget books right after finishing, help me retain what I study, or take better reading notes. Produces an active-reading method (questions before, engagement during, retrieval after), a lightweight note format that captures the few ideas worth keeping, a spaced review touch, and how to actually apply what you read — turning passive consumption into knowledge you keep."
+homepage: https://mohitagw15856.github.io/pm-claude-skills/skill/reading-retention-system.html
+metadata:
+  {
+    "openclaw": { "emoji": "🧠" }
+  }
+---
+
+# Reading Retention System
+
+Most reading evaporates — you finish a book and a month later couldn't say what it was about. Highlighting feels productive but does almost nothing. Retention comes from *active* reading: engaging before, during, and after, capturing the few real ideas, and using them. This sets up a lightweight system that turns what you read into knowledge you actually keep and apply.
+
+## What This Skill Produces
+
+- **The active-reading method** — questions to hold before you start, ways to engage while reading (not passive highlighting), and retrieval after
+- **A lightweight note format** — capturing only the few ideas worth keeping, in your own words, linked to what you already know
+- **The retrieval habit** — a quick "what were the key ideas?" from memory after finishing (retrieval, not re-reading, cements it)
+- **A spaced review touch** — a light revisit so it doesn't fade
+- **The application step** — how to actually *use* an idea (the strongest retention of all)
+
+## Required Inputs
+
+Ask for these if not provided:
+- **What you're reading** — books, articles, study material, and for what
+- **Your current approach** — highlighting, notes, nothing (reveals the passive trap)
+- **Your goal** — remember for a purpose, apply it, or general learning
+- **How much you read** — to size the system realistically
+
+## Framework: Engage, Capture, Retrieve, Apply
+
+1. **Prime before reading.** Hold a question or purpose ("what am I trying to get from this?") — it turns reading from passive to hunting.
+2. **Engage, don't highlight.** Argue with the text, connect ideas to what you know, note reactions — active engagement encodes; highlighting doesn't.
+3. **Capture selectively, in your words.** After a chapter/article, note only the few genuinely valuable ideas, rephrased yourself and linked to existing knowledge — not a summary of everything.
+4. **Retrieve from memory.** After finishing, recall the key ideas without looking — this retrieval is what cements them, far more than re-reading.
+5. **Review lightly and apply.** A quick spaced revisit stops the fade; and using an idea in real life is the strongest retention there is.
+
+## Output Format
+
+### Reading system: [what you read] · for [purpose]
+
+**Before:** [hold a question/purpose].
+**During:** [engage — react, connect, argue — not passive highlight].
+**Capture (per chapter/piece):** [only the few key ideas, in your words, linked to what you know].
+**After:** [retrieve the key ideas from memory — don't re-read].
+**Review:** [a light spaced revisit].
+**Apply:** [how to actually use one idea].
+
+## Quality Checks
+- [ ] Includes priming with a question/purpose before reading
+- [ ] Replaces passive highlighting with active engagement
+- [ ] Captures selectively, in the reader's own words
+- [ ] Uses retrieval (from memory) rather than re-reading
+- [ ] Adds a light spaced review and an application step
+
+## Anti-Patterns
+- **Highlight-and-forget** as the whole system.
+- **Summarizing everything** instead of the few key ideas.
+- **Copying quotes verbatim** instead of rephrasing.
+- **Re-reading** instead of retrieving from memory.
+- **Never applying** what's read.
+
+## Example Trigger Phrases
+- "I forget books right after I finish them — help me retain more."
+- "How do I actually remember what I read?"
+- "Set up a system for taking notes on what I study."
+- "I highlight everything but retain nothing. Fix my reading."
+- "Help me get more out of the books I read."

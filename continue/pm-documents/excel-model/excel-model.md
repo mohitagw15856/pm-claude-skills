@@ -1,0 +1,81 @@
+---
+name: "Build a real, formula-driven Excel (.xlsx) model — not a sta"
+description: "Build a real, formula-driven Excel (.xlsx) model — not a static table. Use when asked to build an Excel model, a financial model, a budget/forecast spreadsheet, or any .xlsx with live formulas a user can edit. Produces an actual .xlsx file via a generated openpyxl script: an inputs/assumptions sheet, calculation sheets with real cell formulas, and formatting — so changing an input recalculates the model. Requires a code-execution environment (Claude Code, the API code tool, or Claude.ai)."
+---
+
+# Excel Model Skill
+
+A model is only useful if it's *live* — change an assumption and everything recalculates. A markdown
+table can't do that; a real `.xlsx` with cell formulas can. This skill builds an actual Excel workbook by
+**writing and running an `openpyxl` script**: a clean inputs sheet, calculation sheets that reference
+those inputs with real `=` formulas, and sensible formatting — so the user gets a file they can drive,
+not a snapshot.
+
+> **Environment:** this produces a binary file, so it needs a place to run code — **Claude Code**, the
+> **Anthropic API code-execution tool**, or **Claude.ai** (with the analysis/code tool). In the
+> browser playground (no code execution), use the markdown output as the spec instead.
+
+## Required Inputs
+
+Ask for these only if they aren't already provided:
+
+- **What the model is** — financial model, budget, forecast, pricing model, scenario planner, etc.
+- **The inputs/assumptions** — the driver variables (and rough values) the user will change.
+- **The outputs** — what it should compute (revenue, burn, margins, totals, a P&L, etc.).
+- **Structure** — periods (months/years), tiers/segments, and any required layout.
+
+## Process
+
+1. **Design before coding** — lay out the sheets (Inputs · Calculations · Output/Summary), and which cells are inputs vs. formulas. Confirm the calculation logic with the user if non-trivial.
+2. **Write an `openpyxl` script** that:
+   - Puts all driver assumptions on an **Inputs** sheet (one source of truth), labelled and formatted.
+   - Builds calculation cells as **real formulas referencing the input cells** (e.g. `=Inputs!B2*Inputs!B3`), never hard-coded results — so the model is live.
+   - Adds formatting: headers, number/currency/percent formats, column widths, and light cell styling for readability.
+   - Saves to a clearly named `.xlsx`.
+3. **Run it**, then **state the formulas used** and tell the user which cells to change to flex the model.
+
+## Output Format
+
+- The **generated `.xlsx` file** (the deliverable).
+- A short **README of the model**: the sheets, the input cells to change, the key formulas in plain English, and any assumptions.
+
+## Quality Checks
+
+- [ ] Calculations are **live cell formulas**, not pasted static values
+- [ ] All driver assumptions live on one Inputs sheet and are referenced, not duplicated
+- [ ] Numbers are formatted (currency/percent/thousands) and sheets are readable
+- [ ] The script runs cleanly and the file opens in Excel/Sheets/Numbers
+- [ ] The user is told exactly which cells to change to drive the model
+
+## Anti-Patterns
+
+- [ ] Do not write computed results as static numbers — the whole point is that inputs recalculate
+- [ ] Do not hard-code an assumption inside a formula — put it on the Inputs sheet and reference it
+- [ ] Do not scatter inputs across sheets — one assumptions sheet, single source of truth
+- [ ] Do not skip formatting — an unformatted grid of numbers is hard to trust or use
+- [ ] Do not claim a file was produced if there was no code execution — fall back to a clear spec instead
+
+## Based On
+
+Financial-modelling best practice (separate inputs from calculations, formula-driven, no hard-codes) implemented with openpyxl.
+
+## Programmatic Helper
+
+This skill ships `scripts/xlsx_tool.py` — a **zero-dependency** (stdlib zip+XML) tool that produces real `.xlsx` files, so the model you design can be delivered as a working workbook, not a markdown table:
+
+```bash
+# Build a workbook from JSON (numbers stay numbers, "=B2*C2" becomes a live formula)
+python3 scripts/xlsx_tool.py create model.xlsx --data '{"Model": [["Item","Qty","Price","Total"],["Widget",4,9.5,"=B2*C2"]]}'
+
+# Fill {{placeholders}} in an existing template workbook
+python3 scripts/xlsx_tool.py fill template.xlsx out.xlsx --values '{"month":"July","revenue":21000}'
+```
+
+Design the model first (per this skill), then emit the JSON and run `create`. Honest limits: default styling only, no charts — for formatted finals, open the generated file and style it, or use the playground's Excel export.
+
+## Example Trigger Phrases
+
+- "Build an Excel model."
+- "Build a financial model in Excel."
+- "Make a budget spreadsheet with live formulas."
+- "Make me an .xlsx forecast I can edit."

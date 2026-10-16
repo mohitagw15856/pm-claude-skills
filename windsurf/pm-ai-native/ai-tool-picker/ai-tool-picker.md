@@ -1,0 +1,64 @@
+---
+trigger: model_decision
+description: "Figure out which AI tool actually fits the task in front of you — chatbot, coding assistant, image model, agent, or none — instead of forcing one tool onto everything. Use when asked which AI tool should I use for, what's the best AI for, do I even need AI for this, or should I use ChatGPT or something else. Produces a match between your task and the right kind of AI tool (with why), the trade-offs that matter for your case, when the answer is a non-AI tool or plain human effort, and how to try it cheaply before committing — so you pick by fit, not by hype or habit."
+---
+
+# AI-Tool Picker
+
+Most people reach for the one AI tool they know and force every task through it — or freeze because there are a hundred options and endless hype. The right question isn't "what's the best AI tool," it's "what kind of tool fits *this* task." This matches your task to the right category of AI (or none), names the trade-offs that actually matter for your case, and shows how to try it cheaply — so you choose by fit, not by marketing.
+
+## What This Skill Produces
+
+- **The task-to-tool match** — which *category* of tool fits (conversational assistant, coding assistant, image/video model, research agent, automation, specialized app) and why
+- **The trade-offs that matter for you** — the 2–3 dimensions that actually decide it for this task (accuracy, privacy, cost, speed, integration), not a generic feature grid
+- **The "you don't need AI for this" call** — when a non-AI tool or plain human effort is genuinely the better answer
+- **A cheap way to try it** — how to test the fit with a free tier or a small task before committing time or money
+- **A shortlist, not a lecture** — a couple of concrete options in the right category, chosen for your constraints
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The task** — what you're actually trying to get done
+- **Your constraints** — budget, privacy needs, where it has to fit (a workflow, a tool you already use)
+- **Your current tools** — what you already have access to (often the answer's already in your pocket)
+- **The stakes** — one-off vs recurring, low-stakes vs must-be-right
+
+## Framework: Fit The Task, Not The Hype
+
+1. **Name the task shape.** Is it generation, transformation, research, decision support, or automation? The shape points to the tool category far better than brand names do.
+2. **Pick the category first.** Match the shape to a *kind* of tool (assistant, coding, image, agent, specialized) before naming any product — categories are stable, products churn.
+3. **Find the 2–3 deciding trade-offs.** For this specific task, what actually decides it — accuracy, privacy, cost, speed, integration? Ignore the dimensions that don't matter here.
+4. **Check if AI is even the answer.** Some tasks are better done by a non-AI tool, a template, or ten minutes of human effort — say so when it's true.
+5. **Recommend a cheap test.** Suggest trying the fit on a small real task via a free tier before investing — fit is revealed by use, not spec sheets.
+
+## Output Format
+
+### Tool for: [the task]
+
+**Task shape:** [generation / transformation / research / decision support / automation].
+**Right category:** [conversational assistant / coding / image / research agent / automation / specialized] — because [reason].
+**Deciding trade-offs for you:** [the 2–3 that actually matter here].
+**Shortlist:** [a couple concrete options in that category, fit to your constraints].
+**Or skip AI:** [when a non-AI tool / human effort is the better call — if applicable].
+**Try it cheaply:** [free tier / small test task before committing].
+
+## Quality Checks
+- [ ] Identifies the task shape before naming tools
+- [ ] Recommends a category, not just a trendy product name
+- [ ] Names only the trade-offs that matter for this task
+- [ ] Flags when AI isn't the right answer at all
+- [ ] Suggests a cheap way to test fit before committing
+
+## Anti-Patterns
+- **Defaulting to the one tool** the person already knows for everything.
+- **A generic feature comparison** ignoring what matters for this task.
+- **Recommending AI** where a non-AI tool or human effort wins.
+- **Chasing the hyped product** over the right category.
+- **No cheap test** — committing before verifying fit.
+
+## Example Trigger Phrases
+- "Which AI tool should I use for editing my photos?"
+- "What's the best AI for summarizing research papers?"
+- "Do I even need AI for this, or is there a simpler tool?"
+- "Should I use ChatGPT for this or something more specialized?"
+- "There are too many AI tools — which one fits what I'm doing?"

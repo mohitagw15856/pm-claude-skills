@@ -1,0 +1,64 @@
+---
+name: "Diagnose why you've stopped improving at something and get a"
+description: "Diagnose why you've stopped improving at something and get a plan to break through the plateau. Use when asked I've stopped getting better at, I'm stuck at the same level, how do I improve past this plateau, or why am I not improving. Produces a diagnosis of why you've plateaued (comfort-zone practice, missing feedback, a specific weak sub-skill, or just needing recovery), the specific change that resumes progress, a targeted practice plan for your actual bottleneck, and honest expectations — because plateaus are usually a practice problem, not a talent ceiling."
+---
+
+# Skill-Plateau Breaker
+
+Plateaus feel like hitting your ceiling, but they're almost always a practice problem: you've gotten good enough that autopilot works, so you stopped stretching, or you're missing the feedback that reveals what to fix, or one specific weak sub-skill is capping the whole thing. This diagnoses which, and gives a targeted plan to start improving again — usually by practicing differently, not just more.
+
+## What This Skill Produces
+
+- **The plateau diagnosis** — why you've stopped improving (practicing in your comfort zone, no feedback loop, a specific weak sub-skill, or genuine need for rest/consolidation)
+- **The unlock** — the specific change that resumes progress (usually a shift in *how* you practice, not more hours)
+- **A targeted practice plan** — deliberate practice aimed at your actual bottleneck, not general repetition
+- **A feedback fix** — how to get the feedback that plateaus often lack (a coach, recording yourself, a metric)
+- **Honest expectations** — that breakthroughs come from focused discomfort, and progress may feel worse before better
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The skill** — what you've plateaued at
+- **How you practice now** — what your practice actually looks like (reveals the comfort-zone trap)
+- **How long you've been stuck** — and at what level
+- **Feedback available** — do you get any, and from where
+- **Your specific weak spots** — where you sense you're weakest
+
+## Framework: Diagnose The Plateau, Practice The Bottleneck
+
+1. **Rule out comfort-zone practice.** The most common plateau cause: you practice what you're already good at on autopilot. Real improvement needs deliberate stretch.
+2. **Check the feedback loop.** Without feedback you can't see what to fix — plateaus often mean you've outgrown your current feedback source.
+3. **Find the capping sub-skill.** Often one specific weakness limits the whole — isolate and target it rather than practicing the whole skill generally.
+4. **Consider recovery.** Sometimes the plateau is fatigue/over-practice; consolidation and rest can be the unlock, not more grinding.
+5. **Practice deliberately at the edge.** Design practice that targets the bottleneck at the edge of your ability, with feedback — uncomfortable, focused, and specific. Expect it to feel harder before it pays off.
+
+## Output Format
+
+### Plateaued at: [skill] · stuck for [time] at [level]
+
+**Why you've plateaued:** [comfort-zone practice / no feedback / a weak sub-skill / need recovery] — because [signals].
+**The unlock:** [the specific change — usually how you practice].
+**Targeted practice plan:** [deliberate practice on the bottleneck, at the edge].
+**Get feedback via:** [coach / recording / metric].
+**Expect:** focused discomfort; it may feel worse before it clicks.
+
+## Quality Checks
+- [ ] Diagnoses the specific plateau cause, not "just try harder"
+- [ ] Checks comfort-zone practice, feedback, weak sub-skill, and recovery
+- [ ] Targets practice at the actual bottleneck
+- [ ] Addresses the feedback loop
+- [ ] Sets honest expectations about the discomfort of real progress
+
+## Anti-Patterns
+- **"Just practice more"** of the same comfort-zone stuff.
+- **Ignoring the missing feedback loop.**
+- **Practicing the whole skill generally** instead of the capping weakness.
+- **Missing that rest** might be the unlock.
+- **Framing it as a talent ceiling** when it's a practice problem.
+
+## Example Trigger Phrases
+- "I've stopped improving at chess — I'm stuck at the same rating."
+- "My running times have plateaued. How do I break through?"
+- "I've been at the same level of Spanish for a year. Why?"
+- "How do I get better past this plateau in my guitar playing?"
+- "I practice a lot but I'm not improving anymore. Diagnose it."

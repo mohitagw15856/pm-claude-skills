@@ -1,0 +1,86 @@
+---
+trigger: model_decision
+description: "Analyses sprint delivery data and produces a structured retrospective brief. Use when asked to run a retrospective, analyse sprint data, prepare a retro brief, or turn sprint metrics into discussion prompts. Produces a data-grounded retrospective brief with completion stats, pattern analysis, Start/Stop/Continue prompts, and one concrete experiment for next sprint."
+---
+
+# Retrospective Analysis Skill
+
+Generate a data-grounded retrospective brief that separates facts from feelings, so the team spends retro time on solutions rather than debating what happened.
+
+## Required Inputs
+
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
+- **Sprint tickets: planned vs. completed**
+- **Carry-over tickets and reasons** (if known)
+- **Tickets reopened after closing** (quality signal)
+- **Any incidents or unplanned work** (scope creep signal)
+- **Sprint velocity vs. historical average** (trend context)
+
+## Process
+1. Calculate: completion rate, carry-over rate, unplanned work percentage
+2. Identify patterns: which ticket types were most likely to carry over? Which caused blockers?
+3. Note any process or communication breakdowns visible in the data
+4. Prepare 3 "Start / Stop / Continue" prompts based on the data — not generic, specific to this sprint
+5. Suggest 1 concrete experiment for the next sprint based on the biggest friction point
+6. **Validate** — Confirm each prompt is specific to this sprint (not a recycled generic prompt), and that the recommended experiment is concrete and measurable
+
+## Output Structure
+
+### Sprint [Number] Retrospective Brief
+
+**By the Numbers:**
+- Planned: [n] tickets | Completed: [n] | Carry-over: [n] | Completion rate: [%]
+- Unplanned work: [n] tickets ([%] of capacity)
+- Velocity: [points] vs. [average] average
+
+**What the Data Suggests:**
+[2-3 observations grounded in the numbers above]
+
+**Discussion Prompts:**
+- Start: [specific prompt based on this sprint's data]
+- Stop: [specific prompt based on this sprint's data]
+- Continue: [specific prompt based on this sprint's data]
+
+**Suggested Experiment for Next Sprint:**
+[One concrete, testable process change — with a specific success metric]
+
+## Deeper Materials
+
+This skill ships with support files — use them when they are available:
+
+- **`references/root-cause-vs-symptom.md`** — Retros That Change Things: Root Causes vs Symptoms. Apply it while producing the output; it carries the calibration and judgment calls the method summary above compresses.
+- **`templates/retro-board.md`** — a fill-in version of the deliverable with the quality gates inline. Offer it when the user wants to work the document themselves rather than have it generated.
+
+## Scoring Rubric (0–40)
+
+Score any output of this skill before handing it over; 32+ is ship-quality.
+
+| Dimension | 0 | 5 | 10 |
+|---|---|---|---|
+| **Data grounding** | Numbers missing or wrong; observations are opinions with no traceable source | Core rates computed correctly, but observations only restate the numbers without pattern analysis (ticket types, historical comparison) | Every observation traces to a computed figure, carry-over is broken down by type/cause, and velocity is compared against the historical trend, not just the average |
+| **Blamelessness** | Brief names or implies individuals/disciplines as the cause ("QA missed them") | Neutral wording, but framing still points at effort or diligence rather than systemic conditions | Failure modes are reframed as process/coverage/scheduling patterns the data actually supports — a defensive reader would find nothing aimed at them |
+| **Prompt specificity** | Start/Stop/Continue are recycled generic categories ("communicate better") | Prompts reference this sprint but stay at category level — no numbers, no named behaviour | Each prompt is welded to this sprint's data, names one specific behaviour, and is phrased to open discussion rather than dictate the answer |
+| **Experiment quality** | No experiment, or a multi-quarter initiative dressed as one | One concrete change, but success is unmeasurable or can't be evaluated at the next retro | One process change testable within a single sprint, with explicit success metrics and a stated cost-if-wrong, checkable at the next retro |
+
+## Quality Checks
+
+- [ ] Each Start/Stop/Continue prompt names a specific behaviour, not a vague category
+- [ ] The recommended experiment is testable in one sprint
+- [ ] Carry-over analysis identifies the ticket type or cause, not just the count
+- [ ] Data observations don't assign blame — they describe patterns
+- [ ] Velocity trend is mentioned in context (is this a one-off or a pattern?)
+
+## Anti-Patterns
+
+- [ ] Do not assign blame to individuals in the retrospective brief — observations must describe patterns, not people
+- [ ] Do not produce Start/Stop/Continue prompts that are vague categories — each must name a specific behaviour
+- [ ] Do not recommend an experiment that cannot be completed within one sprint — small, testable experiments only
+- [ ] Do not treat carry-over tickets as a velocity problem without first identifying the root cause category
+- [ ] Do not run the same retrospective format every sprint — vary the format to prevent engagement fatigue
+
+## Example Trigger Phrases
+
+- "Run a retrospective."
+- "Analyse sprint data."
+- "Prepare a retro brief."
+- "Turn sprint metrics into discussion prompts."

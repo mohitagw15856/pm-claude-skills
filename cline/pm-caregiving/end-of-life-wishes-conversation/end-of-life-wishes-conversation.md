@@ -1,0 +1,64 @@
+# End-of-Life Wishes Conversation
+
+The conversation nobody wants to have is the one that, unhad, leaves families guessing and guilt-ridden during a crisis — making wrenching decisions with no idea what their loved one would have wanted. Having it *before* a crisis, gently and thoroughly, is one of the greatest gifts a family can give each other. This helps you open it without it feeling morbid, cover what matters, listen well, and capture the wishes so they can actually be honored. Not legal or medical advice.
+
+## What This Skill Produces
+
+- **A gentle opening** — a way to start this conversation that doesn't feel morbid, forced, or like you're rushing them toward death (a news story, a form to fill, "I want to make sure we honor what you want")
+- **The areas to cover** — medical wishes (interventions, resuscitation, comfort vs. aggressive care), where they want to be cared for and to die, what quality of life means to them, spiritual/personal wishes, and the practical/legal pieces (documents, who decides)
+- **A listen-don't-impose stance** — how to draw out *their* wishes rather than project your own or steer them
+- **How to handle resistance** — if they don't want to talk about it, how to ease in without forcing
+- **Capturing & sharing it** — how to document the wishes and make sure the right people (family, doctors) know them, and a nudge toward proper advance-directive documents
+- **A boundary** — this guides the conversation; the legal documents and medical specifics need professionals
+
+## Required Inputs
+
+Ask for these if not provided:
+- **Who** — whose wishes (an aging parent, an ill partner, planning your own)
+- **The context** — proactive planning, a recent diagnosis, or declining health
+- **The relationship & dynamic** — how open they are, and whether this is welcome or resisted
+- **What prompted it** — and any urgency
+- **What's been discussed** — any wishes already known or documented
+
+## Framework: Open Gently, Listen, Capture
+
+1. **Open without morbidity.** Frame it as honoring their wishes and easing the family's burden — anchored to a prompt (a form, a story, a relative's experience) so it's not out of nowhere. Reassure it's about respecting them, not giving up on them.
+2. **Cover the real areas.** Medical interventions and comfort-vs-aggressive care, where they want to be, what makes life worth living for them, spiritual/personal wishes, and the practical/legal (documents, decision-maker).
+3. **Listen, don't impose.** This is about *their* wishes — draw them out with open questions and resist steering toward what you'd want or find easier.
+4. **Ease resistance.** If they deflect, don't force it — plant the seed, come back another time, or start with the easier practical pieces.
+5. **Capture and share.** Write down what they express, make sure the key people and their doctors know, and point them toward proper advance-directive/legal documents so wishes are actually binding.
+6. **Get the documents right.** The conversation isn't the paperwork — flag that legal directives and medical orders need the proper professional process.
+
+## Output Format
+
+### Wishes conversation: with [who] · context [x]
+
+**Open gently:** [a non-morbid way in — anchored to a prompt, framed as honoring them].
+**Cover:** medical wishes (interventions/comfort vs aggressive) · where they want to be cared for/die · what quality of life means to them · spiritual/personal wishes · practical & legal (documents, who decides).
+**Listen, don't impose:** [open questions; draw out THEIR wishes].
+**If they resist:** [don't force — plant it, return later, or start with practical pieces].
+**Capture & share:** [write it down · tell the key people & doctors · point to proper advance-directive documents].
+
+> Guides the conversation — not legal or medical advice. Advance directives and medical orders require the proper legal/clinical process.
+
+## Quality Checks
+- [ ] Offers a gentle, non-morbid way to open it
+- [ ] Covers medical, location, quality-of-life, personal, and practical/legal areas
+- [ ] Emphasizes listening and drawing out their wishes, not imposing
+- [ ] Handles resistance without forcing
+- [ ] Includes capturing and sharing the wishes + proper documents
+- [ ] States it's conversation guidance, not legal/medical advice
+
+## Anti-Patterns
+- **A morbid or abrupt opening** that shuts it down.
+- **Projecting your wishes** onto them.
+- **Forcing it** when they're not ready.
+- **Covering only medical** and missing what matters to them.
+- **Having the talk** but never capturing or sharing it.
+
+## Example Trigger Phrases
+- "How do I talk to my dad about his end-of-life wishes?"
+- "I need to discuss advance care planning with my mom but don't know how."
+- "Help me ask my ill partner what they'd want."
+- "How do I bring up final wishes without it being morbid?"
+- "My parent won't talk about this — how do I ease into it?"

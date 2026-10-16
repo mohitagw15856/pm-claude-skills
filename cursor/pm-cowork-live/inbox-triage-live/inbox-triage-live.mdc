@@ -1,0 +1,77 @@
+---
+description: "Triage the user's REAL inbox through the Gmail connector — not a framework they run by hand. Use when asked to clear my inbox, get me to inbox zero on the actual account, triage my unread, or process my email backlog in Cowork. Reads unread via the Gmail connector, sorts every message into archive / reply-now / task / park, applies labels and archives in place, drafts the reply-now messages as real Gmail drafts. Produces a triage-report artifact of what it did and what still needs the user."
+globs:
+alwaysApply: false
+---
+
+# Inbox Triage (Live)
+
+The generic triage skill teaches a system; this one *runs it on the real account*. In Claude Cowork it reads the user's actual unread mail through the Gmail connector, decides each message, and takes the safe actions (label, archive, draft) itself — leaving only true judgement calls for the human.
+
+## What This Skill Produces
+
+- **The triage pass, executed** — every unread message assigned one of four verbs and the safe actions applied in the account
+- **Reply-now drafts** — short replies created as real Gmail drafts (never auto-sent) for the user to review and send
+- **A triage-report artifact** — a table of what was archived/labelled/drafted, plus the short list of messages that need a human decision
+
+## Required Inputs
+
+Ask for these if not provided:
+- **Scope** — which mailbox/label and how far back (e.g. "all unread", "Primary from the last 7 days")
+- **Reply-now boundary** — may the skill draft replies, or only classify? (default: draft, never send)
+- **Sender rules** — VIPs that are never auto-archived; newsletters that always are
+
+## Framework: The Four Verbs
+
+1. **Archive (default):** no action needed → archive; search beats filing.
+2. **Reply-now (two-minute rule):** a real reply under two minutes → draft it now.
+3. **Task:** needs real work → capture as a task with the message linked; never left in the inbox as its own reminder.
+4. **Park:** genuinely waiting-on → `@waiting` label + a weekly review.
+
+## Execution (Cowork)
+
+Run against the real account; act, don't just advise:
+
+1. **Read** — via the Gmail connector, list unread in scope (`is:unread` + the user's filter). Batch oldest-first; cap at a stated number per pass and report the remainder.
+2. **Classify** — apply the four verbs. Newsletters/receipts/notifications → archive. Direct asks from real people → reply-now or task.
+3. **Act safely** — through the connector: add labels (`@waiting`, `@task`), archive the archive-bucket, and create Gmail **drafts** (not sends) for reply-now. Never delete, never send, never touch anything outside scope.
+4. **Escalate** — anything ambiguous, from a VIP, or legally/financially sensitive is left untouched and listed for the human.
+5. **Emit the artifact** — the triage report (below). Stop and confirm before a second pass.
+
+Guardrails: draft-only by default; no bulk delete; respect the VIP/never-archive list; if the connector isn't authorised, say so and fall back to producing the rules + a manual pass, not silence.
+
+## Output Format
+
+A **Triage Report** artifact:
+
+### Summary
+`N processed · A archived · R drafted · T tasks · P parked · H need you`
+
+### Actions taken
+| Message | From | Verb | Action applied |
+|---|---|---|---|
+
+### Needs your decision
+- **[subject]** — from [sender] — why it was escalated, the suggested verb
+
+### Reply-now drafts created
+- **[subject]** → draft ready in Gmail; one-line summary of the drafted reply
+
+## Quality Checks
+- [ ] No message was sent or deleted — only labelled, archived, or drafted
+- [ ] Every escalated message states *why* it needs a human
+- [ ] VIP/never-archive rules were honoured
+- [ ] The report reconciles: processed = archived + drafted + tasks + parked + needs-you
+- [ ] The remaining backlog count is stated when a cap was hit
+
+## Anti-Patterns
+- **Auto-sending replies.** Draft only; the human sends.
+- **Bulk-deleting to hit zero.** Archive, never delete.
+- **Silent failure when the connector is missing.** Say it, and fall back to a guided manual pass.
+- **Re-triaging parked/handled mail** on the next pass — respect existing `@waiting`/`@task` labels.
+
+## Example Trigger Phrases
+- "Get my actual inbox to zero in Cowork."
+- "Triage my unread Gmail and draft the quick replies."
+- "Process my email backlog — archive the noise, flag what needs me."
+- "Label and archive my newsletters, leave the real messages."

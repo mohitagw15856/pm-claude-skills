@@ -1,0 +1,73 @@
+---
+description: "Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough budget. Use when asked to plan a trip, build a travel itinerary, what should I do in [place], or help me plan my holiday. Produces a day-by-day plan grouped by area (so you're not criss-crossing the city), must-book-ahead flags, a packing list tuned to the trip, a rough budget range, and honest notes on pace and gaps to fill with local info."
+globs:
+alwaysApply: false
+---
+
+# Trip Planner
+
+Most trip plans fail one of two ways: a Pinterest list with no shape, or an itinerary so packed it's a forced march. This builds a real one — clustered by neighbourhood so you're not zig-zagging, paced with actual downtime, honest about what needs booking ahead, and clear about where you should check current local info rather than trust a plan.
+
+## What This Skill Produces
+
+- **The day-by-day itinerary** — grouped by area, with a realistic number of things per day and built-in slack
+- **Book-ahead flags** — what sells out or needs reservations, and roughly how far ahead
+- **A tuned packing list** — for the destination, season, and activities (not a generic list)
+- **A rough budget range** — lodging / food / activities / transit, with the big swing factors named
+- **Verify-locally notes** — opening hours, closures, tickets, and safety that change and must be checked near the date
+
+## Required Inputs
+
+Ask for these if not provided:
+- **Where & when** — destination(s), dates or season, number of days
+- **Who's going** — solo / couple / family with kids / friends (changes pace and picks)
+- **The vibe** — relax / see-everything / food / outdoors / culture / budget-backpack vs. comfort
+- **Constraints** — budget level, mobility needs, must-dos, and no-gos
+
+## Framework: A Plan You'd Actually Enjoy
+
+1. **Cluster geographically.** Group each day by area to cut transit time — the biggest hidden cost of a bad plan.
+2. **Pace for humans.** 2–3 anchor things per day, not 7; jet lag on day one; a slow morning somewhere.
+3. **Flag the bookable.** Separate "just show up" from "sold out a month ahead."
+4. **Budget in ranges, honestly.** Give a band and name what moves it (season, lodging tier, eating out vs. in).
+5. **Say what to verify.** Hours, seasonal closures, and safety change — mark them "check near your date," don't assert them as fixed.
+
+## Output Format
+
+### [Destination] · [dates/season] · [travellers] · [vibe]
+**Budget band:** ~[range] — swing factors: [x].
+
+### Day by day
+**Day 1 — [area]:** morning … · afternoon … · evening … · *(built-in downtime: …)*
+**Day 2 — [area]:** …
+
+### Book ahead
+- [thing] — ~[how far ahead]
+
+### Packing (tuned)
+- [items specific to season/activities]
+
+### Verify near your date
+- [hours / closures / tickets / safety to confirm]
+
+## Quality Checks
+- [ ] Each day is clustered by area to minimise back-and-forth
+- [ ] Pace is realistic (downtime, jet lag, not over-stuffed)
+- [ ] Book-ahead items are separated from walk-ups
+- [ ] Budget is a range with the main swing factors named
+- [ ] Time-sensitive facts (hours/closures/safety) are flagged "verify," not asserted as current
+- [ ] Packing list is specific to the destination/season/activities
+
+## Anti-Patterns
+- **A march** — cramming every landmark into every day.
+- **Zig-zag routing** that ignores geography and burns hours in transit.
+- **Asserting current hours/prices/closures** as fact — flag them to verify.
+- **A generic packing list** that ignores the actual climate and plans.
+- **One-size pace** for a family with a toddler and a group of 20-somethings.
+
+## Example Trigger Phrases
+- "Plan a 5-day trip to Lisbon for a couple who loves food."
+- "Build me a Tokyo itinerary — first time, 7 days, mid-budget."
+- "What should I do in Rome in 3 days with kids?"
+- "Help me plan a relaxed week in the mountains."
+- "Weekend city break — give me a day-by-day and a packing list."

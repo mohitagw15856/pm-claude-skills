@@ -1,0 +1,293 @@
+# Stakeholder Update Skill
+
+This skill creates effective status updates for executives and stakeholders following the BLUF (Bottom Line Up Front) principle.
+
+## Required Inputs
+
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
+- **Project or product being reported on**
+- **Audience** (CEO, board, cross-functional leads, investors — changes depth and format)
+- **Period** (this week / this sprint / this month)
+- **Current status** (on track / at risk / blocked)
+- **Key metrics** and their current values vs. targets
+
+## Reads from / Writes to the Brain
+
+If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, use it before asking:
+
+- **Read first:** the relevant `stakeholders/` files (what each person cares about and their prior asks), `context.md` (voice/tone), and recent `decisions/` for what's changed since the last update.
+- **Write after:** append any new ask, concern, or commitment surfaced to the relevant `stakeholders/` file, provenance-tagged (`[verbal]` for something said in a meeting, not yet documented).
+
+## Deeper Materials
+
+- **`references/status-honesty-guide.md`** — calibration for the 🟢/🟡/🔴 call (the watermelon problem, the consecutive-🟡 rule, re-baselining honestly) and fact → impact → action → ask phrasing for bad news. Apply it whenever the status is 🟡/🔴 or the input notes feel rosier than the metrics.
+- **`templates/update-skeleton.md`** — a one-page fill-in update with the quality gates inline and a pre-send checklist. Offer it to users who want to write updates themselves.
+
+## Update Structure
+
+### 1. BLUF (Bottom Line Up Front)
+Start with the most important information:
+- **Status**: 🟢 On track / 🟡 At risk / 🔴 Blocked / ✅ Complete
+- **Key Takeaway**: One sentence summary of current state
+- **Action Needed**: What you need from stakeholders (if anything)
+
+### 2. Progress Summary
+Brief overview of accomplishments:
+- What shipped this period
+- Milestones achieved
+- Key metrics movement
+
+Keep to 3-5 bullet points maximum.
+
+### 3. Metrics Dashboard
+
+**Key Metrics**
+| Metric | Current | Target | Trend | Status |
+|--------|---------|--------|-------|--------|
+| [Metric name] | [Value] | [Target] | ↑/→/↓ | 🟢/🟡/🔴 |
+
+Include 3-5 most important metrics only.
+
+### 4. Risks & Blockers
+
+**High Priority Issues:**
+- **Issue**: Brief description
+- **Impact**: What's at stake
+- **Mitigation**: What you're doing about it
+- **Help Needed**: What stakeholders can do (if applicable)
+
+Only include issues that matter at executive level.
+
+### 5. Upcoming Milestones
+
+**Next 30 Days:**
+- Milestone (expected date)
+- Milestone (expected date)
+
+**Next 90 Days:**
+- Major milestone (month)
+- Major milestone (month)
+
+### 6. Decisions Needed (if applicable)
+- **Decision**: Clear description
+- **Options**: 2-3 options with pros/cons
+- **Recommendation**: What you recommend and why
+- **Timeline**: When decision is needed
+
+End every output with a short **Assumptions and gaps** block: two to four bullets naming what was assumed because the input did not say, and what missing information would most change this output. If nothing was assumed and nothing was missing, say so in one line instead.
+
+## Writing Guidelines
+
+**Tone**: Professional, concise, action-oriented
+**Length**: Keep under 1 page (or 2 minutes reading time)
+**Frequency**: Weekly for active projects, bi-weekly for maintenance
+
+**Executive Communication Principles:**
+
+1. **Lead with conclusions, not process**
+   - ❌ "We ran 5 experiments this week and analyzed the data..."
+   - ✅ "Conversion rate increased 15% from optimization work"
+
+2. **Focus on impact, not activities**
+   - ❌ "Held 12 customer interviews"
+   - ✅ "Identified #1 barrier to adoption (complexity of setup)"
+
+3. **Make problems visible early**
+   - Don't sugarcoat risks
+   - Propose solutions, not just problems
+   - Be specific about help needed
+
+4. **Use data to tell story**
+   - Quantify whenever possible
+   - Show trends, not just snapshots
+   - Connect metrics to business outcomes
+
+5. **Make it scannable**
+   - Use headers and bullet points
+   - Bold key information
+   - Use visual indicators (🟢🟡🔴, ↑→↓)
+
+## Status Guidelines
+
+**🟢 On Track**: Meeting all targets, no significant risks
+**🟡 At Risk**: Potential issues that could impact delivery
+**🔴 Blocked**: Critical issues preventing progress, needs intervention
+
+## Example Update
+
+```
+# Product Update: Customer Onboarding Redesign
+**Week of Jan 20, 2026**
+
+## BLUF
+**Status**: 🟡 At Risk  
+**Key Takeaway**: New onboarding flow is performing well in tests (+35% completion), but launch delayed one week due to integration issues with billing system.  
+**Action Needed**: Decision needed on whether to launch onboarding separately or wait for billing integration fix.
+
+## Progress Summary
+- Completed user testing with 24 participants (94% positive feedback)
+- Implemented first-time user experience improvements
+- Resolved 12 of 15 bugs identified in QA
+- Engineering allocated resources to billing integration fix
+
+## Key Metrics
+| Metric | Current | Target | Trend | Status |
+|--------|---------|--------|-------|--------|
+| Onboarding Completion | 45% | 60% | → | 🟡 |
+| Time to First Value | 4.2 min | 3.0 min | ↓ | 🟢 |
+| Setup Support Tickets | 45/week | <30/week | ↓ | 🟢 |
+| User Activation Rate | 52% | 65% | → | 🟡 |
+
+## Risks & Blockers
+
+**HIGH: Billing System Integration Delay**
+- **Impact**: Prevents users from completing onboarding flow; delays launch by 1-2 weeks
+- **Root Cause**: API deprecation by payment processor, requires code rewrite
+- **Mitigation**: Engineering team reallocated resources, fix ETA Feb 3
+- **Decision Needed**: Launch onboarding without payment integration or wait for fix? (See below)
+
+**MEDIUM: Mobile Testing Coverage**
+- **Impact**: Some edge cases on older Android devices not tested
+- **Mitigation**: Partnering with QA to expand test matrix; running beta with internal users on diverse devices
+
+## Upcoming Milestones
+
+**Next 30 Days:**
+- Resolve billing integration (Feb 3)
+- Launch onboarding redesign (Feb 5 or Feb 12 depending on decision)
+- Begin measuring impact on conversion (Feb 12)
+
+**Next 90 Days:**
+- Iterate based on production data (March)
+- Extend to mobile app (April)
+- Launch advanced features (May)
+
+## Decision Needed
+
+**Should we launch onboarding separately from billing integration?**
+
+**Option A: Launch Now (Recommended)**
+- Pros: Get 35% completion rate improvement to users immediately, gather production data, maintain momentum
+- Cons: Users need to complete payment in old flow, slightly disjointed experience
+- Timeline: Launch Feb 5
+
+**Option B: Wait for Billing Fix**
+- Pros: Fully integrated experience from day one, no technical debt
+- Cons: Delays benefits by 2 weeks, Q1 metric targets at risk, team momentum lost
+- Timeline: Launch Feb 12
+
+**Recommendation**: Option A. The onboarding improvements are valuable independently, and the old payment flow works fine. Waiting risks missing Q1 targets and delays validated improvements from reaching users.
+
+**Timeline**: Need decision by Jan 22 for Feb 5 launch.
+
+---
+
+**Questions?** Reply to this email or ping me on Slack.
+```
+
+## Frequency Guidance
+
+**Daily standups**: 
+- Ultra-brief (3 bullets)
+- What shipped yesterday
+- What's shipping today
+- Blockers
+
+**Weekly updates**:
+- Use full template above
+- Focus on progress and risks
+- Keep to 1 page
+
+**Monthly reviews**:
+- Deeper metrics analysis
+- Strategic reflections
+- Quarterly goal progress
+- Longer format (2-3 pages) acceptable
+
+**Quarterly business reviews**:
+- Comprehensive analysis
+- Trends over time
+- Strategic recommendations
+- Presentation format
+
+## Adaptation by Audience
+
+### For C-Suite
+- Lead with business impact
+- Connect to company OKRs
+- Focus on strategy and outcomes
+- Minimize technical details
+
+### For Product/Engineering Leadership
+- Include technical context
+- Show sprint/milestone progress
+- Discuss architecture implications
+- Reference technical debt
+
+### For Cross-Functional Teams
+- Balance technical and business context
+- Highlight dependencies
+- Call out collaboration needs
+- Make asks explicit
+
+### For Board/Investors
+- Focus on metrics and traction
+- Competitive positioning
+- Market opportunities
+- Financial implications
+
+## Scoring Rubric (0–40)
+
+Score any output of this skill before handing it over; 32+ is ship-quality.
+
+| Dimension | 0 | 5 | 10 |
+|---|---|---|---|
+| **BLUF & status honesty** | Status buried or missing; update reads as a diary of activities | Status and takeaway up front, but the emoji flatters the metrics (green outside, red inside) | First three lines give status, one-sentence takeaway, and the ask; the 🟢/🟡/🔴 call matches the worst material metric and says why |
+| **Metric context** | Raw numbers with no targets, trends, or period comparison | Targets present, but metrics are activity counts disconnected from business outcomes | 3–5 metrics, each with target, trend, and status — and the ones that matter are tied to money, customers, or the goal at stake |
+| **Risk actionability** | Risks listed as worries with no owner, mitigation, or impact | Mitigations stated, but impact is unquantified and it's unclear whether the reader needs to do anything | Every risk has quantified impact, a mitigation with a date or success condition, and an explicit "help needed" (or "none") |
+| **Decision framing** | Open-ended questions thrown at executives, or no decisions surfaced at all | Options listed, but without costs/trade-offs or a recommendation | Each decision has 2–3 costed options, a clear recommendation with reasoning, and the date the decision is needed — with what forces that date |
+
+## Quality Checks
+
+- [ ] Update leads with BLUF — status, key takeaway, and action needed before any detail
+- [ ] Every metric has a target comparison (not just a raw number)
+- [ ] Every risk has a mitigation and a "help needed" flag if stakeholder action is required
+- [ ] Decisions needed have specific options and a clear recommendation
+- [ ] Total length is under 1 page / 2 minutes reading time
+
+## Anti-Patterns
+
+- [ ] Do not bury the status assessment at the bottom — BLUF means the most important information comes first
+- [ ] Do not report metrics without a target or prior-period comparison — raw numbers without context are not useful
+- [ ] Do not list risks without mitigation actions and clear flags for stakeholder help needed
+- [ ] Do not write decisions needed as questions without providing a clear recommendation — executives need options, not open-ended questions
+- [ ] Do not allow the update to exceed one page — if it requires more, the message needs editing, not expanding
+
+## Execution
+
+For tool-using agents that can reach the team's communication channels (Slack, email). Sending an update is **outward-facing**: it is never automatic. Runtimes without tool access ignore this section. See [SKILLSPEC.md §5](../../SKILLSPEC.md).
+
+### Preconditions
+- The final update text has been shown to the human **verbatim** and explicitly approved — including the exact channel/recipient list.
+- The channel or recipient list is named by the user, not inferred from history.
+- If the status is 🔴 or contains a Decision Needed, confirm the named decision-maker is among the recipients.
+
+### Allowed actions
+- Post the approved text, unmodified, to the one approved channel — or send it as one email to the approved recipients with the approved subject line.
+- Save a copy to the location the user names (doc, Brain, repo file).
+- Nothing else: no scheduling recurring sends (see `schedule-recipe` for that, with its own gates), no @-mentions not present in the approved text, no cross-posting.
+
+### Verification
+- Confirm the message exists in the channel/thread (fetch its permalink) and report the link back.
+- Confirm the sent text is byte-identical to the approved text.
+
+### Rollback
+- If the platform allows it, deletion of a just-posted message is permitted **only** on explicit human instruction — otherwise post a correction reply.
+- Stop and ask a human if: the channel is not found, posting partially fails, or the approved text no longer matches what is about to be sent.
+
+## Example Trigger Phrases
+
+- "Write a status update."
+- "Write a progress report for leadership."
+- "Write the project update for stakeholders."
+- "Write an executive briefing."

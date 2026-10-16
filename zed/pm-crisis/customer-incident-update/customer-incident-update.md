@@ -1,0 +1,63 @@
+# Customer Incident Update
+
+During an outage, silence is the second failure. But the customer update is its own craft: say what's affected without guessing at causes, commit to a next-update time you can keep, and never promise a fix-by you don't control. This writes the post for the stage you're in — the messy middle included — so customers feel informed, not managed.
+
+## What This Skill Produces
+
+- **The update**, in the tense of the current stage (investigating / identified / monitoring / resolved)
+- **The impact line** — who and what is affected, in the customer's terms
+- **The workaround** — if one exists, stated plainly
+- **The next-update commitment** — a specific time, always
+- **Channel variants** — a terse status-page version and a fuller email if needed
+
+## Required Inputs
+
+Ask for these if not provided:
+- **Stage** — investigating, identified, monitoring, or resolved
+- **Impact** — which product/region/customers, and what they can't do right now
+- **What's known** — only what you're confident of; unknowns stay unknown in the post
+- **Workaround** — any, or none
+- **Audience** — all customers, affected only, or enterprise accounts (tone shifts)
+
+## Framework: Honest Status Comms
+
+1. **Match the tense to the stage.** "We're investigating" ≠ "we've identified" ≠ "we're monitoring the fix." Don't skip ahead.
+2. **Impact before cause.** Customers care what's broken for them; causes come in the postmortem, not mid-incident.
+3. **Commit to the next update, not the fix.** "Next update by 15:00 UTC" is a promise you can keep; "fixed within the hour" often isn't.
+4. **No speculation.** If you don't know the cause, say you're investigating — a wrong guess published is worse than an honest unknown.
+5. **Own it plainly.** Brief, human, no corporate throat-clearing; apologise once, then inform.
+
+## Output Format
+
+### Status-page post
+> **[Investigating/Identified/Monitoring/Resolved] — [title]** · [timestamp]
+> [Impact: who/what]. [What we're doing]. [Workaround, if any]. Next update by [time].
+
+### Email (if broader comms needed)
+- Subject: [clear, non-alarmist]
+- Body: impact → status → workaround → next update → apology
+- Sign-off
+
+### Update ladder (for the incident's life)
+- The follow-on posts you'll publish as the stage changes, pre-drafted
+
+## Quality Checks
+- [ ] The tense matches the actual stage — no claiming a fix that isn't confirmed
+- [ ] Impact is stated in customer terms, up top
+- [ ] A specific next-update time is given
+- [ ] No cause is speculated when it isn't known
+- [ ] No fix-by time is promised that depends on an unknown
+- [ ] Tone is human and brief — one apology, no jargon
+
+## Anti-Patterns
+- **"Some users may be experiencing issues"** when it's a full outage — minimising erodes trust faster than the outage.
+- **Promising a resolution time** you can't control.
+- **Publishing a guessed cause** that turns out wrong.
+- **No next-update time** — leaves customers refreshing in the dark.
+- **Skipping stages** — jumping to "resolved" before monitoring confirms it.
+
+## Example Trigger Phrases
+- "Write a status page update — we're investigating an outage."
+- "Draft customer comms for the API downtime, identified stage."
+- "Post an incident notice for enterprise accounts."
+- "We've deployed a fix and are monitoring — write the update."

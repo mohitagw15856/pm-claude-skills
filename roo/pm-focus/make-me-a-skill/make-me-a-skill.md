@@ -1,0 +1,59 @@
+# Make Me a Skill
+
+The biggest leverage in working with AI is turning your repeated tasks into reusable skills — so formatting the meeting notes, writing the weekly update, or organizing the tasks becomes "do the thing" instead of re-explaining it every time. This captures one such task into a clean, reusable skill or prompt you can invoke by name, and shows you how to save and improve it. Do it once and you'll do it for everything.
+
+## What This Skill Produces
+
+- **The captured task** — the repetitive thing, spelled out: what it takes in, the steps it follows, and what a good result looks like
+- **A reusable skill/prompt** — a clean, named artifact you can invoke ("do my weekly update") instead of re-explaining
+- **The output template** — the consistent format the skill should produce each time
+- **Save & invoke guidance** — where to keep it (a skill file, a saved prompt, a snippet) and how to trigger it
+- **A refine loop** — how to improve it as you use it (the first version is never the last)
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The repetitive task** — the thing you do regularly and re-explain each time
+- **A good example** — one instance of the task done well (the target output)
+- **The inputs it needs** — what information you feed it each time
+- **Where you'll use it** — Claude Code, a chat, a specific tool (shapes the format)
+
+## Framework: Capture, Templatize, Reuse
+
+1. **Pick one repeated task.** Start with a single weekly thing — the highest-frequency, most-annoying-to-re-explain one.
+2. **Extract the spec.** From how you currently do it (and a good example), capture the inputs, the steps, and what "good" looks like — the reusable essence.
+3. **Write the invocable artifact.** Turn it into a named skill or prompt with a clear trigger, required inputs, and an output template — so next time it's one instruction.
+4. **Fit the tool.** Format it for where it'll live (a SKILL.md, a saved prompt, a text snippet) and note how to invoke it.
+5. **Refine as you go.** Treat v1 as a draft — each use surfaces a tweak. And once one exists, the pattern generalizes to your other repeated tasks.
+
+## Output Format
+
+### Skill: [name] — for [the repetitive task]
+
+**What it does:** [one line].
+**Inputs it needs:** [the info you feed it].
+**The skill/prompt (reusable):**
+> [The invocable instruction — trigger, steps, and the output template it should follow.]
+
+**Save it as:** [SKILL.md / saved prompt / snippet], invoke with "[trigger phrase]".
+**Refine it:** each time you use it, tweak the part that wasn't quite right. Then make one for your next repeated task.
+
+## Quality Checks
+- [ ] Captures a genuinely repeated task's inputs, steps, and good-output
+- [ ] Produces a reusable, invocable skill/prompt with a clear trigger
+- [ ] Includes a consistent output template
+- [ ] Gives concrete save-and-invoke guidance for the person's tool
+- [ ] Includes a refine loop and the generalize-to-others nudge
+
+## Anti-Patterns
+- **A one-off answer** instead of a reusable artifact.
+- **Capturing a vague task** with no clear inputs or output.
+- **No trigger/invocation** guidance.
+- **Treating v1 as final** with no refine loop.
+
+## Example Trigger Phrases
+- "I format meeting notes the same way every week — make me a skill for it."
+- "Turn my weekly status update into a reusable prompt."
+- "Help me create a template skill for organizing my tasks."
+- "I keep re-explaining this to AI — capture it as a skill."
+- "Make a 'do this' skill out of my monthly report process."

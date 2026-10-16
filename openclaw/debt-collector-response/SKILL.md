@@ -1,0 +1,73 @@
+---
+name: debt-collector-response
+description: "Respond to a debt collector correctly — know your rights, make them prove the debt, and avoid the mistakes that reset the clock or admit liability. Use when asked how to deal with a debt collector, a collection agency is contacting me, is this debt real, or respond to a collections letter. Produces a validation/proof-of-debt request, a rights-aware read on what collectors can and can't do, guidance on statute-of-limitations and not accidentally restarting it, a communication and record-keeping plan, and escalation if they break the rules. Not legal advice."
+homepage: https://mohitagw15856.github.io/pm-claude-skills/skill/debt-collector-response.html
+metadata:
+  {
+    "openclaw": { "emoji": "💵" }
+  }
+---
+
+# Debt Collector Response
+
+Collectors count on people either panicking and paying anything, or ignoring it until it escalates. The right move is neither: make them *prove* the debt is yours and accurate, know what they legally can and can't do, and be careful not to accidentally admit or restart an old debt. This prepares that response — while being clear it isn't legal advice.
+
+## What This Skill Produces
+
+- **A debt-validation request** — the letter demanding they prove the debt, amount, and their right to collect, before you pay anything
+- **A rights read** — what collectors legally can and can't do (contact limits, harassment, false threats) for your region
+- **A statute-of-limitations caution** — how old the debt is, and how *not* to accidentally restart the clock (a payment or admission can reset it)
+- **A communication plan** — in writing where possible, what to say and not say, and a record of every contact
+- **Escalation** — how to report violations, and options like disputing, negotiating, or settlement — flagged carefully
+
+## Required Inputs
+
+Ask for these if not provided:
+- **The contact** — letter, call, email; the collector's name and what they claim
+- **The debt** — amount, original creditor, and roughly how old
+- **Is it yours** — recognized, unsure, disputed, or possibly not yours/already paid
+- **What you've done** — any payments, promises, or acknowledgments made
+- **Region** — determines rights, limits, and statute of limitations
+
+## Framework: Verify First, Protect The Clock
+
+1. **Validate before you pay.** Request written proof of the debt, the amount, and the collector's authority to collect — never pay on a phone demand alone.
+2. **Know the rules.** Collectors face legal limits (contact times, harassment, false or threatening claims). Recognizing violations shifts the power back to you.
+3. **Mind the statute of limitations.** Old debts may be time-barred — but a partial payment or written admission can *reset* the clock. Don't acknowledge or pay an old debt without understanding this.
+4. **Communicate in writing.** Put key communication in writing, keep copies of everything, and log every call (date, name, what was said).
+5. **Then decide.** Once validated, options include dispute (if wrong/not yours), negotiate/settle, or a payment plan — chosen deliberately, not under pressure.
+
+## Output Format
+
+### Collections response: [collector] · [amount] · ~[age] · yours? [y/n/unsure]
+
+**Step 1 — Validate:** send a written debt-validation request (proof, amount, authority). Don't pay until validated.
+**Your rights:** [region — contact limits, harassment/false-threat protections].
+**Clock caution:** debt is ~[age]; [note on statute of limitations + don't reset it by paying/admitting].
+**Communicate:** in writing · say [x], avoid [admissions] · log every contact.
+**Then:** [dispute if not yours / negotiate / settle / plan] — after validation.
+**If they break the rules:** [report to the relevant authority].
+
+> Not legal advice. For lawsuits, large sums, or complex disputes, consult a qualified adviser or legal-aid service.
+
+## Quality Checks
+- [ ] Leads with debt validation before any payment
+- [ ] States region-appropriate collector rules/limits
+- [ ] Warns that paying/admitting can restart the statute of limitations
+- [ ] Advises written communication and a contact log
+- [ ] Presents dispute/negotiate/settle only after validation
+- [ ] Flags "not legal advice" for serious cases
+
+## Anti-Patterns
+- **Paying immediately** on a phone demand without validation.
+- **Admitting or part-paying an old debt** and resetting the clock.
+- **Communicating only by phone** with no record.
+- **Ignoring it entirely** until it escalates to court.
+- **Treating this as legal advice** for a lawsuit-level matter.
+
+## Example Trigger Phrases
+- "A debt collector is calling about a debt I don't recognize — what do I do?"
+- "How do I make a collection agency prove I owe this?"
+- "I got a collections letter for an old debt — should I pay it?"
+- "Can debt collectors call me at work / threaten me?"
+- "Write me a debt validation letter."

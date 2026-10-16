@@ -1,0 +1,244 @@
+---
+trigger: model_decision
+description: "Write a structured incident postmortem or post-incident review. Use when asked to write a postmortem, incident report, P1/P2 review, outage report, or RCA (root cause analysis). Produces a blameless postmortem with timeline, root cause, contributing factors, impact summary, and action items."
+---
+
+# Incident Postmortem Skill
+
+This skill produces a complete, blameless incident postmortem document following industry-standard format. Output enforces blameless framing throughout — system gaps over individual failures — and drives toward specific, closeable action items rather than vague process commitments.
+
+> **Not quite this?** Use `agent-incident-postmortem` when an AI agent caused the incident (runaway tool use, a shipped hallucination).
+
+## Proposes Actions
+
+The action items don't have to stay on the page: hand them to [`action-runner`](../action-runner/SKILL.md), which previews them (dry-run, risk-rated), runs only what you approve via the connected action MCP, and records what was done back to the brain. Typical: **file a follow-up issue per action item** (🟡), assigned to its owner with a due date. This skill proposes; action-runner gates and runs — never silently.
+
+## Where this sits — turning an incident into fixes
+
+Third in the incident-response spine: **`/slo-error-budget` (frame) →
+`/debugging-log-analyser` → `incident-postmortem` → `/oncall-runbook`**. It receives the
+**root-cause diagnosis** from `/debugging-log-analyser` (read it rather than
+re-diagnosing) and hands `/oncall-runbook` **the contributing factors and prioritised
+action items** — and the error budget from `/slo-error-budget` decides how urgent those
+actions are. *Blameless*, *root cause vs contributing factors*, and *action item* are
+defined once in [`docs/craft/incident-response.md`](../../docs/craft/incident-response.md);
+blameless is the load-bearing rule.
+
+## The loop
+
+A postmortem fails the moment it assigns blame — the honest data dries up and every
+future incident is under-reported. Phase 1 sets that frame; everything depends on it.
+
+1. **Establish blameless framing first.** State up front that this examines the *system*
+   that let a competent person make the move, never the person. This isn't politeness —
+   it's the precondition for the truthful timeline the rest of the skill needs.
+   **Done when:** the framing is explicit and no sentence in the document blames an
+   individual; failures are attributed to system gaps.
+2. **Build the timeline from evidence.** Reconstruct start → detection → mitigation →
+   resolution with real timestamps (from the diagnosis and logs, not memory). Detection,
+   mitigation, and resolution are distinct events — track each.
+   **Done when:** the timeline has real timestamps and separates detection/mitigation/
+   resolution, and the impact is quantified (users, duration, scope).
+3. **Find the root cause AND the contributing factors.** The root cause is one thing;
+   the contributing factors are what let it reach users and persist (the missing alert,
+   the skipped canary, the unclear runbook). A postmortem with a root cause and no
+   contributing factors hasn't looked hard enough.
+   **Done when:** at least the load-bearing contributing factors are named, each pointing
+   at a system gap that's fixable.
+4. **Drive to owned, dated action items — governed by the budget.** Convert factors into
+   specific action items, each with an owner and a date; vague "improve monitoring"
+   items decay. Prioritise them against the error budget (spent → now; healthy → soon).
+   **Done when:** every action item has an owner and a date, and `/oncall-runbook` could
+   turn the detection/mitigation learnings into an entry without re-analysing the incident.
+
+## Required Inputs
+
+Work from what is given. If any of these is missing, still produce the complete output: fill each gap with a reasonable assumption marked *(assumed, confirm)* and list those assumptions at the end. Ask a question first only when the core subject itself is missing (there is nothing to write about).
+- **Incident title / ID**
+- **Severity** (P1 / P2 / P3 or SEV1 / SEV2 / SEV3)
+- **Date and duration** of the incident
+- **What happened** (rough notes are fine — the skill will structure them)
+- **Services or systems affected**
+- **Customer impact** (how many users, what was degraded)
+- **How it was detected**
+- **How it was resolved**
+- **Initial thoughts on root cause**
+- **Action items already identified** (optional)
+- **Responders** (who was on-call or responded — names or roles; used for the timeline, not for blame)
+- **Customer or external communications sent** (optional — any status page updates, emails, or support messages with timestamps)
+
+## Reads from / Writes to the Brain
+
+If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, use it before asking:
+
+- **Read first:** the affected system's `entities/` file and any related prior `decisions/` or past incidents (recurring root causes are the most important thing to surface).
+- **Write after:** log the action items and decisions to `decisions/`, and the root-cause learning to `knowledge/` — tag a measured cause `[data]` and a suspected one `[hunch]`, never the reverse.
+
+## Deeper Materials
+
+- **`references/root-cause-digging.md`** — five-whys done properly (stop at a changeable system property, branch into cause/detection/response chains), a contributing-factor taxonomy to sweep, and blame-shaped → systemic language rewrites. Use it while writing the Root Cause section and to reframe any blameful input notes.
+- **`templates/review-meeting-agenda.md`** — a 45-minute, document-first agenda for the postmortem review meeting, with ground rules and an action-item quality gate. Offer it alongside the finished postmortem.
+
+## Output Format
+
+---
+
+# Incident Postmortem: [Incident Title]
+
+**Incident ID:** [ID]
+**Severity:** [P1/P2/P3]
+**Date:** [Date]
+**Duration:** [Start time → Resolution time — total duration]
+**Status:** [Resolved / Monitoring / Ongoing]
+**Author:** [Leave blank for user to fill]
+**Last updated:** [Date]
+
+---
+
+## Executive Summary
+
+[3–5 sentences. Describe what happened, who was affected, and what was done to resolve it. Written for a non-technical stakeholder. No jargon. No blame.]
+
+---
+
+## Impact
+
+| Dimension | Details |
+|---|---|
+| **Users affected** | [Number or percentage] |
+| **Services degraded** | [List affected services] |
+| **Business impact** | [Revenue, SLA breach, support tickets, etc. if known] |
+| **Duration** | [Total time from first detection to full resolution] |
+
+---
+
+## Timeline
+
+List events in chronological order. Each entry: `[HH:MM UTC] — [What happened. Who did what. What changed.]`
+
+Rules for timeline entries:
+- Use passive or system-focused language — avoid "X made a mistake"
+- Include: first symptom, detection, escalation, hypothesis tested, fix applied, confirmation of resolution
+- Note time between key events (e.g. "22 minutes between detection and escalation")
+
+**Timeline, drawn** — also render the incident timeline as a Mermaid Gantt so the gaps (e.g. detection → escalation) are visible at a glance (it renders live in the playground and exports as PNG). Use the incident phases as bars; keep it blameless and system-focused:
+
+```mermaid
+gantt
+    title Incident timeline (UTC)
+    dateFormat HH:mm
+    axisFormat %H:%M
+    section Phases
+        Undetected impact   :22:00, 18m
+        Detection           :milestone, 22:18, 0m
+        Investigation       :22:18, 22m
+        Mitigation          :22:40, 15m
+        Resolved            :milestone, 22:55, 0m
+```
+
+---
+
+## Root Cause
+
+**Primary root cause:** [One clear sentence. Technical but plain. "A misconfigured deployment config caused..."]
+
+**Contributing factors:**
+- [Factor 1 — e.g. lack of canary deployment meant change hit 100% of traffic immediately]
+- [Factor 2 — e.g. alert threshold was set too high to catch the initial degradation]
+- [Factor 3 — add as many as are relevant]
+
+**Why did our existing safeguards not prevent this?**
+[Honest paragraph explaining why monitoring, tests, or processes didn't catch this earlier. This is where blameless analysis matters most — focus on system gaps, not individual failures.]
+
+---
+
+## Detection
+
+- **How was it first detected?** [Customer report / automated alert / internal monitoring / manual observation]
+- **Time from incident start to detection:** [X minutes]
+- **Should we have detected this faster?** [Yes / No — and why]
+
+---
+
+## Resolution
+
+**What fixed it?** [Clear description of the actual fix — one paragraph]
+**Why did this work?** [Brief technical explanation]
+**Was there a temporary mitigation before full resolution?** [Yes/No — describe if yes]
+
+---
+
+## Action Items
+
+| # | Action | Owner | Due Date | Priority |
+|---|---|---|---|---|
+| 1 | [Specific, testable action] | [Team or person] | [Date] | P1/P2/P3 |
+
+Rules for action items:
+- Each action must be specific enough to close as "done" or "not done" — no vague items like "improve monitoring"
+- Distinguish between: **Prevent recurrence** (fix the root cause), **Improve detection** (catch it faster next time), **Improve response** (resolve it faster next time)
+- Assign a real owner — not "team" or "TBD" if avoidable
+- Flag P1 actions as items that block the incident from being marked fully closed
+
+---
+
+## What Went Well
+
+[3–5 honest observations about the response. Include: fast collaboration, good runbooks used, effective escalation, clear communication. This section builds team confidence and reinforces good habits.]
+
+---
+
+## Lessons Learned
+
+[3–5 key insights from this incident that are worth sharing beyond this team. Write these as transferable lessons — e.g. "Our runbook for database failover didn't account for read-replica lag. All runbooks involving database failover should be reviewed."]
+
+---
+
+## Communication Log
+
+[Optional — list external communications sent: status page updates, customer emails, support responses. Include timestamps.]
+
+---
+
+## Scoring Rubric (0–40)
+
+Score any output of this skill before handing it over; 32+ is ship-quality.
+
+| Dimension | 0 | 5 | 10 |
+|---|---|---|---|
+| Blamelessness with truth | Names-and-shames, or sanitizes so much the story vanishes | Blameless wording but individual actions blurred | Individuals' actions stated factually inside a systems framing — honest and safe at once |
+| Root-cause depth | Stops at the symptom or "human error" | Names a system gap but only one "why" deep | Root cause plus contributing factors explain why the system allowed it, not just what broke |
+| Timeline forensic quality | Sparse, unordered, or missing detection-to-resolution beats | Complete but without timestamps or decision points | Timestamped, includes detection lag, decision points, and dead ends actually explored |
+| Action-item accountability | Vague improvements, no owners | Owners assigned but items unticketable or dateless | Every item ticketable with owner and due date, mapped to a root cause or contributing factor |
+
+## Quality Checks
+
+- [ ] Timeline has no blame-focused language
+- [ ] Root cause is specific (not "human error")
+- [ ] Root cause answers "why did this happen?" not just "what happened?" — it names a system or process gap, not a symptom
+- [ ] Contributing factors explain the systemic gaps
+- [ ] Every action item has an owner and due date
+- [ ] "What went well" section is genuine, not token
+- [ ] No action item contains vague language like "improve monitoring", "increase resilience", or "better testing" — each must name a specific change
+- [ ] Executive summary is readable by non-technical leadership
+
+## Anti-Patterns
+
+- [ ] Do not assign blame to individuals — postmortems must focus on system and process failures
+- [ ] Do not write action items with vague language like "improve monitoring" — each must name a specific, ownable change
+- [ ] Do not skip the contributing factors — root cause alone misses the systemic issues that enable incidents
+- [ ] Do not omit the detection timeline — how long it took to detect matters as much as how long it took to resolve
+- [ ] Do not treat the postmortem as closed until all action items have named owners and due dates
+
+## Usage Examples
+- "Write a postmortem for the [incident name] outage"
+- "Help me write a P1 incident report"
+- "Generate an RCA document for [service] going down on [date]"
+- "Draft a blameless postmortem from these notes: [paste notes]"
+
+## Example Trigger Phrases
+
+- "Write a postmortem."
+- "Write the incident report."
+- "Write the P1 review."
+- "Do a root cause analysis of the outage."

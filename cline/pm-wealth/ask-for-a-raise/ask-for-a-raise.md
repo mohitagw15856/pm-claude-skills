@@ -1,0 +1,60 @@
+# Ask for a Raise
+
+Raises rarely come from working hard and waiting to be noticed — they come from making a clear case at the right time to the right person. Most people either never ask or ask badly ("I've been here a while and could use more money"). This builds the version that works: evidence of your value, a specific justified number, good timing, the words to say, and answers to the pushback. It's a business case, not a plea.
+
+## What This Skill Produces
+
+- **Your value case** — your actual contributions, results, and added responsibilities, framed as value delivered (not effort spent)
+- **A target number** — a specific ask backed by your market rate and contribution, not a vague "a raise"
+- **Timing & audience** — when to ask (after a win, at review cycles, not during bad times) and who actually decides
+- **The conversation script** — how to open, state the ask, and hold, in words you'd actually say
+- **Pushback responses** — answers to "there's no budget," "not right now," "the market's tough," and how to get a concrete path if it's a no
+
+## Required Inputs
+
+Ask for these if not provided:
+- **Your contributions** — what you've delivered, especially results and expanded scope since your last raise
+- **Current pay & market rate** — what you earn and what the role pays (benchmark it if unknown)
+- **The context** — company/team health, review cycles, your relationship with your manager
+- **What you want** — a number, and your walk-away/backup if it's no
+
+## Framework: Build The Case, Time It, Ask Clearly
+
+1. **Frame value, not effort.** Managers pay for impact, not hours — lead with results, revenue/savings, and expanded responsibilities, quantified where possible.
+2. **Anchor to a real number.** Combine your contribution with market rate into a specific ask; a vague request gets a vague answer.
+3. **Time it well.** Ask after a clear win or at a review cycle, when budget and goodwill exist — not during layoffs or a bad quarter. And ask the person who actually decides.
+4. **Say it plainly and hold.** Open with the value, state the number, then stop talking — let them respond. Confidence and a specific ask beat apology and hedging.
+5. **Handle the no.** If it's not now, get a concrete path: what specifically would earn the raise, and by when — a vague "maybe later" is a soft no to pin down.
+
+## Output Format
+
+### Raise request: current [pay] → target [ask] · role [x]
+
+**Your value case:** [contributions/results/added scope — as value delivered, quantified].
+**The number:** [specific ask] — justified by [contribution + market rate].
+**Timing & who:** [when to ask + the actual decision-maker].
+**The script**
+> [Open with value] · [state the number] · [then stop and listen].
+**If they push back:** "no budget" → [response] · "not now" → [get a concrete path: what + by when].
+
+## Quality Checks
+- [ ] The case is framed as value/impact, not effort or need
+- [ ] The ask is a specific number backed by contribution + market rate
+- [ ] Timing and the right decision-maker are addressed
+- [ ] A clear, confident script is provided
+- [ ] Responses to the common pushbacks are included
+- [ ] A "get a concrete path" plan exists for a no
+
+## Anti-Patterns
+- **Asking based on need or tenure** ("I've been here 3 years") instead of value.
+- **A vague ask** with no number.
+- **Bad timing** (during layoffs, to the wrong person).
+- **Apologizing** or over-hedging the ask.
+- **Accepting a vague "maybe later"** with no path.
+
+## Example Trigger Phrases
+- "How do I ask for a raise? I think I deserve more."
+- "Prepare me to negotiate a pay increase."
+- "Help me build a case for a raise and what to say."
+- "I want to ask for more money — what number and when?"
+- "My manager said 'no budget' last time. How do I approach it now?"

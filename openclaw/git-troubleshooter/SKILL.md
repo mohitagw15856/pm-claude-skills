@@ -1,0 +1,63 @@
+---
+name: git-troubleshooter
+description: "Diagnose a tangled git situation and give the exact, safe commands to fix it. Use when asked to undo a commit, recover lost work, fix a bad merge or rebase, resolve a detached HEAD, unstage files, or get out of a git mess. Produces the diagnosis, the precise commands to run in order, what each does, and a recovery note if something goes wrong."
+homepage: https://mohitagw15856.github.io/pm-claude-skills/skill/git-troubleshooter.html
+metadata:
+  {
+    "openclaw": { "emoji": "⚙️" }
+  }
+---
+
+# Git Troubleshooter Skill
+
+Get the user un-stuck from git — calmly, safely, and without destroying work.
+
+## Working from a brief
+
+Infer the current state from what the user describes (and typical git output); label assumptions *(assumed — confirm)*. Always give a concrete command sequence. If a step is destructive, say so loudly *before* it.
+
+## Input
+
+Ask for these if not provided:
+- **What happened** — e.g. committed to main instead of a branch, rebase went wrong, deleted a branch with unpushed work
+- **What they want instead** — the end state they are trying to reach
+- **The output** — `git status`, `git log --oneline -5`, and any error text
+- **Whether it is pushed** — whether the bad state has left their machine, which decides how safe the fix is
+
+## Output Structure
+
+### Diagnosis
+One or two lines: what state the repo is in and why the user is stuck.
+
+### Fix — run these in order
+A numbered list of exact commands, each with a one-line note of what it does:
+```
+1. git reflog                # find the lost commit's SHA
+2. git checkout -b rescue <SHA>   # recover it onto a new branch
+```
+Prefer **non-destructive** routes (branch, reflog, `--soft`) over destructive ones. Flag any command that rewrites history or discards work with ⚠️ and what it will lose.
+
+### Safety net
+How to undo if the fix doesn't do what they expected (usually `git reflog` + reset to the prior HEAD), plus a one-line habit to avoid the situation next time.
+
+## Quality Checks
+
+- [ ] The command sequence is exact and ordered (copy-pasteable)
+- [ ] Destructive commands are clearly marked with what they destroy
+- [ ] A non-destructive option is offered first where one exists
+- [ ] A recovery/undo path is included
+
+## Anti-Patterns
+
+- [ ] Do not suggest `git push --force`, `reset --hard`, or `clean -fd` without a ⚠️ and a safer alternative first
+- [ ] Do not give commands without saying what each one does
+- [ ] Do not assume the remote state — ask or label it if it changes the safe path
+- [ ] Do not skip `git reflog` when work might be recoverable — it usually is
+
+## Example Trigger Phrases
+
+- "Undo a commit."
+- "Recover lost work."
+- "Fix a bad merge."
+- "Resolve a detached HEAD."
+- "Get out of a git mess."
