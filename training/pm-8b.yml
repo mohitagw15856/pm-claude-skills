@@ -22,7 +22,8 @@ sample_packing: false
 sdp_attention: true
 micro_batch_size: 2
 gradient_accumulation_steps: 8
-num_epochs: 3
+# Two epochs: a mix of a few hundred rows over-fits by the third.
+num_epochs: 2
 learning_rate: 1e-4
 lr_scheduler: cosine
 warmup_ratio: 0.05

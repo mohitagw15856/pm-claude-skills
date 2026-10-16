@@ -61,12 +61,15 @@ if (!BASE && !KEY) { console.error('ANTHROPIC_API_KEY is not set.'); process.exi
 async function openaiCompat(model, system, user, maxTokens) {
   const r = await fetch(BASE.replace(/\/$/, '') + '/chat/completions', {
     method: 'POST', headers: { 'content-type': 'application/json', authorization: 'Bearer ' + (process.env.OPENAI_API_KEY || 'local') },
-    body: JSON.stringify({ model, max_tokens: maxTokens, messages: [...(system ? [{ role: 'system', content: system }] : []), { role: 'user', content: user }] }),
+    // Thinking off (Qwen3 on vLLM): otherwise the thinking eats the token budget, so the
+    // judge's 300 tokens never reach the score and long answers are cut off. Servers that
+    // do not know chat_template_kwargs ignore it.
+    body: JSON.stringify({ model, max_tokens: maxTokens, chat_template_kwargs: { enable_thinking: false }, messages: [...(system ? [{ role: 'system', content: system }] : []), { role: 'user', content: user }] }),
   });
   const j = await r.json();
   if (!r.ok) throw new Error(`${model}: ${(j.error && j.error.message) || r.status}`);
-  // Reasoning models (Qwen3) wrap their thinking in <think>; keep only the answer.
-  return (j.choices?.[0]?.message?.content || '').replace(/<think>[\s\S]*?<\/think>\s*/g, '').trim();
+  // Keep only the answer: drop closed <think> blocks, and one cut off before it closed.
+  return (j.choices?.[0]?.message?.content || '').replace(/<think>[\s\S]*?<\/think>\s*/g, '').replace(/<think>[\s\S]*$/, '').trim();
 }
 
 async function claude(model, system, user, maxTokens) {

@@ -33,8 +33,17 @@ const skillOfRow = (r) => r.skill || r.meta?.skill || ((r.messages || []).find((
 const train = [];
 let dropped = 0;
 const sources = { 'training/sft.jsonl': 0, 'training/teacher.jsonl': 0, 'dataset/samples.jsonl': 0 };
+// sft.jsonl rows are short (a skill's name and a summary, median ~460 characters). As
+// most of the mix they taught the model to answer briefly: the first trained adapter
+// (2026-10-16) scored 2.53 without a skill against 4.69 for its base model. So once
+// full-depth rows exist, the short rows are capped at a fifth of them, picked evenly.
+const fullDepth = ['training/teacher.jsonl', 'dataset/samples.jsonl'].reduce((n, p) => n + readJsonl(join(root, p)).length, 0);
+const sftAll = readJsonl(join(root, 'training/sft.jsonl'));
+const sftCap = fullDepth >= 50 ? Math.min(sftAll.length, Math.round(fullDepth * 0.2)) : sftAll.length;
+const sftKeep = new Set(Array.from({ length: sftCap }, (_, i) => Math.floor((i * sftAll.length) / sftCap)));
 for (const src of Object.keys(sources)) {
-  for (const r of readJsonl(join(root, src))) {
+  const rows = src === 'training/sft.jsonl' ? sftAll.filter((_, i) => sftKeep.has(i)) : readJsonl(join(root, src));
+  for (const r of rows) {
     const messages = r.messages || (r.system && r.user && r.assistant ? [{ role: 'system', content: r.system }, { role: 'user', content: r.user }, { role: 'assistant', content: r.assistant }] : null);
     if (!messages) continue;
     const skill = skillOfRow(r);

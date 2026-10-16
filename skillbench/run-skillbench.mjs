@@ -120,12 +120,14 @@ async function complete({ model, system, user, maxTokens = 4096 }) {
     const res = await fetch(base.replace(/\/$/, '') + '/chat/completions', {
       method: 'POST',
       headers: { 'content-type': 'application/json', authorization: 'Bearer ' + key },
-      body: JSON.stringify({ model: model.slice(prefix.length), max_tokens: maxTokens, messages: msgs }),
+      // Self-hosted Qwen3 (local:, local-judge:) answers without thinking, so the judge's
+      // 300 tokens reach the score and answers are not cut off mid-thought.
+      body: JSON.stringify({ model: model.slice(prefix.length), max_tokens: maxTokens, ...(/^local/.test(prefix) ? { chat_template_kwargs: { enable_thinking: false } } : {}), messages: msgs }),
     });
     const j = await res.json();
     if (!res.ok) throw new Error(`${model}: ${j.error?.message || res.status}`);
     // Reasoning models put their thinking in <think> blocks; the judge scores the answer.
-    return (j.choices?.[0]?.message?.content || '').replace(/<think>[\s\S]*?<\/think>\s*/g, '').trim();
+    return (j.choices?.[0]?.message?.content || '').replace(/<think>[\s\S]*?<\/think>\s*/g, '').replace(/<think>[\s\S]*$/, '').trim();
   }
   // google
   const key = process.env.GEMINI_API_KEY;
