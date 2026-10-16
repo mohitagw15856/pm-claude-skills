@@ -68,3 +68,7 @@ Add to the `packs` array in [`registry.json`](registry.json):
   "repo": "https://github.com/yourhandle/your-repo", "path": "packs/med-device-bench.json", "ref": "main" }
 ```
 CI validates structure (2-8 complete executives / required scenario fields) and runs the security scan on the fetched JSON. Writing a great *character* is a 20-minute contribution — a great skill is a day. Start here.
+
+## Paid expert skills
+
+Qualified professionals can list a paid skill with a free public preview: see [docs/EXPERT-SKILLS.md](../docs/EXPERT-SKILLS.md). Paid entries need `pricing` (price, currency, a Polar, Lemon Squeezy or GitHub Sponsors checkout) and `expert` (name, credential, a public profile that confirms it). They appear on [experts.html](https://mohitagw15856.github.io/pm-claude-skills/experts.html).

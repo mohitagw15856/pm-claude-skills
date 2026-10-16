@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Expert skills: paid skills by qualified professionals | PM Skills</title>
+<meta name="description" content="Skills written by working professionals (solicitors, accountants, clinicians, engineers) and sold by them, with a free preview of every one. The library stays free; experts keep most of the price." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/experts.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .ex-wrap { max-width: 860px; margin: 0 auto; padding: 22px 22px 70px; }
+  .ex-wrap h1 { font-size: 30px; margin-bottom: 6px; }
+  .lead, .muted { color: var(--muted); line-height: 1.6; }
+  .grid { display: grid; gap: 12px; margin: 18px 0; }
+  .card { border: 1px solid var(--border); border-radius: 14px; background: var(--panel); padding: 16px 18px; overflow-wrap: anywhere; }
+  .card h2 { font-size: 18px; margin: 0 0 4px; }
+  .who { font-size: 14px; margin: 6px 0; }
+  .price { font-weight: 700; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .btn { display: inline-block; border: 1px solid var(--accent); background: var(--accent); color: #fff; border-radius: 10px; padding: 8px 14px; text-decoration: none; font-size: 14px; }
+  .btn.ghost { background: transparent; color: var(--accent); }
+  .rules { border: 1px solid var(--border); border-radius: 14px; padding: 14px 18px; background: var(--bg); }
+  .rules li { margin: 4px 0; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<main class="ex-wrap">
+  <h1>Expert skills</h1>
+  <p class="lead">Some know-how is worth paying for: a solicitor's lease review, an accountant's year-end checklist, a clinician's care-plan guide. Here, qualified professionals publish their own skills and sell them, and every one has a <strong>free preview</strong> you can run first. The 1,000+ skills in the library stay free.</p>
+  <div class="grid" id="list" aria-live="polite"><p class="muted">Loading the listings…</p></div>
+  <div class="rules">
+    <b>How it's kept honest</b>
+    <ul class="muted">
+      <li>Every listing names the expert and their credential, and links to a public page where you can check it.</li>
+      <li>The preview is a real skill, checked for structure and security, and pinned by hash like every community skill.</li>
+      <li>Payment, tax and refunds are handled by the seller's checkout (Polar, Lemon Squeezy or GitHub Sponsors). This site never sees card details.</li>
+      <li>A paid skill can't take the name of a free one, and it is still not personal professional advice.</li>
+    </ul>
+  </div>
+  <p class="muted" style="margin-top:16px">Are you a professional with a method worth selling? <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/docs/EXPERT-SKILLS.md">How to list an expert skill</a>.</p>
+</main>
+<script src="nav.js" defer></script>
+<script>
+(function () {
+  var API = 'https://pm-skills-mcp.pm-claude-skills.workers.dev';
+  var RAW = 'https://raw.githubusercontent.com/mohitagw15856/pm-claude-skills/main/community/registry.json';
+  var list = document.getElementById('list');
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  var safeUrl = function (u) { return /^https:\/\//.test(String(u || '')) ? String(u) : '#'; };
+  fetch(API + '/v1/community').then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .catch(function () { return fetch(RAW).then(function (r) { return r.json(); }); })
+    .then(function (reg) {
+      var paid = (reg.skills || []).filter(function (s) { return s.pricing && s.pricing.model === 'paid' && s.expert; });
+      if (!paid.length) {
+        list.innerHTML = '<div class="card"><h2>The first listings are on their way</h2><p class="muted">The pilot is open to qualified professionals now. Each listing goes through the same checks as every community skill, plus a credential you can verify. Until then, the free library covers most everyday needs: <a href="find.html">search it</a>.</p></div>';
+        return;
+      }
+      list.innerHTML = paid.map(function (s) {
+        var ref = s.ref || 'main', parts = String(s.repo).split('/');
+        var preview = 'https://github.com/' + encodeURIComponent(parts[3] || '') + '/' + encodeURIComponent(parts[4] || '') + '/blob/' + encodeURIComponent(ref) + '/' + String(s.path).split('/').map(encodeURIComponent).join('/');
+        return '<div class="card"><h2>' + esc(s.name.split('/')[1]) + '</h2><p class="muted">' + esc(s.description) + '</p>' +
+          '<p class="who">By <a href="' + esc(safeUrl(s.expert.profile)) + '" rel="noopener">' + esc(s.expert.name) + '</a>: ' + esc(s.expert.credential) + '</p>' +
+          '<div class="row"><span class="price">' + esc(s.pricing.currency) + ' ' + esc(s.pricing.price) + '</span>' +
+          '<a class="btn ghost" href="' + esc(preview) + '" rel="noopener">Free preview</a>' +
+          '<a class="btn" href="' + esc(safeUrl(s.pricing.checkout)) + '" rel="noopener">Buy from the expert</a></div></div>';
+      }).join('');
+    })
+    .catch(function () { list.innerHTML = '<p class="muted">Could not load the listings. Check your connection.</p>'; });
+})();
+</script>
+</body>
+</html>

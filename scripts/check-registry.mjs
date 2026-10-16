@@ -6,6 +6,7 @@
 //
 //   node scripts/check-registry.mjs            # structural only, no network
 //   node scripts/check-registry.mjs --fetch    # + fetch and validate each skill
+//   node scripts/check-registry.mjs --file x.json   # check another file (tests)
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { join, dirname } from 'node:path';
@@ -13,7 +14,8 @@ import { fileURLToPath } from 'node:url';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const fetchMode = process.argv.includes('--fetch');
-const reg = JSON.parse(readFileSync(join(root, 'community', 'registry.json'), 'utf8'));
+const fileArg = process.argv.indexOf('--file');
+const reg = JSON.parse(readFileSync(fileArg > 0 ? process.argv[fileArg + 1] : join(root, 'community', 'registry.json'), 'utf8'));
 const errors = [], warnings = [];
 
 if (reg.spec !== 'pm-skills-registry/1') errors.push('spec must be "pm-skills-registry/1"');
@@ -62,7 +64,16 @@ for (const s of reg.skills || []) {
   if (!s.ref) warnings.push(`${tag}: no ref — defaulting consumers to main; a tag is more stable`);
   if (s.pricing) {
     if (!['free', 'paid'].includes(s.pricing.model)) errors.push(`${tag}: pricing.model must be free|paid`);
-    if (s.pricing.model === 'paid' && !/^https:\/\/(.*\.)?(lemonsqueezy\.com|polar\.sh)\//.test(s.pricing.checkout || '')) errors.push(`${tag}: paid entries need a lemonsqueezy/polar checkout URL`);
+    if (s.pricing.model === 'paid') {
+      // Paid expert skills (docs/EXPERT-SKILLS.md): the merchant of record handles payment and
+      // tax, so the library never touches card data; the listed path is the free, public preview.
+      const pr = s.pricing, ex = s.expert || {};
+      if (!/^https:\/\/((.*\.)?(lemonsqueezy\.com|polar\.sh)\/|github\.com\/sponsors\/)/.test(pr.checkout || '')) errors.push(`${tag}: paid entries need a Polar, Lemon Squeezy or GitHub Sponsors checkout URL`);
+      if (!/^\d{1,4}(\.\d{2})?$/.test(String(pr.price || ''))) errors.push(`${tag}: pricing.price must be a plain amount like "19" or "19.00"`);
+      if (!/^[A-Z]{3}$/.test(pr.currency || '')) errors.push(`${tag}: pricing.currency must be a three-letter code like "USD"`);
+      if (!ex.name || !ex.credential || ex.credential.length < 10) errors.push(`${tag}: paid entries need expert.name and expert.credential (what qualifies you, in a sentence)`);
+      if (!/^https:\/\//.test(ex.profile || '')) errors.push(`${tag}: paid entries need expert.profile, a public https page that confirms the credential`);
+    }
   }
   // The pin is what the signed registry and `install @name` enforce: required.
   if (!/^sha256:[0-9a-f]{64}$/.test(s.sha256 || '')) errors.push(`${tag}: needs a sha256 pin ("sha256:<64 hex>") — the signed registry installs only the exact file that was reviewed; pin with: shasum -a 256 SKILL.md`);

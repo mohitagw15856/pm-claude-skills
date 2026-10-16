@@ -1,6 +1,6 @@
 # RFC-0003: Paid community packs with author revenue share
 
-- **Status:** draft | comment-window (until 2026-09-15)
+- **Status:** accepted for single skills (2026-10-16): the schema, CI checks, listing page and expert guide shipped (docs/EXPERT-SKILLS.md). Paid packs and the revenue share wait on the pilot.
 - **Affects:** schema | process | distribution
 
 ## Summary
