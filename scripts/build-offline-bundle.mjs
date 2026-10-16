@@ -30,7 +30,7 @@ Skills are plain markdown; your AI reads them. Nothing here calls home.
 - \`exports/\`     — the same skills rendered for ChatGPT, Gemini, Cursor, Windsurf, Aider, Cline, Continue, Zed, Roo, Kilo, Obsidian, OpenClaw
 - \`PACKS.md\`     — curated packs for a moment in your life
 - \`JOURNEYS.md\` + \`journeys/\` — packs you can run as an ordered, guided session
-- \`variants/\`    — jurisdiction overlays where they exist
+- \`overlays/\`    — jurisdiction overlays (local rules) where they exist
 - \`SKILLS.md\`    — the full catalogue · \`LICENSE\` — MIT
 
 ## Use with a local model (fully offline)
@@ -52,7 +52,7 @@ mkdirSync(dist, { recursive: true });
 writeFileSync(readmePath, readme);
 // exports/ is generated, not committed: build it if this checkout has none.
 if (!existsSync(join(ROOT, 'exports'))) spawnSync(process.execPath, [join(ROOT, 'scripts', 'build-exports.mjs')], { cwd: ROOT, stdio: 'ignore' });
-const members = ['skills', 'exports', 'PACKS.md', 'SKILLS.md', 'LICENSE', 'OFFLINE-README.md', 'JOURNEYS.md', 'journeys', 'variants'].filter(m => existsSync(join(ROOT, m)));
+const members = ['skills', 'exports', 'PACKS.md', 'SKILLS.md', 'LICENSE', 'OFFLINE-README.md', 'JOURNEYS.md', 'journeys', 'overlays'].filter(m => existsSync(join(ROOT, m)));
 const r = spawnSync('tar', ['-czf', out, '-C', ROOT, '--exclude=journeys/rendered', ...members], { stdio: 'inherit' });
 if (r.status !== 0) { console.error('✗ tar failed'); process.exit(r.status || 1); }
 const mb = (statSync(out).size / 1048576).toFixed(1);

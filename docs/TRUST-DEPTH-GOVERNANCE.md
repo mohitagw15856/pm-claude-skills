@@ -8,7 +8,7 @@ Legend: ✅ built · 🟡 built as mechanism/asset, needs a human step · 🧑 h
 | # | Move | Status | What landed |
 |---|---|---|---|
 | 1 | Expert-verified badge program | 🟡 | `config/human-review.json` registry (starts empty on purpose) + `docs/EXPERT-REVIEW-PROGRAM.md` (who to recruit per bundle, the pitch, the badge). Recruiting is the human step. |
-| 2 | Jurisdiction variants | ✅ | `docs/JURISDICTION-VARIANTS.md` (overlay convention `variants/<skill>/<code>.md`) + real **US** and **UK** overlays for `security-deposit-recovery`. Priority list of the next 9 skills inside. |
+| 2 | Jurisdiction variants | ✅ | `docs/JURISDICTION-VARIANTS.md` (overlay convention `overlays/<skill>/<code>.md`) + real **US** and **UK** overlays for `security-deposit-recovery`. Priority list of the next 9 skills inside. |
 | 3 | Structured risk tier per skill | ✅ | `config/risk-tiers.json` + `scripts/check-risk-tiers.mjs` → `data/risk-tiers.json`. **143 high-stakes · 185 consequential · 846 informational.** Validates names; fails on typos. |
 | 4 | Last-human-reviewed + SLA | ✅ | `scripts/check-human-review.mjs` — coverage of high-stakes skills (**0/143 today, honestly**), 12-month expiry, `--strict` for CI once real. `docs/RISK-TIERS.md`. |
 

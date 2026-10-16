@@ -4,15 +4,19 @@ The money and legal skills are written **jurisdiction-neutral** with "verify loc
 
 ## How it works
 
-A variant is an **overlay**, not a copy: a short file at `variants/<skill>/<code>.md` that the agent reads *on top of* the base `skills/<skill>/SKILL.md`. It only states what differs — deadlines, statutory rules, the forum, the specific bodies to contact — and keeps every "verify current statute" flag. The base skill's framework, output format, and quality checks are unchanged.
+A variant is an **overlay**, not a copy: a short file at `overlays/<skill>/<CODE>.md` (format and rules: [`overlays/README.md`](../overlays/README.md); validated by `scripts/build-overlays.mjs`) that the agent reads *on top of* the base `skills/<skill>/SKILL.md`. It only states what differs — deadlines, statutory rules, the forum, the specific bodies to contact — and keeps every "verify current statute" flag. The base skill's framework, output format, and quality checks are unchanged.
 
 ```
 skills/security-deposit-recovery/SKILL.md      ← the neutral base (unchanged)
-variants/security-deposit-recovery/us.md        ← US overlay (state-varies framing)
-variants/security-deposit-recovery/uk.md        ← England & Wales overlay
+overlays/security-deposit-recovery/US.md        ← US overlay (state-varies framing)
+overlays/security-deposit-recovery/US-CA.md     ← California
+overlays/security-deposit-recovery/GB-ENG.md    ← England & Wales overlay
+overlays/security-deposit-recovery/IN.md        ← India
 ```
 
-**Codes:** ISO-style — `us`, `uk` (England & Wales unless stated; `uk-scot`, `uk-ni` where different), `in`, `eu`, `ca`, `au`, and `us-<state>` (e.g. `us-ca`) when a state differs enough to matter.
+**Codes:** ISO 3166, upper case: `US`, `GB-ENG` (England & Wales), `GB-SCT`, `IN`, `CA`, `AU`, and `US-<state>` (e.g. `US-CA`) when a state differs enough to matter.
+
+**Where they apply:** the playground's 📍 "Where are you?" picker adds the matching overlay to the skill when it runs and says whether a local reviewer has checked it; the offline bundle ships `overlays/`. (Until October 2026 these lived in `overlays/`, which only the offline bundle read; they were merged into `overlays/` so there is one mechanism.)
 
 ## Rules for writing a variant
 

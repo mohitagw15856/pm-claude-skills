@@ -1,6 +1,13 @@
-# security-deposit-recovery — variant: US (state-varies)
-
-*Overlay on `skills/security-deposit-recovery/SKILL.md`. States only what differs in the United States. Deposit law is **state law** — every figure below varies by state and changes; verify the current statute for your state before relying on it. Not legal advice. Updated 2026-09.*
+---
+skill: security-deposit-recovery
+place: United States (general; state law varies)
+code: US
+status: draft
+checked: 2026-10-16
+maintainers: []
+sources:
+  - https://www.consumerfinance.gov/ask-cfpb/what-should-i-do-if-my-landlord-wont-return-my-security-deposit-en-2105/
+---
 
 ## What's different here
 

@@ -1,5 +1,7 @@
 # Running a public instance of the bots
 
+> Read the [public bot runbook](../../docs/PUBLIC-BOT-RUNBOOK.md) first: it covers the duty of care (crisis routing, disclaimers, no personal data). This page covers the cost caps.
+
 The Telegram bot, the WhatsApp bot and the phone line are built to be deployed by whoever pays for them. To share one instance with everyone, for example a public "@PMSkillsBot", turn on the daily caps so it can't run up your Anthropic bill.
 
 1. Create a KV namespace and bind it as `CAPS_KV` in each worker's `wrangler.toml`:

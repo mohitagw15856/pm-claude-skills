@@ -8,7 +8,7 @@ Skills are plain markdown; your AI reads them. Nothing here calls home.
 - `exports/`     — the same skills rendered for ChatGPT, Gemini, Cursor, Windsurf, Aider, Cline, Continue, Zed, Roo, Kilo, Obsidian, OpenClaw
 - `PACKS.md`     — curated packs for a moment in your life
 - `JOURNEYS.md` + `journeys/` — packs you can run as an ordered, guided session
-- `variants/`    — jurisdiction overlays where they exist
+- `overlays/`    — jurisdiction overlays (local rules) where they exist
 - `SKILLS.md`    — the full catalogue · `LICENSE` — MIT
 
 ## Use with a local model (fully offline)

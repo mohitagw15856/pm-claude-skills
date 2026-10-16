@@ -1,4 +1,5 @@
-// Easy Read: the same facts in plain language, for second-language speakers,
+// Easy Read: the web counterpart of the Claude Code output style
+// output-styles/plain-language.md. The same facts in plain language, for second-language speakers,
 // people who find reading hard, and anyone in a hurry. One instruction layer,
 // shared by the playground and the "How do I" page; no model of its own.
 (function (g) {
