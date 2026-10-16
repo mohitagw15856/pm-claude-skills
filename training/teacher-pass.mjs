@@ -5,7 +5,12 @@
 // skilled answer, so the small model learns to produce the skill's judgment
 // without being handed the skill.
 //
-//   ANTHROPIC_API_KEY=… node training/teacher-pass.mjs --dry-run       # plan and rough cost
+// No API credit: point it at an open model you serve yourself (vLLM, Ollama,
+// llama.cpp; any OpenAI-compatible /v1). On the rented GPU that trains PM-8B:
+//   vllm serve Qwen/Qwen3-32B-AWQ --port 8000 &
+//   node training/teacher-pass.mjs --base-url http://localhost:8000/v1 --teacher Qwen/Qwen3-32B-AWQ --judge Qwen/Qwen3-32B-AWQ
+// With Anthropic instead (spends credit; needs --allow-api-spend):
+//   ANTHROPIC_API_KEY=… node training/teacher-pass.mjs --allow-api-spend --dry-run
 //   ANTHROPIC_API_KEY=… node training/teacher-pass.mjs --limit 50      # a first batch
 //   ANTHROPIC_API_KEY=… node training/teacher-pass.mjs                 # everything; resumes
 //   --teacher <model>  (default claude-sonnet-5)  --judge <model>  (default claude-haiku-4-5-20251001)
@@ -47,10 +52,25 @@ if (LIMIT) todo = todo.slice(0, LIMIT);
 
 console.log(`Teacher pass: ${items.length} inputs, ${done.size} already done, ${todo.length} to run (teacher ${TEACHER}, judge ${JUDGE}, keep ≥ ${MIN}).`);
 if (has('dry-run')) { console.log(`About ${todo.length} teacher completions and ${todo.length} judge calls. Dry run: no calls made.`); process.exit(0); }
+const BASE = arg('base-url', '');
 const KEY = process.env.ANTHROPIC_API_KEY;
-if (!KEY) { console.error('ANTHROPIC_API_KEY is not set.'); process.exit(1); }
+if (!BASE && !has('allow-api-spend')) { console.error('Refusing to spend Anthropic credit by default. Pass --base-url <your OpenAI-compatible server>/v1 (free: your own GPU), or --allow-api-spend to use Claude.'); process.exit(1); }
+if (!BASE && !KEY) { console.error('ANTHROPIC_API_KEY is not set.'); process.exit(1); }
+
+// An OpenAI-compatible server (vLLM, Ollama, llama.cpp): no API credit involved.
+async function openaiCompat(model, system, user, maxTokens) {
+  const r = await fetch(BASE.replace(/\/$/, '') + '/chat/completions', {
+    method: 'POST', headers: { 'content-type': 'application/json', authorization: 'Bearer ' + (process.env.OPENAI_API_KEY || 'local') },
+    body: JSON.stringify({ model, max_tokens: maxTokens, messages: [...(system ? [{ role: 'system', content: system }] : []), { role: 'user', content: user }] }),
+  });
+  const j = await r.json();
+  if (!r.ok) throw new Error(`${model}: ${(j.error && j.error.message) || r.status}`);
+  // Reasoning models (Qwen3) wrap their thinking in <think>; keep only the answer.
+  return (j.choices?.[0]?.message?.content || '').replace(/<think>[\s\S]*?<\/think>\s*/g, '').trim();
+}
 
 async function claude(model, system, user, maxTokens) {
+  if (BASE) return openaiCompat(model, system, user, maxTokens);
   for (let attempt = 0; attempt < 3; attempt++) {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',

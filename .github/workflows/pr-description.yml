@@ -15,7 +15,8 @@ permissions:
 
 jobs:
   describe:
-    if: github.event.pull_request.head.repo.full_name == github.repository
+    # Spends Anthropic credit on every PR: off unless the ALLOW_API_SPEND repository variable is true.
+    if: github.event.pull_request.head.repo.full_name == github.repository && vars.ALLOW_API_SPEND == 'true'
     runs-on: ubuntu-latest
     env:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

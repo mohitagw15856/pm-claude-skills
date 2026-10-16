@@ -23,7 +23,8 @@ export function jevProviders(env) {
   const key = env.JEV_API_KEY ? (/^vck_/.test(env.JEV_API_KEY)
     ? { name: 'vercel', url: `${(env.JEV_BASE_URL || 'https://ai-gateway.vercel.sh/typesafe').replace(/\/$/, '')}/v1/systemone`, model: env.JEV_MODEL || 'typesafe-ai/jev', apiKey: env.JEV_API_KEY }
     : { name: 'typesafe', url: `${(env.JEV_BASE_URL || 'https://api.typesafe.ai').replace(/\/$/, '')}/v1/systemone`, model: env.JEV_MODEL || 'jev-latest', apiKey: env.JEV_API_KEY }) : null;
-  const adapter = env.ANTHROPIC_API_KEY ? { name: 'adapter', model: env.JEV_ADAPTER_MODEL || 'claude-haiku-4-5', apiKey: env.ANTHROPIC_API_KEY } : null;
+  // The Claude adapter spends Anthropic credit: only when ALLOW_API_SPEND is 'true'.
+  const adapter = env.ANTHROPIC_API_KEY && env.ALLOW_API_SPEND === 'true' ? { name: 'adapter', model: env.JEV_ADAPTER_MODEL || 'claude-haiku-4-5', apiKey: env.ANTHROPIC_API_KEY } : null;
   const all = [key, ai, adapter].filter(Boolean);
   if (forced) return all.filter((p) => p.name === forced);
   return all;

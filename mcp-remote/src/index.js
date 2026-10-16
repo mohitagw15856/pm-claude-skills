@@ -452,7 +452,12 @@ async function geoJson(env) {
   do { const page = await env.TRY_KV.list({ prefix: 'geo:', cursor }); for (const k of page.keys) out[k.name.slice(4)] = +((await env.TRY_KV.get(k.name)) || 0); cursor = page.list_complete ? null : page.cursor; } while (cursor);
   return new Response(JSON.stringify({ countries: out, total: Object.values(out).reduce((a, b) => a + b, 0) }), { headers: { 'content-type': 'application/json', 'cache-control': 'public, s-maxage=600', ...CORS } });
 }   // adapter-backed /route only; Jev providers are uncapped
-function tryConfigured(env) { return !!(env && env.ANTHROPIC_API_KEY && env.TRY_KV && env.TRY_ENABLED !== 'false'); }
+// The free answers run on Cloudflare Workers AI (the AI binding; its free daily
+// allowance) unless ALLOW_API_SPEND is 'true' and a Claude key is set. That keeps
+// the sponsor's Anthropic credit untouched by default.
+const TRY_FREE_MODEL = '@cf/meta/llama-3.1-8b-instruct-fast';
+const tryUsesClaude = (env) => !!(env && env.ALLOW_API_SPEND === 'true' && env.ANTHROPIC_API_KEY);
+function tryConfigured(env) { return !!(env && env.TRY_KV && env.TRY_ENABLED !== 'false' && (tryUsesClaude(env) || (env.AI && typeof env.AI.run === 'function'))); }
 // GET /try/stats — public runs-served counter (counts only, never content).
 // Default: shields.io endpoint JSON for a README badge; ?format=json for raw.
 async function tryStats(url, env) {
@@ -464,10 +469,11 @@ async function tryStats(url, env) {
     { headers: { 'content-type': 'application/json', 'cache-control': 'public, s-maxage=300, max-age=300', ...CORS } });
 }
 function tryStatus(env) {
-  return jsonResponse({ enabled: tryConfigured(env), perIpPerDay: TRY.perIpPerDay, model: 'Claude Haiku', note: tryConfigured(env) ? 'A few free Claude runs per day, sponsor-funded. Bring your own key for more — or fund runs for everyone: https://github.com/sponsors/mohitagw15856' : 'Free Claude trial not configured on this deployment.' });
+  const claude = tryUsesClaude(env);
+  return jsonResponse({ enabled: tryConfigured(env), perIpPerDay: TRY.perIpPerDay, model: claude ? 'Claude Haiku' : 'Llama 3.1 8B (Cloudflare Workers AI)', provider: claude ? 'anthropic' : 'workers-ai', note: tryConfigured(env) ? 'A few free runs per day. Bring your own key for more, or fund runs for everyone: https://github.com/sponsors/mohitagw15856' : 'Free trial not configured on this deployment.' });
 }
 async function handleTry(request, env) {
-  if (!tryConfigured(env)) return jsonResponse({ error: 'disabled', message: 'Free Claude trial is not enabled here. Use the free Gemini key or your own key.' }, 503);
+  if (!tryConfigured(env)) return jsonResponse({ error: 'disabled', message: 'The free trial is not enabled here. Use the free Gemini key or your own key.' }, 503);
 
   const ip = request.headers.get('cf-connecting-ip') || 'anon';
   const day = new Date().toISOString().slice(0, 10);
@@ -495,6 +501,15 @@ async function handleTry(request, env) {
   ]);
 
   await bumpGeo(env, request);
+  const remaining = Math.max(0, TRY.perIpPerDay - (+(ipN || 0) + 1));
+  if (!tryUsesClaude(env)) {
+    try {
+      const out = await env.AI.run(TRY_FREE_MODEL, { messages: [...(system ? [{ role: 'system', content: system }] : []), { role: 'user', content: prompt }], max_tokens: TRY.maxTokens });
+      return jsonResponse({ text: (out && out.response) || '', model: 'llama-3.1-8b (Workers AI)', remaining });
+    } catch (e) {
+      return jsonResponse({ error: 'upstream', message: /neuron|limit|quota|4006/i.test(String(e && e.message)) ? 'Today\'s free answers are used up. Try tomorrow, or use your own key.' : 'The free model is busy. Try again in a minute, or use your own key.' }, 503);
+    }
+  }
   const res = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: { 'content-type': 'application/json', 'x-api-key': env.ANTHROPIC_API_KEY, 'anthropic-version': '2023-06-01' },
@@ -508,7 +523,6 @@ async function handleTry(request, env) {
   }
   const data = await res.json();
   const text = (data.content || []).map((c) => c.text || '').join('');
-  const remaining = Math.max(0, TRY.perIpPerDay - (+(ipN || 0) + 1));
   return jsonResponse({ text, model: 'claude-haiku', remaining });
 }
 

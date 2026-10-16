@@ -182,9 +182,9 @@
   // has it enabled; the UI hides it otherwise. Non-streaming (the proxy returns full text).
   var TRY_ENDPOINT = 'https://pm-skills-mcp.pm-claude-skills.workers.dev/try';
   PROVIDERS.tryclaude = {
-    name: 'Claude (free trial)', keyStore: 'pm_try_noop', local: true, proxy: true, free: true,
-    placeholder: '(no key — a few free Claude runs, on the house)', keyUrl: 'https://mohitagw15856.github.io/pm-claude-skills/',
-    models: [['claude-haiku', 'Claude Haiku (free trial)']],
+    name: 'Free (no key)', keyStore: 'pm_try_noop', local: true, proxy: true, free: true,
+    placeholder: '(no key — a few free runs a day, on the house)', keyUrl: 'https://mohitagw15856.github.io/pm-claude-skills/',
+    models: [['free', 'Free model (a few runs a day)']],
   };
   async function streamTry(opts) {
     var res = await fetch(TRY_ENDPOINT, {
@@ -192,7 +192,7 @@
       body: JSON.stringify({ system: opts.system || '', prompt: opts.userMessage || '' }),
     });
     var data = await res.json().catch(function () { return {}; });
-    if (!res.ok) throw new Error(data.message || 'Free Claude trial unavailable — use a free Gemini key or your own key.');
+    if (!res.ok) throw new Error(data.message || 'The free trial is unavailable. Use a free Gemini key or your own key.');
     var text = data.text || '';
     if (opts.onDelta) opts.onDelta(text);
     return text;
@@ -366,7 +366,7 @@
         var opt = ps.querySelector('option[value="tryclaude"]');
         if (on && !opt) {
           opt = d.createElement('option');
-          opt.value = 'tryclaude'; opt.textContent = '✨ Claude — free, no key';
+          opt.value = 'tryclaude'; opt.textContent = '✨ Free, no key';
           ps.insertBefore(opt, ps.firstChild);
         }
         if (!on) {

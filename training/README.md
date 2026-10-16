@@ -2,6 +2,16 @@
 
 The pipeline to train **PM-8B**: a QLoRA fine-tune of Qwen3-8B that carries the library's judgment. It learns which skill a task needs, what shape the answer takes, and, from the teacher pass, how a skilled answer actually reads. It runs locally and offline, with zero inference cost.
 
+## Start here: no API credit, one rented GPU
+
+```bash
+# on a GPU box (one 80 GB card), inside tmux
+git clone https://github.com/mohitagw15856/pm-claude-skills && cd pm-claude-skills
+HF_TOKEN=hf_... HF_USER=<your-hf-name> bash training/run-on-gpu.sh
+```
+
+`training/run-on-gpu.sh` does everything in one go. It serves an open teacher model (Qwen3-32B by default) with vLLM, generates and judges the teacher data, trains PM-8B, scores it against its base model on held-out skills, and exports it for Ollama and the playground. Expect about 4 to 6 hours and $8 to $15 of GPU rental. **No Anthropic credit** is used, and your laptop only starts it. The Claude-based route below still works, but only with `--allow-api-spend`.
+
 ## Status: pipeline complete; teacher pass and training await the owner
 
 | Step | Command | State |

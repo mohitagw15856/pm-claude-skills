@@ -63,6 +63,9 @@ const COMPAT = [
   // Cloudflare Workers AI (Qwen, DeepSeek and others on a free daily allowance):
   // cf:@cf/<org>/<model>, with CLOUDFLARE_ACCOUNT_ID and a token allowed to use Workers AI.
   [/^cf:/, `https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID || 'missing-account-id'}/ai/v1`, 'CLOUDFLARE_API_TOKEN', 'cf:'],
+  // A second self-hosted server for the judge (so a model is not judged by itself):
+  // local-judge:<model> at JUDGE_BASE_URL. No API credit.
+  [/^local-judge:/, process.env.JUDGE_BASE_URL || 'http://localhost:8000/v1', 'LOCAL_API_KEY', 'local-judge:'],
   [/^local:/, process.env.LOCAL_BASE_URL || 'http://localhost:11434/v1', 'LOCAL_API_KEY', 'local:'],
   [/^sf:/, process.env.SILICONFLOW_BASE_URL || 'https://api.siliconflow.cn/v1', 'SILICONFLOW_API_KEY', 'sf:'],
   [/^(gpt|o\d|chatgpt)/, process.env.OPENAI_BASE_URL || 'https://api.openai.com/v1', 'OPENAI_API_KEY'],

@@ -2,7 +2,8 @@ name: PM-8B dataset
 
 # Builds the PM-8B training mix (training/README.md, steps 2 and 3): the teacher
 # pass on the repository's Anthropic key, then the mix and the held-out split.
-# Manual only, because it costs tokens. The result is uploaded as a workflow
+# Manual only, because it spends Anthropic credit. The free route is
+# training/run-on-gpu.sh, which uses an open model on the GPU you rent anyway. The result is uploaded as a workflow
 # artifact (pm-8b-dataset) for a GPU machine to train on; nothing is committed
 # or published. Teacher rows carry model outputs: check the provider's terms
 # before publishing them.
@@ -40,7 +41,7 @@ jobs:
           printf '%s' "$LIMIT" | grep -Eq '^[0-9]+$' || { echo "::error::limit must be a number"; exit 1; }
           printf '%s' "$TEACHER" | grep -Eq '^claude-[A-Za-z0-9.-]+$' || { echo "::error::teacher must be a claude-* model id"; exit 1; }
           node scripts/build-worked-examples.mjs
-          node training/teacher-pass.mjs --limit "$LIMIT" --teacher "$TEACHER"
+          node training/teacher-pass.mjs --allow-api-spend --limit "$LIMIT" --teacher "$TEACHER"
           node training/build-pm-8b-mix.mjs
       - uses: actions/upload-artifact@v7
         with:

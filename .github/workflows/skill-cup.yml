@@ -35,7 +35,7 @@ jobs:
       - name: Close a finished month
         run: node scripts/close-skill-cup.mjs
       - name: Score the entry
-        if: inputs.pr != ''
+        if: inputs.pr != '' && vars.ALLOW_API_SPEND == 'true'
         env:
           PR: ${{ inputs.pr }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

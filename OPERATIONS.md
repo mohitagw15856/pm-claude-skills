@@ -54,3 +54,12 @@ A single reference for every URL, dashboard, and config location for this projec
 | **Tier entry policy** (2026-07-02) | New self-contained skills enter **Stable**; **Experimental** only for external-dependency skills. Matches actual practice; authoring standard §8 updated. | If unscored-Stable skills draw quality complaints, revisit gating Stable on an eval score. |
 | **Teams = folder convention, no backend** (2026-07-04) | **No accounts, no hosted DB, no server-side team features.** The workspace bridge + a shared git repo + replay links + registry packs ARE the team story. Full reasoning: [docs/TEAMS-DECISION.md](docs/TEAMS-DECISION.md). | Two of: repeated asks the conventions can't serve · an ops-dedicated maintainer · sustainable funding for the operational tax. |
 | **Evolution loop is dispatch-only** (2026-07-04) | `evolve-skills.yml` never runs on a schedule — it spends API credits (1 rewrite + 2 judge calls per skill). Winners land on `evolve-<run>` branches, never main; humans merge. | If a free/local judge becomes good enough to make runs costless. |
+
+## API spending is off by default (October 2026)
+
+Nothing calls the Anthropic API automatically unless the **`ALLOW_API_SPEND`** variable is `true`:
+
+- **GitHub:** set it as a repository variable. It gates PR descriptions, the `/skill` issue bot, daily scheduled reports, the monthly AI-at-work and Chinese benchmarks, and Skill Cup scoring.
+- **Cloudflare:** set it as a worker variable. It gates Claude for the site's free answers (otherwise Cloudflare Workers AI's free allowance) and the router's Claude fallback.
+
+Manual dispatches of benchmark workflows still run when you start them. The PM-8B teacher pass refuses to use Claude without `--allow-api-spend`; its free route is `training/run-on-gpu.sh`.
