@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Skill apps: any skill as a one-page app | PM Skills</title>
+<meta name="description" content="Open any skill as a small focused app: a form for exactly what the skill needs, one button, the answer. Download it as a single HTML file to keep, share or put on a home screen." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/use.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .ua-wrap { max-width: 760px; margin: 0 auto; padding: 22px 22px 70px; }
+  .ua-wrap h1 { font-size: 28px; margin-bottom: 6px; overflow-wrap: anywhere; }
+  .lead, .muted { color: var(--muted); line-height: 1.6; }
+  .field { display: block; margin: 14px 0; }
+  .field b { display: block; margin-bottom: 4px; }
+  .field textarea, .key input, .pick input { width: 100%; box-sizing: border-box; border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 10px; padding: 10px 12px; font: inherit; }
+  .field textarea { min-height: 70px; resize: vertical; }
+  .btn { border: 1px solid var(--accent); background: var(--accent); color: #fff; border-radius: 12px; padding: 10px 16px; cursor: pointer; font: inherit; }
+  .btn.ghost { background: transparent; color: var(--accent); }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 12px 0; }
+  .out { border: 1px solid var(--border); border-radius: 14px; background: var(--panel); padding: 16px 18px; line-height: 1.65; white-space: pre-wrap; overflow-wrap: anywhere; margin-top: 14px; }
+  .pick { display: flex; gap: 8px; margin: 16px 0; }
+  .pick input { flex: 1; min-width: 0; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<main class="ua-wrap" id="app">
+  <h1 id="title">Skill apps</h1>
+  <p class="lead" id="lead">Any skill in the library as a small focused app: a form for exactly what it needs, one button, the answer. Keep it as a single HTML file, share it, or add it to your home screen.</p>
+  <form class="pick" id="pick" hidden>
+    <input id="pickName" type="search" placeholder="security-deposit-recovery" aria-label="Skill name" autocomplete="off" maxlength="80">
+    <button class="btn" type="submit">Open as an app</button>
+  </form>
+  <p class="muted" id="pickHint" hidden>Type a skill's name, or find one in the <a href="find.html">library search</a> and choose "📱 Use as an app" on its page.</p>
+  <form id="form" hidden>
+    <div id="fields"></div>
+    <label class="muted" style="display:block;margin:4px 0"><input type="checkbox" id="easyRead"> 📖 Easy Read: short sentences and everyday words</label>
+    <label class="muted" style="display:block;margin:4px 0 10px"><input type="checkbox" id="teachMode"> 🧑‍🏫 Teach me: coach me through doing it myself</label>
+    <div class="row">
+      <button class="btn" type="submit" id="run">Run</button>
+      <button class="btn ghost" type="button" id="download">⬇ Download as an app</button>
+      <a class="muted" id="full" href="index.html">Open in the full playground</a>
+    </div>
+    <div class="out" id="out" hidden aria-live="polite"></div>
+    <div class="row"><button class="btn ghost" type="button" id="copy" hidden>Copy the answer</button></div>
+    <details class="key">
+      <summary class="muted">Use your own Claude key (after the free answers run out)</summary>
+      <input id="apiKey" type="password" placeholder="sk-ant-…" aria-label="Your Anthropic API key" autocomplete="off">
+      <p class="muted">Kept in this browser and sent only to Anthropic. Without a key, answers use the free allowance (a few a day).</p>
+    </details>
+    <p class="muted" style="margin-top:18px">📲 To keep it on a phone: download the app, or open this page and choose "Add to Home Screen" in the browser menu. Not professional advice; check anything important with someone qualified.</p>
+  </form>
+</main>
+<script src="nav.js" defer></script>
+<script src="easy-read.js"></script>
+<script src="teach-mode.js"></script>
+<script>
+// The app itself. This one function runs on this page and, serialised with the
+// skill as data, inside the downloaded single-file app, so the two never drift.
+function skillApp(skill, opts) {
+  var WORKER = 'https://pm-skills-mcp.pm-claude-skills.workers.dev';
+  var el = function (id) { return document.getElementById(id); };
+  var extra = opts.extra || function () { return ''; };
+  el('title').textContent = skill.title;
+  el('lead').textContent = String(skill.description || '').split(/\s*Use when/i)[0];
+  el('form').hidden = false;
+  var fields = el('fields'); fields.textContent = '';
+  var inputs = (skill.inputs && skill.inputs.length) ? skill.inputs : [{ label: 'Your situation', hint: 'Describe what you need, with the details that matter' }];
+  inputs.forEach(function (inp, i) {
+    var lab = document.createElement('label'); lab.className = 'field';
+    var b = document.createElement('b'); b.textContent = inp.label; lab.appendChild(b);
+    var ta = document.createElement('textarea'); ta.id = 'in' + i; ta.placeholder = String(inp.hint || '').slice(0, 160); ta.maxLength = 3000;
+    lab.appendChild(ta); fields.appendChild(lab);
+  });
+  try { el('apiKey').value = localStorage.getItem('anthropic_api_key') || ''; } catch (e) {}
+  el('apiKey').addEventListener('change', function () { try { localStorage.setItem('anthropic_api_key', el('apiKey').value.trim()); } catch (e) {} });
+  var system = function () {
+    return skill.instructions.replace(/^---[\s\S]*?---/, '').slice(0, 11000) +
+      '\n\nFollow the skill above for the user\'s inputs. If something it needs is missing, do the best you can and say what would make it better. For legal, medical, tax or money matters, add one short line that this is not professional advice.' + extra();
+  };
+  el('form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var prompt = inputs.map(function (inp, i) { var v = el('in' + i).value.trim(); return v ? '## ' + inp.label + '\n' + v : ''; }).filter(Boolean).join('\n\n');
+    if (!prompt) { el('in0').focus(); return; }
+    var out = el('out'); out.hidden = false; out.textContent = 'Working on it…'; el('copy').hidden = true; el('run').disabled = true;
+    var key = el('apiKey').value.trim();
+    var call = key
+      ? fetch('https://api.anthropic.com/v1/messages', { method: 'POST', headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' },
+          body: JSON.stringify({ model: 'claude-haiku-4-5-20251001', max_tokens: 1500, system: system(), messages: [{ role: 'user', content: prompt }] }) })
+          .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error((j.error && j.error.message) || r.status); return (j.content || []).map(function (c) { return c.text || ''; }).join(''); }); })
+      : fetch(WORKER + '/try', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ prompt: prompt.slice(0, 8000), system: system().slice(0, 12000) }) })
+          .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.message || j.error || r.status); return j.text; }); });
+    call.then(function (text) { out.textContent = text || 'No answer came back. Try again.'; el('copy').hidden = !text; })
+      .catch(function (err) { out.textContent = 'Could not get an answer: ' + err.message; })
+      .then(function () { el('run').disabled = false; });
+  });
+  el('copy').addEventListener('click', function () { try { navigator.clipboard.writeText(el('out').textContent); el('copy').textContent = 'Copied'; } catch (e) {} });
+}
+
+(function () {
+  var API = 'https://pm-skills-mcp.pm-claude-skills.workers.dev';
+  var el = function (id) { return document.getElementById(id); };
+  var name = String(new URLSearchParams(location.search).get('skill') || '').trim();
+  el('pick').addEventListener('submit', function (e) { e.preventDefault(); var v = el('pickName').value.trim().toLowerCase(); if (/^[a-z0-9-]{2,80}$/.test(v)) location.search = '?skill=' + v; });
+  function showPicker(msg) { el('pick').hidden = false; el('pickHint').hidden = false; if (msg) el('lead').textContent = msg; }
+  if (!name) return showPicker();
+  if (!/^[a-z0-9-]{2,80}$/.test(name)) return showPicker('That is not a skill name. Skill names look like security-deposit-recovery.');
+
+  // The API serves one skill; skills.json is the fallback for an offline copy or a box.
+  fetch(API + '/v1/skills/' + encodeURIComponent(name)).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .catch(function () { return fetch('skills.json').then(function (r) { return r.json(); }).then(function (j) { return (j.skills || []).filter(function (s) { return s.name === name; })[0]; }); })
+    .then(function (s) {
+      if (!s || !s.instructions) throw new Error('missing');
+      var skill = { name: s.name, title: s.title || s.name, description: s.description || '', inputs: (s.inputs || []).slice(0, 8), instructions: s.instructions };
+      document.title = skill.title + ' app | PM Skills';
+      el('full').href = 'index.html?skill=' + encodeURIComponent(skill.name);
+      if (window.PMEasyRead) PMEasyRead.bind(el('easyRead'));
+      if (window.PMTeachMode) PMTeachMode.bind(el('teachMode'));
+      skillApp(skill, { extra: function () { return (window.PMEasyRead ? PMEasyRead.instruction() : '') + (window.PMTeachMode ? PMTeachMode.instruction() : ''); } });
+      el('download').addEventListener('click', function () { download(skill); });
+      if (window.pmTrack) pmTrack('use/open');
+    })
+    .catch(function () { showPicker('No skill is called that. Check the name, or search the library.'); });
+
+  // A single HTML file: this page's markup and styles, the skill as JSON data, and skillApp().
+  function download(skill) {
+    var data = JSON.stringify(skill).replace(/</g, '\\u003c');
+    var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+    var css = 'body{font:16px/1.5 system-ui,sans-serif;margin:0;background:#fff;color:#1d1d1f}@media(prefers-color-scheme:dark){body{background:#111;color:#eee}textarea,input,.out{background:#1c1c1e!important;color:#eee!important}}' +
+      'main{max-width:720px;margin:0 auto;padding:20px 16px 60px}h1{font-size:26px;margin:0 0 6px}.lead,.muted{color:#6e6e73}.field{display:block;margin:14px 0}.field b{display:block;margin-bottom:4px}' +
+      'textarea,input{width:100%;box-sizing:border-box;border:1px solid #ccc;border-radius:10px;padding:10px 12px;font:inherit}textarea{min-height:70px}' +
+      '.btn{border:1px solid #4f46e5;background:#4f46e5;color:#fff;border-radius:12px;padding:10px 16px;font:inherit;cursor:pointer}.btn.ghost{background:transparent;color:#4f46e5}' +
+      '.row{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.out{border:1px solid #ccc;border-radius:14px;padding:16px;white-space:pre-wrap;overflow-wrap:anywhere;margin-top:14px}';
+    var html = '<!DOCTYPE html>\n<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">' +
+      '<title>' + esc(skill.title) + '</title><meta name="description" content="' + esc(String(skill.description).slice(0, 200)) + '"><style>' + css + '</style></head><body><main>' +
+      '<h1 id="title"></h1><p class="lead" id="lead"></p><form id="form" hidden><div id="fields"></div><div class="row"><button class="btn" type="submit" id="run">Run</button></div>' +
+      '<div class="out" id="out" hidden aria-live="polite"></div><div class="row"><button class="btn ghost" type="button" id="copy" hidden>Copy the answer</button></div>' +
+      '<details><summary class="muted">Use your own Claude key (after the free answers run out)</summary><input id="apiKey" type="password" placeholder="sk-ant-…" aria-label="Your Anthropic API key" autocomplete="off">' +
+      '<p class="muted">Kept on this device and sent only to Anthropic.</p></details>' +
+      '<p class="muted">From the free PM Skills library (MIT): https://mohitagw15856.github.io/pm-claude-skills/use.html?skill=' + esc(skill.name) + '. Not professional advice.</p></form></main>' +
+      '<script type="application/json" id="skill">' + data + '<\/script><script>' + skillApp.toString() +
+      '\nskillApp(JSON.parse(document.getElementById("skill").textContent), {});<\/script></body></html>\n';
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([html], { type: 'text/html' }));
+    a.download = skill.name + '-app.html';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 2000);
+    if (window.pmTrack) pmTrack('use/download');
+  }
+})();
+</script>
+</body>
+</html>

@@ -131,6 +131,7 @@
       ['career.html', '🧭 Career copilot'],
       ['compile.html', '🧑‍🏫 Expert-to-skill compiler'],
       ['how.html', '❓ How do I…?'],
+      ['use.html', '📱 Skill apps'],
       ['reckoning.html', '⚖️ Reckoning'],
       ['ledger.html', '📓 Outcome Ledger'],
       ['deck.html', '🃏 Operator\'s Deck'],
