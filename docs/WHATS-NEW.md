@@ -2,6 +2,19 @@
 
 The three most recent additions, in full. The short version is in the [README](../README.md#-whats-new) and every release is in the [changelog](../CHANGELOG.md).
 
+## For everyone, everywhere (v83.0.0)
+
+Most of the people who need a tenancy, benefits or bill decoder are not sitting at a laptop with an API key. v83 is about reaching them.
+
+**Read it your way.** Every skill has an Easy Read switch (short sentences, everyday words, the same facts) and a Teach me switch that coaches you through the method instead of writing the thing for you. On "How do I…?" you can ask by voice and hear the answer, and search understands mixed-language questions like Hinglish and Taglish.
+
+**Know the rules where you are.** Pick your place and a skill adds the local rules, with sources and the date they were last checked. Glossary packs make answers use the official terms for that place. The forms page explains the forms people actually get (P45, P60, W-2, Form 16 and more).
+
+**No internet, no smartphone, no problem.** `box/` turns a Raspberry Pi into an offline PM Skills website with its own model and Wi-Fi, for a school, clinic or library. `integrations/ussd/` is a menu you dial on any phone. `integrations/right-click/` runs a skill on any file from your file manager, free with a local model.
+
+**Skills that get better with use.** Your Remix forks are saved and can be suggested back as a diff. With "Learn from my outcomes" on, a skill uses what worked for you last time. Partner organisations can vouch for skills, qualified experts can sell their own with a free preview, and the jobs exam has working professionals mark AI answers blind.
+
+
 ## Design taste (v80.1.0)
 
 Ask an assistant for a landing page and you get the same one everybody gets. The **[pm-design-taste](../plugins/pm-design-taste/)** bundle fixes the order of decisions instead of adding more rules: `ui-design-pipeline` runs five stages in sequence and hands each one to a specialist skill if you have it installed.

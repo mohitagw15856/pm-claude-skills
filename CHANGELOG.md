@@ -9,6 +9,31 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [83.0.0] - For everyone, everywhere - 2026-10-17
+
+**1295 skills · 152 bundles** (from 1285 · 152 at v82.0.0). No Anthropic credit is spent by default from this release on.
+
+### Added
+- **Access for everyone**: an Easy Read switch for every skill (#410), Teach me mode so a skill coaches you through doing it yourself (#417), questions by voice with spoken answers in the browser's language (#412), and search that understands Hinglish, Taglish and Spanglish (#411).
+- **Local rules and terms**: jurisdiction overlays add the rules where you are to a skill, with sources and a last-checked date (#409, #420), and glossary packs make output use each place's official terms (#413).
+- **New skills and journeys**: newcomer and informal-economy skills (#414), disability and after-a-disaster skills (#416), each with two journeys, and `form-explainer` with a forms lookup page covering UK, US and Indian forms (#419).
+- **Offline and low-tech**: PM Skills in a box, the website and a local model on a Raspberry Pi over its own Wi-Fi (`box/`, #421); a USSD menu for any phone with no data, with the link by SMS (`integrations/ussd/`, #422); right-click any file in Finder, Explorer or Linux file managers (`integrations/right-click/`, #426); `pm-claude-skills run --local` for a free local model (#426).
+- **Skills as apps**: `use.html` opens any skill as a one-page app you can download as a single HTML file (#423).
+- **Personal forks**: Skill Remix saves your forks, shows what changed upstream, and "Suggest back" sends only your changed lines (#424).
+- **Paid expert skills**: registry rules for paid listings with a checkable credential and a free preview, an experts page and a guide (#425).
+- **Partner checks**: organisations that help people can vouch for skills, with a badge and a page to send their users to (#427).
+- **The jobs exam**: tasks and marking schemes from working professionals, AI answers graded blind by people in the same occupation (#428).
+- **Learning from outcomes**: opt-in, your Outcome Ledger notes on what worked feed the next run of that skill (#429).
+- **Earlier in this cycle**: the October bets (#350 to #368: AI at work report, PM-8B pipeline, evolution log, the live Firm, signed community registry, phone line, Skill Cup, "How do I…?", 20 languages for search), live A/B tests of skill versions, smart search by meaning, what-changed pages, daily caps for public bots, README front page, trigger phrases and worked examples for every skill.
+
+### Changed
+- **No API spending by default** (#408): automated workflows and the hosted free trial no longer spend Anthropic credit unless `ALLOW_API_SPEND` is set; free answers come from Workers AI.
+- **PM-8B trains without API credit** on one rented GPU (`training/run-on-gpu.sh`), hardened for a fresh server (#430).
+- New checks live in `tests/checks/`, run by `tests/run-checks.mjs`, so parallel pull requests no longer collide on the check script.
+
+### Fixed
+- Stored XSS in credential claims (#365), the homepage card layout (#395), A2A routing (#388), and catalogue dates and counts.
+
 ## [82.0.0] - China for everyone, Korea and Southeast Asia, lite skills, teams - 2026-10-06
 
 **1285 skills · 152 bundles** (from 1250 · 144 at v81.2.0).
