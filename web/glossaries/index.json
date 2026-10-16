@@ -1,0 +1,13 @@
+{
+  "glossaries": {
+    "Spanish": {
+      "code": "es",
+      "status": "draft",
+      "regions": {
+        "ES": "Spain",
+        "MX": "Mexico"
+      },
+      "terms": 11
+    }
+  }
+}

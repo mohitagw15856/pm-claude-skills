@@ -1443,7 +1443,7 @@ ${instr}${ctxBlock}`;
   // localize the whole response. Applied to the plain side too, for a fair compare.
   const outLang = el('outputLang') ? el('outputLang').value : '';
   if (outLang) {
-    const langInstr = `\n\n## Output language\nWrite your ENTIRE response in ${outLang}. Translate all headings, labels, and prose. Keep code, identifiers, URLs, and proper nouns unchanged. Use natural, professional ${outLang}.`;
+    const langInstr = `\n\n## Output language\nWrite your ENTIRE response in ${outLang}. Translate all headings, labels, and prose. Keep code, identifiers, URLs, and proper nouns unchanged. Use natural, professional ${outLang}.` + await glossaryBlock(outLang);
     system += langInstr;
     plainSystem = plainSystem ? plainSystem + langInstr : langInstr.trim();
   }
@@ -1530,6 +1530,21 @@ ${instr}${ctxBlock}`;
     showRunFlow(false);
     controller = null;
   }
+}
+
+// ── Glossary packs (web/glossaries/): official terms for the output language ──
+let GLOSS_INDEX = null;
+const GLOSS_CACHE = {};
+async function glossaryBlock(language) {
+  if (!language) return '';
+  if (!GLOSS_INDEX) GLOSS_INDEX = await fetch('glossaries/index.json').then((r) => (r.ok ? r.json() : { glossaries: {} })).then((j) => j.glossaries || {}).catch(() => ({}));
+  const meta = GLOSS_INDEX[language]; if (!meta) return '';
+  const g = GLOSS_CACHE[meta.code] || (GLOSS_CACHE[meta.code] = await fetch('glossaries/' + meta.code + '.json').then((r) => r.json()).catch(() => null));
+  if (!g) return '';
+  let place = ''; try { place = (localStorage.getItem(PLACE_KEY) || '').split('-')[0]; } catch (e) {}
+  const regions = Object.keys(g.regions || {}).filter((r) => !place || !g.regions[place] || r === place);
+  const lines = g.terms.slice(0, 200).map((t) => `- ${t.en}: ${regions.filter((r) => t[r]).map((r) => (regions.length > 1 ? `${t[r]} (${g.regions[r]})` : t[r])).join(' / ')}`);
+  return `\n\n## Official terms (${language}${regions.length === 1 ? `, ${g.regions[regions[0]]}` : ''})\nWhere these concepts come up, use these terms, the ones local offices and forms use${regions.length > 1 ? ' (pick the region that fits the user)' : ''}:\n${lines.join('\n')}`;
 }
 
 // ── Jurisdiction overlays (overlays/, web/overlays.json) ─────────────────────

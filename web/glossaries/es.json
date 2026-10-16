@@ -1,0 +1,21 @@
+{
+  "language": "Spanish",
+  "code": "es",
+  "status": "draft",
+  "checked": "2026-10-16",
+  "maintainers": [],
+  "regions": { "ES": "Spain", "MX": "Mexico" },
+  "terms": [
+    { "en": "landlord", "ES": "arrendador (casero, informal)", "MX": "arrendador" },
+    { "en": "tenant", "ES": "arrendatario (inquilino)", "MX": "arrendatario (inquilino)" },
+    { "en": "tenancy agreement / lease", "ES": "contrato de arrendamiento", "MX": "contrato de arrendamiento" },
+    { "en": "rent", "ES": "alquiler", "MX": "renta" },
+    { "en": "tenancy deposit", "ES": "fianza", "MX": "depósito en garantía" },
+    { "en": "payslip", "ES": "nómina", "MX": "recibo de nómina" },
+    { "en": "dismissal", "ES": "despido", "MX": "despido" },
+    { "en": "unemployment benefit", "ES": "prestación por desempleo (paro)", "MX": "seguro de desempleo" },
+    { "en": "invoice", "ES": "factura", "MX": "factura (CFDI)" },
+    { "en": "employment contract", "ES": "contrato de trabajo", "MX": "contrato individual de trabajo" },
+    { "en": "annual tax return", "ES": "declaración de la renta", "MX": "declaración anual" }
+  ]
+}
