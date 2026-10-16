@@ -32,9 +32,10 @@
 <nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
 <main class="hw-wrap">
   <h1>How do I…?</h1>
-  <p class="lead">Ask about something at work or in life. The answer is short, built only from the professional skills that match your question, and every point is cited to its skill so you can check it or run the full version.</p>
+  <p class="lead">Ask about something at work or in life, by typing or with 🎙 in your own language. The answer is short, built only from the professional skills that match your question, and every point is cited to its skill so you can check it or run the full version.</p>
   <form class="ask" id="f" role="search">
     <input id="q" type="search" placeholder="How do I ask for a pay rise?" aria-label="Your question" autocomplete="off" maxlength="400">
+    <button class="btn" type="button" id="mic" title="Ask by voice" aria-label="Ask by voice" hidden>🎙</button>
     <button class="btn" type="submit">Ask</button>
   </form>
   <div class="chips" id="chips"></div>
@@ -97,10 +98,35 @@
       .filter(function (r, i, all) { return r.score >= all[0].score / 2; }).slice(0, 3).map(function (r) { return r.s; });
   }
 
+  // ── Voice (the browser's own speech recognition and voices; no model, no cost) ──
+  var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  var VOICE_ASKED = false;
+  var spokenLang = function () { return (navigator.languages && navigator.languages[0]) || navigator.language || 'en-GB'; };
+  function speak(text) {
+    if (!('speechSynthesis' in window)) return;
+    speechSynthesis.cancel();
+    var u = new SpeechSynthesisUtterance(String(text).replace(/\[\d\]/g, '').replace(/[*_#>`]/g, ''));
+    u.lang = spokenLang();
+    var v = speechSynthesis.getVoices().find(function (x) { return x.lang && x.lang.toLowerCase().indexOf(u.lang.slice(0, 2).toLowerCase()) === 0; });
+    if (v) u.voice = v;
+    speechSynthesis.speak(u);
+  }
+  if (SR) {
+    el('mic').hidden = false;
+    el('mic').addEventListener('click', function () {
+      var rec = new SR(); rec.lang = spokenLang(); rec.interimResults = false; rec.maxAlternatives = 1;
+      el('mic').textContent = '⏺'; el('mic').setAttribute('aria-label', 'Listening');
+      rec.onresult = function (e) { var t = e.results[0][0].transcript; el('q').value = t; VOICE_ASKED = true; ask(t); };
+      rec.onend = function () { el('mic').textContent = '🎙'; el('mic').setAttribute('aria-label', 'Ask by voice'); };
+      rec.onerror = function () { el('mic').textContent = '🎙'; };
+      rec.start();
+    });
+  }
+
   function system(src, q) {
     return 'You answer "how do I" questions using ONLY the professional skills below. Write at most 180 words: a direct answer, then the few steps that matter most. ' +
       'Cite every step with the number of the skill it comes from, like [1] or [2]. If the skills do not cover the question, say so in one sentence instead of guessing. ' +
-      'For legal, medical, tax or money questions add one short line that this is not professional advice. Plain text; no headings. Answer in the language the question is written in.' + (q && PMCodeSwitch.mixed(q) ? ' The question mixes languages (for example Hinglish, Taglish or Spanglish): answer in the same natural mix, in the same script.' : '') + (window.PMEasyRead ? PMEasyRead.instruction() : '') + '\n\n' +
+      'For legal, medical, tax or money questions add one short line that this is not professional advice. Plain text; no headings. Answer in the language the question is written in.' + (VOICE_ASKED ? ' The question was spoken and the answer will be read aloud: use short spoken sentences, no lists, no symbols, no URLs.' : '') + (q && PMCodeSwitch.mixed(q) ? ' The question mixes languages (for example Hinglish, Taglish or Spanglish): answer in the same natural mix, in the same script.' : '') + (window.PMEasyRead ? PMEasyRead.instruction() : '') + '\n\n' +
       src.map(function (s, i) { return '[' + (i + 1) + '] ' + s.title + ' (' + s.name + ')\n' + s.description + '\n' + s.instructions.replace(/^---[\s\S]*?---/, '').slice(0, 3400); }).join('\n\n');
   }
 
@@ -131,6 +157,13 @@
             .then(function (r) { return r.json().then(function (j) { if (!r.ok) throw new Error(j.message || j.error || r.status); return j.text; }); });
       call.then(function (text) {
         out.querySelector('.answer').innerHTML = answerHtml(text || '', src);
+        if ('speechSynthesis' in window) {
+          var say = document.createElement('button'); say.type = 'button'; say.className = 'btn'; say.style.marginTop = '10px'; say.textContent = '🔊 Read it aloud';
+          say.addEventListener('click', function () { speak(text || ''); });
+          out.querySelector('.answer').appendChild(document.createElement('br')); out.querySelector('.answer').appendChild(say);
+          if (VOICE_ASKED) speak(text || '');
+        }
+        VOICE_ASKED = false;
         if (window.pmTrack) pmTrack('how/answer');
       }).catch(function (e) {
         var a = out.querySelector('.answer'); a.textContent = 'Could not write an answer: ' + e.message + ' The skills below still answer it in full.';
