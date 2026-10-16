@@ -12,6 +12,8 @@ HF_TOKEN=hf_... HF_USER=<your-hf-name> bash training/run-on-gpu.sh
 
 `training/run-on-gpu.sh` does everything in one go. It serves an open teacher model (Qwen3-32B by default) with vLLM, generates and judges the teacher data, trains PM-8B, scores it against its base model on held-out skills, and exports it for Ollama and the playground. Expect about 4 to 6 hours and $8 to $15 of GPU rental. **No Anthropic credit** is used, and your laptop only starts it. The Claude-based route below still works, but only with `--allow-api-spend`.
 
+Try the pipeline cheaply first with `LIMIT=10 SKIP_EXPORT=1` (about 30 to 45 minutes). It runs every step on a small sample, so a setup problem shows up before you pay for the full run. A later full run reuses the installs and continues the teacher pass. Give the server about 200 GB of disk. If a model server fails to start, the script stops and prints its log rather than waiting on a billed GPU.
+
 ## Status: pipeline complete; teacher pass and training await the owner
 
 | Step | Command | State |

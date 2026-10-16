@@ -16,7 +16,10 @@ datasets:
     field_messages: messages
 chat_template: tokenizer_default
 sequence_len: 4096
-sample_packing: true
+# Packing needs flash-attn, which train-pm-8b.sh skips (it often fails to build);
+# PyTorch's scaled-dot-product attention is used instead.
+sample_packing: false
+sdp_attention: true
 micro_batch_size: 2
 gradient_accumulation_steps: 8
 num_epochs: 3

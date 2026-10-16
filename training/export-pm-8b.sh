@@ -6,6 +6,8 @@
 #
 #   HF_REPO=<you>/PM-8B-q4f16_1-MLC OLLAMA_NAME=<you>/pm-8b bash training/export-pm-8b.sh
 set -euo pipefail
+# Upload with the current Hugging Face CLI (hf), or the older huggingface-cli.
+hf_upload() { if command -v hf >/dev/null; then hf upload "$1" "$2" . --repo-type model; else huggingface-cli upload "$1" "$2" . --repo-type model; fi; }
 cd "$(dirname "$0")/.."
 OUT=training/out
 [ -d "$OUT/pm-8b-lora" ] || { echo "No adapter at $OUT/pm-8b-lora: run training/train-pm-8b.sh first."; exit 1; }
@@ -46,7 +48,7 @@ MLC="$OUT/PM-8B-q4f16_1-MLC"
 mlc_llm convert_weight "$OUT/pm-8b-merged" --quantization q4f16_1 -o "$MLC"
 mlc_llm gen_config "$OUT/pm-8b-merged" --quantization q4f16_1 --conv-template qwen2 -o "$MLC"
 if [ -n "${HF_REPO:-}" ]; then
-  huggingface-cli upload "$HF_REPO" "$MLC" . --repo-type model
+  hf_upload "$HF_REPO" "$MLC"
   echo "Uploaded to https://huggingface.co/$HF_REPO"
 fi
 cat <<NEXT
