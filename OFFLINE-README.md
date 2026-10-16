@@ -11,6 +11,9 @@ Skills are plain markdown; your AI reads them. Nothing here calls home.
 - `variants/`    — jurisdiction overlays where they exist
 - `SKILLS.md`    — the full catalogue · `LICENSE` — MIT
 
+## A whole offline website on one small computer
+For a school, clinic or library: [`box/`](box/README.md) turns a Raspberry Pi or an old laptop into an offline PM Skills website with a local model, served over its own Wi-Fi.
+
 ## Use with a local model (fully offline)
 1. Install a local runner — **Ollama**, **LM Studio**, or **llama.cpp** — and pull a capable instruction model.
 2. Pick a skill: open `skills/<name>/SKILL.md`.

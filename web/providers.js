@@ -206,6 +206,25 @@
     return _tryEnabled;
   }
 
+  // PM Skills in a box (box/setup.sh): served from the box's own address with a local
+  // model behind /ollama. Only checked on .local names and private addresses, so
+  // the public site makes no extra request. The box's model becomes the default.
+  (function () {
+    var h = location.hostname;
+    if (!/\.local$|^10\.|^192\.168\.|^172\.(1[6-9]|2\d|3[01])\./.test(h)) return;
+    fetch('box.json').then(function (r) { return r.ok ? r.json() : null; }).then(function (c) {
+      if (!c || !c.box) return;
+      var base = location.origin + (c.ollama || '/ollama');
+      PROVIDERS.ollama.default = base;
+      if (c.model) PROVIDERS.ollama.models.unshift([c.model, c.model + ' (on this box, offline)']);
+      try {
+        if (!localStorage.getItem('ollama_base_url')) localStorage.setItem('ollama_base_url', base);
+        if (!localStorage.getItem(PROVIDER_STORE) || localStorage.getItem(PROVIDER_STORE) === 'tryclaude') localStorage.setItem(PROVIDER_STORE, 'ollama');
+      } catch (e) {}
+      var ps = document.getElementById('provider'); if (ps) { ps.value = 'ollama'; applyProvider(); }
+    }).catch(function () {});
+  })();
+
   // PM-8B, the library's own model (training/), appears in the In-browser and
   // Ollama lists once web/pm-8b.json says it is released. Until then, nothing.
   var PM8B = null;
