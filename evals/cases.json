@@ -1580,6 +1580,22 @@
   {
    "skill": "daily-cash-book",
    "input": "I sell second-hand clothes from home and on WhatsApp. I buy bales for 3,000 each, sell items for 50 to 300, and I never know if I am making money. Set up records I can keep on my phone."
+  },
+  {
+   "skill": "functional-assessment-prep",
+   "input": "I have fibromyalgia and depression. My disability benefit assessment is in person in 10 days. Most mornings I need an hour before I can stand, I can walk about 50 metres before I have to stop, and I avoid going out alone. I have a letter from my GP from last year. Help me prepare."
+  },
+  {
+   "skill": "emergency-grant-application",
+   "input": "A wildfire destroyed our rented house two weeks ago. We are a family of four staying in a motel. We lost clothes, school things and a laptop my partner needs for work. We have no insurance. Where can we get emergency money and what should I write?"
+  },
+  {
+   "skill": "lost-documents-replacement",
+   "input": "Flood water destroyed all our papers: my passport, my wife's ID, the children's birth certificates and the house deed. I have photos of my passport and the deed on my phone. Our bank cards survived. Where do we start?"
+  },
+  {
+   "skill": "renting-after-disaster-damage",
+   "input": "A storm tore part of the roof off the house we rent. Two rooms are soaked and the landlord says he will fix it when the insurance pays, maybe in two months. We have renter's insurance. Do we keep paying full rent, and should we move out?"
   }
  ]
 }

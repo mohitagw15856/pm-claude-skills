@@ -345,6 +345,10 @@
       "reviewed": "2026-08-10",
       "by": "seed"
     },
+    "emergency-grant-application": {
+      "reviewed": "2026-10-16",
+      "by": "seed"
+    },
     "end-of-life-wishes-conversation": {
       "reviewed": "2026-08-06",
       "by": "seed"
@@ -375,6 +379,10 @@
     },
     "franchise-decoder": {
       "reviewed": "2026-09-04",
+      "by": "seed"
+    },
+    "functional-assessment-prep": {
+      "reviewed": "2026-10-16",
       "by": "seed"
     },
     "funeral-pricing-decoder": {
@@ -509,6 +517,10 @@
       "reviewed": "2026-08-06",
       "by": "seed"
     },
+    "lost-documents-replacement": {
+      "reviewed": "2026-10-16",
+      "by": "seed"
+    },
     "medical-appointment-advocate": {
       "reviewed": "2026-08-06",
       "by": "seed"
@@ -607,6 +619,10 @@
     },
     "rent-increase-response": {
       "reviewed": "2026-07-18",
+      "by": "seed"
+    },
+    "renting-after-disaster-damage": {
+      "reviewed": "2026-10-16",
       "by": "seed"
     },
     "repair-request-escalation": {

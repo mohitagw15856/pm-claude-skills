@@ -1,0 +1,16 @@
+{
+  "id": "after-a-disaster",
+  "name": "After a disaster",
+  "emoji": "🌊",
+  "triggers": ["our home flooded", "we lost everything in the fire", "the storm destroyed our house", "we had to evacuate"],
+  "boundary": "If anyone is in danger, call the emergency services first. Not legal or financial advice; local advice services, councils and disaster agencies can help for free.",
+  "ask_first": "Is everyone safe now, and is the building safe to enter? Nothing else comes before that.",
+  "steps": [
+    { "skill": "after-the-disaster", "why": "Safety, then documenting damage before cleanup, then claims and aid, in that order.", "carry": ["damage photographed", "insurer contacted", "aid registration"] },
+    { "skill": "lost-documents-replacement", "why": "Without ID, every other claim stalls; start with the document that unlocks the rest.", "carry": ["first document applied for"] },
+    { "skill": "emergency-grant-application", "why": "Emergency money is spread across many bodies, each with its own window.", "carry": ["applications made", "references"] },
+    { "skill": "renting-after-disaster-damage", "why": "For tenants: rent, repairs and leaving, checked against local rules.", "carry": ["landlord notified in writing", "stay or leave decision"] },
+    { "skill": "insurance-claim", "why": "Make the claim with the evidence gathered in step one.", "carry": ["claim reference"] }
+  ],
+  "done_when": "Everyone safe, damage recorded, documents being replaced, emergency money applied for, housing settled and the insurance claim made."
+}

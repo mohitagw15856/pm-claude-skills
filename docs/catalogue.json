@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build-catalogue.mjs",
   "bundles": 152,
-  "skills": 1268,
+  "skills": 1272,
   "items": [
     {
       "bundle": "pm-2027",
@@ -105,6 +105,10 @@
         {
           "name": "disability-disclosure-decision",
           "description": "Decide whether, when, how, and to whom to disclose a disability or health condition at work — weighing the real benefits (accommodations, protection, honesty) against the real risks (bias, gossip), tuned to your specific situation."
+        },
+        {
+          "name": "functional-assessment-prep",
+          "description": "Prepare for a disability or illness benefit assessment (a functional or work capability assessment, a medical review, a disability evaluation interview): describe how the condition affects daily life on a bad day, gather evidence, and know what to bring and say."
         },
         {
           "name": "venue-access-check",
@@ -2913,12 +2917,20 @@
           "description": "Assemble the grab-and-go document and information kit for a disaster — the IDs, insurance, medical, financial, and property records (physical copies + secure digital backups) you'd need to prove who you are, get aid, and rebuild after a fire, flood, or evacuation."
         },
         {
+          "name": "emergency-grant-application",
+          "description": "Apply for emergency money after a disaster, crisis or sudden hardship: government disaster assistance, local hardship and welfare funds, charity crisis grants, and employer or union funds."
+        },
+        {
           "name": "go-bag-builder",
           "description": "Build an emergency go-bag tailored to your actual household and your most likely local hazards — not a generic list — covering the people, pets, medications, documents, and hazard-specific items you'd need to grab and leave in minutes."
         },
         {
           "name": "hazard-risk-map",
           "description": "Figure out which disasters and emergencies your specific location actually faces — and the concrete prep each one demands — so your readiness targets real risks instead of generic ones."
+        },
+        {
+          "name": "lost-documents-replacement",
+          "description": "Replace identity and important documents lost or destroyed in a fire, flood, theft or move, in the order that unlocks the rest: ID and birth records first, then bank, benefits, property, medical and education papers."
         },
         {
           "name": "power-outage-plan",
@@ -5607,6 +5619,10 @@
         {
           "name": "rent-increase-response",
           "description": "Respond to a rent increase strategically — check its validity first, price your alternatives honestly, then negotiate with the leverage tenants forget they have (turnover costs the landlord more than a compromise)."
+        },
+        {
+          "name": "renting-after-disaster-damage",
+          "description": "Know your position as a tenant when a fire, flood, storm or other disaster damages your rented home: whether rent is still due, who repairs what, what your landlord's and your own insurance cover, moving out or ending the lease, and getting your deposit back."
         },
         {
           "name": "repair-request-escalation",

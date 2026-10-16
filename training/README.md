@@ -16,7 +16,7 @@ HF_TOKEN=hf_... HF_USER=<your-hf-name> bash training/run-on-gpu.sh
 
 | Step | Command | State |
 |---|---|---|
-| 1. Routing and structure rows | `node training/build-sft-dataset.mjs` → `sft.jsonl` | ✅ committed (646 rows from all 1,290 skills) |
+| 1. Routing and structure rows | `node training/build-sft-dataset.mjs` → `sft.jsonl` | ✅ committed (646 rows from all 1,294 skills) |
 | 2. Teacher pass | `node training/teacher-pass.mjs` → `teacher.jsonl` | 🔑 needs `ANTHROPIC_API_KEY`, about 560 completions plus 560 judge calls. Try `--dry-run`, then `--limit 50`. It resumes where it stopped. |
 | 3. Mix and held-out split | `node training/build-pm-8b-mix.mjs` → `pm-8b-train.jsonl`, `pm-8b-heldout-tasks.json` | ✅ runs now; adds the teacher rows once they exist |
 | 4. Train | `bash training/train-pm-8b.sh` (axolotl, `pm-8b.yml`) | 💳 one 24 GB+ GPU, 1-3 hours, about $2-10 rented |
@@ -40,7 +40,7 @@ Read the **bare** column: it is the skill's judgment without the skill. If PM-8B
 
 ## Honest expectations
 
-Routing and structural discipline transfer well. Depth transfers in proportion to the teacher rows: a few hundred kept answers across 1,290 skills teach the house style, not every skill's specifics. Publish the held-out numbers, not impressions.
+Routing and structural discipline transfer well. Depth transfers in proportion to the teacher rows: a few hundred kept answers across 1,294 skills teach the house style, not every skill's specifics. Publish the held-out numbers, not impressions.
 
 ## Older artefacts
 

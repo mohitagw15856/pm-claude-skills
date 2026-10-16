@@ -2,7 +2,7 @@
  "generated": "2026-10-16",
  "counts": {
   "consequential": 246,
-  "high-stakes": 157,
+  "high-stakes": 161,
   "informational": 899
  },
  "tiers": {
@@ -1714,6 +1714,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "emergency-grant-application": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-emergency"
+  },
   "emil-design-eng-pointer": {
    "tier": "informational",
    "via": "default"
@@ -2193,6 +2197,10 @@
   "frontend-design-pointer": {
    "tier": "informational",
    "via": "default"
+  },
+  "functional-assessment-prep": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-accessibility"
   },
   "fundraising-faq": {
    "tier": "informational",
@@ -2885,6 +2893,10 @@
   "long-term-care-options": {
    "tier": "high-stakes",
    "via": "bundle:pm-caregiving"
+  },
+  "lost-documents-replacement": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-emergency"
   },
   "love-letter-helper": {
    "tier": "consequential",
@@ -3929,6 +3941,10 @@
   "rental-application": {
    "tier": "informational",
    "via": "default"
+  },
+  "renting-after-disaster-damage": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-renters"
   },
   "repair-after-a-fight": {
    "tier": "informational",

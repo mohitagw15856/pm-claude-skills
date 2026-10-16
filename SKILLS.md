@@ -1,4 +1,4 @@
-# 🗂️ All 1290 Skills — full catalog
+# 🗂️ All 1294 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -724,7 +724,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (827 skills)
+## 🌍 Industries & Public Sector (831 skills)
 
 ### `other` — 22 skills
 
@@ -777,7 +777,7 @@
 | **Explorer Viewer Builder** (`explorer-viewer-builder`) | Use when asked to build a 3D viewer for a GLB model, make an interactive explorer with clickable labelled parts, add an exploded view or quiz to a… | — |
 | **Model Prompt Pack** (`model-prompt-pack`) | Use when asked to write prompts for image-to-3D or text-to-3D tools, generate 3D models of a topic's parts, plan the assets for a 3D explorer, or… | — |
 
-### `pm-accessibility` — 5 skills
+### `pm-accessibility` — 6 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -785,6 +785,7 @@
 | **Accommodation Request** (`accommodation-request`) | Request a reasonable accommodation at work or in education — frame it around the barrier and the adjustment (not your diagnosis), cite the right… | — |
 | **Disability Benefit Appeal** (`disability-benefit-appeal`) | Appeal a denied disability benefit (SSDI/SSI, PIP, DLA, ESA and similar) — decode the denial reason, build the evidence-backed case that answers… | — |
 | **Disability Disclosure Decision** (`disability-disclosure-decision`) | Decide whether, when, how, and to whom to disclose a disability or health condition at work — weighing the real benefits (accommodations… | — |
+| **Functional Assessment Prep** (`functional-assessment-prep`) | Prepare for a disability or illness benefit assessment (a functional or work capability assessment, a medical review, a disability evaluation… | — |
 | **Venue Access Check** (`venue-access-check`) | Check whether a specific venue — a restaurant, office, event space, Airbnb, clinic — will actually work for your access needs, before you commit… | — |
 
 ### `pm-agentnative` — 5 skills
@@ -1334,14 +1335,16 @@
 | **Rubric Builder** (`rubric-builder`) | Create a clear grading rubric with criteria and performance-level descriptors that make scoring fair, fast, and consistent. | — |
 | **Student Feedback** (`student-feedback`) | Write constructive, specific feedback on student work that motivates and tells the student exactly how to improve. | — |
 
-### `pm-emergency` — 5 skills
+### `pm-emergency` — 7 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **After The Disaster** (`after-the-disaster`) | Work through the first hours and days after a disaster — a fire, flood, storm, or evacuation — in the right order: safety and people first, then… | — |
 | **Emergency Doc Kit** (`emergency-doc-kit`) | Assemble the grab-and-go document and information kit for a disaster — the IDs, insurance, medical, financial, and property records (physical… | — |
+| **Emergency Grant Application** (`emergency-grant-application`) | Apply for emergency money after a disaster, crisis or sudden hardship: government disaster assistance, local hardship and welfare funds, charity… | — |
 | **Go-Bag Builder** (`go-bag-builder`) | Build an emergency go-bag tailored to your actual household and your most likely local hazards — not a generic list — covering the people, pets… | — |
 | **Hazard Risk Map** (`hazard-risk-map`) | Figure out which disasters and emergencies your specific location actually faces — and the concrete prep each one demands — so your readiness… | — |
+| **Lost Documents Replacement** (`lost-documents-replacement`) | Replace identity and important documents lost or destroyed in a fire, flood, theft or move, in the order that unlocks the rest: ID and birth… | — |
 | **Power Outage Plan** (`power-outage-plan`) | Plan for an extended power outage — keeping medically-essential devices running, food safe, the home warm or cool enough, and communication alive… | — |
 
 ### `pm-estate` — 4 skills
@@ -1811,11 +1814,12 @@
 | **Job Search With a Record** (`job-search-with-a-record`) | Run a job search when you have a criminal record — where to apply, when and how to disclose, and how to turn the question into a short, confident… | — |
 | **Reconnect After Time Away** (`reconnect-after-time-away`) | Rebuild relationships with family, kids, and friends after incarceration or a long absence — how to reach out, repair trust at the other person's… | — |
 
-### `pm-renters` — 3 skills
+### `pm-renters` — 4 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Rent Increase Response** (`rent-increase-response`) | Respond to a rent increase strategically — check its validity first, price your alternatives honestly, then negotiate with the leverage tenants… | — |
+| **Renting After Disaster Damage** (`renting-after-disaster-damage`) | Know your position as a tenant when a fire, flood, storm or other disaster damages your rented home: whether rent is still due, who repairs what… | — |
 | **Repair Request Escalation** (`repair-request-escalation`) | Get a landlord to actually fix things — the repair request that creates a record, the escalation ladder from reminder to habitability leverage… | — |
 | **Security Deposit Recovery** (`security-deposit-recovery`) | Get your security deposit back — the move-out documentation that wins disputes before they start, the itemized-deduction challenge, the… | — |
 
@@ -2085,4 +2089,4 @@
 
 ---
 
-_1290 skills across 153 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1294 skills across 153 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
