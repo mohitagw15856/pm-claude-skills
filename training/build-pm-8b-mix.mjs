@@ -38,7 +38,12 @@ const sources = { 'training/sft.jsonl': 0, 'training/teacher.jsonl': 0, 'dataset
 // (2026-10-16) scored 2.53 without a skill against 4.69 for its base model. So once
 // full-depth rows exist, the short rows are capped at a fifth of them, picked evenly.
 const fullDepth = ['training/teacher.jsonl', 'dataset/samples.jsonl'].reduce((n, p) => n + readJsonl(join(root, p)).length, 0);
-const sftAll = readJsonl(join(root, 'training/sft.jsonl'));
+// "structure" rows pair a real task with a description of the skill instead of the
+// work ("I'll approach this with the X discipline. Structure: ..."). Because their
+// prompts look like real requests, even 21 of them taught the model to describe
+// instead of do (full run, 2026-10-17: bare 2.35 against the base's 4.69). Only the
+// routing rows, whose prompts are plainly different, stay.
+const sftAll = readJsonl(join(root, 'training/sft.jsonl')).filter((r) => r.track !== 'structure');
 const sftCap = fullDepth >= 50 ? Math.min(sftAll.length, Math.round(fullDepth * 0.2)) : sftAll.length;
 const sftKeep = new Set(Array.from({ length: sftCap }, (_, i) => Math.floor((i * sftAll.length) / sftCap)));
 for (const src of Object.keys(sources)) {
