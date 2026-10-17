@@ -30,5 +30,6 @@ warmup_ratio: 0.05
 bf16: auto
 val_set_size: 0.02
 output_dir: training/out/pm-8b-lora
+dataset_prepared_path: training/out/prepared
 save_strategy: epoch
 logging_steps: 10

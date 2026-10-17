@@ -14,6 +14,10 @@ cd "$(dirname "$0")/.."
 command -v axolotl >/dev/null || { pip install -q torch && pip install -q axolotl huggingface_hub; }
 # Upload with the current Hugging Face CLI (hf), or the older huggingface-cli.
 hf_upload() { if command -v hf >/dev/null; then hf upload "$1" "$2" . --repo-type model; else huggingface-cli upload "$1" "$2" . --repo-type model; fi; }
+# Axolotl reuses a prepared dataset without checking whether the training file changed,
+# so a rebuilt mix would be silently ignored (it happened: 2026-10-17, two retrains on
+# the first run's data). Always prepare from the current file.
+rm -rf last_run_prepared training/out/prepared
 axolotl train training/pm-8b.yml
 if [ -n "${HF_REPO:-}" ]; then
   cp training/MODEL_CARD.md training/out/pm-8b-lora/README.md
