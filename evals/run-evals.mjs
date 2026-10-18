@@ -16,13 +16,14 @@
 //   --bundles a,b,c      only score skills in these bundles (needs web/skills.json)
 //   --skills x,y         only score these specific skills
 //   --unevaluated        only score skills that have no score yet in --out (add new ones)
+//   --save-outputs <dir> keep each skill's input, output and scores in <dir>/<skill>.md
 //
 // Usage:
 //   ANTHROPIC_API_KEY=sk-ant-... node evals/run-evals.mjs               # cheap full run
 //   node evals/run-evals.mjs --dry-run                                  # estimate only
 //   node evals/run-evals.mjs --changed                                  # only changed skills
 //   node evals/run-evals.mjs --models claude-sonnet-4-6,claude-haiku-4-5-20251001 --judge claude-opus-4-8  # official run
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
@@ -50,6 +51,9 @@ const onlyChanged = has('changed');   // only skills whose SKILL.md changed vs t
 const force = has('force');           // re-score even if unchanged since last run
 const dryRun = has('dry-run');        // print the plan + cost estimate, make no API calls
 const baseRef = arg('base', 'origin/main');
+// --save-outputs <dir>: write each skill's input, output and scores to <dir>/<skill>.md,
+// so a low score can be read and diagnosed instead of guessed at.
+const saveDir = arg('save-outputs', '');
 
 // Targeted scoring (used by the "Evaluate selected bundles" workflow): score only the
 // skills in chosen bundles / an explicit skill list, optionally only the not-yet-scored
@@ -148,6 +152,10 @@ async function scoreTask({ c, body, description, model, hash }) {
     }
     const overall = DIMENSIONS.reduce((a, d) => a + scores[d], 0) / DIMENSIONS.length;
     process.stderr.write(`✓ ${c.skill} on ${model} — ${overall.toFixed(2)}/5\n`);
+    if (saveDir) {
+      mkdirSync(saveDir, { recursive: true });
+      writeFileSync(join(saveDir, `${c.skill}.md`), `# ${c.skill} (${model}): ${overall.toFixed(2)}/5\n\nScores: ${JSON.stringify(scores)}\nOutput length: ${output.length} characters\n\n## Input\n\n${c.input}\n\n## Output\n\n${output}\n`);
+    }
     return { skill: c.skill, model, scores, overall: Math.round(overall * 100) / 100, hash };
   } catch (e) {
     process.stderr.write(`✗ ${c.skill} on ${model} — FAILED (${e.message})\n`);

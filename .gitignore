@@ -115,3 +115,6 @@ training/out/
 
 # The jobs-exam key unblinds graders: published only after grading closes.
 skillbench/jobs-exam/.key.json
+
+# Eval outputs saved with --save-outputs (for diagnosis; not published)
+evals/outputs/
