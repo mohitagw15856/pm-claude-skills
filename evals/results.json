@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T18:23:42.881Z",
+  "generatedAt": "2026-10-18T19:25:08.807Z",
   "judge": "claude-sonnet-4-6",
   "models": [
     "claude-sonnet-4-6"
@@ -206,13 +206,13 @@
       "skill": "agm-in-a-box",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 1,
-        "usefulness": 2,
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
         "grounding": 4
       },
-      "overall": 2.25,
-      "hash": "29886f64a1700b29"
+      "overall": 4.75,
+      "hash": "ba5bf18fddee3841"
     },
     {
       "skill": "ai-assisted-performance-review",
@@ -302,13 +302,13 @@
       "skill": "annual-report-tutor",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 1,
-        "completeness": 1,
-        "usefulness": 1,
-        "grounding": 5
+        "structure": 3,
+        "completeness": 2,
+        "usefulness": 3,
+        "grounding": 4
       },
-      "overall": 2,
-      "hash": "9c1697874a2cd8a3"
+      "overall": 3,
+      "hash": "e01444a6c4d321e7"
     },
     {
       "skill": "api-for-yourself",
@@ -350,13 +350,13 @@
       "skill": "application-tracker",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 1,
-        "usefulness": 2,
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 4,
         "grounding": 3
       },
-      "overall": 2,
-      "hash": "8c65baf682d7d4e5"
+      "overall": 4.25,
+      "hash": "9d6c1c30be2cba73"
     },
     {
       "skill": "apprentice-first-week",
@@ -482,13 +482,13 @@
       "skill": "band-agreement",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 1,
-        "usefulness": 2,
-        "grounding": 3
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
       },
-      "overall": 2,
-      "hash": "ca019a1dddba5f6e"
+      "overall": 4.75,
+      "hash": "08f5eaf5440dcdfd"
     },
     {
       "skill": "bennett-time-audit",
@@ -506,13 +506,13 @@
       "skill": "bilingual-cv-zh-en",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 1,
-        "completeness": 1,
-        "usefulness": 1,
-        "grounding": 1
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 3,
+        "grounding": 2
       },
-      "overall": 1,
-      "hash": "f687758ed4535a4d"
+      "overall": 3.5,
+      "hash": "ddbc8e87aaf5c401"
     },
     {
       "skill": "board-game-designer",
@@ -650,25 +650,25 @@
       "skill": "career-changer-cv",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 1,
-        "completeness": 1,
-        "usefulness": 2,
-        "grounding": 1
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 3
       },
-      "overall": 1.25,
-      "hash": "a5349f2472ea0f21"
+      "overall": 4.5,
+      "hash": "a99e3d7cb27c1c50"
     },
     {
       "skill": "career-inventory",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 1,
-        "completeness": 1,
-        "usefulness": 1,
-        "grounding": 1
+        "structure": 2,
+        "completeness": 2,
+        "usefulness": 3,
+        "grounding": 4
       },
-      "overall": 1,
-      "hash": "cf6a9101b415c373"
+      "overall": 2.75,
+      "hash": "b23959bb3ad26eaa"
     },
     {
       "skill": "case-for-support",
@@ -711,12 +711,12 @@
       "model": "claude-sonnet-4-6",
       "scores": {
         "structure": 4,
-        "completeness": 2,
-        "usefulness": 3,
+        "completeness": 4,
+        "usefulness": 4,
         "grounding": 3
       },
-      "overall": 3,
-      "hash": "67e18a5ff7e0fc65"
+      "overall": 3.75,
+      "hash": "8c06e2c8bddc4137"
     },
     {
       "skill": "churn-analysis",
@@ -745,13 +745,13 @@
       "skill": "civil-service-application",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 1,
-        "usefulness": 2,
-        "grounding": 5
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 4,
+        "grounding": 2
       },
-      "overall": 2.5,
-      "hash": "3e30233cbd105660"
+      "overall": 3.75,
+      "hash": "720658c8e3250384"
     },
     {
       "skill": "clinical-trial-protocol",
@@ -769,13 +769,13 @@
       "skill": "clip-factory",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 2,
-        "usefulness": 2,
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
         "grounding": 5
       },
-      "overall": 2.75,
-      "hash": "5f48bb222341d9b2"
+      "overall": 5,
+      "hash": "46ac385aa9179af0"
     },
     {
       "skill": "clone-brief",
@@ -805,13 +805,13 @@
       "skill": "cn-8d-report",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 4,
-        "completeness": 3,
-        "usefulness": 3,
-        "grounding": 2
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 4,
+        "grounding": 3
       },
-      "overall": 3,
-      "hash": "022f762aabb0a9f9"
+      "overall": 4.25,
+      "hash": "092055cf11596133"
     },
     {
       "skill": "cn-campus-recruitment",
@@ -1207,7 +1207,7 @@
         "grounding": 5
       },
       "overall": 2.5,
-      "hash": "8493c4a83fd944d0"
+      "hash": "19cbfff7de3cf4e8"
     },
     {
       "skill": "cn-quality-traceability",
@@ -1333,13 +1333,13 @@
       "skill": "cn-thesis-proposal",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 1,
-        "usefulness": 2,
-        "grounding": 5
+        "structure": 4,
+        "completeness": 3,
+        "usefulness": 4,
+        "grounding": 3
       },
-      "overall": 2.5,
-      "hash": "04c943e13549a2c9"
+      "overall": 3.5,
+      "hash": "c92968db10e9fe0a"
     },
     {
       "skill": "cn-trade-quotation",
@@ -1417,13 +1417,13 @@
       "skill": "code-simplification",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 3,
-        "completeness": 2,
-        "usefulness": 3,
-        "grounding": 4
+        "structure": 5,
+        "completeness": 4,
+        "usefulness": 4,
+        "grounding": 3
       },
-      "overall": 3,
-      "hash": "ccd31cee5f92be8b"
+      "overall": 4,
+      "hash": "3d3ae2c365464250"
     },
     {
       "skill": "cohort-analysis",
@@ -1501,13 +1501,13 @@
       "skill": "company-compare-same-definitions",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 3,
-        "completeness": 2,
-        "usefulness": 2,
-        "grounding": 5
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
       },
-      "overall": 3,
-      "hash": "526e9f6f18df77d7"
+      "overall": 4.75,
+      "hash": "ef1fff67a00d8673"
     },
     {
       "skill": "company-tailored-cv",
@@ -1596,13 +1596,13 @@
       "skill": "consulting-banking-cv",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 1,
-        "usefulness": 2,
-        "grounding": 1
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
       },
-      "overall": 1.5,
-      "hash": "cc4e32f91614b367"
+      "overall": 4.75,
+      "hash": "76ca6e90abfae249"
     },
     {
       "skill": "content-style-guide",
@@ -1626,7 +1626,7 @@
         "grounding": 1
       },
       "overall": 1.25,
-      "hash": "a28c3bec2f4a1feb"
+      "hash": "4b5518e3fee28cee"
     },
     {
       "skill": "context-engineering-review",
@@ -1644,13 +1644,13 @@
       "skill": "country-cv-format",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 3,
-        "completeness": 2,
-        "usefulness": 2,
-        "grounding": 4
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
       },
-      "overall": 2.75,
-      "hash": "ebcbd2847df6daf0"
+      "overall": 5,
+      "hash": "3870098ed138cea9"
     },
     {
       "skill": "creator-deal-decoder",
@@ -1775,25 +1775,25 @@
       "skill": "cv-docx-export",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 1,
-        "usefulness": 1,
-        "grounding": 1
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
       },
-      "overall": 1.25,
-      "hash": "c60959ce2699c175"
+      "overall": 5,
+      "hash": "517072b3555cff2e"
     },
     {
       "skill": "cv-honesty-check",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 1,
-        "usefulness": 2,
-        "grounding": 1
+        "structure": 5,
+        "completeness": 2,
+        "usefulness": 4,
+        "grounding": 3
       },
-      "overall": 1.5,
-      "hash": "21a17872972b4dc0"
+      "overall": 3.5,
+      "hash": "ee7b403067a5b4a5"
     },
     {
       "skill": "daily-cash-book",
@@ -1895,13 +1895,13 @@
       "skill": "demo-data-generator",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 1,
-        "usefulness": 2,
-        "grounding": 3
+        "structure": 5,
+        "completeness": 3,
+        "usefulness": 4,
+        "grounding": 4
       },
-      "overall": 2,
-      "hash": "43a8d555b5b8e441"
+      "overall": 4,
+      "hash": "44c448d454feed52"
     },
     {
       "skill": "dependency-conflict-resolver",
@@ -1955,13 +1955,13 @@
       "skill": "digital-death-plan",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 3,
-        "completeness": 2,
-        "usefulness": 2,
-        "grounding": 5
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
       },
-      "overall": 3,
-      "hash": "1d0eae2e2c7c9dc0"
+      "overall": 4.75,
+      "hash": "9475f08b7de730d8"
     },
     {
       "skill": "dingtalk-work-log",
@@ -2171,13 +2171,13 @@
       "skill": "eulogy-writer",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 1,
-        "completeness": 1,
-        "usefulness": 2,
-        "grounding": 3
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
       },
-      "overall": 1.75,
-      "hash": "7e027e2c746fbfdf"
+      "overall": 4.75,
+      "hash": "941bd1cec21693f3"
     },
     {
       "skill": "eval-rubric-designer",
@@ -2219,13 +2219,13 @@
       "skill": "executive-cv",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 3,
-        "completeness": 2,
-        "usefulness": 2,
-        "grounding": 5
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 4,
+        "grounding": 4
       },
-      "overall": 3,
-      "hash": "7e4c64be1670e8e6"
+      "overall": 4.5,
+      "hash": "6396d823509e1cb5"
     },
     {
       "skill": "executive-summary",
@@ -2304,11 +2304,11 @@
       "scores": {
         "structure": 3,
         "completeness": 2,
-        "usefulness": 2,
-        "grounding": 3
+        "usefulness": 3,
+        "grounding": 2
       },
       "overall": 2.5,
-      "hash": "3289e7c416f9ea8d"
+      "hash": "819ff8855ff7be43"
     },
     {
       "skill": "fair-split",
@@ -2422,25 +2422,25 @@
       "skill": "first-maintainer-month",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 1,
-        "usefulness": 2,
-        "grounding": 5
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 3
       },
-      "overall": 2.5,
-      "hash": "9beb56851a7c468e"
+      "overall": 4.5,
+      "hash": "1da154b1b236d4c8"
     },
     {
       "skill": "flare-day-planner",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 3,
-        "completeness": 2,
-        "usefulness": 3,
-        "grounding": 4
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
       },
-      "overall": 3,
-      "hash": "0d13b333bd0dbdd6"
+      "overall": 5,
+      "hash": "e83cb7cac99c364f"
     },
     {
       "skill": "form-explainer",
@@ -2625,13 +2625,13 @@
       "skill": "graduate-cv",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 2,
-        "usefulness": 2,
-        "grounding": 5
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
       },
-      "overall": 2.75,
-      "hash": "3c0a5bce6d30c08d"
+      "overall": 4.75,
+      "hash": "a220df09b6041954"
     },
     {
       "skill": "grief-admin",
@@ -2936,13 +2936,13 @@
       "skill": "jp-ringisho",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 2,
-        "usefulness": 2,
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 4,
         "grounding": 3
       },
-      "overall": 2.25,
-      "hash": "2f295a707d1bde4e"
+      "overall": 4.25,
+      "hash": "15aee2a808984422"
     },
     {
       "skill": "jp-tax-return",
@@ -2984,13 +2984,13 @@
       "skill": "kr-cover-letter",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 1,
-        "usefulness": 2,
-        "grounding": 3
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
       },
-      "overall": 2,
-      "hash": "b26ee20a898bbdfe"
+      "overall": 4.75,
+      "hash": "1e923be29c740d94"
     },
     {
       "skill": "kr-severance-pay",
@@ -3056,13 +3056,13 @@
       "skill": "legacy-letter",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 2,
+        "structure": 3,
+        "completeness": 3,
         "usefulness": 3,
-        "grounding": 2
+        "grounding": 5
       },
-      "overall": 2.25,
-      "hash": "07de6bf0bc3fdbef"
+      "overall": 3.5,
+      "hash": "a956953e16427b87"
     },
     {
       "skill": "licence-notice-auditor",
@@ -3212,13 +3212,13 @@
       "skill": "masking-budget",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 3,
-        "completeness": 2,
-        "usefulness": 2,
-        "grounding": 5
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
       },
-      "overall": 3,
-      "hash": "d9841a05a638ac2a"
+      "overall": 4.75,
+      "hash": "ab0d9f2780d79cc8"
     },
     {
       "skill": "mcp-server-spec",
@@ -3260,13 +3260,13 @@
       "skill": "meltdown-map",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 2,
-        "usefulness": 3,
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
         "grounding": 4
       },
-      "overall": 2.75,
-      "hash": "e39bba56b082a8bd"
+      "overall": 4.75,
+      "hash": "416a37912fd74055"
     },
     {
       "skill": "metric-gaslighting-detector",
@@ -3629,13 +3629,13 @@
       "skill": "press-kit-epk",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 1,
-        "completeness": 1,
-        "usefulness": 2,
-        "grounding": 3
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
       },
-      "overall": 1.75,
-      "hash": "052e13c03a369470"
+      "overall": 4.75,
+      "hash": "eaa523a9ec2faa6e"
     },
     {
       "skill": "pricing-page-copy",
@@ -3905,13 +3905,13 @@
       "skill": "readme-benefit-writer",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 1,
-        "completeness": 1,
-        "usefulness": 1,
-        "grounding": 1
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 3
       },
-      "overall": 1,
-      "hash": "0a8711b41caa0238"
+      "overall": 4.5,
+      "hash": "5e885138d232004d"
     },
     {
       "skill": "readonly-mcp-wrapper",
@@ -3941,13 +3941,13 @@
       "skill": "recruiter-scan-simulator",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 1,
-        "usefulness": 2,
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
         "grounding": 5
       },
-      "overall": 2.5,
-      "hash": "fa24e351a8ca6ab5"
+      "overall": 5,
+      "hash": "855caa037a344632"
     },
     {
       "skill": "reference-letter",
@@ -3965,13 +3965,13 @@
       "skill": "referral-request",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 1,
-        "usefulness": 1,
-        "grounding": 1
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 4,
+        "grounding": 3
       },
-      "overall": 1.25,
-      "hash": "633694c0700917f4"
+      "overall": 4.25,
+      "hash": "afee1960f3819306"
     },
     {
       "skill": "regex-builder",
@@ -4121,13 +4121,13 @@
       "skill": "returner-cv",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 2,
-        "usefulness": 2,
+        "structure": 1,
+        "completeness": 1,
+        "usefulness": 1,
         "grounding": 1
       },
-      "overall": 1.75,
-      "hash": "48c992ceeea01e7c"
+      "overall": 1,
+      "hash": "8f810c85867c2afa"
     },
     {
       "skill": "review-response",
@@ -4299,13 +4299,13 @@
       "skill": "schedule-recipe",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
+        "structure": 1,
         "completeness": 1,
         "usefulness": 2,
-        "grounding": 3
+        "grounding": 1
       },
-      "overall": 2,
-      "hash": "81aa7a39c474623b"
+      "overall": 1.25,
+      "hash": "846c5436fb759a88"
     },
     {
       "skill": "screenshot-teardown",
@@ -4431,13 +4431,13 @@
       "skill": "speak-at-the-council",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 1,
-        "completeness": 1,
-        "usefulness": 2,
-        "grounding": 1
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
       },
-      "overall": 1.25,
-      "hash": "e20f16d63b8b6b63"
+      "overall": 4.75,
+      "hash": "c6c3ae1b868a6601"
     },
     {
       "skill": "spoon-planner",
@@ -4549,13 +4549,13 @@
       "skill": "style-fingerprint",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 1,
-        "completeness": 1,
-        "usefulness": 1,
-        "grounding": 1
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 4
       },
-      "overall": 1,
-      "hash": "5fee1ac281e9ec83"
+      "overall": 4.75,
+      "hash": "e866a75935da194b"
     },
     {
       "skill": "subagent-orchestration",
@@ -4609,13 +4609,13 @@
       "skill": "tabletop-negotiator",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 1,
-        "completeness": 1,
+        "structure": 2,
+        "completeness": 2,
         "usefulness": 2,
-        "grounding": 2
+        "grounding": 3
       },
-      "overall": 1.5,
-      "hash": "7d99e5a86908874e"
+      "overall": 2.25,
+      "hash": "5d4200149ad95a34"
     },
     {
       "skill": "tax-residency-primer",
@@ -4741,25 +4741,25 @@
       "skill": "the-ruthless-editor",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 2,
-        "completeness": 2,
-        "usefulness": 3,
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
         "grounding": 5
       },
-      "overall": 3,
-      "hash": "5fbde29b908367d5"
+      "overall": 5,
+      "hash": "5e754c130066086c"
     },
     {
       "skill": "the-school-appeal",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 3,
-        "completeness": 2,
-        "usefulness": 3,
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
         "grounding": 4
       },
-      "overall": 3,
-      "hash": "7032f6731666af70"
+      "overall": 4.75,
+      "hash": "d83d4d78a36950d4"
     },
     {
       "skill": "the-time-capsule",
@@ -5088,13 +5088,13 @@
       "skill": "whiteboard-to-spec",
       "model": "claude-sonnet-4-6",
       "scores": {
-        "structure": 1,
-        "completeness": 1,
-        "usefulness": 2,
-        "grounding": 3
+        "structure": 5,
+        "completeness": 5,
+        "usefulness": 5,
+        "grounding": 5
       },
-      "overall": 1.75,
-      "hash": "603b28d193a865f6"
+      "overall": 5,
+      "hash": "474dc194cac85a12"
     },
     {
       "skill": "win-loss-analysis",

@@ -60,7 +60,7 @@
 | **Meeting Notes** (`meeting-notes`) | Structure and format meeting notes following PM best practices. | — |
 | **PRD Template** (`prd-template`) | Create a Product Requirements Document following proven PM template structure. | ✅ 4.5/5 |
 | **Stakeholder Update** (`stakeholder-update`) | Create concise executive stakeholder updates using the BLUF (Bottom Line Up Front) framework. | ✅ 4.8/5 |
-| **Style Fingerprint** (`style-fingerprint`) | Study 3-5 documents the user actually shipped and distil a compact style card — so every skill writes in their voice, not the model's. | ✅ 1/5 |
+| **Style Fingerprint** (`style-fingerprint`) | Study 3-5 documents the user actually shipped and distil a compact style card — so every skill writes in their voice, not the model's. | ✅ 4.8/5 |
 | **User Research Synthesis** (`user-research-synthesis`) | Analyze and synthesize user research findings into structured, actionable insights. | — |
 | **Which Skill Router** (`which-skill`) | Route a fuzzy request to the right skill in this library. | ✅ 4/5 |
 
@@ -205,7 +205,7 @@
 | **PR Description** (`pr-description`) | Write a clear pull-request description that gets reviewed fast and merged with confidence, from a git diff, branch summary, or commit list. | — |
 | **Refactoring Plan** (`refactoring-plan`) | Plan a safe, incremental refactor of messy code without changing behavior. | — |
 | **TDD Workflow** (`tdd-workflow`) | Drive a feature with a disciplined test-driven development loop — red, green, refactor. | — |
-| **The Ruthless Editor** (`the-ruthless-editor`) | Run any draft through the editor who owes you nothing — the buried lede surfaced, the throat-clearing cut, the hedges un-stacked, every paragraph… | ✅ 3/5 |
+| **The Ruthless Editor** (`the-ruthless-editor`) | Run any draft through the editor who owes you nothing — the buried lede surfaced, the throat-clearing cut, the hedges un-stacked, every paragraph… | ✅ 5/5 |
 
 ### `pm-dataeng` — 6 skills
 
@@ -732,12 +732,12 @@
 |---|---|---|
 | **Boundary-Setting Scripts** (`boundary-setting-scripts`) | Set a boundary with someone — a friend, family member, coworker, or partner — clearly and kindly, with the actual words and a plan for the pushback. | — |
 | **Conflict De-escalation** (`conflict-deescalation`) | Calm a heated conflict — in person or in writing — before it does damage, by lowering the temperature instead of winning the point. | — |
-| **Digital Death Plan** (`digital-death-plan`) | Plan what happens to your digital life when you die — accounts, photos, passwords, money, and social profiles — so someone you trust can actually… | ✅ 3/5 |
+| **Digital Death Plan** (`digital-death-plan`) | Plan what happens to your digital life when you die — accounts, photos, passwords, money, and social profiles — so someone you trust can actually… | ✅ 4.8/5 |
 | **Future Self Interview** (`future-self-interview`) | Interview your future self about a decision or a stuck moment — a structured perspective-shift that pulls you out of present emotion and into the… | ✅ 5/5 |
 | **Give Hard Feedback Kindly** (`give-hard-feedback-kindly`) | Give someone difficult feedback — a report, a peer, a friend — so it actually lands and helps, without crushing them or dodging the point. | — |
 | **Grief Admin** (`grief-admin`) | Get through the brutal logistics after a death — who to notify, what accounts and services to close, in what order, and what genuinely can't wait… | ✅ 4.8/5 |
 | **Group Trip Negotiator** (`group-trip-negotiator`) | Save the group trip from the group chat — budget alignment before anything gets booked (the awkward conversation, scripted), a decision protocol… | ✅ 4.8/5 |
-| **Legacy Letter** (`legacy-letter`) | Write a letter to the people you love, to be read later — the things you'd want them to know, the stories only you hold, the permission and the… | ✅ 2.3/5 |
+| **Legacy Letter** (`legacy-letter`) | Write a letter to the people you love, to be read later — the things you'd want them to know, the stories only you hold, the permission and the… | ✅ 3.5/5 |
 | **Life Premortem** (`life-premortem`) | Write the failure story of your year, relationship, move, or big life bet in advance — imagine it's a year later and it went wrong, tell that… | ✅ 4.8/5 |
 | **Make Friends as an Adult** (`make-friends-as-an-adult`) | Build a real plan to make friends as an adult — where to meet people you'd actually click with, how to turn acquaintances into friends, and past… | — |
 | **Mechanic Quote Decoder** (`mechanic-quote-decoder`) | Read a garage quote or invoice like someone who can't be padded — which line items connect to your actual symptom, which are while-we're-in-there… | ✅ 5/5 |
@@ -861,7 +861,7 @@
 | **Autopilot Charter** (`autopilot-charter`) | Decide which of your recurring rituals to put on autopilot — and which to keep manual. | ✅ 4.8/5 |
 | **Delta Briefing** (`delta-briefing`) | Make a recurring brief report what changed since the last edition instead of restating everything. | ✅ 4.8/5 |
 | **Outcome Tracker** (`outcome-tracker`) | Record the testable predictions inside a decision, then score them against reality later — so frameworks earn trust from outcomes, not vibes. | ✅ 5/5 |
-| **Schedule Recipe** (`schedule-recipe`) | Turn 'run this every Friday at 4pm' into a working, copy-paste schedule on the user's actual runner. | ✅ 2/5 |
+| **Schedule Recipe** (`schedule-recipe`) | Turn 'run this every Friday at 4pm' into a working, copy-paste schedule on the user's actual runner. | ✅ 1.3/5 |
 
 ### `pm-banking` — 4 skills
 
@@ -907,7 +907,7 @@
 | **Kaoyan Planner (考研规划)** (`cn-kaoyan-planner`) | Plan preparation for the Chinese postgraduate entrance examination (考研): choosing target schools and programmes with realistic odds, a phased… | ✅ 3.5/5 |
 | **State-Owned Enterprise Interview (国企面试)** (`cn-soe-interview`) | Prepare for recruitment at a Chinese state-owned enterprise (国企 / 央企), including its written test and interview: what these employers assess, the… | ✅ 3.8/5 |
 | **Tech Interview Drill (大厂技术面试)** (`cn-tech-interview-drill`) | Use when asked 帮我准备大厂技术面试, 八股文怎么背, 模拟一面二面, 系统设计面试题, 项目深挖怎么答, 手撕算法, or run a mock technical interview for a Chinese internet company. Produces a… | ✅ 4.5/5 |
-| **Thesis Proposal (开题报告)** (`cn-thesis-proposal`) | Use when asked 帮我写开题报告, 开题答辩怎么准备, 文献综述怎么写, 技术路线图, 研究内容和创新点, or write a thesis proposal for a Chinese university. Produces a 开题报告 in the section… | ✅ 2.5/5 |
+| **Thesis Proposal (开题报告)** (`cn-thesis-proposal`) | Use when asked 帮我写开题报告, 开题答辩怎么准备, 文献综述怎么写, 技术路线图, 研究内容和创新点, or write a thesis proposal for a Chinese university. Produces a 开题报告 in the section… | ✅ 3.5/5 |
 
 ### `pm-china-life` — 10 skills · 10 eval-scored
 
@@ -929,7 +929,7 @@
 | Skill | What it does | Eval |
 |---|---|---|
 | **5S / 6S Audit (5S / 6S 检查表)** (`cn-5s-audit`) | Use when asked 5S 检查表, 6S 管理, 现场管理检查, 5S 评分标准, 车间 6S 稽核, 做一份 5S 推行计划, or design a 5S or 6S audit for a workshop, warehouse or office in a Chinese… | ✅ 3.8/5 |
-| **8D Report (8D 报告)** (`cn-8d-report`) | Use when asked 写8D报告, 客户投诉8D, 质量问题8D, 客诉回复报告, 8D 怎么写, 根本原因分析报告, or write an 8D problem-solving report for a customer complaint or internal quality… | ✅ 3/5 |
+| **8D Report (8D 报告)** (`cn-8d-report`) | Use when asked 写8D报告, 客户投诉8D, 质量问题8D, 客诉回复报告, 8D 怎么写, 根本原因分析报告, or write an 8D problem-solving report for a customer complaint or internal quality… | ✅ 4.3/5 |
 | **Quality Traceability Plan (质量追溯方案)** (`cn-quality-traceability`) | Use when asked 质量追溯体系怎么建, 产品追溯方案, 批次追溯, 一物一码, 客户要求可追溯性, 召回演练, 正向追溯和反向追溯, or plan product and batch traceability in a Chinese factory. Produces a… | ✅ 4.8/5 |
 | **Work Instruction (作业指导书 / SOP)** (`cn-sop-writer`) | Use when asked 写作业指导书, SOP 作业指导书, 工序作业标准, 标准作业书, 新员工看得懂的操作说明, WI 怎么写, or write a shop-floor work instruction for a production or inspection step… | ✅ 4.5/5 |
 
@@ -989,7 +989,7 @@
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **出海 Market Entry** (`chuhai-market-entry`) | Plan a Chinese company's entry into an overseas market (出海): choose the market with evidence, then plan entity, payments, localisation… | ✅ 3/5 |
+| **出海 Market Entry** (`chuhai-market-entry`) | Plan a Chinese company's entry into an overseas market (出海): choose the market with evidence, then plan entity, payments, localisation… | ✅ 3.8/5 |
 | **Cross-Border Listing** (`cross-border-listing`) | Write a product listing for an overseas marketplace or store, localised for the buyer rather than translated from Chinese: title, bullet points… | ✅ 4.8/5 |
 | **Cross-border Platform Playbook (跨境平台选择与入驻)** (`crossborder-platform-playbook`) | Use when asked Temu 全托管还是半托管, TikTok Shop 怎么入驻, 亚马逊和 Temu 选哪个, 跨境电商平台怎么选, 产品出海要哪些认证, or choose and launch on cross-border marketplaces (Temu… | ✅ 4.5/5 |
 | **PIPL and GDPR Crosswalk** (`pipl-gdpr-crosswalk`) | Compare China's Personal Information Protection Law (PIPL) with the EU GDPR for a specific data flow, and produce the gap list and cross-border… | ✅ 5/5 |
@@ -1017,9 +1017,9 @@
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **AGM In A Box** (`agm-in-a-box`) | Run a club, PTA, or association AGM that finishes on time and holds up later — the notice and agenda done right, a quorum plan, minutes that… | ✅ 2.3/5 |
+| **AGM In A Box** (`agm-in-a-box`) | Run a club, PTA, or association AGM that finishes on time and holds up later — the notice and agenda done right, a quorum plan, minutes that… | ✅ 4.8/5 |
 | **Committee Handover Pack** (`committee-handover-pack`) | Capture everything an outgoing club secretary, chair, or organizer carries in their head before they disappear — accounts and logins with owners… | ✅ 3.8/5 |
-| **Speak At The Council** (`speak-at-the-council`) | Turn three minutes at a council or community meeting into the version that actually moves the decision — a public comment built as… | ✅ 1.3/5 |
+| **Speak At The Council** (`speak-at-the-council`) | Turn three minutes at a council or community meeting into the version that actually moves the decision — a public comment built as… | ✅ 4.8/5 |
 | **Volunteer Treasurer Basics** (`volunteer-treasurer-basics`) | Be a club or association treasurer without being an accountant — the two-column cashbook that's genuinely enough, monthly reconciliation in 20… | ✅ 4.8/5 |
 
 ### `pm-construction` — 6 skills
@@ -1186,24 +1186,24 @@
 | Skill | What it does | Eval |
 |---|---|---|
 | **Academic CV** (`academic-cv`) | Build or tailor an academic CV for faculty, postdoc, research or fellowship applications: publications, grants, teaching, supervision and service… | ✅ 3.8/5 |
-| **Application Tracker** (`application-tracker`) | Set up and keep a job application tracker: one master CV, every tailored version, where each was sent, its status, next action and follow-up date… | ✅ 2/5 |
+| **Application Tracker** (`application-tracker`) | Set up and keep a job application tracker: one master CV, every tailored version, where each was sent, its status, next action and follow-up date… | ✅ 4.3/5 |
 | **ATS Detector** (`ats-detector`) | Work out which applicant tracking system a job uses from its application link, and give the formatting rules that system parses safely. | ✅ 5/5 |
-| **Bilingual CV, Chinese and English** (`bilingual-cv-zh-en`) | Produce a matched Chinese and English CV (中英文简历) from one set of facts: each version follows its own conventions rather than a literal… | ✅ 1/5 |
-| **Career-Changer CV** (`career-changer-cv`) | Write a CV for someone moving into a new field, leading with transferable evidence instead of job titles that do not match. | ✅ 1.3/5 |
-| **Career Inventory** (`career-inventory`) | Interview someone about their working life and turn the answers into a master CV inventory: every role, project and achievement with real numbers… | ✅ 1/5 |
-| **Civil Service and NHS Application** (`civil-service-application`) | Write a UK Civil Service or NHS application: behaviour statements in the Success Profiles format, a personal statement mapped to the essential… | ✅ 2.5/5 |
+| **Bilingual CV, Chinese and English** (`bilingual-cv-zh-en`) | Produce a matched Chinese and English CV (中英文简历) from one set of facts: each version follows its own conventions rather than a literal… | ✅ 3.5/5 |
+| **Career-Changer CV** (`career-changer-cv`) | Write a CV for someone moving into a new field, leading with transferable evidence instead of job titles that do not match. | ✅ 4.5/5 |
+| **Career Inventory** (`career-inventory`) | Interview someone about their working life and turn the answers into a master CV inventory: every role, project and achievement with real numbers… | ✅ 2.8/5 |
+| **Civil Service and NHS Application** (`civil-service-application`) | Write a UK Civil Service or NHS application: behaviour statements in the Success Profiles format, a personal statement mapped to the essential… | ✅ 3.8/5 |
 | **Company-Tailored CV** (`company-tailored-cv`) | Produce a CV shaped for one target company and role: its applicant tracking system, the country's conventions, the sector's norms, its published… | ✅ 4.5/5 |
-| **Consulting and Banking CV** (`consulting-banking-cv`) | Write a one-page CV for management consulting, investment banking or private equity, in the dense format those screeners expect: education first… | ✅ 1.5/5 |
-| **Country CV Format** (`country-cv-format`) | Apply the CV conventions of the country where the job is: length, photo, personal details, date and name order, spelling, paper size and the… | ✅ 2.8/5 |
-| **CV Word Export** (`cv-docx-export`) | Turn a finished CV into a parsing-safe Word file ready to upload: one column, real heading styles, no tables, headers or images, the right paper… | ✅ 1.3/5 |
-| **CV Honesty Check** (`cv-honesty-check`) | Check a CV for claims that would not survive an interview, a reference or a background check: inflated titles, unprovable numbers, team results… | ✅ 1.5/5 |
-| **Executive CV** (`executive-cv`) | Write an executive or senior leadership CV and the matching board biography: scope, business results and governance up front, two to three pages… | ✅ 3/5 |
+| **Consulting and Banking CV** (`consulting-banking-cv`) | Write a one-page CV for management consulting, investment banking or private equity, in the dense format those screeners expect: education first… | ✅ 4.8/5 |
+| **Country CV Format** (`country-cv-format`) | Apply the CV conventions of the country where the job is: length, photo, personal details, date and name order, spelling, paper size and the… | ✅ 5/5 |
+| **CV Word Export** (`cv-docx-export`) | Turn a finished CV into a parsing-safe Word file ready to upload: one column, real heading styles, no tables, headers or images, the right paper… | ✅ 5/5 |
+| **CV Honesty Check** (`cv-honesty-check`) | Check a CV for claims that would not survive an interview, a reference or a background check: inflated titles, unprovable numbers, team results… | ✅ 3.5/5 |
+| **Executive CV** (`executive-cv`) | Write an executive or senior leadership CV and the matching board biography: scope, business results and governance up front, two to three pages… | ✅ 4.5/5 |
 | **Federal Resume** (`federal-resume`) | Write a US federal resume for a USAJOBS application: the long, detailed format with hours per week, grade-relevant duties and specialised… | ✅ 5/5 |
-| **Graduate CV** (`graduate-cv`) | Write a first CV for a student or recent graduate with little work experience, using coursework, projects, part-time jobs, societies and… | ✅ 2.8/5 |
+| **Graduate CV** (`graduate-cv`) | Write a first CV for a student or recent graduate with little work experience, using coursework, projects, part-time jobs, societies and… | ✅ 4.8/5 |
 | **JD Gap Score** (`jd-gap-score`) | Score how well a CV covers a job ad, requirement by requirement, and say honestly what to do about each gap. | ✅ 5/5 |
-| **Recruiter Scan Simulator** (`recruiter-scan-simulator`) | Simulate a busy recruiter's first scan of a CV for a specific role: what they read in the first seconds, what they decide, and why, then step out… | ✅ 2.5/5 |
-| **Referral Request** (`referral-request`) | Write a short message asking someone at a target company for a referral or a conversation, sized to how well the person knows them, with an easy… | ✅ 1.3/5 |
-| **Returner CV** (`returner-cv`) | Write a CV for someone returning to work after a career break (caring, health, parenting, travel, redundancy or anything else), presenting the gap… | ✅ 1.8/5 |
+| **Recruiter Scan Simulator** (`recruiter-scan-simulator`) | Simulate a busy recruiter's first scan of a CV for a specific role: what they read in the first seconds, what they decide, and why, then step out… | ✅ 5/5 |
+| **Referral Request** (`referral-request`) | Write a short message asking someone at a target company for a referral or a conversation, sized to how well the person knows them, with an easy… | ✅ 4.3/5 |
+| **Returner CV** (`returner-cv`) | Write a CV for someone returning to work after a career break (caring, health, parenting, travel, redundancy or anything else), presenting the gap… | ✅ 1/5 |
 | **Values-Mapped CV** (`values-mapped-cv`) | Map a person's achievements to a target company's published values or leadership principles, so the CV leads with the evidence that company says… | ✅ 5/5 |
 
 ### `pm-dead-mentors` — 5 skills · 5 eval-scored
@@ -1554,9 +1554,9 @@
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Annual Report Tutor** (`annual-report-tutor`) | Use when asked to walk me through an annual report, teach me to read this 10-K, explain a company's accounts to a beginner, or tutor me on the… | ✅ 2/5 |
+| **Annual Report Tutor** (`annual-report-tutor`) | Use when asked to walk me through an annual report, teach me to read this 10-K, explain a company's accounts to a beginner, or tutor me on the… | ✅ 3/5 |
 | **Audited Boundary Check** (`audited-boundary-check`) | Use when asked to check whether a figure is audited, which headline numbers sit outside the audited accounts, what 'adjusted' or 'underlying'… | ✅ 5/5 |
-| **Company Compare, Same Definitions** (`company-compare-same-definitions`) | Use when asked to compare two annual reports, put two companies from the same sector side by side, or check whether two companies' adjusted… | ✅ 3/5 |
+| **Company Compare, Same Definitions** (`company-compare-same-definitions`) | Use when asked to compare two annual reports, put two companies from the same sector side by side, or check whether two companies' adjusted… | ✅ 4.8/5 |
 | **Investing Vocabulary Explainer** (`investing-vocabulary-explainer`) | Use when asked what a term means in an annual report, to explain EBITDA, goodwill, free cash flow, working capital or diluted EPS, or to define… | ✅ 4.5/5 |
 | **Profit to Cash Walk** (`profit-to-cash-walk`) | Use when asked to reconcile operating profit to free cash flow, walk from EBIT to FCF, explain why profit and cash differ in this report, or show… | ✅ 4.3/5 |
 
@@ -1565,7 +1565,7 @@
 | Skill | What it does | Eval |
 |---|---|---|
 | **Diagnosis Limbo Kit** (`diagnosis-limbo-kit`) | Run the multi-year campaign of being chronically ill with no diagnosis — track patterns across specialists so nothing resets, avoid the 'it's just… | ✅ 4.5/5 |
-| **Flare Day Planner** (`flare-day-planner`) | Plan around flare days before they ambush you — spot your early warning signs, pre-build the reduced 'flare mode' version of your life, prepare… | ✅ 3/5 |
+| **Flare Day Planner** (`flare-day-planner`) | Plan around flare days before they ambush you — spot your early warning signs, pre-build the reduced 'flare mode' version of your life, prepare… | ✅ 5/5 |
 | **Perimenopause Navigator** (`perimenopause-navigator`) | Make sense of perimenopause symptoms nobody warned you about and prepare the GP conversation that actually helps — a symptom tracker mapped to… | ✅ 5/5 |
 | **Spoon Planner** (`spoon-planner`) | Budget limited energy the way spoon theory describes it — count your realistic daily 'spoons', price what each task actually costs (including the… | ✅ 4.8/5 |
 
@@ -1574,7 +1574,7 @@
 | Skill | What it does | Eval |
 |---|---|---|
 | **Japan Resignation Procedures (退職の手続き)** (`jp-resignation-procedures`) | Use when asked 退職の手続き, how do I quit my job in Japan, 退職届の書き方, what happens to my health insurance and pension when I leave, 失業保険のもらい方, 有給消化, or… | ✅ 4.3/5 |
-| **Japanese Approval Request (稟議書)** (`jp-ringisho`) | Use when asked 稟議書の書き方, write a ringi approval request in Japanese, 稟議書を作って, how to get a purchase or project approved in a Japanese company, or… | ✅ 2.3/5 |
+| **Japanese Approval Request (稟議書)** (`jp-ringisho`) | Use when asked 稟議書の書き方, write a ringi approval request in Japanese, 稟議書を作って, how to get a purchase or project approved in a Japanese company, or… | ✅ 4.3/5 |
 | **Japan Tax Return (確定申告)** (`jp-tax-return`) | Use when asked 確定申告のやり方, do I need to file a tax return in Japan, how do I claim medical expense deduction, ふるさと納税の確定申告, 副業の確定申告, how to file with… | ✅ 4.8/5 |
 | **Japan Year-End Tax Adjustment (年末調整)** (`jp-year-end-adjustment`) | Use when asked 年末調整の書き方, how do I fill in my nenmatsu chōsei forms, which deductions can I claim at year-end in Japan, 扶養控除等申告書の書き方, 保険料控除申告書, or… | ✅ 4.8/5 |
 
@@ -1599,7 +1599,7 @@
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Korean Job Application Essay (자기소개서)** (`kr-cover-letter`) | Use when asked 자기소개서 써 줘, 자소서 첨삭해 줘, 지원동기 어떻게 써, 입사 후 포부 항목, 대기업 공채 자소서, 공기업 NCS 자기소개서, or write a Korean self-introduction essay for a job… | ✅ 2/5 |
+| **Korean Job Application Essay (자기소개서)** (`kr-cover-letter`) | Use when asked 자기소개서 써 줘, 자소서 첨삭해 줘, 지원동기 어떻게 써, 입사 후 포부 항목, 대기업 공채 자소서, 공기업 NCS 자기소개서, or write a Korean self-introduction essay for a job… | ✅ 4.8/5 |
 | **Korea Severance Pay (퇴직금)** (`kr-severance-pay`) | Use when asked 퇴직금 계산해 줘, 퇴직금 얼마 받을 수 있어, 평균임금 어떻게 계산해, 퇴직연금 DB형 DC형 차이, IRP로 퇴직금 받아야 해, 퇴직금을 안 줘요, or how is severance pay calculated in Korea.… | ✅ 5/5 |
 | **Korean Business Report (보고서 and 주간보고)** (`kr-work-report`) | Use when asked 보고서 써 줘, 주간보고 작성해 줘, 개조식으로 정리해 줘, 팀장님께 보고할 내용 정리, 1페이지 보고서, 업무 보고서 양식, or write a Korean business report or weekly report. Produces… | ✅ 4.5/5 |
 | **Korea Year-End Tax Settlement (연말정산)** (`kr-year-end-tax-settlement`) | Use when asked 연말정산 어떻게 해요, 연말정산 간소화 자료 어떻게 제출해, which deductions can I claim in my Korean year-end tax settlement, 부양가족 공제 누구 올려야 해, 맞벌이 연말정산 누가… | ✅ 4.5/5 |
@@ -1669,7 +1669,7 @@
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **First Maintainer Month** (`first-maintainer-month`) | Set up a new open-source project's first month so it can grow without eating its maintainer — the README that routes people correctly… | ✅ 2.5/5 |
+| **First Maintainer Month** (`first-maintainer-month`) | Set up a new open-source project's first month so it can grow without eating its maintainer — the README that routes people correctly… | ✅ 4.5/5 |
 | **Maintainer Triage** (`maintainer-triage`) | Get an open-source repo's issue backlog from 400-and-drowning to triaged-and-honest in one pass — a label taxonomy that encodes decisions, batch… | ✅ 4.5/5 |
 | **The Maintainer's No** (`the-maintainers-no`) | Say no as an open-source maintainer without burning contributors or yourself — the feature that doesn't fit, the PR that took someone a weekend… | ✅ 5/5 |
 
@@ -1678,7 +1678,7 @@
 | Skill | What it does | Eval |
 |---|---|---|
 | **Brainstorming** (`brainstorming`) | Run a real brainstorm — divergent generation without judgment, then convergent selection with explicit criteria — instead of listing ten obvious… | ✅ 5/5 |
-| **Code Simplification** (`code-simplification`) | Simplify code that works — remove speculative abstraction, dead flexibility, and needless indirection while keeping behaviour identical and verified. | ✅ 3/5 |
+| **Code Simplification** (`code-simplification`) | Simplify code that works — remove speculative abstraction, dead flexibility, and needless indirection while keeping behaviour identical and verified. | ✅ 4/5 |
 | **Decision Forensics** (`decision-forensics`) | Reconstruct the decision actually made in a messy Slack, email, or meeting thread into a proper decision record — commitments named, silent… | — |
 | **Executing Plans** (`executing-plans`) | Execute a written plan with discipline — verify each step before advancing, surface deviations instead of improvising around them, and keep a… | ✅ 5/5 |
 | **Incremental Implementation** (`incremental-implementation`) | Build in small, individually-verified increments that each leave the system working — instead of big-bang changes that fail mysteriously at the end. | ✅ 5/5 |
@@ -1692,8 +1692,8 @@
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Band Agreement** (`band-agreement`) | Write the band agreement before the money or the breakup arrives — who owns the songs, how money splits (writing vs performing distinguished), who… | ✅ 2/5 |
-| **Press Kit EPK** (`press-kit-epk`) | Build an electronic press kit that bookers and blogs actually read — the three-sentence bio that isn't 'genre-defying', a one-page layout with… | ✅ 1.8/5 |
+| **Band Agreement** (`band-agreement`) | Write the band agreement before the money or the breakup arrives — who owns the songs, how money splits (writing vs performing distinguished), who… | ✅ 4.8/5 |
+| **Press Kit EPK** (`press-kit-epk`) | Build an electronic press kit that bookers and blogs actually read — the three-sentence bio that isn't 'genre-defying', a one-page layout with… | ✅ 4.8/5 |
 | **Release Day Countdown** (`release-day-countdown`) | Plan an independent music release backwards from release day — the 8-week countdown with distributor upload deadlines flagged, playlist pitch… | ✅ 2/5 |
 
 ### `pm-neurodivergent` — 5 skills · 5 eval-scored
@@ -1701,8 +1701,8 @@
 | Skill | What it does | Eval |
 |---|---|---|
 | **Body Double Session** (`body-double-session`) | Set up and run a body-doubling session — using another person's presence (in the room, on a call, or a chat check-in) to start and stay on the… | ✅ 5/5 |
-| **Masking Budget** (`masking-budget`) | Treat neurodivergent masking as a daily energy budget — audit what passing as neurotypical actually costs you, where the spend is worth it, where… | ✅ 3/5 |
-| **Meltdown Map** (`meltdown-map`) | Build your personal early-warning system for meltdowns or shutdowns — your specific rising signs, the triggers that stack, what actually helps at… | ✅ 2.8/5 |
+| **Masking Budget** (`masking-budget`) | Treat neurodivergent masking as a daily energy budget — audit what passing as neurotypical actually costs you, where the spend is worth it, where… | ✅ 4.8/5 |
+| **Meltdown Map** (`meltdown-map`) | Build your personal early-warning system for meltdowns or shutdowns — your specific rising signs, the triggers that stack, what actually helps at… | ✅ 4.8/5 |
 | **NT Translator** (`nt-translator`) | Translate both directions across the neurodivergent↔neurotypical gap at work — decode what an indirect message actually meant ('let's circle back'… | ✅ 4.8/5 |
 | **Sensory Audit** (`sensory-audit`) | Walk a space — home, office, commute, classroom — and find the sensory landmines quietly draining or overloading you, with fixes ranked by cost… | ✅ 4.8/5 |
 
@@ -1722,7 +1722,7 @@
 | Skill | What it does | Eval |
 |---|---|---|
 | **Attention Reset** (`attention-reset`) | Get your attention back with a 30-day protocol that assumes you'll break it — a screen-time ledger without moralizing, friction engineering (what… | ✅ 5/5 |
-| **Clip Factory** (`clip-factory`) | Turn one long video, podcast, or stream transcript into 8-12 short-form clips — each with a hook line, cut timestamps, captions, and a platform… | ✅ 2.8/5 |
+| **Clip Factory** (`clip-factory`) | Turn one long video, podcast, or stream transcript into 8-12 short-form clips — each with a hook line, cut timestamps, captions, and a platform… | ✅ 5/5 |
 | **Creator Deal Decoder** (`creator-deal-decoder`) | Decode a brand deal or UGC contract before signing — usage rights, exclusivity windows, whitelisting, payment terms, and kill clauses ranked… | ✅ 4.8/5 |
 | **Dating Profile Doctor** (`dating-profile-doctor`) | Rewrite a dating profile so it sounds like you on a good day — mined from how you actually talk, specific instead of generic, with photo order… | ✅ 3.3/5 |
 | **Micro Retirement Planner** (`micro-retirement-planner`) | Plan a deliberate career break — 3 to 12 months off between chapters — with honest runway math, the re-entry story rehearsed before you leave… | ✅ 4.8/5 |
@@ -1755,12 +1755,12 @@
 | Skill | What it does | Eval |
 |---|---|---|
 | **Demo Clip Storyboard** (`demo-clip-storyboard`) | Use when asked to plan a short demo video for a repo, script a 20-second clip, storyboard a GIF for a README or launch post, or make a project… | ✅ 4.8/5 |
-| **Demo Data Generator** (`demo-data-generator`) | Use when asked to create demo data, seed a no-signup demo, generate fake but realistic data for screenshots, or fill a sandbox without using real… | ✅ 2/5 |
+| **Demo Data Generator** (`demo-data-generator`) | Use when asked to create demo data, seed a no-signup demo, generate fake but realistic data for screenshots, or fill a sandbox without using real… | ✅ 4/5 |
 | **First Issue Designer** (`first-issue-designer`) | Use when asked to create good first issues, prepare a repo for new contributors, turn a roadmap into starter tasks, or write issues that newcomers… | ✅ 3.5/5 |
 | **Fortnightly Release Planner** (`fortnightly-release-planner`) | Use when asked to plan releases for a side project or small open-source repo, turn a backlog into a release schedule, ship smaller and more often… | ✅ 4.8/5 |
 | **Importer Scaffolder** (`importer-scaffolder`) | Use when asked to build an importer from a competitor's export, migrate users' data from another tool, map a CSV or JSON export onto my data… | ✅ 4.8/5 |
 | **Licence and Notice Auditor** (`licence-notice-auditor`) | Use when asked to check a project's licences, audit dependencies before open-sourcing or selling, write a NOTICE file, find licence conflicts, or… | ✅ 4.8/5 |
-| **README Benefit Writer** (`readme-benefit-writer`) | Use when asked to rewrite a README so strangers understand why they should care, turn a feature list into benefits, make a side project's README… | ✅ 1/5 |
+| **README Benefit Writer** (`readme-benefit-writer`) | Use when asked to rewrite a README so strangers understand why they should care, turn a feature list into benefits, make a side project's README… | ✅ 4.5/5 |
 | **Read-only MCP Wrapper** (`readonly-mcp-wrapper`) | Use when asked to expose a folder of notes or docs to Claude or another AI client, build an MCP server over Markdown or JSON files, let an agent… | ✅ 3.5/5 |
 | **Self-Host Packager** (`self-host-packager`) | Use when asked to make a project self-hostable, package an app for Docker, write a docker-compose setup, document self-hosting, or let users run… | ✅ 4/5 |
 
@@ -1902,7 +1902,7 @@
 | **The Price Pushback** (`the-price-pushback`) | Simulate the client who grinds on your price — the budget theater, the competitor quote, the scope squeeze — against your actual offer, with a… | — |
 | **The Procurement Gauntlet** (`the-procurement-gauntlet`) | Simulate enterprise procurement and security review of your product before your first big deal meets it for real — the questionnaire, the gaps… | — |
 | **The Promotion Committee** (`the-promotion-committee`) | Simulate the calibration meeting that discusses your promotion after your manager leaves the room — the debate, the packet's holes, the verdict. | — |
-| **The School Appeal** (`the-school-appeal`) | Simulate a school-place appeal panel before you face the real one — the two questions the panel is actually deciding, the probe that separates… | ✅ 3/5 |
+| **The School Appeal** (`the-school-appeal`) | Simulate a school-place appeal panel before you face the real one — the two questions the panel is actually deciding, the probe that separates… | ✅ 4.8/5 |
 | **The Union Table** (`the-union-table`) | Simulate a collective-bargaining session from either chair — the package-versus-item trap, the caucus break used as a weapon, the mandate check… | ✅ 4.8/5 |
 | **The Visa Interview** (`the-visa-interview`) | Simulate a consular visa interview — the 90-second assessment, the questions behind the questions, and a debrief on which answers helped and hurt. | — |
 | **VC Partner Meeting** (`vc-partner-meeting`) | Simulate the VC partner meeting that discusses your pitch after you leave the room — four partner archetypes debate, then write the internal… | — |
@@ -1950,7 +1950,7 @@
 | **Board Game Designer** (`board-game-designer`) | Take a board game idea from 'wouldn't it be cool if' to a playtestable prototype — core loop, tension source, components you can make tonight… | ✅ 5/5 |
 | **Game Night Planner** (`game-night-planner`) | Plan a game night that actually works for the specific people coming — the right lineup for player count, weight tolerance, and time, sequenced… | ✅ 4.8/5 |
 | **Rules Lawyer** (`rules-lawyer`) | Settle a board game rules dispute like a fair judge — reconstruct the situation, rule from the rulebook text (pasted or known), separate… | ✅ 4.8/5 |
-| **Tabletop Negotiator** (`tabletop-negotiator`) | Practice the table-talk that wins negotiation board games — play out a Catan-style trade, a Diplomacy-style alliance, or a Monopoly-style deal… | ✅ 1.5/5 |
+| **Tabletop Negotiator** (`tabletop-negotiator`) | Practice the table-talk that wins negotiation board games — play out a Catan-style trade, a Diplomacy-style alliance, or a Monopoly-style deal… | ✅ 2.3/5 |
 | **Teach The Game** (`teach-the-game`) | Build a 5-minute teach script for any board game so the table starts playing instead of listening — theme first, goal second, a turn third… | ✅ 5/5 |
 
 ### `pm-teaching` — 4 skills
@@ -2027,7 +2027,7 @@
 | **Chart Data Extractor** (`chart-data-extractor`) | Extract pixel-level data from an image of a chart or graph and produce a structured data table. | — |
 | **Deck Autopsy** (`deck-autopsy`) | Autopsy a slide deck from photos or screenshots of its slides — the narrative arc, the numbers, and what each slide is hiding. | ✅ 3.3/5 |
 | **Screenshot Teardown** (`screenshot-teardown`) | Tear down a competitor's product from screenshots of its actual UI — onboarding, pricing page, core flows. | ✅ 3.3/5 |
-| **Whiteboard To Spec** (`whiteboard-to-spec`) | Turn photos of a whiteboard, sticky-note wall, or napkin sketch into a structured spec the team can execute. | ✅ 1.8/5 |
+| **Whiteboard To Spec** (`whiteboard-to-spec`) | Turn photos of a whiteboard, sticky-note wall, or napkin sketch into a structured spec the team can execute. | ✅ 5/5 |
 
 ### `pm-warroom` — 5 skills · 5 eval-scored
 
