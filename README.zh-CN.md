@@ -238,4 +238,4 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
 
 ## 协议
 
-MIT。用吧，改吧，拿去工作里用。
+本项目基于 MIT 协议开源，可自由使用、修改与分发。
