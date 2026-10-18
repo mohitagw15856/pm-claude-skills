@@ -19,6 +19,10 @@ Ask for these if not provided:
 - **Data, equipment or field access** the student actually has
 - **Deadlines**: proposal defence, mid-term check, submission
 
+## Working from a brief
+
+Given the topic, degree, method and timeline, **write the full 开题报告 anyway** in the standard section order, with the research design and schedule built from what was given. Mark references still to be found as [文献待补], and never invent citations.
+
 ## Output Structure
 
 ### 1. Topic narrowing

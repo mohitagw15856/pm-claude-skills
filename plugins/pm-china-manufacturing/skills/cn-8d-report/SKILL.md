@@ -19,6 +19,10 @@ Ask for these if not provided, otherwise infer and label the assumption:
 - **Analysis done**: tests, comparisons of good and bad parts, reproduction attempts
 - **Team**: names and roles
 
+## Working from a brief
+
+Given the complaint and the clues, **write D1 to D8 anyway**, in the languages asked for, with D3 containment ready to send now and D4 root-cause hypotheses built from the clues given, each marked as to be verified with the test that would confirm it.
+
 ## Output Structure
 
 ### D0 准备 / Preparation

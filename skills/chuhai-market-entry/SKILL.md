@@ -26,6 +26,10 @@ Ask for these if not provided:
 - **Budget and team** available for the first year
 - **Constraints**: data must stay in China, payment needs, sensitive categories
 
+## Working from a brief
+
+Given the company and the markets in question, **make the call and write the first-year plan anyway**: choose between the markets named on stated assumptions, then give the twelve-month plan with entity, payments, localisation, compliance and channels. Mark figures to verify instead of asking first.
+
 ## Framework
 
 **1. Choose the market.** Score each candidate from 1 to 5 on:

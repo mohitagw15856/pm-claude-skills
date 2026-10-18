@@ -21,6 +21,10 @@ Ask for these if not provided:
 - **What must not change** — the public API, behaviour, or performance envelope
 - **Test coverage** — whether there are tests to prove the simplification is safe
 
+## Working from a brief
+
+Given a description of the code instead of the code itself, **deliver the simplification anyway**: the target shape in code, each removal with the reason and the test that proves behaviour is unchanged, and the order to do them in. Say which steps need a look at the real code before they are applied.
+
 ## What to Hunt (in order of payoff)
 
 1. **Speculative generality** — the interface with one implementation, the parameter always called with the same value, the config option no caller sets, the "pluggable" thing nothing plugs into. Rule: *the future that justified it must be on a roadmap, not in an imagination.* YAGNI is a removal warrant.

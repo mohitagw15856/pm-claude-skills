@@ -25,6 +25,10 @@ Ask for these if not provided:
 - **Anything during or since**: study, volunteering, freelance, caring responsibilities that built skills, if the person wants them mentioned
 - **The target role and country**
 
+## Working from a brief
+
+Given the break and the target field, **write the CV anyway**: a profile, one honest line for the gap, experience, and skills kept up or gained during the break, with placeholders for employers and dates. Add the answer about the gap for interviews, in the person's voice, at under 60 seconds spoken.
+
 ## Framework
 
 1. **The person decides how much to say.** A reason is never required. "Career break, 2022 to 2024" is enough. "Career break for family caring responsibilities" is fine if they choose it.

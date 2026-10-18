@@ -17,6 +17,10 @@ Ask for these if not provided:
 - **Title** and the illustrative statement
 - **Hosting**: GitHub Pages, a static host, or opening the file locally (GLB files need a local server; browsers block `file://` loading)
 
+## Working from a brief
+
+Given the model file and the list of parts, **write the complete single-file viewer anyway**. Assume the GLB's node names match the parts listed, say so at the top, and wire the labels, the exploded view and the quiz to those names so a mismatch is a one-line fix.
+
 ## Output Structure
 
 ### 1. The viewer file

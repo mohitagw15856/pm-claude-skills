@@ -435,7 +435,7 @@
   },
   {
    "skill": "whiteboard-to-spec",
-   "input": "Attached are two photos of our sprint-planning whiteboard from this afternoon (same board, left and right halves). The session was about the Q3 referral feature. Write it up before we all forget what the arrows meant."
+   "input": "Here's what was on our sprint-planning whiteboard this afternoon, typed up from the photos (left and right halves). The session was about the Q3 referral feature. Write it up as a spec before we all forget what the arrows meant.\n\nLEFT HALF:\n- \"REFERRER\" box -> arrow -> \"share link (unique code)\" -> arrow -> \"FRIEND signs up\"\n- under FRIEND: \"first order >= £20 ?\" -> YES -> \"both get £10 credit\" ; NO -> \"nothing, code stays valid 30d\"\n- circled: \"fraud?? same card / same address\" with \"Sam to check w/ risk\"\n- \"cap: 10 rewards per referrer / year?\" with a question mark\n- \"credit expires 6 months\" (underlined twice)\n\nRIGHT HALF:\n- \"MVP = link + credit + email\" / \"LATER = leaderboard, tiers\"\n- \"app share sheet (iOS/Android): Priya\" ; \"email template: marketing (Jo)\"\n- \"metric: % new customers via referral, target 8% by end Q3\" ; \"guardrail: CAC not up\"\n- arrow from \"credit\" to \"finance: liability on balance sheet?\" with \"ask Mark\"\n- \"launch: 15 Aug ??\" and next to it \"depends on risk sign-off\"\n- bottom corner: \"NOT doing: cash payouts, referral for B2B accounts\""
   },
   {
    "skill": "screenshot-teardown",
@@ -447,7 +447,7 @@
   },
   {
    "skill": "style-fingerprint",
-   "input": "Here are four things I actually wrote and shipped: two weekly exec updates, a launch announcement to the company, and a long Slack post about our pricing change. [samples pasted]. Learn my voice so the updates you draft stop sounding like a press release."
+   "input": "Here are four things I actually wrote and shipped. Learn my voice so the updates you draft stop sounding like a press release.\n\n1) Weekly exec update, 3 March: \"Short one this week. Checkout v2 is live for 20% of traffic. Conversion is flat so far, which I'll take, because v1 was dropping 4% of carts on mobile and v2 isn't. Risk: payments team is two people down until April, so anything touching refunds waits. Ask: none. Back next Monday.\"\n\n2) Weekly exec update, 10 March: \"Good week, one annoying thing. Good: v2 now at 50%, mobile drop-off fixed, support tickets on checkout down by about a third. Annoying: the Apple Pay bug is ours, not Apple's. Fix lands Thursday. If it slips I'll say so here, not in a meeting.\"\n\n3) Launch note to the company: \"Checkout v2 is now everyone's checkout. Thank you to Priya, Tom and the payments crew, who rebuilt it without breaking a single Friday. What changed for customers: fewer steps, saved cards that actually save, and no more surprise shipping at the last screen. If you hear a complaint, send it to me directly. I want the weird ones.\"\n\n4) Slack post on pricing: \"OK, the pricing change. We're moving Pro from 12 to 15 a month for new customers from 1 May. Existing customers keep 12 for a year. Why: our costs per user went up 30% and we've not raised prices in three years. What I'm not doing: hiding it in an email footer. We'll tell people plainly, early, with the date. Questions in thread, I'll answer all of them, even the grumpy ones.\"\n\nNow draft this week's exec update in my voice from these notes: v2 refunds flow shipped, refund time down from 5 days to 1; hiring for payments still slow, one offer accepted; risk that the May price change email goes out late because legal hasn't signed off."
   },
   {
    "skill": "evidence-lock",
@@ -711,7 +711,7 @@
   },
   {
    "skill": "clip-factory",
-   "input": "Here is the timestamped transcript of my 74-minute podcast episode with a startup founder who sold her company, nearly went bankrupt twice, and has strong opinions about VC money being poison for most businesses. My channel is business-advice-with-jokes tone. Targets: TikTok and Shorts. [transcript]"
+   "input": "Here is a timestamped transcript excerpt from my 74-minute podcast episode with a founder who sold her company, nearly went bankrupt twice, and thinks VC money is poison for most businesses. My channel is business advice with jokes. Targets: TikTok and Shorts. Find the clips.\n\n[03:12] HOST: So you nearly went bust twice. Which time was worse?\n[03:16] GUEST: The second, because the first time I didn't know enough to be scared. The second time I had a spreadsheet, and the spreadsheet was very clear. It said: you have nine days.\n[03:31] HOST: Nine days.\n[03:32] GUEST: Nine days of payroll. I called every customer we had and asked them to pay early. Three did. That's the whole secret. Three people saying yes.\n[11:40] GUEST: Everyone thinks VC money is rocket fuel. For most businesses it's a mortgage on a house you haven't built, with a lender who wants you to build a skyscraper.\n[11:58] HOST: That's going on a mug.\n[12:01] GUEST: Put it on a mug. Sell the mug. That's a better business model than half my portfolio friends.\n[27:15] GUEST: My rule now: if a customer won't pay you before you build it, they won't pay you after.\n[41:02] GUEST: I sold for less than the headline everyone remembers. The number in the press was the number with earn-outs I never hit. I got about a third of it.\n[41:20] HOST: Does that sting?\n[41:22] GUEST: It stung for a week. Then I remembered I own all of my weekends.\n[58:30] GUEST: Hiring advice: hire the person who asks the annoying question in the interview. The one who asks about your churn."
   },
   {
    "skill": "ttrpg-session-forge",
@@ -759,7 +759,7 @@
   },
   {
    "skill": "agm-in-a-box",
-   "input": "I somehow became secretary of our cricket club (120 members). AGM needed by end of September per the constitution (pasted below). We need to elect a new treasurer (nobody wants it), raise subs by 10 pounds which people will hate, and last year only 14 people came and we need 20 for quorum. [constitution text]"
+   "input": "I somehow became secretary of our cricket club (120 members). We need to elect a new treasurer (nobody wants it), raise subs by £10 which people will hate, and last year only 14 people came and we need 20 for quorum. Here are the relevant parts of the constitution:\n\n7.1 The Annual General Meeting shall be held before 30 September each year.\n7.2 The Secretary shall give all members at least 21 days' written notice (email is sufficient) of the AGM, with the agenda and any proposed changes to subscriptions.\n7.3 The quorum for a General Meeting is 20 members or 15% of the membership, whichever is greater.\n7.4 If a quorum is not present within 30 minutes, the meeting stands adjourned to the same day and time the following week, when those present shall form a quorum.\n8.2 Officers (Chair, Secretary, Treasurer) are elected annually at the AGM. Nominations must be proposed and seconded and received by the Secretary 7 days before the AGM.\n9.1 Changes to annual subscriptions require a simple majority of members present and voting at a General Meeting.\n\nGet me through it: timeline, the notice email, agenda, how to get to quorum, and how to land the treasurer and the subs rise."
   },
   {
    "skill": "volunteer-treasurer-basics",
@@ -1043,7 +1043,7 @@
   },
   {
    "skill": "the-ruthless-editor",
-   "input": "Edit this ruthlessly — it's my 1,400-word investor update and I know it's flabby: [draft pasted]. Our lead investor reads these on his phone. Keep my voice but I hedge everything and I know the good news is buried somewhere in the middle."
+   "input": "Edit this ruthlessly. It's my investor update and I know it's flabby. Our lead investor reads these on his phone. Keep my voice, but I hedge everything and I know the good news is buried somewhere in the middle.\n\n\"Hi all, hope you're well and that summer is treating you kindly. I wanted to share a few thoughts on how things have been going this quarter, which has been, in many ways, a period of learning for the team. As you may recall, we had been exploring a number of options around pricing, and I think it's fair to say that we've arrived at something that feels, broadly, like it might be working. We've also been thinking quite a lot about hiring, which remains, as ever, something of a challenge in the current market, though we're cautiously optimistic. On the product side, the team has been working incredibly hard, and I think we're starting to see some early signs that the new onboarding flow may be having a positive impact, although it's probably still too early to say definitively. In terms of numbers, MRR grew from £82k to £118k over the quarter, which is roughly 44%, and net revenue retention came in at 127%, which we're quite pleased with. We did lose one larger customer, which was disappointing, but we've learned a lot from it. Cash runway is about 19 months at the current burn. We'd be really grateful for any introductions to senior engineers, ideally with payments experience, if anyone happens to know someone who might possibly be interested. Anyway, that's probably enough from me for now, thanks as always for your continued support, and do let me know if you have any questions at all.\"\n"
   },
   {
    "skill": "disagreeing-experts",
@@ -1051,7 +1051,7 @@
   },
   {
    "skill": "annual-report-tutor",
-   "input": "I've uploaded the FY2025 annual report of a mid-sized UK supermarket chain (PDF attached, 184 pages). I've never read one before. Walk me through it one step at a time — start with where the three statements are, and don't move on until I say so."
+   "input": "I've never read an annual report. Here are the pages I copied out of the FY2025 annual report of a mid-sized UK supermarket chain (the PDF is 184 pages; these are the three main statements, figures in £m). Walk me through it one step at a time: start with where the three statements are and what each one is for, and don't move on until I say so.\n\nCONSOLIDATED INCOME STATEMENT (52 weeks to 1 March 2025): Revenue 8,412 (FY24: 8,005). Cost of sales (7,866) (FY24: (7,511)). Gross profit 546 (494). Administrative expenses (231) (219). Operating profit 315 (275). Finance costs (88) (92). Profit before tax 227 (183). Tax (57) (44). Profit for the year 170 (139).\n\nCONSOLIDATED BALANCE SHEET (at 1 March 2025): Non-current assets: property, plant and equipment 2,140; right-of-use assets 1,310; intangibles 95. Current assets: inventories 410; trade and other receivables 120; cash 365. Current liabilities: trade and other payables (1,240); lease liabilities (150). Non-current liabilities: borrowings (600); lease liabilities (1,290). Net assets 1,160. Equity: share capital 50; retained earnings 1,110.\n\nCONSOLIDATED CASH FLOW STATEMENT: Cash generated from operations 610. Tax paid (49). Net cash from operating activities 561. Capital expenditure (240). Lease principal repayments (140). Interest paid (88). Dividends paid (60). Net increase in cash 33. Cash at end of year 365."
   },
   {
    "skill": "audited-boundary-check",
@@ -1063,7 +1063,7 @@
   },
   {
    "skill": "company-compare-same-definitions",
-   "input": "I've attached the latest annual reports for two European airlines. Both highlight an 'adjusted operating margin' of about 12%. Compare them on the same five ratios using identical definitions from the audited statements, and tell me where their definitions differ."
+   "input": "Two European airlines both highlight an 'adjusted operating margin' of about 12%. Here are the relevant lines from each audited report (€m, last full year). Compare them on the same five ratios (operating margin, EBITDAR margin, net debt to EBITDA, interest cover, free cash flow margin) using identical definitions from the audited statements, and tell me where their 'adjusted' definitions differ.\n\nAIRLINE A: Revenue 9,800. Operating profit (statutory) 880. Depreciation and amortisation 720. Aircraft lease costs (short-term and variable, expensed) 140. Net finance costs 210. Cash from operations 1,640. Capex 1,050. Gross debt 4,900 including lease liabilities 3,100. Cash 2,300. 'Adjusted operating profit' 1,180, described as \"excluding fuel hedge ineffectiveness (190) and restructuring (110)\".\n\nAIRLINE B: Revenue 6,200. Operating profit (statutory) 610. Depreciation and amortisation 540. Aircraft lease costs (expensed) 60. Net finance costs 95. Cash from operations 1,020. Capex 820. Gross debt 2,600 including lease liabilities 1,900. Cash 1,500. 'Adjusted operating profit' 740, described as \"excluding the gain on sale and leaseback of six aircraft (-40) and IT transformation costs (170)\"."
   },
   {
    "skill": "investing-vocabulary-explainer",
@@ -1127,7 +1127,7 @@
   },
   {
    "skill": "career-inventory",
-   "input": "I have an old CV from 2019 and I've had two jobs since. Interview me one role at a time and build my master career inventory. Don't make up numbers."
+   "input": "I have an old CV from 2019 and I've had two jobs since. Build my master career inventory from what's below, interviewing me only for what's missing. Don't make up numbers.\n\nJob 1 (2019 to 2022): Customer Success Manager at a SaaS company (HR software). Looked after about 60 mid-market accounts. I set up the first health-score dashboard. Renewals were around 92% for my book when I left. I trained new CSMs.\nJob 2 (2022 to now): Senior CSM, then Team Lead from 2024, at a payments start-up. I lead 5 CSMs. We cut onboarding time from about 6 weeks to 3. I ran the migration of 40 customers to the new API. I wrote the playbook for at-risk accounts. Not sure of exact revenue numbers for my team.\nFrom the 2019 CV: Account Executive at a recruitment firm (2016 to 2019), top biller in 2018."
   },
   {
    "skill": "company-tailored-cv",
@@ -1139,7 +1139,7 @@
   },
   {
    "skill": "country-cv-format",
-   "input": "Convert my one-page US resume into a German Lebenslauf for a job in Munich. Should I add a photo and my date of birth?"
+   "input": "Convert my one-page US resume into a German Lebenslauf for a product analyst job in Munich. Should I add a photo and my date of birth? Here's the resume:\n\nDANIEL REYES | Austin, TX | (512) 555-0147 | daniel.reyes@example.com | linkedin.com/in/danielreyes\nSUMMARY: Product analyst with 4 years' experience turning usage data into roadmap decisions.\nEXPERIENCE: Product Analyst, Bluebonnet Software, Austin (Jun 2021 to present): Built the activation funnel that lifted week-1 retention from 41% to 49%; ran 30+ A/B tests; partnered with 3 product teams. Data Analyst Intern, H-E-B, San Antonio (May to Aug 2020): Automated weekly sales reporting, saving 6 hours a week.\nEDUCATION: B.S. Statistics, University of Texas at Austin, May 2021, GPA 3.7.\nSKILLS: SQL, Python (pandas), Looker, Amplitude, experiment design. German: B1 (Goethe-Zertifikat, 2024). Spanish: native."
   },
   {
    "skill": "values-mapped-cv",
@@ -1151,11 +1151,11 @@
   },
   {
    "skill": "cv-docx-export",
-   "input": "Give me my finished CV as an ATS-safe Word file. It's for a job in Boston. Name: Jane Smith. Sections: Summary, Experience, Education, Skills."
+   "input": "Give me my finished CV as an ATS-safe Word file. It's for a job in Boston. Here's the content:\n\nJANE SMITH | Boston, MA | jane.smith@example.com | (617) 555-0123\nSUMMARY: Operations manager with 7 years in healthcare logistics, cutting costs while keeping service levels.\nEXPERIENCE: Operations Manager, MedSupply Partners, Boston (2021 to present): Ran a 40-person distribution team; cut late deliveries from 9% to 3%; renegotiated two carrier contracts saving $410k a year. Logistics Coordinator, CarePoint Health, Worcester (2017 to 2021): Managed inventory for 12 clinics; introduced barcode tracking that reduced stock-outs by 35%.\nEDUCATION: B.S. Supply Chain Management, Northeastern University, 2017.\nSKILLS: Lean Six Sigma Green Belt, SAP, Excel (advanced), vendor negotiation, team leadership."
   },
   {
    "skill": "consulting-banking-cv",
-   "input": "I'm finishing my MBA and applying to McKinsey and BCG. Turn my two-page CV into the one-page consulting format."
+   "input": "I'm finishing my MBA and applying to McKinsey and BCG. Turn my two-page CV into the one-page consulting format. Here it is:\n\nPRIYA SHAH\nEDUCATION: MBA, London Business School (2025, expected); Dean's List; Consulting Club VP. BEng Mechanical Engineering, Imperial College London (2016), First Class.\nEXPERIENCE:\nSenior Product Manager, Ocado Technology (2021 to 2024). Owned the picking-robot software roadmap for 3 warehouses. Led a team of 9 engineers. Worked with operations on reducing pick errors. Rolled out a new scheduling algorithm that reduced robot idle time from 18% to 11% and saved approx £2.4m a year. Presented quarterly to the CTO. Mentored two junior PMs. Organised team socials.\nProduct Manager, Ocado Technology (2018 to 2021). Launched a returns-handling feature used by 1.2m customers. Ran A/B tests. Wrote PRDs. Coordinated with UX.\nGraduate Engineer, Rolls-Royce (2016 to 2018). Stress analysis on turbine components. Identified a design issue that avoided a 6-week delay on a test programme.\nOTHER: Fluent Hindi and Gujarati. Ran the London Marathon 2023 (3h41). Volunteer maths tutor (4 years). Interests: chess, cooking, travel. References available on request."
   },
   {
    "skill": "academic-cv",
@@ -1191,7 +1191,7 @@
   },
   {
    "skill": "recruiter-scan-simulator",
-   "input": "Read my CV like a busy in-house recruiter for a senior data analyst role. Would I get shortlisted? Then tell me what to change."
+   "input": "Read my CV like a busy in-house recruiter for a senior data analyst role at a UK fintech. Would I get shortlisted? Then tell me what to change.\n\nALEX MORGAN | Manchester | alex.morgan@example.com\nPROFILE: Hard-working, detail-oriented team player passionate about data and always eager to learn new things.\nEXPERIENCE\nData Analyst, Northwind Retail (2021 to now): Responsible for reports. Worked on dashboards in Tableau. Helped the marketing team with analysis. Used SQL and Python. Involved in a churn project.\nJunior Analyst, Contoso Insurance (2019 to 2021): Produced weekly MI packs in Excel. Supported the claims team. Took part in data quality initiatives.\nEDUCATION: BSc Economics, University of Leeds (2:1), 2019\nSKILLS: SQL, Python, Tableau, Excel, PowerPoint, communication, teamwork, time management\nINTERESTS: Running, cooking, travel"
   },
   {
    "skill": "cv-honesty-check",

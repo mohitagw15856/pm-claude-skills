@@ -45,6 +45,10 @@ Ask for (if not already provided):
 - What they dread most (drive-by demands? bad PRs? being ignored?) — the
   docs pre-answer the dread
 
+## Working from a brief
+
+Given the project's situation and the hours available, **write the setup anyway**: the README routing section, a CONTRIBUTING file with clear boundaries, issue templates, a pinned answer to the most-asked request, and a triage routine that fits the stated hours.
+
 ## Framework
 
 1. **README routes, not sells.** One-line what-it-is → 60-second quickstart

@@ -23,6 +23,10 @@ Ask for these if not provided:
 - **The process you are in** — country and school type, since appeal rules differ sharply; the simulation uses a common two-stage shape and flags where yours may differ
 - **The school's stated case** — class sizes, published admission number, any prejudice claims made
 
+## Working from a brief
+
+Given the family's grounds, **prepare the full case anyway**: the two questions the panel is deciding, the grounds ranked by strength with the evidence each needs, the opening statement, and then a run of the panel's likely questions with model answers.
+
 ## Framework: The Panel's Moves
 
 1. **Stage one is a process audit, not a plea.** Was the published criteria applied correctly to your child — distance measured right, category assigned right, the medical evidence you submitted actually considered? Most stage-one wins are clerical. The simulation walks your case through the criteria line by line before any emotion enters.

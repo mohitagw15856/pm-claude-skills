@@ -45,6 +45,10 @@ Ask for (if not already provided):
 - What exists already: photos, live footage, past press quotes
 - The current target: who is this EPK trying to convince first?
 
+## Working from a brief
+
+Given where the act is now, **write the EPK and the booking emails anyway**: the three-sentence bio, the one-page layout in order, and two booking email versions (cold venue, warm referral). Use placeholders for links, numbers and quotes that were not given, and say which of them matter most.
+
 ## Framework
 
 1. **Lead with sounds-like.** Sentence one of everything: "[Artist] makes

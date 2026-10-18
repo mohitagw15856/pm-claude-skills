@@ -24,6 +24,10 @@ Ask for these if not provided:
 - **The sender's one-line fit**: why they are a strong candidate
 - **The channel**
 
+## Working from a brief
+
+Given who the contact is and the shared history, **write the message anyway**: a short, warm version with an easy way to say no, placeholders for [role link] and [one specific shared memory], and a polite follow-up for if there is no reply. Do not ask for the job link first.
+
 ## Framework
 
 Size the ask to the relationship:

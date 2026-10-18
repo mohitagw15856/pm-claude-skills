@@ -46,6 +46,10 @@ Ask for (if not already provided):
   possessive of the name) — the agreement is written toward the real
   band, not the ideal one
 
+## Working from a brief
+
+Given how the band works today, **write the full draft agreement anyway**. Where the band must choose, show the options as decisions marked [A] or [B] with a sensible default suggested for each, and add the plan for the conversation before the studio session. Say plainly that this is a starting draft, not legal advice.
+
 ## Framework
 
 1. **Songs first — writing and recording are different rights.** The

@@ -24,6 +24,10 @@ Ask for these if not provided:
 - **The person's experience**, ideally a `career-inventory` file
 - **Anything already done towards the move**: courses, projects, side work
 
+## Working from a brief
+
+Given a current role, years in it and a target field, **write the complete CV anyway**: a targeted profile, a transferable-evidence section that maps the real work of the old job to the new field, and experience written in the new field's language. Put [bracketed] placeholders where a number, project or name is needed, and never invent results. End with the three evidence gaps worth closing.
+
 ## Framework
 
 1. **Find the overlap.** Read the target ads. List the five capabilities they ask for most. For each, find real evidence in the person's history.

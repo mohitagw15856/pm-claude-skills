@@ -25,6 +25,10 @@ Ask for these if not provided:
 - **Board and governance experience**: committees, non-executive roles, trustee posts
 - **The target**: executive role, non-executive role, or both, and the sector
 
+## Working from a brief
+
+Given the role, scope and headline results, **write the executive CV and the board biography anyway**, with scope and results first and [bracketed] placeholders for company names, dates and figures not given. Never invent numbers.
+
 ## Framework
 
 1. **Profile**: four lines. Who they are, the scale they operate at, the two or three results that define them, what they seek.

@@ -38,6 +38,10 @@ Ask for (if not already provided):
 - What the agent is *good* at that must survive — the reason this is
   bankruptcy, not deletion
 
+## Working from a brief
+
+Given what the user says is wrong and what is worth keeping, **do the clean-up anyway**: the facts to delete or correct, the preferences to keep word for word, the fresh memory written out in full, and a short routine to stop it going stale again.
+
 ## Process
 
 1. **Extract beliefs, not text.** Convert the memory dump into discrete claims:

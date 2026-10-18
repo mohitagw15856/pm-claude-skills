@@ -22,6 +22,10 @@ Ask for these if not provided:
 - **The CV**
 - **The person's own notes** on any claim they are unsure of (for example which numbers are estimates)
 
+## Working from a brief
+
+Given only a few claims instead of a whole CV, **check those claims anyway**: for each, say how it would be probed in an interview, a reference or a background check, and give a safer wording that is still strong. Then list the other claim types to check once the full CV is shared.
+
 ## Framework
 
 For every factual claim, check:

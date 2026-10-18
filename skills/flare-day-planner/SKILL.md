@@ -39,6 +39,10 @@ Ask for (if not already provided):
 - Fixed obligations that can't just vanish (a job, dependents) and what flexibility
   exists around them
 
+## Working from a brief
+
+Given the condition and the pattern described, **write the plan anyway**: early warning signs phrased so they can tick or change them, the reduced flare-mode day, ready-to-send cancellation messages, food that needs no effort, and how to come back afterwards.
+
 ## Framework
 
 1. **Catch the flare early — the warning list is the prize.** Most flares have a

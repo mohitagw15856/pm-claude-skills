@@ -24,6 +24,10 @@ Ask for these if not provided:
 - **Where the tracker should live**: a markdown file, a CSV for a spreadsheet, or in the conversation
 - **The master CV file name**, so versions can be named after it
 
+## Working from a brief
+
+Given a rough picture of the search, **build the tracker anyway**: the full table with its columns and six example rows using placeholders, the naming convention for CV versions, the follow-up rules and the weekly review checklist, ready to paste into a spreadsheet.
+
 ## Framework
 
 Tracker columns:

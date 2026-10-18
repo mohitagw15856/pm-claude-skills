@@ -66,7 +66,7 @@ const html = `<!DOCTYPE html>
 </style></head><body>
 <header>
   <h1>🏆 Skill Leaderboard</h1>
-  <p class="bigstat"><strong>${esc(skills.length)} skills scored · average ${overallAvg.toFixed(1)}/5 · ${esc(topCount)} at 4.5+</strong></p>
+  <p class="bigstat"><strong>Skills scored: ${esc(skills.length)} · average ${overallAvg.toFixed(1)}/5 · ${esc(topCount)} at 4.5+</strong></p>
   <p>LLM-judged quality (1–5) for each skill across Claude models — scored on structure, completeness, usefulness &amp; grounding by <code>${esc(data.judge || 'an LLM judge')}</code>. Skills that need an image, a live source, or that activate a behaviour aren't scored on this rubric.</p>
 </header>
 <nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
@@ -81,7 +81,7 @@ ${rows}
 ${avgRow}
     </tbody>
   </table>
-  <p class="meta">Higher is better (max 5). ${esc(skills.length)} skills × ${esc(models.length)} models${data.generatedAt ? ` · generated ${esc(String(data.generatedAt).slice(0, 10))}` : ''}. Methodology and cases in <a href="${REPO}/tree/main/evals">evals/</a>.</p>
+  <p class="meta">Higher is better (max 5). ${esc(skills.length)} scored skills × ${esc(models.length)} model${models.length === 1 ? '' : 's'}${data.generatedAt ? ` · generated ${esc(String(data.generatedAt).slice(0, 10))}` : ''}. Methodology and cases in <a href="${REPO}/tree/main/evals">evals/</a>.</p>
 </main></body></html>
 `;
 

@@ -37,6 +37,10 @@ Ask for (if not already provided):
 - What they most want back (evenings? weekends? the capacity to be present with
   the people who matter?)
 
+## Working from a brief
+
+Given the person's week as described, **build the budget anyway**: the audit of where masking is spent, where the spend is worth it, where it can be cut or recovered, and a weekly plan they can try for a fortnight, with the costs phrased so they can adjust them.
+
 ## Framework
 
 1. **Name masking as labor, not a personality flaw.** The audit starts by making

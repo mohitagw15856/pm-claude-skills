@@ -21,6 +21,10 @@ Ask for these if not provided:
 - **Approval route** (決裁ルート) and the decision deadline
 - **Company template**, if there is one
 
+## Working from a brief
+
+Given the cost, purpose and current problem, **write the full 稟議書 anyway**: every section in order, with the cost-effectiveness worked out from the numbers given. Mark unknowns such as 申請日 or the approvers with 【 】 instead of asking first.
+
 ## Output Structure
 
 ### 1. The 稟議書

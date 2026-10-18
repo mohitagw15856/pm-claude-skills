@@ -10,7 +10,7 @@
 
 ## 🚀 Product (50 skills)
 
-### `pm-advanced` — 6 skills
+### `pm-advanced` — 6 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -19,13 +19,13 @@
 | **Design Handoff Brief** (`design-handoff-brief`) | Transform feature briefs into structured design briefs that give designers the context they need before opening Figma. | — |
 | **Experiment Designer** (`experiment-designer`) | Design statistically rigorous A/B tests and interpret experiment results. | — |
 | **Multi-Source Signal Synthesiser** (`multi-source-signal-synthesiser`) | Synthesises user signals from multiple research sources into a unified, weighted insight brief. | — |
-| **Skill Fusion** (`skill-fusion`) | Fuse two skills from this library into one hybrid brief for a task that sits between them — the meta-skill. | — |
+| **Skill Fusion** (`skill-fusion`) | Fuse two skills from this library into one hybrid brief for a task that sits between them — the meta-skill. | ✅ 4.8/5 |
 
 ### `pm-delivery` — 13 skills · 3 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **A/B Test Planner** (`ab-test-planner`) | Design statistically rigorous A/B tests for product features, UI changes, onboarding flows, and pricing experiments. | ✅ 4.8/5 |
+| **A/B Test Planner** (`ab-test-planner`) | Design statistically rigorous A/B tests for product features, UI changes, onboarding flows, and pricing experiments. | ✅ 4.9/5 |
 | **Epic Progress Report** (`epic-progress-report`) | Report on an epic or initiative deeper than a status bullet — child work broken down by status, the riskiest unfinished pieces, and honest… | — |
 | **Flow Metrics Interpreter** (`flow-metrics-interpreter`) | Read your team's flow metrics — cycle time, throughput, WIP, aging work — and say what they actually mean and what to try, not just restate the… | — |
 | **Go-to-Market Planner** (`go-to-market-planner`) | Build a go-to-market plan for any product launch, feature release, or new market entry. | — |
@@ -34,7 +34,7 @@
 | **Product Launch Checklist** (`product-launch-checklist`) | Generate a comprehensive pre-launch, launch day, and post-launch checklist for any product release. | — |
 | **Retrospective Analysis** (`retro-analysis`) | Analyses sprint delivery data and produces a structured retrospective brief. | — |
 | **Sprint Brief** (`sprint-brief`) | Generate a structured sprint brief from sprint data and goals. | — |
-| **Sprint Planning** (`sprint-planning`) | Structure and facilitate sprint planning sessions. | ✅ 3.8/5 |
+| **Sprint Planning** (`sprint-planning`) | Structure and facilitate sprint planning sessions. | ✅ 4/5 |
 | **Sprint Retro Facilitator** (`sprint-retro-facilitator`) | Run a sprint retrospective that produces real change — themes from what actually happened, honest start/stop/continue, and owned action items, not… | — |
 | **Technical Spec Template** (`technical-spec-template`) | Create structured technical specification documents that bridge product requirements and engineering implementation. | — |
 | **User Story Writer** (`user-story-writer`) | Write well-structured user stories with acceptance criteria and edge cases. | ✅ 4.8/5 |
@@ -43,38 +43,38 @@
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Assumption Mapper** (`assumption-mapper`) | Extract and risk-rate hidden assumptions in a product brief or PRD. | ✅ 5/5 |
+| **Assumption Mapper** (`assumption-mapper`) | Extract and risk-rate hidden assumptions in a product brief or PRD. | ✅ 4.9/5 |
 | **Customer Journey Map** (`customer-journey-map`) | Build a customer journey map for a product, service, or experience. | — |
 | **Discovery Interview Guide** (`discovery-interview-guide`) | Create a structured user discovery interview guide with screener questions, a discussion guide, and a synthesis framework. | — |
 | **Job Story Mapper** (`job-story-mapper`) | Write Jobs-to-be-Done (JTBD) job stories and map customer jobs across functional, social, and emotional dimensions. | — |
 | **User Interview Synthesis** (`user-interview-synthesis`) | Synthesises user interview transcripts into structured research findings. | — |
 
-### `pm-essentials` — 10 skills · 3 eval-scored
+### `pm-essentials` — 10 skills · 5 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Competitive Analysis** (`competitive-analysis`) | Analyze competitors and create competitive landscape documentation with feature matrices, positioning maps, and strategic recommendations. | ✅ 4.3/5 |
+| **Competitive Analysis** (`competitive-analysis`) | Analyze competitors and create competitive landscape documentation with feature matrices, positioning maps, and strategic recommendations. | ✅ 4.1/5 |
 | **Decision Journal** (`decision-journal`) | Record decisions the way good judgment compounds — the reasoning, the alternatives, the probabilities, and what would change your mind, written… | — |
 | **Word Doc Tracked Changes** (`docx-tracked-changes`) | Produce properly-formatted tracked changes for a Word document. | — |
 | **Meeting Action Extractor** (`meeting-action-extractor`) | Pull the action items and decisions out of meeting notes or a transcript — each with an owner, a due date, and enough context to become a ticket —… | — |
 | **Meeting Notes** (`meeting-notes`) | Structure and format meeting notes following PM best practices. | — |
-| **PRD Template** (`prd-template`) | Create a Product Requirements Document following proven PM template structure. | ✅ 4.8/5 |
+| **PRD Template** (`prd-template`) | Create a Product Requirements Document following proven PM template structure. | ✅ 4.5/5 |
 | **Stakeholder Update** (`stakeholder-update`) | Create concise executive stakeholder updates using the BLUF (Bottom Line Up Front) framework. | ✅ 4.8/5 |
-| **Style Fingerprint** (`style-fingerprint`) | Study 3-5 documents the user actually shipped and distil a compact style card — so every skill writes in their voice, not the model's. | — |
+| **Style Fingerprint** (`style-fingerprint`) | Study 3-5 documents the user actually shipped and distil a compact style card — so every skill writes in their voice, not the model's. | ✅ 1/5 |
 | **User Research Synthesis** (`user-research-synthesis`) | Analyze and synthesize user research findings into structured, actionable insights. | — |
-| **Which Skill Router** (`which-skill`) | Route a fuzzy request to the right skill in this library. | — |
+| **Which Skill Router** (`which-skill`) | Route a fuzzy request to the right skill in this library. | ✅ 4/5 |
 
-### `pm-planning` — 8 skills · 3 eval-scored
+### `pm-planning` — 8 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Feature Prioritisation** (`feature-prioritisation`) | Apply prioritisation frameworks (RICE, MoSCoW, Kano, ICE, Opportunity Scoring) to rank features and backlog items. | — |
-| **Feature Sunset Plan** (`feature-sunset-plan`) | Plan the retirement of a product feature — the kill decision made honest, user migration, data handling, comms sequencing, and the code actually… | — |
-| **OKR Builder** (`okr-builder`) | Create well-structured OKRs (Objectives and Key Results) for product teams, startups, and individuals. | ✅ 4.8/5 |
+| **Feature Sunset Plan** (`feature-sunset-plan`) | Plan the retirement of a product feature — the kill decision made honest, user migration, data handling, comms sequencing, and the code actually… | ✅ 4.8/5 |
+| **OKR Builder** (`okr-builder`) | Create well-structured OKRs (Objectives and Key Results) for product teams, startups, and individuals. | ✅ 4.6/5 |
 | **Pricing Strategy** (`pricing-strategy`) | Structure pricing strategy decisions, packaging options, and tier design for SaaS and digital products. | — |
 | **RICE + Strategic Alignment** (`rice-impact-matrix`) | Scores features using both RICE and strategic alignment for nuanced prioritisation. | — |
-| **RICE Prioritisation** (`rice-prioritisation`) | Scores and ranks product initiatives using the RICE framework. | ✅ 4.8/5 |
-| **Roadmap Narrative** (`roadmap-narrative`) | Transform a prioritised initiative list into a compelling strategic roadmap narrative. | ✅ 4.8/5 |
+| **RICE Prioritisation** (`rice-prioritisation`) | Scores and ranks product initiatives using the RICE framework. | ✅ 4.9/5 |
+| **Roadmap Narrative** (`roadmap-narrative`) | Transform a prioritised initiative list into a compelling strategic roadmap narrative. | ✅ 4.6/5 |
 | **Roadmap Presentation** (`roadmap-presentation`) | Create structured roadmap presentations calibrated to any audience. | — |
 
 ### `pm-rituals` — 2 skills
@@ -89,7 +89,7 @@
 | Skill | What it does | Eval |
 |---|---|---|
 | **Ambiguity Resolver** (`ambiguity-resolver`) | Structure vague opportunities and unclear briefs into actionable one-page problem statements. | — |
-| **Competitive Intelligence Monitor** (`competitive-intelligence-monitor`) | Monitor competitor signals and surface strategic implications for your roadmap. | ✅ 3.8/5 |
+| **Competitive Intelligence Monitor** (`competitive-intelligence-monitor`) | Monitor competitor signals and surface strategic implications for your roadmap. | ✅ 4.3/5 |
 | **Competitor Signal Tracker** (`competitor-signal-tracker`) | Analyse competitor moves and translate them into strategic implications for your product roadmap. | — |
 | **Executive Update** (`executive-update`) | Transform detailed product updates into concise executive briefings. | — |
 | **Stakeholder Influence Mapper** (`stakeholder-influence-mapper`) | Map stakeholders for a product decision and produce a tailored influence strategy with talking points. | — |
@@ -145,25 +145,25 @@
 | **Competitor Teardown** (`competitor-teardown`) | Produce a structured competitive analysis for any product or market. | — |
 | **Content Calendar** (`content-calendar`) | Generate a structured content calendar for any brand, product, or creator. | — |
 | **Email Campaign** (`email-campaign`) | Write and sequence multi-email nurture or launch campaigns. | — |
-| **Go-To-Market** (`go-to-market`) | Create go-to-market assets for any product or feature. | ✅ 4.8/5 |
+| **Go-To-Market** (`go-to-market`) | Create go-to-market assets for any product or feature. | ✅ 4.5/5 |
 | **Media Pitch** (`media-pitch`) | Write a media pitch or press outreach email for any story or announcement. | — |
 | **Product Positioning Doc** (`product-positioning-doc`) | Write a product positioning document and messaging framework. | — |
 | **SEO Content Brief** (`seo-content-brief`) | Create a structured SEO content brief for any target keyword or topic. | — |
 | **Social Media Strategy** (`social-media-strategy`) | Build a social media strategy for a brand, product, or creator. | — |
 
-### `pm-pmm` — 9 skills
+### `pm-pmm` — 9 skills · 8 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Analyst Relations Brief** (`analyst-relations-brief`) | Prepare for an industry analyst briefing (Gartner, Forrester, IDC and similar). | — |
-| **Customer Advisory Board** (`customer-advisory-board`) | Plan and run a customer advisory board (CAB). | — |
-| **Launch Tiering Framework** (`launch-tiering-framework`) | Tier a product launch (T1/T2/T3) and scope the right go-to-market effort. | — |
+| **Analyst Relations Brief** (`analyst-relations-brief`) | Prepare for an industry analyst briefing (Gartner, Forrester, IDC and similar). | ✅ 4.8/5 |
+| **Customer Advisory Board** (`customer-advisory-board`) | Plan and run a customer advisory board (CAB). | ✅ 4.8/5 |
+| **Launch Tiering Framework** (`launch-tiering-framework`) | Tier a product launch (T1/T2/T3) and scope the right go-to-market effort. | ✅ 4.8/5 |
 | **Price Increase Announcement** (`price-increase-announcement`) | Announce a price increase without triggering a churn spike — the rationale, grandfathering, effective dates, the FAQ, and the internal brief so… | — |
-| **Pricing Page Copy** (`pricing-page-copy`) | Write pricing page copy that helps buyers self-select the right plan and convert. | — |
-| **Sales Demo Script** (`sales-demo-script`) | Write a product demo script that tells a value story instead of a feature tour — the buyer's-workflow storyline, the golden path rehearsed with… | — |
-| **Sales Enablement Kit** (`sales-enablement-kit`) | Build a sales enablement kit so reps can sell a product, feature, or launch confidently. | — |
-| **Voice of Customer Program** (`voice-of-customer-program`) | Stand up a Voice of Customer (VoC) program that turns feedback into action. | — |
-| **Win/Loss Analysis** (`win-loss-analysis`) | Analyze why deals are won and lost and turn it into an action plan. | — |
+| **Pricing Page Copy** (`pricing-page-copy`) | Write pricing page copy that helps buyers self-select the right plan and convert. | ✅ 4.3/5 |
+| **Sales Demo Script** (`sales-demo-script`) | Write a product demo script that tells a value story instead of a feature tour — the buyer's-workflow storyline, the golden path rehearsed with… | ✅ 4.8/5 |
+| **Sales Enablement Kit** (`sales-enablement-kit`) | Build a sales enablement kit so reps can sell a product, feature, or launch confidently. | ✅ 4.8/5 |
+| **Voice of Customer Program** (`voice-of-customer-program`) | Stand up a Voice of Customer (VoC) program that turns feedback into action. | ✅ 4.8/5 |
+| **Win/Loss Analysis** (`win-loss-analysis`) | Analyze why deals are won and lost and turn it into an action plan. | ✅ 5/5 |
 
 ### `pm-social` — 6 skills
 
@@ -178,25 +178,25 @@
 
 ## 💻 Engineering & AI (84 skills)
 
-### `pm-ai` — 13 skills
+### `pm-ai` — 13 skills · 6 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Agent Design Review** (`agent-design-review`) | Review an LLM agent design and find where it will be unreliable, expensive, or unsafe. | — |
+| **Agent Design Review** (`agent-design-review`) | Review an LLM agent design and find where it will be unreliable, expensive, or unsafe. | ✅ 4.8/5 |
 | **Agent Spec** (`agent-spec`) | Specify an autonomous or tool-using AI agent before building it. | — |
 | **AI Eval Plan** (`ai-eval-plan`) | Design an evaluation plan for an LLM or AI feature before shipping it. | — |
 | **AI Feature PRD** (`ai-feature-prd`) | Write a PRD for an AI-powered feature, covering the things normal PRDs miss. | — |
 | **Dataset Datasheet** (`dataset-datasheet`) | Document a dataset so others know what it is, how it was made, and when not to use it. | — |
-| **Eval Rubric Designer** (`eval-rubric-designer`) | Design a scoring rubric and LLM-as-judge prompt to evaluate the quality of an AI feature's output. | — |
+| **Eval Rubric Designer** (`eval-rubric-designer`) | Design a scoring rubric and LLM-as-judge prompt to evaluate the quality of an AI feature's output. | ✅ 5/5 |
 | **LLM Cost & Latency Budget** (`llm-cost-latency-budget`) | Model the cost and latency of an LLM feature before it ships and surprises the bill. | — |
-| **LLM Guardrails Spec** (`llm-guardrails-spec`) | Specify the safety and reliability guardrails for an LLM feature before it ships. | — |
+| **LLM Guardrails Spec** (`llm-guardrails-spec`) | Specify the safety and reliability guardrails for an LLM feature before it ships. | ✅ 4.8/5 |
 | **Model Card** (`model-card`) | Document a deployed ML/AI model so others can use it responsibly. | — |
-| **Model Selection Advisor** (`model-selection-advisor`) | Choose the right LLM for a task by trading off quality, cost, latency, and constraints. | — |
-| **Prompt Optimizer** (`prompt-optimizer`) | Diagnose and rewrite an underperforming LLM prompt so it produces reliable, well-structured output. | — |
-| **RAG Architecture Review** (`rag-architecture-review`) | Review an existing Retrieval-Augmented Generation system and find why it underperforms. | — |
+| **Model Selection Advisor** (`model-selection-advisor`) | Choose the right LLM for a task by trading off quality, cost, latency, and constraints. | ✅ 4.8/5 |
+| **Prompt Optimizer** (`prompt-optimizer`) | Diagnose and rewrite an underperforming LLM prompt so it produces reliable, well-structured output. | ✅ 5/5 |
+| **RAG Architecture Review** (`rag-architecture-review`) | Review an existing Retrieval-Augmented Generation system and find why it underperforms. | ✅ 4.8/5 |
 | **RAG Design Doc** (`rag-design-doc`) | Design a Retrieval-Augmented Generation system end to end. | — |
 
-### `pm-craft` — 6 skills
+### `pm-craft` — 6 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -205,7 +205,7 @@
 | **PR Description** (`pr-description`) | Write a clear pull-request description that gets reviewed fast and merged with confidence, from a git diff, branch summary, or commit list. | — |
 | **Refactoring Plan** (`refactoring-plan`) | Plan a safe, incremental refactor of messy code without changing behavior. | — |
 | **TDD Workflow** (`tdd-workflow`) | Drive a feature with a disciplined test-driven development loop — red, green, refactor. | — |
-| **The Ruthless Editor** (`the-ruthless-editor`) | Run any draft through the editor who owes you nothing — the buried lede surfaced, the throat-clearing cut, the hedges un-stacked, every paragraph… | — |
+| **The Ruthless Editor** (`the-ruthless-editor`) | Run any draft through the editor who owes you nothing — the buried lede surfaced, the throat-clearing cut, the hedges un-stacked, every paragraph… | ✅ 3/5 |
 
 ### `pm-dataeng` — 6 skills
 
@@ -218,11 +218,11 @@
 | **Metric Semantic Layer** (`metric-semantic-layer`) | Define a metric in a semantic layer so it means one thing everywhere. | — |
 | **SQL Optimizer** (`sql-optimizer`) | Diagnose a slow SQL query and produce a concrete optimization plan. | — |
 
-### `pm-engineering` — 45 skills · 6 eval-scored
+### `pm-engineering` — 45 skills · 9 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **AI Code Review** (`ai-code-review`) | Review AI-authored code for its characteristic failure modes — plausible-but-wrong logic, hallucinated APIs, over-engineering, dead scaffolding… | — |
+| **AI Code Review** (`ai-code-review`) | Review AI-authored code for its characteristic failure modes — plausible-but-wrong logic, hallucinated APIs, over-engineering, dead scaffolding… | ✅ 5/5 |
 | **API Docs Writer** (`api-docs-writer`) | Write clear, developer-facing API documentation. | — |
 | **API Versioning Strategy** (`api-versioning-strategy`) | Write an API versioning strategy document for a service or API platform. | — |
 | **Architecture Decision Record (ADR)** (`architecture-decision-record`) | Create an Architecture Decision Record (ADR) for any technical decision. | — |
@@ -242,21 +242,21 @@
 | **Disaster Recovery Plan** (`disaster-recovery-plan`) | Write a disaster recovery plan for a service or system — covering RPO/RTO targets, failure scenario runbooks, backup and restore procedures, DR… | — |
 | **Engineering Hiring Rubric** (`engineering-hiring-rubric`) | Build an engineering hiring rubric and technical interview scorecard for evaluating software engineers at a specific level. | — |
 | **Engineering Weekly Report** (`engineering-weekly-report`) | Write a weekly engineering status report for a team, service, or initiative. | — |
-| **Error Decoder** (`error-decoder`) | Decode an error message or stack trace into a plain-English cause, the exact fix, and how to prevent it. | ✅ 3.5/5 |
+| **Error Decoder** (`error-decoder`) | Decode an error message or stack trace into a plain-English cause, the exact fix, and how to prevent it. | ✅ 4/5 |
 | **Feature Flag Guide** (`feature-flag-guide`) | Write a feature flag management guide and lifecycle playbook for a service or team — covering flag taxonomy, creation checklist, rollout strategy… | — |
-| **Git Troubleshooter** (`git-troubleshooter`) | Diagnose a tangled git situation and give the exact, safe commands to fix it. | ✅ 4/5 |
+| **Git Troubleshooter** (`git-troubleshooter`) | Diagnose a tangled git situation and give the exact, safe commands to fix it. | ✅ 4.4/5 |
 | **Incident Postmortem** (`incident-postmortem`) | Write a structured incident postmortem or post-incident review. | ✅ 4.8/5 |
 | **Infrastructure-as-Code Review** (`infra-as-code-review`) | Write an infrastructure-as-code review checklist and conduct a structured review of Terraform, CloudFormation, Pulumi, or Ansible code. | — |
 | **Load Testing Plan** (`load-testing-plan`) | Write a load and performance testing plan for a service. | — |
 | **Local Dev Setup** (`local-dev-setup`) | Write a local development environment setup guide for a service or project — covering prerequisites, repository setup, environment variables… | — |
 | **Microservices Decomposition** (`microservices-decomposition`) | Design a microservices decomposition for a monolith or new system, defining service boundaries, ownership, communication patterns, and migration plan. | — |
 | **Monitoring Setup Guide** (`monitoring-setup-guide`) | Write a monitoring setup guide for a service — defining what to measure, how to alert on it, and how to build the observability stack covering the… | — |
-| **On-Call Handoff** (`oncall-handoff`) | Write a structured end-of-shift on-call handoff so the incoming engineer inherits state, not surprises. | — |
+| **On-Call Handoff** (`oncall-handoff`) | Write a structured end-of-shift on-call handoff so the incoming engineer inherits state, not surprises. | ✅ 4/5 |
 | **On-Call Runbook** (`oncall-runbook`) | Write an on-call runbook for a service — covering alert definitions, escalation paths, common incident responses, and on-call handoff procedures. | — |
 | **Performance Budget** (`performance-budget`) | Define and document performance budgets for a web service or application. | — |
-| **Regex Builder & Explainer** (`regex-builder`) | Build a regular expression from a plain-English description, or explain an existing one. | ✅ 4.5/5 |
+| **Regex Builder & Explainer** (`regex-builder`) | Build a regular expression from a plain-English description, or explain an existing one. | ✅ 4.8/5 |
 | **RFC Writer** (`rfc-writer`) | Write an engineering RFC (Request for Comments) for a technical decision, architectural change, or significant implementation approach. | — |
-| **Rollback Plan** (`rollback-plan`) | Write a concrete rollback plan for a risky change (deploy, migration, feature-flag flip, config rollout) so the reverse is one command away — not… | — |
+| **Rollback Plan** (`rollback-plan`) | Write a concrete rollback plan for a risky change (deploy, migration, feature-flag flip, config rollout) so the reverse is one command away — not… | ✅ 4.8/5 |
 | **Runbook Writer** (`runbook-writer`) | Write an operational runbook for a service, incident type, or deployment procedure. | — |
 | **Service Catalog Entry** (`service-catalog-entry`) | Write a service catalog entry for a microservice or internal platform service — covering service identity, purpose, architecture context, SLAs… | — |
 | **Skill Security Auditor** (`skill-security-auditor`) | Audit a Claude/Agent SKILL.md (or any AI skill / system prompt) for safety before installing or merging it. | — |
@@ -268,18 +268,18 @@
 | **Test Strategy Document** (`test-strategy-doc`) | Write a test strategy document from a feature spec, PRD, or system description. | — |
 | **Writing Great Skills** (`writing-great-skills`) | Author a high-quality Agent Skill (SKILL.md) that an AI reliably triggers and executes well — strong frontmatter, a sharp description with trigger… | — |
 
-### `pm-qa` — 8 skills
+### `pm-qa` — 8 skills · 6 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **API Test Plan** (`api-test-plan`) | Plan tests for an API endpoint or service — functional, negative, and contract. | — |
-| **Bug Report** (`bug-report`) | Write a clear, reproducible bug report that gets fixed fast. | — |
+| **API Test Plan** (`api-test-plan`) | Plan tests for an API endpoint or service — functional, negative, and contract. | ✅ 4.8/5 |
+| **Bug Report** (`bug-report`) | Write a clear, reproducible bug report that gets fixed fast. | ✅ 4.8/5 |
 | **Bug Triage Pack** (`bug-triage-pack`) | Triage a raw bug report into something a team can act on — clean repro steps, a defensible severity/priority, environment, likely area/owner, and… | — |
-| **Exploratory Test Charter** (`exploratory-test-charter`) | Write session-based exploratory testing charters to find what scripted tests miss. | — |
+| **Exploratory Test Charter** (`exploratory-test-charter`) | Write session-based exploratory testing charters to find what scripted tests miss. | ✅ 4.8/5 |
 | **QA Handoff Package** (`qa-handoff-package`) | Turn a story and its change into a clean 'ready for QA' package — test scenarios, edge cases, the data and environment setup, and what's… | — |
-| **QA Release Sign-off** (`qa-release-signoff`) | Produce a QA release sign-off / go-no-go readiness report. | — |
-| **Regression Test Plan** (`regression-test-plan`) | Design and prioritize a regression test suite so changes don't break what worked. | — |
-| **Test Case Writer** (`test-case-writer`) | Turn a requirement or user story into clear, executable test cases. | — |
+| **QA Release Sign-off** (`qa-release-signoff`) | Produce a QA release sign-off / go-no-go readiness report. | ✅ 4.8/5 |
+| **Regression Test Plan** (`regression-test-plan`) | Design and prioritize a regression test suite so changes don't break what worked. | ✅ 4.8/5 |
+| **Test Case Writer** (`test-case-writer`) | Turn a requirement or user story into clear, executable test cases. | ✅ 5/5 |
 
 ### `pm-security` — 6 skills
 
@@ -307,26 +307,26 @@
 | Skill | What it does | Eval |
 |---|---|---|
 | **A/B Test Readout** (`ab-test-readout`) | Analyse a finished A/B test and write the readout — the result, whether it's statistically and practically significant, what it means, and the… | — |
-| **Cohort Analysis** (`cohort-analysis`) | Structure a cohort analysis for retention, LTV, or behavioural patterns. | ✅ 3.5/5 |
+| **Cohort Analysis** (`cohort-analysis`) | Structure a cohort analysis for retention, LTV, or behavioural patterns. | ✅ 4/5 |
 | **Dashboard Brief** (`dashboard-brief`) | Convert a business question into a complete dashboard specification. | — |
 | **Data Pipeline Spec** (`data-pipeline-spec`) | Design an ETL/ELT data pipeline specification. | — |
 | **Data Quality Audit** (`data-quality-audit`) | Audit a dataset for the quality problems that silently break analysis — missingness, duplicates, outliers, type and range errors, consistency, and… | — |
 | **Metric Tree Builder** (`metric-tree-builder`) | Decompose a north-star metric into a driver tree — the inputs and sub-inputs that actually move it — so a team knows which levers to pull. | — |
 | **Metrics Framework** (`metrics-framework`) | Build a metrics framework for any product, team, or business. | ✅ 4.8/5 |
-| **SQL Query Explainer** (`sql-query-explainer`) | Explains, optimises, writes, and documents SQL queries. | ✅ 4.3/5 |
+| **SQL Query Explainer** (`sql-query-explainer`) | Explains, optimises, writes, and documents SQL queries. | ✅ 4.5/5 |
 
 ## 🎨 Design & Content (41 skills)
 
-### `pm-design` — 7 skills
+### `pm-design` — 7 skills · 2 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Accessibility Audit** (`accessibility-audit`) | Generate a WCAG 2.2 accessibility audit checklist and remediation suggestions for any UI or design. | — |
-| **Brand Guidelines** (`brand-guidelines`) | Extract a brand's visual and verbal identity into an applicable guideline kit — tokens, voice rules, and do/don't pairs — then apply it… | — |
+| **Brand Guidelines** (`brand-guidelines`) | Extract a brand's visual and verbal identity into an applicable guideline kit — tokens, voice rules, and do/don't pairs — then apply it… | ✅ 4.8/5 |
 | **Design Critique** (`design-critique`) | Give structured, constructive feedback on any design using UX frameworks. | — |
 | **Design System Audit** (`design-system-audit`) | Audit a design system for consistency, coverage, and quality. | — |
 | **Design System Generate** (`design-system-generate`) | Generate a complete, accessibility-checked design system from scratch — colour ramps, type scale, spacing, elevation, and exports for CSS… | — |
-| **Frontend Design** (`frontend-design`) | Produce frontend UI that actually looks designed — a working spacing/type system, deliberate color use, real states, and restraint — instead of… | — |
+| **Frontend Design** (`frontend-design`) | Produce frontend UI that actually looks designed — a working spacing/type system, deliberate color use, real states, and restraint — instead of… | ✅ 3.5/5 |
 | **UX Research Plan** (`ux-research-plan`) | Create a structured UX research plan for any product question or feature. | — |
 
 ### `pm-figma` — 10 skills
@@ -344,16 +344,16 @@
 | **Figma User Flow Planner** (`figma-user-flow-planner`) | Plan user flows and screen states for a Figma design before any designing starts. | — |
 | **Figma Variant Matrix** (`figma-variant-matrix`) | Define component variants and states systematically for Figma. | — |
 
-### `pm-uxwriting` — 6 skills
+### `pm-uxwriting` — 6 skills · 6 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Content Style Guide** (`content-style-guide`) | Create a content style guide / voice & tone guide so everyone writes consistently. | — |
-| **Empty State Writer** (`empty-state-writer`) | Write empty-state content that turns a blank screen into a next step. | — |
-| **Error Message Writer** (`error-message-writer`) | Write clear, helpful error messages that tell users what happened and how to fix it. | — |
-| **Microcopy Writer** (`microcopy-writer`) | Write the small UI text that guides users — buttons, labels, tooltips, CTAs, confirmations. | — |
-| **Onboarding Copy** (`onboarding-copy`) | Write in-product onboarding copy that gets users to value fast. | — |
-| **Product Naming** (`product-naming`) | Generate and evaluate names for a product, feature, or release. | — |
+| **Content Style Guide** (`content-style-guide`) | Create a content style guide / voice & tone guide so everyone writes consistently. | ✅ 4.8/5 |
+| **Empty State Writer** (`empty-state-writer`) | Write empty-state content that turns a blank screen into a next step. | ✅ 4.3/5 |
+| **Error Message Writer** (`error-message-writer`) | Write clear, helpful error messages that tell users what happened and how to fix it. | ✅ 5/5 |
+| **Microcopy Writer** (`microcopy-writer`) | Write the small UI text that guides users — buttons, labels, tooltips, CTAs, confirmations. | ✅ 4.8/5 |
+| **Onboarding Copy** (`onboarding-copy`) | Write in-product onboarding copy that gets users to value fast. | ✅ 4.8/5 |
+| **Product Naming** (`product-naming`) | Generate and evaluate names for a product, feature, or release. | ✅ 4.8/5 |
 
 ### `pm-visuals` — 11 skills
 
@@ -375,7 +375,7 @@
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **AEO Optimizer** (`aeo-optimizer`) | Optimize an article for Answer Engine Optimization (AEO) so AI engines like ChatGPT, Perplexity, and Claude can extract, quote, and cite it. | ✅ 4.5/5 |
+| **AEO Optimizer** (`aeo-optimizer`) | Optimize an article for Answer Engine Optimization (AEO) so AI engines like ChatGPT, Perplexity, and Claude can extract, quote, and cite it. | ✅ 4.6/5 |
 | **Instagram Post Downloader** (`instagram-post-downloader`) | Download and save Instagram posts as high-resolution files. | — |
 | **Memoir Story Capture** (`memoir-story-capture`) | Capture a life story — your own or a parent's/grandparent's — into a keepsake, using good interview questions and a structure that turns memories… | — |
 | **Notes Humanizer** (`notes-humanizer`) | Strips AI writing patterns from text and rewrites it to sound genuinely human — removing the statistical defaults, then adding earned voice… | — |
@@ -389,7 +389,7 @@
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Churn Analysis** (`churn-analysis`) | Produce a structured churn analysis that separates avoidable from unavoidable churn. | ✅ 4.3/5 |
+| **Churn Analysis** (`churn-analysis`) | Produce a structured churn analysis that separates avoidable from unavoidable churn. | ✅ 4.5/5 |
 | **Customer Escalation Brief** (`cs-escalation-brief`) | Write a structured escalation brief for an at-risk customer account. | — |
 | **Customer Health Scorecard** (`cs-health-scorecard`) | Build a customer health scorecard for a specific account. | ✅ 4.8/5 |
 | **Customer Success Plan** (`customer-success-plan`) | Build a joint customer success plan for a specific account. | — |
@@ -397,17 +397,17 @@
 | **Renewal Playbook** (`renewal-playbook`) | Build a structured renewal playbook for a customer account. | — |
 | **Win-back Playbook** (`winback-playbook`) | Turn an at-risk or churned account into a save play — root-cause hypothesis, the offer ladder, the outreach sequence, and the honest call on when… | — |
 
-### `pm-recruiting` — 7 skills
+### `pm-recruiting` — 7 skills · 6 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Boolean Search Builder** (`boolean-search-builder`) | Build boolean and X-ray search strings to source candidates. | — |
-| **Candidate Scorecard** (`candidate-scorecard`) | Turn interview notes into a structured candidate scorecard and hire recommendation. | — |
-| **Interview Question Bank** (`interview-question-bank`) | Build a structured, role-specific interview question bank with what good answers look like. | — |
-| **Offer Letter** (`offer-letter`) | Draft a job offer — the written offer letter and a verbal-offer script. | — |
-| **Recruiter Outreach** (`recruiter-outreach`) | Write personalized candidate outreach that gets replies. | — |
+| **Boolean Search Builder** (`boolean-search-builder`) | Build boolean and X-ray search strings to source candidates. | ✅ 5/5 |
+| **Candidate Scorecard** (`candidate-scorecard`) | Turn interview notes into a structured candidate scorecard and hire recommendation. | ✅ 4.8/5 |
+| **Interview Question Bank** (`interview-question-bank`) | Build a structured, role-specific interview question bank with what good answers look like. | ✅ 4.8/5 |
+| **Offer Letter** (`offer-letter`) | Draft a job offer — the written offer letter and a verbal-offer script. | ✅ 4.8/5 |
+| **Recruiter Outreach** (`recruiter-outreach`) | Write personalized candidate outreach that gets replies. | ✅ 4.8/5 |
 | **Reference Check Script** (`reference-check-script`) | Run a rigorous candidate reference check that surfaces real signal. | — |
-| **Sourcing Strategy** (`sourcing-strategy`) | Build a talent sourcing strategy for a hard-to-fill role. | — |
+| **Sourcing Strategy** (`sourcing-strategy`) | Build a talent sourcing strategy for a hard-to-fill role. | ✅ 4.8/5 |
 
 ### `pm-sales` — 6 skills
 
@@ -433,23 +433,23 @@
 
 ## 💰 Finance, Ops & Business (94 skills)
 
-### `pm-accounting` — 6 skills
+### `pm-accounting` — 6 skills · 6 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Bookkeeping Categorization** (`bookkeeping-categorization`) | Set up a chart of accounts and rules for categorizing transactions. | — |
-| **Cash Flow Forecast** (`cash-flow-forecast`) | Build a short-term (13-week) cash flow forecast to see if you can cover what's due. | — |
-| **Collections Email** (`collections-email`) | Write a polite-but-firm payment-reminder / collections email sequence for overdue invoices. | — |
-| **Expense Policy** (`expense-policy`) | Write a clear company expense & reimbursement policy. | — |
-| **Financial Statement Explainer** (`financial-statement-explainer`) | Explain a financial statement (P&L, balance sheet, or cash flow) in plain English. | — |
-| **Invoice Generator** (`invoice-generator`) | Create a professional, complete invoice for a client or customer. | — |
+| **Bookkeeping Categorization** (`bookkeeping-categorization`) | Set up a chart of accounts and rules for categorizing transactions. | ✅ 5/5 |
+| **Cash Flow Forecast** (`cash-flow-forecast`) | Build a short-term (13-week) cash flow forecast to see if you can cover what's due. | ✅ 5/5 |
+| **Collections Email** (`collections-email`) | Write a polite-but-firm payment-reminder / collections email sequence for overdue invoices. | ✅ 5/5 |
+| **Expense Policy** (`expense-policy`) | Write a clear company expense & reimbursement policy. | ✅ 4.5/5 |
+| **Financial Statement Explainer** (`financial-statement-explainer`) | Explain a financial statement (P&L, balance sheet, or cash flow) in plain English. | ✅ 5/5 |
+| **Invoice Generator** (`invoice-generator`) | Create a professional, complete invoice for a client or customer. | ✅ 4.3/5 |
 
-### `pm-business` — 8 skills
+### `pm-business` — 8 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Board Deck Narrative** (`board-deck-narrative`) | Build the storyline and slide structure for a board presentation. | — |
-| **Board Minutes** (`board-minutes`) | Write formal board meeting minutes from an agenda, notes, transcript, or discussion summary. | — |
+| **Board Minutes** (`board-minutes`) | Write formal board meeting minutes from an agenda, notes, transcript, or discussion summary. | ✅ 4.8/5 |
 | **Board Pre-Read** (`board-pre-read`) | Write a board pre-read that's sent before the meeting so the meeting is about decisions, not status. | — |
 | **Capital Allocation** (`capital-allocation`) | Allocate a finite budget or headcount across competing initiatives by return and strategic fit. | — |
 | **Decision Memo** (`decision-memo`) | Write a crisp decision memo that drives a clear decision, not a discussion. | — |
@@ -457,38 +457,38 @@
 | **Job Application** (`job-application`) | Tailors a CV and cover letter to a specific job description. | — |
 | **Strategy Memo** (`strategy-memo`) | Write a strategy memo that commits to a bet and says what you won't do. | — |
 
-### `pm-calculators` — 29 skills
+### `pm-calculators` — 29 skills · 8 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Car TCO** (`car-tco`) | Compare the total cost of car ownership across buy-new, buy-used, lease, and keep-your-current-car — depreciation, insurance, maintenance ramp… | — |
-| **Cohort Curve Model** (`cohort-curve-model`) | Fit a retention curve to observed cohort data and project LTV — computed, not estimated. | — |
+| **Cohort Curve Model** (`cohort-curve-model`) | Fit a retention curve to observed cohort data and project LTV — computed, not estimated. | ✅ 5/5 |
 | **College Cost** (`college-cost`) | Compute what a degree will actually cost — sticker minus real aid, inflated per year, split into cash and loans, with the loan's decade-long… | — |
 | **Daycare vs Stay-Home** (`daycare-vs-stay-home`) | Run the real math on a parent leaving work versus paying for childcare — the second income net of daycare, marginal taxes, and work costs, AND the… | — |
 | **Debt Payoff** (`debt-payoff`) | Build a debt payoff plan — avalanche vs snowball simulated month by month on your actual debts, the real payoff dates, and the… | — |
-| **Decision Tree Solver** (`decision-tree-solver`) | Turn a fork-in-the-road decision into a computed expected-value tree — settle or sue, launch or wait, fix or replace — rolled back by the bundled… | — |
+| **Decision Tree Solver** (`decision-tree-solver`) | Turn a fork-in-the-road decision into a computed expected-value tree — settle or sue, launch or wait, fix or replace — rolled back by the bundled… | ✅ 5/5 |
 | **Emergency Fund** (`emergency-fund`) | Size an emergency fund from essential spend and real risk factors — not a one-size 'six months' — with the funding timeline and where the money… | — |
 | **EV vs Gas** (`ev-vs-gas`) | Compare an EV against a comparable gas car on total cost — upfront gap after incentives, energy vs fuel per year, maintenance delta, and the… | — |
 | **Exit Waterfall** (`exit-waterfall`) | Compute who gets what at each exit price from a cap table — liquidation preferences, conversion points, and where the founders' share collapses. | — |
-| **Fair Split** (`fair-split`) | Divide things that cannot be divided — an inherited house, a dissolved partnership, the furniture after a breakup — using sealed-bid fair division… | — |
+| **Fair Split** (`fair-split`) | Divide things that cannot be divided — an inherited house, a dissolved partnership, the furniture after a breakup — using sealed-bid fair division… | ✅ 4.8/5 |
 | **FIRE Number** (`fire-number`) | Compute a financial-independence (FIRE) target and years-to-reach with every assumption labeled as an assumption — plus a sensitivity table… | — |
 | **Freelance Rate** (`freelance-rate`) | Derive a freelance day/hourly rate backwards from target income, honest billable utilization, overhead, and the self-employment tax premium — the… | — |
 | **Offer Comparison** (`offer-comparison`) | Compare two or more job offers as total-comp curves over four years — vesting cliffs, bonuses, 401(k) match, and the crossover year computed, not… | — |
 | **Pricing Calculator** (`pricing-calculator`) | Model pricing scenarios — tiers, margins, break-even, and the revenue impact of a price change. | — |
-| **Pricing Sensitivity Model (Van Westendorp)** (`pricing-sensitivity-model`) | Van Westendorp price sensitivity, computed from real survey answers — crossings found by interpolation, not read off a chart by eye. | — |
+| **Pricing Sensitivity Model (Van Westendorp)** (`pricing-sensitivity-model`) | Van Westendorp price sensitivity, computed from real survey answers — crossings found by interpolation, not read off a chart by eye. | ✅ 4/5 |
 | **Raise vs Jump** (`raise-vs-jump`) | Model staying for annual raises vs job-hopping for bigger bumps — cumulative earnings trajectories, the crossover year, and the costs the salary… | — |
 | **Refinance Breakeven** (`refinance-breakeven`) | Compute the month a refinance actually starts saving money — payment delta, breakeven month, and total interest on both paths including the… | — |
 | **Rent vs Buy** (`rent-vs-buy`) | Model rent-vs-buy honestly — year-by-year net position for both paths including the assumption everyone drops (the renter invests the difference)… | — |
 | **ROI Estimator** (`roi-estimator`) | Estimate the ROI, payback, and NPV of an investment, project, or purchase. | — |
 | **Runway Calculator** (`runway-calculator`) | Calculate cash runway, burn, and the zero-cash date — and whether you're default alive or dead. | — |
-| **Runway Monte Carlo** (`runway-monte-carlo`) | Cash runway as a distribution, not a number — Monte Carlo simulated. | — |
+| **Runway Monte Carlo** (`runway-monte-carlo`) | Cash runway as a distribution, not a number — Monte Carlo simulated. | ✅ 5/5 |
 | **SaaS Metrics** (`saas-metrics`) | Compute the core SaaS metrics — MRR/ARR, growth, NRR/GRR, churn, quick ratio, magic number — from your numbers. | — |
-| **Schedule Monte Carlo** (`schedule-monte-carlo`) | Project completion as a distribution, not a date — Monte Carlo over the task graph. | — |
+| **Schedule Monte Carlo** (`schedule-monte-carlo`) | Project completion as a distribution, not a date — Monte Carlo over the task graph. | ✅ 4.8/5 |
 | **Solar Breakeven** (`solar-breakeven`) | Model whether solar panels pay for themselves for your roof — net cost after incentives, bill offset with degradation, electricity inflation, the… | — |
 | **Student Loan Strategy** (`student-loan-strategy`) | Decide what the extra money does about student loans — attack them, invest alongside them, or ride a forgiveness track — with the three paths… | — |
 | **Subscription Audit** (`subscription-audit`) | Find and rank the recurring-payment leak — every subscription annualized, sorted by real yearly cost, with the keep/cancel/downgrade pass and the… | — |
-| **Support Staffing Model** (`support-staffing-model`) | How many support agents does the queue actually need — Erlang C, computed, not 'tickets per agent' folklore. | — |
-| **Tornado Sensitivity** (`tornado-sensitivity`) | Which assumption actually moves the answer — one-at-a-time sensitivity, ranked into a tornado. | — |
+| **Support Staffing Model** (`support-staffing-model`) | How many support agents does the queue actually need — Erlang C, computed, not 'tickets per agent' folklore. | ✅ 5/5 |
+| **Tornado Sensitivity** (`tornado-sensitivity`) | Which assumption actually moves the answer — one-at-a-time sensitivity, ranked into a tornado. | ✅ 5/5 |
 | **Unit Economics** (`unit-economics`) | Model the unit economics of a business — CAC, LTV, payback, contribution margin — from real inputs. | — |
 
 ### `pm-consulting` — 6 skills
@@ -523,7 +523,7 @@
 | **Runway Planner** (`runway-planner`) | Turn burn and cash into a clear runway picture and a raise decision — months left, default-alive vs default-dead, and what to cut or change. | — |
 | **Startup Idea Validator** (`startup-idea-validator`) | Pressure-test a startup idea the way a sharp investor or co-founder would — problem, market, wedge, moat, why-now, and the fastest cheap way to… | — |
 
-### `pm-money` — 22 skills
+### `pm-money` — 22 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -538,7 +538,7 @@
 | **Hidden-Fee Auditor** (`hidden-fee-auditor`) | Scan a bill, contract, or quote for junk and hidden fees — the padding buried in the fine print — and get them questioned or removed. | — |
 | **Investing Policy Statement** (`investing-policy-statement`) | Draft a personal investing policy statement (IPS) — the rules someone sets for their own investing. | — |
 | **Lower My Bill** (`lower-my-bill`) | Negotiate a recurring bill down — internet, phone, insurance, cable, gym — with a ready-to-read script, the competitor leverage that actually… | — |
-| **Microloan Comparison** (`microloan-comparison`) | Compare small loans from microfinance institutions, lending apps, savings groups and moneylenders by what they really cost, including flat versus… | — |
+| **Microloan Comparison** (`microloan-comparison`) | Compare small loans from microfinance institutions, lending apps, savings groups and moneylenders by what they really cost, including flat versus… | ✅ 4.8/5 |
 | **Money Priorities Order** (`money-priorities-order`) | Decide where your next dollar should go — the order to tackle emergency fund, high-interest debt, retirement match, and saving/investing — so you… | — |
 | **Net Worth Statement** (`net-worth-statement`) | Produce a personal net-worth statement — assets minus liabilities — and a way to track it. | — |
 | **Price-Match Request** (`price-match-request`) | Get a retailer to match a lower price you found — or refund the difference when the price drops right after you bought — with the request written… | — |
@@ -550,20 +550,20 @@
 | **Warranty Claim** (`warranty-claim`) | Get a broken product repaired, replaced, or refunded under warranty — with the claim message written, the proof to attach, and the consumer-law… | — |
 | **Windfall Plan** (`windfall-plan`) | Make a smart plan for a lump sum — a bonus, inheritance, tax refund, settlement, or sale — so it builds your future instead of evaporating into… | — |
 
-### `pm-operations` — 12 skills
+### `pm-operations` — 12 skills · 3 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Async Decision Memo** (`async-decision-memo`) | Run a decision asynchronously — the memo, the silent-read window, the comment protocol, and the deadline that makes it land without a meeting. | — |
+| **Async Decision Memo** (`async-decision-memo`) | Run a decision asynchronously — the memo, the silent-read window, the comment protocol, and the deadline that makes it land without a meeting. | ✅ 4.8/5 |
 | **Email Triage** (`email-triage`) | Triage a Gmail inbox down to only what needs you. | — |
 | **Morning Intelligence** (`morning-intelligence`) | Interviews you across 15 questions to capture your role, topics, sources, exclusions, and format preferences, then writes a master prompt you can… | — |
 | **Process Documentation** (`process-documentation`) | Document any business process in a clear, structured format. | — |
 | **Project Status Report** (`project-status-report`) | Write a structured project status report for any project. | — |
 | **RACI Matrix** (`raci-matrix`) | Define a RACI matrix for a cross-functional project or process. | — |
-| **RFP Writer** (`rfp-writer`) | Write a clear Request for Proposal that gets comparable, high-quality vendor bids. | — |
+| **RFP Writer** (`rfp-writer`) | Write a clear Request for Proposal that gets comparable, high-quality vendor bids. | ✅ 4.8/5 |
 | **Risk Register** (`risk-register`) | Build and maintain a project or product risk register. | — |
 | **SOP Writer** (`sop-writer`) | Write a Standard Operating Procedure (SOP) for any operational task. | — |
-| **Vendor Contract Checklist** (`vendor-contract-checklist`) | Review a vendor/SaaS contract against a practical checklist before you sign. | — |
+| **Vendor Contract Checklist** (`vendor-contract-checklist`) | Review a vendor/SaaS contract against a practical checklist before you sign. | ✅ 5/5 |
 | **Vendor Evaluation** (`vendor-evaluation`) | Create a structured vendor evaluation framework for any procurement decision. | — |
 | **Workshop Facilitation Guide** (`workshop-facilitation-guide`) | Design and facilitate any workshop, working session, or collaborative meeting. | — |
 
@@ -598,7 +598,7 @@
 | **Lemon Law Check** (`lemon-law-check`) | Figure out whether your problem car might qualify for a refund or replacement under lemon law or warranty — and build the paper trail to claim it. | — |
 | **NDA Analyser** (`nda-analyser`) | Analyses a Non-Disclosure Agreement clause by clause and flags unusual terms, one-sided provisions, and negotiation points. | — |
 | **Power of Attorney Explainer** (`power-of-attorney-explainer`) | Understand power of attorney — which type you need, what it covers, and how to set one up properly — so the right person can act for you or a… | — |
-| **Privacy Policy Drafter** (`privacy-policy-drafter`) | Draft a clear, plain-language privacy policy tailored to what a product actually collects and does with data. | ✅ 4.8/5 |
+| **Privacy Policy Drafter** (`privacy-policy-drafter`) | Draft a clear, plain-language privacy policy tailored to what a product actually collects and does with data. | ✅ 4.9/5 |
 | **Property Tax Appeal** (`property-tax-appeal`) | Challenge an over-assessed property tax bill — check whether your assessment is too high, build the evidence, and file the appeal before the deadline. | — |
 | **Small-Claims Prep** (`small-claims-prep`) | Prepare a small-claims case end to end — the demand letter that often settles it first, the evidence pack, what to file, and a plain-English… | — |
 | **Tenant Rights Explainer** (`tenant-rights-explainer`) | Understand your rights as a renter in a specific situation — repairs ignored, a rent increase, an eviction notice, deposit disputes, or entry… | — |
@@ -663,24 +663,24 @@
 | **JD Decoder** (`jd-decoder`) | Decode a job description to find what they actually want beneath the buzzwords. | — |
 | **Outreach Message** (`outreach-message`) | Write cold outreach and networking messages that actually get replies. | — |
 
-### `pm-lifeadmin` — 28 skills
+### `pm-lifeadmin` — 28 skills · 7 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Appliance Buying Guide** (`appliance-buying-guide`) | Cut through the model soup to buy the right appliance — the features that actually matter for you, the ones that are marketing, and when to buy. | — |
 | **Car-Buying Negotiation** (`car-buying-negotiation`) | Negotiate a car purchase without getting played — know the real target price, handle the dealership tactics, and keep the financing and add-ons… | — |
 | **Caregiver Coordination** (`caregiver-coordination`) | Organize care for an aging or ill family member across multiple helpers — the shared care map, a fair rotation with backup rules, the information… | — |
-| **Complaint Letter** (`complaint-letter`) | Write a firm, effective complaint letter that gets a resolution. | — |
+| **Complaint Letter** (`complaint-letter`) | Write a firm, effective complaint letter that gets a resolution. | ✅ 4.8/5 |
 | **Contractor Dispute** (`contractor-dispute`) | Handle a dispute with a contractor — unfinished work, poor quality, overcharging, or a no-show — with a path that protects your money and your… | — |
 | **Declutter By Room** (`declutter-by-room`) | Declutter a room (or a whole home) with a plan that actually finishes — a sensible order, quick decision rules, and a way to keep it from creeping… | — |
-| **Dispute Letter** (`dispute-letter`) | Write a letter to dispute an incorrect charge, bill, or record. | — |
+| **Dispute Letter** (`dispute-letter`) | Write a letter to dispute an incorrect charge, bill, or record. | ✅ 4.3/5 |
 | **Doctor Visit Prep** (`doctor-visit-prep`) | Prepare for a doctor's appointment so the 12 minutes actually get used — the symptom timeline in the format clinicians think in, the prioritized… | — |
-| **Fine Appeal Letter** (`fine-appeal-letter`) | Appeal a parking ticket, penalty charge, or administrative fine with the grounds that actually get appeals granted — not indignation. | — |
+| **Fine Appeal Letter** (`fine-appeal-letter`) | Appeal a parking ticket, penalty charge, or administrative fine with the grounds that actually get appeals granted — not indignation. | ✅ 4.8/5 |
 | **Flight-Delay Compensation** (`flight-delay-compensation`) | Work out whether a delayed, cancelled, or overbooked flight likely owes you compensation — and draft the claim with the right rule cited. | — |
 | **Home Energy Savings** (`home-energy-savings`) | Cut your home energy bills with a prioritized plan — the free and cheap fixes first, then the upgrades that actually pay back. | — |
 | **Home-Inspection Decoder** (`home-inspection-decoder`) | Make sense of a home-inspection report before you buy — what's serious vs cosmetic, what to negotiate, and what to investigate further. | — |
 | **Home-Maintenance Calendar** (`home-maintenance-calendar`) | Build a seasonal home-maintenance calendar so the small upkeep gets done before it becomes an expensive repair. | — |
-| **Insurance Claim** (`insurance-claim`) | Write a clear insurance claim letter or appeal that supports a payout. | — |
+| **Insurance Claim** (`insurance-claim`) | Write a clear insurance claim letter or appeal that supports a payout. | ✅ 4.3/5 |
 | **Medical Records Request** (`medical-records-request`) | Request your medical records and actually get them — what to ask for, the request letter that can't be shuffled aside, the timelines and fee rules… | — |
 | **Moving House Checklist** (`moving-house-checklist`) | Turn a move date into a calm, timed plan — every address change, utility switch, deposit-recovery step, and packing wave scheduled so nothing gets… | — |
 | **Moving-Quote Decoder** (`moving-quote-decoder`) | Decode a moving-company quote and spot the lowball, the padding, and the outright scam before you book. | — |
@@ -688,13 +688,13 @@
 | **New Parent Logistics** (`new-parent-logistics`) | Turn the pre-baby chaos into a staged logistics plan — leave paperwork, insurance deadlines, the hospital-bag/home-setup checklists, and the… | — |
 | **Prescription Cost Navigator** (`prescription-cost-navigator`) | Work down the cost of a prescription systematically — the generic and therapeutic-alternative conversation, discount programs vs insurance math… | — |
 | **Product-Recall Check** (`product-recall-check`) | Find out whether something you own — a car, appliance, car seat, food item, or gadget — is under a safety recall, and what to do about it. | — |
-| **Reference Letter** (`reference-letter`) | Write a credible, specific letter of recommendation or reference. | — |
+| **Reference Letter** (`reference-letter`) | Write a credible, specific letter of recommendation or reference. | ✅ 4.3/5 |
 | **Relocation Planner** (`relocation-planner`) | Plan a move — across town or across a border — as a dependency-ordered project: the lease/housing chain, address-change cascade, utilities… | — |
 | **Renovation Scope & Budget** (`renovation-scope-and-budget`) | Turn a renovation idea into a realistic scope, budget, and sequence before you hire anyone — so you go in informed instead of getting… | — |
-| **Rental Application** (`rental-application`) | Write a standout rental application / cover letter to a landlord or letting agent. | — |
+| **Rental Application** (`rental-application`) | Write a standout rental application / cover letter to a landlord or letting agent. | ✅ 4.3/5 |
 | **Second Opinion Request** (`second-opinion-request`) | Get a second medical opinion without torching the first relationship — when it's warranted, how to raise it with the current doctor, the records… | — |
 | **Vehicle-Maintenance Schedule** (`vehicle-maintenance-schedule`) | Build a maintenance schedule for your car so it stays reliable and holds value — the service intervals, the DIY-vs-shop split, and the checks that… | — |
-| **Wedding Speech** (`wedding-speech`) | A best-man/maid-of-honour/parent wedding toast that actually lands — funny without roasting, moving without syrup, short enough that nobody checks… | — |
+| **Wedding Speech** (`wedding-speech`) | A best-man/maid-of-honour/parent wedding toast that actually lands — funny without roasting, moving without syrup, short enough that nobody checks… | ✅ 4.5/5 |
 
 ### `pm-people` — 7 skills
 
@@ -721,99 +721,99 @@
 | **Personal Bio** (`personal-bio`) | Write a professional bio in the three lengths you actually need. | — |
 | **Personal Board of Directors** (`personal-board-of-directors`) | Five standing advisors — the Operator, the Skeptic, the CFO, the Coach, the Customer — debate your decision on paper and vote. | — |
 | **Portfolio Page** (`portfolio-page`) | Structure a portfolio or case-study page that shows your work, not just lists it. | — |
-| **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 3.3/5 |
+| **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 4/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
 ## 🌍 Industries & Public Sector (832 skills)
 
-### `other` — 22 skills
+### `other` — 22 skills · 12 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Boundary-Setting Scripts** (`boundary-setting-scripts`) | Set a boundary with someone — a friend, family member, coworker, or partner — clearly and kindly, with the actual words and a plan for the pushback. | — |
 | **Conflict De-escalation** (`conflict-deescalation`) | Calm a heated conflict — in person or in writing — before it does damage, by lowering the temperature instead of winning the point. | — |
-| **Digital Death Plan** (`digital-death-plan`) | Plan what happens to your digital life when you die — accounts, photos, passwords, money, and social profiles — so someone you trust can actually… | — |
-| **Future Self Interview** (`future-self-interview`) | Interview your future self about a decision or a stuck moment — a structured perspective-shift that pulls you out of present emotion and into the… | — |
+| **Digital Death Plan** (`digital-death-plan`) | Plan what happens to your digital life when you die — accounts, photos, passwords, money, and social profiles — so someone you trust can actually… | ✅ 3/5 |
+| **Future Self Interview** (`future-self-interview`) | Interview your future self about a decision or a stuck moment — a structured perspective-shift that pulls you out of present emotion and into the… | ✅ 5/5 |
 | **Give Hard Feedback Kindly** (`give-hard-feedback-kindly`) | Give someone difficult feedback — a report, a peer, a friend — so it actually lands and helps, without crushing them or dodging the point. | — |
-| **Grief Admin** (`grief-admin`) | Get through the brutal logistics after a death — who to notify, what accounts and services to close, in what order, and what genuinely can't wait… | — |
-| **Group Trip Negotiator** (`group-trip-negotiator`) | Save the group trip from the group chat — budget alignment before anything gets booked (the awkward conversation, scripted), a decision protocol… | — |
-| **Legacy Letter** (`legacy-letter`) | Write a letter to the people you love, to be read later — the things you'd want them to know, the stories only you hold, the permission and the… | — |
-| **Life Premortem** (`life-premortem`) | Write the failure story of your year, relationship, move, or big life bet in advance — imagine it's a year later and it went wrong, tell that… | — |
+| **Grief Admin** (`grief-admin`) | Get through the brutal logistics after a death — who to notify, what accounts and services to close, in what order, and what genuinely can't wait… | ✅ 4.8/5 |
+| **Group Trip Negotiator** (`group-trip-negotiator`) | Save the group trip from the group chat — budget alignment before anything gets booked (the awkward conversation, scripted), a decision protocol… | ✅ 4.8/5 |
+| **Legacy Letter** (`legacy-letter`) | Write a letter to the people you love, to be read later — the things you'd want them to know, the stories only you hold, the permission and the… | ✅ 2.3/5 |
+| **Life Premortem** (`life-premortem`) | Write the failure story of your year, relationship, move, or big life bet in advance — imagine it's a year later and it went wrong, tell that… | ✅ 4.8/5 |
 | **Make Friends as an Adult** (`make-friends-as-an-adult`) | Build a real plan to make friends as an adult — where to meet people you'd actually click with, how to turn acquaintances into friends, and past… | — |
-| **Mechanic Quote Decoder** (`mechanic-quote-decoder`) | Read a garage quote or invoice like someone who can't be padded — which line items connect to your actual symptom, which are while-we're-in-there… | — |
+| **Mechanic Quote Decoder** (`mechanic-quote-decoder`) | Read a garage quote or invoice like someone who can't be padded — which line items connect to your actual symptom, which are while-we're-in-there… | ✅ 5/5 |
 | **Networking for Introverts** (`networking-for-introverts`) | Network in a way that actually works for introverts — depth over breadth, one-on-one over rooms, and energy managed — instead of forcing yourself… | — |
-| **Pixel GIF Maker** (`pixel-gif-maker`) | Generate retro pixel-text animated GIFs for Slack, Teams, or a PR comment — scrolling marquees, heartbeat pulses, confetti parties, twinkling… | — |
-| **Rabbit Hole Rescue** (`rabbit-hole-rescue`) | Talk to a family member or friend who's gone down a conspiracy, misinformation, or extremism rabbit hole — without blowing up the relationship or… | — |
+| **Pixel GIF Maker** (`pixel-gif-maker`) | Generate retro pixel-text animated GIFs for Slack, Teams, or a PR comment — scrolling marquees, heartbeat pulses, confetti parties, twinkling… | ✅ 3.3/5 |
+| **Rabbit Hole Rescue** (`rabbit-hole-rescue`) | Talk to a family member or friend who's gone down a conspiracy, misinformation, or extremism rabbit hole — without blowing up the relationship or… | ✅ 5/5 |
 | **Read the Room** (`read-the-room`) | Figure out the real social dynamics of a situation — the unspoken mood, who holds influence, what's actually going on beneath the surface — so you… | — |
 | **Reconnect With Someone** (`reconnect-with-someone`) | Reach back out to a friend or person you've lost touch with — past the awkwardness of the gap — with a message that reopens the door warmly. | — |
 | **Repair After a Fight** (`repair-after-a-fight`) | Repair a relationship after an argument — reconnect, own your part, and rebuild trust — instead of the cold silence that lets damage set. | — |
 | **Small-Talk Survival** (`small-talk-survival`) | Survive (and even enjoy) small talk — how to start it, keep it going past the weather, and exit gracefully — for people who find it painful. | — |
 | **Support a Friend in Crisis** (`support-a-friend-in-crisis`) | Show up well for someone going through something hard — loss, illness, a breakup, a crisis — with the right words, the right presence, and… | — |
-| **The Ick Decoder** (`the-ick-decoder`) | Figure out whether 'the ick' about someone you're dating is a real incompatibility, a genuine red flag, or an anxious/avoidant self-sabotage… | — |
-| **Usage-Based Pricing Model** (`usage-based-pricing-model`) | Design a usage-based pricing scheme that scales revenue with value without scaring customers away — the metric that tracks value, tiers with… | — |
-| **Used Car Decoder** (`used-car-decoder`) | Decode a used-car listing before you drive an hour to see it — what the seller's phrasing is hiding, the history-check items that matter, a… | — |
+| **The Ick Decoder** (`the-ick-decoder`) | Figure out whether 'the ick' about someone you're dating is a real incompatibility, a genuine red flag, or an anxious/avoidant self-sabotage… | ✅ 5/5 |
+| **Usage-Based Pricing Model** (`usage-based-pricing-model`) | Design a usage-based pricing scheme that scales revenue with value without scaring customers away — the metric that tracks value, tiers with… | ✅ 4.8/5 |
+| **Used Car Decoder** (`used-car-decoder`) | Decode a used-car listing before you drive an hour to see it — what the seller's phrasing is hiding, the history-check items that matter, a… | ✅ 4.8/5 |
 
-### `pm-2027` — 10 skills
-
-| Skill | What it does | Eval |
-|---|---|---|
-| **Agent Hiring Panel** (`agent-hiring-panel`) | Hire an AI agent the way you'd hire an employee — a role spec with success criteria, a structured work-sample interview run on your real tasks… | — |
-| **Agent Severance** (`agent-severance`) | Offboard an AI agent the way you'd offboard an employee — inventory what it knew and touched, export then purge its memory, revoke every… | — |
-| **AI Disclosure Policy** (`ai-disclosure-policy`) | Decide when and how your product and communications must (or should) label AI-generated content, and write the disclosure policy —… | — |
-| **API For Yourself** (`api-for-yourself`) | Publish 'how to work with me' as a literal API spec — endpoints (what to ask me for and what you'll get back), rate limits (meeting and interrupt… | — |
-| **Clone Brief** (`clone-brief`) | Send your position to a meeting instead of your body — a one-page brief carrying your stances, fallbacks, red lines, tradables, and delegation… | — |
-| **Context Bankruptcy** (`context-bankruptcy`) | Declare bankruptcy on a long-lived AI agent's accumulated memory — audit what it currently believes, separate ground truth from stale and wrong… | — |
-| **Deepfake Drill** (`deepfake-drill`) | Run a tabletop drill of a voice-clone or deepfake fraud attempt — the 'CEO needs this wire today' call — against your actual approval process… | — |
-| **The Org Simulator** (`the-org-simulator`) | Stress-test a proposed org change before announcing it — simulate who gains, who loses, who blocks, where friction erupts in the first 90 days… | — |
-| **The Time Capsule** (`the-time-capsule`) | Write a sealed memo to your future self or successor — the honest state of things, falsifiable predictions with confidence levels, and the advice… | — |
-| **The Understudy** (`the-understudy`) | Study 3-5 samples of the user's real writing and decisions, build an explicit 'how you think' profile, then draft new work as their understudy —… | — |
-
-### `pm-3d-explorer` — 4 skills
+### `pm-2027` — 10 skills · 10 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Explorer Interface Brief** (`explorer-interface-brief`) | Use when asked to design the interface for an interactive 3D explorer, plan a UI for exploring a 3D model of a topic, or write an image-model… | — |
-| **Explorer Pipeline** (`explorer-pipeline`) | Use when asked to make an interactive 3D explorer of a topic from start to finish, go from a topic to a clickable 3D learning page, or run the… | — |
-| **Explorer Viewer Builder** (`explorer-viewer-builder`) | Use when asked to build a 3D viewer for a GLB model, make an interactive explorer with clickable labelled parts, add an exploded view or quiz to a… | — |
-| **Model Prompt Pack** (`model-prompt-pack`) | Use when asked to write prompts for image-to-3D or text-to-3D tools, generate 3D models of a topic's parts, plan the assets for a 3D explorer, or… | — |
+| **Agent Hiring Panel** (`agent-hiring-panel`) | Hire an AI agent the way you'd hire an employee — a role spec with success criteria, a structured work-sample interview run on your real tasks… | ✅ 4.8/5 |
+| **Agent Severance** (`agent-severance`) | Offboard an AI agent the way you'd offboard an employee — inventory what it knew and touched, export then purge its memory, revoke every… | ✅ 4.8/5 |
+| **AI Disclosure Policy** (`ai-disclosure-policy`) | Decide when and how your product and communications must (or should) label AI-generated content, and write the disclosure policy —… | ✅ 4.8/5 |
+| **API For Yourself** (`api-for-yourself`) | Publish 'how to work with me' as a literal API spec — endpoints (what to ask me for and what you'll get back), rate limits (meeting and interrupt… | ✅ 4.8/5 |
+| **Clone Brief** (`clone-brief`) | Send your position to a meeting instead of your body — a one-page brief carrying your stances, fallbacks, red lines, tradables, and delegation… | ✅ 5/5 |
+| **Context Bankruptcy** (`context-bankruptcy`) | Declare bankruptcy on a long-lived AI agent's accumulated memory — audit what it currently believes, separate ground truth from stale and wrong… | ✅ 1.3/5 |
+| **Deepfake Drill** (`deepfake-drill`) | Run a tabletop drill of a voice-clone or deepfake fraud attempt — the 'CEO needs this wire today' call — against your actual approval process… | ✅ 4.8/5 |
+| **The Org Simulator** (`the-org-simulator`) | Stress-test a proposed org change before announcing it — simulate who gains, who loses, who blocks, where friction erupts in the first 90 days… | ✅ 4.8/5 |
+| **The Time Capsule** (`the-time-capsule`) | Write a sealed memo to your future self or successor — the honest state of things, falsifiable predictions with confidence levels, and the advice… | ✅ 4.8/5 |
+| **The Understudy** (`the-understudy`) | Study 3-5 samples of the user's real writing and decisions, build an explicit 'how you think' profile, then draft new work as their understudy —… | ✅ 5/5 |
 
-### `pm-accessibility` — 6 skills
-
-| Skill | What it does | Eval |
-|---|---|---|
-| **Accessible Travel Planner** (`accessible-travel-planner`) | Plan a trip that actually works with a disability or access need — confirm real accessibility (not just 'accessible' labels), book the assistance… | — |
-| **Accommodation Request** (`accommodation-request`) | Request a reasonable accommodation at work or in education — frame it around the barrier and the adjustment (not your diagnosis), cite the right… | — |
-| **Disability Benefit Appeal** (`disability-benefit-appeal`) | Appeal a denied disability benefit (SSDI/SSI, PIP, DLA, ESA and similar) — decode the denial reason, build the evidence-backed case that answers… | — |
-| **Disability Disclosure Decision** (`disability-disclosure-decision`) | Decide whether, when, how, and to whom to disclose a disability or health condition at work — weighing the real benefits (accommodations… | — |
-| **Functional Assessment Prep** (`functional-assessment-prep`) | Prepare for a disability or illness benefit assessment (a functional or work capability assessment, a medical review, a disability evaluation… | — |
-| **Venue Access Check** (`venue-access-check`) | Check whether a specific venue — a restaurant, office, event space, Airbnb, clinic — will actually work for your access needs, before you commit… | — |
-
-### `pm-agentnative` — 5 skills
+### `pm-3d-explorer` — 4 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Agent Era Pricing** (`agent-era-pricing`) | Redesign seat-based pricing for the agent era — when one human runs ten agents, per-seat models collapse. | — |
-| **Agent Readiness Audit** (`agent-readiness-audit`) | Audit whether AI agents can actually use your product — docs, APIs, onboarding, errors, and discoverability, evaluated from a non-human user's… | — |
-| **Human-in-the-Loop Design** (`human-in-the-loop-design`) | Design the human approval surface for an agent system — which actions gate, how approvals batch without becoming rubber stamps, and what the audit… | — |
-| **MCP Server Spec** (`mcp-server-spec`) | Design an MCP server for a product — the tool surface, auth model, and safety boundaries that make it genuinely usable by AI agents. | — |
-| **Voice Agent Design** (`voice-agent-design`) | Design a voice AI agent for phone or in-app conversations — call flows, interruption handling, escalation to humans, and the metrics that catch a… | — |
+| **Explorer Interface Brief** (`explorer-interface-brief`) | Use when asked to design the interface for an interactive 3D explorer, plan a UI for exploring a 3D model of a topic, or write an image-model… | ✅ 4.8/5 |
+| **Explorer Pipeline** (`explorer-pipeline`) | Use when asked to make an interactive 3D explorer of a topic from start to finish, go from a topic to a clickable 3D learning page, or run the… | ✅ 4.5/5 |
+| **Explorer Viewer Builder** (`explorer-viewer-builder`) | Use when asked to build a 3D viewer for a GLB model, make an interactive explorer with clickable labelled parts, add an exploded view or quiz to a… | ✅ 2.5/5 |
+| **Model Prompt Pack** (`model-prompt-pack`) | Use when asked to write prompts for image-to-3D or text-to-3D tools, generate 3D models of a topic's parts, plan the assets for a 3D explorer, or… | ✅ 5/5 |
 
-### `pm-agentops` — 5 skills
-
-| Skill | What it does | Eval |
-|---|---|---|
-| **Agent Incident Postmortem** (`agent-incident-postmortem`) | Run a blameless postmortem for an incident caused by an AI agent or LLM feature — hallucinated facts shipped to users, runaway tool use, prompt… | — |
-| **Agent Observability Spec** (`agent-observability-spec`) | Specify the tracing, metrics, and alerting for an AI agent or LLM feature in production. | — |
-| **Context Engineering Review** (`context-engineering-review`) | Review what an LLM feature or agent actually puts in its context window — and find what's bloating, missing, or fighting itself. | — |
-| **Model Migration Plan** (`model-migration-plan`) | Plan the migration of an LLM feature from one model to another without breaking production. | — |
-| **Prompt Regression Suite** (`prompt-regression-suite`) | Design a regression test suite that catches an LLM feature getting worse when the prompt, model, or context changes. | — |
-
-### `pm-aging-parents` — 2 skills
+### `pm-accessibility` — 6 skills · 6 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Aging Parent Talks** (`aging-parent-talks`) | Prepare the conversations with aging parents that everyone postpones — the driving talk, the money talk, the care-options talk, the moving talk —… | — |
-| **Sibling Care Summit** (`sibling-care-summit`) | Get siblings onto one team about aging parents before the crisis does it for them — a structured family meeting with an agenda that prevents… | — |
+| **Accessible Travel Planner** (`accessible-travel-planner`) | Plan a trip that actually works with a disability or access need — confirm real accessibility (not just 'accessible' labels), book the assistance… | ✅ 4.8/5 |
+| **Accommodation Request** (`accommodation-request`) | Request a reasonable accommodation at work or in education — frame it around the barrier and the adjustment (not your diagnosis), cite the right… | ✅ 4.8/5 |
+| **Disability Benefit Appeal** (`disability-benefit-appeal`) | Appeal a denied disability benefit (SSDI/SSI, PIP, DLA, ESA and similar) — decode the denial reason, build the evidence-backed case that answers… | ✅ 4.8/5 |
+| **Disability Disclosure Decision** (`disability-disclosure-decision`) | Decide whether, when, how, and to whom to disclose a disability or health condition at work — weighing the real benefits (accommodations… | ✅ 5/5 |
+| **Functional Assessment Prep** (`functional-assessment-prep`) | Prepare for a disability or illness benefit assessment (a functional or work capability assessment, a medical review, a disability evaluation… | ✅ 4.8/5 |
+| **Venue Access Check** (`venue-access-check`) | Check whether a specific venue — a restaurant, office, event space, Airbnb, clinic — will actually work for your access needs, before you commit… | ✅ 4.5/5 |
+
+### `pm-agentnative` — 5 skills · 5 eval-scored
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Agent Era Pricing** (`agent-era-pricing`) | Redesign seat-based pricing for the agent era — when one human runs ten agents, per-seat models collapse. | ✅ 4.8/5 |
+| **Agent Readiness Audit** (`agent-readiness-audit`) | Audit whether AI agents can actually use your product — docs, APIs, onboarding, errors, and discoverability, evaluated from a non-human user's… | ✅ 4.5/5 |
+| **Human-in-the-Loop Design** (`human-in-the-loop-design`) | Design the human approval surface for an agent system — which actions gate, how approvals batch without becoming rubber stamps, and what the audit… | ✅ 4.8/5 |
+| **MCP Server Spec** (`mcp-server-spec`) | Design an MCP server for a product — the tool surface, auth model, and safety boundaries that make it genuinely usable by AI agents. | ✅ 4.8/5 |
+| **Voice Agent Design** (`voice-agent-design`) | Design a voice AI agent for phone or in-app conversations — call flows, interruption handling, escalation to humans, and the metrics that catch a… | ✅ 4/5 |
+
+### `pm-agentops` — 5 skills · 5 eval-scored
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Agent Incident Postmortem** (`agent-incident-postmortem`) | Run a blameless postmortem for an incident caused by an AI agent or LLM feature — hallucinated facts shipped to users, runaway tool use, prompt… | ✅ 4.8/5 |
+| **Agent Observability Spec** (`agent-observability-spec`) | Specify the tracing, metrics, and alerting for an AI agent or LLM feature in production. | ✅ 5/5 |
+| **Context Engineering Review** (`context-engineering-review`) | Review what an LLM feature or agent actually puts in its context window — and find what's bloating, missing, or fighting itself. | ✅ 4.8/5 |
+| **Model Migration Plan** (`model-migration-plan`) | Plan the migration of an LLM feature from one model to another without breaking production. | ✅ 4.8/5 |
+| **Prompt Regression Suite** (`prompt-regression-suite`) | Design a regression test suite that catches an LLM feature getting worse when the prompt, model, or context changes. | ✅ 4.8/5 |
+
+### `pm-aging-parents` — 2 skills · 2 eval-scored
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Aging Parent Talks** (`aging-parent-talks`) | Prepare the conversations with aging parents that everyone postpones — the driving talk, the money talk, the care-options talk, the moving talk —… | ✅ 5/5 |
+| **Sibling Care Summit** (`sibling-care-summit`) | Get siblings onto one team about aging parents before the crisis does it for them — a structured family meeting with an agenda that prevents… | ✅ 4.8/5 |
 
 ### `pm-ai-native` — 13 skills
 
@@ -833,15 +833,15 @@
 | **Run an Agent Team** (`run-an-agent-team`) | Design a small team of AI agents to tackle a complex task in parallel — who does what, how they hand off, and how to keep them coordinated —… | — |
 | **Spot AI Mistakes** (`spot-ai-mistakes`) | Learn to recognize where and how AI tends to go wrong — the specific failure patterns — so you catch its mistakes on sight instead of getting… | — |
 
-### `pm-aiwork` — 5 skills
+### `pm-aiwork` — 5 skills · 5 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **AI-Assisted Performance Review** (`ai-assisted-performance-review`) | Evaluate performance fairly when output is AI-assisted — what still measures the human, what now measures the tooling, and how to run the review… | — |
-| **AI Content Audit** (`ai-content-audit`) | Audit a content library, docs site, or blog for AI-generated filler that's eroding trust and search performance — and triage what to fix, rewrite… | — |
-| **AI ROI Audit** (`ai-roi-audit`) | Audit whether the organisation's AI spend actually paid — measured against baselines, not vendor math or vibes. | — |
-| **AI Usage Policy** (`ai-usage-policy`) | Write an AI usage policy people can actually follow — approved tools, data rules, disclosure duties, and review obligations, in one page instead… | — |
-| **Role Redesign For AI** (`role-redesign-for-ai`) | Redesign a job role that AI now does a large part of — deliberately, instead of quietly expecting the same headcount to absorb 140% output. | — |
+| **AI-Assisted Performance Review** (`ai-assisted-performance-review`) | Evaluate performance fairly when output is AI-assisted — what still measures the human, what now measures the tooling, and how to run the review… | ✅ 4.8/5 |
+| **AI Content Audit** (`ai-content-audit`) | Audit a content library, docs site, or blog for AI-generated filler that's eroding trust and search performance — and triage what to fix, rewrite… | ✅ 4.8/5 |
+| **AI ROI Audit** (`ai-roi-audit`) | Audit whether the organisation's AI spend actually paid — measured against baselines, not vendor math or vibes. | ✅ 4.8/5 |
+| **AI Usage Policy** (`ai-usage-policy`) | Write an AI usage policy people can actually follow — approved tools, data rules, disclosure duties, and review obligations, in one page instead… | ✅ 5/5 |
+| **Role Redesign For AI** (`role-redesign-for-ai`) | Redesign a job role that AI now does a large part of — deliberately, instead of quietly expecting the same headcount to absorb 140% output. | ✅ 4.8/5 |
 
 ### `pm-architecture` — 6 skills
 
@@ -854,14 +854,14 @@
 | **Planning Application Statement** (`planning-application-statement`) | Write the design and access statement that supports a planning application — the site analysis, the design rationale, the policy compliance, and… | — |
 | **Site Analysis Report** (`site-analysis-report`) | Analyse a site before designing on it — what is physically there, what the law and the neighbours allow, and which constraints will actually shape… | — |
 
-### `pm-autopilot` — 4 skills
+### `pm-autopilot` — 4 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Autopilot Charter** (`autopilot-charter`) | Decide which of your recurring rituals to put on autopilot — and which to keep manual. | — |
-| **Delta Briefing** (`delta-briefing`) | Make a recurring brief report what changed since the last edition instead of restating everything. | — |
-| **Outcome Tracker** (`outcome-tracker`) | Record the testable predictions inside a decision, then score them against reality later — so frameworks earn trust from outcomes, not vibes. | — |
-| **Schedule Recipe** (`schedule-recipe`) | Turn 'run this every Friday at 4pm' into a working, copy-paste schedule on the user's actual runner. | — |
+| **Autopilot Charter** (`autopilot-charter`) | Decide which of your recurring rituals to put on autopilot — and which to keep manual. | ✅ 4.8/5 |
+| **Delta Briefing** (`delta-briefing`) | Make a recurring brief report what changed since the last edition instead of restating everything. | ✅ 4.8/5 |
+| **Outcome Tracker** (`outcome-tracker`) | Record the testable predictions inside a decision, then score them against reality later — so frameworks earn trust from outcomes, not vibes. | ✅ 5/5 |
+| **Schedule Recipe** (`schedule-recipe`) | Turn 'run this every Friday at 4pm' into a working, copy-paste schedule on the user's actual runner. | ✅ 2/5 |
 
 ### `pm-banking` — 4 skills
 
@@ -887,122 +887,122 @@
 | **Medication-Management System** (`medication-management-system`) | Set up a system to manage medications safely — for yourself or someone you care for — so doses aren't missed, doubled, or dangerously combined. | — |
 | **Respite-Care Plan** (`respite-care-plan`) | Plan a genuine break from caregiving — arrange the coverage, hand off the essentials, and actually rest — because respite is what lets you keep going. | — |
 
-### `pm-china-compliance` — 4 skills
+### `pm-china-compliance` — 4 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Data Export Assessment (数据出境)** (`cn-data-export-assessment`) | Use when asked 数据出境要申报吗, 数据出境安全评估还是标准合同, 个人信息出境标准合同怎么备案, 我们把数据传到海外总部合规吗, or decide how to transfer data out of mainland China lawfully. Produces a… | — |
-| **Generative AI Filing (生成式人工智能备案)** (`cn-genai-filing`) | Use when asked 大模型备案怎么做, 生成式人工智能服务备案还是登记, 算法备案流程, AI 生成内容标识怎么加, 我们接了已备案的大模型还要备案吗, or prepare a generative AI product for launch in mainland China.… | — |
-| **MLPS 2.0 Checklist (等保 2.0)** (`cn-mlps-checklist`) | Use when asked 等保怎么做, 等保 2.0 定级, 等保备案和测评流程, 等保三级要求, 我们的系统需要过等保吗, or prepare an information system for China's Multi-Level Protection Scheme (MLPS… | — |
-| **PIPL Impact Assessment (个人信息保护影响评估)** (`cn-pipl-pia`) | Use when asked 个人信息保护影响评估怎么做, 写一份 PIA, 处理敏感个人信息要评估吗, 自动化决策评估, PIPL 第五十五条, or assess a processing activity under China's Personal Information… | — |
+| **Data Export Assessment (数据出境)** (`cn-data-export-assessment`) | Use when asked 数据出境要申报吗, 数据出境安全评估还是标准合同, 个人信息出境标准合同怎么备案, 我们把数据传到海外总部合规吗, or decide how to transfer data out of mainland China lawfully. Produces a… | ✅ 4.8/5 |
+| **Generative AI Filing (生成式人工智能备案)** (`cn-genai-filing`) | Use when asked 大模型备案怎么做, 生成式人工智能服务备案还是登记, 算法备案流程, AI 生成内容标识怎么加, 我们接了已备案的大模型还要备案吗, or prepare a generative AI product for launch in mainland China.… | ✅ 4.8/5 |
+| **MLPS 2.0 Checklist (等保 2.0)** (`cn-mlps-checklist`) | Use when asked 等保怎么做, 等保 2.0 定级, 等保备案和测评流程, 等保三级要求, 我们的系统需要过等保吗, or prepare an information system for China's Multi-Level Protection Scheme (MLPS… | ✅ 3.8/5 |
+| **PIPL Impact Assessment (个人信息保护影响评估)** (`cn-pipl-pia`) | Use when asked 个人信息保护影响评估怎么做, 写一份 PIA, 处理敏感个人信息要评估吗, 自动化决策评估, PIPL 第五十五条, or assess a processing activity under China's Personal Information… | ✅ 4.8/5 |
 
-### `pm-china-exams` — 8 skills
-
-| Skill | What it does | Eval |
-|---|---|---|
-| **Campus Recruitment (校招)** (`cn-campus-recruitment`) | Plan a Chinese campus recruitment season (校招: 秋招 and 春招), including internships that convert to offers (实习转正): the timeline, a target company… | — |
-| **GB/T 7714 References (参考文献著录)** (`cn-citation-gbt7714`) | Use when asked 参考文献格式怎么写, 按 GB/T 7714 排参考文献, 帮我改参考文献格式, 顺序编码制还是著者-出版年制, 文献类型标识 J M D 是什么, or format references to the Chinese national standard.… | — |
-| **Civil Service Essay (申论)** (`cn-civil-exam-essay`) | Practise the essay paper (申论) of the Chinese civil service examination (国考 / 省考): work a question from the given materials (给定资料), find the… | — |
-| **Civil Service Interview (结构化面试)** (`cn-civil-exam-interview`) | Practise the structured interview (结构化面试) for Chinese civil service and public institution posts (公务员面试 / 事业单位面试): the common question types, a… | — |
-| **Kaoyan Planner (考研规划)** (`cn-kaoyan-planner`) | Plan preparation for the Chinese postgraduate entrance examination (考研): choosing target schools and programmes with realistic odds, a phased… | — |
-| **State-Owned Enterprise Interview (国企面试)** (`cn-soe-interview`) | Prepare for recruitment at a Chinese state-owned enterprise (国企 / 央企), including its written test and interview: what these employers assess, the… | — |
-| **Tech Interview Drill (大厂技术面试)** (`cn-tech-interview-drill`) | Use when asked 帮我准备大厂技术面试, 八股文怎么背, 模拟一面二面, 系统设计面试题, 项目深挖怎么答, 手撕算法, or run a mock technical interview for a Chinese internet company. Produces a… | — |
-| **Thesis Proposal (开题报告)** (`cn-thesis-proposal`) | Use when asked 帮我写开题报告, 开题答辩怎么准备, 文献综述怎么写, 技术路线图, 研究内容和创新点, or write a thesis proposal for a Chinese university. Produces a 开题报告 in the section… | — |
-
-### `pm-china-life` — 10 skills
+### `pm-china-exams` — 8 skills · 8 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Gaokao Application Planner (高考志愿)** (`cn-gaokao-planner`) | Help a student and family plan university applications after the 高考 (gaokao): use the student's provincial rank rather than raw score, build a 冲 /… | — |
-| **Helping Parents With Admin (帮爸妈办事)** (`cn-help-parents-admin`) | Use when asked 帮爸妈办医保, 帮父母办养老金认证, 爸妈异地就医备案, 帮老人办银行业务, 父母被诈骗了怎么办, 教爸妈用手机办事, 代办委托书, or help an adult child handle 医保, 社保, 养老金, banking or scam… | — |
-| **Housing Fund Withdrawal (公积金提取)** (`cn-housing-fund-withdrawal`) | Use when asked 公积金怎么提取, 租房能提公积金吗, 离职后公积金怎么办, 公积金贷款能贷多少, 异地提取公积金, or plan how to use a Chinese housing provident fund (住房公积金). Produces the… | — |
-| **Hukou Points (积分落户)** (`cn-hukou-points`) | Use when asked 积分落户怎么算, 我能不能落户上海 / 北京 / 深圳, 居转户条件, 落户积分差多少, 人才引进落户, or check eligibility for a city household registration (户口) in China. Produces… | — |
-| **China Annual Tax Reconciliation (个税年度汇算)** (`cn-iit-reconciliation`) | Prepare for China's annual individual income tax reconciliation (个税年度汇算): check income, deductions and special additional deductions, compare the… | — |
-| **China Labour Contract Decoder (劳动合同)** (`cn-labour-contract-decoder`) | Decode a mainland China labour contract (劳动合同) before signing: probation, pay and its structure, working hours, social insurance, non-compete and… | — |
-| **Medical Insurance Claims (医保报销)** (`cn-medical-insurance-claim`) | Use when asked 医保怎么报销, 异地就医怎么备案, 住院能报多少, 门诊报销比例, 手工报销要什么材料, 惠民保值不值得买, or work out what China's basic medical insurance (医保) will pay for a… | — |
-| **China Severance Calculator (经济补偿金)** (`cn-severance-calculator`) | Estimate economic compensation (经济补偿金) when employment ends in mainland China: N, N+1 or 2N under the Labour Contract Law, with the high-earner… | — |
-| **Small Business Tax (个体户与小微企业税务)** (`cn-small-business-tax`) | Use when asked 个体户怎么报税, 小规模纳税人增值税怎么算, 小微企业所得税优惠, 经营所得汇算, 开票超过免税额怎么办, or plan taxes for a sole trader (个体工商户) or small company in China. Produces… | — |
-| **China Social Insurance Explainer (五险一金)** (`cn-social-insurance-explainer`) | Explain China's social insurance and housing fund (五险一金) for a specific person and city: what each part covers, what they and their employer pay… | — |
+| **Campus Recruitment (校招)** (`cn-campus-recruitment`) | Plan a Chinese campus recruitment season (校招: 秋招 and 春招), including internships that convert to offers (实习转正): the timeline, a target company… | ✅ 4.8/5 |
+| **GB/T 7714 References (参考文献著录)** (`cn-citation-gbt7714`) | Use when asked 参考文献格式怎么写, 按 GB/T 7714 排参考文献, 帮我改参考文献格式, 顺序编码制还是著者-出版年制, 文献类型标识 J M D 是什么, or format references to the Chinese national standard.… | ✅ 5/5 |
+| **Civil Service Essay (申论)** (`cn-civil-exam-essay`) | Practise the essay paper (申论) of the Chinese civil service examination (国考 / 省考): work a question from the given materials (给定资料), find the… | ✅ 3.3/5 |
+| **Civil Service Interview (结构化面试)** (`cn-civil-exam-interview`) | Practise the structured interview (结构化面试) for Chinese civil service and public institution posts (公务员面试 / 事业单位面试): the common question types, a… | ✅ 4.8/5 |
+| **Kaoyan Planner (考研规划)** (`cn-kaoyan-planner`) | Plan preparation for the Chinese postgraduate entrance examination (考研): choosing target schools and programmes with realistic odds, a phased… | ✅ 3.5/5 |
+| **State-Owned Enterprise Interview (国企面试)** (`cn-soe-interview`) | Prepare for recruitment at a Chinese state-owned enterprise (国企 / 央企), including its written test and interview: what these employers assess, the… | ✅ 3.8/5 |
+| **Tech Interview Drill (大厂技术面试)** (`cn-tech-interview-drill`) | Use when asked 帮我准备大厂技术面试, 八股文怎么背, 模拟一面二面, 系统设计面试题, 项目深挖怎么答, 手撕算法, or run a mock technical interview for a Chinese internet company. Produces a… | ✅ 4.5/5 |
+| **Thesis Proposal (开题报告)** (`cn-thesis-proposal`) | Use when asked 帮我写开题报告, 开题答辩怎么准备, 文献综述怎么写, 技术路线图, 研究内容和创新点, or write a thesis proposal for a Chinese university. Produces a 开题报告 in the section… | ✅ 2.5/5 |
 
-### `pm-china-manufacturing` — 4 skills
+### `pm-china-life` — 10 skills · 10 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **5S / 6S Audit (5S / 6S 检查表)** (`cn-5s-audit`) | Use when asked 5S 检查表, 6S 管理, 现场管理检查, 5S 评分标准, 车间 6S 稽核, 做一份 5S 推行计划, or design a 5S or 6S audit for a workshop, warehouse or office in a Chinese… | — |
-| **8D Report (8D 报告)** (`cn-8d-report`) | Use when asked 写8D报告, 客户投诉8D, 质量问题8D, 客诉回复报告, 8D 怎么写, 根本原因分析报告, or write an 8D problem-solving report for a customer complaint or internal quality… | — |
-| **Quality Traceability Plan (质量追溯方案)** (`cn-quality-traceability`) | Use when asked 质量追溯体系怎么建, 产品追溯方案, 批次追溯, 一物一码, 客户要求可追溯性, 召回演练, 正向追溯和反向追溯, or plan product and batch traceability in a Chinese factory. Produces a… | — |
-| **Work Instruction (作业指导书 / SOP)** (`cn-sop-writer`) | Use when asked 写作业指导书, SOP 作业指导书, 工序作业标准, 标准作业书, 新员工看得懂的操作说明, WI 怎么写, or write a shop-floor work instruction for a production or inspection step… | — |
+| **Gaokao Application Planner (高考志愿)** (`cn-gaokao-planner`) | Help a student and family plan university applications after the 高考 (gaokao): use the student's provincial rank rather than raw score, build a 冲 /… | ✅ 4.5/5 |
+| **Helping Parents With Admin (帮爸妈办事)** (`cn-help-parents-admin`) | Use when asked 帮爸妈办医保, 帮父母办养老金认证, 爸妈异地就医备案, 帮老人办银行业务, 父母被诈骗了怎么办, 教爸妈用手机办事, 代办委托书, or help an adult child handle 医保, 社保, 养老金, banking or scam… | ✅ 4.8/5 |
+| **Housing Fund Withdrawal (公积金提取)** (`cn-housing-fund-withdrawal`) | Use when asked 公积金怎么提取, 租房能提公积金吗, 离职后公积金怎么办, 公积金贷款能贷多少, 异地提取公积金, or plan how to use a Chinese housing provident fund (住房公积金). Produces the… | ✅ 4.3/5 |
+| **Hukou Points (积分落户)** (`cn-hukou-points`) | Use when asked 积分落户怎么算, 我能不能落户上海 / 北京 / 深圳, 居转户条件, 落户积分差多少, 人才引进落户, or check eligibility for a city household registration (户口) in China. Produces… | ✅ 3.8/5 |
+| **China Annual Tax Reconciliation (个税年度汇算)** (`cn-iit-reconciliation`) | Prepare for China's annual individual income tax reconciliation (个税年度汇算): check income, deductions and special additional deductions, compare the… | ✅ 4.8/5 |
+| **China Labour Contract Decoder (劳动合同)** (`cn-labour-contract-decoder`) | Decode a mainland China labour contract (劳动合同) before signing: probation, pay and its structure, working hours, social insurance, non-compete and… | ✅ 4.5/5 |
+| **Medical Insurance Claims (医保报销)** (`cn-medical-insurance-claim`) | Use when asked 医保怎么报销, 异地就医怎么备案, 住院能报多少, 门诊报销比例, 手工报销要什么材料, 惠民保值不值得买, or work out what China's basic medical insurance (医保) will pay for a… | ✅ 4.8/5 |
+| **China Severance Calculator (经济补偿金)** (`cn-severance-calculator`) | Estimate economic compensation (经济补偿金) when employment ends in mainland China: N, N+1 or 2N under the Labour Contract Law, with the high-earner… | ✅ 4.8/5 |
+| **Small Business Tax (个体户与小微企业税务)** (`cn-small-business-tax`) | Use when asked 个体户怎么报税, 小规模纳税人增值税怎么算, 小微企业所得税优惠, 经营所得汇算, 开票超过免税额怎么办, or plan taxes for a sole trader (个体工商户) or small company in China. Produces… | ✅ 5/5 |
+| **China Social Insurance Explainer (五险一金)** (`cn-social-insurance-explainer`) | Explain China's social insurance and housing fund (五险一金) for a specific person and city: what each part covers, what they and their employer pay… | ✅ 4.8/5 |
 
-### `pm-china-parents` — 4 skills
-
-| Skill | What it does | Eval |
-|---|---|---|
-| **Extracurricular Planner (兴趣班与课外安排)** (`cn-extracurricular-plan`) | Use when asked 兴趣班怎么选, 孩子报几个兴趣班合适, 课外班规划, 双减后还能报什么班, 寒暑假怎么安排, 预付费培训退费, or plan a child's out-of-school activities in mainland China. Produces a… | — |
-| **Home-School Messages (家校沟通)** (`cn-home-school-comms`) | Use when asked 怎么给老师发消息, 跟班主任沟通, 孩子在学校被欺负怎么跟老师说, 对老师的做法有意见, 请假怎么写, 家长群里怎么说话, or write a message from a parent to a teacher in China. Produces a… | — |
-| **Homework Guide for Parents (家长辅导作业)** (`cn-homework-helper-parent`) | Use when asked 孩子这道题不会怎么教, 辅导作业总发火, 怎么给孩子讲应用题, 陪写作业, 作业太多写到很晚, or help a parent guide (not do) a child's homework in China. Produces, for the… | — |
-| **School Entry Planner (幼升小 / 小升初)** (`cn-school-entry`) | Use when asked 幼升小怎么准备, 小升初流程, 入学信息采集, 学区房和多校划片, 公民同招, 民办摇号, 随迁子女入学, 居住证入学材料, or plan a child's entry to primary or junior high school in mainland… | — |
-
-### `pm-china-teachers` — 5 skills
+### `pm-china-manufacturing` — 4 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Class Meeting Plan (主题班会方案)** (`cn-class-meeting`) | Use when asked 帮我设计一节班会, 主题班会方案, 班会课教案, 开学第一课, 安全教育班会, 心理健康班会, or plan a class meeting as a 班主任. Produces a 主题班会 plan in Chinese with the… | — |
-| **Chinese Lesson Plan (教案 / 教学设计)** (`cn-lesson-plan`) | Use when asked 帮我写教案, 写一份新课标教案, 教学设计, 单元教学设计, 大单元教案, or a lesson plan in the format Chinese schools expect. Produces a complete 教案 in Chinese with… | — |
-| **Open Class and Lesson Talk (公开课准备与说课稿)** (`cn-open-class`) | Use when asked 公开课怎么准备, 帮我写说课稿, 优质课比赛, 评优课, 教研课, 汇报课, 青年教师赛课, 试讲, or prepare an observed lesson in a Chinese school. Produces a 公开课 preparation… | — |
-| **Parent Meeting Pack (家长会发言稿与材料)** (`cn-parent-meeting`) | Use when asked 帮我写家长会发言稿, 家长会PPT大纲, 班主任家长会讲话, 期中家长会, 新生家长会, 毕业班家长会, or prepare a parent meeting as a Chinese teacher. Produces a parent-meeting… | — |
-| **End-of-Term Comments (期末评语)** (`cn-term-comments`) | Use when asked 帮我写期末评语, 学生评语, 班主任评语, 综合素质评价评语, 素质报告单评语, or write end-of-term comments for a class in China. Produces individual comments in… | — |
+| **5S / 6S Audit (5S / 6S 检查表)** (`cn-5s-audit`) | Use when asked 5S 检查表, 6S 管理, 现场管理检查, 5S 评分标准, 车间 6S 稽核, 做一份 5S 推行计划, or design a 5S or 6S audit for a workshop, warehouse or office in a Chinese… | ✅ 3.8/5 |
+| **8D Report (8D 报告)** (`cn-8d-report`) | Use when asked 写8D报告, 客户投诉8D, 质量问题8D, 客诉回复报告, 8D 怎么写, 根本原因分析报告, or write an 8D problem-solving report for a customer complaint or internal quality… | ✅ 3/5 |
+| **Quality Traceability Plan (质量追溯方案)** (`cn-quality-traceability`) | Use when asked 质量追溯体系怎么建, 产品追溯方案, 批次追溯, 一物一码, 客户要求可追溯性, 召回演练, 正向追溯和反向追溯, or plan product and batch traceability in a Chinese factory. Produces a… | ✅ 4.8/5 |
+| **Work Instruction (作业指导书 / SOP)** (`cn-sop-writer`) | Use when asked 写作业指导书, SOP 作业指导书, 工序作业标准, 标准作业书, 新员工看得懂的操作说明, WI 怎么写, or write a shop-floor work instruction for a production or inspection step… | ✅ 4.5/5 |
 
-### `pm-china-trade` — 4 skills
-
-| Skill | What it does | Eval |
-|---|---|---|
-| **Customs Documents (报关单证清单)** (`cn-customs-docs`) | Use when asked 出口报关需要什么单证, 报关资料清单, 申报要素怎么填, 报关单和发票对不上, 出口退税需要的单证, 进口清关资料, or prepare customs documents for an export or import shipment in… | — |
-| **Inquiry Reply (外贸询盘回复)** (`cn-inquiry-reply`) | Use when asked 回复询盘, 外贸询盘怎么回, 帮我回客户邮件, 阿里国际站询盘回复, 客户只问价格怎么回, 跟进没回复的客户, or reply to a foreign-trade inquiry from a Chinese exporter. Produces a… | — |
-| **Letter of Credit Check (信用证审证与审单)** (`cn-letter-of-credit-check`) | Use when asked 信用证审证, 信用证审单, 审核信用证条款, 单证不符点, L/C 软条款, 交单前检查, or check a letter of credit or a set of export documents against it for a Chinese… | — |
-| **Export Quotation (外贸报价单与成本核算)** (`cn-trade-quotation`) | Use when asked 做一份外贸报价单, FOB 和 CIF 怎么报价, 出口报价核算, 报价怎么算利润, 退税怎么算进报价, quotation sheet for an export order, or price an export quotation from China.… | — |
-
-### `pm-china-work` — 10 skills
+### `pm-china-parents` — 4 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **复盘 (Fupan)** (`cn-fupan`) | Run a 复盘 (fupan), the structured project review widely used in Chinese companies: review the goal, assess the result, analyse why, and draw rules… | — |
-| **Chinese Internet Jargon Translator (互联网黑话翻译器)** (`cn-jargon-translator`) | Use when asked 把这段黑话翻译成人话, 这句话到底什么意思, 帮我把周报去黑话, 用大厂黑话改写这段, 互联网黑话词典, 对齐抓手闭环是什么意思, or translate Chinese internet-company jargon (互联网黑话) into plain… | — |
-| **Level Mapper (职级对标)** (`cn-level-mapper`) | Compare job levels (职级) across Chinese technology companies and against international ladders, to judge an offer, a job move or a promotion… | — |
-| **Official Document (公文)** (`cn-official-document`) | Use when asked 帮我写公文, 写一份请示, 写通知 / 报告 / 函 / 纪要, 公文格式怎么排, check this document against GB/T 9704, or draft an official document for a Chinese… | — |
-| **PRD Review (需求评审)** (`cn-prd-review`) | Prepare for and run a product requirements review (需求评审 / PRD 评审会) the way Chinese internet teams do it: a pre-read the engineers, testers and… | — |
-| **Promotion Defence (晋升答辩)** (`cn-promotion-defence`) | Prepare a promotion defence (晋升答辩) for a level-based promotion process common at Chinese technology companies: the materials, the presentation… | — |
-| **Chinese Weekly Report (周报)** (`cn-weekly-report`) | Write a Chinese workplace weekly or monthly report (周报 / 月报) for a manager: results with numbers, progress against goals, risks raised early, next… | — |
-| **DingTalk Work Log (钉钉日志)** (`dingtalk-work-log`) | Write a DingTalk work log (钉钉日志): the daily report (日报), weekly report (周报) or monthly report (月报) in the fields DingTalk's built-in log templates… | — |
-| **Feishu Doc Writer (飞书文档)** (`feishu-doc-writer`) | Write a document for Feishu / Lark Docs (飞书文档) in the shape Feishu readers expect: a summary callout at the top, headed sections that work with… | — |
-| **WeCom Announcement (企业微信公告)** (`wecom-announcement`) | Write an internal announcement for WeCom (企业微信) or a company group chat: policy changes, office notices, system outages, holiday arrangements and… | — |
+| **Extracurricular Planner (兴趣班与课外安排)** (`cn-extracurricular-plan`) | Use when asked 兴趣班怎么选, 孩子报几个兴趣班合适, 课外班规划, 双减后还能报什么班, 寒暑假怎么安排, 预付费培训退费, or plan a child's out-of-school activities in mainland China. Produces a… | ✅ 3.8/5 |
+| **Home-School Messages (家校沟通)** (`cn-home-school-comms`) | Use when asked 怎么给老师发消息, 跟班主任沟通, 孩子在学校被欺负怎么跟老师说, 对老师的做法有意见, 请假怎么写, 家长群里怎么说话, or write a message from a parent to a teacher in China. Produces a… | ✅ 5/5 |
+| **Homework Guide for Parents (家长辅导作业)** (`cn-homework-helper-parent`) | Use when asked 孩子这道题不会怎么教, 辅导作业总发火, 怎么给孩子讲应用题, 陪写作业, 作业太多写到很晚, or help a parent guide (not do) a child's homework in China. Produces, for the… | ✅ 4.8/5 |
+| **School Entry Planner (幼升小 / 小升初)** (`cn-school-entry`) | Use when asked 幼升小怎么准备, 小升初流程, 入学信息采集, 学区房和多校划片, 公民同招, 民办摇号, 随迁子女入学, 居住证入学材料, or plan a child's entry to primary or junior high school in mainland… | ✅ 4.5/5 |
 
-### `pm-china-yearend` — 4 skills
+### `pm-china-teachers` — 5 skills · 5 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Next Year's OKR and Development Plan (明年个人 OKR 与个人发展计划)** (`cn-next-year-plan`) | Use when asked 帮我定明年的个人 OKR, 写个人发展计划, IDP 怎么写, 明年目标怎么跟老板对齐, 个人 KPI 怎么定, 年初定目标, or plan next year's personal goals at a Chinese employer. Produces… | — |
-| **述职 PPT Builder (述职 PPT 大纲与讲稿)** (`cn-shuzhi-deck`) | Use when asked 帮我做述职 PPT, 述职 PPT 大纲, 年终述职怎么讲, 10 分钟述职讲稿, 述职 PPT 每页写什么, or turn a written year-end review into a 述职 presentation. Produces a… | — |
-| **Year-End Bonus Clarifier (年终奖、13薪与个税)** (`cn-year-end-bonus`) | Use when asked 年终奖怎么算, 13薪和年终奖有什么区别, 年终奖怎么交税, 单独计税还是并入综合所得, 年终奖被扣了怎么办, 离职了年终奖还发吗, 怎么问 HR 年终奖, or understand a year-end bonus in mainland China.… | — |
-| **Chinese Year-End Review (述职报告 / 年终总结)** (`cn-year-end-review`) | Write a Chinese annual self-review (述职报告 / 年终总结) for a performance cycle: results against OKR or KPI with evidence, the two or three things that… | — |
+| **Class Meeting Plan (主题班会方案)** (`cn-class-meeting`) | Use when asked 帮我设计一节班会, 主题班会方案, 班会课教案, 开学第一课, 安全教育班会, 心理健康班会, or plan a class meeting as a 班主任. Produces a 主题班会 plan in Chinese with the… | ✅ 4.8/5 |
+| **Chinese Lesson Plan (教案 / 教学设计)** (`cn-lesson-plan`) | Use when asked 帮我写教案, 写一份新课标教案, 教学设计, 单元教学设计, 大单元教案, or a lesson plan in the format Chinese schools expect. Produces a complete 教案 in Chinese with… | ✅ 4.5/5 |
+| **Open Class and Lesson Talk (公开课准备与说课稿)** (`cn-open-class`) | Use when asked 公开课怎么准备, 帮我写说课稿, 优质课比赛, 评优课, 教研课, 汇报课, 青年教师赛课, 试讲, or prepare an observed lesson in a Chinese school. Produces a 公开课 preparation… | ✅ 4/5 |
+| **Parent Meeting Pack (家长会发言稿与材料)** (`cn-parent-meeting`) | Use when asked 帮我写家长会发言稿, 家长会PPT大纲, 班主任家长会讲话, 期中家长会, 新生家长会, 毕业班家长会, or prepare a parent meeting as a Chinese teacher. Produces a parent-meeting… | ✅ 4.8/5 |
+| **End-of-Term Comments (期末评语)** (`cn-term-comments`) | Use when asked 帮我写期末评语, 学生评语, 班主任评语, 综合素质评价评语, 素质报告单评语, or write end-of-term comments for a class in China. Produces individual comments in… | ✅ 5/5 |
 
-### `pm-chuhai` — 4 skills
-
-| Skill | What it does | Eval |
-|---|---|---|
-| **出海 Market Entry** (`chuhai-market-entry`) | Plan a Chinese company's entry into an overseas market (出海): choose the market with evidence, then plan entity, payments, localisation… | — |
-| **Cross-Border Listing** (`cross-border-listing`) | Write a product listing for an overseas marketplace or store, localised for the buyer rather than translated from Chinese: title, bullet points… | — |
-| **Cross-border Platform Playbook (跨境平台选择与入驻)** (`crossborder-platform-playbook`) | Use when asked Temu 全托管还是半托管, TikTok Shop 怎么入驻, 亚马逊和 Temu 选哪个, 跨境电商平台怎么选, 产品出海要哪些认证, or choose and launch on cross-border marketplaces (Temu… | — |
-| **PIPL and GDPR Crosswalk** (`pipl-gdpr-crosswalk`) | Compare China's Personal Information Protection Law (PIPL) with the EU GDPR for a specific data flow, and produce the gap list and cross-border… | — |
-
-### `pm-civic` — 5 skills
+### `pm-china-trade` — 4 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Elected Rep Letter** (`elected-rep-letter`) | Write to an elected representative in a way that actually gets action — a specific ask, your local stake, why it's in their interest to respond… | — |
-| **Jury Duty Navigator** (`jury-duty-navigator`) | Handle a jury summons calmly — confirm it's real, understand what's actually required, request a deferral or excusal the right way if you… | — |
-| **Permit Navigator** (`permit-navigator`) | Work out which permits a project actually needs and the order to get them — building/renovation, business licensing, events, signage, home… | — |
-| **Report A Hazard** (`report-a-hazard`) | Report a public hazard or code problem to the authority that can actually fix it — a pothole, broken streetlight, illegal dump, unsafe building… | — |
-| **Voting Navigator** (`voting-navigator`) | Work out how to actually vote in a specific election — am I registered, what's the deadline, how do I vote (in person / mail / early), what ID do… | — |
+| **Customs Documents (报关单证清单)** (`cn-customs-docs`) | Use when asked 出口报关需要什么单证, 报关资料清单, 申报要素怎么填, 报关单和发票对不上, 出口退税需要的单证, 进口清关资料, or prepare customs documents for an export or import shipment in… | ✅ 5/5 |
+| **Inquiry Reply (外贸询盘回复)** (`cn-inquiry-reply`) | Use when asked 回复询盘, 外贸询盘怎么回, 帮我回客户邮件, 阿里国际站询盘回复, 客户只问价格怎么回, 跟进没回复的客户, or reply to a foreign-trade inquiry from a Chinese exporter. Produces a… | ✅ 4.8/5 |
+| **Letter of Credit Check (信用证审证与审单)** (`cn-letter-of-credit-check`) | Use when asked 信用证审证, 信用证审单, 审核信用证条款, 单证不符点, L/C 软条款, 交单前检查, or check a letter of credit or a set of export documents against it for a Chinese… | ✅ 4.5/5 |
+| **Export Quotation (外贸报价单与成本核算)** (`cn-trade-quotation`) | Use when asked 做一份外贸报价单, FOB 和 CIF 怎么报价, 出口报价核算, 报价怎么算利润, 退税怎么算进报价, quotation sheet for an export order, or price an export quotation from China.… | ✅ 4.8/5 |
+
+### `pm-china-work` — 10 skills · 10 eval-scored
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **复盘 (Fupan)** (`cn-fupan`) | Run a 复盘 (fupan), the structured project review widely used in Chinese companies: review the goal, assess the result, analyse why, and draw rules… | ✅ 4.5/5 |
+| **Chinese Internet Jargon Translator (互联网黑话翻译器)** (`cn-jargon-translator`) | Use when asked 把这段黑话翻译成人话, 这句话到底什么意思, 帮我把周报去黑话, 用大厂黑话改写这段, 互联网黑话词典, 对齐抓手闭环是什么意思, or translate Chinese internet-company jargon (互联网黑话) into plain… | ✅ 4.3/5 |
+| **Level Mapper (职级对标)** (`cn-level-mapper`) | Compare job levels (职级) across Chinese technology companies and against international ladders, to judge an offer, a job move or a promotion… | ✅ 4.8/5 |
+| **Official Document (公文)** (`cn-official-document`) | Use when asked 帮我写公文, 写一份请示, 写通知 / 报告 / 函 / 纪要, 公文格式怎么排, check this document against GB/T 9704, or draft an official document for a Chinese… | ✅ 5/5 |
+| **PRD Review (需求评审)** (`cn-prd-review`) | Prepare for and run a product requirements review (需求评审 / PRD 评审会) the way Chinese internet teams do it: a pre-read the engineers, testers and… | ✅ 3.5/5 |
+| **Promotion Defence (晋升答辩)** (`cn-promotion-defence`) | Prepare a promotion defence (晋升答辩) for a level-based promotion process common at Chinese technology companies: the materials, the presentation… | ✅ 2.5/5 |
+| **Chinese Weekly Report (周报)** (`cn-weekly-report`) | Write a Chinese workplace weekly or monthly report (周报 / 月报) for a manager: results with numbers, progress against goals, risks raised early, next… | ✅ 4.8/5 |
+| **DingTalk Work Log (钉钉日志)** (`dingtalk-work-log`) | Write a DingTalk work log (钉钉日志): the daily report (日报), weekly report (周报) or monthly report (月报) in the fields DingTalk's built-in log templates… | ✅ 5/5 |
+| **Feishu Doc Writer (飞书文档)** (`feishu-doc-writer`) | Write a document for Feishu / Lark Docs (飞书文档) in the shape Feishu readers expect: a summary callout at the top, headed sections that work with… | ✅ 5/5 |
+| **WeCom Announcement (企业微信公告)** (`wecom-announcement`) | Write an internal announcement for WeCom (企业微信) or a company group chat: policy changes, office notices, system outages, holiday arrangements and… | ✅ 5/5 |
+
+### `pm-china-yearend` — 4 skills · 4 eval-scored
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Next Year's OKR and Development Plan (明年个人 OKR 与个人发展计划)** (`cn-next-year-plan`) | Use when asked 帮我定明年的个人 OKR, 写个人发展计划, IDP 怎么写, 明年目标怎么跟老板对齐, 个人 KPI 怎么定, 年初定目标, or plan next year's personal goals at a Chinese employer. Produces… | ✅ 4.8/5 |
+| **述职 PPT Builder (述职 PPT 大纲与讲稿)** (`cn-shuzhi-deck`) | Use when asked 帮我做述职 PPT, 述职 PPT 大纲, 年终述职怎么讲, 10 分钟述职讲稿, 述职 PPT 每页写什么, or turn a written year-end review into a 述职 presentation. Produces a… | ✅ 4.5/5 |
+| **Year-End Bonus Clarifier (年终奖、13薪与个税)** (`cn-year-end-bonus`) | Use when asked 年终奖怎么算, 13薪和年终奖有什么区别, 年终奖怎么交税, 单独计税还是并入综合所得, 年终奖被扣了怎么办, 离职了年终奖还发吗, 怎么问 HR 年终奖, or understand a year-end bonus in mainland China.… | ✅ 4.8/5 |
+| **Chinese Year-End Review (述职报告 / 年终总结)** (`cn-year-end-review`) | Write a Chinese annual self-review (述职报告 / 年终总结) for a performance cycle: results against OKR or KPI with evidence, the two or three things that… | ✅ 4.3/5 |
+
+### `pm-chuhai` — 4 skills · 4 eval-scored
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **出海 Market Entry** (`chuhai-market-entry`) | Plan a Chinese company's entry into an overseas market (出海): choose the market with evidence, then plan entity, payments, localisation… | ✅ 3/5 |
+| **Cross-Border Listing** (`cross-border-listing`) | Write a product listing for an overseas marketplace or store, localised for the buyer rather than translated from Chinese: title, bullet points… | ✅ 4.8/5 |
+| **Cross-border Platform Playbook (跨境平台选择与入驻)** (`crossborder-platform-playbook`) | Use when asked Temu 全托管还是半托管, TikTok Shop 怎么入驻, 亚马逊和 Temu 选哪个, 跨境电商平台怎么选, 产品出海要哪些认证, or choose and launch on cross-border marketplaces (Temu… | ✅ 4.5/5 |
+| **PIPL and GDPR Crosswalk** (`pipl-gdpr-crosswalk`) | Compare China's Personal Information Protection Law (PIPL) with the EU GDPR for a specific data flow, and produce the gap list and cross-border… | ✅ 5/5 |
+
+### `pm-civic` — 5 skills · 5 eval-scored
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Elected Rep Letter** (`elected-rep-letter`) | Write to an elected representative in a way that actually gets action — a specific ask, your local stake, why it's in their interest to respond… | ✅ 3.3/5 |
+| **Jury Duty Navigator** (`jury-duty-navigator`) | Handle a jury summons calmly — confirm it's real, understand what's actually required, request a deferral or excusal the right way if you… | ✅ 5/5 |
+| **Permit Navigator** (`permit-navigator`) | Work out which permits a project actually needs and the order to get them — building/renovation, business licensing, events, signage, home… | ✅ 4.8/5 |
+| **Report A Hazard** (`report-a-hazard`) | Report a public hazard or code problem to the authority that can actually fix it — a pothole, broken streetlight, illegal dump, unsafe building… | ✅ 4.3/5 |
+| **Voting Navigator** (`voting-navigator`) | Work out how to actually vote in a specific election — am I registered, what's the deadline, how do I vote (in person / mail / early), what ID do… | ✅ 4.8/5 |
 
 ### `pm-climate` — 4 skills
 
@@ -1013,14 +1013,14 @@
 | **ESG Disclosure Draft** (`esg-disclosure-draft`) | Draft an honest, audit-ready ESG disclosure section in a CSRD/ESRS-flavored structure, adaptable to other frameworks. | — |
 | **Greenwashing Self-Audit** (`greenwashing-self-audit`) | Audit your own marketing and report claims for greenwashing risk before a regulator, journalist, or competitor does. | — |
 
-### `pm-committee` — 4 skills
+### `pm-committee` — 4 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **AGM In A Box** (`agm-in-a-box`) | Run a club, PTA, or association AGM that finishes on time and holds up later — the notice and agenda done right, a quorum plan, minutes that… | — |
-| **Committee Handover Pack** (`committee-handover-pack`) | Capture everything an outgoing club secretary, chair, or organizer carries in their head before they disappear — accounts and logins with owners… | — |
-| **Speak At The Council** (`speak-at-the-council`) | Turn three minutes at a council or community meeting into the version that actually moves the decision — a public comment built as… | — |
-| **Volunteer Treasurer Basics** (`volunteer-treasurer-basics`) | Be a club or association treasurer without being an accountant — the two-column cashbook that's genuinely enough, monthly reconciliation in 20… | — |
+| **AGM In A Box** (`agm-in-a-box`) | Run a club, PTA, or association AGM that finishes on time and holds up later — the notice and agenda done right, a quorum plan, minutes that… | ✅ 2.3/5 |
+| **Committee Handover Pack** (`committee-handover-pack`) | Capture everything an outgoing club secretary, chair, or organizer carries in their head before they disappear — accounts and logins with owners… | ✅ 3.8/5 |
+| **Speak At The Council** (`speak-at-the-council`) | Turn three minutes at a council or community meeting into the version that actually moves the decision — a public comment built as… | ✅ 1.3/5 |
+| **Volunteer Treasurer Basics** (`volunteer-treasurer-basics`) | Be a club or association treasurer without being an accountant — the two-column cashbook that's genuinely enough, monthly reconciliation in 20… | ✅ 4.8/5 |
 
 ### `pm-construction` — 6 skills
 
@@ -1153,17 +1153,17 @@
 | **Spreadsheet Audit (Live)** (`spreadsheet-audit-live`) | Audit the user's REAL spreadsheet by opening it in the Cowork sandbox — not by reading a description of it. | — |
 | **Thread to Decision (Live)** (`thread-to-decision-live`) | Turn a REAL Slack thread (or channel) into a logged decision — read it, extract what was decided, who owns what, and record it in Notion — not a… | — |
 
-### `pm-crisis` — 7 skills
+### `pm-crisis` — 7 skills · 6 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Apology Letter** (`apology-letter`) | Write a sincere, effective apology to a customer, group, or the public. | — |
-| **Brand Impersonation Response** (`brand-impersonation-response`) | Respond to a brand or executive impersonation incident — deepfaked executives, cloned support lines, fake apps, spoofed domains, or AI-generated… | — |
+| **Apology Letter** (`apology-letter`) | Write a sincere, effective apology to a customer, group, or the public. | ✅ 5/5 |
+| **Brand Impersonation Response** (`brand-impersonation-response`) | Respond to a brand or executive impersonation incident — deepfaked executives, cloned support lines, fake apps, spoofed domains, or AI-generated… | ✅ 5/5 |
 | **Customer Incident Update** (`customer-incident-update`) | Write the customer-facing incident update during an outage — status-page post or email — that's honest about impact without over-promising. | — |
-| **Customer Outage Notice** (`customer-outage-notice`) | Write clear customer-facing outage and service-disruption notifications. | — |
-| **Incident Public Statement** (`incident-public-statement`) | Write a single clear, honest public statement about an incident. | — |
-| **Layoff Communication** (`layoff-communication`) | Plan and write the communications for a layoff or restructure with clarity and dignity. | — |
-| **PR Crisis Response** (`pr-crisis-response`) | Build a crisis communications plan to respond fast and credibly when something goes wrong. | — |
+| **Customer Outage Notice** (`customer-outage-notice`) | Write clear customer-facing outage and service-disruption notifications. | ✅ 4.8/5 |
+| **Incident Public Statement** (`incident-public-statement`) | Write a single clear, honest public statement about an incident. | ✅ 5/5 |
+| **Layoff Communication** (`layoff-communication`) | Plan and write the communications for a layoff or restructure with clarity and dignity. | ✅ 4.8/5 |
+| **PR Crisis Response** (`pr-crisis-response`) | Build a crisis communications plan to respond fast and credibly when something goes wrong. | ✅ 4.8/5 |
 
 ### `pm-cross` — 11 skills · 1 eval-scored
 
@@ -1171,7 +1171,7 @@
 |---|---|---|
 | **Action Runner** (`action-runner`) | Turn a skill's recommendations into real, executed actions — open the tickets, file the issues, post the updates — safely: dry-run preview… | — |
 | **Brief Builder** (`brief-builder`) | Interview the user with sharp, one-at-a-time questions to turn a vague request into a tight, complete brief any other skill can run on. | — |
-| **Executive Summary** (`executive-summary`) | Write an executive summary for any document, report, or proposal. | ✅ 4.3/5 |
+| **Executive Summary** (`executive-summary`) | Write an executive summary for any document, report, or proposal. | ✅ 4.1/5 |
 | **Grant Proposal** (`grant-proposal`) | Write a structured grant proposal or funding application for any grant type. | — |
 | **Last 30 Days Research** (`last-30-days-research`) | Searches Reddit, X/Twitter, and the broader web for recent opinions, sentiment, and signal on any topic. | — |
 | **NotebookLM Connector** (`notebooklm-connector`) | Automates NotebookLM from Claude Code using browser automation via the Claude Chrome extension — creating notebooks, adding sources, and… | — |
@@ -1181,51 +1181,51 @@
 | **Sycophancy Challenger** (`sycophancy-challenger`) | Flip Claude’s default from validation to adversarial critique. | — |
 | **Teaching Lesson Plan** (`teaching-lesson-plan`) | Design a structured lesson plan for any subject, audience, or format. | — |
 
-### `pm-cv` — 20 skills
+### `pm-cv` — 20 skills · 20 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Academic CV** (`academic-cv`) | Build or tailor an academic CV for faculty, postdoc, research or fellowship applications: publications, grants, teaching, supervision and service… | — |
-| **Application Tracker** (`application-tracker`) | Set up and keep a job application tracker: one master CV, every tailored version, where each was sent, its status, next action and follow-up date… | — |
-| **ATS Detector** (`ats-detector`) | Work out which applicant tracking system a job uses from its application link, and give the formatting rules that system parses safely. | — |
-| **Bilingual CV, Chinese and English** (`bilingual-cv-zh-en`) | Produce a matched Chinese and English CV (中英文简历) from one set of facts: each version follows its own conventions rather than a literal… | — |
-| **Career-Changer CV** (`career-changer-cv`) | Write a CV for someone moving into a new field, leading with transferable evidence instead of job titles that do not match. | — |
-| **Career Inventory** (`career-inventory`) | Interview someone about their working life and turn the answers into a master CV inventory: every role, project and achievement with real numbers… | — |
-| **Civil Service and NHS Application** (`civil-service-application`) | Write a UK Civil Service or NHS application: behaviour statements in the Success Profiles format, a personal statement mapped to the essential… | — |
-| **Company-Tailored CV** (`company-tailored-cv`) | Produce a CV shaped for one target company and role: its applicant tracking system, the country's conventions, the sector's norms, its published… | — |
-| **Consulting and Banking CV** (`consulting-banking-cv`) | Write a one-page CV for management consulting, investment banking or private equity, in the dense format those screeners expect: education first… | — |
-| **Country CV Format** (`country-cv-format`) | Apply the CV conventions of the country where the job is: length, photo, personal details, date and name order, spelling, paper size and the… | — |
-| **CV Word Export** (`cv-docx-export`) | Turn a finished CV into a parsing-safe Word file ready to upload: one column, real heading styles, no tables, headers or images, the right paper… | — |
-| **CV Honesty Check** (`cv-honesty-check`) | Check a CV for claims that would not survive an interview, a reference or a background check: inflated titles, unprovable numbers, team results… | — |
-| **Executive CV** (`executive-cv`) | Write an executive or senior leadership CV and the matching board biography: scope, business results and governance up front, two to three pages… | — |
-| **Federal Resume** (`federal-resume`) | Write a US federal resume for a USAJOBS application: the long, detailed format with hours per week, grade-relevant duties and specialised… | — |
-| **Graduate CV** (`graduate-cv`) | Write a first CV for a student or recent graduate with little work experience, using coursework, projects, part-time jobs, societies and… | — |
-| **JD Gap Score** (`jd-gap-score`) | Score how well a CV covers a job ad, requirement by requirement, and say honestly what to do about each gap. | — |
-| **Recruiter Scan Simulator** (`recruiter-scan-simulator`) | Simulate a busy recruiter's first scan of a CV for a specific role: what they read in the first seconds, what they decide, and why, then step out… | — |
-| **Referral Request** (`referral-request`) | Write a short message asking someone at a target company for a referral or a conversation, sized to how well the person knows them, with an easy… | — |
-| **Returner CV** (`returner-cv`) | Write a CV for someone returning to work after a career break (caring, health, parenting, travel, redundancy or anything else), presenting the gap… | — |
-| **Values-Mapped CV** (`values-mapped-cv`) | Map a person's achievements to a target company's published values or leadership principles, so the CV leads with the evidence that company says… | — |
+| **Academic CV** (`academic-cv`) | Build or tailor an academic CV for faculty, postdoc, research or fellowship applications: publications, grants, teaching, supervision and service… | ✅ 3.8/5 |
+| **Application Tracker** (`application-tracker`) | Set up and keep a job application tracker: one master CV, every tailored version, where each was sent, its status, next action and follow-up date… | ✅ 2/5 |
+| **ATS Detector** (`ats-detector`) | Work out which applicant tracking system a job uses from its application link, and give the formatting rules that system parses safely. | ✅ 5/5 |
+| **Bilingual CV, Chinese and English** (`bilingual-cv-zh-en`) | Produce a matched Chinese and English CV (中英文简历) from one set of facts: each version follows its own conventions rather than a literal… | ✅ 1/5 |
+| **Career-Changer CV** (`career-changer-cv`) | Write a CV for someone moving into a new field, leading with transferable evidence instead of job titles that do not match. | ✅ 1.3/5 |
+| **Career Inventory** (`career-inventory`) | Interview someone about their working life and turn the answers into a master CV inventory: every role, project and achievement with real numbers… | ✅ 1/5 |
+| **Civil Service and NHS Application** (`civil-service-application`) | Write a UK Civil Service or NHS application: behaviour statements in the Success Profiles format, a personal statement mapped to the essential… | ✅ 2.5/5 |
+| **Company-Tailored CV** (`company-tailored-cv`) | Produce a CV shaped for one target company and role: its applicant tracking system, the country's conventions, the sector's norms, its published… | ✅ 4.5/5 |
+| **Consulting and Banking CV** (`consulting-banking-cv`) | Write a one-page CV for management consulting, investment banking or private equity, in the dense format those screeners expect: education first… | ✅ 1.5/5 |
+| **Country CV Format** (`country-cv-format`) | Apply the CV conventions of the country where the job is: length, photo, personal details, date and name order, spelling, paper size and the… | ✅ 2.8/5 |
+| **CV Word Export** (`cv-docx-export`) | Turn a finished CV into a parsing-safe Word file ready to upload: one column, real heading styles, no tables, headers or images, the right paper… | ✅ 1.3/5 |
+| **CV Honesty Check** (`cv-honesty-check`) | Check a CV for claims that would not survive an interview, a reference or a background check: inflated titles, unprovable numbers, team results… | ✅ 1.5/5 |
+| **Executive CV** (`executive-cv`) | Write an executive or senior leadership CV and the matching board biography: scope, business results and governance up front, two to three pages… | ✅ 3/5 |
+| **Federal Resume** (`federal-resume`) | Write a US federal resume for a USAJOBS application: the long, detailed format with hours per week, grade-relevant duties and specialised… | ✅ 5/5 |
+| **Graduate CV** (`graduate-cv`) | Write a first CV for a student or recent graduate with little work experience, using coursework, projects, part-time jobs, societies and… | ✅ 2.8/5 |
+| **JD Gap Score** (`jd-gap-score`) | Score how well a CV covers a job ad, requirement by requirement, and say honestly what to do about each gap. | ✅ 5/5 |
+| **Recruiter Scan Simulator** (`recruiter-scan-simulator`) | Simulate a busy recruiter's first scan of a CV for a specific role: what they read in the first seconds, what they decide, and why, then step out… | ✅ 2.5/5 |
+| **Referral Request** (`referral-request`) | Write a short message asking someone at a target company for a referral or a conversation, sized to how well the person knows them, with an easy… | ✅ 1.3/5 |
+| **Returner CV** (`returner-cv`) | Write a CV for someone returning to work after a career break (caring, health, parenting, travel, redundancy or anything else), presenting the gap… | ✅ 1.8/5 |
+| **Values-Mapped CV** (`values-mapped-cv`) | Map a person's achievements to a target company's published values or leadership principles, so the CV leads with the evidence that company says… | ✅ 5/5 |
 
-### `pm-dead-mentors` — 5 skills
-
-| Skill | What it does | Eval |
-|---|---|---|
-| **Bennett Time Audit** (`bennett-time-audit`) | Audit a week the way Arnold Bennett's 'How to Live on 24 Hours a Day' (1908) prescribes — time as the one income that cannot be increased, the… | — |
-| **Franklin Decision Ledger** (`franklin-decision-ledger`) | Run a hard two-option decision through Benjamin Franklin's 'moral or prudential algebra' — the weighted pro/con method he described to Joseph… | — |
-| **Machiavelli Counsel** (`machiavelli-counsel`) | Analyse a workplace power situation the way Machiavelli's The Prince (1532) would — who holds power, whose support you need, what fortune can take… | — |
-| **Stoic Setback Debrief** (`stoic-setback-debrief`) | Recover from a professional setback — a failed launch, brutal feedback, a public mistake, a lost deal, a layoff — using the actual exercises from… | — |
-| **Sun Tzu Strategy Brief** (`sun-tzu-strategy-brief`) | Prepare for a specific contest — a competitive deal, a negotiation, a market entry, a turf fight — using the actual planning framework from Sun… | — |
-
-### `pm-decisions` — 4 skills
+### `pm-dead-mentors` — 5 skills · 5 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Escalate or Hold** (`escalate-or-hold`) | Decide whether an issue gets escalated now, held with a re-check time, or closed — as a typed decision with probabilities rather than a judgment… | — |
-| **Hire or Pass** (`hire-or-pass`) | Turn a hiring debrief into a typed decision — hire, hire at a different level, get more signal, or pass — from rubric evidence only, with… | — |
-| **Renew or Churn Call** (`renew-or-churn-call`) | Score an account's renewal likelihood on a five-level scale with probabilities, and name the next move for the account owner. | — |
-| **Ship or Slip** (`ship-or-slip`) | Turn a release-readiness argument into one typed decision — ship, ship reduced, or slip — with a defined state, defined options, and a probability… | — |
+| **Bennett Time Audit** (`bennett-time-audit`) | Audit a week the way Arnold Bennett's 'How to Live on 24 Hours a Day' (1908) prescribes — time as the one income that cannot be increased, the… | ✅ 5/5 |
+| **Franklin Decision Ledger** (`franklin-decision-ledger`) | Run a hard two-option decision through Benjamin Franklin's 'moral or prudential algebra' — the weighted pro/con method he described to Joseph… | ✅ 4/5 |
+| **Machiavelli Counsel** (`machiavelli-counsel`) | Analyse a workplace power situation the way Machiavelli's The Prince (1532) would — who holds power, whose support you need, what fortune can take… | ✅ 5/5 |
+| **Stoic Setback Debrief** (`stoic-setback-debrief`) | Recover from a professional setback — a failed launch, brutal feedback, a public mistake, a lost deal, a layoff — using the actual exercises from… | ✅ 5/5 |
+| **Sun Tzu Strategy Brief** (`sun-tzu-strategy-brief`) | Prepare for a specific contest — a competitive deal, a negotiation, a market entry, a turf fight — using the actual planning framework from Sun… | ✅ 5/5 |
 
-### `pm-decoders` — 24 skills
+### `pm-decisions` — 4 skills · 4 eval-scored
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Escalate or Hold** (`escalate-or-hold`) | Decide whether an issue gets escalated now, held with a re-check time, or closed — as a typed decision with probabilities rather than a judgment… | ✅ 5/5 |
+| **Hire or Pass** (`hire-or-pass`) | Turn a hiring debrief into a typed decision — hire, hire at a different level, get more signal, or pass — from rubric evidence only, with… | ✅ 4.8/5 |
+| **Renew or Churn Call** (`renew-or-churn-call`) | Score an account's renewal likelihood on a five-level scale with probabilities, and name the next move for the account owner. | ✅ 5/5 |
+| **Ship or Slip** (`ship-or-slip`) | Turn a release-readiness argument into one typed decision — ship, ship reduced, or slip — with a defined state, defined options, and a probability… | ✅ 5/5 |
+
+### `pm-decoders` — 24 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -1233,13 +1233,13 @@
 | **Auto Repair Estimate Decoder** (`auto-repair-estimate-decoder`) | Decode an auto repair estimate — what each line actually is, which items are urgent vs upsell, and the questions that separate a fair shop from a… | — |
 | **Benefits Decoder** (`benefits-decoder`) | Decode an employment benefits package into what it's actually worth and where the fine print bites. | — |
 | **Car Lease Decoder** (`car-lease-decoder`) | Decode a car lease offer — the money factor converted to APR, the cap-cost math, mileage and disposition traps, and what to negotiate. | — |
-| **Care-Home Contract Decoder** (`care-home-contract-decoder`) | Decode a care-home contract before a parent moves in — the fee-escalation clause with no cap, the needs-can-no-longer-be-met eviction trigger, the… | — |
+| **Care-Home Contract Decoder** (`care-home-contract-decoder`) | Decode a care-home contract before a parent moves in — the fee-escalation clause with no cap, the needs-can-no-longer-be-met eviction trigger, the… | ✅ 4.8/5 |
 | **Claim Denial Decoder** (`claim-denial-decoder`) | Decode an insurance claim denial letter — what the cited reason actually means, whether it's commonly overturnable, and the appeal letter that… | — |
 | **Closing Disclosure Decoder** (`closing-disclosure-decoder`) | Decode a mortgage Closing Disclosure line by line — which fees are real, which are shoppable or junk, and what changed since the Loan Estimate. | — |
 | **Disability Insurance Decoder** (`disability-insurance-decoder`) | Decode a disability insurance policy or employer LTD plan — own-occupation vs any-occupation, the benefit math after offsets and taxes, and the… | — |
-| **Form Explainer** (`form-explainer`) | Explain an official form field by field (tax, benefits, immigration, employment, school, health, vehicle or court forms) from a photo, PDF, pasted… | — |
-| **Franchise Decoder** (`franchise-decoder`) | Decode a franchise offering before you sign away a decade — the earnings claims and their absence, the territory that is not exclusive, the… | — |
-| **Funeral Pricing Decoder** (`funeral-pricing-decoder`) | Decode a funeral home price list while grieving — the package maths versus the itemised list, the non-declinable basic fee, the upsells that… | — |
+| **Form Explainer** (`form-explainer`) | Explain an official form field by field (tax, benefits, immigration, employment, school, health, vehicle or court forms) from a photo, PDF, pasted… | ✅ 5/5 |
+| **Franchise Decoder** (`franchise-decoder`) | Decode a franchise offering before you sign away a decade — the earnings claims and their absence, the territory that is not exclusive, the… | ✅ 4.8/5 |
+| **Funeral Pricing Decoder** (`funeral-pricing-decoder`) | Decode a funeral home price list while grieving — the package maths versus the itemised list, the non-declinable basic fee, the upsells that… | ✅ 4.8/5 |
 | **HOA Decoder** (`hoa-decoder`) | Decode HOA covenants (CC&Rs) and the fee structure before you buy into them. | — |
 | **Home Contractor Quote Decoder** (`home-contractor-quote-decoder`) | Decode a home renovation or repair quote — allowances that aren't prices, exclusions that become change orders, payment schedules that shift risk… | — |
 | **Inspection Report Decoder** (`inspection-report-decoder`) | Decode a home inspection report into what's cosmetic, what's expensive, and what kills deals — with repair-cost ranges and the negotiation list. | — |
@@ -1265,16 +1265,16 @@
 | **Dental Referral Letter** (`dental-referral-letter`) | Write a dental referral letter a specialist can act on without ringing you back — the question you are actually asking, the findings and images… | — |
 | **Dental Treatment Plan Presentation** (`treatment-plan-presentation`) | Present a dental treatment plan the patient actually understands and accepts — sequenced by clinical priority, costed with their coverage applied… | — |
 
-### `pm-design-taste` — 6 skills
+### `pm-design-taste` — 6 skills · 6 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Emil Design Eng (pointer)** (`emil-design-eng-pointer`) | Point to Emil Kowalski's emil-design-eng skill and explain when to use it. | — |
-| **Frontend Design (pointer)** (`frontend-design-pointer`) | Point to Anthropic's frontend-design skill and explain when to use it. | — |
-| **Impeccable (pointer)** (`impeccable-pointer`) | Point to Paul Bakaus's Impeccable design skill and explain when to use it. | — |
-| **Playwright CLI (pointer)** (`playwright-cli-pointer`) | Point to Microsoft's playwright-cli and its skill, and explain when to use it. | — |
-| **UI Design Pipeline** (`ui-design-pipeline`) | Run a five-stage UI design pipeline (direction, system, motion, critique, verification) so the result does not look like generic AI output. | — |
-| **UI UX Pro Max (pointer)** (`ui-ux-pro-max-pointer`) | Point to the ui-ux-pro-max skill by nextlevelbuilder and explain when to use it. | — |
+| **Emil Design Eng (pointer)** (`emil-design-eng-pointer`) | Point to Emil Kowalski's emil-design-eng skill and explain when to use it. | ✅ 3.3/5 |
+| **Frontend Design (pointer)** (`frontend-design-pointer`) | Point to Anthropic's frontend-design skill and explain when to use it. | ✅ 2.8/5 |
+| **Impeccable (pointer)** (`impeccable-pointer`) | Point to Paul Bakaus's Impeccable design skill and explain when to use it. | ✅ 4.5/5 |
+| **Playwright CLI (pointer)** (`playwright-cli-pointer`) | Point to Microsoft's playwright-cli and its skill, and explain when to use it. | ✅ 4.5/5 |
+| **UI Design Pipeline** (`ui-design-pipeline`) | Run a five-stage UI design pipeline (direction, system, motion, critique, verification) so the result does not look like generic AI output. | ✅ 5/5 |
+| **UI UX Pro Max (pointer)** (`ui-ux-pro-max-pointer`) | Point to the ui-ux-pro-max skill by nextlevelbuilder and explain when to use it. | ✅ 3.5/5 |
 
 ### `pm-devrel` — 7 skills
 
@@ -1313,17 +1313,17 @@
 | **Slide Deck** (`slide-deck`) | Build a real, editable PowerPoint (.pptx) deck from an outline or brief. | — |
 | **Word Document** (`word-document`) | Build a real, formatted Word (.docx) document — headings, styles, tables, TOC-ready. | — |
 
-### `pm-ecommerce` — 7 skills
+### `pm-ecommerce` — 7 skills · 6 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Category Page Brief** (`category-page-brief`) | Plan an e-commerce category / collection page that ranks and merchandises well. | — |
+| **Category Page Brief** (`category-page-brief`) | Plan an e-commerce category / collection page that ranks and merchandises well. | ✅ 4.8/5 |
 | **Chargeback Dispute Response** (`chargeback-dispute-response`) | Win a chargeback dispute — read the reason code, assemble the evidence packet, and write the rebuttal that actually persuades the bank. | — |
-| **Marketplace Listing Optimizer** (`marketplace-listing-optimizer`) | Audit and optimize a marketplace listing (Amazon, Etsy, eBay, Walmart) to rank and convert. | — |
-| **Product Description** (`product-description`) | Write a product description / listing that sells and ranks. | — |
-| **Promotion Plan** (`promotion-plan`) | Plan a sale or promotion that drives revenue without wrecking margin. | — |
-| **Return & Refund Policy** (`return-refund-policy`) | Write a clear, fair returns, refunds & exchanges policy for an online store. | — |
-| **Review Response** (`review-response`) | Write the right reply to a customer review — positive, negative, or mixed. | — |
+| **Marketplace Listing Optimizer** (`marketplace-listing-optimizer`) | Audit and optimize a marketplace listing (Amazon, Etsy, eBay, Walmart) to rank and convert. | ✅ 4.8/5 |
+| **Product Description** (`product-description`) | Write a product description / listing that sells and ranks. | ✅ 4.5/5 |
+| **Promotion Plan** (`promotion-plan`) | Plan a sale or promotion that drives revenue without wrecking margin. | ✅ 4.3/5 |
+| **Return & Refund Policy** (`return-refund-policy`) | Write a clear, fair returns, refunds & exchanges policy for an online store. | ✅ 4.5/5 |
+| **Review Response** (`review-response`) | Write the right reply to a customer review — positive, negative, or mixed. | ✅ 5/5 |
 
 ### `pm-education` — 6 skills
 
@@ -1336,17 +1336,17 @@
 | **Rubric Builder** (`rubric-builder`) | Create a clear grading rubric with criteria and performance-level descriptors that make scoring fair, fast, and consistent. | — |
 | **Student Feedback** (`student-feedback`) | Write constructive, specific feedback on student work that motivates and tells the student exactly how to improve. | — |
 
-### `pm-emergency` — 7 skills
+### `pm-emergency` — 7 skills · 7 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **After The Disaster** (`after-the-disaster`) | Work through the first hours and days after a disaster — a fire, flood, storm, or evacuation — in the right order: safety and people first, then… | — |
-| **Emergency Doc Kit** (`emergency-doc-kit`) | Assemble the grab-and-go document and information kit for a disaster — the IDs, insurance, medical, financial, and property records (physical… | — |
-| **Emergency Grant Application** (`emergency-grant-application`) | Apply for emergency money after a disaster, crisis or sudden hardship: government disaster assistance, local hardship and welfare funds, charity… | — |
-| **Go-Bag Builder** (`go-bag-builder`) | Build an emergency go-bag tailored to your actual household and your most likely local hazards — not a generic list — covering the people, pets… | — |
-| **Hazard Risk Map** (`hazard-risk-map`) | Figure out which disasters and emergencies your specific location actually faces — and the concrete prep each one demands — so your readiness… | — |
-| **Lost Documents Replacement** (`lost-documents-replacement`) | Replace identity and important documents lost or destroyed in a fire, flood, theft or move, in the order that unlocks the rest: ID and birth… | — |
-| **Power Outage Plan** (`power-outage-plan`) | Plan for an extended power outage — keeping medically-essential devices running, food safe, the home warm or cool enough, and communication alive… | — |
+| **After The Disaster** (`after-the-disaster`) | Work through the first hours and days after a disaster — a fire, flood, storm, or evacuation — in the right order: safety and people first, then… | ✅ 5/5 |
+| **Emergency Doc Kit** (`emergency-doc-kit`) | Assemble the grab-and-go document and information kit for a disaster — the IDs, insurance, medical, financial, and property records (physical… | ✅ 5/5 |
+| **Emergency Grant Application** (`emergency-grant-application`) | Apply for emergency money after a disaster, crisis or sudden hardship: government disaster assistance, local hardship and welfare funds, charity… | ✅ 4.8/5 |
+| **Go-Bag Builder** (`go-bag-builder`) | Build an emergency go-bag tailored to your actual household and your most likely local hazards — not a generic list — covering the people, pets… | ✅ 5/5 |
+| **Hazard Risk Map** (`hazard-risk-map`) | Figure out which disasters and emergencies your specific location actually faces — and the concrete prep each one demands — so your readiness… | ✅ 4.8/5 |
+| **Lost Documents Replacement** (`lost-documents-replacement`) | Replace identity and important documents lost or destroyed in a fire, flood, theft or move, in the order that unlocks the rest: ID and birth… | ✅ 5/5 |
+| **Power Outage Plan** (`power-outage-plan`) | Plan for an extended power outage — keeping medically-essential devices running, food safe, the home warm or cool enough, and communication alive… | ✅ 4.8/5 |
 
 ### `pm-estate` — 4 skills
 
@@ -1368,7 +1368,7 @@
 | **Post-Event Debrief** (`post-event-debrief`) | Run an event debrief that changes the next event — what the numbers say, what actually went wrong versus what felt stressful, and the specific… | — |
 | **Venue Contract Review** (`venue-contract-review`) | Read a venue contract for the clauses that actually cost money — the minimum spend, the cancellation ladder, the attrition clause, and everything… | — |
 
-### `pm-family` — 15 skills
+### `pm-family` — 15 skills · 3 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -1376,14 +1376,14 @@
 | **Childcare Comparison** (`childcare-comparison`) | Compare childcare options — nursery/daycare, childminder, nanny, family, or a mix — for your family's real needs, budget, and values. | — |
 | **Co-Parenting Messages** (`co-parenting-messages`) | Write calm, businesslike co-parenting messages that keep the focus on the kids and stay out of the old conflict — for scheduling, expenses… | — |
 | **Condolence Message Helper** (`condolence-message-helper`) | Write a sincere condolence or sympathy message when someone has died or a friend is grieving — warm, personal, and free of the clichés that hurt… | — |
-| **Family Cookbook Archivist** (`family-cookbook-archivist`) | Rescue the recipes that exist only in someone's hands — the interview that converts a handful of this and cook until it looks right into… | — |
+| **Family Cookbook Archivist** (`family-cookbook-archivist`) | Rescue the recipes that exist only in someone's hands — the interview that converts a handful of this and cook until it looks right into… | ✅ 4.8/5 |
 | **Family Emergency Plan** (`family-emergency-plan`) | Build a family emergency plan — contacts, meeting points, key documents, and 'if something happens to me' info — so your household isn't… | — |
-| **Household Constitution** (`household-constitution`) | Turn the household unwritten rules into a short charter everyone actually agreed to — screens, chores, money, guests, quiet — drafted together… | — |
+| **Household Constitution** (`household-constitution`) | Turn the household unwritten rules into a short charter everyone actually agreed to — screens, chores, money, guests, quiet — drafted together… | ✅ 4.8/5 |
 | **In-Law Boundary Scripts** (`in-law-boundary-scripts`) | Set a boundary with in-laws or extended family kindly and clearly — the words to say, a united-front approach with your partner, and a plan for… | — |
 | **Long-Distance Relationship Plan** (`long-distance-relationship-plan`) | Build a plan to keep a long-distance relationship close and healthy — communication rhythms, visits, shared experiences, and a shared sense of the… | — |
 | **Love-Letter Helper** (`love-letter-helper`) | Help you write a heartfelt letter to someone you love — for an anniversary, a hard time, a birthday, or just because — that sounds like you and… | — |
 | **New-Baby Logistics** (`new-baby-logistics`) | Turn 'we're having a baby' into a calm, timed logistics plan — the admin, leave, registrations, and prep that has to happen, sequenced so nothing… | — |
-| **Oral History Kit** (`oral-history-kit`) | Record a parent's or grandparent's life while they can still tell it — the question arcs that unlock real stories instead of resume facts, the… | — |
+| **Oral History Kit** (`oral-history-kit`) | Record a parent's or grandparent's life while they can still tell it — the question arcs that unlock real stories instead of resume facts, the… | ✅ 4.8/5 |
 | **Relationship Check-In** (`relationship-check-in`) | Run a calm, regular relationship check-in with your partner — a structured 'how are we doing' conversation that catches small things before they… | — |
 | **School Choice Decision** (`school-choice-decision`) | Choose the right school for a specific child by weighing what actually matters to them and your family — not just rankings. | — |
 | **Wedding Vows Writer** (`wedding-vows-writer`) | Write personal wedding vows that sound like you — specific, heartfelt, and the right length — instead of generic or cheesy. | — |
@@ -1487,22 +1487,22 @@
 | **RMA Failure Analysis** (`rma-failure-analysis`) | Turn field returns into a structured failure-analysis report — RMA triage taxonomy (NTF vs real failures), Pareto by verified failure mode… | — |
 | **Tooling Risk Assessment** (`tooling-risk-assessment`) | Assess an injection-mold or production tooling decision before cutting steel — soft vs hard tooling tradeoff, tool life vs forecast, cavitation… | — |
 
-### `pm-health` — 4 skills
+### `pm-health` — 4 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Clinical Trial Protocol** (`clinical-trial-protocol`) | Draft a clinical trial protocol synopsis with the elements regulators and IRBs expect. | — |
-| **Discharge Summary** (`discharge-summary`) | Turn a hospital stay into a complete, well-structured discharge summary. | — |
-| **Prior Authorization Letter** (`prior-authorization-letter`) | Write a persuasive prior-authorization / medical-necessity letter to an insurer. | — |
-| **SOAP Note** (`soap-note`) | Structure a clinical encounter into a clean SOAP note. | — |
+| **Clinical Trial Protocol** (`clinical-trial-protocol`) | Draft a clinical trial protocol synopsis with the elements regulators and IRBs expect. | ✅ 4.5/5 |
+| **Discharge Summary** (`discharge-summary`) | Turn a hospital stay into a complete, well-structured discharge summary. | ✅ 4.5/5 |
+| **Prior Authorization Letter** (`prior-authorization-letter`) | Write a persuasive prior-authorization / medical-necessity letter to an insurer. | ✅ 4.8/5 |
+| **SOAP Note** (`soap-note`) | Structure a clinical encounter into a clean SOAP note. | ✅ 5/5 |
 
-### `pm-hk-tw` — 3 skills
+### `pm-hk-tw` — 3 skills · 3 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Hong Kong Cantonese Copy (香港粵語文案)** (`hk-cantonese-copy`) | Use when asked 幫我寫廣東話文案, 寫香港 IG post, 改成港式口語, Facebook 專頁帖文點寫, Threads 文案, 寫粵語廣告, or write marketing copy and social posts for a Hong Kong… | — |
-| **Hong Kong MPF Explainer (強積金)** (`hk-mpf-explainer`) | Use when asked 強積金點計, 強積金幾時可以攞, 轉強積金計劃, 僱主有冇供強積金, 自願供款扣稅, eMPF 點用, or understand Hong Kong's Mandatory Provident Fund (MPF). Produces how… | — |
-| **Taiwan Labour Standards (勞動基準法)** (`tw-labour-standards`) | Use when asked 加班費怎麼算, 特休有幾天, 被資遣可以拿多少, 預告期間是多久, 勞退 6% 雇主有沒有提繳, 這樣合法嗎 勞基法, or check work terms against Taiwan's Labor Standards Act (勞動基準法).… | — |
+| **Hong Kong Cantonese Copy (香港粵語文案)** (`hk-cantonese-copy`) | Use when asked 幫我寫廣東話文案, 寫香港 IG post, 改成港式口語, Facebook 專頁帖文點寫, Threads 文案, 寫粵語廣告, or write marketing copy and social posts for a Hong Kong… | ✅ 5/5 |
+| **Hong Kong MPF Explainer (強積金)** (`hk-mpf-explainer`) | Use when asked 強積金點計, 強積金幾時可以攞, 轉強積金計劃, 僱主有冇供強積金, 自願供款扣稅, eMPF 點用, or understand Hong Kong's Mandatory Provident Fund (MPF). Produces how… | ✅ 4.8/5 |
+| **Taiwan Labour Standards (勞動基準法)** (`tw-labour-standards`) | Use when asked 加班費怎麼算, 特休有幾天, 被資遣可以拿多少, 預告期間是多久, 勞退 6% 雇主有沒有提繳, 這樣合法嗎 勞基法, or check work terms against Taiwan's Labor Standards Act (勞動基準法).… | ✅ 4.8/5 |
 
 ### `pm-hobbies` — 11 skills
 
@@ -1530,53 +1530,53 @@
 | **Server Training Guide** (`server-training-guide`) | Build an onboarding and training guide for restaurant front-of-house staff (servers, hosts, bartenders). | — |
 | **Shift Schedule Builder** (`shift-schedule-builder`) | Build a staff shift schedule that matches coverage to demand while hitting a labor-cost target. | — |
 
-### `pm-identity` — 4 skills
+### `pm-identity` — 4 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Coming Out Rehearsal** (`coming-out-rehearsal`) | Prepare and rehearse a coming-out conversation, tuned to the specific person and the real risk — what to say, how to open, how to handle the… | — |
-| **Faith Transition Companion** (`faith-transition-companion`) | Navigate questioning, leaving, or changing your religion — especially a high-control or all-encompassing one — with the relationship-preservation… | — |
-| **Name Change Navigator** (`name-change-navigator`) | Get through the 40-institution slog of changing your name — after marriage, divorce, transition, or just because — in the right order, so one… | — |
-| **Two Worlds Translator** (`two-worlds-translator`) | Bridge the gap between your home culture and your adopted one — explain your immigrant parents to your partner (and vice versa), navigate the… | — |
+| **Coming Out Rehearsal** (`coming-out-rehearsal`) | Prepare and rehearse a coming-out conversation, tuned to the specific person and the real risk — what to say, how to open, how to handle the… | ✅ 5/5 |
+| **Faith Transition Companion** (`faith-transition-companion`) | Navigate questioning, leaving, or changing your religion — especially a high-control or all-encompassing one — with the relationship-preservation… | ✅ 5/5 |
+| **Name Change Navigator** (`name-change-navigator`) | Get through the 40-institution slog of changing your name — after marriage, divorce, transition, or just because — in the right order, so one… | ✅ 4.8/5 |
+| **Two Worlds Translator** (`two-worlds-translator`) | Bridge the gap between your home culture and your adopted one — explain your immigrant parents to your partner (and vice versa), navigate the… | ✅ 4.8/5 |
 
-### `pm-insurance` — 6 skills
+### `pm-insurance` — 6 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Claims Triage** (`claims-triage`) | Triage an incoming insurance claim: check the coverage trigger against policy wording, band severity and complexity, screen for fraud indicators… | — |
 | **Coverage Gap Analysis** (`coverage-gap-analysis`) | Map an organisation's risks against its insurance policy portfolio to find what's uncovered, underinsured, or double-covered. | — |
-| **Crop Insurance Claim** (`crop-insurance-claim`) | Make a crop or livestock insurance claim after drought, flood, pests, disease or hail: report it in time, record the loss properly, and follow up… | — |
+| **Crop Insurance Claim** (`crop-insurance-claim`) | Make a crop or livestock insurance claim after drought, flood, pests, disease or hail: report it in time, record the loss properly, and follow up… | ✅ 5/5 |
 | **Insurance Claim Appeal** (`insurance-claim-appeal`) | Appeal a denied insurance claim — read the real reason for the denial, find the strongest grounds, and draft the appeal with the evidence that… | — |
 | **Policy Renewal Review** (`policy-renewal-review`) | Run a pre-renewal review of an insurance programme: scan coverage gaps against current operations, test limit adequacy against inflation and… | — |
 | **Underwriting Narrative** (`underwriting-narrative`) | Write the underwriting file narrative for a risk: the risk story, exposure quantification, loss-history read, mitigating and aggravating factors… | — |
 
-### `pm-investing-literacy` — 5 skills
+### `pm-investing-literacy` — 5 skills · 5 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Annual Report Tutor** (`annual-report-tutor`) | Use when asked to walk me through an annual report, teach me to read this 10-K, explain a company's accounts to a beginner, or tutor me on the… | — |
-| **Audited Boundary Check** (`audited-boundary-check`) | Use when asked to check whether a figure is audited, which headline numbers sit outside the audited accounts, what 'adjusted' or 'underlying'… | — |
-| **Company Compare, Same Definitions** (`company-compare-same-definitions`) | Use when asked to compare two annual reports, put two companies from the same sector side by side, or check whether two companies' adjusted… | — |
-| **Investing Vocabulary Explainer** (`investing-vocabulary-explainer`) | Use when asked what a term means in an annual report, to explain EBITDA, goodwill, free cash flow, working capital or diluted EPS, or to define… | — |
-| **Profit to Cash Walk** (`profit-to-cash-walk`) | Use when asked to reconcile operating profit to free cash flow, walk from EBIT to FCF, explain why profit and cash differ in this report, or show… | — |
+| **Annual Report Tutor** (`annual-report-tutor`) | Use when asked to walk me through an annual report, teach me to read this 10-K, explain a company's accounts to a beginner, or tutor me on the… | ✅ 2/5 |
+| **Audited Boundary Check** (`audited-boundary-check`) | Use when asked to check whether a figure is audited, which headline numbers sit outside the audited accounts, what 'adjusted' or 'underlying'… | ✅ 5/5 |
+| **Company Compare, Same Definitions** (`company-compare-same-definitions`) | Use when asked to compare two annual reports, put two companies from the same sector side by side, or check whether two companies' adjusted… | ✅ 3/5 |
+| **Investing Vocabulary Explainer** (`investing-vocabulary-explainer`) | Use when asked what a term means in an annual report, to explain EBITDA, goodwill, free cash flow, working capital or diluted EPS, or to define… | ✅ 4.5/5 |
+| **Profit to Cash Walk** (`profit-to-cash-walk`) | Use when asked to reconcile operating profit to free cash flow, walk from EBIT to FCF, explain why profit and cash differ in this report, or show… | ✅ 4.3/5 |
 
-### `pm-invisible-illness` — 4 skills
-
-| Skill | What it does | Eval |
-|---|---|---|
-| **Diagnosis Limbo Kit** (`diagnosis-limbo-kit`) | Run the multi-year campaign of being chronically ill with no diagnosis — track patterns across specialists so nothing resets, avoid the 'it's just… | — |
-| **Flare Day Planner** (`flare-day-planner`) | Plan around flare days before they ambush you — spot your early warning signs, pre-build the reduced 'flare mode' version of your life, prepare… | — |
-| **Perimenopause Navigator** (`perimenopause-navigator`) | Make sense of perimenopause symptoms nobody warned you about and prepare the GP conversation that actually helps — a symptom tracker mapped to… | — |
-| **Spoon Planner** (`spoon-planner`) | Budget limited energy the way spoon theory describes it — count your realistic daily 'spoons', price what each task actually costs (including the… | — |
-
-### `pm-japan` — 4 skills
+### `pm-invisible-illness` — 4 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Japan Resignation Procedures (退職の手続き)** (`jp-resignation-procedures`) | Use when asked 退職の手続き, how do I quit my job in Japan, 退職届の書き方, what happens to my health insurance and pension when I leave, 失業保険のもらい方, 有給消化, or… | — |
-| **Japanese Approval Request (稟議書)** (`jp-ringisho`) | Use when asked 稟議書の書き方, write a ringi approval request in Japanese, 稟議書を作って, how to get a purchase or project approved in a Japanese company, or… | — |
-| **Japan Tax Return (確定申告)** (`jp-tax-return`) | Use when asked 確定申告のやり方, do I need to file a tax return in Japan, how do I claim medical expense deduction, ふるさと納税の確定申告, 副業の確定申告, how to file with… | — |
-| **Japan Year-End Tax Adjustment (年末調整)** (`jp-year-end-adjustment`) | Use when asked 年末調整の書き方, how do I fill in my nenmatsu chōsei forms, which deductions can I claim at year-end in Japan, 扶養控除等申告書の書き方, 保険料控除申告書, or… | — |
+| **Diagnosis Limbo Kit** (`diagnosis-limbo-kit`) | Run the multi-year campaign of being chronically ill with no diagnosis — track patterns across specialists so nothing resets, avoid the 'it's just… | ✅ 4.5/5 |
+| **Flare Day Planner** (`flare-day-planner`) | Plan around flare days before they ambush you — spot your early warning signs, pre-build the reduced 'flare mode' version of your life, prepare… | ✅ 3/5 |
+| **Perimenopause Navigator** (`perimenopause-navigator`) | Make sense of perimenopause symptoms nobody warned you about and prepare the GP conversation that actually helps — a symptom tracker mapped to… | ✅ 5/5 |
+| **Spoon Planner** (`spoon-planner`) | Budget limited energy the way spoon theory describes it — count your realistic daily 'spoons', price what each task actually costs (including the… | ✅ 4.8/5 |
+
+### `pm-japan` — 4 skills · 4 eval-scored
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Japan Resignation Procedures (退職の手続き)** (`jp-resignation-procedures`) | Use when asked 退職の手続き, how do I quit my job in Japan, 退職届の書き方, what happens to my health insurance and pension when I leave, 失業保険のもらい方, 有給消化, or… | ✅ 4.3/5 |
+| **Japanese Approval Request (稟議書)** (`jp-ringisho`) | Use when asked 稟議書の書き方, write a ringi approval request in Japanese, 稟議書を作って, how to get a purchase or project approved in a Japanese company, or… | ✅ 2.3/5 |
+| **Japan Tax Return (確定申告)** (`jp-tax-return`) | Use when asked 確定申告のやり方, do I need to file a tax return in Japan, how do I claim medical expense deduction, ふるさと納税の確定申告, 副業の確定申告, how to file with… | ✅ 4.8/5 |
+| **Japan Year-End Tax Adjustment (年末調整)** (`jp-year-end-adjustment`) | Use when asked 年末調整の書き方, how do I fill in my nenmatsu chōsei forms, which deductions can I claim at year-end in Japan, 扶養控除等申告書の書き方, 保険料控除申告書, or… | ✅ 4.8/5 |
 
 ### `pm-journalism` — 4 skills
 
@@ -1587,22 +1587,22 @@
 | **Source Protection Plan** (`source-protection-plan`) | Assess and reduce the risk of exposing a confidential journalistic source. | — |
 | **Story Pitch** (`story-pitch`) | Pitch a news or feature story to an editor — the angle, why now, and how you'll report it. | — |
 
-### `pm-kitchen` — 3 skills
+### `pm-kitchen` — 3 skills · 2 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Grocery Budget Audit** (`grocery-budget-audit`) | Find where the food money actually goes — a no-shame ledger built from real receipts/statements, the four leak categories (waste, convenience… | — |
-| **Meal Prep OS** (`meal-prep-os`) | Turn what's actually in the fridge and 90 minutes on Sunday into a week that mostly feeds itself — a cook-once-eat-thrice batch plan, the… | — |
+| **Grocery Budget Audit** (`grocery-budget-audit`) | Find where the food money actually goes — a no-shame ledger built from real receipts/statements, the four leak categories (waste, convenience… | ✅ 4.8/5 |
+| **Meal Prep OS** (`meal-prep-os`) | Turn what's actually in the fridge and 90 minutes on Sunday into a week that mostly feeds itself — a cook-once-eat-thrice batch plan, the… | ✅ 4.8/5 |
 | **What's for Dinner** (`whats-for-dinner`) | Decide what to cook tonight from what you already have and how much time/energy you've got — no shopping trip, no recipe rabbit hole. | — |
 
-### `pm-korea` — 4 skills
+### `pm-korea` — 4 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Korean Job Application Essay (자기소개서)** (`kr-cover-letter`) | Use when asked 자기소개서 써 줘, 자소서 첨삭해 줘, 지원동기 어떻게 써, 입사 후 포부 항목, 대기업 공채 자소서, 공기업 NCS 자기소개서, or write a Korean self-introduction essay for a job… | — |
-| **Korea Severance Pay (퇴직금)** (`kr-severance-pay`) | Use when asked 퇴직금 계산해 줘, 퇴직금 얼마 받을 수 있어, 평균임금 어떻게 계산해, 퇴직연금 DB형 DC형 차이, IRP로 퇴직금 받아야 해, 퇴직금을 안 줘요, or how is severance pay calculated in Korea.… | — |
-| **Korean Business Report (보고서 and 주간보고)** (`kr-work-report`) | Use when asked 보고서 써 줘, 주간보고 작성해 줘, 개조식으로 정리해 줘, 팀장님께 보고할 내용 정리, 1페이지 보고서, 업무 보고서 양식, or write a Korean business report or weekly report. Produces… | — |
-| **Korea Year-End Tax Settlement (연말정산)** (`kr-year-end-tax-settlement`) | Use when asked 연말정산 어떻게 해요, 연말정산 간소화 자료 어떻게 제출해, which deductions can I claim in my Korean year-end tax settlement, 부양가족 공제 누구 올려야 해, 맞벌이 연말정산 누가… | — |
+| **Korean Job Application Essay (자기소개서)** (`kr-cover-letter`) | Use when asked 자기소개서 써 줘, 자소서 첨삭해 줘, 지원동기 어떻게 써, 입사 후 포부 항목, 대기업 공채 자소서, 공기업 NCS 자기소개서, or write a Korean self-introduction essay for a job… | ✅ 2/5 |
+| **Korea Severance Pay (퇴직금)** (`kr-severance-pay`) | Use when asked 퇴직금 계산해 줘, 퇴직금 얼마 받을 수 있어, 평균임금 어떻게 계산해, 퇴직연금 DB형 DC형 차이, IRP로 퇴직금 받아야 해, 퇴직금을 안 줘요, or how is severance pay calculated in Korea.… | ✅ 5/5 |
+| **Korean Business Report (보고서 and 주간보고)** (`kr-work-report`) | Use when asked 보고서 써 줘, 주간보고 작성해 줘, 개조식으로 정리해 줘, 팀장님께 보고할 내용 정리, 1페이지 보고서, 업무 보고서 양식, or write a Korean business report or weekly report. Produces… | ✅ 4.5/5 |
+| **Korea Year-End Tax Settlement (연말정산)** (`kr-year-end-tax-settlement`) | Use when asked 연말정산 어떻게 해요, 연말정산 간소화 자료 어떻게 제출해, which deductions can I claim in my Korean year-end tax settlement, 부양가족 공제 누구 올려야 해, 맞벌이 연말정산 누가… | ✅ 4.5/5 |
 
 ### `pm-layoff` — 4 skills
 
@@ -1665,80 +1665,80 @@
 | **Subtitle & Caption** (`subtitle-caption`) | Write or translate subtitles/captions that respect reading speed and timing rules. | — |
 | **Transcreation** (`transcreation`) | Transcreate marketing/brand copy for another language and culture — recreate the impact, not the words. | — |
 
-### `pm-maintainer` — 3 skills
+### `pm-maintainer` — 3 skills · 3 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **First Maintainer Month** (`first-maintainer-month`) | Set up a new open-source project's first month so it can grow without eating its maintainer — the README that routes people correctly… | — |
-| **Maintainer Triage** (`maintainer-triage`) | Get an open-source repo's issue backlog from 400-and-drowning to triaged-and-honest in one pass — a label taxonomy that encodes decisions, batch… | — |
-| **The Maintainer's No** (`the-maintainers-no`) | Say no as an open-source maintainer without burning contributors or yourself — the feature that doesn't fit, the PR that took someone a weekend… | — |
+| **First Maintainer Month** (`first-maintainer-month`) | Set up a new open-source project's first month so it can grow without eating its maintainer — the README that routes people correctly… | ✅ 2.5/5 |
+| **Maintainer Triage** (`maintainer-triage`) | Get an open-source repo's issue backlog from 400-and-drowning to triaged-and-honest in one pass — a label taxonomy that encodes decisions, batch… | ✅ 4.5/5 |
+| **The Maintainer's No** (`the-maintainers-no`) | Say no as an open-source maintainer without burning contributors or yourself — the feature that doesn't fit, the PR that took someone a weekend… | ✅ 5/5 |
 
-### `pm-method` — 10 skills
+### `pm-method` — 10 skills · 8 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Brainstorming** (`brainstorming`) | Run a real brainstorm — divergent generation without judgment, then convergent selection with explicit criteria — instead of listing ten obvious… | — |
-| **Code Simplification** (`code-simplification`) | Simplify code that works — remove speculative abstraction, dead flexibility, and needless indirection while keeping behaviour identical and verified. | — |
+| **Brainstorming** (`brainstorming`) | Run a real brainstorm — divergent generation without judgment, then convergent selection with explicit criteria — instead of listing ten obvious… | ✅ 5/5 |
+| **Code Simplification** (`code-simplification`) | Simplify code that works — remove speculative abstraction, dead flexibility, and needless indirection while keeping behaviour identical and verified. | ✅ 3/5 |
 | **Decision Forensics** (`decision-forensics`) | Reconstruct the decision actually made in a messy Slack, email, or meeting thread into a proper decision record — commitments named, silent… | — |
-| **Executing Plans** (`executing-plans`) | Execute a written plan with discipline — verify each step before advancing, surface deviations instead of improvising around them, and keep a… | — |
-| **Incremental Implementation** (`incremental-implementation`) | Build in small, individually-verified increments that each leave the system working — instead of big-bang changes that fail mysteriously at the end. | — |
-| **Interview Me** (`interview-me`) | Elicit the real requirements by interviewing the requester BEFORE building or writing anything — one question at a time, until the brief is buildable. | — |
+| **Executing Plans** (`executing-plans`) | Execute a written plan with discipline — verify each step before advancing, surface deviations instead of improvising around them, and keep a… | ✅ 5/5 |
+| **Incremental Implementation** (`incremental-implementation`) | Build in small, individually-verified increments that each leave the system working — instead of big-bang changes that fail mysteriously at the end. | ✅ 5/5 |
+| **Interview Me** (`interview-me`) | Elicit the real requirements by interviewing the requester BEFORE building or writing anything — one question at a time, until the brief is buildable. | ✅ 3.3/5 |
 | **Receipts Audit** (`receipts-audit`) | Audit any document against its own sources — every factual claim extracted and graded as evidenced, partially evidenced, unsupported, or… | — |
-| **Subagent Orchestration** (`subagent-orchestration`) | Decompose work across parallel subagents properly — task slicing that avoids collisions, briefs that stand alone, and result integration that… | — |
-| **Verification Before Completion** (`verification-before-completion`) | Verify work actually meets its brief BEFORE declaring it done — a structured self-review pass that catches the gaps, unmet requirements, and… | — |
-| **Writing Plans** (`writing-plans`) | Write an executable work plan BEFORE starting a complex task — decomposed steps with verification points, risks pre-named, and explicit stop… | — |
+| **Subagent Orchestration** (`subagent-orchestration`) | Decompose work across parallel subagents properly — task slicing that avoids collisions, briefs that stand alone, and result integration that… | ✅ 4.8/5 |
+| **Verification Before Completion** (`verification-before-completion`) | Verify work actually meets its brief BEFORE declaring it done — a structured self-review pass that catches the gaps, unmet requirements, and… | ✅ 4.8/5 |
+| **Writing Plans** (`writing-plans`) | Write an executable work plan BEFORE starting a complex task — decomposed steps with verification points, risks pre-named, and explicit stop… | ✅ 5/5 |
 
-### `pm-musician` — 3 skills
-
-| Skill | What it does | Eval |
-|---|---|---|
-| **Band Agreement** (`band-agreement`) | Write the band agreement before the money or the breakup arrives — who owns the songs, how money splits (writing vs performing distinguished), who… | — |
-| **Press Kit EPK** (`press-kit-epk`) | Build an electronic press kit that bookers and blogs actually read — the three-sentence bio that isn't 'genre-defying', a one-page layout with… | — |
-| **Release Day Countdown** (`release-day-countdown`) | Plan an independent music release backwards from release day — the 8-week countdown with distributor upload deadlines flagged, playlist pitch… | — |
-
-### `pm-neurodivergent` — 5 skills
+### `pm-musician` — 3 skills · 3 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Body Double Session** (`body-double-session`) | Set up and run a body-doubling session — using another person's presence (in the room, on a call, or a chat check-in) to start and stay on the… | — |
-| **Masking Budget** (`masking-budget`) | Treat neurodivergent masking as a daily energy budget — audit what passing as neurotypical actually costs you, where the spend is worth it, where… | — |
-| **Meltdown Map** (`meltdown-map`) | Build your personal early-warning system for meltdowns or shutdowns — your specific rising signs, the triggers that stack, what actually helps at… | — |
-| **NT Translator** (`nt-translator`) | Translate both directions across the neurodivergent↔neurotypical gap at work — decode what an indirect message actually meant ('let's circle back'… | — |
-| **Sensory Audit** (`sensory-audit`) | Walk a space — home, office, commute, classroom — and find the sensory landmines quietly draining or overloading you, with fixes ranked by cost… | — |
+| **Band Agreement** (`band-agreement`) | Write the band agreement before the money or the breakup arrives — who owns the songs, how money splits (writing vs performing distinguished), who… | ✅ 2/5 |
+| **Press Kit EPK** (`press-kit-epk`) | Build an electronic press kit that bookers and blogs actually read — the three-sentence bio that isn't 'genre-defying', a one-page layout with… | ✅ 1.8/5 |
+| **Release Day Countdown** (`release-day-countdown`) | Plan an independent music release backwards from release day — the 8-week countdown with distributor upload deadlines flagged, playlist pitch… | ✅ 2/5 |
 
-### `pm-newcomer` — 6 skills
+### `pm-neurodivergent` — 5 skills · 5 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Arrival Setup** (`arrival-setup`) | Set up the essentials in the right order after moving to a new country — the ID/registration, bank account, phone, address, and social/tax number… | — |
-| **Credential Recognition** (`credential-recognition`) | Get foreign qualifications, degrees, or professional licenses recognised in a new country — figure out whether recognition is even needed, which… | — |
-| **Credit From Scratch** (`credit-from-scratch`) | Build a credit history from zero in a new country — understand that credit doesn't transfer across borders, get the first products that report… | — |
-| **Healthcare System Primer** (`healthcare-system-primer`) | Understand and enrol in a new country's healthcare system — how it works (public/private/insurance-based), what you're entitled to with your… | — |
-| **Newcomer School Enrolment** (`newcomer-school-enrolment`) | Get a child into school after moving to a new country: who to contact, the documents schools ask for, what to do when papers are missing, language… | — |
-| **Tax Residency Primer** (`tax-residency-primer`) | Orient yourself on your tax-residency situation after moving countries — the questions that determine where you owe tax, the double-taxation and… | — |
+| **Body Double Session** (`body-double-session`) | Set up and run a body-doubling session — using another person's presence (in the room, on a call, or a chat check-in) to start and stay on the… | ✅ 5/5 |
+| **Masking Budget** (`masking-budget`) | Treat neurodivergent masking as a daily energy budget — audit what passing as neurotypical actually costs you, where the spend is worth it, where… | ✅ 3/5 |
+| **Meltdown Map** (`meltdown-map`) | Build your personal early-warning system for meltdowns or shutdowns — your specific rising signs, the triggers that stack, what actually helps at… | ✅ 2.8/5 |
+| **NT Translator** (`nt-translator`) | Translate both directions across the neurodivergent↔neurotypical gap at work — decode what an indirect message actually meant ('let's circle back'… | ✅ 4.8/5 |
+| **Sensory Audit** (`sensory-audit`) | Walk a space — home, office, commute, classroom — and find the sensory landmines quietly draining or overloading you, with fixes ranked by cost… | ✅ 4.8/5 |
 
-### `pm-newgen` — 10 skills
-
-| Skill | What it does | Eval |
-|---|---|---|
-| **Attention Reset** (`attention-reset`) | Get your attention back with a 30-day protocol that assumes you'll break it — a screen-time ledger without moralizing, friction engineering (what… | — |
-| **Clip Factory** (`clip-factory`) | Turn one long video, podcast, or stream transcript into 8-12 short-form clips — each with a hook line, cut timestamps, captions, and a platform… | — |
-| **Creator Deal Decoder** (`creator-deal-decoder`) | Decode a brand deal or UGC contract before signing — usage rights, exclusivity windows, whitelisting, payment terms, and kill clauses ranked… | — |
-| **Dating Profile Doctor** (`dating-profile-doctor`) | Rewrite a dating profile so it sounds like you on a good day — mined from how you actually talk, specific instead of generic, with photo order… | — |
-| **Micro Retirement Planner** (`micro-retirement-planner`) | Plan a deliberate career break — 3 to 12 months off between chapters — with honest runway math, the re-entry story rehearsed before you leave… | — |
-| **Ranked Climb Coach** (`ranked-climb-coach`) | Climb ranked on purpose instead of on tilt — a VOD-review protocol (three deaths per game, one pattern per week), a tilt debrief that ends… | — |
-| **Resale Flip Kit** (`resale-flip-kit`) | Sell secondhand like someone who's done it 500 times — honest condition grading, comps-based pricing with a floor and an anchor, listing titles… | — |
-| **Roommate Agreement** (`roommate-agreement`) | Write the flat's constitution before the first passive-aggressive note — money, chores, guests, noise, food, and the exit plan, decided while… | — |
-| **The Vibe Check** (`the-vibe-check`) | Harden a vibe-coded app before strangers use it — the audit for prototypes built fast with AI: exposed secrets, missing auth checks, unvalidated… | — |
-| **TTRPG Session Forge** (`ttrpg-session-forge`) | Prep tonight's TTRPG session in 30 minutes — three scenes with stakes, NPC voice cards, a flexible encounter, treasure/clues, and the 'players did… | — |
-
-### `pm-nonprofit` — 3 skills
+### `pm-newcomer` — 6 skills · 6 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Case for Support** (`case-for-support`) | Write a fundraising case for support that makes donors want to give. | — |
-| **Donor Update** (`donor-update`) | Write a warm donor update or stewardship message that makes a supporter feel their gift mattered. | — |
-| **Impact Report** (`impact-report`) | Write a compelling nonprofit impact or annual report that shows donors what their money achieved. | — |
+| **Arrival Setup** (`arrival-setup`) | Set up the essentials in the right order after moving to a new country — the ID/registration, bank account, phone, address, and social/tax number… | ✅ 5/5 |
+| **Credential Recognition** (`credential-recognition`) | Get foreign qualifications, degrees, or professional licenses recognised in a new country — figure out whether recognition is even needed, which… | ✅ 5/5 |
+| **Credit From Scratch** (`credit-from-scratch`) | Build a credit history from zero in a new country — understand that credit doesn't transfer across borders, get the first products that report… | ✅ 5/5 |
+| **Healthcare System Primer** (`healthcare-system-primer`) | Understand and enrol in a new country's healthcare system — how it works (public/private/insurance-based), what you're entitled to with your… | ✅ 5/5 |
+| **Newcomer School Enrolment** (`newcomer-school-enrolment`) | Get a child into school after moving to a new country: who to contact, the documents schools ask for, what to do when papers are missing, language… | ✅ 5/5 |
+| **Tax Residency Primer** (`tax-residency-primer`) | Orient yourself on your tax-residency situation after moving countries — the questions that determine where you owe tax, the double-taxation and… | ✅ 5/5 |
+
+### `pm-newgen` — 10 skills · 10 eval-scored
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Attention Reset** (`attention-reset`) | Get your attention back with a 30-day protocol that assumes you'll break it — a screen-time ledger without moralizing, friction engineering (what… | ✅ 5/5 |
+| **Clip Factory** (`clip-factory`) | Turn one long video, podcast, or stream transcript into 8-12 short-form clips — each with a hook line, cut timestamps, captions, and a platform… | ✅ 2.8/5 |
+| **Creator Deal Decoder** (`creator-deal-decoder`) | Decode a brand deal or UGC contract before signing — usage rights, exclusivity windows, whitelisting, payment terms, and kill clauses ranked… | ✅ 4.8/5 |
+| **Dating Profile Doctor** (`dating-profile-doctor`) | Rewrite a dating profile so it sounds like you on a good day — mined from how you actually talk, specific instead of generic, with photo order… | ✅ 3.3/5 |
+| **Micro Retirement Planner** (`micro-retirement-planner`) | Plan a deliberate career break — 3 to 12 months off between chapters — with honest runway math, the re-entry story rehearsed before you leave… | ✅ 4.8/5 |
+| **Ranked Climb Coach** (`ranked-climb-coach`) | Climb ranked on purpose instead of on tilt — a VOD-review protocol (three deaths per game, one pattern per week), a tilt debrief that ends… | ✅ 4.8/5 |
+| **Resale Flip Kit** (`resale-flip-kit`) | Sell secondhand like someone who's done it 500 times — honest condition grading, comps-based pricing with a floor and an anchor, listing titles… | ✅ 4.8/5 |
+| **Roommate Agreement** (`roommate-agreement`) | Write the flat's constitution before the first passive-aggressive note — money, chores, guests, noise, food, and the exit plan, decided while… | ✅ 4.8/5 |
+| **The Vibe Check** (`the-vibe-check`) | Harden a vibe-coded app before strangers use it — the audit for prototypes built fast with AI: exposed secrets, missing auth checks, unvalidated… | ✅ 5/5 |
+| **TTRPG Session Forge** (`ttrpg-session-forge`) | Prep tonight's TTRPG session in 30 minutes — three scenes with stakes, NPC voice cards, a flexible encounter, treasure/clues, and the 'players did… | ✅ 4.8/5 |
+
+### `pm-nonprofit` — 3 skills · 3 eval-scored
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Case for Support** (`case-for-support`) | Write a fundraising case for support that makes donors want to give. | ✅ 4/5 |
+| **Donor Update** (`donor-update`) | Write a warm donor update or stewardship message that makes a supporter feel their gift mattered. | ✅ 4/5 |
+| **Impact Report** (`impact-report`) | Write a compelling nonprofit impact or annual report that shows donors what their money achieved. | ✅ 4.3/5 |
 
 ### `pm-operator` — 5 skills
 
@@ -1750,19 +1750,19 @@
 | **Inbox Zero Operator** (`inbox-zero-operator`) | Drive an email inbox to zero through a computer-use or tool-using agent — triage every message into act/delegate/defer/archive with drafts… | — |
 | **Subscription Auditor** (`subscription-auditor`) | Find the subscriptions you forgot you pay for — a tool-using agent audits statements and inboxes, prices the waste annually, and preps (never… | — |
 
-### `pm-oss-launch` — 9 skills
+### `pm-oss-launch` — 9 skills · 9 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Demo Clip Storyboard** (`demo-clip-storyboard`) | Use when asked to plan a short demo video for a repo, script a 20-second clip, storyboard a GIF for a README or launch post, or make a project… | — |
-| **Demo Data Generator** (`demo-data-generator`) | Use when asked to create demo data, seed a no-signup demo, generate fake but realistic data for screenshots, or fill a sandbox without using real… | — |
-| **First Issue Designer** (`first-issue-designer`) | Use when asked to create good first issues, prepare a repo for new contributors, turn a roadmap into starter tasks, or write issues that newcomers… | — |
-| **Fortnightly Release Planner** (`fortnightly-release-planner`) | Use when asked to plan releases for a side project or small open-source repo, turn a backlog into a release schedule, ship smaller and more often… | — |
-| **Importer Scaffolder** (`importer-scaffolder`) | Use when asked to build an importer from a competitor's export, migrate users' data from another tool, map a CSV or JSON export onto my data… | — |
-| **Licence and Notice Auditor** (`licence-notice-auditor`) | Use when asked to check a project's licences, audit dependencies before open-sourcing or selling, write a NOTICE file, find licence conflicts, or… | — |
-| **README Benefit Writer** (`readme-benefit-writer`) | Use when asked to rewrite a README so strangers understand why they should care, turn a feature list into benefits, make a side project's README… | — |
-| **Read-only MCP Wrapper** (`readonly-mcp-wrapper`) | Use when asked to expose a folder of notes or docs to Claude or another AI client, build an MCP server over Markdown or JSON files, let an agent… | — |
-| **Self-Host Packager** (`self-host-packager`) | Use when asked to make a project self-hostable, package an app for Docker, write a docker-compose setup, document self-hosting, or let users run… | — |
+| **Demo Clip Storyboard** (`demo-clip-storyboard`) | Use when asked to plan a short demo video for a repo, script a 20-second clip, storyboard a GIF for a README or launch post, or make a project… | ✅ 4.8/5 |
+| **Demo Data Generator** (`demo-data-generator`) | Use when asked to create demo data, seed a no-signup demo, generate fake but realistic data for screenshots, or fill a sandbox without using real… | ✅ 2/5 |
+| **First Issue Designer** (`first-issue-designer`) | Use when asked to create good first issues, prepare a repo for new contributors, turn a roadmap into starter tasks, or write issues that newcomers… | ✅ 3.5/5 |
+| **Fortnightly Release Planner** (`fortnightly-release-planner`) | Use when asked to plan releases for a side project or small open-source repo, turn a backlog into a release schedule, ship smaller and more often… | ✅ 4.8/5 |
+| **Importer Scaffolder** (`importer-scaffolder`) | Use when asked to build an importer from a competitor's export, migrate users' data from another tool, map a CSV or JSON export onto my data… | ✅ 4.8/5 |
+| **Licence and Notice Auditor** (`licence-notice-auditor`) | Use when asked to check a project's licences, audit dependencies before open-sourcing or selling, write a NOTICE file, find licence conflicts, or… | ✅ 4.8/5 |
+| **README Benefit Writer** (`readme-benefit-writer`) | Use when asked to rewrite a README so strangers understand why they should care, turn a feature list into benefits, make a side project's README… | ✅ 1/5 |
+| **Read-only MCP Wrapper** (`readonly-mcp-wrapper`) | Use when asked to expose a folder of notes or docs to Claude or another AI client, build an MCP server over Markdown or JSON files, let an agent… | ✅ 3.5/5 |
+| **Self-Host Packager** (`self-host-packager`) | Use when asked to make a project self-hostable, package an app for Docker, write a docker-compose setup, document self-hosting, or let users run… | ✅ 4/5 |
 
 ### `pm-parents` — 3 skills
 
@@ -1794,16 +1794,16 @@
 | **Rehabilitation Programme Design** (`rehab-programme-design`) | Design a rehabilitation programme the patient will actually do — dosed and progressed against stated criteria, built around their week rather than… | — |
 | **Return-to-Activity Criteria** (`return-to-activity-criteria`) | Set criteria-based return-to-activity milestones so the decision rests on what the patient can demonstrate rather than on how long it has been —… | — |
 
-### `pm-realestate` — 6 skills
+### `pm-realestate` — 6 skills · 6 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Comparative Market Analysis** (`comparative-market-analysis`) | Build a comparative market analysis (CMA) to price a property. | — |
-| **Open House Plan** (`open-house-plan`) | Plan and promote an open house that draws buyers and generates leads. | — |
-| **Property Investment Analysis** (`property-investment-analysis`) | Analyze a rental / investment property's returns — cash flow, cap rate, cash-on-cash, ROI. | — |
-| **Property Listing** (`property-listing`) | Write a compelling, accurate real-estate listing description. | — |
-| **Property Offer Letter** (`property-offer-letter`) | Write a buyer's offer cover letter to a seller to strengthen a real-estate bid. | — |
-| **Tenant Screening Guide** (`tenant-screening-guide`) | Design a fair, consistent tenant screening process for a rental. | — |
+| **Comparative Market Analysis** (`comparative-market-analysis`) | Build a comparative market analysis (CMA) to price a property. | ✅ 4.8/5 |
+| **Open House Plan** (`open-house-plan`) | Plan and promote an open house that draws buyers and generates leads. | ✅ 4.5/5 |
+| **Property Investment Analysis** (`property-investment-analysis`) | Analyze a rental / investment property's returns — cash flow, cap rate, cash-on-cash, ROI. | ✅ 4.8/5 |
+| **Property Listing** (`property-listing`) | Write a compelling, accurate real-estate listing description. | ✅ 4.5/5 |
+| **Property Offer Letter** (`property-offer-letter`) | Write a buyer's offer cover letter to a seller to strengthen a real-estate bid. | ✅ 4.3/5 |
+| **Tenant Screening Guide** (`tenant-screening-guide`) | Design a fair, consistent tenant screening process for a rental. | ✅ 5/5 |
 
 ### `pm-reentry` — 5 skills
 
@@ -1815,25 +1815,25 @@
 | **Job Search With a Record** (`job-search-with-a-record`) | Run a job search when you have a criminal record — where to apply, when and how to disclose, and how to turn the question into a short, confident… | — |
 | **Reconnect After Time Away** (`reconnect-after-time-away`) | Rebuild relationships with family, kids, and friends after incarceration or a long absence — how to reach out, repair trust at the other person's… | — |
 
-### `pm-renters` — 4 skills
+### `pm-renters` — 4 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Rent Increase Response** (`rent-increase-response`) | Respond to a rent increase strategically — check its validity first, price your alternatives honestly, then negotiate with the leverage tenants… | — |
-| **Renting After Disaster Damage** (`renting-after-disaster-damage`) | Know your position as a tenant when a fire, flood, storm or other disaster damages your rented home: whether rent is still due, who repairs what… | — |
+| **Renting After Disaster Damage** (`renting-after-disaster-damage`) | Know your position as a tenant when a fire, flood, storm or other disaster damages your rented home: whether rent is still due, who repairs what… | ✅ 5/5 |
 | **Repair Request Escalation** (`repair-request-escalation`) | Get a landlord to actually fix things — the repair request that creates a record, the escalation ladder from reminder to habitability leverage… | — |
 | **Security Deposit Recovery** (`security-deposit-recovery`) | Get your security deposit back — the move-out documentation that wins disputes before they start, the itemized-deduction challenge, the… | — |
 
-### `pm-research` — 6 skills · 1 eval-scored
+### `pm-research` — 6 skills · 3 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Clinical Case Summary** (`clinical-case-summary`) | Write a structured clinical case summary or case presentation. | — |
-| **Evidence Lock** (`evidence-lock`) | Write or rewrite a document in evidence-locked mode: no unsourced sentences — every substantive claim carries a footnote citing the exact passage… | — |
-| **Literature Review** (`literature-review`) | Structure and write a literature review for any research topic. | ✅ 4/5 |
+| **Evidence Lock** (`evidence-lock`) | Write or rewrite a document in evidence-locked mode: no unsourced sentences — every substantive claim carries a footnote citing the exact passage… | ✅ 4/5 |
+| **Literature Review** (`literature-review`) | Structure and write a literature review for any research topic. | ✅ 4.4/5 |
 | **Patient Communication** (`patient-communication`) | Write clear, plain-English patient communications for any healthcare context. | — |
 | **Research Protocol** (`research-protocol`) | Write a structured research protocol or study design document. | — |
-| **Synthetic User Research** (`synthetic-user-research`) | Use AI personas for early-stage research signal — with hard guardrails on what synthetic methods can and cannot validate. Use when asked to run… | — |
+| **Synthetic User Research** (`synthetic-user-research`) | Use AI personas for early-stage research signal — with hard guardrails on what synthetic methods can and cannot validate. Use when asked to run… | ✅ 5/5 |
 
 ### `pm-resignation` — 4 skills
 
@@ -1852,14 +1852,14 @@
 | **Elder Scam Briefing** (`elder-scam-briefing`) | Protect aging parents from the scams that target them — the conversation that doesn't condescend, the family code word, the top patterns aimed at… | — |
 | **Scam Message Decoder** (`scam-message-decoder`) | Decode a suspicious message — text, email, call transcript, or DM — against the anatomy of known scam families, with a 🔴🟡🟢 read and the safe… | — |
 
-### `pm-sea` — 4 skills
+### `pm-sea` — 4 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **新马华文商务写作 (Singapore and Malaysia Chinese business writing)** (`huawen-business-writing`) | Use when asked to write a business email, notice, proposal or WhatsApp message in Chinese for Singapore or Malaysia, 帮我写一封新加坡的中文商务邮件, 马来西亚华文公司通知… | — |
-| **Malaysia EPF Explainer (KWSP)** (`malaysia-epf-explainer`) | Use when asked how EPF works, how much KWSP my employer should pay, what are Akaun Persaraan, Sejahtera and Fleksibel, when can I withdraw EPF… | — |
-| **Singapore CPF Explainer** (`singapore-cpf-explainer`) | Use when asked how CPF works, how much CPF my employer should pay, what happens to my CPF at 55, can I use CPF for my HDB flat, should I top up my… | — |
-| **Singapore Employment Act Guide** (`singapore-employment-act`) | Use when asked am I covered by the Employment Act, how much annual leave or sick leave am I entitled to, can my employer cut my pay, how much… | — |
+| **新马华文商务写作 (Singapore and Malaysia Chinese business writing)** (`huawen-business-writing`) | Use when asked to write a business email, notice, proposal or WhatsApp message in Chinese for Singapore or Malaysia, 帮我写一封新加坡的中文商务邮件, 马来西亚华文公司通知… | ✅ 4.8/5 |
+| **Malaysia EPF Explainer (KWSP)** (`malaysia-epf-explainer`) | Use when asked how EPF works, how much KWSP my employer should pay, what are Akaun Persaraan, Sejahtera and Fleksibel, when can I withdraw EPF… | ✅ 5/5 |
+| **Singapore CPF Explainer** (`singapore-cpf-explainer`) | Use when asked how CPF works, how much CPF my employer should pay, what happens to my CPF at 55, can I use CPF for my HDB flat, should I top up my… | ✅ 4.8/5 |
+| **Singapore Employment Act Guide** (`singapore-employment-act`) | Use when asked am I covered by the Employment Act, how much annual leave or sick leave am I entitled to, can my employer cut my pay, how much… | ✅ 5/5 |
 
 ### `pm-seatbelt` — 6 skills
 
@@ -1872,17 +1872,17 @@
 | **Injection Spotter** (`injection-spotter`) | Spot prompt-injection in untrusted content before an agent acts on it — the anatomy of injected instructions across the channels attackers use… | — |
 | **Tool Permission Review** (`tool-permission-review`) | Review what an agent is actually allowed to do before you turn it loose — the tool-by-tool audit (each capability's blast radius), the… | — |
 
-### `pm-sidehustle` — 5 skills
+### `pm-sidehustle` — 5 skills · 2 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Daily Cash Book** (`daily-cash-book`) | Keep simple daily money records for a small trader, stall or home business with no accounting software: a cash book, stock count and weekly… | — |
+| **Daily Cash Book** (`daily-cash-book`) | Keep simple daily money records for a small trader, stall or home business with no accounting software: a cash book, stock count and weekly… | ✅ 4.8/5 |
 | **First Client Contract** (`first-client-contract`) | Put your first client agreement in writing — the eight clauses a simple service contract must have, in plain language a non-lawyer can use, with… | — |
-| **Market Stall Pricing** (`market-stall-pricing`) | Price goods for a market stall, street stall or small shop so every sale covers its costs, and hold your price when customers bargain. | — |
+| **Market Stall Pricing** (`market-stall-pricing`) | Price goods for a market stall, street stall or small shop so every sale covers its costs, and hold your price when customers bargain. | ✅ 5/5 |
 | **Quarterly Tax Rhythm** (`quarterly-tax-rhythm`) | Build the tax habit self-employment requires — the setaside percentage from day one, the quarterly calendar, the records that make filing boring… | — |
 | **Side Business Setup** (`side-business-setup`) | Set up a side business in the right order — the do-first sequence (separate money, basic terms, simple records) vs. | — |
 
-### `pm-simulators` — 20 skills
+### `pm-simulators` — 20 skills · 5 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -1893,28 +1893,28 @@
 | **The Car Dealership** (`the-car-dealership`) | Simulate the car-buying gauntlet before you walk in — the four-square worksheet, the payment-question trap, the trade-in shuffle, and the finance… | — |
 | **The Churning Customer** (`the-churning-customer`) | Simulate the exact customer who will quietly cancel in month 4 — their internal monologue through the lifecycle and the honest exit interview they… | — |
 | **The Due Diligence Call** (`the-due-diligence-call`) | Simulate the due-diligence call where an acquirer's or investor's analyst takes your metrics apart — the questions behind the spreadsheet, the… | — |
-| **The Ethics Board** (`the-ethics-board`) | Simulate defending your study or protocol before an ethics committee — the consent-comprehension probe, the vulnerable-participant challenge, the… | — |
+| **The Ethics Board** (`the-ethics-board`) | Simulate defending your study or protocol before an ethics committee — the consent-comprehension probe, the vulnerable-participant challenge, the… | ✅ 5/5 |
 | **The Insurance Adjuster** (`the-insurance-adjuster`) | Simulate the adjuster's settlement call after your accident or loss — the recorded-statement asks, the quick-settlement anchor, the friendly… | — |
 | **The Journalist Call** (`the-journalist-call`) | Simulate a hostile-but-fair journalist interview about your company or announcement — the questions you fear, live follow-ups on every dodge, then… | — |
-| **The Loan Officer** (`the-loan-officer`) | Simulate the mortgage or business-loan underwriting conversation before you have it for real — the deposit-source probe, the any-other-debts… | — |
+| **The Loan Officer** (`the-loan-officer`) | Simulate the mortgage or business-loan underwriting conversation before you have it for real — the deposit-source probe, the any-other-debts… | ✅ 4.5/5 |
 | **The Open House** (`the-open-house`) | Simulate the open house and the listing agent's read of you — the questions that profile your budget and urgency, the staging that hides what… | — |
-| **The Planning Committee** (`the-planning-committee`) | Simulate defending your planning application before the committee that decides it — the neighbour objections read into the record, the… | — |
+| **The Planning Committee** (`the-planning-committee`) | Simulate defending your planning application before the committee that decides it — the neighbour objections read into the record, the… | ✅ 4.3/5 |
 | **The Price Pushback** (`the-price-pushback`) | Simulate the client who grinds on your price — the budget theater, the competitor quote, the scope squeeze — against your actual offer, with a… | — |
 | **The Procurement Gauntlet** (`the-procurement-gauntlet`) | Simulate enterprise procurement and security review of your product before your first big deal meets it for real — the questionnaire, the gaps… | — |
 | **The Promotion Committee** (`the-promotion-committee`) | Simulate the calibration meeting that discusses your promotion after your manager leaves the room — the debate, the packet's holes, the verdict. | — |
-| **The School Appeal** (`the-school-appeal`) | Simulate a school-place appeal panel before you face the real one — the two questions the panel is actually deciding, the probe that separates… | — |
-| **The Union Table** (`the-union-table`) | Simulate a collective-bargaining session from either chair — the package-versus-item trap, the caucus break used as a weapon, the mandate check… | — |
+| **The School Appeal** (`the-school-appeal`) | Simulate a school-place appeal panel before you face the real one — the two questions the panel is actually deciding, the probe that separates… | ✅ 3/5 |
+| **The Union Table** (`the-union-table`) | Simulate a collective-bargaining session from either chair — the package-versus-item trap, the caucus break used as a weapon, the mandate check… | ✅ 4.8/5 |
 | **The Visa Interview** (`the-visa-interview`) | Simulate a consular visa interview — the 90-second assessment, the questions behind the questions, and a debrief on which answers helped and hurt. | — |
 | **VC Partner Meeting** (`vc-partner-meeting`) | Simulate the VC partner meeting that discusses your pitch after you leave the room — four partner archetypes debate, then write the internal… | — |
 
-### `pm-skill-promoter` — 4 skills
+### `pm-skill-promoter` — 4 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Promoter Draft** (`promoter-draft`) | Turn one recurring pattern from a promoter scan into a complete, reusable skill in this library's format: a SKILL.md with a strong trigger… | — |
-| **Promoter Publish** (`promoter-publish`) | Register a finished skill in this library and produce the complete release package: the bundle wiring and marketplace entry, the regenerated… | — |
-| **Promoter Scan** (`promoter-scan`) | Find the requests you keep making to your AI assistant by scanning Claude Code transcripts and claude.ai exports, clustering them by intent, and… | — |
-| **Promoter Test** (`promoter-test`) | Generate an evals file for a drafted skill and measure whether its trigger description fires on the right requests: five to eight phrases that… | — |
+| **Promoter Draft** (`promoter-draft`) | Turn one recurring pattern from a promoter scan into a complete, reusable skill in this library's format: a SKILL.md with a strong trigger… | ✅ 4.8/5 |
+| **Promoter Publish** (`promoter-publish`) | Register a finished skill in this library and produce the complete release package: the bundle wiring and marketplace entry, the regenerated… | ✅ 4.8/5 |
+| **Promoter Scan** (`promoter-scan`) | Find the requests you keep making to your AI assistant by scanning Claude Code transcripts and claude.ai exports, clustering them by intent, and… | ✅ 4.3/5 |
+| **Promoter Test** (`promoter-test`) | Generate an evals file for a drafted skill and measure whether its trigger description fires on the right requests: five to eight phrases that… | ✅ 5/5 |
 
 ### `pm-students` — 11 skills
 
@@ -1943,15 +1943,15 @@
 | **S&OP Meeting Prep** (`sop-meeting-prep`) | Prepare an S&OP cycle readout that surfaces the demand-supply gaps and forces the three decisions the meeting must make. | — |
 | **Supplier Scorecard** (`supplier-scorecard`) | Build a quarterly supplier performance scorecard with a weighted grade and a clear escalate/develop/exit call. | — |
 
-### `pm-tabletop` — 5 skills
+### `pm-tabletop` — 5 skills · 5 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Board Game Designer** (`board-game-designer`) | Take a board game idea from 'wouldn't it be cool if' to a playtestable prototype — core loop, tension source, components you can make tonight… | — |
-| **Game Night Planner** (`game-night-planner`) | Plan a game night that actually works for the specific people coming — the right lineup for player count, weight tolerance, and time, sequenced… | — |
-| **Rules Lawyer** (`rules-lawyer`) | Settle a board game rules dispute like a fair judge — reconstruct the situation, rule from the rulebook text (pasted or known), separate… | — |
-| **Tabletop Negotiator** (`tabletop-negotiator`) | Practice the table-talk that wins negotiation board games — play out a Catan-style trade, a Diplomacy-style alliance, or a Monopoly-style deal… | — |
-| **Teach The Game** (`teach-the-game`) | Build a 5-minute teach script for any board game so the table starts playing instead of listening — theme first, goal second, a turn third… | — |
+| **Board Game Designer** (`board-game-designer`) | Take a board game idea from 'wouldn't it be cool if' to a playtestable prototype — core loop, tension source, components you can make tonight… | ✅ 5/5 |
+| **Game Night Planner** (`game-night-planner`) | Plan a game night that actually works for the specific people coming — the right lineup for player count, weight tolerance, and time, sequenced… | ✅ 4.8/5 |
+| **Rules Lawyer** (`rules-lawyer`) | Settle a board game rules dispute like a fair judge — reconstruct the situation, rule from the rulebook text (pasted or known), separate… | ✅ 4.8/5 |
+| **Tabletop Negotiator** (`tabletop-negotiator`) | Practice the table-talk that wins negotiation board games — play out a Catan-style trade, a Diplomacy-style alliance, or a Monopoly-style deal… | ✅ 1.5/5 |
+| **Teach The Game** (`teach-the-game`) | Build a 5-minute teach script for any board game so the table starts playing instead of listening — theme first, goal second, a turn third… | ✅ 5/5 |
 
 ### `pm-teaching` — 4 skills
 
@@ -1962,7 +1962,7 @@
 | **Lesson Plan Builder** (`lesson-plan-builder`) | Build a standards-aligned K-12 lesson plan with clear objectives, a timed activity sequence, checks for understanding, and differentiation. | — |
 | **Parent Conference Prep** (`parent-conference-prep`) | Prepare for a K-12 parent-teacher conference — including the hard ones. | — |
 
-### `pm-thinking` — 25 skills
+### `pm-thinking` — 25 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -1970,7 +1970,7 @@
 | **Cross-Examine Me** (`cross-examine-me`) | Stress-test a decision or claim through a sharp, fair Q&A — the questions a good lawyer or skeptical friend would ask before you commit. | — |
 | **Decision Panel** (`decision-panel`) | Run a decision past a panel of clashing advisors — an optimist, a pessimist, a numbers person, an ethicist, and future-you — then get a chair's… | — |
 | **Devil's Advocate On Demand** (`devils-advocate-on-demand`) | Argue hard against whatever you just concluded — so your decision has to survive a real challenge instead of an echo chamber. | — |
-| **Disagreeing Experts** (`disagreeing-experts`) | Put one situation in front of three professionals chosen to disagree — the lawyer, the accountant, and the therapist read the same divorce — each… | — |
+| **Disagreeing Experts** (`disagreeing-experts`) | Put one situation in front of three professionals chosen to disagree — the lawyer, the accountant, and the therapist read the same divorce — each… | ✅ 4.8/5 |
 | **Explain My Decision To Me** (`explain-my-decision-to-me`) | Talk through a decision out loud with a patient thinking partner that reflects your reasoning back, so the answer you already half-know becomes clear. | — |
 | **Five Minds** (`five-minds`) | Answer a question five completely different ways — as five independent minds with clashing worldviews — then converge on what survives. | — |
 | **From First Principles** (`from-first-principles`) | Strip a problem down to what's actually true — the physics, economics, and human basics — and rebuild the answer from there, ignoring 'how it's… | — |
@@ -2003,13 +2003,13 @@
 | **Token Cost** (`token-cost`) | Measure before optimizing — estimate token counts locally with stated heuristics, price them at your model's rates, and quantify before/after… | — |
 | **Token Diet** (`token-diet`) | Cut LLM output tokens 40–70% by stripping grammatical scaffolding while preserving every fact — telegraphic output modes, when they pay… | — |
 
-### `pm-trades` — 3 skills
+### `pm-trades` — 3 skills · 3 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Apprentice First Week** (`apprentice-first-week`) | Plan an apprentice's or new laborer's first week so they're useful by Friday and safe from hour one — day-by-day teaching order, the safety… | — |
-| **Stage Payment Shield** (`stage-payment-shield`) | Set up deposits and stage payments that protect a tradesperson from the customer who won't pay AND read as fair to the customer — stage triggers… | — |
-| **Trade Quote Builder** (`trade-quote-builder`) | Build a trade quote that wins the job and protects the margin — materials and labor itemized, assumptions and exclusions stated, variations priced… | — |
+| **Apprentice First Week** (`apprentice-first-week`) | Plan an apprentice's or new laborer's first week so they're useful by Friday and safe from hour one — day-by-day teaching order, the safety… | ✅ 4.8/5 |
+| **Stage Payment Shield** (`stage-payment-shield`) | Set up deposits and stage payments that protect a tradesperson from the customer who won't pay AND read as fair to the customer — stage triggers… | ✅ 5/5 |
+| **Trade Quote Builder** (`trade-quote-builder`) | Build a trade quote that wins the job and protects the margin — materials and labor itemized, assumptions and exclusions stated, variations priced… | ✅ 4.8/5 |
 
 ### `pm-veterinary` — 4 skills
 
@@ -2020,24 +2020,24 @@
 | **Treatment Plan Estimate** (`treatment-plan-estimate`) | Build a veterinary treatment plan with tiered options and a cost estimate to discuss with a pet owner. | — |
 | **Wellness Plan** (`wellness-plan`) | Build a preventive-care (wellness) plan for a pet by species, breed, and life stage. | — |
 
-### `pm-vision` — 4 skills
+### `pm-vision` — 4 skills · 3 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Chart Data Extractor** (`chart-data-extractor`) | Extract pixel-level data from an image of a chart or graph and produce a structured data table. | — |
-| **Deck Autopsy** (`deck-autopsy`) | Autopsy a slide deck from photos or screenshots of its slides — the narrative arc, the numbers, and what each slide is hiding. | — |
-| **Screenshot Teardown** (`screenshot-teardown`) | Tear down a competitor's product from screenshots of its actual UI — onboarding, pricing page, core flows. | — |
-| **Whiteboard To Spec** (`whiteboard-to-spec`) | Turn photos of a whiteboard, sticky-note wall, or napkin sketch into a structured spec the team can execute. | — |
+| **Deck Autopsy** (`deck-autopsy`) | Autopsy a slide deck from photos or screenshots of its slides — the narrative arc, the numbers, and what each slide is hiding. | ✅ 3.3/5 |
+| **Screenshot Teardown** (`screenshot-teardown`) | Tear down a competitor's product from screenshots of its actual UI — onboarding, pricing page, core flows. | ✅ 3.3/5 |
+| **Whiteboard To Spec** (`whiteboard-to-spec`) | Turn photos of a whiteboard, sticky-note wall, or napkin sketch into a structured spec the team can execute. | ✅ 1.8/5 |
 
-### `pm-warroom` — 5 skills
+### `pm-warroom` — 5 skills · 5 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **Assumption Bounty** (`assumption-bounty`) | Extract every hidden assumption from a plan or document and put a price on each one — what it costs if wrong, what it costs to test. | — |
-| **Decision Autopsy** (`decision-autopsy`) | Judge a past decision by its PROCESS, not its outcome — because good decisions lose and bad decisions win, and teams that can't tell the… | — |
-| **Devil's Twin** (`devils-twin`) | The strongest possible case AGAINST what you just wrote — argued to win, not to check a box. | — |
-| **Metric Gaslighting Detector** (`metric-gaslighting-detector`) | Find out how a dashboard, KPI report, or metrics slide is lying to you — before you repeat its story in a bigger room. | — |
-| **Premortem Assassin** (`premortem-assassin`) | Kill the plan on paper before reality does it for money. | — |
+| **Assumption Bounty** (`assumption-bounty`) | Extract every hidden assumption from a plan or document and put a price on each one — what it costs if wrong, what it costs to test. | ✅ 4.8/5 |
+| **Decision Autopsy** (`decision-autopsy`) | Judge a past decision by its PROCESS, not its outcome — because good decisions lose and bad decisions win, and teams that can't tell the… | ✅ 4.8/5 |
+| **Devil's Twin** (`devils-twin`) | The strongest possible case AGAINST what you just wrote — argued to win, not to check a box. | ✅ 4.8/5 |
+| **Metric Gaslighting Detector** (`metric-gaslighting-detector`) | Find out how a dashboard, KPI report, or metrics slide is lying to you — before you repeat its story in a bigger room. | ✅ 5/5 |
+| **Premortem Assassin** (`premortem-assassin`) | Kill the plan on paper before reality does it for money. | ✅ 4.8/5 |
 
 ### `pm-wealth` — 10 skills
 
@@ -2079,15 +2079,15 @@
 | **Sleep Reset Plan** (`sleep-reset-plan`) | Build a realistic plan to fix bad sleep — a wind-down routine, a consistent schedule, and the daytime and environment fixes that actually move the… | — |
 | **Stretching Routine** (`stretching-routine`) | Build a targeted stretching or mobility routine for the tightness you actually have — desk-stiff hips, a tight back, post-run legs — not a generic… | — |
 
-### `pm-zh-content` — 4 skills
+### `pm-zh-content` — 4 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
-| **抖音 Script** (`douyin-script`) | Write a short-video script for 抖音 (Douyin) or similar vertical-video platforms: a hook in the first three seconds, a shot-by-shot plan with… | — |
-| **Livestream Sales Script (直播带货)** (`livestream-sales-script`) | Plan and script a live-commerce session (直播带货): the run of show, the script for each product segment, interaction prompts, offer timing, and a… | — |
-| **WeChat Official Account Article (公众号文章)** (`wechat-article`) | Write a WeChat Official Account (公众号) article: a headline that earns the open, a digest line, a structure built for reading on a phone, and an… | — |
-| **小红书 Note** (`xiaohongshu-note`) | Write a 小红书 (Xiaohongshu, RED) note that reads like a real person's experience: a scroll-stopping title, cover text, a body built on specific… | — |
+| **抖音 Script** (`douyin-script`) | Write a short-video script for 抖音 (Douyin) or similar vertical-video platforms: a hook in the first three seconds, a shot-by-shot plan with… | ✅ 4.8/5 |
+| **Livestream Sales Script (直播带货)** (`livestream-sales-script`) | Plan and script a live-commerce session (直播带货): the run of show, the script for each product segment, interaction prompts, offer timing, and a… | ✅ 3.5/5 |
+| **WeChat Official Account Article (公众号文章)** (`wechat-article`) | Write a WeChat Official Account (公众号) article: a headline that earns the open, a digest line, a structure built for reading on a phone, and an… | ✅ 5/5 |
+| **小红书 Note** (`xiaohongshu-note`) | Write a 小红书 (Xiaohongshu, RED) note that reads like a real person's experience: a scroll-stopping title, cover text, a body built on specific… | ✅ 4.8/5 |
 
 ---
 
-_1295 skills across 153 bundles · 28 eval-scored (2%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1295 skills across 153 bundles · 399 eval-scored (31%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

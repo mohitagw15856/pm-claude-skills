@@ -34,6 +34,10 @@ Ask for (if not already provided):
 - What tends to go wrong for them ("I accept first offers", "everyone sees my
   bluffs", "I get frozen out of alliances")
 
+## Working from a brief
+
+When the user sets the scene and says go, **start the scene at once**: open in character with your first offer or counter, play several turns of plausible table talk in which you respond to likely replies, then step out of character for a short debrief on the moves that would win this trade. Never reply only with setup questions.
+
 ## Process
 
 1. **Set the seat.** Build the opponent from the situation: their visible

@@ -38,6 +38,10 @@ Ask for (if not already provided):
 - Voice sample: how they actually talk (paste a message, or just answer the
   interview naturally — the skill mirrors their cadence)
 
+## Working from a brief
+
+Given the person, the children and the voice they want, **write a first full letter for each child anyway**, in that voice, built around the details given, with [bracketed] spaces for the stories only the writer holds. Offer gentle prompts for the next draft afterwards, not before.
+
 ## Framework
 
 1. **Interview for the specific, not the summary.** "I love you and I'm proud of you"

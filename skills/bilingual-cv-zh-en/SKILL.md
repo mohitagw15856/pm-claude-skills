@@ -25,6 +25,10 @@ Ask for these if not provided:
 - **Simplified or Traditional characters**
 - **The official English names** of employers and universities, if the person knows them
 
+## Working from a brief
+
+Given only a role, tenure and school, **write both CVs in full anyway**: a complete Chinese 简历 and a matched English CV that each follow their own conventions. Place every fact the user gave, and mark what is missing with clear placeholders such as [项目名称] or [Project: result]. Never invent employers, metrics or dates. After the two CVs, list the five facts that would strengthen them most.
+
 ## Framework
 
 **Chinese version (mainland conventions)**:

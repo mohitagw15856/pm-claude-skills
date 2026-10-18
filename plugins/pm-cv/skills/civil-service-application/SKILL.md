@@ -24,6 +24,10 @@ Ask for these if not provided:
 - **The grade** (for example HEO, SEO, Grade 7) or the NHS band
 - **The person's examples**, ideally from `career-inventory`
 
+## Working from a brief
+
+Given one example, the behaviour, the grade and the word limit, **write the full statement anyway** in STAR form at the stated length, with [bracketed] numbers or dates to confirm. Never ask for more detail before the first draft.
+
 ## Framework: Behaviour Statements
 
 Use situation, task, action, result, with most of the words on action:

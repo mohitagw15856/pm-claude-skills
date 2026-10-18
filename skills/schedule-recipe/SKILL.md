@@ -22,6 +22,10 @@ Ask for (if not already provided):
 - **Where it can run** — Claude Code (routines/loops), a server with cron, n8n, or GitHub Actions
 - **Where the output should land** — file in a repo, Slack/email, a Brain folder, a PR
 
+## Working from a brief
+
+Given what the user runs and where the output should go, **write the working setup anyway**: choose the runner from what they described, give the complete run prompt, the schedule definition with the time zone handled, and how to test it once by hand. Use placeholders only for paths you cannot infer.
+
 ## Runner Selection
 
 Pick the simplest runner the user already has, in this order:

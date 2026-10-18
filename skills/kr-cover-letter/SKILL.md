@@ -20,6 +20,10 @@ Ask for these if not provided:
 - **Existing draft**, if the person wants 첨삭 rather than a new answer
 - **Blind hiring rules** in the posting, if any
 
+## Working from a brief
+
+Given the company, role, character limit and experience, **write the full essay anyway** at the stated length, built from the facts given, and mark any fact you would need to confirm with [ ]. Do not stop to ask for more experience before the first draft.
+
 ## Output Structure
 
 ### 1. Answer plan

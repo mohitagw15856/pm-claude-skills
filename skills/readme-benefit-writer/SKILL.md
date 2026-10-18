@@ -17,6 +17,10 @@ Ask for these if not provided:
 - **Where data goes**: what is stored, where, and whether anything leaves the user's machine
 - **How to contribute**: CONTRIBUTING file, issue labels, or "not accepting PRs yet"
 
+## Working from a brief
+
+Given a feature list and an audience, **write the full README anyway**: the one-line promise, who it is for, three benefits each tied to a feature, a quick start and how to contribute. Use placeholders for install commands, links or screenshots you do not have. Do not ask for the current README before drafting.
+
 ## Output Structure
 
 Return the rewritten README in Markdown, in this order.

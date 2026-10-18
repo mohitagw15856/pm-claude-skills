@@ -37,6 +37,10 @@ Ask for (if not already provided):
 - What they know of the process/dates (the skill flags what to find out at
   the council's own site — never invents procedure)
 
+## Working from a brief
+
+Given the issue and the time limit, **write the full statement anyway**, timed for about three minutes spoken, plus the message to rally the parents and a one-page handout for the councillors. Mark facts to confirm (dates, the council's own figures, the agenda item) in [brackets] rather than asking first.
+
 ## Framework
 
 1. **Find the real decision point.** Public speaking slots are often

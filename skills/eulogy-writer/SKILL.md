@@ -18,6 +18,10 @@ Gathered gently — a few at a time, never as a form:
 - **One true sentence** the speaker wants said, if they have it. Many do; it becomes the spine.
 - Tone check: is laughter welcome in this room? (Usually yes; always ask.)
 
+## Working from a brief
+
+Given a name, a few details and the room, **write the full eulogy anyway**, about four to five minutes spoken, built from the details given and in the tone asked for. Mark one or two [bracketed] places where another story would fit. Offer questions that would deepen it afterwards, not before.
+
 ## The Shape That Works
 
 1. **Arrive small** — one concrete image of them, mid-life, mid-gesture. Never "we are gathered" and never a dictionary definition of loss.

@@ -24,6 +24,10 @@ Ask for these if not provided:
 - **Everything else**: part-time jobs, internships, societies, sport, volunteering, personal projects, competitions
 - **The target**: graduate scheme, internship, a specific sector, and the country
 
+## Working from a brief
+
+Given a degree, part-time work and activities, **write the complete CV anyway**, using coursework, projects, the job and the society role as real evidence, with [bracketed] placeholders where a result or date is needed. Never invent grades or results.
+
 ## Framework
 
 Ask, for each activity: what did you do, for how many people or how much money, and what happened because you did it?
