@@ -219,9 +219,13 @@ async function main() {
   if (toRun.length && !apiKey) { console.error('Set ANTHROPIC_API_KEY to run evals.'); process.exit(1); }
 
   const fresh = (await pool(toRun, concurrency, scoreTask)).filter(Boolean);
+  // A run where every call failed (a bad key, no credit) must not touch the results file.
+  if (toRun.length && !fresh.length) { console.error(`\nAll ${toRun.length} run(s) failed; ${outPath} left unchanged.`); process.exit(1); }
 
-  // Merge fresh + reused, keeping the freshest per (skill, model).
-  const merged = new Map(reused.map((r) => [`${r.skill}|${r.model}`, r]));
+  // Merge: every prior score is kept unless this run re-scored it. Building only from
+  // this run's tasks used to drop scores it did not touch (capped runs, other models).
+  const merged = new Map(prior.map((r) => [`${r.skill}|${r.model}`, r]));
+  for (const r of reused) merged.set(`${r.skill}|${r.model}`, r);
   for (const r of fresh) merged.set(`${r.skill}|${r.model}`, r);
   const results = [...merged.values()].sort((a, b) => a.skill.localeCompare(b.skill));
 
