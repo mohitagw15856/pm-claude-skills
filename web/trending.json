@@ -1,17 +1,33 @@
 {
-  "generatedAt": "2026-10-12T16:49:25.181Z",
+  "generatedAt": "2026-10-19T14:45:57.431Z",
   "window": "7d",
   "skills": [
     {
-      "name": "data-quality-checks",
+      "name": "meeting-notes",
+      "count": 2
+    },
+    {
+      "name": "personal-board-of-directors",
       "count": 1
     },
     {
-      "name": "briefing-note",
+      "name": "tool-permission-review",
       "count": 1
     },
     {
-      "name": "learn-anything-roadmap",
+      "name": "doc-restructure-live",
+      "count": 1
+    },
+    {
+      "name": "inbox-zero-operator",
+      "count": 1
+    },
+    {
+      "name": "resume",
+      "count": 1
+    },
+    {
+      "name": "prd-template",
       "count": 1
     }
   ]
