@@ -3,6 +3,7 @@
 A once-a-week minute on doing professional work with AI — auto-generated from the catalog, so it ships with no manual effort. Each issue also carries a spoken **show script** ready for text-to-speech.
 
 ## Issues
+- [2026-w42](2026-w42.md)
 - [2026-w41](2026-w41.md)
 - [2026-w40](2026-w40.md)
 - [2026-w39](2026-w39.md)
