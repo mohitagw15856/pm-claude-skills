@@ -1624,6 +1624,10 @@
     {
       "skill": "prepare-for-duet",
       "input": "Audit my setup before my Duet invite lands. Memory says I work at a company I left in June. I have a recurring prompt that posts a standup summary to Slack every morning. I would connect Gmail (400 unread), Calendar, and GitHub. I want it to own follow-ups and my morning brief."
+    },
+    {
+      "skill": "standing-orders",
+      "input": "Write standing orders for my agent. I run a two-person accounting practice; it is connected to Outlook, our calendar and Xero. Clients are small UK businesses. Never email a client or touch anything in Xero without me. I write politely and sign off 'Kind regards, Dev'. I work 8 to 6, Monday to Friday."
     }
   ]
 }

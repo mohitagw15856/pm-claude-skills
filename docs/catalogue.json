@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build-catalogue.mjs",
   "bundles": 153,
-  "skills": 1279,
+  "skills": 1280,
   "items": [
     {
       "bundle": "pm-2027",
@@ -2861,6 +2861,11 @@
         {
           "name": "send-approval-check",
           "description": "The gate before an agent sends anything on your behalf: one card showing recipient, sending account, subject, attachments, and the single sentence that commits you to something, so approving the wording is never mistaken for approving the send.",
+          "duet_ready": "designed-for-duet"
+        },
+        {
+          "name": "standing-orders",
+          "description": "Write the operating manual a proactive agent follows between your messages: who is a VIP, what it may always do, what it must never do, the tone it writes in, and when it must stop and ask.",
           "duet_ready": "designed-for-duet"
         },
         {

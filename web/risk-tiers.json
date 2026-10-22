@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-18",
+ "generated": "2026-10-22",
  "counts": {
   "consequential": 246,
   "high-stakes": 162,
-  "informational": 899
+  "informational": 906
  },
  "tiers": {
   "360-feedback-template": {
@@ -1730,6 +1730,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "end-of-day-report": {
+   "tier": "informational",
+   "via": "default"
+  },
   "end-of-life-wishes-conversation": {
    "tier": "high-stakes",
    "via": "bundle:pm-caregiving"
@@ -2570,6 +2574,10 @@
    "tier": "high-stakes",
    "via": "bundle:pm-decoders"
   },
+  "interrupt-rules": {
+   "tier": "informational",
+   "via": "default"
+  },
   "interview-me": {
    "tier": "informational",
    "via": "default"
@@ -3114,6 +3122,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "morning-brief-designer": {
+   "tier": "informational",
+   "via": "default"
+  },
   "morning-intelligence": {
    "tier": "informational",
    "via": "default"
@@ -3543,6 +3555,10 @@
    "via": "default"
   },
   "premortem-assassin": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "prepare-for-duet": {
    "tier": "informational",
    "via": "default"
   },
@@ -4238,6 +4254,10 @@
    "tier": "consequential",
    "via": "bundle:pm-career"
   },
+  "send-approval-check": {
+   "tier": "informational",
+   "via": "default"
+  },
   "sensory-audit": {
    "tier": "consequential",
    "via": "bundle:pm-neurodivergent"
@@ -4487,6 +4507,10 @@
    "via": "default"
   },
   "standing-meeting-audit": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "standing-orders": {
    "tier": "informational",
    "via": "default"
   },
@@ -5127,6 +5151,10 @@
    "via": "bundle:pm-family"
   },
   "weekly-review-ritual": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "weekly-rollup": {
    "tier": "informational",
    "via": "default"
   },
