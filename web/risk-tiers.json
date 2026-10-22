@@ -3,7 +3,7 @@
  "counts": {
   "consequential": 246,
   "high-stakes": 162,
-  "informational": 906
+  "informational": 907
  },
  "tiers": {
   "360-feedback-template": {
@@ -231,6 +231,10 @@
    "via": "bundle:pm-cv"
   },
   "apprentice-first-week": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "approval-policy-designer": {
    "tier": "informational",
    "via": "default"
   },

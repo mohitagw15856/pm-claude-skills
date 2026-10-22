@@ -1628,6 +1628,10 @@
     {
       "skill": "standing-orders",
       "input": "Write standing orders for my agent. I run a two-person accounting practice; it is connected to Outlook, our calendar and Xero. Clients are small UK businesses. Never email a client or touch anything in Xero without me. I write politely and sign off 'Kind regards, Dev'. I work 8 to 6, Monday to Friday."
+    },
+    {
+      "skill": "approval-policy-designer",
+      "input": "My Duet is connected to Outlook, Teams, our Xero and DocuSign. I approve too many trivial things. Never pay or sign anything without me; small internal meeting changes are fine. Our domain is lindqvist-partners.se."
     }
   ]
 }

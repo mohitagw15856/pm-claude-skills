@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build-catalogue.mjs",
   "bundles": 153,
-  "skills": 1280,
+  "skills": 1281,
   "items": [
     {
       "bundle": "pm-2027",
@@ -2838,6 +2838,11 @@
         "any_tool": "npx pm-claude-skills add --bundle pm-duet"
       },
       "skills": [
+        {
+          "name": "approval-policy-designer",
+          "description": "Design the approval policy for a proactive agent across every connected app: for each kind of action, whether it may act alone, must ask first, or must never do it, with money limits, recipient rules and an audit line.",
+          "duet_ready": "designed-for-duet"
+        },
         {
           "name": "end-of-day-report",
           "description": "Produce an end-of-day report an unattended agent can send honestly: what shipped (verified), what is drafted or waiting, what is blocked and on whom, and tomorrow's first action.",

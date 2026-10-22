@@ -5,7 +5,7 @@ tags: [lora, skills, product-management, professional-work, pm-claude-skills]
 ---
 # PM-8B (LoRA)
 
-A small open model distilled from [pm-claude-skills](https://github.com/mohitagw15856/pm-claude-skills), a library of 1,302 professional skills. It is a QLoRA adapter over Qwen3-8B, so it runs on a laptop.
+A small open model distilled from [pm-claude-skills](https://github.com/mohitagw15856/pm-claude-skills), a library of 1,303 professional skills. It is a QLoRA adapter over Qwen3-8B, so it runs on a laptop.
 
 **Training data, three kinds:**
 
