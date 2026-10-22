@@ -1632,6 +1632,10 @@
     {
       "skill": "approval-policy-designer",
       "input": "My Duet is connected to Outlook, Teams, our Xero and DocuSign. I approve too many trivial things. Never pay or sign anything without me; small internal meeting changes are fine. Our domain is lindqvist-partners.se."
+    },
+    {
+      "skill": "shared-agent-charter",
+      "input": "Our 14-person finance team wants one shared AI agent in Microsoft Teams to answer policy questions and summarise the month-end close channel. Our controller Jonas would own it. Payroll and audit channels must stay off limits."
     }
   ]
 }

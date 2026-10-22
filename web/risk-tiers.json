@@ -3,7 +3,7 @@
  "counts": {
   "consequential": 246,
   "high-stakes": 162,
-  "informational": 907
+  "informational": 908
  },
  "tiers": {
   "360-feedback-template": {
@@ -4289,6 +4289,10 @@
   "severance-agreement-decoder": {
    "tier": "high-stakes",
    "via": "skill"
+  },
+  "shared-agent-charter": {
+   "tier": "informational",
+   "via": "default"
   },
   "shared-drive-cleanup": {
    "tier": "informational",

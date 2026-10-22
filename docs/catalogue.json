@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build-catalogue.mjs",
   "bundles": 153,
-  "skills": 1281,
+  "skills": 1282,
   "items": [
     {
       "bundle": "pm-2027",
@@ -2866,6 +2866,11 @@
         {
           "name": "send-approval-check",
           "description": "The gate before an agent sends anything on your behalf: one card showing recipient, sending account, subject, attachments, and the single sentence that commits you to something, so approving the wording is never mistaken for approving the send.",
+          "duet_ready": "designed-for-duet"
+        },
+        {
+          "name": "shared-agent-charter",
+          "description": "Write the charter for an AI agent a whole team shares (an OpenAI Dot in Slack or Teams, a shared Claude agent, a channel bot): who may give it instructions, which channels it works in, what it may say and do there, whose data it may read, who owns its mistakes, and how anyone can pause it.",
           "duet_ready": "designed-for-duet"
         },
         {

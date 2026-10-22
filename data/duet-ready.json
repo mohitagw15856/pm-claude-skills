@@ -9,6 +9,7 @@
     "prepare-for-duet": { "tier": "designed-for-duet", "since": "2026-10-22" },
     "stakeholder-update": { "tier": "designed-for-duet", "since": "2026-10-22" },
     "standing-orders": { "tier": "designed-for-duet", "since": "2026-10-22" },
-    "approval-policy-designer": { "tier": "designed-for-duet", "since": "2026-10-23" }
+    "approval-policy-designer": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "shared-agent-charter": { "tier": "designed-for-duet", "since": "2026-10-23" }
   }
 }
