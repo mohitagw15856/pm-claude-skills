@@ -1636,6 +1636,10 @@
     {
       "skill": "shared-agent-charter",
       "input": "Our 14-person finance team wants one shared AI agent in Microsoft Teams to answer policy questions and summarise the month-end close channel. Our controller Jonas would own it. Payroll and audit channels must stay off limits."
+    },
+    {
+      "skill": "agent-kill-switch-plan",
+      "input": "Make a kill switch plan for my Claude Duet. It is connected to Outlook, OneDrive, Xero, Stripe and our Teams workspace. I run a 6-person consultancy and our clients are in financial services."
     }
   ]
 }

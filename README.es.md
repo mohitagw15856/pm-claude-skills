@@ -16,7 +16,7 @@ y un informe para dirección que pueda enviar hoy mismo.
 
 Tu asistente carga [user-interview-synthesis](skills/user-interview-synthesis/SKILL.md), [prd-template](skills/prd-template/SKILL.md) y [stakeholder-update](skills/stakeholder-update/SKILL.md) y devuelve los tres documentos, no consejos sobre cómo escribirlos.
 
-PM Skills es una biblioteca open source de 1304 Agent Skills: archivos Markdown (SKILL.md) que enseñan a un asistente de IA a hacer una tarea profesional al nivel de alguien senior, desde escribir un PRD hasta descifrar un contrato de alquiler. Cada skill incluye el marco de trabajo, una plantilla de salida, controles de calidad y antipatrones. Licencia MIT; funciona con Claude, ChatGPT, Gemini, Cursor y Codex. (PM significa Professional, no solo product manager.)
+PM Skills es una biblioteca open source de 1305 Agent Skills: archivos Markdown (SKILL.md) que enseñan a un asistente de IA a hacer una tarea profesional al nivel de alguien senior, desde escribir un PRD hasta descifrar un contrato de alquiler. Cada skill incluye el marco de trabajo, una plantilla de salida, controles de calidad y antipatrones. Licencia MIT; funciona con Claude, ChatGPT, Gemini, Cursor y Codex. (PM significa Professional, no solo product manager.)
 
 ## ⚡ Instalación en 30 segundos
 
@@ -45,8 +45,8 @@ Los 153 bundles con sus comandos de instalación: [docs/catalogue.md](docs/catal
 
 ## ✅ Confianza y calidad
 
-- Cada cambio pasa por CI: estructura (SkillCheck L3, las 1304 skills), auditoría de seguridad, detección de duplicados, paridad de traducciones y una batería de inyección de prompts.
-- 389 de las 1304 skills tienen casos de evaluación; 28 tienen puntuaciones a ciegas publicadas. Lo no medido se declara no medido.
+- Cada cambio pasa por CI: estructura (SkillCheck L3, las 1305 skills), auditoría de seguridad, detección de duplicados, paridad de traducciones y una batería de inyección de prompts.
+- 389 de las 1305 skills tienen casos de evaluación; 28 tienen puntuaciones a ciegas publicadas. Lo no medido se declara no medido.
 - Las skills legales, fiscales y laborales terminan con un descargo claro e indican a qué profesional acudir; no sustituyen a uno.
 - Privacidad: todo corre en local. Las skills, la CLI y los exports no envían nada. Detalles: [docs/TELEMETRY.md](docs/TELEMETRY.md) · [SECURITY.md](SECURITY.md) · licencia: [MIT](LICENSE)
 

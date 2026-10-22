@@ -1,4 +1,4 @@
-# 🗂️ All 1304 Skills — full catalog
+# 🗂️ All 1305 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -724,7 +724,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 4/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (841 skills)
+## 🌍 Industries & Public Sector (842 skills)
 
 ### `other` — 22 skills · 12 eval-scored
 
@@ -1313,10 +1313,11 @@
 | **Slide Deck** (`slide-deck`) | Build a real, editable PowerPoint (.pptx) deck from an outline or brief. | — |
 | **Word Document** (`word-document`) | Build a real, formatted Word (.docx) document — headings, styles, tables, TOC-ready. | — |
 
-### `pm-duet` — 9 skills
+### `pm-duet` — 10 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **Agent Kill Switch Plan** (`agent-kill-switch-plan`) | Prepare, before you need it, the runbook for stopping a proactive agent that is misbehaving: how to pause it in seconds, which connections to… | — |
 | **Approval Policy Designer** (`approval-policy-designer`) | Design the approval policy for a proactive agent across every connected app: for each kind of action, whether it may act alone, must ask first, or… | — |
 | **End Of Day Report** (`end-of-day-report`) | Produce an end-of-day report an unattended agent can send honestly: what shipped (verified), what is drafted or waiting, what is blocked and on… | — |
 | **Interrupt Rules** (`interrupt-rules`) | Write the between-brief alert rules for a proactive agent: exactly what may interrupt you, what waits for the next brief, and the wording of an… | — |
@@ -2104,4 +2105,4 @@
 
 ---
 
-_1304 skills across 154 bundles · 399 eval-scored (31%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1305 skills across 154 bundles · 399 eval-scored (31%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
