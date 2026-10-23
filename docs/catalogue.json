@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build-catalogue.mjs",
   "bundles": 153,
-  "skills": 1290,
+  "skills": 1291,
   "items": [
     {
       "bundle": "pm-2027",
@@ -206,6 +206,10 @@
         {
           "name": "agent-readiness-audit",
           "description": "Audit whether AI agents can actually use your product — docs, APIs, onboarding, errors, and discoverability, evaluated from a non-human user's perspective."
+        },
+        {
+          "name": "agent-spending-mandate",
+          "description": "Write a spending mandate that lets an AI agent buy things for you within strict limits: what it may buy, from whom, up to how much per purchase and in total, until when, and what needs your yes."
         },
         {
           "name": "computer-use-runbook",

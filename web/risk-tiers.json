@@ -3,7 +3,7 @@
  "counts": {
   "consequential": 246,
   "high-stakes": 162,
-  "informational": 916
+  "informational": 917
  },
  "tiers": {
   "360-feedback-template": {
@@ -107,6 +107,10 @@
    "via": "default"
   },
   "agent-spec": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "agent-spending-mandate": {
    "tier": "informational",
    "via": "default"
   },

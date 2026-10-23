@@ -1668,6 +1668,10 @@
     {
       "skill": "agent-negotiation-brief",
       "input": "My agent will negotiate with a hotel's booking agent to move my non-refundable stay (3 nights, £540) to next month without a fee. I'd accept a £60 change fee at most. I don't want them to know I've already booked flights for the new dates."
+    },
+    {
+      "skill": "agent-spending-mandate",
+      "input": "I want my AI agent to reorder office supplies for our 6-person team: printer paper, ink, coffee and cleaning products, from our usual two suppliers. Monthly budget about £250. Nothing on subscription."
     }
   ]
 }

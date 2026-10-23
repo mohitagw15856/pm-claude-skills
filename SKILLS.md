@@ -1,4 +1,4 @@
-# 🗂️ All 1312 Skills — full catalog
+# 🗂️ All 1313 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -724,7 +724,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 4/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (849 skills)
+## 🌍 Industries & Public Sector (850 skills)
 
 ### `other` — 22 skills · 12 eval-scored
 
@@ -788,13 +788,14 @@
 | **Functional Assessment Prep** (`functional-assessment-prep`) | Prepare for a disability or illness benefit assessment (a functional or work capability assessment, a medical review, a disability evaluation… | ✅ 4.8/5 |
 | **Venue Access Check** (`venue-access-check`) | Check whether a specific venue — a restaurant, office, event space, Airbnb, clinic — will actually work for your access needs, before you commit… | ✅ 4.5/5 |
 
-### `pm-agentnative` — 7 skills · 5 eval-scored
+### `pm-agentnative` — 8 skills · 5 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Agent Era Pricing** (`agent-era-pricing`) | Redesign seat-based pricing for the agent era — when one human runs ten agents, per-seat models collapse. | ✅ 4.8/5 |
 | **Agent Negotiation Brief** (`agent-negotiation-brief`) | Brief an AI agent that will negotiate for you with another party's agent or a person (a refund, a price, a meeting time, a contract term): your… | — |
 | **Agent Readiness Audit** (`agent-readiness-audit`) | Audit whether AI agents can actually use your product — docs, APIs, onboarding, errors, and discoverability, evaluated from a non-human user's… | ✅ 4.5/5 |
+| **Agent Spending Mandate** (`agent-spending-mandate`) | Write a spending mandate that lets an AI agent buy things for you within strict limits: what it may buy, from whom, up to how much per purchase… | — |
 | **Computer-Use Runbook** (`computer-use-runbook`) | Write the step-by-step runbook a computer-use or browser agent follows to finish a real online task, such as cancelling a subscription or changing… | — |
 | **Human-in-the-Loop Design** (`human-in-the-loop-design`) | Design the human approval surface for an agent system — which actions gate, how approvals batch without becoming rubber stamps, and what the audit… | ✅ 4.8/5 |
 | **MCP Server Spec** (`mcp-server-spec`) | Design an MCP server for a product — the tool surface, auth model, and safety boundaries that make it genuinely usable by AI agents. | ✅ 4.8/5 |
@@ -2112,4 +2113,4 @@
 
 ---
 
-_1312 skills across 154 bundles · 399 eval-scored (30%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1313 skills across 154 bundles · 399 eval-scored (30%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
