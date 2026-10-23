@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build-catalogue.mjs",
   "bundles": 153,
-  "skills": 1283,
+  "skills": 1288,
   "items": [
     {
       "bundle": "pm-2027",
@@ -2849,6 +2849,16 @@
           "duet_ready": "designed-for-duet"
         },
         {
+          "name": "cash-watch",
+          "description": "Set up a proactive agent to watch a small business's cash every day across Stripe, QuickBooks or Xero and the bank feed: today's cash position, money due in and out this week, failed payments, new disputes and the runway line, with clear rules for what interrupts you and what waits for the morning brief.",
+          "duet_ready": "designed-for-duet"
+        },
+        {
+          "name": "crm-hygiene-sweep",
+          "description": "Have a proactive agent sweep a CRM (HubSpot, Salesforce, Pipedrive) on a schedule for the things that quietly rot a pipeline: deals with no next step, close dates in the past, deals untouched for weeks, contacts with no owner, and duplicate records, reported per owner with suggested fixes a human approves.",
+          "duet_ready": "designed-for-duet"
+        },
+        {
           "name": "end-of-day-report",
           "description": "Produce an end-of-day report an unattended agent can send honestly: what shipped (verified), what is drafted or waiting, what is blocked and on whom, and tomorrow's first action.",
           "duet_ready": "designed-for-duet"
@@ -2861,6 +2871,11 @@
         {
           "name": "morning-brief-designer",
           "description": "Design a proactive agent's morning brief: which connected sources it reads, what earns a line, the fixed section order and length cap, and the wording rules that keep it honest.",
+          "duet_ready": "designed-for-duet"
+        },
+        {
+          "name": "payroll-eve-check",
+          "description": "Have a proactive agent check payroll the day before it runs in Gusto, Deel, Xero Payroll or similar: unusual pay changes, new starters and leavers, missing approvals, enough cash in the funding account, and anything that would make a payslip wrong, reported as a short pre-run list for a human to approve.",
           "duet_ready": "designed-for-duet"
         },
         {
@@ -2879,8 +2894,18 @@
           "duet_ready": "designed-for-duet"
         },
         {
+          "name": "signature-pipeline-watch",
+          "description": "Have a proactive agent watch documents waiting for signature in DocuSign, Adobe Sign or PandaDoc: which are stuck, for how long, with whom, which have expiry dates coming, and which signed ones still need countersigning or filing, reported in the brief with drafted reminders a human sends.",
+          "duet_ready": "designed-for-duet"
+        },
+        {
           "name": "standing-orders",
           "description": "Write the operating manual a proactive agent follows between your messages: who is a VIP, what it may always do, what it must never do, the tone it writes in, and when it must stop and ask.",
+          "duet_ready": "designed-for-duet"
+        },
+        {
+          "name": "store-watch",
+          "description": "Have a proactive agent watch an online shop (Shopify, WooCommerce, Etsy) for what needs the owner: best-sellers about to run out, a spike in refunds or returns on one product, bad reviews, failed orders and checkout problems, with interrupts only for what cannot wait and drafted replies for reviews.",
           "duet_ready": "designed-for-duet"
         },
         {

@@ -1,4 +1,4 @@
-# 🗂️ All 1305 Skills — full catalog
+# 🗂️ All 1310 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -724,7 +724,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 4/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (842 skills)
+## 🌍 Industries & Public Sector (847 skills)
 
 ### `other` — 22 skills · 12 eval-scored
 
@@ -1313,19 +1313,24 @@
 | **Slide Deck** (`slide-deck`) | Build a real, editable PowerPoint (.pptx) deck from an outline or brief. | — |
 | **Word Document** (`word-document`) | Build a real, formatted Word (.docx) document — headings, styles, tables, TOC-ready. | — |
 
-### `pm-duet` — 10 skills
+### `pm-duet` — 15 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
 | **Agent Kill Switch Plan** (`agent-kill-switch-plan`) | Prepare, before you need it, the runbook for stopping a proactive agent that is misbehaving: how to pause it in seconds, which connections to… | — |
 | **Approval Policy Designer** (`approval-policy-designer`) | Design the approval policy for a proactive agent across every connected app: for each kind of action, whether it may act alone, must ask first, or… | — |
+| **Cash Watch** (`cash-watch`) | Set up a proactive agent to watch a small business's cash every day across Stripe, QuickBooks or Xero and the bank feed: today's cash position… | — |
+| **CRM Hygiene Sweep** (`crm-hygiene-sweep`) | Have a proactive agent sweep a CRM (HubSpot, Salesforce, Pipedrive) on a schedule for the things that quietly rot a pipeline: deals with no next… | — |
 | **End Of Day Report** (`end-of-day-report`) | Produce an end-of-day report an unattended agent can send honestly: what shipped (verified), what is drafted or waiting, what is blocked and on… | — |
 | **Interrupt Rules** (`interrupt-rules`) | Write the between-brief alert rules for a proactive agent: exactly what may interrupt you, what waits for the next brief, and the wording of an… | — |
 | **Morning Brief Designer** (`morning-brief-designer`) | Design a proactive agent's morning brief: which connected sources it reads, what earns a line, the fixed section order and length cap, and the… | — |
+| **Payroll Eve Check** (`payroll-eve-check`) | Have a proactive agent check payroll the day before it runs in Gusto, Deel, Xero Payroll or similar: unusual pay changes, new starters and… | — |
 | **Prepare For Duet** (`prepare-for-duet`) | A readiness audit for proactive agents, useful while you are still on the waitlist: what in your memory, recurring prompts, connectors and inbox… | — |
 | **Send Approval Check** (`send-approval-check`) | The gate before an agent sends anything on your behalf: one card showing recipient, sending account, subject, attachments, and the single sentence… | — |
 | **Shared Agent Charter** (`shared-agent-charter`) | Write the charter for an AI agent a whole team shares (an OpenAI Dot in Slack or Teams, a shared Claude agent, a channel bot): who may give it… | — |
+| **Signature Pipeline Watch** (`signature-pipeline-watch`) | Have a proactive agent watch documents waiting for signature in DocuSign, Adobe Sign or PandaDoc: which are stuck, for how long, with whom, which… | — |
 | **Standing Orders** (`standing-orders`) | Write the operating manual a proactive agent follows between your messages: who is a VIP, what it may always do, what it must never do, the tone… | — |
+| **Store Watch** (`store-watch`) | Have a proactive agent watch an online shop (Shopify, WooCommerce, Etsy) for what needs the owner: best-sellers about to run out, a spike in… | — |
 | **Weekly Rollup** (`weekly-rollup`) | Roll a week of daily reports and agent activity into one honest weekly summary: trajectory against goals, what shipped with proof, the recurring… | — |
 
 ### `pm-ecommerce` — 7 skills · 6 eval-scored
@@ -2105,4 +2110,4 @@
 
 ---
 
-_1305 skills across 154 bundles · 399 eval-scored (31%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1310 skills across 154 bundles · 399 eval-scored (30%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-22",
+ "generated": "2026-10-23",
  "counts": {
   "consequential": 246,
   "high-stakes": 162,
-  "informational": 909
+  "informational": 914
  },
  "tiers": {
   "360-feedback-template": {
@@ -579,6 +579,10 @@
    "via": "default"
   },
   "cash-flow-forecast": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cash-watch": {
    "tier": "informational",
    "via": "default"
   },
@@ -1197,6 +1201,10 @@
   "credit-memo": {
    "tier": "high-stakes",
    "via": "bundle:pm-banking"
+  },
+  "crm-hygiene-sweep": {
+   "tier": "informational",
+   "via": "default"
   },
   "crop-insurance-claim": {
    "tier": "high-stakes",
@@ -3382,6 +3390,10 @@
    "tier": "high-stakes",
    "via": "bundle:pm-decoders"
   },
+  "payroll-eve-check": {
+   "tier": "informational",
+   "via": "default"
+  },
   "paywall-optimization": {
    "tier": "informational",
    "via": "default"
@@ -4334,6 +4346,10 @@
    "tier": "consequential",
    "via": "bundle:pm-sidehustle"
   },
+  "signature-pipeline-watch": {
+   "tier": "informational",
+   "via": "default"
+  },
   "singapore-cpf-explainer": {
    "tier": "informational",
    "via": "default"
@@ -4565,6 +4581,10 @@
   "stop-the-bleed-triage": {
    "tier": "high-stakes",
    "via": "bundle:pm-hardship"
+  },
+  "store-watch": {
+   "tier": "informational",
+   "via": "default"
   },
   "story-pitch": {
    "tier": "informational",

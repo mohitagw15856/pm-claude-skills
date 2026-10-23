@@ -1640,6 +1640,26 @@
     {
       "skill": "agent-kill-switch-plan",
       "input": "Make a kill switch plan for my Claude Duet. It is connected to Outlook, OneDrive, Xero, Stripe and our Teams workspace. I run a 6-person consultancy and our clients are in financial services."
+    },
+    {
+      "skill": "cash-watch",
+      "input": "Set up my agent to watch our cash. We're a 5-person bakery business selling online through Shopify Payments with QuickBooks and a Barclays feed. Payroll is on the 28th, about £9,400. Fixed costs about £14k a month. I want to know early if we're heading for trouble."
+    },
+    {
+      "skill": "payroll-eve-check",
+      "input": "Payroll runs Thursday in Gusto for our 23 staff. Usually about $96k gross. One person left last week and two started. Our ops lead Mia approves. Have the agent check it the night before."
+    },
+    {
+      "skill": "signature-pipeline-watch",
+      "input": "Watch our DocuSign for us. We send customer contracts and offer letters. Things get stuck with the client's legal team for weeks. Our sales lead is Tomás and HR is Grace."
+    },
+    {
+      "skill": "crm-hygiene-sweep",
+      "input": "Sweep our HubSpot every Monday. 4 sales reps, about 120 open deals. Close dates keep slipping and nobody updates next steps. Send each rep their own list and me the summary."
+    },
+    {
+      "skill": "store-watch",
+      "input": "Watch my Shopify candle shop. About 40 orders a day, best-sellers are the fig and cedar candles, restock takes 10 days from my supplier. I want to hear about bad reviews quickly and never run out of the best-sellers."
     }
   ]
 }
