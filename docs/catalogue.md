@@ -217,8 +217,8 @@ Put recurring rituals on autopilot: charter what to automate, schedule it on any
 | Skill | What it does |
 |---|---|
 | [autopilot-charter](../skills/autopilot-charter/SKILL.md) | Decide which of your recurring rituals to put on autopilot — and which to keep manual. |
-| [competitive-intelligence-monitor](../skills/competitive-intelligence-monitor/SKILL.md) | Monitor competitor signals and surface strategic implications for your roadmap. |
-| [delta-briefing](../skills/delta-briefing/SKILL.md) | Make a recurring brief report what changed since the last edition instead of restating everything. |
+| [competitive-intelligence-monitor](../skills/competitive-intelligence-monitor/SKILL.md) ⚡ | Monitor competitor signals and surface strategic implications for your roadmap. |
+| [delta-briefing](../skills/delta-briefing/SKILL.md) ⚡ | Make a recurring brief report what changed since the last edition instead of restating everything. |
 | [morning-intelligence](../skills/morning-intelligence/SKILL.md) | Interviews you across 15 questions to capture your role, topics, sources, exclusions, and format preferences, then writes a master prompt you can paste into a scheduled task or Claude Code Routine. |
 | [outcome-tracker](../skills/outcome-tracker/SKILL.md) | Record the testable predictions inside a decision, then score them against reality later — so frameworks earn trust from outcomes, not vibes. |
 | [pm-weekly-review](../skills/pm-weekly-review/SKILL.md) | Structure a PM's weekly review and planning session. |
@@ -726,8 +726,8 @@ Copywriting & conversion skills: Value Proposition, Landing Page Copy, Sales Pag
 | [changelog-from-commits](../skills/changelog-from-commits/SKILL.md) | Write a human changelog from the REAL commit history — read the actual commit range via the GitHub connector, not a template. |
 | [deck-from-doc](../skills/deck-from-doc/SKILL.md) | Turn the user's REAL doc into a slide deck — open the source, structure the narrative, and build the actual .pptx — not slide-writing tips. |
 | [doc-restructure-live](../skills/doc-restructure-live/SKILL.md) | Restructure the user's REAL Google Doc — open it, tighten and reorganise it, and return a clean version — not advice on how to edit it. |
-| [followup-sweep](../skills/followup-sweep/SKILL.md) | Sweep the user's REAL mail and calendar for dropped balls — threads awaiting their reply, promises they made, and replies they're owed — then draft the nudges. |
-| [inbox-triage-live](../skills/inbox-triage-live/SKILL.md) | Triage the user's REAL inbox through the Gmail connector — not a framework they run by hand. |
+| [followup-sweep](../skills/followup-sweep/SKILL.md) ⚡ | Sweep the user's REAL mail and calendar for dropped balls — threads awaiting their reply, promises they made, and replies they're owed — then draft the nudges. |
+| [inbox-triage-live](../skills/inbox-triage-live/SKILL.md) ⚡ | Triage the user's REAL inbox through the Gmail connector — not a framework they run by hand. |
 | [issue-triage-live](../skills/issue-triage-live/SKILL.md) | Triage the user's REAL issue tracker — read open issues via the GitHub/Linear connector, label / prioritise / dedupe / flag them, and apply the safe changes — not advice on triage. |
 | [meeting-prep-live](../skills/meeting-prep-live/SKILL.md) | Prepare the user for a REAL upcoming meeting by pulling the actual Calendar event, its attendees, the linked Drive docs, and the last email/Slack thread — then producing a brief. |
 | [notion-db-hygiene](../skills/notion-db-hygiene/SKILL.md) | Clean the user's REAL Notion database — read it, find stale/incomplete/duplicate entries, and fix them via the connector — not advice on keeping Notion tidy. |
@@ -1380,7 +1380,7 @@ Freelance business survival: price your services with structure, shut down scope
 | [client-onboarding-kit](../skills/client-onboarding-kit/SKILL.md) | Build a smooth client-onboarding process that starts projects on the right foot — clear expectations, the info you need, and a professional first impression that prevents problems later. |
 | [client-red-flags](../skills/client-red-flags/SKILL.md) | Spot a bad client before you sign — the warning signs of the projects that turn into unpaid, scope-creeping nightmares, and how to screen, price, or decline them. |
 | [cold-outreach-that-isnt-spam](../skills/cold-outreach-that-isnt-spam/SKILL.md) | Write cold outreach to potential clients that gets replies — specific, useful, and about them — instead of the templated pitch that gets deleted. |
-| [late-invoice-chaser](../skills/late-invoice-chaser/SKILL.md) | Chase an overdue invoice and actually get paid — a firm-but-friendly escalation ladder that protects the client relationship until it's clear the relationship is the problem. |
+| [late-invoice-chaser](../skills/late-invoice-chaser/SKILL.md) ⚡ | Chase an overdue invoice and actually get paid — a firm-but-friendly escalation ladder that protects the client relationship until it's clear the relationship is the problem. |
 | [late-invoice-escalation](../skills/late-invoice-escalation/SKILL.md) | Collect overdue invoices with a graduated escalation ladder — friendly nudge to firm notice to work-stop to final demand, each with send-ready wording and timing, plus the prevention terms that stop the next one. |
 | [pricing-your-services](../skills/pricing-your-services/SKILL.md) | Design a freelance/consulting pricing structure — hourly vs day-rate vs project vs retainer chosen per engagement type, anchored packages, and the rules for saying the number out loud without flinching. |
 | [scope-creep-response](../skills/scope-creep-response/SKILL.md) | Handle scope creep on client work without torching the relationship — classify the ask against the agreement, respond with the goodwill/change-order/renegotiate move that fits, and install the prevention language for next time. |
@@ -2383,7 +2383,7 @@ Strategy & stakeholder skills: Competitor Signal Tracker, Competitive Intelligen
 | Skill | What it does |
 |---|---|
 | [ambiguity-resolver](../skills/ambiguity-resolver/SKILL.md) | Structure vague opportunities and unclear briefs into actionable one-page problem statements. |
-| [competitive-intelligence-monitor](../skills/competitive-intelligence-monitor/SKILL.md) | Monitor competitor signals and surface strategic implications for your roadmap. |
+| [competitive-intelligence-monitor](../skills/competitive-intelligence-monitor/SKILL.md) ⚡ | Monitor competitor signals and surface strategic implications for your roadmap. |
 | [competitor-signal-tracker](../skills/competitor-signal-tracker/SKILL.md) | Analyse competitor moves and translate them into strategic implications for your product roadmap. |
 | [executive-update](../skills/executive-update/SKILL.md) | Transform detailed product updates into concise executive briefings. |
 | [stakeholder-influence-mapper](../skills/stakeholder-influence-mapper/SKILL.md) | Map stakeholders for a product decision and produce a tailored influence strategy with talking points. |

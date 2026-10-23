@@ -16,6 +16,11 @@
     "payroll-eve-check": { "tier": "designed-for-duet", "since": "2026-10-23" },
     "signature-pipeline-watch": { "tier": "designed-for-duet", "since": "2026-10-23" },
     "crm-hygiene-sweep": { "tier": "designed-for-duet", "since": "2026-10-23" },
-    "store-watch": { "tier": "designed-for-duet", "since": "2026-10-23" }
+    "store-watch": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "inbox-triage-live": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "followup-sweep": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "delta-briefing": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "competitive-intelligence-monitor": { "tier": "designed-for-duet", "since": "2026-10-23" },
+    "late-invoice-chaser": { "tier": "designed-for-duet", "since": "2026-10-23" }
   }
 }

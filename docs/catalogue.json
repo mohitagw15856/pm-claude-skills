@@ -509,11 +509,13 @@
         },
         {
           "name": "competitive-intelligence-monitor",
-          "description": "Monitor competitor signals and surface strategic implications for your roadmap."
+          "description": "Monitor competitor signals and surface strategic implications for your roadmap.",
+          "duet_ready": "designed-for-duet"
         },
         {
           "name": "delta-briefing",
-          "description": "Make a recurring brief report what changed since the last edition instead of restating everything."
+          "description": "Make a recurring brief report what changed since the last edition instead of restating everything.",
+          "duet_ready": "designed-for-duet"
         },
         {
           "name": "morning-intelligence",
@@ -1920,11 +1922,13 @@
         },
         {
           "name": "followup-sweep",
-          "description": "Sweep the user's REAL mail and calendar for dropped balls — threads awaiting their reply, promises they made, and replies they're owed — then draft the nudges."
+          "description": "Sweep the user's REAL mail and calendar for dropped balls — threads awaiting their reply, promises they made, and replies they're owed — then draft the nudges.",
+          "duet_ready": "designed-for-duet"
         },
         {
           "name": "inbox-triage-live",
-          "description": "Triage the user's REAL inbox through the Gmail connector — not a framework they run by hand."
+          "description": "Triage the user's REAL inbox through the Gmail connector — not a framework they run by hand.",
+          "duet_ready": "designed-for-duet"
         },
         {
           "name": "issue-triage-live",
@@ -3702,7 +3706,8 @@
         },
         {
           "name": "late-invoice-chaser",
-          "description": "Chase an overdue invoice and actually get paid — a firm-but-friendly escalation ladder that protects the client relationship until it's clear the relationship is the problem."
+          "description": "Chase an overdue invoice and actually get paid — a firm-but-friendly escalation ladder that protects the client relationship until it's clear the relationship is the problem.",
+          "duet_ready": "designed-for-duet"
         },
         {
           "name": "late-invoice-escalation",
@@ -6164,7 +6169,8 @@
         },
         {
           "name": "competitive-intelligence-monitor",
-          "description": "Monitor competitor signals and surface strategic implications for your roadmap."
+          "description": "Monitor competitor signals and surface strategic implications for your roadmap.",
+          "duet_ready": "designed-for-duet"
         },
         {
           "name": "competitor-signal-tracker",
