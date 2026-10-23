@@ -10,6 +10,7 @@
 // Flags for `add`:
 //   --agent <name>   see `list` (required)
 //   --bundle <a,b>   only the skills in these bundles (e.g. pm-china-work,pm-cv)
+//   --skills <a,b>   only these skills (e.g. a starter pack); combines with --bundle
 //   --target <path>  override the default install directory
 //   --link           symlink instead of copy (native agents; falls back to copy)
 //   --dry-run        print what would happen without writing
@@ -79,6 +80,18 @@ function splitSkill(text) {
   const d = m[1].split(/\r?\n/).map((l) => l.match(/^description:\s*(.*)$/)).find(Boolean);
   const description = d ? d[1].trim().replace(/^"([\s\S]*)"$/, '$1').replace(/^'([\s\S]*)'$/, '$1') : '';
   return { description, body: text.slice(m[0].length).trim() };
+}
+
+// --skills a,b → the set of those skill names (each must exist), or null for no filter.
+function skillsFilter(value) {
+  if (value === undefined || value === null) return null;
+  const names = String(value).split(',').map((s) => s.trim()).filter(Boolean);
+  if (!names.length) { console.error('Error: --skills needs at least one skill name, e.g. --skills standing-orders,cash-watch'); process.exit(2); }
+  for (const n of names) {
+    if (!/^[a-z0-9]+(-[a-z0-9]+)*$/.test(n)) { console.error(`Error: "${n}" is not a skill name.`); process.exit(2); }
+    if (!existsSync(join(PKG_ROOT, 'skills', n, 'SKILL.md'))) { console.error(`Error: no skill called "${n}". Search with: npx pm-claude-skills find "<what you need>"`); process.exit(2); }
+  }
+  return new Set(names);
 }
 
 // --bundle a,b → the set of skill names in those bundles, or null for no filter.
@@ -312,7 +325,8 @@ function add(opts) {
     console.error(`Error: --agent must be one of: ${AGENTS.join(', ')}.`);
     process.exit(2);
   }
-  const only = opts._only || bundleFilter(opts.bundle);
+  const fromBundles = bundleFilter(opts.bundle), fromSkills = skillsFilter(opts.skills);
+  const only = opts._only || (fromBundles || fromSkills ? new Set([...(fromBundles || []), ...(fromSkills || [])]) : null);
   if (opts.lite && opts.link) { console.error('Error: --lite writes condensed copies, so it cannot be combined with --link.'); process.exit(2); }
   if (opts.lite && agent in RULEFILE) console.log(`  note: --lite applies to native and generated agents; '${agent}' uses the pre-built rule files in exports/, which are installed in full.`);
   const skillsDir = join(PKG_ROOT, 'skills');
@@ -758,7 +772,7 @@ const HELP = `pm-claude-skills — install professional Agent Skills into any AI
 (This is a CLI, not a library — you don't need \`npm install\`; \`npx …\` always runs the latest.)
 
 Usage:
-  npx pm-claude-skills add --agent <${AGENTS.join('|')}> [--bundle <a,b>] [--target <path>] [--link] [--lite] [--dry-run]
+  npx pm-claude-skills add --agent <${AGENTS.join('|')}> [--bundle <a,b>] [--skills <a,b>] [--target <path>] [--link] [--lite] [--dry-run]
   npx pm-claude-skills run <skill> [--text "…" | --input <file>] [--model <m>] [--out <file>]
   npx pm-claude-skills find "<describe your task>" [--json] [--limit <n>]   # ranked task→skill router (start here)
   npx pm-claude-skills search [query…] [--json] [--limit <n>]

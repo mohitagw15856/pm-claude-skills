@@ -331,7 +331,9 @@ writeFileSync(join(__dirname, 'skills-index.json'), JSON.stringify({ count: live
     const settings = Object.fromEntries([...block.matchAll(/^[ \t]+([a-z_]+):[ \t]*(.*?)[ \t]*(?:#.*)?$/gm)].map((m) => [m[1], m[2]]));
     return { name: n, title: s.title, summary: s.summary, plugin: s.plugin, tier: r.tier, since: r.since, settings };
   }).sort((a, b) => a.name.localeCompare(b.name));
-  writeFileSync(join(__dirname, 'duet.json'), JSON.stringify({ count: duet.length, skills: duet }, null, 1) + '\n');
+  const packsFile = join(root, 'data', 'duet-packs.json');
+  const packs = existsSync(packsFile) ? (JSON.parse(readFileSync(packsFile, 'utf8')).packs || []) : [];
+  writeFileSync(join(__dirname, 'duet.json'), JSON.stringify({ count: duet.length, skills: duet, packs }, null, 1) + '\n');
 }
 const tierCounts = skills.reduce((a, s) => ((a[s.tier] = (a[s.tier] || 0) + 1), a), {});
 console.log(

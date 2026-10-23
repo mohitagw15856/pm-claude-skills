@@ -56,3 +56,7 @@ A skill may only claim the highest tier it has evidence for. Overclaiming here c
 Gradual by design: add the block to a skill when you can vouch for its unattended behaviour, not before. The [pm-duet bundle](../../plugins/pm-duet/) ships with the block on every skill as the worked example; the flag registry lives at [data/duet-ready.json](../../data/duet-ready.json) and surfaces in [the catalogue](../catalogue.md).
 
 To try Duet-ready skills without a real account, use the [fake-apps sandbox](../../integrations/fake-apps-mcp/): invented business data with the situations the watchers look for, where every outward action is refused and logged.
+
+## Starter packs
+
+An always-on agent works best with a few skills that match the work. [data/duet-packs.json](../../data/duet-packs.json) holds five packs of three or four Duet-ready skills (founder, freelancer, shop owner, team lead, business operations), shown on the [Duet page](https://mohitagw15856.github.io/pm-claude-skills/duet.html). Install one in Claude Code or another supported tool with `npx pm-claude-skills add --agent claude --skills <the pack's skills>`.

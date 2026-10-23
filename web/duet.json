@@ -316,5 +316,62 @@
     "cadence": "on-demand"
    }
   }
+ ],
+ "packs": [
+  {
+   "id": "founder",
+   "title": "Founder",
+   "for": "Running a small company: you want a morning picture and early warnings, not more email.",
+   "skills": [
+    "standing-orders",
+    "morning-brief-designer",
+    "cash-watch",
+    "crm-hygiene-sweep"
+   ]
+  },
+  {
+   "id": "freelancer",
+   "title": "Freelancer",
+   "for": "Clients, invoices and follow-ups across one inbox, with nothing sent to a client without you.",
+   "skills": [
+    "standing-orders",
+    "approval-policy-designer",
+    "followup-sweep",
+    "late-invoice-chaser"
+   ]
+  },
+  {
+   "id": "shop-owner",
+   "title": "Shop owner",
+   "for": "An online shop: stock, refunds, reviews and cash, with interruptions only when money is at stake.",
+   "skills": [
+    "store-watch",
+    "cash-watch",
+    "interrupt-rules",
+    "send-approval-check"
+   ]
+  },
+  {
+   "id": "team-lead",
+   "title": "Team lead",
+   "for": "A shared agent and honest reporting: what shipped, what is waiting, and the weekly picture for your manager.",
+   "skills": [
+    "shared-agent-charter",
+    "end-of-day-report",
+    "weekly-rollup",
+    "stakeholder-update"
+   ]
+  },
+  {
+   "id": "business-ops",
+   "title": "Business operations",
+   "for": "The back office: payroll, contracts awaiting signature and cash, under a clear approval policy.",
+   "skills": [
+    "payroll-eve-check",
+    "signature-pipeline-watch",
+    "cash-watch",
+    "approval-policy-designer"
+   ]
+  }
  ]
 }
