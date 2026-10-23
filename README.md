@@ -78,15 +78,15 @@ Then just say what you need: *"Decode this job ad and tell me where I am weak."*
 
 **PM Skills works with [Claude Duet](https://claude.com/)**, Anthropic's proactive agent. Duet uses the skills in your Claude account, so every skill here can run inside it. Agents that work while you're away fail in new ways: briefs that pad, uncited claims, acting instead of drafting, saying "done" about a draft. So **21 Duet-ready skills are built for unattended use**. They keep briefs short and cited, draft instead of sending, and always ask before anything is sent, posted, paid, signed or deleted.
 
-| Step | Skill | What you get |
-|---|---|---|
-| 1 | [prepare-for-duet](skills/prepare-for-duet/SKILL.md) | What in your memory, connectors and inbox will help or hurt the agent |
-| 2 | [standing-orders](skills/standing-orders/SKILL.md) | A one-page manual: always, never, VIPs, tone, when to stop and ask |
-| 3 | [approval-policy-designer](skills/approval-policy-designer/SKILL.md) | For each app, what the agent may do alone, must ask about, or must never do |
-| 4 | [morning-brief-designer](skills/morning-brief-designer/SKILL.md) and [interrupt-rules](skills/interrupt-rules/SKILL.md) | What the brief says, and what may interrupt you between briefs |
-| 5 | [agent-kill-switch-plan](skills/agent-kill-switch-plan/SKILL.md) | How to stop it in under a minute, written before you need it |
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/duet-flow.svg"><source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/duet-flow-light.svg"><img src="docs/readme-assets/duet-flow.svg" width="100%" alt="How PM Skills works inside Claude Duet: your apps are checked every few hours, a Duet-ready skill turns what it finds into a short cited brief and drafts, and anything outward waits at an approval gate for your yes." /></picture></p>
+
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/duet-setup.svg"><source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/duet-setup-light.svg"><img src="docs/readme-assets/duet-setup.svg" width="100%" alt="Set up your always-on agent in five steps: audit, standing orders, approval policy, brief and alerts, kill switch; then install with Add to Claude, a starter pack or the whole bundle." /></picture></p>
+
+<sub>The five skills: [prepare-for-duet](skills/prepare-for-duet/SKILL.md) · [standing-orders](skills/standing-orders/SKILL.md) · [approval-policy-designer](skills/approval-policy-designer/SKILL.md) · [morning-brief-designer](skills/morning-brief-designer/SKILL.md) and [interrupt-rules](skills/interrupt-rules/SKILL.md) · [agent-kill-switch-plan](skills/agent-kill-switch-plan/SKILL.md)</sub>
 
 **Watchers for a small business**: [cash-watch](skills/cash-watch/SKILL.md), [payroll-eve-check](skills/payroll-eve-check/SKILL.md), [signature-pipeline-watch](skills/signature-pipeline-watch/SKILL.md), [crm-hygiene-sweep](skills/crm-hygiene-sweep/SKILL.md) and [store-watch](skills/store-watch/SKILL.md). They cover Stripe, Xero, QuickBooks, Gusto, DocuSign, HubSpot and Shopify. **For teams**: [shared-agent-charter](skills/shared-agent-charter/SKILL.md), for a Dot or a shared agent in Slack or Teams.
+
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/duet-brief.svg"><source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/duet-brief-light.svg"><img src="docs/readme-assets/duet-brief.svg" width="100%" alt="Illustration with invented data: the morning brief the five watchers would give a small candle shop, with what needs you, what waits on others, what to watch, and two planted scams reported rather than obeyed." /></picture></p>
 
 **Get started**
 - **Into Claude and Duet:** press **⬇ Add to Claude** on any skill's page, then upload the ZIP in claude.ai (Settings, Skills, Upload skill).
