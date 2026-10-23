@@ -1664,6 +1664,10 @@
     {
       "skill": "computer-use-runbook",
       "input": "Write a runbook for a computer-use agent to change my home energy supplier on a comparison site. I want the cheapest fixed tariff, I must keep my Warm Home Discount, and the agent must not sign anything for me. I'm already logged in to the comparison site."
+    },
+    {
+      "skill": "agent-negotiation-brief",
+      "input": "My agent will negotiate with a hotel's booking agent to move my non-refundable stay (3 nights, £540) to next month without a fee. I'd accept a £60 change fee at most. I don't want them to know I've already booked flights for the new dates."
     }
   ]
 }

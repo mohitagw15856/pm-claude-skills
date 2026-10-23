@@ -3,7 +3,7 @@
  "counts": {
   "consequential": 246,
   "high-stakes": 162,
-  "informational": 915
+  "informational": 916
  },
  "tiers": {
   "360-feedback-template": {
@@ -87,6 +87,10 @@
    "via": "default"
   },
   "agent-kill-switch-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "agent-negotiation-brief": {
    "tier": "informational",
    "via": "default"
   },

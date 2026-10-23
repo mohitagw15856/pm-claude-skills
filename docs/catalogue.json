@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build-catalogue.mjs",
   "bundles": 153,
-  "skills": 1289,
+  "skills": 1290,
   "items": [
     {
       "bundle": "pm-2027",
@@ -198,6 +198,10 @@
         {
           "name": "agent-era-pricing",
           "description": "Redesign seat-based pricing for the agent era — when one human runs ten agents, per-seat models collapse."
+        },
+        {
+          "name": "agent-negotiation-brief",
+          "description": "Brief an AI agent that will negotiate for you with another party's agent or a person (a refund, a price, a meeting time, a contract term): your goal, your opening, your limits, your walk-away point, what it must never reveal, and when it must come back to you."
         },
         {
           "name": "agent-readiness-audit",

@@ -1,7 +1,7 @@
 # 🧭 Disambiguation — you want *this* one, not that one
 
 > **Generated — do not edit.** Run `node scripts/build-disambiguation.mjs`.
-> 1311 live skills across 153 bundles, plus 12 retired names that still resolve.
+> 1312 live skills across 153 bundles, plus 12 retired names that still resolve.
 
 At this size the hard part is not finding *a* skill — it is telling two similar ones apart, and
 knowing whether the thing you are about to write already exists under a different noun.
@@ -125,6 +125,19 @@ assuming the skill you want is missing.
 - `the-worry-decompiler` · pm-focus — Turn an anxious spiral into a concrete list — separate the specific worries from the vague dread, sort what you can act on from what you can't, and get one action.
 - `the-year-of-firsts` · pm-grief — Get through the first year after losing someone — the birthdays, holidays, and ordinary triggers that ambush you — with a gentle plan for the hard days instead of being blindsided.
 
+**`agent-*`** (10)
+
+- `agent-design-review` · pm-ai — Review an LLM agent design and find where it will be unreliable, expensive, or unsafe.
+- `agent-era-pricing` · pm-agentnative — Redesign seat-based pricing for the agent era — when one human runs ten agents, per-seat models collapse.
+- `agent-hiring-panel` · pm-2027 — Hire an AI agent the way you'd hire an employee — a role spec with success criteria, a structured work-sample interview run on your real tasks, reference checks (what do actual users report), probation KPIs, and termination criteria written before day one.
+- `agent-incident-postmortem` · pm-agentops — Run a blameless postmortem for an incident caused by an AI agent or LLM feature — hallucinated facts shipped to users, runaway tool use, prompt injection, cost blowouts, or wrong actions taken autonomously.
+- `agent-kill-switch-plan` · pm-duet — Prepare, before you need it, the runbook for stopping a proactive agent that is misbehaving: how to pause it in seconds, which connections to revoke in what order, how to check what it did, who to tell, and how to restart safely.
+- `agent-negotiation-brief` · pm-agentnative — Brief an AI agent that will negotiate for you with another party's agent or a person (a refund, a price, a meeting time, a contract term): your goal, your opening, your limits, your walk-away point, what it must never reveal, and when it must come back to you.
+- `agent-observability-spec` · pm-agentops — Specify the tracing, metrics, and alerting for an AI agent or LLM feature in production.
+- `agent-readiness-audit` · pm-agentnative — Audit whether AI agents can actually use your product — docs, APIs, onboarding, errors, and discoverability, evaluated from a non-human user's perspective.
+- `agent-severance` · pm-2027 — Offboard an AI agent the way you'd offboard an employee — inventory what it knew and touched, export then purge its memory, revoke every credential and access grant, and write the handover for its successor (human or agent).
+- `agent-spec` · pm-ai — Specify an autonomous or tool-using AI agent before building it.
+
 **`data-*`** (10)
 
 - `data-analysis-standard` · pm-analytics — Structure a product data analysis, metric deep-dive, funnel analysis, or cohort study.
@@ -163,18 +176,6 @@ assuming the skill you want is missing.
 - `figma-spacing-system` · pm-figma — Design a spacing and layout token system for a Figma design system.
 - `figma-user-flow-planner` · pm-figma — Plan user flows and screen states for a Figma design before any designing starts.
 - `figma-variant-matrix` · pm-figma — Define component variants and states systematically for Figma.
-
-**`agent-*`** (9)
-
-- `agent-design-review` · pm-ai — Review an LLM agent design and find where it will be unreliable, expensive, or unsafe.
-- `agent-era-pricing` · pm-agentnative — Redesign seat-based pricing for the agent era — when one human runs ten agents, per-seat models collapse.
-- `agent-hiring-panel` · pm-2027 — Hire an AI agent the way you'd hire an employee — a role spec with success criteria, a structured work-sample interview run on your real tasks, reference checks (what do actual users report), probation KPIs, and termination criteria written before day one.
-- `agent-incident-postmortem` · pm-agentops — Run a blameless postmortem for an incident caused by an AI agent or LLM feature — hallucinated facts shipped to users, runaway tool use, prompt injection, cost blowouts, or wrong actions taken autonomously.
-- `agent-kill-switch-plan` · pm-duet — Prepare, before you need it, the runbook for stopping a proactive agent that is misbehaving: how to pause it in seconds, which connections to revoke in what order, how to check what it did, who to tell, and how to restart safely.
-- `agent-observability-spec` · pm-agentops — Specify the tracing, metrics, and alerting for an AI agent or LLM feature in production.
-- `agent-readiness-audit` · pm-agentnative — Audit whether AI agents can actually use your product — docs, APIs, onboarding, errors, and discoverability, evaluated from a non-human user's perspective.
-- `agent-severance` · pm-2027 — Offboard an AI agent the way you'd offboard an employee — inventory what it knew and touched, export then purge its memory, revoke every credential and access grant, and write the handover for its successor (human or agent).
-- `agent-spec` · pm-ai — Specify an autonomous or tool-using AI agent before building it.
 
 **`context-*`** (7)
 
