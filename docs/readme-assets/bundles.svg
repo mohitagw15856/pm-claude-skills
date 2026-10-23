@@ -8,78 +8,78 @@
 <text x="36" y="122" font-size="22">🔎</text>
 <text x="72" y="120" font-size="14.5" font-weight="700" fill="#e6edf3">Turn research into decisions</text>
 <text x="72" y="142" font-size="11.5" font-family="ui-monospace,monospace" fill="#58a6ff">pm-discovery</text>
-<text x="72" y="161" font-size="11.5" fill="#8b949e">5 skills</text>
+<text x="72" y="161" font-size="11.5" fill="#8b949e">skills: 5</text>
 <rect x="316" y="84" width="288" height="92" rx="12" fill="#161b22" stroke="#30363d"/>
 <rect x="316" y="84" width="5" height="92" rx="2" fill="#d2a8ff"/>
 <text x="338" y="122" font-size="22">📝</text>
 <text x="374" y="120" font-size="14.5" font-weight="700" fill="#e6edf3">Write the PRD and the updates</text>
 <text x="374" y="142" font-size="11.5" font-family="ui-monospace,monospace" fill="#d2a8ff">pm-essentials</text>
-<text x="374" y="161" font-size="11.5" fill="#8b949e">10 skills</text>
+<text x="374" y="161" font-size="11.5" fill="#8b949e">skills: 10</text>
 <rect x="618" y="84" width="288" height="92" rx="12" fill="#161b22" stroke="#30363d"/>
 <rect x="618" y="84" width="5" height="92" rx="2" fill="#3fb950"/>
 <text x="640" y="122" font-size="22">🗓</text>
 <text x="676" y="120" font-size="14.5" font-weight="700" fill="#e6edf3">Plan the quarter</text>
 <text x="676" y="142" font-size="11.5" font-family="ui-monospace,monospace" fill="#3fb950">pm-planning</text>
-<text x="676" y="161" font-size="11.5" fill="#8b949e">8 skills</text>
+<text x="676" y="161" font-size="11.5" fill="#8b949e">skills: 8</text>
 <rect x="14" y="190" width="288" height="92" rx="12" fill="#161b22" stroke="#30363d"/>
 <rect x="14" y="190" width="5" height="92" rx="2" fill="#d29922"/>
 <text x="36" y="228" font-size="22">🚀</text>
 <text x="72" y="226" font-size="14.5" font-weight="700" fill="#e6edf3">Ship the sprint and the launch</text>
 <text x="72" y="248" font-size="11.5" font-family="ui-monospace,monospace" fill="#d29922">pm-delivery</text>
-<text x="72" y="267" font-size="11.5" fill="#8b949e">13 skills</text>
+<text x="72" y="267" font-size="11.5" fill="#8b949e">skills: 13</text>
 <rect x="316" y="190" width="288" height="92" rx="12" fill="#161b22" stroke="#30363d"/>
 <rect x="316" y="190" width="5" height="92" rx="2" fill="#f85149"/>
 <text x="338" y="228" font-size="22">📈</text>
 <text x="374" y="226" font-size="14.5" font-weight="700" fill="#e6edf3">Read the numbers</text>
 <text x="374" y="248" font-size="11.5" font-family="ui-monospace,monospace" fill="#f85149">pm-data</text>
-<text x="374" y="267" font-size="11.5" fill="#8b949e">9 skills</text>
+<text x="374" y="267" font-size="11.5" fill="#8b949e">skills: 9</text>
 <rect x="618" y="190" width="288" height="92" rx="12" fill="#161b22" stroke="#30363d"/>
 <rect x="618" y="190" width="5" height="92" rx="2" fill="#58a6ff"/>
 <text x="640" y="228" font-size="22">🧭</text>
 <text x="676" y="226" font-size="14.5" font-weight="700" fill="#e6edf3">Watch the market</text>
 <text x="676" y="248" font-size="11.5" font-family="ui-monospace,monospace" fill="#58a6ff">pm-strategy</text>
-<text x="676" y="267" font-size="11.5" fill="#8b949e">6 skills</text>
+<text x="676" y="267" font-size="11.5" fill="#8b949e">skills: 6</text>
 <rect x="14" y="296" width="288" height="92" rx="12" fill="#161b22" stroke="#30363d"/>
 <rect x="14" y="296" width="5" height="92" rx="2" fill="#d2a8ff"/>
 <text x="36" y="334" font-size="22">📣</text>
 <text x="72" y="332" font-size="14.5" font-weight="700" fill="#e6edf3">Launch and sell it</text>
 <text x="72" y="354" font-size="11.5" font-family="ui-monospace,monospace" fill="#d2a8ff">pm-gtm</text>
-<text x="72" y="373" font-size="11.5" fill="#8b949e">8 skills</text>
+<text x="72" y="373" font-size="11.5" fill="#8b949e">skills: 8</text>
 <rect x="316" y="296" width="288" height="92" rx="12" fill="#161b22" stroke="#30363d"/>
 <rect x="316" y="296" width="5" height="92" rx="2" fill="#3fb950"/>
 <text x="338" y="334" font-size="22">🤝</text>
 <text x="374" y="332" font-size="14.5" font-weight="700" fill="#e6edf3">Keep the customers</text>
 <text x="374" y="354" font-size="11.5" font-family="ui-monospace,monospace" fill="#3fb950">pm-cs</text>
-<text x="374" y="373" font-size="11.5" fill="#8b949e">7 skills</text>
+<text x="374" y="373" font-size="11.5" fill="#8b949e">skills: 7</text>
 <rect x="618" y="296" width="288" height="92" rx="12" fill="#161b22" stroke="#30363d"/>
 <rect x="618" y="296" width="5" height="92" rx="2" fill="#d29922"/>
 <text x="640" y="334" font-size="22">⚖️</text>
 <text x="676" y="332" font-size="14.5" font-weight="700" fill="#e6edf3">Make the hard call</text>
 <text x="676" y="354" font-size="11.5" font-family="ui-monospace,monospace" fill="#d29922">pm-decisions</text>
-<text x="676" y="373" font-size="11.5" fill="#8b949e">4 skills</text>
+<text x="676" y="373" font-size="11.5" fill="#8b949e">skills: 4</text>
 <rect x="14" y="402" width="288" height="92" rx="12" fill="#161b22" stroke="#30363d"/>
 <rect x="14" y="402" width="5" height="92" rx="2" fill="#f85149"/>
 <text x="36" y="440" font-size="22">🧠</text>
 <text x="72" y="438" font-size="14.5" font-weight="700" fill="#e6edf3">Escape the average answer</text>
 <text x="72" y="460" font-size="11.5" font-family="ui-monospace,monospace" fill="#f85149">pm-thinking</text>
-<text x="72" y="479" font-size="11.5" fill="#8b949e">25 skills</text>
+<text x="72" y="479" font-size="11.5" fill="#8b949e">skills: 25</text>
 <rect x="316" y="402" width="288" height="92" rx="12" fill="#161b22" stroke="#30363d"/>
 <rect x="316" y="402" width="5" height="92" rx="2" fill="#58a6ff"/>
 <text x="338" y="440" font-size="22">🔍</text>
 <text x="374" y="438" font-size="14.5" font-weight="700" fill="#e6edf3">Read before you sign</text>
 <text x="374" y="460" font-size="11.5" font-family="ui-monospace,monospace" fill="#58a6ff">pm-decoders</text>
-<text x="374" y="479" font-size="11.5" fill="#8b949e">26 skills</text>
+<text x="374" y="479" font-size="11.5" fill="#8b949e">skills: 26</text>
 <rect x="618" y="402" width="288" height="92" rx="12" fill="#161b22" stroke="#30363d"/>
 <rect x="618" y="402" width="5" height="92" rx="2" fill="#d2a8ff"/>
 <text x="640" y="440" font-size="22">💼</text>
 <text x="676" y="438" font-size="14.5" font-weight="700" fill="#e6edf3">Land the next job</text>
 <text x="676" y="460" font-size="11.5" font-family="ui-monospace,monospace" fill="#d2a8ff">pm-jobsearch</text>
-<text x="676" y="479" font-size="11.5" fill="#8b949e">5 skills</text>
+<text x="676" y="479" font-size="11.5" fill="#8b949e">skills: 5</text>
 <rect x="316" y="508" width="288" height="92" rx="12" fill="#161b22" stroke="#30363d"/>
 <rect x="316" y="508" width="5" height="92" rx="2" fill="#3fb950"/>
 <text x="338" y="546" font-size="22">🇨🇳</text>
 <text x="374" y="544" font-size="14.5" font-weight="700" fill="#e6edf3">用中文工作</text>
 <text x="374" y="566" font-size="11.5" font-family="ui-monospace,monospace" fill="#3fb950">pm-china-work</text>
-<text x="374" y="585" font-size="11.5" fill="#8b949e">11 skills</text>
+<text x="374" y="585" font-size="11.5" fill="#8b949e">skills: 11</text>
 <text x="460" y="634" text-anchor="middle" font-size="12" fill="#8b949e">npx pm-claude-skills add --bundle &lt;name&gt;  ·  every bundle: docs/catalogue.md</text>
 </svg>
