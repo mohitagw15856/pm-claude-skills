@@ -5,6 +5,7 @@ Ways to reach the PM Skills library beyond the CLI, MCP server, and browser play
 | Integration | What it is | Setup |
 |---|---|---|
 | [`right-click/`](right-click/) | **Right-click any file** in Finder, Explorer or a Linux file manager and run a skill on it; free with a local model, or your own key | [README](right-click/README.md) |
+| [`fake-apps-mcp/`](fake-apps-mcp/) | **Fake-apps sandbox**: a local MCP server with invented Gmail, Stripe, Xero, Gusto, DocuSign, HubSpot and Shopify data for one shop, to try proactive-agent skills safely; sends, payments and deletions are refused and logged | [README](fake-apps-mcp/README.md) |
 | [`raycast/`](raycast/) | Raycast extension — search skills, open/run/install from your launcher | [README](raycast/README.md) |
 | [`alfred/`](alfred/) | Alfred workflow (keyword `pm`) — live skill search | [README](alfred/README.md) |
 | [`custom-gpt/`](custom-gpt/) | Publish the library as a **Custom GPT** in the GPT Store (live Actions API) | [SETUP](custom-gpt/SETUP.md) |

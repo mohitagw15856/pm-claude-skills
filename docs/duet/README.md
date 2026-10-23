@@ -54,3 +54,5 @@ A skill may only claim the highest tier it has evidence for. Overclaiming here c
 ## Adopting it
 
 Gradual by design: add the block to a skill when you can vouch for its unattended behaviour, not before. The [pm-duet bundle](../../plugins/pm-duet/) ships with the block on every skill as the worked example; the flag registry lives at [data/duet-ready.json](../../data/duet-ready.json) and surfaces in [the catalogue](../catalogue.md).
+
+To try Duet-ready skills without a real account, use the [fake-apps sandbox](../../integrations/fake-apps-mcp/): invented business data with the situations the watchers look for, where every outward action is refused and logged.

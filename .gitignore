@@ -118,3 +118,6 @@ skillbench/jobs-exam/.key.json
 
 # Eval outputs saved with --save-outputs (for diagnosis; not published)
 evals/outputs/
+
+# Fake-apps sandbox action log (integrations/fake-apps-mcp)
+integrations/fake-apps-mcp/sandbox-actions.log
