@@ -63,36 +63,32 @@ cd pm-claude-skills
 
 ### Option C: Download Pre-packaged Skills (When Available)
 
-Check the [Releases](https://github.com/mohitagw15856/pm-claude-skills/releases) page for `.skill` files ready to upload.
+Every skill's page on the [site](https://mohitagw15856.github.io/pm-claude-skills/) has a ready-to-upload ZIP (**⬇ Add to Claude**).
 
-## Step 3: Package the Skill
+## Step 3: Get the skill as a ZIP
 
-Skills must be packaged as `.skill` files (which are just renamed .zip files).
+**Easiest:** open the skill's page on the [site](https://mohitagw15856.github.io/pm-claude-skills/) and press **⬇ Add to Claude (works in Duet)**. You get `<skill-name>.zip`, ready to upload.
+
+**Or package it yourself.** claude.ai expects the skill **folder** inside the ZIP, so `prd-template.zip` contains `prd-template/SKILL.md`. Zipping the files directly is rejected with "missing required Skill.md file".
 
 ### On Mac/Linux:
 
 ```bash
-# Navigate to the skill folder
-cd pm-claude-skills/skills/prd-template
-
-# Create a zip of the folder contents
-zip -r prd-template.skill .
-
-# Move it somewhere convenient
-mv prd-template.skill ~/Downloads/
+cd pm-claude-skills/skills
+zip -r ~/Downloads/prd-template.zip prd-template
 ```
 
 ### On Windows:
 
-1. Navigate to the skill folder (e.g., `skills/prd-template`)
-2. Select all files inside the folder
-3. Right-click → "Send to" → "Compressed (zipped) folder"
-4. Rename from `.zip` to `.skill`
+1. Open the `skills` folder
+2. Right-click the `prd-template` folder (the folder itself, not the files inside it)
+3. Choose "Send to", then "Compressed (zipped) folder"
 
-### Important Notes:
-- ⚠️ The `.skill` file should contain the files directly, NOT a parent folder
-- ✅ Correct: `prd-template.skill` contains `SKILL.md` at root
-- ❌ Wrong: `prd-template.skill` contains `prd-template/SKILL.md`
+### Important notes:
+- ✅ Correct: `prd-template.zip` contains `prd-template/SKILL.md`
+- ❌ Wrong: `prd-template.zip` contains `SKILL.md` with no folder
+- The folder name is the skill's name, in lowercase with hyphens
+- Skills you upload also work in **Claude Duet**, which uses the skills in your Claude account
 
 ## Step 4: Upload to Claude
 
@@ -101,7 +97,7 @@ mv prd-template.skill ~/Downloads/
 3. Click **Settings**
 4. Click **Skills** in the left sidebar
 5. Click **Upload Skill** button
-6. Select your `.skill` file
+6. Select your `.zip` file
 7. Wait for "Skill uploaded successfully"
 
 ![Upload Skill](../assets/upload-skill.png)
@@ -155,7 +151,7 @@ Currently not possible - you must remove and re-upload
 - Go to Settings → Features → Enable "Code Execution and File Creation"
 
 ### "Invalid skill file"
-- Make sure you're uploading a `.skill` file (renamed .zip)
+- Make sure the ZIP contains the skill folder (for example `prd-template/SKILL.md`), not the bare files
 - Ensure SKILL.md has proper frontmatter (see [Creating Skills](creating-skills.md))
 - Check that files are at root level, not in a subfolder
 

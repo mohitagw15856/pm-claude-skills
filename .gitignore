@@ -121,3 +121,6 @@ evals/outputs/
 
 # Fake-apps sandbox action log (integrations/fake-apps-mcp)
 integrations/fake-apps-mcp/sandbox-actions.log
+
+# One ZIP per skill for claude.ai upload (scripts/build-skill-zips.mjs, built at deploy)
+web/skill-zip/

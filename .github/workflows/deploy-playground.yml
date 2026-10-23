@@ -104,6 +104,9 @@ jobs:
       - name: Build per-skill SEO pages + sitemap (web/skill/*.html)
         run: node scripts/build-skill-pages.mjs
 
+      - name: One ZIP per skill for claude.ai and Claude Duet (web/skill-zip/)
+        run: node scripts/build-skill-zips.mjs
+
       # Chinese pages for Baidu, Bing China and 360: /zh/<skill>.html and a hub,
       # appended to the sitemap built above.
       - name: Build the Chinese landing pages (web/zh/)

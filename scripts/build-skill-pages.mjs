@@ -340,6 +340,7 @@ ${existsSync(join(root, 'skills-i18n', 'zh', s.name, 'SKILL.md')) ? `<link rel="
   <div class="cta">
     <a class="btn btn-primary" href="${playUrl}">▶ Run it free — no key needed</a>
     <a class="btn btn-ghost" href="${BASE}/grade.html?skill=${s.name}">📝 Grade your existing draft</a>
+    <a class="btn btn-ghost" href="${BASE}/skill-zip/${s.name}.zip" download title="Upload in claude.ai: Settings, Skills, Upload skill. It then works in Claude and in Claude Duet.">⬇ Add to Claude (works in Duet)</a>
     <a class="btn btn-ghost" href="${BASE}/use.html?skill=${s.name}">📱 Use as an app</a>
     <a class="btn btn-ghost" href="${REPO}/blob/main/skills/${s.name}/SKILL.md">View SKILL.md ↗</a>
     <a class="btn btn-ghost" href="../changes.html?skill=${s.name}">What changed</a>

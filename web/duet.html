@@ -44,6 +44,8 @@
     <li><a href="skill/agent-kill-switch-plan.html"><b>agent-kill-switch-plan</b></a>: how to stop it in under a minute, written before you need it</li>
   </ol>
 
+  <div class="note"><b>Adding a skill to Duet:</b> Duet uses the skills in your Claude account. Download a skill with <em>⬇ Add to Claude</em>, then in claude.ai open Settings, then Skills, and choose Upload skill. Upload the ZIP as it is; don't unzip it. In Claude Code or other tools, use the install line under each pack.</div>
+
   <h2>Starter packs</h2>
   <p class="muted">An always-on agent works best with a few skills that match your work, not dozens. Pick the pack closest to yours.</p>
   <div class="grid" id="packs"><p class="muted">Loading…</p></div>
@@ -83,7 +85,7 @@
       var n = encodeURIComponent(s.name);
       return '<div class="card"><h3>' + esc(s.title) + '</h3><div class="chips">' + chips + '</div><p class="s">' + esc(s.summary) + '</p>' +
         (st.requires_approval ? '<p class="s">Always asks before: ' + esc(st.requires_approval) + '</p>' : '') +
-        '<div class="links"><a href="skill/' + n + '.html">Read it</a><a href="index.html?skill=' + n + '">Try it free</a><a href="use.html?skill=' + n + '">Use as an app</a></div></div>';
+        '<div class="links"><a href="skill/' + n + '.html">Read it</a><a href="index.html?skill=' + n + '">Try it free</a><a href="skill-zip/' + n + '.zip" download>⬇ Add to Claude</a></div></div>';
     }).join('');
   }
   function renderPacks(packs) {
