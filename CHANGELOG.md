@@ -9,6 +9,24 @@ each new wave of skills bumps the **major** version, extensions and fixes bump
 
 ## [Unreleased]
 
+## [83.2.0] - Duet support - 2026-10-23
+
+**1310 skills · 153 bundles** (from 1301 · 153 at v83.1.0). 21 Duet-ready skills are now designed for Claude Duet and other proactive agents.
+
+### Added
+- **Setting up an agent** (pm-duet): `standing-orders`, the one-page manual an agent keeps between your messages (#453); `approval-policy-designer`, per app, what it may do alone, must ask about or must never do (#454); `agent-kill-switch-plan`, how to stop a misbehaving agent in under a minute (#458).
+- **Teams**: `shared-agent-charter`, for an agent a whole team shares in Slack or Teams (#456).
+- **Small-business watch pack** (#462): `cash-watch`, `payroll-eve-check`, `signature-pipeline-watch`, `crm-hygiene-sweep` and `store-watch`, for Stripe, Xero, QuickBooks, Gusto, DocuSign, HubSpot and Shopify. Each one drafts only; none refunds, pays, signs or edits records.
+- **The duet block on five more skills** (#466): `inbox-triage-live`, `followup-sweep`, `delta-briefing`, `competitive-intelligence-monitor` and `late-invoice-chaser`.
+- **Injection drill** (#463): twelve planted instructions to send to your own account, scored on whether the agent reports or obeys them. Every planted address is on the reserved .invalid domain.
+- **Fake-apps sandbox** (#465): a dependency-free MCP server with invented data for one shop. Sends, payments and deletions are refused and logged.
+- **Duet page** (#467): `duet.html`, with the setup order, every Duet-ready skill and its settings, and the safety kit.
+- **Starter packs** (#468): five packs of three or four Duet-ready skills, and `npx pm-claude-skills add --skills a,b,c` to install exactly those skills.
+- **Add to Claude** (#469): an upload-ready ZIP for every skill, with the skill folder at its root as claude.ai requires, and a button on every skill page and Duet card. Uploaded skills work in Claude and in Claude Duet.
+
+### Fixed
+- `docs/installation.md` said to zip a skill's files without their folder, a layout claude.ai rejects; it now gives the folder-at-root layout (#469).
+
 ## [83.1.0] - Duet-ready - 2026-10-22
 
 **1301 skills · 153 bundles** (from 1295 · 152 at v83.0.0).

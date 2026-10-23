@@ -74,15 +74,28 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add  # 中国大�
 
 Then just say what you need: *"Decode this job ad and tell me where I am weak."* Nothing here can break your setup: a skill is a markdown file your AI reads; installing copies text files, uninstalling deletes them. [Read one first](skills/lease-decoder/SKILL.md). Per-tool instructions: [docs/installation.md](docs/installation.md) · ChatGPT and Gemini: copy from [`exports/`](https://github.com/mohitagw15856/pm-claude-skills/tree/exports) · MCP: `claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp`
 
-## 🌅 Using PM Skills with Claude Duet
+## 🌅 Claude Duet, OpenAI Dots and other proactive agents
 
-[Claude Duet](https://claude.com/) is Anthropic's proactive agent (US research preview, waitlist). **Most readers cannot use it yet; get ready before your invite lands**: the [pm-duet bundle](plugins/pm-duet/) designs your morning brief, your interrupt rules and the send-approval gate, and every one of its skills is useful in the ordinary Claude app today.
+**PM Skills works with [Claude Duet](https://claude.com/)**, Anthropic's proactive agent. Duet uses the skills in your Claude account, so every skill here can run inside it. Agents that work while you're away fail in new ways: briefs that pad, uncited claims, acting instead of drafting, saying "done" about a draft. So **21 Duet-ready skills are built for unattended use**. They keep briefs short and cited, draft instead of sending, and always ask before anything is sent, posted, paid, signed or deleted.
 
-```bash
-npx pm-claude-skills add --bundle pm-duet
-```
+| Step | Skill | What you get |
+|---|---|---|
+| 1 | [prepare-for-duet](skills/prepare-for-duet/SKILL.md) | What in your memory, connectors and inbox will help or hurt the agent |
+| 2 | [standing-orders](skills/standing-orders/SKILL.md) | A one-page manual: always, never, VIPs, tone, when to stop and ask |
+| 3 | [approval-policy-designer](skills/approval-policy-designer/SKILL.md) | For each app, what the agent may do alone, must ask about, or must never do |
+| 4 | [morning-brief-designer](skills/morning-brief-designer/SKILL.md) and [interrupt-rules](skills/interrupt-rules/SKILL.md) | What the brief says, and what may interrupt you between briefs |
+| 5 | [agent-kill-switch-plan](skills/agent-kill-switch-plan/SKILL.md) | How to stop it in under a minute, written before you need it |
 
-The [7-day challenge](docs/duet/7-day-challenge.md) walks it one day at a time. The conventions ([the duet block, the status vocabulary](docs/duet/README.md)) keep unattended briefs short, cited and honest, and the [honest flags](data/duet-ready.json) say "designed for Duet" rather than tested, because nobody here has access yet. Have access? [Test a skill and get credited](.github/ISSUE_TEMPLATE/tested-on-duet.yml). How the three proactive agents compare: [docs/duet/proactive-agents.md](docs/duet/proactive-agents.md).
+**Watchers for a small business**: [cash-watch](skills/cash-watch/SKILL.md), [payroll-eve-check](skills/payroll-eve-check/SKILL.md), [signature-pipeline-watch](skills/signature-pipeline-watch/SKILL.md), [crm-hygiene-sweep](skills/crm-hygiene-sweep/SKILL.md) and [store-watch](skills/store-watch/SKILL.md). They cover Stripe, Xero, QuickBooks, Gusto, DocuSign, HubSpot and Shopify. **For teams**: [shared-agent-charter](skills/shared-agent-charter/SKILL.md), for a Dot or a shared agent in Slack or Teams.
+
+**Get started**
+- **Into Claude and Duet:** press **⬇ Add to Claude** on any skill's page, then upload the ZIP in claude.ai (Settings, Skills, Upload skill).
+- **A starter pack** of 3 or 4 skills (founder, freelancer, shop owner, team lead, business ops) on the [Duet page](https://mohitagw15856.github.io/pm-claude-skills/duet.html), or `npx pm-claude-skills add --agent claude --skills standing-orders,cash-watch,store-watch`.
+- **The whole bundle:** `npx pm-claude-skills add --bundle pm-duet`.
+
+**Test it safely**: the [injection drill](docs/duet/injection-drill.md) has 12 planted instructions to check whether your agent reports or obeys them. The [fake-apps sandbox](integrations/fake-apps-mcp/) gives invented Gmail, Stripe and Shopify data where every send or payment is refused and logged.
+
+**Honest status:** every one of these skills is *designed for Duet*. None has been tested on Duet yet, because it's a waitlisted research preview. [File a Tested on Duet report](.github/ISSUE_TEMPLATE/tested-on-duet.yml) and a skill moves up a tier, with your name on it. They're written to work with Dots and Muse too: see [how the three compare](docs/duet/proactive-agents.md).
 
 ## 🥊 The demo
 
@@ -156,7 +169,8 @@ Install any bundle: `/plugin install pm-decoders@pm-claude-skills`, or `npx pm-c
 
 | Release | What it adds | Try saying |
 |---|---|---|
-| **[v83.0.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)** For everyone, everywhere | Easy Read, Teach me, voice and mixed-language questions, local rules for your place, a skill for every form, newcomer, informal-economy, disability and after-a-disaster skills, the library offline on a Raspberry Pi, a USSD menu for any phone, right-click any file, skill apps, partner checks and an expert-graded jobs exam | *"Explain this P60 to me"* · *"मेरा landlord deposit नहीं दे रहा"* |
+| **[v83.2.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)** Duet support | 21 Duet-ready skills for Claude Duet and other proactive agents: standing orders, approval policies, a kill switch, small-business watchers (cash, payroll, signatures, CRM, store), team charters, an injection drill, a fake-apps sandbox, starter packs and an Add to Claude ZIP for every skill | *"Write standing orders for my Duet"* · *"Watch my Stripe and Xero every morning"* |
+| **[v83.0.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v83.0.0)** For everyone, everywhere | Easy Read, Teach me, voice and mixed-language questions, local rules for your place, a skill for every form, newcomer, informal-economy, disability and after-a-disaster skills, the library offline on a Raspberry Pi, a USSD menu for any phone, right-click any file, skill apps, partner checks and an expert-graded jobs exam | *"Explain this P60 to me"* · *"मेरा landlord deposit नहीं दे रहा"* |
 | **[v82.0.0](https://github.com/mohitagw15856/pm-claude-skills/releases/tag/v82.0.0)** China for everyone, Korea and Southeast Asia | Teachers, parents, trade and manufacturing packs, 适老化, Korean, Japanese and Southeast Asian packs, lite skills for local models, Word and WPS add-ins, team sync | *"帮我写一份新课标教案"* · *"연말정산 어떻게 해요?"* |
 
 **Reaching everyone (v83):** read any skill in [Easy Read](https://mohitagw15856.github.io/pm-claude-skills/index.html?easy=1), have it [teach you](https://mohitagw15856.github.io/pm-claude-skills/index.html?teach=1) instead of doing it, [ask by voice](https://mohitagw15856.github.io/pm-claude-skills/how.html) in your own language (Hinglish and Taglish included), look up [any form](https://mohitagw15856.github.io/pm-claude-skills/forms.html), open a skill [as an app](https://mohitagw15856.github.io/pm-claude-skills/use.html), or use it with no internet: [on a Raspberry Pi](box/README.md), over [USSD on a basic phone](integrations/ussd/README.md), or [from the right-click menu](integrations/right-click/README.md) with a free local model.

@@ -1,6 +1,6 @@
 {
   "name": "pm-skills-tools",
-  "version": "83.1.0",
+  "version": "83.2.0",
   "description": "Every PM Skills skill as an agent tool — OpenAI function schemas, Vercel AI SDK tools, and a framework-agnostic runtime. pick()/search() what you need; executing a tool returns the skill's instructions for YOUR model to run (no second vendor, no extra key).",
   "type": "module",
   "main": "tools.mjs",

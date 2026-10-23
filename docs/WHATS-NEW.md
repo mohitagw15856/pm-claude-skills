@@ -2,6 +2,18 @@
 
 The three most recent additions, in full. The short version is in the [README](../README.md#-whats-new) and every release is in the [changelog](../CHANGELOG.md).
 
+## Duet support (v83.2.0)
+
+Claude Duet works while you are away: it reads your connected apps, sends a morning brief, checks in every few hours and asks before it acts. Duet uses the skills in your Claude account, so the library already runs inside it. v83.2.0 adds what an unattended agent specifically needs.
+
+**Set it up properly.** `standing-orders` writes the one-page manual the agent keeps in memory. `approval-policy-designer` decides, app by app, what it may do alone, what it must ask about and what it must never do. `agent-kill-switch-plan` writes down how to stop it before you ever need to.
+
+**Let it watch the business.** Five watchers cover cash, payroll, contracts awaiting signature, the CRM and an online shop. Each reports a few cited lines in the brief, interrupts only for what cannot wait, and drafts instead of acting.
+
+**Test it before you trust it.** The injection drill sends twelve planted instructions to your own account and scores whether the agent reports or obeys them. The fake-apps sandbox gives an agent invented business data in which every send and payment is refused and logged.
+
+**Install in one click.** Every skill page now has an *Add to Claude* button, a ZIP ready for claude.ai. The Duet page lists starter packs of three or four skills for founders, freelancers, shop owners, team leads and back offices. Every skill is honestly marked *designed for Duet* until someone with access tests it.
+
 ## For everyone, everywhere (v83.0.0)
 
 Most of the people who need a tenancy, benefits or bill decoder are not sitting at a laptop with an API key. v83 is about reaching them.
