@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-# The three Duet images in the README and on duet.html, each in dark and light:
-# duet-flow (how a Duet-ready skill sits between your apps and you), duet-setup
-# (the five setup steps and three ways to install) and duet-brief (an
-# illustrative morning brief built from the fake-apps sandbox's invented data).
+# The README's hand-written images, each in dark and light: skill-flow (from a
+# plain request to a finished deliverable), releases (the What's new timeline),
+# and the Duet set: duet-flow, duet-setup and duet-brief (an illustrative morning
+# brief from the fake-apps sandbox's invented data). Images drawn from repo data
+# (the trust scorecard, the bundle grid) are written by the scripts that compute
+# that data, with the same palette (scripts/lib/readme-svg.mjs).
 # Edit the text here and rerun; colours follow GitHub's dark and light palettes.
 #
-#   python3 scripts/build-duet-visuals.py      # writes docs/readme-assets/duet-*.svg
+#   python3 scripts/build-readme-visuals.py    # writes docs/readme-assets/*.svg
 import os
 OUT=os.environ.get('OUT') or os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','docs','readme-assets')
 DARK=dict(bg="#0d1117",panel="#161b22",panel2="#1c2330",border="#30363d",text="#e6edf3",muted="#8b949e",purple="#d2a8ff",green="#3fb950",red="#f85149",blue="#58a6ff",amber="#d29922",soft="#21262d")
@@ -130,7 +132,64 @@ def brief(c):
     o.append('</svg>')
     return '\n'.join(o)
 
-for name,fn in (("duet-flow",flow),("duet-setup",setup),("duet-brief",brief)):
+def how(c):
+    W,H=920,400
+    steps=[("💬","You ask in plain words",'"Decode this lease','before I sign"',c['blue']),
+           ("🎯","Your AI picks the skill","matched by its description,","loaded only when it fits",c['purple']),
+           ("📄","It follows SKILL.md","the framework, the template","and the quality checks",c['amber']),
+           ("✅","You get the deliverable","the finished document,","not advice about one",c['green'])]
+    o=[f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" {FONT}>',
+       '<title>How it works: you ask in plain words, your AI matches a skill by its description, follows the skill file (framework, template, quality checks) and returns the finished deliverable. Skills reach your AI through the installer, the MCP server or the REST API.</title>',
+       f'<rect width="{W}" height="{H}" rx="16" fill="{c["bg"]}"/>',
+       f'<text x="{W//2}" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="{c["text"]}">How a skill turns a request into a finished document</text>',
+       f'<text x="{W//2}" y="64" text-anchor="middle" font-size="13" fill="{c["muted"]}">A skill is one markdown file. Nothing runs in the background, and uninstalling deletes text files.</text>']
+    for i,(ic,t,a,b,col) in enumerate(steps):
+        x=20+i*226
+        o.append(f'<rect x="{x}" y="88" width="204" height="150" rx="14" fill="{c["panel"]}" stroke="{col}" stroke-width="2"/>'
+                 f'<text x="{x+102}" y="134" text-anchor="middle" font-size="28">{ic}</text>'
+                 f'<text x="{x+102}" y="170" text-anchor="middle" font-size="14.5" font-weight="700" fill="{c["text"]}">{esc(t)}</text>'
+                 f'<text x="{x+102}" y="196" text-anchor="middle" font-size="12" fill="{c["muted"]}">{esc(a)}</text>'
+                 f'<text x="{x+102}" y="214" text-anchor="middle" font-size="12" fill="{c["muted"]}">{esc(b)}</text>')
+        if i<3: o.append(f'<text x="{x+215}" y="170" text-anchor="middle" font-size="22" font-weight="700" fill="{c["muted"]}">›</text>')
+    o.append(f'<text x="40" y="276" font-size="14" font-weight="700" fill="{c["text"]}">Three ways skills reach your AI</text>')
+    ways=[("🧰 The installer","npx pm-claude-skills add","copies skills into your AI tool"),
+          ("🔌 The MCP server","any MCP client","serves the right skill on demand"),
+          ("🌐 The REST API","n8n, Make, any HTTP tool","read-only, for automations")]
+    for i,(a,b,d) in enumerate(ways):
+        x=20+i*300
+        o.append(f'<rect x="{x}" y="292" width="280" height="84" rx="12" fill="{c["panel2"]}" stroke="{c["border"]}"/>'
+                 f'<text x="{x+18}" y="321" font-size="14" font-weight="700" fill="{c["purple"]}">{esc(a)}</text>'
+                 f'<text x="{x+18}" y="342" font-size="12" font-family="ui-monospace,monospace" fill="{c["text"]}">{esc(b)}</text>'
+                 f'<text x="{x+18}" y="361" font-size="11.5" fill="{c["muted"]}">{esc(d)}</text>')
+    o.append('</svg>')
+    return '\n'.join(o)
+
+def releases(c):
+    W,H=920,340
+    rel=[("v82.0.0","5 Oct","China for everyone",["Teachers and parents","Korean and SE Asian packs","Lite skills for local models"],c['muted']),
+         ("v83.0.0","16 Oct","For everyone, everywhere",["Easy Read and Teach me","Voice, Hinglish and Taglish","Offline on a Raspberry Pi"],c['blue']),
+         ("v83.1.0","22 Oct","Duet-ready",["The duet block","Morning brief and alerts","Send-approval gate"],c['purple']),
+         ("v83.2.0","23 Oct","Duet support",["21 Duet-ready skills","Small-business watchers","Add to Claude, every skill"],c['green'])]
+    o=[f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" {FONT}>',
+       '<title>Recent releases: v82.0.0 China for everyone (5 October), v83.0.0 For everyone, everywhere (16 October), v83.1.0 Duet-ready (22 October) and v83.2.0 Duet support (23 October), the latest.</title>',
+       f'<rect width="{W}" height="{H}" rx="16" fill="{c["bg"]}"/>',
+       f'<text x="{W//2}" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="{c["text"]}">What\'s new, release by release</text>',
+       f'<line x1="70" y1="96" x2="850" y2="96" stroke="{c["border"]}" stroke-width="4" stroke-linecap="round"/>']
+    for i,(v,d,t,chips,col) in enumerate(rel):
+        x=20+i*225; cx=x+102; latest=i==len(rel)-1
+        o.append(f'<circle cx="{cx}" cy="96" r="{13 if latest else 9}" fill="{col}"/>')
+        if latest: o.append(f'<circle cx="{cx}" cy="96" r="19" fill="none" stroke="{col}" stroke-width="2" opacity="0.6"/>')
+        o.append(f'<text x="{cx}" y="70" text-anchor="middle" font-size="12" fill="{c["muted"]}">{esc(d)}</text>'
+                 f'<rect x="{x}" y="126" width="204" height="190" rx="14" fill="{c["panel"]}" stroke="{col if latest else c["border"]}" stroke-width="{2 if latest else 1}"/>'
+                 f'<text x="{x+18}" y="156" font-size="13" font-weight="800" font-family="ui-monospace,monospace" fill="{col}">{esc(v)}{"  · latest" if latest else ""}</text>'
+                 f'<text x="{x+18}" y="182" font-size="13.5" font-weight="700" fill="{c["text"]}">{esc(t)}</text>')
+        for j,ch in enumerate(chips):
+            o.append(f'<rect x="{x+18}" y="{200+j*36}" width="168" height="26" rx="13" fill="{c["soft"]}"/>'
+                     f'<text x="{x+30}" y="{217+j*36}" font-size="11.5" fill="{c["text"]}">{esc(ch)}</text>')
+    o.append('</svg>')
+    return '\n'.join(o)
+
+for name,fn in (("skill-flow",how),("releases",releases),("duet-flow",flow),("duet-setup",setup),("duet-brief",brief)):
     for theme,pal,suf in (("dark",DARK,""),("light",LIGHT,"-light")):
         s=fn(pal)
         assert '—' not in s, name

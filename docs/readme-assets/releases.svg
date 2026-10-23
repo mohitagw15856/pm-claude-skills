@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 340" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif">
+<title>Recent releases: v82.0.0 China for everyone (5 October), v83.0.0 For everyone, everywhere (16 October), v83.1.0 Duet-ready (22 October) and v83.2.0 Duet support (23 October), the latest.</title>
+<rect width="920" height="340" rx="16" fill="#0d1117"/>
+<text x="460" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="#e6edf3">What's new, release by release</text>
+<line x1="70" y1="96" x2="850" y2="96" stroke="#30363d" stroke-width="4" stroke-linecap="round"/>
+<circle cx="122" cy="96" r="9" fill="#8b949e"/>
+<text x="122" y="70" text-anchor="middle" font-size="12" fill="#8b949e">5 Oct</text><rect x="20" y="126" width="204" height="190" rx="14" fill="#161b22" stroke="#30363d" stroke-width="1"/><text x="38" y="156" font-size="13" font-weight="800" font-family="ui-monospace,monospace" fill="#8b949e">v82.0.0</text><text x="38" y="182" font-size="13.5" font-weight="700" fill="#e6edf3">China for everyone</text>
+<rect x="38" y="200" width="168" height="26" rx="13" fill="#21262d"/><text x="50" y="217" font-size="11.5" fill="#e6edf3">Teachers and parents</text>
+<rect x="38" y="236" width="168" height="26" rx="13" fill="#21262d"/><text x="50" y="253" font-size="11.5" fill="#e6edf3">Korean and SE Asian packs</text>
+<rect x="38" y="272" width="168" height="26" rx="13" fill="#21262d"/><text x="50" y="289" font-size="11.5" fill="#e6edf3">Lite skills for local models</text>
+<circle cx="347" cy="96" r="9" fill="#58a6ff"/>
+<text x="347" y="70" text-anchor="middle" font-size="12" fill="#8b949e">16 Oct</text><rect x="245" y="126" width="204" height="190" rx="14" fill="#161b22" stroke="#30363d" stroke-width="1"/><text x="263" y="156" font-size="13" font-weight="800" font-family="ui-monospace,monospace" fill="#58a6ff">v83.0.0</text><text x="263" y="182" font-size="13.5" font-weight="700" fill="#e6edf3">For everyone, everywhere</text>
+<rect x="263" y="200" width="168" height="26" rx="13" fill="#21262d"/><text x="275" y="217" font-size="11.5" fill="#e6edf3">Easy Read and Teach me</text>
+<rect x="263" y="236" width="168" height="26" rx="13" fill="#21262d"/><text x="275" y="253" font-size="11.5" fill="#e6edf3">Voice, Hinglish and Taglish</text>
+<rect x="263" y="272" width="168" height="26" rx="13" fill="#21262d"/><text x="275" y="289" font-size="11.5" fill="#e6edf3">Offline on a Raspberry Pi</text>
+<circle cx="572" cy="96" r="9" fill="#d2a8ff"/>
+<text x="572" y="70" text-anchor="middle" font-size="12" fill="#8b949e">22 Oct</text><rect x="470" y="126" width="204" height="190" rx="14" fill="#161b22" stroke="#30363d" stroke-width="1"/><text x="488" y="156" font-size="13" font-weight="800" font-family="ui-monospace,monospace" fill="#d2a8ff">v83.1.0</text><text x="488" y="182" font-size="13.5" font-weight="700" fill="#e6edf3">Duet-ready</text>
+<rect x="488" y="200" width="168" height="26" rx="13" fill="#21262d"/><text x="500" y="217" font-size="11.5" fill="#e6edf3">The duet block</text>
+<rect x="488" y="236" width="168" height="26" rx="13" fill="#21262d"/><text x="500" y="253" font-size="11.5" fill="#e6edf3">Morning brief and alerts</text>
+<rect x="488" y="272" width="168" height="26" rx="13" fill="#21262d"/><text x="500" y="289" font-size="11.5" fill="#e6edf3">Send-approval gate</text>
+<circle cx="797" cy="96" r="13" fill="#3fb950"/>
+<circle cx="797" cy="96" r="19" fill="none" stroke="#3fb950" stroke-width="2" opacity="0.6"/>
+<text x="797" y="70" text-anchor="middle" font-size="12" fill="#8b949e">23 Oct</text><rect x="695" y="126" width="204" height="190" rx="14" fill="#161b22" stroke="#3fb950" stroke-width="2"/><text x="713" y="156" font-size="13" font-weight="800" font-family="ui-monospace,monospace" fill="#3fb950">v83.2.0  · latest</text><text x="713" y="182" font-size="13.5" font-weight="700" fill="#e6edf3">Duet support</text>
+<rect x="713" y="200" width="168" height="26" rx="13" fill="#21262d"/><text x="725" y="217" font-size="11.5" fill="#e6edf3">21 Duet-ready skills</text>
+<rect x="713" y="236" width="168" height="26" rx="13" fill="#21262d"/><text x="725" y="253" font-size="11.5" fill="#e6edf3">Small-business watchers</text>
+<rect x="713" y="272" width="168" height="26" rx="13" fill="#21262d"/><text x="725" y="289" font-size="11.5" fill="#e6edf3">Add to Claude, every skill</text>
+</svg>

@@ -111,7 +111,13 @@ More to see: the **[Showcase gallery](docs/SHOWCASE.md)** has the Playground, th
 
 ## 🧭 How it works
 
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/skill-flow.svg"><source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/skill-flow-light.svg"><img src="docs/readme-assets/skill-flow.svg" width="100%" alt="How a skill turns a request into a finished document: you ask in plain words, your AI picks the matching skill by its description, follows the skill file (framework, template, quality checks) and returns the finished document. Skills reach your AI through the installer, the MCP server or the REST API." /></picture></p>
+
+<details><summary>More detail: the installer, the MCP server and the REST API</summary>
+
 A skill is one plain-markdown SKILL.md file: a description that tells your assistant when to load it, plus the working framework, output template and quality checks it follows. The installer (`npx pm-claude-skills add`) copies the skills you choose into the config folder of the tool you use, so they load only when a request matches. The [MCP server](mcp-remote/) serves skills on demand to any MCP client instead, and the same package exposes a read-only [REST API](mcp-remote/#rest-api-for-n8n-lovable-make-any-http-tool) for n8n, Make and other automations. No runtime, no account, nothing resident: uninstalling deletes text files.
+
+</details>
 
 ## 🧑‍🤝‍🧑 Pick your path
 
@@ -136,7 +142,11 @@ A skill is one plain-markdown SKILL.md file: a description that tells your assis
 
 ## 🗺 What you can do
 
-The product-management core first, then the bundles everyone borrows. Each row is a real bundle in [`plugins/`](plugins/).
+The product-management core first, then the bundles everyone borrows. Each one is a real bundle in [`plugins/`](plugins/).
+
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/bundles.svg"><source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/bundles-light.svg"><img src="docs/readme-assets/bundles.svg" width="100%" alt="Pick the job you have this week: thirteen bundles, from turning research into decisions and writing the PRD to reading before you sign and landing the next job, each with its number of skills." /></picture></p>
+
+<details><summary>The table: what each bundle gives you, what you bring, and links</summary>
 
 <!-- WHAT-YOU-CAN-DO:START -->
 | Your job this week | Bundle | What you get | What you bring |
@@ -156,6 +166,8 @@ The product-management core first, then the bundles everyone borrows. Each row i
 | 用中文工作 | [pm-china-work](plugins/pm-china-work/) | 周报、述职、复盘，中国职场的写法 | 你的工作记录 |
 <!-- WHAT-YOU-CAN-DO:END -->
 
+</details>
+
 Install any bundle: `/plugin install pm-decoders@pm-claude-skills`, or `npx pm-claude-skills add --bundle pm-decoders`. All 153 bundles with every skill and install command: **[docs/catalogue.md](docs/catalogue.md)** · every skill in one page: [SKILLS.md](SKILLS.md) · chain them: [WORKFLOWS.md](WORKFLOWS.md)
 
 ## 🇨🇳 中文用户
@@ -167,6 +179,10 @@ Install any bundle: `/plugin install pm-decoders@pm-claude-skills`, or `npx pm-c
 
 ## 🆕 What's new
 
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/releases.svg"><source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/releases-light.svg"><img src="docs/readme-assets/releases.svg" width="100%" alt="What's new, release by release: v82.0.0 China for everyone, v83.0.0 For everyone, everywhere, v83.1.0 Duet-ready and v83.2.0 Duet support, the latest." /></picture></p>
+
+<details><summary>What each release adds, and what to try saying</summary>
+
 | Release | What it adds | Try saying |
 |---|---|---|
 | **[v83.2.0](https://github.com/mohitagw15856/pm-claude-skills/releases/latest)** Duet support | 21 Duet-ready skills for Claude Duet and other proactive agents: standing orders, approval policies, a kill switch, small-business watchers (cash, payroll, signatures, CRM, store), team charters, an injection drill, a fake-apps sandbox, starter packs and an Add to Claude ZIP for every skill | *"Write standing orders for my Duet"* · *"Watch my Stripe and Xero every morning"* |
@@ -175,11 +191,17 @@ Install any bundle: `/plugin install pm-decoders@pm-claude-skills`, or `npx pm-c
 
 **Reaching everyone (v83):** read any skill in [Easy Read](https://mohitagw15856.github.io/pm-claude-skills/index.html?easy=1), have it [teach you](https://mohitagw15856.github.io/pm-claude-skills/index.html?teach=1) instead of doing it, [ask by voice](https://mohitagw15856.github.io/pm-claude-skills/how.html) in your own language (Hinglish and Taglish included), look up [any form](https://mohitagw15856.github.io/pm-claude-skills/forms.html), open a skill [as an app](https://mohitagw15856.github.io/pm-claude-skills/use.html), or use it with no internet: [on a Raspberry Pi](box/README.md), over [USSD on a basic phone](integrations/ussd/README.md), or [from the right-click menu](integrations/right-click/README.md) with a free local model.
 
+</details>
+
 Everything older: **[CHANGELOG.md](CHANGELOG.md)** · the write-ups: [docs/WHATS-NEW.md](docs/WHATS-NEW.md) · most-wanted skills and votes: the [tech tree](https://mohitagw15856.github.io/pm-claude-skills/tech-tree/)
 
 ## ✅ Trust and quality
 
 An honest summary of what is checked, measured and still unreviewed, computed from the repo on every change:
+
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/readme-assets/trust.svg"><source media="(prefers-color-scheme: light)" srcset="docs/readme-assets/trust-light.svg"><img src="docs/readme-assets/trust.svg" width="100%" alt="Trust and quality in numbers: skills that pass SkillCheck on every change, skills with eval cases, measured skills and their average score, hostile documents in the injection suite, translations, and how many high-stakes skills have an expert review." /></picture></p>
+
+<details><summary>The numbers in full, with links, and how the library checks itself</summary>
 
 <!-- TRUST-NUMBERS:START (generated by scripts/build-trust-numbers.mjs; do not edit by hand) -->
 - **Checked on every change, in CI:** structure ([SkillCheck](SKILLSPEC.md), all 1,310 skills at the L3 gate), a security audit, a near-duplicate check, a count-drift check, translation parity (178 translations in 10 languages), and a prompt-injection suite of 15 hostile documents. A change that fails any of them does not merge.
@@ -191,6 +213,8 @@ An honest summary of what is checked, measured and still unreviewed, computed fr
 - **Checked by people who do the job:** organisations can vouch for skills as [partners](https://mohitagw15856.github.io/pm-claude-skills/partners.html), and the [jobs exam](https://mohitagw15856.github.io/pm-claude-skills/jobs-exam.html) has AI answers marked blind by working professionals on their own marking schemes. Both start empty and fill only with real participants.
 - **It rewrites itself, in public:** the weakest skills are periodically rewritten by a model and kept only if a judge scores the rewrite higher; every attempt, including the losses, is in the [evolution log](EVOLUTION.md).
 - **Honesty rules baked in:** decoders end with a not-advice line ([the severity scale](docs/severity-scale.md)), calculators name what they do not model, simulators debrief out of character. PM Skills is not a substitute for a professional.
+
+</details>
 
 **Privacy, stated plainly:** everything installable runs locally. Skills are inert markdown on your machine; the CLI, the exports and the local MCP server send nothing anywhere, and telemetry is off unless you set `PM_SKILLS_TELEMETRY=1` (skill name only, never content). The two things that do leave your machine are your prompts to whichever model provider you chose, and requests to the hosted playground or hosted MCP if you opt to use them. Full statements: [docs/TELEMETRY.md](docs/TELEMETRY.md) · report a vulnerability: [SECURITY.md](SECURITY.md) · licence: [MIT](LICENSE). Verify a release: `npx pm-claude-skills verify --release` (signed SBOM, Sigstore provenance).
 
