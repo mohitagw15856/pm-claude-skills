@@ -133,6 +133,7 @@
       ['compile.html', '🧑‍🏫 Expert-to-skill compiler'],
       ['use.html', '📱 Skill apps'],
       ['how.html', '❓ How do I…?'],
+      ['duet.html', '⚡ Proactive agents (Duet)'],
       ['forms.html', '📋 Forms explained'],
       ['reckoning.html', '⚖️ Reckoning'],
       ['ledger.html', '📓 Outcome Ledger'],

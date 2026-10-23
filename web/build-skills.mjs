@@ -319,6 +319,20 @@ const byBundle = {};
 for (const s of skills) (byBundle[s.plugin || 'other'] ||= {})[s.name] = s.instructions || '';
 for (const [plugin, bodies] of Object.entries(byBundle)) writeFileSync(join(bodiesDir, `${plugin}.json`), JSON.stringify(bodies));
 writeFileSync(join(__dirname, 'skills-index.json'), JSON.stringify({ count: live, total: slim.length, skills: slim }));
+// The Duet-ready skills (data/duet-ready.json) with each one's duet block, for
+// duet.html: small enough to load on its own instead of the full index.
+{
+  const reg = existsSync(join(root, 'data', 'duet-ready.json')) ? JSON.parse(readFileSync(join(root, 'data', 'duet-ready.json'), 'utf8')).skills || {} : {};
+  const byName = new Map(skills.map((s) => [s.name, s]));
+  const duet = Object.entries(reg).filter(([n]) => byName.has(n)).map(([n, r]) => {
+    const s = byName.get(n);
+    const fm = (readFileSync(join(skillsDir, n, 'SKILL.md'), 'utf8').match(/^---\r?\n([\s\S]*?)\r?\n---/) || [])[1] || '';
+    const block = (fm.match(/^duet:\r?\n((?:[ \t]+.*\r?\n?)*)/m) || [])[1] || '';
+    const settings = Object.fromEntries([...block.matchAll(/^[ \t]+([a-z_]+):[ \t]*(.*?)[ \t]*(?:#.*)?$/gm)].map((m) => [m[1], m[2]]));
+    return { name: n, title: s.title, summary: s.summary, plugin: s.plugin, tier: r.tier, since: r.since, settings };
+  }).sort((a, b) => a.name.localeCompare(b.name));
+  writeFileSync(join(__dirname, 'duet.json'), JSON.stringify({ count: duet.length, skills: duet }, null, 1) + '\n');
+}
 const tierCounts = skills.reduce((a, s) => ((a[s.tier] = (a[s.tier] || 0) + 1), a), {});
 console.log(
   `Wrote web/skills.json + skills-index.json — ${skills.length} skills, ${new Set(skills.map((s) => s.plugin)).size} bundles ` +

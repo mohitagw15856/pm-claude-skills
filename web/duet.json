@@ -1,0 +1,320 @@
+{
+ "count": 21,
+ "skills": [
+  {
+   "name": "agent-kill-switch-plan",
+   "title": "Agent Kill Switch Plan",
+   "summary": "Prepare, before you need it, the runbook for stopping a proactive agent that is misbehaving: how to pause it in seconds, which connections to…",
+   "plugin": "pm-duet",
+   "tier": "designed-for-duet",
+   "since": "2026-10-23",
+   "settings": {
+    "brief_length": "0 lines",
+    "cite_sources": "true",
+    "default_action": "draft",
+    "requires_approval": "send, post, pay, sign, delete, book",
+    "cadence": "on-demand"
+   }
+  },
+  {
+   "name": "approval-policy-designer",
+   "title": "Approval Policy Designer",
+   "summary": "Design the approval policy for a proactive agent across every connected app: for each kind of action, whether it may act alone, must ask first, or…",
+   "plugin": "pm-duet",
+   "tier": "designed-for-duet",
+   "since": "2026-10-23",
+   "settings": {
+    "brief_length": "0 lines",
+    "cite_sources": "false",
+    "default_action": "draft",
+    "requires_approval": "send, post, pay, sign, delete, book",
+    "cadence": "on-demand"
+   }
+  },
+  {
+   "name": "cash-watch",
+   "title": "Cash Watch",
+   "summary": "Set up a proactive agent to watch a small business's cash every day across Stripe, QuickBooks or Xero and the bank feed: today's cash position…",
+   "plugin": "pm-duet",
+   "tier": "designed-for-duet",
+   "since": "2026-10-23",
+   "settings": {
+    "brief_length": "8 lines",
+    "cite_sources": "true",
+    "default_action": "draft",
+    "requires_approval": "send, post, pay, sign, delete, book",
+    "cadence": "daily"
+   }
+  },
+  {
+   "name": "competitive-intelligence-monitor",
+   "title": "Competitive Intelligence Monitor",
+   "summary": "Monitor competitor signals and surface strategic implications for your roadmap.",
+   "plugin": "pm-strategy",
+   "tier": "designed-for-duet",
+   "since": "2026-10-23",
+   "settings": {
+    "brief_length": "8 lines",
+    "cite_sources": "true",
+    "default_action": "summarise",
+    "requires_approval": "send, post",
+    "cadence": "daily"
+   }
+  },
+  {
+   "name": "crm-hygiene-sweep",
+   "title": "CRM Hygiene Sweep",
+   "summary": "Have a proactive agent sweep a CRM (HubSpot, Salesforce, Pipedrive) on a schedule for the things that quietly rot a pipeline: deals with no next…",
+   "plugin": "pm-duet",
+   "tier": "designed-for-duet",
+   "since": "2026-10-23",
+   "settings": {
+    "brief_length": "8 lines",
+    "cite_sources": "true",
+    "default_action": "draft",
+    "requires_approval": "send, post, pay, sign, delete, book",
+    "cadence": "daily"
+   }
+  },
+  {
+   "name": "delta-briefing",
+   "title": "Delta Briefing",
+   "summary": "Make a recurring brief report what changed since the last edition instead of restating everything.",
+   "plugin": "pm-autopilot",
+   "tier": "designed-for-duet",
+   "since": "2026-10-23",
+   "settings": {
+    "brief_length": "8 lines",
+    "cite_sources": "true",
+    "default_action": "summarise",
+    "requires_approval": "send, post",
+    "cadence": "daily"
+   }
+  },
+  {
+   "name": "end-of-day-report",
+   "title": "End Of Day Report",
+   "summary": "Produce an end-of-day report an unattended agent can send honestly: what shipped (verified), what is drafted or waiting, what is blocked and on…",
+   "plugin": "pm-duet",
+   "tier": "designed-for-duet",
+   "since": "2026-10-22",
+   "settings": {
+    "brief_length": "6 lines",
+    "cite_sources": "true",
+    "default_action": "draft",
+    "requires_approval": "send",
+    "cadence": "daily"
+   }
+  },
+  {
+   "name": "followup-sweep",
+   "title": "Follow-up Sweep (Live)",
+   "summary": "Sweep the user's REAL mail and calendar for dropped balls — threads awaiting their reply, promises they made, and replies they're owed — then…",
+   "plugin": "pm-cowork-live",
+   "tier": "designed-for-duet",
+   "since": "2026-10-23",
+   "settings": {
+    "brief_length": "6 lines",
+    "cite_sources": "true",
+    "default_action": "draft",
+    "requires_approval": "send",
+    "cadence": "daily"
+   }
+  },
+  {
+   "name": "inbox-triage-live",
+   "title": "Inbox Triage (Live)",
+   "summary": "Triage the user's REAL inbox through the Gmail connector — not a framework they run by hand.",
+   "plugin": "pm-cowork-live",
+   "tier": "designed-for-duet",
+   "since": "2026-10-23",
+   "settings": {
+    "brief_length": "6 lines",
+    "cite_sources": "true",
+    "default_action": "draft",
+    "requires_approval": "send, delete",
+    "cadence": "daily"
+   }
+  },
+  {
+   "name": "interrupt-rules",
+   "title": "Interrupt Rules",
+   "summary": "Write the between-brief alert rules for a proactive agent: exactly what may interrupt you, what waits for the next brief, and the wording of an…",
+   "plugin": "pm-duet",
+   "tier": "designed-for-duet",
+   "since": "2026-10-22",
+   "settings": {
+    "brief_length": "3 lines",
+    "cite_sources": "true",
+    "default_action": "draft",
+    "requires_approval": "send",
+    "cadence": "few-hours"
+   }
+  },
+  {
+   "name": "late-invoice-chaser",
+   "title": "Late-Invoice Chaser",
+   "summary": "Chase an overdue invoice and actually get paid — a firm-but-friendly escalation ladder that protects the client relationship until it's clear the…",
+   "plugin": "pm-freelance",
+   "tier": "designed-for-duet",
+   "since": "2026-10-23",
+   "settings": {
+    "brief_length": "4 lines",
+    "cite_sources": "true",
+    "default_action": "draft",
+    "requires_approval": "send",
+    "cadence": "on-demand"
+   }
+  },
+  {
+   "name": "morning-brief-designer",
+   "title": "Morning Brief Designer",
+   "summary": "Design a proactive agent's morning brief: which connected sources it reads, what earns a line, the fixed section order and length cap, and the…",
+   "plugin": "pm-duet",
+   "tier": "designed-for-duet",
+   "since": "2026-10-22",
+   "settings": {
+    "brief_length": "8 lines",
+    "cite_sources": "true",
+    "default_action": "draft",
+    "requires_approval": "send",
+    "cadence": "daily"
+   }
+  },
+  {
+   "name": "payroll-eve-check",
+   "title": "Payroll Eve Check",
+   "summary": "Have a proactive agent check payroll the day before it runs in Gusto, Deel, Xero Payroll or similar: unusual pay changes, new starters and…",
+   "plugin": "pm-duet",
+   "tier": "designed-for-duet",
+   "since": "2026-10-23",
+   "settings": {
+    "brief_length": "8 lines",
+    "cite_sources": "true",
+    "default_action": "draft",
+    "requires_approval": "send, post, pay, sign, delete, book",
+    "cadence": "daily"
+   }
+  },
+  {
+   "name": "prepare-for-duet",
+   "title": "Prepare For Duet",
+   "summary": "A readiness audit for proactive agents, useful while you are still on the waitlist: what in your memory, recurring prompts, connectors and inbox…",
+   "plugin": "pm-duet",
+   "tier": "designed-for-duet",
+   "since": "2026-10-22",
+   "settings": {
+    "brief_length": "15 lines",
+    "cite_sources": "true",
+    "default_action": "draft",
+    "requires_approval": "send",
+    "cadence": "on-demand"
+   }
+  },
+  {
+   "name": "send-approval-check",
+   "title": "Send Approval Check",
+   "summary": "The gate before an agent sends anything on your behalf: one card showing recipient, sending account, subject, attachments, and the single sentence…",
+   "plugin": "pm-duet",
+   "tier": "designed-for-duet",
+   "since": "2026-10-22",
+   "settings": {
+    "brief_length": "10 lines",
+    "cite_sources": "true",
+    "default_action": "ask",
+    "requires_approval": "send",
+    "cadence": "on-demand"
+   }
+  },
+  {
+   "name": "shared-agent-charter",
+   "title": "Shared Agent Charter",
+   "summary": "Write the charter for an AI agent a whole team shares (an OpenAI Dot in Slack or Teams, a shared Claude agent, a channel bot): who may give it…",
+   "plugin": "pm-duet",
+   "tier": "designed-for-duet",
+   "since": "2026-10-23",
+   "settings": {
+    "brief_length": "0 lines",
+    "cite_sources": "false",
+    "default_action": "draft",
+    "requires_approval": "send, post, pay, sign, delete, book",
+    "cadence": "on-demand"
+   }
+  },
+  {
+   "name": "signature-pipeline-watch",
+   "title": "Signature Pipeline Watch",
+   "summary": "Have a proactive agent watch documents waiting for signature in DocuSign, Adobe Sign or PandaDoc: which are stuck, for how long, with whom, which…",
+   "plugin": "pm-duet",
+   "tier": "designed-for-duet",
+   "since": "2026-10-23",
+   "settings": {
+    "brief_length": "8 lines",
+    "cite_sources": "true",
+    "default_action": "draft",
+    "requires_approval": "send, post, pay, sign, delete, book",
+    "cadence": "daily"
+   }
+  },
+  {
+   "name": "stakeholder-update",
+   "title": "Stakeholder Update",
+   "summary": "Create concise executive stakeholder updates using the BLUF (Bottom Line Up Front) framework.",
+   "plugin": "pm-essentials",
+   "tier": "designed-for-duet",
+   "since": "2026-10-22",
+   "settings": {
+    "brief_length": "12 lines",
+    "cite_sources": "true",
+    "default_action": "draft",
+    "requires_approval": "send",
+    "cadence": "on-demand"
+   }
+  },
+  {
+   "name": "standing-orders",
+   "title": "Standing Orders",
+   "summary": "Write the operating manual a proactive agent follows between your messages: who is a VIP, what it may always do, what it must never do, the tone…",
+   "plugin": "pm-duet",
+   "tier": "designed-for-duet",
+   "since": "2026-10-22",
+   "settings": {
+    "brief_length": "0 lines",
+    "cite_sources": "false",
+    "default_action": "draft",
+    "requires_approval": "send, post, pay, sign, delete, book",
+    "cadence": "on-demand"
+   }
+  },
+  {
+   "name": "store-watch",
+   "title": "Store Watch",
+   "summary": "Have a proactive agent watch an online shop (Shopify, WooCommerce, Etsy) for what needs the owner: best-sellers about to run out, a spike in…",
+   "plugin": "pm-duet",
+   "tier": "designed-for-duet",
+   "since": "2026-10-23",
+   "settings": {
+    "brief_length": "8 lines",
+    "cite_sources": "true",
+    "default_action": "draft",
+    "requires_approval": "send, post, pay, sign, delete, book",
+    "cadence": "daily"
+   }
+  },
+  {
+   "name": "weekly-rollup",
+   "title": "Weekly Rollup",
+   "summary": "Roll a week of daily reports and agent activity into one honest weekly summary: trajectory against goals, what shipped with proof, the recurring…",
+   "plugin": "pm-duet",
+   "tier": "designed-for-duet",
+   "since": "2026-10-22",
+   "settings": {
+    "brief_length": "12 lines",
+    "cite_sources": "true",
+    "default_action": "draft",
+    "requires_approval": "send",
+    "cadence": "on-demand"
+   }
+  }
+ ]
+}

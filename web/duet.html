@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Skills for Claude Duet and other proactive agents | PM Skills</title>
+<meta name="description" content="Skills built for agents that work while you are away: Claude Duet, OpenAI Dots and others. A setup path, every Duet-ready skill with its settings, and the safety kit, stated honestly: designed for Duet, not yet tested on it." />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/duet.html" />
+<link rel="stylesheet" href="styles.css" />
+<style>
+  .du-wrap { max-width: 900px; margin: 0 auto; padding: 22px 22px 70px; }
+  .du-wrap h1 { font-size: 30px; margin-bottom: 6px; }
+  .du-wrap h2 { font-size: 20px; margin: 28px 0 8px; }
+  .lead, .muted { color: var(--muted); line-height: 1.6; }
+  .note { border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: 10px; padding: 10px 14px; background: var(--panel); margin: 14px 0; }
+  .path { counter-reset: step; list-style: none; padding: 0; display: grid; gap: 8px; }
+  .path li { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 10px 14px 10px 46px; position: relative; overflow-wrap: anywhere; }
+  .path li::before { counter-increment: step; content: counter(step); position: absolute; left: 14px; top: 10px; width: 22px; height: 22px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 13px; text-align: center; line-height: 22px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+  .card { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 12px 14px; overflow-wrap: anywhere; }
+  .card h3 { font-size: 15px; margin: 0 0 4px; }
+  .card .s { font-size: 13px; color: var(--muted); margin: 4px 0 8px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 5px; }
+  .chip { font-size: 11.5px; border: 1px solid var(--border); border-radius: 999px; padding: 2px 8px; color: var(--muted); }
+  .chip.tier { color: var(--accent); border-color: var(--accent); }
+  .links { margin-top: 8px; font-size: 13px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .filter { width: 100%; box-sizing: border-box; border: 1px solid var(--border); background: var(--panel); color: var(--text); border-radius: 10px; padding: 9px 12px; font: inherit; margin: 6px 0 12px; }
+</style>
+</head>
+<body>
+<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
+<main class="du-wrap">
+  <h1>⚡ Skills for proactive agents</h1>
+  <p class="lead">Claude Duet, OpenAI Dots and similar agents read your connected apps and work while you are away. A skill that is fine in a chat you are watching can go wrong in a brief you are not. It can pad, skip its sources, act instead of drafting, or say "done" about a draft. These skills are written so that doesn't happen.</p>
+  <div class="note"><b>Honest status:</b> every skill here is <em>designed for Duet</em>: it follows the library's <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/docs/duet/README.md">Duet conventions</a>, and nobody has run it on Duet yet. Duet is a waitlisted research preview. If you have access, <a href="https://github.com/mohitagw15856/pm-claude-skills/issues/new?template=tested-on-duet.yml">file a Tested on Duet report</a> and the skill moves up a tier, with your report linked.</div>
+
+  <h2>Set up in this order</h2>
+  <ol class="path">
+    <li><a href="skill/prepare-for-duet.html"><b>prepare-for-duet</b></a>: audit your memory, connectors and inbox habits before the agent starts</li>
+    <li><a href="skill/standing-orders.html"><b>standing-orders</b></a>: the one-page manual: always, never, VIPs, tone, when to stop and ask</li>
+    <li><a href="skill/approval-policy-designer.html"><b>approval-policy-designer</b></a>: per app, what it may do alone, what it must ask about, what it must never do</li>
+    <li><a href="skill/morning-brief-designer.html"><b>morning-brief-designer</b></a> and <a href="skill/interrupt-rules.html"><b>interrupt-rules</b></a>: what the brief says, and what may interrupt you between briefs</li>
+    <li><a href="skill/agent-kill-switch-plan.html"><b>agent-kill-switch-plan</b></a>: how to stop it in under a minute, written before you need it</li>
+  </ol>
+
+  <h2>Every Duet-ready skill</h2>
+  <label class="muted" for="q">Filter by name or job</label>
+  <input id="q" class="filter" type="search" placeholder="cash, payroll, brief, team…" autocomplete="off">
+  <div class="grid" id="grid" aria-live="polite"><p class="muted">Loading…</p></div>
+
+  <h2>Safety kit</h2>
+  <div class="grid">
+    <div class="card"><h3>Injection drill</h3><p class="s">Twelve planted instructions to send to your own account. See whether your agent reports them or acts on them. Every planted address is undeliverable.</p><div class="links"><a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/docs/duet/injection-drill.md">Run the drill</a></div></div>
+    <div class="card"><h3>Fake-apps sandbox</h3><p class="s">A local MCP server with invented Gmail, Stripe, Xero, Gusto, DocuSign, HubSpot and Shopify data. Sends, payments and deletions are refused and logged.</p><div class="links"><a href="https://github.com/mohitagw15856/pm-claude-skills/tree/main/integrations/fake-apps-mcp">Try it</a></div></div>
+    <div class="card"><h3>Before anything is sent</h3><p class="s">One card with the recipient, account, attachments and the sentence that commits you, so approving the wording is never mistaken for approving the send.</p><div class="links"><a href="skill/send-approval-check.html">send-approval-check</a></div></div>
+  </div>
+
+  <h2>Duet, Dots and Muse</h2>
+  <p class="muted">What each agent does, and how these skills stand with each, updated only with evidence: <a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/docs/duet/proactive-agents.md">the comparison</a>. Status words in every brief mean one thing each (<a href="https://github.com/mohitagw15856/pm-claude-skills/blob/main/docs/duet/status-vocabulary.md">the vocabulary</a>): "done" is banned, so a draft can never pass for something shipped.</p>
+</main>
+<script src="nav.js" defer></script>
+<script>
+(function () {
+  var el = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  var TIER = { 'designed-for-duet': 'designed for Duet', 'community-tested-on-duet': 'community-tested on Duet', 'maintainer-tested-on-duet': 'maintainer-tested on Duet' };
+  var SKILLS = [];
+  function render() {
+    var q = el('q').value.trim().toLowerCase();
+    var list = SKILLS.filter(function (s) { return !q || (s.name + ' ' + s.title + ' ' + s.summary).toLowerCase().indexOf(q) >= 0; });
+    if (!list.length) { el('grid').innerHTML = '<p class="muted">No Duet-ready skill matches that.</p>'; return; }
+    el('grid').innerHTML = list.map(function (s) {
+      var st = s.settings || {};
+      var chips = '<span class="chip tier">⚡ ' + esc(TIER[s.tier] || s.tier) + '</span>' +
+        (st.default_action ? '<span class="chip">default: ' + esc(st.default_action) + '</span>' : '') +
+        (st.cadence ? '<span class="chip">' + esc(st.cadence) + '</span>' : '') +
+        (st.brief_length && st.brief_length !== '0 lines' ? '<span class="chip">brief ≤ ' + esc(st.brief_length) + '</span>' : '');
+      var n = encodeURIComponent(s.name);
+      return '<div class="card"><h3>' + esc(s.title) + '</h3><div class="chips">' + chips + '</div><p class="s">' + esc(s.summary) + '</p>' +
+        (st.requires_approval ? '<p class="s">Always asks before: ' + esc(st.requires_approval) + '</p>' : '') +
+        '<div class="links"><a href="skill/' + n + '.html">Read it</a><a href="index.html?skill=' + n + '">Try it free</a><a href="use.html?skill=' + n + '">Use as an app</a></div></div>';
+    }).join('');
+  }
+  el('q').addEventListener('input', render);
+  fetch('duet.json').then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) { SKILLS = d.skills || []; render(); })
+    .catch(function () { el('grid').innerHTML = '<p class="muted">Could not load the list. Check your connection.</p>'; });
+})();
+</script>
+</body>
+</html>
