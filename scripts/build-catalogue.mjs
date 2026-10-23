@@ -97,7 +97,7 @@ function bundleGrid(c) {
   const rows = Math.ceil(CURATED.length / cols), H = top + rows * (th + gap) + 34;
   const accents = [c.blue, c.purple, c.green, c.amber, c.red];
   const o = [`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" ${FONT}>`,
-    `<title>What you can do: ${CURATED.length} bundles by the job you have this week, from turning research into decisions to reading before you sign.</title>`,
+    `<title>What you can do: a bundle for each job you have this week, from turning research into decisions to reading before you sign.</title>`,
     `<rect width="${W}" height="${H}" rx="16" fill="${c.bg}"/>`,
     `<text x="${W / 2}" y="40" text-anchor="middle" font-size="22" font-weight="700" fill="${c.text}">Pick the job you have this week</text>`,
     `<text x="${W / 2}" y="64" text-anchor="middle" font-size="13" fill="${c.muted}">Each one is a bundle of skills. Install one, or all ${bundles.length}.</text>`];
