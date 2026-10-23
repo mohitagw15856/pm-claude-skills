@@ -1,6 +1,6 @@
 <sub>[English](README.md) · [简体中文](README.zh-CN.md) · **繁體中文** · [한국어](README.ko.md) · [日本語](README.ja.md) · [Español](README.es.md) · [Português (BR)](README.pt-BR.md)</sub>
 
-# PM Skills：1,310 個專業 Agent Skills，用中文提問就能用
+# PM Skills：1,311 個專業 Agent Skills，用中文提問就能用
 
 > 本翻譯以機器輔助維護，歡迎母語者透過 PR 修正；方法見 [CONTRIBUTING.md](CONTRIBUTING.md)。
 
@@ -29,7 +29,7 @@
 </p>
 
 > **公司說要資遣你，你不確定資遣費該拿多少；轉工之後，舊公司的強積金不知道該怎麼處理；每個月加班，卻從沒算清楚加班費。**
-> 通用 AI 像一個很有自信的實習生。**PM Skills** 是資深同事的筆記：1,310 份，每份一個 Markdown 檔案。（PM 指 Professional，各行各業的專業人士，不只是產品經理。）
+> 通用 AI 像一個很有自信的實習生。**PM Skills** 是資深同事的筆記：1,311 份，每份一個 Markdown 檔案。（PM 指 Professional，各行各業的專業人士，不只是產品經理。）
 
 MIT 開源授權，永久免費。沒有執行環境，沒有遙測，不需要帳號。
 

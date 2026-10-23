@@ -3,7 +3,7 @@
  "counts": {
   "consequential": 246,
   "high-stakes": 162,
-  "informational": 914
+  "informational": 915
  },
  "tiers": {
   "360-feedback-template": {
@@ -1063,6 +1063,10 @@
    "via": "bundle:pm-wealth"
   },
   "compounding-record": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "computer-use-runbook": {
    "tier": "informational",
    "via": "default"
   },

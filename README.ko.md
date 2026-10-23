@@ -1,6 +1,6 @@
 <sub>[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-TW.md) · **한국어** · [日本語](README.ja.md) · [Español](README.es.md) · [Português (BR)](README.pt-BR.md)</sub>
 
-# PM Skills: 1,310개의 전문 Agent Skills, 한국어로 물어보면 됩니다
+# PM Skills: 1,311개의 전문 Agent Skills, 한국어로 물어보면 됩니다
 
 > 이 번역은 기계 번역의 도움을 받아 관리됩니다. 원어민의 수정 PR을 환영합니다. 방법은 [CONTRIBUTING.md](CONTRIBUTING.md)를 참고하세요.
 
@@ -15,7 +15,7 @@
 </p>
 
 > **연말정산 서류는 쌓여 있고, 퇴직금은 얼마인지 모르겠고, 자소서 마감은 내일입니다.**
-> 일반 AI는 자신감 넘치는 인턴과 같습니다. **PM Skills**는 선배의 업무 노트입니다. 1,310개, 각각 마크다운 파일 하나입니다. (PM은 Product Manager가 아니라 Professional, 즉 모든 직업의 전문가를 뜻합니다.)
+> 일반 AI는 자신감 넘치는 인턴과 같습니다. **PM Skills**는 선배의 업무 노트입니다. 1,311개, 각각 마크다운 파일 하나입니다. (PM은 Product Manager가 아니라 Professional, 즉 모든 직업의 전문가를 뜻합니다.)
 
 ## 작동 방식
 

@@ -1660,6 +1660,10 @@
     {
       "skill": "store-watch",
       "input": "Watch my Shopify candle shop. About 40 orders a day, best-sellers are the fig and cedar candles, restock takes 10 days from my supplier. I want to hear about bad reviews quickly and never run out of the best-sellers."
+    },
+    {
+      "skill": "computer-use-runbook",
+      "input": "Write a runbook for a computer-use agent to change my home energy supplier on a comparison site. I want the cheapest fixed tariff, I must keep my Warm Home Discount, and the agent must not sign anything for me. I'm already logged in to the comparison site."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build-catalogue.mjs",
   "bundles": 153,
-  "skills": 1288,
+  "skills": 1289,
   "items": [
     {
       "bundle": "pm-2027",
@@ -202,6 +202,10 @@
         {
           "name": "agent-readiness-audit",
           "description": "Audit whether AI agents can actually use your product — docs, APIs, onboarding, errors, and discoverability, evaluated from a non-human user's perspective."
+        },
+        {
+          "name": "computer-use-runbook",
+          "description": "Write the step-by-step runbook a computer-use or browser agent follows to finish a real online task, such as cancelling a subscription or changing an energy supplier: what to look for on screen, one action per step, how to know it worked, and where to stop for a human."
         },
         {
           "name": "human-in-the-loop-design",
