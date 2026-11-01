@@ -53,6 +53,7 @@ Your assistant loads [user-interview-synthesis](skills/user-interview-synthesis/
   <a href="https://www.npmjs.com/package/pm-claude-skills"><img src="https://img.shields.io/npm/v/pm-claude-skills?logo=npm&color=cb3837" alt="npm"></a>
   <a href="#-install-in-30-seconds"><img src="https://img.shields.io/badge/Anthropic%20Plugin%20Directory-Published-D97757?logo=anthropic&logoColor=white" alt="In the official Anthropic plugin directory"></a>
   <a href="https://github.com/BehiSecc/awesome-claude-skills"><img src="https://img.shields.io/badge/Listed%20in-awesome--claude--skills-blue" alt="Listed in awesome-claude-skills"></a>
+  <a href="https://codespaces.new/mohitagw15856/pm-claude-skills"><img src="https://img.shields.io/badge/Open%20in-Codespaces-181717?logo=github" alt="Open in GitHub Codespaces"></a>
   <a href=".github/workflows/skillcheck.yml"><img src="https://img.shields.io/github/actions/workflow/status/mohitagw15856/pm-claude-skills/skillcheck.yml?branch=main&label=SkillCheck" alt="SkillCheck"></a>
   <a href="SKILLSPEC.md"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fpm-skills-mcp.pm-claude-skills.workers.dev%2Fbadge%3Frepo%3Dmohitagw15856%2Fpm-claude-skills%26path%3Dskills" alt="SkillSpec conformance level, graded live"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-lightgrey" alt="License"></a>

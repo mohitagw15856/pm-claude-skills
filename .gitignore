@@ -132,3 +132,8 @@ web/skill-zip/
 
 # /.well-known/agent-skills.json (scripts/build-well-known.mjs, built at deploy)
 web/.well-known/
+
+# Local secrets (see .env.example)
+.env
+.env.*
+!.env.example
