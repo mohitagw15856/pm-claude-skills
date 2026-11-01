@@ -29,7 +29,7 @@ jobs:
         with:
           node-version: '24'
       - name: Cache the models
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: node_modules/@huggingface/transformers/.cache
           key: embed-models-v1
