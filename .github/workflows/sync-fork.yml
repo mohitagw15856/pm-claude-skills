@@ -1,0 +1,29 @@
+# Keeps a fork's main branch in step with mohitagw15856/pm-claude-skills.
+# Does nothing in the upstream repository itself. Forks get new skills weekly
+# without a manual "Sync fork" click. See docs/fork-sync.md.
+name: Sync fork with upstream
+
+on:
+  schedule:
+    - cron: '45 5 * * 3' # Wednesdays 05:45 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    if: github.repository != 'mohitagw15856/pm-claude-skills'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Sync main from upstream
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh repo sync "$GITHUB_REPOSITORY" --source mohitagw15856/pm-claude-skills --branch main
+      - name: Explain a failed sync
+        if: failure()
+        run: |
+          echo "::error::The sync could not fast-forward. Your fork has commits on main that upstream does not."
+          echo "Move your changes to a branch, then run this workflow again, or use the Sync fork button on GitHub."
