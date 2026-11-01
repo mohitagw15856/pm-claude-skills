@@ -179,7 +179,7 @@ jobs:
           node scripts/build-well-known.mjs
           node scripts/check-well-known.mjs web/.well-known/agent-skills.json --verify 50 --root .
       - name: Sign the release bundle and the registry (build provenance)
-        uses: actions/attest-build-provenance@v2
+        uses: actions/attest-build-provenance@v4
         with:
           subject-path: 'web/releases/*.tar.gz, web/releases/*.sbom.cdx.json, web/registry/registry.json'
 
