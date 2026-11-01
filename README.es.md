@@ -28,6 +28,20 @@ npx pm-claude-skills setup        # guiado: detecta tus agentes, muestra el plan
 
 Una skill es solo un archivo Markdown que tu IA lee: instalar copia archivos de texto y desinstalar los borra; nada puede romper tu entorno. Instrucciones por herramienta: [docs/installation.md](docs/installation.md)
 
+## 🔄 Mantenlo actualizado
+
+Las skills mejoran cada semana. Da igual cómo lo instalaste: actualizar es un solo paso.
+
+| Instalaste con | Actualiza con |
+|---|---|
+| `npx pm-claude-skills add` (cualquier herramienta) | Ejecuta el mismo comando otra vez. `npx pm-claude-skills doctor` muestra qué está instalado y qué está desactualizado. |
+| El marketplace de Claude Code | Abre `/plugin`, elige el marketplace pm-claude-skills y pulsa Update. |
+| El paquete de Python | `pip install -U pm-skills` |
+| El servidor MCP | Usa `npx -y -p pm-claude-skills@latest pm-claude-skills-mcp` en tu configuración MCP y cada arranque será la última versión. |
+| Un fork de este repositorio | El workflow `sync-fork.yml` incluido adelanta tu `main` al upstream cada semana. Ver [docs/fork-sync.md](docs/fork-sync.md). |
+
+¿Dudas? Las **[preguntas frecuentes en español](docs/faq/es.md)** responden las más comunes.
+
 ## 🗺 Qué puedes hacer
 
 | Tu tarea esta semana | Bundle | Qué obtienes | Qué aportas |

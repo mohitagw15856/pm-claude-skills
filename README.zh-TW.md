@@ -98,6 +98,20 @@ npx pm-claude-skills add --agent cursor --bundle pm-hk-tw,pm-cv
 | 在 Python 智能體裡用 | `pip install pm-skills` |
 | 在 Cherry Studio、Dify 等應用裡用 | 本機 MCP 服務：`npx -y -p pm-claude-skills pm-claude-skills-mcp`，詳見 [docs/CHINA.md](docs/CHINA.md) 第五節 |
 
+## 🔄 保持更新
+
+技能每週都在改進。無論用哪種方式安裝，更新只需一步。
+
+| 安裝方式 | 更新方式 |
+|---|---|
+| `npx pm-claude-skills add`（任何工具） | 再執行一次同樣的指令。`npx pm-claude-skills doctor` 會列出已安裝和已過時的技能。 |
+| Claude Code 外掛市集 | 開啟 `/plugin`，選擇 pm-claude-skills 市集，按 Update。 |
+| Python 套件 | `pip install -U pm-skills` |
+| MCP 伺服器 | MCP 設定裡用 `npx -y -p pm-claude-skills@latest pm-claude-skills-mcp`，每次啟動都是最新版。 |
+| 自己的 Fork | 倉庫自帶的 `sync-fork.yml` 工作流程每週把你的 `main` 快轉到上游，見 [docs/fork-sync.md](docs/fork-sync.md)。 |
+
+更多問題見 **[常見問題（繁體中文）](docs/faq/zh-TW.md)**。
+
 ## 用繁體中文版的技能
 
 [`skills-i18n/zh-TW/`](skills-i18n/zh-TW/) 有 27 個技能的繁體中文譯本，英文版仍是規範版本。想讓 AI 直接讀繁體版，把譯本資料夾複製到技能目錄，取代同名的英文版即可：

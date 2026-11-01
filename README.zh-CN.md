@@ -66,6 +66,21 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add --agent trae 
   <a href="https://www.modelscope.ai/datasets/mohitagw15856/pm-skills-instruct"><img alt="魔搭数据集状态" src="https://mohitagw15856.github.io/pm-claude-skills/live/cn-status-modelscope-dataset.svg"></a>
 </p>
 
+## 🔄 保持更新
+
+技能每周都在改进。无论用哪种方式安装，更新只需一步。
+
+| 安装方式 | 更新方式 |
+|---|---|
+| `npx pm-claude-skills add`（任意工具） | 再运行一次同样的命令。`npx pm-claude-skills doctor` 会列出已安装和已过时的技能。 |
+| Claude Code 插件市场 | 打开 `/plugin`，选择 pm-claude-skills 市场，点 Update。 |
+| Python 包 | `pip install -U pm-skills` |
+| MCP 服务 | MCP 配置里用 `npx -y -p pm-claude-skills@latest pm-claude-skills-mcp`，每次启动都是最新版。 |
+| Gitee 克隆 | `git pull`，镜像在每次 GitHub 更新后自动同步。 |
+| 自己的 Fork | 仓库自带的 `sync-fork.yml` 工作流每周把你的 `main` 快进到上游，见 [docs/fork-sync.md](docs/fork-sync.md)。 |
+
+更多问题见 **[常见问题（简体中文）](docs/faq/zh-CN.md)**。
+
 ## 看个对比
 
 <p align="center">

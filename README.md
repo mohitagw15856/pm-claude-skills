@@ -76,6 +76,20 @@ npx --registry=https://registry.npmmirror.com pm-claude-skills add  # 中国大�
 
 Then just say what you need: *"Decode this job ad and tell me where I am weak."* Nothing here can break your setup: a skill is a markdown file your AI reads; installing copies text files, uninstalling deletes them. [Read one first](skills/lease-decoder/SKILL.md). Per-tool instructions: [docs/installation.md](docs/installation.md) · ChatGPT and Gemini: copy from [`exports/`](https://github.com/mohitagw15856/pm-claude-skills/tree/exports) · MCP: `claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp`
 
+## 🔄 Keep it updated
+
+Skills improve every week. Whichever way you installed, updating is one step.
+
+| You installed with | Update with |
+|---|---|
+| `npx pm-claude-skills add` (any tool) | Run the same command again. `npx pm-claude-skills doctor` lists what is installed and what is stale. |
+| The Claude Code marketplace | Open `/plugin`, pick the pm-claude-skills marketplace and choose Update. |
+| The Python package | `pip install -U pm-skills` |
+| The MCP server | Use `npx -y -p pm-claude-skills@latest pm-claude-skills-mcp` in your MCP config and every start is the latest release. |
+| A fork of this repository | The bundled `sync-fork.yml` workflow fast-forwards your `main` every week. See [docs/fork-sync.md](docs/fork-sync.md). |
+
+Stuck? The **[FAQ](docs/faq/README.md)** answers the common questions in English, [简体中文](docs/faq/zh-CN.md), [繁體中文](docs/faq/zh-TW.md), [日本語](docs/faq/ja.md), [한국어](docs/faq/ko.md), [Español](docs/faq/es.md) and [Português](docs/faq/pt-BR.md).
+
 ## 🌅 Claude Duet, OpenAI Dots and other proactive agents
 
 **PM Skills works with [Claude Duet](https://claude.com/)**, Anthropic's proactive agent. Duet uses the skills in your Claude account, so every skill here can run inside it. Agents that work while you're away fail in new ways: briefs that pad, uncited claims, acting instead of drafting, saying "done" about a draft. So **21 Duet-ready skills are built for unattended use**. They keep briefs short and cited, draft instead of sending, and always ask before anything is sent, posted, paid, signed or deleted.

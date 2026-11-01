@@ -28,6 +28,20 @@ npx pm-claude-skills setup        # 対話式: エージェント検出、プラ
 
 スキルは AI が読む Markdown ファイルにすぎません。インストールはテキストファイルのコピー、アンインストールはその削除で、環境を壊すことはありません。ツール別の手順: [docs/installation.md](docs/installation.md)
 
+## 🔄 最新の状態を保つ
+
+スキルは毎週改善されています。どの方法でインストールしても、更新は一手順です。
+
+| インストール方法 | 更新方法 |
+|---|---|
+| `npx pm-claude-skills add`（どのツールでも） | 同じコマンドをもう一度実行します。`npx pm-claude-skills doctor` で、インストール済みと古くなったスキルを確認できます。 |
+| Claude Code のマーケットプレイス | `/plugin` を開き、pm-claude-skills マーケットプレイスを選んで Update を押します。 |
+| Python パッケージ | `pip install -U pm-skills` |
+| MCP サーバー | MCP 設定で `npx -y -p pm-claude-skills@latest pm-claude-skills-mcp` を使うと、起動ごとに最新版になります。 |
+| このリポジトリのフォーク | 同梱の `sync-fork.yml` ワークフローが毎週 `main` を上流に追従させます。[docs/fork-sync.md](docs/fork-sync.md) を参照。 |
+
+困ったときは **[よくある質問（日本語）](docs/faq/ja.md)** をご覧ください。
+
 ## 🗺 できること
 
 | 今週の仕事 | バンドル | 得られるもの | 用意するもの |

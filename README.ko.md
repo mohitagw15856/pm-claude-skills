@@ -46,6 +46,20 @@ npx pm-claude-skills add --agent cursor --bundle pm-korea
 
 Claude Code에서는 `/plugin`을 입력하고 **pm-skills**를 검색해 설치할 수도 있습니다. 설치하면 텍스트 파일만 복사되고, 삭제하면 그 파일만 지워집니다.
 
+## 🔄 최신 상태 유지
+
+스킬은 매주 개선됩니다. 어떤 방식으로 설치했든 업데이트는 한 단계입니다.
+
+| 설치 방법 | 업데이트 방법 |
+|---|---|
+| `npx pm-claude-skills add` (모든 도구) | 같은 명령을 다시 실행합니다. `npx pm-claude-skills doctor`로 설치된 스킬과 오래된 스킬을 확인할 수 있습니다. |
+| Claude Code 마켓플레이스 | `/plugin`을 열고 pm-claude-skills 마켓플레이스를 선택한 뒤 Update를 누릅니다. |
+| Python 패키지 | `pip install -U pm-skills` |
+| MCP 서버 | MCP 설정에서 `npx -y -p pm-claude-skills@latest pm-claude-skills-mcp`를 쓰면 시작할 때마다 최신 버전이 됩니다. |
+| 이 저장소의 포크 | 함께 제공되는 `sync-fork.yml` 워크플로가 매주 `main`을 업스트림에 맞춥니다. [docs/fork-sync.md](docs/fork-sync.md) 참고. |
+
+궁금한 점은 **[자주 묻는 질문 (한국어)](docs/faq/ko.md)** 을 보세요.
+
 ## 그 밖의 스킬
 
 PM Skills에는 기획, 개발, 데이터, 디자인, 마케팅, 영업, 인사, 법무, 재무 등 35개 직업에 걸친 1,000개가 넘는 범용 스킬이 있습니다. 한국어로 물어봐도 영어 스킬이 잘 작동하며, 결과는 한국어로 받을 수 있습니다. 전체 목록은 [SKILLS.md](SKILLS.md)에 있습니다.

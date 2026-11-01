@@ -77,8 +77,8 @@
 <br /><sub><b>🧊 <a href="../plugins/pm-3d-explorer/">3D explorer</a></b>: topic in, a clickable 3D page out, with exploded view and a quiz.</sub>
 </td>
 <td width="50%" align="center">
-<a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="../web/docs-assets/demo-galaxy.webp" width="100%" alt="Galaxy 3D: fly through all the skills as a constellation" /></a>
-<br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html">Galaxy 3D</a></b>: every skill a star. Zero productivity value, 100% recommended.</sub>
+<a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy.html"><img src="../web/docs-assets/demo-galaxy.webp" width="100%" alt="Galaxy 3D: fly through all the skills as a constellation" /></a>
+<br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy.html">Galaxy 3D</a></b>: every skill a star. Zero productivity value, 100% recommended.</sub>
 </td>
 </tr>
 <tr>
@@ -162,15 +162,8 @@ In Claude Code, [`/firm`](../commands/firm.md) runs the same session natively �
 
 <table>
   <tr>
-    <td width="64%"><a href="https://mohitagw15856.github.io/pm-claude-skills/spatial.html"><img src="../web/docs-assets/showcase/spatial.png" alt="Spatial 3D — the whole library as a navigable 3D constellation of skills, coloured by bundle" /></a><br /><sub><b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/spatial.html">Spatial 3D</a></b> — fly through all 1314 skills as a constellation you orbit, zoom, and click straight into.</sub></td>
-    <td width="36%"><a href="https://mohitagw15856.github.io/pm-claude-skills/voice.html"><img src="../web/docs-assets/showcase/voice.png" alt="Voice Mode — a living orb you talk to hands-free; it listens, thinks, and speaks back" /></a><br /><sub><b>🎙️ <a href="https://mohitagw15856.github.io/pm-claude-skills/voice.html">Voice Mode</a></b> — talk to the library; a living orb listens and answers out loud.</sub></td>
-  </tr>
-  <tr>
-    <td><a href="https://mohitagw15856.github.io/pm-claude-skills/holo.html"><img src="../web/docs-assets/showcase/holo.png" alt="Holo Cards — tilt-reactive holographic skill cards pulled from a booster pack, with rarities" /></a><br /><sub><b>🎴 <a href="https://mohitagw15856.github.io/pm-claude-skills/holo.html">Holo Cards</a></b> — tear open a pack and pull tilt-reactive holographic skill cards.</sub></td>
-    <td><a href="https://mohitagw15856.github.io/pm-claude-skills/timemachine.html"><img src="../web/docs-assets/showcase/timemachine.png" alt="The Time Machine — a draggable, playable timeline that replays your professional history" /></a><br /><sub><b>⏳ <a href="https://mohitagw15856.github.io/pm-claude-skills/timemachine.html">The Time Machine</a></b> — scrub a playable timeline of your decisions & predictions.</sub></td>
-  </tr>
-  <tr>
-    <td colspan="2"><a href="https://mohitagw15856.github.io/pm-claude-skills/make.html"><img src="../web/docs-assets/showcase/make.png" alt="Make it real — turn any skill's output into a branded document, deck, model, or a whole zip Packet" /></a><br /><sub><b>🏭 <a href="https://mohitagw15856.github.io/pm-claude-skills/make.html">Make it real</a></b> — any skill's output → a branded PDF / Word / deck / live-formula Excel, or a one-click <b>Packet</b> (a zip of finished documents). Plus ⚔️ <a href="https://mohitagw15856.github.io/pm-claude-skills/wartable.html">the War Table</a> (watch two AIs negotiate live), 🛰️ <a href="https://mohitagw15856.github.io/pm-claude-skills/workos.html">Work OS</a>, ⚙️ <a href="https://mohitagw15856.github.io/pm-claude-skills/app.html">Prompt-to-App</a>, 🧑‍🤝‍🧑 <a href="https://mohitagw15856.github.io/pm-claude-skills/cocanvas.html">Co-Canvas</a> & 🎬 <a href="https://mohitagw15856.github.io/pm-claude-skills/video.html">Video export</a>.</sub></td>
+    <td width="50%"><a href="https://mohitagw15856.github.io/pm-claude-skills/voice.html"><img src="../web/docs-assets/showcase/voice.png" alt="Voice Mode — a living orb you talk to hands-free; it listens, thinks, and speaks back" /></a><br /><sub><b>🎙️ <a href="https://mohitagw15856.github.io/pm-claude-skills/voice.html">Voice Mode</a></b> — talk to the library; a living orb listens and answers out loud.</sub></td>
+    <td width="50%"><a href="https://mohitagw15856.github.io/pm-claude-skills/make.html"><img src="../web/docs-assets/showcase/make.png" alt="Make it real — turn any skill's output into a branded document, deck, model, or a whole zip Packet" /></a><br /><sub><b>🏭 <a href="https://mohitagw15856.github.io/pm-claude-skills/make.html">Make it real</a></b> — any skill's output → a branded PDF / Word / deck / live-formula Excel, or a one-click <b>Packet</b> (a zip of finished documents). Plus ⚔️ <a href="https://mohitagw15856.github.io/pm-claude-skills/wartable.html">the War Table</a> (watch two AIs negotiate live), 🛰️ <a href="https://mohitagw15856.github.io/pm-claude-skills/workos.html">Work OS</a>, ⚙️ <a href="https://mohitagw15856.github.io/pm-claude-skills/app.html">Prompt-to-App</a>, 🧑‍🤝‍🧑 <a href="https://mohitagw15856.github.io/pm-claude-skills/cocanvas.html">Co-Canvas</a> & 🎬 <a href="https://mohitagw15856.github.io/pm-claude-skills/video.html">Video export</a>.</sub></td>
   </tr>
 </table>
 
@@ -203,7 +196,7 @@ In Claude Code, [`/firm`](../commands/firm.md) runs the same session natively �
       <b>🪄 <a href="https://mohitagw15856.github.io/pm-claude-skills/">The command bar</a></b> — don't browse 515 cards; just say it: <i>"a blameless postmortem for Friday's outage"</i> → the top three skills, instantly, locally, before you've even entered a key. Enter opens the best match.
     </td>
     <td width="50%">
-      <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy.html"><img src="../web/docs-assets/showcase/galaxy.png" alt="Skill Galaxy — the library as a living star map with a guided sky tour" /></a>
+      <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy.html"><img src="../web/docs-assets/demo-galaxy.webp" alt="Skill Galaxy — the library as a living star map with a guided sky tour" /></a>
       <b>🌌 <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy.html">The Skill Galaxy</a></b> — the whole library as a living star map (brightness = eval score). Press <b>▶ Sky tour</b> and the camera flies you across the professions, then traces a Journey constellation. Click any star for details; search flies you to it.
     </td>
   </tr>
@@ -418,12 +411,11 @@ Connect the Firm or the Boardroom to a **real folder on disk** (the 🗂 chip, C
 ### 🌌 The library in 3D
 
 <p align="center">
-  <a href="https://mohitagw15856.github.io/pm-claude-skills/tower.html"><img src="../web/docs-assets/demo-tower.webp" width="420" alt="The Tower of Claims — the argument collapses because the conclusion rested on glass" /></a>
-  <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html"><img src="../web/docs-assets/demo-galaxy.webp" width="420" alt="Galaxy 3D — hyperspace warp between skill constellations" /></a>
+  <a href="https://mohitagw15856.github.io/pm-claude-skills/galaxy.html"><img src="../web/docs-assets/demo-galaxy.webp" width="420" alt="Galaxy 3D — hyperspace warp between skill constellations" /></a>
 </p>
 
 
-- **[Galaxy 3D](https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html)** — 1314 skills as a bloom-lit starfield you fly through; **your sky is yours** (stars you've run burn brighter). **[Skill City](https://mohitagw15856.github.io/pm-claude-skills/city.html)** — the same idea as a dusk skyline: windows light up in buildings you've used.
+- **[Galaxy 3D](https://mohitagw15856.github.io/pm-claude-skills/galaxy.html)** — 1314 skills as a bloom-lit starfield you fly through; **your sky is yours** (stars you've run burn brighter). **[Skill City](https://mohitagw15856.github.io/pm-claude-skills/city.html)** — the same idea as a dusk skyline: windows light up in buildings you've used.
 - **[The Tower of Claims](https://mohitagw15856.github.io/pm-claude-skills/tower.html)** — your document as a physics tower: data is steel, assumptions are glass, and the stress test shows the argument stand or **collapse**. Keyless demo built in.
 - **[The Stage](https://mohitagw15856.github.io/pm-claude-skills/stage.html)** — any Boardroom replay as a cinematic 3D scene: the hologram document cracks as objections land; the verdict seals it gold or shatters it.
 - **⚔️ Duels** — challenge links from the Gym and the Panel: your friend faces the *identical* hidden scenario, side-by-side scorecard at the end. **[The Charter](https://mohitagw15856.github.io/pm-claude-skills/charter.html)** — the performance-based, cryptographically verifiable certification. **[The Trophy Forge](https://mohitagw15856.github.io/pm-claude-skills/trophy.html)** — cast it in spinning gold.

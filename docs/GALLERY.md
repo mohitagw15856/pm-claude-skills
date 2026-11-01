@@ -14,9 +14,7 @@ Paste a strategy doc and watch five archetype executives debate it around a rend
 
 Every skill a star, every bundle a constellation; fly through the library instead of scrolling it.
 
-[![The Galaxy](../web/docs-assets/showcase/galaxy.png)](https://mohitagw15856.github.io/pm-claude-skills/galaxy3d.html)
-
-![Galaxy flythrough](../web/docs-assets/demo-galaxy.webp)
+[![Galaxy flythrough](../web/docs-assets/demo-galaxy.webp)](https://mohitagw15856.github.io/pm-claude-skills/galaxy.html)
 
 ## 🏢 The Firm — don't run tools, employ a staff
 
@@ -32,14 +30,6 @@ The interview-prep skills chained into one continuous run, staged like the fight
 
 [![The Gauntlet](../web/docs-assets/showcase/gauntlet.png)](https://mohitagw15856.github.io/pm-claude-skills/gauntlet.html)
 
-## 🔮 The Holo-Deck
-
-The catalog as a holographic projection — because a JSON file deserves at least one dramatic rendering.
-
-[![Holo](../web/docs-assets/showcase/holo.png)](https://mohitagw15856.github.io/pm-claude-skills/holo.html)
-
-![Holo demo](../web/docs-assets/demo-holo.webp)
-
 ## 🎙 Voice mode — talk to the library
 
 Pick a skill, speak your brief, hear the result — hands-free professional judgment.
@@ -52,19 +42,12 @@ Any skill dissected live: which sections do what, where the framework's teeth ar
 
 [![X-Ray](../web/docs-assets/showcase/xray.png)](https://mohitagw15856.github.io/pm-claude-skills/xray.html)
 
-## ⏳ The Time Machine — the library through its releases
-
-Scrub through every version and watch the library grow from 12 skills to 599.
-
-[![Time Machine](../web/docs-assets/showcase/timemachine.png)](https://mohitagw15856.github.io/pm-claude-skills/timemachine.html)
-
 ## 🌆 More rooms in the building
 
 | | |
 |---|---|
-| [🏙 The City](https://mohitagw15856.github.io/pm-claude-skills/city.html) — skills as a skyline | [🕹 The command bar](https://mohitagw15856.github.io/pm-claude-skills/) — ⌘K over everything ![cmdbar](../web/docs-assets/showcase/cmdbar.png) |
-| [🛠 The Make page](https://mohitagw15856.github.io/pm-claude-skills/make.html) — build a skill in the browser ![make](../web/docs-assets/showcase/make.png) | [📦 Artifacts](https://mohitagw15856.github.io/pm-claude-skills/) — every output, downloadable ![artifacts](../web/docs-assets/showcase/artifacts.png) |
-| [🗿 Spatial view](https://mohitagw15856.github.io/pm-claude-skills/spatial.html) ![spatial](../web/docs-assets/showcase/spatial.png) | 🏛 [The Museum](https://mohitagw15856.github.io/pm-claude-skills/museum.html) — 2,900+ anti-pattern rules, each one shareable |
+| [🕹 The command bar](https://mohitagw15856.github.io/pm-claude-skills/) — ⌘K over everything ![cmdbar](../web/docs-assets/showcase/cmdbar.png) | [🛠 The Make page](https://mohitagw15856.github.io/pm-claude-skills/make.html) — build a skill in the browser ![make](../web/docs-assets/showcase/make.png) |
+| [📦 Artifacts](https://mohitagw15856.github.io/pm-claude-skills/) — every output, downloadable ![artifacts](../web/docs-assets/showcase/artifacts.png) | 🏛 [The Museum](https://mohitagw15856.github.io/pm-claude-skills/museum.html) — 2,900+ anti-pattern rules, each one shareable |
 
 ## 🎬 Motion
 
@@ -76,8 +59,6 @@ Scrub through every version and watch the library grow from 12 skills to 599.
 | ![canvas](../web/docs-assets/canvas-demo.webp) | The Canvas — skills composed visually |
 | ![compare](../web/docs-assets/compare-demo.webp) | Model comparison on one brief |
 | ![firm](../web/docs-assets/firm-demo.webp) | Hiring from The Firm |
-| ![stage](../web/docs-assets/demo-stage.webp) | The Stage |
-| ![tower](../web/docs-assets/demo-tower.webp) | The Tower |
 
 ---
 
