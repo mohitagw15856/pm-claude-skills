@@ -27,6 +27,7 @@ A directory of **skill repos and packs built by the community** that follow the
 | [YYLO Skills](https://github.com/yylo-dev/yylo-skills) | [@yylo-dev](https://github.com/yylo-dev) | Seven reusable agent skills for Claude Code, Codex, and Pi built around YYLO Ledger: task management, wiki and workflow Records, provenance-bound evidence, and validated task delivery. | https://github.com/yylo-dev/yylo-skills |
 | [agent-skills](https://github.com/mblode/agent-skills) | [@mblode](https://github.com/mblode) | Nobody ships AI slop on purpose. These skills make sure you don't. UI audits, typography, docs, PR review, and releases. | https://github.com/mblode/agent-skills |
 
+| resume-claim-guard | [Korey Wang Tianru](https://korey2028.tech) | Interviews candidates to lock a verified fact sheet before tailoring resumes to job descriptions, preventing hallucinated metrics | [korey2028-prog/resume-claim-guard](https://github.com/korey2028-prog/resume-claim-guard) |
 <!-- COMMUNITY-SKILLS:ROWS-BELOW
   Add your row directly above this comment, keeping the four columns in order:
   | [Name](https://github.com/you/your-repo) | [@you](https://github.com/you) | One concise line — what it produces and when to use it. | https://github.com/you/your-repo |
