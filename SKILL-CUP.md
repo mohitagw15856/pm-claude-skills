@@ -4,9 +4,9 @@
 
 A monthly contest for the best new skill on a theme. Write one skill on the month's theme, open a pull request, and it is scored the same way the library scores itself: it must pass SkillSpec L3, then it runs on its own eval cases and a pinned judge scores the output, blind, on a 1–5 rubric. The top score at the end of the month wins a permanent line below, a winner badge on the skill's page, and first pick of a future theme. Prizes are funded by sponsors, month by month: [sponsor a Cup](docs/SPONSOR-THE-CUP.md). (The Cup replaces the 2026 Seasons; their record stays in [seasons/HALL.md](seasons/HALL.md).)
 
-## This month: Health paperwork (2026-10-11 → 2026-10-31)
+## This month: Small business admin (2026-11-01 → 2026-11-30)
 
-Skills that help people read, check and act on medical letters, bills, test results and insurance forms.
+Skills for sole traders and small shops: invoices, VAT and sales tax, late payers, suppliers, permits.
 
 **Prize:** none pledged for this month yet. [Sponsor it](docs/SPONSOR-THE-CUP.md).
 
@@ -37,5 +37,6 @@ Each winner gets a short announcement video, published to the [media branch](htt
 
 | Month | Theme | Winner | Skill | Score |
 |---|---|---|---|---|
+| 2026-10 | Health paperwork | no entries | | |
 
-**Coming up:** Small business admin · Teachers · Caring for someone.
+**Coming up:** Teachers · Caring for someone · Trades and site work.
