@@ -95,3 +95,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Run a pre-launch review."
 - "Give me a go or no-go for this release."
 - "Is this release safe to ship?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/launch-readiness.html

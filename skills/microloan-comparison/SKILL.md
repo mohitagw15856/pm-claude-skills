@@ -80,3 +80,5 @@ This is not financial advice. For a large loan, or if repayments are already har
 - "This lending app gives me 5,000 for 14 days, is that a good deal?"
 - "Should I join a group loan with my neighbours?"
 - "The loan officer says only 3% per month, what will I really pay?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/microloan-comparison.html

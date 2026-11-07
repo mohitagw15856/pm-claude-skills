@@ -33,3 +33,5 @@ Ask for (if not already provided), else infer and label:
 - "We're arguing about a rule."
 - "Can you do X in Catan/Uno/Monopoly?"
 - "Who's right here?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rules-lawyer.html

@@ -33,3 +33,5 @@ Ask for (if not already provided), else infer and label:
 - "What board game should we play?"
 - "My partner hates long games."
 - "We always end up arguing over what to play."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/game-night-planner.html

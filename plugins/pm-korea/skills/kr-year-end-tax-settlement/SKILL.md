@@ -63,3 +63,5 @@ Items to claim later through 5월 종합소득세 확정신고 or a 경정청구
 - "맞벌이 부부인데 아이 공제랑 카드 공제 누가 받는 게 유리한가요?"
 - "월세 세액공제 받으려면 뭐가 필요해요?"
 - "How does year-end tax settlement work in Korea? I changed jobs in July."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/kr-year-end-tax-settlement.html

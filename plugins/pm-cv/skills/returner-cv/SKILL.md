@@ -64,3 +64,5 @@ Protected information: health, pregnancy, disability and similar details are the
 - "Help me write my CV after maternity leave."
 - "My CV has a gap since my redundancy. What do I say?"
 - "Write my CV for a returnship programme."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/returner-cv.html

@@ -103,3 +103,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Draft a media statement about [event]"
 - "We are launching [product] — write the press release"
 - "Turn this announcement into a press release: [paste notes]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/press-release.html

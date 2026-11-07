@@ -1,0 +1,135 @@
+{
+  "$schema": "https://mohitagw15856.github.io/pm-claude-skills/schemas/contract.schema.json",
+  "skill": "user-story-writer",
+  "version": 1,
+  "inputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "user-story-writer inputs",
+    "type": "object",
+    "properties": {
+      "feature": {
+        "type": "string",
+        "description": "Feature or change to break into stories; brief, PRD section or description"
+      },
+      "personas": {
+        "type": "array",
+        "description": "User types involved",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      },
+      "scope": {
+        "type": "string",
+        "description": "One story or full decomposition of an epic",
+        "enum": [
+          "single",
+          "epic"
+        ]
+      },
+      "ac_format": {
+        "type": "string",
+        "description": "Acceptance criteria format",
+        "enum": [
+          "gherkin",
+          "checklist",
+          "both"
+        ]
+      },
+      "constraints": {
+        "type": "string",
+        "description": "Technical constraints or notes from engineering"
+      }
+    },
+    "required": [
+      "feature"
+    ],
+    "additionalProperties": true
+  },
+  "outputs": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "user-story-writer outputs",
+    "type": "object",
+    "properties": {
+      "epic": {
+        "type": "string",
+        "description": "Epic title when scope is epic"
+      },
+      "stories": {
+        "type": "array",
+        "description": "Stories ready for the backlog",
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "e.g. US-1"
+            },
+            "title": {
+              "type": "string",
+              "description": ""
+            },
+            "persona": {
+              "type": "string",
+              "description": ""
+            },
+            "story": {
+              "type": "string",
+              "description": "As a <persona>, I want <goal>, so that <benefit>"
+            },
+            "acceptance_criteria": {
+              "type": "array",
+              "description": "Given/When/Then or checklist lines",
+              "items": {
+                "type": "string",
+                "description": ""
+              }
+            },
+            "size": {
+              "type": "string",
+              "description": "Relative size",
+              "enum": [
+                "XS",
+                "S",
+                "M",
+                "L",
+                "XL"
+              ]
+            },
+            "dependencies": {
+              "type": "array",
+              "description": "Story IDs this depends on",
+              "items": {
+                "type": "string",
+                "description": ""
+              }
+            },
+            "notes": {
+              "type": "string",
+              "description": ""
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "story",
+            "acceptance_criteria"
+          ],
+          "additionalProperties": true
+        }
+      },
+      "open_questions": {
+        "type": "array",
+        "description": "",
+        "items": {
+          "type": "string",
+          "description": ""
+        }
+      }
+    },
+    "required": [
+      "stories"
+    ],
+    "additionalProperties": true
+  }
+}

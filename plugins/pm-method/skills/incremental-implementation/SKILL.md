@@ -57,3 +57,5 @@ The big-bang failure is always the same story: three hours of changes, then "it 
 - "Refactor anything load-bearing safely."
 - "Make this large mechanical change incrementally."
 - "Implement this multi-part feature without breaking things."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/incremental-implementation.html

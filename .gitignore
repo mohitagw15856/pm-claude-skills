@@ -95,9 +95,20 @@ web/i18n-desc/
 web/ab/
 web/skill-changes.json
 web/proven.json
+# The catalogue JSON is generated from skills/ by web/build-skills.mjs (8 MB a copy; it used to be
+# committed on every change and had grown to most of the repository's history). Built at the front
+# of 'npm run check', at prepack, at deploy and in every workflow that reads it.
+web/skills.json
+web/skills-index.json
+extension/skills.json
+python/pm_skills/skills.json
 # Generated from skills/ by scripts/build-exports.mjs: built before npm publish (prepack)
-# and published to the 'exports' branch for browsing; never committed to main.
-exports/
+# and published to the 'exports' branch for browsing. Only the two folders Google already
+# indexes (Cursor and Windsurf rules) are committed to main, so those links keep working.
+exports/*
+!exports/README.md
+!exports/cursor/
+!exports/windsurf/
 # Large binaries live on the 'media' branch (served by raw URL), not on main.
 docs/print/*.pdf
 web/docs-assets/handbook.pdf
@@ -137,3 +148,9 @@ web/.well-known/
 .env
 .env.*
 !.env.example
+
+# /schemas/ copied to web/schemas/ at deploy (scripts/check-skill-schemas.mjs validates the source)
+web/schemas/
+
+# Per-skill git history for the CLI changelog and doctor (scripts/build-skill-changelog.mjs, built at deploy and prepack)
+web/skill-changelog.json

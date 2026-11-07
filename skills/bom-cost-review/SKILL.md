@@ -81,3 +81,5 @@ Ask for these if not provided; work with a partial BOM if that's all there is, l
 - "Find cost-down opportunities."
 - "Check component sourcing risk."
 - "Sanity-check BOM cost against target."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bom-cost-review.html

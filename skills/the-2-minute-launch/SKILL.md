@@ -60,3 +60,5 @@ Ask for these if not provided:
 - "I keep avoiding the gym. Get me moving now."
 - "Help me finally start writing this thing."
 - "2-minute launch for cleaning my room."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-2-minute-launch.html

@@ -73,3 +73,5 @@ Rules:
 - "Help me with my civil service personal statement."
 - "Write my NHS supporting information for this Band 7 post."
 - "Check my application against the essential criteria."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/civil-service-application.html

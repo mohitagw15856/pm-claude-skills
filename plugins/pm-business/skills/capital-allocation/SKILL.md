@@ -74,3 +74,5 @@ Portfolio capital-allocation practice — expected-value × strategic-fit scorin
 - "Decide where to invest."
 - "Build a funding/portfolio plan."
 - "Make trade-offs across initiatives under a cap."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/capital-allocation.html

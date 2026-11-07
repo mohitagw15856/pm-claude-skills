@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "How else could I look at this conflict?"
 - "I keep hitting a wall on this — different angle?"
 - "Recast this problem for me."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/think-from-another-angle.html

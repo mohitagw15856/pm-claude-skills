@@ -62,3 +62,5 @@ Uses: … · Method: 1) … 2) … 3) … · Sub: [if missing X, use Y]
 - "I don't know what to eat tonight, help."
 - "What's for dinner? I've got chicken, rice, and whatever's in the door of the fridge."
 - "No-oven dinner for two, nothing in the house is fresh."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/whats-for-dinner.html

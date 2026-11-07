@@ -82,3 +82,5 @@ Ask for (if not already provided):
 - "Sunsetting a feature."
 - "Killing an underused capability."
 - "Retire an AI feature that didn't land."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/feature-sunset-plan.html

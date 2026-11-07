@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "A gratitude routine to help during a stressful period."
 - "How specific should my gratitude list be?"
 - "Set up a simple gratitude habit anchored to my morning coffee."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/gratitude-practice.html

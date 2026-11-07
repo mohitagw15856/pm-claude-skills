@@ -77,3 +77,5 @@ Given the level move, the format and the headline achievements, **write the full
 - "写晋升答辩 PPT 的大纲。"
 - "模拟一下晋升委员会会问我什么问题。"
 - "Help me prepare my promotion defence for a Chinese tech company."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-promotion-defence.html

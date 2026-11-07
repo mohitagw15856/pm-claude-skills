@@ -307,3 +307,5 @@ Medium and Low findings should be tracked as follow-up issues with a committed r
 - "Audit infrastructure configurations."
 - "Check cloud security posture."
 - "Produce a reusable IaC review checklist."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/infra-as-code-review.html

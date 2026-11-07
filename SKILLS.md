@@ -1,4 +1,4 @@
-# 🗂️ All 1314 Skills — full catalog
+# 🗂️ All 1320 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -724,7 +724,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 4/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (851 skills)
+## 🌍 Industries & Public Sector (857 skills)
 
 ### `other` — 22 skills · 12 eval-scored
 
@@ -1563,6 +1563,17 @@
 | **Name Change Navigator** (`name-change-navigator`) | Get through the 40-institution slog of changing your name — after marriage, divorce, transition, or just because — in the right order, so one… | ✅ 4.8/5 |
 | **Two Worlds Translator** (`two-worlds-translator`) | Bridge the gap between your home culture and your adopted one — explain your immigrant parents to your partner (and vice versa), navigate the… | ✅ 4.8/5 |
 
+### `pm-india` — 6 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **EPF Withdrawal Guide (India)** (`in-epf-withdrawal-guide`) | Guide an Indian employee through an EPF withdrawal: whether a partial advance or a full settlement applies, the eligibility by reason (job loss… | — |
+| **Gratuity Calculator (India)** (`in-gratuity-calculator`) | Estimate gratuity under India's Payment of Gratuity Act when someone leaves a job: eligibility (the five-year rule and its exceptions), the 15/26… | — |
+| **GST Return Explainer (India)** (`in-gst-return-explainer`) | Explain which GST returns an Indian business must file and when: GSTR-1, GSTR-3B, the annual GSTR-9, the composition scheme's CMP-08 and GSTR-4… | — |
+| **Income Tax Regime Chooser (India)** (`in-income-tax-regime-chooser`) | Compare India's old and new income tax regimes for a salaried or freelance taxpayer from their own figures: which deductions and exemptions are… | — |
+| **Labour Codes Decoder (India)** (`in-labour-codes-decoder`) | Decode India's four labour codes (Wages, Industrial Relations, Social Security, OSH) for an employee, HR lead or small employer: what changes in… | — |
+| **Notice Period and Full and Final Settlement (India)** (`in-notice-period-fnf-settlement`) | Work through an Indian employee's exit money: the notice period from the appointment letter and standing orders, notice pay and buy-out, what a… | — |
+
 ### `pm-insurance` — 6 skills · 1 eval-scored
 
 | Skill | What it does | Eval |
@@ -2114,4 +2125,4 @@
 
 ---
 
-_1314 skills across 154 bundles · 399 eval-scored (30%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1320 skills across 155 bundles · 399 eval-scored (30%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

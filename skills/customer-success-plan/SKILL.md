@@ -216,3 +216,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Write a 6-month customer success roadmap for [Company]"
 - "I need a mutual action plan for our QBR with [Account]"
 - "Generate a customer success plan for an at-risk account"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/customer-success-plan.html

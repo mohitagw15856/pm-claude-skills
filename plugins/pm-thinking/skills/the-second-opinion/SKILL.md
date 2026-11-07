@@ -59,3 +59,5 @@ Ask for these if not provided:
 - "I need a fresh take, not a yes-man."
 - "Everyone agrees with me — take the opposite side."
 - "Make me defend this decision properly."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-second-opinion.html

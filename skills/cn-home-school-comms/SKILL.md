@@ -66,3 +66,5 @@ Do not discuss one child's problem in the group, do not flood it with thanks, re
 - "明天孩子要请假去医院，帮我写一条请假消息。"
 - "家长群里有家长指责老师，我该不该说话？"
 - "Help me write a polite WeChat message to my child's teacher in Chinese."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-home-school-comms.html

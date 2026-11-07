@@ -1,6 +1,10 @@
 ---
 name: voice-agent-design
 description: "Design a voice AI agent for phone or in-app conversations — call flows, interruption handling, escalation to humans, and the metrics that catch a bad voice experience. Use when asked to design a voice agent, automate a phone line, spec an IVR replacement, or review why callers hate an existing voice bot. Produces a voice agent spec: persona and disclosure policy, conversation architecture, barge-in and repair behaviour, human-handoff rules, and a launch scorecard."
+metadata:
+  permissions:
+    tools: []
+    approval: never
 ---
 
 # Voice Agent Design Skill
@@ -83,3 +87,5 @@ Ask for (if not already provided):
 - "Automate a phone line."
 - "Spec an IVR replacement."
 - "Review why callers hate an existing voice bot."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/voice-agent-design.html

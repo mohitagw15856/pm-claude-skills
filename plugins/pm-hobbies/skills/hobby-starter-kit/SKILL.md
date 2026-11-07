@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "Help me pick up running from zero."
 - "I want to try pottery — what's a cheap way in?"
 - "Give me a first-month plan for learning to paint."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hobby-starter-kit.html

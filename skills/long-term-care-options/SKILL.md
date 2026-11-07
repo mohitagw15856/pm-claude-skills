@@ -74,3 +74,5 @@ Ask for these if not provided:
 - "Explain long-term care options for my ill father."
 - "How do I choose a care facility, and what are the red flags?"
 - "My parent has dementia — what care level do they need?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/long-term-care-options.html

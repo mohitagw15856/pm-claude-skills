@@ -93,3 +93,5 @@ If a [`professional-brain`](../professional-brain/SKILL.md) (`brain/`) exists, r
 - "Review what actually happened."
 - "Score last quarter's forecast against reality."
 - "Did our prioritisation framework work?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/outcome-tracker.html

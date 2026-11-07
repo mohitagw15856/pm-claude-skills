@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Give me a checklist after a death."
 - "Help me handle my parent's affairs."
 - "What needs to happen this week?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/when-someone-dies.html

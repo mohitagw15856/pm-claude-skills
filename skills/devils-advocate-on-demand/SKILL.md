@@ -59,3 +59,5 @@ Ask for these if not provided:
 - "Challenge this — I want to know if it holds up."
 - "Try to talk me out of this decision."
 - "I think I'm right — prove me wrong if you can."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/devils-advocate-on-demand.html

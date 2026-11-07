@@ -75,3 +75,5 @@ Clinical handoff/documentation practice — structured discharge summaries with 
 - "Write the hospital discharge note."
 - "Document this patient's admission-to-discharge course for handoff."
 - "Summarise this admission for the GP."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/discharge-summary.html

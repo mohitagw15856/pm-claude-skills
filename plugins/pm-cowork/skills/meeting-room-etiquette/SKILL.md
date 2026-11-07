@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Write the office etiquette guide."
 - "Stop people ghost-booking meeting rooms."
 - "Write rules for the shared kitchen."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/meeting-room-etiquette.html

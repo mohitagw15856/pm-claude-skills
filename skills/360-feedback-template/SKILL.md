@@ -262,3 +262,5 @@ Ask the user which output they need, then gather inputs:
 - "Design a 360 review template for engineering managers"
 - "Help me write constructive 360 feedback for my colleague [Name]"
 - "Create a peer feedback survey for our upcoming performance cycle"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/360-feedback-template.html

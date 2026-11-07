@@ -86,3 +86,5 @@ Grade = Σ(score × weight) × 20 → 0–100. **Bands:** ≥85 Preferred · 70�
 - "Score a supplier on OTIF and quality."
 - "Decide whether to escalate."
 - "Exit a supplier."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/supplier-scorecard.html

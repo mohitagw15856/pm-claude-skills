@@ -245,3 +245,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Define our product positioning — who is this for and why should they care?"
 - "Create a positioning statement and messaging hierarchy for [launch]"
 - "Help me articulate our differentiation vs [Competitor]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-positioning-doc.html

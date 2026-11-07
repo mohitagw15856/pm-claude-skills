@@ -239,3 +239,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Create a journey map for our onboarding experience"
 - "Map out the touchpoints and pain points for [customer type]"
 - "Design an experience map for [process or product]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/customer-journey-map.html

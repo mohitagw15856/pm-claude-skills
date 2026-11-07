@@ -105,3 +105,5 @@ what can be won: which existing customers, allies, or territory must be defended
 - "Prepare a bake-off or RFP."
 - "Entering a rival's market."
 - "Pick which fight to have."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sun-tzu-strategy-brief.html

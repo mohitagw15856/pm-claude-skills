@@ -100,3 +100,5 @@ End verbatim: *"以上为估算，不构成法律意见。各地规定和裁判�
 - "N+1 到底怎么算？"
 - "公司没提前通知就辞退我，是不是违法解除？"
 - "How much severance am I owed in Shanghai?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-severance-calculator.html

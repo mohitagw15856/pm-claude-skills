@@ -75,3 +75,5 @@ Procurement practice — requirement-driven scoping, weighted evaluation criteri
 - "Write a request for quotes."
 - "Write a tender for this project."
 - "Solicit and compare vendor proposals."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rfp-writer.html

@@ -94,3 +94,5 @@ telematics ☐ · camera footage ☐ · ELD/tachograph ☐ · photographs ☐ ·
 - "What evidence do I need to secure after an incident?"
 - "Write a post-accident investigation report"
 - "Our driver had an accident — what do I do first?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/driver-incident-investigation.html

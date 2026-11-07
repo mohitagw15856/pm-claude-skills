@@ -64,3 +64,5 @@ A short "before you submit, check you've…" version students can self-assess ag
 - "Create grading criteria."
 - "Design an assessment scoring guide."
 - "Make grading more objective."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rubric-builder.html

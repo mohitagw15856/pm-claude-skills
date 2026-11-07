@@ -62,3 +62,5 @@ Ask for (if not already provided), else infer and label:
 - "Duet pings me too much, write rules for when it may alert me"
 - "Define quiet hours and what can override them"
 - "What should count as urgent enough to interrupt me?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/interrupt-rules.html

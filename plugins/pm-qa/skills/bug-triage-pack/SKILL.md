@@ -73,3 +73,5 @@ Ask for these if not provided:
 - "Is this a P1? Here's the report."
 - "Clean up this bug for the backlog with repro steps and an owner."
 - "Normalize this customer bug report and check if it's a duplicate."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bug-triage-pack.html

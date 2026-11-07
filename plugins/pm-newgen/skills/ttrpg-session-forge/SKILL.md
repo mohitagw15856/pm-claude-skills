@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "My players derailed everything."
 - "I need an NPC on the fly."
 - "Help me start a campaign."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ttrpg-session-forge.html

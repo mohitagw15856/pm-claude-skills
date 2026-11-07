@@ -62,3 +62,5 @@ Source: [wttr.in / Open-Meteo] at [response timestamp] · rerun: `[the exact cur
 - "Will it rain today?"
 - "Forecast for a city."
 - "Get me weather data for a location."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/weather-now.html

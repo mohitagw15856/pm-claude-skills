@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "What should I gather from a new client before starting?"
 - "My projects start chaotically — help me onboard clients better."
 - "Give me a kickoff meeting agenda for a new client project."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/client-onboarding-kit.html

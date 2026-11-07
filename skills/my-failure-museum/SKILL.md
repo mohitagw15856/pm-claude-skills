@@ -60,3 +60,5 @@ Ask for these if not provided:
 - "Turn this failure into a lesson I'll remember."
 - "Do a blame-free post-mortem on my screw-up."
 - "Add this to my list of lessons — what's the rule?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/my-failure-museum.html

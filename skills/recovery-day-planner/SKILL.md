@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "What should I do on my day off to actually feel rested?"
 - "A recovery day that isn't just errands."
 - "I have a free Sunday and I'm mentally fried — help me use it well."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/recovery-day-planner.html

@@ -82,3 +82,5 @@ This is not legal or financial advice. Local advice centres, social services and
 - "I need a hardship grant for rent and food this month"
 - "How do I register for disaster assistance after the wildfire?"
 - "My crisis grant application was refused, what now?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/emergency-grant-application.html

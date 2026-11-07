@@ -70,3 +70,5 @@ Rules:
 - "I have no real experience. What can I put on my internship CV?"
 - "Help me with my CV for graduate schemes."
 - "帮我写一份校招简历。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/graduate-cv.html

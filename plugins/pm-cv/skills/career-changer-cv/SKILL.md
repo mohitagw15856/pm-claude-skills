@@ -64,3 +64,5 @@ Given a current role, years in it and a target field, **write the complete CV an
 - "My job titles don't match the jobs I want. How do I present myself?"
 - "Help me write a CV for a career change into data analysis."
 - "转行做产品经理，简历怎么写？"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/career-changer-cv.html

@@ -88,3 +88,5 @@ WARNING: For documentation and educational purposes only. All clinical content m
 - "Summarise this case in SOAP format"
 - "Write a case report for [clinical scenario]"
 - "Prepare an MDT summary for this patient"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/clinical-case-summary.html

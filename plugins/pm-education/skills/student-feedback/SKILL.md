@@ -56,3 +56,5 @@ If a rubric was given, map the feedback to its criteria.
 - "Write grading comments."
 - "Respond to an essay."
 - "Coach a learner."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/student-feedback.html

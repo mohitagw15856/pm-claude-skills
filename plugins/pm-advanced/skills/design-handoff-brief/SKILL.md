@@ -113,3 +113,5 @@ with the value.
 - "Create a design handoff."
 - "Brief a designer on a new feature."
 - "Translate a PRD into design requirements."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/design-handoff-brief.html

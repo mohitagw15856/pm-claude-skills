@@ -107,6 +107,35 @@ A registry serving this spec SHOULD expose, per skill: the raw `SKILL.md`, the f
 
 Unknown frontmatter keys under `metadata`, unknown `##` sections, and unknown files in the package directory are all *reserved for extension* — validators MUST NOT fail on them. Proposed extensions (attestation records, outcome/calibration records, i18n variants) are tracked in this repository's issues; extensions that prove out are folded into the next minor spec revision.
 
+Two extensions have proved out and are documented here. Both are optional; a validator MUST accept a skill that carries neither.
+
+### 9.1 Permission manifest (`metadata.permissions`)
+
+A skill that expects an agent to act, rather than only to write, SHOULD declare what it needs:
+
+```yaml
+metadata:
+  permissions:
+    tools: [browser, screenshot]   # capabilities the skill expects; [] for drafting-only skills
+    approval: always               # always | never: must a human approve before the skill acts?
+```
+
+- `tools` is a list of capability names. Recommended vocabulary: `browser`, `screenshot`, `filesystem-read`, `filesystem-write`, `shell`, `network`, `payments`, `email`, `calendar`. Unknown names are allowed.
+- `approval: always` means a host MUST obtain a human's consent before running the skill's Execution block. `never` means the skill only produces text and needs no gate. The default when absent is `never`.
+- Hosts that honour the manifest: this repo's local and hosted MCP servers return it from `get_skill`, and `run_skill` refuses an `approval: always` skill unless the caller passes `approved: true`.
+
+### 9.2 Typed contract (`schemas/skills/<name>.json`)
+
+A skill MAY ship a machine-readable contract beside the package: a JSON document with an `inputs` JSON Schema (what the skill needs) and an `outputs` JSON Schema (the structured shape of what it produces). The shape of that file is fixed by [schemas/contract.schema.json](schemas/contract.schema.json):
+
+```json
+{ "skill": "prd-template", "version": 1,
+  "inputs":  { "type": "object", "properties": { "feature_name": { "type": "string" } }, "required": ["feature_name"] },
+  "outputs": { "type": "object", "properties": { "title": { "type": "string" } }, "required": ["title"] } }
+```
+
+Contracts let an orchestrator validate what it passes in, and parse what comes back, without reading the prose. Registries SHOULD expose the contract next to the skill; this repo serves it at `/schemas/skills/<name>.json`, inside `skills.json`, and from the MCP tool `get_skill_contract`. The `version` integer is bumped when the contract changes shape.
+
 ---
 
 *Maintained in [pm-claude-skills](https://github.com/mohitagw15856/pm-claude-skills). To propose a change, open an issue titled `spec: …`. The spec versions independently of the library.*

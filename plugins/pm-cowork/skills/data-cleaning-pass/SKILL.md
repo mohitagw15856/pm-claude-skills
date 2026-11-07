@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Clean this export."
 - "Why is my pivot double-counting?"
 - "Prep this data for analysis."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-cleaning-pass.html

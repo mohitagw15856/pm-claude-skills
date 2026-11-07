@@ -72,3 +72,5 @@ Commands that prove a fresh install works: start, wait for health, hit the healt
 - "Write a SELF_HOSTING.md with HTTPS, backups and upgrades."
 - "Package this Node and Postgres project for home-lab users."
 - "Give me a one-command self-host setup and an env var table."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/self-host-packager.html

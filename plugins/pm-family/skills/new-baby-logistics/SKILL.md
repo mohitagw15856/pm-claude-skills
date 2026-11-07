@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "What admin do I need to sort before the baby comes?"
 - "What does a newborn actually need vs. what's marketing?"
 - "Help me plan parental leave and benefits before the due date."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/new-baby-logistics.html

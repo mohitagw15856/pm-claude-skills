@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "Build an end-of-day routine."
 - "My evenings are ruined by open loops."
 - "How do I stop checking one more time?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/shutdown-ritual.html

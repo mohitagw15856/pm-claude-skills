@@ -34,7 +34,7 @@ KDP reaches far more readers than Lulu and costs nothing to list. The catch is t
 > Optional: enrol in **KDP Select** only if you want Kindle exclusivity perks — not needed for a paperback, and it would restrict where else you can sell, so skip it here.
 
 ## The Operator's Deck (cards)
-- **Cards:** the deck builder (`scripts/build-deck.mjs`, shipped in #133) already renders per-skill cards with QR codes; `node docs/print/build-covers.mjs --deck` lays them out 9-up on A4 + singles at 63×88mm (poker standard) for print services.
+- **Cards:** `node docs/print/build-covers.mjs --deck` lays per-skill cards out 9-up on A4 + singles at 63×88mm (poker standard) for print services.
 - **Route — MakePlayingCards.com / printerstudio:** upload the singles PDF, 54-card deck (the 50 production skills + 4 arena cards), ~$12/deck at qty 1, ~$6 at 50. The QR on every card lands on that skill's playground page — the deck is a distribution channel disguised as a gift.
 
 ## House rules for physical goods

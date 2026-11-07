@@ -303,3 +303,5 @@ Conway's Law: the architecture of a system mirrors the communication structure o
 - "Define service boundaries."
 - "Design a microservices architecture."
 - "Plan a strangler-fig migration."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/microservices-decomposition.html

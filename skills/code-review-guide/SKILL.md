@@ -70,3 +70,5 @@ Senior code-review practice (Google's engineering review guidelines): prioritize
 - "Review code."
 - "Give PR feedback."
 - "Review this change."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/code-review-guide.html

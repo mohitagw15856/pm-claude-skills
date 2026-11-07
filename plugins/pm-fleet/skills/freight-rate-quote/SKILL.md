@@ -99,3 +99,5 @@ Transit time: [days] · Reload position at destination: [strong / weak — typic
 - "Should we take this load at this rate?"
 - "Why is this lane losing money?"
 - "How do I price detention so we actually get paid?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/freight-rate-quote.html

@@ -76,3 +76,5 @@ Work through four passes, in order:
 - "Check a tender for gaps."
 - "Compare sub quotes."
 - "Vet a schedule of values before award."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bid-tender-review.html

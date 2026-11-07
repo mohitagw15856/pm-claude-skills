@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Simulate a security review."
 - "Why do enterprise deals stall?"
 - "Get ready for vendor assessment."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-procurement-gauntlet.html

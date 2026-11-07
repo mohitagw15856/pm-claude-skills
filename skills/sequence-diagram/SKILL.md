@@ -75,3 +75,5 @@ UML sequence diagramming (lifelines, sync/async messages, alt fragments), expres
 - "Draw the auth handshake."
 - "What calls what in what order?"
 - "Diagram this integration."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sequence-diagram.html

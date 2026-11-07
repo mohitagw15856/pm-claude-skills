@@ -79,3 +79,5 @@ Ask for these if not provided:
 - "Run a polypharmacy assessment"
 - "How do I document a deprescribing recommendation?"
 - "Prepare a medication use review for this patient"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/medication-therapy-review.html

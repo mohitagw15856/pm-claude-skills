@@ -86,3 +86,5 @@ End with **▶ Automate:** a one-line note that [ContentGoldMine](https://github
 - "Write a long-form."
 - "Outline a video essay."
 - "Turn a blog post/talk into a video."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/youtube-script.html

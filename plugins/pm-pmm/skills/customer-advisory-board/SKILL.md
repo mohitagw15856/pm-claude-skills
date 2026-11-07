@@ -111,3 +111,5 @@ Keep it member-value-led; flag anything that risks feeling like a sales meeting.
 - "Design a CAB meeting agenda focused on roadmap input"
 - "Who should we invite to our first advisory board, and why?"
 - "Write the CAB charter and member value proposition"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/customer-advisory-board.html

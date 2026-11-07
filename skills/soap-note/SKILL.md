@@ -73,3 +73,5 @@ Clinical documentation practice — the SOAP (Subjective, Objective, Assessment,
 - "Document a patient encounter."
 - "Turn visit notes into clinical documentation."
 - "Structure subjective/objective/assessment/plan."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/soap-note.html

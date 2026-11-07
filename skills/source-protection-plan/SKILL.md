@@ -59,3 +59,5 @@ The risks that remain after all mitigations, stated plainly, and the recommendat
 - "How do I protect a whistleblower's identity?"
 - "Assess the risk of exposing my source."
 - "We have leaked documents: how do we protect who sent them?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/source-protection-plan.html

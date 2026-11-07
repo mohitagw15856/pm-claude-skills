@@ -92,3 +92,5 @@ Ask for these if not provided:
 - "How do I stop the same problems happening at every event?"
 - "Capture lessons learned from our launch event"
 - "What should we change for next year's gala?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/post-event-debrief.html

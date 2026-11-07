@@ -83,3 +83,5 @@ One question at a time. After each answer: 用时, then the feedback below.
 - "综合分析题总是没话说，怎么组织？"
 - "我报的是街道办岗位，应急应变题怎么答？"
 - "Practise a Chinese civil service structured interview with me."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-civil-exam-interview.html

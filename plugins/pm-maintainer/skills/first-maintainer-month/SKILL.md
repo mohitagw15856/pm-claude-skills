@@ -127,3 +127,5 @@ the moments docs can't pre-answer; [[changelog-generator]] and
 - "My repo is getting attention."
 - "I just open-sourced something."
 - "Set up my project properly."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/first-maintainer-month.html

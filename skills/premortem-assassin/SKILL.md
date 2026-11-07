@@ -59,3 +59,5 @@ Attack through every one; report survival honestly (a plan that "fails" all twel
 - "Run a premortem on our launch."
 - "How will this migration fail?"
 - "Attack this strategy before we commit."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/premortem-assassin.html

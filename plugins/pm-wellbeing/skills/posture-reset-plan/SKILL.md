@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "My shoulders are really rounded, what should I do?"
 - "Desk setup and exercises to stop hunching."
 - "Simple daily routine to improve my posture."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/posture-reset-plan.html

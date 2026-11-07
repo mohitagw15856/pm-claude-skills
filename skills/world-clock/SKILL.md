@@ -63,3 +63,5 @@ Source: [timeapi.io / worldtimeapi] · rerun: `[exact curl]`
 - "Convert 3pm my time to Tokyo."
 - "Find a meeting slot across time zones."
 - "What's the UTC offset somewhere?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/world-clock.html

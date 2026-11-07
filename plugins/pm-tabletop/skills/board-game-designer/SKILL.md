@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "Design a game about X."
 - "My game drags in the midgame."
 - "How do I playtest this?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/board-game-designer.html

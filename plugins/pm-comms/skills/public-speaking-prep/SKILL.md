@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "How do I structure a persuasive presentation?"
 - "I get terrible nerves speaking — help me manage them for a talk."
 - "Prepare me for the Q&A after my presentation."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/public-speaking-prep.html

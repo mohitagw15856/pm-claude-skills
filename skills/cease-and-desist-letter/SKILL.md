@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Someone's posting defamatory reviews about my business — draft a C&D."
 - "A competitor copied my content — cease and desist letter, please."
 - "Draft a letter demanding a harasser stop, with a deadline."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cease-and-desist-letter.html

@@ -101,3 +101,5 @@ Do not invent prices, limits, or guarantees — mark unknowns `[to confirm]`.
 - "Improve our pricing tiers so buyers pick the right one"
 - "Write a pricing FAQ that handles overage and cancellation questions"
 - "Name and describe a Free, Pro, and Enterprise plan for [product]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pricing-page-copy.html

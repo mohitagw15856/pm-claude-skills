@@ -71,3 +71,5 @@ Accounts-receivable practice — staged dunning sequences that escalate professi
 - "Chase an overdue invoice."
 - "Write a payment reminder."
 - "Set up a dunning sequence."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/collections-email.html

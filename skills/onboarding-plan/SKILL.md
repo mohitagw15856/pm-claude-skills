@@ -103,3 +103,5 @@ New hire: Have the clarity, tools, support needed? What surprised you? What woul
 - "Create a 30/60/90 day plan for a new [role]"
 - "Write an onboarding plan for [name] starting as [role]"
 - "Build a first 90 days roadmap for our new hire"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/onboarding-plan.html

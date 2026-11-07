@@ -145,3 +145,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Plan a product launch."
 - "Write a GTM strategy."
 - "Define launch tiers."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/go-to-market-planner.html

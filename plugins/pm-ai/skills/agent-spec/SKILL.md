@@ -73,3 +73,5 @@ Tool-using / agentic design practice — bounded control loops, least-privilege 
 - "Define an agent's tools and guardrails."
 - "Scope what an agent is allowed to do."
 - "Write an agent spec/PRD."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-spec.html

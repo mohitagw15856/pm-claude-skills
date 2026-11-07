@@ -73,3 +73,5 @@ Fundraising practice — donor-centred case construction (need, solution, credib
 - "Write our fundraising case statement."
 - "Make the case for our capital campaign."
 - "Why should a donor give to us?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/case-for-support.html

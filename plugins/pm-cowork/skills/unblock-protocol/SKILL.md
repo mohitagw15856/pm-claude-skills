@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "I keep avoiding this task."
 - "How long should I struggle before asking?"
 - "Unblock my stalled project."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/unblock-protocol.html

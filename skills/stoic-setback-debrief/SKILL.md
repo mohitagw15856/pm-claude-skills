@@ -111,3 +111,5 @@ decision-journal line to log]
 - "I got torn apart in that meeting."
 - "Our launch failed and I can't stop thinking about it."
 - "Help me recover from this public mistake."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stoic-setback-debrief.html

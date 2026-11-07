@@ -60,3 +60,5 @@ Ask for these if not provided:
 - "Should I move cities? Weigh it properly."
 - "I'm stuck on this decision — give me different advisors' views and a call."
 - "Convene a decision panel on whether to start this business."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-panel.html

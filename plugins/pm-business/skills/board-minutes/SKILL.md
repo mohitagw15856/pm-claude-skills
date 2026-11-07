@@ -150,3 +150,5 @@ These minutes were approved by the board on [date] as an accurate record of the 
 - "Write governance minutes for this meeting."
 - "Turn this transcript into formal board minutes."
 - "Record the board's decisions and actions."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/board-minutes.html

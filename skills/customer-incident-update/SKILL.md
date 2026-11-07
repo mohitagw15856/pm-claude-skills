@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "Draft customer comms for the API downtime, identified stage."
 - "Post an incident notice for enterprise accounts."
 - "We've deployed a fix and are monitoring — write the update."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/customer-incident-update.html

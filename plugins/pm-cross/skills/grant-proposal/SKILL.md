@@ -108,3 +108,5 @@ Funder test: does this problem align with [funder] stated priorities? Make the c
 - "Write a grant proposal for [project] applying to [funder]"
 - "Help me write a funding application for [grant programme]"
 - "Turn these project notes into a grant proposal: [paste]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/grant-proposal.html

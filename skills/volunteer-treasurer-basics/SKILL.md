@@ -118,3 +118,5 @@ real budget.
 - "How do I do the accounts for our club?"
 - "What goes in the treasurer's report?"
 - "Inherits a shoebox of receipts."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/volunteer-treasurer-basics.html

@@ -91,3 +91,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Investigate a performance issue."
 - "Produce a health report."
 - "Assess product-market fit signals."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-health-analysis.html

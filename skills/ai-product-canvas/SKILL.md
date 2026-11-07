@@ -174,3 +174,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Evaluate LLM integrations."
 - "Design AI products."
 - "Assess AI readiness."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-product-canvas.html

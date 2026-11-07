@@ -82,3 +82,5 @@ Deterministic. Cadences: weekly/monthly/quarterly/yearly; output ranks by annual
 - "How much am I spending on subscriptions?"
 - "Help me cancel stuff."
 - "What recurring charges am I forgetting?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/subscription-audit.html

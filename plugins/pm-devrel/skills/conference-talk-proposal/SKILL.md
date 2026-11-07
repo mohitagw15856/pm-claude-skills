@@ -63,3 +63,5 @@ Conference CFP practice (clear promise, concrete takeaways, paced outline, the c
 - "Propose a talk."
 - "Write a session abstract."
 - "Help me get accepted at this conference."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/conference-talk-proposal.html

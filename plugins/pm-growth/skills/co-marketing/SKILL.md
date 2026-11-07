@@ -66,3 +66,5 @@ Partnership / co-marketing practice (audience-overlap fit, balanced value exchan
 - "Plan a joint campaign."
 - "Plan a co-branded webinar."
 - "Write partner outreach for an integration launch."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/co-marketing.html

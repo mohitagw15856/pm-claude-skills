@@ -53,3 +53,5 @@ Bugs, edge cases, or smells you noticed while reading — with the fix. (If it's
 - "Walk through a function."
 - "Understand an unfamiliar snippet."
 - "Onboard to a file."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/code-explainer.html

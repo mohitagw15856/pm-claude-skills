@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "My AI results are bland — what am I not telling it?"
 - "Help me brief the AI properly for this task."
 - "Build me a context block I can paste before my requests."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-context-primer.html

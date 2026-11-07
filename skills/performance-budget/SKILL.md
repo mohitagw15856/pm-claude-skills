@@ -290,3 +290,5 @@ When a breach is detected, work through this checklist in order:
 - "Define SLOs for latency."
 - "Create a performance baseline."
 - "Document performance regression policy."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/performance-budget.html

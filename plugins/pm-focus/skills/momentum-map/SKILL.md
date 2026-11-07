@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "I can't get going on anything. Give me small wins."
 - "Help me break out of this stuck feeling."
 - "I have no motivation — map me a way back into motion."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/momentum-map.html

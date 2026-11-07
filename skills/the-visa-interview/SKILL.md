@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "Simulate the consular interview."
 - "Why might my visa be denied?"
 - "Practice my student visa questions."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-visa-interview.html

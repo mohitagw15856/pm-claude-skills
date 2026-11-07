@@ -80,3 +80,5 @@ End with: *"This narrative is analytical support, not a binding decision. Author
 - "Document why we're writing a risk."
 - "Prepare a referral to a senior underwriter."
 - "Justify terms and exclusions on a submission."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/underwriting-narrative.html

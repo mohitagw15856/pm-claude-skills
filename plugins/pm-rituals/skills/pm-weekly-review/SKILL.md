@@ -139,3 +139,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Write a weekly update."
 - "Prepare for Monday planning."
 - "Review sprint health."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pm-weekly-review.html

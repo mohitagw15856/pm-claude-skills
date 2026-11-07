@@ -96,3 +96,5 @@ Define four families; every metric gets a threshold, a window, and an owner.
 - "What to log for an LLM app?"
 - "Design agent tracing."
 - "Define quality and cost monitors."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-observability-spec.html

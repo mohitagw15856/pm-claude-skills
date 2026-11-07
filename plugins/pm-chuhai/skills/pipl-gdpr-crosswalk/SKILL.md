@@ -74,3 +74,5 @@ End verbatim: *"This is a structured starting point, not legal advice. Data tran
 - "Compare PIPL and GDPR for our HR data flow from Shanghai to Dublin."
 - "个人信息保护法和 GDPR 有什么关键区别？"
 - "What do we need to transfer customer data out of China?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pipl-gdpr-crosswalk.html

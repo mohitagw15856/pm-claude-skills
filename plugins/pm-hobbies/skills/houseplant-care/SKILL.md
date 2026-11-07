@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "Peace lily keeps drooping even though I water it. Help."
 - "Brown crispy tips on my calathea — what am I doing wrong?"
 - "Is this plant safe for cats, and how often should I water it?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/houseplant-care.html

@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Outline before I write."
 - "Why do my docs get rewritten from scratch in review?"
 - "Get sign-off before drafting."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/outline-before-prose.html

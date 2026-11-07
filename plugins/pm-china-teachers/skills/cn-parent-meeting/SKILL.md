@@ -71,3 +71,5 @@ A short message for the 家长群 summarising the meeting, without any individua
 - "家长会 PPT 大纲和会后发在家长群的通知。"
 - "家长会上家长问为什么不公布排名，怎么回答？"
 - "Prepare a parent meeting speech for a Chinese secondary class."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-parent-meeting.html

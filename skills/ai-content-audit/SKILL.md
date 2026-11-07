@@ -80,3 +80,5 @@ The gate is a checklist with an owner, not a sentiment.
 - "Audit AI-written content quality."
 - "Explain why content engagement."
 - "Set a quality bar for AI-assisted publishing."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-content-audit.html

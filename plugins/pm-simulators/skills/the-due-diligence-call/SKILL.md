@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Stress-test my metrics before the raise."
 - "What will the acquirer's analyst ask?"
 - "Prep me for the DD call."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-due-diligence-call.html

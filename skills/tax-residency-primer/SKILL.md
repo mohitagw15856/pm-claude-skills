@@ -119,3 +119,5 @@ neighbors for business finances — but a professional owns the tax itself.
 - "Am I tax resident in [country]?"
 - "Do I pay tax in two countries?"
 - "What about tax?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tax-residency-primer.html

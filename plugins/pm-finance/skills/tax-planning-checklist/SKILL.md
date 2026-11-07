@@ -134,3 +134,5 @@ Based on the above, prioritise these before year-end:
 - "What tax reliefs should I consider as a [sole trader / limited company / individual]?"
 - "Review my tax efficiency before the end of the tax year"
 - "What should I check for my year-end tax planning?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tax-planning-checklist.html

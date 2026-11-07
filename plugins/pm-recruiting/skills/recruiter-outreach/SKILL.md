@@ -69,3 +69,5 @@ Candidate-sourcing practice — concise, candidate-centric personalization, bene
 - "Write candidate outreach for this role."
 - "Write a sourcing message."
 - "Write a follow-up sequence for candidates."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/recruiter-outreach.html

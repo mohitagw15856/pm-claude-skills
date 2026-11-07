@@ -66,3 +66,5 @@ Rules:
 - "I want to qualify for GS-13. Write my resume to the announcement."
 - "What am I missing in my federal resume?"
 - "Help me apply for a government job on USAJOBS."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/federal-resume.html

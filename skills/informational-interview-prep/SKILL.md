@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "How do I reach out for a coffee chat without it being weird?"
 - "I have a call with someone at a company I'm interested in — what do I ask?"
 - "Questions for an informational interview to help me break into a field."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/informational-interview-prep.html

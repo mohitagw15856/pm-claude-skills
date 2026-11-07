@@ -66,3 +66,5 @@ Rules:
 - "Which CV did I send to which company? Help me organise this."
 - "What should I follow up on this week?"
 - "帮我整理一下我投过的简历和进度。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/application-tracker.html

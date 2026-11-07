@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "Get a decision out of this discussion."
 - "Summarize where we landed."
 - "Why do our threads never conclude?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/thread-to-decision.html

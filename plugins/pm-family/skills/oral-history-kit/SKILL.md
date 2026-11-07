@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Interview my grandmother about her life."
 - "Record dad's stories before it is too late."
 - "Make a family history book."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/oral-history-kit.html

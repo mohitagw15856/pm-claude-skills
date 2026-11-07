@@ -81,3 +81,5 @@ End every output with a short **Assumptions and gaps** block: two to four bullet
 - "写一份给老板的月报，突出数据。"
 - "本周工作有点乱，帮我写周报，下周有个风险要提。"
 - "Write my weekly report in Chinese for my manager."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-weekly-report.html

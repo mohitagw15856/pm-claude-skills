@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "I got an eviction notice — is it valid and what do I do?"
 - "My landlord keeps entering without notice. Can they do that?"
 - "How do I get my deposit back when my landlord won't return it?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tenant-rights-explainer.html

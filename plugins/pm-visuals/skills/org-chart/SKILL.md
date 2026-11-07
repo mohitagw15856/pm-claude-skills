@@ -79,3 +79,5 @@ Organizational charting (reporting lines, spans of control, matrix relationships
 - "Show reporting lines."
 - "Visualize team structure."
 - "Map who reports to whom."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/org-chart.html

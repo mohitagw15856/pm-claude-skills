@@ -82,3 +82,5 @@ Patient billing-advocacy practice — itemized-bill auditing, EOB reconciliation
 - "Decode my hospital bill."
 - "What is this EOB saying?"
 - "Can I negotiate this bill?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/medical-bill-decoder.html

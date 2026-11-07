@@ -84,3 +84,5 @@ End every triage note with: *"This is analytical support for triage, not a cover
 - "Assess a new claim."
 - "Decide fast-track vs adjuster routing."
 - "Screen a claim for SIU referral."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/claims-triage.html

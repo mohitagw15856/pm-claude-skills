@@ -71,3 +71,5 @@ Secure code/design review practice (OWASP Top 10 & ASVS risk areas, severity-ran
 - "Do a security review?"
 - "Security-review a change/PR."
 - "Check a feature for vulnerabilities."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/security-review.html

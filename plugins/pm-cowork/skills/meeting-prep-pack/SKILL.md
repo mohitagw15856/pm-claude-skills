@@ -74,3 +74,5 @@ Ask for these if not provided:
 - "What should I know before this call?"
 - "I have 15 minutes before a big meeting."
 - "Help me not wing it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/meeting-prep-pack.html

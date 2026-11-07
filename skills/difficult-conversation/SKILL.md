@@ -69,3 +69,5 @@ Crucial Conversations (Patterson et al.) and Difficult Conversations (Stone, Pat
 - "Deliver bad news."
 - "Confront a colleague."
 - "Have a hard talk with a manager/report/peer."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/difficult-conversation.html

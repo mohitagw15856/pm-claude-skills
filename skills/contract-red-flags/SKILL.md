@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Are there red flags in this employment offer's fine print?"
 - "Explain the risky clauses in this service agreement."
 - "This NDA feels one-sided — what should I push back on?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/contract-red-flags.html

@@ -109,3 +109,5 @@ Mark anything unknown as `[to confirm]` rather than inventing claims or metrics.
 - "Write a rep-ready one-pager with talk track and objection handling"
 - "Create discovery questions and a demo flow for [product]"
 - "Arm the sales team to sell against [Competitor]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sales-enablement-kit.html

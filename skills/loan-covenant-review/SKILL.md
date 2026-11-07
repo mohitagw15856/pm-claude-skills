@@ -79,3 +79,5 @@ End with: *"This review is analytical support, not a credit or enforcement decis
 - "Check covenant headroom."
 - "Assess a potential covenant breach."
 - "Prepare a quarterly borrower monitoring review."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/loan-covenant-review.html

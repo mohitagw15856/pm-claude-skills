@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Should I move cities for this role? Make it a weighted decision."
 - "I'm torn between two apartments — help me choose."
 - "Make a real pro/con list and actually tell me what to pick."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-helper.html

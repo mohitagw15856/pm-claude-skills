@@ -77,3 +77,5 @@ what & why — 2–3 lines
 - "Describe this pull request from the actual diff."
 - "Draft the PR body against main and match our template."
 - "Document these changes for reviewers — read the diff first."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pr-description-live.html

@@ -65,3 +65,5 @@ A table for Word or WPS: A4 paper; 标题 in 2号小标宋体; 正文 in 3号仿
 - "这份通知的格式对吗？按 GB/T 9704 检查一下。"
 - "写一份给兄弟单位的函，商请协助调研。"
 - "Draft a Chinese official notice for our state-owned company."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-official-document.html

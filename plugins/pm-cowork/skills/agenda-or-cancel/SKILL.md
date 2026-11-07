@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Should this meeting happen?"
 - "Our meetings have no agendas."
 - "Cancel this meeting politely."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agenda-or-cancel.html

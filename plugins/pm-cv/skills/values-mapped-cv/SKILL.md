@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "Which of my achievements fit Atlassian's values?"
 - "Map my experience to this company's culture page."
 - "按照这家公司的价值观调整我的简历。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/values-mapped-cv.html

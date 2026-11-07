@@ -58,3 +58,5 @@ How the result shows on the December or January payslip and the 源泉徴収票,
 - "iDeCoと生命保険は年末調整でどう書く？"
 - "How do I fill in my year-end adjustment forms in Japan? I have two kids."
 - "我在日本上班，年末调整要交哪些表？"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/jp-year-end-adjustment.html

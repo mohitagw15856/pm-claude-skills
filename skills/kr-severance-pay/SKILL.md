@@ -68,3 +68,5 @@ The leaving date (퇴직일) is the day after the last day worked. Standard libr
 - "회사가 DC형 퇴직연금이래요. 퇴직금 계산이 다른가요?"
 - "퇴사한 지 한 달인데 퇴직금을 안 줘요. 어떻게 해야 해요?"
 - "How is severance calculated in Korea? I worked 18 months at 30 hours a week."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/kr-severance-pay.html

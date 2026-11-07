@@ -69,3 +69,5 @@ How a member contests an action: where to appeal, who reviews (not the acting mo
 - "Write a code of conduct for our forum."
 - "Overhaul moderation for our subreddit."
 - "Set up an enforcement ladder for our community."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/community-moderation-policy.html

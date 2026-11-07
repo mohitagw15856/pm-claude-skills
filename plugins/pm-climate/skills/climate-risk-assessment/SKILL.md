@@ -90,3 +90,5 @@ TCFD/ISSB and ESRS E1 climate-risk practice (physical/transition split, scenario
 - "Evaluate physical."
 - "Prepare TCFD/ESRS-style climate risk analysis."
 - "Assess how climate scenarios affect an asset."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/climate-risk-assessment.html

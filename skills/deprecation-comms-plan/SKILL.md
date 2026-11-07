@@ -74,3 +74,5 @@ The at-risk account list, who owns each, the CSM talking points, the "customer c
 - "Winding down."
 - "Plan a breaking change."
 - "Migrate customers off a legacy path."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/deprecation-comms-plan.html

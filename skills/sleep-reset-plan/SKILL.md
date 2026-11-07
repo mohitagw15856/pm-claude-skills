@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Build me a bedtime routine."
 - "My sleep schedule is a mess, how do I reset it?"
 - "I sleep 8 hours but still feel exhausted — what should I check?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sleep-reset-plan.html

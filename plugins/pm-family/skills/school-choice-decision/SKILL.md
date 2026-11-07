@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "Is the top-ranked school actually the best choice for my kid?"
 - "What should I ask when I visit a school?"
 - "Help me decide between a big school and a small one for my child."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/school-choice-decision.html

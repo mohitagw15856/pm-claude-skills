@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "I'm ending a retainer — how do I do it gracefully?"
 - "Give me a project closeout checklist."
 - "How do I turn a finished project into more work?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/client-offboarding.html

@@ -73,3 +73,5 @@ For the sales manager: margin at each term, the risks the seller carries under e
 - "帮我做一份英文报价单，有三个数量档。"
 - "FOB 和 FCA 有什么区别？我们走集装箱该用哪个？"
 - "Build an export quotation with a cost build-up for several Incoterms."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-trade-quotation.html

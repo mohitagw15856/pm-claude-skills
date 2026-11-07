@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "My heating costs are brutal — what actually helps?"
 - "What energy upgrades are worth the money?"
 - "Cheap ways to cut my electricity usage."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/home-energy-savings.html

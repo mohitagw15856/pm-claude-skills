@@ -173,3 +173,5 @@ For **recall**, answer then show your grounding:
 - "Set up a brain."
 - "Log a decision with provenance."
 - "Run a weekly brain review."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/professional-brain.html

@@ -70,3 +70,5 @@ Night shifts: [split] · Meals: [plan] · Visitors: [policy, verbatim] · Escala
 - "Help me prepare for a baby."
 - "What do I need to do before my due date?"
 - "Set up our parental leave plan."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/new-parent-logistics.html

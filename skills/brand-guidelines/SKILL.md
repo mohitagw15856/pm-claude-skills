@@ -92,3 +92,5 @@ JavaScript adds later — a partial sample, honestly labelled.
 - "Extract a brand kit from existing materials."
 - "Keep AI-produced artifacts on-brand."
 - "Write lightweight brand guidelines for a startup."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/brand-guidelines.html

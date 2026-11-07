@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "Organize my day around a 10am and a 2pm meeting."
 - "Turn this brain-dump into a realistic schedule."
 - "What should I actually get done today?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/plan-my-day.html

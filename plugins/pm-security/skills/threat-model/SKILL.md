@@ -70,3 +70,5 @@ Threat-modeling practice (STRIDE, trust boundaries, data-flow diagrams, risk-ran
 - "Do a security design review?"
 - "Document security risks."
 - "Apply STRIDE to a design."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/threat-model.html

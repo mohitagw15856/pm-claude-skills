@@ -80,3 +80,5 @@ Rules that apply everywhere:
 - "What should a German Lebenslauf look like? Do I need a photo?"
 - "Make my CV into a Japanese 履歴書 and 職務経歴書."
 - "帮我把简历改成国内的格式。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/country-cv-format.html

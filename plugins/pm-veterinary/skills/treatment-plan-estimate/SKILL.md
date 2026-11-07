@@ -62,3 +62,5 @@ What the owner is agreeing to, the deposit/authorization, and the decision point
 - "Prepare a treatment plan."
 - "Create an estimate for an owner."
 - "Have the cost conversation in a vet practice."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/treatment-plan-estimate.html

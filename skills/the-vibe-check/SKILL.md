@@ -123,3 +123,5 @@ for the operational half of "real app."
 - "Claude built my app: is it secure?"
 - "Harden my prototype before strangers use it."
 - "Vibe check my project."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-vibe-check.html

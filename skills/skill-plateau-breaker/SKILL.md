@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "I've been at the same level of Spanish for a year. Why?"
 - "How do I get better past this plateau in my guitar playing?"
 - "I practice a lot but I'm not improving anymore. Diagnose it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/skill-plateau-breaker.html

@@ -69,3 +69,5 @@ Conversion-copywriting practice — single conversion goal, problem-led structur
 - "Write our homepage copy."
 - "Write a product page."
 - "Write copy for our marketing site."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/landing-page-copy.html

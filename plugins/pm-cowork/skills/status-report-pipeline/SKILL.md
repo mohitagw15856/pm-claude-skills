@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Streamline our reporting chain."
 - "My Friday is spent chasing updates."
 - "Make the rollup write itself."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/status-report-pipeline.html

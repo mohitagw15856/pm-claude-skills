@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Help me sort out what I'm actually anxious about."
 - "I'm overwhelmed with worry, none of it is clear."
 - "Decompile my anxiety into something I can deal with."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-worry-decompiler.html

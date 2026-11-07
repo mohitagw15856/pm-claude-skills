@@ -3,7 +3,7 @@
   "version": "83.2.0",
   "type": "module",
   "mcpName": "io.github.mohitagw15856/pm-claude-skills",
-  "description": "1314 professional Agent Skills (SKILL.md) + subagents + slash commands for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes. It's a CLI, not a library: run `npx pm-claude-skills add --agent <tool>` to install into your AI tool — no `npm install` needed. Or try any skill free at https://mohitagw15856.github.io/pm-claude-skills/",
+  "description": "1320 professional Agent Skills (SKILL.md) + subagents + slash commands for Claude, ChatGPT, Gemini, Cursor, Codex & Hermes. It's a CLI, not a library: run `npx pm-claude-skills add --agent <tool>` to install into your AI tool — no `npm install` needed. Or try any skill free at https://mohitagw15856.github.io/pm-claude-skills/",
   "keywords": [
     "claude",
     "claude-code",
@@ -76,12 +76,11 @@
     "build:community": "node scripts/build-community.mjs",
     "build:og": "node scripts/build-og-images.mjs",
     "build:star": "node scripts/build-star-history.mjs",
-    "build:deck": "node scripts/build-deck.mjs",
     "build:show": "node scripts/build-morning-show.mjs",
     "grow": "node scripts/mine-gaps.mjs",
     "build:modelbench": "node scripts/build-modelbench.mjs",
     "skill-of-the-week": "node scripts/skill-of-the-week.mjs",
-    "check": "node scripts/skillcheck.mjs --strict && node scripts/check-a11y.mjs --check && node scripts/check-web-weight.mjs --check && node scripts/skill-dupes.mjs --check && node scripts/check-drift.mjs && node tests/lite-test.mjs && node scripts/check-injection.mjs && node scripts/rules-reviewed.mjs --check && node tests/teams-test.mjs && node tests/run-checks.mjs && node tests/setup-test.mjs && node scripts/build-catalogue.mjs --check && node scripts/build-contributors.mjs --check && node scripts/build-banner.mjs --check && node scripts/build-trust-numbers.mjs --check && node scripts/build-worked-examples.mjs --check && node scripts/build-ai-at-work-report.mjs --check && node scripts/build-evolution-log.mjs --check && node scripts/score-firm-predictions.mjs --check && node scripts/close-skill-cup.mjs --check && node scripts/build-overlays.mjs --check && node scripts/check-glossaries.mjs --check && node scripts/build-readme-onboarding.mjs --check && node scripts/build-conformance-badge.mjs --check && node scripts/build-exports.mjs && node scripts/build-workflows.mjs --check && node web/build-skills.mjs && node extension/sync-skills.mjs && cp web/skills.json python/pm_skills/skills.json && node scripts/build-samples.mjs && node scripts/build-skills-md.mjs && node tests/exports-lint.mjs && node tests/i18n-parity.mjs && node scripts/build-disambiguation.mjs && git diff --exit-code -- web/skills.json web/skills-index.json extension/skills.json python/pm_skills/skills.json web/samples.json SKILLS.md DISAMBIGUATION.md",
+    "check": "node web/build-skills.mjs && node extension/sync-skills.mjs && cp web/skills.json python/pm_skills/skills.json && node scripts/skillcheck.mjs --strict && node scripts/check-a11y.mjs --check && node scripts/check-web-weight.mjs --check && node scripts/skill-dupes.mjs --check && node scripts/check-drift.mjs && node tests/lite-test.mjs && node scripts/check-injection.mjs && node scripts/check-skill-schemas.mjs && node scripts/rules-reviewed.mjs --check && node tests/teams-test.mjs && node tests/run-checks.mjs && node tests/setup-test.mjs && node scripts/build-catalogue.mjs --check && node scripts/build-contributors.mjs --check && node scripts/build-banner.mjs --check && node scripts/build-trust-numbers.mjs --check && node scripts/build-worked-examples.mjs --check && node scripts/build-ai-at-work-report.mjs --check && node scripts/build-evolution-log.mjs --check && node scripts/score-firm-predictions.mjs --check && node scripts/close-skill-cup.mjs --check && node scripts/build-overlays.mjs --check && node scripts/check-glossaries.mjs --check && node scripts/build-readme-onboarding.mjs --check && node scripts/build-conformance-badge.mjs --check && node scripts/build-exports.mjs && node scripts/build-workflows.mjs --check && node scripts/build-samples.mjs && node scripts/build-skills-md.mjs && node tests/exports-lint.mjs && node tests/i18n-parity.mjs && node scripts/build-disambiguation.mjs && git diff --exit-code -- web/samples.json SKILLS.md DISAMBIGUATION.md",
     "improve": "node scripts/improve-skill.mjs",
     "eval:gen-cases": "node scripts/gen-eval-cases.mjs",
     "eval:all": "node scripts/gen-eval-cases.mjs && node evals/run-evals.mjs --cases evals/cases.full.json --models claude-haiku-4-5-20251001 --judge claude-haiku-4-5-20251001",
@@ -115,7 +114,7 @@
     "build:worked-examples": "node scripts/build-worked-examples.mjs",
     "build:ai-at-work": "node scripts/build-ai-at-work-report.mjs",
     "build:evolution": "node scripts/build-evolution-log.mjs",
-    "prepack": "node scripts/build-exports.mjs"
+    "prepack": "node web/build-skills.mjs && node scripts/build-exports.mjs && node scripts/build-skill-changelog.mjs"
   },
   "devDependencies": {
     "qrcode": "^1.5.4"

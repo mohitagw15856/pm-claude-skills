@@ -68,29 +68,6 @@ const PAGES = [
       });
       if (!ok) throw new Error('PMArtifacts renderer failed');
     } },
-  { url: 'spend.html', async check(p) {
-      await p.click('#sample'); await p.waitForTimeout(150);
-      const total = await p.locator('#mTotal').textContent();
-      if (!/\$\d/.test(total || '')) throw new Error('spend meter produced no total');
-      const rows = await p.locator('#tbody tr').count();
-      if (rows < 3) throw new Error('spend sample produced ' + rows + ' rows');
-    } },
-  { url: 'cowork.html', async check(p) {
-      const cards = await p.locator('.card').count();
-      if (cards < 10) throw new Error('cowork page has ' + cards + ' cards');
-    } },
-  { url: 'tokens.html', async check(p) {
-      // the sample session must produce a breakdown with computed crusher savings
-      await p.click('#sampleBtn'); await p.waitForTimeout(200);
-      const rows = await p.locator('#tbody tr').count();
-      if (rows < 5) throw new Error('sample produced ' + rows + ' rows');
-      const rec = await p.locator('#tbody').textContent();
-      if (!/context-crusher/.test(rec) || !/−\d+%/.test(rec)) throw new Error('no computed crusher recommendation');
-      const verdict = await p.locator('#verdict').textContent();
-      if (!/per 1,000 turns/.test(verdict || '')) throw new Error('verdict missing');
-      // cache-leak warning: sample includes a volatile piece above stable ones
-      if (!(await p.locator('.cachewarn').count())) throw new Error('cache warning missing');
-    } },
   { url: 'boardroom.html', async check(p) {
       await p.fill('#doc', 'x'.repeat(120));
       await p.click('#runBtn'); await p.waitForTimeout(300);
@@ -175,37 +152,18 @@ const PAGES = [
   { url: 'status.html', settle: 2500, async check(p) {
       if ((await p.locator('.vcard').count()) !== 4) throw new Error('vitals cards missing');
     } },
-  { url: 'fineprint.html', async check(p) {
-      await p.waitForFunction(() => window.__fineprintReady === 6, null, { timeout: 15000 });
-      await p.fill('#doc', 'THIS LEASE AGREEMENT between Landlord and Tenant: monthly rent, security deposit, premises, sublet prohibited.');
-      await p.waitForTimeout(300);
-      const v = await p.textContent('#verdict');
-      if (!/Lease/.test(v)) throw new Error('lease auto-detect failed: ' + v);
-    } },
   { url: 'semantic.html', async check(p) {
       await p.waitForFunction(() => window.__semanticReady > 500, null, { timeout: 15000 });
       await p.fill('#q', 'churn analysis');
       await p.waitForTimeout(400);
       if ((await p.locator('.hit').count()) < 1) throw new Error('keyword fallback returned no hits');
     } },
-  { url: 'skillify.html', async check(p) {
-      await p.waitForFunction(() => window.__skillifyReady === true, null, { timeout: 15000 });
-    } },
   { url: 'credential.html', async check(p) {
       await p.waitForFunction(() => window.__credentialReady === true, null, { timeout: 15000 });
-    } },
-  { url: 'authors.html', async check(p) {
-      await p.waitForFunction(() => window.__authorsReady > 500, null, { timeout: 15000 });
     } },
   { url: 'for/construction-managers.html', async check(p) {
       const n = await p.locator('.sk').count();
       if (n < 4) throw new Error('profession page rendered ' + n + ' skills');
-    } },
-  { url: 'museum.html', async check(p) {
-      await p.waitForFunction(() => window.__museumReady > 2000, null, { timeout: 15000 });
-      await p.fill('#q', 'average');
-      await p.waitForTimeout(300);
-      if ((await p.locator('.exhibit').count()) < 1) throw new Error('museum search returned nothing');
     } },
   { url: 'growth.html', async check(p) {
       await p.waitForFunction(() => window.__growthReady === true, null, { timeout: 15000 });
@@ -213,9 +171,9 @@ const PAGES = [
   { url: 'compare/vs-diy.html', async check(p) {
       if ((await p.locator('table tr').count()) < 4) throw new Error('comparison table missing');
     } },
-  { url: 'canvas.html' }, { url: 'agent.html' }, { url: 'studio.html' },
-  { url: 'brain.html' }, { url: 'ask.html' }, { url: 'daily.html' },
-  { url: 'jobs.html' }, { url: 'hub.html' }, { url: 'grade.html' },
+  
+  { url: 'brain.html' }, { url: 'daily.html' },
+  { url: 'grade.html' },
   { url: 'learn.html' }, { url: 'examples.html' },
   // NOTE: catalog/leaderboard/community/coverage are GENERATED pages
   // (gitignored) — they don't exist in a fresh checkout, so CI can't load

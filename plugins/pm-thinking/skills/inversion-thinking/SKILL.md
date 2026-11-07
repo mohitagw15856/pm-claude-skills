@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "Think about my fitness goal in reverse — how would I guarantee I quit?"
 - "How do I avoid screwing up this presentation?"
 - "Invert this problem for me."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/inversion-thinking.html

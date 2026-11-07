@@ -70,3 +70,5 @@ Given only the app and the date, **write the full check anyway**: default thresh
 - "Have my agent review Gusto before payday"
 - "Pre-payroll checklist"
 - "Tell me if this month's payroll looks wrong"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/payroll-eve-check.html

@@ -59,3 +59,5 @@ End with: **negotiation notes** — the 2–3 levers (usage rights, exclusivity,
 - "Land a sponsorship."
 - "Write a brand-deal email."
 - "Set creator rates."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/creator-media-kit.html

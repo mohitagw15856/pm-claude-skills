@@ -82,3 +82,5 @@ This is not legal advice. For citizenship or residence documents, a legal aid se
 - "My bag was stolen with my passport, ID and bank cards"
 - "How do I get a new ID when I have no ID to prove who I am?"
 - "Which documents do I replace first after the flood?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/lost-documents-replacement.html

@@ -111,3 +111,5 @@ This call is NOT successful if we only pitched and got "sounds interesting, send
 - "Prepare me for a discovery call with [company/contact]"
 - "Build a call brief for my meeting with [name] at [company]"
 - "What questions should I ask in a discovery call for [use case]?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/discovery-call-prep.html

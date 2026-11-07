@@ -74,3 +74,5 @@ Ask for (if not already provided):
 - "Write a revised role charter."
 - "What is my job now?"
 - "Plan capacity after AI adoption."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/role-redesign-for-ai.html

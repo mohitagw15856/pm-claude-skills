@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "Test wire-transfer controls."
 - "Run a social-engineering tabletop."
 - "Could we get CEO-frauded?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/deepfake-drill.html

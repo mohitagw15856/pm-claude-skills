@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Write a rebuttal for a payment dispute on a $400 order."
 - "Help me contest a customer chargeback and tell me if it's winnable."
 - "Respond to this friendly-fraud chargeback with the right evidence."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/chargeback-dispute-response.html

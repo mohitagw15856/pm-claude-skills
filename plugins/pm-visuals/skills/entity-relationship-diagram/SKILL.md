@@ -90,3 +90,5 @@ Data modeling (entity-relationship modeling, crow's-foot notation, normalization
 - "Model data."
 - "Show how tables/entities relate."
 - "Diagram a database."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/entity-relationship-diagram.html

@@ -76,3 +76,5 @@ Ask for these if not provided:
 - "Write down grandma's recipes."
 - "How much is some flour?"
 - "Make a family cookbook."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/family-cookbook-archivist.html

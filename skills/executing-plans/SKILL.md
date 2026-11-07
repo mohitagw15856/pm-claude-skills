@@ -60,3 +60,5 @@ A plan's value is realised or destroyed at execution time. The two failure modes
 - "Resume the plan from where we left off."
 - "Execute this plan and log each step."
 - "Follow the plan and tell me when it deviates."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/executing-plans.html

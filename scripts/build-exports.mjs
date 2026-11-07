@@ -70,6 +70,18 @@ const PLATFORMS = {
     render: ({ description, body }) =>
       `---\ntrigger: model_decision\ndescription: ${JSON.stringify(description)}\n---\n\n${body.trim()}\n`,
   },
+  copilot: {
+    label: 'GitHub Copilot — custom instructions (.instructions.md)',
+    dir: 'exports/copilot',
+    file: (s) => `${s.name}.instructions.md`,
+    groupByBundle: true,
+    // VS Code and github.com Copilot read `.github/instructions/*.instructions.md`.
+    // `applyTo` scopes a file; "**" plus a description lets Copilot pick the
+    // instruction by relevance. Copilot's coding agent also reads native SKILL.md
+    // from `.github/skills/`, which `npx pm-claude-skills add --agent copilot` installs.
+    render: ({ description, body }) =>
+      `---\napplyTo: "**"\ndescription: ${JSON.stringify(description)}\n---\n\n${body.trim()}\n`,
+  },
   aider: {
     label: 'Aider — conventions file (.md)',
     dir: 'exports/aider',

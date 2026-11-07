@@ -68,3 +68,5 @@ Structured-hiring practice — competency ratings anchored to evidence, calibrat
 - "Turn my interview notes into a candidate evaluation."
 - "Run the interview debrief."
 - "Summarise the feedback into a hire or no-hire call."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/candidate-scorecard.html

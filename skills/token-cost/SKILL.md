@@ -71,3 +71,5 @@ Deterministic, stdlib-only. Two heuristics (≈4 chars/token, ≈0.75 words/toke
 - "What does this context cost per call?"
 - "Is this optimization worth it?"
 - "Compare these two versions cost."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/token-cost.html

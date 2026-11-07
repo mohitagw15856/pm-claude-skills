@@ -84,3 +84,5 @@ Money says: [one honest sentence, both timescales] · Not modeled and often deci
 - "Daycare costs my whole salary."
 - "Should one of us stay home with the kids?"
 - "What does leaving work for five years really cost?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/daycare-vs-stay-home.html

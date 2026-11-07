@@ -113,3 +113,5 @@ this plan pre-commits to.
 - "Choose between AI agents/tools/copilots for a job."
 - "Formalizing an AI pilot."
 - "Which agent should we use for X?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-hiring-panel.html

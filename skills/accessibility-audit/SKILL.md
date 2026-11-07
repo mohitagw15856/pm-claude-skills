@@ -206,3 +206,5 @@ an inferred ratio is not an audit finding.
 - "Check WCAG compliance for [screen/component]"
 - "Give me an a11y audit of [UI description]"
 - "What accessibility issues does this design have?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/accessibility-audit.html

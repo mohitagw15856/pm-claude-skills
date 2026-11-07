@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "I focus better with someone there — help me work on this."
 - "Body-double me through cleaning my inbox."
 - "Sit with me while I write this, and keep me moving."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/body-doubling-partner.html

@@ -82,3 +82,5 @@ Closure criteria (for example no recurrence over three months or a set number of
 - "帮我把这个客诉整理成中英文 8D 报告。"
 - "D3 临时措施要写哪些内容？"
 - "Write an 8D report for a customer complaint about a dimension defect."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-8d-report.html

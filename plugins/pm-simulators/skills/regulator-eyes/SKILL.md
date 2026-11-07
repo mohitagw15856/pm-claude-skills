@@ -80,3 +80,5 @@ Judge claims by the *net impression on a reasonable consumer*, not the writer's 
 - "Read this like a regulator."
 - "Audit my landing page for claim risk."
 - "Is this ad compliant?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/regulator-eyes.html

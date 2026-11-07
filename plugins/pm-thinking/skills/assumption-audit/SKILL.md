@@ -61,3 +61,5 @@ Ask for these if not provided:
 - "Stress-test my thinking here — what if I'm wrong?"
 - "I'm sure this will work — what am I not questioning?"
 - "What hidden assumption could sink this?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/assumption-audit.html

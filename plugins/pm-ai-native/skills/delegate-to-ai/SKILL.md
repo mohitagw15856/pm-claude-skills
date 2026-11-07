@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "Where should I use AI in my work, and where shouldn't I?"
 - "Help me figure out what to delegate to AI vs keep doing myself."
 - "I want AI leverage without dropping the ball — what do I hand over?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/delegate-to-ai.html

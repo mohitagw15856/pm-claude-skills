@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "Do I even need AI for this, or is there a simpler tool?"
 - "Should I use ChatGPT for this or something more specialized?"
 - "There are too many AI tools — which one fits what I'm doing?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-tool-picker.html

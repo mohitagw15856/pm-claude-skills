@@ -346,3 +346,5 @@ go-licenses check ./... --allowed_licenses=MIT,Apache-2.0,BSD-2-Clause,BSD-3-Cla
 - "Check license compliance."
 - "Assess dependency health."
 - "Produce a vulnerability report."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dependency-audit.html

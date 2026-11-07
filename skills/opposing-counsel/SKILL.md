@@ -67,3 +67,5 @@ Drop the persona entirely. For each ☠️ and ⚠️ finding: the specific clau
 - "Read this like opposing counsel."
 - "How would the other side attack this agreement?"
 - "Find the weaknesses before they do."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/opposing-counsel.html

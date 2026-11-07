@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "Help me get going, my brain is a mess of tasks."
 - "Everything feels urgent. What do I do first?"
 - "I don't know where to start with any of this."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/where-do-i-start.html

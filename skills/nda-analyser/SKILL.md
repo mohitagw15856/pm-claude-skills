@@ -74,3 +74,5 @@ WARNING: This analysis is for informational purposes only and is not legal advic
 - "Review this confidentiality agreement"
 - "Is this NDA standard or unusual?"
 - "What should I negotiate in this mutual NDA?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/nda-analyser.html

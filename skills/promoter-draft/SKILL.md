@@ -66,3 +66,5 @@ Followed by a short note: the collision check (nearest three skills, why this di
 - "Promote 'release notes from git log' into a skill."
 - "Write the SKILL.md for the thing I keep asking for."
 - "Turn this repeated prompt into a proper skill."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/promoter-draft.html

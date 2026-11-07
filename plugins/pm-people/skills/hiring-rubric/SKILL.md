@@ -135,3 +135,5 @@ Suggest how to divide competencies across interview rounds to avoid repetition:
 - "Build an interview scorecard for [job title]"
 - "Give me structured interview questions for a [level] [role]"
 - "We're hiring a [role] — help me build an assessment framework"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hiring-rubric.html

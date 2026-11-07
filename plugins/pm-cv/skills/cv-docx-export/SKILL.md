@@ -68,3 +68,5 @@ Standard library only. It refuses to overwrite an existing file unless `--force`
 - "Export this CV to an ATS-safe docx."
 - "Make it US Letter, it's for a job in Boston."
 - "把我的简历导出成 Word 文件。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cv-docx-export.html

@@ -65,3 +65,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Analyse this competitor's price change."
 - "What does their new partnership signal?"
 - "Write this month's competitive intelligence report."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/competitor-signal-tracker.html

@@ -61,3 +61,5 @@ What's still open before this can publish, and a note that quotes should be conf
 - "Fact-check a piece."
 - "Verify claims before publishing."
 - "Do editorial verification."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/fact-check-pass.html

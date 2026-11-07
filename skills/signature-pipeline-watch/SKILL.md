@@ -66,3 +66,5 @@ Given only the app, **write the full watch anyway**: stuck after 3 working days,
 - "Have my agent watch DocuSign for me"
 - "Chase unsigned envelopes"
 - "Remind me about documents nobody has signed"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/signature-pipeline-watch.html

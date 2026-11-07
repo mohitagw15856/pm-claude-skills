@@ -138,3 +138,5 @@ Prioritised list of the 3 most impactful changes. Each should be actionable in t
 - "Review this Figma screen for usability issues"
 - "What's wrong with this user flow?"
 - "Do a heuristic evaluation of [screen/product]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/design-critique.html

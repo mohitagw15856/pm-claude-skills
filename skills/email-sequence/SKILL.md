@@ -64,3 +64,5 @@ Lifecycle email practice — one-goal-per-email sequences, value-before-ask, beh
 - "Write a welcome series for new users."
 - "Write a nurture drip."
 - "Write a re-engagement series."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/email-sequence.html

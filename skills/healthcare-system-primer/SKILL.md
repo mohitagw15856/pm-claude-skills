@@ -119,3 +119,5 @@ enrolled; [[perimenopause-navigator]]/[[diagnosis-limbo-kit]] for specific healt
 - "How does healthcare work in [country]?"
 - "Do I need health insurance in [country]?"
 - "I just moved and need to see a doctor."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/healthcare-system-primer.html

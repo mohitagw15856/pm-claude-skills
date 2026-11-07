@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "Turn this thread into a task list."
 - "Extract the action items from this email."
 - "I keep re-reading this thread."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/email-to-tasks.html

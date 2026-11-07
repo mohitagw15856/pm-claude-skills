@@ -60,3 +60,5 @@ Ask for these if not provided:
 - "Break down cleaning the garage so I can actually start."
 - "I keep avoiding this email. Help me just start it."
 - "Give me a first step so small I can't say no."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/task-to-first-step.html

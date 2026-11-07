@@ -145,3 +145,5 @@ Things to tackle in production but out of scope for this design session:
 - "Design a system."
 - "Answer a system design interview question."
 - "Architect a solution at scale."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/system-design-interview.html

@@ -71,3 +71,5 @@ Files written: `skills/<name>/evals.json`, `evals/cases.json` (+1 case)
 - "Write evals for release-notes-from-git-log."
 - "Does this description fire on the right prompts?"
 - "Run the third step of the promote loop."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/promoter-test.html

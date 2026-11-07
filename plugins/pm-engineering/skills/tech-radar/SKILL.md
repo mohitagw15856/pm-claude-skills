@@ -302,3 +302,5 @@ This log records every ring movement since the radar's first edition. Use it to 
 - "Create a tech radar."
 - "Evaluate the team's technology landscape."
 - "Establish a technology strategy."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tech-radar.html

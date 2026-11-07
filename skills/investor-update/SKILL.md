@@ -133,3 +133,5 @@ Hi [Investor names or "all"],
 - "Draft a monthly update for our investors based on these notes: [paste notes]"
 - "Help me write a board update for Q[N]"
 - "Write our Series A investor newsletter"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/investor-update.html

@@ -70,3 +70,5 @@ Localization / internationalization practice — the translate/adapt/rebuild mod
 - "Plan market entry localization."
 - "Prepare a localization brief."
 - "Figure out what to adapt for a new region."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/localization-brief.html

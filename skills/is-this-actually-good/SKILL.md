@@ -60,3 +60,5 @@ Ask for these if not provided:
 - "Rate this design honestly."
 - "Don't just say it's great. Is it?"
 - "How good is this really, on a real scale?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/is-this-actually-good.html

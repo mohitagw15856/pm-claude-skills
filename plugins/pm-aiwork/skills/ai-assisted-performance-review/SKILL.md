@@ -75,3 +75,5 @@ Ask for (if not already provided):
 - "Review someone whose work is heavily AI-assisted."
 - "Calibrating a team with uneven AI adoption."
 - "Write review criteria for the AI era."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-assisted-performance-review.html

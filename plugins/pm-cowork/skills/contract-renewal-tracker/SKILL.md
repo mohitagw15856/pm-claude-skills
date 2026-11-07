@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "We got auto-renewed again."
 - "Do we have to decide on this vendor?"
 - "Set up renewal management."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/contract-renewal-tracker.html

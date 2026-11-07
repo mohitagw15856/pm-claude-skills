@@ -125,3 +125,5 @@ scams; [[grief-admin]] and [[stoic-setback-debrief]] for the human aftermath;
 - "My house flooded/burned."
 - "What do I do after the disaster?"
 - "We just evacuated."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/after-the-disaster.html

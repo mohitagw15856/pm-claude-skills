@@ -74,3 +74,5 @@ E-commerce trust & CRO practice — transparent, plain-language returns policies
 - "Write our refund and exchange policy."
 - "Write the store returns page."
 - "Set fair rules for returns."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/return-refund-policy.html

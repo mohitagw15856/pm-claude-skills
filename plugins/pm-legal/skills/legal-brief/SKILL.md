@@ -78,3 +78,5 @@ WARNING: This draft requires review by a qualified legal professional. It does n
 - "Write a legal brief arguing [position]"
 - "Summarise the legal position on [topic]"
 - "Write a letter before action for [situation]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/legal-brief.html

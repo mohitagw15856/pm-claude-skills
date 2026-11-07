@@ -179,3 +179,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Write API reference docs."
 - "Create a developer guide."
 - "Turn a raw spec/Postman collection into documentation."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/api-docs-writer.html

@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "What should I do with my money first? I'm overwhelmed."
 - "Pay down my student loan or invest?"
 - "Help me prioritize: debt, emergency fund, or retirement?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/money-priorities-order.html

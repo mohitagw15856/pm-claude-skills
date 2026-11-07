@@ -79,3 +79,5 @@ End with: *"This brief is analytical support, not a credit, provisioning, or cap
 - "Write the loan book review."
 - "Write the quarterly portfolio quality update."
 - "Brief the credit risk committee."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/lending-risk-brief.html

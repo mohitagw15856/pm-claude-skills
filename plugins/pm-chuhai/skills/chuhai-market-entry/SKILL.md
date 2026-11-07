@@ -88,3 +88,5 @@ End with: *"Regulatory points are a starting checklist, not legal advice. Confir
 - "帮我做一个进入美国市场的出海计划。"
 - "Plan our expansion from China into Europe for the first year."
 - "出海需要注意哪些合规问题？"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/chuhai-market-entry.html

@@ -65,3 +65,5 @@ Donor-stewardship practice — gratitude-first, impact attribution, storytelling
 - "Write a thank-you email to our donors."
 - "Write a gift acknowledgement."
 - "Write our supporter newsletter."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/donor-update.html

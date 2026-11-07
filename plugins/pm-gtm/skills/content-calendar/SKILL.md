@@ -64,3 +64,5 @@ For each "High Priority" post, add one repurposing suggestion — e.g. "Turn thi
 - "Create a social media plan for [product launch]"
 - "Give me a monthly editorial calendar for my newsletter"
 - "Plan my LinkedIn content for the next month"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/content-calendar.html

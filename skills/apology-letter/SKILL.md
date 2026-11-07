@@ -67,3 +67,5 @@ Effective-apology practice — specific acknowledgement, unconditional responsib
 - "Say sorry to a customer."
 - "Make amends after a mistake."
 - "Respond to a complaint with an apology."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/apology-letter.html

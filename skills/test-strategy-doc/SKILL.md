@@ -143,3 +143,5 @@ Testing is complete when:
 - "Write a test strategy."
 - "Define QA approach."
 - "Plan testing for a feature."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/test-strategy-doc.html

@@ -67,3 +67,5 @@ Ship / iterate / re-run, plus what to monitor post-launch or what the follow-up 
 - "Write an A/B test readout."
 - "Interpret test data."
 - "Decide whether to ship a variant."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ab-test-readout.html

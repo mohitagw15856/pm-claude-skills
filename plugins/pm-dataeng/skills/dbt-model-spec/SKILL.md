@@ -67,3 +67,5 @@ dbt / analytics-engineering best practice — explicit grain, ref/source lineage
 - "Plan a data transformation."
 - "Write a staging/intermediate/mart model spec."
 - "Define dbt tests for a table."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dbt-model-spec.html

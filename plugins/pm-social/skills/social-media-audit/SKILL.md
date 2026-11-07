@@ -233,3 +233,5 @@ The fastest way to improve the score by 10+ points:
 - [ ] Do not use competitor benchmarks that are not based on real data — fabricated benchmarks invalidate the competitive gap analysis
 - [ ] Do not audit content mix based on what should have been posted — analyse what was actually posted during the audit period
 - [ ] Do not sequence the action plan by effort alone — sequence by impact × effort so the highest-value actions come first
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/social-media-audit.html

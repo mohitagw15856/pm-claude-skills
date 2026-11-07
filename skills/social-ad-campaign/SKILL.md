@@ -334,3 +334,5 @@ Run structured tests — change one variable at a time:
 - [ ] Do not launch without completing the tracking setup checklist — campaigns without verified pixel firing cannot be optimised or attributed
 - [ ] Do not run A/B tests changing more than one variable at a time — multi-variable tests produce uninterpretable results
 - [ ] Do not allocate equal budget across TOFU, MOFU, and BOFU — BOFU audiences convert at higher rates and deserve proportionally more budget per conversion
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/social-ad-campaign.html

@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "Our calendar is all standing syncs."
 - "Which meetings should die?"
 - "Reset the team's meeting load."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/standing-meeting-audit.html

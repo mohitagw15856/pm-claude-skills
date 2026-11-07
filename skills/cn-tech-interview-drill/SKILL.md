@@ -67,3 +67,5 @@ Questions one at a time. After each answer: 追问 until the edge is found, then
 - "Java 八股文按优先级帮我列一下，附追问。"
 - "帮我准备项目深挖，项目是一个订单系统。"
 - "Run a mock technical interview for a Chinese tech company, frontend role."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-tech-interview-drill.html

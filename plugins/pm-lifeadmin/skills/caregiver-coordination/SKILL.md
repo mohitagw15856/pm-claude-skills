@@ -73,3 +73,5 @@ Swap protocol: [how] · Escalation: [symptom → who → then who; 911-first lis
 - "My siblings and I need to split caregiving."
 - "Organize care for a sick family member."
 - "Set up a care schedule."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/caregiver-coordination.html

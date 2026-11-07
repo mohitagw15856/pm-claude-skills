@@ -81,3 +81,5 @@ Input shape in the script docstring. The script computes vesting month-by-month 
 - "Which offer pays more over time?"
 - "Model my equity vesting."
 - "Is the startup offer actually worth it?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/offer-comparison.html

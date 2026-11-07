@@ -76,3 +76,5 @@ Ask for these if not provided:
 - "Rehearse a bargaining session."
 - "Practice negotiating with management."
 - "We are heading into pay talks."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-union-table.html

@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "What should I do in Rome in 3 days with kids?"
 - "Help me plan a relaxed week in the mountains."
 - "Weekend city break — give me a day-by-day and a packing list."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/trip-planner.html

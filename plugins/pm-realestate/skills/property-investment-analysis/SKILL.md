@@ -78,3 +78,5 @@ Real-estate investment analysis practice — NOI/cap-rate/cash-on-cash modelling
 - "Analyze a rental property."
 - "Evaluate a real-estate investment."
 - "Run the numbers on an investment property."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/property-investment-analysis.html

@@ -62,3 +62,5 @@ Managing-up practice — Drucker on managing the boss, Gabarro & Kotter's "Manag
 - "Get buy-in from your manager."
 - "Escalate without overstepping."
 - "Prepare to raise something with leadership."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/managing-up.html

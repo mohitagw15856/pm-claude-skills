@@ -79,3 +79,5 @@ Given only the agent and its apps, **write the full runbook anyway**, ordering r
 - "Make a kill switch plan for my Duet"
 - "My agent just emailed a client something it shouldn't have"
 - "Emergency plan for my always-on AI assistant"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-kill-switch-plan.html

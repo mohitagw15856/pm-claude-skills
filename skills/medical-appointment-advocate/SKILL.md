@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "How do I advocate for my dad at his specialist visit?"
 - "I feel rushed and dismissed at appointments — how do I get heard?"
 - "What should I confirm before leaving a medical appointment?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/medical-appointment-advocate.html

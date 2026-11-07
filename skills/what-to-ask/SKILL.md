@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "I'm about to buy X what do I check."
 - "What questions for the landlord/dealer/contractor/HR?"
 - "What am I forgetting?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/what-to-ask.html

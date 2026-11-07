@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "Set up stage payments for this kitchen job."
 - "Write the payment terms for my quotes."
 - "The customer won't pay the next stage: what do I say?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stage-payment-shield.html

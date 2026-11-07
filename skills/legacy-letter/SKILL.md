@@ -115,3 +115,5 @@ professional-decisions cousin; [[personal-bio]] shares the voice-mining craft.
 - "Write a legacy letter."
 - "Help me write an ethical will."
 - "Write a letter for my partner to read later."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/legacy-letter.html

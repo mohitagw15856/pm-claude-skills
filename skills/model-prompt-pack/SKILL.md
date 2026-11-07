@@ -73,3 +73,5 @@ The exact sentence for the viewer, for example: "This 3D model is illustrative. 
 - "Plan the 3D assets for a jet engine explorer."
 - "Give me a prompt per part for generating a plant cell in 3D."
 - "I need labelled 3D models for a volcano cross-section. Sources must be cited."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/model-prompt-pack.html

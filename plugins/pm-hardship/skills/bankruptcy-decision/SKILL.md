@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "What actually happens if I file, and what do I lose?"
 - "What are the alternatives to bankruptcy?"
 - "I'm drowning in debt — how do I decide what to do?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bankruptcy-decision.html

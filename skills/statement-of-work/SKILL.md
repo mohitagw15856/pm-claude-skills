@@ -68,3 +68,5 @@ Statement-of-work / contracting practice — explicit scope + exclusions, accept
 - "Write the scope of work for this project."
 - "Turn what we agreed into a project agreement."
 - "Stop this project creeping in scope."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/statement-of-work.html

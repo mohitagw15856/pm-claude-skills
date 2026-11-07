@@ -574,3 +574,5 @@ Run this checklist quarterly and before any major infrastructure change:
 - "Create recovery runbooks."
 - "Define RTO/RPO targets."
 - "Prepare for a disaster recovery game day."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/disaster-recovery-plan.html

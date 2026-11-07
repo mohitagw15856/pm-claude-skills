@@ -63,3 +63,5 @@ Ask for (if not already provided):
 - "Decide something async."
 - "Replace a decision meeting with a document."
 - "Run an Amazon-style written decision process."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/async-decision-memo.html

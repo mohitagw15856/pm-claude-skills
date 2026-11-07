@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "Organize settling an estate."
 - "What's the probate process roughly?"
 - "Track estate assets and debts."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/estate-settlement-organizer.html

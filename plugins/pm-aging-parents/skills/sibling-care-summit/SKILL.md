@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "My brother does nothing."
 - "We keep fighting about dad's care."
 - "Before a parent's health forces it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sibling-care-summit.html

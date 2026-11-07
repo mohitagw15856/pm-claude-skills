@@ -68,3 +68,5 @@ What the next steps need from this brief: the parts list it implies (for model-p
 - "Write an image prompt for a UI mock of an interactive jet engine viewer."
 - "Plan the screens for a museum touch-screen 3D model of a volcano."
 - "Brief for a 3D cell explorer app, phone first."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/explorer-interface-brief.html

@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "What's the difference between financial and health power of attorney?"
 - "Which type of POA do I need for someone with dementia?"
 - "How do I make a power of attorney valid, and how do I revoke one?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/power-of-attorney-explainer.html

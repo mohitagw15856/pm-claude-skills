@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "What did we actually learn from the calls?"
 - "Turn 12 transcripts into insights."
 - "Are these themes real?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/interview-synthesis.html

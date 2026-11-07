@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Synthesize this folder for the new lead."
 - "Turn these 20 docs into a brief."
 - "What does all this material actually say?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/brief-from-pile.html

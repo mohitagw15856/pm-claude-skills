@@ -227,3 +227,5 @@ List each transformation in execution order. For ELT pipelines, this is the dbt 
 - "Build an ETL spec for our user activity data"
 - "Document our dbt pipeline from raw events to the analytics mart"
 - "Spec out the pipeline that feeds the executive dashboard"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-pipeline-spec.html

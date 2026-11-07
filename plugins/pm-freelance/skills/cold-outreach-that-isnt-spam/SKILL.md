@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Cold LinkedIn message to a prospect — make it not cringe."
 - "I need a pitch to reach out to local businesses."
 - "Write a follow-up sequence for prospects who didn't reply."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cold-outreach-that-isnt-spam.html

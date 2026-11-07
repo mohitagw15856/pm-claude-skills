@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "How do I screen out bad clients?"
 - "This prospect can't tell me what they want — should I be worried?"
 - "Help me decline a client politely."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/client-red-flags.html

@@ -71,3 +71,5 @@ Day 0: send via official intake, keep proof · Day ~10: polite status call, note
 - "Write a records request."
 - "My doctor's office won't send my records."
 - "What records should I collect?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/medical-records-request.html

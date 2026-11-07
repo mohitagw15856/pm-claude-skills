@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "Give me a hydration routine for a desk job."
 - "How do I get more energy without more caffeine?"
 - "What should I eat for lunch to avoid the afternoon slump?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hydration-and-energy-plan.html

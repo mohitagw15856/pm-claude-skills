@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Hand over the model to the team."
 - "Make this sheet survivable without me."
 - "We inherited a workbook nobody understands."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/spreadsheet-handover.html

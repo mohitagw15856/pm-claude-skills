@@ -73,3 +73,5 @@ The facts you assumed, each marked to confirm.
 - "The school wants a birth certificate we lost in the move"
 - "My daughter doesn't speak English yet, will they put her in a lower year?"
 - "Which office do I contact to find a school place for my son?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/newcomer-school-enrolment.html

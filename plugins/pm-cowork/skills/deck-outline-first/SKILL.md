@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Structure my deck."
 - "Why does my deck feel like a data tour?"
 - "Get sign-off before I build slides."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/deck-outline-first.html

@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "My phone number and relatives are showing up online — help."
 - "I want to shrink my digital footprint for safety reasons."
 - "Are data-removal services worth it, or can I do it myself?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-broker-removal.html

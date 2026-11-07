@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Someone changed my account's password and recovery email."
 - "I forgot my password and don't have my authenticator anymore."
 - "Got back into my account — how do I make sure they can't return?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/account-recovery-plan.html

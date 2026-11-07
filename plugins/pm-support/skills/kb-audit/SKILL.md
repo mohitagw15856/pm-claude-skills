@@ -66,3 +66,5 @@ Knowledge-base / support-content practice — ticket-driver-led gap analysis, co
 - "Find documentation gaps."
 - "Reduce ticket volume with better docs."
 - "Prioritise what to write/fix."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/kb-audit.html

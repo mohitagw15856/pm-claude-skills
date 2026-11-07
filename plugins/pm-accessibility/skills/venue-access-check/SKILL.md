@@ -33,3 +33,5 @@ Ask for (if not already provided), else infer and label:
 - "Will this place work for my wheelchair?"
 - "Check if this venue is accessible."
 - "Is this restaurant/office actually accessible?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/venue-access-check.html

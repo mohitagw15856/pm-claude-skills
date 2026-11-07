@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Our wiki is a graveyard."
 - "Who maintains the knowledge base?"
 - "Set up knowledge management that lasts."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/knowledge-gardening.html

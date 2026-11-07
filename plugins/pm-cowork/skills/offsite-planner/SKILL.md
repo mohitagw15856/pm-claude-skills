@@ -63,3 +63,5 @@ Ask for these if not provided:
 - [ ] Do not treat remote attendees as speakerphones — hybrid inclusion is designed or it's exclusion with a call link
 - [ ] Do not let commitments live in the room's memory — owner, date, note, or it was a retreat
 - [ ] Do not skip the weighting conversation — mismatched expectations turn good offsites into "wastes of time" in the retelling
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/offsite-planner.html

@@ -88,3 +88,5 @@ _Not an incident report — for full context on any open item, follow the linked
 - "Handoff pager to <name>"
 - "End of shift summary"
 - "Weekly on-call handover"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/oncall-handoff.html

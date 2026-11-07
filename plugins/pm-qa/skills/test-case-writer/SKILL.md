@@ -69,3 +69,5 @@ Test-design practice — requirement-derived cases with boundary-value and negat
 - "Write test scenarios for checkout."
 - "Build a test suite for this feature."
 - "Derive tests from these acceptance criteria."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/test-case-writer.html

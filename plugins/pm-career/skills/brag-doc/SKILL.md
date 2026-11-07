@@ -69,3 +69,5 @@ Brag-document practice (Julia Evans) and impact-first accomplishment tracking.
 - "Log a win."
 - "Track accomplishments."
 - "Prep evidence for a review/promotion."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/brag-doc.html

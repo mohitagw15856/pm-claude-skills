@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "Help me find comparables to appeal my property assessment."
 - "What evidence do I need to lower my property tax?"
 - "When's the deadline to appeal my assessment and how do I file?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/property-tax-appeal.html

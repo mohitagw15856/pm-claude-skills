@@ -63,3 +63,5 @@ Ask for (if not already provided), else infer and label:
 - "Show me exactly what the agent is about to send"
 - "Set up a send-approval gate for my drafts"
 - "Review this outgoing reply: recipients, attachments, what it commits me to"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/send-approval-check.html

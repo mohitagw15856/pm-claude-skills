@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "I don't want to lose my photos if my phone dies — what do I do?"
 - "Is my current backup actually safe from ransomware?"
 - "What's the 3-2-1 backup rule and how do I set it up?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/backup-strategy.html

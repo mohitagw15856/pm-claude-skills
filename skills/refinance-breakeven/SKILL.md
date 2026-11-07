@@ -80,3 +80,5 @@ Standard amortization, simple-savings breakeven (cumulative payment delta vs upf
 - "Does a refi break even?"
 - "Compare my loan to a refi offer."
 - "Is this refinance worth the closing costs?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/refinance-breakeven.html

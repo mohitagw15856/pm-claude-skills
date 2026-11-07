@@ -59,3 +59,5 @@ What data is collected, how often, and what counts as on-track vs needs-revision
 - "Draft special-education goals."
 - "List accommodations."
 - "Write a present-levels statement."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/iep-goal-support.html

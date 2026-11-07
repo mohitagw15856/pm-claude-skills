@@ -66,3 +66,5 @@ Good Strategy / Bad Strategy (Richard Rumelt) — diagnosis, guiding policy, coh
 - "Articulate a strategy."
 - "Make the case for a strategic direction."
 - "Align the team on where to focus."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/strategy-memo.html

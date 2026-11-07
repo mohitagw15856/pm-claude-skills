@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "Help me build a social life from scratch."
 - "I have acquaintances but no real friends — how do I go deeper?"
 - "Making friends feels awkward and hard. Help."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/make-friends-as-an-adult.html

@@ -65,3 +65,5 @@ Guest follow-up (care, not admission), corrective action to prevent recurrence, 
 - "Log an accident."
 - "Document a slip/fall."
 - "Record an incident for insurance/legal."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/guest-incident-log.html

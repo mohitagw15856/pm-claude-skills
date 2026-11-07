@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "My landlord is keeping my deposit."
 - "Dispute these deposit deductions."
 - "Write a deposit demand letter."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/security-deposit-recovery.html

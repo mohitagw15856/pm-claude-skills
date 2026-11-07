@@ -75,3 +75,5 @@ A short excerpt of each generated file (three records each) and the command that
 - "Create realistic seed data for screenshots, no real people."
 - "Write a seeded script that fills my sandbox with consistent fake data."
 - "I need a no-signup demo. Make the data tell a story."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/demo-data-generator.html

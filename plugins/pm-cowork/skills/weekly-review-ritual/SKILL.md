@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "Set up a weekly review."
 - "My weeks just happen to me."
 - "I keep dropping threads between weeks."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/weekly-review-ritual.html

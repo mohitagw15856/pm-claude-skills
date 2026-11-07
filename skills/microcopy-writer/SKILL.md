@@ -67,3 +67,5 @@ UX writing practice — action-oriented, expectation-setting microcopy, voice co
 - "Write button and CTA text."
 - "Write tooltips and helper text."
 - "Make this UI wording clearer."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/microcopy-writer.html

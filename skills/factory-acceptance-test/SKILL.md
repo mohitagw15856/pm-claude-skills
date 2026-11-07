@@ -79,3 +79,5 @@ From lot size + Level II, derive the sample-size code letter and accept/reject n
 - "Set AQL levels."
 - "Prepare for a factory acceptance."
 - "Document FAT results."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/factory-acceptance-test.html

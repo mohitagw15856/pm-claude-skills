@@ -77,3 +77,5 @@ LLM application security practice — layered controls, prompt-injection defence
 - "Define LLM guardrails."
 - "Prevent prompt injection."
 - "Harden a chatbot/agent against misuse."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/llm-guardrails-spec.html

@@ -74,3 +74,5 @@ Given only the apps, **write the full watch anyway**: default floor of six weeks
 - "Watch Stripe and Xero and tell me if something's wrong"
 - "Daily cash check for my Duet"
 - "Alert me about disputes and failed payments"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cash-watch.html

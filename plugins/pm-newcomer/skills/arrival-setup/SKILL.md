@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "What do I do first after arriving?"
 - "Set up my life in [country]."
 - "I can't open a bank account without an address but can't rent without a bank."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/arrival-setup.html

@@ -83,3 +83,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Calculate sample size."
 - "Interpret test results."
 - "Assess whether an experiment was successful."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/experiment-designer.html

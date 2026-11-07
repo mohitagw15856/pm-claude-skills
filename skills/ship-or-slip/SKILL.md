@@ -93,3 +93,5 @@ End every output with a short **Assumptions and gaps** block: two to four bullet
 - "Should we ship on Friday or slip a week?"
 - "Go/no-go for the 3.2 release — here's the state."
 - "Two blockers open, rollback untested — call it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ship-or-slip.html

@@ -112,3 +112,5 @@ conversation.
 - "Can I get out of jury duty?"
 - "How do I defer jury service?"
 - "What happens at jury duty?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/jury-duty-navigator.html

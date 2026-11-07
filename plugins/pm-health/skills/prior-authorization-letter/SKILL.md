@@ -76,3 +76,5 @@ Utilization-management correspondence practice — medical-necessity argumentati
 - "Write a letter of medical necessity."
 - "Appeal a denied medication."
 - "Get this procedure approved by the insurer."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prior-authorization-letter.html

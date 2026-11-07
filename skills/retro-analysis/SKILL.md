@@ -84,3 +84,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Analyse sprint data."
 - "Prepare a retro brief."
 - "Turn sprint metrics into discussion prompts."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/retro-analysis.html

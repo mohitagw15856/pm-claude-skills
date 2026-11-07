@@ -69,3 +69,5 @@ Ask for (if not already provided):
 - "Make a document fully sourced."
 - "Ground a draft in the attached material."
 - "Produce something for audiences that will check."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/evidence-lock.html

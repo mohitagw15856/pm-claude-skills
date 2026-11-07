@@ -70,3 +70,5 @@ Day-of decision-maker: **[name]** (authority: under $[X] / under 30 min — deci
 - "Make our wedding day timeline."
 - "Who tells the vendors where to go?"
 - "How do we not deal with problems at our own wedding?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wedding-logistics-planner.html

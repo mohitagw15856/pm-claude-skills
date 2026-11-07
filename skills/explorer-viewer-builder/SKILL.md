@@ -66,3 +66,5 @@ Binary checks to run in a browser: the model appears; each part in the list high
 - "Turn this parts list into a single-file Three.js explorer."
 - "Add an exploded view and quiz mode to my 3D model page."
 - "Make a GLB viewer that works on phones, no build step."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/explorer-viewer-builder.html

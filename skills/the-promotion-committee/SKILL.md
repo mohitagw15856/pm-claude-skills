@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Simulate the promo committee."
 - "Stress-test my promotion packet."
 - "Why did my promo get rejected?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-promotion-committee.html

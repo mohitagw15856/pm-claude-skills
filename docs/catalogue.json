@@ -1,7 +1,7 @@
 {
   "generated_by": "scripts/build-catalogue.mjs",
-  "bundles": 153,
-  "skills": 1292,
+  "bundles": 154,
+  "skills": 1298,
   "items": [
     {
       "bundle": "pm-2027",
@@ -4176,6 +4176,41 @@
         {
           "name": "two-worlds-translator",
           "description": "Bridge the gap between your home culture and your adopted one — explain your immigrant parents to your partner (and vice versa), navigate the code-switch that exhausts you, and handle the specific collisions (holidays, money, marriage expectations, 'when are you coming home') without betraying either side."
+        }
+      ]
+    },
+    {
+      "bundle": "pm-india",
+      "description": "Working life in India: file the right GST returns on time, withdraw EPF, calculate gratuity, choose between the old and new income tax regimes, decode the four labour codes, and settle a notice period and full and final payment",
+      "category": "productivity",
+      "install": {
+        "claude_code": "/plugin install pm-india@pm-claude-skills",
+        "any_tool": "npx pm-claude-skills add --bundle pm-india"
+      },
+      "skills": [
+        {
+          "name": "in-epf-withdrawal-guide",
+          "description": "Guide an Indian employee through an EPF withdrawal: whether a partial advance or a full settlement applies, the eligibility by reason (job loss, medical, home purchase, marriage, education, retirement), the UAN, KYC and bank seeding prerequisites, TDS on early withdrawal, the online claim steps and what to check before submitting."
+        },
+        {
+          "name": "in-gratuity-calculator",
+          "description": "Estimate gratuity under India's Payment of Gratuity Act when someone leaves a job: eligibility (the five-year rule and its exceptions), the 15/26 formula on last drawn basic plus dearness allowance, the half-year rounding rule, the tax-free ceiling and what to verify with the employer."
+        },
+        {
+          "name": "in-gst-return-explainer",
+          "description": "Explain which GST returns an Indian business must file and when: GSTR-1, GSTR-3B, the annual GSTR-9, the composition scheme's CMP-08 and GSTR-4, and the QRMP quarterly option, with what goes in each, how late fees and interest work, and a filing calendar for the user's registration type."
+        },
+        {
+          "name": "in-income-tax-regime-chooser",
+          "description": "Compare India's old and new income tax regimes for a salaried or freelance taxpayer from their own figures: which deductions and exemptions are lost under the new regime, a side-by-side tax computation, the break-even deduction level, when the choice can be switched, and what to confirm against the current Finance Act."
+        },
+        {
+          "name": "in-labour-codes-decoder",
+          "description": "Decode India's four labour codes (Wages, Industrial Relations, Social Security, OSH) for an employee, HR lead or small employer: what changes in the wage definition, hours and overtime, leave, gratuity, fixed-term and contract work, with the caveat that commencement and state rules must be checked."
+        },
+        {
+          "name": "in-notice-period-fnf-settlement",
+          "description": "Work through an Indian employee's exit money: the notice period from the appointment letter and standing orders, notice pay and buy-out, what a full and final settlement must contain (last salary, leave encashment, bonus, gratuity, reimbursements, deductions and recoveries), the usual timelines, a reconciliation checklist and a polite escalation email if the settlement is late."
         }
       ]
     },

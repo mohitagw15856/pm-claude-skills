@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "What would I need if my house burned down?"
 - "Build a grab-and-go document kit."
 - "Back up our important papers before a disaster."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/emergency-doc-kit.html

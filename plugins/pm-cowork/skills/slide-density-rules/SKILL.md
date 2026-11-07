@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "How much text per slide?"
 - "Fix this wall-of-bullets deck."
 - "Make this readable from the back of the room."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/slide-density-rules.html

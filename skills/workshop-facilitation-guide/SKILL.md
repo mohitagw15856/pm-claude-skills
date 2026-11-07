@@ -154,3 +154,5 @@ End every session with:
 - "Plan a facilitated session to [outcome]"
 - "Help me run a [type] workshop with my team"
 - "Create a facilitation guide for [topic]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/workshop-facilitation-guide.html

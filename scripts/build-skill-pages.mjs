@@ -287,6 +287,11 @@ function page(s) {
     headline: `${s.title} — AI Agent Skill`,
     description: s.description,
     url,
+    mainEntityOfPage: url,
+    sameAs: [`https://github.com/mohitagw15856/pm-claude-skills/blob/main/skills/${s.name}/SKILL.md`],
+    inLanguage: 'en',
+    isAccessibleForFree: true,
+    license: 'https://github.com/mohitagw15856/pm-claude-skills/blob/main/LICENSE',
     author: { '@type': 'Person', name: 'Mohit Aggarwal' },
     isPartOf: { '@type': 'WebSite', name: 'PM Claude Skills', url: BASE },
     keywords: ['Claude', 'AI agent skill', 'SKILL.md', s.title, s.plugin].join(', '),
@@ -387,9 +392,9 @@ for (const s of skills) writeFileSync(join(outDir, `${s.name}.html`), page(s));
 const today = new Date().toISOString().slice(0, 10);
 const urls = [
   `${BASE}/`, `${BASE}/find.html`, `${BASE}/catalog.html`, `${BASE}/examples.html`, `${BASE}/leaderboard.html`,
-  `${BASE}/coverage.html`, `${BASE}/canvas.html`, `${BASE}/firm.html`, `${BASE}/boardroom.html`, `${BASE}/verify.html`, `${BASE}/gym.html`, `${BASE}/gauntlet.html`, `${BASE}/xray.html`, `${BASE}/grade.html`, `${BASE}/benchmark.html`, `${BASE}/hiring.html`, `${BASE}/academy.html`, `${BASE}/campaign.html`, `${BASE}/reckoning.html`, `${BASE}/handbook.html`, `${BASE}/status.html`,
+  `${BASE}/coverage.html`, `${BASE}/firm.html`, `${BASE}/boardroom.html`, `${BASE}/verify.html`, `${BASE}/gym.html`, `${BASE}/gauntlet.html`, `${BASE}/xray.html`, `${BASE}/grade.html`, `${BASE}/hiring.html`, `${BASE}/academy.html`, `${BASE}/campaign.html`, `${BASE}/reckoning.html`, `${BASE}/handbook.html`, `${BASE}/status.html`,
   ...skills.map((s) => `${BASE}/skill/${s.name}.html`),
-  `${BASE}/museum.html`, `${BASE}/growth.html`,
+  `${BASE}/growth.html`,
   ...(existsSync(join(root, 'web', 'compare'))
     ? readdirSync(join(root, 'web', 'compare')).filter((f) => f.endsWith('.html')).map((f) => `${BASE}/compare/${f}`)
     : []),

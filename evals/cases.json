@@ -1676,6 +1676,30 @@
     {
       "skill": "agent-project-file",
       "input": "I want an agent to spend two weeks producing a competitor landscape report on UK meal-kit companies: 8 competitors, pricing, positioning, a final 10-page report. I'll check in on Mondays and Thursdays."
+    },
+    {
+      "skill": "in-gst-return-explainer",
+      "input": "I run a small design studio in Pune, regular GST registration, turnover around 70 lakh, mostly B2B services. Which returns do I file, when, and can I move to QRMP?"
+    },
+    {
+      "skill": "in-epf-withdrawal-guide",
+      "input": "I resigned in July and have been unemployed since. 6 years of service across two companies, old PF not transferred, balance about 4.2 lakh. Can I withdraw everything and will there be TDS?"
+    },
+    {
+      "skill": "in-gratuity-calculator",
+      "input": "Joined 3 March 2017, last day 20 October 2024, last basic 48,000 and DA 6,000. Resigned. How much gratuity am I owed?"
+    },
+    {
+      "skill": "in-income-tax-regime-chooser",
+      "input": "Salaried, Bengaluru, gross 16.5 lakh, HRA 3 lakh, rent 28,000 a month, 80C 1.5 lakh, 80D 25,000, NPS own 50,000, no home loan. AY 2026-27. Old or new regime?"
+    },
+    {
+      "skill": "in-labour-codes-decoder",
+      "input": "I am an HR manager at a 120-person manufacturing unit in Gujarat. Decode the four labour codes for us and tell me what changes in wages, overtime, leave and contract labour."
+    },
+    {
+      "skill": "in-notice-period-fnf-settlement",
+      "input": "Notice period 90 days, served 45, buy-out clause says basic for unserved days. Gross 1.2 lakh, basic 50,000, 18 days leave balance, 3.5 years service. What should my F&F look like?"
     }
   ]
 }

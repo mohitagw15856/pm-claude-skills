@@ -124,3 +124,5 @@ By the end of this session, participants will be able to:
 - "Design a 60-minute session on [subject]"
 - "Create a training module on [skill]"
 - "Plan a workshop on [topic] for [group]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/teaching-lesson-plan.html

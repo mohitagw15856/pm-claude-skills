@@ -59,3 +59,5 @@ Finance on cost and budget, legal on contract terms, the department head on prio
 - "外部デザイナーへの発注、稟議を通したい。比較検討も入れて。"
 - "Write a ringi-sho in Japanese to approve buying 20 laptops."
 - "帮我写一份日本公司的稟議書，申请参加一个展会。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/jp-ringisho.html

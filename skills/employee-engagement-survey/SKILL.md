@@ -117,3 +117,5 @@ eNPS: Below 0 = Concerning / 0-30 = Good / 30-70 = Great / 70+ = Excellent
 - "Create an employee engagement survey for our team"
 - "Design a pulse survey for [topic]"
 - "Analyse these engagement survey results: [paste]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/employee-engagement-survey.html

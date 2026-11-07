@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "My delegations come back wrong."
 - "Write a brief for this task I'm giving away."
 - "How much detail do I give?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/delegation-brief.html

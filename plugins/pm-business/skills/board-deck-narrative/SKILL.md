@@ -167,3 +167,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Help me create the narrative for our board presentation"
 - "Write the slide structure for our annual board review"
 - "Design a board deck for [specific context — e.g. fundraise update]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/board-deck-narrative.html

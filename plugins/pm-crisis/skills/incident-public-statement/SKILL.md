@@ -69,3 +69,5 @@ Incident communication practice — prompt acknowledgement, factual transparency
 - "Write a press statement about the breach."
 - "Write our official response to the outage."
 - "Respond publicly to this controversy."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/incident-public-statement.html

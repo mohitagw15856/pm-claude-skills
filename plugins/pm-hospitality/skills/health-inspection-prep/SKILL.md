@@ -60,3 +60,5 @@ How to receive the inspector: cooperate, don't argue, know where the logs and pe
 - "Do a food-safety self-audit?"
 - "Avoid critical violations."
 - "Get ready for the health department."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/health-inspection-prep.html

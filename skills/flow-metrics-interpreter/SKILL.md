@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "Why does our delivery feel slow? Here are our flow numbers."
 - "Read our Kanban metrics and suggest experiments."
 - "Our WIP is high and cycle time is climbing — what do we do?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/flow-metrics-interpreter.html

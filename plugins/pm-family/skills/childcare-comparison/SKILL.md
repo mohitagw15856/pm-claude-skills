@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "What should I ask when visiting a daycare?"
 - "How do I choose childcare on a tight budget?"
 - "We need part-time care with backup for sick days — what fits?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/childcare-comparison.html

@@ -69,3 +69,5 @@ Behavioral economics & persuasion research (Cialdini's principles, Kahneman fram
 - "Apply psychological triggers."
 - "Reduce friction."
 - "Understand why something does/doesn't convert."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/marketing-psychology.html

@@ -63,3 +63,5 @@ Interview when: the request is one sentence for a multi-hour deliverable · the 
 - "Ask me questions first."
 - "Make me a dashboard."
 - "Work out what I actually need."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/interview-me.html

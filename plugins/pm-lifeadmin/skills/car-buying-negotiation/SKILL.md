@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "The dealer keeps talking monthly payments — how do I handle that?"
 - "Which dealership add-ons should I say no to?"
 - "How do I negotiate my trade-in and the price separately?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/car-buying-negotiation.html

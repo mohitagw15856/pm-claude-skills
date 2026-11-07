@@ -61,3 +61,5 @@ Ask for these if not provided:
 - "What's an idea for this problem that nobody else would suggest?"
 - "Think outside the box on how to spend my Saturday."
 - "Skip the textbook answer — what's the interesting take?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-third-answer.html

@@ -3,107 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
-<title>Auto-Agent — describe a goal, it picks & runs the right skills</title>
-<meta name="description" content="Describe a goal and the agent plans which professional skills to chain, then runs them in order — each step's output feeding the next. Powered by your own Claude key." />
-<link rel="stylesheet" href="styles.css" />
-<script src="https://cdn.jsdelivr.net/npm/marked@12.0.0/marked.min.js" integrity="sha384-NNQgBjjuhtXzPmmy4gurS5X7P4uTt1DThyevz4Ua0IVK5+kazYQI1W27JHjbbxQz" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/dompurify@3.0.9/dist/purify.min.js" integrity="sha384-3HPB1XT51W3gGRxAmZ+qbZwRpRlFQL632y8x+adAqCr4Wp3TaWwCLSTAJJKbyWEK" crossorigin="anonymous"></script>
-<script src="providers.js"></script>
-<style>
-  .agent { max-width: 860px; margin: 0 auto; padding: 16px 22px 70px; }
-  .goal { width: 100%; box-sizing: border-box; padding: 13px 15px; border-radius: 12px; background: var(--panel); border: 1px solid var(--border); color: var(--text); font-family: inherit; font-size: 15px; }
-  .lead { color: #c7cfda; font-size: 15.5px; }
-  .plan { border: 1px dashed var(--border); border-radius: 12px; padding: 8px 14px; margin: 14px 0; background: rgba(217,119,87,.06); }
-  .plan ol { margin: 8px 0; padding-left: 20px; } .plan li { margin: 5px 0; }
-  .plan .why { color: var(--muted); font-size: 13px; }
-  .stage { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 12px 16px; margin: 12px 0; }
-  .stage h3 { margin: 0 0 6px; font-size: 14.5px; } .stage .num { background: var(--accent); color: #0f1115; font-weight: 700; font-size: 12px; padding: 1px 8px; border-radius: 99px; margin-right: 6px; }
-  .arrow { text-align: center; color: var(--muted); }
-</style>
+<title>Moved to Playground | PM Skills</title>
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/index.html" />
+<meta http-equiv="refresh" content="0; url=index.html" />
+<style>body{font-family:system-ui,sans-serif;margin:0;padding:24px;background:#0d1117;color:#e6edf3}a{color:#58a6ff}@media (prefers-color-scheme:light){body{background:#fff;color:#1f2328}a{color:#0969da}}</style>
 </head>
 <body>
-<header class="topbar">
-  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
-    <div class="brand-text"><h1>Auto-Agent</h1><p class="tagline">Describe a goal — it picks the skills and runs them.</p></div></div>
-  <div class="key-area">
-    <select id="provider" title="Model provider"><option value="gemini">Gemini (free key)</option><option value="webllm">In-browser (no key)</option><option value="anthropic">Claude</option><option value="openai">OpenAI</option><option value="ollama">Ollama (local)</option></select>
-    <div class="key-field"><input id="apiKey" type="password" placeholder="sk-ant-… (your Anthropic API key)" autocomplete="off" / aria-label="sk-ant-… (your Anthropic API key)"><button id="keyToggle" type="button" class="show-toggle">Show</button></div>
-    <select id="model" title="Model"><option value="claude-fable-5">Fable 5 ✨</option><option value="claude-opus-4-8">Opus 4.8</option><option value="claude-sonnet-4-6" selected>Sonnet 4.6</option><option value="claude-haiku-4-5-20251001">Haiku 4.5</option></select>
-  </div>
-</header>
-<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
-<div class="key-note">🔒 Your key stays in this browser. The agent plans a skill chain from your goal, then runs it.</div>
-
-<div class="agent">
-  <p class="lead">Don't know which skills to use? Just say what you're trying to do. The agent picks the right ones from all 244 and runs them as a chain — each step building on the last.</p>
-  <textarea id="goal" class="goal" rows="3" placeholder="e.g. We're launching a referral program for activated B2B users next quarter — help me take it from idea to launch." aria-label="e.g. We're launching a referral program for activated B2B users next quarter — help me…"></textarea>
-  <div class="actions" style="margin:12px 0; display:flex; gap:10px; align-items:center; flex-wrap:wrap">
-    <button id="runBtn" class="primary" type="button">✨ Plan &amp; run</button>
-    <button id="stopBtn" class="ghost" type="button" hidden>Stop</button>
-    <span id="status" class="status"></span>
-  </div>
-  <div id="plan" class="plan" hidden></div>
-  <div id="stages"></div>
-</div>
-
-<script src="i18n.js"></script>
-
-<script src="a11y.js"></script>
-<script src="nav.js"></script>
-<script>
-const API_URL='https://api.anthropic.com/v1/messages';
-const el=(id)=>document.getElementById(id);
-let SKILLS=[], byName={}, controller=null;
-PMProviders.initProviderUI();
-el('keyToggle').addEventListener('click',()=>{const f=el('apiKey');const s=f.type==='password';f.type=s?'text':'password';el('keyToggle').textContent=s?'Hide':'Show';});
-el('runBtn').addEventListener('click',run);
-el('stopBtn').addEventListener('click',()=>controller&&controller.abort());
-(async()=>{ try{ SKILLS=(await (await fetch('skills.json')).json()).skills; byName=Object.fromEntries(SKILLS.map(s=>[s.name,s])); }catch(e){ setStatus('Could not load skills.',true); } })();
-function setStatus(t,e){const s=el('status');s.textContent=t;s.className='status'+(e?' err':'');}
-
-async function callAPI({key,model,system,user,node,signal}){
-  return PMProviders.stream({key,model,system,userMessage:user,signal,onDelta:(a)=>{if(node)node.innerHTML=DOMPurify.sanitize(marked.parse(a));}});
-}
-
-async function run(){
-  const key=el('apiKey').value.trim(); if(!key) return setStatus('Enter your '+PMProviders.current().name+' key first.',true);
-  const goal=el('goal').value.trim(); if(!goal) return setStatus('Describe your goal first.',true);
-  if(!SKILLS.length) return setStatus('Skills not loaded yet — try again in a moment.',true);
-  if(window.pmTrack) pmTrack('agent/run');
-  el('runBtn').disabled=true; el('stopBtn').hidden=false; controller=new AbortController();
-  el('plan').hidden=true; el('plan').innerHTML=''; el('stages').innerHTML='';
-  const model=el('model').value;
-  try{
-    // 1) PLAN — pick an ordered chain of skills from the catalog.
-    setStatus('Planning the skill chain…');
-    const catalog=SKILLS.map(s=>`${s.name}: ${s.summary||s.description}`).join('\n');
-    const planSys=`You are a planning agent for a library of professional "skills". Given a GOAL, choose the best ORDERED chain of 2–5 skills to accomplish it, where each skill's output feeds the next. Use ONLY skill names from the catalog. Return ONLY a JSON array, no prose: [{"skill":"exact-name","why":"one short line"}].`;
-    const planRaw=await callAPI({key,model,system:planSys,user:`GOAL:\n${goal}\n\nCATALOG (name: what it does):\n${catalog}`,signal:controller.signal});
-    let plan; try{ plan=JSON.parse((planRaw.match(/\[[\s\S]*\]/)||[])[0]); }catch(_){ throw new Error('Could not parse the plan.'); }
-    plan=(plan||[]).filter(p=>byName[p.skill]).slice(0,5);
-    if(!plan.length) throw new Error('The planner did not pick valid skills — try rephrasing the goal.');
-    el('plan').hidden=false;
-    el('plan').innerHTML='<strong>🧠 Plan</strong><ol>'+plan.map(p=>`<li><a href="skill/${p.skill}.html" target="_blank">${byName[p.skill].title}</a> <span class="why">— ${escapeHtml(p.why||'')}</span></li>`).join('')+'</ol>';
-
-    // 2) RUN — execute each skill, feeding output forward.
-    let upstream='';
-    for(let i=0;i<plan.length;i++){
-      const s=byName[plan[i].skill];
-      setStatus(`Running step ${i+1}/${plan.length}: ${s.title}…`);
-      const stage=document.createElement('div'); stage.className='stage';
-      stage.innerHTML=`<h3><span class="num">${i+1}</span>${escapeHtml(s.title)}</h3><div class="output markdown" id="st${i}"></div>`;
-      el('stages').appendChild(stage);
-      if(i>0){const a=document.createElement('div');a.className='arrow';a.textContent='↓';el('stages').insertBefore(a,stage);}
-      const system=s.instructions+'\n\n---\nExecute this skill now and produce the complete output. Do not ask questions; note any assumptions.';
-      const user=i===0?`Goal: ${goal}`:`Overall goal:\n${goal}\n\nBuild on the upstream work below:\n\n${upstream}`;
-      upstream=await callAPI({key,model,system,user,node:el('st'+i),signal:controller.signal});
-    }
-    setStatus('Done — the agent completed the chain.');
-  }catch(e){ setStatus(e.name==='AbortError'?'Stopped.':(e.message||'Failed.'),true); }
-  finally{ el('runBtn').disabled=false; el('stopBtn').hidden=true; controller=null; }
-}
-function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-</script>
+<main><p>This page has been retired to keep the site focused. Continue to <a href="index.html">the Playground</a>.</p></main>
+<script>location.replace('index.html' + location.search + location.hash);</script>
 </body>
 </html>

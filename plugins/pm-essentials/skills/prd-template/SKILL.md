@@ -245,3 +245,5 @@ Acceptance Criteria:
 - "Write a product spec for this feature."
 - "Write the feature specification."
 - "Write a requirements document for a new feature."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prd-template.html

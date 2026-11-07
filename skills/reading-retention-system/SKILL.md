@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "Set up a system for taking notes on what I study."
 - "I highlight everything but retain nothing. Fix my reading."
 - "Help me get more out of the books I read."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/reading-retention-system.html

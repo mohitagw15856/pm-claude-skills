@@ -76,3 +76,5 @@ Ask for these if not provided:
 - "How do I document consent properly?"
 - "Help me write a defensible clinical note for a complication"
 - "What does an insurance auditor look for in a dental note?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dental-clinical-note.html

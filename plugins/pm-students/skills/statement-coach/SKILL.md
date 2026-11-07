@@ -71,3 +71,5 @@ Pass 1: … Pass 2: … Pass 3 (cut to limit): …
 - "Improve my SOP."
 - "Give feedback on my application essay."
 - "Why is my essay generic?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/statement-coach.html

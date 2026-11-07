@@ -403,3 +403,5 @@ Apply the hook formulas and content structures from above to these topic angles:
 - "What makes content go viral on [LinkedIn / TikTok / Instagram]?"
 - "Give me hook formulas and content structures for [niche]"
 - "Build a repeatable system for creating high-reach content"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/viral-content-framework.html

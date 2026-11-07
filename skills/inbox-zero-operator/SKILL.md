@@ -78,3 +78,5 @@ For computer-use or tool-using agents with mailbox access (Gmail/Outlook APIs or
 - "Triage my email hands-on."
 - "Process my inbox for me."
 - "Run inbox zero."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/inbox-zero-operator.html

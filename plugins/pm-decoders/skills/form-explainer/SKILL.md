@@ -80,3 +80,5 @@ This is not legal, tax or immigration advice. For complex cases, a free advice s
 - "Help me fill in a W-4, I don't understand the dependants part"
 - "What is Form 16 and why does my employer give it to me?"
 - "I photographed this benefits form, can you explain each box?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/form-explainer.html

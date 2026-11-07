@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Should I schedule deep work?"
 - "My calendar has no room to think."
 - "I block time and then waste it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/deep-work-blocking.html

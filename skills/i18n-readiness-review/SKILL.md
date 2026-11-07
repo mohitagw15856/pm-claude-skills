@@ -66,3 +66,5 @@ Internationalization engineering practice — string externalization, ICU/Intl f
 - "Review i18n readiness."
 - "Find hard-coded strings/locale bugs."
 - "Prep for going multilingual."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/i18n-readiness-review.html

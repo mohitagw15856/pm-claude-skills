@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "How strong is our evidence for this?"
 - "Grade what we know before the decision."
 - "Is this enough to bet on?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/evidence-grading.html

@@ -121,3 +121,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Write release notes."
 - "Generate a CHANGELOG.md entry."
 - "Document what changed in a version."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/changelog-generator.html

@@ -66,3 +66,5 @@ Schema.org structured data + Google's structured-data guidelines for rich result
 - "Write JSON-LD for our product pages."
 - "Get rich snippets for our FAQ."
 - "Make this page eligible for star ratings in search."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/schema-markup.html

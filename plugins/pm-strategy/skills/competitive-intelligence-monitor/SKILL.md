@@ -85,3 +85,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Track the competitive landscape."
 - "Produce a competitive briefing."
 - "Understand what has changed in the market this week."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/competitive-intelligence-monitor.html

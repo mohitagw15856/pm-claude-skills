@@ -68,3 +68,5 @@ Given only the CRM, **write the full sweep anyway** with default rules: no next 
 - "Which deals have no next step?"
 - "Have my agent check HubSpot every Monday"
 - "Find stale deals and duplicates"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/crm-hygiene-sweep.html

@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Can this meeting be async?"
 - "Replace our status meeting with a doc."
 - "Run this decision without a call."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/async-instead.html

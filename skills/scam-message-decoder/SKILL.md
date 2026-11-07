@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "Decode this suspicious text."
 - "My 'bank' just called me."
 - "My parent got a weird message."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/scam-message-decoder.html

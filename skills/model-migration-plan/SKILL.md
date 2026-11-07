@@ -84,3 +84,5 @@ Between model generations, re-check: instruction-following strictness (newer mod
 - "How to upgrade models safely?"
 - "Run shadow traffic."
 - "Set rollback criteria for a model change."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/model-migration-plan.html

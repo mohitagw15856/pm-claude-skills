@@ -30,6 +30,7 @@ const DIALECTS = {
   windsurf: { leaf: /\.md$/,   check: (t) => /^---\ntrigger: model_decision/.test(t) || 'missing windsurf trigger frontmatter' },
   chatgpt:  { leaf: /^SYSTEM_PROMPT\.md$/, check: (t) => !/^---\n/.test(t) || 'chatgpt export must not carry frontmatter' },
   gemini:   { leaf: /^GEM_INSTRUCTIONS\.md$/, check: (t) => /^You are a specialised assistant\./.test(t) || 'missing gemini role primer' },
+  copilot:  { leaf: /\.instructions\.md$/, check: (t) => /^---\napplyTo: "\*\*"/.test(t) || 'missing copilot applyTo frontmatter' },
   aider:    { leaf: /\.md$/,   check: (t) => !/^---\n/.test(t) || 'aider conventions must be plain body' },
   cline:    { leaf: /\.md$/,   check: (t) => t.trim().length > 200 || 'suspiciously empty rule' },
   continue: { leaf: /\.md$/,   check: (t) => t.trim().length > 200 || 'suspiciously empty rule' },

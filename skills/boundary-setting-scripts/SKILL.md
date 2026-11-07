@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "A coworker keeps dumping work on me. Help me set a limit."
 - "How do I say no without feeling guilty?"
 - "Someone keeps overstepping and I don't know how to stop it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/boundary-setting-scripts.html

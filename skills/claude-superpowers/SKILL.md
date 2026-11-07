@@ -288,3 +288,5 @@ Tell the user: "Add this to your CLAUDE.md and Superpowers will be active perman
 - "Write tests first this time"
 - "Slow down and plan it out before you start building"
 - "Work on a branch and show me a plan before touching anything"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/claude-superpowers.html

@@ -127,3 +127,5 @@ Instructions for applying the redline:
 
 ## Why This Works Better on Opus 4.7
 Tracked changes require the model to preserve source text exactly while suggesting alternatives — earlier models would paraphrase the original or lose track of which text was original vs suggested. Opus 4.7 improvements specifically target this workflow.
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/docx-tracked-changes.html

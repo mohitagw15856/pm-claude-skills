@@ -76,3 +76,5 @@ For each significant variance:
 - "Turn this P&L into a board narrative"
 - "Write the finance section of our board pack"
 - "Explain these financial results in plain English"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/financial-model-narrative.html

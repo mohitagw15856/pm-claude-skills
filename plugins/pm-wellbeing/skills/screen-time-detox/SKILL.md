@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "Help me use social media less without deleting it entirely."
 - "A realistic digital detox plan, not going cold turkey."
 - "How do I stop reaching for my phone every time I'm bored?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/screen-time-detox.html

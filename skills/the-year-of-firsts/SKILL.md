@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "Grief keeps hitting me in waves out of nowhere."
 - "How do I survive the first year after losing my partner?"
 - "Should we keep our traditions or change them this year?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-year-of-firsts.html

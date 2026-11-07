@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "My desktop has 200 files on it."
 - "Why does my desktop keep filling up?"
 - "Set up a clean-desktop habit."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/desktop-zero.html

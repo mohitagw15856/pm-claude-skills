@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "I can't leave my mom alone and I'm exhausted. Help me get time off."
 - "I feel too guilty to take a break from caregiving."
 - "Set up a regular break in my caregiving so I don't collapse."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/respite-care-plan.html

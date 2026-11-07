@@ -113,3 +113,5 @@ Once certified/compliant, what needs to continue:
 - "What do we need for ISO 27001 certification?"
 - "FCA compliance checklist for a fintech startup"
 - "HIPAA gap analysis for a healthtech scaleup"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/compliance-checklist.html

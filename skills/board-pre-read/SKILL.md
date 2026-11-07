@@ -67,3 +67,5 @@ Board-management practice — pre-circulated reading, metrics-vs-plan transparen
 - "Write our board pack for next week."
 - "Send the board materials before the meeting."
 - "Make the board meeting about decisions, not status."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/board-pre-read.html

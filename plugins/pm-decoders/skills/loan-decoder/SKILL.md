@@ -86,3 +86,5 @@ Borrower-side loan review practice — total-cost math, APR reconciliation, fee 
 - "Decode my loan offer."
 - "What am I signing?"
 - "What will this mortgage actually cost me?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/loan-decoder.html

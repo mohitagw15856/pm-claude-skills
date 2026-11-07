@@ -81,3 +81,5 @@ Participant-side plan review practice — fee-disclosure auditing, match-formula
 - "Decode my 401k plan."
 - "Which funds should I look at?"
 - "What fees am I paying?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/401k-plan-decoder.html

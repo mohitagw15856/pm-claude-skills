@@ -61,3 +61,5 @@ Growth-process practice — ICE/PXL prioritisation, hypothesis-driven experiment
 - "Prioritise growth ideas."
 - "Set up a test backlog."
 - "Run a growth process/sprint."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/growth-experiment-backlog.html

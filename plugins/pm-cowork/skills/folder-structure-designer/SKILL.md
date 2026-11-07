@@ -68,3 +68,5 @@ _inbox/        → anything, when unsure — drained weekly
 - "Design a folder structure for the project."
 - "Where should things live?"
 - "Our files are chaos."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/folder-structure-designer.html

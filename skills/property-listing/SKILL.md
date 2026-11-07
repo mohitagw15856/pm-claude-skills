@@ -69,3 +69,5 @@ Real-estate marketing practice — lifestyle-led, feature-accurate listings that
 - "Write the Zillow description."
 - "Write a real-estate listing."
 - "Make this property description more appealing."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/property-listing.html

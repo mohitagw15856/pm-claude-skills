@@ -65,3 +65,5 @@ Risk levels:
 - "Is it OK to say I led this project? I was second in charge."
 - "Which lines on my CV would an interviewer challenge?"
 - "帮我检查简历里有没有夸大的地方。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cv-honesty-check.html

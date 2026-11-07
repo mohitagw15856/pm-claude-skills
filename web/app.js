@@ -292,9 +292,9 @@ function showHero(show) { const h = el('hero'); if (h) h.hidden = !show; }
 
 // ---------- ⌘K command palette ----------
 const CMDK_TOOLS = [
-  ['canvas.html', '🧩 Workflow Canvas'], ['agent.html', '✨ Auto-Agent'], ['studio.html', '🏗️ Create a skill'],
-  ['grade.html', '📝 Grade your work'], ['benchmark.html', '🏆 Benchmark'], ['community.html', '💬 Community'],
-  ['leaderboard.html', '📊 Leaderboard'], ['catalog.html', '📚 Catalog'], ['pro.html', '⭐ Pro'],
+  ['make.html', '🏭 Make it real'], ['find.html', '🔎 Find a skill'], ['grade.html', '📝 Grade your work'],
+  ['modelbench.html', '🤖 Model rankings'], ['community.html', '💬 Community'],
+  ['leaderboard.html', '📊 Leaderboard'], ['catalog.html', '📚 Catalog'], ['galaxy.html', '🗺 Galaxy'],
 ];
 let cmdkResults = [], cmdkSel = 0;
 function openCmdk() { el('cmdkOverlay').hidden = false; el('cmdkInput').value = ''; el('cmdkInput').focus(); renderCmdk(); }

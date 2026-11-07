@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "Disclose my ADHD/chronic illness at work."
 - "Do I tell my employer?"
 - "How much do I share?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/disability-disclosure-decision.html

@@ -128,3 +128,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Help me write my self-assessment for [period]"
 - "Draft a peer review for my colleague who did [description]"
 - "Turn these bullet points into a full performance review: [paste bullets]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/performance-review.html

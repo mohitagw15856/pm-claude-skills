@@ -65,3 +65,5 @@ Confidential figures: if a number is confidential, use a range or a ratio the pe
 - "I need a board bio for a non-executive director application."
 - "Turn my CFO resume into something search firms will read."
 - "Help me with a C-suite CV."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/executive-cv.html

@@ -84,3 +84,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Create a sprint summary."
 - "Document sprint goals and scope."
 - "Produce a team-facing sprint overview."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sprint-brief.html

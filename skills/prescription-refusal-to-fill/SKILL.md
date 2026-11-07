@@ -83,3 +83,5 @@ Ask for these if not provided:
 - "Patient is asking for an early refill on a controlled drug"
 - "How do I document a decision not to dispense?"
 - "What do I say to the patient when I decline?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prescription-refusal-to-fill.html

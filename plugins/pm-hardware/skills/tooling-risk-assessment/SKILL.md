@@ -80,3 +80,5 @@ Ask for these if not provided; if forecast confidence is unstated, assume it is 
 - "Size cavities."
 - "Review a tooling quote."
 - "Assess the risk of tooling before the design is frozen."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tooling-risk-assessment.html

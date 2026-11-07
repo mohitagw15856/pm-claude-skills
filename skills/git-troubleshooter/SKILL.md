@@ -56,3 +56,5 @@ How to undo if the fix doesn't do what they expected (usually `git reflog` + res
 - "Fix a bad merge."
 - "Resolve a detached HEAD."
 - "Get out of a git mess."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/git-troubleshooter.html

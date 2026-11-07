@@ -143,3 +143,5 @@ solo artists dealing with venues.
 - "Who owns our songs?"
 - "Our drummer quit."
 - "What happens?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/band-agreement.html

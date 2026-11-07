@@ -78,3 +78,5 @@ Ask for these if not provided; run the review on partial data but mark unverifia
 - "Review build results."
 - "Assess whether to proceed to the next build."
 - "Triage open issues before a phase gate."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/evt-dvt-pvt-gate-review.html

@@ -64,3 +64,5 @@ A simple timeline of the next 12 months' visits/actions so it reads as a plan, w
 - "Plan preventive care."
 - "Set up a vaccination/parasite schedule."
 - "Advise an owner on routine care for a puppy/kitten/adult/senior pet."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wellness-plan.html

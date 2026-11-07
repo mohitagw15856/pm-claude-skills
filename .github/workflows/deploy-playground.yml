@@ -25,6 +25,8 @@ on:
       - 'scripts/build-skill-pages.mjs'
       - 'config/partners.json'
       - 'scripts/build-skill-changes.mjs'
+      - 'scripts/build-skill-changelog.mjs'
+      - 'schemas/**'
       - 'scripts/build-community.mjs'
       - 'community/registry.json'
       - 'scripts/build-samples.mjs'
@@ -260,6 +262,7 @@ jobs:
         run: |
           git fetch --unshallow --filter=blob:none --quiet origin || git fetch --unshallow --quiet origin || true
           node scripts/build-skill-changes.mjs
+          node scripts/build-skill-changelog.mjs
 
       - name: Publish the jurisdiction overlays (web/overlays.json)
         run: node scripts/build-overlays.mjs
@@ -281,6 +284,11 @@ jobs:
           cp data/skill-cup.json web/skill-cup.json
           cp config/cup-prizes.json web/cup-prizes.json
           cp data/skill-hack.json web/skill-hack.json
+
+      - name: Publish the typed skill contracts (web/schemas/)
+        run: |
+          mkdir -p web/schemas
+          cp -R schemas/. web/schemas/
 
       - name: Build the side-by-side translations (web/i18n/, for compare-lang.html)
         run: node scripts/build-i18n-web.mjs

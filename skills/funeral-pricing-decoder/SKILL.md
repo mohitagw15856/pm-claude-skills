@@ -79,3 +79,5 @@ Ask for these if not provided:
 - "Is this funeral price fair?"
 - "What can we decline?"
 - "Help me read this price list."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/funeral-pricing-decoder.html

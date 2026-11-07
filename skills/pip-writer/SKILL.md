@@ -77,3 +77,5 @@ Ask for these if not provided:
 - "Put together a 60-day performance improvement plan."
 - "Help me document underperformance fairly before I talk to HR."
 - "Draft a formal improvement plan with measurable goals and support."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pip-writer.html
