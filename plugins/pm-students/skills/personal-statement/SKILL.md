@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "Make my application essay show fit, not just list my achievements."
 - "Strengthen my personal statement draft."
 - "Why-this-program essay — help me find my angle."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/personal-statement.html

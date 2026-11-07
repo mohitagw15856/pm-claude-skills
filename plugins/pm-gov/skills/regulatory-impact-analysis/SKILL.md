@@ -71,3 +71,5 @@ Regulatory impact analysis practice (OMB Circular A-4 / Better Regulation): prob
 - "Do a cost-benefit analysis of a policy?"
 - "Justify a rulemaking."
 - "Compare regulatory options."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/regulatory-impact-analysis.html

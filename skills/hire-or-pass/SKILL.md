@@ -88,3 +88,5 @@ Confidence: 0.xx · Source: [model / estimate]
 - "Run the debrief — three interviewers, split panel."
 - "Hire or pass on this candidate? Here are the scorecards."
 - "We're at hire vs. pass 50/50 — what do we do?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hire-or-pass.html

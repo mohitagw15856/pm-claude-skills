@@ -86,3 +86,5 @@ Ask for these if not provided:
 - "They keep promising to pay and don't. What's my next message?"
 - "Invoice is 45 days overdue and they've gone silent — what now?"
 - "Write a firm final notice before I take this to small claims."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/late-invoice-chaser.html

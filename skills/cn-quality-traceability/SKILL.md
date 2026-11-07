@@ -71,3 +71,5 @@ Phase 1 with paper or Excel where needed, phase 2 with scanning, phase 3 with ME
 - "帮我设计一次召回演练。"
 - "食品厂一物一码追溯要怎么做？"
 - "Design a batch traceability plan for a Chinese electronics factory."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-quality-traceability.html

@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Is this claim actually true?"
 - "Verify this stat before the deck."
 - "How solid is this source?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/source-triangulation.html

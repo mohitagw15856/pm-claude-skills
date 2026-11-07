@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "I'm interrupted constantly but want to stay accessible."
 - "My office hours sit empty."
 - "Design expert time for the team."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/office-hours-design.html

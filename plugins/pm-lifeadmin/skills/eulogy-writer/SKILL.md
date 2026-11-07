@@ -50,3 +50,5 @@ Given a name, a few details and the room, **write the full eulogy anyway**, abou
 - [ ] Do not summarise the whole life — a eulogy is a portrait, not a résumé; the gaps are allowed
 - [ ] Do not sand off the person's edges — "he was difficult and we loved him" is a better sentence than any halo
 - [ ] Do not produce only a polished artifact — the delivery copy with pause marks is the part they'll actually clutch at the podium
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/eulogy-writer.html

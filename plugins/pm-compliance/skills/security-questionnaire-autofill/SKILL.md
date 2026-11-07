@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Answer this SIG/CAIQ for a customer security review."
 - "Respond to the vendor risk assessment — flag anything we can't truthfully claim."
 - "Draft answers to this security review and list our gaps."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/security-questionnaire-autofill.html

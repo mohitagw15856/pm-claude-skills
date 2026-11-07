@@ -84,3 +84,5 @@ For every email in the sequence, produce:
 - "Build an onboarding email flow for [SaaS tool]"
 - "Create a drip campaign to nurture leads for [offer]"
 - "Write a re-engagement campaign for churned users"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/email-campaign.html

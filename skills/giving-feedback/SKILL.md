@@ -63,3 +63,5 @@ SBI feedback model (Center for Creative Leadership) and Radical Candor (Kim Scot
 - "Write a feedback note."
 - "Prepare to tell someone something hard about their work."
 - "Coach a report/peer."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/giving-feedback.html

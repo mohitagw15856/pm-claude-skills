@@ -3,107 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
-<title>Guided Journeys — PM Skills</title>
-<meta name="description" content="Guided, step-by-step skill journeys for real goals — launch a startup, ramp as a new PM, close the quarter. Each step runs free in your browser." />
-<link rel="stylesheet" href="styles.css" />
-<style>
-  .jobs { max-width: 940px; margin: 0 auto; padding: 18px 22px 90px; }
-  .jobs-hero { text-align: center; padding: 10px 0 6px; }
-  .jobs-hero h1 { font-size: 30px; margin: 6px 0; }
-  .jobs-hero p { color: var(--muted); font-size: 15.5px; max-width: 640px; margin: 6px auto; line-height: 1.55; }
-  .jobs-note { font-size: 12.5px; color: var(--muted); background: var(--panel); border: 1px solid var(--border);
-    border-radius: 10px; padding: 10px 14px; margin: 16px auto; max-width: 720px; text-align: center; }
-  .stage { margin: 26px 0 8px; }
-  .stage-head { display: flex; align-items: baseline; gap: 10px; border-bottom: 1px solid var(--border); padding-bottom: 6px; margin-bottom: 14px; }
-  .stage-num { width: 26px; height: 26px; flex: none; border-radius: 50%; background: var(--accent-grad); color: #1a1207; font-weight: 800; font-size: 13px; display: grid; place-items: center; }
-  .stage-head h2 { font-size: 19px; margin: 0; } .stage-head span { color: var(--muted); font-size: 13px; }
-  .cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(248px, 1fr)); }
-  .jcard { display: flex; flex-direction: column; gap: 6px; text-align: left; text-decoration: none; background: var(--panel);
-    border: 1px solid var(--border); border-radius: 14px; padding: 15px 16px; color: var(--text);
-    transition: border-color .15s, transform .15s, box-shadow .15s; }
-  .jcard:hover { border-color: rgba(217,119,87,.55); transform: translateY(-3px); box-shadow: var(--shadow-accent); }
-  .jcard .jt { font-weight: 700; font-size: 15px; } .jcard .jd { font-size: 12.7px; color: var(--muted); line-height: 1.5; }
-  .jcard .jrun { font-size: 11.5px; color: var(--accent-2); font-weight: 600; margin-top: auto; }
-  .journey-picker { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 18px 0; }
-  .journey-pick { text-decoration: none; padding: 14px 16px; border-radius: 14px; background: var(--panel); border: 1px solid var(--border); color: var(--text); min-width: 210px; transition: border-color .15s, transform .15s; }
-  .journey-pick:hover { border-color: rgba(217,119,87,.55); transform: translateY(-2px); }
-  .journey-pick b { display: block; font-size: 15px; } .journey-pick span { font-size: 12.5px; color: var(--muted); }
-</style>
+<title>Moved to Learn | PM Skills</title>
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/learn.html" />
+<meta http-equiv="refresh" content="0; url=learn.html" />
+<style>body{font-family:system-ui,sans-serif;margin:0;padding:24px;background:#0d1117;color:#e6edf3}a{color:#58a6ff}@media (prefers-color-scheme:light){body{background:#fff;color:#1f2328}a{color:#0969da}}</style>
 </head>
 <body>
-<header class="topbar">
-  <div class="brand"><img src="assets/product-notes.jpg" alt="Product Notes" class="brand-logo" />
-    <div class="brand-text"><h1 id="hubTitle" data-i18n="hub.brandH1">🧭 Guided Journeys</h1><p class="tagline" id="hubTag" data-i18n="hub.brandTag">Step-by-step skill journeys for real goals.</p></div></div>
-</header>
-<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
-
-<div class="jobs">
-  <div class="jobs-hero">
-    <h1 id="heroTitle" data-i18n="hub.heroH1">Guided Journeys</h1>
-    <p id="heroTag" data-i18n="hub.heroP">Pick a goal and follow the steps — each runs in the playground with the structure a senior pro uses.</p>
-  </div>
-  <div class="jobs-note" data-i18n="hub.note">🔒 Runs in your browser — free with a Google AI Studio key or the in-browser model (no card), or your own key. Export any result as a designed PDF.</div>
-
-  <div id="picker" class="journey-picker" hidden></div>
-  <div id="stages"></div>
-</div>
-
-<script>
-const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
-const params = new URLSearchParams(location.search);
-
-(async function () {
-  let data;
-  try { data = await (await fetch('hubs.json')).json(); } catch (_) { document.getElementById('stages').innerHTML = '<p class="empty-msg">Could not load journeys.</p>'; return; }
-  const journeys = data.journeys || [];
-  const id = params.get('j');
-  const journey = journeys.find((x) => x.id === id);
-
-  if (!journey) {
-    // No (or unknown) journey → show the picker. Leave heroTitle/heroTag to the data-i18n chrome.
-    const pick = document.getElementById('picker');
-    pick.hidden = false;
-    pick.innerHTML = journeys.map((j) =>
-      `<a class="journey-pick" href="hub.html?j=${encodeURIComponent(j.id)}"><b>${j.emoji || ''} ${esc(j.name)}</b><span>${esc(j.tagline)}</span></a>`).join('') +
-      `<a class="journey-pick" href="jobs.html"><b>💼 Job Search</b><span>Find and land your next role.</span></a>`;
-    if (window.PMi18n) window.PMi18n.apply();
-    return;
-  }
-
-  document.title = `${journey.name} — Guided Journey | PM Skills`;
-  document.getElementById('hubTitle').textContent = `${journey.emoji || '🧭'} ${journey.name}`;
-  document.getElementById('hubTag').textContent = journey.tagline;
-  document.getElementById('heroTitle').textContent = `${journey.emoji || ''} ${journey.name}`;
-  document.getElementById('heroTag').textContent = journey.tagline;
-
-  const wrap = document.getElementById('stages');
-  (journey.stages || []).forEach((st, i) => {
-    const sec = document.createElement('section');
-    sec.className = 'stage';
-    sec.innerHTML = `<div class="stage-head"><span class="stage-num">${i + 1}</span><h2>${esc(st.title)}</h2><span>${esc(st.note || '')}</span></div>`;
-    const cards = document.createElement('div');
-    cards.className = 'cards';
-    (st.skills || []).forEach(([name, title, desc]) => {
-      const a = document.createElement('a');
-      a.className = 'jcard';
-      a.href = 'index.html?skill=' + encodeURIComponent(name);
-      a.innerHTML = `<span class="jt">${esc(title)}</span><span class="jd">${esc(desc)}</span><span class="jrun">Run it →</span>`;
-      cards.appendChild(a);
-    });
-    sec.appendChild(cards);
-    wrap.appendChild(sec);
-  });
-
-  // Footer: back to all journeys.
-  const back = document.createElement('p');
-  back.style.cssText = 'text-align:center;margin-top:30px';
-  back.innerHTML = '<a class="tool" href="hub.html" style="text-decoration:none">← All journeys</a>';
-  wrap.appendChild(back);
-})();
-</script>
-<script src="i18n.js"></script>
-<script src="a11y.js"></script>
-<script src="nav.js"></script>
+<main><p>This page has been retired to keep the site focused. Continue to <a href="learn.html">Learn</a>.</p></main>
+<script>location.replace('learn.html' + location.search + location.hash);</script>
 </body>
 </html>

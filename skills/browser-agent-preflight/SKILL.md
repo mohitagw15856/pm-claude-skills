@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Let my agent browse safely."
 - "Is it safe to give the agent computer/browser use?"
 - "Review my browser agent's setup."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/browser-agent-preflight.html

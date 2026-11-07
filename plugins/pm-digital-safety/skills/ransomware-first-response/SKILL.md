@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Suspicious pop-up locked my computer demanding payment."
 - "Should I pay the ransom to get my files back?"
 - "Malware on my work laptop — what's my first move?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ransomware-first-response.html

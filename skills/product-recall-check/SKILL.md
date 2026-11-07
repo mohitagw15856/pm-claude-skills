@@ -73,3 +73,5 @@ Ask for these if not provided:
 - "My space heater is the brand in the news — is mine affected?"
 - "How do I find out if a food product I bought was recalled?"
 - "Bought a used appliance — how do I check it wasn't recalled?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-recall-check.html

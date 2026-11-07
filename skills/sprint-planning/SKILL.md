@@ -179,3 +179,5 @@ For tool-using or computer-use agents that can reach the team's tracker (Jira, L
 - "Organise backlog items."
 - "Create sprint goals."
 - "Prepare sprint planning agendas."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sprint-planning.html

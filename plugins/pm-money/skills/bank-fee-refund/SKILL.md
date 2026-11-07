@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "They charged me a monthly maintenance fee I didn't know about."
 - "Write me a message to ask the bank to reverse a charge."
 - "I keep getting overdraft fees — how do I stop them for good?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bank-fee-refund.html

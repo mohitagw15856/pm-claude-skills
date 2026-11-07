@@ -109,3 +109,5 @@ which previews, gates, executes, and records. The skill never executes directly.
 - "Create issues from a PRD."
 - "Execute the recommended next steps."
 - "Wire a skill's output into GitHub/Linear/Slack."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/action-runner.html

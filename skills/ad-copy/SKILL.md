@@ -64,3 +64,5 @@ Performance-creative practice — angle testing, platform-native formats, messag
 - "Give me five Google ad headlines to test."
 - "Write LinkedIn and Instagram ads for this offer."
 - "Draft paid social copy with different angles."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ad-copy.html

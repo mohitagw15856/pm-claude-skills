@@ -184,3 +184,5 @@ Use this list to spot a page that has drifted into the default. It is a smell te
 ---
 
 Part of the pm-design-taste bundle in the library at https://github.com/mohitagw15856/pm-claude-skills. The specialist skills are third-party projects; see `THIRD_PARTY.md` in the bundle for authors and licences.
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ui-design-pipeline.html

@@ -91,3 +91,5 @@ Ask for (if not already provided):
 - "I don't know which skill fits."
 - "Find the right skill for my task."
 - "Which of these skills is the better match?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/which-skill.html

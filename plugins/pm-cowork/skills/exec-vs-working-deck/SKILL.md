@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "My leadership readout went badly."
 - "How do I compress 40 slides to 10 minutes?"
 - "What do execs actually want in a deck?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/exec-vs-working-deck.html

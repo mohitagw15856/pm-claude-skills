@@ -93,3 +93,5 @@ Input: *"We need to figure out what to do about our enterprise customers."*
 - "Make sense of an unclear opportunity."
 - "We need to figure out what to do about X."
 - "I've been asked to look into Y."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ambiguity-resolver.html

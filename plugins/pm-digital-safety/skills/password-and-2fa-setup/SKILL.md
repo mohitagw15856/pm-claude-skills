@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Walk me through enabling 2FA on my important accounts."
 - "Which is safer, SMS codes or an authenticator app?"
 - "I want to secure my accounts without locking myself out."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/password-and-2fa-setup.html

@@ -91,3 +91,5 @@ Ask for these if not provided:
 - "What order should load-in happen in?"
 - "Write contingency plans for our outdoor event"
 - "Create a production schedule for the gala"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/event-run-of-show.html

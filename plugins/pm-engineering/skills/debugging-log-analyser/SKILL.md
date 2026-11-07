@@ -100,3 +100,5 @@ One or two concrete things that would prevent this class of error recurring:
 - "Read this stack trace and tell me what's wrong."
 - "Diagnose these error logs."
 - "What's causing these exceptions?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/debugging-log-analyser.html

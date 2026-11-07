@@ -86,3 +86,5 @@ Offer-review practice — total-comp reconstruction, plan-language decoding, pre
 - "Decode my benefits package."
 - "What does my equity actually mean?"
 - "What should I ask HR before signing?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/benefits-decoder.html

@@ -84,3 +84,5 @@ If the brief is thin, propose a default weighting and label it `[assumed — con
 - "Build a supplier evaluation matrix."
 - "Run a sourcing event scorecard."
 - "Decide which bidder to award."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rfp-scoring-matrix.html

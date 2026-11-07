@@ -65,3 +65,5 @@ Ask for (if not already provided), else infer and label:
 - "Audit my memory and recurring prompts for a proactive agent"
 - "What should I tidy before I connect my inbox to an agent?"
 - "Am I ready for an AI that acts between my messages?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prepare-for-duet.html

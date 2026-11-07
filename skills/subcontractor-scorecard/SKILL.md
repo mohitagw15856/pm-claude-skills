@@ -80,3 +80,5 @@ Safety scores of 1–2 cap the overall recommendation at **Conditional** regardl
 - "Decide whether to rebid."
 - "Rehire a trade."
 - "Review sub performance for prequalification."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/subcontractor-scorecard.html

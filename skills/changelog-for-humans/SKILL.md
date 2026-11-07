@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Turn this commit list into a changelog."
 - "Announce this update to users."
 - "Why does nobody read our changelogs?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/changelog-for-humans.html

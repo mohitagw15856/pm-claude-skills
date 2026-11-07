@@ -268,3 +268,5 @@ Use this template to document results after the session or survey.
 - "Build a team health check survey for my product team"
 - "Generate a Spotify-style health check for our cross-functional pod"
 - "Create a quarterly team health check template"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/team-health-check.html

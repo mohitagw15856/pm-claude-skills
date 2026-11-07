@@ -141,3 +141,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Rank a backlog using RICE."
 - "Score initiatives for quarterly planning."
 - "Apply an objective framework to a list of competing ideas."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rice-prioritisation.html

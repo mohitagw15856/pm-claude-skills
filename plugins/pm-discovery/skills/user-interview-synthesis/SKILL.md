@@ -82,3 +82,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Analyse interview notes."
 - "Synthesise qualitative research."
 - "Turn raw interview data into actionable product insights."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/user-interview-synthesis.html

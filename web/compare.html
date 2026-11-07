@@ -3,67 +3,14 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="google-site-verification" content="osZgdSLYnqidzCKt4CxjqAxo44OqGvlKi-Bmg0UmxFQ" />
-<title>Agent Skills vs Prompts vs Custom GPTs — an Honest Comparison | PM Skills</title>
-<meta name="description" content="When to use agent skills, when a prompt library is enough, and when a custom GPT fits better — an honest comparison from the maintainers of a 1314-skill library, trade-offs included." />
-<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/compare.html" />
-<link rel="stylesheet" href="styles.css" />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    { "@type": "Question", "name": "Should I use agent skills, a prompt library, or a custom GPT?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Use agent skills when quality must be repeatable across a team and tools — they are versioned files that activate automatically and improve by pull request. A prompt library is enough for personal, occasional use. A custom GPT fits when your users live only in ChatGPT and you want a packaged, shareable assistant. The deciding factor is whether the method needs to outlive the person who wrote it." } },
-    { "@type": "Question", "name": "What is the difference between PM Skills and the GPT Store?",
-      "acceptedAnswer": { "@type": "Answer", "text": "The GPT Store distributes closed assistants that run only inside ChatGPT; PM Skills distributes open markdown files that run in Claude, ChatGPT, Gemini, Cursor, and any MCP client. Store GPTs cannot be audited or edited by users; every PM Skills file is MIT-licensed, readable, and security-scanned in CI. The trade-off: a GPT can bundle actions and files; a skill is deliberately just instructions." } },
-    { "@type": "Question", "name": "How is a skills library different from an awesome list?",
-      "acceptedAnswer": { "@type": "Answer", "text": "An awesome list curates links to other people's tools with no shared quality bar; a skills library maintains the content itself behind one standard — every file the same structure, gated in CI, eval-scored, and installable with one command. Lists answer discovery; libraries answer trust and consistency." } }
-  ]
-}
-</script>
-<style>
-  .c-wrap { max-width: 820px; margin: 0 auto; padding: 16px 22px 70px; line-height: 1.6; }
-  .c-wrap h1 { font-size: 27px; } .c-wrap h2 { font-size: 20px; margin-top: 34px; }
-  .capsule { border-left: 4px solid var(--accent); background: var(--panel); border-radius: 0 12px 12px 0; padding: 12px 16px; margin: 10px 0 16px; }
-  .c-wrap table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
-  .c-wrap td, .c-wrap th { border-bottom: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
-  .win { color: #3fb950; } .lose { color: var(--muted); }
-  .updated { color: var(--muted); font-size: 12.5px; }
-</style>
+<title>Moved to Model rankings | PM Skills</title>
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/modelbench.html" />
+<meta http-equiv="refresh" content="0; url=modelbench.html" />
+<style>body{font-family:system-ui,sans-serif;margin:0;padding:24px;background:#0d1117;color:#e6edf3}a{color:#58a6ff}@media (prefers-color-scheme:light){body{background:#fff;color:#1f2328}a{color:#0969da}}</style>
 </head>
 <body>
-<nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
-<div class="c-wrap">
-<h1>Agent skills vs prompts vs custom GPTs — the honest comparison</h1>
-<p class="updated">Written by the maintainers of PM Skills — so read the conclusions knowing where we sit. The trade-offs against us are listed too. Updated 2026-07-26.</p>
-
-<h2>Should I use skills, a prompt library, or a custom GPT?</h2>
-<div class="capsule">Use agent skills when quality must be repeatable across a team and across tools — they are versioned files that activate automatically and improve by pull request. A prompt library is enough for personal, occasional use with no consistency requirement. A custom GPT fits when your users live only in ChatGPT and you want a packaged assistant with bundled files and actions. The deciding factor: does the method need to outlive the person who wrote it?</div>
-<table>
-  <tr><th></th><th>Prompt library</th><th>Custom GPT</th><th>Agent skills</th></tr>
-  <tr><td>Portability</td><td class="win">any tool (paste)</td><td class="lose">ChatGPT only</td><td class="win">any tool (file / MCP)</td></tr>
-  <tr><td>Auto-activation</td><td class="lose">no — you find &amp; paste</td><td class="win">within the GPT</td><td class="win">yes, by description</td></tr>
-  <tr><td>Auditable content</td><td class="win">yes</td><td class="lose">no — system prompt hidden</td><td class="win">yes — it's the file</td></tr>
-  <tr><td>Versioning &amp; review</td><td class="lose">rarely</td><td class="lose">owner-only edits</td><td class="win">git, PRs, CI gates</td></tr>
-  <tr><td>Bundled tools/files</td><td class="lose">no</td><td class="win">yes — actions, knowledge</td><td class="lose">deliberately no*</td></tr>
-  <tr><td>Works offline / local models</td><td class="win">yes</td><td class="lose">no</td><td class="win">yes</td></tr>
-</table>
-<p>*Skills can <em>reference</em> scripts and templates shipped alongside them, but the contract stays "instructions the model reads", which is what keeps them portable and auditable. If you need hosted actions with secrets, a GPT or an MCP server is the right tool — sometimes the answer isn't a skill.</p>
-
-<h2>What is the difference between PM Skills and the GPT Store?</h2>
-<div class="capsule">The GPT Store distributes closed assistants that run only inside ChatGPT; PM Skills distributes open markdown files that run in Claude, ChatGPT, Gemini, Cursor, Codex, and any MCP client. A store GPT's system prompt cannot be read or edited by its users; every PM Skills file is MIT-licensed, human-readable, and security-scanned in CI. The Store's advantage is packaging — a GPT bundles files, actions, and branding in one shareable unit.</div>
-<p>Pick the Store when your audience is ChatGPT-only consumers. Pick skills when your audience is professionals who switch tools, need to audit what instructs their AI, or want to fork the method.</p>
-
-<h2>How is a skills library different from an awesome list?</h2>
-<div class="capsule">An awesome list curates links to other people's tools; the list owner vouches for relevance, not quality, and every entry has a different standard. A skills library maintains the content itself behind one bar — in this library's case: one structure standard enforced in CI, a security scan on every file, published eval scores, and one-command install. Lists solve discovery; libraries solve trust and consistency.</div>
-<p>They compose: this library is itself listed in several awesome lists, and its <a href="https://github.com/mohitagw15856/pm-claude-skills/tree/main/community">community registry</a> gives independent authors the library treatment — structural validation and a security scan — while their skill stays in their repo.</p>
-
-<h2>Where PM Skills is the wrong choice</h2>
-<div class="capsule">Skip skills when you need hosted actions with secrets (build an MCP server or GPT), when your task is one-off and generic (just prompt), when you need retrieval over private documents (that's RAG, not instructions), or when your organisation requires vendor support contracts — this is an MIT project with community support and a small paid services tier, not an enterprise vendor.</div>
-
-<p style="margin-top:36px"><a href="index.html">▶ Try the playground</a> · <a href="what-are-agent-skills.html">What are agent skills?</a> · <a href="https://github.com/mohitagw15856/pm-claude-skills">GitHub</a></p>
-</div>
-<script src="nav.js"></script>
+<main><p>This page has been retired to keep the site focused. Continue to <a href="modelbench.html">Model rankings</a>.</p></main>
+<script>location.replace('modelbench.html' + location.search + location.hash);</script>
 </body>
 </html>

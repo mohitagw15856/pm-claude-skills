@@ -64,3 +64,5 @@ A short routine: a fixed time and place, phone away, the child plans the order, 
 - "初一的有理数减法，我自己都忘了怎么教。"
 - "孩子每天作业写到十点，正常吗？"
 - "How do I help my child with Chinese primary maths homework without giving the answer?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-homework-helper-parent.html

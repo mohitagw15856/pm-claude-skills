@@ -67,3 +67,5 @@ Social/launch announcement craft (lead with the news, proof over adjectives, one
 - "Write a post announcing our new hire."
 - "We just raised a round: write the announcement."
 - "Make a shareable card for this milestone."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/announcement-card.html

@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "I don't know if I should keep going with this degree."
 - "Push through or walk away — I can't tell anymore."
 - "Am I quitting too early, or is this genuinely a dead end?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/should-i-quit-or-push.html

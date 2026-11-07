@@ -67,3 +67,5 @@ Structured interview preparation — STAR/behavioural method, competency-mapped 
 - "Prepare answers for a role."
 - "Practice for a specific company's interview."
 - "Get ready for a behavioural/case/PM round."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/interview-prep.html

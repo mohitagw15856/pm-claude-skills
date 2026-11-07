@@ -81,3 +81,5 @@ Project scheduling (Gantt charts, critical path, milestones, dependencies), expr
 - "Build a roadmap."
 - "Schedule phases."
 - "Show a project timeline."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/gantt-roadmap.html

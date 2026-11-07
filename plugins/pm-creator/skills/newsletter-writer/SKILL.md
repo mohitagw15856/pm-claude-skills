@@ -58,3 +58,5 @@ A 3-bullet "what a 5-second skimmer takes away" — if those bullets don't carry
 - "Write this week's Substack issue."
 - "Turn these notes into a sendable newsletter."
 - "Write a subject line and hook for my email issue."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/newsletter-writer.html

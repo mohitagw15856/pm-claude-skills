@@ -75,3 +75,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Reconcile what users say across these sources."
 - "Synthesise these app reviews and sales calls."
 - "Surface the underlying need behind these requests."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/multi-source-signal-synthesiser.html

@@ -114,3 +114,5 @@ found money needs a destination.
 - "We spend how much on food?!"
 - "Audit my grocery spending."
 - "Cut our food bill."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/grocery-budget-audit.html

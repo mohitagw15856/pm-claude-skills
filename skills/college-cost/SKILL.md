@@ -84,3 +84,5 @@ Deterministic. Defaults: 4% cost inflation, 4 years, 50% loan share at 6.5% over
 - "Compare these two offers real prices."
 - "How much loan payment after graduation?"
 - "Is this school affordable?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/college-cost.html

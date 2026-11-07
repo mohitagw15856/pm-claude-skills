@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "Why does nothing ever finish?"
 - "Set a WIP limit for my work."
 - "I start everything and complete nothing."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/personal-wip-limits.html

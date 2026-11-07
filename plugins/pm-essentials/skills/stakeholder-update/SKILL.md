@@ -305,3 +305,5 @@ For tool-using agents that can reach the team's communication channels (Slack, e
 - "Write a progress report for leadership."
 - "Write the project update for stakeholders."
 - "Write an executive briefing."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stakeholder-update.html

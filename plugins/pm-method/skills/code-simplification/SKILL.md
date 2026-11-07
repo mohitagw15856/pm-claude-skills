@@ -75,3 +75,5 @@ Given a description of the code instead of the code itself, **deliver the simpli
 - "This AI-generated code is over-engineered: simplify it."
 - "Remove the dead abstraction in this file."
 - "Make this simpler without changing behaviour."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/code-simplification.html

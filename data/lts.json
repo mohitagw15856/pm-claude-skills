@@ -8,122 +8,242 @@
     {
       "name": "ab-test-planner",
       "pinned": "f26f6efd8af1a054c896c1d05dd3959ea4c1823d5b95af226f32f37970b5150a",
-      "sha256": "f26f6efd8af1a054c896c1d05dd3959ea4c1823d5b95af226f32f37970b5150a",
-      "revisions": []
+      "sha256": "b55434342b3987bb1a142adc12eaad2186793f23ef2b13ee84c5d2c995356c19",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "b55434342b3987bb1a142adc12eaad2186793f23ef2b13ee84c5d2c995356c19",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "assumption-mapper",
       "pinned": "da5a46b846b63e984cb30bbe53cf2fea8c0f11cd5a8d1247f47247bf84278504",
-      "sha256": "da5a46b846b63e984cb30bbe53cf2fea8c0f11cd5a8d1247f47247bf84278504",
-      "revisions": []
+      "sha256": "f61bc19c416c736964245a6d4ac0ebde069c33222f98e43e76639342489cf6a7",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "f61bc19c416c736964245a6d4ac0ebde069c33222f98e43e76639342489cf6a7",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "churn-analysis",
       "pinned": "fe7eafb1d4021b3fd78786933936cd7bbaa1c4eaffcaddc11fb4112d9ed00337",
-      "sha256": "fe7eafb1d4021b3fd78786933936cd7bbaa1c4eaffcaddc11fb4112d9ed00337",
-      "revisions": []
+      "sha256": "a53e1cdacddec543dbd00611aa3fc627d7e3116e488fdeebf0357f9c29d94f8b",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "a53e1cdacddec543dbd00611aa3fc627d7e3116e488fdeebf0357f9c29d94f8b",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "cohort-analysis",
       "pinned": "8767f95e861ed54be8d02f09d4c159644a4b23042cb8594a656efaaa1a722432",
-      "sha256": "8767f95e861ed54be8d02f09d4c159644a4b23042cb8594a656efaaa1a722432",
-      "revisions": []
+      "sha256": "a746da5692e430662de9cf0121ccd160cc71dbb12a47f68d0b83e2d28e789d03",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "a746da5692e430662de9cf0121ccd160cc71dbb12a47f68d0b83e2d28e789d03",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "competitive-analysis",
       "pinned": "3572bb0710ecc27a67801bc71bff1bfea3ef9bab9fcec81d432f82b0b810b704",
-      "sha256": "3572bb0710ecc27a67801bc71bff1bfea3ef9bab9fcec81d432f82b0b810b704",
-      "revisions": []
+      "sha256": "b757491c774257682a702fff33e7e6a29166a939fad35a439db4b2a42899b8c8",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "b757491c774257682a702fff33e7e6a29166a939fad35a439db4b2a42899b8c8",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "cs-health-scorecard",
       "pinned": "ea7dd006e068556c7a55cd942dab631635876385c248077cef24b929c27041c1",
-      "sha256": "ea7dd006e068556c7a55cd942dab631635876385c248077cef24b929c27041c1",
-      "revisions": []
+      "sha256": "bf11917f7f587fa845536aac5e8a23782081907f5778caf47456242c235322f4",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "bf11917f7f587fa845536aac5e8a23782081907f5778caf47456242c235322f4",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "executive-summary",
       "pinned": "bc89aa98d4fbc26a7a38369fe0ac6774608a84771fdf674dcf45645432b87e95",
-      "sha256": "bc89aa98d4fbc26a7a38369fe0ac6774608a84771fdf674dcf45645432b87e95",
-      "revisions": []
+      "sha256": "31a9d1bf006881623214ccb6e5a9da8160f594641cf27e9a02e17af5f742c3cf",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "31a9d1bf006881623214ccb6e5a9da8160f594641cf27e9a02e17af5f742c3cf",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "go-to-market",
       "pinned": "96fea593e4ad4b29c2f7b2a2c54ac22d0a99258800cd3d387fffc9cd6a6f4260",
-      "sha256": "96fea593e4ad4b29c2f7b2a2c54ac22d0a99258800cd3d387fffc9cd6a6f4260",
-      "revisions": []
+      "sha256": "617539e06fad27a167ef0e23c5030cd6919ec1be7565716bbdacf256cacd6ca8",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "617539e06fad27a167ef0e23c5030cd6919ec1be7565716bbdacf256cacd6ca8",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "incident-postmortem",
       "pinned": "f50e046ed3a45f789a98e966f076c3dde42b054f5489fca7ca78d99a90b91473",
-      "sha256": "f50e046ed3a45f789a98e966f076c3dde42b054f5489fca7ca78d99a90b91473",
-      "revisions": []
+      "sha256": "37bdab910b7adbbf211e426098bb8929c1ed84c1ad0ddeb943390f94ba3bf9b5",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "37bdab910b7adbbf211e426098bb8929c1ed84c1ad0ddeb943390f94ba3bf9b5",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "metrics-framework",
       "pinned": "1dcc823c9d97b37dda289c287df2ff11020504632891e52d06b16c82d102a153",
-      "sha256": "1dcc823c9d97b37dda289c287df2ff11020504632891e52d06b16c82d102a153",
-      "revisions": []
+      "sha256": "cfcd51d3dd42bc4d413e0b72f504ec94689d70ac6ccdbcdfd3bb66afd8f93e57",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "cfcd51d3dd42bc4d413e0b72f504ec94689d70ac6ccdbcdfd3bb66afd8f93e57",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "okr-builder",
       "pinned": "61a85318f26e8edcd42a1b420e85e40b174e8fc3d888bbf5ff4a84e231332e76",
-      "sha256": "61a85318f26e8edcd42a1b420e85e40b174e8fc3d888bbf5ff4a84e231332e76",
-      "revisions": []
+      "sha256": "55f480ad6af3cf26e5ca936c59db45fcc63255f9f10bdbe08f752a3e7c072d5b",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "55f480ad6af3cf26e5ca936c59db45fcc63255f9f10bdbe08f752a3e7c072d5b",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "prd-template",
       "pinned": "2f62cc3543b0af74be50969a3dcd197fe7693e08e1e3691e2580c03d938ad748",
-      "sha256": "2f62cc3543b0af74be50969a3dcd197fe7693e08e1e3691e2580c03d938ad748",
-      "revisions": []
+      "sha256": "66a4761f5472ac5748383379d5a4db7d37bfffea3684c213813a23066badcf63",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "66a4761f5472ac5748383379d5a4db7d37bfffea3684c213813a23066badcf63",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "pricing-sensitivity-model",
       "pinned": "fd911f6762f89cbb44bc5f14ff275429515b0ae207348a8cc63cd08172bac2a4",
-      "sha256": "fd911f6762f89cbb44bc5f14ff275429515b0ae207348a8cc63cd08172bac2a4",
-      "revisions": []
+      "sha256": "3821c627e81bf7f8549baf86637e4e4541aa805fc5ce43d223f1ea458620dd8a",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "3821c627e81bf7f8549baf86637e4e4541aa805fc5ce43d223f1ea458620dd8a",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "rice-prioritisation",
       "pinned": "79ed752a117ff3859542cb1c29af0229b04ef854e76ceb9b17f951ac5ffab366",
-      "sha256": "79ed752a117ff3859542cb1c29af0229b04ef854e76ceb9b17f951ac5ffab366",
-      "revisions": []
+      "sha256": "02d76863924ccfede7e6b466deb580c472c85ecebdc52046c563a6e60764dd89",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "02d76863924ccfede7e6b466deb580c472c85ecebdc52046c563a6e60764dd89",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "roadmap-narrative",
       "pinned": "d1fdc2ac6c7123a93c9b66badc90a9addd4776cc940748cbc046032cdd1b7a4f",
-      "sha256": "d1fdc2ac6c7123a93c9b66badc90a9addd4776cc940748cbc046032cdd1b7a4f",
-      "revisions": []
+      "sha256": "affe946afbfd19257b915cd7dcae09461b22d646ae901c2ca08694e0ffe4c9f3",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "affe946afbfd19257b915cd7dcae09461b22d646ae901c2ca08694e0ffe4c9f3",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "runway-monte-carlo",
       "pinned": "77f3d8f05bd9afd10f710fd6b83daab6185f0918460a5b8ce7bbf997124f97ed",
-      "sha256": "77f3d8f05bd9afd10f710fd6b83daab6185f0918460a5b8ce7bbf997124f97ed",
-      "revisions": []
+      "sha256": "468fac5cf318a3e9733f84bdfebeb4db92be97c16c778f69a99d098d8e4c6230",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "468fac5cf318a3e9733f84bdfebeb4db92be97c16c778f69a99d098d8e4c6230",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "sprint-planning",
       "pinned": "19f18712799e2af3227f77c5953064c10cc9b36f4fcd3c93ee436399c819c0ac",
-      "sha256": "19f18712799e2af3227f77c5953064c10cc9b36f4fcd3c93ee436399c819c0ac",
-      "revisions": []
+      "sha256": "19e3bfeaa7fb7a05a6b79c819ef8c5df23cd54f88193b791a34bd53e80333f7c",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "19e3bfeaa7fb7a05a6b79c819ef8c5df23cd54f88193b791a34bd53e80333f7c",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "stakeholder-update",
       "pinned": "52f0bac6abd0cb1cf02a828f61a5ae817b489d9447a45fbccc3e362cf32122e6",
-      "sha256": "52f0bac6abd0cb1cf02a828f61a5ae817b489d9447a45fbccc3e362cf32122e6",
-      "revisions": []
+      "sha256": "28692408b37b42fec9e26ae4ed6b7e3ecdca271799f2e9c7ddb0ac42ee342c3a",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "28692408b37b42fec9e26ae4ed6b7e3ecdca271799f2e9c7ddb0ac42ee342c3a",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "user-story-writer",
       "pinned": "ac6e18040c8e0dd2925ea8fff75df41dcf80fde82ed3d32d2b3642560efa54d1",
-      "sha256": "ac6e18040c8e0dd2925ea8fff75df41dcf80fde82ed3d32d2b3642560efa54d1",
-      "revisions": []
+      "sha256": "cfd67b9a4f803aad60c984ba31d1048049bd53b8adfbf2a69a9f0f0d924b3db3",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "cfd67b9a4f803aad60c984ba31d1048049bd53b8adfbf2a69a9f0f0d924b3db3",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     },
     {
       "name": "win-loss-analysis",
       "pinned": "a90e5f2599376ebfdec81555ab70ecfa26dfeb8f239fc860c357cbe524409b43",
-      "sha256": "a90e5f2599376ebfdec81555ab70ecfa26dfeb8f239fc860c357cbe524409b43",
-      "revisions": []
+      "sha256": "3186abc32940bb63bfd7417b97f04665f4d2b59c9c0031502515c640fd12fbbb",
+      "revisions": [
+        {
+          "date": "2026-11-07",
+          "sha256": "3186abc32940bb63bfd7417b97f04665f4d2b59c9c0031502515c640fd12fbbb",
+          "note": "Added the closing line linking to the skill's browser page; no change to the instructions"
+        }
+      ]
     }
   ]
 }

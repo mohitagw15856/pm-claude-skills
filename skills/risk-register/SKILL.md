@@ -217,3 +217,5 @@ A risk is closed when:
 - [ ] Do not delete closed risks — they provide an audit trail; archive them instead
 - [ ] Do not confuse risks with issues — a risk is something that might happen; an issue is something that has already happened
 - [ ] Do not leave Critical or High risks without a contingency plan — what happens if the mitigation fails must be documented
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/risk-register.html

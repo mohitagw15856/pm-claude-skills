@@ -89,3 +89,5 @@ Every recipe includes the prompt the scheduled run executes. It must contain:
 - "Set up a routine."
 - "Automate a weekly report."
 - "Wire a skill into n8n or GitHub Actions."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/schedule-recipe.html

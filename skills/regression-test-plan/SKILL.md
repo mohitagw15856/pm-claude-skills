@@ -72,3 +72,5 @@ Risk-based regression practice — change-impact analysis, tiered smoke/targeted
 - "Build a regression suite."
 - "Decide what to re-test after a change."
 - "Trim a bloated regression pack."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/regression-test-plan.html

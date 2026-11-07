@@ -136,3 +136,5 @@ To hit £[target]:
 - [ ] Do not skip the activity sanity check — a forecast number that requires unreachable activity levels is not credible
 - [ ] Do not use top-down quota as the only forecast method when pipeline data exists — bottom-up is more accurate and defensible
 - [ ] Do not omit the coverage ratio — without it, stakeholders cannot assess whether the pipeline is sufficient to hit target
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sales-forecasting-model.html

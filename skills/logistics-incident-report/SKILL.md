@@ -94,3 +94,5 @@ If details are thin, build the report with figures marked `[to confirm]` and lis
 - "Report a customs hold."
 - "Quantify a supply disruption."
 - "Draft the customer notice for a late delivery."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/logistics-incident-report.html

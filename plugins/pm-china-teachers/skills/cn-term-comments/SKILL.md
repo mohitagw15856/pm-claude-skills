@@ -59,3 +59,5 @@ Duplicates flagged: any sentence used for more than two students, and any studen
 - "综合素质评价里的班主任评语怎么写？"
 - "把这些评语改得不那么千篇一律。"
 - "Write end-of-term report comments in Chinese for my class."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-term-comments.html

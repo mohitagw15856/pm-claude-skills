@@ -74,3 +74,5 @@ Then verify: rewrite one neutral paragraph in the extracted voice and check it a
 - "Learn my writing style."
 - "Make outputs sound like me."
 - "Build a voice profile."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/style-fingerprint.html

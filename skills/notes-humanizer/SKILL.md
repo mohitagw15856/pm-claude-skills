@@ -187,3 +187,5 @@ Present the output in the four-section structure defined above. The change log m
 - "Run the humanizer on this LinkedIn post: [paste]"
 - "This has too many em dashes and rule-of-three lists — clean it up: [paste]"
 - "Make this email sound less robotic: [paste]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/notes-humanizer.html

@@ -67,3 +67,5 @@ Case-study / social-proof marketing practice â€” result-led headline, challengeâ
 - "Turn this project into a client success story."
 - "Write up this engagement for our portfolio."
 - "Show the results we got for this client."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/case-study-writeup.html

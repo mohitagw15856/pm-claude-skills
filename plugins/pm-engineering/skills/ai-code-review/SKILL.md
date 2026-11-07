@@ -74,3 +74,5 @@ Review in this order — most damaging first:
 - "Claude wrote this code: what did it get wrong?"
 - "Check this PR for hallucinated APIs."
 - "Set review standards for a team using coding agents."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-code-review.html

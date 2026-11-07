@@ -121,3 +121,5 @@ Status, signed off by, date.
 - "Is this Figma design ready for engineering?"
 - "Do a design QA on [screen/feature]"
 - "What needs fixing before we hand this off?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-design-qa.html

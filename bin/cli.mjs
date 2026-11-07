@@ -32,7 +32,7 @@ const VERSION = (() => {
   try { return createRequire(import.meta.url)('../package.json').version; } catch { return '0.0.0'; }
 })();
 
-const NATIVE = new Set(['claude', 'hermes', 'codex', 'openclaw']);
+const NATIVE = new Set(['claude', 'hermes', 'codex', 'openclaw', 'copilot']);
 // Rule-file agents install generated files from exports/<agent> (ext per agent).
 const RULEFILE = { cursor: '.mdc', windsurf: '.md', aider: '.md', kilocode: '.md' };
 // Generated rule-file agents: rule files are written at install time from skills/,
@@ -68,6 +68,7 @@ const defaultTarget = (agent) => ({
   hermes: join(homedir(), '.hermes', 'skills'),
   codex: join(homedir(), '.codex', 'skills'),
   openclaw: join(homedir(), '.openclaw', 'skills'),
+  copilot: join(process.cwd(), '.github', 'skills'),   // Copilot coding agent reads native SKILL.md here
   cursor: join(process.cwd(), '.cursor', 'rules'),
   windsurf: join(process.cwd(), '.windsurf', 'rules'),
   aider: join(process.cwd(), '.aider', 'skills'),
@@ -322,6 +323,83 @@ function sync(opts) {
   for (const agent of cfg.agents) add({ ...opts, agent, _only: set, lite, target: targetFor(agent) });
 }
 
+// `lock`: write pm-skills.lock, a reproducible record of which library version
+// and which exact skill contents (sha256 of each SKILL.md) this project uses.
+// The set comes from .pm-skills.json when present, otherwise from what `add`
+// recorded for this machine. `lock --check` exits 1 when the library this
+// command runs from, or the installed copies on disk, no longer match the lock.
+function lockCmd(opts) {
+  const lockPath = resolve(opts.out || 'pm-skills.lock');
+  const cfgPath = resolve(opts.config || '.pm-skills.json');
+  let agents = [], set = new Set(), lite = !!opts.lite, targetFor, source;
+  if (existsSync(cfgPath)) {
+    let cfg;
+    try { cfg = loadConfig(cfgPath, AGENTS); } catch (e) { console.error(`Error: ${e.message}`); process.exit(2); }
+    agents = cfg.agents; lite = cfg.lite || lite; source = basename(cfgPath);
+    for (const n of cfg.bundles.length ? bundleFilter(cfg.bundles.join(',')) : []) set.add(n);
+    for (const n of cfg.skills) set.add(n);
+    targetFor = (a) => resolve(cfg.targets[a] ? resolve(dirname(cfgPath), cfg.targets[a]) : defaultTarget(a));
+  } else {
+    const manifest = readManifest();
+    const entries = Object.entries(manifest.installs);
+    if (!entries.length) { console.error('Error: nothing to lock. Create .pm-skills.json (docs/TEAMS.md) or run: npx pm-claude-skills add --agent <agent>'); process.exit(2); }
+    agents = entries.map(([a]) => a); source = 'installs.json';
+    for (const [, rec] of entries) {
+      if (Array.isArray(rec.skills) && rec.skills.length) { for (const n of rec.skills) set.add(n); continue; }
+      const only = rec.bundle ? bundleFilter(rec.bundle) : null;
+      for (const n of readdirSync(join(PKG_ROOT, 'skills'))) if (existsSync(join(PKG_ROOT, 'skills', n, 'SKILL.md')) && (!only || only.has(n))) set.add(n);
+      lite = lite || !!rec.lite;
+    }
+    targetFor = (a) => resolve(manifest.installs[a]?.target || defaultTarget(a));
+  }
+  const names = [...set].sort();
+  const hashOf = (name) => createHash('sha256').update(readFileSync(join(PKG_ROOT, 'skills', name, 'SKILL.md'))).digest('hex');
+  if (opts.check) {
+    let lock;
+    try { lock = JSON.parse(readFileSync(lockPath, 'utf8')); } catch { console.error(`✗ No readable lockfile at ${lockPath}. Run: npx pm-claude-skills lock`); process.exit(2); }
+    const problems = [];
+    const locked = lock.skills || {};
+    for (const n of names) if (!locked[n]) problems.push(`${n} is in the set but not in the lock`);
+    for (const [n, rec] of Object.entries(locked)) {
+      if (!set.has(n)) { problems.push(`${n} is locked but no longer in the set`); continue; }
+      if (!existsSync(join(PKG_ROOT, 'skills', n, 'SKILL.md'))) { problems.push(`${n}: not in library ${VERSION}`); continue; }
+      if (hashOf(n) !== rec.sha256) problems.push(`${n}: library ${VERSION} ships a different SKILL.md than the one locked (${lock.library})`);
+    }
+    for (const a of agents) {
+      const target = targetFor(a);
+      for (const n of names) {
+        const exp = expectedFile(a, n, target, lite);
+        if (!exp || !locked[n]) continue;
+        if (!existsSync(exp.path)) problems.push(`${a}: ${n} is not installed at ${exp.path}`);
+        else if (createHash('sha256').update(readFileSync(exp.path)).digest('hex') !== (locked[n].installed?.[a] || '')) problems.push(`${a}: installed ${n} differs from the locked copy`);
+      }
+    }
+    if (problems.length) {
+      console.error(`✗ ${basename(lockPath)}: ${problems.length} problem(s)`);
+      for (const p of problems.slice(0, 25)) console.error(`  ${p}`);
+      if (problems.length > 25) console.error(`  … and ${problems.length - 25} more`);
+      console.error('Re-lock after an intentional update: npx pm-claude-skills lock');
+      process.exit(1);
+    }
+    console.log(`✓ ${basename(lockPath)} matches library ${VERSION}: ${names.length} skill(s) for ${agents.join(', ')}.`);
+    return;
+  }
+  const skills = {};
+  for (const n of names) {
+    if (!existsSync(join(PKG_ROOT, 'skills', n, 'SKILL.md'))) { console.error(`Error: no skill called "${n}".`); process.exit(2); }
+    const installed = {};
+    for (const a of agents) {
+      const exp = expectedFile(a, n, targetFor(a), lite);
+      if (exp) installed[a] = createHash('sha256').update(exp.content).digest('hex');
+    }
+    skills[n] = { sha256: hashOf(n), installed };
+  }
+  const lock = { lockfileVersion: 1, library: VERSION, generated: new Date().toISOString(), source, agents, lite, skills };
+  if (opts.dryRun) { console.log(JSON.stringify(lock, null, 2)); return; }
+  writeFileSync(lockPath, JSON.stringify(lock, null, 2) + '\n');
+  console.log(`Wrote ${basename(lockPath)}: library ${VERSION}, ${names.length} skill(s) for ${agents.join(', ')}. Commit it; CI runs: npx pm-claude-skills lock --check`);
+}
+
 // --lts: every chosen skill must be in the LTS line (data/lts.json) and its
 // bundled SKILL.md must still have the pinned SHA-256; otherwise nothing is installed.
 function ltsGuard(only) {
@@ -455,6 +533,12 @@ function add(opts) {
   installProfile(agent, target, opts);
   console.log(`\n${opts.dryRun ? 'Would install' : 'Installed'} ${count} item(s) for '${agent}'.`);
   if (!opts.dryRun) {
+    // Record when and where, so `doctor` can say what changed since and `lock` knows the set.
+    try {
+      const manifest = readManifest();
+      manifest.installs[agent] = { ...(manifest.installs[agent] || {}), target, bundle: opts.bundle || '', skills: opts.skills ? String(opts.skills).split(',').map((x) => x.trim()).filter(Boolean) : [], lite: !!opts.lite, version: VERSION, when: new Date().toISOString() };
+      writeManifest(manifest);
+    } catch { /* state dir not writable: nothing depends on it */ }
     const note = {
       cursor: `Cursor will pick up the rules in ${target} on its next session.`,
       windsurf: `Windsurf will pick up the rules in ${target} on its next session.`,
@@ -487,6 +571,7 @@ function detectAgents() {
     windsurf: [join(home, '.codeium', 'windsurf'), join(cwd, '.windsurf')],
     aider: [join(home, '.aider.conf.yml'), join(cwd, '.aider.conf.yml')],
     kilocode: [join(cwd, '.kilocode')],
+    copilot: [join(cwd, '.github', 'copilot-instructions.md'), join(cwd, '.github', 'skills'), join(home, '.copilot')],
     trae: [join(home, '.trae'), join(cwd, '.trae')], qoder: [join(home, '.qoder'), join(cwd, '.qoder')],
     lingma: [join(home, '.lingma'), join(cwd, '.lingma')], codebuddy: [join(home, '.codebuddy'), join(cwd, '.codebuddy')],
   };
@@ -816,6 +901,8 @@ Usage:
   npx pm-claude-skills uninstall   # remove what this library installed; your own files stay ([--agent <a>] [-y])
   npx pm-claude-skills doctor      # checkup: what's installed, what's stale, what to fix (read-only)
   npx pm-claude-skills changelog <skill>      # what changed in a skill, and when (per-skill git history)
+  npx pm-claude-skills lock [--check]         # pin the exact skill contents this project uses (pm-skills.lock); --check for CI
+  npx pm-claude-skills memory show|set|clear  # the one shared memory file every skill reads first (docs/MEMORY-CONVENTION.md)
   npx pm-claude-skills list
   npx pm-claude-skills --version
 
@@ -857,6 +944,12 @@ else if (cmd === 'setup') await setup(opts);
 else if (cmd === 'uninstall') await uninstallCmd(opts);
 else if (cmd === 'update') updateCmd(opts);
 else if (cmd === 'sync') sync(opts);
+else if (cmd === 'lock') lockCmd(opts);
+else if (cmd === 'memory') {
+  const { run } = await import('./memory.mjs');
+  try { process.exit(await run(process.argv.slice(3))); }
+  catch (e) { console.error(`Error: ${e.message}`); process.exit(1); }
+}
 else if (cmd === 'profile') {
   const { run } = await import('./profile.mjs');
   try { process.exit(await run(process.argv.slice(3))); }

@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "Find the holes in my argument before I present it."
 - "What's the weakest part of this plan?"
 - "How would a competitor break what I'm building?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/red-team-my-plan.html

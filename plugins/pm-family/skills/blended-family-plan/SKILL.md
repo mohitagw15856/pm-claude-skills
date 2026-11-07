@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "My partner's child is resisting me — what do I do?"
 - "How do we merge two sets of house rules fairly?"
 - "Help our blended family get off to a good start."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/blended-family-plan.html

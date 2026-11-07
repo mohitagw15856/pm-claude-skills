@@ -74,3 +74,5 @@ What counts as abnormal (equipment alarm, material mismatch, a defect repeats) a
 - "我们的 SOP 全是文字，帮我改成带图示占位的格式。"
 - "注塑机换模的作业指导书。"
 - "Write a shop-floor work instruction in Chinese for a soldering station."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-sop-writer.html

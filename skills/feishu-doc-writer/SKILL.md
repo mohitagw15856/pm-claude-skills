@@ -79,3 +79,5 @@ Then:
 - "写一份飞书方案文档，比较这三个方案，领导要做决定。"
 - "Turn these notes into a Lark doc for the cross-team review."
 - "把复盘内容整理成飞书格式，行动项要能转成任务。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/feishu-doc-writer.html

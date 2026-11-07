@@ -74,3 +74,5 @@ Ask for these if not provided:
 - "Travel insurance won't pay for my cancelled trip — write the appeal."
 - "The denial says 'insufficient documentation.' What exactly do I send?"
 - "Internal appeal failed — how do I escalate to an ombudsman?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/insurance-claim-appeal.html

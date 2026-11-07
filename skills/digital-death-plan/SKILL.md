@@ -127,3 +127,5 @@ for the will this plugs into; [[password]] hygiene now makes all of this easier.
 - "Help my family access my stuff if something happens."
 - "Plan my digital legacy."
 - "Who gets my photos and passwords?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/digital-death-plan.html

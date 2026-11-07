@@ -59,3 +59,5 @@ A one-line note on timing and how you'll follow up if you don't hear back.
 - "Sell an editor on this angle."
 - "Write a query letter to a publication."
 - "Why now for this feature story?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/story-pitch.html

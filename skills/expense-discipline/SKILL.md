@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Set up my expense workflow."
 - "What does the policy actually require?"
 - "Review expenses as a manager without being a receipt cop."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/expense-discipline.html

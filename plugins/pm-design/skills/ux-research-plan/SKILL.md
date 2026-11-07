@@ -166,3 +166,5 @@ For each insight: "This means we should [design/product implication]" or "This c
 - "Create a discussion guide for user interviews about [topic]"
 - "Plan a usability test for [prototype or feature]"
 - "Write screener questions for [target user type]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ux-research-plan.html

@@ -63,3 +63,5 @@ Performance-marketing practice — LTV/CAC and payback economics, incrementality
 - "Allocate an ad budget across channels."
 - "Set CAC/LTV targets."
 - "Structure a creative-testing program."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/paid-acquisition-plan.html

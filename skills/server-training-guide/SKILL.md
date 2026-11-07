@@ -62,3 +62,5 @@ The observable competencies a trainer checks before solo — greeting, order acc
 - "Create FOH onboarding."
 - "Write service standards."
 - "Build a restaurant training program."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/server-training-guide.html

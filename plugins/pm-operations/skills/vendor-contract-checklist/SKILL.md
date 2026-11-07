@@ -76,3 +76,5 @@ Procurement and vendor-risk practice — key-term extraction, risk-flagged revie
 - "Review a vendor contract."
 - "Check a SaaS/MSA/subscription agreement."
 - "Prepare negotiation points before signing."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vendor-contract-checklist.html

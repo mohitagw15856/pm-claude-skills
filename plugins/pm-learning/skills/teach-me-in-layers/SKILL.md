@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "I need to understand inflation progressively — start simple."
 - "Explain quantum computing, building up gradually."
 - "Give me the gist first, then go deeper if I get it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/teach-me-in-layers.html

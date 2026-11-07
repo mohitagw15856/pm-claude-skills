@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "What dishwasher features actually matter?"
 - "Is this appliance worth the extra money, or is it marketing?"
 - "Should I get the extended warranty on a new dryer?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/appliance-buying-guide.html

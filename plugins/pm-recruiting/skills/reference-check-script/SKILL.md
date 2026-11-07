@@ -72,3 +72,5 @@ Ask about job performance only. Do **not** ask about age, health/disability, fam
 - "Design reference questions."
 - "Build a reference-check rubric."
 - "What should I ask this candidate's references?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/reference-check-script.html

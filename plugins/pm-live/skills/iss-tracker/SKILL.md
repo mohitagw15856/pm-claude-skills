@@ -63,3 +63,5 @@ Source: open-notify.org (position fetched live; orbital constants are stable fac
 - "Is the space station overhead?"
 - "Can I see the ISS tonight?"
 - "Track the station for the kids."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/iss-tracker.html

@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Simulate the finance office."
 - "What tricks will the dealer use?"
 - "Prep me before I buy a car."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-car-dealership.html

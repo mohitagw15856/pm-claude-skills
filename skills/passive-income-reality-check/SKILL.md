@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Best realistic passive income ideas for my situation?"
 - "I keep seeing passive income gurus — what's actually legit?"
 - "Reality-check these passive income ideas for me."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/passive-income-reality-check.html

@@ -126,3 +126,5 @@ misinformation supply side.
 - "My dad believes X now."
 - "My friend's gone down a conspiracy hole."
 - "How do I talk to them without a fight?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rabbit-hole-rescue.html

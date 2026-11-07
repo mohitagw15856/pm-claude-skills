@@ -64,3 +64,5 @@ Freelance/consulting pricing practice — minimum-viable-rate math, value-based 
 - "Build a rate card."
 - "Decide what to charge."
 - "Move off hourly billing."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rate-card.html

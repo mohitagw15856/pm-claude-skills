@@ -37,6 +37,17 @@ Every high-stakes skill page without a current review links straight to that for
 
 A reviewed skill shows **"✔ Reviewed by [credential], [month year]"** on its page and in the Playground, sourced from the registry — never hand-typed. Reviewers are credited by name/credential (or "a licensed X" if they prefer anonymity) on a Reviewers section of the README.
 
+## What reviewers get
+
+Reviewing is unpaid work by people whose time is expensive, so the credit is explicit and durable:
+
+- **Co-authorship.** A reviewed skill lists the reviewer in `config/human-review.json`, and the skill's page, its catalogue entry and the Reviewers section of the README name them (or "a licensed X" on request). That credit stays in the git history even after the 12-month badge expires.
+- **A signed certificate.** Every recorded review can be issued as a signed credential from the [credentials page](https://mohitagw15856.github.io/pm-claude-skills/credential.html): a verifiable record that a named professional reviewed a named skill on a date, suitable for a CV or a professional-development log. Verification needs nothing but the public key the site publishes.
+- **The badge.** "✔ Reviewed by [credential], [month year]" on the skill's page and in the Playground, for 12 months, sourced from the registry and never hand-typed.
+- **A say in the skill.** Review edits are applied as a pull request with the reviewer as co-author, and the reviewer is asked first when the skill is next rewritten.
+
+The count that matters is public: the README's trust section shows how many high-stakes skills have a current review, and it is 0 until the first one lands.
+
 ## Where to start
 [HUMAN-REVIEW-QUEUE.md](HUMAN-REVIEW-QUEUE.md) ranks the unreviewed high-stakes skills by realistic harm if the output is wrong (regenerate with `node scripts/human-review-queue.mjs --write`). Reviewers take the top of the list first.
 

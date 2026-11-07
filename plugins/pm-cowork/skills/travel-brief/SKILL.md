@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "Build the travel brief."
 - "I always forget something when traveling."
 - "Organize this three-city week."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/travel-brief.html

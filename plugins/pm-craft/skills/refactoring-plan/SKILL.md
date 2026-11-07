@@ -65,3 +65,5 @@ Refactoring discipline (Martin Fowler): behavior-preserving transformations, cha
 - "This code is tangled: how do we clean it up safely?"
 - "Restructure this before we add the feature."
 - "Plan small behaviour-preserving steps."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/refactoring-plan.html

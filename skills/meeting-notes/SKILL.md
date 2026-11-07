@@ -344,3 +344,5 @@ For tool-using agents with connected MCP servers (Notion, Linear/Jira, Slack). R
 - "Format discussion notes."
 - "Capture action items."
 - "Document decisions from any meeting type."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/meeting-notes.html

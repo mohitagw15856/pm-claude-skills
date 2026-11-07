@@ -85,3 +85,5 @@ Ask for (if not already provided):
 - "Simulate user reactions with AI personas."
 - "Pretest a survey."
 - "Decide whether synthetic research is appropriate at all."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/synthetic-user-research.html

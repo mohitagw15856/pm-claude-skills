@@ -81,3 +81,5 @@ Retail promotion & pricing practice — objective-led offer design, margin/break
 - "Plan our Black Friday sale."
 - "Run a discount without wrecking margin."
 - "Plan a launch offer."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/promotion-plan.html

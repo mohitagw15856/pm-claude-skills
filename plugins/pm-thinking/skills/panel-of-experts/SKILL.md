@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "Who should I be thinking like when handling this work conflict?"
 - "What would professionals catch here that I'm missing?"
 - "Convene an expert panel on this health-and-money decision."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/panel-of-experts.html

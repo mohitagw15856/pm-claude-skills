@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "We had a fight last week; help me check in first."
 - "He read my message and didn't reply — what do I send?"
 - "My roommate keeps skipping their chores — how do I bring it up?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/awkward-message-helper.html

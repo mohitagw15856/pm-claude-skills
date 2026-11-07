@@ -74,3 +74,5 @@ Ask for these if not provided:
 - "Laptop screen failed just outside the 1-year warranty — can I still get it fixed free?"
 - "Write me a warranty claim for my phone; the battery swelled up."
 - "Retailer and manufacturer keep pointing at each other. What now?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/warranty-claim.html

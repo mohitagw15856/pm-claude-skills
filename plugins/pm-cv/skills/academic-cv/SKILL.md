@@ -74,3 +74,5 @@ Rules:
 - "Format my publications list properly."
 - "I'm applying for a postdoc. Help me order my CV."
 - "Turn my academic CV into a two-page version for an industry research role."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/academic-cv.html

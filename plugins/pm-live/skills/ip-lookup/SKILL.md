@@ -62,3 +62,5 @@ Source: [ip-api.com / ipify] · rerun: `[exact curl]`
 - "What's my public IP?"
 - "Where is this IP from?"
 - "Is this IP a VPN/datacenter?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ip-lookup.html

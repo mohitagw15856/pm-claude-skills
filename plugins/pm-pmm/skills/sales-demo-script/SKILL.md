@@ -97,3 +97,5 @@ Use realistic sample data; don't imply results or claims you can't back — mark
 - "Turn this feature list into a value-story demo"
 - "Structure a 20-minute demo that leads with buyer pain"
 - "Script the talk track and aha moments for our product demo"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sales-demo-script.html

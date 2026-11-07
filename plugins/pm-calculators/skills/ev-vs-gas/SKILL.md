@@ -82,3 +82,5 @@ Battery replacement risk (and its warranty) · resale-value differences in an ev
 - "Is an EV worth it?"
 - "Does an EV pay for itself?"
 - "Should my next car be electric?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ev-vs-gas.html

@@ -59,3 +59,5 @@ Steps: raise it in writing with the employer, then file with the Tripartite Alli
 - "How much annual leave should I get after three years?"
 - "I'm being retrenched. Is there a compulsory payout?"
 - "新加坡公司要我离职，我能拿什么补偿？"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/singapore-employment-act.html

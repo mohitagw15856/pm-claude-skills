@@ -60,6 +60,25 @@ if (existsSync(pluginsDir)) {
 }
 
 // --- Parse YAML-ish frontmatter (name + description only) ---
+// Permission manifest (SkillSpec §9.1): metadata.permissions { tools: [...], approval }.
+// Parsed from the raw frontmatter block, like the duet block below.
+function parsePermissions(text) {
+  const fm = (text.match(/^---\r?\n([\s\S]*?)\r?\n---/) || [])[1] || '';
+  const meta = (fm.match(/^metadata:\r?\n((?:[ \t]+.*\r?\n?)*)/m) || [])[1] || '';
+  const block = (meta.match(/^[ \t]+permissions:\r?\n((?:[ \t]{4}.*\r?\n?)*)/m) || [])[1] || '';
+  if (!block) return null;
+  const get = (k) => (block.match(new RegExp(`^[ \\t]+${k}:[ \\t]*(.*?)[ \\t]*$`, 'm')) || [])[1];
+  const toolsRaw = get('tools') || '[]';
+  const tools = toolsRaw.replace(/^\[|\]$/g, '').split(',').map((t) => t.trim()).filter(Boolean);
+  return { tools, approval: get('approval') || 'never' };
+}
+// Typed contract (SkillSpec §9.2): schemas/skills/<name>.json with inputs + outputs JSON Schema.
+function loadContract(name) {
+  const f = join(__dirname, '..', 'schemas', 'skills', `${name}.json`);
+  if (!existsSync(f)) return null;
+  try { const c = JSON.parse(readFileSync(f, 'utf8')); return { inputs: c.inputs, outputs: c.outputs }; } catch { return null; }
+}
+
 function parseFrontmatter(text) {
   const m = text.match(/^---\n([\s\S]*?)\n---\n?([\s\S]*)$/);
   if (!m) return { meta: {}, body: text };
@@ -233,6 +252,8 @@ for (const name of readdirSync(skillsDir)) {
     eval: evalScores[meta.name || name] || null,
     source: SOURCES[meta.name || name] || null,
     inputs: parseInputs(body),
+    ...(parsePermissions(text) ? { permissions: parsePermissions(text) } : {}),
+    ...(loadContract(meta.name || name) ? { contract: loadContract(meta.name || name) } : {}),
     instructions: body.trim(),
   });
 }

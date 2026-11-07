@@ -83,3 +83,5 @@ One paragraph: the single strongest move before pitching for real.
 - "Simulate the partner meeting."
 - "Stress-test my fundraise."
 - "What happens after the pitch?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vc-partner-meeting.html

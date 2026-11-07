@@ -105,3 +105,5 @@ Same habit off the table: [one sentence]
 - "Practice Catan trades with me."
 - "How do I get better at Diplomacy?"
 - "Roleplay a trade with me."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tabletop-negotiator.html

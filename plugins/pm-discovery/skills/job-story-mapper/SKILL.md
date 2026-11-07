@@ -161,3 +161,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Write job stories."
 - "Map the customer jobs for this feature."
 - "Reframe these features around customer outcomes."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/job-story-mapper.html

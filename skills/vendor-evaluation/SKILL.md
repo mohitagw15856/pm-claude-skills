@@ -85,3 +85,5 @@ Security: ISO 27001 / SOC 2 certified? Where is data stored? Breach notification
 - "Help me evaluate vendors for [procurement]"
 - "Create a vendor scorecard for [software/service]"
 - "Compare [Vendor A] vs [Vendor B] for [use case]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vendor-evaluation.html

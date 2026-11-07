@@ -82,3 +82,5 @@ A **Triage Report** artifact:
 - "Triage my unread Gmail and draft the quick replies."
 - "Process my email backlog — archive the noise, flag what needs me."
 - "Label and archive my newsletters, leave the real messages."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/inbox-triage-live.html

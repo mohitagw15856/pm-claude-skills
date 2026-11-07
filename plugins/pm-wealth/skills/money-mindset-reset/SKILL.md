@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "Money stresses me out and I avoid dealing with it."
 - "I earn fine but always feel broke and anxious about money."
 - "Help me fix my money mindset — I feel guilt around spending."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/money-mindset-reset.html

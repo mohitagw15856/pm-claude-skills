@@ -1,6 +1,10 @@
 ---
 name: agent-project-file
 description: "Set up the project file an AI agent keeps for work that runs over days or weeks: the goal, the definition of done, milestones, the current state, decisions made, open questions, and the exact point to resume from after an interruption. Use when asked to plan a long-running agent task, make my agent work on this over a week, keep state between agent sessions, or hand a multi-day project to an AI. Produces the project file, the update rules, the check-in schedule and the resume checklist."
+metadata:
+  permissions:
+    tools: [filesystem-read]
+    approval: never
 ---
 
 # Agent Project File Skill
@@ -69,3 +73,5 @@ Given only a goal and a time span, **write the full project file anyway**: deriv
 - "Make a project file so my agent can resume where it left off"
 - "Plan a week-long research task for an AI agent"
 - "Keep state between my agent's sessions"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-project-file.html

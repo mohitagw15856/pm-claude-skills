@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "Help me explain my record in an interview without tanking it."
 - "What jobs actually hire people with records?"
 - "What are ban-the-box rules and how do they help me?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/job-search-with-a-record.html

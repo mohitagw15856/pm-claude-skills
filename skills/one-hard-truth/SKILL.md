@@ -62,3 +62,5 @@ Ask for these if not provided:
 - "Be honest with me — what do I not want to hear about this plan?"
 - "What's the thing everyone's too nice to tell me here?"
 - "Give it to me straight about this situation."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/one-hard-truth.html

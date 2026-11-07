@@ -78,3 +78,5 @@ Ask for these if not provided:
 - "What do I need to do to get my full deposit back when I move out?"
 - "Moving across the country with two kids and a dog — help me plan it."
 - "Everything's booked but I don't know what to pack when."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/moving-house-checklist.html

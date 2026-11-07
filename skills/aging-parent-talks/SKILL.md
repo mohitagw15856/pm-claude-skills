@@ -139,3 +139,5 @@ bones; [[patient-communication]] for the clinical-side cousin.
 - "I need to talk to my dad about driving."
 - "My mum won't discuss her finances."
 - "We need to talk about care."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/aging-parent-talks.html

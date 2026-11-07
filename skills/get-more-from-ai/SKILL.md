@@ -61,3 +61,5 @@ Ask for these if not provided:
 - "How do power users actually use AI so well?"
 - "Teach me to get dramatically better results from AI."
 - "What am I doing wrong that makes my AI results so basic?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/get-more-from-ai.html

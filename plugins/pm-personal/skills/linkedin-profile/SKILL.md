@@ -59,3 +59,5 @@ LinkedIn profile-optimisation practice — keyword-aware headline/About, hook-be
 - "Rewrite my LinkedIn About section."
 - "Make my profile recruiter-friendly."
 - "Optimise my LinkedIn profile."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/linkedin-profile.html

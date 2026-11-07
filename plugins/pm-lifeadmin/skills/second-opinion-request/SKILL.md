@@ -74,3 +74,5 @@ Ask for these if not provided:
 - "Should I get a second opinion?"
 - "How do I ask for a second opinion without offending my doctor?"
 - "What records do I send?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/second-opinion-request.html

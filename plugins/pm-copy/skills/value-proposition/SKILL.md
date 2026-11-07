@@ -66,3 +66,5 @@ Value-proposition design (Osterwalder) + April Dunford positioning as the upstre
 - "Write our value proposition."
 - "Write a one-liner for the product."
 - "What do we even say we do?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/value-proposition.html

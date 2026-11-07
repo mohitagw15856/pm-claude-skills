@@ -95,3 +95,5 @@ When a case fails, classify before "fixing":
 - "Stop prompt changes breaking production."
 - "Set up golden tests or CI gates for an LLM feature."
 - "Test a model/prompt upgrade before shipping it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prompt-regression-suite.html

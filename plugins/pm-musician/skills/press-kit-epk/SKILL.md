@@ -134,3 +134,5 @@ the general-press cousin; [[personal-bio]] for the human behind the act.
 - "I need an EPK."
 - "Write my band bio."
 - "What do I send festivals?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/press-kit-epk.html

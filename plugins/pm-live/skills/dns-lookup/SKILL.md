@@ -63,3 +63,5 @@ Source: [dns.google / Cloudflare DoH / RDAP] · rerun: `[exact curls]`
 - "Check the MX or TXT records."
 - "Who registered this domain?"
 - "Does it expire?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dns-lookup.html

@@ -275,3 +275,5 @@ If cycle time data was not provided: *Cycle time data was not included in this a
 - "Analyze sprint velocity."
 - "Review team delivery health."
 - "Produce a retrospective data analysis."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sprint-velocity-analysis.html

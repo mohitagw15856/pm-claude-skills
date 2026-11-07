@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "My AI agent keeps misunderstanding my codebase — how do I fix that?"
 - "What should go in my project's AI context file?"
 - "Onboard an AI coding agent to my project properly."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/claude-project-setup.html

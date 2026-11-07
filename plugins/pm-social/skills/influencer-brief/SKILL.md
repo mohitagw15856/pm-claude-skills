@@ -248,3 +248,5 @@ How we'll measure success:
 - "Draft a brief for a TikTok influencer collab"
 - "Build a paid partnership brief for [brand]"
 - "What should I include in an influencer campaign brief?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/influencer-brief.html

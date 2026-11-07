@@ -60,3 +60,5 @@ The impact assessment (see `cn-pipl-pia`), notices and separate consent where re
 - "个人信息出境标准合同怎么备案？"
 - "数据出境安全评估的门槛是什么？我们够不够？"
 - "Do we need a CAC assessment to send customer data from China to the EU?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-data-export-assessment.html

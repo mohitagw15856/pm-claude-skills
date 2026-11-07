@@ -70,3 +70,5 @@ Content design practice — example-driven voice principles, context-based tone,
 - "Write a voice and tone guide."
 - "Set editorial guidelines for the team."
 - "Write our UX-writing standards."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/content-style-guide.html

@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Does this store do price adjustments, and am I still in the window?"
 - "The price fell right after I ordered — what do I say to get it refunded?"
 - "They won't match a marketplace seller — what are my options?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/price-match-request.html

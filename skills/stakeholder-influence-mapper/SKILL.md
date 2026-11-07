@@ -73,3 +73,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Build consensus."
 - "Get buy-in from engineering."
 - "Plan stakeholder conversations for a major initiative."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stakeholder-influence-mapper.html

@@ -38,3 +38,5 @@ Ask for (if not already provided):
 - "Prepare a bake-off or RFP."
 - "Entering a rival's market."
 - "Pick which fight to have."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sun-tzu-strategy-brief.html

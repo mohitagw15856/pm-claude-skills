@@ -142,3 +142,5 @@ Every roadmap needs a narrative, not just a timeline. Structure it as:
 - "Build a product roadmap."
 - "Create a roadmap slide."
 - "Communicate quarterly plans to execs."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/roadmap-presentation.html

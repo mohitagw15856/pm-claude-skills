@@ -76,3 +76,5 @@ Model-selection practice — quality/cost/latency trade-offs, tiered routing wit
 - "Which model to use?"
 - "How to cut LLM costs without hurting quality?"
 - "Justify a model choice."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/model-selection-advisor.html

@@ -166,3 +166,5 @@ Please review the full matrix here: [Link]. Raise any concerns by [Date] — aft
 - "Who owns what on this initiative? Help me build a RACI"
 - "Map out decision rights for our engineering and product teams"
 - "Generate a RACI for a [migration / launch / process] involving [teams]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/raci-matrix.html

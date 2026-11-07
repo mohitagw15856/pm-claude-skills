@@ -83,3 +83,5 @@ One paragraph: the order of operations for the next two quarters, and the one fi
 - "Red-team my company before a sale."
 - "How will an acquirer attack our valuation?"
 - "What will DD find?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/acquirer-red-team.html

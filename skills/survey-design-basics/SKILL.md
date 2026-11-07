@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Check these questions for bias."
 - "Why are our survey results useless?"
 - "Design the questionnaire for this decision."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/survey-design-basics.html

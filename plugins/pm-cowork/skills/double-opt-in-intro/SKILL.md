@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "Introduce me to someone."
 - "Can you connect us?"
 - "Write an intro email."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/double-opt-in-intro.html

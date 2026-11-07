@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "If I make more, will I lose Medicaid or food stamps?"
 - "Should I take the extra hours or will it hurt my childcare help?"
 - "How do I know if a new job leaves me better or worse off?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/benefits-cliff-check.html

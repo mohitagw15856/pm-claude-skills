@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "I waste my best hours on email."
 - "Map my energy levels."
 - "Why is 3pm always useless?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/energy-scheduling.html

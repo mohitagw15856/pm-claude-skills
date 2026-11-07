@@ -74,3 +74,5 @@ Outline: `# Title` (+ next line = subtitle) · `## Slide title` · `- bullet` (t
 - "Make a PowerPoint for the board."
 - "Turn these notes into slides."
 - "Build an actual .pptx pitch deck."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/slide-deck.html

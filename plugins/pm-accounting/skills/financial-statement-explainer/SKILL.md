@@ -68,3 +68,5 @@ Financial-literacy practice — plain-language statement walkthroughs (P&L, bala
 - "Explain our balance sheet in plain English."
 - "What does this cash flow statement tell me?"
 - "Make these financials understandable to a non-finance reader."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/financial-statement-explainer.html

@@ -77,3 +77,5 @@ Five to eight steps telling users how to export from the source tool and import,
 - "Here's a CSV export from Notion, map it onto my data model."
 - "Make it easy for users to switch from [competitor] to my project."
 - "Write a CSV importer that never drops rows."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/importer-scaffolder.html

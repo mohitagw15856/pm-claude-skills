@@ -72,3 +72,5 @@ Billing & accounts-receivable practice — complete, itemised invoices with clea
 - "Create a bill."
 - "Draft a freelance/contractor invoice."
 - "Set up an invoice template."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/invoice-generator.html

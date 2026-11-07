@@ -67,3 +67,5 @@ Spending-audit / subscription-audit practice (categorize, annualize, rank cuts b
 - "Review subscriptions."
 - "Find where money is going."
 - "Free up cash."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/expense-audit.html

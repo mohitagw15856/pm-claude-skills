@@ -62,3 +62,5 @@ Double-sided usually beats one-sided. Reward the *outcome* you want (paid conver
 ## Based On
 
 Referral/viral-growth practice (double-sided incentives, trigger-at-aha, referral CAC vs. LTV, fraud guardrails).
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/referral-program.html

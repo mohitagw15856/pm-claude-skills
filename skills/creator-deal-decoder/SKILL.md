@@ -118,3 +118,5 @@ becomes net-never.
 - "Is this brand deal fair?"
 - "What does perpetual usage mean?"
 - "Should I sign this collab agreement?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/creator-deal-decoder.html

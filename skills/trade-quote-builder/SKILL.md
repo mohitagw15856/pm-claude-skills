@@ -112,3 +112,5 @@ write quotes that survive it; [[late-invoice-escalation]] for afterwards.
 - "Help me quote this job."
 - "I keep losing money on jobs."
 - "How do I quote a day rate vs fixed?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/trade-quote-builder.html

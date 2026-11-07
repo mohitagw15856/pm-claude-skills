@@ -78,3 +78,5 @@ Given only a team and a tool, **write the full charter anyway** with conservativ
 - "We're rolling out Dots to the support team; what's the policy?"
 - "Who should be allowed to instruct our channel bot?"
 - "Charter for an always-on agent used by the whole team"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/shared-agent-charter.html

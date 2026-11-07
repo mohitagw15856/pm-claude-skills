@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "Split teams."
 - "Move a function."
 - "How will this org change land?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-org-simulator.html

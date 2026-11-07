@@ -62,3 +62,5 @@ Test-Driven Development (Kent Beck): red → green → refactor, triangulation, 
 - "Implementing a feature."
 - "Fix a bug and you want tests to lead."
 - "'do this with TDD' / write the test first."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tdd-workflow.html

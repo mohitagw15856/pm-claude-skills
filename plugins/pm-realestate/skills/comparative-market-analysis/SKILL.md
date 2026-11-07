@@ -75,3 +75,5 @@ Real-estate valuation practice — comparable-sales analysis with feature adjust
 - "Do a CMA?"
 - "Price a home."
 - "Estimate a property's value from comparables."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/comparative-market-analysis.html

@@ -62,3 +62,5 @@ Support-experience practice — empathetic, scannable, personalised canned respo
 - "Write a canned response for refund requests."
 - "Write a saved reply that doesn't sound robotic."
 - "Template our answer to this common ticket."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/support-macro.html

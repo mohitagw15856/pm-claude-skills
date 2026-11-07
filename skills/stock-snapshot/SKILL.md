@@ -61,3 +61,5 @@ Source: Yahoo Finance public endpoint (unofficial; may be delayed) · rerun: `[e
 - "What's this stock at?"
 - "How did the market do today?"
 - "Get me a ticker's recent range."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stock-snapshot.html

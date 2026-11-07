@@ -305,3 +305,5 @@ Document limitations honestly — this section prevents other teams from buildin
 - "Write a service README for a platform catalog."
 - "Create a service overview page."
 - "Onboard a new service to a service registry."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/service-catalog-entry.html

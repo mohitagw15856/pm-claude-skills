@@ -66,23 +66,12 @@
   var NAV = [
     { href: 'index.html', label: '▶ Playground' },
     { href: 'find.html', label: '🔎 Find a skill' },
-    { href: 'router.html', label: '🎯 Skill router' },
     { href: 'daily.html', label: '🔥 Daily' },
     // Intent-based groups: what do you want to DO right now?
     { group: '✍️ Create', items: [
-      ['fineprint.html', '🔍 The Fine Print'],
-      ['skillify.html', '⚙️ Skillify (SOP → skill)'],
       ['remix.html', '🔀 Skill Remix'],
-      ['studio.html', '🏗️ Create a skill'],
       ['make.html', '🏭 Make it real'],
-      ['meeting.html', '🗒️ Meeting → artifacts'],
-      ['data.html', '📊 Bring your own data'],
-      ['compose.html', '🧭 Auto-Composer'],
-      ['agent.html', '✨ Auto-Agent'],
-      ['canvas.html', '🧩 Workflow Canvas'],
       ['workos.html', '🛰️ Work OS'],
-      ['consult.html', '💬 Consultant Mode'],
-      ['ask.html', '❓ Ask'],
       ['grade.html', '📝 Grade your work'],
       ['xray.html', '🩻 X-ray'],
       ['brain.html', '🧠 Brain'],
@@ -101,8 +90,6 @@
     { group: '🎓 Learn', items: [
       ['academy.html', '🎓 Academy'],
       ['certified.html', '🎓 Operator\'s Exam'],
-      ['hub.html', '🧭 Journeys'],
-      ['jobs.html', '💼 Job Search'],
       ['learn.html', '🎓 Learn'],
       ['guide.html', '📖 Guide'],
       ['handbook.html', '📖 Handbook'],
@@ -112,8 +99,6 @@
       ['evolution.html', '🧬 Evolution log'],
       ['changes.html', '📝 What changed'],
       ['firm-live.html', '🏢 The live Firm'],
-      ['career.html', '🧭 Career copilot'],
-      ['experts.html', '🎓 Expert skills'],
       ['compile.html', '🧑‍🏫 Expert-to-skill compiler'],
       ['use.html', '📱 Skill apps'],
       ['how.html', '❓ How do I…?'],
@@ -121,7 +106,6 @@
       ['forms.html', '📋 Forms explained'],
       ['reckoning.html', '⚖️ Reckoning'],
       ['ledger.html', '📓 Outcome Ledger'],
-      ['deck.html', '🃏 Operator\'s Deck'],
     ] },
     { group: '🏛 Trust', items: [
       ['credential.html', '🔏 Credentials'],
@@ -129,16 +113,9 @@
       ['leaderboard.html', '📊 Leaderboard'],
       ['jobs-exam.html', '📝 Jobs exam'],
       ['coverage.html', '📈 Eval coverage'],
-      ['benchmark.html', '🏆 Benchmark'],
       ['modelbench.html', '🤖 Model rankings'],
-      ['authors.html', '📈 Author stats'],
       ['status.html', '📈 Vitals'],
       ['growth.html', '📈 Growth'],
-      ['cost.html', '💰 Cost & Privacy'],
-      ['tokens.html', '🪙 Token Dashboard'],
-      ['spend.html', '📊 AI Spend'],
-      ['cowork.html', '🤝 Cowork'],
-      ['trends.html', '📈 Trends'],
     ] },
     { group: '🗺 Explore', items: [
       ['semantic.html', '🧠 Semantic Search'],
@@ -149,18 +126,13 @@
       ['zhufu.html', '💌 祝福语生成器 (greetings)'],
       ['nianzhong.html', '📋 年终总结提纲 (year-end outline)'],
       ['tiaoxiu.html', '🗓 调休规划器 (holiday planner)'],
-      ['live-cards.html', '🪪 Live cards (embed)'],
-      ['city-data.html', '🏙 城市数据 (city figures)'],
       ['campus/talk.html', '🎓 校园分享会 (campus talk)'],
-      ['museum.html', '🏛 Anti-Pattern Museum'],
       ['catalog.html', '📚 Catalog'],
       ['galaxy.html', '🗺 Galaxy (2D)'],
-      ['api.html', '🔌 API'],
       ['community.html', '💬 Community'],
       // External (GitHub doc): a 3rd truthy element renders it as a new-tab link.
       ['https://github.com/mohitagw15856/pm-claude-skills/blob/main/COMMUNITY-SKILLS.md', '🌐 Community Skills', true],
     ] },
-    { href: 'pro.html', label: '⭐ Pro' },
     // Always-visible way back to the source — opens the GitHub repo in a new tab.
     { href: 'https://github.com/mohitagw15856/pm-claude-skills', label: '★ GitHub', external: true, cta: true },
   ];
@@ -170,10 +142,10 @@
   if (file === '' || file === '/') file = 'index.html';
   // Map nav targets to i18n keys (used by i18n.js when the UI language is switched).
   var NAVKEY = {
-    'index.html': 'nav.playground', 'daily.html': 'nav.daily', 'jobs.html': 'nav.jobs', 'hub.html': 'nav.journeys', 'galaxy.html': 'nav.galaxy', 'pro.html': 'nav.pro',
-    'agent.html': 'nav.agent', 'canvas.html': 'nav.canvas', 'ask.html': 'nav.ask', 'brain.html': 'nav.brain', 'grade.html': 'nav.grade', 'studio.html': 'nav.studio',
+    'index.html': 'nav.playground', 'daily.html': 'nav.daily', 'galaxy.html': 'nav.galaxy',
+    'brain.html': 'nav.brain', 'grade.html': 'nav.grade',
     'catalog.html': 'nav.catalog', 'examples.html': 'nav.examples', 'leaderboard.html': 'nav.leaderboard', 'coverage.html': 'nav.coverage',
-    'benchmark.html': 'nav.benchmark', 'learn.html': 'nav.learn', 'guide.html': 'nav.guide', 'community.html': 'nav.community',
+    'learn.html': 'nav.learn', 'guide.html': 'nav.guide', 'community.html': 'nav.community',
     'https://github.com/mohitagw15856/pm-claude-skills/blob/main/COMMUNITY-SKILLS.md': 'nav.communitySkills',
     'Tools': 'nav.tools', 'Explore': 'nav.explore',
   };

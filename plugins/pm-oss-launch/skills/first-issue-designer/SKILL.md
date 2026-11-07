@@ -80,3 +80,5 @@ A short note (under 120 words) for a pinned issue or discussion: how to claim an
 - "I want contributors. Write 10 starter issues newcomers can finish."
 - "Turn these TODO comments into good first issues with acceptance criteria."
 - "Prepare my project for Hacktoberfest-style contributors."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/first-issue-designer.html

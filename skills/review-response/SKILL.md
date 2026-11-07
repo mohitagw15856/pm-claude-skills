@@ -67,3 +67,5 @@ Online reputation & customer-service practice — specific, ownership-led public
 - "Reply to a bad/1-star review."
 - "Handle online reviews."
 - "Write review-response templates."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/review-response.html

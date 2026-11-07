@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "Help me build a case for a raise and what to say."
 - "I want to ask for more money — what number and when?"
 - "My manager said 'no budget' last time. How do I approach it now?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ask-for-a-raise.html

@@ -73,3 +73,5 @@ Ask for these if not provided:
 - "What can this agent actually do?"
 - "Lock down my agent's tools."
 - "Is this MCP/tool set safe to grant?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tool-permission-review.html

@@ -61,3 +61,5 @@ The specific questions to put to each platform before committing (fees by catego
 - "TikTok Shop 美区怎么入驻？要准备什么？"
 - "卖儿童玩具去欧盟要哪些认证？"
 - "Help us choose cross-border marketplaces for our products."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/crossborder-platform-playbook.html

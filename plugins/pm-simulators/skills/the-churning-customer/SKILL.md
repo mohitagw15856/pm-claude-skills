@@ -79,3 +79,5 @@ One paragraph: the single change to onboarding that moves moment 2 from "extra w
 - "Simulate a churning customer."
 - "Roleplay the customer who cancels."
 - "What does silent churn look like for my product?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-churning-customer.html

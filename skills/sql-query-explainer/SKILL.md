@@ -164,3 +164,5 @@ Every mode returns the same disciplined shape:
 - "Write a SQL query that [natural language description]"
 - "Document this query for my non-technical stakeholders"
 - "Why is this query returning unexpected results?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sql-query-explainer.html

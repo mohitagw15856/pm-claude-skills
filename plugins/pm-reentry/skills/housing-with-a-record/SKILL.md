@@ -65,3 +65,5 @@ Ask for these if not provided:
 - "Where's second-chance housing for people with records?"
 - "Help me explain my record to a landlord."
 - "Can a landlord reject everyone with any record?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/housing-with-a-record.html

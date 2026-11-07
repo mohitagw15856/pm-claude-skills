@@ -73,3 +73,5 @@ Model Cards for Model Reporting (Mitchell et al., 2019) and the model-documentat
 - "Write a model card."
 - "Document a model's intended use and limitations."
 - "Prepare an AI model for review/launch."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/model-card.html

@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "File for prompt injection."
 - "Spot the injection."
 - "Why did my agent go off-task?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/injection-spotter.html

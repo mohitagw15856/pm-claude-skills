@@ -83,3 +83,5 @@ Bad month: [minimums-only protocol, restart trigger] · Windfalls: [target-debt 
 - "Make me a debt payoff plan."
 - "Tackle my credit cards."
 - "Will I be debt-free?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/debt-payoff.html

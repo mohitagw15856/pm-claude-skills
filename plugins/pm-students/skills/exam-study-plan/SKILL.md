@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "Make a study schedule that actually helps me remember things."
 - "How should I study for a multiple-choice licensing exam?"
 - "I've got 10 days and a lot to cover — plan my revision."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/exam-study-plan.html

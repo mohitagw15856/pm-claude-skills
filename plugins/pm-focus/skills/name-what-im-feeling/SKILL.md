@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "I'm in a weird mood — can you help me name it?"
 - "Why am I upset? I can't put my finger on it."
 - "Something's bothering me but I can't tell what."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/name-what-im-feeling.html

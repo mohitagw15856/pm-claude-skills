@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "How do I keep a conversation going past the weather?"
 - "Help me make conversation at a party where I know no one."
 - "I never know how to end a conversation politely."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/small-talk-survival.html

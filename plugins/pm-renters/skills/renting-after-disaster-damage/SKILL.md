@@ -82,3 +82,5 @@ This is not legal advice. A local tenants' union, housing advice service or lega
 - "The landlord won't fix the storm damage to the roof"
 - "Can I end my lease after the fire made the house unliveable?"
 - "Who pays for my furniture damaged in the flood, me or the landlord?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/renting-after-disaster-damage.html

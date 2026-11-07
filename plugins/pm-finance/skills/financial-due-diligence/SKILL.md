@@ -90,3 +90,5 @@ Produces a structured financial due diligence framework — document request lis
 - "Give me a financial due diligence checklist for [company type]"
 - "What documents should I request for financial DD?"
 - "Build a DD framework for our Series A investment"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/financial-due-diligence.html

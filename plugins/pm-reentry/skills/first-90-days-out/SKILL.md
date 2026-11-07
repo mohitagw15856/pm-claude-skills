@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "I just got out and I'm completely overwhelmed."
 - "What are the first steps after prison — ID, benefits, all of it?"
 - "Sequence the things I have to set up after incarceration."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/first-90-days-out.html

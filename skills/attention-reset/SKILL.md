@@ -136,3 +136,5 @@ as the protocol's maintenance home after day 30.
 - "I want a dumbphone."
 - "I can't read books anymore."
 - "My attention span is gone."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/attention-reset.html

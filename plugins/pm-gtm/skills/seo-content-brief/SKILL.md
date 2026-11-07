@@ -132,3 +132,5 @@ Each heading is the exact H2/H3 to use (these are what Google reads):
 - [ ] Do not skip the competitor gap analysis — without it, the brief produces content that duplicates what already ranks
 - [ ] Do not leave the FAQ section without real "People Also Ask" questions — fabricated questions miss search volume opportunities
 - [ ] Do not write a title tag longer than 60 characters — it will be truncated in search results and undermine ranking
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/seo-content-brief.html

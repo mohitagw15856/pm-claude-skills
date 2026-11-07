@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "A conversation at work is turning into a fight. Calm it down."
 - "Someone's yelling at me — how do I lower the temperature?"
 - "Help me handle this conflict without it blowing up."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/conflict-deescalation.html

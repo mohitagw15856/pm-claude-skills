@@ -72,3 +72,5 @@ Data-minimisation practice — GDPR Art. 5(1)(e) storage limitation, sector rete
 - "Create a data retention policy."
 - "Set retention periods."
 - "Plan data deletion/minimisation."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-retention-policy.html

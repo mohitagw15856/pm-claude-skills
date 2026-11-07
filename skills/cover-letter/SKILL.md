@@ -66,3 +66,5 @@ Modern cover-letter practice — specific hook, evidence-to-need mapping, human 
 - "Write an application letter for this job."
 - "Write a note to go with my CV."
 - "Make my cover letter less generic."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cover-letter.html

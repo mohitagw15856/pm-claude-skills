@@ -82,3 +82,5 @@ This is not legal or financial advice. A farmer organisation, cooperative or agr
 - "My crop insurance claim was rejected, what can I do?"
 - "Hail damaged my wheat yesterday, what proof do I need?"
 - "How does the weather insurance on my bank loan pay out?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/crop-insurance-claim.html

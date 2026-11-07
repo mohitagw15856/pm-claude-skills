@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "How do I handle my mother's accounts and benefits after she passed?"
 - "How many death certificates should I order?"
 - "What has to happen this week vs. what can wait after a death?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/notify-everyone-of-a-death.html

@@ -63,3 +63,5 @@ How the remaining 住民税 is paid after leaving, and the documents to collect:
 - "任意継続と国民健康保険、どっちが安い？年収は450万円です。"
 - "How do I resign properly in Japan and keep my health insurance?"
 - "在日本辞职要办哪些手续？失业保险怎么领？"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/jp-resignation-procedures.html

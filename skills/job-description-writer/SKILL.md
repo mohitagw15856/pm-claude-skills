@@ -80,3 +80,5 @@ Nice to have (3-4 items):
 - "Write a job description for a [role]"
 - "Create an inclusive job posting for [role]"
 - "Review and rewrite this JD: [paste]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/job-description-writer.html

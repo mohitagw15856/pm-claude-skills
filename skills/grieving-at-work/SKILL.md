@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "What are my options for bereavement leave?"
 - "I can't focus at work since I lost him — what do I do?"
 - "Someone at work said something awful about my loss — how do I respond?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/grieving-at-work.html

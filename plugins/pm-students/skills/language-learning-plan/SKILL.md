@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "I keep doing language apps but can't actually speak — help."
 - "How do I study Japanese efficiently for work?"
 - "Realistic plan to learn a language from scratch."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/language-learning-plan.html

@@ -234,3 +234,5 @@ How we'll know the partnership is working:
 - [ ] Do not omit the "What we're not proposing" section — leaving unstated assumptions creates misaligned expectations that derail negotiations later
 - [ ] Do not set success metrics unilaterally — metrics that only your company controls or cares about will not earn partner commitment
 - [ ] Do not write a go-to-market plan with "TBD" owners — every activity must have a named owner on at least one side before the proposal goes out
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/partnership-proposal.html

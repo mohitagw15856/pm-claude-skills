@@ -76,3 +76,5 @@ SaaS unit-economics practice (David Skok / for Entrepreneurs) — margin-based L
 - "Work out LTV:CAC."
 - "Find the payback period."
 - "Check whether a business model is viable per customer."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/unit-economics.html

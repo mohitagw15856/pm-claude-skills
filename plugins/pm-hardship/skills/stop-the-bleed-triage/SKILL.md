@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "What bills should I prioritize in a financial emergency?"
 - "Should I pay my credit card or my rent if I can't do both?"
 - "Who do I call when I can't cover everything?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stop-the-bleed-triage.html

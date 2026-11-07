@@ -99,3 +99,5 @@ Order by: fixes before handoff (critical) > consistency fixes (high) > polish (m
 
 ## Why This Works Better on Opus 4.7
 Earlier models struggled with precise spatial analysis of slide layouts — they would hallucinate issues or miss obvious overflow problems. Opus 4.7 vision improvements mean coordinates map 1:1 to pixels, making slide-level issue detection reliable without manual screenshot annotation.
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pptx-slide-auditor.html

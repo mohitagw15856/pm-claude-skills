@@ -74,3 +74,5 @@ Ask for these if not provided:
 - "这个视频开头怎么写才抓人？"
 - "写一个产品测评短视频的分镜脚本。"
 - "Write a 60-second Douyin script for our coffee brand."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/douyin-script.html

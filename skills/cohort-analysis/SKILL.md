@@ -284,3 +284,5 @@ This skill activates on phrases including:
 - "Run a cohort analysis."
 - "Analyse retention by cohort."
 - "Calculate lifetime value by acquisition period."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cohort-analysis.html

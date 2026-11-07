@@ -78,3 +78,5 @@ Ask for these if not provided:
 - "Check whether a report's claims are backed up."
 - "Verify a deck against the data."
 - "Does this doc have receipts?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/receipts-audit.html

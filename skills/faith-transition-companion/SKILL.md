@@ -135,3 +135,5 @@ a framework.
 - "I'm losing my faith."
 - "I left my religion and my family is devastated."
 - "How do I tell my believing parents?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/faith-transition-companion.html

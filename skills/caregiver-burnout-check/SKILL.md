@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "I feel guilty even thinking about taking a break from caregiving."
 - "How do I take care of myself while caring for my dad full-time?"
 - "Caregiver stress is overwhelming me — help."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/caregiver-burnout-check.html

@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "There are fraudulent charges and a loan I never took out."
 - "My details were used to file something fraudulently — where do I start?"
 - "How do I dispute accounts opened by an identity thief?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/identity-theft-recovery.html

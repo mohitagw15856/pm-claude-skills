@@ -70,3 +70,5 @@ Narrative decision-memo practice (Amazon-style one/six-pagers; one-way vs. two-w
 - "Write a recommendation memo."
 - "Write a one-pager for this decision."
 - "Get leadership to decide something."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-memo.html

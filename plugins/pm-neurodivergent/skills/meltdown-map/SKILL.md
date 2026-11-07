@@ -117,3 +117,5 @@ Slow load (the base): … + Acute triggers (the top): … = over the edge
 - "Help me not shut down."
 - "I need a plan for when I'm overwhelmed."
 - "Shuts down."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/meltdown-map.html

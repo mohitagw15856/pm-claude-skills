@@ -150,3 +150,5 @@ Template for the summary document to send within 48 hours:
 - "Design a 2-day team retreat for [goal]"
 - "Build an agenda for our Q[N] team planning day"
 - "Help me plan a hybrid offsite for [team size] people"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/team-offsite-planner.html

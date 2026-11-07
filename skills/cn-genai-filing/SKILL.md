@@ -57,3 +57,5 @@ Including real-name verification where required, minors protection, a complaint 
 - "大模型备案需要准备哪些材料？"
 - "AI 生成的图片怎么加标识才合规？"
 - "What filings does our generative AI product need before launching in China?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-genai-filing.html

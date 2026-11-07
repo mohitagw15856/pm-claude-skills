@@ -70,3 +70,5 @@ Signed: __________  Date: __________
 - "Write a statement about an incident I witnessed at work."
 - "Document what happened for the police."
 - "How do I write a witness statement that's factual and credible?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/witness-statement-writer.html

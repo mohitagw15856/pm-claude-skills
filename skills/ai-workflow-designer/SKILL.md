@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Where does AI fit in my content process, and where shouldn't it?"
 - "Help me automate part of this task with AI without losing control."
 - "Map out an AI workflow for my recurring [task]."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-workflow-designer.html

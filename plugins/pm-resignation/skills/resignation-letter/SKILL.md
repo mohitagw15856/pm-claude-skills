@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "How do I resign professionally?"
 - "What do I say when I quit?"
 - "Review my resignation email."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/resignation-letter.html

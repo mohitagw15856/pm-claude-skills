@@ -164,3 +164,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Analyse user retention."
 - "Investigate churn."
 - "Build a retention improvement plan."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/retention-analysis.html

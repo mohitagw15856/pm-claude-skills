@@ -64,3 +64,5 @@ Ask for (if not already provided), else infer and label:
 - "Set up what Duet should tell me each morning"
 - "My daily agent summary is too long, fix what it includes"
 - "What should a morning brief read and ignore for a solo founder?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/morning-brief-designer.html

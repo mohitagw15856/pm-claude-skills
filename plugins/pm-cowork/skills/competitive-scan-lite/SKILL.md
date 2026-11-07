@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "What are competitors doing?"
 - "How does our pricing/feature set compare?"
 - "Prep the competitive slide honestly."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/competitive-scan-lite.html

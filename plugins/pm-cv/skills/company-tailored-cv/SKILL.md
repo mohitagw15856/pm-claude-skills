@@ -84,3 +84,5 @@ If web access is not available, say so, ask the person to paste the job ad and t
 - "Tailor my CV to this Amazon job, in whatever format they expect."
 - "I have my career inventory. Make the CV for this Siemens role in Munich."
 - "Turn my experience into a CV for this company."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/company-tailored-cv.html

@@ -65,3 +65,5 @@ Notice-and-comment rulemaking practice (substantive, provision-specific, evidenc
 - "Respond to this consultation."
 - "Submit feedback on a proposed regulation."
 - "Write a comment to the agency."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/public-comment.html

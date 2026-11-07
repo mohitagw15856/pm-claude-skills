@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Negotiate my rent increase."
 - "Is this increase even legal?"
 - "Should I stay?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rent-increase-response.html

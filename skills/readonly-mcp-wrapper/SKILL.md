@@ -81,3 +81,5 @@ Piped JSON-RPC requests that check: initialize succeeds; the three tools are lis
 - "Expose this docs folder to Cursor as MCP tools."
 - "Build a safe MCP server over a folder of JSON files."
 - "I want my agent to search our specs but never change them."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/readonly-mcp-wrapper.html

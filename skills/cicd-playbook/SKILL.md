@@ -315,3 +315,5 @@ Ask for these if not already provided:
 - "Define release gates."
 - "Document build and test stages."
 - "Create a deployment guide."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cicd-playbook.html

@@ -73,3 +73,5 @@ Ask for these if not provided:
 - "Should I be honest in my exit interview?"
 - "Prep me for my exit interview."
 - "Is the exit interview confidential?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/exit-interview-strategy.html

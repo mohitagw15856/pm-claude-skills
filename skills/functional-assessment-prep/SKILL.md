@@ -81,3 +81,5 @@ This is not legal or medical advice. A welfare rights adviser, disability advice
 - "They want a phone assessment for my illness benefit, what will they ask?"
 - "Last time the assessor said I could walk fine because I walked into the room"
 - "What evidence should I bring to my work capability assessment?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/functional-assessment-prep.html

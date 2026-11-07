@@ -86,3 +86,5 @@ Ask for these if not provided:
 - "给这个护肤品写个种草文案，品牌送的。"
 - "小红书标题怎么起才有流量？"
 - "Write a Xiaohongshu note about my new standing desk."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/xiaohongshu-note.html

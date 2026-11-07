@@ -80,3 +80,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Write a leadership update."
 - "Write a product update for the exec team."
 - "Brief the C-suite on the product."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/executive-update.html

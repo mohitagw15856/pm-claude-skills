@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "My prompt gives me different results every time."
 - "Help me fix this prompt, it's not doing what I want."
 - "How do I get consistent output from this prompt?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prompt-debugging.html

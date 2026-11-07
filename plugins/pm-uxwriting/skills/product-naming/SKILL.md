@@ -73,3 +73,5 @@ Brand & product naming practice — strategy-driven generation, criteria-based e
 - "Brainstorm names for our feature."
 - "Choose between these name candidates."
 - "Name our company."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-naming.html

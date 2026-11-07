@@ -345,3 +345,5 @@ curl http://localhost:[PORT]/health
 - "Write the README for this service."
 - "Write an onboarding doc for a new engineer."
 - "Give new developers a codebase orientation."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/developer-onboarding-doc.html

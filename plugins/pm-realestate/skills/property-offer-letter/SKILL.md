@@ -68,3 +68,5 @@ Real-estate buyer-representation practice — property- and offer-focused cover 
 - "Write a letter to the seller."
 - "Write an offer cover note."
 - "Make our home offer stand out."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/property-offer-letter.html

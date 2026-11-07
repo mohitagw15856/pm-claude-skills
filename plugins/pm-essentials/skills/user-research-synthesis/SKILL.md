@@ -268,3 +268,5 @@ When synthesizing research, use this structure:
 - "Analyse our survey results."
 - "Find themes in this user feedback."
 - "Summarise this user research."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/user-research-synthesis.html

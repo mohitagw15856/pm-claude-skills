@@ -112,3 +112,5 @@ future self; [[franklin-decision-ledger]] for the analytical complement.
 - "I don't know what to do."
 - "Help me think long-term about this."
 - "What would future me say?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/future-self-interview.html

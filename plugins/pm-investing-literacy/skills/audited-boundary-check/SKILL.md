@@ -95,3 +95,5 @@ End verbatim: *"Educational, not financial advice. Decisions with real money bel
 ## Related Skills in This Bundle
 
 `annual-report-tutor` (the full walk), `profit-to-cash-walk` (bridge profit to cash), `company-compare-same-definitions` (two reports), `investing-vocabulary-explainer` (define any term).
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/audited-boundary-check.html

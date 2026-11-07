@@ -34,3 +34,5 @@ Ask for (if not already provided), else infer and label:
 - "Travel with a wheelchair/disability."
 - "Book assistance for my flight."
 - "Will this hotel actually work for me?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/accessible-travel-planner.html

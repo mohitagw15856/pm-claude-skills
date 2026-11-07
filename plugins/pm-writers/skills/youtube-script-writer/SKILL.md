@@ -113,3 +113,5 @@ Every YouTube script must follow this structure to prevent early drop-off:
 - "Help me script a 10-minute video explaining inflation to college students."
 - "I need a YouTube outline and script for a tutorial on clean code in Python."
 - "Draft a retention-optimized YouTube script on how to build a SaaS in 2026."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/youtube-script-writer.html

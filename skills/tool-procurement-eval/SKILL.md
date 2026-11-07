@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Evaluate this software for the team."
 - "We have three tools that do this already."
 - "Run a proper trial before committing."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tool-procurement-eval.html

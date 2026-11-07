@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Does every claim in this memo have a source?"
 - "Do these links actually say what we claim?"
 - "Set citation norms for the team."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/citation-hygiene.html

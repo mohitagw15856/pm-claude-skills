@@ -66,3 +66,5 @@ Terminology-management practice — termbases, do-not-translate lists, context d
 - "Build a termbase for the translators."
 - "Make a do-not-translate list."
 - "Keep terminology consistent across languages."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/glossary-builder.html

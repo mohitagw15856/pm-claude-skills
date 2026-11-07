@@ -125,3 +125,5 @@ your outside. [[working-agreements]] for the team-level contract;
 - "Onboard to a new team."
 - "Report arrives."
 - "Write my README/user manual."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/api-for-yourself.html

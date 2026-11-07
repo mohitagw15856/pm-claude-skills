@@ -76,3 +76,5 @@ Ask for these if not provided:
 - "Rehearse an ethics-committee defence."
 - "Why might ethics reject my study?"
 - "Practice my protocol presentation."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-ethics-board.html

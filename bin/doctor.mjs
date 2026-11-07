@@ -49,6 +49,18 @@ function auditAgent(name, dir, bundled) {
 
 function readJson(p) { try { return JSON.parse(readFileSync(p, 'utf8')); } catch { return null; } }
 
+// "N skills changed since you installed on DATE": the install manifest records
+// when `add` ran per agent; web/skill-changelog.json (built at deploy and
+// prepack) records when each skill last changed. Null when either is missing.
+function changedSince(agent, changelog, installs) {
+  const when = installs?.[agent]?.when;
+  if (!when || !changelog?.skills) return null;
+  const date = when.slice(0, 10);
+  let count = 0;
+  for (const history of Object.values(changelog.skills)) if (history.some((e) => e.date > date)) count++;
+  return { date, count };
+}
+
 export async function run() {
   const bundled = bundledSkills();
   const lines = [];
@@ -62,6 +74,8 @@ export async function run() {
 
   // ── 1. Skills installed per agent ─────────────────────────────────────────
   lines.push('\x1b[1mSkills\x1b[0m');
+  const changelog = readJson(join(PKG_ROOT, 'web', 'skill-changelog.json'));
+  const installs = readJson(join(process.env.PM_SKILLS_HOME || join(HOME, '.pm-skills'), 'installs.json'))?.installs || {};
   let anyAgent = false;
   for (const [agent, dir] of Object.entries(AGENT_DIRS)) {
     const a = auditAgent(agent, dir, bundled);
@@ -76,6 +90,15 @@ export async function run() {
     if (a.ours < bundled.size) {
       lines.push(warn(`${agent}: ${bundled.size - a.ours} library skills not installed`));
     }
+  }
+  // What moved in the library since each recorded install (any agent, any target).
+  for (const agent of Object.keys(installs)) {
+    const since = changedSince(agent, changelog, installs);
+    if (!since) continue;
+    anyAgent = true;
+    lines.push(since.count
+      ? warn(`${agent}: ${since.count} skill${since.count === 1 ? '' : 's'} changed in the library since you installed on ${since.date} ${dim('(npx pm-claude-skills changelog <skill> shows what)')}`)
+      : ok(`${agent}: nothing has changed in the library since you installed on ${since.date}`));
   }
   if (!anyAgent) {
     lines.push(bad('No skills installed for any supported agent (claude, hermes, codex, openclaw)'));

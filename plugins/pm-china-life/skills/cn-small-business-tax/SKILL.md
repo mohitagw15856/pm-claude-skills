@@ -59,3 +59,5 @@ Whether to stay a 小规模纳税人 or register as 一般纳税人 (customers n
 - "小规模纳税人的增值税优惠到什么时候？"
 - "经营所得年度汇算怎么报？"
 - "Estimate taxes for my small company in China."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-small-business-tax.html

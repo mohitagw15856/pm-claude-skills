@@ -372,3 +372,5 @@ Define the thresholds that require explicit action — not retrospective fixes a
 - "Model traffic growth."
 - "Define scaling strategy."
 - "Produce a capacity review for a service."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/capacity-planning.html

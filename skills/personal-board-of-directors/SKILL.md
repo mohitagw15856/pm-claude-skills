@@ -75,3 +75,5 @@ Decision rule: [stated + why] · Count: [n–n] · **Board recommendation:** …
 - "Pressure-test this decision."
 - "What would smart advisors say?"
 - "Convene my board."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/personal-board-of-directors.html

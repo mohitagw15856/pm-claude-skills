@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "How do I put an AI workflow into production safely?"
 - "What checks does my agent need before I let it run on real data?"
 - "How do I know my agent won't do something dumb and irreversible?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-agent-reliability.html

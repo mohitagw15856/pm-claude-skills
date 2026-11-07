@@ -50,3 +50,5 @@ Outcome bias is the strongest bias in organisational memory: the bet that failed
 - "Review the call we made last year."
 - "Judge this decision by its process, not the outcome."
 - "What should we learn from this failed bet?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-autopsy.html

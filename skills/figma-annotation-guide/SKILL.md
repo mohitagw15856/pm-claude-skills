@@ -94,3 +94,5 @@ Touch targets, screen reader labels, focus order, colour contrast, motion prefer
 - "Document this design for the engineering team"
 - "Write the Figma spec for [feature]"
 - "What should I annotate before handing off this design?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-annotation-guide.html

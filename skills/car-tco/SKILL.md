@@ -79,3 +79,5 @@ Financing interest (run the loan separately) Â· taxes and fees by jurisdiction Â
 - "Buy a car."
 - "Is it cheaper to keep my old car?"
 - "What does this car really cost per month?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/car-tco.html

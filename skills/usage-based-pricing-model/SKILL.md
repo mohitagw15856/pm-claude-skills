@@ -92,3 +92,5 @@ Ask for these if not provided:
 - "How do we price our AI product per token without bill shock?"
 - "Customers are afraid of variable bills — what guardrails do we need?"
 - "Model what usage pricing would do to our revenue"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/usage-based-pricing-model.html

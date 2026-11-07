@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "Neck pain from my monitor — how should I set it up?"
 - "Best free fixes for my desk before I buy anything?"
 - "Set up my dual-monitor workstation ergonomically."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/desk-ergonomics-audit.html

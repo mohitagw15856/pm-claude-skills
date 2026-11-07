@@ -144,3 +144,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Design an A/B test."
 - "Calculate sample size."
 - "Interpret test results."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ab-test-planner.html

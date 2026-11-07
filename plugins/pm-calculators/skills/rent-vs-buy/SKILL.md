@@ -80,3 +80,5 @@ Taxes and deductions (jurisdiction-specific) · renovation and repair surprises 
 - "Does buying beat renting where I live?"
 - "Run the rent-vs-buy numbers."
 - "How long until buying breaks even?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rent-vs-buy.html

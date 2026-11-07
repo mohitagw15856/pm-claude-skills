@@ -83,3 +83,5 @@ Crisis communications practice — single-source-of-truth messaging, stakeholder
 - "Draft a crisis comms plan."
 - "Respond to a public backlash/scandal/incident."
 - "Prepare holding statements."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pr-crisis-response.html

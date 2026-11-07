@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "Build a metrics dashboard in sheets."
 - "Which numbers should we track?"
 - "Our dashboard exists but nobody acts on it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/kpi-tracker-design.html

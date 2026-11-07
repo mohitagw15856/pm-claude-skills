@@ -118,3 +118,5 @@ answer is offboarding, not bankruptcy.
 - "Purge my assistant's stale memory."
 - "Audit what my agent currently believes."
 - "Reset the agent's memory after our pivot."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/context-bankruptcy.html

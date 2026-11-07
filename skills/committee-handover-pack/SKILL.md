@@ -123,3 +123,5 @@ same move at other scales.
 - "Write a handover for the next chair."
 - "What does my successor need to know?"
 - "Capture everything I do for the committee before I leave."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/committee-handover-pack.html

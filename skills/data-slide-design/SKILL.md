@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "Make this data slide land."
 - "My chart slide confuses people."
 - "How do I present these numbers?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-slide-design.html

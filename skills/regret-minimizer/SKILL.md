@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "Should I finally start the thing I keep putting off? Regret test it."
 - "Use the 'what would I regret at 80' lens on this."
 - "I'm scared to do it but scared not to — which regret is worse?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/regret-minimizer.html

@@ -60,3 +60,5 @@ Ask for these if not provided:
 - "Why does my pitch sound like everyone else's?"
 - "Spot the clichés in this and fix them."
 - "Make this less textbook and more specific."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-boring-answer-detector.html

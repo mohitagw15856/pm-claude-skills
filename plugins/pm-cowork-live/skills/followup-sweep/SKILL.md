@@ -79,3 +79,5 @@ A **Follow-up Sweep** artifact:
 - "Sweep my inbox for dropped balls and draft the nudges."
 - "Who owes me a reply, and who am I ignoring?"
 - "Chase my open threads from the last two weeks in Cowork."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/followup-sweep.html

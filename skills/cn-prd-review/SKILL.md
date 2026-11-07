@@ -77,3 +77,5 @@ Ask for these if not provided:
 - "研发和测试一般会问什么问题？帮我准备一下。"
 - "Prepare me for a PRD review with a Chinese engineering team."
 - "帮我写这次评审会的纪要，结论是有条件通过。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-prd-review.html

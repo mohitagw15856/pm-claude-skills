@@ -382,3 +382,5 @@ All flag changes in production must be traceable. Ensure the following are confi
 - "Create a flag rollout plan."
 - "Write a feature flag policy."
 - "Guide a team on flag lifecycle management."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/feature-flag-guide.html

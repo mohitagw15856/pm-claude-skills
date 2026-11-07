@@ -61,3 +61,5 @@ Query-optimization practice — sargability, index/partition pruning, join-order
 - "Reduce a query's cost/scan."
 - "Fix a timeout."
 - "Review a query plan."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sql-optimizer.html

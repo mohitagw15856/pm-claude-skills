@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "How do I test my business idea cheaply before committing?"
 - "Pressure-test my startup idea honestly."
 - "Should I actually start this, or am I kidding myself?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/business-idea-validator.html

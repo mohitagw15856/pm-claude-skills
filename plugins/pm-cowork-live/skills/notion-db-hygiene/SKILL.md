@@ -73,3 +73,5 @@ A **Notion Hygiene Report**:
 - "Find the stale and duplicate entries in my tracker and fix them."
 - "My Notion CRM is a mess — audit it and show me the plan."
 - "Tidy my tasks DB: fill blanks, archive dead rows, fix statuses."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/notion-db-hygiene.html

@@ -77,3 +77,5 @@ For a three-minute slot or a pre-read: the year in one slide, with results, one 
 - "我是带 6 个人的组长，团队述职怎么讲？"
 - "述职只有 3 分钟，帮我压缩成一页。"
 - "Turn my year-end review into a 述职 deck outline with a speaking script."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-shuzhi-deck.html

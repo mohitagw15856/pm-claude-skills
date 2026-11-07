@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Work through these review comments."
 - "Close out the feedback on this doc."
 - "Which comments do I actually have to take?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/review-comments-resolver.html

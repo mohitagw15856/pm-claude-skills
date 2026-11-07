@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Write my out of office message."
 - "Cover my work while I'm out."
 - "I always come back to chaos."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/out-of-office-designer.html

@@ -50,3 +50,5 @@ Every plan is a stack of beliefs wearing a costume of facts. Most die from an as
 - "Find the hidden assumptions in this plan."
 - "Price the assumptions in this spreadsheet."
 - "Which assumption should we test first?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/assumption-bounty.html

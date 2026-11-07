@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "How do I get my family on the same page about a care decision?"
 - "We keep fighting about our parent's care instead of deciding. Help."
 - "Structure a family conversation about where our parent should live."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/care-decision-family-meeting.html

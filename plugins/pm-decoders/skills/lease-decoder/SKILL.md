@@ -89,3 +89,5 @@ Tenant-side lease review practice — clause triage, exit-cost math, deposit-con
 - "Decode my lease."
 - "Is this rental agreement normal?"
 - "Can my landlord really do this?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/lease-decoder.html

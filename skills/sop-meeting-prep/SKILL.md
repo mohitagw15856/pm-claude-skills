@@ -92,3 +92,5 @@ From a thin brief, build the structure with the numbers marked `[to confirm]` â€
 - "Build the executive S&OP deck."
 - "Summarize demand vs supply for the monthly cycle."
 - "Prepare a supply review readout."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sop-meeting-prep.html

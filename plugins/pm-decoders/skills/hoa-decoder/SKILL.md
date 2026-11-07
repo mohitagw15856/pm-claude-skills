@@ -80,3 +80,5 @@ Buyer-side HOA due-diligence practice — CC&R triage, assessment-exposure analy
 - "Decode these CC&Rs."
 - "Is this HOA going to be a problem?"
 - "What should I check before buying in an HOA?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hoa-decoder.html

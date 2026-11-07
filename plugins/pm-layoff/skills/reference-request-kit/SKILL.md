@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "Write a reference request."
 - "Prep my referee."
 - "Ask my old manager for a recommendation."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/reference-request-kit.html

@@ -52,3 +52,5 @@ description: "Verify work actually meets its brief BEFORE declaring it done — 
 - "Verify this meets the brief before I send it."
 - "Review my deliverable against the requirements."
 - "What's missing before we call this finished?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/verification-before-completion.html

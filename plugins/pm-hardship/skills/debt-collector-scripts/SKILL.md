@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Can they legally do this? What are my rights?"
 - "I got a collection notice — how do I respond?"
 - "How do I dispute a debt I don't think is mine?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/debt-collector-scripts.html

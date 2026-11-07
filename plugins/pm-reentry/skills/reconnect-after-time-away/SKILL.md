@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "What do I say in the first conversation after so long?"
 - "I want to reach out but I don't want to pressure them."
 - "How do I handle it when they're still angry at me?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/reconnect-after-time-away.html

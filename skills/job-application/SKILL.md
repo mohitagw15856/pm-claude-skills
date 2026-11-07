@@ -138,3 +138,5 @@ Before submitting:
 - "Tailor my CV for this role: [paste JD + CV]"
 - "Write a cover letter for [role] at [company]"
 - "Optimise my application for ATS for this job description"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/job-application.html

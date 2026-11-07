@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "What should I ask the care team each day?"
 - "How do I make sure my dad's discharge home is actually safe?"
 - "What do I need ready at home before they're discharged?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hospital-stay-plan.html

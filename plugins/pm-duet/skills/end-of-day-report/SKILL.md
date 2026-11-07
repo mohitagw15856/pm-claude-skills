@@ -60,3 +60,5 @@ Anything the agent could not verify today is listed as "unverified since [time]"
 - "What did my agent actually finish today?"
 - "Wrap up my day: shipped, blocked, waiting"
 - "Daily close-out in the status vocabulary"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/end-of-day-report.html

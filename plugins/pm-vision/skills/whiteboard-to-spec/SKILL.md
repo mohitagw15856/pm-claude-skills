@@ -73,3 +73,5 @@ The whiteboard is where teams decide; the photo of it is where decisions go to d
 - "Turn these whiteboard photos into a spec."
 - "Here's a photo of our sticky-note wall: make it a plan."
 - "Turn this napkin sketch into a spec."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/whiteboard-to-spec.html

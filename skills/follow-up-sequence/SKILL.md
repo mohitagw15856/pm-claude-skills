@@ -63,3 +63,5 @@ Post-interview and job-search follow-up practice — timed, value-adding touches
 - "They haven't replied since the interview: write a follow-up."
 - "Nudge a stalled application."
 - "Plan check-ins during my job search."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/follow-up-sequence.html

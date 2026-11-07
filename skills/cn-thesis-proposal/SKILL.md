@@ -67,3 +67,5 @@ The likely panel questions with answer points: why this topic, is the scope feas
 - "开题答辩老师会问什么？帮我准备。"
 - "我的文献综述像流水账，帮我按主题重新组织。"
 - "Help me write a Chinese university thesis proposal."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-thesis-proposal.html

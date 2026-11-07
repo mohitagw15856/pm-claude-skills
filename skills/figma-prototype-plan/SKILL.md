@@ -90,3 +90,5 @@ Success when: [Specific trigger]
 - "Help me set up a Figma prototype for [research question]"
 - "Write the test task scripts for our [feature] prototype"
 - "What should I prototype vs leave as static screens?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-prototype-plan.html

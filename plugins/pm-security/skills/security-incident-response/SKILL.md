@@ -66,3 +66,5 @@ Incident-response practice (NIST SP 800-61 / SANS PICERL: prepare, identify, con
 - "Respond to a breach/compromise/security incident."
 - "Write an IR plan."
 - "Produce a post-incident report."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/security-incident-response.html

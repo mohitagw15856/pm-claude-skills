@@ -87,3 +87,5 @@ Confirm the install: start a new session and check that `emil-design-eng` appear
 ---
 
 Part of the pm-design-taste bundle in the library at https://github.com/mohitagw15856/pm-claude-skills.
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/emil-design-eng-pointer.html

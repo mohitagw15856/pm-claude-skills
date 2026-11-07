@@ -75,3 +75,5 @@ Each marked to confirm.
 - "Customers always bargain me down and I end the day with nothing"
 - "What price for my handmade bags so I actually make money?"
 - "Am I making money selling snacks outside the school?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/market-stall-pricing.html

@@ -68,3 +68,5 @@ Sensitive points (no naming or shaming students, privacy of survey answers, stud
 - "暑假前防溺水安全教育班会方案。"
 - "小学三年级开学第一课班会怎么设计？"
 - "Plan a class meeting on friendship for a Chinese primary class."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-class-meeting.html

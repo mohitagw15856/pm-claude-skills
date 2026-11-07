@@ -75,3 +75,5 @@ End verbatim: *"以上为条款解读，不构成法律意见。如有争议或�
 - "三年合同试用期六个月，合法吗？"
 - "合同里有竞业限制但没写补偿，怎么办？"
 - "Review my Chinese employment contract before I sign."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-labour-contract-decoder.html

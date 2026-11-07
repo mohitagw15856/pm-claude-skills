@@ -74,3 +74,5 @@ Each marked to confirm.
 - "How do I keep simple records for my vegetable stall?"
 - "The microfinance officer asked for my business records, I have none"
 - "My business and home money are all mixed up"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/daily-cash-book.html

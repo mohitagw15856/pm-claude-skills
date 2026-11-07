@@ -73,3 +73,5 @@ Given only a list of apps, **write the full policy anyway**: every app gets rows
 - "Set approval rules for my Duet across Gmail, Xero and Slack"
 - "Design an approval policy for my AI assistant"
 - "Which actions need my yes, and which can it just do?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/approval-policy-designer.html

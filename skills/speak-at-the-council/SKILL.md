@@ -125,3 +125,5 @@ verify-at-your-council items with search terms]
 - "I want to speak at the council meeting."
 - "How do I fight this decision?"
 - "Write my public comment."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/speak-at-the-council.html

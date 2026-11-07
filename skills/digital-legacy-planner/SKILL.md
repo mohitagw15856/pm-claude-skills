@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Set up a digital legacy plan."
 - "Help an executor deal with online accounts."
 - "How does my family get into my stuff?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/digital-legacy-planner.html

@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "I got promoted over my former peers — how do I handle it?"
 - "I'm a new manager and keep doing all the work myself. Help."
 - "What are the biggest mistakes new managers make and how do I avoid them?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/new-manager-first-90-days.html

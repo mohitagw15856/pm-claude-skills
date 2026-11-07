@@ -154,3 +154,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Design pricing tiers."
 - "Evaluate freemium vs paid."
 - "Prepare a pricing change."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pricing-strategy.html

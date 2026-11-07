@@ -80,3 +80,5 @@ End verbatim: *"以上为一般性说明，不构成财务或法律意见。费�
 - "换工作中间断了一个月社保有影响吗？"
 - "公积金怎么提取出来付房租？"
 - "Explain Chinese social insurance for my situation."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-social-insurance-explainer.html

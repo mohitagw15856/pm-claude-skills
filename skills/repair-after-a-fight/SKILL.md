@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "We fought and now it's just cold silence. Help me reconnect."
 - "I hurt someone in an argument and want to fix it."
 - "What do I say to make up after a big blowup?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/repair-after-a-fight.html

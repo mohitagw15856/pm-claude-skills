@@ -86,3 +86,5 @@ Ask for these if not provided:
 - "How do I address the local plan policies in my statement?"
 - "Neighbours are objecting about overlooking — how do I answer that?"
 - "Write a supporting statement for a change of use"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/planning-application-statement.html

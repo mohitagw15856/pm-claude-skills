@@ -72,3 +72,5 @@ After the README, a table of what changed and why:
 - "Turn this feature list into benefits for the README."
 - "My side project's README is all tech stack. Fix it."
 - "Make this README convincing for someone who has never heard of the project."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/readme-benefit-writer.html

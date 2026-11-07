@@ -89,3 +89,5 @@ Green-claims substantiation practice (claim–evidence matching, scope disciplin
 - "Review sustainability claims."
 - "Check marketing copy for greenwash."
 - "Audit environmental claims on a website."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/greenwashing-self-audit.html

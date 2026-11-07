@@ -115,3 +115,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Find hidden assumptions."
 - "Validate product plans."
 - "Run an assumption analysis."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/assumption-mapper.html

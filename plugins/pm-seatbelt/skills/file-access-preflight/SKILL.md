@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Let my agent access my files safely."
 - "Is it safe to give the agent file/computer access?"
 - "Scope down my coding agent's reach."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/file-access-preflight.html

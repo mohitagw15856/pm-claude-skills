@@ -213,3 +213,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Review the AI risks for our hiring / credit / recommendation system"
 - "Build a responsible AI checklist for our product"
 - "What are the ethical risks of using AI for [use case]?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-ethics-review.html

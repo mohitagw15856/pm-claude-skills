@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "Write an obituary for my grandmother."
 - "I don't know how to put who she was into words."
 - "How long should a eulogy be and how do I get through it?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/eulogy-and-obituary-writer.html

@@ -64,3 +64,5 @@ Engineering handoff / pairing-rotation practice and incident-handoff (SBAR-style
 - "Hitting a context limit."
 - "Switch agents."
 - "Pausing a task mid-flight."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/session-handoff.html

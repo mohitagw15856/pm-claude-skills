@@ -80,3 +80,5 @@ Deterministic. The tax premium default (8%) is a placeholder for the self-employ
 - "How do I set my consulting rate?"
 - "Why is my freelance rate so high?"
 - "Convert my salary to a contract rate."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/freelance-rate.html

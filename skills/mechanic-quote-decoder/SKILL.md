@@ -137,3 +137,5 @@ trade; [[car-tco]] for whether this car is worth fixing at all.
 - "Do I really need all this?"
 - "Which of these repairs are padding?"
 - "Should I get a second opinion on this garage quote?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/mechanic-quote-decoder.html

@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "I need to escalate this."
 - "Write an email to my boss's boss."
 - "How do I go over someone's head professionally?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/escalation-email.html

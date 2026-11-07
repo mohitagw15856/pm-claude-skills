@@ -75,3 +75,5 @@ Insurance-claim practice — complete incident documentation, itemised evidenced
 - "File a claim letter."
 - "Document a loss for insurance."
 - "Appeal a denied claim."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/insurance-claim.html

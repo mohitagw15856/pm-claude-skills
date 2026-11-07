@@ -99,3 +99,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Tear down [Competitor]'s positioning"
 - "Give me a competitive landscape for [market]"
 - "Build a SWOT for our product against [competitor]"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/competitor-teardown.html

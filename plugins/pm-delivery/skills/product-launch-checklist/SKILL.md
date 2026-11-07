@@ -176,3 +176,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Give me a launch-day checklist."
 - "Plan the feature release."
 - "What do we need before this major update ships?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-launch-checklist.html

@@ -257,3 +257,5 @@ For each component, assess against these quality criteria:
 - "Assess the health of our shared design system"
 - "Run a design system audit before we do a rebrand"
 - "What's wrong with our design system and what should we fix first?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/design-system-audit.html

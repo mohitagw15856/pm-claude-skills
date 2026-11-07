@@ -74,3 +74,5 @@ Given only a role, tenure and school, **write both CVs in full anyway**: a compl
 - "Translate my Chinese CV into English for a job in London."
 - "I need my English resume in Chinese for a role in Shanghai."
 - "英文简历怎么写？我要投外企。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bilingual-cv-zh-en.html

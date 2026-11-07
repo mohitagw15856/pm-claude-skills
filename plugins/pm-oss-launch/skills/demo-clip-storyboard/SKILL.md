@@ -67,3 +67,5 @@ Format and size for each platform: MP4 (H.264), under 15 MB for X; square or ver
 - "Plan a short video that sells my repo on X and LinkedIn."
 - "What should my README demo GIF show?"
 - "Script a launch clip for my open-source app."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/demo-clip-storyboard.html

@@ -67,3 +67,5 @@ Pirate Metrics (AARRR — Dave McClure) and full-funnel demand-generation practi
 - "Map the customer journey to tactics."
 - "Plan demand generation."
 - "Diagnose where a funnel leaks."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/marketing-funnel-plan.html

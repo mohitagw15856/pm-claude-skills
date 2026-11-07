@@ -64,3 +64,5 @@ Ask for these if not provided:
 - "My manager should know how I work best — help me put it in writing."
 - "A working-with-me guide for my partner about how I operate."
 - "Help me articulate my non-negotiables and work style."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/personal-operating-manual.html

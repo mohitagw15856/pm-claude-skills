@@ -90,3 +90,5 @@ If the user doesn't have a strong angle, help them find one:
 - "Draft a journalist outreach email for [topic]"
 - "Help me pitch [story] to [type of journalist or outlet]"
 - "What is a good angle for a media pitch about [topic]?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/media-pitch.html

@@ -86,3 +86,5 @@ Deterministic. Models salary only — the script prints its own not-modeled list
 - "Should I switch jobs for more money?"
 - "Model my salary if I stay vs leave."
 - "Raise versus new offer."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/raise-vs-jump.html

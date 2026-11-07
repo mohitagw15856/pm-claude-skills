@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "Is investing even worth it for someone like me?"
 - "What are the basics I need before I start investing?"
 - "Explain index investing for a total beginner."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/investing-for-beginners.html

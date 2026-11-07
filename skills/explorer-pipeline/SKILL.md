@@ -81,3 +81,5 @@ At the end of each session: what is done, what is blocked (and on whom), and the
 - "Topic in, 3D explorer out: jet engines for an aviation museum."
 - "Run the whole 3D explorer pipeline for a plant cell."
 - "I want an interactive 3D page about volcanoes. Take me through it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/explorer-pipeline.html

@@ -100,3 +100,5 @@ Ask the user which of these they want:
 
 ## Why This Works Better on Opus 4.7
 Earlier models struggled with pixel-level data transcription from charts, often hallucinating values or misreading gridline positions. Opus 4.7 uses a higher image resolution (2576px vs 1568px) with coordinates mapping 1:1 to pixels, making chart data extraction reliable for practical use.
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/chart-data-extractor.html

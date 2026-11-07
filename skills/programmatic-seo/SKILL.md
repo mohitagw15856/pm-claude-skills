@@ -61,3 +61,5 @@ Programmatic SEO practice (templated data-driven pages, intent + unique value, G
 - "Build pages for each city and service."
 - "Scale content with templates and data."
 - "Capture long-tail search at scale."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/programmatic-seo.html

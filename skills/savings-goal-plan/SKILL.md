@@ -67,3 +67,5 @@ Goal-based saving (sinking funds): target ÷ timeline, milestone tracking, and a
 - "How much should I set aside each month?"
 - "Build an emergency fund plan."
 - "Save £3,000 for a trip by summer."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/savings-goal-plan.html

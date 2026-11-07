@@ -61,3 +61,5 @@ Ask for these if not provided:
 - "This feedback crushed me — help me reread it calmly."
 - "Did they mean it the harsh way, or is it just me?"
 - "Help me not catastrophize this text."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rejection-sensitivity-reframe.html

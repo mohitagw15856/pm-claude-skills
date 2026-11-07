@@ -121,3 +121,5 @@ neuro-crash cousin; [[diagnosis-limbo-kit]] if the flaring condition is unnamed;
 - "I fall apart when a bad day hits."
 - "Help me prepare for flare-ups."
 - "Has a relapsing condition."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/flare-day-planner.html

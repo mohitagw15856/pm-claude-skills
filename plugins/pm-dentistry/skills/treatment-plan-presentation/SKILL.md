@@ -85,3 +85,5 @@ Ask for these if not provided:
 - "How do I phase a large treatment plan for someone who cannot afford it all?"
 - "The patient said they want to think about it — what do I do?"
 - "How do I explain why this crown cannot wait?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/treatment-plan-presentation.html

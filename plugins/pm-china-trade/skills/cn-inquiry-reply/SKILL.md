@@ -71,3 +71,5 @@ Flags for destination country, end use or product category that need a sanctions
 - "帮我写一封英文邮件，跟进两周没回复的美国客户。"
 - "这个询盘看起来像同行套价，怎么判断？"
 - "Reply to this export inquiry in English with a Chinese version."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-inquiry-reply.html

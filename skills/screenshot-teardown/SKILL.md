@@ -71,3 +71,5 @@ Marketing pages say what a competitor claims; screenshots show what they shipped
 - "How does their flow work?"
 - "What should we learn, steal or avoid from their pricing page?"
 - "Here are screenshots of their app: what are they doing?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/screenshot-teardown.html

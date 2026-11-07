@@ -108,3 +108,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Create a SKILL.md."
 - "Improve a skill."
 - "Review a skill for quality."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/writing-great-skills.html

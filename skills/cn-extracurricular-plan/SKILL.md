@@ -67,3 +67,5 @@ A date (for example after 8 weeks) and three questions to decide whether to cont
 - "暑假两个月怎么安排，预算 1 万。"
 - "培训机构让一次性交两年学费有优惠，靠谱吗？"
 - "Plan my child's after-school activities in China within the double reduction rules."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-extracurricular-plan.html

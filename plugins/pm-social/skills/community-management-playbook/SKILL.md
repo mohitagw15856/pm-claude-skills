@@ -315,3 +315,5 @@ Track these weekly:
 - "What should our moderation policy be for [platform]?"
 - "Write community management templates and escalation procedures"
 - "How should we handle negative comments on social media?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/community-management-playbook.html

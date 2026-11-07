@@ -86,3 +86,5 @@ Given only a role and a few preferences, **write the full standing orders anyway
 - "Set ground rules for what my agent can do while I'm not there"
 - "Make an operating manual for my proactive assistant"
 - "What should my agent always and never do?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/standing-orders.html

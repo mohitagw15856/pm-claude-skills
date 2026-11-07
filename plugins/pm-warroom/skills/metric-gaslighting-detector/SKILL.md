@@ -55,3 +55,5 @@ Dashboards rarely contain false numbers. They contain true numbers arranged to c
 - "Is this dashboard lying to me?"
 - "Audit this KPI report before I present it."
 - "I inherited these metrics: can I trust them?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/metric-gaslighting-detector.html

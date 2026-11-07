@@ -49,3 +49,5 @@ One line on the underlying reason and a guardrail (a check, a type, a test, a co
 - "Debug a stack trace."
 - "Figure out why code is throwing."
 - "Make sense of a cryptic exception."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/error-decoder.html

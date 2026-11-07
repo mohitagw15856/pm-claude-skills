@@ -54,3 +54,5 @@ A 30-second spoken version (구두 보고) in polite speech for reporting in per
 - "신규 CRM 도입 검토 보고서 1페이지로 써 주세요. 팀장님 결재 받아야 해요."
 - "본부장님께 프로젝트 지연 상황을 보고해야 하는데 두괄식으로 정리해 줘."
 - "Write a Korean-style weekly report from these English notes for my manager in Seoul."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/kr-work-report.html

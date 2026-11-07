@@ -64,3 +64,5 @@ Defect-reporting practice — reproducibility-first reports with precise titles,
 - "File a defect."
 - "Report an issue."
 - "Turn it's broken into an actionable ticket."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bug-report.html

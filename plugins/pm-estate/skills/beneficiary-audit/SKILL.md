@@ -73,3 +73,5 @@ Ask for these if not provided:
 - "Does my 401k go to my ex?"
 - "Do beneficiary forms beat a will."
 - "What should I update after marriage/divorce/a birth?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/beneficiary-audit.html

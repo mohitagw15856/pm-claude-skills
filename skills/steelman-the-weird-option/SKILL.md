@@ -58,3 +58,5 @@ Ask for these if not provided:
 - "Argue properly for the choice I said no to."
 - "Why might the weird, contrarian option actually be right here?"
 - "Was my fast no to this bias or wisdom?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/steelman-the-weird-option.html

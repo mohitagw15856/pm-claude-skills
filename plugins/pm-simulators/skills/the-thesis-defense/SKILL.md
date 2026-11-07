@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "Grill me on my dissertation."
 - "What will my committee ask?"
 - "Prep me for my viva."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-thesis-defense.html

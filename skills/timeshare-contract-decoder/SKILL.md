@@ -66,3 +66,5 @@ End verbatim: *"This is a plain-language reading, not legal or financial advice 
 - "Decode my timeshare contract."
 - "Can I get out of a timeshare?"
 - "Is this vacation ownership worth it?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/timeshare-contract-decoder.html

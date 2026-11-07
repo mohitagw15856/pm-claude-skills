@@ -91,3 +91,5 @@ Verified by: [second person, where required] · [date/time]
 - "How do I document beyond-use dating for an inspection?"
 - "We are being inspected — what should our compounding records show?"
 - "Write a batch record with the calculations shown"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/compounding-record.html

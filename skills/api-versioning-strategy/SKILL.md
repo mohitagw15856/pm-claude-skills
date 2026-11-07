@@ -324,3 +324,5 @@ builders and response parsers.
 - "Define versioning policy."
 - "Plan API deprecation."
 - "Document version lifecycle."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/api-versioning-strategy.html

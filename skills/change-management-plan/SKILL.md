@@ -145,3 +145,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Help me plan the rollout of [system change] for [team/org]"
 - "Create a communication and training plan for [change]"
 - "How do I manage resistance to [change]?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/change-management-plan.html

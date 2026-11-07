@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "My personal details got leaked in an online argument."
 - "People are sharing my info and making threats — is this a police matter?"
 - "How do I get my exposed information taken down fast?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/doxxing-response.html

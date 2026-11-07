@@ -128,3 +128,5 @@ Flag any fields that may not exist in current data infrastructure.
 - "Give me a spec for a [team] performance dashboard"
 - "What should go on a [topic] dashboard?"
 - "Write a dashboard brief for our [metric] monitoring"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dashboard-brief.html

@@ -94,3 +94,5 @@ We lose when: [Honest scenario — e.g. primary driver is lowest upfront cost]
 - [ ] Do not make the battlecard exhaustive — it is a one-page cheat sheet, not a full competitive analysis
 - [ ] Do not include a "When we lose" section that is dishonestly optimistic — honest loss scenarios build rep trust
 - [ ] Do not skip the review date — an outdated battlecard with wrong information is worse than no battlecard
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sales-battlecard.html

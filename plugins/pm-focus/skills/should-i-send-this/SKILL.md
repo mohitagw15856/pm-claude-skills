@@ -63,3 +63,5 @@ Ask for these if not provided:
 - "Read this before I hit send on it."
 - "I'm hurt and about to send this — should I?"
 - "Gut-check this message for me."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/should-i-send-this.html

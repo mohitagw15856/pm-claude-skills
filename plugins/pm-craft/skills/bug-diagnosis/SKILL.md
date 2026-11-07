@@ -64,3 +64,5 @@ Systematic debugging method (reproduce → isolate → hypothesize → verify) �
 - "Why is this happening?"
 - "This test fails intermittently."
 - "Find the root cause of this defect."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bug-diagnosis.html

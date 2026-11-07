@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Build an expense sheet for the team."
 - "Get ready for reimbursement/tax season."
 - "My shoebox of receipts needs a system."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/expense-sheet-design.html

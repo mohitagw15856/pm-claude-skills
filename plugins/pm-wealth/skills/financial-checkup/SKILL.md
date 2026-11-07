@@ -72,3 +72,5 @@ Ask for these if not provided:
 - "Financial health check — where are my gaps?"
 - "It's a new year — help me review my money situation."
 - "Am I financially healthy, and what should I prioritize?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/financial-checkup.html

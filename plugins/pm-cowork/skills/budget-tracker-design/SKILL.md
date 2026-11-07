@@ -69,3 +69,5 @@ Ask for these if not provided:
 - "Track team spend against budget."
 - "Why do we always blow the budget invisibly?"
 - "Design a household/project budget tracker."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/budget-tracker-design.html

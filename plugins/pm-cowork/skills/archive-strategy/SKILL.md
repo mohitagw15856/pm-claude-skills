@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Set up an archiving system."
 - "Our workspace is drowning in old projects."
 - "Make history findable without cluttering today."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/archive-strategy.html

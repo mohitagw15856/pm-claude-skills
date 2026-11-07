@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "Learning plan for getting good at public speaking."
 - "Roadmap to learn data analysis for my job."
 - "I want to get into woodworking — stage it for me."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/learn-anything-roadmap.html

@@ -82,3 +82,5 @@ Ask for (if not already provided):
 - "Cut token usage without losing quality."
 - "Debug an agent that ignores instructions."
 - "Audit how retrieval results."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/context-engineering-review.html

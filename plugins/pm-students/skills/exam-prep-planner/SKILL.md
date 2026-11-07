@@ -67,3 +67,5 @@ Missed 1 day → [absorb via buffer] · Missed 3+ → [the triage list, in drop 
 - "Make a study schedule."
 - "I have N weeks until finals."
 - "How do I study for multiple exams?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/exam-prep-planner.html

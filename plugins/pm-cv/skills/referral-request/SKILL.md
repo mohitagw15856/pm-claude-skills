@@ -69,3 +69,5 @@ Under 120 words. No CV attached unless it is a close contact; offer it instead.
 - "Write a LinkedIn message to someone on the team I'm applying to."
 - "How do I ask my university alumni at Tencent for a referral?"
 - "帮我写一条内推请求的微信消息。"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/referral-request.html

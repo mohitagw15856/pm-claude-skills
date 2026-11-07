@@ -65,3 +65,5 @@ Influence & persuasion practice — Cialdini's principles, Aristotle's ethos/pat
 - "Get buy-in."
 - "Win over a skeptic."
 - "Prepare to pitch a proposal internally."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/persuasion-brief.html

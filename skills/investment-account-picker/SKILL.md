@@ -71,3 +71,5 @@ Ask for these if not provided:
 - "Where should I put money for retirement vs. a house deposit?"
 - "Explain tax-advantaged accounts — am I missing free benefits?"
 - "I have savings to invest — which account is right?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/investment-account-picker.html

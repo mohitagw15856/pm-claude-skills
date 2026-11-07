@@ -45,11 +45,10 @@ jobs:
           node scripts/build-exports.mjs
           node tests/exports-lint.mjs
 
-      - name: Verify web/skills.json is up to date
+      - name: Build the catalogue (web/skills.json is generated, not committed)
         run: |
           node web/build-skills.mjs
-          git diff --exit-code -- web/skills.json web/skills-index.json \
-            || (echo "::error::web/skills.json or web/skills-index.json is stale — run 'node web/build-skills.mjs' and commit." && exit 1)
+          node extension/sync-skills.mjs
 
       - name: Verify DISAMBIGUATION.md is up to date
         run: node scripts/build-disambiguation.mjs --check

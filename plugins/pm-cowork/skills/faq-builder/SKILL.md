@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "I answer the same questions weekly."
 - "Turn our support threads into docs."
 - "Why does nobody find our answers?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/faq-builder.html

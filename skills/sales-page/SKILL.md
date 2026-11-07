@@ -64,3 +64,5 @@ Direct-response copywriting (PAS / problem-agitate-solve, unique-mechanism, offe
 - "Write a long-form sales letter."
 - "Write the page for my course."
 - "Write direct-response copy that closes."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sales-page.html

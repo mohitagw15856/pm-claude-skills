@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Summarize what my subscriptions said this week."
 - "What did I miss that I actually care about?"
 - "Make my reading pile useful."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/newsletter-digest-brief.html

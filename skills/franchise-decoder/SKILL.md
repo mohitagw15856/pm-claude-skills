@@ -76,3 +76,5 @@ Ask for these if not provided:
 - "Review an FDD."
 - "Is this franchise a good deal?"
 - "What to ask existing franchisees?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/franchise-decoder.html

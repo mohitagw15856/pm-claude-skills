@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "Someone messaged me a link about a package fee. Legit?"
 - "I think I just got phished — I clicked the link and logged in."
 - "Did I just get scammed? They asked for a one-time code."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/phishing-triage.html

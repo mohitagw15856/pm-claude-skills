@@ -66,3 +66,5 @@ Ask for these if not provided:
 - "How do I decide what to keep vs. get rid of?"
 - "Declutter my kitchen in short sessions."
 - "How do I stop the clutter from coming back?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/declutter-by-room.html

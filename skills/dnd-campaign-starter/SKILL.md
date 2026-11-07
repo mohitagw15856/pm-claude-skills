@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "I need a session zero framework for my new group."
 - "Give me a hook and first adventure for a heroic 5e party."
 - "My players always go off-script — help me prep to improvise."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dnd-campaign-starter.html

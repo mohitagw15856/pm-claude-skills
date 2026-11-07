@@ -70,3 +70,5 @@ Ask for these if not provided:
 - "Write the wiki page for this process."
 - "I explain this every month."
 - "Make this knowledge survive me."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/handbook-page.html

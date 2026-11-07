@@ -92,3 +92,5 @@ Ask for (if not already provided):
 - "Only tell me what changed since last week."
 - "Set up a scheduled monitor."
 - "Make this recurring update delta-aware."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/delta-briefing.html

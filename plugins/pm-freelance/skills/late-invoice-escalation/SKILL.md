@@ -72,3 +72,5 @@ Deposit [%] before work starts · milestone billing over monthly-in-arrears · l
 - "Write a payment reminder email."
 - "Send a final demand for this invoice."
 - "Should I stop work until they pay?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/late-invoice-escalation.html

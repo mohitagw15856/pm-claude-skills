@@ -66,3 +66,5 @@ Consumer-advocacy correspondence practice — factual specificity, a concrete re
 - "Write a complaint letter."
 - "Escalate poor service."
 - "Demand a refund/replacement."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/complaint-letter.html

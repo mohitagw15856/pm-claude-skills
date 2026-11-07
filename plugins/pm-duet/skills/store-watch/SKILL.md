@@ -67,3 +67,5 @@ Given only the platform, **write the full watch anyway**: low stock at 7 days of
 - "Have my agent tell me when stock runs low"
 - "Watch for bad reviews and refunds"
 - "Daily shop health check"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/store-watch.html

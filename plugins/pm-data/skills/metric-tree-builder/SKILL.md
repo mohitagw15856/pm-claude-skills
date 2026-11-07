@@ -76,3 +76,5 @@ flowchart TD
 - "Break down a north-star metric."
 - "Map metric drivers."
 - "Find the inputs behind an output metric."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/metric-tree-builder.html

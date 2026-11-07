@@ -66,3 +66,5 @@ Source: GitHub REST (anonymous, rate-budgeted) · as of [date] · rerun: `[the c
 - "Check this project before we build on it."
 - "How active is this library's development?"
 - "Compare these repos health."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/github-repo-vitals.html

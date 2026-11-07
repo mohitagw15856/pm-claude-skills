@@ -80,3 +80,5 @@ Given the family's grounds, **prepare the full case anyway**: the two questions 
 - "We did not get our school place."
 - "Rehearse the appeal hearing."
 - "What does the panel ask?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-school-appeal.html

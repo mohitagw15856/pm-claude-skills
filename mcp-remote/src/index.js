@@ -29,7 +29,7 @@ async function getSkills() {
   if (CACHE) return CACHE;
   const r = await fetch(SKILLS_URL, { cf: { cacheTtl: 3600, cacheEverything: true } });
   const j = await r.json();
-  CACHE = (j.skills || []).map((s) => ({ name: s.name, title: s.title, description: s.description, plugin: s.plugin, tier: s.tier || null, inputs: s.inputs || null, source: s.source || null, body: s.instructions || '' }));
+  CACHE = (j.skills || []).map((s) => ({ name: s.name, title: s.title, description: s.description, plugin: s.plugin, tier: s.tier || null, inputs: s.inputs || null, source: s.source || null, permissions: s.permissions || null, contract: s.contract || null, body: s.instructions || '' }));
   return CACHE;
 }
 
@@ -128,6 +128,14 @@ const TOOLS = [
     },
     annotations: { title: 'Get a skill', ...READONLY },
   },
+  {
+    name: 'get_skill_contract',
+    title: 'Get a skill\'s typed contract and permissions',
+    description: 'Get the permission manifest (allowed tools, approval rule) and the JSON Schema contract (inputs, outputs) a skill declares, for deterministic chaining and safe unattended use.',
+    inputSchema: { type: 'object', additionalProperties: false, properties: { name: { type: 'string', description: 'The exact skill id.' } }, required: ['name'] },
+    outputSchema: { type: 'object', properties: { name: { type: 'string' }, permissions: { type: 'object' }, contract: { type: 'object' } }, required: ['name'] },
+    annotations: { title: 'Get skill contract', ...READONLY },
+  },
 ];
 
 // Each tool returns { text, structured }: human-readable text + a structured object matching outputSchema.
@@ -151,7 +159,13 @@ async function runTool(name, args) {
   if (name === 'get_skill') {
     const s = skills.find((x) => x.name === args.name);
     if (!s) return { text: `No skill named "${args.name}". Use search_skills to find one.`, structured: { name: String(args.name || ''), title: '', instructions: '' } };
-    return { text: `# ${s.title}\n\n${s.body}`, structured: { name: s.name, title: s.title, instructions: s.body } };
+    return { text: `# ${s.title}\n\n${s.body}`, structured: { name: s.name, title: s.title, instructions: s.body, ...(s.permissions ? { permissions: s.permissions } : {}), ...(s.contract ? { contract: s.contract } : {}) } };
+  }
+  if (name === 'get_skill_contract') {
+    const s = skills.find((x) => x.name === args.name);
+    if (!s) return { text: `No skill named "${args.name}".`, structured: { name: String(args.name || '') } };
+    const text = `${s.name}: ` + (s.permissions ? `tools=[${s.permissions.tools.join(', ')}] approval=${s.permissions.approval}` : 'no permission manifest (drafting only)') + (s.contract ? '; typed contract declared' : '; no typed contract');
+    return { text, structured: { name: s.name, ...(s.permissions ? { permissions: s.permissions } : {}), ...(s.contract ? { contract: s.contract } : {}) } };
   }
   throw new Error('Unknown tool: ' + name);
 }

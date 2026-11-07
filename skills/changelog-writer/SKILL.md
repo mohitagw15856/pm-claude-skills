@@ -64,3 +64,5 @@ The Keep a Changelog standard and Semantic Versioning, written for the reader ra
 - "Turn these commits into a changelog entry."
 - "Write the version announcement from these PRs."
 - "Group these changes into Added, Changed and Fixed."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/changelog-writer.html

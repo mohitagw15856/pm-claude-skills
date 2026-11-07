@@ -63,3 +63,5 @@ Developer-launch craft (Show HN / Product Hunt norms): substance over hype, hone
 - "Write our Product Hunt blurb."
 - "Write a launch tweet thread for this library."
 - "Announce our open-source project to developers."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/launch-post.html

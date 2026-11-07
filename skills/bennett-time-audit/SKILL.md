@@ -104,3 +104,5 @@ or treating the margin as a second job — and the guard]
 - "I have no time."
 - "Work eats everything."
 - "I want to learn X but can't fit it."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bennett-time-audit.html

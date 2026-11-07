@@ -68,3 +68,5 @@ Ask for these if not provided:
 - "I think my builder overcharged me. How do I dispute it?"
 - "Write a firm message demanding my contractor fix their work."
 - "Contractor's threatening a lien — what are my options?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/contractor-dispute.html

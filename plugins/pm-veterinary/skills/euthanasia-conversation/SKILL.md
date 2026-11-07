@@ -60,3 +60,5 @@ Acknowledging the loss, grief-support resources, and any follow-up (a condolence
 - "Assess quality of life."
 - "Prepare for a difficult end-of-life conversation."
 - "Support an owner facing the decision."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/euthanasia-conversation.html

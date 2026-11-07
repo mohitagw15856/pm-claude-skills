@@ -74,3 +74,5 @@ Client-side event-contract review — cancellation-schedule math, postponement-c
 - "Is this photographer contract normal?"
 - "What if we have to postpone?"
 - "Decode this caterer agreement."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wedding-vendor-contract-decoder.html

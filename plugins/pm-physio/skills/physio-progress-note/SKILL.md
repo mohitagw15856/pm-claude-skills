@@ -83,3 +83,5 @@ Ask for these if not provided:
 - "How do I document clinical reasoning in a progress note?"
 - "My notes just list what I did — how do I improve them?"
 - "Write a note where the patient has not improved"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/physio-progress-note.html

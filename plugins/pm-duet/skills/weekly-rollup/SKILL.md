@@ -58,3 +58,5 @@ Ask for (if not already provided), else infer and label:
 - "Weekly summary: what shipped against the plan?"
 - "Friday wrap-up for my manager"
 - "What pattern is in this week's blockers?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/weekly-rollup.html

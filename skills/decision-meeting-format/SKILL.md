@@ -67,3 +67,5 @@ Ask for these if not provided:
 - "We discuss forever and never decide."
 - "Structure the meeting where we pick the vendor/plan/design."
 - "Why do our decisions get relitigated?"
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-meeting-format.html
