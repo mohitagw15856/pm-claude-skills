@@ -65,3 +65,6 @@ Knowledge-base / technical-writing practice — task-based titles, answer-first,
 - "Write support documentation that cuts tickets."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/help-center-article.html
+
+<!-- pm-claude-skills v83.2.0 | skill: help-center-article | source: skills/help-center-article/SKILL.md | sha256: 787b9d1399f075c392032e1082878ad074e0c384ef57725a55d1358e629a8a04 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -128,3 +128,6 @@ scams; [[grief-admin]] and [[stoic-setback-debrief]] for the human aftermath;
 - "We just evacuated."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/after-the-disaster.html
+
+<!-- pm-claude-skills v83.2.0 | skill: after-the-disaster | source: skills/after-the-disaster/SKILL.md | sha256: 1ac8b3b898b14c938ed149a65e2218b0e685c7d4ec38eddf38932a0dc8d45246 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

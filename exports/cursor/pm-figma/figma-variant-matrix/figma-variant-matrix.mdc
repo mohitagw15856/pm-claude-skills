@@ -87,3 +87,6 @@ For each state, list only what changes from Default:
 - "What are all the combinations I need for my [component]?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-variant-matrix.html
+
+<!-- pm-claude-skills v83.2.0 | skill: figma-variant-matrix | source: skills/figma-variant-matrix/SKILL.md | sha256: 9262a743da6e421d76ce5274479a5b4cd60d3108ed6b38533372761e7a87f906 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

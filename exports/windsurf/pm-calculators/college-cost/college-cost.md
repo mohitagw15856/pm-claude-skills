@@ -86,3 +86,6 @@ Deterministic. Defaults: 4% cost inflation, 4 years, 50% loan share at 6.5% over
 - "Is this school affordable?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/college-cost.html
+
+<!-- pm-claude-skills v83.2.0 | skill: college-cost | source: skills/college-cost/SKILL.md | sha256: ac381247b6c69d5d33122602c218d88ccf866026c571a7c5b4d4ded2414280c8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

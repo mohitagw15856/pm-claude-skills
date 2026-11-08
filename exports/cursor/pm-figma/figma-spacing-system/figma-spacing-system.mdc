@@ -86,3 +86,6 @@ Desktop (1440px): 12 columns, margin [value], gutter [value], max content width 
 - "Help me build the layout foundation for our Figma file"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-spacing-system.html
+
+<!-- pm-claude-skills v83.2.0 | skill: figma-spacing-system | source: skills/figma-spacing-system/SKILL.md | sha256: 2a665c773eb91fea93c2a4376d652885875ed5b0196b83db99a6cc17e3ae1af0 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

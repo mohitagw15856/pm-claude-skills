@@ -75,3 +75,6 @@ Ask for these if not provided:
 - "They blamed 'operational reasons' for a 5-hour delay — does that count?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/flight-delay-compensation.html
+
+<!-- pm-claude-skills v83.2.0 | skill: flight-delay-compensation | source: skills/flight-delay-compensation/SKILL.md | sha256: 923cc55e983f979be8c504b9116881a311fa743df1a35398d02cdb19c8c3ec24 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

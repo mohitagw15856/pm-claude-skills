@@ -27,4 +27,34 @@ const commits = log.split('\x1e').filter((b) => b.trim()).map((block) => {
 }).filter((c) => c.count);
 const evo = existsSync(join(root, 'data', 'evolution-log.json')) ? JSON.parse(readFileSync(join(root, 'data', 'evolution-log.json'), 'utf8')).entries || [] : [];
 writeFileSync(join(root, 'web', 'skill-changes.json'), JSON.stringify({ generated: new Date().toISOString().slice(0, 10), bulkThreshold: BULK, commits, rewrites: evo.filter((e) => e.kept) }));
-console.log(`skill-changes.json: ${commits.length} commits (${commits.filter((c) => c.bulk).length} library-wide), ${evo.filter((e) => e.kept).length} kept rewrites.`);
+
+// Atom feed of the same history (web/changes.xml), so a reader or an agent can
+// follow skill changes without polling the page. Library-wide commits are kept
+// but summarised by count; per-skill commits list the skills.
+const SITE = 'https://mohitagw15856.github.io/pm-claude-skills';
+const REPO = 'https://github.com/mohitagw15856/pm-claude-skills';
+const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const feedItems = commits.slice(0, 100).map((c) => {
+  const link = c.pr ? `${REPO}/pull/${c.pr}/files` : `${REPO}/commit/${c.sha}`;
+  const what = c.bulk ? `${c.count} skills changed (library-wide)` : c.skills.map((s) => `<a href="${SITE}/skill/${s}.html">${s}</a>`).join(', ');
+  return `  <entry>
+    <id>${REPO}/commit/${c.sha}</id>
+    <title>${esc(c.subject)}</title>
+    <link href="${link}"/>
+    <updated>${c.date}T00:00:00Z</updated>
+    <summary type="html">${esc(`<p>${what}</p><p><a href="${link}">Full diff</a></p>`)}</summary>
+  </entry>`;
+});
+const feed = `<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>PM Skills: what changed</title>
+  <subtitle>Every edit to a skill in the library, newest first, with the pull request that carries the diff.</subtitle>
+  <link href="${SITE}/changes.html"/>
+  <link rel="self" href="${SITE}/changes.xml"/>
+  <id>${SITE}/changes.xml</id>
+  <updated>${(commits[0] ? commits[0].date : new Date().toISOString().slice(0, 10))}T00:00:00Z</updated>
+${feedItems.join('\n')}
+</feed>
+`;
+writeFileSync(join(root, 'web', 'changes.xml'), feed);
+console.log(`skill-changes.json: ${commits.length} commits (${commits.filter((c) => c.bulk).length} library-wide), ${evo.filter((e) => e.kept).length} kept rewrites; changes.xml: ${feedItems.length} entries.`);

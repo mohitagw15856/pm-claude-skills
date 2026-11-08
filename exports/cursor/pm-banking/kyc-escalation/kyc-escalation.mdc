@@ -79,3 +79,6 @@ End with: *"This memo is analytical support for internal escalation, not a compl
 - "Prepare an enhanced due diligence referral."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/kyc-escalation.html
+
+<!-- pm-claude-skills v83.2.0 | skill: kyc-escalation | source: skills/kyc-escalation/SKILL.md | sha256: f3bb2e555ba170c99ae274b1d0172dc26080c0631fbc56355817a77a1554b164 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

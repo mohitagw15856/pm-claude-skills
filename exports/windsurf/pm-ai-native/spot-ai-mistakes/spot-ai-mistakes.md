@@ -63,3 +63,6 @@ Ask for these if not provided:
 - "Teach me to spot when an AI answer is unreliable."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/spot-ai-mistakes.html
+
+<!-- pm-claude-skills v83.2.0 | skill: spot-ai-mistakes | source: skills/spot-ai-mistakes/SKILL.md | sha256: d185bd42789821ab9a2b3eb829834762769556f68311dacc971110d8188ec115 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

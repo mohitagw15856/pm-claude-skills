@@ -71,3 +71,6 @@ Ask for these if not provided:
 - "Make the case for fewer attendees."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/meeting-cost-meter.html
+
+<!-- pm-claude-skills v83.2.0 | skill: meeting-cost-meter | source: skills/meeting-cost-meter/SKILL.md | sha256: 78cca9345c14fc652cbc15a1b5c4bf17517078b9e560515cef46484b844019cc | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

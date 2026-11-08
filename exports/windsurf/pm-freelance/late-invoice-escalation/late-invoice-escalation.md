@@ -74,3 +74,6 @@ Deposit [%] before work starts · milestone billing over monthly-in-arrears · l
 - "Should I stop work until they pay?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/late-invoice-escalation.html
+
+<!-- pm-claude-skills v83.2.0 | skill: late-invoice-escalation | source: skills/late-invoice-escalation/SKILL.md | sha256: 964babdc5215a8296d47a6d45ac680d1cb647ac4fd73696052e185880229f108 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

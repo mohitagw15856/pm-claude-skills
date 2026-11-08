@@ -72,3 +72,6 @@ Structured-interview practice — competency-based, behaviorally-anchored questi
 - "Write competency-based questions for a product manager."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/interview-question-bank.html
+
+<!-- pm-claude-skills v83.2.0 | skill: interview-question-bank | source: skills/interview-question-bank/SKILL.md | sha256: dae7d103b74d5f3fa60c5d12a60097bbdae6589ee05c65575715903e9178ed1e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

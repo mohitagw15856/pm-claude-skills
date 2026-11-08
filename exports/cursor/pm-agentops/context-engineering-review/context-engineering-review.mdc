@@ -85,3 +85,6 @@ Ask for (if not already provided):
 - "Audit how retrieval results."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/context-engineering-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: context-engineering-review | source: skills/context-engineering-review/SKILL.md | sha256: ff187b3b04cef438f8b16b13dfb83e9a6279864f000a027a8d34c71b74204dfd | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

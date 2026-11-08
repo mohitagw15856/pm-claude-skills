@@ -26,6 +26,16 @@ A menudo recibirás un brief corto (unos pocos temas, una audiencia) sin una lis
 - **Audiencia** (all-hands, junta directiva, inversores, equipo de ventas — cambia tono y profundidad)
 - **Elementos explícitamente NO en el roadmap** (opcional pero fortalece credibilidad)
 
+## Dónde encaja — el final de la columna vertebral
+
+Último en la columna vertebral de decisiones de producto: **`/assumption-mapper` → `/prd-template` →
+`/rice-prioritisation` → `roadmap-narrative`**. Recibe **las iniciativas clasificadas con
+sus puntuaciones RICE** y las convierte en una historia a nivel de *tema* que la dirección pueda repetir.
+No añade prioridades nuevas: clasificar es tarea de los pasos anteriores; esta habilidad lo narra. *Tema*
+y *procedencia* se definen una sola vez en
+[`docs/craft/product-decisions.md`](../../docs/craft/product-decisions.md): un roadmap
+narra en temas, y no puede blanquear una [corazonada] anterior convirtiéndola en una promesa segura.
+
 ## Proceso
 1. Revisa la lista de iniciativas priorizadas y OKRs empresariales proporcionados
 2. Identifica 2-3 temas estratégicos que agrupen naturalmente las iniciativas
@@ -72,6 +82,24 @@ gantt
         Iniciativa      :2026-08-01, 45d
 ```
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/now-next-later.md`** — Ahora/Después/Más adelante bien hecho: gradientes de compromiso, no camuflaje de fechas. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/roadmap-onepager.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| Coherencia temática | Una lista de funcionalidades con fechas reetiquetada como "narrativa"; sin temas | Hay temas, pero una o más iniciativas quedan huérfanas sin señalarlo | Cada iniciativa se asigna a un tema; lo que no encaja se señala explícitamente como hueco narrativo, no se cuela |
+| Progresión causal | Los trimestres son un listado cronológico sin conexión entre ellos | La secuencia se enuncia, pero el razonamiento "el T1 habilita el T2 porque…" falta o se afirma sin evidencia | Cada periodo habilita visiblemente el siguiente, con la dependencia causal argumentada en prosa y reflejada en la cronología |
+| Franqueza estratégica | Sin sección de "qué no está en el roadmap" | Una exclusión con una razón floja ("no es prioridad ahora mismo") | Dos o más exclusiones con nombre y una razón estratégica defendible, incluida al menos una idea que alguien quiere de verdad |
+| Repetibilidad ejecutiva | Cargado de jerga; sin resumen independiente; un director financiero no podría contar nada de ello | Hay resumen, pero es demasiado largo, demasiado técnico o se lee como compresión y no como historia | Resumen de 3 o 4 frases que un interesado no técnico podría repetir correctamente tras una lectura, sin jerga de ingeniería |
+
 ## Verificaciones de Calidad
 
 - [ ] Cada iniciativa en el input se asigna a un tema estratégico
@@ -87,3 +115,11 @@ gantt
 - [ ] No escribas la progresión como lista cronológica — muestra enlaces causales entre trimestres (Q1 habilita Q2 porque…)
 - [ ] No escribas el resumen ejecutivo al final y lo trates como un resumen — escríbelo como la versión que stakeholders repetirán
 - [ ] No dejes iniciativas huérfanas sin tema — o crea un tema o señala explícitamente la brecha
+
+## Frases de activación de ejemplo
+
+- "Escribe una narrativa de roadmap."
+- "Explica el roadmap del producto a interesados no técnicos."
+- "Elabora una historia del roadmap para compartir con dirección."
+
+Ejecuta esta habilidad en tu navegador: https://mohitagw15856.github.io/pm-claude-skills/skill/roadmap-narrative.html

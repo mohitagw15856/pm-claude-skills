@@ -64,3 +64,6 @@ Support-experience practice — empathetic, scannable, personalised canned respo
 - "Template our answer to this common ticket."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/support-macro.html
+
+<!-- pm-claude-skills v83.2.0 | skill: support-macro | source: skills/support-macro/SKILL.md | sha256: 121707725afed737a72c358725ebc53d7bb73c27cb0055c02ae9fd86df9cb9c7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

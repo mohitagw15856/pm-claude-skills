@@ -64,3 +64,6 @@ The observable competencies a trainer checks before solo — greeting, order acc
 - "Build a restaurant training program."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/server-training-guide.html
+
+<!-- pm-claude-skills v83.2.0 | skill: server-training-guide | source: skills/server-training-guide/SKILL.md | sha256: 85a7e4f6c958f3b2d35fa0d01629aa35ebcc12dcf26e74ebf9bbce9d27ddc0bc | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

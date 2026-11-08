@@ -374,3 +374,6 @@ Define the thresholds that require explicit action — not retrospective fixes a
 - "Produce a capacity review for a service."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/capacity-planning.html
+
+<!-- pm-claude-skills v83.2.0 | skill: capacity-planning | source: skills/capacity-planning/SKILL.md | sha256: f949a3d7dc76bb53e30fc8086aaae008f8f7d6e0b7cd04d1de0ffd59066618df | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -76,3 +76,6 @@ Client-side event-contract review — cancellation-schedule math, postponement-c
 - "Decode this caterer agreement."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wedding-vendor-contract-decoder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: wedding-vendor-contract-decoder | source: skills/wedding-vendor-contract-decoder/SKILL.md | sha256: 9eec966e5772f1878f91557ed10e1bfe793b407b5347c2fddd684b5448a20f6a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

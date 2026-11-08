@@ -68,3 +68,6 @@ End verbatim: *"This is a plain-language reading, not tax or legal advice — pa
 - "Check my paycheck for mistakes."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pay-stub-decoder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: pay-stub-decoder | source: skills/pay-stub-decoder/SKILL.md | sha256: 1fc7a6bc521ff8a3aeaf494d801b6113ce6ad37a9f5dd50b93be9549d184e807 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

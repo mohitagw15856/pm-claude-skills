@@ -229,3 +229,6 @@ List each transformation in execution order. For ELT pipelines, this is the dbt 
 - "Spec out the pipeline that feeds the executive dashboard"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-pipeline-spec.html
+
+<!-- pm-claude-skills v83.2.0 | skill: data-pipeline-spec | source: skills/data-pipeline-spec/SKILL.md | sha256: 59d8ceac955f9f865228d2247917ee257f41db8aa42287063069a598b47635cc | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

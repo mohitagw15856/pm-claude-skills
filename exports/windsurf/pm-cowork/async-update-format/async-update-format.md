@@ -64,3 +64,6 @@ Ask for these if not provided:
 - "What goes in a good async check-in?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/async-update-format.html
+
+<!-- pm-claude-skills v83.2.0 | skill: async-update-format | source: skills/async-update-format/SKILL.md | sha256: 8d58a5aa07ed1d74d741c06578d55467d2ae8024f7e970e7d55e84bb7f7defdf | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -337,3 +337,6 @@ Run structured tests — change one variable at a time:
 - [ ] Do not allocate equal budget across TOFU, MOFU, and BOFU — BOFU audiences convert at higher rates and deserve proportionally more budget per conversion
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/social-ad-campaign.html
+
+<!-- pm-claude-skills v83.2.0 | skill: social-ad-campaign | source: skills/social-ad-campaign/SKILL.md | sha256: efd2d01eff0e44989e0ee1b34f1f5180d8ffea7748080875bc497e484de1e481 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

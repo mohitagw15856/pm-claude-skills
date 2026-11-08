@@ -67,3 +67,6 @@ Ask for these if not provided:
 - "Can a landlord reject everyone with any record?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/housing-with-a-record.html
+
+<!-- pm-claude-skills v83.2.0 | skill: housing-with-a-record | source: skills/housing-with-a-record/SKILL.md | sha256: 3c236ba5ea6b93b684f899516e6fd7a2d37e299eeab21ad9728e8fd425246351 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

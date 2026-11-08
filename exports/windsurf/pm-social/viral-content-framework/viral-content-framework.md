@@ -405,3 +405,6 @@ Apply the hook formulas and content structures from above to these topic angles:
 - "Build a repeatable system for creating high-reach content"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/viral-content-framework.html
+
+<!-- pm-claude-skills v83.2.0 | skill: viral-content-framework | source: skills/viral-content-framework/SKILL.md | sha256: 35b5384d6a80d2468146d6b105118979f48d3022a2d73398de98810b2a5d5dc7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -77,3 +77,6 @@ Given a description of the code instead of the code itself, **deliver the simpli
 - "Make this simpler without changing behaviour."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/code-simplification.html
+
+<!-- pm-claude-skills v83.2.0 | skill: code-simplification | source: skills/code-simplification/SKILL.md | sha256: b605c0ab8c97c8d257edccc93e2d391ccb4dbfdfb3111a1a381f3be2a4d3a8ee | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

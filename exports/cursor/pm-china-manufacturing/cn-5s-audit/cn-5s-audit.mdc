@@ -70,3 +70,6 @@ Rota of auditors (cross-department), frequency, and how to use the scores: trend
 - "Create a 5S audit checklist for a Chinese assembly line."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-5s-audit.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-5s-audit | source: skills/cn-5s-audit/SKILL.md | sha256: f87f3075f067f5570f0dd44b864d7191311ae8c364716e4f4c4c1c038494774f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -68,3 +68,6 @@ Guest follow-up (care, not admission), corrective action to prevent recurrence, 
 - "Record an incident for insurance/legal."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/guest-incident-log.html
+
+<!-- pm-claude-skills v83.2.0 | skill: guest-incident-log | source: skills/guest-incident-log/SKILL.md | sha256: 5d7086e74b46bd2417186c5b0073b4ffe693a6964768a6e9670a43fd542b54b6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

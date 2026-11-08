@@ -76,3 +76,6 @@ Rules:
 - "Turn my academic CV into a two-page version for an industry research role."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/academic-cv.html
+
+<!-- pm-claude-skills v83.2.0 | skill: academic-cv | source: skills/academic-cv/SKILL.md | sha256: f448399d382221883a7a69b870315cf960c8a758a993116a18a11d7e4bf3c301 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -106,3 +106,6 @@ Qualitative: [Framework — e.g. Braun & Clarke], [quality assurance]
 - "Write the methodology for my research proposal"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/research-protocol.html
+
+<!-- pm-claude-skills v83.2.0 | skill: research-protocol | source: skills/research-protocol/SKILL.md | sha256: 4a25a63bccb085db1c197d76b51247fdbee2b0ba3f35d74c5adceac795c04b9f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

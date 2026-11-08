@@ -70,3 +70,6 @@ Under 120 words. No CV attached unless it is a close contact; offer it instead.
 - "帮我写一条内推请求的微信消息。"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/referral-request.html
+
+<!-- pm-claude-skills v83.2.0 | skill: referral-request | source: skills/referral-request/SKILL.md | sha256: 7d5fca01e378cec8761eea94be30cc870102453c0122ead0d739d1b490b2c5e5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -278,3 +278,6 @@ If cycle time data was not provided: *Cycle time data was not included in this a
 - "Produce a retrospective data analysis."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sprint-velocity-analysis.html
+
+<!-- pm-claude-skills v83.2.0 | skill: sprint-velocity-analysis | source: skills/sprint-velocity-analysis/SKILL.md | sha256: 672b87a15cae18fc7f89b3c22c1a0e862cafdc18aaf2584523834dcb84c1ad6c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

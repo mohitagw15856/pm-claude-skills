@@ -81,3 +81,6 @@ Real-estate investment analysis practice — NOI/cap-rate/cash-on-cash modelling
 - "Run the numbers on an investment property."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/property-investment-analysis.html
+
+<!-- pm-claude-skills v83.2.0 | skill: property-investment-analysis | source: skills/property-investment-analysis/SKILL.md | sha256: 8f65c32b7211fc383422bf52cb60b7459d87c87207bee140e3da4400af642081 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

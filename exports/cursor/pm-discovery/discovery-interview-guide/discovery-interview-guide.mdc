@@ -143,3 +143,6 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Help me validate this problem with customers."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/discovery-interview-guide.html
+
+<!-- pm-claude-skills v83.2.0 | skill: discovery-interview-guide | source: skills/discovery-interview-guide/SKILL.md | sha256: ff0de8843fc9196df9a91959a0aa7908225b047f4a09cc57b337fde2e856e0ad | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

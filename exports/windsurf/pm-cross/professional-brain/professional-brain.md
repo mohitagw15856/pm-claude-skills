@@ -175,3 +175,6 @@ For **recall**, answer then show your grounding:
 - "Run a weekly brain review."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/professional-brain.html
+
+<!-- pm-claude-skills v83.2.0 | skill: professional-brain | source: skills/professional-brain/SKILL.md | sha256: 06934074bfb0fa6496ae5f37ee51b9150bc998e67085ecccea999a6d7d2a1c1b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

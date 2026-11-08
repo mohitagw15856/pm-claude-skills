@@ -80,3 +80,6 @@ LLM application security practice — layered controls, prompt-injection defence
 - "Harden a chatbot/agent against misuse."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/llm-guardrails-spec.html
+
+<!-- pm-claude-skills v83.2.0 | skill: llm-guardrails-spec | source: skills/llm-guardrails-spec/SKILL.md | sha256: 102706bdbeac90aa5478a90959ea5f92af0287ca0ab2a713759025080d91427f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

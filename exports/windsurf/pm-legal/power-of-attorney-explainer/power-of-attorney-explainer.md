@@ -67,3 +67,6 @@ Ask for these if not provided:
 - "How do I make a power of attorney valid, and how do I revoke one?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/power-of-attorney-explainer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: power-of-attorney-explainer | source: skills/power-of-attorney-explainer/SKILL.md | sha256: 232ad7f1f3d4f377a58759eab3486c024adcea77bb7250edc5a457a96652a564 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

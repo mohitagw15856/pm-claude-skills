@@ -68,3 +68,6 @@ Ask for these if not provided:
 - "Best things to look at with a small telescope this evening?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stargazing-tonight.html
+
+<!-- pm-claude-skills v83.2.0 | skill: stargazing-tonight | source: skills/stargazing-tonight/SKILL.md | sha256: 7b62a1759742688d0d3f007e64118f5fda95a8c086f8dd98749f14f2ed9ab0d4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

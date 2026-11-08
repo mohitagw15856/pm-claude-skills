@@ -5,6 +5,10 @@
 
 1332 skills exported. Copy a `.md rule` into the tool to use it.
 
+Every file ends with a provenance comment: library version, source path, the SHA-256 of the source
+`SKILL.md` and the licence. The same hash is published at `https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json`,
+so a copy can be checked against the library with `shasum -a 256` on the source file.
+
 | Skill | Bundle | Path |
 |---|---|---|
 | 360-Degree Feedback Template | `pm-people` | `pm-people/360-feedback-template/360-feedback-template.md` |

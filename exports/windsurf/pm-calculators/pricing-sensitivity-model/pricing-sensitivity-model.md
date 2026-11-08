@@ -56,3 +56,6 @@ It prints the points (`n=40 OPP=12.05 IPP=12.75 range=9.66–15.05 dropped=1`) a
 - "Plan a four-question pricing survey."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pricing-sensitivity-model.html
+
+<!-- pm-claude-skills v83.2.0 | skill: pricing-sensitivity-model | source: skills/pricing-sensitivity-model/SKILL.md | sha256: 3821c627e81bf7f8549baf86637e4e4541aa805fc5ce43d223f1ea458620dd8a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

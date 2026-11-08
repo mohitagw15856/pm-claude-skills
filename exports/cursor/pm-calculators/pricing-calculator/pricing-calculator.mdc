@@ -79,3 +79,6 @@ Pricing & break-even analysis — contribution margin, break-even volume, price-
 - "Estimate the revenue effect of a pricing change."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pricing-calculator.html
+
+<!-- pm-claude-skills v83.2.0 | skill: pricing-calculator | source: skills/pricing-calculator/SKILL.md | sha256: 31c2543b7100fcee6292455b72281b650f5cdbf5b47f8dd1582a1278badd0efa | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

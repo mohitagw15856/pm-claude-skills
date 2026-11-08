@@ -82,3 +82,6 @@ Ask for these if not provided:
 - "Plan my campus recruitment season in China for software engineering roles."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-campus-recruitment.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-campus-recruitment | source: skills/cn-campus-recruitment/SKILL.md | sha256: dd1ac6a64805530b89957a97a3b9115bd85e5d9b6471754c57dd6aef45e944d8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

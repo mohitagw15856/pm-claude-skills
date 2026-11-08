@@ -57,3 +57,6 @@ How to confirm the fix (`npm ls <pkg>`, a clean reinstall, the build), and one h
 - "My lockfile keeps fighting me."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dependency-conflict-resolver.html
+
+<!-- pm-claude-skills v83.2.0 | skill: dependency-conflict-resolver | source: skills/dependency-conflict-resolver/SKILL.md | sha256: 67ac8e42844725253dcbef79fc2cbc8fb00ebfdc5ba3eff43dbc253a2e6e6eaa | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

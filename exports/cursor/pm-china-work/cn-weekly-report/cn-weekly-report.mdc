@@ -83,3 +83,6 @@ End every output with a short **Assumptions and gaps** block: two to four bullet
 - "Write my weekly report in Chinese for my manager."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-weekly-report.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-weekly-report | source: skills/cn-weekly-report/SKILL.md | sha256: 9af8c42f23ed6779ecfae0c84cd3fe10ca52fb9e79d6f00cd3b066ef9c131856 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

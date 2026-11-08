@@ -67,3 +67,6 @@ A table for Word or WPS: A4 paper; 标题 in 2号小标宋体; 正文 in 3号仿
 - "Draft a Chinese official notice for our state-owned company."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-official-document.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-official-document | source: skills/cn-official-document/SKILL.md | sha256: 65ce348c6d8b23863141cd810722b0d52f389aba20bb001679e1ae0106c5227c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

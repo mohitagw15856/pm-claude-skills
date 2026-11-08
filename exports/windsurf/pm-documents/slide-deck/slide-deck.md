@@ -76,3 +76,6 @@ Outline: `# Title` (+ next line = subtitle) · `## Slide title` · `- bullet` (t
 - "Build an actual .pptx pitch deck."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/slide-deck.html
+
+<!-- pm-claude-skills v83.2.0 | skill: slide-deck | source: skills/slide-deck/SKILL.md | sha256: 71fdee339fa04de9a9ea19b3654cf4160a2e2c4399f92eb562b294f2729b82ca | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

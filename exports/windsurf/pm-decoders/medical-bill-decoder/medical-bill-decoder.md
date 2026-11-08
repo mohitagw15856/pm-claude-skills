@@ -84,3 +84,6 @@ Patient billing-advocacy practice — itemized-bill auditing, EOB reconciliation
 - "Can I negotiate this bill?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/medical-bill-decoder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: medical-bill-decoder | source: skills/medical-bill-decoder/SKILL.md | sha256: 8feb9010ebdc78498c96f5308d214debc3a7ef8527a78fa1697d99d176aa25c0 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

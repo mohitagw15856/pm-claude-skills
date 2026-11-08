@@ -1,0 +1,20 @@
+{
+  "$schema": "https://mohitagw15856.github.io/pm-claude-skills/schemas/pm-skills.schema.json",
+  "version": "83.x",
+  "agents": [
+    "claude",
+    "cursor"
+  ],
+  "bundles": [
+    "pm-essentials"
+  ],
+  "skills": [
+    "figma-design-review",
+    "design-critique",
+    "design-system-generate",
+    "design-system-audit",
+    "accessibility-audit",
+    "design-handoff-brief"
+  ],
+  "lite": false
+}

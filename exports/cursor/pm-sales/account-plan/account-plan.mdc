@@ -112,3 +112,6 @@ At end of [period]:
 - "Plan my territory for next year."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/account-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: account-plan | source: skills/account-plan/SKILL.md | sha256: 35e07262fcd5d50e3fbe919e799116321d0a8bcd62a641997416d26b392d7451 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

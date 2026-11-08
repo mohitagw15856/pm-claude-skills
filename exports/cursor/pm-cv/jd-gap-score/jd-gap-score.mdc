@@ -74,3 +74,6 @@ A rough first pass: it pulls bullet lines from the job ad and counts how many of
 - "帮我看看我的简历和这个岗位要求的匹配度。"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/jd-gap-score.html
+
+<!-- pm-claude-skills v83.2.0 | skill: jd-gap-score | source: skills/jd-gap-score/SKILL.md | sha256: 8f835d2b12ed77577b29de06b612ac02851942c152c57a82813ac691183f2700 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

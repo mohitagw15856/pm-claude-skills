@@ -73,3 +73,6 @@ Ask for these if not provided:
 - "Rewrite this formula with helper columns."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/formula-detangler.html
+
+<!-- pm-claude-skills v83.2.0 | skill: formula-detangler | source: skills/formula-detangler/SKILL.md | sha256: 2130358f6f9a0ac3d7ed26949080476d869570c13566af27c58cb6f132218fa6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

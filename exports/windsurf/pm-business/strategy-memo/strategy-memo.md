@@ -68,3 +68,6 @@ Good Strategy / Bad Strategy (Richard Rumelt) — diagnosis, guiding policy, coh
 - "Align the team on where to focus."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/strategy-memo.html
+
+<!-- pm-claude-skills v83.2.0 | skill: strategy-memo | source: skills/strategy-memo/SKILL.md | sha256: cc6982409d2c948755e11893fd0ae4606edc4bee765d350343b0671fc1002cfd | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

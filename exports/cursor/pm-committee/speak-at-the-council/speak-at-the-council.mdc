@@ -128,3 +128,6 @@ verify-at-your-council items with search terms]
 - "Write my public comment."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/speak-at-the-council.html
+
+<!-- pm-claude-skills v83.2.0 | skill: speak-at-the-council | source: skills/speak-at-the-council/SKILL.md | sha256: d09011bb4eb9e7d04636a51d3af49aa85b631512e5e66ccf90bbd8c8523e8119 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

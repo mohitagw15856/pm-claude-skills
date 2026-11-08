@@ -73,3 +73,6 @@ Ask for these if not provided:
 - "Our workshops are fun but nothing comes out."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/workshop-designer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: workshop-designer | source: skills/workshop-designer/SKILL.md | sha256: 351e08ff991e656b57812565c44473c0d007cf5a643eae65b5471cf764967eb3 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

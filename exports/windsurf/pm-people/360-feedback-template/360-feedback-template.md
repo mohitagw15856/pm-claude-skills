@@ -264,3 +264,6 @@ Ask the user which output they need, then gather inputs:
 - "Create a peer feedback survey for our upcoming performance cycle"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/360-feedback-template.html
+
+<!-- pm-claude-skills v83.2.0 | skill: 360-feedback-template | source: skills/360-feedback-template/SKILL.md | sha256: 42fdfd63c42f258bde2c69ffd42e3f5ac82384bd43a425a53608c31431ea0f3e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "Switch providers without drama."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vendor-breakup-email.html
+
+<!-- pm-claude-skills v83.2.0 | skill: vendor-breakup-email | source: skills/vendor-breakup-email/SKILL.md | sha256: 5cc8d1ef3460581d20211c8be18bb4190308f604a88889e9dc271ce2b288da5e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

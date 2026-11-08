@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "I'm drowning in debt — how do I decide what to do?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bankruptcy-decision.html
+
+<!-- pm-claude-skills v83.2.0 | skill: bankruptcy-decision | source: skills/bankruptcy-decision/SKILL.md | sha256: 3f7cb17fc28ba37f2e45c8911e6159655c75fdc583d1f17fa0799b8a1b6e5ae1 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

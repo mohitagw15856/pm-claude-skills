@@ -99,3 +99,6 @@ Use realistic sample data; don't imply results or claims you can't back — mark
 - "Script the talk track and aha moments for our product demo"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sales-demo-script.html
+
+<!-- pm-claude-skills v83.2.0 | skill: sales-demo-script | source: skills/sales-demo-script/SKILL.md | sha256: 8de4f7be37c8a36169dc4bf0f4ad4c917f78a91c7cc706d00f9b48a447c2e604 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

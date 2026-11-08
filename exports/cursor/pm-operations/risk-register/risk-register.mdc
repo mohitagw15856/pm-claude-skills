@@ -220,3 +220,6 @@ A risk is closed when:
 - [ ] Do not leave Critical or High risks without a contingency plan — what happens if the mitigation fails must be documented
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/risk-register.html
+
+<!-- pm-claude-skills v83.2.0 | skill: risk-register | source: skills/risk-register/SKILL.md | sha256: aa939cead9fc9228b1ad500741af68952fd8f08c17112e01738ac61362aa5ba0 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

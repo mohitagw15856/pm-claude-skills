@@ -163,3 +163,6 @@ direction, motion beyond the presets, iconography.]
 - "Make a deck theme that matches our product"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/design-system-generate.html
+
+<!-- pm-claude-skills v83.2.0 | skill: design-system-generate | source: skills/design-system-generate/SKILL.md | sha256: f8d8ae38117f2a794dc6aa11bcebece46b616d72f6d7ea714a6144974a076f72 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

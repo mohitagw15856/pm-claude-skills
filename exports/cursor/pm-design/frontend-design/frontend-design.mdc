@@ -69,3 +69,6 @@ Ask for (if not already provided):
 - "Establish the visual system for a new app."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/frontend-design.html
+
+<!-- pm-claude-skills v83.2.0 | skill: frontend-design | source: skills/frontend-design/SKILL.md | sha256: e7ea2d2ab7799a7d6196bc7803f4e8a8b1c72bff0046e780f243ad5153ebbce3 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -347,3 +347,6 @@ curl http://localhost:[PORT]/health
 - "Give new developers a codebase orientation."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/developer-onboarding-doc.html
+
+<!-- pm-claude-skills v83.2.0 | skill: developer-onboarding-doc | source: skills/developer-onboarding-doc/SKILL.md | sha256: feb22ef3259c13cb365386155223d695c6cb81687a88798b3911971796adb6b0 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

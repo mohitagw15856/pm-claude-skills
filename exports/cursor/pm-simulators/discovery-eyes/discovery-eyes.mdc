@@ -71,3 +71,6 @@ Ask for these if not provided:
 - "What shouldn't we put in writing?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/discovery-eyes.html
+
+<!-- pm-claude-skills v83.2.0 | skill: discovery-eyes | source: skills/discovery-eyes/SKILL.md | sha256: 686840391bedf9ad29794fbec8e150222dd51bf86ae836bdb5871db8efd3a4d2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

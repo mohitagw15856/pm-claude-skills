@@ -68,3 +68,6 @@ Ask for these if not provided:
 - "Explain index investing for a total beginner."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/investing-for-beginners.html
+
+<!-- pm-claude-skills v83.2.0 | skill: investing-for-beginners | source: skills/investing-for-beginners/SKILL.md | sha256: fc52dd5d7f4dd497c39d0ee7ca5d6880914ed4c795510b03de7f57f07512760f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

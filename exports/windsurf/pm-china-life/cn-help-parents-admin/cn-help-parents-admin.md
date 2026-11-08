@@ -71,3 +71,6 @@ Immediate steps: call 110, call the bank to freeze the card, keep the call recor
 - "Help me handle my parents' pension and medical insurance admin in China from another city."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-help-parents-admin.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-help-parents-admin | source: skills/cn-help-parents-admin/SKILL.md | sha256: 9af243c0b2b60054bdfe94800abf7dde9a2fbd0772fb0be49ef84eea5c4224ac | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

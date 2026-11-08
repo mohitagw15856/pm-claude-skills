@@ -87,3 +87,6 @@ Verification anchors customers can check (verified handles list on your domain, 
 - "Prepare an impersonation playbook before it happens."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/brand-impersonation-response.html
+
+<!-- pm-claude-skills v83.2.0 | skill: brand-impersonation-response | source: skills/brand-impersonation-response/SKILL.md | sha256: dddf654b25e35211fcb2718fad7692dfe0395292b01b31f8854d6ce7a571c504 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

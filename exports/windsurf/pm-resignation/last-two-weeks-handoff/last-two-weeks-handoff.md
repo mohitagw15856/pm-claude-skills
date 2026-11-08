@@ -72,3 +72,6 @@ Ask for these if not provided:
 - "What do I do before I leave my job?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/last-two-weeks-handoff.html
+
+<!-- pm-claude-skills v83.2.0 | skill: last-two-weeks-handoff | source: skills/last-two-weeks-handoff/SKILL.md | sha256: e6bdc4eda0c09a07fefcada8a6d893aae3ce782989ce01000ff502309abebcd6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

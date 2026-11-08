@@ -126,3 +126,6 @@ kind of ranked.
 - "How do I actually improve at ranked?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ranked-climb-coach.html
+
+<!-- pm-claude-skills v83.2.0 | skill: ranked-climb-coach | source: skills/ranked-climb-coach/SKILL.md | sha256: 5bf9e5c4ecd5a679d1e75f09a1bfe5ee426d49603df18ffa69d25d0a00f301fa | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

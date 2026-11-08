@@ -118,6 +118,24 @@ Pide al usuario estos datos si no están provistos:
 - **Pregunta clave a responder** (¿por qué cae la retención? ¿qué impulsa la retención?)
 - **Datos disponibles** (eventos de analytics, encuestas de churn, notas de entrevistas)
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/curve-reading.md`** — Leer curvas de retención sin engañarse. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/retention-readout.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| Diagnóstico de la curva | Informa una cifra de retención sin la forma de la curva | Se muestra la forma, pero no se interpreta | Se diagnostica explícitamente si se aplana o tiende a cero y se vincula a lo que significa (encaje producto-mercado frente a problema de onboarding) |
+| Disciplina de cohortes | Todos los usuarios agrupados en una única tasa combinada | Cohortes separadas pero leídas como un volcado de tabla | Cohortes segmentadas antes del análisis, con la cohorte divergente señalada y explicada |
+| Vínculo con el momento "ajá" | La activación nunca se conecta con la retención | Se afirma una correlación sin datos ni salvedades | Se identifica con evidencia el comportamiento que separa a los usuarios retenidos de los que abandonan, o se marca honestamente como desconocido con un plan para averiguarlo |
+| Especificidad de las intervenciones | Consejos del tipo "mejorar el onboarding" | Acciones concretas pero sin plan de medición | Las intervenciones nombran el momento del usuario al que apuntan, más un plan de seguimiento con umbral de alerta y entrevistas a usuarios que abandonaron |
+
 ## Checklists de Calidad
 
 - [ ] La forma de la curva de retención está diagnosticada (aplana vs tiende a cero = PMF vs onboarding)
@@ -141,3 +159,11 @@ Pide al usuario estos datos si no están provistos:
 - Haz benchmark contra la industria — aplicaciones de consumidor, SaaS y marketplaces tienen norms de retención muy diferentes
 - Si DAU/MAU está por debajo de 5%, esa es una conversación de PMF, no una conversación de tácticas de retención
 - Siempre recomienda hablar con usuarios con churn — ninguna cantidad de datos reemplaza entender la *razón*
+
+## Frases de activación de ejemplo
+
+- "Analiza la retención de usuarios."
+- "Investiga el abandono."
+- "Construye un plan de mejora de la retención."
+
+Ejecuta esta habilidad en tu navegador: https://mohitagw15856.github.io/pm-claude-skills/skill/retention-analysis.html

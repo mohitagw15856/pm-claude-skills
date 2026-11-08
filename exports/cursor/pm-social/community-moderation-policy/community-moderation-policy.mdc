@@ -72,3 +72,6 @@ How a member contests an action: where to appeal, who reviews (not the acting mo
 - "Set up an enforcement ladder for our community."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/community-moderation-policy.html
+
+<!-- pm-claude-skills v83.2.0 | skill: community-moderation-policy | source: skills/community-moderation-policy/SKILL.md | sha256: 95bf2ef623e484a7a89073f020a4141e86c0d04416a3f5b9932ef4badd93fb11 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

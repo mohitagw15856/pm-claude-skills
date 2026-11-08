@@ -71,3 +71,6 @@ Real-estate marketing practice — lifestyle-led, feature-accurate listings that
 - "Make this property description more appealing."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/property-listing.html
+
+<!-- pm-claude-skills v83.2.0 | skill: property-listing | source: skills/property-listing/SKILL.md | sha256: a7c0d2171dc4b81b7898088f7a36bdd1daa62eff6427986638b675318f5a2651 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

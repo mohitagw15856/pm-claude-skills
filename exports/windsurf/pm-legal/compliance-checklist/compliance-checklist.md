@@ -115,3 +115,6 @@ Once certified/compliant, what needs to continue:
 - "HIPAA gap analysis for a healthtech scaleup"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/compliance-checklist.html
+
+<!-- pm-claude-skills v83.2.0 | skill: compliance-checklist | source: skills/compliance-checklist/SKILL.md | sha256: b6794c36aaa5069157e29a82471604b68552a3f2af149be44978b884eafa7f96 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

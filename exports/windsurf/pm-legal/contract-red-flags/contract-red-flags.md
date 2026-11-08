@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "This NDA feels one-sided — what should I push back on?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/contract-red-flags.html
+
+<!-- pm-claude-skills v83.2.0 | skill: contract-red-flags | source: skills/contract-red-flags/SKILL.md | sha256: f5cc2185d834369dcdd0230dd7690867a42ac9ac20236ac315cf6357f8c472e7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

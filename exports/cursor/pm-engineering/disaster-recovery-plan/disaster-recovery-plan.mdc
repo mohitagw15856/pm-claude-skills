@@ -577,3 +577,6 @@ Run this checklist quarterly and before any major infrastructure change:
 - "Prepare for a disaster recovery game day."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/disaster-recovery-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: disaster-recovery-plan | source: skills/disaster-recovery-plan/SKILL.md | sha256: a6ebf784e785bf4b7a86664aa7a71b31d2ddd59ccb766e48808b73fc22a08054 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

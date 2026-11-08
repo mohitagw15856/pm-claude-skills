@@ -141,3 +141,6 @@ Before submitting:
 - "Optimise my application for ATS for this job description"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/job-application.html
+
+<!-- pm-claude-skills v83.2.0 | skill: job-application | source: skills/job-application/SKILL.md | sha256: f8e0a262fe9bedb8e141737069a461feb35937c2b47b06b7fec52db9879cacec | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

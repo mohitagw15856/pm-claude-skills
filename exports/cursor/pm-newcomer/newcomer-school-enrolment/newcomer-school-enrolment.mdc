@@ -76,3 +76,6 @@ The facts you assumed, each marked to confirm.
 - "Which office do I contact to find a school place for my son?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/newcomer-school-enrolment.html
+
+<!-- pm-claude-skills v83.2.0 | skill: newcomer-school-enrolment | source: skills/newcomer-school-enrolment/SKILL.md | sha256: da1dc4a45889eca64a49434a8d01d2075cd1eac050f7a47fb5f0a1d0bfbc52db | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

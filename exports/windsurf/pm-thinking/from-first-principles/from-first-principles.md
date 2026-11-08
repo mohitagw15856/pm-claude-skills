@@ -63,3 +63,6 @@ Ask for these if not provided:
 - "Strip this problem to basics and reason it back up."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/from-first-principles.html
+
+<!-- pm-claude-skills v83.2.0 | skill: from-first-principles | source: skills/from-first-principles/SKILL.md | sha256: 9ff408f94c6b0aa184e67cf62b62ff92d6891586a47d04e09b48fc4a0e5d12bd | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

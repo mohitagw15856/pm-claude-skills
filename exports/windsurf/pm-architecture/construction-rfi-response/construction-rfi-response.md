@@ -85,3 +85,6 @@ Ask for these if not provided:
 - "Our RFIs keep coming back — what are we doing wrong?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/construction-rfi-response.html
+
+<!-- pm-claude-skills v83.2.0 | skill: construction-rfi-response | source: skills/construction-rfi-response/SKILL.md | sha256: 3f42200369da2f1aa8d65c74767e424dbbba4565a82ef8d4c58e34bc5070df16 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

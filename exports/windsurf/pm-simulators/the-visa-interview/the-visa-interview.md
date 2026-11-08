@@ -73,3 +73,6 @@ Ask for these if not provided:
 - "Practice my student visa questions."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-visa-interview.html
+
+<!-- pm-claude-skills v83.2.0 | skill: the-visa-interview | source: skills/the-visa-interview/SKILL.md | sha256: cd6e2cd5d2b662899929ae99823d0e6db86b2327283e8130c759aca9caae70cb | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -372,3 +372,6 @@ If this schema is being introduced to an existing system, note the migration app
 - "Plan an index strategy."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/database-schema-design.html
+
+<!-- pm-claude-skills v83.2.0 | skill: database-schema-design | source: skills/database-schema-design/SKILL.md | sha256: bdfd901ca793455ed7923ea6e597a4d233fe0c34d6f88d413d875c979c3c5e9c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

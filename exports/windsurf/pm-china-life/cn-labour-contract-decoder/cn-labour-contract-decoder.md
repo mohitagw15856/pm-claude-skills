@@ -76,3 +76,6 @@ End verbatim: *"以上为条款解读，不构成法律意见。如有争议或�
 - "Review my Chinese employment contract before I sign."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-labour-contract-decoder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-labour-contract-decoder | source: skills/cn-labour-contract-decoder/SKILL.md | sha256: 5e90c6a38d90f519a8f1b55a62f9fc8b8f56f3f88cffdfa578e18e20be7f8164 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

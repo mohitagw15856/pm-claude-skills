@@ -134,7 +134,7 @@ A skill MAY ship a machine-readable contract beside the package: a JSON document
   "outputs": { "type": "object", "properties": { "title": { "type": "string" } }, "required": ["title"] } }
 ```
 
-Contracts let an orchestrator validate what it passes in, and parse what comes back, without reading the prose. Registries SHOULD expose the contract next to the skill; this repo serves it at `/schemas/skills/<name>.json`, inside `skills.json`, and from the MCP tool `get_skill_contract`. The `version` integer is bumped when the contract changes shape.
+Contracts let an orchestrator validate what it passes in, and parse what comes back, without reading the prose. This repo's [typed pipelines](docs/PIPELINES.md) are one such orchestrator: a pipeline step may only use a skill with a contract, and the chain is validated against the contracts before it runs. Registries SHOULD expose the contract next to the skill; this repo serves it at `/schemas/skills/<name>.json`, inside `skills.json`, and from the MCP tool `get_skill_contract`. The `version` integer is bumped when the contract changes shape.
 
 ---
 

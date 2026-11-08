@@ -72,3 +72,6 @@ Options: correct and re-present within the time limit, ask the buyer to accept t
 - "Check these export documents against the letter of credit for discrepancies."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-letter-of-credit-check.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-letter-of-credit-check | source: skills/cn-letter-of-credit-check/SKILL.md | sha256: 6a887cac6c09afd754a18cdaa8e954bcc7cd91e98bb66c714df79dc54e74bfc4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

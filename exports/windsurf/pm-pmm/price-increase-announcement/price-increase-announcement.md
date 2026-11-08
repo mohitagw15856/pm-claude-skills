@@ -72,3 +72,6 @@ Ask for these if not provided:
 - "Draft customer and internal comms for new pricing."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/price-increase-announcement.html
+
+<!-- pm-claude-skills v83.2.0 | skill: price-increase-announcement | source: skills/price-increase-announcement/SKILL.md | sha256: 541678b3e05fd959a76d4439aae3b7bc4c33c052344c4f3f946dc7c9b1da32b6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

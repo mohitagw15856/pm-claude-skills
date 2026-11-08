@@ -85,3 +85,6 @@ Sequence-of-returns risk (largest near the target date) · taxes · spending dri
 - "Model my savings trajectory."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/fire-number.html
+
+<!-- pm-claude-skills v83.2.0 | skill: fire-number | source: skills/fire-number/SKILL.md | sha256: 7c42d80d47202f61e007fa3655198674915e103adc2a45bc329f655429c5ddcc | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

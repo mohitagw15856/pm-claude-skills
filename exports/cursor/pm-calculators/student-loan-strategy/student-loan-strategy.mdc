@@ -83,3 +83,6 @@ Match captured first: [yes/no — fix first if no] · Temperament: [their words,
 - "Model my student debt."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/student-loan-strategy.html
+
+<!-- pm-claude-skills v83.2.0 | skill: student-loan-strategy | source: skills/student-loan-strategy/SKILL.md | sha256: c7ac5a4f672a6d184536b6572c403da00b747a2d3875fe6db59480156781f3c7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

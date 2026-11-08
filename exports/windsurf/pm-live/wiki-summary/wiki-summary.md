@@ -65,3 +65,6 @@ Source: [canonical article URL] · fetched [date] · rerun: `[exact curl]`
 - "Has this article changed."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wiki-summary.html
+
+<!-- pm-claude-skills v83.2.0 | skill: wiki-summary | source: skills/wiki-summary/SKILL.md | sha256: ff42aebbb26e8bf5d2b70295394720113ca4fe142ee75b3d2864e4e4deeeca11 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

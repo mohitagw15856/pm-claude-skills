@@ -71,3 +71,6 @@ Conversion-copywriting practice — single conversion goal, problem-led structur
 - "Write copy for our marketing site."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/landing-page-copy.html
+
+<!-- pm-claude-skills v83.2.0 | skill: landing-page-copy | source: skills/landing-page-copy/SKILL.md | sha256: b311b92160fce092f9ae39d7e4ba3eaa399458dfb1dceb8e6c64ec7853b024b0 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

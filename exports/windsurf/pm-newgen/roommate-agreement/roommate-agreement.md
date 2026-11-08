@@ -124,3 +124,6 @@ same peace treaty.
 - "Someone's moving out mid-lease."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/roommate-agreement.html
+
+<!-- pm-claude-skills v83.2.0 | skill: roommate-agreement | source: skills/roommate-agreement/SKILL.md | sha256: 72a864b4f8e95f28094891d84199a3fd19ad291b46c7921f0e2516cd7c41424f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

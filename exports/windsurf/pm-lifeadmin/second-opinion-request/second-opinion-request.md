@@ -76,3 +76,6 @@ Ask for these if not provided:
 - "What records do I send?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/second-opinion-request.html
+
+<!-- pm-claude-skills v83.2.0 | skill: second-opinion-request | source: skills/second-opinion-request/SKILL.md | sha256: 95f8e3e58a420cbe394131db95bffe2d1ee9391efbcdc7697a4f0eca98c5777b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

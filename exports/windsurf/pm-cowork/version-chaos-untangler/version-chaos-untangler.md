@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "Stop the version chaos on this doc."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/version-chaos-untangler.html
+
+<!-- pm-claude-skills v83.2.0 | skill: version-chaos-untangler | source: skills/version-chaos-untangler/SKILL.md | sha256: 75207c3392e437984e8e4a6394d307f703ea48091a6374c638ce6cb9643ccc9a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "Set up a regular break in my caregiving so I don't collapse."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/respite-care-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: respite-care-plan | source: skills/respite-care-plan/SKILL.md | sha256: d351479d1334111fabc771ce400630513d66ba710dd044ac76b155600a42db4c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

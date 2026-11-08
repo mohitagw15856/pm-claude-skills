@@ -73,3 +73,6 @@ Narrative decision-memo practice (Amazon-style one/six-pagers; one-way vs. two-w
 - "Get leadership to decide something."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-memo.html
+
+<!-- pm-claude-skills v83.2.0 | skill: decision-memo | source: skills/decision-memo/SKILL.md | sha256: e0c8103d9a2100912fcac75a26f741d289164c1a4581165a6355cfefe49c51b7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

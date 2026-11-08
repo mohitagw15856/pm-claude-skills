@@ -115,3 +115,6 @@ documents core; [[power-outage-plan]] and [[after-the-disaster]] for during and 
 - "Prepare for evacuation."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/go-bag-builder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: go-bag-builder | source: skills/go-bag-builder/SKILL.md | sha256: f0a44cd2ffeb25b31a8f62d57e6072b6b8d7d4b56877e96aa656865514fc874c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

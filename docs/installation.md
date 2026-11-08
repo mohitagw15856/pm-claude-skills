@@ -4,19 +4,20 @@ Complete guide to installing and using PM Claude Skills.
 
 ## The fast path: guided setup
 
-One command detects which supported agents are on your machine, lets you pick agents and bundles, shows the exact plan before writing anything, backs up any existing files it would overwrite, and records what it did so it can be updated or removed later:
+One command detects which supported agents are on your machine, asks what you do (a role installs its starter loadout plus `pm-essentials`, so you never need a bundle name) and how many people will use the set (more than one writes a `.pm-skills.json` teammates install with `sync`), shows the exact plan before writing anything, backs up any existing files it would overwrite, records what it did so it can be updated or removed later, and ends with a `doctor` checkup:
 
 ```bash
 npx pm-claude-skills setup
 ```
 
-- **Non-interactive** (CI, scripts): `npx pm-claude-skills setup --yes --agents claude,cursor --bundle pm-essentials,pm-decoders`
+- **Non-interactive** (CI, scripts): `npx pm-claude-skills setup --yes --agents claude,cursor --bundle pm-essentials,pm-decoders`; a role and team size can be passed too: `--role product-manager --team 4` (roles are the persona ids in `web/personas.json`; `--no-config` and `--no-doctor` skip those steps)
+- **Pre-commit hook for skill authors**: `npx pm-claude-skills githook install` runs SkillCheck on the skill files you commit ([docs/GIT-HOOK.md](GIT-HOOK.md))
 - **Preview only**: add `--dry-run` to see the plan and write nothing
 - **Refresh to the current library version**: `npx pm-claude-skills update`
 - **Remove it all**: `npx pm-claude-skills uninstall` removes only files this library wrote; your own skills and rules stay. Backups live under `~/.pm-skills/backups/`.
 - **MCP** (optional, Claude Code): `claude mcp add pm-skills -- npx -y -p pm-claude-skills pm-claude-skills-mcp`
 
-Supported agents are the ones `npx pm-claude-skills list` names (Claude Code, Hermes, Codex, OpenClaw, Cursor, Windsurf, Aider, Kilo Code, Trae, Qoder, Lingma, CodeBuddy); each uses that tool's documented skill or rule format. Tools with no local config folder (ChatGPT, Gemini web) take the copy-paste route via [`exports/`](../exports/) instead. The manual, per-tool steps follow below.
+Supported agents are the ones `npx pm-claude-skills list` names (Claude Code, Hermes, Codex, OpenClaw, Copilot, Gemini CLI, Cursor, Windsurf, Aider, Kilo Code, Trae, Qoder, Lingma, CodeBuddy); each uses that tool's documented skill or rule format. Tools with no local config folder (ChatGPT, Gemini web) take the copy-paste route via [`exports/`](../exports/) instead, and the OpenAI Agents SDK loads the `exports/openai-agents/` definitions as data. The manual, per-tool steps follow below.
 
 ## Prerequisites
 

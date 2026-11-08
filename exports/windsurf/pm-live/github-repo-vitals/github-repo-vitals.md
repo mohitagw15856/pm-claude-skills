@@ -68,3 +68,6 @@ Source: GitHub REST (anonymous, rate-budgeted) · as of [date] · rerun: `[the c
 - "Compare these repos health."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/github-repo-vitals.html
+
+<!-- pm-claude-skills v83.2.0 | skill: github-repo-vitals | source: skills/github-repo-vitals/SKILL.md | sha256: bdc5cd02fd33aa27bcbcf8cd3ea1a14d3bce0bf288d8fa84cbf9d61194a05338 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

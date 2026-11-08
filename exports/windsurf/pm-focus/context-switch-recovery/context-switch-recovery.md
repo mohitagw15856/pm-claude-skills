@@ -61,3 +61,6 @@ Ask for these if not provided:
 - "How do I get back into this after being distracted?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/context-switch-recovery.html
+
+<!-- pm-claude-skills v83.2.0 | skill: context-switch-recovery | source: skills/context-switch-recovery/SKILL.md | sha256: eff3e393596ec1cc50afdbf5e7bf13e32861e166309fe96c6c3b4758bb97c13f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

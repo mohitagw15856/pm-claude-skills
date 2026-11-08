@@ -63,3 +63,6 @@ Three concrete actions in order, each with where to do it (the CPF website or ap
 - "新加坡公积金怎么算？我每个月应该存多少？"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/singapore-cpf-explainer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: singapore-cpf-explainer | source: skills/singapore-cpf-explainer/SKILL.md | sha256: 7719df162c0213d53ee137a6adaf572cec568e04f87db9d3b1b635db4a500cd9 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -59,3 +59,6 @@ A checklist of documents and a month-by-month timeline to the application window
 - "Can I get a Shanghai hukou, and how long would it take?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-hukou-points.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-hukou-points | source: skills/cn-hukou-points/SKILL.md | sha256: e86b6554116d2f98aeee9d9a3529e8dae3aa482259fabe4994c862e232eeeb5f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

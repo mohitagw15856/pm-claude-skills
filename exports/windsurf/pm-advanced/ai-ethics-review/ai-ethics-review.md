@@ -215,3 +215,6 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "What are the ethical risks of using AI for [use case]?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-ethics-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: ai-ethics-review | source: skills/ai-ethics-review/SKILL.md | sha256: 0571761061a2bdcaa6bdb0ab34edcac2f8e813c19b327b595011557215c19e23 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

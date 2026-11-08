@@ -74,3 +74,6 @@ Ask for these if not provided:
 - "Design a parallel agent workflow for this."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/run-an-agent-team.html
+
+<!-- pm-claude-skills v83.2.0 | skill: run-an-agent-team | source: skills/run-an-agent-team/SKILL.md | sha256: f1fe0c952297dbd0e4634b23c6218cd445594352b969798e98970712c0aa8bb2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

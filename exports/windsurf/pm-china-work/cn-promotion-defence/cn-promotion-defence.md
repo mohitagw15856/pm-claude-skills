@@ -78,3 +78,6 @@ Given the level move, the format and the headline achievements, **write the full
 - "Help me prepare my promotion defence for a Chinese tech company."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-promotion-defence.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-promotion-defence | source: skills/cn-promotion-defence/SKILL.md | sha256: 1f83f9ea7cbf8ad731d139345677891cd7a12b8fb54b819769a059bb0f6ac882 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

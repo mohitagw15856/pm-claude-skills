@@ -107,3 +107,6 @@ Kill criteria: [the honest thresholds]
 - "How do I playtest this?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/board-game-designer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: board-game-designer | source: skills/board-game-designer/SKILL.md | sha256: 9fa9f79181ca15bfe089f0a48f21dcbb760e6f989ebb3b775a7968fd7345ae5a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

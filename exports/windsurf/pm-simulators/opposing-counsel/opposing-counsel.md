@@ -69,3 +69,6 @@ Drop the persona entirely. For each ☠️ and ⚠️ finding: the specific clau
 - "Find the weaknesses before they do."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/opposing-counsel.html
+
+<!-- pm-claude-skills v83.2.0 | skill: opposing-counsel | source: skills/opposing-counsel/SKILL.md | sha256: 48b20801bea3b02979a90972001ca893269ef54e57d219f2e756a9ecf9705cce | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

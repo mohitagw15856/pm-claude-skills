@@ -83,3 +83,6 @@ Deterministic. The tax premium default (8%) is a placeholder for the self-employ
 - "Convert my salary to a contract rate."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/freelance-rate.html
+
+<!-- pm-claude-skills v83.2.0 | skill: freelance-rate | source: skills/freelance-rate/SKILL.md | sha256: b6aa07956e4866c88871c3b1437754d3b60861409251ff14807d2fa8c856d491 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -134,3 +134,6 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Track competitive positioning."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/competitive-analysis.html
+
+<!-- pm-claude-skills v83.2.0 | skill: competitive-analysis | source: skills/competitive-analysis/SKILL.md | sha256: b757491c774257682a702fff33e7e6a29166a939fad35a439db4b2a42899b8c8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -78,3 +78,6 @@ AICPA SOC 2 Trust Services Criteria (Security, Availability, Confidentiality, Pr
 - "Get audit-ready."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/soc2-readiness.html
+
+<!-- pm-claude-skills v83.2.0 | skill: soc2-readiness | source: skills/soc2-readiness/SKILL.md | sha256: cb63e69e16a7a4f71293afbbd3e688b48956ab781b089d72f74869e99122ae32 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

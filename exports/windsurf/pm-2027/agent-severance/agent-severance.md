@@ -118,3 +118,6 @@ Duties: [scheduled + reactive + undocumented] · Dependents: [who/what calls it]
 - "Ending an AI pilot."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-severance.html
+
+<!-- pm-claude-skills v83.2.0 | skill: agent-severance | source: skills/agent-severance/SKILL.md | sha256: fdef946d043a57f6b9c10dc5de73e32f39e30e6603fd7fb9a031f343e0ddde69 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

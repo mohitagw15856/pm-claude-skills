@@ -126,3 +126,6 @@ illness.
 - "Help me handle the admin."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/grief-admin.html
+
+<!-- pm-claude-skills v83.2.0 | skill: grief-admin | source: skills/grief-admin/SKILL.md | sha256: abfb2c4c287951c8ca37d17b9cb9619203f3d13a4022d7e071cfaf3d5f7e216c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -74,3 +74,6 @@ Ask for these if not provided:
 - "Am I financially healthy, and what should I prioritize?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/financial-checkup.html
+
+<!-- pm-claude-skills v83.2.0 | skill: financial-checkup | source: skills/financial-checkup/SKILL.md | sha256: ab4d3a1d89179ed3653722af08b378e7dd763b1ac9330addec40d092528be87f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

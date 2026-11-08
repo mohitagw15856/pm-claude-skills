@@ -73,3 +73,6 @@ Ask for these if not provided:
 - "Write a deposit demand letter."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/security-deposit-recovery.html
+
+<!-- pm-claude-skills v83.2.0 | skill: security-deposit-recovery | source: skills/security-deposit-recovery/SKILL.md | sha256: 4a63a429cdd4b0a8606b43ffc3abd191286613c0af4fcfb4e6533ed5fa605a03 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

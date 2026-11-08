@@ -77,3 +77,6 @@ Ask for these if not provided:
 - "Simulate the offer pressure."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-open-house.html
+
+<!-- pm-claude-skills v83.2.0 | skill: the-open-house | source: skills/the-open-house/SKILL.md | sha256: cacf39c1314a1c8d13fb65595efc8c68a83eed35b1a551c042138527464fe104 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "What's the 3-2-1 backup rule and how do I set it up?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/backup-strategy.html
+
+<!-- pm-claude-skills v83.2.0 | skill: backup-strategy | source: skills/backup-strategy/SKILL.md | sha256: c64f86de6038b953cb62fbb3081b0e7ac653647c2779a67cb32fb781f10dc2ca | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

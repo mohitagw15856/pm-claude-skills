@@ -73,3 +73,6 @@ Ask for these if not provided:
 - "I have savings to invest — which account is right?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/investment-account-picker.html
+
+<!-- pm-claude-skills v83.2.0 | skill: investment-account-picker | source: skills/investment-account-picker/SKILL.md | sha256: 9257548fee72cc76ace17429e3cd296c01a278b044a63303578d2b34692f4d5d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

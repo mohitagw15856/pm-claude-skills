@@ -124,3 +124,6 @@ engine; [[nt-translator]] and [[masking-budget]] for the neurodivergent version;
 - "How much do I share?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/disability-disclosure-decision.html
+
+<!-- pm-claude-skills v83.2.0 | skill: disability-disclosure-decision | source: skills/disability-disclosure-decision/SKILL.md | sha256: dde15bad3faf7e2e40286696332cc42faf2a994e10d1dab3f75efb7110dd4559 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

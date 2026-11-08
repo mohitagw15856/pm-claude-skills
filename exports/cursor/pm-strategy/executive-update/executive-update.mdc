@@ -83,3 +83,6 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Brief the C-suite on the product."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/executive-update.html
+
+<!-- pm-claude-skills v83.2.0 | skill: executive-update | source: skills/executive-update/SKILL.md | sha256: 8e5a46ce3e574a36c765556cc2f52e80fbd75acb95106ce0e9bfb5872be54297 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -1,0 +1,48 @@
+{
+  "$schema": "../schemas/pipeline.schema.json",
+  "id": "incident-to-sprint",
+  "name": "Incident to a risk register and a remediation sprint",
+  "summary": "Run the blameless postmortem, turn its contributing factors into a risk register, and plan the sprint that works through the action items. Three typed skills, chained by contract.",
+  "inputs": {
+    "type": "object",
+    "properties": {
+      "title": { "type": "string", "description": "Incident title" },
+      "severity": { "type": "string", "enum": ["P1", "P2", "P3", "SEV1", "SEV2", "SEV3"] },
+      "narrative": { "type": "string", "description": "What happened, in order, as the responders remember it" },
+      "project": { "type": "string", "description": "The project or service the risk register is for" },
+      "objectives": { "type": "array", "description": "What the project must still achieve", "items": { "type": "string" } },
+      "sprint_length_weeks": { "type": "integer" },
+      "team_size": { "type": "integer" }
+    },
+    "required": ["title", "severity", "narrative", "project", "objectives", "sprint_length_weeks", "team_size"]
+  },
+  "steps": [
+    {
+      "id": "postmortem",
+      "skill": "incident-postmortem",
+      "inputs": {
+        "title": "$.input.title",
+        "severity": "$.input.severity",
+        "narrative": "$.input.narrative"
+      }
+    },
+    {
+      "id": "risks",
+      "skill": "risk-register",
+      "inputs": {
+        "project": "$.input.project",
+        "objectives": "$.input.objectives",
+        "known_risks": "$.postmortem.contributing_factors"
+      }
+    },
+    {
+      "id": "sprint",
+      "skill": "sprint-planning",
+      "inputs": {
+        "sprint_length_weeks": "$.input.sprint_length_weeks",
+        "team_size": "$.input.team_size",
+        "backlog": { "from": "$.postmortem.action_items[]", "map": { "item": "action" } }
+      }
+    }
+  ]
+}

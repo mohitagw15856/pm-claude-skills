@@ -125,3 +125,6 @@ RAG definitions:
 - "Write the steering committee report for [project]"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/project-status-report.html
+
+<!-- pm-claude-skills v83.2.0 | skill: project-status-report | source: skills/project-status-report/SKILL.md | sha256: 72ea0dab881f613fb1d42c747cf5fdf49f5ab47137150792882ec8829073a79f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

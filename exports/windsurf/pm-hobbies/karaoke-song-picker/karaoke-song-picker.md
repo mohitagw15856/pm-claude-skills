@@ -65,3 +65,6 @@ Ask for these if not provided:
 - "I always pick songs too high — give me safe options."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/karaoke-song-picker.html
+
+<!-- pm-claude-skills v83.2.0 | skill: karaoke-song-picker | source: skills/karaoke-song-picker/SKILL.md | sha256: 0f6e54bc2491021dfb12cb18df5b719acc64243a46a281577ea46ea24026339e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

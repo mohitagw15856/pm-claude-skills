@@ -67,3 +67,6 @@ Ask for these if not provided:
 - "Where can I get free help expunging my record?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/expungement-navigator.html
+
+<!-- pm-claude-skills v83.2.0 | skill: expungement-navigator | source: skills/expungement-navigator/SKILL.md | sha256: 9dde1daa78e07b49191cd84de9d71786b81eadf692aabb75d710639ff881222c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

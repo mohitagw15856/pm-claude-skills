@@ -62,3 +62,6 @@ A one-line note on timing and how you'll follow up if you don't hear back.
 - "Why now for this feature story?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/story-pitch.html
+
+<!-- pm-claude-skills v83.2.0 | skill: story-pitch | source: skills/story-pitch/SKILL.md | sha256: d142b0f68cd0e31ed1c95a6349fe27c93c673393e5407924f6d3df764da70918 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

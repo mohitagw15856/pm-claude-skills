@@ -65,3 +65,6 @@ Source: ESPN public feed (unofficial) · as of [fetch time] · rerun: `[exact cu
 - "Show me the league standings right now."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sports-scores.html
+
+<!-- pm-claude-skills v83.2.0 | skill: sports-scores | source: skills/sports-scores/SKILL.md | sha256: 4cfe4c8f47fbd1be0a069c020811b6e8f288a40b3f520d8d3b35d27c816eb2ef | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

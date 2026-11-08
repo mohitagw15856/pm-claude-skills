@@ -81,3 +81,6 @@ Finance-operations practice — clear, category-based expense policies with limi
 - "Set spending guidelines for the team."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/expense-policy.html
+
+<!-- pm-claude-skills v83.2.0 | skill: expense-policy | source: skills/expense-policy/SKILL.md | sha256: 8305b24c0c2363a5c23970e40e69ad27d59784fbf031535f4cfe9cf45f2f3282 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

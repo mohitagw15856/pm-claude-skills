@@ -179,3 +179,6 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "What do we need before this major update ships?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-launch-checklist.html
+
+<!-- pm-claude-skills v83.2.0 | skill: product-launch-checklist | source: skills/product-launch-checklist/SKILL.md | sha256: 59d72db32b53301fbadc91c45340b785a738dc2aaa73332d1079bf0511fa42da | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -87,3 +87,6 @@ Ask for these if not provided:
 - "Write a Xiaohongshu note about my new standing desk."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/xiaohongshu-note.html
+
+<!-- pm-claude-skills v83.2.0 | skill: xiaohongshu-note | source: skills/xiaohongshu-note/SKILL.md | sha256: 674abaf60d3b99b4a02bfe762ecd85f7beecbd90c14c373720082e586bcd44ac | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

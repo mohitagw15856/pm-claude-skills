@@ -76,3 +76,6 @@ A **Notion Hygiene Report**:
 - "Tidy my tasks DB: fill blanks, archive dead rows, fix statuses."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/notion-db-hygiene.html
+
+<!-- pm-claude-skills v83.2.0 | skill: notion-db-hygiene | source: skills/notion-db-hygiene/SKILL.md | sha256: f66321301f4dfd31f6480f0f68af6a0dee99ce8c8f2b027bf309b368ac85b43d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

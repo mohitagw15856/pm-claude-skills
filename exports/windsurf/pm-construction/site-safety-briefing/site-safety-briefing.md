@@ -80,3 +80,6 @@ If a briefing's controls are all level 4–5, flag it: the task plan itself may 
 - "Plan safety for a specific task like a crane pick."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/site-safety-briefing.html
+
+<!-- pm-claude-skills v83.2.0 | skill: site-safety-briefing | source: skills/site-safety-briefing/SKILL.md | sha256: 409325ad8d0d6ed3e1df30e58c03a4b1b92f9fa8ce160d46372caa9771e13350 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

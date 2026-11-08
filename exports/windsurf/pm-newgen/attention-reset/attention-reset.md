@@ -138,3 +138,6 @@ as the protocol's maintenance home after day 30.
 - "My attention span is gone."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/attention-reset.html
+
+<!-- pm-claude-skills v83.2.0 | skill: attention-reset | source: skills/attention-reset/SKILL.md | sha256: 7490db91b1b9c1ab6a7d18913adeacd0bd7ea2d0266efb0e423582f9c94167de | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

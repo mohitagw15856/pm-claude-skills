@@ -66,3 +66,6 @@ UX writing practice — plain-language, blame-free error messages with clear rec
 - "Make our error messages less blaming."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/error-message-writer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: error-message-writer | source: skills/error-message-writer/SKILL.md | sha256: 74d19b3211ecc2c05f3e9fd02dc3cf1dcdb2f1bb9993f52839c02dfc673451e9 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

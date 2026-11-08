@@ -71,3 +71,6 @@ Ask for these if not provided:
 - "I start everything and complete nothing."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/personal-wip-limits.html
+
+<!-- pm-claude-skills v83.2.0 | skill: personal-wip-limits | source: skills/personal-wip-limits/SKILL.md | sha256: ba2cabba0b66cacf46ffe5e8d6d86593ca46770369826277b4c5b39d1532d074 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

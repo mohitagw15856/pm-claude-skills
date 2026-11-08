@@ -66,3 +66,6 @@ Ask for these if not provided:
 - "Process this backlog."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/email-triage-system.html
+
+<!-- pm-claude-skills v83.2.0 | skill: email-triage-system | source: skills/email-triage-system/SKILL.md | sha256: d55758af7b315ae0395bd2d394407ba17e954b55c3a56ba706d4028a46cb68ff | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

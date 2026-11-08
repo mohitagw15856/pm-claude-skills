@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "Make history findable without cluttering today."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/archive-strategy.html
+
+<!-- pm-claude-skills v83.2.0 | skill: archive-strategy | source: skills/archive-strategy/SKILL.md | sha256: e18ab91b863a7dcae25809c4303a8b619c2ab6c1dc9ba143e3a5ebcd6ac74b09 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -62,3 +62,6 @@ Government/executive briefing-note practice (purpose-led, one page, key consider
 - "Summarize an issue for a decision."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/briefing-note.html
+
+<!-- pm-claude-skills v83.2.0 | skill: briefing-note | source: skills/briefing-note/SKILL.md | sha256: 03160604c31fd939f67e358e602afe8c44dbeadc135fca6505c6743bf39b2147 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

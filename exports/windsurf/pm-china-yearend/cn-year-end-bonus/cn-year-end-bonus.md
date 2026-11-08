@@ -87,3 +87,6 @@ Compares separate taxation with combining, using only the person's figures, and 
 - "Explain how my year-end bonus in China is taxed."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-year-end-bonus.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-year-end-bonus | source: skills/cn-year-end-bonus/SKILL.md | sha256: 89053f32ab44719789340cea9bec6f93800260797dc77e420085819e727ad256 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -195,3 +195,6 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Evaluate an account's likelihood to renew."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cs-health-scorecard.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cs-health-scorecard | source: skills/cs-health-scorecard/SKILL.md | sha256: bf11917f7f587fa845536aac5e8a23782081907f5778caf47456242c235322f4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -68,3 +68,6 @@ Notice-and-comment rulemaking practice (substantive, provision-specific, evidenc
 - "Write a comment to the agency."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/public-comment.html
+
+<!-- pm-claude-skills v83.2.0 | skill: public-comment | source: skills/public-comment/SKILL.md | sha256: 393f4067a7a1a6d1ab350f4d352e79acf40168bdefbb4fa71c1d8ac10b70d320 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

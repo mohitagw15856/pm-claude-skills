@@ -182,3 +182,6 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Turn a raw spec/Postman collection into documentation."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/api-docs-writer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: api-docs-writer | source: skills/api-docs-writer/SKILL.md | sha256: 8e96e869e9ee986d07a7781bf43289c558fc37d38fee9cb8522f9216c9640784 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

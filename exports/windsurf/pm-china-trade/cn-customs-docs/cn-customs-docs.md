@@ -76,3 +76,6 @@ The records to keep: the export declaration data, invoices, contract, logistics 
 - "List the customs documents for exporting furniture from China."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-customs-docs.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-customs-docs | source: skills/cn-customs-docs/SKILL.md | sha256: d0205e267a206448e0f98c4bc35c0727c32c3fb49d6601caefcaf26ce5f647e1 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

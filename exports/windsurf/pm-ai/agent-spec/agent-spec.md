@@ -75,3 +75,6 @@ Tool-using / agentic design practice — bounded control loops, least-privilege 
 - "Write an agent spec/PRD."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-spec.html
+
+<!-- pm-claude-skills v83.2.0 | skill: agent-spec | source: skills/agent-spec/SKILL.md | sha256: c8c60907024b005a4992bbb13c6c2a6e1a3e7b5b23d3477a88dce2bcfa6f7fd8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

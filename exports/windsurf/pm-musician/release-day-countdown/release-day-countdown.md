@@ -132,3 +132,6 @@ pieces; [[content-calendar]] for the ongoing rhythm after.
 - "Plan my release."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/release-day-countdown.html
+
+<!-- pm-claude-skills v83.2.0 | skill: release-day-countdown | source: skills/release-day-countdown/SKILL.md | sha256: b476099100db8d891a7cf4db1580317f43592326dc6b0378adf7af69931380ab | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

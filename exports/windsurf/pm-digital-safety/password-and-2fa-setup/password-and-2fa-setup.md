@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "I want to secure my accounts without locking myself out."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/password-and-2fa-setup.html
+
+<!-- pm-claude-skills v83.2.0 | skill: password-and-2fa-setup | source: skills/password-and-2fa-setup/SKILL.md | sha256: 98fc93ec84b92900a8cb9f1e79f6590657c2a74f60978cc19003994e89c0cefb | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

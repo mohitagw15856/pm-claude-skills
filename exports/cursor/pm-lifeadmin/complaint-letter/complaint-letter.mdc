@@ -69,3 +69,6 @@ Consumer-advocacy correspondence practice — factual specificity, a concrete re
 - "Demand a refund/replacement."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/complaint-letter.html
+
+<!-- pm-claude-skills v83.2.0 | skill: complaint-letter | source: skills/complaint-letter/SKILL.md | sha256: b2e81bd8f81d19c269cae0ca8ea9d52e4ec42c01d56553e3f9ad9020409d8257 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

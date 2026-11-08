@@ -76,3 +76,6 @@ Ask for these if not provided:
 - "Retailer and manufacturer keep pointing at each other. What now?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/warranty-claim.html
+
+<!-- pm-claude-skills v83.2.0 | skill: warranty-claim | source: skills/warranty-claim/SKILL.md | sha256: 8f6db0732924bca88e04637ec8a29e2906e9539191cd73110117cc718cc23be8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -77,3 +77,6 @@ A short excerpt of each generated file (three records each) and the command that
 - "I need a no-signup demo. Make the data tell a story."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/demo-data-generator.html
+
+<!-- pm-claude-skills v83.2.0 | skill: demo-data-generator | source: skills/demo-data-generator/SKILL.md | sha256: 541e32213e79e8944a0b7c1f0562472d8cd7275760e306d972c59fe724d0d0c0 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

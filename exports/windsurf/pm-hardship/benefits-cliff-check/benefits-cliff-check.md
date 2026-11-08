@@ -68,3 +68,6 @@ Ask for these if not provided:
 - "How do I know if a new job leaves me better or worse off?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/benefits-cliff-check.html
+
+<!-- pm-claude-skills v83.2.0 | skill: benefits-cliff-check | source: skills/benefits-cliff-check/SKILL.md | sha256: e4819ecc80f0b96c8f70d0566b8b01496dc140ef351fbf3d9f9d96970d27903f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

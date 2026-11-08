@@ -65,3 +65,6 @@ Conference CFP practice (clear promise, concrete takeaways, paced outline, the c
 - "Help me get accepted at this conference."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/conference-talk-proposal.html
+
+<!-- pm-claude-skills v83.2.0 | skill: conference-talk-proposal | source: skills/conference-talk-proposal/SKILL.md | sha256: 2a3cdb10dbde36dd55d41f62bd4ff8f7052e81461b32238db9926abd16087319 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

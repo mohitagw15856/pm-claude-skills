@@ -242,3 +242,6 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Design an experience map for [process or product]"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/customer-journey-map.html
+
+<!-- pm-claude-skills v83.2.0 | skill: customer-journey-map | source: skills/customer-journey-map/SKILL.md | sha256: 526ceac8a6e33ec2367aeb3751c5fe437fa06e62b6ce5ab12b44f86dcc722ead | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

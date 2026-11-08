@@ -67,3 +67,6 @@ Ask for these if not provided:
 - "What pairs with a cheese board, and something non-alcoholic too?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wine-pairing.html
+
+<!-- pm-claude-skills v83.2.0 | skill: wine-pairing | source: skills/wine-pairing/SKILL.md | sha256: 283e590919fcef9929a3a3f1dc7253f046df30a7c670a291f03c0af636df450c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -44,6 +44,24 @@ Solicita al usuario estos datos si no están disponibles:
 #### Pasos Recomendados
 [Recomendaciones específicas y accionables basadas en hallazgos]
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/coding-transcripts.md`** — Codificar transcripciones de entrevistas sin perder la señal. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/per-session-capture.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| Trazabilidad de la evidencia | Temas afirmados sin citas ni atribución a participantes | La mayoría de los temas llevan citas, pero algunos se apoyan en 1 o 2 participantes o en paráfrasis sin atribuir | Cada tema lleva citas textuales de 3 o más participantes distintos, con recuentos de frecuencia ("6 de 9") coherentes con la lista |
+| Accionabilidad de las implicaciones | Las implicaciones repiten la observación ("los usuarios encuentran X frustrante") | Las implicaciones apuntan una dirección, pero no nombran decisión, responsable ni cambio | Cada implicación habilita una decisión de producto concreta sobre la que alguien podría actuar este trimestre |
+| Honestidad con las contradicciones | Todos los hallazgos apoyan convenientemente la hipótesis del patrocinador; los datos incómodos no aparecen | La evidencia contradictoria está, pero enterrada o suavizada; las citas ambivalentes recortadas a la mitad conveniente | Los hallazgos que contradicen la hipótesis se muestran de forma destacada, y las citas ambiguas se mantienen enteras con la tensión señalada |
+| Separación de señal y cobertura de preguntas | Anécdotas de una sola fuente mezcladas con los temas principales; preguntas de investigación ignoradas | Las señales de baja confianza están separadas, pero sin camino de seguimiento, o una pregunta de investigación queda sin tratar | Cada señal de 1 o 2 participantes va en su propia sección con la prueba barata que la confirmaría, y cada pregunta de investigación recibe una respuesta explícita, incluida "no concluyente" |
+
 ## Controles de Calidad
 
 - [ ] Cada tema está respaldado por citas de al menos 3 participantes
@@ -59,3 +77,11 @@ Solicita al usuario estos datos si no están disponibles:
 - [ ] No incluyas temas que solo apoyen la hipótesis del proyecto — hallazgos contradictorios deben ser expuestos, no omitidos
 - [ ] No presentes hallazgos sin citas — cada tema requiere evidencia textual de al menos 3 participantes
 - [ ] No dejes preguntas de investigación sin responder — cada pregunta del brief del estudio debe ser explícitamente respondida, incluso si la respuesta es inconclusiva
+
+## Frases de activación de ejemplo
+
+- "Analiza las notas de las entrevistas."
+- "Sintetiza la investigación cualitativa."
+- "Convierte los datos en bruto de las entrevistas en conclusiones de producto accionables."
+
+Ejecuta esta habilidad en tu navegador: https://mohitagw15856.github.io/pm-claude-skills/skill/user-interview-synthesis.html

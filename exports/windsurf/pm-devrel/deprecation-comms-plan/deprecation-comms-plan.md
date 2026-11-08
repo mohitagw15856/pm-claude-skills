@@ -76,3 +76,6 @@ The at-risk account list, who owns each, the CSM talking points, the "customer c
 - "Migrate customers off a legacy path."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/deprecation-comms-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: deprecation-comms-plan | source: skills/deprecation-comms-plan/SKILL.md | sha256: 1e0df064b6e4f2bf2b87bf246fcc1c1322881b5e10d778dbdc6eac52fd194e6f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -76,3 +76,6 @@ Portfolio capital-allocation practice — expected-value × strategic-fit scorin
 - "Make trade-offs across initiatives under a cap."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/capital-allocation.html
+
+<!-- pm-claude-skills v83.2.0 | skill: capital-allocation | source: skills/capital-allocation/SKILL.md | sha256: 82fb041d3a75c5162c1e939187704f0dcb431538b99e88f2aafd9b1216a73bc2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

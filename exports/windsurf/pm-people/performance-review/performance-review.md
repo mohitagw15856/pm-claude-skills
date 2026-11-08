@@ -130,3 +130,6 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Turn these bullet points into a full performance review: [paste bullets]"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/performance-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: performance-review | source: skills/performance-review/SKILL.md | sha256: f5583a68df43e7698cb5c55c9a1c053a831f8c53e61fa242532094113fabb6ef | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

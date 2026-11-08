@@ -73,3 +73,6 @@ Ask for these if not provided:
 - "Why does nobody read our changelogs?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/changelog-for-humans.html
+
+<!-- pm-claude-skills v83.2.0 | skill: changelog-for-humans | source: skills/changelog-for-humans/SKILL.md | sha256: f652acda86557bc25868d04ae25f9ca0f91e0e8588fde41c1de2d53323a0a3f0 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -111,3 +111,6 @@ request route; [[media-pitch]] and [[press-release]] when it needs public visibi
 - "My letter to the council got ignored."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/elected-rep-letter.html
+
+<!-- pm-claude-skills v83.2.0 | skill: elected-rep-letter | source: skills/elected-rep-letter/SKILL.md | sha256: 3b2bdeda3ec2bed0a1b521abe814e046907fd18d39ce07dc9294fea5ebf9803b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

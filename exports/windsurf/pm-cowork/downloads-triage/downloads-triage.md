@@ -67,3 +67,6 @@ Ask for these if not provided:
 - "Stop my downloads from piling up."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/downloads-triage.html
+
+<!-- pm-claude-skills v83.2.0 | skill: downloads-triage | source: skills/downloads-triage/SKILL.md | sha256: cb7f3f9bf0b2cf745e6ca9ed3226042fb46623ab225b465e9d7006a262adfc66 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

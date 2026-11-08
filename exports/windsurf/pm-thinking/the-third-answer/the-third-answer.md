@@ -63,3 +63,6 @@ Ask for these if not provided:
 - "Skip the textbook answer — what's the interesting take?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-third-answer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: the-third-answer | source: skills/the-third-answer/SKILL.md | sha256: 12b66f42ffa3d161aaf5367ef33bfbf7b708749e8ceebf6e27bf800d3ab9ecff | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

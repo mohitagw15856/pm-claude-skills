@@ -78,3 +78,6 @@ Ask for these if not provided:
 - "帮我写这次评审会的纪要，结论是有条件通过。"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-prd-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-prd-review | source: skills/cn-prd-review/SKILL.md | sha256: 6ad3f85549f3c414b7c2a043c1f5733160d0c955d9f8b633a405ffa7d112ee8d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -71,3 +71,6 @@ The single dilution number that matters, and the one term quietly driving it.
 - "Figure out who owns what after a raise."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cap-table-explainer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cap-table-explainer | source: skills/cap-table-explainer/SKILL.md | sha256: 390bdc814b9ddc563d6be62a6160ccdf54acf89e93fd6b05262e2965c28ef054 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

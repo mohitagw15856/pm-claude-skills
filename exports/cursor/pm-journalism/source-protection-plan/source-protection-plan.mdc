@@ -62,3 +62,6 @@ The risks that remain after all mitigations, stated plainly, and the recommendat
 - "We have leaked documents: how do we protect who sent them?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/source-protection-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: source-protection-plan | source: skills/source-protection-plan/SKILL.md | sha256: ce780a20551ccd295e4b4ca56ecdf6f9ceaf9cfafbd5bc0733768272a878e349 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -154,3 +154,9 @@ web/schemas/
 
 # Per-skill git history for the CLI changelog and doctor (scripts/build-skill-changelog.mjs, built at deploy and prepack)
 web/skill-changelog.json
+
+# Atom feed of skill changes (scripts/build-skill-changes.mjs, built at deploy)
+web/changes.xml
+
+# Year-in-review pages (scripts/build-year-in-review.mjs, built at deploy from git history and the data files)
+web/report/

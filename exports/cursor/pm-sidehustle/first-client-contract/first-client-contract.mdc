@@ -77,3 +77,6 @@ Ask for these if not provided:
 - "Review this simple services agreement."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/first-client-contract.html
+
+<!-- pm-claude-skills v83.2.0 | skill: first-client-contract | source: skills/first-client-contract/SKILL.md | sha256: 0cf8664811f250fb39dd14006d1af095861ebf9669c0c59bd13263bf4fa26328 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

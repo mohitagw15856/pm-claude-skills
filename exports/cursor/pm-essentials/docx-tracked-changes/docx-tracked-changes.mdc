@@ -130,3 +130,6 @@ Instructions for applying the redline:
 Tracked changes require the model to preserve source text exactly while suggesting alternatives — earlier models would paraphrase the original or lose track of which text was original vs suggested. Opus 4.7 improvements specifically target this workflow.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/docx-tracked-changes.html
+
+<!-- pm-claude-skills v83.2.0 | skill: docx-tracked-changes | source: skills/docx-tracked-changes/SKILL.md | sha256: 3894920232963871eaccd26057a4ee9b548f63aec5c8ed26a950c01f32897445 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

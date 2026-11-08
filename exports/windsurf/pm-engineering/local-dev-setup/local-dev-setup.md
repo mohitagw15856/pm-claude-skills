@@ -499,3 +499,6 @@ Before opening your first pull request, verify:
 - "Write a getting-started guide for a codebase."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/local-dev-setup.html
+
+<!-- pm-claude-skills v83.2.0 | skill: local-dev-setup | source: skills/local-dev-setup/SKILL.md | sha256: 706e95e1a4ab42b639ca324f84d98d7befe294e2912d3557a58358a8afd043ec | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

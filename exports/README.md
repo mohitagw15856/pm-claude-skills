@@ -23,6 +23,8 @@ Currently exporting **1320 skills** to:
 - **Kilo Code — .kilocode/rules/ rule (.md)** → `exports/kilocode/`
 - **Obsidian — vault skill note (AI-plugin prompt)** → `exports/obsidian/`
 - **OpenClaw — native SKILL.md with metadata block** → `exports/openclaw/`
+- **Gemini CLI — agent skill (.gemini/skills/<name>/SKILL.md)** → `exports/gemini-cli/`
+- **OpenAI Agents SDK — agent definition (agent.json)** → `exports/openai-agents/`
 
 Retired skills are exported too, so an existing install never breaks — they are
 just not counted above. See `docs/DEPRECATION.md`.

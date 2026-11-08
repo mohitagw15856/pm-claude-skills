@@ -71,3 +71,6 @@ One-pager / one-sheet practice (problem · solution · why-now · ask) used for 
 - "Give me a tl;dr brief of this product."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/one-pager.html
+
+<!-- pm-claude-skills v83.2.0 | skill: one-pager | source: skills/one-pager/SKILL.md | sha256: 98da36bc78d31a88190e3b35ffb6b71a2285004579143df225497d5e7ee03ee5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

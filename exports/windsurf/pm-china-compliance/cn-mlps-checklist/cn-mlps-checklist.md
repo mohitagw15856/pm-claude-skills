@@ -60,3 +60,6 @@ Gaps ordered by assessment risk and effort, with owners and dates that finish be
 - "Prepare our system for China's MLPS 2.0 assessment."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-mlps-checklist.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-mlps-checklist | source: skills/cn-mlps-checklist/SKILL.md | sha256: 3d159b4ae8a153c84668ce353ceb3c42a546f9220db5ab64119642fc68794e1d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

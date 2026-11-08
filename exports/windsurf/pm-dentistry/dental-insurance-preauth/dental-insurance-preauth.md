@@ -83,3 +83,6 @@ Ask for these if not provided:
 - "Why do our crown claims keep getting denied?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dental-insurance-preauth.html
+
+<!-- pm-claude-skills v83.2.0 | skill: dental-insurance-preauth | source: skills/dental-insurance-preauth/SKILL.md | sha256: 0dc944531845404f3b1a742b6f62626bda2a4278b9e4ced6c2c6b120e7a939a8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

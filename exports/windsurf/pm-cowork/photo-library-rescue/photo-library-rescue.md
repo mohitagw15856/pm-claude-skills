@@ -72,3 +72,6 @@ Ask for these if not provided:
 - "Set up a photo system that lasts."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/photo-library-rescue.html
+
+<!-- pm-claude-skills v83.2.0 | skill: photo-library-rescue | source: skills/photo-library-rescue/SKILL.md | sha256: 6bc9b0261ceaddf8a67851212af4250aa0410e777c6ea775c2be2effd149740e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

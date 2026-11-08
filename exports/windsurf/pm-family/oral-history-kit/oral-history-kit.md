@@ -72,3 +72,6 @@ Ask for these if not provided:
 - "Make a family history book."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/oral-history-kit.html
+
+<!-- pm-claude-skills v83.2.0 | skill: oral-history-kit | source: skills/oral-history-kit/SKILL.md | sha256: b47e812fce3de8dac894e19ad30e21009f33bb17d865dcb1e7cd062c3139a56b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

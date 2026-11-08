@@ -62,6 +62,24 @@ Escanea cada categoría y clasifica la severidad (🔴 Alta / 🟠 Media / 🟡 
 
 ---
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/injection-patterns.md`** — La biblioteca de patrones de inyección: qué aspecto tienen de verdad las habilidades maliciosas. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/audit-report.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| **Profundidad de la cobertura** | Solo se ojeó el cuerpo en markdown; los scripts incluidos no se tocaron | Cuerpo leído con atención, scripts vistos por encima, pero sin revisar codificaciones ni caracteres invisibles | Cada script incluido leído línea a línea, más inspección de puntos de código y codificación en busca de contenido oculto, con el alcance indicado en el informe |
+| **Precisión de la evidencia** | Los hallazgos dicen "parece arriesgado" sin ubicación | Los hallazgos citan líneas, pero mezclan observación con especulación | Cada hallazgo fija una referencia exacta de línea/archivo con una descripción fiel e inerte del patrón y de por qué es peligroso |
+| **Disciplina del veredicto** | Cautela vaga sin decisión de instalación | Se da un veredicto, pero no se deriva de las severidades encontradas | El veredicto aplica exactamente la regla de severidad (cualquier alta ⇒ no instalar), enunciado al principio y con razones |
+| **Calibración** | Cada mención a claves o actividad de red se marca como maliciosa | Un patrón benigno marcado de más o un riesgo real pasado por alto | Los ejemplos benignos documentados se descartan por su nombre, se sopesan intención y contexto, y no se escapa nada real |
+
 ## Verificaciones de Calidad
 
 - [ ] Se leyeron todos los scripts incluidos, no solo el cuerpo markdown
@@ -77,3 +95,12 @@ Escanea cada categoría y clasifica la severidad (🔴 Alta / 🟠 Media / 🟡 
 - [ ] No des un veredicto vago — siempre decide instalar / precaución / no-instalar con razones
 - [ ] No ignores caracteres de ancho cero o invisibles; son una forma clásica de ocultar instrucciones
 - [ ] No asumas que una alta cantidad de estrellas o un autor popular significan que un skill es seguro — audita el contenido mismo
+
+## Frases de activación de ejemplo
+
+- "Revisa la seguridad de una habilidad."
+- "Comprueba si un prompt tiene inyección."
+- "Examina una habilidad de la comunidad."
+- "Evalúa si un archivo de instrucciones es seguro de ejecutar."
+
+Ejecuta esta habilidad en tu navegador: https://mohitagw15856.github.io/pm-claude-skills/skill/skill-security-auditor.html

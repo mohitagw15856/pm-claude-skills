@@ -74,3 +74,6 @@ Ask for these if not provided:
 - "Are these themes real?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/interview-synthesis.html
+
+<!-- pm-claude-skills v83.2.0 | skill: interview-synthesis | source: skills/interview-synthesis/SKILL.md | sha256: d9b67600b705682ccf2075de404e43fb4154545c0ac8d5dd86309af440108f03 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

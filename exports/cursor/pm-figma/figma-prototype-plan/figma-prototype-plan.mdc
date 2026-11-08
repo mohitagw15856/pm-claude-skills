@@ -93,3 +93,6 @@ Success when: [Specific trigger]
 - "What should I prototype vs leave as static screens?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-prototype-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: figma-prototype-plan | source: skills/figma-prototype-plan/SKILL.md | sha256: 022b1ad514b4be84f7e861ca4c6e1efd574ec4761c92261aadb2f5a3972c5ec8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

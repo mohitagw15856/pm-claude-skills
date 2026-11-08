@@ -85,3 +85,6 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Make the roadmap tell a story."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/strategic-narrative-generator.html
+
+<!-- pm-claude-skills v83.2.0 | skill: strategic-narrative-generator | source: skills/strategic-narrative-generator/SKILL.md | sha256: 43c5029369830f74d97916558ff8221f1802cfa96702d0bc75fa02a01a4d8ae6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

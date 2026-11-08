@@ -68,3 +68,6 @@ Ask for these if not provided:
 - "Make this readable from the back of the room."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/slide-density-rules.html
+
+<!-- pm-claude-skills v83.2.0 | skill: slide-density-rules | source: skills/slide-density-rules/SKILL.md | sha256: a83b3194e88b9f50e358d16251cd94a789d2dc6a92a18256e09eb8c7e60e399f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

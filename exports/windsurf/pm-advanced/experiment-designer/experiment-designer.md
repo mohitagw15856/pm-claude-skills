@@ -85,3 +85,6 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Assess whether an experiment was successful."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/experiment-designer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: experiment-designer | source: skills/experiment-designer/SKILL.md | sha256: 63eff237a006279fae4e6a4859f538c42d648ee526baf81ef8615857feaf0d41 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

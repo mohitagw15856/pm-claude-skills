@@ -62,3 +62,6 @@ Attack through every one; report survival honestly (a plan that "fails" all twel
 - "Attack this strategy before we commit."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/premortem-assassin.html
+
+<!-- pm-claude-skills v83.2.0 | skill: premortem-assassin | source: skills/premortem-assassin/SKILL.md | sha256: d76c9e3f91531ba59a45a495aeb4331931c9334be6cf0f09bf1ad1c236d82d39 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

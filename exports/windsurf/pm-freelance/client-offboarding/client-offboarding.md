@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "How do I turn a finished project into more work?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/client-offboarding.html
+
+<!-- pm-claude-skills v83.2.0 | skill: client-offboarding | source: skills/client-offboarding/SKILL.md | sha256: e0c416b5ea5f3fdc1acb7468b14ba4bfcf87002de9e689f9ccc1b69e90664f0c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

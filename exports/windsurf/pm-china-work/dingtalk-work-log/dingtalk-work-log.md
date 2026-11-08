@@ -80,3 +80,6 @@ For 周报 and 月报, use the matching field names listed above, with 工作总
 - "写月报，下个月的计划要具体一点。"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dingtalk-work-log.html
+
+<!-- pm-claude-skills v83.2.0 | skill: dingtalk-work-log | source: skills/dingtalk-work-log/SKILL.md | sha256: fb480a7b43ba02cbc644d83fd38ba12dd80f7d268d9b5175547d5fed6ddbdac5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

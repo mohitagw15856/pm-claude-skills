@@ -93,3 +93,6 @@ Ask for these if not provided:
 - "We know we have a gap in our driver files — what do we do?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/fleet-compliance-audit-prep.html
+
+<!-- pm-claude-skills v83.2.0 | skill: fleet-compliance-audit-prep | source: skills/fleet-compliance-audit-prep/SKILL.md | sha256: bcab0ce66d9b72120325034ab304da0877df7529eba89733ef330f8b8763639a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

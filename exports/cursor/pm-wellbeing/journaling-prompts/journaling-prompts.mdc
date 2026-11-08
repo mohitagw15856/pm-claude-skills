@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "Help me reflect on a stressful week."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/journaling-prompts.html
+
+<!-- pm-claude-skills v83.2.0 | skill: journaling-prompts | source: skills/journaling-prompts/SKILL.md | sha256: 9abfeff18d9151a94b6bb20c8efa4b6c2fa3917160e8b3984010217d7a12613e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

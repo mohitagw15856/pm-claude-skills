@@ -85,3 +85,6 @@ Ask for these if not provided:
 - "Prepare a medication use review for this patient"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/medication-therapy-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: medication-therapy-review | source: skills/medication-therapy-review/SKILL.md | sha256: b11767fdcb9bd379b500a7a5c3dc90713d3032fc5a21bb2a0ef8982e4acff6f1 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

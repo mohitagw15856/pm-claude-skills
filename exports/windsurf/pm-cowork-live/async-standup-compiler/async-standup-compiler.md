@@ -75,3 +75,6 @@ An **Async Standup Digest**:
 - "Run async standup in Cowork and give me a post-ready digest."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/async-standup-compiler.html
+
+<!-- pm-claude-skills v83.2.0 | skill: async-standup-compiler | source: skills/async-standup-compiler/SKILL.md | sha256: 971ef2ce02c9c92dd6e61b0496aa7ea1ef92be7c5253a0b052cac61335739a54 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -59,3 +59,6 @@ Keep each hook in the platform's natural length (a YouTube title ≤60 chars; an
 - "Make this thread starter more clickable."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hook-writer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: hook-writer | source: skills/hook-writer/SKILL.md | sha256: 9f2ed9beeeb1bf4714fa2c7b14e06fc32c141e4110b7102f75ffd25b3a311653 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

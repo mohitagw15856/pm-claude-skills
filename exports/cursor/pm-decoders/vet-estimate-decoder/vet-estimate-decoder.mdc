@@ -80,3 +80,6 @@ Client-side veterinary cost-conversation practice — line triage, staged-diagno
 - "I can't afford this vet bill what are my options."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vet-estimate-decoder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: vet-estimate-decoder | source: skills/vet-estimate-decoder/SKILL.md | sha256: 92426eaaa0895622c6e9afcf52a9d6d175855bd05991741587143dd8f17c6c86 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

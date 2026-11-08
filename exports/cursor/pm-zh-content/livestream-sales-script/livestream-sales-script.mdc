@@ -87,3 +87,6 @@ Ask for these if not provided:
 - "Write a livestream sales script for our skincare launch."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/livestream-sales-script.html
+
+<!-- pm-claude-skills v83.2.0 | skill: livestream-sales-script | source: skills/livestream-sales-script/SKILL.md | sha256: 0bfd210e39223ba2204f16329ff4aa20f490b1cbe8ee56c6ce90b8238ffa01e2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

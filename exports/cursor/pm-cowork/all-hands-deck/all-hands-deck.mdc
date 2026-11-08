@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "Announce this change at all-hands."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/all-hands-deck.html
+
+<!-- pm-claude-skills v83.2.0 | skill: all-hands-deck | source: skills/all-hands-deck/SKILL.md | sha256: 9a60e78eab24cc95e48fc7bdc4f75f383f40a8d9a69f92d6c15b5e0dc25a4367 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

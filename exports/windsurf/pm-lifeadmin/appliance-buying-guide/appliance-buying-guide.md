@@ -71,3 +71,6 @@ Ask for these if not provided:
 - "Should I get the extended warranty on a new dryer?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/appliance-buying-guide.html
+
+<!-- pm-claude-skills v83.2.0 | skill: appliance-buying-guide | source: skills/appliance-buying-guide/SKILL.md | sha256: 4a31865ea921262d81e2b5e3e3c81eaca33ec7aa8fe353182b55a623ea20fe37 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

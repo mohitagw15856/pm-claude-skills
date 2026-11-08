@@ -82,3 +82,6 @@ Consumer-contract review practice — impact-ranked clause triage, license-scope
 - "Should I click accept?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tos-decoder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: tos-decoder | source: skills/tos-decoder/SKILL.md | sha256: 8c0cdacee591b4566efb99bf2c99b5e23a2ac0c1a2c8897791f34bcdf0be0f09 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

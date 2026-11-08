@@ -106,3 +106,6 @@ Transit time: [days] · Reload position at destination: [strong / weak — typic
 - "How do I price detention so we actually get paid?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/freight-rate-quote.html
+
+<!-- pm-claude-skills v83.2.0 | skill: freight-rate-quote | source: skills/freight-rate-quote/SKILL.md | sha256: 805cea3603c723218ed782211d89742f1ec17c3732e18b0164f6895c3290d76d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -72,3 +72,6 @@ Ask for these if not provided:
 - "Design the questionnaire for this decision."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/survey-design-basics.html
+
+<!-- pm-claude-skills v83.2.0 | skill: survey-design-basics | source: skills/survey-design-basics/SKILL.md | sha256: 5a91e234eabeea5ac2e03245c829c812fc2e14c2df7d8fef4b562af8fe3bfb3a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

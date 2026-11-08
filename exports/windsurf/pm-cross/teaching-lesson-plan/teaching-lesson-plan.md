@@ -126,3 +126,6 @@ By the end of this session, participants will be able to:
 - "Plan a workshop on [topic] for [group]"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/teaching-lesson-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: teaching-lesson-plan | source: skills/teaching-lesson-plan/SKILL.md | sha256: 06b505b4d9113c067759ffee43edd9cd8c1f733262ec71224acffe632a9f3934 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -82,3 +82,6 @@ End with: *"This narrative is analytical support, not a binding decision. Author
 - "Justify terms and exclusions on a submission."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/underwriting-narrative.html
+
+<!-- pm-claude-skills v83.2.0 | skill: underwriting-narrative | source: skills/underwriting-narrative/SKILL.md | sha256: 6aa50a274b8238157c69e6e2910c58154d5e2663e66ded769531125d8b2b26d4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

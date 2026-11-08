@@ -81,3 +81,6 @@ For each paper: internal validity, external validity, bias types, effect size si
 - "Write the background section for my research proposal on [topic]"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/literature-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: literature-review | source: skills/literature-review/SKILL.md | sha256: b285ef1cd4eedaeca0adbea30e4db10d7be0eaba0e8f79a49f93cf4b7c650169 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

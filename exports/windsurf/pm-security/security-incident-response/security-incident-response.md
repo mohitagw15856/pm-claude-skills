@@ -68,3 +68,6 @@ Incident-response practice (NIST SP 800-61 / SANS PICERL: prepare, identify, con
 - "Produce a post-incident report."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/security-incident-response.html
+
+<!-- pm-claude-skills v83.2.0 | skill: security-incident-response | source: skills/security-incident-response/SKILL.md | sha256: a75955270b37f3615686a6a310823fdc73abef42a67a146ef614c72c878152a2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -111,3 +111,6 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Review a skill for quality."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/writing-great-skills.html
+
+<!-- pm-claude-skills v83.2.0 | skill: writing-great-skills | source: skills/writing-great-skills/SKILL.md | sha256: 4a801a139bcd39bf1220be47554bef45c7754ae41083da8d7765d59bbeb86cdd | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

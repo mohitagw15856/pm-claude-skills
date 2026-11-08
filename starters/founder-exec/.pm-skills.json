@@ -1,0 +1,20 @@
+{
+  "$schema": "https://mohitagw15856.github.io/pm-claude-skills/schemas/pm-skills.schema.json",
+  "version": "83.x",
+  "agents": [
+    "claude",
+    "cursor"
+  ],
+  "bundles": [
+    "pm-essentials"
+  ],
+  "skills": [
+    "strategy-memo",
+    "decision-memo",
+    "board-pre-read",
+    "capital-allocation",
+    "investor-update",
+    "go-to-market"
+  ],
+  "lite": false
+}

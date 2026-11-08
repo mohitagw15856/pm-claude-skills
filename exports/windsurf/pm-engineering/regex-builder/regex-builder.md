@@ -63,3 +63,6 @@ Edge cases, catastrophic-backtracking risks, anchoring, Unicode, and a simpler a
 - "Understand what a regex does."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/regex-builder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: regex-builder | source: skills/regex-builder/SKILL.md | sha256: adbb24c1a9a3bb572be226f320a901eaf93d4363d3fc30584e363eb5c92bfcce | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

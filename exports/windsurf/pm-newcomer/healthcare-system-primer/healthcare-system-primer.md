@@ -121,3 +121,6 @@ enrolled; [[perimenopause-navigator]]/[[diagnosis-limbo-kit]] for specific healt
 - "I just moved and need to see a doctor."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/healthcare-system-primer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: healthcare-system-primer | source: skills/healthcare-system-primer/SKILL.md | sha256: 90649a7334c6fadab2bc5b52c43a17b245fd1bd973c513353166c21b264734b2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

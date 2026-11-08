@@ -71,3 +71,6 @@ Ask for these if not provided:
 - "I've got 10 days and a lot to cover — plan my revision."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/exam-study-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: exam-study-plan | source: skills/exam-study-plan/SKILL.md | sha256: c869286d4163e0443ade951904c19a1a7f23b10913c970c5e1e5ebb4d893ee1a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

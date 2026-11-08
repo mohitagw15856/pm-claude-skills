@@ -261,3 +261,6 @@ Accepted risks are threats the team has decided not to mitigate right now. Every
 - [ ] Do not omit the asset register — without knowing what is being protected, the STRIDE analysis has no anchor
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/security-threat-model.html
+
+<!-- pm-claude-skills v83.2.0 | skill: security-threat-model | source: skills/security-threat-model/SKILL.md | sha256: 71a0f743946d41af4f7c59f99e2ed4702bc500222d31c34bb5a256b2922afc4c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

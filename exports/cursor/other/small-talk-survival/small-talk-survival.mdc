@@ -66,3 +66,6 @@ Ask for these if not provided:
 - "I never know how to end a conversation politely."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/small-talk-survival.html
+
+<!-- pm-claude-skills v83.2.0 | skill: small-talk-survival | source: skills/small-talk-survival/SKILL.md | sha256: 2e1f2147470ff659a3800e9a0b8c1a0f4ee33ca8163065f6b168d65a13da3cc7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

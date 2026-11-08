@@ -66,3 +66,6 @@ Ask for these if not provided:
 - "How do I know my agent won't do something dumb and irreversible?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-agent-reliability.html
+
+<!-- pm-claude-skills v83.2.0 | skill: ai-agent-reliability | source: skills/ai-agent-reliability/SKILL.md | sha256: 329e0bed40eaee0d449fec2a01ff10479e6a0b028d4db06e5e9badcec35d13dd | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

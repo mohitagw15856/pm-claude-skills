@@ -62,3 +62,6 @@ Ask for these if not provided:
 - "Five reasons this plan might die, and how to prevent them."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pre-mortem-panel.html
+
+<!-- pm-claude-skills v83.2.0 | skill: pre-mortem-panel | source: skills/pre-mortem-panel/SKILL.md | sha256: 062a2dadc77b18567e276ab028cfb1f395956103a0e9bd596e764d117dfc108a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

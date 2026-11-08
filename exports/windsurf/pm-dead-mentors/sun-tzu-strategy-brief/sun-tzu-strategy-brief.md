@@ -107,3 +107,6 @@ what can be won: which existing customers, allies, or territory must be defended
 - "Pick which fight to have."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sun-tzu-strategy-brief.html
+
+<!-- pm-claude-skills v83.2.0 | skill: sun-tzu-strategy-brief | source: skills/sun-tzu-strategy-brief/SKILL.md | sha256: a6ff8b26a3e3b87be10e1f4908b0c6014a4e840084b9a3e897a58dad8478bbee | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

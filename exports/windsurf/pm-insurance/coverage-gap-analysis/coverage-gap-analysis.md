@@ -75,3 +75,6 @@ End with: *"This analysis is analytical support, not a coverage determination or
 - "Audit a policy portfolio."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/coverage-gap-analysis.html
+
+<!-- pm-claude-skills v83.2.0 | skill: coverage-gap-analysis | source: skills/coverage-gap-analysis/SKILL.md | sha256: fcd820ee47a71bd5ce449dba4a369692c2d1a808828bd75e69ae02fef7d8f369 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

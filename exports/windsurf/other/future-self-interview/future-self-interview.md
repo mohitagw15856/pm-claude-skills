@@ -114,3 +114,6 @@ future self; [[franklin-decision-ledger]] for the analytical complement.
 - "What would future me say?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/future-self-interview.html
+
+<!-- pm-claude-skills v83.2.0 | skill: future-self-interview | source: skills/future-self-interview/SKILL.md | sha256: 8b827eb7a3fced4263a8b58449ffbfc66ba7c11ec1a1e475fdeba737f7c6926d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

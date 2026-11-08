@@ -67,3 +67,6 @@ Source: USGS real-time feeds · rerun: `[exact curl]`
 - "Monitor seismic activity near me."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/earthquake-watch.html
+
+<!-- pm-claude-skills v83.2.0 | skill: earthquake-watch | source: skills/earthquake-watch/SKILL.md | sha256: 96338ce076c9fb67bb949b8ca00b2fd12f7a9c79539232d8fef0e8220b13bcb6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

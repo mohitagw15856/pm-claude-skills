@@ -75,3 +75,6 @@ Rules:
 - "Check my application against the essential criteria."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/civil-service-application.html
+
+<!-- pm-claude-skills v83.2.0 | skill: civil-service-application | source: skills/civil-service-application/SKILL.md | sha256: 9adbb37743e19fa12dd0f313cf2e392f8ca9bd03128b0f12c0e30dd3614290e6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

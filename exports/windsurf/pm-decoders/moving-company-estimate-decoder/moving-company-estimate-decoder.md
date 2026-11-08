@@ -80,3 +80,6 @@ Consumer-side moving-contract review — estimate-type triage, scam-pattern matc
 - "How do I avoid moving scams?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/moving-company-estimate-decoder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: moving-company-estimate-decoder | source: skills/moving-company-estimate-decoder/SKILL.md | sha256: 6664e895d47f0cf9795147e9a240d23c878bc7e5d8de65c03ddab66ebe390b92 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

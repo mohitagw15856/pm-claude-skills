@@ -69,3 +69,6 @@ The likely panel questions with answer points: why this topic, is the scope feas
 - "Help me write a Chinese university thesis proposal."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-thesis-proposal.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-thesis-proposal | source: skills/cn-thesis-proposal/SKILL.md | sha256: e854a2243cbae96ac6770d3fbdf2a2886906f4e42021811b670602ad12d6610e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -73,3 +73,6 @@ Mind-mapping practice (radial hierarchy, balanced branches, MECE-ish themes), ex
 - "Summarize something as a mind map."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/mind-map.html
+
+<!-- pm-claude-skills v83.2.0 | skill: mind-map | source: skills/mind-map/SKILL.md | sha256: a4f6253ed9e5006dadfc24ca722ae9b93276f2757d73cb1f8a6dfaf08f2f0e6c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

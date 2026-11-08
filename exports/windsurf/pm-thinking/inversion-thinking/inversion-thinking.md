@@ -64,3 +64,6 @@ Ask for these if not provided:
 - "Invert this problem for me."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/inversion-thinking.html
+
+<!-- pm-claude-skills v83.2.0 | skill: inversion-thinking | source: skills/inversion-thinking/SKILL.md | sha256: 16ca591af65565df8627133dca7e1427d8807bf4e605990d2a480a454644fb3a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

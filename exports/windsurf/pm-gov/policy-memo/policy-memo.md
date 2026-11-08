@@ -69,3 +69,6 @@ Government & executive decision-memo practice (BLUF, options analysis, evidence-
 - "Brief a decision-maker on a policy choice."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/policy-memo.html
+
+<!-- pm-claude-skills v83.2.0 | skill: policy-memo | source: skills/policy-memo/SKILL.md | sha256: b60d1a246a7541556486425905c8cb048ed63302a0e4ad6d94e5f493b8954cec | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

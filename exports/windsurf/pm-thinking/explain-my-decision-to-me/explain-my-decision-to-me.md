@@ -65,3 +65,6 @@ Ask for these if not provided:
 - "Just reflect my reasoning back so I can hear it."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/explain-my-decision-to-me.html
+
+<!-- pm-claude-skills v83.2.0 | skill: explain-my-decision-to-me | source: skills/explain-my-decision-to-me/SKILL.md | sha256: 0af79a0df76b1ab06d142ff0474841ac79612498480e845493259f8ebfa681f1 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

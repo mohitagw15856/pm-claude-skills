@@ -83,3 +83,6 @@ Ask for these if not provided:
 - "Can they make my parent leave?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/care-home-contract-decoder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: care-home-contract-decoder | source: skills/care-home-contract-decoder/SKILL.md | sha256: 615cc7450d4b0ec93e18371057391345f042da4c22458147c9b50febe1340371 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -114,3 +114,6 @@ the other side of local government.
 - "Help me apply for a permit."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/permit-navigator.html
+
+<!-- pm-claude-skills v83.2.0 | skill: permit-navigator | source: skills/permit-navigator/SKILL.md | sha256: 446b40136b07dd9463783b6101f8e604276e0bbe91ce35c050d49061c7e780b7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "Do my Sunday reset with me."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/weekly-unstuck.html
+
+<!-- pm-claude-skills v83.2.0 | skill: weekly-unstuck | source: skills/weekly-unstuck/SKILL.md | sha256: 1a28189adf43cf55c5822384cb1524b662c586c0253d0180513d28dfa8d5b2c6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

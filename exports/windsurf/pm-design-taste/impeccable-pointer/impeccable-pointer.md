@@ -94,3 +94,6 @@ Confirm the install: run `/impeccable critique` on a page and check that it resp
 Part of the pm-design-taste bundle in the library at https://github.com/mohitagw15856/pm-claude-skills.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/impeccable-pointer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: impeccable-pointer | source: skills/impeccable-pointer/SKILL.md | sha256: 89dbf0c83f6b67bcf6aae442c69e04338d9f406ed3a524af9a313fbdbeda9ccb | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

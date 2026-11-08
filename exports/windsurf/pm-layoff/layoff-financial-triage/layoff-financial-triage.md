@@ -74,3 +74,6 @@ Mon: … Tue: … (file unemployment day 1–2, always)
 - "What needs to happen this week?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/layoff-financial-triage.html
+
+<!-- pm-claude-skills v83.2.0 | skill: layoff-financial-triage | source: skills/layoff-financial-triage/SKILL.md | sha256: 92d69b83c6352c06b8635d91b9fee35f12952be5feff662149253367a243a418 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

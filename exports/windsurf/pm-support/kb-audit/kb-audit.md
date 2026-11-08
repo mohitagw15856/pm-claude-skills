@@ -68,3 +68,6 @@ Knowledge-base / support-content practice — ticket-driver-led gap analysis, co
 - "Prioritise what to write/fix."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/kb-audit.html
+
+<!-- pm-claude-skills v83.2.0 | skill: kb-audit | source: skills/kb-audit/SKILL.md | sha256: cc463b6ca8d5bd5afeb0456b9eda9c0ff1c8a5672f6d1256f55528c98019a8a9 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

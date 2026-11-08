@@ -66,3 +66,6 @@ Ask for these if not provided:
 - "Gut-check this message for me."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/should-i-send-this.html
+
+<!-- pm-claude-skills v83.2.0 | skill: should-i-send-this | source: skills/should-i-send-this/SKILL.md | sha256: 3e7dbf39baa2abc8a0b63c82035c0afa248e35d26dfef196f1d91a94fb7ab7aa | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

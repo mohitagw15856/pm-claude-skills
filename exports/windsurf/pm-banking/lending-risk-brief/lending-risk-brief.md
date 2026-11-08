@@ -81,3 +81,6 @@ End with: *"This brief is analytical support, not a credit, provisioning, or cap
 - "Brief the credit risk committee."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/lending-risk-brief.html
+
+<!-- pm-claude-skills v83.2.0 | skill: lending-risk-brief | source: skills/lending-risk-brief/SKILL.md | sha256: fa3c8cdcfb9a9644dd530612579d11575f9bcccda5e3efe8c837920f9f0ec322 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

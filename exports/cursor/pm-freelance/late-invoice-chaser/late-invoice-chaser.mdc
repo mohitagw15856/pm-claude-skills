@@ -83,3 +83,6 @@ Ask for these if not provided:
 - "Write a firm final notice before I take this to small claims."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/late-invoice-chaser.html
+
+<!-- pm-claude-skills v83.2.0 | skill: late-invoice-chaser | source: skills/late-invoice-chaser/SKILL.md | sha256: 9149225aff9ddc3e12fc470c34698faac4fc9aedcd130dbf9c69bfc4aeea727f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

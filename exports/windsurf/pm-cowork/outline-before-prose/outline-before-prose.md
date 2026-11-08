@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "Get sign-off before drafting."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/outline-before-prose.html
+
+<!-- pm-claude-skills v83.2.0 | skill: outline-before-prose | source: skills/outline-before-prose/SKILL.md | sha256: 443ca7a7dc2ec2eda01a6d2f07d647f95a1e1c5e3e27d1aa00d0bf8934d0456d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

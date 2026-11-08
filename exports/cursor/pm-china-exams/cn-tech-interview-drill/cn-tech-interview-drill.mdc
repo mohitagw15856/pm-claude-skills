@@ -69,3 +69,6 @@ Questions one at a time. After each answer: 追问 until the edge is found, then
 - "Run a mock technical interview for a Chinese tech company, frontend role."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-tech-interview-drill.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-tech-interview-drill | source: skills/cn-tech-interview-drill/SKILL.md | sha256: ed4b4a5af19b7b752d9386662adb6b5fb8d38e72da84e7734a78eccd16d8035a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -60,3 +60,6 @@ Ask for these if not provided:
 - "Was my fast no to this bias or wisdom?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/steelman-the-weird-option.html
+
+<!-- pm-claude-skills v83.2.0 | skill: steelman-the-weird-option | source: skills/steelman-the-weird-option/SKILL.md | sha256: 7dd38fdfe2f5e147dc05116b52d3275ac0429fcd94047901247b7bde90cde94b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

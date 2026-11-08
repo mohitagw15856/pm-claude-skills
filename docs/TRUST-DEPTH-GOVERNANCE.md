@@ -40,7 +40,7 @@ Legend: ✅ built · 🟡 built as mechanism/asset, needs a human step · 🧑 h
 ## E. Product depth
 | # | Move | Status | What landed |
 |---|---|---|---|
-| 18 | Offline / air-gapped bundle | ✅ | `scripts/build-offline-bundle.mjs` → `dist/pm-skills-offline-<v>.tar.gz` (27.9 MB; `tar` via arg array, no shell) + `OFFLINE-README.md` (local-model how-to). `dist/` gitignored. |
+| 18 | Offline / air-gapped bundle | ✅ | `scripts/build-offline-bundle.mjs --zstd` → `dist/pm-skills-offline-<v>.tar.zst` (about 33 MB with the playground and the Org server; attached to every GitHub release by `release-assets.yml`; `pm-claude-skills serve --bundle <file>` hosts it offline; docs/OFFLINE-BUNDLE.md). `dist/` gitignored. |
 | 19 | Deprecation & retirement policy | ♻️ | **Already existed and is better than what I'd have added** — `docs/DEPRECATION.md` uses `deprecated:`/`supersededBy:` frontmatter. I drafted a config-registry version, saw the conflict, and removed mine. No change. |
 | 20 | Hands-free voice pack | ✅ | `output-styles/hands-free-voice.md` (+ README row) + the `hands-free-caregiver` journey (`"voice": true`). |
 

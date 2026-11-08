@@ -70,3 +70,6 @@ What the next steps need from this brief: the parts list it implies (for model-p
 - "Brief for a 3D cell explorer app, phone first."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/explorer-interface-brief.html
+
+<!-- pm-claude-skills v83.2.0 | skill: explorer-interface-brief | source: skills/explorer-interface-brief/SKILL.md | sha256: 7d44f6c80a051ee7169ee9fe7429001359854c143d340aabd418010ceaf21235 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

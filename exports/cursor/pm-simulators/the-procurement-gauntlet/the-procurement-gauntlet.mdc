@@ -73,3 +73,6 @@ Ask for these if not provided:
 - "Get ready for vendor assessment."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-procurement-gauntlet.html
+
+<!-- pm-claude-skills v83.2.0 | skill: the-procurement-gauntlet | source: skills/the-procurement-gauntlet/SKILL.md | sha256: 895aeffd00fbe83394053816305d55c9fd6a0715f98ee5c6539426937d3ace8f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

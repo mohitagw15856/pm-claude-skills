@@ -114,3 +114,6 @@ This call is NOT successful if we only pitched and got "sounds interesting, send
 - "What questions should I ask in a discovery call for [use case]?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/discovery-call-prep.html
+
+<!-- pm-claude-skills v83.2.0 | skill: discovery-call-prep | source: skills/discovery-call-prep/SKILL.md | sha256: 349e1602f3d54f91b4d903438b39e3e2b992af834fa53f9b2a765cddd0292b7b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

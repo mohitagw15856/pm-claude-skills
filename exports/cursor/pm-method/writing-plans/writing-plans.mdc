@@ -64,3 +64,6 @@ Complex work fails in a predictable way: start confidently, discover mid-flight,
 - "Write an execution plan with stop conditions."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/writing-plans.html
+
+<!-- pm-claude-skills v83.2.0 | skill: writing-plans | source: skills/writing-plans/SKILL.md | sha256: 944d6e9c8ac9ea98ad517f719364ba6394dfc778168ff539cd9d2a264d2baec5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

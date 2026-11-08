@@ -74,3 +74,6 @@ Ask for these if not provided:
 - "How do I negotiate my trade-in and the price separately?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/car-buying-negotiation.html
+
+<!-- pm-claude-skills v83.2.0 | skill: car-buying-negotiation | source: skills/car-buying-negotiation/SKILL.md | sha256: d14e7eeee4a5bf5075b32839c2215ff867c998d101e5ecdacf4b3aa2e495e5c6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

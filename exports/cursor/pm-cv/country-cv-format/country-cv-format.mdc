@@ -82,3 +82,6 @@ Rules that apply everywhere:
 - "帮我把简历改成国内的格式。"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/country-cv-format.html
+
+<!-- pm-claude-skills v83.2.0 | skill: country-cv-format | source: skills/country-cv-format/SKILL.md | sha256: f8bc2cd14762ebc8077d1fcd4812c8fc2680edb098630fe272f7262076bb76f1 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

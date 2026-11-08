@@ -66,3 +66,6 @@ Ask for these if not provided:
 - "Help me plan my day around my focus, not the clock."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/my-energy-map.html
+
+<!-- pm-claude-skills v83.2.0 | skill: my-energy-map | source: skills/my-energy-map/SKILL.md | sha256: aaa7f8c99247c66d62329881dfa0dea90eb917ca56ce13e0f793a618054c274d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

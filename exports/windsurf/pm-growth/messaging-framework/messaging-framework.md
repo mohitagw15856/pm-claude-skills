@@ -69,3 +69,6 @@ Message-house / value-proposition practice (incl. April Dunford-style positionin
 - "Make marketing, sales and product say the same thing."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/messaging-framework.html
+
+<!-- pm-claude-skills v83.2.0 | skill: messaging-framework | source: skills/messaging-framework/SKILL.md | sha256: 0e7a3f1d4111f176e36fb2010fc6c0e752ad6110a65fb4ca7cb85173c9db6758 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

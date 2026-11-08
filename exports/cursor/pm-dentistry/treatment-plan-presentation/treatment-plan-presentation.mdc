@@ -92,3 +92,6 @@ Ask for these if not provided:
 - "How do I explain why this crown cannot wait?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/treatment-plan-presentation.html
+
+<!-- pm-claude-skills v83.2.0 | skill: treatment-plan-presentation | source: skills/treatment-plan-presentation/SKILL.md | sha256: f12ca8f40dc0bb52e832abbb3f38224008889c09d3c171af6eb4691d3f5b2625 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

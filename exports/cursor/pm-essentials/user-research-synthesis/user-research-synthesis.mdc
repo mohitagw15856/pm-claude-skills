@@ -270,3 +270,6 @@ When synthesizing research, use this structure:
 - "Summarise this user research."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/user-research-synthesis.html
+
+<!-- pm-claude-skills v83.2.0 | skill: user-research-synthesis | source: skills/user-research-synthesis/SKILL.md | sha256: ba7441d2ee30d1176676307f38bba5bb2b73687af5ab94bd2f79cda970c0238a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

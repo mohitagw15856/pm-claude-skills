@@ -67,3 +67,6 @@ Do not discuss one child's problem in the group, do not flood it with thanks, re
 - "Help me write a polite WeChat message to my child's teacher in Chinese."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-home-school-comms.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-home-school-comms | source: skills/cn-home-school-comms/SKILL.md | sha256: 8faa3ab5d2933ab1ed10effb200c63066de461793ff3386bfa12e5cbc08b9cb9 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

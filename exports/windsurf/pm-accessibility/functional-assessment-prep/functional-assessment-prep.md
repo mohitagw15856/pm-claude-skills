@@ -83,3 +83,6 @@ This is not legal or medical advice. A welfare rights adviser, disability advice
 - "What evidence should I bring to my work capability assessment?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/functional-assessment-prep.html
+
+<!-- pm-claude-skills v83.2.0 | skill: functional-assessment-prep | source: skills/functional-assessment-prep/SKILL.md | sha256: 09ea88835de29f0c2bb8c5804c457031f1cf3174ca51d5d9e108f47dd3bb5595 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

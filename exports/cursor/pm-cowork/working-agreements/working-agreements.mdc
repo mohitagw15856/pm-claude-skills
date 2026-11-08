@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "Onboard people into how this team operates."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/working-agreements.html
+
+<!-- pm-claude-skills v83.2.0 | skill: working-agreements | source: skills/working-agreements/SKILL.md | sha256: 872d407ed4e2d06a098436c372fa88dbaa738f6a3c92e0715306b8c132391b0d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

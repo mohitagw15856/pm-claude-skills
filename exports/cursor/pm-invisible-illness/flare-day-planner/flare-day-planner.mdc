@@ -124,3 +124,6 @@ neuro-crash cousin; [[diagnosis-limbo-kit]] if the flaring condition is unnamed;
 - "Has a relapsing condition."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/flare-day-planner.html
+
+<!-- pm-claude-skills v83.2.0 | skill: flare-day-planner | source: skills/flare-day-planner/SKILL.md | sha256: 893d65bbf42f51eda6591077a93f68935f00b502f312cbac10999ea9c0316e28 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

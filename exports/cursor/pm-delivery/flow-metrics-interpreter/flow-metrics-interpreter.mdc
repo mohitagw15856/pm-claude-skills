@@ -72,3 +72,6 @@ Ask for these if not provided:
 - "Our WIP is high and cycle time is climbing — what do we do?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/flow-metrics-interpreter.html
+
+<!-- pm-claude-skills v83.2.0 | skill: flow-metrics-interpreter | source: skills/flow-metrics-interpreter/SKILL.md | sha256: 5b7d389558fd18008371c84bdc229efcdc8712150b197024d79b92ebe40f7f20 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

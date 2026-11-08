@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "Find the gap for my thesis."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/literature-review-builder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: literature-review-builder | source: skills/literature-review-builder/SKILL.md | sha256: 90e9982d141edb2ce4bcf93c05f5c5cb25c1e77c24ea8fcf2d4b24402ebedc63 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

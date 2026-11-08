@@ -91,3 +91,6 @@ Tenant-side lease review practice — clause triage, exit-cost math, deposit-con
 - "Can my landlord really do this?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/lease-decoder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: lease-decoder | source: skills/lease-decoder/SKILL.md | sha256: 1887a5deba11d4eb82e6e5578327dcbe3f5f4e4cb123b7375f20b081c4e88cc5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -80,3 +80,6 @@ Six to eight binary steps for shipping a release in under 30 minutes (tag, notes
 - "Plan the next few releases of my open-source library with themes."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/fortnightly-release-planner.html
+
+<!-- pm-claude-skills v83.2.0 | skill: fortnightly-release-planner | source: skills/fortnightly-release-planner/SKILL.md | sha256: 23e4b9e29bedb5acbdac82d5cf2964fea40ba94e91ba4d884848d6791adc610d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

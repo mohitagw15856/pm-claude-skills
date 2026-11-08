@@ -67,3 +67,6 @@ Ask for these if not provided:
 - "How do I get my deposit back when my landlord won't return it?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tenant-rights-explainer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: tenant-rights-explainer | source: skills/tenant-rights-explainer/SKILL.md | sha256: f3c2def18476899bf97394472abb61888328a8db20adc78149abffddff318045 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

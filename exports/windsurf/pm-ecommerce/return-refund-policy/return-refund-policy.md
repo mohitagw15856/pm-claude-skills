@@ -76,3 +76,6 @@ E-commerce trust & CRO practice — transparent, plain-language returns policies
 - "Set fair rules for returns."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/return-refund-policy.html
+
+<!-- pm-claude-skills v83.2.0 | skill: return-refund-policy | source: skills/return-refund-policy/SKILL.md | sha256: 729e224a97857a511024fe03ec64af9aa9d8a00fa01ef5ab701f5615d4c4172e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -67,3 +67,6 @@ Ask for these if not provided:
 - "Help me break the habit of checking my phone first thing."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/habit-builder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: habit-builder | source: skills/habit-builder/SKILL.md | sha256: 17adcb33298b9616634fad2c24084880d4b92b4c8c5f60435fed1998d7d3e822 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

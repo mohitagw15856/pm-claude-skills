@@ -73,3 +73,6 @@ Day 0: send via official intake, keep proof · Day ~10: polite status call, note
 - "What records should I collect?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/medical-records-request.html
+
+<!-- pm-claude-skills v83.2.0 | skill: medical-records-request | source: skills/medical-records-request/SKILL.md | sha256: 407f4f25f8fc0400c5142277b0e87785820b1152bd5b057cb9a5fd138784afdf | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -67,3 +67,6 @@ Ask for these if not provided:
 - "Introvert-friendly way to build professional connections."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/networking-for-introverts.html
+
+<!-- pm-claude-skills v83.2.0 | skill: networking-for-introverts | source: skills/networking-for-introverts/SKILL.md | sha256: 8b6ede8f0155d9a7262878210da43f98a1144f099e47485d38e6e56c316d870b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

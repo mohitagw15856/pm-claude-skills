@@ -64,3 +64,6 @@ Ask for these if not provided:
 - "Help me just pick and move on."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stop-overthinking-this.html
+
+<!-- pm-claude-skills v83.2.0 | skill: stop-overthinking-this | source: skills/stop-overthinking-this/SKILL.md | sha256: 6b378a22e58a0de1b75347fd7d97cf10c8b826df0d5e8861ab150a8dc62f7957 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

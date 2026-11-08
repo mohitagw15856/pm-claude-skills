@@ -72,3 +72,6 @@ Ask for these if not provided:
 - "How does my family get into my stuff?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/digital-legacy-planner.html
+
+<!-- pm-claude-skills v83.2.0 | skill: digital-legacy-planner | source: skills/digital-legacy-planner/SKILL.md | sha256: c23963a68a09bee488a0a822e06d8721849afef1cec1967a21f2bdd55b6d9e20 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

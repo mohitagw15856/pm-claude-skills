@@ -66,3 +66,6 @@ Ask for these if not provided:
 - "I have no motivation — map me a way back into motion."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/momentum-map.html
+
+<!-- pm-claude-skills v83.2.0 | skill: momentum-map | source: skills/momentum-map/SKILL.md | sha256: 587d4510edc4e9ecda6c42ae1d1f6a4830efafc7f898601b95a383294c142ac6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

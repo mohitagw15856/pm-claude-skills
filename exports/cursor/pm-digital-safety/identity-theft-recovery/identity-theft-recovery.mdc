@@ -74,3 +74,6 @@ Ask for these if not provided:
 - "How do I dispute accounts opened by an identity thief?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/identity-theft-recovery.html
+
+<!-- pm-claude-skills v83.2.0 | skill: identity-theft-recovery | source: skills/identity-theft-recovery/SKILL.md | sha256: 4fa8b6c85908a6fae0872ec30bec0240caaa483c6d606b2cee02eddf7b8c6474 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

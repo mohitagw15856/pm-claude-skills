@@ -73,3 +73,6 @@ Mandatory contributions for both sides and the yearly tax-deductible amount. Sta
 - "Explain my Hong Kong MPF and how to save tax with voluntary contributions."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hk-mpf-explainer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: hk-mpf-explainer | source: skills/hk-mpf-explainer/SKILL.md | sha256: 6a5d15323e6282ee14c81e73b3ee2f8a408aabea545eb44020471e9cd9c302ce | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

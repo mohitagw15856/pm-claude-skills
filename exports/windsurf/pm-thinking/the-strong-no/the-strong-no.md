@@ -62,3 +62,6 @@ Ask for these if not provided:
 - "I'm fired up about this idea — is it actually a mistake?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-strong-no.html
+
+<!-- pm-claude-skills v83.2.0 | skill: the-strong-no | source: skills/the-strong-no/SKILL.md | sha256: 115b4b69036583b37ec6d71f44635ec96fe4bc19ae92f121823d6483589e5213 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -73,3 +73,6 @@ Deterministic, stdlib-only. Two heuristics (≈4 chars/token, ≈0.75 words/toke
 - "Compare these two versions cost."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/token-cost.html
+
+<!-- pm-claude-skills v83.2.0 | skill: token-cost | source: skills/token-cost/SKILL.md | sha256: fe3099c3b87195418d7c6bb217e3e744eebd5fbfbf60546b267fdd7f5664732a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -67,3 +67,6 @@ The Hook Model (Nir Eyal) and cohort-retention analysis practice (flattening cur
 - "Build a re-engagement system."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/retention-loop-design.html
+
+<!-- pm-claude-skills v83.2.0 | skill: retention-loop-design | source: skills/retention-loop-design/SKILL.md | sha256: f0e55ef55af42eb5df6f0b7db7c6980963a8d1d287fa870127553066418a5c4a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

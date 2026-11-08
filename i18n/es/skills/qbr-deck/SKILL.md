@@ -210,6 +210,24 @@ Preguntas de apertura:
 - [ ] Patrocinador ejecutivo informado sobre temas sensibles antes de la llamada
 - [ ] Acciones del QBR anterior revisadas — cualquier elemento pendiente abordado
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/value-narrative.md`** — La narrativa de valor del QBR: sus números, no tus funcionalidades. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/qbr-outline.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| Encuadre en resultados | La diapositiva de valor es actividad del producto (inicios de sesión, sesiones, funcionalidades entregadas) disfrazada de impacto | Hay resultados de negocio, pero sin cuantificar o cuantificados en unidades del proveedor en lugar de las métricas y la moneda del cliente | Cada afirmación de valor es un antes/después en las unidades del cliente (horas, gasto, bajas, £/$), y la atribución dudosa se declara en vez de reclamarse |
+| Honestidad en la rendición de cuentas | Faltan los objetivos del trimestre anterior, o todos aparecen discretamente como logrados; se omiten problemas y escalados | Los objetivos se califican, pero los fallos no tienen causa ni plan modificado; los incidentes de soporte solo se mencionan de pasada | Cada objetivo se califica ✅/⚠️/❌ con causa y plan correctivo para los fallos, y el peor momento del trimestre (caída, escalado, cifra disputada) tiene su propio espacio con lo que cambia a continuación |
+| Tiempo del cliente y facilitación | La presentación es unidireccional, del proveedor; sin secciones de aportación del cliente | La agenda incluye nominalmente turnos del cliente, pero los puntos de conversación no ceden realmente la palabra, o el tiempo total del cliente no llega a 20 minutos | El cliente dispone de 20 minutos o más según la agenda, la diapositiva de objetivos es pura facilitación con preguntas y una tabla de captura en vivo, y varios puntos de conversación invitan explícitamente a objetar |
+| Compromisos y relevancia | Sin compromisos mutuos; el roadmap es un volcado completo del producto | Hay compromisos, pero solo del proveedor o sin fecha; a algunos elementos del roadmap les falta el vínculo con los objetivos de este cliente | Ambas partes asumen compromisos con nombre y fecha, cada fila del roadmap dice por qué importa para esta cuenta, y el siguiente contacto queda agendado antes de terminar la presentación |
+
 ## Controles de Calidad
 
 - [ ] Cada diapositiva tiene un punto de conversación, no solo un título
@@ -225,3 +243,12 @@ Preguntas de apertura:
 - [ ] No ejecutes un QBR como una presentación unilateral — debe incluir tiempo estructurado para que el cliente hable
 - [ ] No cierres un QBR sin compromisos mutuos documentados con responsables nombrados en ambos lados
 - [ ] No omitas la diapositiva "qué no está funcionando" — suprimir problemas erosiona la confianza y pierde señales de riesgo de renovación
+
+## Frases de activación de ejemplo
+
+- "Prepara un QBR."
+- "Construye la presentación de revisión de negocio para este cliente."
+- "Prepara la revisión ejecutiva."
+- "Planifica la reunión trimestral con esta cuenta."
+
+Ejecuta esta habilidad en tu navegador: https://mohitagw15856.github.io/pm-claude-skills/skill/qbr-deck.html

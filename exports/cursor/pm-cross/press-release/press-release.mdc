@@ -106,3 +106,6 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Turn this announcement into a press release: [paste notes]"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/press-release.html
+
+<!-- pm-claude-skills v83.2.0 | skill: press-release | source: skills/press-release/SKILL.md | sha256: f6234ab5dded412db950df30e1433a328aadf213d1fbc94eb6e61615ddc2e858 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -72,3 +72,6 @@ Ask for these if not provided:
 - "Make day one at the new office not a disaster."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/office-move-runbook.html
+
+<!-- pm-claude-skills v83.2.0 | skill: office-move-runbook | source: skills/office-move-runbook/SKILL.md | sha256: e979bf4ca7e8be209457ce9e49e24d1f48881835fceb1f6b6fbc0661acfda2e2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

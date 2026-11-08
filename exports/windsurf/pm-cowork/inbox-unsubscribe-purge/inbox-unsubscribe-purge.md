@@ -66,3 +66,6 @@ Ask for these if not provided:
 - "Set up filters for the noise."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/inbox-unsubscribe-purge.html
+
+<!-- pm-claude-skills v83.2.0 | skill: inbox-unsubscribe-purge | source: skills/inbox-unsubscribe-purge/SKILL.md | sha256: 03a57adbdeb065f0a271bbc6e7f43d5de970355b02ca74ab8ee2a1c37b8aeb97 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->
