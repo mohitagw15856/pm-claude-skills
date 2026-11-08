@@ -6,6 +6,7 @@
 <title>What changed: every edit to every skill | PM Skills</title>
 <meta name="description" content="The change history of the library's professional skills: what changed, when, in which pull request, and the before and after scores for machine rewrites." />
 <link rel="canonical" href="https://mohitagw15856.github.io/pm-claude-skills/changes.html" />
+<link rel="alternate" type="application/atom+xml" title="PM Skills: what changed" href="changes.xml" />
 <link rel="stylesheet" href="styles.css" />
 <style>
   .ch-wrap { max-width: 900px; margin: 0 auto; padding: 16px 22px 70px; }
@@ -26,9 +27,10 @@
 <nav class="toolbar-nav" id="toolbar" aria-label="Tools"></nav>
 <main class="ch-wrap">
   <h1>What changed</h1>
-  <p class="lead">Every edit to a skill, newest first: what changed, when, the pull request with the full diff, and, for machine rewrites, the score before and after. Filter by skill to see one skill's history. For why the self-rewrites happen, see the <a href="evolution.html">evolution log</a>.</p>
+  <p class="lead">Every edit to a skill, newest first: what changed, when, the pull request with the full diff, and, for machine rewrites, the score before and after. Filter by skill to see one skill's history and a link that diffs its first and latest change. Follow it without visiting: the <a href="changes.xml">Atom feed</a> carries the same entries. For why the self-rewrites happen, see the <a href="evolution.html">evolution log</a>.</p>
   <div class="controls"><input id="f" type="search" placeholder="Filter by skill name, for example lease-decoder" aria-label="Filter by skill name"></div>
   <p class="muted" id="count"></p>
+  <p class="muted" id="compare" hidden></p>
   <div id="list"><p class="muted">Loading…</p></div>
 </main>
 <script src="nav.js" defer></script>
@@ -43,6 +45,13 @@
     var rows = D.commits.filter(function (c) { return !q || c.skills.some(function (s) { return s.indexOf(q) !== -1; }); });
     var exact = q && D.commits.some(function (c) { return c.skills.indexOf(q) !== -1; });
     el('count').textContent = (q ? rows.length + ' change' + (rows.length === 1 ? '' : 's') + ' matching "' + q + '"' : rows.length + ' changes') + '.';
+    // One skill selected: offer the diff between its oldest and newest listed change, and the file's full history.
+    var cmp = el('compare');
+    if (exact && rows.length > 1) {
+      var newest = rows[0], oldest = rows[rows.length - 1];
+      cmp.innerHTML = 'Between ' + esc(oldest.date) + ' and ' + esc(newest.date) + ': <a href="' + REPO + '/compare/' + esc(oldest.sha) + '^...' + esc(newest.sha) + '#files_bucket">diff of every change to ' + esc(q) + '</a> · <a href="' + REPO + '/commits/main/skills/' + encodeURIComponent(q) + '/SKILL.md">full file history</a> · <a href="skill/' + encodeURIComponent(q) + '.html">skill page</a>';
+      cmp.hidden = false;
+    } else { cmp.hidden = true; cmp.innerHTML = ''; }
     el('list').innerHTML = rows.slice(0, 200).map(function (c) {
       var rw = D.rewrites.filter(function (r) { return c.skills.indexOf(r.skill) !== -1 && (r.pr ? r.pr === c.pr : r.date === c.date); });
       var link = c.pr ? '<a href="' + REPO + '/pull/' + c.pr + '/files">#' + c.pr + ' (diff)</a>' : '<a href="' + REPO + '/commit/' + esc(c.sha) + '">' + esc(c.sha.slice(0, 7)) + ' (diff)</a>';

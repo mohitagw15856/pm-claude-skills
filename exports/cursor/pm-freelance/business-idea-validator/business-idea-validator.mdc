@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "Should I actually start this, or am I kidding myself?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/business-idea-validator.html
+
+<!-- pm-claude-skills v83.2.0 | skill: business-idea-validator | source: skills/business-idea-validator/SKILL.md | sha256: e83f6fe7fb10fcb3837e3c8cdbb6ddc45614941ec097f5c6c9a9713c3b020d2c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

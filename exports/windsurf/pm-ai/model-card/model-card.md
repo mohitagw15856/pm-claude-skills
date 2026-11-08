@@ -75,3 +75,6 @@ Model Cards for Model Reporting (Mitchell et al., 2019) and the model-documentat
 - "Prepare an AI model for review/launch."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/model-card.html
+
+<!-- pm-claude-skills v83.2.0 | skill: model-card | source: skills/model-card/SKILL.md | sha256: 9b8e2172565ba8c16b9664f2ced68a7dbb3a78ed7d873dcbd4beac21e67109eb | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

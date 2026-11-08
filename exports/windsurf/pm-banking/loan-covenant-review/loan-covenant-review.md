@@ -81,3 +81,6 @@ End with: *"This review is analytical support, not a credit or enforcement decis
 - "Prepare a quarterly borrower monitoring review."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/loan-covenant-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: loan-covenant-review | source: skills/loan-covenant-review/SKILL.md | sha256: a423685e61e6a0e0422102e1311e1f8b92fbd045accb3ed9ddba842793378e05 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -75,3 +75,6 @@ Ask for these if not provided:
 - "What comes first legally and financially?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/side-business-setup.html
+
+<!-- pm-claude-skills v83.2.0 | skill: side-business-setup | source: skills/side-business-setup/SKILL.md | sha256: 62422443498892ac37ae9bbc88bf87e7c87febb4f711442c82898f52905fa654 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

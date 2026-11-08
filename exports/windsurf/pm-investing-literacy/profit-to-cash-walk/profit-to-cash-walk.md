@@ -93,3 +93,6 @@ End verbatim: *"Educational, not financial advice. Decisions with real money bel
 `annual-report-tutor` (this walk as Rung 3 of six), `audited-boundary-check` (is the company's FCF figure audited?), `company-compare-same-definitions`, `investing-vocabulary-explainer`.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/profit-to-cash-walk.html
+
+<!-- pm-claude-skills v83.2.0 | skill: profit-to-cash-walk | source: skills/profit-to-cash-walk/SKILL.md | sha256: b37c17c473c2a35f52c4f3e73fafc94006b6a2d3bbaf0b830c2a27eeb408c7c0 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

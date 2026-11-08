@@ -67,3 +67,6 @@ Ask for these if not provided:
 - "Message to reconnect with someone after a long silence."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/reconnect-with-someone.html
+
+<!-- pm-claude-skills v83.2.0 | skill: reconnect-with-someone | source: skills/reconnect-with-someone/SKILL.md | sha256: b710abfae6400f0357df1bc2340c710f6ca847932d15fe7003f238179cd59cbf | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

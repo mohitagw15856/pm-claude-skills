@@ -65,3 +65,6 @@ Ask for (if not already provided):
 - "Run an Amazon-style written decision process."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/async-decision-memo.html
+
+<!-- pm-claude-skills v83.2.0 | skill: async-decision-memo | source: skills/async-decision-memo/SKILL.md | sha256: 556c839d078c2a53b340c0e2fd66a14f94ef875ec530710d94374ac77dab4bd4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

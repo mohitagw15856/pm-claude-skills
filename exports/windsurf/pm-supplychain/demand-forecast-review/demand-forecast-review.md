@@ -90,3 +90,6 @@ Persistent over-forecast bias means excess inventory is being manufactured upstr
 - "Find hockey sticks in the numbers."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/demand-forecast-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: demand-forecast-review | source: skills/demand-forecast-review/SKILL.md | sha256: 316f8fd4bef5e2b9be90d4826025a180874d21d1a8317304aabc24e669464ec9 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

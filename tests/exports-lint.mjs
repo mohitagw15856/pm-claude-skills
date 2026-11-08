@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Export-dialect lint — 6,000+ generated files across 12 platforms ship on
+// Export-dialect lint — 18,000+ generated files across 14 platforms ship on
 // every release, and a renderer bug would ship everywhere silently. This
 // validates each platform's dialect on a sample of skills (first, last, and a
 // middle skill alphabetically) plus platform-wide invariants. Pure Node.
@@ -38,6 +38,16 @@ const DIALECTS = {
   roo:      { leaf: /\.md$/,   check: (t) => t.trim().length > 200 || 'suspiciously empty rule' },
   kilocode: { leaf: /\.md$/,   check: (t) => t.trim().length > 200 || 'suspiciously empty rule' },
   obsidian: { leaf: /\.md$/,   check: (t) => /^---\naliases:/.test(t) && /\{\{selection\}\}/.test(t) || 'missing obsidian properties or selection hook' },
+  'gemini-cli': { leaf: /^SKILL\.md$/, check: (t) => /^---\nname: [a-z0-9-]+\ndescription: "/.test(t) && !/## Deeper Materials/.test(t) && /<!-- pm-claude-skills v/.test(t) || 'missing gemini-cli frontmatter, leaked local section or no provenance footer' },
+  'openai-agents': {
+    leaf: /^agent\.json$/,
+    check: (t) => {
+      let j; try { j = JSON.parse(t); } catch { return 'not valid JSON'; }
+      if (!j.name || !j.instructions || !j.handoff_description) return 'missing name, instructions or handoff_description';
+      if (!j.metadata || !/^[0-9a-f]{64}$/.test(j.metadata.sha256 || '')) return 'missing provenance sha256';
+      return true;
+    },
+  },
   openclaw: {
     leaf: /^SKILL\.md$/,
     check: (t) => {

@@ -59,3 +59,6 @@ Overtime risk, insufficient rest between close/open ("clopening"), availability 
 - "Plan coverage for a restaurant/retail/shift-based team."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/shift-schedule-builder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: shift-schedule-builder | source: skills/shift-schedule-builder/SKILL.md | sha256: 61fb17b254600329e6bd22803d2c5e47c05480a2c78f6056ec25a15691c8a4e8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

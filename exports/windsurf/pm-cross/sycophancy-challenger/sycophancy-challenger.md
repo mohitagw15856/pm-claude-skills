@@ -164,3 +164,6 @@ These prohibitions do more work than the rules above. Follow them absolutely:
 - "I think I'm right about X — what am I missing?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sycophancy-challenger.html
+
+<!-- pm-claude-skills v83.2.0 | skill: sycophancy-challenger | source: skills/sycophancy-challenger/SKILL.md | sha256: 40f60cf187a648ec389d9ebeb5aa8d473cef0d5d6c61e622b9ed9700caa5fa67 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

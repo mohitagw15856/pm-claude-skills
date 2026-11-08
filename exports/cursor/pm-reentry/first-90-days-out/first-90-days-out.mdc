@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "Sequence the things I have to set up after incarceration."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/first-90-days-out.html
+
+<!-- pm-claude-skills v83.2.0 | skill: first-90-days-out | source: skills/first-90-days-out/SKILL.md | sha256: cd3dabc7fbbc3c7276ab5fa5d960780344d475a13e90f453f7826fe618afb74a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

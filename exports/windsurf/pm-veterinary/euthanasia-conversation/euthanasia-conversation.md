@@ -62,3 +62,6 @@ Acknowledging the loss, grief-support resources, and any follow-up (a condolence
 - "Support an owner facing the decision."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/euthanasia-conversation.html
+
+<!-- pm-claude-skills v83.2.0 | skill: euthanasia-conversation | source: skills/euthanasia-conversation/SKILL.md | sha256: 58b3d31235d3ca00c784c7ef10c069c8b174a4f172d40a5a90f2e7e26b9e7cc3 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

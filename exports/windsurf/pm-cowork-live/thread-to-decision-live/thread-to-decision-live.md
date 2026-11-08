@@ -80,3 +80,6 @@ A **Decision Record**:
 - "Close this thread out with owners and next steps in Cowork."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/thread-to-decision-live.html
+
+<!-- pm-claude-skills v83.2.0 | skill: thread-to-decision-live | source: skills/thread-to-decision-live/SKILL.md | sha256: 52e883aa0ba6e596ccdbe28c9f9d8fc4c3380b9801bf12d5519d1aa6f59bee94 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

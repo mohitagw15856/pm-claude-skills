@@ -74,3 +74,6 @@ Ask for these if not provided:
 - "Review my browser agent's setup."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/browser-agent-preflight.html
+
+<!-- pm-claude-skills v83.2.0 | skill: browser-agent-preflight | source: skills/browser-agent-preflight/SKILL.md | sha256: ce13e44ecfd4e7cec600ef2b32bc23e0751705e8014cd47830adcdc9c0a392cb | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

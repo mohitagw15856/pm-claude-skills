@@ -91,3 +91,6 @@ Green-claims substantiation practice (claim–evidence matching, scope disciplin
 - "Audit environmental claims on a website."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/greenwashing-self-audit.html
+
+<!-- pm-claude-skills v83.2.0 | skill: greenwashing-self-audit | source: skills/greenwashing-self-audit/SKILL.md | sha256: d4dc303dbd140c830a18ce4ff9e98d4041773666d29d578bee4cbca71b5bc6d5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -67,3 +67,6 @@ Ask for these if not provided:
 - "Best time and gear to start birding near the coast?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/birdwatching-log.html
+
+<!-- pm-claude-skills v83.2.0 | skill: birdwatching-log | source: skills/birdwatching-log/SKILL.md | sha256: 0845453e8aa9420d3635b3ee9ae9db1c89e0f6acaa4729b852f37fb1827c1137 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

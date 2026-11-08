@@ -76,3 +76,6 @@ API testing practice — contract/schema validation, status-code correctness, au
 - "Validate an API contract."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/api-test-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: api-test-plan | source: skills/api-test-plan/SKILL.md | sha256: 6aef59ffe5639c31a04cd946de491b9a772cd2150ace9afd5ddc70709f221bba | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -84,3 +84,6 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Turn raw interview data into actionable product insights."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/user-interview-synthesis.html
+
+<!-- pm-claude-skills v83.2.0 | skill: user-interview-synthesis | source: skills/user-interview-synthesis/SKILL.md | sha256: 7a9f28ef446cef29308fc0f701a84ad19a88bf8ace344c5e3573c65372c09c94 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

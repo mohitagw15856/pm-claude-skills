@@ -78,3 +78,6 @@ Ask for these if not provided:
 - "Make a family cookbook."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/family-cookbook-archivist.html
+
+<!-- pm-claude-skills v83.2.0 | skill: family-cookbook-archivist | source: skills/family-cookbook-archivist/SKILL.md | sha256: 635c4bd7c64b52e895cb49a82cccc48cb67009a371eaa099718dd39626391559 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

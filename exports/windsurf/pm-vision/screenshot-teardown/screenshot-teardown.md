@@ -73,3 +73,6 @@ Marketing pages say what a competitor claims; screenshots show what they shipped
 - "Here are screenshots of their app: what are they doing?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/screenshot-teardown.html
+
+<!-- pm-claude-skills v83.2.0 | skill: screenshot-teardown | source: skills/screenshot-teardown/SKILL.md | sha256: e7ce08cb371c8aecd760ab4863e252a4bc35b39e4075ccffdf833aba25119594 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

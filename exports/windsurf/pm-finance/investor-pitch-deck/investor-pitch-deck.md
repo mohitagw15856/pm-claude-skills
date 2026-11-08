@@ -65,3 +65,6 @@ For each slide:
 - "What slides should my investor pitch have?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/investor-pitch-deck.html
+
+<!-- pm-claude-skills v83.2.0 | skill: investor-pitch-deck | source: skills/investor-pitch-deck/SKILL.md | sha256: 5801c69e350cfbf86ecb36e1f9c5bfe854caf82ee258b0b22be5f1b3198e708d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

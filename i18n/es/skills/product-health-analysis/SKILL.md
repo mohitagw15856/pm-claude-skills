@@ -51,6 +51,24 @@ Analiza a través de cuatro capas:
 **Acciones Recomendadas:**
 [Pasos específicos siguientes con propietarios y cronogramas]
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/signal-vs-noise.md`** — Salud del producto: separar la señal del ruido del panel. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/health-review.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| Disciplina de objetivos y tendencias | Las métricas se muestran como instantáneas sueltas; sin objetivos ni comparación entre periodos | La mayoría de las métricas tienen objetivo y tendencia, pero algunos estados RAG no se siguen de los números o los objetivos se aceptan sin crítica | Cada métrica tiene objetivo, tendencia y un estado que se deriva de ambos, y al menos un objetivo se cuestiona si ya no tiene sentido |
+| Profundidad de la causa raíz | Los movimientos se enumeran sin explicación ("la activación cayó 27 puntos") | Las métricas señaladas tienen hipótesis, pero genéricas ("fricción en el onboarding") y sin diagnóstico que las confirme | Cada métrica señalada tiene una hipótesis específica y falsable más un paso de diagnóstico con nombre, y se traza al menos una correlación entre métricas (p. ej. activación → retardo de retención) |
+| Honestidad por segmentos | Solo se informan agregados globales; las tendencias opuestas por segmento son invisibles | Se muestran algunos cortes por segmento, pero las observaciones principales siguen apoyándose en promedios que ocultan divergencias | Cada agregado relevante se descompone donde los segmentos divergen, y la divergencia misma se presenta como hallazgo, no como nota al pie |
+| Veredicto y accionabilidad | Sin calificación global, o una calificación afirmada sin evidencia; acciones ausentes o sin responsable | RAG global presente y más o menos justificado; hay acciones, pero algunas sin responsable, fecha o vínculo a una métrica señalada | Calificación global argumentada con evidencia concreta (incluso contra las buenas noticias), y cada acción tiene responsable con nombre, fecha y remite a una investigación u observación |
+
 ## Verificaciones de Calidad
 
 - [ ] Cada métrica incluye tanto un objetivo como una tendencia (no solo una captura de momento)
@@ -66,3 +84,13 @@ Analiza a través de cuatro capas:
 - [ ] No listes movimientos de métricas sin hipótesis de causa raíz — observaciones sin explicaciones no son análisis
 - [ ] No mezcles métricas de salud del producto con KPIs de negocio sin explicar la relación entre ellos
 - [ ] No omitas acciones recomendadas — un informe de salud que solo describe problemas sin pasos priorizados siguientes está incompleto
+
+## Frases de activación de ejemplo
+
+- "Analiza la salud del producto."
+- "Revisa las métricas clave."
+- "Investiga un problema de rendimiento."
+- "Elabora un informe de salud."
+- "Evalúa las señales de encaje producto-mercado."
+
+Ejecuta esta habilidad en tu navegador: https://mohitagw15856.github.io/pm-claude-skills/skill/product-health-analysis.html

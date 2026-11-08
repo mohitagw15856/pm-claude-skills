@@ -55,3 +55,6 @@ Bugs, edge cases, or smells you noticed while reading — with the fix. (If it's
 - "Onboard to a file."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/code-explainer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: code-explainer | source: skills/code-explainer/SKILL.md | sha256: ca4e9612b1df65b3f8ce6a2288422b1e94ee7131cb42e2fe111403b9d3fe2fb7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

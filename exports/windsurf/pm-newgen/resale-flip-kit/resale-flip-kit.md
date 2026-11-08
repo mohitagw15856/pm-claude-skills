@@ -119,3 +119,6 @@ Floor £/€/$X · List Y · Anchor Z · Drop schedule: [dates]
 - "Write my Depop listing."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/resale-flip-kit.html
+
+<!-- pm-claude-skills v83.2.0 | skill: resale-flip-kit | source: skills/resale-flip-kit/SKILL.md | sha256: da2a0661e5062d5f4513a80ed67753bbdcfb42c459285328d2f97983f75666f4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

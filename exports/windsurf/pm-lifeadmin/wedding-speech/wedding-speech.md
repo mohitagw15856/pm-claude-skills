@@ -52,3 +52,6 @@ Every bad wedding speech fails the same three ways: too long, too inside, or sec
 - "Fix my wedding speech draft."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wedding-speech.html
+
+<!-- pm-claude-skills v83.2.0 | skill: wedding-speech | source: skills/wedding-speech/SKILL.md | sha256: 81cc6217d4b764ebbaa029b90fd895b6f14cdffe0096a9fd39be40d8bf968c0f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

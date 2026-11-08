@@ -73,3 +73,6 @@ Content design practice — example-driven voice principles, context-based tone,
 - "Write our UX-writing standards."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/content-style-guide.html
+
+<!-- pm-claude-skills v83.2.0 | skill: content-style-guide | source: skills/content-style-guide/SKILL.md | sha256: e07fe1f78e59b712d10d9eaaa6cbb0f8615b223a8efda9efdf1320c4b547b5bb | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

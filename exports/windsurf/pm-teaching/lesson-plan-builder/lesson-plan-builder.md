@@ -68,3 +68,6 @@ Everything needed, ready to gather.
 - "Turn a topic into a class period."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/lesson-plan-builder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: lesson-plan-builder | source: skills/lesson-plan-builder/SKILL.md | sha256: 0ce6af154260cf9ec040d0ed1cd8442100a374c979c3dd3c184faaccb5c9b6c2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

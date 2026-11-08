@@ -68,3 +68,6 @@ Ask for these if not provided:
 - "Help me decide between a big school and a small one for my child."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/school-choice-decision.html
+
+<!-- pm-claude-skills v83.2.0 | skill: school-choice-decision | source: skills/school-choice-decision/SKILL.md | sha256: 9ad943ec26ab9fbba5868630a761ae28c74b9dc560b4a34cfc3eee39690fbcf1 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -81,3 +81,6 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Get more mileage from a piece."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/content-repurposer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: content-repurposer | source: skills/content-repurposer/SKILL.md | sha256: 02b740ef0ce52d98eece2ecc42477ecadae81134b0f8bff434611a17c179ae3f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

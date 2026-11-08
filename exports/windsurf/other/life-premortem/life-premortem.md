@@ -118,3 +118,6 @@ and [[regret-minimizer]] for the decide-or-not layer.
 - "De-risk my year."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/life-premortem.html
+
+<!-- pm-claude-skills v83.2.0 | skill: life-premortem | source: skills/life-premortem/SKILL.md | sha256: 89658060ec70980de8f4f056b9ac4c1a7f311653404b899aaaf272b739fbcdc3 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -75,3 +75,6 @@ Ask about job performance only. Do **not** ask about age, health/disability, fam
 - "What should I ask this candidate's references?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/reference-check-script.html
+
+<!-- pm-claude-skills v83.2.0 | skill: reference-check-script | source: skills/reference-check-script/SKILL.md | sha256: fcb8eefe92c18ed5a563e9727bb4a1be59a103e6d83fcdde805012f804e3e748 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

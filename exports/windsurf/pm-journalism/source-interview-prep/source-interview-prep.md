@@ -61,3 +61,6 @@ Recording (and consent/legal note — recording-consent laws vary by jurisdictio
 - "Get a reluctant person to talk."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/source-interview-prep.html
+
+<!-- pm-claude-skills v83.2.0 | skill: source-interview-prep | source: skills/source-interview-prep/SKILL.md | sha256: 7858363f7d9f665f4146ea05ea28c626c3da9c381e1049e19a2f100d82cc0cb2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

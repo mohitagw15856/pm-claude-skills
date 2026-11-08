@@ -157,3 +157,6 @@ Each rung is headed `## Rung N — [title]` and contains only the tables and fix
 `profit-to-cash-walk` (Rung 3 standalone), `audited-boundary-check` (Rung 5 deep dive), `company-compare-same-definitions` (two reports), `investing-vocabulary-explainer` (any term, in context).
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/annual-report-tutor.html
+
+<!-- pm-claude-skills v83.2.0 | skill: annual-report-tutor | source: skills/annual-report-tutor/SKILL.md | sha256: bf1554369a7ef971132fa193f8c3e9e8c597f0e0a6c1e11c3fac6539a443da84 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

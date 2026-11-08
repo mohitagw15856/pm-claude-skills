@@ -130,3 +130,6 @@ Flag any fields that may not exist in current data infrastructure.
 - "Write a dashboard brief for our [metric] monitoring"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dashboard-brief.html
+
+<!-- pm-claude-skills v83.2.0 | skill: dashboard-brief | source: skills/dashboard-brief/SKILL.md | sha256: 5fed470eeea463429dc50909406bfd7fc10125461f01ee5231830c16b2ef18d0 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

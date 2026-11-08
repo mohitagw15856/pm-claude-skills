@@ -75,3 +75,6 @@ Ask for these if not provided:
 - "Bought a used appliance — how do I check it wasn't recalled?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-recall-check.html
+
+<!-- pm-claude-skills v83.2.0 | skill: product-recall-check | source: skills/product-recall-check/SKILL.md | sha256: b15c24719257d06889ca1c75dcf435c321a145afacb2283048bd3cc489f721a8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

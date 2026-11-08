@@ -71,3 +71,6 @@ Ask for these if not provided:
 - "Protect the roadmap from a pet feature."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/saying-no-kindly.html
+
+<!-- pm-claude-skills v83.2.0 | skill: saying-no-kindly | source: skills/saying-no-kindly/SKILL.md | sha256: 4ec7b5f0690eb11b16079b45657d0513fb4670d4f1e0428bc1dee68891bed0b5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -235,3 +235,6 @@ The fastest way to improve the score by 10+ points:
 - [ ] Do not sequence the action plan by effort alone — sequence by impact × effort so the highest-value actions come first
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/social-media-audit.html
+
+<!-- pm-claude-skills v83.2.0 | skill: social-media-audit | source: skills/social-media-audit/SKILL.md | sha256: 55b7eaa54c44fa53f390b875dc5675008fbbce4c7f57f55b5daaf539892b3f2d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

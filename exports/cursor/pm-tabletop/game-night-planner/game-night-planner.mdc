@@ -101,3 +101,6 @@ Total honest time: [X]h[Y]m of your [window]
 - "We always end up arguing over what to play."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/game-night-planner.html
+
+<!-- pm-claude-skills v83.2.0 | skill: game-night-planner | source: skills/game-night-planner/SKILL.md | sha256: 61f92d890622f3d4993cebeffa6edb6064a86fbc5df87487d330b7495d428f78 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -304,3 +304,6 @@ This log records every ring movement since the radar's first edition. Use it to 
 - "Establish a technology strategy."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tech-radar.html
+
+<!-- pm-claude-skills v83.2.0 | skill: tech-radar | source: skills/tech-radar/SKILL.md | sha256: 7e9e8fe099cd41bd30550fb0cdde8dd91805db3c5878ab5093994db29a252a47 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

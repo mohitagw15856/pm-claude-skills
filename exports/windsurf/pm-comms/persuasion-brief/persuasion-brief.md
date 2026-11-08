@@ -67,3 +67,6 @@ Influence & persuasion practice — Cialdini's principles, Aristotle's ethos/pat
 - "Prepare to pitch a proposal internally."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/persuasion-brief.html
+
+<!-- pm-claude-skills v83.2.0 | skill: persuasion-brief | source: skills/persuasion-brief/SKILL.md | sha256: 648cd0c588f6a7dd6702d59765819d8b90973c027fb5c48ac81d4e2f3cd64b25 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

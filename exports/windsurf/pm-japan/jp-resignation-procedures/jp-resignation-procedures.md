@@ -64,3 +64,6 @@ How the remaining 住民税 is paid after leaving, and the documents to collect:
 - "在日本辞职要办哪些手续？失业保险怎么领？"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/jp-resignation-procedures.html
+
+<!-- pm-claude-skills v83.2.0 | skill: jp-resignation-procedures | source: skills/jp-resignation-procedures/SKILL.md | sha256: 5cecbf0522646e9a8f1eff02dd4e6c6caff5b0fc18b558cff66f1bd635f4e62b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

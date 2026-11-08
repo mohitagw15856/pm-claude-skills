@@ -73,3 +73,6 @@ After the README, a table of what changed and why:
 - "Make this README convincing for someone who has never heard of the project."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/readme-benefit-writer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: readme-benefit-writer | source: skills/readme-benefit-writer/SKILL.md | sha256: e150344e1adc8fe87293940409af0e816063f29edeb5d274b3e46147c73cedd6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

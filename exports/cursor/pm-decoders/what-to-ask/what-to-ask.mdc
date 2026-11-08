@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "What am I forgetting?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/what-to-ask.html
+
+<!-- pm-claude-skills v83.2.0 | skill: what-to-ask | source: skills/what-to-ask/SKILL.md | sha256: 11d45e9f8008468ceded5d8119b3479bd7fe5503a0d49a974f53a3648fa40610 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

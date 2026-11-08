@@ -82,3 +82,6 @@ Ask for these if not provided; if forecast confidence is unstated, assume it is 
 - "Assess the risk of tooling before the design is frozen."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tooling-risk-assessment.html
+
+<!-- pm-claude-skills v83.2.0 | skill: tooling-risk-assessment | source: skills/tooling-risk-assessment/SKILL.md | sha256: b566cf382a1df2c5091ef590abc1b7b98eb2789a1735a961c8336f144cd0f048 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

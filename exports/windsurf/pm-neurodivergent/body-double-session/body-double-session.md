@@ -116,3 +116,6 @@ which atom first; [[masking-budget]] and [[meltdown-map]] for the ND context aro
 - "Sit with me while I do my taxes."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/body-double-session.html
+
+<!-- pm-claude-skills v83.2.0 | skill: body-double-session | source: skills/body-double-session/SKILL.md | sha256: 5dbe56ebdaf5f568614a928f1e04bdadec2924c06558c2c2cb73bbeeddd1e3e9 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

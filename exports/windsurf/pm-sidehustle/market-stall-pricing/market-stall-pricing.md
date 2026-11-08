@@ -77,3 +77,6 @@ Each marked to confirm.
 - "Am I making money selling snacks outside the school?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/market-stall-pricing.html
+
+<!-- pm-claude-skills v83.2.0 | skill: market-stall-pricing | source: skills/market-stall-pricing/SKILL.md | sha256: 2963610a832af2d48e749c1d9c7f29a439f4b5a0067e479fd380cfbaa344851b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

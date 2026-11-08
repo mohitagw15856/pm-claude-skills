@@ -74,3 +74,6 @@ Ask for these if not provided:
 - "Set up my dual-monitor workstation ergonomically."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/desk-ergonomics-audit.html
+
+<!-- pm-claude-skills v83.2.0 | skill: desk-ergonomics-audit | source: skills/desk-ergonomics-audit/SKILL.md | sha256: 0a217ba5a1e72d7ab197df622ca4e42f321d86742b3a447f3a8eedcaba1b80a8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

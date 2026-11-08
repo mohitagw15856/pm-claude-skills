@@ -67,3 +67,6 @@ Government/enterprise procurement practice (compliance matrix, evaluation-criter
 - "Build the compliance matrix for this bid."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rfp-response.html
+
+<!-- pm-claude-skills v83.2.0 | skill: rfp-response | source: skills/rfp-response/SKILL.md | sha256: 9250488f3e2270c78a57f05708f492be81721bc001e9677654d2bceda25dc15f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

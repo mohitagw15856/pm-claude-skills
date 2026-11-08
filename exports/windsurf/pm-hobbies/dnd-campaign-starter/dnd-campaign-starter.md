@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "My players always go off-script — help me prep to improvise."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dnd-campaign-starter.html
+
+<!-- pm-claude-skills v83.2.0 | skill: dnd-campaign-starter | source: skills/dnd-campaign-starter/SKILL.md | sha256: d763baf47a9bd567f9e81a24d2f2a1bdf8d337f100451966622883cb4a359393 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

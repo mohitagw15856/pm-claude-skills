@@ -179,3 +179,6 @@ If no decisions are pending: *No decisions pending.*
 - "Update stakeholders on the team's week."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/engineering-weekly-report.html
+
+<!-- pm-claude-skills v83.2.0 | skill: engineering-weekly-report | source: skills/engineering-weekly-report/SKILL.md | sha256: f8ab96f8b779659ca915a975dced684580bcc902897bd3695ecedf02f075679d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

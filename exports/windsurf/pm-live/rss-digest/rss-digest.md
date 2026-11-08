@@ -67,3 +67,6 @@ Feeds: `[curl per feed]` · window: [the since-filter applied]
 - "Build me a morning briefing from these sources."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rss-digest.html
+
+<!-- pm-claude-skills v83.2.0 | skill: rss-digest | source: skills/rss-digest/SKILL.md | sha256: 63dc4885122a9efc1d924515da48b99feea041cadd273985bef971abd35d6782 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

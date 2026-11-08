@@ -74,3 +74,6 @@ Ask for these if not provided:
 - "Where do renovation budgets usually blow up?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/renovation-scope-and-budget.html
+
+<!-- pm-claude-skills v83.2.0 | skill: renovation-scope-and-budget | source: skills/renovation-scope-and-budget/SKILL.md | sha256: 886b6cf4e7c60f2c619c45bb996d8e2fbfd52bbe55474a0bb99bce388621916e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

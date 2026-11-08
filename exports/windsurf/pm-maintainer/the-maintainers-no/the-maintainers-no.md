@@ -121,3 +121,6 @@ setting the boundaries early enough that nos stay rare.
 - "Suggest a fork without burning the contributor."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-maintainers-no.html
+
+<!-- pm-claude-skills v83.2.0 | skill: the-maintainers-no | source: skills/the-maintainers-no/SKILL.md | sha256: ada3fcafa9b7ffa773a6b3eb7bf1342db91eb01ab6a7ac8fb07ec89335d7d1d4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

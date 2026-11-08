@@ -52,3 +52,6 @@ Outcome bias is the strongest bias in organisational memory: the bet that failed
 - "What should we learn from this failed bet?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-autopsy.html
+
+<!-- pm-claude-skills v83.2.0 | skill: decision-autopsy | source: skills/decision-autopsy/SKILL.md | sha256: de06af58a85505346e74337ea0f4d0e96f37561f5a91efa522e45f53aa780eea | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

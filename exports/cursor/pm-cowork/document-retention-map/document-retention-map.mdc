@@ -74,3 +74,6 @@ Ask for these if not provided:
 - "What papers does my small business need to keep?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/document-retention-map.html
+
+<!-- pm-claude-skills v83.2.0 | skill: document-retention-map | source: skills/document-retention-map/SKILL.md | sha256: 64c8765d96f1af35a1a1408b1879ea64690517ed755171e09fba0af7415fe0c5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -127,3 +127,6 @@ graph the rollout sequence rides on.
 - "How will this org change land?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-org-simulator.html
+
+<!-- pm-claude-skills v83.2.0 | skill: the-org-simulator | source: skills/the-org-simulator/SKILL.md | sha256: dbd4476801d1ad097f72eff68aecd0b90ccc29c4107b4712a5ec3ca84ccbc6e0 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

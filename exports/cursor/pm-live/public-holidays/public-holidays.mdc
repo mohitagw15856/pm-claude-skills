@@ -68,3 +68,6 @@ Source: Nager.Date · rerun: `[exact curl]`
 - "Which days is the team in Japan and Germany both off?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/public-holidays.html
+
+<!-- pm-claude-skills v83.2.0 | skill: public-holidays | source: skills/public-holidays/SKILL.md | sha256: 32aee28f5b97206f959b4bb0a10ae2fe89983f9323797b73e5569c39da781e89 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -66,3 +66,6 @@ Interview research / company due-diligence practice for candidates (business mod
 - "Understand a prospective employer fast."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/company-brief.html
+
+<!-- pm-claude-skills v83.2.0 | skill: company-brief | source: skills/company-brief/SKILL.md | sha256: 2d2e815d913e555b44732113bfc3967b8c295788ba8c1e641c7414411a62cec2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

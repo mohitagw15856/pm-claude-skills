@@ -74,3 +74,6 @@ Commands that prove a fresh install works: start, wait for health, hit the healt
 - "Give me a one-command self-host setup and an env var table."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/self-host-packager.html
+
+<!-- pm-claude-skills v83.2.0 | skill: self-host-packager | source: skills/self-host-packager/SKILL.md | sha256: 245c2f2866c93dc4b15cec5ccc2e790c5cbe0128179b0fd07934121a4044c50d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

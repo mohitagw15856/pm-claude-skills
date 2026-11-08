@@ -65,3 +65,6 @@ Source: [Frankfurter (ECB) / open.er-api.com] · rerun: `[exact curl]`
 - "How much is this in my currency?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/currency-rates.html
+
+<!-- pm-claude-skills v83.2.0 | skill: currency-rates | source: skills/currency-rates/SKILL.md | sha256: 76f3d4cb63693e8b4f9930e75e7190b5d0fd70dc08fe287faeb0325f93d3db89 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

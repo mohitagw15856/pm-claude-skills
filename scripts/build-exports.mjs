@@ -18,12 +18,28 @@ import {
 } from 'node:fs';
 import { join, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
 const skillsDir = join(root, 'skills');
 const pluginsDir = join(root, 'plugins');
 const exportsDir = join(root, 'exports');
+const VERSION = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8')).version;
+const SITE = 'https://mohitagw15856.github.io/pm-claude-skills';
+
+// ── Provenance ──────────────────────────────────────────────────────────────
+// Every exported file says where it came from: library version, source path,
+// the SHA-256 of the source SKILL.md (the same hash /.well-known/agent-skills.json
+// publishes, so a copy can be verified) and the licence. Markdown dialects get
+// an HTML comment the tools ignore; JSON dialects embed the same fields.
+const provenance = (s) => ({
+  library: 'pm-claude-skills', version: VERSION, source: `skills/${s.name}/SKILL.md`, sha256: s.sha256,
+  licence: 'MIT', verify: `${SITE}/.well-known/agent-skills.json`,
+});
+const provenanceFooter = (s) =>
+  `\n<!-- pm-claude-skills v${VERSION} | skill: ${s.name} | source: skills/${s.name}/SKILL.md | sha256: ${s.sha256} | licence: MIT\n` +
+  `     verify: this hash is published at ${SITE}/.well-known/agent-skills.json -->\n`;
 
 // ── Platform registry ───────────────────────────────────────────────────────
 // To add a new platform, add an entry here. `render` gets
@@ -182,6 +198,59 @@ const PLATFORMS = {
       `---\n\n` +
       `${stripLocalLayoutSections(body).trim()}\n`,
   },
+  'gemini-cli': {
+    label: 'Gemini CLI — agent skill (.gemini/skills/<name>/SKILL.md)',
+    dir: 'exports/gemini-cli',
+    file: 'SKILL.md',
+    groupByBundle: true,
+    // Gemini CLI discovers Agent Skills (the same SKILL.md standard) from
+    // .gemini/skills/<name>/ in a project or ~/.gemini/skills/ for the user. The
+    // frontmatter keeps only the routing fields; library-local sections are
+    // stripped as for every standalone export.
+    render: ({ name, description, body }) =>
+      `---\nname: ${name}\ndescription: ${JSON.stringify(description)}\n---\n\n${stripLocalLayoutSections(body).trim()}\n`,
+    usage: [
+      'Copy a skill folder into `.gemini/skills/` in your project (or `~/.gemini/skills/` for every project),',
+      'then run `gemini` and describe the task; the CLI picks the skill by its description. Or install the set:',
+      '`npx pm-claude-skills add --agent gemini`.',
+    ].join('\n'),
+  },
+  'openai-agents': {
+    label: 'OpenAI Agents SDK — agent definition (agent.json)',
+    dir: 'exports/openai-agents',
+    file: 'agent.json',
+    groupByBundle: true,
+    footer: false,
+    // One Agent(...) per skill, as data rather than code so it works from Python
+    // and TypeScript alike: `name` and `instructions` map straight onto the SDK's
+    // Agent constructor, `handoff_description` lets a triage agent route to it.
+    render: (s) => JSON.stringify({
+      name: s.title,
+      handoff_description: s.description,
+      instructions: stripLocalLayoutSections(s.body).trim(),
+      metadata: { skill: s.name, bundle: s.bundle, ...provenance(s) },
+    }, null, 2) + '\n',
+    usage: [
+      '```python',
+      'import json',
+      'from agents import Agent, Runner',
+      '',
+      'spec = json.load(open("pm-essentials/prd-template/agent.json"))',
+      'prd = Agent(name=spec["name"], instructions=spec["instructions"], handoff_description=spec["handoff_description"])',
+      'print(Runner.run_sync(prd, "A referral programme for B2B users").final_output)',
+      '```',
+      '',
+      '```ts',
+      'import { Agent, run } from "@openai/agents";',
+      'import spec from "./pm-essentials/prd-template/agent.json" with { type: "json" };',
+      '',
+      'const prd = new Agent({ name: spec.name, instructions: spec.instructions, handoffDescription: spec.handoff_description });',
+      'console.log((await run(prd, "A referral programme for B2B users")).finalOutput);',
+      '```',
+      '',
+      'Several specs can be handed to one triage agent as `handoffs`; the `handoff_description` is what it routes on.',
+    ].join('\n'),
+  },
 };
 
 // Drop sections that only make sense inside this repo's layout (sibling-skill
@@ -260,10 +329,12 @@ function loadSkills() {
   for (const name of readdirSync(skillsDir)) {
     const file = join(skillsDir, name, 'SKILL.md');
     if (!existsSync(file)) continue;
-    const { meta, body } = parseFrontmatter(readFileSync(file, 'utf8'));
+    const raw = readFileSync(file);
+    const { meta, body } = parseFrontmatter(raw.toString('utf8'));
     const titleHeading = body.match(/^#\s+(.+)$/m);
     skills.push({
       name: meta.name || name,
+      sha256: createHash('sha256').update(raw).digest('hex'),
       title: (titleHeading ? titleHeading[1] : titleFromName(meta.name || name)).replace(/\s+Skill$/i, ''),
       description: meta.description || '',
       body,
@@ -289,7 +360,7 @@ function planPlatform(key, platform, skills) {
     const parts = [base];
     if (platform.groupByBundle) parts.push(skill.bundle);
     parts.push(skill.name, fileNameFor(platform, skill));
-    files.set(join(...parts), platform.render(skill));
+    files.set(join(...parts), platform.render(skill) + (platform.footer === false ? '' : provenanceFooter(skill)));
   }
   // Generated index for the platform. Derive the extension from an actual
   // rendered filename so the hint matches what each platform emits (only
@@ -309,6 +380,11 @@ function planPlatform(key, platform, skills) {
     `> **Do not edit these files by hand** — edit the source skill and regenerate.`,
     '',
     `${skills.length} skills exported. Copy a \`${fileHint}\` into the tool to use it.`,
+    '',
+    ...(platform.usage ? [platform.usage, ''] : []),
+    `Every file ends with a provenance ${platform.footer === false ? 'block' : 'comment'}: library version, source path, the SHA-256 of the source`,
+    `\`SKILL.md\` and the licence. The same hash is published at \`${SITE}/.well-known/agent-skills.json\`,`,
+    'so a copy can be checked against the library with `shasum -a 256` on the source file.',
     '',
     '| Skill | Bundle | Path |',
     '|---|---|---|',

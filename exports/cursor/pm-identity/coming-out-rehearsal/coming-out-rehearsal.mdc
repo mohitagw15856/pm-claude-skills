@@ -125,3 +125,6 @@ that may follow.
 - "Rehearse this conversation with me."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/coming-out-rehearsal.html
+
+<!-- pm-claude-skills v83.2.0 | skill: coming-out-rehearsal | source: skills/coming-out-rehearsal/SKILL.md | sha256: c78305c2dbb1215390a01c10793da6a9a05ddf96f6daf6aff34f8ccc719b9dcb | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

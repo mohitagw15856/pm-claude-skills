@@ -86,3 +86,6 @@ One paragraph: the single strongest move before pitching for real.
 - "What happens after the pitch?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vc-partner-meeting.html
+
+<!-- pm-claude-skills v83.2.0 | skill: vc-partner-meeting | source: skills/vc-partner-meeting/SKILL.md | sha256: a01c9557976870ea9cae66a69c142232e1957954a22d9ef4a47ec21021748dcb | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

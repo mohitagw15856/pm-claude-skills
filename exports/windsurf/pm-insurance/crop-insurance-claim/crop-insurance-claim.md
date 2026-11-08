@@ -84,3 +84,6 @@ This is not legal or financial advice. A farmer organisation, cooperative or agr
 - "How does the weather insurance on my bank loan pay out?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/crop-insurance-claim.html
+
+<!-- pm-claude-skills v83.2.0 | skill: crop-insurance-claim | source: skills/crop-insurance-claim/SKILL.md | sha256: 0bb2a69db45345529c894538b3884aa721d8f04441689d112b603564c72a4f8f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

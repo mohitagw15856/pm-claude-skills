@@ -89,3 +89,6 @@ Ask for these if not provided:
 - "What are the constraints on this site?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/site-analysis-report.html
+
+<!-- pm-claude-skills v83.2.0 | skill: site-analysis-report | source: skills/site-analysis-report/SKILL.md | sha256: c478148b07051b722581192e9369df105fec3d9733044c1bf1418ea17664acb3 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

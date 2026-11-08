@@ -66,3 +66,6 @@ SBI feedback model (Center for Creative Leadership) and Radical Candor (Kim Scot
 - "Coach a report/peer."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/giving-feedback.html
+
+<!-- pm-claude-skills v83.2.0 | skill: giving-feedback | source: skills/giving-feedback/SKILL.md | sha256: b53f37bc6f922f9f823b21219619dfd2af734e6f84be0e9db4e5aee4aad0456d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

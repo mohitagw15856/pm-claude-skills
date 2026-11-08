@@ -415,3 +415,6 @@ ANYTHING ELSE:
 - "Prepare an on-call handoff document."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/oncall-runbook.html
+
+<!-- pm-claude-skills v83.2.0 | skill: oncall-runbook | source: skills/oncall-runbook/SKILL.md | sha256: c0912333233ea8f579e72ab8de468703cd1cd0ea90078711c1d2a09560d42a1a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

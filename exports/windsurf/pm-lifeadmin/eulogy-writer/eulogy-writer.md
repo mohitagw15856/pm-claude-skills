@@ -50,3 +50,6 @@ Given a name, a few details and the room, **write the full eulogy anyway**, abou
 - [ ] Do not produce only a polished artifact — the delivery copy with pause marks is the part they'll actually clutch at the podium
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/eulogy-writer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: eulogy-writer | source: skills/eulogy-writer/SKILL.md | sha256: 4af893d760663161430e01908527a1aaae8f27912027670ec8f294aeb8bf196a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

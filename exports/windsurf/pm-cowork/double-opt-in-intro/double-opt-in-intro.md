@@ -68,3 +68,6 @@ Ask for these if not provided:
 - "Write an intro email."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/double-opt-in-intro.html
+
+<!-- pm-claude-skills v83.2.0 | skill: double-opt-in-intro | source: skills/double-opt-in-intro/SKILL.md | sha256: d718f4ea08a8229701e75aa0bb02117031dc183f79549f83ae487e302b1d65e2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

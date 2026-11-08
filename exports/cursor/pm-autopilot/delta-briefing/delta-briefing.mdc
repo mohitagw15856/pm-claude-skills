@@ -89,3 +89,6 @@ Ask for (if not already provided):
 - "Make this recurring update delta-aware."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/delta-briefing.html
+
+<!-- pm-claude-skills v83.2.0 | skill: delta-briefing | source: skills/delta-briefing/SKILL.md | sha256: 0c712b56e8efb436d8e4420f26533fdf6bb115b0692a3f350012bd3fb05727c5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -150,3 +150,6 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Generate a code review checklist."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/code-review-checklist.html
+
+<!-- pm-claude-skills v83.2.0 | skill: code-review-checklist | source: skills/code-review-checklist/SKILL.md | sha256: 865a74717c35a903df78d000e5f218d1d539ffccbecbc71bed085164c649feda | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

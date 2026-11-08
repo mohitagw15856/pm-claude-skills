@@ -68,3 +68,6 @@ Source: Open-Meteo air-quality API (modeled/CAMS) · rerun: `[exact curl]`
 - "How bad is the pollution right now?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/air-quality.html
+
+<!-- pm-claude-skills v83.2.0 | skill: air-quality | source: skills/air-quality/SKILL.md | sha256: d6e477116a6c8e5935425bf08889b70dd92a87b2a5e406cbce6ba3b07b64c2af | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

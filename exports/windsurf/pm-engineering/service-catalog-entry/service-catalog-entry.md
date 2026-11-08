@@ -307,3 +307,6 @@ Document limitations honestly — this section prevents other teams from buildin
 - "Onboard a new service to a service registry."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/service-catalog-entry.html
+
+<!-- pm-claude-skills v83.2.0 | skill: service-catalog-entry | source: skills/service-catalog-entry/SKILL.md | sha256: a311fe18a346b984651f25f34a79b7375441bb340608baa5e8cd038ed0b59a82 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

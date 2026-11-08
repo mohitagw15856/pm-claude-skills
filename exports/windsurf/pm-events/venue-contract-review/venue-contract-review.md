@@ -95,3 +95,6 @@ Ask for these if not provided:
 - "Is this minimum spend reasonable for 200 guests?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/venue-contract-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: venue-contract-review | source: skills/venue-contract-review/SKILL.md | sha256: 9676bcf901952f8493cde9458f0a80588ae976dc76c0187f3faf1a4d55d70abd | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

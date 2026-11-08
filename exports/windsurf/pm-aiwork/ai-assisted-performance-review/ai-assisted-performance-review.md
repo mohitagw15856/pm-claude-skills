@@ -77,3 +77,6 @@ Ask for (if not already provided):
 - "Write review criteria for the AI era."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-assisted-performance-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: ai-assisted-performance-review | source: skills/ai-assisted-performance-review/SKILL.md | sha256: 4332916f3a74fd1a935280b6ef196a6ebf5596e4bdcadbdf0ccc9e1fcb689d5b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

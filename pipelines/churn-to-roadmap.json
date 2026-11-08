@@ -1,0 +1,54 @@
+{
+  "$schema": "../schemas/pipeline.schema.json",
+  "id": "churn-to-roadmap",
+  "name": "Churn numbers to OKRs to a ranked roadmap",
+  "summary": "Diagnose the churn, set the quarter's objectives from its recommendations, then RICE-rank the objectives into a roadmap. Three typed skills, chained by contract.",
+  "inputs": {
+    "type": "object",
+    "properties": {
+      "period": { "type": "string", "description": "The period analysed, for example Q3 2026" },
+      "customers_start": { "type": "integer" },
+      "customers_churned": { "type": "integer" },
+      "churn_reasons": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": { "reason": { "type": "string" }, "count": { "type": "integer" }, "source": { "type": "string" } },
+          "required": ["reason"]
+        }
+      },
+      "owner": { "type": "string", "description": "Who owns the OKRs" },
+      "okr_period": { "type": "string", "description": "The period the OKRs cover" }
+    },
+    "required": ["period", "customers_start", "customers_churned", "owner", "okr_period"]
+  },
+  "steps": [
+    {
+      "id": "churn",
+      "skill": "churn-analysis",
+      "inputs": {
+        "period": "$.input.period",
+        "customers_start": "$.input.customers_start",
+        "customers_churned": "$.input.customers_churned",
+        "churn_reasons": "$.input.churn_reasons"
+      }
+    },
+    {
+      "id": "okrs",
+      "skill": "okr-builder",
+      "inputs": {
+        "owner": "$.input.owner",
+        "period": "$.input.okr_period",
+        "priorities": { "from": "$.churn.recommendations[]", "pick": "action" }
+      }
+    },
+    {
+      "id": "roadmap",
+      "skill": "rice-prioritisation",
+      "inputs": {
+        "period": "$.input.okr_period",
+        "initiatives": { "from": "$.okrs.objectives[]", "map": { "name": "objective", "description": "links_to_north_star" } }
+      }
+    }
+  ]
+}

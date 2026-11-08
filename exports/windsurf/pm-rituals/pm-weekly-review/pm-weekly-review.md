@@ -141,3 +141,6 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Review sprint health."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pm-weekly-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: pm-weekly-review | source: skills/pm-weekly-review/SKILL.md | sha256: b2166cb70c637bf340832d4b05f0188c6a012e748f2dff2387db447de3d5aa97 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

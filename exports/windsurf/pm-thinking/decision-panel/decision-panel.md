@@ -62,3 +62,6 @@ Ask for these if not provided:
 - "Convene a decision panel on whether to start this business."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-panel.html
+
+<!-- pm-claude-skills v83.2.0 | skill: decision-panel | source: skills/decision-panel/SKILL.md | sha256: fab6192c4c058d7b247ba414c76e4320190a1b364cb532541ce80182ea31caff | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "Is this plant safe for cats, and how often should I water it?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/houseplant-care.html
+
+<!-- pm-claude-skills v83.2.0 | skill: houseplant-care | source: skills/houseplant-care/SKILL.md | sha256: 30706bd78fc45e056755abc1051f9f628297fddba1180c8d496c9ff18d98095a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

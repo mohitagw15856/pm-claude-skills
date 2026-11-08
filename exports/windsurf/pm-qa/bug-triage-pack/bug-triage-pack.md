@@ -75,3 +75,6 @@ Ask for these if not provided:
 - "Normalize this customer bug report and check if it's a duplicate."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bug-triage-pack.html
+
+<!-- pm-claude-skills v83.2.0 | skill: bug-triage-pack | source: skills/bug-triage-pack/SKILL.md | sha256: d01bb55980b8b2e74700b30ce4a8e7a98ab2e5c31ff3dd14dda17bfaaf0a18f7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

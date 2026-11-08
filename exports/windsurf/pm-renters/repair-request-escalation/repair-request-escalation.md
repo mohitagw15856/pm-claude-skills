@@ -74,3 +74,6 @@ Ask for these if not provided:
 - "What are my options if repairs never happen?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/repair-request-escalation.html
+
+<!-- pm-claude-skills v83.2.0 | skill: repair-request-escalation | source: skills/repair-request-escalation/SKILL.md | sha256: f045cb7ce36f63db678cbd67714968178e93341579561292cf16f9845fba185f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

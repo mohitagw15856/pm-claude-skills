@@ -65,3 +65,6 @@ Source: [wttr.in / Open-Meteo] at [response timestamp] · rerun: `[the exact cur
 - "Get me weather data for a location."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/weather-now.html
+
+<!-- pm-claude-skills v83.2.0 | skill: weather-now | source: skills/weather-now/SKILL.md | sha256: 41c5b3eb49efd086fe404f2b7ae7ab7a6c62555d11709b21a02a51bb6061f876 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

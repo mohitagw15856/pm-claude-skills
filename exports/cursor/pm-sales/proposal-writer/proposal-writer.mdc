@@ -109,3 +109,6 @@ Writes commercial proposals that win business — structured around the prospect
 - "Turn my discovery notes into a proposal"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/proposal-writer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: proposal-writer | source: skills/proposal-writer/SKILL.md | sha256: e2b85c8c49d95c562a355b6d887322c3415fca414079b84dd5f7d18b03b6b989 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

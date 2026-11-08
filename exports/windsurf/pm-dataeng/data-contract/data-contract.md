@@ -67,3 +67,6 @@ Data-contract practice — schema + semantics + measurable quality SLAs, semanti
 - "Stop a producer from silently breaking downstream consumers."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-contract.html
+
+<!-- pm-claude-skills v83.2.0 | skill: data-contract | source: skills/data-contract/SKILL.md | sha256: d9a7ffa86449fa02c3e4ebc7e2f7df34b710274e74f6a2b76b4d7428b54ee452 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

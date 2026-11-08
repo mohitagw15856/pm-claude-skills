@@ -63,3 +63,6 @@ The specific questions to put to each platform before committing (fees by catego
 - "Help us choose cross-border marketplaces for our products."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/crossborder-platform-playbook.html
+
+<!-- pm-claude-skills v83.2.0 | skill: crossborder-platform-playbook | source: skills/crossborder-platform-playbook/SKILL.md | sha256: 1892f5d97e227e160dbb476600efd1b155839ea7e6c146b6336ef9624bcee967 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

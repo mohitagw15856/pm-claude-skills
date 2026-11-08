@@ -129,3 +129,6 @@ for the will this plugs into; [[password]] hygiene now makes all of this easier.
 - "Who gets my photos and passwords?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/digital-death-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: digital-death-plan | source: skills/digital-death-plan/SKILL.md | sha256: f9e5296a3478061257f35be7450453bfa781b23429db4b8ee6e638b5daab1981 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -118,3 +118,6 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Run an assumption analysis."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/assumption-mapper.html
+
+<!-- pm-claude-skills v83.2.0 | skill: assumption-mapper | source: skills/assumption-mapper/SKILL.md | sha256: f61bc19c416c736964245a6d4ac0ebde069c33222f98e43e76639342489cf6a7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -60,3 +60,6 @@ The likely parent responses (defensiveness, blame, overwhelm, disengagement) and
 - "Handle a difficult conversation about a student's behavior."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/parent-conference-prep.html
+
+<!-- pm-claude-skills v83.2.0 | skill: parent-conference-prep | source: skills/parent-conference-prep/SKILL.md | sha256: ae71d47cc5eb00206ebdc260ec5c9949303e08904b248ac55c008946fdbb0947 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -72,3 +72,6 @@ Ask for these if not provided:
 - "What needs to happen this week?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/when-someone-dies.html
+
+<!-- pm-claude-skills v83.2.0 | skill: when-someone-dies | source: skills/when-someone-dies/SKILL.md | sha256: 4275909682dd374eff1d15399e3fa302966a452fb6da9a17502a1d0ff6c23749 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

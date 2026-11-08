@@ -204,6 +204,24 @@ El posicionamiento solo funciona si se implementa consistentemente:
 
 ---
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/category-choice.md`** — Elegir tu categoría: la decisión de posicionamiento de mayor palanca. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/positioning-canvas.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| **Especificidad de la diferenciación** | El posicionamiento podría describir a cualquier competidor; los atributos son nombres de funcionalidades | Algunos atributos realmente únicos, pero mezclados con funcionalidades básicas y sin razonar por qué los competidores no pueden igualarlos | Cada atributo es un resultado, demostrable, acompañado de por qué las alternativas no pueden copiarlo, y remite a una única afirmación principal |
+| **Honestidad sobre categoría y alternativas** | Categoría afirmada sin justificación; las alternativas solo enumeran competidores con nombre | Categoría justificada, pero faltan el statu quo o el "hazlo tú mismo" entre las alternativas, o la idea clave es genérica | Categoría argumentada frente a una categoría adyacente con nombre, las alternativas incluyen el statu quo, y la idea clave impulsa visiblemente los mensajes |
+| **Disciplina de la evidencia** | Las pruebas son afirmaciones sin fuente ("los clientes dicen…") | La mayoría de las afirmaciones tienen fuente, pero los huecos de prueba no se reconocen y los datos antiguos no llevan fecha | Cada prueba cita una fuente con fecha, y los huecos se enumeran junto con lo que ventas no puede afirmar hasta que se cierren |
+| **Ajuste del mensaje por persona** | El mismo titular para cada persona, escrito en jerga de la empresa | Las personas difieren, pero el lenguaje es vocabulario interno, o falta la sección "no es para" | Cada persona tiene un mensaje principal distinto en las palabras del comprador con una prueba asociada, y "no es para" funciona como herramienta de cualificación |
+
 ## Verificaciones de Calidad
 
 - [ ] La declaración de posicionamiento tiene exactamente una A — el producto es responsable de exactamente una afirmación principal diferenciada

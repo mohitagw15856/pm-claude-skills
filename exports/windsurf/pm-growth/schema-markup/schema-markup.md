@@ -68,3 +68,6 @@ Schema.org structured data + Google's structured-data guidelines for rich result
 - "Make this page eligible for star ratings in search."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/schema-markup.html
+
+<!-- pm-claude-skills v83.2.0 | skill: schema-markup | source: skills/schema-markup/SKILL.md | sha256: 147758c8eaccb408f780d71bd438a3456d9d3bee677d8a2b4886f0d936735f4b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

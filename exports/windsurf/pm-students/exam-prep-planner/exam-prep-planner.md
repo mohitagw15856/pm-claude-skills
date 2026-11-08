@@ -69,3 +69,6 @@ Missed 1 day → [absorb via buffer] · Missed 3+ → [the triage list, in drop 
 - "How do I study for multiple exams?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/exam-prep-planner.html
+
+<!-- pm-claude-skills v83.2.0 | skill: exam-prep-planner | source: skills/exam-prep-planner/SKILL.md | sha256: 2437d10f9bf6b36c29bd7513f3aa82d4c20bd2d3def6ed747fd044820574c435 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

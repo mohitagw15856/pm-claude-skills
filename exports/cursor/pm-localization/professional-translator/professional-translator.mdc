@@ -63,3 +63,6 @@ Professional translation practice — meaning-based (not literal) translation, r
 - "Translate this keeping the tone."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/professional-translator.html
+
+<!-- pm-claude-skills v83.2.0 | skill: professional-translator | source: skills/professional-translator/SKILL.md | sha256: 837ec09dc7a6c84ff6d032b1d6fbf1a5dec5c48be81798f988c0316ca4327c87 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

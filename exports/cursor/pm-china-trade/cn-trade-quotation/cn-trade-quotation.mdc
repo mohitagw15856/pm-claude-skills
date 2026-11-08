@@ -75,3 +75,6 @@ For the sales manager: margin at each term, the risks the seller carries under e
 - "Build an export quotation with a cost build-up for several Incoterms."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-trade-quotation.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-trade-quotation | source: skills/cn-trade-quotation/SKILL.md | sha256: 0f9306355f4116bab5d6140c208058a656ed6ea9758fab83f60880cc9dc43d76 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

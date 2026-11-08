@@ -71,3 +71,6 @@ Ask for these if not provided:
 - "Set up a personal prompt toolkit."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prompt-library-builder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: prompt-library-builder | source: skills/prompt-library-builder/SKILL.md | sha256: 29e5b1c7e11f9aa1189991ffb2ff056513440604ac589d40b3dc0df30ecb07f2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

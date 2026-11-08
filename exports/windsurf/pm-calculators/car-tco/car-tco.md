@@ -81,3 +81,6 @@ Financing interest (run the loan separately) Â· taxes and fees by jurisdiction Â
 - "What does this car really cost per month?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/car-tco.html
+
+<!-- pm-claude-skills v83.2.0 | skill: car-tco | source: skills/car-tco/SKILL.md | sha256: e94c734a9c813767e431454d6cec4810dbe268e17e3bbc6931af59446e7cb17c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

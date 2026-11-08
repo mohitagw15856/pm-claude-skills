@@ -113,3 +113,6 @@ not neurological.
 - "Why do people think I'm blunt?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/nt-translator.html
+
+<!-- pm-claude-skills v83.2.0 | skill: nt-translator | source: skills/nt-translator/SKILL.md | sha256: 3b1c9f27656d99ef6726a5f49111cd34091ede8e927868172efe482a010b3b52 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

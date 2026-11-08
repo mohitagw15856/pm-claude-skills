@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://mohitagw15856.github.io/pm-claude-skills/schemas/pipeline.schema.json",
+  "title": "PM Skills typed pipeline",
+  "description": "A chain of skills bound by their typed contracts (schemas/skills/<name>.json). Validated by scripts/check-pipelines.mjs and run by the pipeline CLI command.",
+  "type": "object",
+  "required": ["id", "name", "summary", "steps"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+    "name": { "type": "string" },
+    "summary": { "type": "string" },
+    "inputs": {
+      "description": "JSON Schema (object) of what the person running the pipeline supplies; steps refer to it as $.input.<field>",
+      "type": "object",
+      "required": ["type", "properties"],
+      "properties": { "type": { "const": "object" }, "properties": { "type": "object" }, "required": { "type": "array", "items": { "type": "string" } } }
+    },
+    "steps": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "skill", "inputs"],
+        "additionalProperties": false,
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "description": "Later steps refer to this step's outputs as $.<id>.<field>" },
+          "skill": { "type": "string", "description": "A skill with a contract in schemas/skills/" },
+          "inputs": {
+            "type": "object",
+            "description": "One binding per skill input: a $.reference, a literal, or { from, pick } / { from, map }",
+            "additionalProperties": {
+              "anyOf": [
+                { "type": "string" },
+                { "type": "number" },
+                { "type": "boolean" },
+                { "type": "array" },
+                {
+                  "type": "object",
+                  "required": ["from"],
+                  "additionalProperties": false,
+                  "properties": {
+                    "from": { "type": "string", "pattern": "^\\$\\." },
+                    "pick": { "type": "string", "description": "Field to take from each item of an array reference" },
+                    "map": { "type": "object", "additionalProperties": { "type": "string" }, "description": "target field: source field, applied to each item" }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

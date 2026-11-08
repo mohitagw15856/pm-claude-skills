@@ -85,3 +85,6 @@ One paragraph: the order of operations for the next two quarters, and the one fi
 - "What will DD find?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/acquirer-red-team.html
+
+<!-- pm-claude-skills v83.2.0 | skill: acquirer-red-team | source: skills/acquirer-red-team/SKILL.md | sha256: f195d26dc293ae41a923f391b4473fff6a5f2198948720f599545498ed975eca | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

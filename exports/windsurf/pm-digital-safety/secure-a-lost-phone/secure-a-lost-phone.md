@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "My phone's gone and it had my authenticator app on it."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/secure-a-lost-phone.html
+
+<!-- pm-claude-skills v83.2.0 | skill: secure-a-lost-phone | source: skills/secure-a-lost-phone/SKILL.md | sha256: 7fd7f0f7711d67eb35918af3a12ae9c0bb5bd6ae9160c1b00504faa70660fede | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

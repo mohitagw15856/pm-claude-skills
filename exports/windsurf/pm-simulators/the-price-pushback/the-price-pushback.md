@@ -74,3 +74,6 @@ Ask for these if not provided:
 - "Stress-test my pricing conversation."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-price-pushback.html
+
+<!-- pm-claude-skills v83.2.0 | skill: the-price-pushback | source: skills/the-price-pushback/SKILL.md | sha256: 1b3e401e34328468d51e2ed573090b6168d5e023132763b6bb2ff5558cd39ffe | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

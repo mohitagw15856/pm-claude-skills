@@ -68,3 +68,6 @@ Ask for these if not provided:
 - "Leave a meeting politely."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/recurring-meeting-pruner.html
+
+<!-- pm-claude-skills v83.2.0 | skill: recurring-meeting-pruner | source: skills/recurring-meeting-pruner/SKILL.md | sha256: 39e0a259444fa6b15799bdde90ce5404996bbd5370aa6b5b9c7e54b8cdaae72f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

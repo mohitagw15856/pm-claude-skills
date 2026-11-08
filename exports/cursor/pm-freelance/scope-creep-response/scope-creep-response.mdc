@@ -74,3 +74,6 @@ Ask for these if not provided:
 - "Write a change order email."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/scope-creep-response.html
+
+<!-- pm-claude-skills v83.2.0 | skill: scope-creep-response | source: skills/scope-creep-response/SKILL.md | sha256: 2902c9106d047570e24030b118d7b14c5b3b012e4ad11495cbe1e570f2c8b525 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

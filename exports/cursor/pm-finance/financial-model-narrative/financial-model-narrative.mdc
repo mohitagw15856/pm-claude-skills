@@ -79,3 +79,6 @@ For each significant variance:
 - "Explain these financial results in plain English"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/financial-model-narrative.html
+
+<!-- pm-claude-skills v83.2.0 | skill: financial-model-narrative | source: skills/financial-model-narrative/SKILL.md | sha256: 899a123251979cf21658717a4c0bec512373dea021478ab159fb93bfb10b4434 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

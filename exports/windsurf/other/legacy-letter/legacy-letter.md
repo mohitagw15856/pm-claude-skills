@@ -117,3 +117,6 @@ professional-decisions cousin; [[personal-bio]] shares the voice-mining craft.
 - "Write a letter for my partner to read later."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/legacy-letter.html
+
+<!-- pm-claude-skills v83.2.0 | skill: legacy-letter | source: skills/legacy-letter/SKILL.md | sha256: d0a9ba19b3de66b2eee61c39ad53afc8264f7598e7602959b7bd1d6e199cfd93 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

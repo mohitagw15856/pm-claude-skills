@@ -64,3 +64,6 @@ Ask for these if not provided:
 - "Someone told me to pay a fee with gift cards — is that a scam?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/gift-card-recovery.html
+
+<!-- pm-claude-skills v83.2.0 | skill: gift-card-recovery | source: skills/gift-card-recovery/SKILL.md | sha256: 0ae0b7c7daaefead1133514413f51ca6a2e9a567fa3580eaff2249062800efdb | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

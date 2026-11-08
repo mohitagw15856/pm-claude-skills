@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "My pivot shows nonsense."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pivot-analysis-planner.html
+
+<!-- pm-claude-skills v83.2.0 | skill: pivot-analysis-planner | source: skills/pivot-analysis-planner/SKILL.md | sha256: db4f30822da567c22daea6c87b11ed7b0912204a27841bbfab5c2b5fa7b354fc | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

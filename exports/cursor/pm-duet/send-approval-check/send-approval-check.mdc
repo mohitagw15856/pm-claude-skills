@@ -60,3 +60,6 @@ Ask for (if not already provided), else infer and label:
 - "Review this outgoing reply: recipients, attachments, what it commits me to"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/send-approval-check.html
+
+<!-- pm-claude-skills v83.2.0 | skill: send-approval-check | source: skills/send-approval-check/SKILL.md | sha256: a5333523fc592252cffdd1f1c08f830aa05b8bc75936cb3360d3a62d182c4be2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

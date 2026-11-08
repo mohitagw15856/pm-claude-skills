@@ -67,3 +67,6 @@ Binary checks to run in a browser: the model appears; each part in the list high
 - "Make a GLB viewer that works on phones, no build step."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/explorer-viewer-builder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: explorer-viewer-builder | source: skills/explorer-viewer-builder/SKILL.md | sha256: 170450b12852512e55eef171de81b41cf77ca28e671b30d048bbf3071f4c9ea5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

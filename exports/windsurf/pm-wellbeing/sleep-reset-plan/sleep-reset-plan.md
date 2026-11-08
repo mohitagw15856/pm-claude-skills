@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "I sleep 8 hours but still feel exhausted — what should I check?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sleep-reset-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: sleep-reset-plan | source: skills/sleep-reset-plan/SKILL.md | sha256: 8f2729e1cef3171d8ad78ae8d0897f0ad4eff71369bc2eb2b7f019106c6a76db | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

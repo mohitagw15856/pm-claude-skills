@@ -78,3 +78,6 @@ Insurance-claim practice — complete incident documentation, itemised evidenced
 - "Appeal a denied claim."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/insurance-claim.html
+
+<!-- pm-claude-skills v83.2.0 | skill: insurance-claim | source: skills/insurance-claim/SKILL.md | sha256: 7316831b3590d6d6013ff4898ec46daa560df1324ab8a262cc9aa8d8855cbc5b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

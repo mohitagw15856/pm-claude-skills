@@ -75,3 +75,6 @@ Ask for these if not provided:
 - "Is the exit interview confidential?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/exit-interview-strategy.html
+
+<!-- pm-claude-skills v83.2.0 | skill: exit-interview-strategy | source: skills/exit-interview-strategy/SKILL.md | sha256: c390c665a5128ab44e78aa987211f5413a883fff9111df8e639275ab189c31bd | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

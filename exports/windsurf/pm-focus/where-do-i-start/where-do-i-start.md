@@ -64,3 +64,6 @@ Ask for these if not provided:
 - "I don't know where to start with any of this."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/where-do-i-start.html
+
+<!-- pm-claude-skills v83.2.0 | skill: where-do-i-start | source: skills/where-do-i-start/SKILL.md | sha256: 43024008d73328656d2fcd9955934744b687fe4386fa046f18cc2f6321ec14e9 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

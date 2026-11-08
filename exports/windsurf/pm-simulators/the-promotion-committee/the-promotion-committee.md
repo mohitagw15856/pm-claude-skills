@@ -74,3 +74,6 @@ Ask for these if not provided:
 - "Why did my promo get rejected?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-promotion-committee.html
+
+<!-- pm-claude-skills v83.2.0 | skill: the-promotion-committee | source: skills/the-promotion-committee/SKILL.md | sha256: a4e16c200725c489bb65a8602131d7e4f336d8ace0846ee720dedbc95398c86c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

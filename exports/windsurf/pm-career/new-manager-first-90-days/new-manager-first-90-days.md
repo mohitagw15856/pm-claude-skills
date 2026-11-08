@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "What are the biggest mistakes new managers make and how do I avoid them?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/new-manager-first-90-days.html
+
+<!-- pm-claude-skills v83.2.0 | skill: new-manager-first-90-days | source: skills/new-manager-first-90-days/SKILL.md | sha256: c7833b0f6bcc03c5a7baf8e2b97f8f987e2533606b6d7d340bb35added478e59 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

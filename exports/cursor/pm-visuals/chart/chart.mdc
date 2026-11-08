@@ -78,3 +78,6 @@ Data-visualization practice (chart-type-to-intent: trend/comparison/composition)
 - "Show these numbers as a picture instead of a table."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/chart.html
+
+<!-- pm-claude-skills v83.2.0 | skill: chart | source: skills/chart/SKILL.md | sha256: 530cd0840c73d781c6bd63348fd1b05807cf074f9046401cc9097f7aeb447626 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

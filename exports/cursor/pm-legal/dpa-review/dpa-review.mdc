@@ -71,3 +71,6 @@ Ask for these if not provided:
 - "Check this DPA — we're the controller, it's a GDPR deal."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dpa-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: dpa-review | source: skills/dpa-review/SKILL.md | sha256: c763a027e7cac3caff93b9b9efa2f23f59f9bd4135944fbf16cbcd8a54b71aff | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -147,3 +147,6 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Define launch tiers."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/go-to-market-planner.html
+
+<!-- pm-claude-skills v83.2.0 | skill: go-to-market-planner | source: skills/go-to-market-planner/SKILL.md | sha256: 34d76001aaf1742f007e49ee6d751231bb83d05a4d53db479ce23b19886018b0 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

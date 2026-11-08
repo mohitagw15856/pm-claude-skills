@@ -300,3 +300,6 @@ For tool-using agents that can reach the team's communication channels (Slack, e
 - "Write an executive briefing."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stakeholder-update.html
+
+<!-- pm-claude-skills v83.2.0 | skill: stakeholder-update | source: skills/stakeholder-update/SKILL.md | sha256: 28692408b37b42fec9e26ae4ed6b7e3ecdca271799f2e9c7ddb0ac42ee342c3a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "Decompile my anxiety into something I can deal with."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-worry-decompiler.html
+
+<!-- pm-claude-skills v83.2.0 | skill: the-worry-decompiler | source: skills/the-worry-decompiler/SKILL.md | sha256: ea88ee731fc88ecb987b5aa0f4fa640123ad9d589f60092829fbfb17e6d79b2d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

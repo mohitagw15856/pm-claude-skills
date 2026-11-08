@@ -66,3 +66,6 @@ Ask for these if not provided:
 - "Manage my waiting-on list."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/follow-up-chaser.html
+
+<!-- pm-claude-skills v83.2.0 | skill: follow-up-chaser | source: skills/follow-up-chaser/SKILL.md | sha256: f89de6678a4547c3d4d0688d01c5cc1870f47c87c2842ee6a3dd7ec3bb271b83 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

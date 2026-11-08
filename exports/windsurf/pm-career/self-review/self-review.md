@@ -64,3 +64,6 @@ Competency-based performance-review practice — evidence-mapped accomplishments
 - "Turn my year into a performance self-review."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/self-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: self-review | source: skills/self-review/SKILL.md | sha256: 9c12ee3338b3a23e2bcac6c705737b872d54dd243594e4c43b851101ca33182e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

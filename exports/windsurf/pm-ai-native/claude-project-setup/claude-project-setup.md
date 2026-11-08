@@ -67,3 +67,6 @@ Ask for these if not provided:
 - "Onboard an AI coding agent to my project properly."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/claude-project-setup.html
+
+<!-- pm-claude-skills v83.2.0 | skill: claude-project-setup | source: skills/claude-project-setup/SKILL.md | sha256: 1cc51e62bd338f9703a7f06806c37f4c2d25560da74e17983660b646fcef07b7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

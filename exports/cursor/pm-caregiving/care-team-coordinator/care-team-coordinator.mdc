@@ -74,3 +74,6 @@ Ask for these if not provided:
 - "Organize the medical, daily, and financial sides of caring for someone."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/care-team-coordinator.html
+
+<!-- pm-claude-skills v83.2.0 | skill: care-team-coordinator | source: skills/care-team-coordinator/SKILL.md | sha256: 5200145f4e2070e0198369b5ea34774fcad84eddee21147d4b1a22b57c964b5a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -87,3 +87,6 @@ If the brief is thin, propose a default weighting and label it `[assumed — con
 - "Decide which bidder to award."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rfp-scoring-matrix.html
+
+<!-- pm-claude-skills v83.2.0 | skill: rfp-scoring-matrix | source: skills/rfp-scoring-matrix/SKILL.md | sha256: 15a77549011f3febf7a5ecf2fabc306bb6e20b4d54ae0045232bb5854eb9c304 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

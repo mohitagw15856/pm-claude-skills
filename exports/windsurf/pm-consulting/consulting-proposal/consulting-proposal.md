@@ -66,3 +66,6 @@ Value-based consulting-proposal practice (Alan Weiss-style outcomes-over-hours, 
 - "Respond to an RFP."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/consulting-proposal.html
+
+<!-- pm-claude-skills v83.2.0 | skill: consulting-proposal | source: skills/consulting-proposal/SKILL.md | sha256: d2d99194813bc3c4704379e1d62d57a1cabbe4edc3f4b4949a613ea91e74b345 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

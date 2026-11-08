@@ -68,3 +68,6 @@ Ordered by impact-on-the-decision: what to fix first, how (drop / impute / dedup
 - "Explain why numbers look off."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-quality-audit.html
+
+<!-- pm-claude-skills v83.2.0 | skill: data-quality-audit | source: skills/data-quality-audit/SKILL.md | sha256: 8ca6464aaa71851225d72bf1fc93bb4b65933a68e523eba8532c9dad2d33d193 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -94,3 +94,6 @@ CSRD/ESRS disclosure architecture (double materiality, policies–actions–metr
 - "Turn raw sustainability data into disclosure text."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/esg-disclosure-draft.html
+
+<!-- pm-claude-skills v83.2.0 | skill: esg-disclosure-draft | source: skills/esg-disclosure-draft/SKILL.md | sha256: 3fde4ab4bfdeb277aed4c189068d95ac5aeb55cc05042c2469291151e85941c1 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

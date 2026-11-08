@@ -67,3 +67,6 @@ Ask for these if not provided:
 - "I'm job-hunting — what should I lock down or remove?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/oversharing-audit.html
+
+<!-- pm-claude-skills v83.2.0 | skill: oversharing-audit | source: skills/oversharing-audit/SKILL.md | sha256: 582ded43a71cc5e9d6e88f08ac0a18438865d1c8630c887a89350520fabdc218 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

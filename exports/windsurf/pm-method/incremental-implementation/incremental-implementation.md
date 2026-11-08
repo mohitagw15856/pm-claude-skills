@@ -59,3 +59,6 @@ The big-bang failure is always the same story: three hours of changes, then "it 
 - "Implement this multi-part feature without breaking things."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/incremental-implementation.html
+
+<!-- pm-claude-skills v83.2.0 | skill: incremental-implementation | source: skills/incremental-implementation/SKILL.md | sha256: 1868d1810af571c552bebd344b015d17c1c27e2bf41cf398c00a94c4685b41f0 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

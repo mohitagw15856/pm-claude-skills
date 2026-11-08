@@ -236,3 +236,6 @@ How we'll know the partnership is working:
 - [ ] Do not write a go-to-market plan with "TBD" owners — every activity must have a named owner on at least one side before the proposal goes out
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/partnership-proposal.html
+
+<!-- pm-claude-skills v83.2.0 | skill: partnership-proposal | source: skills/partnership-proposal/SKILL.md | sha256: 6c7217fe59992e9e4c82b9e66d6b426e7642056156987f0159450d2be86fd4d6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

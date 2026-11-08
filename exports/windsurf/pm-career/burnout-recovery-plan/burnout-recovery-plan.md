@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "I rested but the burnout came right back — what am I missing?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/burnout-recovery-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: burnout-recovery-plan | source: skills/burnout-recovery-plan/SKILL.md | sha256: 1b4bf6b4653c38e5d106e8d696e5a074bc03e22d6c72b31142529636b2ff443e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

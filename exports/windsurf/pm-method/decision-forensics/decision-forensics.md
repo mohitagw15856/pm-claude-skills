@@ -79,3 +79,6 @@ Ask for these if not provided:
 - "Reconstruct this discussion."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-forensics.html
+
+<!-- pm-claude-skills v83.2.0 | skill: decision-forensics | source: skills/decision-forensics/SKILL.md | sha256: 32c7e2e6716c5597b51e86a44eb7cccee08e5de9576ed93234d0a328a8242623 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

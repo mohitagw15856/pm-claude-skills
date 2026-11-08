@@ -64,3 +64,6 @@ Ask for these if not provided:
 - "What is this news story actually about?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/explain-simply.html
+
+<!-- pm-claude-skills v83.2.0 | skill: explain-simply | source: skills/explain-simply/SKILL.md | sha256: 7c03ed4439e1fb2bef911b07932d26ed9bd91ea342c4e336e3545bbfaa54b713 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

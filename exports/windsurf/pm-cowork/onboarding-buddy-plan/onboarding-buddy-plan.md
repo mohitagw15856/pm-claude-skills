@@ -71,3 +71,6 @@ Ask for these if not provided:
 - "Our onboarding is docs with no humans."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/onboarding-buddy-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: onboarding-buddy-plan | source: skills/onboarding-buddy-plan/SKILL.md | sha256: 7201ea86222f1a18b92c066051e8a422e1ee6b335065748be490405eefbe5ad4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

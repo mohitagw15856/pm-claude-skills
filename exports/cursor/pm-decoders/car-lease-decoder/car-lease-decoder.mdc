@@ -69,3 +69,6 @@ End verbatim: *"This is a plain-language reading, not financial advice — lease
 - "Review this lease before I sign."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/car-lease-decoder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: car-lease-decoder | source: skills/car-lease-decoder/SKILL.md | sha256: a8772fa064934e3920b922dc5acab697cea72d6a7f8e7559c0a1782fe4545804 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

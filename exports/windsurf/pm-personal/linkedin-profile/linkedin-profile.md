@@ -61,3 +61,6 @@ LinkedIn profile-optimisation practice — keyword-aware headline/About, hook-be
 - "Optimise my LinkedIn profile."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/linkedin-profile.html
+
+<!-- pm-claude-skills v83.2.0 | skill: linkedin-profile | source: skills/linkedin-profile/SKILL.md | sha256: 7fb8717193562253ba1086ca78ce81b96bf9523e1730c34011a09a84f80f2f4a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

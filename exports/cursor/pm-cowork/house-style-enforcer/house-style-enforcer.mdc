@@ -71,3 +71,6 @@ Ask for these if not provided:
 - "Check this draft against house style."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/house-style-enforcer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: house-style-enforcer | source: skills/house-style-enforcer/SKILL.md | sha256: 68234902e27f5c7d7c4e47d9dcf334cd90ab33f463122b7ea9ea3e6c550a0a56 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

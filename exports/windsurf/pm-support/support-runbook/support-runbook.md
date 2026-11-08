@@ -68,3 +68,6 @@ Support-operations practice — issue triage, decision-tree diagnosis, time-boxe
 - "Write the tier-1 response procedure."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/support-runbook.html
+
+<!-- pm-claude-skills v83.2.0 | skill: support-runbook | source: skills/support-runbook/SKILL.md | sha256: 0b4ea55e26a3801466d625edcf208466c8f1434670e6649d40aad2c9a4582b96 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

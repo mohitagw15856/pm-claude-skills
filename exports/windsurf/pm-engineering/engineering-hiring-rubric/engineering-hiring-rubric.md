@@ -352,3 +352,6 @@ Brief every interviewer on these before they conduct their first interview for t
 - "Build a technical scorecard."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/engineering-hiring-rubric.html
+
+<!-- pm-claude-skills v83.2.0 | skill: engineering-hiring-rubric | source: skills/engineering-hiring-rubric/SKILL.md | sha256: cff0c6f2547f9bc06410154bb5ac12c1b2506c876c537e33291ac1eb518f53c5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

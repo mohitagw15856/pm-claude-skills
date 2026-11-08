@@ -260,3 +260,6 @@ For each component, assess against these quality criteria:
 - "What's wrong with our design system and what should we fix first?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/design-system-audit.html
+
+<!-- pm-claude-skills v83.2.0 | skill: design-system-audit | source: skills/design-system-audit/SKILL.md | sha256: 4810da6f62b180e053d7899123328f0495b2ab6355e87bf8c44db6ec714bac97 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

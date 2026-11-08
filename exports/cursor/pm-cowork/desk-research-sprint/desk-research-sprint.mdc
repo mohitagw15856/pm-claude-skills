@@ -72,3 +72,6 @@ Ask for these if not provided:
 - "I keep researching and never concluding."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/desk-research-sprint.html
+
+<!-- pm-claude-skills v83.2.0 | skill: desk-research-sprint | source: skills/desk-research-sprint/SKILL.md | sha256: 6563710d057ff5436ab2da0370754da78672b183cc92cdfcbdf59702af3955f6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

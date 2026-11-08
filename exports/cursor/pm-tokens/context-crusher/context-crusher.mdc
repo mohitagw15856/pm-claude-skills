@@ -77,3 +77,6 @@ The context-compression layer pattern — structural compression of tool outputs
 - "Stop wasting tokens on raw data."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/context-crusher.html
+
+<!-- pm-claude-skills v83.2.0 | skill: context-crusher | source: skills/context-crusher/SKILL.md | sha256: cb3174cbb806a2b8137178b70cf09cd9fd09a9c8e5e1f376b07b0d88821f9bed | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

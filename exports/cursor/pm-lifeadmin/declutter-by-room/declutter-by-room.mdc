@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "How do I stop the clutter from coming back?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/declutter-by-room.html
+
+<!-- pm-claude-skills v83.2.0 | skill: declutter-by-room | source: skills/declutter-by-room/SKILL.md | sha256: d707d949b2fe3e9ee055727d54117932e2e125e499902987d2e51da1e0a36d91 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

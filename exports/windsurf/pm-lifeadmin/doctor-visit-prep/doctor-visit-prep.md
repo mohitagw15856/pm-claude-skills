@@ -76,3 +76,6 @@ Dismissed: "[the chart-documentation line]" · Alternatives: "What else could th
 - "I always forget what to ask."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/doctor-visit-prep.html
+
+<!-- pm-claude-skills v83.2.0 | skill: doctor-visit-prep | source: skills/doctor-visit-prep/SKILL.md | sha256: e22ceb894b802310d893f7f4a2413c4c8cce16786fd713b6086db1ac02b35e10 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

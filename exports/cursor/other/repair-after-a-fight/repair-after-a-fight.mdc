@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "What do I say to make up after a big blowup?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/repair-after-a-fight.html
+
+<!-- pm-claude-skills v83.2.0 | skill: repair-after-a-fight | source: skills/repair-after-a-fight/SKILL.md | sha256: bb454bc2eac1754d63127e2e6863bef277246ae066c86a71860a29bd4a0d655f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

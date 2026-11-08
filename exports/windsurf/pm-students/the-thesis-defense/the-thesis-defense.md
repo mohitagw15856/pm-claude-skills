@@ -73,3 +73,6 @@ Ask for these if not provided:
 - "Prep me for my viva."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-thesis-defense.html
+
+<!-- pm-claude-skills v83.2.0 | skill: the-thesis-defense | source: skills/the-thesis-defense/SKILL.md | sha256: a9a473bbfc015c39dcbbc0b0482219066e5012f9c7d0ce94aaa34bec936a728b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

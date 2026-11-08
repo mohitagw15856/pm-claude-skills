@@ -10,6 +10,7 @@ instrument that produced it and the raw data it stands on. Cite freely.
 | Report | Cadence | Instrument | Source data |
 | --- | --- | --- | --- |
 | [State of Professional AI](state-of-professional-ai-2026.md) | Annual (+ mid-year) | [`scripts/build-annual-report.mjs`](../../scripts/build-annual-report.mjs) | census + SkillBench + the Season + repo vitals |
+| [Year in review](https://mohitagw15856.github.io/pm-claude-skills/report/) | Annual, regenerated on every deploy | [`scripts/build-year-in-review.mjs`](../../scripts/build-year-in-review.mjs) | git history (commits, skills added, releases, authors) + evolution log + contributor roll + trust numbers + vitals; print styles for the PDF |
 | [State of Agent Skills (census)](state-of-agent-skills-2026-07-06.md) | Weekly | [`scripts/skill-census.mjs`](../../scripts/skill-census.mjs) | GitHub `SKILL.md` code search |
 | Scheduled operator digests | Configurable | [`scripts/scheduled-report.mjs`](../../scripts/scheduled-report.mjs) | your inputs, via a chosen skill → [`scheduled/`](scheduled/) |
 | [SkillBench (working paper)](../paper/skillbench.md) | Per benchmark release | [`skillbench/run-skillbench.mjs`](../../skillbench/run-skillbench.mjs) | frozen task set + pinned judge |

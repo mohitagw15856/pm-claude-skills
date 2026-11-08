@@ -250,3 +250,6 @@ How we'll measure success:
 - "What should I include in an influencer campaign brief?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/influencer-brief.html
+
+<!-- pm-claude-skills v83.2.0 | skill: influencer-brief | source: skills/influencer-brief/SKILL.md | sha256: 5532bca87d824fd4759abae0b39cb0e76f9aa3bde518b1cd0d1077691e7cf8f7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

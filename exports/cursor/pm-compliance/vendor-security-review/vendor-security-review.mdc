@@ -77,3 +77,6 @@ Third-party / vendor risk management practice — data-and-access-driven tiering
 - "Decide what due diligence a new tool needs."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vendor-security-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: vendor-security-review | source: skills/vendor-security-review/SKILL.md | sha256: 5d9b736fce7d6f9209c8eb83f50326c21d5326249f5a0d254b75db55bc508b92 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

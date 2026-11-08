@@ -67,3 +67,6 @@ Ask for these if not provided:
 - "Why do our threads never conclude?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/thread-to-decision.html
+
+<!-- pm-claude-skills v83.2.0 | skill: thread-to-decision | source: skills/thread-to-decision/SKILL.md | sha256: 58452ae4b15a8833a9d5c4dc090c72f973b44fe9daadca415e0707db105b6960 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

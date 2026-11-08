@@ -63,3 +63,6 @@ Given only the platform, **write the full watch anyway**: low stock at 7 days of
 - "Daily shop health check"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/store-watch.html
+
+<!-- pm-claude-skills v83.2.0 | skill: store-watch | source: skills/store-watch/SKILL.md | sha256: 201708c553c42d752820ec18134907c477efd65142768b1c32bb52699a1f32f3 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -107,3 +107,6 @@ If readiness lags the tier the impact warrants, flag the gap rather than downgra
 - "Plan T2 launch activities and owners for [product]"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/launch-tiering-framework.html
+
+<!-- pm-claude-skills v83.2.0 | skill: launch-tiering-framework | source: skills/launch-tiering-framework/SKILL.md | sha256: e1faea00be2afeb899b48af30ed34efca7c2ba77d724735250b683c2068d5dec | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

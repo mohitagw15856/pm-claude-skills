@@ -121,3 +121,6 @@ real budget.
 - "Inherits a shoebox of receipts."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/volunteer-treasurer-basics.html
+
+<!-- pm-claude-skills v83.2.0 | skill: volunteer-treasurer-basics | source: skills/volunteer-treasurer-basics/SKILL.md | sha256: ab332dd759d82a0baed6eed7c90f4005403670620e1a867d5eee39d98f4c0e5b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

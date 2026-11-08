@@ -103,3 +103,6 @@ GHG Protocol Corporate Standard and Scope 2/Scope 3 guidance practice (boundarie
 - "Prepare emissions data for assurance."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/carbon-accounting-check.html
+
+<!-- pm-claude-skills v83.2.0 | skill: carbon-accounting-check | source: skills/carbon-accounting-check/SKILL.md | sha256: d3da04298e48e15b00ad2f674c25d1322c651538271180794f45a5a3f85d61b6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

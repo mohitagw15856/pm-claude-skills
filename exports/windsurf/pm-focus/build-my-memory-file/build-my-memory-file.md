@@ -78,3 +78,6 @@ Ask for these if not provided:
 - "Help my AI remember my patterns and past mistakes."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/build-my-memory-file.html
+
+<!-- pm-claude-skills v83.2.0 | skill: build-my-memory-file | source: skills/build-my-memory-file/SKILL.md | sha256: ded779949266bee053881d6ede06e7b0cb7b411d89c0cdd7129004af0e7ad7dc | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

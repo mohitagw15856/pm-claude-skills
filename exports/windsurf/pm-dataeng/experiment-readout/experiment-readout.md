@@ -79,3 +79,6 @@ Frequentist A/B analysis — two-proportion z-test, confidence intervals, guardr
 - "Decide ship/no-ship from test data."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/experiment-readout.html
+
+<!-- pm-claude-skills v83.2.0 | skill: experiment-readout | source: skills/experiment-readout/SKILL.md | sha256: 15033db90b5fd4e6c830548045f8e738e4bb85fc36bf5e06b571a37bd4e7a810 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

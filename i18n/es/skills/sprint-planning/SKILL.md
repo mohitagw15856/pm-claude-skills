@@ -116,6 +116,24 @@ El script retorna horas de enfoque disponibles, una figura de velocidad ajustada
 - Si no se proporcionan datos de velocidad, asume 20–30 points para un equipo de 5 personas como punto de partida
 - Destaca cualquier historia con propiedad poco clara como bloqueador
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/capacity-honesty.md`** — Honestidad sobre la capacidad: los números con los que los equipos se engañan. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/planning-worksheet.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| Calidad del objetivo del sprint | El objetivo es una lista de tareas ("hacer las historias 1–8") o falta por completo | Con sabor a resultado pero vago; no puntuable como aprobado/suspenso al final del sprint | Una única frase de resultado con el beneficio para el usuario o el negocio y un indicador de éxito, puntuable sin ambigüedad al final del sprint |
+| Honestidad sobre la capacidad | El compromiso asume el 100 % de la capacidad teórica; se ignoran los arrastres | Disponibilidad ajustada, pero se salta la ratio de compromiso del 80 % o los puntos arrastrados no se restan antes de tomar trabajo nuevo | Disponibilidad real (vacaciones, reuniones, horas de concentración), arrastres descontados primero, y compromiso limitado al 80 % de la velocidad ajustada |
+| Preparación de las historias | Las historias carecen de criterios de aceptación, estimaciones o responsables | La mayoría de las historias están estimadas y asignadas, pero las de 8 puntos o más no se dividen o los criterios de aceptación no son comprobables | Cada historia tiene un responsable, puntos calibrados y criterios de aceptación comprobables; cada historia de 8 puntos o más se marca para dividir |
+| Visibilidad de riesgos y dependencias | Sin riesgos ni dependencias | Riesgos genéricos ("podría retrasarse") sin mitigaciones ni responsables | Bloqueos concretos y dependencias entre equipos, cada uno con una mitigación concreta y un responsable con nombre |
+
 ## Controles de Calidad
 
 - [ ] El objetivo del sprint es enfocado en resultados (no "implementar X" — algo como "los usuarios pueden hacer Y")
@@ -155,3 +173,12 @@ Para agentes que usan herramientas o acceso a computadora que pueden alcanzar el
 ### Rollback
 - Deshacer = mover los elementos de vuelta al backlog y eliminar el contenedor de sprint vacío.
 - Para y pregunta a un humano si: cualquier elemento en el plan ya no existe o cambió desde la aprobación, el tracker rechaza una acción, o la placa contiene un sprint activo con fechas superpuestas.
+
+## Frases de activación de ejemplo
+
+- "Planifica un sprint."
+- "Organiza los elementos del backlog."
+- "Crea los objetivos del sprint."
+- "Prepara las agendas de planificación del sprint."
+
+Ejecuta esta habilidad en tu navegador: https://mohitagw15856.github.io/pm-claude-skills/skill/sprint-planning.html

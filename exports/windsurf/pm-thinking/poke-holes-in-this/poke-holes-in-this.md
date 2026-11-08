@@ -67,3 +67,6 @@ Ask for these if not provided:
 - "Rip into this draft so I can fix it."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/poke-holes-in-this.html
+
+<!-- pm-claude-skills v83.2.0 | skill: poke-holes-in-this | source: skills/poke-holes-in-this/SKILL.md | sha256: 19cd850513de30c9b2cfb9d293e444bc13a9570573a6fda1385be8bab34bdce0 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -93,3 +93,6 @@ Data modeling (entity-relationship modeling, crow's-foot notation, normalization
 - "Diagram a database."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/entity-relationship-diagram.html
+
+<!-- pm-claude-skills v83.2.0 | skill: entity-relationship-diagram | source: skills/entity-relationship-diagram/SKILL.md | sha256: 45874980a9a4884729004563d90e77ecdf6d942319df8d031dfdb79b81153944 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

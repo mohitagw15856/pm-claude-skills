@@ -76,3 +76,6 @@ Guardrails: never overwrite the source — always a new copy; preserve facts and
 - "Reorganise my proposal doc around what the reader has to decide."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/doc-restructure-live.html
+
+<!-- pm-claude-skills v83.2.0 | skill: doc-restructure-live | source: skills/doc-restructure-live/SKILL.md | sha256: 2dfc47e630ddb64ce82919dd10736bc51fd124e51299e93f4915d126e05937af | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

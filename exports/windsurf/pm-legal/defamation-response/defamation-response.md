@@ -71,3 +71,6 @@ Ask for these if not provided:
 - "Should I sue for defamation or is there a better first step?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/defamation-response.html
+
+<!-- pm-claude-skills v83.2.0 | skill: defamation-response | source: skills/defamation-response/SKILL.md | sha256: 5324186816492fb7e53251a5067defcc62de4f584d738fdf3b16867d86fc64b5 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

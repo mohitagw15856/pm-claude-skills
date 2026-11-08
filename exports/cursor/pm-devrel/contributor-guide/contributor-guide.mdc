@@ -77,3 +77,6 @@ Open-source contribution best practices (clear setup, defined workflow, good-fir
 - "Make a repo welcoming to contributors."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/contributor-guide.html
+
+<!-- pm-claude-skills v83.2.0 | skill: contributor-guide | source: skills/contributor-guide/SKILL.md | sha256: 50b11dc6f2e8e83769fa4e7783701d46a38819f8093d97d234a73d8f800a89be | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -74,3 +74,6 @@ Two alternative headlines, one more playful and one more formal.
 - "Write Cantonese social copy for our Hong Kong launch."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hk-cantonese-copy.html
+
+<!-- pm-claude-skills v83.2.0 | skill: hk-cantonese-copy | source: skills/hk-cantonese-copy/SKILL.md | sha256: 0caffe80bb001c6f7862c97933c043496622393bc120e4575bdf8674281d92de | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

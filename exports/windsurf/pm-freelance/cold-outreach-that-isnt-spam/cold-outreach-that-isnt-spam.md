@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "Write a follow-up sequence for prospects who didn't reply."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cold-outreach-that-isnt-spam.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cold-outreach-that-isnt-spam | source: skills/cold-outreach-that-isnt-spam/SKILL.md | sha256: 8cefd39030fbdb09222d4656677ff1a85ffb8d8235db05448f73fd3595a8c921 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

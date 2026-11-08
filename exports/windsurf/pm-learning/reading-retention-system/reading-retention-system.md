@@ -64,3 +64,6 @@ Ask for these if not provided:
 - "Help me get more out of the books I read."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/reading-retention-system.html
+
+<!-- pm-claude-skills v83.2.0 | skill: reading-retention-system | source: skills/reading-retention-system/SKILL.md | sha256: 0bcd7cbe974bc663d2a5311c787fc436007713852af5511e7eadbc4346ab6a60 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -71,3 +71,6 @@ Five likely questions from the 评委 or 教研组 (why this method, how you kno
 - "Help me prepare an observed lesson and lesson talk for a Chinese school competition."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-open-class.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-open-class | source: skills/cn-open-class/SKILL.md | sha256: 9e92d50f6cfe9312884e542a1df5f2e2544b7b4ac7aac88db1d1fade0626efc6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

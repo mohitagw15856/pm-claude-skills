@@ -68,3 +68,6 @@ Ask for these if not provided:
 - "A real project to learn Python, scoped to a beginner."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/learn-from-a-project.html
+
+<!-- pm-claude-skills v83.2.0 | skill: learn-from-a-project | source: skills/learn-from-a-project/SKILL.md | sha256: 81c69ed6408c6827507acacc8e344db8f9d8ec2a34a34b4ce150197dad88f58f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

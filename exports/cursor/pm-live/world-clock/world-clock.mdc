@@ -66,3 +66,6 @@ Source: [timeapi.io / worldtimeapi] · rerun: `[exact curl]`
 - "What's the UTC offset somewhere?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/world-clock.html
+
+<!-- pm-claude-skills v83.2.0 | skill: world-clock | source: skills/world-clock/SKILL.md | sha256: 173d0cd4bb37923d319db29d5e013bb04a487d1a67aec1739a79f7d5ee6294e2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

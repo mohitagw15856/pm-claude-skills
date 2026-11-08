@@ -66,3 +66,6 @@ Ask for these if not provided:
 - "It worked last month and now every loaf is a brick."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sourdough-troubleshooter.html
+
+<!-- pm-claude-skills v83.2.0 | skill: sourdough-troubleshooter | source: skills/sourdough-troubleshooter/SKILL.md | sha256: b9efcb1cf3db8753ba799b8e42214c721390515cc8bbbf13c11e507e2ff85058 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

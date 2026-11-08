@@ -73,3 +73,6 @@ Ask for these if not provided:
 - "Weekend city break — give me a day-by-day and a packing list."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/trip-planner.html
+
+<!-- pm-claude-skills v83.2.0 | skill: trip-planner | source: skills/trip-planner/SKILL.md | sha256: adacddb3fdc6e51b343e7c24e1373a240b7e1f44ec2596176e4113d76b9b1ee3 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

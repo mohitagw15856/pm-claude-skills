@@ -286,3 +286,6 @@ This skill activates on phrases including:
 - "Calculate lifetime value by acquisition period."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cohort-analysis.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cohort-analysis | source: skills/cohort-analysis/SKILL.md | sha256: a746da5692e430662de9cf0121ccd160cc71dbb12a47f68d0b83e2d28e789d03 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

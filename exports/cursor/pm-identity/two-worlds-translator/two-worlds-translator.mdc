@@ -128,3 +128,6 @@ third party.
 - "Is a first/second-gen immigrant?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/two-worlds-translator.html
+
+<!-- pm-claude-skills v83.2.0 | skill: two-worlds-translator | source: skills/two-worlds-translator/SKILL.md | sha256: 1f4b769e207435729806b788decedeb40428d2e52544e9d51ebb3450dbf50d4d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

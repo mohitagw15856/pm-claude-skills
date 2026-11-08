@@ -70,3 +70,6 @@ Structured interview preparation — STAR/behavioural method, competency-mapped 
 - "Get ready for a behavioural/case/PM round."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/interview-prep.html
+
+<!-- pm-claude-skills v83.2.0 | skill: interview-prep | source: skills/interview-prep/SKILL.md | sha256: 5a9878c27cea76cc8545e1bd2ad3828d5a3bfc417ce2a487b1cc7e68c3b6f1c2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

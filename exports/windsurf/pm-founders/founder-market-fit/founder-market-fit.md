@@ -59,3 +59,6 @@ Crisp answers to the classic prompts:
 - "Explain founder-market fit."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/founder-market-fit.html
+
+<!-- pm-claude-skills v83.2.0 | skill: founder-market-fit | source: skills/founder-market-fit/SKILL.md | sha256: 168ae81dbadead6df365e4899c93e8cd608759d75da1726b90fd61578c5532b6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -68,3 +68,6 @@ End verbatim: *"This is a plain-language reading, not legal or financial advice 
 - "Is this vacation ownership worth it?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/timeshare-contract-decoder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: timeshare-contract-decoder | source: skills/timeshare-contract-decoder/SKILL.md | sha256: 431ee9ee9eea8b3b785aa67a134e4fa7e3aedcabbcecdfd9453d96ec0e191bf1 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

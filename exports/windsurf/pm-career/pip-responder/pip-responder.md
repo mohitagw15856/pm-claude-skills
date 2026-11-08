@@ -75,3 +75,6 @@ Ask for these if not provided:
 - "Write my PIP check-in updates."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pip-responder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: pip-responder | source: skills/pip-responder/SKILL.md | sha256: 683c642361b0bb7b5bdf01a6c0e1890abd3a06044a72cac183aa81aca30fd22d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

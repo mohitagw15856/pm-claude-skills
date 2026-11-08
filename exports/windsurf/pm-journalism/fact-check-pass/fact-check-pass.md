@@ -63,3 +63,6 @@ What's still open before this can publish, and a note that quotes should be conf
 - "Do editorial verification."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/fact-check-pass.html
+
+<!-- pm-claude-skills v83.2.0 | skill: fact-check-pass | source: skills/fact-check-pass/SKILL.md | sha256: bc8802dd1d6c6dac262bfb0d85939473951765146dd6e01f1adbcaba864adda2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

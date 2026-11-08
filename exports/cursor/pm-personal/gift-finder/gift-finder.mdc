@@ -67,3 +67,6 @@ Why it fits: [specific to them].
 - "I have no idea what to buy my teenage niece."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/gift-finder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: gift-finder | source: skills/gift-finder/SKILL.md | sha256: f6a850db4f3a1787c40bf5fa311002a7988f2e69883946c9e64642f01fd46e6c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

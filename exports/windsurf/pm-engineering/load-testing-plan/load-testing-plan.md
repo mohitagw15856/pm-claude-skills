@@ -447,3 +447,6 @@ load-test:
 - "Set performance regression gates for CI."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/load-testing-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: load-testing-plan | source: skills/load-testing-plan/SKILL.md | sha256: 4c772c2075caa76806263c439cbebe67b2333e0e8e26022a6cee7ddf1bd74b58 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -62,3 +62,6 @@ Ask for these if not provided:
 - "Give me an off-ramp from this — I'm hyperfocused."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hyperfocus-exit.html
+
+<!-- pm-claude-skills v83.2.0 | skill: hyperfocus-exit | source: skills/hyperfocus-exit/SKILL.md | sha256: 41f5de17f915ed48ae7fe5e90ab001d6180118b2a25b47d1f4acb926988af1fa | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -65,3 +65,6 @@ Items to claim later through 5월 종합소득세 확정신고 or a 경정청구
 - "How does year-end tax settlement work in Korea? I changed jobs in July."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/kr-year-end-tax-settlement.html
+
+<!-- pm-claude-skills v83.2.0 | skill: kr-year-end-tax-settlement | source: skills/kr-year-end-tax-settlement/SKILL.md | sha256: 7ff66453de1a8a7b107d9f883e792f4acf8a34cbf00d481b588fc85ee86109ee | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

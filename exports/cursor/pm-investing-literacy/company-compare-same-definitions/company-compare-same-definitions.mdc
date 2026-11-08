@@ -100,3 +100,6 @@ End verbatim: *"Educational, not financial advice. Decisions with real money bel
 `annual-report-tutor` (learn one report first), `audited-boundary-check` (inside/outside for one report in depth), `profit-to-cash-walk` (the FCF definition used here), `investing-vocabulary-explainer`.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/company-compare-same-definitions.html
+
+<!-- pm-claude-skills v83.2.0 | skill: company-compare-same-definitions | source: skills/company-compare-same-definitions/SKILL.md | sha256: b82a391c26bd24b47c69be7091aa63695515a311cbac18572ea20089c4d8a617 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

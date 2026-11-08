@@ -78,3 +78,6 @@ Clinical research practice — objective-endpoint-analysis alignment, explicit e
 - "Structure endpoints, eligibility and statistics for an interventional study."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/clinical-trial-protocol.html
+
+<!-- pm-claude-skills v83.2.0 | skill: clinical-trial-protocol | source: skills/clinical-trial-protocol/SKILL.md | sha256: 65eb2f1eaf069e36882435f03e58b2d5b0e1830696aa8a1df67b3db947774f0a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

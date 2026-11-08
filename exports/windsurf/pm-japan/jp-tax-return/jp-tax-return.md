@@ -59,3 +59,6 @@ The filing period (typically mid-February to mid-March; confirm the dates for th
 - "在日本做副业要报税吗？怎么用 e-Tax？"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/jp-tax-return.html
+
+<!-- pm-claude-skills v83.2.0 | skill: jp-tax-return | source: skills/jp-tax-return/SKILL.md | sha256: 60fa22a26152a170a53ed804f594824627a854be944b5b4bdc2c014590f8c5c6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

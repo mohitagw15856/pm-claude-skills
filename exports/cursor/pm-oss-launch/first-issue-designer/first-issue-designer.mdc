@@ -82,3 +82,6 @@ A short note (under 120 words) for a pinned issue or discussion: how to claim an
 - "Prepare my project for Hacktoberfest-style contributors."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/first-issue-designer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: first-issue-designer | source: skills/first-issue-designer/SKILL.md | sha256: 813ff26d09f86f2a780cfc0d7fb007fe9eba1e4e5433617219663d9c0c80e145 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

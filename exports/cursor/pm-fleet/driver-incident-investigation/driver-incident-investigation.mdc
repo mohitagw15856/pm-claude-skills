@@ -97,3 +97,6 @@ telematics ☐ · camera footage ☐ · ELD/tachograph ☐ · photographs ☐ ·
 - "Our driver had an accident — what do I do first?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/driver-incident-investigation.html
+
+<!-- pm-claude-skills v83.2.0 | skill: driver-incident-investigation | source: skills/driver-incident-investigation/SKILL.md | sha256: 0be7845c49308f282a33a7d88f911eb65ce7cd8ca7bfd7ce4744439f59660742 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

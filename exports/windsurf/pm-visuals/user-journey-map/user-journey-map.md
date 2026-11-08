@@ -81,3 +81,6 @@ Customer/user journey mapping (phases, actions, emotion curve, friction-to-oppor
 - "Find friction and drop-off points."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/user-journey-map.html
+
+<!-- pm-claude-skills v83.2.0 | skill: user-journey-map | source: skills/user-journey-map/SKILL.md | sha256: c3a6438cf8a0b513d8d5d14b7f3e601ee17b9a4051ed45ad5cf80e139a2177e2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

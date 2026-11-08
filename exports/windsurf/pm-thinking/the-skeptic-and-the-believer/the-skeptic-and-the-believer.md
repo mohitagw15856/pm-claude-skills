@@ -60,3 +60,6 @@ Ask for these if not provided:
 - "Talk me through both extremes on whether this is worth it."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-skeptic-and-the-believer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: the-skeptic-and-the-believer | source: skills/the-skeptic-and-the-believer/SKILL.md | sha256: 1dea112af8478b0515343c8f0aab926379bb082d89aa9526eed11e3d0aab97e0 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

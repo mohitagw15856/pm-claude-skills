@@ -84,3 +84,6 @@ This is not legal advice. A local tenants' union, housing advice service or lega
 - "Who pays for my furniture damaged in the flood, me or the landlord?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/renting-after-disaster-damage.html
+
+<!-- pm-claude-skills v83.2.0 | skill: renting-after-disaster-damage | source: skills/renting-after-disaster-damage/SKILL.md | sha256: d5c5d648ade0eef545e977a4f822466b7eaa58c8afb1eb47422f97039c8e85bf | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

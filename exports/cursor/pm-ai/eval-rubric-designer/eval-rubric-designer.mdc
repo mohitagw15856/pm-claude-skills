@@ -79,3 +79,6 @@ LLM-as-judge evaluation practice — orthogonal weighted dimensions, anchored sc
 - "Decide how to measure whether AI output is good."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/eval-rubric-designer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: eval-rubric-designer | source: skills/eval-rubric-designer/SKILL.md | sha256: acd5e130f73afd6645ef2738a50a9ab50b334d133d01031d4df5b186a7626eca | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

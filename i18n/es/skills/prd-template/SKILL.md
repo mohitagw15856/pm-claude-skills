@@ -8,6 +8,42 @@ description: "Crear un Documento de Requisitos de Producto siguiendo una estruct
 
 Esta habilidad ayuda a crear Documentos de Requisitos de Producto profesionales siguiendo mejores prácticas de la industria.
 
+## Dónde encaja — el centro de la columna vertebral
+
+Segundo en la columna vertebral de decisiones de producto: **`/assumption-mapper` → `prd-template` →
+`/rice-prioritisation` → `/roadmap-narrative`**. Recibe **la suposición más arriesgada**
+de `/assumption-mapper` (si se ejecutó, lee su mapa en lugar de volver a adivinar los riesgos)
+y entrega a `/rice-prioritisation` **la métrica de éxito del PRD**: el único número con línea base
+que se convierte en el *Impact* de RICE. Los términos compartidos (declaración del problema, hipótesis,
+métrica de éxito, procedencia) viven una sola vez en
+[`docs/craft/product-decisions.md`](../../docs/craft/product-decisions.md); úsalos
+exactamente así.
+
+## El ciclo
+
+Un PRD se escribe de fuera hacia dentro, el problema antes que la solución, siempre, en cuatro fases. La fase 1
+soporta todo el peso: un PRD construido sobre un problema difuso queda pulido hasta el final y aun así
+es erróneo.
+
+1. **Fija la declaración del problema.** Una frase: quién tiene qué problema, cuándo, y el
+   coste de dejarlo así. Sin lenguaje de solución. Todo lo que sigue debe remitir a esto.
+   **Está hecho cuando:** la declaración del problema se sostiene sola sin nombrar ninguna funcionalidad, y
+   un desconocido podría decir qué significa "resuelto".
+2. **Establece la línea base de la métrica de éxito.** El único número que demuestra que el problema se resolvió,
+   con su *línea base actual* y el movimiento que cuenta como éxito. Lleva aquí cualquier riesgo
+   de `/assumption-mapper` como pregunta abierta, no como apuesta silenciosa.
+   **Está hecho cuando:** la métrica tiene línea base (o se marca explícitamente como sin línea base)
+   y mide el problema, no la actividad.
+3. **Redacta las secciones, cada una remitiendo hacia arriba.** Rellena la plantilla (abajo) de modo que cada
+   requisito e historia remita a la declaración del problema; descarta lo que no lo haga.
+   Etiqueta los hechos con su procedencia: un número adivinado es una [corazonada], y así se marca.
+   **Está hecho cuando:** cada requisito remite a la declaración del problema y cada
+   hecho afirmado lleva [datos]/[corazonada]/[suposición].
+4. **Entrega.** Haz visibles la métrica de éxito y la(s) iniciativa(s) para que
+   `/rice-prioritisation` pueda puntuar el Impact desde *esta* métrica, no desde una reinventada.
+   **Está hecho cuando:** el PRD nombra la métrica y el alcance que `/rice-prioritisation` necesitaría
+   para puntuarla sin volver a preguntar.
+
 ## Entradas Requeridas
 
 Pregunta al usuario por estas si no están proporcionadas:
@@ -121,6 +157,17 @@ Formato: "Como [tipo de usuario], quiero [acción] para que [beneficio]"
 - Omitas el "por qué"
 - Olvides la accesibilidad
 
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| **Anclaje del problema** | Problema planteado desde la perspectiva de la empresa, o afirmado sin evidencia | Problema enmarcado desde el usuario, pero los datos de apoyo son vagos ("los usuarios están frustrados") y no se cita investigación | El problema es del usuario, cuantificado con datos del estado actual, y el Por qué ahora explica qué cambió; las afirmaciones remiten a investigación citada |
+| **Verificabilidad de los requisitos** | Los requisitos son cualidades vagas ("rápido", "intuitivo") que un revisor no podría verificar | La mayoría de los requisitos son concretos, pero los criterios de aceptación son escasos y los requisitos no funcionales son de plantilla | Cada elemento P0/P1/P2 y cada NFR es verificable (umbrales, percentiles, estándares) y remite a una historia de usuario o a un hallazgo de investigación |
+| **Rigor de las métricas** | Faltan métricas de éxito, o hay porcentajes sin línea base | Hay líneas base y objetivos, pero las métricas solo miden adopción; nada detectaría que la funcionalidad triunfa mientras el negocio pierde | Cada métrica tiene línea base → objetivo, el conjunto cubre resultado además de adopción, y al menos una barrera protege de ganar la métrica dañando al usuario |
+| **Honestidad sobre alcance y riesgo** | El MVP y las fases futuras se mezclan; no hay preguntas abiertas | Las fases están separadas, pero faltan las razones de los cortes y los desacuerdos se suavizan | Cada límite de fase tiene una razón declarada, las peticiones fuera de alcance se registran con condiciones de reentrada, y cada pregunta abierta tiene responsable, fecha límite y el coste de cada respuesta |
+
 ## Verificaciones de Calidad
 
 - [ ] La declaración del problema está escrita desde la perspectiva del usuario (no la de la empresa)
@@ -189,3 +236,12 @@ Criterios de Aceptación:
 
 [Continúa con 5-7 historias de usuario totales...]
 ```
+
+## Frases de activación de ejemplo
+
+- "Escribe un PRD."
+- "Escribe una especificación de producto para esta funcionalidad."
+- "Escribe la especificación de la funcionalidad."
+- "Escribe un documento de requisitos para una nueva funcionalidad."
+
+Ejecuta esta habilidad en tu navegador: https://mohitagw15856.github.io/pm-claude-skills/skill/prd-template.html

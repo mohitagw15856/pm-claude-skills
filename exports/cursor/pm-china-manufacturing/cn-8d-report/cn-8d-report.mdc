@@ -84,3 +84,6 @@ Closure criteria (for example no recurrence over three months or a set number of
 - "Write an 8D report for a customer complaint about a dimension defect."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-8d-report.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-8d-report | source: skills/cn-8d-report/SKILL.md | sha256: e7eb897a4e6e0e74bcb097278d007ea1a4a0365a19ce54cbe7db7357aa8be7eb | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

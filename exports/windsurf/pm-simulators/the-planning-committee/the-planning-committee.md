@@ -78,3 +78,6 @@ Ask for these if not provided:
 - "How do I answer the objectors?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-planning-committee.html
+
+<!-- pm-claude-skills v83.2.0 | skill: the-planning-committee | source: skills/the-planning-committee/SKILL.md | sha256: fb40d58198438f2b941e3ff50629cec812c01f7f476a84ca6386dcd35bd07315 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -66,3 +66,6 @@ Ask for these if not provided:
 - "New phone's rumored soon — should I wait or buy the current one cheap?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/big-purchase-timing.html
+
+<!-- pm-claude-skills v83.2.0 | skill: big-purchase-timing | source: skills/big-purchase-timing/SKILL.md | sha256: d4df8678d5e1921535d065a5bd85d0f71b947c141417e579541e3c5bc46b1d7c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

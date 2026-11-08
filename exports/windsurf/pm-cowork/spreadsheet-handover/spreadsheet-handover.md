@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "We inherited a workbook nobody understands."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/spreadsheet-handover.html
+
+<!-- pm-claude-skills v83.2.0 | skill: spreadsheet-handover | source: skills/spreadsheet-handover/SKILL.md | sha256: 73ca489b0c8cf1cef76c27ebd911ecd9a7ca53b167893622164b9ec0bec57281 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

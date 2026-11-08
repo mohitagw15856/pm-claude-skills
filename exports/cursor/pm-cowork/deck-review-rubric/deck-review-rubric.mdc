@@ -75,3 +75,6 @@ Ask for these if not provided:
 - "Our deck reviews are just font opinions."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/deck-review-rubric.html
+
+<!-- pm-claude-skills v83.2.0 | skill: deck-review-rubric | source: skills/deck-review-rubric/SKILL.md | sha256: ca6d44e8ede4d475ce682009d456aade513c24f6c1c117c1f96d454d21ab2d2f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

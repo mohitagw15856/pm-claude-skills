@@ -81,3 +81,6 @@ Ask for these if not provided:
 - "Help me read this price list."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/funeral-pricing-decoder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: funeral-pricing-decoder | source: skills/funeral-pricing-decoder/SKILL.md | sha256: b1d6d7b42302d3ad546107387dd67e8ea3cac5bf30ca17d0a4c8e511751b011f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

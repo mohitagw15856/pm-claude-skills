@@ -73,3 +73,6 @@ Ask for these if not provided:
 - "Track estate assets and debts."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/estate-settlement-organizer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: estate-settlement-organizer | source: skills/estate-settlement-organizer/SKILL.md | sha256: dd6599a9363ffd8d77b100d3fb3660da34d0e0b61a40c079631b038125c8cec4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

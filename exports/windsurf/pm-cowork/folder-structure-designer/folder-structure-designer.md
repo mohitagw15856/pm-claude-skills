@@ -70,3 +70,6 @@ _inbox/        → anything, when unsure — drained weekly
 - "Our files are chaos."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/folder-structure-designer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: folder-structure-designer | source: skills/folder-structure-designer/SKILL.md | sha256: b64684ed07b86d7424eac9be5e50725e77d9318a79893224efa91cb05f631e51 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

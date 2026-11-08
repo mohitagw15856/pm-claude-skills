@@ -63,3 +63,6 @@ A simple, teacher-doable method (tally, rating, frequency) and a review point to
 - "Set up positive behavior supports."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/behavior-intervention-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: behavior-intervention-plan | source: skills/behavior-intervention-plan/SKILL.md | sha256: ad6a4b803119205466f7d54605acfc982205d24a52dda428e4aed5860b6c66a8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

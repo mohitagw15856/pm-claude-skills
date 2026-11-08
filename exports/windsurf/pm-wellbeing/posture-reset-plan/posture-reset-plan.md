@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "Simple daily routine to improve my posture."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/posture-reset-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: posture-reset-plan | source: skills/posture-reset-plan/SKILL.md | sha256: 10e79e1e92eef264292a670d1c61b9603fa7606f4cf9d6e5623af327921d3c10 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

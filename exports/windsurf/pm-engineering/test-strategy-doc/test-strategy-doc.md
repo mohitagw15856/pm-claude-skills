@@ -145,3 +145,6 @@ Testing is complete when:
 - "Plan testing for a feature."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/test-strategy-doc.html
+
+<!-- pm-claude-skills v83.2.0 | skill: test-strategy-doc | source: skills/test-strategy-doc/SKILL.md | sha256: 74f25104e5fcacc0adac8cf150507b79b7734ca61d532b61b186c9a0367ca7ca | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

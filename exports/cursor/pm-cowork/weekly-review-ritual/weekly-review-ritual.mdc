@@ -72,3 +72,6 @@ Ask for these if not provided:
 - "I keep dropping threads between weeks."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/weekly-review-ritual.html
+
+<!-- pm-claude-skills v83.2.0 | skill: weekly-review-ritual | source: skills/weekly-review-ritual/SKILL.md | sha256: 618a493c95895b25bc29db8e047f6151daba6763db5c0774b44a244864ff3382 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

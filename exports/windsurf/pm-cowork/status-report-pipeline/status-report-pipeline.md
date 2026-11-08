@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "Make the rollup write itself."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/status-report-pipeline.html
+
+<!-- pm-claude-skills v83.2.0 | skill: status-report-pipeline | source: skills/status-report-pipeline/SKILL.md | sha256: e150f250dd2f32f8d0092e6c0dee7b3e9cea876c8848055b28e7a74d0940cfa9 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

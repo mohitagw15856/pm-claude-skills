@@ -88,3 +88,6 @@ Offer-review practice — total-comp reconstruction, plan-language decoding, pre
 - "What should I ask HR before signing?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/benefits-decoder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: benefits-decoder | source: skills/benefits-decoder/SKILL.md | sha256: 775ea9238c6fce810cdb9e327c1cd9d66c7d92c9bd952adab0bbd5d745e6f5ed | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

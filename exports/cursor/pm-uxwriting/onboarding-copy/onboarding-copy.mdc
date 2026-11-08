@@ -67,3 +67,6 @@ Product onboarding & activation practice — outcome-led welcome, guided path to
 - "Write activation messages for new users."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/onboarding-copy.html
+
+<!-- pm-claude-skills v83.2.0 | skill: onboarding-copy | source: skills/onboarding-copy/SKILL.md | sha256: 01ead4549c8a3592389736525fed0cf3fdfb14ddd5113cefddc26c3138116fea | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

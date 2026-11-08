@@ -40,6 +40,10 @@ vowel signs, and Thai and Chinese are split into pairs. `how.html` answers in th
 question's language. Exact-word matching means heavily inflected languages
 (Polish, Russian, Turkish) match best on the dictionary form.
 
+## Hindi bodies, and the Spanish refresh
+
+As of 2026-11-08 the Production-Ready tier has full-body Hindi editions (`i18n/hi/skills/`, 50 skills) alongside the Spanish ones, and the 24 Spanish bodies that had drifted were brought back to structural parity by translating the sections their English sources gained (Deeper Materials, the scoring rubric, the trigger phrases, the spine sections). Both sets were written without the API: a model translated them in a working session, section by section, so they carry the same `machine-translated … review: pending` label and the same request for native review. Technical terms a working PM uses in English (PRD, RICE, OKR, sprint, backlog) stay in Latin script, which is how Indian product teams read.
+
 ## Why bodies rot
 
 `node scripts/translate-skills.mjs --check` currently reports **50 of 50**

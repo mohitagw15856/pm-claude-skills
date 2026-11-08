@@ -96,3 +96,6 @@ Ask for these if not provided:
 - "How do I set goals with a patient?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/physio-initial-assessment.html
+
+<!-- pm-claude-skills v83.2.0 | skill: physio-initial-assessment | source: skills/physio-initial-assessment/SKILL.md | sha256: dcdd09393bfb744df5498fee0368b381f909f8d30ad6527fcc8b199793ff5d7e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

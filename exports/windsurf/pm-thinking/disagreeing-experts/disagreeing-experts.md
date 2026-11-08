@@ -83,3 +83,6 @@ Ask for these if not provided:
 - "Pressure-test this from multiple angles."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/disagreeing-experts.html
+
+<!-- pm-claude-skills v83.2.0 | skill: disagreeing-experts | source: skills/disagreeing-experts/SKILL.md | sha256: 447e2f2ed0d9adfdcf4e841c13272f8399b19ca276bec9c284eec16adb52b478 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

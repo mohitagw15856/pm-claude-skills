@@ -80,3 +80,6 @@ Ask for these if not provided; run the review on partial data but mark unverifia
 - "Triage open issues before a phase gate."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/evt-dvt-pvt-gate-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: evt-dvt-pvt-gate-review | source: skills/evt-dvt-pvt-gate-review/SKILL.md | sha256: d5cf8f60444167b4cbc2334425ec0b3b0813f8c4a7316b644c8b2265fc83e800 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -71,3 +71,6 @@ Ask for these if not provided:
 - "I always come back to chaos."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/out-of-office-designer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: out-of-office-designer | source: skills/out-of-office-designer/SKILL.md | sha256: f82d2a1f224634d5967b599fda7ae098545624077c7b621b1e419cb78b944fdc | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

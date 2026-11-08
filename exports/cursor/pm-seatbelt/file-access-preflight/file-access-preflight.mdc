@@ -73,3 +73,6 @@ Ask for these if not provided:
 - "Scope down my coding agent's reach."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/file-access-preflight.html
+
+<!-- pm-claude-skills v83.2.0 | skill: file-access-preflight | source: skills/file-access-preflight/SKILL.md | sha256: c62ac04c7913f0b7e2cd0feb9604d68c39b6416be4b16ddfcbd7ed44792a979f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

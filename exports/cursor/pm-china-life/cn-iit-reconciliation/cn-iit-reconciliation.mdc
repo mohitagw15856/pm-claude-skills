@@ -83,3 +83,6 @@ End verbatim: *"以上为估算，不构成税务意见。请以个人所得税 
 - "Explain China's annual tax reconciliation for me."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-iit-reconciliation.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-iit-reconciliation | source: skills/cn-iit-reconciliation/SKILL.md | sha256: 98763f08d98d19827c35c7c6e8243630d43899d92fb7073b1ade8b11afb8f3ff | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

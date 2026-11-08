@@ -55,3 +55,6 @@ A 30-second spoken version (구두 보고) in polite speech for reporting in per
 - "Write a Korean-style weekly report from these English notes for my manager in Seoul."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/kr-work-report.html
+
+<!-- pm-claude-skills v83.2.0 | skill: kr-work-report | source: skills/kr-work-report/SKILL.md | sha256: a5f661e60942080b347d42e5854da44236f14161e6057ff1cac7bf411663877b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

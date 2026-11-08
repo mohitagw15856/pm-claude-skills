@@ -64,3 +64,6 @@ Test-Driven Development (Kent Beck): red → green → refactor, triangulation, 
 - "'do this with TDD' / write the test first."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tdd-workflow.html
+
+<!-- pm-claude-skills v83.2.0 | skill: tdd-workflow | source: skills/tdd-workflow/SKILL.md | sha256: 8f252a1715e51ef2b73752fadc1707fbf8084ddb4b61290741dbf41e6716cc65 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

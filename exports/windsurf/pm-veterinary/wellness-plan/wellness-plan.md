@@ -66,3 +66,6 @@ A simple timeline of the next 12 months' visits/actions so it reads as a plan, w
 - "Advise an owner on routine care for a puppy/kitten/adult/senior pet."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wellness-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: wellness-plan | source: skills/wellness-plan/SKILL.md | sha256: 1fe3c63d61250c8128effedffde874f5d76cbbe0956962316cf96e01b63fcb15 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

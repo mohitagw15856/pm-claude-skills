@@ -86,3 +86,6 @@ Money says: [one honest sentence, both timescales] · Not modeled and often deci
 - "What does leaving work for five years really cost?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/daycare-vs-stay-home.html
+
+<!-- pm-claude-skills v83.2.0 | skill: daycare-vs-stay-home | source: skills/daycare-vs-stay-home/SKILL.md | sha256: 737f60c68df1f920dee861c73e8662c0e33a963c1439772946165a58e911b329 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

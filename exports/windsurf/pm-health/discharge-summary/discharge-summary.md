@@ -77,3 +77,6 @@ Clinical handoff/documentation practice — structured discharge summaries with 
 - "Summarise this admission for the GP."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/discharge-summary.html
+
+<!-- pm-claude-skills v83.2.0 | skill: discharge-summary | source: skills/discharge-summary/SKILL.md | sha256: f1ad2566a2d9c78fd625d22797f8107f9a85e0d89f1d7c3055ea13814b071829 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

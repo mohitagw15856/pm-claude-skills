@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "Is this enough to bet on?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/evidence-grading.html
+
+<!-- pm-claude-skills v83.2.0 | skill: evidence-grading | source: skills/evidence-grading/SKILL.md | sha256: d953fa25fa7173dd9f625083619e1ebff8b58c3a54115b08d9e9b7e529863875 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

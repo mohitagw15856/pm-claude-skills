@@ -88,3 +88,6 @@ Deterministic. Models salary only — the script prints its own not-modeled list
 - "Raise versus new offer."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/raise-vs-jump.html
+
+<!-- pm-claude-skills v83.2.0 | skill: raise-vs-jump | source: skills/raise-vs-jump/SKILL.md | sha256: 0d4fd2f0112e7b07d71e36826142061d40110f626661734441c8753b7931a964 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

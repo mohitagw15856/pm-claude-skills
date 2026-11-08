@@ -88,3 +88,6 @@ Ask for (if not already provided), else infer and label as an assumption:
 - "I am on a two-year fixed-term contract. Do I get gratuity under the new codes?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/in-labour-codes-decoder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: in-labour-codes-decoder | source: skills/in-labour-codes-decoder/SKILL.md | sha256: 15ef8d3a52e3401acf39089b42abb0057f92ece24dc5ed572fda36ccc31da074 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

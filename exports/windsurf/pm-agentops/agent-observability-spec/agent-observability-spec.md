@@ -98,3 +98,6 @@ Define four families; every metric gets a threshold, a window, and an owner.
 - "Define quality and cost monitors."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-observability-spec.html
+
+<!-- pm-claude-skills v83.2.0 | skill: agent-observability-spec | source: skills/agent-observability-spec/SKILL.md | sha256: 0ec32eec0303e5a5948027304b427cb04154d0be17971bb27158c4ee3026b084 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

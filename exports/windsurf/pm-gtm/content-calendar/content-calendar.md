@@ -66,3 +66,6 @@ For each "High Priority" post, add one repurposing suggestion — e.g. "Turn thi
 - "Plan my LinkedIn content for the next month"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/content-calendar.html
+
+<!-- pm-claude-skills v83.2.0 | skill: content-calendar | source: skills/content-calendar/SKILL.md | sha256: 5ca3ad97f9779540efeb86824fc593cffd4bdeecb83baf13fdf66c0318515894 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -20,7 +20,7 @@ Commit a `.pm-skills.json` to a project (or a dotfiles repo) to say which skills
 
 | Key | Meaning |
 |---|---|
-| `agents` | Tools to install for: claude, hermes, codex, openclaw, cursor, windsurf, aider, kilocode, trae, qoder, lingma, codebuddy |
+| `agents` | Tools to install for: claude, hermes, codex, openclaw, gemini, copilot, cursor, windsurf, aider, kilocode, trae, qoder, lingma, codebuddy |
 | `bundles`, `skills` | What to install; at least one of the two |
 | `version` | Library versions the team has agreed on: `81.2.0`, `81.x`, `81.2.x` or `>=81.2.0` |
 | `lite` | Condensed skills for small local models (see `add --lite`) |
@@ -34,6 +34,8 @@ npx pm-claude-skills sync --check    # exits 1 if this machine does not match it
 ```
 
 `sync --check` compares every installed file with the library version in use, so it catches a missing skill, a hand-edited one, or a laptop on a different version. Put it in an onboarding script or a CI job. A different `--config <file>` can be passed for monorepos.
+
+You do not have to write the file by hand: `npx pm-claude-skills setup` asks what you do and how many people will use the set, and writes `.pm-skills.json` when the answer is more than one (`--role <persona> --team <n>` non-interactively). The [starter templates](STARTERS.md) ship one per role.
 
 ## `profile`
 

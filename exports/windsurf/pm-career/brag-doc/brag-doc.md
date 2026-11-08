@@ -71,3 +71,6 @@ Brag-document practice (Julia Evans) and impact-first accomplishment tracking.
 - "Prep evidence for a review/promotion."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/brag-doc.html
+
+<!-- pm-claude-skills v83.2.0 | skill: brag-doc | source: skills/brag-doc/SKILL.md | sha256: a57505550db3615008c10e2ac5297336af3e690178f9c8fb672d18fbdc6c75d1 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

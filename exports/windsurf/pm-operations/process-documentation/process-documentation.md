@@ -97,3 +97,6 @@ Next review due: [Date]
 - "Map out how [process] works"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/process-documentation.html
+
+<!-- pm-claude-skills v83.2.0 | skill: process-documentation | source: skills/process-documentation/SKILL.md | sha256: d97c891846e03dd2edee4d5389634075491337c21c265f8710918eac6c3fec41 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

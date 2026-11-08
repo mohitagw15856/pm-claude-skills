@@ -88,3 +88,6 @@ Grade = Σ(score × weight) × 20 → 0–100. **Bands:** ≥85 Preferred · 70�
 - "Exit a supplier."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/supplier-scorecard.html
+
+<!-- pm-claude-skills v83.2.0 | skill: supplier-scorecard | source: skills/supplier-scorecard/SKILL.md | sha256: 71f3b7c6e1a3b4742409debcedce665835e7b751a71125940e852eeaa202020c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -70,3 +70,6 @@ Goal-based saving (sinking funds): target ÷ timeline, milestone tracking, and a
 - "Save £3,000 for a trip by summer."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/savings-goal-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: savings-goal-plan | source: skills/savings-goal-plan/SKILL.md | sha256: ca8292e025985aaa94ffff6b61323c4e49d23a4a6f5937c21e52b8da13683b67 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

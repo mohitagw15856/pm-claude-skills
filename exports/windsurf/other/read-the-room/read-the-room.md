@@ -68,3 +68,6 @@ Ask for these if not provided:
 - "What's the unspoken dynamic in this group?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/read-the-room.html
+
+<!-- pm-claude-skills v83.2.0 | skill: read-the-room | source: skills/read-the-room/SKILL.md | sha256: 1a97c5c6488705d640c3b6c63d9af34b44589f1f823875c4efd9fac244f3da21 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

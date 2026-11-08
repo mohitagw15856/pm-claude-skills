@@ -69,3 +69,6 @@ Consulting discovery / sales-qualification practice — root-cause questioning, 
 - "Run a kickoff."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/client-discovery.html
+
+<!-- pm-claude-skills v83.2.0 | skill: client-discovery | source: skills/client-discovery/SKILL.md | sha256: dfc4b0e49ac853f9cc876c6fea8d367db1fa4bb6bc4e28eb8333bdf011e4a984 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -143,3 +143,6 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Apply an objective framework to a list of competing ideas."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rice-prioritisation.html
+
+<!-- pm-claude-skills v83.2.0 | skill: rice-prioritisation | source: skills/rice-prioritisation/SKILL.md | sha256: 02d76863924ccfede7e6b466deb580c472c85ecebdc52046c563a6e60764dd89 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

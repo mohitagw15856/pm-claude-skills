@@ -79,3 +79,6 @@ Ask for these if not provided:
 - "What to ask existing franchisees?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/franchise-decoder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: franchise-decoder | source: skills/franchise-decoder/SKILL.md | sha256: 380333a0834b6caf64a4046f3677e849856be4d9192346c15c5223baf02ba4c7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

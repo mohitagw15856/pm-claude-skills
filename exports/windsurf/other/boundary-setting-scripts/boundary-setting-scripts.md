@@ -66,3 +66,6 @@ Ask for these if not provided:
 - "Someone keeps overstepping and I don't know how to stop it."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/boundary-setting-scripts.html
+
+<!-- pm-claude-skills v83.2.0 | skill: boundary-setting-scripts | source: skills/boundary-setting-scripts/SKILL.md | sha256: ef78db75b47ea5ed17ac481ad004ee5038bc18e8481fc70d4f64241deb5300a4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

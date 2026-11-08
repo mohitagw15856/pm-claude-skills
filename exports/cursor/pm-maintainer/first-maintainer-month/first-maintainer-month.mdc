@@ -130,3 +130,6 @@ the moments docs can't pre-answer; [[changelog-generator]] and
 - "Set up my project properly."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/first-maintainer-month.html
+
+<!-- pm-claude-skills v83.2.0 | skill: first-maintainer-month | source: skills/first-maintainer-month/SKILL.md | sha256: c9480c36094b3e28c618ed94f9e9f960b8b228a9dc313808f720bd0c9d67720c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

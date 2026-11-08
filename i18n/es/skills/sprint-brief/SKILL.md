@@ -45,6 +45,24 @@ Pídele al usuario lo siguiente si no lo proporciona:
 
 **Definición de Terminado:** [Criterios específicos y acordados para el éxito del sprint]
 
+## Materiales más profundos
+
+Esta habilidad incluye archivos de apoyo; úsalos cuando estén disponibles:
+
+- **`references/goal-writing.md`** — Escribir objetivos de sprint que orienten. Aplícalo mientras produces el resultado; contiene la calibración y los criterios de juicio que el resumen del método de arriba comprime.
+- **`templates/brief-one-pager.md`** — una versión para rellenar del entregable con las comprobaciones de calidad integradas. Ofrécela cuando el usuario prefiera trabajar el documento por su cuenta en lugar de que se genere.
+
+## Rúbrica de puntuación (0–40)
+
+Puntúa cualquier resultado de esta habilidad antes de entregarlo; 32 o más es calidad de entrega.
+
+| Dimensión | 0 | 5 | 10 |
+|---|---|---|---|
+| **Puntuabilidad del objetivo** | El objetivo es una lista de tareas o una dirección vaga ("avanzar en X"); nadie podría puntuarlo al final del sprint | El objetivo enuncia un resultado, pero la línea de aprobado/suspenso es difusa (sin número, fecha ni prueba observable) | El objetivo es una única frase de resultado con una prueba explícita de aprobado/suspenso que cualquiera del equipo podría aplicar el último día |
+| **Precisión del camino crítico** | Sin camino crítico, o "los tickets importantes"; el lector no sabe qué retraso es fatal | Los tickets del camino crítico tienen nombre, pero sin secuencia ni la fecha o el desencadenante en que el objetivo fracasa | Tickets con nombre en orden de dependencia, con la fecha límite que mata el objetivo y una separación clara entre lo fatal y lo sobrevivible respecto al resto del tablero |
+| **Accionabilidad de los riesgos** | Los riesgos son una lista de preocupaciones: sin mitigaciones ni responsables | Cada riesgo tiene mitigación *o* responsable, pero las respuestas son genéricas ("vigilar de cerca") | Cada riesgo tiene una mitigación concreta con fecha de preparación y un único responsable con nombre, e indica si amenaza el objetivo o solo un ticket |
+| **Honestidad sobre la capacidad** | El arrastre se enumera sin impacto; el tablero está sobrecargado en silencio | Se indica el impacto del arrastre en el objetivo, pero el informe no actúa: la sobrecarga se marca como riesgo y se deja ahí | El arrastre se cuantifica contra la capacidad y el informe muestra la resolución: recortes de alcance con nombre, un objetivo reducido o una aceptación explícita de sobrecarga acordada por el equipo |
+
 ## Verificaciones de Calidad
 
 - [ ] El objetivo del sprint es específico enough para calificar aprobado/desaprobado al final del sprint
@@ -60,3 +78,12 @@ Pídele al usuario lo siguiente si no lo proporciona:
 - [ ] No listes riesgos sin una mitigación u owner — un riesgo sin respuesta es solo una lista de preocupaciones
 - [ ] No ignores el impacto de los elementos trasladados en la capacidad y objetivo de este sprint
 - [ ] No escribas una Definición de Terminado que mezcle completitud de tareas con criterios de resultado — deben ser observables y acordados antes de que inicie el sprint
+
+## Frases de activación de ejemplo
+
+- "Escribe un informe de sprint."
+- "Crea un resumen del sprint."
+- "Documenta los objetivos y el alcance del sprint."
+- "Elabora una visión general del sprint para el equipo."
+
+Ejecuta esta habilidad en tu navegador: https://mohitagw15856.github.io/pm-claude-skills/skill/sprint-brief.html

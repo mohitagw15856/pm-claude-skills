@@ -78,3 +78,6 @@ Approved / Approved with changes (list) / Needs revision (focus area + next revi
 - "What is missing from this design before we can build it?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-design-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: figma-design-review | source: skills/figma-design-review/SKILL.md | sha256: d9be428b40f0b57eaaa9857ed2b6ac2eea7e98a696c02df1455f6f625de38954 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

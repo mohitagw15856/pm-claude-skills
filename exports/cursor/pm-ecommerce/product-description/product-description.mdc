@@ -70,3 +70,6 @@ E-commerce copywriting practice — benefit-led, scannable listings with feature
 - "Rewrite this flat product blurb."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-description.html
+
+<!-- pm-claude-skills v83.2.0 | skill: product-description | source: skills/product-description/SKILL.md | sha256: 166602dad84a07e25f95b73706d704a711aa012da658c153ef0a0389bb2eb626 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

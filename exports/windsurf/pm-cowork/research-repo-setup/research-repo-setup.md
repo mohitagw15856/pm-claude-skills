@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "Make past research findable."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/research-repo-setup.html
+
+<!-- pm-claude-skills v83.2.0 | skill: research-repo-setup | source: skills/research-repo-setup/SKILL.md | sha256: d94a518d9578dd9aae4a0f3ed539ee315adf1312f3110d95c81eab0b1366ee8a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -70,3 +70,6 @@ Sensitive points (no naming or shaming students, privacy of survey answers, stud
 - "Plan a class meeting on friendship for a Chinese primary class."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-class-meeting.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-class-meeting | source: skills/cn-class-meeting/SKILL.md | sha256: d125c4bad5a062253245c98e328aa61e48e291cabbb611eee5493e5806766956 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "I never know what home tasks to do when — help me set a routine."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/home-maintenance-calendar.html
+
+<!-- pm-claude-skills v83.2.0 | skill: home-maintenance-calendar | source: skills/home-maintenance-calendar/SKILL.md | sha256: 36831ae83b10a1fc5cb446a828012f084d20868c0f3a86fb6582b78e102838c8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -62,3 +62,6 @@ Ask for these if not provided:
 - "Add this to my list of lessons — what's the rule?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/my-failure-museum.html
+
+<!-- pm-claude-skills v83.2.0 | skill: my-failure-museum | source: skills/my-failure-museum/SKILL.md | sha256: 9830c656aa436fd4fe0b7c8835343344c121720f7de1d3fbc1b28c83f3a8bca4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

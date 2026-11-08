@@ -74,3 +74,6 @@ Ask for these if not provided:
 - "Organize my research into chapters."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/thesis-outline.html
+
+<!-- pm-claude-skills v83.2.0 | skill: thesis-outline | source: skills/thesis-outline/SKILL.md | sha256: b2b29e8546e74c7a973ad60fcf95fa76b57fa1dba87e81ccb69cddf654e3c30b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

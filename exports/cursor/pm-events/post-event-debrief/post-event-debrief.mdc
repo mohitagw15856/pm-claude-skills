@@ -95,3 +95,6 @@ Ask for these if not provided:
 - "What should we change for next year's gala?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/post-event-debrief.html
+
+<!-- pm-claude-skills v83.2.0 | skill: post-event-debrief | source: skills/post-event-debrief/SKILL.md | sha256: 52617b772d824e20853216d2da7106b322b8b15fd612b8df04e1dd5b0568e784 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

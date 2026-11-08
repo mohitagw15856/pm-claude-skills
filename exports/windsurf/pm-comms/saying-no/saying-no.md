@@ -59,3 +59,6 @@ Ask for these only if they aren't already provided:
 Boundary-setting and negotiation practice — the "positive no" (William Ury), trade-off framing, and protecting priorities.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/saying-no.html
+
+<!-- pm-claude-skills v83.2.0 | skill: saying-no | source: skills/saying-no/SKILL.md | sha256: 75376b95a984395222fc36361ae40cb41cad74899a46ea25434672cd73f10a79 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

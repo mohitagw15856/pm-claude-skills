@@ -63,3 +63,6 @@ Viral-loop / referral practice — k-factor and cycle-time math, activation-gate
 - "Improve word-of-mouth growth."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/referral-program-design.html
+
+<!-- pm-claude-skills v83.2.0 | skill: referral-program-design | source: skills/referral-program-design/SKILL.md | sha256: 43edff157d37614452aa9cd9f1ad0c5b4bfdc0c5589e57db8f1e85e506fb1688 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

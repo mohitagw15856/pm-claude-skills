@@ -76,3 +76,6 @@ Each marked to confirm.
 - "My business and home money are all mixed up"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/daily-cash-book.html
+
+<!-- pm-claude-skills v83.2.0 | skill: daily-cash-book | source: skills/daily-cash-book/SKILL.md | sha256: 551b66cd07b9c724e594ddca83624ab96a82ae3102c98c0f704de52c3bb3307f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

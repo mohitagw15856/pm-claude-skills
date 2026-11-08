@@ -72,3 +72,6 @@ Ask for these if not provided:
 - "Malware on my work laptop — what's my first move?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ransomware-first-response.html
+
+<!-- pm-claude-skills v83.2.0 | skill: ransomware-first-response | source: skills/ransomware-first-response/SKILL.md | sha256: 552ebc1b3e4c1ecb96f79c6de0f9be6a4b0de6ad281e1b9ceaf4504d0e4e861f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

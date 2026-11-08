@@ -69,3 +69,6 @@ UX writing practice — action-oriented, expectation-setting microcopy, voice co
 - "Make this UI wording clearer."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/microcopy-writer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: microcopy-writer | source: skills/microcopy-writer/SKILL.md | sha256: c45ddeb7ed897c3e571a22bfc2d61c8c4505613e667a52666a988a8ee5a631d7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -86,3 +86,6 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Produce a team-facing sprint overview."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sprint-brief.html
+
+<!-- pm-claude-skills v83.2.0 | skill: sprint-brief | source: skills/sprint-brief/SKILL.md | sha256: 2436b3b87f1ede7014243ae53dcaa5f58c3655d32b9a4c08925a5c3cc94864bf | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -73,3 +73,6 @@ Ask for these if not provided:
 - "Set me up a simple system for which card to use where."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rewards-optimizer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: rewards-optimizer | source: skills/rewards-optimizer/SKILL.md | sha256: 21241c2269a9f35eb2268f0a7d2ba8d54452f14c366ea70afa55944ca83e7f93 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

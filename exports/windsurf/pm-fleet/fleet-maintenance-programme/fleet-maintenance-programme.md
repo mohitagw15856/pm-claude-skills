@@ -94,3 +94,6 @@ Ask for these if not provided:
 - "Build a defect reporting process for our fleet"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/fleet-maintenance-programme.html
+
+<!-- pm-claude-skills v83.2.0 | skill: fleet-maintenance-programme | source: skills/fleet-maintenance-programme/SKILL.md | sha256: e50c02eb7de896d7994e8ff6473bb2a0f7fdfc783889d989db6fb2f20d9732ec | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

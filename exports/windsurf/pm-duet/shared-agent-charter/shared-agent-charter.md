@@ -74,3 +74,6 @@ Given only a team and a tool, **write the full charter anyway** with conservativ
 - "Charter for an always-on agent used by the whole team"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/shared-agent-charter.html
+
+<!-- pm-claude-skills v83.2.0 | skill: shared-agent-charter | source: skills/shared-agent-charter/SKILL.md | sha256: 24ecdae2cc5708faba2a3e10e85f3f2ef03b772ac8722cfec15a9a2d8e08ceee | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -58,3 +58,6 @@ For long lists, run `python3 scripts/gbt7714.py references.json` with one JSON o
 - "Format my references to GB/T 7714 for my thesis."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-citation-gbt7714.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-citation-gbt7714 | source: skills/cn-citation-gbt7714/SKILL.md | sha256: a13961bd24d50a127a67f966cb36473b591c318a170c9b09e85a972df73d212f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

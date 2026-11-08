@@ -66,3 +66,6 @@ Ask for these if not provided:
 - "Help me run a retro that actually leads to change."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sprint-retro-facilitator.html
+
+<!-- pm-claude-skills v83.2.0 | skill: sprint-retro-facilitator | source: skills/sprint-retro-facilitator/SKILL.md | sha256: dc2a08af14463246b7af9d8450e30ded0831196b400723772920be81d2d31c05 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

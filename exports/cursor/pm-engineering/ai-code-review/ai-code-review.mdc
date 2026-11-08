@@ -77,3 +77,6 @@ Review in this order — most damaging first:
 - "Set review standards for a team using coding agents."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-code-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: ai-code-review | source: skills/ai-code-review/SKILL.md | sha256: 1bccaa409fe1038091df9479fd283a5fc20fca475a159fe58ace884358674ffc | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

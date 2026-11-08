@@ -137,3 +137,6 @@ Based on the above, prioritise these before year-end:
 - "What should I check for my year-end tax planning?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tax-planning-checklist.html
+
+<!-- pm-claude-skills v83.2.0 | skill: tax-planning-checklist | source: skills/tax-planning-checklist/SKILL.md | sha256: fe90fe2073a83a522cc4f7a48758d7972d764d1b76c484b5174ce743e9f76374 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -72,3 +72,6 @@ Ask for these if not provided:
 - "Taking over an existing team."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/manager-first-90-days.html
+
+<!-- pm-claude-skills v83.2.0 | skill: manager-first-90-days | source: skills/manager-first-90-days/SKILL.md | sha256: 912ab53744b37d4499a160d14f0526b0bfe1978284f6149684f5e75ff2174cc8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

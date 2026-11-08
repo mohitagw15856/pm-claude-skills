@@ -74,3 +74,6 @@ Ask for these if not provided:
 - "Why do I keep making the same mistake?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-journal.html
+
+<!-- pm-claude-skills v83.2.0 | skill: decision-journal | source: skills/decision-journal/SKILL.md | sha256: 7a2bed86931cf4f265b7a0ac0741fb47bf80d21f923b0eb10659154b53b58fa6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

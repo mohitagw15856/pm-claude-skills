@@ -74,3 +74,6 @@ Accounts-receivable practice — staged dunning sequences that escalate professi
 - "Set up a dunning sequence."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/collections-email.html
+
+<!-- pm-claude-skills v83.2.0 | skill: collections-email | source: skills/collections-email/SKILL.md | sha256: c9bd00571a2e1e078853ff7e7002f2627e5102d8d1383e7dbe4f0ff51a90ccdc | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

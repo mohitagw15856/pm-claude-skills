@@ -83,3 +83,6 @@ Participant-side plan review practice — fee-disclosure auditing, match-formula
 - "What fees am I paying?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/401k-plan-decoder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: 401k-plan-decoder | source: skills/401k-plan-decoder/SKILL.md | sha256: a59b141929423182627c79e3471e197c2d77f074be07ebfb3a8d3aaebdc2d5a6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

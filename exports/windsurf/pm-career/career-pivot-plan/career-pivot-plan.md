@@ -72,3 +72,6 @@ Ask for these if not provided:
 - "How do I make my background make sense for a new industry?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/career-pivot-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: career-pivot-plan | source: skills/career-pivot-plan/SKILL.md | sha256: 9aee27dc33b65964ffac43e9bb6a1cdfdf24cf0676e928265d1c8b72eecc42d8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

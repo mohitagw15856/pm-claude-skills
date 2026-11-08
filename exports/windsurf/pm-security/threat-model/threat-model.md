@@ -72,3 +72,6 @@ Threat-modeling practice (STRIDE, trust boundaries, data-flow diagrams, risk-ran
 - "Apply STRIDE to a design."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/threat-model.html
+
+<!-- pm-claude-skills v83.2.0 | skill: threat-model | source: skills/threat-model/SKILL.md | sha256: 0ea7258bfadfbd7f7afdbdb8f081e0df5b7ee5598aece9e5278716053865baeb | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

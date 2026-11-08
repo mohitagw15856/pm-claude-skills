@@ -78,3 +78,6 @@ Procurement and vendor-risk practice — key-term extraction, risk-flagged revie
 - "Prepare negotiation points before signing."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vendor-contract-checklist.html
+
+<!-- pm-claude-skills v83.2.0 | skill: vendor-contract-checklist | source: skills/vendor-contract-checklist/SKILL.md | sha256: ca570d6a0f4ea6dfa4093b59abc5535c2bc68900fd843bd7a5914288cfdc0c9e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -283,3 +283,6 @@ This policy defines what to do with the error budget — both when it's healthy 
 - "Create an error budget policy."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/slo-error-budget.html
+
+<!-- pm-claude-skills v83.2.0 | skill: slo-error-budget | source: skills/slo-error-budget/SKILL.md | sha256: 91fd0deda249ce376f805e904daeb3c81c2bc279546b6b8e97dbaa7ed85c5096 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

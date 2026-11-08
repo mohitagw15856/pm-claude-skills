@@ -66,3 +66,6 @@ Defect-reporting practice — reproducibility-first reports with precise titles,
 - "Turn it's broken into an actionable ticket."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bug-report.html
+
+<!-- pm-claude-skills v83.2.0 | skill: bug-report | source: skills/bug-report/SKILL.md | sha256: 401cb495d445322ab813dac6a2ae655da33aa40feafb1c6f14acd0b473324579 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

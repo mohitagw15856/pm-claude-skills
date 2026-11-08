@@ -110,3 +110,6 @@ digital/UI standards audit; [[accommodation-request]] when the venue is your wor
 - "Is this restaurant/office actually accessible?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/venue-access-check.html
+
+<!-- pm-claude-skills v83.2.0 | skill: venue-access-check | source: skills/venue-access-check/SKILL.md | sha256: 2a3b34ac2660ba8b87fa5c9943e847bc5696972494513b89103c02ad0dbca89d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

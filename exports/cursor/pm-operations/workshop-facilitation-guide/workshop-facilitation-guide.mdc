@@ -157,3 +157,6 @@ End every session with:
 - "Create a facilitation guide for [topic]"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/workshop-facilitation-guide.html
+
+<!-- pm-claude-skills v83.2.0 | skill: workshop-facilitation-guide | source: skills/workshop-facilitation-guide/SKILL.md | sha256: 55214def9714e9962ab307822a13aec59bc47ecd1429184a266735156d49446a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

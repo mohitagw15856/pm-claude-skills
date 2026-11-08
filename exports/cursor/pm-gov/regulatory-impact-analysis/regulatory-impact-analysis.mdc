@@ -74,3 +74,6 @@ Regulatory impact analysis practice (OMB Circular A-4 / Better Regulation): prob
 - "Compare regulatory options."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/regulatory-impact-analysis.html
+
+<!-- pm-claude-skills v83.2.0 | skill: regulatory-impact-analysis | source: skills/regulatory-impact-analysis/SKILL.md | sha256: 120457288cc60f58323dea0a20390c5bbc053af90b1ce0331a07388511b10982 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

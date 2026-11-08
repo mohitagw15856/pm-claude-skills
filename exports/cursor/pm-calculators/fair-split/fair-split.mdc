@@ -80,3 +80,6 @@ Ask for these if not provided:
 - "Handle unequal shares."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/fair-split.html
+
+<!-- pm-claude-skills v83.2.0 | skill: fair-split | source: skills/fair-split/SKILL.md | sha256: ba3fbbcb8ae6eea1e6e6db1acb483feebdd5d72d05434eae98a955a0697ff23e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

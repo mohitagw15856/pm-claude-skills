@@ -68,3 +68,6 @@ Ask for these if not provided:
 - "How do I get consistent output from this prompt?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prompt-debugging.html
+
+<!-- pm-claude-skills v83.2.0 | skill: prompt-debugging | source: skills/prompt-debugging/SKILL.md | sha256: ac947807fa9a53286d578c48f68c2486e736a9d2ba292d6a5d0c2c258c09838e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

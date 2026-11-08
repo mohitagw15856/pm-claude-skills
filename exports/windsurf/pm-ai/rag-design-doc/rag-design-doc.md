@@ -77,3 +77,6 @@ Retrieval-Augmented Generation practice — hybrid retrieval, reranking, grounde
 - "Why does our RAG system give wrong answers?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rag-design-doc.html
+
+<!-- pm-claude-skills v83.2.0 | skill: rag-design-doc | source: skills/rag-design-doc/SKILL.md | sha256: 5f45bb20960931bca8b0311657264b58afe15ff6d498a93153b191f203787a9f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

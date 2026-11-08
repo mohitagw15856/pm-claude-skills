@@ -68,3 +68,6 @@ Source: [HN Firebase API / Algolia HN search] · rerun: `[exact curls]`
 - "What's the discussion on this story?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hn-digest.html
+
+<!-- pm-claude-skills v83.2.0 | skill: hn-digest | source: skills/hn-digest/SKILL.md | sha256: 99edc7bed61744a1012b3b83be486e213d242c390cbdf030cc2ee6ada4936345 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

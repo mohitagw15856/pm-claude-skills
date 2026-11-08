@@ -58,3 +58,6 @@ How to undo if the fix doesn't do what they expected (usually `git reflog` + res
 - "Get out of a git mess."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/git-troubleshooter.html
+
+<!-- pm-claude-skills v83.2.0 | skill: git-troubleshooter | source: skills/git-troubleshooter/SKILL.md | sha256: 5d84629927d816c25dbd003929cf0eb8fc3380d1b76a8b192559a126406ec224 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

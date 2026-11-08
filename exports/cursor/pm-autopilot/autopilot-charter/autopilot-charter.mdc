@@ -86,3 +86,6 @@ For each automated ritual, define:
 - "Design an automation charter for a team."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/autopilot-charter.html
+
+<!-- pm-claude-skills v83.2.0 | skill: autopilot-charter | source: skills/autopilot-charter/SKILL.md | sha256: 6b1d0c06cdb10a5f46c29d1b01556e09aefdcab9f58174410851c00ab8bfb9e2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

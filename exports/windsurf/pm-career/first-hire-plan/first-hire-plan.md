@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "What obligations do I take on when I hire my first employee?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/first-hire-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: first-hire-plan | source: skills/first-hire-plan/SKILL.md | sha256: 4c529a16266e9e9b36ccf88bce69515cb7e1713753fc286550cb6e8d5e6c6621 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

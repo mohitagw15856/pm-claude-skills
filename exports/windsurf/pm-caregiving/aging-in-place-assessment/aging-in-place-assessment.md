@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "How do I bring up that home might not be safe anymore, respectfully?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/aging-in-place-assessment.html
+
+<!-- pm-claude-skills v83.2.0 | skill: aging-in-place-assessment | source: skills/aging-in-place-assessment/SKILL.md | sha256: 3d81e719f093cf963ef5d078e71369c7662d392528d1d74d620ae63de7ea731b | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

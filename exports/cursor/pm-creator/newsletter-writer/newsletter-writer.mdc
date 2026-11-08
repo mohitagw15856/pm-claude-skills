@@ -61,3 +61,6 @@ A 3-bullet "what a 5-second skimmer takes away" — if those bullets don't carry
 - "Write a subject line and hook for my email issue."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/newsletter-writer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: newsletter-writer | source: skills/newsletter-writer/SKILL.md | sha256: 1b2c15255ff134a7bf0ac8d06bdaf0d4f8c375338df56cc0e032b825919c19c4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

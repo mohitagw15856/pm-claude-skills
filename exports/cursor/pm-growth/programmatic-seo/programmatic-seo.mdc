@@ -64,3 +64,6 @@ Programmatic SEO practice (templated data-driven pages, intent + unique value, G
 - "Capture long-tail search at scale."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/programmatic-seo.html
+
+<!-- pm-claude-skills v83.2.0 | skill: programmatic-seo | source: skills/programmatic-seo/SKILL.md | sha256: 9af98e79fd105cf7f79ac6b76c56862cc19a8fe6a4d83c7e56ab729909fe1a70 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

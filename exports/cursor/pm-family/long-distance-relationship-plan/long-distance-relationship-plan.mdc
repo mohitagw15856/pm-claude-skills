@@ -66,3 +66,6 @@ Ask for these if not provided:
 - "How do we handle the jealousy and loneliness of being apart?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/long-distance-relationship-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: long-distance-relationship-plan | source: skills/long-distance-relationship-plan/SKILL.md | sha256: ca69932b5c7d9ba700f448214e27698a0df00c8f148d616bf972455780a70dec | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

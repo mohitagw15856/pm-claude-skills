@@ -84,3 +84,6 @@ Never let a Tier A hide inside a room's list of C's — pull Tier A items to the
 - "Track punch items to closeout."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/punch-list-builder.html
+
+<!-- pm-claude-skills v83.2.0 | skill: punch-list-builder | source: skills/punch-list-builder/SKILL.md | sha256: 3dffe8127921bfda688b402dd1ff52700c96e04643e52cd4728ac86a4ac5686c | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

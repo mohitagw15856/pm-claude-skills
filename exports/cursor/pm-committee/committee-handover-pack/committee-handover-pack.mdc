@@ -126,3 +126,6 @@ same move at other scales.
 - "Capture everything I do for the committee before I leave."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/committee-handover-pack.html
+
+<!-- pm-claude-skills v83.2.0 | skill: committee-handover-pack | source: skills/committee-handover-pack/SKILL.md | sha256: a7902f37e30481baa3b3a377c2ad36b7e357c5821c52e65aac71a53a489eb527 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

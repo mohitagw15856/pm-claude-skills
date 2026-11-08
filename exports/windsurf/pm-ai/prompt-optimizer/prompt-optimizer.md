@@ -77,3 +77,6 @@ Prompt-engineering practice — explicit output contracts, grounding/uncertainty
 - "Make output follow a format."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prompt-optimizer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: prompt-optimizer | source: skills/prompt-optimizer/SKILL.md | sha256: d3ab6d8d71b00c562d053947bf60a30765ff3112fed89bb89594984fb857730d | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -60,3 +60,6 @@ How and how often the goal is measured, so a progress report can be written from
 - "List accommodations."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/iep-goal-writer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: iep-goal-writer | source: skills/iep-goal-writer/SKILL.md | sha256: 90b74c234abc086965d189f89673a742acb65c5e3e4290bb9661002e003eaad2 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -71,3 +71,6 @@ Ask for these if not provided:
 - "My intro internet rate is about to jump — what are my options?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/utility-switch-advisor.html
+
+<!-- pm-claude-skills v83.2.0 | skill: utility-switch-advisor | source: skills/utility-switch-advisor/SKILL.md | sha256: eff2425c1e8960c1338279ed8b029818759cb05475b9f965a82edb715728e120 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

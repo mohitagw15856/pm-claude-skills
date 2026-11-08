@@ -59,3 +59,6 @@ Including real-name verification where required, minors protection, a complaint 
 - "What filings does our generative AI product need before launching in China?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-genai-filing.html
+
+<!-- pm-claude-skills v83.2.0 | skill: cn-genai-filing | source: skills/cn-genai-filing/SKILL.md | sha256: 80daae41f0548e37d6f8f7467f85a989589453ae8358c55cc4093b3bbf85c8d4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

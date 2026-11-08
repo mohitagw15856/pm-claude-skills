@@ -94,3 +94,6 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Decide what to build next with multiple competing initiatives."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rice-impact-matrix.html
+
+<!-- pm-claude-skills v83.2.0 | skill: rice-impact-matrix | source: skills/rice-impact-matrix/SKILL.md | sha256: 85cb3beaabaf1a9a1a7cbff4cf983d2a45feb628aaa5c15044dcc92dba3ac1d4 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

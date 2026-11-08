@@ -55,3 +55,6 @@ Prints `deterministic=21.0 P10=22.3 P50=27.0 P90=32.3 · top critical: design, i
 - "Which tasks actually drive the end date?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/schedule-monte-carlo.html
+
+<!-- pm-claude-skills v83.2.0 | skill: schedule-monte-carlo | source: skills/schedule-monte-carlo/SKILL.md | sha256: bca6d264eeeb0dc0d80f55b2332ef8c497de544b574c7ae3bacf951394f8a3e7 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -70,3 +70,6 @@ Ask for these if not provided:
 - "Set up a clean-desktop habit."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/desktop-zero.html
+
+<!-- pm-claude-skills v83.2.0 | skill: desktop-zero | source: skills/desktop-zero/SKILL.md | sha256: 419cc6b9866b0bf79a8882a16481508d8de67e293570bef5df726474ab799f0f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

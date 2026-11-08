@@ -169,3 +169,6 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Design a board deck for [specific context — e.g. fundraise update]"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/board-deck-narrative.html
+
+<!-- pm-claude-skills v83.2.0 | skill: board-deck-narrative | source: skills/board-deck-narrative/SKILL.md | sha256: 8c76103afcfec9ab452acfb76856bd0609f97160fe645f3b147e3df2c5f30e4a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -76,3 +76,6 @@ Bookkeeping practice — fit-for-purpose charts of accounts, consistent categori
 - "Sort bank transactions into the right buckets."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bookkeeping-categorization.html
+
+<!-- pm-claude-skills v83.2.0 | skill: bookkeeping-categorization | source: skills/bookkeeping-categorization/SKILL.md | sha256: cf9b32c5d26b6021b6dc51c0d8c80ea4b27da438483ca44991afc8019d7837ee | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

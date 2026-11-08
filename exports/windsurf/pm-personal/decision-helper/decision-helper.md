@@ -69,3 +69,6 @@ Ask for these if not provided:
 - "Make a real pro/con list and actually tell me what to pick."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-helper.html
+
+<!-- pm-claude-skills v83.2.0 | skill: decision-helper | source: skills/decision-helper/SKILL.md | sha256: 6464194333434f5bdc27c5e7974e1960f77c3e75ae00b0d5505fd9878a0d99ea | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

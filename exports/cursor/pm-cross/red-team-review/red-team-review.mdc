@@ -77,3 +77,6 @@ The specific, prioritised changes that would most reduce risk — what to add, c
 - "Find the blind spots in this plan before we commit."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/red-team-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: red-team-review | source: skills/red-team-review/SKILL.md | sha256: b554188f7ee58c3616fbbbb67a921857a9c20316367130704bdb86646e6eed51 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

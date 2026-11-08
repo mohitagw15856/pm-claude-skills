@@ -67,3 +67,6 @@ Rules:
 - "帮我整理一下我投过的简历和进度。"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/application-tracker.html
+
+<!-- pm-claude-skills v83.2.0 | skill: application-tracker | source: skills/application-tracker/SKILL.md | sha256: 528465e3b5e32ae9ba9974895c2f5619039501bc4b7d793446503d1e735b9c56 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -1,0 +1,67 @@
+{
+  "$schema": "../schemas/pipeline.schema.json",
+  "id": "competitor-to-sprint",
+  "name": "Competitor teardown to a planned sprint",
+  "summary": "Tear down the competition, write the PRD for the gap you found, break it into stories and plan the first sprint. Four typed skills, each output feeding the next by contract.",
+  "inputs": {
+    "type": "object",
+    "properties": {
+      "product": {
+        "type": "object",
+        "description": "Your product",
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string", "description": "One line" }
+        },
+        "required": ["name"]
+      },
+      "competitors": { "type": "array", "description": "Two to five competitor names", "items": { "type": "string" } },
+      "feature_name": { "type": "string", "description": "Working name for the feature the PRD will describe" },
+      "target_user": { "type": "string", "description": "Role, context and what the user is trying to accomplish" },
+      "success_metrics": { "type": "array", "items": { "type": "string" } },
+      "personas": { "type": "array", "description": "Personas for the user stories", "items": { "type": "string" } },
+      "sprint_length_weeks": { "type": "integer" },
+      "team_size": { "type": "integer" }
+    },
+    "required": ["product", "competitors", "feature_name", "target_user", "sprint_length_weeks", "team_size"]
+  },
+  "steps": [
+    {
+      "id": "teardown",
+      "skill": "competitor-teardown",
+      "inputs": {
+        "product": "$.input.product",
+        "competitors": "$.input.competitors",
+        "use_case": "product_planning"
+      }
+    },
+    {
+      "id": "prd",
+      "skill": "prd-template",
+      "inputs": {
+        "feature_name": "$.input.feature_name",
+        "problem": "$.teardown.opportunities[0]",
+        "target_user": "$.input.target_user",
+        "success_metrics": "$.input.success_metrics"
+      }
+    },
+    {
+      "id": "stories",
+      "skill": "user-story-writer",
+      "inputs": {
+        "feature": "$.prd.title",
+        "personas": "$.input.personas",
+        "scope": "$.prd.sections.overview"
+      }
+    },
+    {
+      "id": "sprint",
+      "skill": "sprint-planning",
+      "inputs": {
+        "sprint_length_weeks": "$.input.sprint_length_weeks",
+        "team_size": "$.input.team_size",
+        "backlog": { "from": "$.stories.stories[]", "map": { "item": "title" } }
+      }
+    }
+  ]
+}

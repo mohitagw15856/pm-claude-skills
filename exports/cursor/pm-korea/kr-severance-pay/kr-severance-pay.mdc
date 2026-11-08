@@ -70,3 +70,6 @@ The leaving date (퇴직일) is the day after the last day worked. Standard libr
 - "How is severance calculated in Korea? I worked 18 months at 30 hours a week."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/kr-severance-pay.html
+
+<!-- pm-claude-skills v83.2.0 | skill: kr-severance-pay | source: skills/kr-severance-pay/SKILL.md | sha256: 87dfd9c471866e0f57feb19a96de1325e4a28ef1c19345a4940e3b9b0f484587 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

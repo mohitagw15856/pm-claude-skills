@@ -83,3 +83,6 @@ Ask for these if not provided:
 - "Compare options under uncertainty."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-tree-solver.html
+
+<!-- pm-claude-skills v83.2.0 | skill: decision-tree-solver | source: skills/decision-tree-solver/SKILL.md | sha256: c347b9c8318d9ffa1e3c65a07e32b547f643cfefa0f0982333f9771f71e6d1e8 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

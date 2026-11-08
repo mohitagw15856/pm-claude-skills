@@ -138,3 +138,6 @@ To hit £[target]:
 - [ ] Do not omit the coverage ratio — without it, stakeholders cannot assess whether the pipeline is sufficient to hit target
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sales-forecasting-model.html
+
+<!-- pm-claude-skills v83.2.0 | skill: sales-forecasting-model | source: skills/sales-forecasting-model/SKILL.md | sha256: bf88287c42131cb65034614fdbf0d83317a7ed41816515cca948cb850b5bedd9 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

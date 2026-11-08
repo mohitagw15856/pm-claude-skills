@@ -539,3 +539,6 @@ Not all content benefits equally. Use this to set expectations with the user abo
 *Originally created by Gencay (LearnAIwithMe) — adapted and extended for this library.*
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/aeo-optimizer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: aeo-optimizer | source: skills/aeo-optimizer/SKILL.md | sha256: 52f9554cac7415efea37d0fd39a50a3cfe95a02a18add421a7d3734ebf5c2f7a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

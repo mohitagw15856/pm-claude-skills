@@ -60,3 +60,6 @@ Steps: raise it in writing with the employer, then file with the Tripartite Alli
 - "新加坡公司要我离职，我能拿什么补偿？"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/singapore-employment-act.html
+
+<!-- pm-claude-skills v83.2.0 | skill: singapore-employment-act | source: skills/singapore-employment-act/SKILL.md | sha256: 531334a6ee5ed700e8d1616ad58301603846a1e4fd26be46e14abd09b0e63186 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

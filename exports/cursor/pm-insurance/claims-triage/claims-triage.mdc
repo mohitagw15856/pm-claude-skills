@@ -87,3 +87,6 @@ End every triage note with: *"This is analytical support for triage, not a cover
 - "Screen a claim for SIU referral."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/claims-triage.html
+
+<!-- pm-claude-skills v83.2.0 | skill: claims-triage | source: skills/claims-triage/SKILL.md | sha256: d185f299c6eb4adec0c7f7a60bea942790bf9e33265cb4c8323f79fb6a343f78 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -70,3 +70,6 @@ Real-estate buyer-representation practice — property- and offer-focused cover 
 - "Make our home offer stand out."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/property-offer-letter.html
+
+<!-- pm-claude-skills v83.2.0 | skill: property-offer-letter | source: skills/property-offer-letter/SKILL.md | sha256: d80f1eaca4a840ffb5818768b867dcfef8a65a1e02fd868da434ae44972a0d25 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

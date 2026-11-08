@@ -79,3 +79,6 @@ A **Changelog** block:
 - "Summarise this commit range as a human changelog."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/changelog-from-commits.html
+
+<!-- pm-claude-skills v83.2.0 | skill: changelog-from-commits | source: skills/changelog-from-commits/SKILL.md | sha256: fc2da7b36e10d44795a6dfac3acf11d92edefb0acff57d964adf2969ef88c024 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

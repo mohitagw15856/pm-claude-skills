@@ -71,3 +71,6 @@ Guardrails: every slide claim traces to the doc — never invent data or a recom
 - "Build the presentation from my doc and save it to Drive."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/deck-from-doc.html
+
+<!-- pm-claude-skills v83.2.0 | skill: deck-from-doc | source: skills/deck-from-doc/SKILL.md | sha256: 26f4d0ee0bf4ce76a1139019ce517ff1d92c8b7c4988c9c680b40d407b01b633 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -415,3 +415,6 @@ Accept the current state and revisit the problem in [timeframe].
 - "Produce a technical specification for team feedback."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rfc-writer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: rfc-writer | source: skills/rfc-writer/SKILL.md | sha256: b303b5509d28cf7ba4b70112b51df629b2a9d4755d5a930550135735c7a52c59 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

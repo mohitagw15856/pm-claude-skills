@@ -94,3 +94,6 @@ This library has its own skill called `frontend-design` in the pm-design bundle.
 Part of the pm-design-taste bundle in the library at https://github.com/mohitagw15856/pm-claude-skills.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/frontend-design-pointer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: frontend-design-pointer | source: skills/frontend-design-pointer/SKILL.md | sha256: bd122add41a0debc248e6176b9dc0ae04cd0a4bff3ed970301618f4b13ff1bad | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

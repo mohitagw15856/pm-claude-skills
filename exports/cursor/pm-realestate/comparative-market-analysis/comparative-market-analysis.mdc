@@ -78,3 +78,6 @@ Real-estate valuation practice — comparable-sales analysis with feature adjust
 - "Estimate a property's value from comparables."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/comparative-market-analysis.html
+
+<!-- pm-claude-skills v83.2.0 | skill: comparative-market-analysis | source: skills/comparative-market-analysis/SKILL.md | sha256: f2c8ae8daeb7a35f2b1ab81c32415a0e5301c9e45a57c40a565aae3045397d03 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

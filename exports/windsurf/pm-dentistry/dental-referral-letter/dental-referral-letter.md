@@ -84,3 +84,6 @@ Ask for these if not provided:
 - "Write a perio referral with the charting attached"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dental-referral-letter.html
+
+<!-- pm-claude-skills v83.2.0 | skill: dental-referral-letter | source: skills/dental-referral-letter/SKILL.md | sha256: 1a02cfa09b321375315a0f0d2b78578d481c15b0e424e75cd42a738ad375583e | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -81,3 +81,6 @@ Work from what is given. If any of these is missing, still produce the complete 
 - "Understand what has changed in the market this week."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/competitive-intelligence-monitor.html
+
+<!-- pm-claude-skills v83.2.0 | skill: competitive-intelligence-monitor | source: skills/competitive-intelligence-monitor/SKILL.md | sha256: 42df48c2b72a27d84f30cd2946eb52c085375857703b8226038703b2bb643d4f | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

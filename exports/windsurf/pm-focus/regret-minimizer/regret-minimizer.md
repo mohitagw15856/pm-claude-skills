@@ -65,3 +65,6 @@ Ask for these if not provided:
 - "I'm scared to do it but scared not to — which regret is worse?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/regret-minimizer.html
+
+<!-- pm-claude-skills v83.2.0 | skill: regret-minimizer | source: skills/regret-minimizer/SKILL.md | sha256: f288ccb9c8b5d720758ca4607776aa5728f4e1527acd2100c230c73b23bad7eb | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -263,6 +263,8 @@ jobs:
           git fetch --unshallow --filter=blob:none --quiet origin || git fetch --unshallow --quiet origin || true
           node scripts/build-skill-changes.mjs
           node scripts/build-skill-changelog.mjs
+      - name: Build the year-in-review pages (web/report/)
+        run: node scripts/build-year-in-review.mjs
 
       - name: Publish the jurisdiction overlays (web/overlays.json)
         run: node scripts/build-overlays.mjs

@@ -79,3 +79,6 @@ Real-estate marketing practice — multi-channel open-house promotion, staging, 
 - "Create an open-house checklist."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/open-house-plan.html
+
+<!-- pm-claude-skills v83.2.0 | skill: open-house-plan | source: skills/open-house-plan/SKILL.md | sha256: 4dd044b76f9ec0c5e5a41ec502e6e2a158c0fea3207ee475f1d0eb5562abe0b6 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

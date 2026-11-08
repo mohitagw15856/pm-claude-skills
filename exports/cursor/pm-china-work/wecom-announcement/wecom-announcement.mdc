@@ -83,3 +83,6 @@ Then **群消息版本**, **置顶版本** and, where there is an action, **提�
 - "部门架构调整，帮我写一则内部公告，语气要稳。"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wecom-announcement.html
+
+<!-- pm-claude-skills v83.2.0 | skill: wecom-announcement | source: skills/wecom-announcement/SKILL.md | sha256: 430ffde99dc21f81e45310e37afc8ac590b5e569ae7fa5c439256e83a4e13d04 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -74,3 +74,6 @@ Secure code/design review practice (OWASP Top 10 & ASVS risk areas, severity-ran
 - "Check a feature for vulnerabilities."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/security-review.html
+
+<!-- pm-claude-skills v83.2.0 | skill: security-review | source: skills/security-review/SKILL.md | sha256: db4a4f26db82075e64438dacf906465787207fb8082efb70f0526bb2bc14fe68 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -88,3 +88,6 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 - "Craft a bio."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/creator-brand-kit.html
+
+<!-- pm-claude-skills v83.2.0 | skill: creator-brand-kit | source: skills/creator-brand-kit/SKILL.md | sha256: bba059af991ed9010fddf42f55ad3f23ecddcf1791d10f60968b7e111c19c86a | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

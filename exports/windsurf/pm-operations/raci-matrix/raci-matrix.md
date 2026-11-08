@@ -168,3 +168,6 @@ Please review the full matrix here: [Link]. Raise any concerns by [Date] — aft
 - "Generate a RACI for a [migration / launch / process] involving [teams]"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/raci-matrix.html
+
+<!-- pm-claude-skills v83.2.0 | skill: raci-matrix | source: skills/raci-matrix/SKILL.md | sha256: 96bec6f0551726aff91e9ddb8e4dd3656c62a4109044ab7fae1cc66c6ac9f7e9 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -71,3 +71,6 @@ Ask for these if not provided:
 - "What has to happen this week vs. what can wait after a death?"
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/notify-everyone-of-a-death.html
+
+<!-- pm-claude-skills v83.2.0 | skill: notify-everyone-of-a-death | source: skills/notify-everyone-of-a-death/SKILL.md | sha256: bd8c836903c154aac897c58d9d60f8cb1af5e2da430d02e2bcf1f69846a62b82 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

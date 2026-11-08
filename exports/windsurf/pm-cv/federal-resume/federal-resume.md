@@ -67,3 +67,6 @@ Rules:
 - "Help me apply for a government job on USAJOBS."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/federal-resume.html
+
+<!-- pm-claude-skills v83.2.0 | skill: federal-resume | source: skills/federal-resume/SKILL.md | sha256: cb33caf3b20450279371bb2e5745a07d9112837231effab7f45275e5db58a514 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->
