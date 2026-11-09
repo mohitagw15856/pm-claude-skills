@@ -1,5 +1,38 @@
 {
-  "generatedAt": "2026-11-02T17:14:44.080Z",
+  "generatedAt": "2026-11-09T17:40:44.451Z",
   "window": "7d",
-  "skills": []
+  "skills": [
+    {
+      "name": "meeting-notes",
+      "count": 2
+    },
+    {
+      "name": "exam-study-plan",
+      "count": 1
+    },
+    {
+      "name": "idea-storm",
+      "count": 1
+    },
+    {
+      "name": "interview-me",
+      "count": 1
+    },
+    {
+      "name": "the-thesis-defense",
+      "count": 1
+    },
+    {
+      "name": "expense-audit",
+      "count": 1
+    },
+    {
+      "name": "clip-factory",
+      "count": 1
+    },
+    {
+      "name": "board-minutes",
+      "count": 1
+    }
+  ]
 }
