@@ -70,5 +70,5 @@ Source: [registry] APIs · as of [date] · rerun: `[the curls]`
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/package-health.html
 
-<!-- pm-claude-skills v83.2.0 | skill: package-health | source: skills/package-health/SKILL.md | sha256: 5eba4bd5c2db579d2d15c2c5e592c497351d00d7268c9bb1dddcf9ebd8683d4d | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: package-health | source: skills/package-health/SKILL.md | sha256: 5eba4bd5c2db579d2d15c2c5e592c497351d00d7268c9bb1dddcf9ebd8683d4d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -103,5 +103,5 @@ Feature, PM, Designer, Platform, Design due, Dev handoff dates.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-design-brief.html
 
-<!-- pm-claude-skills v83.2.0 | skill: figma-design-brief | source: skills/figma-design-brief/SKILL.md | sha256: 5a468332584cc66cf1b8d3641f8a4a583dd5cdc1b50aede863b94a562c508936 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: figma-design-brief | source: skills/figma-design-brief/SKILL.md | sha256: 5a468332584cc66cf1b8d3641f8a4a583dd5cdc1b50aede863b94a562c508936 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

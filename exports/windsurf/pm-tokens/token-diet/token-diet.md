@@ -74,5 +74,5 @@ The output-compression register pattern — telegraphic prompting for output-tok
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/token-diet.html
 
-<!-- pm-claude-skills v83.2.0 | skill: token-diet | source: skills/token-diet/SKILL.md | sha256: d7ca21c35b1a6478f051be304c6b217f066cebb02e7dedf8f9443fff24580743 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: token-diet | source: skills/token-diet/SKILL.md | sha256: d7ca21c35b1a6478f051be304c6b217f066cebb02e7dedf8f9443fff24580743 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

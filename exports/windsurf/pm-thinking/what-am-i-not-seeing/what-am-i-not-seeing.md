@@ -65,5 +65,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/what-am-i-not-seeing.html
 
-<!-- pm-claude-skills v83.2.0 | skill: what-am-i-not-seeing | source: skills/what-am-i-not-seeing/SKILL.md | sha256: d0e6d84230f544036051b6c5156be47f08d812e87fa1dd3ed8ccbca29de3fc9c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: what-am-i-not-seeing | source: skills/what-am-i-not-seeing/SKILL.md | sha256: d0e6d84230f544036051b6c5156be47f08d812e87fa1dd3ed8ccbca29de3fc9c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

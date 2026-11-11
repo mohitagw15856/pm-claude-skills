@@ -78,5 +78,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/layoff-announcement.html
 
-<!-- pm-claude-skills v83.2.0 | skill: layoff-announcement | source: skills/layoff-announcement/SKILL.md | sha256: 069f931d37cc1b5d583c9d03d74760be2b823680fba3de246f270cf8b5b34cbe | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: layoff-announcement | source: skills/layoff-announcement/SKILL.md | sha256: 069f931d37cc1b5d583c9d03d74760be2b823680fba3de246f270cf8b5b34cbe | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

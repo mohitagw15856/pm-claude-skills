@@ -74,5 +74,5 @@ Reads: […] · Writes: […] · Network: [every host, named] · Executes: […]
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/skill-vetting.html
 
-<!-- pm-claude-skills v83.2.0 | skill: skill-vetting | source: skills/skill-vetting/SKILL.md | sha256: 89766dc61f033393432de58430250b5e2e7154fa336dd8928c9011764c1e6484 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: skill-vetting | source: skills/skill-vetting/SKILL.md | sha256: 89766dc61f033393432de58430250b5e2e7154fa336dd8928c9011764c1e6484 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

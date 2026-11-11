@@ -66,5 +66,5 @@ Performance-marketing practice — LTV/CAC and payback economics, incrementality
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/paid-acquisition-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: paid-acquisition-plan | source: skills/paid-acquisition-plan/SKILL.md | sha256: ac41fa41ca83b6801b9139ba21b567a168668386c2886598f61b725669dc20a9 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: paid-acquisition-plan | source: skills/paid-acquisition-plan/SKILL.md | sha256: ac41fa41ca83b6801b9139ba21b567a168668386c2886598f61b725669dc20a9 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -72,5 +72,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/blended-family-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: blended-family-plan | source: skills/blended-family-plan/SKILL.md | sha256: c4da03fbfd2306a59d3c8b544067ffdbd95841e28c8d913d714f279af53c17a0 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: blended-family-plan | source: skills/blended-family-plan/SKILL.md | sha256: c4da03fbfd2306a59d3c8b544067ffdbd95841e28c8d913d714f279af53c17a0 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/quarterly-tax-rhythm.html
 
-<!-- pm-claude-skills v83.2.0 | skill: quarterly-tax-rhythm | source: skills/quarterly-tax-rhythm/SKILL.md | sha256: 2c74c9a729610205aff7f7a03c1606067d67b59cd7a693b605d3b599a4689f7f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: quarterly-tax-rhythm | source: skills/quarterly-tax-rhythm/SKILL.md | sha256: 2c74c9a729610205aff7f7a03c1606067d67b59cd7a693b605d3b599a4689f7f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

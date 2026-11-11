@@ -68,5 +68,5 @@ Semantic-layer / metrics-layer practice (dbt MetricFlow, Cube, LookML) — singl
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/metric-semantic-layer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: metric-semantic-layer | source: skills/metric-semantic-layer/SKILL.md | sha256: 7681b273b0addcc1b24a36d4d14cc5a3d826a14ce48eb63bee68c5137ab4b6c5 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: metric-semantic-layer | source: skills/metric-semantic-layer/SKILL.md | sha256: 7681b273b0addcc1b24a36d4d14cc5a3d826a14ce48eb63bee68c5137ab4b6c5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

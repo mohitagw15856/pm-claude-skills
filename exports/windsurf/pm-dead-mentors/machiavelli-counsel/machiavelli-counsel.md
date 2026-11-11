@@ -106,5 +106,5 @@ and what to do instead. Be specific: "he'd say X; the durable version is Y."]
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/machiavelli-counsel.html
 
-<!-- pm-claude-skills v83.2.0 | skill: machiavelli-counsel | source: skills/machiavelli-counsel/SKILL.md | sha256: 93d3c9511283e0dcf9e596e980dd883a69917f4edd7a5ab240c145ba7e1550ad | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: machiavelli-counsel | source: skills/machiavelli-counsel/SKILL.md | sha256: 93d3c9511283e0dcf9e596e980dd883a69917f4edd7a5ab240c145ba7e1550ad | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

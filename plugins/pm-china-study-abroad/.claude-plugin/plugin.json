@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-china-study-abroad",
+  "version": "1.0.0",
+  "description": "留学与海归：申请文书、留学签证准备、海归求职。Study abroad for Chinese applicants: application essays, student visa preparation and the returnee job search",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "china",
+    "study-abroad",
+    "personal-statement",
+    "visa",
+    "returnee",
+    "haigui"
+  ]
+}

@@ -246,5 +246,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/user-story-writer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: user-story-writer | source: skills/user-story-writer/SKILL.md | sha256: cfd67b9a4f803aad60c984ba31d1048049bd53b8adfbf2a69a9f0f0d924b3db3 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: user-story-writer | source: skills/user-story-writer/SKILL.md | sha256: cfd67b9a4f803aad60c984ba31d1048049bd53b8adfbf2a69a9f0f0d924b3db3 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -68,5 +68,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bank-fee-refund.html
 
-<!-- pm-claude-skills v83.2.0 | skill: bank-fee-refund | source: skills/bank-fee-refund/SKILL.md | sha256: 78c7a00e2317750c8e7f5121b1b49b14afdb519a6f40ad552c19c3b391f92c5e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: bank-fee-refund | source: skills/bank-fee-refund/SKILL.md | sha256: 78c7a00e2317750c8e7f5121b1b49b14afdb519a6f40ad552c19c3b391f92c5e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

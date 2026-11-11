@@ -82,5 +82,5 @@ Creative/agency briefing practice and structured-elicitation interviewing (decis
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/brief-builder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: brief-builder | source: skills/brief-builder/SKILL.md | sha256: 53bd8cc0b5bfa3538c27f1221f8436d1c15f33a3f39bb137f0e17a95df75c8e6 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: brief-builder | source: skills/brief-builder/SKILL.md | sha256: 53bd8cc0b5bfa3538c27f1221f8436d1c15f33a3f39bb137f0e17a95df75c8e6 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

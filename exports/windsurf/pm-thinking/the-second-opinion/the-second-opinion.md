@@ -62,5 +62,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-second-opinion.html
 
-<!-- pm-claude-skills v83.2.0 | skill: the-second-opinion | source: skills/the-second-opinion/SKILL.md | sha256: bcfdc95f45c3e09938c7679fe018364a626a7f89c67ea0212c026d596f6f2e10 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: the-second-opinion | source: skills/the-second-opinion/SKILL.md | sha256: bcfdc95f45c3e09938c7679fe018364a626a7f89c67ea0212c026d596f6f2e10 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

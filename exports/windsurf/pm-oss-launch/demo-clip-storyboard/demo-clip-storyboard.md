@@ -69,5 +69,5 @@ Format and size for each platform: MP4 (H.264), under 15 MB for X; square or ver
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/demo-clip-storyboard.html
 
-<!-- pm-claude-skills v83.2.0 | skill: demo-clip-storyboard | source: skills/demo-clip-storyboard/SKILL.md | sha256: 0a1b1ab17c41553f6421ba76d0c22ac548af969ecdd44f630be8e47c498a057b | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: demo-clip-storyboard | source: skills/demo-clip-storyboard/SKILL.md | sha256: 0a1b1ab17c41553f6421ba76d0c22ac548af969ecdd44f630be8e47c498a057b | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

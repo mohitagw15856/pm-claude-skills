@@ -75,5 +75,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-car-dealership.html
 
-<!-- pm-claude-skills v83.2.0 | skill: the-car-dealership | source: skills/the-car-dealership/SKILL.md | sha256: b9c2d702c853d52fedb1f887e651ec206a405d350cfd75a37e7d81c5a950fb4c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: the-car-dealership | source: skills/the-car-dealership/SKILL.md | sha256: b9c2d702c853d52fedb1f887e651ec206a405d350cfd75a37e7d81c5a950fb4c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

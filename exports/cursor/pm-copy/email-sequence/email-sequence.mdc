@@ -68,5 +68,5 @@ Lifecycle email practice — one-goal-per-email sequences, value-before-ask, beh
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/email-sequence.html
 
-<!-- pm-claude-skills v83.2.0 | skill: email-sequence | source: skills/email-sequence/SKILL.md | sha256: df73373299e933a12d26a61ab423c9f5cd7aa3e44e2debc7b683d96cb784a8c6 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: email-sequence | source: skills/email-sequence/SKILL.md | sha256: df73373299e933a12d26a61ab423c9f5cd7aa3e44e2debc7b683d96cb784a8c6 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

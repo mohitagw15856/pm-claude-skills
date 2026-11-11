@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/class-action-claim-finder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: class-action-claim-finder | source: skills/class-action-claim-finder/SKILL.md | sha256: 9c61d75fa0e13098c6da1e82f6d61a489e237834d9dfcf57ddbfeab9c2ca2608 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: class-action-claim-finder | source: skills/class-action-claim-finder/SKILL.md | sha256: 9c61d75fa0e13098c6da1e82f6d61a489e237834d9dfcf57ddbfeab9c2ca2608 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -80,5 +80,5 @@ Open-source README best practices (one-line pitch, time-to-first-success quickst
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/readme-writer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: readme-writer | source: skills/readme-writer/SKILL.md | sha256: ac5133249f0394ecf1c51ec6607d62538b105d43977276d967c821c10a8d716d | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: readme-writer | source: skills/readme-writer/SKILL.md | sha256: ac5133249f0394ecf1c51ec6607d62538b105d43977276d967c821c10a8d716d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

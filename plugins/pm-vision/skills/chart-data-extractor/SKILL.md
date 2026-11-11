@@ -1,11 +1,11 @@
 ---
 name: chart-data-extractor
-description: "Extract pixel-level data from an image of a chart or graph and produce a structured data table. Use when asked to extract data from a chart image, transcribe numbers from a graph, digitise a chart, or turn a screenshot of data into a table. Produces a structured table with extracted values, confidence levels, and a reconstructed chart source. Best used with Claude Opus 4.7 or newer for reliable chart data extraction."
+description: "Extract pixel-level data from an image of a chart or graph and produce a structured data table. Use when asked to extract data from a chart image, transcribe numbers from a graph, digitise a chart, or turn a screenshot of data into a table. Produces a structured table with extracted values, confidence levels, and a reconstructed chart source. Needs a model that can read images at high resolution."
 ---
 
 # Chart Data Extractor Skill
 
-Extracts data from images of charts and graphs — bar charts, line charts, pie charts, scatter plots, and tables in images — producing a structured data table that can be used in spreadsheets or rebuilt in any charting tool. Built to leverage Opus 4.7 pixel-level image analysis capabilities.
+Extracts data from images of charts and graphs — bar charts, line charts, pie charts, scatter plots, and tables in images — producing a structured data table that can be used in spreadsheets or rebuilt in any charting tool.
 
 ## Required Inputs
 
@@ -98,7 +98,7 @@ Ask the user which of these they want:
 - "Digitise this chart so I can rebuild it"
 - "What are the exact values in this bar chart?"
 
-## Why This Works Better on Opus 4.7
-Earlier models struggled with pixel-level data transcription from charts, often hallucinating values or misreading gridline positions. Opus 4.7 uses a higher image resolution (2576px vs 1568px) with coordinates mapping 1:1 to pixels, making chart data extraction reliable for practical use.
+## Model Requirements
+Reading values off a chart depends on image resolution: a model that sees the chart at low resolution will misread gridlines and invent values. Use a model with high-resolution vision, and keep the confidence column honest. Where the image is small or compressed, say so and ask for a larger copy or the source data.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/chart-data-extractor.html

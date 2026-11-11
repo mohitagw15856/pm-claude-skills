@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/public-speaking-prep.html
 
-<!-- pm-claude-skills v83.2.0 | skill: public-speaking-prep | source: skills/public-speaking-prep/SKILL.md | sha256: 94f1f9b06d6ed7cf88069a47bc463f755efab26f777382b6a46968270c8abc7e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: public-speaking-prep | source: skills/public-speaking-prep/SKILL.md | sha256: 94f1f9b06d6ed7cf88069a47bc463f755efab26f777382b6a46968270c8abc7e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

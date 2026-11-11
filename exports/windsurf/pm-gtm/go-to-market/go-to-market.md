@@ -135,5 +135,5 @@ Before delivering output, verify:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/go-to-market.html
 
-<!-- pm-claude-skills v83.2.0 | skill: go-to-market | source: skills/go-to-market/SKILL.md | sha256: 617539e06fad27a167ef0e23c5030cd6919ec1be7565716bbdacf256cacd6ca8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: go-to-market | source: skills/go-to-market/SKILL.md | sha256: 617539e06fad27a167ef0e23c5030cd6919ec1be7565716bbdacf256cacd6ca8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

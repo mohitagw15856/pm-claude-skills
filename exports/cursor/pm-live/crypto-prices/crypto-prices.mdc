@@ -65,5 +65,5 @@ Source: [CoinGecko / Coinbase] at [timestamp, UTC] · rerun: `[exact curl]`
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/crypto-prices.html
 
-<!-- pm-claude-skills v83.2.0 | skill: crypto-prices | source: skills/crypto-prices/SKILL.md | sha256: 4ad50b90c593f3a89574b0955d7ac1c9752fe2dcff8355cf9417b8ed1c08408e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: crypto-prices | source: skills/crypto-prices/SKILL.md | sha256: 4ad50b90c593f3a89574b0955d7ac1c9752fe2dcff8355cf9417b8ed1c08408e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

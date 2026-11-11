@@ -1,11 +1,11 @@
 ---
 name: pptx-slide-auditor
-description: "Audit a PowerPoint presentation for layout issues, text overflow, visual hierarchy problems, and consistency gaps. Use when asked to review a slide deck, check a presentation before a meeting, audit slides for layout problems, or QA a deck before sharing. Produces a slide-by-slide report with issues ranked by severity and specific fixes. Best used with Claude Opus 4.7 or newer for reliable slide-level vision analysis."
+description: "Audit a PowerPoint presentation for layout issues, text overflow, visual hierarchy problems, and consistency gaps. Use when asked to review a slide deck, check a presentation before a meeting, audit slides for layout problems, or QA a deck before sharing. Produces a slide-by-slide report with issues ranked by severity and specific fixes. Needs a model that can read images at high resolution; text-only models cannot do the layout checks."
 ---
 
 # PPTX Slide Auditor Skill
 
-Runs a systematic visual and structural audit of a PowerPoint presentation — identifying layout issues, text overflow, inconsistent styling, weak visual hierarchy, and slides that will cause problems in a presentation setting. Built to leverage Opus 4.7 vision improvements for pixel-level layout analysis.
+Runs a systematic visual and structural audit of a PowerPoint presentation — identifying layout issues, text overflow, inconsistent styling, weak visual hierarchy, and slides that will cause problems in a presentation setting.
 
 ## Required Inputs
 
@@ -97,7 +97,7 @@ Order by: fixes before handoff (critical) > consistency fixes (high) > polish (m
 - "QA my deck before I send it to the client"
 - "What is wrong with slide 7 in this deck?"
 
-## Why This Works Better on Opus 4.7
-Earlier models struggled with precise spatial analysis of slide layouts — they would hallucinate issues or miss obvious overflow problems. Opus 4.7 vision improvements mean coordinates map 1:1 to pixels, making slide-level issue detection reliable without manual screenshot annotation.
+## Model Requirements
+This audit depends on reading slide images precisely: where text overflows, what overlaps, what is misaligned. Use a model with high-resolution vision. On a model that cannot see the slides, or sees them at low resolution, ask for the slide text and layout notes instead and say that layout findings are unverified.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pptx-slide-auditor.html

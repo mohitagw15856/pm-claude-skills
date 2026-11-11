@@ -63,5 +63,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/demo-script.html
 
-<!-- pm-claude-skills v83.2.0 | skill: demo-script | source: skills/demo-script/SKILL.md | sha256: bd55362c4617c8dfca01d79588cd898bb048a16366897da8a146c3e680c805c0 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: demo-script | source: skills/demo-script/SKILL.md | sha256: bd55362c4617c8dfca01d79588cd898bb048a16366897da8a146c3e680c805c0 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

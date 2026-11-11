@@ -116,5 +116,5 @@ write quotes that survive it; [[late-invoice-escalation]] for afterwards.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/trade-quote-builder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: trade-quote-builder | source: skills/trade-quote-builder/SKILL.md | sha256: af198efe3da7cf833fecba005dcad10a4406ff9a0592ce1f7f17b0c0bbbaa884 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: trade-quote-builder | source: skills/trade-quote-builder/SKILL.md | sha256: af198efe3da7cf833fecba005dcad10a4406ff9a0592ce1f7f17b0c0bbbaa884 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

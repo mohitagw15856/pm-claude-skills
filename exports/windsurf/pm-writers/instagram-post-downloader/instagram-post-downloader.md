@@ -674,5 +674,5 @@ This skill is designed for public posts only. It does not support login, session
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/instagram-post-downloader.html
 
-<!-- pm-claude-skills v83.2.0 | skill: instagram-post-downloader | source: skills/instagram-post-downloader/SKILL.md | sha256: c1831e021fcdf73f7f1517f036e93a18951353f1c409435edec4f726a8de43eb | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: instagram-post-downloader | source: skills/instagram-post-downloader/SKILL.md | sha256: c1831e021fcdf73f7f1517f036e93a18951353f1c409435edec4f726a8de43eb | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

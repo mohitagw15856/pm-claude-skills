@@ -89,5 +89,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/patient-education-explainer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: patient-education-explainer | source: skills/patient-education-explainer/SKILL.md | sha256: e6f80122da8f3decad16f238b6a97b789610c8407a5f551efbb61c48a3faf475 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: patient-education-explainer | source: skills/patient-education-explainer/SKILL.md | sha256: e6f80122da8f3decad16f238b6a97b789610c8407a5f551efbb61c48a3faf475 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

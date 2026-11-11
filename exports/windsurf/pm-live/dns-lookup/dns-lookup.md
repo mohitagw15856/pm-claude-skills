@@ -66,5 +66,5 @@ Source: [dns.google / Cloudflare DoH / RDAP] · rerun: `[exact curls]`
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dns-lookup.html
 
-<!-- pm-claude-skills v83.2.0 | skill: dns-lookup | source: skills/dns-lookup/SKILL.md | sha256: 9c77d66e2ac01e8966b8d9a3b9e1828895c11ab1d99a240fcb4c0be518715e24 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: dns-lookup | source: skills/dns-lookup/SKILL.md | sha256: 9c77d66e2ac01e8966b8d9a3b9e1828895c11ab1d99a240fcb4c0be518715e24 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

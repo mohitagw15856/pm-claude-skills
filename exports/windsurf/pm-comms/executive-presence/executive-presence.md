@@ -65,5 +65,5 @@ Executive-communication practice — BLUF / Minto Pyramid (answer-first), compos
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/executive-presence.html
 
-<!-- pm-claude-skills v83.2.0 | skill: executive-presence | source: skills/executive-presence/SKILL.md | sha256: ca3279d0907bd41574fc3c6f2fb5df74dc7e244b0c7da070a265127ba5d97628 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: executive-presence | source: skills/executive-presence/SKILL.md | sha256: ca3279d0907bd41574fc3c6f2fb5df74dc7e244b0c7da070a265127ba5d97628 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

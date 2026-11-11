@@ -80,5 +80,5 @@ what & why — 2–3 lines
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pr-description-live.html
 
-<!-- pm-claude-skills v83.2.0 | skill: pr-description-live | source: skills/pr-description-live/SKILL.md | sha256: 52bf645d00551e7a79678980894a42a9bf518c8459694a039454962328ed28e1 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: pr-description-live | source: skills/pr-description-live/SKILL.md | sha256: 52bf645d00551e7a79678980894a42a9bf518c8459694a039454962328ed28e1 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

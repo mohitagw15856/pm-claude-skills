@@ -20,7 +20,7 @@ a code-review checklist — on every push or PR.
 | `input` | — | The text/context to run the skill on. |
 | `input_file` | — | Read input from a file instead of `input`. |
 | `api_key` | ✅ | Anthropic API key (store as a repo secret). |
-| `model` | — | Model id (default `claude-sonnet-4-6`). |
+| `model` | — | Model id. Empty uses the `default` role in `data/models.json` (currently `claude-sonnet-5-5`). |
 | `output_file` | — | Also write the result to this file. |
 
 **Output:** `result` — the skill's output (use `output_file` for long, multi-line results).

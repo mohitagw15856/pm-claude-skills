@@ -92,5 +92,5 @@ _Not an incident report — for full context on any open item, follow the linked
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/oncall-handoff.html
 
-<!-- pm-claude-skills v83.2.0 | skill: oncall-handoff | source: skills/oncall-handoff/SKILL.md | sha256: 94680b1463fe7e7df3116ba5ea461b447825d5b8fdc1377954be3a5b4b15c883 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: oncall-handoff | source: skills/oncall-handoff/SKILL.md | sha256: 94680b1463fe7e7df3116ba5ea461b447825d5b8fdc1377954be3a5b4b15c883 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

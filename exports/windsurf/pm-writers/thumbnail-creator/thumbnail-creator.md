@@ -634,5 +634,5 @@ Before marking the task complete, verify each item:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/thumbnail-creator.html
 
-<!-- pm-claude-skills v83.2.0 | skill: thumbnail-creator | source: skills/thumbnail-creator/SKILL.md | sha256: 6b34e725a2a293d2b3aa7c9c293c109187bdcb71ac1b30176554389164b096a5 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: thumbnail-creator | source: skills/thumbnail-creator/SKILL.md | sha256: 6b34e725a2a293d2b3aa7c9c293c109187bdcb71ac1b30176554389164b096a5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

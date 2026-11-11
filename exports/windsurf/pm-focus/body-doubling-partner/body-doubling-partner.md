@@ -67,5 +67,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/body-doubling-partner.html
 
-<!-- pm-claude-skills v83.2.0 | skill: body-doubling-partner | source: skills/body-doubling-partner/SKILL.md | sha256: 606a269b7427f57b254f2defcddfa036d9f778c7040fdea64189f3e0c7d72b25 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: body-doubling-partner | source: skills/body-doubling-partner/SKILL.md | sha256: 606a269b7427f57b254f2defcddfa036d9f778c7040fdea64189f3e0c7d72b25 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

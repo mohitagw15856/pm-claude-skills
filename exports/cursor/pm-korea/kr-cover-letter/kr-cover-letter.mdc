@@ -66,5 +66,5 @@ Interviewers ask about what is written; every claim should survive a "구체적�
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/kr-cover-letter.html
 
-<!-- pm-claude-skills v83.2.0 | skill: kr-cover-letter | source: skills/kr-cover-letter/SKILL.md | sha256: 77db5398aa74b85452ad3bc84cd2efbdcd4f1c92916b13149f1afa0b20e5ed58 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: kr-cover-letter | source: skills/kr-cover-letter/SKILL.md | sha256: 77db5398aa74b85452ad3bc84cd2efbdcd4f1c92916b13149f1afa0b20e5ed58 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

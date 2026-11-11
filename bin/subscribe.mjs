@@ -14,6 +14,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { install, uninstall, list } from './lib/scheduler.mjs';
 import { complete, parseSkill } from './lib/anthropic.mjs';
+import { modelFor } from './lib/models.mjs';
 
 const PKG_ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const getArg = (argv, n, d) => { const i = argv.indexOf('--' + n); return i >= 0 && argv[i + 1] ? argv[i + 1] : d; };
@@ -32,7 +33,7 @@ async function runCycle(skill, inputPath, model) {
   const { body } = parseSkill(readFileSync(file, 'utf8'));
   const input = readFileSync(inputPath, 'utf8').slice(0, 60000);
   console.error(`⏰ ${skill} ← ${inputPath}${prev ? ' (diffing vs last run)' : ' (first run)'}`);
-  const out = await complete({ apiKey, model: model || 'claude-sonnet-4-6', maxTokens: 8192,
+  const out = await complete({ apiKey, model: model || modelFor('default'), maxTokens: 8192,
     system: body + '\n\n---\nExecute this skill on the input below. This is a RECURRING run.' +
       (prev ? ' The previous run\'s output is provided — begin your output with a "## What changed since last run" section (3-6 bullets, most decision-relevant first, honest "nothing material" if true), THEN the full artifact.' : ''),
     messages: [{ role: 'user', content: 'INPUT:\n' + input + (prev ? '\n\nPREVIOUS RUN OUTPUT:\n' + prev.slice(0, 20000) : '') }] });

@@ -127,5 +127,5 @@ for the operational half of "real app."
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-vibe-check.html
 
-<!-- pm-claude-skills v83.2.0 | skill: the-vibe-check | source: skills/the-vibe-check/SKILL.md | sha256: 1016dc1e6a14916f9acb715ac53e291f373901625664a383c8fcec7a55b56dcb | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: the-vibe-check | source: skills/the-vibe-check/SKILL.md | sha256: 1016dc1e6a14916f9acb715ac53e291f373901625664a383c8fcec7a55b56dcb | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -112,5 +112,5 @@ which previews, gates, executes, and records. The skill never executes directly.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/action-runner.html
 
-<!-- pm-claude-skills v83.2.0 | skill: action-runner | source: skills/action-runner/SKILL.md | sha256: 6ab7e3e32cbfd79cbeede5402f30c0f54b32877e7a3ff615722ae8437e310c19 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: action-runner | source: skills/action-runner/SKILL.md | sha256: 6ab7e3e32cbfd79cbeede5402f30c0f54b32877e7a3ff615722ae8437e310c19 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

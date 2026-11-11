@@ -60,5 +60,5 @@ Ask for (if not already provided), else infer and label:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/interrupt-rules.html
 
-<!-- pm-claude-skills v83.2.0 | skill: interrupt-rules | source: skills/interrupt-rules/SKILL.md | sha256: d416573547555b18596898a9aae58a8303d9a104107691c06c4b95ecdd6e3bda | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: interrupt-rules | source: skills/interrupt-rules/SKILL.md | sha256: d416573547555b18596898a9aae58a8303d9a104107691c06c4b95ecdd6e3bda | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

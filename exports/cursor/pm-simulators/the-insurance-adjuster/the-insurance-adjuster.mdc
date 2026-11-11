@@ -74,5 +74,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-insurance-adjuster.html
 
-<!-- pm-claude-skills v83.2.0 | skill: the-insurance-adjuster | source: skills/the-insurance-adjuster/SKILL.md | sha256: e7da00bbf38bbe3f409c022a8f9b22cafec46cd0e3f49262b0f0987df8918b67 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: the-insurance-adjuster | source: skills/the-insurance-adjuster/SKILL.md | sha256: e7da00bbf38bbe3f409c022a8f9b22cafec46cd0e3f49262b0f0987df8918b67 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

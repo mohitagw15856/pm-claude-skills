@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/doxxing-response.html
 
-<!-- pm-claude-skills v83.2.0 | skill: doxxing-response | source: skills/doxxing-response/SKILL.md | sha256: d63a0e36293aed5331ec56dc185e3ede561df7fcfc11cce67c43ce38ce1fef0d | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: doxxing-response | source: skills/doxxing-response/SKILL.md | sha256: d63a0e36293aed5331ec56dc185e3ede561df7fcfc11cce67c43ce38ce1fef0d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

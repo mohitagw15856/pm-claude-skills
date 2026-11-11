@@ -271,5 +271,5 @@ Use this template to document results after the session or survey.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/team-health-check.html
 
-<!-- pm-claude-skills v83.2.0 | skill: team-health-check | source: skills/team-health-check/SKILL.md | sha256: d3879afa3a529c1b8e0e22bdb82812c1e44870bf974f8c091a73ca4f7aa1c43b | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: team-health-check | source: skills/team-health-check/SKILL.md | sha256: d3879afa3a529c1b8e0e22bdb82812c1e44870bf974f8c091a73ca4f7aa1c43b | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

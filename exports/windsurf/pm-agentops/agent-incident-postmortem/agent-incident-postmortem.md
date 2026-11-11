@@ -97,5 +97,5 @@ Walk the layers in order; the root cause is usually the *earliest* layer that co
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-incident-postmortem.html
 
-<!-- pm-claude-skills v83.2.0 | skill: agent-incident-postmortem | source: skills/agent-incident-postmortem/SKILL.md | sha256: 13a3965184c79deda3aa27f98c2ce58dd697b1cd040ae9cc366cacd95909e442 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: agent-incident-postmortem | source: skills/agent-incident-postmortem/SKILL.md | sha256: 13a3965184c79deda3aa27f98c2ce58dd697b1cd040ae9cc366cacd95909e442 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

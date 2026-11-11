@@ -187,3 +187,21 @@ export function checkAgainst(value, schema, label) {
   }
   return problems;
 }
+
+/**
+ * Resolve every input of one step. An optional input bound to a pipeline input
+ * the person did not supply is left out; anything else that is absent throws.
+ */
+export function resolveStepInputs(step, contract, ctx) {
+  const required = (contract.inputs && contract.inputs.required) || [];
+  const out = {};
+  for (const [key, binding] of Object.entries(step.inputs || {})) {
+    const ref = binding && typeof binding === 'object' && !Array.isArray(binding) && 'from' in binding ? binding.from : binding;
+    try { out[key] = resolveBinding(binding, ctx); }
+    catch (e) {
+      if (typeof ref === 'string' && ref.startsWith('$.input.') && !required.includes(key)) continue;
+      throw e;
+    }
+  }
+  return out;
+}

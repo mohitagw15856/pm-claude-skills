@@ -153,5 +153,5 @@ Template for the summary document to send within 48 hours:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/team-offsite-planner.html
 
-<!-- pm-claude-skills v83.2.0 | skill: team-offsite-planner | source: skills/team-offsite-planner/SKILL.md | sha256: d1efa4b1eb363a83280d4d5a96e1404cce22b427ce897d6a05db1b1dabf86f0c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: team-offsite-planner | source: skills/team-offsite-planner/SKILL.md | sha256: d1efa4b1eb363a83280d4d5a96e1404cce22b427ce897d6a05db1b1dabf86f0c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

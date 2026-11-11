@@ -72,5 +72,5 @@ Test-design practice — requirement-derived cases with boundary-value and negat
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/test-case-writer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: test-case-writer | source: skills/test-case-writer/SKILL.md | sha256: 497388269505c7eb51f5008316ee02c52916e5ab0a64f2e9c1951a9af3587a84 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: test-case-writer | source: skills/test-case-writer/SKILL.md | sha256: 497388269505c7eb51f5008316ee02c52916e5ab0a64f2e9c1951a9af3587a84 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

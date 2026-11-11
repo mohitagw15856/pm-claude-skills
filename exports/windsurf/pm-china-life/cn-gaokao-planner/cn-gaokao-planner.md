@@ -76,5 +76,5 @@ End verbatim: *"以上为基于历史数据的规划建议，不保证录取。�
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-gaokao-planner.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-gaokao-planner | source: skills/cn-gaokao-planner/SKILL.md | sha256: a490b46e0fe1ca9a7a857ff62f8ed3fbb957c039f849eb287ed2a3795051b194 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-gaokao-planner | source: skills/cn-gaokao-planner/SKILL.md | sha256: a490b46e0fe1ca9a7a857ff62f8ed3fbb957c039f849eb287ed2a3795051b194 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

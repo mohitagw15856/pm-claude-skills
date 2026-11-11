@@ -319,5 +319,5 @@ Ask for these if not already provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cicd-playbook.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cicd-playbook | source: skills/cicd-playbook/SKILL.md | sha256: 2f94089903d9782af03cec9097233ea672b7724118d8c124197f4c5df083c15c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cicd-playbook | source: skills/cicd-playbook/SKILL.md | sha256: 2f94089903d9782af03cec9097233ea672b7724118d8c124197f4c5df083c15c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -75,5 +75,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/parent-teacher-conference-prep.html
 
-<!-- pm-claude-skills v83.2.0 | skill: parent-teacher-conference-prep | source: skills/parent-teacher-conference-prep/SKILL.md | sha256: 4f375fec94ab1d35da791b9ae758628c3c1febf7e6979752449dee6bb16fbeb4 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: parent-teacher-conference-prep | source: skills/parent-teacher-conference-prep/SKILL.md | sha256: 4f375fec94ab1d35da791b9ae758628c3c1febf7e6979752449dee6bb16fbeb4 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

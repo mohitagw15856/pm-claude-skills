@@ -97,5 +97,5 @@ Touch targets, screen reader labels, focus order, colour contrast, motion prefer
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-annotation-guide.html
 
-<!-- pm-claude-skills v83.2.0 | skill: figma-annotation-guide | source: skills/figma-annotation-guide/SKILL.md | sha256: 39024fcfd82c4e4e7e0eb0b08c06ac9014922205e0b00a0943c2a91c07e0cb83 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: figma-annotation-guide | source: skills/figma-annotation-guide/SKILL.md | sha256: 39024fcfd82c4e4e7e0eb0b08c06ac9014922205e0b00a0943c2a91c07e0cb83 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

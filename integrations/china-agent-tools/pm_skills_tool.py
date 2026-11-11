@@ -34,13 +34,45 @@ def _tokens(text):
     return set(words) | set(cjk)
 
 
+def _load_skills():
+    """The skill list, from whichever index the mirror carries.
+
+    data/skills-index.min.json is the committed routing index (full descriptions
+    plus Chinese ones), built by scripts/build-mirror-index.mjs. web/skills-index.json
+    is a build output that mirrors no longer carry. docs/catalogue.json is the last
+    resort: committed, but its descriptions are one sentence, so Chinese trigger
+    phrases are lost; data/zh-aliases.json adds short Chinese descriptions.
+    """
+    for path in ("data/skills-index.min.json", "web/skills-index.json"):
+        try:
+            skills = json.loads(_get(path))["skills"]
+            if skills:
+                return skills
+        except Exception:
+            continue
+    catalogue = json.loads(_get("docs/catalogue.json"))
+    try:
+        aliases = json.loads(_get("data/zh-aliases.json")).get("aliases", {})
+    except Exception:
+        aliases = {}
+    seen, skills = set(), []
+    for bundle in catalogue.get("items", []):
+        for s in bundle.get("skills", []):
+            if s.get("name") and s["name"] not in seen:
+                seen.add(s["name"])
+                skills.append({"name": s["name"], "description": s.get("description", ""),
+                               "descriptionZh": aliases.get(s["name"], "")})
+    if not skills:
+        raise RuntimeError("the skill catalogue on the mirror is empty")
+    return skills
+
+
 def _index():
     global _INDEX
     if _INDEX is None:
-        data = json.loads(_get("web/skills-index.json"))
         _INDEX = [(s["name"], s.get("description", ""), _tokens(s["name"].replace("-", " ")),
                    _tokens(" ".join([s.get("description", ""), s.get("descriptionZh", "")])))
-                  for s in data["skills"] if not s.get("deprecated")]
+                  for s in _load_skills() if not s.get("deprecated")]
     return _INDEX
 
 

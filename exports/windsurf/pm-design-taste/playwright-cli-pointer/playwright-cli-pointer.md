@@ -114,5 +114,5 @@ Part of the pm-design-taste bundle in the library at https://github.com/mohitagw
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/playwright-cli-pointer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: playwright-cli-pointer | source: skills/playwright-cli-pointer/SKILL.md | sha256: bd2d50fb4f68ff25e5ce98231378c79a69077748074b1dd5105175b505655d6a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: playwright-cli-pointer | source: skills/playwright-cli-pointer/SKILL.md | sha256: bd2d50fb4f68ff25e5ce98231378c79a69077748074b1dd5105175b505655d6a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

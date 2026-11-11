@@ -10,7 +10,8 @@
     anthropic: {
       name: 'Claude', keyStore: 'anthropic_api_key',
       placeholder: 'sk-ant-… (your Anthropic API key)', keyUrl: 'https://console.anthropic.com/settings/keys',
-      models: [['claude-fable-5', 'Fable 5 ✨ (newest)'], ['claude-opus-4-8', 'Opus 4.8'], ['claude-sonnet-4-6', 'Sonnet 4.6'], ['claude-haiku-4-5-20251001', 'Haiku 4.5']],
+      // Current line-up, kept in step with data/models.json by scripts/check-model-refs.mjs.
+      models: [['claude-fable-5-2', 'Fable 5.2 ✨ (newest)'], ['claude-opus-5-5', 'Opus 5.5'], ['claude-sonnet-5-5', 'Sonnet 5.5'], ['claude-haiku-5-5', 'Haiku 5.5']],
       buildReq: function (o) {
         // Vision: o.images = [{media_type, data(base64)}] → content blocks before the text.
         var content = (o.images && o.images.length)

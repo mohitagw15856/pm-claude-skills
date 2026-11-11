@@ -123,5 +123,5 @@ present recognised credentials; [[two-worlds-translator]] for the cultural trans
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/credential-recognition.html
 
-<!-- pm-claude-skills v83.2.0 | skill: credential-recognition | source: skills/credential-recognition/SKILL.md | sha256: 984b1e6c6540601dae086399cc2c5e7d3168cafa4f7168cdc65bc0208ec356ab | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: credential-recognition | source: skills/credential-recognition/SKILL.md | sha256: 984b1e6c6540601dae086399cc2c5e7d3168cafa4f7168cdc65bc0208ec356ab | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

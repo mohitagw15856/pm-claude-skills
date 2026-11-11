@@ -68,5 +68,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hydration-and-energy-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: hydration-and-energy-plan | source: skills/hydration-and-energy-plan/SKILL.md | sha256: f1c22c45f1f1011a817cc05e49c2c2caa72482a8c41bee70a6672dfc28ae6e85 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: hydration-and-energy-plan | source: skills/hydration-and-energy-plan/SKILL.md | sha256: f1c22c45f1f1011a817cc05e49c2c2caa72482a8c41bee70a6672dfc28ae6e85 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -91,5 +91,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/event-vendor-brief.html
 
-<!-- pm-claude-skills v83.2.0 | skill: event-vendor-brief | source: skills/event-vendor-brief/SKILL.md | sha256: aaa2c2cd2b17bbabdee2ded0660baa4c1125d9271296a0e53389673cbdc6af0d | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: event-vendor-brief | source: skills/event-vendor-brief/SKILL.md | sha256: aaa2c2cd2b17bbabdee2ded0660baa4c1125d9271296a0e53389673cbdc6af0d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -65,5 +65,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/five-minds.html
 
-<!-- pm-claude-skills v83.2.0 | skill: five-minds | source: skills/five-minds/SKILL.md | sha256: 940011223b46bcc284370a68b5598081895c329beee22f1cc296223b591797b7 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: five-minds | source: skills/five-minds/SKILL.md | sha256: 940011223b46bcc284370a68b5598081895c329beee22f1cc296223b591797b7 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

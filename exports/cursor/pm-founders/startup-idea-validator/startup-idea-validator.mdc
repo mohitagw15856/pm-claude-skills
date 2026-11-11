@@ -71,5 +71,5 @@ The single cheapest, fastest test that would most change your confidence — wha
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/startup-idea-validator.html
 
-<!-- pm-claude-skills v83.2.0 | skill: startup-idea-validator | source: skills/startup-idea-validator/SKILL.md | sha256: 4834ca3b4391f062ae409b8ac2b79352edc519136d652139ee944bd3c8c196f5 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: startup-idea-validator | source: skills/startup-idea-validator/SKILL.md | sha256: 4834ca3b4391f062ae409b8ac2b79352edc519136d652139ee944bd3c8c196f5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

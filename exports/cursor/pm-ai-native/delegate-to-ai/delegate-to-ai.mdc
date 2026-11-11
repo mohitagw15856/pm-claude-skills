@@ -69,5 +69,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/delegate-to-ai.html
 
-<!-- pm-claude-skills v83.2.0 | skill: delegate-to-ai | source: skills/delegate-to-ai/SKILL.md | sha256: 3b2ac2e6627efdb0911baadb5b0ecedfe4d0bb98e0f2e635e9887417c4fb092f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: delegate-to-ai | source: skills/delegate-to-ai/SKILL.md | sha256: 3b2ac2e6627efdb0911baadb5b0ecedfe4d0bb98e0f2e635e9887417c4fb092f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

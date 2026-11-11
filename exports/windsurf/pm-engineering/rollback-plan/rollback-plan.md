@@ -111,5 +111,5 @@ Also roll back on any P1/P2 incident opened against <service> during the window.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rollback-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: rollback-plan | source: skills/rollback-plan/SKILL.md | sha256: 18869819b2afe5149fb2bfbebf724ba5d6a199e75564cf08334f80bd90456d3b | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: rollback-plan | source: skills/rollback-plan/SKILL.md | sha256: 18869819b2afe5149fb2bfbebf724ba5d6a199e75564cf08334f80bd90456d3b | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

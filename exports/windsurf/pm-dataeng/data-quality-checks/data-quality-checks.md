@@ -67,5 +67,5 @@ Data-quality practice — the six DQ dimensions, dbt tests / Great Expectations 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-quality-checks.html
 
-<!-- pm-claude-skills v83.2.0 | skill: data-quality-checks | source: skills/data-quality-checks/SKILL.md | sha256: 040877b51c10914960f348d781d9ef8fa59895689a75375e35ae9937c32fa41e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: data-quality-checks | source: skills/data-quality-checks/SKILL.md | sha256: 040877b51c10914960f348d781d9ef8fa59895689a75375e35ae9937c32fa41e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

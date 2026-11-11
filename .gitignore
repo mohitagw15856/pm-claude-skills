@@ -160,3 +160,7 @@ web/changes.xml
 
 # Year-in-review pages (scripts/build-year-in-review.mjs, built at deploy from git history and the data files)
 web/report/
+
+# Generated launcher data (scripts/build-miniprogram.mjs)
+integrations/wechat-miniprogram/miniprogram/data/
+integrations/utools/data/

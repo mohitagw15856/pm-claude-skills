@@ -67,5 +67,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/escalation-email.html
 
-<!-- pm-claude-skills v83.2.0 | skill: escalation-email | source: skills/escalation-email/SKILL.md | sha256: 4ad3d68a1a5db803c59a29d6a94a61541c6ddd8ca0f4851f5aa9e9fd262692ee | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: escalation-email | source: skills/escalation-email/SKILL.md | sha256: 4ad3d68a1a5db803c59a29d6a94a61541c6ddd8ca0f4851f5aa9e9fd262692ee | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

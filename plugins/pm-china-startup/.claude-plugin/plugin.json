@@ -1,0 +1,20 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "pm-china-startup",
+  "version": "1.0.0",
+  "description": "在中国创业：公司注册、股权分配、高新技术企业认定、专精特新申报、补贴申报、融资商业计划书。Starting a company in China: registration, equity split, High and New Technology Enterprise and Specialised SME applications, subsidy filings and a financing deck",
+  "author": {
+    "name": "Mohit Aggarwal",
+    "email": "mohit15856@gmail.com"
+  },
+  "homepage": "https://github.com/mohitagw15856/pm-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "china",
+    "startup",
+    "company-registration",
+    "equity",
+    "high-tech-enterprise",
+    "financing"
+  ]
+}

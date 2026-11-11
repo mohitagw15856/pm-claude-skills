@@ -68,5 +68,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/lemon-law-check.html
 
-<!-- pm-claude-skills v83.2.0 | skill: lemon-law-check | source: skills/lemon-law-check/SKILL.md | sha256: f58f0e566945386cab84af52d39ccbd309a1728474f78363bd50b0679cb2c0df | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: lemon-law-check | source: skills/lemon-law-check/SKILL.md | sha256: f58f0e566945386cab84af52d39ccbd309a1728474f78363bd50b0679cb2c0df | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -3,7 +3,7 @@
 > Auto-generated from `skills/*/SKILL.md` by `scripts/build-exports.mjs`.
 > **Do not edit these files by hand** — edit the source skill and regenerate.
 
-1332 skills exported. Copy a `.md rule` into the tool to use it.
+1386 skills exported. Copy a `.md rule` into the tool to use it.
 
 Every file ends with a provenance comment: library version, source path, the SHA-256 of the source
 `SKILL.md` and the licence. The same hash is published at `https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json`,
@@ -105,6 +105,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Bennett Time Audit | `pm-dead-mentors` | `pm-dead-mentors/bennett-time-audit/bennett-time-audit.md` |
 | Bid / Tender Review | `pm-construction` | `pm-construction/bid-tender-review/bid-tender-review.md` |
 | Big-Purchase Timing | `pm-money` | `pm-money/big-purchase-timing/big-purchase-timing.md` |
+| B 站视频脚本 | `pm-zh-content` | `pm-zh-content/bilibili-video-script/bilibili-video-script.md` |
 | Bilingual CV, Chinese and English | `pm-cv` | `pm-cv/bilingual-cv-zh-en/bilingual-cv-zh-en.md` |
 | Birdwatching Log | `pm-hobbies` | `pm-hobbies/birdwatching-log/birdwatching-log.md` |
 | Blast Radius Drill | `pm-seatbelt` | `pm-seatbelt/blast-radius-drill/blast-radius-drill.md` |
@@ -120,6 +121,8 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Bookkeeping Categorization | `pm-accounting` | `pm-accounting/bookkeeping-categorization/bookkeeping-categorization.md` |
 | Boolean Search Builder | `pm-recruiting` | `pm-recruiting/boolean-search-builder/boolean-search-builder.md` |
 | Boundary-Setting Scripts | `other` | `other/boundary-setting-scripts/boundary-setting-scripts.md` |
+| IRPF Prep (Brazil) | `pm-latam` | `pm-latam/br-irpf-prep/br-irpf-prep.md` |
+| Rescisão CLT (Brazil) | `pm-latam` | `pm-latam/br-rescisao-clt/br-rescisao-clt.md` |
 | Brag Doc | `pm-career` | `pm-career/brag-doc/brag-doc.md` |
 | Brainstorming | `pm-method` | `pm-method/brainstorming/brainstorming.md` |
 | Brand Guidelines | `pm-design` | `pm-design/brand-guidelines/brand-guidelines.md` |
@@ -196,6 +199,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Clip Factory | `pm-newgen` | `pm-newgen/clip-factory/clip-factory.md` |
 | Clone Brief | `pm-2027` | `pm-2027/clone-brief/clone-brief.md` |
 | Closing Disclosure Decoder | `pm-decoders` | `pm-decoders/closing-disclosure-decoder/closing-disclosure-decoder.md` |
+| 1688 批发 Listing | `pm-china-ecommerce` | `pm-china-ecommerce/cn-1688-wholesale-listing/cn-1688-wholesale-listing.md` |
 | 5S / 6S Audit (5S / 6S 检查表) | `pm-china-manufacturing` | `pm-china-manufacturing/cn-5s-audit/cn-5s-audit.md` |
 | 8D Report (8D 报告) | `pm-china-manufacturing` | `pm-china-manufacturing/cn-8d-report/cn-8d-report.md` |
 | Campus Recruitment (校招) | `pm-china-exams` | `pm-china-exams/cn-campus-recruitment/cn-campus-recruitment.md` |
@@ -203,13 +207,20 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Civil Service Essay (申论) | `pm-china-exams` | `pm-china-exams/cn-civil-exam-essay/cn-civil-exam-essay.md` |
 | Civil Service Interview (结构化面试) | `pm-china-exams` | `pm-china-exams/cn-civil-exam-interview/cn-civil-exam-interview.md` |
 | Class Meeting Plan (主题班会方案) | `pm-china-teachers` | `pm-china-teachers/cn-class-meeting/cn-class-meeting.md` |
+| 公司注册 | `pm-china-startup` | `pm-china-startup/cn-company-registration/cn-company-registration.md` |
+| 电商客服话术 | `pm-china-ecommerce` | `pm-china-ecommerce/cn-customer-service-scripts/cn-customer-service-scripts.md` |
 | Customs Documents (报关单证清单) | `pm-china-trade` | `pm-china-trade/cn-customs-docs/cn-customs-docs.md` |
 | Data Export Assessment (数据出境) | `pm-china-compliance` | `pm-china-compliance/cn-data-export-assessment/cn-data-export-assessment.md` |
+| 大促方案（双 11 / 618） | `pm-china-ecommerce` | `pm-china-ecommerce/cn-double11-promotion-plan/cn-double11-promotion-plan.md` |
+| 国内电商商品 Listing | `pm-china-ecommerce` | `pm-china-ecommerce/cn-ecommerce-listing/cn-ecommerce-listing.md` |
+| 创始人股权分配 | `pm-china-startup` | `pm-china-startup/cn-equity-split/cn-equity-split.md` |
 | Extracurricular Planner (兴趣班与课外安排) | `pm-china-parents` | `pm-china-parents/cn-extracurricular-plan/cn-extracurricular-plan.md` |
+| 融资商业计划书（BP） | `pm-china-startup` | `pm-china-startup/cn-financing-bp/cn-financing-bp.md` |
 | 复盘 (Fupan) | `pm-china-work` | `pm-china-work/cn-fupan/cn-fupan.md` |
 | Gaokao Application Planner (高考志愿) | `pm-china-life` | `pm-china-life/cn-gaokao-planner/cn-gaokao-planner.md` |
 | Generative AI Filing (生成式人工智能备案) | `pm-china-compliance` | `pm-china-compliance/cn-genai-filing/cn-genai-filing.md` |
 | Helping Parents With Admin (帮爸妈办事) | `pm-china-life` | `pm-china-life/cn-help-parents-admin/cn-help-parents-admin.md` |
+| 高新技术企业认定申报 | `pm-china-startup` | `pm-china-startup/cn-high-tech-enterprise-application/cn-high-tech-enterprise-application.md` |
 | Home-School Messages (家校沟通) | `pm-china-parents` | `pm-china-parents/cn-home-school-comms/cn-home-school-comms.md` |
 | Homework Guide for Parents (家长辅导作业) | `pm-china-parents` | `pm-china-parents/cn-homework-helper-parent/cn-homework-helper-parent.md` |
 | Housing Fund Withdrawal (公积金提取) | `pm-china-life` | `pm-china-life/cn-housing-fund-withdrawal/cn-housing-fund-withdrawal.md` |
@@ -232,6 +243,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | PRD Review (需求评审) | `pm-china-work` | `pm-china-work/cn-prd-review/cn-prd-review.md` |
 | Promotion Defence (晋升答辩) | `pm-china-work` | `pm-china-work/cn-promotion-defence/cn-promotion-defence.md` |
 | Quality Traceability Plan (质量追溯方案) | `pm-china-manufacturing` | `pm-china-manufacturing/cn-quality-traceability/cn-quality-traceability.md` |
+| 海归求职 | `pm-china-study-abroad` | `pm-china-study-abroad/cn-returnee-job-search/cn-returnee-job-search.md` |
 | School Entry Planner (幼升小 / 小升初) | `pm-china-parents` | `pm-china-parents/cn-school-entry/cn-school-entry.md` |
 | China Severance Calculator (经济补偿金) | `pm-china-life` | `pm-china-life/cn-severance-calculator/cn-severance-calculator.md` |
 | 述职 PPT Builder (述职 PPT 大纲与讲稿) | `pm-china-yearend` | `pm-china-yearend/cn-shuzhi-deck/cn-shuzhi-deck.md` |
@@ -239,6 +251,9 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | China Social Insurance Explainer (五险一金) | `pm-china-life` | `pm-china-life/cn-social-insurance-explainer/cn-social-insurance-explainer.md` |
 | State-Owned Enterprise Interview (国企面试) | `pm-china-exams` | `pm-china-exams/cn-soe-interview/cn-soe-interview.md` |
 | Work Instruction (作业指导书 / SOP) | `pm-china-manufacturing` | `pm-china-manufacturing/cn-sop-writer/cn-sop-writer.md` |
+| 留学申请文书 | `pm-china-study-abroad` | `pm-china-study-abroad/cn-study-abroad-essay/cn-study-abroad-essay.md` |
+| 留学签证准备 | `pm-china-study-abroad` | `pm-china-study-abroad/cn-study-visa-prep/cn-study-visa-prep.md` |
+| 补贴与政策申报 | `pm-china-startup` | `pm-china-startup/cn-subsidy-filing/cn-subsidy-filing.md` |
 | Tech Interview Drill (大厂技术面试) | `pm-china-exams` | `pm-china-exams/cn-tech-interview-drill/cn-tech-interview-drill.md` |
 | End-of-Term Comments (期末评语) | `pm-china-teachers` | `pm-china-teachers/cn-term-comments/cn-term-comments.md` |
 | Thesis Proposal (开题报告) | `pm-china-exams` | `pm-china-exams/cn-thesis-proposal/cn-thesis-proposal.md` |
@@ -246,8 +261,11 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Chinese Weekly Report (周报) | `pm-china-work` | `pm-china-work/cn-weekly-report/cn-weekly-report.md` |
 | Year-End Bonus Clarifier (年终奖、13薪与个税) | `pm-china-yearend` | `pm-china-yearend/cn-year-end-bonus/cn-year-end-bonus.md` |
 | Chinese Year-End Review (述职报告 / 年终总结) | `pm-china-yearend` | `pm-china-yearend/cn-year-end-review/cn-year-end-review.md` |
+| 专精特新申报 | `pm-china-startup` | `pm-china-startup/cn-zhuanjingtexin-application/cn-zhuanjingtexin-application.md` |
 | Co-Marketing | `pm-growth` | `pm-growth/co-marketing/co-marketing.md` |
 | Co-Parenting Messages | `pm-family` | `pm-family/co-parenting-messages/co-parenting-messages.md` |
+| Coaching Season Plan | `pm-sports-coaching` | `pm-sports-coaching/coaching-season-plan/coaching-season-plan.md` |
+| Coaching Session Plan | `pm-sports-coaching` | `pm-sports-coaching/coaching-session-plan/coaching-session-plan.md` |
 | Cocktail From What I Have | `pm-hobbies` | `pm-hobbies/cocktail-from-what-i-have/cocktail-from-what-i-have.md` |
 | Code Explainer | `pm-engineering` | `pm-engineering/code-explainer/code-explainer.md` |
 | Code Review Checklist | `pm-engineering` | `pm-engineering/code-review-checklist/code-review-checklist.md` |
@@ -297,7 +315,8 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Context Switch Budget | `pm-cowork` | `pm-cowork/context-switch-budget/context-switch-budget.md` |
 | Context-Switch Recovery | `pm-focus` | `pm-focus/context-switch-recovery/context-switch-recovery.md` |
 | Contract Red Flags | `pm-legal` | `pm-legal/contract-red-flags/contract-red-flags.md` |
-| Contract Renewal Tracker | `pm-cowork` | `pm-cowork/contract-renewal-tracker/contract-renewal-tracker.md` |
+| Contract Renewal Brief | `pm-procurement` | `pm-procurement/contract-renewal-brief/contract-renewal-brief.md` |
+| Contract Renewal Tracker | `pm-procurement` | `pm-procurement/contract-renewal-tracker/contract-renewal-tracker.md` |
 | Contract Review | `pm-legal` | `pm-legal/contract-review/contract-review.md` |
 | Contractor Dispute | `pm-lifeadmin` | `pm-lifeadmin/contractor-dispute/contractor-dispute.md` |
 | Contributor Guide | `pm-devrel` | `pm-devrel/contributor-guide/contributor-guide.md` |
@@ -316,6 +335,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Credit Memo | `pm-banking` | `pm-banking/credit-memo/credit-memo.md` |
 | CRM Hygiene Sweep | `pm-duet` | `pm-duet/crm-hygiene-sweep/crm-hygiene-sweep.md` |
 | Crop Insurance Claim | `pm-insurance` | `pm-insurance/crop-insurance-claim/crop-insurance-claim.md` |
+| Crop Season Plan | `pm-agriculture` | `pm-agriculture/crop-season-plan/crop-season-plan.md` |
 | Cross-Border Listing | `pm-chuhai` | `pm-chuhai/cross-border-listing/cross-border-listing.md` |
 | Cross-Examine Me | `pm-thinking` | `pm-thinking/cross-examine-me/cross-examine-me.md` |
 | Cross-border Platform Playbook (跨境平台选择与入驻) | `pm-chuhai` | `pm-chuhai/crossborder-platform-playbook/crossborder-platform-playbook.md` |
@@ -349,6 +369,9 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Dating Profile Doctor | `pm-newgen` | `pm-newgen/dating-profile-doctor/dating-profile-doctor.md` |
 | Daycare vs Stay-Home | `pm-calculators` | `pm-calculators/daycare-vs-stay-home/daycare-vs-stay-home.md` |
 | dbt Model Spec | `pm-dataeng` | `pm-dataeng/dbt-model-spec/dbt-model-spec.md` |
+| Arbeitszeugnis Decoder (Germany) | `pm-dach` | `pm-dach/de-arbeitszeugnis-decoder/de-arbeitszeugnis-decoder.md` |
+| Kündigungsfrist Check (Germany) | `pm-dach` | `pm-dach/de-kuendigungsfrist-check/de-kuendigungsfrist-check.md` |
+| Steuererklärung Prep (Germany) | `pm-dach` | `pm-dach/de-steuererklaerung-prep/de-steuererklaerung-prep.md` |
 | Debt Collector Response | `pm-money` | `pm-money/debt-collector-response/debt-collector-response.md` |
 | Debt-Collector Scripts | `pm-hardship` | `pm-hardship/debt-collector-scripts/debt-collector-scripts.md` |
 | Debt Payoff | `pm-calculators` | `pm-calculators/debt-payoff/debt-payoff.md` |
@@ -512,6 +535,9 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Family Emergency Plan | `pm-family` | `pm-family/family-emergency-plan/family-emergency-plan.md` |
 | Fantasy League Drafter | `pm-hobbies` | `pm-hobbies/fantasy-league-drafter/fantasy-league-drafter.md` |
 | FAQ Builder | `pm-cowork` | `pm-cowork/faq-builder/faq-builder.md` |
+| Farm Buyer Contract Check | `pm-agriculture` | `pm-agriculture/farm-buyer-contract-check/farm-buyer-contract-check.md` |
+| Farm Records Book | `pm-agriculture` | `pm-agriculture/farm-records-book/farm-records-book.md` |
+| Farm Subsidy Application | `pm-agriculture` | `pm-agriculture/farm-subsidy-application/farm-subsidy-application.md` |
 | Feature Flag Guide | `pm-engineering` | `pm-engineering/feature-flag-guide/feature-flag-guide.md` |
 | Feature Prioritisation | `pm-planning` | `pm-planning/feature-prioritisation/feature-prioritisation.md` |
 | Feature Sunset Plan | `pm-planning` | `pm-planning/feature-sunset-plan/feature-sunset-plan.md` |
@@ -600,6 +626,8 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Group Trip Negotiator | `other` | `other/group-trip-negotiator/group-trip-negotiator.md` |
 | Growth Experiment Backlog | `pm-growth` | `pm-growth/growth-experiment-backlog/growth-experiment-backlog.md` |
 | Guest Incident Log | `pm-hospitality` | `pm-hospitality/guest-incident-log/guest-incident-log.md` |
+| Gulf Job Offer Check | `pm-mena` | `pm-mena/gulf-job-offer-check/gulf-job-offer-check.md` |
+| Gulf Residence Visa Admin | `pm-mena` | `pm-mena/gulf-residence-visa-admin/gulf-residence-visa-admin.md` |
 | Habit Builder | `pm-wellbeing` | `pm-wellbeing/habit-builder/habit-builder.md` |
 | Handbook Page | `pm-cowork` | `pm-cowork/handbook-page/handbook-page.md` |
 | Hardware PRD | `pm-hardware` | `pm-hardware/hardware-prd/hardware-prd.md` |
@@ -702,6 +730,8 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Jury Duty Navigator | `pm-civic` | `pm-civic/jury-duty-navigator/jury-duty-navigator.md` |
 | Karaoke Song Picker | `pm-hobbies` | `pm-hobbies/karaoke-song-picker/karaoke-song-picker.md` |
 | Knowledge Base Audit | `pm-support` | `pm-support/kb-audit/kb-audit.md` |
+| M-Pesa Reversal and Dispute (Kenya) | `pm-africa` | `pm-africa/ke-mpesa-reversal-dispute/ke-mpesa-reversal-dispute.md` |
+| Kenyan Payslip Decoder | `pm-africa` | `pm-africa/ke-payslip-decoder/ke-payslip-decoder.md` |
 | Kids' Online-Safety Plan | `pm-digital-safety` | `pm-digital-safety/kids-online-safety-plan/kids-online-safety-plan.md` |
 | Knowledge-Gap Map | `pm-learning` | `pm-learning/knowledge-gap-map/knowledge-gap-map.md` |
 | Knowledge Gardening | `pm-cowork` | `pm-cowork/knowledge-gardening/knowledge-gardening.md` |
@@ -710,6 +740,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Korea Severance Pay (퇴직금) | `pm-korea` | `pm-korea/kr-severance-pay/kr-severance-pay.md` |
 | Korean Business Report (보고서 and 주간보고) | `pm-korea` | `pm-korea/kr-work-report/kr-work-report.md` |
 | Korea Year-End Tax Settlement (연말정산) | `pm-korea` | `pm-korea/kr-year-end-tax-settlement/kr-year-end-tax-settlement.md` |
+| KSA Labour Contract Decoder | `pm-mena` | `pm-mena/ksa-labour-contract-decoder/ksa-labour-contract-decoder.md` |
 | KYC Escalation | `pm-banking` | `pm-banking/kyc-escalation/kyc-escalation.md` |
 | Landing Page Copy | `pm-copy` | `pm-copy/landing-page-copy/landing-page-copy.md` |
 | Language-Learning Plan | `pm-students` | `pm-students/language-learning-plan/language-learning-plan.md` |
@@ -765,6 +796,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Marketing Psychology | `pm-growth` | `pm-growth/marketing-psychology/marketing-psychology.md` |
 | Marketplace Listing Optimizer | `pm-ecommerce` | `pm-ecommerce/marketplace-listing-optimizer/marketplace-listing-optimizer.md` |
 | Masking Budget | `pm-neurodivergent` | `pm-neurodivergent/masking-budget/masking-budget.md` |
+| Match Review | `pm-sports-coaching` | `pm-sports-coaching/match-review/match-review.md` |
 | MCP Server Spec | `pm-agentnative` | `pm-agentnative/mcp-server-spec/mcp-server-spec.md` |
 | Meal Prep OS | `pm-kitchen` | `pm-kitchen/meal-prep-os/meal-prep-os.md` |
 | Mechanic Quote Decoder | `other` | `other/mechanic-quote-decoder/mechanic-quote-decoder.md` |
@@ -810,6 +842,8 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Moving House Checklist | `pm-lifeadmin` | `pm-lifeadmin/moving-house-checklist/moving-house-checklist.md` |
 | Moving-Quote Decoder | `pm-lifeadmin` | `pm-lifeadmin/moving-quote-decoder/moving-quote-decoder.md` |
 | Multi-Source Signal Synthesiser | `pm-advanced` | `pm-advanced/multi-source-signal-synthesiser/multi-source-signal-synthesiser.md` |
+| Declaración Anual Prep (Mexico) | `pm-latam` | `pm-latam/mx-declaracion-anual-prep/mx-declaracion-anual-prep.md` |
+| Finiquito y Liquidación (Mexico) | `pm-latam` | `pm-latam/mx-finiquito-liquidacion/mx-finiquito-liquidacion.md` |
 | My Energy Map | `pm-focus` | `pm-focus/my-energy-map/my-energy-map.md` |
 | My Failure Museum | `pm-focus` | `pm-focus/my-failure-museum/my-failure-museum.md` |
 | Name Change Navigator | `pm-identity` | `pm-identity/name-change-navigator/name-change-navigator.md` |
@@ -825,12 +859,18 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Newcomer School Enrolment | `pm-newcomer` | `pm-newcomer/newcomer-school-enrolment/newcomer-school-enrolment.md` |
 | Newsletter Digest Brief | `pm-cowork` | `pm-cowork/newsletter-digest-brief/newsletter-digest-brief.md` |
 | Newsletter Writer | `pm-creator` | `pm-creator/newsletter-writer/newsletter-writer.md` |
+| Nigerian Payslip Decoder | `pm-africa` | `pm-africa/ng-payslip-decoder/ng-payslip-decoder.md` |
+| Nigerian Pension RSA Guide | `pm-africa` | `pm-africa/ng-pension-rsa-guide/ng-pension-rsa-guide.md` |
 | Note-Taking System | `pm-learning` | `pm-learning/note-taking-system/note-taking-system.md` |
 | NotebookLM Connector | `pm-cross` | `pm-cross/notebooklm-connector/notebooklm-connector.md` |
 | Notes Humanizer | `pm-writers` | `pm-writers/notes-humanizer/notes-humanizer.md` |
 | Notify Everyone of a Death | `pm-grief` | `pm-grief/notify-everyone-of-a-death/notify-everyone-of-a-death.md` |
 | Notion DB Hygiene (Live) | `pm-cowork-live` | `pm-cowork-live/notion-db-hygiene/notion-db-hygiene.md` |
 | NT Translator | `pm-neurodivergent` | `pm-neurodivergent/nt-translator/nt-translator.md` |
+| Nursing Care Plan | `pm-nursing` | `pm-nursing/nursing-care-plan/nursing-care-plan.md` |
+| Nursing Family Update | `pm-nursing` | `pm-nursing/nursing-family-update/nursing-family-update.md` |
+| Nursing Incident Report | `pm-nursing` | `pm-nursing/nursing-incident-report/nursing-incident-report.md` |
+| Nursing Shift Handover | `pm-nursing` | `pm-nursing/nursing-shift-handover/nursing-shift-handover.md` |
 | Offer Comparison | `pm-calculators` | `pm-calculators/offer-comparison/offer-comparison.md` |
 | Offer Letter | `pm-recruiting` | `pm-recruiting/offer-letter/offer-letter.md` |
 | Office Hours Design | `pm-cowork` | `pm-cowork/office-hours-design/office-hours-design.md` |
@@ -881,6 +921,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Personal WIP Limits | `pm-cowork` | `pm-cowork/personal-wip-limits/personal-wip-limits.md` |
 | Persuasion Brief | `pm-comms` | `pm-comms/persuasion-brief/persuasion-brief.md` |
 | Pharmacy Counselling Script | `pm-pharmacy` | `pm-pharmacy/pharmacy-counselling-script/pharmacy-counselling-script.md` |
+| PhD Supervisor Update | `pm-phd` | `pm-phd/phd-supervisor-update/phd-supervisor-update.md` |
 | Phishing Triage | `pm-digital-safety` | `pm-digital-safety/phishing-triage/phishing-triage.md` |
 | Photo Library Rescue | `pm-cowork` | `pm-cowork/photo-library-rescue/photo-library-rescue.md` |
 | Physiotherapy Discharge Summary | `pm-physio` | `pm-physio/physio-discharge-summary/physio-discharge-summary.md` |
@@ -1027,6 +1068,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Resignation Letter | `pm-resignation` | `pm-resignation/resignation-letter/resignation-letter.md` |
 | Respite-Care Plan | `pm-caregiving` | `pm-caregiving/respite-care-plan/respite-care-plan.md` |
 | Resume | `pm-personal` | `pm-personal/resume/resume.md` |
+| Retail Shift Handover | `pm-retail-shopfloor` | `pm-retail-shopfloor/retail-shift-handover/retail-shift-handover.md` |
 | Retention Analysis | `pm-analytics` | `pm-analytics/retention-analysis/retention-analysis.md` |
 | Retention Loop Design | `pm-growth` | `pm-growth/retention-loop-design/retention-loop-design.md` |
 | Retrospective Analysis | `pm-delivery` | `pm-delivery/retro-analysis/retro-analysis.md` |
@@ -1035,11 +1077,12 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Returner CV | `pm-cv` | `pm-cv/returner-cv/returner-cv.md` |
 | Review Comments Resolver | `pm-cowork` | `pm-cowork/review-comments-resolver/review-comments-resolver.md` |
 | Review Response | `pm-ecommerce` | `pm-ecommerce/review-response/review-response.md` |
+| Reviewer Rebuttal Letter | `pm-phd` | `pm-phd/reviewer-rebuttal-letter/reviewer-rebuttal-letter.md` |
 | Rewards Optimizer | `pm-money` | `pm-money/rewards-optimizer/rewards-optimizer.md` |
 | RFC Writer | `pm-engineering` | `pm-engineering/rfc-writer/rfc-writer.md` |
-| RFP Response | `pm-gov` | `pm-gov/rfp-response/rfp-response.md` |
+| RFP Response | `pm-procurement` | `pm-procurement/rfp-response/rfp-response.md` |
 | RFP Scoring Matrix | `pm-supplychain` | `pm-supplychain/rfp-scoring-matrix/rfp-scoring-matrix.md` |
-| RFP Writer | `pm-operations` | `pm-operations/rfp-writer/rfp-writer.md` |
+| RFP Writer | `pm-procurement` | `pm-procurement/rfp-writer/rfp-writer.md` |
 | RICE + Strategic Alignment | `pm-planning` | `pm-planning/rice-impact-matrix/rice-impact-matrix.md` |
 | RICE Prioritisation | `pm-planning` | `pm-planning/rice-prioritisation/rice-prioritisation.md` |
 | Risk Register | `pm-operations` | `pm-operations/risk-register/risk-register.md` |
@@ -1098,11 +1141,13 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Severance Agreement Decoder | `pm-layoff` | `pm-layoff/severance-agreement-decoder/severance-agreement-decoder.md` |
 | Shared Agent Charter | `pm-duet` | `pm-duet/shared-agent-charter/shared-agent-charter.md` |
 | Shared Drive Cleanup | `pm-cowork` | `pm-cowork/shared-drive-cleanup/shared-drive-cleanup.md` |
-| Shift Schedule Builder | `pm-hospitality` | `pm-hospitality/shift-schedule-builder/shift-schedule-builder.md` |
+| Shift Schedule Builder | `pm-retail-shopfloor` | `pm-retail-shopfloor/shift-schedule-builder/shift-schedule-builder.md` |
 | Ship or Slip | `pm-decisions` | `pm-decisions/ship-or-slip/ship-or-slip.md` |
+| 视频号脚本 | `pm-zh-content` | `pm-zh-content/shipinhao-script/shipinhao-script.md` |
 | Short-Form Script | `pm-creator` | `pm-creator/short-form-script/short-form-script.md` |
 | Should I Quit or Push | `pm-focus` | `pm-focus/should-i-quit-or-push/should-i-quit-or-push.md` |
 | Should I Send This | `pm-focus` | `pm-focus/should-i-send-this/should-i-send-this.md` |
+| Shrink Report | `pm-retail-shopfloor` | `pm-retail-shopfloor/shrink-report/shrink-report.md` |
 | Shutdown Ritual | `pm-cowork` | `pm-cowork/shutdown-ritual/shutdown-ritual.md` |
 | Sibling Care Summit | `pm-aging-parents` | `pm-aging-parents/sibling-care-summit/sibling-care-summit.md` |
 | Side Business Setup | `pm-sidehustle` | `pm-sidehustle/side-business-setup/side-business-setup.md` |
@@ -1138,6 +1183,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Spaced-Repetition Setup | `pm-learning` | `pm-learning/spaced-repetition-setup/spaced-repetition-setup.md` |
 | Speak At The Council | `pm-committee` | `pm-committee/speak-at-the-council/speak-at-the-council.md` |
 | Spoon Planner | `pm-invisible-illness` | `pm-invisible-illness/spoon-planner/spoon-planner.md` |
+| Sports Parent Comms | `pm-sports-coaching` | `pm-sports-coaching/sports-parent-comms/sports-parent-comms.md` |
 | Sports Scores | `pm-live` | `pm-live/sports-scores/sports-scores.md` |
 | Spot AI Mistakes | `pm-ai-native` | `pm-ai-native/spot-ai-mistakes/spot-ai-mistakes.md` |
 | Spreadsheet Audit | `pm-cowork` | `pm-cowork/spreadsheet-audit/spreadsheet-audit.md` |
@@ -1162,6 +1208,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Status Report Pipeline | `pm-cowork` | `pm-cowork/status-report-pipeline/status-report-pipeline.md` |
 | Steelman the Weird Option | `pm-thinking` | `pm-thinking/steelman-the-weird-option/steelman-the-weird-option.md` |
 | Stock Snapshot | `pm-live` | `pm-live/stock-snapshot/stock-snapshot.md` |
+| Stock Take Plan | `pm-retail-shopfloor` | `pm-retail-shopfloor/stock-take-plan/stock-take-plan.md` |
 | Stoic Setback Debrief | `pm-dead-mentors` | `pm-dead-mentors/stoic-setback-debrief/stoic-setback-debrief.md` |
 | Stop Overthinking This | `pm-focus` | `pm-focus/stop-overthinking-this/stop-overthinking-this.md` |
 | Stop-the-Bleed Triage | `pm-hardship` | `pm-hardship/stop-the-bleed-triage/stop-the-bleed-triage.md` |
@@ -1247,6 +1294,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | The Visa Interview | `pm-simulators` | `pm-simulators/the-visa-interview/the-visa-interview.md` |
 | The Worry Decompiler | `pm-focus` | `pm-focus/the-worry-decompiler/the-worry-decompiler.md` |
 | The Year of Firsts | `pm-grief` | `pm-grief/the-year-of-firsts/the-year-of-firsts.md` |
+| Thesis Chapter Plan | `pm-phd` | `pm-phd/thesis-chapter-plan/thesis-chapter-plan.md` |
 | Thesis Outline | `pm-students` | `pm-students/thesis-outline/thesis-outline.md` |
 | Think From Another Angle | `pm-thinking` | `pm-thinking/think-from-another-angle/think-from-another-angle.md` |
 | Thread To Decision | `pm-cowork` | `pm-cowork/thread-to-decision/thread-to-decision.md` |
@@ -1271,6 +1319,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | TTRPG Session Forge | `pm-newgen` | `pm-newgen/ttrpg-session-forge/ttrpg-session-forge.md` |
 | Taiwan Labour Standards (勞動基準法) | `pm-hk-tw` | `pm-hk-tw/tw-labour-standards/tw-labour-standards.md` |
 | Two Worlds Translator | `pm-identity` | `pm-identity/two-worlds-translator/two-worlds-translator.md` |
+| UAE Gratuity Calculator | `pm-mena` | `pm-mena/uae-gratuity-calculator/uae-gratuity-calculator.md` |
 | UI Design Pipeline | `pm-design-taste` | `pm-design-taste/ui-design-pipeline/ui-design-pipeline.md` |
 | UI UX Pro Max (pointer) | `pm-design-taste` | `pm-design-taste/ui-ux-pro-max-pointer/ui-ux-pro-max-pointer.md` |
 | Unblock Protocol | `pm-cowork` | `pm-cowork/unblock-protocol/unblock-protocol.md` |
@@ -1300,6 +1349,7 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Version Chaos Untangler | `pm-cowork` | `pm-cowork/version-chaos-untangler/version-chaos-untangler.md` |
 | Vet Estimate Decoder | `pm-decoders` | `pm-decoders/vet-estimate-decoder/vet-estimate-decoder.md` |
 | Viral Content Framework | `pm-social` | `pm-social/viral-content-framework/viral-content-framework.md` |
+| Viva Prep Pack | `pm-phd` | `pm-phd/viva-prep-pack/viva-prep-pack.md` |
 | Voice Agent Design | `pm-agentnative` | `pm-agentnative/voice-agent-design/voice-agent-design.md` |
 | Voice of Customer Program | `pm-pmm` | `pm-pmm/voice-of-customer-program/voice-of-customer-program.md` |
 | Volunteer Treasurer Basics | `pm-committee` | `pm-committee/volunteer-treasurer-basics/volunteer-treasurer-basics.md` |
@@ -1340,6 +1390,10 @@ so a copy can be checked against the library with `shasum -a 256` on the source 
 | Writing Great Skills | `pm-engineering` | `pm-engineering/writing-great-skills/writing-great-skills.md` |
 | Writing Plans | `pm-method` | `pm-method/writing-plans/writing-plans.md` |
 | 小红书 Note | `pm-zh-content` | `pm-zh-content/xiaohongshu-note/xiaohongshu-note.md` |
+| 小宇宙播客提纲 | `pm-zh-content` | `pm-zh-content/xiaoyuzhou-podcast-outline/xiaoyuzhou-podcast-outline.md` |
 | Year in Review | `pm-career` | `pm-career/year-in-review/year-in-review.md` |
 | YouTube Script | `pm-creator` | `pm-creator/youtube-script/youtube-script.md` |
 | YouTube Script Writer | `pm-writers` | `pm-writers/youtube-script-writer/youtube-script-writer.md` |
+| Retrenchment Package Check (South Africa) | `pm-africa` | `pm-africa/za-retrenchment-package-check/za-retrenchment-package-check.md` |
+| UIF Claim Guide (South Africa) | `pm-africa` | `pm-africa/za-uif-claim-guide/za-uif-claim-guide.md` |
+| 知乎回答 | `pm-zh-content` | `pm-zh-content/zhihu-answer/zhihu-answer.md` |

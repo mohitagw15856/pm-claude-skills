@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/windfall-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: windfall-plan | source: skills/windfall-plan/SKILL.md | sha256: 9ae6de867e18ecbce2dead22d3a3675474f5bb3cdb39be08394d39f7c8ec64c9 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: windfall-plan | source: skills/windfall-plan/SKILL.md | sha256: 9ae6de867e18ecbce2dead22d3a3675474f5bb3cdb39be08394d39f7c8ec64c9 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

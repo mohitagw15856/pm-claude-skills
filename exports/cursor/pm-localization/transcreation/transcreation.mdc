@@ -67,5 +67,5 @@ Transcreation / creative-localization practice — intent-led recreation, multip
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/transcreation.html
 
-<!-- pm-claude-skills v83.2.0 | skill: transcreation | source: skills/transcreation/SKILL.md | sha256: dafe16ccfba21d27dc5c47cbc2349f8cc922c60c7a02254eedbccd69065b01f0 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: transcreation | source: skills/transcreation/SKILL.md | sha256: dafe16ccfba21d27dc5c47cbc2349f8cc922c60c7a02254eedbccd69065b01f0 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

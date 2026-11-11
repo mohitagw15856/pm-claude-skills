@@ -72,5 +72,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/spreadsheet-audit.html
 
-<!-- pm-claude-skills v83.2.0 | skill: spreadsheet-audit | source: skills/spreadsheet-audit/SKILL.md | sha256: 39836dc98aa12c92140c302ad26c6c81a55b277c3f0c2a37201987aa79d05a6e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: spreadsheet-audit | source: skills/spreadsheet-audit/SKILL.md | sha256: 39836dc98aa12c92140c302ad26c6c81a55b277c3f0c2a37201987aa79d05a6e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

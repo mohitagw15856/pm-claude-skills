@@ -1,0 +1,61 @@
+{
+  "$schema": "../schemas/mission.schema.json",
+  "id": "retention-quarter",
+  "name": "From churn numbers to a planned sprint for the top bet",
+  "summary": "Diagnose the churn and rank the quarter's objectives, stop for a human to confirm the top bet, then tear down the competition for that bet and carry it through a PRD and stories to a planned sprint. Two typed pipelines, seven steps.",
+  "model_role": "frontier",
+  "effort": "high",
+  "inputs": {
+    "type": "object",
+    "properties": {
+      "period": { "type": "string", "description": "The period analysed, for example Q3 2026" },
+      "customers_start": { "type": "integer" },
+      "customers_churned": { "type": "integer" },
+      "churn_reasons": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": { "reason": { "type": "string" }, "count": { "type": "integer" }, "source": { "type": "string" } },
+          "required": ["reason"]
+        }
+      },
+      "owner": { "type": "string", "description": "Who owns the OKRs" },
+      "okr_period": { "type": "string", "description": "The period the OKRs cover" },
+      "product": { "type": "object", "description": "Your product, as the competitor-teardown contract describes it" },
+      "competitors": { "type": "array", "items": { "type": "string" } },
+      "target_user": { "type": "string" },
+      "personas": { "type": "array", "items": { "type": "string" } },
+      "sprint_length_weeks": { "type": "integer" },
+      "team_size": { "type": "integer" }
+    },
+    "required": ["period", "customers_start", "customers_churned", "owner", "okr_period", "product", "competitors", "target_user", "sprint_length_weeks", "team_size"]
+  },
+  "stages": [
+    {
+      "id": "diagnose",
+      "pipeline": "churn-to-roadmap",
+      "inputs": {
+        "period": "$.input.period",
+        "customers_start": "$.input.customers_start",
+        "customers_churned": "$.input.customers_churned",
+        "churn_reasons": "$.input.churn_reasons",
+        "owner": "$.input.owner",
+        "okr_period": "$.input.okr_period"
+      },
+      "checkpoint": "Read the ranked roadmap. The next stage builds the item ranked first; edit the rank in the saved state or stop here if it is the wrong bet."
+    },
+    {
+      "id": "build",
+      "pipeline": "competitor-to-sprint",
+      "inputs": {
+        "product": "$.input.product",
+        "competitors": "$.input.competitors",
+        "feature_name": "$.diagnose.roadmap.ranked[0].name",
+        "target_user": "$.input.target_user",
+        "personas": "$.input.personas",
+        "sprint_length_weeks": "$.input.sprint_length_weeks",
+        "team_size": "$.input.team_size"
+      }
+    }
+  ]
+}

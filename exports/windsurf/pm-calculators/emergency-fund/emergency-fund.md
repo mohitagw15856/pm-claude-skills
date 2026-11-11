@@ -87,5 +87,5 @@ Deterministic: base 3 months + 1 (single income) + 2 (variable income) + 1 (depe
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/emergency-fund.html
 
-<!-- pm-claude-skills v83.2.0 | skill: emergency-fund | source: skills/emergency-fund/SKILL.md | sha256: ff957ab930a488559ee64a1ac3c0933fb222e9837701f71ae4a729262ea4ecce | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: emergency-fund | source: skills/emergency-fund/SKILL.md | sha256: ff957ab930a488559ee64a1ac3c0933fb222e9837701f71ae4a729262ea4ecce | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

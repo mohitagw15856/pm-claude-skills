@@ -70,5 +70,5 @@ Effective-apology practice — specific acknowledgement, unconditional responsib
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/apology-letter.html
 
-<!-- pm-claude-skills v83.2.0 | skill: apology-letter | source: skills/apology-letter/SKILL.md | sha256: 034c7fb1b7cfea95615081808abb7706a164254f44839e3c9cbd0b90b544cad6 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: apology-letter | source: skills/apology-letter/SKILL.md | sha256: 034c7fb1b7cfea95615081808abb7706a164254f44839e3c9cbd0b90b544cad6 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

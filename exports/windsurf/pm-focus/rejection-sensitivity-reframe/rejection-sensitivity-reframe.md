@@ -64,5 +64,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rejection-sensitivity-reframe.html
 
-<!-- pm-claude-skills v83.2.0 | skill: rejection-sensitivity-reframe | source: skills/rejection-sensitivity-reframe/SKILL.md | sha256: a52febf8a588ba4dabd15026a3d5784aed1e8c8a015e04c1a0d0d1779d81f9bd | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: rejection-sensitivity-reframe | source: skills/rejection-sensitivity-reframe/SKILL.md | sha256: a52febf8a588ba4dabd15026a3d5784aed1e8c8a015e04c1a0d0d1779d81f9bd | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

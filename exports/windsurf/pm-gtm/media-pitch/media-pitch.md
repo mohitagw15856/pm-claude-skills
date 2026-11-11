@@ -93,5 +93,5 @@ If the user doesn't have a strong angle, help them find one:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/media-pitch.html
 
-<!-- pm-claude-skills v83.2.0 | skill: media-pitch | source: skills/media-pitch/SKILL.md | sha256: ebca0152ef7ef0cb8957d570b89a8f1c30b98917321644a9f1ec26e6f5188581 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: media-pitch | source: skills/media-pitch/SKILL.md | sha256: ebca0152ef7ef0cb8957d570b89a8f1c30b98917321644a9f1ec26e6f5188581 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -186,5 +186,5 @@ Part of the pm-design-taste bundle in the library at https://github.com/mohitagw
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ui-design-pipeline.html
 
-<!-- pm-claude-skills v83.2.0 | skill: ui-design-pipeline | source: skills/ui-design-pipeline/SKILL.md | sha256: 32c7f04326c251af931baa4c93557b622e0d50d38f28cbd19c426f6cc8bf07c1 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: ui-design-pipeline | source: skills/ui-design-pipeline/SKILL.md | sha256: 32c7f04326c251af931baa4c93557b622e0d50d38f28cbd19c426f6cc8bf07c1 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

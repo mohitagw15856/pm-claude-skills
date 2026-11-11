@@ -119,5 +119,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pr-description-writer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: pr-description-writer | source: skills/pr-description-writer/SKILL.md | sha256: c30dacd0af41fbc32c939c3dbd10a5156cd8476cc3c3dcdc3efd210eb7bd0f92 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: pr-description-writer | source: skills/pr-description-writer/SKILL.md | sha256: c30dacd0af41fbc32c939c3dbd10a5156cd8476cc3c3dcdc3efd210eb7bd0f92 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -115,5 +115,5 @@ conversation.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/jury-duty-navigator.html
 
-<!-- pm-claude-skills v83.2.0 | skill: jury-duty-navigator | source: skills/jury-duty-navigator/SKILL.md | sha256: 749dce6be57834318cacf67221e2c062ada6c2a03e01f17af38e9e0c3015352f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: jury-duty-navigator | source: skills/jury-duty-navigator/SKILL.md | sha256: 749dce6be57834318cacf67221e2c062ada6c2a03e01f17af38e9e0c3015352f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

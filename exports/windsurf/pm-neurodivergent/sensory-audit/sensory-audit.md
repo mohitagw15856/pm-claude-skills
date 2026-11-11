@@ -113,5 +113,5 @@ digital-sensory layer.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sensory-audit.html
 
-<!-- pm-claude-skills v83.2.0 | skill: sensory-audit | source: skills/sensory-audit/SKILL.md | sha256: 1547109f3041bd49717792acd931380966dc060334e8e1a09732007f20b4efb8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: sensory-audit | source: skills/sensory-audit/SKILL.md | sha256: 1547109f3041bd49717792acd931380966dc060334e8e1a09732007f20b4efb8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

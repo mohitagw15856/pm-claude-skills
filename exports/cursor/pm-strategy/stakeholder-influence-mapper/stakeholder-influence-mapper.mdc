@@ -77,5 +77,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stakeholder-influence-mapper.html
 
-<!-- pm-claude-skills v83.2.0 | skill: stakeholder-influence-mapper | source: skills/stakeholder-influence-mapper/SKILL.md | sha256: 0b1d632225b3ff5e2cf837cd36fa45646700450f9600083c2a977f5d8ec7e2d2 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: stakeholder-influence-mapper | source: skills/stakeholder-influence-mapper/SKILL.md | sha256: 0b1d632225b3ff5e2cf837cd36fa45646700450f9600083c2a977f5d8ec7e2d2 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

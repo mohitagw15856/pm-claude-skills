@@ -63,5 +63,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dependency-check.html
 
-<!-- pm-claude-skills v83.2.0 | skill: dependency-check | source: skills/dependency-check/SKILL.md | sha256: 3927ee7f940b72bf37df0947210b4fe2a8292ca5e38bcaf2530af1bfd141c738 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: dependency-check | source: skills/dependency-check/SKILL.md | sha256: 3927ee7f940b72bf37df0947210b4fe2a8292ca5e38bcaf2530af1bfd141c738 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

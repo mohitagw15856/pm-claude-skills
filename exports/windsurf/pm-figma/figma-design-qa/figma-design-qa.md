@@ -1,6 +1,6 @@
 ---
 trigger: model_decision
-description: "Runs a pre-handoff QA checklist on a Figma design before it goes to engineering. Use when asked to QA a Figma design, do a pre-handoff check, or validate a Figma file is ready to build. Produces a structured QA report covering file hygiene, component usage, accessibility, and handoff readiness with explicit pass/fail status per item. Optimised for Opus 4.7 and newer models."
+description: "Runs a pre-handoff QA checklist on a Figma design before it goes to engineering. Use when asked to QA a Figma design, do a pre-handoff check, or validate a Figma file is ready to build. Produces a structured QA report covering file hygiene, component usage, accessibility, and handoff readiness with explicit pass/fail status per item."
 ---
 
 # Figma Design QA Skill
@@ -124,5 +124,5 @@ Status, signed off by, date.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/figma-design-qa.html
 
-<!-- pm-claude-skills v83.2.0 | skill: figma-design-qa | source: skills/figma-design-qa/SKILL.md | sha256: 0e517126e9822d3a28e54a4b4438ec89265df0617fc98f1dec91a14a012c4abc | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: figma-design-qa | source: skills/figma-design-qa/SKILL.md | sha256: e2b5bc9e25686a1795a274bad1208bb35c02d8b3f4f9fa2ff54bec06d6ce7548 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

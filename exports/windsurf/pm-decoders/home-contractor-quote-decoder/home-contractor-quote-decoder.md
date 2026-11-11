@@ -82,5 +82,5 @@ Owner-side bid review practice — finished-job reconciliation, allowance auditi
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/home-contractor-quote-decoder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: home-contractor-quote-decoder | source: skills/home-contractor-quote-decoder/SKILL.md | sha256: 46920d8bb0e963232bd19dc2acf3404ddbb0a6abc1b77d86cb6336a8f9b22495 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: home-contractor-quote-decoder | source: skills/home-contractor-quote-decoder/SKILL.md | sha256: 46920d8bb0e963232bd19dc2acf3404ddbb0a6abc1b77d86cb6336a8f9b22495 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

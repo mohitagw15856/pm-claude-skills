@@ -66,5 +66,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/offsite-planner.html
 
-<!-- pm-claude-skills v83.2.0 | skill: offsite-planner | source: skills/offsite-planner/SKILL.md | sha256: f167b956494d6521e33622eef0adf82a9bdd0ac62b7e6487aa7b00b4971d841c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: offsite-planner | source: skills/offsite-planner/SKILL.md | sha256: f167b956494d6521e33622eef0adf82a9bdd0ac62b7e6487aa7b00b4971d841c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

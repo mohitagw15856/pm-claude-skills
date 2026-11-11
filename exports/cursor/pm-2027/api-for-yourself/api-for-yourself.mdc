@@ -129,5 +129,5 @@ your outside. [[working-agreements]] for the team-level contract;
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/api-for-yourself.html
 
-<!-- pm-claude-skills v83.2.0 | skill: api-for-yourself | source: skills/api-for-yourself/SKILL.md | sha256: fee7be8f26979dc6019f106a108dee83ea27d68899bbf6ffe85acde0e6c6c0ab | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: api-for-yourself | source: skills/api-for-yourself/SKILL.md | sha256: fee7be8f26979dc6019f106a108dee83ea27d68899bbf6ffe85acde0e6c6c0ab | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

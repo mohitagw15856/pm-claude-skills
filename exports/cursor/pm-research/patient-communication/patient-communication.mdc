@@ -108,5 +108,5 @@ Yours sincerely, [Name, Title, Department]
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/patient-communication.html
 
-<!-- pm-claude-skills v83.2.0 | skill: patient-communication | source: skills/patient-communication/SKILL.md | sha256: 8aa403aa6906d33a96b5e8d24b8d6320b1c6ce31d2d221700c6f716b13976259 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: patient-communication | source: skills/patient-communication/SKILL.md | sha256: 8aa403aa6906d33a96b5e8d24b8d6320b1c6ce31d2d221700c6f716b13976259 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

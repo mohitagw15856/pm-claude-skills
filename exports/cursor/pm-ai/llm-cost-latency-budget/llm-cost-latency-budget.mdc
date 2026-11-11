@@ -73,5 +73,5 @@ LLM production cost/latency practice — token accounting, model cascades/tierin
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/llm-cost-latency-budget.html
 
-<!-- pm-claude-skills v83.2.0 | skill: llm-cost-latency-budget | source: skills/llm-cost-latency-budget/SKILL.md | sha256: 6f4df79915c3fa5e26ab710400277c057ad15eef0a0868bcb48eae1817dbdfa8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: llm-cost-latency-budget | source: skills/llm-cost-latency-budget/SKILL.md | sha256: 6f4df79915c3fa5e26ab710400277c057ad15eef0a0868bcb48eae1817dbdfa8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

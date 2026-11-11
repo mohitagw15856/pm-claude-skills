@@ -88,5 +88,5 @@ Between model generations, re-check: instruction-following strictness (newer mod
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/model-migration-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: model-migration-plan | source: skills/model-migration-plan/SKILL.md | sha256: c142839272c130b741637617db3cf0273e4fbe4bf7e7793df939ac6c21b6eca0 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: model-migration-plan | source: skills/model-migration-plan/SKILL.md | sha256: c142839272c130b741637617db3cf0273e4fbe4bf7e7793df939ac6c21b6eca0 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

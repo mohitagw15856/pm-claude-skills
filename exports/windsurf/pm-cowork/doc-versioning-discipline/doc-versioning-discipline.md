@@ -70,5 +70,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/doc-versioning-discipline.html
 
-<!-- pm-claude-skills v83.2.0 | skill: doc-versioning-discipline | source: skills/doc-versioning-discipline/SKILL.md | sha256: 3bb6ea9eb00617296648eee3a069013eaeb57bd4669ee4c4331a1fc6af4d92da | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: doc-versioning-discipline | source: skills/doc-versioning-discipline/SKILL.md | sha256: 3bb6ea9eb00617296648eee3a069013eaeb57bd4669ee4c4331a1fc6af4d92da | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -125,5 +125,5 @@ symptoms sprawl beyond one system; [[symptom]] tracking feeds the case;
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/perimenopause-navigator.html
 
-<!-- pm-claude-skills v83.2.0 | skill: perimenopause-navigator | source: skills/perimenopause-navigator/SKILL.md | sha256: 396d22d63198e1e6c14cfe623419dde9d18e901b02b43cc6674b07fc8d481f7a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: perimenopause-navigator | source: skills/perimenopause-navigator/SKILL.md | sha256: 396d22d63198e1e6c14cfe623419dde9d18e901b02b43cc6674b07fc8d481f7a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -71,5 +71,5 @@ A short script: the proposed goals, the resources needed, what will be dropped t
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-next-year-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-next-year-plan | source: skills/cn-next-year-plan/SKILL.md | sha256: 947ea4d1303e1e164667fb906241b3df9def4ef370ce3decbc1bf9fd72c188de | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-next-year-plan | source: skills/cn-next-year-plan/SKILL.md | sha256: 947ea4d1303e1e164667fb906241b3df9def4ef370ce3decbc1bf9fd72c188de | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

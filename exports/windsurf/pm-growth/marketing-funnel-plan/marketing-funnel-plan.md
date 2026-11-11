@@ -70,5 +70,5 @@ Pirate Metrics (AARRR — Dave McClure) and full-funnel demand-generation practi
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/marketing-funnel-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: marketing-funnel-plan | source: skills/marketing-funnel-plan/SKILL.md | sha256: 80e40993b9e6f6b762951ba4e9a7b3c3795874306e8d9e29b2e1847a8d0b6c88 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: marketing-funnel-plan | source: skills/marketing-funnel-plan/SKILL.md | sha256: 80e40993b9e6f6b762951ba4e9a7b3c3795874306e8d9e29b2e1847a8d0b6c88 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

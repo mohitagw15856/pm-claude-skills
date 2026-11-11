@@ -69,5 +69,5 @@ End verbatim: *"This is a plain-language reading, not legal or lending advice â€
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/closing-disclosure-decoder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: closing-disclosure-decoder | source: skills/closing-disclosure-decoder/SKILL.md | sha256: 426b71f32b069e6dde1cf864c7d071494e1ddbd7d26a12cc0ca387e19850dd79 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: closing-disclosure-decoder | source: skills/closing-disclosure-decoder/SKILL.md | sha256: 426b71f32b069e6dde1cf864c7d071494e1ddbd7d26a12cc0ca387e19850dd79 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -74,5 +74,5 @@ Day-of decision-maker: **[name]** (authority: under $[X] / under 30 min — deci
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/wedding-logistics-planner.html
 
-<!-- pm-claude-skills v83.2.0 | skill: wedding-logistics-planner | source: skills/wedding-logistics-planner/SKILL.md | sha256: 558d4792db4fcf4acc052b48389b6581f4de3c5b7700882280b966d9cae50b42 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: wedding-logistics-planner | source: skills/wedding-logistics-planner/SKILL.md | sha256: 558d4792db4fcf4acc052b48389b6581f4de3c5b7700882280b966d9cae50b42 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

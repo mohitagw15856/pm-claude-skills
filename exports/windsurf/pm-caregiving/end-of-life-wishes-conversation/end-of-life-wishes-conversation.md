@@ -70,5 +70,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/end-of-life-wishes-conversation.html
 
-<!-- pm-claude-skills v83.2.0 | skill: end-of-life-wishes-conversation | source: skills/end-of-life-wishes-conversation/SKILL.md | sha256: 82e1570ab2d3af36d19b0d23813a943d6d84fb06d630f27bdc57f90ebf840925 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: end-of-life-wishes-conversation | source: skills/end-of-life-wishes-conversation/SKILL.md | sha256: 82e1570ab2d3af36d19b0d23813a943d6d84fb06d630f27bdc57f90ebf840925 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

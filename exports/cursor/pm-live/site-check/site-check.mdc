@@ -72,5 +72,5 @@ Rerun: `[the curl(s)]`
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/site-check.html
 
-<!-- pm-claude-skills v83.2.0 | skill: site-check | source: skills/site-check/SKILL.md | sha256: 9c33ac43bfdb2623a4ca77d0d2d84b7decde44df3d04d780d3248456503f8f1a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: site-check | source: skills/site-check/SKILL.md | sha256: 9c33ac43bfdb2623a4ca77d0d2d84b7decde44df3d04d780d3248456503f8f1a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

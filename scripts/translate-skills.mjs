@@ -10,6 +10,7 @@
 //   … --lang ja --all                                    # the whole library (costs real tokens)
 //   … --lang de --descriptions --all                     # descriptions only — the discovery layer
 //   … --check                                            # validate existing i18n/ files, no API
+//   … --check --strict                                   # the same, and stale translations fail (npm run check)
 //
 // Two units of translation, deliberately:
 //   full body      the whole SKILL.md. Expensive, and only worth it for skills
@@ -87,6 +88,9 @@ if (checkOnly) {
     }
   }
   if (stale) console.log(`⚠ ${stale} full translation(s) are stale: the English skill's sections changed since. Retranslate with --skills <names>.`);
+  // --strict (npm run check): a stale translation fails, so an edit that adds or
+  // removes a section in an English skill has to bring its translations along.
+  if (stale && has('strict')) { console.error(`✗ ${stale} stale translation(s). Retranslate them, or delete the files if the translation is being retired.`); process.exit(1); }
   console.log(errs ? `${errs} error(s) across ${n} translations` : `All ${n} translation(s) structurally consistent ✓`);
   process.exit(errs ? 1 : 0);
 }

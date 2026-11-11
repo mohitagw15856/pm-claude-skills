@@ -79,5 +79,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/proposal-skeleton.html
 
-<!-- pm-claude-skills v83.2.0 | skill: proposal-skeleton | source: skills/proposal-skeleton/SKILL.md | sha256: e3e7723c790d172df3a87d5905be0d087a8aeb0115254fb83f885c037a54b7d5 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: proposal-skeleton | source: skills/proposal-skeleton/SKILL.md | sha256: e3e7723c790d172df3a87d5905be0d087a8aeb0115254fb83f885c037a54b7d5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

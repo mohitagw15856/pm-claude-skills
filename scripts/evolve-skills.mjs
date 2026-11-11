@@ -17,6 +17,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { complete } from '../bin/lib/anthropic.mjs';
+import { modelFor } from '../bin/lib/models.mjs';
 import { logEvolution } from './lib/evolution-log.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -27,8 +28,8 @@ const opt = (n, d) => { const i = args.indexOf('--' + n); return i >= 0 ? args[i
 const dryRun = flag('dry-run');
 const count = Math.max(1, parseInt(opt('count', '3'), 10) || 3);
 const only = (opt('skills', '') || '').split(',').map((s) => s.trim()).filter(Boolean);
-const model = opt('model', 'claude-sonnet-4-6');
-const judgeModel = opt('judge', 'claude-haiku-4-5-20251001');
+const model = opt('model', modelFor('default'));
+const judgeModel = opt('judge', modelFor('fast'));
 const MARGIN = 0.25;              // challenger must beat champion overall by this
 const apiKey = process.env.ANTHROPIC_API_KEY;
 

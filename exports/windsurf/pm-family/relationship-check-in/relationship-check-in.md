@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/relationship-check-in.html
 
-<!-- pm-claude-skills v83.2.0 | skill: relationship-check-in | source: skills/relationship-check-in/SKILL.md | sha256: e4912bb996c72dc56d10a973d299ad494061f85866b1607b8f99f6b2ce6cc6db | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: relationship-check-in | source: skills/relationship-check-in/SKILL.md | sha256: e4912bb996c72dc56d10a973d299ad494061f85866b1607b8f99f6b2ce6cc6db | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

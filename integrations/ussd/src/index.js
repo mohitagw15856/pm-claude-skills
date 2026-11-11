@@ -9,7 +9,12 @@
 // Stateless: the path through the menu is in text, and nothing is stored.
 
 import { allow } from '../../shared/caps.js';
-import { MENU, TITLE } from './menu.js';
+import { MENU as MENU_DEFAULT, TITLE as TITLE_DEFAULT } from './menu.js';
+import { MENU as MENU_AFRICA, TITLE as TITLE_AFRICA } from './menu-africa.js';
+
+// USSD_MENU = "africa" serves the Nigeria, Kenya and South Africa menu (menu-africa.js).
+const MENUS = { africa: { MENU: MENU_AFRICA, TITLE: TITLE_AFRICA } };
+const menuFor = (env) => (Object.hasOwn(MENUS, env && env.USSD_MENU) ? MENUS[env.USSD_MENU] : { MENU: MENU_DEFAULT, TITLE: TITLE_DEFAULT });
 
 const API = 'https://pm-skills-mcp.pm-claude-skills.workers.dev';
 const SITE = 'https://mohitagw15856.github.io/pm-claude-skills';
@@ -52,6 +57,7 @@ async function sendSms(env, to, message) {
 // The reply for one step through the menu ("" is the first screen; "2*1" is topic 2, skill 1).
 export async function screen(env, input, phone, ctx) {
   const path = input ? input.split('*') : [];
+  const { MENU, TITLE } = menuFor(env);
   if (path.at(-1) === '0') return screen(env, path.slice(0, -2).join('*'), phone, ctx); // 0 goes back
   if (!path.length) return `CON ${TITLE}\n${list(MENU.map((t) => t.label))}`;
   const topic = MENU[Number(path[0]) - 1];

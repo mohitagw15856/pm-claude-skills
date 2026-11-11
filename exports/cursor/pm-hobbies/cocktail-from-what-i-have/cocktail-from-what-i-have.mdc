@@ -66,5 +66,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cocktail-from-what-i-have.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cocktail-from-what-i-have | source: skills/cocktail-from-what-i-have/SKILL.md | sha256: f32b4f5b1c51cdce3980f2da425e411a12f1d0f9772589263bf784638265ac51 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cocktail-from-what-i-have | source: skills/cocktail-from-what-i-have/SKILL.md | sha256: f32b4f5b1c51cdce3980f2da425e411a12f1d0f9772589263bf784638265ac51 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

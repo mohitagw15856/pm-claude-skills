@@ -16,6 +16,7 @@ import { tmpdir } from 'node:os';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { complete } from '../bin/lib/anthropic.mjs';
+import { modelFor } from '../bin/lib/models.mjs';
 import { skillLanguage } from './lib/skill-language.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -23,8 +24,8 @@ const FILE = join(root, 'data', 'skill-cup.json');
 const arg = (n) => { const i = process.argv.indexOf(`--${n}`); return i !== -1 ? process.argv[i + 1] : undefined; };
 const pr = arg('pr');
 const dryRun = process.argv.includes('--dry-run');
-const GEN = 'claude-haiku-4-5-20251001';
-const JUDGE = 'claude-sonnet-4-6';
+const GEN = modelFor('fast');
+const JUDGE = modelFor('judge');
 if (!/^\d+$/.test(pr || '')) { console.error('Usage: node scripts/score-cup-entry.mjs --pr <number> [--dry-run]'); process.exit(1); }
 
 const gh = (path) => JSON.parse(execFileSync('gh', ['api', path], { encoding: 'utf8', maxBuffer: 64 * 1024 * 1024 }));

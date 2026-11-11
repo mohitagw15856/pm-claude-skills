@@ -66,5 +66,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/should-i-quit-or-push.html
 
-<!-- pm-claude-skills v83.2.0 | skill: should-i-quit-or-push | source: skills/should-i-quit-or-push/SKILL.md | sha256: 3f3a07d32795f9714146ab7dccfe5c8e45a3a7b29bebb9a56ee6a3b49b862ad1 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: should-i-quit-or-push | source: skills/should-i-quit-or-push/SKILL.md | sha256: 3f3a07d32795f9714146ab7dccfe5c8e45a3a7b29bebb9a56ee6a3b49b862ad1 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

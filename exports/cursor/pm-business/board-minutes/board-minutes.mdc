@@ -154,5 +154,5 @@ These minutes were approved by the board on [date] as an accurate record of the 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/board-minutes.html
 
-<!-- pm-claude-skills v83.2.0 | skill: board-minutes | source: skills/board-minutes/SKILL.md | sha256: a088b1ea826fffcd076f5c590fdcf36ec6a0045dacd8c7e878d7b7e92d032c35 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: board-minutes | source: skills/board-minutes/SKILL.md | sha256: a088b1ea826fffcd076f5c590fdcf36ec6a0045dacd8c7e878d7b7e92d032c35 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

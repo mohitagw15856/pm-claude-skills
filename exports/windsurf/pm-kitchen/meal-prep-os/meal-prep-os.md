@@ -127,5 +127,5 @@ scheduled easy night]
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/meal-prep-os.html
 
-<!-- pm-claude-skills v83.2.0 | skill: meal-prep-os | source: skills/meal-prep-os/SKILL.md | sha256: bb26294673749106370b0403df33124ab836d14e5d590b751aefb378f54ed04d | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: meal-prep-os | source: skills/meal-prep-os/SKILL.md | sha256: bb26294673749106370b0403df33124ab836d14e5d590b751aefb378f54ed04d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

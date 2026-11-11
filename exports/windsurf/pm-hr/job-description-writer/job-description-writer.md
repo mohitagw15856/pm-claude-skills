@@ -83,5 +83,5 @@ Nice to have (3-4 items):
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/job-description-writer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: job-description-writer | source: skills/job-description-writer/SKILL.md | sha256: 22ae109b3267934fcf5af581cf9ea199d7a1dbe64a8bc26b9ad72a84875fd741 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: job-description-writer | source: skills/job-description-writer/SKILL.md | sha256: 22ae109b3267934fcf5af581cf9ea199d7a1dbe64a8bc26b9ad72a84875fd741 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

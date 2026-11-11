@@ -72,5 +72,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/competitive-scan-lite.html
 
-<!-- pm-claude-skills v83.2.0 | skill: competitive-scan-lite | source: skills/competitive-scan-lite/SKILL.md | sha256: 6d4406714f927ffcf514c64c834089aaee746c9b5aec6792c15c3e45768fbf43 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: competitive-scan-lite | source: skills/competitive-scan-lite/SKILL.md | sha256: 6d4406714f927ffcf514c64c834089aaee746c9b5aec6792c15c3e45768fbf43 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

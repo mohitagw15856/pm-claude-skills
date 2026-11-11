@@ -85,5 +85,5 @@ A **Meeting Brief** artifact:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/meeting-prep-live.html
 
-<!-- pm-claude-skills v83.2.0 | skill: meeting-prep-live | source: skills/meeting-prep-live/SKILL.md | sha256: 1fa5efa3f65987ee931849e0270ed9d9269203a1b208ffd042df6823552f0fdf | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: meeting-prep-live | source: skills/meeting-prep-live/SKILL.md | sha256: 1fa5efa3f65987ee931849e0270ed9d9269203a1b208ffd042df6823552f0fdf | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

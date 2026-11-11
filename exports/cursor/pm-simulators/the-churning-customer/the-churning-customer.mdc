@@ -83,5 +83,5 @@ One paragraph: the single change to onboarding that moves moment 2 from "extra w
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-churning-customer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: the-churning-customer | source: skills/the-churning-customer/SKILL.md | sha256: c256dfde788e6deb80538e149970384d2a457a84d8feba52727537e80733511a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: the-churning-customer | source: skills/the-churning-customer/SKILL.md | sha256: c256dfde788e6deb80538e149970384d2a457a84d8feba52727537e80733511a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

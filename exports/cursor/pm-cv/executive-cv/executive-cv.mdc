@@ -68,5 +68,5 @@ Confidential figures: if a number is confidential, use a range or a ratio the pe
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/executive-cv.html
 
-<!-- pm-claude-skills v83.2.0 | skill: executive-cv | source: skills/executive-cv/SKILL.md | sha256: e7bd0cd21624eba411ad0114e68610fa8d07b7e3614365d9bf78e115d0bf2748 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: executive-cv | source: skills/executive-cv/SKILL.md | sha256: e7bd0cd21624eba411ad0114e68610fa8d07b7e3614365d9bf78e115d0bf2748 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

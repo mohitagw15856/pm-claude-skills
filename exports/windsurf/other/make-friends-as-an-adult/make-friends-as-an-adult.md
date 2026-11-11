@@ -67,5 +67,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/make-friends-as-an-adult.html
 
-<!-- pm-claude-skills v83.2.0 | skill: make-friends-as-an-adult | source: skills/make-friends-as-an-adult/SKILL.md | sha256: c7f907d6dd74e7538f4484ab7bb358f5c39d83bd1074dde7d17121c12233a8b4 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: make-friends-as-an-adult | source: skills/make-friends-as-an-adult/SKILL.md | sha256: c7f907d6dd74e7538f4484ab7bb358f5c39d83bd1074dde7d17121c12233a8b4 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

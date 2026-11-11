@@ -66,5 +66,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/unclaimed-money-tracer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: unclaimed-money-tracer | source: skills/unclaimed-money-tracer/SKILL.md | sha256: 348d2cbcde8c894e7eb2a45fec4b809e7e72f8b78c4bc0a35ba3c3be72b67aaf | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: unclaimed-money-tracer | source: skills/unclaimed-money-tracer/SKILL.md | sha256: 348d2cbcde8c894e7eb2a45fec4b809e7e72f8b78c4bc0a35ba3c3be72b67aaf | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -85,5 +85,5 @@ This is not legal or financial advice. Local advice centres, social services and
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/emergency-grant-application.html
 
-<!-- pm-claude-skills v83.2.0 | skill: emergency-grant-application | source: skills/emergency-grant-application/SKILL.md | sha256: e411fcdec33cc03ee16b8d32434a161e1e2b142e8a392ae2a6c0c56e1ec5adb2 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: emergency-grant-application | source: skills/emergency-grant-application/SKILL.md | sha256: e411fcdec33cc03ee16b8d32434a161e1e2b142e8a392ae2a6c0c56e1ec5adb2 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

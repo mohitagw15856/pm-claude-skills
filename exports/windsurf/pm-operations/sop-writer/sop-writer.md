@@ -105,5 +105,5 @@ NOTE: Steps must be written in imperative form. Each step must have one action o
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sop-writer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: sop-writer | source: skills/sop-writer/SKILL.md | sha256: ada2b518cd3bfa8fa44a8a0a87a2f511d7a63e61db1b25e6ba19a945082dada7 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: sop-writer | source: skills/sop-writer/SKILL.md | sha256: ada2b518cd3bfa8fa44a8a0a87a2f511d7a63e61db1b25e6ba19a945082dada7 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

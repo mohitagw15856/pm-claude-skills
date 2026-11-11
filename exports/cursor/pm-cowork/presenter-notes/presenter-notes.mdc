@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/presenter-notes.html
 
-<!-- pm-claude-skills v83.2.0 | skill: presenter-notes | source: skills/presenter-notes/SKILL.md | sha256: 4cd4f4098c43ade5b297c7ad01177f4117a528fcd9f54b5189d919e86fd3afd5 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: presenter-notes | source: skills/presenter-notes/SKILL.md | sha256: 4cd4f4098c43ade5b297c7ad01177f4117a528fcd9f54b5189d919e86fd3afd5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

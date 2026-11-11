@@ -69,5 +69,5 @@ Partnership / co-marketing practice (audience-overlap fit, balanced value exchan
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/co-marketing.html
 
-<!-- pm-claude-skills v83.2.0 | skill: co-marketing | source: skills/co-marketing/SKILL.md | sha256: 7f28a7bcaab4fb3bdbc7f96ba54353e8a8ac09fc4399da71dfcd80010fbcc182 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: co-marketing | source: skills/co-marketing/SKILL.md | sha256: 7f28a7bcaab4fb3bdbc7f96ba54353e8a8ac09fc4399da71dfcd80010fbcc182 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

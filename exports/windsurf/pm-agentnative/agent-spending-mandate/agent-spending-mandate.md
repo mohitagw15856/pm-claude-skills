@@ -79,5 +79,5 @@ mandate:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-spending-mandate.html
 
-<!-- pm-claude-skills v83.2.0 | skill: agent-spending-mandate | source: skills/agent-spending-mandate/SKILL.md | sha256: de066c4271f6f10483083eda0b5ab891466c3eaa566bfe7ac9b274f3ebf46b28 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: agent-spending-mandate | source: skills/agent-spending-mandate/SKILL.md | sha256: de066c4271f6f10483083eda0b5ab891466c3eaa566bfe7ac9b274f3ebf46b28 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

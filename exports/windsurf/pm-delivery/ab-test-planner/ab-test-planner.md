@@ -147,5 +147,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ab-test-planner.html
 
-<!-- pm-claude-skills v83.2.0 | skill: ab-test-planner | source: skills/ab-test-planner/SKILL.md | sha256: b55434342b3987bb1a142adc12eaad2186793f23ef2b13ee84c5d2c995356c19 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: ab-test-planner | source: skills/ab-test-planner/SKILL.md | sha256: b55434342b3987bb1a142adc12eaad2186793f23ef2b13ee84c5d2c995356c19 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

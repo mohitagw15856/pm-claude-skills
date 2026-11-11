@@ -74,5 +74,5 @@ Phase 1 with paper or Excel where needed, phase 2 with scanning, phase 3 with ME
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-quality-traceability.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-quality-traceability | source: skills/cn-quality-traceability/SKILL.md | sha256: bb9c905efea0dcc2efe83bf9b59bda0d51f865baf3f207dece65bb0453e12c44 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-quality-traceability | source: skills/cn-quality-traceability/SKILL.md | sha256: bb9c905efea0dcc2efe83bf9b59bda0d51f865baf3f207dece65bb0453e12c44 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -74,5 +74,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-workflow-designer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: ai-workflow-designer | source: skills/ai-workflow-designer/SKILL.md | sha256: a00c2a703aac92db84848f5e96ea7e139b32939c568532f871ce4932d8584aae | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: ai-workflow-designer | source: skills/ai-workflow-designer/SKILL.md | sha256: a00c2a703aac92db84848f5e96ea7e139b32939c568532f871ce4932d8584aae | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

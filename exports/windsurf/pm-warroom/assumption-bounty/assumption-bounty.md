@@ -53,5 +53,5 @@ Every plan is a stack of beliefs wearing a costume of facts. Most die from an as
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/assumption-bounty.html
 
-<!-- pm-claude-skills v83.2.0 | skill: assumption-bounty | source: skills/assumption-bounty/SKILL.md | sha256: 31eb0a34cb349d83d5b2e1f5e495b214589108e724f8c16df6e848b988c8f60f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: assumption-bounty | source: skills/assumption-bounty/SKILL.md | sha256: 31eb0a34cb349d83d5b2e1f5e495b214589108e724f8c16df6e848b988c8f60f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

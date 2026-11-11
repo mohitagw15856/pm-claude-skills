@@ -67,5 +67,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/index-fund-starter.html
 
-<!-- pm-claude-skills v83.2.0 | skill: index-fund-starter | source: skills/index-fund-starter/SKILL.md | sha256: 24de8b968f5a70f110013b55745472e13dce84cb203a1ba2fe97ced6ec9b3328 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: index-fund-starter | source: skills/index-fund-starter/SKILL.md | sha256: 24de8b968f5a70f110013b55745472e13dce84cb203a1ba2fe97ced6ec9b3328 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

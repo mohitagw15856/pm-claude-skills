@@ -63,5 +63,5 @@ Debt-reduction methods — the debt avalanche (highest-interest-first) and debt 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/debt-payoff-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: debt-payoff-plan | source: skills/debt-payoff-plan/SKILL.md | sha256: e41bd99977228fce896042f1b51e67babc30fd25a52c2eeebd08e964a90504cc | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: debt-payoff-plan | source: skills/debt-payoff-plan/SKILL.md | sha256: e41bd99977228fce896042f1b51e67babc30fd25a52c2eeebd08e964a90504cc | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -64,5 +64,5 @@ Query-optimization practice — sargability, index/partition pruning, join-order
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sql-optimizer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: sql-optimizer | source: skills/sql-optimizer/SKILL.md | sha256: 2d515958bce5b2a52f8371bdef964c9d38a9aded96ef4f5d7b7074baa12865ca | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: sql-optimizer | source: skills/sql-optimizer/SKILL.md | sha256: 2d515958bce5b2a52f8371bdef964c9d38a9aded96ef4f5d7b7074baa12865ca | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -83,5 +83,5 @@ From a thin brief, place the item in the grid using stated context, label placem
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/inventory-policy.html
 
-<!-- pm-claude-skills v83.2.0 | skill: inventory-policy | source: skills/inventory-policy/SKILL.md | sha256: b5f957c626bf8345e2a8643f71e4e2bff67cc790dfcbd5beadcf03099123c1d4 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: inventory-policy | source: skills/inventory-policy/SKILL.md | sha256: b5f957c626bf8345e2a8643f71e4e2bff67cc790dfcbd5beadcf03099123c1d4 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

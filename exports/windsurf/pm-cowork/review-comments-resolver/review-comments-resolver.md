@@ -75,5 +75,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/review-comments-resolver.html
 
-<!-- pm-claude-skills v83.2.0 | skill: review-comments-resolver | source: skills/review-comments-resolver/SKILL.md | sha256: 0d400f49b0e2e85722e2eba760717d38b439b0a247b6d7a02b7912ddc9f001fc | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: review-comments-resolver | source: skills/review-comments-resolver/SKILL.md | sha256: 0d400f49b0e2e85722e2eba760717d38b439b0a247b6d7a02b7912ddc9f001fc | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

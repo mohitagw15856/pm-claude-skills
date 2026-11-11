@@ -35,7 +35,7 @@ Evals call the API, so the defaults are deliberately frugal and **nothing runs o
 - **Skip unchanged:** each result stores a content hash; re-running only re-scores skills whose `SKILL.md` (or case) changed. `--force` overrides.
 - **Only changed skills:** `--changed` scores just the skills that differ from `--base` (default `origin/main`) — ideal for CI / per-PR evals (often $0.00).
 - **Hard cap:** `--max-skills N`.
-- **Official, stricter pass** when you want it: `--models claude-sonnet-4-6,claude-haiku-4-5-20251001 --judge claude-opus-4-8`.
+- **Official, stricter pass** when you want it: `--models claude-sonnet-5-5,claude-haiku-5-5 --judge claude-opus-5-5`.
 
 > **Set a hard ceiling at the source:** in the [Anthropic Console](https://console.anthropic.com/settings/limits) → **Limits**, set a monthly spend cap. That guarantees evals (or the ChatOps bot, or sample generation) can never run your balance dry again.
 

@@ -79,5 +79,5 @@ A **Triage Report** artifact:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/inbox-triage-live.html
 
-<!-- pm-claude-skills v83.2.0 | skill: inbox-triage-live | source: skills/inbox-triage-live/SKILL.md | sha256: 6a0debecf0ce59b21c4d0f4f40da85a7fb266d6c6f0a2ae2324fac18e0cfa415 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: inbox-triage-live | source: skills/inbox-triage-live/SKILL.md | sha256: 6a0debecf0ce59b21c4d0f4f40da85a7fb266d6c6f0a2ae2324fac18e0cfa415 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

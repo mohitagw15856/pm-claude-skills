@@ -158,5 +158,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pricing-strategy.html
 
-<!-- pm-claude-skills v83.2.0 | skill: pricing-strategy | source: skills/pricing-strategy/SKILL.md | sha256: 34c5018a2a2df8d274590484a6e5479cec9c73975195bc7c5e7a122ea6a7d163 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: pricing-strategy | source: skills/pricing-strategy/SKILL.md | sha256: 34c5018a2a2df8d274590484a6e5479cec9c73975195bc7c5e7a122ea6a7d163 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

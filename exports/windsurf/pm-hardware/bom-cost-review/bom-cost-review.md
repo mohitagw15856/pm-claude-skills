@@ -84,5 +84,5 @@ Ask for these if not provided; work with a partial BOM if that's all there is, l
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bom-cost-review.html
 
-<!-- pm-claude-skills v83.2.0 | skill: bom-cost-review | source: skills/bom-cost-review/SKILL.md | sha256: 87df7efb1f1d2d69042056a4bd136856d32d0b6adc997e5e268f3aee2ac9a498 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: bom-cost-review | source: skills/bom-cost-review/SKILL.md | sha256: 87df7efb1f1d2d69042056a4bd136856d32d0b6adc997e5e268f3aee2ac9a498 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

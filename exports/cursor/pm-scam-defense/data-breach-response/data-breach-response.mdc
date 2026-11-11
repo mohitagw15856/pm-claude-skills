@@ -74,5 +74,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/data-breach-response.html
 
-<!-- pm-claude-skills v83.2.0 | skill: data-breach-response | source: skills/data-breach-response/SKILL.md | sha256: 12c6a72e01e57eb13baec0b9cdc453ae32dc6ad0bff73f8f03e39d4892134193 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: data-breach-response | source: skills/data-breach-response/SKILL.md | sha256: 12c6a72e01e57eb13baec0b9cdc453ae32dc6ad0bff73f8f03e39d4892134193 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

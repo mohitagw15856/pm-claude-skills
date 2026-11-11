@@ -99,5 +99,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/hours-of-service-check.html
 
-<!-- pm-claude-skills v83.2.0 | skill: hours-of-service-check | source: skills/hours-of-service-check/SKILL.md | sha256: 6acfa1fc3e55eeb0e1ad914b7caf321a1a4e48a2f1d74265d58dec5b3e88bdb1 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: hours-of-service-check | source: skills/hours-of-service-check/SKILL.md | sha256: 6acfa1fc3e55eeb0e1ad914b7caf321a1a4e48a2f1d74265d58dec5b3e88bdb1 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

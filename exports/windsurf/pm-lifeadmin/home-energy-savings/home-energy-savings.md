@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/home-energy-savings.html
 
-<!-- pm-claude-skills v83.2.0 | skill: home-energy-savings | source: skills/home-energy-savings/SKILL.md | sha256: befe425702cf5a5d24df0aef7764182fe8c4cdfc6d93aacd515a4baa3ea3fe0b | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: home-energy-savings | source: skills/home-energy-savings/SKILL.md | sha256: befe425702cf5a5d24df0aef7764182fe8c4cdfc6d93aacd515a4baa3ea3fe0b | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -15,7 +15,8 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join, dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { complete, parseSkill } from './lib/anthropic.mjs';
-import { loadContracts, loadPipelines, validatePipeline, resolveBinding, checkAgainst } from './lib/pipelines.mjs';
+import { modelFor } from './lib/models.mjs';
+import { loadContracts, loadPipelines, validatePipeline, resolveStepInputs, checkAgainst } from './lib/pipelines.mjs';
 
 const PKG_ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const getArg = (argv, name, def) => { const i = argv.indexOf('--' + name); return i !== -1 && argv[i + 1] ? argv[i + 1] : def; };
@@ -26,7 +27,7 @@ const HELP = `pipeline — run skills as a typed chain, each output feeding the 
   pm-claude-skills pipeline validate [id]              prove the chain fits the contracts (no API)
   pm-claude-skills pipeline run <id> --input in.json   run it (ANTHROPIC_API_KEY, one call per step)
       [--out-dir <dir>]   write <n>-<step>.json per step and pipeline.json (default ./pipeline-out)
-      [--model <m>]       default claude-sonnet-4-6
+      [--model <m>]       default: the "default" role in data/models.json
       [--dry-run]         resolve the plan and the first step's inputs, call nothing
 
 Write your own: docs/PIPELINES.md. A step may only use a skill with a contract in schemas/skills/.`;
@@ -85,7 +86,7 @@ export async function run(argv) {
 
   const dryRun = argv.includes('--dry-run');
   const outDir = resolve(getArg(argv, 'out-dir', 'pipeline-out'));
-  const model = getArg(argv, 'model', 'claude-sonnet-4-6');
+  const model = getArg(argv, 'model', modelFor('default'));
   const apiKey = process.env.ANTHROPIC_API_KEY || '';
   if (!apiKey && !dryRun) { console.error('Set ANTHROPIC_API_KEY to run a pipeline (one API call per step), or pass --dry-run.'); return 1; }
 
@@ -102,7 +103,7 @@ export async function run(argv) {
       console.log(`   inputs: ${Object.entries(step.inputs).map(([k, b]) => `${k} <- ${typeof b === "object" && b && b.from ? b.from : JSON.stringify(b)}`).join(", ")}`);
       continue;
     }
-    try { stepInputs = Object.fromEntries(Object.entries(step.inputs).map(([k, b]) => [k, resolveBinding(b, ctx)])); }
+    try { stepInputs = resolveStepInputs(step, contract, ctx); }
     catch (e) { console.error(`✗ ${step.id}: ${e.message}`); return 1; }
     const problems = checkAgainst(stepInputs, contract.inputs, `${step.id} inputs`);
     if (problems.length) { for (const p of problems) console.error(`✗ ${p}`); return 1; }

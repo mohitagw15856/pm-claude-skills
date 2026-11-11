@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/elder-scam-briefing.html
 
-<!-- pm-claude-skills v83.2.0 | skill: elder-scam-briefing | source: skills/elder-scam-briefing/SKILL.md | sha256: dcda2a5dfad7a43d13440d592b30671b466567d92e0f6f98ea0773cfdd8a9e20 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: elder-scam-briefing | source: skills/elder-scam-briefing/SKILL.md | sha256: dcda2a5dfad7a43d13440d592b30671b466567d92e0f6f98ea0773cfdd8a9e20 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -69,5 +69,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/winback-playbook.html
 
-<!-- pm-claude-skills v83.2.0 | skill: winback-playbook | source: skills/winback-playbook/SKILL.md | sha256: 6a24be9ca73da36fe40e033b87fc31c81683d164e71f92de1e7f1681099334a8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: winback-playbook | source: skills/winback-playbook/SKILL.md | sha256: 6a24be9ca73da36fe40e033b87fc31c81683d164e71f92de1e7f1681099334a8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

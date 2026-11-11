@@ -66,5 +66,5 @@ Cold-outreach / networking practice — specificity, brevity, a single low-frict
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/outreach-message.html
 
-<!-- pm-claude-skills v83.2.0 | skill: outreach-message | source: skills/outreach-message/SKILL.md | sha256: 5dddd24e6d40c7f1452b16c6f6eda46390d5728296d1eebcd330fd5678b97197 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: outreach-message | source: skills/outreach-message/SKILL.md | sha256: 5dddd24e6d40c7f1452b16c6f6eda46390d5728296d1eebcd330fd5678b97197 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

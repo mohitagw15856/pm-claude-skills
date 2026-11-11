@@ -73,5 +73,5 @@ B2B cold-email practice — relevance/trigger-led openers, one-outcome value, si
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cold-email.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cold-email | source: skills/cold-email/SKILL.md | sha256: 1cc9cd7716c90b1f71fa162d196c0422f263415dce9081931c1f6ef9e178a28e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cold-email | source: skills/cold-email/SKILL.md | sha256: 1cc9cd7716c90b1f71fa162d196c0422f263415dce9081931c1f6ef9e178a28e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

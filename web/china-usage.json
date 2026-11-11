@@ -1,0 +1,683 @@
+{
+ "updated": "2026-11-10T23:18:23.590Z",
+ "window_days": 90,
+ "note": "Counts only. npmmirror, Gitee and ModelScope are reachable in mainland China; npmjs.org is included for scale. Mirror downloads include bots and CI.",
+ "mirror_share_30d_percent": 4.9,
+ "sources": {
+  "npmmirror": {
+   "daily": [
+    {
+     "day": "2026-08-14",
+     "downloads": 1
+    },
+    {
+     "day": "2026-08-17",
+     "downloads": 11
+    },
+    {
+     "day": "2026-08-18",
+     "downloads": 2
+    },
+    {
+     "day": "2026-08-19",
+     "downloads": 2
+    },
+    {
+     "day": "2026-08-20",
+     "downloads": 1
+    },
+    {
+     "day": "2026-08-21",
+     "downloads": 3
+    },
+    {
+     "day": "2026-08-22",
+     "downloads": 1
+    },
+    {
+     "day": "2026-08-25",
+     "downloads": 2
+    },
+    {
+     "day": "2026-08-26",
+     "downloads": 1
+    },
+    {
+     "day": "2026-08-27",
+     "downloads": 1
+    },
+    {
+     "day": "2026-08-28",
+     "downloads": 1
+    },
+    {
+     "day": "2026-09-01",
+     "downloads": 13
+    },
+    {
+     "day": "2026-09-04",
+     "downloads": 2
+    },
+    {
+     "day": "2026-09-05",
+     "downloads": 18
+    },
+    {
+     "day": "2026-09-06",
+     "downloads": 30
+    },
+    {
+     "day": "2026-09-07",
+     "downloads": 31
+    },
+    {
+     "day": "2026-09-12",
+     "downloads": 1
+    },
+    {
+     "day": "2026-09-14",
+     "downloads": 1
+    },
+    {
+     "day": "2026-09-15",
+     "downloads": 2
+    },
+    {
+     "day": "2026-09-16",
+     "downloads": 40
+    },
+    {
+     "day": "2026-09-17",
+     "downloads": 16
+    },
+    {
+     "day": "2026-09-18",
+     "downloads": 1
+    },
+    {
+     "day": "2026-09-19",
+     "downloads": 4
+    },
+    {
+     "day": "2026-09-20",
+     "downloads": 1
+    },
+    {
+     "day": "2026-09-21",
+     "downloads": 2
+    },
+    {
+     "day": "2026-09-22",
+     "downloads": 16
+    },
+    {
+     "day": "2026-09-23",
+     "downloads": 42
+    },
+    {
+     "day": "2026-09-24",
+     "downloads": 15
+    },
+    {
+     "day": "2026-09-25",
+     "downloads": 23
+    },
+    {
+     "day": "2026-09-26",
+     "downloads": 15
+    },
+    {
+     "day": "2026-09-27",
+     "downloads": 22
+    },
+    {
+     "day": "2026-09-28",
+     "downloads": 48
+    },
+    {
+     "day": "2026-09-29",
+     "downloads": 53
+    },
+    {
+     "day": "2026-09-30",
+     "downloads": 28
+    },
+    {
+     "day": "2026-10-01",
+     "downloads": 29
+    },
+    {
+     "day": "2026-10-02",
+     "downloads": 1
+    },
+    {
+     "day": "2026-10-03",
+     "downloads": 27
+    },
+    {
+     "day": "2026-10-04",
+     "downloads": 29
+    },
+    {
+     "day": "2026-10-05",
+     "downloads": 22
+    },
+    {
+     "day": "2026-10-06",
+     "downloads": 12
+    },
+    {
+     "day": "2026-10-08",
+     "downloads": 1
+    },
+    {
+     "day": "2026-10-10",
+     "downloads": 1
+    },
+    {
+     "day": "2026-10-12",
+     "downloads": 7
+    },
+    {
+     "day": "2026-10-13",
+     "downloads": 1
+    },
+    {
+     "day": "2026-10-14",
+     "downloads": 4
+    },
+    {
+     "day": "2026-10-15",
+     "downloads": 115
+    },
+    {
+     "day": "2026-10-16",
+     "downloads": 10
+    },
+    {
+     "day": "2026-10-17",
+     "downloads": 33
+    },
+    {
+     "day": "2026-10-18",
+     "downloads": 4
+    },
+    {
+     "day": "2026-10-19",
+     "downloads": 8
+    },
+    {
+     "day": "2026-10-20",
+     "downloads": 13
+    },
+    {
+     "day": "2026-10-21",
+     "downloads": 4
+    },
+    {
+     "day": "2026-10-22",
+     "downloads": 8
+    },
+    {
+     "day": "2026-10-23",
+     "downloads": 22
+    },
+    {
+     "day": "2026-10-24",
+     "downloads": 3
+    },
+    {
+     "day": "2026-10-25",
+     "downloads": 2
+    },
+    {
+     "day": "2026-10-26",
+     "downloads": 4
+    },
+    {
+     "day": "2026-10-27",
+     "downloads": 34
+    },
+    {
+     "day": "2026-10-28",
+     "downloads": 32
+    },
+    {
+     "day": "2026-10-29",
+     "downloads": 2
+    },
+    {
+     "day": "2026-10-30",
+     "downloads": 4
+    },
+    {
+     "day": "2026-10-31",
+     "downloads": 1
+    },
+    {
+     "day": "2026-11-01",
+     "downloads": 3
+    },
+    {
+     "day": "2026-11-02",
+     "downloads": 2
+    },
+    {
+     "day": "2026-11-03",
+     "downloads": 1
+    },
+    {
+     "day": "2026-11-04",
+     "downloads": 4
+    },
+    {
+     "day": "2026-11-05",
+     "downloads": 2
+    },
+    {
+     "day": "2026-11-06",
+     "downloads": 2
+    },
+    {
+     "day": "2026-11-07",
+     "downloads": 6
+    },
+    {
+     "day": "2026-11-08",
+     "downloads": 2
+    }
+   ],
+   "last7": 19,
+   "last30": 335,
+   "last90": 905
+  },
+  "npm": {
+   "daily": [
+    {
+     "day": "2026-08-12",
+     "downloads": 241
+    },
+    {
+     "day": "2026-08-13",
+     "downloads": 356
+    },
+    {
+     "day": "2026-08-14",
+     "downloads": 403
+    },
+    {
+     "day": "2026-08-15",
+     "downloads": 272
+    },
+    {
+     "day": "2026-08-16",
+     "downloads": 411
+    },
+    {
+     "day": "2026-08-17",
+     "downloads": 796
+    },
+    {
+     "day": "2026-08-18",
+     "downloads": 857
+    },
+    {
+     "day": "2026-08-19",
+     "downloads": 468
+    },
+    {
+     "day": "2026-08-20",
+     "downloads": 884
+    },
+    {
+     "day": "2026-08-21",
+     "downloads": 579
+    },
+    {
+     "day": "2026-08-22",
+     "downloads": 20
+    },
+    {
+     "day": "2026-08-23",
+     "downloads": 72
+    },
+    {
+     "day": "2026-08-24",
+     "downloads": 181
+    },
+    {
+     "day": "2026-08-25",
+     "downloads": 56
+    },
+    {
+     "day": "2026-08-26",
+     "downloads": 56
+    },
+    {
+     "day": "2026-08-27",
+     "downloads": 132
+    },
+    {
+     "day": "2026-08-28",
+     "downloads": 45
+    },
+    {
+     "day": "2026-08-29",
+     "downloads": 71
+    },
+    {
+     "day": "2026-08-30",
+     "downloads": 99
+    },
+    {
+     "day": "2026-08-31",
+     "downloads": 346
+    },
+    {
+     "day": "2026-09-01",
+     "downloads": 182
+    },
+    {
+     "day": "2026-09-02",
+     "downloads": 334
+    },
+    {
+     "day": "2026-09-03",
+     "downloads": 330
+    },
+    {
+     "day": "2026-09-04",
+     "downloads": 477
+    },
+    {
+     "day": "2026-09-05",
+     "downloads": 543
+    },
+    {
+     "day": "2026-09-06",
+     "downloads": 1274
+    },
+    {
+     "day": "2026-09-07",
+     "downloads": 0
+    },
+    {
+     "day": "2026-09-08",
+     "downloads": 0
+    },
+    {
+     "day": "2026-09-09",
+     "downloads": 517
+    },
+    {
+     "day": "2026-09-10",
+     "downloads": 354
+    },
+    {
+     "day": "2026-09-11",
+     "downloads": 272
+    },
+    {
+     "day": "2026-09-12",
+     "downloads": 305
+    },
+    {
+     "day": "2026-09-13",
+     "downloads": 445
+    },
+    {
+     "day": "2026-09-14",
+     "downloads": 572
+    },
+    {
+     "day": "2026-09-15",
+     "downloads": 0
+    },
+    {
+     "day": "2026-09-16",
+     "downloads": 478
+    },
+    {
+     "day": "2026-09-17",
+     "downloads": 316
+    },
+    {
+     "day": "2026-09-18",
+     "downloads": 1295
+    },
+    {
+     "day": "2026-09-19",
+     "downloads": 446
+    },
+    {
+     "day": "2026-09-20",
+     "downloads": 535
+    },
+    {
+     "day": "2026-09-21",
+     "downloads": 757
+    },
+    {
+     "day": "2026-09-22",
+     "downloads": 907
+    },
+    {
+     "day": "2026-09-23",
+     "downloads": 485
+    },
+    {
+     "day": "2026-09-24",
+     "downloads": 595
+    },
+    {
+     "day": "2026-09-25",
+     "downloads": 524
+    },
+    {
+     "day": "2026-09-26",
+     "downloads": 666
+    },
+    {
+     "day": "2026-09-27",
+     "downloads": 390
+    },
+    {
+     "day": "2026-09-28",
+     "downloads": 645
+    },
+    {
+     "day": "2026-09-29",
+     "downloads": 700
+    },
+    {
+     "day": "2026-09-30",
+     "downloads": 856
+    },
+    {
+     "day": "2026-10-01",
+     "downloads": 576
+    },
+    {
+     "day": "2026-10-02",
+     "downloads": 438
+    },
+    {
+     "day": "2026-10-03",
+     "downloads": 1286
+    },
+    {
+     "day": "2026-10-04",
+     "downloads": 1360
+    },
+    {
+     "day": "2026-10-05",
+     "downloads": 883
+    },
+    {
+     "day": "2026-10-06",
+     "downloads": 0
+    },
+    {
+     "day": "2026-10-07",
+     "downloads": 209
+    },
+    {
+     "day": "2026-10-08",
+     "downloads": 203
+    },
+    {
+     "day": "2026-10-09",
+     "downloads": 214
+    },
+    {
+     "day": "2026-10-10",
+     "downloads": 269
+    },
+    {
+     "day": "2026-10-11",
+     "downloads": 163
+    },
+    {
+     "day": "2026-10-12",
+     "downloads": 164
+    },
+    {
+     "day": "2026-10-13",
+     "downloads": 121
+    },
+    {
+     "day": "2026-10-14",
+     "downloads": 0
+    },
+    {
+     "day": "2026-10-15",
+     "downloads": 0
+    },
+    {
+     "day": "2026-10-16",
+     "downloads": 212
+    },
+    {
+     "day": "2026-10-17",
+     "downloads": 239
+    },
+    {
+     "day": "2026-10-18",
+     "downloads": 175
+    },
+    {
+     "day": "2026-10-19",
+     "downloads": 0
+    },
+    {
+     "day": "2026-10-20",
+     "downloads": 0
+    },
+    {
+     "day": "2026-10-21",
+     "downloads": 229
+    },
+    {
+     "day": "2026-10-22",
+     "downloads": 282
+    },
+    {
+     "day": "2026-10-23",
+     "downloads": 390
+    },
+    {
+     "day": "2026-10-24",
+     "downloads": 172
+    },
+    {
+     "day": "2026-10-25",
+     "downloads": 88
+    },
+    {
+     "day": "2026-10-26",
+     "downloads": 204
+    },
+    {
+     "day": "2026-10-27",
+     "downloads": 83
+    },
+    {
+     "day": "2026-10-28",
+     "downloads": 380
+    },
+    {
+     "day": "2026-10-29",
+     "downloads": 288
+    },
+    {
+     "day": "2026-10-30",
+     "downloads": 93
+    },
+    {
+     "day": "2026-10-31",
+     "downloads": 100
+    },
+    {
+     "day": "2026-11-01",
+     "downloads": 199
+    },
+    {
+     "day": "2026-11-02",
+     "downloads": 338
+    },
+    {
+     "day": "2026-11-03",
+     "downloads": 372
+    },
+    {
+     "day": "2026-11-04",
+     "downloads": 445
+    },
+    {
+     "day": "2026-11-05",
+     "downloads": 386
+    },
+    {
+     "day": "2026-11-06",
+     "downloads": 248
+    },
+    {
+     "day": "2026-11-07",
+     "downloads": 375
+    },
+    {
+     "day": "2026-11-08",
+     "downloads": 409
+    },
+    {
+     "day": "2026-11-09",
+     "downloads": 307
+    }
+   ],
+   "last7": 2542,
+   "last30": 6462,
+   "last90": 33445
+  },
+  "gitee": {
+   "stars": 1,
+   "forks": 0,
+   "watchers": 1,
+   "pushed_at": "2026-11-10T22:37:03+08:00"
+  },
+  "modelscope": {
+   "dataset_downloads": 16,
+   "model_downloads": 6
+  }
+ },
+ "history": [
+  {
+   "date": "2026-11-10",
+   "npmmirror_30d": 335,
+   "npm_30d": 6462,
+   "gitee_stars": 1,
+   "ms_dataset": 16,
+   "ms_model": 6
+  }
+ ],
+ "errors": []
+}

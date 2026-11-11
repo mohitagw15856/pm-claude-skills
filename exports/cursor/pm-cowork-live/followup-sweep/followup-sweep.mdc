@@ -77,5 +77,5 @@ A **Follow-up Sweep** artifact:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/followup-sweep.html
 
-<!-- pm-claude-skills v83.2.0 | skill: followup-sweep | source: skills/followup-sweep/SKILL.md | sha256: f51fbae61a1c4d6072b104e46c7e07e484b556b240b5457f94a80e09ca0866d4 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: followup-sweep | source: skills/followup-sweep/SKILL.md | sha256: f51fbae61a1c4d6072b104e46c7e07e484b556b240b5457f94a80e09ca0866d4 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

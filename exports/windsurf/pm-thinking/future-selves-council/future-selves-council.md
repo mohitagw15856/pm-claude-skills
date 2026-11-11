@@ -64,5 +64,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/future-selves-council.html
 
-<!-- pm-claude-skills v83.2.0 | skill: future-selves-council | source: skills/future-selves-council/SKILL.md | sha256: 2620cd93f4fb6157c335d59e0e78c83c3a49f3b2601654c1455e6b618722c305 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: future-selves-council | source: skills/future-selves-council/SKILL.md | sha256: 2620cd93f4fb6157c335d59e0e78c83c3a49f3b2601654c1455e6b618722c305 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -137,5 +137,5 @@ for the leaving itself.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/micro-retirement-planner.html
 
-<!-- pm-claude-skills v83.2.0 | skill: micro-retirement-planner | source: skills/micro-retirement-planner/SKILL.md | sha256: 4046f79e87b6e8a9b0614b1662d75a812f46934b8cd1f86d0be0155aa5918eca | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: micro-retirement-planner | source: skills/micro-retirement-planner/SKILL.md | sha256: 4046f79e87b6e8a9b0614b1662d75a812f46934b8cd1f86d0be0155aa5918eca | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

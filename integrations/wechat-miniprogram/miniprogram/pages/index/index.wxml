@@ -1,0 +1,21 @@
+<view class="wrap">
+  <view class="card">
+    <input class="search" value="{{query}}" placeholder="说说你要做什么，比如：帮我写周报" confirm-type="search" bindinput="onInput" bindconfirm="onSearch" focus="{{true}}" />
+    <view class="muted">离线查找，不联网、不收集任何输入。共 {{total}} 个技能。</view>
+  </view>
+
+  <view wx:if="{{!results.length && !query}}">
+    <view class="muted" style="margin: 8rpx 0 12rpx;">试试这些</view>
+    <view>
+      <text class="chip" wx:for="{{examples}}" wx:key="*this" data-q="{{item}}" bindtap="onExample">{{item}}</text>
+    </view>
+  </view>
+
+  <view wx:if="{{query && !results.length}}" class="card muted">没有找到匹配的技能。换一种说法，或者用英文关键词再试一次。</view>
+
+  <navigator wx:for="{{results}}" wx:key="n" url="/pages/skill/skill?name={{item.n}}" class="card">
+    <view class="title">{{item.t || item.n}}</view>
+    <view class="muted">{{item.z || item.d}}</view>
+    <view class="muted" wx:if="{{item.b}}">· 含完整中文技能说明</view>
+  </navigator>
+</view>

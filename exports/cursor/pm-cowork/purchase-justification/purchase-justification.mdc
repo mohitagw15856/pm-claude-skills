@@ -74,5 +74,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/purchase-justification.html
 
-<!-- pm-claude-skills v83.2.0 | skill: purchase-justification | source: skills/purchase-justification/SKILL.md | sha256: 735f02560fa99d02a2e70690c91fbcd2649a3aa1634e25e36906ed8f7f738b47 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: purchase-justification | source: skills/purchase-justification/SKILL.md | sha256: 735f02560fa99d02a2e70690c91fbcd2649a3aa1634e25e36906ed8f7f738b47 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

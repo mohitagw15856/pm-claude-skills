@@ -79,5 +79,5 @@ For a three-minute slot or a pre-read: the year in one slide, with results, one 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-shuzhi-deck.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-shuzhi-deck | source: skills/cn-shuzhi-deck/SKILL.md | sha256: 6f1845c179a374a3949b87432ca61e19e9fe026ea5cac04d1fc20b3b96605ee2 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-shuzhi-deck | source: skills/cn-shuzhi-deck/SKILL.md | sha256: 6f1845c179a374a3949b87432ca61e19e9fe026ea5cac04d1fc20b3b96605ee2 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

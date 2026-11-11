@@ -64,5 +64,5 @@ For every question: the correct answer **and a one-line explanation** (for MCQs,
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/quiz-generator.html
 
-<!-- pm-claude-skills v83.2.0 | skill: quiz-generator | source: skills/quiz-generator/SKILL.md | sha256: 12c3e29ac00a3540f67e6f8a77cc512a4ff277cbfebb323e32f4526485ec047f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: quiz-generator | source: skills/quiz-generator/SKILL.md | sha256: 12c3e29ac00a3540f67e6f8a77cc512a4ff277cbfebb323e32f4526485ec047f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

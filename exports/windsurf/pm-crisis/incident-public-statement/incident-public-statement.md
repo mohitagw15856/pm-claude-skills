@@ -72,5 +72,5 @@ Incident communication practice — prompt acknowledgement, factual transparency
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/incident-public-statement.html
 
-<!-- pm-claude-skills v83.2.0 | skill: incident-public-statement | source: skills/incident-public-statement/SKILL.md | sha256: bcd1d59d0144b21dcd48ed2fc560360cd1035daa1ee9c07c2fb5971e2c2f0b07 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: incident-public-statement | source: skills/incident-public-statement/SKILL.md | sha256: bcd1d59d0144b21dcd48ed2fc560360cd1035daa1ee9c07c2fb5971e2c2f0b07 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -66,5 +66,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/awkward-message-helper.html
 
-<!-- pm-claude-skills v83.2.0 | skill: awkward-message-helper | source: skills/awkward-message-helper/SKILL.md | sha256: 1f2f89ee9d3c17486892310297d1a3e987679e033f95ea5223d1f767a758ae93 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: awkward-message-helper | source: skills/awkward-message-helper/SKILL.md | sha256: 1f2f89ee9d3c17486892310297d1a3e987679e033f95ea5223d1f767a758ae93 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

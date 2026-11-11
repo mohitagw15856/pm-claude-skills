@@ -115,5 +115,5 @@ are the infinite-spoon cousins — useful, but read them through this lens.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/spoon-planner.html
 
-<!-- pm-claude-skills v83.2.0 | skill: spoon-planner | source: skills/spoon-planner/SKILL.md | sha256: b088b6370f77310b91ffb6a1e861b7e9cddd35df529c57d8675d6484f3bb739a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: spoon-planner | source: skills/spoon-planner/SKILL.md | sha256: b088b6370f77310b91ffb6a1e861b7e9cddd35df529c57d8675d6484f3bb739a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/caregiver-burnout-check.html
 
-<!-- pm-claude-skills v83.2.0 | skill: caregiver-burnout-check | source: skills/caregiver-burnout-check/SKILL.md | sha256: cda0cfa9844ecd262039175c87dd9bb80b3058f75bafe99256abd489484fc22f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: caregiver-burnout-check | source: skills/caregiver-burnout-check/SKILL.md | sha256: cda0cfa9844ecd262039175c87dd9bb80b3058f75bafe99256abd489484fc22f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

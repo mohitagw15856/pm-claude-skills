@@ -97,5 +97,5 @@ Ask for (if not already provided):
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/teach-the-game.html
 
-<!-- pm-claude-skills v83.2.0 | skill: teach-the-game | source: skills/teach-the-game/SKILL.md | sha256: 658e461f9a6e63fa0a6b121923a4cc9406ac5b3cbd52992e8d5eb51462ddd603 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: teach-the-game | source: skills/teach-the-game/SKILL.md | sha256: 658e461f9a6e63fa0a6b121923a4cc9406ac5b3cbd52992e8d5eb51462ddd603 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

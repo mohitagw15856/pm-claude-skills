@@ -1,6 +1,6 @@
 ---
 trigger: model_decision
-description: "Generate a prioritised compliance checklist for GDPR, SOC 2, ISO 27001, FCA, HIPAA, or other frameworks with a gap analysis. Use when asked for a compliance checklist, gap analysis, readiness assessment, or audit preparation for any regulatory framework. Produces a structured checklist with prioritised gaps, quick wins, and evidence requirements. Optimised for Opus 4.7 and newer models. Not a substitute for legal or compliance professional advice."
+description: "Generate a prioritised compliance checklist for GDPR, SOC 2, ISO 27001, FCA, HIPAA, or other frameworks with a gap analysis. Use when asked for a compliance checklist, gap analysis, readiness assessment, or audit preparation for any regulatory framework. Produces a structured checklist with prioritised gaps, quick wins, and evidence requirements. Not a substitute for legal or compliance professional advice."
 ---
 
 # Compliance Checklist Skill
@@ -116,5 +116,5 @@ Once certified/compliant, what needs to continue:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/compliance-checklist.html
 
-<!-- pm-claude-skills v83.2.0 | skill: compliance-checklist | source: skills/compliance-checklist/SKILL.md | sha256: b6794c36aaa5069157e29a82471604b68552a3f2af149be44978b884eafa7f96 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: compliance-checklist | source: skills/compliance-checklist/SKILL.md | sha256: 5ae0f578e36f407d16975037113fde429070d1352b35785502ab20936bf941fa | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -84,5 +84,5 @@ Standard amortization, simple-savings breakeven (cumulative payment delta vs upf
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/refinance-breakeven.html
 
-<!-- pm-claude-skills v83.2.0 | skill: refinance-breakeven | source: skills/refinance-breakeven/SKILL.md | sha256: 2ff1b39859c038b46f0cbc8f23f8cf38e6adb71f74cb11219f35d0378bcb93db | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: refinance-breakeven | source: skills/refinance-breakeven/SKILL.md | sha256: 2ff1b39859c038b46f0cbc8f23f8cf38e6adb71f74cb11219f35d0378bcb93db | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

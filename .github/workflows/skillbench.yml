@@ -8,7 +8,7 @@ on:
       models:
         description: 'Comma-separated model ids (claude-*/gpt-*/gemini-*)'
         required: true
-        default: 'claude-sonnet-4-6'
+        default: 'claude-sonnet-5-5'
       judge:
         description: 'Judge model (pinned; disclose changes in the report)'
         required: false

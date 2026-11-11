@@ -72,5 +72,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/debt-collector-scripts.html
 
-<!-- pm-claude-skills v83.2.0 | skill: debt-collector-scripts | source: skills/debt-collector-scripts/SKILL.md | sha256: e72df71cfd794bb5d94681ca32c01e62264929cee3e969be781ed95605bc0eb5 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: debt-collector-scripts | source: skills/debt-collector-scripts/SKILL.md | sha256: e72df71cfd794bb5d94681ca32c01e62264929cee3e969be781ed95605bc0eb5 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

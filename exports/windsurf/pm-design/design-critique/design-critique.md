@@ -141,5 +141,5 @@ Prioritised list of the 3 most impactful changes. Each should be actionable in t
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/design-critique.html
 
-<!-- pm-claude-skills v83.2.0 | skill: design-critique | source: skills/design-critique/SKILL.md | sha256: 126331ed26464995f75e85af49f55795f0c247fb42caa1b1e2aab0fe4a69b4c0 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: design-critique | source: skills/design-critique/SKILL.md | sha256: 126331ed26464995f75e85af49f55795f0c247fb42caa1b1e2aab0fe4a69b4c0 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

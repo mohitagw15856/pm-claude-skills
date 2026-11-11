@@ -83,5 +83,5 @@ The gate is a checklist with an owner, not a sentiment.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-content-audit.html
 
-<!-- pm-claude-skills v83.2.0 | skill: ai-content-audit | source: skills/ai-content-audit/SKILL.md | sha256: 2b7df7b80d7851befb0f85f1fcbcc36740359625b8f177262a32c41e6a7b24e8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: ai-content-audit | source: skills/ai-content-audit/SKILL.md | sha256: 2b7df7b80d7851befb0f85f1fcbcc36740359625b8f177262a32c41e6a7b24e8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

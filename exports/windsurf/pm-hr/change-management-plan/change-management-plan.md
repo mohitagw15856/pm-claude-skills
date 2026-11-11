@@ -148,5 +148,5 @@ Work from what is given. If any of these is missing, still produce the complete 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/change-management-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: change-management-plan | source: skills/change-management-plan/SKILL.md | sha256: 149e960e557d5eb45ca677265eef9030083e4350699043ee39f8fd61c39a2fe1 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: change-management-plan | source: skills/change-management-plan/SKILL.md | sha256: 149e960e557d5eb45ca677265eef9030083e4350699043ee39f8fd61c39a2fe1 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

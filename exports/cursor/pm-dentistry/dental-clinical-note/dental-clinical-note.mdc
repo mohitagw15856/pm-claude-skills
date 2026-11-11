@@ -80,5 +80,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dental-clinical-note.html
 
-<!-- pm-claude-skills v83.2.0 | skill: dental-clinical-note | source: skills/dental-clinical-note/SKILL.md | sha256: fc0ed749aa983290f76eb9178b13eb710dbc3f721ac754ad684ca89490c23588 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: dental-clinical-note | source: skills/dental-clinical-note/SKILL.md | sha256: fc0ed749aa983290f76eb9178b13eb710dbc3f721ac754ad684ca89490c23588 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -87,5 +87,5 @@ For every email in the sequence, produce:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/email-campaign.html
 
-<!-- pm-claude-skills v83.2.0 | skill: email-campaign | source: skills/email-campaign/SKILL.md | sha256: 51e75620b043bd8b068605e95fe62658a75ba170d5eed0a51b77a5bbad0498f0 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: email-campaign | source: skills/email-campaign/SKILL.md | sha256: 51e75620b043bd8b068605e95fe62658a75ba170d5eed0a51b77a5bbad0498f0 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

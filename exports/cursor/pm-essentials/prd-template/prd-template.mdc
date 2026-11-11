@@ -248,5 +248,5 @@ Acceptance Criteria:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/prd-template.html
 
-<!-- pm-claude-skills v83.2.0 | skill: prd-template | source: skills/prd-template/SKILL.md | sha256: 66a4761f5472ac5748383379d5a4db7d37bfffea3684c213813a23066badcf63 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: prd-template | source: skills/prd-template/SKILL.md | sha256: 66a4761f5472ac5748383379d5a4db7d37bfffea3684c213813a23066badcf63 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

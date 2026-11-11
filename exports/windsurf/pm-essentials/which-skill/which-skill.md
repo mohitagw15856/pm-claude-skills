@@ -94,5 +94,5 @@ Ask for (if not already provided):
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/which-skill.html
 
-<!-- pm-claude-skills v83.2.0 | skill: which-skill | source: skills/which-skill/SKILL.md | sha256: 0edc811083183e90788e4f484ab7c6e7ee9f6c6619a72158a2552fc7447452ed | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: which-skill | source: skills/which-skill/SKILL.md | sha256: 0edc811083183e90788e4f484ab7c6e7ee9f6c6619a72158a2552fc7447452ed | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

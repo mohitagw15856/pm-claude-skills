@@ -85,5 +85,5 @@ Write the document first (per this skill), then `create` it as a real file. Hone
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/word-document.html
 
-<!-- pm-claude-skills v83.2.0 | skill: word-document | source: skills/word-document/SKILL.md | sha256: 10fd28ef084f14bf0cf68fe94f19e0fa19af8ac965db817bedccb9bf31a585d6 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: word-document | source: skills/word-document/SKILL.md | sha256: 10fd28ef084f14bf0cf68fe94f19e0fa19af8ac965db817bedccb9bf31a585d6 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

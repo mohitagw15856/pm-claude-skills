@@ -1,9 +1,9 @@
 {
- "generated": "2026-10-23",
+ "generated": "2026-11-11",
  "counts": {
-  "consequential": 246,
-  "high-stakes": 162,
-  "informational": 918
+  "consequential": 268,
+  "high-stakes": 184,
+  "informational": 934
  },
  "tiers": {
   "360-feedback-template": {
@@ -382,6 +382,10 @@
    "tier": "consequential",
    "via": "bundle:pm-money"
   },
+  "bilibili-video-script": {
+   "tier": "informational",
+   "via": "default"
+  },
   "bilingual-cv-zh-en": {
    "tier": "consequential",
    "via": "bundle:pm-cv"
@@ -441,6 +445,14 @@
   "boundary-setting-scripts": {
    "tier": "informational",
    "via": "default"
+  },
+  "br-irpf-prep": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-latam"
+  },
+  "br-rescisao-clt": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-latam"
   },
   "brag-doc": {
    "tier": "consequential",
@@ -746,6 +758,10 @@
    "tier": "high-stakes",
    "via": "bundle:pm-decoders"
   },
+  "cn-1688-wholesale-listing": {
+   "tier": "informational",
+   "via": "default"
+  },
   "cn-5s-audit": {
    "tier": "informational",
    "via": "default"
@@ -774,6 +790,14 @@
    "tier": "informational",
    "via": "default"
   },
+  "cn-company-registration": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-startup"
+  },
+  "cn-customer-service-scripts": {
+   "tier": "informational",
+   "via": "default"
+  },
   "cn-customs-docs": {
    "tier": "consequential",
    "via": "bundle:pm-china-trade"
@@ -782,9 +806,25 @@
    "tier": "consequential",
    "via": "bundle:pm-china-compliance"
   },
+  "cn-double11-promotion-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cn-ecommerce-listing": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "cn-equity-split": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-startup"
+  },
   "cn-extracurricular-plan": {
    "tier": "consequential",
    "via": "bundle:pm-china-parents"
+  },
+  "cn-financing-bp": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-startup"
   },
   "cn-fupan": {
    "tier": "consequential",
@@ -801,6 +841,10 @@
   "cn-help-parents-admin": {
    "tier": "high-stakes",
    "via": "bundle:pm-china-life"
+  },
+  "cn-high-tech-enterprise-application": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-startup"
   },
   "cn-home-school-comms": {
    "tier": "consequential",
@@ -890,6 +934,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "cn-returnee-job-search": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-study-abroad"
+  },
   "cn-school-entry": {
    "tier": "consequential",
    "via": "bundle:pm-china-parents"
@@ -917,6 +965,18 @@
   "cn-sop-writer": {
    "tier": "informational",
    "via": "default"
+  },
+  "cn-study-abroad-essay": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-study-abroad"
+  },
+  "cn-study-visa-prep": {
+   "tier": "high-stakes",
+   "via": "skill"
+  },
+  "cn-subsidy-filing": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-startup"
   },
   "cn-tech-interview-drill": {
    "tier": "informational",
@@ -946,6 +1006,10 @@
    "tier": "consequential",
    "via": "bundle:pm-china-work"
   },
+  "cn-zhuanjingtexin-application": {
+   "tier": "consequential",
+   "via": "bundle:pm-china-startup"
+  },
   "co-marketing": {
    "tier": "informational",
    "via": "default"
@@ -953,6 +1017,14 @@
   "co-parenting-messages": {
    "tier": "consequential",
    "via": "bundle:pm-family"
+  },
+  "coaching-season-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "coaching-session-plan": {
+   "tier": "informational",
+   "via": "default"
   },
   "cocktail-from-what-i-have": {
    "tier": "informational",
@@ -1150,9 +1222,13 @@
    "tier": "high-stakes",
    "via": "bundle:pm-legal"
   },
+  "contract-renewal-brief": {
+   "tier": "consequential",
+   "via": "bundle:pm-procurement"
+  },
   "contract-renewal-tracker": {
-   "tier": "informational",
-   "via": "default"
+   "tier": "consequential",
+   "via": "bundle:pm-procurement"
   },
   "contract-review": {
    "tier": "high-stakes",
@@ -1225,6 +1301,10 @@
   "crop-insurance-claim": {
    "tier": "high-stakes",
    "via": "bundle:pm-insurance"
+  },
+  "crop-season-plan": {
+   "tier": "consequential",
+   "via": "bundle:pm-agriculture"
   },
   "cross-border-listing": {
    "tier": "consequential",
@@ -1357,6 +1437,18 @@
   "dbt-model-spec": {
    "tier": "informational",
    "via": "default"
+  },
+  "de-arbeitszeugnis-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-dach"
+  },
+  "de-kuendigungsfrist-check": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-dach"
+  },
+  "de-steuererklaerung-prep": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-dach"
   },
   "debt-collector-response": {
    "tier": "consequential",
@@ -2010,6 +2102,18 @@
    "tier": "informational",
    "via": "default"
   },
+  "farm-buyer-contract-check": {
+   "tier": "consequential",
+   "via": "bundle:pm-agriculture"
+  },
+  "farm-records-book": {
+   "tier": "consequential",
+   "via": "bundle:pm-agriculture"
+  },
+  "farm-subsidy-application": {
+   "tier": "consequential",
+   "via": "bundle:pm-agriculture"
+  },
   "feature-flag-guide": {
    "tier": "informational",
    "via": "default"
@@ -2362,6 +2466,14 @@
    "tier": "informational",
    "via": "default"
   },
+  "gulf-job-offer-check": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-mena"
+  },
+  "gulf-residence-visa-admin": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-mena"
+  },
   "habit-builder": {
    "tier": "consequential",
    "via": "bundle:pm-wellbeing"
@@ -2538,9 +2650,33 @@
    "tier": "informational",
    "via": "default"
   },
+  "in-epf-withdrawal-guide": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "in-gratuity-calculator": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "in-gst-return-explainer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "in-income-tax-regime-chooser": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "in-labour-codes-decoder": {
+   "tier": "informational",
+   "via": "default"
+  },
   "in-law-boundary-scripts": {
    "tier": "consequential",
    "via": "bundle:pm-family"
+  },
+  "in-notice-period-fnf-settlement": {
+   "tier": "informational",
+   "via": "default"
   },
   "inbox-triage-live": {
    "tier": "informational",
@@ -2746,6 +2882,14 @@
    "tier": "informational",
    "via": "default"
   },
+  "ke-mpesa-reversal-dispute": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-africa"
+  },
+  "ke-payslip-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-africa"
+  },
   "kids-online-safety-plan": {
    "tier": "high-stakes",
    "via": "bundle:pm-digital-safety"
@@ -2777,6 +2921,10 @@
   "kr-year-end-tax-settlement": {
    "tier": "consequential",
    "via": "bundle:pm-korea"
+  },
+  "ksa-labour-contract-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-mena"
   },
   "kyc-escalation": {
    "tier": "high-stakes",
@@ -2998,6 +3146,10 @@
    "tier": "consequential",
    "via": "bundle:pm-neurodivergent"
   },
+  "match-review": {
+   "tier": "informational",
+   "via": "default"
+  },
   "mcp-server-spec": {
    "tier": "informational",
    "via": "default"
@@ -3178,6 +3330,14 @@
    "tier": "informational",
    "via": "default"
   },
+  "mx-declaracion-anual-prep": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-latam"
+  },
+  "mx-finiquito-liquidacion": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-latam"
+  },
   "my-energy-map": {
    "tier": "informational",
    "via": "default"
@@ -3238,6 +3398,14 @@
    "tier": "informational",
    "via": "default"
   },
+  "ng-payslip-decoder": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-africa"
+  },
+  "ng-pension-rsa-guide": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-africa"
+  },
   "note-taking-system": {
    "tier": "informational",
    "via": "default"
@@ -3261,6 +3429,22 @@
   "nt-translator": {
    "tier": "consequential",
    "via": "bundle:pm-neurodivergent"
+  },
+  "nursing-care-plan": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-nursing"
+  },
+  "nursing-family-update": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-nursing"
+  },
+  "nursing-incident-report": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-nursing"
+  },
+  "nursing-shift-handover": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-nursing"
   },
   "offer-comparison": {
    "tier": "informational",
@@ -3461,6 +3645,10 @@
   "pharmacy-counselling-script": {
    "tier": "informational",
    "via": "default"
+  },
+  "phd-supervisor-update": {
+   "tier": "consequential",
+   "via": "skill"
   },
   "phishing-triage": {
    "tier": "high-stakes",
@@ -4046,6 +4234,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "retail-shift-handover": {
+   "tier": "informational",
+   "via": "default"
+  },
   "retention-analysis": {
    "tier": "informational",
    "via": "default"
@@ -4078,6 +4270,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "reviewer-rebuttal-letter": {
+   "tier": "consequential",
+   "via": "skill"
+  },
   "rewards-optimizer": {
    "tier": "consequential",
    "via": "bundle:pm-money"
@@ -4091,12 +4287,12 @@
    "via": "bundle:pm-gov"
   },
   "rfp-scoring-matrix": {
-   "tier": "informational",
-   "via": "default"
+   "tier": "consequential",
+   "via": "bundle:pm-procurement"
   },
   "rfp-writer": {
-   "tier": "informational",
-   "via": "default"
+   "tier": "consequential",
+   "via": "bundle:pm-procurement"
   },
   "rice-impact-matrix": {
    "tier": "informational",
@@ -4338,6 +4534,10 @@
    "tier": "consequential",
    "via": "bundle:pm-decisions"
   },
+  "shipinhao-script": {
+   "tier": "informational",
+   "via": "default"
+  },
   "short-form-script": {
    "tier": "informational",
    "via": "default"
@@ -4347,6 +4547,10 @@
    "via": "default"
   },
   "should-i-send-this": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "shrink-report": {
    "tier": "informational",
    "via": "default"
   },
@@ -4490,6 +4694,10 @@
    "tier": "high-stakes",
    "via": "bundle:pm-invisible-illness"
   },
+  "sports-parent-comms": {
+   "tier": "consequential",
+   "via": "skill"
+  },
   "sports-scores": {
    "tier": "informational",
    "via": "default"
@@ -4586,6 +4794,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "stock-take-plan": {
+   "tier": "informational",
+   "via": "default"
+  },
   "stoic-setback-debrief": {
    "tier": "informational",
    "via": "default"
@@ -4671,8 +4883,8 @@
    "via": "default"
   },
   "supplier-scorecard": {
-   "tier": "informational",
-   "via": "default"
+   "tier": "consequential",
+   "via": "bundle:pm-procurement"
   },
   "support-a-friend-in-crisis": {
    "tier": "high-stakes",
@@ -4926,6 +5138,10 @@
    "tier": "high-stakes",
    "via": "bundle:pm-grief"
   },
+  "thesis-chapter-plan": {
+   "tier": "consequential",
+   "via": "skill"
+  },
   "thesis-outline": {
    "tier": "informational",
    "via": "default"
@@ -5021,6 +5237,10 @@
   "two-worlds-translator": {
    "tier": "high-stakes",
    "via": "bundle:pm-identity"
+  },
+  "uae-gratuity-calculator": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-mena"
   },
   "ui-design-pipeline": {
    "tier": "informational",
@@ -5137,6 +5357,10 @@
   "viral-content-framework": {
    "tier": "consequential",
    "via": "bundle:pm-social"
+  },
+  "viva-prep-pack": {
+   "tier": "consequential",
+   "via": "skill"
   },
   "voice-agent-design": {
    "tier": "informational",
@@ -5298,6 +5522,10 @@
    "tier": "informational",
    "via": "default"
   },
+  "xiaoyuzhou-podcast-outline": {
+   "tier": "informational",
+   "via": "default"
+  },
   "year-in-review": {
    "tier": "consequential",
    "via": "bundle:pm-career"
@@ -5307,6 +5535,18 @@
    "via": "default"
   },
   "youtube-script-writer": {
+   "tier": "informational",
+   "via": "default"
+  },
+  "za-retrenchment-package-check": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-africa"
+  },
+  "za-uif-claim-guide": {
+   "tier": "high-stakes",
+   "via": "bundle:pm-africa"
+  },
+  "zhihu-answer": {
    "tier": "informational",
    "via": "default"
   }

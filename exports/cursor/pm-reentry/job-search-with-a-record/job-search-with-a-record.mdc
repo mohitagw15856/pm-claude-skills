@@ -69,5 +69,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/job-search-with-a-record.html
 
-<!-- pm-claude-skills v83.2.0 | skill: job-search-with-a-record | source: skills/job-search-with-a-record/SKILL.md | sha256: 720f8355299fb8da4ec50ea874039fb906c52694f2c8c3494205d1dae2a9de86 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: job-search-with-a-record | source: skills/job-search-with-a-record/SKILL.md | sha256: 720f8355299fb8da4ec50ea874039fb906c52694f2c8c3494205d1dae2a9de86 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

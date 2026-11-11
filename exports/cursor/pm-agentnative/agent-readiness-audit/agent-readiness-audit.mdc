@@ -89,5 +89,5 @@ Score each surface 0-4: 0 = actively hostile · 2 = humans-only assumptions thro
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-readiness-audit.html
 
-<!-- pm-claude-skills v83.2.0 | skill: agent-readiness-audit | source: skills/agent-readiness-audit/SKILL.md | sha256: d36020761837a903b5cb5eed5d48e2f04073a47be096407434284261e6145285 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: agent-readiness-audit | source: skills/agent-readiness-audit/SKILL.md | sha256: d36020761837a903b5cb5eed5d48e2f04073a47be096407434284261e6145285 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

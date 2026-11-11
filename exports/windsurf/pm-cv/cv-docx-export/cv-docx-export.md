@@ -70,5 +70,5 @@ Standard library only. It refuses to overwrite an existing file unless `--force`
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cv-docx-export.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cv-docx-export | source: skills/cv-docx-export/SKILL.md | sha256: 54bf0ca30acaabe305053bc9c24a565510a3e28a25d8911cb747a7b942fe5e8b | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cv-docx-export | source: skills/cv-docx-export/SKILL.md | sha256: 54bf0ca30acaabe305053bc9c24a565510a3e28a25d8911cb747a7b942fe5e8b | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

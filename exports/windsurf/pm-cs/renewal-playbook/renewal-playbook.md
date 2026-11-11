@@ -217,5 +217,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/renewal-playbook.html
 
-<!-- pm-claude-skills v83.2.0 | skill: renewal-playbook | source: skills/renewal-playbook/SKILL.md | sha256: cc2eba7a1c3e804a2ead6cc4839ab73c31bd7d336a7f2f8b521359ef505156a9 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: renewal-playbook | source: skills/renewal-playbook/SKILL.md | sha256: cc2eba7a1c3e804a2ead6cc4839ab73c31bd7d336a7f2f8b521359ef505156a9 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

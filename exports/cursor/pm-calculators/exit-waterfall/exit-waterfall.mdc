@@ -83,5 +83,5 @@ Input shape and worked example are in the script docstring. It brute-forces the 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/exit-waterfall.html
 
-<!-- pm-claude-skills v83.2.0 | skill: exit-waterfall | source: skills/exit-waterfall/SKILL.md | sha256: 4cdc2df6dbf1b01327ae9c63937965075b26a372ebb0e848b0b10496234d723a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: exit-waterfall | source: skills/exit-waterfall/SKILL.md | sha256: 4cdc2df6dbf1b01327ae9c63937965075b26a372ebb0e848b0b10496234d723a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

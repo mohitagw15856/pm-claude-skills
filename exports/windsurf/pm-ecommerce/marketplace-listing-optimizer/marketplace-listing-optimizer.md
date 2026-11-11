@@ -77,5 +77,5 @@ Marketplace SEO & CRO practice — relevance-and-performance ranking, field-appr
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/marketplace-listing-optimizer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: marketplace-listing-optimizer | source: skills/marketplace-listing-optimizer/SKILL.md | sha256: a1c431528d88d1043aa0648b9d820ba73d2a8bf25fb1d63a0ebc23544facc383 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: marketplace-listing-optimizer | source: skills/marketplace-listing-optimizer/SKILL.md | sha256: a1c431528d88d1043aa0648b9d820ba73d2a8bf25fb1d63a0ebc23544facc383 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

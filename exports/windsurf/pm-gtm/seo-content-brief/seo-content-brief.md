@@ -135,5 +135,5 @@ Each heading is the exact H2/H3 to use (these are what Google reads):
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/seo-content-brief.html
 
-<!-- pm-claude-skills v83.2.0 | skill: seo-content-brief | source: skills/seo-content-brief/SKILL.md | sha256: ccd28c17b17811227c1c3017b30e5935f876c7ec269c6c38dd2ec391d7e5b557 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: seo-content-brief | source: skills/seo-content-brief/SKILL.md | sha256: ccd28c17b17811227c1c3017b30e5935f876c7ec269c6c38dd2ec391d7e5b557 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

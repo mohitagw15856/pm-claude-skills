@@ -74,5 +74,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/personal-statement.html
 
-<!-- pm-claude-skills v83.2.0 | skill: personal-statement | source: skills/personal-statement/SKILL.md | sha256: 3ae2e3d56e7a597d76d6e05b5394f2e7f5621c10272bc646e991b1bed07758bb | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: personal-statement | source: skills/personal-statement/SKILL.md | sha256: 3ae2e3d56e7a597d76d6e05b5394f2e7f5621c10272bc646e991b1bed07758bb | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -76,5 +76,5 @@ Given only a role, tenure and school, **write both CVs in full anyway**: a compl
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/bilingual-cv-zh-en.html
 
-<!-- pm-claude-skills v83.2.0 | skill: bilingual-cv-zh-en | source: skills/bilingual-cv-zh-en/SKILL.md | sha256: f926cd39ce999e361db1746bc0624d11110d932c1c4f6305733bba4608a81bed | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: bilingual-cv-zh-en | source: skills/bilingual-cv-zh-en/SKILL.md | sha256: f926cd39ce999e361db1746bc0624d11110d932c1c4f6305733bba4608a81bed | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -111,5 +111,5 @@ Funder test: does this problem align with [funder] stated priorities? Make the c
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/grant-proposal.html
 
-<!-- pm-claude-skills v83.2.0 | skill: grant-proposal | source: skills/grant-proposal/SKILL.md | sha256: e99f6f7056938c1308c4909dc77e2d0ee8fc3a8816e3f31110be49baafa3b779 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: grant-proposal | source: skills/grant-proposal/SKILL.md | sha256: e99f6f7056938c1308c4909dc77e2d0ee8fc3a8816e3f31110be49baafa3b779 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

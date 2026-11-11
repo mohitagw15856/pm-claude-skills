@@ -1,0 +1,100 @@
+---
+description: "Plan one thesis or dissertation chapter in detail: the chapter's claim and its job in the thesis, section-by-section argument, the evidence and sources for each section, a word budget, the figures and tables, and a writing schedule with a first-draft date. Use when asked to plan my chapter, I do not know how to start my discussion chapter, structure my methods chapter, break this chapter into sections, or make a writing plan for chapter four. Produces a chapter brief, a section table with word counts and evidence, a list of gaps to fill before writing, and a dated schedule. Distinct from thesis-outline, which structures the whole thesis."
+globs:
+alwaysApply: false
+---
+
+# Thesis Chapter Plan
+
+A chapter stalls when the writer opens a blank document with a title and eighty pages of notes. This skill works one level below the thesis outline: it fixes what this chapter must prove, divides it into sections that each do one job, and gives each a word budget and the evidence it will use. The student then writes sections, not a chapter.
+
+## What This Skill Produces
+
+- A chapter brief: the claim in one sentence, the chapter's job in the thesis, what the reader must know by the end
+- A section table: purpose, main points, evidence, word budget
+- Signposting: how the chapter opens and how it hands over to the next
+- Figures and tables needed, with their status
+- A list of gaps to close before or during writing
+- A writing schedule with a first full-draft date
+
+## Required Inputs
+
+Ask for these if not provided:
+
+- Discipline, degree, and the thesis argument or research questions
+- Which chapter, its type (introduction, literature review, methods, results, discussion, conclusion, or a paper-style chapter) and the target length
+- What material exists: notes, data, analyses, drafts, published papers
+- The previous and next chapters' roles
+- Department or supervisor expectations and any required structure
+- Time available per week and the deadline for this chapter
+
+## Framework
+
+1. **One-sentence claim.** If the chapter cannot be summarised in a sentence, it is two chapters or none.
+2. **Job in the thesis.** Which research question it answers or which step of the argument it supplies.
+3. **Sections do one thing.** Five to eight sections. Each has a purpose line beginning with a verb: establishes, compares, reports, explains, limits.
+4. **Type-specific order.** Methods: design, participants or data, procedure, analysis, ethics, limitations. Results: by research question, not by test. Discussion: answer, interpretation, relation to literature, limitations, implications. Literature review: by theme and debate, ending at the gap.
+5. **Evidence mapped to sections.** Sources, data, figures. A section with no evidence is a gap, listed.
+6. **Word budget.** Allocate by importance to the argument, not by how much material exists.
+7. **Schedule by section.** Start with the section that is easiest to write, not the introduction. Introductions and conclusions are written last.
+8. **Definition of done** for a first draft: every section has prose, every claim has a citation or a marked placeholder.
+
+## Output Format
+
+### Chapter plan: [number and title]
+
+**Claim:** [one sentence]
+**Job in the thesis:** [question answered or step supplied]
+**By the end the reader knows:** [two or three points]
+**Target length:** [words]
+
+| # | Section | Purpose | Main points | Evidence and sources | Words |
+|---|---|---|---|---|---|
+
+**Opening and hand-over:** [how the chapter begins; the final paragraph's link to the next chapter]
+
+**Figures and tables**
+| Item | Shows | Status |
+|---|---|---|
+
+**Gaps to close**
+- [reading, analysis or data still needed, and which section it blocks]
+
+**Schedule**
+| Week | Sections | Output |
+|---|---|---|
+
+**First full draft:** [date]. **Done means:** [definition]
+
+**Assumptions and gaps**
+- [Expectations assumed about structure or length]
+- [The decision that most needs the supervisor's view]
+
+## Quality Checks
+
+- [ ] The claim fits in one sentence
+- [ ] Each section has a purpose line and evidence
+- [ ] Word budgets sum to the target
+- [ ] Results are organised by question
+- [ ] The schedule starts with a body section, not the introduction
+- [ ] Gaps are listed with the section they block
+
+## Anti-Patterns
+
+- **Do not plan sections as topics** ("Background") without a purpose.
+- **Do not allocate words by volume of notes.**
+- **Do not write prose for the student.** This is a plan.
+- **Do not invent sources or findings** to fill a section.
+- **Do not schedule the introduction first.**
+
+## Example Trigger Phrases
+
+- "Plan my discussion chapter. Here are my three main findings."
+- "My literature review is 15,000 words of summaries. Help me restructure it."
+- "Break my methods chapter into sections with word counts."
+- "I have six weeks for chapter four. Make a writing schedule."
+
+Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/thesis-chapter-plan.html
+
+<!-- pm-claude-skills v84.0.0 | skill: thesis-chapter-plan | source: skills/thesis-chapter-plan/SKILL.md | sha256: f20aa4f74762d200177686287ac797121a4a0c4a486e99dff153f5cadab39b86 | licence: MIT
+     verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

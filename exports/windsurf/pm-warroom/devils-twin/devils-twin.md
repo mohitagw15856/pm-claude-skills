@@ -51,5 +51,5 @@ Critique finds weaknesses in your argument. The twin does something scarier: it 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/devils-twin.html
 
-<!-- pm-claude-skills v83.2.0 | skill: devils-twin | source: skills/devils-twin/SKILL.md | sha256: 89e155f90c666b6e8bc03f20415259c81365fc5ca925da9f44dd9d9875212e3b | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: devils-twin | source: skills/devils-twin/SKILL.md | sha256: 89e155f90c666b6e8bc03f20415259c81365fc5ca925da9f44dd9d9875212e3b | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

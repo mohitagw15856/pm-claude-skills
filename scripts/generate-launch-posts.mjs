@@ -13,7 +13,7 @@
 //   GITHUB_TOKEN       - to read PRs (optional for public repos, used if present)
 //   GITHUB_REPOSITORY  - owner/repo (defaults to this repo)
 //   PR_COUNT           - how many merged PRs to consider (default 10)
-//   MODEL              - Claude model id (default claude-sonnet-4-6)
+//   MODEL              - Claude model id (default: the "default" role in data/models.json)
 //
 // Usage:
 //   node scripts/generate-launch-posts.mjs            # full run (needs API key)
@@ -22,13 +22,14 @@ import { writeFileSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { complete } from '../bin/lib/anthropic.mjs';
+import { modelFor } from '../bin/lib/models.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const REPO = process.env.GITHUB_REPOSITORY || 'mohitagw15856/pm-claude-skills';
 const GH_TOKEN = process.env.GITHUB_TOKEN || '';
 const API_KEY = process.env.ANTHROPIC_API_KEY;
 const PR_COUNT = Math.max(1, Math.min(30, Number(process.env.PR_COUNT) || 10));
-const MODEL = process.env.MODEL || 'claude-sonnet-4-6';
+const MODEL = process.env.MODEL || modelFor('default');
 const DRY_RUN = process.argv.includes('--dry-run');
 
 // PRs that are automation noise, not feature news — filtered out.

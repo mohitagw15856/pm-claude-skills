@@ -65,5 +65,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/good-enough-detector.html
 
-<!-- pm-claude-skills v83.2.0 | skill: good-enough-detector | source: skills/good-enough-detector/SKILL.md | sha256: a3528eef9ed6262200593b7b5aa30d3815aec2e1b2fb9c0e46f9e84367aa8a44 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: good-enough-detector | source: skills/good-enough-detector/SKILL.md | sha256: a3528eef9ed6262200593b7b5aa30d3815aec2e1b2fb9c0e46f9e84367aa8a44 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

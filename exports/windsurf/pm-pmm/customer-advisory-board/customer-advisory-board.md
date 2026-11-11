@@ -114,5 +114,5 @@ Keep it member-value-led; flag anything that risks feeling like a sales meeting.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/customer-advisory-board.html
 
-<!-- pm-claude-skills v83.2.0 | skill: customer-advisory-board | source: skills/customer-advisory-board/SKILL.md | sha256: 50205fc5bf88346e23b13d7f6951f81a70b2d4c0df6d349bd32896e3a10fd14e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: customer-advisory-board | source: skills/customer-advisory-board/SKILL.md | sha256: 50205fc5bf88346e23b13d7f6951f81a70b2d4c0df6d349bd32896e3a10fd14e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

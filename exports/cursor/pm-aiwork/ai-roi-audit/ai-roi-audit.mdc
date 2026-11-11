@@ -79,5 +79,5 @@ Ask for (if not already provided):
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-roi-audit.html
 
-<!-- pm-claude-skills v83.2.0 | skill: ai-roi-audit | source: skills/ai-roi-audit/SKILL.md | sha256: 9b287684d4286f86bb0d31406763a93722c41f739d9cc21154e2ffd5ebf53549 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: ai-roi-audit | source: skills/ai-roi-audit/SKILL.md | sha256: 9b287684d4286f86bb0d31406763a93722c41f739d9cc21154e2ffd5ebf53549 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

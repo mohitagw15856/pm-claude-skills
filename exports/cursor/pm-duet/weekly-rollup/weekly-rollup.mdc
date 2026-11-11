@@ -56,5 +56,5 @@ Ask for (if not already provided), else infer and label:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/weekly-rollup.html
 
-<!-- pm-claude-skills v83.2.0 | skill: weekly-rollup | source: skills/weekly-rollup/SKILL.md | sha256: 314255aade5c264fc21acbb81f47927bfb739b3f71d462b357b092ff45d436cf | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: weekly-rollup | source: skills/weekly-rollup/SKILL.md | sha256: 314255aade5c264fc21acbb81f47927bfb739b3f71d462b357b092ff45d436cf | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -72,5 +72,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/energy-scheduling.html
 
-<!-- pm-claude-skills v83.2.0 | skill: energy-scheduling | source: skills/energy-scheduling/SKILL.md | sha256: f197bc3913c6ca1b128571b4e71e1ec206d1f2732914b9da10da353aeb7cbe56 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: energy-scheduling | source: skills/energy-scheduling/SKILL.md | sha256: f197bc3913c6ca1b128571b4e71e1ec206d1f2732914b9da10da353aeb7cbe56 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

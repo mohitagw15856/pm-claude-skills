@@ -118,5 +118,5 @@ to be heard between elections.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/voting-navigator.html
 
-<!-- pm-claude-skills v83.2.0 | skill: voting-navigator | source: skills/voting-navigator/SKILL.md | sha256: f226d67f5745a5419e85ae6c41372a7ef3ac1bdfa46f4a108a90e96ab2de6f0f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: voting-navigator | source: skills/voting-navigator/SKILL.md | sha256: f226d67f5745a5419e85ae6c41372a7ef3ac1bdfa46f4a108a90e96ab2de6f0f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

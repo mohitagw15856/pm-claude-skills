@@ -80,5 +80,5 @@ Model-selection practice — quality/cost/latency trade-offs, tiered routing wit
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/model-selection-advisor.html
 
-<!-- pm-claude-skills v83.2.0 | skill: model-selection-advisor | source: skills/model-selection-advisor/SKILL.md | sha256: 1b8f7b5025d1c4dc3da4ca79ccdef494bdb81aef484e7b5734ef8362722140bf | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: model-selection-advisor | source: skills/model-selection-advisor/SKILL.md | sha256: 1b8f7b5025d1c4dc3da4ca79ccdef494bdb81aef484e7b5734ef8362722140bf | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

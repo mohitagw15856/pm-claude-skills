@@ -67,5 +67,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/panel-of-experts.html
 
-<!-- pm-claude-skills v83.2.0 | skill: panel-of-experts | source: skills/panel-of-experts/SKILL.md | sha256: 4d46af7c8266163b2876e2074f8ae8903a7397bca3fef1ea71bc72df73dfeb53 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: panel-of-experts | source: skills/panel-of-experts/SKILL.md | sha256: 4d46af7c8266163b2876e2074f8ae8903a7397bca3fef1ea71bc72df73dfeb53 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

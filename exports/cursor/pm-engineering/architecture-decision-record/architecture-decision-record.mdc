@@ -154,5 +154,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/architecture-decision-record.html
 
-<!-- pm-claude-skills v83.2.0 | skill: architecture-decision-record | source: skills/architecture-decision-record/SKILL.md | sha256: 309fbb39681418cc79d23e913f365751916f484e65873e15a30cc82c943f8675 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: architecture-decision-record | source: skills/architecture-decision-record/SKILL.md | sha256: 309fbb39681418cc79d23e913f365751916f484e65873e15a30cc82c943f8675 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

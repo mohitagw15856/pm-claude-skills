@@ -69,5 +69,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stop-the-bleed-triage.html
 
-<!-- pm-claude-skills v83.2.0 | skill: stop-the-bleed-triage | source: skills/stop-the-bleed-triage/SKILL.md | sha256: ff9ccbf09ad05b2395f2e5203d329b3c004f79f52cfa4a8a7078668c2eb9e929 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: stop-the-bleed-triage | source: skills/stop-the-bleed-triage/SKILL.md | sha256: ff9ccbf09ad05b2395f2e5203d329b3c004f79f52cfa4a8a7078668c2eb9e929 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

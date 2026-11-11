@@ -64,5 +64,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ai-output-verifier.html
 
-<!-- pm-claude-skills v83.2.0 | skill: ai-output-verifier | source: skills/ai-output-verifier/SKILL.md | sha256: bc4634efe3bafe5dd4d72e935532d8444f950532c0c144cef9fda2c8efa0acc3 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: ai-output-verifier | source: skills/ai-output-verifier/SKILL.md | sha256: bc4634efe3bafe5dd4d72e935532d8444f950532c0c144cef9fda2c8efa0acc3 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

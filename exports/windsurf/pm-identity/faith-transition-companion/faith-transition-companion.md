@@ -138,5 +138,5 @@ a framework.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/faith-transition-companion.html
 
-<!-- pm-claude-skills v83.2.0 | skill: faith-transition-companion | source: skills/faith-transition-companion/SKILL.md | sha256: e6c84e4cb5cae30d6a2626b391b0cd42b2d0cb13ffc7ca83bfe93f42abf12ad4 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: faith-transition-companion | source: skills/faith-transition-companion/SKILL.md | sha256: e6c84e4cb5cae30d6a2626b391b0cd42b2d0cb13ffc7ca83bfe93f42abf12ad4 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

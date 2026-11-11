@@ -35,11 +35,20 @@ jobs:
           GOATCOUNTER_TOKEN: ${{ secrets.GOATCOUNTER_TOKEN }}
           GOATCOUNTER_SITE: mohitagw
         run: node scripts/build-trending.mjs
+      # Same weekly run, no extra workflow: the counters visible from mainland China
+      # (npmmirror, Gitee, ModelScope). Public endpoints, no token needed. A failed
+      # source keeps its last values, so this step never fails the job.
+      - name: Build china-usage.json
+        env:
+          GITEE_TOKEN: ${{ secrets.GITEE_TOKEN }}
+        run: node scripts/build-china-usage.mjs || true
       - name: Open a PR with the refreshed trending data
         id: cpr
         uses: peter-evans/create-pull-request@v8
         with:
-          add-paths: web/trending.json
+          add-paths: |
+            web/trending.json
+            web/china-usage.json
           branch: trending-data
           delete-branch: true
           commit-message: "chore(trending): refresh trending skills from usage"
@@ -59,8 +68,8 @@ jobs:
           set -euo pipefail
           files=$(gh pr diff "$PR" --name-only --repo "$GITHUB_REPOSITORY")
           echo "$files"
-          if [ -z "$files" ] || echo "$files" | grep -qvE '^web/trending\.json$'; then
-            echo "::warning::PR #$PR changes files outside ^web/trending\.json$; leaving it for review."
+          if [ -z "$files" ] || echo "$files" | grep -qvE '^web/(trending|china-usage)\.json$'; then
+            echo "::warning::PR #$PR changes files outside web/trending.json and web/china-usage.json; leaving it for review."
             exit 0
           fi
           gh pr merge "$PR" --squash --delete-branch --repo "$GITHUB_REPOSITORY"

@@ -87,5 +87,5 @@ Architecture diagramming (C4-style grouping, logical layers, sync/async edges), 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/architecture-diagram.html
 
-<!-- pm-claude-skills v83.2.0 | skill: architecture-diagram | source: skills/architecture-diagram/SKILL.md | sha256: 7844c7bdae994d62cc405a1e063a3b9b92de0042e607b28f1cac0546f7b5408c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: architecture-diagram | source: skills/architecture-diagram/SKILL.md | sha256: 7844c7bdae994d62cc405a1e063a3b9b92de0042e607b28f1cac0546f7b5408c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

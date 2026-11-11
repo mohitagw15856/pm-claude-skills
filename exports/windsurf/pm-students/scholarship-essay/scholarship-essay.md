@@ -74,5 +74,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/scholarship-essay.html
 
-<!-- pm-claude-skills v83.2.0 | skill: scholarship-essay | source: skills/scholarship-essay/SKILL.md | sha256: 41e2c171173f5bb7427d7dc549cd8eb7cdc2a91e1f8df2215b8eb02bc00e3793 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: scholarship-essay | source: skills/scholarship-essay/SKILL.md | sha256: 41e2c171173f5bb7427d7dc549cd8eb7cdc2a91e1f8df2215b8eb02bc00e3793 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

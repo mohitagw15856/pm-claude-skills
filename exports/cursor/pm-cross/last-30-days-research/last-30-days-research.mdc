@@ -160,5 +160,5 @@ Before outputting the report, verify:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/last-30-days-research.html
 
-<!-- pm-claude-skills v83.2.0 | skill: last-30-days-research | source: skills/last-30-days-research/SKILL.md | sha256: 1f5780d5675a8c41a11be6e46c428ea5e8ef75b91ea60814a37ea17f1fb89558 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: last-30-days-research | source: skills/last-30-days-research/SKILL.md | sha256: 1f5780d5675a8c41a11be6e46c428ea5e8ef75b91ea60814a37ea17f1fb89558 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

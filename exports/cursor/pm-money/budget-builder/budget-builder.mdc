@@ -75,5 +75,5 @@ Personal budgeting practice (zero-based budgeting + the 50/30/20 needs/wants/sav
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/budget-builder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: budget-builder | source: skills/budget-builder/SKILL.md | sha256: 064cbf1d69ddbb43058fb2d735e5ffac77566abcba66bdd5c11f6181bfc54fd1 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: budget-builder | source: skills/budget-builder/SKILL.md | sha256: 064cbf1d69ddbb43058fb2d735e5ffac77566abcba66bdd5c11f6181bfc54fd1 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

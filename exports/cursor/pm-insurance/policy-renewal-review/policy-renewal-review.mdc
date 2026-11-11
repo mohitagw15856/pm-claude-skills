@@ -76,5 +76,5 @@ End with: *"This review is analytical support, not a coverage or placement deter
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/policy-renewal-review.html
 
-<!-- pm-claude-skills v83.2.0 | skill: policy-renewal-review | source: skills/policy-renewal-review/SKILL.md | sha256: 044dde98c135da8349f594bdf7f8ac0bff5d3a238db304ff4e62ebe6f7db85c0 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: policy-renewal-review | source: skills/policy-renewal-review/SKILL.md | sha256: 044dde98c135da8349f594bdf7f8ac0bff5d3a238db304ff4e62ebe6f7db85c0 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

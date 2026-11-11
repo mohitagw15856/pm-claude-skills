@@ -54,5 +54,5 @@ Prints `base=1.371 · top driver: lifetime (swing 1.097, 33% of total)` and writ
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tornado-sensitivity.html
 
-<!-- pm-claude-skills v83.2.0 | skill: tornado-sensitivity | source: skills/tornado-sensitivity/SKILL.md | sha256: 64537e2bd8c6688c164aebfc7fd9818149d49093ac1b7a4965821e5f7a99b8a0 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: tornado-sensitivity | source: skills/tornado-sensitivity/SKILL.md | sha256: 64537e2bd8c6688c164aebfc7fd9818149d49093ac1b7a4965821e5f7a99b8a0 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -143,5 +143,5 @@ bones; [[patient-communication]] for the clinical-side cousin.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/aging-parent-talks.html
 
-<!-- pm-claude-skills v83.2.0 | skill: aging-parent-talks | source: skills/aging-parent-talks/SKILL.md | sha256: 95bba9541302a7b85929e612609d0698cf2b8cb3c7ef5e91a54d66c01289ad5f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: aging-parent-talks | source: skills/aging-parent-talks/SKILL.md | sha256: 95bba9541302a7b85929e612609d0698cf2b8cb3c7ef5e91a54d66c01289ad5f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

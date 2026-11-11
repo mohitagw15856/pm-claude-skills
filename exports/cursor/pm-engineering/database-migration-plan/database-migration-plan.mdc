@@ -472,5 +472,5 @@ Follow this checklist on the day of migration. Mark each step as done before pro
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/database-migration-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: database-migration-plan | source: skills/database-migration-plan/SKILL.md | sha256: 4c8ce33bb678396a907a7628375d8f444832998eeb216bcf25232a910b660345 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: database-migration-plan | source: skills/database-migration-plan/SKILL.md | sha256: 4c8ce33bb678396a907a7628375d8f444832998eeb216bcf25232a910b660345 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

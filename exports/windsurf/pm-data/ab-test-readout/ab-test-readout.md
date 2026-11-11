@@ -70,5 +70,5 @@ Ship / iterate / re-run, plus what to monitor post-launch or what the follow-up 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ab-test-readout.html
 
-<!-- pm-claude-skills v83.2.0 | skill: ab-test-readout | source: skills/ab-test-readout/SKILL.md | sha256: 35149e30cb74642fac6e71ec4d01d23ea545204cd782f65b24cdc660a3dc01da | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: ab-test-readout | source: skills/ab-test-readout/SKILL.md | sha256: 35149e30cb74642fac6e71ec4d01d23ea545204cd782f65b24cdc660a3dc01da | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

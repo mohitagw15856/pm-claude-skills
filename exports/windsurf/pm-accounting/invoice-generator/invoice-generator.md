@@ -75,5 +75,5 @@ Billing & accounts-receivable practice — complete, itemised invoices with clea
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/invoice-generator.html
 
-<!-- pm-claude-skills v83.2.0 | skill: invoice-generator | source: skills/invoice-generator/SKILL.md | sha256: c8be771d3403e3f93e8dcf441693e9953b310a55f499079f0ff787fe92efacf8 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: invoice-generator | source: skills/invoice-generator/SKILL.md | sha256: c8be771d3403e3f93e8dcf441693e9953b310a55f499079f0ff787fe92efacf8 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

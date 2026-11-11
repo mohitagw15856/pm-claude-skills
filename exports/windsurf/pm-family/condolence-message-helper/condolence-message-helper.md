@@ -67,5 +67,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/condolence-message-helper.html
 
-<!-- pm-claude-skills v83.2.0 | skill: condolence-message-helper | source: skills/condolence-message-helper/SKILL.md | sha256: 0c08f45449f670908c809fa80b3939f928b85d402057976f02045713fd24ea21 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: condolence-message-helper | source: skills/condolence-message-helper/SKILL.md | sha256: 0c08f45449f670908c809fa80b3939f928b85d402057976f02045713fd24ea21 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

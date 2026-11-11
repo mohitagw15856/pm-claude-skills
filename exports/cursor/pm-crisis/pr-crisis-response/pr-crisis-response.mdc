@@ -87,5 +87,5 @@ Crisis communications practice — single-source-of-truth messaging, stakeholder
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/pr-crisis-response.html
 
-<!-- pm-claude-skills v83.2.0 | skill: pr-crisis-response | source: skills/pr-crisis-response/SKILL.md | sha256: 44f3a5e1768cf97fc19f258e4ad1c9460fcad6ece40b24d61509aae5dccdb894 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: pr-crisis-response | source: skills/pr-crisis-response/SKILL.md | sha256: 44f3a5e1768cf97fc19f258e4ad1c9460fcad6ece40b24d61509aae5dccdb894 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

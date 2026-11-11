@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/task-triage-matrix.html
 
-<!-- pm-claude-skills v83.2.0 | skill: task-triage-matrix | source: skills/task-triage-matrix/SKILL.md | sha256: 2c76fc8c4578d989d8407de5d52f16479486c554b0692faf8f20d0e87b0c7c52 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: task-triage-matrix | source: skills/task-triage-matrix/SKILL.md | sha256: 2c76fc8c4578d989d8407de5d52f16479486c554b0692faf8f20d0e87b0c7c52 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

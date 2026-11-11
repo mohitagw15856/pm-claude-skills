@@ -83,5 +83,5 @@ LLM agent design practice — bounded control flow, least-privilege tool use, co
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/agent-design-review.html
 
-<!-- pm-claude-skills v83.2.0 | skill: agent-design-review | source: skills/agent-design-review/SKILL.md | sha256: b689c65c7e3f066be4e129c5e717c5b2cde4e9f6cc28ac102d81b0aa08bcb183 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: agent-design-review | source: skills/agent-design-review/SKILL.md | sha256: b689c65c7e3f066be4e129c5e717c5b2cde4e9f6cc28ac102d81b0aa08bcb183 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

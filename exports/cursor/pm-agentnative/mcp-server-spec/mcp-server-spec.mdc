@@ -81,5 +81,5 @@ Ask for (if not already provided):
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/mcp-server-spec.html
 
-<!-- pm-claude-skills v83.2.0 | skill: mcp-server-spec | source: skills/mcp-server-spec/SKILL.md | sha256: 242f2a392b42cd8a0b203e4c9b693a25c85eac733c8ae70ac22e7b1e17c542da | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: mcp-server-spec | source: skills/mcp-server-spec/SKILL.md | sha256: 242f2a392b42cd8a0b203e4c9b693a25c85eac733c8ae70ac22e7b1e17c542da | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

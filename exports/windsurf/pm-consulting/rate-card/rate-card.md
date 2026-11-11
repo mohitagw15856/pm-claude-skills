@@ -67,5 +67,5 @@ Freelance/consulting pricing practice — minimum-viable-rate math, value-based 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rate-card.html
 
-<!-- pm-claude-skills v83.2.0 | skill: rate-card | source: skills/rate-card/SKILL.md | sha256: cde0adbccd7915b6967ba8d9b39b1624e2c2e63368eceae31ec6a297866b45c1 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: rate-card | source: skills/rate-card/SKILL.md | sha256: cde0adbccd7915b6967ba8d9b39b1624e2c2e63368eceae31ec6a297866b45c1 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

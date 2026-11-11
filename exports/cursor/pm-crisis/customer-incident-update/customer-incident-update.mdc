@@ -70,5 +70,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/customer-incident-update.html
 
-<!-- pm-claude-skills v83.2.0 | skill: customer-incident-update | source: skills/customer-incident-update/SKILL.md | sha256: 4a2b3e540952b641e1253a98dc9e6754fd7f9454a39df78f3ebfce6b7b1f66fc | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: customer-incident-update | source: skills/customer-incident-update/SKILL.md | sha256: 4a2b3e540952b641e1253a98dc9e6754fd7f9454a39df78f3ebfce6b7b1f66fc | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -67,5 +67,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/networking-outreach.html
 
-<!-- pm-claude-skills v83.2.0 | skill: networking-outreach | source: skills/networking-outreach/SKILL.md | sha256: f6e1bfbd1888900e28cb56e9af4bdffcd32a61671485211f35b076f4ad6b4008 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: networking-outreach | source: skills/networking-outreach/SKILL.md | sha256: f6e1bfbd1888900e28cb56e9af4bdffcd32a61671485211f35b076f4ad6b4008 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

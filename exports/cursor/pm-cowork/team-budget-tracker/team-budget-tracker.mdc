@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/team-budget-tracker.html
 
-<!-- pm-claude-skills v83.2.0 | skill: team-budget-tracker | source: skills/team-budget-tracker/SKILL.md | sha256: 27248d60673a32b827809849891705ed836657958349ae7780d6eb93acf3a098 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: team-budget-tracker | source: skills/team-budget-tracker/SKILL.md | sha256: 27248d60673a32b827809849891705ed836657958349ae7780d6eb93acf3a098 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

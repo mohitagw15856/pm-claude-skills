@@ -1,4 +1,4 @@
-# 🗂️ All 1320 Skills — full catalog
+# 🗂️ All 1374 Skills — full catalog
 
 > The complete per-skill breakdown, grouped by domain. For an interactive, searchable version see the [**live catalog**](https://mohitagw15856.github.io/pm-claude-skills/catalog.html); to run any skill in your browser, use the [**Playground**](https://mohitagw15856.github.io/pm-claude-skills/). Back to the [README](README.md).
 >
@@ -431,7 +431,7 @@
 | **Support Macro** (`support-macro`) | Write reusable support macros / canned responses that sound human, not robotic. | — |
 | **Support Runbook** (`support-runbook`) | Write a support runbook for handling a recurring issue type consistently. | — |
 
-## 💰 Finance, Ops & Business (94 skills)
+## 💰 Finance, Ops & Business (93 skills)
 
 ### `pm-accounting` — 6 skills · 6 eval-scored
 
@@ -550,7 +550,7 @@
 | **Warranty Claim** (`warranty-claim`) | Get a broken product repaired, replaced, or refunded under warranty — with the claim message written, the proof to attach, and the consumer-law… | — |
 | **Windfall Plan** (`windfall-plan`) | Make a smart plan for a lump sum — a bonus, inheritance, tax refund, settlement, or sale — so it builds your future instead of evaporating into… | — |
 
-### `pm-operations` — 12 skills · 3 eval-scored
+### `pm-operations` — 11 skills · 2 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -560,7 +560,6 @@
 | **Process Documentation** (`process-documentation`) | Document any business process in a clear, structured format. | — |
 | **Project Status Report** (`project-status-report`) | Write a structured project status report for any project. | — |
 | **RACI Matrix** (`raci-matrix`) | Define a RACI matrix for a cross-functional project or process. | — |
-| **RFP Writer** (`rfp-writer`) | Write a clear Request for Proposal that gets comparable, high-quality vendor bids. | ✅ 4.8/5 |
 | **Risk Register** (`risk-register`) | Build and maintain a project or product risk register. | — |
 | **SOP Writer** (`sop-writer`) | Write a Standard Operating Procedure (SOP) for any operational task. | — |
 | **Vendor Contract Checklist** (`vendor-contract-checklist`) | Review a vendor/SaaS contract against a practical checklist before you sign. | ✅ 5/5 |
@@ -724,7 +723,7 @@
 | **Resume** (`resume`) | Write a sharp, achievement-led resume/CV that passes ATS and earns the interview. | ✅ 4/5 |
 | **Trip Planner** (`trip-planner`) | Turn a destination, some dates, and your vibe into a realistic day-by-day trip itinerary — paced for real humans, with a packing list and a rough… | — |
 
-## 🌍 Industries & Public Sector (857 skills)
+## 🌍 Industries & Public Sector (912 skills)
 
 ### `other` — 22 skills · 12 eval-scored
 
@@ -788,6 +787,17 @@
 | **Functional Assessment Prep** (`functional-assessment-prep`) | Prepare for a disability or illness benefit assessment (a functional or work capability assessment, a medical review, a disability evaluation… | ✅ 4.8/5 |
 | **Venue Access Check** (`venue-access-check`) | Check whether a specific venue — a restaurant, office, event space, Airbnb, clinic — will actually work for your access needs, before you commit… | ✅ 4.5/5 |
 
+### `pm-africa` — 6 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **M-Pesa Reversal and Dispute (Kenya)** (`ke-mpesa-reversal-dispute`) | Handle money sent to the wrong number or taken by fraud on mobile money in Kenya: what to do in the first minutes, how the reversal request works… | — |
+| **Kenyan Payslip Decoder** (`ke-payslip-decoder`) | Decode a Kenyan payslip line by line: gross pay, PAYE, the social security contribution, the social health insurance contribution, the affordable… | — |
+| **Nigerian Payslip Decoder** (`ng-payslip-decoder`) | Decode a Nigerian payslip line by line: gross pay and its components, PAYE income tax, pension, National Housing Fund, health insurance and other… | — |
+| **Nigerian Pension RSA Guide** (`ng-pension-rsa-guide`) | Guide a Nigerian worker through their Retirement Savings Account: checking that contributions are remitted, choosing or changing a pension fund… | — |
+| **Retrenchment Package Check (South Africa)** (`za-retrenchment-package-check`) | Check a retrenchment process and package for an employee in South Africa: whether consultation was done properly, the statutory minimum severance… | — |
+| **UIF Claim Guide (South Africa)** (`za-uif-claim-guide`) | Guide a worker in South Africa through an unemployment insurance claim: which benefit applies, eligibility, how credits and the benefit amount… | — |
+
 ### `pm-agentnative` — 9 skills · 5 eval-scored
 
 | Skill | What it does | Eval |
@@ -818,6 +828,15 @@
 |---|---|---|
 | **Aging Parent Talks** (`aging-parent-talks`) | Prepare the conversations with aging parents that everyone postpones — the driving talk, the money talk, the care-options talk, the moving talk —… | ✅ 5/5 |
 | **Sibling Care Summit** (`sibling-care-summit`) | Get siblings onto one team about aging parents before the crisis does it for them — a structured family meeting with an agenda that prevents… | ✅ 4.8/5 |
+
+### `pm-agriculture` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Crop Season Plan** (`crop-season-plan`) | Plan a cropping season for a small or family farm: what to grow on which field, the rotation, a dated calendar from land preparation to sale… | — |
+| **Farm Buyer Contract Check** (`farm-buyer-contract-check`) | Check a contract between a farmer and a buyer, processor or contract-farming company before signing: price and how it is set, quality grades and… | — |
+| **Farm Records Book** (`farm-records-book`) | Set up or tidy a farm's records so they answer the questions that matter: what was applied where and when, what each field and animal group… | — |
+| **Farm Subsidy Application** (`farm-subsidy-application`) | Prepare a farm subsidy, grant or support-scheme application: check eligibility against the scheme's own rules, list the evidence, draft the… | — |
 
 ### `pm-ai-native` — 13 skills
 
@@ -900,6 +919,15 @@
 | **MLPS 2.0 Checklist (等保 2.0)** (`cn-mlps-checklist`) | Use when asked 等保怎么做, 等保 2.0 定级, 等保备案和测评流程, 等保三级要求, 我们的系统需要过等保吗, or prepare an information system for China's Multi-Level Protection Scheme (MLPS… | ✅ 3.8/5 |
 | **PIPL Impact Assessment (个人信息保护影响评估)** (`cn-pipl-pia`) | Use when asked 个人信息保护影响评估怎么做, 写一份 PIA, 处理敏感个人信息要评估吗, 自动化决策评估, PIPL 第五十五条, or assess a processing activity under China's Personal Information… | ✅ 4.8/5 |
 
+### `pm-china-ecommerce` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **1688 批发 Listing** (`cn-1688-wholesale-listing`) | Write a wholesale listing for 1688: a buyer-searchable title, tiered pricing and minimum order quantity, factory and supply-capacity proof… | — |
+| **电商客服话术** (`cn-customer-service-scripts`) | Write customer service scripts (客服话术) for a Chinese online shop: pre-sale answers, payment reminders, order and logistics replies, returns and… | — |
+| **大促方案（双 11 / 618）** (`cn-double11-promotion-plan`) | Plan a shop's 双 11, 618 or other major platform promotion in China: targets broken down by product, the pricing and discount stack checked against… | — |
+| **国内电商商品 Listing** (`cn-ecommerce-listing`) | Write a product listing for a Chinese consumer marketplace (淘宝, 天猫, 拼多多 or 京东): a keyword-built title within the platform's length limit, selling… | — |
+
 ### `pm-china-exams` — 8 skills · 8 eval-scored
 
 | Skill | What it does | Eval |
@@ -945,6 +973,25 @@
 | **Home-School Messages (家校沟通)** (`cn-home-school-comms`) | Use when asked 怎么给老师发消息, 跟班主任沟通, 孩子在学校被欺负怎么跟老师说, 对老师的做法有意见, 请假怎么写, 家长群里怎么说话, or write a message from a parent to a teacher in China. Produces a… | ✅ 5/5 |
 | **Homework Guide for Parents (家长辅导作业)** (`cn-homework-helper-parent`) | Use when asked 孩子这道题不会怎么教, 辅导作业总发火, 怎么给孩子讲应用题, 陪写作业, 作业太多写到很晚, or help a parent guide (not do) a child's homework in China. Produces, for the… | ✅ 4.8/5 |
 | **School Entry Planner (幼升小 / 小升初)** (`cn-school-entry`) | Use when asked 幼升小怎么准备, 小升初流程, 入学信息采集, 学区房和多校划片, 公民同招, 民办摇号, 随迁子女入学, 居住证入学材料, or plan a child's entry to primary or junior high school in mainland… | ✅ 4.5/5 |
+
+### `pm-china-startup` — 6 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **公司注册** (`cn-company-registration`) | Plan the registration of a business in mainland China: choose between 个体工商户, 有限责任公司 and 合伙企业, prepare the name, address, business scope… | — |
+| **创始人股权分配** (`cn-equity-split`) | Design a founder equity split and its protective terms for a start-up in China: who gets how much and why, control thresholds, vesting and… | — |
+| **融资商业计划书（BP）** (`cn-financing-bp`) | Build a financing business plan (融资商业计划书, BP) for a Chinese start-up raising seed, angel or Series A money: the storyline, slide-by-slide content… | — |
+| **高新技术企业认定申报** (`cn-high-tech-enterprise-application`) | Prepare a 高新技术企业 (High and New Technology Enterprise) recognition application in China: test the company against the recognition conditions… | — |
+| **补贴与政策申报** (`cn-subsidy-filing`) | Find and file for government support available to a small company in China: map the policies that fit the company, check eligibility, prepare the… | — |
+| **专精特新申报** (`cn-zhuanjingtexin-application`) | Prepare an application under China's tiered SME programme: 创新型中小企业, 专精特新中小企业 and 专精特新小巨人. | — |
+
+### `pm-china-study-abroad` — 3 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **海归求职** (`cn-returnee-job-search`) | Plan the job search of a Chinese student returning from study abroad (海归): the recruitment calendar, graduate-status and degree-certification… | — |
+| **留学申请文书** (`cn-study-abroad-essay`) | Coach a Chinese applicant through study-abroad application writing: the personal statement or statement of purpose, the UK undergraduate… | — |
+| **留学签证准备** (`cn-study-visa-prep`) | Prepare a student visa application for a Chinese student going abroad: the document checklist by country, proof of funds, the application sequence… | — |
 
 ### `pm-china-teachers` — 5 skills · 5 eval-scored
 
@@ -1037,7 +1084,7 @@
 | **Site Safety Briefing** (`site-safety-briefing`) | Produce a toolbox talk or pre-task safety briefing from the day's planned construction work. | — |
 | **Subcontractor Scorecard** (`subcontractor-scorecard`) | Score a subcontractor's performance across schedule reliability, quality, safety, paperwork, and change-order behaviour with weighted anchors. | — |
 
-### `pm-cowork` — 98 skills
+### `pm-cowork` — 97 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -1056,7 +1103,6 @@
 | **Company Event Ops** (`company-event-ops`) | Run a company event — the launch party, the customer day, the team celebration — as the operation it is: the goal that shapes every choice, the… | — |
 | **Competitive Scan Lite** (`competitive-scan-lite`) | Run a fast, honest competitive scan — the dimension table built from public evidence (sites, docs, pricing pages, changelogs, reviews), the… | — |
 | **Context Switch Budget** (`context-switch-budget`) | Treat context switches as the budget line they are — the switch census (how fragmented the week really is), the batching moves that consolidate… | — |
-| **Contract Renewal Tracker** (`contract-renewal-tracker`) | Never get auto-renewed into another year again — the contract inventory with the dates that matter (notice deadlines, not renewal dates), the… | — |
 | **Data Cleaning Pass** (`data-cleaning-pass`) | Clean a messy dataset methodically — the profiling pass that finds what's actually wrong (dupes, format drift, phantom spaces, mixed types), the… | — |
 | **Data Slide Design** (`data-slide-design`) | Design slides where the data makes the argument — the takeaway-titled chart, the one-chart-per-slide rule, the annotation layer that guides the… | — |
 | **Decision Log Setup** (`decision-log-setup`) | Set up the team decision log that ends relitigation — the one-line-per-decision format (what, why, who, when, reopening rule), the capture moments… | — |
@@ -1209,6 +1255,14 @@
 | **Referral Request** (`referral-request`) | Write a short message asking someone at a target company for a referral or a conversation, sized to how well the person knows them, with an easy… | ✅ 4.3/5 |
 | **Returner CV** (`returner-cv`) | Write a CV for someone returning to work after a career break (caring, health, parenting, travel, redundancy or anything else), presenting the gap… | ✅ 1/5 |
 | **Values-Mapped CV** (`values-mapped-cv`) | Map a person's achievements to a target company's published values or leadership principles, so the CV leads with the evidence that company says… | ✅ 5/5 |
+
+### `pm-dach` — 3 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Arbeitszeugnis Decoder (Germany)** (`de-arbeitszeugnis-decoder`) | Decode a German employment reference (Arbeitszeugnis): translate the coded phrases into the grade they signal, check the structure and the closing… | — |
+| **Kündigungsfrist Check (Germany)** (`de-kuendigungsfrist-check`) | Work out the notice period and last working day for an employment contract in Germany, for resignation or dismissal: the statutory periods by… | — |
+| **Steuererklärung Prep (Germany)** (`de-steuererklaerung-prep`) | Prepare an employee's annual income tax return in Germany: whether filing is required or worthwhile, which forms apply, the documents to gather… | — |
 
 ### `pm-dead-mentors` — 5 skills · 5 eval-scored
 
@@ -1469,7 +1523,7 @@
 | **Scope Creep Response** (`scope-creep-response`) | Handle scope creep on client work without torching the relationship — classify the ask against the agreement, respond with the… | — |
 | **Testimonial Request** (`testimonial-request`) | Ask happy clients for a testimonial or review the right way — timed well, easy to give, and specific enough to actually persuade future clients. | — |
 
-### `pm-gov` — 6 skills
+### `pm-gov` — 5 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -1478,7 +1532,6 @@
 | **Policy Memo** (`policy-memo`) | Write a decision-ready policy memo that frames an issue and recommends an option. | — |
 | **Public Comment** (`public-comment`) | Draft a persuasive public comment on a proposed rule, regulation, or plan. | — |
 | **Regulatory Impact Analysis** (`regulatory-impact-analysis`) | Produce a regulatory impact analysis (RIA) weighing the costs, benefits, and alternatives of a proposed rule. | — |
-| **RFP Response** (`rfp-response`) | Write a compliant, competitive response to an RFP/RFQ/ITT (government or enterprise procurement). | — |
 
 ### `pm-grief` — 5 skills
 
@@ -1544,7 +1597,7 @@
 | **Stargazing Tonight** (`stargazing-tonight`) | Plan a stargazing session for tonight from where you are — what's worth looking for, when and where to look, and how to see it with just your eyes… | — |
 | **Wine Pairing** (`wine-pairing`) | Pick a wine that flatters tonight's meal — at your budget, from what's actually available — without the sommelier mystique. | — |
 
-### `pm-hospitality` — 5 skills
+### `pm-hospitality` — 4 skills
 
 | Skill | What it does | Eval |
 |---|---|---|
@@ -1552,7 +1605,6 @@
 | **Health Inspection Prep** (`health-inspection-prep`) | Run a self-audit of a food establishment before the health inspector arrives, focused on the violations that actually close kitchens. | — |
 | **Menu Cost Engineer** (`menu-cost-engineer`) | Cost a menu item to a plate cost and food-cost percentage, then price it for a target margin. | — |
 | **Server Training Guide** (`server-training-guide`) | Build an onboarding and training guide for restaurant front-of-house staff (servers, hosts, bartenders). | — |
-| **Shift Schedule Builder** (`shift-schedule-builder`) | Build a staff shift schedule that matches coverage to demand while hitting a labor-cost target. | — |
 
 ### `pm-identity` — 4 skills · 4 eval-scored
 
@@ -1639,6 +1691,15 @@
 | **Korean Business Report (보고서 and 주간보고)** (`kr-work-report`) | Use when asked 보고서 써 줘, 주간보고 작성해 줘, 개조식으로 정리해 줘, 팀장님께 보고할 내용 정리, 1페이지 보고서, 업무 보고서 양식, or write a Korean business report or weekly report. Produces… | ✅ 4.5/5 |
 | **Korea Year-End Tax Settlement (연말정산)** (`kr-year-end-tax-settlement`) | Use when asked 연말정산 어떻게 해요, 연말정산 간소화 자료 어떻게 제출해, which deductions can I claim in my Korean year-end tax settlement, 부양가족 공제 누구 올려야 해, 맞벌이 연말정산 누가… | ✅ 4.5/5 |
 
+### `pm-latam` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **IRPF Prep (Brazil)** (`br-irpf-prep`) | Prepare an individual's annual income tax return in Brazil (Declaração de Ajuste Anual do IRPF): whether filing is required, which documents to… | — |
+| **Rescisão CLT (Brazil)** (`br-rescisao-clt`) | Explain and estimate termination pay (verbas rescisórias) for an employee under Brazil's CLT: which amounts are due for each type of termination… | — |
+| **Declaración Anual Prep (Mexico)** (`mx-declaracion-anual-prep`) | Prepare an individual's annual tax return in Mexico (declaración anual de personas físicas): whether filing is required, the access credentials… | — |
+| **Finiquito y Liquidación (Mexico)** (`mx-finiquito-liquidacion`) | Explain and estimate what an employee in Mexico is owed when a job ends: finiquito on any separation and liquidación on unjustified dismissal… | — |
+
 ### `pm-layoff` — 4 skills
 
 | Skill | What it does | Eval |
@@ -1708,6 +1769,15 @@
 | **Maintainer Triage** (`maintainer-triage`) | Get an open-source repo's issue backlog from 400-and-drowning to triaged-and-honest in one pass — a label taxonomy that encodes decisions, batch… | ✅ 4.5/5 |
 | **The Maintainer's No** (`the-maintainers-no`) | Say no as an open-source maintainer without burning contributors or yourself — the feature that doesn't fit, the PR that took someone a weekend… | ✅ 5/5 |
 
+### `pm-mena` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Gulf Job Offer Check** (`gulf-job-offer-check`) | Check a job offer in a Gulf country before accepting: basic wage against total package, allowances, what gratuity will be based on, visa and… | — |
+| **Gulf Residence Visa Admin** (`gulf-residence-visa-admin`) | Plan the residence and work permit paperwork for someone moving to, working in or leaving a Gulf country: the sequence of steps, who does each… | — |
+| **KSA Labour Contract Decoder** (`ksa-labour-contract-decoder`) | Decode an employment contract under Saudi labour law for an employee: contract term, probation, wages and allowances, hours and overtime, leave… | — |
+| **UAE Gratuity Calculator** (`uae-gratuity-calculator`) | Estimate end-of-service gratuity for a private-sector employee in the United Arab Emirates and check a final settlement: service length, basic… | — |
+
 ### `pm-method` — 10 skills · 8 eval-scored
 
 | Skill | What it does | Eval |
@@ -1775,6 +1845,15 @@
 | **Donor Update** (`donor-update`) | Write a warm donor update or stewardship message that makes a supporter feel their gift mattered. | ✅ 4/5 |
 | **Impact Report** (`impact-report`) | Write a compelling nonprofit impact or annual report that shows donors what their money achieved. | ✅ 4.3/5 |
 
+### `pm-nursing` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Nursing Care Plan** (`nursing-care-plan`) | Draft a nursing care plan from an assessment: prioritised problems, a measurable goal for each, the nursing interventions with their rationale… | — |
+| **Nursing Family Update** (`nursing-family-update`) | Prepare a plain-language update for a patient's family or carer: what has happened, how the patient is now, what happens next, and what the family… | — |
+| **Nursing Incident Report** (`nursing-incident-report`) | Write a factual clinical incident report for a nurse: what happened in time order, what was observed, the immediate actions, who was told and… | — |
+| **Nursing Shift Handover** (`nursing-shift-handover`) | Write a nursing shift handover for a ward, unit or community caseload in ISBAR order, patient by patient, with the sickest first, outstanding… | — |
+
 ### `pm-operator` — 5 skills
 
 | Skill | What it does | Eval |
@@ -1818,6 +1897,15 @@
 | **Pharmacy Counselling Script** (`pharmacy-counselling-script`) | Write the counselling a patient will actually follow when collecting a new or changed medicine — what it is for, how to take it, what to expect… | — |
 | **Declining to Dispense** (`prescription-refusal-to-fill`) | Handle a prescription you are not going to dispense — the professional judgement recorded, the patient conversation, the prescriber contact, and… | — |
 
+### `pm-phd` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **PhD Supervisor Update** (`phd-supervisor-update`) | Write a doctoral student's update to a supervisor before a meeting: what was done since last time against what was agreed, results and their… | — |
+| **Reviewer Rebuttal Letter** (`reviewer-rebuttal-letter`) | Write the response-to-reviewers letter for a revised journal article or conference paper: every comment quoted and numbered, a direct answer, the… | — |
+| **Thesis Chapter Plan** (`thesis-chapter-plan`) | Plan one thesis or dissertation chapter in detail: the chapter's claim and its job in the thesis, section-by-section argument, the evidence and… | — |
+| **Viva Prep Pack** (`viva-prep-pack`) | Prepare a doctoral candidate for the viva or thesis defence with a written pack: a three-minute thesis summary, the contribution stated plainly… | — |
+
 ### `pm-physio` — 6 skills
 
 | Skill | What it does | Eval |
@@ -1828,6 +1916,15 @@
 | **Physiotherapy Progress Note** (`physio-progress-note`) | Write a physiotherapy progress note that shows clinical reasoning rather than attendance — what changed against the reassessment markers, what… | — |
 | **Rehabilitation Programme Design** (`rehab-programme-design`) | Design a rehabilitation programme the patient will actually do — dosed and progressed against stated criteria, built around their week rather than… | — |
 | **Return-to-Activity Criteria** (`return-to-activity-criteria`) | Set criteria-based return-to-activity milestones so the decision rests on what the patient can demonstrate rather than on how long it has been —… | — |
+
+### `pm-procurement` — 4 skills · 1 eval-scored
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Contract Renewal Brief** (`contract-renewal-brief`) | Write the decision brief for one supplier contract coming up for renewal: what was bought and used, how the supplier performed, what the market… | — |
+| **Contract Renewal Tracker** (`contract-renewal-tracker`) | Never get auto-renewed into another year again — the contract inventory with the dates that matter (notice deadlines, not renewal dates), the… | — |
+| **RFP Response** (`rfp-response`) | Write a compliant, competitive response to an RFP/RFQ/ITT (government or enterprise procurement). | — |
+| **RFP Writer** (`rfp-writer`) | Write a clear Request for Proposal that gets comparable, high-quality vendor bids. | ✅ 4.8/5 |
 
 ### `pm-realestate` — 6 skills · 6 eval-scored
 
@@ -1878,6 +1975,15 @@
 | **Exit Interview Strategy** (`exit-interview-strategy`) | Walk into an exit interview knowing what it's for, what to say, and what to keep — honest-but-strategic answers that protect references and leave… | — |
 | **Last Two Weeks Handoff** (`last-two-weeks-handoff`) | Turn your notice period into a handoff that makes you missed for the right reasons — the transition doc nobody has to call you about, the… | — |
 | **Resignation Letter** (`resignation-letter`) | Write a resignation letter that closes a chapter without burning it — short, warm, legally clean, and silent on everything that doesn't belong in… | — |
+
+### `pm-retail-shopfloor` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Retail Shift Handover** (`retail-shift-handover`) | Write a shop-floor shift handover between duty managers or team leaders: trading so far against plan, cash and till position, deliveries and stock… | — |
+| **Shift Schedule Builder** (`shift-schedule-builder`) | Build a staff shift schedule that matches coverage to demand while hitting a labor-cost target. | — |
+| **Shrink Report** (`shrink-report`) | Write a retail shrink report: how much stock was lost, where, split into theft, damage and waste, supplier and delivery error, and administrative… | — |
+| **Stock Take Plan** (`stock-take-plan`) | Plan and reconcile a shop stock take: the count method, zones and teams, the cut-off for deliveries and sales, count sheets, recount rules, and… | — |
 
 ### `pm-scam-defense` — 3 skills
 
@@ -1950,6 +2056,15 @@
 | **Promoter Publish** (`promoter-publish`) | Register a finished skill in this library and produce the complete release package: the bundle wiring and marketplace entry, the regenerated… | ✅ 4.8/5 |
 | **Promoter Scan** (`promoter-scan`) | Find the requests you keep making to your AI assistant by scanning Claude Code transcripts and claude.ai exports, clustering them by intent, and… | ✅ 4.3/5 |
 | **Promoter Test** (`promoter-test`) | Generate an evals file for a drafted skill and measure whether its trigger description fires on the right requests: five to eight phrases that… | ✅ 5/5 |
+
+### `pm-sports-coaching` — 4 skills
+
+| Skill | What it does | Eval |
+|---|---|---|
+| **Coaching Season Plan** (`coaching-season-plan`) | Plan a season for a club, school or youth sports team: the season's aims, phases from pre-season to the final block, what is trained in each… | — |
+| **Coaching Session Plan** (`coaching-session-plan`) | Write a training session plan for a sports team or group: one objective, a timed sequence from warm-up to game-related practice to cool-down, the… | — |
+| **Match Review** (`match-review`) | Review a match or competition for a team coach: what the plan was, what happened in each phase of the game, three things that worked and three to… | — |
+| **Sports Parent Comms** (`sports-parent-comms`) | Write messages from a youth sports coach or team manager to parents: the season welcome, weekly logistics, selection and playing-time… | — |
 
 ### `pm-students` — 11 skills
 
@@ -2114,15 +2229,19 @@
 | **Sleep Reset Plan** (`sleep-reset-plan`) | Build a realistic plan to fix bad sleep — a wind-down routine, a consistent schedule, and the daytime and environment fixes that actually move the… | — |
 | **Stretching Routine** (`stretching-routine`) | Build a targeted stretching or mobility routine for the tightness you actually have — desk-stiff hips, a tight back, post-run legs — not a generic… | — |
 
-### `pm-zh-content` — 4 skills · 4 eval-scored
+### `pm-zh-content` — 8 skills · 4 eval-scored
 
 | Skill | What it does | Eval |
 |---|---|---|
+| **B 站视频脚本** (`bilibili-video-script`) | Write a script for a Bilibili (B站) video: a title and cover line that earn the click, an opening that holds the first ten seconds, a chaptered… | — |
 | **抖音 Script** (`douyin-script`) | Write a short-video script for 抖音 (Douyin) or similar vertical-video platforms: a hook in the first three seconds, a shot-by-shot plan with… | ✅ 4.8/5 |
 | **Livestream Sales Script (直播带货)** (`livestream-sales-script`) | Plan and script a live-commerce session (直播带货): the run of show, the script for each product segment, interaction prompts, offer timing, and a… | ✅ 3.5/5 |
+| **视频号脚本** (`shipinhao-script`) | Write a script for WeChat Channels (视频号): a short vertical video or a livestream outline built for sharing among friends and groups, with a… | — |
 | **WeChat Official Account Article (公众号文章)** (`wechat-article`) | Write a WeChat Official Account (公众号) article: a headline that earns the open, a digest line, a structure built for reading on a phone, and an… | ✅ 5/5 |
 | **小红书 Note** (`xiaohongshu-note`) | Write a 小红书 (Xiaohongshu, RED) note that reads like a real person's experience: a scroll-stopping title, cover text, a body built on specific… | ✅ 4.8/5 |
+| **小宇宙播客提纲** (`xiaoyuzhou-podcast-outline`) | Plan an episode of a Chinese-language podcast for 小宇宙 and other podcast apps: the episode angle and title, a segment outline with timings and… | — |
+| **知乎回答** (`zhihu-answer`) | Write an answer for Zhihu (知乎): the conclusion in the first lines, the author's standing to answer, a structured argument with evidence and… | — |
 
 ---
 
-_1320 skills across 155 bundles · 399 eval-scored (30%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._
+_1374 skills across 168 bundles · 399 eval-scored (29%). See the [leaderboard](https://mohitagw15856.github.io/pm-claude-skills/leaderboard.html)._

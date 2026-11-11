@@ -64,5 +64,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/is-this-actually-good.html
 
-<!-- pm-claude-skills v83.2.0 | skill: is-this-actually-good | source: skills/is-this-actually-good/SKILL.md | sha256: 106d6b6928b141b5e454b561a1b813dd0ff8e45e2f932e90f3fa370efddea218 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: is-this-actually-good | source: skills/is-this-actually-good/SKILL.md | sha256: 106d6b6928b141b5e454b561a1b813dd0ff8e45e2f932e90f3fa370efddea218 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

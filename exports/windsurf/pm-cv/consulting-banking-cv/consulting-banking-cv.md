@@ -64,5 +64,5 @@ Format rule: one page, no exceptions; consistent dates on the right; a plain ser
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/consulting-banking-cv.html
 
-<!-- pm-claude-skills v83.2.0 | skill: consulting-banking-cv | source: skills/consulting-banking-cv/SKILL.md | sha256: d38a1846b8bfdd62e0387cde7b16ca8afe8f99455224799de2c5e5e80a671726 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: consulting-banking-cv | source: skills/consulting-banking-cv/SKILL.md | sha256: d38a1846b8bfdd62e0387cde7b16ca8afe8f99455224799de2c5e5e80a671726 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

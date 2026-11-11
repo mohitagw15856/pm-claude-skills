@@ -4,8 +4,10 @@
 // (task + the matching SKILL.md). A pinned judge scores all outputs on the
 // library's fixed 1–5 rubric, two passes, mean taken.
 //
-//   ANTHROPIC_API_KEY=… node skillbench/run-skillbench.mjs --models claude-sonnet-4-6
-//   … OPENAI_API_KEY=… GEMINI_API_KEY=… --models claude-fable-5,gpt-4o,gemini-2.0-flash
+//   ANTHROPIC_API_KEY=… node skillbench/run-skillbench.mjs --models claude-sonnet-5-5
+//   … OPENAI_API_KEY=… GEMINI_API_KEY=… --models claude-fable-5-2,gpt-4o,gemini-2.0-flash
+//   --lineup current     add every current Claude model from data/models.json to --models
+//   --effort <level>     low | medium | high | xhigh | max for current Claude models (default: the API's)
 //   --dry-run            plan + cost estimate, no API calls
 //   --judge <model>      override the pinned judge (discloses in results)
 //   --tasks <path>       alternate task set (default: skillbench/tasks.json)
@@ -28,6 +30,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { REGISTRY, modelFor, modelInfo, requestShape } from '../bin/lib/models.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = join(__dirname, '..');
@@ -38,11 +41,15 @@ const HARNESS_VERSION = '1.1';
 // --judges a,b,c runs a cross-family panel (1 pass each, mean + spread recorded);
 // --judge keeps the single-judge behaviour (2 passes, mean). v2 default panels
 // exist so no single family grades its own outputs unchallenged.
-const JUDGES = (arg('judges', '') || arg('judge', 'claude-sonnet-4-6')).split(',').map((s) => s.trim()).filter(Boolean);
+const JUDGES = (arg('judges', '') || arg('judge', modelFor('judge'))).split(',').map((s) => s.trim()).filter(Boolean);
 const JUDGE = JUDGES.join('+');
 let models = (arg('models', '') || '').split(',').map((s) => s.trim()).filter(Boolean);
+// --lineup current: the four current Claude models, so a new line-up needs no edit here.
+if (arg('lineup', '') === 'current') models = [...new Set([...models, ...REGISTRY.current.map((m) => m.id)])];
+else if (arg('lineup', '')) { console.error('--lineup takes "current".'); process.exit(1); }
+const EFFORT = arg('effort', '') || undefined;
 const dryRun = has('dry-run');
-if (!models.length) { console.error('Usage: --models model-a,model-b [--dry-run]'); process.exit(1); }
+if (!models.length) { console.error('Usage: --models model-a,model-b | --lineup current  [--dry-run]'); process.exit(1); }
 
 const taskFile = JSON.parse(readFileSync(arg('tasks', join(__dirname, 'tasks.json')), 'utf8'));
 const taskSetVersion = taskFile.version;
@@ -104,11 +111,16 @@ async function complete({ model, system, user, maxTokens = 4096 }) {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
       headers: { 'content-type': 'application/json', 'x-api-key': key, 'anthropic-version': '2023-06-01' },
-      body: JSON.stringify({ model, max_tokens: maxTokens, ...(system ? { system } : {}), messages: [{ role: 'user', content: user }] }),
+      // requestShape adds thinking headroom (and effort, if asked) for current models only.
+      body: JSON.stringify({ model, ...requestShape(model, maxTokens, EFFORT), ...(system ? { system } : {}), messages: [{ role: 'user', content: user }] }),
     });
     const j = await res.json();
     if (!res.ok) throw new Error(`${model}: ${j.error?.message || res.status}`);
-    return j.content?.[0]?.text || '';
+    // Current models return a thinking block first, so the answer is every text block joined,
+    // not content[0]. An empty answer is an error: scoring '' would look like a real result.
+    const text = (j.content || []).filter((c) => c.type === 'text').map((c) => c.text || '').join('');
+    if (!text.trim()) throw new Error(`${model}: empty answer (stop_reason ${j.stop_reason || 'unknown'})`);
+    return text;
   }
   if (prov === 'openai') {
     const [, base, keyVar, prefix = ''] = COMPAT.find(([re]) => re.test(model));
@@ -193,7 +205,16 @@ const skillBody = (name) => readFileSync(join(root, 'skills', name, 'SKILL.md'),
 const genCalls = models.length * tasks.length * 2;
 const judgeCalls = genCalls * 2;
 console.log(`SkillBench v${taskSetVersion} · ${models.length} model(s) × ${tasks.length} tasks × 2 modes = ${genCalls} generations + ${judgeCalls} judge passes (judge: ${JUDGE})`);
-if (dryRun) { console.log('~rough cost: generations dominate; expect the cost of ~' + genCalls + ' medium completions per full run. Dry run — no calls made.'); process.exit(0); }
+if (dryRun) {
+  console.log('~rough cost: generations dominate; expect the cost of ~' + genCalls + ' medium completions per full run.');
+  // List prices from the registry so the spend can be judged before any call is made.
+  for (const m of [...new Set([...models, ...JUDGES])]) {
+    const info = modelInfo(m);
+    if (info && Number.isFinite(info.input)) console.log(`  ${m}: $${info.input} in / $${info.output} out per million tokens${info.status === 'legacy' ? ' (legacy)' : ''}${info.thinking ? ', thinks before answering (billed as output)' : ''}`);
+  }
+  console.log('Dry run — no calls made.');
+  process.exit(0);
+}
 
 // ── Run ───────────────────────────────────────────────────────────────────────
 const results = existsSync(outPath) ? JSON.parse(readFileSync(outPath, 'utf8')) : { _comment: 'SkillBench results. One entry per model per run. See skillbench/README.md.', runs: [] };

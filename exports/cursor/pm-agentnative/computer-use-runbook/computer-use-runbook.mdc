@@ -74,5 +74,5 @@ Given only a task and a site, **write the full runbook anyway** from the usual s
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/computer-use-runbook.html
 
-<!-- pm-claude-skills v83.2.0 | skill: computer-use-runbook | source: skills/computer-use-runbook/SKILL.md | sha256: c1642ba36620f22e98c3be25f763d72360b6698aedeba126bf8a27cb900a295c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: computer-use-runbook | source: skills/computer-use-runbook/SKILL.md | sha256: c1642ba36620f22e98c3be25f763d72360b6698aedeba126bf8a27cb900a295c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

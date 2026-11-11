@@ -57,5 +57,5 @@ One line on the underlying reason and a guardrail (a check, a type, a test, a co
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/error-decoder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: error-decoder | source: skills/error-decoder/SKILL.md | sha256: 3f141c5e52e838312303b3574055a006d9eb1e942ff89b0b6c94044d3158a609 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: error-decoder | source: skills/error-decoder/SKILL.md | sha256: 3f141c5e52e838312303b3574055a006d9eb1e942ff89b0b6c94044d3158a609 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

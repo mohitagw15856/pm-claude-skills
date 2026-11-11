@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vendor-comparison-matrix.html
 
-<!-- pm-claude-skills v83.2.0 | skill: vendor-comparison-matrix | source: skills/vendor-comparison-matrix/SKILL.md | sha256: 12fb089a58f6a7ca13fe780ccff75d475758a13e9844ddc64eb671a8dfd61e88 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: vendor-comparison-matrix | source: skills/vendor-comparison-matrix/SKILL.md | sha256: 12fb089a58f6a7ca13fe780ccff75d475758a13e9844ddc64eb671a8dfd61e88 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

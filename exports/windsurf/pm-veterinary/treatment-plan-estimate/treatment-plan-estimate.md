@@ -65,5 +65,5 @@ What the owner is agreeing to, the deposit/authorization, and the decision point
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/treatment-plan-estimate.html
 
-<!-- pm-claude-skills v83.2.0 | skill: treatment-plan-estimate | source: skills/treatment-plan-estimate/SKILL.md | sha256: 830ffe130855f925f41aec5f3170a2d3c228bf77f139a349c3ff29037c9d2a62 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: treatment-plan-estimate | source: skills/treatment-plan-estimate/SKILL.md | sha256: 830ffe130855f925f41aec5f3170a2d3c228bf77f139a349c3ff29037c9d2a62 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

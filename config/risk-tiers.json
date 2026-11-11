@@ -12,7 +12,7 @@
       "pm-legal", "pm-estate", "pm-insurance", "pm-banking", "pm-scam-defense",
       "pm-health", "pm-crisis", "pm-invisible-illness", "pm-accessibility",
       "pm-newcomer", "pm-decoders", "pm-emergency", "pm-identity",
-      "pm-digital-safety", "pm-renters", "pm-parents", "pm-china-life", "pm-hk-tw"
+      "pm-digital-safety", "pm-renters", "pm-parents", "pm-china-life", "pm-hk-tw", "pm-nursing", "pm-mena", "pm-latam", "pm-dach", "pm-africa"
     ],
     "consequential": [
       "pm-wealth", "pm-money", "pm-finance", "pm-investing-literacy", "pm-hr",
@@ -20,14 +20,14 @@
       "pm-compliance", "pm-china-compliance", "pm-security", "pm-gov", "pm-recruiting", "pm-neurodivergent",
       "pm-family", "pm-social", "pm-wellbeing", "pm-freelance", "pm-sidehustle",
       "pm-wedding", "pm-realestate", "pm-simulators", "pm-decisions", "pm-cv", "pm-china-work", "pm-china-yearend", "pm-chuhai",
-      "pm-china-parents", "pm-china-trade", "pm-korea"]
+      "pm-china-parents", "pm-china-trade", "pm-korea", "pm-agriculture", "pm-procurement", "pm-china-startup", "pm-china-study-abroad"]
   },
   "skills": {
     "high-stakes": [
       "salary-negotiation", "the-visa-interview", "medical-bill-decoder",
-      "severance-agreement-decoder", "pip-responder", "support-a-friend-in-crisis"
+      "severance-agreement-decoder", "pip-responder", "support-a-friend-in-crisis", "cn-study-visa-prep"
     ],
-    "consequential": ["licence-notice-auditor"],
+    "consequential": ["licence-notice-auditor", "reviewer-rebuttal-letter", "viva-prep-pack", "phd-supervisor-update", "thesis-chapter-plan", "sports-parent-comms"],
     "informational": ["cn-jargon-translator", "hk-cantonese-copy"]
   }
 }

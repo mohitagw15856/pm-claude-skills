@@ -65,5 +65,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/deliberate-practice-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: deliberate-practice-plan | source: skills/deliberate-practice-plan/SKILL.md | sha256: 491a57bb8bdcc9ca1b92f0a09cc83f7582e5d493a7e0fc958d0aea6e12dbe3eb | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: deliberate-practice-plan | source: skills/deliberate-practice-plan/SKILL.md | sha256: 491a57bb8bdcc9ca1b92f0a09cc83f7582e5d493a7e0fc958d0aea6e12dbe3eb | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

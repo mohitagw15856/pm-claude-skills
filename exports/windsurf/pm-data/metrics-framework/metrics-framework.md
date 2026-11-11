@@ -137,5 +137,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/metrics-framework.html
 
-<!-- pm-claude-skills v83.2.0 | skill: metrics-framework | source: skills/metrics-framework/SKILL.md | sha256: cfcd51d3dd42bc4d413e0b72f504ec94689d70ac6ccdbcdfd3bb66afd8f93e57 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: metrics-framework | source: skills/metrics-framework/SKILL.md | sha256: cfcd51d3dd42bc4d413e0b72f504ec94689d70ac6ccdbcdfd3bb66afd8f93e57 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

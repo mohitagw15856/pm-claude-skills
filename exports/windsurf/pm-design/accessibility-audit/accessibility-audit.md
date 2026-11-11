@@ -209,5 +209,5 @@ an inferred ratio is not an audit finding.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/accessibility-audit.html
 
-<!-- pm-claude-skills v83.2.0 | skill: accessibility-audit | source: skills/accessibility-audit/SKILL.md | sha256: 2343ec274b064b265785c3cbe4a84cce7d7375b34cc7d26f3187c8909accac7b | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: accessibility-audit | source: skills/accessibility-audit/SKILL.md | sha256: 2343ec274b064b265785c3cbe4a84cce7d7375b34cc7d26f3187c8909accac7b | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

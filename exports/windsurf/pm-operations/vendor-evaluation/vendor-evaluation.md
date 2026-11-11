@@ -88,5 +88,5 @@ Security: ISO 27001 / SOC 2 certified? Where is data stored? Breach notification
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/vendor-evaluation.html
 
-<!-- pm-claude-skills v83.2.0 | skill: vendor-evaluation | source: skills/vendor-evaluation/SKILL.md | sha256: eac7087ec551e2682fe6199a45a0ec6a0a6aca9e01f454455fd94ed9dd2e88aa | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: vendor-evaluation | source: skills/vendor-evaluation/SKILL.md | sha256: eac7087ec551e2682fe6199a45a0ec6a0a6aca9e01f454455fd94ed9dd2e88aa | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

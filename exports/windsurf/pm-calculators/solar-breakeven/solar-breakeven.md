@@ -86,5 +86,5 @@ Deterministic. Defaults: 85% offset, 3% electricity inflation, 0.5%/yr degradati
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/solar-breakeven.html
 
-<!-- pm-claude-skills v83.2.0 | skill: solar-breakeven | source: skills/solar-breakeven/SKILL.md | sha256: f5ecaa01890fdb4c0f413ee8e3a8116859416aee1e442a84c6f1fce2c19a8ebd | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: solar-breakeven | source: skills/solar-breakeven/SKILL.md | sha256: f5ecaa01890fdb4c0f413ee8e3a8116859416aee1e442a84c6f1fce2c19a8ebd | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

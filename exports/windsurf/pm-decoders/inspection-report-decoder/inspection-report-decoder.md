@@ -69,5 +69,5 @@ End verbatim: *"This is a plain-language reading, not a professional inspection,
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/inspection-report-decoder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: inspection-report-decoder | source: skills/inspection-report-decoder/SKILL.md | sha256: 341e2c7eec5b7895866ec94f4956a6640e02004b04990f02e7be2128416a8bfa | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: inspection-report-decoder | source: skills/inspection-report-decoder/SKILL.md | sha256: 341e2c7eec5b7895866ec94f4956a6640e02004b04990f02e7be2128416a8bfa | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

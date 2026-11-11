@@ -77,5 +77,5 @@ An **Issue Triage Report**:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/issue-triage-live.html
 
-<!-- pm-claude-skills v83.2.0 | skill: issue-triage-live | source: skills/issue-triage-live/SKILL.md | sha256: 09da804ba579614c19ff993d2a069357446c8d6e799f57c58aba4e60e431af10 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: issue-triage-live | source: skills/issue-triage-live/SKILL.md | sha256: 09da804ba579614c19ff993d2a069357446c8d6e799f57c58aba4e60e431af10 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

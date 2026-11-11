@@ -71,5 +71,5 @@ Given only a list of apps, **write the full policy anyway**: every app gets rows
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/approval-policy-designer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: approval-policy-designer | source: skills/approval-policy-designer/SKILL.md | sha256: f43419bd8f346ecd6c173ba0e12a42a7e0e3e8217b084e9e707cdfe780704f1a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: approval-policy-designer | source: skills/approval-policy-designer/SKILL.md | sha256: f43419bd8f346ecd6c173ba0e12a42a7e0e3e8217b084e9e707cdfe780704f1a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

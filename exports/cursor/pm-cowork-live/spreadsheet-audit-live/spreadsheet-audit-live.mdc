@@ -78,5 +78,5 @@ A **Spreadsheet Audit** artifact:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/spreadsheet-audit-live.html
 
-<!-- pm-claude-skills v83.2.0 | skill: spreadsheet-audit-live | source: skills/spreadsheet-audit-live/SKILL.md | sha256: 5e6192181a4aa5b6c0a9de551ab715ed5c0db9cec6aa38cccfc4bd2f328f17e9 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: spreadsheet-audit-live | source: skills/spreadsheet-audit-live/SKILL.md | sha256: 5e6192181a4aa5b6c0a9de551ab715ed5c0db9cec6aa38cccfc4bd2f328f17e9 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -67,5 +67,5 @@ Source: Free Dictionary API · rerun: `[exact curl]`
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dictionary-lookup.html
 
-<!-- pm-claude-skills v83.2.0 | skill: dictionary-lookup | source: skills/dictionary-lookup/SKILL.md | sha256: 3780fb5153833a755dd9f4957b4875cedfa181612ed761b109ffd9b63f66b389 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: dictionary-lookup | source: skills/dictionary-lookup/SKILL.md | sha256: 3780fb5153833a755dd9f4957b4875cedfa181612ed761b109ffd9b63f66b389 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

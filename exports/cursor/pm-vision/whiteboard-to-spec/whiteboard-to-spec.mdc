@@ -77,5 +77,5 @@ The whiteboard is where teams decide; the photo of it is where decisions go to d
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/whiteboard-to-spec.html
 
-<!-- pm-claude-skills v83.2.0 | skill: whiteboard-to-spec | source: skills/whiteboard-to-spec/SKILL.md | sha256: 72dfc122bb748dd26c058bfe51722e2dd0249533f9b724bbdb73437e93cb6503 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: whiteboard-to-spec | source: skills/whiteboard-to-spec/SKILL.md | sha256: 72dfc122bb748dd26c058bfe51722e2dd0249533f9b724bbdb73437e93cb6503 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

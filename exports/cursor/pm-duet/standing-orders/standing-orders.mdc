@@ -84,5 +84,5 @@ Given only a role and a few preferences, **write the full standing orders anyway
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/standing-orders.html
 
-<!-- pm-claude-skills v83.2.0 | skill: standing-orders | source: skills/standing-orders/SKILL.md | sha256: ff9c908664783881ca2977ad396370a2b7f51e7255eb6291146ed5a878580ad9 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: standing-orders | source: skills/standing-orders/SKILL.md | sha256: ff9c908664783881ca2977ad396370a2b7f51e7255eb6291146ed5a878580ad9 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

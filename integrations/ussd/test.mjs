@@ -8,9 +8,10 @@ import { fileURLToPath } from 'node:url';
 import assert from 'node:assert/strict';
 import worker, { screen } from './src/index.js';
 import { MENU } from './src/menu.js';
+import { MENU as AFRICA } from './src/menu-africa.js';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-for (const t of MENU) for (const [name] of t.skills) assert.ok(existsSync(join(root, 'skills', name, 'SKILL.md')), `menu skill missing: ${name}`);
+for (const t of [...MENU, ...AFRICA]) for (const [name] of t.skills) assert.ok(existsSync(join(root, 'skills', name, 'SKILL.md')), `menu skill missing: ${name}`);
 
 const sent = [];
 globalThis.fetch = async (url, opts) => {
@@ -47,4 +48,21 @@ const post = (path, text) => worker.fetch(new Request(`https://x${path}`, { meth
 assert.equal((await post('/wrong', '')).status, 403);
 assert.equal((await worker.fetch(new Request('https://x/s3cret', { method: 'POST', body: new URLSearchParams({ text: '' }) }), {}, {})).status, 403, 'no secret set, no service');
 assert.match(await (await post('/s3cret', '1')).text(), /^CON Money and work/);
-console.log('USSD: menu, screens, secret path and SMS checks pass. ✓');
+
+// The Africa menu (USSD_MENU = "africa"): same limits, different topics.
+const af = { USSD_MENU: 'africa' };
+const afFirst = await screen(af, '', '');
+assert.match(afFirst, /^CON PM Skills: work and money\n1\. Nigeria/);
+assert.ok(afFirst.length <= 182, 'africa first screen too long');
+for (let i = 1; i <= AFRICA.length; i++) {
+  const s = await screen(af, String(i), '');
+  assert.match(s, /^CON /); assert.ok(s.length <= 182, `africa topic ${i} screen too long: ${s.length}`);
+  for (let j = 1; j <= AFRICA[i - 1].skills.length; j++) {
+    const leaf = await screen(af, `${i}*${j}`, '');
+    assert.match(leaf, /^END /); assert.ok(leaf.length <= 182, `africa leaf ${i}*${j} too long: ${leaf.length}`);
+    assert.doesNotMatch(leaf, /[\u2014\u{1F000}-\u{1FFFF}]/u, 'non-GSM character on screen');
+  }
+}
+assert.match(await screen({ USSD_MENU: 'nope' }, '', ''), /^CON PM Skills: free help/, 'an unknown menu name falls back to the default');
+assert.match(await screen({ USSD_MENU: 'constructor' }, '', ''), /^CON PM Skills: free help/, 'a prototype key is not a menu');
+console.log('USSD: both menus, screens, secret path and SMS checks pass. ✓');

@@ -69,5 +69,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/jury-duty-guide.html
 
-<!-- pm-claude-skills v83.2.0 | skill: jury-duty-guide | source: skills/jury-duty-guide/SKILL.md | sha256: 20dc756982496d4f875b42f32ddab1aca4195f4481e18fa2b8ad8e5425b2cce3 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: jury-duty-guide | source: skills/jury-duty-guide/SKILL.md | sha256: 20dc756982496d4f875b42f32ddab1aca4195f4481e18fa2b8ad8e5425b2cce3 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

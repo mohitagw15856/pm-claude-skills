@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/injection-spotter.html
 
-<!-- pm-claude-skills v83.2.0 | skill: injection-spotter | source: skills/injection-spotter/SKILL.md | sha256: d1a3414f63884aee85918c03ccaa6d33138ad63c990c1a0f2c749adaafbfd259 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: injection-spotter | source: skills/injection-spotter/SKILL.md | sha256: d1a3414f63884aee85918c03ccaa6d33138ad63c990c1a0f2c749adaafbfd259 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -79,5 +79,5 @@ Five to eight steps telling users how to export from the source tool and import,
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/importer-scaffolder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: importer-scaffolder | source: skills/importer-scaffolder/SKILL.md | sha256: 64d9d5ca10d48be7dbd329efbf1911205243cf1bd64e07cfe45b359751467e63 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: importer-scaffolder | source: skills/importer-scaffolder/SKILL.md | sha256: 64d9d5ca10d48be7dbd329efbf1911205243cf1bd64e07cfe45b359751467e63 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

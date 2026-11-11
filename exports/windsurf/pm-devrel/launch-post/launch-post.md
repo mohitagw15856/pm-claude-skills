@@ -66,5 +66,5 @@ Developer-launch craft (Show HN / Product Hunt norms): substance over hype, hone
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/launch-post.html
 
-<!-- pm-claude-skills v83.2.0 | skill: launch-post | source: skills/launch-post/SKILL.md | sha256: 25c1ab967b002be4a0774e20b70fb672f907ad78e8b06e806c49859f5161ad9a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: launch-post | source: skills/launch-post/SKILL.md | sha256: 25c1ab967b002be4a0774e20b70fb672f907ad78e8b06e806c49859f5161ad9a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

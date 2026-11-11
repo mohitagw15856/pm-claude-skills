@@ -76,5 +76,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/care-decision-family-meeting.html
 
-<!-- pm-claude-skills v83.2.0 | skill: care-decision-family-meeting | source: skills/care-decision-family-meeting/SKILL.md | sha256: a14c6130cc1b334ee679e6acfe9a5303a8f2683cfa669ce7effdf914eccfafe9 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: care-decision-family-meeting | source: skills/care-decision-family-meeting/SKILL.md | sha256: a14c6130cc1b334ee679e6acfe9a5303a8f2683cfa669ce7effdf914eccfafe9 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

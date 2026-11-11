@@ -5,8 +5,10 @@
 // whose headline does not match its own tasks is rejected, not ranked.
 import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { modelFor } from '../../bin/lib/models.mjs';
 
-export const PINNED_JUDGE = 'claude-sonnet-4-6';
+// The judge is pinned in data/models.json (role "judge"), with the reason beside it.
+export const PINNED_JUDGE = modelFor('judge');
 const STEM_RE = /^[A-Za-z0-9._-]{1,100}$/;
 const ACTIONS_RE = /^https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+\/actions\/runs\/\d+$/;
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;

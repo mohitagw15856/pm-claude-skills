@@ -58,5 +58,5 @@ Dashboards rarely contain false numbers. They contain true numbers arranged to c
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/metric-gaslighting-detector.html
 
-<!-- pm-claude-skills v83.2.0 | skill: metric-gaslighting-detector | source: skills/metric-gaslighting-detector/SKILL.md | sha256: 67756512b06bd78a4951cf23b1a180a18fa2d703bd25f08a3c6c88c80cb5676a | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: metric-gaslighting-detector | source: skills/metric-gaslighting-detector/SKILL.md | sha256: 67756512b06bd78a4951cf23b1a180a18fa2d703bd25f08a3c6c88c80cb5676a | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

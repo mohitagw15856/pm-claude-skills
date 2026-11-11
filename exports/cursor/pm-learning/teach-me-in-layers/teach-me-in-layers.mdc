@@ -67,5 +67,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/teach-me-in-layers.html
 
-<!-- pm-claude-skills v83.2.0 | skill: teach-me-in-layers | source: skills/teach-me-in-layers/SKILL.md | sha256: 1502a59eeaba0499860fa5ec837ef41c3612499ccf698130f2fa0a071fe58173 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: teach-me-in-layers | source: skills/teach-me-in-layers/SKILL.md | sha256: 1502a59eeaba0499860fa5ec837ef41c3612499ccf698130f2fa0a071fe58173 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -127,5 +127,5 @@ AI-written — the enemy here too.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/dating-profile-doctor.html
 
-<!-- pm-claude-skills v83.2.0 | skill: dating-profile-doctor | source: skills/dating-profile-doctor/SKILL.md | sha256: c97173d0b532361befd347769575b5fff3fa4dc8cedfa03e1030e29589687e43 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: dating-profile-doctor | source: skills/dating-profile-doctor/SKILL.md | sha256: c97173d0b532361befd347769575b5fff3fa4dc8cedfa03e1030e29589687e43 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

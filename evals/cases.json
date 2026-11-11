@@ -1700,6 +1700,222 @@
     {
       "skill": "in-notice-period-fnf-settlement",
       "input": "Notice period 90 days, served 45, buy-out clause says basic for unserved days. Gross 1.2 lakh, basic 50,000, 18 days leave balance, 3.5 years service. What should my F&F look like?"
+    },
+    {
+      "skill": "nursing-shift-handover",
+      "input": "Day shift to night, medical ward, 6 patients. Bed 4: Mrs Okafor, 78, pneumonia day 3, NEWS went from 3 to 5 at 17:00, on 2L oxygen, IV antibiotics due 22:00, family asking about discharge. Bed 7: Mr Lee, post hip replacement day 1, pain 6/10, not yet mobilised. Write my handover."
+    },
+    {
+      "skill": "nursing-care-plan",
+      "input": "Write a care plan for a 72-year-old admitted after a fall at home, type 2 diabetes, mild confusion in the evenings, Waterlow 16, lives alone, daughter visits weekly. Mobilising with a frame and one assistant."
+    },
+    {
+      "skill": "nursing-incident-report",
+      "input": "Medication error on my shift: patient in bed 12 was given 10 mg oral morphine instead of 5 mg at 14:10, noticed at 14:40 during the controlled drug check, obs stable, doctor informed at 14:45, patient and wife told at 15:00. Help me write the incident report."
+    },
+    {
+      "skill": "nursing-family-update",
+      "input": "I need to phone the son of a patient with advanced dementia who has stopped eating and had two aspiration episodes this week. The team is recommending comfort-focused care. He lives abroad and last heard she was 'doing fine'. Help me plan the call."
+    },
+    {
+      "skill": "crop-season-plan",
+      "input": "12 hectares, rain-fed, clay loam, western Kenya. Last season maize after maize, yields fell from 28 to 19 bags per acre, striga in two fields. I have cash for inputs on about 8 hectares. Plan the long rains season."
+    },
+    {
+      "skill": "farm-subsidy-application",
+      "input": "Mixed farm in Wales, 85 ha, 60 suckler cows, want to apply for a capital grant for a covered slurry store and rainwater harvesting. Quote is 62,000 for the store. Window closes in five weeks. What do I need and how should I write the case?"
+    },
+    {
+      "skill": "farm-records-book",
+      "input": "Smallholder, 2 acres of tomatoes and onions, I sell at the weekly market and to one hotel. I keep nothing written down. Set up a simple records book I can fill in by hand each evening."
+    },
+    {
+      "skill": "farm-buyer-contract-check",
+      "input": "A supermarket supplier offered me a contract for 40 tonnes of green beans over the season at a fixed price, with rejection 'at buyer's sole discretion' on quality, payment 60 days after delivery, and I must buy seed from them. Check it before I sign."
+    },
+    {
+      "skill": "stock-take-plan",
+      "input": "Convenience store, 2,400 SKUs, three staff, one stockroom and a chilled section. We have never done a full count; shrink feels high on alcohol and tobacco. Plan a stock take for a Sunday night."
+    },
+    {
+      "skill": "shrink-report",
+      "input": "Clothing shop, quarter sales 310,000, stock take shows a shortfall of 9,300 at retail. Biggest gaps: denim (2,900), accessories (2,100), kids' outerwear (1,400). Two delivery discrepancies were never claimed. Write the shrink report for the area manager."
+    },
+    {
+      "skill": "retail-shift-handover",
+      "input": "Closing shift handing over to the morning: card terminal 2 keeps dropping, delivery of 14 cages arrived at 16:00 and 6 are unworked in the back, a customer complaint about a refund is waiting for the manager, float short by 12.50, fridge 3 reading 7 degrees since 19:00."
+    },
+    {
+      "skill": "coaching-season-plan",
+      "input": "Under-13 girls football, 16 players, two training sessions and one match a week, September to April. Last season we conceded lots from set pieces and half the squad is new to 11-a-side. Plan the season."
+    },
+    {
+      "skill": "coaching-session-plan",
+      "input": "75 minutes, 14 players aged 10 to 11, one half pitch, 10 balls, 12 cones, 2 small goals. Theme: playing out from the back under pressure. Two players are returning from injury."
+    },
+    {
+      "skill": "sports-parent-comms",
+      "input": "A parent emailed, angry that their daughter played only 10 minutes on Saturday and saying I have favourites. She has missed four of the last six training sessions. Write my reply and a note on playing-time policy for all parents."
+    },
+    {
+      "skill": "match-review",
+      "input": "Lost 3-1 away. We had 58 percent possession, 4 shots on target to their 7, conceded twice from corners and once on the counter after our own corner. Their press forced 11 turnovers in our half. Under-16 boys. Write the match review for Tuesday's session."
+    },
+    {
+      "skill": "contract-renewal-brief",
+      "input": "Our CRM contract renews in 90 days: 140 seats at 85 per seat per month, only 96 active in the last quarter, 7 percent uplift clause, 60-day notice for non-renewal, two unresolved support escalations. Prepare the renewal brief for procurement and the sales director."
+    },
+    {
+      "skill": "phd-supervisor-update",
+      "input": "Month 14 of a PhD in computational linguistics. Since last meeting: finished annotation of 1,200 items (kappa 0.71), first model run underperforms baseline by 3 points, conference abstract due in 5 weeks, I am behind on the literature chapter. Write my update for Thursday."
+    },
+    {
+      "skill": "thesis-chapter-plan",
+      "input": "Chapter 4 of my sociology thesis: findings from 32 interviews with gig workers on algorithmic management. I have three themes (opacity, workarounds, collective sense-making) and about 60 coded excerpts. Target 12,000 words. Plan the chapter."
+    },
+    {
+      "skill": "reviewer-rebuttal-letter",
+      "input": "Major revisions. Reviewer 1 says the sample (n=84) is underpowered and wants a power analysis; Reviewer 2 wants two more baselines and says the related work misses three papers; the editor asks us to shorten by 15 percent. We ran one of the baselines. Draft the response letter."
+    },
+    {
+      "skill": "viva-prep-pack",
+      "input": "Viva in three weeks. Thesis: a mixed-methods study of remote work and team trust in UK SMEs. External examiner is a quantitative organisational psychologist; my weakest part is the survey sampling (convenience sample, 212 responses). Build my prep pack."
+    },
+    {
+      "skill": "uae-gratuity-calculator",
+      "input": "I worked for a Dubai mainland company from 3 March 2018 to 30 June 2025, basic wage 9,500 dirhams a month, total package 21,000, 40 days of unpaid leave in 2021, and I resigned with full notice. What gratuity should I expect and what else belongs in my final settlement?"
+    },
+    {
+      "skill": "gulf-residence-visa-admin",
+      "input": "I am an Indian engineer starting a job in Abu Dhabi next month on 18,000 a month and want to bring my wife and two children within three months. What are the steps, what must be attested before I travel, and who pays for what?"
+    },
+    {
+      "skill": "ksa-labour-contract-decoder",
+      "input": "Riyadh offer, two-year contract, basic 12,000 riyals, housing 3,000, transport 1,000, probation 180 days, 'employee bears iqama renewal fees', non-compete two years across the GCC, 30 days notice either side. Decode it before I sign."
+    },
+    {
+      "skill": "gulf-job-offer-check",
+      "input": "Offer in Doha: 28,000 riyals total, of which 11,000 basic, no schooling allowance, family medical 'as per company policy', one ticket a year for me only. Family of four, two children aged 7 and 10. I earn the equivalent of 9,500 net at home. Is it good, and what should I negotiate?"
+    },
+    {
+      "skill": "br-rescisao-clt",
+      "input": "Fui demitido sem justa causa depois de 4 anos e 7 meses, salário de R$ 5.200, 18 dias de férias vencidas não gozadas, aviso prévio indenizado, saldo de FGTS de R$ 24.000. Confira o que devo receber na rescisão."
+    },
+    {
+      "skill": "br-irpf-prep",
+      "input": "Sou CLT, recebi R$ 96.000 no ano, tenho um dependente, plano de saúde de R$ 9.600, escola de R$ 14.000, e vendi um carro por R$ 45.000 que comprei por R$ 52.000. Me ajude a preparar a declaração do IRPF e escolher entre completa e simplificada."
+    },
+    {
+      "skill": "mx-finiquito-liquidacion",
+      "input": "Me despidieron sin causa después de 6 años y 3 meses, salario diario de 620 pesos, 9 días de vacaciones pendientes, aguinaldo de 15 días, y me ofrecen 95,000 pesos para firmar hoy. ¿Qué me corresponde de liquidación?"
+    },
+    {
+      "skill": "mx-declaracion-anual-prep",
+      "input": "Soy asalariado con ingresos de 520,000 pesos, tuve dos patrones en el año, pagué 38,000 de colegiaturas, 22,000 de gastos médicos con factura y 31,000 de intereses reales de mi crédito hipotecario. Ayúdame a preparar mi declaración anual."
+    },
+    {
+      "skill": "de-arbeitszeugnis-decoder",
+      "input": "Mein Zeugnis sagt: 'Herr Meier erledigte die ihm übertragenen Aufgaben zu unserer vollen Zufriedenheit. Sein Verhalten gegenüber Kollegen und Vorgesetzten war einwandfrei. Er verlässt uns auf eigenen Wunsch.' Kein Dank, keine Zukunftswünsche. Welche Note ist das und was sollte ich ändern lassen?"
+    },
+    {
+      "skill": "de-kuendigungsfrist-check",
+      "input": "Ich arbeite seit dem 1. Februar 2019 als Angestellte, im Vertrag steht 'drei Monate zum Quartalsende', kein Tarifvertrag. Ich will am 12. Mai kündigen. Wann ist mein letzter Tag, und schreib mir bitte das Kündigungsschreiben."
+    },
+    {
+      "skill": "de-steuererklaerung-prep",
+      "input": "Angestellte, Steuerklasse 1, 58.000 Euro brutto, 34 km einfacher Arbeitsweg an 120 Tagen, 95 Tage Homeoffice, Laptop für 1.150 Euro selbst gekauft, Umzug wegen Jobwechsel im Mai, 400 Euro Spenden. Lohnt sich die Steuererklärung und was brauche ich?"
+    },
+    {
+      "skill": "ng-payslip-decoder",
+      "input": "Lagos payslip: basic 180,000, housing 90,000, transport 60,000, gross 330,000 naira a month. Deductions: PAYE 31,400, pension 26,400, NHF 4,500, 'staff levy' 5,000. Net 262,700. Explain each line and tell me if anything looks wrong."
+    },
+    {
+      "skill": "ng-pension-rsa-guide",
+      "input": "I changed jobs in Abuja in March and my new employer says contributions are being paid, but my RSA statement shows nothing since February. I am 34 and want to know how to check, how to move my PFA, and when I can access the balance."
+    },
+    {
+      "skill": "ke-payslip-decoder",
+      "input": "Nairobi payslip: basic 95,000, house allowance 20,000, gross 115,000 shillings. Deductions: PAYE 24,180, NSSF 4,320, SHIF 3,163, housing levy 1,725, sacco 6,000. Net 75,612. Decode it and check the statutory deductions."
+    },
+    {
+      "skill": "ke-mpesa-reversal-dispute",
+      "input": "I sent 18,500 shillings by M-Pesa to the wrong number yesterday at 19:42 because I mistyped one digit. The recipient is not picking up and may have withdrawn it. I have the transaction code. What do I do, step by step, and what do I say?"
+    },
+    {
+      "skill": "za-retrenchment-package-check",
+      "input": "Retrenched in Johannesburg after 9 years, salary 42,000 rand a month, offered one week per year severance, one month notice pay, 14 days leave outstanding, and a pro-rata bonus 'at the company's discretion'. Section 189 consultation was a single meeting. Check the package."
+    },
+    {
+      "skill": "za-uif-claim-guide",
+      "input": "My contract ended on 30 September after 3 years at 18,500 rand a month in Cape Town. The employer has not given me a UI-19. How do I claim UIF, what documents do I need, how much might I get and for how long?"
+    },
+    {
+      "skill": "cn-ecommerce-listing",
+      "input": "产品：便携式榨汁杯，400ml，Type-C充电，一次充电可用12杯，食品级Tritan，三色。目标人群：上班族和健身人群。价格带79-99元，准备上淘宝和拼多多。请写商品标题、五点卖点和详情页文案。"
+    },
+    {
+      "skill": "cn-1688-wholesale-listing",
+      "input": "我们是义乌的工厂，做不锈钢保温杯，500ml，起订量200个，支持激光LOGO定制，7天打样，月产能8万个。请写一条1688批发详情，面向礼品公司和跨境卖家。"
+    },
+    {
+      "skill": "cn-double11-promotion-plan",
+      "input": "天猫店，母婴湿巾品类，去年双11成交180万，今年目标260万。主推80抽10包装，日常价59.9。预算：推广费25万。请做双11活动方案，包括预售、定金膨胀、满减和直播节奏。"
+    },
+    {
+      "skill": "cn-customer-service-scripts",
+      "input": "淘宝店卖小家电，常见问题：物流慢、收到有划痕要求退款、问能不能开发票、差评威胁要求补偿。请写一套客服话术，包含售前、售中、售后和差评处理。"
+    },
+    {
+      "skill": "cn-company-registration",
+      "input": "两个人合伙在深圳开一家做跨境电商SaaS的公司，注册资本打算认缴100万，一个人全职一个人兼职，暂时在家办公。请告诉我注册公司的步骤、要准备的材料和容易踩的坑。"
+    },
+    {
+      "skill": "cn-equity-split",
+      "input": "三个联合创始人：CEO全职出了20万启动资金，CTO全职不出钱，还有一个顾问兼职提供客户资源。准备留期权池。请给出股权分配方案、成熟条款和退出机制。"
+    },
+    {
+      "skill": "cn-high-tech-enterprise-application",
+      "input": "公司成立4年，软件开发，去年营收2800万，研发人员占比32%，研发费用占营收6.5%，有8个软件著作权、1个发明专利在审。想申报高新技术企业，请评估条件并列出材料清单。"
+    },
+    {
+      "skill": "cn-zhuanjingtexin-application",
+      "input": "做工业传感器的制造企业，营收1.2亿，近两年增长率18%，研发投入占比5.2%，细分市场占有率省内第二，有12项实用新型专利。想申报省级专精特新中小企业，请对照条件自评并列出短板。"
+    },
+    {
+      "skill": "cn-subsidy-filing",
+      "input": "杭州的一家30人软件公司，去年新招了6名应届毕业生，租了300平米办公室，买了一批服务器。有哪些补贴可以申请？请列出可能适用的类别、要准备的材料和申报节奏。"
+    },
+    {
+      "skill": "cn-financing-bp",
+      "input": "项目：给中小餐饮店做AI排班和用工合规的SaaS，上线10个月，付费门店420家，月经常性收入38万，月流失率2.1%，团队12人。准备融天使+轮800万。请写商业计划书大纲和关键页内容。"
+    },
+    {
+      "skill": "cn-study-abroad-essay",
+      "input": "申请英国硕士，专业是数据科学，本科是统计学，GPA 3.6，有一段在银行风控部门的实习，做过信用评分模型，还参加过数学建模比赛拿了省二等奖。请帮我写个人陈述的结构和初稿。"
+    },
+    {
+      "skill": "cn-study-visa-prep",
+      "input": "拿到了美国一所大学的硕士录取，I-20已收到，学费加生活费一年约6万美元，父母存款80万人民币，本科专业是计算机。下个月面签F-1，请帮我准备材料清单和常见问题的回答思路。"
+    },
+    {
+      "skill": "cn-returnee-job-search",
+      "input": "英国一年制硕士毕业，市场营销专业，今年9月回国，没有国内实习经历，想进互联网大厂或快消做品牌方向。秋招已经开始了。请帮我规划求职时间线、简历调整重点和落户、学历认证要办的事。"
+    },
+    {
+      "skill": "bilibili-video-script",
+      "input": "做一期B站视频，主题是'普通人怎么用AI工具整理读书笔记'，时长8分钟左右，目标观众是大学生和刚工作的年轻人，风格轻松，不要太像广告。请写脚本，包括开头钩子、分段、弹幕互动点和结尾。"
+    },
+    {
+      "skill": "zhihu-answer",
+      "input": "知乎问题：'30岁转行做产品经理还来得及吗？' 我有5年运营经验，去年转了产品。请写一篇有个人经历、有方法、不灌鸡汤的回答。"
+    },
+    {
+      "skill": "shipinhao-script",
+      "input": "视频号短视频，60秒以内，我是做社区团购的团长，想讲'夏天买西瓜怎么挑'，顺带引导大家进群。观众主要是35到55岁的社区居民。请写口播脚本和字幕。"
+    },
+    {
+      "skill": "xiaoyuzhou-podcast-outline",
+      "input": "小宇宙播客，一期60分钟，两位主播对谈，主题是'在大厂做了十年后去小城市开咖啡店'，嘉宾是当事人。请写节目大纲、提问清单、时间轴和shownotes。"
     }
   ]
 }

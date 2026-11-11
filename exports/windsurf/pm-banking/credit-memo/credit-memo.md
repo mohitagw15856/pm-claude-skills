@@ -83,5 +83,5 @@ End with: *"This memo is analytical support, not a credit decision. Approval aut
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/credit-memo.html
 
-<!-- pm-claude-skills v83.2.0 | skill: credit-memo | source: skills/credit-memo/SKILL.md | sha256: 446aecee5c30ce4e2b6bdc8116f2848119b69cc5d9dc62134d1b5e40cf39db1d | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: credit-memo | source: skills/credit-memo/SKILL.md | sha256: 446aecee5c30ce4e2b6bdc8116f2848119b69cc5d9dc62134d1b5e40cf39db1d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

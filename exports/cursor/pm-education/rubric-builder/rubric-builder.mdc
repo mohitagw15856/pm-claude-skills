@@ -68,5 +68,5 @@ A short "before you submit, check you've…" version students can self-assess ag
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/rubric-builder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: rubric-builder | source: skills/rubric-builder/SKILL.md | sha256: 0153c046dc82ecf5c51f13312fca54abf730c7b65d8b772f749857aaf8401c5c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: rubric-builder | source: skills/rubric-builder/SKILL.md | sha256: 0153c046dc82ecf5c51f13312fca54abf730c7b65d8b772f749857aaf8401c5c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

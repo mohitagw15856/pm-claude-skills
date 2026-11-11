@@ -57,5 +57,5 @@ What happens to the balance if they change cities: 转移接续 between cities t
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-housing-fund-withdrawal.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-housing-fund-withdrawal | source: skills/cn-housing-fund-withdrawal/SKILL.md | sha256: 20b250b910cef3a3135aa9b22e13dbc301eed264963738677ff8ad3541630663 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-housing-fund-withdrawal | source: skills/cn-housing-fund-withdrawal/SKILL.md | sha256: 20b250b910cef3a3135aa9b22e13dbc301eed264963738677ff8ad3541630663 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

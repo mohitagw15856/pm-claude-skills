@@ -82,5 +82,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/cn-kaoyan-planner.html
 
-<!-- pm-claude-skills v83.2.0 | skill: cn-kaoyan-planner | source: skills/cn-kaoyan-planner/SKILL.md | sha256: adde67914788a3ff56b82b0c1a84174d3bd52dda1a218927e2e6710fce61760f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: cn-kaoyan-planner | source: skills/cn-kaoyan-planner/SKILL.md | sha256: adde67914788a3ff56b82b0c1a84174d3bd52dda1a218927e2e6710fce61760f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

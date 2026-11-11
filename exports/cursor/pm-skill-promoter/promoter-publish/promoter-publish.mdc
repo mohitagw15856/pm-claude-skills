@@ -79,5 +79,5 @@ It checks the skill has the required sections and no em dashes, then prints the 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/promoter-publish.html
 
-<!-- pm-claude-skills v83.2.0 | skill: promoter-publish | source: skills/promoter-publish/SKILL.md | sha256: 0a0abbf7100ff47eccc37ccc711c32fa19730c842eb81eddcab104b354b76c67 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: promoter-publish | source: skills/promoter-publish/SKILL.md | sha256: 0a0abbf7100ff47eccc37ccc711c32fa19730c842eb81eddcab104b354b76c67 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

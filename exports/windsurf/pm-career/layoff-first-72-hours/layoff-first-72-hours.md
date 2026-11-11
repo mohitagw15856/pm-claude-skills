@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/layoff-first-72-hours.html
 
-<!-- pm-claude-skills v83.2.0 | skill: layoff-first-72-hours | source: skills/layoff-first-72-hours/SKILL.md | sha256: 792be724c26afd79ae9c8d6ab6fd9736a60ba8d39201e9657dc3fb0914229ca4 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: layoff-first-72-hours | source: skills/layoff-first-72-hours/SKILL.md | sha256: 792be724c26afd79ae9c8d6ab6fd9736a60ba8d39201e9657dc3fb0914229ca4 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

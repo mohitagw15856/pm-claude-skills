@@ -69,5 +69,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/new-baby-logistics.html
 
-<!-- pm-claude-skills v83.2.0 | skill: new-baby-logistics | source: skills/new-baby-logistics/SKILL.md | sha256: cf4120a0dcd9fee7b62aef5f02baa113f4cf1cb588d877dcdf65a911cc3d0e37 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: new-baby-logistics | source: skills/new-baby-logistics/SKILL.md | sha256: cf4120a0dcd9fee7b62aef5f02baa113f4cf1cb588d877dcdf65a911cc3d0e37 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

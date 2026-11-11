@@ -61,5 +61,5 @@ How the result shows on the December or January payslip and the 源泉徴収票,
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/jp-year-end-adjustment.html
 
-<!-- pm-claude-skills v83.2.0 | skill: jp-year-end-adjustment | source: skills/jp-year-end-adjustment/SKILL.md | sha256: 7eeff41a0184f81dffdde107dfd3a9ad3ec36d465ee17eb2ae82219d63aa2740 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: jp-year-end-adjustment | source: skills/jp-year-end-adjustment/SKILL.md | sha256: 7eeff41a0184f81dffdde107dfd3a9ad3ec36d465ee17eb2ae82219d63aa2740 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

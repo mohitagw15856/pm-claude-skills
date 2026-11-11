@@ -82,5 +82,5 @@ Organizational charting (reporting lines, spans of control, matrix relationships
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/org-chart.html
 
-<!-- pm-claude-skills v83.2.0 | skill: org-chart | source: skills/org-chart/SKILL.md | sha256: d54d45c699c6c74589c3eb4f4b3261a4489f4291dbd9d4220848dde745b79e0e | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: org-chart | source: skills/org-chart/SKILL.md | sha256: d54d45c699c6c74589c3eb4f4b3261a4489f4291dbd9d4220848dde745b79e0e | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -76,5 +76,5 @@ Swap protocol: [how] · Escalation: [symptom → who → then who; 911-first lis
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/caregiver-coordination.html
 
-<!-- pm-claude-skills v83.2.0 | skill: caregiver-coordination | source: skills/caregiver-coordination/SKILL.md | sha256: 0edb82e2c554d9ad3ccac34be63df07afb1fc4ecdfc8bd0d9a120ffcb792c22f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: caregiver-coordination | source: skills/caregiver-coordination/SKILL.md | sha256: 0edb82e2c554d9ad3ccac34be63df07afb1fc4ecdfc8bd0d9a120ffcb792c22f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

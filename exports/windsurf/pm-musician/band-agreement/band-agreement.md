@@ -146,5 +146,5 @@ solo artists dealing with venues.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/band-agreement.html
 
-<!-- pm-claude-skills v83.2.0 | skill: band-agreement | source: skills/band-agreement/SKILL.md | sha256: 192f5917453a01ec359dce51f1d9f2d2d8849fff9642c55c0763e9b43fba01ea | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: band-agreement | source: skills/band-agreement/SKILL.md | sha256: 192f5917453a01ec359dce51f1d9f2d2d8849fff9642c55c0763e9b43fba01ea | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

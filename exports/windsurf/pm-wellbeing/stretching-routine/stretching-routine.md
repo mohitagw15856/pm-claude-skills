@@ -69,5 +69,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/stretching-routine.html
 
-<!-- pm-claude-skills v83.2.0 | skill: stretching-routine | source: skills/stretching-routine/SKILL.md | sha256: a3ae38f477f6fd44776ae8c35fb5e2af7743897b01cd8f9fa915c560387aa181 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: stretching-routine | source: skills/stretching-routine/SKILL.md | sha256: a3ae38f477f6fd44776ae8c35fb5e2af7743897b01cd8f9fa915c560387aa181 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

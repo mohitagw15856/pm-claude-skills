@@ -97,5 +97,5 @@ We lose when: [Honest scenario — e.g. primary driver is lowest upfront cost]
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/sales-battlecard.html
 
-<!-- pm-claude-skills v83.2.0 | skill: sales-battlecard | source: skills/sales-battlecard/SKILL.md | sha256: 00d5c1810f8cbd01a70f8e8cb9492ee6df721cea99df16fe6ef2ee61c433eb19 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: sales-battlecard | source: skills/sales-battlecard/SKILL.md | sha256: 00d5c1810f8cbd01a70f8e8cb9492ee6df721cea99df16fe6ef2ee61c433eb19 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

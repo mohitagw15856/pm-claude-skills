@@ -139,5 +139,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/roadmap-narrative.html
 
-<!-- pm-claude-skills v83.2.0 | skill: roadmap-narrative | source: skills/roadmap-narrative/SKILL.md | sha256: affe946afbfd19257b915cd7dcae09461b22d646ae901c2ca08694e0ffe4c9f3 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: roadmap-narrative | source: skills/roadmap-narrative/SKILL.md | sha256: affe946afbfd19257b915cd7dcae09461b22d646ae901c2ca08694e0ffe4c9f3 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

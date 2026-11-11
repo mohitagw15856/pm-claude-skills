@@ -62,5 +62,5 @@ Ask for (if not already provided), else infer and label:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/morning-brief-designer.html
 
-<!-- pm-claude-skills v83.2.0 | skill: morning-brief-designer | source: skills/morning-brief-designer/SKILL.md | sha256: 517658ca787da9053d35d472b12f8bba570162460c6be323421c50f1f3c145b7 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: morning-brief-designer | source: skills/morning-brief-designer/SKILL.md | sha256: 517658ca787da9053d35d472b12f8bba570162460c6be323421c50f1f3c145b7 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

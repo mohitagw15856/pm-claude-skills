@@ -70,5 +70,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/decision-meeting-format.html
 
-<!-- pm-claude-skills v83.2.0 | skill: decision-meeting-format | source: skills/decision-meeting-format/SKILL.md | sha256: 5be4343fbe6133b5b9f2f78caed7e2850a4b9169c0503b654178ea9f547b4420 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: decision-meeting-format | source: skills/decision-meeting-format/SKILL.md | sha256: 5be4343fbe6133b5b9f2f78caed7e2850a4b9169c0503b654178ea9f547b4420 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

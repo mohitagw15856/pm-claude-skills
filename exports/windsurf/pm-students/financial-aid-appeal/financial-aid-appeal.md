@@ -73,5 +73,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/financial-aid-appeal.html
 
-<!-- pm-claude-skills v83.2.0 | skill: financial-aid-appeal | source: skills/financial-aid-appeal/SKILL.md | sha256: 7a88160b6e7501179a35dd7897fe4c15bfdc4fc95e00c241202dc6e44e549864 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: financial-aid-appeal | source: skills/financial-aid-appeal/SKILL.md | sha256: 7a88160b6e7501179a35dd7897fe4c15bfdc4fc95e00c241202dc6e44e549864 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

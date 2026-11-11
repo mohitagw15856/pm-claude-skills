@@ -70,5 +70,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/spreadsheet-or-database.html
 
-<!-- pm-claude-skills v83.2.0 | skill: spreadsheet-or-database | source: skills/spreadsheet-or-database/SKILL.md | sha256: 5c011d081343e61d16eccc5b4d9f35ee37937156ff2d0753c03fe1ccbc2a029c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: spreadsheet-or-database | source: skills/spreadsheet-or-database/SKILL.md | sha256: 5c011d081343e61d16eccc5b4d9f35ee37937156ff2d0753c03fe1ccbc2a029c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

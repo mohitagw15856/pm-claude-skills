@@ -70,5 +70,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/salary-benchmarking.html
 
-<!-- pm-claude-skills v83.2.0 | skill: salary-benchmarking | source: skills/salary-benchmarking/SKILL.md | sha256: 5e13a0b2f1a0585cc5e15f34a8e8c2b8160ef8330fa8ebdac01972c706ff202c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: salary-benchmarking | source: skills/salary-benchmarking/SKILL.md | sha256: 5e13a0b2f1a0585cc5e15f34a8e8c2b8160ef8330fa8ebdac01972c706ff202c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

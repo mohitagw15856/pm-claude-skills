@@ -70,5 +70,5 @@ Terminology-management practice — termbases, do-not-translate lists, context d
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/glossary-builder.html
 
-<!-- pm-claude-skills v83.2.0 | skill: glossary-builder | source: skills/glossary-builder/SKILL.md | sha256: 0ebf157fd037d28c15d79fa5af148235fdd110398e146d327140ef4abbc16160 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: glossary-builder | source: skills/glossary-builder/SKILL.md | sha256: 0ebf157fd037d28c15d79fa5af148235fdd110398e146d327140ef4abbc16160 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

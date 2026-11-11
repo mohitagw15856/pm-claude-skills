@@ -32,7 +32,8 @@ const VERSION = (() => {
   try { return createRequire(import.meta.url)('../package.json').version; } catch { return '0.0.0'; }
 })();
 
-const NATIVE = new Set(['claude', 'hermes', 'codex', 'openclaw', 'copilot', 'gemini']);
+// qwen, iflow and kimi read native SKILL.md folders (paths checked against each tool's docs, 2026-11-10).
+const NATIVE = new Set(['claude', 'hermes', 'codex', 'openclaw', 'copilot', 'gemini', 'qwen', 'iflow', 'kimi']);
 // Rule-file agents install generated files from exports/<agent> (ext per agent).
 const RULEFILE = { cursor: '.mdc', windsurf: '.md', aider: '.md', kilocode: '.md' };
 // Generated rule-file agents: rule files are written at install time from skills/,
@@ -63,6 +64,13 @@ const GENERATED = {
   },
 };
 const AGENTS = [...NATIVE, ...Object.keys(RULEFILE), ...Object.keys(GENERATED)];
+// Kimi renamed its home directory between the older Kimi CLI and Kimi Code CLI.
+// Honour KIMI_CODE_HOME, then whichever directory already exists, newest first.
+function kimiSkillsDir() {
+  if (process.env.KIMI_CODE_HOME) return join(process.env.KIMI_CODE_HOME, 'skills');
+  const next = join(homedir(), '.kimi-code'), legacy = join(homedir(), '.kimi');
+  return join(!existsSync(next) && existsSync(legacy) ? legacy : next, 'skills');
+}
 const defaultTarget = (agent) => ({
   claude: join(homedir(), '.claude', 'skills'),
   hermes: join(homedir(), '.hermes', 'skills'),
@@ -70,6 +78,9 @@ const defaultTarget = (agent) => ({
   openclaw: join(homedir(), '.openclaw', 'skills'),
   gemini: join(homedir(), '.gemini', 'skills'),      // Gemini CLI reads native SKILL.md here (or .gemini/skills in a project)
   copilot: join(process.cwd(), '.github', 'skills'),   // Copilot coding agent reads native SKILL.md here
+  qwen: join(homedir(), '.qwen', 'skills'),            // Qwen Code: ~/.qwen/skills (or .qwen/skills in a project)
+  iflow: join(homedir(), '.iflow', 'skills'),          // iFlow CLI: ~/.iflow/skills (or .iflow/skills in a project)
+  kimi: kimiSkillsDir(),                               // Kimi Code CLI: ~/.kimi-code/skills; older Kimi CLI: ~/.kimi/skills
   cursor: join(process.cwd(), '.cursor', 'rules'),
   windsurf: join(process.cwd(), '.windsurf', 'rules'),
   aider: join(process.cwd(), '.aider', 'skills'),
@@ -577,6 +588,8 @@ function detectAgents() {
     copilot: [join(cwd, '.github', 'copilot-instructions.md'), join(cwd, '.github', 'skills'), join(home, '.copilot')],
     trae: [join(home, '.trae'), join(cwd, '.trae')], qoder: [join(home, '.qoder'), join(cwd, '.qoder')],
     lingma: [join(home, '.lingma'), join(cwd, '.lingma')], codebuddy: [join(home, '.codebuddy'), join(cwd, '.codebuddy')],
+    qwen: [join(home, '.qwen'), join(cwd, '.qwen')], iflow: [join(home, '.iflow'), join(cwd, '.iflow')],
+    kimi: [join(home, '.kimi-code'), join(home, '.kimi'), join(cwd, '.kimi-code')],
   };
   return AGENTS.map((a) => {
     const hit = (marks[a] || []).find((p) => existsSync(p));
@@ -930,6 +943,7 @@ Usage:
   npx pm-claude-skills skillcheck [--dir <path>]    # validate your own SKILL.md files (--strict, --json)\n  npx pm-claude-skills verify                 # integrity check: detect drift in anything "install" brought in
   npx pm-claude-skills chain <workflow>       # run a whole multi-skill pipeline (chain --list to see them)
   npx pm-claude-skills pipeline list|validate|run <id> --input in.json   # typed chains: each step bound to the next by contract
+  npx pm-claude-skills mission list|plan|run <id> --input in.json        # pipelines chained into one long run with checkpoints and resume
   npx pm-claude-skills council <skill>        # author -> cross-vendor critique -> arbiter (2+ provider keys)
   npx pm-claude-skills migrate <dir>          # convert a folder of prompts/SOPs into SkillSpec skills
   npx pm-claude-skills init        # scaffold the professional workspace here (brain/, context, arena folders)
@@ -962,6 +976,7 @@ Examples:
   npx pm-claude-skills profile init                                   # your role, city, language: skills personalise from it
   npx pm-claude-skills sync [--check]                                  # install the team set in .pm-skills.json (--check for CI)
   npx pm-claude-skills add --agent qoder      # Qoder / Lingma: --agent lingma
+  npx pm-claude-skills add --agent qwen --bundle pm-china-work           # Qwen Code (~/.qwen/skills); also --agent iflow, --agent kimi
 
   npx pm-claude-skills find "prep a QBR for an at-risk account"   # describe the task, get ranked skills + a measured/unmeasured badge
   npx pm-claude-skills search board            # exact keyword filter by name/description
@@ -998,6 +1013,11 @@ else if (cmd === 'githook') {
 }
 else if (cmd === 'pipeline') {
   const { run } = await import('./pipeline.mjs');
+  try { process.exit(await run(process.argv.slice(3))); }
+  catch (e) { console.error(`Error: ${e.message}`); process.exit(1); }
+}
+else if (cmd === 'mission') {
+  const { run } = await import('./mission.mjs');
   try { process.exit(await run(process.argv.slice(3))); }
   catch (e) { console.error(`Error: ${e.message}`); process.exit(1); }
 }

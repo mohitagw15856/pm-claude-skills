@@ -385,5 +385,5 @@ All flag changes in production must be traceable. Ensure the following are confi
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/feature-flag-guide.html
 
-<!-- pm-claude-skills v83.2.0 | skill: feature-flag-guide | source: skills/feature-flag-guide/SKILL.md | sha256: 139cfa857ea737f22037cf90891a9673092750a1967b0f2ff6a04f7daa8a7358 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: feature-flag-guide | source: skills/feature-flag-guide/SKILL.md | sha256: 139cfa857ea737f22037cf90891a9673092750a1967b0f2ff6a04f7daa8a7358 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

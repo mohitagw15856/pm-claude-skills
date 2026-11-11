@@ -248,5 +248,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/product-positioning-doc.html
 
-<!-- pm-claude-skills v83.2.0 | skill: product-positioning-doc | source: skills/product-positioning-doc/SKILL.md | sha256: 79574e64f20ab1ddcb17d0ba43b9c630335ca70c40bc730f3bdac326d3a20707 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: product-positioning-doc | source: skills/product-positioning-doc/SKILL.md | sha256: 79574e64f20ab1ddcb17d0ba43b9c630335ca70c40bc730f3bdac326d3a20707 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -76,5 +76,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/immigration-document-checklist.html
 
-<!-- pm-claude-skills v83.2.0 | skill: immigration-document-checklist | source: skills/immigration-document-checklist/SKILL.md | sha256: f9811e8eb3e025881322ca35fae644ddabb0323887437c03b7a59f45f68a5a12 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: immigration-document-checklist | source: skills/immigration-document-checklist/SKILL.md | sha256: f9811e8eb3e025881322ca35fae644ddabb0323887437c03b7a59f45f68a5a12 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

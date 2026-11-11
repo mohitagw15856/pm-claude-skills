@@ -96,5 +96,5 @@ End every output with a short **Assumptions and gaps** block: two to four bullet
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/ship-or-slip.html
 
-<!-- pm-claude-skills v83.2.0 | skill: ship-or-slip | source: skills/ship-or-slip/SKILL.md | sha256: 9dba40c758796194316b259a23fbc6f2241f3c24a8e20644102aa5d2660aa6de | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: ship-or-slip | source: skills/ship-or-slip/SKILL.md | sha256: 9dba40c758796194316b259a23fbc6f2241f3c24a8e20644102aa5d2660aa6de | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

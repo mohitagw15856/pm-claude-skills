@@ -108,5 +108,5 @@ Same habit off the table: [one sentence]
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/tabletop-negotiator.html
 
-<!-- pm-claude-skills v83.2.0 | skill: tabletop-negotiator | source: skills/tabletop-negotiator/SKILL.md | sha256: 0c03c91d8b9008eb51d633147fcf235517828841ba29f150246bff7d89f8af77 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: tabletop-negotiator | source: skills/tabletop-negotiator/SKILL.md | sha256: 0c03c91d8b9008eb51d633147fcf235517828841ba29f150246bff7d89f8af77 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

@@ -72,5 +72,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/language-learning-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: language-learning-plan | source: skills/language-learning-plan/SKILL.md | sha256: 46c9822ee619b1a8c06e51e82ea08131a6a32b043f91a1ccdec3841680279f8c | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: language-learning-plan | source: skills/language-learning-plan/SKILL.md | sha256: 46c9822ee619b1a8c06e51e82ea08131a6a32b043f91a1ccdec3841680279f8c | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

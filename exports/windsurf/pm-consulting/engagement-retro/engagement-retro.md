@@ -64,5 +64,5 @@ Consulting close-out / retrospective practice — outcome review, profitability 
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/engagement-retro.html
 
-<!-- pm-claude-skills v83.2.0 | skill: engagement-retro | source: skills/engagement-retro/SKILL.md | sha256: 7e6efe94e94b78c6b2c8a9c663e8f62e02783a86fbdc2eb41fb44ea0ec85ff71 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: engagement-retro | source: skills/engagement-retro/SKILL.md | sha256: 7e6efe94e94b78c6b2c8a9c663e8f62e02783a86fbdc2eb41fb44ea0ec85ff71 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

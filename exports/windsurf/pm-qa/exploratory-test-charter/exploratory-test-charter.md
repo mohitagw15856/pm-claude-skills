@@ -73,5 +73,5 @@ Session-Based Test Management (exploratory testing) — chartered, risk-prioriti
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/exploratory-test-charter.html
 
-<!-- pm-claude-skills v83.2.0 | skill: exploratory-test-charter | source: skills/exploratory-test-charter/SKILL.md | sha256: 9528f900ffd5b1e6f1969547b33b8fb886fe77478a55c3eb548a89d4eb8ab13d | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: exploratory-test-charter | source: skills/exploratory-test-charter/SKILL.md | sha256: 9528f900ffd5b1e6f1969547b33b8fb886fe77478a55c3eb548a89d4eb8ab13d | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

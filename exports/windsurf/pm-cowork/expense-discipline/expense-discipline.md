@@ -71,5 +71,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/expense-discipline.html
 
-<!-- pm-claude-skills v83.2.0 | skill: expense-discipline | source: skills/expense-discipline/SKILL.md | sha256: c1aa467df6f3273a563855fff4ccfe01b3570aceae33119dcd07295e4f7ce79f | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: expense-discipline | source: skills/expense-discipline/SKILL.md | sha256: c1aa467df6f3273a563855fff4ccfe01b3570aceae33119dcd07295e4f7ce79f | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

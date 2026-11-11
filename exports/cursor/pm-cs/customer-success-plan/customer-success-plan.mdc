@@ -220,5 +220,5 @@ Score any output of this skill before handing it over; 32+ is ship-quality.
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/customer-success-plan.html
 
-<!-- pm-claude-skills v83.2.0 | skill: customer-success-plan | source: skills/customer-success-plan/SKILL.md | sha256: a67be4ddc0a1d6566decdeccbe58bbb266a08d7bb34a0d7b8a491fb045b56b53 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: customer-success-plan | source: skills/customer-success-plan/SKILL.md | sha256: a67be4ddc0a1d6566decdeccbe58bbb266a08d7bb34a0d7b8a491fb045b56b53 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

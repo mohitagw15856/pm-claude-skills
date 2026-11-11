@@ -79,5 +79,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-union-table.html
 
-<!-- pm-claude-skills v83.2.0 | skill: the-union-table | source: skills/the-union-table/SKILL.md | sha256: e2899f2fbb4317e636c7dda55d1757a8e2711ceb72d2e7aa75c7e3defc72cf04 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: the-union-table | source: skills/the-union-table/SKILL.md | sha256: e2899f2fbb4317e636c7dda55d1757a8e2711ceb72d2e7aa75c7e3defc72cf04 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->

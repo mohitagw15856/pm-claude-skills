@@ -69,5 +69,5 @@ Ask for these if not provided:
 
 Run this skill in your browser: https://mohitagw15856.github.io/pm-claude-skills/skill/the-year-of-firsts.html
 
-<!-- pm-claude-skills v83.2.0 | skill: the-year-of-firsts | source: skills/the-year-of-firsts/SKILL.md | sha256: 83135b0bd4cb29cf3008139c43f60154c5cd67b7ff5ee4703baaaa7eba050683 | licence: MIT
+<!-- pm-claude-skills v84.0.0 | skill: the-year-of-firsts | source: skills/the-year-of-firsts/SKILL.md | sha256: 83135b0bd4cb29cf3008139c43f60154c5cd67b7ff5ee4703baaaa7eba050683 | licence: MIT
      verify: this hash is published at https://mohitagw15856.github.io/pm-claude-skills/.well-known/agent-skills.json -->
